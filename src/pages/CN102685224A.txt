@@ -1,0 +1,399 @@
+<!DOCTYPE html><html><head><title>专利 CN102685224A - 用户行为分析方法及相关设备和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="用户行为分析方法及相关设备和系统"><meta name="DC.contributor" content="周&#38881;" scheme="inventor"><meta name="DC.contributor" content="唐东" scheme="inventor"><meta name="DC.contributor" content="张洪丁" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2012-4-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了用户行为分析方法及相关设备和系统。其中，一种用户行为分析方法，应用于包括至少1个UBA云服务器的UBA云，UBA云服务器处于所在网络的分析决策层，可方法包括：UBA云服务器接收第一UBA子节点上报的无法识别的网络内容标识；获取网络内容标识对应的网络内容；从网络内容中提取出关键词；利用提取出的关键词更新行为知识库；UBA云服务器向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中UBA子节点集至少包括第二UBA子节点和第一UBA子节点，第二UBA子节点和第一UBA子节点处于所在网络的探针层。本发明实施例的方案有利于提高用户行为分析能力，减少重复分析问题。"><meta name="DC.date" content="2012-9-19"><meta name="DC.relation" content="CN:101105795:A" scheme="references"><meta name="DC.relation" content="CN:102307315:A" scheme="references"><meta name="DC.relation" content="WO:2001027760:A2" scheme="references"><meta name="citation_patent_publication_number" content="CN:102685224:A"><meta name="citation_patent_application_number" content="CN:201210132715"><link rel="canonical" href="https://www.google.com/patents/CN102685224A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102685224A?cl=zh"/><meta name="title" content="专利 CN102685224A - 用户行为分析方法及相关设备和系统"/><meta name="description" content="本发明实施例公开了用户行为分析方法及相关设备和系统。其中，一种用户行为分析方法，应用于包括至少1个UBA云服务器的UBA云，UBA云服务器处于所在网络的分析决策层，可方法包括：UBA云服务器接收第一UBA子节点上报的无法识别的网络内容标识；获取网络内容标识对应的网络内容；从网络内容中提取出关键词；利用提取出的关键词更新行为知识库；UBA云服务器向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中UBA子节点集至少包括第二UBA子节点和第一UBA子节点，第二UBA子节点和第一UBA子节点处于所在网络的探针层。本发明实施例的方案有利于提高用户行为分析能力，减少重复分析问题。"/><meta property="og:title" content="专利 CN102685224A - 用户行为分析方法及相关设备和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102685224A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102685224A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102685224A&amp;usg=AFQjCNEx31baLcj5vgkhIVCHtt4ah23wCA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/71bfd6672378938b6740/CN102685224A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/71bfd6672378938b6740/CN102685224A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102685224A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102685224A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102685224A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102685224B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102685224A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了用户行为分析方法及相关设备和系统。其中，一种用户行为分析方法，应用于包括至少1个UBA云服务器的UBA云，UBA云服务器处于所在网络的分析决策层，可方法包括：UBA云服务器接收第一UBA子节点上报的无法 ...</span><span itemprop="url">https://www.google.com/patents/CN102685224A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102685224A - 用户行为分析方法及相关设备和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102685224A - 用户行为分析方法及相关设备和系统" title="专利 CN102685224A - 用户行为分析方法及相关设备和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102685224 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210132715</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年9月19日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年4月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年4月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CA2871698A1?hl=zh-CN&amp;cl=zh">CA2871698A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102685224B?hl=zh-CN&amp;cl=zh">CN102685224B</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2830283A1?hl=zh-CN&amp;cl=zh">EP2830283A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2830283A4?hl=zh-CN&amp;cl=zh">EP2830283A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20150066589?hl=zh-CN&amp;cl=zh">US20150066589</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2013159512A1?hl=zh-CN&amp;cl=zh">WO2013159512A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210132715.3, </span><span class="patent-bibdata-value">CN 102685224 A, </span><span class="patent-bibdata-value">CN 102685224A, </span><span class="patent-bibdata-value">CN 201210132715, </span><span class="patent-bibdata-value">CN-A-102685224, </span><span class="patent-bibdata-value">CN102685224 A, </span><span class="patent-bibdata-value">CN102685224A, </span><span class="patent-bibdata-value">CN201210132715, </span><span class="patent-bibdata-value">CN201210132715.3</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%91%A8%E9%9F%A1%22">周&#38881;</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%94%90%E4%B8%9C%22">唐东</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E6%B4%AA%E4%B8%81%22">张洪丁</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102685224A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102685224A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102685224A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (5),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210132715&amp;usg=AFQjCNEYL9mrdR8nGgAlfWOFt31kYm20kg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102685224A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFBvl20WW2gcXGs3D9RMJFSk7KNug"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT115315554" lang="ZH" load-source="patent-office">用户行为分析方法及相关设备和系统</invention-title>
+      </span><br><span class="patent-number">CN 102685224 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA100227091" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了用户行为分析方法及相关设备和系统。其中，一种用户行为分析方法，应用于包括至少1个UBA云服务器的UBA云，UBA云服务器处于所在网络的分析决策层，可方法包括：UBA云服务器接收第一UBA子节点上报的无法识别的网络内容标识；获取网络内容标识对应的网络内容；从网络内容中提取出关键词；利用提取出的关键词更新行为知识库；UBA云服务器向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中UBA子节点集至少包括第二UBA子节点和第一UBA子节点，第二UBA子节点和第一UBA子节点处于所在网络的探针层。本发明实施例的方案有利于提高用户行为分析能力，减少重复分析问题。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(18)</span></span></div><div class="patent-text"><div mxw-id="PCLM45257584" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种用户行为分析方法，其特征在于，应用于包括至少一个用户行为分析UBA云服务器的UBA云，其中，所述UBA云服务器处于所在网络的分析决策层，所述方法包括：  UBA云服务器接收第一 UBA子节点上报的无法识别的网络内容标识；  所述UBA云服务器获取所述网络内容标识对应的网络内容；  所述UBA云服务器从所述网络内容中提取出关键词；  所述UBA云服务器利用提取出的所述关键词更新行为知识库；  所述UBA云服务器向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中，所述UBA子节点集至少包括第二 UBA子节点和所述第一 UBA子节点，所述第二 UBA子节点和第一 UBA子节点处于所在网络的探针层。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其特征在于，所述UBA云服务器利用提取出的所述关键词更新行为知识库，包括：  所述UBA云服务器根据提取的所述关键词得到内容分类信息；  所述UBA云服务器基于所述内容分类信息和关键词生成行为记录；  所述UBA云服务器将生成的所述行为记录添加到行为知识库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求I或2所述的方法，其特征在于，  所述从所述网络内容中提取出关键词，包括：  对所述网络内容进行去噪处理；对去噪处理后所述网络内容进行切词处理得到若干个词；根据关键词参考参数从所述若干个词中提取出关键词，所述关键词参考参数包括：词的词性、词频、权重和所处位置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求I至3任一项所述的方法，其特征在于，  所述方法还包括：  所述UBA云服务器利用所述网络内容标识，在行为知识库查找与所述网络内容标识匹配的行为记录；若在所述行为知识库中未查找到与所述网络内容标识匹配的行为记录，则执行如下步骤：所述UBA云服务器获取所述网络内容标识对应的网络内容；从所述网络内容中提取出关键词；利用提取出的所述关键词更新所述行为知识库；并向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求I至4任一项所述的方法，其特征在于，  所述方法还包括：  所述UBA云服务器获取所述UBA子节点集生成的用户行为分析报表或网络行为分析报表；汇总获取的所述用户行为分析报表或网络行为分析报表，得到汇总的用户行为分析报表或网络行为分析报表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求I至5任一项所述的方法，其特征在于，  所述获取所述网络内容标识对应的网络内容具体为：爬取所述网络内容标识对应的网络内容；  所述爬取所述网络内容标识对应的网络内容之后，还包括：  所述UBA云服务器判断当前对所述网络内容标识的爬取深度是否超过设定的爬取深度上限，若是，则所述UBA云服务器停止爬取所述网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；若否，则所述UBA云服务器进一步爬取所述网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容，从爬取到的所述网络内容中包含的子网络内容标识所对应的网络内容中提取出关键词；利用提取出的该关键词更新行为知识库；并向所述UBA子节点集下发更新的行为知识库或者行为知识库的更新内容。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求I至6任一项所述的方法，其特征在于，  所述UBA云服务器处于所在网络的核心层，所述UBA子节点处于所在网络的接入层；或者，所述UBA云服务器处于所在网络的汇聚层，所述UBA子节点处于所在网络的边缘网络；或者，所述UBA云服务器处于所在网络的核心互联网数据中心IDC，所述UBA子节点处于所在网络的区域IDC。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.	一种用户行为分析方法，其特征在于，应用于包括至少一个用户行为分析UBA云服务器的UBA云，其中，所述UBA云服务器处于所在网络的分析决策层，所述方法包括：  UBA云服务器接收第一 UBA子节点上报的无法识别的网络内容标识；  所述UBA云服务器利用所述网络内容标识，在行为知识库查找与所述网络内容标识匹配的行为记录；  若在所述行为知识库查找到与所述网络内容标识匹配的行为记录，则所述UBA云服务器向所述第一 UBA子节点下发与所述网络内容标识匹配的行为记录中包含的，所述网络内容标识对应的内容分类信息，其中，所述第一 UBA子节点处于所在网络的探针层。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种用户行为分析方法，其特征在于，包括：  第一用户行为分析UBA子节点收集用户上网信息；  第一 UBA子节点从收集的所述用户上网信息中提取上网关键信息，所述上网关键信息包含网络内容标识；  第一 UBA子节点利用所述上网关键信息，在本地行为知识库中查找与所述上网关键信息匹配的行为记录；  若在所述本地行为知识库中未查找到与所述上网关键信息匹配的行为记录，则第一UBA子节点向UBA云服务器上报所述上网关键信息中的网络内容标识；若在所述本地行为知识库中查找到与所述上网关键信息匹配的行为记录，则第一 UBA子节点根据匹配的行为记录生成用户访问日志，根据生成的用户访问日志进行用户行为建模，其中，所述UBA云服务器处于所在网络的分析决策层，所述第一 UBA子节点处于所在网络的探针层。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的方法，其特征在于，  所述方法还包括：  第一 UBA子节点接收所述UBA云服务器下发的行为知识库、行为知识库的更新内容或所述网络内容标识对应的内容分类信息；第一 UBA子节点利用所述UBA云服务器下发的行为知识库、行为知识库的更新内容或所述网络内容标识对应的内容分类信息，更新第一 UBA子节点的本地行为知识库。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.	一种用户行为分析UBA云服务器，其特征在于，包括：  接收模块，用于接收第一 UBA子节点上报的无法识别的网络内容标识；  获取模块，用于获取所述网络内容标识对应的网络内容；  提取模块，用于从所述获取模块获取的网络内容中提取出关键词；  库更新模块，用于利用所述提取模块提取出的所述关键词更新行为知识库；下发模块，用于向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中，所述UBA子节点集至少包括第二 UBA子节点和所述第一 UBA子节点，其中，所述UBA云服务器处于所在网络的分析决策层，所述第一 UBA子节点和第二 UBA子节点处于所在网络的探针层。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的UBA云服务器，其特征在于，  所述UBA云服务器还包括：  查找模块，用于利用所述接收模块接收到的网络内容标识在行为知识库查找与所述网络内容标识匹配的行为记录；  所述获取模块具体用于，若所述查找模块在所述行为知识库中未查找到与所述网络内容标识匹配的行为记录，获取所述网络内容标识对应的网络内容。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求11或12所述的UBA云服务器，其特征在于，  所述获取模块具体用于，爬取所述网络内容标识对应的网络内容；  所述UBA云服务器还包括：  控制爬取模块，用于判断当前对所述网络内容标识的爬取深度是否超过设定的爬取深度上限，若是，则停止爬取所述网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；若否，则控制所述获取模块进一步爬取所述网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；  所述获取模块还用于，爬取所述网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；  所述提取模块还用于，从所述获取模块爬取到的所述子网络内容标识所对应的网络内容中提取出关键词；  所述库更新模块还用于，利用所述提取模块提取出的所述关键词更新行为知识库；  所述下发模块还用于，向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.	一种用户行为分析UBA云服务器，其特征在于，包括：  接收模块，用于接收第一 UBA子节点上报的无法识别的网络内容标识；  查询模块，用于利用所述接收模块接收的网络内容标识，在行为知识库查找匹配的行为记录；  下发模块，用于若所述查询模块在所述行为知识库查找到与所述网络内容标识匹配的行为记录，则向所述第一 UBA子节点下发与所述网络内容标识匹配的行为记录中包含的，所述网络内容标识对应的内容分类信息；其中，所述UBA云服务器处于所在网络的分析决策层，所述第一 UBA子节点处于所在网络的探针层。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.	一种用户行为分析UBA子节点，其特征在于，包括：  收集模块，用于收集用户上网信息；  提取模块，用于从所述收集模块收集的所述用户上网信息中提取上网关键信息，其中，所述上网关键信息包括网络内容标识；  查找模块，用于利用所述提取模块提取的上网关键信息在本地行为知识库中查找匹配的行为记录；  上报模块，用于若所述查找模块在所述本地行为知识库中未查找到与所述上网关键信息匹配的行为记录，则向UBA云服务器上报所述上网关键信息中的网络内容标识；生成模块，用于若所述查找模块在所述本地行为知识库中查找到与所述上网关键信息匹配的行为记录，则根据与所述上网关键信息匹配的行为记录生成用户访问日志，根据生成的用户访问日志进行用户行为建模；其中，所述UBA云服务器处于所在网络的分析决策层，所述UBA子节点处于所在网络的探针层。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的UBA子节点，其特征在于，  所述UBA子节点还包括：  获取模块，用于接收UBA云服务器下发的行为知识库、行为知识库的更新内容或所述网络内容标识对应的内容分类信息；  库更新模块，用于利用所述UBA云服务器下发的行为知识库、行为知识库的更新内容或所述网络内容标识对应的内容分类信息，更新所述UBA子节点的本地行为知识库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.	一种用户行为分析UBA云，其特征在于，包括：  至少一个如权利要求11至14任一项所述的用户行为分析UBA云服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.	一种用户行为分析UBA系统，其特征在于，包括：  如权利要求17所述的用户行为分析UBA云和至少一个如权利要求15&#12316;16任一项所述的UBA子节点，其中，所述UBA子节点和所述UBA云中的UBA云服务器以可通信方式连接。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES51622615" lang="ZH" load-source="patent-office" class="description">
+    <p>用户行为分析方法及相关设备和系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信技术领域，具体涉及用户行为分析方法及相关设备和系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着全网网际互联协议（IP, Internet Protocol)化进程的推进,丰富的业务给运营商带来机遇的同时也带来了挑战。业务流量呈爆炸式增长，为了更好地运营网络，为用户提供更好的体验，有必要分析用户上网行为，进而获知用户的兴趣所在、整网应用情况和应用趋势等，以便更好的为用户提供个性化服务和优化网络。</p>
+    <p>[0003]	用户行为分析（UBA, User Behavior Analysis)不仅可用于精细化运营规划和网络规划，还可用于精准广告推送等业务，运营商可据此运营高价值的（如广告推送业务）等增值业务。据统计，2007年国际互联网广告的业务额为440亿美元（连续3年增长超过 44% )，中国为103亿人民币，预计2012年中国可达703亿人民币。</p>
+    <p>[0004]	现有常见UBA设备部署架构可如图1-a和图l_b所示，不同的区域分别部署不同的UBA设备。UBA设备需对用户访问内容进行分析，而每天用户访问量通常很大，网络每天新增的内容可能也比较多，实践发现，现有架构中的UBA设备分析能力有限，且不同UBA设备之间经常出现重复分析问题，进一步影响有效性能。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明实施例提供用户行为分析方法及相关设备和系统，以提高用户行为分析能力，减少重复分析问题。</p>
+    <p>[0006]	为解决上述技术问题，本发明实施例提供以下技术方案：</p>
+    <p>[0007]	本发明实施例一方面还一种用户行为分析方法，应用于包括至少一个用户行为分析UBA云服务器的UBA云，其中，所述UBA云服务器处于所在网络的分析决策层，所述方法包括：所述方法包括：</p>
+    <p>[0008]	UBA云服务器接收第一 UBA子节点上报的无法识别的网络内容标识；</p>
+    <p>[0009]	所述UBA云服务器获取所述网络内容标识对应的网络内容；</p>
+    <p>[0010]	所述UBA云服务器从所述网络内容中提取出关键词；</p>
+    <p>[0011]	所述UBA云服务器利用提取出的所述关键词更新行为知识库；</p>
+    <p>[0012]	所述UBA云服务器向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中，所述UBA子节点集至少包括第二 UBA子节点和所述第一 UBA子节点，所述第二UBA子节点和第一 UBA子节点处于所在网络的探针层。</p>
+    <p>[0013]	本发明实施例另一方面还提供一种用户行为分析方法，应用于包括至少一个用户行为分析UBA云服务器的UBA云，其中，所述UBA云服务器处于所在网络的分析决策层，所述方法包括：</p>
+    <p>[0014]	UBA云服务器接收第一 UBA子节点上报的无法识别的网络内容标识；</p>
+    <p>[0015]	所述UBA云服务器利用所述网络内容标识，在行为知识库查找与所述网络内容标识匹配的行为记录；</p>
+    <p>[0016]	若在所述行为知识库查找到与所述网络内容标识匹配的行为记录，则所述UBA云服务器向所述第一 UBA子节点下发与所述网络内容标识匹配的行为记录中包含的，所述网络内容标识对应的内容分类信息，其中，所述第一 UBA子节点处于所在网络的探针层。</p>
+    <p>[0017]	本发明实施例另一方面还提供一种用户行为分析方法，包括：</p>
+    <p>[0018]	一种用户行为分析方法，其特征在于，包括：</p>
+    <p>[0019]	第一用户行为分析UBA子节点收集用户上网信息；</p>
+    <p>[0020]	第一 UBA子节点从收集的所述用户上网信息中提取上网关键信息，所述上网关键信息包含网络内容标识； [0021]	第一 UBA子节点利用所述上网关键信息，在本地行为知识库中查找与所述上网关键信息匹配的行为记录；</p>
+    <p>[0022]	若在所述本地行为知识库中未查找到与所述上网关键信息匹配的行为记录，则第</p>
+    <p>一	UBA子节点向UBA云服务器上报所述上网关键信息中的网络内容标识；若在所述本地行为知识库中查找到与所述上网关键信息匹配的行为记录，则第一 UBA子节点根据匹配的行为记录生成用户访问日志，根据生成的用户访问日志进行用户行为建模，其中，所述UBA云服务器处于所在网络的分析决策层，所述第一 UBA子节点处于所在网络的探针层。</p>
+    <p>[0023]	本发明实施例另一方面还提供一种用户行为分析UBA云服务器，包括：</p>
+    <p>[0024]	接收模块，用于接收第一 UBA子节点上报的无法识别的网络内容标识；</p>
+    <p>[0025]	获取模块，用于获取所述网络内容标识对应的网络内容；</p>
+    <p>[0026]	提取模块，用于从所述获取模块获取的网络内容中提取出关键词；</p>
+    <p>[0027]	库更新模块，用于利用所述提取模块提取出的所述关键词更新行为知识库；</p>
+    <p>[0028]	下发模块，用于向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中，所述UBA子节点集至少包括第二 UBA子节点和所述第一 UBA子节点，其中，所述UBA云服务器处于所在网络的分析决策层，所述第一 UBA子节点和第二 UBA子节点处于所在网络的探针层。</p>
+    <p>[0029]	本发明实施例另一方面还提供一种用户行为分析UBA云服务器，包括：</p>
+    <p>[0030]	接收模块，用于接收第一 UBA子节点上报的无法识别的网络内容标识；</p>
+    <p>[0031]	查询模块，用于利用所述接收模块接收的网络内容标识，在行为知识库查找匹配的行为记录；</p>
+    <p>[0032]	下发模块，用于若所述查询模块在所述行为知识库查找到与所述网络内容标识匹配的行为记录，则向所述第一 UBA子节点下发与所述网络内容标识匹配的行为记录中包含的，所述网络内容标识对应的内容分类信息；其中，所述UBA云服务器处于所在网络的分析决策层，所述第一 UBA子节点处于所在网络的探针层。</p>
+    <p>[0033]	本发明实施例另一方面还提供一种用户行为分析UBA子节点，包括：</p>
+    <p>[0034]	收集模块，用于收集用户上网信息；</p>
+    <p>[0035]	提取模块，用于从所述收集模块收集的所述用户上网信息中提取上网关键信息，其中，所述上网关键信息包括网络内容标识；</p>
+    <p>[0036]	查找模块，用于利用所述提取模块提取的上网关键信息在本地行为知识库中查找匹配的行为记录；[0037]	上报模块，用于若所述查找模块在所述本地行为知识库中未查找到与所述上网关键信息匹配的行为记录，则向UBA云服务器上报所述上网关键信息中的网络内容标识；</p>
+    <p>[0038]	生成模块，用于若所述查找模块在所述本地行为知识库中查找到与所述上网关键信息匹配的行为记录，则根据与所述上网关键信息匹配的行为记录生成用户访问日志，根据生成的用户访问日志进行用户行为建模；其中，所述UBA云服务器处于所在网络的分析决策层，所述UBA子节点处于所在网络的探针层。</p>
+    <p>[0039]	本发明实施例另一方面还提供一种用户行为分析UBA云，包括：</p>
+    <p>[0040]	至少一个如上述实施例所述的用户行为分析UBA云服务器。</p>
+    <p>[0041]	本发明实施例另一方面还提供一种用户行为分析UBA系统，包括： [0042]	如上述实施例所述的用户行为分析UBA云和至少一个如上述实施例所述的UBA子节点，其中，所述UBA子节点和所述UBA云中的UBA云服务器以可通信方式连接。</p>
+    <p>[0043]	由上可见，本发明实施例中UBA云下部署多个UBA子节点，UBA云包括至少一个UBA云服务器，UBA云服务器处于所在网络的分析决策层，UBA子节点处于所在网络的探针层，当UBA云服务器接收第一 UBA子节点上报的其无法识别的网络内容标识后;UBA云服务器获取该网络内容标识对应的网络内容；从该网络内容中提取关键词；利用提取的该关键词更新行为知识库；向UBA子节点集下发更新的行为知识库或行为知识库的更新内容；其中，UBA子节点集包括第二 UBA子节点和第一 UBA子节点。由于采用云技术的UBA云具有比UBA子节点更强的分析处理能力，因此由UBA云服务器来分析识别UBA子节点无法识别的网络内容标识，有利于提高UBA系统的用户行为分析能力，并且由UBA云服务器进行一次分析识别后，向UBA子节点集下发UBA云服务器据此更新的UBA云行为知识库或UBA云行为知识库的更新内容，使得UBA子节点集中的所有UBA子节点都可据此更新其本地行为知识库，这样有利于避免UBA子节点对例如新网络内容的重复分析问题，进而有利于提升用户行为分析的时效性，减少资源消耗。</p>
+    <p>附图说明</p>
+    <p>[0044]	为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0045]	图1-a是现有技术的一种UBA设备部署示意图；</p>
+    <p>[0046]	图1-b是现有技术的另一种UBA设备部署示意图；</p>
+    <p>[0047]	图2是本发明实施例提供的一种UBA系统架构示意图；</p>
+    <p>[0048]	图3是本发明实施例提供的一种用户行为分析方法的流程示意图；</p>
+    <p>[0049]	图4是本发明实施例提供的另一种用户行为分析方法的流程示意图；</p>
+    <p>[0050]	图5是本发明实施例提供的一种UBA子节点的模块示意图；</p>
+    <p>[0051]	图6是本发明实施例提供的一种UBA云服务器的模块示意图；</p>
+    <p>[0052]	图7是本发明实施例提供的另一种用户行为分析方法的流程示意图；</p>
+    <p>[0053]	图8是本发明实施例提供的一种UBA云更新行为知识库的流程示意图；</p>
+    <p>[0054]	图9是本发明实施例提供的一种UBA云下发行为知识库的流程示意图；[0055]	图10是本发明实施例提供的一种UBA子节点进行用户行为建模的流程示意图；</p>
+    <p>[0056]	图11是本发明实施例提供的一种广告推送架构示意图；</p>
+    <p>[0057]	图12-a是本发明实施例提供的另一种UBA云服务器的示意图；</p>
+    <p>[0058]	图12-b是本发明实施例提供的另一种UBA云服务器的示意图；</p>
+    <p>[0059]	图12-c是本发明实施例提供的另一种UBA云服务器的示意图；</p>
+    <p>[0060]	图13是本发明实施例提供的另一种UBA云服务器的示意图；</p>
+    <p>[0061]	图14-a是本发明实施例提供的另一种UBA子节点的示意图；</p>
+    <p>[0062]	图14-b是本发明实施例提供的另一种UBA子节点的示意图； </p>
+    <p>[0063]	图15是本发明实施例提供的另一种UBA云服务器的示意图；</p>
+    <p>[0064]	图16是本发明实施例提供的UBA云的示意图；</p>
+    <p>[0065]	图17是本发明实施例提供的UBA系统的示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0066]	本发明实施例提供用户行为分析方法及相关设备和系统，以提高用户行为分析能力，减少重复分析问题。</p>
+    <p>[0067]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0068]	以下分别进行详细说明。</p>
+    <p>[0069]	参见图2，本发明实施例提供一种UBA系统架构，可包括：</p>
+    <p>[0070]	UBA云和多个UBA子节点，UBA云包括一个或多个UBA云服务器（如2中以UBA云包括多个UBA云服务器为例);本发明实施例中，UBA云服务器所处网络层级高于UBA子节点所处网络层级，例如UBA云服务器可处于所在网络的分析决策层，而UBA子节点可处于处于所在网络的探针层，UBA云服务器具有比UBA子节点更大的辐射范围。UBA子节点和UBA云服务器以可通信方式连接。</p>
+    <p>[0071 ] 例如，在电信移动网中，UBA云服务器可处于所在网络的核心层（此处将核心层看做是分析决策层），而UBA子节点可处于所在网络的接入层（此处将接入层看做探针层）；或者在电信运营网中，UBA云服务器可处于所在网络的汇聚层（此处将汇聚层看做分析决策层），UBA子节点可处于所在网络的边缘网络（此处将边缘网络看做探针层）；或在服务提供/内容提供（SP/CP)网络中，UBA云服务器可处于所在网络的核心互联网数据中心（此处将核心互联网数据中心（IDC, Internet Data Center)看做分析决策层），而UBA子节点可处于所在网络的区域IDC(此处将区域IDC看做探针层），对于其它类型的网络则可以此类推。</p>
+    <p>[0072]	其中，本发明实施例的下述方案可基于图2所示架构的UBA系统或其变形架构来具体实施。</p>
+    <p>[0073]	本发明的说明书和权利要求书及上述附图中的术语“第一”、“第二”、“第三” “第四”等（如果存在）是用于区别类似的对象，而不必用于描述特定的顺序或先后次序。应该理解这样使用的数据在适当情况下可以互换，以便这里描述的本发明的实施例例如能够以除了在这里图示的或否则描述的那些以外的顺序实施。此外，术语“包括”和“具有”以及他们的任何变形，意图在于覆盖不排他的包含，以便包含一系列单元的过程、方法、系统、产品或设备不必限于那些单元，而是可包括没有清楚地列出的或对于这些过程、方法、产品或设备固有的其它单元。</p>
+    <p>[0074]	本发明用户行为分析方法的一个实施例，可应用于包括至少一个UBA云服务器的UBA云，其中，UBA云服务器处于所在网络的分析决策层，该方法可包括：UBA云服务器接收第一 UBA子节点上报的其无法识别的网络内容标识；该UBA云服务器获取该网络内容标识对应的网络内容；该UBA云服务器从该网络内容中提取关键词；该UBA云服务器利用提取的该关键词更新行为知识库；该UBA云服务器向UBA子节点集下发更新的行为知识库或行为知识库的更新内容；其中，UBA子节点集至少包括第二 UBA子节点和第一 UBA子节点，第</p>
+    <p>二	UBA子节点和第一 UBA子节点处于所在网络的探针层。</p>
+    <p>[0075]	参见图3、本发明一个实施例提供的一种用户行为分析方法，可包括：</p>
+    <p>[0076]	301、UBA云服务器接收第一 UBA子节点上报的其无法识别的网络内容标识；</p>
+    <p>[0077]	其中，本发明实施例中提及的网络内容标识例如可为网络文件名、或统一资源定位符（URL,Uniform/Universal Resource Locator)等等能够标识网络内容的信息。其中，当UBA云下部署的多个UBA子节点中的其中某个UBA子节点（为便于引述，下面可称第一UBA子节点）遇到无法识别的某网络内容标识时，第一UBA子节点可向UBA云服务器上报该无法识别的网络内容标识。UBA云服务器具有比UBA子节点更广的辐射面，UBA云服务器更容易识别该网络内容标识。其中，UBA子节点和UBA云服务器以可通信方式连接。</p>
+    <p>[0078]	在本发明的一些实施例中，与UBA云中的UBA云服务器互联的各UBA子节点可采用以下几种方式来部署：串联或并联到传输网络中的独立设备、依附于某个网关或路由器设备、依附于某个平台（如移动梦网平台等）或采用与现有UAB设备类似的其它部署形式。</p>
+    <p>[0079]	在实际应用中，若UBA云包括多个UBA云服务器，则某个UBA云服务器接收到待处理数据（例如某UBA子节点（如第一 UBA子节点）上报的其无法识别的网络内容标识）后，该某个UBA云服务器可以自行进行相关处理，或者也可随机或非随机的将UBA子节点上报的其无法识别的网络内容标识，转发给UBA云中的其它UBA云服务器进行处理，例如，若该某个UBA云服务器当前的处理负荷大于某设定阈值（或大于UBA云的平均处理负荷），则该某个UBA云服务器可将UBA子节点上报的其无法识别的网络内容标识，转发给UBA云中当前处理负荷最小（或当前处理负荷小于UBA云的平均处理负荷）的UBA云服务器处理，或者转发给其随机选择的UBA云中其它某UBA云服务器处理，当然UBA云还可按照其它方式进行负载均衡。</p>
+    <p>[0080]	302、UBA云服务器获取上述网络内容标识对应的网络内容；</p>
+    <p>[0081]	在本发明的一些实施例中，UBA云服务器还可进一步爬取上述网络内容中的网络内容标识对应的网络内容。其中，UBA云服务器例如可进一步通过如下机制来限制网络内容爬取深度。例如，UBA云服务器可先判断当前对该网络内容标识的爬取深度是否超过设定的爬取深度上限（该爬取深度上限可根据具体需要具体设定），若是则UBA云服务器可停止爬取当前爬取到的该网络内容中包含的网络内容标识所对应的网络内容；若否则UBA云服务器可爬取当前爬取到的该网络内容中包含的网络内容标识所对应的网络内容。 </p>
+    <p>[0082]	303、UBA z?服务器从上述&#29374;取的网络内容中提取关键词；[0083]	其中，关键词例如可包括：Host、标题、URL或其它关键词等信息中其中一种或多种。</p>
+    <p>[0084]	可以理解的是，从网络内容中提取关键词，可能是直接从网络内容中提取到所有关键词（即网络内容中包含所有关键词），也可能是利用从网络内容中提取到的信息转化得到关键词（即网络内容中未直接包含所有关键词，部分或全部关键词是利用从网络内容中提取到的信息转化得到的）。</p>
+    <p>[0085]	在本发明的一些实施例中，UBA云服务器可通过如下举例方式来从网络内容中提取出关键词。举例来说，UBA云服务器对网络内容进行去噪处理（当然也可省略此步骤）；对去噪处理后网络内容进行切词处理得到若干个词；根据根据关键词参考参数从若干个词中提取出关键词，其中，该关键词参考参数例如可包括：词的词性、词频、权重和所处位置（词所处位置，可能指词在句子中所处位置，也可能指词在整个版面中所处位置）等，当然还可包括相关自定义词库等其它关键词参考参数，当然UBA云服务器还可基于现有其它关键词提取技术来从从网络内容中提取出关键词。 </p>
+    <p>[0086]	304、UBA云服务器利用提取的上述关键词更新行为知识库；</p>
+    <p>[0087]	在本发明的一些实施例中，UBA云服务器例如可根据提取的关键词得到内容分类信息（当然还可得到如应用名信息等）；UBA云服务器可基于该内容分类信息和关键词生成行为记录，并可将生成的该行为记录添加到UBA云的行为知识库。</p>
+    <p>[0088]	305.UBA云服务器向UBA子节点集下发更新的行为知识库或行为知识库的更新内容；其中，UBA子节点集至少包括：第二 UBA子节点和第一 UBA子节点等。</p>
+    <p>[0089]	可以理解，若UBA云包括多个UBA云服务器，则各UBA云服务器可共同维护行为知识库，各UBA云服务器都可更新UBA云的行为知识库，各UBA云服务器也可向UBA子节点下发行为知识库。</p>
+    <p>[0090]	在本发明的一些实施例中，UBA云服务器例如可主动（如周期性或非周期性的）或者根据UBA子节点的请求，向UBA子节点集下发UBA云更新的行为知识库、行为知识库的(部分或全部）更新内容（其中可包括上述网络内容标识对应的内容分类信息，当然还可包括该网络内容标识对应的标题、关键词等信息）、或最新的行为知识库。如此，UBA子节点集中的各UBA子节点在接收到UBA云服务器下发的更新的行为知识库、行为知识库的更新内容或最新的行为知识库后，可利用UBA云服务器下发的上述信息来更新各个UBA子节点的本地行为知识库。基于此机制，对于某UBA子节点无法识别的网络内容标识（如当前新出网络内容对应的网络内容标识，可能与UBA云服务器关联的其它很多UBA子节点都无法识别该网络内容标识），由UBA云服务器进行一次分析识别后，向UBA子节点集下发UBA云服务器据此更新的行为知识库、行为知识库的更新内容或最新的行为知识库，进而可让UBA子节点集中的所有UBA子节点都可识别，这样有利于避免各UBA子节点重复分析。</p>
+    <p>[0091]	由上可见，本实施例中UBA云下部署多个UBA子节点，UBA云包括至少一个UBA云服务器，其中，UBA云服务器处于所在网络的分析决策层，UBA子节点处于所在网络的探针层，当UBA云服务器接收第一 UBA子节点上报的其无法识别的网络内容标识后；UBA云服务器获取该网络内容标识对应的网络内容；从该网络内容中提取关键词；利用提取的该关键词更新行为知识库；向UBA子节点集下发更新的行为知识库或行为知识库的更新内容；UBA子节点集包括第二 UBA子节点和第一 UBA子节点。由于采用云技术的UBA云具有比UBA子节点更强的分析处理能力，因此由UBA云服务器来分析识别UBA子节点无法识别的网络内容标识，有利于提高UBA系统的用户行为分析能力，并且由UBA云服务器进行一次分析识别后，向UBA子节点集下发UBA云服务器据此更新的UBA云行为知识库或UBA云行为知识库的更新内容，使得UBA子节点集中的所有UBA子节点都可据此更新其本地行为知识库，这样就有利于避免多个UBA子节点对例如新网络内容的重复分析问题，进而有利于提升用户行为分析的时效性，减少资源消耗。</p>
+    <p>[0092]	在本发明的一些实施例中，UBA云服务器服务器接收第一 UBA子节点上报的其无法识别的网络内容标识后，可先利用该网络内容标识（例如可以以该网络内容标识作为索弓丨，或，可以以该网络内容标识变换得到的信息作为索引），在行为知识库查找匹配的行为记录；若在行为知识库中查找到与该网络内容标识匹配的行为记录，则UBA云服务器可向第一 UBA子节点下发该与该网络内容标识匹配的行为记录中包含的与该网络内容标识对应的内容分类信息（当然，UBA云服务器还可向第一 UBA子节点下发该与该网络内容标识匹配的行为记录中包含的该网络内容标识对应的标题、关键词等信息，甚至还可向第一 UBA子节点下发该与该网络内容标识匹配的行为记录包含的全部信息）；若在行为知识库中未 查找到与该网络内容标识匹配的行为记录，则UBA云服务器可通知第一 UBA子节点识别失败，或者，UBA云服务器可获取上述网络内容标识对应的网络内容；从该网络内容中提取关键词；利用提取的该关键词更新行为知识库；向UBA子节点集下发更新的行为知识库、或行为知识库的（部分或全部）更新内容（其中可包括上述网络内容标识对应的内容分类信息，当然还可包括该网络内容标识对应的标题、关键词等等信息），其中，UBA子节点集至少包括第二 UBA子节点和第一 UBA子节点等。</p>
+    <p>[0093]	在本发明的另一实施例中，UBA云服务器还可基于其它机制来更新其行为知识库，并可向UBA子节点集下发UBA云服务器更新的行为知识库、UBA云服务器的行为知识库的更新内容或最新的行为知识库。</p>
+    <p>[0094]	在本发明的一些实施例中，UBA云服务器例如可通过如下机制来限制网络内容爬取深度。UBA云服务器爬取上述网络内容标识对应的网络内容之后，还可判断当前对该网络内容标识的爬取深度是否超过设定的爬取深度上限，若是，则UBA云服务器可停止爬取该网络内容标识对应的网络内容中包含的子网络内容标识（其中，子网络内容标识是相对而言的，子网络内容标识包含在某网络内容标识对应的网络内容中，例如，某网络内容标识对应的网络内容中包含的若个网络内容标识，而这若干个网络内容标识则可看成是该某网络内容标识的子网络内容标识，而该子网络内容标识对应的网络内容中包含的网络内容标识，又可看成是该子网络内容标识的子网络内容标识，以此类推）所对应的网络内容；若否，则UBA云服务器可进一步爬取该网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；并可进步一步从爬取到的该网络内容中包含的子网络内容标识所对应的网络内容中提取出关键词；利用提取出的该关键词更新行为知识库；并可向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容。基于上述限制网络内容爬取深度的机制，UBA云服务器可根据需要来进行可控深度的内容爬取，有利于更好的平衡资源占用和需求。</p>
+    <p>[0095]	此外，UBA云服务器还可获取UBA子节点集生成的用户行为分析报表（如对应一个或多个用户的用户访问兴趣排名报表等）或网络行为分析报表（如对应多个网站或资源的网络访问排名报表等）；汇总获取的该用户行为分析报表或网络行为分析报表，得到汇总的用户行为分析报表（如对应一个或多个用户的用户访问兴趣排名报表等）或网络行为分析报表（如对应多个网站或资源的网络访问排名报表等）。后续，运营商便可据此进行例如精准广告推送业务等闻附加值业务。</p>
+    <p>[0096]	本发明用户行为分析方法的另一个实施例，可应用于包括至少一个UBA云服务器的UBA云，其中，UBA云服务器处于所在网络的分析决策层，该方法可包括以下内容:UBA云服务器接收第一 UBA子节点上报的无法识别的网络内容标识;UBA云服务器利用该网络内容标识在行为知识库查找与该网络内容标识匹配的行为记录；若在该行为知识库查找到与该网络内容标识匹配的行为记录，则UBA云服务器可向第一 UBA子节点下发最新的行为知识库，或该与该网络内容标识匹配的行为记录中包含的该网络内容标识对应的内容分类信息（当然，UBA云服务器还可向第一 UBA子节点下发该与该网络内容标识匹配的行为记录中包含的该网络内容标识对应的标题、关键词等信息，UBA云服务器甚至可向第一 UBA子节点下发该与该网络内容标识匹配的行为记录包含的全部信息）。此外，若UBA云服务器该行为知识库未查找到与该网络内容标识匹配的行为记录，则UBA云服务器可获取该网络内容标识对应的网络内容；UBA云服务器从该网络内容中提取关键词;UBA云服务器利用提取的该关键词更新行为知识库;UBA云服务器向UBA子节点集下发更新的行为知识库或行为知识库的更新内容；其中，UBA子节点集至少包括第二 UBA子节点和第一 UBA子节点，第二UBA子节点和第一 UBA子节点处于所在网络的探针层。相应的，而第一 UBA子节点（和第二UBA子节点）可利用UBA云服务器下发的上述信息来更新本地行为知识库。</p>
+    <p>[0097]	本发明用户行为分析方法的另一个实施例，方法可包括：第一 UBA子节点收集用户上网信息；第一 UBA子节点从收集的该用户上网信息中提取上网关键信息，其中，上网关键信息包含网络内容标识；第一 UBA子节点利用该上网关键信息在本地行为知识库中查找与该上网关键信息匹配的行为记录；若在本地行为知识库中未查找到与该上网关键信息匹配的行为记录，则第一 UBA子节点向UBA云服务器上报该上网关键信息中的网络内容标识，其中，UBA云服务器处于所在网络的分析决策层，第一 UBA子节点处于所在网络的探针层；若在本地行为知识库中查找到与该上网关键信息匹配的行为记录，则第一 UBA子节点根据匹配成功的本地行为知识库中的记录生成用户访问日志，根据生成的用户访问日志进行用户行为建模。</p>
+    <p>[0098]	参见图4、本发明另一实施例提供的一种用户行为分析方法可包括：</p>
+    <p>[0099]	401、第一 UBA子节点收集用户上网信息；</p>
+    <p>[0100]	在本发明的一些实施例中，与UBA云服务器关联的各UBA子节点可采用以下几种方式来部署：串联或并联到传输网络中的独立设备、依附于某个网关或路由器设备、依附于某个平台（如移动梦网平台等）或采用与现有UAB设备类似的其它部署形式，其中，UBA云服务器处于所在网络的分析决策层，第一 UBA子节点处于所在网络的探针层。</p>
+    <p>[0101]	402、第一 UBA子节点从收集的用户上网信息中提取上网关键信息； </p>
+    <p>[0102]	其中，第一 UBA子节点提取的上网关键信息例如可包括如下信息的一种多种多种：用户名、代理终端（user-agent)信息、网络内容标识（如URL)、时间信息、域名信息、响应码、其它现有业务参数等。</p>
+    <p>[0103]	可以理解的是，第一 UBA子节点从用户上网信息中提取上网关键信息，可能是直接从用户上网信息中提取到所有上网关键信息（即，用户上网信息中包含所有上网关键信息），也可能是利用从用户上网信息中提取到的信息转化得到上网关键信息（即网络内容中未直接包含所有上网关键信息，部分或全部上网关键信息是利用从网络内容中提取到的信息转化得到的）。</p>
+    <p>[0104]	403、第一 UBA子节点利用提取的上网关键信息在本地行为知识库中查找与该上网关键信息匹配的行为记录；</p>
+    <p>[0105]	若在本地行为知识库中未查找到与该上网关键信息匹配的行为记录（表示没有记录能够与该提取的上网关键信息相匹配，此时，可认为第一 UBA子节点无法识别该上网关键信息中的网络内容标识），则执行步骤404，若在本地行为知识库中查找到与该上网关键信息匹配的行为记录（表示有记录能够与提取的上网关键信息匹配，匹配成功则可认为第一 UBA子节点能够识别该上网关键信息中的网络内容标识），则执行步骤405 ；</p>
+    <p>[0106]	404、第一 UBA子节点向UBA云服务器上报提取的上网关键信息中的网络内容标识 (当然，还可向UBA云服务器上报上网关键信息中的其它信息，例如时间信息、域名信息、用户名等）；</p>
+    <p>[0107]	405、第一 UBA子节点根据查找到的与该上网关键信息匹配行为记录生成用户访问日志，根据生成的用户访问日志进行用户行为建模。进一步的，第一 UBA子节点还可根据建模结果生成用户行为分析报表（如对应一个或多个用户的用户访问兴趣排名报表等）或网络行为分析报表（如对应多个网站或资源的网络访问排名报表等）。</p>
+    <p>[0108]	由上可见，本发明实施例中UBA云下部署的UBA子节点可收集用户上网信息；从收集的该用户上网信息中提取上网关键信息；利用该上网关键信息匹配本地行为知识库中的记录；若匹配失败，则向UBA云服务器上报该上网关键信息中的网络内容标识，这就为UBA云服务器来分析识别该UBA子节点无法识别的网络内容标识奠定了基础，由于采用云技术的UBA云服务器具有比UBA子节点更强的分析处理能力，其中，UBA云服务器处于所在网络的分析决策层，UBA子节点处于所在网络的探针层，因此若由UBA云服务器来分析识别UBA子节点无法识别的网络内容标识，有利于提高UBA系统用户行为分析能力，且由UBA云服务器进行一次分析识别后，还可向多个UBA子节点下发UBA云服务器据此更新的行为知识库或行为知识库的更新内容，使得各UBA子节点都可据此更新其本地行为知识库，这样就有利于避免UBA子节点对例如新网络内容的重复分析问题，进而有利于提升用户行为分析的时效性，相对减少资源消耗。</p>
+    <p>[0109]	此外，第一 UBA子节点还可主动（周期性或非周期性）向UBA云服务器上报其生成的用户行为分析报表（例如，对应一个或多个用户的用户访问兴趣排名报表等）或网络行为分析报表（例如，对应多个网站或资源的网络访问排名报表等），或者第一 UBA子节点也可在UBA云服务器的指令下，向UBA云服务器上报其生成的用户行为分析报表（如对应一个或多个用户的用户访问兴趣排名报表等）或网络行为分析报表（如对应多个网站或资源的网络访问排名报表等）。而UBA云服务器可汇总与其关联的多个UBA子节点上报的用户行为分析报表或网络行为分析报表，得到汇总的用户行为分析报表或网络行为分析报表。后续，运营商便可据此进行例如精准广告推送业务等高附加值业务。</p>
+    <p>[0110]	在本发明的一些实施例中，第一 UBA子节点可接收UBA云服务器下发的UBA云服务器最新的行为知识库、更新的行为知识库、行为知识库的更新内容或第一 UBA子节点无法识别的网络内容标识对应的内容分类信息、甚至该网络内容标识对应的标题、关键词等信息。其中。第一 UBA子节点可接收UBA云服务器主动下发的上述信息，或第一 UBA子节点也可向UBA云服务器发送行为知识库更新请求，而后接收UBA云服务器在接收到该行为知识库更新请求后下发的上述信息；第一 UBA子节点可利用UBA云服务器下发的上述信息，来更新第一 UBA子节点的本地行为知识库。当然，与UBA云下部署的其它各个UBA子节点均可按照上述方式更新其本地行为知识库。</p>
+    <p>[0111]	本发明实施例还提供一种网络内容爬取方法，可包括以下内容：UBA云服务器或UBA子节点爬取第二网络内容标识（其中，第二网络内容标识可能是配置在UBA云服务器中的，也可能是UBA云服务器获取的某个网络内容中包含的，也可能是UBA子节点上报的对应的网络内容标识）；判断当前对该第二网络内容标识的爬取深度是否超过设定的爬取深度上限（其中，爬取深度上限例如可设定为5、6、7、8、9或其它值），若是则停止爬取当前爬取至IJ的该网络内容中包含的子网络内容标识所对应的网络内容；若否则爬取当前爬取到的该网络内容中包含的子网络内容标识所对应的网络内容。可以理解，基于上述网 络内容爬取深度控制机制，UBA云服务器或UBA子节点可根据需要来进行可控深度的内容爬取，有利于更好的平衡资源占用和需求。</p>
+    <p>[0112]	为便于更好的理解和实施本发明实施例的上述方案，下面举例几个应用场景来进行具体说明。</p>
+    <p>[0113]	下面主要以基于如图2所示的UBA系统架构为例。</p>
+    <p>[0114]	其中，UBA系统架构可包括UAB云和多个UBA子节点。</p>
+    <p>[0115]	在本发明的一些实施例中，UBA云下部署的各UBA子节点可采用以下几种方式来部署：串联或并联到传输网络中的独立设备、依附于某个网关或路由器设备、依附于某个平台（如移动梦网平台等）或采用与现有UAB设备类似的其它部署形式。其中，UAB云包括一个多个UBA云服务器，UBA云服务器处于汇聚网络，UBA子节点处于边缘网络。</p>
+    <p>[0116]	其中，每个UBA子节点例如可主要完成以下功能：</p>
+    <p>[0117]	Wsl、该UBA子节点所辐射区域内的用户行为分析；</p>
+    <p>[0118]	Ws2、向UAB云上报无法识别的网络内容标识。</p>
+    <p>[0119]	在一种应用场景下，参见图5，UBA子节点可包括：收集模块501、筛选模块502、筛选规则库503、行为识别模块504、本地行为知识库505、库升级模块506、上报模块507、建模模块508、建模结果库509、服务模块510。</p>
+    <p>[0120]	其中，收集模块501可用于采集用户上网信息（如用户上网日志信息），该用户上网信息可包括如下信息的一种或多种：网络内容标识（如URL)、时间信息、用户名、域名信息、响应码、user-agent等。</p>
+    <p>[0121]	筛选模块502，用于去除收集模块501采集到的非法用户上网信息，筛选模块502例如可对用户上网信息中的URL的长度进行合法性校验，去除URL长度超过阈值的用户上网信息。</p>
+    <p>[0122]	筛选规则库503中可包括若干条筛选规则，而筛选模块502则可根据筛选规则库503中的一条或多条筛选规则，来对收集模块501采集到的用户上网信息进行筛选。</p>
+    <p>[0123]	其中，筛选规则库503中的一条筛选规则记录的示例例如可如表I :</p>
+    <p>[0124]表	I[0125]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00161.png"> <img id="idf0001" file="CN102685224AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00161.png" class="patent-full-image" alt="Figure CN102685224AD00161"> </a> </div>
+    <p>[0126]	UBA子节点的本地行为知识库505中可包括若干条行为记录。其中，UBA子节点本地行为知识库中的一条行为记录示例例如可如表2 ：</p>
+    <p>[0127]表	2</p>
+    <p>[0128]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00162.png"> <img id="idf0002" file="CN102685224AD00162.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00162.png" class="patent-full-image" alt="Figure CN102685224AD00162"> </a> </div>
+    <p>[0130]	行为识别模块504，用于从收集模块501收集的用户上网信息中提取上网关键信息，利用提取的上网关键信息在其本地行为知识库中查找匹配的行为记录。例如，可根据上网关键信息中的URL(或其它信息）通过哈希算法（或其它算法）计算出索引标识，而本地行为知识库中的每条记录都包括至少I个索引标识（记录中的该索引标识当然也是根据该记录中的URL(或其它信息）通过哈希算法（或其它算法）计算得到的），行为识别模块504利用上网关键信息得到索引标识，利用该索引标识在本地行为知识库中查找匹配行为记录，若查找到匹配行为记录，则表示上网关键信息中的URL能够识别，也表示该上网关键信息能够识别，对应的用户上网行为能够识别；若未查找到匹配行为记录，则表示该上网关键信息中的URL不能够识别，也表示该上网关键信息不能识别，对应的用户上网行为也不能够识别，以此类推。</p>
+    <p>[0131 ] 上报模块507，用于向UBA云服务器上报行为识别模块504无法识别的上网关键信息中的网络内容标识（如URL)，当然，上报模块507还可一并上报该上网关键信息中的时间信息、域名信息、user-agent信息等。</p>
+    <p>[0132]	建模模块508，用于根据行为识别模块504匹配出的本地行为记录进行用户行为建模，例如可采取频度算法、SVN或其它现有建模算法来进行用户行为建模。</p>
+    <p>[0133]	建模结果库509，用于记录建模模块508的用户行为建模结果。</p>
+    <p>[0134]	其中，建模结果库509中的一条建模结果记录示例例如可如表3 ：</p>
+    <p>[0135]表	3</p>
+    <p>[0136]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00171.png"> <img id="idf0003" file="CN102685224AD00171.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00171.png" class="patent-full-image" alt="Figure CN102685224AD00171"> </a> </div>
+    <p>[0137]	库升级模块506，用于主动获取或被动接收UBA云服务器的行为知识库，并基于UBA云服务器的行为知识库更新本地行为知识库505。</p>
+    <p>[0138]	服务模块510，用于提供包括但不限于以下的服务，查询用户兴趣、查询对某类兴趣词感兴趣的用户群等。</p>
+    <p>[0139]	其中，UBA云服务器例如可主要完成以下功能：</p>
+    <p>[0140]	WyI、分析整网的网络行为、</p>
+    <p>[0141]	Wy2、完成整网行为知识库的建立、</p>
+    <p>[0142]	Wy3、提供人工审计接口、</p>
+    <p>[0143]	Wy4、提供获取最新行为知识库的服务接口。</p>
+    <p>[0144]	在一种应用场景下，参见图6，UBA云服务器可包括：</p>
+    <p>[0145]	爬取模块601、解析模块602、审计接口 603、行为知识库604、远程库升级模块605、UBA子节点认证模块606、爬取列表607、本地初始爬取列表608、爬取列表配置模块609、服务模块610、汇总分析模块611。</p>
+    <p>[0146]	其中，爬取模块601，用于获取网络内容标识（如URL)所对应的网络内容；其中，爬取模块601用来爬取网络内容的网络内容标识可能来自二个方面，一个是由UBA子节点上报，一个是UBA云服务器本地配置本区域内比较活跃的网站等。</p>
+    <p>[0147]	解析模块602，用于解析爬取模块601获取的网络内容，以从网络内容中的提取关键词（例如标题或其它关键词等信息），根据该关键词通过聚类算法（如SVN算法等）得出内容分类信息，生成行为记录并将生成的行为记录添加到行为知识库604中。</p>
+    <p>[0148]	行为知识库604中可包括若干条行为记录；</p>
+    <p>[0149]	其中，UBA云服务器维护的行为知识库中的一条行为记录示例例如可如表4 ：</p>
+    <p>[0150]表	4</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00181.png"> <img id="idf0004" file="CN102685224AD00181.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00181.png" class="patent-full-image" alt="Figure CN102685224AD00181"> </a> </div>
+    <p>[0152]	审计接口 603 :提供查看或修正内容分类信息的接口 ；</p>
+    <p>[0153]	爬取列表本地配置模块609，可用于按活跃程度等来配置本地初始爬取列表608，例如新闻门户类网站，每天都会有大量更新的内容，将其配置在本地初始爬取列表608。</p>
+    <p>[0154]	其中，本地初始爬取列表608中的一条爬取记录示例例如可如表5 ：</p>
+    <p>[0155]表	5</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00182.png"> <img id="idf0005" file="CN102685224AD00182.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00182.png" class="patent-full-image" alt="Figure CN102685224AD00182"> </a> </div>
+    <p>[0158]	爬取列表607，记录UBA子节点上报的网络内容标识，及爬取模块601爬取的网络内容中包含的网络内容标识；</p>
+    <p>[0159]	其中，爬取列表607中的一条爬取记录示例例如可如表6 ：</p>
+    <p>[0160]表	3</p>
+    <p>[0161]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00183.png"> <img id="idf0006" file="CN102685224AD00183.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00183.png" class="patent-full-image" alt="Figure CN102685224AD00183"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00191.png"> <img id="idf0007" file="CN102685224AD00191.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00191.png" class="patent-full-image" alt="Figure CN102685224AD00191"> </a> </div>
+    <p>[0162]	远程库升级模块605，用于向UBA子节点下发最新的行为知识库。</p>
+    <p>[0163]	汇总分析模块611，用于收集各UBA子节点生成的用户行为分析报表（如对应一个或多个用户的用户访问兴趣排名报表等）或网络行为分析报表（如对应多个网站或资源的网络访问排名报表等）分析结果，汇总分析得到汇总的用户行为分析报表（如对应一个或多个用户的用户访问兴趣排名报表等）或网络行为分析报表（如对应多个网站或资源的网络访问排名报表等）。 </p>
+    <p>[0164]	服务模块610，用于提供获取用户行为分析报表或网络行为分析报表的服务接口。</p>
+    <p>[0165]	UBA子节点认证模块606，用于对UBA子节点进行鉴权认证，认证通过后的UBA子节点与UBA云服务器关联成功。</p>
+    <p>[0166]	可以理解的是，上述举例提供的UBA子节点和UBA云服务器所包括的部分模块可以省略，且其中的多个模块也可集成为一个模块，其中的某个模块也可能拆分为多个模块，或某模块的功能可集成到其它一个或多个模块中。</p>
+    <p>[0167]	下面举例包含UBA云服务器更新UBA子节点的本地行为知识库过程的一种用户行为分析方法的流程示例。</p>
+    <p>[0168]	参见图7、具体流程可包括：</p>
+    <p>[0169]	701、UBA子节点Al收集用户ul的用户上网信息；</p>
+    <p>[0170]	702、UBA子节点Al从用户ul的用户上网信息中提取上网关键信息，利用该上网关键信息在本地行为知识库中查找与该上网关键信息匹配的行为记录；</p>
+    <p>[0171]	此处假设在本地行为知识库中未查找到与该上网关键信息匹配的行为记录（即UBA子节点Al无法识别该上网关键信息中的网络内容标识），UBA子节点Al点向UBA云服务器上报该上网关键信息中的网络内容标识；</p>
+    <p>[0172]	703、UBA云服务器获取UBA子节点Al上报的无法识别的网络内容标识对应的网络内容；从该网络内容中提取关键词；利用提取的该关键词更新行为知识库；UBA云服务器向UBA子节点集下发更新的行为知识库或行为知识库的更新内容；</p>
+    <p>[0173]	其中，该UBA子节点集包括与UBA云服务器下部署的UBA子节点Al和UBA子节点A2。UBA子节点Al和UBA子节点A2利用UBA云服务器下发更新的行为知识库或行为知识库的更新内容，来更新UBA子节点Al和UBA子节点A2的本地行为知识库。</p>
+    <p>[0174]	UBA子节点Al利用提取的上网关键信息，在更新后的本地行为知识库中查找匹配的行为记录（此处便可查找到匹配的行为记录）；根据查找到的匹配行为记录生成用户访问日志，UBA子节点Al根据生成的用户访问日志进行用户行为建模，UBA子节点Al根据建模结果生成用户行为分析报表或网络行为分析报表。</p>
+    <p>[0175]	704、UBA子节点A2收集用户u2的用户上网信息，此处假设用户u2访问与用户ul相同的网站或资源。</p>
+    <p>[0176]	705、UBA子节点A2从收集的该用户上网信息中提取上网关键信息；[0177]	利用该上网关键信息在本地行为知识库中查找与该上网关键信息匹配的行为记录（由于UBA子节点A2更新了本地行为知识库，因此可识别），UBA子节点A2可根据匹配的行为记录生成用户访问日志，UBA子节点A2根据生成的用户访问日志进行用户行为建模，UBA子节点A2根据建模结果生成用户行为分析报表或网络行为分析报表。</p>
+    <p>[0178]	下面举例一种UBA云服务器更新行为知识库的流程示例。</p>
+    <p>[0179]	参见图8、具体流程可包括：</p>
+    <p>[0180]	801、UBA云服务器设当前爬取深度m = I ；</p>
+    <p>[0181]	802、UBA云服务器爬取URL对应的网页内容； </p>
+    <p>[0182]	其中，步骤802中的URL可能配置在UBA云服务器中，也可能是UBA云服务器获取的某个网络内容中包含的，也可能是UBA子节点上报的。</p>
+    <p>[0183]	803、m = m+1 ；</p>
+    <p>[0184]	804、UBA云服务器判断当前爬取深度m是否超过设定的爬取深度上限MO ；</p>
+    <p>[0185]	若否，则执行步骤805 ;若是，则执行步骤807 ；</p>
+    <p>[0186]	805、UBA云服务器解析当前爬取的网页内容以获得网页内容中的URL ；</p>
+    <p>[0187]	806、UBA云服务器爬取当前获得的URL对应的网页内容，返回步骤803 ；</p>
+    <p>[0188]	807、UBA z?服务器从爬取的网页内容中提取关键词（例如Host、标题或其它关键词等）；</p>
+    <p>[0189]	808, UBA云服务器根据提取的关键词通过聚类算法得到内容分类信息；</p>
+    <p>[0190]	809、UBA云服务器基于上述内容分类信息和关键词生成行为记录；</p>
+    <p>[0191]	810、UBA云服务器将生成的行为记录添加到行为知识库。</p>
+    <p>[0192]	由上可见，UBA云服务器可根据需要来限制爬取深度，有利于更好的平衡资源占用和需求。</p>
+    <p>[0193]	下面举例一种UBA云服务器下发行为知识库的流程示例。</p>
+    <p>[0194]	参见图9，具体步骤可包括：</p>
+    <p>[0195]	901、UBA云服务器接收UBA子节点发送的认证消息；</p>
+    <p>[0196]	902、UBA云服务器对该认证消息进行认证；</p>
+    <p>[0197]	若认证通过，则执行步骤903，若认证失败，则执行步骤904</p>
+    <p>[0198]	903、UBA云服务器向UBA子节点下发最新的行为知识库；UBA子节点利用该最新的行为知识库来更新其本地行为知识库。</p>
+    <p>[0199]	904、UBA云服务器通知UBA子节点认证失败。</p>
+    <p>[0200]	由上可见，引入认证机制后有利于提高UBA系统的安全可靠性。</p>
+    <p>[0201]	下面举例一种UBA子节点进行用户行为建模的流程示例。</p>
+    <p>[0202]	参见图10，具体步骤可包括：</p>
+    <p>[0203]	1001、UBA子节点收集用户上网信息；</p>
+    <p>[0204]	其中，UBA子节点收集的用户上网信息可如下信息的一种或多种：</p>
+    <p>[0205]	用户名、时间、URL、域名信息、User-Agent、响应码、其它业务参数等信息。</p>
+    <p>[0206]	1002、UBA子节点从用户上网信息中提取上网关键信息；</p>
+    <p>[0207]	其中，UBA子节点提取的上网关键信息可如下信息的一种或多种：</p>
+    <p>[0208]	用户名、时间、URL、域名信息、User-Agent等信息；[0209]	1003、UBA子节点按照筛选规则筛选出合法的用户上网信息；</p>
+    <p>[0210]	例如UBA子节点选出的合法用户上网信息为，网关键信息中的URL的长度在2083Bytes 以内的。</p>
+    <p>[0211]	1004, UBA子节点利用合法关键信息中的URL计算出索引标识。</p>
+    <p>[0212]	1005、UBA子节点根据索引标识在本地行为知识库查找匹配行为记录；</p>
+    <p>[0213]	其中，本地行为知识库的记录中包括但不限于网站、应用名、分类等信息；</p>
+    <p>[0214]	若未查找到匹配行为记录，则将网关键信息中的URL上报给UBA云服务器；</p>
+    <p>[0215]	若查找到匹配行为记录，则执行步骤1006。</p>
+    <p>[0216]	1006、UBA子节点根据查找到的匹配行为记录生成用户访问日志，并可将生成用户访问日志添加到用户行为日志表；&#183;</p>
+    <p>[0217]	1007、UBA子节点根据用户行为日志表进行用户行为建模；</p>
+    <p>[0218]	UBA子节点例如可基于SVN、统计频度等算法来进行用户行为建模。</p>
+    <p>[0219]	1008、UBA子节点根据用户行为用户行为建模结构生成用户行为分析报表或网络行为分析报表。</p>
+    <p>[0220]	此外，UBA云服务器可收集各UBA子节点生成的用户行为分析报表或网络行为分析报表，比如TOP N网站报表、TOP N流量报表等。UBA云服务器可汇总各UBA生成的用户行为分析报表或网络行为分析报表，得到汇总的用户行为分析报表或网络行为分析报表，比如将各UBA子节点生成的TOP N网站报表合并后可得到整网的TOP N网站报表。</p>
+    <p>[0221]	下面举例一个UBA云服务器协助路由器完成精准广告推送业务的示例。</p>
+    <p>[0222]	例如图11所示，UBA云服务器从路由器获取用户上网信息（该用户上网信息包括用户名，URL，域名等）；UBA云服务器根据用户上网信息建模出用户行为模型；当用户访问到某内容提供网页或服务提供网页时，路由器通过广告平台向UBA云服务器查询该用户的访问兴趣爱好，广告平台根据兴趣爱好找到对应的广告，广告平台指示网络代理(Webproxy)添加相应的广告到用户所访问的网页内容中去，实现精准广告推送业务。</p>
+    <p>[0223]	下面再举例一个具体应用场景。</p>
+    <p>[0224]	S01、用户 A 访问 http://www. tingroom. com/radio/1334, html ；</p>
+    <p>[0225]	用户A上网信息被UBA子节点A3收集到，UBA子节点A3收集到的用户A上网信息包括但不限于：</p>
+    <p>[0226]	user-a, http://www. tingroom. com/radio/1334, html、</p>
+    <p>[0227]	2012-3-109:30:00&gt; Mozilla/4. 0&gt; www. tingroom. com。</p>
+    <p>[0228]	S02、UBA 子节点 A3 根据 http://www. tingroom. com/radio/1334, html 在本地行为知识库中无法找到匹配的行为记录；</p>
+    <p>[0229]	UBA子节点A3上报信息给云UBA，此处上报的信息包括但不限于：</p>
+    <p>[0230]	http://www. tingroom. com/radio/1334, html、</p>
+    <p>[0231]	2012-3-109:30:00&gt; Mozilla/4. 0&gt; www. tingroom. com。</p>
+    <p>[0232]	S03、UBA云服务器接收到UBA子节点A3上报的信息后，</p>
+    <p>[0233]根据	http://www. tingroom. com/radio/1334, html 在云端的行为知识库中查找是否存在匹配的行为记录，如果查找到匹配行为记录，执行步骤1308 ;如果未查找到匹配行为记录，则执行步骤1304。[0234]	S04、UBA 云服务器根据 http://www. tingroom. com/radio/1334, html 向 Internet发出网页获取请求；</p>
+    <p>[0235]	S05、Internet返回对应网页给UBA云服务器；</p>
+    <p>[0236]	S06、UBA云服务器从获取到网页中提练出如下但不限于关键信息：BBC和英语等；</p>
+    <p>[0237]	UBA云服务器根据关键信息生成行为记录并添加到行为知识库中：</p>
+    <p>[0238]如：http://www.	tingroom. com/radio/1334, html,英语学习，BBC,英语。</p>
+    <p>[0239]	S07、云UBA向UBA子节点A3和UBA子节点A4下发生成的行为记录；</p>
+    <p>[0240]	下属UBA子节点A3和UBA子节点A4据此更新本地行为知识库。</p>
+    <p>[0241]	S08、用户 B 访问 http://www. tingroom. com/radio/1334, html,</p>
+    <p>[0242]	用户B上网信息被UBA子节点A4收集到，UBA子节点A3收集到的用户A上网信息包括但不限于：</p>
+    <p>[0243]	user-b, http://www. tingroom. com/radio/1334, html、</p>
+    <p>[0244]	2012-3-10 9:35:00、Mozilla/4. 0、www. tingroom. com。</p>
+    <p>[0245]	S09、UBA 子节点 A4 根据 http://www. tingroom. com/radio/1334, html 在本地行为知识库中找到了匹配的行为记录：</p>
+    <p>[0246]如：http://www.	tingroom. com/radio/1334, html,英语学习，BBC,英语 UBA 子节点A4生成用户B上网日志记录：</p>
+    <p>[0247]	user-b, http://www.tingroom. com/radio/1334. html,2012-3-10 9:35:00，Mozilla/4. 0, www. tingroom. com,英语学习，BBC,英语。</p>
+    <p>[0248]	Sll、与UBA云服务器关联的各UBA子节点定时为本地用户行为建模。</p>
+    <p>[0249]	假定用户A每天访问实例网页100次，体育NBA网页间断访问少于10次；</p>
+    <p>[0250]	假定用户B每天访问实例网页100次，新闻网页间断访问少于10次。</p>
+    <p>[0251]	那么，UBA子节点A3的用户A行为建模结果可为：</p>
+    <p>[0252]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00221.png"> <img id="idf0008" file="CN102685224AD00221.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00221.png" class="patent-full-image" alt="Figure CN102685224AD00221"> </a> </div>
+    <p>[0253]	UBA子节点A3生成的的用户A的T0P2报表举例可为： </p>
+    <p>[0254]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00222.png"> <img id="idf0009" file="CN102685224AD00222.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00222.png" class="patent-full-image" alt="Figure CN102685224AD00222"> </a> </div>
+    <p>[0255]	UBA子节点A4的用户B行为建模结果可为：</p>
+    <p>[0256]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00231.png"> <img id="idf0010" file="CN102685224AD00231.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00231.png" class="patent-full-image" alt="Figure CN102685224AD00231"> </a> </div>
+    <p>[0257]	UBA子节点A4生成的用户B的T0P2报表举例可为：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00232.png"> <img id="idf0011" file="CN102685224AD00232.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00232.png" class="patent-full-image" alt="Figure CN102685224AD00232"> </a> </div>
+    <p>[0259]	S12、UBA云服务器定期或不定期向各UBA子节点收集信息，收集的信息包括但不限于用户兴趣表，T0P2报表等。</p>
+    <p>[0260]	S14、UBA云服务器进行整网建模。</p>
+    <p>[0261]	UBA云服务器的整网建模结果例如可为：</p>
+    <p>[0262]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00233.png"> <img id="idf0012" file="CN102685224AD00233.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00233.png" class="patent-full-image" alt="Figure CN102685224AD00233"> </a> </div>
+    <p>[0263]	UBA云服务器汇总的网络访问TOPN报表举例可为：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00234.png"> <img id="idf0013" file="CN102685224AD00234.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00234.png" class="patent-full-image" alt="Figure CN102685224AD00234"> </a> </div>
+    <p>[0265]	后续广告平台可向UBA云服务器查询该用户的访问兴趣爱好，广告平台根据兴趣爱好找到对应的广告，广告平台可指示网络代理添加相应的广告到用户所访问的网页内容中去，实现精准广告推送业务。[0266]	可以理解的是，上述举例仅为说明本发明实施例方案思想，不同应用场景下可基于需要灵活变换，不限于上述举例形式。</p>
+    <p>[0267]	由上可见，本实施例中的UBA云下部署的UBA子节点可收集用户上网信息；从收集的该用户上网信息中提取上网关键信息；利用该上网关键信息匹配本地行为知识库中的记录；若匹配失败，则向UBA云服务器上报该上网关键信息中的网络内容标识，这就为UBA云服务器来分析识别该UBA子节点无法识别的网络内容标识奠定了基础，由于采用云技术的UBA云服务器具有比UBA子节点更强的分析处理能力，UBA云服务器处于所在网络的分析决策层，UBA子节点处于所在网络的探针层，因此若由UBA云服务器来分析识别UBA子节点无法识别的网络内容标识，有利于提高UBA系统用户行为分析能力，且由UBA云服务器进行一次分析识别后，还可向多个UBA子节点下发UBA云服务器据此更新的行为知识库或行为知识库的更新内容，使得各UBA子节点都可据此更新其本地行为知识库，这样有利于避免UBA子节点对例如新网络内容的重复分析问题，进而有利于提升用户行为分析的时效性，减少 资源消耗。进一步的，通过UBA云服务器有利于支撑复杂场景处理能力，同时通过UBA子节点实现了接入端设备的高性能；采用云计算方式有利于支持业务无损升级，保证业务的连续性。</p>
+    <p>[0268]	需要说明的是，对于前述的各方法实施例，为了简单描述，故将其都表述为一系列的动作组合，但是本领域技术人员应该知悉，本发明并不受所描述的动作顺序的限制，因为依据本发明，某些步骤可以采用其他顺序或者同时进行。其次，本领域技术人员也应该知悉，说明书中所描述的实施例均属于优选实施例，所涉及的动作和模块并不一定是本发明所必须的。</p>
+    <p>[0269]	为便于更好的实施本发明实施例的上述方案，下面还提供用于实施上述方案的相</p>
+    <p>关装置。</p>
+    <p>[0270]	参见图12-a、本发明实施例提供的一种UBA云服务器1200，可包括：</p>
+    <p>[0271]	接收模块1201、获取模块1202、提取模块1203、库更新模块1204和下发模块1205。</p>
+    <p>[0272]	其中，接收模块1201，用于接收第一 UBA子节点上报的无法识别的网络内容标识；</p>
+    <p>[0273]	获取模块1202，用于获取接收模块1201接收的网络内容标识对应的网络内容；</p>
+    <p>[0274]	提取模块1203，用于从获取模块1202获取的网络内容中提取关键词；</p>
+    <p>[0275]	可以理解的是，提取模块1203从网络内容中提取关键词，可能是直接从网络内容中提取到所有关键词（即网络内容中包含所有关键词），也可能是利用从网络内容中提取到的信息转化得到关键词（即网络内容中未直接包含所有关键词，部分或全部关键词是利用从网络内容中提取到的信息转化得到的）。</p>
+    <p>[0276]	在本发明的一些实施例中，提取模块1203可通过如下举例方式来从网络内容中提取出关键词。举例来说，提取模块1203可对网络内容进行去噪处理（当然也可省略此步骤）；对去噪处理后网络内容进行切词处理得到若干个词；根据根据关键词参考参数从若干个词中提取出关键词，其中，该关键词参考参数例如可包括：词的词性、词频、权重和所处位置（词所处位置，可能指词在句子中所处位置，也可能指词在整个版面中所处位置）等，当然还可包括相关自定义词库等其它关键词参考参数，当然提取模块1203还可基于现有其它关键词提取技术来从从网络内容中提取出关键词。[0277]	库更新模块1204，用于利用提取的提取模块1203提取的关键词更新行为知识库；</p>
+    <p>[0278]	下发模块1205，用于向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容；其中，UBA子节点集至少包括第二 UBA子节点和第一 UBA子节点。其中，UBA云服务器1200处于所在网络的分析决策层，第二 UBA子节点和第一 UBA子节点处于所在网络的探针层。</p>
+    <p>[0279]	例如，在电信移动网中，UBA云服务器1200可处于所在网络的核心层（此处将核心层看做是分析决策层），而UBA子节点可处于所在网络的接入层（此处将接入层看做探针层）；或者在电信运营网中，UBA云服务器1200可处于所在网络的汇聚层（此处将汇聚层看做分析决策层），UBA子节点可处于所在网络的边缘网络（此处将边缘网络看做探针层）；或在SP/CP网络中，UBA云服务器1200可处于所在网络的核心互联网数据中心（此处将核心互联网数据中心IDC看做分析决策层），而UBA子节点可处于所在网络的区域IDC(此处 将区域IDC看做探针层），对于其它类型的网络则可以此类推。</p>
+    <p>[0280]	参见图12-b，在本发明的一些实施例中，UBA云服务器1200还可包括：</p>
+    <p>[0281]	查找模块1206，用于利用接收模块1201接收到的网络内容标识在行为知识库查找与网络内容标识匹配的行为记录；</p>
+    <p>[0282]	下发模块1205还可用于，若查找模块1206在行为知识库中查找到与网络内容标识匹配的行为记录，则向第一 UBA子节点下发与网络内容标识匹配的行为记录中包含的，与该网络内容标识对应的内容分类信息；</p>
+    <p>[0283]	获取模块1202具体用于，若查找模块1206在行为知识库中未查找到与网络内容标识匹配的行为记录，则获取上述网络内容标识对应的网络内容。</p>
+    <p>[0284]	参见图12-c，在本发明的一些实施例中，UBA云服务器1200还可包括：</p>
+    <p>[0285]	控制爬取模块1210，用于判断当前对上述网络内容标识的爬取深度是否超过设定的爬取深度上限，若是，则停止爬取该网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；若否，则控制获取模块1202进一步爬取该网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；</p>
+    <p>[0286]	获取模块1202还用于，爬取上述网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；</p>
+    <p>[0287]	提取模块1203还可用于，从获取模块1202爬取到的上述子网络内容标识所对应的网络内容中提取出关键词；</p>
+    <p>[0288]	库更新模块1204还用于，利用提取模块1203提取出的上述关键词更新行为知识库；</p>
+    <p>[0289]	库更新模块1205还用于，向UBA子节点集下发更新的行为知识库或者行为知识库的更新内容。</p>
+    <p>[0290]	可以理解的是，本实施例中的UBA云服务器1200可如上述方法实施例中的UBA云服务器，其各个功能模块的功能可以根据上述方法实施例中的方法具体实现，其具体实现过程可以参照上述方法实施例的相关描述，此处不再一一赘述。</p>
+    <p>[0291]	参见图13、本发明实施例提供的一种UBA云服务器1300，可包括：</p>
+    <p>[0292]	接收模块1301，用于接收第一 UBA子节点上报的无法识别的网络内容标识；</p>
+    <p>[0293]	查询模块1302，用于利用接收模块1301接收的网络内容标识，在行为知识库查找匹配的行为记录；</p>
+    <p>[0294]	下发模块1303，用于若查询模块1302在行为知识库查找到与网络内容标识匹配的行为记录，则向第一 UBA子节点下发与网络内容标识匹配的行为记录中包含的上述网络内容标识对应的内容分类信息，其中，UBA云服务器1300处于所在网络的分析决策层，第一UBA子节点处于所在网络的探针层。</p>
+    <p>[0295]	例如，在电信移动网中，UBA云服务器1300可处于所在网络的核心层（此处将核心层看做是分析决策层），而UBA子节点可处于所在网络的接入层（此处将接入层看做探针层）；或者在电信运营网中，UBA云服务器1300可处于所在网络的汇聚层（此处将汇聚层看做分析决策层），UBA子节点可处于所在网络的边缘网络（此处将边缘网络看做探针层）；或在SP/CP网络中，UBA云服务器1300可处于所在网络的核心互联网数据中心（此处将核心互联网数据中心（IDC)看做分析决策层），而UBA子节点可处于所在网络的区域IDC(此处将区域IDC看做探针层），对于其它类型的网络则可以此类推。 </p>
+    <p>[0296]	可以理解的是，本实施例中的UBA云服务器1300可如上述方法实施例中的UBA云服务器，其各个功能模块的功能可以根据上述方法实施例中的方法具体实现，其具体实现过程可以参照上述方法实施例的相关描述，此处不再一一赘述。</p>
+    <p>[0297]	参见图14-a、本发明实施例提供的一种UBA子节点1400，可包括：</p>
+    <p>[0298]	收集模块1401，用于收集用户上网信息；</p>
+    <p>[0299]	提取模块1402，用于从收集模块1401收集的用户上网信息中提取上网关键信息，其中，上网关键信息中包含网络内容标识；</p>
+    <p>[0300]	可以理解的是，提取模块1402从用户上网信息中提取上网关键信息，可能是直接从用户上网信息中提取到所有上网关键信息（即，用户上网信息中包含所有上网关键信息），也可能是利用从用户上网信息中提取到的信息转化得到上网关键信息（即网络内容中未直接包含所有上网关键信息，部分或全部上网关键信息是利用从网络内容中提取到的信息转化得到的）。</p>
+    <p>[0301]	查找模块1403，用于利用提取模块1402提取的上网关键信息在本地行为知识库中查找匹配的行为记录；</p>
+    <p>[0302]	上报模块1404，用于若查找模块1403在本地行为知识库中未查找到与上述上网关键信息匹配的行为记录，则UBA云服务器上报上网关键信息中的网络内容标识，其中，UBA云服务器处于所在网络的分析决策层，UBA子节点1400处于所在网络的探针层；</p>
+    <p>[0303]	例如，在电信移动网中，UBA云服务器可处于所在网络的核心层（此处将核心层看做是分析决策层），而UBA子节点1400可处于所在网络的接入层（此处将接入层看做探针层）；或者在电信运营网中，UBA云服务器可处于所在网络的汇聚层（此处将汇聚层看做分析决策层），UBA子节点1400可处于所在网络的边缘网络（此处将边缘网络看做探针层）；或在SP/CP网络中，UBA云服务器可处于所在网络的核心互联网数据中心（此处，将核心IDC看做分析决策层），而UBA子节点1400可处于所在网络的区域IDC (此处将区域IDC看做探针层），对于其它类型的网络则可以此类推。</p>
+    <p>[0304]	生成模块1405，用于若查找模块1403在本地行为知识库1408中查找到匹配的行为记录，则根据匹配的行为记录生成用户访问日志，根据生成的用户访问日志进行用户行为建模。[0305]	参见图14-b、在本发明的一些实施例中，UBA子节点1400还可包括：</p>
+    <p>[0306]	获取模块1406，用于接收UBA云服务器下发的行为知识库、行为知识库的更新内容或上述网络内容标识对应的内容分类信息；</p>
+    <p>[0307]	库更新模块1407，用于利用UBA云服务器下发的行为知识库、行为知识库的更新内容或上述网络内容标识对应的内容分类信息，更新UBA子节点1400的本地行为知识库1408 ；</p>
+    <p>[0308]	本地行为知识库1408，用于存储若干条行为记录。其中，UBA子节点1400本地行为知识库中的一条行为记录示例例如可如表2 ：</p>
+    <p>[0309]	表 2</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00271.png"> <img id="idf0014" file="CN102685224AD00271.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102685224A/CN102685224AD00271.png" class="patent-full-image" alt="Figure CN102685224AD00271"> </a> </div>
+    <p>[0311]	当然，本地行为知识库1408中记录的行为记录不限于表2格式。</p>
+    <p>[0312]	可以理解的是，本实施例中介绍的UBA子节点1400可如上述方法实施例中的UBA子节点，其各个功能模块的功能可以根据上述方法实施例中的方法具体实现，其具体实现过程可以参照上述方法实施例的相关描述，此处不再一一赘述。</p>
+    <p>[0313]	参见图15、本发明实施例还提供一种UBA云服务器1500,可包括：</p>
+    <p>[0314]	控制爬取模块1510和爬取模块1520 ；</p>
+    <p>[0315]	爬取模块1520，用于爬取网络内容标识对应的网络内容；</p>
+    <p>[0316]	控制爬取模块1510，用于判断当前对网络内容标识的爬取深度是否超过设定的爬取深度上限，若是，则停止爬取网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；若否，则控制爬取模块1520进一步爬取该网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容；</p>
+    <p>[0317]	爬取模块1520还用于，爬取网络内容标识对应的网络内容中包含的子网络内容标识所对应的网络内容。</p>
+    <p>[0318]	可以理解的是，本实施例中介绍的UBA云服务器1500可如上述方法实施例中的UBA云服务器，其各个功能模块的功能可以根据上述方法实施例中的方法具体实现，其具体实现过程可以参照上述方法实施例的相关描述，此处不再一一赘述。</p>
+    <p>[0319]	参见图16、本发明实施例还提供一种UBA云1600,包括：</p>
+    <p>[0320]	至少一个UBA云服务器1610 (其中，图16中以包括多个UBA云服务器1610为例）；其中，UBA云服务器1610处于所在网络的分析决策层。</p>
+    <p>[0321 ] 其中，UBA云服务器1600例如可具有上述实施例中的UBA云服务器1200或UBA云服务器1300或UBA云服务器1500的部分或全部功能。</p>
+    <p>[0322]	参见图17、本发明实施例还提供一种用户行为分析系统，可包括：</p>
+    <p>[0323]	UBA云1600和至少一个UBA子节点1400。</p>
+    <p>[0324]	其中，UBA云1600中UBA云服务器和UBA子节点1400以可通信方式连接。</p>
+    <p>&#183;[0325]	在上述实施例中，对各个实施例的描述都各有侧重，某个实施例中没有详述的部分，可以参见其他实施例的相关描述。</p>
+    <p>[0326]	综上，本发明实施例中实施例中UBA云下部署多个UBA子节点，UBA云包括至少一个UBA云服务器，其中，UBA云服务器处于所在网络的分析决策层，UBA子节点处于所在网络的探针层，当UBA云服务器接收第一 UBA子节点上报的其无法识别的网络内容标识后；UBA云服务器获取该网络内容标识对应的网络内容；从该网络内容中提取关键词；利用提取的该关键词更新行为知识库；向UBA子节点集下发更新的行为知识库或行为知识库的更新内容；UBA子节点集包括第二 UBA子节点和第一 UBA子节点。由于采用云技术的UBA云具有比UBA子节点更强的分析处理能力，因此由UBA云服务器来分析识别UBA子节点无法识别的网络内容标识，有利于提高UBA系统的用户行为分析能力，并且由UBA云服务器进行一次分析识别后，向UBA子节点集下发UBA云服务器据此更新的UBA云行为知识库或UBA云行为知识库的更新内容，使得UBA子节点集中的所有UBA子节点都可据此更新其本地行为知识库，这样就有利于避免多个UBA子节点对例如新网络内容的重复分析问题，进而有利于提升用户行为分析的时效性，减少资源消耗。</p>
+    <p>[0327]	本领域普通技术人员可以理解上述实施例的各种方法中的全部或部分步骤是可以通过程序来指令相关的硬件来完成，该程序可以存储于一计算机可读存储介质中，存储介质例如可以包括：只读存储器、随机存储器、磁盘或光盘等。</p>
+    <p>[0328]	以上对本发明实施例所提供的用户行为分析方法及相关设备和系统进行了详细介绍，本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处，综上，本说明书内容不应理解为对本发明的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101105795A?cl=zh">CN101105795A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年10月27日</td><td class="patent-data-table-td patent-date-value">2008年1月16日</td><td class="patent-data-table-td ">北京搜神网络技术有限责任公司</td><td class="patent-data-table-td ">基于网络行为的个性化推荐方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102307315A?cl=zh">CN102307315A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月22日</td><td class="patent-data-table-td patent-date-value">2012年1月4日</td><td class="patent-data-table-td ">赛特斯网络科技(南京)有限责任公司</td><td class="patent-data-table-td ">Iptv系统中用户行为分析装置及实现分析应用的系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2001027760A2?cl=zh">WO2001027760A2</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2000年10月13日</td><td class="patent-data-table-td patent-date-value">2001年4月19日</td><td class="patent-data-table-td ">Joachim Schlafke</td><td class="patent-data-table-td ">Verfahren zur analyse des benutzerverhaltens in computernetzen zur optimierung der web-pr&#228;senz</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2013159512A1?cl=zh">WO2013159512A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月22日</td><td class="patent-data-table-td patent-date-value">2013年10月31日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">用户行为分析方法及相关设备和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06Q30/0251">G06Q30/0251</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L67/22">H04L67/22</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L67/10">H04L67/10</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=nwikBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06Q30/0201">G06Q30/0201</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年9月19日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年11月14日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年10月8日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/71bfd6672378938b6740/CN102685224A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E5%88%86%E6%9E%90%E6%96%B9%E6%B3%95%E5%8F%8A%E7%9B%B8%E5%85%B3%E8%AE%BE%E5%A4%87.pdf?id=nwikBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3vzk-lfeT8LYgQHcEaGiEu04wapg"},"sample_url":"https://www.google.com/patents/reader?id=nwikBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

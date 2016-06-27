@@ -1,0 +1,468 @@
+<!DOCTYPE html><html><head><title>专利 CN103200209A - 成员资源的访问方法、群组服务器和成员设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="成员资源的访问方法、群组服务器和成员设备"><meta name="DC.contributor" content="张永靖" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2012-1-6" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种成员资源的访问方法，群组服务器和成员设备，通过建立的群组资源中多播地址与扇出URI的映射关系，可以向群组资源中的成员资源所在的成员设备通过多播的方式发送成员资源访问请求，并在成员资源访问请求中包含所述扇出URI；以便所述成员资源所属的成员设备根据所述扇出URI指示的所述成员资源在成员设备上的访问路径执行所述成员访问请求指示的操作。从而使得群组服务器不需要对各成员设备单播访问请求，节省网络开销。"><meta name="DC.date" content="2013-7-10"><meta name="citation_patent_publication_number" content="CN:103200209:A"><meta name="citation_patent_application_number" content="CN:201210004135"><link rel="canonical" href="https://www.google.com/patents/CN103200209A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103200209A?cl=zh"/><meta name="title" content="专利 CN103200209A - 成员资源的访问方法、群组服务器和成员设备"/><meta name="description" content="本发明提供了一种成员资源的访问方法，群组服务器和成员设备，通过建立的群组资源中多播地址与扇出URI的映射关系，可以向群组资源中的成员资源所在的成员设备通过多播的方式发送成员资源访问请求，并在成员资源访问请求中包含所述扇出URI；以便所述成员资源所属的成员设备根据所述扇出URI指示的所述成员资源在成员设备上的访问路径执行所述成员访问请求指示的操作。从而使得群组服务器不需要对各成员设备单播访问请求，节省网络开销。"/><meta property="og:title" content="专利 CN103200209A - 成员资源的访问方法、群组服务器和成员设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103200209A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103200209A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103200209A&amp;usg=AFQjCNGHgMgMN572Uj1_VjDUxeWxmwnofA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/5d9a49330e0e14ffc377/CN103200209A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/5d9a49330e0e14ffc377/CN103200209A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103200209A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103200209A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103200209A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种成员资源的访问方法，群组服务器和成员设备，通过建立的群组资源中多播地址与扇出URI的映射关系，可以向群组资源中的成员资源所在的成员设备通过多播的方式发送成员资源访问请求，并在成员资源访问请...</span><span itemprop="url">https://www.google.com/patents/CN103200209A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103200209A - 成员资源的访问方法、群组服务器和成员设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103200209A - 成员资源的访问方法、群组服务器和成员设备" title="专利 CN103200209A - 成员资源的访问方法、群组服务器和成员设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103200209 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210004135</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年7月10日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年1月6日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年1月6日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CA2859059A1?hl=zh-CN&amp;cl=zh">CA2859059A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2782367A1?hl=zh-CN&amp;cl=zh">EP2782367A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2782367A4?hl=zh-CN&amp;cl=zh">EP2782367A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20140369251?hl=zh-CN&amp;cl=zh">US20140369251</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2013102346A1?hl=zh-CN&amp;cl=zh">WO2013102346A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210004135.6, </span><span class="patent-bibdata-value">CN 103200209 A, </span><span class="patent-bibdata-value">CN 103200209A, </span><span class="patent-bibdata-value">CN 201210004135, </span><span class="patent-bibdata-value">CN-A-103200209, </span><span class="patent-bibdata-value">CN103200209 A, </span><span class="patent-bibdata-value">CN103200209A, </span><span class="patent-bibdata-value">CN201210004135, </span><span class="patent-bibdata-value">CN201210004135.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E6%B0%B8%E9%9D%96%22">张永靖</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103200209A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103200209A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103200209A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (8),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210004135&amp;usg=AFQjCNHv9yt2lq59CxHwwlw-759Ye-VY6A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103200209A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNG7I6t4kVppuIivNI4BGmpxy9uUhA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT126058388" lang="ZH" load-source="patent-office">成员资源的访问方法、群组服务器和成员设备</invention-title>
+      </span><br><span class="patent-number">CN 103200209 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA117458474" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种成员资源的访问方法，群组服务器和成员设备，通过建立的群组资源中多播地址与扇出URI的映射关系，可以向群组资源中的成员资源所在的成员设备通过多播的方式发送成员资源访问请求，并在成员资源访问请求中包含所述扇出URI；以便所述成员资源所属的成员设备根据所述扇出URI指示的所述成员资源在成员设备上的访问路径执行所述成员访问请求指示的操作。从而使得群组服务器不需要对各成员设备单播访问请求，节省网络开销。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(43)</span></span></div><div class="patent-text"><div mxw-id="PCLM53585889" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种成员资源的访问方法，其特征在于，包括:  接收对成员资源的访问请求，所述对成员资源的访问请求中携带成员资源所属群组资源的群组资源标识；  根据所述群组资源标识获取群组资源中与成员资源对应的扇出通用资源标识符URI，以及与所述扇出URI对应的多播地址，所述扇出URI用于指示成员资源在成员设备上的访问路径；  根据所述多播地址向所述成员资源所属的成员设备发送成员资源访问请求，所述成员资源访问请求的目的URI包含与所述成员资源对应的扇出URI ;以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请求指示的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，该方法进一步包括:  接收群组资源创建请求，所述群组资源创建请求中携带各成员资源，所述成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；  根据所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址 ；根据成员资源在成员设备上的访问路径建立所述多播地址和所述扇出URI的映射关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，其特征在于，所述根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址，以及根据成员资源在成员设备上的访问路径建立所述多播地址及所述扇出URI之间的映射关系具体为:  为在成员设备上具有相同访问路径的成员资源分配多播地址，并建立所述多播地址及所述扇出URI的映射关系；所述扇出URI为所述成员资源在成员设备上的访问路径；和/或  为在成员设备上具有不同访问路径的至少一个成员资源分配虚拟标识，为所述至少一个成员资源分配多播地址，并为建立所述多播地址及所述虚拟标识的映射关系以及所述虚拟标识和成员资源的映射关系；将所述虚拟标识设为所述扇出URI。</div>
+    </div>
+    </div> <div class="claim"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要2或3所述的方法，其特征在于，该方法进一步包括:  根据所述多播地址及所述扇出URI的映射关系向成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，以便于成员资源所属的成员设备根据加入多播组的群组通告加入与所述多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的方法，其特征在于，  所述加入多播组的群组通告中还携带所述所述扇出URI和成员资源的映射关系，以便所述成员资源所属的成员设备存储所述扇出URI和所述多播地址映射关系，以及所述成员资源和所述多播地址的映射关系；  所述以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请求指示的操作具体为:所述成员资源所属的成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的所述扇出URI以及根据所述扇出URI和成员资源映射关系确定成员资源在成员设备上的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求2-5任一所述的方法，其特征在于，所述根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址具体为:根据所述成员资源所属的成员设备确定所述成员资源所属的成员设备归属于第一群组服务器，为成员资源所属的成员设备分配本地多播域的多播地址；或  根据所述成员资源所属的成员设备确定所述群组资源的成员资源所属的成员设备并不都归属于第一群组服务器，为成员资源所属的成员设备分配全局多播域的多播地址或请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的方法，其特征在于，  所述为成员资源所属的成员设备分配全局多播域的多播地址具体为:向具有全局多播域的多播地址的群组服务器申请全局多播域的多播地址，为成员资源所属的成员设备分配申请的全局多播域的多播地址；  所述请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址具体为:确定不归属于第一群组服务器的成员资源所属的成员设备归属于第二群组服务器，向第二群组服务器发送创建第二群组资源请求，所述创建第二群组资源请求携带第一群组资源标识以及成员资源，所述成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；第二群组服务器根据所述成员资源所属的成员设备创建第二群组资源以及为成员资源分配多播地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求2-7任一所述的方法，其特征在于，所述根据成员资源所属的成员设备以及成员资源在成员设备 上的访问路径为所述成员资源分配多播地址具体为:  根据所述成员资源所属的成员设备确定所述成员资源所属的成员设备和成员设备所属的网络支持多播，并为所述成员资源分配多播地址；  所述方法还包括:  存储不具有多播能力的成员设备对应的成员资源，以便于群组服务器为不具有多播能力的成员设备单播对成员资源的访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求1-8任一所述的方法，其特征在于，所述根据所述群组资源标识获取群组资源中与成员资源对应的扇出URI以及与所述扇出URI对应的多播地址之后，该方法还包括:  将对成员资源的访问请求的目的地址设置为与所述扇出URI对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI，以生成成员资源访问请求；  利用所述多播地址发送携带所述与成员资源对应的扇出URI的成员资源访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求1-8任一所述的方法，其特征在于，所述根据所述群组资源标识获取群组资源中与成员资源对应的扇出URI以及与所述扇出URI对应的多播地址之后，该方法还包括:  确定所述对成员资源的访问请求中的目的URI还包含后缀；  将对成员资源的访问请求的目的地址设置为与所述扇出UIR对应的多播地址，将所述目的URI设为所述与成员资源对应的扇出URI以及在所述扇出URI后面添加所述目的URI包含的后缀，以生成成员资源访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求2-10任一所述的方法，其特征在于，该方法还包括:  接收增加成员资源的群组资源更新请求，所述增加成员资源的群组资源更新请求中携带群组资源的标识以及需加入群组资源的成员资源，所述需加入群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；  根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI相同，向需加入群组资源的成员资源所属的成员设备发送携带所述多播地址和扇出URI的映射关系中的多播地址的加入多播组的群组通告，以便于需加入群组资源的成员资源所属的成员设备通过所述多播地址加入多播组，以及接收通过多播地址发送的成员资源访问请求；或  根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI不同；在与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系中增加需加入群组资源的成员资源，向需加入群组资源的成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告携带与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系，和与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系；以便于成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的扇出URI与成员资源的映射关系确定成员资源在成员设备上的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求2-11任一所述的方法，其特征在于，该方法还包括:  接收删除成员资源的群组 资源更新请求，所述删除成员资源的群组资源更新请求中携带需离开群组资源的成员资源和群组资源的标识，所述需离开群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；根据群组资源的标识确定与需离开群组资源的成员资源对应的扇出URI，以及与需离开群组资源的成员资源对应的扇出URI和多播地址的映射关系，删除所述与需离开群组资源的成员资源对应的扇出URI和多播地址的映射关系中的需离开群组资源的成员资源，向需离开的成员资源所属的成员设备发送携带与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组；或  删除成员资源的群组资源更新请求中携带需保留的群组资源的成员资源和群组资源的标识，所述需保留的群组资源的成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；根据群组资源的标识确定与需离开群组资源的成员资源和扇出UIR的映射关系，利用需保留的群组资源的成员资源更新所述需离开群组资源的成员资源和扇出UIR的映射关系中成员资源，向需离开的成员资源所属的成员设备发送携带映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求12所述的方法，其特征在于，该方法进一步包括:  根据删除成员资源的群组资源更新请求的群组资源的标识确定需离开群组资源的成员资源在成员设备上的的访问路径和需离开的成员资源对应的扇出URI不同；  所述离开多播组的群组通告还包括与需离开群组资源的成员资源对应的所述扇出URI ;以便于需离开群组资源的成员资源所属的成员设备离开所述多播地址指示的多播组，并根据所述需离开群组资源的成员资源和离开多播组的群组通告中的扇出URI删除成员设备中与删除成员资源的群组资源更新请求的群组资源的标识对应的多播组信息中的成员资源。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.一种群组资源的访问方法，其特征在于:包括  接收群组服务器发送的成员资源访问请求，所述成员资源访问请求为多播的成员资源访问请求，所述成员资源访问请求中包含与所述成员资源对应的扇出URI，所述扇出URI用于指示成员资源在成员设备上的访问路径；  根据所述扇出URI确定成员资源在成员设备上的访问路径，以及根据所述成员资源在成员设备上的访问路径执行访问请求的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求14所述的方法，其特征在于，该方法进一步包括:  接收加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，根据加入多播组的群组通告加入与所述多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求15所述的方法，其特征在于，所述加入多播组的群组通告中还携带所述扇出URI和成员资源的映射关系；所述方法进一步包括:  存储所述多播地 址和所述扇出URI的映射关系，以及所述成员资源和所述多播地址的映射关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求14-16任一所述的方法，其特征在于，该方法进一步包括:确定成员资源访问请求的目的地址为多播地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求17所述的方法，其特征在于，所述根据所述扇出URI确定成员资源在成员设备上的访问路径具体为:  确定包含与成员资源访问请求中的目的地址相同的多播地址的多播组信息，确定与成员资源访问请求中的目的地址相同的多播地址的多播组信息中包含与所述成员资源访问请求中的目的URI相同的扇出URI，确定多播组信息中与扇出URI对应的成员资源在成员设备上的访问路径。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求14-18任一所述的方法，所述根据所述成员资源在成员设备上的访问路径执行访问请求的操作具体为::  将所述成员资源访问请求中的目的URI包含的扇出URI用确定的成员资源在成员设备上的访问路径替换，并针对与确定的成员资源在成员设备上的访问路径对应的成员资源执行访问请求的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求14-19任一所述的方法，其特征在于，该方法进一步包括:  接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址；  删除存储的与离开多播组的群组通告中的多播地址相同的多播地址对应的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求14-20任一所述的方法，其特征在于，该方法进一步包括:  接收离开多播组的群组通告，所述离开多播组的群组通告中携带需离开的多播组对应的多播地址以及需离开群组资源的成员资源，所述需离开的成员资源包含需离开群组资源的成员资源所属的成员设备以及成员资源在成员设备上的访问路径；  删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中需离开群组资源的成员资源；  删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求21所述的方法，其特征在于，该方法进一步包括:  确定存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中的扇出URI不对应成员资源。</div>
+    </div>
+    </div> <div class="claim"> <div num="23" class="claim">
+      <div class="claim-text">23.&#8212;种群组服务器，其特征在于，包括:  接收模块，用于接收对成员资源的访问请求，所述对成员资源的访问请求中携带成员资源所属群组资源的群组资源标识；  获取模块，用于根据所述群组资源标识获取群组资源中与成员资源对应的扇出URI，以及与所述扇出URI对应的多播地址，所述扇出URI用于指示成员资源在成员设备上的访问路径；  发送模块，用于根据所述多播地址向所述成员资源所属的成员设备发送成员资源访问请求，所述成员资源访问请求的目的URI包含与所述成员资源对应的扇出URI ；以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请 求指示的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求23所述的群组服务器，其特征在于，  所述接收模块进一步用于接收群组资源创建请求，所述群组资源创建请求中携带各成员资源，所述成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；  所述群组服务器还包括:处理模块，用于根据所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址；以及根据成员资源在成员设备上的访问路径建立所述多播地址及所述扇出URI之间的映射关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.如权利要求24所述的群组服务器，其特征在于，  所述处理模块具体为:用于为在成员设备上具有相同访问路径的成员资源分配多播地址，并建立所述多播地址及所述扇出URI的映射关系；所述扇出URI为所述成员资源在成员设备上的访问路径；和/或  用于为在成员设备上具有不同访问路径的至少一个成员资源分配虚拟标识，为所述至少一个成员资源分配多播地址，并建立所述多播地址及所述虚拟标识的映射关系以及所述虚拟标识和成员资源的映射关系；将所述虚拟标识设为所述扇出URI。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求24所述的群组服务器，其特征在于，  所述发送模块进一步用于:根据所述多播地址及所述扇出URI的映射关系向成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，以便于成员资源所属的成员设备根据加入多播组的群组通告加入与所述多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求24-26任一所述的群组服务器，其特征在于，所述处理模块根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址具体为:  根据所述成员资源所属的成员设备确定所述成员资源所属的成员设备归属于第一群组服务器，为成员资源所属的成员设备分配本地多播域的多播地址；或  根据所述成员资源所属的成员设备确定所述群组资源的成员资源所属的成员设备并不都归属于第一群组服务器，为成员资源所属的成员设备分配全局多播域的多播地址或请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求27所述的群组服务器，其特征在于，所述处理模块为成员资源所属的成员设备分配全局多播域的多播地址具体为:向具有全局多播域的多播地址的群组服务器申请全局多播域的多播地址，为成员资源所属的成员设备分配申请的全局多播域的多播地址；  所述请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址具体为:确定不归属于第一群组服务器的成员资源所属的成员设备归属于第二群组服务器，向第二群组服务器发送创建第二群组资源请求，所述创建第二群组资源请求携带第一群组资源标识以及成员资源，所述成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；第二群组服务器根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径创建第二群组资源以及为成员资源分配多播地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求24-28任一所述的群组服务器，其特征在于:所述处理模块根据成员资源所属的成员设备为所述成员资源分配多播地址具体为:根据成员资源所属的成员设备确定所述成员资源所属的成员设备和成员设备所属的网络支持多播，并为所述成员资源分配多播地址；  所述处理模块还用于:存储不具有多播能力的成员设备对应的成员资源，以便于群组服务器为不具有多播能力的 成员设备单播对成员资源的访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求24-29任一所述的群组服务器，其特征在于，所述处理模块还用于:将对成员资源的访问请求的目的地址设置为与所述扇出URI对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI，以生成成员资源访问请求，以及还用于利用所述多播地址发送携带所述与成员资源对应的扇出URI的成员资源访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.如权利要求24-29任一所述的群组服务器，其特征在于，  所述处理模块还用于确定所述对成员资源的访问请求中的目的URI还包含后缀；将对成员资源的访问请求的目的地址设置与所述扇出UIR对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI以及在所述扇出URI后面添加所述目的URI包含的后缀，以生成成员资源访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.如权利要求25-31任一所述的群组服务器，其特征在于，  所述接收模块还用于接收增加成员资源的群组资源更新请求，所述增加成员资源的群组资源更新请求中携带群组资源的标识以及需加入群组资源的成员资源，所述需加入群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径;  所述处理模块还用于根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI相同，向需加入群组资源的成员资源所属的成员设备发送携带所述多播地址和扇出URI的映射关系中的多播地址的加入多播组的群组通告，以便于需加入群组资源的成员资源所属的成员设备通过所述多播地址加入多播组，以及接收通过多播地址发送的成员资源访问请求；或所述处理模块还用于根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI不同；在与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系中增加需加入群组资源的成员资源，向需加入群组资源的成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告携带与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系，和扇出URI与成员资源在成员设备上的访问路径的映射关系；以便于成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的扇出URI与成员资源的映射关系确定成员资源在成员设备的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.如权利要求25-32任一所述的群组服务器，其特征在于，  所述接收模块还用于接收删除成员资源的群组资源更新请求，所述删除成员资源的群组资源更新请求中携带需离开群组资源的成员资源和群组资源的标识，所述需离开群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述处理模块还用于:根据群组资源的标识确定与需离开群组资源的成员资源对应的扇出URI,以及与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系，删除所述映射关系中的需离开群组资源的成员资源，向需离开的成员资源所属的成员设备发送携带与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组；或  所述接收模块还用于接收删除成员资源的群组资源更新请求，所述删除成员资源的群组资源更新请求中携带需保 留的群组资源的成员资源和群组资源的标识，所述需保留的群组资源的成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述处理模块还用于根据群组资源的标识确定需离开群组资源的成员资源和扇出UIR的映射关系，利用需保留的群组资源的成员资源更新所述需离开群组资源的成员资源和扇出UIR的映射关系中成员资源；向需离开的成员资源所属的成员设备发送携带映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.如权利要求33所述的群组服务器，其特征在于，  所述处理模块还用于:根据删除成员资源的群组资源更新请求的群组资源的标识确定需离开群组资源的成员资源在成员设备上的访问路径和需离开的成员资源对应的扇出URI不同；  所述离开多播组的群组通告还包括与需离开群组资源的成员资源对应的所述扇出URI ;以便于需离开群组资源的成员资源所属的成员设备离开所述多播地址指示的多播组，并根据所述需离开群组资源的成员资源和离开多播组的群组通告中的扇出URI删除成员设备中与删除成员资源的群组资源更新请求的群组资源的标识对应的多播组信息中的成员资源。</div>
+    </div>
+    </div> <div class="claim"> <div num="35" class="claim">
+      <div class="claim-text">35.一种成员设备,其特征在于,包括:  接收模块，用于接收群组服务器发送的成员资源访问请求，所述成员资源访问请求为多播的成员资源访问请求，所述成员资源访问请求中包含与所述成员资源对应的扇出URI，所述扇出URI用于指示成员资源在成员设备上的访问路径；  操作模块，用于根据所述扇出URI确定成员资源在成员设备上的访问路径，以及根据所述成员资源在成员设备上的访问路径执行访问请求的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.如权利要求35所述的成员设备，其特征在于，所述接收模块进一步用于:接收加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，根据加入多播组的群组通告加入与所述多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37.如权利要求36所述的成员设备，其特征在于，所述加入多播组的群组通告中还携带所述扇出URI和成员资源的映射关系，所述成员设备进一步包括:  存储模块，用于存储所述扇出URI和所述多播地址映射关系以及所述成员资源和所述多播地址的映射关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.如权利要求35-37任一所述的成员设备，其特征在于，进一步包括:确定模块，用于确定成员资源访问请求的目的地址为多播地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39.如权利要求38所述的成员设备，其特征在于，所述操作模块根据所述扇出URI确定成员资源在成员设备上的访问路径具体为:确定包含与成员资源访问请求中的目的地址相同的多播地址的多播组信息，确定与成员资源访问请求中的目的地址相同的多播地址的多播组信息中包含与所述成员资源访问请求中的目的URI相同的扇出URI，确定多播组信息中与扇出URI对应的成员资源在成员设备上的访问路径。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40.如权利要求35-39任一所述的成员设备，其特征在于，所述操作模块根据所述成员资源在成员设备上的访问路径执行访问请求的操作具体为:将所述成员资源访问请求中的目的URI包含的扇出URI用确定的成员资源在成员设备上的访问路径替换，并针对与确定的成员资源在成员设备上的访问路径对应的成员资源执行访问请求的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.如权利要求35-40任一所述的成员设备，其特征在于，所述接收模块进一步用于:接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址；  所述存储模块进一步用于，删除存储的与离开多播组的群组通告中的多播地址相同的多播地址对应的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42.如权利要求35-40任一所述的成员设备，其特征在于，所述接收模块进一步用于:接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址和需离开的成员资源，所述需离开的成员资源包含需离开群组资源的成员资源所属的成员设备以及成员资源在成员设备上的访问路径；  所述存储模块进一步用于删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中需离开群组资源的成员资源；以及删除存储的与所述离开多播组的群组 通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43.如权利要求42所述的成员设备，其特征在于，  所述存储模块进一步用于确定存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中的扇出URI不对应成员资源。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES60624910" lang="ZH" load-source="patent-office" class="description">
+    <p>成员资源的访问方法、群组服务器和成员设备</p>
+    <p>技术领域</p>
+    <p>[0001]本发明涉及机器通信(Machine-to-Machine	Communications, M2M)技术领域，尤其涉及成员资源的访问方法、群组服务器和成员设备。</p>
+    <p>背景技术</p>
+    <p>[0002]机器通信(Machine-to-Machine	Communications,M2M)是一种以机器智能交互为核心的、网络化的应用与服务。M2M技术通过在机器内部嵌入无线或有线通信模块以及应用处理逻辑，实现无需人工干预的数据通信，以满足用户对监控、指挥调度、数据采集和测量等方面的信息化需求。在M2M系统架构中，各种M2M终端(如传感器、微控制器等)直接或经过M2M网关远程接入到M2M业务平台，而各种M2M应用服务器(如电力抄表、智能交通等)则通过M2M业务平台所提供的业务能力获取M2M终端采集的数据或对M2M终端进行远程的控制和管理。</p>
+    <p>[0003]	然而，在一些常见的M2M业务中，往往需要同时对大量的M2M终端/网关进行相同的业务操作，比如同时读取一个小区内所有住户家中的电表读数，或者同时控制开关一栋建筑内的所有照明或者空调设施等。在这种情况下，由于群组通信能够避免M2M应用向各M2M终端/网关重复发送相同的业务操作请求，从而节约大量的通信开销，而变得尤其重要。</p>
+    <p>[0004]	现有技术中描述了一种面向资源的群组通信方法。该方法中，M2M应用服务器、M2M平台、M2M终端、M2M网关、包括M2M终端和M2M网关上所运行的所有本地应用、数据对象均被看做一种RESTful (Representational State Transfer,表述性状态转移)资源，并由一个URI (Universal Resource Identifier,通用资源标识符)唯一标识。通过构建以上述各种资源为成员资源的群组资源，能够实现对多个成员资源的群组化操作。也就是说，通过构成群组资源，所述的群组资源包含各成员资源的相关信息，如成员资源的访问路径，所属设备的名称，访问地址等，实现对多个成员资源的群组化操作。例如，将所有目标电表(M2M设备)上的读数资源作为群组的成员资源，则M2M应用服务器可以向维护群组资源的实体(以下称群组服务器，可以是M2M平台、M2M网关、M2M终端中的任意一个)发送针对该群组资源的一个读取请求，群组服务器负责将请求逐一转发到每个目标电表上，并将读取结果合并为一个响应消息返回给M2M应用服务器。这样，M2M应用服务器可通过一次性读取该群组资源来获得所有成员资源(即电表读数内容)。该方法所采用的具体通信协议可以是 HTTP (HyperText Transfer Protocol,超文本传输协议)协议或 CoAP (ConstrainedApplication Protocol,受限应用协议)协议。</p>
+    <p>[0005]	然而，现有的应用于M2M的群组通信的方法，仅仅节约了 M2M应用服务器与群组服务器之间的通信，而群组服务器仍然需要对每个M2M设备单独发送请求。如果群组服务器能力有限(比如M2M网关)，或者其与M2M设备间的网络带宽较小或通信费用较高，则该方法中群组服务器与M2M设备间的通信并不经济。发明内容</p>
+    <p>[0006]	本发明的实施例提供的成员资源的访问方法、群组服务器和成员设备，能够实现不需要对各成员设备单播访问请求，节省网络开销。</p>
+    <p>[0007]	本发明的一方面提供了一种成员资源的访问方法，包括:</p>
+    <p>[0008]	接收对成员资源的访问请求，所述对成员资源的访问请求中携带成员资源所属群组资源的群组资源标识；根据所述群组资源标识获取群组资源中与成员资源对应的扇出通用资源标识符URI，以及与所述扇出URI对应的多播地址，所述扇出URI用于指示成员资源在成员设备上的访问路径；根据所述多播地址向所述成员资源所属的成员设备发送成员资源访问请求，所述成员资源访问请求的目的URI包含与所述成员资源对应的扇出URI ;以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请求指示的操作。</p>
+    <p>[0009]	可选的，该方法进一步包括:接收群组资源创建请求，所述群组资源创建请求中携带各成员资源，所述成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；根据所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址；根据成员资源在成员设备上的访问路径建立所述多播地址和所述扇出URI的映射关系。</p>
+    <p>[0010]	可选的，所述根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址，以及根据成员资源在成员设备上的访问路径建立所述多播地址及所述扇出URI之间的映射关系具体为:为在成员设备上具有相同访问路径的成员资源分配多播地址，并建立所述多播地址及所述扇出URI的映射关系；所述扇出URI为所述成员资源在成员设备上的访问路径；和/或为在成员设备上具有不同访问路径的至少一个成员资源分配虚拟标识，为所述至少一个成员资源分配多播地址，并为建立所述多播地址及所述虚拟标识的映射关系以及所述虚拟标识和成员资源的映射关系；将所述虚拟标识设为所述扇出URI。</p>
+    <p>[0011]	可选的，该方法进一步包括:根据所述多播地址及所述扇出URI的映射关系向成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，以便于成员资源所属的成员设备根据加入多播组的群组通告加入与所述多播地址对应的多播组。</p>
+    <p>[0012]	可选的，所述加入多播组的群组通告中还携带所述所述扇出URI和成员资源的映射关系，以便所述成员资源所属的成员设备存储所述扇出URI和所述多播地址映射关系，以及所述成员资源和所述多播地址的映射关系；所述以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请求指示的操作具体为:所述成员资源所属的成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的所述扇出URI以及根据所述扇出URI和成员资源映射关系确定成员资源在成员设备上的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</p>
+    <p>[0013]	可选的，所述根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址具体为:根据所述成员资源所属的成员设备确定所述成员资源所属的成员设备归属于第一群组服务器，为成员资源所属的成员设备分配本地多播域的多播地址；或根据所述成员资源所属的成员设备确定所述群组资源的成员资源所属的成员设备并不都归属于第一群组服务器，为成员资源所属的成员设备分配全局多播域的多播地址或请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址。</p>
+    <p>[0014]	可选的，所述为成员资源所属的成员设备分配全局多播域的多播地址具体为:向具有全局多播域的多播地址的群组服务器申请全局多播域的多播地址，为成员资源所属的成员设备分配申请的全局多播域的多播地址；所述请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址具体为:确定不归属于第一群组服务器的成员资源所属的成员设备归属于第二群组服务器，向第二群组服务器发送创建第二群组资源请求，所述创建第二群组资源请求携带第一群组资源标识以及成员资源，所述成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；第二群组服务器根据所述成员资源所属的成员设备创建第二群组资源以及为成员资源分配多播地址。</p>
+    <p>[0015]	可选的，所述根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址具体为:根据所述成员资源所属的成员设备确定所述成员资源所属的成员设备和成员设备所属的网络支持多播，并为所述成员资源分配多播地址；所述方法还包括:存储不具有多播能力的成员设备对应的成员资源，以便于群组服务器为不具有多播能力的成员设备单播对成员资源的访问请求。</p>
+    <p>[0016]	可选的，所述根据所述群组资源标识获取群组资源中与成员资源对应的扇出URI以及与所述扇出URI对应的多播地址之后，该方法还包括:将对成员资源的访问请求的目的地址设置为与所述扇出URI对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI，以生成成员资源访问请求；利用所述多播地址发送携带所述与成员资源对应的扇出URI的成员资源访问请求。</p>
+    <p>[0017]	可选的，所述根据所述群组资源标识获取群组资源中与成员资源对应的扇出URI以及与所述扇出URI对应的多播地址之后，该方法还包括:确定所述对成员资源的访问请求中的目的URI还包含后缀；将对成员资源的访问请求的目的地址设置为与所述扇出WR对应的多播地址，将所述目的URI设为所述与成员资源对应的扇出URI以及在所述扇出URI后面添加所述目的URI包含的后缀，以生成成员资源访问请求。</p>
+    <p>[0018]	可选的，该方法还包括:接收增加成员资源的群组资源更新请求，所述增加成员资源的群组资源更新请求中携带群组资源的标识以及需加入群组资源的成员资源，所述需加入群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI相同，向需加入群组资源的成员资源所属的成员设备发送携带所述多播地址和扇出URI的映射关系中的多播地址的加入多播组的群组通告，以便于需加入群组资源的成员资源所属的成员设备通过所述多播地址加入多播组，以及接收通过多播地址发送的成员资源访问请求；或根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI不同；在与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系中增加需加入群组资源的成员资源，向需加入群组资源的成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告携带与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系，和与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系；以便于成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的扇出URI与成员资源的映射关系确定成员资源在成员设备上的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</p>
+    <p>[0019]	可选的，该方法还包括:接收删除成员资源的群组资源更新请求，所述删除成员资源的群组资源更新请求中携带需离开群组资源的成员资源和群组资源的标识，所述需离开群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；根据群组资源的标识确定与需离开群组资源的成员资源对应的扇出URI，以及与需离开群组资源的成员资源对应的扇出URI和多播地址的映射关系，删除所述与需离开群组资源的成员资源对应的扇出URI和多播地址的映射关系中的需离开群组资源的成员资源，向需离开的成员资源所属的成员设备发送携带与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组；或删除成员资源的群组资源更新请求中携带需保留的群组资源的成员资源和群组资源的标识，所述需保留的群组资源的成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；根据群组资源的标识确定与需离开群组资源的成员资源和扇出WR的映射关系，利用需保留的群组资源的成员资源更新所述需离开群组资源的成员资源和扇出WR的映射关系中成员资源，向需离开的成员资源所属的成员设备发送携带映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组。</p>
+    <p>[0020]	可选的，该方法进一步包括:根据删除成员资源的群组资源更新请求的群组资源的标识确定需离开群组资源的成员资源在成员设备上的的访问路径和需离开的成员资源对应的扇出URI不同；所述离开多播组的群组通告还包括与需离开群组资源的成员资源对应的所述扇出URI ;以便于需离开群组资源的成员资源所属的成员设备离开所述多播地址指示的多播组，并根据所述需离开群组资源的成员资源和离开多播组的群组通告中的扇出URI删除成员设备中与删除成员资源的群组资源更新请求的群组资源的标识对应的多播组信息中的成员资源。</p>
+    <p>[0021]	此外，本发明另一方面还提供了一种群组资源的访问方法，包括:接收群组服务器发送的成员资源访问请求，所述成员资源访问请求为多播的成员资源访问请求，所述成员资源访问请求中包含与所述成员资源对应的扇出URI，所述扇出URI用于指示成员资源在成员设备上的访问路径；根据所述扇出URI确定成员资源在成员设备上的访问路径，以及根据所述成员资源在成员设备上的访问路径执行访问请求的操作。</p>
+    <p>[0022]	可选的，该方法进一步包括:接收加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，根据加入多播组的群组通告加入与所述多播地址对应的多播组。</p>
+    <p>[0023]	可选的，所述加入多播组的群组通告中还携带所述扇出URI和成员资源的映射关系；所述方法进一步包括:存储所述多播地址和所述扇出URI的映射关系，以及所述成员资源和所述多播地址的映射关系。</p>
+    <p>[0024]	可选的，该方法进一步包括:确定成员资源访问请求的目的地址为多播地址。</p>
+    <p>[0025]	可选的，所述根据所述扇出URI确定成员资源在成员设备上的访问路径具体为:[0026]	确定包含与成员资源访问请求中的目的地址相同的多播地址的多播组信息，确定与成员资源访问请求中的目的地址相同的多播地址的多播组信息中包含与所述成员资源访问请求中的目的URI相同的扇出URI，确定多播组信息中与扇出URI对应的成员资源在成员设备上的访问路径。</p>
+    <p>[0027]	可选的，所述根据所述成员资源在成员设备上的访问路径执行访问请求的操作具体为:将所述成员资源访问请求中的目的URI包含的扇出URI用确定的成员资源在成员设备上的访问路径替换，并针对与确定的成员资源在成员设备上的访问路径对应的成员资源执行访问请求的操作。</p>
+    <p>[0028]	可选的，该方法进一步包括:接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址；删除存储的与离开多播组的群组通告中的多播地址相同的多播地址对应的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0029]	可选的，该方法进一步包括:接收离开多播组的群组通告，所述离开多播组的群组通告中携带需离开的多播组对应的多播地址以及需离开群组资源的成员资源，所述需离开的成员资源包含需离开群组资源的成员资源所属的成员设备以及成员资源在成员设备上的访问路径；删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中需离开群组资源的成员资源；删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0030]	可选的，该方法进一步包括:确定存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中的扇出URI不对应成员资源。</p>
+    <p>[0031]	此外，本发明另一方面还提供了一种群组服务器，包括:接收模块，用于接收对成员资源的访问请求，所述对成员资源的访问请求中携带成员资源所属群组资源的群组资源标识；获取模块，用于根据所述群组资源标识获取群组资源中与成员资源对应的扇出URI，以及与所述扇出URI对应的多播地址，所述扇出URI用于指示成员资源在成员设备上的访问路径；发送模块，用于根据所述多播地址向所述成员资源所属的成员设备发送成员资源访问请求，所述成员资源访问请求的目的URI包含与所述成员资源对应的扇出URI ;以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请求指示的操作。</p>
+    <p>[0032]	可选的，所述接收模块进一步用于接收群组资源创建请求，所述群组资源创建请求中携带各成员资源，所述成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述群组服务器还包括:处理模块，用于根据所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址；以及根据成员资源在成员设备上的访问路径建立所述多播地址及所述扇出URI之间的映射关系。</p>
+    <p>[0033]	可选的，所述处理模块具体为:用于为在成员设备上具有相同访问路径的成员资源分配多播地址，并建立所述多播地址及所述扇出URI的映射关系；所述扇出URI为所述成员资源在成员设备上的访问路径；和/或用于为在成员设备上具有不同访问路径的至少一个成员资源分配虚拟标识，为所述至少一个成员资源分配多播地址，并建立所述多播地址及所述虚拟标识的映射关系以及所述虚拟标识和成员资源的映射关系；将所述虚拟标识设为所述扇出URI。[0034]	可选的，所述发送模块进一步用于:根据所述多播地址及所述扇出URI的映射关系向成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，以便于成员资源所属的成员设备根据加入多播组的群组通告加入与所述多播地址对应的多播组。</p>
+    <p>[0035]	可选的，所述处理模块根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址具体为:根据所述成员资源所属的成员设备确定所述成员资源所属的成员设备归属于第一群组服务器，为成员资源所属的成员设备分配本地多播域的多播地址；或根据所述成员资源所属的成员设备确定所述群组资源的成员资源所属的成员设备并不都归属于第一群组服务器，为成员资源所属的成员设备分配全局多播域的多播地址或请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址。</p>
+    <p>[0036]	可选的，所述处理模块为成员资源所属的成员设备分配全局多播域的多播地址具体为:向具有全局多播域的多播地址的群组服务器申请全局多播域的多播地址，为成员资源所属的成员设备分配申请的全局多播域的多播地址；所述请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址具体为:确定不归属于第一群组服务器的成员资源所属的成员设备归属于第二群组服务器，向第二群组服务器发送创建第二群组资源请求，所述创建第二群组资源请求携带第一群组资源标识以及成员资源，所述成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；第二群组服务器根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径创建第二群组资源以及为成员资源分配多播地址。</p>
+    <p>[0037]	可选的，所述处理模块根据成员资源所属的成员设备为所述成员资源分配多播地址具体为:根据成员资源所属的成员设备确定所述成员资源所属的成员设备和成员设备所属的网络支持多播，并为所述成员资源分配多播地址；所述处理模块还用于:存储不具有多播能力的成员设备对应的成员资源，以便于群组服务器为不具有多播能力的成员设备单播对成员资源的访问请求。</p>
+    <p>[0038]	可选的，所述处理模块还用于:将对成员资源的访问请求的目的地址设置为与所述扇出URI对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI，以生成成员资源访问请求，以及还用于利用所述多播地址发送携带所述与成员资源对应的扇出URI的成员资源访问请求。</p>
+    <p>[0039]	可选的，所述处理模块还用于确定所述对成员资源的访问请求中的目的URI还包含后缀；将对成员资源的访问请求的目的地址设置与所述扇出UIR对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI以及在所述扇出URI后面添加所述目的URI包含的后缀，以生成成员资源访问请求。</p>
+    <p>[0040]	32、如权利要求25-31任一所述的群组服务器，其特征在于，</p>
+    <p>[0041]	所述接收模块还用于接收增加成员资源的群组资源更新请求，所述增加成员资源的群组资源更新请求中携带群组资源的标识以及需加入群组资源的成员资源，所述需加入群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；</p>
+    <p>[0042]	所述处理模块还用于根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI相同，向需加入群组资源的成员资源所属的成员设备发送携带所述多播地址和扇出URI的映射关系中的多播地址的加入多播组的群组通告，以便于需加入群组资源的成员资源所属的成员设备通过所述多播地址加入多播组，以及接收通过多播地址发送的成员资源访问请求；或</p>
+    <p>[0043]	所述处理模块还用于根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI不同；在与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系中增加需加入群组资源的成员资源，向需加入群组资源的成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告携带与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系，和扇出URI与成员资源在成员设备上的访问路径的映射关系；以便于成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的扇出URI与成员资源的映射关系确定成员资源在成员设备的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</p>
+    <p>[0044]	可选的，所述接收模块还用于接收删除成员资源的群组资源更新请求，所述删除成员资源的群组资源更新请求中携带需离开群组资源的成员资源和群组资源的标识，所述需离开群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述处理模块还用于:根据群组资源的标识确定与需离开群组资源的成员资源对应的扇出URI，以及与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系，删除所述映射关系中的需离开群组资源的成员资源，向需离开的成员资源所属的成员设备发送携带与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组；或</p>
+    <p>[0045]	所述接收模块还用于接收删除成员资源的群组资源更新请求，所述删除成员资源的群组资源更新请求中携带需保留的群组资源的成员资源和群组资源的标识，所述需保留的群组资源的成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述处理模块还用于根据群组资源的标识确定需离开群组资源的成员资源和扇出UIR的映射关系，利用需保留的群组资源的成员资源更新所述需离开群组资源的成员资源和扇出WR的映射关系中成员资源；向需离开的成员资源所属的成员设备发送携带映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组。</p>
+    <p>[0046]	可选的，所述处理模块还用于:根据删除成员资源的群组资源更新请求的群组资源的标识确定需离开群组资源的成员资源在成员设备上的访问路径和需离开的成员资源对应的扇出URI不同；所述离开多播组的群组通告还包括与需离开群组资源的成员资源对应的所述扇出URI ;以便于需离开群组资源的成员资源所属的成员设备离开所述多播地址指示的多播组，并根据所述需离开群组资源的成员资源和离开多播组的群组通告中的扇出URI删除成员设备中与删除成员资源的群组资源更新请求的群组资源的标识对应的多播组信息中的成员资源。</p>
+    <p>[0047]	此外，本发明又一方面还提供了一种成员设备，包括:接收模块，用于接收群组服务器发送的成员资源访问请求，所述成员资源访问请求为多播的成员资源访问请求，所述成员资源访问请求中包含与所述成员资源对应的扇出URI，所述扇出URI用于指示成员资源在成员设备上的访问路径；操作模块，用于根据所述扇出URI确定成员资源在成员设备上的访问路径，以及根据所述成员资源在成员设备上的访问路径执行访问请求的操作。</p>
+    <p>[0048]	可选的，所述成员设备的接收模块进一步用于:接收加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，根据加入多播组的群组通告加入与所述多播地址对应的多播组。</p>
+    <p>[0049]	可选的，所述加入多播组的群组通告中还携带所述扇出URI和成员资源的映射关系，所述成员设备进一步包括:存储模块，用于存储所述扇出URI和所述多播地址映射关系以及所述成员资源和所述多播地址的映射关系。</p>
+    <p>[0050]	可选的，成员设备进一步包括:确定模块，用于确定成员资源访问请求的目的地址为多播地址。</p>
+    <p>[0051]	可选的，所述成员设备的操作模块根据所述扇出URI确定成员资源在成员设备上的访问路径具体为:确定包含与成员资源访问请求中的目的地址相同的多播地址的多播组信息，确定与成员资源访问请求中的目的地址相同的多播地址的多播组信息中包含与所述成员资源访问请求中的目的URI相同的扇出URI，确定多播组信息中与扇出URI对应的成员资源在成员设备上的访问路径。</p>
+    <p>[0052]	可选的，所述成员设备的操作模块根据所述成员资源在成员设备上的访问路径执行访问请求的操作具体为:将所述成员资源访问请求中的目的URI包含的扇出URI用确定的成员资源在成员设备上的访问路径替换，并针对与确定的成员资源在成员设备上的访问路径对应的成员资源执行访问请求的操作。</p>
+    <p>[0053]	可选的，所述成员设备的接收模块进一步用于:接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址；所述成员设备的存储模块进一步用于，删除存储的与离开多播组的群组通告中的多播地址相同的多播地址对应的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0054]	可选的，所述成员设备的接收模块进一步用于:接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址和需离开的成员资源，所述需离开的成员资源包含需离开群组资源的成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述成员设备的存储模块进一步用于删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中需离开群组资源的成员资源；以及删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0055]	可选的，所述成员设备的存储模块进一步用于确定存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中的扇出URI不对应成员资源。</p>
+    <p>[0056]	由上述本发明的实施例提供的技术方案可以看出，通过建立群组资源中多播地址与扇出URI的映射关系，可以向群组资源中的成员资源所在的成员设备通过多播的方式发送成员资源访问请求，并在成员资源访问请求中包含所述扇出URI ;以便所述成员资源所属的成员设备根据所述扇出URI指示的所述成员资源在成员设备上的访问路径执行所述成员访问请求指示的操作。从而使得群组服务器不需要对各成员设备单播访问请求，节省网络开销。</p>
+    <p>附图说明</p>
+    <p>[0057]	为了更清楚地说明本发明实施例的技术方案，下面将对实施例描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0058]	图1为本发明的实施例提供的群组资源访问方法的流程图；</p>
+    <p>[0059]	图2为本发明的实施例提供的创建群组资源的流程图；</p>
+    <p>[0060]	图2-A为本发明的实施例提供的建立多播组的流程图；</p>
+    <p>[0061]	图2-B为本发明的实施例提供的M2M网络连接关系的架构示意图；</p>
+    <p>[0062]	图2-C为本发明的实施例提供的为成员设备分配多播地址并建立映射关系的流程图；</p>
+    <p>[0063]	图2-D为本发明的实施例提供的M2M网络连接关系的架构示意图；</p>
+    <p>[0064]	图2-E为本发明的实施例提供的M2M网络连接关系的架构示意图；</p>
+    <p>[0065]	图2-F为本发明的实施例提供的群组资源表述中包括RESTful资源的示意图；</p>
+    <p>[0066]	图2-G为本发明的实施例提供的成员设备存储的多播组资源的示意图；</p>
+    <p>[0067]	图3为本发明的实施例提供的群组资源访问方法的流程图；</p>
+    <p>[0068]	图3-A为本发明实施例提供的成员设备对接收的成员资源访问请求的处理的方法流程图；</p>
+    <p>[0069]	图4为本发明实施例提供的通过直接分配的多播地址的群组资源访问方法的流程图；</p>
+    <p>[0070]	图5为本发明实施例提供的通过申请的全局多播地址的群组资源访问方法的流程图；</p>
+    <p>[0071]	图6为本发明实施例提供的通过远程分配的多播地址的群组资源访问方法的流程图；</p>
+    <p>  图7为本发明实施例提供的群组服务器的结构示意图；</p>
+    <p>  图8为本发明实施例提供的成员设备的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0072]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有作出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0073]	如图1所示，本发明实施例提供的群组资源的访问方法包括如下步骤:</p>
+    <p>[0074]	步骤101、接收对成员资源的访问请求，所述对成员资源的访问请求中携带成员资源所属群组资源的群组资源标识；</p>
+    <p>[0075]	具体的，第一群组服务器接收对成员资源的访问请求。例如:第一群组服务器接收到针对群组资源标识为Grp4的成员资源的访问请求:GEThttp://gl.example.org/groups/grp4/membersContent/data HTTP/1.1。其中 grp4 为群组资源标识，“membersContent”部分表明此请求为针对grp4对应的群组资源中所有成员资源的操作，“data”即为所述后缀的一个实例，用以表明该请求具体应该访问每个成员资源的“data”数据。</p>
+    <p>[0076]	步骤102，根据所述群组资源标识获取群组资源中与成员资源对应的扇出URI，以及与与所述扇出URI对应的多播地址，所述扇出URI用于指示成员资源在成员设备上的访问路径。</p>
+    <p>[0077]	具体的，当第一群组服务器接收对成员资源的访问请求时，首先根据对成员资源的访问请求中的群组资源标识检查群组资源是否为建立了多播地址及扇出URI的映射关系，和进一步建立了所述扇出URI和成员资源的映射关系，若建立了多播地址及扇出URI的映射关系，则按照所述多播地址及扇出URI的映射关系发送成员资源访问请求到各成员设备，否则按现有技术中的方法采用单播方式逐一发送对成员资源的第一访问请求。</p>
+    <p>[0078]	对于建立了多播地址及扇出URI的映射关系的情形，第一群组服务器按照所述映射关系发送成员资源访问请求到各成员设备时，应将对成员资源访问请求的目的地址设为多播地址及扇出URI的映射关系中的多播地址(即群组服务器为成员资源分配的多播地址)，将目的URI设为扇出URI。当群组资源包含多组多播地址及扇出URI的映射关系时，则应针对每组多播地址及扇出URI的映射关系按上述方法发送一个成员资源访问请求。若第一群组服务器所接收的对成员资源的访问请求中的目的URI还包含任何后缀(如子资源、属性，参数等用于访问成员资源中的内部信息)，则第一群组服务器所发送的成员资源访问请求中的目的URI也应在 扇出URI后面添加相应的后缀。具体的，第一群组服务器需要确定所述对成员资源的访问请求中的目的URI还包含后缀；则还第一群组服务器还需要所述目的URI设为所述与成员资源对应的扇出URI以及在所述扇出URI后面添加所述目的URI包含的后缀，以生成成员资源访问请求。</p>
+    <p>[0079]	具体的，第一群组服务器或其它的群组服务器针对各群组存储的如表I所示的多播地址及扇出URI的映射关系，和扇出RUI和成员资源的映射关系。</p>
+    <p>[0080]	表1:群组资源映射表</p>
+    <p>[0081]</p>
+    <p> &#8226;群组资源成员资源多播地址	扇出URI</p>
+    <p>Grp4	m41，m42 [FF32:30:3FFE:FFFF:1::1231]	/xxx/templ</p>
+    <p>[0082]	其中，Grp4为群组资源标识；成员资源m41，m42,多播地址:[FF32:30:3FFE:FFFF:1:: 1231]为群组资源Grp4中的成员资源m41，m42分配的多播地址；扇出URI:/xxx/templ为成员资源m41, m42在成员资源所属的成员设备上的访问路径,通常，如表I所示，至少两个成员资源对应一个多播地址和扇出URI。</p>
+    <p>[0083]	在表I所述的实施例中，如果群组资源Grp4仅包含成员m41，m42,则表I中的成员资源一列还可以不用包含m41, m42o则表一只包含扇出URI和多播地址的映射关系</p>
+    <p>[0084]	步骤103，根据所述多播地址向所述成员资源所属的成员设备发送成员资源访问请求，所述成员资源访问请求的目的URI包含与所述成员资源对应的扇出URI ;以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请求指示的操作。</p>
+    <p>[0085]	具体的，第一群组服务器根据表I中的扇出URI和多播地址的映射关系，向成员设备发送如下成员资源访问请求:</p>
+    <p>[0086]	GET/xxx/tempi/data HTTP/1.1</p>
+    <p>[0087]	Host:[FF32:30:3FFE:FFFF:1::1231]</p>
+    <p>[0088]	其中，GET命令中携带的URI为添加了后缀data的扇出URI “/xxx/temp/data”，而Host头域作为目的地址携带多播地址(即第一群组服务器为群组资源Grp4中的成员资源m41, m42所分配的IPv6多播地址)。</p>
+    <p>[0089]	从而，成员资源m41，m42所属的成员设备(假设为Dl，D2)通过多播地址[FF32:30:3FFE:FFFF:1::1231]接收到 GET/xxx/temp/data HTTP/1.1 请求后，可以将成员设备Dl和D2中路径为/xxx/templ下后缀为data的数据发送给第一群组服务器，从而第一群组服务器不需要以单播的形式将成员资源访问请求发送给成员设备Dl和D2，从而节省了网络流量。</p>
+    <p>[0090]	此外，在第一群组服务器接收对成员资源的访问请求之前，第一群组服务器还接收群组资源创建请求，所述群组资源创建请求中携带各成员资源，所述成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述成员资源所属的成员设备以及成员资源 在成员设备上的访问路径为所述成员资源所属的成员设备分配至少一个多播地址，并根据所述成员资源在成员设备上的访问路径建立多播地址和所述扇出URI的映射关系，所述扇出URI用于指示成员资源在成员设备上的访问路径。具体的，第一群组服务器创建群组资源以及建立多播地址和所述扇出URI的映射关系，请参考图2的描述，包括如下步骤:</p>
+    <p>[0091]	步骤201、第一群组服务器接收群组资源创建请求，所述群组资源创建请求中携带各成员资源，所述成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径。</p>
+    <p>[0092]	步骤202、第一群组服务器根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径获取各成员资源的特征，并根据所述成员资源的特征判断是否需要建立多播组；具体的，第一群组服务器判断是否需要建立多播组的方法请参考图2-A的描述，包括以下步骤:</p>
+    <p>[0093]	步骤202-1、第一群组服务器解析所述群组资源创建请求，获取群组资源特征描述及其成员资源的特征描述，包括但不限于群组资源的类型属性(如是否为静态、动态或临时群组)、群组资源的用途(是否需要可靠的请求响应)、成员资源的在成员设备上的访问路径、成员资源的访问接口、成员资源所属的成员设备及网络特性(是否支持多播)等特征。</p>
+    <p>[0094]	例如，对于群组资源的特征描述可以从群组资源创建请求所携带的群组资源描述内容获得。其中群组资源描述内容包括群组资源的类型属性、用途；而对于成员资源的特征描述则可以通过群组资源描述中所包含的成员资源的URI信息来获得，其中包括成员资源的URI结构、成员资源的访问接口等，还可以根据成员资源的URI来访问成员资源的成员设备从而进一步获取成员资源的成员设备及成员设备所属的网络特性等特征。</p>
+    <p>[0095]	步骤202-2、根据所述群组资源创建请求的群组描述判断所创建的群组资源是否为相对静态的群组，或是变化较为频繁的动态群组，若是相对静态的群组，执行后续判断流程；若是动态群组，不为群组资源创建多播组以及结束流程，从而避免由于群组频繁变化所带来的多播组创建和维护开销。所述相对静态的群组可以为:群组描述中包含了具体的成员资源列表且成员的变化由第一群组服务器通过群组管理命令(如增加/删除成员)来控制的群组；所述动态群组包括但不限于:群组所包含的成员资源是满足特定条件的资源集合，例如在指定地理范围内的成员资源、或具有其他相同特征的成员资源，而群组成员的变化可根据成员资源自身特征的改变而自动触发(如成员离开或进入某个地理范围，群组选择某个频道)。</p>
+    <p>[0096]	步骤202-3、根据群组资源创建请求携带的成员资源的访问接口判断各成员资源的访问接口是否一致，若是执行后续判断流程，否则不为群组资源创建多播组以及结束流程。所述成员资源访问接口是否一致具体为能否用相同的多播数据包(如IPv4或IPv6)进行访问。例如，若用于访问多个成员资源的URI遵循相同的协议和访问端口号、且所述多个成员资源的URI在不同成员设备上的访问路径相同，则可以认为所述多个成员资源具有相同的资源访问接口。在一个实际系统中，所述URI可用URL (Uniform Resource Locator,统一资源定位符)来进行表示，而URL的基本结构包括:</p>
+    <p>[0097]	&lt;scheme&gt;://&lt;authority&gt;:&lt;port&gt;/&lt;path&gt; ? &lt;query&gt;#&lt;fragment&gt;</p>
+    <p>[0098]	其中，〈scheme〉部分确定了访问该URL对应资源所采用的协议(如http或coap)；〈authority〉部分确定了成员资源所属的成员设备的地址(如IP地址或域名);〈port&gt;作为可选项，表明了协议访问端口号；</p>
+    <p>[0099]	〈path〉？ &lt;query&gt;#〈fragment&gt;表示该资源在设备上的访问路径。</p>
+    <p>[0100]	作为一个例子，假设M2M平台N1、M2M设备Dl和M2M网关Gl的域名分别为:nl.example, com、dl.example, com、gl.example, com,则 NI 上的 Grpl 群组资源 URL 为:</p>
+    <p>[0101]	Grpl = http://nl.example, com/groups/grpI</p>
+    <p>[0102]	其所包含的成员资源m ll、ml2、ml3、ml4的URL分别为:</p>
+    <p>[0103]	mil = coap://dl.example, com/xxx/tempI</p>
+    <p>[0104]	ml2 = coap://dl.example.com/yyy/temp2</p>
+    <p>[0105]	ml3 = coap://gl.example, com/xxx/tempI</p>
+    <p>[0106]	ml4 = http://nl.example, com/xxx/tempI</p>
+    <p>[0107]	则上述4个成员资源中mil和ml3具有相同的资源访问接口，因为其〈scheme〉采用了相同的coap协议,且在成员设备(此处为dl和gl)上访问路径均为/xxx/templ ;相反的，ml2的在成员设备dl的访问路径为/yyy/temp2,而ml4的〈scheme〉为http协议，因此ml2与ml4与其他成员资源不具有相同的资源访问接口。在此示例中，可以为mil和ml3建立多播组，而不包含ml2与ml4。</p>
+    <p>[0108]	步骤202-4、第一群组服务器判断各成员资源及其各成员资源所属的成员设备和各成员设备所属的网络是否支持多播，若支持执行后续判断流程，否则不为群组资源创建多播组以及结束流程。对于成员资源是否支持多播可根据该成员资源对应的URL是否支持多播协议访问(例如HTTP协议不支持，而CoAP协议支持)来判断；对于成员资源所属的成员设备及成员设备所属的网络是否支持多播，则可能需要第一群组服务器进一步获取该成员资源及该成员资源所属的成员设备的相关资源表述信息如注册信息，并根据资源表述信息如注册信息确定。</p>
+    <p>[0109]	作为一个例子，成员资源mil所在的成员设备Dl在M2M平台NI上的注册信息可由如下 URL 访问:http: //nl.example, com/scls/dl,</p>
+    <p>[0110]	则第一群组服务器可以通过向NI发送一个HTTP GET请求获取该URL所对应的资源表述内容。在资源表述内容中，对于Dl是否支持多播可由一个专门的属性(如”multicastEnabled”)来表示，若其取值为TRUE则表示支持多播，若取值为FALSE则表不不支持多播。</p>
+    <p>[0111]	可选的，即使成员资源的所在的成员设备不支持多播，但访问该成员资源需要经过一个支持多播的其他设备时，也可以判断为该成员资源所属的成员设备资源支持多播。如图2-B所示，第一群组服务器为M2M设备D1，且群组资源Grp2中包含一个M2M平台上的成员资源m21，而Dl访问m21时需要经过M2M网关G1。</p>
+    <p>[0112]	若Dl与Gl间的通信链路支持多播(如CoAP协议)，则Dl可以采用多播的方式发送请求给G1，然后Gl将其转换为单播的方式(如HTTP协议)访问NI上的m21。此时，可以认为对成员资源m21的访问支持多播。</p>
+    <p>[0113]	步骤202-5，第一群组服务器判断满足上述条件的成员资源所属的成员设备是否达到一定数量，若是则执行后续步骤，否则结束流程并不为群组资源创建多播组。这里，可以通过预先配置的策略或参数来确定一个数量作为建立多播组的门限，少于此门限时，则不需要为上述成员资源建立多播组，以节约多播组的管理开销。</p>
+    <p>[0114]	值得注意的是，上述202-2到202-5的步骤并没有严格的时间顺序，并且第一群组服务器可能根据配置的策略或能力只执行202-2到202-5之间的一个或多个步骤，本发明实施例在此并不做限定。此外，第一群组服务器还可以判断针对该群组资源的成员访问是否要求可靠响应，若是，结束流程并不为群组资源创建多播组，否则执行后续判断流程。</p>
+    <p>[0115]	所述要求可靠响应是指所述成员资源的成员设备在接收到成员资源访问请求后，必须返回操作成功或失败的响应消息。具体来说，CoAP协议中的Confirmable(CON)类型的请求消息就是一种要求可靠响应的成员资源访问请求，其要求成员资源访问请求的接收者必须返回Acknowledgement (ACK)或者Reset (RST)类型的响应消息；而Non-Conf irmab Ie (NON)类型的请求消息则不要求消息接收者返回任何响应消息。</p>
+    <p>[0116]	步骤203、根据所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址，并根据成员资源在成员设备上的访问路径建立所述所述多播地址及所述扇出URI之间的映射关系。具体的请参考图2-C的描述，包括以下步骤:</p>
+    <p>[0117]	步骤203-1、第一群组服务器分析满足步骤202中各条件的成员资源所属的成员设备(以下简称成员设备)所属的多播域情况，所述成员设备是否都属于本地多播域，如是，执行步骤203-4，否则，执行步骤203-2 ；</p>
+    <p>[0118]	具体的，在本发明实施例中，多播域可分为本地多播域、远程多播域和全局多播域。本地多播域是指第一群组服务器所管辖的网络地址的区域，第一群组服务器能够为该区域中的成员设备分配本地多播域的多播地址(本地多播地址)，当该区域中的设备加入了本地多播地址所指示的多播组后，发往本地多播地址的数据包可以被所有已加入该本地多播组的成员设备接收。而远程多播域则是第一群组服务器所管辖的网络地址的区域以外的区域，群组服务器不能够为远程多播域分配本地多播地址，且本地多播域中的成员设备无法接收发往远程多播域的多播地址(远程多播地址)的数据包(即使本地址多播址和远程多播地址相同，因为不同的多播域可以重复使用相同的地址空间)，反之亦然。全局多播域是指包含了本地多播域以及远程多播域在内的整个网络的区域。因此，无论本地网络设备或远程网络设备，只要加入了一个全局多播域中的多播地址(全局多播地址)所指示的多播组，都可以接收发往全局多播地址的数据包。全局多播地址可能由一个全局网络实体统一管理分配，也可以按一定的地址规划事先分配到某些群组服务器中。关于IPv4和IPv6的多播地址空间的分配方案指导可参考[RFC3171]和[RFC 4291]等标准文献。一个成员设备具体属于哪个多播域可根据该成员设备与群组服务器的连接关系判断，例如若成员设备(如M2M设备)注册到第一群组服务器(如M2M网关)，则可认为该成员设备属于该群组服务器的本地多播域，若成员设备注册到其它与该第一群组服务器平级(如另一个M2M网关)或更高一级的实体(如M2M平台)时(即归属于第二群组服务器)，则可认为该成员设备属于远程多播域。即，第一群组服务器根据创建群组资源请求中的成员地址获取各成员设备的注册信息，然后根据注册信息来判断是否是属于本地多播域。</p>
+    <p>[0119]	203-2、第一群组服务器判断能否为群组资源的成员设备分配全局多播地址，若是则执行步骤203-5，否则执行步骤203-3。</p>
+    <p>[0120]	具体的，如步骤203-1中所述，全局多播地址可以按一定的地址规划策略预先分配到某些群组服务器中。因此，第一群组服务器在确定群组资源的成员设备不全都属于第一群组服务器所管辖的本地多播域时，在第一群组服务器中查找被预先分配的全局多播地址空间是否还有尚未分配的全局多播地址，或者第一群组服务器通过向负责管理全局多播地址分配的全局实体发出地址分配请求。对于第一群组服务器通过向负责管理全局多播地址分配的全局多播地址管理实体发出地址分配请求，具体实施方式如下:</p>
+    <p>[0121]	假设全局多播地址管理实体为M2M平台NI，且NI上用于分配全局多播地址的资源URL 为:http://nl.example.com/mcAddrPool,则第一群组服务器可通过一个 HTTP GET 请求访问资源http://nl.example.com/mcAddrPool。若NI返回的是成功响应，贝U可以从响应消息的消息体中获取第一群组服务器所申请的全局多播地址，若NI返回的是失败响应，则意味着M2M平台NI不能为所属成员设备分配全局多播地址。</p>
+    <p>[0122]	实际上，第一群组服务器也可以用类似的方法向负责管理本地或远程多播地址分配的其它实体(如其它群组服务器)请求分配远程或全局多播地址，实现方式与向M2M平台NI申请全局多播地址的方式类似，本发明不在详述。</p>
+    <p>[0123]	203-3、第一群组服务器判断不归属于本地多播域的成员设备(非本地成员设备)是否可通过第二群组服务器进行访问，若是则执行步骤203-6，否则执行步骤203-7。例如，假设第一群组服务器为第一 M2M网关G1，而群组资源Grp3有非本地成员资源m31、m32、m33、m34 如下:</p>
+    <p>[0124]	m31 = http://d2.example, com/xxx/tempI</p>
+    <p>[0125]	m32 = http://d2.example.com/xxx/temp2</p>
+    <p>[0126]	m33 = coap://d3.example, com/xxx/tempI</p>
+    <p>[0127]	m34 = coap://d4.example, com/xxx/tempI</p>
+    <p>[0128]	则m31和m32的成员设备为M2M设备D2，而m33和m34的成员设备分别为M2M设备D3和D4，且D2、D3、D4均不归属于Gl的本地多播域。假设D3和D4可通过第二 M2M网关G2的进行访问，其网络连接关系如图2-D所示。因此，可以认为成员(m31，m32)可以通过第二群组服务器(图2-D中的M2M设备D2)访问，而成员(m33，m34)可通过第三群组服务器(图2-D中的M2M网关G2)访问。但是，若D2或G2由于设备能力等原因无法充当群组服务器，则可认为(m31，m32)或(m33，m34)无法通过另一群组服务器访问。具体的，本发明实施例中第一群组服务器(图2-D中的M2M关Gl)</p>
+    <p>[0129]	需要说明的是，即使只有I个成员资源(如仅有m31而没有m32)可通过另一群组服务器访问时，仍然可以执行步骤203-6为成员资源m31创建一个群组资源。然而从提高效率的角度出发，第一群组服务器可以根据预先配置的策略或参数来确定一个成员数量门限，少于此门限时，则认为不满足上述判断条件，从而执行步骤203-7，而不执行步骤203-6，以节约群组管理开销。</p>
+    <p>[0130]	203-4、第一群组服务器为支持多播的本地成员设备分配本地多播地址。</p>
+    <p>[0131]	203-5、第一群组服务器为支持多播的所有成员设备分配全局多播地址。</p>
+    <p>[0132]	203-6、第一群组服务器根据步骤203-3的判断结果，请求第二群组服务器在第二群组服务器上创建第二群组资源，其中第二群组资源包含能够通过所述第二群组服务器访问的非第一群组服务器管辖的成员资源。此后，所述第二群组服务器按本发明所揭示的方法，从图2中的步骤201开始执行相关流程，本发明实施例在此不再详述。</p>
+    <p>[0133]	203-7、第一群组服务器记录无法通过第二群组服务器访问的非本地成员资源列表，以便后续按单播方式对其进行访问。</p>
+    <p>[0134]	203-8确定第二群组服务器(如图2-D中的G2)是否为本地多播域设备(即是否通过第一群组服务器访问)，如是执行步骤203-9第一群组服务器还可以为第二群组服务器分配本地多播地址并执行步骤203-10，否则建立成员资源与第二群组服务器的映射关系，并按默认的单播方式访问第二群组服务器；在图2-D的示例中，第二群组服务器D2或G2都不属于第一群组服务器Gl的本地多播设备。</p>
+    <p>[0135]	步骤203-10、根据步骤203-4、203-5或203-9中的多播地址的分配结果，或203-8中的第二群组服务器的访问地址，或203-7中的成员设备的地址，在第一群组服务器中建立为群组资源建立映射关系。</p>
+    <p>[0136]	具体的，在同一多播域中的成员资源可以共享一个多播地址，然而根据成员资源本身的访问接口是否一致，可以为群组资源建立多种的映射关系。具体来说，无论成员资源的访问接口是否相同，都需要将群组资源标识与所分配的多播地址进行关联，并建立多播地址和“扇出URI”的映射关系。所述扇出URI为:当第一群组服务器接收对群组资源的成员资源的访问请求时，向成员设备发送成员资源访问请求的目的URI。具体的，当成员资源的URI遵循相同的协议和访问端口号，且成员资源在成员设备上的访问路径相同时，所述扇出URI为在成员资源在成员设备上的访问路径；当URI遵循相同的协议和访问端口号，但在成员设备上的访问路径不同时，所述扇出URI设为一个虚拟资源标识(可以是群组资源标识或其它形式的资源标识)。。其中，建立多播地址与扇出URI的映射关系请参照如下几种情况:</p>
+    <p>[0137]	第一种情况:群组资源的各成员资源的在成员设备上的访问路径相同。</p>
+    <p>[0138]	作为一个例子，假设M2M网关Gl上的群组资源Grp4为:Grp4 = http://gl.example, org/groups/grp4</p>
+    <p>[0139]	其中包含的成员资源为M2M设备Dl上的m41和M2M设备D5上的m42:</p>
+    <p>[0140]	m41 = coap://dl.example, org/xxx/tempI[0141]	m42 = coap://d5.example, org/xxx/templ</p>
+    <p>[0142]	第一群组服务器(此例中为M2M网关Gl)为群组资源Grp4下的成员资源m41和m42所分配的IPv6多播地址为[FF32:30: 3FFE:FFFF:1:: 1231]，且设备间的网络连接关系如图2-E所示(即成员资源m41和m42所属的成员设备Dl和D2都归属于M2M网关Gl);则群组资源 Grp4 的多播地址([FF32:30:3FFE:FFFF:1::1231])及扇出 URI (/xxx/templ)的的映射关系，以及群组资源Grp4的成员资源(m41和m42)、和扇出URI (/xxx/templ)的映射关系如表I所示。当然，在此种情况下，由于群组资源的所有成员资源在成员设备上的访问路径相同，因此所有成员资源对应一个多播地址和扇出URI，因此，映射关系还可以仅为群组资源Grp4的多播地址和扇出URI的映射关系，而无需记录群组资源的成员资源和扇出URI的映射关系。然而，由于同一群组服务器中通常包括多个群组资源，而每个群组资源的成员资源特性不一致，因此为了记录的统一性，即便无需记录成员资源的扇出URI的映射关系，也可以在列表中映射关系记录成员资源，或保留相关的属性。</p>
+    <p>[0143]	第二种情况，群组资源的成员资源即代表其所在的成员设备。</p>
+    <p>[0144]例如,假设	M2M 网关 Gl 上的群组资源 Grp5 为:Grp5 = http: //gl.example, org/grouDs/grp5,其中包含的成员咨源分别为M2M设备Dl、D5、D6上的m51、m52、m53:</p>
+    <p>[0145]	m51 = coap://dl.example, org/&#183;[0146]	m52 = coap://d5.example, org/</p>
+    <p>[0147]	m53 = coap://d6.example, org/</p>
+    <p>[0148]	所分配的IPv6多播地址为[FF32:30:3FFE:FFFF:1::1232]，且设备间的网络连接关系仍然图2-E所示(即成员资源m51、m52和m53各自所属的成员设备Dl、D5、D6均归属于M2M网关Gl)，则与成员资源m51、m52和m53对应的扇出URI则为根符号“/，，，则群组资源Grp5的多播地址([FF32:30:3FFE:FFFF:1::1232])及扇出URI(/)的映射关系，以及成员资源(m51、m52和m53)和扇出URI(/)的映射关系如表2所示。在这种情况下，也可以简化省略扇出URI信息。此外，在此种情况下，也可以称之为君组资源的多播地址([FF32:30:3FFE:FFFF:1::1232])及扇出 URI(/)和成员资源(m51、m52 和 m53)的映射关系。本发明实施例在无特别说明的情况下，映射关系均指多播地址、成员资源和扇出URI的映射关系。</p>
+    <p>[0149]	第三种情况，群组资源的各成员资源在各自的成员设备上的访问路径不同。</p>
+    <p>[0150]	作为一个例子，假设M2M网关Gl上的群组资源Grp6为:Grp6 = http://gl.example.0rg/grouDs/grp6,其中群组咨源Grp6的成员资源分别为M2M设备D5上的m61和M2M设备D6上的(m62, m63):</p>
+    <p>[0151]	m61 = coap://d5.example, org/xx</p>
+    <p>[0152]	m62 = coap://d6.example, org/yy</p>
+    <p>[0153]	m63 = coap://d6.example, org/zz</p>
+    <p>[0154]	第一群组服务器(此例中为图2-E中M2M网关Gl)为Grp6所分配的IPv6多播地址为[FF32:30:3FFE:FFFF:1::1233]，且设备间的网络连接关系如图2-E所示(即成员资源m61所属的成员设备D5和成员资源m62,m63所属的成员设备D6均归属于M2M网关Gl),则第一群组服务器需要为群组资源Grp6的各成员资源分配一个虚拟的扇出URI (具体的分配方法可由第一群组服务器确定，本发明实施例在此不在限定)，例如“/well-know/grpe”。此虚拟的扇出URI (/well-know/grp6)并不直接对应任何成员设备上的成员资源,但是各成员设备需要将其关联到与该虚拟的扇出URI对应群组资源中属于该成员设备的成员资源，具体的关联方法见后续图2-G的相关描述。另外，为了避免此不同群组服务器所分配的虚拟扇出URI在同一成员设备上的命名冲突，可以在不同的群组服务器间采取恰当的命名空间划分，或者直接使用具有唯一'I"生的群组URI (例如/gl.example.0rg/groups/grp6)作为该虚拟扇出URI的一个组成部分或全部。对群组资源Grp6的成员资源m61、m62和m63,和扇出 URI (/well- know/grp6)的映射关系，和多播地址([FF32:30: 3FFE:FFFF:1:: 1233])及扇出URI (/well-know/grp6)建立的映射关系请参考表2所示。</p>
+    <p>[0155]	第四种情况，成员资源的访问接口部分相同。</p>
+    <p>[0156]	作为一个例子，当有部分成员资源的访问接口相同，而其余成员资源的访问接口不同时，除了可以采用上述方法外，还可以将访问接口相同的成员资源分为第一组(可以有多组)，将具有不同访问接口的成员资源分为第二组，然后按上述方法分别对每组成员资源，多播地址及扇出URI进行映射，从而形成多组映射关系。群组服务器可以为每组成员资源单独分配不同的多播地址，也可以为其分配相同的多播地址。对于后者，则要求每组的“扇出URI”不同。</p>
+    <p>[0157]例如,假设	M2M 网关 Gl 上的群组资源 Grp7 为:Grp7 = http: //gl.example, org/Rroups/Rrp7,其中群组资源Grp7包含的成员资源分别为M2M设备Dl上的m71,D5上的m72,D6上的m73，D7上的m74，D8上的m75，D9上的m76，NI上的m77:</p>
+    <p>[0158]	m71 = coap://dl.example, org/xx/aa</p>
+    <p>[0159]	m72 = coap://d5.example, org/xx/aa</p>
+    <p>[0160]	m73 = coap://d6.example, org/yy/bb</p>
+    <p>[0161]	m74 = coap://d7.example, org/yy/bb</p>
+    <p>[0162]	m75 = coap://d8.example, org/cc</p>
+    <p>[0163]	m76 = coap://d9.example, org/dd</p>
+    <p>[0164]	第一群组服务器(此例中为图2-E中M2M网关Gl)为群组资源Grp7所分配的IPv6多播地址为[FF32:30:3FFE:FFFF:1::1234],且设备间的网络连接关系如图2-E所示(即成员资源m71、m72、m73、m74、m75和m76各自所属的成员设备Dl、D5、D6、D7、D8、D9均归属于M2M网关G1)，则成员资源(m71，m72)对应相同的扇出URI iVxx/aa/”，(m73, m74)对应相同的扇出URI “/yy/bb/”，而(m75，m76)则需要分配一个虚拟的扇出URI,如“/well-known/grp7/”,则为群组资源Grp7的各成员资源建立的映射关系如表2所示，S卩成员资源(m71，m72)和扇出URI (/xx/aa)的映射关系以及多播地址([FF32:30:3FFE:FFFF:1::1234])和扇出 URI (/xx/aa)的映射关系，成员资源(m73, m74)和扇出URI (/yy/bb)的映射关系以及多播地址([FF32:30: 3FFE:FFFF:1:: 1234])和扇出URI (/yy/bb),成员资源(m75,m76)和扇出URI (/well_known/grp7)的映射关系以及多播地址([FF32:30:3FFE:FFFF:1::1234])和扇出 URI (/well_known/grp7)的映射关系，成员资源(m77)、单播地址([3FFE:2A00:100:7031::1])及扇出URI(/abc)之间的映射关系。[0165]	当存在部分不支持多播的成员资源时:若群组资源中还包含不支持多播的成员资源，则对于这些不支持多播的成员资源单独采用现有技术中的逐一单播的访问方式处理而不需加入上述成员地址映射表。当然，为了便于群组服务器的统一处理，也可以在成员地址映射表中单独列出这些成员资源的单播访问地址和扇出URI。此时，需将其单播地址填入多播地址栏，而将其在成员设备上的访问路径填入扇出URI栏。例如假设上述Grp7中还包含成员m77为:</p>
+    <p>[0166]	m77 = http://nl.example, org/abc</p>
+    <p>[0167]	由于m77只能通过http协议访问，不支持多播，因此映射关系如表2所示。</p>
+    <p>[0168]	第五种情况，群组资源的成员资源中存在非本地成员资源且无法分配全局多播地址:</p>
+    <p>[0169]	对于步骤203-3中所描述的群组资源Grp3包含了非本地成员的情形，则第一群组服务器(此例中为图2-E中M2M网关Gl)可以在D2和G2分别创建两个群组:Grp8包含(m31, m32)和 Grp9 包含(m33, m34)，例如:</p>
+    <p>[0170]	Grp8 = http://d2.example, com/groups/grp8</p>
+    <p>[0171]	Grp9 = http://g2.example, com/groups/grp9</p>
+    <p>[0172]	由于第一群组服务器无法为D2和G2分配全局多播地址，因此只能按上述不支持多播方式处理，将D2和G2的单播地址分别填入多播地址栏，而将GrpS和Grp9的群组资源URI (或其在成员设备上的访问路径)分别填入扇出URI栏，如表2所示。</p>
+    <p>[0173]	表2，群组资源映射表</p>
+    <p>[0174]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103200209A/CN103200209AD00271.png"> <img id="idf0001" file="CN103200209AD00271.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103200209A/CN103200209AD00271.png" class="patent-full-image" alt="Figure CN103200209AD00271"> </a> </div>
+    <p>[0175]	上述群组资源映射表I和表2在具体实施时，可通过第一群组服务器内部的一般数据库来进行维护操作，或者注册到一个DNS (Domain Name System,域名系统)服务器中，或者也可以作为一种RESTful资源进行表述。该RESTful资源可以作为群组资源表述的一部分，如图2-F所示。</p>
+    <p>[0176]	图2-F中，〈group〉为现有技术ETSI M2M规范TS 102 690中所定义的群组资源表述，包含主要包含用于描述各成员资源URI的members属性，用以指代所有成员资源的membersContent子资源，以及其他若干属性和子资源(本发明在此不做详述)。符号“〈&gt;”表示相同类型的属性或子资源可能有多个实例，每个实例的字符串名称可以任意设定。请求者可以通过对members属性的增加、删除、修改、查看等操作实现对群组成员列表的修改，也可以通过对members属性的查看操作实现对成员资源列表的查看，也可以通过对membersContent子资源的增/删/改/查等操作实现对群组资源中所有成员资源的修改或查看。</p>
+    <p>[0177]	本发明实施例中，通过在现有的群组资源中新增扇出组〈fanoutSet〉资源，来描述群组资源中用于多播管理的成员资源与扇出URI及多播地址的映射关系。每个〈fanoutSet〉可描述表I或表2中的扇出URI及多播地址映射关系以及成员资源和扇出URI的映射关系，一个〈group〉资源本身对应表I或表2中的一个群组资源,其中可能包含O至任意多个〈fanoutSet〉子资源。每个〈fanoutSet〉资源可包含如下一些属性:</p>
+    <p>[0178]	fanoutAddress:对应表I或表2中的多播地址。</p>
+    <p>[0179]	fanoutUr1:对应表I或表2中的扇出URI信息。此属性在某些情况下是可选的。例如，当一个〈group〉资源中仅包含一个〈fanoutSet〉资源,且所有成员资源在其成员设备上的访问路径都相同时，扇出URI可以直接从members属性中的成员资源URI中明确获得，此时该属性可以被省略。或者，当扇出URI采用唯一确定的群组URI本身时，该属性也可以被省略。</p>
+    <p>[0180]	addressType为可选信息，用以描述fanoutAdress中的地址类型为多播或单播、以及IPv4或IPv6等信息。</p>
+    <p>[0181]	memberList为可选信息，用以描述该组映射关系所涉及的成员资源列表即各成员资源所属的成员设备以及各成员资源在成员设备上的访问路径，即表I中的成员资源。具体的，当群组资源的所有成员资源在成员设备上的访问路径相同时，所有成员资源对应一个多播地址和扇出URI。由于members属性中已包含群组资源中所有成员资源的信息，因此memberlist属性中可以不用再次记载各成员资源的信息。</p>
+    <p>[0182]	需要说明的是，图2-C中的步骤的执行并没有严格的先后顺序要求，图2-C所提供的流程只是一种较为优选的实施方式。实际上，步骤203-2可以先于步骤203-1执行从而优先分配全局多播地址而非本地多播地址，而步骤203-10中的建立多播地址和扇出RUI的映射关系以及成员资源和扇出URI的映射关系可以伴随步骤203-4到203-9之中分配多播或单播地址而完成。另外，每当群组资源被更新时，若其中成员资源的构成发生了变化(如原有的成员被删除，或新的成员被加入)，则第一群组服务器也应该按上述方法执行，并根据需要重新分配多播地址和更新相应的映射关系。</p>
+    <p>[0183]	步骤204、第一群组服务器根据多播地址及扇出URI的映射关系向成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址；以便于成员资源所属的成员设备根据加入多播组的群组通告加入与所述多播地址对应的多播组。</p>
+    <p>[0184]	具体的，第一群组服务器根据所建立的多播地址及扇出URI的映射关系，向支持多播的成员设备发送加入多播组的群组通告。加入多播组的群组通告中携带分配的多播地址，以指示支持多播的成员设备加入与所述多播地址对应的多播组。对于不支持多播的成员设备则不必发送加入多播组的群组通告。以一个群组资源(如Grp7)包括多条多播地址及扇出URI的映射关系为例，第一群组服务器需要针对每条具有扇出URI的映射关系中的成员资源对应的成员设备分别发送加入多播组的群组通告。此外，上述加入多播组的群组通告除包含成员设备所应加入的多播组对应的多播地址以外，加入多播组的群组通告还可以包括扇出URI以及成员资源的映射关系。</p>
+    <p>[0185]	具体来说，当群组资源中成员资源的在成员设备上的访问路径完全相同时(如表I和表2中的Grp4、Grp5)，所述加入多播组的群组通告可以只需要包含多播地址信息；当群组中成员资源的在成员设备上的访问路径不完全相同时(如表2中的Grp6、Grp7)，则加入多播组的群组通告还应包含扇出URI以及成员资源的映射关系，以便成员资源所属的成员设备存储所述扇出URI和所述多播地址映射关系，以及所述成员资源和所述多播地址的映身寸关系。</p>
+    <p>[0186]	加入多播组的群组通告可以根据预先的配置通过单播、多播或广播等多种方式发送到成员设备。具体来说，当采用单播方式时，第一群组服务器采用单播消息逐一向每个成员资源所属的成员设备的单播地址(如IPv4或IPv6单播地址)发送加入多播组的群组通告；当采用多播或广播方式时，群组服务器采用多播或广播消息，向事先约定的多播或广播地址(如IPv4或IPv6多播地址)发送加入多播组的群组通告，此时要求相应的成员设备已事先加入了所述特定多播或者广播地址所对应的多播/广播组(比如通过IGMP或MLD等IP多播管理协议的方式实现)，并且所述加入多播组的群组通告中还应包含成员设备的标识(URI)或成员资源URI，以指示与成员设备的标识(URI)或成员资源URI对应的成员设备接收并处理该加入多播组的群组通告，而其他成员设备忽略该加入多播组的群组通告。</p>
+    <p>[0187]	本发明实施例并不限定单播、多播或广播方式发送加入多播组的群组通告所采用的传输协议(例如HTTP、CoAP或SIP等)，而消息格式本身也可以采用不同的封装方式(例如XML或二进制编码等)。以下仅给出一种采用RESTful的发送加入多播组的群组通告的优选实施方式。</p>
+    <p>[0188]	为实现本发明，成员设备中存储了成员资源加入多播组的mcGroups资源，用于存储O至任意多个多播组资源〈mcGroup〉,而每个〈mcGroup〉资源描述了该成员设备所加入的多播组信息，如图2-G所示，〈mcGroup〉资源包含如下属性:</p>
+    <p>[0189]	mcAddress:成员设备所加入多播组的多播地址。</p>
+    <p>[0190]	fanoutUr1:成员设备所加入多播组对应的扇出URI。</p>
+    <p>[0191]	memberList:与所述扇出URI对应的本地成员资源列表,可以是成员资源的完整URI或者仅保存成员资源在该成员设备上的访问路径。</p>
+    <p>[0192]	第一群组服务器可以通过单播或多播或广播RESTful请求向相应的成员设备发送用于添加、删除或修改上述多播组资源〈mcGroup〉的请求，从而实现加入多播组的群组通告的发送。</p>
+    <p>[0193]	具体的，第一群组服务器通过加入多播组的群组通告指示成员设备加入多播组时，进行如下处理:</p>
+    <p>[0194]	当第一群组服务器需要通过加入多播组的群组通告将成员设备Dl加入一个多播组时，则向Dl发送HTTP POST请求向Dl中的mcGroups资源下添加一个〈mcGroup〉资源，并将mcGroup的资源表述携带在POST请求的消息体内:</p>
+    <p>[0195]	POST/xxx/mcGroups HTTP/1.1</p>
+    <p>[0196]	Host:dl.example, com</p>
+    <p>[0197]	{〈mcGroup〉资源表述}</p>
+    <p>[0198]	其中”/xxx/mcGroups”表明mcGroups资源在Dl上的访问路径，“HTTP/1.1”表示协议版本号，而Host头域携带Dl的域名或IP地址。若采用支持多播的CoAP协议发送加入多播组的群组通告，则Host头域可以携带Dl事先加入的一个多播组地址,且Host头域及该请求消息的各部分将按现有技术的方法转换为CoAP协议中的相应字段。其他与本发明不相关的POST请求的消息头域或消息体内容没有详尽列出。</p>
+    <p>[0199]	当成员设备Dl成功接收POST请求并在本地添加了〈mcGroup〉资源后，向第一群组服务器返回HTTP成功响应，如下:</p>
+    <p>[0200]	HTTP/1.1201 Created</p>
+    <p>[0201]	Location:http://dl.example, com/xxx/mcGroups/mcGrpI</p>
+    <p>[0202]	其中”201Created”表明所请求资源〈mcGroup〉已被成功添加，而Location头域则携带所添加资源在Dl上的URI，其中”mcGrpl”为该资源的实例名称。</p>
+    <p>[0203]	作为一种可选方式，群组服务器还可以通过发送HTTP PUT请求直接在成员设备Dl中写入一个名为mcGrp I的〈mcGroup〉资源，例如:</p>
+    <p>[0204]	PUT/xxx/mcGroups/mcGrpI HTTP/1.1</p>
+    <p>[0205]	Host:dl.example, com</p>
+    <p>[0206]	{〈mcGroup〉资源表述}</p>
+    <p>[0207]	而成员设备Dl则直接返回成功响应:HTTP/1.12000K</p>
+    <p>[0208]	第一群组服务器通过离开多播组的群组通告指示成员设备退出多播组时，则可以通过与发送加入多播组的群组通告类似的方法发送离开多播组的群组通告，进行如下处理:</p>
+    <p>[0209]	当第一群组服务器需要通过离开多播组的群组通告指示成员设备Dl离开一个多播组时，则向Dl发送一个HTTP DELETE请求以便从Dl中的mcGroups资源下删除一个〈mcGroup〉资源:</p>
+    <p>[0210]	DELETE/xxx/mcGroups/mcGrpI HTTP/1.1</p>
+    <p>[0211]	Host:dl.example, com</p>
+    <p>[0212]	其他发送加入或离开多播组的群组通告的实现方式:</p>
+    <p>[0213]	第一群组服务器还可以采用其它RESTful方法或者其他协议(如CoAP)来发送上述加入或离开多播组的群组通告。比如通过PUT、POST或DELETE方法直接修改成员设备上已有的〈mcGroup〉资源表(或者其中的部分属性)来指示成员设备加入或者离开某个多播组的通告。具体来说，通过替换整个〈mcGroup〉资源来指示离开原有的多播组，加入新的多播组；通过修改〈mcGroup〉资源中的mcAddress属性来变更多播组地址；通过修改〈mcGroup〉资源的fanoutURI属性来变更多播组对应的扇出URI ;或通过添加、删除或修改membersList中的成员资源列表来指示成员设备上某些成员资源加入或离开某多播组。</p>
+    <p>[0214]	成员设备在接收到上述加入或离开多播组的群组通告后，应根据加入或离开多播组的群组通告中的指示，采用IGMP或MLD等多播管理协议加入或离开相应的多播组，同时维护存储于该成员设备的多播组资源〈mcGroup〉，以便处理后续来自群组服务器的群组成员访问请求。</p>
+    <p>[0215]	此外，对于上述步骤203-9中分配了多播地址的第二群组服务器，则需要将所述第二群组服务器看作成员设备，进行上述发送加入或离开多播组的群组通告的相同处理，此处不再赘述。[0216]	此外，在第一群组服务器创建群组资源后，第一群组服务器还能收到应用服务器发送的对群组资源的更新请求，如增加成员资源的群组资源更新请求、删除成员资源的群组资源更新请求或修改群组资源描述信息的请求。</p>
+    <p>[0217]	具体的，增加成员资源的群组资源更新请求中携带群组资源的标识以及需加入群组资源的成员资源，所述需加入群组资源的成员资源包括成员资源所属的成员设备以及成员资源在成员设备上的访问路径。第一群组服务器收到增加成员资源的群组资源更新请求后，根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI相同，向需加入群组资源的成员资源所属的成员设备发送携带所述多播地址和扇出URI的映射关系中的多播地址的加入多播组的群组通告，以便于需加入群组资源的成员资源所属的成员设备通过所述多播地址加入多播组，以及接收通过多播地址发送的成员资源访问请求；或第一群组服务器收到增加成员资源的群组资源更新请求后，根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI不同；在与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系中增加需加入群组资源的成员资源，向需加入群组资源的成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告携带与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系，和与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系；以便于成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的扇出URI与成员资源的映射关系确定成员资源在成员设备上的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</p>
+    <p>[0218]	如果第一群组服务器接收的是修改群组资源描述信息的请求，则需要根据修改群组资源描述信息的请求中的群组描述替换存储的群组资源的描述信息，并根据更新后的群组资源的描述信息更新建立的群组资源。</p>
+    <p>[0219]	此外，上述删除成员资源的群组资源更新请求中携带需离开群组资源的成员资源和群组资源的标识，所述需离开群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径。第一群组服务器收到述删除成员资源的群组资源更新请求后，根据群组资源的标识确定与需离开群组资源的成员资源对应的扇出URI，以及与需离开群组资源的成员资源对应的扇出URI和多播地址的映射关系，删除所述与需离开群组资源的成员资源对应的扇出URI和多播地址的映射关系中的需离开群组资源的成员资源，向需离开的成员资源所属的成员设备发送携带与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组；或删除成员资源的群组资源更新请求中携带需保留的群组资源的成员资源和群组资源的标识，所述需保留的群组资源的成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；根据群组资源的标识确定与需离开群组资源的成员资源和扇出WR的映射关系，利用需保留的群组资源的成员资源更新所述需离开群组资源的成员资源和扇出UIR的映射关系中成员资源，向需离开的成员资源所属的成员设备发送携带映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组。[0220]	进一步的，第一群组服务器根据删除成员资源的群组资源更新请求的群组资源的标识确定需离开群组资源的成员资源在成员设备上的访问路径和需离开的成员资源对应的扇出URI不同；所述离开多播组的群组通告还包括与需离开群组资源的成员资源对应的所述扇出URI ;以便于需离开群组资源的成员资源所属的成员设备离开所述多播地址指示的多播组，并根据所述需离开群组资源的成员资源和离开多播组的群组通告中的扇出URI删除成员设备中与删除成员资源的群组资源更新请求的群组资源的标识对应的多播组信息中的成员资源。</p>
+    <p>[0221]	如图3所示，本发明实施例提供的一种群组资源的访问方法包括如下步骤:</p>
+    <p>[0222]	步骤301、接收群组服务器发送的成员资源访问请求，所述成员资源访问请求为多播的成员资源访问请求，所述成员资源访问请求中包含与所述成员资源对应的扇出URI。</p>
+    <p>[0223]	具体的，成员设备在加入到多播组以后，通过所述多播组接收第一群组服务器发送的成员资源访问请求。所述成员资源访问请求中携带的信息可参见步骤103的描述，本发明实施例在此不再详述。</p>
+    <p>[0224]	此外，在执行本步骤之前，成员设备还可以接收加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，以及根据所述多播地址加入与多播地址对应的多播组。具体的，成员设备接收第一群组服务器发送的加入多播组的群组通告。其中，第一群组服务器发送加入多播组的群组通告可参见步骤204的相关描述，本发明实施例在此不再详述。</p>
+    <p>[0225]	302、根据所述扇出URI确定成员资源在成员设备上的访问路径，以及根据所述成员资源在成员设备上的访问路径执行成员资源访问请求的操作。</p>
+    <p>[0226]	具体的，成员设备在收到第一群组服务器通过多播组发送的成员资源访问请求后，根据成员资源访问请求中携带的扇出URI，获取成员设备在步骤204中收到加入多播组的群组通告后存储的与扇出URI对应的成员资源，而执行成员资源访问请求的操作。</p>
+    <p>[0227]	此外，在上述实施例中，成员资源的成员设备还可以在加入多播组后，接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址；成员设备在收到离开多播组的群组通告后，删除存储的与离开多播组的群组通告中的多播地址相同的多播地址对应的多播组信息，并退出离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0228]	可选的，上述离开多播组的群组通告中还可以携带需离开群组资源的成员资源，所述需离开的成员资源包含需离开群组资源的成员资源所属的成员设备以及成员资源在成员设备上的访问路径。成员设备在收到离开多播组的群组通告后，删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中需离开群组资源的成员资源；以及删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0229]	此外，作为一种可选实施例，成员设备在删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组之前，还需要确定存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中的扇出URI不对应成员资源。</p>
+    <p>[0230]	由图3所示的实施例可知，成员设备可以通过多播组接收到第一群组服务器发送的成员资源访问请求，从而第一群组服务器不需要将成员资源访问请求分别发送给多播组的各成员设备，从而节省了网络流量。</p>
+    <p>[0231]	图3-A为本发明实施例提供的成员设备对接收的成员资源访问请求的处理的方法流程图，包括如下步骤:</p>
+    <p>[0232]	步骤302-1、接收成员资源访问请求；</p>
+    <p>[0233]	具体的，成员设备接收成员资源访问请求，所述成员资源访问请求可以是单播的成员资源访问请求，也可以是多播的成员资源访问请求。</p>
+    <p>[0234]	步骤302-2、成员设备判断成员资源访问请求是否为多播请求，若是则执行步骤302-4，否则执行步骤302-3 ；</p>
+    <p>[0235]	具体的，成员设备解析成员资源访问请求，如果成员资源访问请求的目的地址为多播地址，则成员资源访问请求为通过多播方式获取的，即为多播请求。反之，如果成员资源访问请求的目的地址为成员设备的单播地址，则不是通过多播方式获取的，即该成员资源访问请求并不是多播请求。</p>
+    <p>[0236]	步骤302-3、成员设备根据请求方法的具体类型，直接返回所述请求中目的URI对应的本地成员资源的操作结果，本步骤按现有技术处理；</p>
+    <p>[0237]	对成员资源的操作至少包括RESTful的几种基本操作类型之一，包括创建(Create，对应于HTTP或CoAP协议中的POST请求)、获取(Retrieve，对应于HTTP或CoAP协议中的GET请求)、更新(Update，对应于HTTP或CoAP协议中的PUT请求)、删除(Delete，对应于HTTP或CoAP协议中的DELETE请求)，因此相应的操作结果为上述操作是否成功的状态响应码，以及分别包括所创建子资源的内容描述、所获取资源的内容描述、所更新资源的内容描述、所删除操作是否成功等信息。</p>
+    <p>[0238]	步骤302-4、成员设备确定本地的多播组信息中是否包含所述成员资源访问请求中的目的URI包含的扇出URI指示的成员资源在成员设备上的访问路径，若是则执行步骤302-8，否则执行步骤302-5 ；</p>
+    <p>[0239]	步骤302-5、成员设备确定包含与成员资源访问请求中的目的地址相同的多播地址的多播组信息，参考图2-G所示的多播组资源〈mcGroup〉；</p>
+    <p>[0240]	步骤302-6、成员设备判断与成员资源访问请求中的目的地址相同的多播地址的多播组信息中是否包含与所述目的URI相关的扇出URI信息，若是则执行步骤302-7，否则执行步骤302-9。所述与目的URI相关的扇出URI具体为:目的URI与多播组信息中的扇出URI相同，或目的URI中包含了多播组信息中的扇出URI。</p>
+    <p>[0241]	步骤302-7、成员设备根据多播组信息中与扇出URI对应的成员资源在成员设备上的访问路径，将目的URI中的扇出URI部分替换为多播组信息中与扇出URI对应的成员资源在成员设备上的访问路径，将目的URI中除了扇出URI的剩余部分作为后缀，添加成员资源在成员设备上的访问路径后面，从而构造对本地成员资源的访问请求。当与扇出URI对应的成员资源在成员设备上的访问路径为多个时，则需要对每个成员资源分别构造对本地成员资源的访问请求。</p>
+    <p>[0242]	步骤302-8、成员设备根据成员资源访问请求中的方法(比如HTTPGET/PUT/POST/DELETE)操作成员资源，并返回操作结果。成员设备可以合并多个本地成员资源的操作结果为一个，返回给群组服务器，也可以分别返回多个操作结果。</p>
+    <p>[0243]	步骤302-9、成员设备丢弃或忽略成员资源访问请求。[0244]	具体的，根据图3-A的描述，假设按第一群组服务器所发送的针对表一中的群组资源Grp4的成员资源访问请求，则成员设备Dl和D5由于已加入了与多播地址[FF32:30:3FFE:FFFF:1::1231]对应的多播组，将收到相同的一个访问请求如下:</p>
+    <p>[0245]	GET/xxx/tempi/data HTTP/1.1</p>
+    <p>[0246]	Host:[FF32:30:3FFE:FFFF:1::1231]</p>
+    <p>[0247]	则成员设备Dl和D5将根据目的URI “/xxx/templ/data”查找该URI所指示的本地成员资源，并根据GET请求方法返回相应的资源内容。</p>
+    <p>[0248]	作为另一个例子，假设按照实施例2表I中的映射关系，第一群组服务器发送针对表二中的对群组资源Grp7的成员资源的访问请求，则成员设备D8和D9由于已加入了多播地址[FF32:30:3FFE:FFFF:1:: 1234]对应的多播组，将收到相同的成员资源访问请求，如下:</p>
+    <p>[0249]	GET/well-known/grp7/data HTTP/1.1</p>
+    <p>[0250]	Host:[FF32:30:3FFE:FFFF:1::1234]</p>
+    <p>[0251]	由于Dl和D5根据目的URI “/well_known/grp7”无法找到在成员设备上的访问路径为“/well-kn0Wn/grp7”的成员资源，但可以在本地存储的多播组资源信息中找到包含扇出URI “/well-known/grp7”的记录,如表3所示，当然包含扇出URI “/well-known/grp7”的记录也可以是如图2-G所示，本发明实施例在此不做限定。</p>
+    <p>[0252]	表3:成员资源映射表</p>
+    <p>[0253]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103200209A/CN103200209AD00341.png"> <img id="idf0002" file="CN103200209AD00341.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103200209A/CN103200209AD00341.png" class="patent-full-image" alt="Figure CN103200209AD00341"> </a> </div>
+    <p>[0254]	于是Dl和D5分别将目的URI中的扇出URI部分替换为对应的本地成员资源列表memberList中的记录,从而构造对应的本地成员资源访问URI分别为“/cc/data”和“/dd/data”，然后根据GET请求方法返回相应的资源内容。</p>
+    <p>[0255]	图4为本发明实施例提供的通过直接分配的多播地址的群组资源访问方法的流程图，包括如下步骤:</p>
+    <p>[0256]	步骤401、网络应用服务器NAl请求在M2M平台NI (即本发明实施例中的第一群组服务器)上创建群组资源GrplO，向NI发送群组资源创建请求。群组资源创建请求中包含成员资源mlOl和ml02。成员资源mlOl和ml02分别位于M2M网关Gl下的两个M2M设备Dl和D2上。</p>
+    <p>[0257]	步骤402、NI在本地创建群组资源GrplO。</p>
+    <p>[0258]	步骤403、N1分析群组资源GrplO及其成员资源mlOl和ml02,判断可以为成员资源mlOl和ml02建立多播组。具体的，NI对群组资源GrplO及其成员资源mlOl和ml02的分析可参见图2-A及上述实施例与图2-A对应的描述，本发明实施例在此不在详述；</p>
+    <p>[0259]	此外，NI为Dl和D2分配相同的本地或全局多播地址，并建立与本地或全局多播地址相关的映射关系。具体的，可参见图2-C及上述实施例与图2-C对应的描述，本发明实施例在此不在详述。</p>
+    <p>[0260]	步骤404和404_a、Nl向成员设备Dl和D2发送加入多播组的群组通告，以指示Dl和D2加入上述多播地址对应的多播组。所述加入多播组的群组通告可以采用单播的方式分别向Dl和D2逐一发送；或者可以采用多播的方式向成员设备Dl和D2已经事先加入的某个多播组一次发送。具体的，请参见步骤204的相关描述，本发明实施例在此不在详述。</p>
+    <p>[0261]	步骤405和步骤405-a、成员设备Dl和D2按照现有技术中的方法，采用MLD或IGMP等多播管理协议加入所述多播群组通告中所指示的多播地址对应的多播组。本实施例假设Gl为Dl和D2共有的本地多播路由器，则Dl和D2分别向Gl发送MLD/IGMP report命令加入响应的多播组。</p>
+    <p>[0262]	步骤406、NA1向NI发送对成员资源的访问请求,请求访问群组资源GrplO中的所有成员资源mlOl和ml02。其中，对成员资源的访问请求携带的信息请参考步骤101的描述，本发明实施例在此不在详述。</p>
+    <p>[0263]	步骤407、NI通过群组资源标识GrplO确定群组资源GrplO建立了映射关系，构造成员资源访问请求，并采用多播的方式将成员资源访问请求发送到映射关系的多播地址(即多播地址)。具体的，本步骤的执行请参考步骤102的描述，本发明实施例在此不在详述。</p>
+    <p>[0264]	由于Gl在步骤405和405_a中获知成员设备Dl和D2已加入了所述多播地址对应的多播组，因此将所述多播访问请求转发到本地链路上。</p>
+    <p>[0265]	步骤408和408-a、成员设备Dl和D2接收所述多播访问请求，并访问所述请求中所指示的本地成员资源mlOl和ml02，然后将访问结果返回给NI。具体的，本步骤的请参考图3-A及上述实施例与图3-A对应的描述，本发明实施例在此不在详述。</p>
+    <p>[0266]	步骤409、NI将接收到的来自Dl和D2的群组成员资源访问结果进行合并。</p>
+    <p>[0267]	步骤410、NI向NAl返回所合并的群组成员资源访问结果。</p>
+    <p>[0268]	图5为本发明实施例提供的通过申请的全局多播地址的群组资源访问方法的流程图，包括如下步骤:</p>
+    <p>[0269]	步骤501、网络应用服务器NAl请求在M2M网关Gl (即本发明实施例中的第一群组服务器)上创建群组资源Grpll，向Gl发送群组资源创建请求。群组资源创建请求中包含成员资源mill和mll2。成员资源mill和mll2分别位于M2M平台NI下的两个M2M设备Dl和D2上。</p>
+    <p>[0270]	步骤502、M2M网关Gl按现有技术在本地创建群组资源GrplO。</p>
+    <p>[0271]	步骤503、M2M网关Gl分析群组资源Grpll及其成员资源mill和mll2，判断可以为成员资源mlOl和ml02建立多播组。具体的，M2M网关Gl对群组资源GrplO及其成员资源mlOl和ml02的分析可参见图2-A及上述实施例与图2-A对应的描述，本发明实施例在此不在详述；</p>
+    <p>[0272]	此外，M2M网关Gl判断成员设备Dl和D2不属于其本地多播域，同时M2M网关Gl不能直接分配全局多播地址，因此向具有全局多播地址分配能力的M2M平台NI (第二群组服务器)请求为Dl和D2分配一个全局多播地址。具体的，可参考可参见图2-C中步骤203-2的相应描述，本发明实施例在此不在详述。</p>
+    <p>[0273]	步骤504、M2M平台NI根据Gl的请求返回一个所分配的全局多播地址。</p>
+    <p>[0274]	步骤505、M2M网关Gl为Dl和D2分配从NI申请到的全局多播地址，并建立与全局多播地址相关的映射关系。具体的，可参见图2-C及上述实施例与图2-C对应的描述，本发明实施例在此不在详述</p>
+    <p>[0275]	步骤506和506_a、M2M网关Gl向成员设备Dl和D2发送加入多播组的群组通告，以指示Dl和D2加入上述多播地址对应的多播组。所述加入多播组的群组通告可以采用单播的方式分别向Dl和D2逐一发送；或者可以采用多播的方式向成员设备Dl和D2已经事先加入的某个多播组一次发送。具体的，请参见步骤204的相关描述，本发明实施例在此不在详述。</p>
+    <p>[0276]	步骤507和步骤507-a、成员设备Dl和D2按照现有技术中的方法，采用MLD或IGMP等多播管理协议加入所述多播群组通告中所指示的多播地址对应的多播组。本实施例假设M2M网关NI为Dl和D2共有的本地多播路由器，则Dl和D2分别向M2M网关NI发送MLD/IGMP r印ort命令加入相应的多播组。</p>
+    <p>[0277]	步骤508、将步骤406-410中的群组资源标识换为Grpl I，成员资源为ml I l、ml 12，</p>
+    <p>其余相同。</p>
+    <p>[0278]	图6为本发明实施例提供的通过远程分配的多播地址的群组资源访问方法的流程图，包括如下步骤:</p>
+    <p>[0279]	步骤601-602与步骤501和502相同，本发明实施例在此不在详述。</p>
+    <p>[0280]	步骤603、M2M网关Gl分析群组资源Grpll及其成员资源mill和mll2，判断可以为成员资源mlOl和ml02建立多播组。具体的，M2M网关Gl对群组资源GrplO及其成员资源mlOl和ml02的分析可参见图2-A及上述实施例与图2-A对应的描述，本发明实施例在此不在详述；</p>
+    <p>[0281 ] 此外，M2M网关Gl确定成员资源mlOl和ml02所属的成员设备Dl和D2归属于M2M平台NI (即Dl和D2注册到NI)，请求在M2M平台NI (第二群组服务器)上创建第二群组资源Grpl2，第二群组资源Grpl2包含成员设备Dl和D2上的成员资源mill和mll2。此时，NI作为远程群组服务器(即第二群组服务器)。</p>
+    <p>[0282]	步骤604、M2M平台NI按现有技术在本地创建群组资源Grp 12。</p>
+    <p>[0283]	步骤605、M2M平台NI向M2M网关Gl返回建群组资源Grpl2创建成功的响应，其中包含Grp 12的访问标识URI。</p>
+    <p>[0284]	步骤606、M2M网关Gl为成员资源建立映射关系，并将Grpl2的URI作为Grpll中成员资源mill和mll2的扇出URlJfNl的网络地址(可以是单播或多播)作为其多播地址。可选的，若Gl可以为NI分配一个本地多播地址，则所述映射关系中的多播地址可设为所分配的本地多播地址。具体的，可参考步骤203-10的相关描述，本发明实施例不在详述。</p>
+    <p>[0285]	步骤607、M2M平台NI为成员设备Dl和D2分配相同的本地或全局多播地址，并建立与本地或全局多播地址相关的映射关系。具体的，可参考图2-C的相关描述。[0286]	此外，M2M平台NI在为成员设备Dl和D2分配相同的本地或全局多播地址之前，还需要分析所创建群组资源Grpl2及其成员资源mill和mll2的特征，判断可以为其建立多播组。具体的，可参考图2-A及上述实施例与图2-A对应的描述，本发明实施例在此不在详述。</p>
+    <p>[0287]	值得说明的是，步骤607和步骤605之间并没有时间上的限制，步骤607既可以在步骤605之后执行，也可以在步骤605之前执行，还可以同时执行，本发明实施例在此不再详述。</p>
+    <p>[0288]	步骤608和608_a、M2M平台NI向成员设备Dl和D2发送加入多播组的群组通告，以指示Dl和D2加入多播地址对应的多播组。所述加入多播组的群组通告可以采用单播的方式分别向Dl和D2逐一发送；或者可以采用多播的方式向成员设备Dl和D2已经事先加入的某个多播组一次发送。具体的，请参见步骤204的相关描述，本发明实施例在此不在详述。</p>
+    <p>[0289]	步骤609和步骤609-a与步骤507和步骤507_a相同，本发明在此不再详述。</p>
+    <p>[0290]	步骤610、网络应用服务器NAl向M2M网关Gl发送对成员资源的访问请求，请求访问群组资源Grpll中的所有成员资源mill和mll2。其中，对成员资源的访问请求携带的信息请参考步骤101的描述，本发明实施例在此不在详述。</p>
+    <p>[0291]	步骤611、M2M网关Gl通过群组资源标识Grpll确定群组资源Grpll的成员资源建立了映射关系，构造第一成员资源访问请求，并采用多播的方式将成员资源访问请求发送到映射关系的多播地址(M2M平台NI的网络地址)，此外，第一成员资源访问请求的扇出URI为Grpll的URI。若Grpll还包含了其他本地成员资源，则M2M网关Gl可按向其他本地成员设备发送单播或多播访问请求，此处不再赘述。</p>
+    <p>[0292]	步骤612、M2M平台NI根据第一成员资源访问请求的扇出URI (即Grpll的URI)确定为Grpll的成员资源建立了映射关系，根据建立的映射关系构造第二成员资源访问请求，然后采用多播的方式发送到与Grpll对应的多播地址。具体的，本步骤的执行与步骤407相同，本发明实施例在此不在详述。</p>
+    <p>[0293]	步骤613-615与步骤408-410的描述相同，除了具体的成员资源以及收发消息的成员设备不同以外，本发明实施例在此不在详述。</p>
+    <p>[0294]	步骤615-617请与步骤409-410的描述相同，本发明实施例在此不在详述。</p>
+    <p>[0295]	图7为本发明实施例提供的群组服务器，如前所述，M2M中的群组服务器可以为M2M平台，M2M网关，也可以为M2M设备。即在M2M网络中，只要具有业务中间件，可以存储和维护群组资源的设备、网关、和平台都可以作为群组服务器。</p>
+    <p>[0296]	图7所示的群组服务器包括接收模块701，获取模块702和发送模块703，处理模块704。具体的，</p>
+    <p>[0297]	接收模块701，用于接收对成员资源的访问请求，所述对成员资源的访问请求中携带成员资源所属群组资源的群组资源标识；获取模块702，用于根据所述群组资源标识获取群组资源中与所述扇出URI对应的扇出URI，以及与成员资源对应的多播地址，所述扇出URI用于指示成员资源在成员设备上的访问路径；发送模块703，用于根据所述多播地址向所述成员资源所属的成员设备发送成员资源访问请求，所述成员资源访问请求的目的URI包含与所述成员资源对应的扇出URI ;以便所述成员资源所属的成员设备根据所述扇出URI指示的成员资源在成员设备上的访问路径执行所述成员资源访问请求指示的操作。</p>
+    <p>[0298]	可选的，接收模块701进一步用于接收群组资源创建请求，所述群组资源创建请求中携带各成员资源，所述成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述群组服务器还包括处理模块704，用于根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址以及根据成员资源在成员设备上的访问路径建立所述所述多播地址及所述扇出URI之间的映射关系。</p>
+    <p>[0299]	可选的，处理模块704具体为:用于为在成员设备上具有相同访问路径的成员资源分配多播地址，并建立所述多播地址及所述扇出URI的映射关系；所述扇出URI为所述成员资源在成员设备上的访问路径；和/或用于为在成员设备上具有不同访问路径的至少一个成员资源分配虚拟标识，为所述至少一个成员资源分配多播地址，并建立所述多播地址及所述虚拟标识的映射关系以及所述虚拟标识和成员资源的映射关系；将所述虚拟标识设为所述扇出URI。</p>
+    <p>[0300]	可选的，发送模块703进一步用于:根据多播地址及所述扇出URI的映射关系向成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，以便于成员资源所属的成员设备根据加入多播组的群组通告加入与所述多播地址对应的多播组。</p>
+    <p>[0301]	可选的，处理模块704根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径为所述成员资源分配多播地址具体为:根据成员资源所属的成员设备确定所述成员资源所属的成员设备归属于第一群组服务器，为成员资源所属的成员设备分配本地多播域的多播地址；或根据成员资源所属的成员设备确定所述成员资源所属的成员设备并不都归属于第一群组服务器，为成员资源所属的成员设备分配全局多播域的多播地址或请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址。</p>
+    <p>[0302]	可选的，处理模块704为成员资源所属的成员设备分配全局多播域的多播地址具体为:向具有全局多播域的多播地址的群组服务器申请全局多播域的多播地址，为成员资源所属的成员设备分配申请的全局多播域的多播地址；所述请求为不归属于第一群组服务器的成员资源所属的成员设备分配远程多播域的多播地址具体为:确定不归属于第一群组服务器的成员资源所属的成员设备归属于第二群组服务器，向第二群组服务器发送创建第二群组资源请求，所述创建第二群组资源请求携带第一群组资源标识以及成员资源，所述成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；第二群组服务器根据成员资源所属的成员设备以及成员资源在成员设备上的访问路径创建第二群组资源以及为成员资源分配多播地址</p>
+    <p>[0303]	可选的，处理模块704根据成员资源所属的成员设备为所述成员资源分配多播地址具体为:根据成员资源所属的成员设备确定所述成员资源所属的成员设备和成员设备所属的网络支持多播，并为所述成员资源分配多播地址；所述处理模块704还用于:存储不具有多播能力的成员设备对应的成员资源，以便于群组服务器为不具有多播能力的成员设备单播对成员资源的访问请求。</p>
+    <p>[0304]	可选的，处理模块704还用于:将对成员资源的访问请求的目的地址设置为与所述扇出URI对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI，以生成成员资源访问请求，以及还用于利用所述多播地址发送携带所述与成员资源对应的扇出URI的成员资源访问请求。</p>
+    <p>[0305]	可选的，处理模块704还用于确定所述对成员资源的访问请求中的目的URI还包含后缀；将对成员资源的访问请求的目的地址设置与所述扇出UIR对应的多播地址，将对成员资源的访问请求的目的URI设为所述与成员资源对应的扇出URI以及在所述扇出URI后面添加所述目的URI包含的后缀，以生成成员资源访问请求。</p>
+    <p>[0306]	可选的，接收模块701还用于接收增加成员资源的群组资源更新请求，所述增加成员资源的群组资源更新请求中携带群组资源的标识以及需加入群组资源的成员资源，所述需加入群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；处理模块704还用于还用于根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI相同，向需加入群组资源的成员资源所属的成员设备发送携带所述多播地址和扇出URI的映射关系中的多播地址的加入多播组的群组通告，以便于需加入群组资源的成员资源所属的成员设备通过所述多播地址加入多播组，以及接收通过多播地址发送的成员资源访问请求；</p>
+    <p>[0307]	可选的，处理模块704还用于根据群组资源的标识确定需加入群组资源的成员资源在成员设备上的访问路径和与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系中的扇出URI不同；在与群组资源的标识对应的群组资源中的扇出URI和成员资源的映射关系中增加需加入群组资源的成员资源，向需加入群组资源的成员资源所属的成员设备发送加入多播组的群组通告，所述加入多播组的群组通告携带与群组资源的标识对应的群组资源中的所述多播地址和扇出URI的映射关系，和扇出URI与成员资源在成员设备上的访问路径的映射关系；以便于成员设备在接收到携带所述扇出URI的访问请求后，根据接收到的扇出URI与成员资源的映射关系确定成员资源在成员设备的访问路径，并根据确定的成员资源在成员设备上的访问路径执行相应的成员资源访问请求。</p>
+    <p>[0308]	可选的，接收模块701还用于接收删除成员资源的群组资源更新请求，所述删除成员资源的群组资源更新请求中携带需离开群组资源的成员资源和群组资源的标识，所述需离开群组资源的成员资源包括所述成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述处理模块还用于:根据群组资源的标识确定与需离开群组资源的成员资源对应的扇出URI，以及与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系，删除所述映射关系中的需离开群组资源的成员资源，向需离开的成员资源所属的成员设备发送携带与需离开群组资源的成员资源对应扇出URI和多播地址的映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组；</p>
+    <p>[0309]	可选的，接收模块还用于接收删除成员资源的群组资源更新请求，所述删除成员资源的群组资源更新请求中携带需保留的群组资源的成员资源和群组资源的标识，所述需保留的群组资源的成员资源包含成员资源所属的成员设备以及成员资源在成员设备上的访问路径；所述处理模块还用于根据群组资源的标识确定需离开群组资源的成员资源和扇出UIR的映射关系，利用需保留的群组资源的成员资源更新所述需离开群组资源的成员资源和扇出UIR的映射关系中成员资源；向需离开的成员资源所属的成员设备发送携带映射关系中的多播地址的离开多播组的群组通告，以便于需离开的成员资源所属的成员设备离开所述多播地址指示的多播组。</p>
+    <p>[0310]	可选的，处理模块704还用于:根据删除成员资源的群组资源更新请求的群组资源的标识确定需离开群组资源的成员资源在成员设备上的访问路径和需离开的成员资源对应的扇出URI不同；所述离开多播组的群组通告还包括与需离开群组资源的成员资源对应的所述扇出URI ;以便于需离开群组资源的成员资源所属的成员设备离开所述多播地址指示的多播组，并根据所述需离开群组资源的成员资源和离开多播组的群组通告中的扇出URI删除成员设备中与删除成员资源的群组资源更新请求的群组资源的标识对应的多播组信息中的成员资源。</p>
+    <p>[0311]	图8为本发明实施例提供的成员设备，可以为M2M平台，M2M网关，也可以为M2M设备。即在M2M网络中，只要存储有资源的设备、网关、和平台都可以作为成员设备。具体的，成员设备包括:接收模块801和操作模块802。</p>
+    <p>[0312]	具体的，接收模块801，用于接收群组服务器发送的成员资源访问请求，所述成员资源访问请求为多播的成员资源访问请求，所述成员资源访问请求中包含与所述成员资源对应的扇出URI，所述扇出URI用于指示成员资源在成员设备上的访问路径；操作模块802，用于根据所述扇出URI确定成员资源在成员设备上的访问路径，以及根据所述成员资源在成员设备上的访问路径执行访问请求的操作。</p>
+    <p>[0313]	可选的，接收模块801进一步用于:接收加入多播组的群组通告，所述加入多播组的群组通告中携带多播地址，根据加入多播组的群组通告加入与所述多播地址对应的多播组。</p>
+    <p>[0314]	可选的，加入多播组的群组通告中还携带所述扇出URI和成员资源在成员设备上的访问路径的映射关系，所述成员设备进一步包括存储模块803，用于存储所述扇出URI和所述多播地址映射关系以及所述成员资源和所述多播地址的映射关系。</p>
+    <p>[0315]	可选的，成员设备进一步包括确定模块804用于确定成员资源访问请求的目的地址为多播地址。</p>
+    <p>[0316]	可选的，操作模块802根据所述扇出URI确定成员资源在成员设备上的访问路径具体为具体为:确定包含与成员资源访问请求中的目的地址相同的多播地址的多播组信息，确定与成员资源访问请求中的目的地址相同的多播地址的多播组信息中包含与所述成员资源访问请求中的目的URI相同的扇出URI，确定多播组信息中与扇出URI对应的成员资源在成员设备上的访问路径。</p>
+    <p>[0317]	可选的，操作模块802根据所述成员资源在成员设备上的访问路径执行访问请求的操作具体为:将所述成员资源访问请求中的目的URI包含的扇出URI用确定的成员资源在成员设备上的访问路径替换，并针对与确定的成员资源在成员设备上的访问路径对应的成员资源执行访问请求的操作。</p>
+    <p>[0318]	可选的，接收模块801进一步用于:接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址；存储模块803进一步用于，删除存储的与离开多播组的群组通告中的多播地址相同的多播地址对应的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0319]	可选的，接收模块801进一步用于:接收离开多播组的群组通告，所述离开多播组的群组通告中携带多播地址和需离开的成员资源，所述需离开的成员资源包含需离开群组资源的成员资源所属的成员设备以及成员资源在成员设备上的访问路径；存储模块803进一步用于删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中需离开群组资源的成员资源；以及删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组。</p>
+    <p>[0320]	进一步的，存储模块803在删除存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息，并退出所述离开多播组的群组通告中的多播地址对应的多播组之前，还需要确定存储的与所述离开多播组的群组通告中的多播地址相同的多播地址的多播组信息中的扇出URI不对应成员资源</p>
+    <p>[0321]	上述针对群组服务器或成员设备中包含的各模块的处理功能的实施方式在之前的方法实施例中已经描述，在此不再重复描述。此外，在M2M网络中，M2M平台可以是各计算机，具有处理器的设备。M2M网关和M2M终端在设备上没有严格的区分，比如做网关的设备也可以做为终端，此外为各种终端设备，如手机，计算机，PDA,笔记本电脑，远程控制器，家用电器，各种仪器仪表、传感器等都可以做为M2M网络的网关或终端。在上述模块实施例中，所包括的各个单元只是按照功能逻辑进行划分的，但并不局限于上述的划分，只要能够实现相应的功能即可；另外，各功能单元的具体名称也只是为了便于相互区分，并不用于限制本发明的保护范围。上述实现成员设备执行的方法及成员设备各功能模块的功能均可以由成员设备的处理器完成，以及上述实现群组服务器执行的方法及群组服务器各功能模块的功能均可以由群组服务器的处理器完成。</p>
+    <p>[0322]	采用上述本发明的实施例提供的技术方案可以看出，通过建立成员资源在成员设备上的访问路径与扇出URI的映射关系，并在成员访问请求中包含所述扇出URI ;以便所述成员资源所属的成员设备根据所述扇出URI指示的所述成员资源在成员设备上的访问路径执行所述成员访问请求指示的操作。从而使得不同的成员设备能够通过使用多播技术利用扇出URI，解析多播的对成员资源的访问请求，以及针对访问请求进行后续的操作。从而使得群组服务器不需要对各成员设备单播访问请求，节省网络开销。</p>
+    <p>[0323]	以上所述，仅为本发明较佳的具体实施方式，但本发明的保护范围并不局限于此，任何熟悉本技术领域的技术人员在本发明揭露的技术范围内，可轻易想到的变化或替换，都应涵盖在本发明的保护范围之内。因此，本发明的保护范围应该以权利要求的保护范围为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103605480A?cl=zh">CN103605480A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年10月29日</td><td class="patent-data-table-td patent-date-value">2014年2月26日</td><td class="patent-data-table-td ">新浪网技术(中国)有限公司</td><td class="patent-data-table-td ">Web服务器及其磁盘资源访问控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2016008102A1?cl=zh">WO2016008102A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年7月15日</td><td class="patent-data-table-td patent-date-value">2016年1月21日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">对群组资源中成员资源的操作请求的处理方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012180000">H04L12/18</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029120000">H04L29/12</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L12/185">H04L12/185</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L61/2069">H04L61/2069</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W4/005">H04W4/005</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W4/08">H04W4/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=4eLFCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L12/1877">H04L12/1877</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年7月10日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年12月10日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/5d9a49330e0e14ffc377/CN103200209A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%88%90%E5%91%98%E8%B5%84%E6%BA%90%E7%9A%84%E8%AE%BF%E9%97%AE%E6%96%B9%E6%B3%95_%E7%BE%A4%E7%BB%84%E6%9C%8D%E5%8A%A1.pdf?id=4eLFCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1GFU6XK1-VIDwdBcgGIzP0Syzrhw"},"sample_url":"https://www.google.com/patents/reader?id=4eLFCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

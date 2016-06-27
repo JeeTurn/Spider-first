@@ -1,0 +1,230 @@
+<!DOCTYPE html><html><head><title>专利 CN103412897A - 一种基于分布式结构的并行数据处理方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种基于分布式结构的并行数据处理方法"><meta name="DC.contributor" content="郭皓明" scheme="inventor"><meta name="DC.contributor" content="丁治明" scheme="inventor"><meta name="DC.contributor" content="刘奎恩" scheme="inventor"><meta name="DC.contributor" content="许佳捷" scheme="inventor"><meta name="DC.contributor" content="徐怀野" scheme="inventor"><meta name="DC.contributor" content="李亚光" scheme="inventor"><meta name="DC.contributor" content="张天为" scheme="inventor"><meta name="DC.contributor" content="中国科学院软件研究所" scheme="assignee"><meta name="DC.date" content="2013-7-25" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及一种基于分布式结构的并行数据处理方法，其存储步骤包括：1）根据主键值类型在主节点抽取得到数据主键值，在主节点中根据数据属性取值与区间对比结果确定数据分发的定向从节点，同时建立全局关键字B+树索引；2）根据全局关键字B+树索引基于share-nothing原则将数据分发到主键值对应的从节点；3）在从节点接受数据分发请求，在本地基于share-everything原则将数据存储在子节点中。本发明中结合有效的索引机制，提高系统数据存储与管理的效率；一方面保证数据合理分布，降低从节点存储吞吐，提高局部查询性能，利用从节点高可扩展性保证系统弹性；另一方面通过局部多副本复制保证局部副本安全。"><meta name="DC.date" content="2013-11-27"><meta name="DC.relation" content="CN:101916261:A" scheme="references"><meta name="DC.relation" content="CN:102467570:A" scheme="references"><meta name="DC.relation" content="US:7818349" scheme="references"><meta name="citation_patent_publication_number" content="CN:103412897:A"><meta name="citation_patent_application_number" content="CN:201310317203"><link rel="canonical" href="https://www.google.com/patents/CN103412897A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103412897A?cl=zh"/><meta name="title" content="专利 CN103412897A - 一种基于分布式结构的并行数据处理方法"/><meta name="description" content="本发明涉及一种基于分布式结构的并行数据处理方法，其存储步骤包括：1）根据主键值类型在主节点抽取得到数据主键值，在主节点中根据数据属性取值与区间对比结果确定数据分发的定向从节点，同时建立全局关键字B+树索引；2）根据全局关键字B+树索引基于share-nothing原则将数据分发到主键值对应的从节点；3）在从节点接受数据分发请求，在本地基于share-everything原则将数据存储在子节点中。本发明中结合有效的索引机制，提高系统数据存储与管理的效率；一方面保证数据合理分布，降低从节点存储吞吐，提高局部查询性能，利用从节点高可扩展性保证系统弹性；另一方面通过局部多副本复制保证局部副本安全。"/><meta property="og:title" content="专利 CN103412897A - 一种基于分布式结构的并行数据处理方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103412897A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103412897A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=iVLkCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103412897A&amp;usg=AFQjCNEJ00Oe2ld4t37744d-bZPXjz9XRg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/f7081d59edc8fe3fd940/CN103412897A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/f7081d59edc8fe3fd940/CN103412897A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103412897A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103412897A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103412897A?cl=zh" style="display:none"><span itemprop="description">本发明涉及一种基于分布式结构的并行数据处理方法，其存储步骤包括：1）根据主键值类型在主节点抽取得到数据主键值，在主节点中根据数据属性取值与区间对比结果确定数据分发的定向从节点，同时建立全局关键字B+树索引...</span><span itemprop="url">https://www.google.com/patents/CN103412897A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103412897A - 一种基于分布式结构的并行数据处理方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103412897A - 一种基于分布式结构的并行数据处理方法" title="专利 CN103412897A - 一种基于分布式结构的并行数据处理方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103412897 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310317203</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年11月27日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年7月25日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年7月25日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310317203.9, </span><span class="patent-bibdata-value">CN 103412897 A, </span><span class="patent-bibdata-value">CN 103412897A, </span><span class="patent-bibdata-value">CN 201310317203, </span><span class="patent-bibdata-value">CN-A-103412897, </span><span class="patent-bibdata-value">CN103412897 A, </span><span class="patent-bibdata-value">CN103412897A, </span><span class="patent-bibdata-value">CN201310317203, </span><span class="patent-bibdata-value">CN201310317203.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%AD%E7%9A%93%E6%98%8E%22">郭皓明</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%B8%81%E6%B2%BB%E6%98%8E%22">丁治明</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E5%A5%8E%E6%81%A9%22">刘奎恩</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%AE%B8%E4%BD%B3%E6%8D%B7%22">许佳捷</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BE%90%E6%80%80%E9%87%8E%22">徐怀野</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E4%BA%9A%E5%85%89%22">李亚光</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E5%A4%A9%E4%B8%BA%22">张天为</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E8%BD%AF%E4%BB%B6%E7%A0%94%E7%A9%B6%E6%89%80%22">中国科学院软件研究所</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103412897A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103412897A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103412897A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=iVLkCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310317203&amp;usg=AFQjCNFH3vzWuFgXq5KnK7LBilCW2SuM_A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=iVLkCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103412897A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHXlJ0XGAPBf2l5eaTkiDu7ZieXrg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT131550037" lang="ZH" load-source="patent-office">一种基于分布式结构的并行数据处理方法</invention-title>
+      </span><br><span class="patent-number">CN 103412897 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA126228139" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及一种基于分布式结构的并行数据处理方法，其存储步骤包括：1）根据主键值类型在主节点抽取得到数据主键值，在主节点中根据数据属性取值与区间对比结果确定数据分发的定向从节点，同时建立全局关键字B+树索引；2）根据全局关键字B+树索引基于share-nothing原则将数据分发到主键值对应的从节点；3）在从节点接受数据分发请求，在本地基于share-everything原则将数据存储在子节点中。本发明中结合有效的索引机制，提高系统数据存储与管理的效率；一方面保证数据合理分布，降低从节点存储吞吐，提高局部查询性能，利用从节点高可扩展性保证系统弹性；另一方面通过局部多副本复制保证局部副本安全。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM56913454" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种基于分布式结构的并行数据存储方法，其步骤包括:  1)根据主键值类型在主节点抽取得到数据主键值，在所述主节点中根据数据属性取值与区间对比结果确定数据分发的定向从节点，同时建立全局关键字B+树索引；  2)根据所述全局关键字B+树索引基于share-nothing原则将数据分发到所述主键值对应的从节点；  3)在所述从节点接受数据分发请求，在本地基于share-everything原则将数据存储在子节点中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的基于分布式结构的并行数据存储方法，其特征在于，根据所述share-nothing原则将数据从主节点转发到各个从节点，且从节点间的数据不互为副本；根据所述share-everything原则将子节点中之间的数据在本地集群中进行多副本复制且子节点间的数据互为副本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的基于分布式结构的并行数据存储方法，其特征在于，将数据分发到所述主键值对应的从节点的步骤如下:  1)利用预先注册的分发策略从当前数据中提取指定的列对应的数据内容构成当前数据属性，根据策略类型抽取属性作为当前数据的主键值；  2)所述分发策略信息注册在全局关键字分区表中，根据当前数据表对应类型的全局关键字B+树获取当前数据键值对应的映射关系对；  3)通过这一映射关系对绑定特定的从节点，实现基于主键值取值的定向发送。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的基于分布式结构的并行数据存储方法，其特征在于，主键值类型包括文本属性取值、数值区间取值 以及空间栅格三种基本类型；不同类型主键值的抽取与构造按照如下一种或者多种方式进行:  文本属性取值策略:数据在注册阶段将当前表以特定列取值作为全局关键词的依据；在分发过程中，文本全局关键字树和与其对应的全局关键字分区表中会记录当前表中对应文本取值的数据定向发送的节点标识从节点，当前表中所有特定列取值为该文本的数据定向发送到个节点中；  和/或者数值区间取值策略:数据在注册阶段将前表以特定列取值作为全局关键值的依据，所述特定列的数据由数值型构成；在分发过程中，数值全局关键字树和与其对应的全局关键字分区表中会记录当前表中对应数值取值区间的数据定向发送的节点标识从节点，当前表中所有特定列取值为该数值取值的数据定向发送到个节点中；  和/或者空间栅格策略:数据在注册阶段将确空间取值对应的特定列，所述特定列的数据由空间地理坐标等数据类型构成；在分发过程中，空间栅格全局关键字和与其对应的全局关键字分区表中会记录当前表中对应空间栅格取值区间编码的数据定向发送的节点标识从节点，当前表中所有特定列取值为空间栅格的数据定向发送到个节点中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1所述的基于分布式结构的并行数据存储方法，其特征在于，全局关键字B+树由一存放在根结点的全局关键字分区表和一组关键字到分发从节点标识的映射组成；  根据所述主键值类型建立与全局关键字B+树索引一一对应的B+树索引包括:关键词/字索引、关键值索引以及空间栅格索引三种基本类型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的基于分布式结构的并行数据存储方法，其特征在于，所述全局关键字B+树按照不同的分布原则分为:缺省全局关键字树、文本全局关键字树、数值区间全局关键字树以及空间栅格全局关键字树四个基本类型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求1所述的基于分布式结构的并行数据存储方法，其特征在于，所述全局关键字B+树索引根据数据自动增加新的数据关系对，通过判断当前叶结点中主键值映射关系对的数量是否会超过阈值，对树进行局部优化过程如下:  1)为当前叶节点构造一组子节点，将构造的该组子节点放置在当前叶节点的子节点集合中；  2)将当前叶节点的映射关系对列表清空；从当前子节点中提取与主键值对应的子节点，设置为当前叶节点；  3)查看当前叶节点中是否已经存储了主键值与当前映射关系对，如果已经存储则结束当前操作，否则将当前主键值与映射关系对放置在当前叶节点中，完成平衡操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求1所述的基于分布式结构的并行存储数据对应的查询方法，其特征在于，通过并行方法实现步骤如下:  (1)提取当前查询sql语句中的计算符将sql语句分解为若干子sql语句；  (2)构造并行二叉任务树，将计算符作为任务数的叶节点；将分解的字句作为叶结点的子节点；  (3)遍历当前任务树，从最底层计算符节点开始执行左右单步查询任务，完成当前计算节点的左右单步查询任务节点结果集汇聚与处理后向上逐级执行。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求1所述的基于分布式结构的并行存储数据对应的查询方法，其特征在于，根据全局关键字B+树索引提`取数据对象的属性集合作为该特定取值的属性集记录在索引数据表中，利用所述索引数据表进行查询的步骤为:  (1)根据查询请求提交的主键值，在属性取值策略所对应的全局关键字分区表中利用RDB查询与当前关键词匹配的索引记录列提取全部匹配命中的索引记录行信息；  (2)根据所述行信息中记录的数据表名进行分组，同时统计每个数据表所涉及的节点标不;  (3 )根据不同的数据表，建立并行查询任务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求1所述的基于分布式结构的并行存储数据对应的查询方法，其特征在于，在查询任务的执行过程中在多个从节点的对应数据表中执行，并完成结果集的汇聚与合并，查询步骤如下:  (1)根据注册的从节点信息，构造子任务对象，  (2)依次启动子任务对象线程，直到当前任务进入等待状态后子任务完成本地查询，将查询结果集汇聚回当前任务结果集中，完成汇聚后通知当前任务执行完毕信息；  (3)当全部子任务执行完毕后，当前任务完成全部数据结果集汇聚结束任务。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63892637" lang="ZH" load-source="patent-office" class="description">
+    <p>一种基于分布式结构的并行数据处理方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明面向地理信息系统、时空数据管理、位置相关服务、大规模传感器流数据管理等领域，针对云计算环境中超大规模海量数据的存储、检索与高效访问需求，提出了一种集键-值数据库(Key-Value Store)和关系数据库双方优势的RDB-KV并行云数据库存储与检索方法，实现兼备键值存储高效访问特性与数据库完整特性的海量数据存储技术。</p>
+    <p>背景技术</p>
+    <p>[0002]	云计算是当前信息技术发展的重要方向。基于云平台的计算与存储服务因底层架构基础设施的变化，在应用模式、应用范围以及技术需求上发生了重大变革。云存储是在云计算(cloud computing)概念上延伸和发展出来的一个新的概念,是指通过集群应用、网格技术或分布式文件系统等功能，将网络中大量各种不同类型的存储设备通过应用软件集合起来协同工作，共同对外提供数据存储和业务访问功能的一个系统。当云计算系统运算和处理的核心是大量数据的存储和管理时，云计算系统中就需要配置大量的存储设备，那么云计算系统就转变成为一个云存储系统，所以云存储是一个以数据存储和管理为核心的云计算系统。</p>
+    <p>[0003]	分布、并行是云存储的基本特点。在云存储的环境中，存储节点之间构成复杂的互相依赖关系。为了有效利用资源、提高存储服务的性能，数据通常根据一定原则分布在特定集群节点范围内容。这些集群节点通过“数据池”等方式将片段数据存储在本地环境中。为了保障数据的安全，集群节点内部又将这一特定片段数据进行多副本复制与分发。集群内部的储存设备之间构成多个副本。这样从整体上，保证数据的有效分散与安全。</p>
+    <p>[0004]	云存储的推广带动了存储技术的发展。云存储的高弹性、并行性等特点可以很好的满足日益膨胀的企业应用发展。企业业务在向云环境的迁移过程中，需要将相关数据植入云存储的分布式并行存储环境中。在传统的企业应用中，数据支撑环境通常构建在关系数据库中。在关系数据模型的基础上，依据业务逻辑设计基本库表结构。在设计阶段，以独立事物对象或业务单步活动为数据粒度划分的原则。将一组属性构成基本粒度数据的表征全集，以此构成一个独立二维表的基本结构。为满足复杂逻辑中数据一致性与完全性，在库表设计的过程中，不同表项之间通常存在复杂的约束与依赖关系；在数据更新的过程中，利用这些表项之间的约束关系，实现全局范围内数据一致性的校核。另一方面，在业务数据查询的过程中，通常一个查询任务涉及多个基本粒度数据模型的交叉、组合。这些任务以关系代数为基础构造查，利用jion等复杂操作满足查询任务的基本要求。在传统的存储环境中，成熟的关系数据库管理系统依托关系数据库模型，借助于集合代数等概念和方法来处理数据库中的数据。此类关系数据库建立在严格的数学概念的基础上的。关系模型的概念单一，无论实体还是实体之间的联系都用关系表示，操作的对象和操作的结果都是关系，所以其数据结构简单、清晰，用户易懂易用。关系模型的存取路径对用户透明，从而具有更高的数据独立性、更好的安全保密性，也简化了程序员的工作和数据库开发建立的工作。</p>
+    <p>[0005]	随着企业应用规模的不断膨胀，关系数据库的在性能方便的瓶颈问题日益凸显，因数据海量性、异构性、高并发性等特点导致的数据集成环境性能低下的问题成为影响企业发展以及信息技术推广的一个核心问题。</p>
+    <p>[0006]	另一方面，云存储的兴起为海量高并发数据的应用与管理提供了物质支持。云存储因其自身高弹性，高伸缩性、高并发性等特点可以很好的为企业应用的迅速扩展提供服务。然而，传统的云存储在技术层面以none-sql等模式为基础。在应对以关系代数为基础的传统数据库迁移的过程中，存在以下基本问题:</p>
+    <p>[0007]	I)海量数据对传统存储架构的挑战:传统的数据管理系统以关系代数与关系数据为存储架构的设计依据。在传统的应用中，由于关系数据之间存在复杂的依赖与约束关系；这些数据管理系统多以集中式的架构实现存储管理。随着数据规模的膨胀，部分成熟数据管理系统利用分布式结构、以多副本平行复制、CDN等方式在多节点之间实现数据的统一组织与管理。以oracle rac等为代表，在数据查询等活动中，在本质上，节点局部内仍以数据全集为基本范围执行查询任务。这就导致系统查询性能存在瓶颈制约。同时，系统中数据吞吐量严重影响了整体稳定性与可靠性。这一不足之处严重影响了服务计算规模与处理质量的提升；</p>
+    <p>[0008]	2)基于RDB的查询与可支持KV查询矛盾:键-值查询是云存储的一个基本特点，同时也是云存储高性能实现的技术保证。在非结构化数据管理的过程中数据本体用于基本存储。数据属性经过抽象后，形成对本体取值描述的key。数据管理系统通过key的排列、组合形成有序的键索引机制。在查询过程中，依据一定的排序规则通过key的比对、匹配实现数据本体的快速定位与访问。另一方面，结构化数据本身具有明确的数据项结构定义。在数据组织与存储的过程中，数据本体经过处理其取值存放在所属表项行目中。各个表中的数据存储过程中，不存在统一的特征抽取、key值排序的步骤。从全局的角度出发，不能支持全部表对象统一的key值对应数据本体查询；这一矛盾导致RDB查询与KV查询结合的困难；</p>
+    <p>[0009]	3)海量数据分析对高性能查询的挑战:服务计算涉及大量复杂要素、对象属性、监测数据、多媒体数据、遥感数据以及各种非结构化数据的复杂访问。另一方面，围绕服务计算中数据的空间分布性特点，底层数据多以分布式方式实现组织与管理。因此高性能并行查询成为提高数据访问工作性能的必然手段。然而，在传统GIS平台依赖的数据管理系统中，由于架构上存在先天性的不足，导致在高性能查询方面存在无法逾越的机制限制。这就导致GIS平台在面对日益膨胀的地理数据，在基本查询方面就存在缺陷。因此，需要在并行存储架构的技术上，实现高性能并行查询的任务组织、调度，数据汇聚与过滤的相关技术，满足服务计算对海量数据高性能访问的核心需求；</p>
+    <p>发明内容</p>
+    <p>[0010]	针对上述问题，本发明的目的在于提供一种基于分布式环境的并行数据集群处理方法，其目的是在分布式环境并行架构的基础上，实现海量数据的有序组织、检索与查询服务，实现集键-值数据库(Key-Value Store)和关系数据库双方优势的RDB-KV云数据库存储与检索。提供兼备键值存储高效访问特性与数据库完整特性的海量数据存储技术；满足如物联网传感器数据、多媒体数据、交通网络数据、移动对象时空数据等数据的管理与查询。[0011]	为了实现上述目的，本发明所采用的技术方案为:一种基于分布式结构的并行数据存储方法，其步骤包括:</p>
+    <p>[0012]	I)根据主键值类型在主节点抽取得到数据主键值，在所述主节点中根据数据属性取值与区间对比结果确定数据分发的定向从节点，同时建立全局关键字B+树索引；</p>
+    <p>[0013]	2)根据所述全局关键字B+树索引基于share-nothing原则将数据分发到所述主键值对应的从节点；</p>
+    <p>[0014]	3)在所述从节点接受数据分发请求,在本地基于share-everything原则将数据存储在子节点中。</p>
+    <p>[0015]	更进一步,根据所述share-nothing原则将数据从主节点转发到各个从节点，且从节点间的数据不互为副本；根据所述share-everything原则将子节点中之间的数据在本地集群中进行多副本复制且子节点间的数据互为副本。</p>
+    <p>[0016]	更进一步，将数据分发到所述主键值对应的从节点的步骤如下:</p>
+    <p>[0017]	I)利用预先注册的分发策略从当前数据中提取指定的列对应的数据内容构成当前数据属性，根据策略类型抽取属性作为当前数据的主键值；</p>
+    <p>[0018]	2)所述分发策略信息注册在全局关键字分区表中，根据当前数据表对应类型的全局关键字B+树获取当前数据键值对应的映射关系对；</p>
+    <p>[0019]	3)通过这一映射关系对绑定特定的从节点，实现基于主键值取值的定向发送。</p>
+    <p>[0020]	更进一步，主键值类型包括文本属性取值、数值区间取值以及空间栅格三种基本类型；不同类型主键值的抽取与构造按照如下一种或者多种方式进行: [0021]	文本属性取值策略:数据在注册阶段将当前表以特定列取值作为全局关键词的依据；在分发过程中，文本全局关键字树和与其对应的全局关键字分区表中会记录当前表中对应文本取值的数据定向发送的节点标识从节点，当前表中所有特定列取值为该文本的数据定向发送到个节点中；</p>
+    <p>[0022]	和/或者数值区间取值策略:数据在注册阶段将前表以特定列取值作为全局关键值的依据，所述特定列的数据由数值型构成；在分发过程中，数值全局关键字树和与其对应的全局关键字分区表中会记录当前表中对应数值取值区间的数据定向发送的节点标识从节点，当前表中所有特定列取值为该数值取值的数据定向发送到个节点中；</p>
+    <p>[0023]	和/或者空间栅格策略:数据在注册阶段将确空间取值对应的特定列，所述特定列的数据由空间地理坐标等数据类型构成；在分发过程中，空间栅格全局关键字和与其对应的全局关键字分区表中会记录当前表中对应空间栅格取值区间编码的数据定向发送的节点标识从节点，当前表中所有特定列取值为空间栅格的数据定向发送到个节点中。</p>
+    <p>[0024]	更进一步，全局关键字B+树由一存放在根结点的全局关键字分区表和一组关键字到分发从节点标识的映射组成；</p>
+    <p>[0025]	根据所述主键值类型建立与全局关键字B+树索引一一对应的B+树索引包括&#8226;&#8226;关键词/字索引、关键值索引以及空间栅格索引三种基本类型。</p>
+    <p>[0026]	更进一步，所述全局关键字B+树按照不同的分布原则分为:缺省全局关键字树、文本全局关键字树、数值区间全局关键字树以及空间栅格全局关键字树四个基本类型。</p>
+    <p>[0027]	更进一步，所述全局关键字B+树索引根据数据自动增加新的数据关系对，通过判断当前叶结点中主键值映射关系对的数量是否会超过阈值，对树进行局部优化过程如下:[0028]	I)为当前叶节点构造一组子节点，将构造的该组子节点放置在当前叶节点的子节点集合中；</p>
+    <p>[0029]	2)将当前叶节点的映射关系对列表清空；从当前子节点中提取与主键值对应的子节点，设置为当前叶节点；</p>
+    <p>[0030]	3)查看当前叶节点中是否已经存储了主键值与当前映射关系对，如果已经存储则结束当前操作，否则将当前主键值与映射关系对放置在当前叶节点中，完成平衡操作。</p>
+    <p>[0031]	更进一步，通过并行方法实现步骤如下:</p>
+    <p>[0032]	(I)提取当前查询sql语句中的计算符将sql语句分解为若干子sql语句；</p>
+    <p>[0033]	(2)构造并行二叉任务树，将计算符作为任务数的叶节点；将分解的字句作为叶结点的子节点；</p>
+    <p>[0034]	(3)遍历当前任务树,从最底层计算符节点开始执行左右单步查询任务,完成当前计算节点的左右单步查询任务节点结果集汇聚与处理后向上逐级执行。</p>
+    <p>[0035]	更进一步，根据全局关键字B+树索引提取数据对象的属性集合作为该特定取值的属性集记录在索引数据表中，利用所述索引数据表进行查询的步骤为:</p>
+    <p>[0036]	(I)根据查询请求提交的主键值，在属性取值策略所对应的全局关键字分区表中利用RDB查询与当前关键词匹配的索引记录列提取全部匹配命中的索引记录行信息；</p>
+    <p>[0037]	(2)根据所述行信息中记录的数据表名进行分组，同时统计每个数据表所涉及的节点标示；</p>
+    <p>[0038]	(3)根据不同的数据表，建立并行查询任务。</p>
+    <p>[0039]	更进一步，在查询任务的执行过程中在多个从节点的对应数据表中执行，并完成结果集的汇聚与合并，查询步骤如下:</p>
+    <p>[0040]	(I)根据注册的从节点信息，构造子任务对象，</p>
+    <p>[0041]	(2)依次启动子任务对象线程，直到当前任务进入等待状态后子任务完成本地查询，将查询结果集汇聚回当前任务结果集中，完成汇聚后通知当前任务执行完毕信息；</p>
+    <p>[0042]	(3)当全部子任务执行完毕后，当前任务完成全部数据结果集汇聚结束任务。</p>
+    <p>[0043]	与现有技术相比，本发明的积极效果为:</p>
+    <p>[0044]	(I)针对大数据海量性、异构性的特点，提出一种高性能数据并行云存储方法。在现有技术的框架中一般采用share-nothing原则简单的分为两级分散存储，或者采用share-everything原则单级多副本并行存储。本发明中的存储管理方法利用两级三层的基本框架，结合有效的索引机制，提高系统数据存储与管理的效率；一方面保证数据合理分布，降低从节点存储吞吐，提高局部查询性能，利用从节点高可扩展性保证系统弹性；另一方面通过局部多副本复制保证局部副本安全。</p>
+    <p>[0045]	(2)提出了一种新型的、集“键-值”型数据存储与关系数据库二者优势于一体的云计算数据库存储模型。在实现海量数据快速“键-值”访问的同时，提供完整的关系数据库功能特性。</p>
+    <p>[0046]	(3)基于某市道路交通数据的实验表明，系统在对全集数据查询的过程中效率提高5.2% ;对单个对象的流数据查询、提取效率提高了 11.6%。</p>
+    <p>附图说明[0047]	图1是本发明采取的分布式数据集群管理架构示意图；</p>
+    <p>[0048]	图2是本发明一实施例中分布式环境中数据转发、存储的基本流程示意图；</p>
+    <p>[0049]	图3是本发明一实施例中主节点数据分发中全局key索引树的基本结构示意图；</p>
+    <p>[0050]	图4是本发明一实施例中数据更新过程中全局key索引树维护流程示意图；</p>
+    <p>[0051]	图5是图4所示的key索引树中数据更新过程中全局key索引树平衡流程；</p>
+    <p>[0052]	图6是本发明一实施例中并行查询任务基本组织流程示意图；</p>
+    <p>[0053]	图7是本发明一实施例中并行任务二叉树查询语句的示例图；</p>
+    <p>[0054]	图8是本发明一实施例中并行任务执行节点阻塞关系示意图；</p>
+    <p>[0055]	图9是本发明一实施例中并行查询任务结果集汇聚组织示意图；</p>
+    <p>[0056]	图10是本发明一实施例中全局关键词索引树不例不意图。</p>
+    <p>具体实施方式</p>
+    <p>[0057]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，可以理解的是，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0058]	本发明所采用的技术方案如下:</p>
+    <p>[0059]	第一步:针对云存储环境的特点，提供一种并行数据处理方法。整个数据集群处理系统采用两级三层的数据组织、管理架构。在这一系统中，数据的组织过程经过全局分发与局部存储两个基本步骤。在全局分发的过程中，首先将当前数据根据当前数据注册的特征列提取数值作为特征，经过选择哈希编码、取值区间量化编码、空间栅格编码三种编码方式中的一种处理后形成当前数据主key,而后,基于share-nothing的原则根据按照B+树或者其他索引的规则，将数据分发到与主key对应的从节点中，保证不同节点之间数据没有交集。从节点接受这一数据分发请求后，在本地以share-everything的原则,存储在本地数据集群构成的子节点中。子节点中的数据互为副本。互为副本的意思就是在子节点中，每一个节点中的数据集是完全一样的，这样在访问的时候可以根据任意选择一个子节点进行访问，查询或者提取数据。</p>
+    <p>[0060]	第二步:在数据的分发与存储过程中，根据属性取值与区间对比确定数据分发的定向节点。利用这一以属性取值区间为原则的分发策略构成全局索引。全局索引的目的是缩小实际需要执行查询的叶结点范围。主节点中，数据分发过程中各个数据属性取值与区间定义的对比结果构成主key,这一主key在全局关键字B+树(Global Full-Text KeywordB+-Tree,简称GFTKB+_Tree)。GFTKB+-Tree对全局关键字进行统一管理，同时建立索引机制。在整个系统中，根据数据取值的类型提供关键词/字索引、关键值索引以及空间栅格索引三种基本类型的服务。每一种基本类型对应一种B+树；</p>
+    <p>[0061]	第三步:在数据查询的过程中，在系统中，首先解析、分解当前查询请求的sql语句。根据查询语句中的join、union、in、not in等关系,将复杂查询sql分解为一组简单sql语句。利用二叉树树构造复杂查询任务。这一任务树的根节点为任务汇聚根节点。其由一组子节点构成。子节点为一个表结果集处理计算符，为join、union等。表结果集处理计算符表示对其所约束的表查询语句结果集的处理计算方式。表结果集处理计算符子节点包含一组子节点。这组子节点既可以是表结果集处理计算符节点也可以是单步查询的简单任务节点。</p>
+    <p>[0062]	针对KV-RDB查询，根据提交的key，在主节点的全局GKR-tabIe中利用RDB查询与当前关键词匹配的索引记录列。提取全部匹配命中的索引记录行信息。根据行信息中记录的数据表名进行分组。同时，统计每个数据表所涉及的节点标示；而后根据不同的数据表，建立并行查询任务。并行查询任务的从节点范围由以上统计节点结果确定。完成查询任务创建后，既执行该任务。多个表所对应的查询结果集以xml的方式实现汇聚与展示；</p>
+    <p>[0063]	第一步:建立分布式并行数据集群管理架构</p>
+    <p>[0064]	本发明的目的是在云基础平台的基础上，构建云存储环境，这一环境满足云环境中海量、异构数据统一组织、管理、访问的基本要求；提供兼备键值存储高效访问特性与数据库完整特性的海量数据存储技术；满足云存储环境高并发、高可用的基本要求，同时，基于云计算的基本要求，提供有效的安全管理机制，保障云存储数据的安全性。图1中展示了这一架构的基本组织结构。</p>
+    <p>[0065]	图1中展示了本发明的基本层次关系。整体而言整个数据管理系统采用两级三层的数据组织、管理架构。在这一系统中，数据的组织过程经过全局分发与局部存储两个基本步骤。</p>
+    <p>[0066]	在全局分发的过程中，首先将当前数据特征抽取，经过哈希或其他手段处理为主key，而后，基于share-nothing的原则根据按照B+树或者其他索引的规则，将数据分发到与key对应的从节点中。在局部存储过程中，从节点接受这一数据分发请求后，在本地以share-everything的原则,存在在本地数据集群构成的子节点中。子节点中的数据互为副本。</p>
+    <p>[0067]	整个云存储数据库包括三个基本层次:控制层、组织层与数据层，其中:</p>
+    <p>[0068]	控制层:控制层承担整个云存储系统数据更新请求分发与组织；数据访问请求解析、并行任务构造与执行；全局key维护与管理；全局安全统一认证与访问等基本任务。控制层由一个主节点构成。</p>
+    <p>[0069]	组织层:组织层是数据组织与管理的核心。在本发明中组织层中部署大量从节点。这些数据节点具有高度的可扩充性与弹性；在数据更新过程中，组织层对上接收数据更新请求。这一请求在从节点本地的数据集群中进行统一更新。组织层的从节点之间数据不存在互为副本的关系。不同从节点的数据完全没有交集；在查询过程中，从节点根据当前的查询任务在本地数据集群中提取结果集并汇聚给主节点。当本地执行局部查询或者数据更新时。从节点通过管理层的统一访问控制首先对请求权限进行校核，保证组织层中局部数据安全；</p>
+    <p>[0070]	数据层:数据层由一组互为副本的数据集群构成。这一数据集群中的节点之间数据完全一致，互为副本；在数据更新的过程中从节点利用数据库复制、一致性维护等手段实现数据副本的统一制作与管理维护。在数据查询过程中，依赖cdn、负载均衡等手段，合理执行查询任务；在整个云存储换中，数据层中的集群节点可以根据实际情况进行灵活扩展。通过这一方式，提高从节点的稳定性与安全性，保证企业应用的顺利开展；</p>
+    <p>[0071]	在本发明中并行分布是数据存储与管理的基本特点。在并行分布的过程中，系统遵守两级分布的基本策略。既:根据share-noting的原则实现从节点之间的分布；根据share-everything原则实现从节点中局部数据的多副本式分布。保证数据合理分布，降低从节点存储吞吐，提高局部查询性能，利用从节点高可扩展性保证系统弹性；另一方面通过局部多副本复制保证局部副本安全。图2中展示了数据更新的基本流程:</p>
+    <p>[0072]	这一基本流程如下:</p>
+    <p>[0073]	1.提取当前数据对应的表映射注册信息；</p>
+    <p>[0074]	2.根据映射注册信息从当前数据中提取属性特征列对应的数据集作为属性；</p>
+    <p>[0075]	3.将当前数据属性转化为对应分布策略的主key</p>
+    <p>[0076]	4.根据当前策略,选择并绑定特定从节点；</p>
+    <p>[0077]	5.存储或者更新当前数据的属性特征与key以及与从节点定向对应信息；</p>
+    <p>[0078]	6.将当前数据更新请求发送给从节点；</p>
+    <p>[0079]	7.从节点接受数据请求进行全局一致性检查，通过检查则执行步骤9，否则执行步骤8 ;</p>
+    <p>[0080]	8.抛出异常报告一致性检查错误信息，结束当前操作；</p>
+    <p>[0081]	9.从节点本地进行数据更新操作；</p>
+    <p>[0082]	10.从节点在本地数据集群中进行副本同步更新；</p>
+    <p>[0083]	11.结束当前操作</p>
+    <p>[0084]	在云存储系统中，每个从结点slavenode对应于一个特定数据属性取值区(例如:地理位置、ID、采样取值等记为a (snode))而主结点中存贮属性取值分区定向映射表，(Attribute Key Mapping Table,简称 AKM-Table)。</p>
+    <p>[0085]	数据对象根据它们的特定属性取值分布在不同的叶结点中。对于任意一个数据对象data，如果其属性取值是固定不变的，则它仅对应于一个元组，该元组存贮在属性取值区包含data的从结点中；如果数据的属性的动态变化的,则它对应于多个元组-元组的基本信息。在对象属性取值所覆盖的从结点中进行分割并分布式存放在这些从结点中。对于一个从结点site，它仅存放属性与a (site)在取值上相交的部分。</p>
+    <p>[0086]	第二步:数据存储过程中实现定向分布与全局数据索引</p>
+    <p>[0087]	在云存储环境中数据分发过程中根据属性取值与区间对比确定分发节点。利用这一以属性取值区间为原则的分发策略构成全局索引。为了支持全局的查询处理，在RDB-KV云存储系统中需要建立相应的全局索引。全局索引的目的是缩小实际需要执行查询的叶结点范围。</p>
+    <p>[0088]	主节点中，数据分发过程中各个数据属性取值与区间定义的对比结果构成主key这一主 key 在全局关键字 B+树(Global Full-Text Keyword B+_Tree,简称</p>
+    <p>[0089]	GFTKB+_Tree)。GFTKB+_Tree对全局关键字进行统一管理，同时建立索引机制。下图中给出了 GFTKB+-Tree的基本结构:</p>
+    <p>[0090]	如图3所示，GFTKB+-Tree实际上包含一个存放在根结点的全局关键字分区表Range Table,简称 GKR-Table)和一组 keyword 到 slaveNodelD 的映射 B+ 树(keyword toSiteID Mapping B+_Tree,简称 KSMB+_Tree)。</p>
+    <p>[0091]	GKR-tabIe由一个一组全局关键字映射关系对构成；</p>
+    <p>[0092]	GKR-table={kmi I i=l, 2,......, η};其中km为关键字映射关系对,其由一个四元组</p>
+    <p>构成:[0093]	km= {key, attGroup, slavelD, dataRef};</p>
+    <p>[0094]	其中key为当前关系对中数据属性主key取值，这一取值根据分发策略share-nothing的不同可以为哈希编码hashcode、空间栅格地理编码、取值区间编码、文本取值等构成；</p>
+    <p>[0095]	attGroup为属性集合；</p>
+    <p>[0096]	slavelD为当前key取值对应的分发从节点标识；在不同的策略下主key对应的从节点方法存在一定的区别；</p>
+    <p>[0097]	dataRef为数据存储指针映射，其由一个二元组构成:</p>
+    <p>[0098]	dataRef= {localPointer, tabname}其中:</p>
+    <p>[0099]	localPointer为数据在从节点中存储的指针；</p>
+    <p>[0100]	tabname为当前数据所对应的数据表名称。</p>
+    <p>[0101]	在系统中，对应不同的分布策略，GFTKB+-Tree包括缺省全局关键字树、文本全局关键字树、数值区间全局关键字树以及空间栅格全局关键字树四个基本类型。在结构上这四个全局关键字树类型是一致的。一个全局关键字树GFTKB+-Tree由一个多元组构成，其根节点包括一组叶结点构成:</p>
+    <p>[0102]	Root=IleafiIi=U,......η}</p>
+    <p>[0103]	Leaf为叶节点。一个叶结点对应一个取值区间。其由一个多元组构成:</p>
+    <p>[0104]	Leaf= {ID, keymax, keymin, kkms, leafs, size}</p>
+    <p>[0105]	其中:ID为当前叶结点对应的标识，这一标识全局唯一；</p>
+    <p>[0106]	Keymax为当前叶结点对应的关键词取值上限；</p>
+    <p>[0107]	Keymin为当前叶结点对应的关键词取值下限；</p>
+    <p>[0108]	kKms为关键字映射关系对集合,其为一组kkm构成:</p>
+    <p>[0109]	kkms= {kknij i=l, 2......, η} ;kkm= {key, (Icm1, km2,....km」}</p>
+    <p>[0110]	key为关键词取值</p>
+    <p>[0111]	km其定义与GKR-table中的定义完全一致；</p>
+    <p>[0112]	Leafs为当前叶节点的子节点集合。当当前叶结点没有子节点时,其kms中存放全部关系对；当当前叶结点包含子节点时，其kms中没有任何关系对存在。本级节点中的关系对集合通过遍历其子节点中的关系对集合获取；</p>
+    <p>[0113]	Size为当前叶结点中关系对的个数。在索引的维护过程中，为了保证平衡性，当一个叶结点的size超过阈值时,就将这一叶结点进行拆分；</p>
+    <p>[0114]	在数据更新的过程中，系统首先提取当前数据对象对应的注册信息，根据这一注册信息提取属性集与主key取值。而后与全局索引中进行的叶节点进行对比，如果当前叶结点中已经存在了这一主key对应的取值，则将这一主key取值中的映射关系对中与tabname相匹配的关系对提取,并获取其中的slavelD,根据slavelD与对应的slave节点建立连接关系，将当前的数据更新请求转发给slave节点。完成后,将slave节点返回的局部指针在关系对中进彳丁更新；</p>
+    <p>[0115]	在这一过程中，如果不存在这一关系对,贝U建立当前tabname对应的关系对,根据当前分布策略选择一个从节点，完成从节点中数据更新后，将这一从节点的slavelD与对应的信息作为新的关系对存储在GKR-table表中，同时，对当前GFTKB+_Tree的叶节点进行更新。</p>
+    <p>[0116]	图4中展示了这一过程的基本流程:</p>
+    <p>[0117]	这一流程的基本过程如下:</p>
+    <p>[0118]	1.提取当前数据表注册的分布类型全局索引树GFTKB-TREE ;成功则执行步骤3，否则执行步骤2 ；</p>
+    <p>[0119]	2.构造当前数据库内该类型所对应的全局索引树；</p>
+    <p>[0120]	3.获取当前数据对应表注册的分布策略信息；</p>
+    <p>[0121]	4.根据策略信息从当前数据中提取属性集与当前数据的主key ；</p>
+    <p>[0122]	5.根据当前数据的主key从当前GFTKB-TREE中提取对应的映射关系对，如果映射关系对提取成功则执行步骤9，否则执行步骤6 ；</p>
+    <p>[0123]	6.根据当前映射关系对,提取对应的从节点slavenode,并绑定；</p>
+    <p>[0124]	7.将当前数据更新请求发送给步骤6中绑定的slavenode ；slavenode完成本地数据更新以及局部集群中的数据同步；</p>
+    <p>[0125]	8.更新当前GFTKB-TREE中主key的对应内容；执行步骤13 ；</p>
+    <p>[0126]	9.根据当前分布策略动态选择一个slavenode节点并绑定；</p>
+    <p>[0127]	10.将当前数据更新请求发送给步骤9中绑定的slavenode ；slavenode完成本地数据更新以及局部集群中的数据同步；</p>
+    <p>[0128]	11.在当前类型对应的GKR-table中存储新的key与映射关系对的信息；</p>
+    <p>[0129]	12.在当前类型对应的GFTKB-TREE中存储新的key与映射关系对的信息；</p>
+    <p>[0130]	13.更新当前GFTKB-TREE中主key的相关内容；</p>
+    <p>[0131]	14.结束</p>
+    <p>[0132]	在上述的数据更新过程中，全局GFTKB-TREE根据数据更新增量，自动增加新的数据关系对。在这一过程中叶节点根据一定的数据平衡原则，对树的局部进行数结构优化。如图5所示这一过程如下所示:</p>
+    <p>[0133]	这一流程基本如下:</p>
+    <p>[0134]	1.获取当前树种key与映射关系对增量请求；</p>
+    <p>[0135]	2.从当前数中提取主key对应取值区间的叶节点；提取成功则执行步骤4，否则执行步骤3 ；</p>
+    <p>[0136]	3.创建新的叶节点，将当前主key与映射关系对放置在这一叶节点中，结束当前操作；</p>
+    <p>[0137]	4.查看当前叶节点中的映射关系对数量是否超过阈值设置，如果超过则执行步骤5，否则执行步骤9;</p>
+    <p>[0138]	5.根据平衡原则，为当前叶节点构造一组子节点；</p>
+    <p>[0139]	6.将构造的这一组子节点放置在当前叶节点的子节点集合中；</p>
+    <p>[0140]	7.将当前叶节点的映射关系对列表清空；</p>
+    <p>[0141]	8.从当前子节点中提取与key对应的子节点，设置为当前叶节点；</p>
+    <p>[0142]	9.查看当前叶节点中是否已经存储了主key与当前映射关系对,如果已经存储则结束当前操作，否则执行步骤10 ；</p>
+    <p>[0143]	10.将当前key与映射关系对放置在当前叶节点中，完成平衡操作；第三步:实现高性能并行数据查询与全局KV-RBD查询</p>
+    <p>[0144]	本发明云存储系统是采用并行架构的云存储系统，数据根据特定的分布测量分散在不同从节点中，从全局的角度出发，从节点中的局部数据为数据全集的一个子集。通过降低从节点中的数据吞吐量，实现单节点数据高效组织与查询，以及数据吞吐量的规模。另一方面，在数据查询过程中，系统充分利用分布式数据的特点，采用并行处理模式提高查询过程的速度与性能。</p>
+    <p>[0145]	本发明采用数据无交叉分布的原则，在查询过程中，利用并行架构实现数据任务的组织、结果集的汇聚与过滤。图6中展示了数据查询任务整体组织过程</p>
+    <p>[0146]	在系统中，首先解析、分解当前查询请求的sql语句。根据查询语句中的join、union、in、not in等关系,将复杂查询sql分解为一组简单sql语句。利用二叉树树构造复杂查询任务。这一任务树的根节点为任务汇聚根节点。其由一组子节点构成。子节点为一个表结果集处理计算符，为join、union等。表结果集处理计算符表示对其所约束的表查询语句结果集的处理计算方式。表结果集处理计算符子节点包含一组子节点。这组子节点既可以是表结果集处理计算符节点也可以是单步查询的简单任务节点。任务树的定义如下:</p>
+    <p>[0147]	QueryTree= {ID, childNodes};其中:</p>
+    <p>[0148]	ID为当前任务树的标示；</p>
+    <p>[0149]	childNodes 为当前任务树的子子节点集合，childNodes= {cni | i=l, 2,......, η},</p>
+    <p>[0150]	cn为子节点定义,其取值为计算符型节点ccn或单步查询简单任务节点sen,计算符型节点定义如下:</p>
+    <p>[0151]	ccn= {factor, IeftNode, rightNode};其中:</p>
+    <p>[0152]	factor为当前计算符取值,其取值为union、join、in、not in等；</p>
+    <p>[0153]	IeftNode为当前计算符节点的左子节点,其定义与前述一致；</p>
+    <p>[0154]	rightNode为当前计算符节点的右子节点,其定义与前述一致；</p>
+    <p>[0155]	sen= {sqlstate};其中:</p>
+    <p>[0156]	Sqlstate为当前单步查询简单任务节点的单步查询sql语句</p>
+    <p>[0157]	在任务树中，复杂查询任务的sql语句被分解为一组计算符与单步查询sql语句，例如:</p>
+    <p>[0158]	select*from GPStable where location in(select roadlineTable.locationfrom roadlineTable, maptable where maptable.areacodeO’ haidian’ and maptable.Areacode=roadlineTable.areacode);</p>
+    <p>[0159]	图7展示了这一复杂查询分解为任务树后的组织情况:</p>
+    <p>[0160]	在任务的执行过程中，系统遍历当前任务树，从最底层计算符节点开始执行左右单步查询任务。完成当前计算节点的左右单步查询任务节点结果集汇聚与处理后向上逐级执行。最终完成整个二叉树的任务执行与结果汇聚、处理；</p>
+    <p>[0161]	一个计算符节点包括左右两个单步查询任务节点。其首先执行左节点查询任务。在左子节点任务执行过程中，在本地创建左任务临时数据表，通过并行查询左任务的结果集被存储在临时数据表中，这一临时数据表通过表复制的方式，复制在从节点中。而后，再利用并行查询执行右任务，右任务的结果集汇聚到本地后创建右任务临时数据表，将汇聚结果存储在右临时数据表中，至此完成当前计算符节点的全部查询任务请求。执行其上级节点其他任务；这一过程如图8所示，</p>
+    <p>[0162]	在任务树的执行过程中，为了提高执行效率，当一个计算符型子节点的右子节点同样为计算符型子节点时。当前节点的两个子任务以并行方式执行，即如下结构:</p>
+    <p>[0163]	在查询任务的执行过程中，单步查询简单任务是一个不包含表关联操作的单表查询任务。本发明采用数据并行的策略。因此，一个简单查询任务需要在多个从节点的对应数据表中执行，并完成结果集的汇聚与合并。再启动一个单步查询简单查询节点的任务时。图9中展示了这一任务的基本组织形式:</p>
+    <p>[0164]	在执行过程中，首先根据系统注册的从节点信息，构造子任务对象，而后依次启动子任务对象线程。当前任务进入等待状态，子任务完成本地查询后，将结果集汇聚回当前任务结果集中，完成汇聚后通知当前任务执行完毕信息。当全部子任务执行完毕后，当前任务完成全部数据结果集汇聚结束任务。</p>
+    <p>[0165]	在本发明中，数据更新过程中，根据不同的数据分布策略建立相应的全局索引树。这些索引树中记录了当前数据表特定列的取值或区间划分对应情况。同时，提取数据对象的属性集合作为该特定取值的属性集记录在索引数据表中。利用这一索引数据表，可以实现RDB-KV相结合的高效查询。这一查询根据提交的key，在属性取值策略所对应的GKR-table中利用RDB查询与当前关键词匹配的索引记录列。提取全部匹配命中的索引记录行信息。根据行信息中记录的数据表名进行分组。同时，统计每个数据表所涉及的节点标示；而后根据不同的数据表，建立并行查询任务。并行查询任务的从节点范围由以上统计节点结果确定。完成查询任务创建后，既执行该任务。多个表所对应的查询结果集以xml的方式实现汇聚与展示；</p>
+    <p>[0166]	在数据环境中根据云存储环境中数据特点，构造全局关键词、全局关键值以及空间栅格等三种不同基本类型的分布策略与索引服务。下面以全局关键词为例介绍本发明的方法。</p>
+    <p>[0167]	第一步，用户创建数据表staffTable,其由三个基本字段构成:{ID、name、job},其中:ID为当前员工的标示；name为当前员工的名称；job为当前员工的岗位描述。</p>
+    <p>[0168]	第二步，用户将当前数据表注册为全局关键词类型；</p>
+    <p>[0169]	第三步,用户插入一条记录:(‘kOOl’，‘李白’，‘senior’ ),主节点接受这一数据更新请求后，首先根据注册信息判定当前数据表为全局关键词型。而后访问全局关键词对应的GFTKB-TREE ;因是初始状态当前全局GFTKB-TREE不存在，系统根据对应GKR-Table的内容构造 GFTKB-TREE ；</p>
+    <p>[0170]	第四步，在当前GFTKB-TREE中未发现‘李白’为主key的叶节点。系统为当前数据选择一个从节点(slaveOl),绑定；将当前数据更新请求发送给slaveOl节点，完成局部更新后，在当前类型GKR-Table中插入主key李白所对应的映射关系对信息；并在当前GFTKB-TREE中构造新的叶节点，将主key李白所对应的映射关系对信息放置在新的叶节点中；</p>
+    <p>[0171]	第五步，在后续的数据更新操作中，用户插入新的数据:(‘k001’，‘李白’，‘vp);系统访问当前类型对应的全局GFTKB-TREE，获取其中李白作为主key的叶节点；通过叶节点提取映射关系对信息，从映射关系对中获取绑定的从节点(slaveOl);将当前数据定向发送给slaveOl节点，完成局部数据更新；如图10所示[0172]	本发明通过分布式云存储环境实现数据管理与索引组织。通过并行查询方法提供高性能查询服务。</p>
+    <p>[0173]	在实验中通过海量传感器数据对系统性能进行测试，测试环境如下所示:</p>
+    <p>[0174]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00151.png"> <img id="idf0001" file="CN103412897AD00151.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00151.png" class="patent-full-image" alt="Figure CN103412897AD00151"> </a> </div>
+    <p>[0175]	在测试过程中，通过对4从节点与8从节点分组测试来测试对海量传感器数据读写操作的基本性能</p>
+    <p>[0176]	表I空间数据查询</p>
+    <p>[0177]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00152.png"> <img id="idf0002" file="CN103412897AD00152.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00152.png" class="patent-full-image" alt="Figure CN103412897AD00152"> </a> </div>
+    <p>[0178]	表2关键词数据查询</p>
+    <p>[0179]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00153.png"> <img id="idf0003" file="CN103412897AD00153.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00153.png" class="patent-full-image" alt="Figure CN103412897AD00153"> </a> </div>
+    <p>[0180]	表3关键词数据查询</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00154.png"> <img id="idf0004" file="CN103412897AD00154.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103412897A/CN103412897AD00154.png" class="patent-full-image" alt="Figure CN103412897AD00154"> </a> </div>
+    <p>[0182]</p>
+    <p>[0183] 针对当前云存储领域中传统关系数据库的局限性，本发明提供集键-值数据库(Key-Value Store)和关系数据库双方优势的RDB-KV云数据库存储与检索系统。提供兼备键值存储高效访问特性与数据库完整特性的海量数据存储技术。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101916261A?cl=zh">CN101916261A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年7月28日</td><td class="patent-data-table-td patent-date-value">2010年12月15日</td><td class="patent-data-table-td ">北京播思软件技术有限公司</td><td class="patent-data-table-td ">一种分布式并行数据库系统的数据分区方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102467570A?cl=zh">CN102467570A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月17日</td><td class="patent-data-table-td patent-date-value">2012年5月23日</td><td class="patent-data-table-td ">日电（中国）有限公司</td><td class="patent-data-table-td ">用于分布式数据仓库的连接查询系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US7818349">US7818349</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value">2010年10月19日</td><td class="patent-data-table-td ">Datallegro, Inc.</td><td class="patent-data-table-td ">Ultra-shared-nothing parallel database</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=iVLkCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年11月27日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年12月18日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/f7081d59edc8fe3fd940/CN103412897A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E5%88%86%E5%B8%83%E5%BC%8F%E7%BB%93%E6%9E%84%E7%9A%84%E5%B9%B6%E8%A1%8C%E6%95%B0.pdf?id=iVLkCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U35UZ-DIINhwc6dWfXeien-_mDOdA"},"sample_url":"https://www.google.com/patents/reader?id=iVLkCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

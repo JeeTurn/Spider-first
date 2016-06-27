@@ -1,0 +1,896 @@
+<!DOCTYPE html><html><head><title>专利 CN101569129A - 网络安全系统和方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="网络安全系统和方法"><meta name="DC.contributor" content="托德&#183;F&#183;布伦南" scheme="inventor"><meta name="DC.contributor" content="约翰&#183;汉拉蒂" scheme="inventor"><meta name="DC.contributor" content="艾伦&#183;希拉里" scheme="inventor"><meta name="DC.contributor" content="Bit9公司" scheme="assignee"><meta name="DC.date" content="2006-7-27" scheme="dateSubmitted"><meta name="DC.description" content="一种安全系统，防御已知和未知的病毒、蠕虫、间谍件、黑客和不需要的或者未知的软件。所述系统可以实现集中的策略，其允许管理员批准、阻止、隔离或者记录文件行为。所述系统在主机和在服务器中保存文件元信息。主机检测可以引起对于文件内容或者文件名的改变的文件操作，并且作为结果更新主机和/或服务器元信息。服务器元信息上的改变可以被主机获得。"><meta name="DC.date" content="2009-10-28"><meta name="citation_patent_publication_number" content="CN:101569129:A"><meta name="citation_patent_application_number" content="CN:200680034493"><link rel="canonical" href="https://www.google.com/patents/CN101569129A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101569129A?cl=zh"/><meta name="title" content="专利 CN101569129A - 网络安全系统和方法"/><meta name="description" content="一种安全系统，防御已知和未知的病毒、蠕虫、间谍件、黑客和不需要的或者未知的软件。所述系统可以实现集中的策略，其允许管理员批准、阻止、隔离或者记录文件行为。所述系统在主机和在服务器中保存文件元信息。主机检测可以引起对于文件内容或者文件名的改变的文件操作，并且作为结果更新主机和/或服务器元信息。服务器元信息上的改变可以被主机获得。"/><meta property="og:title" content="专利 CN101569129A - 网络安全系统和方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101569129A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101569129A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=lml0BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101569129A&amp;usg=AFQjCNFe4X2v-CiyPIMZKMR_4GxNhhtQew" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/037efb014db9cd4c3746/CN101569129A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/037efb014db9cd4c3746/CN101569129A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101569129A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101569129A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101569129A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101569129B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101569129A?cl=zh" style="display:none"><span itemprop="description">一种安全系统，防御已知和未知的病毒、蠕虫、间谍件、黑客和不需要的或者未知的软件。所述系统可以实现集中的策略，其允许管理员批准、阻止、隔离或者记录文件行为。所述系统在主机和在服务器中保存文件元信息。主机...</span><span itemprop="url">https://www.google.com/patents/CN101569129A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101569129A - 网络安全系统和方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101569129A - 网络安全系统和方法" title="专利 CN101569129A - 网络安全系统和方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101569129 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200680034493</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/US2006/029714</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年10月28日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2006年7月27日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2005年7月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101569129B?hl=zh-CN&amp;cl=zh">CN101569129B</a>, </span><span class="patent-bibdata-value"><a href="/patents/US7895651?hl=zh-CN&amp;cl=zh">US7895651</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20070028303?hl=zh-CN&amp;cl=zh">US20070028303</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200680034493.4, </span><span class="patent-bibdata-value">CN 101569129 A, </span><span class="patent-bibdata-value">CN 101569129A, </span><span class="patent-bibdata-value">CN 200680034493, </span><span class="patent-bibdata-value">CN-A-101569129, </span><span class="patent-bibdata-value">CN101569129 A, </span><span class="patent-bibdata-value">CN101569129A, </span><span class="patent-bibdata-value">CN200680034493, </span><span class="patent-bibdata-value">CN200680034493.4, </span><span class="patent-bibdata-value">PCT/2006/29714, </span><span class="patent-bibdata-value">PCT/US/2006/029714, </span><span class="patent-bibdata-value">PCT/US/2006/29714, </span><span class="patent-bibdata-value">PCT/US/6/029714, </span><span class="patent-bibdata-value">PCT/US/6/29714, </span><span class="patent-bibdata-value">PCT/US2006/029714, </span><span class="patent-bibdata-value">PCT/US2006/29714, </span><span class="patent-bibdata-value">PCT/US2006029714, </span><span class="patent-bibdata-value">PCT/US200629714, </span><span class="patent-bibdata-value">PCT/US6/029714, </span><span class="patent-bibdata-value">PCT/US6/29714, </span><span class="patent-bibdata-value">PCT/US6029714, </span><span class="patent-bibdata-value">PCT/US629714</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%89%98%E5%BE%B7%C2%B7F%C2%B7%E5%B8%83%E4%BC%A6%E5%8D%97%22">托德&#183;F&#183;布伦南</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%BA%A6%E7%BF%B0%C2%B7%E6%B1%89%E6%8B%89%E8%92%82%22">约翰&#183;汉拉蒂</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%89%BE%E4%BC%A6%C2%B7%E5%B8%8C%E6%8B%89%E9%87%8C%22">艾伦&#183;希拉里</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22Bit9%E5%85%AC%E5%8F%B8%22">Bit9公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101569129A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101569129A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101569129A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (7),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=lml0BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200680034493&amp;usg=AFQjCNGHudhQD0BvqJdFPxDYmxYwRb6zvw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=lml0BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101569129A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFpYZyOF03oNeRJO9I5G03YSv-wvw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT86556365" lang="ZH" load-source="patent-office">网络安全系统和方法</invention-title>
+      </span><br><span class="patent-number">CN 101569129 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA62846447" lang="ZH" load-source="patent-office">
+    <div class="abstract">一种安全系统，防御已知和未知的病毒、蠕虫、间谍件、黑客和不需要的或者未知的软件。所述系统可以实现集中的策略，其允许管理员批准、阻止、隔离或者记录文件行为。所述系统在主机和在服务器中保存文件元信息。主机检测可以引起对于文件内容或者文件名的改变的文件操作，并且作为结果更新主机和/或服务器元信息。服务器元信息上的改变可以被主机获得。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(197)</span></span></div><div class="patent-text"><div mxw-id="PCLM26876358" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种在系统中使用的方法，所述系统具有服务器和一个或多个相关联的主计算机(主机)，所述方法包括：    在服务器上对于多个文件保存一组服务器元信息，其中对于每个唯一文件内容签名包括文件的内容的签名、文件或者签名被第一次报告到服务器的日期、以及用于指示是否和在什么条件下可以由主机对于文件执行特定的文件操作的状态数据；    在主机上对于多个文件保存一组元信息，其中，对于每个文件包括状态数据和文件内容的签名；    在主机上检测对于文件内容或者名称的可能改变，并且更新主机和/或服务器元信息；以及    服务器向主机提供服务器元信息中的改变。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 按照权利要求l的方法，其中，所述内容的签名包括文件的 内容的一个或多个加密散列值的结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 按照权利要求1的方法，还包括：对于每个主机，维护具有 文件名和状态数据的独立名称高速&#32233;冲存储器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 按照权利要求3的方法，其中，响应于对于文件的文件操作 的请求，主机访问名称高速&#32233;冲存储器，以确定是否允许文件操作， 并且如果在所述名称高速&#32233;冲存储器中没有指示是否允许所述文件 操作，则使得所述文件内容散列化，并且将所述文件的散列值与主机 高速&#32233;冲存储器中的元信息比较，以确定是否允许文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 按照权利要求4的方法，其中，如果主机高速&#32233;冲存储器没 有用于确定是否允许所述文件操作的数据，则所述主机查询所述服务 器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 按照权利要求5的方法，其中，所述服务器响应于上栽的文 件或者所述文件的内容的签名，使得执行一个或多个分析，其中包括 反病毒或者反间谍件扫描。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 按照权利要求6的方法，其中，所述文件操作被允许来在所述分析完成之前进行。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 按照权利要求6的方法，其中，如果所述分析指示不应当允 许特定的文件操作，则服务器使得主机更新它们的元信息以指示对于 随后的尝试，对于那个文件不允许特定的文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 按照权利要求6的方法，其中，如果所述分析指示应当允许 特定文件操作，则服务器使得主机更新它们的元信息，以指示对于随 后的尝试，对于那个文件允许特定的文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 按照权利要求6的方法，其中，如果未确定是否应当允许特 定的文件操作，则主机更新它们的元信息以指示仅仅在特定的条件 下，对于随后的尝试，对于那个文件允许特定的文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 按照权利要求2的方法，还包括：对于在文件中的嵌入的有 效内容，从所述文件提取所述内容，执行所述内容的加密散列，并且 保存所述有效内容的散列值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 按照权利要求ll的方法，其中，在执行加密散列之前，在 有效的格式化的文件中提供所述有效内容，以产生缩小的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 按照权利要求12的方法，其中，所述有效内容包括宏，并 且所述有效的格式化的文件包括字处理文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 按照权利要求ll的方法，其中，所述主机将所述有效内容 与从其提取有效内容的文件相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15. 按照权利要求l的方法，其中，响应于主机接收到对于在文 件上的文件操作的请求，主机访问主机高速&#32233;&#27798;存储器以确定状态， 并且如果存在高速&#32233;&#27798;存储器未命中，则所述主机延迟所述文件操 作，同时系统执行进一步的分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16. 按照权利要求15的方法，其中，所述文件操作包括执行、 文件读取和文件写入。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17，按照权利要求15的方法，其中，所述进一步的分析包括下 述的一个或多个：反病毒扫描、间谍件扫描、与已知文件或者内容的 列表相比较、以及与由其它服务器提供的结果相比较。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.按照权利要求l的方法，其中，所述状态数据包括是否根据文件的内容来禁止文件操作、根据文件的路径和名称来禁止文件操 作、批准文件操作、通过主机本地批准文件操作、或者等待进一步的 分析来允许或禁止文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19. 按照权利要求l的方法，其中，所述服务器还保存用于指示 何时服务器第 一次看到文件或者文件内容的散列值的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20. 按照权利要求l的方法，其中，所述服务器还保存用于指示 文件被修改的最后时间的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21. 按照权利要求l的方法，其中，所述状态数据包括用于指示 对于一些主机禁止而对于其它主机允许文件操作的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22. 按照权利要求l的方法，其中，所述服务器保存多少主机具 有文件的拷贝的计数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23. 按照权利要求22的方法，其中，所述服务器使用多少主机 具有文件的拷贝的计数，将所述计数与阈值相比较，并且在所述计数 已经超过所述阈值后禁止主机进行文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24. 按照权利要求23的方法，其中，所述服务器保存用于指示 分析结果和推荐状态的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25. 按照权利要求l的方法，其中，在主机中保存的元信息还包 括文件路径名称、第一次看到的日期和最后的修改日期。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26. 按照权利要求l的方法，其中，分析在主机存储器上的所有 文件，就像在每个文件上发生了改变，自动触发所述分析以将主机状 态与服务器状态同步。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27. 按照权利要求l的方法，其中，在服务器上的每个文件的元 信息包括关于文件的名称的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28. 按照权利要求l的方法，其中，所述服务器通过以主机可访 问的方式发布元信息中的改变而向主机提供元信息中的改变，并且所 述主机访问所发布的改变，并且修改主机上的所述元信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="29" class="claim">
+      <div class="claim-text">29. &#8212;种在系统中使用的方法，所述系统具有服务器和相关联的 主计算机（主机），所述方法包括：在服务器上对于多个文件保存一组元信息，其中对于每个唯一文件内容签名包括文件的内容的签名、用于指示是否和在什么条件下可 以由主机对于文件执行特定的文件操作的状态数据、以及当第一次看到所述文件或者签名时的时间；在主机上对于多个文件保存一组元信息，其中，对于每个文件包 括状态数据、文件内容的签名和文件路径名称；主机检测对于文件内容或者名称的可能改变，并且更新主机和/ 或服务器元信息；以及服务器向主机提供服务器元信息中的改变。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30. 按照权利要求29的方法，其中，如果服务器还未具有所述 文件的元信息，则所述文件被上载到所述服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31. 按照权利要求29的方法，其中，所述主机访问基于文件名 而存储信息的第一高速&#32233;冲存储器和基于文件内容的散列值而存储 信息的第二高速&#32233;冲存储器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32. 按照权利要求30的方法，其中，所述服务器执行所述文件 的内容的一个或多个散列，并且将所述一个或多个散列与由主机执行 的散列相比较。</div>
+    </div>
+    </div> <div class="claim"> <div num="33" class="claim">
+      <div class="claim-text">33. &#8212;种在系统中使用的方法，所述系统具有服务器和相关联的 主计算机（主机），所述方法包括：在服务器上对于多个文件保存一组元信息，其中对于每个唯一文 件内容签名包括状态数据，所述状态数据用于指示是否和在什么条件 下禁止、允许、或者还没有完全确定与文件相关联的特定操作；在主机上对于多个文件保存一组元信息，其中，对于每个文件包 括所述状态数据；在主机上检测对于文件内容或者名称的可能改变，并且更新主机和/或服务器元信息；服务器向主机提供服务器元信息中的改变；以及 响应于在服务器中没有所述文件的输入项或者存在还没有完全确定的状态，则所述服务器执行所述文件的分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34. 按照权利要求33的方法，其中，所述服务器使得进行一个或多个反病毒或者反间谍件扫描。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35. 按照权利要求34的方法，其中，所述服务器以后确定是否 应当对于特定文件禁止或者允许文件操作，所述服务器使得在状态中 的这个改变被传播到主机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36. 按照权利要求35的方法，其中，所述服务器通过发布元信 息中的改变而传播该改变，以便主机访问和检索所述改变。</div>
+    </div>
+    </div> <div class="claim"> <div num="37" class="claim">
+      <div class="claim-text">37. &#8212;种系统，包括： 服务器；多个与服务器相关联的主计算机（主机）；所述服务器具有服务器存储器，用于对于多个文件保存一组元信 息，其中对于每个文件包括关于文件的名称的数据、文件的内容的签 名、和状态数据，所述状态数据用于指示是否和在什么条件下禁止、 允许或者还没有确定与文件相关联的特定操作；每个主机具有本地存储器，用于对于多个文件保存一组元信息， 其中对于每个文件包括状态数据和签名；在主机上检测对于文件内容或者名称的可能改变，并且更新主机 和/或服务器元信息；所述服务器使得向主机提供所述服务器元信息中的改变。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38. 按照权利要求37的方法，其中，所述服务器通过以主机可 访问的方式发布改变而提供所述改变，并且允许主机访问所发布的改 变，以&lt;更主机{务改主才几上的元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39. 按照权利要求37的系统，其中，内容的签名包括文件的内 容的一个或多个加密散列值的结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40. 按照权利要求37的系统，其中，每个主机具有带有文件名 和状态数据的独立的名称高速&#32233;&#27798;存储器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41. 按照权利要求37的系统，其中，响应于主机接收到对于在 文件上的文件操作的请求，主机访问主机高速&#32233;冲存储器以确定状 态，并且如果存在高速&#32233;冲存储器未命中，则所述主机延迟所述文件 操作，同时系统执行进一步的分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42. 按照权利要求37的系统，其中，所述服务器还保存用于指 示何时服务器第一次看到文件或者文件内容的散列值的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43. 按照权利要求37的系统，其中，所述服务器还保存用于指 示文件被修改的最后时间的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44. 按照权利要求37的系统，其中，所述服务器保存多少主机 具有文件的拷贝的计数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45. 按照权利要求37的系统，其中，在主机中存储的元信息还 包括文件路径名称、第一次看到的日期和最后的修改日期。</div>
+    </div>
+    </div> <div class="claim"> <div num="46" class="claim">
+      <div class="claim-text">46. &#8212;种用于计算机系统的方法，所述计算机系统包括多个主计 算机（主机）和与所述主机相关联的服务器，所述方法包括：服务器向主机传播与文件操作相关联的策略和策略选项的主集， 所述策略选项至少表示是否和在什么条件下这样的操作被允许或者 禁止，并且服务器向所述主机传播值；在所述主机上存储的值表示在所述策略和策略选项的主集中的 策略和策略选项的哪个子集要在主机上实现；所述主机实现由所述值指示的文件操作策略。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47. 按照权利要求46的方法，其中，每个策略具有单个配置参 数，其指示策略选项之一，被传播的值用于选择多个策略的每个的策 略选项。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="48" class="claim">
+      <div class="claim-text">48. 按照权利要求46的方法，所述主集包括策略和选项的列表， 被转播的所述值用于选择所述列表之一。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="49" class="claim">
+      <div class="claim-text">49. 按照权利要求46的方法，其中，所述策略至少具有三个选 项，它们构成限制的有序集，所述限制递增地增加或者减少主机执行 文件操作的能力。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50. 按照权利要求46的方法，其中，所述服务器响应于管理员 的人工改变而改变所述值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="51" class="claim">
+      <div class="claim-text">51. 按照权利要求46的方法，其中，所述服务器自动改变所述 值，而不使用来自管理员的输入。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="52" class="claim">
+      <div class="claim-text">52. 按照权利要求51的方法，其中，所述自动服务器值改变响 应于所检测的安全事件或者SNMP消息或者syslog消息或者报告或者 网络消息或者电子邮件消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="53" class="claim">
+      <div class="claim-text">53. 按照权利要求46的方法，其中，所述主机自动改变所述值， 而不使用来自人的输入或者不使用来自服务器的命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="54" class="claim">
+      <div class="claim-text">54. 按照权利要求46的方法，其中，所述主机响应于在同一主 机上的策略报告或者响应于在主机上检测的事件或者响应于在主机 上执行的命令而自动改变所述值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="55" class="claim">
+      <div class="claim-text">55. 按照权利要求46的方法，其中，所述策略选项包括：自动 允许具有相关联的元信息状态的文件的执行和/或读取操作，所述状态 指示批准这样的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="56" class="claim">
+      <div class="claim-text">56. 按照权利要求46的方法，其中，所述策略选项包括：阻止 具有相关联的元信息状态的文件的执行和/或读取操作，所述状态指示 禁止这样的操作；并且/或者，向服务器发送报告。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="57" class="claim">
+      <div class="claim-text">57. 按照权利要求46的方法，其中，所述策略选项包括：阻止 具有相关联的待决元信息状态的文件的执行和/或读取操作，所述状态 指示还没有确定允许或者禁止这样的行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="58" class="claim">
+      <div class="claim-text">58. 按照权利要求46的方法，其中，所述策略选项包括：允许 具有相关联的待决元信息状态的文件的执行和/或读取操作，所述状态 指示还没有完全确定允许或者禁止这样的行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="59" class="claim">
+      <div class="claim-text">59. 按照权利要求46的方法，其中，所述策略选项包括：在对 于对具有相关联的待决元信息状态的文件的操作的请求的情况下，向 服务器发送报告，所述状态指示还没有完全确定允许或者禁止这样的 行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="60" class="claim">
+      <div class="claim-text">60. 按照权利要求46的方法，其中，所述策略选项包括：检测 和跟踪具有相关联的待决和/或禁止的元信息状态的新文件的建立或 者修改或者第一次执行。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="61" class="claim">
+      <div class="claim-text">61. 按照权利要求46的方法，其中，所述策略选项包括：阻止 具有相关联的待决元信息状态的文件的建立或者修改。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="62" class="claim">
+      <div class="claim-text">62. 按照权利要求46的方法，其中，所述策略选项包括：自动 删除或者移动具有相关联的禁止的元信息状态的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="63" class="claim">
+      <div class="claim-text">63. 按照权利要求46的方法，其中，所述策略选项包括自动将 新建立或者修改的文件的主机元信息状态设置为批准。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="64" class="claim">
+      <div class="claim-text">64. 按照权利要求46的方法，其中，所述策略选项包括：自动 将在主机上新建立或者修改的文件的服务器元信息状态设置为批准。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="65" class="claim">
+      <div class="claim-text">65. 按照权利要求46的方法，其中，所述主机保存主机上的每 个文件的元信息，所述元信息包括具有至少三个可能值的状态，所述 可能值是批准、禁止和待决。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="66" class="claim">
+      <div class="claim-text">66. 按照权利要求65的方法，其中，允许指示允许不进一步监 控地进行操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="67" class="claim">
+      <div class="claim-text">67. 按照权利要求65的方法，其中，所迷策略选项包括：当主 机和/或服务器正在分析文件时，延迟文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="68" class="claim">
+      <div class="claim-text">68. 按照权利要求67的方法，其中，当服务器确定其没有与那 个文件相关联的元信息时，服务器将待决状态与文件相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="69" class="claim">
+      <div class="claim-text">69. 按照权利要求67的方法，其中，当主机确定其没有与那个 文件相关联的元信息时，主机将待决状态与文件相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="70" class="claim">
+      <div class="claim-text">70. 按照权利要求46的方法，其中，所述服务器保存用于指示 何时由任何主机第一次看到文件的元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="71" class="claim">
+      <div class="claim-text">71. 按照权利要求46的方法，其中，所述策略和策略选项的至 少一些指示基于文件的名称的行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="72" class="claim">
+      <div class="claim-text">72. 按照权利要求46的方法，其中，所述策略和策略选项的至 少一些表示基于文件的内容的行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="73" class="claim">
+      <div class="claim-text">73. 按照权利要求46的方法，其中，所述策略和策略选项的至 少一些表示基于文件的名称和内容的组合的行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="74" class="claim">
+      <div class="claim-text">74. 按照权利要求46的方法，其中，所述服务器保存关于文件 的元信息，其中包括文件的内容的散列值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="75" class="claim">
+      <div class="claim-text">75. 按照权利要求74的方法，其中，所述文件的内容的散列值 是在文件内的感兴趣的内容的散列值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="76" class="claim">
+      <div class="claim-text">76. 按照权利要求46的方法，其中，所述策略包括新文件的执 行、对于文件的写访问和对于文件的读取，其中，所述选项包括使用 进一步的监控来允许所述行为发生、禁止所述行为或者批准所述行 为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="77" class="claim">
+      <div class="claim-text">77. 按照权利要求76的方法，其中，所述进一步监控包括：记 录和提供报告的一个或多个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="78" class="claim">
+      <div class="claim-text">78. 按照权利要求46的方法，其中，所述值之一禁止所有的新 可执行部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="79" class="claim">
+      <div class="claim-text">79. 按照权利要求46的方法，其中，所述值之一允许所有的文 件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="80" class="claim">
+      <div class="claim-text">80. 按照权利要求46的方法，其中，所述服务器通过以主机可 访问的方式发布新值来改变所述值，所述主机访问所述新值，将所述 新值与所述主机具有的值相比较，并且将其值改变为新值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="81" class="claim">
+      <div class="claim-text">81. 按照权利要求80的方法，其中，存在值和相关联的策略和 策略选项的有序集，所述主机通过其它的中间值而递增地改变到所述 新值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="82" class="claim">
+      <div class="claim-text">82. 按照权利要求46的方法，其中，每个主机被布置到多个主 机组之一中，所述服务器改变至少一个但是不是全部主机组的值，以 便主机组具有不同的值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="83" class="claim">
+      <div class="claim-text">83. 按照权利要求46的方法，其中，所述服务器通过向主机发 送所述新值而改变所述值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="84" class="claim">
+      <div class="claim-text">84. 按照权利要求54的方法，其中，主机可以获得对于服务器 文件元信息状态的改变，并且/或者，所述改变传播到主机。</div>
+    </div>
+    </div> <div class="claim"> <div num="85" class="claim">
+      <div class="claim-text">85. &#8212;种计算机系统，包括： 多个主计算机（主机）；以及服务器，用于向主机传播与文件操作相关的策略和策略选项的主 集，所述策略选项用于至少指示是否和在什么条件下允许或者禁止这 样的操作，并且所述服务器还用于向主机传播一个值，以存储在主机上；在所述主机上存储的值表示在策略和策略选项的主集中的策略和策略选项的哪个子集要在主机上实现；所述主机实现由所述值指示的文件操作策略。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="86" class="claim">
+      <div class="claim-text">86. 按照权利要求85的系统，其中，由服务器传播的信息包括 用于指示多个不同的策略的每个的策略选项集的值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="87" class="claim">
+      <div class="claim-text">87. 按照权利要求86的系统，其中，所述主机被组织为多个主 机组，所述服务器向一个或多个主机组但是不是全部主机组传播在所 述值上的改变。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="88" class="claim">
+      <div class="claim-text">88. 按照权利要求85的系统，其中，所述文件操作包括对于文 件的写访问和文件的执行，所述选项包括在限制的有序集中的多个选 项，所述限制递增地增加或者减少主机执行文件操作的能力。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="89" class="claim">
+      <div class="claim-text">89. 按照权利要求85的系统，其中，所述主集包括策略和策略 选项的列表，所述服务器提供包括用于指示所述列表之一的值的信 息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="90" class="claim">
+      <div class="claim-text">90. 按照权利要求85的系统，其中，所述服务器在主机可访问 的位置发布信息，并且所述主机访问所述信息并且更新它们的值。</div>
+    </div>
+    </div> <div class="claim"> <div num="91" class="claim">
+      <div class="claim-text">91. 一种用于系统中的方法，所述系统具有服务器和多个主计算 机，所述主计算机与服务器相关联，所述方法包括：服务器指定文件的元信息查询；向 一个或多个主机组分发所述元信息查询；所述主机从在存储器中存储的本地主机元信息进行所述元信息查询；所述主机向服务器发送来自所述元信息的查询的结果，所述结果 包括关于主机上的文件的信息；所述服务器接收和存储来自主机的结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="92" class="claim">
+      <div class="claim-text">92. 按照权利要求91的系统，其中，所述服务器根据规则集设置安全策略，所述服务器响应于从主机接收的查询的结果而自动改变 适用于至少一些主机的规则。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="93" class="claim">
+      <div class="claim-text">93. 按照权利要求92的方法，其中，所述服务器响应于所述结果而自动触发安全警告。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="94" class="claim">
+      <div class="claim-text">94. 按照权利要求91的方法，其中，所述服务器将从主机接收 的结果合并，以产生统一的报告。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="95" class="claim">
+      <div class="claim-text">95. 按照权利要求91的方法，其中所述服务器向每个主机发送 所述查询。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="96" class="claim">
+      <div class="claim-text">96. 按照权利要求91的方法，其中，所述服务器发布所述查询 以由每个主机访问，并且其中，每个主机获得由所述服务器发布的查 询。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="97" class="claim">
+      <div class="claim-text">97. 按照权利要求91的方法，其中，可以对于一&#32068;主机查询的 文件的元信息包括下面的内容的一个或多个：文件名的正则表达式模式规格， 文件路径的正则表达式模式规格， 文件的感兴趣的内容的散列值，当主机第一次看到文件或者文件的散列值时的时间范围，主机的名称，主机的IP地址，文件的类型，来自 一组至少三个状态的、与文件相关联的一个或多个主机文件 状态，所述三个状态是批准、禁止、待决分析，是否已经由主机对于文件执行了特定的文件操作，以及 主机组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="98" class="claim">
+      <div class="claim-text">98. 按照权利要求97的方法，其中，所述查询用于具有被识别 的文件名的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="99" class="claim">
+      <div class="claim-text">99. 按照权利要求97的方法，其中，所述查询用于具有被识别 的文件路径的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="100" class="claim">
+      <div class="claim-text">100. 按照权利要求97的方法，其中，所述查询用于具有其内容 的被识别的散列值的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="101" class="claim">
+      <div class="claim-text">101. 按照权利要求97的方法，其中，所述查询是用于具有被识 别的当主机第 一次看到所述文件时的时间范围的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="102" class="claim">
+      <div class="claim-text">102. 按照权利要求97的方法，其中，所述查询用于具有文件操 作的被识别状态的文件，所述状态表示是否已经批准或者禁止了所述 文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="103" class="claim">
+      <div class="claim-text">103. 按照权利要求97的方法，其中，所述查询包括项目（l)-(6)的两个或者多个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="104" class="claim">
+      <div class="claim-text">104. 按照权利要求97的方法，其中，所述查询包括项目（l)-(6)的三个或者多个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="105" class="claim">
+      <div class="claim-text">105. 按照权利要求91的方法，其中，由主机识别到服务器的每 个文件的结果包括：文件名， 文件路径，文件的感兴趣的内容的散列值，当主机第一次看到文件或者文件的散列值时的时间，主才几的名称，主才几的IP地址，文件的类型，来自 一组至少三个状态的、与文件相关联的一个或多个主机文件 状态，所述三个状态是批准、禁止、待决分析，是否已经由主机对于文件执行了特定的文件操作，以及 主机组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="106" class="claim">
+      <div class="claim-text">106. 按照权利要求91的方法，其中，所述服务器保存元信息的 存储库，服务器向主机提供更新以改变在主存储器中存储的元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="107" class="claim">
+      <div class="claim-text">107. 按照权利要求96的方法，其中，所述主机使用最后已知的 修改的元信息时间来轮询，并且服务器发回对于元信息的本地主机存 储库的更新是否是待决的指示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="108" class="claim">
+      <div class="claim-text">108. 按照权利要求96的方法，其中，所述主机元信息被存储在 核心和用户空间中的多个永久高速&#32233;冲存储器中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="109" class="claim">
+      <div class="claim-text">109. 按照权利要求96的方法，其中，在文件被服务器第一次看 到后经过限定时段，文件的元信息和/或所述文件被删除。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="110" class="claim">
+      <div class="claim-text">110. 按照权利要求96的方法，其中，在服务器中保存的元信息 包括内容签名、由一个或多个主机组第一次看到的日期/时间、和近来 分析结果和时间的历史。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="111" class="claim">
+      <div class="claim-text">111. 按照权利要求110的方法，其中，在服务器中保存的元信 息还包括近来状态改变的历史、改变的原因、和元信息最后改变的时 间。</div>
+    </div>
+    </div> <div class="claim"> <div num="112" class="claim">
+      <div class="claim-text">112. &#8212;种计算机系统，包括： 多个主计算机；与所述主计算机相关联的服务器；每个主计算机具有元信息数据存储库，其具有名称信息、内容信 息、内容的散列值、和多个文件的每个的安全信息，所述主计算机响 应于来自服务器的查询，根据所定义的标准而搜索所述元信息，并且 提供满足所述标准的文件的列表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="113" class="claim">
+      <div class="claim-text">113. 按照权利要求112的系统，其中，通过管理接口向所述服 务器提供查询。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="114" class="claim">
+      <div class="claim-text">114. 按照权利要求112的系统，其中，所述主计算机定期查看 所述服务器以获得元信息更新。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="115" class="claim">
+      <div class="claim-text">115. 按照权利要求112的系统，其中，可以对于一组主机可查 询的文件的元信息包括下面的内容的一个或多个：文件名的正则表达式模式规格， 文件路径的正则表达式模式规格， 文件的感兴趣的内容的散列值，当主机第 一次看到文件或者文件的散列值时的时间范围，主机的名称，主机的IP地址，文件的类型，来自 一组至少三个状态的、与文件相关联的一个或多个主机文件 状态，所述三个状态是批准、禁止、待决分析，是否已经由主机对于文件执行了特定的文件操作，以及主机组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="116" class="claim">
+      <div class="claim-text">116. 按照权利要求112的系统，其中，所述查询用于具有被识 别的文件名的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="117" class="claim">
+      <div class="claim-text">117. 按照权利要求112的系统，其中，所述查询用于具有被识 别的文件路径的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="118" class="claim">
+      <div class="claim-text">118. 按照权利要求112的系统，其中，所述查询用于具有感兴 趣的内容的被识别的散列值的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="119" class="claim">
+      <div class="claim-text">119. 按照权利要求112的系统，其中，所述查询是用于具有被 识别的当主机第 一次看到所述文件或文件散列值时的时间范围的文 件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="120" class="claim">
+      <div class="claim-text">120. 按照权利要求112的系统，其中，所述查询用于具有文件 操作的被识别状态的文件，所述状态表示在特定条件下是否已经批准 或者禁止了所述文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="121" class="claim">
+      <div class="claim-text">121. 按照权利要求112的系统，其中，所述查询包括项目（1) -(6)的两个或者多个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="122" class="claim">
+      <div class="claim-text">122. 按照权利要求112的系统，其中，所述查询包括项目（1) -(6)的三个或者多个。</div>
+    </div>
+    </div> <div class="claim"> <div num="123" class="claim">
+      <div class="claim-text">123. &#8212;种用于服务器和一组相关联的主机的方法，包括： 在服务器中存储与在主机上看到的文件相关的元信息状态，所述元信息包括文件的内容的签名； 对于每个签名存储初始时间；在与初始时间相关的限定时段，执行所述文件的至少 一个安全分 析或者所述文件内容的签名的分析；并且改变所述文件状态，并且向主机提供与所改变的状态相关联的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="124" class="claim">
+      <div class="claim-text">124. 按照权利要求123的方法，其中，所述执行处理包括执行 反病毒和反间谍件扫描之一。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="125" class="claim">
+      <div class="claim-text">125. 按照权利要求123的方法，其中，所述签名包括内容的一 个或多个加密散列值，所述服务器存储具有唯一散列值的每个文件的单个拷贝。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="126" class="claim">
+      <div class="claim-text">126. 按照权利要求123的方法，还包括存储用于指示是否和在 什么条件下可以通过主机对于文件执行特定的文件操作，其中，所述 执行处理包括查看对于其已经在特定条件下批准或者禁止了特定的 文件操作的签名的一个或多个列表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="127" class="claim">
+      <div class="claim-text">127. 按照权利要求123的方法，其中，与初始时间相关的限定 时段是具有在所限定的范围内的所述文件或者签名被主机和/或服务 器第一次看到的日期的全部文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="128" class="claim">
+      <div class="claim-text">128. 按照权利要求123的方法，还包括：存储用于指示是否和 在什么条件下可以通过主机对于文件执行特定的文件操作的状态，其 中，所述状态包括在特定条件下对于特定的文件操作禁止、允许或者 允许进一步的监控。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="129" class="claim">
+      <div class="claim-text">129. 按照权利要求128的方法，其中，所述进一步监控包括记 录或者提供报告。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="130" class="claim">
+      <div class="claim-text">130. 按照权利要求123的方法，还包括对于在服务器上的每个 元信息记录存储与每个分析相关联的附加记录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="131" class="claim">
+      <div class="claim-text">131. 按照权利要求130的方法，其中，所述附加记录包括与执 行分析的人员、分析时间和分析结果相关的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="132" class="claim">
+      <div class="claim-text">132. 按照权利要求131的方法，其中，所述附加记录还包括推 荐的状态和分析结果信息串。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="133" class="claim">
+      <div class="claim-text">133. 按照权利要求123的方法，还包括响应于所述分析而产生 syslog消息和/或统计更新和/或警告。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="134" class="claim">
+      <div class="claim-text">134. 按照权利要求123的方法，其中，所述分析引起下述的一 个或多个：内容转发、元信息转发、分析转发和在安全规则上的改变。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="135" class="claim">
+      <div class="claim-text">135. 按照权利要求123的方法，其中，作为对于另一方的主计 算机的外包服务，执行权利要求l的行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="136" class="claim">
+      <div class="claim-text">136. 按照权利要求135的方法，其中，服务器使用被设置为禁 止或者批准的特定行为自动向其它网络装置通知对于文件的列表的 改变。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="137" class="claim">
+      <div class="claim-text">137. 按照权利要求135的方法，其中，所述服务基于年代和分 析结果来向其它服务器和网络装置传送近来的元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="138" class="claim">
+      <div class="claim-text">138. 按照权利要求123的方法，其中，所述安全分析包括将近 来的分析结果与其它服务器的近来分析结果相比较。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="139" class="claim">
+      <div class="claim-text">139. 按照权利要求123的方法，其中，所述安全分析包括用户 定义的内容分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="140" class="claim">
+      <div class="claim-text">140. 按照权利要求123的方法，其中，所述服务器具有基于初 始时间在多个时间执行的 一 组多个分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="141" class="claim">
+      <div class="claim-text">141. 按照权利要求140的方法，其中，所述多个时间之一小于 在初始时间后的一天，并且所述多个时间的另一个大于在初始时间后 的一天。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="142" class="claim">
+      <div class="claim-text">142. 按照权利要求140的方法，其中，所述多个时间之一*J、于 在初始时间后的一天，并且所述多个时间的另 一个大于在初始时间后 的一个星期。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="143" class="claim">
+      <div class="claim-text">143，按照权利要求123的方法，其中，所述初始时间与当主机 在系统中第一次看到文件或者文件内容的散列值时的时间相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="144" class="claim">
+      <div class="claim-text">144. 按照权利要求123的方法，其中，所述初始时间与当服务 器在系统中第一次看到文件或者文件内容的散列值时的时间相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="145" class="claim">
+      <div class="claim-text">145. 按照权利要求123的方法，其中，服务器向主机传播一组 策略，所述服务器也提供用于指示要通过主机在哪些条件下实现哪些 策略的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="146" class="claim">
+      <div class="claim-text">146. 按照权利要求123的方法，还包括：主机接收第一文件， 提取在第一文件内的感兴趣的内容，将感兴趣的内容重新打包为有效 的格式化类型的文件，以产生缩小的文件，并且向所述缩小的文件应 用散列。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="147" class="claim">
+      <div class="claim-text">147. 按照权利要求123的方法，其中，执行文件的至少一个安 全分析的处理包括：向另一个计算机系统提供文件，并且从所述另一 个计算机系统接收分析结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="148" class="claim">
+      <div class="claim-text">148. 按照权利要求123的方法，还包括：存储用于指示是否和在什么条件下可以通过主机对于文件执行特定文件操作的状态，当所 述状态中有改变时，所述服务器向主机传播元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="149" class="claim">
+      <div class="claim-text">149. 按照权利要求148的方法，其中，所述服务器通过发布元 信息而传播该元信息，以便主机访问和获得所述元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="150" class="claim">
+      <div class="claim-text">150. 按照权利要求123的方法，其中，所述服务器执行所述内 容的散列，并且将所述散列与至少一个主机执行的散列相比较。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="151" class="claim">
+      <div class="claim-text">151. 按照权利要求150的方法，其中，所述服务器执行多个散列。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="152" class="claim">
+      <div class="claim-text">152. 按照权利要求123的方法，其中，主机查询服务器以确定 在向服务器上载签名和/或文件内容之前所述服务器是否具有用于特 定文件的元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="153" class="claim">
+      <div class="claim-text">153. 按照权利要求123的方法，其中，所述服务器向远程网络 装置查询以确定是否签名或者名称对应于被批准的文件的白名单。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="154" class="claim">
+      <div class="claim-text">154. 按照权利要求123的方法，其中，所述服务器向远程网络 装置查询以确定是否签名或者名称对应于被禁止的文件的黑名单。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="155" class="claim">
+      <div class="claim-text">155. 按照权利要求123的方法，其中，所述服务器向远程网络 装置查询以确定是否签名或者名称对应于新或者未分类的文件的待 决列表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="156" class="claim">
+      <div class="claim-text">156. 按照权利要求123的方法，其中，所述服务器存储将文件 和签名与其它文件和签名的&#32068;相关联的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="157" class="claim">
+      <div class="claim-text">157. 按照权利要求123的方法，其中，所述服务器存储将文件 和签名与关于在其它服务器上存储的信息的统计相关联的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="158" class="claim">
+      <div class="claim-text">158. 按照权利要求123的方法，其中，所述签名包括内容的一 个或多个加密散列值，服务器向远程网络装置查询以查找相对于已知 产品分类数据库的散列值，以便识别相关的产品和对应于与文件散列 值相关联的产品的其它文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="159" class="claim">
+      <div class="claim-text">159. 按照权利要求123的方法，其中，所述服务器执行下述的 一个或多个：内容查询、元信息查询、分析结果查询和安全规则查询， 并且所述服务器查询网络上的另一个装置。</div>
+    </div>
+    </div> <div class="claim"> <div num="160" class="claim">
+      <div class="claim-text">160. &#8212;种计算机系统，包括：服务器，其包括存储器，用于存储与在与服务器相关联的主机上 看到的文件相关的安全相关元信息，所述元信息对于每个文件包括用 于指示是否和在什么条件下主机对于文件执行特定的文件操作的状态；所述服务器在限定时段使得进行文件的至少一个安全分析，所述 限定时段基于当主机和/或服务器已经接收到文件或者文件的签名时的初始时间；并且响应于至少一些分析，改变所述状态，并且向主机提供与所改变 的状态相关联的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="161" class="claim">
+      <div class="claim-text">161. 按照权利要求160的系统，还包括：与所述服务器相关联 的一组主才几。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="162" class="claim">
+      <div class="claim-text">162. 按照权利要求161的系统，其中，所述服务器存储用于指 示是否和在什么条件下主机对于文件执行特定的文件操作的状态，其 中，所述执行处理包括查看对于其已经批准或者禁止了文件操作的文 件的一个或多个列表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="163" class="claim">
+      <div class="claim-text">163. 按照权利要求160的系统，其中，所述服务器自动向其它 网络装置通知对于被设置为禁止或者批准的行为的列表的改变。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="164" class="claim">
+      <div class="claim-text">164. 按照权利要求161的系统，其中，所述服务器根据年代和 分析结果来向其它的服务器和网络装置发送近来的元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="165" class="claim">
+      <div class="claim-text">165. 按照权利要求160的系统，其中，所述初始时间与当服务 器在系统中第一次看到文件或者文件内容的散列值时的时间相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="166" class="claim">
+      <div class="claim-text">166. 按照权利要求161的系统，其中，所述服务器向主机传播 策略集，所述服务器也提供用于指示主机在什么条件下要实现所述策 略的哪些的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="167" class="claim">
+      <div class="claim-text">167. 按照权利要求161的系统，其中，所述服务器存储用于指态，当在状态中有改变时，所述服务器向主机传播所述元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="168" class="claim">
+      <div class="claim-text">168.按照权利要求167的系统，其中，所述服务器通过发布元信息而传播所述元信息，以便通过主机访问和获得元信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="169" class="claim">
+      <div class="claim-text">169. 按照权利要求161的系统，其中，所述签名包括所述内容 的一个或多个加密散列值，所述服务器执行所述内容的散列，并且将 所述散列与由至少一个主机执行的散列相比较。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="170" class="claim">
+      <div class="claim-text">170. 按照权利要求169的系统，其中，所述服务器执行多个散 列以荻得签名。</div>
+    </div>
+    </div> <div class="claim"> <div num="171" class="claim">
+      <div class="claim-text">171. &#8212;种计算机实现的方法,包括： 接收第一文件；提取在第一文件内的感兴趣的内容；将所述感兴趣的内容重新打包为一个或多个有效格式化类型的 文件，以产生第一缩小的文件；向缩小的文件应用签名；以及存储所述签名，并且将所述签名与第 一文件相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="172" class="claim">
+      <div class="claim-text">172. 按照权利要求171的方法，还包括：对于第二文件执行权 利要求l的行为，并且将第一缩小文件的签名与第二缩小文件的签名 相比较，以确定是否它们相同。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="173" class="claim">
+      <div class="claim-text">173. 按照权利要求172的方法，其中，所述签名包括文件内容 的一个或多个加密散列值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="174" class="claim">
+      <div class="claim-text">174. 按照权利要求171的方法，其中，在主计算机上执行权利 要求1的行为，以及向与所述主计算机相关联的服务器传送所述第一 缩小文件，以用于进一步的内容分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="175" class="claim">
+      <div class="claim-text">175. 按照权利要求171的方法，其中，所述感兴趣的内容包括宏。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="176" class="claim">
+      <div class="claim-text">176. 按照权利要求175的方法，其中，所述感兴趣的内容被重 新打包为字处理文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="177" class="claim">
+      <div class="claim-text">177. 按照权利要求171的方法，其中，存储散列值还包括存储 当服务器第一次看到所述缩小的文件或者其签名时的日期。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="178" class="claim">
+      <div class="claim-text">178. 按照权利要求171的方法，其中，所述第一文件是具有演 示幻灯片的演示文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="179" class="claim">
+      <div class="claim-text">179. 按照权利要求171的方法，还包括：作为电子邮件附件发 送所述第一缩小文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="180" class="claim">
+      <div class="claim-text">180. 按照权利要求178的方法，其中，向具有电子邮件附件的 病毒扫描能力的网关发送电子邮件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="181" class="claim">
+      <div class="claim-text">181. 按照权利要求171的方法，其中，感兴趣的内容包括可执 行部分、脚本、档案文件和安装程序之一。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="182" class="claim">
+      <div class="claim-text">182. 按照权利要求171的方法，其中，所述感兴趣的内容被重 新打包为字处理文件或者档案文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="183" class="claim">
+      <div class="claim-text">183. 按照权利要求171的方法，其中，所述签名包括文件内容 的一个或多个加密散列值。</div>
+    </div>
+    </div> <div class="claim"> <div num="184" class="claim">
+      <div class="claim-text">184. &#8212;种计算机系统，包括：存储器，用于存储关于文件的元信息，其中对于每个文件包括内 容的签名和用于指示是否和在什么条件下可以执行特定的指定文件 操作的状态信息；主计算机，响应于接收到第一文件来提取所述第一文件内的感兴 趣的内容，将所述感兴趣的内容重新打包为一个或多个有效的格式化类型 的文件，以产生第一缩小文件，向第一缩小文件应用签名或者散列值；以及存储所述签名或者散列值，并且将所述签名或者散列值与所述第 一文件相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="185" class="claim">
+      <div class="claim-text">185. 按照权利要求184的系统，其中，所述签名包括文件内容 的 一个或多个加密散列值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="186" class="claim">
+      <div class="claim-text">186. 按照权利要求184的系统，其中，存在多个主计算机和与 所述多个主计算机相关联的一个服务器，所述主计算机向所述服务器 提供签名以存储。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="187" class="claim">
+      <div class="claim-text">187. 按照权利要求184的系统，其中，所述元信息对于每个文 件包括：文件名称、缩小内容的签名、和用于指示是否和在什么条件 下可以执行特定的指定文件操作的批准或者禁止或者未知状态信息的至少一个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="188" class="claim">
+      <div class="claim-text">188. 按照权利要求187的系统，其中，所述元信息具有用于不 同操作的多个批准或者禁止状态，所述不同操作包括执行和写入操 作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="189" class="claim">
+      <div class="claim-text">189. 按照权利要求188的系统，其中，所述服务器在数据存储 库中存储元信息，并且所述主计算机在数据存储库中存储数据的高速 &#32233;冲存储器，所述服务器使得向所述主计算机高速&#32233;&#27798;存储器提供更 新。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="190" class="claim">
+      <div class="claim-text">190. 按照权利要求188的系统，其中，所述服务器存储内容散 列值、文件名、批准和禁止的状态和服务器第一次看到文件或者文件 的散列值的日期。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="191" class="claim">
+      <div class="claim-text">191. 按照权利要求190的系统，其中，所述服务器可以存储待 决状态，其中，等待进一步分析来允许操作以将状态改变到允许或者 禁止。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="192" class="claim">
+      <div class="claim-text">192. 按照权利要求186的系统，其中：所述主计算机通过检测可以改变文件的内容和/或名称的操作来 接收第一文件；所述主计算机通过在本地元信息存储库上的文件名或者文件名 的签名来查找文件元信息；如果未找到所述文件名或者签名，则根据内容的散列值向服务器提供查询；如果找到文件名或者签名，则访问所述元信息以确定是否和在什么条件下可以执行特定的指定文件操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="193" class="claim">
+      <div class="claim-text">193. 按照权利要求192的系统，其中，所述签名包括一个或多 个文件内容的加密散列值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="194" class="claim">
+      <div class="claim-text">194. 按照权利要求192的系统，其中，所述主机定期查看服务 器以获得元信息更新。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="195" class="claim">
+      <div class="claim-text">195. 按照权利要求186的系统，还包括：在第一次看到文件后 经过限定时段自动执行文件的进一步的分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="196" class="claim">
+      <div class="claim-text">196. 按照权利要求189的系统，其中，在服务器中保存的元信 息还包括近来状态改变的历史和改变的原因、以及最后改变元信息的 时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="197" class="claim">
+      <div class="claim-text">197. 按照权利要求194的系统，其中，根据服务器元信息，从 主机向服务器自动传送文件。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES31949837" lang="ZH" load-source="patent-office" class="description">
+    <p>网络安全系统和方法</p>
+    <p>背景技术</p>
+    <p>大企业具有大的信息技术（IT )安全预算和分层的IT安全系统， 但是网络损害、来自病毒和蠕虫的损害和间谍件问题是常有的。当前 的IT安全技术维护起来很昂贵，并且不提供针对新的或者未知的威 胁的保护，而新的威胁正在以提高的速率被分布、检测和报告。</p>
+    <p>位于网络周界的安全解决方案（诸如防火墙）具有限于直接通过 它们的网络流量的可见度。诸如电子邮件病毒、网页浏览器利用、无 线访问、VPN、即时消息传送和文件共享的输入向量产生绕过这些技 术的越来越能够渗透的周界。难于限定提供足够的控制和可见度的、 在现代网络中的周界。许多攻击仅仅在它们已经损害了机器或者网络 后产生网络流量。例如，在病毒开始从在网络内的机器发出电子邮件 时之前，那个机器已经被损害。为了在攻击执行之前停止攻击， 一般 需要保护文件，而不仅仅是网络流量。</p>
+    <p>可以通过主机代理来提供可见度和保护，所述主机代理是软件， 有时与硬件相结合地使用，所述主机代理工作在网络内的多个独立的 计算机（"主机"）上。主机代理一般并行工作，使用所述主机的资源 的一些来在后台执行安全功能。通过可能访问主机的所有重要的内部 功能，主机代理可以在理论上在任何损害发生之前检测和停止在主机 上的威胁。主机代理安全系统有时被称为端点安全系统，因为它们工 作在网络的"端部"上。</p>
+    <p>当前的企业端点安全系统经常试图使用已知的位模式（诸如反病 毒（AV)扫描和反间谍件（AS)扫描）来检测和阻止攻击。模式扫 描使用被预先识别为坏的模式的黑名单。类似地， 一些安全系统使用 所检测的已知行为简档，其可以被描述为坏行为模式的黑名单。在这 两种情况下，黑名单永久过期，不能响应于新的或者未知的攻击。黑名单也相对于诸如新病毒的攻击无效，所述新病毒可以比用于得出、测试和分布黑名单更新的能力更快地传播。在每个星期发现许多新的病毒的情况下，所有种类的黑名单变得越来越无效。行为模式开发和</p>
+    <p>测试起来很复杂，结果，它们具有高误报警率；即，当事实上一个行为无危险时，它们错误地得出所述行为坏的结论。随着新的攻击演化，行为改变，导致丢失检测的错误。通过等待直到诸如病毒的攻击显示坏的行为，被影响的机器可能已经被损害。总之，黑名单试图跟踪已知为错误的内容，而错误的内容总是在改变。</p>
+    <p>另一种企业端点技术是异常检测。这可以被看作行为黑名单记录，通过随着时间观察行为来以统计方式确定所述行为黑名单。除了继承行为黑名单的缺点，当以统计方式估算好和坏行为时，异常检测还增加新的错误^^莫式，因此肯定存在估算错误。这个过程经常导致不可接受的高误报警和丢失检测率。</p>
+    <p>另一类端点安全系统将执行仅仅限于在白名单上的程序。所述白名单是已知的好程序的模式的列表。如果在所述列表中不包括一个程序，则其将不运行。这样的系统对于典型的现代企业不够灵活，并且，难于维护所产生的白名单。例如，大多数大企业部署定制的程序，其在内部被开发，并且经常地改变。而且，这些程序可以包括不能向第三方曝光的敏感的知识产权和安全风险。白名单提供商不可能及时地访问以预先批准这个软件。其它示例是操作系统和其它更新。同样，没有任何中央数据库或者中央授权证书来验证特定程序或者更新对于所有的企业是良好的。白名单系统的故障模式是严重的，阻止了对于关键的、但是未被批准的应用和商业功能的访问。</p>
+    <p>结果，在中央将文件内容访问划分为仅仅一个或者两个状态（批准和禁止）的系统具有关于竟争（定时）条件的问题。大量的软件不明确地适合于任何类别，并且没有对于在一个企业内的所有软件普遍地被信任的任何中央授权。即使这不是一个因素，也可能需要时间来</p>
+    <p>划分中间件。在新的病毒的情况下，需要6-48小时或者更多时间来将新的病毒分类为坏，但是在此之前，爆发会是传染性的。因此即使对于从主机向中央批准授权的强网络连接，也会需要比几分钟更长的时间来检测和分析新的软件。为了透明地将这个基于内容的授权加到后台的操作系统中，延迟通常必须小于一分钟，否则，所述文件系统将超时，并且发生伪访问阻止错误。</p>
+    <p>发明内容</p>
+    <p>在此所述的安全系统允许管理员检测、监控、定位、识别和控制在大计算机网络上安装的文件。所述系统可以防御已知和未知的病毒、蠕虫、间谍件、黑客、未批准的/不需要的软件（例如不符合商业使用策略的软件应用）和社会工程攻击。当新的可执行部分、脚本和嵌入脚本出现和传播到联网系统时，管理员可以访问关于所述新的可执行部分、脚本和嵌入脚本的详细信息和统计。所述系统可以实现集中的策略，其允许管理员批准、阻止、隔离或者记录文件行为。所述系统也可以收集对于诊断和定位问题文件或者攻击有益的详细信息。所迷系统提供用于大计算机站的可见度、控制和保护。</p>
+    <p>所述系统架构最好包括代理软件，其运行在每个被保护的主机和服务器（被称为"服务器"）上，所述服务器提供集中策略管理、事件监控、代理协调和病毒扫描。所述服务器可以被实现为装置</p>
+    <p>(appliance)(其一般暗示更有限功能的装置）。单个装置可以支持多个主机，例如10000个主机。另一个服务器或者装置（有时被称为"超级服务器"）可以监控多个装置。</p>
+    <p>在每个被保护的主计算机上运行的代理软件分析文件系统行为，并且根据在服务器上配置的策略来采取行动。在一种实现方式中，当主机试图打开或者写入文件时，所述代理软件计算所述文件的内容的散列值（hash)以唯一地向所述系统标识所述文件。所述代理软件使用这个散列值来查找所述文件的状态或者策略。根据这个信息，代理软件可能阻止操作，记录事件，隔离文件或者&#37318;取一些其它的指定行为。</p>
+    <p>所述系统也包括许多其它的特征，其可以组合地或者独立地有益，其中包括在此所述的从文档提取文件的能力、从文件提取宏的能力、集中内容跟踪和分析以及"查找文件，，功能。</p>
+    <p>在此所述的系统可以使用至少两个附加状态：待决，其表示中间的未限定的威胁级；局部批准，其是批准一个主机，但是不必然批准中央授权（因此所有的其它主机）。后者允许主机略微地脱离基线。待决状态允许主机根据各种威胁级和企业使用策略来阻止或者允许对于新的内容的访问。虽然使用普通的二进制批准术语批准和禁止，但是将批准划分为3-4个状态导致每个独立状态的不同的改善能力。一般地，新的还没有被分类的软件是待决的。软件的传统二进制访问状态（禁止/批准）不足够灵活，这样的分类系统是不可升级的。</p>
+    <p>作为新/待决的软件的指定是有益的。大多数企业具有某种形式的"禁止新的可执行部分，，策略，诸如"不允许雇员从因特网下载和运行未经批准的软件"。可是，企业当新的软件传播时不能检测所述新的软件，直到太晚，不知道何时它们的策略被违反，并且没有有效地实施它们的策略的手段。通过当待决的新程序正在被修改/写入文件系统时跟踪所述待决的新程序，主机代理可以当新的内容从几乎任何手段（无论是电子邮件、即时消息传送器、下载、USB密钥、移动笔记本计算机等）进入网络时实时地检测和报告所述新的内容。通过识别待决的程序， 一些简单的、可升级的、有效的策略是可能的，诸如"允许但是当主机运行新的可执行部分时警告，，或者"不能通过这组主机来安装或者运行新的未批准的程序"或者"当在24小时内在超过N个主机上出现同一新的未批准的程序时警告"。因此，可以安全地定位、跟踪或者在阻止的同时分析新的程序。其它被批准的商业软件继续运行。新的被批准的软件可以被安装和运行，诸如AV更新或者安全补丁。这种方法是主动的响应，在允许生产率的同时保护防止未知的可能恶意的软件，并且赢得分析时间而不需要任何时间紧要的黑名单或者白名单更新。</p>
+    <p>现有的文件白名单和黑名单系统趋于在本质上是全局的，因为在中央保留许多独立的名单（每个主机上一个）是困难的。如在此所述，主机可以保留它们自己的名单，其可以从中央名单分出。特别是，对于本地批准和待决状态可以是这种情况，并且对于基于名称的状态</p>
+    <p>(诸如NameBan和NameApprove )而言经常如此。因为"name (名称）"是本地属性，因此这些状态可以从中央受控的状态分出。例如，如果文件"foo，，具有特定的hash = x和中央服务器状态待决，则在主机上，所述文件可以是本地批准或者名称禁止的或者名称批准的，后两者依赖于在主机上的文件的本地名称。在此所述的系统允许被同时应</p>
+    <p>略实现。名称批准（NameApprove)基于其在主机上建立文件允许灵活的本地批准和中央批准能力。与主机组相结合，这允许精确地灵活有效地指定在哪里和在哪些主机上批准了新的内容。</p>
+    <p>即使对于这种新的灵活策略系统，企业通常需要对于不同的角色和情况实施不同的策略。例如，IT管理员和内部软件开发者可能需要仔细地运行新的软件，而其它的雇员仅仅需要小标准套件的相对静态的应用。当在攻击下时，这种情况可以迅速地改变。例如，如果在超过N个主机上检测到病毒，则扩展"禁止新的可执行部分"策略有意义。与不能适应于在企业内并且在不同的条件下的各种策略的刚性系统相比较，这种灵活性和递增响应是在此所述的"参数内容控制"的优点。"参数内容控制，，允许灵活的锁定模式，其可以根据网络和主机条件被中央地管理，并且迅速地被改变。这允许递增文件内容和/或基于文件名称的限制和批准。</p>
+    <p>不像处理主机用户证书、处理标识符、数据源（URL)、目录结构和操作系统安全描述符的其它端点安全技术那样，在此所述的系统不必使用这些因素来作为主机策略的一部分。在主机上，这些因素会是不可靠的，并且会易于受到损害攻击，并且它们会妨碍可升级性。这些因素导致不可升级的策略，因为精细粒度的策略可以以复杂的方式在多个主机上交互。即使所述操作系统被损害并且一个攻击获得管理特权和所有相关联的安全描述符，在此所述的"禁止新的可执行部分"将提供实质的保护。"内容跟踪，，系统使用诸如待决的附加状态来当新的内容通过网</p>
+    <p>络移动时监控和分析所述新的内容。当前的^L术不允许实时地在大量主机上的每个新的可执行文件的全局中央可见度和跟踪。依赖于文件</p>
+    <p>系统扫描的端点系统（诸如AV扫描器）和主机应用目录（诸如Tripwire )定期地和&#32233;慢地爬过大文件系统以查找新的或者改变的软件。这通常对于主机是破坏性的，会需要较多时间，并且通常至多每天一次地被调度。通过聚焦在新的内容并且将那个信息存储在存储器中，内容跟踪系统更具有可升级性和响应性。因为很少有从未被在大组N中的任何主机见过的新的软件到达，并且更少有许多主机M使得新的软件在短时间内出现，因此通过这个区别而便利了报告、响应和分析。</p>
+    <p>一旦检测到新的软件，以及时的方式来定位和识别它会是有益的。如果某个新的软件原来是新的攻击并且正在传播，则期望很快地响应。此外，当前的技术可以在几分钟到几小时的时间量程上在网络上的单个主机上定位单个新文件。即使在单个主机上，通过名称或者内容查找很新的文件需要15-60分钟，这将在查询正在被处理的同时不利地影响主机的盘性能。在过去20年中，硬盘已经在字节存储空间上变得更大，但是还没有在速度上成比例地增大。"分布式元信息查询，，特征加速了在大量（几千）的主机上在几秒内定位和识别关键文件属性，并且具有中央指定的查询，中央报告的结果，较少或者没有主机盘影响。不像跟踪所有文件的传统的跟踪技术（包括还没有改变的那些）那样，在此的本发明当文件正在改变时跟踪在存储器中的文件改变，这提供了对于主机查询来自存储器的文件元信息的有效手段。中央地处理这个信息第一次提供了在主机文件系统的集合上独立文件的移动的响应全局视图。最后，作为安全服务，主机连接到、发送到中央服务器和从中央服务器查询是重要的。这是本发明的重要部分，其允许主机通过一个或多个防火墙或者NAT装置从服务器分离，并且避免了保证在接受/监听模式中的附加主机网络插口的困难问题。</p>
+    <p>使用内容分析的当前的端点主机代理系统对于更新主机代理具有问题。例如，对于更有效的AV扫描器，它们应当在使得可以获得的更新的几个小时或者几分钟内被更新。带有滞后的AV的任何主机具有风险，并且许多AV系统被不正确地配置，导致更新滞后。因为它们不有效地跟踪文件改变，因此AV扫描器通常需要较长的时间来响应于被写入到文件系统的新的内容。而且，当前的主机内容分析技术不必重新分析文件，不考虑安全因素。例如，更重要的是，新的内容越新，就越经常地分析所述新的内容。如果文件在网络中完全未变达到2年，则有可能不必每10分钟扫描所述文件。但是，如果新的文件在10分钟之前开始通过网络传播，则经常是前两天扫描所述新的文件有意义。 一般地，随着时间过去，存在越来越少的关于新的恶意可执行文件的新信息。"集中化的定时分析"特征能够处理这些问题。仅仅需要更新一个分析代理，即中央的那个，所有的主机立即受益。不太可能主机配置与内容分析更新干扰。通过仅仅跟踪新的文件，并且通过基于被暴露到网络的年代（时间）的调度分析，可以有效地和更快地定位和识别新的坏内容。最后，诸如AV的许多端点内容分析技术与操作系统紧密地集成。结果，会难于将来自不同提供商的几个内容查看代理布置在一个主机上。分析技术的多样性改善了检测和分类精度。此外，本发明通过使用中央服务器在必要时向不同的服务器发出分析来解决这个问题。</p>
+    <p>可执行内容（exe文件）和嵌入的宏（在微软Office文件中嵌入的宏）趋向于以簇或者组传播。字处理文件可能包含10个宏，并且在大小上超过30MB，但是所述宏仅仅占用那个空间的一部分。大的安装包会在大小上具有几百MB,但是其内部文档的可执行部分通常占用总的大小的一小部分。病毒经常作为文档附件（诸如zip文件）通过电子邮件传播，以避免检测。在这些文档内，病毒有效负荷可能小。对于所有这些情况，较大的"容器"文件会掩蔽可能不需要的新代码的传播。"内容提取器"特征通过保护（嵌套的）容器关系来处理多个当前限制，并且同时便利：内容的跟踪、类似容器的跟踪、跟踪处理关联性、最小化不必要的重新分析、最小化文件传送带宽和通过将内容重新打包为其它已知的文件类型而保护与其它分析技术的兼容性。新的内容的中央存储和跟踪、以及相对于内容的第一次出现时间的分析的中央调度在安全、全局可见度、企业管理系统集成和未来扩展上提供了强大的优点。</p>
+    <p>虽然已经将在此所述的系统与其它系统相区别，但是这样的区别</p>
+    <p>不意味着否认权利要求对于这些系统的涵盖。在此所迷的系统和特征可以组合地或者分离地被提供，并且在许多情况下，可以被集成到现有已知的系统中，其中包括如上所述的那些系统。</p>
+    <p>通过下面的附图、详细说明和权利要求，其它特征和优点将变得清楚。</p>
+    <p>附图说明</p>
+    <p>图l是示出在此所述的安全系统的概览的方框图。</p>
+    <p>图2是示出在图1中的系统的部件的更详细的方框图。</p>
+    <p>图3是图解用于执行分析的处理的流程图。</p>
+    <p>图4-图5是由所述系统执行的处理的示意图。</p>
+    <p>图6是示出定时分析的示例的图。</p>
+    <p>图7是在定时分析期间执行的步骤的流程图。</p>
+    <p>图8是内容提取处理的示意图。</p>
+    <p>具体实施方式</p>
+    <p>参见图1,也被称为数字抗体系统（DAS) 10的系统允许管理员监控、理解和控制在大的计算机网络上安装的文件，并且可以防御已知和未知的病毒、蠕虫、间谍件、黑客和社会工程攻击以及未被批准的软件（例如不用于商务用途的文件共享软件）。所述系统包括一个或多个服务器，其中之一在此被示出为服务器14 (装置）。这个服务器提供了集中的策略管理、事件监控、代理协调和内容分析（例如间谍件和病毒扫描）。单个服务器可以支持多个主机12,例如几百或者几千主机。服务器也维护与分析相关联的元数据的数据库，所述元数据为诸如相对于文件和程序的扫描历史和批准状态。这个元数据被称为每个文件和程序的"抗体"。</p>
+    <p>每个被保护的主机12具有主机代理16，其优选地被实现为软件。它分析文件系统行为，并且根据在服务器上配置的策略来采取行动。这些策略（在下面更详细地被描述）识别是否阻止、记录、允许或者隔离诸如文件访问或者可执行部分的执行的行为。每个主机代理16具有：本地"抗体"存储器16，其是与文件相关联的元信息的高速&#32233;&#27798;存储器；以及，参数策略引擎20，用于实现来自服务器14的策略。</p>
+    <p>服务器14具有多个功能和接口。所述接口包括：主机通信接口22，用于与主机通信；基于网页的图形用户接口 （GUI)，用于与网页浏览器管理控制台26通信；报告接口 26,用于作为到企业管理系统28的接口；以及远程分析接口 30,用于与内容分析服务32 (例如病毒和间谍件扫描器）通信。服务器14也包括分析块34和主抗体存储器36，所述主抗体存储器36与抗体分析服务38通信并存储相关联的主机的抗体的主列表。服务38可以包括非现场（off-site)证书授权，其具有与抗体相关联的附加信息，诸如作为诸如微软Office的特定产品包的成员的抗体类别。</p>
+    <p>图2示出了所述系统及其部件的放大图，所述部件包括服务器14、具有用户和核心部分的主机12和其它网络和网页服务40。如在此所示，服务器包括：新的文件处理和文件池块42，其包括已经在网络上出现的近来的文件的拷贝；预定分析引擎44,用于识别要分析的文件和散列值；内容签名器46，用于使用诸如MD5和SHA-1之类的算法来建立内容的加密散列；主抗体存储器36;配置管理50;记录和报告52。服务器与网络和网页服务40交互，所述网络和网页服务40包括分析54、 AV (或者其它内容）扫描器56和管理服务57。</p>
+    <p>主机12的用户部分60具有：抗体高速&#32233;&#27798;存储器64，用于按照名称和数据来保存来自数据库34的更新；文件和事件处理66;分析引擎68;内容提取器70，用于提取在包中的感兴趣的内容和独立内容的相关联的分组；内容签名器72，用于建立内容的加密散列；服务器元信息（MI)状态解析器74，用于查看抗体的抗体高速&#32233;冲存储器64,并且对于服务器查看抗体；以及文件状态解析器76，用于查看向服务器的内容上载进程，并且对于服务器查看上载的证书。</p>
+    <p>主机12的核心部分80具有：高速&#32233;冲存储器82,用于存储通过文件名称组织的抗体；近来文件操作和文件信息的高速&#32233;冲存储器84。所述核心也具有截取/阻挡功能86，其接收和截取文件操作请求，并且向全状态过滤器88提供这些请求，所述全状态过滤器88首先查看近来文件操作的高速&#32233;&#27798;存储器84。如果没有匹配，则它查看保存安全策略的触发器和行为块90。这个块90耦接到："defcon"块92，所述"defcon，，块92具有用于指示系统的安全级的值；策略引擎94，其控制块82、 90和92以控制各种文件操作，其中包括执行、文件读取、文件写入和其它行为。所述触发器和行为块90与抗体高速&#32233;&#27798;存储器82通信，所述抗体高速&#32233;&#27798;存储器82根据文件的名称来查找关于文件的元信息。策略引擎94也控制行为，诸如阻止、报告或者允许文件操作和向用户报告。</p>
+    <p>所述系统包括用于设置这个安全系统的多个方法和方面，其中许多被单独使用或者与其它组合使用。下面更详细地说明这些方法和方面。</p>
+    <p>一个方面是使用中央扫描来查看文件和可执行部分，并且保持用于指示是否已经预先查看了数据的散列值。所述散列值可以被存储在数据库中，并且也被&#32233;存在本地主机中。</p>
+    <p>另一个方面在于使用中央设置的参数，有时被称为"D"或者"Defcon"，其控制主机的策略。这个中央策略和参数可以被应用到所有的主机，或者被应用到所选择的主机组。所述参数可以被操作员人工设置，或者可以不用人为干预而（通常响应于某个事件）被系统调整。所述策略可以包括阻止或者允许特定行为，或者可以使得一个行为待决，这使得其被允许进行进一步的监控，诸如记录。待决状态具有多个益处，包括考虑在系统中的等待时间，以及实现不适用于传统的二进制批准/禁止模型的策略。这些等待时间包括在识别有害代码之前的时间，在系统中的误操作期间或者当主机与网络断开的时间。</p>
+    <p>在另一个方面，中央服务器可以指定元信息的查询，并且将那个查询分布到所有或者所选择的主机组。这些主机执行来自元信息的本地存储器的查询，并且向服务器发回结果，可以使得所述服务器调整</p>
+    <p>在另一个方面，所述系统包括一种用于防止可以在其它文件中嵌</p>
+    <p>入的宏病毒传播的方法。这种功能可以用于Visual Basic宏，但是所述方法可以应用到除了 Visual Basic之外的任何其它宏语言。</p>
+    <p>在另一个方面，新文件的所有拷贝被保存在服务器42中的特定目录中。可以根据定时器来执行进一步的分析，并且可以在文件被第一次看到后几天后执行所述进一步分析。在文件第一次出现后的某段时间（例如30天）后，所述文件可以被重新扫描以查看病毒、间谍件或者其它问题，并且所述系统可以根据结果而采取行动。例如，用于指示在文件中包含病毒的分析将使得这个文件的对应的抗体数据库36输入项（entry)包括禁止状态。这种改变以及其它的抗体数据库改变将被传播到主机。</p>
+    <p>中央设置的参数和参数内容策略</p>
+    <p>在系统中的安全基于在每个服务器中定义并且通过推和/或拉技术被传播到所有相关联的主机或者主机组的策略。这些策略涉及：可以对于可执行部分和文件所做的内容，诸如读取、执行和写入；当它们被主机建立和改变时要做的内容；扫描如何进行；如何进行记录；以及许多其它的功能，并且对于每个策略（例如对于新看到的可执行部分可以进行什么操作），可以有多个策略选项（诸如禁止、允许或者允许和记录）。所述策略可以基于在文件中的内容（数据）或者文件的名称或者组合。可以通过签名（诸如一个或多个加密散列值）来定义所述内容。采样策略的非专有列表包括：</p>
+    <p>1. 新的可执行部分和独立脚本（例如气exe或者气bat)的阻止/记录执行</p>
+    <p>2. 新的嵌入内容（例如在气doc中的宏）的阻止/记录读取/执行</p>
+    <p>3. 网页内容的阻止/记录安装/修改（在气html或者气cgi文件 中的内容的改变）</p>
+    <p>4. 允许诸如上述的（3)的策略的更新</p>
+    <p>5. 自动批准通过两个病毒扫描的文件（例如将对应的文件状 态设置为批准）</p>
+    <p>6. 被管理员特别禁止的文件的阻止/记录安装/执行</p>
+    <p>7. 通过数据来隔离/删除/记录被感染的文件</p>
+    <p>8. 通过名称来隔离/记录被感染的文件</p>
+    <p>9. 在管理地定义的"类，，中的新文件的阻止/记录执行；例如 管理员可能期望阻止屏幕保护程序气scr，但是不是全部类别的可执行 部分气exe、 *.dll、气sys等…</p>
+    <p>10. 当指定文件被复制到可装卸介质时记录</p>
+    <p>11. 除了在特定目录中之外，新的可执行部分、脚本和嵌入内 容的阻止/记录执行，即允许用户在特殊的目录中建立新的脚本或者可</p>
+    <p>执行部分，但是保护文件系统的其余部分</p>
+    <p>12. 当离线、远程连接或者本地连接时的不同的主机策略</p>
+    <p>13. 通过数据或者通过名称而列出包含指定文件的主机/路径</p>
+    <p>14. 列出具有被阻止的可执行部分、脚本和嵌入脚本的主机</p>
+    <p>15. 列出具有被感染或者被禁止的文件的主机/路径</p>
+    <p>16. 自动批准来自被定义的更新服务（例如来自可信来源）的</p>
+    <p>文件</p>
+    <p>17. 由管理员对于特定的主机组（即存在多个&#32068;）特别禁止的 文件的阻止/记录执行</p>
+    <p>18. 由于性能原因或者测试而完全地去活主机系统</p>
+    <p>19. 在一段时间（用户可配置）后自动批准文件</p>
+    <p>20. 允许新的文件被安装/执行多达x次（用户可配置）。阻 止任何更多的安装和/或执行直到被批准</p>
+    <p>21. 当新的文件被写入时本地批准所述新的文件22. 当新的文件被写入时中央地批准所述新的文件</p>
+    <p>服务器可以保存每个主机组的一个或多个策略，并且每个策略按 照被中央地设置并且指示策略的选项的参数来可变地被实施。这些策 略和选项可以被逻辑地组织为二维阵列，其中，有效的参数沿着一维 移动以选择各种策略的策略选项。这个参数在此被称为D值。所有的 主机可以具有D的一个值，或者主机的逻辑子组具有它们子集的D 的值；例如，在销售部门中的主机可以被分配D-l，并且在市场部 门中的主机可以同时被分配D-2。在一种实现方式中，主机查看（轮 询）服务器以查看是否D值已经改变。当每个主机发现D已经改变 时，它们每个开始"移动，，到新的D值。这种移动可以逐步地进行。可 以作为网络消息从主机向服务器提供这些轮询。D值控制策略行为。 对于给定的策略（例如"禁止新的可执行部分，，或者"禁止新的脚本，，）， D-2阻止策略侵害行为（在这种情况下，执行"新的可执行部分"）， D - 4警告（向服务器无声警告）但是允许，D = 6允许而根本不警告。 无论是否D-2、 4或者6，主机最好当新的可执行部分被写入时继续 注意和记录所述新的可执行部分。当在此的示例使用D的数值时，D 可以具有以字母、字或者字母和数字的任何组合表达的"值"。</p>
+    <p>所述D值也控制策略激活。对于给定的策略（例如"禁止新的可 执行部分"或者"禁止新的脚本，，），D-l使能"写保护"策略，因此， 根本不能写入新的可执行部分，而D = 8完全禁止所有的策略，D - 2、 4和6情况可以像如上所述设置的那样。在这种情况下，D-8可以甚 至禁止注意何时新的可执行部分被写入到文件系统的策略。</p>
+    <p>当可以在服务器中中央地设置D值时，其被本地地实现在主机 上。可以由管理员利用连接到服务器的浏览器通过在管理控制台上的 图形用户接口 （GUI)、或者经由简单网络管理协议（SNMP)而将 其设置。D值被当做"目标"值；主机试图移动到尽可能地接近这个值， 这可能需要几秒或者几分钟。在一些情况下，主机可以从由服 务器指 定的目标值本地地分出。可以在主机上调用命令行程序，或者用户可 以被提示D的特定值，并且可以改写D的目标值。例如在个人的机器需要禁止安全（D - 8 )并且没有与服务器的网络连接时，这个特征 是有益的。特定的行为可以自动改变在主机上的D值，诸如检测来自 授权程序的更新（例如反病毒更新）。</p>
+    <p>所迷策略反映了在安全和可使用性之间的折衷。在上述的示例 中，D-8最为有用，并且最不安全&#8212;&#8212;没有策略被激活，主机代理 被有效地禁止阻止和跟踪。当D向最大安全（D = l)移动时，越来 越多的限制策略被激活，并且当策略被违反时执行的行为变得越来越 严重。有序的状态是所期望的，因为它们更容易可视化和测试（一般， 可以仅仅测试需要测试的端点，诸如D-l和D-8)。当所述值提高 或者降低时，使用有序的状态，文件和用户的数量变得连续地更容易 访问或者更受限制。这些有序的状态自然地反映安全和可使用性之间 的折衷。</p>
+    <p>当D在活动的系统上改变时，会发生竟争条件。基本问题是： 如果在安装程序时D的值要从8+1改变，则多个文件的安装会变得 "半阻止"或者"半安装"。结果，特定的D转换可以触发文件抗体状态 重新分析和文件抗体块状态变换。</p>
+    <p>本地D改变有时可以被本地策略触发器引起。通常，在服务器 上中央地设置D。但是有时，触发本地主机策略，其然后使得本地主 机D值改变。这有益于例如完成在被锁定的系统上的安装（D-2)。 继续这个示例，在D-2安装打印机驱动器可能导致问题，因为一些 打开的新的安装文件需要执行以完成所述安装。而且，不同的主机机 器可能需要打开和执行不同的程序以完成所述安装（例如Windows 2000和Windows XP )。在这种情况下， 一个特定抗体文件类型&#8212;&#8212;</p>
+    <p>^U比准的程序"printer_setup.exe"-的执行将主才几的本地D从</p>
+    <p>2+3，这是略弱的状态，其自动本地仅仅批准这些新的安装文件和它 们的后代。</p>
+    <p>可以根据连接类型来改变D值，不论是否为本地（在有线LAN 上）、远程（诸如通过电话调制解调器或者&#34395;拟专用网络（VPN)) 或者完全断开。主机代理因此存储这些类型的连接的一组指定的D值，然后自动响应于改变（例如当用户将主机与LAN断开时）而从 所述组中选择。而且，不同的D值可以导致在报告、记录和跟踪细节 上的减少或者增加。</p>
+    <p>也可以从中央服务器（有时被称为"超级服务器，，）设置策略，所 述中央服务器可以控制许多服务器/服务器。假定每个服务器控制 2000个主机，并且存在1000个超级服务器，则不可能用于设置D-1 的超级服务器命令将对于所有的2000000个主机适当。相反，超级服 务器可以命令所有的服务器和主机具有本地允许的尽可能强的D。因</p>
+    <p>此， 一些服务器和它们所连接的主机将到达它们的极限例如D = 2。 其它服务器可以进行到D-l，但是然后也许它们的主机组的一些限 于D-4，因此那些主机将走强，但是不强于D-4。同一限制对于上 述范围的另一端为真。如果超级服务器命令D = 8，则一些服务器和 主机仅仅可能取而代之走到D = 6。因为D是有序状态，因此这些限 制是简单的整数范围（最小值和最大值）。</p>
+    <p>D的值可以根据某个事件的检测而改变，诸如传播文件。如果新 的文件的太多的拷贝正在服务器的多个主机上传播，则服务器可以选 用地将D提高以停止所述传播（例如走到D-2)。这种事件可以被 指定为特定名称的太多（例如按照名称列出的前10个）或者按照唯 一内容的太多（例如按照数据的散列值列出的前10个）。</p>
+    <p>所述值也可以响应于由服务器感知的新的事件而根据服务器请 求改变，所述事件诸如新来到的文件或者可能的病毒攻击。在大多数 情况下，是管理员（一个人）按照所计划的用户操作或者根据特定文 件事件的观察而启动D的改变。可以自动改变D，例如在操作的进行 期间，在这种情况下，主机/服务器在操作终止后将D的值返回到其 原始水平。外部触发器可以改变D的值，诸如SNMP。</p>
+    <p>另一个响应是服务器自动批准在少于特定阈值数量的主机上的 内容，但是当超过所述主机数量时自动禁止对于那个内容的访问。这 样的策略可以用于限制在网络中的任何内容或者文件的拷贝的数量。 而且，这样的策略可以用于仅仅报告超过特定主机数量的内容。服务器可以对于每个主机逻辑组（诸如销售主机、市场主机和工 程主机）分别保存策略集。策略集可以具有与抗体版本号码类似的唯 一识&#21029;号码。差别在于一旦被部署，则策略集变得"只读，，以协调策略</p>
+    <p>集的以后的问题，并且取消问题部署。也可以使用与Unix实用程序 "difP和"patch"类似的技术对于差别配置和其它更新如此进行。主机 可以向服务器查询它们的组的当前策略集的ID号，并且如果存在不 匹配，则它们可以向所述服务器发送"GetPolicySet"查询。</p>
+    <p>策略集可以包括多个策略，诸如"新的可执行部分，，策略或者"新 的脚本"策略。每个策略可以处于活动（接通）、不活动（断开）或 者测试模式（其中，允许阻止，但是向服务器发送"将阻止，，消息）中。</p>
+    <p>每个策略可以具有多个规则，每个规则具有基本的"触发和行为"模 型。触发器是被测试的模式。如果模式匹配，则执行所产生的行为。 例如，可以将"在D = 2的新的可执行部分的阻止执行"指定如下：</p>
+    <p>Trigger=(D=2    &amp;    FileOp=Execute    &amp;    State=Pending &amp; FileExtensionClass-ExecutableClass),   其中，ExecutableClass = (*.exe|*.sys|*.dll|...)</p>
+    <p>Action-(Block &amp; Report &amp; Notify(P)),其中，"BIock，，停止操作， "Report，，向服务器发送通知，"Notify"使用参数集P来警告用户。</p>
+    <p>使用这种结构，除了在核心抗体高速&#32233;冲存储器更新、D更新和 策略集更新的情况下，所述核心可以不用与用户空间交互而实施所有 的策略。策略集仅仅需要被存储在一个位置，并且在这种实现方式中 它们仅仅需要在核心中被解释。策略集可以被认证和存储在一个安全 的背景（所述核心）中，结果产生对于篡改的更强的安全性。</p>
+    <p>通过D来对策略和行为进行参数化，因为D允许不同的规则匹 配不同的触发器。具有特定状态的文件可以阻止特定的操作。这些状 态可以是名称和数据属性的组合。这些状态在用户空间中被确定，在 核心空间中被镜像，并且最后，所述状态被服务器确定。 一种有益的 策略是阻止被禁止的文件，并且在一些D值的情况下，阻止待决（新） 文件的执行。所述策略可以作为策略的 一组列表而被提供在具有访问性和安 全性的折衷的范围上。所述服务器可以然后提供信息以使得主机选择 所述列表之一。通过使得所述多个列表存在于所述主机上并且允许所 述主机使用"拉"手段来更新策略，所述主机可以方便地在服务器的控 制下更新安全策略。</p>
+    <p>下面的表格示出了所述D值如何可以影响在&#32068;策略集中的各种 策略的一个示例，其中，行是在主集内的策略，列是行为，并且所述 单元具有用于指示所述行为的D的数值范围。在所述表中指定的行为 和其它细节被汇总如下：&lt;table&gt;table see original document page 41&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;(1) 允许：允许操作，否则无声</p>
+    <p>(2) 阻止：阻止操作，否则无声</p>
+    <p>(3) 跟踪：跟踪操作和所产生的内容（如果所述内容是待决的 或者被禁止的），否则无声。 一般不跟踪被批准的内容。</p>
+    <p>(4) 报告：向服务器发送通知。</p>
+    <p>(5) 通知：向主机端点用户指示为什么操作被阻止/中断。</p>
+    <p>(6) 自动本地批准：具有本地主机状态=待决的新的主机文件 和/或新的内容被本地设置为：当建立/修改文件/内容时，主机状态-批准或状态-仅仅在本地主机上本地批准。</p>
+    <p>(7) 自动全局批准：具有本地状态-待决的新的主机文件和/ 或新的内容被全局地设置为：当建立/修改文件/内容时，在服务器上 的服务器状态-批准。</p>
+    <p>抗体引入，文件元信息</p>
+    <p>具体参见图2，对于被允许的行为，在系统中的服务器包括抗体 数据库36，其主要用于跟踪文件扫描历史和每个文件的批准状态。抗 体是关于文件的数据块（即元数据或者元信息），其可以包括一些或 者全部的下面的字段：</p>
+    <p>*第一次看到的时间。当文件或者散列值被主机第一次看到并且 被报告到服务器的时间。</p>
+    <p>*文件ID。文件的唯一标识符，包括诸如MD5、SHA-1和OMAC 的内容的一个或多个散列值。</p>
+    <p>&#21443;文件类型。文件类别（例如可执行、脚本，办公文件、文档等）。 其是当第一次看到文件（见下）时从文件名称得到的，并且也从文件 内容的分析得到。</p>
+    <p>*状态。当前文件的状态，包括批准、待决或者禁止。</p>
+    <p>*方法，服务器得知文件的方式（自动，人工等）。</p>
+    <p>*文件名。被第一次看到和报告到服务器的文件的名称。其可以 不是文件的当前名称，而仅仅是在网络上看到的第一实例的名称。</p>
+    <p>*文件路径。被笫一次看到和报告到服务器的文件的路径。*当第一次被看到/报告时的主机文件名称/路径/扩展。 &#8226;当最后被看到/报告时的主机文件名称/路径/扩展。 *第一次看到/才艮告的主机IP地址文件。</p>
+    <p>*第一次看到的主机，在其上第一次看到和^L告文件或者散列值 的主机的名称。</p>
+    <p>*分析结果。最新的扫描或者其它分析的结果。</p>
+    <p>&#21443;第一次分析。文件的第一次扫描/分析的时间。</p>
+    <p>*最后的分析。文件被最后扫描/分析的时间。</p>
+    <p>*最后更新。文件状态被最后修改的时间。</p>
+    <p>*父容器。到已经与文件相关联的其它文件的链接。</p>
+    <p>*父容器属性。文件名称、第一次看到的时间、第一次看到的主 机、文件路径、产品类别和一个相关联的容器文件的状态。</p>
+    <p>*根容器。到已经与所述文件相关联的其它文件的链接。根容器 是未在另 一个容器内包含的容器。</p>
+    <p>&#21443;根容器属性。文件名称、第一次看到的时间、第一次看到的主 机、文件路径、产品类别和一个相关联的根容器文件的状态。</p>
+    <p>&#21443;参考父文件容器，如果已知的话。这些用于保存包含关联，诸 如"在散列值=x的文档文件中观察到这个散列值- y的文件"。</p>
+    <p>&#21443;文件内容类型（通过内容分析而确定），诸如可执行、脚本文 件、嵌入的宏。</p>
+    <p>服务器具有系统的抗体的全集。当每个主机在用户高速&#32233;冲存储 器64中和在核心高速&#32233;冲存储器82中包括抗体的本地子集时，服务 器是用于设置和改变到特定状态的主管方（authority)。例如，服务 器是中央地发起和（向主机）传播改变的主管方，所述改变包括从待 决向批准或者禁止的状态过渡（这三种状态最好与内容散列值相关 联），而主机是唯一可以将状态设置为本地批准的主管方。在数据库 36中的每个输入项是永久的，并且最好容易使用文件数据散列值索引 被访问。数据库可以选用地由其它关键字加索引，诸如文件名、第一 次看到的日期、状态、分析结果、主机ID或者主机计数，以便管理员可以容易地浏览抗体数据库。</p>
+    <p>当具有抗体的数据库被描述为正处于服务器之内或者之上时，应</p>
+    <p>当明白，这表示所述数据库与服务器相关联。其可以物理地驻留在同 一机箱和服务器的处理功能内，或者其可以驻留在不同的机箱或者甚 至在远程位置中。如果远程的话，则应当存在适当的有线或者无线的 连接来获得数据。</p>
+    <p>抗体（AB)跟踪引入</p>
+    <p>当建立新的文件或者修改现有的文件时，可以触发跟踪策略，由 此引起一系列文件和抗体分析事件。首先，主机执行一系列步骤来确 定是否已经有对于内容的重大修改，所述内容对应于已经被分析的内 容，并且对于所述内容而言，已经在主机高速&#32233;冲存储器中存储了抗 体。如果内容抗体未在主机高速&#32233;冲存储器中，则向服务器查询以确 定是否所述服务器已经分析了内容。如果服务器没有对应的抗体，则 所述内容可以被上载到服务器以进行进一步的分析。直到所述服务器 可以确实地确定状态，与所述内容相关联的状态^i殳置到待决或者还 没有被确定。可以限制对于待决内容的随后的访问。服务器根据自从 所述内容在服务器上被第 一次看到的时间来对于内容进行分析。根据 所述分析或者其它外部确定，服务器可以确实地确定在状态上的改 变。这些改变可以被主机指示来用于以后的检索，因此主机可以使用 所改变的状态来更新它们的抗体高速&#32233;&#27798;存储器。</p>
+    <p>主抗体跟踪</p>
+    <p>参见图3,主机截取文件操作（501),包括执行、读取、重新 命名或者写入，并且向全状态文件操作过滤器（502)提供所述操作。 如果所述文件名称不在核心高速&#32233;冲存储器中，并且存在核心高速&#32233; 冲存储器未命中（miss) (510)，并且如果已经有可能的文件或者内 容修改（511)，则所述状态无效。所述文件然后去往内容提取器， 内容提取器提取感兴趣的有效内容（503 )以产生减小的文件（如下 更详细所述），并且向内容签名器提供所述减小的文件（504)。内 容签名器向减小的文件应用诸如MD5之类的加密散列。这个散列与文件和文件名相关联。可以当散列和其它分析（高速&#32233;&#27798;存储器未命 中解析）完成时延迟/停止文件操作。</p>
+    <p>主机也根据散列值内容来进行本地查找，以试图获得状态（505 )。 如果内容和状态未被找到，则所述状态被设置为待决。这可以表示文 件操作被允许进行，虽然诸如记录之类的另外的监控也可以发生。如 果所述内容被找到，则名称、内容、容器（包含有效内容的文件）和 状态全部关联在一起（507)。否则，主机向服务器请求在其存储器 中查找内容（506)。如果在那里找到了，则名称、内容、容器（包 含有效内容的文件）和状态全部关联在一起（507)。如果内容和状 态未被找到，则所述状态被设置为待决，并且所述内容被上栽到服务 器（508)，服务器确认所述上栽（509)。服务器也可以查看与多个 服务器相关联的"超级服务器"。容器关系被存储，并且与文件和其它 容器相关联。容器信息也被发送到服务器和主机以及被发送来用于分 析。"根"容器是未被另一个容器包含的容器。通过它们相关联的文件 以及通过加密散列值来识别容器。</p>
+    <p>一般地，向文件内容的"有效"部分或者整个文件内容的散列值或 者签名分配抗体状态。因此， 一般地，HASH (文件数据/内容）+状 态。这映射数据^状态。状态（S)可以包含多个信息，诸如"批准，， (白名单）或者"禁止"（黑名单）或者"待决，，（诸如还没有被完全分 析的新看到的文件的"灰名单"）。</p>
+    <p>这个系统的优点是将名称状态与内容状态组合。例如，服务器可 以指定和存储多个名称禁止，诸如^^msblast,exe。服务器将名称状态 策略存储为正则表达式和相关联的元信息的列表。与所述正则表达式 匹配的任何文件驱动器/路径/名称/扩展然后继承名称元信息。每当文 件名被改变或者名称元信息指定改变时更新这个名称元信息。从服务 器向主机传播名称状态和策略。例如，通过加上 *msblast.exe^NameBan,服务器将感测到新的策略/状态，并且将向 主机传播那个规格。主机然后对于它们的名称元信息高速&#32233;冲存储器 搜索与夫msblastexe的匹配，并且那些匹配的文件将继承NameBan状态。主机文件状态是名称和数据状态的叠加：例如，如果 temp&#8212;msblast.exe具有内容状态=待决，则其组合状态是禁止，因为 NameBan相对于待决具有优先权。以类似的方式来处理名称批准状 态。</p>
+    <p>抗体被分层地存储在数据库中。存在如上所述的抗体的四种主要 存储位置。在主机代理中，核心抗体高速&#32233;冲存储器82映射文件 NAME (名称）■&gt;抗体STATE (状态）。例如，NAME -c:\windows\bar.exe^STATE=approved。简写的话，这种映射是N+S。 核心可以并且实际上根据所述状态来实施策略，而不需要访问文件内 容。当文件可以在核心中被加密但是以未加密以上的形式可见时，这 是有益的。所述核心直接访问名称，但是不访问散列值。由于可以有 较长延迟（秒、分钟、小时、天），核心高速&#32233;冲存储器可以较弱地 与其它的高速&#32233;冲存储器一致，并且最后与服务器一致。</p>
+    <p>主机代理具有用户抗体名称高速&#32233;冲存储器（UN)和用户抗体 数据高速&#32233;冲存储器（UD ) 60。 UN将文件名映射到文件内容（数据） 的散列值，即UN映射N+数据。并且类似地，UH将数据映射到状 态Data(数据）^S。 一般地，N^数据的映射是多对一，UN镜像本 地文件系统的结构。所述数据+S的映射一般是一对一的，因为对于 优选使用的强散列值（诸如MD5)，散列值冲突是很少见的。UN和 UD高速&#32233;冲存储器也与服务器弱一致，但是UN和UD与本地主机 文件系统强一致，就像核心高速&#32233;冲存储器那样。UN和UD可以被 组合如下：N^数据+S-N+S。</p>
+    <p>服务器具有已经被其任何主机报告的一般每个唯一的散列值的 抗体数据库34，并且超级服务器（如果存在一个）具有已经在任何其 服务器上看到的一般每个唯一的散列值的抗体数据库。限于唯一散列 值限制了存储和处理，虽然可以使用在存储和处理上的进一步的改善 来存储更多。而且，限于唯一散列值导致更有效的分析和更低的网络 流量。</p>
+    <p>一般地，新的文件响应于"新文件"或者"脏文件"事件而从主机向</p>
+    <p>46服务器向超级服务器传播，并且新计算的抗体状态相反地以抗体更新 的形式从超级服务器向服务器向主机核心传播。以这种方式，中央地 控制、管理和验证抗体。所述服务器"拥有，，和证明所述抗体，并且所 述服务器提供所述抗体还没有被改变或者伪造的认证。主机保存它们 自己的抗体，其一般（但是不必要）对应于在服务器上的那些抗体。 因此，损害的或者误操作的主机不能使得服务器或者超级服务器抗体 集变差，损害的主机也不能使得其它主机的抗体变差。</p>
+    <p>在主机上，抗体状态最好被存储，以便其不与散列值/数据相关 联，而是通过名称相关联。核心分析、解译和实施策略，并且按照名 称来查找所述文件的状态。可以明白，优选的实现方式在核心中实施 策略，但是其它的实现方式可以在用户空间中实施策略。当查找状态 时，在用户空间或者核心中，其实际是确定结果产生的状态的混合体。</p>
+    <p>例如，如果foo.exe的数据抗体待决，但是名称抗体根据其名称而被 禁止，贝'J GetABState (foo.exe)返回"按照名称禁止，，的结果。存在用 于阻止具有抗体状态-NameBan的文件的执行的独立策略。那个策 略的行为被D的值如上参数化。 一个差别是阻止"按照名称禁止"的策 略在较低的D安全设置有效。例如在D-4，"待决"文件将执行（使 用无声警告），但是被禁止的文件不执行。</p>
+    <p>名称禁止被表示为正则表达式的列表，并且可以在服务器上包括 通酉己符(*)， 例如'"oo.exe "或者'wmsblast.exe"。这些列表具有版本 号码。当主机轮询时，它们查看它们的版本号码。当主机检测到不匹 配时，其然后从服务器发送GetNameBans查询（即主机从服务器拉 新的禁止数据）。然后，对于名称抗体重新评估这些正则表达式。名 称禁止是状态的属性，并且仅仅当名称禁止列表改变时或者当文件名 改变时被重新计算。不必在每个文件操作比较通配符列表。因此，数 据抗体和名称抗体的双特性有益。而且，成百上千的名称正则表达式 可以同时有效，而不对于每个文件操作要求在核心中进行几千个正则 表达式匹配计算，这会是极为昂贵的。</p>
+    <p>文件内容跟踪向回参见图2，截取/阻止功能86可以截取并且读取文件访问请 求。其可以在获得策略信息的同时中止请求，根据在核心内的策略来 阻止请求，并且对于被阻止的请求返回适当的错误代码。功能86从 文件访问请求读取请求处理名称、所述请求的本地系统时间、所请求 的数据（包括全路径）和所请求的行为（例如读取、写入或者执行）。 在一个实施例中，功能86向"全状态过滤器"88提供所有的文件访问 请求，每个操作被阻止，直到过滤器88返回标记，所述标记指示所 述操作或者被阻止或者被允许。</p>
+    <p>过滤器88从功能86截取文件访问请求，并且对于大多数文件访 问请求返回"阻止"或者"允许"的行为。不能与已经被批准的文件访问 请求相关联的任何文件访问请求被转发到核心触发器和行为模块90, 其返回"阻止，，或者"允许"的行为。这个行为被过滤器88存储，并且 最好对于任何随后的相关联的类似文件访问请求被发送到功能86。</p>
+    <p>过滤器88维护已经打开的文件的高速&#32233;冲存储器84 (通过核心 范围的唯一标识符来索引；例如在Windows NT中的核心文件句柄）。 每个高速&#32233;冲存储器输入项包含文件标识符（核心文件句柄），并且 阻止或者允许对于读取、写入或者执行的许可。</p>
+    <p>如果多个处理访问同 一文件，则每个将具有其本身的高速&#32233;冲存 储器输入项。如果给定的处理尝试新的文件访问，则全状态过滤器将 经历那个文件的高速&#32233;冲存储器未命中，这将使得其向所述触发器和 行为模块提交文件访问请求。如果模块90允许，则所请求的操作（读 取、写入或者执行）的标记应当被设置为"允许"。否则，其应当被设 置为"阻止"。如果仅仅获得一种许可（例如读取）的处理然后尝试另 一种处理（例如写入），则模块90将再一次被接触。</p>
+    <p>其使用期限超过特定值（例如60秒）的高速&#32233;冲存储器输入项 可以被删除。这允许剪除由于某些原因未被去除的输入项。这也允许 通过模块90定期重新查看文件。</p>
+    <p>在这个示例中，通过用于文件"foo.exe"的主机代理核心程序 (HK)来在阻止垫片（shim) 86中的核心中捕获文件写入操作。在D = 4的值下，文件操作（在此为文件写入操作）被激活的"脏跟踪" 策略插获，并且这从主机核心程序向主机代理用户空间程序（HU) 发出"脏"事件。这个事件指定文件名和脏操作。对于这个操作不参考 核心高速&#32233;冲存储器82，因为脏跟踪策略使得那个字段为空。</p>
+    <p>HU然后对于foo.exe执行在文件和事件处理66和分析引擎68 中的多个本地分析操作。首先，查看foo.exe以看是否其存在，是否 是可读，是否其确实是可执行部分。可以执行其它的操作，诸如在过 滤器88中提取"感兴趣的数据"；例如，如果文件是foo.bat，则可以 去除脚本说明。所提取的foo.exe的数据然后被以加密方式散列化， 并且这个散列值用于尝试在HU抗体高速&#32233;冲存储器60中的查找表。 如果名称和数据已经存在，则不进行任何其它事情。如果名称是新的， 但是所述数据是已知的，则在UN高速&#32233;冲存储器中建立新的名称抗 体。这个处理是被称为"阶段l分析队列，，项目的所有部分。可以排队 在主机上在阶段1队列中等待散列化的许多文件。阶段1队列仅仅具 有名称抗体和元信息，因为所述数据还没有被知道或者分析。</p>
+    <p>如果主机已经看到这个文件数据和散列值，则那个散列值的对应 的已知元信息与那个文件的主文件元信息相关联，所述元信息是从 UD本地存储器或者本地盘存储器以那个顺序被检索出来的。如果主 机还没有看到这个数据，则UD高速&#32233;冲存储器"未命中"。所述散列 值被置于阶段2分析队列。实际上，存在数据抗体，即，逻辑地跟踪 数据的状态（诸如"批准"、"禁止，，或者"待决"），并且也存在名称抗 体，例如"按照名称禁止"。例如，如果服务器禁止"oo.exe"，则foo.exe 的名称抗体将指示"NameBan"，并且名称禁止策略可以据其来阻止。 因此即使高速&#32233;冲存储器可能知道已经（通过名称）禁止了 foo.exe, 脏跟踪解析仍然继续。名称和数据抗体的这种区别在范围上对于独立 的主机是本地的，但是其对于FindFile (查找文件）功能（下述）和 对于策略实施变得重要。所述数据抗体因此被置于阶段2队列中。</p>
+    <p>阶段2分析尝试首先从存储器高速&#32233;冲存储器、然后从基于本地 盘的数据存储器、然后从服务器解析本地状态信息。如果服务器被连接，则阶段2队列将当解析元信息时为空。当从这个队列去除foo.exe 时，如果未本地找到那个散列值，则向服务器查询是否它已经看到这 个数据散列值。如果回答是否，则foo.exe及其散列值和其它元信息 被置于阶段3队列中以上载到服务器。另外，如果服务器还没有看到 所述散列值或者如果服务器分析还没有完全结束以确定其它状态，服 务器将向主机发送默认的抗体状态，即"待决"。如果服务器已经计算 了有效的抗体和状态，则其返回这个抗体元信息。如果服务器从未看 到foo.exe的这个数据，则在所述服务器的经历中的所有机器从未看 到这个文件的意义上来说其是新的。</p>
+    <p>当从阶段3队列去除foo.exe时，其使用加密的单向传送被上载 到服务器。即，使用FTPS (安全文件传送协议）和只写服务器目录， 文件可以被上栽到服务器，但是不能被下载。当成功地完成上栽时， 主机向服务器通知传送了 foo.exe。这种传送通过散列值被引用，以便 最小化信息泄漏和用于附加的安全性。</p>
+    <p>当服务器知道上载了 foo.exe时，像主机那样，其通过经由几个 阶段分析文件而开始。在这种情况下建立新的抗体，所述服务器使用 其被同步的被验证时钟来记录其首次出现的时间。而且，执行所述提 取和散列化，并且那些结果取代所迷主机的相应内容。</p>
+    <p>服务器分析按照在服务器上指定和存储的时间表。这个时间表与 文件或者其散列在服务器上的第一次出现时间相关。例如，如果文件 在中午到达并且时间表是"在+0散列查找并且在+0 AV扫描并且在+2 小时AV扫描"，则在中午，将使用外部散列查找服务来计算和查找 文件散列。然后，执行AV扫描。两个小时后，在下午两点，执行那 个文件的另一个AV扫描。用于描述所述时间表的另一个方式是其与 "在服务器上的文件使用期限，，相关联。</p>
+    <p>当抗体在服务器上改变状态时，递增的计数值被写入到所述抗体 中。这个计数用于仅仅选择自从任何特定的主机或者超级服务器登录 起已经改变的抗体的范围。例如，如果前一个抗体改变是从待决+批 准过渡的glorp.bat并且全局抗体版本计数是277，则对应于glorp.bat</p>
+    <p>50得版本号277，并且计数将是278。因此， 对应于抗体foo.exe的版本号是278,并且计数是279。</p>
+    <p>当主机定期轮询时，它们提供它们最后的抗体版本号，并且服务 器将发送自从最后的轮询起已经改变的所有抗体。优选的是，所述服 务器发送当前的编号，并且当主机意识到不匹配时，其向服务器查询 抗体更新，并且返回数据抗体的列表。这些然后被合并为主机抗体， 并且也向核心内下发改变。虽然主机可以获取并且存储从未看到的数 据的一些抗体， 一般仅仅对应于现有的主机文件的那些抗体被合并。 通常丢弃其它的抗体。服务器捕获最后几分钟的更新，以最小化对于 每个主机定制所有的更新的效果。此外，因为主机通常获得比它们需 要的更多的抗体，并且因为新的抗体很少见，因此这个流量是有限的。 抗体更新小，大多数其它消息都如此。</p>
+    <p>抗体可以以类似的方式保持与超级服务器同步。在此，超级服务 器可以轮询服务器，并且获得抗体更新列表。超级服^器可以合并它 们，并且发出每个服务器的定制的更新。这些更新全部在它们会滞后 几分钟或者几天上弱一致，但是必须有互锁（interlock)和保护以避 免在更新中的"空洞"。</p>
+    <p>存在与抗体的合并相关联的其它方面和特征。例如， 一些服务器 可能不从超级服务器接受特定的抗体更新。而且，主机将不允许特定 的本地状态改变到特定的服务器指定状态。</p>
+    <p>一个问题是关于高速&#32233;&#27798;存储器的初始状态和初始策略。服务器 高速&#32233;冲存储器可以预先安装已知的良好和坏的散列抗体，或者其可 以是空的，都是可以的。但是，主机必须偶尔"点滴式充电（trickle charge)"。例如，当主机首次连接到特定服务器时，检测到这个事实， 并且主机将执行点滴式充电，其中，在主机文件系统上的每个单个感 兴趣的文件被插入到阶段1队列中。在此处理期间使用D的特定值以 保证不确定的高速&#32233;&#27798;存储器将不引起问题。抗体一般全部以状态 "待决，，开始，并且它们&#32233;慢地与服务器同步。而且，所有的主机抗体 和队列信息和相关联的全局符定期地被保存，并且过度重新启动。核心高速&#32233;冲存储器一致性</p>
+    <p>在主机代理的启动或者其它初始化时，对于具有有效元信息的每 个已知的现有主机文件，所述核心被安装从用户空间已知的每个有效 抗体。 一些抗体更新当它们被从服务器或者从在用户空间中的分析队 列接收时被发送到核心中。但是，某些更新是核心高速&#32233;冲存储器未 命中的结果。如果确定一个策略有效，并且如果需要抗体状态而如果 那个状态不可获得，则所述核心一般将所述操作延迟某个时间，并且 向用户空间发送核心未命中事件。即使不立即需要抗体， 一些事件也 可以被延迟。这是当一个策略通过与用户接口 （弹出消息框）交互（例</p>
+    <p>如点击是（yes)来覆盖（override)被阻止的待决操作并且使得随后 的受限操作接续，而不阻止某个时间）来允许主机用户覆盖受限状态 (待决）的情况。</p>
+    <p>在一个示例中，安装程序打开被称为inst.exe的新的程序，然后 将其重新命名和执行。通过在执行所述分析的同时延迟所述重新命名 并且延迟所述执行，核心将避免暂时的不一致。结果产生的抗体从用 户空间异步地被发送，然后一旦完成了所述异步更新，则待决操作解 除阻止，并且使用所需要的状态信息来评估策略。</p>
+    <p>所述核心高速&#32233;冲存储器在初始化时包含在文件系统中的几乎 所有文件的抗体。可以在核心高速&#32233;&#27798;存储器中留下空洞或者其它不 一致的操作（即使是短时间的）被延迟并且互锁，以便保持一致性。 用户空间高速&#32233;冲存储器被优化以便以很低的延迟来解析核心未命 中。当核心和用户空间高速&#32233;冲存储器对于服务器侧延迟很不敏感 时，核心高速&#32233;&#27798;存储器对于互锁和正确的持久性敏感。</p>
+    <p>查找文件（FindFile )</p>
+    <p>因为UN和UD高速&#32233;&#27798;存储器最好被优化以用于低延迟的查 找，因此这些高速&#32233;冲存储器可以被用作来自服务器的分布式抗体查 询的一部分（在此被称为"FindFile，，功能），以产生什么文件在什么 主机上的视图。通过经由在服务器或者超级服务器上的网页接口提交 网页浏览器形式，管理员可以指定FindFile请求。例如，可以联合地指定下面的限定符：</p>
+    <p>(1) 文件名的正则表达式模式指定，</p>
+    <p>(2) 文件路径的正则表达式模式指定， (3 )   文件的感兴趣的内容的散列值，</p>
+    <p>(4)与文件相关联的容器的散列值或者其它ID,</p>
+    <p>(5 )当主机第 一次看到文件或者文件的散列值时的时间范围，</p>
+    <p>(6) 主机的名称，</p>
+    <p>(7) 主才几的IP地址</p>
+    <p>(8) 文件的类型</p>
+    <p>(9) 来自一组至少三个状态（批准、禁止、待决分析）的、与 文件相关联的一个或多个主机文件状态。例如， 一组 AllBanned-(NameBan， BanByHash)。</p>
+    <p>(10) 是否主机对于文件执行了特定的文件操作，以及</p>
+    <p>(11) 主才几组</p>
+    <p>参见图4,完成的FindFile请求与电子邮件的相似之处在于：服 务器发布（post)对于由指定主机进行随后的检索的请求。当主机登 录（check in)时，它们获知是否存在来自服务器的FindFile消息在 等待它们。当一个主机获知其具有未完结的FindFile请求时，其使用 获得查找文件请求（GetFindFileRequests )来检索所述请求， GetFindFileRequests如图4中的线（1)所示。换句话说，所述请求 最好被实现为从服务器的"拉"。这允许更安全的实现，而不需要监听 的主机插口 。</p>
+    <p>所连接的主机的每个通过访问来自它们的抗体高速&#32233;&#27798;存储器 的适用数据而处理它们的FindFile请求，并且将结果列表发布到结果 数据库，被示出为发布查找文件结果（PostFindFileResults)(图4 中的线（2)),其中包括下面的所返回的每个文件的信息的一些或 者全部：</p>
+    <p>(1) 文件名，</p>
+    <p>(2) 文件路径，(3) 文件的感兴趣的内容的散列值，</p>
+    <p>(4) 当主机第一次看到文件或者文件的散列值时的时间，</p>
+    <p>(5) 主机的名称，</p>
+    <p>(6) 主才几的IP地址，</p>
+    <p>(7) 文件的类型，</p>
+    <p>(8) 文件的容器信息，</p>
+    <p>(9) 来自一组至少三个状态（批准、禁止、待决分析）的、与 文件相关联的一个或多个主机文件状态，</p>
+    <p>(10) 是否已经由主机对于文件执行了特定的文件操作，以及</p>
+    <p>(11) 主机组</p>
+    <p>在一种实现方式中，通过主机首先连接到服务器并且发送一个或 多个网络消息，并且在断开之前接收对于主机消息的服务器答复，完 成所有的主机服务器通信（不仅仅是FindFile )。同样，这具有更安 全的优点：因为不需要监听主机插口。存在另一个优点：仅仅需要维 护服务器寻址和路由，而不维护主机寻址、路由和减少发现这样的主 机信息的必要。</p>
+    <p>服务器混合和建立来自主机的FindFile结果列表的主列表。这 些列表的并集是完整的FindFile请求响应，并且其随着时间建立，通 常以少于一分钟的时间完成。因为本地主机处理仅仅访问抗体高速&#32233; 冲存储器，而不访问主机文件系统，因此这些查询会很快。双重名称 和数据抗体关联系统和高速&#32233;冲存储器允许这一点。服务器然后例如 通过网页接口向管理员输出结果。而且，特定的FindFile结果可以影 响和触发SNMP、 syslog、警告和其它通知系统。</p>
+    <p>超级服务器也可以以类似的方式发布要由服务器访问的请求，或 者超级服务器可以直接向服务器递交FindFile请求。然后，服务器可 以向超级服务器返回合并的结果，超级服务器然后可以将这些合并为 较大的主结果。这类似于当处理FindFile请求时在服务器和主机之间 的关系。</p>
+    <p>定时器触发的中央分析</p>
+    <p>54参照图5，服务器可以根据事件来执行分析，例如每次主机上载 内容时的分析，或者系统可以根据时间来执行这些分析。如上所述， 新的内容可以被上栽到服务器，并且使用外部和/或内部分析代理来执 行分析以建立被存储在数据库中的元数据或者元信息。例如在当上载 新的内容时相对于文件的第一次观察的特定时间间隔后，所述系统可 以然后查看另外的所计划的分析。服务器和超级服务器可以执行许多 类型的另外的基于时间的分析。</p>
+    <p>参见图6,当首次看到一个文件并且其抗体被加到服务器数据库 时，效果是好像对于每个文件启动定时器。因此，例如，时间间隔可 以是（在第一次看到或者向服务器的报告后，t-0-立即，t-12小 时之后，t-2天之后，t-30天之后），并且可以基于服务器的时钟。 除了一次的定时行为之外，可以指定周期的行为。如在此所示，可以 在不同时间执行反病毒（AV)和反间谍件（AS)扫描，并且可以执 行其它分析。对于以后的时段，这可以是与可能已经查看了所述文件 的其它服务器的比较。通常，以后的分析将基于在某个时段内首次看 到的所有文件。例如，在一个小时时间内首次看到的所有文件将在所 述时段内的最后文件起的12小时获得12小时分析。</p>
+    <p>参见图7，系统选择要分析的文件，并且发送文件以执行指定的 分析。可以对于每个时间间隔指定不同的操作。因为文件在服务器上 被保存一段时间，这些时间启动的分析可以进行，而不论原始主机是 否仍然连接。可以执行的中央定时服务器分析的示例包括：</p>
+    <p>(1) 计算替代散列值（例如使用MD5或者SHAI算法）， 验证被报告的散列值，并且存储所有的散列值。</p>
+    <p>(2) 使用服务器证书或者其它第三方证书来认证和签名内容。</p>
+    <p>(3) 本地或者经由另一个服务器的查询而查找相对于已知 的坏数据库（黑名单）的散列值。</p>
+    <p>(4) 本地或者经由另一个服务器的查询而查找相对于已知 的好数据库（白名单）的散列值。(5) 查找相对于已知产品分类数据库的散列值以识别对应 于文件散列值的产品（和其它信息）。</p>
+    <p>(6) 发送用于病毒扫描的文件（例如通过作为例如MIME 附件的FTP或者SMTP )，或者本地执行。</p>
+    <p>(7) 像在（4)中那样发送用于间谍件扫描的文件，或者本 地执行。</p>
+    <p>(8) 像在（4)中那样发送用于与站点特别定制分析的文件， 或者本地执行。</p>
+    <p>(9 )      向在网络文件服务器上的特殊受限网络访问子目录（例 如被认证的samba或者FTPS )输出文件。</p>
+    <p>(10) 发送新文件需要分析的SNMP陷阱，并且指定它们的</p>
+    <p>(11) 发送新的文件需要分析的Syslog或者电子邮件消息， 并且指定它们的位置。</p>
+    <p>(12) 查看特定的目录以看是否另一个系统已经批准或者未 批准文件。</p>
+    <p>(13 ) 对于服务器执行定制分析。</p>
+    <p>(14 )自动执行以第 一分析的结果为条件的第二分析。</p>
+    <p>(15) 从外部分析系统接收包含分析结果的被认证的网络消息。</p>
+    <p>上述分析的结果在服务器上被汇总，服务器更新元信息存储库 (124)中的状态，特别是要广播到主机的状态。服务器对于是否应 当批准或者禁止文件作出建议。信息被汇总，以便管理员可以使用一 个网页浏览器行为来批准或者禁止文件组。可选地，来自上述分析的 结果可以用于自动使用特定的抗体来批准或者禁止文件。服务器可以 提供报告、警告或者其它信息，并且可以改变所有或者一个或多个组 的主机的参数D值。服务器标记状态改变以^使以后通过更新（130)</p>
+    <p>来分发，优选的是以主机从服务器拉（pull)更新的方式。 抗体分析/批准服务因为系统聚焦在新的文件上，因此，可以使得外来的文件分析服</p>
+    <p>务实用和有益。这些服务可以是自动化的（例如使用SOAP/网页服务 调用）或者人工的（沿着到服务提供商的服务器的已认证的链路)。 可以使用远程服务器本地或者在装置外部执行的这些服务可以包括：</p>
+    <p>(1) 人工地输入散列值或者沿着预先计算的网页链路以获得 已知的好和坏数据库查找项的查询结果。诸如公司的实体可能希望保 存全局白名单或者全局黑名单。后者不对于散列值起作用，因为它们 太多。前者不起作用，因为不同的公司具有用于限定"好"程序的不同 策略。这些服务处理如下所述的白名单/黑名单/灰名单和表决。</p>
+    <p>(2) 查找与特定抗体相关联的抗体（例如与同一应用或者类 似的应用相关联的文件组）。</p>
+    <p>(3 )    识别与散列值相关联的提供商和应用。</p>
+    <p>(4 ) 查明多少公司和计算机具有那个文件并且多长时间具有 那个文件。这些公司将不通过名称而被识别，仅仅被计数。服务提供 商将作为这个服务的一部分秘密地收集这个信息。服务提供商建立结 果和服务的双盲（double-blind)数据库。</p>
+    <p>(5) 查明多少公司已经禁止或者批准了文件，并且它们与所 述文件一起批准了哪些文件。同样，从终端用户的视点来看，这些全 部是盲的并且通过散列值来进行。服务提供商不必收集或者存储文件 名或者文件数据，仅仅收集以抗体形式的元信息。事实上，文件名并 且当然文件本身应当被考虑为专有信息。</p>
+    <p>(6 ) 基于上述查询的结果以及也基于服务器侧的分析的自动 化的服务器侧批准。</p>
+    <p>内容提取器（CE)</p>
+    <p>内容通常形成内容的组或者包。其示例包括可执行程序和在.zip 文件中的病毒或者在微软Office文件（例如Word、 Excel和 Powerpoint文件）中的宏或者在安装包中的文件，诸如微&#36575;.msi文件。 参见图8，接收文件，并且内容提取器查找嵌入的内容类型，诸如在 Office文件中的宏。优选的是，仅仅提取这样的"有效"类型的内容。</p>
+    <p>57在检测到可能的文件修改（600)或者未知状态后，提取器获取 所提取的部分，并且将它们转换为有效的内容文件类型（诸如没有文 本或者附图的Word (.doc)文件），以重新打包它们。这个处理被 图解为步骤600-605。结果产生的重新打包的文件一般比原始文件 ("容器，，）小得多，并且被称为"缩小品"。所述缩小品的散列值被计 算（603)，并且将所述缩小散列值与容器散列值相关联（604)。容 器可以被嵌套，并且具有关联的那些也被跟踪。以后，如果内容需要 被上载，仅仅上载所述缩小品。作为选用，可以根据提取的分析的结 果来上载容器文件及其元信息。可以根据提取的分析的结果来上载根 容器和它们的元信息。例如，文件setup.exe包含文件main.cab,其 继而包含文件install.exe。相对于install.exe， main.cab是install.exe 的父容器，并且setup.exe是install.exe的才艮容器以及main.cab的父 容器。所有这些关联被存储，优选地被存储为在独立文件的散列值之 间的关系。</p>
+    <p>这个处理减少了分析阶段的网络流量和覆盖区（footprint)，并 且其允许仅仅跟踪嵌入内容，而不跟踪与其它文件（例如继承的文件 模板）相关联的宏。这对于在宏装栽时截取它们的方法不适用。提取 器允许位置独立的嵌入宏检测和跟踪。</p>
+    <p>所述缩小品被重新打包为其它有效文件类型具有下述优点：所述 缩小品与第三方分析系统兼容，例如被重新打包为小Word文件的宏 可以作为电子邮件附件被发送到病毒扫描电子邮件网关。另一个示例 是zip文件，temp.zip，其包含5个文件，仅仅其中之一是有效的， foo.exe。 temp.zip的缩小品可以是zip文件foo.zip, 其中仅仅有 foo.exe;或者，缩小品可以是foo.exe本身。Foo.zip的签名或者foo.exe 的签名最好被相关联为对应于temp.zip的签名。缩小品可以再次被以 电子邮件发送到AS扫描电子邮件网关。 一些容器缺少有效内容，因 此可能不被跟踪。在跟踪缩小品上有效率高的优点，也有仅仅检测和 分析新内容的优点。以这种方式，可以产生更多的精确的统计、警告 和分析。诸如待决状态文件的未分类内容的自动和特定的早期检测允许强大的策略和内容管理。 服务器用户接口</p>
+    <p>服务器的用户接口提供了多个"面板"，其中每个允许配置和管理 系统的不同方面。在这个部分中，术语"用户"用于指示有权使用服务</p>
+    <p>器用户接口的管理员。可以经由SSL加密的连接通过标准的网页浏览 器来访问所述用户接口 。认证和访问控制被提供来保持服务器的完整 性，并且确定特定用户的特权级。</p>
+    <p>当用户第 一次访问系统时，用户被认证并基于这个认证被分配特 权级。这个特权级确定是否用户被允许无限制的访问或者只读的访 问；也可以提供访问的更细的粒度。按照用户名和时间来跟踪和记录 用户行为。在服务器上安装的证书可以用于控制和加密对于用户接口 的访问，并且也提供被返回到主机的信息的签名和可能的加密。这些 证书可以在维护面板中被安装和更新。对于接口的所有输入应当被正 确地验证以保证服务器正向在它们的配置中的主机提供正确的信息。</p>
+    <p>网络状态接口提供运行的系统的概览，其中包括近来的事件和相 关联的信息，所述相关联的信息包括唯一文件标识符、事件时间戳、 事件类型、事件优先权、文件类型和名称以及通过名称和唯一标识符 识别的主机系统。所述接口也提供关于在特定时段（例如最后一个小 时、最后一天）期间的系统的状态的汇总信息。在统计面板中可以获 得更详细的信息。在此显示的信息包括所进行的新的可执行部分的编 号、所检测的新的脚本、具有新的嵌入内容的文件、未批准的文件和 -陂感染的文件。</p>
+    <p>统计面板显示由系统收集的更详细的统计。这个信息包括在各种 时段（例如，最后一个小时、最后24个小时、最后一个星期）中的 下述事件的数量。它可以包括例如在网络上看到的新的可执行部分的 数量、具有新的嵌入内容的文件、新的网页文件（HTML， ASP等）、 还没有人工或者通过扫描被批准的文件、通过扫描处理批准的文件、 人工或者经由自动批准而批准的文件、扫描失败的文件、已知被感染 并且已经被阻止的文件、被禁止并且阻止的可执行部分、自从事件被</p>
+    <p>59第一次安装起由服务器处理的全部事件以及自从最后一次重启起的 事件。</p>
+    <p>伴随每种类别的统计，用户可以观看一个项目的"前10个列表"， 高亮在由服务器管理的所有主机上的每个的最常看到的实例。前10</p>
+    <p>个列表的示例包括按照多少主机至少具有文件的一个拷贝的计数而</p>
+    <p>排序的前10个近来发现的文件，这个列表的变体包括按照唯一的散</p>
+    <p>列值的计数、按照唯一的文件名的计数、按照散列值被禁止的计数、 按照名称被禁止的计数、近来被禁止的计数、近来更新/修改的计数、</p>
+    <p>按照唯一组/容器/根容器/产品的计数。经由SNMP来更新和报告前 10列表。配置面板可以用于根据前10计数和其它更新变量来配置警 告和自动响应。警告包括记录报告、SNMP陷阱、syslog消息、电子 邮件通知和其它网络消息。响应包括禁止文件、批准文件、改变一个 或多个主才几组的参数D、改变一个或多个主才几组的策略、改变一个或 多个主机的主才几组分配和分析文件。</p>
+    <p>统计面板也包括关于系统的整体信息，其中包括：被划分为有效 和无效（无效主机是近来未接触服务器的主机）的、由这个服务器服 务的主机的总数；在服务器数据库中的抗体的总数；以及正常运行时 间，即系统自从最后一次重启已经正常运行了多长时间。</p>
+    <p>也可以经由向服务器的SNMP(简单网络管理协议）查询来获得 在这个面板上显示的统计信息，允许与网络管理系统交互。</p>
+    <p>绘图面板允许用户绘制和打印近来的行为的图形和图表。这个面 板可以与统计面板组合。也可以以XML格式来获得绘制信息以在外 部应用中显示。可以被绘制的图形的示例包括在近来的时段（按照分 钟计的一个小时、按照小时计的一周等）上的行为或者"前10个列表，， 图形显示。</p>
+    <p>由于对于由服务器保留的统计信息的限制，对于可以获得的多个 绘图有一些限制。当管理员正在使用SNMP管理系统时，其也能够在 组织内提供已经在使用的格式的统计绘图。</p>
+    <p>抗体数据库面板允许用户直接地与在服务器上存储的抗体数据库交互。数据库的内容被显示，并且用户可以选择通过不同的标准来 分类所述显示，或者通过选择过滤模式而限制所述显示。用户也可以 与抗体本身交互；这些操作被详细说明如下。</p>
+    <p>服务器可以使用辅助信息数据库，其包括在主抗体数据库中不要 求的字段。在这个数据库中的字段的一个示例可以是第一个看到的文 件名或者初始文件类。</p>
+    <p>对于每个文件，在这个面板上显示下面的信息：</p>
+    <p>&#8226; 第一次看到的时间。文件或者散列值被主机第一次看到并 且报告到服务器的时间。</p>
+    <p>* 文件ID。文件的唯一标识符，包括内容的一个或多个散列 值，诸如MD5、 SHA-l和OMAC。</p>
+    <p>&#8226; 文件类型。网络类别（例如可执行、脚本、office文件、档 案文件等）。其是当其被笫一次看到时从文件名得到（见下），并且 也从文件内容的分析得到。</p>
+    <p>&#8226; 状态。包括批准、待决、禁止的当前文件状态。</p>
+    <p>&#9830; 方法。服务器得知文件（自动、人为等）的方式。</p>
+    <p>&#8226; 文件名。文件当第一次被看到并且被报告到服务器时的名 称。其可能不是文件的当前名称，而仅仅是在网络上看到的第一示例 的名称。</p>
+    <p>* 文件路径。文件当第一次被看到并且被报告到服务器时的路径。</p>
+    <p>* 第一次看到的主机。文件或者散列值被首次看到和报告所 在的主机的名称。</p>
+    <p>* 分析结果。最新的扫描或者其它分析的结果。</p>
+    <p>&#8226; 第一次分析。文件的第一次扫描/分析的时间。 &#21443;     最后一次分析，最后扫描/分析文件的时间。</p>
+    <p>&#8226; 最后更新。最后修改文件状态的时间。</p>
+    <p>* 父容器。到已经与文件相关联的其它文件的链接。</p>
+    <p>* 父容器属性。 一个相关联的容器文件的文件名、第一次被看到的时间、第一次被看到的主机、文件路径、产品类别和状态。</p>
+    <p>* 根容器。到已经与文件相关联的其它文件的链接。根容器 是未在另一个容器中被包含的容器。</p>
+    <p>* 根容器属性， 一个相关联的根容器文件的文件名、第一次 被看到的时间、第一次被看到的主机、文件路径、产品类别和状态。</p>
+    <p>可以对于从列表选择的文件执行下面的操作：</p>
+    <p>* 文件细节。这从抗体数据库提供了关于文件的附加信息， 包括批准或者禁止所述文件的接口用户（其中，所述文件被首次看 到）、用户加上的任何评述。</p>
+    <p>* 批准。明确地批准当前选择的文件。这个选择应向用户提 供足够的警告，因为其将在所有主机上批准所述文件。</p>
+    <p>* 不批准。明确地不批准已经被批准的文件，最好过渡到待 决的状态。</p>
+    <p>* 禁止。明确地禁止文件。这使得文件在所有的主机上被禁止。</p>
+    <p>* 分析/病毒扫描。强制所选择的文件的分析/扫描的计划。</p>
+    <p>* 删除。去除关于这个文件的信息。这将使得服务器下一次 看到所述文件时将所述文件当作新的文件。</p>
+    <p>* 在主机上查找文件。这个操作链接到文件查找器，用于将 所选择的文件名提供为输入。</p>
+    <p>&#171;    查找容器。查找文件的可能容器和那些容器的信息。</p>
+    <p>* 查找根容器。查找文件的可能根容器和那些容器的信息。</p>
+    <p>* 查找网页服务信息。查询各种其它网络服务器以找到关于 所述文件和/或其容器/产品的附加信息。</p>
+    <p>文件查找器面板允许用户启动在所有的被管理的主机上找到特 定文件的位置的尽力处理。因为这个处理可能是耗时的，因此用户在 启动新的搜索之前被通知。可能不在产品的所有版本中实现文件查找 器。可以在查询的部分完成期间报告FindFile处理。</p>
+    <p>也以通过选择一个或多个特定文件来从抗体数据库面板启动所</p>
+    <p>62述处理（参见第o部分），这然后将用户带到文件查找器面板，并且</p>
+    <p>自动填充适当的信息。</p>
+    <p>这个处理需要与服务器通信的所有的主机异步地返回状态，因 此，所述面板将打开新的视图以动态地显示被接收的结果。如果用户 启动另一个搜索，则将终止当前的搜索。可以在未来的版本中允许多 个文件搜索。</p>
+    <p>主机组面板允许服务器已知的主机与特定的逻辑组相关联。在接 口的初始版本中不可获得全组功能，在这种情况下，这个屏幕将显示 关于由这个服务器支持的单个组的信息。</p>
+    <p>所述面板支持操纵组成员资格，包括：</p>
+    <p>* 加上新的组。</p>
+    <p>* 去除现有的组，当去除一个组时，不从服务器的数据库去 除主机，而是将其重新分配到默认组。</p>
+    <p>* 从一个组向另一个移动主才几。 在这个面板上显示关于每个主机的下面的信息：</p>
+    <p>* 主机。主机的DNS名称。</p>
+    <p>* 唯一ID。主机的唯一标识符。</p>
+    <p>* IP地址。这个主机的最后一个已知的IP地址。</p>
+    <p>* 状态。主机的在线状态。</p>
+    <p>* 最后看到。主机向服务器登录的最后时间。</p>
+    <p>* 操作系统。主机的操作系统版本。</p>
+    <p>* 版本。在主机上的操作系统的版本。</p>
+    <p>文件类面板允许观看和编辑被映射到每个类的文件扩展。通过扩 展来定义下面的一些类。通过内容的分析来确定其它类。通过扩展和 分析来确定一些类。这些扩展是只读的。</p>
+    <p>一些预先定义的扩展类是：</p>
+    <p>&#21443;     可执行部分。包括exe、 com、 dll、 pif、 scr、 drv和ocx的扩展。</p>
+    <p>* 脚本。包括vbs、 bat和cmd的扩展。* 嵌入的宏内容。包括doc、 dot、 xls、 xla、 xlt、 xlw、 ppt、 pps和pot的扩展。* 网页内容。包括htm、 html、 asp和cgi的扩展。 策略面板是服务器的配置的核心。用户可以显示和编辑通过主机组分组的、在所有的被管理的主机上实施的策略。这个面板也显示当 前选择的组的当前全局D设置。这个部分允许用户定义当前所选择的组的全局D级。当选择新 的D级时，不立即应用所述改变，但是必须明确地选择所述改变。选 择新的所提出的D级改变策略信息和行为的显示以示出这个新级的 那些信息和行为。从面板导航离开将不应用所述改变。策略列表显示在特定文件类（例如可执行部分、脚本等）上的特 定D级的各种行为和效果。可以使能或者禁止策略，但是不可以编辑 策略。在所述列表中包括下面的策略：* 新的可执行部分* 新的单独脚本* 新的嵌入脚本* 新的网页内容* 未批准的网页内容* 忽略更新代理（自动批准来自特定更新源/处理/位置的新的 内容）* 病毒/间谍件感染的文件每当禁止策略时，那个类的文件的跟踪仍然继续，但是被影响的 主机系统不采取行动。对于每个策略，显示行为网格。所述网格指示在当前所选择的D 级上应用哪些策略设置。像 行为* 阻止执行。这个文件类的执行要被阻止吗？* 阻止写入。向这个文件类的文件的写入将被阻止吗？这个设 置仅仅用于网页内容和未批准的文件。其仅仅用于严格地受控的系统，而不用于正常的操作。&#8226; 隔离。将隔离这类的文件吗？可以通过阻止读取，而不是移 动到独立的目录来隔离文件。在病毒感染的文件的情况下，这些可以 被写入，但是随后被删除，但是这个功能也可以不在初始被实现。&#21443;       记录。将记录对于这个类的文件的访问吗？&#8226; 批准&#8226; 隐含的批准。文件在这个D级上被隐含地批准了吗？在适当 的扫描和等待时间后，隐含的批准改变文件的被批准状态。&#8226; 明确的批准。在这个D级上明确地批准文件吗？ 类似于上述的那个的行为网格与预先制订的策略组合地向用户示出了特定D级的效果的表示。下面的表格示出了在各种D级（0-7 ) 上的行为和预先进行的策略的组合的示例。 通知参数当阻止内容访问时，主机用户被通知。对于在列表上的每个策略， 并且对于每个主机组，可以获得下面的设置：&#8226; 所显示的消息。在用户交互对话上显示的文本。在列表框 中列出多个消息。&#8226; 按钮文本。在用户交互对话上的单个按钮上显示的文本。&#8226; 超时。对话将向用户显示多长时间。零超时表示一直到用 户接受，并且对话保持无限期地被显示。&#8226; 作为选用，对于D的特定值，用于覆盖内容限制一段时间 的按钮。&#8226; 具有关于策略的更多信息的ULR链接。 所述通知参数也包括全局设置，用于与通知消息一起限定在主机上显示的图像。这些设置对于每个预先制定的策略单独可配置。在服 务器管理接口中编辑通知参数。那些参数与继而被分配到主机组的策 略相关联，并且当策略改变时被传播到主机。 扫描年代参数这个部分允许用户配置在当第一次看到和批准文件时（自动批准批准）扫描的时间和发生第三次（重复）扫描的时间之间的时间。可以如图7中那样指定更多的扫描和时间。 维护维护部分允许用户配置服务器本身的全局设置。* 系统配置。与服务器与本地网络和主机系统的交互相关联 的设置。* IP地址和子网掩码。子网掩码允许将主机分类为远程和本 地类型。远程主机具有更受限的通信，以保存带宽。主机组可以具有 不同的策略集和D参数设置，其被对于每个连接类型远程、本地或者 断开指定。远程主机将产生较小的网络流量，例如较少的服务器报告。 并且远程主机最好向服务器报告新的内容的散列值，但是不上载所述 内容。* IP取路由信息。* 密码。设置或者重新设置用于访问服务器接口的密码。* 证书。从可装卸的介质（并且作为选用，从网络）安装证 书。这些被主机使用来验证服务器的身份，并且也用于到服务器的SSL 接口。* SNMP。设置SNMP服务器的列表以接收陷阱，并且被允 许查询服务器的配置。* SNMP陷阱选择。选择哪种事件类型引起哪些陷阱，以及 所述陷阱将被发送到哪种SNMP服务（并且与优先权相关的、高的、 中间的、低的、信息的等...）* Syslog。设置服务器的列表以对于各种事件类型和优先权经 由syslog接收记录信息。* NTP时间同步服务器。设置用于时间同步的服务器列表。 在服务器上的时间在启动时从其内部时钟被获得，然后与这个外部 NTP时间源同步。服务器将跟踪与服务器时间的主机偏离。*系统状态（服务器）* 正常运行时间。显示自从最后一次系统重启起的时间。66* 软件版本。显示服务器软件的版本信息。* 盘空间。显示服务器的本地盘和存储统计。 *病毒/间谍件签名更新* 最后签名更新。最后签名更新的时间。* 更新服务配置。配置被安装的反病毒软件的更新服务，包 括下载位置和时间表。* 更新扫描器。更新病毒扫描器软件。* 更新签名。强制病毒签名的更新。 *服务器软件更新* 当前版本。显示当前服务器软件版本。* 重启。使用当前安装的镜像来重启服务器。* 安装新的镜像。从可装卸介质或者网络（例如经由FTP) 向服务器安装新的软件镜像。* 返回到前一个版本，返回到先前使用的软件镜像。 *外部服务配置* 内容扫描系统的网络地址、服务类型和批准授权。* 元信息共享服务的网络地址、服务类型和批准授权。* 外部内容传送和用户定义的分析的外部文件服务器地址、 协议、登录和目录。* SNMP、 syslog、电子邮件和新的内容的SOAP通知的外部 内容通知服务配置。*备份。向可装卸介质（并且也向网络）备份和恢复所述配置。* 存储配置和数据库。存储所述配置和抗体数据库（例如纟二 由XML)* 安装配置和数据库。安装所述配置和抗体数据库（例如以 XML)。服务器包括处理能力，诸如可编程的微处理器、数字信号处理器 (DSP)或者应用相关的处理和存储器。主机可以包括个人计算机或 者类似的计算机或者其它处理装置，其中包括手持装置、PDA或者在 网络上的其它装置。已经在此描述了本发明的实施例，显然在不脱离所要求保护的本 发明的范围的情况下，可以进行修改。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101808102A?cl=zh">CN101808102A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年4月23日</td><td class="patent-data-table-td patent-date-value">2010年8月18日</td><td class="patent-data-table-td ">潘燕辉;周勇兵</td><td class="patent-data-table-td ">一种基于云计算的操作记录追踪系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101808102B?cl=zh">CN101808102B</a></td><td class="patent-data-table-td patent-date-value">2010年4月23日</td><td class="patent-data-table-td patent-date-value">2012年12月12日</td><td class="patent-data-table-td ">潘燕辉</td><td class="patent-data-table-td ">一种基于云计算的操作记录追踪系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101827096A?cl=zh">CN101827096A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年4月9日</td><td class="patent-data-table-td patent-date-value">2010年9月8日</td><td class="patent-data-table-td ">潘燕辉;周勇兵</td><td class="patent-data-table-td ">一种基于云计算的多用户协同安全防护系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101827096B?cl=zh">CN101827096B</a></td><td class="patent-data-table-td patent-date-value">2010年4月9日</td><td class="patent-data-table-td patent-date-value">2012年9月5日</td><td class="patent-data-table-td ">周勇兵</td><td class="patent-data-table-td ">一种基于云计算的多用户协同安全防护系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102801740A?cl=zh">CN102801740A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月30日</td><td class="patent-data-table-td patent-date-value">2012年11月28日</td><td class="patent-data-table-td ">苏州山石网络有限公司</td><td class="patent-data-table-td ">木马病毒的阻止方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102982275A?cl=zh">CN102982275A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月14日</td><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种运行应用程序的安全控制方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103229185A?cl=zh">CN103229185A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月10日</td><td class="patent-data-table-td patent-date-value">2013年7月31日</td><td class="patent-data-table-td ">麦克菲公司</td><td class="patent-data-table-td ">用于针对恶意软件的本地保护的系统和方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=lml0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009000000">H04L9/00</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=lml0BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/55">G06F21/55</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=lml0BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/20">H04L63/20</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=lml0BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/14">H04L63/14</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">G06F21/55</span>, <span class="nested-value">H04L63/14</span>, <span class="nested-value">H04L63/20</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年10月28日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年12月23日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年4月23日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/037efb014db9cd4c3746/CN101569129A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F%E5%92%8C%E6%96%B9%E6%B3%95.pdf?id=lml0BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2MCgE-dtSkv1YDoRv3b0lQjaNYPQ"},"sample_url":"https://www.google.com/patents/reader?id=lml0BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

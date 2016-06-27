@@ -1,0 +1,366 @@
+<!DOCTYPE html><html><head><title>专利 CN102456050A - 从网页中抽取数据的方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="从网页中抽取数据的方法和装置"><meta name="DC.contributor" content="杨俊拯" scheme="inventor"><meta name="DC.contributor" content="王全礼" scheme="inventor"><meta name="DC.contributor" content="肖巍" scheme="inventor"><meta name="DC.contributor" content="郑长松" scheme="inventor"><meta name="DC.contributor" content="中国移动通信集团四川有限公司" scheme="assignee"><meta name="DC.date" content="2010-10-27" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了从网页中抽取数据方法和装置，其中，该方法包括：步骤A，定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；步骤B，利用所述约束规则集合从待抽取的网页中抽取数据。采用本发明，能够避免通过编写正则表达式的方式抽取数据，节省人力资源。"><meta name="DC.date" content="2012-5-16"><meta name="DC.relation" content="CN:101582075:A" scheme="references"><meta name="DC.relation" content="CN:1410918:A" scheme="references"><meta name="DC.relation" content="JP:2008123425" scheme="references"><meta name="DC.relation" content="US:20050216443:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102456050:A"><meta name="citation_patent_application_number" content="CN:201010527635"><link rel="canonical" href="https://www.google.com/patents/CN102456050A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102456050A?cl=zh"/><meta name="title" content="专利 CN102456050A - 从网页中抽取数据的方法和装置"/><meta name="description" content="本发明提供了从网页中抽取数据方法和装置，其中，该方法包括：步骤A，定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；步骤B，利用所述约束规则集合从待抽取的网页中抽取数据。采用本发明，能够避免通过编写正则表达式的方式抽取数据，节省人力资源。"/><meta property="og:title" content="专利 CN102456050A - 从网页中抽取数据的方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102456050A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102456050A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=Q8dwBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102456050A&amp;usg=AFQjCNGcHtqERHZv5ldtI3ELXy4VDbF1ug" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/5ec89edee93e2e2e425e/CN102456050A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/5ec89edee93e2e2e425e/CN102456050A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102456050A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102456050A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102456050A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102456050B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102456050A?cl=zh" style="display:none"><span itemprop="description">本发明提供了从网页中抽取数据方法和装置，其中，该方法包括：步骤A，定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；步骤B，利用所述约束规则集合从待 ...</span><span itemprop="url">https://www.google.com/patents/CN102456050A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102456050A - 从网页中抽取数据的方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102456050A - 从网页中抽取数据的方法和装置" title="专利 CN102456050A - 从网页中抽取数据的方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102456050 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010527635</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年5月16日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年10月27日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年10月27日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102456050B?hl=zh-CN&amp;cl=zh">CN102456050B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010527635.9, </span><span class="patent-bibdata-value">CN 102456050 A, </span><span class="patent-bibdata-value">CN 102456050A, </span><span class="patent-bibdata-value">CN 201010527635, </span><span class="patent-bibdata-value">CN-A-102456050, </span><span class="patent-bibdata-value">CN102456050 A, </span><span class="patent-bibdata-value">CN102456050A, </span><span class="patent-bibdata-value">CN201010527635, </span><span class="patent-bibdata-value">CN201010527635.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E4%BF%8A%E6%8B%AF%22">杨俊拯</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%E5%85%A8%E7%A4%BC%22">王全礼</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%82%96%E5%B7%8D%22">肖巍</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%91%E9%95%BF%E6%9D%BE%22">郑长松</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E9%9B%86%E5%9B%A2%E5%9B%9B%E5%B7%9D%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">中国移动通信集团四川有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102456050A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102456050A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102456050A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=Q8dwBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010527635&amp;usg=AFQjCNFXdfjM7XvOPbIFOaeEbhuAhTRl8w"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=Q8dwBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102456050A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFkTtRK_zfvvd2RmC5g_bHOhzfbYg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT112448051" lang="ZH" load-source="patent-office">从网页中抽取数据的方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 102456050 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA95935418" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了从网页中抽取数据方法和装置，其中，该方法包括：步骤A，定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；步骤B，利用所述约束规则集合从待抽取的网页中抽取数据。采用本发明，能够避免通过编写正则表达式的方式抽取数据，节省人力资源。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(30)</span></span></div><div class="patent-text"><div mxw-id="PCLM41301110" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种从网页中抽取数据的方法，其特征在于，该方法包括：步骤A，定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；步骤B，利用所述约束规则集合从待抽取的网页中抽取数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述步骤A中的获取包括：步骤Al，根据节点划分规则，生成每一训练样本网页对应的第一约束条件集合和第二约束条件集合；步骤A2，依据第一约束条件集合和第二约束条件集合分别生成对应的约束规则集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述步骤Al包括：步骤All，针对每一训练样本网页，将该训练样本网页解析成DOM树，并将该DOM树转换成节点集合U;步骤A12，按照定义的不同节点划分规则，将节点集合U划分成不同的划分集合； 步骤A13，根据所述划分集合，确定指定抽取维度集合对应的节点存放集合Ul中每个节点的约束集合，将节点存放集合UI中所有节点的所有约束集合作为该训练样本网页对应的第一约束条件集合；步骤A14，针对节点存放集合UI中任意两个节点，计算该两个节点对应的两个维度在至少一个属性上的二元关系，将计算结果记录在该训练样本网页对应的第二约束条件集</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的方法，其特征在于，所述步骤A12包括：步骤A121，遍历定义的节点划分规则，将遍历到的节点划分规则作为当前划分规则； 步骤A122，遍历节点集合U，将遍历到的节点作为当前节点；步骤A123，判断该当前节点是否满足当前划分规则，如果是，则将当前节点添加到该当前划分规则对应的划分集合中，执行步骤A124，如果否，执行步骤AlM ；步骤A124，判断所述节点集合U中是否还存在未被遍历的节点，如果是，将该未被遍历的其中一个节点作为当前节点，返回执行步骤A123 ；如果否，执行步骤A125 ；步骤A125，判断定义的节点划分规则中是否还存在未被遍历的节点划分规则，如果是， 将未被遍历的其中一个节点划分规则作为当前划分规则，返回执行步骤A122，否则，结束当前流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求3所述的方法，其特征在于，所述步骤A13包括： 步骤A131，遍历节点存放集合UI，将遍历到的节点作为当前节点；步骤A132，判断步骤A12得到的划分集合中是否存在包含该当前节点的划分集合，如果是，将当前节点上对应该存在的划分集合的节点属性值和该当前节点存放在当前节点的约束集合中，之后执行步骤A133 ；如果否，执行步骤A133 ；步骤A133，判断节点存放集合Ul中是否还存在未被遍历的节点，如果是，将未被遍历的其中一个节点作为当前节点，返回步骤A132，否则，结束当前流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2所述的方法，其特征在于，所述步骤A2中的约束规则集合包括：基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其特征在于，所述基于粗糙集的等价约束条件集合依据第一约束条件集合生成，具体包括：步骤A21，遍历第一约束条件集合中各个节点的约束集合，将遍历到的节点约束集合作为当前约束集合；步骤A22，判断当前约束集合对应的节点划分规则是离散型还是连续型，并根据确定结果计算当前约束集合中各个节点分布的概率；步骤A23，从当前约束集合中去除具有概率不同于指定目标节点的概率的节点；步骤A24，判断第一约束条件集合中的节点约束集合是否已被全部遍历，如果是，执行步骤A25，否则，将未被遍历的其中一个节点约束集合确定为当前约束集合，返回执行步骤 A22 ；步骤A25，将通过步骤A23得到的所有集合确定为基于粗糙集的等价约束条件集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求6所述的方法，其特征在于，所述维度在节点属性值上的约束条件集合依据第二约束条件集合生成，具体包括：合并不同训练样本网页对应的第二约束条件集合；确定合并后得到的集合为维度在节点属性值上的约束条件集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的方法，其特征在于，所述第二约束条件集合中的二元关系至少包括比较关系和距离关系；将不同训练样本网页对应的第二约束条件集合合并至少包括：合并比较关系和合并距离关系；其中，合并比较关系包括：在一个训练样本网页对应的第二约束条件集合中存在两个节点之间的比较关系，判断该比较关系是否存在其他训练样本网页对应的第二约束条件集合中，如果是，该比较关系保留；如果不是，删除掉该比较关系；合并距离关系包括：在一个训练样本网页对应的第二约束条件集合中两个维度之间的距离关系为第一值，如果在其他训练样本网页对应的第二约束条件集合中该两个维度之间的距离关系为第二值，则该两个维度之间的距离关系在合并后为第一值至第二值之间的数值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求6所述的方法，其特征在于，所述步骤A2进一步包括：验证所述基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合是否识别出所述指定维度集合中的各个维度，如果是，则执行步骤B ；否则，执行步骤A3 ；步骤A3，确定维度在节点属性值上的极值约束条件集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的方法，其特征在于，所述验证基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合是否识别出指定维度集合中的各个维度包括：针对每一训练样本网页中任意两个维度Dl和D2，执行以下处理：如果维度Dl对应的节点集合为Um (Nxl，&#183; &#183; &#183; NJ，维度Dl对应的节点集合为Udid2 {(NxlNyl) &#183; &#183; &#183; Nyn)，维度Dl和D2 上的二元关系集合为UR(R1，. . . to)，则将维度Dl和维度D2对应的节点集组合，得到以下节点对：UD1D2{(Nxi，Nyi) I i e {1，m}，j e {1，η}}；遍历所述节点对，确定满足所述二元关系集合中所有二元关系的节点对，得到集合Udl {(Nx, Ny)...}；在对所述训练样本网页中每两个维度都完成所述处理后，判断最终得到满足二元关系集合中所有二元关系的节点对组成的集合是否仅有1个，如果是，确定所述基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别出所述指定维度集合中的各个维度；否则，确定所述基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别不出所述指定维度集合中的各个维度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求10所述的方法，其特征在于，所述步骤A3包括：步骤A31，遍历所述指定维度集合中的维度，将遍历到的维度作为当前维度，如果当前维度对应的节点集Un中包含的节点数量大于1，所述节点集Un中的节点属于同一训练样本网页，则遍历指定目标节点与当前维度对应的所有节点具有的各个属性，将遍历到的属性作为当前属性；步骤A32，将指定目标节点分别与当前维度对应的所有节点在当前属性上进行比较，得到比较结果；步骤A33，根据所述比较结果确定所述指定目标节点在该当前属性上的取值； 步骤A33，根据确定的取值确定当前属性对应的输出结果；步骤A34，判断是否还存在未被遍历的属性，如果是，将未被遍历的其中一个属性确定为当前属性，返回执行步骤A32 ；如果否，执行步骤A35 ；步骤A35，将所述各个属性对应的各个输出结果组成各个集合，对各个集合进行处理， 得到当前维度对应的极值序列集合；判断当前是否到达预设的合并条件，如果是，执行步骤 A36，否则，如果当前还存在未被遍历的维度，则将其中一个未被遍历的维度作为当前维度， 返回执行步骤A31 ；步骤A36，合并各个维度对应的极值序列集合，将合并后得到的极值序列集合作为维度在节点属性值上的极值约束条件集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求12所述的方法，其特征在于，所述比较结果包括大于、等于和小于； 所述步骤A33包括：如果比较结果只有小于，等于和小于为0，则取值为Top ； 如果比较结果只有小于和等于，大于为0，则取值为Tops ； 如果比较结果只有大于，小于和大于为0，则取值为Bottom ； 如果比较结果只有大于和等于，小于为0，则取值为Bottoms ； 如果比较结果既有大于又有小于，等于为任意，则取值为Middle ； 如果比较结果只有等于，大于和小于都为0，则取值为Identical。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的方法，其特征在于，所述步骤A34包括： 如果取值为Top，Bottom，则输出结果为1，作为极值序列的尾部；如果取值为Tops，Bottoms，则输出结果为{2，m_l}，作为极值序列的开头或者中间部分，所述m为指定维度集合中维度的数量；如果取值为Identical，则输出结果为m，作为极值序列的开头或者中间部分； 如果取值为Middle，则输出结果为0，作为序列的尾部后续处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的方法，其特征在于，所述步骤A35包括：将根据所述输出结果为m得到的第一集合中的元素排列，得到排列集合I; 把第一集合中所有元素都分为Top，Bottom，确定排列集合根据所述输出结果为1 得到的第二集合为该维度对应的符合条件的第一极值序列；从所述节点集Un中确定出满足排列集合&amp;+根据所述输出结果为{2，m-l}得到的第三集合的子集Uns，把第三集合中的bottoms转为bottom，tops转为top，加入至排列集合&#20175;+根据所述输出结果为{2，m-l}得到的第三集合中，形成第二极值序列；合并所述第一极值序列和第二极值序列，将合并后得到的极值序列确定为当前维度对应的极值序列集合；所述预设条件为第三集合中的元素数量为0。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的方法，其特征在于，所述合并第一极值序列和第二极值序列，或者步骤A36中合并各个维度对应的极值序列集合具体包括：针对两个极值序列Sl和S2，如果Sl e S2 JiJSl η S2 = S2，如果S2 e Si，则Sl η S2 =Si，如果Sl = S2，则Sl η S2 = Si，其他则返回Φ。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求10所述的方法，其特征在于，当基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别不出所述指定维度集合中的各个维度时，所述步骤B包括：步骤Bi，生成待抽取网页对应的信息集合；步骤Β2，对所述信息集合按照定义的节点划分规则进行划分，得到信息集合的各个子集；步骤Β3，合并得到的各个子集，得到特征值集合；步骤Β4，根据所述基于粗糙集的等价约束条件集合、维度在节点属性值上的约束条件集合和维度在节点属性值上的极值约束条件集合对所述特征值集合进行规则约束，得到用于抽取数据的关联约束映射表；步骤Β5，利用所述关联约束映射表进行数据抽取。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的方法，其特征在于，所述步骤Bl包括： 步骤B11，将待抽取网页解析成DOM树；步骤Β12，遍历DOM树上的所有节点，将遍历到的节点作为当前节点，执行步骤Β13; 步骤Β13，判断该节点是否为注释节点，如果是，执行步骤Β14，否则，执行Β15 ； 步骤Β14，判断DOM树是否还有节点没有遍历，如果是，将该未被遍历的其中一个节点作为当前节点，返回执行步骤Β13，如果否，返回执行步骤Bll ；步骤Β15，将该当前节点添加到信息集合中，返回执行步骤Β14。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求17所述的方法，其特征在于，所述步骤Β2包括：步骤Β21，判断所述信息集合是否为空，如果为空，执行步骤Β24，否则执行步骤Β22 ； 步骤Β22，遍历信息集合，将遍历到的信息集合中的节点作为当前节点，执行步骤Β23; 步骤Β23，针对定义的每一节点划分规则，判断当前节点是否满足该划分规则，如果满足，则将当前节点添加到该节点划分规则对应的子集中，返回步骤Β21，如果不满足，则返回步骤Β21 ；步骤Β2，将最后得到的各个子集作为对所述信息集合按照定义的节点划分规则进行划分所得到的子集。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求17所述的方法，其特征在于，所述步骤Β3包括： 步骤Β31，初始化一个新的特征值集合；步骤Β32，遍历步骤Β2得到的子集，将遍历到的子集作为当前子集，执行步骤Β33; 步骤Β33，遍历当前子集中的节点，将遍历到的节点作为当前节点，执行步骤Β34; 步骤Β34，判断特征值集合中是否包含该当前节点，如果包含，执行步骤Β36 ；否则，执行步骤B35 ；步骤B35，将当前节点及其对应的特征值添加到特征值集合中，之后执行步骤B37 ； 步骤B36，将当前节点对应的特征值添加到特征值集合中，之后执行步骤B37 ； 步骤B37，将该当前节点设置为已访问标志Signed，并执行步骤B38 ； 步骤B38，判断当前子集是否有节点没有遍历，如果是，将其中一个未被遍历的节点作为当前节点，返回执行步骤B34，如果否，执行步骤B39 ；步骤B39，将当前子集设置为已处理完毕的标志；之后执行步骤B30 ； 步骤B30，判断步骤B2得到的子集中是否还存在未被遍历的子集，如果是，将其中一个未被遍历的子集作为当前子集，返回执行步骤B33，如果否，结束当前流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求17所述的方法，其特征在于，所述步骤B4包括：步骤B41，根据所述基于粗糙集的等价约束条件集合生成等价关系划分映射表； 步骤B42，根据所述等价关系划分映射表和所述维度在节点属性值上的极值约束条件集合生成排序划分约束映射表；步骤B43，根据所述维度在节点属性值上的约束条件集合和所述排序划分约束映射表生成用于抽取数据的关联约束映射表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求21所述的方法，其特征在于，不同维度对应不同的基于粗糙集的等价约束条件集合；所述步骤B41包括：步骤B411，遍历各个维度对应的基于粗糙集的等价约束条件集合，将遍历到的对应维度的等价约束条件集合作为当前约束条件集合；步骤B412，利用当前约束条件集合中的第一个约束条件对所述特征值集合进行等价划分；步骤B413，判断当前约束条件集合是否仅包含第一个约束条件，如果是，执行步骤 B416，否则，将第一个约束条件之后的约束条件作为当前约束条件，执行步骤B414;步骤B414，使用当前约束条件对通过使用上一个约束条件进行等价划分得到的满足上一个约束条件的集合进行等价划分；步骤B415，判断当前约束条件是否为当前约束条件集合的最后一个约束条件，如果是， 执行步骤B416，如果否，将当前约束条件的下一个约束条件作为当前约束条件，返回执行步骤B414 ；步骤B416，将满足最后一个约束条件的集合转化为“以维度为键值，满足约束的节点集为值对”的等价关系划分映射表；步骤B417，判断各个维度对应的等价约束条件集合中是否还存在未被遍历的等价约束条件集合，如果是，将其中一个未被遍历的维度等价约束条件集合作为当前约束结合，执行步骤B412，否则，结束当前流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求21所述的方法，其特征在于，所述步骤B42包括：步骤B421，遍历所有维度对应的排序约束条件，将遍历到的维度对应的排序约束条件作为当前约束条件；所述排序约束条件为维度对应的极值序列；步骤B422，从等价关系划分映射表中读取该维度对应的候选节点集合； 步骤B423，根据当前约束条件对候选节点集合进行分类，对分类后得到的多个块集合分别进行块内排序；步骤B4M，分别从每块选取指定的TopN个节点，并按照块顺序依次放到同一个节点集合中；步骤B425，将该节点集合存放到“以其所在的维度为键值，节点集为值对”的排序划分约束映射表中；步骤B似6，判断是否存在未被遍历的排序约束条件，如果是，将其中一个未被遍历的对应维度的排序约束条件作为当前约束条件，返回执行步骤B422，否则，结束当前流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求21所述的方法，其特征在于，所述步骤B43包括：步骤B431，遍历所有维度对应的关联约束条件，将遍历到的维度关联约束条件作为当前关联条件；所述关联约束条件为维度在节点属性值上的约束条件集合；步骤B432，从排序划分约束映射表中获取与当前关联条件相关的维度所对应的所有候选节点；步骤B433，对获取的所有候选节点进行积映射，得到一组以节点对为元素的新集合； 步骤B434，对步骤B433得到新集合中的节点对进行约束计算，将满足约束规则的元素保留，并删除不满足约束的节点对，得到该维度的关联约束映射表；步骤B435，判断是否存在未被遍历的关联约束条件，如果是，将其中一个未被遍历的关联约束条件作为当前约束条件，返回执行步骤B432，否则，结束当前流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.根据权利要求17所述的方法，其特征在于，所述步骤B5包括步骤B51，遍历关联约束映射表中维度的候选节点集合，将该维度的候选节点集合作为当前集合；步骤B52，判断当前集合中的节点个数是否为1，如果是，执行步骤B53，否则，执行步骤B56 ；步骤B53，根据需求抽取该节点的相关内容信息，即去除网页的标记以及相关格式信息；步骤B54，将该信息保存到“以维度为键值，节点信息内容为值对”的信息体集合中； 步骤B55判断关联约束映射表中是否还存在未被遍历的维度候选节点集合，如果是， 将其中一个未被遍历的维度候选节点集合作为当前集合，返回执行步骤B52;否则，结束当前流程；步骤B56，将此待抽取网页的页面链接、维度标识及其候选节点集合写入错误处理日志中。</div>
+    </div>
+    </div> <div class="claim"> <div num="26" class="claim">
+      <div class="claim-text">26.	一种从网页中抽取数据的装置，其特征在于，该装置包括：处理单元，用于定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；抽取单元，用于利用所述约束规则集合从待抽取的网页中抽取数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.根据权利要求沈所述的装置，其特征在于，所述处理单元包括：约束条件集合生成子单元，用于根据节点划分规则，生成每一训练样本网页对应的第一约束条件集合和第二约束条件集合；约束规则集合生成子单元，用于依据第一约束条件集合和第二约束条件集合分别生成对应的约束规则集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.根据权利要求27所述的装置，其特征在于，所述约束条件集合生成子单元通过以下操作生成每一训练样本网页对应的第一约束条件集合和第二约束条件集合：针对每一训练样本网页，将该训练样本网页解析成DOM树，并将该DOM树转换成节点集合U;按照定义的不同节点划分规则，将节点集合U划分成不同的划分集合； 根据所述划分集合，确定指定维度集合对应的节点存放集合UI中每个节点的约束集合，将节点存放集合UI中所有节点的所有约束集合作为该训练样本网页对应的第一约束条件集合；针对节点存放集合UI中任意两个节点，计算该两个节点对应的两个维度在至少一个属性上的二元关系，将计算结果记录在该训练样本网页对应的第二约束条件集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.根据权利要求27所述的装置，其特征在于，所述约束规则集合包括：基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合；或者，所述约束规则集合包括： 基于粗糙集的等价约束条件集合、维度在节点属性值上的约束条件集合和维度在节点属性值上的极值约束条件集合，其中，所述维度在节点属性值上的极值约束条件集合在所述基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别不出所述指定维度集合中的各个维度时存在。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.根据权利要求四所述的装置，其特征在于，所述抽取单元在基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别不出所述指定维度集合中的各个维度时，包括：信息集合生成子单元，用于生成待抽取网页对应的信息集合； 划分子单元，用于对所述信息集合按照定义的节点划分规则进行划分，得到信息集合的各个子集；合并子单元，用于合并得到的各个子集，得到特征值集合；规则约束子单元，用于根据所述基于粗糙集的等价约束条件集合、维度在节点属性值上的约束条件集合和维度在节点属性值上的极值约束条件集合对所述特征值集合进行规则约束，得到用于抽取数据的关联约束映射表；抽取子单元，用于利用所述关联约束映射表进行数据抽取。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES46749520" lang="ZH" load-source="patent-office" class="description">
+    <p>从网页中抽取数据的方法和装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及数据业务技术，特别涉及从网页中抽取数据的方法和装置。 背景技术</p>
+    <p>[0002]	在数据业务技术中，目前的网页信息抽取方式都是通过编写正则表达式实现的， 具体为：针对每个网站，甚至网站内的每个版块，都需要编写对应的正则表达式。这种方式主要针对信息量相对较小的某个网站或网站内部的某个版块，比较适合少数网站短期的研究行为。</p>
+    <p>[0003]	但是，网站采用的技术或者布局日新月异，这样随着技术或布局的变化，就需要重新编写相应的正则表达式，这会导致无法对全网海量的数据进行实时处理，并且，正则表达式都是由人工执行的，这种随着技术或布局的变化就需要重新编写相应的正则表达式的方式，需要太多人力资源。</p>
+    <p>发明内容</p>
+    <p>[0004]	本发明提供了从网页中抽取数据的方法，以避免通过编写正则表达式的方式抽取数据，节省人力资源。</p>
+    <p>[0005]	本发明提供的技术方案包括：</p>
+    <p>[0006]	一种从网页中抽取数据的方法，该方法包括：</p>
+    <p>[0007]	步骤A，定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；</p>
+    <p>[0008]	步骤B，利用所述约束规则集合从待抽取的网页中抽取数据。</p>
+    <p>[0009]	一种从网页中抽取数据的装置，包括：</p>
+    <p>[0010]	处理单元，用于定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；</p>
+    <p>[0011]	抽取单元，用于利用所述约束规则集合从待抽取的网页中抽取数据。</p>
+    <p>[0012]	由以上技术方案可以看出，本发明中，通过定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；以及利用所述约束规则集合从待抽取的网页中抽取数据，实现了根据节点自身属性及确定的规则约束来完成数据抽取，避免了根据网站网页结构量身定做模板或者编写正则表达式的方式， 同时也消除了网站改版或技术更换带来的模板重新定义或正则表达式重新编写等因素的影响；</p>
+    <p>[0013]	进一步地，本发明中，一旦规则约束确立，就可以对展现“同类节点但不同网站或不同结构的网页”准确实时进行数据抽取，极大的提高了方法的适用范围及时效性，很大程度上减少了人工干预，同时极大的改善了搜索引擎信息检索的质量及信息更新的及时性问题，使搜索引擎不必再受制于前端页面展现技术或版式多变的困扰。附图说明</p>
+    <p>[0014]	图1为本发明实施例提供的基本流程图；</p>
+    <p>[0015]	图2为本发明实施例提供的步骤102的流程图；</p>
+    <p>[0016]	图3为本发明实施例提供的步骤204的具体流程图；</p>
+    <p>[0017]	图4为本发明实施例提供的确定步骤205中节点的约束集合的流程图；</p>
+    <p>[0018]	图5为本发明实施例提供的步骤209的流程图；</p>
+    <p>[0019]	图6为本发明实施例提供的确定维度在节点属性值上的极值约束条件集合的流程图；</p>
+    <p>[0020]	图7为本发明实施例提供的步骤103的具体流程图；</p>
+    <p>[0021]	图8为本发明实施例提供的步骤701的流程图；</p>
+    <p>[0022]	图9为本发明实施例提供的步骤702的具体流程图；</p>
+    <p>[0023]	图10为本发明实施例提供的步骤703的流程图；</p>
+    <p>[0024]	图11为本发明实施例提供的等价关系划分约束流程图；</p>
+    <p>[0025]	图12为本发明实施例提供的划分关系的排序约束的流程图；</p>
+    <p>[0026]	图13为本发明实施例提供的维度之间关联约束的流程图；</p>
+    <p>[0027]	图14为本发明实施例提供的步骤705的流程图；</p>
+    <p>[0028]	图15为本发明实施例提供的装置结构图。</p>
+    <p>具体实施方式</p>
+    <p>[0029]	本发明提供的方法可对网页中的数据进行抽取，其主要是利用网页中节点自身或节点之间的属性定义相应的节点划分规则，再根据提供的普通训练样本网页集和指定抽取维度集合确定该指定抽取维度集合中各个维度在该普通训练样本网页集中出现的路径 (Xpath)，采用基于粗糙集等价划分和维度间约束分析方法，计算得出各个维度对应的基于粗糙集的等价约束条件集合及维度在节点属性值上的约束条件集合等，该计算得出的约束条件集合可以通过反向验证方式来验证其有效性及通用性，最后将这些约束条件集合应用到网页的数据抽取中。其中，在后期的数据抽取中也可以不断的完善上述约束集合，也就是说，本发明提供的方法实质上是一个开放式的自动不断完善的过程。</p>
+    <p>[0030]	为了使本发明的目的、技术方案和优点更加清楚，下面结合附图和具体实施例对本发明进行详细描述。</p>
+    <p>[0031]	参见图1，图1为本发明实施例提供的基本流程图。如图1所示，该流程可包括以下步骤：</p>
+    <p>[0032]	步骤101，定义网页中节点的划分规则。</p>
+    <p>[0033]	本步骤101中，网页中节点实质上为将网页解析成DOM树，然后将DOM树转化成各个节点，组成节点集合。</p>
+    <p>[0034]	至于步骤101中的划分规则，其可以根据网页中各个节点自身包含的信息以及位置等因素来定义，也可以根据实际情况来定义，本发明实施例并不具体限定。</p>
+    <p>[0035]	优选地，作为本发明的一个实施例，该节点分类规则可包括以下几种的至少一个：</p>
+    <p>[0036]	1)节点位置特征，即节点在DOM树中的位置；[0037]	2)节点的文本类型，即节点的类型是文本、注释，或样式等；</p>
+    <p>[0038]	3)节点的 HTML 标记 Tag ；</p>
+    <p>[0039]	4)节点内容；</p>
+    <p>[0040]	5)节点内容的字符长度；</p>
+    <p>[0041]	6)节点中包含的子节点中含有内容的子节点个数；</p>
+    <p>[0042]	7)节点所在HTML标记中的区域；</p>
+    <p>[0043]	8)节点兄弟节点的个数；</p>
+    <p>[0044]	9)节点文字的正则表达式；</p>
+    <p>[0045]	10)其他，可以根据不同的需求定义的节点划分规则。</p>
+    <p>[0046]	步骤102，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合。</p>
+    <p>[0047]	本步骤102中训练样本网页的个数为一个以上，可统一存在一个集合比如训练样本集（以下以训练样本集为例进行描述）中，其主要是根据实际情况确定的，不需要特殊处理，可为普通网页。</p>
+    <p>[0048]	至于步骤102中的获取操作如何实现，具体在下文图2进行描述。</p>
+    <p>[0049]	步骤103，利用所述约束规则集合从待抽取的网页中抽取数据。</p>
+    <p>[0050]	至此，通过以上步骤实现了本发明实施例提供的数据抽取方法。</p>
+    <p>[0051]	参见图2，图2为本发明实施例提供的步骤102的流程图。本实施例中，步骤102 主要是根据节点划分规则对训练样本网页进行分析，识别出指定维度所在节点满足哪些约束规则，然后再将这些约束规则应用在其他样本网页，如果能够正确且唯一识别出所有样本网页在该设定维度的信息，则将该约束规则保留，形成约束规则集合，如果不能识别出， 则额外增加节点分类规则，重复上述过程，最终得到有效的约束规则集合。下面对该步骤 102进行详细描述。</p>
+    <p>[0052]	如图2所示，该流程可包括以下步骤：</p>
+    <p>[0053]	步骤201，指定从训练样本网页中抽取的维度I (Dl，D2，D3. . . Dm)(记为维度集合 I)，以及指定该维度集合I对应的节点存放集合UI。</p>
+    <p>[0054]	步骤201中，指定维度集合I中的维度是从样本训练网页中需要抽取的结果对象， 比如：标题title、内容content、发表时间time等。其可与集合UI中的节点具有一一对应关系，也可具有一对多关系，其中，维度对应的集合UI中的节点，实质上是该维度在训练样本网页中的位置，即路径Xpath，比如标题在某个训练样本网页中的Xpath，这里，获取这些信息的Xpath方式有很多，利用firefox浏览器插件是其中一种很简单的方式。</p>
+    <p>[0055]	步骤202，遍历训练样本集中的训练样本网页，将该遍历到的训练样本网页作为当前样本。</p>
+    <p>[0056]	步骤203，将当前样本解析成DOM树，然后将DOM树转化成节点集合U。</p>
+    <p>[0057]	本步骤203中，集合U可与集合UI相同，也可不同，比如，集合U为集合UI中的子集，或者集合U与集合UI具有部分相同的节点等。</p>
+    <p>[0058]	步骤204，根据不同的节点划分规则将集合U划分成不同的划分集合。</p>
+    <p>[0059]	也就是说，步骤101定义多少个节点划分规则，本步骤204就可得到多少个划分集合，具体可参见图3所示的流程。[0060]	参见图3，图3为本发明实施例提供的步骤204的具体流程图。如图3所示，该流程可包括以下步骤：</p>
+    <p>[0061]	步骤301，遍历步骤101定义的节点划分规则，将遍历到的节点划分规则作为当前划分规则；</p>
+    <p>[0062]	步骤302，遍历集合U，将遍历到的节点作为当前节点；</p>
+    <p>[0063]	步骤303，判断当前节点是否满足当前划分规则，如果是，执行步骤304 ；如果否， 执行步骤305 ；</p>
+    <p>[0064]	步骤304，将当前节点添加到该当前划分规则对应的划分集合中，之后执行步骤 305。</p>
+    <p>[0065]	步骤305，判断集合U中是否还存在未被遍历的节点，如果是，将该未被遍历的其中一个节点作为当前节点，返回执行步骤303 ；如果否，执行步骤306 ；</p>
+    <p>[0066]	步骤306，判断定义的节点划分规则中是否还存在未被遍历的节点划分规则，如果是，将未被遍历的其中一个节点划分规则作为当前划分规则，返回执行步骤302，否则，结束当前流程。</p>
+    <p>[0067]	至此，通过上述步骤306实现了步骤204中的流程。</p>
+    <p>[0068]	步骤205，根据划分集合，确定集合UI中每个节点的约束集合，将集合UI中所有节点的所有约束集合作为该训练样本网页对应的第一约束条件集合。</p>
+    <p>[0069]	本步骤205实质上是分别确定集合UI中每个节点出现在步骤204得到的哪些划分集合中，得到该节点的约束集合，将集合UI中所有节点的约束集合组合在一起，得到第一约束条件集合。</p>
+    <p>[0070]	参见图4，图4为本发明实施例提供的确定步骤205中节点的约束集合的流程图。 如图4所示，该流程可包括以下步骤：</p>
+    <p>[0071]	步骤401，遍历集合UI，将遍历到的节点作为当前节点；</p>
+    <p>[0072]	步骤402，判断步骤204得到的划分集合中是否存在包含该当前节点的划分集合， 如果是，执行步骤403，否则，执行步骤404 ；</p>
+    <p>[0073]	步骤403，将当前节点上对应该存在的划分集合的节点属性值和该当前节点存放在当前节点的约束集合中。之后执行步骤404。</p>
+    <p>[0074]	由于划分集合与节点划分规则对应，因此，该当前节点的节点属性值与该存在的划分集合所对应的节点划分规则对应。</p>
+    <p>[0075]	步骤404，判断集合UI中是否还存在未被遍历的节点，如果是，将未被遍历的其中一个节点作为当前节点，返回步骤402，否则，结束当前流程。</p>
+    <p>[0076]	至此，通过上述步骤可以确定集合UI中各个节点的约束集合。</p>
+    <p>[0077]	步骤206，针对集合UI中任意两个节点，计算该两个节点对应的两个维度在至少一个属性上的二元关系，将计算结果记录在该训练样本网页对应的第二约束条件集合（也称为维度间约束集合）。</p>
+    <p>[0078]	其中，根据节点属性值类型，及节点之间的关联，本发明实施例中的二元关系主要包括以下至少一种：</p>
+    <p>[0079]	(1)等价关系：指每个节点属性值都具有的二元关系，用于判断两个节点在同一属性上是否相等，比如两个节点是否都是文本节点，是否有孩子节点等；[0080]	(2)比较关系：其是可选的二元关系，用于比较两个节点在同一属性上的取值，其得到的比较结果集分为：大于、小于、等于三种；</p>
+    <p>[0081]	(3)距离关系：数值型属性都具有，结果为两个节点在此数值型属性上的数值差的绝对值；</p>
+    <p>[0082]	(4)其他，根据属性的值，可以增加更多的自定义的关系。</p>
+    <p>[0083]	以集合UI中任意两个节点对应的两个维度为题目Tp和日期Dp，选取的属性为位置属性为例，由于在位置属性上有比较关系，以及距离关系，因此，可计算题目和日期在位置属性上这两种关系的至少一个，以计算这两种关系为例，假设这两个计算结果为：比较关系：τρ &gt; Dp，距离关系：|Tp-Dp| &lt; 5，如此，将则将该计算结果记录到当前样本对应的维度间约束集合中。</p>
+    <p>[0084]	步骤207，判断训练样本集是否还存在未被遍历的训练样本网页，如果是，执行步骤208 ；否则，执行步骤209。</p>
+    <p>[0085]	步骤208，将该未被遍历的其中一个训练样本网页作为当前样本，返回执行步骤 203。</p>
+    <p>[0086]	步骤209，根据步骤205计算的第一约束条件集合确定基于粗糙集的等价约束条件集合。</p>
+    <p>[0087]	参见图5，图5为本发明实施例提供的步骤209的流程图。如图5所示，该流程可包括以下步骤：</p>
+    <p>[0088]	步骤501，遍历第一约束条件集合中各个节点的约束集合，将遍历到的节点约束集合作为当前约束集合。</p>
+    <p>[0089]	步骤502，判断当前约束集合对应的节点划分规则是离散型还是连续型，并根据确定结果计算当前约束集合中各个节点分布的概率。</p>
+    <p>[0090]	由于在步骤205中，节点的约束集合对应划分集合，而划分集合是依赖于节点划分规则划分的，即划分集合对应节点划分规则，因此，本步骤502根据当前约束集合很容易确定出该当前约束集合对应的节点划分规则。</p>
+    <p>[0091]	本实施例中，如果对应的节点划分规则是离散型，则步骤502中的计算可按照公式一执行：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102456050A/CN102456050AD00131.png"> <img id="idf0001" file="CN102456050AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102456050A/CN102456050AD00131.png" class="patent-full-image" alt="Figure CN102456050AD00131"> </a> </div>
+    <p>[0093]	其中，i大于0且小于等于N，为节点的标识，Pvi为节点i在当前约束集合对应的维度（由于约束集合对应节点，而节点又对应维度，因此，很容易知道当前约束集合对应的维度）上的分布概率，counti为节点i的属性值。</p>
+    <p>[0094]	如果对应的节点划分规则是连续散型，且服从下面的正态概率分布，则步骤502 中的计算可按照公式二执行：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102456050A/CN102456050AD00132.png"> <img id="idf0002" file="CN102456050AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102456050A/CN102456050AD00132.png" class="patent-full-image" alt="Figure CN102456050AD00132"> </a> </div>
+    <p>[0096]	其中，f (Vi)表示节点Vi的概率Pvi的分布情况，μ为数学期望，可通过下式表示：μ = Vi*pvi+v2*pv2+... +vN*pVN ； δ 为方差，可通过下式表示:δ =技ΣF)2,1 大于 0且小于等于N</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102456050A/CN102456050AD00141.png"> <img id="idf0003" file="CN102456050AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102456050A/CN102456050AD00141.png" class="patent-full-image" alt="Figure CN102456050AD00141"> </a> </div>
+    <p>[0097]	步骤503，从当前约束集合中去除具有概率不同于指定目标节点的概率的节点；</p>
+    <p>[0098]	由于约束集合是节点和属性值的集合，因此，在去除节点时，属性值也一起去除。</p>
+    <p>[0099]	步骤504，判断第一约束条件集合中的节点约束集合是否已被全部遍历，如果是， 执行步骤505，否则，将未被遍历的其中一个节点约束集合确定为当前约束集合，返回执行步骤502。</p>
+    <p>[0100]	步骤505，将通过步骤503得到的所有集合确定为基于粗糙集的等价约束条件集</p>
+    <p>[0101]	由于约束集合对应节点，而节点又对应维度，因此，可以得到步骤505确定出的基于粗糙集的等价约束条件集合都与维度对应的，并且，根据步骤503的描述，可以知道，该基于粗糙集的等价约束条件集合与维度对应的目标节点等价。</p>
+    <p>[0102]	步骤210，合并不同训练样本网页对应的第二约束条件集合，确定合并后得到的集合为维度在节点属性值上的约束条件集合。</p>
+    <p>[0103]	步骤210中的合并是从所有训练样本网页的角度确定维度之间存在的关系，即发现该关系的一般性或共有特性。根据步骤206的描述可以知道，每一个训练样本网页对应的第二约束条件集合中记录了多个二元关系。以第二约束条件集合记录的二元关系为比较关系和距离关系为例，其他情况实现原理类似，则步骤210具体可包括：</p>
+    <p>[0104]	(1)，对比较关系的合并，其是指在一个训练样本网页对应的第二约束条件集合中存在两个节点之间的比较关系，判断该比较关系是否存在其他训练样本网页对应的第二约束条件集合中，如果是，该比较关系保留；如果不是，删除掉该比较关系。其具体实现时可为：将大于，小于，等于作为枚举值的离散型数值属性，按照上述的公式一得到比较关系的概率值，将在不同样本页中分布相同的情况进行合并，不同的关系去除。</p>
+    <p>[0105]	O)，对于距离关系的合并，其是指在一个训练样本网页对应的第二约束条件集合中两个维度之间的距离关系为第一值，如果在其他训练样本网页对应的第二约束条件集合中该两个维度之间的距离关系为第二值，则该两个维度之间的距离关系在合并后为第一值至第二值之间的数值，即是简单的计算距离的覆盖范围。具体实现操作为：把一个个距离值作为取值的点，看做是以这些点作为样本值的连续性数值属性，按照上述公式二得到距离关系的概率值，计算距离值覆盖的范围，对这种关系逐步确定分布的区域。</p>
+    <p>[0106]	至此，通过以上步骤可以确定出基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合。</p>
+    <p>[0107]	步骤211，验证步骤209和步骤210得到的约束条件集合的有效性，在验证无效时， 执行步骤212。</p>
+    <p>[0108]	实质上，步骤211主要是验证步骤209和步骤210得到的约束条件集合是否识别出指定维度集合I中的各个维度，如果是，则确定步骤209和步骤210得到的约束条件集合有效，直接利用该步骤209和步骤210得到的约束条件集合进行数据抽取即可，实现流程比较简单，这里不再赘述；否则，确定步骤209和步骤210得到的约束条件集合无效，还需要执行步骤212。至于如何验证，下面进行描述。</p>
+    <p>[0109]	本实施例中，步骤211中的验证操作具体包括：</p>
+    <p>[0110]	针对每一训练样本网页中任意两个维度Dl和D2，执行以下处理：</p>
+    <p>[0111]	如果维度Dl对应的节点集合为^11 (Nxl，...Nxm)，维度Dl对应的节点集合为 Udid2 {(NxlNyl) &#183; &#183; &#183; Nyn)，维度Dl和D2上的二元关系集合为UR (Rl,... Rn)，则将维度Dl和维度 D2对应的节点集组合，得到以下节点对：Udid2{(Nxi，Nyi) |i e {l，m}，j e {Ι,η}}；遍历所述节点对，确定满足所述二元关系集合中所有二元关系的节点对，得到集合Udl {(Nx，Ny)...}；</p>
+    <p>[0112]	在对所述训练样本网页中每两个维度都完成所述处理后，判断最终得到满足二元关系集合中所有二元关系的节点对组成的集合是否仅有1个，如果是，确定步骤209和步骤 210得到的约束条件集合识别出所述指定维度集合中的各个维度；即，步骤209和步骤210 得到的约束条件集合有效，否则，确定步骤209和步骤210得到的约束条件集合识别不出所述指定维度集合中的各个维度，即步骤209和步骤210得到的约束条件集合无效。</p>
+    <p>[0113]	步骤212，确定维度在节点属性值上的极值约束条件集合。</p>
+    <p>[0114]	对于极值序列关系，因为比较的对象是相对的节点，而这些节点中只有指定维度集合中纬度对应的节点是固定的，其他的节点都是不具描述性的，因此只能用值的比较序列取最大或最小值来确定。</p>
+    <p>[0115]	本发明实施例为减少步骤212的计算量，提供了如图6所示的流程。</p>
+    <p>[0116]	参见图6，图6为本发明实施例提供的步骤212的操作流程图。如图6所示，该流程可包括：</p>
+    <p>[0117]	步骤601，遍历指定维度集合I中的维度，将遍历到的维度作为当前维度，如果当前维度对应的节点集Un中包含的节点数量大于1，所述节点集Un中的节点属于同一训练样本网页，则遍历指定目标节点与当前维度对应的所有节点具有的各个属性，将遍历到的属性作为当前属性。</p>
+    <p>[0118]	步骤602，将指定目标节点分别与当前维度对应的所有节点在当前属性上进行比较，得到比较结果，根据所述比较结果确定指定目标节点在该当前属性上的取值。</p>
+    <p>[0119]	本步骤602中得到的比较结果为包括大于、等于和小于三种。</p>
+    <p>[0120]	根据比较结果确定指定目标节点在当前属性上的取值，具体为：</p>
+    <p>[0121]	如果比较结果只有小于，等于和小于为0，则取值为Top ；</p>
+    <p>[0122]	如果比较结果只有小于和等于，大于为0，则取值为Tops ；</p>
+    <p>[0123]	如果比较结果只有大于，小于和大于为0，则取值为Bottom ；</p>
+    <p>[0124]	如果比较结果只有大于和等于，小于为0，则取值为Bottoms ；</p>
+    <p>[0125]	如果比较结果既有大于又有小于，等于为任意，则取值为Middle ；</p>
+    <p>[0126]	如果比较结果只有等于，大于和小于都为0，则取值为Identical ；</p>
+    <p>[0127]	步骤603，根据确定的取值确定当前属性对应的输出结果。</p>
+    <p>[0128]	步骤603具体为：</p>
+    <p>[0129]	如果取值为Top，Bottom，则输出结果为1，作为极值序列的尾部；</p>
+    <p>[0130]	如果取值为Tops，Bottoms，则输出结果为{2，m_l}，作为极值序列的开头或者中间部分，所述m为指定维度集合中维度的数量；</p>
+    <p>[0131]	如果取值为Identical，则输出结果为m，作为极值序列的开头或者中间部分；[0132]	如果取值为Middle，则输出结果为0，作为序列的尾部后续处理。</p>
+    <p>[0133]	步骤604，判断是否还存在未被遍历的属性，如果是，将未被遍历的其中一个属性确定为当前属性，返回执行步骤602 ；如果否，执行步骤605 ；</p>
+    <p>[0134]	步骤605，将各个属性对应的各个输出结果组成各个集合，对各个集合进行处理， 得到当前维度对应的极值序列集合；判断当前是否到达预设的合并条件，如果是，执行步骤 606，否则，如果当前还存在未被遍历的维度，则将其中一个未被遍历的维度作为当前维度， 返回执行步骤601。</p>
+    <p>[0135]	步骤605具体为：将根据所述输出结果为m得到的第一集合中的元素排列，得到排列集合&amp;，把第一集合中所有元素都分为Top，Bottom，确定排列集合根据所述输出结果为1得到的第二集合为该维度对应的符合条件的第一极值序列；</p>
+    <p>[0136]	从所述节点集Un中确定出满足排列集合％+根据所述输出结果为{2，m_l}得到的第三集合的子集Uns，把第三集合中的bottoms转为bottom，tops转为top，加入至排列集合</p>
+    <p>根据所述输出结果为{2，m-l}得到的第三集合中，形成第二极值序列；合并所述第一极值序列和第二极值序列，将合并后得到的极值序列确定为当前维度对应的极值序列集合。</p>
+    <p>[0137]	其中，合并第一极值序列（记为Si)和第二极值序列（记为S2)具体为：如果 Sl e S2,则 Sl η S2 = S2,如果 S2 e Si，则 Sl η S2 = Si，如果 Sl = S2,则 Sl η S2 = Si，其他则返回Φ。</p>
+    <p>[0138]	需要说明的是，本发明实施例中，预设条件为第三集合中的元素数量为0。</p>
+    <p>[0139]	步骤606，合并各个维度对应的极值序列集合，将合并后得到的极值序列集合作为维度在节点属性值上的极值约束条件集合U0。</p>
+    <p>[0140]	具体地，步骤606中的合并可按照步骤605中合并第一极值序列和第二极值序列的方式进行，这里不再赘述。</p>
+    <p>[0141]	至此，我们得到了信息维度在节点属性值上的极值约束条件集合。需要说明的是， 如果通过计算所有训练样本网页得到集合UO不为空集，则认为在节点划分规则上，指定抽取维度集合I是可识别的。如果集合UO为空集，且通过其他两种得出的结果大于实际结果， 则认为在节点划分规则上，指定抽取维度集合1是不可识别的。此时需要添加节点划分规则重新计算。</p>
+    <p>[0142]	至此，通过上述步骤实现了步骤102中获取用于抽取网页中数据的约束规则集合的操作。</p>
+    <p>[0143]	至于步骤103中的具体操作，可参见图7。</p>
+    <p>[0144]	参见图7，图7为本发明实施例提供的步骤103的具体流程图。该流程是在基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别不出所述指定维度集合中的各个维度时，根据训练生成的约束规则集合筛选合适的信息节点，从而完成信息的抽取。如图7所示，该流程可包括以下步骤：</p>
+    <p>[0145]	步骤701，生成待抽取网页对应的信息集合。</p>
+    <p>[0146]	这里，信息集合是网页的一种表述方式，是所有待提取数据字段所在节点的候选集合，具体生成操作可参见图8所示的流程：</p>
+    <p>[0147]	参见图8，图8为本发明实施例提供的步骤701的流程图。如图8所示，该流程可包括：[0148]	步骤801，将待抽取网页解析成DOM树。</p>
+    <p>[0149]	步骤802，遍历DOM树上的所有节点，将遍历到的节点作为当前节点，执行步骤 803。</p>
+    <p>[0150]	步骤803，判断该节点是否为注释节点，如果是，执行步骤804，否则，执行805。</p>
+    <p>[0151]	由于注释节点在网页设计中起辅助作用，和展示的信息无关。因此，本发明抽取的数据一般不在注释节点上。</p>
+    <p>[0152]	步骤804，判断DOM树是否还有节点没有遍历，如果是，将该未被遍历的其中一个节点作为当前节点，返回执行步骤803，如果否，返回执行步骤801。</p>
+    <p>[0153]	步骤805，将该当前节点添加到信息集合中，返回执行步骤804。</p>
+    <p>[0154]	至此，通过以上步骤即可生成信息集合。</p>
+    <p>[0155]	步骤702，对步骤701生成的信息集合按照定义的节点划分规则进行划分，得到信息集合的各个子集。</p>
+    <p>[0156]	参见图9，图9为本发明实施例提供的步骤702的具体流程图。如图9所示，该流程可包括以下步骤：</p>
+    <p>[0157]	步骤901，判断步骤701生成的信息集合是否为空，如果为空，执行步骤904，否则执行步骤902。</p>
+    <p>[0158]	步骤902，遍历信息集合，将遍历到的信息集合中的节点作为当前节点，执行步骤 903。</p>
+    <p>[0159]	步骤903，针对定义的每一节点划分规则，判断该当前节点是否满足该划分规则， 如果满足，则将当前节点添加到该节点划分规则对应的子集中，返回步骤901，如果不满足， 则返回步骤901。</p>
+    <p>[0160]	步骤904，将最后得到的各个子集作为对步骤701生成的信息集合UO按照定义的节点划分规则进行划分所得到的子集。</p>
+    <p>[0161]	步骤703，对步骤702得到的子集进行合并，得到特征值集合。</p>
+    <p>[0162]	由于不同子集可能会包含相同的节点，而后续的数据抽取是以节点为单位进行的，因此，为便于后续数据抽取，需要先合并步骤702得到的子集。</p>
+    <p>[0163]	其中，合并步骤702得到的子集主要是以遍历步骤702中的所有子集，将同一个节点不同特征值进行合并，生成新的“以元素为键值，特征元组为值”的映射表，具体可参见图 10所示的流程：</p>
+    <p>[0164]	参见图10，图10为本发明实施例提供的步骤703的流程图。如图10所示，该流程可包括以下步骤：</p>
+    <p>[0165]	步骤1001，初始化一个新的特征值集合。</p>
+    <p>[0166]	此时，步骤1001中的特征值集合实质上为构造一个以“元素为键值，特征元祖为</p>
+    <p>值的”空映射表。</p>
+    <p>[0167]	步骤1002，遍历步骤702得到的子集，将遍历到的子集作为当前子集，执行步骤</p>
+    <p>1003。</p>
+    <p>[0168]	步骤1003，遍历当前子集中的节点，将遍历到的节点作为当前节点，执行步骤</p>
+    <p>1004。</p>
+    <p>[0169]	步骤1004，判断特征值集合中是否包含该当前节点，如果包含，执行步骤1006 ；否贝丨J，执行步骤1005。</p>
+    <p>[0170]	初始化的特征值集合为空集，因此，不可能包含当前节点，需要执行步骤1005。</p>
+    <p>[0171]	步骤1005，将当前节点及其对应的特征值添加到特征值集合中，之后执行步骤 1007。</p>
+    <p>[0172]	通常，一个节点对应一个以上特征值。</p>
+    <p>[0173]	步骤1006，将当前节点对应的特征值添加到特征值集合中，之后执行步骤1007。</p>
+    <p>[0174]	步骤1007，将该当前节点设置为已访问标志（Signed)，并执行步骤1008。</p>
+    <p>[0175]	步骤1008，判断当前子集是否有节点没有遍历，如果是，将其中一个未被遍历的节点作为当前节点，返回执行步骤1004，如果否，执行步骤1009。</p>
+    <p>[0176]	步骤1009，将当前子集设置为已处理完毕的标志。之后执行步骤1010。</p>
+    <p>[0177]	步骤1010，判断步骤702得到的子集中是否还存在未被遍历的子集，如果是，将其中一个未被遍历的子集作为当前子集，返回执行步骤1003，如果否，结束当前流程。</p>
+    <p>[0178]	至此，通过以上操作实现了对步骤702得到的子集进行合并，得到特征值集合。</p>
+    <p>[0179]	步骤704，根据所述基于粗糙集的等价约束条件集合、维度在节点属性值上的约束条件集合和维度在节点属性值上的极值约束条件集合对所述特征值集合进行规则约束，得到用于抽取数据的关联约束映射表。</p>
+    <p>[0180]	本步骤704主要是减少候选集合的大小，逐步筛选，最终找到合适的目标节点。下面进行详细描述：</p>
+    <p>[0181]	1)等价关系划分约束：</p>
+    <p>[0182]	等价关系划分约束采用基于粗糙集等价关系划分的思想，对从步骤703中由节点及其特征值组成的特征值集合按照维度进行等价划分，生成一组“以维度为标识，其对应的满足划分关系的候选节点集合为值对”的新映射表，在该生成过程中，不满足任何维度的节点就会被剔除，维度也相应的大大降低，具体可参见图11所示的流程：</p>
+    <p>[0183]	参见图11，图11为本发明实施例提供的等价关系划分约束流程图。如图11所示， 该流程可包括以下步骤：</p>
+    <p>[0184]	步骤1101，遍历步骤209确定的各个维度对应的基于粗糙集的等价约束条件集合，将遍历到的对应维度的等价约束条件集合作为当前约束条件集合。</p>
+    <p>[0185]	步骤1102，利用当前约束条件集合中的第一个约束条件对步骤703中的特征值集合进行等价划分。</p>
+    <p>[0186]	由于基于粗糙集的等价约束条件集合包含了属性值和节点的组合，因此，本实施例中的约束条件为节点和属性值的组合，相应地，本步骤1102中的第一个约束条件为当前约束条件集合中第一个节点和属性值的组合。</p>
+    <p>[0187]	至于如何利用第一个约束条件对步骤703中的特征值集合进行等价划分，具体实现时，可根据约束条件中的属性值或该节点自身的属性进行等价划分。通过该步骤1102，得到的划分结果包括两种：一种是满足第一个约束条件的集合，由多个节点组成；另一部分是不满足第一个约束条件的集合。</p>
+    <p>[0188]	步骤1103，判断当前约束条件集合是否仅包含第一个约束条件，如果是，执行步骤 1106，否则，将第一个约束条件之后的约束条件作为当前约束条件，执行步骤1104。</p>
+    <p>[0189]	步骤1104，使用当前约束条件对通过使用上一个约束条件进行等价划分得到的满足上一个约束条件的集合进行等价划分。</p>
+    <p>[0190]	通过该步骤1104，能够得到类似步骤1102的两种结果。</p>
+    <p>[0191]	步骤1105，判断当前约束条件是否为当前约束条件集合的最后一个约束条件，如果是，执行步骤1106，如果不是，将当前约束条件的下一个约束条件作为当前约束条件，返回执行步骤1104</p>
+    <p>[0192]	步骤1106，将满足最后一个约束条件的集合转化为“以维度为键值，满足约束的节点集为值对”的映射表；</p>
+    <p>[0193]	步骤1107，将步骤1106转化得到的映射表添加到等价关系划分映射集合中；</p>
+    <p>[0194]	步骤1108，判断步骤209确定的各个维度的等价约束条件集合中是否还存在未被遍历的维度等价约束条件集合，如果是，将其中一个未被遍历的维度等价约束条件集合作为当前约束结合，执行步骤1102，否则，结束当前流程。</p>
+    <p>[0195]	通过以上步骤可已看出，在利用维度等价约束条件集合进行划分时，每一次的划分都会减少集合的维度，增加的约束条件越多，集合的元素就会越少，从而降低这种处理算法的复杂度，具有很好的效率。</p>
+    <p>[0196]	2)满足划分关系的排序约束</p>
+    <p>[0197]	排序约束是在等价划分约束处理之后，对每个维度自身包含的候选节点集合处理，首先会对这些节点按照约束规则进行分类，然后根据指定的排序规则对分类后得到的多个块集合分别进行块内排序，然后按照配置的条件分别取每块的TopN个元素作为候选结果集。处理流程见图12，具体如下：</p>
+    <p>[0198]	步骤1201，遍历所有维度对应的排序约束条件，将遍历到的排序约束条件作为当前约束条件。</p>
+    <p>[0199]	本实施例中，排序约束条件为维度对应的极值序列。</p>
+    <p>[0200]	步骤1202，从等价关系划分映射集合包含的“以维度为键值，满足约束的节点集为值对”的等价关系划分映射表中读取该维度对应的候选节点集合。</p>
+    <p>[0201]	本步骤1202中的候选节点集合与当前约束条件所对应的维度对应。</p>
+    <p>[0202]	步骤1203，根据当前约束条件对候选节点集合进行分类。</p>
+    <p>[0203]	实质上，步骤1203是根据极值序列集合对候选节点集合进行分类。</p>
+    <p>[0204]	步骤1204，对分类后得到的多个块集合分别进行块内排序。</p>
+    <p>[0205]	由于节点的类型或值，分为离散字符型和连续型，对应每种类型的排序规则都不一致：</p>
+    <p>[0206]	a)离散字符型需要将字符转化为指定的枚举集合中包含的元素形式，具体转化方法参见本发明实施例的公式一，然后按照相关顺序排序；</p>
+    <p>[0207]	b)连续型，比如字符的长度分部情况，连续型的节点属性一般服从正态分布，从落入的区间范围来对其进行相关排序，具体计算方法参见本发明实施例提供的公式二。</p>
+    <p>[0208]	步骤1205，分别从每块选取指定的TopN个节点，并按照块顺序依次放到同一个节</p>
+    <p>点集合中ο</p>
+    <p>[0209]	步骤1206，将该节点集合存放到“以其所在的维度为键值，节点集为值对”的排序划分约束映射表中；</p>
+    <p>[0210]	步骤1207，判断是否存在未被遍历的排序约束条件，如果是，将其中一个未被遍历的排序约束条件作为当前约束条件，返回执行步骤1202，否则，结束当前流程。</p>
+    <p>[0211]	可以看出，排序约束划分是进一步缩小每个维度的对应的候选节点集合的范围， 将候选集合从另外一个角度作划分，这一步不同类型节点的排序规则如何定义是关键，特别是对离散型值集的转化。</p>
+    <p>[0212]	3)维度之间关联约束</p>
+    <p>[0213]	维度间关联约束从维度之间的关联关系角度对整个集合过程进行划分规约，进一步确定每个维度对应节点集合的精确范围，从而完成信息节点的定位。关联约束见图13，具体过程如下：</p>
+    <p>[0214]	步骤1301，遍历所有维度对应的关联约束条件，将遍历到的关联约束条件作为当前关联条件。</p>
+    <p>[0215]	本步骤1301中，关联约束条件为维度在节点属性值上的约束条件集合；</p>
+    <p>[0216]	步骤1302，从排序划分约束映射表中获取与当前关联条件相关的维度的所有候选节点。</p>
+    <p>[0217]	由于关联约束条件为维度在节点属性值上的约束条件集合，而维度在节点属性值上的约束条件集合包含了两个维度之间的二元关系，因此，与当前关联条件相关的维度实质上是维度在节点属性值上的约束条件集合中二元关系所涉及的维度。</p>
+    <p>[0218]	步骤1303，对读取的相关的维度的所有候选节点进行积映射，得到一组以节点对为元素的新集合。</p>
+    <p>[0219]	假设当前关联条件相关的维度分别是维度a和维度b，维度a具有N个集合元素， 维度b具有M个集合元素，先对这两个维度之间的节点做积映射，得到一组以节点对为元素的新集合，集合中的元素个数是N*M个。</p>
+    <p>[0220]	步骤1304，对步骤1203得到新集合中的元素即节点对进行约束计算，将满足约束规则的元素保留，并删除不满足约束的节点对，得到该维度的关联约束映射表。</p>
+    <p>[0221]	本步骤1304的约束计算可按照现有操作执行，这里不再赘述。</p>
+    <p>[0222]	步骤1305，判断是否存在未被遍历的关联约束条件，如果是，将其中一个未被遍历的维度关联约束条件作为当前约束条件，返回执行步骤1302，否则，结束当前流程。</p>
+    <p>[0223]	可以看出，关联约束主要是从维度与维度之间的关联约束角度出发，对每个维度的候选节点集合继续进行降维处理，进一步缩小每个集合的元素个数。</p>
+    <p>[0224]	步骤705，利用步骤704得到的关联约束映射表进行数据抽取。</p>
+    <p>[0225]	实质上，本步骤705的数据抽取是对数据原始状态的一种还原过程，处理过程参见图14所示的流程：</p>
+    <p>[0226]	步骤1401，遍历关联约束映射表中维度的候选节点集合，将该维度的候选节点集合作为当前集合。</p>
+    <p>[0227]	步骤1402，判断当前集合中的节点个数是否为1，如果是，执行步骤1403，否则，执行步骤1406 ；</p>
+    <p>[0228]	本实施例最终的结果就是要求一个维度对应一个节点，如果超过一个，就说明这个维度的信息抽取出现错误。</p>
+    <p>[0229]	步骤1403，根据需求抽取该节点的相关内容信息，即去除网页的标记以及相关格</p>
+    <p>式fe息。[0230]	步骤1404，将该信息保存到“以维度为键值，节点信息内容为值对”的信息体集合中。</p>
+    <p>[0231]	步骤1405判断关联约束映射表中是否还存在未被遍历的维度候选节点集合，如果是，将其中一个未被遍历的维度候选节点集合作为当前集合，返回执行步骤1402 ；否则， 结束当前流程；</p>
+    <p>[0232]	步骤1406，将此待抽取网页的页面链接、维度标识及其候选节点集合写入错误处理日志中。</p>
+    <p>[0233]	至此，通过以上步骤实现了本发明实施例提供的数据抽取流程。</p>
+    <p>[0234]	以上对本发明实施例提供的方法进行了描述，下面对本发明实施例提供的装置进行描述。</p>
+    <p>[0235]	参见图15，图15为本发明实施例提供的装置结构图。该装置对应于上文所述的方法，如图15所示，该装置可包括：</p>
+    <p>[0236]	处理单元1501，用于定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；</p>
+    <p>[0237]	抽取单元1502，用于利用所述约束规则集合从待抽取的网页中抽取数据。</p>
+    <p>[0238]	其中，处理单元1501包括：</p>
+    <p>[0239]	约束条件集合生成子单元15011，用于根据节点划分规则，生成每一训练样本网页对应的第一约束条件集合和第二约束条件集合；</p>
+    <p>[0240]	约束规则集合生成子单元15012，用于依据第一约束条件集合和第二约束条件集合分别生成对应的约束规则集合。</p>
+    <p>[0241]	本实施例中，所述约束条件集合生成子单元通过以下操作生成每一训练样本网页对应的第一约束条件集合和第二约束条件集合：</p>
+    <p>[0242]	针对每一训练样本网页，将该训练样本网页解析成DOM树，并将该DOM树转换成节</p>
+    <p>点集合U ；</p>
+    <p>[0243]	按照定义的不同节点划分规则，将节点集合U划分成不同的划分集合；</p>
+    <p>[0244]	根据所述划分集合，确定指定维度集合对应的节点存放集合UI中每个节点的约束集合，将节点存放集合UI中所有节点的所有约束集合作为该训练样本网页对应的第一约束条件集合；</p>
+    <p>[0245]	针对节点存放集合UI中任意两个节点，计算该两个节点对应的两个维度在至少一个属性上的二元关系，将计算结果记录在该训练样本网页对应的第二约束条件集合。</p>
+    <p>[0246]	本实施例中，所述约束规则集合包括：基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合；或者，所述约束规则集合包括：基于粗糙集的等价约束条件集合、维度在节点属性值上的约束条件集合和维度在节点属性值上的极值约束条件集</p>
+    <p>I=I，</p>
+    <p>[0247]	其中，所述维度在节点属性值上的极值约束条件集合在所述基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别不出所述指定维度集合中的各个维度时存在。</p>
+    <p>[0248]	本实施例中，抽取单元1502在基于粗糙集的等价约束条件集合和维度在节点属性值上的约束条件集合识别不出所述指定维度集合中的各个维度时，包括：[0249]	信息集合生成子单元15021，用于生成待抽取网页对应的信息集合；</p>
+    <p>[0250]	划分子单元15022，用于对所述信息集合按照定义的节点划分规则进行划分，得到信息集合的各个子集；</p>
+    <p>[0251]	合并子单元15023，用于合并得到的各个子集，得到特征值集合；</p>
+    <p>[0252]	规则约束子单元15024，用于根据所述基于粗糙集的等价约束条件集合、维度在节点属性值上的约束条件集合和维度在节点属性值上的极值约束条件集合对所述特征值集合进行规则约束，得到用于抽取数据的关联约束映射表；</p>
+    <p>[0253]	抽取子单元15025，用于利用所述关联约束映射表进行数据抽取。</p>
+    <p>[0254]	至此，对本发明实施例提供的装置完成了描述。</p>
+    <p>[0255]	由以上技术方案可以看出，本发明中，通过定义网页中节点的划分规则，根据节点划分规则和对训练样本网页的解析，获取用于抽取网页中数据的约束规则集合；以及利用所述约束规则集合从待抽取的网页中抽取数据，实现了根据节点自身属性及确定的规则约束来完成数据抽取，避免了根据网站网页结构量身定做模板或者编写正则表达式的方式， 同时也消除了网站改版或技术更换带来的模板重新定义或正则表达式重新编写等因素的影响；</p>
+    <p>[0256]	进一步地，本发明中，一旦规则约束确立，就可以对展现“同类节点但不同网站或不同结构的网页”准确实时进行数据抽取，极大的提高了方法的适用范围及时效性，很大程度上减少了人工干预，同时极大的改善了搜索引擎信息检索的质量及信息更新的及时性问题，使搜索引擎不必再受制于前端页面展现技术或版式多变的困扰。</p>
+    <p>[0257]	以上所述仅为本发明的较佳实施例而已，并不用以限制本发明，凡在本发明的精神和原则之内，所做的任何修改、等同替换、改进等，均应包含在本发明保护的范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1410918A?cl=zh">CN1410918A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2002年5月31日</td><td class="patent-data-table-td patent-date-value">2003年4月16日</td><td class="patent-data-table-td ">浙江大学</td><td class="patent-data-table-td ">基于信息抽取技术的搜索引擎</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101582075A?cl=zh">CN101582075A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月24日</td><td class="patent-data-table-td patent-date-value">2009年11月18日</td><td class="patent-data-table-td ">大连海事大学</td><td class="patent-data-table-td ">Web信息抽取系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=Q8dwBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D2008123425A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEVi3ruO5j5Qn76uVOhhkh7na6jLA">JP2008123425A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20050216443">US20050216443</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2003年2月12日</td><td class="patent-data-table-td patent-date-value">2005年9月29日</td><td class="patent-data-table-td ">Streamsage, Inc.</td><td class="patent-data-table-td ">Method and system for indexing and searching timed media information based upon relevance intervals</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102855324A?cl=zh">CN102855324A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月11日</td><td class="patent-data-table-td patent-date-value">2013年1月2日</td><td class="patent-data-table-td ">北京云泓道元信息技术有限公司</td><td class="patent-data-table-td ">一种网络信息的自动提取方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102855324B?cl=zh">CN102855324B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月11日</td><td class="patent-data-table-td patent-date-value">2015年8月26日</td><td class="patent-data-table-td ">北京云泓道元信息技术有限公司</td><td class="patent-data-table-td ">一种网络信息的自动提取方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102902723A?cl=zh">CN102902723A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月6日</td><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td ">北京北森测评技术有限公司</td><td class="patent-data-table-td ">一种网络数据解析方法与装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=Q8dwBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年5月16日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年6月27日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年4月9日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年3月30日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of patent application or patent right or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/5ec89edee93e2e2e425e/CN102456050A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%BB%8E%E7%BD%91%E9%A1%B5%E4%B8%AD%E6%8A%BD%E5%8F%96%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85.pdf?id=Q8dwBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U16IwfnlI4sBwTr2kDUOemOhQJ01w"},"sample_url":"https://www.google.com/patents/reader?id=Q8dwBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

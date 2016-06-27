@@ -1,0 +1,514 @@
+<!DOCTYPE html><html><head><title>专利 CN104539571A - 信息交互方法、身份鉴权方法、服务器及终端 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="信息交互方法、身份鉴权方法、服务器及终端"><meta name="DC.contributor" content="张小龙" scheme="inventor"><meta name="DC.contributor" content="孙剑晖" scheme="inventor"><meta name="DC.contributor" content="王晓兵" scheme="inventor"><meta name="DC.contributor" content="陈 峰" scheme="inventor"><meta name="DC.contributor" content="腾讯科技（深圳）有限公司" scheme="assignee"><meta name="DC.date" content="2014-7-30" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种信息交互方法、身份鉴权方法、服务器及终端，属于信息技术领域。所述方法包括：接收第一用户对应的第一终端发送的信息发送请求，信息发送请求中携带需要发送的信息以及至少一个用户标识，用户标识为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；查询信息发送请求中携带的每个用户标识对应的社交应用标识；根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第二终端。由于可以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并进行维护，从而使得信息交互的成本较低，信息交互的通用性较好。"><meta name="DC.date" content="2015-4-22"><meta name="DC.relation" content="CN:102611636:A" scheme="references"><meta name="DC.relation" content="CN:102651718:A" scheme="references"><meta name="DC.relation" content="CN:102932414:A" scheme="references"><meta name="DC.relation" content="US:20130152184:A1" scheme="references"><meta name="DC.relation" content="US:8745134" scheme="references"><meta name="citation_patent_publication_number" content="CN:104539571:A"><meta name="citation_patent_application_number" content="CN:201410371455"><link rel="canonical" href="https://www.google.com/patents/CN104539571A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN104539571A?cl=zh"/><meta name="title" content="专利 CN104539571A - 信息交互方法、身份鉴权方法、服务器及终端"/><meta name="description" content="本发明公开了一种信息交互方法、身份鉴权方法、服务器及终端，属于信息技术领域。所述方法包括：接收第一用户对应的第一终端发送的信息发送请求，信息发送请求中携带需要发送的信息以及至少一个用户标识，用户标识为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；查询信息发送请求中携带的每个用户标识对应的社交应用标识；根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第二终端。由于可以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并进行维护，从而使得信息交互的成本较低，信息交互的通用性较好。"/><meta property="og:title" content="专利 CN104539571A - 信息交互方法、身份鉴权方法、服务器及终端"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN104539571A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN104539571A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=o1tPCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN104539571A&amp;usg=AFQjCNGLDwOQ8v8czq-MI_6-842pVMchSA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/8347e8e7575ad551998d/CN104539571A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/8347e8e7575ad551998d/CN104539571A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN104539571A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN104539571A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN104539571A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种信息交互方法、身份鉴权方法、服务器及终端，属于信息技术领域。所述方法包括：接收第一用户对应的第一终端发送的信息发送请求，信息发送请求中携带需要发送的信息以及至少一个用户标识，用户标识为...</span><span itemprop="url">https://www.google.com/patents/CN104539571A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN104539571A - 信息交互方法、身份鉴权方法、服务器及终端</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN104539571A - 信息交互方法、身份鉴权方法、服务器及终端" title="专利 CN104539571A - 信息交互方法、身份鉴权方法、服务器及终端"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN104539571 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201410371455</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2015年4月22日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2014年7月30日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2014年7月30日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201410371455.4, </span><span class="patent-bibdata-value">CN 104539571 A, </span><span class="patent-bibdata-value">CN 104539571A, </span><span class="patent-bibdata-value">CN 201410371455, </span><span class="patent-bibdata-value">CN-A-104539571, </span><span class="patent-bibdata-value">CN104539571 A, </span><span class="patent-bibdata-value">CN104539571A, </span><span class="patent-bibdata-value">CN201410371455, </span><span class="patent-bibdata-value">CN201410371455.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E5%B0%8F%E9%BE%99%22">张小龙</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%AD%99%E5%89%91%E6%99%96%22">孙剑晖</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%E6%99%93%E5%85%B5%22">王晓兵</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%88%EF%BF%BD%E5%B3%B0%22">陈 峰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">腾讯科技（深圳）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104539571A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104539571A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104539571A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (1)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=o1tPCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201410371455&amp;usg=AFQjCNFv84IO0FltzTuBek5PcFUGqM1rgw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=o1tPCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D104539571A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHGkZKs4KBj14FkpK5ae5ggfqik9Q"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT156442133" lang="ZH" load-source="patent-office">信息交互方法、身份鉴权方法、服务器及终端</invention-title>
+      </span><br><span class="patent-number">CN 104539571 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA156189036" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种信息交互方法、身份鉴权方法、服务器及终端，属于信息技术领域。所述方法包括：接收第一用户对应的第一终端发送的信息发送请求，信息发送请求中携带需要发送的信息以及至少一个用户标识，用户标识为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；查询信息发送请求中携带的每个用户标识对应的社交应用标识；根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第二终端。由于可以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并进行维护，从而使得信息交互的成本较低，信息交互的通用性较好。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(38)</span></span></div><div class="patent-text"><div mxw-id="PCLM83456423" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1. 一种信息交互方法，其特征在于，所述方法应用于同一群组内的各个用户使用各自 对应的用户标识通过与各个系统平台兼容的社交应用服务器进行信息交互的场景，其中， 所述同一群组内的各个用户在所述社交应用服务器上注册有对应的社交应用标识，所述方 法包括：  接收第一用户对应的第一终端发送的信息发送请求，所述信息发送请求中携带需要发 送的信息W及至少一个用户标识，所述用户标识为接收所述信息的第二用户的用户标识， 所述第一用户及所述第二用户属于相同群组；  查询所述信息发送请求中携带的每个用户标识对应的社交应用标识；  根据每个社交应用标识将所述信息发送请求中携带的信息发送至每个第二用户对应 的第二终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 根据权利要求1所述的方法，其特征在于，所述接收第一用户对应的第一终端发送 的信息发送请求之前，还包括： 接收所述第二用户对应的第二终端发送的群组加入请求，所述群组加入请求中携带请 求加入群组的第二用户对应的用户信息；  在预先获取到的用户信息集合中查询所述群组加入请求中携带的用户信息，所述用户 信息集合中包括具有加入群组权限的用户对应的用户信息，所述用户信息包括社交应用标 识、邮箱号码、手机号码中的至少一种信息；  如果在所述用户信息集合中查询到所述群组加入请求中携带的用户信息，则将所述第 二用户作为群组用户，并向所述第二用户对应的第二终端返回成功加入群组响应。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 根据权利要求2所述的方法，其特征在于，所述接收所述第二用户对应的第二终端 发送的群组加入请求之前，还包括： 生成群组标识，并根据所述群组标识生成对应的二维码；  所述接收所述第二用户对应的第二终端发送的群组加入请求，包括：  接收所述第二用户对应的第二终端在扫描所述群组标识对应的二维码后发送的群组 加入请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 根据权利要求1所述的方法，其特征在于，所述查询所述信息发送请求中携带的每 个用户标识对应的社交应用标识，包括： 在预先存储的用户标识与社交应用标识的对应关系中查询所述信息发送请求中携带 的每个用户标识对应的社交应用标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 根据权利要求1所述的方法，其特征在于，所述根据每个社交应用标识将所述信息 发送请求中携带的信息发送至每个第二用户对应的第二终端，包括： 根据每个社交应用标识W超文本传输协议HTTP方式调用公开的应用程序编程接口 API将所述信息发送请求中携带的信息发送至每个第二用户对应的第二终端；  或，根据每个社交应用标识W网页的方式将所述信息发送请求中携带的信息发送至每 个第二用户对应的第二终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 根据权利要求1至5中任一权利要求所述的方法，其特征在于，所述方法还包括： 接收所述第二终端发送的信息处理请求，所述信息处理请求中携带群组标识、所述第 二终端对应的第二用户的用户标识及信息处理标识；  根据所述群组标识将所述信息处理请求中携带的第二用户的用户标识及信息处理标  识转发至对应群组中的第一用户对应的第一终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 根据权利要求6所述的方法，其特征在于，所述根据所述群组标识将所述信息处理 请求转发至对应群组中的第一用户对应的第一终端之后，还包括： 接收所述第一终端返回的信息处理响应，所述信息处理响应中携带所述第二用户的用 户标识和信息处理结果；  查询所述信息处理响应中携带的用户标识对应的社交应用标识；  根据查询到的社交应用标识将所述信息处理响应中携带的信息处理结果返回至发送 信息处理请求的第二终端。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8. -种信息交互方法，其特征在于，所述方法包括： 第一用户对应的第一终端获取需要发送的信息W及至少一个用户标识，所述用户标识 为接收所述信息的第二用户的用户标识，所述第一用户及所述第二用户属于相同群组；  向社交应用服务器发送携带所述需要发送的信息W及所述至少一个用户标识的信息 发送请求，由所述社交应用服务器查询所述信息发送请求中携带的每个用户标识对应的社 交应用标识后，根据每个社交应用标识将所述信息发送请求中携带的信息发送至每个第二 用户对应的第二终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 根据权利要求8所述的方法，其特征在于，所述方法还包括： 接收所述社交应用服务器发送的第二用户的用户标识及信息处理标识，所述第二用户 的用户标识及信息处理标识由所述社交应用服务器在接收到携带群组标识、第二用户的用 户标识及信息处理标识的信息处理请求后发送；  根据所述第二用户的用户标识及信息处理标识执行对应的信息处理操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 根据权利要求9所述的方法，其特征在于，所述根据所述第二用户的用户标识及信 息处理标识执行对应的信息处理操作之后，还包括： 向所述社交应用服务器返回携带所述第二用户的用户标识和信息处理结果的信息处 理响应，由所述社交应用服务器查询所述信息处理响应中携带的用户标识对应的社交应用 标识后，根据查询到的社交应用标识将所述信息处理响应中携带的信息处理结果返回至发 送信息处理请求的第二终端。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11. 一种信息交互方法，其特征在于，所述方法包括： 第二用户对应的第二终端接收社交应用服务器发送的信息，所述信息由所述社交应用 服务器接收到第一用户对应的第一终端发送的信息发送请求，并查询所述信息发送请求中 携带的每个用户标识对应的社交应用标识后发送，所述信息发送请求中携带需要发送的信 息W及至少一个用户标识，所述用户标识为接收所述信息的第二用户的用户标识，所述第 一用户及所述第二用户属于相同群组；  展示接收到的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 根据权利要求11所述的方法，其特征在于，所述接收社交应用服务器发送的信息 之前，还包括： 获取加入群组指令，根据所述加入群组指令向所述社交应用服务器发送群组加入请 求，所述群组加入请求中携带所述第二用户对应的用户信息；  接收所述社交应用服务器在根据所述群组加入请求中携带的用户信息进行加入群组 权限验证，并在加入群组权限验证通过后返回的成功加入群组响应。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 根据权利要求12所述的方法，其特征在于，所述获取加入群组指令，包括： 获取群组标识对应的二维码的扫描指令，所述二维码由所述社交应用服务器生成群组 标识，并根据所述群组标识生成；  根据所述扫描指令扫描所述群组标识对应的二维码，生成加入群组指令，所述加入群 组指令用于请求加入所述二维码对应的群组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 根据权利要求11至13中任一权利要求所述的方法，其特征在于，所述方法还包 括： 获取第二用户的用户标识及信息处理标识；  向所述社交应用服务器发送携带群组标识、所述第二用户的用户标识及信息处理标识 的信息处理请求，由所述社交应用服务器根据所述群组标识将所述信息处理请求中携带的 第二用户的用户标识及信息处理标识转发至对应群组中的第一用户对应的第一终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15. 根据权利要求14所述的方法，其特征在于，所述向所述社交应用服务器发送携带 群组标识、所述第二用户的用户标识及信息处理标识的信息处理请求之后，还包括： 接收所述社交应用服务器返回的信息处理结果。</div>
+    </div>
+    </div> <div class="claim"> <div num="16" class="claim">
+      <div class="claim-text">16. -种身份鉴权方法，其特征在于，所述方法包括： 接收请求加入群组的至少一个终端发送的群组加入请求，所述群组加入请求中携带请 求加入群组的用户对应的用户信息；  在预先获取到的用户信息集合中查询所述群组加入请求中携带的用户信息，所述用户 信息集合中包括具有加入群组权限的用户对应的用户信息，所述用户信息包括社交应用标 识、邮箱号码、手机号码中的至少一种信息；  如果在所述用户信息集合中查询到所述群组加入请求中携带的用户信息，则将所述群 组加入请求中携带的用户信息对应的用户作为群组用户，并向请求加入群组的终端返回成 功加入群组响应。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17. 根据权利要求16所述的方法，其特征在于，所述在预先获取到的用户信息集合中 查询所述群组加入请求中携带的用户信息之前，还包括： 获取具有加入群组权限的各个用户对应的用户信息，得到用户信息集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18. 根据权利要求16所述的方法，其特征在于，所述接收请求加入群组的至少一个终 端发送的群组加入请求之前，还包括： 生成群组标识，并根据所述群组标识生成对应的二维码；  所述接收请求加入群组的至少一个终端发送的群组加入请求，包括：  接收请求加入群组的至少一个终端在扫描所述群组标识对应的二维码后发送的群组 加入请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19. 根据权利要求16至18中任一权利要求所述的方法，其特征在于，所述在预先获取 到的用户信息集合中查询所述群组加入请求中携带的用户信息之后，还包括： 如果在所述用户信息集合中未查询到所述群组加入请求中携带的用户信息，则向所述 终端返回输入手机号码的提示信息，并接收根据所述提示信息返回的手机号码；  如果接收到的手机号码在所述用户信息集合中，则向接收到的手机号码对应的终端下 发验证信息，并获取返回的验证信息；  在验证获取到的验证信息正确之后，将所述群组加入请求中携带的用户信息对应的用  户作为群组用户，并向请求加入群组的终端返回成功加入群组响应。</div>
+    </div>
+    </div> <div class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20. -种社交应用服务器，其特征在于，所述服务器上注册有同一群组内的各个用户对 应的社交应用标识，所述服务器包括： 第一接收模块，用于接收第一用户对应的第一终端发送的信息发送请求，所述信息发 送请求中携带需要发送的信息W及至少一个用户标识，所述用户标识为接收所述信息的第 二用户的用户标识，所述第一用户及所述第二用户属于相同群组；  第一查询模块，用于查询所述信息发送请求中携带的每个用户标识对应的社交应用标 识；  发送模块，用于根据每个社交应用标识将所述信息发送请求中携带的信息发送至每个 第二用户对应的第二终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21. 根据权利要求20所述的服务器，其特征在于，所述服务器还包括： 第二接收模块，用于接收所述第二用户对应的第二终端发送的群组加入请求，所述群 组加入请求中携带请求加入群组的第二用户对应的用户信息；  第二查询模块，用于在预先获取到的用户信息集合中查询所述群组加入请求中携带的 用户信息，所述用户信息集合中包括具有加入群组权限的用户对应的用户信息，所述用户 信息包括社交应用标识、邮箱号码、手机号码中的至少一种信息；  返回模块，用于当在所述用户信息集合中查询到所述群组加入请求中携带的用户信息 时，将所述第二用户作为群组用户，并向所述第二用户对应的第二终端返回成功加入群组 响应。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22. 根据权利要求21所述的服务器，其特征在于，所述服务器还包括： 生成模块，用于生成群组标识，并根据所述群组标识生成对应的二维码；  所述第二接收模块，用于接收所述第二用户对应的第二终端在扫描所述群组标识对应 的二维码后发送的群组加入请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23. 根据权利要求20所述的服务器，其特征在于，所述第一查询模块，用于在预先存储 的用户标识与社交应用标识的对应关系中查询所述信息发送请求中携带的每个用户标识 对应的社交应用标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24. 根据权利要求20所述的服务器，其特征在于，所述发送模块，用于根据每个社交应 用标识W超文本传输协议HTTP方式调用公开的应用程序编程接口 API将所述信息发送请 求中携带的信息发送至每个第二用户对应的第二终端；或，根据每个社交应用标识W网页 的方式将所述信息发送请求中携带的信息发送至每个第二用户对应的第二终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25. 根据权利要求20至24中任一权利要求所述的服务器，其特征在于，所述服务器还 包括： 第=接收模块，用于接收所述第二终端发送的信息处理请求，所述信息处理请求中携 带群组标识、所述第二终端对应的第二用户的用户标识及信息处理标识；  转发模块，用于根据所述群组标识将所述信息处理请求中携带的第二用户的用户标识 及信息处理标识转发至对应群组中的第一用户对应的第一终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26. 根据权利要求25所述的服务器，其特征在于，所述服务器还包括： 第四接收模块，用于接收所述第一终端返回的信息处理响应，所述信息处理响应中携 带所述第二用户的用户标识和信息处理结果；  第=查询模块，用于查询所述信息处理响应中携带的用户标识对应的社交应用标识；  第二返回模块，用于根据查询到的社交应用标识将所述信息处理响应中携带的信息处 理结果返回至发送信息处理请求的第二终端。</div>
+    </div>
+    </div> <div class="claim"> <div num="27" class="claim">
+      <div class="claim-text">27. -种终端，其特征在于，所述终端为第一用户对应的终端，包括： 获取模块，用于获取需要发送的信息W及至少一个用户标识，所述用户标识为接收所 述信息的第二用户的用户标识，所述第一用户及所述第二用户属于相同群组；  发送模块，用于向社交应用服务器发送携带所述需要发送的信息W及所述至少一个用 户标识的信息发送请求，由所述社交应用服务器查询所述信息发送请求中携带的每个用户 标识对应的社交应用标识后，根据每个社交应用标识将所述信息发送请求中携带的信息发 送至每个第二用户对应的第二终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28. 根据权利要求27所述的终端，其特征在于，所述终端还包括： 接收模块，用于接收所述社交应用服务器发送的第二用户的用户标识及信息处理标 识，所述第二用户的用户标识及信息处理标识由所述社交应用服务器在接收到携带群组标 识、第二用户的用户标识及信息处理标识的信息处理请求后发送；  处理模块，用于根据所述第二用户的用户标识及信息处理标识执行对应的信息处理操 作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29. 根据权利要求28所述的终端，其特征在于，所述终端还包括： 返回模块，用于向所述社交应用服务器返回携带所述第二用户的用户标识和信息处理 结果的信息处理响应，由所述社交应用服务器查询所述信息处理响应中携带的用户标识对 应的社交应用标识后，根据查询到的社交应用标识将所述信息处理响应中携带的信息处理 结果返回至发送信息处理请求的第二终端。</div>
+    </div>
+    </div> <div class="claim"> <div num="30" class="claim">
+      <div class="claim-text">30. -种终端，其特征在于，所述终端为第二用户对应的终端，包括： 第一接收模块，用于接收社交应用服务器发送的信息，所述信息由所述社交应用服务 器接收到第一用户对应的第一终端发送的信息发送请求，并查询所述信息发送请求中携带 的每个用户标识对应的社交应用标识后发送，所述信息发送请求中携带需要发送的信息W 及至少一个用户标识，所述用户标识为接收所述信息的第二用户的用户标识，所述第一用 户及所述第二用户属于相同群组；  展示模块，用于展示接收到的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31. 根据权利要求30所述的终端，其特征在于，所述终端还包括： 第一获取模块，用于获取加入群组指令；  第一发送模块，用于根据所述加入群组指令向所述社交应用服务器发送群组加入请 求，所述群组加入请求中携带所述第二用户对应的用户信息；  第二接收模块，用于接收所述社交应用服务器在根据所述群组加入请求中携带的用户 信息进行加入群组权限验证，并在加入群组权限验证通过后返回的成功加入群组响应。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32. 根据权利要求31所述的终端，其特征在于，所述第一获取模块，用于获取群组标识 对应的二维码的扫描指令，所述二维码由所述社交应用服务器生成群组标识，并根据所述 群组标识生成；根据所述扫描指令扫描所述群组标识对应的二维码，生成加入群组指令，所 述加入群组指令用于请求加入所述二维码对应的群组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33. 根据权利要求30至32中任一权利要求所述的终端，其特征在于，所述终端还包 括：  第二获取模块，用于获取第二用户的用户标识及信息处理标识；  第二发送模块，用于向所述社交应用服务器发送携带群组标识、所述第二用户的用户 标识及信息处理标识的信息处理请求，由所述社交应用服务器根据所述群组标识将所述信 息处理请求中携带的第二用户的用户标识及信息处理标识转发至对应群组中的第一用户 对应的第一终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34. 根据权利要求33所述的终端，其特征在于，所述终端还包括： 第=接收模块，用于接收所述社交应用服务器返回的信息处理结果。</div>
+    </div>
+    </div> <div class="claim"> <div num="35" class="claim">
+      <div class="claim-text">35. -种身份鉴权服务器，其特征在于，所述服务器包括： 第一接收模块，用于接收请求加入群组的至少一个终端发送的群组加入请求，所述群 组加入请求中携带请求加入群组的用户对应的用户信息；  查询模块，用于在预先获取到的用户信息集合中查询所述群组加入请求中携带的用户 信息，所述用户信息集合中包括具有加入群组权限的用户对应的用户信息，所述用户信息 包括社交应用标识、邮箱号码、手机号码中的至少一种信息；  第一确定模块，用于当在所述用户信息集合中查询到所述群组加入请求中携带的用户 信息时，则将所述群组加入请求中携带的用户信息对应的用户作为群组用户；  第一返回模块，用于向请求加入群组的终端返回成功加入群组响应。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36. 根据权利要求35所述的服务器，其特征在于，所述服务器，还包括： 第一获取模块，用于获取具有加入群组权限的各个用户对应的用户信息，得到用户信 息集合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37. 根据权利要求35所述的服务器，其特征在于，所述服务器，还包括： 生成模块，用于生成群组标识，并根据所述群组标识生成对应的二维码；  所述第一接收模块，用于接收请求加入群组的至少一个终端在扫描所述群组标识对应 的二维码后发送的群组加入请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38. 根据权利要求35至37中任一权利要求所述的服务器，其特征在于，所述服务器，还 包括： 第二返回模块，用于当在所述用户信息集合中未查询到所述群组加入请求中携带的用 户信息时，向所述终端返回输入手机号码的提示信息；  第二接收模块，用于接收根据所述提示信息返回的手机号码；  发送模块，用于当接收到的手机号码在所述用户信息集合中时，向接收到的手机号码 对应的终端下发验证信息；  第二获取模块，用于获取返回的验证信息；  第二确定模块，用于在验证获取到的验证信息正确之后，将所述群组加入请求中携带 的用户信息对应的用户作为群组用户；  第=返回模块，用于向请求加入群组的终端返回成功加入群组响应。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES91579328" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">信息交互方法、身份鉴权方法、服务器及终端</invention-title>
+    <technical-field>
+      <p>技术领域</p>
+      <p>[0001] 本发明涉及信息技术领域，特别涉及一种信息交互方法、身份鉴权方法、服务器及 终端。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>[0002] 随着现在信息技术的快速发展，越来越多的企业通过移动化的沟通方式实现对企 业内部的管理。由于在实现对企业内部的管理时，需要以信息的交互为基础。因此，如何通 过移动化的沟通方式实现信息的交互是提高企业内部管理效率的关键。</p>
+      <p>[0003] 相关技术中提供了一种信息交互方法，在该方法中，每个企业需要预先在各自的 系统平台上开发用于实现信息交互的应用程序，并根据每个终端所处的系统平台开发相应 版本的应用程序，同时在每个终端上安装相应版本的应用程序。其中，不同企业的系统平台 对应不同的应用程序，终端上不同的系统平台对应不同版本的应用程序，任一版本的应用 程序只与相应的系统平台兼容，即只能在相应的系统平台上运行。通过每个终端上安装的 应用程序中的载体实现信息的交互。其中，每个版本的应用程序中的载体也只与相应的系 统平台兼容。另外，在实现信息交互的过程中，还需要对终端上安装的每个版本的应用程序 进行维护。</p>
+      <p>[0004] 在实现本发明的过程中，发明人发现上述方法至少存在以下问题：</p>
+      <p>[0005] 由于在进行信息交互之前，每个企业需要针对各自的系统平台开发相应的应用程 序，不仅使得开发成本较高，后期维护成本也较高，导致现有的信息交互方式的通用性较 差。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>[0006] 为了解决现有技术的问题，本发明实施例提供了一种信息交互方法、身份鉴权方 法、服务器及终端。所述技术方案如下：</p>
+      <p>[0007] 第一方面，提供了一种信息交互方法，所述方法应用于同一群组内的各个用户使 用各自对应的用户标识通过与各个系统平台兼容的社交应用服务器进行信息交互的场景， 其中，所述同一群组内的各个用户在所述社交应用服务器上注册有对应的社交应用标识， 所述方法包括：</p>
+      <p>[0008] 接收第一用户对应的第一终端发送的信息发送请求，所述信息发送请求中携带需 要发送的信息以及至少一个用户标识，所述用户标识为接收所述信息的第二用户的用户标 识，所述第一用户及所述第二用户属于相同群组；</p>
+      <p>[0009] 查询所述信息发送请求中携带的每个用户标识对应的社交应用标识；</p>
+      <p>[0010] 根据每个社交应用标识将所述信息发送请求中携带的信息发送至每个第二用户 对应的第二终端。</p>
+      <p>[0011] 第二方面，提供了一种信息交互方法，所述方法包括：</p>
+      <p>[0012] 第一用户对应的第一终端获取需要发送的信息以及至少一个用户标识，所述用户 标识为接收所述信息的第二用户的用户标识，所述第一用户及所述第二用户属于相同群 组；</p>
+      <p>[0013] 向社交应用服务器发送携带所述需要发送的信息以及所述至少一个用户标识的 信息发送请求，由所述社交应用服务器查询所述信息发送请求中携带的每个用户标识对应 的社交应用标识后，根据每个社交应用标识将所述信息发送请求中携带的信息发送至每个 第二用户对应的第二终端。</p>
+      <p>[0014] 第三方面，提供了一种信息交互方法，所述方法包括：</p>
+      <p>[0015] 第二用户对应的第二终端接收社交应用服务器发送的信息，所述信息由所述社交 应用服务器接收到第一用户对应的第一终端发送的信息发送请求，并查询所述信息发送请 求中携带的每个用户标识对应的社交应用标识后发送，所述信息发送请求中携带需要发 送的信息以及至少一个用户标识，所述用户标识为接收所述信息的第二用户的用户标识， 所述第一用户及所述第二用户属于相同群组；</p>
+      <p>[0016] 展示接收到的信息。</p>
+      <p>[0017] 第四方面，提供了一种身份鉴权方法，所述方法包括：</p>
+      <p>[0018] 接收请求加入群组的至少一个终端发送的群组加入请求，所述群组加入请求中携 带请求加入群组的用户对应的用户信息；</p>
+      <p>[0019] 在预先获取到的用户信息集合中查询所述群组加入请求中携带的用户信息，所述 用户信息集合中包括具有加入群组权限的用户对应的用户信息，所述用户信息包括社交应 用标识、邮箱号码、手机号码中的至少一种信息；</p>
+      <p>[0020] 如果在所述用户信息集合中查询到所述群组加入请求中携带的用户信息，则将所 述群组加入请求中携带的用户信息对应的用户作为群组用户，并向请求加入群组的终端返 回成功加入群组响应。</p>
+      <p>[0021] 第五方面，提供了一种社交应用服务器，所述服务器上注册有同一群组内的各个 用户对应的社交应用标识，所述服务器包括：</p>
+      <p>[0022] 第一接收模块，用于接收第一用户对应的第一终端发送的信息发送请求，所述信 息发送请求中携带需要发送的信息以及至少一个用户标识，所述用户标识为接收所述信息 的第二用户的用户标识，所述第一用户及所述第二用户属于相同群组；</p>
+      <p>[0023] 第一查询模块，用于查询所述信息发送请求中携带的每个用户标识对应的社交应 用标识；</p>
+      <p>[0024] 发送模块，用于根据每个社交应用标识将所述信息发送请求中携带的信息发送至 每个第二用户对应的第二终端。</p>
+      <p>[0025] 第六方面，提供了一种终端，所述终端为第一用户对应的终端，所述终端包括：</p>
+      <p>[0026] 获取模块，用于获取需要发送的信息以及至少一个用户标识，所述用户标识为接 收所述信息的第二用户的用户标识，所述第一用户及所述第二用户属于相同群组；</p>
+      <p>[0027] 发送模块，用于向社交应用服务器发送携带所述需要发送的信息以及所述至少一 个用户标识的信息发送请求，由所述社交应用服务器查询所述信息发送请求中携带的每个 用户标识对应的社交应用标识后，根据每个社交应用标识将所述信息发送请求中携带的信 息发送至每个第二用户对应的第二终端。</p>
+      <p>[0028] 第七方面，提供了一种终端，所述终端为第二用户对应的终端，所述终端包括：</p>
+      <p>[0029] 第一接收模块，用于接收社交应用服务器发送的信息，所述信息由所述社交应用 服务器接收到第一用户对应的第一终端发送的信息发送请求，并查询所述信息发送请求中 携带的每个用户标识对应的社交应用标识后发送，所述信息发送请求中携带需要发送的信 息以及至少一个用户标识，所述用户标识为接收所述信息的第二用户的用户标识，所述第 一用户及所述第二用户属于相同群组；</p>
+      <p>[0030] 展示模块，用于展示接收到的信息。</p>
+      <p>[0031] 第八方面，提供了一种身份鉴权服务器，所述服务器包括：</p>
+      <p>[0032] 第一接收模块，用于接收请求加入群组的至少一个终端发送的群组加入请求，所 述群组加入请求中携带请求加入群组的用户对应的用户信息；</p>
+      <p>[0033] 查询模块，用于在预先获取到的用户信息集合中查询所述群组加入请求中携带的 用户信息，所述用户信息集合中包括具有加入群组权限的用户对应的用户信息，所述用户 信息包括社交应用标识、邮箱号码、手机号码中的至少一种信息；</p>
+      <p>[0034] 第一确定模块，用于当在所述用户信息集合中查询到所述群组加入请求中携带的 用户信息时，则将所述群组加入请求中携带的用户信息对应的用户作为群组用户；</p>
+      <p>[0035] 第一返回模块，用于向请求加入群组的终端返回成功加入群组响应。</p>
+      <p>[0036] 本发明实施例提供的技术方案带来的有益效果是：</p>
+      <p>[0037] 通过与各个系统平台兼容的社交应用服务器接收第一用户对应的第一终端发送 的信息发送请求，查询信息发送请求中携带的每个用户标识对应的社交应用标识，根据每 个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第二终端，从而 实现第一终端与第二终端的交互。由于可以通过与各个系统平台兼容的社交应用服务器实 现第一终端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并进行 维护，从而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>[0038] 为了更清楚地说明本发明实施例中的技术方案，下面将对实施例描述中所需要使 用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于 本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他 的附图。</p>
+      <p>[0039] 图1是根据一示例性实施例示出的一种信息交互方法的实施环境的示意图；</p>
+      <p>[0040] 图2是根据一示例性实施例示出的一种信息交互方法的流程图；</p>
+      <p>[0041] 图3是根据一示例性实施例示出的一种信息交互方法的流程图；</p>
+      <p>[0042] 图4是根据一示例性实施例示出的一种信息交互方法的流程图；</p>
+      <p>[0043] 图5是根据一示例性实施例示出的一种身份鉴权方法的流程图；</p>
+      <p>[0044] 图6是根据一示例性实施例示出的一种信息交互方法的流程图；</p>
+      <p>[0045] 图7是根据一示例性实施例示出的一种信息交互方法的流程图；</p>
+      <p>[0046] 图8是根据一示例性实施例示出的一种服务器的框图；</p>
+      <p>[0047] 图9是根据一示例性实施例示出的一种服务器的框图；</p>
+      <p>[0048] 图10是根据一示例性实施例示出的一种服务器的框图；</p>
+      <p>[0049] 图11是根据一示例性实施例示出的一种服务器的框图；</p>
+      <p>[0050] 图12是根据一示例性实施例示出的一种服务器的框图；</p>
+      <p>[0051] 图13是根据一示例性实施例示出的一种服务器的框图；</p>
+      <p>[0052] 图14是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0053] 图15是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0054] 图16是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0055] 图17是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0056] 图18是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0057] 图19是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0058] 图20是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0059] 图21是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0060] 图22是根据一示例性实施例示出的一种终端的框图；</p>
+      <p>[0061] 图23是根据一示例性实施例示出的一种服务器的框图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>[0062] 为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方 式作进一步地详细描述。</p>
+      <p>[0063] 请参考图1，其示出了本发明实施例提供的方法所涉及的实施环境的结构示意图。 如图1所示，该实施环境包括第一终端101、第二终端102、社交应用服务器103和身份鉴权 服务器104。第一终端101及第二终端102可以是智能手机、平板电脑、膝上型便携计算机 等等。通过图1所示的实施环境，第一终端101和社交应用服务器103之间可以通过无线网 络进行通信，第二终端102和社交应用服务器103之间可以通过无线网络进行通信，身份鉴 权服务器104可分别与第一终端101、第二终端102及社交应用服务器103之间通过无线网 络进行通信。此外，社交应用服务器103及身份鉴权服务器104的功能可以集成到一个服 务器来实现，即通过一个服务器既社交应用服务器103的功能，也实现身份鉴权服务器104 的功能。当然，社交应用服务器103及身份鉴权服务器104的功能也可以分成两个独立的 服务器来实现，本实施例对此不作具体限定。</p>
+      <p>[0064] 为了便于说明，图1仅示出一个第一终端101、第二终端102、社交应用服务器103 和身份鉴权服务器104,第一终端101及第二终端102仅代表多个终端中的一个。下面实施 例将以通过第一终端101、第二终端102、社交应用服务器103和身份鉴权服务器104之间 的信息交互实现信息统计为例来对本发明实施例进行举例说明。</p>
+      <p>[0065] 由于相关技术中在进行信息交互时，需要预先在各自的系统平台上开发用于实现 信息交互的应用程序，并根据每个终端所处的系统平台开发相应版本的应用程序，使得开 发成本较高。同时，在后期对已开发的多个版本应用程序进行维护时，维护成本也较高。另 夕卜，在进行信息交互时，每个终端只有在安装了与自身所处的系统平台兼容的应用程序时， 才能够进行信息交互，导致信息交互方式的通用性差。</p>
+      <p>[0066] 为了预防上述情况，降低信息交互的成本，并提高信息交互方式的通用性。结合图 1及上述内容的实施环境，本发明实施例提供了一种信息交互方法，该方法应用于同一群组 内的各个用户使用各自对应的用户标识通过与各个系统平台兼容的社交应用服务器进行 信息交互的场景。其中，同一群组内的各个用户在社交应用服务器上注册有对应的社交应 用标识。参见图2,本实施例提供的方法流程包括：</p>
+      <p>[0067] 201 :接收第一用户对应的第一终端发送的信息发送请求，信息发送请求中携带需 要发送的信息以及至少一个用户标识，用户标识为接收信息的第二用户的用户标识，第一 用户及第二用户属于相同群组；</p>
+      <p>[0068] 在一个可选实施例中，接收第一用户对应的第一终端发送的信息发送请求之前， 还包括：</p>
+      <p>[0069] 接收第二用户对应的第二终端发送的群组加入请求，群组加入请求中携带请求加 入群组的第二用户对应的用户信息；</p>
+      <p>[0070] 在预先获取到的用户信息集合中查询群组加入请求中携带的用户信息，用户信息 集合中包括具有加入群组权限的用户对应的用户信息，用户信息包括社交应用标识、邮箱 号码、手机号码中的至少一种信息；</p>
+      <p>[0071] 如果在用户信息集合中查询到群组加入请求中携带的用户信息，则将第二用户作 为群组用户，并向第二用户对应的第二终端返回成功加入群组响应。</p>
+      <p>[0072] 在一个可选实施例中，接收第二用户对应的第二终端发送的群组加入请求之前， 还包括：</p>
+      <p>[0073] 生成群组标识，并根据群组标识生成对应的二维码；</p>
+      <p>[0074] 接收第二用户对应的第二终端发送的群组加入请求，包括：</p>
+      <p>[0075] 接收第二用户对应的第二终端在扫描群组标识对应的二维码后发送的群组加入 请求。</p>
+      <p>[0076]202 :查询信息发送请求中携带的每个用户标识对应的社交应用标识；</p>
+      <p>[0077] 在一个可选实施例中，查询信息发送请求中携带的每个用户标识对应的社交应用 标识，包括：</p>
+      <p>[0078] 在预先存储的用户标识与社交应用标识的对应关系中查询信息发送请求中携带 的每个用户标识对应的社交应用标识。</p>
+      <p>[0079]203:根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户 对应的第二终端。</p>
+      <p>[0080] 在一个可选实施例中，根据每个社交应用标识将信息发送请求中携带的信息发送 至每个第二用户对应的第二终端，包括：</p>
+      <p>[0081] 根据每个社交应用标识以HTTP(Hypertexttransferprotocol，超文本传输协 议）方式调用公开的API(ApplicationProgrammingInterface,应用程序编程接口）将 信息发送请求中携带的信息发送至每个第二用户对应的第二终端；</p>
+      <p>[0082] 或，根据每个社交应用标识以网页的方式将信息发送请求中携带的信息发送至每 个第二用户对应的第二终端。</p>
+      <p>[0083] 在一个可选实施例中，该方法还包括：</p>
+      <p>[0084] 接收第二终端发送的信息处理请求，信息处理请求中携带群组标识、第二终端对 应的第二用户的用户标识及信息处理标识；</p>
+      <p>[0085] 根据群组标识将信息处理请求中携带的第二用户的用户标识及信息处理标识转 发至对应群组中的第一用户对应的第一终端。</p>
+      <p>[0086] 在一个可选实施例中，根据群组标识将信息处理请求转发至对应群组中的第一用 户对应的第一终端之后，还包括：</p>
+      <p>[0087] 接收第一终端返回的信息处理响应，信息处理响应中携带第二用户信息对应的用 户标识和信息处理结果；</p>
+      <p>[0088] 查询信息处理响应中携带的用户标识对应的社交应用标识；</p>
+      <p>[0089] 根据查询到的社交应用标识将信息处理响应中携带的信息处理结果返回至发送 信息处理请求的第二终端。</p>
+      <p>[0090] 本发明实施例提供的方法，通过与各个系统平台兼容的社交应用服务器接收第一 用户对应的第一终端发送的信息发送请求，查询信息发送请求中携带的每个用户标识对应 的社交应用标识，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用 户对应的第二终端，从而实现第一终端与第二终端的交互。由于可以通过与各个系统平台 兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开 发相应的应用程序并进行维护，从而使得实现信息交互的成本较低，信息交互的通用性较 好。</p>
+      <p>[0091] 结合图1及上述内容的实施环境，本发明实施例提供了一种信息交互方法，该方 法应用于第一终端。参见图3,本实施例提供的方法流程包括：</p>
+      <p>[0092] 301 :第一用户对应的第一终端获取需要发送的信息以及至少一个用户标识，用户 标识为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0093] 302:向社交应用服务器发送携带需要发送的信息以及至少一个用户标识的信息 发送请求，由社交应用服务器查询信息发送请求中携带的每个用户标识对应的社交应用标 识后，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第 二终端。</p>
+      <p>[0094] 在一个可选实施例中，该方法还包括：</p>
+      <p>[0095] 接收社交应用服务器发送的第二用户的用户标识及信息处理标识，第二用户的用 户标识及信息处理标识由社交应用服务器在接收到携带群组标识、第二用户的用户标识及 信息处理标识的信息处理请求后发送；</p>
+      <p>[0096] 根据第二用户的用户标识及信息处理标识执行对应的信息处理操作。</p>
+      <p>[0097] 在一个可选实施例中，根据第二用户的用户信息及信息处理标识执行对应的信息 处理操作之后，还包括：</p>
+      <p>[0098] 向社交应用服务器返回携带第二用户的用户标识和信息处理结果的信息处理响 应，由社交应用服务器查询信息处理响应中携带的用户标识对应的社交应用标识后，根据 查询到的社交应用标识将信息处理响应中携带的信息处理结果返回至发送信息处理请求 的第二终端。</p>
+      <p>[0099] 本发明实施例提供的方法，通过获取需要发送的信息以及至少一个用户标识，向 社交应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送请求，由与各 个系统平台兼容的社交应用服务器根据查询到的每个社交应用标识将信息发送请求中携 带的信息发送至每个第二用户对应的第二终端，从而实现第一终端与第二终端的交互。由 于可以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交互，而不 需要针对各自的系统平台开发相应的应用程序并进行维护，从而使得实现信息交互的成本 较低，信息交互的通用性较好。</p>
+      <p>[0100] 结合图1及上述内容的实施环境，本发明实施例提供了一种信息交互方法，该方 法应用于第二终端。参见图4,本实施例提供的方法流程包括：</p>
+      <p>[0101] 401 :第二用户对应的第二终端接收社交应用服务器发送的信息，信息由社交应用 服务器接收到第一用户对应的第一终端发送的信息发送请求，并查询信息发送请求中携带 的每个用户标识对应的社交应用标识后发送，信息发送请求中携带需要发送的信息以及至 少一个用户标识，用户标识为接收信息的第二用户的用户标识，第一用户及第二用户属于 相同群组；</p>
+      <p>[0102] 在一个可选实施例中，接收社交应用服务器发送的信息之前，还包括：</p>
+      <p>[0103] 获取加入群组指令，根据加入群组指令向社交应用服务器发送群组加入请求，群 组加入请求中携带第二用户对应的用户信息；</p>
+      <p>[0104] 接收社交应用服务器在根据群组加入请求中携带的用户信息进行加入群组权限 验证，并在加入群组权限验证通过后返回的成功加入群组响应。</p>
+      <p>[0105] 在一个可选实施例中，获取加入群组指令，包括：</p>
+      <p>[0106] 获取群组标识对应的二维码的扫描指令，二维码由社交应用服务器生成群组标 识，并根据群组标识生成；</p>
+      <p>[0107] 根据扫描指令扫描群组标识对应的二维码，生成加入群组指令，加入群组指令用 于请求加入二维码对应的群组。</p>
+      <p>[0108] 402 :展示接收到的信息。</p>
+      <p>[0109] 在一个可选实施例中，该方法还包括：</p>
+      <p>[0110] 获取第二用户的用户标识及信息处理标识；</p>
+      <p>[0111] 向社交应用服务器发送携带群组标识、第二用户的用户标识及信息处理标识的信 息处理请求，由社交应用服务器根据群组标识将信息处理请求中携带的第二用户的用户标 识及信息处理标识转发至对应群组中的第一用户对应的第一终端。</p>
+      <p>[0112] 在一个可选实施例中，向社交应用服务器发送携带群组标识、第二用户的用户标 识及信息处理标识的信息处理请求之后，还包括：</p>
+      <p>[0113] 接收社交应用服务器返回的信息处理结果。</p>
+      <p>[0114] 本发明实施例提供的方法，通过接收与各个系统平台兼容的社交应用服务器发送 的信息，展示接收到的信息。由于可以通过与各个系统平台兼容的社交应用服务器实现第 一终端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并进行维 护，从而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0115] 结合图1及上述内容的实施环境，本发明实施例提供了一种身份鉴权方法，该方 法应用于身份鉴权服务器。参见图5,本实施例提供的方法流程包括：</p>
+      <p>[0116] 501 :接收请求加入群组的至少一个终端发送的群组加入请求，群组加入请求中携 带请求加入群组的用户对应的用户信息；</p>
+      <p>[0117] 在一个可选实施例中，接收请求加入群组的至少一个终端发送的群组加入请求之 前，还包括：</p>
+      <p>[0118] 生成群组标识，并根据群组标识生成对应的二维码；</p>
+      <p>[0119] 接收请求加入群组的至少一个终端发送的群组加入请求，包括：</p>
+      <p>[0120] 接收请求加入群组的至少一个终端在扫描群组标识对应的二维码后发送的群组 加入请求。</p>
+      <p>[0121] 502:在预先获取到的用户信息集合中查询群组加入请求中携带的用户信息，用户 信息集合中包括具有加入群组权限的用户对应的用户信息，用户信息包括社交应用标识、 邮箱号码、手机号码中的至少一种信息；</p>
+      <p>[0122] 在一个可选实施例中，在预先获取到的用户信息集合中查询群组加入请求中携带 的用户信息之前，还包括：</p>
+      <p>[0123] 获取具有加入群组权限的各个用户对应的用户信息，得到用户信息集合。</p>
+      <p>[0124] 在一个可选实施例中，在预先获取到的用户信息集合中查询群组加入请求中携带 的用户信息之后，还包括：</p>
+      <p>[0125] 如果在用户信息集合中未查询到群组加入请求中携带的用户信息，则向终端返回 输入手机号码的提示信息，并接收根据提示信息返回的手机号码；</p>
+      <p>[0126] 如果接收到的手机号码在用户信息集合中，则向接收到的手机号码对应的终端下 发验证信息，并获取返回的验证信息；</p>
+      <p>[0127] 在验证获取到的验证信息正确之后，将群组加入请求中携带的用户信息对应的用 户作为群组用户，并向请求加入群组的终端返回成功加入群组响应。</p>
+      <p>[0128] 503 :如果在用户信息集合中查询到群组加入请求中携带的用户信息，则将群组 加入请求中携带的用户信息对应的用户作为群组用户，并向请求加入群组的终端返回成功 加入群组响应。</p>
+      <p>[0129] 上述各个步骤的具体实现过程可参考下述图6所示的实施例步骤601中有关身份 鉴权的详细描述，此处不再一一赘述。</p>
+      <p>[0130] 本发明实施例提供的方法，通过在预先获取到的用户信息集合中查询群组加入请 求中携带的用户信息，若在用户信息集合中查询到群组加入请求中携带的用户信息，则将 群组加入请求中携带的用户信息对应的用户作为群组用户，并向请求加入群组的终端返回 成功加入群组响应。从而使得加入群组的用户为预先获取到的用户信息集合中的用户信息 所对应的用户，即对加入群组的用户进行了限制，进而保证群组内用户的安全性。</p>
+      <p>[0131] 结合图1及上述内容的实施环境，本发明实施例提供了一种信息交互方法，该方 法涉及社交应用服务器、第一终端及第二终端，其中，社交应用服务器同时具有上述各个实 施例所述的社交应用服务器及身份鉴权服务器的功能。也就是说，本实施例将上述各个实 施例中的社交应用服务器及身份鉴权服务器的功能集成到一个社交应用服务器中，实现同 一群组内的各个用户使用各自对应的用户标识通过与各个系统平台兼容的社交应用服务 器进行信息交互。此外，同一群组内的各个用户在社交应用服务器上注册有对应的社交应 用标识。结合上述实施例中的内容，以通过如图5所示实施例进行身份鉴权的终端加入群 组后，群组内用户之间进行信息交互为例，对本实施例提供的方法进行举例说明。参见图6， 本实施例提供的方法流程包括：</p>
+      <p>[0132] 601 :第一用户对应的第一终端获取需要发送的信息以及至少一个用户标识，用户 标识为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0133] 本实施例不对第一终端获取需要发送的信息的方式作具体限定，包括但不限于： 显示信息编辑界面；获取第一用户在显示的信息编辑界面上输入的信息，并作为需要发送 的信息。</p>
+      <p>[0134] 在上述方法中，第一终端获取到的信息是由第一用户实时输入的。除此之外，第一 终端还可以根据预先设定的系统逻辑自动生成需要发送的信息，本实施例对此不作具体限 定。例如，第一终端将最近一些财务数据进行统计，生成需要发送的信息。</p>
+      <p>[0135] 需要说明的是，本步骤中第一终端获取的用户标识为接收信息的第二用户的用户 标识，每个第二用户都对应一个唯一的用户标识。例如，若群组为一个企业群组，则群组内 的每个用户为企业员工，每个用户的用户标识可以为用户的员工号等。而群组是由第一用 户创建，第二用户可以加入第一用户创建的群组。若第二用户加入了第一用户创建的群组， 则第一用户及第二用户将属于相同的群组，此时，第二用户可以接收第一用户发送的信息。 若第二用户未加入第一用户创建的群组，则第一用户及第二用户将不属于相同的群组，此 时，第二用户不能接收第一用户发送的信息。另外，第一用户在向第二用户发送信息时，实 质上是先由社交应用服务器获取第一用户需要发送的信息，再由社交应用服务器向第二用 户进行转发，具体过程可参考后续步骤。</p>
+      <p>[0136] 以上述内容为基础，关于第一终端获取至少一个用户标识的方式，本实施例对此 不作具体限定，包括但不限于：预先存储所有已加入群组的第二用户的用户标识；显示所 有已加入群组的第二用户的用户标识；获取第一用户在显示的用户标识中选择的用户标 识。当然，第一终端还可以获取预先存储的所有已加入群组的第二用户的用户标识，而不用 第一用户进行选择，本实施例对此不作具体限定。</p>
+      <p>[0137] 例如，第一终端在存储所有已加入群组的第二用户的用户标识后，可通过列表的 形式显示所有已加入群组的第二用户的用户标识。其中，每个列表项都对应一个第二用户 的用户标识。第一用户可通过点击列表项的方式选择至少一个用户标识，从而由第一终端 获取第一用户选择的至少一个用户标识。</p>
+      <p>[0138] 由于本步骤中第一终端获取到的信息最终需要发送至第二用户对应的第二终 端，而第二用户在加入到第一用户创建群组后，才能接收到第一用户发送的信息。因此，第 二用户在接收第一用户发送的信息之前，还需要先加入到第一用户创建的群组，而在这之 前，第一用户需要先创建群组。</p>
+      <p>[0139] 关于第一用户创建群组的方式，本实施例对此不作具体限定，包括但不限于：第一 终端确定创建群组指令，根据创建群组指令向社交应用服务器发送群组创建请求；社交应 用服务器接收第一终端发送的群组创建请求，根据群组创建请求创建群组，并同时生成群 组标识，根据群组标识生成对应的二维码。</p>
+      <p>[0140] 本实施例不对第一终端确定创建群组指令的方式作具体限定，包括但不限于：显 示群组创建界面；获取用户在群组创建界面上输入的群组信息；根据获取到的群组信息确 定创建群组指令。其中，群组信息中可以包括群组名称，群组介绍等，本实施例不对群组信 息的内容作具体限定。</p>
+      <p>[0141] 社交应用服务器在接收第一终端发送的群组创建请求后，可根据群组创建请求创 建群组，并同时生成群组标识，根据群组标识生成对应的二维码。需要说明的是，社交应用 服务器在生成群组标识时，需要保证生成的群组标识与当前已创建群组的群组标识不同。 另外，在根据群组标识生成对应的二维码时，可先将群组标识转换为对应的二进制代码，再 根据二进制代码按照预设算法生成对应的二维码。当然，还可以采取其它方式根据群组标 识生成对应的二维码，本实施例对此不作具体限定。可选地，由于第一终端需根据创建群组 指令向社交应用服务器发送群组创建请求，而创建群组指令中包含群组信息，因此，还可以 先将群组标识及群组信息转换为对应的二进制代码，再根据两者的二进制代码按照预设算 法生成对应的二维码。通过上述过程能够让终端后续在扫描二维码时，除了能够获取群组 标识，还能够获取群组信息并可进行显示，如群组名称及群组介绍等，从而使得扫描二维码 能获取较丰富的信息，本实施例对此不作具体限定。</p>
+      <p>[0142] 第一用户创建群组后，以上述内容为基础，关于第二用户加入到第一用户创建的 群组时，对第二用户进行身份鉴权的方式，本实施例对此不作具体限定。结合上述图5所 示的身份鉴权的内容，包括但不限于如下过程：</p>
+      <p>[0143] 第一步，第二终端获取加入群组指令，根据加入群组指令向社交应用服务器发送 群组加入请求，其中，群组加入请求中携带第二用户对应的用户信息；</p>
+      <p>[0144] 本实施例不对第二终端获取加入群组指令的方式作具体限定，包括但不限于：获 取群组标识对应的二维码的扫描指令；根据扫描指令扫描群组标识对应的二维码，生成加 入群组指令。</p>
+      <p>[0145] 其中，第二终端可以检测用户的扫描操作，根据检测到的扫描操作获取群组标识 对应的二维码的扫描指令。例如，第二终端显示的界面上有"扫描二维码"文本的按钮，当 检测到用户点击该按钮时，则表示用户需要扫描二维码。此时，可根据检测到的点击操作获 取扫描指令，根据扫描指令打开摄像头，并对摄像头对准区域内的群组标识对应的二维码 进行扫描，从而生成加入群组指令。当然，还可以采用其它方式生成加入群组指令，本实施 例对此不作具体限定。</p>
+      <p>[0146] 第二终端获取加入群组指令后，可根据加入群组指令向社交应用服务器发送群组 加入请求。由于后续步骤社交应用服务器需要根据第二用户对应的用户信息对第二用户进 行加入群组权限验证，因此，群组加入请求中需至少携带第二用户对应的用户信息。又由于 社交应用服务器在对第二用户进行加入群组权限验证时，需要先确定一个群组，再对第二 用户加入该群组的权限进行验证。因此，群组加入请求中还可携带群组标识，以用于标识第 二用户需要加入哪个群组。其中，由于二维码是根据群组标识生成，因此，在上述扫描二维 码时可获取对应的群组标识。当然，还可以采用其它方法获取群组标识，本实施例对此不作 具体限定。</p>
+      <p>[0147] 第二步，社交应用服务器接收请求加入群组的至少一个终端发送的群组加入请 求；</p>
+      <p>[0148] 由于需要加入群组的第二用户可能会有多个，因此在第一步中，会有多个第二终 端向社交应用服务器发送群组加入请求，从而使得社交应用服务器能够接收到至少一个终 端发送的群组加入请求。</p>
+      <p>[0149] 需要说明的是，由于在第一步中，第二终端向社交应用服务器发送群组加入请求 可由第二终端扫描二维码来触发。因此，社交应用服务器在接收群组加入请求时，可以接收 请求加入群组的至少一个终端在扫描群组标识对应的二维码后发送的群组加入请求，本实 施例对此不作具体限定。</p>
+      <p>[0150] 第三步，社交应用服务器根据群组加入请求中携带的用户信息进行加入群组权限 验证；</p>
+      <p>[0151] 本实施例不对社交应用服务器根据群组加入请求中携带的用户信息进行加入群 组权限验证的方式作具体限定，包括但不限于：在预先获取到的用户信息集合中查询群组 加入请求中携带的用户信息，用户信息集合中包括具有加入群组权限的用户对应的用户信 息，该用户信息包括但不限于社交应用标识、邮箱号码、手机号码中的至少一种信息；如果 在用户信息集合中查询到群组加入请求中携带的用户信息，则加入群组权限验证通过，将 群组加入请求中携带的用户信息对应的用户作为群组用户，并向请求加入群组的终端返回 成功加入群组响应。</p>
+      <p>[0152] 其中，具有加入群组权限的用户对应的用户信息集合可由第一用户通过网络上 传，社交应用服务器获取第一用户上传的用户信息集合并进行保存，本实施例不对社交应 用服务器获取具有加入群组权限的用户对应的用户信息集合的方式作具体限定。另外，第 一用户还可以上传具有加入群组权限的用户对应的用户标识，社交应用服务器获取第一用 户上传的用户标识后也可以进行保存，本实施例对此也不作具体限定。</p>
+      <p>[0153] 需要说明的是，由于每个用户可能会使用多种应用，因此，每个用户对应的用户信 息可能会有多个。例如，以终端为用户手机的为例，该用户相应的用户信息除了手机号之 夕卜，可能还会包括邮箱账号及社交应用程序帐号等，从而该用户的用户信息就会有三个。基 于上述原理，社交应用服务器在预先存储每个用户信息及每个用户信息对应的用户标识 时，每个用户标识对应的用户信息可能会有多种，本实施例不对每个用户标识对应的用户 信息的个数作具体限定。</p>
+      <p>[0154] 其中，社交应用服务器预先存储的每个用户标识对应的用户均为具有加入群组权 限的用户。通过预先存储每个用户信息及每个用户信息对应的用户标识，在接收到任意一 个第二终端发送的用户信息时，可以根据该第二终端发送的用户信息进行查找，从而确定 使用该第二终端的用户是否具有加入群组权限。基于上述说明，服务器在接收任一第二终 端发送的用户信息时，可能会接收到使用该第二终端的用户相应的用户信息中的任意一种 信息。另外，服务器在预先存储每个用户信息及每个用户信息对应的用户标识时，存储的每 个用户表示也可能会对应多个用户信息。因此，社交应用服务器在根据每个第二终端发送 的用户信息在数据库中查找时，若第二终端所发送的用户信息存在于存储的任意一种用户 信息中，即可确定使用该终端的用户具有加入群组的权限。</p>
+      <p>[0155] 例如，以第二终端为手机，用户信息包括手机号、邮箱账号及应用程序账号为例， 社交应用服务器预先存储了每个用户信息及每个用户信息对应的用户标识，得到的数据库 如表1所示：</p>
+      <p>[0156] 表 1</p>
+      <p>[0157]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104539571A/CN104539571AD00191.png"> <img id="idf0001" file="CN104539571AD00191.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104539571A/CN104539571AD00191.png" class="patent-full-image" alt="Figure CN104539571AD00191"> </a> </div>
+      
+      <p>[0158] 其中，表1中每个用户标识都对应着三种应用标识。在实际情况中，可能存在有的 用户标识对应的用户信息种类在三种以下，本实施例不对作具体限定。例如，在表1中用户 标识User_IDl对应的用户信息为手机号、邮箱账号及应用程序账号，实际情况中用户标识 User_IDl对应的用户可能没有邮箱，则此时用户标识User_IDl对应的用户信息只有手机 号与应用程序账号这两种。</p>
+      <p>[0159] 若任一第二终端发送的用户信息为Apl，此时可以在表1中所有的用户信息进行 查找。由于用户信息API在表1中是用户标识User_ID3对应的用户信息，因此，在表1中 可以查找到第二终端发送的用户信息Apl，从而该第二终端即为具有加入群组权限的终端。 另外，由于服务器并不知道第二终端发送的用户信息为上述三种用户信息的哪一种，因此， 服务器在根据第二终端发送的用户信息在表1中进行查找时，可以分如下三步查找过程： 先根据第二终端发送的用户信息在表1中所有的手机号中进行查找，若第二终端发送的用 户信息不存在于表1中所有的手机号中，则再根据第二终端发送的用户信息在表1中所有 的邮箱账号中进行查找。若第二终端发送的用户信息不存在于表1中所有的邮箱账号中， 则最后根据第二终端发送的用户信息在表1中所有的应用程序账号中进行查找。其中，上 述三步查找过程若有一步查找成功，则确定该第二终端具有加入群组的权限。若三步查找 过程均查找失败，则确定该第二终端不具有加入群组的权限。</p>
+      <p>[0160] 另外，由于第二终端发送的用户信息可能不为表1中三种用户信息中的任意一 种，此时，为了验证终端是否具有加入群组的权限，则向终端返回输入手机号码的提示信 息，从而可提示使用该第二终端的第二用户输入手机号，当第一终端接收根据提示信息返 回的手机号之后，查找第二用户输入的手机号是否在用户信息集合中。若查找结果为接收 到的手机号码在用户信息集合中，则向接收到的手机号码对应的终端下发验证信息，即根 据第二用户输入的手机号向第二用户下发验证信息，并提示第二用户输入下发的验证信 息。获取返回的验证信息后，对获取到的验证信息进行验证，若用户输入的验证信息与之前 下发的验证信息一致，则确定该第二终端具有加入群组的权限。反之，则确定该第二终端不 具有加入群组的权限。</p>
+      <p>[0161] 可选地，由于用户在输入验证信息时，会存在输入错误的可能性，因此，可以提供 给用户若干次输入的机会。当用户在规定次数内未输入正确的验证信息时，则确定该终端 不具有加入群组的权限。</p>
+      <p>[0162] 例如，以第二终端为手机为例，若手机发送的用户信息不为表1中三种应用标识 中的任意一种，则可提示使用该手机的第二用户输入手机号，如在手机的界面上以弹出对 话框的形式提示第二用户输入手机号。当获取到第二用户输入的手机号后，可根据第二用 户输入的手机号在表1中存储的手机号中进行查找，查找是否存在，以验证第二用户输入 的手机号是否合法。若在表1中查找到第二用户输入的手机号，则说明第二用户输入的手 机号合法。反之，则说明第二用户输入的手机号不合法。</p>
+      <p>[0163] 在验证第二用户输入的手机号合法后，根据第二用户输入的手机号以短信的形式 向手机下发验证信息。手机在接收到包含验证信息的短信后，可以显示给第二用户。第二 用户根据显示的验证信息在显示的验证信息输入界面中输入验证信息，并由手机将输入的 验证信息发送至服务器。服务器在接收到手机发送的验证信息后，将接收到的验证信息与 之前下发的验证信息进行比对。若两者相同，则确定该手机具有加入群组的权限。若两者 不相同，则确定该手机不具有加入群组的权限。</p>
+      <p>[0164] 由于若该第二用户真的是该手机号的使用者，则该第二用户的手机会收到服务器 发送的验证信息。若该第二用户不是该手机号的使用者，该第二用户的手机则不会收到服 务器发送的验证信息，从而不能输入正确的验证信息。通过上述方式可以验证该第二用户 是否为该手机号的合法用户。</p>
+      <p>[0165] 可选地，由于用户输入验证信息时可能会输错，因此，可以设置三次机会让用户进 行输入。若连续三次都输入错误，则再确定该手机不具有加入群组的权限。</p>
+      <p>[0166] 第四步，如果加入群组权限验证通过，则社交应用服务器向请求加入群组的终端 返回成功加入群组响应，并将群组加入请求中携带的应用标识对应的用户作为群组用户；</p>
+      <p>[0167] 通过上述第三步的过程，当发送群组加入请求的第二终端加入群组权限验证通过 后，社交应用服务器向请求加入群组的第二终端返回成功加入群组响应，第二终端可以根 据返回的成功加入群组响应提醒第二用户成功加入群组，如以通知的形式，本实施例对此 不作具体限定。</p>
+      <p>[0168] 需要说明的是，由于第三步中可能会有多个发送群组加入请求的第二终端通过加 入群组权限验证，因此，社交应用服务器可能会向多个请求加入群组的第二终端返回成功 加入群组响应，本实施例对此不作具体限定。</p>
+      <p>[0169] 社交应用服务器向请求加入群组的终端返回成功加入群组响应，可将群组加入请 求中携带的应用标识对应的用户作为群组用户。另外，为了后续发送信息，可将群组用户中 第二用户的用户标识及对应的应用标识进行保存，本实施例对此不作具体限定。</p>
+      <p>[0170] 通过在预先获取到的用户信息集合中查询群组加入请求中携带的用户信息，若在 用户信息集合中查询到群组加入请求中携带的用户信息，则将群组加入请求中携带的用户 信息对应的用户作为群组用户，并向请求加入群组的终端返回成功加入群组响应。从而使 得加入群组的用户为预先获取到的用户信息集合中的用户信息所对应的用户，即对加入群 组的用户进行了限制，进而保证群组内用户的安全性。</p>
+      <p>[0171] 第五步，第二终端接收社交应用服务器返回的成功加入群组响应。</p>
+      <p>[0172] 通过第四步的执行过程，第二终端在接收到社交应用服务器返回的成功加入群组 响应后，可根据成功加入群组响应提醒用户，如以通知的形式，用户可根据相关提醒获知已 成功加入群组。</p>
+      <p>[0173] 602:第一终端向社交应用服务器发送携带需要发送的信息以及至少一个用户标 识的信息发送请求；</p>
+      <p>[0174] 本实施例不对第一终端向社交应用服务器发送携带需要发送的信息以及至少一 个用户标识的信息发送请求的方式作具体限定，包括但不限于：根据需要发送的信息以及 至少一个用户标识生成信息发送请求；通过网络以数据包的形式向社交应用服务器发送信 息发送请求。其中，信息发送请求除了携带上述需要发送的信息以及至少一个用户标识之 夕卜，还可以携带其它内容，本实施例对此不作具体限定。</p>
+      <p>[0175] 603 :社交应用服务器接收第一终端发送的信息发送请求；</p>
+      <p>[0176] 通过上述步骤602,第一终端在向社交应用服务器发送信息发送请求后，社交应用 服务器可接收信息发送请求。其中，接收信息发送请求的方式与上述步骤602中第一终端 向社交应用服务器发送信息发送请求的方式相对应，本实施例对此不作具体限定。</p>
+      <p>[0177] 604:社交应用服务器查询信息发送请求中携带的每个用户标识对应的社交应用 标识；</p>
+      <p>[0178] 根据上述步骤603中的内容可知，由于社交应用服务器中存储了已加入群组的第 二用户的用户标识及社交应用标识，因此，社交应用服务器可以在预先存储的用户标识与 社交应用标识的对应关系中查询信息发送请求中携带的每个用户标识对应的社交应用标 识。</p>
+      <p>[0179] 605:社交应用服务器根据每个社交应用标识将信息发送请求中携带的信息发送 至每个第二用户对应的第二终端；</p>
+      <p>[0180] 本实施例不对社交应用服务器根据每个社交应用标识将信息发送请求中携带的 信息发送至每个第二用户对应的第二终端作具体限定，包括但不限于：根据每个社交应用 标识以HTTP方式调用公开的API将信息发送请求中携带的信息发送至每个第二用户对应 的第二终端；或，根据每个应用标识以网页的方式将信息发送请求中携带的信息发送至每 个第二用户对应的第二终端。</p>
+      <p>[0181] 其中，HTTP方式调用公开的API的方式适合使用程序自动生成相关内容，并动态 进行发送。而根据每个社交应用标识以网页的方式进行消息发送则适合批量发送相同内容 的消息，因此，可以根据具体需求选择发送方式，本实施例对此不作具体限定。</p>
+      <p>[0182] 606 :第二用户对应的第二终端接收社交应用服务器发送的信息；</p>
+      <p>[0183] 本实施例不对第二用户对应的第二终端接收社交应用服务器发送的信息的方式 作具体限定，具体实施时，第二用户对应的第二终端的接收方式可根据社交应用服务器发 送信息的方式进行接收，此处不再赘述。</p>
+      <p>[0184] 可选地，第二终端在接收到信息后，还可以反馈给第二用户，因此，第二终端可以 展示接收到的信息，具体详见步骤607。</p>
+      <p>[0185] 607 :第二终端展示接收到的信息。</p>
+      <p>[0186] 通过上述步骤606,第二终端在接收到信息后，可以对接收到的信息进行展示。其 中，展示的形式可根据社交应用服务器发送信息的形式，本实施例对此不作具体限定。例 如，当社交应用服务器发送信息的形式为网页的形式时，则以网页的形式进行展示。</p>
+      <p>[0187] 本实施例提供的方法，通过获取需要发送的信息以及至少一个用户标识，向社交 应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送请求，由与各个系 统平台兼容的社交应用服务器根据查询到的每个社交应用标识将信息发送请求中携带的 信息发送至每个第二用户对应的第二终端，从而实现第一终端与第二终端的交互。由于可 以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要 针对各自的系统平台开发相应的应用程序并进行维护，从而使得实现信息交互的成本较 低，信息交互的通用性较好。</p>
+      <p>[0188] 结合图1及上述内容的实施环境，本发明实施例提供了一种信息交互方法，该方 法涉及社交应用服务器、第一终端及第二终端，结合上述实施例中的内容，对本实施例提供 的方法进行举例说明。参见图7,本实施例提供的方法流程包括：</p>
+      <p>[0189] 701 :第二用户对应的第二终端获取第二用户的用户标识及信息处理标识；</p>
+      <p>[0190] 本实施例不对第二用户对应的第二终端获取第二用户的用户标识及信息处理标 识的方式作具体限定，包括但不限于：显示信息输入界面；获取第二用户在信息输入界面 输入的用户标识及信息处理标识。</p>
+      <p>[0191]其中，用户标识可以包括用户的员工号，姓名，用户联系方式等，本实施例对此不 作具体限定。信息处理标识用于标识具体做哪种信息处理操作，如可以为做查询信息处理 操作的信息处理标识，本实施例对此不作具体限定。</p>
+      <p>[0192] 702:第二终端向社交应用服务器发送携带群组标识、第二用户的用户标识及信息 处理标识的信息处理请求；</p>
+      <p>[0193] 本实施例不对二终端向社交应用服务器发送携带群组标识、第二用户的用户标识 及信息处理标识的信息处理请求的方式作具体限定，包括但不限于通过网络以数据包的方 式进行发送。</p>
+      <p>[0194] 信息处理请求中至少携带群组标识、第二用户的用户标识及信息处理标识，本实 施例不对信息处理请求中携带的内容作具体限定。其中，群组标识为第二终端对应的第二 用户在已加入群组对应的群组标识。但由于第二用户可能会加入多个群组，因此，第二用户 需要在已加入群组中选择至少一个群组。此时，群组标识为第二终端对应的第二用户在已 加入群组中选择的群组对应的群组标识。</p>
+      <p>[0195] 703 :社交应用服务器接收第二终端发送的信息处理请求；</p>
+      <p>[0196] 本实施例不对社交应用服务器接收第二终端发送的信息处理请求的方式作具体 限定，包括但不限于根据第二终端发送信息处理请求的方式进行接收。具体过程可结合上 述步骤702中第二终端的发送方式，此处不再赘述。</p>
+      <p>[0197] 704:社交应用服务器根据群组标识将信息处理请求中携带的第二用户的用户标 识及信息处理标识转发至对应群组中的第一用户对应的第一终端；</p>
+      <p>[0198] 根据上述图6对应的实施例中的内容，由于每个群组都对应唯一的群组标识，因 此，社交应用服务器可根据群组标识将信息处理请求中携带的第二用户的用户标识及信息 处理标识转发至对应群组中的第一用户对应的第一终端。其中，发送的方式可以通过网络 以数据包的形式发送，本实施例对此不作具体限定。</p>
+      <p>[0199] 705:第一终端接收社交应用服务器发送的第二用户的用户标识及信息处理标 识；</p>
+      <p>[0200]本实施例不对第一终端接收社交应用服务器发送的第二用户的用户标识及信息 处理标识的方式作具体限定，包括但不限于根据社交应用服务器的发送方式进行接收。具 体过程可结合上述步骤705中社交应用服务器的发送方式，此处不再赘述。</p>
+      <p>[0201] 706:第一终端根据第二用户的用户标识及信息处理标识执行对应的信息处理操 作；</p>
+      <p>[0202] 本实施例不对第一终端根据第二用户的用户标识及信息处理标识执行对应的信 息处理操作，包括但不限于：根据信息处理标识确定需要做的信息处理操作的种类；根据 需要做的信息处理操作的种类及第二用户的用户标识执行对应的信息处理操作。</p>
+      <p>[0203] 例如，以第二用户的用户标识为用户姓名或员工号，第一终端上预先存储了用户 个人信息为例。当信息处理标识对应的信息处理操作为查询用户个人信息操作时，可根据 第二用户的用户姓名或员工号查询该用户姓名对应的用户相关的用户个人信息，并将查询 到的信息返回至第二用户对应的第二终端。或者，当信息处理标识对应的信息处理操作为 上传信息操作时，可根据第二用户的用户标识确定上传者的身份，并对第二用户上传的信 息进行保存。</p>
+      <p>[0204] 可选地，通过上述过程可知，有的信息处理操作需第一终端独自进行，而有些信息 处理操作可能需要进一步地反馈，因此，针对后一种情况，本实施例还提供了相关的反馈方 法，具体详见后续步骤。</p>
+      <p>[0205] 707 :第一终端获取第二用户的用户标识，向社交应用服务器返回携带第二用户的 用户标识和信息处理结果的信息处理响应；</p>
+      <p>[0206] 根据上述图6对应的实施例可知，第一终端上存储了所有第二用户的用户标识， 因此，本步骤可根据预先存储的用户标识获取第二用户的用户标识，并向社交应用服务器 返回携带第二用户的用户标识和信息处理结果的信息处理响应。其中，信息处理响应即为 上述步骤706中执行信息处理操作后的反馈过程。通过信息处理响应能够让第二用户获知 信息处理操作的处理结果，而向社交应用服务器返回第二用户的用户标识，能够让社交应 用服务器根据用户标识确定向哪个第二用户发送信息处理响应，本实施例对此不作具体限 定。</p>
+      <p>[0207] 另外，返回的方式可通过网络以数据包的方式进行发送，本实施例对此不作具体 限定。</p>
+      <p>[0208] 708 :社交应用服务器接收第一终端返回的信息处理响应；</p>
+      <p>[0209] 本实施例不对社交应用服务器接收第一终端返回的信息处理响应的方式作具体 限定，包括但不限于根据第一终端向社交应用服务器返回信息处理响应的方式进行接收。 具体过程可结合上述步骤707中第一终端的返回方式，此处不再赘述。</p>
+      <p>[0210] 709:社交应用服务器查询信息处理响应中携带的用户标识对应的社交应用标 识；</p>
+      <p>[0211] 根据上述图6对应的实施例可知，由于社交应用服务器中预先存储了用户标识及 对应的社交应用标识，因此，本步骤可根据预先存储的用户标识及对应的社交应用标识查 询信息处理响应中携带的用户标识对应的社交应用标识。具体查询过程可参考上述图6对 应的实施例中的内容，此处不再赘述。</p>
+      <p>[0212] 710:社交应用服务器根据查询到的社交应用标识将信息处理响应中携带的信息 处理结果返回至发送信息处理请求的第二终端；</p>
+      <p>[0213] 本实施例不对社交应用服务器根据查询到的社交应用标识将信息处理响应中携 带的信息处理结果返回至发送信息处理请求的第二终端的方式作具体限定，具体过程可参 考上述图6对应的实施例中步骤605中的发送方式，此处不再赘述。</p>
+      <p>[0214] 需要说明的是，社交应用服务器在将信息处理结果返回至发送信息处理请求的第 二终端时，由于需要确定发送至哪个第二终端，因此，需要根据查询到的社交应用标识进行 发送。</p>
+      <p>[0215] 711:第二终端接收社交应用服务器返回的信息处理结果。</p>
+      <p>[0216] 本实施例不对第二终端接收社交应用服务器返回的信息处理结果的方式作具体 限定，具体过程可参考上述图6对应的实施例中步骤606中的接收方式，此处不再赘述。</p>
+      <p>[0217] 其中，信息处理结果可以为查询结果，或者信息处理是否成功的相关信息，本实施 例不对信息处理结果的内容作具体限定。可选地，第二终端在接收到信息处理结果后，还可 反馈给第二用户，因此，第二终端可以展示接收到的信息处理结果，具体过程可参考上述图 6对应的实施例中步骤607中的展示方式，此处不再赘述。</p>
+      <p>[0218] 本实施例提供的方法，通过与各个系统平台兼容的社交应用服务器接收第一用户 对应的第一终端发送的信息处理请求，并将信息处理请求中携带的第二用户的用户标识及 信息处理标识转发至对应群组中的第一用户对应的第一终端。第一终端根据第二用户的 用户标识及信息处理标识执行对应的信息处理操作，并向社交应用服务器返回信息处理响 应。社交应用服务器将信息处理响应中携带的信息处理结果返回至发送信息处理请求的第 二终端，从而实现第一终端与第二终端的交互。由于可以通过与各个系统平台兼容的社交 应用服务器实现第一终端与第二终端的交互，而不需对不同系统平台的应用程序不断地进 行维护，从而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0219] 本发明实施例提供了一种服务器，该服务器上注册有同一群组内的各个用户对应 的社交应用标识，且该服务器用于执行上述各个实施例中社交应用服务器所执行的功能。 参见图8,该服务器包括：</p>
+      <p>[0220] 第一接收模块801，用于接收第一用户对应的第一终端发送的信息发送请求，信息 发送请求中携带需要发送的信息以及至少一个用户标识，用户标识为接收信息的第二用户 的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0221] 第一查询模块802,用于查询信息发送请求中携带的每个用户标识对应的社交应 用标识；</p>
+      <p>[0222] 发送模块803,用于根据每个社交应用标识将信息发送请求中携带的信息发送至 每个第二用户对应的第二终端。</p>
+      <p>[0223] 在一个可选实施例中，参见图9，该服务器还包括：</p>
+      <p>[0224] 第二接收模块804,用于接收第二用户对应的第二终端发送的群组加入请求，群组 加入请求中携带请求加入群组的第二用户对应的用户信息；</p>
+      <p>[0225] 第二查询模块805,用于在预先获取到的用户信息集合中查询群组加入请求中携 带的用户信息，用户信息集合中包括具有加入群组权限的用户对应的用户信息，用户信息 包括社交应用标识、邮箱号码、手机号码中的至少一种信息；</p>
+      <p>[0226] 返回模块806,用于当在用户信息集合中查询到群组加入请求中携带的用户信息 时，将第二用户作为群组用户，并向第二用户对应的第二终端返回成功加入群组响应。</p>
+      <p>[0227] 在一个可选实施例中，参见图10,该服务器还包括：</p>
+      <p>[0228] 生成模块807,用于生成群组标识，并根据群组标识生成对应的二维码；</p>
+      <p>[0229] 该第二接收模块804,用于接收第二用户对应的第二终端在扫描群组标识对应的 二维码后发送的群组加入请求。</p>
+      <p>[0230] 在一个可选实施例中，第一查询模块802,用于在预先存储的用户标识与社交应用 标识的对应关系中查询信息发送请求中携带的每个用户标识对应的社交应用标识。</p>
+      <p>[0231] 在一个可选实施例中，发送模块803,用于根据每个社交应用标识以超文本传输协 议HTTP方式调用公开的应用程序编程接口API将信息发送请求中携带的信息发送至每个 第二用户对应的第二终端；或，根据每个社交应用标识以网页的方式将信息发送请求中携 带的信息发送至每个第二用户对应的第二终端。</p>
+      <p>[0232] 在一个可选实施例中，参见图11，该服务器还包括：</p>
+      <p>[0233] 第三接收模块808,用于接收第二终端发送的信息处理请求，信息处理请求中携带 群组标识、第二终端对应的第二用户的用户标识及信息处理标识；</p>
+      <p>[0234] 转发模块809,用于根据群组标识将信息处理请求中携带的第二用户的用户标识 及信息处理标识转发至对应群组中的第一用户对应的第一终端。</p>
+      <p>[0235] 在一个可选实施例中，参见图12,该服务器还包括：</p>
+      <p>[0236] 第四接收模块810,用于接收第一终端返回的信息处理响应，信息处理响应中携 带第二用户的用户标识和信息处理结果；</p>
+      <p>[0237] 第三查询模块811，用于查询信息处理响应中携带的用户标识对应的社交应用标 识；</p>
+      <p>[0238] 第二返回模块812,用于根据查询到的社交应用标识将信息处理响应中携带的信 息处理结果返回至发送信息处理请求的第二终端。</p>
+      <p>[0239] 本实施例提供的服务器，通过与各个系统平台兼容的社交应用服务器接收第一用 户对应的第一终端发送的信息发送请求，查询信息发送请求中携带的每个用户标识对应的 社交应用标识，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户 对应的第二终端，从而实现第一终端与第二终端的交互。由于可以通过与各个系统平台兼 容的社交应用服务器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开发 相应的应用程序并进行维护，从而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0240] 图13是根据一示例性实施例示出的一种服务器1900的框图。例如，服务器1900 可以被提供为一服务器。参照图13,服务器1900包括处理组件1922,其进一步包括一个或 多个处理器，以及由存储器1932所代表的存储器资源，用于存储可由处理部件1922的执行 的指令，例如应用程序。存储器1932中存储的应用程序可以包括一个或一个以上的每一个 对应于一组指令的模块。此外，处理组件1922被配置为执行指令，以执行上述各个实施例 中社交应用服务器所执行的功能。</p>
+      <p>[0241] 服务器1900还可以包括一个电源组件1926被配置为执行服务器1900的电源管 理，一个有线或无线网络接口 1950被配置为将服务器1900连接到网络，和一个输入输出 (I/O)接口 1958。服务器1900可以操作基于存储在存储器1932的操作系统，例如Windows ServerTM，MacOSXTM，UnixTM,LinuxTM，FreeBSDTM或类似。</p>
+      <p>[0242] 本实施例提供的服务器，通过与各个系统平台兼容的社交应用服务器接收第一 用户对应的第一终端发送的信息发送请求，查询信息发送请求中携带的每个用户标识对应 的社交应用标识，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用 户对应的第二终端，从而实现第一终端与第二终端的交互。由于可以通过与各个系统平台 兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开 发相应的应用程序并进行维护，从而使得实现信息交互的成本较低，信息交互的通用性较 好。</p>
+      <p>[0243] 本发明实施例提供了一种终端，该终端用于执行上述各个实施例中第一终端所执 行的功能。参见图14,该终端包括：</p>
+      <p>[0244] 获取模块901，用于获取需要发送的信息以及至少一个用户标识，用户标识为接收 信息的第二用户的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0245] 发送模块902,用于向社交应用服务器发送携带需要发送的信息以及至少一个用 户标识的信息发送请求，由社交应用服务器查询信息发送请求中携带的每个用户标识对应 的社交应用标识后，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二 用户对应的第二终端。</p>
+      <p>[0246] 在一个可选实施例中，参见图15,该终端还包括：</p>
+      <p>[0247] 接收模块903,用于接收社交应用服务器发送的第二用户的用户标识及信息处理 标识，第二用户的用户标识及信息处理标识由社交应用服务器在接收到携带群组标识、第 二用户的用户标识及信息处理标识的信息处理请求后发送；</p>
+      <p>[0248] 处理模块904,用于根据第二用户的用户标识及信息处理标识执行对应的信息处 理操作。</p>
+      <p>[0249] 在一个可选实施例中，参见图16,该终端还包括：</p>
+      <p>[0250] 返回模块905,用于向社交应用服务器返回携带第二用户的用户标识和信息处理 结果的信息处理响应，由社交应用服务器查询信息处理响应中携带的用户标识对应的社交 应用标识后，根据查询到的社交应用标识将信息处理响应中携带的信息处理结果返回至发 送信息处理请求的第二终端。</p>
+      <p>[0251] 本实施例提供的终端，通过获取需要发送的信息以及至少一个用户标识，向社交 应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送请求，由与各个系 统平台兼容的社交应用服务器根据查询到的每个社交应用标识将信息发送请求中携带的 信息发送至每个第二用户对应的第二终端，从而实现第一终端与第二终端的交互。由于可 以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要 针对各自的系统平台开发相应的应用程序并进行维护，从而使得实现信息交互的成本较 低，信息交互的通用性较好。</p>
+      <p>[0252] 本实施例提供了一种终端，该终端可以用于执行上述各个实施例中数据更新方法 中第一终端所执行的功能。参见图17,该终端1700包括：</p>
+      <p>[0253] 终端1700可以包括RF(RadioFrequency，射频）电路110、包括有一个或一个以上 计算机可读存储介质的存储器120、输入单元130、显示单元140、传感器150、音频电路160、 WiFi(WirelessFidelity，无线保真）模块170、包括有一个或者一个以上处理核心的处理 器180、以及电源190等部件。本领域技术人员可以理解，图17中示出的终端结构并不构成 对终端的限定，可以包括比图示更多或更少的部件，或者组合某些部件，或者不同的部件布 置。其中：</p>
+      <p>[0254] RF电路110可用于收发信息或通话过程中，信号的接收和发送，特别地，将基站的 下行信息接收后，交由一个或者一个以上处理器180处理；另外，将涉及上行的数据发送给 基站。通常，RF电路110包括但不限于天线、至少一个放大器、调谐器、一个或多个振荡器、 用户身份模块（SM)卡、收发信机、耦合器、LNA(LowNoiseAmplifier，低噪声放大器）、双 工器等。此外，RF电路110还可以通过无线通信与网络和其他设备通信。无线通信可以使 用任一通信标准或协议，包括但不限于GSM(GlobalSystemofMobilecommunication，全 球移动通讯系统）、GPRS(GeneralPacketRadioService，通用分组无线服务）、CDMA(Code DivisionMultipleAccess，码分多址）、WCDMA(WidebandCodeDivisionMultiple Access,宽带码分多址）、LTE(LongTermEvolution,长期演进）、电子邮件、SMS(Short MessagingService，短消息服务）等。</p>
+      <p>[0255] 存储器120可用于存储软件程序以及模块，处理器180通过运行存储在存储器120 的软件程序以及模块，从而执行各种功能应用以及数据处理。存储器120可主要包括存储 程序区和存储数据区，其中，存储程序区可存储操作系统、至少一个功能所需的应用程序 (比如声音播放功能、图像播放功能等）等；存储数据区可存储根据终端1700的使用所创 建的数据（比如音频数据、电话本等）等。此外，存储器120可以包括高速随机存取存储器， 还可以包括非易失性存储器，例如至少一个磁盘存储器件、闪存器件、或其他易失性固态存 储器件。相应地，存储器120还可以包括存储器控制器，以提供处理器180和输入单元130 对存储器120的访问。</p>
+      <p>[0256] 输入单元130可用于接收输入的数字或字符信息，以及产生与用户设置以及功能 控制有关的键盘、鼠标、操作杆、光学或者轨迹球信号输入。具体地，输入单元130可包括触 敏表面131以及其他输入设备132。触敏表面131，也称为触摸显示屏或者触控板，可收集 用户在其上或附近的触摸操作（比如用户使用手指、触笔等任何适合的物体或附件在触敏 表面131上或在触敏表面131附近的操作），并根据预先设定的程式驱动相应的连接装置。 可选的，触敏表面131可包括触摸检测装置和触摸控制器两个部分。其中，触摸检测装置检 测用户的触摸方位，并检测触摸操作带来的信号，将信号传送给触摸控制器；触摸控制器从 触摸检测装置上接收触摸信息，并将它转换成触点坐标，再送给处理器180,并能接收处理 器180发来的命令并加以执行。此外，可以采用电阻式、电容式、红外线以及表面声波等多 种类型实现触敏表面131。除了触敏表面131，输入单元130还可以包括其他输入设备132。 具体地，其他输入设备132可以包括但不限于物理键盘、功能键（比如音量控制按键、开关 按键等）、轨迹球、鼠标、操作杆等中的一种或多种。</p>
+      <p>[0257] 显示单元140可用于显示由用户输入的信息或提供给用户的信息以及终端1700 的各种图形用户接口，这些图形用户接口可以由图形、文本、图标、视频和其任意组合来构 成。显示单元140可包括显示面板141，可选的，可以采用IXD(LiquidCrystalDisplay， 液晶显示器）、�LED(OrganicLight-EmittingDiode,有机发光二极管）等形式来配置显 示面板141。进一步的，触敏表面131可覆盖显示面板141，当触敏表面131检测到在其上 或附近的触摸操作后，传送给处理器180以确定触摸事件的类型，随后处理器180根据触摸 事件的类型在显示面板141上提供相应的视觉输出。虽然在图17中，触敏表面131与显示 面板141是作为两个独立的部件来实现输入和输入功能，但是在某些实施例中，可以将触 敏表面131与显示面板141集成而实现输入和输出功能。</p>
+      <p>[0258] 终端1700还可包括至少一种传感器150,比如光传感器、运动传感器以及其他传 感器。具体地，光传感器可包括环境光传感器及接近传感器，其中，环境光传感器可根据环 境光线的明暗来调节显示面板141的亮度，接近传感器可在终端1700移动到耳边时，关闭 显示面板141和/或背光。作为运动传感器的一种，重力加速度传感器可检测各个方向上 (一般为三轴）加速度的大小，静止时可检测出重力的大小及方向，可用于识别手机姿态的 应用（比如横竖屏切换、相关游戏、磁力计姿态校准）、振动识别相关功能（比如计步器、敲 击）等；至于终端1700还可配置的陀螺仪、气压计、湿度计、温度计、红外线传感器等其他传 感器，在此不再赘述。</p>
+      <p>[0259] 音频电路160、扬声器161，传声器162可提供用户与终端1700之间的音频接口。 音频电路160可将接收到的音频数据转换后的电信号，传输到扬声器161，由扬声器161转 换为声音信号输出；另一方面，传声器162将收集的声音信号转换为电信号，由音频电路 160接收后转换为音频数据，再将音频数据输出处理器180处理后，经RF电路110以发送给 比如另一终端，或者将音频数据输出至存储器120以便进一步处理。音频电路160还可能 包括耳塞插孔，以提供外设耳机与终端1700的通信。</p>
+      <p>[0260] WiFi属于短距离无线传输技术，终端1700通过WiFi模块170可以帮助用户收 发电子邮件、浏览网页和访问流式媒体等，它为用户提供了无线的宽带互联网访问。虽然图 17示出了WiFi模块170,但是可以理解的是，其并不属于终端1700的必须构成，完全可以 根据需要在不改变发明的本质的范围内而省略。</p>
+      <p>[0261] 处理器180是终端1700的控制中心，利用各种接口和线路连接整个手机的各个部 分，通过运行或执行存储在存储器120内的软件程序和/或模块，以及调用存储在存储器 120内的数据，执行终端1700的各种功能和处理数据，从而对手机进行整体监控。可选的， 处理器180可包括一个或多个处理核心；优选的，处理器180可集成应用处理器和调制解调 处理器，其中，应用处理器主要处理操作系统、用户界面和应用程序等，调制解调处理器主 要处理无线通信。可以理解的是，上述调制解调处理器也可以不集成到处理器180中。</p>
+      <p>[0262] 终端1700还包括给各个部件供电的电源190(比如电池），优选的，电源可以通过 电源管理系统与处理器180逻辑相连，从而通过电源管理系统实现管理充电、放电、以及功 耗管理等功能。电源190还可以包括一个或一个以上的直流或交流电源、再充电系统、电源 故障检测电路、电源转换器或者逆变器、电源状态指示器等任意组件。</p>
+      <p>[0263] 尽管未示出，终端1700还可以包括摄像头、蓝牙模块等，在此不再赘述。具体在本 实施例中，终端的显示单元是触摸屏显示器，终端还包括有存储器，以及一个或者一个以上 的程序，其中一个或者一个以上程序存储于存储器中，且经配置以由一个或者一个以上处 理器执行。一个或者一个以上程序包含用于执行以下操作的指令：</p>
+      <p>[0264] 第一用户对应的第一终端获取需要发送的信息以及至少一个用户标识，用户标识 为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0265] 向社交应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送 请求，由社交应用服务器查询信息发送请求中携带的每个用户标识对应的社交应用标识 后，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第二 终端。</p>
+      <p>[0266] 假设上述为第一种可能的实施方式，则在第一种可能的实施方式作为基础而提供 的第二种可能的实施方式中，终端的存储器中，还包含用于执行以下操作的指令：</p>
+      <p>[0267] 接收社交应用服务器发送的第二用户的用户标识及信息处理标识，第二用户的用 户标识及信息处理标识由社交应用服务器在接收到携带群组标识、第二用户的用户标识及 信息处理标识的信息处理请求后发送；</p>
+      <p>[0268] 根据第二用户的用户标识及信息处理标识执行对应的信息处理操作。</p>
+      <p>[0269] 在第二种可能的实施方式作为基础而提供的第三种可能的实施方式中，终端的存 储器中，还包含用于执行以下操作的指令：</p>
+      <p>[0270] 向社交应用服务器返回携带第二用户的用户标识和信息处理结果的信息处理响 应，由社交应用服务器查询信息处理响应中携带的用户标识对应的社交应用标识后，根据 查询到的社交应用标识将信息处理响应中携带的信息处理结果返回至发送信息处理请求 的第二终端。</p>
+      <p>[0271] 本发明提供的终端，通过获取需要发送的信息以及至少一个用户标识，向社交应 用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送请求，由与各个系统 平台兼容的社交应用服务器根据查询到的每个社交应用标识将信息发送请求中携带的信 息发送至每个第二用户对应的第二终端，从而实现第一终端与第二终端的交互。由于可以 通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交互，而不需要针 对各自的系统平台开发相应的应用程序并进行维护，从而使得实现信息交互的成本较低， 信息交互的通用性较好。</p>
+      <p>[0272] 本发明实施例还提供了一种计算机可读存储介质，该计算机可读存储介质可以是 上述实施例中的存储器中所包含的计算机可读存储介质；也可以是单独存在，未装配入终 端中的计算机可读存储介质。该计算机可读存储介质存储有一个或者一个以上程序，该一 个或者一个以上程序被一个或者一个以上的处理器用来执行实现信息交互方法，该方法 包括：</p>
+      <p>[0273] 第一用户对应的第一终端获取需要发送的信息以及至少一个用户标识，用户标识 为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0274] 向社交应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送 请求，由社交应用服务器查询信息发送请求中携带的每个用户标识对应的社交应用标识 后，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第二 终端。</p>
+      <p>[0275] 假设上述为第一种可能的实施方式，则在第一种可能的实施方式作为基础而提供 的第二种可能的实施方式中，所述方法还包括：</p>
+      <p>[0276] 接收社交应用服务器发送的第二用户的用户标识及信息处理标识，第二用户的用 户标识及信息处理标识由社交应用服务器在接收到携带群组标识、第二用户的用户标识及 信息处理标识的信息处理请求后发送；</p>
+      <p>[0277] 根据第二用户的用户标识及信息处理标识执行对应的信息处理操作。</p>
+      <p>[0278] 在第二种可能的实施方式作为基础而提供的第三种可能的实施方式中，所述根据 第二用户的用户标识及信息处理标识执行对应的信息处理操作之后，还包括：</p>
+      <p>[0279] 向社交应用服务器返回携带第二用户的用户标识和信息处理结果的信息处理响 应，由社交应用服务器查询信息处理响应中携带的用户标识对应的应用标识后，根据查询 到的应用标识将信息处理响应中携带的信息处理结果返回至发送信息处理请求的第二终 端。</p>
+      <p>[0280] 本发明实施例提供的计算机可读存储介质，通过获取需要发送的信息以及至少一 个用户标识，向社交应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发 送请求，由与各个系统平台兼容的社交应用服务器根据查询到的每个社交应用标识将信息 发送请求中携带的信息发送至每个第二用户对应的第二终端，从而实现第一终端与第二终 端的交互。由于可以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端 的交互，而不需要针对各自的系统平台开发相应的应用程序并进行维护，从而使得实现信 息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0281] 本发明实施例提供了一种图形用户接口，图形用户接口用在终端上，终端包括触 摸屏显示器、存储器和用于执行一个或者一个以上的程序的一个或者一个以上的处理器； 图形用户接口包括：</p>
+      <p>[0282] 第一用户对应的第一终端获取需要发送的信息以及至少一个用户标识，用户标识 为接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0283] 向社交应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送 请求，由社交应用服务器查询信息发送请求中携带的每个用户标识对应的社交应用标识 后，根据每个社交应用标识将信息发送请求中携带的信息发送至每个第二用户对应的第二 终端。</p>
+      <p>[0284] 本发明实施例提供的图形用户接口，通过获取需要发送的信息以及至少一个用户 标识，向社交应用服务器发送携带需要发送的信息以及至少一个用户标识的信息发送请 求，由与各个系统平台兼容的社交应用服务器根据查询到的每个社交应用标识将信息发送 请求中携带的信息发送至每个第二用户对应的第二终端，从而实现第一终端与第二终端的 交互。由于可以通过与各个系统平台兼容的社交应用服务器实现第一终端与第二终端的交 互，而不需要针对各自的系统平台开发相应的应用程序并进行维护，从而使得实现信息交 互的成本较低，信息交互的通用性较好。</p>
+      <p>[0285] 本发明实施例提供了一种终端，该终端用于执行上述各个实施例中第二终端所执 行的功能。参见图18,该终端包括：</p>
+      <p>[0286] 第一接收模块1001，用于接收社交应用服务器发送的信息，信息由社交应用服务 器接收到第一用户对应的第一终端发送的信息发送请求，并查询信息发送请求中携带的每 个用户标识对应的社交应用标识后发送，信息发送请求中携带需要发送的信息以及至少 一个用户标识，用户标识为接收信息的第二用户的用户标识，第一用户及第二用户属于相 同群组；</p>
+      <p>[0287] 展示模块1002,用于展示接收到的信息。</p>
+      <p>[0288] 在一个可选实施例中，参见图19,该终端还包括：</p>
+      <p>[0289] 第一获取模块1003,用于获取加入群组指令；</p>
+      <p>[0290] 第一发送模块1004,用于根据加入群组指令向社交应用服务器发送群组加入请 求，群组加入请求中携带第二用户对应的用户信息；</p>
+      <p>[0291] 第二接收模块1005,用于接收社交应用服务器在根据群组加入请求中携带的用户 信息进行加入群组权限验证，并在加入群组权限验证通过后返回的成功加入群组响应。</p>
+      <p>[0292] 在一个可选实施例中，第一获取模块1003,用于获取群组标识对应的二维码的扫 描指令，二维码由社交应用服务器生成群组标识，并根据群组标识生成；根据扫描指令扫描 群组标识对应的二维码，生成加入群组指令，加入群组指令用于请求加入二维码对应的群 组。</p>
+      <p>[0293] 在一个可选实施例中，参见图20,该终端还包括：</p>
+      <p>[0294] 第二获取模块1006,用于获取第二用户的用户标识及信息处理标识；</p>
+      <p>[0295] 第二发送模块1007,用于向社交应用服务器发送携带群组标识、第二用户的用户 标识及信息处理标识的信息处理请求，由社交应用服务器根据群组标识将信息处理请求中 携带的第二用户的用户标识及信息处理标识转发至对应群组中的第一用户对应的第一终 端。</p>
+      <p>[0296] 在一个可选实施例中，参见图21，该终端还包括：</p>
+      <p>[0297] 第三接收模块1008,用于接收社交应用服务器返回的信息处理结果。</p>
+      <p>[0298] 本实施例提供的终端，通过接收与各个系统平台兼容的社交应用服务器发送的信 息，展示接收到的信息。由于可以通过与各个系统平台兼容的社交应用服务器实现第一终 端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并进行维护，从 而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0299] 本实施例提供了一种终端，该终端可以用于执行上述各个实施例中信息交互方法 中第二终端所执行的功能。参见图22,该终端2200包括：</p>
+      <p>[0300] 终端2200可以包括RF(RadioFrequency，射频）电路210、包括有一个或一个以上 计算机可读存储介质的存储器220、输入单元230、显示单元240、传感器250、音频电路260、 WiFi(WirelessFidelity，无线保真）模块270、包括有一个或者一个以上处理核心的处理 器280、以及电源290等部件。本领域技术人员可以理解，图22中示出的终端结构并不构成 对终端的限定，可以包括比图示更多或更少的部件，或者组合某些部件，或者不同的部件布 置。其中：</p>
+      <p>[0301]RF电路210可用于收发信息或通话过程中，信号的接收和发送，特别地，将基站的 下行信息接收后，交由一个或者一个以上处理器280处理；另外，将涉及上行的数据发送给 基站。通常，RF电路210包括但不限于天线、至少一个放大器、调谐器、一个或多个振荡器、 用户身份模块（SM)卡、收发信机、耦合器、LNA(LowNoiseAmplifier，低噪声放大器）、双 工器等。此外，RF电路210还可以通过无线通信与网络和其他设备通信。无线通信可以使 用任一通信标准或协议，包括但不限于GSM(GlobalSystemofMobilecommunication，全 球移动通讯系统）、GPRS(GeneralPacketRadioService，通用分组无线服务）、CDMA(Code DivisionMultipleAccess，码分多址）、WCDMA(WidebandCodeDivisionMultiple Access,宽带码分多址）、LTE(LongTermEvolution,长期演进）、电子邮件、SMS(Short MessagingService，短消息服务）等。</p>
+      <p>[0302] 存储器220可用于存储软件程序以及模块，处理器280通过运行存储在存储器 220的软件程序以及模块，从而执行各种功能应用以及数据处理。存储器220可主要包括 存储程序区和存储数据区，其中，存储程序区可存储操作系统、至少一个功能所需的应用程 序（比如声音播放功能、图像播放功能等）等；存储数据区可存储根据终端2200的使用所 创建的数据（比如音频数据、电话本等）等。此外，存储器220可以包括高速随机存取存储 器，还可以包括非易失性存储器，例如至少一个磁盘存储器件、闪存器件、或其他易失性固 态存储器件。相应地，存储器220还可以包括存储器控制器，以提供处理器280和输入单元 230对存储器220的访问。</p>
+      <p>[0303]输入单元230可用于接收输入的数字或字符信息，以及产生与用户设置以及功能 控制有关的键盘、鼠标、操作杆、光学或者轨迹球信号输入。具体地，输入单元230可包括触 敏表面231以及其他输入设备232。触敏表面231，也称为触摸显示屏或者触控板，可收集 用户在其上或附近的触摸操作（比如用户使用手指、触笔等任何适合的物体或附件在触敏 表面231上或在触敏表面231附近的操作），并根据预先设定的程式驱动相应的连接装置。 可选的，触敏表面231可包括触摸检测装置和触摸控制器两个部分。其中，触摸检测装置检 测用户的触摸方位，并检测触摸操作带来的信号，将信号传送给触摸控制器；触摸控制器从 触摸检测装置上接收触摸信息，并将它转换成触点坐标，再送给处理器280,并能接收处理 器280发来的命令并加以执行。此外，可以采用电阻式、电容式、红外线以及表面声波等多 种类型实现触敏表面231。除了触敏表面231，输入单元230还可以包括其他输入设备232。 具体地，其他输入设备232可以包括但不限于物理键盘、功能键（比如音量控制按键、开关 按键等）、轨迹球、鼠标、操作杆等中的一种或多种。</p>
+      <p>[0304]显示单元240可用于显示由用户输入的信息或提供给用户的信息以及终端2200 的各种图形用户接口，这些图形用户接口可以由图形、文本、图标、视频和其任意组合来构 成。显示单元240可包括显示面板241，可选的，可以采用IXD(LiquidCrystalDisplay， 液晶显示器）、�LED(OrganicLight-EmittingDiode,有机发光二极管）等形式来配置显 示面板241。进一步的，触敏表面231可覆盖显示面板241，当触敏表面231检测到在其上 或附近的触摸操作后，传送给处理器280以确定触摸事件的类型，随后处理器280根据触摸 事件的类型在显示面板241上提供相应的视觉输出。虽然在图22中，触敏表面231与显示 面板241是作为两个独立的部件来实现输入和输入功能，但是在某些实施例中，可以将触 敏表面231与显示面板241集成而实现输入和输出功能。</p>
+      <p>[0305] 终端2200还可包括至少一种传感器250,比如光传感器、运动传感器以及其他传 感器。具体地，光传感器可包括环境光传感器及接近传感器，其中，环境光传感器可根据环 境光线的明暗来调节显示面板241的亮度，接近传感器可在终端2200移动到耳边时，关闭 显示面板241和/或背光。作为运动传感器的一种，重力加速度传感器可检测各个方向上 (一般为三轴）加速度的大小，静止时可检测出重力的大小及方向，可用于识别手机姿态的 应用（比如横竖屏切换、相关游戏、磁力计姿态校准）、振动识别相关功能（比如计步器、敲 击）等；至于终端2200还可配置的陀螺仪、气压计、湿度计、温度计、红外线传感器等其他传 感器，在此不再赘述。</p>
+      <p>[0306] 音频电路260、扬声器261，传声器262可提供用户与终端2200之间的音频接口。 音频电路260可将接收到的音频数据转换后的电信号，传输到扬声器261，由扬声器261转 换为声音信号输出；另一方面，传声器262将收集的声音信号转换为电信号，由音频电路 260接收后转换为音频数据，再将音频数据输出处理器280处理后，经RF电路210以发送给 比如另一终端，或者将音频数据输出至存储器220以便进一步处理。音频电路260还可能 包括耳塞插孔，以提供外设耳机与终端2200的通信。</p>
+      <p>[0307]WiFi属于短距离无线传输技术，终端2200通过WiFi模块270可以帮助用户收发 电子邮件、浏览网页和访问流式媒体等，它为用户提供了无线的宽带互联网访问。虽然图22 示出了WiFi模块270,但是可以理解的是，其并不属于终端2200的必须构成，完全可以根据 需要在不改变发明的本质的范围内而省略。</p>
+      <p>[0308] 处理器280是终端2200的控制中心，利用各种接口和线路连接整个手机的各个部 分，通过运行或执行存储在存储器220内的软件程序和/或模块，以及调用存储在存储器 220内的数据，执行终端2200的各种功能和处理数据，从而对手机进行整体监控。可选的， 处理器280可包括一个或多个处理核心；优选的，处理器280可集成应用处理器和调制解 调处理器，其中，应用处理器主要处理操作系统、用户界面和应用程序等，调制解调处理器 主要处理无线通信。可以理解的是，上述调制解调处理器也可以不集成到处理器280中。</p>
+      <p>[0309] 终端2200还包括给各个部件供电的电源290 (比如电池），优选的，电源可以通过 电源管理系统与处理器280逻辑相连，从而通过电源管理系统实现管理充电、放电、以及功 耗管理等功能。电源290还可以包括一个或一个以上的直流或交流电源、再充电系统、电源 故障检测电路、电源转换器或者逆变器、电源状态指示器等任意组件。</p>
+      <p>[0310] 尽管未示出，终端2200还可以包括摄像头、蓝牙模块等，在此不再赘述。具体在本 实施例中，终端的显示单元是触摸屏显示器，终端还包括有存储器，以及一个或者一个以上 的程序，其中一个或者一个以上程序存储于存储器中，且经配置以由一个或者一个以上处 理器执行。一个或者一个以上程序包含用于执行以下操作的指令：</p>
+      <p>[0311] 接收社交应用服务器发送的信息，信息由社交应用服务器接收到第一用户对应的 第一终端发送的信息发送请求，并查询信息发送请求中携带的每个用户标识对应的社交应 用标识后发送，信息发送请求中携带需要发送的信息以及至少一个用户标识，用户标识为 接收信息的第二用户的用户标识，第一用户及第二用户属于相同群组；</p>
+      <p>[0312] 展示接收到的信息。</p>
+      <p>[0313] 假设上述为第一种可能的实施方式，则在第一种可能的实施方式作为基础而提供 的第二种可能的实施方式中，终端的存储器中，还包含用于执行以下操作的指令：</p>
+      <p>[0314] 获取加入群组指令，根据加入群组指令向社交应用服务器发送群组加入请求，群 组加入请求中携带第二用户对应的用户信息；</p>
+      <p>[0315] 接收社交应用服务器在根据群组加入请求中携带的用户信息进行加入群组权限 验证，并在加入群组权限验证通过后返回的成功加入群组响应。</p>
+      <p>[0316] 在第二种可能的实施方式作为基础而提供的第三种可能的实施方式中，终端的存 储器中，还包含用于执行以下操作的指令：</p>
+      <p>[0317] 获取群组标识对应的二维码的扫描指令，二维码由社交应用服务器生成群组标 识，并根据群组标识生成；</p>
+      <p>[0318] 根据扫描指令扫描群组标识对应的二维码，生成加入群组指令，加入群组指令用 于请求加入二维码对应的群组。</p>
+      <p>[0319] 在第一种可能的实施方式至第三种可能的实施方式中任一种可能的实施方式作 为基础而提供的第四种可能的实施方式中，终端的存储器中，还包含用于执行以下操作的 指令：</p>
+      <p>[0320] 获取第二用户的用户标识及信息处理标识；</p>
+      <p>[0321] 向社交应用服务器发送携带群组标识、第二用户的用户标识及信息处理标识的信 息处理请求，由社交应用服务器根据群组标识将信息处理请求中携带的第二用户的用户标 识及信息处理标识转发至对应群组中的第一用户对应的第一终端。</p>
+      <p>[0322] 在第四种可能的实施方式作为基础而提供的第五种可能的实施方式中，终端的存 储器中，还包含用于执行以下操作的指令：</p>
+      <p>[0323] 接收社交应用服务器返回的信息处理结果。</p>
+      <p>[0324] 本发明提供的终端，通过接收与各个系统平台兼容的社交应用服务器发送的信 息，展示接收到的信息。由于可以通过与各个系统平台兼容的社交应用服务器实现第一终 端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并进行维护，从 而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0325] 本发明实施例还提供了一种计算机可读存储介质，该计算机可读存储介质可以是 上述实施例中的存储器中所包含的计算机可读存储介质；也可以是单独存在，未装配入终 端中的计算机可读存储介质。该计算机可读存储介质存储有一个或者一个以上程序，该一 个或者一个以上程序被一个或者一个以上的处理器用来执行实现信息交互方法，该方法包 括：</p>
+      <p>[0326] 第二用户对应的第二终端接收社交应用服务器发送的信息，信息由社交应用服务 器接收到第一用户对应的第一终端发送的信息发送请求，并查询信息发送请求中携带的每 个用户标识对应的社交应用标识后发送，信息发送请求中携带需要发送的信息以及至少一 个用户标识，用户标识为接收信息的第二用户的用户标识，第一用户及第二用户属于相同 群组；</p>
+      <p>[0327] 展示接收到的信息。</p>
+      <p>[0328] 假设上述为第一种可能的实施方式，则在第一种可能的实施方式作为基础而提供 的第二种可能的实施方式中，所述接收社交应用服务器发送的信息之前，还包括：</p>
+      <p>[0329] 获取加入群组指令，根据加入群组指令向社交应用服务器发送群组加入请求，群 组加入请求中携带第二用户对应的用户信息；</p>
+      <p>[0330] 接收社交应用服务器在根据群组加入请求中携带的用户信息进行加入群组权限 验证，并在加入群组权限验证通过后返回的成功加入群组响应。</p>
+      <p>[0331] 在第二种可能的实施方式作为基础而提供的第三种可能的实施方式中，所述获取 加入群组指令，包括：</p>
+      <p>[0332] 获取群组标识对应的二维码的扫描指令，二维码由社交应用服务器生成群组标 识，并根据群组标识生成；</p>
+      <p>[0333] 根据扫描指令扫描群组标识对应的二维码，生成加入群组指令，加入群组指令用 于请求加入二维码对应的群组。本发明实施例提供的计算机可读存储介质。</p>
+      <p>[0334] 在第一种可能的实施方式至第三种可能的实施方式中任一种可能的实施方式作 为基础而提供的第四种可能的实施方式中，所述方法还包括：</p>
+      <p>[0335] 获取第二用户的用户信息及信息处理标识；</p>
+      <p>[0336] 向社交应用服务器发送携带群组标识、第二用户的用户标识及信息处理标识的 信息处理请求，由社交应用服务器根据群组标识将信息处理请求中携带的第二用户的用户 标识及信息处理标识转发至对应群组中的第一用户对应的第一终端。</p>
+      <p>[0337] 在第四种可能的实施方式作为基础而提供的第五种可能的实施方式中，所述向社 交应用服务器发送携带群组标识、第二用户的用户标识及信息处理标识的信息处理请求之 后，还包括：</p>
+      <p>[0338] 接收社交应用服务器返回的信息处理结果。</p>
+      <p>[0339] 本发明实施例提供的计算机可读存储介质，通过接收与各个系统平台兼容的社交 应用服务器发送的信息，展示接收到的信息。由于可以通过与各个系统平台兼容的社交应 用服务器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用 程序并进行维护，从而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0340] 本发明实施例提供了一种图形用户接口，所述图形用户接口用在终端上，所述终 端包括触摸屏显示器、存储器和用于执行一个或者一个以上的程序的一个或者一个以上的 处理器；所述图形用户接口包括：</p>
+      <p>[0341] 接收社交应用服务器发送的信息，所述信息由所述社交应用服务器接收到第一用 户对应的第一终端发送的信息发送请求，并查询所述信息发送请求中携带的每个用户标识 对应的社交应用标识后发送，所述信息发送请求中携带需要发送的信息以及至少一个用户 标识，所述用户标识为接收所述信息的第二用户的用户标识，所述第一用户及所述第二用 户属于相同群组；</p>
+      <p>[0342] 展示接收到的信息。</p>
+      <p>[0343] 本发明实施例提供的图形用户接口，通过接收与各个系统平台兼容的社交应用服 务器发送的信息，展示接收到的信息。由于可以通过与各个系统平台兼容的社交应用服务 器实现第一终端与第二终端的交互，而不需要针对各自的系统平台开发相应的应用程序并 进行维护，从而使得实现信息交互的成本较低，信息交互的通用性较好。</p>
+      <p>[0344] 本发明实施例提供了一种服务器，该服务器用于执行上述各个实施例中身份鉴权 服务器所执行的功能。参见图23,该服务器包括：</p>
+      <p>[0345] 第一接收模块1101，用于接收请求加入群组的至少一个终端发送的群组加入请 求，所述群组加入请求中携带请求加入群组的用户对应的用户信息；</p>
+      <p>[0346] 查询模块1102,用于在预先获取到的用户信息集合中查询所述群组加入请求中携 带的用户信息，所述用户信息集合中包括具有加入群组权限的用户对应的用户信息，所述 用户信息包括社交应用标识、邮箱号码、手机号码中的至少一种信息；</p>
+      <p>[0347] 第一确定模块1103,用于当在所述用户信息集合中查询到所述群组加入请求中携 带的用户信息时，则将所述群组加入请求中携带的用户信息对应的用户作为群组用户；</p>
+      <p>[0348] 第一返回模块1104,用于向请求加入群组的终端返回成功加入群组响应。</p>
+      <p>[0349] 在一个可选实施例中，该服务器还包括：</p>
+      <p>[0350] 第一获取模块1105,用于获取具有加入群组权限的各个用户对应的用户信息，得 到用户信息集合。</p>
+      <p>[0351] 在一个可选实施例中，该服务器还包括：</p>
+      <p>[0352] 生成模块1106,用于生成群组标识，并根据所述群组标识生成对应的二维码；</p>
+      <p>[0353] 所述第一接收模块1101，用于接收请求加入群组的至少一个终端在扫描所述群组 标识对应的二维码后发送的群组加入请求。</p>
+      <p>[0354] 在一个可选实施例中，该服务器还包括：</p>
+      <p>[0355] 第二返回模块1107,用于当在所述用户信息集合中未查询到所述群组加入请求中 携带的用户信息时，向所述终端返回输入手机号码的提示信息；</p>
+      <p>[0356] 第二接收模块1108,用于接收根据所述提示信息返回的手机号码；</p>
+      <p>[0357] 发送模块1109,用于当接收到的手机号码在所述用户信息集合中时，向接收到的 手机号码对应的终端下发验证信息；</p>
+      <p>[0358] 第二获取模块1110,用于获取返回的验证信息；</p>
+      <p>[0359] 第二确定模块1111，用于在验证获取到的验证信息正确之后，将所述群组加入请 求中携带的用户信息对应的用户作为群组用户；</p>
+      <p>[0360] 第三返回模块1112,用于向请求加入群组的终端返回成功加入群组响应。</p>
+      <p>[0361] 本实施例提供的服务器，通过在预先获取到的用户信息集合中查询群组加入请求 中携带的用户信息，若在用户信息集合中查询到群组加入请求中携带的用户信息，则将群 组加入请求中携带的用户信息对应的用户作为群组用户，并向请求加入群组的终端返回成 功加入群组响应。从而使得加入群组的用户为预先获取到的用户信息集合中的用户信息所 对应的用户，即对加入群组的用户进行了限制，进而保证群组内用户的安全性。</p>
+      <p>[0362] 图23是根据一示例性实施例示出的一种服务器2700的框图。例如，服务器2700 可以被提供为一服务器。参照图23,服务器2700包括处理组件1922,其进一步包括一个或 多个处理器，以及由存储器1932所代表的存储器资源，用于存储可由处理部件1922的执行 的指令，例如应用程序。存储器1932中存储的应用程序可以包括一个或一个以上的每一个 对应于一组指令的模块。此外，处理组件1922被配置为执行指令，以执行上述各个实施例 中身份鉴权服务器所执行的功能。</p>
+      <p>[0363] 服务器2700还可以包括一个电源组件1926被配置为执行服务器2700的电源管 理，一个有线或无线网络接口 1950被配置为将服务器2700连接到网络，和一个输入输出 (I/O)接口 1958。服务器2700可以操作基于存储在存储器1932的操作系统，例如Windows ServerTM，MacOSXTM，UnixTM,LinuxTM，FreeBSDTM或类似。</p>
+      <p>[0364] 本实施例提供的服务器，通过在预先获取到的用户信息集合中查询群组加入请 求中携带的用户信息，若在用户信息集合中查询到群组加入请求中携带的用户信息，则将 群组加入请求中携带的用户信息对应的用户作为群组用户，并向请求加入群组的终端返回 成功加入群组响应。从而使得加入群组的用户为预先获取到的用户信息集合中的用户信息 所对应的用户，即对加入群组的用户进行了限制，进而保证群组内用户的安全性。</p>
+      <p>[0365] 需要说明的是：上述实施例提供的终端及服务器在进行信息交互时，仅以上述各 功能模块的划分进行举例说明，实际应用中，可以根据需要而将上述功能分配由不同的功 能模块完成，即将终端及服务器的内部结构划分成不同的功能模块，以完成以上描述的全 部或者部分功能。另外，上述实施例提供的终端、服务器与信息交互方法实施例属于同一构 思，其具体实现过程详见方法实施例，这里不再赘述。</p>
+      <p>[0366] 上述本发明实施例序号仅仅为了描述，不代表实施例的优劣。</p>
+      <p>[0367] 本领域普通技术人员可以理解实现上述实施例的全部或部分步骤可以通过硬件 来完成，也可以通过程序来指令相关的硬件完成，所述的程序可以存储于一种计算机可读 存储介质中，上述提到的存储介质可以是只读存储器，磁盘或光盘等。</p>
+      <p>[0368] 以上所述仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和 原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102611636A?cl=zh">CN102611636A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月20日</td><td class="patent-data-table-td patent-date-value">2012年7月25日</td><td class="patent-data-table-td ">优美通讯(深圳)有限公司</td><td class="patent-data-table-td ">一种聚合通信移动终端系统及其应用</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102651718A?cl=zh">CN102651718A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年2月25日</td><td class="patent-data-table-td patent-date-value">2012年8月29日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">信息传输的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102932414A?cl=zh">CN102932414A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月26日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种通讯录与社交网络的融合方法及其系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US8745134">US8745134</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年3月31日</td><td class="patent-data-table-td patent-date-value">2014年6月3日</td><td class="patent-data-table-td ">Zynga Inc.</td><td class="patent-data-table-td ">Cross social network data aggregation</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20130152184">US20130152184</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月13日</td><td class="patent-data-table-td patent-date-value">2013年6月13日</td><td class="patent-data-table-td ">Samsung Electronics Co., Ltd.</td><td class="patent-data-table-td ">Method of providing sns-group inviting service and sns server therefor</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=o1tPCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2015年5月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/8347e8e7575ad551998d/CN104539571A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%BF%A1%E6%81%AF%E4%BA%A4%E4%BA%92%E6%96%B9%E6%B3%95_%E8%BA%AB%E4%BB%BD%E9%89%B4%E6%9D%83%E6%96%B9%E6%B3%95.pdf?id=o1tPCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1e_9OFaoscjaShR4e__PT6zrdRuw"},"sample_url":"https://www.google.com/patents/reader?id=o1tPCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

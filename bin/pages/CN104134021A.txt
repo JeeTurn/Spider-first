@@ -1,0 +1,221 @@
+<!DOCTYPE html><html><head><title>专利 CN104134021A - 软件的防篡改验证方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="软件的防篡改验证方法及装置"><meta name="DC.contributor" content="陈树华" scheme="inventor"><meta name="DC.contributor" content="肖天明" scheme="inventor"><meta name="DC.contributor" content="腾讯科技（深圳）有限公司" scheme="assignee"><meta name="DC.date" content="2013-6-20" scheme="dateSubmitted"><meta name="DC.description" content="本发明适用于计算机技术领域，提供了软件的防篡改验证方法，包括：接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；执行所述验证参数对应的验证逻辑，获取第一校验值；将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。在本发明中，一旦软件遭到了篡改，能够准确地识别出结果，有效地提高了对软件是否遭到了篡改的验证结果的准确性。"><meta name="DC.date" content="2014-11-5"><meta name="DC.relation" content="CN:101783801:A" scheme="references"><meta name="DC.relation" content="CN:101834867:A" scheme="references"><meta name="DC.relation" content="CN:102299930:A" scheme="references"><meta name="DC.relation" content="CN:102546179:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:104134021:A"><meta name="citation_patent_application_number" content="CN:201310247480"><link rel="canonical" href="https://www.google.com/patents/CN104134021A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN104134021A?cl=zh"/><meta name="title" content="专利 CN104134021A - 软件的防篡改验证方法及装置"/><meta name="description" content="本发明适用于计算机技术领域，提供了软件的防篡改验证方法，包括：接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；执行所述验证参数对应的验证逻辑，获取第一校验值；将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。在本发明中，一旦软件遭到了篡改，能够准确地识别出结果，有效地提高了对软件是否遭到了篡改的验证结果的准确性。"/><meta property="og:title" content="专利 CN104134021A - 软件的防篡改验证方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN104134021A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN104134021A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN104134021A&amp;usg=AFQjCNGWfBe70i8-E2xhwwvX-0IPovUAvw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/36c2df8585068c0cb3bb/CN104134021A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/36c2df8585068c0cb3bb/CN104134021A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN104134021A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN104134021A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN104134021A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN104134021B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN104134021A?cl=zh" style="display:none"><span itemprop="description">本发明适用于计算机技术领域，提供了软件的防篡改验证方法，包括：接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；执行所述验证参数对应的验证逻辑，...</span><span itemprop="url">https://www.google.com/patents/CN104134021A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN104134021A - 软件的防篡改验证方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN104134021A - 软件的防篡改验证方法及装置" title="专利 CN104134021A - 软件的防篡改验证方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN104134021 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310247480</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年11月5日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年6月20日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年6月20日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104134021B?hl=zh-CN&amp;cl=zh">CN104134021B</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20140380469?hl=zh-CN&amp;cl=zh">US20140380469</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2014201830A1?hl=zh-CN&amp;cl=zh">WO2014201830A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310247480.7, </span><span class="patent-bibdata-value">CN 104134021 A, </span><span class="patent-bibdata-value">CN 104134021A, </span><span class="patent-bibdata-value">CN 201310247480, </span><span class="patent-bibdata-value">CN-A-104134021, </span><span class="patent-bibdata-value">CN104134021 A, </span><span class="patent-bibdata-value">CN104134021A, </span><span class="patent-bibdata-value">CN201310247480, </span><span class="patent-bibdata-value">CN201310247480.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%88%E6%A0%91%E5%8D%8E%22">陈树华</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%82%96%E5%A4%A9%E6%98%8E%22">肖天明</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">腾讯科技（深圳）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104134021A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104134021A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104134021A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (6),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310247480&amp;usg=AFQjCNGX_5E1iUKSucr6wfZUU2DlPX6EjA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D104134021A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEF0XnNZebadM-sakXp3qK93vYF8A"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT151267331" lang="ZH" load-source="patent-office">软件的防篡改验证方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 104134021 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA147811070" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明适用于计算机技术领域，提供了软件的防篡改验证方法，包括：接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；执行所述验证参数对应的验证逻辑，获取第一校验值；将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。在本发明中，一旦软件遭到了篡改，能够准确地识别出结果，有效地提高了对软件是否遭到了篡改的验证结果的准确性。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(24)</span></span></div><div class="patent-text"><div mxw-id="PCLM78238921" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种软件的防篡改验证方法，其特征在于，包括:  接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；  执行所述验证参数对应的验证逻辑，获取第一校验值；  将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，所述验证参数包括采样数据获取位置，  所述执行所述验证参数对应的验证逻辑，获取第一校验值包括:  从所述采样数据获取位置获取采样数据；  根据指定的校验算法对获取到的采样数据计算所述第一校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，其特征在于，所述采样数据获取位置包括所述软件的安装目录下的文件路径，  所述从所述采样数据获取位置获取采样数据包括:  提取所述文件路径指向的文件，将所述文件包含的数据确定为所述采样数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求2所述的方法，其特征在于，所述采样数据获取位置包括内存映射区间，  所述从所述采样数据获取位置获取采样数据包括:  在所述软件运行时，读取所述内存映射区间中的数据，将读取到的数据确定为所述采样数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求2&#12316;4任一项所述的方法，其特征在于，所述验证参数还包括所述指定的校验算法，所述指定的校验算法为所述服务器在N种预设的校验算法中随机确定的一种，所述N为大于I的整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求1所述的方法，其特征在于，所述验证参数包括可执行代码，  所述执行所述验证参数对应的验证逻辑，获取第一校验值包括:  执行所述可执行代码，输出所述第一校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求1所述的方法，其特征在于，在所述接收服务器发送的验证控制指令之前，所述方法还包括:  向所述服务器发送验证请求，以使所述服务器发送所述验证控制指令。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.一种软件的防篡改验证方法，其特征在于，包括:  动态确定所述软件的验证参数；  向客户端发送验证控制指令，所述验证控制指令携带了所述验证参数，以使所述客户端通过执行所述验证参数对应的验证逻辑，获取第一校验值；  接收所述客户端返回的所述第一校验值，比较所述第一校验值与第二校验值，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值；  当所述第一校验值与所述第二校验值相同时，确定所述软件未被篡改；当所述第一校验值与所述第二校验值不同时，确定所述软件被篡改。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求8所述的方法，其特征在于，所述验证参数包括采样数据获取位置，所述采样数据获取位置包括所述软件的安装目录下的文件路径或者内存映射区间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的方法，其特征在于，所述验证参数还包括所述指定的校验算法，所述指定的校验算法被所述客户端用于对在所述采样数据获取位置获取到的采样数据计算所述第一校验值，  则在所述向客户端发送验证控制指令之前，所述方法还包括:  随机将N种预设的校验算法中的一种确定为所述指定的校验算法，所述N为大于等于I的整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求8所述的方法，其特征在于，所述验证参数包括可执行代码，所述可执行代码被所述客户端用于在执行后输出所述第一校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求8&#12316;11任一项所述的方法，其特征在于，在所述向客户端发送验证控制指令之前，所述方法还包括:  接收所述客户端发送的验证请求。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.一种软件的防篡改验证装置，其特征在于，包括:  指令接收单元，用于接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；  获取单元，用于执行所述验证参数对应的验证逻辑，获取第一校验值；  返回单元，用于将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的装置，其特征在于，所述验证参数包括采样数据获取位置，  所述获取单元包括:  采样子单元，用于从所述采样数据获取位置获取采样数据；  计算子单元，用于根据指定的校验算法对获取到的采样数据计算所述第一校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求14所述的装置，其特征在于，所述采样数据获取位置包括所述软件的安装目录下的文件路径，  所述采样子单元具体用于:  提取所述文件路径指向的文件，将所述文件包含的数据确定为所述采样数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求14所述的装置，其特征在于，所述采样数据获取位置包括内存映射区间，  所述采样子单元具体用于:  在所述软件运行时，读取所述内存映射区间中的数据，将读取到的数据确定为所述采样数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求14&#12316;16任一项所述的装置，其特征在于，所述验证参数还包括所述指定的校验算法，所述指定的校验算法为所述服务器在N种预设的校验算法中随机确定的一种，所述N为大于I的整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求13所述的装置，其特征在于，所述验证参数包括可执行代码，  所述获取单元具体用于:  执行所述可执行代码，输出所述第一校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求13所述的装置，其特征在于，所述装置还包括:  请求发送单元，用于向所述服务器发送验证请求，以使所述服务器发送所述验证控制指令。</div>
+    </div>
+    </div> <div class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20.一种软件的防篡改验证装置，其特征在于，包括:  动态确定单元，用于动态确定所述软件的验证参数；  指令发送单元，用于向客户端发送验证控制指令，所述验证控制指令携带了所述验证参数，以使所述客户端通过执行所述验证参数对应的验证逻辑，获取第一校验值；  判断单元，用于接收所述客户端返回的所述第一校验值，比较所述第一校验值与第二校验值，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值；  验证结果确定单元，用于当所述第一校验值与所述第二校验值相同时，确定所述软件未被篡改；当所述第一校验值与所述第二校验值不同时，确定所述软件被篡改。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求20所述的装置，其特征在于，所述验证参数包括采样数据获取位置，所述采样数据获取位置包括所述软件的安装目录下的文件路径或者内存映射区间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求21所述的装置，其特征在于，所述验证参数还包括所述指定的校验算法，所述指定的校验算法被所述客户端用于对在所述采样数据获取位置获取到的采样数据计算所述第一校验值，  所述装置还包括:  算法确定单元，用于随机将N种预设的校验算法中的一种确定为所述指定的校验算法，所述N为大于等于I的整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求21所述的装置，其特征在于，所述验证参数包括可执行代码，所述可执行代码被所述客户端用于在执行后输出所述第一校验值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求20&#12316;23任一项所述的装置，其特征在于，所述装置还包括:  请求接收单元，用于接收所述客户端发送的验证请求。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES86559613" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">软件的防篡改验证方法及装置</invention-title>
+    <technical-field>
+      <p>技术领域</p>
+      <p>[0001]	本发明属于计算机技术领域，尤其涉及一种软件的防篡改验证方法及装置。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>[0002]目前，数字化的生活方式得到了广泛的推广与普及，人们的日常工作、学习及休闲生活越来越离不开各式各样的应用软件，而软件的安全问题也由此得到了重视。</p>
+      <p>[0003]	出于窃取用户隐私、盗取用户银行账户信息等目的，一些攻击者能够通过篡改软件的方法，在软件中嵌入恶意代码、修改或者删除部分代码，从而获取到用户的关键信息，从中获利。软件篡改在游戏类、支付类或者社交类软件中出现的尤为频繁，为了防止此类现象的出现，需要对安装在终端设备中的软件进行验证。</p>
+      <p>[0004]	现有的软件防篡改软件验证方法只能通过对软件的全部或者部分数据进行校验，判断校验结果是否正确，以此来判定软件是否遭到了篡改。然而，由于用于校验的软件数据是固定不变的，其正确的校验结果也很容易被攻击者得知，并以此伪造校验结果通过软件验证，导致软件验证的结果不准确，由此带来了数据安全隐患。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>[0005]	本发明实施例提供一种软件的防篡改验证方法，旨在提高对软件是否遭到了篡改的验证结果的准确性。</p>
+      <p>[0006]	本发明实施例是这样实现的，一种软件的防篡改验证方法，包括:</p>
+      <p>[0007]	接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；</p>
+      <p>[0008]	执行所述验证参数对应的验证逻辑，获取第一校验值；</p>
+      <p>[0009]	将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</p>
+      <p>[0010]	本发明实施例的另一目的在于提供一种软件的防篡改验证方法，包括:</p>
+      <p>[0011]	动态确定所述软件的验证参数；</p>
+      <p>[0012]	向客户端发送验证控制指令，所述验证控制指令携带了所述验证参数，以使所述客户端通过执行所述验证参数对应的验证逻辑，获取第一校验值；</p>
+      <p>[0013]	接收所述客户端返回的所述第一校验值，比较所述第一校验值与第二校验值，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值；</p>
+      <p>[0014]	当所述第一校验值与所述第二校验值相同时，确定所述软件未被篡改；当所述第一校验值与所述第二校验值不同时，确定所述软件被篡改。</p>
+      <p>[0015]	本发明实施例的另一目的在于提供一种软件的防篡改验证装置，包括:</p>
+      <p>[0016]	指令接收单元，用于接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定；</p>
+      <p>[0017]	获取单元，用于执行所述验证参数对应的验证逻辑，获取第一校验值；</p>
+      <p>[0018]	返回单元，用于将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</p>
+      <p>[0019]	本发明实施例的另一目的在于提供一种软件的防篡改验证装置，包括:</p>
+      <p>[0020]	动态确定单元，用于动态确定所述软件的验证参数；</p>
+      <p>[0021 ] 指令发送单元，用于向客户端发送验证控制指令，所述验证控制指令携带了所述验证参数，以使所述客户端通过执行所述验证参数对应的验证逻辑，获取第一校验值；</p>
+      <p>[0022]	判断单元，用于接收所述客户端返回的所述第一校验值，比较所述第一校验值与第二校验值，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值；</p>
+      <p>[0023]	验证结果确定单元，用于当所述第一校验值与所述第二校验值相同时，确定所述软件未被篡改；当所述第一校验值与所述第二校验值不同时，确定所述软件被篡改。</p>
+      <p>[0024]	本发明实施例在软件的防篡改验证过程中，由该软件的服务器端动态地确定验证参数，由此，该软件的客户端生成的验证结果也根据验证参数的不同而不同，从而避免了验证结果的唯一性，一旦软件遭到了篡改，通过本发明实施例提供的方法即能够准确地识别出结果，有效地提高了对软件是否遭到了篡改的验证结果的准确性。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>[0025]	图1是本发明实施例提供的软件的防篡改验证方法客户端的实现流程图；</p>
+      <p>[0026]	图2是本发明实施例提供的软件的防篡改验证方法内存映射区间数据分布情况的不意图；</p>
+      <p>[0027]	图3是本发明实施例提供的软件的防篡改验证方法服务器端的实现流程图；</p>
+      <p>[0028]	图4是本发明实施例提供的软件的防篡改验证装置的结构框图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>[0029]	为了使本发明的目的、技术方案及优点更加清楚明白，以下结合附图及实施例，对本发明进行进一步详细说明。应当理解，此处所描述的具体实施例仅仅用以解释本发明，并不用于限定本发明。</p>
+      <p>[0030]	本发明实施例在软件的防篡改验证过程中，由该软件的服务器端动态地确定验证参数，由此，该软件的客户端生成的验证结果也根据验证参数的不同而不同，从而避免了验证结果的唯一性，一旦软件遭到了篡改，通过本发明实施例提供的方法即能够准确地识别出结果，有效地提高了对软件是否遭到了篡改的验证结果的准确性。</p>
+      <p>[0031]	具体地，本发明实施例中提及的进行防篡改验证的软件均为具备与其客户端对应的服务器端的软件。该软件的客户端可以安装在手机、个人计算机、平板电脑、笔记本电脑等具备网络接入功能的终端设备上，能够通过互联网与其服务器进行通信，而该服务器能够实现的功能包括但不限于:管理其客户端的用户数据、转发其不同客户端之间的数据、向其客户端发布该软件的新版本等。</p>
+      <p>[0032]	图1示出了本发明实施例提供的软件的防篡改验证方法的实现流程，在本实施例中，流程的执行主体为进行防篡改验证的软件的客户端，实现流程详述如下:</p>
+      <p>[0033]	在SlOl中，接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定。</p>
+      <p>[0034]	在本实施例中，客户端触发对软件的防篡改验证可以通过以下方式实现:</p>
+      <p>[0035]	由服务器向客户端发送验证控制指令，从而触发客户端开始执行对软件的防篡改验证；或者，</p>
+      <p>[0036]	由客户端向服务器发送验证请求，从而触发客户端开始执行对软件的防自发验证，包括:</p>
+      <p>[0037]	客户端每隔预设的时间间隔向服务器发送验证请求；或者，</p>
+      <p>[0038]	客户端在预约的时间点向服务器发送验证请求；或者，</p>
+      <p>[0039]	客户端通过用户端输入的触发指令向服务器发送验证请求。</p>
+      <p>[0040]	无论上述任何一种情况，服务器均会向客户端发送验证控制指令，该验证控制指令中携带了用于指示客户端如何进行软件的防篡改验证的验证参数，每一种验证参数均对应了一种验证逻辑，通过在软件开发过程中，在服务器和客户端约定好每一种验证参数与其对应的验证逻辑的关系，客户端即可以根据验证控制指令中的验证参数来执行对应的验证逻辑。</p>
+      <p>[0041]	在本实施例中，生成何种验证参数，且生成的验证参数取值如何，均由服务器动态随机地来确定。</p>
+      <p>[0042]	其中，验证参数可以包括采样数据获取位置，该验证参数即为由客户端从该采样数据获取位置获取到采样数据，并通过指定的校验算法对获取到的采样数据进行计算，以得到第一校验值。</p>
+      <p>[0043]	当验证参数包括采样数据获取位置时，作为本发明的一个实施例，该采样数据获取位置包括该软件的客户端在其所在终端设备中的安装目录下的文件路径，当该文件路径指向该安装目录下的一个文件时，表明当前需要采样的数据为该文件中的数据，而当该文件路径指向该安装目录下的一个文件夹时，则表明当前需要采样的数据为该文件夹中的全部数据。由于对于软件开发人员来说，软件客户端在终端设备中的安装目录文件结构及相应的文件内容是可知的，因此，在服务器中能够预存储其客户端的安装目录下的所有文件结构及相应的文件内容，服务器能够在其客户端的安装目录下随机地指定一个或者多个文件路径，从而动态地确定出采样数据获取位置。</p>
+      <p>[0044]	当验证参数包括采样数据获取位置时，作为本发明的另一实施例，该采样数据获取位置包括内存映射区间，该内存映射区间具体为客户端所在终端设备中的内存映射区间。由于对于软件开发人员来说，软件客户端在终端设备上运行时，对该终端设备的内存空间占用情况是可知的，如图2所示，其即为运行在Android设备上的软件在运行时，该Android设备中内存映射区间的情况示意图，其中的第一列即为每一个内存映射区间的地址，而最后一列即为相应的内存映射区间中的数据。因此，在服务器中能够预存储当客户端在运行时终端设备的每个内存映射区间内的数据内容，服务器能够随机地指定一个或者多个内存映射区间，从而动态地确定出采样数据获取位置。</p>
+      <p>[0045]	需要说明的是，针对不同操作系统的终端设备，包括运行Android、1S或者WP8(Windows Phone8)等操作系统的终端设备，相同的软件在运行时，单位内存映射区间内的数据是相同的，只可能是相同的数据所分布的内存映射区间的位置不同，因此，服务器需要针对每一种操作系统，预存储当客户端在运行时使用该操作系统的终端设备的每个内存映射区间内的数据内容。</p>
+      <p>[0046]	同时，在本实施例中，服务器动态确定的采样数据位置也可以同时包括内存映射区间和软件的安装目录下的文件路径，从而进一步保证采样数据的随机性。</p>
+      <p>[0047]	此外，验证参数还可以包括可执行代码，则该验证参数所对应的验证逻辑即为由客户端执行该段可执行代码，并将通过执行该段可执行代码所输出的值作为第一校验值。例如，该段可执行代码在执行时被用于调用软件的其中一个功能，并输出在调用该功能时所生成的数据结果，在软件未被篡改的情况下，调用该功能所生成的数据结果均是相同的，因此，该数据结果能够被作为第一校验值，用于判断软件是否遭到了篡改。又例如，当软件为游戏类软件或者试用版软件时，该段可执行代码可以在执行时被用于输出软件所在终端设备的当前系统时间，由于游戏类或者试用版软件会以当前系统时间作为软件是否继续被使用的判决标准，因此，将当前系统时间作为第一校验值，若软件通过篡改从而在非法或者未授权情况下继续使用时，即可以通过该第一校验值判断出来。</p>
+      <p>[0048]	在本发明实施例中，服务器动态确定的验证参数及其对应的验证逻辑包括但不限于上述几种情形，只要能够保证客户端通过执行验证参数对应的验证逻辑所得到的正确的校验值对该验证参数来说是唯一的即可，在此不一一限定。</p>
+      <p>[0049]	在S102中，执行所述验证参数对应的验证逻辑，获取第一校验值。</p>
+      <p>[0050]	在本实施例中，当验证参数包括采样数据获取位置时，客户端根据服务器的控制验证指令中所携带的采样数据获取位置，从该位置上获取到本次验证所需要的采样数据，并根据指定的校验算法对获取到的采样数据计算第一校验值。</p>
+      <p>[0051]	作为本发明的一个实施例，当采样数据获取位置包括所述软件的安装目录下的文件路径时，从所述采样数据获取位置获取采样数据具体为:</p>
+      <p>[0052]	提取所述文件路径指向的文件，将所述文件包含的数据确定为所述采样数据。</p>
+      <p>[0053]	作为本发明的另一实施例，当采样数据获取位置包括内存映射区间时，从所述采样数据获取位置获取采样数据具体为:</p>
+      <p>[0054]	在所述软件运行时，读取所述内存映射区间中的数据，将读取到的数据确定为所述采样数据。</p>
+      <p>[0055]	在本实施例中，从服务器动态确定的采样数据获取位置上获取到的采样数据根据采样数据获取位置的不同，可以为图片、字符串、代码等任意形式的数据。</p>
+      <p>[0056]	作为本发明的一个实施例，验证所采用的校验算法可以在软件开发过程中同时在服务器与客户端预置，从而保证服务器和客户端约定好相同的校验算法。</p>
+      <p>[0057]	作为本发明的另一实施例，验证所采用的校验算法也可以在每次验证之前由服务器动态地确定并通知给客户端，具体地，服务器可以在N种预设的校验算法中随机确定一种，并作为验证参数之一携带在验证控制指令中，与采样数据获取位置一并发送给客户端，其中，N为大于I的整数。</p>
+      <p>[0058]	作为本发明的一个实现示例，校验算法可以为哈希(Hash)算法。若校验算法用f()表示，而采样数据用S表示，当服务器动态指示了多个采样数据获取位置时，客户端从这些采样数据获取位置上分别获取到采样数据S1、S2、S3、……，则相应地，最终得到的第一校验值为 f (S1、S2、S3、......)。</p>
+      <p>[0059]	在S103中，将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</p>
+      <p>[0060]	在本实施例中，当客户端计算出第一校验值后，将该第一校验值返回给服务器，而在服务器端预存储了其动态确定的验证参数所对应的正确校验值，即第二校验值，因此，月艮务器通过判断客户端返回的第一校验值与服务器预存储的第二校验值是否一致，即可以判断出该软件客户端是否遭到了篡改。</p>
+      <p>[0061]	图3示出了本发明实施例提供的软件的防篡改验证方法的实现流程，在本实施例中，流程的执行主体为进行防篡改验证的软件的服务器端，实现流程详述如下:</p>
+      <p>[0062]	在S301中，动态确定所述软件的验证参数。</p>
+      <p>[0063]	在本实施例中，当需要验证软件客户端是否遭到了篡改时，服务器首先需要动态确定本次验证的验证参数。</p>
+      <p>[0064]	在本实施例中，S301可以在以下条件下触发:</p>
+      <p>[0065]	服务器每隔预设的时间间隔触发；或者，</p>
+      <p>[0066]	服务器在预约的时间点触发；或者，</p>
+      <p>[0067]	服务器接收到来自客户端的验证请求后触发。</p>
+      <p>[0068]	在本实施例中，每一种验证参数均对应了一种验证逻辑，通过在软件开发过程中，在服务器和客户端约定好每一种验证参数与其对应的验证逻辑的关系，客户端即可以根据验证控制指令中的验证参数来执行对应的验证逻辑。</p>
+      <p>[0069]	在本实施例中，生成何种验证参数，且生成的验证参数取值如何，均由服务器动态随机地来确定。</p>
+      <p>[0070]	当验证参数包括采样数据获取位置时，作为本发明的一个实施例，该采样数据获取位置包括该软件的客户端在其所在终端设备中的安装目录下的文件路径，当该文件路径指向该安装目录下的一个文件时，表明当前需要采样的数据为该文件中的数据，而当该文件路径指向该安装目录下的一个文件夹时，则表明当前需要采样的数据为该文件夹中的全部数据。由于对于软件开发人员来说，软件客户端在终端设备中的安装目录文件结构及相应的文件内容是可知的，因此，在服务器中能够预存储其客户端的安装目录下的所有文件结构及相应的文件内容，服务器能够在其客户端的安装目录下随机地指定一个或者多个文件路径，从而动态地确定出采样数据获取位置。</p>
+      <p>[0071]	当验证参数包括采样数据获取位置时，作为本发明的另一实施例，该采样数据获取位置包括内存映射区间，该内存映射区间具体为客户端所在终端设备中的内存映射区间。由于对于软件开发人员来说，软件客户端在终端设备上运行时，对该终端设备的内存空间占用情况是可知的，因此，在服务器中能够预存储当客户端在运行时终端设备的每个内存映射区间内的数据内容，服务器能够随机地指定一个或者多个内存映射区间，从而动态地确定出采样数据获取位置。</p>
+      <p>[0072]	同时，在本实施例中，服务器动态确定的采样数据位置也可以同时包括内存映射区间和软件的安装目录下的文件路径，从而进一步保证采样数据的随机性。</p>
+      <p>[0073]	此外，验证参数还可以包括可执行代码，则该验证参数所对应的验证逻辑即为由客户端执行该段可执行代码，并将通过执行该段可执行代码所输出的值作为第一校验值。例如，该段可执行代码在执行时被用于调用软件的其中一个功能，并输出在调用该功能时所生成的数据结果，在软件未被篡改的情况下，调用该功能所生成的数据结果均是相同的，因此，该数据结果能够被作为第一校验值，用于判断软件是否遭到了篡改。又例如，当软件为游戏类软件或者试用版软件时，该段可执行代码可以在执行时被用于输出软件所在终端设备的当前系统时间，由于游戏类或者试用版软件会以当前系统时间作为软件是否继续被使用的判决标准，因此，将当前系统时间作为第一校验值，若软件通过篡改从而在非法或者未授权情况下继续使用时，即可以通过该第一校验值判断出来。</p>
+      <p>[0074]	在本发明实施例中，服务器动态确定的验证参数及其对应的验证逻辑包括但不限于上述几种情形，只要能够保证客户端通过执行验证参数对应的验证逻辑所得到的正确的校验值对该验证参数来说是唯一的即可，在此不一一限定。</p>
+      <p>[0075]	在S302中，向客户端发送验证控制指令，所述验证控制指令携带了所述验证参数，以使所述客户端通过执行所述验证参数对应的验证逻辑，获取第一校验值。</p>
+      <p>[0076]	在本实施例中，当服务器动态确定了验证参数之后，便向客户端发送携带了验证参数的验证控制指令，以使得客户端根据前述实施例S102所述,执行该验证参数对应的验证逻辑，获取到第一校验值，具体的计算方法再此不再赘述。</p>
+      <p>[0077]	在S303中，接收所述客户端返回的第一校验值，比较所述第一校验值与第二校验值，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</p>
+      <p>[0078]	在本实施例中，当客户端计算出第一校验值后，将该第一校验值返回给服务器，而在服务器端，由于其预存储了其动态确定的验证参数对应的正确校验值，因此，服务器通过判断客户端返回的第一校验值与第二校验值是否一致，即可以判断出该软件客户端是否遭到了篡改。</p>
+      <p>[0079]	在本实施例中，当验证参数包括采样数据获取位置时，客户端计算获取到的采样数据时所采用的校验算法可以在软件开发过程中同时在服务器与客户端预置，从而保证服务器和客户端约定好相同的校验算法，也可以在每次验证之前由服务器动态地确定并通知给客户端，即，在S302之前，服务器端还需要执行:</p>
+      <p>[0080]	随机将N种预设的校验算法中的一种确定为所述指定的校验算法，所述N为大于等于I的整数</p>
+      <p>[0081]	由此，服务器可以在N种预设的校验算法中随机确定一种，并作为验证参数之一携带在验证控制指令中，与采样数据获取位置一并发送给客户端。</p>
+      <p>[0082]	在S304中，当所述第一校验值与所述第二校验值相同时，确定所述软件未被篡改；当所述第一校验值与所述第二校验值不同时，确定所述软件被篡改。</p>
+      <p>[0083]	在本实施例中，由于不同的数据内容的校验结果是唯一的，因此，当软件客户端遭到了篡改之后，S303会得到第一校验值与第二校验值不相同的判断结果，由此来完成对软件是否遭到了篡改的验证。</p>
+      <p>[0084]	本发明实施例在软件的防篡改验证过程中，由该软件的服务器端动态地确定验证参数，由此，该软件的客户端生成的验证结果也根据验证参数的不同而不同，从而避免了验证结果的唯一性，一旦软件遭到了篡改，通过本发明实施例提供的方法即能够准确地识别出结果，有效地提高了对软件是否遭到了篡改的验证结果的准确性。</p>
+      <p>[0085]	图4示出了本发明实施例提供的软件的防篡改验证装置的结构框图，该装置可以分别位于软件的客户端和服务器端中，用于分别运行本发明图1实施例和图3实施例所述的软件的防篡改验证方法。为了便于说明，仅示出了与本实施例相关的部分。</p>
+      <p>[0086]	参照图4，在软件的客户端，该装置包括:</p>
+      <p>[0087]	指令接收单元41，接收服务器发送的验证控制指令，所述验证控制指令携带了所述软件的验证参数，所述验证参数由所述服务器动态确定。</p>
+      <p>[0088]	获取单元42，执行所述验证参数对应的验证逻辑，获取第一校验值。</p>
+      <p>[0089]	返回单元43，将所述第一校验值返回给所述服务器，以使所述服务器通过比较所述第一校验值和第二校验值确定所述软件是否被篡改，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</p>
+      <p>[0090]	可选地，所述验证参数包括采样数据获取位置，</p>
+      <p>[0091]	所述获取单元42包括:</p>
+      <p>[0092]	采样子单元，从所述采样数据获取位置获取采样数据。</p>
+      <p>[0093]	计算子单元，根据指定的校验算法对获取到的采样数据计算所述第一校验值。</p>
+      <p>[0094]	可选地，所述采样数据获取位置包括所述软件的安装目录下的文件路径；</p>
+      <p>[0095]	所述采样子单元具体用于:</p>
+      <p>[0096]	提取所述文件路径指向的文件，将所述文件包含的数据确定为所述采样数据。</p>
+      <p>[0097]	可选地，所述采样数据获取位置包括内存映射区间；</p>
+      <p>[0098]	所述采样子单元具体用于:</p>
+      <p>[0099]	在所述软件运行时，读取所述内存映射区间中的数据，将读取到的数据确定为所述采样数据。</p>
+      <p>[0100]	可选地，所述验证参数还包括所述指定的校验算法，所述指定的校验算法为所述服务器在N种预设的校验算法中随机确定的一种，所述N为大于I的整数。</p>
+      <p>[0101]	可选地，所述验证参数包括可执行代码，</p>
+      <p>[0102]	所述获取单元42具体用于:</p>
+      <p>[0103]	执行所述可执行代码，输出所述第一校验值。</p>
+      <p>[0104]	可选地，所述装置还包括:</p>
+      <p>[0105]	请求发送单元，向所述服务器发送验证请求，以使所述服务器发送所述验证控制指令。</p>
+      <p>[0106]	在软件的服务器端，该装置包括:</p>
+      <p>[0107]	动态确定单元44，动态确定所述软件的验证参数。</p>
+      <p>[0108]	指令发送单元45，向客户端发送验证控制指令，所述验证控制指令携带了所述验证参数，以使所述客户端通过执行所述验证参数对应的验证逻辑，获取第一校验值。</p>
+      <p>[0109]	判断单元46，接收所述客户端返回的所述第一校验值，比较所述第一校验值与第二校验值，所述第二校验值为预存储在所述服务器的所述验证参数对应的正确校验值。</p>
+      <p>[0110]	验证结果确定单元47，当所述第一校验值与所述第二校验值相同时，确定所述软件未被篡改；当所述第一校验值与所述第二校验值不同时，确定所述软件被篡改。</p>
+      <p>[0111]	可选地，所述验证参数包括采样数据获取位置，所述采样数据获取位置包括所述软件的安装目录下的文件路径或者内存映射区间。</p>
+      <p>[0112]	可选地，所述验证参数还包括所述指定的校验算法，所述指定的校验算法被所述客户端用于对在所述采样数据获取位置获取到的采样数据计算所述第一校验值，</p>
+      <p>[0113]	所述装置还包括:</p>
+      <p>[0114]	算法确定单元，随机将N种预设的校验算法中的一种确定为所述指定的校验算法，所述N为大于等于I的整数。</p>
+      <p>[0115]	可选地，所述验证参数包括可执行代码，所述可执行代码被所述客户端用于在执行后输出所述第一校验值。</p>
+      <p>[0116]	可选地，所述装置还包括:</p>
+      <p>[0117]	请求接收单元,用于接收所述客户端发送的验证请求。</p>
+      <p>[0118]	本发明实施例在软件的防篡改验证过程中，由该软件的服务器端动态地确定验证参数，由此，该软件的客户端生成的验证结果也根据验证参数的不同而不同，从而避免了验证结果的唯一性，一旦软件遭到了篡改，通过本发明实施例提供的方法即能够准确地识别出结果，有效地提高了对软件是否遭到了篡改的验证结果的准确性。</p>
+      <p>[0119]	同时，采用本发明实施例提供的方法及装置，能够有效地进行软件的自身安全和软件的安装环境安全检测，尤其是对于交易类软件、通信类软件等前后台交互类型的软件，能够有效地防止软件被篡改，达到很好的数据保护效果。</p>
+      <p>[0120]	以上所述仅为本发明的较佳实施例而已，并不用以限制本发明，凡在本发明的精神和原则之内所作的任何修改、等同替换和改进等，均应包含在本发明的保护范围之内。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101783801A?cl=zh">CN101783801A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年1月29日</td><td class="patent-data-table-td patent-date-value">2010年7月21日</td><td class="patent-data-table-td ">福建星网锐捷网络有限公司</td><td class="patent-data-table-td ">一种基于网络的软件保护方法、客户端及服务器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101834867A?cl=zh">CN101834867A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年5月7日</td><td class="patent-data-table-td patent-date-value">2010年9月15日</td><td class="patent-data-table-td ">杭州华三通信技术有限公司</td><td class="patent-data-table-td ">一种客户端安全保护方法及其装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102299930A?cl=zh">CN102299930A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月19日</td><td class="patent-data-table-td patent-date-value">2011年12月28日</td><td class="patent-data-table-td ">北京无限新锐网络科技有限公司</td><td class="patent-data-table-td ">一种保障客户端软件安全的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102546179A?cl=zh">CN102546179A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月31日</td><td class="patent-data-table-td patent-date-value">2012年7月4日</td><td class="patent-data-table-td ">珠海市君天电子科技有限公司</td><td class="patent-data-table-td ">一种服务器端和客户端之间的身份验证方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0021120000">G06F21/12</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/64">G06F21/64</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/12">G06F21/12</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/51">G06F21/51</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/554">G06F21/554</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=c7EoCQABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F2221/033">G06F2221/033</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年11月5日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年12月10日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年3月2日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/36c2df8585068c0cb3bb/CN104134021A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E8%BD%AF%E4%BB%B6%E7%9A%84%E9%98%B2%E7%AF%A1%E6%94%B9%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85%E7%BD%AE.pdf?id=c7EoCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1P86NGy1P2OjX5SgpchAjqDLSy2Q"},"sample_url":"https://www.google.com/patents/reader?id=c7EoCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

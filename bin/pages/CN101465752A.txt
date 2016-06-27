@@ -1,0 +1,203 @@
+<!DOCTYPE html><html><head><title>专利 CN101465752A - 一种联系人排序方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种联系人排序方法及系统"><meta name="DC.contributor" content="夏志勇" scheme="inventor"><meta name="DC.contributor" content="腾讯科技（深圳）有限公司" scheme="assignee"><meta name="DC.date" content="2009-1-9" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及排序技术，公开了一种联系人排序方法及系统，用于解决即时通信系统中无法根据联系人的等级、职位等特殊因素需求对联系人进行排序显示的技术问题。本发明在服务器端为联系人设定排序权值，终端根据所述排序权值进行联系人的排序显示。对于有多个影响联系人排序顺序的因素的情况，本发明提出了一种通过因素权重比及因素子类型权重值乘积多项式求和的方法计算联系人排序权值。此外，在基于排序权值进行联系人排序的基础上结合基于状态优先的排序方法，能够为企业用户提供多样灵活的联系人排序方式，满足企业用户的特殊需求，提升了用户满意度。"><meta name="DC.date" content="2009-6-24"><meta name="citation_patent_publication_number" content="CN:101465752:A"><meta name="citation_patent_application_number" content="CN:200910076591"><link rel="canonical" href="https://www.google.com/patents/CN101465752A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101465752A?cl=zh"/><meta name="title" content="专利 CN101465752A - 一种联系人排序方法及系统"/><meta name="description" content="本发明涉及排序技术，公开了一种联系人排序方法及系统，用于解决即时通信系统中无法根据联系人的等级、职位等特殊因素需求对联系人进行排序显示的技术问题。本发明在服务器端为联系人设定排序权值，终端根据所述排序权值进行联系人的排序显示。对于有多个影响联系人排序顺序的因素的情况，本发明提出了一种通过因素权重比及因素子类型权重值乘积多项式求和的方法计算联系人排序权值。此外，在基于排序权值进行联系人排序的基础上结合基于状态优先的排序方法，能够为企业用户提供多样灵活的联系人排序方式，满足企业用户的特殊需求，提升了用户满意度。"/><meta property="og:title" content="专利 CN101465752A - 一种联系人排序方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101465752A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101465752A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=dt1qBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101465752A&amp;usg=AFQjCNFVyhOz88mdBi5uohmgeLpuUr3k4w" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/7c50f6847014970772bd/CN101465752A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/7c50f6847014970772bd/CN101465752A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101465752A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101465752A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101465752A?cl=zh" style="display:none"><span itemprop="description">本发明涉及排序技术，公开了一种联系人排序方法及系统，用于解决即时通信系统中无法根据联系人的等级、职位等特殊因素需求对联系人进行排序显示的技术问题。本发明在服务器端为联系人设定排序权值，终端根据所述排序...</span><span itemprop="url">https://www.google.com/patents/CN101465752A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101465752A - 一种联系人排序方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101465752A - 一种联系人排序方法及系统" title="专利 CN101465752A - 一种联系人排序方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101465752 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910076591</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年6月24日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年1月9日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年1月9日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910076591.X, </span><span class="patent-bibdata-value">CN 101465752 A, </span><span class="patent-bibdata-value">CN 101465752A, </span><span class="patent-bibdata-value">CN 200910076591, </span><span class="patent-bibdata-value">CN-A-101465752, </span><span class="patent-bibdata-value">CN101465752 A, </span><span class="patent-bibdata-value">CN101465752A, </span><span class="patent-bibdata-value">CN200910076591, </span><span class="patent-bibdata-value">CN200910076591.X</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A4%8F%E5%BF%97%E5%8B%87%22">夏志勇</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">腾讯科技（深圳）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101465752A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101465752A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101465752A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (8),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dt1qBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910076591&amp;usg=AFQjCNENT7JnfvxsI2crtFHQx3EZlj3Leg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dt1qBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101465752A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGQKJxOxvbii7YUefH2ZOxYe61alQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT75793371" lang="ZH" load-source="patent-office">一种联系人排序方法及系统</invention-title>
+    </span><br><span class="patent-number">CN 101465752 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA53548372" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及排序技术，公开了一种联系人排序方法及系统，用于解决即时通信系统中无法根据联系人的等级、职位等特殊因素需求对联系人进行排序显示的技术问题。本发明在服务器端为联系人设定排序权值，终端根据所述排序权值进行联系人的排序显示。对于有多个影响联系人排序顺序的因素的情况，本发明提出了一种通过因素权重比及因素子类型权重值乘积多项式求和的方法计算联系人排序权值。此外，在基于排序权值进行联系人排序的基础上结合基于状态优先的排序方法，能够为企业用户提供多样灵活的联系人排序方式，满足企业用户的特殊需求，提升了用户满意度。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM13530518" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种联系人排序方法，其特征在于：终端接收服务器端设定的排序权值，并根据所述排序权值进行联系人的排序显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求1所述的方法，其特征在于，所述排序权值由管理员设定 或由服务器自动生成，或将管理员设定方式与服务器自动生成方式相结合来设 定所述排序权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求1所述的方法，其特征在于，当有多个因素影响所述排序 权值的取值时，所述排序权值由服务器自动生成的步骤如下：步骤A1、为每一因素设定其在排序方法中的权重比； 步骤A2、为每一因素子类型设定对应的权重值； 步骤A3、计算每一联系人在每一因素子类型下对应的因素权值； 步骤A4、将每一联系人在每一 因素下的因素权值求和，从而获得每一联系 人的排序权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求3所述的方法，其特征在于，还包括为每一个联系人设定 修正属性值的步骤，所述修正属性值与服务器根据因素自动生成的值共同决定 所述排序权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 根据权利要求4所述的方法，其特征在于，所述排序权值、或所述因素 权重比和因素子类型的权重值、或修正属性值可由管理员设定或将权限下放给 特定用户，由有设定权限的用户在终端设定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求l所述的方法，其特征在于，所述终端根据所述排序权值 进行联系人的排序显示时采用基于排序权值优先的排序方式，排序方法为：根 据每个联系人排序权值大小依次排序，对于排序权值相同的联系人采用其它排 序方式进行再次排序。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 根据权利要求1所述的方法，其特征在于，所述终端根据所述排序权值 进行联系人的排序显示时采用基于状态优先的排序权值排序方式，方法如下：判断联系人是否在线，将在线的联系人作为 一组按该组内每个联系人的排序权值大小在该组内进行排序；将离线的联系人作为 一组按该组内每个联系人 的排序权值大小在该组内进行排序；将离线的联系人组排在在线的联系人组之后，对于状态相同且排序权值也 相同的联系人还包括采用其它排序方式进行再次排序的步骤。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8、 一种联系人排序系统，其特征在于，服务器端包括排序权值设定模块，用于设定联系人的排序权值； 终端包括排序模块，用于终端根据联系人的排序权值进行基于排序权值的 排序。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 根据权利要求8所述的系统，其特征在于，所述服务器端还包括：因素设定模块，用于设定影响所述排序权值因素权重比及因素子类型的权 重值；排序权值计算^t块，用于服务器才艮据因素自动生成所述排序权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求9所述的系统，其特征在于，所述因素设定模块还包括 对修正属性值进行设定的功能，所述排序权值由所述修正属性值与服务器根据 因素自动生成的值共同来决定。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES18917531" lang="ZH" load-source="patent-office" class="description">
+    <p>一种联系人排序方法及系统</p>
+    <p>技术领域</p>
+    <p>本发明涉及排序技术，尤其涉及一种联系人的排序方法及系统。 背景技术</p>
+    <p>显示联系人列表，是即时通信客户端、邮件客户端等需要对众多联系人进 行排序显示的软件最基本的元素之一。例如，即时通信客户端用户发起即时通 信业务请求（文本、文件、语音等）时都需要通过联系人列表找到相应的联系 人。联系人列表通过头像、账号等界面元素，将联系人独一无二的区分开来， 并能体现联系人在线状态。</p>
+    <p>为了方便终端用户迅速的找到某一特定的联系人，联系人列表往往会通过 排序表现出有序性。显然，对终端用户而言，发起与在线联系人的业务请求更 可能得到回应，在实际的运营过程中，用户也确实倾向于发起和在线联系人的 通信，而不是离线联系人，除非他们不得不这么做。这导致了在线联系人在整 个联系人列表中相对更加重要。因此几乎所有的即时通信客户端软件都遵循这</p>
+    <p>样一种状态优先的排序方式，其排序原则如下：</p>
+    <p>1) 在线联系人排在最前；</p>
+    <p>2) 离开联系人排在在线联系人之后；</p>
+    <p>3) 离线联系人排在最后；</p>
+    <p>4) 对于状态相同的联系人，按照账号的字母顺序排序。</p>
+    <p>对于状态相同的联系人，采用字母顺序排序是最容易被用户理解的排序方 式，同时也是最便于用户找到某个联系人的方式。</p>
+    <p>在基于以上状态优先的排序方法的基础上，特定的即时通信产品会衍生出 一些新的排序方式。例如为了凸显使用某种业务的用户的重要性或为了鼓励用户使用某种业务，在状态相同的情况下，将使用这种业务的用户排在其它联系人前面。</p>
+    <p>在通用即时通信领域，客户端用户没有过多的将目光放在联系人的排序上，他们只需要能够方便的找到某联系人就可以了，而除了排序方式，目前一些终端软件已经提供了快捷搜索栏等方便查找联系人的辅助性工具。因此在联系人排序方式上一直没有太多的扩展和延伸。然而在企业即时通信领域，由于使用的对象是企业管理人员和员工，或者政府、学校、医院等机构工作人员，在一些特殊的场合，可能需要凸显某些联系人的相对重要性。比如一些企业里总经理是部门最高领导，企业希望让总经理一直处于部门下联系人列表中的最高位置，不论他是否在线。</p>
+    <p>在现有技术中，有一些产品支持终端自定义的排序方式，即终端通过拖拽或其它管理手段，手动设置联系人的排序次序，在终端下次启动时仍然按照用</p>
+    <p>户设置的顺序显示。这样的解决方案虽然灵活性4艮好，但是缺点在于：</p>
+    <p>1 )服务器无法存储和处理所有终端的设置情况，因此终端设置只能保存在</p>
+    <p>本地而无法保存到服务器上，那就意味着用户换台机器登录，之前在另外一台</p>
+    <p>终端上设置的排序次序在新的终端上就无法生效了 ；</p>
+    <p>2)终端用户根据自己的需要对联系人进行排序，这里凸显用户个性的因素</p>
+    <p>强，管理的因素弱，这对于管理性需求比较强的领域是不太合适的，尤其是对</p>
+    <p>于企业即时通信领域，即时通信软件首先是个管理软件，其次才是个人软件。</p>
+    <p>发明内容</p>
+    <p>有鉴于此，本发明的主要目的在于提供一种联系人排序方法，用于解决即时通信系统或邮件系统中无法根据联系人的等级、职位等特殊因素需求对联系人进行排序显示的技术问题。</p>
+    <p>为达到上述目的，本发明的技术方案是这样实现的：</p>
+    <p>一种联系人排序方法，实现方法如下：</p>
+    <p>终端接收服务器端设定的排序权值，并根据所述排序权值进行联系人的排序显示。</p>
+    <p>所述终端可以是企业即时通信客户端、通用即时通信客户端、邮件系统客户端等需要对联系人进行排序显示的终端，本发明不限制终端的具体形式，例</p>
+    <p>如可以是基于手机的终端、基于web终端或基于普通Windows程序终端等。进一步地，所述排序权值由管理员设定或由服务器自动生成，或将管理员</p>
+    <p>设定方式与服务器自动生成方式相结合来设定所述排序权值。</p>
+    <p>进一步地，所述服务器自动生成所述排序权值的依据是影响联系人排序顺</p>
+    <p>序的因素，所述排序权值由所述因素权重比及因素子类型权重值来决定。</p>
+    <p>进一步地，当有多个因素影响所述排序权值的取值时，所述排序权值由服</p>
+    <p>务器自动生成的步骤如下：</p>
+    <p>步骤A1、为每一因素设定其在排序方法中的权重比；</p>
+    <p>步骤A2、为每一因素子类型设定对应的权重值；</p>
+    <p>步骤A3、计算每一联系人在每一因素子类型下对应的因素权值；</p>
+    <p>步骤A4、将每一联系人在每一因素下的因素权值求和，从而获得每一联系</p>
+    <p>人的排序权值。</p>
+    <p>进一步地，为了给用户更多的排序灵活性，还包括为每一个联系人设定修正属性值的步骤，所述修正属性值与服务器根据因素自动生成的值共同决定所述排序权值，即所述排序权值为修正属性值与服务器根据因素自动生成值之和。</p>
+    <p>进一步地，所述排序权值、或所述因素权重比和因素子类型的权重值、或修正属性值可由管理员设定或将权限下放给特定用户，由有设定权限的用户在终端设定。</p>
+    <p>进一步地，所述终端根据所述排序权值进行联系人的排序显示时采用基于排序权值优先的排序方式，排序步骤为：根据每个联系人排序权值大小依次排序，对于排序权值相同的联系人采用其它排序方式进行再次排序。</p>
+    <p>进一步地，所述终端根据所述排序权值进行联系人的排序显示时采用基于状态优先的排序权值排序方式，排序步骤为：</p>
+    <p>判断联系人是否在线，将在线的联系人作为一组按该组内每个联系人的排</p>
+    <p>6序权值大小在该组内进行排序；将离线的联系人作为一组按该组内每个联系人的排序权值大小在该组内进行排序；</p>
+    <p>将离线的联系人组排在在线的联系人组之后，对于状态相同且排序权值也相同的联系人还包括采用其它排序方式进行再次排序的步骤。</p>
+    <p>进一步地，在所述服务器端设定第一配置选项，用于控制终端是否采用基于状态优先的排序柏J直排序方式。</p>
+    <p>进一步地，在所述服务器端设定第二配置选项，用于控制是否允许终端在其本地选择采用何种排序方式。</p>
+    <p>本发明的另一主要目的在于提供一种联系人排序系统，为达到上述目的，本发明的技术方案是这样实现的：</p>
+    <p>一种联系人排序系统，包括服务器端和终端，</p>
+    <p>服务器端包括排序权值设定模块，用于设定联系人的排序权值；</p>
+    <p>终端包括排序模块，用于终端根据联系人的排序权值进行基于排序权值的排序。</p>
+    <p>进一步地，所述^^务器端还包括：</p>
+    <p>因素设定模块，用于设定影响所述排序权值因素权重比及因素子类型的权重值；</p>
+    <p>排序权值计算坤莫块，用于服务器根据因素自动生成所述排序权值。进一步地，所述排序权值计算模块包括：</p>
+    <p>因素权值计算模块，用于计算每一联系人在每一因素子类型下对应的因素权值；</p>
+    <p>因素权值加和模块，用于将每一联系人在每一因素下的因素权值求和，从而获得每一联系人的排序权值。</p>
+    <p>进一步地，所述因素设定模块还包括对修正属性值进行设定的功能，所述排序权值由所述修正属性值与服务器根据因素自动生成的值共同来决定，即通过修正属性值对服务器根据给定的计算公式所计算获得的排序权值进行修正从而得到新的排序权值。</p>
+    <p>7进一步地，所述终端还包括终端设定模块，用于当终端用户拥有设定权限的情况下对所述排序权值或所述修正属性值进行设定。此处所述的设定包括对服务器端管理员设定的排序权值或所述修正属性值的设定。</p>
+    <p>进一步地，所述终端的排序模块根据所述排序权值进行联系人的排序时&#37318;用基于排序权值优先的排序方式。</p>
+    <p>进一步地，所述终端的排序模块根据所述排序权值进行联系人的排序时采用基于状态优先的排序权值排序方式。</p>
+    <p>通过本发明，可根据特殊需求在服务器端为联系人设定排序权值，满足例如企业等特殊环境下即时通信领域对联系人排序的多样化的需求；为了满足终端用户个性化的需求，本发明还在服务器端增加了配置选项，管理员可设定默认排序方式是否采用基于状态优先的排序方式，终端用户可根据配置选项决定是否采用服务器端设定的默认排序方式。本发明为例如企业、科研单位等特殊情况下的即时通讯软件提供了更加灵活、多样的排序方式，充分满足了统一管理及个性化的双重需求，提高了用户满意度。</p>
+    <p>附图说明</p>
+    <p>图1为本发明实施例1所采用的系统结构图；图2为本发明实施例2所采用的系统结构图；图3为本发明实施例2中计算排序权值的流程图；图4为本发明实施例3的排序流程图。</p>
+    <p>具体实施方式</p>
+    <p>为使本发明的目的、技术方案和优点更加清楚明白，以下举实施例并参照附图，对本发明进一步详细说明。实施例1:</p>
+    <p>图1为本实施例的系统结构图，服务器端包括排序权值设定模块，用于为联系人设定排序权值，终端包括排序模块，用于根据排序权值对联系人进行排序显示。本实施例中，为联系人建立一张表，每一个联系人都有对应的排序权值字段。管理员可通过服务器端排序权值设定模块为每个联系人设置排序权值。服务器管理员可以通过服务器本地的管理员操作界面，或者以客户服务器模式远程登录到管理员操作界面，根据影响联系人排序位置的因素的重要程度设置每一联系人的排序权值。</p>
+    <p>本实施例适用于联系人人数较少，通过管理员主观判断就能够很容易确定</p>
+    <p>每一个联系人的排序位置的情况。表1-1是联系人排序权值的数据表示例：</p>
+    <p>表1-1&lt;table&gt;table see original document page 9&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>如上表所示，终端在进行排序显示时，默认情况下采用按排序权值优先的排序方式，根据排序权值的大小降序显示，当出现多个联系人的排序权值相同的情况时，可采用按账号字母顺序排序的方式进行再次排序，显示的顺序如下</p>
+    <p>表所示：</p>
+    <p>表1-2&lt;table&gt;table see original document page 9&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>为了提供更灵活的排序方式，终端还可包括终端设定^f莫块，当管理员为某个用户分配了排序权值的修改权限时，该用户可通过终端设定模块在终端上对排序权值进行修改。</p>
+    <p>通过该实施例可看到，通过管理员对排序权值的设定，可根据人员角色的重要性决定联系在终端联系人列表的显示位置，在企业即时通信领域尤其拥有实用价值，此外，通过权限管理，管理员可将一定的设置权限下放给各部门的特定人员，例如部门经理，由部门经理自己指定本部门联系人的排序顺序，这在分部门显示联系人的情况下尤其能够带来很好的灵活性及客户满意度。</p>
+    <p>实施例2:</p>
+    <p>以企业即时通信系统为例，当企业需要设置排序的人较多时，若管理员为每一个联系人手动设置排序权值会给管理员带来很大工作量。因此通过在服务器端给定计算^^式自动生成排序权值将可在^f艮大程度上减少管理员的工作量。</p>
+    <p>图2给出了本实施例的系统结构图，服务器端包括因素设定模块和排序权值计算模块，因素设定模块用于选择影响联系人排序权值的因素，为每一因素分配权重比以及为每一因素子类型设定不同的权重值。终端包括排序模块及终端设定模块，排序模块用于根据排序权值对联系人排序显示；终端设定模块用于为有权限的用户4是供接口用来修改因素分配权重比及因素子类型的权重值。</p>
+    <p>本实施例采^J;口下步骤将排序权值的设置自动化，如图3所示：</p>
+    <p>步骤1、选择影响联系人排序权值的因素，例如：职位，所属部门，是否关键业务接口人等，并为每一因素设定标识其对排序权值影响程度的权重比，该权重比越大表示其对最终的排序次序的影响程度越大。例如职位的权重为60%,说明其在排序权值中所占比重较其它因素大很多。每一因素又分为若干个因素子类型，例如：部门因素的因素子类型分为总裁、总经理等，本实施例中选择了如表2-l所示的几个因素：</p>
+    <p>表2-l</p>
+    <p>&lt;table&gt;table see original document page 10&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>步骤2、在服务器端为每一因素子类型设定不同的权重值，用于评估不同的因素子类型对该因素的影响程度。例如总裁的权重值为100、总经理的权重值为80,本实施例各因素的因素子类型取值如下列表中所示。表2-2</p>
+    <p>职位	取值</p>
+    <p>'s、裁	嫌</p>
+    <p>副总裁	90</p>
+    <p>总经理	80</p>
+    <p>副总经理	60</p>
+    <p>普通员工	30</p>
+    <p>秘书	30</p>
+    <p>表2-3	所述部门	取值</p>
+    <p>管理部	100</p>
+    <p>国际部	50</p>
+    <p>市场部	40</p>
+    <p>研发部	30</p>
+    <p>表2-4	是否关键的业务接口人	取值</p>
+    <p>是	100</p>
+    <p>否	0</p>
+    <p>步骤3、计算每一联系人在每一因素子类型下对应的因素权值；</p>
+    <p>在执行该步骤前，需管理员为每一个联系人设定该联系人在各因素中的因素子类型，例如Hunter这一联系人在职位这一 因素中的因素子类型为"总裁"。"总裁"对应的因素权重值为100，若职位这一因素的权重为60%，则该联系人在职位这一 因素下对应的因素权值的计算方法为：</p>
+    <p>因素权值=因素权重比*因素子类型对应的权重值=100*60%=60;</p>
+    <p>步骤4、将每一联系人在每一因素下的因素权值求和，从而获得每一联系人的排序权值；</p>
+    <p>假设存在n个影响排序权值的因素(Eh E2， ...， En)， n个因素对应的权重比分别为(Qi,Q2，.,.，Qn)，对于某个确定的联系人，这n个因素下该联系人的n因素子类型对应的权重值分别为(Vb V2, Vn)，则该联系人最终的排序权值R为：</p>
+    <p>R = 1&gt;必（其中'0 5V^100， OSQi^l )      (公式1 )</p>
+    <p>11采用自动计算4又值的方法可以降低管理员的工作量，但是统一的标准总是有不适用的时候。在某些特殊的场景下，对少数人的排序有特殊要求时，用一个服务器端给定的计算公式获得排序权值就无法做到人为控制排序位置，这样虽然可以减少管理员的工作量，但话灵活性比较差，因此本发明为每一个联系人添加了一个修正属性，用于给管理员或有权限的人来设定一个值，从而对自动计算的结果进行干预，所以作为对本实施例的改进，本发明对公式1进行了</p>
+    <p>改进：</p>
+    <p>R = l^e, + Rc (其中，0 SV^lOO, O^Q^l ， Rc^O )     (公式2 )</p>
+    <p>Rc为修正属性值，是一个大于等于O的常数，默认为O当需要对某些人的排序产生影响时，管理员在服务器端通过因素设定模块或拥有权限的用户在终端通过终端设定模块可对修正属性值进行设置，以达到灵活排序的目的。</p>
+    <p>本实施例中，结合表2-l至2-4的内容给出表2-5</p>
+    <p>表2画5</p>
+    <p>联系人	职位	所属部门	接口人	修正属性	排序权值</p>
+    <p>Hunter	总裁	管理部	否	0	100*60o/o+l 00*30%+0* 10%+0=90</p>
+    <p>Jina	副总裁	管理部	否	0	90*60%+100*30%+0*10%+0=84</p>
+    <p>Barry	总经理	研发部	否	0	80*60%+穿30%+0* 10%+0=57</p>
+    <p>Adler	副总经理	研发部	是	0	60* 60%十30 * 30%十100 * 10%+0=5 5</p>
+    <p>Jack	普通员工	研发部	否	0	30*60o/。+30*30%+0*10%+0=27</p>
+    <p>Jeremy	秘书	研发部	否	1	30*60%+30*30%+0*10%+1=28</p>
+    <p>Young	普通员工	研发部	否	0	30*60%+30"0o/o+0* 100/0十0=27</p>
+    <p>通过上表可知，Hunter的部门这一因素下其取值为"管理部"，"管理部"对应的因素权重值为100,部门这一因素对应的权重为30°/。，所以Hunter在管理部这一因素下的因素4又值为100%30%=30;根据依次类推，Hunter的排序权值为100*60%+100*30%+0* 10%+0=90。</p>
+    <p>在不加修正属性值的情况下，联系的排序情况如下：</p>
+    <p>部门	职位	联系人	排序权值</p>
+    <p>管理部	'&amp;裁	Hunter	卯</p>
+    <p>富'J总裁	Jina	84&lt;table&gt;table see original document page 13&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;由于Jeremy和Jack的排序权值都是27，但按账号字母顺序进行再次排序后，Jeremy排在Jack的后面，但对企业来说，秘书可能处理接口事物较多，因此将秘书排在经理下面会更好些，此时通过修正属性就可以进行修正，服务器根据公式进行计算所得排序权值的基础上加上修正属性值的排序情况如下：&lt;table&gt;table see original document page 13&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>从显示结果可以看出，通过修正属性值可以对原有计算公式所的排序结果进行修正，满足了在特殊情况下对排序顺序进行人为干预的需求，既减少了工作量又可满足特殊情况的需要，获得了很好的技术效果。</p>
+    <p>实施例3:</p>
+    <p>为了给企业用户提供多重选择，本发明在服务器端提供配置终端排序方式的配置选项，选项分为两个部分：</p>
+    <p>配置选项1、是否采用基于状态优先的排序权值排序方式。该配置选项用于控制终端是否采用状态优先的排序方式；若该选项设置为采用状态优先排序方式时，终端根据排序权值进行联系人的排序显示时即采用基于状态优先的排序权值排序方式，所述状态优先的排序方式的策略如下：</p>
+    <p>1) 在线联系人排在最前；</p>
+    <p>2) 离线联系人排在在线联系人之后；</p>
+    <p>3) 离线联系人排在最后；</p>
+    <p>4) 对于状态相同的联系人，按照排序权值从大到d、一次排列；5)对于状态相同且排序权值也相同的联系人，再按照其它排序方式进行再次排序，所述其它排序方式可以是按账号字母顺序排序、按是否申请某种业务排序等。</p>
+    <p>结合实施例2,若研发部只有Adler和Jeremy处于在线状态，其他联系人都处于离线状态的话，其显示顺序如下：</p>
+    <p>&lt;table&gt;table see original document page 14&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;若该配置选项设置为不采用状态优先排序方式时，则终端根据排序权值进行联系人的排序显示时即采用基于排序权值优先的排序方式。所述排序权值优</p>
+    <p>先的排序方式的策略如下：</p>
+    <p>a) 排序权值大的联系人排在排序权值小的联系人之前；</p>
+    <p>b) 排序权值相同的联系人再按照其它排序方式进行再次排序。所述其它</p>
+    <p>排序方式可以是按账号字母顺序排序、按是否申请某种业务排序等。</p>
+    <p>结合实施例2，若研发部只有Adler和Jeremy处于在线状态，其他联系人都处于离线状态的话，其显示顺序如表3-2所示：</p>
+    <p>&lt;table&gt;table see original document page 14&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>配置选项2、是否允许终端用户修改本地排序方式。该配置选项用于控制是否允许终端在其本地选择使用何种排序方式。在该配置选项设置为允许的情况下，用户可以在本地选择自己喜欢的排序方式，例如基于状态优先的排序权值排序方式、基于排序权值优先的排序方式，基于账号字母顺序的排序方式等。此时，不管服务端的配置选项1是何值，终端都只根据自己选择的排序方式进行排序，当然也可以在程序上限制只能选择服务器允许的排序方式。</p>
+    <p>在该配置选项设置为不允许的情况下，用户不能在终端修改排序方式，只能采用服务器端给定的默认排序方式，例如，当配置选项1设定为采用基于状</p>
+    <p>态优先的排序权值排序方式时，终端采用基于状态优先的排序权值排序方式；</p>
+    <p>若配置选项1设定为不采用基于状态优先的排序权值排序方式时，则终端采用基于排序权值优先的排序方式。</p>
+    <p>图4为本实施例的执行步骤，详细说明如下：</p>
+    <p>步骤A、在服务器端设定排序权限，或设定因素权重比、因素子类型权重值以及修正属性值，并为用户分配账号权限。</p>
+    <p>在排序权值由管理员人为指定的实施例中，所述账号权限是指特定用户在终端修改排序权值的权限。在采用服务端自动生成排序权值的情况下，账号权限是指特定用户修改因素权重比、因素子类型权重值及修正属性值的权限。</p>
+    <p>步骤B、客户端读取联系人信息、服务器配置选项及联系人账号权限信息等，并对排序权值或决定排序权值的参数进行设定。</p>
+    <p>本实施例中，服务器配置选项是指配置选项1和配置选项2。联系人信息包括联系人的基本信息、排序权值等，联系人账号权限指修改排序权值或因素权重比和因素子类型权重值或修正属性值的权限。所述决定排序权值的参数指因素权重比、因素子类型权重值及修正属性值。</p>
+    <p>步骤C、终端判断配置选项2，即判断是否允许终端修改本地排序方式，若允许则执行步骤D,若不允许则执行步骤E。</p>
+    <p>步骤D、采用终端选择的排序方式对联系人进行排序并显示，流程结束。</p>
+    <p>步骤E、终端判断配置选项1,即判断是否采用基于状态优先的排序权值排序方式，若是则执行步骤F，若否则执行步骤G。</p>
+    <p>步骤F、采用基于状态优先的排序权值排序方式对联系人进行排序并显示，流程结束。</p>
+    <p>步骤G、采用基于排序权值优先的排序方式排序显示对联系人进行排序并显示，流程结束。通过实施例可以看到，通过服务器端的配置选项可以对终端的排序方式进行一定的控制，利于集中管理，同时，通过用户账号权限的控制，可以为特定人员开放设定排序次序的权限，大大增强了排序策略的灵活性，充分满足了企业及个人的需要，提高了用户满意度。</p>
+    <p>以上所述，仅为本发明的较佳实施例而已，并非用于限定本发明的保护范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101931655A?cl=zh">CN101931655A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月10日</td><td class="patent-data-table-td patent-date-value">2010年12月29日</td><td class="patent-data-table-td ">北京开心人信息技术有限公司</td><td class="patent-data-table-td ">一种在线状态的提示方法与系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102340534A?cl=zh">CN102340534A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月21日</td><td class="patent-data-table-td patent-date-value">2012年2月1日</td><td class="patent-data-table-td ">佳世达科技股份有限公司</td><td class="patent-data-table-td ">动态更新联络人名单资料的方法及应用其的通信装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102369528A?cl=zh">CN102369528A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月31日</td><td class="patent-data-table-td patent-date-value">2012年3月7日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">一种基于多值属性的排序方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102369528B?cl=zh">CN102369528B</a></td><td class="patent-data-table-td patent-date-value">2011年8月31日</td><td class="patent-data-table-td patent-date-value">2014年6月4日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">一种基于多值属性的排序方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102594724A?cl=zh">CN102594724A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年1月20日</td><td class="patent-data-table-td patent-date-value">2012年7月18日</td><td class="patent-data-table-td ">上海量明科技发展有限公司</td><td class="patent-data-table-td ">即时通信中设置联系人对象状态的方法、客户端及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103049511A?cl=zh">CN103049511A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月30日</td><td class="patent-data-table-td patent-date-value">2013年4月17日</td><td class="patent-data-table-td ">李晶</td><td class="patent-data-table-td ">一种微博关注列表、微博内容的显示方法及其客户端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103049511B?cl=zh">CN103049511B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月30日</td><td class="patent-data-table-td patent-date-value">2016年2月3日</td><td class="patent-data-table-td ">温州大学</td><td class="patent-data-table-td ">一种微博关注列表、微博内容的显示方法及其客户端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012119431A1?cl=zh">WO2012119431A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月31日</td><td class="patent-data-table-td patent-date-value">2012年9月13日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">一种基于多值属性的排序方法和设备</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=dt1qBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012180000">H04L12/18</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年6月24日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年8月19日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年1月11日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of an application for a patent</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/7c50f6847014970772bd/CN101465752A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E8%81%94%E7%B3%BB%E4%BA%BA%E6%8E%92%E5%BA%8F%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=dt1qBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2FGTh7HpJ40VujD_0TfTmJVkVFPg"},"sample_url":"https://www.google.com/patents/reader?id=dt1qBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

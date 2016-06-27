@@ -1,0 +1,482 @@
+<!DOCTYPE html><html><head><title>专利 CN102567063A - 一种自动安装软件的方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种自动安装软件的方法及装置"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="飞天诚信科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2012-1-20" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开一种自动安装软件的方法及装置，所述方法包括：步骤A：接收到触发信息后获取下载地址；步骤B：根据下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C；步骤C：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B；步骤D：从最新驱动安装包中获取签名证书，并判断签名证书是否合法，是则执行步骤E，否则结束；步骤E：判断当前用户是否为管理员，是则执行步骤G，否则执行步骤F；步骤F：创建管理员权限进程，并判断创建是否成功，是则执行步骤G，否则结束；步骤G：安装所述最新驱动安装包。使用本发明提供的方法及装置节省无驱无软Key的硬件资源并降低硬件要求。"><meta name="DC.date" content="2012-7-11"><meta name="DC.relation" content="CN:101127781:A" scheme="references"><meta name="DC.relation" content="CN:101668284:A" scheme="references"><meta name="DC.relation" content="CN:102004655:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102567063:A"><meta name="citation_patent_application_number" content="CN:201210019286"><link rel="canonical" href="https://www.google.com/patents/CN102567063A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102567063A?cl=zh"/><meta name="title" content="专利 CN102567063A - 一种自动安装软件的方法及装置"/><meta name="description" content="本发明公开一种自动安装软件的方法及装置，所述方法包括：步骤A：接收到触发信息后获取下载地址；步骤B：根据下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C；步骤C：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B；步骤D：从最新驱动安装包中获取签名证书，并判断签名证书是否合法，是则执行步骤E，否则结束；步骤E：判断当前用户是否为管理员，是则执行步骤G，否则执行步骤F；步骤F：创建管理员权限进程，并判断创建是否成功，是则执行步骤G，否则结束；步骤G：安装所述最新驱动安装包。使用本发明提供的方法及装置节省无驱无软Key的硬件资源并降低硬件要求。"/><meta property="og:title" content="专利 CN102567063A - 一种自动安装软件的方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102567063A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102567063A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=eJKDBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102567063A&amp;usg=AFQjCNGnFrYBuEtoJF3PjpNKaiTNKFQggg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/54620e770b85d108f576/CN102567063A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/54620e770b85d108f576/CN102567063A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102567063A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102567063A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102567063A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102567063B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102567063A?cl=zh" style="display:none"><span itemprop="description">本发明公开一种自动安装软件的方法及装置，所述方法包括：步骤A：接收到触发信息后获取下载地址；步骤B：根据下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C；步骤C： ...</span><span itemprop="url">https://www.google.com/patents/CN102567063A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102567063A - 一种自动安装软件的方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102567063A - 一种自动安装软件的方法及装置" title="专利 CN102567063A - 一种自动安装软件的方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102567063 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210019286</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年7月11日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年1月20日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年1月20日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102567063B?hl=zh-CN&amp;cl=zh">CN102567063B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210019286.9, </span><span class="patent-bibdata-value">CN 102567063 A, </span><span class="patent-bibdata-value">CN 102567063A, </span><span class="patent-bibdata-value">CN 201210019286, </span><span class="patent-bibdata-value">CN-A-102567063, </span><span class="patent-bibdata-value">CN102567063 A, </span><span class="patent-bibdata-value">CN102567063A, </span><span class="patent-bibdata-value">CN201210019286, </span><span class="patent-bibdata-value">CN201210019286.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">飞天诚信科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102567063A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102567063A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102567063A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=eJKDBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210019286&amp;usg=AFQjCNHoO3eroJl5_DpaoNI2q40WNBHxMA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=eJKDBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102567063A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHe4VPay_NldKoKqs-mxDiNonnm1w"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT114036412" lang="ZH" load-source="patent-office">一种自动安装软件的方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 102567063 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA98384513" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开一种自动安装软件的方法及装置，所述方法包括：步骤A：接收到触发信息后获取下载地址；步骤B：根据下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C；步骤C：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B；步骤D：从最新驱动安装包中获取签名证书，并判断签名证书是否合法，是则执行步骤E，否则结束；步骤E：判断当前用户是否为管理员，是则执行步骤G，否则执行步骤F；步骤F：创建管理员权限进程，并判断创建是否成功，是则执行步骤G，否则结束；步骤G：安装所述最新驱动安装包。使用本发明提供的方法及装置节省无驱无软Key的硬件资源并降低硬件要求。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(30)</span></span></div><div class="patent-text"><div mxw-id="PCLM44208291" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种自动安装软件的方法，其特征在于，包括：步骤A ：接收到触发信息后获取下载地址；步骤B ：根据所述下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C ；步骤C ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B ；步骤D ：从所述最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤E，否则结束；步骤E ：判断当前用户是否为管理员，是则执行步骤G，否则执行步骤F ；步骤F ：创建管理员权限进程，并判断创建是否成功，是则执行步骤G，否则结束；步骤G ：安装所述最新驱动安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的自动安装软件的方法，其特征在于，在所述步骤A中获取下载地址之前包括步骤A’，步骤A’ ：接收所述触发信息，判断是否需要下载最新驱动安装包，是则执行步骤A，否则结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的自动安装软件的方法，其特征在于，所述步骤A’包括：当接收到第一触发信息时，所述装置被启动，判断本地是否已安装无驱无软Key的驱动程序，是则结束，否则执行步骤A。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的自动安装软件的方法，其特征在于，所述步骤A包括：步骤All ：根据预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤A13，否则执行步骤A12 ；步骤A12 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤All ；步骤A13 ：从所述配置文件中获取备用的下载地址，顺序执行步骤B。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的自动安装软件的方法，其特征在于，所述配置文件中备用的下载地址设置一条，所述步骤B包括：根据所述备用的下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求4所述的自动安装软件的方法，其特征在于，所述配置文件中备用的下载地址设置多条，所述步骤B包括：步骤Bll ：将所述配置文件中备用的第一条下载地址作为当前下载地址；步骤B12 ：根据所述当前下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B13 ；步骤B13 ：判断所述配置文件中备用的下载地址是否用完，是则执行步骤C，否则执行步骤B14 ；步骤B14:将所述配置文件中备用的下一条下载地址作为当前下载地址，返回步骤B12。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求3所述的自动安装软件的方法，其特征在于，所述步骤A包括：获取预设的下载地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求3所述的自动安装软件的方法，其特征在于，所述步骤A包括：步骤A21 ：获取第一下载地址和预设地址；步骤A22 ：根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤A24，否则执行步骤A23 ；步骤A23 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤A22 ；步骤A24 ：从所述配置文件中获取备用的第二下载地址，顺序执行步骤B。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求8所述的自动安装软件的方法，其特征在于，所述配置文件中备用的第二下载地址设置一条，所述步骤B包括：步骤B21 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B22 ；步骤B22:根据所述备用的第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求8所述的自动安装软件的方法，其特征在于，所述配置文件中备用的第二下载地址设置多条，所述步骤B包括：步骤B31 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B32 ；步骤B32 ：将所述配置文件中第一条备用的下载地址作为当前第二下载地址；步骤B33 ：根据当前第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B34 ；步骤B34 ：判断所述配置文件中备用的第二下载地址是否用完，是则执行步骤C，否则执行步骤B35 ；步骤B35 ：将所述配置文件中下一条备用的第二下载地址作为当前第二下载地址，返回步骤B33。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求3所述的自动安装软件的方法，其特征在于，所述步骤A包括：获取第一下载地址和预设地址；所述步骤B包括：步骤B41 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B42 ；步骤B42 ：根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤B44，否则执行步骤B43 ；步骤B43 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B42 ；步骤B44 ：将所述配置文件中第一条备用的下载地址作为当前第二下载地址；步骤B45 ：根据当前第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B46 ；步骤B46 ：判断所述配置文件中备用的第二下载地址是否用完，是则执行步骤C，否则执行步骤B47 ；步骤B47:将所述配置文件中下一条备用的第二下载地址作为当前第二下载地址，返回步骤B45。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求3所述的自动安装软件的方法，其特征在于，所述步骤A包括：获取第一下载地址和预设地址；所述步骤B包括：步骤B51 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B52 ；步骤B52 ：根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤B54，否则执行步骤B53 ；步骤B53 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B52 ；步骤B54 ：根据所述配置文件中的第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求3所述的自动安装软件的方法，其特征在于，所述步骤A包括：获取第一下载地址和预设地址；所述步骤B包括：分别根据所述第一下载地址和预设地址从所述网络服务器上下载最新驱动安装包和配置文件，并分别判断所述最新驱动安装包和配置文件是否下载成功；如两者均未下载成功，则执行步骤C ；如只有所述最新驱动安装包下载成功，则执行步骤D ；如只有所述配置文件下载成功，则根据配置文件中的第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则结束；如两者均下载成功，则根据所述配置文件中的下载地址从所述网络服务器上下载最新驱动安装包，并检测根据所述第一预设地址下载的最新驱动安装包和根据所述第二下载地址下载的最新驱动安装包的版本号的高低，顺序执行步骤D ；所述步骤D具体为：从版本号最高的最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤E，否则结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求3-13任意一项所述的自动安装软件的方法，其特征在于，所述第一触发信息为无驱无软KEY插入计算机的触发信息或点击安装按钮的触发信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求1所述的自动安装软件的方法，其特征在于，在所述步骤A中的获取下载地址之前包括步骤A”，所述步骤A”包括：步骤A”1 ：当接收到第二触发信息时，根据预设地址从所述网络服务器上下载配置文件，并判断下载是否成功，是则执行步骤A” 3，否则执行步骤A” 2 ；步骤A”2 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤A”l，重新进行下载；步骤A” 3 ：比较配置文件中的最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述配置文件中的驱动版本号较高，则执行步骤A，如本地已安装驱动程序的版本号较高，则结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求15所述的自动安装软件的方法，其特征在于，所述步骤A包括：从所述配置文件中获取下载地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求16所述的自动安装软件的方法，其特征在于，所述配置文件中的下载地址设置一条，所述步骤B包括：根据所述获取的下载地址从所述网络服务器上下载最新驱动安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求16所述的自动安装软件的方法，其特征在于，所述配置文件中的下载地址设置多条，所述步骤B包括：步骤B61 ：将所述获取的第一条下载地址作为当前下载地址；步骤B62 ：根据当前下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B63 ；步骤B63 ：判断所述获取的下载地址是否用完，是则执行步骤C，否则执行步骤B64 ；步骤B64 ：将所述获取的下一条下载地址作为当前下载地址，返回步骤B62。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求1所述的自动安装软件的方法，其特征在于，所述步骤A包括：当接收到第二触发信息时，获取预设的下载地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的自动安装软件的方法，其特征在于，所述步骤B和步骤D之间包括步骤B’，所述步骤B判断为是后执行所述步骤B’，步骤B’ ：比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求1所述的自动安装软件的方法，其特征在于，所述步骤A包括：当接收到第二触发信息时，获取第一下载地址和预设地址；所述步骤B包括：分别根据所述第一下载地址和预设地址从所述网络服务器上下载最新驱动安装包和配置文件，并分别判断所述最新驱动安装包和所述配置文件是否下载成功，如两者均未下载成功，则执行步骤C ；如只有所述最新驱动安装包下载成功，则比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束；如只有所述配置文件下载成功，则根据所述配置文件中备用的下载地址从所述网络服务器上下载最新驱动安装包，并判断下载是否成功，是则比较所述最新驱动安装包的版本号和所述本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；如两者均下载成功，则根据所述配置文件中的备用地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则检测根据所述第一预设地址下载的最新驱动安装包、根据所述备用地址下载的最新驱动安装包的版本号和所述本地已安装驱动程序的版本号的高低，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；步骤D具体为：从版本号最高的最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤F，否则结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求14-21任意一项所述的自动安装软件的方法，其特征在于，所述第二触发信息为无驱无软KEY插入计算机且到达更新周期的触发信息或点击升级按钮的触发信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求22所述的自动安装软件的方法，其特征在于，所述步骤G具体为：覆盖安装所述最新驱动安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求1所述的自动安装软件的方法，其特征在于，在所述步骤A中接收到触发信息和获取下载地址之间包括：步骤AOl ：判断其是否与所述网络服务器建立了连接，是则执行步骤A03，否则执行步骤 A02 ；步骤A02 ：与所述网络服务器建立连接，并判断连接是否成功，是则执行步骤A03，否则结束；步骤A03 ：检测当前用户是否为管理员，是则获取下载地址，顺序执行步骤B，否则执行步骤A04 ；步骤A04 ：判断当前计算机中的操作系统是否高于预设系统，是则执行步骤A05，否则执行步骤A06;步骤A05 ：判断用户账户控制界面是否被打开，是则结束，否则执行步骤A06 ；步骤A06 ：输出提示信息，等待用户确认；步骤A07 ：接收用户输入的信息，判断所述信息是否为确认继续的信息，是则获取下载地址，顺序执行步骤B，否则结束。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25.	一种自动安装软件的装置，其特征在于，包括：接收模块：用于接收触发信息；获取模块：用于在所述接收模块接收到触发信息后获取下载地址；下载判断模块：用于根据所述下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功；第一判断模块：用于在所述下载判断模块判断下载不成功时，判断下载次数是否超过预设重试次数；获取判断模块：用于在所述下载判断模块判断下载成功时，从所述最新驱动安装包中获取签名证书，并判断所述签名证书是否合法；第二判断模块：用于在所述签名证书合法时，判断当前用户是否为管理员；创建判断模块：用于当前用户不为管理员是，创建管理员权限进程，并判断创建是否成功；安装模块：用于在管理员权限下安装所述最新驱动安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求25所述的自动安装软件的装置，其特征在于，还包括第三判断模块：用于在接收到触发信息时，判断是否需要下载最新驱动安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求25所述的自动安装软件的装置，其特征在于，所述触发信息包括第一触发信息或第二触发信息；所述第一触发信息为无驱无软KEY插入计算机的触发信息或点击安装按钮的触发信息；所述第二触发信息为无驱无软KEY插入计算机且到达更新周期的触发信息或点击升级按钮的触发信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求25所述的自动安装软件的装置，其特征在于，所述获取模块包括：第一获取单元：用于在所述接收模块接收到触发信息后获取第一下载地址和/或预设地址；第二获取单元：用于获取配置文件中备用的第二下载地址；所述下载判断模块还用于根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求25所述的自动安装软件的装置，其特征在于，还包括第一检测模块：用于检测最新驱动安装包的版本号与本地已安装的驱动程序的版本号的高低；所述安装模块具体用于在管理员权限下覆盖安装所述最新驱动安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求25-&#190;任意一项所述的自动安装软件的装置，其特征在于，还包括：第四判断模块：用于判断所述装置是否与所述网络服务器建立了连接；建立判断模块：用于在所述第四判断模块判断为否时，将所述装置与所述网络服务器建立连接，并判断连接是否成功；第二检测模块：用于在所述装置与所述网络服务器建立连接成功时，检测当前用户是否为管理员；第五判断模块：用于在所述当前用户不为管理员时，判断当前计算机中的操作系统是否高于预设系统；第六判断模块：用于在所述第五判断模块判断为是时，判断用户账户控制界面是否被打开；输出模块：用于在所述第五判断模块和第六判断模块判断为否时，输出提示信息，等待用户确认；接收判断模块：用于接收用户输入的信息，判断所述信息是否为确认继续的信息。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES49829971" lang="ZH" load-source="patent-office" class="description">
+    <p>一种自动安装软件的方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及信息安全领域，尤其涉及一种自动安装软件的方法及装置。背景技术</p>
+    <p>[0002]	早期需要使用Key之前，需要在电脑中安装相应的驱动程序和软件以识别和读取Key中的信息。而后，随着电脑中操作系统（如WindowsXP等操作系统）预置了 USB驱动，逐渐免去安装驱动程序，而使用操作系统预置的USB驱动。目前，为了使得Key的使用更方便，出现了无驱无软Key。</p>
+    <p>[0003]	无驱无软Key不需要人工手动安装驱动（通过电脑操作系统预置的USB驱动来实现），插入电脑相应的USB接口即可使用。无驱无软Key的原理是将用户所需的用户程序以iso文件格式写入到Key的存储区中，从而可以作为虚拟光驱自动运行，不用手工安装软件。但现有的iso文件内容为驱动安装包，占用较大的存储空间，对Key的硬件要求较高；而且现有的无驱无软Key在升级过程中，需要人工参与进行，操作较为繁琐。</p>
+    <p>发明内容</p>
+    <p>[0004]	本发明提供了一种自动安装软件的方法及装置，以克服上述Key内iso文件较大、占用较大的存储空间，从而使得Key的生产成本高的缺陷。</p>
+    <p>[0005]	本发明实施例提供一种自动安装软件的方法，包括：</p>
+    <p>[0006]	步骤A ：接收到触发信息后获取下载地址；</p>
+    <p>[0007]	步骤B ：根据所述下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C ；</p>
+    <p>[0008]	步骤C ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B ；</p>
+    <p>[0009]	步骤D ：从所述最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤E，否则结束；</p>
+    <p>[0010]	步骤E ：判断当前用户是否为管理员，是则执行步骤G，否则执行步骤F ；</p>
+    <p>[0011]	步骤F ：创建管理员权限进程，并判断创建是否成功，是则执行步骤G，否则结束；</p>
+    <p>[0012]	步骤G ：安装所述最新驱动安装包。</p>
+    <p>[0013]	其中，在所述步骤A中获取下载地址之前包括步骤A’，</p>
+    <p>[0014]	步骤A’:接收所述触发信息，判断是否需要下载最新驱动安装包，是则执行步骤A，否则结束。</p>
+    <p>[0015]	其中，所述步骤A’包括：当接收到第一触发信息时，所述装置被启动，判断本地是否已安装无驱无软Key的驱动程序，是则结束，否则执行步骤A。</p>
+    <p>[0016]	其中，所述步骤A包括：</p>
+    <p>[0017]	步骤All ：根据预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤A13，否则执行步骤A12 ；</p>
+    <p>[0018]	步骤A12 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤All ；[0019]	步骤A13 ：从所述配置文件中获取备用的下载地址，顺序执行步骤B。</p>
+    <p>[0020]	其中，所述配置文件中备用的下载地址设置一条，所述步骤B包括：</p>
+    <p>[0021]	根据所述备用的下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</p>
+    <p>[0022]	其中，所述配置文件中备用的下载地址设置多条，所述步骤B包括：</p>
+    <p>[0023]	步骤Bll ：将所述配置文件中备用的第一条下载地址作为当前下载地址；</p>
+    <p>[0024]	步骤B12 ：根据所述当前下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B13 ；</p>
+    <p>[0025]	步骤B13 ：判断所述配置文件中备用的下载地址是否用完，是则执行步骤C，否则执行步骤B14;</p>
+    <p>[0026]	步骤B14:将所述配置文件中备用的下一条下载地址作为当前下载地址，返回步骤 B12。</p>
+    <p>[0027]	其中，所述步骤A包括：获取预设的下载地址。</p>
+    <p>[0028]	其中，所述步骤A包括：</p>
+    <p>[0029]	步骤A21 ：获取第一下载地址和预设地址；</p>
+    <p>[0030]	步骤A22 ：根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤A24，否则执行步骤A23 ；</p>
+    <p>[0031]	步骤A23 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤A22 ；</p>
+    <p>[0032]	步骤A24:从所述配置文件中获取备用的第二下载地址，顺序执行步骤B。</p>
+    <p>[0033]	其中，所述配置文件中备用的第二下载地址设置一条，所述步骤B包括：</p>
+    <p>[0034]	步骤B21 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B22 ；</p>
+    <p>[0035]	步骤B22 ：根据所述备用的第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</p>
+    <p>[0036]	其中，所述配置文件中备用的第二下载地址设置多条，所述步骤B包括：</p>
+    <p>[0037]	步骤B31 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B32 ；</p>
+    <p>[0038]	步骤B32 ：将所述配置文件中第一条备用的下载地址作为当前第二下载地址；</p>
+    <p>[0039]	步骤B33 ：根据当前第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B34 ；[0040]	步骤B34 ：判断所述配置文件中备用的第二下载地址是否用完，是则执行步骤C，否则执行步骤B35 ；</p>
+    <p>[0041]	步骤B35 ：将所述配置文件中下一条备用的第二下载地址作为当前第二下载地址，返回步骤B33。</p>
+    <p>[0042]	其中，所述步骤A包括：获取第一下载地址和预设地址；</p>
+    <p>[0043]	所述步骤B包括：</p>
+    <p>[0044]	步骤B41 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B42 ；</p>
+    <p>[0045]	步骤B42 ：根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤B44，否则执行步骤B43 ；</p>
+    <p>[0046]	步骤B43 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B42 ；</p>
+    <p>[0047]	步骤B44 ：将所述配置文件中第一条备用的下载地址作为当前第二下载地址；</p>
+    <p>[0048]	步骤B45 ：根据当前第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B46 ；</p>
+    <p>[0049]	步骤B46 ：判断所述配置文件中备用的第二下载地址是否用完，是则执行步骤C，否则执行步骤B47 ；</p>
+    <p>[0050]	步骤B47 ：将所述配置文件中下一条备用的第二下载地址作为当前第二下载地址，返回步骤B45。</p>
+    <p>[0051]	其中，所述步骤A包括：获取第一下载地址和预设地址；</p>
+    <p>[0052]	所述步骤B包括：</p>
+    <p>[0053]	步骤B51 ：根据所述第一下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B52 ；</p>
+    <p>[0054]	步骤B52 ：根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤B54，否则执行步骤B53 ；</p>
+    <p>[0055]	步骤B53 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B52 ；</p>
+    <p>[0056]	步骤B54 ：根据所述配置文件中的第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</p>
+    <p>[0057]	其中，所述步骤A包括：获取第一下载地址和预设地址；</p>
+    <p>[0058]	所述步骤B包括：</p>
+    <p>[0059]	分别根据所述第一下载地址和预设地址从所述网络服务器上下载最新驱动安装包和配置文件，并分别判断所述最新驱动安装包和配置文件是否下载成功；</p>
+    <p>[0060]	如两者均未下载成功，则执行步骤C ；</p>
+    <p>[0061]	如只有所述最新驱动安装包下载成功，则执行步骤D ；</p>
+    <p>[0062]	如只有所述配置文件下载成功，则根据配置文件中的第二下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则结束；</p>
+    <p>[0063]	如两者均下载成功，则根据所述配置文件中的下载地址从所述网络服务器上下载最新驱动安装包，并检测根据所述第一预设地址下载的最新驱动安装包和根据所述第二下载地址下载的最新驱动安装包的版本号的高低，顺序执行步骤D ；</p>
+    <p>[0064]	所述步骤D具体为：从版本号最高的最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤E，否则结束。</p>
+    <p>[0065]	其中，所述第一触发信息为无驱无软KEY插入计算机的触发信息或点击安装按钮的触发信息。</p>
+    <p>[0066]	其中，在所述步骤A中的获取下载地址之前包括步骤A”，所述步骤A”包括：</p>
+    <p>[0067]	步骤A”1 ：当接收到第二触发信息时，根据预设地址从所述网络服务器上下载配置文件，并判断下载是否成功，是则执行步骤A” 3，否则执行步骤A” 2 ；</p>
+    <p>[0068]	步骤A”2 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤A”l，重新进行下载；</p>
+    <p>[0069]	步骤A” 3 ：比较配置文件中的最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述配置文件中的驱动版本号较高，则执行步骤A，如本地已安装驱动程序的版本号较高，则结束。</p>
+    <p>[0070]	其中，所述步骤A包括：</p>
+    <p>[0071]	从所述配置文件中获取下载地址。</p>
+    <p>[0072]	其中，所述配置文件中的下载地址设置一条，所述步骤B包括：根据所述获取的下载地址从所述网络服务器上下载最新驱动安装包。</p>
+    <p>[0073]	其中于，所述配置文件中的下载地址设置多条，所述步骤B包括：</p>
+    <p>[0074]	步骤B61 ：将所述获取的第一条下载地址作为当前下载地址；</p>
+    <p>[0075]	步骤B62 ：根据当前下载地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B63 ；</p>
+    <p>[0076]	步骤B63:判断所述获取的下载地址是否用完，是则执行步骤C，否则执行步骤B64 ；</p>
+    <p>[0077]	步骤B64 ：将所述获取的下一条下载地址作为当前下载地址，返回步骤B62。</p>
+    <p>[0078]	其中，所述步骤A包括：当接收到第二触发信息时，获取预设的下载地址。</p>
+    <p>[0079]	其中，所述步骤B和步骤D之间包括步骤B’，所述步骤B判断为是后执行所述步骤B，，</p>
+    <p>[0080]	步骤B’ ：比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束。</p>
+    <p>[0081]	其中，所述步骤A包括：当接收到第二触发信息时，获取第一下载地址和预设地址；</p>
+    <p>[0082]	所述步骤B包括：</p>
+    <p>[0083]	分别根据所述第一下载地址和预设地址从所述网络服务器上下载最新驱动安装包和配置文件，并分别判断所述最新驱动安装包和所述配置文件是否下载成功，</p>
+    <p>[0084]	如两者均未下载成功，则执行步骤C ；</p>
+    <p>[0085]	如只有所述最新驱动安装包下载成功，则比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束；</p>
+    <p>[0086]	如只有所述配置文件下载成功，则根据所述配置文件中备用的下载地址从所述网络服务器上下载最新驱动安装包，并判断下载是否成功，是则比较所述最新驱动安装包的版本号和所述本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；</p>
+    <p>[0087]	如两者均下载成功，则根据所述配置文件中的备用地址从所述网络服务器上下载最新驱动安装包，并判断是否下载成功，是则检测根据所述第一预设地址下载的最新驱动安装包、根据所述备用地址下载的最新驱动安装包的版本号和所述本地已安装驱动程序的版本号的高低，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如所述本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；步骤D具体为：从版本号最高的最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤F，否则结束ο[0088]	其中，所述第二触发信息为无驱无软KEY插入计算机且到达更新周期的触发信息或点击升级按钮的触发信息。</p>
+    <p>[0089]	其中，所述步骤G具体为：覆盖安装所述最新驱动安装包。</p>
+    <p>[0090]	其中，在所述步骤A中接收到触发信息和获取下载地址之间包括：</p>
+    <p>[0091]	步骤AOl ：判断其是否与所述网络服务器建立了连接，是则执行步骤A03，否则执行步骤A02 ；</p>
+    <p>[0092]	步骤A02 ：与所述网络服务器建立连接，并判断连接是否成功，是则执行步骤A03，否则结束；</p>
+    <p>[0093]	步骤A03 ：检测当前用户是否为管理员，是则获取下载地址，顺序执行步骤B，否则执行步骤A04;</p>
+    <p>[0094]	步骤A04 ：判断当前计算机中的操作系统是否高于预设系统，是则执行步骤A05，否则执行步骤A06;</p>
+    <p>[0095]	步骤A05 ：判断用户账户控制界面是否被打开，是则结束，否则执行步骤A06 ；</p>
+    <p>[0096]	步骤A06 ：输出提示信息，等待用户确认；</p>
+    <p>[0097]	步骤A07 ：接收用户输入的信息，判断所述信息是否为确认继续的信息，是则获取下载地址，顺序执行步骤B，否则结束。</p>
+    <p>[0098]	本发明实施例又提供一种自动安装软件的装置，包括：</p>
+    <p>[0099]	接收模块：用于接收触发信息；</p>
+    <p>[0100]	获取模块：用于在所述接收模块接收到触发信息后获取下载地址；</p>
+    <p>[0101]	下载判断模块：用于根据所述下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功；</p>
+    <p>[0102]	第一判断模块：用于在所述下载判断模块判断下载不成功时，判断下载次数是否超过预设重试次数；</p>
+    <p>[0103]	获取判断模块：用于在所述下载判断模块判断下载成功时，从所述最新驱动安装包中获取签名证书，并判断所述签名证书是否合法；</p>
+    <p>[0104]	第二判断模块：用于在所述签名证书合法时，判断当前用户是否为管理员；</p>
+    <p>[0105]	创建判断模块：用于当前用户不为管理员是，创建管理员权限进程，并判断创建是否成功；</p>
+    <p>[0106]	安装模块：用于在管理员权限下安装所述最新驱动安装包。</p>
+    <p>[0107]	其中，所述装置还包括第三判断模块：用于在接收到触发信息时，判断是否需要下载最新驱动安装包。</p>
+    <p>[0108]	其中，所述触发信息包括第一触发信息或第二触发信息；</p>
+    <p>[0109]	所述第一触发信息为无驱无软KEY插入计算机的触发信息或点击安装按钮的触发信息；</p>
+    <p>[0110]	所述第二触发信息为无驱无软KEY插入计算机且到达更新周期的触发信息或点击升级按钮的触发信息。</p>
+    <p>[0111]	其中，所述获取模块包括：</p>
+    <p>[0112]	第一获取单元：用于在所述接收模块接收到触发信息后获取第一下载地址和/或预设地址；[0113]	第二获取单元：用于获取配置文件中备用的第二下载地址；</p>
+    <p>[0114]	所述下载判断模块还用于根据所述预设地址从所述网络服务器上下载配置文件，并判断是否下载成功。</p>
+    <p>[0115]	其中，所述装置还包括第一检测模块：用于检测最新驱动安装包的版本号与本地已安装的驱动程序的版本号的高低；</p>
+    <p>[0116]	所述安装模块具体用于在管理员权限下覆盖安装所述最新驱动安装包。</p>
+    <p>[0117]	其中，所述装置还包括：</p>
+    <p>[0118]	第四判断模块：用于判断所述装置是否与所述网络服务器建立了连接；</p>
+    <p>[0119]	建立判断模块：用于在所述第四判断模块判断为否时，将所述装置与所述网络服务器建立连接，并判断连接是否成功；</p>
+    <p>[0120]	第二检测模块：用于在所述装置与所述网络服务器建立连接成功时，检测当前用户是否为管理员；</p>
+    <p>[0121]	第五判断模块：用于在所述当前用户不为管理员时，判断当前计算机中的操作系统是否高于预设系统；</p>
+    <p>[0122]	第六判断模块：用于在所述第五判断模块判断为是时，判断用户账户控制界面是否被打开；</p>
+    <p>[0123]	输出模块：用于在所述第五判断模块和第六判断模块判断为否时，输出提示信息，等待用户确认；</p>
+    <p>[0124]	接收判断模块：用于接收用户输入的信息，判断所述信息是否为确认继续的信息。</p>
+    <p>[0125]	本发明达到的有益效果：本发明中只将用于下载的程序以iso文件格式写入无驱无软Key中，通过预设下载地址访问服务器从而直接下载无驱无软Key的驱动安装包，或者通过预设地址访问服务器并下载配置文件，再根据配置文件中的下载路径访问服务器下载无驱无软Key的驱动安装包，而未直接将驱动安装包以iso文件格式存储在无驱无软Key中，从而减小了无驱无软Key内用于存储驱动安装包的空间，达到节省硬件资源、缩减成本的效果；当到达更新时间时，对无驱无软Key的已安装程序实现自动更新，而无需人工参与，简化升级操作过程。</p>
+    <p>附图说明</p>
+    <p>[0126]	图1为本发明实施例一提供的一种自动安装软件的方法流程图；</p>
+    <p>[0127]	图2为本发明实施例二提供的一种实现第一次安装过程的自动安装软件的方法流程图；</p>
+    <p>[0128]	图3为本发明实施例三提供的一种实现升级过程的自动安装软件的方法流程图；</p>
+    <p>[0129]	图4为本发明实施例四提供的一种自动安装软件的装置方框图；</p>
+    <p>[0130]	图5为本发明实施例四提供的一种实现第一次安装驱动程序的自动安装软件的装置方框图；</p>
+    <p>[0131]	图6为本发明实施例四提供的一种实现升级驱动程序的自动安装软件的装置方框图。</p>
+    <p>具体实施方式[0132]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方式做进一步的详细描述。</p>
+    <p>[0133]	实施例一</p>
+    <p>[0134]	本发明实施例一提供的一种自动安装软件的方法，在进行本实施例的方法前，无驱无软Key已与计算机建立了连接，如图1所示，包括：</p>
+    <p>[0135]	步骤A ：接收到触发信息后获取下载地址；</p>
+    <p>[0136]	在本实施例中，在所述步骤A中的获取下载地址之前包括步骤A’，步骤A’ ：接收所述触发信息，判断是否需要下载最新驱动安装包，是则执行步骤A，否则结束；</p>
+    <p>[0137]	在第一次安装过程中，步骤A’具体为：当接收到第一触发信息时，所述装置被启动，判断本地是否已安装无驱无软Key的驱动程序，是则结束，否则获取下载地址；在步骤A中获取的下载地址可以为最新驱动包的直接下载地址和/或配置文件的预设地址。</p>
+    <p>[0138]	在升级安装过程中，当接收到第二触发信息时，先根据预设地址下载配置文件，当配置文件中的驱动版本号高于本地已安装驱动程序的版本号时，从配置文件中获取备用的下载地址；或者当接收到第二触发信息时，直接获取预先设置的下载地址；</p>
+    <p>[0139]	本实施例中，所述第一触发信息为无驱无软KEY插入计算机的触发信息或点击安装按钮的触发信息；所述第二触发信息为无驱无软KEY插入计算机且到达更新周期的触发信息或点击升级按钮的触发信息。</p>
+    <p>[0140]	步骤B ：根据所述下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C ；</p>
+    <p>[0141]	本实施例中，步骤B中可以根据获取的下载地址从网络服务器上直接下载最新驱动安装包，和/或根据配置文件中备用的下载地址从网络服务器上下载最新驱动安装包；配置文件中备用的下载地址可以设置一条或多条；</p>
+    <p>[0142]	第一次安装时，配置文件的下载可以在步骤A中进行，也可以在步骤B中进行；</p>
+    <p>[0143]	在升级安装过程中，当步骤A中获取的是预先设置的下载地址时，当步骤B判断为是时，先执行步骤B’，步骤B’包括：比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如本地已安装驱动程序的版本号较高，则结束。</p>
+    <p>[0144]	步骤C ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B ；</p>
+    <p>[0145]	步骤D ：从所述最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤E，否则结束；[0146]	步骤E ：判断当前用户是否为管理员，是则执行步骤G，否则执行步骤F ；</p>
+    <p>[0147]	步骤F ：创建管理员权限进程，并判断创建是否成功，是则执行步骤G，否则结束；</p>
+    <p>[0148]	步骤G ：安装所述最新驱动安装包；</p>
+    <p>[0149]	在升级安装过程中，步骤G具体为：覆盖安装所述最新驱动安装包。</p>
+    <p>[0150]	在本实施例中，在所述步骤A中接收到触发信息和获取下载地址之间还可以包括：</p>
+    <p>[0151]	步骤AOl ：判断其是否与网络服务器建立了连接，是则执行步骤A03，否则执行步骤 A02 ；</p>
+    <p>[0152]	步骤A02 ：与网络服务器建立连接，并判断连接是否成功，是则执行步骤A03，否则结束；</p>
+    <p>[0153]	步骤A03:检测当前用户是否为管理员，是则获取下载地址，顺序执行步骤B，否则执行步骤A04;</p>
+    <p>[0154]	步骤A04 ：判断当前计算机中的操作系统是否高于预设系统，是则执行步骤A05，否则执行步骤A06;</p>
+    <p>[0155]	步骤A05 ：判断用户账户控制界面是否被打开，是则结束，否则执行步骤A06 ；</p>
+    <p>[0156]	步骤A06 ：输出提示信息，等待用户确认；</p>
+    <p>[0157]	步骤A07 ：接收用户输入的信息，判断所述信息是否为确认继续的信息，是则获取下载地址，顺序执行步骤B，否则结束。</p>
+    <p>[0158](	一 )本实施例中，在第一次安装时，步骤A和步骤B对应有以下六种实现方式；</p>
+    <p>[0159]	(1)步骤A中获取的下载地址为配置文件中备用的下载地址，所述步骤A包括：</p>
+    <p>[0160]	步骤All ：根据预设地址从网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤A13，否则执行步骤A12 ；</p>
+    <p>[0161]	步骤A12 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤All ；</p>
+    <p>[0162]	步骤A13 ：从所述配置文件中获取备用的下载地址，顺序执行步骤B。</p>
+    <p>[0163]	①当所述配置文件中备用的下载地址设置一条，所述步骤B包括：</p>
+    <p>[0164]	根据所述备用的下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</p>
+    <p>[0165]	②当所述配置文件中备用的下载地址设置多条，所述步骤B包括：</p>
+    <p>[0166]	步骤Bll ：将所述配置文件中备用的第一条下载地址作为当前下载地址；</p>
+    <p>[0167]	步骤B12 ：根据所述当前下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B13 ；</p>
+    <p>[0168]	步骤B13:判断所述配置文件中备用的下载地址是否用完，是则执行步骤C，否则执行步骤B14;</p>
+    <p>[0169]	步骤B14:将所述配置文件中备用的下一条下载地址作为当前下载地址，返回步骤 B12。</p>
+    <p>[0170]	(2)步骤A中获取的下载地址为预先设置的下载地址，所述步骤A包括：获取预设的下载地址。</p>
+    <p>[0171]	(3)步骤A中获取的下载地址为预先设置的第一下载地址和用于下载配置文件的预设地址，且在步骤A中下载配置文件，所述步骤A包括：</p>
+    <p>[0172]	步骤A21 ：获取第一下载地址和预设地址；</p>
+    <p>[0173]	步骤A22 ：根据所述预设地址从网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤A24，否则执行步骤A23 ；</p>
+    <p>[0174]	步骤A23 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤A22 ；</p>
+    <p>[0175]	步骤A24 ：从所述配置文件中获取备用的第二下载地址，顺序执行步骤B。①当所述配置文件中备用的第二下载地址设置一条，所述步骤B包括：</p>
+    <p>[0176]	步骤B21 ：根据所述第一下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B22 ；</p>
+    <p>[0177]	步骤B22 ：根据所述备用的第二下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</p>
+    <p>[0178]	②当所述配置文件中备用的第二下载地址设置多条，所述步骤B包括：</p>
+    <p>[0179]	步骤B31 ：根据所述第一下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B32 ；</p>
+    <p>[0180]	步骤B32 ：将所述配置文件中第一条备用的下载地址作为当前第二下载地址；</p>
+    <p>[0181]	步骤B33 ：根据当前第二下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B34 ；</p>
+    <p>[0182]	步骤B34 ：判断所述配置文件中备用的第二下载地址是否用完，是则执行步骤C，否则执行步骤B35 ；</p>
+    <p>[0183]	步骤B35 ：将所述配置文件中下一条备用的第二下载地址作为当前第二下载地址，返回步骤B33。</p>
+    <p>[0184]	(4)步骤A中获取的下载地址为预先设置的第一下载地址和用于下载配置文件的预设地址，且在步骤B中下载配置文件，这种实现方式配置文件中备用的下载地址设置多条；</p>
+    <p>[0185]	所述步骤A包括：获取第一下载地址和预设地址；</p>
+    <p>[0186]	所述步骤B包括：</p>
+    <p>[0187]	步骤B41 ：根据所述第一下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B42 ；</p>
+    <p>[0188]	步骤B42 ：根据所述预设地址从网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤B44，否则执行步骤B43 ；</p>
+    <p>[0189]	步骤B43 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B42 ；</p>
+    <p>[0190]	步骤B44 ：将所述配置文件中第一条备用的下载地址作为当前第二下载地址；</p>
+    <p>[0191]	步骤B45 ：根据当前第二下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B46 ；</p>
+    <p>[0192]	步骤B46 ：判断所述配置文件中备用的第二下载地址是否用完，是则执行步骤C，否则执行步骤B47;</p>
+    <p>[0193]	步骤B47 ：将所述配置文件中下一条备用的第二下载地址作为当前第二下载地址，返回步骤B45。</p>
+    <p>[0194]	(5)步骤A中获取的下载地址为预先设置的第一下载地址和用于下载配置文件的预设地址，且在步骤B中下载配置文件，这种实现方式配置文件中备用的下载地址设置一条；</p>
+    <p>[0195]	所述步骤A包括：获取第一下载地址和预设地址；</p>
+    <p>[0196]	所述步骤B包括：</p>
+    <p>[0197]	步骤B51 ：根据所述第一下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B52 ；</p>
+    <p>[0198]	步骤B52 ：根据所述预设地址从网络服务器上下载配置文件，并判断是否下载成功，是则执行步骤B54，否则执行步骤B53 ；</p>
+    <p>[0199]	步骤B53 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤B52 ；</p>
+    <p>[0200]	步骤B54 ：根据所述配置文件中的第二下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤C。</p>
+    <p>[0201]	(6)步骤A中获取的下载地址为预先设置的第一下载地址和用于下载配置文件的预设地址，且在步骤B中同时根据第一下载地址和预设地址从网络服务器上下载最新驱动安装包和配置文件；</p>
+    <p>[0202]	所述步骤A包括：获取第一下载地址和预设地址；</p>
+    <p>[0203]	所述步骤B包括：</p>
+    <p>[0204]	分别根据所述第一下载地址和预设地址从网络服务器上下载最新驱动安装包和配置文件，并分别判断所述最新驱动安装包和配置文件是否下载成功，</p>
+    <p>[0205]	如两者均未下载成功，则执行步骤C ；</p>
+    <p>[0206]	如只有所述最新驱动安装包下载成功，则执行步骤D ；</p>
+    <p>[0207]	如只有所述配置文件下载成功，则根据配置文件中的第二下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则结束；</p>
+    <p>[0208]	如两者均下载成功，则根据所述配置文件中的下载地址从网络服务器上下载最新驱动安装包，并检测根据所述第一预设地址下载的最新驱动安装包和根据所述第二下载地址下载的最新驱动安装包的版本号的高低，顺序执行步骤D ；步骤D具体为：从版本号最高的最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤E，否则结束。</p>
+    <p>[0209]	(二）本实施例中，在升级安装时，步骤A和步骤B对应有以下几种实现方式；</p>
+    <p>[0210]	(1)在执行步骤A之前判断是否需要进行升级处理，当需要升级处理时再下载最新驱动安装包，即在所述步骤A中的获取下载地址之前包括步骤A”，所述步骤A”包括：</p>
+    <p>[0211]	步骤A”1 ：当接收到第二触发信息时，根据预设地址从网络服务器上下载配置文件，并判断下载是否成功，是则执行步骤A” 3，否则执行步骤A” 2 ；</p>
+    <p>[0212]	步骤A”2 ：判断下载次数是否超过预设重试次数，是则结束，否则返回步骤A”l，重新进行下载；</p>
+    <p>[0213]	步骤A” 3 ：比较配置文件中的最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述配置文件中的驱动版本号较高，则执行步骤A，如本地已安装驱动程序的版本号较高，则结束。</p>
+    <p>[0214]	所述步骤A包括：从所述配置文件中获取下载地址。</p>
+    <p>[0215]	①当所述配置文件中的下载地址设置一条，所述步骤B包括：根据所述获取的下载地址从网络服务器上下载最新驱动安装包。</p>
+    <p>[0216]	②当所述配置文件中的下载地址设置多条，所述步骤B包括：</p>
+    <p>[0217]	步骤B61 ：将所述获取的第一条下载地址作为当前下载地址；</p>
+    <p>[0218]	步骤B62 ：根据当前下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤D，否则执行步骤B63 ；</p>
+    <p>[0219]	步骤B63:判断所述获取的下载地址是否用完，是则执行步骤C，否则执行步骤B64 ；</p>
+    <p>[0220]	步骤B64 ：将所述获取的下一条下载地址作为当前下载地址，返回步骤B62。</p>
+    <p>[0221]	(2)先根据预先设置的下载地址从网络服务器上下载最新驱动安装包，当最新驱动安装包的版本号高于本地已安装的驱动程序的版本号时，再进行升级处理；[0222]	所述步骤A包括：当接收到第二触发信息时，获取预设的下载地址；</p>
+    <p>[0223]	所述步骤B和步骤D之间包括步骤B’，步骤B判断为是后执行步骤B’，</p>
+    <p>[0224]	步骤B’ ：比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如本地已安装驱动程序的版本号较高，则结束。</p>
+    <p>[0225]	(3)同时根据第一下载地址和预设地址从网络服务器上下载最新驱动安装包和配置文件，针对下载情况的不同进行不同的升级处理过程；</p>
+    <p>[0226]	所述步骤A包括：当接收到第二触发信息时，获取第一下载地址和预设地址；</p>
+    <p>[0227]	所述B包括：</p>
+    <p>[0228]	分别根据所述第一下载地址和预设地址从网络服务器上下载最新驱动安装包和配置文件，并分别判断所述最新驱动安装包和配置文件是否下载成功，</p>
+    <p>[0229]	如两者均未下载成功，则执行步骤C ；</p>
+    <p>[0230]	如只有所述最新驱动安装包下载成功，则比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如本地已安装驱动程序的版本号较高，则结束；</p>
+    <p>[0231]	如只有所述配置文件下载成功，则根据配置文件中备用的下载地址从网络服务器上下载最新驱动安装包，并判断下载是否成功，是则比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤D，如本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；</p>
+    <p>[0232]	如两者均下载成功，则根据所述配置文件中的备用地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则检测根据所述第一预设地址下载的最新驱动安装包、根据所述备用地址下载的最新驱动安装包的版本号和本地已安装驱动程序的版本号的高低，如最新驱动安装包的驱动版本号较高，则执行步骤D，如本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；步骤D具体为：从版本号最高的最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤F，否则结束。</p>
+    <p>[0233]	本实施例的升级过程中，当驱动版本号预设在配置文件中，可以先下载配置文件，再根据配置文件中备用的下载地址从网络服务器上下载最新驱动安装包，再比较最新驱动安装包的版本号与本地已安装的驱动程序的版本号的高低；或依次根据配置文件中备用的下载地址从网络服务器上下载最新驱动安装包，比较所有下载成功你的最新驱动安装包的版本号与本地已安装的驱动程序的版本号的高低，进行升级处理，也可先根据预设的下载地址下载最新驱动安装包，下载不成功时在根据配置文件中备用的下载地址进行下载，或者同时根据预设的下载地址和配置文件中备用的下载地址从网络服务器上下载最新驱动安装包，进行升级处理。具体的从网络服务器上的下载过程可参照上述方式，在此不再赘述。</p>
+    <p>[0234]	本实施例中，在接收到触发信息时根据下载地址从服务器上下载驱动安装包并进行安装，对无驱无软Key的硬件要求较低，节省生产成本；当接收到的是第一触发信息时，实现第一次安装过程，当接收到的是第二触发信息时，进行升级安装过程，整个安装过程无需人工参与，简化安装操作过程，方便用户使用。</p>
+    <p>[0235]	实施例二[0236]	本发明实施例二提供了一种自动安装软件的方法，实现第一次安装过程，具体以第（4)种方式为例进行说明。当无驱无软Key插入计算机时，通过预设的第一下载地址从网络服务器上下载驱动安装包，如下载成功进行安装过程，如下载不成功再通过预设地址访问服务器并下载配置文件，根据配置文件中备用的第二下载地址从网络服务器上下载所述驱动安装包，如下载成功进行安装过程，如下载不成功则结束。参见图2，本实施例提供的方法包括：</p>
+    <p>[0237]	步骤201 ：当接收到第一触发信息时所述装置启动，所述装置判断本地是否已经安装所述无驱无软Key的驱动程序，是则结束，否则执行步骤202 ；</p>
+    <p>[0238]	本实施例中，计算机接收到第一触发信息后加载iso程序即所述装置被启动，所述第一触发信息为无驱无软Key插入计算机的触发信息或用户点击安装按钮的触发信息；步骤201具体为：所述装置读取注册表中的标志version，判断version的值是否为1，是则已安装所述无驱无软Key的安装包，否则未安装；</p>
+    <p>[0239]	步骤202 ：所述装置判断是否与网络服务器建立了连接，是则执行步骤204，否则执行步骤203 ；</p>
+    <p>[0240]	本实施例中，步骤202具体为：所述装置通过系统函数MternetCheckConnection判断当前网络连接状态；</p>
+    <p>[0241]	步骤203 ：所述装置与网络服务器建立连接，并判断连接是否成功，是则执行步骤204，否则结束；</p>
+    <p>[0242]	具体地，在本实施例中，计算机通过调用系统函数InternetGetConnectedState获取网络状态，通过调用系统函数hternetCheckCormection判断与服务器是否可连接；</p>
+    <p>[0243]	步骤204 ：所述装置检测当前用户是否为管理员，是则执行步骤209，否则执行步骤 205 ；</p>
+    <p>[0244]	具体地，本实施例中，步骤204具体包括：</p>
+    <p>[0245]	步骤204-1 ：所述装置判断当前进程是否具有管理员权限，是则执行步骤204-2，否则执行步骤205 ；</p>
+    <p>[0246]	步骤204-2 ：所述装置获取当前用户和所述当前用户的信息判断当前用户是否为管理员，是则执行步骤209，否则执行步骤205 ；</p>
+    <p>[0247]	步骤205 ：所述装置判断当前的操作系统版本是否高于预设的操作系统版本，是则执行步骤206，否则执行步骤207 ；</p>
+    <p>[0248]	优选地，在本实施例中，所述预设的操作系统为Vista ；</p>
+    <p>[0249]	步骤206 ：所述装置判断用户账户控制界面是否已经被打开，是则结束，否则执行步骤207 ；</p>
+    <p>[0250]	本实施例中步骤206具体为：通过读取注册表中UAC的标志，判断UAC的标识是否为预设值，是则已经被打开，否则未被打开；</p>
+    <p>[0251]	步骤207 ：所述装置输出提示信息，待用户确认；</p>
+    <p>[0252]	优选地，在本实施例中，所述提示信息为“当前用户非管理员，安装过程中会需要您输入管理员账户和密码，是否继续？，，；</p>
+    <p>[0253]	步骤208 ：所述装置接收用户输入的信息，判断所述输入的信息是否为确认继续的信息，是则执行步骤209，否则结束操作；[0254]	步骤209 ：所述装置获取预设地址和第一下载地址；</p>
+    <p>[0255]	步骤210 ：所述装置根据第一下载地址从网络服务器上下载最新驱动安装包，下载完毕后判断是否下载成功，是则执行步骤217，否则执行步骤211 ；</p>
+    <p>[0256]	在本实施例中，如最新驱动安装包的名称为“ ABOTktup ”，第一下载地址为 "http://www. xxxxx. cn/update/down/ABCDSetup. exe，，；</p>
+    <p>[0257]	在本实施例中，判断下载是否成功具体为：在下载完毕后，根据所述预设存储地址判断最新驱动安装包的本地文件是否存在，存在则下载成功，不存在则下载失败，继续根据预设的固定地址下载配置文件；</p>
+    <p>[0258]	步骤210和步骤211之间还可包括步骤210’，步骤210判断为否时执行步骤210’ ；</p>
+    <p>[0259]	步骤210’ ：所述装置判断下载次数是否超过预设重试次数，是则执行步骤211，否则返回步骤209 ；</p>
+    <p>[0260]	本实施例中，也可不执行步骤209和步骤210，步骤208中判断为是时，顺序执行步骤 211 ；</p>
+    <p>[0261]	步骤211 ：所述装置根据预设地址从所述服务器中下载配置文件，并判断是否下载成功，是则执行步骤213，否则执行步骤212 ；</p>
+    <p>[0262]	本实施例中，如所述配置文件的名称为‘‘ABCDVer”，则所述预设地址为：http:// www. xxxxx. cn/update/down/ABCVDer. ini ；所述配置文件包含以下内容：</p>
+    <p>[0263]	配置文件格式为</p>
+    <p>[0264]	[version]</p>
+    <p>[0265]	version = //最新农行K宝驱动安装包</p>
+    <p>[0266]	[update]</p>
+    <p>[0267]	Updatetime = 10// 更新周期设定</p>
+    <p>[0268]	Adrl = //最新驱动安装包的备用地址1</p>
+    <p>[0269]	Adr2 = //最新驱动安装包的备用地址2</p>
+    <p>[0270]	Adr3 = //最新驱动安装包的备用地址3 ；</p>
+    <p>[0271]	本实施例中，判断是否下载成功具体为：在下载完毕后，所述装置根据预设存储地址判断配置文件的本地文件是否存在，存在则下载成功，不存在则下载失败；</p>
+    <p>[0272]	步骤212 ：所述装置判断下载次数是否超过预设重试次数，是则结束，否则返回步骤 211 ；</p>
+    <p>[0273]	步骤213 ：将所述配置文件中第一条备用的下载地址作为当前第二下载地址；</p>
+    <p>[0274]	步骤214 ：所述装置根据当前第二下载地址从网络服务器中下载最新驱动安装包，并判断是否下载成功，是则执行步骤217，否则执行步骤215 ；</p>
+    <p>[0275]	本实施例中，判断下载是否成功具体为：在下载完毕后，所述装置根据所述预设存储地址判断最新驱动安装包的本地文件是否存在，存在则下载成功，不存在则下载失败；</p>
+    <p>[0276]	步骤215 ：所述装置判断所述配置文件中的备用地址是否全部用完，是则结束，否则执行步骤216;</p>
+    <p>[0277]	步骤216 ：所述装置将所述配置文件中下一条备用的第二下载地址作为当前第二下载地址，返回步骤214;</p>
+    <p>[0278]	步骤217 ：所述装置从所述最新驱动安装包的本地文件中获取签名证书；[0279]	步骤218 ：所述装置验证所述签名证书是否合法，是则执行步骤219，否则结束；</p>
+    <p>[0280]	本实施例中，步骤218具体包括：</p>
+    <p>[0281]	步骤218-1 ：所述装置通过WinVerifyTrust函数判断所述签名证书是否为合法的 windows签名，是则执行步骤218-2，否则结束；</p>
+    <p>[0282]	步骤218-2 ：所述装置判断所述获取的签名证书是否由VeriSign签发，是则执行步骤219，否则结束操作；</p>
+    <p>[0283]	步骤218-2具体为：所述装置从所述签名证书中获取根证，判断所述根证是否与 VeriSign的证书链相符；</p>
+    <p>[0284]	步骤219:所述装置判断当前用户是否为管理员，是则执行步骤221，否则执行步骤 220 ；</p>
+    <p>[0285]	本实施中该步骤的判断过程与步骤204相同，不再赘述；</p>
+    <p>[0286]	步骤220 ：所述装置创建管理员权限进程，并判断创建是否成功，是则执行步骤 221，否则结束；</p>
+    <p>[0287]	本实施例中，步骤220具体为：所述装置调用系统函数创建管理员权限进程，并获取返回值，判断所述获取的返回值是否为“成功”，是则执行步骤221，否则结束；</p>
+    <p>[0288]	本实施例中所述系统函数具体为SiellExecuteEx ；</p>
+    <p>[0289]	步骤221 ：所述装置在所述计算机上安装所述最新驱动安装包。</p>
+    <p>[0290]	本实施例中的配置文件也可预先存储在无驱无软Key上的iso文件中，实现过程省去步骤211和步骤212，步骤210判断为否时顺序执行步骤213。</p>
+    <p>[0291]	本实施例中，根据第一下载地址下载最新驱动安装包的过程和根据预设地址下载配置文件的过程可调换，即步骤210与步骤211-216可调换。</p>
+    <p>[0292]	本实施例中，也可同时根据第一下载地址和预设地址分别从网上服务器上下载最新驱动安装包和配置文件，再根据配置文件中的所有备用地址下载最新驱动安装包，最后判断所有下载的最新驱动安装包的版本号的高低，并对版本号最高的最新驱动安装包进行安装处理。</p>
+    <p>[0293]	本实施例中，也可先下载配置文件，根据配置文件中备用的第二下载地址从网络服务器上下载最新驱动安装包，下载不成功时再根据第一下载地址从服务器上下载最新驱动安装包。本实施例通过自动安装驱动包的方法，当无驱无软Key插入到计算机上后，自动从网络服务器上下载驱动安装包并进行安装过程，节省无驱无软Key的硬件资源，降低无驱无软Key的硬件要求。</p>
+    <p>[0294]	实施例三</p>
+    <p>[0295]	本发明实施例三提供了一种在升级过程的自动安装软件的方法，具体的以升级过程的第（1)种实现方式且配置文件中设有多条下载地址为例进行说明，即当无驱无软Key 插入计算机并在驱动程序到达更新周期时，装置通过预设地址从网络服务器上下载配置文件，比较本地计算机中已安装的驱动程序的版本号与配置文件中的最新驱动安装包的版本号高低，当配置文件中的最新驱动安装包的版本号较高时，所述装置根据配置文件中的下载地址从网络服务器上下载最新驱动安装包，对计算机中已安装的所述无驱无软Key的驱动程序进行升级处理。如图3所示，包括：</p>
+    <p>[0296]	步骤301 ：当接收到第二触发信息时，所述装置判断是否与网络服务器建立了连接，是则执行步骤303，否则执行步骤302 ；</p>
+    <p>[0297]	本实施例中，步骤301具体为：通过系统函数MternetCheckConnection判断当前网络连接状态；</p>
+    <p>[0298]	本实施例中，所述第二触发信息为无驱无软KEY插入计算机且到达更新周期的触发信息或用户点击升级按钮的触发信息；所述装置记录驱动程序最后一次更新时的时间， 当最后一次更新时间与驱动程序第一次安装时的时间的间隔到达预定的更新周期时，生成第二触发信息。</p>
+    <p>[0299]	步骤302 ：所述装置与网络服务器建立连接，并判断连接是否成功，是则执行步骤 303，否则结束；</p>
+    <p>[0300]	具体地，在本实施例中，计算机通过调用系统函数MternetGetConnectecKtate 获取网络状态，通过系统函数hternetCheckCormection判断与服务器是否可连接；</p>
+    <p>[0301]	步骤303 ：所述装置检测当前用户是否为管理员，是则执行步骤308，否则执行步骤 304 ；</p>
+    <p>[0302]	具体地，本实施例中，步骤303具体包括：</p>
+    <p>[0303]	步骤303-1 ：所述装置通过判断当前进程是否具有管理员权限，是则执行步骤 303-2，否则执行步骤304 ；</p>
+    <p>[0304]	步骤303-2 ：所述装置获取当前用户和所述当前用户的信息判断当前用户是否为管理员，是则执行步骤308，否则执行步骤304 ；</p>
+    <p>[0305]	步骤304:所述装置判断当前的操作系统版本是否高于预设的操作系统版本，是则执行步骤305，否则执行步骤306 ；</p>
+    <p>[0306]	优选地，在本实施例中，所述预设的操作系统为Vista ；</p>
+    <p>[0307]	步骤305 ：所述装置判断用户账户控制界面是否已经被打开，是则结束，否则执行步骤306 ；</p>
+    <p>[0308]	本实施例中步骤305具体为：通过读取注册表中UAC的标志，判断UAC的标识是否与预设值，是则用户账户控制界面已经被打开，否则未被打开；</p>
+    <p>[0309]	步骤306 ：所述装置输出提示信息，待用户确认；</p>
+    <p>[0310]	优选地，在本实施例中，所述提示信息为“当前用户非管理员，安装过程中会需要您输入管理员账户和密码，是否继续？，，；</p>
+    <p>[0311]	步骤307 ：所述装置接收用户输入的信息，判断所述输入的信息是否为确认继续的信息，是则执行步骤308，否则结束操作；</p>
+    <p>[0312]	步骤308 ：所述装置根据预设地址从网络服务器中下载配置文件，并判断是否下载成功，是则执行步骤310，否则执行步骤309 ；</p>
+    <p>[0313]	本实施例中，如所述配置文件的名称为“ABCDVer”，则所述固定地址为：http:// www. xxxxx. cn/update/down/ABCDVer. ini ；所述配置文件包含以下内容：</p>
+    <p>[0314]	配置文件格式为</p>
+    <p>[0315]	[version]</p>
+    <p>[0316]	version = //最新驱动安装包的版本</p>
+    <p>[0317]	[update]</p>
+    <p>[0318]	Updatetime = 10//更新周期设定[0319]	Adrl = //最新驱动安装包的备用地址1</p>
+    <p>[0320]	Adr2 = //最新驱动安装包的备用地址2</p>
+    <p>[0321]	Adr3 = //最新驱动安装包的备用地址3 ；</p>
+    <p>[0322]	本实施例中判断是否下载成功具体为：在下载完毕后，根据预设存储地址判断配置文件的本地文件是否存在，存在则下载成功，不存在则下载失败；</p>
+    <p>[0323]	步骤309 ：所述装置判断下载次数是否超过预设重试次数，是则结束，否则返回步骤308，重新进行下载；</p>
+    <p>[0324]	步骤310 ：所述装置从所述配置文件中获取最新驱动安装包的版本号，并判断所述获取的版本号是否高于本地已安装的驱动程序的版本号，是则执行步骤311，否则结束；</p>
+    <p>[0325]	步骤311 ：所述装置从所述配置文件中获取下载地址；</p>
+    <p>[0326]	步骤312 ：所述装置将获取的第一条下载地址作为当前下载地址；</p>
+    <p>[0327]	步骤313 ：所述装置根据当前下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则执行步骤317，否则执行步骤314 ；</p>
+    <p>[0328]	在本实施例中，判断是否下载成功具体为：在下载完毕后，所述装置根据所述预设存储地址判断最新驱动安装包的本地文件是否存在，存在则下载成功，不存在则下载失败，</p>
+    <p>[0329]	步骤314 ：所述装置判断所述获取的下载地址是否用完，是则执行步骤316，否则执行步骤315;</p>
+    <p>[0330]	步骤315 ：所述装置将所述获取的下一条下载地址作为当前下载地址，返回步骤 313，重新进行下载；</p>
+    <p>[0331]	步骤316 ：所述装置判断下载次数是否超过预设重试次数，是则结束，否则返回步骤 312 ；</p>
+    <p>[0332]	步骤317 ：所述装置从所述最新驱动安装包中获取签名证书；</p>
+    <p>[0333]	步骤318 ：所述装置验证所述签名证书是否合法，是则执行步骤319，否则结束；</p>
+    <p>[0334]	本实施例中，步骤318具体包括：</p>
+    <p>[0335]	步骤318-1 ：所述装置通过WinVerifyTrust函数判断所述签名证书是否为合法的 windows签名，是则执行步骤318-2，否则结束；</p>
+    <p>[0336]	步骤318-2 ：所述装置判断所述获取的签名证书是否由VeriSign签发，是则执行步骤319，否则结束操作；</p>
+    <p>[0337]	具体地，从所述签名证书中获取根证，判断所述根证是否与VeriSign的证书链相符；</p>
+    <p>[0338]	步骤319:所述装置判断当前用户是否为管理员，是则执行步骤321，否则执行步骤 320 ；</p>
+    <p>[0339]	步骤320 ：所述装置创建管理员权限进程，并判断创建是否成功，是则执行步骤 321，否则结束；</p>
+    <p>[0340]	本实施例中，步骤320具体为：所述装置调用系统函数创建管理员权限进程，获取返回值，并判断所述返回值是否为“成功”，是则创建成功，否则创建不成功；</p>
+    <p>[0341]	本实施例中的所述系统函数具体为SiellExecuteEx ；</p>
+    <p>[0342]	步骤321 ：所述装置覆盖安装已下载的所述最新驱动安装包。</p>
+    <p>[0343]	本实施例中，所述装置也可根据预设的下载地址直接从服务器上下载最新驱动安装包，然后比较已安装的驱动程序的版本号与下载的最新驱动安装包的版本号的高低，如下载的最新驱动安装包的版本号较高，则进行升级处理，覆盖安装已下载的所述最新驱动安装包；如已安装的驱动程序的版本号较高，则结束；</p>
+    <p>[0344]	或者，本实施例中，所述装置同时根据预设的第一下载地址和预设地址从服务器上下载驱动安装包，如两者均未下载成功，则判断下载次数是否超过预设次数，是则结束， 否则重新进行下载；</p>
+    <p>[0345]	如只有所述最新驱动安装包下载成功，则比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤317， 如本地已安装驱动程序的版本号较高，则结束；</p>
+    <p>[0346]	如只有所述配置文件下载成功，则根据配置文件中备用的下载地址从网络服务器上下载最新驱动安装包，并判断下载是否成功，是则比较所述最新驱动安装包的版本号和本地已安装驱动程序的版本号，如所述最新驱动安装包的驱动版本号较高，则执行步骤 317，如本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；</p>
+    <p>[0347]	如两者均下载成功，则根据所述配置文件中的备用地址从网络服务器上下载最新驱动安装包，并判断是否下载成功，是则检测根据所述第一预设地址下载的最新驱动安装包、根据所述备用地址下载的最新驱动安装包的版本号和本地已安装驱动程序的版本号的高低，如最新驱动安装包的驱动版本号较高，则执行步骤317，如本地已安装驱动程序的版本号较高，则结束；如下载不成功，则结束；步骤317具体为：从版本号最高的最新驱动安装包中获取签名证书，并判断所述签名证书是否合法，是则执行步骤318，否则结束。</p>
+    <p>[0348]	本实施例中的自动安装软件的方法，是在软件升级过程中，当接收到第二触发信息时，先下载配置文件，再比较配置文件中的最新驱动安装包的版本号与本地已安装的驱动程序的版本号，当配置文件中的最新驱动安装包的版本号较高时，进行升级处理，无需人工参与自动进行升级，且最新驱动安装包需要从网络服务器上进行下载，节省无驱无软Key 的硬件资源，降低无驱无软Key的硬件要求。</p>
+    <p>[0349]	实施例四</p>
+    <p>[0350]	本发明实施例四提供一种自安装软件的装置，如图4所示，包括：</p>
+    <p>[0351]	接收模块401 ：用于接收触发信息；</p>
+    <p>[0352]	本实施例中，所述触发信息包括第一触发信息或第二触发信息；所述第一触发信息为无驱无软KEY插入计算机的触发信息或点击安装按钮的触发信息；所述第二触发信息为无驱无软KEY插入计算机且到达更新周期的触发信息或点击升级按钮的触发信息；</p>
+    <p>[0353]	获取模块402 ：用于在所述接收模块401接收到触发信息后获取下载地址；</p>
+    <p>[0354]	本实施例中，所述获取模块402具体包括：</p>
+    <p>[0355]	第一获取单元：用于在所述接收模块401接收到触发信息后获取第一下载地址和 /或预设地址；</p>
+    <p>[0356]	第二获取单元：用于获取配置文件中备用的第二下载地址；</p>
+    <p>[0357]	下载判断模块403 ：用于根据所述下载地址从网络服务器上下载最新驱动安装包，并判断是否下载成功；和/或用于根据所述预设地址从网络服务器上下载配置文件，并判断是否下载成功；</p>
+    <p>[0358]	所述下载地址包括第一下载地址和\或第二下载地址；[0359]	第一判断模块404 ：用于在所述下载判断模块403判断下载不成功时，判断下载次数是否超过预设重试次数；</p>
+    <p>[0360]	获取判断模块405 ：用于在所述下载判断模块403判断下载成功时，从所述最新驱动安装包中获取签名证书，并判断所述签名证书是否合法；</p>
+    <p>[0361]	第二判断模块406 ：用于在所述签名证书合法时，判断当前用户是否为管理员；</p>
+    <p>[0362]	创建判断模块407:用于当前用户不为管理员时，创建管理员权限进程，并判断创建是否成功；</p>
+    <p>[0363]	安装模块408 ：用于在管理员权限下安装所述最新驱动安装包。</p>
+    <p>[0364]	如图5所示，当所述装置用于实现第一次安装驱动程序时，本实施例提供的装置还包括第三判断模块409 ：用于在接收到触发信息时，判断是否需要下载最新驱动安装包；</p>
+    <p>[0365]	为提高自动下载软件的安全性，本实施例提供的装置进一步的还包括：</p>
+    <p>[0366]	第四判断模块411 ：用于判断所述装置是否与网络服务器建立了连接；</p>
+    <p>[0367]	建立判断模块412 ：用于在所述第四判断模块411判断为否时，将所述装置与网络服务器建立连接，并判断连接是否成功；</p>
+    <p>[0368]	第二检测模块413:用于在所述装置与网络服务器建立连接时，检测当前用户是否为管理员；</p>
+    <p>[0369]	第五判断模块414:用于在当前用户不为管理员时，判断当前计算机中的操作系统是否高于预设系统；</p>
+    <p>[0370]	第六判断模块415 ：用于在所述第五判断模块414判断为是时，判断用户账户控制界面是否被打开；</p>
+    <p>[0371]	输出模块416 ：用于在所述第五判断模块414和第六判断模块415判断为否时，输出提示信息，等待用户确认；</p>
+    <p>[0372]	接收判断模块417:用于接收用户输入的信息，判断所述信息是否为确认继续的</p>
+    <p>fn息ο</p>
+    <p>[0373]	如图6所示，当所述装置用于实现驱动程序的升级过程时，本实施例提供的装置还包括：</p>
+    <p>[0374]	第一检测模块410 ：用于检测最新驱动安装包的版本号与本地已安装的驱动程序的版本号的高低；</p>
+    <p>[0375]	所述安装模块408具体用于覆盖安装所述最新驱动安装包；</p>
+    <p>[0376]	为提高自动下载软件的安全性，本实施例提供的装置进一步的还包括：</p>
+    <p>[0377]	第四判断模块411 ：用于判断所述装置是否与网络服务器建立了连接；</p>
+    <p>[0378]	建立判断模块412 ：用于在所述第四判断模块411判断为否是，将所述装置与网络服务器建立连接，并判断连接是否成功；</p>
+    <p>[0379]	第二检测模块413:用于在所述装置与网络服务器建立连接时，检测当前用户是否为管理员；</p>
+    <p>[0380]	第五判断模块414:用于在当前用户不为管理员时，判断当前计算机中的操作系统是否高于预设系统；</p>
+    <p>[0381]	第六判断模块415 ：用于在所述第五判断模块414判断为是时，判断用户账户控制界面是否被打开；[0382]	输出模块416 ：用于在所述第五判断模块414和第六判断模块415判断为否时，输出提示信息，等待用户确认；</p>
+    <p>[0383]	接收判断模块417:用于接收用户输入的信息，判断所述信息是否为确认继续的</p>
+    <p>fn息ο</p>
+    <p>[0384]	本实施例中提供的装置，可以实现无驱无软Key的驱动包装包的第一次安装和安装后进行升级的过程，省去手动操作的过程，且无驱无软Key中只预先存储下载地址或预设地址而不用存储驱动安装包，节省无驱无软Key的硬件资源，降低无驱无软Key的硬件要求。</p>
+    <p>[0385]	以上所述，仅为本发明的具体实施方式，但本发明的保护范围并不局限于此，任何熟悉本技术领域的技术人员在本发明揭露的技术范围内，可轻易想到变化或替换，都应涵盖在本发明的保护范围之内。因此，本发明的保护范围应所述以权利要求的保护范围为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101127781A?cl=zh">CN101127781A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年9月26日</td><td class="patent-data-table-td patent-date-value">2008年2月20日</td><td class="patent-data-table-td ">北京搜狐新时代信息技术有限公司</td><td class="patent-data-table-td ">移动终端下载文件的方法、装置及移动终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101668284A?cl=zh">CN101668284A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年9月9日</td><td class="patent-data-table-td patent-date-value">2010年3月10日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种保障网络设备上版本软件安全的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102004655A?cl=zh">CN102004655A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月25日</td><td class="patent-data-table-td patent-date-value">2011年4月6日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">自动安装驱动程序的装置及方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103020501A?cl=zh">CN103020501A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月14日</td><td class="patent-data-table-td patent-date-value">2013年4月3日</td><td class="patent-data-table-td ">曙光云计算技术有限公司</td><td class="patent-data-table-td ">用户数据的访问控制方法和装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=eJKDBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0021510000">G06F21/51</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=eJKDBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009445000">G06F9/445</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年7月30日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/54620e770b85d108f576/CN102567063A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85.pdf?id=eJKDBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1c5nTNqLsofCe30_e5If4L7eYVIQ"},"sample_url":"https://www.google.com/patents/reader?id=eJKDBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

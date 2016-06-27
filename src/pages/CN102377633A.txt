@@ -1,0 +1,1293 @@
+<!DOCTYPE html><html><head><title>专利 CN102377633A - 一种接入网设备的通信连接方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种接入网设备的通信连接方法及系统"><meta name="DC.contributor" content="杨春晖" scheme="inventor"><meta name="DC.contributor" content="陆宏成" scheme="inventor"><meta name="DC.contributor" content="北京乾唐视联网络科技有限公司" scheme="assignee"><meta name="DC.date" content="2010-8-6" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种接入网设备的通信连接方法，所述接入网设备包括节点服务器、接入交换机和终端，所述的方法包括：节点服务器依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务的节点服务器和接入交换机的通信端口信息；节点服务器依据所述节点服务器的通信端口信息，在其内部的数据包地址表中设置当次服务的数据包所导向的端口；并依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令；所述接入交换机依据端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。本发明可以保证传输通路的稳定和通畅，避免多媒体业务的延时。"><meta name="DC.date" content="2012-3-14"><meta name="DC.relation" content="CN:101030940:A" scheme="references"><meta name="DC.relation" content="CN:101404619:A" scheme="references"><meta name="DC.relation" content="CN:101557303:A" scheme="references"><meta name="DC.relation" content="CN:101674221:A" scheme="references"><meta name="DC.relation" content="CN:1275299:A" scheme="references"><meta name="DC.relation" content="CN:1373980:A" scheme="references"><meta name="DC.relation" content="JP:2008228069" scheme="references"><meta name="citation_patent_publication_number" content="CN:102377633:A"><meta name="citation_patent_application_number" content="CN:201010248220"><link rel="canonical" href="https://www.google.com/patents/CN102377633A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102377633A?cl=zh"/><meta name="title" content="专利 CN102377633A - 一种接入网设备的通信连接方法及系统"/><meta name="description" content="本发明公开了一种接入网设备的通信连接方法，所述接入网设备包括节点服务器、接入交换机和终端，所述的方法包括：节点服务器依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务的节点服务器和接入交换机的通信端口信息；节点服务器依据所述节点服务器的通信端口信息，在其内部的数据包地址表中设置当次服务的数据包所导向的端口；并依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令；所述接入交换机依据端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。本发明可以保证传输通路的稳定和通畅，避免多媒体业务的延时。"/><meta property="og:title" content="专利 CN102377633A - 一种接入网设备的通信连接方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102377633A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102377633A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102377633A&amp;usg=AFQjCNEZeNcrA8rB5MgWUUTodpgB-Fm5dQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/58664fdc22afe212b550/CN102377633A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/58664fdc22afe212b550/CN102377633A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102377633A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102377633A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102377633A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102377633B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102377633A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种接入网设备的通信连接方法，所述接入网设备包括节点服务器、接入交换机和终端，所述的方法包括：节点服务器依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参...</span><span itemprop="url">https://www.google.com/patents/CN102377633A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102377633A - 一种接入网设备的通信连接方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102377633A - 一种接入网设备的通信连接方法及系统" title="专利 CN102377633A - 一种接入网设备的通信连接方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102377633 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010248220</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年3月14日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年8月6日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年8月6日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102377633B?hl=zh-CN&amp;cl=zh">CN102377633B</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20130188519?hl=zh-CN&amp;cl=zh">US20130188519</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2012016529A1?hl=zh-CN&amp;cl=zh">WO2012016529A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010248220.8, </span><span class="patent-bibdata-value">CN 102377633 A, </span><span class="patent-bibdata-value">CN 102377633A, </span><span class="patent-bibdata-value">CN 201010248220, </span><span class="patent-bibdata-value">CN-A-102377633, </span><span class="patent-bibdata-value">CN102377633 A, </span><span class="patent-bibdata-value">CN102377633A, </span><span class="patent-bibdata-value">CN201010248220, </span><span class="patent-bibdata-value">CN201010248220.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E6%98%A5%E6%99%96%22">杨春晖</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E5%AE%8F%E6%88%90%22">陆宏成</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E4%B9%BE%E5%94%90%E8%A7%86%E8%81%94%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京乾唐视联网络科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102377633A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102377633A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102377633A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (6),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (5)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010248220&amp;usg=AFQjCNGE2Zl0K-ONo2zle_0_fAY1kYGroA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102377633A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFVMxdnplfkO0vHU-N7xoo4yg6IpQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT112037940" lang="ZH" load-source="patent-office">一种接入网设备的通信连接方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 102377633 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA95505024" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种接入网设备的通信连接方法，所述接入网设备包括节点服务器、接入交换机和终端，所述的方法包括：节点服务器依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务的节点服务器和接入交换机的通信端口信息；节点服务器依据所述节点服务器的通信端口信息，在其内部的数据包地址表中设置当次服务的数据包所导向的端口；并依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令；所述接入交换机依据端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。本发明可以保证传输通路的稳定和通畅，避免多媒体业务的延时。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(99)</span></span></div><div class="patent-text"><div mxw-id="PCLM40858101" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种接入网设备的通信连接方法，其特征在于，所述接入网设备包括节点服务器、接入交换机和终端，所述的方法包括：节点服务器依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务接入交换机的通信端口信息；节点服务器依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令；所述接入交换机依据端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，还包括：节点服务器在其内部的数据包地址表中设置当次服务的数据包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的方法，其特征在于，所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求；所述数据包地址表包括单播数据包地址表和组播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求2所述的方法，其特征在于，所述节点服务器获取当次服务的通信链路信息的步骤包括：节点服务器获得源终端发起的、用于与目标终端建立单播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址， 其中，所述服务内容信息包括服务号码；节点服务器依据所述服务号码在预置的内容-地址映射表中提取目标终端的接入网地址；节点服务器依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的方法，其特征在于，所述通信链路信息为单向通信链路信息，或为双向通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求4或5所述的方法，其特征在于，所述节点服务器获取当次服务的通信链路信息的步骤还包括：节点服务器向所述源终端和目标终端发送菜单协议包；以及，接收目标终端针对所述菜包协议包发出的应答协议包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的方法，其特征在于，所述节点服务器获取当次服务的通信链路信息的步骤还包括：依据所述节点服务器和源终端之间的接入交换机中预置协议包地址表的设置，所述菜单协议包被导向至源终端；依据所述节点服务器和目标终端之间的接入交换机中预置协议包地址表的设置，所述菜单协议包被导向至目标终端；其中，所述协议包地址表中设置有，目的地址为当前接入交换机的接入网地址的协议包导向CPU模块；以及，目的地址为其它接入网设备地址的协议包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求4所述的方法，其特征在于，还包括：节点服务器依据所述服务类型信息，确定当前设置的数据包地址表为单播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求8所述的方法，其特征在于，所述节点服务器在其内部的单播数据包地址表中设置当次服务的单播数据包所导向的端口包括：目的地址为源终端的单播数据包所导向的下行端口 ；以及，目的地址为目标终端的单播数据包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求8所述的方法，其特征在于，当所述通信链路信息为单向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；所述接入交换机依据端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求8所述的方法，其特征在于，当所述通信链路信息为双向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口和下行端口信息，以及，下行链路中接入交换机的上行端口和下行端口信息；所述接入交换机依据所述端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行端口 ；以及，目的地址为源终端的单播数据包所导向的下行链路中接入交换机的上行端口的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求2所述的方法，其特征在于，还包括：节点服务器分别向源终端与目标终端发送服务处理命令，所述源终端与目标终端依据所述服务处理命令执行相应的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求2所述的方法，其特征在于，所述节点服务器获取当次服务的通信链路信息的步骤包括：节点服务器获得目标终端发起的申请组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息、服务内容信息和目标终端的接入网地址；其中，所述服务内容信息中包括服务号码；节点服务器依据所述服务号码在预置的内容-地址映射表中，提取源终端的接入网地址；节点服务器获取所述源终端对应的组播地址，并分配给目标终端；以及，依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次组播服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的方法，其特征在于，所述节点服务器获取当次服务的通信链路信息的步骤还包括：节点服务器获得源终端提交的发起组播通信服务的服务请求协议包，并依据所述服务请求协议包向源终端分配组播地址；所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息中包括服务号码；依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务上行的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求14所述的方法，其特征在于，所述节点服务器获取当次服务的通信链路信息的步骤还包括：依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务下行的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求14所述的方法，其特征在于，还包括：节点服务器依据所述服务类型信息，确定当前设置的数据包地址表为组播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求16所述的方法，其特征在于，所述节点服务器在其内部的组播数据包地址表中设置当次服务的组播数据包所导向的端口包括：目的地址为组播地址的组播数据包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求16所述的方法，其特征在于，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求16所述的方法，其特征在于，所述接入交换机的通信端口信息还包括上行链路中接入交换机的下行端口信息；所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的方法，其特征在于，所述端口配置命令记录在协议包中，所述节点服务器依据其内部预置的下行协议包地址表的设置，通过连接相应接入交换机的下行端口将所述协议包导向至对应的接入交换机；其中，所述下行协议包地址表中设置有，目的地址为下级接入网设备地址的协议包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求13所述的方法，其特征在于，还包括：节点服务器向目标终端发送服务处理命令，目标终端依据所述服务处理命令执行相应的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求13所述的方法，其特征在于，还包括：节点服务器向源终端发送服务处理命令，源终端依据所述服务处理命令执行相应的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求4、5、13或14所述的方法，其特征在于，所述节点服务器获取当次服务的通信链路信息的步骤还包括：若获得多条当次服务的通信链路信息，则节点服务器按照预置规则选择其中一条通信链路信息为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求23所述的方法，其特征在于，所述预置规则为节点服务器获取各条通信链路的流量信息，以及，当次服务的流量信息，确定已用流量最小的通信链路为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.如权利要求23所述的方法，其特征在于，所述预置规则为节点服务器获取各条通信链路的带宽信息，以及，当次服务的带宽信息，确定带宽最大的通信链路为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求1、2或3所述的方法，其特征在于，所述源终端发起的服务请求协议包， 依据连接在所述源终端与节点服务器之间的接入交换机中预置的上行协议包地址表的设置，通过相应接入交换机的上行端口导向至节点服务器；其中，所述上行协议包地址表中设置有，目的地址为节点服务器地址的协议包导向的上行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求1、2或3所述的方法，其特征在于，还包括：在完成当次服务后，节点服务器在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放；并向参与当次服务的接入交换机发送端口释放命令；所述接入交换机依据所述端口释放命令在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求27所述的方法，其特征在于，还包括：节点服务器向源终端和/或目标终端发出服务结束命令，所述源终端和/或目标终端依据所述服务结束命令结束服务处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求27或观所述的方法，其特征在于，所述节点服务器内部还设置有地址信息表，所述地址信息表中记录有地址占用信息、设备标识信息和设备资源信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求四所述的方法，其特征在于，还包括：节点服务器修改预置地址信息表中的内容，所述修改包括将所述释放端口的对应表项的地址占用信息更新为未占用；以及，更新对应的设备标识信息和设备资源信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.如权利要求1所述的方法，其特征在于，还包括：接入交换机上电，在其内部的下行协议包地址表中设置所有下行协议包导向CPU模块；所述接入交换机接收节点服务器发送的下行协议包，依据所述下行协议包地址表的设置，将所述下行协议包导向该接入交换机的CPU模块，所述CPU模块生成上行协议包，并发送给节点服务器；所述下行协议包中包括一个待分配的接入网地址；节点服务器向该接入交换机发送入网命令，所述入网命令中包括该接入交换机的接入网地址，所述接入网地址即为该接入交换机所接收下行协议包中的待分配接入网地址；所述接入交换机更新其内部的下行协议包地址表为，仅目的地址为自己接入网地址的协议包导向CPU模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.如权利要求31所述的方法，其特征在于，当已入网的接入交换机接收到节点服务器发送的端口分配包时，所述的方法还包括：已入网的接入交换机将目的地址为自己接入网地址的端口分配包导向CPU模块；依据包中的端口分配信息，在其内部的下行协议包地址表中，设置各个端口下行协议包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.如权利要求32所述的方法，其特征在于，当已入网的接入交换机接收到节点服务器发送的端口下行协议包时，所述的方法还包括：所述接入交换机依据其内部下行协议包地址表的设置，将所述端口下行协议包导向对应的下行端口 ；所述端口下行协议包中包括一个待分配的接入网地址；若节点服务器接收到连接在所述接入交换机下行端口的某个下级接入网设备发送的端口上行协议包，并向该下级接入网设备发送入网命令，所述入网命令中包括该下级接入网设备的接入网地址，所述接入网地址即为该下级接入网设备所接收的端口下行协议包中待分配的接入网地址。</div>
+    </div>
+    </div> <div class="claim"> <div num="34" class="claim">
+      <div class="claim-text">34.	一种接入网设备的通信连接系统，其特征在于，所述接入网设备包括节点服务器、 接入交换机和终端，所述节点服务器包括：服务请求接收模块，用于接收源终端发起的服务请求协议包；通信链路获取模块，用于依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务的接入交换机的通信端口信息；交换机端口配置模块，用于依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令；所述接入交换机包括：地址表配置模块，用于依据端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35.如权利要求34所述的系统，其特征在于，还包括：地址表配置模块，用于在节点服务器内部的数据包地址表中设置当次服务的数据包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.如权利要求34所述的系统，其特征在于，所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求；所述数据包地址表包括单播数据包地址表和组播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37.如权利要求35所述的系统，其特征在于，所述节点服务器的通信链路获取模块包括：单播服务协议包接收子模块，用于接收源终端发起的、用于与目标终端建立单播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及， 源终端的接入网地址，其中，所述服务内容信息包括服务号码；目标终端地址获取子模块，用于依据所述服务号码在预置的内容-地址映射表中提取目标终端的接入网地址；通信链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址， 获取当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.如权利要求37所述的系统，其特征在于，所述通信链路信息为单向通信链路信息， 或为双向通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39.如权利要求37或38所述的系统，其特征在于，所述节点服务器还包括：菜单协议包发送模块，用于向所述源终端和目标终端发送菜单协议包；应答协议包接收模块，用于接收目标终端针对所述菜包协议包发出的应答协议包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40.如权利要求39所述的系统，其特征在于，所述接入交换机包括位于所述节点服务器和源终端之间的第一接入交换机，以及，位于所述节点服务器和目标终端之间的第二接入交换机；所述第一接入交换机还包括：菜单协议包第一导向模块，用于依据其内部预置协议包地址表的设置，将所述菜单协议包被导向至源终端；所述第二接入交换机还包括：菜单协议包第二导向模块，用于依据其内部预置协议包地址表的设置，所述菜单协议包被导向至目标终端；其中，所述协议包地址表中设置有，目的地址为当前接入交换机的接入网地址的协议包导向CPU模块；以及，目的地址为其它接入网设备地址的协议包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.如权利要求37所述的系统，其特征在于，所述节点服务器还包括：单播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为单播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42.如权利要求41所述的系统，其特征在于，所述节点服务器在其内部的单播数据包地址表中设置当次服务的单播数据包所导向的端口包括：目的地址为源终端的单播数据包所导向的下行端口 ；以及，目的地址为目标终端的单播数据包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43.如权利要求41所述的系统，其特征在于，当所述通信链路信息为单向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及， 下行链路中接入交换机的下行端口信息；所述接入交换机依据端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44.如权利要求41所述的系统，其特征在于，当所述通信链路信息为双向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口和下行端口信息，以及，下行链路中接入交换机的上行端口和下行端口信息；所述接入交换机依据所述端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行端口 ；以及，目的地址为源终端的单播数据包所导向的下行链路中接入交换机的上行端口的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45.如权利要求35所述的系统，其特征在于，所述节点服务器还包括： 服务处理命令发送模块，用于分别向源终端与目标终端发送服务处理命令； 所述源终端包括命令执行模块，用于依据所述服务处理命令执行相应的操作； 所述目标终端包括命令执行模块，用于依据所述服务处理命令执行相应的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46.如权利要求35所述的系统，其特征在于，所述节点服务器的通信链路获取模块包括：组播通信申请请求接收子模块，用于接收目标终端发起的申请组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息、服务内容信息和目标终端的接入网地址；其中，所述服务内容信息中包括服务号码；源终端地址提取子模块，用于依据所述服务号码在预置的内容-地址映射表中，提取源终端的接入网地址；组播地址第一分配子模块，用于获取所述源终端对应的组播地址，并分配给目标终端；组播申请链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次组播服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47.如权利要求46所述的系统，其特征在于，所述节点服务器的通信链路获取模块还包括：组播通信发起请求接收子模块，用于接收源终端提交的发起组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息中包括服务号码；组播地址第二分配子模块，用于依据所述服务请求协议包向源终端分配组播地址；上行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务上行的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="48" class="claim">
+      <div class="claim-text">48.如权利要求47所述的系统，其特征在于，所述节点服务器的通信链路获取模块还包括：下行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务下行的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="49" class="claim">
+      <div class="claim-text">49.如权利要求47或48所述的系统，其特征在于，所述节点服务器还包括：组播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为组播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50.如权利要求49所述的系统，其特征在于，所述节点服务器在其内部的组播数据包地址表中设置当次服务的组播数据包所导向的端口包括：目的地址为组播地址的组播数据包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="51" class="claim">
+      <div class="claim-text">51.如权利要求49所述的系统，其特征在于，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="52" class="claim">
+      <div class="claim-text">52.如权利要求51所述的系统，其特征在于，所述接入交换机的通信端口信息还包括上行链路中接入交换机的下行端口信息；所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口还包括：目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="53" class="claim">
+      <div class="claim-text">53.如权利要求52所述的系统，其特征在于，所述端口配置命令记录在协议包中，所述节点服务器还包括：协议包导向模块，用于依据其内部预置的下行协议包地址表的设置，通过连接相应接入交换机的下行端口将所述协议包导向至对应的接入交换机；其中，所述下行协议包地址表中设置有，目的地址为下级接入网设备地址的协议包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="54" class="claim">
+      <div class="claim-text">54.如权利要求37、38、46或47所述的系统，其特征在于，所述节点服务器的通信链路获取模块还包括：通信链路选择子模块，用于在获得多条当次服务的通信链路信息时，按照预置规则选择其中一条通信链路信息为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="55" class="claim">
+      <div class="claim-text">55.如权利要求M所述的系统，其特征在于，所述预置规则为节点服务器获取各条通信链路的流量信息，以及，当次服务的流量信息，确定已用流量最小的通信链路为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="56" class="claim">
+      <div class="claim-text">56.如权利要求M所述的系统，其特征在于，所述预置规则为节点服务器获取各条通信链路的带宽信息，以及，当次服务的带宽信息，确定带宽最大的通信链路为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="57" class="claim">
+      <div class="claim-text">57.如权利要求34、35或36所述的系统，其特征在于，所述接入交换机为连接在所述源终端与节点服务器之间的接入交换机，所述接入交换机还包括：协议包导向模块，用于依据其内部预置上行协议包地址表的设置，将所述源终端发起的服务请求协议包，通过该接入交换机的上行端口导向至节点服务器；其中，所述上行协议包地址表中设置有，目的地址为节点服务器地址的协议包导向的上行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="58" class="claim">
+      <div class="claim-text">58.如权利要求34、35或36所述的系统，其特征在于，所述节点服务器还包括：服务器端口释放模块，用于在完成当次服务后，在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放；交换机端口释放配置模块，用于向参与当次服务的接入交换机发送端口释放命令；所述接入交换机还包括：端口释放模块，用于依据所述端口释放命令在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="59" class="claim">
+      <div class="claim-text">59.如权利要求58所述的系统，其特征在于，所述节点服务器还包括：服务结束命令发送模块，用于向源终端和/或目标终端发出服务结束命令；所述源终端还包括第一结束服务模块，用于依据服务结束命令结束服务处理；所述目标终端还包括第二结束服务模块，用于依据服务结束命令结束服务处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="60" class="claim">
+      <div class="claim-text">60.如权利要求58或59所述的系统，其特征在于，所述节点服务器内部还设置有地址信息表，所述地址信息表中记录有地址占用信息、设备标识信息和设备资源信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="61" class="claim">
+      <div class="claim-text">61.如权利要求60所述的系统，其特征在于，所述节点服务器还包括：地址信息表修改模块，用于修改预置地址信息表中的内容，所述修改包括将所述释放端口的对应表项的地址占用信息更新为未占用；以及，更新对应的设备标识信息和设备资源{曰息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="62" class="claim">
+      <div class="claim-text">62.如权利要求34所述的系统，其特征在于，所述节点服务器还包括向接入交换机发送下行协议包的下行协议包发送模块，以及，依据接入交换机回复的上行协议包发送入网命令的第一入网命令发送模块；所述接入交换机还包括：0号表初始化配置模块，用于在上电时，在其内部的下行协议包地址表中设置所有下行协议包导向CPU模块；下行协议包接收模块，用于依据所述下行协议包地址表的设置，将接收到的下行协议包导向该接入交换机的CPU模块，所述下行协议包中包括一个待分配的接入网地址；上行协议包回复模块，用于由所述CPU模块生成上行协议包，并发送给节点服务器；第一入网命令接收模块，用于接收节点服务器发送的入网命令，所述入网命令中包括该接入交换机的接入网地址，所述接入网地址即为该接入交换机所接收下行协议包中的待分配接入网地址；0号表第一设置模块，用于更新其内部的下行协议包地址表为，仅目的地址为自己接入网地址的协议包导向CPU模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="63" class="claim">
+      <div class="claim-text">63.如权利要求62所述的系统，其特征在于，所述节点服务器还包括用于向已入网的接入交换机发送端口分配包的端口分配包发送模块，所述端口分配包中包括端口分配信息，所述端口分配信息为各个端口下行协议包导向所述接入交换机各个下行端口的信息；所述接入交换机还包括：第一导向模块，用于将目的地址为自己接入网地址的端口分配包导向CPU模块；0号表第二设置模块，用于依据所述端口分配信息，在其内部的下行协议包地址表中， 设置各个端口下行协议包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="64" class="claim">
+      <div class="claim-text">64.如权利要求63所述的系统，其特征在于，所述节点服务器还包括用于向已入网的接入交换机发送端口下行协议包的端口下行协议包发送模块，所述端口下行协议包中包括一个待分配的接入网地址；所述接入交换机还包括：第二导向模块，用于依据其内部下行协议包地址表的设置，将所述端口下行协议包导向对应的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="65" class="claim">
+      <div class="claim-text">65.如权利要求64所述的系统，其特征在于，所述接入网设备还包括连接在已入网接入交换机下行端口的下级接入网设备，所述节点服务器还包括用于向所述下级接入网设备发送入网命令的第二入网命令发送模块；所述下级接入网设备包括：端口上行协议包回复模块，用于针对接收到的端口下行协议包生成端口上行协议包， 并发送给节点服务器；第二入网命令接收模块，用于接收节点服务器发送的入网命令，所述入网命令中包括该下级接入交换机的接入网地址，所述接入网地址即为该下级接入交换机所接收端口下行协议包中的待分配接入网地址。</div>
+    </div>
+    </div> <div class="claim"> <div num="66" class="claim">
+      <div class="claim-text">66.	一种节点服务器，其特征在于，包括：服务请求接收模块，用于接收源终端发起的服务请求协议包；通信链路获取模块，用于依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务接入交换机的通信端口信息；交换机端口配置模块，用于依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="67" class="claim">
+      <div class="claim-text">67.如权利要求66所述的节点服务器，其特征在于，还包括：地址表配置模块，用于依据所述节点服务器的通信端口信息，在其内部的数据包地址表中设置当次服务的数据包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="68" class="claim">
+      <div class="claim-text">68.如权利要求66所述的节点服务器，其特征在于，所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求；所述数据包地址表包括单播数据包地址表和组播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="69" class="claim">
+      <div class="claim-text">69.如权利要求67所述的节点服务器，其特征在于，所述通信链路获取模块包括： 单播服务协议包接收子模块，用于接收源终端发起的、用于与目标终端建立单播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及， 源终端的接入网地址，其中，所述服务内容信息包括服务号码；目标终端地址获取子模块，用于依据所述服务号码在预置的内容-地址映射表中提取目标终端的接入网地址；通信链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址， 获取当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="70" class="claim">
+      <div class="claim-text">70.如权利要求69所述的节点服务器，其特征在于，所述通信链路信息为单向通信链路信息，或为双向通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="71" class="claim">
+      <div class="claim-text">71.如权利要求68或69所述的节点服务器，其特征在于，还包括： 菜单协议包发送模块，用于向所述源终端和目标终端发送菜单协议包；应答协议包接收模块，用于接收目标终端针对所述菜包协议包发出的应答协议包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="72" class="claim">
+      <div class="claim-text">72.如权利要求69所述的节点服务器，其特征在于，所述节点服务器还包括：单播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为单播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="73" class="claim">
+      <div class="claim-text">73.如权利要求72所述的节点服务器，其特征在于，所述节点服务器在其内部的单播数据包地址表中设置当次服务的单播数据包所导向的端口包括：目的地址为源终端的单播数据包所导向的下行端口 ；以及，目的地址为目标终端的单播数据包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="74" class="claim">
+      <div class="claim-text">74.如权利要求67所述的节点服务器，其特征在于，当所述数据包为单播数据包时，所述节点服务器还包括：服务处理命令发送模块，用于分别向源终端与目标终端发送服务处理命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="75" class="claim">
+      <div class="claim-text">75.如权利要求67所述的节点服务器，其特征在于，所述通信链路获取模块包括： 组播通信申请请求接收子模块，用于接收目标终端发起的申请组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息、服务内容信息和目标终端的接入网地址；其中，所述服务内容信息中包括服务号码；源终端地址提取子模块，用于依据所述服务号码在预置的内容-地址映射表中，提取源终端的接入网地址；组播地址第一分配子模块，用于获取所述源终端对应的组播地址，并分配给目标终端；组播申请链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次组播服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="76" class="claim">
+      <div class="claim-text">76.如权利要求75所述的节点服务器，其特征在于，所述通信链路获取模块还包括： 组播通信发起请求接收子模块，用于接收源终端提交的发起组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息中包括服务号码；组播地址第二分配子模块，用于依据所述服务请求协议包向源终端分配组播地址； 上行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务上行的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="77" class="claim">
+      <div class="claim-text">77.如权利要求76所述的节点服务器，其特征在于，所述通信链路获取模块还包括： 下行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务下行的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="78" class="claim">
+      <div class="claim-text">78.如权利要求76或77所述的节点服务器，其特征在于，还包括：组播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为组播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="79" class="claim">
+      <div class="claim-text">79.如权利要求78所述的节点服务器，其特征在于，所述节点服务器在其内部的组播数据包地址表中设置当次服务的组播数据包所导向的端口包括：目的地址为组播地址的组播数据包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="80" class="claim">
+      <div class="claim-text">80.如权利要求66所述的节点服务器，其特征在于，所述端口配置命令记录在协议包中，所述节点服务器还包括：协议包导向模块，用于依据其内部预置的下行协议包地址表的设置，通过连接相应接入交换机的下行端口将所述协议包导向至对应的接入交换机；其中，所述下行协议包地址表中设置有，目的地址为下级接入网设备地址的协议包所导向的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="81" class="claim">
+      <div class="claim-text">81.如权利要求66所述的节点服务器，其特征在于，还包括： 服务处理命令第一发送模块，用于向目标终端发送服务处理命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="82" class="claim">
+      <div class="claim-text">82.如权利要求66所述的节点服务器，其特征在于，还包括： 服务处理命令第二发送模块，用于向源终端发送服务处理命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="83" class="claim">
+      <div class="claim-text">83.如权利要求68、69、75或76所述的节点服务器，其特征在于，所述通信链路获取模块还包括：通信链路选择子模块，用于在获得多条当次服务的通信链路信息时，按照预置规则选择其中一条通信链路信息为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="84" class="claim">
+      <div class="claim-text">84.如权利要求83所述的节点服务器，其特征在于，所述预置规则为节点服务器获取各条通信链路的流量信息，以及，当次服务的流量信息，确定已用流量最小的通信链路为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="85" class="claim">
+      <div class="claim-text">85.如权利要求83所述的节点服务器，其特征在于，所述预置规则为节点服务器获取各条通信链路的带宽信息，以及，当次服务的带宽信息，确定带宽最大的通信链路为当次服务的通信链路信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="86" class="claim">
+      <div class="claim-text">86.如权利要求66、67或68所述的节点服务器，其特征在于，还包括：服务器端口释放模块，用于在完成当次服务后，在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放；交换机端口释放配置模块，用于向参与当次服务的接入交换机发送端口释放命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="87" class="claim">
+      <div class="claim-text">87.如权利要求86所述的节点服务器，其特征在于，还包括：服务结束命令发送模块，用于向源终端和/或目标终端发出服务结束命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="88" class="claim">
+      <div class="claim-text">88.如权利要求86或87所述的节点服务器，其特征在于，所述节点服务器内部还设置有地址信息表，所述地址信息表中记录有地址占用信息、设备标识信息和设备资源信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="89" class="claim">
+      <div class="claim-text">89.如权利要求88所述的节点服务器，其特征在于，还包括：地址信息表修改模块，用于修改预置地址信息表中的内容，所述修改包括将所述释放端口的对应表项的地址占用信息更新为未占用；以及，更新对应的设备标识信息和设备资源{曰息。</div>
+    </div>
+    </div> <div class="claim"> <div num="90" class="claim">
+      <div class="claim-text">90.	一种接入交换机，其特征在于，包括：端口配置命令接收模块，用于接收节点服务器发送的端口配置命令，所述端口配置命令包括当次服务的通信链路信息中，参与当次服务的接入交换机的通信端口信息；其中，所述通信链路信息依据源终端发起的服务请求协议包生成；地址表配置模块，用于依据所述端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="91" class="claim">
+      <div class="claim-text">91.如权利要求90所述的接入交换机，其特征在于，所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="92" class="claim">
+      <div class="claim-text">92.如权利要求91所述的接入交换机，其特征在于，所述数据包地址表包括单播数据包地址表和组播数据包地址表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="93" class="claim">
+      <div class="claim-text">93.如权利要求90所述的接入交换机，其特征在于，所述接入交换机包括位于所述节点服务器和源终端之间的第一接入交换机，以及，位于所述节点服务器和目标终端之间的第二接入交换机；所述第一接入交换机还包括：菜单协议包第一导向模块，用于依据其内部预置协议包地址表的设置，将所述菜单协议包被导向至源终端；所述第二接入交换机还包括：菜单协议包第二导向模块，用于依据其内部预置协议包地址表的设置，所述菜单协议包被导向至目标终端；其中，所述协议包地址表中设置有，目的地址为当前接入交换机的接入网地址的协议包导向CPU模块；以及，目的地址为其它接入网设备地址的协议包所导向的端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="94" class="claim">
+      <div class="claim-text">94.如权利要求91所述的接入交换机，其特征在于，当所述通信链路信息为单向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；所述接入交换机依据端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="95" class="claim">
+      <div class="claim-text">95.如权利要求91所述的接入交换机，其特征在于，当所述通信链路信息为双向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口和下行端口信息，以及，下行链路中接入交换机的上行端口和下行端口信息；所述接入交换机依据所述端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行端口 ；以及，目的地址为源终端的单播数据包所导向的下行链路中接入交换机的上行端口的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="96" class="claim">
+      <div class="claim-text">96.如权利要求91所述的接入交换机，其特征在于，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="97" class="claim">
+      <div class="claim-text">97.如权利要求96所述的接入交换机，其特征在于，所述接入交换机的通信端口信息还包括上行链路中接入交换机的下行端口信息；所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口还包括：目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的下行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="98" class="claim">
+      <div class="claim-text">98.如权利要求90、91或92所述的接入交换机，其特征在于，所述接入交换机为连接在所述源终端与节点服务器之间的接入交换机，所述接入交换机还包括：协议包导向模块，用于依据其内部预置上行协议包地址表的设置，将所述源终端发起的服务请求协议包通过该接入交换机的上行端口导向至节点服务器；其中，所述上行协议包地址表中设置有，目的地址为节点服务器地址的协议包导向的上行端口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="99" class="claim">
+      <div class="claim-text">99.如权利要求90、91或92所述的接入交换机，其特征在于，还包括：端口释放模块，用于依据节点服务器发送的端口释放命令在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES46320495" lang="ZH" load-source="patent-office" class="description">
+    <p>一种接入网设备的通信连接方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及新型网络的技术领域，特别是涉及一种接入网设备的通信连接方法、 一种接入网设备的通信连接系统、一种节点服务器及一种接入交换机。</p>
+    <p>背景技术</p>
+    <p>[0002]	新型网络（包括互联网）使得不同的个人和机构之间能够交换信息和其他信息资源。网络通常包括通路、传输、信令以及网络管理等技术。这些技术已广泛地见诸于各类文献。对此作了概括介绍的有：Steven Si印herd所著的《Telecommunications Convergence》 （McGrgw&#8212;Hill，2000)， Armabel Ζ. Dodd PJf M 白勺《The Essential Guide, to Telecommunications》第三版（Prentice Hall PRT,2001),或 Ray Horak 所著的 ((Communications Systems and Networks》第二版(M&amp;T Books，2000)。这些技术以往取得的进展已经充分地增进了信息传输的速度和质量，并降低了其费用。</p>
+    <p>[0003]	连接终端到一个广域传输网络的通路技术（如终端装置和网络边缘的局域环路） 已经从14. 4,28. 8和56K的调制解调器发展到包括ISDN、T1、线缆调制解调器、DSL、以太网和无线连接在内的技术。</p>
+    <p>[0004]	现今用在广域网中的传输技术包括：同步光纤网（SONET)、密集波分复用（DWDM)、 帧中继、异步传输模式（ATM)和弹性分组环（RPR)。</p>
+    <p>[0005]	在所有不同的信令技术中（如在网络中用来建立、维持和终结通信的协议和方法），互联网协议（IP)的应用最为广泛。事实上，几乎所有的通信和网络专家认为集声音 (如电话）、视频和数据网于一体的一个基于IP协议的网络（如互联网）将是不可避免的。 就像一位作者所阐述的那样：“有一件事是清楚的，那就是以IP为基础的整合各类网络于一体的列车已经驶离了车站，有些乘客对此次旅行极具热情，而另一些则很不情愿地被拖拽而行，并哭、叫、踢打着列举IP的种种缺陷。但是不管它有着何种缺陷，IP已被采纳为一种行业标准，除了它以外没有任何其他的技术具有如此大的潜力和发展的空间。”(摘自 1998 年 8 月 10 日((Network World》上的 “IP Convergence =Building the Future”，作者 Susan Breidenbach)。</p>
+    <p>[0006]	随着hternet的业务爆炸式增长，其应用范围已扩展到社会的各个领域和各个行业。从电信业来看，传统的电信业务已越来越多地采用IP传输，即所谓的Everything Over IP。现有的电信网的框架将从电路交换及其组网技术，逐步转向以分组交换特别是IP 为基础的新框架，电信网承载的业务将从以电话为主，转向以数据业务为主。</p>
+    <p>[0007]	TCP/IP网络协议</p>
+    <p>[0008]	TCP/IP (Transmission Control Protocol/Internet Protocol，传输控制协议 / 网间网协议）是目前世界上应用最为广泛的协议，它的流行与^ternet的迅猛发展密切相关-TCP/IP最初是为互联网的原型ARPANET所设计的，目的是提供一整套方便实用、能应用于多种网络上的协议，事实证明TCP/IP做到了这一点，它使网络互联变得容易起来，并且使越来越多的网络加入其中，成为hternet的事实标准。[0009]	*应用层-应用层是所有用户所面向的应用程序的统称。TCP/IP协议族在这一层面有着很多协议来支持不同的应用，许多大家所熟悉的基于^ternet的应用的实现就离不开这些协议。如我们进行万维网（WWW)访问用到了 HTTP协议、文件传输用FTP协议、电子邮件发送用SMTP、域名的解析用DNS协议、远程登录用Telnet协议等等，都是属于TCP/IP 应用层的；就用户而言，看到的是由一个个软件所构筑的大多为图形化的操作界面，而实际后台运行的便是上述协议。</p>
+    <p>[0010]	*传输层-这一层的的功能主要是提供应用程序间的通信，TCP/IP协议族在这一层的协议有TCP和UDP。</p>
+    <p>[0011]	*网络层-是TCP/IP协议族中非常关键的一层，主要定义了 IP地址格式，从而能够使得不同应用类型的数据在hternet上通畅地传输，IP协议就是一个网络层协议。</p>
+    <p>[0012]	*网络接口层-这是TCP/IP软件的最低层，负责接收IP数据包并通过网络发送之，或者从网络上接收物理帧，抽出IP数据报，交给IP层。</p>
+    <p>[0013]	IP是怎样实现网络互连的？各个厂家生产的网络系统和设备，如以太网、分组交换网等，它们相互之间不能互通，不能互通的主要原因是因为它们所传送数据的基本单元 (技术上称之为“帧”）的格式不同。IP协议实际上是一套由软件程序组成的协议软件，它把各种不同“帧”统一转换成“IP数据包”格式，这种转换是因特网的一个最重要的特点，使所有各种计算机都能在因特网上实现互通，即具有“开放性”的特点。</p>
+    <p>[0014]	那么，“数据包”是什么？它又有什么特点呢？数据包也是分组交换的一种形式， 就是把所传送的数据分段打成“包”，再传送出去。但是，它属于“无连接型”，是把打成的每个“包”（分组）都作为一个“独立的报文”传送出去，所以叫做“数据包”。这样，在开始通信之前就不需要先连接好一条电路，各个数据包不一定都通过同一条路径传输，所以叫做 “无连接型”。这一特点非常重要，在文本信息传输的情况下，它大大提高了网络的坚固性和安全性。</p>
+    <p>[0015]	每个数据包都有报头和报文这两个部分，报头中有目的地址等必要内容，使每个数据包不经过同样的路径都能准确地到达目的地。在目的地重新组合还原成原来发送的数据。这就要IP具有分组打包和集合组装的功能。</p>
+    <p>[0016]	在实际传送过程中，数据包还要能根据所经过网络规定的分组大小来改变数据包的长度，IP数据包的最大长度可达65535个字节。</p>
+    <p>[0017]	服务品质保证（QoQ是IP互联网的一个主要问题。尽管长期以来无数个研究报告试图解决这一难题，如果我们将QoS主要里程碑按时间排列，不难看出互联网QoS是不断降低要求，并不断失败的无奈历史。从“Inte Serv" (1990)到“Diff Serv，，（1997)，再至Ij “Lightload”（2001)，各种看似有效的QoS局部改善方案加起来，距离全网范围品质保证的目标还是像水中的月亮。QoS看起来很近，其实遥不可达。</p>
+    <p>[0018]	早在IP互联网初期阶段，视讯应用已经成为网络服务的目标，如MBone。由于缺乏有效的品质保证，长期无法开展有商业价值的视频通讯服务，削弱了 IP互联网的盈利能力。因此，解决网络传输品质难题，具有很大的商业价值。网络传输品质具体表现为丢包和误码。电脑文件对于传输中的错误不敏感，就算传输过程中大部分数据包都丢掉了，只要有 TCP的重发机制，电脑还是会认为网络是可用的。但是，若丢包和误码率高于千分之一，对同步视讯将会造成视音品质下降。经验数据告诉我们，高品质视频通讯甚至要求丢包和误码少于十万分之一。当前网络环境的测试数据显示，绝大部分丢包发生在路由器内部，在光纤传输中产生的误码几乎可以忽略不计。</p>
+    <p>[0019]	*为什么Inte Serv”不成功？</p>
+    <p>[0020]	"Inte krv”建立在独立流资源预留的基础上，采用Resource Reservation SetupProtocol (RSVP)。在一个大规模网络环境中，如果能在两个视讯终端之间预留一部分带宽资源，为该视讯业务专用。听起来很好，但实际上行不通。</p>
+    <p>[0021]	首先，这个方案要求全网设备改造，等于重新建网，实际操作几乎不可能。</p>
+    <p>[0022]	其次，就算实现了全网改造，比如能够在每一台交换机内，为2Mbps的视讯业务保留2Mbps带宽，能否解决品质保证呢？答案是否定的。</p>
+    <p>[0023]	所谓RSVP的2Mbps带宽只能对宏观而言，如果1秒钟的数据集中在前半秒发送， 就会造成问题，形成周期性的突发流量。由于，IP互联网的核心理念是尽力而为，在每一个网络节点，交换机总是试图以最快速度转发数据。当一个视讯流通过多级交换机后必然导致流量分布不均&#21243;。多个不均&#21243;的非同步流合在一起，在一段时间内将产生更大的不均&#21243;， 也就是说，网络流量一定有周期性的阻塞。随着视讯用户数增加，周期性的阻塞没有上限， 当超过交换机内部储存量，直接导致丢包后果。</p>
+    <p>[0024]	*为什么“Diff Serv”不成功？</p>
+    <p>[0025]	在“Inte Serv”问世7年后，一种新方法“Diff Serv”开始流行。"Diff Serv”试图提供一种优于尽力而为的网络服务。这一方法不需要复杂的全网资源预留，实施很简单。 只要在每个数据包中打上“优先级”标记，网络交换机首先处理带有“优先级”的视讯数据。 其基本原理好比银行为VIP客户发放金卡，能够有效减少高端客户的排队时间。这个方法听起来也很好，但实际上还是行不通。</p>
+    <p>[0026]	我们不能忽视一个简单的事实，单一视讯业务流量远远大于传统非视讯业务（百倍以上）。</p>
+    <p>[0027]	只要有少量视讯用户，网络上看到的几乎都是视讯数据包。如果大部分数据包都有金卡，也就谈不上VIP 了。另外由于IP互联网管理不是强制性的，尽管QoS为用户制定了一套独善其身的道德标准，但要求别人都自觉执行根本不现实。</p>
+    <p>[0028]	因此，“Diff Serv”除了在少数企业专网中有用，难以在大规模公网中有效推广。</p>
+    <p>[0029]	* 为什么 “Light load” 不成功？</p>
+    <p>[0030]	自从IP互联网逐步普及以来，人们不间断地寻找解决网络品质保证的良方。网络技术专家们经过10多年搜肠刮肚，两大QoS方案均不理想。在对于解决QoS失去信心的大环境下，一些不愿留名的人提出了不是办法的办法，即“Light load”。其基本设想是所谓的轻载网络，认为只要给足带宽，光纤入户，就不担心网络拥塞。</p>
+    <p>[0031]	轻载网络的设想可行吗？答案还是否定的。</p>
+    <p>[0032]	当前的网络技术专家们似乎没有意识到一个基本原理，网络丢包现象的根源是流量不均&#21243;性造成的。从宏观上看，在一个时间段发送略快一点，必然导致另一时间段的拥挤，只要网络流量不均&#21243;，网络可能达到的峰值流量就没有上限，在短时间内可以占满任意大的带宽。</p>
+    <p>[0033]	其实，只要有2Mbps带宽就可以传输相当不错的视讯节目，若有8Mbps带宽，就可以传输HDTV品质的视讯内容。然而，如果我们在普通网站上随意点看一段文字或一幅照片，现今的网站服务器多数使用千兆网口，其瞬间流量是HDTV的数十倍。如果有许多个类似网站，刚巧碰撞在一起，在某个短时间产生的突发流量会超过全网用户使用HDTV所需， 能够占满任意宽的网络。统计分析显示，这种碰撞是很频繁的。</p>
+    <p>[0034]	IP互联网试图采用储存器来吸收瞬间流量，其后果是增加了传输时延。由于储存能力有限，而突发流量没有上限。因此，采用储存方法只能改善本设备丢包的机会，在本节点吸收的突发流量将对下一个节点造成更大的压力。视讯流量源源不断，交换机储存方式加剧了突发流向薄弱节点汇聚，网络丢包不可避免。</p>
+    <p>[0035]	当前的网络建设者们，采用轻载加上“Diff Serv”技术，可以应付窄带的VoIP语音业务。这是因为语音在网络总流量中不占主要部分，一旦发生拥挤，牺牲电脑文件，对语音优先。但是，对于高带宽的视频通讯而言，局部扩容只能收到暂时改善的效果。如果其他地方也扩容，网络流量的不均&#21243;性跟着水涨船高，导致原先已扩容部分的效果下降。如果全网都平均扩容的话，传输品质又将恢复到原先没有扩容前的样子。也就是说，整体扩容是无效的。</p>
+    <p>[0036]	当前的设备厂商推荐每户数十，乃至上百兆的超宽带接入网，就算每家都有了光纤到户，还是难以向消费者展示品质保证的视频通讯服务。再复杂的QoS手段充其量只能 “改善” IP互联网的传输品质，而无法“保证”网络传输品质。</p>
+    <p>发明内容</p>
+    <p>[0037]	本发明所要解决的技术问题是提供一种接入网设备的通信连接方法，用以保证传输通路的稳定和通畅，避免多媒体业务的延时，保证国家信息安全的需求，节约硬件资源， 从而保证网络传输品质。</p>
+    <p>[0038]	本发明实施例还提供了一种接入网设备的通信连接系统、一种节点服务器及一种接入交换机，用以保证上述方法在实际中的实现及应用。</p>
+    <p>[0039]	为了解决上述技术问题，本发明实施例公开了一种接入网设备的通信连接方法， 所述接入网设备包括节点服务器、接入交换机和终端，所述的方法包括以下步骤：</p>
+    <p>[0040]	节点服务器依据源终端发起的服务请求协议包，获取当次服务的通信链路信息， 所述通信链路信息包括，参与当次服务的接入交换机的通信端口信息；</p>
+    <p>[0041]	节点服务器依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令；</p>
+    <p>[0042]	所述接入交换机依据端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。</p>
+    <p>[0043]	优选的，通信链路信息还可以包括参与当次服务的节点服务器的通信端口信息， 则此时，节点服务器可以在其内部的数据包地址表中设置当次服务的数据包所导向的端</p>
+    <p>[0044]	其中，如果源终端和目标终端接在同一个接入交换机下，则节点服务器可以仅配置接入交换机的数据包导向端口，在源终端和目标终端进行服务通信时，接入交换机依据该内部的数据包地址表的设置，直接通过该接入交换机相应的下行端口传送数据包，即源终端和目标终端可以在其共同连接的接入交换机下直接进行服务通信，而无需将数据包上传至节点服务器，再由节点服务器下发至相应的终端，有效节省了带宽和路由资源。[0045]	经过上述步骤，当次服务的通信链路就被配置好了。在本发明实施例中，所述接入网设备是指新型网中接入网部分的设备。这种新型网是一种集中控制的网络结构，该网络可以是树型网、星型网、环状网等等类型，但在此基础上网络中需要有集中控制节点来控制整个网络。接入网部分的设备主要可以分为3类：节点服务器，接入交换机，终端（包括各种机顶盒、编码板、存储器等）。其中，节点服务器是接入网中起集中控制功能的节点，可控制接入交换机和终端。节点服务器可直接与接入交换机相连，也可以直接与终端相连。</p>
+    <p>[0046]	在实际中，本发明实施例的通信连接方法不仅适用于组播通信，还适用于单播通信，即所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求，相应地，所述数据包地址表可以包括单播数据包地址表和组播数据包地址表。</p>
+    <p>[0047]	在进行单播通信服务的情况下，所述节点服务器获取当次服务的通信链路信息的步骤具体可以包括以下子步骤：</p>
+    <p>[0048]	节点服务器获得源终端发起的、用于与目标终端建立单播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息包括服务号码；</p>
+    <p>[0049]	节点服务器依据所述服务号码在预置的内容-地址映射表中提取目标终端的接入网地址；</p>
+    <p>[0050]	节点服务器依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次服务的通信链路信息。</p>
+    <p>[0051]	对于单播通信服务而言，所述通信链路信息可以为单向通信链路信息，如源终端向目标终端发起单播服务请求，或者，目标终端向源终端发起单播服务请求；或者，所述通信链路信息也可以为双向通信链路信息，如源终端和目标终端互相向对端发起单播服务请求。</p>
+    <p>[0052]	在建立通信连接的过程中，节点服务器会通知源终端和目标终端，并依据目标终端的应答判断是否可以采用当前通信链路，即在本发明的一种优选实施例中，所述节点服务器获取当次服务的通信链路信息的步骤还包括以下子步骤：</p>
+    <p>[0053]	节点服务器向所述源终端和目标终端发送菜单协议包；</p>
+    <p>[0054]	以及，接收目标终端针对所述菜包协议包发出的应答协议包。</p>
+    <p>[0055]	更具体而言，所述节点服务器获取当次服务的通信链路信息的步骤还可以包括以下子步骤：</p>
+    <p>[0056]	依据所述节点服务器和源终端之间的接入交换机中预置协议包地址表的设置，所述菜单协议包被导向至源终端；</p>
+    <p>[0057]	依据所述节点服务器和目标终端之间的接入交换机中预置协议包地址表的设置， 所述菜单协议包被导向至目标终端；</p>
+    <p>[0058]	其中，所述协议包地址表中设置有，目的地址为当前接入交换机的接入网地址的协议包导向CPU模块；以及，目的地址为其它接入网设备地址的协议包所导向的端口。</p>
+    <p>[0059]	即节点服务器可以基于预置协议包地址表的设置向源终端和目标终端发送菜单协议包。</p>
+    <p>[0060]	对于单播服务通信连接的建立而言，节点服务器会依据所述服务类型信息，确定当前设置的数据包地址表为单播数据包地址表。[0061]	由于节点服务器作为接入网中的主控节点，单播服务通信只涉及节点服务器的下行端口，因而节点服务器在其内部的单播数据包地址表中设置当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0062]	目的地址为源终端的单播数据包所导向的下行端口 ；以及，目的地址为目标终端的单播数据包所导向的下行端口。</p>
+    <p>[0063]	节点服务器通知接入交换机配表则存在以下两种情况：</p>
+    <p>[0064]	1)当所述通信链路信息为单向通信链路信息时，所述接入交换机的通信端口信息则可以包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行</p>
+    <p>端口信息；</p>
+    <p>[0065]	所述接入交换机依据端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0066]	目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</p>
+    <p>[0067]	2)当所述通信链路信息为双向通信链路信息时，所述接入交换机的通信端口信息则可以包括上行链路中接入交换机的上行端口和下行端口信息，以及，下行链路中接入交换机的上行端口和下行端口信息；</p>
+    <p>[0068]	所述接入交换机依据所述端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0069]	目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行端口 ；以及，目的地址为源终端的单播数据包所导向的下行链路中接入交换机的上行端口的下行端口。</p>
+    <p>[0070]	在具体实现中，在向接入交换机发送端口配置命令时，节点服务器还可以分别向源终端与目标终端发送服务处理命令，如编解码命令，所述源终端与目标终端则会依据所述服务处理命令执行相应的操作。</p>
+    <p>[0071]	在进行组播通信服务的情况下，所述节点服务器获取当次服务的通信链路信息的步骤可以包括以下子步骤：</p>
+    <p>[0072]	节点服务器获得目标终端发起的申请组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息、服务内容信息和目标终端的接入网地址；其中，所述服务内容信息中包括服务号码；</p>
+    <p>[0073]	节点服务器依据所述服务号码在预置的内容-地址映射表中，提取源终端的接入网地址；</p>
+    <p>[0074]	节点服务器获取所述源终端对应的组播地址，并分配给目标终端；以及，依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次组播服务的通信链路信息。</p>
+    <p>[0075]	在实际中，组播数据包可能是由源终端发出的，在这种情况下，所述节点服务器获取当次服务的通信链路信息的步骤还可以包括以下子步骤：</p>
+    <p>[0076]	节点服务器获得源终端提交的发起组播通信服务的服务请求协议包，并依据所述服务请求协议包向源终端分配组播地址；所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息中包括服务号码；</p>
+    <p>[0077]	依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务上行的通信链路信息。</p>
+    <p>[0078]	还有一种可能的组播业务是，源终端在发送组播数据包时，自己也会接收该组播数据包，在这种情况下，所述节点服务器获取当次服务的通信链路信息的步骤还可以包括以下子步骤：</p>
+    <p>[0079]	依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务下行的通信链路信息。</p>
+    <p>[0080]	在实际中，节点服务器会依据所述服务类型信息，确定当前设置的数据包地址表为组播数据包地址表。</p>
+    <p>[0081]	由于节点服务器作为接入网中的主控节点，组播服务通信只涉及节点服务器的下行端口，因而节点服务器在其内部的组播数据包地址表中设置当次服务的组播数据包所导向的端口包括：</p>
+    <p>[0082]	目的地址为组播地址的组播数据包所导向的下行端口。</p>
+    <p>[0083]	作为一种组播服务的实施例，节点服务器所获取的接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；</p>
+    <p>[0084]	所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：</p>
+    <p>[0085]	目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</p>
+    <p>[0086]	作为另一种组播服务的实施例，所述节点服务器所获取的接入交换机的通信端口信息还可以包括上行链路中接入交换机的下行端口信息；</p>
+    <p>[0087]	所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：</p>
+    <p>[0088]	目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的下行端口。</p>
+    <p>[0089]	在具体实现中，优选的是，所述端口配置命令记录在协议包中，所述节点服务器依据其内部预置的下行协议包地址表的设置，通过连接相应接入交换机的下行端口将所述协议包导向至对应的接入交换机；</p>
+    <p>[0090]	其中，所述下行协议包地址表中设置有，目的地址为下级接入网设备地址的协议包所导向的下行端口。</p>
+    <p>[0091 ] 在具体实现中，在向接入交换机发送端口配置命令时，节点服务器还可以向目标终端发送服务处理命令，由目标终端依据所述服务处理命令执行相应的操作；或者，节点服务器还可以向源终端发送服务处理命令，由源终端依据所述服务处理命令执行相应的操作。</p>
+    <p>[0092] 如果节点服务器当前获得多条当次服务的通信链路信息，则可以按照预置规则选择其中一条通信链路信息为当次服务的通信链路信息。作为本发明的一种优选实施例，所述预置规则可以为节点服务器获取各条通信链路的流量信息，以及，当次服务的流量信息， 确定已用流量最小的通信链路为当次服务的通信链路信息；或者，所述预置规则也可以为节点服务器获取各条通信链路的带宽信息，以及，当次服务的带宽信息，确定带宽最大的通信链路为当次服务的通信链路信息。[0093]	在本发明实施例中优选的是，所述源终端发起的服务请求协议包，可以依据连接在所述源终端与节点服务器之间的接入交换机中预置的上行协议包地址表的设置，通过相应接入交换机的上行端口导向至节点服务器；</p>
+    <p>[0094]	其中，所述上行协议包地址表中设置有，目的地址为节点服务器地址的协议包导向的上行端口。</p>
+    <p>[0095]	为节省资源，在完成当次服务后，节点服务器会在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放；并向参与当次服务的接入交换机发送端口释放命令；</p>
+    <p>[0096]	所述接入交换机依据所述端口释放命令在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放。</p>
+    <p>[0097]	优选的是，节点服务器还会向源终端和/或目标终端发出服务结束命令，所述源终端和/或目标终端依据所述服务结束命令结束服务处理。</p>
+    <p>[0098]	为更好地对接入网地址进行集中管理和控制，所述节点服务器内部还设置有地址信息表，所述地址信息表中记录有地址占用信息、设备标识信息和设备资源信息。</p>
+    <p>[0099]	在完成当次服务后，节点服务器会修改预置地址信息表中的内容，所述修改包括将所述释放端口的对应表项的地址占用信息更新为未占用；以及，更新对应的设备标识信息和设备资源信息。</p>
+    <p>[0100]	在本发明实施例中，所述接入网设备可以通过以下步骤接入新型网：</p>
+    <p>[0101]	接入交换机上电，在其内部的下行协议包地址表中设置所有下行协议包导向CPU 模块；</p>
+    <p>[0102]	所述接入交换机接收节点服务器发送的下行协议包，依据所述下行协议包地址表的设置，将所述下行协议包导向该接入交换机的CPU模块，所述CPU模块生成上行协议包， 并发送给节点服务器；所述下行协议包中包括一个待分配的接入网地址；</p>
+    <p>[0103]	节点服务器向该接入交换机发送入网命令，所述入网命令中包括该接入交换机的接入网地址，所述接入网地址即为该接入交换机所接收下行协议包中的待分配接入网地址；</p>
+    <p>[0104]	所述接入交换机更新其内部的下行协议包地址表为，仅目的地址为自己接入网地址的协议包导向CPU模块。</p>
+    <p>[0105]	在具体实现中，往往接入交换机下还连接有其它下级接入网设备，在这种情况下， 节点服务器会向已入网的接入交换机发送端口分配包，即作为本发明的一种优选实施例， 当已入网的接入交换机接收到节点服务器发送的端口分配包时，所述的方法还包括以下步骤：</p>
+    <p>[0106]	已入网的接入交换机将目的地址为自己接入网地址的端口分配包导向CPU模块；</p>
+    <p>[0107]	依据包中的端口分配信息，在其内部的下行协议包地址表中，设置各个端口下行协议包所导向的下行端口。</p>
+    <p>[0108]	进一步而言，当已入网的接入交换机接收到节点服务器发送的端口下行协议包时，所述的方法还包括以下步骤：</p>
+    <p>[0109]	所述接入交换机依据其内部下行协议包地址表的设置，将所述端口下行协议包导向对应的下行端口 ；所述端口下行协议包中包括一个待分配的接入网地址；[0110]	若节点服务器接收到连接在所述接入交换机下行端口的某个下级接入网设备发送的端口上行协议包，并向该下级接入网设备发送入网命令，所述入网命令中包括该下级接入网设备的接入网地址，所述接入网地址即为该下级接入网设备所接收的端口下行协议包中待分配的接入网地址。</p>
+    <p>[0111]	本发明实施例还公开了一种接入网设备的通信连接系统，所述接入网设备包括节点服务器、接入交换机和终端，所述节点服务器包括：</p>
+    <p>[0112]	服务请求接收模块，用于接收源终端发起的服务请求协议包；</p>
+    <p>[0113]	通信链路获取模块，用于依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务的接入交换机的通信端口信息；</p>
+    <p>[0114]	交换机端口配置模块，用于依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令；</p>
+    <p>[0115]	所述接入交换机包括：</p>
+    <p>[0116]	地址表配置模块，用于依据端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。</p>
+    <p>[0117]	优选的，通信链路信息还可以包括参与当次服务的节点服务器的通信端口信息， 则此时，节点服务器还可以包括地址表配置模块，用于依据所述节点服务器的通信端口信息，在其内部的数据包地址表中设置当次服务的数据包所导向的端口。</p>
+    <p>[0118]	在实际中，本发明实施例的通信连接方法不仅适用于组播通信，还适用于单播通信，即所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求，相应地，所述数据包地址表可以包括单播数据包地址表和组播数据包地址表。</p>
+    <p>[0119]	在进行单播通信服务的情况下，所述节点服务器的通信链路获取模块包括以下子模块：</p>
+    <p>[0120]	单播服务协议包接收子模块，用于接收源终端发起的、用于与目标终端建立单播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息包括服务号码；</p>
+    <p>[0121 ] 目标终端地址获取子模块，用于依据所述服务号码在预置的内容-地址映射表中提取目标终端的接入网地址；</p>
+    <p>[0122]	通信链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次服务的通信链路信息。</p>
+    <p>[0123]	对于单播通信服务而言，所述通信链路信息可以为单向通信链路信息，如源终端向目标终端发起单播服务请求，或者，目标终端向源终端发起单播服务请求；或者，所述通信链路信息也可以为双向通信链路信息，如源终端和目标终端互相向对端发起单播服务请求。</p>
+    <p>[0124]	在建立通信连接的过程中，节点服务器会通知源终端和目标终端，并依据目标终端的应答判断是否可以采用当前通信链路，即在本发明的一种优选实施例中，所述节点服务器还包括以下模块：</p>
+    <p>[0125]	菜单协议包发送模块，用于向所述源终端和目标终端发送菜单协议包；</p>
+    <p>[0126]	应答协议包接收模块，用于接收目标终端针对所述菜包协议包发出的应答协议包。[0127]	更具体而言，所述接入交换机包括位于所述节点服务器和源终端之间的第一接入交换机，以及，位于所述节点服务器和目标终端之间的第二接入交换机；</p>
+    <p>[0128]	所述第一接入交换机还包括：</p>
+    <p>[0129]	菜单协议包第一导向模块，用于依据其内部预置协议包地址表的设置，将所述菜单协议包被导向至源终端；</p>
+    <p>[0130]	所述第二接入交换机还包括：</p>
+    <p>[0131]	菜单协议包第二导向模块，用于依据其内部预置协议包地址表的设置，所述菜单协议包被导向至目标终端；</p>
+    <p>[0132]	其中，所述协议包地址表中设置有，目的地址为当前接入交换机的接入网地址的协议包导向CPU模块；以及，目的地址为其它接入网设备地址的协议包所导向的端口。</p>
+    <p>[0133]	即节点服务器可以基于预置协议包地址表的设置向源终端和目标终端发送菜单协议包。</p>
+    <p>[0134]	对于单播服务通信连接的建立而言，所述节点服务器还包括：</p>
+    <p>[0135]	单播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为单播数据包地址表。</p>
+    <p>[0136]	由于节点服务器作为接入网中的主控节点，单播服务通信只涉及节点服务器的下行端口，因而所述节点服务器在其内部的单播数据包地址表中设置当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0137]	目的地址为源终端的单播数据包所导向的下行端口 ；以及，目的地址为目标终端的单播数据包所导向的下行端口。</p>
+    <p>[0138]	节点服务器通知接入交换机配表则存在以下两种情况：</p>
+    <p>[0139]	1)当所述通信链路信息为单向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；</p>
+    <p>[0140]	所述接入交换机依据端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0141]	目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</p>
+    <p>[0142]	2)当所述通信链路信息为双向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口和下行端口信息，以及，下行链路中接入交换机的上行端口和下行端口信息；</p>
+    <p>[0143]	所述接入交换机依据所述端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0144]	目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行端口 ；以及，目的地址为源终端的单播数据包所导向的下行链路中接入交换机的上行端口的下行端口。</p>
+    <p>[0145]	在具体实现中，所述节点服务器还包括：</p>
+    <p>[0146]	服务处理命令发送模块，用于分别向源终端与目标终端发送服务处理命令；</p>
+    <p>[0147]	所述源终端包括命令执行模块，用于依据所述服务处理命令执行相应的操作；[0148]	所述目标终端包括命令执行模块，用于依据所述服务处理命令执行相应的操作。</p>
+    <p>[0149]	在进行组播通信服务的情况下，所述节点服务器的通信链路获取模块包括：</p>
+    <p>[0150]	组播通信申请请求接收子模块，用于接收目标终端发起的申请组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息、服务内容信息和目标终端的接入网地址；其中，所述服务内容信息中包括服务号码；</p>
+    <p>[0151]	源终端地址提取子模块，用于依据所述服务号码在预置的内容-地址映射表中， 提取源终端的接入网地址；</p>
+    <p>[0152]	组播地址第一分配子模块，用于获取所述源终端对应的组播地址，并分配给目标终端；</p>
+    <p>[0153]	组播申请链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次组播服务的通信链路信息。</p>
+    <p>[0154]	在实际中，组播数据包可能是由源终端发出的，在这种情况下，所述节点服务器的通信链路获取模块还包括：</p>
+    <p>[0155]	组播通信发起请求接收子模块，用于接收源终端提交的发起组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息中包括服务号码；</p>
+    <p>[0156]	组播地址第二分配子模块，用于依据所述服务请求协议包向源终端分配组播地址；</p>
+    <p>[0157]	上行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务上行的通信链路信息。</p>
+    <p>[0158]	还有一种可能的组播服务是，源终端在发送组播数据包时，自己也会接收该组播数据包，在这种情况下，所述节点服务器的通信链路获取模块还包括：</p>
+    <p>[0159]	下行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务下行的通信链路信息。</p>
+    <p>[0160]	在实际中，所述节点服务器还包括：</p>
+    <p>[0161]	组播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为组播数据包地址表。</p>
+    <p>[0162]	由于节点服务器作为接入网中的主控节点，组播服务通信只涉及节点服务器的下行端口，因而所述节点服务器在其内部的组播数据包地址表中设置当次服务的组播数据包所导向的端口包括：</p>
+    <p>[0163]	目的地址为组播地址的组播数据包所导向的下行端口。</p>
+    <p>[0164]	作为一种组播服务的实施例，节点服务器所获取的接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；</p>
+    <p>[0165]	所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：</p>
+    <p>[0166]	目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</p>
+    <p>[0167]	作为另一种组播服务的实施例，节点服务器所获取的接入交换机的通信端口信息还包括上行链路中接入交换机的下行端口信息；</p>
+    <p>[0168]	所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口还包括：</p>
+    <p>[0169]	目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的下行端口。</p>
+    <p>[0170]	在具体实现中，所述端口配置命令记录在协议包中，所述节点服务器还包括：</p>
+    <p>[0171]	协议包导向模块，用于依据其内部预置的下行协议包地址表的设置，通过连接相应接入交换机的下行端口将所述协议包导向至对应的接入交换机；</p>
+    <p>[0172]	其中，所述下行协议包地址表中设置有，目的地址为下级接入网设备地址的协议包所导向的下行端口。</p>
+    <p>[0173]	如果节点服务器当前获得多条当次服务的通信链路信息，则所述节点服务器的通信链路获取模块还包括：</p>
+    <p>[0174]	通信链路选择子模块，用于在获得多条当次服务的通信链路信息时，按照预置规则选择其中一条通信链路信息为当次服务的通信链路信息。其中，所述预置规则可以为节点服务器获取各条通信链路的流量信息，以及，当次服务的流量信息，确定已用流量最小的通信链路为当次服务的通信链路信息；或者，所述预置规则也可以为节点服务器获取各条通信链路的带宽信息，以及，当次服务的带宽信息，确定带宽最大的通信链路为当次服务的通信链路信息。</p>
+    <p>[0175]	优选的是，在所述接入交换机为连接在所述源终端与节点服务器之间的接入交换机时，所述接入交换机还包括：</p>
+    <p>[0176]	协议包导向模块，用于依据其内部预置上行协议包地址表的设置，将所述源终端发起的服务请求协议包，通过该接入交换机的上行端口导向至节点服务器；</p>
+    <p>[0177]	其中，所述上行协议包地址表中设置有，目的地址为节点服务器地址的协议包导向的上行端口。</p>
+    <p>[0178]	在完成当次服务后，所述节点服务器还包括：</p>
+    <p>[0179]	服务器端口释放模块，用于在完成当次服务后，在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放；</p>
+    <p>[0180]	交换机端口释放配置模块，用于向参与当次服务的接入交换机发送端口释放命令；</p>
+    <p>[0181]	所述接入交换机还包括：</p>
+    <p>[0182]	端口释放模块，用于依据所述端口释放命令在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放。</p>
+    <p>[0183]	进一步而言，在完成当次服务后，所述节点服务器还可以包括：</p>
+    <p>[0184]	服务结束命令发送模块，用于向源终端和/或目标终端发出服务结束命令；</p>
+    <p>[0185]	所述源终端还包括第一结束服务模块，用于依据服务结束命令结束服务处理；</p>
+    <p>[0186]	所述目标终端还包括第二结束服务模块，用于依据服务结束命令结束服务处理。</p>
+    <p>[0187]	为更好地对接入网地址进行集中管理和控制，所述节点服务器内部还设置有地址信息表，所述地址信息表中记录有地址占用信息、设备标识信息和设备资源信息。</p>
+    <p>[0188]	在这种情况下，当完成当次服务后，所述节点服务器还包括：</p>
+    <p>[0189]	地址信息表修改模块，用于修改预置地址信息表中的内容，所述修改包括将所述释放端口的对应表项的地址占用信息更新为未占用；以及，更新对应的设备标识信息和设备资源信息。</p>
+    <p>[0190]	在本发明实施例中，所述接入网设备可以采用以下功能模块接入新型网：</p>
+    <p>[0191]	所述节点服务器包括向接入交换机发送下行协议包的下行协议包发送模块，以及，依据接入交换机回复的上行协议包发送入网命令的第一入网命令发送模块；</p>
+    <p>[0192]	所述接入交换机还包括：</p>
+    <p>[0193]	0号表初始化配置模块，用于在上电时，在其内部的下行协议包地址表中设置所有下行协议包导向CPU模块；</p>
+    <p>[0194]	下行协议包接收模块，用于依据所述下行协议包地址表的设置，将接收到的下行协议包导向该接入交换机的CPU模块，所述下行协议包中包括一个待分配的接入网地址；</p>
+    <p>[0195]	上行协议包回复模块，用于由所述CPU模块生成上行协议包，并发送给节点服务器；</p>
+    <p>[0196]	第一入网命令接收模块，用于接收节点服务器发送的入网命令，所述入网命令中包括该接入交换机的接入网地址，所述接入网地址即为该接入交换机所接收下行协议包中的待分配接入网地址；</p>
+    <p>[0197]	0号表第一设置模块，用于更新其内部的下行协议包地址表为，仅目的地址为自己接入网地址的协议包导向CPU模块。</p>
+    <p>[0198]	在具体实现中，往往接入交换机下还连接有其它下级接入网设备，在这种情况下， 节点服务器会向已入网的接入交换机发送端口分配包，即作为本发明的一种优选实施例， 所述节点服务器还包括用于向已入网的接入交换机发送端口分配包的端口分配包发送模块，所述端口分配包中包括端口分配信息，所述端口分配信息为各个端口下行协议包导向所述接入交换机各个下行端口的信息；</p>
+    <p>[0199]	所述接入交换机还包括：</p>
+    <p>[0200]	第一导向模块，用于将目的地址为自己接入网地址的端口分配包导向CPU模块；</p>
+    <p>[0201]	0号表第二设置模块，用于依据所述端口分配信息，在其内部的下行协议包地址表中，设置各个端口下行协议包所导向的下行端口。</p>
+    <p>[0202]	更为优选的是，所述节点服务器还包括用于向已入网的接入交换机发送端口下行协议包的端口下行协议包发送模块，所述端口下行协议包中包括一个待分配的接入网地址；</p>
+    <p>[0203]	所述接入交换机还包括：</p>
+    <p>[0204]	第二导向模块，用于依据其内部下行协议包地址表的设置，将所述端口下行协议包导向对应的下行端口。</p>
+    <p>[0205]	更为优选的是，所述接入网设备还包括连接在已入网接入交换机下行端口的下级接入网设备，所述节点服务器还包括用于向所述下级接入网设备发送入网命令的第二入网命令发送模块；</p>
+    <p>[0206]	所述下级接入网设备包括：</p>
+    <p>[0207]	端口上行协议包回复模块，用于针对接收到的端口下行协议包生成端口上行协议包，并发送给节点服务器；</p>
+    <p>[0208]	第二入网命令接收模块，用于接收节点服务器发送的入网命令，所述入网命令中包括该下级接入交换机的接入网地址，所述接入网地址即为该下级接入交换机所接收端口下行协议包中的待分配接入网地址。</p>
+    <p>[0209]	本发明实施例还公开了一种节点服务器，包括：</p>
+    <p>[0210]	服务请求接收模块，用于接收源终端发起的服务请求协议包；</p>
+    <p>[0211]	通信链路获取模块，用于依据源终端发起的服务请求协议包，获取当次服务的通信链路信息，所述通信链路信息包括，参与当次服务的接入交换机的通信端口信息；</p>
+    <p>[0212]	交换机端口配置模块，用于依据所述接入交换机的通信端口信息，向相应的接入交换机发送端口配置命令。</p>
+    <p>[0213]	优选的，通信链路信息还可以包括参与当次服务的节点服务器的通信端口信息， 则此时，节点服务器还可以包括地址表配置模块，用于依据所述节点服务器的通信端口信息，在其内部的数据包地址表中设置当次服务的数据包所导向的端口。</p>
+    <p>[0214]	在实际中，本发明实施例的通信连接方法不仅适用于组播通信，还适用于单播通信，即所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求，相应地，所述数据包地址表可以包括单播数据包地址表和组播数据包地址表。</p>
+    <p>[0215]	在进行单播通信服务的情况下，所述通信链路获取模块包括：</p>
+    <p>[0216]	单播服务协议包接收子模块，用于接收源终端发起的、用于与目标终端建立单播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息包括服务号码；</p>
+    <p>[0217]	目标终端地址获取子模块，用于依据所述服务号码在预置的内容-地址映射表中提取目标终端的接入网地址；</p>
+    <p>[0218]	通信链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次服务的通信链路信息。</p>
+    <p>[0219]	对于单播通信服务而言，所述通信链路信息可以为单向通信链路信息，如源终端向目标终端发起单播服务请求，或者，目标终端向源终端发起单播服务请求；或者，所述通信链路信息也可以为双向通信链路信息，如源终端和目标终端互相向对端发起单播服务请求。</p>
+    <p>[0220]	在建立通信连接的过程中，节点服务器会通知源终端和目标终端，并依据目标终端的应答判断是否可以采用当前通信链路，即在本发明的一种优选实施例中，所述节点服务器还包括：</p>
+    <p>[0221]	菜单协议包发送模块，用于向所述源终端和目标终端发送菜单协议包；</p>
+    <p>[0222]	应答协议包接收模块，用于接收目标终端针对所述菜包协议包发出的应答协议包。</p>
+    <p>[0223]	在具体实现中，所述节点服务器还包括：</p>
+    <p>[0224]	单播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为单播数据包地址表。</p>
+    <p>[0225]	由于节点服务器作为接入网中的主控节点，单播服务通信只涉及节点服务器的下行端口，因而所述节点服务器在其内部的单播数据包地址表中设置当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0226]	目的地址为源终端的单播数据包所导向的下行端口 ；以及，目的地址为目标终端的单播数据包所导向的下行端口。</p>
+    <p>[0227]	在具体实现中，在向接入交换机发送端口配置命令时，节点服务器还可以分别向源终端与目标终端发送服务处理命令，如编解码命令，即优选的是，所述节点服务器还包括：</p>
+    <p>[0228]	服务处理命令发送模块，用于分别向源终端与目标终端发送服务处理命令。</p>
+    <p>[0229]	在进行组播通信服务的情况下，所述通信链路获取模块包括：</p>
+    <p>[0230]	组播通信申请请求接收子模块，用于接收目标终端发起的申请组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息、服务内容信息和目标终端的接入网地址；其中，所述服务内容信息中包括服务号码；</p>
+    <p>[0231]	源终端地址提取子模块，用于依据所述服务号码在预置的内容-地址映射表中， 提取源终端的接入网地址；</p>
+    <p>[0232]	组播地址第一分配子模块，用于获取所述源终端对应的组播地址，并分配给目标终端；</p>
+    <p>[0233]	组播申请链路计算子模块，用于依据所述服务类型信息、源终端和目标终端的接入网地址，获取当次组播服务的通信链路信息。</p>
+    <p>[0234]	在实际中，组播数据包可能是由源终端发出的，在这种情况下，所述通信链路获取模块还包括：</p>
+    <p>[0235]	组播通信发起请求接收子模块，用于接收源终端提交的发起组播通信服务的服务请求协议包，所述服务请求协议包中包括服务类型信息，服务内容信息，以及，源终端的接入网地址，其中，所述服务内容信息中包括服务号码；</p>
+    <p>[0236]	组播地址第二分配子模块，用于依据所述服务请求协议包向源终端分配组播地址；</p>
+    <p>[0237]	上行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务上行的通信链路信息。</p>
+    <p>[0238]	还有一种可能的组播业务是，源终端在发送组播数据包时，自己也会接收该组播数据包，在这种情况下，所述通信链路获取模块还包括：</p>
+    <p>[0239]	下行链路计算子模块，用于依据服务类型信息，以及，节点服务器与所述源终端的接入网地址，获取当次组播服务下行的通信链路信息。</p>
+    <p>[0240]	在实际中，所述的节点服务器还包括：</p>
+    <p>[0241]	组播地址表确定模块，用于依据所述服务类型信息，确定当前设置的数据包地址表为组播数据包地址表。</p>
+    <p>[0242]	由于节点服务器作为接入网中的主控节点，组播服务通信只涉及节点服务器的下行端口，因而所述节点服务器在其内部的组播数据包地址表中设置当次服务的组播数据包所导向的端口包括：</p>
+    <p>[0243]	目的地址为组播地址的组播数据包所导向的下行端口。</p>
+    <p>[0244]	在具体实现中，所述端口配置命令记录在协议包中，所述节点服务器还包括：</p>
+    <p>[0245]	协议包导向模块，用于依据其内部预置的下行协议包地址表的设置，通过连接相应接入交换机的下行端口将所述协议包导向至对应的接入交换机；</p>
+    <p>[0246]	其中，所述下行协议包地址表中设置有，目的地址为下级接入网设备地址的协议包所导向的下行端口。</p>
+    <p>[0247]	在具体实现中，在向接入交换机发送端口配置命令时，节点服务器还可以向目标终端发送服务处理命令，由目标终端依据所述服务处理命令执行相应的操作；或者，节点服务器还可以向源终端发送服务处理命令，由源终端依据所述服务处理命令执行相应的操作。即优选的是，节点服务器还包括：</p>
+    <p>[0248]	服务处理命令第一发送模块，用于向目标终端发送服务处理命令；</p>
+    <p>[0249]和	/ 或，</p>
+    <p>[0250]	服务处理命令第二发送模块，用于向源终端发送服务处理命令。</p>
+    <p>[0251]	如果节点服务器当前获得多条当次服务的通信链路信息，则所述通信链路获取模块还包括：</p>
+    <p>[0252]	通信链路选择子模块，用于在获得多条当次服务的通信链路信息时，按照预置规则选择其中一条通信链路信息为当次服务的通信链路信息。</p>
+    <p>[0253]	作为本发明的一种优选实施例，所述预置规则可以为节点服务器获取各条通信链路的流量信息，以及，当次服务的流量信息，确定已用流量最小的通信链路为当次服务的通信链路信息。或者，所述预置规则也可以为节点服务器获取各条通信链路的带宽信息，以及，当次服务的带宽信息，确定带宽最大的通信链路为当次服务的通信链路信息。</p>
+    <p>[0254]	在完成当次的服务后，所述的节点服务器还包括：</p>
+    <p>[0255]	服务器端口释放模块，用于在完成当次服务后，在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放；</p>
+    <p>[0256]	交换机端口释放配置模块，用于向参与当次服务的接入交换机发送端口释放命令。</p>
+    <p>[0257]	优选的是，所述的节点服务器还包括：</p>
+    <p>[0258]	服务结束命令发送模块，用于向源终端和/或目标终端发出服务结束命令。</p>
+    <p>[0259]	为更好地对接入网地址进行集中管理和控制，所述节点服务器内部还设置有地址信息表，所述地址信息表中记录有地址占用信息、设备标识信息和设备资源信息。</p>
+    <p>[0260]	在这种情况下，当完成当次服务后，所述节点服务器还包括地址信息表修改模块， 用于修改预置地址信息表中的内容，所述修改包括将所述释放端口的对应表项的地址占用信息更新为未占用；以及，更新对应的设备标识信息和设备资源信息。</p>
+    <p>[0261]	本发明实施例还公开了一种接入交换机，包括：</p>
+    <p>[0262]	端口配置命令接收模块，用于接收节点服务器发送的端口配置命令，所述端口配置命令包括当次服务的通信链路信息中，参与当次服务的接入交换机的通信端口信息；其中，所述通信链路信息依据源终端发起的服务请求协议包生成；</p>
+    <p>[0263]	地址表配置模块，用于依据所述端口配置命令在其内部的数据包地址表中，设置当次服务的数据包所导向的端口。</p>
+    <p>[0264]	优选的是，所述源终端发起的服务请求包括单播通信服务请求和组播通信服务请求；相应地，所述数据包地址表包括单播数据包地址表和组播数据包地址表。</p>
+    <p>[0265]	在建立通信连接的过程中，节点服务器会通知源终端和目标终端，并依据目标终端的应答判断是否可以采用当前通信链路，即在本发明的一种优选实施例中，所述接入交换机包括位于所述节点服务器和源终端之间的第一接入交换机，以及，位于所述节点服务器和目标终端之间的第二接入交换机；</p>
+    <p>[0266]	所述第一接入交换机还包括：</p>
+    <p>[0267]	菜单协议包第一导向模块，用于依据其内部预置协议包地址表的设置，将所述菜单协议包被导向至源终端；</p>
+    <p>[0268]	所述第二接入交换机还包括：</p>
+    <p>[0269]	菜单协议包第二导向模块，用于依据其内部预置协议包地址表的设置，所述菜单协议包被导向至目标终端；</p>
+    <p>[0270]	其中，所述协议包地址表中设置有，目的地址为当前接入交换机的接入网地址的协议包导向CPU模块；以及，目的地址为其它接入网设备地址的协议包所导向的端口。</p>
+    <p>[0271]	即节点服务器可以基于预置协议包地址表的设置向源终端和目标终端发送菜单协议包。</p>
+    <p>[0272]	节点服务器通知接入交换机配表则存在以下两种情况：</p>
+    <p>[0273]	1)当所述通信链路信息为单向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；</p>
+    <p>[0274]	所述接入交换机依据端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0275]	目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</p>
+    <p>[0276]	2)当所述通信链路信息为双向通信链路信息时，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口和下行端口信息，以及，下行链路中接入交换机的上行端口和下行端口信息；</p>
+    <p>[0277]	所述接入交换机依据所述端口配置命令在其内部的单播数据包地址表中设置的当次服务的单播数据包所导向的端口包括：</p>
+    <p>[0278]	目的地址为目标终端的单播数据包所导向的上行链路中接入交换机的上行端口和下行端口 ；以及，目的地址为源终端的单播数据包所导向的下行链路中接入交换机的上行端口的下行端口。</p>
+    <p>[0279]	在进行组播通信服务的情况下，所述接入交换机的通信端口信息包括上行链路中接入交换机的上行端口信息，以及，下行链路中接入交换机的下行端口信息；</p>
+    <p>[0280]	所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口包括：</p>
+    <p>[0281]	目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的上行端口和下行链路中接入交换机的下行端口。</p>
+    <p>[0282]	在实际中，组播数据包可能是由源终端发出的，在这种情况下，所述接入交换机的通信端口信息还包括上行链路中接入交换机的下行端口信息；</p>
+    <p>[0283]	所述接入交换机依据所述端口配置命令在其内部的组播数据包地址表中设置的当次服务的组播数据包所导向的端口还包括：</p>
+    <p>[0284]	目的地址为组播地址的组播数据包所导向的上行链路中接入交换机的下行端口。</p>
+    <p>[0285]	还有一种可能的组播服务是，源终端在发送组播数据包时，自己也会接收该组播数据包，在这种情况下，所述接入交换机为连接在所述源终端与节点服务器之间的接入交换机，所述接入交换机还包括：</p>
+    <p>[0286]	协议包导向模块，用于依据其内部预置上行协议包地址表的设置，将所述源终端发起的服务请求协议包通过该接入交换机的上行端口导向至节点服务器；</p>
+    <p>[0287]	其中，所述上行协议包地址表中设置有，目的地址为节点服务器地址的协议包导向的上行端口。</p>
+    <p>[0288]	在完成当次服务后，所述的接入交换机还包括：</p>
+    <p>[0289]	端口释放模块，用于依据节点服务器发送的端口释放命令在其内部的数据包地址表中，将所设置的当次服务数据包导向的端口释放。</p>
+    <p>[0290]	需要说明的是，从实际硬件的角度划分，本发明的节点服务器主要包括网络接口模块、交换引擎模块、CPU模块、磁盘阵列模块；本发明的接入交换机主要包括网络接口模块（下行网络接口模块、上行网络接口模块）、交换引擎模块和CPU模块；由于上述硬件模块针对不同的处理情况，所执行的功能并不相同，比如，交换引擎模块对于不同的包（协议包、数据包等），所查的地址表就不一样，获得的包的导向信息就不一样；或如，CPU模块在收到包的情况下，可能是配地址表，也可能是解析包并生成一个应答包。因而，为使本领域技术人员更好地理解本发明，在本发明实施例中，主要从功能角度描述了本发明的节点服务器、接入交换机及接入网设备的入网系统所涉及的模块，然而实质上，这些功能模块与实际硬件模块是对应的。</p>
+    <p>[0291]	与现有技术相比，本发明具有以下优点：</p>
+    <p>[0292]	本发明通过主控服务器，在发起服务请求时（通信过程建立的协议交互过程中）， 针对服务请求的情况以针对各个接入交换机配表的方式，对本次服务数据的传输路径进行实现设置，在数据包的传输过程中，直接按照该传输路径进行传输即可，而无需采用现有IP 协议的解决方案，由每个数据包自行协商传输路由。总之，本发明可以保证传输通路的稳定和通畅，避免多媒体业务的延时。</p>
+    <p>[0293]	其次，本发明对所有数据业务（尤其是单播数据包）都采用配表的方式，事先设定路径，这样可以满足国家信息安全的需要。例如，对于国家信息安全而言，其需要对新型网络中的某些数据进行监控，而采用本发明配表的方式，可以非常容易的将本次业务所传输的数据导向监控通道，以保证国家信息安全的需求。</p>
+    <p>[0294]	再者，在本发明中，接入交换机不需要针对每个数据包进行路由的计算，也不需要维护其周围的网络设备拓扑，只要按照实现配置的数据包地址表进行导向传输即可，而该导向过程可以由硬件实现，可以大大提高交换机的导向效率，并可以大大降低交换机的运算需求，节约硬件资源。</p>
+    <p>附图说明</p>
+    <p>[0295]	图1是本发明的一种节点服务器的硬件结构示意图；</p>
+    <p>[0296]	图2是本发明的一种接入交换机的硬件结构示意图；</p>
+    <p>[0297]	图3是本发明的一种节点服务器、接入交换机、终端的连接示意图；</p>
+    <p>[0298]	图4是本发明的一种接入交换机入网过程的示意图：</p>
+    <p>[0299]	图5是本发明的一种节点服务器与接入交换机的连接示意图；[0300]	图6是本发明的一种终端入网过程的示意图。 具体实施方式</p>
+    <p>[0301]	为使本发明的上述目的、特征和优点能够更加明显易懂，下面结合附图和具体实施方式对本发明作进一步详细的说明。</p>
+    <p>[0302]	一、以下简单介绍本发明的核心构思：</p>
+    <p>[0303]	本专利发明人认为，本发明实现全网品质保证的充分条件有以下几点：</p>
+    <p>[0304]	第一，IP互联网核心理论中关于“尽力而为”（Best Efforts)的机制必然导致网络流量不均&#21243;和频繁的丢包。实际上，TCP协议正是利用网络丢包状态来调节发送流量。</p>
+    <p>[0305]	第二，IP互联网核心理论中关于“储存转发”（Store &amp; forward)的机制在吸收本地突发流量的同时，将造成下一个节点网络流量更大的不均&#21243;。</p>
+    <p>[0306]	第三，IP互联网核心理论中关于“检错重发”（Error Detection &amp; Retransmission)的机制在同步视频通讯中，将造成不可容忍的延时，因此没有实用价值。</p>
+    <p>[0307]	第四，连续性的网络流量不均&#21243;或突发流量必然导致周期性交换机（路由器）丢包。</p>
+    <p>[0308]	由此可见，由于电脑文件突发流量本质是离散性，没有后继，上述IP互联网核心理论曾经使互联网高效率传输文件。但是，面对连续性同步流媒体传输中的品质保证，昔日的功臣却成了破坏网络传输品质的元凶。我们已经从前面论述中得出结论，任何资源预留、 优先级别和轻载方案都不能从根本上解决同步流媒体的品质保证。</p>
+    <p>[0309]	既然前述方法无一可行，那么，解决网络传输品质保证的出路在哪里？</p>
+    <p>[0310]	本专利发明人认为，当前各种QoS方法，都建立在一种错误的假设上。根据这种假设，QoS的解决方法是为视讯流量提供优先处理的特权。但事实是，由于不同媒体形式所需的网络流量极度不&#21243;，只要有少数人使用视讯服务，网络上的视讯流量将占据绝对主体。</p>
+    <p>[0311]	如果换一角度看，专门为大部分网络流量提供好的品质，等效于专门为少部分非视讯流量提供差的品质。既然，大部分网络流量必须要求品质保证，那么，剩下少数不要求品质保证的业务流量也都给于品质保证何尝不可。假设1000位旅客订飞机票时都要求头等舱，只有少数几位可以接受经济舱，那么，航空公司的自然措施是取消经济舱。因为，为了满足极少数差异化的经济舱，航空公司所花的代价远大于给这些旅客提供免费升舱。实际上，网络传输品质完全不保证，或者完全有保证都很简单，难就难在部分保证和部分不保证，尤其还不知道这“部分”两字的界线划在哪里。因此，只要为全部网络业务都提供品质保证，QoS问题就不存在了。</p>
+    <p>[0312]	IP互联网初期好比是乡间小路，在民风淳朴的小镇不需要交通警察。但是到了繁华的大都市，有些热闹路段的红绿灯和交通警察都控制不了混乱局面，出行赴约难以确定时间，就像今天的IP互联网。</p>
+    <p>[0313]	本发明好比是高速公路，不需要警察和红绿灯，水泥隔开的车道和立交桥确保汽车在规定的道路行驶。根据加州交通局的经验，避免高速公路堵车的办法是关闭入口匝道。</p>
+    <p>[0314]	加州高速公路的设计思路有三个特点：</p>
+    <p>[0315]	&#183;在公路入口匝道设置开关，控制宏观车流量。</p>
+    <p>[0316]	&#183;保持车速稳定，提高道路通车率。[0317]	&#8226;采用水泥结构的道路分隔和立交桥，而不是警察和红绿灯来规范车辆行驶。</p>
+    <p>[0318]	本发明实施例遵循电话网的原理，采取类似上述高速公路的三项措施：</p>
+    <p>[0319]	&#183;每条通路都计算和实测流量，一旦流量接近饱和，采取绕道或拒绝新用户加入。</p>
+    <p>[0320]	&#183;严格均流发送，本发明实施例TV能够在90 %重载流量下，达到百万分之一的丢包率。</p>
+    <p>[0321]	&#183;上行数据匹配和流量控制，从结构上确保用户严格遵守交通规则，因为品质保证措施不可能指望用户自觉执行。</p>
+    <p>[0322]	电脑文件与流媒体是两种截然不同的媒体形式，处理方式相互排斥。本发明的网络理论和实践揭示了两项成果：</p>
+    <p>[0323]	&#183;本发明实施例百倍于IP互联网的性价比优势</p>
+    <p>[0324]	&#183;发展高品质对称电视不干扰现有IP互联网业务的实施方法</p>
+    <p>[0325]	尤其在大流量的骨干网络，电脑文件和流媒体通过不同波长合用一根光纤。如果一定要统一到单一网络，如接入网，那么应该是将电脑文件统一到视讯流媒体网络。本发明实施例提供了完整的透明承载IP互联网的解决方案。</p>
+    <p>[0326]	将流媒体与文件分开处理只是第一步，如何保证独立的流媒体网络品质？</p>
+    <p>[0327]	前面说过，PSTN电话网络采用严格的同步机制，当流量百分之百用满之前，不会出现网络阻塞现象。从理论上讲，多个均&#21243;流合并以后，还是均&#21243;流。实践进一步证明，在均&#21243;流的前提下，网络流量可以接近于极限值，而不发生丢包现象。由于占据未来网络流量中九成以上的视讯媒体流，本身具备均&#21243;流特征。因此，以视讯业务为主要目标的本发明互联网品质保证的途径自然是消除信源流量不均&#21243;，尤其在意从根本上防止重载条件下网络交换机的丢包现象。</p>
+    <p>[0328]	本发明实施例是用改良以太网建立面向连接的电路，全网统一采用定长度数据包。只要改变发包时间间隔，就可以得到任意带宽的媒体流。为了保证网络均流特征，本发明互联网要求终端设计必须具备均流能力。但是，在实际网络环境中，显然不可能寄希望于用户自觉遵守均流规定。因此，本发明实施例节点服务器向网络交换机发放通行证，只允许用户数据包在很细的时间精度下均&#21243;通过。对于符合规定要求设计的用户终端，通行证是完全透明的。</p>
+    <p>[0329]	在上述前提下，网络实践得出令人满意的结果，本发明的交换机能够在90%带宽利用率的条件下，获得优于百万分之一的重载丢包率。</p>
+    <p>[0330]	综上所述，品质保证是下一代网络不可回避的问题，流媒体网络是不同于传统电脑文件的另外一个物种。因此，修改IP互联网去适应视讯业务是没有前途的，创立新的网络是唯一的出路。</p>
+    <p>[0331]	二、以下对本发明提出的一种新型网进行介绍：</p>
+    <p>[0332]	新型网是一种集中控制的网络结构，该网络可以是树型网、星型网、环状网等等类型，但在此基础上网络中需要有集中控制节点来控制整个网络。</p>
+    <p>[0333]	新型网分为接入网和城域网两部分。接入网部分的设备主要可以分为3类：节点服务器，接入交换机，终端（包括各种机顶盒、编码板、存储器等）。其中，节点服务器是接入网中起集中控制功能的节点，可控制接入交换机和终端。节点服务器可直接与接入交换机相连，也可以直接与终端相连。类似的，城域网部分的设备也可以分为3类：城域服务器，节点交换机，节点服务器。其中，节点服务器即为接入网部分的节点服务器，即节点服务器既属于接入网部分，又属于城域网部分。城域服务器是城域网中起集中控制功能的节点，可控制节点交换机和节点服务器。城域服务器可直接连接节点交换机，也可直接连接节点服务器。由此可见，整个新型网络是一种分层集中控制的网络结构，而节点服务器和城域服务器下控制的网络可以是树型、星型、环状等各种结构。</p>
+    <p>[0334]	1、新型网设备分类</p>
+    <p>[0335]	1. 1本发明的新型网系统中的设备主要可以分为3类：服务器，交换机（包括以太网网关），终端（包括各种机顶盒，编码板，存储器等）。新型网整体上可以分为城域网（或者国家网、全球网等）和接入网。</p>
+    <p>[0336]	1.2其中接入网部分的设备主要可以分为3类：节点服务器，接入交换机（包括以太网网关），终端（包括各种机顶盒，编码板，存储器等）。</p>
+    <p>[0337]	各接入网设备的具体硬件结构为：</p>
+    <p>[0338]	节点服各器：</p>
+    <p>[0339]	如图1所示，主要包括网络接口模块101、交换引擎模块102、CPU模块103、磁盘阵列模块；</p>
+    <p>[0340]	其中，网络接口模块101，CPU模块103、磁盘阵列模块104进来的包均进入交换引擎模块102 ；交换引擎模块102对进来的包进行查地址表105的操作，从而获得包的导向信息；并根据包的导向信息把该包存入对应的包缓存器106的队列；如果包缓存器106的队列接近满，则丢弃；交换引擎模块102轮询所有包缓存器队列，如果满足以下条件进行转发：1)该端口发送缓存未满；幻该队列包计数器大于零。磁盘阵列模块104主要实现对硬盘的控制，包括对硬盘的初始化、读写等操作；CPU模块103主要负责与接入交换机、终端 (图中未示出）之间的协议处理，对地址表105(包括下行协议包地址表、上行协议包地址表、数据包地址表)的配置，以及，对磁盘阵列模块104的配置。</p>
+    <p>[0341]	接入交换机：</p>
+    <p>[0342]	如图2所示，主要包括网络接口模块（下行网络接口模块201、上行网络接口模块 202)、交换引擎模块203和CPU模块204 ；</p>
+    <p>[0343]	其中，下行网络接口模块201进来的包（上行数据）进入包检测模块205 ；包检测模块205检测包的目地地址（DA)、源地址（SA)、数据包类型及包长度是否符合要求，如果符合，则分配相应的流标识符（stream-id)，并进入交换引擎模块203，否则丢弃；上行网络接口模块202进来的包（下行数据）进入交换引擎模块203 ；CPU模块204进来的数据包进入交换引擎模块203 ；交换引擎模块203对进来的包进行查地址表206的操作，从而获得包的导向信息；如果进入交换引擎模块203的包是下行网络接口往上行网络接口去的，则结合流标识符（stream-id)把该包存入对应的包缓存器207的队列；如果该包缓存器207的队列接近满，则丢弃；如果进入交换引擎模块203的包不是下行网络接口往上行网络接口去的，则根据包的导向信息，把该数据包存入对应的包缓存器207的队列；如果该包缓存器 207的队列接近满，则丢弃。</p>
+    <p>[0344]	交换引擎模块203轮询所有包缓存器队列，在本发明实施例中分两种情形：</p>
+    <p>[0345]	如果该队列是下行网络接口往上行网络接口去的，则满足以下条件进行转发：1) 该端口发送缓存未满；幻该队列包计数器大于零；幻获得码率控制模块产生的令牌；[0346]	如果该队列不是下行网络接口往上行网络接口去的，则满足以下条件进行转发： 1)该端口发送缓存未满；幻该队列包计数器大于零。</p>
+    <p>[0347]	码率控制模块208是由CPU模块204来配置的，在可编程的间隔内对所有下行网络接口往上行网络接口去的包缓存器队列产生令牌，用以控制上行转发的码率。</p>
+    <p>[0348]	CPU模块204主要负责与节点服务器之间的协议处理，对地址表206的配置，以及， 对码率控制模块208的配置。</p>
+    <p>[0349]终端：</p>
+    <p>[0350]	主要包括网络接口模块、业务处理模块和CPU模块；例如，机顶盒主要包括网络接口模块、视音频编解码引擎模块、CPU模块；编码板主要包括网络接口模块、视音频编码引擎模块、CPU模块；存储器主要包括网络接口模块、CPU模块和磁盘阵列模块。</p>
+    <p>[0351]	1. 3城域网部分的设备主要可以分为2类：节点服务器，节点交换机，城域服务器。 其中，节点交换机主要包括网络接口模块、交换引擎模块和CPU模块；城域服务器主要包括网络接口模块、交换引擎模块和CPU模块构成。</p>
+    <p>[0352]	2、新型网数据包定义</p>
+    <p>[0353]	2. 1接入网数据包定义</p>
+    <p>[0354]	接入网的数据包主要包括以下几部分：目的地址（DA)、源地址（SA)、保留字节、 payload (PDU)、CRC。</p>
+    <p>[0355]	如下表所示，接入网的数据包主要包括以下几部分：</p>
+    <p>[0356]</p>
+    <p>DA	SA	Reserved	Payload	CRC</p>
+    <p>[0357]其中：</p>
+    <p>[0358]	目的地址（DA)由8个字节（byte)组成，第一个字节表示数据包的类型（例如各种协议包、组播数据包、单播数据包等），最多有256种可能，第二字节到第六字节为城域网地址，第七、第八字节为接入网地址；</p>
+    <p>[0359]	源地址（SA)也是由8个字节（byte)组成，定义与目的地址（DA)相同；</p>
+    <p>[0360]	保留字节由2个字节组成；</p>
+    <p>[0361]	payload部分根据不同的数据报的类型有不同的长度，如果是各种协议包的话是 64个字节，如果是单组播数据包话是32+10&#190;= 1056个字节，当然并不仅仅限于以上2种；</p>
+    <p>[0362]	CRC有4个字节组成，其计算方法遵循标准的以太网CRC算法。</p>
+    <p>[0363]	2. 2城域网数据包定义</p>
+    <p>[0364]	城域网的拓扑是图型，两个设备之间可能有2种、甚至2种以上的连接，即节点交换机和节点服务器、节点交换机和节点交换机、节点交换机和节点服务器之间都可能超过2 种连接。但是，城域网设备的城域网地址却是唯一的，为了精确描述城域网设备之间的连接关系，在本发明实施例中引入参数：标签，来唯一描述一个城域网设备。</p>
+    <p>[0365]	本说明书中标签的定义和MPLS(Multi_Protocol Label Switch，多协议标签交换)的标签的定义类似，假设设备A和设备B之间有两个连接，那么数据包从设备A到设备 B就有2个标签，数据包从设备B到设备A也有2个标签。标签分入标签、出标签，假设数据包进入设备A的标签（入标签）是0x0000，这个数据包离开设备A时的标签（出标签）CN  23/63页</p>
+    <p>可能就变成了 0x0001。城域网的入网流程是集中控制下的入网过程，也就意味着城域网的地址分配、标签分配都是由城域服务器主导的，节点交换机、节点服务器都是被动的执行而已，这一点与MPLS的标签分配是不同的，MPLS的标签分配是交换机、服务器互相协商的结</p>
+    <p>：^ ο</p>
+    <p>[0366]	如下表所示，城域网的数据包主要包括以下几部分：</p>
+    <p>[0367]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00371.png"> <img id="idf0001" file="CN102377633AD00371.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00371.png" class="patent-full-image" alt="Figure CN102377633AD00371"> </a> </div>
+    <p>[0368]即目的地址(DA)、源地址(SA)、保留字节(Reserved)、标签、payload	(PDU)、CRC0 其中，标签的格式可以参考如下定义：标签是32bit，其中高16bit保留，只用低16bit，它的位置是在数据包的保留字节和payload之间。</p>
+    <p>[0369]	3、新型网实现</p>
+    <p>[0370]	以下讨论节点服务器与接入交换机、节点服务器与终端的入网流程。为了简化设计，定义在接入网中的数据包类型为4种，分别是：</p>
+    <p>[0371]	下行协议包（由节点服务器发往接入交换机、终端的协议包）；</p>
+    <p>[0372]	上行协议包（由接入交换机、终端回应给节点服务器的协议包）；</p>
+    <p>[0373]	单播数据包；</p>
+    <p>[0374]	组播数据包；</p>
+    <p>[0375]	接入网的地址总共是16bit，所以总共可以接入的接入交换机、终端数为65536， 假设下行协议包的数据报类型为“ 10000000” ( 二进制），也就是0x80 (十六进制），上行协议包的数据报类型为“00001000” ( 二进制），也就是0x08 (十六进制），单播数据包的数据报类型为“00010000” ( 二进制），也就是0x10 (十六进制），组播数据包的数据报类型为 “01111000” ( 二进制），也就是0x78 (十六进制），通过合并同类项，可以把Sbit长的地址表映射为2bit长的地址表，例如</p>
+    <p>[0376]	“10000000” =&gt; “00”，下行协议包的地址表，在本发明实施例中定义为0号表</p>
+    <p>[0377]	“00001000” =&gt; “01”，上行协议包的地址表，在本发明实施例中定义为1号表</p>
+    <p>[0378]	“ 00010000 ” = &gt; “ 10 ”，单播数据包的地址表，在本发明实施例中定义为2号表</p>
+    <p>[0379]	“ 01111000 ” = &gt; ” 11 ”，组播数据包的地址表，在本发明实施例中定义为3号表</p>
+    <p>[0380]	结合16bit的接入网地址，在实际中只需4张64K = 4x65536,也就是256K的地址表，地址表的输出就表示数据包导向的端口。例如，其中的一种接入交换机BX-008，它具有1个上行的百兆网口，8个下行百兆网口，1个CPU模块接口。如果8个下行百兆网口依次定义为0号端口到7号端口，CPU模块接口定义为8号端口，1个上行的百兆网口定义为 9号端口，则总共需要256Kxl0bit的地址表，例如地址表的输出为“0000000001”表示数据包导向的0号端口，“ 1100000000，，表示数据包导向的8号、9号端口，以此类推。</p>
+    <p>[0381]	假设9号端口进来一个数据包它的目的地址（DA)是0x80560xl5000x00000x55aa， 那么它的数据包类型为0x80，接入网地址为0x55aa，根据查表规则这时查0号表，即地址为 “000101010110101010”，此地址对应的地址表的输出为“0100000000”，表示数据包导向8 号端口。</p>
+    <p>[0382]	3. 1接入网设备的通信连接流程：[0383]	3. 1. 1接入网设备执行单播通信服务的通信连接流程示例：</p>
+    <p>[0384]	如图3所示，假设一台节点服务器MSS-400 (接入网地址为0x0000)，它的0号端口接了一台接入交换机BX-008-0(接入网地址为0x0001)，它的1号端口接了一台接入交换机 BX-008-1 (接入网地址为0x0002)，BX-008-0的0号端口接了一台机顶盒STB-0 (接入网地址为0x0009)，BX_008-1的1号端口接了一台机顶盒STB-I (接入网地址为0x0012)。机顶盒STB_0向节点服务器MSS-400发出申请和机顶盒STB_1进行可视通信的单播通信服务， 步骤如下：</p>
+    <p>[0385]	Si、机顶盒STB_0发出服务请求协议包，包的DA(目的地址） 为 0x08000x00000x00000x0000 (艮口 MSS-400 的地址）、SA (源地址）为 0x00000x00000x00000x0009 ；在该包中，还可以包括 reserved 0x0000 (保留字)，PDU 部分</p>
+    <p>如下表所示：</p>
+    <p>[0386]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00381.png"> <img id="idf0002" file="CN102377633AD00381.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00381.png" class="patent-full-image" alt="Figure CN102377633AD00381"> </a> </div>
+    <p>[0387]	服务申请所涉及到的节目号码，广播频道号全放在服务参数中，例如：</p>
+    <p>[0388]	#define	SERVICE_TYPE_GTML_REQUEST 0x8000 申请一张菜单</p>
+    <p>[0389]	#define	SERVICE_TYPE_VOD_REQUEST 0x8001 申请点播节目</p>
+    <p>[0390]	#define	SERVICE_TYPE_CHANGE_MENU 0x8002 申请改变背景菜单</p>
+    <p>[0391]	#define	SERVICE_TYPE_BROADCAST_REQUEST 0x8003 申请收看广播</p>
+    <p>[0392]	#define	SERVICE_TYPE_CHANGE_CHANNEL 0x8004 申请频道切换</p>
+    <p>[0393]	#define	SERVICE_TYPE_TELEPHONE_DIRECT 0x8005 申请拨打可视电话</p>
+    <p>[0394]	#define	SERVICE_TYPE_PERMISSION 0x8006 是否允许接入的应答</p>
+    <p>[0395]	#define	SERVICE_TYPE_RECORD_REQUEST 0x8007 申请录制</p>
+    <p>[0396]	#define	SERVICE_TYPE_END_REQUEST 0x8008 申请结束当前服务</p>
+    <p>[0397]	#define	SERVICE_TYPE_ORG_CAST_REQUEST 0x8009 申请发起直播</p>
+    <p>[0398]	#define	SERVICE_TYPE_DDB_REQUEST 0x800b 申请收看延时电视</p>
+    <p>[0399]	#define	SERVICE_TYPE_SKIP 0x800c收看点播或延时电视的过程中快进快退暂停继续</p>
+    <p>[0400]	#define	SERVICE_TYPE_RECORD_END 0x800e 申请结束录制</p>
+    <p>[0401]	#define	SERVICE_TYPE_VIEff_Monitor_DIRECT 0x8024 申请收看监控</p>
+    <p>[0402]	#define	SERVICE_TYPE_RCV_CAST_DIRECT 0x8025 申请收看直播[0403]	#define SERVICE_TYPE_TELEPHONE_REQUEST 0 申请拨打可视电话</p>
+    <p>[0404]	#define SERVICE_TYPE_RCV_CAST_REQUEST Oxa 申请收看直播</p>
+    <p>[0405]	#define SERVICE_TYPE_VIEff_Monitor Oxc 申请收看监控</p>
+    <p>[0406]在本例中，服务参数为	SERVICE_TYPE_TELEPHONE_REQUEST 或 SERVICE_TYPE_ TELEPHONE_DIRECT。</p>
+    <p>[0407]	S2、根据连接在机顶盒STB_0与节点服务器MSS-400之间的接入交换机ΒΧ_008_0 中1号表的配置，该服务请求协议包被导向至节点服务器MSS-400，节点服务器MSS-400根据包的内容，判断收到可视通信的申请（服务类型），根据服务号码查CAM表（内容-地址映射表）知道被叫（目标终端）是STB_1，根据其内部的地址信息表，就知道了本次服务涉及的链路拓扑，判断出链路允许，双方可以进行通信。于是分别发送菜单协议包给主叫 (STB_0)和被叫（STB_1)，并等待被叫应答：</p>
+    <p>[0408]其中，发向	STB_0 的菜单协议包：DA 为 0x80000x00000x00000x0009、SA 为 0x00000x00000x00000x0000、reserved 0x0000、PDU 部分如下表所示：</p>
+    <p>[0409]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00391.png"> <img id="idf0003" file="CN102377633AD00391.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00391.png" class="patent-full-image" alt="Figure CN102377633AD00391"> </a> </div>
+    <p>[0410]发向	STB_1 的菜单协议包：DA 为 0x80000x00000x00000x0012、SA 为 0x00000x00000x00000x0000&gt; reserved 0x0000, PDU 部分如上表所示。</p>
+    <p>[0411]	S3、根据节点服务器MSS-400中0号表的配置，以及，接入交换机Βχ-008-0和 Bx-008-l中0号表的配置，这2个菜单协议包会分别导向至机顶盒STB_0和STB_1，被叫 STB_1发出申请SERVICE_TYPE_PERMISSION接STB_1受通信，并向节点服务器MSS-400发送应答协议包，该包的 DA 为 0x08000x00000x00000x0000、SA 0x00000x00000x00000x0012,reserved 0x0000，服务参数是 SERVICE_TYPE_PERMISSION，PDU 部分如下表所示： [0412]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00401.png"> <img id="idf0004" file="CN102377633AD00401.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00401.png" class="patent-full-image" alt="Figure CN102377633AD00401"> </a> </div>
+    <p>[0413]	S4、根据接入交换机BX-008-1中1号表的配置，所述应答协议包导向节点服务器 MSS-400，节点服务器MSS-400根据包的内容判断收到接受可视通信的申请，根据服务号码查CAM表知道被叫是STB_1，根据其内部的地址信息表，节点服务器MSS-400就知道了本次服务涉及的链路拓扑，判断出链路允许，双方可以进行通信。</p>
+    <p>[0414]	在这种情况下，节点服务器MSS-400配置自己的2号表如下：</p>
+    <p>[0415]	&#183; “100000000000010010 “= &gt;“00000000010”，即目的地址（DA)是 0x10000x00000x00000x0012 (即机顶盒BX-008-1)的单播数据包导向1号端口 ；</p>
+    <p>[0416]	&#183; “100000000000001001 “= &gt;“00000000001”，即目的地址（DA)是 0x10000x00000x00000x0009 (即机顶盒BX-008-0)的单播数据包导向0号端口 ；</p>
+    <p>[0417]	并且，节点服务器MSS-400给上行链路（主叫通路）和下行链路（被叫通路）上的所有接入交换机发送端口配置命令。要求同时开放对方地址的上行和自身地址的下行。</p>
+    <p>[0418]	发向接入交换机BX-008-0的两个包：</p>
+    <p>[0419]	1)第一个包的 DA 0x80000x00000x00000x0001、SA 0x00000x00000x00000x0000、 reserved 0x0000, PDU部分如下表所示：</p>
+    <p>[0420]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00411.png"> <img id="idf0005" file="CN102377633AD00411.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00411.png" class="patent-full-image" alt="Figure CN102377633AD00411"> </a> </div>
+    <p>[0421]	2)第二 个包的 DA 为 0x80000x00000x00000x0001、SA 为 0x00000x00000x00000x0000、reserved 0x0000，PDU 部分如下表所示：</p>
+    <p>[0422]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00412.png"> <img id="idf0006" file="CN102377633AD00412.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00412.png" class="patent-full-image" alt="Figure CN102377633AD00412"> </a> </div>
+    <p>[0423]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00421.png"> <img id="idf0007" file="CN102377633AD00421.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00421.png" class="patent-full-image" alt="Figure CN102377633AD00421"> </a> </div>
+    <p>[0424]	发向接入交换机BX-008-1的两个包：</p>
+    <p>[0425]	1)第一个包的 DA 为 0x80000x00000x00000x0002、SA 为 0x00000x00000x00000x0000、reserved 0x0000，PDU 部分如下表所示：</p>
+    <p>[0426]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00422.png"> <img id="idf0008" file="CN102377633AD00422.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00422.png" class="patent-full-image" alt="Figure CN102377633AD00422"> </a> </div>
+    <p>[0427]	2)第二 个包的 DA 为 0x80000x00000x00000x0002、SA 为 0x00000x00000x00000x0000、reserved 0x0000，PDU 部分如下表所示：</p>
+    <p>[0428]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00423.png"> <img id="idf0009" file="CN102377633AD00423.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00423.png" class="patent-full-image" alt="Figure CN102377633AD00423"> </a> </div>
+    <p>[0429]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00431.png"> <img id="idf0010" file="CN102377633AD00431.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00431.png" class="patent-full-image" alt="Figure CN102377633AD00431"> </a> </div>
+    <p>[0430]	发向机顶盒STB-O的包（服务处理命令，本例中为编解码命令）：</p>
+    <p>[0431]	包的 DA 0x80000x00000x00000x0009、SA 0x00000x00000x00000x0000、reserved 0x0000, PDU部分如下表所示：</p>
+    <p>[0432]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00432.png"> <img id="idf0011" file="CN102377633AD00432.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00432.png" class="patent-full-image" alt="Figure CN102377633AD00432"> </a> </div>
+    <p>[0433]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00441.png"> <img id="idf0012" file="CN102377633AD00441.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00441.png" class="patent-full-image" alt="Figure CN102377633AD00441"> </a> </div>
+    <p>[0434]	发向STB-I的包（服务处理命令，本例中为编解码命令）：</p>
+    <p>[0435]包的	DA 为 0x80000x00000x00000x0012、 SA 0x00000x00000x00000x0000、 reserved 0x0000, PDU部分如下表所示：</p>
+    <p>[0436]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00442.png"> <img id="idf0013" file="CN102377633AD00442.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00442.png" class="patent-full-image" alt="Figure CN102377633AD00442"> </a> </div>
+    <p>[0437]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00451.png"> <img id="idf0014" file="CN102377633AD00451.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00451.png" class="patent-full-image" alt="Figure CN102377633AD00451"> </a> </div>
+    <p>[0438]	上述编解码命令的PDU中，字段号13表示编码类型：0 =停止编码，Offff =维持原状，Oxfffe将解码的数据返回，不进行本地编码；字段号14表示解码类型：0 =停止解码，0ffff =维持原状；字段号15-18表示编码地址（DA或组播地址）=OxfTfT =维持原状； 字段号19-22表示解码地址（DA或组播地址）=OxfTfT =维持原状；字段号23表示：HB ：编码HDA，LB ：解码的HAD ；Oxffff =维持原状；字段号M表示响铃参数：0 =关闭响铃，1 = 开始响铃，Oxffff =维持原状；字段号25表示云台操作参数：0xffff =维持原状；字段号 26表示辅助信道操作参数=OxfTfT =维持原状。</p>
+    <p>[0439]	其中，编码类型如下表所示：</p>
+    <p>[0440]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00452.png"> <img id="idf0015" file="CN102377633AD00452.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00452.png" class="patent-full-image" alt="Figure CN102377633AD00452"> </a> </div>
+    <p>[0441]	S5、根据节点服务器MSS-400中0号表的配置，以及，接入交换机BX-008-0、 BX-008-1中0号表的配置，前面4个发给接入交换机的包会分别导向ΒΧ-008-0、ΒΧ-008-1。</p>
+    <p>[0442]	在这种情况下，接入交换机BX-008-0配置自己的2号表如下：</p>
+    <p>[0443]</p>
+    <p>100000000000010010 "= &gt;‘‘1000000000”，即目的地址（DA)是</p>
+    <p>0x10000x00000x00000x0012的单播数据包导向9号端口 ；</p>
+    <p>[0444]</p>
+    <p>100000000000001001 "= &gt;‘‘0000000001”，即目的地址（DA)是</p>
+    <p>0x10000x00000x00000x0009的单播数据包导向0号端口 ；</p>
+    <p>[0445]	接入交换机BX-008-1配置自己的2号表如下：</p>
+    <p>[0446]	&#183; “100000000000010010 “= &gt;“0000000010”， 0x10000x00000x00000x0012的单播数据包导向1号端口 ；</p>
+    <p>即目的地址（DA)是</p>
+    <p>[0447]</p>
+    <p>100000000000001001 "= &gt;‘‘1000000000”，即目的地址（DA)是</p>
+    <p>0x10000x00000x00000x0009的单播数据包导向9号端口 ；</p>
+    <p>[0448]	根据节点服务器MSS-400中0号表的配置，以及，接入交换机ΒΧ-008-0、ΒΧ-008_1 中0号表的配置，后面2个发向机顶盒的包会分别导向至机顶盒STB-0、STB-1。收到包后， 机顶盒STB-0、STB-I就可以根据包的内容开始编解码，并接收、发送单播数据。</p>
+    <p>[0449]	具体而言，在配置好当次服务的通信链路后，所述机顶盒STB-0、STB-I基于所述通信链路收发单播数据的过程为：</p>
+    <p>[0450]	1)机顶盒STB-O向机顶盒STB-I发送单播数据包，该包的DA是0x10000x00000x00000x0012 ；SA 是0x00000x00000x00000x0009 ；</p>
+    <p>[0451]	2)该单播数据包进入接入交换机BX-008-0，接入交换机BX-008-0的交换引擎模块根据组合地址域查2号表，表的地址是“ 100000000000010010”，该表项的输出是 “1000000000” ( “100000000000010010 “= &gt;“1000000000”，即目的地址(DA)是 0x10000x00000x00000x0012的单播数据包导向9号端口），表示打开上行9号端口，当前单播数据包通过该9号端口进入了节点服务器MSS-400 ；</p>
+    <p>[0452]	3)节点服务器MSS-400收到所述单播数据包后，其交换引擎根据组合地址域查2 号表,表的地址是“ 100000000000010010”,该表项的输出是“00000000010”(“ 100000000000 010010“ = &gt;“00000000010”，即目的地址(DA)是 0x10000x00000x00000x0012 的单播数据</p>
+    <p>包导向1号端口），表示打开下行1号端口，当前单播数据包通过该1号端口进入了接入交换机 BX-008-1 ；</p>
+    <p>[0453]	4)接入交换机BX-008-1收到所述单播数据包后，其交换引擎模块根据组合地址域查2号表，表的地址是“ 100000000000010010”，该表项的输出是“0000000010”(“ 1000000 00000010010" = &gt;“0000000010”，即目的地址(DA)是 0x10000x00000x00000x0012 的单播</p>
+    <p>数据包导向1号端口），表示打开下行1号端口，当前单播数据包通过该1号端口进入了机顶盒STB-I ；</p>
+    <p>[0454]	5)机顶盒STB-I向机顶盒STB-O发送单播数据包，该包的DA是 0x10000x00000x00000x0009 ；SA 是0x00000x00000x00000x0012 ；</p>
+    <p>[0455]	6)该单播数据包进入接入交换机BX-008-1，接入交换机BX-008-1的交换引擎模块根据组合地址域查2号表，表的地址是“ 100000000000001001，，，该表项的输出是 “1000000000” ( “100000000000001001 “= &gt;“1000000000”，即目的地址(DA)是 0x10000x00000x00000x0009的单播数据包导向9号端口 )，表示打开上行9号端口，当前单播数据包通过该9号端口进入了节点服务器MSS-400 ；</p>
+    <p>[0456]	7)节点服务器MSS-400收到所述单播数据包后，其交换引擎根据组合地址域查2 号表,表的地址是“ 100000000000001001”,该表项的输出是“00000000001”(“ 100000000000 001001“ = &gt;“00000000001”，即目的地址(DA)是 0x10000x00000x00000x0009 的单播数据</p>
+    <p>包导向0号端口），表示打开下行0号端口，当前单播数据包通过该0号端口进入了接入交换机 BX-008-0 ；</p>
+    <p>[0457]	8)接入交换机BX-008-0收到所述单播数据包后，其交换引擎模块根据组合地址域查2号表，表的地址是“ 100000000000001001”，该表项的输出是“0000000001”(“ 1000000 00000001001“ = &gt;“0000000001”，即目的地址(DA)是 0x10000x00000x00000x0009 的单播</p>
+    <p>数据包导向0号端口），表示打开下行0号端口，当前单播数据包通过该0号端口进入了机顶盒STB-O。</p>
+    <p>[0458]	应用上述过程进行单播服务通信的一种简单示例如下：</p>
+    <p>[0459]	假设STB-O向MSS-400服务器申请打可视电话给STB-1，在STB-0发向MSS-400 的服务申请包中含有所申请服务的类型（本例是可视电话，所以含有对方的号码，例如 888888888888)；</p>
+    <p>[0460]	MSS-400服务器收到服务申请包后，检查服务类型知道是可视电话，就跳入可视电话服务流程，根据对方的号码（888888888888)，MSS-400服务器通过CAM查找可以得到STB-I的接入网地址（因为在STB-I入网时，MSS-400服务器会更新CAM的内容，把地址为 0x0012更新为888888888888)，根据STB-0、STB-I的接入网地址，查地址信息表可以知道他们的拓扑信息，由0x0009知道STB-O连着BX-008-0的0号端口，而且上下行流量为0， 而链路流量为100Mbit/s，BX-008-0的接入网地址是0x0001，查地址信息表知BX-008-0连着MSS-400的0号端口，而且上下行流量为0，而链路流量为100Mbit/S，同理可知STB-I的链路的流量信息，而申请的可视电话的上下行带宽是2Mbit/s，满足要求，再检查其他信息如果满足，服务器将被叫机顶盒和主叫机顶盒之间的所有交换机的针对这2路单播数据的通路打开（包括对BX-008-0的0号端口、BX-008-1的1号端口的地址匹配及精确流量控制），修改查地址信息表的链路的流量信息，服务器发送编解码命令给双方机顶盒。</p>
+    <p>[0461]	3. 1. 2接入网设备执行组播通信服务的通信连接流程示例：</p>
+    <p>[0462]	如图3所示，假设一台节点服务器MSS-400 (接入网地址为0x0000)，它的0号端口接了一台接入交换机BX-008-0(接入网地址为0x0001)，它的1号端口接了一台接入交换机 BX-008-1 (接入网地址为0x0002)，BX-008-0的0号端口接了一台机顶盒STB-0 (接入网地址为 0x0009)，STB_0 的号码是 0x66660x66660x6666，BX_008-1 的 1 号端口接了一台机顶盒 STB-I (接入网地址为0x001》，STB_1的号码是0x88880x88880x8888。机顶盒STB_0向节点服务器MSS-400申请发起直播，步骤如下：</p>
+    <p>[0463]	Si、机顶盒STB_0发出发起直播的服务请求协议包，包的DA是 0x08000x00000x00000x0000、SA 是 0x00000x00000x00000x0009、reserved 0x0000 (保留</p>
+    <p>字），PDU部分如下表所示：</p>
+    <p>[0464]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00471.png"> <img id="idf0016" file="CN102377633AD00471.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00471.png" class="patent-full-image" alt="Figure CN102377633AD00471"> </a> </div>
+    <p>[0465] S2、根据连接在机顶盒STB_0与节点服务器MSS-400之间的接入交换机BX-008-0 中1号表的配置，该服务请求协议包被导向节点服务器MSS-400，节点服务器MSS-400根据包的内容，判断收到发起直播的申请（服务类型），根据服务号码查CAM表（内容-地址映射表）知道用户（源终端）是STB_0，根据其内部的地址信息表，就知道了本次服务涉及的链路拓扑，判断出链路允许，可以进行发起直播，于是分配组播地址为0x0008。并且，节点服务器给当前通信链路上的所有接入交换机发送端口配置命令，要求同时开放对方地址的上行和自身地址的下行。此时，通过链路拓扑判断，获知当前只需配置接入交换机BX-008-0。</p>
+    <p>[0466]	在这种情况下，节点服务器MSS-400向接入交换机BX-008-0发包：</p>
+    <p>[0467]包的	DA 为 0x80000x00000x00000x0001、SA 为 0x00000x00000x00000x0000、 reserved 0x0000 (保留字)，PDU部分如下表所示：</p>
+    <p>[0468]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00481.png"> <img id="idf0017" file="CN102377633AD00481.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00481.png" class="patent-full-image" alt="Figure CN102377633AD00481"> </a> </div>
+    <p>[0469]</p>
+    <p>[0470]	节点服务器MSS-400向机顶盒STB-0发包（服务处理命令，本例为编解码命令）：</p>
+    <p>[0471]包的	DA 为 0x80000x00000x00000x0009， SA 为 0x00000x00000x00000x0000、 reserved 0x0000, PDU部分如下表所示：</p>
+    <p>[0472]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00491.png"> <img id="idf0018" file="CN102377633AD00491.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00491.png" class="patent-full-image" alt="Figure CN102377633AD00491"> </a> </div>
+    <p>[0473]</p>
+    <p>[0474]	S3、根据节点服务器MSS-400中0号表的配置，发向接入交换机BX-008-0的包会导向至BX-008-0。在这种情况下，BX-008-0配置自己的3号表如下：</p>
+    <p>[0475]	&#183; “110000000000001000 “= &gt;“0000000001”，即目的地址（DA)是 0x78000x00000x00000x0008的组播数据包导向0号端口 ；</p>
+    <p>[0476]	S4、根据节点服务器MSS-400中0号表的配置，以及，接入交换机BX-008-0中0号表的配置，发向机顶盒STB-O的包会导向至STB-0。STB-O根据包的内容开始编解码，并开始接收、发送组播数据。</p>
+    <p>[0477]	具体而言，所述机顶盒STB-O基于当前的直播发起通信链路收发组播数据的过程为：</p>
+    <p>[0478]	1)机顶盒STB-O发出组播数据包，该包的DA是0x78000x00000x00000x0008 (组播地址）；SA 是 0x00000x00000x00000x0009 ；</p>
+    <p>[0479]	幻所述组播数据包进入接入交换机BX-008-0，接入交换机BX-008-0的交换引擎模块根据组合地址域查3号表，表的地址是“ 110000000000001000 ”，该表项的输出是“0000000001” ( “110000000000001000 “= &gt;“0000000001”，即目的地址(DA)是 0x78000x00000x00000x0008的组播数据包导向0号端口 )，表示打开下行0号端口，当前组</p>
+    <p>播数据包通过该O号端口进入了机顶盒STB-0。</p>
+    <p>[0480]	机顶盒STB_1向节点服务器MSS-400申请收看直播，号码是0x66660x66660x6666， 步骤如下：</p>
+    <p>[0481]	Si、机顶盒STB_1发出收看直播的服务请求协议包，包的DA是 0x08000x00000x00000x0000, SA 是 0x00000x00000x00000x0012、reserved 0x0000, PDU 部</p>
+    <p>分如下表所示：</p>
+    <p>[0482]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00501.png"> <img id="idf0019" file="CN102377633AD00501.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00501.png" class="patent-full-image" alt="Figure CN102377633AD00501"> </a> </div>
+    <p>[0483]	S2、根据连接在机顶盒STB_1与节点服务器MSS-400之间的接入交换机BX-008-1 中1号表的配置，该服务请求协议包被导向节点服务器MSS-400，节点服务器MSS-400根据包的内容，判断收到收看直播的申请，根据服务号码查CAM表知道发起者（源终端）是 STB_0，根据其内部的地址信息表，就知道了本次服务涉及的链路拓扑，判断出链路允许，可以进行收看直播，于是分配组播地址（对应分配给源终端的组播地址）是0x0008。并且，节点服务器给当前通信链路上的所有接入交换机发送端口配置命令，要求同时开放对方地址的上行和自身地址的下行。在这种情况下，节点服务器MSS-400配置自己的3号表如下：</p>
+    <p>[0484]	&#183; “110000000000001000 “= &gt;“00000000010”，即目的地址（DA)是 0x78000x00000x00000x0008的组播数据包导向1号端口 ；</p>
+    <p>[0485]	同时，节点服务器MSS-400向接入交换机BX-008-0发包：</p>
+    <p>[0486]包的	DA 为 0x80000x00000x00000x0001、SA 为 0x00000x00000x00000x0000、 reserved 0x0000, PDU部分如下表所示：</p>
+    <p>[0487]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00511.png"> <img id="idf0020" file="CN102377633AD00511.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00511.png" class="patent-full-image" alt="Figure CN102377633AD00511"> </a> </div>
+    <p>[0488]	同时，节点服务器MSS-400向接入交换机BX-008-1发包：</p>
+    <p>[0489]包的	DA 为 0x80000x00000x00000x0002、SA 为 0x00000x00000x00000x0000、 reserved 0x0000, PDU部分如下表所示：</p>
+    <p>[0490]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00512.png"> <img id="idf0021" file="CN102377633AD00512.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00512.png" class="patent-full-image" alt="Figure CN102377633AD00512"> </a> </div>
+    <p>[0491]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00521.png"> <img id="idf0022" file="CN102377633AD00521.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00521.png" class="patent-full-image" alt="Figure CN102377633AD00521"> </a> </div>
+    <p>[0492]	同时，节点服务器MSS-400向机顶盒STB-1发包：</p>
+    <p>[0493]包的	DA 为 0x80000x00000x00000x0012、SA 为 0x00000x00000x00000x0000、 reserved 0x0000, PDU部分如下表所示：</p>
+    <p>[0494]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00522.png"> <img id="idf0023" file="CN102377633AD00522.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00522.png" class="patent-full-image" alt="Figure CN102377633AD00522"> </a> </div>
+    <p>[0495]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00531.png"> <img id="idf0024" file="CN102377633AD00531.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00531.png" class="patent-full-image" alt="Figure CN102377633AD00531"> </a> </div>
+    <p>[0496]	S3、根据节点服务器MSS-400中0号表的配置，发向接入交换机BX-008-0、 BX-008-1会分别导向至接入交换机BX-008-0和BX-008-1。</p>
+    <p>[0497]	在这种情况下，接入交换机BX-008-0配置自己的3号表如下：</p>
+    <p>[0498]	&#183; “110000000000001000 “= &gt;“1000000001”，即目的地址（DA)是 0x78000x00000x00000x0008的组播数据包导向0号、9号端口 ；</p>
+    <p>[0499]	接入交换机BX-008-1配置自己的3号表如下：</p>
+    <p>[0500]	&#183; “110000000000001000 “= &gt;“0000000010”，即目的地址（DA)是 0x78000x00000x00000x0008的组播数据包导向1号端口 ；</p>
+    <p>[0501]	S4、根据节点服务器MSS-400中0号表的配置，以及，接入交换机BX-008-1中0号表的配置，发向机顶盒STB-I的包会导向至STB-1。STB-I根据包的内容接收组播数据、解码。</p>
+    <p>[0502]	具体而言，所述机顶盒STB-I基于当前的收看直播的通信链路接收组播数据的过程为：</p>
+    <p>[0503]	1)机顶盒STB-O发出组播数据包，该包的DA是0x78000x00000x00000x0008 (组播地址)；SA 是 0x00000x00000x00000x0009 ；</p>
+    <p>[0504]	幻所述组播数据包进入接入交换机BX-008-0，接入交换机BX-008-0的交换引擎模块根据组合地址域查3号表，表的地址是“ 110000000000001000，，，该表项的输出是“1000000001” ( “110000000000001000 “= &gt;“1000000001”，即目的地址(DA)是 0x78000x00000x00000x0008的组播数据包导向0号、9号端口 )；表示打开下行0号端口和</p>
+    <p>上行9号端口，当前组播数据包通过该0号端口进入了机顶盒STB-O ；通过该9号端口进入了节点服务器MSS-400 ；</p>
+    <p>[0505]	3)节点服务器MSS-400收到该组播数据包后，其交换引擎模块根据组合地址域查 3 号表，表的地址是“ 110000000000001000 ”，该表项的输出是“00000000010 ” (“ 1100000000 00001000“ = &gt;“00000000010”，即目的地址（DA)是 0x78000x00000x00000x0008 的组播数</p>
+    <p>据包导向1号端口），表示打开下行1号端口，当前组播数据包通过该1号端口进入了接入交换机BX-008-1 ；</p>
+    <p>[0506]	4)接入交换机BX-008-1收到该组播数据包后，其交换引擎模块根据组合地址域查 3 号表，表的地址是“ 110000000000001000 ”，该表项的输出是“0000000010 ” (“ 110000000 000001000“ = &gt;“0000000010”，即目的地址（DA)是 0x78000x00000x00000x0008 的组播数</p>
+    <p>据包导向1号端口），表示打开下行1号端口，当前组播数据包通过该1号端口进入了机顶盒 STB-I。</p>
+    <p>[0507]	当然，上述的单播服务通信过程和组播服务通信过程仅仅用作示例。在实际中，应用本发明实施例执行任一种单播服务通信或组播服务通信均是可行的。[0508]	为使本领域技术人员更好地理解本发明，以下提供几种应用本发明实施例进行服务通信的示例：</p>
+    <p>[0509]	3. 1.3接入网的服务流程示例：</p>
+    <p>[0510]	3. 1. 3. 1广播交互流程：</p>
+    <p>[0511]	广播流程中的涉及终端设备有2种：编码板（广播源），机顶盒（收看广播的一方）。</p>
+    <p>[0512]	当编码板通过网管流程入网之后，节点服务器会发送命令让编码板开始编码。每个编码板编一路广播数据。</p>
+    <p>[0513]	开始收看：</p>
+    <p>[0514]	进入广播流程后，首先是机顶盒发出申请命令，节点服务器收到机顶盒的申请命令后就知道机顶盒要看广播，并且知道了机顶盒要看哪一路广播。这时候节点服务器找到编码板和机顶盒之间的路径。向路径上的所有交换机发命令，将编码板和机顶盒之间的的所有交换机的针对这路广播数据的通路打开，同时发送解码命令给机顶盒。机顶盒就可以收看到广播了。</p>
+    <p>[0515]	停止收看：</p>
+    <p>[0516]	机顶盒发出停止命令，节点服务器收到机顶盒的停止命令后找到编码板和机顶盒之间的路径，将编码板和机顶盒之间的的所有交换机的针对这路广播数据的通路有针对性的关闭（有可能路径上的交换机还有其他机顶盒在收看本广播，所以不能直接全部关闭）， 同时发送停止解码的命令给机顶盒，发送上一页菜单，让机顶盒返回到菜单。</p>
+    <p>[0517]	注意：机顶盒收到的广播数据和编码板发出的广播数据是一模一样的。</p>
+    <p>[0518]	3. 1. 3. 2点播交互流程</p>
+    <p>[0519]	点播流程中的涉及终端设备有2种：存储器（节目源），机顶盒（收看点播的一方）。</p>
+    <p>[0520]	开始收看：</p>
+    <p>[0521]	进入点播流程，首先是机顶盒发出申请命令，命令中给出点播的节目号。节点服务器收到机顶盒的申请命令后就知道机顶盒要看点播，并且知道了机顶盒要看哪一个节目。 在节点服务器的内部信息表中可以查出本节目是放在哪个存储器上面的</p>
+    <p>[0522]	因为机顶盒入网之后，地址就固定了，收看点播的数据是单播数据，数据地址就是机顶盒的地址。</p>
+    <p>[0523]	节点服务器发送读盘命令给存储器（命令中有节目号和单播数据地址），命令存储器发送单播数据。存储器查到本存储器上确实有该节目，就开始发送节目，同时发读盘命令应答给节点服务器，表示存储器已经开始发送节目了。</p>
+    <p>[0524]	节点服务器收到存储器的应答后，要找到存储器和机顶盒之间的路径，将存储器和机顶盒之间的的所有交换机的针对这路单播数据的通路打开，同时发送解码命令给机顶盒。机顶盒就可以收看到点播了。</p>
+    <p>[0525]	停止收看：</p>
+    <p>[0526]	机顶盒发出停止命令，节点服务器收到机顶盒的停止命令后发送停止读盘命令给存储器，命令存储器停止发送单播数据。存储器停止发送，同时发停止读盘命令应答给节点服务器，表示存储器已经停止发送节目了。[0527]	节点服务器收到后找到存储器和机顶盒之间的路径，将存储器和机顶盒之间的的所有交换机的针对这路单播数据的通路关闭，同时发送停止解码的命令给机顶盒，发送上一页菜单，让机顶盒返回到菜单。</p>
+    <p>[0528]	3. 1.3.3可视通信交互流程</p>
+    <p>[0529]	开始可视通信：</p>
+    <p>[0530]	主叫机顶盒发出申请命令，命令中有被叫机顶盒的号码。</p>
+    <p>[0531]	节点服务器收到机顶盒的申请命令后先去查询被叫机顶盒是否入网，未入网则告知主叫机顶盒申请失败。</p>
+    <p>[0532]	若是被叫机顶盒已入网则查询被叫机顶盒是否空闲，若是不空闲告知主叫机顶盒申请失败。</p>
+    <p>[0533]	若是被叫机顶盒已入网并且处于空闲状态，节点服务器发送呼叫菜单给被叫机顶盒，等待被叫机顶盒应答。被叫机顶盒可以选择接受或者拒接，应答发送给节点服务器。</p>
+    <p>[0534]	节点服务器收到被叫机顶盒的应答。如果是拒接，告知主叫机顶盒申请失败。</p>
+    <p>[0535]	如果是接受，节点服务器发送编解码命令给双方机顶盒。可视通信要求，双方机顶盒要同时编解码。数据是单播数据，编码地址是对方地址，解码地址是自己的地址</p>
+    <p>[0536]	节点服务器将被叫机顶盒和主叫机顶盒之间的的所有交换机的针对这2路单播数据的通路打开。</p>
+    <p>[0537]	停止可视通信</p>
+    <p>[0538]	被叫机顶盒和主叫机顶盒都可以提出停止申请。节点服务器收到机顶盒的停止命令后将被叫机顶盒和主叫机顶盒之间的的所有交换机的针对这2路单播数据的通路关闭。 然后给被叫机顶盒和主叫机顶盒分别发送停止编解码的命令，发送上一页菜单，让机顶盒返回到菜单。</p>
+    <p>[0539]	3. 1.3.4现场直播交互流程</p>
+    <p>[0540]	发起直播</p>
+    <p>[0541]	直播的数据也是一路广播数据</p>
+    <p>[0542]	机顶盒发出申请命令，节点服务器收到申请后自动分配一路广播数据，向机顶盒发编解码命令，同时命令本机顶盒的上层交换机打开这路广播数据的通路。机顶盒就可以收看到自己发起的广播了。发起方同时也是收看方。</p>
+    <p>[0543]	收看直播</p>
+    <p>[0544]	收看机顶盒发出申请命令，命令中包含发起直播方的号码。节点服务器收到申请后先查询发起直播方是否已入网，是否已发起直播。条件不满足，告知收看机顶盒收看失败。</p>
+    <p>[0545]	如果条件满足，节点服务器要找到发起直播方和收看机顶盒之间的路径，将发起直播方和收看机顶盒之间的的所有交换机的针对这路广播数据的通路打开，同时发送解码命令给收看机顶盒。机顶盒就可以收看到直播了。</p>
+    <p>[0546]	停止收看直播</p>
+    <p>[0547]	收看机顶盒发出停止命令，节点服务器收到收看机顶盒的停止命令后找到发起直播方和收看机顶盒之间的路径，将发起直播方和收看机顶盒之间的的所有交换机的针对这路广播数据的通路有针对性的关闭（有可能路径上的交换机还有其他机顶盒在收看本直播，所以不能直接全部关闭)，同时发送停止解码的命令给收看机顶盒，发送上一页菜单，让收看机顶盒返回到菜单</p>
+    <p>[0548]	停止发起直播</p>
+    <p>[0549]	发起直播方发出停止命令。节点服务器收到后先查询有多少用户在收看本直播， 将所有的收看直播的用户按照停止收看的流程结束后，向发起直播方发停止编解码命令， 同时命令本机顶盒的上层交换机关闭这路广播数据的通路。</p>
+    <p>[0550]	3. 1. 3. 5除上述示例外，本发明实施例还可以实现以下服务通信应用：</p>
+    <p>[0551]	一、可控广播：</p>
+    <p>[0552]	1)广播和限量广播：（组播业务)</p>
+    <p>[0553]	节点服务器，维护广播操作表。</p>
+    <p>[0554]	广播源：实时模拟编码器、实时数字转换器、储存节目。</p>
+    <p>[0555]	节点服务器，限量广播观众计数器，超过设定值后拒绝新增观众。</p>
+    <p>[0556]	节点服务器，限量广播用户群审核。</p>
+    <p>[0557]	用户终端进入收看后，根据HLP键显示OSD菜单，可将广播内容存入个人邮箱。</p>
+    <p>[0558]	可控广播：可有选择地只向一部分用户提供服务（如收费台）。</p>
+    <p>[0559]	可控广播：可随时统计收视率（甚至观众分类收视率）。</p>
+    <p>[0560]	限量广播：能将上千个广播频道，根据不同限量值，设置很宽的价格范围，大量租给商业客户（广告、教育等）。</p>
+    <p>[0561]	2)投票反馈（可按次计费）：</p>
+    <p>[0562]	媒体中心MPC，编辑及记录OSD内容。</p>
+    <p>[0563]	节点服务器，定期发送与广播远源相同地址（DA)的OSD内容。</p>
+    <p>[0564]	用户机顶盒，根据HLP键显示OSD内容，转发遥控器反馈值。</p>
+    <p>[0565]	用户代理服务器，接收用户反馈，用户信息表记录（组播DA、节目时间码、评分和票数）。</p>
+    <p>[0566]	用户代理服务器，每秒搜索用户信息表，将用户投票结果发送到节点服务器。</p>
+    <p>[0567]	观众反馈信息：总参评人次、每个目标点的分别投票数和观众评级（YES/N0或5分制）。广播频道的投票反馈：可用于指定问卷民意调查、未来明星海选等。</p>
+    <p>[0568]	二、VOD，MOD ：(单播业务)</p>
+    <p>[0569]	3) VOD过程操作：</p>
+    <p>[0570]	节点服务器，编辑及记录点播确认内容，包括（节目信息、价格信息、观众反馈信</p>
+    <p>[0571]	节点服务器，收到用户申请后，发送点播确认菜单和OSD内容。</p>
+    <p>[0572]	用户机顶盒，根据HLP键显示OSD内容（节目播放位置、评级提示），转发遥控器反馈值。</p>
+    <p>[0573]	用户代理服务器，记录用户信息表，点播结束后时，将用户评级结果发送到节点服务器。</p>
+    <p>[0574]	用户机顶盒，播放操作（暂停/播放、连续快/退、15分钟进/退）</p>
+    <p>[0575]	观众反馈信息：总点击数、观众评级（5分制）。</p>
+    <p>[0576]	VOD服务：内容可以是大众媒体、或者小众媒体（TV部落格、专业教育和产品操作</p>
+    <p>5维护等）。</p>
+    <p>[0577]	4)卡拉 OK ：</p>
+    <p>[0578]	与VOD相同，音频采用独立双声道。</p>
+    <p>[0579]	5)电视杂志（MOD)：</p>
+    <p>[0580]	节点服务器，在VOD基础上，增加有声文字点播和有声图片点播。</p>
+    <p>[0581]	节点服务器，将多个媒体内容按序排列或挑选。</p>
+    <p>[0582]	6)互动多媒体网站：</p>
+    <p>[0583]	用户代理器，在电视杂志的基础上配备面向公众的邮箱，接受读者图、文、音反馈。</p>
+    <p>[0584]	互动多媒体网站：可以作为企业和政府面向公众的窗口（电子政务）。</p>
+    <p>[0585]	三、TVOD (可控广播+V0D)：(组播+单播业务）</p>
+    <p>[0586]	7)集中监控：</p>
+    <p>[0587]	媒体中心或用户代理服务器MPC，编辑及维护监控操作表，可选择定时开关录像。</p>
+    <p>[0588]	用户终端进入收看后，根据HLP键显示OSD菜单，可将监控内容存入个人邮箱。</p>
+    <p>[0589]	集中监控：适合大规模远程监控，可通过用户群分隔，向许多公司同时提供保安服务。</p>
+    <p>[0590]	8)电视回放(网络TiVo)：</p>
+    <p>[0591]	用户代理服务储存器，可储存数十频道，3-7天全部内容。</p>
+    <p>[0592]	用户终端进入收看后，根据HLP键显示OSD菜单，可将节目内容存入个人邮箱。</p>
+    <p>[0593]	电视回放：用户采用VOD方式看电视，随时选看从7天前至当前的任何节目内容。</p>
+    <p>[0594]	9)节目精选：</p>
+    <p>[0595]	媒体中心MPC，编辑及维护广播节目精选表，定时分类节目自动录像。</p>
+    <p>[0596]	用户代理服务储存器，可储存数十个精彩栏目，60天全部内容。</p>
+    <p>[0597]	用户终端进入收看后，根据HLP键显示OSD菜单，可将节目内容存入个人邮箱。</p>
+    <p>[0598]	节目精选：自动将电视台节目分类储存，编辑成菜单形式，方便消费者观看。</p>
+    <p>[0599]	四、现场直播：(组播业务)</p>
+    <p>[0600]	1)简单直播：</p>
+    <p>[0601]	用户代理服务器，与限量广播相同。</p>
+    <p>[0602]	用户代理服务器，在直播终端控制下，直播内容可录像。</p>
+    <p>[0603]	现场直播：观众可达全网，广播源设在用户现场。</p>
+    <p>[0604]	2)视频聊天，网上教室，市民热线：</p>
+    <p>[0605]	参与方终端进入聊天室后，根据HLP键显示OSD内容，可申请视频上传，向主持送花。</p>
+    <p>[0606]	主持方用户代理服务器，记录用户申请，并向直播终端发送OSD提示。</p>
+    <p>[0607]	直播方终端，可能显示多条视频上传申请0SD，遥控器选择一路上传，并自动关闭上一路。</p>
+    <p>[0608]	用户代理服务器，在关闭视频上传时，向计费流水帐发送特别计费包。</p>
+    <p>[0609]	用户代理服务器，记录该用户送花值，通知直播方，并向计费流水帐发送特别计费包。</p>
+    <p>[0610]	用户进入聊天室，送花，参与音频，开通视频对话所付费用，自动安比例存入个人[0611]	视频聊天：主持人在家（现场）播出影像可达全网，主持人可看到观众申请，听到许多观众声音，但只能选择地看到1路观众影像。</p>
+    <p>[0612]	观众通过节目表得知聊天室拨号加入，可向主持人鲜花（额外收费），可申请通话或视频。</p>
+    <p>[0613]	3)购物频道：</p>
+    <p>[0614]	直播终端或相连的MPC，维护购物信息（商品和客户)。</p>
+    <p>[0615]	用户终端进入购物频道后，根据HLP键显示OSD订单（商品、规格、数量、价格）。</p>
+    <p>[0616]	用户终端通过遥控器填写并提交订单。</p>
+    <p>[0617]	用户代理服务器，收看订单后转发至直播方终端或相连的MPC。</p>
+    <p>[0618]	直播方终端或MPC，审核订单，并向用户发回确认的订单。</p>
+    <p>[0619]	用户终端再次显示订单，并通过遥控器确认。</p>
+    <p>[0620]	用户代理服务器，向直播方发送用户确认，并向计费流水帐发送特别计费包。</p>
+    <p>[0621]	用户终端进入收看后，根据HLP键显示OSD菜单，可将购物内容存入个人邮箱。</p>
+    <p>[0622]	MPC为装载特殊软件的PC机，增强TV机顶盒的操作性能。</p>
+    <p>[0623]	4)拍卖频道：</p>
+    <p>[0624]	直播终端或MPC，维护拍卖信息（商品和客户）。</p>
+    <p>[0625]	用户终端进入拍卖频道后，根据HLP键显示OSD介绍（商品、规格、最高价格）。</p>
+    <p>[0626]	用户终端通过遥控器填写并提交出价。</p>
+    <p>[0627]	用户代理服务器，收到出价后转发至直播方终端或MPC。</p>
+    <p>[0628]	直播方终端或相连的MPC，审核用户出价，并向用户发回确认后的出价。</p>
+    <p>[0629]	用户终端再次显示出价，并通过遥控器确认。</p>
+    <p>[0630]	用户代理服务器，向直播方发送用户确认，并向计费流水帐发送特别计费包。</p>
+    <p>[0631]	用户终端进入收看后，根据HLP键显示OSD菜单，可将拍卖内容存入个人邮箱。</p>
+    <p>[0632]	MPC为装载特殊软件的PC机，直接与终端连接，增强TV机顶盒的操作性能。</p>
+    <p>[0633]	5)视频呼叫中心：</p>
+    <p>[0634]	直播方终端或相连的MPC，将多路视频聊天捆绑到一个号码（或名称），共享资源。</p>
+    <p>[0635]	视频呼叫中心：可与购物频道或拍卖频道直接链接，提供后续服务。</p>
+    <p>[0636]	五、会议（多路现场直播捆绑）：（组播业务）</p>
+    <p>[0637]	会议发起方终端或相连的MPC，编辑和维护会议操作表，实现多路进程捆绑。</p>
+    <p>[0638]	1)大会发言：</p>
+    <p>[0639]	发起方终端直接控制指定参与方的终端，并关闭参与方的遥控操作，强制被动参石。</p>
+    <p>[0640]	强制实现发起方发言，参与收看。</p>
+    <p>[0641]	发起方终端可在参与方不知情的前提下，收看任一参与方，或者指定其发言。</p>
+    <p>[0642]	大会发言：适合上级领导报告，工程事件指挥，企业总部与远程分支间的例行调度会议。</p>
+    <p>[0643]	2)课堂教学：</p>
+    <p>[0644]	任意参与方终端，可向发起方终端提出发言申请，获得发起方批准后，即可发言。[0645]	课堂教学：实现会议聊天室，与直播聊天室的差别是直播观众永远看支持人，会议聊天观众看发言方，或者通过多屏终端同时看支持人和发言方。</p>
+    <p>[0646]	3)圆桌讨论：</p>
+    <p>[0647]	任意参与方终端，按单个ENTER键，即可打断别人而争抢发言（至少10秒不被打断）。</p>
+    <p>[0648]	圆桌讨论：实现会议聊天室，与直播聊天室的差别是直播观众永远看支持人，会议聊天观众看发言方，或者通过多屏终端同时看支持人和发言方。</p>
+    <p>[0649]	4)多屏会议：</p>
+    <p>[0650]	用户代理服务器，可插入VOD。</p>
+    <p>[0651]	必须使用PBOX终端，可同时显示发起方（主席)、发言方、本地会场、VOD或PC屏</p>
+    <p>眷ο</p>
+    <p>[0652]	可选择大会发言，课堂教学，圆桌讨论等会议模式。</p>
+    <p>[0653]	5)电视墙：</p>
+    <p>[0654]	可同时显示发起方（主席）、发言方、多分路会场、VOD或PC屏幕。</p>
+    <p>[0655]	可选择大会发言，课堂教学，圆桌讨论等会议模式。</p>
+    <p>[0656]	六、电视电话：（单播业务）</p>
+    <p>[0657]	6)普通可视电话：</p>
+    <p>[0658]	用户代理服务器，维护电话号码簿，支持普通拨号和强制拨号。</p>
+    <p>[0659]	用户终端进入通话后，根据HLP键显示OSD菜单，可将通信内容存入邮箱，可选择或调整对方摄像头角度。</p>
+    <p>[0660]	7)被叫方付费可视电话（Video 800)：</p>
+    <p>[0661]	此类号码以800开头，用户免费，其他与普通可视电话相同。</p>
+    <p>[0662]	被叫方付费可视电话：适用于广告、客户服务、公益服务等。</p>
+    <p>[0663]	8)视讯服务电话(Video 900)：</p>
+    <p>[0664]	此类号码以900开头，主叫方为普通用户终端，服务费中除了通信费外，还包含较高的内容费（按秒计），其他与普通可视电话相同。</p>
+    <p>[0665]	被叫方为内容提供商（内容包括实时通讯、V0D、电视杂志）。</p>
+    <p>[0666]	9)家庭监控：</p>
+    <p>[0667]	用户代理服务器，单向通信，只要视频发送资源不冲突，可与其他服务同时进行。</p>
+    <p>[0668]	用户终端拨号进入监控后，根据HLP键显示OSD菜单，可将监控内容存入邮箱，可选择多路摄像头或调整对方摄像头角度。</p>
+    <p>[0669]	被监控终端，可设定监控权限（指定一组可监控号码，开放所有号码，或禁止所有号码）。</p>
+    <p>[0670]	家庭监控：适用于家庭、小商店、银行分理所等。</p>
+    <p>[0671]	七、电视邮件，电视部落格：（单播业务)</p>
+    <p>[0672]	10)个人网络储存：</p>
+    <p>[0673]	用户代理服务器，维护用户邮箱表。</p>
+    <p>[0674]	用户终端内容上传，包括视、音、图、文，以草稿形式保存在邮箱内，可随时调看。</p>
+    <p>[0675]	上传内容可从USB端口输入（直接连PC、优盘、移动硬盘等）。[0676]	11)普通可视邮件：</p>
+    <p>[0677]	用户终端指定邮箱中的内容，输入发送对象的号码，申请发送。</p>
+    <p>[0678]	用户代理服务器，向发送对象的终端发出新到邮件通知，但实际上不转发邮件内容。接受方终端收看时才执行VOD操作。</p>
+    <p>[0679]	接受方终端若要长期保存邮件内容，根据HLP键显示OSD菜单，可将内容存入邮箱。</p>
+    <p>[0680]	12)短信和语音留言：</p>
+    <p>[0681]	与视频邮件同样处理，内容可存入专用VDOS-SD储存设备。</p>
+    <p>[0682]	13)电视部落格：</p>
+    <p>[0683]	节点服务器，根据内容分类，维护公共大邮箱。</p>
+    <p>[0684]	用户终端将邮件上传至媒体中心的公共大邮箱（包括自定价格）。</p>
+    <p>[0685]	媒体中心MPC，观看并审核上传邮件，转换成VOD内容，登记存入对应分类部落格。</p>
+    <p>[0686]	节点服务器，维护观众反馈信息，维护点播帐单。</p>
+    <p>[0687]	接受方终端若要长期保存部落格内容，根据HLP键显示OSD菜单，可将内容存入邮箱。</p>
+    <p>[0688]	电视部落格：内容收费中的一部分可自动转入内容上传方的帐户（百货商场模式)O</p>
+    <p>[0689]	八、电脑网络：</p>
+    <p>[0690]	14)因特网宽带上网：</p>
+    <p>[0691]	由于以太网网关的存在，使得在用户家里使用普通的以太网交换机就可以接入新型网，这样在用户家里就实现了互联网和新型网的融合，实现IP数据连接公共因特网。</p>
+    <p>[0692]	因特网宽带上网：适合分散社区消费者。</p>
+    <p>[0693]	15)多媒体电脑局域网：</p>
+    <p>[0694]	由于以太网网关的存在，使得在企业使用普通的以太网交换机就可以接入新型网，这样在企业就实现了互联网和新型网的融合。</p>
+    <p>[0695]	多媒体电脑局域网：适合学校、企业和政府办公室。</p>
+    <p>[0696]	九、语音电话：(组播+单播业务）</p>
+    <p>[0697]	新型网电话：直接使用未经压缩PCM(G. 711)，具备PSTN品质和低延迟（透传FAX 和Modem)，功能超越PSTN，成本低于IP电话，只需占用百分之一的新型网带宽资源，即可满足所有用户的电话服务。</p>
+    <p>[0698]	16)新型网电话：</p>
+    <p>[0699]	新型网电话网内电话：直拨新型网电话号码。</p>
+    <p>[0700]	新型网向PSTN网拨号：99+PSTN电话号码。</p>
+    <p>[0701]	PSTN网向新型网拨号：077+MP号码，（077或其他号码必须获得电信公司配合）。</p>
+    <p>[0702]	用户进入通话后，连续拨“ *** ”，双方通话内容自动存入邮箱。</p>
+    <p>[0703]	17)录音电话：</p>
+    <p>[0704]	用户可选择：来电未接，自动播放邮箱中的录音，然后在邮箱中记录来电内容。</p>
+    <p>[0705]	可选包月收费。</p>
+    <p>[0706]	18)语音电话会议：[0707]	节点服务器，配备专用多路语音合成设备，音色清晰，延迟低。</p>
+    <p>[0708]	会议发起方预约会议时间、人数、对应号码、外网PSTN密码，并可选择全程录音。</p>
+    <p>[0709]	节点服务器，向指定用户发送短信通知（包括会议号码）。</p>
+    <p>[0710]	用户在指定时间，拨指定号码，加入电话会议。</p>
+    <p>[0711]	节点服务器，自动审核时间、会议号码及用户号码，并可自动向参会方呼叫。</p>
+    <p>[0712]	19)语音自动服务中心：</p>
+    <p>[0713]	与多媒体网站功能类似，只限于语音，此功能一般企业用1台PC即可实现，在新型网网上每家每户都可自动设立，不需要任何硬件，只收少量月费。</p>
+    <p>[0714]	语音自动服务中心：适用于天气、股票、交通、公共服务、客户服务等。</p>
+    <p>[0715]	20)语音呼叫中心：</p>
+    <p>[0716]	发起方终端或相连的MPC，将多路电话天捆绑到一个号码（或名称），共享资源。</p>
+    <p>[0717]	发起方可选择全程录音。</p>
+    <p>[0718]	21)有线音乐广播台：</p>
+    <p>[0719]	类似电视广播，内容限于音乐。</p>
+    <p>[0720]	在本发明实施例中，所述0号表、1号表均是在入网过程中进行配置的。为使本领域技术人员更好地理解本发明，以下描述接入网设备的入网过程。</p>
+    <p>[0721]	3. 1. 4接入网设备的入网流程</p>
+    <p>[0722]	3. 1. 4. 1接入交换机的入网过程：</p>
+    <p>[0723]	首先每台允许入网的接入交换机都必须在节点服务器里注册，没有注册的接入交换机无法入网。如图4所示，所述接入交换机入网的过程涉及以下步骤：</p>
+    <p>[0724]	1、节点服务器向每个端口发送查询包，接入交换机收到查询包后发送应答包，应答包中包含当前接入交换机的注册信息；</p>
+    <p>[0725]	2、节点服务器收到接入交换机发出的应答后，就知道哪个端口下接了一台接入交换机，然后在节点服务器内部的注册信息表里找到该接入交换机信息，向该接入交换机发送入网命令（告知接入网地址），该接入交换机收到入网命令后就入网了，同时向节点服务器发送入网命令应答；</p>
+    <p>[0726]	3、节点服务器收到接入交换机发出的入网命令应答就知道该接入交换机已经入网了，以后定时向这个端口发送状态查询包，检查这台接入交换机是否正常工作，同时还要向该接入交换机的下行端口发送端口查询包，检查是否有其他接入网设备接在该接入交换机下面。如果当前接入交换机正常工作，收到状态查询包后会发送状态查询应答给节点服务器。当节点服务器一段时间之内没有收到状态查询应答，就认为该接入交换机已经被移出网络，不再发送状态查询包，而继续向本端口发送查询包。</p>
+    <p>[0727]	3. 1. 4. 2节点服务器与接入交换机在入网过程中的交互示例：</p>
+    <p>[0728]	为了简单起见，假设节点服务器并未和节点交换机相连，忽略城域网的入网过程， 为了方便讨论，假设此节点服务器有8个下行百兆网口依次定义为0号端口到7号端口，1 个CPU模块接口定义为8号端口，1个磁盘阵列接口定义为9号端口，1个上行千兆光口定义为10号端口，此节点服务器型号为MSS-400。如图5所示，MSS-400的0号端口接了 1台 BX-008-0, BX-008-0 的 1 号端口接了 1 台 BX-008-1。</p>
+    <p>[0729]	Si、MSS-400服务器上电后初始化硬件，获得默认城域网地址（假设为0x000x00000x0000)，从硬盘导入配置文件到CPU内存（例如交换机的注册信息、终端的注册信息等等），MSS-400服务器配置自己的接入网地址为0x0000 ；</p>
+    <p>52、MSS-400服务器初始化0、1、2、3号表：</p>
+    <p>&#8226;配置0号表为“00000000000 “，即所有查询包传送关闭； &#8226;配置1号表为“00100000000”，即所有的应答包导向CPU ； &#8226;配置2号、3号表为“00000000000 “，即所有单组播数据包传送关闭；</p>
+    <p>53、MSS-400服务器知道自己有8个下行端口，所以它配置8个0号表的表项分别</p>
+    <p>[0730]</p>
+    <p>[0731]</p>
+    <p>[0732]</p>
+    <p>[0733]</p>
+    <p>[0734] 为：</p>
+    <p>[0735]	&#183; “000000000000000001 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x0001 的查询包导向 0 号端口 ；</p>
+    <p>[0736]	&#183; “000000000000000010 “= &gt;“00000000010”，即目的地址（DA)是 0x80000x00000x00000x0002 的查询包导向 1 号端口 ；</p>
+    <p>[0737]	&#183; “000000000000000011 “= &gt;“00000000100”，即目的地址（DA)是 0x80000x00000x00000x0003 的查询包导向 2 号端口 ；</p>
+    <p>[0738]	&#183; “000000000000000100 “= &gt;“00000001000”，即目的地址（DA)是 0x80000x00000x00000x0004 的查询包导向 3 号端口 ；</p>
+    <p>[0739]	&#183; “000000000000000101 “= &gt;“00000010000”，即目的地址（DA)是 0x80000x00000x00000x0005 的查询包导向 4 号端口 ；</p>
+    <p>[0740]	&#183; “000000000000000110 “= &gt;“00000100000”，即目的地址（DA)是 0x80000x00000x00000x0006 的查询包导向 5 号端口 ；</p>
+    <p>[0741]	&#183; “000000000000000111 “= &gt;“00001000000”，即目的地址（DA)是 0x80000x00000x00000x0007 的查询包导向 6 号端口 ；</p>
+    <p>[0742]	&#183; “000000000000001000 “= &gt;“00010000000”，即目的地址（DA)是 0x80000x00000x00000x0008 的查询包导向 7 号端口 ；</p>
+    <p>[0743]	S4、MSS-400 服务器发目的地址（DA)是 0x80000x00000x00000x0001、 0x80000x00000x00000x0002,0x80000x00000x00000x0003,0x80000x00000x00000x0004, 0x80000x00000x00000x0005,0x80000x00000x00000x0006,0x80000x00000x00000x0007, 0x80000x00000x00000x0008 的查询包（SA 都为 0x00000x00000x00000x0000)，根据 0 号表</p>
+    <p>的配置，所述查询包会依次导向O到7号端口；</p>
+    <p>[0744]	S5、BX-008-0、BX-008-l交换机上电后初始化硬件，</p>
+    <p>[0745]	&#8226;配置 0 号表”OOxxxx xxxx xxxx xxxx”为“0100000000”，即所有查询包导向 CPU ；</p>
+    <p>[0746]	&#8226;配置1号表” Olxxxx xxxx xxxx xxxx”为“ 1000000000”，即所有的应答包导向上行的百兆网口；</p>
+    <p>[0747]	&#8226;配置2号、3号表为“00000000000 “，即所有单组播数据包传送关闭；</p>
+    <p>[0748]	S6、BX-008-0交换机收到查询包后，根据其0号表的配置，该查询包被接收至其CPU模块，由CPU解析该查询包后生成应答包（应答包中包含本交换机的注册信息），并发送给MSS-400服务器，该应答包的DA是0x08000x00000x00000x0000, SA是 0x00000x00000x00000x0001 ；</p>
+    <p>[0749]	S7、MSS-400服务器收到BX-008-0交换机发出的应答包后，对比应答包的源地址</p>
+    <p>6(SA)及设备类型就知道它的0号端口下接了一台接入交换机，然后在节点服务器内部的注册信息表里找到这台接入交换机的信息，向这台接入交换机发送入网命令（告知其接入网地址为0x0001)；</p>
+    <p>[0750]	S8、BX-008-0交换机收到入网命令后，知道自己的接入网地址是0x0001就入网了，于是配置其0号表” 000000000000000001”为“0100000000”，并0号表其余表项配置为” 0000000000 “，即只有本交换机的下行协议包导入CPU，同时向MSS-400服务器发送入网命令应答（入网命令应答包）；</p>
+    <p>[0751]	S9、MSS-400服务器收到BX-008-0交换机发出的入网命令应答就知道BX-008-0 交换机已经入网了，以后每秒钟向这个端口发送状态查询包，检查BX-008-0交换机是否正常工作，同时还要向BX-008-0交换机的下行端口发送端口下行协议包，检查是否有其它接入网设备接在本接入交换机下面，在这种情况下，MSS-400服务器会在其0号表中做如下配</p>
+    <p>置：</p>
+    <p>[0752]</p>
+    <p>'000000000000001001 “= &gt;“00000000001”，即目的地址（DA)是</p>
+    <p>0x80000x00000x00000x0009的端口下行协议包导向0号端口 ；</p>
+    <p>[0753]</p>
+    <p>'000000000000001010 "= &gt;‘‘00000000001”，即目的地址（DA)是</p>
+    <p>0x80000x00000x00000x000a的端口下行协议包导向0号端口 ；</p>
+    <p>[0754]</p>
+    <p>'000000000000001011 "= &gt;“00000000001”，即目的地址（DA)是</p>
+    <p>0x80000x00000x00000x000b的端口下行协议包导向0号端口 ；</p>
+    <p>[0755]</p>
+    <p>'000000000000001100 "= &gt;“00000000001”，即目的地址（DA)是</p>
+    <p>0x80000x00000x00000x000c的端口下行协议包导向0号端口 ；</p>
+    <p>[0756]</p>
+    <p>'000000000000001101 “= &gt;“00000000001”，即目的地址（DA)是0x80000x00000x00000x000d的端口下行协议包导向0号端口 ；</p>
+    <p>[0757]</p>
+    <p>'000000000000001110 "= &gt;“00000000001”，即目的地址（DA)是</p>
+    <p>0x80000x00000x00000x000e的端口下行协议包导向0号端口 ；</p>
+    <p>[0758]</p>
+    <p>'000000000000001111 “= &gt;“00000000001”，即目的地址（DA)是</p>
+    <p>0x80000x00000x00000x000f的端口下行协议包导向0号端口 ；</p>
+    <p>[0759]</p>
+    <p>'000000000000010000 "= &gt;“00000000001”，即目的地址（DA)是</p>
+    <p>0x80000x00000x00000x0010的端口下行协议包导向0号端口 ；</p>
+    <p>[0760] MSS-400服务器会通过包括端口分配信息的端口分配包，通知BX-008-0交换机在其0号表中做如下配置：</p>
+    <p>'000000000000001001 "= &gt;‘‘0000000001”，即	目的地址（DA)是 000x00000x0009的端口下行协议包导向0号端口 ；</p>
+    <p>'000000000000001010 "= &gt;‘‘0000000010”，即	目的地址（DA)是 000x00000x000a的端口下行协议包导向1号端口 ；</p>
+    <p>'000000000000001011 "= &gt;“0000000100”，即	目的地址（DA)是 000x00000x000b的端口下行协议包导向2号端口 ；</p>
+    <p>'000000000000001100 "= &gt;“0000001000”，即	目的地址（DA)是 000x00000x000c的端口下行协议包导向3号端口 ；</p>
+    <p>'000000000000001101 "= &gt;“0000010000”，即	目的地址（DA)是</p>
+    <p>630x80000x00000x00000x000d的端口下行协议包导向4号端口 ；</p>
+    <p>[0766]	&#183; “000000000000001110 “= &gt;“0000100000”，即目的地址（DA)是 0x80000x00000x00000x000e的端口下行协议包导向5号端口 ；</p>
+    <p>[0767]	&#183; “000000000000001111 “= &gt;“0001000000”，即目的地址（DA)是 0x80000x00000x00000x000f的端口下行协议包导向6号端口 ；</p>
+    <p>[0768]	&#183; “000000000000010000 “= &gt;“0010000000”，即目的地址（DA)是 0x80000x00000x00000x0010的端口下行协议包导向7号端口 ；</p>
+    <p>[0769]	S10、MSS-400 服务器发目的地址（DA)是 0x80000x00000x00000x0009、 0x80000x00000x00000x000a&gt;0x80000x00000x00000x000b&gt;0x80000x00000x00000x000c&gt; 0x80000x00000x00000x000d,0x80000x00000x00000x000e,0x80000x00000x00000x000f, 0x80000x00000x00000x0010 的端口下行协议包（SA 都为 0x00000x00000x00000x0000)，根据MSS-400服务器中0号表的配置，端口下行协议包会依次导向MSS-400服务器0号端口， 根据BX-008-0交换机中0号表的配置，端口下行协议包会依次导向BX-008-0交换机0到 7号端口 ；</p>
+    <p>[0770]	S1UBX-008-1交换机从BX-008-0交换机的1号端口收到端口下行协议包（即目的地址是0x80000x00000x00000x000a的端口下行协议包）后发送端口上行协议包（该端口上行协议包中包含本交换机的注册信息），包的DA是0x08000x00000x00000x0000，SA是 0x00000x00000x00000x000a ；</p>
+    <p>[0771]	S12、MSS-400服务器收到BX_008_1交换机发出的端口上行协议包后，对比上行协议包的源地址（SA)及设备类型就知道BX-008-0的1号端口下接了一台接入交换机，然后在服务器内部的注册信息表里找到这台接交换机信息，并向该接入交换机发送入网命令 (告知其接入网地址为0x000a)；</p>
+    <p>[0772]	S13, BX-008-1交换机收到入网命令后，知道自己的接入网地址是0x000a就入网了，配置其0号表” 000000000000001010”为“0100000000”，0号表其余表项配置为”0000000000 “，即只有本交换机的下行协议包导入CPU，同时向服务器发送入网命令应答；</p>
+    <p>[0773]	S14、MSS-400服务器收到交换机发出的入网命令应答就知道BX_008_1交换机已经入网了，以后每秒钟向这个端口发送状态查询包，检查BX-008-1交换机是否正常工作， 同时还要向BX-008-1交换机的下行端口发送端口下行协议包，检查是否有其他接入网设备接在本接入交换机下面。如果当前接入交换机正常工作，收到状态查询包后会发送状态查询应答给服务器。当服务器6秒之内没有收到状态查询应答，就认为这台接入交换机已经被移出网络，不再发送状态查询包，继续向本端口发送查询包。</p>
+    <p>[0774]	3. 1. 4. 3终端的入网过程：</p>
+    <p>[0775]	首先每台允许入网的终端都必须在节点服务器中注册，没有注册的终端无法入网。如图6所示，所述终端入网的过程涉及以下步骤：</p>
+    <p>[0776]	1、节点服务器向每个端口发送查询包，终端收到查询包后发送应答包，该应答包中包含终端的注册信息；</p>
+    <p>[0777]	2、节点服务器收到终端发出的应答包后就知道哪个端口下接了哪种终端（机顶盒，编码板还是存储器），然后在节点服务器内部的注册信息表里找到该终端的信息，向该终端发送入网命令（告诉终端的接入网地址），终端收到入网命令后就入网了，同时向节点服务器发送入网命令应答；</p>
+    <p>[0778]	3、节点服务器收到终端发出的入网命令应答就知道本终端已经入网了，以后定时向这个端口发送状态查询包，检查终端是否正常工作。如果终端正常工作，收到状态查询包后会发送状态查询应答给节点服务器。当节点服务器一段时间之内没有收到状态查询应答，就认为本终端已经被移出网络，不再发送状态查询包，继续向本端口发送查询包。</p>
+    <p>[0779]	3. 1. 4. 4节点服务器与接入交换机、终端在入网过程中的交互示例：</p>
+    <p>[0780]	接入网的地址可以设置为16bit，所有接入网设备都有唯一的接入网地址（包括机顶盒、接入交换机、存储器，甚至节点服务器本身）。为方便管理所有接入网设备的接入网地址，在节点服务器的CPU模块中可以维护一张地址信息表，该表的大小为2的16次方，也即64K，每个表的表项由如下构成：</p>
+    <p>[0781]	1)地址占用描述符：“00”表示此地址未用，“01”表示此地址待用（节点服务器用此地址发出了端口下行协议包，但未收到入网上行协议包)，“10”表示此地址已用（节点服务器收到入网上行协议包后设置）；</p>
+    <p>[0782]	2)设备描述符：例如，“000000”表示节点服务器，“000001”表示其中一种接入交换机BX-008，“000010”表示其中一种存储器，“000011 ”表示其中一种终端；</p>
+    <p>[0783]	3)设备资源描述信息：例如，该设备是接入交换机的话，它的网络端口连接的设备的接入网地址，它的各个网络端口的上下行流量计数；如果该设备是存储器的话，它的网络端口连接的设备的接入网地址，它的读写通道的计数以及网络端口的上下行流量计数； 等等，所有这些信息是为了服务流程提供决策依据，而且每次的服务流程中都会修改这些 fn息ο</p>
+    <p>[0784]	如图3所示，假设一台节点服务器MSS-400，它的0号端口接了一台接入交换机 BX-008-0，它的1号端口接了一台接入交换机BX-008-1，BX-008-0的0号端口接了一台机顶盒STB-0，BX_008-1的1号端口接了一台机顶盒STB-1。</p>
+    <p>[0785]	Si、MSS-400服务器上电后初始化硬件，获得默认城域网地址（假设为 0x000x00000x0000)，从硬盘导入配置文件到CPU内存（例如交换机的注册信息、终端的注册信息等等），MSS-400服务器初始化地址信息表，全部清零（表示所有地址未用)，MSS-400 服务器配置自己的接入网地址为0x0000，也即地址信息表的第0x0000项被配置成如下：</p>
+    <p>[0786]	&#183;地址占用描述符：“ 10”表示此地址已用；</p>
+    <p>[0787]	&#183;设备描述符：“000000”表示节点服务器；</p>
+    <p>[0788]	&#183;设备资源描述信息：此节点服务器有8个下行百兆网口依次定义为0号端口到 7号端口，1个CPU模块接口定义为8号端口，1个磁盘阵列接口定义为9号端口，1个上行千兆光口定义为10号端口，此节点服务器型号为MSS-400，它的网络端口连接的设备的接入网地址未分配，它的各个网络端口的上下行流量计数为0 ；</p>
+    <p>[0789]	地址信息表下一个可用地址为0x0001 ；</p>
+    <p>[0790]	S2、MSS-400服务器初始化0、1、2、3号表：</p>
+    <p>[0791]	&#183;配置0号表为“00000000000 “，即所有下行协议包传送关闭；</p>
+    <p>[0792]	&#183;配置1号表为“00100000000”，即所有上行协议包导向CPU ；</p>
+    <p>[0793]	&#8226;配置2号、3号表为“00000000000 “，即所有单组播数据包传送关闭；</p>
+    <p>6[0794]	S3、MSS-400服务器知道自己有8个下行端口，下一个可用地址为0x0001，所以它配置8个0号表的表项分别为：</p>
+    <p>[0795]	&#183; “000000000000000001 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x0001 的查询包导向 0 号端口 ；</p>
+    <p>[0796]	&#183; “000000000000000010 “= &gt;“00000000010”，即目的地址（DA)是 0x80000x00000x00000x0002 的查询包导向 1 号端口 ；</p>
+    <p>[0797]	&#183; “000000000000000011 “= &gt;“00000000100”，即目的地址（DA)是 0x80000x00000x00000x0003 的查询包导向 2 号端口 ；</p>
+    <p>[0798]	&#183; “000000000000000100 “= &gt;“00000001000”，即目的地址（DA)是 0x80000x00000x00000x0004 的查询包导向 3 号端口 ；</p>
+    <p>[0799]	&#183; “000000000000000101 “= &gt;“00000010000”，即目的地址（DA)是 0x80000x00000x00000x0005 的查询包导向 4 号端口 ；</p>
+    <p>[0800]	&#183; “000000000000000110 “= &gt;“00000100000”，即目的地址（DA)是 0x80000x00000x00000x0006 的查询包导向 5 号端口 ；</p>
+    <p>[0801]	&#183; “000000000000000111 “= &gt;“00001000000”，即目的地址（DA)是 0x80000x00000x00000x0007 的查询包导向 6 号端口 ；</p>
+    <p>[0802]	&#183; “000000000000001000 “= &gt;“00010000000”，即目的地址（DA)是 0x80000x00000x00000x0008 的查询包导向 7 号端口 ；</p>
+    <p>[0803]	S4、MSS-400 服务器发目的地址（DA)是 0x80000x00000x00000x0001、 0x80000x00000x00000x0002,0x80000x00000x00000x0003,0x80000x00000x00000x0004, 0x80000x00000x00000x0005,0x80000x00000x00000x0006,0x80000x00000x00000x0007, 0x80000x00000x00000x0008 的查询包（SA 都为 0x00000x00000x00000x0000)，根据其 0 号</p>
+    <p>表的配置，所述查询包会依次导向O到7号端口 ；此时，地址信息表的第0x0001至0x0008 项被配置成：</p>
+    <p>[0804]	&#183;地址占用描述符：“01”表示此地址待用；</p>
+    <p>[0805]	&#183;设备描述符：不做修改；</p>
+    <p>[0806]	&#183;设备资源描述信息：不做修改；</p>
+    <p>[0807]	地址信息表的下一个可用地址为0x0009 ；</p>
+    <p>[0808]	S5、BX-008-0、BX-008-l交换机上电后初始化硬件，</p>
+    <p>[0809]	&#8226;配置其0号表” OOxxxx xxxx xxxx xxxx”为“0100000000”，即所有下行协议包包导向CPU ；</p>
+    <p>[0810]	&#8226;配置其1号表” Olxxxx xxxx xxxx xxxx”为“ 1000000000”，即所有的上行协议</p>
+    <p>包导向上行的百兆网口；</p>
+    <p>[0811]	&#183;配置其2号、3号表为“0000000000 “，即所有单组播数据包传送关闭；</p>
+    <p>[0812]	S6、BX-008-0交换机收到查询包后，根据其0号表的配置，该查询包被接收至其CPU模块，由CPU模块解析该查询包并生成应答包（该应答中包含本接入交换机的注册信息）发送给MSS-400服务器，包的DA是0x08000x00000x00000x0000, SA是 0x00000x00000x00000x0001 ；</p>
+    <p>[0813]	S7、MSS-400服务器收到BX-008-0交换机发出的应答包后，对比应答包的源地址(SA)、及设备类型就知道其0号端口下接了一台接入交换机，然后在节点服务器内部的注册信息表里找到这台接入交换机的信息，向该接入交换机发送入网命令（告知其接入网地址为 0x0001)；</p>
+    <p>[0814]	S8、BX-008-0交换机收到入网命令后，知道自己的接入网地址是0x0001就入网了，于是配置其0号表” 000000000000000001”为“0100000000”，0号表其余表项配置为” 0000000000 “，即只有本交换机的下行协议包导入CPU，同时向服务器发送入网命令应答；</p>
+    <p>[0815]	S9、MSS-400服务器收到BX-008-0交换机发出的入网命令应答就知道BX-008-0交换机已经入网了，于是将服务器内部的地址信息表的第0x0001项被配置成：</p>
+    <p>[0816]	&#183;地址占用描述符：“ 10”表示此地址已用；</p>
+    <p>[0817]	&#183;设备描述符：“ 000001，，表示其中一种接入交换机BX-008 ；</p>
+    <p>[0818]	&#8226;设备资源描述信息：此接入交换机有8个下行百兆网口依次定义为0号端口到7 号端口，1个CPU模块接口定义为8号端口，1个上行百兆网口定义为9号端口，此接入交换机型号为BX-008，它的上行网络端口连接的设备的接入网地址是0x0000 (即MSS-400)，下行网络端口连接的设备的接入网地址未分配，它的各个网络端口的上下行流量计数为0 ；</p>
+    <p>[0819]	以后每秒钟向这个端口发送状态查询包，检查BX-008-0交换机是否正常工作，同时还要向BX-008-0交换机的下行端口发送端口下行协议包，检查是否有其他接入网设备接在本接入交换机下面。在这种情况下，MSS-400服务器会在其0号表中做如下配置：</p>
+    <p>[0820]	&#183; “000000000000001001 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x0009的端口下行协议包导向0号端口 ；</p>
+    <p>[0821]	&#183; “000000000000001010 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x000a的端口下行协议包导向0号端口 ；</p>
+    <p>[0822]	&#183; “000000000000001011 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x000b的端口下行协议包导向0号端口 ；</p>
+    <p>[0823]	&#183; “000000000000001100 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x000c的端口下行协议包导向0号端口 ；</p>
+    <p>[0824]	&#183; “000000000000001101 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x000d的端口下行协议包导向0号端口 ；</p>
+    <p>[0825]	&#183; “000000000000001110 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x000e的端口下行协议包导向0号端口 ；</p>
+    <p>[0826]	&#183; “000000000000001111 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x000f的端口下行协议包导向0号端口 ；</p>
+    <p>[0827]	&#183; “000000000000010000 “= &gt;“00000000001”，即目的地址（DA)是 0x80000x00000x00000x0010的端口下行协议包导向0号端口 ；</p>
+    <p>[0828]	MSS-400服务器会通过包括端口分配信息的端口分配包，通知BX-008-0交换机在其0号表中做如下配置：</p>
+    <p>[0829]	&#183; “000000000000001001 “= &gt;“0000000001”，即目的地址（DA)是 0x80000x00000x00000x0009的端口下行协议包导向0号端口 ；</p>
+    <p>[0830]	&#183; “000000000000001010 “= &gt;“0000000010”，即目的地址（DA)是0x80000x00000x00000x000a的端口下行协议包导向1号端口 ；</p>
+    <p>[0831]	&#183; “000000000000001011 “= &gt;“0000000100”，即 0x80000x00000x00000x000b的端口下行协议包导向2号端口 ；</p>
+    <p>[0832]	&#183; “000000000000001100 “= &gt;“0000001000”，即 0x80000x00000x00000x000c的端口下行协议包导向3号端口 ；</p>
+    <p>[0833]	&#183; “000000000000001101 “= &gt;“0000010000”，即 0x80000x00000x00000x000d的端口下行协议包导向4号端口 ；</p>
+    <p>[0834]	&#183; “000000000000001110 “= &gt;“0000100000”，即 0x80000x00000x00000x000e的端口下行协议包导向5号端口 ；</p>
+    <p>[0835]	&#183; “000000000000001111 “= &gt;“0001000000”，即 0x80000x00000x00000x000f的端口下行协议包导向6号端口 ；</p>
+    <p>[0836]	&#183; “000000000000010000 “= &gt;“0010000000”，即 0x80000x00000x00000x0010的端口下行协议包导向7号端口 ；</p>
+    <p>[0837]	S10、MSS-400 服务器发目的地址（DA)是 0x80000x00000x00000x0009、 0x80000x00000x00000x000a&gt;0x80000x00000x00000x000b&gt;0x80000x00000x00000x000c&gt; 0x80000x00000x00000x000d,0x80000x00000x00000x000e,0x80000x00000x00000x000f, 0x80000x00000x00000x0010 的端口下行协议包（SA 都为 0x00000x00000x00000x0000)，根据MSS-400服务器中0号表的配置，所述端口下行协议包会依次导向MSS-400服务器0号端口，根据BX-008-0交换机中0号表配置，端口下行协议包会依次导向BX-008-0交换机0 到7号端口 ；并且，MSS-400服务器中的地址信息表的第0x0009至0x0010项被配置成：</p>
+    <p>[0838]	&#183;地址占用描述符：“01”表示此地址待用；</p>
+    <p>[0839]	&#183;设备描述符：不做修改；</p>
+    <p>[0840]	&#183;设备资源描述信息：不做修改；</p>
+    <p>[0841]	下一个可用地址为0x0011 ；</p>
+    <p>[0842]	SlU STB-O从BX-008-0交换机的0号端口收到端口下行协议包（即目的地址是0x80000x00000x00000x0009的端口下行协议包)收到端口下行协议包后发送端口上行协议包（包含本终端的注册信息），包的DA是0x08000x00000x00000x0000，SA是 0x00000x00000x00000x0009 (交换机的 0 号端口 )；</p>
+    <p>[0843]	S12、MSS-400服务器收到STB-O交换机发出的端口上行协议包后，对比上行协议包的源地址（SA)及设备类型就知道BX-008-0的0号端口下接了一台终端，然后在服务器内部的注册信息表里找到终端信息，向终端发送入网命令（告诉终端的接入网地址为 0x0009)；</p>
+    <p>[0844]	S13、STB-O收到入网命令后，知道自己的接入网地址是0x0009就入网了，同时向服务器发送入网命令应答；</p>
+    <p>[0845]	14、MSS-400服务器收到STB-0发出的入网命令应答就知道STB-0交换机已经入网了，于是将地址信息表的第0x0009项配置成：</p>
+    <p>[0846]	&#183;地址占用描述符：“ 10”表示此地址已用；</p>
+    <p>[0847]	&#183;设备描述符：“000011”表示其中一种终端；</p>
+    <p>[0848]	&#183;设备资源描述信息：此终端有视音频编解码引擎，1个百兆网口，此终端型号为</p>
+    <p>目的地址（DA)是目的地址（DA)是目的地址（DA)是目的地址（DA)是目的地址（DA)是目的地址（DA)是</p>
+    <p>6STB，它的网络端口连接的设备的接入网地址是0x0001(即BX-008-0)，它的网络端口的上下行流量计数为0 ；</p>
+    <p>[0849]	地址信息表的第0x0001项被配置成：</p>
+    <p>[0850]	&#183;地址占用描述符：不做修改；</p>
+    <p>[0851]	&#183;设备描述符：不做修改；</p>
+    <p>[0852]	&#183;设备资源描述信息：此接入交换机有8个下行百兆网口依次定义为0号端口到 7号端口，1个CPU模块接口定义为8号端口，1个上行百兆网口定义为9号端口，此接入交换机型号为BX-008，它的上行网络端口连接的设备的接入网地址是0x0000 (即MSS-400)， 下行网络端口 0连接的设备的接入网地址是0x0009，其余未分配，它的各个网络端口的上下行流量计数为0 ；</p>
+    <p>[0853]	以后MSS-400服务器每秒钟向这个端口发送状态查询包，检查STB-O是否正常工作，当服务器6秒之内没有收到状态查询应答，就认为STB-O已经被移出网络，不再发送状态查询包，继续向本端口发送查询包。</p>
+    <p>[0854]	参照上述第S6-S14步骤，BX-008-1也会入网，获得其接入网地址为0x0002 ；STB-I 也会入网，获得其接入网地址为0x0012。</p>
+    <p>[0855]	3. 1. 5入网过程中的数据格式定义：</p>
+    <p>[0856]	PDU是用户终端和服务器的信息交互方式，两者使用原始套接字（RawSocket)传递PDU，其数据格式如下：</p>
+    <p>[0857</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00691.png"> <img id="idf0025" file="CN102377633AD00691.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00691.png" class="patent-full-image" alt="Figure CN102377633AD00691"> </a> </div>
+    <p>[0858]	系统消息（PDU)定义</p>
+    <p>[0859]	一.端口查询</p>
+    <p>[0860]	1、端口查询指令，由服务器发出，32W短信令：</p>
+    <p>[0861]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00692.png"> <img id="idf0026" file="CN102377633AD00692.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00692.png" class="patent-full-image" alt="Figure CN102377633AD00692"> </a> </div>
+    <p>[0862][0863]	2、端口查询应答指令，32W短信令：</p>
+    <p>[0864]	机顶盒收到8A01发给服务器的应答</p>
+    <p>[0865]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00701.png"> <img id="idf0027" file="CN102377633AD00701.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00701.png" class="patent-full-image" alt="Figure CN102377633AD00701"> </a> </div>
+    <p>[0866]	交换机收到8A01发给服务器的应答</p>
+    <p>[0867]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00702.png"> <img id="idf0028" file="CN102377633AD00702.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00702.png" class="patent-full-image" alt="Figure CN102377633AD00702"> </a> </div>
+    <p>[0868]</p>
+    <p>[0869]	编码板收到8A01发给服务器的应答</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00703.png"> <img id="idf0029" file="CN102377633AD00703.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00703.png" class="patent-full-image" alt="Figure CN102377633AD00703"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00711.png"> <img id="idf0030" file="CN102377633AD00711.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00711.png" class="patent-full-image" alt="Figure CN102377633AD00711"> </a> </div>
+    <p>[0871]	设备标识：暂时可以取值0x51310201000X(X = 0-f)</p>
+    <p>[0872]	3、入网指令，由服务器发出，32W短信令：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00712.png"> <img id="idf0031" file="CN102377633AD00712.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00712.png" class="patent-full-image" alt="Figure CN102377633AD00712"> </a> </div>
+    <p>[0874] 4、入网确认指令，32W短信令：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00713.png"> <img id="idf0032" file="CN102377633AD00713.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00713.png" class="patent-full-image" alt="Figure CN102377633AD00713"> </a> </div>
+    <p>[0876]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00721.png"> <img id="idf0033" file="CN102377633AD00721.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00721.png" class="patent-full-image" alt="Figure CN102377633AD00721"> </a> </div>
+    <p> [0877]	5、状态查询指令，由服务器发出，32W短信令：</p>
+    <p>[0878]	给交换机的状态查询指令</p>
+    <p>[0879]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00722.png"> <img id="idf0034" file="CN102377633AD00722.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00722.png" class="patent-full-image" alt="Figure CN102377633AD00722"> </a> </div>
+    <p>[0880] 给机顶盒的状态查询指令</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00731.png"> <img id="idf0035" file="CN102377633AD00731.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00731.png" class="patent-full-image" alt="Figure CN102377633AD00731"> </a> </div>
+    <p>[0882]	6、状态查询应答指令，32W短信令：</p>
+    <p>[0883]	交换机的状态查询应答</p>
+    <p>[0884]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00732.png"> <img id="idf0036" file="CN102377633AD00732.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00732.png" class="patent-full-image" alt="Figure CN102377633AD00732"> </a> </div>
+    <p>[0885] 机顶盒的状态查询应答</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00741.png"> <img id="idf0037" file="CN102377633AD00741.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00741.png" class="patent-full-image" alt="Figure CN102377633AD00741"> </a> </div>
+    <p>[0887] 编码板的状态查询应答</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00742.png"> <img id="idf0038" file="CN102377633AD00742.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102377633A/CN102377633AD00742.png" class="patent-full-image" alt="Figure CN102377633AD00742"> </a> </div>
+    <p>[0889]	三、以下通过与IP互联网对比，更进一步描述本发明实施例的优点：</p>
+    <p>[0890]	1、网络地址结构上根治仿冒</p>
+    <p>[0891]	IP互联网的地址由用户设备告诉网络；本发明的新型网地址由网络告诉用户设[0892]	为了防范他人入侵，PC和互联网设置了繁琐的口令、密码障碍。就算是实名地址， 仍无法避免密码被破译或用户稍不留神而造成的安全信息泄漏。连接到IP互联网上的PC 终端，首先必须自报家门，告诉网络自己的IP地址。然而，谁能保证这个IP地址是真是假。 这就是IP互联网第一个无法克服的安全漏洞。</p>
+    <p>[0893]	本发明的新型网终端的地址是通过网管协议学来的，用户终端只能用这个学来的地址进入本发明的新型网，因此，无需认证确保不会错。详细描述参见网管协议。本发明的新型网创立了有序化结构“带色彩”的地址体系（D/SCAF)。本发明的新型网地址不仅具备唯一性，同时具备可定位和可定性功能，如同个人身份证号码一样，隐含了该用户端口的地理位置、设备性质、服务权限等其他特征。本发明的新型网交换机根据这些特征规定了分组包的行为规则，实现不同性质的数据分流。</p>
+    <p>[0894]	2、每次服务发放独立通行证，阻断黑客攻击和病毒扩散的途径；</p>
+    <p>[0895]	IP互联网可以自由进出，用户自备防火墙；本发明的新型网每次服务必须申请通行证。</p>
+    <p>[0896]	由于通讯协议在用户终端执行，可能被篡改。由于路由信息在网上广播，可能被窃听。网络中的地址欺骗、匿名攻击、邮件炸弹、泪滴、隐蔽监听、端口扫描、内部入侵、涂改信息等形形色色固有的缺陷，为黑客提供了施展空间。垃圾邮件等互联网污染难以防范。</p>
+    <p>[0897]	由于IP互联网用户可以设定任意IP地址来冒充别人，可以向网上任何设备发出探针窥探别人的信息，也可以向网络发送任意干扰数据包（泼脏水）。为此，许多聪明人发明了各种防火墙，试图保持独善其身。但是，安装防火墙是自愿的，防火墙的效果是暂时的和相对的，IP互联网本身永远不会干净。这是IP互联网第二项收不了场的安全败笔。</p>
+    <p>[0898]	本发明的新型网用户入网后，网络交换机仅允许用户向节点服务器发出有限的服务请求，对其他数据包一律关门。如果节点服务器批准用户申请，即向用户所在的交换机发出网络通行证，用户终端发出的每个数据包若不符合网络交换机端的审核条件一律丢弃， 彻底杜绝黑客攻击。每次服务结束后，自动撤销通行证。通行证机制由交换机执行，不在用户可控制的范围内：</p>
+    <p>[0899]	审核用户数据包的源地址：防止用户发送任何假冒或匿名数据包（入网后自动设定）</p>
+    <p>[0900]	审核目标地址：用户只能发送数据包到服务器指定的对象（服务申请时确定)</p>
+    <p>[0901]	审核数据流量：用户发送数据流量必须符合服务器规定（服务申请时确定）</p>
+    <p>[0902]	审核版权标识：防止用户转发从网上下载的有版权内容（内容供应商设定）</p>
+    <p>[0903]	本发明的新型网不需要防火墙、杀毒、加密、内外网隔离等消极手段，本发明的新型网从结构上彻底阻断了黑客攻击和病毒扩散的途径，是本质上可以高枕无忧的安全网</p>
+    <p>[0904]	3、网络设备与用户数据完全隔离，切断病毒和木马的生命线；</p>
+    <p>[0905]	IP互联网设备可随意拆解用户数据包；本发明的新型网设备与用户数据完全隔离。即在数据传输中，新型网设备（例如，交换机、网关等）对用户数据包并不进行拆解，而是直接依据数据包的地址，查找映射表，将其从相应端口转发即可。即本发明的交换机并不存在自己计算和选择路由的功能。[0906]	冯&#183;诺依曼创造的电脑将程序指令和操作数据放在同一个地方，也就是说一段程序可以修改机器中的其他程序和数据。沿用至今的这一电脑模式，给特洛伊木马，蠕虫，病毒，后门等留下了可乘之机。随着病毒的高速积累，防毒软件和补丁永远慢一拍，处于被动状态。</p>
+    <p>[0907]	互联网TCP/IP协议的技术核心是尽力而为、储存转发、检错重发。为了实现互联网的使命，网络服务器和路由器必须具备解析用户数据包的能力，这就为黑客病毒留了活路，网络安全从此成了比谁聪明的角力，永无安宁。这是IP互联网第三项遗传性缺陷。</p>
+    <p>[0908]	本发明的新型网上所有的服务器和交换机设备中的CPU都不可能接触到任意一个用户数据包。也就是说，整个本发明的新型网只是为业务提供方和接收方的终端设备之间，建立一条完全隔离和流量行为规范的透明管道。用户终端不管收发什么数据，一概与网络无关。从结构上切断了病毒和木马的生命线。因此，本发明的新型网杜绝网络上的无关人员窃取用户数据的可能，同理，那些想当黑客或制毒的人根本就没有可供攻击的对象。</p>
+    <p>[0909]	4、用户之间的自由连接完全隔离，确保有效管理：</p>
+    <p>[0910]	IP互联网是自由市场，无中间人；本发明的新型网是百货公司，有中间人。对于网络来说，消费者与内容供应商都属于网络用户范畴，只是大小不同而已。IP互联网是个无管理的自由市场，任意用户之间可以直接通讯（P2P)。也就是说，要不要管理是用户说了算， 要不要收费是单方大用户（供应商）说了算，要不要遵守法规也是单方大用户（吸血鬼网站）说了算。运营商至多收个入场费，要想执行法律、道德、安全和商业规矩只能是天方夜谭，现在和将来都不可能。这是IP互联网第四项架构上的残疾。</p>
+    <p>[0911]	本发明的新型网创造了服务节点概念，形成有管理的百货公司商业模式。用户之间，或者消费者与供货商之间，绝对不可能有任何自由接触，一切联系都必须取得节点服务器（中间人）的批准。这是实现网络业务有效管理的必要条件。要想成为新型网的用户， 必须先与网络运营商谈判自己的角色，从普通消费者、网上商店、学校医院、政府部门、直到电视台，都属于运营商的客户，就好像上述部门都是电话公司的客户一样。尽管看起来每个角色无非都是收发视讯内容，但如何收发必须严格遵守各自商定的行为法则。有了不可逾越的规范，各类用户之间的关系才能在真正意义上分成C2C、B2C、B2B等，或者统称为有管理的用户与用户间通讯（MP2P)。</p>
+    <p>[0912]	5、商业规则植入通讯协议，确保盈利模式；</p>
+    <p>[0913]	IP互联网奉行先通讯，后管理模式；本发明的新型网奉行先管理，后通讯模式。</p>
+    <p>[0914]	网上散布非法媒体内容，只有造成恶劣影响以后，才能在局部范围内查封，而不能防范于未然。法律与道德不能防范有组织有计划的“职业攻击”。而且法律只能对已造成危害的人实施处罚。IP互联网将管理定义成一种额外附加的服务，建立在应用层。因此，管理自然成为一种可有可无的摆设。这是IP互联网第五项难移的本性。</p>
+    <p>[0915]	本发明的新型网用户终端只能在节点服务器许可范围内的指定业务中，选择申请其中之一。服务建立过程中的协议信令，由节点服务器执行（不经用户之手）。用户终端只是被动地回答服务器的提问，接受或拒绝服务，不能参与到协议过程中。一旦用户接受服务器提供的服务，只能按照通行证规定的方式发送数据包，任何偏离通行证规定的数据包一律在底层交换机中丢弃。本发明的新型网协议的基本思路是实现以服务内容为核心的商业模式，而不只是完成简单的数据交流。在这一模式下，安全是新型网的固有属性，而不是附加在网络上的额外服务项目。当然，业务权限审核、资源确认和计费手续等，均可轻易包含管理合同之中。</p>
+    <p>[0916]	由于本发明关于一种接入网设备的通信连接系统、一种节点服务器及一种接入交换机的装置实施例基本相应于前述方法实施例，具体可以参见前述方法实施例中的相关说明，在此就不赘述了。</p>
+    <p>[0917]	需要说明的是，在本文中，诸如第一和第二等之类的关系术语仅仅用来将一个实体或者操作与另一个实体或操作区分开来，而不一定要求或者暗示这些实体或操作之间存在任何这种实际的关系或者顺序。</p>
+    <p>[0918]	以上对本发明所提供的一种接入网设备的通信连接方法、一种接入网设备的通信连接系统、一种节点服务器及一种接入交换机进行了详细介绍，本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本发明的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1275299A?cl=zh">CN1275299A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1999年6月18日</td><td class="patent-data-table-td patent-date-value">2000年11月29日</td><td class="patent-data-table-td ">尤尼斯菲尔解决方案公司</td><td class="patent-data-table-td ">用于ip转发和atm交换的设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1373980A?cl=zh">CN1373980A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1999年12月9日</td><td class="patent-data-table-td patent-date-value">2002年10月9日</td><td class="patent-data-table-td ">诺基亚网络有限公司</td><td class="patent-data-table-td ">利用常规网络节点交换机管理与各种业务质量原则相关联的数据业务的系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101030940A?cl=zh">CN101030940A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年4月9日</td><td class="patent-data-table-td patent-date-value">2007年9月5日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">网络流量负载均衡的方法以及第三层交换设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101404619A?cl=zh">CN101404619A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年11月17日</td><td class="patent-data-table-td patent-date-value">2009年4月8日</td><td class="patent-data-table-td ">杭州华三通信技术有限公司</td><td class="patent-data-table-td ">一种实现服务器负载均衡的方法和一种三层交换机</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101557303A?cl=zh">CN101557303A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年4月30日</td><td class="patent-data-table-td patent-date-value">2009年10月14日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">路径建立请求方法、路径建立方法与系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101674221A?cl=zh">CN101674221A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月9日</td><td class="patent-data-table-td patent-date-value">2010年3月17日</td><td class="patent-data-table-td ">中国移动通信集团公司</td><td class="patent-data-table-td ">静态路由生成方法、终端路由实现方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D2008228069A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFXXzYpG_Uh1aawQSWGddAipEObgw">JP2008228069A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012560000">H04L12/56</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L12/6418">H04L12/6418</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L45/306">H04L45/306</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=QDCHBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L12/437">H04L12/437</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">H04L12/64B</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年3月14日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年4月25日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年1月15日</td><td class="patent-data-table-td ">C53</td><td class="patent-data-table-td ">Correction of patent for invention or patent application</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年1月15日</td><td class="patent-data-table-td ">COR</td><td class="patent-data-table-td ">Change of bibliographic data</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">CORRECT: INVENTOR; FROM: LU HONGCHENG YANG CHUNHUI TO: YANG CHUNHUI LU HONGCHENG</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年10月8日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/58664fdc22afe212b550/CN102377633A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E6%8E%A5%E5%85%A5%E7%BD%91%E8%AE%BE%E5%A4%87%E7%9A%84%E9%80%9A%E4%BF%A1%E8%BF%9E%E6%8E%A5%E6%96%B9.pdf?id=QDCHBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1Ozehm91XyCoqKD9ansv48ISa-lw"},"sample_url":"https://www.google.com/patents/reader?id=QDCHBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

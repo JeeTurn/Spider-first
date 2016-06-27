@@ -1,0 +1,268 @@
+<!DOCTYPE html><html><head><title>专利 CN103076743A - 卷取机的张力模糊pid控制方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="卷取机的张力模糊pid控制方法"><meta name="DC.contributor" content="陆地" scheme="inventor"><meta name="DC.contributor" content="王胜" scheme="inventor"><meta name="DC.contributor" content="许岩" scheme="inventor"><meta name="DC.contributor" content="崔璐" scheme="inventor"><meta name="DC.contributor" content="西安建筑科技大学" scheme="assignee"><meta name="DC.date" content="2012-12-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种卷取机的张力模糊PID控制方法，该方法采用电流环和速度环双闭环控制，对电流环和速度环的反馈环节分别设置速度和电流调节器，并采用六个模糊控制器控制电流环和速度环的PID参数，每个模糊控制器采用两输入一输出，输入量均为设定张力的偏差值E以及偏差变化率Ec，输出量分别为电流控制器和速度控制器需要的P、I、D参数；在电流调节器与速度调节器之前分别串入3个相应的模糊控制器，在卷取机运行的过程中，不断调整隶属度函数，对电机转速和电枢电流进行控制，实现对卷取机张力的自动控制，使卷取机的张力实现自动调节始终保持恒定；通过simulink仿真，证实该方法响应快，调整能力强，鲁棒性好，有效地改善了控制效果。"><meta name="DC.date" content="2013-5-1"><meta name="DC.relation" content="CN:101579706:A" scheme="references"><meta name="DC.relation" content="CN:101602068:A" scheme="references"><meta name="DC.relation" content="CN:101673119:A" scheme="references"><meta name="DC.relation" content="CN:101844155:A" scheme="references"><meta name="DC.relation" content="CN:102319482:A" scheme="references"><meta name="citation_reference" content="毛金玲: &quot;卷取机张力控制系统研究&quot;, 《中国优秀硕士学位论文全文数据库》, 15 March 2012 (2012-03-15)"><meta name="citation_patent_publication_number" content="CN:103076743:A"><meta name="citation_patent_application_number" content="CN:201210590933"><link rel="canonical" href="https://www.google.com/patents/CN103076743A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103076743A?cl=zh"/><meta name="title" content="专利 CN103076743A - 卷取机的张力模糊pid控制方法"/><meta name="description" content="本发明公开了一种卷取机的张力模糊PID控制方法，该方法采用电流环和速度环双闭环控制，对电流环和速度环的反馈环节分别设置速度和电流调节器，并采用六个模糊控制器控制电流环和速度环的PID参数，每个模糊控制器采用两输入一输出，输入量均为设定张力的偏差值E以及偏差变化率Ec，输出量分别为电流控制器和速度控制器需要的P、I、D参数；在电流调节器与速度调节器之前分别串入3个相应的模糊控制器，在卷取机运行的过程中，不断调整隶属度函数，对电机转速和电枢电流进行控制，实现对卷取机张力的自动控制，使卷取机的张力实现自动调节始终保持恒定；通过simulink仿真，证实该方法响应快，调整能力强，鲁棒性好，有效地改善了控制效果。"/><meta property="og:title" content="专利 CN103076743A - 卷取机的张力模糊pid控制方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103076743A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103076743A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=FoT2BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103076743A&amp;usg=AFQjCNFE3Q2QgOSImLQWoKufq0ekVb_j-g" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/73116051e34d06e2c102/CN103076743A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/73116051e34d06e2c102/CN103076743A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103076743A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103076743A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103076743A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种卷取机的张力模糊PID控制方法，该方法采用电流环和速度环双闭环控制，对电流环和速度环的反馈环节分别设置速度和电流调节器，并采用六个模糊控制器控制电流环和速度环的PID参数，每个模糊控制器采用两...</span><span itemprop="url">https://www.google.com/patents/CN103076743A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103076743A - 卷取机的张力模糊pid控制方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103076743A - 卷取机的张力模糊pid控制方法" title="专利 CN103076743A - 卷取机的张力模糊pid控制方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103076743 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210590933</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年5月1日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年12月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年12月28日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210590933.1, </span><span class="patent-bibdata-value">CN 103076743 A, </span><span class="patent-bibdata-value">CN 103076743A, </span><span class="patent-bibdata-value">CN 201210590933, </span><span class="patent-bibdata-value">CN-A-103076743, </span><span class="patent-bibdata-value">CN103076743 A, </span><span class="patent-bibdata-value">CN103076743A, </span><span class="patent-bibdata-value">CN201210590933, </span><span class="patent-bibdata-value">CN201210590933.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E5%9C%B0%22">陆地</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%E8%83%9C%22">王胜</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%AE%B8%E5%B2%A9%22">许岩</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%B4%94%E7%92%90%22">崔璐</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%A5%BF%E5%AE%89%E5%BB%BA%E7%AD%91%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%22">西安建筑科技大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103076743A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103076743A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103076743A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=FoT2BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210590933&amp;usg=AFQjCNEGQPVqoRmPQJcg_bLes4L2uBNN0A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=FoT2BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103076743A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFNZo7sMTcwlV-Laf2PlbRg8xq1ow"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT124060793" lang="ZH" load-source="patent-office">卷取机的张力模糊pid控制方法</invention-title>
+      </span><br><span class="patent-number">CN 103076743 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA111025998" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种卷取机的张力模糊PID控制方法，该方法采用电流环和速度环双闭环控制，对电流环和速度环的反馈环节分别设置速度和电流调节器，并采用六个模糊控制器控制电流环和速度环的PID参数，每个模糊控制器采用两输入一输出，输入量均为设定张力的偏差值E以及偏差变化率Ec，输出量分别为电流控制器和速度控制器需要的P、I、D参数；在电流调节器与速度调节器之前分别串入3个相应的模糊控制器，在卷取机运行的过程中，不断调整隶属度函数，对电机转速和电枢电流进行控制，实现对卷取机张力的自动控制，使卷取机的张力实现自动调节始终保持恒定；通过simulink仿真，证实该方法响应快，调整能力强，鲁棒性好，有效地改善了控制效果。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(6)</span></span></div><div class="patent-text"><div mxw-id="PCLM52803995" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种卷取机的张力模糊PID控制方法，其特征在于，该方法采用电流环和速度环双闭环控制，对电流环和速度环的反馈环节分别设置PID调节器，即速度调节器和电流调节器，并采用六个模糊控制器分别控制电流环和速度环的PID参数的调整，每个模糊控制器采用MISO的形式即两输入一输出，输入量均为设定张力的偏差值E以及偏差变化率Ec，输出量分别为电流控制器和速度控制器需要的P、1、D参数；在电流调节器与速度调节器之前分别串入3个相应的模糊控制器，在卷取机运行的过程中，不断调整隶属度函数，对电机的转速和电机电枢电流进行控制，从而实现对卷取机张力的自动控制，使卷取机的张力T实现自动调节始终保持恒定；具体操作如下:  用户根据公式T= σ 设定所需张力T:其中，b为带钢的宽度，单位:mm ;h为带钢的厚度,单位:mm ; %为带钢的单位张力，单位:N/mm2 ；  根据公SMt=T* (D/2)计算得到张力力矩Mt，单位:Nm ;其中，T为张力设定值，单位:N ；D为卷筒卷径，单位:m ;计算动态力矩Md,单位:Nm ;通过实验得到空载力矩M。,单位:Nm ;将张力力矩Mt、动态力矩Md、空载力矩M。相加得到主电机的力矩极限值Mm ;  在主电机M上安装脉冲编码器2测得卷筒的转速n，通过S辊的线速度Vl计算卷筒的线速度V2，将卷筒的线速度V2与卷筒的转速η经过除法器得到卷筒卷径D ；  S辊的线速度Vl与S辊的直径Ds经过除法器得到转速给定值，转速给定值与转速η经过比较器得到速度偏差；卷筒卷径D与带钢带宽共同作用的转动惯量经过比例调节器，所述比例调节器用于根据卷筒卷径D与带钢带宽的变化引起的动态惯量变化来调节比例系数；将速度偏差和比例系数输入速度调节器得到速度整定值，速度整定值作为电流给定值；将电流给定值和力矩极限值Mm送入电流调节器，经电流调节器通过如下公式得到主电机M的电枢电流值，使主电机M根据得到的电枢电流Id运转；     Mm=Cm Φ Id   其中，Mm为主电机的力矩极限值；Φ为磁通量，单位:Wb ;Cm为电动机力矩常数，取2.68N/m.A ;Id为电枢电流，单位:A。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，所述S辊的线速度Vl的计算如下:  S辊的驱动电机Ml通过减速器I连接S棍，在S辊的驱动电机Ml安装脉冲编码器I检测S辊的转速nl，利用下式计算得到S辊的线速度Vl:        V   rie &#8212; I     ――'........................Knl  其中，V1-卷筒转速，单位:m/min ；  Ds--S棍的直径，单位:m ；  Ii1--S棍的实际转速,单位:r/min ；  31&#8212;&#8212;圆周率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的方法，其特征在于，所述比例调节器根据系统卷径带宽的变化引起的动态惯量变化，来调节速度条件器的比例系数，给速度调节器叠加一个5%的给定值，使速度饱和；饱和的速度使电流环限幅输出，当速度饱和后，力矩极限接管系统控制；比例系数的计算公式如下:   κ (Α + DfiCJm   " 2haRTZM其中，Kn&#8212;比例调节器的比例系数；  h&#8212;频率宽度，为了跟随特性和抗干扰性，h取5 ;  β&#8212;&#8212;电流反馈系数，单位:V/A，取0.0095V/A ；   Ce-主电机的电势转速比,单位:V/(r.min-1),取0.1 85V/(r.mirT1)；   Tm&#8212;&#8212;主电机机电时间常数，单位:s，空卷时Tm=0.148s，满卷时Tm = 0.9s ；  Tzn掼性时间常数，单位:s，本发明取0.0124s ；  α-转速反馈系数，单位:s,本发明取0.0Ols ；  R&#8212;&#8212;电枢回路等效电阻，单位:欧姆。</div>
+    </div>
+    </div> <div class="claim"> <div num="4" class="claim">
+      <div class="claim-text">4.一种卷取机的张力模糊PID控制方法，其特征在于，所述的模糊控制器的设置如下；  步骤1:对每个模糊控制器的输入和输出均设置七个语言值，采用Gauss型函数，并确定函数的边界点和中心点，完成所有控制语言的隶属度函数；  步骤2:建立模糊规则表，即确定输入和输出之间的控制规则；`  步骤3:对输出的模糊语言利用模糊规则表解模糊。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的卷取机的张力模糊PID控制方法，其特征在于，所述的步骤3采用最大隶属度法解模糊。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求4所述的卷取机的张力模糊PID控制方法，其特征在于，在解模糊过程中，如果推理出来的论域有多个元素同时出现最大隶属函数的值，就取这些元素的平均值作为该隶属函数的清晰值。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59860155" lang="ZH" load-source="patent-office" class="description">
+    <p>卷取机的张力模糊PID控制方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及一种卷取机张力控制方法，通过对模糊控制器对卷取机的电流环及速度环的PID参数控制，实现卷取机张力间接控制。本发明可广泛应用于纤维、造纸、塑料薄膜、电线、印刷品、磁带等轻工业相关领域以及金属制品行业。</p>
+    <p>背景技术</p>
+    <p>[0002]	在冶金行业中，卷取机是将热轧或冷轧钢材卷取成卷筒状的轧钢车间辅助设备，用卷取机将钢材弯曲成卷，从而为增大原材料重量、提高轧制速度、减小轧件头、尾温差提供了有力的条件，由此导致了产品产量与质量的提高；此外，成卷的轧材便于运送，这是各种形式卷取机的共同特点和作用。</p>
+    <p>[0003]	卷取机一个重要的控制就是张力控制，在冶金行业中，对薄钢板的卷取就会碰到类似问题。如果张力过大，钢材在卷取的过程中，便会使钢卷的内卷产生相对滑动，由滑动造成的表面划痕，极大地影响了钢材的表面质量，更为重要的是，张力过大会造成钢卷内部应力变大，最终使钢卷的内孔内陷，或者使整个内层卷突出，形成塔形，最终使钢卷的等级降低。如果卷取的张力过小，钢卷会在其自身重力的情况下松散、突出，无法对其包装。而且在松散过程中，由于钢卷的相对滑动，常常会在钢材表面产生大面积的划痕。</p>
+    <p>[0004]	解决上述问题，工业现场传统方式通过变频器对卷筒电机进行控制。通常采用PLC对电机进行PI (比例、积分）调节，或者PID (比例、积分、微分）调节。传统的PID控制算法，其设计简单、实施容易，具有很强的鲁棒性，特别对二阶系统具有最优的调节特性，因此在工业控制中一直占有主导地位。但是，张力系统中，常常有很多干扰因素，PI或者PID调节系数，如Kp(比例系数）K1 (积分系数）Kd (微分系数）一旦设定，如果没有人为对其进行调节，这些参数是固定不变的，它们不会随着受控参量的变化而变化，即不会随着环境的改变而改变。但实际上，在张力控制过程中，张力的大小是随着卷径的变化而实时变化的，当卷径较小时，卷辊线速度较小，张力不大。随着卷径的不断扩大，卷辊的线速度变快，张力变大。因此设置静态参数往往达不到最佳控制效果，PID控制常常达不到要求精度。</p>
+    <p>[0005]	纵观国内外的张力控制设备的发展，它的研究重点是对张力控制的算法，目前已经有一些控制算法，神经网络控制算法，不依赖对控制对象的数学模型，但是，由于神经网络需要大量的样本且需要对网络样本进行训练，而训练过程比较繁琐，不适宜卷取机这类对控制实时性有较强要求的系统；分析卷取机这一类系统，它是多参量、非线性的，不宜使用精确的数学方法控制。这样的系统，恰恰最适合使用模糊控制技术进行控制。模糊控制是一种基于规则的控制，它直接采用语言控制规则，出发点是模糊语言和相关专家的知识，在设计中不需要建立被控制对象的精确的数学模型，控制机理和策略易于接受与理解，设计简单，便于应用。</p>
+    <p>发明内容</p>
+    <p>[0006]	针对上述现有技术存在的缺陷或不足，本发明的目的在于，提供一种卷取机的张力模糊PID控制方法。本申请首先对卷取机工作特性进行分析，完成卷取机主电机的选型；然后建立卷取机的数学模型，完成卷取机的工作仿真；设计卷取机张力控制的模糊控制器，该模糊控制器不是建立在数学分析基础上，而是根据工程实际运行的样本确定各参数和控制规则，最后将模糊控制器应用于实际卷取机系统，根据控制结果调整输入、输出隶属度函数，直至调整到理想效果。</p>
+    <p>[0007]	为了实现上述目的，本发明采用如下的技术解决方案:</p>
+    <p>[0008]	一种卷取机的张力模糊PID控制方法，该方法采用电流环和速度环双闭环控制，对电流环和速度环的反馈环节分别设置PID调节器，即速度调节器和电流调节器，并采用六个模糊控制器分别控制电流环和速度环的PID参数的调整，每个模糊控制器采用MISO的形式即两输入一输出，输入量均为设定张力的偏差值E以及偏差变化率Ec，输出量分别为电流控制器和速度控制器需要的P、1、D参数；在电流调节器与速度调节器之前分别串入3个相应的模糊控制器，在卷取机运行的过程中，不断调整隶属度函数，对电机的转速和电机电枢电流进行控制，从而实现对卷取机张力的自动控制，使卷取机的张力T实现自动调节始终保持恒定；具体操作如下: [0009]	用户根据公式T= σ 0bh设定所需张力T:其中，b为带钢的宽度，单位:mm ；h为带钢的厚度，单位:mm ; %为带钢的单位张力，单位:N/mm2 ；</p>
+    <p>[0010]	根据公Smt=T* (D/2)计算得到张力力矩Mt，单位:Nm ;其中，T为张力设定值单位:N, D为卷筒卷径D,单位:m ;计算动态力矩Md,单位:Nm ;通过实验得到空载力矩Μ。,单位:Nm ；将张力力矩Mt、动态力矩MD、空载力矩Μ。相加得到主电机的力矩极限值Mm ;</p>
+    <p>[0011]	在主电机M上安装脉冲编码器2测得卷筒的转速η，通过S辊的线速度Vl计算卷筒的线速度V2，将卷筒的线速度V2与卷筒的转速η经过除法器得到卷筒卷径D ；</p>
+    <p>[0012]	S辊的线速度Vl与S辊的直径Ds经过除法器得到转速给定值，转速给定值与转速η经过比较器得到速度偏差；卷筒卷径D与带钢带宽共同作用的转动惯量经过比例调节器，所述比例调节器用于根据卷筒卷径D与带钢带宽的变化引起的动态惯量变化来调节比例系数；将速度偏差和比例系数输入速度调节器得到速度整定值，速度整定值作为电流给定值；将电流给定值和力矩极限值Mm送入电流调节器，经电流调节器通过如下公式得到主电机M的电枢电流值，使主电机M根据得到的电枢电流Id运转；</p>
+    <p>[0013]	Mm=C^Id</p>
+    <p>[0014]	其中，Mni为主电机的力矩极限值；Φ为磁通量，单位:Wb ;C111为电动机力矩常数，取</p>
+    <p>2.68N/m.A ;Id为电枢电流，单位:A。</p>
+    <p>[0015]	本发明还包括如下其他技术特征:</p>
+    <p>[0016]	所述S辊的线速度Vl的计算如下:</p>
+    <p>[0017]	S辊的驱动电机Ml通过减速器I连接S辊，在S辊的驱动电机Ml安装脉冲编码器I检测S辊的转速nl，利用下式计算得到S辊的线速度Vl:</p>
+    <p>[0018]	Ds = ~&#8212;</p>
+    <p>[0019]	其中，Ds&#8212;&#8212;S辊的直径，单位m;</p>
+    <p>[0020]	Ii1-S棍的实际转速,单位r/min ；</p>
+    <p>[0021]	J1-圆周率。[0022]	所述比例调节器根据系统卷径带宽的变化引起的动态惯量变化，来调节速度条件器的比例系数的计算公式如下:</p>
+    <p>[0023]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00061.png"> <img id="idf0001" file="CN103076743AD00061.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00061.png" class="patent-full-image" alt="Figure CN103076743AD00061"> </a> </div>
+    <p>[0024]其中，</p>
+    <p>[0025]	Kn~比例调节器的比例系数；</p>
+    <p>[0026]	h&#8212;频率宽度，为了跟随特性和抗干扰性，h取5 ;</p>
+    <p>[0027]	β&#8212;&#8212;电流反馈系数，单位:V/A取0.0095V/A ；</p>
+    <p>[0028]	Ce-主电机的电势转速比，单位:V/ (r.mirT1)取 0.185V/ (r.mirT1)；</p>
+    <p>[0029]	Tm&#8212;&#8212;主电机机电时间常数，单位:s，空卷时Tm=0.148s，满卷时Tm = 0.9s ；</p>
+    <p>[0030]	Tvn--丨贯性时间常数，单位:s，取0.0124s ；</p>
+    <p>[0031]	α&#8212;&#8212;转速反馈系数，单位:s取0.0Ols ;</p>
+    <p>[0032]	R&#8212;&#8212;电枢回路等效电阻。单位:欧姆；</p>
+    <p>[0033]	所述的模糊控制器的设置如下；</p>
+    <p>[0034]	步骤1:对每个模糊控制器的输入和输出均设置七个语言值，采用Gauss型函数，并确定函数的边界点和中心点，完成所有控制语言的隶属度函数；</p>
+    <p>[0035]	步骤2:建立模糊规则表，即确定输入和输出之间的控制规则；</p>
+    <p>[0036]	步骤3:对输出的模糊语言利用模糊规则表解模糊。</p>
+    <p>[0037]	所述的步骤3采用最大隶属度法解模糊。</p>
+    <p>[0038]	在解模糊过程中，如果推理出来的论域有多个元素同时出现最大隶属函数的值，就取这些元素的平均值作为该隶属函数的清晰值。</p>
+    <p>[0039]	与现有技术相比，本发明具有如下优点:</p>
+    <p>[0040]1、以人的丰富实践经验和思维过程，构建的模糊规则进行推理和判断。它无需对被控对象建立精确的数学模型，只需做模糊描述即可。易于实行和操作。</p>
+    <p>[0041]	2、模糊控制是通过引入模糊逻辑语言变量，通过各变量间的模糊关系进行推理，从而使计算机控制进入那些基于精确模型无法控制的禁区。</p>
+    <p>[0042]	3、更精确的实现了张力控制，使设备更加简单，人性化，减少了生产的废品率，降低了成本。</p>
+    <p>附图说明</p>
+    <p>[0043]	图1是本发明的卷取机张力控制系统的结构原理图。</p>
+    <p>[0044]	图2是模糊PID控制原理图。</p>
+    <p>[0045]	图3是常规的PID张力控制数学模型。</p>
+    <p>[0046]	图4是本发明的模糊PID张力控制数学模型。</p>
+    <p>[0047]	图5是常规PID控制响应曲线速度波形图。</p>
+    <p>[0048]	图6是本发明进行模糊PID控制的响应曲线速度波形图。</p>
+    <p>[0049]	以下结合附图和具体实施方式对本发明进一步解释说明。</p>
+    <p>具体实施方式[0050]	I卷取机的建立</p>
+    <p>[0051]1.1卷取机间接张力控制的实现原理</p>
+    <p>[0052]	卷取机卷绕带钢时，S辊的线速度设为vl，卷筒上的线速度设为v2，在开始卷取时，v2显然大于vl的，只有这样，开始卷取时才能使带钢紧紧缠绕在卷筒上。否则便会使带钢松散。根据胡克定律F=-kx得到带钢的张力T的计算公式:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00071.png"> <img id="idf0002" file="CN103076743AD00071.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00071.png" class="patent-full-image" alt="Figure CN103076743AD00071"> </a> </div>
+    <p>[0054]	其中A&#8212;&#8212;带钢横截面积，单位:mm2 ；</p>
+    <p>[0055]	K&#8212;&#8212;带钢的弹性系数，单位:N/mm ；</p>
+    <p>[0056]	I&#8212;&#8212;卷筒与辊之间的距离，单位:mm ；</p>
+    <p>[0057]	t&#8212;卷取机建立张力的时间，单位:s ;</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00072.png"> <img id="idf0003" file="CN103076743AD00072.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00072.png" class="patent-full-image" alt="Figure CN103076743AD00072"> </a> </div>
+    <p>[0059]	从公式可知，只有当v2大于Vl时，被卷取的带钢便会产生弹性形变，从而产生张力T ;v2与vl差值为固定值时张力恒定不变。v2与vl中的任一个发生变化都会导致张力不稳定，造成卷取出现质量问题。因此，在卷取机工作过程中应保持v2与vl的速度差为定值。</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00073.png"> <img id="idf0004" file="CN103076743AD00073.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00073.png" class="patent-full-image" alt="Figure CN103076743AD00073"> </a> </div>
+    <p>[0061]	其中，C&#8212;&#8212;常数，由卷取机系统本身特性决定；</p>
+    <p>[0062]	E&#8212;&#8212;主电机的电动势；单位:V ;</p>
+    <p>[0063]	V&#8212;&#8212;卷筒的线速度；单位:m/s ;</p>
+    <p>[0064]	Id&#8212;&#8212;主电机的电枢电流。单位:A ;</p>
+    <p>[0065]	从上式可知，要求张力大小T不变，那么线速度v2是恒定的，而电动势不变，张力T可以用电枢电流线性表示；如果主电机的电动势E不变，而Id与V的比也为定值，那么张力T也为一定值；根据公式</p>
+    <p>[0066]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00074.png"> <img id="idf0005" file="CN103076743AD00074.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00074.png" class="patent-full-image" alt="Figure CN103076743AD00074"> </a> </div>
+    <p>[0067]	其中，Cm&#8212;&#8212;电动机力矩常数，单位:N/m.A ；</p>
+    <p>[0068]	D-卷筒卷径,单位:m ；</p>
+    <p>[0069]	φ-磁通量，单位:Wb ；</p>
+    <p>[0070]	当磁通φ不变时，Id随着卷筒卷径D的变化而变化，并且要与卷筒卷径D的变化保持一致，使张力T达到一个恒值，或者保持Id不动，而磁通Φ随着卷筒卷径D变化，从而可以通过控制主电机的电枢电流Id实现对卷取机张力的控制。</p>
+    <p>[0071]	因为卷取过程中，卷径D不断增大，而线速度不变，但这样便会增大力矩，为了保持卷取机张力T为恒定值，须随着卷筒卷径D的变化调节电机速度，降低转速，达到最终的精确控制。因此，可以通过控制主电机的转速实现对卷取机张力的控制。</p>
+    <p>[0072]	综上，通过对电机电枢电流或者对电机的转速的控制，就能实现对卷取机张力的间接控制。因此，卷取机采用电流环和速度环双闭环控制。设计双闭环控制能够获得理想的启动过程。使用两种负反馈分别对电流环和速度环进行调节，对这两个反馈环节设置PID调节器。</p>
+    <p>[0073]1.2卷取机分析</p>
+    <p>[0074]	本发明需要设计一种间接张力控制卷取机，应用最大力矩式间接控制，通过对整个卷取张力系统的物理方程进行动态、静态分析，得出一系列参数，达到间接控制卷取机张力的目的。</p>
+    <p>[0075]	如图1所示，本发明的方法所应用的卷取机包括可编程控制器S7-300PLC、西门子6SE70变频器、现场总线Profibus-DP、脉冲编码器1、脉冲编码器2、减速器1、减速器2、主电机M、S辊的驱动电机Ml和卷筒。</p>
+    <p>[0076]	该卷取机具体工作原理如下:</p>
+    <p>[0077]	用户根据需要设定卷取机的张力值，张力设定值T (单位:N)与卷筒卷径D的实测值根据公式Mt=T* (D/2)计算得到张力力矩Μτ。卷筒卷径D、卷筒转速η的变化产生动态力矩Md ;通过实验得到空载力矩Μ。；将张力力矩Mt、动态力矩MD、空载力矩Μ。相加得到主电机的力矩极限值Mm。</p>
+    <p>[0078]	主电机M通过减速器2驱动卷筒转动卷取带钢，减速器2选用卧式两级圆柱斜齿轮，在卷筒转动过程中，将来自S辊的带钢经过导向辊缠绕在卷筒上，在主电机M上安装脉冲编码器2测得卷筒 的转速n，根据胡克定律F=-kx，只有卷筒的线速度V2与S辊的线速度Vl的差值是定值，被卷曲的带材产生固定的形变，才能保证张力恒定。由张力设定值T与带材弹性系数、带材横截面积、卷筒与辊之间距离可建立卷筒的线速度V2与S辊的线速度Vl的差值。通过S辊的线速度Vl计算卷筒的线速度V2，也可直接在导向辊上安装速度传感器测出卷筒的线速度V2，将卷筒的线速度V2与卷筒的转速η经过除法器得到卷筒卷径D。</p>
+    <p>[0079]	S辊的驱动电机Ml通过减速器I连接S辊，在S辊的驱动电机Ml安装脉冲编码器I检测S辊的转速nl，利用下式计算得到S辊的线速度Vl:</p>
+    <p>          V</p>
+    <p>[0080]	Ds = ~&#8212;</p>
+    <p>               MK1</p>
+    <p>[0081]	其中，Ds&#8212;&#8212;S辊的直径，单位m;</p>
+    <p>[0082]	Ii1S棍的实际转速,单位m/min ；</p>
+    <p>[0083]	J1-圆周率。</p>
+    <p>[0084]	S辊的线速度Vl与S辊的直径Ds经过除法器得到转速给定值，转速给定值与转速η经过比较器得到速度偏差；为了保持主电机转速尽可能与给定转速一致，达到系统无静差，转速环节应被校正为II型系统，因此，在卷筒卷径D与带宽共同作用的转动惯量需要经过比例调节器，比例调节器根据系统参数的变化调节比例系数Kn，其计算公式如下:</p>
+    <p>              (h + \ \RC T</p>
+    <p>[0085]	Kn =玉........-、.令f........l</p>
+    <p>                  1 h a KI,,.[0086]其中，</p>
+    <p>[0087]	Kn&#8212;&#8212;比例系数；</p>
+    <p>[0088]	h&#8212;频率宽度，为了跟随特性和抗干扰性，h取5 ;</p>
+    <p>[0089]	β-电流反馈系数，取0.0095V/A ；</p>
+    <p>[0090]	Ce&#8212;&#8212;主电机的电势转速比，取0.lSSV/^r.mirT1)；[0091]	Tm&#8212;&#8212;主电机机电时间常数，单位:s，空卷时1&#8222;=0.148s，满卷时Tm = 0.9s ；</p>
+    <p>[0092]	Trn--掼性时间常数,单位:s，取0.0124s ；</p>
+    <p>[0093]	α&#8212;&#8212;转速反馈系数，单位:s，取0.0Ols ;</p>
+    <p>[0094]	R&#8212;&#8212;电枢回路等效电阻,单位:欧姆；</p>
+    <p>[0095]	将速度偏差和比例系数输入速度调节器得到速度整定值，速度整定值作为电流给定值；将电流给定值和力矩极限值Mm送入电流调节器，经电流调节器得到主电机M的电枢电流值，主电机M根据得到的电枢电流值运转。</p>
+    <p>[0096]	所述的速度调节器和电流调节器均为PID控制器，速度调节器和电流调节器设置在变频器中。</p>
+    <p>[0097]	所述的现场总线Profibus-DP实现PLC与变频器的通讯。</p>
+    <p>[0098]1.3主电机的选择</p>
+    <p>[0099]	在卷取机张力控制中，设计两个PI调节器:电流调节器和速度调节器。其中电流调节器是当卷径D在增加过程中，要建立张力电流idl、空载补偿电流id2、动态力矩补偿电流1(13&#187;由此完成系统的动态补偿，才能保证系统卷取电机的电枢电流恒定。</p>
+    <p>[0100]	主电机M作为卷取机的动力源，必须产生足够的力矩以驱动系统。从图1可知卷筒有三个力矩:张力力矩Mt、动态力矩MD、空载补偿力矩M。，因为卷取机工作时三个力矩相加得到力矩极限值Mm，使其作为速度环的输入，选取的主电机工作应同时满足理论力矩极限和电流极限。卷取机的主电机力矩平衡方程为:</p>
+    <p>[0101]	Mm=MT+MD+M。</p>
+    <p> [0102]	Mm=C111 Φ Id</p>
+    <p>[0103]	Mm&#8212;&#8212;主电机的电磁力矩,单位:Nm ；</p>
+    <p>[0104]	Mt&#8212;&#8212;产生张力所需的张力力矩，单位:Nm ；</p>
+    <p>[0105]	Md&#8212;动态力矩，主电机加速为正值，主电机减速为负值，单位:Nm ；</p>
+    <p>[0106]	M0-空载力矩，单位:Nm;</p>
+    <p>[0107]	φ-磁通量；单位:Wb</p>
+    <p>[0108]	Cm&#8212;&#8212;电动机力矩常数，由电动机自身性能决定，单位:N/m.A ；</p>
+    <p>[0109]	Id&#8212;&#8212;电枢电流。单位:A</p>
+    <p>[0110]	通过上式得到主电机的力矩极限值Mm即电磁力矩值Mm，进而得到电枢电流Id ;选取满足电枢电流Id的合适主电机。本发明中Cm为2.68N/m.A。</p>
+    <p>[0111]1.3.I张力力矩Mt的计算</p>
+    <p>[0112]	产生张力所需的张力力矩是在卷筒启动的时候对带钢所产生的力矩，此张力在建立时与所卷取的带材有关。本发明选取带钢的宽度b为1000mm，厚度h为0.5mm，经测定，带钢的单位张力σ Q=140N/mm2,用户依据张力计算公式Τ=σ Qbh计算出负载的理论张力T为35000N其中，b为带钢的宽度，单位:mm ；h为带钢的厚度，单位:mm ; ο。为带钢的单位张力，单位:N/mm2 ；。卷取机的张力力矩Mt=T* (D/2)，其中，T为张力设定值，单位:N ；D为卷筒的卷径，单位:m。</p>
+    <p>[0113]1.3.2动态力矩MD的计算</p>
+    <p>[0114]	卷取机在工作过程中，卷径D的变化直接影响带钢的线速度V2、动态力矩补偿电流id3 ;卷径D随着卷筒不断卷取而逐渐增大，转动惯量也随着增大，那么卷筒上的线速度V2变化必然跟不上辊的线速度Vl的变化，从而产生动态力矩Md，必须对卷筒的变化的转动惯量进行补偿。动态力矩Md的计算过程如下:</p>
+    <p>[0115]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00101.png"> <img id="idf0006" file="CN103076743AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00101.png" class="patent-full-image" alt="Figure CN103076743AD00101"> </a> </div>
+    <p>[0116]	式中GD12-主电机轴转动惯量；单位:N.m2</p>
+    <p>[0117]	(&#190;2&#8212;&#8212;机械传动转动惯量；单位:N.m2</p>
+    <p>[0118]	OT32&#8212;&#8212;卷取机卷筒转动惯量；单位:N.m2</p>
+    <p>[0119]	η-卷筒转速；r/min</p>
+    <p>[0120]	i&#8212;&#8212;传动比。</p>
+    <p>[0121]	或者根据如下公式计算Md:</p>
+    <p> [0122]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00102.png"> <img id="idf0007" file="CN103076743AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00102.png" class="patent-full-image" alt="Figure CN103076743AD00102"> </a> </div>
+    <p>[0123]式中，</p>
+    <p>[0124]⑶2GD12、(&#174;22、(&#190;2	三个值之和；单位:N.m2</p>
+    <p>[0125]	g&#8212;&#8212;重力加速度；单位:m/s2</p>
+    <p>[0126]	V-卷筒线速度；单位:m/min</p>
+    <p>[0127]	D-卷筒实时卷径；单位:m</p>
+    <p>[0128]	h&#8212;&#8212;带材厚度；单位:m</p>
+    <p>[0129]	b&#8212;&#8212;带材宽度,单位m;</p>
+    <p>[0130]	S&#8212;&#8212;带材的填充率，与带材致密程度有关，一般为0.85、.9 ；</p>
+    <p>[0131]	P&#8212;&#8212;带材的比重，单位kg/m3，与带材材料有关；</p>
+    <p>[0132]	OT12为主电机轴转动惯量，与电机本身参数有关AD22为机械传动(主要为减速器及其连接装置）转动惯量AD/、⑶/视为已知定量；GD32的计算公式如下:</p>
+    <p>[0133]	GD32 = 2 31 P Sb (r4-r04)</p>
+    <p>[0134]式中，</p>
+    <p>[0135]	P&#8212;&#8212;带材的比重，单位kg/m3，与带材材料有关；</p>
+    <p>[0136]	S&#8212;&#8212;带材的填充率，与带材致密程度有关，一般为0.85、.9 ；</p>
+    <p>[0137]	b&#8212;&#8212;带材宽度，单位m;</p>
+    <p>[0138]	r&#8212;&#8212;带卷半径,单位m ；</p>
+    <p>[0139]	r0&#8212;&#8212;卷筒半径,单位m ；</p>
+    <p>[0140]	由公式可知，⑶32由带材的宽度、密度、卷筒的直径或半径相关,并不恒定。将⑶Λ⑶/、⑶/三个值相加，通过上述公式，即可得到卷取机动态力矩Md。</p>
+    <p>[0141]1.3.3空载力矩Μ。的计算</p>
+    <p>[0142]	空载力矩Μ。主要克服机械摩擦产生的力矩，卷取机自动过程中克服的最大静摩擦力所需的电流可通过点动方式进行测量，先将电流限幅至零，逐渐加大，直到电机启动，这样便可以得到卷取机空载所需的补偿电流，进而得到空载力矩Μ。。</p>
+    <p>[0143]	在本实施例中，卷筒内径D=508mm ;卷筒外径D=1500mm ;卷筒宽度700&#12316;1250mm ；带钢厚度0.2mnTl.2mm ;卷取速度传动比i=16.88 ;工作电压380v ;卷取速度maxl30m/min ；上述已经计算出主电机所需最大力矩值Mm和电枢电流Id，选取的主电机M应满足最大力矩和最大电流要求:主电机参数220V，额定功率90KW，主电机转速750r/min，励磁回路电阻Rx=0.08 Ω，励磁回路电感I Σ =0.004Η,电枢回路电阻Ra=0.02 Ω，过载倍数λ =1.5。</p>
+    <p>[0144]	2卷取机模糊PID的设计</p>
+    <p>[0145]	2.1自整定设计思想:</p>
+    <p>[0146]	PID参数自整定设计思想是先找出PID三个参数Kp、Kl、Kd与偏差|Ε|和偏差变化率IeJ之间的模糊关系，在工作中不断检测偏差值|e|和偏差变化率|e」，再根据模糊控制原理对参数κΡ、κι、Kd进行在线校正，以满足不同的偏差值|ε|和|ec|时对控制参数的不同要求，而使被控对象有良好的动、静态性能，而且计算量小，便于微机实现。</p>
+    <p>[0147]	(I)在偏差值|εI较大，即系统处于响应的初始段，为了使系统响应具有良好的快速跟踪性能，并避免因开始时偏差的瞬间变大，可能引起微分过饱和，而使控制作用超出许可范围，应取较大的Kp和较小的K。，同时为了避免系统响应出现较大的超调，需对积分作用加以限制，通常取Κ1=0。</p>
+    <p>[0148]	(2)当偏差值IeI为中等大小时，即系统响应处于中间阶段，为了使系统具有较小的超调，应取较小的Κρ，适当的Kl和KD，以保证系统的响应速度。</p>
+    <p>[0149]	(3)当偏差值IeI较小时，即系统处于响应处于结束阶段，为使系统具有较好的稳定性，应取较大的K p和K1，同时为避免系统在设定值附近出现震荡，并考虑系统的抗干扰性能，Kd值可取大些，通常为中等大小，当I Ec I较大时，K。值可取小些。</p>
+    <p>[0150]	建立参数Kp、Kl、Kd与偏差值|E|和偏差变化率|Ee|间的二元函数关系:</p>
+    <p>[0151]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00111.png"> <img id="idf0008" file="CN103076743AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00111.png" class="patent-full-image" alt="Figure CN103076743AD00111"> </a> </div>
+    <p>[0152]	通过上式计算PID参数Kp、Kl、Kd,即可得到控制器在第η个采样时刻的输出量U(η):</p>
+    <p>[0153]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00112.png"> <img id="idf0009" file="CN103076743AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00112.png" class="patent-full-image" alt="Figure CN103076743AD00112"> </a> </div>
+    <p>[0154]	其中，Kp为比例系数；Kl为积分系数；Kd为微分系数；e (η)是第η个时刻的输出采样值，e (η-l)是第η-l个时刻的输出采样值。</p>
+    <p>[0155]	2.2模糊控制器的设计:</p>
+    <p>[0156]	把模糊控制理论与PID控制算法结合起来构成模糊PID控制器，如图2所示的自整定模糊PID控制器。本发明的卷取机张力控制的模糊PID自动控制方法，采用六个模糊PID控制器，分别用于控制电流环和速度环的PID参数的调整。模糊控制器设置在可编程控制器PLC中，在电流调节器与速度调节器之前分别串入相应的模糊控制器。每个模糊控制器均为两输入一输出（MISO)结构，输入为卷取机设定的张力偏差值E与张力偏差值变化率Eco将输入的具体值模糊化，采用mamdani算法对模糊过程进行推理，输出量分别为电流控制器和速度控制器需要的P、1、D参数。</p>
+    <p>[0157]	2.2.1确定隶属度函数</p>
+    <p>[0158]	每个模糊控制器均为两输入一输出（MISO)结构，输入为卷取机设定的张力偏差值E与张力偏差值变化率E。，将输入的两个精确量利用隶属度函数模糊化，作为PID动态过程中现象差异的中间过渡，在实际卷取机系统中，不断调整隶属度函数，直到恒张力控制效果理想为止，本发明中最终确定了使用Gauss型隶属度函数，统计表明，自然界众多现象都服从正态分布，因此采用Gauss型做为隶属度函数是合适的。</p>
+    <p>[0159]	将期望张力设定在1000N，由工程实际基本可以确定，张力偏差值E输入的基本论域为【-270N，270N],张力偏差变化率EC基本论域为【-60N/0.1S, 60N/0.1S】。上述输入量的越界值均作为边界值处理。论域内的精确量通过隶属度函数转变为语言值{负大、负中、负小、零、正小、正中、正大}，用英文字母缩写为【NB、匪、NS、Z0、PS、PM、PB】。输入输出的隶属度函数参见表1-表5。</p>
+    <p>[0160]	表I输入变量E (张力偏差值E)的隶属度函数</p>
+    <p>[0161]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00121.png"> <img id="idf0010" file="CN103076743AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00121.png" class="patent-full-image" alt="Figure CN103076743AD00121"> </a> </div>
+    <p>[0162]	表2输入变量Ec (张力偏差变化率Ec)的隶属度函数</p>
+    <p>[0163]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00122.png"> <img id="idf0011" file="CN103076743AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00122.png" class="patent-full-image" alt="Figure CN103076743AD00122"> </a> </div>
+    <p>[0164]	表3输出变量P的隶属度函数[0165]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00131.png"> <img id="idf0012" file="CN103076743AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00131.png" class="patent-full-image" alt="Figure CN103076743AD00131"> </a> </div>
+    <p>[0166]	表4输出变量I的隶属度函数</p>
+    <p>[0167]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00132.png"> <img id="idf0013" file="CN103076743AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00132.png" class="patent-full-image" alt="Figure CN103076743AD00132"> </a> </div>
+    <p>[0168]	表5输出变量D的隶属度函数</p>
+    <p>[0169]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00133.png"> <img id="idf0014" file="CN103076743AD00133.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00133.png" class="patent-full-image" alt="Figure CN103076743AD00133"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00141.png"> <img id="idf0015" file="CN103076743AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00141.png" class="patent-full-image" alt="Figure CN103076743AD00141"> </a> </div>
+    <p>[0170]	2.2.2模糊规则表的建立</p>
+    <p>[0171]	在每个PID控制器中，比例系数Kp值决定系统的响应速度。增大Kp能提高响应速度，减小稳态误差；但Kp值过大会产生较大的超调，甚至使系统不稳定；减小Kp可减小超调，提高稳定性，但Kp过小会减慢响应速度，延长响应时间。因此调节初期应适当取较大的Kp值以提高响应速度，而在调节中期，Kp则取较小值，以使系统具有较小的超调并保证一定的响应速度；而在调节后期，再将Kp值调到较大值来减小静差，提高控制精度。</p>
+    <p>[0172]	表6Κρ模糊控制规则表</p>
+    <p>[0173]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00142.png"> <img id="idf0016" file="CN103076743AD00142.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00142.png" class="patent-full-image" alt="Figure CN103076743AD00142"> </a> </div>
+    <p>[0174]	在PID控制器中，积分控制Kl主要用来消除系统的稳态误差。由于饱和非线性等原因，积分过程有可能在调节初期产生积分饱和，从而引起调节过程的较大超调。因此，在调节过程初期，为防止积分饱和，其积分作用Ki应当弱一些，甚至可以取零；而在调节中期，为了避免影响稳定性，其积分作用Ki应该比较适中；最后在过程后期，则应增强积分作用Kl,以减小调节静差。</p>
+    <p>[0175]	表7K1模糊控制规则表</p>
+    <p>[0176]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00143.png"> <img id="idf0017" file="CN103076743AD00143.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00143.png" class="patent-full-image" alt="Figure CN103076743AD00143"> </a> </div>
+    <p>[0177]</p>
+    <p>[0178]	微分环节的调整主要针对大惯性过程引入的，微分环节的系数Kd的作用在于改变系统的动态特性。系统的微分环节系数能反映信号变换的趋势，并能在偏差信号变换太大之前，在系统中引入一个有戏的早期修正信号，从而加快响应速度，减少调整时间，消除振荡，最终改变系统的动态性能。因此，微分环节的系数Kd值的选取对调节动态特性影响很大。微分环节的系数Kd过大，调节过程制动就会超前，致使调节时间过长；微分环节的系数Kd过小，调节过程的制动就会落后，从而导致超调增加。根据实际过程经验，在调节初期，应加大微分作用，这样可得到较小甚至避免超调；而在中期，由于调节特性对Kd值得变化比较敏感，因此，Kd值应适当小一些并应保持固定不变；在调节后期，Kd值应减小，以减小被控制过程的制动作用，进而在调节过程初期由于Kd值较大所造成的调节过程的时间延长。</p>
+    <p>[0179]	表8Kd模糊控制规则表</p>
+    <p>[0180]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00151.png"> <img id="idf0018" file="CN103076743AD00151.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00151.png" class="patent-full-image" alt="Figure CN103076743AD00151"> </a> </div>
+    <p>[0181]	2.2.3解模糊化</p>
+    <p>[0182]	模糊控制器通过模糊规则表，得到一组语言化的控制输出，需要对这些语言的模糊量精确化，也就是解模糊过程，这里采用最大隶属度法进行数据清晰化，即选取隶属度最大的元素，把其作为清晰量的方法。如果推理出来的论域（即输出的模糊子集)中，有多个元素同时出现最大隶属函数的值，那么就取这些元素的平均值作为该隶属函数的清晰值。</p>
+    <p>[0183]	完成上述工作后，对卷取机张力控制设计已经完成。</p>
+    <p>[0184]	3.卷取机模型建立</p>
+    <p>[0185]	以下通过建立卷取机数学模型，来说明本发明的方法的有效性。卷取机常规PID数学模型如图3所示，在该模型的基础上，添加模糊PID控制器得到如图4所示的模糊PID数学模型。</p>
+    <p>[0186]	对数学模型中的各参数进行选取:</p>
+    <p>[0187]	晶闸管滞后时间常数取Ts=0.0017s;</p>
+    <p>[0188]	电流环的滤波时间常数Ttji=0.002s;</p>
+    <p>[0189]	晶闸管的比例系数</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00152.png"> <img id="idf0019" file="CN103076743AD00152.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00152.png" class="patent-full-image" alt="Figure CN103076743AD00152"> </a> </div>
+    <p>,其中取电流调节器的限幅值Uet=8V，电压Ud(l=220V，</p>
+    <p>                                   那么 Ks=27.5。 [0190]	转速反馈系数</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00153.png"> <img id="idf0020" file="CN103076743AD00153.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00153.png" class="patent-full-image" alt="Figure CN103076743AD00153"> </a> </div>
+    <p>其中选取Um=8V,则反馈系数α =0.011;</p>
+    <p>[0191]	对于速度调节器分为满卷时和空卷时:Kn=:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00154.png"> <img id="idf0021" file="CN103076743AD00154.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00154.png" class="patent-full-image" alt="Figure CN103076743AD00154"> </a> </div>
+    <p>’其中有:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00161.png"> <img id="idf0022" file="CN103076743AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00161.png" class="patent-full-image" alt="Figure CN103076743AD00161"> </a> </div>
+    <p>[0193]	电流环电流调节器的时间常数τ i=Tn,其中取速度环滤波时间常数</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00162.png"> <img id="idf0023" file="CN103076743AD00162.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00162.png" class="patent-full-image" alt="Figure CN103076743AD00162"> </a> </div>
+    <p>[0194]	对于转动惯量，在电机空卷过程中，卷筒和卷取电机的转动惯量折算到电机的轴</p>
+    <p>上的惯量为⑶2=1962N.m2，转动惯量</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00163.png"> <img id="idf0024" file="CN103076743AD00163.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00163.png" class="patent-full-image" alt="Figure CN103076743AD00163"> </a> </div>
+    <p>[0195]	当卷取机工作时，卷入卷筒上得带钢和卷取电机的转动惯量折算到电机的轴上的惯量为GD2=I 1772N.m2，，转动惯量QQ kS.m2。其中带钢卷取后的直径即卷筒卷径</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00164.png"> <img id="idf0025" file="CN103076743AD00164.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00164.png" class="patent-full-image" alt="Figure CN103076743AD00164"> </a> </div>
+    <p>[0196]电机的电势转速比:0&#8364;Φ</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00165.png"> <img id="idf0026" file="CN103076743AD00165.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00165.png" class="patent-full-image" alt="Figure CN103076743AD00165"> </a> </div>
+    <p>[0197]电机力矩电流比 </p>
+    <p>[0198]	因此电机在卷筒空卷时 0199]空卷时</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00166.png"> <img id="idf0027" file="CN103076743AD00166.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00166.png" class="patent-full-image" alt="Figure CN103076743AD00166"> </a> </div>
+    <p>[0200]卷筒满卷时</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00167.png"> <img id="idf0028" file="CN103076743AD00167.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103076743A/CN103076743AD00167.png" class="patent-full-image" alt="Figure CN103076743AD00167"> </a> </div>
+    <p>[0201]满卷时	Tm = 0.9s</p>
+    <p>[0202]1.6动态仿真</p>
+    <p>[0203]	为了验证本发明方法的有效性，通过Simulink建立数学模型，进行卷取机张力控制常规PID动态仿真，得到如图5所示的速度波形图。从图5看出，常规PID的超调量与调节还不是很理想，还有继续优化的空间。</p>
+    <p>[0204]	利用模糊PID控制器，采用simulink对卷取机数学模型进行卷取机张力控制仿真，得到如图6所示的速度波形图。在电流调节器与速度调节器之前各串入相应的模糊控制器进行仿真，用以检验设计效果，仿真数学模型如图4所示。</p>
+    <p>[0205]	参见如图5和图6，通过常规PID控制与模糊PID控制速度环波形对比，可明显看出，模糊PID超调量与快速量比常规PID控制明显优化了很多，系统运行更加快速及稳定，达到了预期效果。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101579706A?cl=zh">CN101579706A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月19日</td><td class="patent-data-table-td patent-date-value">2009年11月18日</td><td class="patent-data-table-td ">武汉钢铁(集团)公司</td><td class="patent-data-table-td ">一种重卷钢带断带保护控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101602068A?cl=zh">CN101602068A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年7月7日</td><td class="patent-data-table-td patent-date-value">2009年12月16日</td><td class="patent-data-table-td ">东北大学</td><td class="patent-data-table-td ">周期性变厚度带材轧制过程中张力的控制方法及控制系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101673119A?cl=zh">CN101673119A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年10月12日</td><td class="patent-data-table-td patent-date-value">2010年3月17日</td><td class="patent-data-table-td ">天津工业大学</td><td class="patent-data-table-td ">一种控制织机送经卷取过程中经纱张力稳定的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101844155A?cl=zh">CN101844155A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年12月29日</td><td class="patent-data-table-td patent-date-value">2010年9月29日</td><td class="patent-data-table-td ">中冶南方（武汉）自动化有限公司</td><td class="patent-data-table-td ">一种轧机agc控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102319482A?cl=zh">CN102319482A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月20日</td><td class="patent-data-table-td patent-date-value">2012年1月18日</td><td class="patent-data-table-td ">天津大学</td><td class="patent-data-table-td ">一种功能性电刺激模糊控制方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">毛金玲: "<a href='http://scholar.google.com/scholar?q="%E5%8D%B7%E5%8F%96%E6%9C%BA%E5%BC%A0%E5%8A%9B%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F%E7%A0%94%E7%A9%B6"'>卷取机张力控制系统研究</a>", 《中国优秀硕士学位论文全文数据库》, 15 March 2012 (2012-03-15)</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103316959B?cl=zh">CN103316959B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月26日</td><td class="patent-data-table-td patent-date-value">2015年7月22日</td><td class="patent-data-table-td ">江苏亨特宏业重工有限公司</td><td class="patent-data-table-td ">宽幅铝箔立式分卷机卷取轴静态摩擦补偿方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103611730A?cl=zh">CN103611730A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年11月19日</td><td class="patent-data-table-td patent-date-value">2014年3月5日</td><td class="patent-data-table-td ">北京首钢自动化信息技术有限公司</td><td class="patent-data-table-td ">用于提高热连轧新品种首卷钢尺寸控制精度的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103611730B?cl=zh">CN103611730B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年11月19日</td><td class="patent-data-table-td patent-date-value">2015年11月18日</td><td class="patent-data-table-td ">北京首钢自动化信息技术有限公司</td><td class="patent-data-table-td ">用于提高热连轧新品种首卷钢尺寸控制精度的方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=FoT2BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0013040000">G05B13/04</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年5月1日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年6月5日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/73116051e34d06e2c102/CN103076743A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%8D%B7%E5%8F%96%E6%9C%BA%E7%9A%84%E5%BC%A0%E5%8A%9B%E6%A8%A1%E7%B3%8Apid%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95.pdf?id=FoT2BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2lhTgtSip0aJK-Hr7ar3N0jwv8Lw"},"sample_url":"https://www.google.com/patents/reader?id=FoT2BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

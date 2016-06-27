@@ -1,0 +1,322 @@
+<!DOCTYPE html><html><head><title>专利 CN101493677A - 一种神经网络的系统控制器结构及系统辨识结构 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种神经网络的系统控制器结构及系统辨识结构"><meta name="DC.contributor" content="李华嵩" scheme="inventor"><meta name="DC.contributor" content="李华嵩" scheme="assignee"><meta name="DC.date" content="2008-6-30" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及一种神经网络系统的控制器结构及其自动辨识与自动提高系统控制精度的结构。其中神经网络系统控制器结构包含神经网络控制结构、系统控制中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，在实际控制中对期望输出值进行神经网络修正处理，以提高输出控制精度。一种神经网络系统辨识结构，其特征在于：包含神经网络辨识结构、系统辨识中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，使用神经网络的基函数与权值重构控制系统的描述函数。"><meta name="DC.date" content="2009-7-29"><meta name="citation_patent_publication_number" content="CN:101493677:A"><meta name="citation_patent_application_number" content="CN:200810029119"><link rel="canonical" href="https://www.google.com/patents/CN101493677A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101493677A?cl=zh"/><meta name="title" content="专利 CN101493677A - 一种神经网络的系统控制器结构及系统辨识结构"/><meta name="description" content="本发明涉及一种神经网络系统的控制器结构及其自动辨识与自动提高系统控制精度的结构。其中神经网络系统控制器结构包含神经网络控制结构、系统控制中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，在实际控制中对期望输出值进行神经网络修正处理，以提高输出控制精度。一种神经网络系统辨识结构，其特征在于：包含神经网络辨识结构、系统辨识中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，使用神经网络的基函数与权值重构控制系统的描述函数。"/><meta property="og:title" content="专利 CN101493677A - 一种神经网络的系统控制器结构及系统辨识结构"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101493677A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101493677A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=V-1rBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101493677A&amp;usg=AFQjCNFvQbhaoUwSkW-MVYZ-GniryFLCFQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ecbcffc209e75de2900b/CN101493677A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ecbcffc209e75de2900b/CN101493677A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101493677A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101493677A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101493677A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101493677B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101493677A?cl=zh" style="display:none"><span itemprop="description">本发明涉及一种神经网络系统的控制器结构及其自动辨识与自动提高系统控制精度的结构。其中神经网络系统控制器结构包含神经网络控制结构、系统控制中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆...</span><span itemprop="url">https://www.google.com/patents/CN101493677A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101493677A - 一种神经网络的系统控制器结构及系统辨识结构</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101493677A - 一种神经网络的系统控制器结构及系统辨识结构" title="专利 CN101493677A - 一种神经网络的系统控制器结构及系统辨识结构"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101493677 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810029119</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年7月29日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年6月30日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年6月30日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101493677B?hl=zh-CN&amp;cl=zh">CN101493677B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810029119.6, </span><span class="patent-bibdata-value">CN 101493677 A, </span><span class="patent-bibdata-value">CN 101493677A, </span><span class="patent-bibdata-value">CN 200810029119, </span><span class="patent-bibdata-value">CN-A-101493677, </span><span class="patent-bibdata-value">CN101493677 A, </span><span class="patent-bibdata-value">CN101493677A, </span><span class="patent-bibdata-value">CN200810029119, </span><span class="patent-bibdata-value">CN200810029119.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%8D%8E%E5%B5%A9%22">李华嵩</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%9D%8E%E5%8D%8E%E5%B5%A9%22">李华嵩</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101493677A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101493677A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101493677A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=V-1rBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810029119&amp;usg=AFQjCNHKkvIXKBPqlDRB_SqgoME3CZKDOQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=V-1rBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101493677A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFqdh21lU0mPix70R5U3Wg6h6yXTA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT85305412" lang="ZH" load-source="patent-office">一种神经网络的系统控制器结构及系统辨识结构</invention-title>
+      </span><br><span class="patent-number">CN 101493677 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109509707" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及一种神经网络系统的控制器结构及其自动辨识与自动提高系统控制精度的结构。其中神经网络系统控制器结构包含神经网络控制结构、系统控制中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，在实际控制中对期望输出值进行神经网络修正处理，以提高输出控制精度。一种神经网络系统辨识结构，其特征在于：包含神经网络辨识结构、系统辨识中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，使用神经网络的基函数与权值重构控制系统的描述函数。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(8)</span></span></div><div class="patent-text"><div mxw-id="PCLM51296942" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种神经网络系统控制器结构，其特征在于：包含神经网络控制结构、系统控制中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，在实际控制中对期望输出值进行神经网络修正处理，以提高输出控制精度。</div>
+    </div>
+    </div> <div class="claim"> <div num="2" class="claim">
+      <div class="claim-text">2.一种神经网络系统辨识结构，其特征在于：包含神经网络辨识结构、系统辨识中线性无关的基函数结构、相应权与权值的分析迭代训练结构；根据可覆盖控制范围的样本，调节神经网络基函数的权值，使用神经网络的基函数与权值重构控制系统的描述函数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所所述的神经网络系统控制器结构或权利要求2所述的神经网络系统辨识结构，其特征在于：在神经网络中使用了包括正交基函数在内的线性无关基函数，对神经网络输入值进行处理；对于网络输入值x的神经网络输出使用形式为</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">的神经网络基函数，其中ωi为网络权值；其中线性无关的函数有Laguerre函数、Kautz函数、Z(Λ)变换、1，x，x2，x3，Λ。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所所述的神经网络系统控制器结构或权利要求2所述的神经网络系统辨识结构，其特征在于：在神经网络权值简化迭代训练中使用了高斯-赛德尔迭代、SOR超松弛迭代方法或者雅可比迭代方法，对于高斯-赛德尔迭代、SOR超松弛迭代方法包含下述四个方程式；</div>
+      <div class="claim-text">一、对于一组训练样本(xi，yi)，在神经网络系统辨识结构中使用高斯-赛德尔迭代有公式：</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">其矩阵表达式为：a(k+1)＝-(L+D)-1Ra(k)+(L+D)-1b。其中k为迭代次数，i＝0，1，Λ，m，内积定义为Γ(xi)为内积权函数，可取为常数；</div>
+      <div class="claim-text">二、对于一组训练样本(xi，yi)，在神经网络系统辨识结构中使用SOR超松弛迭代有：</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">其矩阵表达式为：a(k+1)＝(D+φL)-1[(1-φ)D-φR]a(k)+φ(D+φL)-1b。其中k为迭代次数，i＝0，1，Λ，m，内积定义为Γ(xi)为内积权函数，可取为常数，0＜φ＜2为迭代因子；</div>
+      <div class="claim-text">三、对于一组训练样本(xi，yi)，在神经网络控制器结构中使用高斯-赛德尔迭代有公式：</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">其矩阵表达式为：ω(k+1)＝-(L+D)-1Rω(k)+(L+D)-1b。其中k为迭代次数，i＝0，1，Λ，m，内积定义为Γ(xi)为内积权函数，可取为常数；</div>
+      <div class="claim-text">四、对于一组训练样本(xi，yi)，在神经网络系统控制器结构中使用SOR超松弛迭代有：</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">其矩阵表达式为：ω(k+1)＝(D+φL)-1[(1-φ)D-φR]ω(k)+φ(D+φL)-1b。其中k为迭代次数，i＝0，1，Λ，m，内积定义为Γ(xi)为内积权函数，可取为常数，0＜φ＜2为迭代因子。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所所述的神经网络系统控制器结构，其特征在于：在期望输入值为X时，实际送往硬件系统的人工神经网络输出值为</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">其中ωi为网络权值，</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">为神经网络基函数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1所所述的神经网络系统控制器结构或权利要求2所述的神经网络系统辨识结构，其特征在于：将神经网络应用于某种体应用环境条件下，可用于自动修正由于具体的元件误差，性能老化，温度漂移等问题带来产品的控制误差；针对不同应用环境场合，神经网络将自动调节有不同的控制权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1所所述的神经网络系统控制器结构或权利要求2所述的神经网络系统辨识结构，其特征在于：神经网络在整体系统校验调整过程中，由样本值迭代计算并调节神经网络权值，以提高控制或辨识精度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求1所述的神经网络系统控制器结构或权利要求2所述的神经网络系统辨识结构，其特征在于：在具体应用环境条件下，可启动神经网络模拟量模块进行神经网络参数自动调节；通过包含硬件外部按键、开关、远程控制指令触发或程序启动自检命令的方式，来启动控制器参数调整子程序或辨识子程序，自动调节神经网络权值。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58340372" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">一种神经网络的系统控制器结构及系统辨识结构</invention-title>
+    <technical-field>
+      <p>[0001] 技术领域</p>
+      <p>[0002] 本发明涉及自动控制系统，尤其涉及一种神经网络系统的控制器结构及其自动辨识与自动提高系统控制精度的结构。</p>
+    </technical-field>
+    <background-art>
+      <p>[0003] 背景技术</p>
+      <p>[0004] 现实中时变性是控制产品及系统的基本特征，例如控制系统的使用环境变化，系统硬件的温度漂移，控制系统部件或元件随时间的老化，都会造成系统输入与输出之间描述函数的变化。这种变化的程度，无法在系统设计或产品生产时准确预计到，而且电子元器件本身的误差更加剧了系统的设计误差，造成系统或产品在具体使用时无法达到很高的设计控制精度。如增加反馈环节在控制上有时却无法满足控制相应速度的要求。</p>
+      <p>[0005] 对于具体的一个产品或一个控制系统，当前针对于时变模型参数漂移的解决方法通常有两种，一是阶段性考虑问题，针对应用现场实际情况将时变系统阶段性视为时不变系统对系统参数进行辨识；二是利用模糊建模的思想，利用人工神经网络及遗传算法等手段，辨识出针对模糊控制系统名义模型参数的规则时间函数。通常第二种思想所耗费的成本代价很高，而且计算量较为复杂。</p>
+      <p>[0006] 针对温度漂移、老化、使用环境变化造成的控制系统参数变化，很多情况下需要自动调节控制参数以提高控制精度。</p>
+      <p>[0007] 目前尚未见到对控制系统根据使用现场及具体使用环境进行自动参数调节的合适方案，当前针对时不变系统的模型集辨识建立的自适应算法等，都只能在建模误差平方无穷可积的条件下，才能保证系统模型辨识误差渐近收敛。尤其对于时变性引起的对象名义模型的模型参数甚至是模型结构漂移，经典的自适应辨识算法有时甚至不能保证名义模型误差及辨识参数的有界性。</p>
+      <p>[0008] 神经网络是智能控制的一种，神经网络的优点是可以在无法确知系统传递描述函数的情况下利用训练数据或经验知识库来实现自适应控制，相关理论论述较多，但对于神经网络训练简化算法手段较少。对于具体的产品应用，需要解决下述两个问题：</p>
+      <p>[0009] 一、神经网络算法收敛的适用性，避免训练算法进入局部极小值；</p>
+      <p>[0010] 二、需要考虑神经算法简化问题，以节约计算资源适应产品现场控制要求。</p>
+      <p>[0011] 因此需要找到一种简单的人工神经网络计算方法以实现不同环境、不同硬件误差下的自适应控制。</p>
+    </background-art>
+    <disclosure>
+      <p>[0012] 发明内容：</p>
+      <p>[0013] 针对当前人工神经网络控制器的缺点，本发明旨在提供一种结构简便、经济实用神经网络结构及其系统辨识和系统控制计算方法，其可以提高神经网络控制器的输出或系统辨识、数据采集的精度，对抗使用环境变化，系统硬件的温度漂移，控制系统部件或元件随时间的老化，电子元器件本身的误差造成的系统描述函数与设计要求间的误差，抵消中间环节过多造成的累计误差。</p>
+      <p>[0014] 本技术所针对的控制系统至少包含下述四个方面：1、智能计算处理器，如单片机、嵌入式微处理器、DSP、计算机等。2、系统优化控制的明确期望目标，如在确定输入值下的输出值期望确定，或是得到系统输入与输出的描述函数。3、反馈控制信号。4、在一定范围内输入与输出稳定且一一对应。</p>
+      <p>[0015] 本发明的一种神经网络系统控制器结构，其特征在于：包含神经网络控制结构、系统控制中线性无关的基函数结构、相应权与权值的分析迭代训练结构；该神经网络控制结构根据可覆盖控制范围的样本，调节神经网络基函数的权值，在实际控制中对期望输出值进行神经网络修正处理，以提高输出控制精度。</p>
+      <p>[0016] 本发明的技术方案结合了三种技术概念：Adaline神经网络结构，线性无关辨识基函数的应用，LMS最小均方算法的高斯-赛德尔或SOR超松弛迭代或雅可比迭代数值分析。Adaline神经网络结构可以通过减少类神经元的真实输出与期望输出间的均方误差来提高系统控制精度或辨识精度；使用线性无关控制(辨识)基函数的取代输入延迟序列，可以有效地减少硬件资源耗费并用软件实现计算，同时使用正交控制(辨识)基函数使神经网络权值具有累加特性；LMS最小均方算法的高斯-赛德尔或SOR超松弛迭代数值分析简化了网络权值运算迭代，使得动态正交神经网络计算方法可以在单片机这样计算资源有限的硬件上运行。本发明结合这三种技术的技术方案，提出了一种新的系统控制与系统辨识方法。</p>
+      <p>[0017] 如图1，本发明解决其技术问题的技术方案包括两个可独立使用或共同使用的部分：</p>
+      <p>[0018] 一种神经网络系统控制器结构，包含神经网络控制结构、系统控制中的线性无关基函数结构、相应权与权值的高斯-赛德尔迭代训练结构。</p>
+      <p>[0019] 一种神经网络系统辨识结构，包含神经网络辨识结构、系统辨识中的线性无关基函数结构、相应权与权值的分析迭代训练结构</p>
+      <p>[0020] 对于该结构算法的解释及推导如下：</p>
+      <p>[0021] 在图1的神经网络中，对于一个网络输入值x，其形式为</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>其中ωi为网络权值，</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>为神经网络基函数。</p>
+      <p>[0022] 神经网络在理论上能以任意精度逼近L2[0，∞)上的任意连续非线性系统的描述函数。而当神经网络的系统辨识函数模型结构由某种正交基或线性无关基函数，如Z(Λ)变换、Laguerre函数、Kautz函数等的线性组合形式来表示的时候，训练算法的问题在数学上的处理一般会大幅度简化。</p>
+      <p>[0023] 将动态神经网络的辨识基取为正交基，即可得到基于动态正交神经网络的辨识结构。常见的正交多项式有Legendre多项式，Laguerre多项式，Hermite多项式和切比雪夫多项式等。</p>
+      <p>[0024] 如Legendre多项式：|x|≤1</p>
+      <p>[0025] 称为Legendre正交多项式。在实空间L2[-1，1]中，线性无关的函数系1，x，x2，x3，Λ经过标准正交化也可以得到Legendre正交多项式。</p>
+      <p>[0026] 对于图1一组实际输入值xi与反馈信号yi，对于函数族</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>及权函数Γ(x)，用于辨识实际控制系统的描述函数y＝f(x)，依据线性空间最小二乘法曲线拟合定义：所谓“最好”的拟合辨识标准通常是要求</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>与yi的偏差</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>的平方和：</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>为最小。</p>
+      <p>[0027] 由此寻求系统辨识正交神经网络权值训练的任务变为：对于给定的N个数据(xi，yi)，(i＝1，2...n)，选取线性无关的函数族</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>及权函数Γ(x)，要求在函数类</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>中寻找一个系统描述函数y＝f(x)的辨识函数</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>(m＜N)，使得：</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>达到极小。显然该式是m+1个变量a0，a1，Λam的二次函数，令：</p>
+      <p>[0028] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0029] 由多元函数极值的必要条件，有：</p>
+      <p>[0030] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>(j＝0，1，Λm)</p>
+      <p>[0031] 引入内积的定义：</p>
+      <p>[0032] 多元函数极值方程组可表示为：</p>
+      <p>[0033] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0034] 由于正交基函数</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>线性无关，可以证明方程存在唯一解使I(a0，a1，Λam)取最小值，且最小平方误差为</p>
+      <p>[0035] 对于多元函数极值方程组简记为Aa＝B。讨论如下，令矩阵：</p>
+      <p>[0036] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0037] 对于任意m+1维非零列向量aH＝[a0&#160;a1&#160;Λ&#160;am]，有：</p>
+      <p>[0038] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0039] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0040] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0041] 可以看出，对于正交神经网络，总可以取得权函数Γ(xi)＞0，N＞＞m，在线性无关的正交辨识基</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>上，对于任意非零aH＝[a0&#160;a1&#160;Λ&#160;am]，有aHAa：</p>
+      <p>[0042] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0043] 在此条件下矩阵A对称正定，因此对于矩阵A的超松弛迭代(0＜超松弛因子＜2)及高斯-赛德尔迭代收敛，即可以使用超松弛迭代法或高斯-赛德尔迭代法在单片机中解出正交神经网络权向量值。在矩阵A对称正定条件下，雅可比迭代不一定收敛，但在某些具体应用场合，雅可比迭代也可以收敛。</p>
+      <p>[0044] 对于矩阵</p>
+      <p>[0045] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0046] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0047] 其中L、R分别是A的上、下三角部分元素构成的严格上、下三角阵，D是A的对角线元素构成的对角阵。</p>
+      <p>[0048] a＝-(L+D)-1Ra+(L+D)-1b</p>
+      <p>[0049] 这样可以得到两种很简单的简化迭代计算方法：</p>
+      <p>[0050] 一、引入高斯-赛德尔迭代，当k为迭代次数，i＝0，1，Λ，m时：</p>
+      <p>[0051] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0052] 其矩阵表达式为：a(k+1)＝-(L+D)-1Ra(k)+(L+D)-1b。</p>
+      <p>[0053] 二、引入SOR超松弛迭代，当k为迭代次数，i＝0，1，Λ，m时：</p>
+      <p>[0054] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0055] 其中0＜φ＜2为迭代因子。</p>
+      <p>[0056] 其矩阵表达式为：a(k+1)＝(D+φL)-1[(1-φ)D-φR]a(k)+φ(D+φL)-1b。</p>
+      <p>[0057] 上述两种迭代方程在实际应用中，权函数Γ(xi)经常可以取为常数，例如Γ(xi)≡1，计算量非常小，适合单片机使用，使得神经网络在单片机等现场智能控制中的参数修正成为可能。</p>
+      <p>[0058] 对于正交神经网络的控制输出权向量ω0，ω1，Λωn的调节，同上所述之原理，实际是希望控制实际输出值与期望输出值见误差最小，即辨识出x＝f-1(y)，则在控制期望为X时，对应控制系统的实际输入值为x＝f-1(X)，此时理想状况下实际输出y＝X。因此将实际输入值xi与采样反馈信号yi调转，即可使用相同的方法寻求出输出权向量ω0，ω1，Λωn。问题描述如下：对于图1一组实际输入值xi与反馈信号yi，寻求满足控制期望的最佳控制输出权向量ω0，ω1，Λωn，对于给定的N个数据(xi，yi)，(i＝1，2...n)，选取正交线性无关的函数族</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>及权函数Γ(y)，要求在函数类</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>中寻找一个系统描述函数的辨识函数</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>(m＜N)，使得：</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>达到极小，显然该式是n+1个变量ω0，ω1，Λωn的二次函数，其迭代运算可参考辨识结构算法中的超松弛迭代及高斯-赛德尔迭代。其中超松弛迭代中0＜超松弛因子＜2。对于高斯-赛德尔迭代，当k为迭代次数，i＝0，1，Λ，m：</p>
+      <p>[0059] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0060] 其矩阵表达式为：ω(k+1)＝-(L+D)-1Rω(k)+(L+D)-1b。</p>
+      <p>[0061] 对于SOR超松弛迭代，当k为迭代次数，i＝0，1，Λ，m时：</p>
+      <p>[0062] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0063] ，其中0＜φ＜2为迭代因子。</p>
+      <p>[0064] 其矩阵表达式为：ω(k+1)＝(D+φL)-1[(1-φ)D-φR]ω(k)+φ(D+φL)-1b。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>[0065] 附图说明</p>
+      <p>[0066] 图1为本发明的神经网络控制器结构与系统辨识结构示意图；</p>
+      <p>[0067] 图2为本发明应用实例的模拟输出控制结构示意图；</p>
+      <p>[0068] 图3为本发明应用实例的0～20mA电流输出硬件结构示意图；</p>
+      <p>[0069] 图4为本发明应用实例的硬件系统描述函数辨识程序流程示意图；</p>
+      <p>[0070] 图5为本发明应用实例的神经网络控制器模拟输出量控制程序结构示意图；</p>
+      <p>[0071] 图6为本发明应用实例的神经网络控制器输出期望值的控制处理示意图；</p>
+      <p>[0072] 图7为本发明应用实例的离心泵恒压力控制系统结构示意图；</p>
+      <p>[0073] 图8为本发明应用实例的离心泵恒压力控制系统压力期望值处理示意图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>[0074] 具体实施方式</p>
+      <p>[0075] 实例一：</p>
+      <p>[0076] 如图2，例如有某现场级模拟量输出单元，其功能是按接收到控制输出指令执行模拟量输出，该指令通常为上层控制总线发来输出值，例如发出0-20mA、4-20mA、0-5V这样的常规模拟输出值。</p>
+      <p>[0077] 由于具体的元件误差，性能老化，温度漂移等问题，硬件电气参数发生了改变，输出信号与控制期望值误差超出要求。要求设计一个软件辨识结构，在需要的时候，通过一个按钮或按键，启动神经网络校验程序，使用软件方式来优化更改控制参数并提高控制精度。</p>
+      <p>[0078] 举例若某一电流模拟输出通道的硬件，根据输入指令码0000～1111输出0～20mA电流，其结构如图3。</p>
+      <p>[0079] 不同温度环境下，由CPU数字输出到实际输出的硬件描述函数会改变，例如某个模拟量硬件通道在环境试验中的评估为：1、温度19.60℃，湿度95.5％条件下，误差精度为：5.69％(4mA)，3.82％(10mA)，-0.41％(15mA)，2.32％(20mA)；2、温度55.0℃，湿度91.9％条件下，误差精度为：6.12％(4mA)，3.78％(10mA)，-0.40％(15mA)，2.43％(20mA)；3、温度-25.0。C，湿度41.0％条件下，误差精度为：8.98％(4mA)，6.92％(10mA)，2.55％(15mA)，5.40％(20mA)。</p>
+      <p>[0080] 结论为：该模拟量硬件通道在环境试验中，温度-21.0℃，湿度42.5％条件下，输出4mA时有最大误差9.15％。在不同环境条件下，同一输出条件下的最大误差迁移为：4mA为3.54％，10mA为3.17％，15mA为2.95％，20mA为3.18％。显然温度变化对硬件误差影响较大，同时如果为硬件加装恒温系统则成本很高。在此条件下，上边提到的神经网络结构可在软件中自动调节温度对误差的影响。</p>
+      <p>[0081] 依据本发明神经网络迭代计算的方法，取在实空间L2[-1.1]中Legendre正交多项式，或可以得到Legendre正交多项式的线性无关的函数系1，x，x2，x3，Λ为辨识基，定义函数Γ≡1，采用图1的神经网络结构。根据模拟输出硬件通道的测试经验，取x2为最高阶次，其辨识结构已满足辨识精度要求ε。</p>
+      <p>[0082] 一、对于辨识出硬件描述函数的过程是：1、在某种具体应用环境条件下，启动神经网络模拟量模块，通过某些方式，例如：a、硬件外部按键、开关等；b、远程控制指令：c、程序启动自检等，启动辨识子程序；2、记录一组能覆盖到控制量程样本值(xi，yi)，其中，xi为实际输出给DAC转换的数据，yi为输出反馈检验值；3、根据样本值计算</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>其中由于该过程取样本输入xi固定值不变，故此实际软件简化，只需计算</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>在CPU存储中建立迭代向量组；4、设置初始权向量与迭代循环次数n，例如[0&#160;0&#160;0]或上次已有的辨识权值</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>使用已有辨识权值可提高迭代精度，进入迭代循环。根据神经网络高斯-赛德尔迭代法有：</p>
+      <p>[0083] </p>
+      <p>[0084] 5、最后存储权向量迭代结果[a0n&#160;a1n&#160;a2n]，硬件描述函数辨识结果为可对控制上层上报权向量。整个辨识程序流程如图4。</p>
+      <p>[0085] 动态神经网络系统辨识软件流程也可以在控制上层实现，而无需在本CPU结构内部完成，其迭代方法一致。</p>
+      <p>[0086] 二、对于使用动态神经网络提高输出精度的验证：</p>
+      <p>[0087] 1、在具体应用环境改变的条件下，启动神经网络模拟量控制校验模块，通过某些方式例如：a、硬件外部按键、开关等；b、远程控制指令；c、程序启动自检，启动控制校验子程序；2、记录一组样本值能覆盖到控制量程的(xi，yi)；其中xi为实际输出给DAC转换的数据，yi为输出反馈检验值。3、根据样本值计算</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>在CPU存储中建立迭代向量组；4、设置初始权向量与迭代循环次数n，例如[0&#160;0&#160;0]或上次已有的控制权值[ω0*&#160;ω1*&#160;ω2*]，使用已有控制权值可提高迭代精度或减少迭代次数，进入迭代循环；根据神经网络高斯-赛德尔迭代法有：</p>
+      <p>[0088] </p>
+      <p>[0089] 5、最后存储控制权向量迭代结果</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>存储存储控制权向量结果为以后输出控制值调节使用。神经网络迭代子程序如图5。</p>
+      <p>[0090] 6、在接到输出指令值X时，使用运算式计算x，以x为实际送给硬件通道的控制值，即可实现控制误差ε最小。控制输出的程序过程如图6。</p>
+      <p>[0091] 对于实例一，在程序中若随时采集输入值，对辨识或控制迭代的样本值进行局部更新，在CPU系统空闲时迭代并修正权值，则该系统即为动态神经网络；若基函数又取了正交函数，则系统视为动态正交神经网络。</p>
+      <p>[0092] 实例一的控制器校验计算，也可以在产品的外部进行。例如由一台测试仪器采集硬件的校验样本(xi，yi)，在外部完成使用动态神经网络提高输出精度的校验计算，将结果[ω0n&#160;ω1n&#160;ω2n]做为产品修正值输入进产品中，在具体使用时，产品内部仅需要完成第6步修正计算即可。</p>
+      <p>[0093] 实例二：</p>
+      <p>[0094] 很多控制系统，由于所涉及到的中间环节较多，误差难以控制，在系统完成后需要进行整个系统的精度调试，采用图1的人工神经网络结构，可以实现系统精度的自动调节，节约大量人力物力及时间。</p>
+      <p>[0095] 例如假定有如图7的离心泵恒压力控制系统，其为单回路简单控制系统。安装在离心泵出口管路上压力传感器PT将离心泵出口压力转换成电压信号，经放大器放大后输出至PC工业控制计算机，PC将压力信号与压力给定值比较后，需要按照设定网络权值，依据调节规律输出变频调速的激励信号，驱动变频调速器控制电机的转速，达到恒定离心泵出口压力的目的。</p>
+      <p>[0096] 整个控制系统参数如下：1、被控变量Y：离心泵出口稳定后压力P；2、给定值(设定值)X：对应于被控变量所需保持的工艺参数值。3、测量值y：由传感器检测到的被控变量的实际值，在本实验中为离心泵出口压力值P。4、操纵变量：实现控制作用的变量在变频调速中使用了PID比例积分控制规律方式消除干扰。</p>
+      <p>[0097] 在系统构架搭配完成时，由于控制系统中间环节较多，误差人为控制可能性较小；而且在不同液体介质条件下、不同输出量大小或不同粗细的输送管道条件下，在离心泵同转速条件下产生的压力也不尽相同。因此使用神经网络可以在整个控制系统调试时进行自动修正调节，无需考虑中间环节误差及介质密度等因素。</p>
+      <p>[0098] 假定在图1结构中使用线性无关的函数族</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>为辨识基函数，由于使用工业控制计算机，因此[ω0&#160;ω1&#160;Λ&#160;ωm]权向量可以取较高阶数以提高精度。与实例一中的方法类似，应用SOR超松弛迭代的本方法步骤如下：</p>
+      <p>[0099] 1、在具体应用环境的条件下，启动神经网络权值控制校验模块，通过某些方式，启动控制校验程序；2、记录一组能覆盖到控制量程的样本值(xi，yi)；其中xi为控制输出到变频调速的控制信号，yi为输出压力传感器反馈值。3、根据样本计算内积定义，在CPU存储中建立所需内积迭代向量组；4、设置初始权向量与迭代循环次数n，例如[0&#160;0&#160;Λ&#160;0]或上次已有的控制权值[ω0*&#160;ω1*&#160;Λ&#160;ωm*]，进入迭代循环；k为迭代次数，i＝0，1，Λ，m，根据SOR超松弛迭代有：</p>
+      <p>[0100] </p>
+      <p>[0101] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0102] 其中0＜φ＜2为迭代因子。</p>
+      <p>[0103] 5、最后存储控制权向量迭代结果[ω0n&#160;ω1n&#160;Λ&#160;ωmn]；以便下一步输出控制使用。</p>
+      <p>[0104] 6、在接到系统压力输出指令值X时，使用运算式</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>计算x，以x做为实际送给电机变频调速的控制值，即可实现控制误差最小。并以图8所示的控制程序过程输出。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102636994A?cl=zh">CN102636994A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年4月25日</td><td class="patent-data-table-td patent-date-value">2012年8月15日</td><td class="patent-data-table-td ">哈尔滨工程大学</td><td class="patent-data-table-td ">潜器全方位推进器单通道电液位置伺服控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103324085A?cl=zh">CN103324085A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月9日</td><td class="patent-data-table-td patent-date-value">2013年9月25日</td><td class="patent-data-table-td ">中国科学院自动化研究所</td><td class="patent-data-table-td ">基于监督式强化学习的最优控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103324085B?cl=zh">CN103324085B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月9日</td><td class="patent-data-table-td patent-date-value">2016年3月2日</td><td class="patent-data-table-td ">中国科学院自动化研究所</td><td class="patent-data-table-td ">基于监督式强化学习的最优控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103454920A?cl=zh">CN103454920A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年8月20日</td><td class="patent-data-table-td patent-date-value">2013年12月18日</td><td class="patent-data-table-td ">北京交通大学</td><td class="patent-data-table-td ">基于描述函数法分析双级滞环控制系统稳定性的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN104214772A?cl=zh">CN104214772A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年7月16日</td><td class="patent-data-table-td patent-date-value">2014年12月17日</td><td class="patent-data-table-td ">山西大学</td><td class="patent-data-table-td ">一种循环流化床机组agc负荷指令响应的控制方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=V-1rBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0013020000">G05B13/02</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年7月29日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年9月23日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年6月29日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年8月26日</td><td class="patent-data-table-td ">EXPY</td><td class="patent-data-table-td ">Termination of patent right or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ecbcffc209e75de2900b/CN101493677A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8E%A7%E5%88%B6%E5%99%A8%E7%BB%93.pdf?id=V-1rBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U12g93nHsIuRyvokMAaXnf0p9cP0A"},"sample_url":"https://www.google.com/patents/reader?id=V-1rBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

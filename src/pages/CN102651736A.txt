@@ -1,0 +1,514 @@
+<!DOCTYPE html><html><head><title>专利 CN102651736A - 基于dhcp的认证方法、dhcp服务器及客户端 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于dhcp的认证方法、dhcp服务器及客户端"><meta name="DC.contributor" content="毕晓宇" scheme="inventor"><meta name="DC.contributor" content="陈佳佳" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2011-2-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了一种基于DHCP的认证方法、DHCP服务器及客户端，所述方法包括：DHCP服务器接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；所述DHCP服务器根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识；所述DHCP服务器接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；所述DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证；所述DHCP服务器向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。本发明适用于进行基于DHCP的认证。"><meta name="DC.date" content="2012-8-29"><meta name="DC.relation" content="CN:101141253:A" scheme="references"><meta name="DC.relation" content="CN:101471934:A" scheme="references"><meta name="DC.relation" content="CN:101753354:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102651736:A"><meta name="citation_patent_application_number" content="CN:201110047862"><link rel="canonical" href="https://www.google.com/patents/CN102651736A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102651736A?cl=zh"/><meta name="title" content="专利 CN102651736A - 基于dhcp的认证方法、dhcp服务器及客户端"/><meta name="description" content="本发明实施例公开了一种基于DHCP的认证方法、DHCP服务器及客户端，所述方法包括：DHCP服务器接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；所述DHCP服务器根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识；所述DHCP服务器接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；所述DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证；所述DHCP服务器向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。本发明适用于进行基于DHCP的认证。"/><meta property="og:title" content="专利 CN102651736A - 基于dhcp的认证方法、dhcp服务器及客户端"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102651736A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102651736A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102651736A&amp;usg=AFQjCNEMZ6oZ8uUhVb-N2_6csv49ndtnIw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/9e4ac6c8b98f5d1a1b16/CN102651736A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/9e4ac6c8b98f5d1a1b16/CN102651736A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102651736A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102651736A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102651736A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102651736B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102651736A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了一种基于DHCP的认证方法、DHCP服务器及客户端，所述方法包括：DHCP服务器接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；所述DHCP服务器根据所述CA的URL发现CA并向所述C...</span><span itemprop="url">https://www.google.com/patents/CN102651736A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102651736A - 基于dhcp的认证方法、dhcp服务器及客户端</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102651736A - 基于dhcp的认证方法、dhcp服务器及客户端" title="专利 CN102651736A - 基于dhcp的认证方法、dhcp服务器及客户端"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102651736 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110047862</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年8月29日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年2月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年2月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102651736B?hl=zh-CN&amp;cl=zh">CN102651736B</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2663049A1?hl=zh-CN&amp;cl=zh">EP2663049A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2663049A4?hl=zh-CN&amp;cl=zh">EP2663049A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2012116633A1?hl=zh-CN&amp;cl=zh">WO2012116633A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110047862.6, </span><span class="patent-bibdata-value">CN 102651736 A, </span><span class="patent-bibdata-value">CN 102651736A, </span><span class="patent-bibdata-value">CN 201110047862, </span><span class="patent-bibdata-value">CN-A-102651736, </span><span class="patent-bibdata-value">CN102651736 A, </span><span class="patent-bibdata-value">CN102651736A, </span><span class="patent-bibdata-value">CN201110047862, </span><span class="patent-bibdata-value">CN201110047862.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%AF%95%E6%99%93%E5%AE%87%22">毕晓宇</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%88%E4%BD%B3%E4%BD%B3%22">陈佳佳</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102651736A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102651736A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102651736A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (7),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110047862&amp;usg=AFQjCNETBonDmaq-0LaedTCojkkwCOgz_A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102651736A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNF9z8T5s6jzZiaQ0XjMTBpaFmDPaQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT114930995" lang="ZH" load-source="patent-office">基于dhcp的认证方法、dhcp服务器及客户端</invention-title>
+      </span><br><span class="patent-number">CN 102651736 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA99762742" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了一种基于DHCP的认证方法、DHCP服务器及客户端，所述方法包括：DHCP服务器接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；所述DHCP服务器根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识；所述DHCP服务器接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；所述DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证；所述DHCP服务器向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。本发明适用于进行基于DHCP的认证。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(48)</span></span></div><div class="patent-text"><div mxw-id="PCLM44938602" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于DHCP的认证方法，其特征在于，包括：  DHCP服务器接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的统�资源定位符URL以及DHCP客户端的标识；  所述DHCP服务器根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识；  所述DHCP服务器接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；   所述DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证；  所述DHCP服务器向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其特征在于，所述DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；  所述DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证包括：  所述DHCP服务器采用所述证书中包括的所述DHCP客户端的公钥对所述签名进行验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求I所述的方法，其特征在于，所述CA返回的授权信息中包括所述CA产生的随机&#21443;数；  在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：  所述DHCP服务器根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的方法，其特征在干，  所述随机&#21443;数为所述DHCP服务器通过与所述CA之间的安全隧道接收的；  或者，  所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，在所述DHCP服务器根据所述随机&#21443;数推演共享密钥之前，还包括：  所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求I所述的方法，其特征在于，所述CA返回的授权信息中包括所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；  在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：  所述DHCP服务器从所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在干，  所述共享密钥为所述DHCP服务器通过与所述CA之间的安全隧道接收的；  或者，  所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，所述DHCP服务器从所述授权信息中获取所述共享密钥包括：  所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取所述共享密钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.	一种基于动态主机配置协议DHCP的认证方法，其特征在于，包括：  DHCP服务器接收DHCP客户端发送的DHCP发现消息；  所述DHCP服务器向认证中心CA发送授权请求，所述授权请求中包括所述DHCP发现消息；  所述DHCP服务器接收所述CA返回的授权信息，所述授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生；  所述DHCP服务器向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，其特征在于，所述DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；  所述CA根据所述授权请求对所述DHCP客户端进行认证包括：  所述CA采用所述DHCP客户端的公钥对所述签名进行验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求7所述的方法，其特征在于，所述CA返回的授权信息为所述CA产生的随机&#21443;数；  在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：  所述DHCP服务器根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的方法，其特征在干，  所述随机&#21443;数为所述DHCP服务器通过与所述CA之间的安全隧道接收的；  或者，  所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，在所述DHCP服务器根据所述随机&#21443;数推演共享密钥之前，还包括：  所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求7所述的方法，其特征在于，所述CA返回的授权信息为所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；  在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：  所述DHCP服务器从所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的方法，其特征在干，  所述共享密钥为所述DHCP服务器通过与所述CA之间的安全隧道接收的；  或者，  所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，所述DHCP服务器从所述授权信息中获取所述共享密钥包括：  所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取所述共享密钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.	&#8212;种基于DHCP的认证方法,其特征在于,包括：  DHCP客户端向DHCP服务器发送DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权信息；所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的方法，其特征在于，所述DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；以使得所述DHCP服务器采用所述DHCP客户端的公钥对所述签名进行验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求13所述的方法，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；  在所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息之后，还包括：  所述DHCP客户端对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；  所述DHCP客户端根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求13所述的方法，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；  在所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息之后，还包括：  所述DHCP客户端对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；  所述DHCP客户端根据所述随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求15或16所述的方法，其特征在于，所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息包括：  DHCP客户端接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回的授权信息得到；  所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：  所述DHCP客户端使用所述共享密钥对所述经过保护的DHCP提供消息进行认证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求13所述的方法，其特征在于，所述授权信息中包括先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；  所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：  DHCP客户端对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数；  DHCP客户端将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</div>
+    </div>
+    </div> <div class="claim"> <div num="19" class="claim">
+      <div class="claim-text">19.	一种基于DHCP的认证方法，其特征在于，包括：  DHCP客户端向DHCP服务器发送DHCP发现消息；所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息，所述DHCP提供消息中包括CA在对所述DHCP客户端进行认证通过后向所述DHCP服务器返回的授权信息；  所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求19所述的方法，其特征在于，所述DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；以使得所述CA采用所述DHCP客户端的公钥对所述签名进行验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求19所述的方法，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；  在所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息之后，还包括：  所述DHCP客户端对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；  所述DHCP客户端根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求19所述的方法，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；  在所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息之后，还包括：  所述DHCP客户端对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；  所述DHCP客户端根据所述随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求21或22所述的方法，其特征在于，所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息包括：  DHCP客户端接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回的授权信息得到；  所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：  所述DHCP客户端使用所述共享密钥对所述经过保护的DHCP提供消息进行认证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求19所述的方法，其特征在于，所述授权信息中包括先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；  所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：  DHCP客户端对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数；  DHCP客户端将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25.	&#8212;种DHCP服务器，其特征在于，包括：  第一接收模块，用于接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；  第一发送模块，用于根据所述CA的URL发现CA井向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识；  所述第一接收模块，还用于接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；  所述DHCP服务器还包括：  第一认证模块，用于根据所述第一接收模块接收的所述授权信息中的所述DHCP客户端的证书完成对所述DHCP客户端的认证；  所述第一发送模块，还用于向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述第一接收模块接收的所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.根据权利要求25所述的DHCP服务器，其特征在于，所述第一接收模块接收的DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；  所述第一认证模块，具体用于采用所述第一接收模块接收的所述授权信息中的所述DHCP客户端的证书中包括的所述DHCP客户端的公钥对所述签名进行验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.根据权利要求25所述的DHCP服务器，其特征在于，所述第一接收模块接收的所述CA返回的授权信息为所述CA产生的随机&#21443;数；  所述DHCP服务器还包括：  第一获取模块，用于根据所述第一接收模块接收的所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.根据权利要求27所述的DHCP服务器，其特征在于，所述随机&#21443;数为所述第一接收模块通过与所述CA之间的安全隧道接收的；  或者，  所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，所述DHCP服务器还包括：  第一解密模块，用于使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数；则相应的，所述第一获取模块具体用于：根据所述第一解密模块获取的所述随机&#21443;数推演共享密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.根据权利要求25所述的DHCP服务器，其特征在于，所述第一接收模块接收的CA返回的授权信息为所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；  所述DHCP服务器还包括：  第二获取模块，用于从所述第一接收模块接收的所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.根据权利要求29所述的DHCP服务器，其特征在于，所述共享密钥为所述第一接收模块通过与所述CA之间的安全隧道接收的；  或者，  所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，所述第二获取模块具体用于：使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取所述共享密钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="31" class="claim">
+      <div class="claim-text">31.	�种DHCP服务器，其特征在于，包括：  第二接收模块，用于接收DHCP客户端发送的DHCP发现消息；  第二发送模块，用于根据所述第二接收模块接收的DHCP发现消息向CA发送授权请求，所述授权请求中包括所述DHCP发现消息；所述第二接收模块，还用于接收所述CA返回的授权信息，所述授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生；  所述第二发送模块，还用于向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述第二接收模块接收的所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.根据权利要求31所述的DHCP服务器，其特征在于，所述第二接收模块接收的DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；  则所述第二接收模块接收的授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.根据权利要求31所述的DHCP服务器，其特征在于，所述第二接收模块接收的所述CA返回的授权信息为所述CA产生的随机&#21443;数；  所述DHCP服务器还包括：  第三获取模块，用于根据所述第二接收模块接收的所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.根据权利要求33所述的DHCP服务器，其特征在于，所述随机&#21443;数为所述第二接收模块通过与所述CA之间的安全隧道接收的；  或者，  所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，所述DHCP服务器还包括：  第二解密模块，用于使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数；则相应的，所述第三获取模块具体用于：根据所述第二解密模块获取的所述随机&#21443;数推演共享密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35.根据权利要求31所述的DHCP服务器，其特征在于，所述第二接收模块接收的CA返回的授权信息为所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；  所述DHCP服务器还包括：  第四获取模块，用于从所述第二接收模块接收的所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.根据权利要求35所述的DHCP服务器，其特征在于，所述共享密钥为所述第二接收模块通过与所述CA之间的安全隧道接收的；  或者，  所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，所述第四获取模块具体用于：使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取所述共享密钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="37" class="claim">
+      <div class="claim-text">37.	�种DHCP客户端，其特征在于，包括：  第三发送模块，用于向DHCP服务器发送DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；  第三接收模块，用于接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权信息；  第二认证模块，用于根据所述第三接收模块接收的所述DHCP提供消息中的授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.根据权利要求37所述的DHCP客户端，其特征在于，所述第三接收模块接收的所述DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；以使得所述DHCP服务器采用所述DHCP客户端的公钥对所述签名进行验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39.根据权利要求37所述的DHCP客户端，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；  所述DHCP客户端还包括：  第三解密模块，用于对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；  第五获取模块，用于根据所述第三解密模块获取的随机&#21443;数推演共享密钥，其中，所述 共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40.根据权利要求37所述的DHCP客户端，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；  所述DHCP客户端还包括：  第四解密模块，用于对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；  第六获取模块，用于根据所述第四解密模块获取的随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述第四解密模块获取的中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.根据权利要求39或40所述的DHCP客户端，其特征在于，所述第三接收模块，具体用于接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回的授权信息得到；  所述第二认证模块，具体用于使用所述共享密钥对所述第三接收模块接收的经过保护的所述DHCP提供消息进行认证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42.根据权利要求37所述的DHCP客户端，其特征在于，所述授权信息中包括先后使用CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；  所述第二认证模块，具体用于对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数，将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</div>
+    </div>
+    </div> <div class="claim"> <div num="43" class="claim">
+      <div class="claim-text">43.	�种DHCP客户端，其特征在于，包括：  第四发送模块，用于向DHCP服务器发送DHCP发现消息；  第四接收模块，用于接收所述DHCP服务器发送的DHCP提供消息，所述DHCP提供消息中包括CA在对所述DHCP客户端进行认证通过后向所述DHCP服务器返回的授权信息；  第三认证模块，用于根据所述第四接收模块接收的所述DHCP提供消息中的授权信息认证所述DHCP服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44.根据权利要求43所述的DHCP客户端，其特征在于，所述第四接收模块接收的所述DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；以使得所述CA采用所述DHCP客户端的公钥对所述签名进行验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45.根据权利要求43所述的DHCP客户端，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；  所述DHCP客户端还包括：  第五解密模块，用于对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；  第七获取模块，用于根据所述第五解密模块获取的随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46.根据权利要求43所述的DHCP客户端，其特征在于，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；  所述DHCP客户端还包括：  第六解密模块，用于对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；  第八获取模块，用于根据所述第六解密模块获取的随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述第六解密模块获取的中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47.根据权利要求45或46所述的DHCP客户端，其特征在于，所述第四接收模块，具体用于接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回的授权信息得到；  所述第三认证模块，具体用于使用所述共享密钥对所述第四接收模块接收的经过保护的所述DHCP提供消息进行认证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="48" class="claim">
+      <div class="claim-text">48.根据权利要求43所述的DHCP客户端，其特征在于，所述授权信息中包括先后使用CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；  所述第三认证模块，具体用于对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数，将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES51319422" lang="ZH" load-source="patent-office" class="description">
+    <p>基于DHCP的认证方法、DHCP服务器及客户端</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信技术领域，特别涉及一种基于DHCP的认证方法、DHCP服务器及客户端。</p>
+    <p>背景技术</p>
+    <p>[0002]	DHCP (Dynamic Host Configuration Protocol,动态主机配置协议）是一个局域网的网络协议，使用UDP(User Datagram Protocol,用户数据包协议）工作，采用DHCP协议，DHCP服务器可自动将IP地址分配给登陆TCP/IP网络的DHCP客户端。</p>
+    <p>[0003]	为了保证DHCP客户端与DHCP服务器之间的通信安全，需要对DHCP服务器进行安全认证。目前，通常采用延迟认证方法对DHCP服务器进行认证，在该方法中，DHCP客户端和DHCP服务器中预先配置有共享密钥。该方法的基本流程为：</p>
+    <p>[0004]	DHCP客户端将携带有认证选项和客户端身份标识的DHCP发现消息(DHCPDISC0VER)向本地子网广播；网络上的DHCP服务器收到该消息后，根据客户端身份标识和共享密钥计算出会话密钥，利用该会话密钥计算DHCP发现消息的认证码，使用该认证码填充认证选项，构造DHCP提供消息（DHCP0FFER)，并将该DHCP提供消息发送给DHCP客户端；DHCP客户端利用本地存储的共享密钥计算出会话密钥，利用该会话密钥验证认证选项中的认证信息是否正确，然后构造DHCP请求消息（DHCPREQUEST)，并利用该会话密钥计算该消息的认证码，使用该认证码填充认证选项，将该DHCP请求消息发送给选中的DHCP服务器；DHCP服务器收到该DHCP请求消息后，使用会话密钥验证该消息。</p>
+    <p>[0005]	在DHCP服务器和DHCP客户端之间进行认证&#21515;，DHCP客户端和DHCP服务器需要基于预先配置的共享密钥进行认证，认证方式较复杂。</p>
+    <p>发明内容</p>
+    <p>[0006]	本发明的实施例提供一种基于DHCP的认证方法、DHCP服务器及客户端，能够以简单的方式实现DHCP服务器和DHCP客户端之间的认证。</p>
+    <p>[0007]	本发明实施例采用的技术方案为：</p>
+    <p>[0008]	一种基于DHCP的认证方法，包括：</p>
+    <p>[0009]	DHCP服务器接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；</p>
+    <p>[0010]	所述DHCP服务器根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识； </p>
+    <p>[0011 ] 所述DHCP服务器接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；</p>
+    <p>[0012]	所述DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证；</p>
+    <p>[0013]	所述DHCP服务器向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0014]	一种基于DHCP的认证方法，包括：</p>
+    <p>[0015]	DHCP服务器接收DHCP客户端发送的DHCP发现消息；</p>
+    <p>[0016]	所述DHCP服务器向CA发送授权请求，所述授权请求中包括所述DHCP发现消息；</p>
+    <p>[0017]	所述DHCP服务器接收所述CA返回的授权信息，所述授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生；</p>
+    <p>[0018]	所述DHCP服务器向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP 服务器。</p>
+    <p>[0019]	一种基于DHCP的认证方法，包括：</p>
+    <p>[0020]	DHCP客户端向DHCP服务器发送DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；</p>
+    <p>[0021]	所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权信息；</p>
+    <p>[0022]	所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0023]	&#8212;种基于DHCP的认证方法,包括：</p>
+    <p>[0024]	DHCP客户端向DHCP服务器发送DHCP发现消息；</p>
+    <p>[0025]	所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息，所述DHCP提供消息中包括CA在对所述DHCP客户端进行认证通过后向所述DHCP服务器返回的授权信息；</p>
+    <p>[0026]	所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0027]	�种DHCP服务器，包括：</p>
+    <p>[0028]	第一接收模块，用于接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；</p>
+    <p>[0029]	第一发送模块，用于根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识；</p>
+    <p>[0030]	所述第一接收模块，还用于接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；</p>
+    <p>[0031 ] 所述DHCP服务器还包括：</p>
+    <p>[0032]	第一认证模块，用于根据所述第一接收模块接收的所述授权信息中的所述DHCP客户端的证书完成对所述DHCP客户端的认证；</p>
+    <p>[0033]	所述第一发送模块，还用于向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述第一接收模块接收的所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0034]	�种DHCP服务器，包括：</p>
+    <p>[0035]	第二接收模块，用于接收DHCP客户端发送的DHCP发现消息；</p>
+    <p>[0036]	第二发送模块，用于根据所述第二接收模块接收的DHCP发现消息向CA发送授权请求，所述授权请求中包括所述DHCP发现消息；</p>
+    <p>[0037]	所述第二接收模块，还用于接收所述CA返回的授权信息，所述授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生；</p>
+    <p>[0038]	所述第二发送模块，还用于向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述第二接收模块接收的所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0039]	�种DHCP客户端，包括：</p>
+    <p>[0040]	第三发送模块，用于向DHCP服务器发送DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识； </p>
+    <p>[0041]	第三接收模块，用于接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权</p>
+    <p>信息；</p>
+    <p>[0042]	第二认证模块，用于根据所述第三接收模块接收的所述DHCP提供消息中的授权信息认证所述DHCP服务器。</p>
+    <p>[0043]	�种DHCP客户端，包括：</p>
+    <p>[0044]	第四发送模块，用于向DHCP服务器发送DHCP发现消息；</p>
+    <p>[0045]	第四接收模块，用于接收所述DHCP服务器发送的DHCP提供消息，所述DHCP提供消息中包括CA在对所述DHCP客户端进行认证通过后向所述DHCP服务器返回的授权信息；</p>
+    <p>[0046]	第三认证模块，用于根据所述第四接收模块接收的所述DHCP提供消息中的授权信息认证所述DHCP服务器。</p>
+    <p>[0047]	本发明实施例提供的基于DHCP的认证方法、DHCP服务器及客户端，DHCP服务器根据CA返回的授权信息完成对DHCP客户端的认证或者由CA实现对DHCP客户端的认证，DHCP服务器将CA返回的授权信息通过DHCP提供消息发送给DHCP客户端，DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简&#21336;。</p>
+    <p>附图说明</p>
+    <p>[0048]	为了更清楚地说明本发明实施例中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的�些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其它的附图。</p>
+    <p>[0049]	图I为本发明实施例一提供的方法流程图；</p>
+    <p>[0050]	图2为本发明实施例ニ提供的方法流程图；</p>
+    <p>[0051]	图3为本发明实施例三提供的方法流程图；</p>
+    <p>[0052]	图4为本发明实施例四提供的方法流程图；</p>
+    <p>[0053]	图5为本发明实施例五提供的方法流程图；</p>
+    <p>[0054]	图6为本发明实施例六提供的方法流程图；</p>
+    <p>[0055]	图7为本发明实施例七提供的方法流程图；</p>
+    <p>[0056]	图8为本发明实施例八提供的方法流程图；</p>
+    <p>[0057]	图9a、图％、图9c为本发明实施例九提供的DHCP服务器结构示意图；[0058]	图10a、图10b、图IOc为本发明实施例十提供的DHCP客户端结构示意图；</p>
+    <p>[0059]	图11a、图lib、图Ilc为本发明实施例i^一提供的DHCP服务器结构示意图；</p>
+    <p>[0060]	图12a、图12b、图12c为本发明实施例十二提供的DHCP客户端结构示意图；</p>
+    <p>[0061]	图13为本发明实施例十三提供的认证中心结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0062]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其它实施例，都属于本发明保护的范围。 </p>
+    <p>[0063]	为使本发明技术方案的优点更加清楚，下面结合附图和实施例对本发明作详细说明。</p>
+    <p>[0064]	在本发明的所有实施例中，DHCP客户端中保存的信息包括DHCP客户端的公钥和私钥、CA (Certificate Authority,认证中心)的公钥以及DHCP客户端的证书；DHCP服务器中保存的信息包括DHCP服务器的公钥和私钥以及CA的公钥'CA中保存的信息包括CA的公钥和私钥、DHCP服务器的公钥和/或证书以及DHCP客户端的公钥和/或证书。</p>
+    <p>[0065]	实施例一</p>
+    <p>[0066]	本实施例提供一种基于DHCP的认证方法，在本实施例中，由DHCP服务器对DHCP客户端进行认证。</p>
+    <p>[0067]	如图I所示，在DHCP服务器端，所述方法包括：</p>
+    <p>[0068]	101、DHCP服务器接收DHCP客户端发送的DHCP发现消息（DHCPDISC0VER)，所述DHCP发现消息中包括CA的URL (Universal Resource Locator,统一资源定位符）以及DHCP客户端的标识。</p>
+    <p>[0069]	102、所述DHCP服务器根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识。</p>
+    <p>[0070]	103、所述DHCP服务器接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书。</p>
+    <p>[0071]	可选的，所述CA返回的授权信息中还包括所述CA产生的随机&#21443;数；</p>
+    <p>[0072]	则在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：</p>
+    <p>[0073]	所述DHCP服务器根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0074]	其中，所述随机&#21443;数为所述DHCP服务器通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0075]或者，</p>
+    <p>[0076]	所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，在所述DHCP服务器根据所述随机&#21443;数推演共享密钥之前，还包括：</p>
+    <p>[0077]	所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数。</p>
+    <p>[0078]	可选的，所述CA返回的授权信息中还包括所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；[0079]	则在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：</p>
+    <p>[0080]	所述DHCP服务器从所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0081]	可选的，所述共享密钥为所述DHCP服务器通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0082]或者，</p>
+    <p>[0083]	所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，所述DHCP服务器从所述授权信息中获取所述共享密钥包括：</p>
+    <p>[0084]	所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取所述共享密钥。</p>
+    <p>[0085]	104、所述DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证。</p>
+    <p>[0086]	为了增加DHCP发现消息的安全性，步骤301中的DHCP发现消息还包括采用DHCP客户端的私钥进行的签名，相应的，步骤304中，DHCP服务器根据所述DHCP客户端的证书完成对所述DHCP客户端的认证（authentication)即为：DHCP服务器采用所述证书中包括的所述DHCP客户端的公钥对所述签名进行验证（verification)。 </p>
+    <p>[0087]	105、所述DHCP服务器向所述DHCP客户端发送DHCP提供消息（DHCP0FFER)，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0088]	在本实施例中，所述DHCP客户端可以为基站，但不仅限于此。</p>
+    <p>[0089]	本发明实施例提供的基于DHCP的认证方法，DHCP服务器根据CA返回的授权信息完成对DHCP客户端的认证，DHCP服务器将CA返回的授权信息通过DHCP提供消息发送给DHCP客户端，DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简&#21336;。</p>
+    <p>[0090]	实施例ニ</p>
+    <p>[0091]	与实施例一相对应，本实施例提供一种基于DHCP的认证方法，在本实施例中，由DHCP服务器对DHCP客户端进行认证。</p>
+    <p>[0092]	如图2所示,在DHCP客户端,所述方法包括：</p>
+    <p>[0093]	201、DHCP客户端向DHCP服务器发送DHCP发现消息（DHCPDISC0VER)，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识。</p>
+    <p>[0094]	为了增加DHCP发现消息的安全性，还需对该DHCP发现消息采用DHCP客户端的私钥进行签名保护，以使得在DHCP服务器使用所述DHCP客户端的私钥对应的公钥对该签名进行验证，即实现对所述DHCP客户端的认证。</p>
+    <p>[0095]	202、所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息（DHCP0FFER)，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权信息。</p>
+    <p>[0096]	203、所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0097]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；</p>
+    <p>[0098]	在所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息之后，还包括：</p>
+    <p>[0099]	所述DHCP客户端对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；</p>
+    <p>[0100]	所述DHCP客户端根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0101]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共 享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；</p>
+    <p>[0102]	在所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息之后，还包括：</p>
+    <p>[0103]	所述DHCP客户端对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；</p>
+    <p>[0104]	所述DHCP客户端根据所述随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0105]	进�步的，所述DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息包括：</p>
+    <p>[0106]	DHCP客户端接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回的授权信息得到；</p>
+    <p>[0107]	所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：</p>
+    <p>[0108]	所述DHCP客户端使用所述共享密钥对所述经过保护的DHCP提供消息进行认证。</p>
+    <p>[0109]	可选的，所述授权信息中包括先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；</p>
+    <p>[0110]	所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：</p>
+    <p>[0111]	DHCP客户端对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数；</p>
+    <p>[0112]	DHCP客户端将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</p>
+    <p>[0113]	在本实施例中，所述DHCP客户端可以为基站，但不仅限于此。</p>
+    <p>[0114]	本发明实施例提供的基于DHCP的认证方法，DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权信息，所述DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简&#21336;。</p>
+    <p>[0115]	实施例三</p>
+    <p>[0116]	本实施例提供一种基于DHCP的认证方法，在本实施例中，由CA对DHCP客户端进行认证。</p>
+    <p>[0117]	如图3所示，在DHCP服务器端，所述方法包括：</p>
+    <p>[0118]	301、DHCP服务器接收DHCP客户端发送的DHCP发现消息（DHCPDISC0VER)。</p>
+    <p>[0119]	为了增加DHCP发现消息的安全性，该DHCP发现消息还包括采用DHCP客户端的私钥进行的签名，以使得在CA接收到该DHCP发现消息后，使用所述DHCP客户端的私钥对应的公钥对该签名进行验证，即实现对所述DHCP客户端的认证。</p>
+    <p>[0120]	302、DHCP服务器向CA发送授权请求，所述授权请求中包括所述DHCP发现消息。</p>
+    <p>[0121]	其中，步骤302的目的是为了让CA代替DHCP服务器完成对DHCP客户端的认证。 [0122]	303、所述DHCP服务器接收所述CA返回的授权信息，所述授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生。上述对DHCP客户端的认证，即指CA使用DHCP客户端的私钥对应的公钥对该签名进行验证。</p>
+    <p>[0123]	可选的，所述CA返回的授权信息为所述CA产生的随机&#21443;数；</p>
+    <p>[0124]	则在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：</p>
+    <p>[0125]	所述DHCP服务器根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0126]	其中，所述随机&#21443;数为所述DHCP服务器通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0127]或者，</p>
+    <p>[0128]	所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，在所述DHCP服务器根据所述随机&#21443;数推演共享密钥之前，还包括：</p>
+    <p>[0129]	所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数。</p>
+    <p>[0130]	可选的，所述CA返回的授权信息为所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；</p>
+    <p>[0131]	则在所述DHCP服务器接收所述CA返回的授权信息之后，还包括：</p>
+    <p>[0132]	所述DHCP服务器从所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0133]	其中，所述共享密钥为所述DHCP服务器通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0134]或者，</p>
+    <p>[0135]	所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，所述DHCP服务器从所述授权信息中获取所述共享密钥包括：</p>
+    <p>[0136]	所述DHCP服务器使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取所述共享密钥。</p>
+    <p>[0137]	304、所述DHCP服务器向所述DHCP客户端发送DHCP提供消息（DHCP0FFER)，所述DHCP提供消息中包括所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0138]	在本实施例中，所述DHCP客户端可以为基站，但不仅限于此。</p>
+    <p>[0139]	本发明实施例提供的基于DHCP的认证方法，CA根据DHCP服务器发送的授权请求完成对DHCP客户端的认证，DHCP服务器将CA返回的授权信息通过DHCP提供消息发送给DHCP客户端，以使DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简&#21336;。</p>
+    <p>[0140]	实施例四</p>
+    <p>[0141]	与实施例三相对应，本实施例提供一种基于DHCP的认证方法，在本实施例中，由CA对DHCP客户端进行认证。</p>
+    <p>[0142]	如图4所示,在DHCP客户端,所述方法包括：</p>
+    <p>[0143]	401、DHCP客户端向DHCP服务器发送DHCP发现消息（DHCPDISC0VER)。</p>
+    <p>[0144]	为了增加DHCP发现消息的安全性，还需对该DHCP发现消息采用DHCP客户端的私 钥进行签名保护，以使得在CA接收到该DHCP发现消息后，使用所述DHCP客户端的私钥对应的公钥对该DHCP发现消息进行验证，即实现对所述DHCP客户端的认证。</p>
+    <p>[0145]	402、所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息（DHCP0FFER)，所述DHCP提供消息中包括CA在对所述DHCP客户端进行认证通过后向所述DHCP服务器返回的授权信息。</p>
+    <p>[0146]	其中，所述DHCP服务器接收到所述DHCP客户端发送的DHCP发现消息后，向CA发送授权请求，所述CA根据所述授权请求向所述DHCP服务器返回授权信息。</p>
+    <p>[0147]	403、所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0148]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；</p>
+    <p>[0149]	在所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息之后，还包括：</p>
+    <p>[0150]	所述DHCP客户端对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；</p>
+    <p>[0151]	所述DHCP客户端根据所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0152]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；</p>
+    <p>[0153]	在所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息之后，还包括：</p>
+    <p>[0154]	所述DHCP客户端对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；</p>
+    <p>[0155]	所述DHCP客户端根据所述随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0156]	进�步的，所述DHCP客户端接收所述DHCP服务器发送的DHCP提供消息包括：</p>
+    <p>[0157]	DHCP客户端接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回的授权信息得到；</p>
+    <p>[0158]	所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：</p>
+    <p>[0159]	所述DHCP客户端使用所述共享密钥对所述经过保护的DHCP提供消息进行认证。</p>
+    <p>[0160]	可选的，所述授权信息中包括先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；</p>
+    <p>[0161]	则所述DHCP客户端根据所述授权信息认证所述DHCP服务器包括：</p>
+    <p>[0162]	DHCP客户端对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数；</p>
+    <p>[0163]	DHCP客户端将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</p>
+    <p>[0164]	在本实施例中，所述DHCP客户端可以为基站，但不仅限于此。</p>
+    <p>[0165]	本发明实施例提供的基于DHCP的认证方法，CA在完成对DHCP客户端的认证后，向DHCP服务器返回授权信息，DHCP服务器将CA返回的授权信息通过DHCP提供消息发送给DHCP客户端，DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP 服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简&#21336;。</p>
+    <p>[0166]	实施例五</p>
+    <p>[0167]	本实施例提供一种基于DHCP的认证方法，在本实施例中，DHCP客户端为基站，CA向DHCP服务器发送的授权信息包括经过单重加密的随机&#21443;数和经过双重加密的随机&#21443;数。</p>
+    <p>[0168]	如图5所示，所述DHCP服务器与DHCP客户端之间基于DHCP的认证方法包括：</p>
+    <p>[0169]	501、当DHCP服务器与CA进行认证通过后，基站向DHCP服务器发送DHCP发现消息（DHCPDISC0VER)，所述DHCP发现消息中包括认证选项，该认证选项包括使用基站的私钥计算的数字签名以及可选的随机数等信息。</p>
+    <p>[0170]	可选的，所述认证选项还可以包括URL选项,所述URL选项携带CA的地址；具体地，所述URL选项可以为选项98。</p>
+    <p>[0171]	所述认证选项的结构如表I所示：</p>
+    <p>  0_I_5 _3_</p>
+    <p>    类型	算法	协议	算法</p>
+    <p>       重放机制	重放检测值（64位）</p>
+    <p>[0172]	重放检测值</p>
+    <p>重放检测值认证信息类型	认证信息长度</p>
+    <p>                   授权信息                   数字签名</p>
+    <p>[0173]表	I</p>
+    <p>[0174]	所述选项98的格式如表2所示：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102651736A/CN102651736AD00191.png"> <img id="idf0001" file="CN102651736AD00191.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102651736A/CN102651736AD00191.png" class="patent-full-image" alt="Figure CN102651736AD00191"> </a> </div>
+    <p>[0176]表	2</p>
+    <p>[0177]	502、DHCP服务器收到DHCP发现消息后，向CA发送授权请求，所述授权请求中包括所述DHCP发现消息，所述DHCP发现消息采用基站的私钥进行签名保护。</p>
+    <p>[0178]	可选的，如果所述DHCP发现消息中包括URL选项，则DHCP服务器通过URL发现CA并获取基站证书，使用基站证书中基站的公钥完成对基站签名的验证，然后向CA发送授权请求。</p>
+    <p>[0179]	503、CA接收到DHCP服务器的授权请求后，产生随机&#21443;数，使用DHCP服务器的公钥对该随机&#21443;数进行单重加密，井先后使用CA的私钥和基站的公钥对该随机&#21443;数进行双重加密。</p>
+    <p>[0180]	其中，CA首先完成对DHCP服务器的认证（verification)，然后CA使用基站的公钥进行签名验证（authentication)，验证成功后，再将授权信息发送给DHCP服务器。</p>
+    <p>[0181]	504、CA将经过单重加密的随机&#21443;数和经过双重加密的随机&#21443;数作为授权信息发送给DHCP服务器。</p>
+    <p>[0182]	可选的，CA也可以通过与DHCP服务器之间的安全隧道将随机&#21443;数发送给DHCP服务器。</p>
+    <p>[0183]	505、DHCP服务器接收到CA发送过来的授权信息后，使用DHCP服务器的私钥对经过单重加密的随机&#21443;数进行解密，获得随机&#21443;数；或直接通过安全隧道获取随机&#21443;数，然后，DHCP服务器使用该随机&#21443;数推演共享密钥以及共享密钥标识。具体的，DHCP服务器可以使用该随机&#21443;数和CA的公钥计算产生共享密钥以及共享密钥标识。</p>
+    <p>[0184]	506、DHCP服务器向基站发送DHCP提供消息（DHCPOFFER)，所述DHCP提供消息中包括了授权信息的认证选项。</p>
+    <p>[0185]	其中，所述授权信息中包括经过双重加密的随机&#21443;数、共享密钥标识，所述认证选项中包括使用该共享密钥计算的数字签名。</p>
+    <p>[0186]	507、基站接收到该DHCP提供消息后，首先使用基站的私钥和CA的公钥对经过双重加密的随机&#21443;数进行解密，获得随机&#21443;数，然后使用该随机&#21443;数和CA的公钥计算产生共享密钥，使用授权信息中的共享密钥标识对该共享密钥进行标识，并使用该共享密钥进行计算得到数字签名，将该数字签名与所述认证选项中的数字签名进行比较，若两者相同，则认证成功。</p>
+    <p>[0187]	508、基站向DHCP服务器发送DHCP请求消息（DHCPREQUEST)，使用所述共享密钥对该DHCP请求消息进行保护。[0188]	509,DHCP服务器使用共享密钥对DHCP请求消息进行验证，并向基站回复DHCP响应消息（DHCPACK)，使用所述共享密钥对该DHCP响应消息进行保护。</p>
+    <p>[0189]	510、基站使用所述共享密钥对该DHCP响应消息进行验证。</p>
+    <p>[0190]	需要说明的是，CA只为合法的DHCP服务器分配随机&#21443;数，只有合法的DHCP服务器才可以获得随机&#21443;数；完成IP地址等信息的配置后，CA、DHCP服务器和基站释放该随机&#21443;数，DHCP服务器和基站中的共享密钥立即失效。</p>
+    <p>[0191]	本发明实施例提供的基于DHCP的认证方法，DHCP服务器根据CA返回的随机&#21443;数，计算产生共享密钥，DHCP服务器将CA返回的双重加密的随机&#21443;数通过DHCP提供消息发送给基站，基站根据所述随机&#21443;数计算产生共享密钥。与现有技术 相比，DHCP服务器和基站都是根据CA返回的信息获取共享密钥，不需要预先配置共享密钥，从而能够减少管 理共享密钥的负担，避免安全隐患。</p>
+    <p>[0192]	实施例六</p>
+    <p>[0193]	本实施例提供一种基于DHCP的认证方法，在本实施例中，DHCP客户端为基站，CA向DHCP服务器发送的授权信息包括经过单重加密的共享密钥和共享密钥标识以及经过双重加密的随机&#21443;数。</p>
+    <p>[0194]	如图6所示，所述DHCP服务器与DHCP客户端之间基于DHCP的认证方法包括：</p>
+    <p>[0195]	601、当DHCP服务器与CA进行认证通过后，基站向DHCP服务器发送DHCP发现消息（DHCPDISC0VER)，所述DHCP发现消息中包括认证选项，该认证选项包括使用基站的私钥计算的数字签名以及可选的随机数等信息。</p>
+    <p>[0196]	可选的，所述认证选项还可以包括URL选项，所述URL选项携带证书服务器的地址(在此为CA)。</p>
+    <p>[0197]	602、DHCP服务器收到DHCP发现消息后，向CA发送授权请求，所述授权请求中包括所述DHCP发现消息，所述DHCP发现消息采用基站的私钥进行签名保护。</p>
+    <p>[0198]	可选的，如果所述DHCP发现消息中包括URL选项，则DHCP服务器通过URL发现CA并获取基站证书，使用基站证书中基站的公钥完成对基站签名的验证，然后向CA发送授权请求。</p>
+    <p>[0199]	603,CA接收到DHCP服务器的授权请求后，产生随机&#21443;数，井根据该随机&#21443;数计算出共享密钥以及共享密钥标识，并使用DHCP服务器的公钥对该共享密钥和共享密钥标识进行单重加密，井先后使用CA的私钥和基站的公钥对该随机&#21443;数进行双重加密。</p>
+    <p>[0200]	其中，CA首先完成对DHCP服务器的验证，然后CA使用基站的公钥进行签名验证，验证成功后，再将授权信息发送给DHCP服务器。</p>
+    <p>[0201]	604、CA将经过单重加密的共享密钥和共享密钥标识以及经过双重加密的随机&#21443;数发送给DHCP服务器。</p>
+    <p>[0202]	可选的，CA也可以通过与DHCP服务器之间的安全隧道将共享密钥和共享密钥标识发送给DHCP服务器。</p>
+    <p>[0203]	605、DHCP服务器接收到CA发送过来的授权信息后，使用DHCP服务器的私钥对经过单重加密的共享密钥和共享密钥标识进行解密，获得共享密钥和共享密钥标识。</p>
+    <p>[0204]	606、DHCP服务器向基站发送DHCP提供消息（DHCPOFFER)，所述DHCP提供消息中包括了授权信息的认证选项。[0205]	其中，所述授权信息中包括经过双重加密的随机&#21443;数、共享密钥标识，所述认证选项中包括使用该共享密钥计算的数字签名。</p>
+    <p>[0206]	607、基站接收到该DHCP提供消息后，首先使用基站的私钥和CA的公钥对经过双重加密的随机&#21443;数进行解密，获得随机&#21443;数，然后使用该随机&#21443;数和CA的公钥计算产生共享密钥，使用授权信息中的共享密钥标识对该共享密钥进行标识，并使用该共享密钥进行计算得到数字签名，将该数字签名与所述认证选项中的数字签名进行比较，若两者相同，则认证成功。</p>
+    <p>[0207]	608、基站向DHCP服务器发送DHCP请求消息（DHCPREQUEST)，使用所述共享密钥对该DHCP请求消息进行保护。 </p>
+    <p>[0208]	609,DHCP服务器使用共享密钥对DHCP请求消息进行验证，并向基站回复DHCP响应消息（DHCPACK)，使用所述共享密钥对该DHCP响应消息进行保护。</p>
+    <p>[0209]	610、基站使用所述共享密钥对该DHCP响应消息进行验证。</p>
+    <p>[0210]	需要说明的是，CA只为合法的DHCP服务器分配随机&#21443;数，只有合法的DHCP服务器才可以获得随机&#21443;数；完成IP地址等信息的配置后，CA、DHCP服务器和基站释放该随机&#21443;数，DHCP服务器和基站中的共享密钥立即失效。</p>
+    <p>[0211]	本发明实施例提供的基于DHCP的认证方法，DHCP服务器接收CA返回的共享密钥，DHCP服务器将CA返回的双重加密的随机&#21443;数通过DHCP提供消息发送给基站，基站根据所述随机&#21443;数计算产生共享密钥。与现有技术相比，DHCP服务器和基站都是根据CA返回的信息获取共享密钥，不需要预先配置共享密钥，从而能够减少管理共享密钥的负担，避免安全隐患。</p>
+    <p>[0212]	实施例七</p>
+    <p>[0213]	本实施例提供一种基于DHCP的认证方法，在本实施例中，DHCP客户端为基站，CA向DHCP服务器发送的授权信息包括经过单重加密的第一共享密钥以及经过双重加密的随机&#21443;数和第二共享密钥。</p>
+    <p>[0214]	如图7所示，所述DHCP服务器与DHCP客户端之间基于DHCP的认证方法包括：</p>
+    <p>[0215]	701、当DHCP服务器与CA进行认证通过后，基站向DHCP服务器发送DHCP发现消息（DHCPDISC0VER)，所述DHCP发现消息中包括认证选项，该认证选项包括使用基站的私钥计算的数字签名以及可选的随机数等信息。</p>
+    <p>[0216]	可选的，所述认证选项还可以包括URL选项，所述URL选项携&#24111;CA的地址。</p>
+    <p>[0217]	702、DHCP服务器收到DHCP发现消息后，向CA发送授权请求，所述授权请求中包括所述DHCP发现消息，所述DHCP发现消息采用基站的私钥进行签名保护。</p>
+    <p>[0218]	可选的，如果所述DHCP发现消息中包括URL选项，则DHCP服务器通过URL发现CA并获取基站证书，使用基站证书中基站的公钥完成对基站签名的验证，然后向CA发送授权请求。</p>
+    <p>[0219]	703,CA接收到DHCP服务器的授权请求后，产生第一共享密钥和随机&#21443;数，利用该随机&#21443;数和CA的公钥计算产生共享密钥标识，然后对该第一共享密钥和共享密钥标识进行异或计算得到第二共享密钥，使用DHCP的公钥对该第一共享密钥和共享密钥标识进行单重加密，井先后使用CA的私钥和基站的公钥对该随机&#21443;数和第二共享密钥进行双重加密。[0220]	其中，CA首先完成对DHCP服务器的验证，然后CA使用基站的公钥进行签名验证，验证成功后，再将授权信息发送给DHCP服务器。</p>
+    <p>[0221]	704、CA将经过单重加密的第一共享密钥和共享密钥标识以及经过双重加密的随机&#21443;数和第二共享密钥作为授权信息发送给DHCP服务器。</p>
+    <p>[0222]	可选的，CA也可以通过与DHCP服务器之间的安全隧道将第一共享密钥和共享密钥标识发送给DHCP服务器。</p>
+    <p>[0223]	705、DHCP服务器接收到CA发送过来的授权信息后，使用DHCP服务器的私钥对</p>
+    <p>经过单重加密的第一共享密钥和共享密钥标识进行解密，获得第一共享密钥和共享密钥标识。</p>
+    <p>[0224]	706、DHCP服务器向基站发送DHCP提供消息（DHCPOFFER)，所述DHCP提供消息中包括了授权信息的认证选项。</p>
+    <p>[0225]	其中，所述授权信息中包括经过双重加密的随机&#21443;数和第二共享密钥以及共享密钥标识，所述认证选项中包括使用该第一共享密钥计算的数字签名。</p>
+    <p>[0226]	707、基站接收到该DHCP提供消息后，首先使用基站的私钥和CA的公钥对经过双重加密的随机&#21443;数和第二共享密钥进行解密，获得随机&#21443;数和第二共享密钥，利用该随机&#21443;数和CA的第一共享密钥计算产生共享密钥标识，然后对该第二共享密钥和共享密钥标识进行异或计算得到第一共享密钥，使用授权信息中的共享密钥标识对该第一共享密钥进行标识，并使用该第一共享密钥进行计算得到数字签名，将该数字签名与所述认证选项中的数字签名进行比较，若两者相同，则认证成功。</p>
+    <p>[0227]	708、基站向DHCP服务器发送DHCP请求消息（DHCPREQUEST)，使用所述第一共享密钥对该DHCP请求消息进行保护。</p>
+    <p>[0228]	709、DHCP服务器使用第一共享密钥对DHCP请求消息进行验证，并向基站回复DHCP响应消息（DHCPACK)，使用所述第一共享密钥对该DHCP响应消息进行保护。</p>
+    <p>[0229]	710、基站使用所述共享密钥对该DHCP响应消息进行验证。</p>
+    <p>[0230]	需要说明的是，CA只为合法的DHCP服务器分配随机&#21443;数，只有合法的DHCP服务器才可以获得随机&#21443;数；完成IP地址等信息的配置后，CA、DHCP服务器和基站释放该随机&#21443;数，DHCP服务器和基站中的共享密钥立即失效。</p>
+    <p>[0231]	本发明实施例提供的基于DHCP的认证方法，DHCP服务器接收CA返回的第一共享密钥，DHCP服务器将CA返回的双重加密的第二共享密钥和随机&#21443;数通过DHCP提供消息发送给基站，基站根据所述第二共享密钥和随机&#21443;数计算产生第一共享密钥。与现有技术相比，DHCP服务器和基站都是根据CA返回的信息获取共享密钥，不需要预先配置共享密钥，从而能够减少管理共享密钥的负担，避免安全隐患。</p>
+    <p>[0232]	实施例八 </p>
+    <p>[0233]	本实施例提供一种基于DHCP的认证方法，在本实施例中，DHCP客户端为基站，CA向DHCP服务器发送的授权信息包括经过单重加密的随机&#21443;数和经过双重加密的随机&#21443;数。</p>
+    <p>[0234]	如图8所示，所述DHCP服务器与DHCP客户端之间基于DHCP的认证方法包括：</p>
+    <p>[0235]	801、当DHCP服务器与CA进行认证通过后，基站向DHCP服务器发送DHCP发现消息（DHCPDISC0VER)，所述DHCP发现消息中包括认证选项，该认证选项包括使用基站的私钥计算的数字签名以及可选的随机数等信息。</p>
+    <p>[0236]	可选的，所述认证选项还可以包括URL选项，所述URL选项携&#24111;CA的地址。</p>
+    <p>[0237]	802、DHCP服务器收到DHCP发现消息后，向CA发送授权请求，所述授权请求中包括所述DHCP发现消息，所述DHCP发现消息采用基站的私钥进行签名保护。</p>
+    <p>[0238]	可选的，如果所述DHCP发现消息中包括URL选项，则DHCP服务器通过URL发现CA并获取基站证书，使用基站证书中基站的公钥完成对基站签名的验证，然后向CA发送授权请求。</p>
+    <p>[0239]	803、CA接收到DHCP服务器的授权请求后，产生随机&#21443;数，使用DHCP服务器的公钥对该随机&#21443;数进行单重加密，井先后使用CA的私钥和基站的公钥对该随机&#21443;数进行双重加密。</p>
+    <p>[0240]	其中，CA首先完成对DHCP服务器的验证，然后CA使用基站的公钥进行签名验证，验证成功后，再将授权信息发送给DHCP服务器。</p>
+    <p>[0241]	804、CA将经过单重加密的随机&#21443;数和经过双重加密的随机&#21443;数作为授权信息发送给DHCP服务器。</p>
+    <p>[0242]	可选的，CA也可以通过与DHCP服务器之间的安全隧道将随机&#21443;数发送给DHCP服务器。</p>
+    <p>[0243]	805、DHCP服务器接收到CA发送过来的授权信息后，使用DHCP服务器的私钥对经过单重加密的随机&#21443;数进行解密，获得随机&#21443;数，使用基站的公钥对该随机&#21443;数进行加密；并对基站发送过来的DHCP发现消息中的随机数进行DH交换计算出共享密钥以及共享密钥标识。</p>
+    <p>[0244]	806、DHCP服务器向基站发送DHCP提供消息（DHCPOFFER)，所述DHCP提供消息中包括了授权信息的认证选项。</p>
+    <p>[0245]	其中，所述授权信息中包括经过双重加密的随机&#21443;数、经过基站的公钥单重加密的随机&#21443;数和共享密钥标识，所述认证选项中包括使用该共享密钥计算的数字签名。</p>
+    <p>[0246]	807、基站接收到该DHCP提供消息后，首先使用基站的私钥和CA的公钥对经过双重加密的随机&#21443;数进行双重解密，获得随机&#21443;数；并使用基站的私钥对经过单重加密的随机&#21443;数进行单重解密，获得随机&#21443;数；将双重解密获得的随机&#21443;数与单重解密获得的随机&#21443;数进行比较，若两者相同，则认证成功；基站对随机数进行DH交换计算出共享密钥，使用授权信息中的共享密钥标识对该共享密钥进行标识，并使用该共享密钥进行计算得到数字签名，将该数字签名与所述认证选项中的数字签名进行比较，若两者相同，则认证成功。</p>
+    <p>[0247]	808、基站向DHCP服务器发送DHCP请求消息（DHCPREQUEST)，使用所述共享密钥对该DHCP请求消息进行保护。</p>
+    <p>[0248]	809,DHCP服务器使用共享密钥对DHCP请求消息进行验证，并向基站回复DHCP响应消息（DHCPACK)，使用所述共享密钥对该DHCP响应消息进行保护。</p>
+    <p>[0249]	810、基站使用所述共享密钥对该DHCP响应消息进行验证。 </p>
+    <p>[0250]	需要说明的是，CA只为合法的DHCP服务器分配随机&#21443;数，只有合法的DHCP服务器才可以获得随机&#21443;数；完成IP地址等信息的配置后，CA、DHCP服务器和基站释放该随机&#21443;数，DHCP服务器和基站中的共享密钥立即失效。</p>
+    <p>[0251]	本发明实施例提供的基于DHCP的认证方法，DHCP服务器根据基站发送过来的随机数，计算产生共享密钥，DHCP服务器将CA返回的双重加密的随机&#21443;数以及自身进行单重加密的随机&#21443;数通过DHCP提供消息发送给基站，基站对双重解密和单重解密后得到的随机&#21443;数进行比较认证，井根据自身的随机数计算产生共享密钥。与现有技术相比，DHCP服务器和基站都是根据基站自身的随机数产生共享密钥，不需要预先配置共享密钥，从而能够减少管理共享密钥的负担，避免安全隐患。</p>
+    <p>[0252]	实施例九</p>
+    <p>[0253]	本实施例提供�种DHCP服务器，本实施例中的DHCP服务器可以实现本发明图I、图5至图8所示实施例的流程。</p>
+    <p>[0254]	如图9a所示,所述DHCP服务器包括：</p>
+    <p>[0255]	第一接收模块91，用于接收DHCP客户端发送的DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；</p>
+    <p>[0256]	第一发送模块92，用于根据所述CA的URL发现CA并向所述CA发送授权请求，所述授权请求中携带所述DHCP客户端的标识；</p>
+    <p>[0257]	所述第一接收模块91，还用于接收所述CA返回的授权信息，所述授权信息中包括所述DHCP客户端的证书；</p>
+    <p>[0258]	所述DHCP服务器还包括：</p>
+    <p>[0259]	第一认证模块93，用于根据所述第一接收模块91接收的所述授权信息中的所述DHCP客户端的证书完成对所述DHCP客户端的认证；</p>
+    <p>[0260]	所述第一发送模块92，还用于向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述第一接收模块91接收的所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0261]	进�步的，所述第一接收模块91接收的DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；</p>
+    <p>[0262]	所述第一认证模块93，具体用于采用所述第一接收模块91接收的所述授权信息中的所述DHCP客户端的证书中包括的所述DHCP客户端的公钥对所述签名进行验证。</p>
+    <p>[0263]	可选的，所述第一接收模块91接收的所述CA返回的授权信息为所述CA产生的随机&#21443;数；</p>
+    <p>[0264]	则如图9b所示，所述DHCP服务器还包括： [0265]	第一获取模块94，用于根据所述第一接收模块91接收的所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0266]	其中，所述随机&#21443;数为所述第一接收模块91通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0267]或者，</p>
+    <p>[0268]	所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，如图9b所示，所述DHCP服务器还包括：</p>
+    <p>[0269]	第一解密模块95，用于使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数；则相应的，所述第一获取模块94具体用于：根据所述第一解密模块95获取的所述随机&#21443;数推演共享密钥。</p>
+    <p>[0270]	可选的，所述第一接收模块91接收的CA返回的授权信息为所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；</p>
+    <p>[0271]	如图9c所示，所述DHCP服务器还包括：</p>
+    <p>[0272]	第二获取模块96，用于从所述第一接收模块91接收的所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0273]	其中，所述共享密钥为所述DHCP服务器通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0274]或者，</p>
+    <p>[0275]	所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，如图9c所示，所述第二获取模块96具体用干：使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取 所述共享密钥。</p>
+    <p>[0276]	本发明实施例提供的DHCP服务器，DHCP服务器根据CA返回的授权信息完成对DHCP客户端的认证，DHCP服务器将CA返回的授权信息通过DHCP提供消息发送给DHCP客户端，DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简单；DHCP客户端根据DHCP服务器转发的CA返回的信息获取共享密钥，不需要预先配置共享密钥，从而能够减少管理共享密钥的负担，避免安全隐患。</p>
+    <p>[0277]	实施例十</p>
+    <p>[0278]	与实施例九相对应，本实施例提供�种DHCP客户端，本实施例中的DHCP客户端可以实现本发明图2、图5至图8所示实施例的流程。</p>
+    <p>[0279]	如图IOa所示,所述DHCP客户端包括：</p>
+    <p>[0280]	第三发送模块1001，用于向DHCP服务器发送DHCP发现消息，所述DHCP发现消息中包括CA的URL以及DHCP客户端的标识；</p>
+    <p>[0281]	第三接收模块1002，用于接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权信息；</p>
+    <p>[0282]	第二认证模块1003，用于根据所述第三接收模块1002接收的所述DHCP提供消息中的授权信息认证所述DHCP服务器。</p>
+    <p>[0283]	进�步的，所述第三接收模块1002接收的所述DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；以使得所述DHCP服务器采用所述DHCP客户端的公钥对所述签名进行验证。</p>
+    <p>[0284]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；</p>
+    <p>[0285]	如图IOb所示,所述DHCP客户端还包括：</p>
+    <p>[0286]	第三解密模块1004，用于对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；</p>
+    <p>[0287]	第五获取模块1005，用于根据所述第三解密模块1004获取的随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0288]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；</p>
+    <p>[0289]	如图IOc所示,所述DHCP客户端还包括：</p>
+    <p>[0290]	第四解密模块1006，用于对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；</p>
+    <p>[0291]	第六获取模块1007，用于根据所述第四解密模块1006获取的随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述第四解密模块1006获取的中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0292]	进�步的，所述第三接收模块1002，具体用于接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回 的授权信息得到；</p>
+    <p>[0293]	所述第二认证模块1003，具体用于使用所述共享密钥对所述第三接收模块1002接收的经过保护的所述DHCP提供消息进行认证。</p>
+    <p>[0294]	可选的，所述授权信息中包括先后使用CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；</p>
+    <p>[0295]	所述第二认证模块1003，具体用于对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数，将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</p>
+    <p>[0296]	本发明实施例提供的DHCP客户端，DHCP客户端接收所述DHCP服务器在对所述DHCP客户端进行认证通过后发送的DHCP提供消息，所述DHCP提供消息中包括所述CA向所述DHCP服务器返回的授权信息，所述DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简单；DHCP客户端根据DHCP服务器转发的CA返回的信息获取共享密钥，不需要预先配置共享密钥，从而能够减少管理共享密钥的负担，避免安全隐患。</p>
+    <p>[0297]	实施例^^ 一</p>
+    <p>[0298]	本实施例提供�种DHCP服务器，本实施例中的DHCP服务器可以实现本发明图3、图5至图8所示实施例的流程。</p>
+    <p>[0299]	如图Ila所示，所述DHCP服务器包括：</p>
+    <p>[0300]	第二接收模块1101，用于接收DHCP客户端发送的DHCP发现消息；</p>
+    <p>[0301]	第二发送模块1102，用于根据所述第一接收模块91接收的DHCP发现消息向CA发送授权请求，所述授权请求中包括所述DHCP发现消息；</p>
+    <p>[0302]	所述第二接收模块1101，还用于接收所述CA返回的授权信息，所述授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生；</p>
+    <p>[0303]	所述第二发送模块1102，还用于向所述DHCP客户端发送DHCP提供消息，所述DHCP提供消息中包括所述第二接收模块1101接收的所述CA返回的授权信息，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。</p>
+    <p>[0304]	进�步的，为了增加DHCP发现消息的安全性，所述第二接收模块1101接收的DHCP发现消息还包括：采用DHCP客户端的私钥进行的签名；</p>
+    <p>[0305]	则所述第二接收模块1101接收的授权信息由所述CA根据所述授权请求对所述DHCP客户端进行认证通过后产生。</p>
+    <p>[0306]	可选的，所述第二接收模块1101接收的所述CA返回的授权信息为所述CA产生的随机&#21443;数；</p>
+    <p>[0307]	如图I Ib所示，所述DHCP服务器还包括：</p>
+    <p>[0308]	第三获取模块1103，用于根据所述第二接收模块1101接收的所述随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安 全。</p>
+    <p>[0309]	其中，所述随机&#21443;数为所述第二接收模块1101通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0310]或者，</p>
+    <p>[0311]	所述随机&#21443;数经过了 DHCP服务器的公钥加密；则相应的，如图Ilb所示，所述DHCP服务器还包括：</p>
+    <p>[0312]	第二解密模块1104，用于使用所述DHCP服务器的私钥对所述加密的随机&#21443;数进行解密，获取所述随机&#21443;数；则相应的，所述第三获取模块1103具体用于：根据所述第二解密模块1104获取的所述随机&#21443;数推演共享密钥。</p>
+    <p>[0313]	可选的，所述第二接收模块1101接收的CA返回的授权信息为所述CA根据随机&#21443;数生成的共享密钥或者所述CA直接产生的共享密钥；</p>
+    <p>[0314]	如图Ilc所示，所述DHCP服务器还包括：</p>
+    <p>[0315]	第四获取模块1105，用于从所述第二接收模块1101接收的所述授权信息中获取所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0316]	其中，所述共享密钥为所述第二接收模块1101通过与所述CA之间的安全隧道接收的；</p>
+    <p>[0317]或者，</p>
+    <p>[0318]	所述共享密钥经过了 DHCP服务器的公钥加密；则相应的，所述第四获取模块1105具体用于：使用所述DHCP服务器的私钥对所述加密的共享密钥进行解密，获取所述共享密钥。</p>
+    <p>[0319]	在本实施例中，所述DHCP客户端可以为基站，但不仅限于此。</p>
+    <p>[0320]	本发明实施例提供的DHCP服务器，CA根据DHCP服务器发送的授权请求完成对DHCP客户端的认证，DHCP服务器将CA返回的授权信息通过DHCP提供消息发送给DHCP客户端，以使DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简单；DHCP服务器和DHCP客户端都是根据CA返回的信息获取共享密钥，不需要预先配置共享密钥，从而能够减少管理共享密钥的负担，避免安全隐患。</p>
+    <p>[0321]	实施例十二</p>
+    <p>[0322]	与实施例i^一相对应，本实施例提供�种DHCP客户端，本实施例中的DHCP客户端可以实现本发明图4、图5至图8所示实施例的流程。[0323]	如图12a所示,所述DHCP客户端包括：</p>
+    <p>[0324]	第四发送模块1201，用于向DHCP服务器发送DHCP发现消息；</p>
+    <p>[0325]	第四接收模块1202，用于接收所述DHCP服务器发送的DHCP提供消息，所述DHCP提供消息中包括CA在对所述DHCP客户端进行认证通过后向所述DHCP服务器返回的授权</p>
+    <p>信息；</p>
+    <p>[0326]	第三认证模块1203，用于根据所述第四接收模块1202接收的所述DHCP提供消息中的授权信息认证所述DHCP服务器。</p>
+    <p>[0327]	进�步的，所述第四接收模块1202接收的所述DHCP发现消息还包括：采用DHCP 客户端的私钥进行的签名；以使得所述CA采用所述DHCP客户端的公钥对所述签名进行验证。</p>
+    <p>[0328]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的随机&#21443;数；</p>
+    <p>[0329]	则如图12b所示,所述DHCP客户端还包括：</p>
+    <p>[0330]	第五解密模块1204，用于对所述双重加密的随机&#21443;数进行解密，获取随机&#21443;数；</p>
+    <p>[0331]	第七获取模块1205，用于根据所述第五解密模块1204获取的随机&#21443;数推演共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0332]	可选的，所述授权信息为先后使用所述CA的私钥和DHCP客户端的公钥进行双重加密的中间共享密钥和随机&#21443;数，其中，所述中间共享密钥由所述CA根据所述CA生成的共享密钥和共享密钥标识计算得到，所述共享密钥标识由所述CA根据所述随机&#21443;数和所述CA的公钥计算得到；</p>
+    <p>[0333]	则如图12c所示,所述DHCP客户端还包括：</p>
+    <p>[0334]	第六解密模块1206，用于对所述双重加密的中间共享密钥和随机&#21443;数进行解密，获取所述中间共享密钥和随机&#21443;数；</p>
+    <p>[0335]	第八获取模块1207，用于根据所述第六解密模块1206获取的随机&#21443;数以及所述CA的公钥计算产生所述共享密钥标识，根据所述共享密钥标识和所述第六解密模块1206获取的中间共享密钥计算产生所述共享密钥，其中，所述共享密钥用于保护所述DHCP服务器和所述DHCP客户端之间通信的安全。</p>
+    <p>[0336]	进�步的，所述第四接收模块1202，具体用于接收所述DHCP服务器发送的、经过共享密钥保护的DHCP提供消息，其中，所述共享密钥为所述DHCP服务器根据所述CA返回的授权信息得到；</p>
+    <p>[0337]	所述第三认证模块1203，具体用于使用所述共享密钥对所述第四接收模块1202接收的经过保护的所述DHCP提供消息进行认证。</p>
+    <p>[0338]	可选的，所述授权信息中包括先后使用CA的私钥和DHCP客户端的公钥进行双重加密的第一随机&#21443;数，所述DHCP提供消息中包括使用DHCP客户端的公钥进行单重加密的第二随机&#21443;数；</p>
+    <p>[0339]	则所述第三认证模块1203，具体用于对所述双重加密的第一随机&#21443;数进行解密，得到第一随机&#21443;数，对所述单重加密的第二随机&#21443;数进行解密，得到第二随机&#21443;数，将所述第一随机&#21443;数和第二随机&#21443;数进行比较，若两者相同，则认证通过。</p>
+    <p>[0340]	在本实施例中，所述DHCP客户端可以为基站，但不仅限于此。[0341 ] 本发明实施例提供的DHCP客户端，CA在完成对DHCP客户端的认证后，向DHCP服务器返回授权信息，DHCP服务器将CA返回的授权信息通过DHCP提供消息发送给DHCP客户端，DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，DHCP服务器和DHCP客户端不需要预先配置共享密钥，借助CA即可实现DHCP服务器和DHCP客户端之间的认证，认证方式较简单；DHCP客户端根据DHCP服务器转发的CA返回的信息获取共享密钥，不需要预先配置共享密钥，从而能够减少管理共享密钥的负担，避免安全隐患。</p>
+    <p>[0342]	实施例十三</p>
+    <p>[0343]	本实施例提供一种认证中心，本实施例中的认证中心可以实现本发明图I至图8所示实施例的流程。</p>
+    <p>[0344]	如图13所示,所述认证中心包括： [0345]	第五接收模块1301，用于接收DHCP服务器发送的授权请求；</p>
+    <p>[0346]	产生模块1302，用于根据所述授权请求产生授权信息；</p>
+    <p>[0347]	第五发送模块1303，用于将所述授权信息发送给所述DHCP服务器。</p>
+    <p>[0348]	可选的，所述产生模块1302，具体用于根据所述授权请求对所述DHCP客户端进行认证通过后产生授权信息，所述第五发送模块1303将所述授权信息发送给所述DHCP服务器后，所述DHCP服务器将所述授权信息发送给DHCP客户端，以使所述DHCP客户端根据所述授权信息对所述DHCP服务器进行认证。</p>
+    <p>[0349]	可选的，所述产生模块1302根据所述授权请求产生授权信息后，所述第五发送模块1303将所述授权信息发送给所述DHCP服务器，所述DHCP根据所述授权信息对所述DHCP客户端进行认证后，将所述授权信息发送给DHCP客户端，以使所述DHCP客户端根据所述授权信息对所述DHCP服务器进行认证。</p>
+    <p>[0350]	本发明实施例提供的认证中心，接收DHCP服务器发送的授权请求，根据所述授权请求产生授权信息，将所述授权信息发送给所述DHCP服务器，由所述DHCP服务器将所述授权信息发送给DHCP客户端，以使所述DHCP客户端根据所述授权信息认证所述DHCP服务器。与现有技术相比，CA能够根据DHCP服务器发送的授权请求产生授权信息，DHCP客户端根据DHCP服务器转发的CA返回的授权信息即可实现对DHCP服务器的认证，认证方式较简单。</p>
+    <p>[0351]	本发明实施例提供的DHCP服务器和DHCP客户端、认证中心可以实现上述提供的方法实施例，具体功能实现请&#21443;见方法实施例中的说明，在此不再赘述。本发明实施例提供的基于DHCP的认证方法、DHCP服务器及客户端、认证中心可以适用于进行基于DHCP的认证，但不仅限于此。</p>
+    <p>[0352]	本领域普通技术人员可以理解实现上述实施例方法中的全部或部分流程，是可以通过计算机程序来指令相关的硬件来完成，所述的程序可存储于一计算机可读取存储介质中，该程序在执行时，可包括如上述各方法的实施例的流程。其中，所述的存储介质可为磁碟、光盘、只读存储记忆体（Read-Only Memory, ROM)或随机存储记忆体（Random AccessMemory, RAM)等。</p>
+    <p>[0353]	以上所述，仅为本发明的具体实施方式，但本发明的保护范围并不局限于此，任何熟悉本技术领域的技术人员在本发明揭露的技术范围内，可轻易想到的变化或替换，都应涵盖在本发明的保护范围之内。因此，本发明的保护范围应该以权利要求的保护范围为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101141253A?cl=zh">CN101141253A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年9月5日</td><td class="patent-data-table-td patent-date-value">2008年3月12日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">实现认证的方法和认证系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101471934A?cl=zh">CN101471934A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年12月28日</td><td class="patent-data-table-td patent-date-value">2009年7月1日</td><td class="patent-data-table-td ">三星电子株式会社;北京三星通信技术研究有限公司</td><td class="patent-data-table-td ">动态主机配置协议中双向加密及身份鉴权的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101753354A?cl=zh">CN101753354A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月22日</td><td class="patent-data-table-td patent-date-value">2010年6月23日</td><td class="patent-data-table-td ">北京中星微电子有限公司</td><td class="patent-data-table-td ">实现网络摄像机自动配置的方法和监控系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029120000">H04L29/12</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/0823">H04L63/0823</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L61/2015">H04L61/2015</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/0869">H04L63/0869</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L9/0825">H04L9/0825</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=t1-dBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L9/3247">H04L9/3247</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年8月29日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年10月17日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年12月3日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/9e4ac6c8b98f5d1a1b16/CN102651736A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8Edhcp%E7%9A%84%E8%AE%A4%E8%AF%81%E6%96%B9%E6%B3%95_dhcp%E6%9C%8D%E5%8A%A1%E5%99%A8.pdf?id=t1-dBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1e_R_gt3QNXnsZ8HwltcCWMKW4Cg"},"sample_url":"https://www.google.com/patents/reader?id=t1-dBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

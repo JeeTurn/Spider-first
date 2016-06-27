@@ -1,0 +1,375 @@
+<!DOCTYPE html><html><head><title>专利 CN102819554A - 一种收藏夹数据的处理方法、装置和服务器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种收藏夹数据的处理方法、装置和服务器"><meta name="DC.contributor" content="李冰" scheme="inventor"><meta name="DC.contributor" content="任寰" scheme="inventor"><meta name="DC.contributor" content="北京奇虎科技有限公司" scheme="assignee"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2012-6-26" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种收藏夹数据的处理方法、装置和服务器，所述方法包括：从收藏夹配置信息中获取目标链接；向所述目标链接对应的WEB服务器发送HTTP请求信息；接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；根据所述HTTP响应状态码获得所述目标链接的链接标识；在收藏夹中于所述目标链接处提示显示所述链接标识。通过链接标识使得用户可直观的对目标链接的有效性作出判断，因而大大降低了因访问无效链接导致的时间损耗以及对服务器资源的消耗。"><meta name="DC.date" content="2012-12-12"><meta name="DC.relation" content="CN:101382954:A" scheme="references"><meta name="DC.relation" content="CN:101957818:A" scheme="references"><meta name="DC.relation" content="CN:102043805:A" scheme="references"><meta name="DC.relation" content="CN:1912869:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102819554:A"><meta name="citation_patent_application_number" content="CN:201210215519"><link rel="canonical" href="https://www.google.com/patents/CN102819554A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102819554A?cl=zh"/><meta name="title" content="专利 CN102819554A - 一种收藏夹数据的处理方法、装置和服务器"/><meta name="description" content="本发明提供了一种收藏夹数据的处理方法、装置和服务器，所述方法包括：从收藏夹配置信息中获取目标链接；向所述目标链接对应的WEB服务器发送HTTP请求信息；接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；根据所述HTTP响应状态码获得所述目标链接的链接标识；在收藏夹中于所述目标链接处提示显示所述链接标识。通过链接标识使得用户可直观的对目标链接的有效性作出判断，因而大大降低了因访问无效链接导致的时间损耗以及对服务器资源的消耗。"/><meta property="og:title" content="专利 CN102819554A - 一种收藏夹数据的处理方法、装置和服务器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102819554A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102819554A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=st2zBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102819554A&amp;usg=AFQjCNGe2oAQTDJYf1TwCHK1hj1h26WHxQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/4ee79bd9fa1b7d4e1399/CN102819554A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/4ee79bd9fa1b7d4e1399/CN102819554A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102819554A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102819554A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102819554A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102819554B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102819554A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种收藏夹数据的处理方法、装置和服务器，所述方法包括：从收藏夹配置信息中获取目标链接；向所述目标链接对应的WEB服务器发送HTTP请求信息；接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所...</span><span itemprop="url">https://www.google.com/patents/CN102819554A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102819554A - 一种收藏夹数据的处理方法、装置和服务器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102819554A - 一种收藏夹数据的处理方法、装置和服务器" title="专利 CN102819554A - 一种收藏夹数据的处理方法、装置和服务器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102819554 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210215519</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年12月12日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年6月26日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年6月26日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102819554B?hl=zh-CN&amp;cl=zh">CN102819554B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210215519.2, </span><span class="patent-bibdata-value">CN 102819554 A, </span><span class="patent-bibdata-value">CN 102819554A, </span><span class="patent-bibdata-value">CN 201210215519, </span><span class="patent-bibdata-value">CN-A-102819554, </span><span class="patent-bibdata-value">CN102819554 A, </span><span class="patent-bibdata-value">CN102819554A, </span><span class="patent-bibdata-value">CN201210215519, </span><span class="patent-bibdata-value">CN201210215519.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%86%B0%22">李冰</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BB%BB%E5%AF%B0%22">任寰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E5%A5%87%E8%99%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京奇虎科技有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102819554A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102819554A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102819554A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=st2zBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210215519&amp;usg=AFQjCNG8CoGKQTHcQxaS_CcY25hn0h54AQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=st2zBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102819554A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFEok-1E8kbvl9F7IagE04ptWN8PA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT117871171" lang="ZH" load-source="patent-office">一种收藏夹数据的处理方法、装置和服务器</invention-title>
+      </span><br><span class="patent-number">CN 102819554 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA103128059" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种收藏夹数据的处理方法、装置和服务器，所述方法包括：从收藏夹配置信息中获取目标链接；向所述目标链接对应的WEB服务器发送HTTP请求信息；接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；根据所述HTTP响应状态码获得所述目标链接的链接标识；在收藏夹中于所述目标链接处提示显示所述链接标识。通过链接标识使得用户可直观的对目标链接的有效性作出判断，因而大大降低了因访问无效链接导致的时间损耗以及对服务器资源的消耗。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(31)</span></span></div><div class="patent-text"><div mxw-id="PCLM47244333" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种收藏夹数据的处理方法，其特征在于，包括：  从收藏夹配置信息中获取目标链接；  向所述目标链接对应的WEB服务器发送HTTP请求信息；  接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；  根据所述HTTP响应状态码获得所述目标链接的链接标识；  在收藏夹中于所述目标链接处提示显示所述链接标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述的方法，其特征在于，所述从收藏夹配置信息中获取目标链接包括：  从收藏夹配置信息中获取超出设定时间未进行过访问的链接信息作为目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求I所述的方法，其特征在于，所述链接标识包括访问状态标识；  所述根据所述HTTP响应状态码获得所述目标链接的链接标识包括：  若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或  若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或  若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的方法，其特征在于，所述链接标识还包括链接重复标识；  所述方法进�步包括：  判断所述收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的方法，其特征在于，所述链接标识还包括第一关键字提示标识；  所述方法进�步包括： 发送所述目标链接中的第一关键字到服务器侧进行基于第一关键字的第一网页检索；  并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求3所述的方法，其特征在干，进�步包括：  在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的方法，其特征在于，所述对目标链接进行删除和/或更新操作基于浏览器图形界面窗口中的操作控件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的方法，其特征在于，所述更新目标链接包括： 发送所述目标链接中的第二关键字到服务器侧进行基于第二关键字的第二网页检索；  并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求8所述的方法，其特征在干，进�步包括：  将用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少�个发送到所述服务器，并结合第二关键字进行第三网页检索；并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求5至9中任�权利要求所述的方法，其特征在于，所述检索结果中的网页链接包含：按时间或访问量排序的两个或多个网页链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求5至9中任�权利要求所述的方法，其特征在于，所述关键字包括：新闻信息和/或时事信息和/或购物信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11所述的方法，其特征在干，进�步包括：  判断所述目标链接的URL或Title中是否包含新闻信息和/或时事信息和/或购物信息；  在包含新闻信息和/或时事信息和/或购物信息时，将所述新闻信息和/或时事信息和/或购物信息发送至服务器侧进行所述网页检索； 并将所述网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求7所述的方法，其特征在于，所述更新目标链接包括：  若所述访问状态标识是重定向标识，则从所述HTTP应答信息中获取重定向链接更新对应的目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求I所述的方法，其特征在于，所述收藏夹配置信息中还包括与目标链接对应的链接标识；  所述根据所述HTTP响应状态码获得所述目标链接的链接标识之后还包括：  使用所述HTTP响应状态码从预置的HTTP状态码映射表中匹配出对应的链接值，并使用所述链接值更新所述收藏夹配置信息中对应的链接标识。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.	一种收藏夹数据的处理方法，其特征在于，包括：  从网络收藏夹配置信息中获取目标链接；  向所述目标链接对应的WEB服务器发送HTTP请求信息；  接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；  根据所述HTTP响应状态码获得所述目标链接的链接标识；  根据所述目标链接和对应的链接标识更新所述网络收藏夹配置信息；  收到来自客户端的网络收藏夹同步请求信息，将所述网络收藏夹配置信息发送至客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求15所述的方法，其特征在于，所述链接标识包括访问状态标识；  所述根据所述HTTP响应状态码获得所述目标链接的链接标识包括：  若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或  若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或  若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求16所述的方法，其特征在于，所述链接标识还包括链接重复标识；所述方法进�步包括：  判断所述网络收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求16所述的方法，其特征在于，所述链接标识还包括第一关键字提示标识；  所述方法进�步包括： 根据所述目标链接中的第一关键字在服务器侧进行基于第一关键字的第一网页检索；   并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求16所述的方法，其特征在干，进�步包括：  在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的方法，其特征在于，所述更新目标链接包括： 根据所述目标链接中的第二关键字在服务器侧进行基于第二关键字的第二网页检索；  并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求20所述的方法，其特征在于，进�步包括：  获取用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少�个，并结合第二关键字进行第三网页检索；  并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</div>
+    </div>
+    </div> <div class="claim"> <div num="22" class="claim">
+      <div class="claim-text">22.	&#8212;种收藏夹数据的处理装置，其特征在于，包括：  存储单元，用于存储收藏夹配置信息；  目标链接获取模块，用于从收藏夹配置信息中获取目标链接；  HTTP请求发送模块，用于向所述目标链接对应的WEB服务器发送HTTP请求信息；  HTTP应答接收模块，用于接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；  链接标识获取模块，用于根据所述HTTP响应状态码获得所述目标链接的链接标识；  显示模块，用于在收藏夹中于所述目标链接处提示显示所述链接标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求22所述的装置，其特征在于，所述目标链接获取模块包括：  第一获取单元，用于从收藏夹配置信息中获取超出设定时间未进行过访问的链接信息作为目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求22所述的装置，其特征在于，所述链接标识包括访问状态标识；  所述链接标识获取模块包括：  访问状态标识设置&#21336;元，用于   若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或  若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.如权利要求24所述的装置，其特征在于，所述链接标识还包括链接重复标识；  所述链接标识获取模块进�步包括：  链接重复标识生成&#21336;元，用于判断所述收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求25所述的装置，其特征在于，所述链接标识还包括第一关键字提示标识；  所述链接标识获取模块进�步包括：  第一关键字提示标识生成&#21336;元，用于 发送所述目标链接中的第一关键字到服务器侧进行基于第一关键字的第一网页检索；  并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求24所述的装置，其特征在干，进�步包括：  链接操作模块，用于在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求27所述的装置，其特征在于，所述链接操作模块还包括：目标链接第一更新&#21336;元，用于 发送所述目标链接中的第二关键字到服务器侧进行基于第二关键字的第二网页检索；  并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求27所述的装置，其特征在于，所述链接操作模块还包括：目标链接第二更新&#21336;元，用于  将用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少�个发送到所述服务器，并结合第二关键字进行第三网页检索；  并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求22所述的装置，其特征在于，所述收藏夹配置信息中还包括与目标链接对应的链接标识；  所述装置还包括：  收藏夹配置信息更新&#21336;元，用于使用所述HTTP响应状态码从预置的HTTP状态码映射表中匹配出对应的链接值，并使用所述链接值更新所述收藏夹配置信息中对应的链接标识。</div>
+    </div>
+    </div> <div class="claim"> <div num="31" class="claim">
+      <div class="claim-text">31.	�种收藏夹数据的处理服务器，其特征在于，包括：  存储单元，用于存储网络收藏夹配置信息；  目标链接获取模块，用于从所述网络收藏夹配置信息中获取目标链接；  HTTP请求发送模块，用于向所述目标链接对应的WEB服务器发送HTTP请求信息；  HTTP应答接收模块，用于接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；  链接标识获取模块，用于根据所述HTTP响应状态码获得所述目标链接的链接标识；收藏夹配置信息更新模块，用于根据所述目标链接和对应的链接标识更新所述网络收藏夹配置信息；  收藏 夹响应模块，用于接收来自客户端的网络收藏夹同步请求信息，并将所述网络收藏夹配置信息发送至客户端。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES53752746" lang="ZH" load-source="patent-office" class="description">
+    <p>一种收藏夹数据的处理方法、装置和服务器</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及浏览器技术领域，特别是涉及一种收藏数据的处理方法、装置和服务器。</p>
+    <p>背景技术</p>
+    <p>[0002]	浏览器是用户访问互联网的最常用入口。很多情况下，用户需要访问曾经访问过的历史网页，因此浏览器大都提供了收藏夹用于收藏某个特定网页的链接地址。当用户想重新浏览网页时，只需打开收藏夹，点击收藏的链接，而不用重新输入网址。</p>
+    <p>[0003]目前浏览器的收藏夹有两种形式：一种是本地收藏，收藏夹数据存储于本地客户 端；另一种是网络收藏，用户根据各自的用户账户将收藏夹数据存储于服务器，当用户使用不同的客户端时，可根据用户账户将服务器收藏的数据同步到本地客户端。</p>
+    <p>[0004]	在使用收藏夹的过程中，随着收藏夹中的数据越来越多，有些链接所指向的网页会失效、被重定向等，造成收藏夹中积累了大量无效的垃圾数据，使用起来非常不便。虽然收藏夹中提供了整理、删除收藏夹链接的功能，但由于需要用户逐一点击才能确定链接是否有效，效率非常低下。</p>
+    <p>[0005]	总之，需要本领域技术人员迫切解决的一个技术问题就是：如何快速有效地清除浏览器收藏夹中无效链接的垃圾数据，以提高用户操作效率。</p>
+    <p>发明内容</p>
+    <p>[0006]	本发明所要解决的技术问题是提供一种收藏夹数据的处理方法、装置和服务器，以便用户能够快速有效地识别和清除浏览器收藏夹中无效链接的垃圾数据，节约系统资源、节省操作时间，提高效率。</p>
+    <p>[0007]	为了解决上述问题，本发明公开了一种收藏夹数据的处理方法，包括：</p>
+    <p>[0008]	从收藏夹配置信息中获取目标链接；</p>
+    <p>[0009]	向所述目标链接对应的WEB服务器发送HTTP请求信息；</p>
+    <p>[0010]	接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；</p>
+    <p>[0011]	根据所述HTTP响应状态码获得所述目标链接的链接标识；</p>
+    <p>[0012]	在收藏夹中于所述目标链接处提示显示所述链接标识。</p>
+    <p>[0013]	优选的，所述从收藏夹配置信息中获取目标链接包括：</p>
+    <p>[0014]	从收藏夹配置信息中获取超出设定时间未进行过访问的链接信息作为目标链接。</p>
+    <p>[0015]	优选的,所述链接标识包括访问状态标识；</p>
+    <p>[0016]	所述根据所述HTTP响应状态码获得所述目标链接的链接标识包括：</p>
+    <p>[0017]	若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或</p>
+    <p>[0018]	若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或</p>
+    <p>[0019]	若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</p>
+    <p>[0020]	优选的，所述链接标识还包括链接重复标识；</p>
+    <p>[0021]	所述方法进一步包括：</p>
+    <p>[0022]	判断所述收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</p>
+    <p>[0023]	优选的，所述链接标识还包括第一关键字提示标识；</p>
+    <p>[0024]	所述方法进一步包括： [0025]	发送所述目标链接中的第一关键字到服务器侧进行基于第一关键字的第一网页检索；</p>
+    <p>[0026]	并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</p>
+    <p>[0027]	优选的，进一步包括：</p>
+    <p>[0028]	在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</p>
+    <p>[0029]	优选的，所述对目标链接进行删除和/或更新操作基于浏览器图形界面窗口中的操作控件。</p>
+    <p>[0030]	优选的，所述更新目标链接包括：</p>
+    <p>[0031]	发送所述目标链接中的第二关键字到服务器侧进行基于第二关键字的第二网页检索；</p>
+    <p>[0032]	并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0033]	优选的，进一步包括：</p>
+    <p>[0034]	将用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少一个发送到所述服务器，并结合第二关键字进行第三网页检索；</p>
+    <p>[0035]	并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0036]	优选的，所述检索结果中的网页链接包含：按时间或访问量排序的两个或多个网页链接。</p>
+    <p>[0037]	优选的，所述关键字包括：新闻信息和/或时事信息和/或购物信息。</p>
+    <p>[0038]	优选的，进一步包括：</p>
+    <p>[0039]	判断所述目标链接的URL或Title中是否包含新闻信息和/或时事信息和/或购物信息；</p>
+    <p>[0040]	在包含新闻信息和/或时事信息和/或购物信息时，将所述新闻信息和/或时事信息和/或购物信息发送至服务器侧进行所述网页检索；</p>
+    <p>[0041]	并将所述网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0042]	优选的，所述更新目标链接包括：</p>
+    <p>[0043]	若所述访问状态标识是重定向标识，则从所述HTTP应答信息中获取重定向链接更新对应的目标链接。[0044]	优选的，所述收藏夹配置信息中还包括与目标链接对应的链接标识；</p>
+    <p>[0045]	所述根据所述HTTP响应状态码获得所述目标链接的链接标识之后还包括：</p>
+    <p>[0046]	使用所述HTTP响应状态码从预置的HTTP状态码映射表中匹配出对应的链接值，并使用所述链接值更新所述收藏夹配置信息中对应的链接标识。</p>
+    <p>[0047]	为解决上述问题，本发明还提供了一种收藏夹数据的处理方法，包括：</p>
+    <p>[0048]	从网络收藏夹配置信息中获取目标链接； </p>
+    <p>[0049]	向所述目标链接对应的WEB服务器发送HTTP请求信息；</p>
+    <p>[0050]	接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；</p>
+    <p>[0051]	根据所述HTTP响应状态码获得所述目标链接的链接标识；</p>
+    <p>[0052]	根据所述目标链接和对应的链接标识更新所述网络收藏夹配置信息；</p>
+    <p>[0053]	收到来自客户端的网络收藏夹同步请求信息，将所述网络收藏夹配置信息发送至客户端。</p>
+    <p>[0054]	优选的，所述链接标识包括访问状态标识；</p>
+    <p>[0055]	所述根据所述HTTP响应状态码获得所述目标链接的链接标识包括：</p>
+    <p>[0056]	若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或</p>
+    <p>[0057]	若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或</p>
+    <p>[0058]	若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</p>
+    <p>[0059]	优选的，所述链接标识还包括链接重复标识；</p>
+    <p>[0060]	所述方法进一步包括：</p>
+    <p>[0061]	判断所述网络收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</p>
+    <p>[0062]	优选的，所述链接标识还包括第一关键字提示标识；</p>
+    <p>[0063]	所述方法进一步包括：</p>
+    <p>[0064]	根据所述目标链接中的第一关键字在服务器侧进行基于第一关键字的第一网页检索；</p>
+    <p>[0065]	并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</p>
+    <p>[0066]	优选的，进一步包括：</p>
+    <p>[0067]	在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</p>
+    <p>[0068]	优选的，所述更新目标链接包括：</p>
+    <p>[0069]	根据所述目标链接中的第二关键字在服务器侧进行基于第二关键字的第二网页检索；</p>
+    <p>[0070]	并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0071]	优选的，进一步包括：</p>
+    <p>[0072]	获取用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少一个，并结合第二关键字进行第三网页检索；</p>
+    <p>[0073]	并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0074]	为解决上述问题，本发明还提供了一种收藏夹数据的处理装置，包括：</p>
+    <p>[0075]	存储单元，用于存储收藏夹配置信息；</p>
+    <p>[0076]目标链接获取模块，用于从收藏夹配置信息中获取目标链接；</p>
+    <p>[0077]	HTTP请求发送模块，用于向所述目标链接对应的WEB服务器发送HTTP请求信息；</p>
+    <p>[0078]	HTTP应答接收模块，用于接收所述WEB服务器返回的HTTP应答信息，所述HTTP应 答信息中包括所述目标链接对应的HTTP响应状态码；</p>
+    <p>[0079]	链接标识获取模块，用于根据所述HTTP响应状态码获得所述目标链接的链接标识；</p>
+    <p>[0080]	显示模块，用于在收藏夹中于所述目标链接处提示显示所述链接标识。</p>
+    <p>[0081]	优选的，所述目标链接获取模块包括：</p>
+    <p>[0082]	第一获取单元，用于从收藏夹配置信息中获取超出设定时间未进行过访问的链接信息作为目标链接。</p>
+    <p>[0083]	优选的，所述链接标识包括访问状态标识；</p>
+    <p>[0084]	所述链接标识获取模块包括：</p>
+    <p>[0085]	访问状态标识设置单元，用于</p>
+    <p>[0086]	若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或</p>
+    <p>[0087]	若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或</p>
+    <p>[0088]	若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</p>
+    <p>[0089]	优选的，所述链接标识还包括链接重复标识；</p>
+    <p>[0090]	所述链接标识获取模块进一步包括：</p>
+    <p>[0091]	链接重复标识生成单元，用于判断所述收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</p>
+    <p>[0092]	优选的，所述链接标识还包括第一关键字提示标识；</p>
+    <p>[0093]	所述链接标识获取模块进一步包括：</p>
+    <p>[0094]	第一关键字提示标识生成单元，用于</p>
+    <p>[0095]	发送所述目标链接中的第一关键字到服务器侧进行基于第一关键字的第一网页检索；</p>
+    <p>[0096]	并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</p>
+    <p>[0097]	优选的，进一步包括：</p>
+    <p>[0098]	链接操作模块，用于在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</p>
+    <p>[0099]	优选的，所述链接操作模块还包括：目标链接第一更新单元，用于</p>
+    <p>[0100]	发送所述目标链接中的第二关键字到服务器侧进行基于第二关键字的第二网页检索；</p>
+    <p>[0101]	并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0102]	优选的，所述链接操作模块还包括：目标链接第二更新单元，用于</p>
+    <p>[0103]	将用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少一个发送到所述服务器，并结合第二关键字进行第三网页检索；</p>
+    <p>[0104]	并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0105]	优选的，所述收藏夹配置信息中还包括与目标链接对应的链接标识；</p>
+    <p>[0106]	所述装置还包括： </p>
+    <p>[0107]	收藏夹配置信息更新单元，用于使用所述HTTP响应状态码从预置的HTTP状态码映射表中匹配出对应的链接值，并使用所述链接值更新所述收藏夹配置信息中对应的链接标识。</p>
+    <p>[0108]	为解决上述问题，本发明还提供了一种收藏夹数据的处理服务器，包括：</p>
+    <p>[0109]	存储单元，用于存储网络收藏夹配置信息；</p>
+    <p>[0110]目标链接获取模块，用于从所述网络收藏夹配置信息中获取目标链接；</p>
+    <p>[0111]	HTTP请求发送模块，用于向所述目标链接对应的WEB服务器发送HTTP请求信息；</p>
+    <p>[0112]	HTTP应答接收模块，用于接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；</p>
+    <p>[0113]	链接标识获取模块，用于根据所述HTTP响应状态码获得所述目标链接的链接标识；</p>
+    <p>[0114]	收藏夹配置信息更新模块，用于根据所述目标链接和对应的链接标识更新所述网络收藏夹配置信息；</p>
+    <p>[0115]	收藏夹响应模块，用于接收来自客户端的网络收藏夹同步请求信息，并将所述网络收藏夹配置信息发送至客户端。</p>
+    <p>[0116]	与现有技术相比，本发明包括以下优点：</p>
+    <p>[0117]	考虑到用户基于现有浏览器收藏夹访问网页时，需要打开收藏夹中的目标链接，在经过等待并获得WEB服务器的应答信息后才能得知当前目标链接是否有效。而随着时间的积累和收藏夹中所收藏的链接日益增多，上述问题就变得更加突出，用户往往不愿意花费大量时间去逐个验证链接的有效性以便整理收藏夹，这就导致收藏夹中的无效链接越来越多，而这些无效的垃圾数据不仅浪费了系统宝贵的存储空间，而且严重降低了用户地使用效率。针对上述问题，本发明提出根据目标链接的HTTP响应状态码获得目标链接的链接标识，并在收藏夹目标链接处显示链接标识。这样一来，当用户打开收藏夹时，无需向WEB服务器发出任何HTTP请求信息，也无需等待任何HTTP应答信息，即可通过链接标识获知对应的目标链接是否有效，方便用户直观地对收藏夹数据进行整理，避免用户因为盲目打开无效链接而浪费时间。</p>
+    <p>附图说明</p>
+    <p>[0118]	图1-a是本发明实施例I所述一种收藏夹数据的处理方法的流程示意图；[0119]	图1-b是本发明实施例I中所述收藏夹在展开状态下的效果示意图；</p>
+    <p>[0120]	图2是本发明实施例2所述一种收藏夹数据的处理方法的流程示意图；</p>
+    <p>[0121]	图3是本发明实施例3所述一种收藏夹数据的处理方法的流程示意图；</p>
+    <p>[0122]	图4是本发明实施例4所述一种收藏夹数据处理装置的结构示意图；</p>
+    <p>[0123]	图5是本发明实施例5所述一种收藏夹数据处理服务器的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0124]	为使本发明的上述目的、特征和优点能够更加明显易懂，下面结合附图和具体实施方式对本发明作进一步详细的说明。</p>
+    <p>[0125]	以下本发明的实施例为描述方便、简洁起见，以个人电脑（PC)上的浏览器中的收 藏夹和/或网络收藏夹功能为平台进行本发明方案的描述。参照图l_a，基于个人电脑（PC)上的浏览器中的收藏夹，示出了本发明提供的一种收藏夹数据处理方法实施例I的流程示意图。本实施例的方法包括以下步骤：</p>
+    <p>[0126]	步骤101，从收藏夹配置信息中获取目标链接。</p>
+    <p>[0127]	收藏夹配置信息存储了收藏夹中所记录的网页链接地址（URL)，本领域技术人员容易理解，所述收藏夹配置信息可采用多种数据存储格式，例如关系型数据库、目录文件夹，或者是一个独立的数据文件，如txt、xml文件等。</p>
+    <p>[0128]	为便于理解，下面给出所述收藏夹配置信息为数据库时的一个数据结构示例：</p>
+    <p>[0129]</p>
+    <p>  字段名	示例数据</p>
+    <p>   Title	百度</p>
+    <p>      url	http://www.baidu.com</p>
+    <p>       createtime	2012-05-19，链接被收藏时间</p>
+    <p>        Iastmodifytime	2012-05-20，最后访问时间</p>
+    <p>   state	当前链接标识</p>
+    <p>[0130]	在本发明的另一优选实施例中，所述从收藏夹配置信息中获取目标链接具体包括：从收藏夹配置信息中获取超出设定时间未进行过访问的链接信息作为目标链接。</p>
+    <p>[0131]	由于网站资源的日新月异，因此，当网页的链接被用户收藏后，随着时间的增加，该链接变为无效链接的可能性也在增加。鉴于此，我们从收藏夹中选择满足设定条件的链接作为目标链接，缩小目标链接的范围，降低了本发明在实施过程中所耗时间，尽可能少的占用系统资源。尤其是，在收藏夹配置信息中记录并更新链接的最后访问时间，然后仅获取超出设定时间未进行过访问的链接信息作为目标链接，这样一来使得需处理的目标链接数量尽可能少，因此能尽早释放系统资源，将对系统性能的影响降至最低。</p>
+    <p>[0132]	步骤102，向所述目标链接对应的WEB服务器发送HTTP请求信息。</p>
+    <p>[0133]	步骤103，接收WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码。</p>
+    <p>[0134]	根据HTTP通信协议，WEB服务器会在返回给客户端的HTTP应答信息中包含HTTP响应状态码，以说明当前访问请求的结果。HTTP响应状态码包含5类，常见的状态码示例如下：</p>
+    <p>[0135]	②成功</p>
+    <p>[0136]	200:访问成功</p>
+    <p>[0137]	③重定向</p>
+    <p>[0138]	301 :永久移动转移，请求的内容已永久移动其他新位置。</p>
+    <p>[0139]	302 :临时移动转移，请求的内容已临时移动新的位置。 [0140]	304:未修改。自从上次请求后，请求的内容未修改过。</p>
+    <p>[0141]	307 :临时重定向。服务器目前从不同位置响应请求，但请求者应继续使用原有位置来进行以后的请求</p>
+    <p>[0142]	④客户端错误</p>
+    <p>[0143]	400 :错误请求</p>
+    <p>[0144]	404 :请求页面不存在</p>
+    <p>[0145]	⑤服务器错误</p>
+    <p>[0146]	500 :服务器内部错误</p>
+    <p>[0147]	501 :未实现（Not Implemented)</p>
+    <p>[0148]	502:网关失败</p>
+    <p>[0149]	504 :网关超时</p>
+    <p>[0150]	505 =HTTP版本不支持</p>
+    <p>[0151 ] 以上列出了部分HTTP响应状态码，若需了解更详细的内容，请参考HTTP协议有关现有资料。</p>
+    <p>[0152]	步骤104，根据所述HTTP响应状态码获得所述目标链接的链接标识。</p>
+    <p>[0153]	链接标识以直观的方式向用户说明当前目标链接的访问状态，方便用户进行后续操作。</p>
+    <p>[0154]	本发明的另一优选实施例中，所述链接标识包括访问状态标识；所述根据所述HTTP响应状态码获得所述目标链接的链接标识包括：</p>
+    <p>[0155]	若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或</p>
+    <p>[0156]	若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或</p>
+    <p>[0157]	若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</p>
+    <p>[0158]	具体而言，可对HTTP响应状态码进行分组，并与链接标识建立映射表：</p>
+    <p>[0159]</p>
+    <p>          HTTP响应状态码	链接标识</p>
+    <p>     200 1&#190;</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102819554A/CN102819554AD00141.png"> <img id="idf0001" file="CN102819554AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102819554A/CN102819554AD00141.png" class="patent-full-image" alt="Figure CN102819554AD00141"> </a> </div>
+    <p>[0160]	在本发明的另一优选实施例中，所述链接标识还包括链接重复标识；</p>
+    <p>[0161]	所述方法进一步包括：</p>
+    <p>[0162]	判断所述收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</p>
+    <p>[0163]	在本发明的另一优选实施例中，</p>
+    <p>[0164]	所述链接标识还包括第一关键字提示标识；</p>
+    <p>[0165]	所述方法进一步包括： [0166]	发送所述目标链接中的第一关键字到服务器侧进行基于第一关键字的第一网页检索；</p>
+    <p>[0167]	并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</p>
+    <p>[0168]	优选的，所述关键字包括新闻信息和/或时事信息和/或购物信息。</p>
+    <p>[0169]	优选的，所述第一网页检索结果中的网页链接包含：按时间或访问量排序的两个或多个网页链接。</p>
+    <p>[0170]	由于新闻、时事或购物信息的时效性非常强，已经过期的时事新闻对用户来说意义并不大，因此，若目标链接或目标链接的标题（Title)中包括新闻信息和/或时事信息和/或购物信息这些第一关键字时，按照所述第一关键字从服务器侧进行网页检索（为便于区分，本发明将此处按第一关键字进行检索称为第一网页检索），并将检索结果中的网页链接生成第一关键字提示标识显示在所述目标链接处，为用户推荐并提供参考，若用户点击第一关键字提示标识中的链接信息还可直接打开对应的网页。这样一来，当用户打开收藏夹查看所收藏的目标链接时，在不用打开目标链接的情况下，即可通过第一关键字提示标识获知当前第一关键字所对应的最新时事/新闻/购物信息的部分内容，进而便于用户决定是否有必要打开该目标链接所对应的网页以获取全部网页信息，节省了操作时间，提高了操作效率。</p>
+    <p>[0171]	步骤105，在收藏夹中于所述目标链接处提示显示所述链接标识。</p>
+    <p>[0172]	参见图l_b，图l_b示出了本实施例中收藏夹在展开状态下的效果示意图。其中，用户所收藏的网页链接sOl的右侧显示了该目标链接和对应的链接标识s02，包括：无效、重定向；若链接有效，可不显示任何信息；若链接中包含时事/新闻/购物信息，则其链接标识显示为包含该链接所对应当前网页中时事/新闻/购物信息等第一关键字的两个或多个网页链接。</p>
+    <p>[0173]	在本发明的另一优选实施例中，在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</p>
+    <p>[0174]	优选的，所述对目标链接进行删除和/或更新操作基于浏览器图形界面窗口中的操作控件。</p>
+    <p>[0175]	当然，在所述目标链接的访问状态标识为无效标识自动完成对目标链接的删除和/或更新只是一种优选做法，我们也可以在图形界面窗口中提供相应的操作控件，并根据用户的指令执行相应的操作。[0176]	参见图l_b，操作控件s03显示在链接标识的右侧，方便用户当前目标链接进行删除和/或更新操作。</p>
+    <p>[0177]	当所述操作控件接收到用户的删除和/或更新指令后，根据所述指令对当前目标链接执行相应的删除和/或更新操作。</p>
+    <p>[0178]	本领域技术人员应当理解，本实施例中所述的链接标识和操作控件在浏览器收藏夹图形界面窗口中所显示的位置可以是所述目标链接相邻或相近、上方或下方的任何位置。</p>
+    <p>[0179]	在本发明的另一优选实施例中，所述更新目标链接包括：</p>
+    <p>[0180]	发送所述目标链接中的第二关键字到服务器侧进行基于第二关键字的第二网页检索； [0181]	并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0182]	在本发明的另一优选实施例中，所述方法进一步包括：</p>
+    <p>[0183]	将用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少一个发送到所述服务器，并结合第二关键字进行第三网页检索；</p>
+    <p>[0184]	并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0185]	优选的，所述第二关键字包括：新闻信息和/或时事信息和/或购物信息；所述第二网页检索和第三网页检索的检索结果中的网页链接包含：按时间或访问量排序的两个或多个网页链接。</p>
+    <p>[0186]	在本发明的另一优选实施例中，所述方法进一步包括：</p>
+    <p>[0187]	判断所述目标链接的URL或Title中是否包含新闻信息和/或时事信息和/或购物信息；</p>
+    <p>[0188]	在包含新闻信息和/或时事信息和/或购物信息时，将所述新闻信息和/或时事信息和/或购物信息发送至服务器侧进行网页检索；</p>
+    <p>[0189]	并将所述网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0190]	优选的，所述更新目标链接还包括：若所述访问状态标识是重定向标识，则从所述HTTP应答信息中获取重定向链接更新对应的目标链接。</p>
+    <p>[0191]	在本发明的另一优选实施例中，所述收藏夹配置信息中还包括与目标链接对应的链接标识；所述根据所述HTTP响应状态码获得所述目标链接的链接标识之后还包括：</p>
+    <p>[0192]	使用所述HTTP响应状态码从预置的HTTP状态码映射表中匹配出对应的链接值，并使用所述链接值更新所述收藏夹配置信息中对应的链接标识。</p>
+    <p>[0193]	上述实施例I中，收藏夹配置信息存储在客户端，在下面的实施例2中，收藏夹配置信息存储在服务器，即网络收藏夹配置信息，并由服务器对网络收藏夹配置信息中的链接信息进行维护更新，当收到客户端的收藏夹同步请求信息后，根据请求信息获取对应的网络收藏夹配置信息发送至客户端。参照图2，基于个人电脑（PC)浏览器上的网络收藏夹，示出了本发明提供的一种收藏夹数据处理方法实施例2的流程示意图，包括以下步骤：</p>
+    <p>[0194]	步骤201，从网络收藏夹配置信息中获取目标链接。[0195]	优选的，服务器可按一定规则执行本实施例所述步骤，例如，可每周执行一次。这样尽可能降低对服务器资源的消耗，同时也保证了收藏夹配置信息的实时有效。</p>
+    <p>[0196]	步骤202，根据所述目标链接向对应的WEB服务器发送HTTP请求信息。</p>
+    <p>[0197]	步骤203，接收WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接的HTTP响应状态码。</p>
+    <p>[0198]	步骤204，根据所述HTTP响应状态码获得所述目标链接的链接标识。</p>
+    <p>[0199]	在本发明的另一优选实施例中,所述链接标识包括访问状态标识；</p>
+    <p>[0200]	所述根据所述HTTP响应状态码获得所述目标链接的链接标识 包括：</p>
+    <p>[0201 ] 若所述HTTP响应状态码包含HTTP请求成功信息，则所述目标链接的访问状态标识为有效标识，或</p>
+    <p>[0202]	若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或</p>
+    <p>[0203]	若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</p>
+    <p>[0204]	步骤205，根据所述目标链接和链接标识更新所述网络收藏夹配置信息。</p>
+    <p>[0205]	步骤206，收到来自客户端的收藏夹同步请求信息，将所述网络收藏夹配置信息发送至客户端。</p>
+    <p>[0206]	在本发明另一优选实施中，所述网络收藏夹配置信息还包括用户标识；所述当收到来自客户端的网络收藏夹同步请求信息后，将所述网络收藏夹配置信息发送至客户端，具体包括：</p>
+    <p>[0207]	根据客户端同步请求信息中的用户标识从所述网络收藏夹配置信息中获取对应的收藏信息发送至客户端。</p>
+    <p>[0208]	收藏夹配置信息存储在服务器，即使用户使用不同的客户端，也可根据用户标识从服务器获取对应的收藏夹配置信息，而不必担心客户端数据的损坏或遗失给用户造成的不利影响。</p>
+    <p>[0209]	参照图3，基于PC浏览器上的网络收藏夹，示出了本发明实施例提供的一种收藏夹数据处理方法的实施例3的流程示意图，本实施例方法包括以下步骤：</p>
+    <p>[0210]	步骤301，客户端向服务器发送网络收藏夹同步请求信息。</p>
+    <p>[0211 ] 步骤302，接收来自服务器的网络收藏夹配置信息。</p>
+    <p>[0212]	在本发明的另一优选实施例中，所述向服务器发送的网络收藏夹同步请求信息中包括用户标识。</p>
+    <p>[0213]	客户端根据用户标识从服务器获取对应的网络收藏夹配置信息，以保证在任一客户端都能够获得同样的收藏夹配置信息。</p>
+    <p>[0214]	步骤303，从所述网络收藏夹配置信息中获取目标链接。</p>
+    <p>[0215]	步骤304，向所述目标链接对应的WEB服务器发送HTTP请求信息。</p>
+    <p>[0216]	步骤305，接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码。</p>
+    <p>[0217]	步骤306，根据所述HTTP响应状态码获得所述目标链接的链接标识。</p>
+    <p>[0218]	步骤307，在收藏夹中于所述目标链接处提示显示所述链接标识。[0219]	以上对本发明所提供的一种收藏夹数据处理方法的实施例做了描述，下面参见上述方法实施例的内容，对本发明的装置和服务器实施例进行描述：</p>
+    <p>[0220]	参照图4，图4示出了本发明所述一种收藏夹数据的处理装置的结构示意图，所述装置包括：</p>
+    <p>[0221]	存储单元410，用于存储收藏夹配置信息；</p>
+    <p>[0222]目标链接获取模块420，用于从收藏夹配置信息中获取目标链接；</p>
+    <p>[0223]	HTTP请求发送模块430，用于向所述目标链接对应的WEB服务器发送HTTP请求信息；</p>
+    <p>[0224]	HTTP应答接收模块440，用于接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码； [0225]	链接标识获取模块450，用于根据所述HTTP响应状态码获得所述目标链接的链接标识；</p>
+    <p>[0226]	显示模块460，用于在收藏夹中于所述目标链接处提示显示所述链接标识。</p>
+    <p>[0227]	优选的，所述目标链接获取模块420包括：</p>
+    <p>[0228]	第一获取单元，用于从收藏夹配置信息中获取超出设定时间未进行过访问的链接信息作为目标链接。</p>
+    <p>[0229]	优选的，所述链接标识包括访问状态标识；</p>
+    <p>[0230]	所述链接标识获取模块包括：</p>
+    <p>[0231 ] 访问状态标识设置单元，用于</p>
+    <p>[0232]	若所述HTTP响应状态码包含HTTP请求成功信息,则所述目标链接的访问状态标识为有效标识，或</p>
+    <p>[0233]	若所述HTTP响应状态码包含HTTP请求错误信息，则所述目标链接的访问状态标识为无效标识，或</p>
+    <p>[0234]	若所述HTTP响应状态码包含HTTP重定向信息，则所述目标链接的访问状态标识为重定向标识。</p>
+    <p>[0235]	优选的，所述链接标识还包括链接重复标识；</p>
+    <p>[0236]	所述链接标识获取模块进一步包括：</p>
+    <p>[0237]	链接重复标识生成单元，用于判断所述收藏夹配置信息中是否存在与所述目标链接重复的链接信息，若存在，则生成链接重复标识。</p>
+    <p>[0238]	优选的，所述链接标识还包括第一关键字提示标识；</p>
+    <p>[0239]	所述链接标识获取模块进一步包括：</p>
+    <p>[0240]	第一关键字提示标识生成单元，用于</p>
+    <p>[0241]	发送所述目标链接中的第一关键字到服务器侧进行基于第一关键字的第一网页检索；</p>
+    <p>[0242]	并将第一网页检索的检索结果中的网页链接生成第一关键字提示标识。</p>
+    <p>[0243]	优选的，进一步包括：</p>
+    <p>[0244]	链接操作模块，用于在所述目标链接的访问状态标识为无效标识时，删除和/或更新所述目标链接。</p>
+    <p>[0245]	优选的，所述链接操作模块还包括：目标链接第一更新单元，用于[0246]	发送所述目标链接中的第二关键字到服务器侧进行基于第二关键字的第二网页检索；</p>
+    <p>[0247]	并将第二网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0248]	优选的，所述链接操作模块还包括：目标链接第二更新单元，用于</p>
+    <p>[0249]	将用户侧的网页浏览记录、收藏夹配置信息、浏览器使用偏好信息中的至少一个发送到所述服务器，并结合第二关键字进行第三网页检索；</p>
+    <p>[0250]	并将第三网页检索的检索结果中的网页链接更新所述访问状态标识为无效标识的目标链接。</p>
+    <p>[0251]	优选的，所述收藏夹配置信息中还包括与目标链接对应的链接标识； </p>
+    <p>[0252]	所述装置还包括：</p>
+    <p>[0253]	收藏夹配置信息更新单元，用于使用所述HTTP响应状态码从预置的HTTP状态码映射表中匹配出对应的链接值，并使用所述链接值更新所述收藏夹配置信息中对应的链接标识。</p>
+    <p>[0254]	参照图5，图5示出了本发明所述一种收藏夹数据的处理服务器的结构示意图，所述服务器包括：</p>
+    <p>[0255]	存储单元510，用于存储网络收藏夹配置信息；</p>
+    <p>[0256]目标链接获取模块520，用于从所述网络收藏夹配置信息中获取目标链接；</p>
+    <p>[0257]	HTTP请求发送模块530，用于向所述目标链接对应的WEB服务器发送HTTP请求信息；</p>
+    <p>[0258]	HTTP应答接收模块540，用于接收所述WEB服务器返回的HTTP应答信息，所述HTTP应答信息中包括所述目标链接对应的HTTP响应状态码；</p>
+    <p>[0259]	链接标识获取模块550，用于根据所述HTTP响应状态码获得所述目标链接的链接标识；</p>
+    <p>[0260]	收藏夹配置信息更新模块560，用于根据所述目标链接和对应的链接标识更新所述网络收藏夹配置信息；</p>
+    <p>[0261]	收藏夹响应模块570，用于接收来自客户端的网络收藏夹同步请求信息，并将所述网络收藏夹配置信息发送至客户端。</p>
+    <p>[0262]	上述本发明实施例中的方法、装置和服务器适用于各种网络或者客户端环境中，例如可以实现在诸如个人计算机设备之类的计算机设备中，或者可以实现在诸如移动电话、移动通信设备、个人数字助理（PDA)等其他便携式电子设备或者非便携式电子设备中。因此本领域技术人员要明确的是，本发明的保护范围并不限于PC上运行浏览器中的收藏夹功能和网络收藏夹功能，仅是出于描述的简洁和方便而在本发明实施例中采用了 PC上运行浏览器中的收藏夹功能和网络收藏夹功能进行描述。</p>
+    <p>[0263]	本发明的各个实施例均采用递进的方式描述，每个实施例重点说明的都是与其他实施例的不同之处，各个实施例之间相同相似的部分互相参见即可。对于系统和/或装置实施例而言，由于其与方法实施例基本相似，所以描述的比较简单，相关之处参见方法实施例的部分说明即可。</p>
+    <p>[0264]	最后，还需要说明的是，在本文中，诸如第一和第二等之类的关系术语仅仅用来将一个实体或者操作与另一个实体或操作区分开来，而不一定要求或者暗示这些实体或操作之间存在任何这种实际的关系或者顺序。</p>
+    <p>[0265]	而且，上文中的“和/或”表示本文既包含了 “和”的关系，也包含了 “或”的关系，其中：如果方案A与方案B是“和”的关系，则表示某实施例中可以同时包括方案A和方案B ;如果方案A与方案B是“或”的关系，则表示某实施例中可以单独包括方案A，或者单独包括方案B。 [0266]	以上对本发明实施例所提供的一种收藏夹数据处理方法、装置和服务器，进行了详细介绍，本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本发明的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1912869A?cl=zh">CN1912869A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2005年8月11日</td><td class="patent-data-table-td patent-date-value">2007年2月14日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">一种网络收藏夹的实现方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101382954A?cl=zh">CN101382954A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月25日</td><td class="patent-data-table-td patent-date-value">2009年3月11日</td><td class="patent-data-table-td ">北京搜狗科技发展有限公司</td><td class="patent-data-table-td ">提供网址收藏名称的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101957818A?cl=zh">CN101957818A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年7月13日</td><td class="patent-data-table-td patent-date-value">2011年1月26日</td><td class="patent-data-table-td ">北京搜狗科技发展有限公司</td><td class="patent-data-table-td ">一种批量收藏网页的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102043805A?cl=zh">CN102043805A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年10月19日</td><td class="patent-data-table-td patent-date-value">2011年5月4日</td><td class="patent-data-table-td ">阿里巴巴集团控股有限公司</td><td class="patent-data-table-td ">一种上网导航页面的生成方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015058621A1?cl=zh">WO2015058621A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年10月11日</td><td class="patent-data-table-td patent-date-value">2015年4月30日</td><td class="patent-data-table-td ">Tencent Technology (Shenzhen) Company Limited</td><td class="patent-data-table-td ">Method and apparatus of updating quick link information</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=st2zBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=st2zBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年12月12日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/4ee79bd9fa1b7d4e1399/CN102819554A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E6%94%B6%E8%97%8F%E5%A4%B9%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95_%E8%A3%85.pdf?id=st2zBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U354H0J_mt0Bfw0KNdZy_x3QAfB-w"},"sample_url":"https://www.google.com/patents/reader?id=st2zBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

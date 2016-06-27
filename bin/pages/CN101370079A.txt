@@ -1,0 +1,213 @@
+<!DOCTYPE html><html><head><title>专利 CN101370079A - 双接口智能卡的片内操作系统及其实现方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="双接口智能卡的片内操作系统及其实现方法"><meta name="DC.contributor" content="涌 姜" scheme="inventor"><meta name="DC.contributor" content="剑 廖" scheme="inventor"><meta name="DC.contributor" content="泉 廖" scheme="inventor"><meta name="DC.contributor" content="旭 张" scheme="inventor"><meta name="DC.contributor" content="张海英" scheme="inventor"><meta name="DC.contributor" content="曹会扬" scheme="inventor"><meta name="DC.contributor" content="普天信息技术研究院有限公司" scheme="assignee"><meta name="DC.date" content="2008-10-6" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种双接口智能卡的片内操作系统及其实现方法，该系统包括：智能卡接口传输管理模块、高速数据接口传输管理模块、安全管理模块、应用管理模块、文件管理模块和高速数据协处理模块；本发明方法通过对接收到的命令头的安全机制检查后，判断业务类型，如果命令头表明业务类型为普通数据业务，则进行普通数据业务处理；如果命令头表明业务类型为高速数据业务，则进行高速数据业务处理。本发明的片内操作系统及其实现方法可以应用于具有高速数据接口的双接口智能卡，摆脱了传统智能卡接口的条件束缚，使得高速数据的传输成为可能。"><meta name="DC.date" content="2009-2-18"><meta name="citation_patent_publication_number" content="CN:101370079:A"><meta name="citation_patent_application_number" content="CN:200810223677"><link rel="canonical" href="https://www.google.com/patents/CN101370079A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101370079A?cl=zh"/><meta name="title" content="专利 CN101370079A - 双接口智能卡的片内操作系统及其实现方法"/><meta name="description" content="本发明公开了一种双接口智能卡的片内操作系统及其实现方法，该系统包括：智能卡接口传输管理模块、高速数据接口传输管理模块、安全管理模块、应用管理模块、文件管理模块和高速数据协处理模块；本发明方法通过对接收到的命令头的安全机制检查后，判断业务类型，如果命令头表明业务类型为普通数据业务，则进行普通数据业务处理；如果命令头表明业务类型为高速数据业务，则进行高速数据业务处理。本发明的片内操作系统及其实现方法可以应用于具有高速数据接口的双接口智能卡，摆脱了传统智能卡接口的条件束缚，使得高速数据的传输成为可能。"/><meta property="og:title" content="专利 CN101370079A - 双接口智能卡的片内操作系统及其实现方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101370079A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101370079A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=srpnBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101370079A&amp;usg=AFQjCNEh9c3BtwpwLDQVhF9giRh23bWA9g" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/c9bca9d99f329142eafd/CN101370079A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/c9bca9d99f329142eafd/CN101370079A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101370079A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101370079A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101370079A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种双接口智能卡的片内操作系统及其实现方法，该系统包括：智能卡接口传输管理模块、高速数据接口传输管理模块、安全管理模块、应用管理模块、文件管理模块和高速数据协处理模块；本发明方法通过对接收...</span><span itemprop="url">https://www.google.com/patents/CN101370079A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101370079A - 双接口智能卡的片内操作系统及其实现方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101370079A - 双接口智能卡的片内操作系统及其实现方法" title="专利 CN101370079A - 双接口智能卡的片内操作系统及其实现方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101370079 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810223677</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年2月18日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年10月6日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年10月6日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810223677.6, </span><span class="patent-bibdata-value">CN 101370079 A, </span><span class="patent-bibdata-value">CN 101370079A, </span><span class="patent-bibdata-value">CN 200810223677, </span><span class="patent-bibdata-value">CN-A-101370079, </span><span class="patent-bibdata-value">CN101370079 A, </span><span class="patent-bibdata-value">CN101370079A, </span><span class="patent-bibdata-value">CN200810223677, </span><span class="patent-bibdata-value">CN200810223677.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B6%8C+%E5%A7%9C%22">涌 姜</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%89%91+%E5%BB%96%22">剑 廖</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B3%89+%E5%BB%96%22">泉 廖</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%97%AD+%E5%BC%A0%22">旭 张</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E6%B5%B7%E8%8B%B1%22">张海英</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9B%B9%E4%BC%9A%E6%89%AC%22">曹会扬</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%99%AE%E5%A4%A9%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%99%A2%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">普天信息技术研究院有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101370079A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101370079A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101370079A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=srpnBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810223677&amp;usg=AFQjCNFuIfOTnSgeeu5f7zSVRMi1mnvxTQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=srpnBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101370079A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFTT0yLZ8_skT8JGvR3E8is1RaBdQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT84939823" lang="ZH" load-source="patent-office">双接口智能卡的片内操作系统及其实现方法</invention-title>
+    </span><br><span class="patent-number">CN 101370079 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA61174526" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种双接口智能卡的片内操作系统及其实现方法，该系统包括：智能卡接口传输管理模块、高速数据接口传输管理模块、安全管理模块、应用管理模块、文件管理模块和高速数据协处理模块；本发明方法通过对接收到的命令头的安全机制检查后，判断业务类型，如果命令头表明业务类型为普通数据业务，则进行普通数据业务处理；如果命令头表明业务类型为高速数据业务，则进行高速数据业务处理。本发明的片内操作系统及其实现方法可以应用于具有高速数据接口的双接口智能卡，摆脱了传统智能卡接口的条件束缚，使得高速数据的传输成为可能。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(15)</span></span></div><div class="patent-text"><div mxw-id="PCLM13322631" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种双接口智能卡的片内操作系统，其特征在于，该系统包括：智能卡接口传输管理模块、高速数据接口传输管理模块、安全管理模块、应用管理模块、文件管理模块和高速数据协处理模块；智能卡接口传输管理模块或高速数据接口传输管理模块，用于读取命令头，并将读取到的命令头发送给安全管理模块；安全管理模块，用于对命令头进行安全机制检查，并将通过检查的命令头发送给应用管理模块；应用管理模块，用于根据接收到的命令头判断业务类型，如果命令头表明业务类型为普通数据业务，则将命令头中指定长度的后续有效字节数据发送给文件管理模块；如果业务类型为高速数据业务，则将命令头中指定长度的后续有效字节数据发送给高速数据协处理模块；文件管理模块，用于对普通数据业务的命令头中指定长度的后续有效字节数据进行普通数据业务处理，并在完成处理后向智能卡接口传输管理模块返回业务处理结果和状态信息；高速数据协处理模块，用于对高速数据业务的命令头中指定长度的后续有效字节数据进行高速数据业务处理，并在完成处理后向高速数据接口传输管理模块返回业务处理结果和状态信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求l所述的片内操作系统，其特征在于，所述智能卡接口传 输管理模块进一步用于检测智能卡接口&#32233;存buffer中是否有数据；如果有，从 智能卡接口&#32233;存buffer中读取命令头；如果没有，则继续等待。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求2所述的片内操作系统，其特征在于，所述将命令头中指 定长度的后续有效字节数据发送给高速数据协处理模块具体包括：应用管理模 块通过高速数据接口传输管理模块从高速数据接口接收命令头中指定长度的后 续有效字节数据，并将接收到的后续有效字节数据发送给高速数据协处理模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求2所述的片内操作系统，其特征在于，所述高速数据协处理模块进一步用于检测高速数据接口&#32233;存buffer中是否有数据；如果有，从高 速数据接口&#32233;存buffer中读取命令头；如果没有，则继续等待。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 根据权利要求4所述的片内操作系统，其特征在于，所述将命令头中指 定长度的后续有效字节数据发送给高速数据协处理模块具体包括：应用管理模 块通过高速数据接口传输管理模块读取高速数据接口&#32233;存buffer中的命令头中 指定长度的后续有效字节数据，并将读取到的后续有效字节数据发送给高速数 据协处理模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求l、 3或5所述的片内操作系统，其特征在于，在所述高 速数据协处理模块在进行高速数据业务处理时，如果需要读写已有存储器中内 容，则所述高速数据协处理模块进一步用于，通知文件管理模块；接收到文件 管理模块返回的处理结果后继续进行高速数据业务处理；所述文件管理模块进一步用于，对高速数据协处理模块发送的命令进行相 应的文件读写操作，并将处理结果返回给高速数据协处理模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 根据权利要求6所述的片内操作系统，其特征在于，所述高速数据业务 为数字电视数据流解扰业务；所述高速数据接口传输管理模块为数据总线接口 传输管理模块；所述高速数据协处理模块为数字电视业务解扰模块；所述命令 头为五字节；所述状态信息为两字节。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8、 一种双接口智能卡的片内操作系统的实现方法，其特征在于，该方法包括：A、 通过对接收到的命令头的安全机制检查后，判断业务类型，如果命令 头表明业务类型为普通数据业务，则进行普通数据业务处理；如果命令头表明 业务类型为高速数据业务，则进行高速数据业务处理；B、 返回业务处理结果和状态信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 根据权利要求8所述的实现方法，其特征在于，步骤A之前，该方法 进一步包括检测智能卡接口&#32233;存buffer中是否有数据的步骤；如果有，则从智 能卡接口&#32233;存buffer中读取命令头；如果没有，则继续等待。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求9所述的实现方法，其特征在于，步骤A中的进行高速 数据业务处理具体包括：从高速数据接口接收到命令头中指定长度的后续有效 字节数据后，对所述后续有效字节数据进行高速数据业务处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11、 根据权利要求9所述的实现方法，其特征在于，步骤A之前，该方法 进一步包括检测高速数据接口&#32233;存buffer中是否有数据的步骤；如果有：则从 高速数据接口&#32233;存buffer中读取命令头；如果没有，则继续等待。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12、 根据权利要求11所述的实现方法，其特征在于，步骤A中的进行高 速数据业务处理具体包括：从高速数据接口&#32233;存buffer中读取到命令头中指定 长度的后续有效字节数据后，对所述后续有效字节数据进行高速数据业务处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 根据权利要求10或12所述的实现方法，其特征在于，步骤A中的进 行高速数据业务处理进一步包括：如果高速数据业务处理需要读写已有存储器 中内容，则通知普通数据业务处理流程进行相关操作并结合普通数据业务处理 流程返回的处理结果继续进行高速数据业务处理；步骤B具体包括：通过高速 数据接口返回业务处理结果和状态信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14、 根据权利要求9或11所述的实现方法，其特征在于，步骤A中的进 行普通数据业务处理具体包括：从智能卡接口接收到命令头中指定长度的后续 有效字节数据后，对所述后续有效字节数据进行普通数据业务处理，或按照高 速数据业务处理流程发送的读写已有存储器中内容的命令进行普通数据业务处 理并将处理结果返回高速数据业务处理流程；步骤B具体包括：通过智能卡接 口返回业务处理结果和状态信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15、 根据权利要求11所述的实现方法，其特征在于，步骤A中的进行普 通数据业务处理具体包括：对从高速数据接口&#32233;存buffer中读取的命令头中指 定长度的后续有效字节数据进行普通数据业务处理，或按照高速数据业务处理 流程发送的读写已有存储器中内容的命令进行普通数据业务处理并将处理结果 返回高速数据业务处理流程；步骤B具体包括：通过智能卡接口返回业务处理 结果和状态信息。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES18709660" lang="ZH" load-source="patent-office" class="description">
+    <p>双接口智能卡的片内操作系统及其实现方法</p>
+    <p>技术领域</p>
+    <p>本发明涉及智能卡领域，特别涉及一种双接口智能卡的片内操作系统</p>
+    <p>(COS ， chip operating system )及其实现方法。</p>
+    <p>背景技术</p>
+    <p>目前，随着科技的不断进步，智能卡应用已经逐渐成为人们生活中不可 或缺的一部分，其主要应用于安全性要求较高的行业中。从楼宇门禁到移动 电话、从公交一^^通到校园一卡通、从银行卡到数字电视中的条件接收（CA， conditional access)卡，这诸多应用都与智能卡息息相关。随着智能卡应用 的不断推广与普及，人们对智能卡的功能需求也越来越多样化，丰富多彩的 应用需求使得智能卡的硬件工艺水平日新月异。</p>
+    <p>智能卡硬件工艺日新月异的发展，必将带来智能卡片内操作系统结构的 不断变化。图1显示了单接口智能卡片内操作系统的结构图，从图1中可以 看出，单接口智能卡片内操作系统由传输管理模块101、安全管理模块102、 应用管理模块103和文件管理模块104组成。传输管理模块101将读取到的 命令头发送给安全管理模块102;安全管理模块102对接收到的命令头进行 安全性检查，并将通过检查的命令头发送给应用管理模块103;应用管理模 块103判断所接收的命令头执行的可能性，如果可行，则通过传输管理模块 接收后续有效字节数据，并将接收到的后续有效字节数据发送给文件管理模 块104;文件管理模块104完成对所述后续有效字节数据的处理，并通过传 输管理模块101返回业务处理结果和状态信息。在这里需要提起注意的是， 智能卡中的"文件"概念与我们通常所说的"文件"是有区别的。尽管智能卡中 的文件内存储的也是数据单元或记录，但它们都是与智能卡的具体应用直接</p>
+    <p>相关的。   一般而言，   一个具体的应用必然要对应于智能卡中的一个文件。但</p>
+    <p>是，由于符合IS07816标准的单一智能卡接口的数据处理能力有限，因此， 对于高速数据的传输显得力不从心。</p>
+    <p>比如，在现今流行的数字电视行业中，大部分终端厂家采用基于单一智 能卡接口的条件接收卡方案来实现数字电视的接收，该方案是通过内嵌一颗 智能卡芯片来完成认证、鉴权等功能。具体是将需要解扰的数据流放在终端 来处理，条件接收卡主要完成鉴权、认证、计费等功能，这样密钥需在CA 卡内完成解析，回传到终端，再由终端根据获得的密钥完成数据解扰，即不 能实现真正意义上的机卡分离。为了传输数据的安全性，满足密钥不出卡的 要求，将解扰数据流放在卡内处理成为条件接收卡的一种发展趋势。但若将 解扰数据流放在条件接收卡内进行，现有的单一智能卡接口必然成为该方案 实现的一个瓶颈。</p>
+    <p>发明内容</p>
+    <p>有鉴于此，本发明的主要目的在于提供一种双接口智能卡的片内操作系 统及其实现方法，使得支持双接口的智能卡具备处理高速数据流的能力。 为达到上述目的，本发明的技术方案具体是这样实现的： 一种双接口智能卡的片内操作系统，该系统包括：智能卡接口传输管理模</p>
+    <p>块、高速数据接口传输管理模块、安全管理模块、应用管理模块、文件管理模 块和高速数据协处理模块；</p>
+    <p>智能卡接口传输管理模块或高速数据接口传输管理模块，用于读取命令头， 并将读取到的命令头发送给安全管理模块；</p>
+    <p>安全管理模块，用于对命令头进行安全机制检查，并将通过检查的命令头 发送给应用管理模块；</p>
+    <p>应用管理模块，用于根据接收到的命令头判断业务类型，如果命令头表明 业务类型为普通数据业务，则将命令头中指定长度的后续有效字节数据发送给 文件管理模块；如果业务类型为高速数据业务，则将命令头中指定长度的后续</p>
+    <p>有效字节数据发送给高速数据协处理模块；</p>
+    <p>文件管理模块，用于对普通数据业务的命令头中指定长度的后续有效字节 数据进行普通数据业务处理，并在完成处理后向智能卡接口传输管理模块返回</p>
+    <p>业务处理结果和状态信息；</p>
+    <p>高速数据协处理模块，用于对高速数据业务的命令头中指定长度的后续有 效字节数据进行高速数据业务处理，并在完成处理后向高速数据接口传输管理 模块返回业务处理结果和状态信息。</p>
+    <p>所述智能卡接口传输管理模块进一步用于检测智能卡接口&#32233;存（buffer)中 是否有数据；如果有，从智能卡接口&#32233;存（buffer)中读取命令头；如果没有， 则继续等待。</p>
+    <p>所述将命令头中指定长度的后续有效字节数据发送给高速数据协处理模块 具体包括：应用管理模块通过高速数据接口传输管理模块从高速数据接口接收 命令头中指定长度的后续有效字节数据，并将接收到的后续有效字节数据发送 给高速数据协处理模块。</p>
+    <p>所述高速数据协处理模块进一步用于检测高速数据接口&#32233;存（buffer)中是 否有数据；如果有，从高速数据接口&#32233;存（buffer)中读取命令头；如果没有， 则继续等待。</p>
+    <p>所述将命令头中指定长度的后续有效字节数据发送给高速数据协处理模块 具体包括：应用管理模块通过高速数据接口传输管理模块读取高速数据接口&#32233; 存（buffer)中的命令头中指定长度的后续有效字节数据，并将读取到的后续有 效字节数据发送给高速数据协处理模块。</p>
+    <p>在所述高速数据协处理模块在进行高速数据业务处理时，如果需要读写已 有存储器中内容，</p>
+    <p>则所述高速数据协处理^f莫块进一步用于，通知文件管理^f莫块；接收到文件 管理;漠块返回的处理结果后继续进行高速数据业务处理；</p>
+    <p>所述文件管理模块进一步用于，对高速数据协处理模块发送的命令进行相 应的文件读写操作，并将处理结果返回给高速数据协处理模块。</p>
+    <p>所述高速数据业务为数字电视数据流解扰业务；所述高速数据接口传输管 理模块为数据总线接口传输管理模块；所述高速数据协处理模块为数字电视业 务解扰模块；所述命令头为五字节；所述状态信息为两字节。</p>
+    <p>一种双接口智能卡的片内操作系统的实现方法，该方法包括：</p>
+    <p>A、 通过对接收到的命令头的安全机制检查后，判断业务类型，如果命令 头表明业务类型为普通数据业务，则进行普通数据业务处理；如果命令头表明 业务类型为高速数据业务，则进行高速数据业务处理；</p>
+    <p>B、 返回业务处理结果和状态信息。</p>
+    <p>该方法进一步包括检测智能卡接口&#32233;存（buffer)中是否有数据的步骤；如 果有，则从智能卡接口&#32233;存（buffer)中读取命令头；如果没有，则继续等待。</p>
+    <p>步骤A中的进行高速数据业务处理具体包括：从高速数据接口接收到命令 头中指定长度的后续有效字节数据后，对所述后续有效字节数据进行高速数据 业务处理。</p>
+    <p>步骤A之前，该方法进一步包括检测高速数据接口&#32233;存（buffer)中是否有 数据的步骤；如果有：则从高速数据接口&#32233;存（buffer)中读取命令头；如果没 有，则继续等待。</p>
+    <p>步骤A中的进行高速数据业务处理具体包括:从高速数据接口&#32233;存（buffer) 中读取命令头中指定长度的后续有效字节数据后，对所述后续有效字节数据进 行高速数据业务处理。</p>
+    <p>步骤A中的进行高速数据业务处理进一步包括：如果高速数据业务处理需 要读写已有存储器中内容，则通知普通数据业务处理流程进行相关操作并结合 普通数据业务处理流程返回的处理结果继续进行高速数据业务处理；步骤B具 体包括：通过高速数据接口返回业务处理结果和状态信息。</p>
+    <p>步骤A中的进行普通数据业务处理具体包括：从智能卡接口接收到命令头 中指定长度的后续有效字节数据后，对所述后续有效字节数据进行普通数据业 务处理，或按照高速数据业务处理流程发送的读写已有存储器中内容的命令进 行普通数据业务处理并将处理结果返回高速数据业务处理流程；步骤B具体包</p>
+    <p>括：通过智能卡接口返回业务处理结果和状态信息。</p>
+    <p>步骤A中的进行普通数据业务处理具体包括：对从高速数据接口&#32233;存 (buffer)中读取的命令头中指定长度的后续有效字节数据进行普通数据业 务处理，或按照高速数据业务处理流程发送的读写已有存储器中内容的命令 进行普通数据业务处理并将处理结果返回高速数据业务处理流程；步骤B 具体包括：通过智能卡接口返回业务处理结果和状态信息。</p>
+    <p>由上述的技术方案可见，本发明提供的一种双接口智能卡的片内操作系 统及其实现方法应用于具有智能卡接口和高速数据接口的双接口智能卡，摆 脱了传统智能卡接口的条件束缚，使得高速数据的传输成为可能，提高了智 能卡的处理能力和处理效率。本发明的实施例中，将解扰数据流放在条件接 收卡内处理，解决了数字电视业务中密钥不出卡的机卡分离问题。</p>
+    <p>附图说明</p>
+    <p>图1为现有技术中智能卡片内操作系统的结构示意图； 图2为本发明双接口智能卡片内操作系统的结构示意图； 图3为本发明中双接口智能卡片内操作系统的单线程业务处理模式的 流程图；</p>
+    <p>图4为本发明中双接口智能卡片内操作系统的双线程业务处理模式的 流程图；</p>
+    <p>图5为本发明实施例中双接口智能卡片内操作系统应用于数字电视业 务中的业务流程图。</p>
+    <p>具体实施方式</p>
+    <p>为使本发明的目的、技术方案、及优点更加清楚明白，以下参照附图并 举实施例，对本发明进一步详细说明。</p>
+    <p>本发明的主要思想是：通过对接收到的命令头的安全机制检查后，判断 业务类型，如果命令头表明业务类型为普通数据业务，则进行普通数据业务</p>
+    <p>处理；如果命令头表明业务类型为高速数据业务，则进行高速数据业务处理。</p>
+    <p>根据IS07816协议，智能卡接口解析命令是通过判断五个命令字节来进 行的，即把接收到的前五个字节作为命令头，表明该条命令是完成什么操作 的；后续字节是信息字节，表明该命令所携带的信息。本发明对高速数据接 口接收的数据也采用命令解析的形式，即收到的前五个数据字节为命令头。</p>
+    <p>智能卡的标准状态信息为两字节，本发明同样用两字节作为高速数据业 务处理后产生的状态信息。具体的字节定义可以参照IS07816协议或者自定 义，这里不再赘述。</p>
+    <p>智能卡支持两类信息交换协议，即异步字符传输的T=0协议以及异步 分组传输的T=l协议，本发明中以异步字符传输的丁=0协议为例进行说明。</p>
+    <p>图2为本发明所述双接口智能卡片内操作系统的结构图。参见图2，该 片内操作系统包括：智能卡接口传输管理模块201、高速数据接口传输管理 模块202、安全管理模块203、应用管理模块204、文件管理模块205和高 速数据协处理模块206。</p>
+    <p>该片内操作系统具有两种工作模式，即单线程模式和双线程模式，实际 工作中可以根据需要选用其中一种工作模式。</p>
+    <p>单线程模式</p>
+    <p>智能卡复位后，智能卡接口传输管理模块201检测智能卡接口的&#32233;存 (buffer)内是否有数据；如果有，读取五个字节的命令头，并将该命令头 发送给安全管理模块203;如果没有，则继续等待；</p>
+    <p>根据T=0协议，智能卡接口分别接收命令头和命令头指定长度的后续 有效字节数据；此时如果智能卡接口的&#32233;存（buffer)内有数据，则该数据 为五个字节的命令头；</p>
+    <p>安全管理模块203根据该命令头判断命令的合法性，然后进行命令的安 全级别和安全属性验证，如果通过，将该命令头传送给应用管理模块204, 否则，将状态信息通过智能卡争口传输管理模块201返回到智能卡接口的&#32233; 存（buffer)中从智能卡接口发送出智能卡；</p>
+    <p>关于安全管理模块203如何进行各种安全管理操作为本领域普通技术 人员的惯用技术手段且不是本发明的重点，这里不再赘述；</p>
+    <p>应用管理模块204根据命令头判断要执行操作的业务类型；如果命令头 表明业务类型为普通数据业务，则通过智能卡传输管理模块201从智能卡接 口接收命令头中指定长度的后续有效字节数据，并将接收到的后续有效字节 数据发送给文件管理模块205;如果命令头表明业务类型为高速数据业务， 则通过高速数据传输管理模块从高数数据接口接收命令头中指定长度的后 续有效字节数据，并将接收到的后续有效字节数据发送给高速数据协处理模</p>
+    <p>块206;如果命令头业务类型错误，将状态信息通过智能卡接口传输管理模 块201返回到智能卡接口的&#32233;存（buffer)中从智能卡接口发送出智能卡；</p>
+    <p>如果命令头表明业务类型为普通数据业务，应用管理模块204通知智能 卡传输管理模块201检测智能卡接口的&#32233;存（buffer)中是否有数据，如果 没有，继续等待；如果有数据，该数据为命令头中指定长度的后续有效字节 数据，智能卡传输管理模块201接收该后续有效字节数据，并将接收到的后 续有效字节数据发送给应用管理模块204;应用管理模块204再将接收到的 后续有效字节数据发送给文件管理模块205;</p>
+    <p>如果命令头表明业务类型为高速数据业务，应用管理模块204通知高速 数据传输管理模块202检测高速数据接口的&#32233;存（buffer)中是否有数据， 如果没有，继续等待；如果有数据，该数据为命令头中指定长度的后续有效 字节数据，高速数据传输管理模块202接收该后续有效字节数据，并将接收 到的后续有效字节数据发送给应用管理模块204;应用管理模块204再将接 收到的后续有效字节数据发送给高速数据协处理模块206;</p>
+    <p>文件管理模块205接收所述后续有效字节数据或高速数据协处理模块 206发送的读写已有存储器中内容的命令，按照命令类型完成读写已有存储 器中内容的工作，并判断是否为高速数据业务，如果是，将处理结果返回高 速数据协处理模块206处理；如果不是，将处理结果和状态信息通过智能卡 接口传输管理模块201返回到智能卡接口的&#32233;存（buffer)中从智能卡接口</p>
+    <p>发送出智能卡；</p>
+    <p>高速数据协处理模块206对接收到的所述后续有效字节数据进行高速 数据业务处理，并判断是否需要读写已有存储器中内容，如果是，将通知文 件管理模块205进行相应的存储器读写操作并在接收到文件管理模块205返 回的处理结果后继续进行高速数据业务处理，然后将业务处理结果和状态信 息通过高速数据接口传输管理模块202返回到高速数据接口的&#32233;存（buffer) 中从高速数据接口发送出智能卡；如果不是，直接将业务处理结果和状态信 息通过高速数据接口传输管理模块202返回到高速数据接口的&#32233;存（buffer ) 中从高速数据接口发送出智能卡；</p>
+    <p>高速数据协处理模块206主要用于处理高速数据业务，例如数字电视业 务中的数据加、解扰运算的处理；高速数据接口，比如通用输入/输出（1/0) 接口，上可以使用现有的MMC、 USB以及其他高速数据传输协议或自行定 制协议，传输时序也可以根据需要定制。</p>
+    <p>双线程模式</p>
+    <p>智能卡复位后，智能卡接口传输管理模块201检测智能卡接口的&#32233;存 (buffer)内是否有数据，如果有，读取五个字节的命令头，并将命令头传 送给安全管理模块203，如果没有，则通知高速数据接口传输管理模块202 才全测数据；</p>
+    <p>根据T=0协议，智能卡接口分别接收命令头和命令头指定长度的后续 有效字节数据；此时如果智能卡接口的&#32233;存（buffer)内有数据，则该数据 为五个字节的命令头；</p>
+    <p>高速数据接口传输管理模块202检测高速数据接口的&#32233;存（buffer)内 是否有数据，如果有，读取五个字节的命令头，并将该命令头发送给安全管 理模块203，如果没有，则继续等待；</p>
+    <p>高速数据接口可以分别接收命令头和命令头指定长度的后续有效字节 数据，也可以一次性同时接收命令头和命令头指定长度的后续有效字节数 据，可以根据需要选定接收方式；本发明以高速数据接口一次性同时接收命</p>
+    <p>令头和命令头指定长度的后续有效字节数据为例，此时如果高速数据接口的</p>
+    <p>&#32233;存（buffer)内有数据，则该数据为五个字节的命令头和命令头指定长度 的后续有效字节数据；</p>
+    <p>安全管理模块203根据该命令头判断命令的合法性，然后进行命令的安 全级别和安全属性验证，如果通过，将命令头传送给应用管理模块204，否 则，将状态信息通过智能卡接口传输管理模块201返回到智能卡接口的&#32233;存 (buffer)中从智能卡接口发送出智能卡；</p>
+    <p>关于安全管理模块203如何进行各种安全管理操作为本领域普通技术 人员的惯用技术手段且不是本发明的重点，这里不再赘述；</p>
+    <p>应用管理模块204根据命令头判断要执行操作的业务类型；如果命令头 表明业务类型为普通数据业务并且是从智能卡接口接收的该命令头，则通过 智能卡传输管理模块201接收命令头中指定长度的后续有效字节数据，并将 接收到的后续有效字节数据发送给文件管理模块205;如果命令头表明业务 类型为普通数据业务并且是从高速数据接口接收的该命令头，则通过高速数 据传输管理模块202读取高速数据接口的&#32233;存（buffer)中的命令头中指定 长度的后续有效字节数据并发送给文件管理模块205;如果命令头表明业务 类型为高速数据业务，则通过高速数据传输管理模块202读取高速数据接口 的&#32233;存（buffer)中的命令头中指定长度的后续有效字节数据并发送给高速 数据协处理模块206;如果命令头业务类型错误，将状态信息通过智能卡接 口传输管理模块201返回到智能卡接口的&#32233;存（buffer)中从智能卡接口发 送出智能卡；</p>
+    <p>如果命令头表明业务类型为普通数据业务并且是从智能卡接口接收的 该命令头，应用管理模块204通知智能卡传输管理模块201检测智能卡接口 的&#32233;存（buffer)中是否有数据，如果没有，继续等待；如果有数据，该数 据为命令头中指定长度的后续有效字节数据，智能卡传输管理模块201接收 该后续有效字节数据，并将接收到的后续有效字节数据发送给应该管理模块 204;应用管理模块204再将接收到的后续有效字节数据发送给文件管理模</p>
+    <p>文件管理模块205接收所述后续有效字节数据或高速数据协处理模块 206发送的读写已有存储器中内容的命令，按照命令类型完成读写已有存储 器中内容的工作，并判断是否为高速数据业务，如果是，将处理结果返回高 速数据协处理模块206;如果不是，将处理结果和状态信息通过智能卡接口 传输管理模块201返回到智能卡接口的&#32233;存（buffer)中从智能卡接口发送 出智能卡；</p>
+    <p>高速数据协处理模块206对接收到的所述后续有效字节数据进行高速 数据业务处理，并判断是否需要读写已有存储器中内容，如果是，将通知文 件管理模块205进行相应的存储器读写操作并在接收到文件管理模块205返 回的处理结果后继续进行高速数据业务处理，高速数据业务处理完成后再将 业务处理结果和状态信息通过高速数据接口传输管理模块202返回到高速 数据接口的&#32233;存（buffer)中从高速数据接口发送出智能卡；如果不是，直 接将业务处理结果和状态信息通过高速数据接口传输管理模块202返回到 高速数据接口的&#32233;存（buffer)中从高速数据接口发送出智能卡；</p>
+    <p>高速数据协处理模块206主要用于处理高速数据业务，例如数字电视业 务中的数据加、解扰运算的处理；高速数据接口，比如通用输入/输出（1/0) 接口，上可以使用现有的MMC、 USB以及其他高速数据传输协议或自行定 制协议，传输时序也可以根据需要定制。</p>
+    <p>在以上的双线程模式中，智能卡接口传输管理模块201和高速数据接口 传输管理模块202的检测次序可以互换，可以根据需要确定先检测智能卡接 口还是高速数据接口；普通数据业务可通过智能卡接口发送到智能卡，亦可 通过高速数据接口发送，而高速数据业务则只能通过高速数据接口发送到智 能卡。</p>
+    <p>图3为本发明中双接口智能卡片内操作系统的单线程业务处理模式的 流程图。参见图3，智能卡复位后， 一直处于等待、接收、处理的循环之中。 步骤301:检测智能卡接口的&#32233;存（buffer)内是否有数据，如果有，</p>
+    <p>执行步骤302;如果没有，则继续等待；</p>
+    <p>根据T=0协议，智能卡接口分别接收命令头和命令头指定长度的后续 有效字节数据；此时如果智能卡接口的&#32233;存（buffer)内有数据，则该数据 为五个字节的命令头；</p>
+    <p>步骤302:读取五个字节的命令头；</p>
+    <p>步骤303:根据该命令头判断该命令的合法性，然后进行命令的安全级 别和安全属性的验证；如果通过执行步骤304;如果任一项不通过，则执行 步骤308;</p>
+    <p>步骤304:根据该命令头判断要执行操作的业务类型；如果命令头表明 业务类型为普通数据业务，则执行步骤305;如果命令头表明业务类型为高 速数据业务，则执行步骤309;</p>
+    <p>步骤305:从智能卡接口接收后续有效字节数据；</p>
+    <p>需要再次检测智能卡接口的&#32233;存（buffer)内是否有数据，如果有数据， 该数据为命令头中指定长度的后续有效字节数据，则接收该后续有效字节数 据；如果没有，则继续等待；</p>
+    <p>步骤306:按照命令类型读写已有存储器中内容；</p>
+    <p>对于接收到的后续有效字节数据或步骤311发送来的读写已有存储器 中内容的命令进行处理；</p>
+    <p>步骤307:判断是否为高速数据业务，如果是，则将业务处理结果返回 步骤310;如果不是，则执行步骤308;</p>
+    <p>步骤308:从智能卡接口返回状态信息和业务处理结果，并继续等待；</p>
+    <p>步骤309:从高速数据接口接收后续有效字节数据；</p>
+    <p>需要检测高速数据接口的&#32233;存（buffer)内是否有数据，如果有数据， 该数据为命令头中指定长度的后续有效字节数据，则接收该后续有效字节数 据；如果没有，则继续等待；</p>
+    <p>步骤310:进行高速数据业务处理流程；</p>
+    <p>对于接收到的后续有效字节数据或步骤307返回的业务处理结果进行 处理，主要是一些算法处理，比如数字电视业务中的加、解扰数据流的操作。</p>
+    <p>步骤311:判断是否需要读写已有存储器中内容，如果是，执行步骤306， 如果否，则执行步骤312;</p>
+    <p>步骤312:从高速数据接口返回状态信息和业务处理结果，并继续等待。</p>
+    <p>图4为本发明中双接口智能卡片内操作系统的双线程业务处理模式的 流程图。参见图4，智能卡上电后， 一直处于等待、接收、处理的循环之中。</p>
+    <p>步骤401:检测智能卡接口的&#32233;存（buffer)内是否有数据，如果有， 执行步骤403;如果没有，则执行步骤402;</p>
+    <p>根据T=0协议，智能卡接口分别接收命令头和命令头指定长度的后续 有效字节数据；此时如果智能卡接口的&#32233;存（buffer)内有数据，则该数据 为五个字节的命令头；</p>
+    <p>步骤402:检测高速数据接口的&#32233;存内是否有数据，如果有，执行步骤 403;如果没有，则继续等待；</p>
+    <p>高速数据接口可以分别接收命令头和命令头指定长度的后续有效字节 数据，也可以一次性同时接收命令头和命令头指定长度的后续有效字节数 据，可以根据需要选定接收方式；本发明以高速数据接口一次性同时接收命 令头和命令头指定长度的后续有效字节数据为例，此时如果高速数据接口的 &#32233;存（buffer)内有数据，则该数据为五个字节的命令头和命令头中指定长 度的后续有效字节数据；</p>
+    <p>步骤403:读取五个字节的命令头；</p>
+    <p>步骤404:根据该命令头判断命令的合法性，然后进行命令安全级别和 安全属性的验证；如果通过执行步骤405;如果任一项不通过，则执行步骤 409;</p>
+    <p>步骤405:根据该命令头判断要执行操作的业务类型；如果命令头表明 业务类型为普通数据业务并且是从智能卡接口接收的该命令头，则执行步骤 406;如果命令头表明业务类型为普通数据业务并且是从高速数据接口接收 的该命令头，则执行步骤407;如果命令头表明业务类型为高速数据业务，</p>
+    <p>则执行步骤410;</p>
+    <p>步骤406:从智能卡接口接收后续有效字节数据；</p>
+    <p>需要检测智能卡接口的&#32233;存（buffer)内是否有数据，如果有数据，该 数据为命令头中指定长度的后续有效字节数据，则接收该后续有效字节数 据；如果没有，则继续等待；</p>
+    <p>步骤407:按照命令类型读写已有存储器中内容；</p>
+    <p>对于接收到的后续有效字节数据、从智能卡接口的&#32233;存（buffer)内读 取的后续有效字节数据或步骤411发送来的读写已有存储器中内容的命令 进行处理；</p>
+    <p>步骤408:判断是否为高速数据业务，如果是，则返回业务处理结果到 步骤410;如果不是，则执行步骤409;</p>
+    <p>步骤409:从智能卡接口返回状态信息和业务处理结果，并继续等待； 步骤410:进行高速数据业务处理流程；</p>
+    <p>对于从智能卡接口的&#32233;存（buffer)内读取的后续有效字节数据或步骤 408返回的业务处理结果进行处理，主要是一些算法处理，比如数字电视业 务中的加、解扰数据流的操作。</p>
+    <p>步骤411:判断是否需要读写已有存储器中内容，如果是，执行步骤407, 如果否，则执行步骤412;</p>
+    <p>步骤412:从高速数据接口返回状态信息和业务处理结果，并继续等待。</p>
+    <p>以上步骤401和步骤402的次序可以互换，先检测智能卡接口还是高速 数据接口可根据需要来确定。</p>
+    <p>图5为本发明实施例中双接口智能卡片内操作系统应用于数字电视业 务中的业务流程图。参见图5，本实施例采用的条件接收（CA)卡能同时支 持两种接口传输数据， 一种是智能卡接口，支持T-O协议，其对应的传输管 理模块为智能卡接口传输管理模块；另一种是数据总线接口，数据总线的位 数可根据需要确定为4位、8位或16位，其对应的传输管理模块为数据总 线接口传输管理模块。条件接收卡中的存储器为闪存（flash)，存储着密钥</p>
+    <p>种子、卡片信息、计费明细和节目信息等。本实施例中的高速数据协处理模</p>
+    <p>块为数字电视业务解扰模块。终端向条件接收卡发送的数据有：第一信息流、 第二信息流和需要解扰的数据流。</p>
+    <p>其中第 一信息流中包含表明第 一信息流所属的CA标识符、密钥种子ID 号以及授权和产品信息等信息；第二信息流中包含表明本流所属的CA标识、 控制字密文、节目信息等信息；解扰数据流中包含需要解扰的节目内容数据。</p>
+    <p>为了描述方便，本发明中实施例中所需业务命令头做以下设定：</p>
+    <p>表1所示为第一信息流的命令头格式:</p>
+    <p>&lt;table&gt;table see original document page 18&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;		表1</p>
+    <p>表2所示为第二信息流的命令头格式：</p>
+    <p>&lt;table&gt;table see original document page 18&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;上述表中，命令字节l代表命令的类型，80代表数字电视业务；命令 字节2表示命令编码，30、 31和32分别代表第一信息流、第二信息流和解 扰数据流；命令字节3和和命令字节4为具体命令参数，可以根据需要自定 义；命令字节5表示后续字节的长度。</p>
+    <p>下面具体说明双接口智能卡片内操作系统以单线程模式和双线程模式 分别处理数字电视业务的流程：</p>
+    <p>1 )当本发明的双接口智能卡片内操作系统工作于单线程模式时，</p>
+    <p>接收第一信息流；</p>
+    <p>当智能卡接口传输管理模块从智能卡接口的&#32233;存（buffer)内检测到数 据，则读取五个字节的命令头并将其发送给安全管理模块；安全管理模块根 据该命令头判断命令的合法性，然后对命令进行安全级别和安全属性的验 证，将验证通过的命令头发送给应用管理模块；应用管理模块根据命令字节 1的值"80"和命令字节2的值"30"来判断其业务类型，这里为数字电视 业务的第一信息流，属于普通数据业务，则通过智能卡传输管理模块从智能 卡接口接收命令字节5中指定长度的后续有效字节数据，即第一信息流，并 将接收到的后续有效字节数据发送给文件管理模块；文件管理模块接收所述 第一信息流并根据第一信息流中携带的业务密钥种子ID号，找到条件接收 卡存储器flash中存储的与之相对应的业务密钥，存储该业务密钥，为解控 制字使用，并将处理结果和状态信息通过智能卡接口传输管理模块返回到智 能卡接口的&#32233;存（buffer)中从智能卡接口发送出智能卡； 接收第二信息流；</p>
+    <p>当智能卡接口传输管理模块从智能卡接口的&#32233;存（buffer)内检测到数 据，则读取五个字节的命令头并将其传送给安全管理模块；安全管理模块根 据该命令头判断命令的合法性，然后对命令进行安全级别和安全属性的验 证，将验证通过的命令头发送给应用管理模块；应用管理模块根据命令字节 1的值"80"和命令字节2的值"31"来判断其业务类型，这里为数字电视 业务的第二信息流，属于普通数据业务，则通过智能卡传输管理模块从智能 卡接口接收命令字节5中指定长度的后续有效字节数据，即第二信息流，并 将接收到的后续有效字节数据发送给文件管理模块；文件管理模块接收所述 第二信息流并根据第一信息流的业务密钥解密第二信息流中携带的控制字 信息，存储该控制字信息，为解扰使用，并将处理结果和状态信息通过智能 卡接口传输管理模块返回到智能卡接口的&#32233;存（buffer)中从智能卡接口发 送出智能卡；接收解扰数据流；</p>
+    <p>当智能卡接口传输管理模块从智能卡接口的&#32233;存（buffer)内检测到数 据，则读取五个字节的命令头并将其传送给安全管理模块；安全管理模块根 据该命令头判断命令的合法性，然后对命令进行安全级别和安全属性的验</p>
+    <p>证，将验证通过的命令头发送给应用管理模块；应用管理模块根据命令字节 1的值"80"和命令字节2的值"32"来判断其业务数据类型，这里为数字 电视业务的解扰数据流，属于高速数据业务，则通过数据总线接口传输管理 模块从数据总线接口接收命令字节5中指定长度的后续有效字节数据，即为 解扰数据流，并将接收到的后续有效字节数据发送给数字电视业务解扰模 块；数字电视业务解扰模块对接收到的解扰数据流进行解扰操作，因为解扰 数据流需要用到第二信息流的控制字，所以通知文件管理模块从存储器flash 中读取第二信息流的控制字并利用文件管理模块返回的第二信息流的控制</p>
+    <p>字解扰该解扰数据流，最后将明文数据流和状态信息通过数据总线接口传输 管理模块返回到数据总线接口的&#32233;存（buffer)中从数据总线接口发送出智</p>
+    <p>能卡；</p>
+    <p>从智能卡接口接收收到的其他命令可能是创建文件、访问文件安全认证 等，都是智能卡的标准命令，属于本领域普通技术人员的惯用技术手段且不 是本发明的重点，这里不再赘述。</p>
+    <p>2)当本发明的双接口智能卡片内操作系统工作于双线程模式时， 如果通过智能卡接口接收第一信息流和第二信息流，则接收第一信息流 和第二信息流的流程与单线程模式相同； 接收解扰数据流</p>
+    <p>当数据总线接口传输管理模块从数据总线接口的&#32233;存（buffer)内检测 到数据，则读取五个字节的命令头，并将所述命令头发送给安全管理模块； 安全管理模块根据该命令头判断命令的合法性，然后对命令进行安全级别和 安全属性的验证，将验证通过的命令头发送给应用管理模块；应用管理模块 根据命令字节i的值"so"和命令字节2的值"32"来判断其业务类型，这</p>
+    <p>里为数字电视业务的解扰数据流，属于高速数据业务，则通过并行总线传输</p>
+    <p>管理模块读取并行总线接口的&#32233;存（buffer)中的命令字节5中指定长度的 后续有效字节数据，即解扰数据流，并将读取到的后续有效字节数据发送给 数字电视业务解扰模块；数字电视业务解扰模块对接收到的解扰数据流进行 解扰操作，因为解扰数据流需要用到第二信息流的控制字，所以通知文件管 理模块从存储器flash中读取第二信息流的控制字并利用文件管理模块返回 的第二信息流的控制字解扰该解扰数据流，最后将明文数据流和状态信息通</p>
+    <p>过数据总线接口传输管理模块返回到数据总线接口的&#32233;存（buffer)中从数 据总线接口发送出智能卡；</p>
+    <p>从智能卡接口接收到的其他指令可能是创建文件、访问文件安全认证 等，都是智能卡的标准命令，属于本领域普通技术人员的惯用技术手段且不 是本发明的重点，这里不再赘述。</p>
+    <p>在上述双线程模式中，第 一信息流和第二信息流可通过智能卡接口发送 到智能卡，还可以通过数据总线接口发送，选择哪种方式发送可以通过条件 接收卡上的智能卡控制器来控制，下面介绍 一下第 一信息流和第二信息流通 过数据总线接口发送的情况：</p>
+    <p>3)当本发明的双接口智能卡片内操作系统工作于双线程模式时，</p>
+    <p>接收第一信息流</p>
+    <p>当数据总线接口传输管理模块从数据总线接口的&#32233;存（buffer)内检测 到数据，则读取五个字节的命令头，并将所述命令头发送给安全管理模块； 安全管理模块根据该命令头判断命令的合法性，然后对命令进行安全级别和 安全属性的验证，将验证通过的命令头发送给应用管理模块；应用管理模块 根据命令字节i的值"so"和命令字节2的值"30"来判断其业务类型，这 里为数字电视业务的第一信息流，属于普通数据业务，则通过并行总线传输 管理模块读取并行总线接口的&#32233;存（buffer)中的命令字节5中指定长度的 后续有效字节数据，即第一信息流，并将读取到的后续有效字节数据发送给 文件管理模块；文件管理模块接收所述第 一信息流并根据第 一信息流中携带</p>
+    <p>的业务密钥种子ID号，找到条件接收卡存储器flash中存储的与之相对应的 业务密钥，存储该业务密钥，为解控制字使用，并将处理结果和状态信息通 过智能卡接口传输管理模块返回到智能卡接口的&#32233;存（buffer)中从智能卡 接口发送出智能卡； 接收第二信息流</p>
+    <p>当数据总线接口传输管理模块从数据总线接口的&#32233;存（buffer)内检测 到数据，则读取五个字节的命令头，并将所述命令头发送给安全管理模块； 安全管理模块根据该命令头判断命令的合法性，然后对命令进行安全级别和 安全属性的验证，将验证通过的命令头发送给应用管理模块；应用管理模块 根据命令字节i的值"go"和命令字节2的值"31"来判断其业务数据类型， 这里为数字电视业务的第二信息流，属于普通数据业务，则通过并行总线传 输管理模块读取并行总线接口的&#32233;存（buffer)中的命令字节5中指定长度 的后续有效字节数据，即第二信息流，并将读取到的后续有效字节数据发送 给文件管理模块；文件管理模块接收所述第二信息流并根据存储的第 一信息 流的业务密钥解密第二信息流中携带的控制字信息，存储该控制字信息，为 解扰使用，并将处理结果和状态信息通过智能卡接口传输管理模块返回到智 能卡接口的&#32233;存（buffer)中从智能卡接口发送出智能卡；</p>
+    <p>接收解扰数据流的流程与上述双线程模式中接收解扰数据流的流程相同。</p>
+    <p>从智能卡接口接收到的其他命令可能是创建文件、访问文件安全认证 等，都是智能卡的标准命令，属于本领域普通技术人员的惯用技术手段且不 是本发明的重点，这里不再赘述。</p>
+    <p>本发明中的高速数据接口还可以采用MMC、 USB或非接触式接口等高 速数据接口，具体操作过程与上述实施例基本相同，这里不再赘述。</p>
+    <p>以上所述仅为本发明的较佳实施例而已，并不用以限制本发明，凡在本 发明的精神和原则之内，所做的任何修改、等同替换、改进等，均应包含在 本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101950261A?cl=zh">CN101950261A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月9日</td><td class="patent-data-table-td patent-date-value">2011年1月19日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">数据存储与鉴权并行的处理方法和终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102202017A?cl=zh">CN102202017A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月13日</td><td class="patent-data-table-td patent-date-value">2011年9月28日</td><td class="patent-data-table-td ">中山大学</td><td class="patent-data-table-td ">一种数字媒体互动业务智能网关支撑平台</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=srpnBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0021430000">H04N21/43</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=srpnBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06K0019070000">G06K19/07</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年2月18日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年4月15日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年2月15日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of an application for a patent</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/c9bca9d99f329142eafd/CN101370079A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%8F%8C%E6%8E%A5%E5%8F%A3%E6%99%BA%E8%83%BD%E5%8D%A1%E7%9A%84%E7%89%87%E5%86%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.pdf?id=srpnBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2FF7hhHL74vhNzCMUXUqVY6RXm1g"},"sample_url":"https://www.google.com/patents/reader?id=srpnBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

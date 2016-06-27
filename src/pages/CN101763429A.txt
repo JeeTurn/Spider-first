@@ -1,0 +1,187 @@
+<!DOCTYPE html><html><head><title>专利 CN101763429A - 一种基于颜色和形状特征的图像检索方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种基于颜色和形状特征的图像检索方法"><meta name="DC.contributor" content="罗笑南" scheme="inventor"><meta name="DC.contributor" content="汪卫星" scheme="inventor"><meta name="DC.contributor" content="李峰" scheme="inventor"><meta name="DC.contributor" content="中山大学" scheme="assignee"><meta name="DC.date" content="2010-1-14" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种基于颜色和形状特征的图像检索方法。该方法包括：将示例图像进行颜色空间转换与量化；对量化后的图像进行图像分块；对每个子块图像的每个像素点计算颜色复杂度，得到视觉权值；对每个子块图像计算不同颜色的视觉权值在子块图像视觉权值所占的比例，得到加权颜色直方图，根据加权颜色直方图得到每个子块的颜色特征；对示例图像通过灰度处理进行轮廓提取；采用曲率尺度空间描述算子提取经过轮廓提取后的图像的形状特征；对提取的所述颜色特征和所述形状特征进行归一化处理，得到归一化后的图像特征；将归一化后的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果。本发明的检索方法更为准确。"><meta name="DC.date" content="2010-6-30"><meta name="citation_patent_publication_number" content="CN:101763429:A"><meta name="citation_patent_application_number" content="CN:201010019405"><link rel="canonical" href="https://www.google.com/patents/CN101763429A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101763429A?cl=zh"/><meta name="title" content="专利 CN101763429A - 一种基于颜色和形状特征的图像检索方法"/><meta name="description" content="本发明公开了一种基于颜色和形状特征的图像检索方法。该方法包括：将示例图像进行颜色空间转换与量化；对量化后的图像进行图像分块；对每个子块图像的每个像素点计算颜色复杂度，得到视觉权值；对每个子块图像计算不同颜色的视觉权值在子块图像视觉权值所占的比例，得到加权颜色直方图，根据加权颜色直方图得到每个子块的颜色特征；对示例图像通过灰度处理进行轮廓提取；采用曲率尺度空间描述算子提取经过轮廓提取后的图像的形状特征；对提取的所述颜色特征和所述形状特征进行归一化处理，得到归一化后的图像特征；将归一化后的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果。本发明的检索方法更为准确。"/><meta property="og:title" content="专利 CN101763429A - 一种基于颜色和形状特征的图像检索方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101763429A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101763429A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=pvd-BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101763429A&amp;usg=AFQjCNE1DpGE1dA81yag88EASuHcTfOoCQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/011f925d611803eca72e/CN101763429A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/011f925d611803eca72e/CN101763429A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101763429A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101763429A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101763429A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101763429B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101763429A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种基于颜色和形状特征的图像检索方法。该方法包括：将示例图像进行颜色空间转换与量化；对量化后的图像进行图像分块；对每个子块图像的每个像素点计算颜色复杂度，得到视觉权值；对每个子块图像计算不...</span><span itemprop="url">https://www.google.com/patents/CN101763429A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101763429A - 一种基于颜色和形状特征的图像检索方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101763429A - 一种基于颜色和形状特征的图像检索方法" title="专利 CN101763429A - 一种基于颜色和形状特征的图像检索方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101763429 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010019405</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年6月30日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年1月14日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年1月14日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101763429B?hl=zh-CN&amp;cl=zh">CN101763429B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010019405.1, </span><span class="patent-bibdata-value">CN 101763429 A, </span><span class="patent-bibdata-value">CN 101763429A, </span><span class="patent-bibdata-value">CN 201010019405, </span><span class="patent-bibdata-value">CN-A-101763429, </span><span class="patent-bibdata-value">CN101763429 A, </span><span class="patent-bibdata-value">CN101763429A, </span><span class="patent-bibdata-value">CN201010019405, </span><span class="patent-bibdata-value">CN201010019405.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%BD%97%E7%AC%91%E5%8D%97%22">罗笑南</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B1%AA%E5%8D%AB%E6%98%9F%22">汪卫星</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%B3%B0%22">李峰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A6%22">中山大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101763429A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101763429A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101763429A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (14),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=pvd-BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010019405&amp;usg=AFQjCNFKbFm1fznoqKiMDXQfTCAeH4g01A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=pvd-BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101763429A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHXKSStn5K96xG4CVr5XmcYiOFt9Q"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT96301718" lang="ZH" load-source="patent-office">一种基于颜色和形状特征的图像检索方法</invention-title>
+      </span><br><span class="patent-number">CN 101763429 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109401818" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种基于颜色和形状特征的图像检索方法。该方法包括：将示例图像进行颜色空间转换与量化；对量化后的图像进行图像分块；对每个子块图像的每个像素点计算颜色复杂度，得到视觉权值；对每个子块图像计算不同颜色的视觉权值在子块图像视觉权值所占的比例，得到加权颜色直方图，根据加权颜色直方图得到每个子块的颜色特征；对示例图像通过灰度处理进行轮廓提取；采用曲率尺度空间描述算子提取经过轮廓提取后的图像的形状特征；对提取的所述颜色特征和所述形状特征进行归一化处理，得到归一化后的图像特征；将归一化后的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果。本发明的检索方法更为准确。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(6)</span></span></div><div class="patent-text"><div mxw-id="PCLM51233834" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种基于颜色与形状特征图像检索方法，其特征在于，包括如下步骤：</div>
+      <div class="claim-text">将示例图像进行颜色空间转换与量化；</div>
+      <div class="claim-text">对量化后的图像进行图像分块；</div>
+      <div class="claim-text">对每个子块图像的每个像素点计算颜色复杂度，得到视觉权值；</div>
+      <div class="claim-text">对每个子块图像计算不同颜色的视觉权值在子块图像视觉权值所占的比例，得到加权颜色直方图，根据加权颜色直方图得到每个子块的颜色特征；</div>
+      <div class="claim-text">对示例图像通过灰度处理进行轮廓提取；</div>
+      <div class="claim-text">采用曲率尺度空间描述算子提取经过轮廓提取后的图像的形状特征；</div>
+      <div class="claim-text">对提取的所述颜色特征和所述形状特征进行归一化处理，得到归一化后的图像特征；</div>
+      <div class="claim-text">将归一化后的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的基于颜色与形状特征图像检索方法，其特征在于：</div>
+      <div class="claim-text">所述将示例图像进行颜色空间转换具体为：从RGB空间转换到HSV空间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的基于颜色与形状特征图像检索方法，其特征在于：</div>
+      <div class="claim-text">所述对量化后的图像进行图像分块具体为：将量化后的图像进行3×3大小的分块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1至3任一项所述的基于颜色与形状特征图像检索方法，其特征在于：</div>
+      <div class="claim-text">所述得到视觉权值后，将视觉权值归一化到[0，1]区间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1至3任一项所述的基于颜色与形状特征图像检索方法，其特征在于：</div>
+      <div class="claim-text">所述对示例图像通过灰度处理进行轮廓提取具体为：</div>
+      <div class="claim-text">首先将示例图像进行灰度转化，将灰度图像进行二值转换，再采用拉普拉斯算子提取图像的形状轮廓信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1至3任一项所述的基于颜色与形状特征图像检索方法，其特征在于：</div>
+      <div class="claim-text">所述将归一化后的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果，具体为：</div>
+      <div class="claim-text">对图像特征库采用霍特林KL变换进行降维，并对示例图像特征采用R*树来对图像特征进行索引，根据相似性度量的公式选取相似度匹配小的图像作为用户检索的结果。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58274839" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">一种基于颜色和形状特征的图像检索方法</invention-title>
+    <technical-field>
+      <p>[0001] 技术领域</p>
+      <p>[0002] 本发明涉及图像处理技术领域，具体涉及一种基于颜色和形状特征的图像检索方法。</p>
+    </technical-field>
+    <background-art>
+      <p>[0003] 背景技术</p>
+      <p>[0004] 近年来，随着计算机技术以及网络媒体技术的迅猛发展，信息表现方式由普遍的文本方式逐步变为以图形、图像、动画、视频等多媒体信息为主的表现形式。其中图像作为最广泛最基本的多媒体信息，已成为大众化数字信息的一种重要表现形式，也产生了大量的各式各样的图像数据库，使得图像管理和图像检索逐步发展成为极其重要的研究领域。</p>
+      <p>[0005] 由于普通的基于文本的图像检索方法需要对图像进行注解，且图像注解带有主观性和不精确性，不同的人对于图像的理解也不相同，因此检索的结果不能很好地符合用户的需求。所以人们无法使用现有的高效的文本检索系统来查询图像。随着大规模的数字图像库的出现，上述的问题变得越来越尖锐。</p>
+      <p>[0006] 因此，现有技术的图像检索方法准确率不高，使用也不方便。</p>
+    </background-art>
+    <disclosure>
+      <p>[0007] 发明内容</p>
+      <p>[0008] 本发明要解决的技术问题提供一种基于颜色和形状特征图像检索方法，能够根据用户提供的图像信息，通过提取图像的颜色和形状特征，并综合颜色和形状特征与指定的图像特征库进行匹配，从而高效地检索出满足用户的图像，提高检索准确率，方便用户使用。</p>
+      <p>[0009] 本发明提供一种基于颜色与形状特征图像检索方法，包括如下步骤：</p>
+      <p>[0010] 将示例图像进行颜色空间转换与量化；</p>
+      <p>[0011] 对量化后的图像进行图像分块；</p>
+      <p>[0012] 对每个子块图像的每个像素点计算颜色复杂度，得到视觉权值；</p>
+      <p>[0013] 对每个子块图像计算不同颜色的视觉权值在子块图像视觉权值所占的比例，得到加权颜色直方图，根据加权颜色直方图得到每个子块的颜色特征；</p>
+      <p>[0014] 对示例图像通过灰度处理进行轮廓提取；</p>
+      <p>[0015] 采用曲率尺度空间描述算子提取经过轮廓提取后的图像的形状特征；</p>
+      <p>[0016] 对提取的所述颜色特征和所述形状特征进行归一化处理，得到归一化后的图像特征；</p>
+      <p>[0017] 将归一化后的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果。</p>
+      <p>[0018] 优选的，所述将示例图像进行颜色空间转换具体为：从RGB空间转换到HSV空间。</p>
+      <p>[0019] 优选的，所述对量化后的图像进行图像分块具体为：将量化后的图像进行3×3大小的分块。</p>
+      <p>[0020] 优选的，所述得到视觉权值后，将视觉权值归一化到[0，1]区间。</p>
+      <p>[0021] 优选的，所述对示例图像通过灰度处理进行轮廓提取具体为：</p>
+      <p>[0022] 首先将示例图像进行灰度转化，将灰度图像进行二值转换，再采用拉普拉斯算子提取图像的形状轮廓信息。</p>
+      <p>[0023] 优选的，所述将归一化后的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果，具体为：</p>
+      <p>[0024] 对图像特征库采用霍特林KL变换进行降维，并对示例图像特征采用R*树来对图像特征进行索引，根据相似性度量的公式选取相似度匹配小的图像作为用户检索的结果。</p>
+      <p>[0025] 上述技术方案可以看出，本发明实施例提供的检索方法避免了人工注释进行文本检索带来的主观性，检索也更准确，本发明的方法在颜色特征提取方面充分考虑到图像的视觉特性以及空间特性，采用分块的方法来满足图像的空间位置关系，并通过颜色复杂度的加权颜色直方图来深入提取图像的颜色特征，并融合了图像的形状特征，具有很强的鲁棒性，检索精度高。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>[0026] 附图说明</p>
+      <p>[0027] 为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其它的附图。</p>
+      <p>[0028] 图1是本发明的方法流程图；</p>
+      <p>[0029] 图2是HSV颜色空间模型；</p>
+      <p>[0030] 图3是彩色图像的HSV的三基色图；</p>
+      <p>[0031] 图4是3×3分块示意图；</p>
+      <p>[0032] 图5是像素点局部邻近区域图；</p>
+      <p>[0033] 图6是HSV颜色空间图的加权颜色直方图；</p>
+      <p>[0034] 图7是图像形状特征提取预处理过程图；</p>
+      <p>[0035] 图8-1是本发明检索方法得到的检索结果示意图；</p>
+      <p>[0036] 图8-2是一般颜色特征算法得到的检索结果示意图；</p>
+      <p>[0037] 图8-3是一般形状特征算法得到的检索结果示意图；</p>
+      <p>[0038] 图9是本发明方法与现有方法准确度检索率比较图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>[0039] 具体实施方式</p>
+      <p>[0040] 下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有作出创造性劳动前提下所获得的所有其它实施例，都属于本发明保护的范围。</p>
+      <p>[0041] 本发明提供一种基于颜色和形状特征图像检索方法，能够提高检索准确率，更方便用户使用。</p>
+      <p>[0042] 颜色是图像最直观的特征，也是图像视觉重要的感知特征之一，其不仅与图像中的物体和场景密切相关，而且对图像本身尺寸、方向、视角的依赖性较小，而形状特征作为物体识别时所需要的另一关键信息，不随周围的环境如亮度等变化而变化，是比较稳定的信息。因此，本发明实施例提供一种高效精确的图像检索方法，能够通过提取图像的颜色和形状特征，设置颜色和形状特征的权重，综合颜色和形状特征与指定的图像特征库进行匹配，从而更准确检索出满足用户需求的图像。</p>
+      <p>[0043] 本发明提供的基于颜色和形状特征的图像检索方法，包括两个部分：</p>
+      <p>[0044] 第一部分为颜色特征与形状特征的提取，包括以下方面：(1)颜色空间转换与量化、图像分块、加权颜色直方图提取颜色特征(2)形状特征预处理、提取形状特征。</p>
+      <p>[0045] 第二部分为图像特征的相似性匹配与图像结果查询，包括以下方面：图像特征的归一化、特征相似性匹配得到检索结果。</p>
+      <p>[0046] 本发明方法的检索流程见附图1，现详细说明如下：</p>
+      <p>[0047] 第一部分为颜色与形状特征的提取，具体包括下面几个步骤：</p>
+      <p>[0048] (一)颜色特征的提取</p>
+      <p>[0049] 1、进行颜色空间转换与量化：</p>
+      <p>[0050] 将原示例图RGB(Red红、Green绿、B1ue蓝)颜色空间转换为HSV(Hue色相、Saturation饱和度、Value亮度)颜色空间中，参加附图2和3，附图2为HSV颜色空间模型图，附图3为彩色图像的HSV三基色图。</p>
+      <p>[0051] 附图2及附图3给出了HSV颜色空间模型以及彩色图像HSV分量的示例，图3中，其中从左到右并从上到下依次为HSV图像、饱和度S分量、色调H分量和亮度V分量。</p>
+      <p>[0052] 具体转换公式如下：</p>
+      <p>[0053] </p>
+      <p>[0054] </p>
+      <p>[0055] </p>
+      <p>[0056] 并根据色彩不同和主观颜色感知对HSV空间进行量化，公式如下：</p>
+      <p>[0057] </p>
+      <p>[0058] </p>
+      <p>[0059] </p>
+      <p>[0060] 按照上面的方法将颜色空间划分为72种颜色，这72种代表颜色的量化方法有效地压缩了颜色特征并且较好的符合人眼对颜色的感知。按照以上的量化级把3个颜色分量合成为一维特征矢量：G＝HQsQv+SQv+V，其中，Qs和Qv是分量S和V的量化级数，这里取Qs＝3，Qv＝3，那么此式变为：G＝9H+3S+V。</p>
+      <p>[0061] 2、对图像分块；</p>
+      <p>[0062] 考虑到图像子块区域空间信息及存储空间的大小，对图像进行3×3划分，参见附图4，为3×3分块示意图。</p>
+      <p>[0063] 3、计算视觉权重；</p>
+      <p>[0064] 对每个子块图像采用颜色复杂度来计算视觉权重，首先先构造出像素点(i，j)的局部邻近区域，以点(i，j)为中心的8个像素点作为邻近区域Ω，见附图5，附图5为像素点局部邻近区域示意图。</p>
+      <p>[0065] 邻近区域的颜色平均值的计算公式为：</p>
+      <p>[0066] </p>
+      <p>[0067] 其中Ω为像素点(i，j)的邻域，N为邻域内像素个数，Ik(x，y)为第(s，t)个子块像素点(x，y)的颜色值。</p>
+      <p>[0068] 像素点(i，j)的颜色复杂度计算公式如下：</p>
+      <p>[0069] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0070] 这里Gα是高斯权值，经过变化可将颜色复杂度计算公式改写为如下公式：</p>
+      <p>[0071] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0072] 其中γ是常量，E(I(s，t)(i，j)，I(s，t)(x，y))为HSV空间的欧氏距离，即</p>
+      <p>[0073] </p>
+      <p>[0074] 根据颜色复杂度，可以按如下公式计算出每个像素点的视觉权值，即</p>
+      <p>[0075] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0076] 其中</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>I(s，t)为子块(s，t)图像的整个区域，c为常量。</p>
+      <p>[0077] 由于在实际应用过程中，需要将所有像素点的视觉权值归一化到[0，1]区间，则像素点(i，j)的视觉权值表示为：</p>
+      <p>[0078] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0079] 4、确定加权颜色直方图，提取颜色特征；</p>
+      <p>[0080] 根据视觉权值来计算不同颜色在子块图像视觉权值所占的比例得到加权颜色直方图，其计算公式如下：</p>
+      <p>[0081] </p>
+      <p>[0082] 其中n表示图像第n种颜色，M表示图像所包含的颜色数，ωn表示图像中颜色值为n的像素点权值和，I(s，t)表示第(s，t)个子块图像。</p>
+      <p>[0083] 这样通过加权颜色直方图，计算颜色特征，得到的颜色特征表示为I＝[I1，I2，...Ii，IN]，N＝9，Ii＝[Ii1，Ii2，...Iij，IiL]，L为子块特征向量维数。</p>
+      <p>[0084] 附图6给出了HSV颜色空间图的加权颜色直方图，附图6中，左边为HSV图，右边为加权颜色直方图。</p>
+      <p>[0085] (二)形状特征的提取</p>
+      <p>[0086] 1、灰度处理进行轮廓提取：</p>
+      <p>[0087] 为了更精确获取图像形状信息特征，首先对原示例图像进行预处理，将其进行灰度转化，使得成为灰度图像，然后再对灰度图像进行二值转换成为二值图像，以便更好的提取形状轮廓信息。具体过程见附图7。</p>
+      <p>[0088] 附图7，其中从左到右并从上到下依次为原始图像、灰度转换图像、二值转换图像、轮廓提取图像。</p>
+      <p>[0089] 2、提取形状特征；</p>
+      <p>[0090] 该步骤采用曲率尺度空间描述算子CSS(Curvature曲率、Scale尺度、Shape形状)提取形状特征。</p>
+      <p>[0091] 在对图像进行预处理后，通过拉普拉斯算子提取图像的轮廓曲线Γ，然后根据如下公式来获取图像的形状特征。</p>
+      <p>[0092] </p>
+      <p>[0093] 其中t表示轮廓曲线Γ＝{(x(t)，y(t))|t∈[0，b]}的参数，b代表曲线参数的取值上限，σ代表高斯核的宽度，起始值设定为σ＝1，然后按照Δσ进行增长，直到曲率为0。这样得到的形状特征表示为K＝[K1，K2，...Ki，KM]，M为特征维数。</p>
+      <p>[0094] 第二部分为图像的相似性匹配，根据图像索引检索得到检索结果，具体包括以下几个步骤：</p>
+      <p>[0095] 1、进行特征归一化，得到归一化后的图像特征；</p>
+      <p>[0096] 在进行相似性匹配之前，考虑到形状特征与颜色特征的物理意义以及取值范围不同，不能进行简单的匹配，需要对其进行特征向量的归一化。对颜色特征I＝[I1，I2，...Ii，IN]以及其特征分量Ii＝[Ii1，Ii2，...Iij，IiL]，计算出其均值μi和σi，采用归一化公式Ii，j＝(Ii，j-mj)/3σj使其保证将Ii，j归一化到[-1，1]之间。</p>
+      <p>[0097] 对于形状特征，也一样做类似处理。</p>
+      <p>[0098] 在对颜色特征与形状特征综合匹配时，同样需要进行综合归一化。通过计算两幅不同图像I和J的特征向量的相似距D(i，j)＝distance(Fi，Fj)i，j＝1，2，...，M以及M(M-1)/2个距离值的均值mD和标准差σD，并进行Di，j＝(Ii，j-mj)/σj高斯归一化。</p>
+      <p>[0099] 通过进行特征归一化后，得到归一化后的图像特征。</p>
+      <p>[0100] 2、确定相似性度量的计算公式；</p>
+      <p>[0101] 归一化图像特征向量后就需要进行图像之间的相似性度量，采用欧式距离的匹配方法计算公式如下：</p>
+      <p>[0102] </p>
+      <p>[0103] 其中Q为示例图像，T为图像特征库图像，D1，D2，D为颜色形状特征分量相似性距离以及最终的相似性距离，Ii，Ki为归一化分量，wi，δi，ωi为归一化权重，根据图像特点而定，一般都取相等权值1。</p>
+      <p>[0104] 3、将提取的图像特征，利用索引并根据相似性度量的公式在图像特征库中进行匹配，得到检索结果。</p>
+      <p>[0105] 本发明在对示例图像以及检索库中图像提取了特征后，采用的是基于向量空间的索引结构。</p>
+      <p>[0106] 对特征库使用霍特林(KL，Karhunen-Loeve&#160;Transform)变换来进行维数缩减，并对示例图像特征采用R*树来对图像特征进行索引，根据相似性度量的公式选取相似度匹配较小的图像作为用户检索的结果。</p>
+      <p>[0107] 可以从检索结果中选取设定数目的图像作为查询结果，例如选取相似度顺序较小的前15张作为查询结果。或者，可以选取前20张。</p>
+      <p>[0108] 本发明通过一定的实验说明了本发明检索方法的优越性，具体见以下描述：</p>
+      <p>[0109] 附图8-1是本发明检索方法得到的检索结果示意图，附图8-2是一般颜色特征算法得到的检索结果示意图，附图8-3是一般形状特征算法得到的检索结果示意图。</p>
+      <p>[0110] 上述是从Corel数据库中选取的10类中每类有20张且图像大小均为640*640的图像库中，以花卉为示例图进行检索得到的结果。可以发现，本发明在图像检索方面不仅具有颜色特性和形状特征，且同时具有一定的空间位置关系，充分考虑到了图像检索中的视觉特征，因此具有明显的检索效果，检索更准确。</p>
+      <p>[0111] 附图9给出了不同检索算法的准确度检索率曲线图。图中的3条曲线，从上往下的顺序，分别是本发明方法的曲线，一般颜色特征方法的曲线和一般形状特征方法的曲线。可以发现，本发明方法检索更为准确。</p>
+      <p>[0112] 由上述技术方案可以看出，本发明实施例提供的检索方法避免了人工注释进行文本检索带来的主观性，检索也更准确，本发明的方法在颜色特征提取方面充分考虑到图像的视觉特性以及空间特性，采用分块的方法来满足图像的空间位置关系，并通过颜色复杂度的加权颜色直方图来深入提取图像的颜色特征，并融合了图像的形状特征，具有很强的鲁棒性，检索精度高。</p>
+      <p>[0113] 本领域普通技术人员可以理解上述实施例的各种方法中的全部或部分步骤是可以通过程序来指令相关的硬件来完成，该程序可以存储于一计算机可读存储介质中，存储介质可以包括：只读存储器(ROM，Read&#160;Only&#160;Memory)、随机存取存储器(RAM，Random&#160;Access&#160;Memory)、磁盘或光盘等。</p>
+      <p>[0114] 以上对本发明实施例所提供的一种基于颜色和形状特征的图像检索方法，进行了详细介绍，本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本发明的限制。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102184250A?cl=zh">CN102184250A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月24日</td><td class="patent-data-table-td patent-date-value">2011年9月14日</td><td class="patent-data-table-td ">东华大学</td><td class="patent-data-table-td ">基于彩色图像匹配的服装面料样品检索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102184250B?cl=zh">CN102184250B</a></td><td class="patent-data-table-td patent-date-value">2011年5月24日</td><td class="patent-data-table-td patent-date-value">2014年4月2日</td><td class="patent-data-table-td ">东华大学</td><td class="patent-data-table-td ">基于彩色图像匹配的服装面料样品检索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102496157A?cl=zh">CN102496157A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月22日</td><td class="patent-data-table-td patent-date-value">2012年6月13日</td><td class="patent-data-table-td ">上海电力学院</td><td class="patent-data-table-td ">基于高斯多尺度变换及颜色复杂度的图像检测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102565056A?cl=zh">CN102565056A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月24日</td><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">泰尔茂株式会社</td><td class="patent-data-table-td ">便携终端、卡路里推定方法及卡路里推定程序</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102622420A?cl=zh">CN102622420A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月22日</td><td class="patent-data-table-td patent-date-value">2012年8月1日</td><td class="patent-data-table-td ">哈尔滨工程大学</td><td class="patent-data-table-td ">基于颜色特征和形状上下文的商标图像检索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102622420B?cl=zh">CN102622420B</a></td><td class="patent-data-table-td patent-date-value">2012年2月22日</td><td class="patent-data-table-td patent-date-value">2013年10月30日</td><td class="patent-data-table-td ">哈尔滨工程大学</td><td class="patent-data-table-td ">基于颜色特征和形状上下文的商标图像检索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102646190A?cl=zh">CN102646190A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月19日</td><td class="patent-data-table-td patent-date-value">2012年8月22日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">一种基于生物特征的认证方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102682308A?cl=zh">CN102682308A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年3月17日</td><td class="patent-data-table-td patent-date-value">2012年9月19日</td><td class="patent-data-table-td ">株式会社理光</td><td class="patent-data-table-td ">图像处理方法和图像处理设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102682308B?cl=zh">CN102682308B</a></td><td class="patent-data-table-td patent-date-value">2011年3月17日</td><td class="patent-data-table-td patent-date-value">2014年5月28日</td><td class="patent-data-table-td ">株式会社理光</td><td class="patent-data-table-td ">图像处理方法和图像处理设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103150330A?cl=zh">CN103150330A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年1月16日</td><td class="patent-data-table-td patent-date-value">2013年6月12日</td><td class="patent-data-table-td ">中南大学</td><td class="patent-data-table-td ">一种基于局部对象和块匹配的扫描证书图像检索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103150330B?cl=zh">CN103150330B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年1月16日</td><td class="patent-data-table-td patent-date-value">2015年12月23日</td><td class="patent-data-table-td ">中南大学</td><td class="patent-data-table-td ">一种基于局部对象和块匹配的扫描证书图像检索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103440348A?cl=zh">CN103440348A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月16日</td><td class="patent-data-table-td patent-date-value">2013年12月11日</td><td class="patent-data-table-td ">重庆邮电大学</td><td class="patent-data-table-td ">一种基于矢量量化的全局和局部颜色图像检索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012151755A1?cl=zh">WO2012151755A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月12日</td><td class="patent-data-table-td patent-date-value">2012年11月15日</td><td class="patent-data-table-td ">Institute Of Automation, Chinese Academy Of Sciences</td><td class="patent-data-table-td ">商标检测与识别的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014187408A1?cl=zh">WO2014187408A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年6月10日</td><td class="patent-data-table-td patent-date-value">2014年11月27日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">视觉搜索方法、系统以及移动终端</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=pvd-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年6月30日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年8月25日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年1月25日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/011f925d611803eca72e/CN101763429A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E9%A2%9C%E8%89%B2%E5%92%8C%E5%BD%A2%E7%8A%B6%E7%89%B9%E5%BE%81%E7%9A%84%E5%9B%BE.pdf?id=pvd-BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0Hs_meNEoMi6D7uoThWVejWiYexQ"},"sample_url":"https://www.google.com/patents/reader?id=pvd-BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

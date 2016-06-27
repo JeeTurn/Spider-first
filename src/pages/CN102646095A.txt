@@ -1,0 +1,302 @@
+<!DOCTYPE html><html><head><title>专利 CN102646095A - 一种基于网页分类信息的对象分类方法和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种基于网页分类信息的对象分类方法和系统"><meta name="DC.contributor" content="姜珊珊" scheme="inventor"><meta name="DC.contributor" content="孙军" scheme="inventor"><meta name="DC.contributor" content="谢宣松" scheme="inventor"><meta name="DC.contributor" content="赵利军" scheme="inventor"><meta name="DC.contributor" content="郑继川" scheme="inventor"><meta name="DC.contributor" content="株式会社理光" scheme="assignee"><meta name="DC.date" content="2011-2-18" scheme="dateSubmitted"><meta name="DC.description" content="本申请提供一种基于网页分类信息的对象分类方法，包括以下步骤：将每个单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；从每个所述XML树中抽取对象的标识符；从每个所述XML树中抽取单层次链；将来自不同单网页的多个单层次链集成为一棵有向树；以及根据单网页的对象标识符和单层次链，从所述有向树得到此对象的分类信息。本申请采用综合因素来抽取网页中的具有层次的分类信息，这些因素有：节点序列模式匹配和节点位置等的计算方法，这些能够从单网页中得到更精确和有用的分类信息。"><meta name="DC.date" content="2012-8-22"><meta name="DC.relation" content="CN:101118553:A" scheme="references"><meta name="DC.relation" content="CN:101727498:A" scheme="references"><meta name="DC.relation" content="CN:101944094:A" scheme="references"><meta name="DC.relation" content="US:20050050086:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102646095:A"><meta name="citation_patent_application_number" content="CN:201110040468"><link rel="canonical" href="https://www.google.com/patents/CN102646095A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102646095A?cl=zh"/><meta name="title" content="专利 CN102646095A - 一种基于网页分类信息的对象分类方法和系统"/><meta name="description" content="本申请提供一种基于网页分类信息的对象分类方法，包括以下步骤：将每个单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；从每个所述XML树中抽取对象的标识符；从每个所述XML树中抽取单层次链；将来自不同单网页的多个单层次链集成为一棵有向树；以及根据单网页的对象标识符和单层次链，从所述有向树得到此对象的分类信息。本申请采用综合因素来抽取网页中的具有层次的分类信息，这些因素有：节点序列模式匹配和节点位置等的计算方法，这些能够从单网页中得到更精确和有用的分类信息。"/><meta property="og:title" content="专利 CN102646095A - 一种基于网页分类信息的对象分类方法和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102646095A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102646095A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=GnGaBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102646095A&amp;usg=AFQjCNFK9sPCF5uIwxR6zCJLh803T73txw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/b090fc6aba819938dbb8/CN102646095A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/b090fc6aba819938dbb8/CN102646095A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102646095A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102646095A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102646095A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102646095B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102646095A?cl=zh" style="display:none"><span itemprop="description">本申请提供一种基于网页分类信息的对象分类方法，包括以下步骤：将每个单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；从每个所述XML树中抽取对象的标识符；从每个所述XML树中抽取单层次 ...</span><span itemprop="url">https://www.google.com/patents/CN102646095A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102646095A - 一种基于网页分类信息的对象分类方法和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102646095A - 一种基于网页分类信息的对象分类方法和系统" title="专利 CN102646095A - 一种基于网页分类信息的对象分类方法和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102646095 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110040468</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年8月22日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年2月18日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年2月18日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102646095B?hl=zh-CN&amp;cl=zh">CN102646095B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110040468.X, </span><span class="patent-bibdata-value">CN 102646095 A, </span><span class="patent-bibdata-value">CN 102646095A, </span><span class="patent-bibdata-value">CN 201110040468, </span><span class="patent-bibdata-value">CN-A-102646095, </span><span class="patent-bibdata-value">CN102646095 A, </span><span class="patent-bibdata-value">CN102646095A, </span><span class="patent-bibdata-value">CN201110040468, </span><span class="patent-bibdata-value">CN201110040468.X</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A7%9C%E7%8F%8A%E7%8F%8A%22">姜珊珊</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%AD%99%E5%86%9B%22">孙军</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B0%A2%E5%AE%A3%E6%9D%BE%22">谢宣松</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B5%B5%E5%88%A9%E5%86%9B%22">赵利军</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%91%E7%BB%A7%E5%B7%9D%22">郑继川</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E7%90%86%E5%85%89%22">株式会社理光</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102646095A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102646095A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102646095A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=GnGaBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110040468&amp;usg=AFQjCNHTzbsq56EsvoyGcnt-vrL4_JMUBg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=GnGaBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102646095A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGyLhDTQ5H4dEDi4U9kcL5HzEVWug"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT114730751" lang="ZH" load-source="patent-office">一种基于网页分类信息的对象分类方法和系统</invention-title>
+      </span><br><span class="patent-number">CN 102646095 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA99548315" lang="ZH" load-source="patent-office">
+    <div class="abstract">本申请提供一种基于网页分类信息的对象分类方法，包括以下步骤：将每个单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；从每个所述XML树中抽取对象的标识符；从每个所述XML树中抽取单层次链；将来自不同单网页的多个单层次链集成为一棵有向树；以及根据单网页的对象标识符和单层次链，从所述有向树得到此对象的分类信息。本申请采用综合因素来抽取网页中的具有层次的分类信息，这些因素有：节点序列模式匹配和节点位置等的计算方法，这些能够从单网页中得到更精确和有用的分类信息。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(26)</span></span></div><div class="patent-text"><div mxw-id="PCLM44886955" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于网页分类信息的对象分类方法，包括以下步骤：  a)将每个单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；  b)从每个所述XML树中抽取对象的标识符；  c)从每个所述XML树中抽取单层次链；  d)将来自不同单网页的多个单层次链集成为一棵有向树；以及  e)根据单网页的对象标识符和单层次链，从所述有向树得到此对象的分类信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，进一步包括f):基于所述有向树从更多的网页中得到分类信息，并将之加入到有向树中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求I所述的方法，其中步骤a)进一步包括：  从DOM树中移除与第一列表中枚举的节点相同的节点；  删除DOM树中的其他节点属性，只将超链接HREF属性保留到输出的XML树中；  如果一个节点没有值，而且只有一个拥有文本值的孩子节点，那么，所述孩子节点的文本值会被看成该节点的值，同时从XML树中移除所述孩子节点；以及  通过渲染得到XML树中节点的可视信息，并将节点的可视信息作为节点的属性保留在输出XML树中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求I所述的方法，其中步骤b)进一步包括：  根据第一规则过滤掉不可能的节点；  根据可视信息计算每个节点的可视化分值，根据特定的正规表达式与标题相似度计算每个节点的值分值，并且根据标签因素计算每个节点的标签分值；  合并可视化分值、值分值、和标签分值，并得到排名前η的节点作为候选节点；  计算每个候选节点的频率分值，并选择频率分值排在前3的节点作为标识符候选节点；和  移除与第二列表中列举的值相同的节点值，得到分值排名第一的节点作为对象标识符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其中第一规则包括：  节点的值长度大于第一阈值并小于第二阈值，否则过滤掉该节点，所述第一阈值和第二阈值为经验设置值；  节点的名字如果在停用标签集合中，则过滤掉该节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求4所述的方法，其中可视化分值的计算进一步包括：  通过二维高斯方法计算节点的位置分值；  根据字体信息计算节点的字体分值；  通过合并位置分值和字体分值得到节点的可视化分值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求I所述的方法，其中步骤c)进一步包括：  根据节点的自底而上深度、节点的孩子数目以及停用词列表来过滤掉不可能的节点；  根据分类规则将所有剩下的候选节点分成I、II、II和IV四大类；  将每个候选节点的所有孩子看成一个节点序列，并基于节点序列类型进行模式匹配并得到每个候选节点的模式分值；  根据节点字体和绝对位置信息来计算每个候选节点的可视化分值；对上述步骤得到的模式分值和可视化分值进行合并，并根据结果进行排序，取分值高的和它的孩子为层次链的候选者；以及  根据第三列表移除不必要的层次，并且如果层次链最低层不是对象标识符则将步骤b)得到的对象标识符添加到最低层，从而得到最终的层次链。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，分类规则包括：  该节点有值，且节点名为“A”时，将节点分为第I类；  该节点有值，且节点名为“TEXT”时，将节点分为第II类；  该节点有值，且节点名不是上述两种情况时，将节点分为第III类；以及  该节点没有值时，将节点分为第IV类。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求7所述的方法，其中所述模式匹配进一步包括：   根据节点类型将每个候选节点的孩子节点序列分成头部、中部和尾部三部分，以便中部是一个节点类型不断重复且重复最小单位是两个节点的序列；  根据有头尾部长度、中部长度以及节点类型重复次数，对每个候选节点的孩子节点序列计算模式分值；  根据每个候选节点的孩子的数目计算节点的附加分值，并将该附加分值与上述模式分值合并，得到最终模式分值；以及  过滤掉其最终模式分值小于第三阈值的候选节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求7所述的方法，其中可视化分值的计算进一步包括：  通过二维高斯方法来计算候选节点的位置分值；  如果候选节点的所有孩子的同一维位置值相同，那么该节点的可视化分值为位置分值；如果都不相同，那么该节点的可视化分值为O ;  如果候选节点的孩子序可视位置是递增的，那么该节点的可视化分值为位置分值；如果孩子序的可视位置不是递增的，那么该节点的可视化分值为O ;  如果候选节点的所有孩子的字体相同，那么该节点的可视化分值为位置分值；如果不同，那么该节点的可视化分值为O。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求I所述的方法，其中步骤d)进一步包括：  dl)建立一颗只存在一个根节点的树；  d2)检查步骤c)抽取得到的每个单层次链中的每个新来节点是否在树中已经存在，如果已存在，则合并该新来节点到树中对应的节点，并增加该节点的计数，同时将该新来节点的后代视为其下层节点；  d3)如果不存在，则检查树中是否存在与新来节点有关系的节点，如果存在有关系的节点，则根据所述关系将新来节点添加为有关系的节点的上层或下层节点；d4)如果不存在有关系的节点，则将此链合并至根节点之下；d5)所有层次链合并完成之后得到一个有向图；以及  d6)根据有向图中所有上层节点的计数来确定计数最大的一个为正式父节点，并删除符合预定条件的关系边，从而得到最终的有向树。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求I所述的方法，其中步骤e)进一步包括：  接收一个对象标识符；以及  从有向树查找该对象标识符，如果存在，则相应节点的祖先节点为此对象的分类信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求4、6-7或9的任何一个所述的方法，其中，所述合并包括：对所述分值求加权和、或对所述分值直接相乘。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.	一种基于网页分类信息的对象分类系统，包括：  预处理模块，用于通过转换处理将单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；  对象标识符抽取模块，用于每个从所述XML树中抽取对象的标识符；  单层次链抽取模块，用于从每个所述XML树中抽取单层次链；  多链集成模块，用于将来自不同网页的多个单层次链集成为一棵有向树；和对象分类模块，用于根据单网页的对象标识符和单层次链，从所述有向树得到此对象的分类信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的系统，进一步包括：抽取提升模块，用于基于所述有向树从更多的网页中得到分类信息，并将之加入到有向树中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求14所述的系统，其中预处理模块中的转换处理进一步包括：  从DOM树中移除与第一列表中枚举的节点相同的节点；  删除DOM树中的其他节点属性，只将超链接HREF属性保留到输出的XML树中；  如果一个节点没有值，而且只有一个拥有文本值的孩子节点，那么，所述孩子节点的文本值会被看成该节点的值，同时从XML树中移除所述孩子节点；以及  通过渲染得到XML树中节点的可视信息，并将节点的可视信息作为节点的属性保留在输出XML树中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求14所述的系统，其中对象标识符抽取模块进一步包括：  过滤单元，根据第一规则过滤掉不可能的节点；  分值计算单元，根据可视信息计算每个节点的可视化分值，根据特定的正规表达式与标题相似度计算每个节点的值分值，并且根据标签因素计算每个节点的标签分值；  排序单元，合并可视化分值、值分值、和标签分值，并得到排名前η的节点作为候选节占.  频率分计算单元，计算每个候选节点的频率分值，并选择频率分值排在前3的节点作为标识符候选节点；和  对象标识符获得单元，移除与第二列表中列举的值相同的节点值，得到分值排名第一的节点作为对象标识符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的系统，其中第一规则包括：  节点的值长度大于第一阈值并小于第二阈值，否则过滤掉该节点，所述第一阈值和第二阈值为经验设置值；和  节点的名字如果在停用标签集合中，则过滤掉该节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求17所述的系统，其中可视化分值的计算进一步包括：  通过二维高斯方法计算节点的位置分值；  根据字体信息计算节点的字体分值；  通过合并位置分值和字体分值得到节点的可视化分值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求14所述的系统，其中单层次链抽取模块进一步包括：  过滤单元，根据节点的自底而上深度、节点的孩子数目以及停用词列表来过滤掉不可能的节点；  划分单元，根据分类规则将所有剩下的候选节点分成I、II、II和IV四大类；  模式匹配单元，将每个候选节点的所有孩子看成一个节点序列，并基于节点序列类型进行模式匹配以得到每个候选节点的模式分值；  计算单元，根据节点字体和绝对位置信息来计算每个候选节点的可视化分值；  选取单元，对上述步骤得到的模式分值和可视化分值进行合并，并根据结果进行排序，选取分值高的和它的孩子为层次链的候选者；以及  单层次链获取单元，根据第三列表移除不必要的层次，并且如果层次链最低层不是对象标识符则将所述对象标识符抽取模块得到的对象标识符添加到最低层，从而得到最终的单层次链。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求20所述的系统，分类规则包括：  该节点有值，且节点名为“A”时，将节点分为第I类；  该节点有值，且节点名为“TEXT”时，将节点分为第II类；  该节点有值，且节点名不是上述两种情况时，将节点分为第III类；以及  该节点没有值时，将节点分为第IV类。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求20所述的系统，其中所述模式匹配进一步包括：  根据节点类型将每个候选节点的孩子节点序列分成头部、中部和尾部三部分，以便中部是一个节点类型不断重复且重复最小单位是两个节点的序列；  根据有头尾部长度，中部长短以及节点类型重复次数，对每个候选节点的孩子节点序列计算模式分值；  根据每个候选节点的孩子的数目计算节点的附加分值，并将该附加分值与上述模式分值合并，得到最终模式分值；以及  过滤掉其最终模式分值小于第三阈值的候选节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求20所述的系统，其中可视化分值的计算进一步包括：  通过二维高斯方法来计算候选节点的位置分值；  如果候选节点的所有孩子的同一维位置值相同，那么该节点的可视化分值为位置分值；如果都不相同，那么该节点的可视化分值为O ;  如果候选节点的孩子序可视位置是递增的，那么该节点的可视化分值为位置分值；如果孩子序的可视位置不是递增的，那么该节点的可视化分值为O ;和  如果候选节点的所有孩子的字体相同，那么该节点的可视化分值为位置分值；如果不同，那么该节点的可视化分值为O。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求14所述的系统，其中多链集成模块进一步包括：  新树建立单元，建立一颗只存在一个根节点的树；  相同节点合并单元，检查单层次链抽取模块抽取得到的每个单层次链中的每个新来节点是否在树中已经存在，如果已存在，贝1J合并该新来节点到树中对应的节点，并增加该节点的计数，同时将该新来节点的后代视为其下层节点；  相关节点合并单元，如果树中不存在该新来节点，则检查树中是否存在与新来节点有关系的节点，如果存在有关系的节点，则根据所述关系将新来的节点添加为有关系的节点的上层或下层节点；其他节点合并单元，如果不存在相同和有关系的节点，则将此链合并至根节点之下；  有向图建立单元，当所有单层次链合并完成之后，建立一个有向图；  有向树建立单元，根据有向图中所有上层节点的计数来确定计数最大的一个为正式父节点，并删除符合该预定条件的关系边，从而得到最终的有向树。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.根据权利要求14所述的系统，其中对象分类模块进一步包括：  对象标识符接收单元，接收一个对象标识符；以及  分类信息获取单元，从有向树查找该对象标识符，如果存在，则相应 节点的祖先节点为此对象的分类信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.根据权利要求17、19-20或22的任何一个所述的系统，其中，所述合并包括：对所述分值求加权和、或对所述分值直接相乘。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES51267771" lang="ZH" load-source="patent-office" class="description">
+    <p>一种基于网页分类信息的对象分类方法和系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本申请一般涉及与信息处理和信息抽取相关的技术，更具体地，涉及利用基于因特网上的网页分类信息的对象分类方法和系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	在现有技术中，存在如下一些相关的技术：  </p>
+    <p>[0003]	I、从网站中抽取层次（Hierarchy extraction from the websites,G06F001700,20091231，NEC(CHINA)CO.，LTD.)</p>
+    <p>[0004]	现有的从网站中抽取层次的技术中提供了一种构建对象层次的方法和系统，该方法包括：从一个网站中获取一系列网页，对这些网页进行inter-page (页面间）分析来抽取这些网页的层次；进行intra-page (页面内）分析来标识网页内的语义区块，并且得到所有网页的语义区块层次；然后根据网页的层次，来融合这些语义块的层次，以便于生成相应的分层。</p>
+    <p>[0005]分析：</p>
+    <p>[0006]	首先，该技术将一个网页映射成一个对象（inter-);因为网页的树结构而使对象具有层次结构；然后使用相似的网页（intra-)来改善此对象的层次；该方法基于全页面映射来得到对象的分类信息，与本申请的方法有根本的不同。</p>
+    <p>[0007]	2、TaxaMiner : &#8212; 个自动分类自举的实验框架（An ExperimentationFrameworkfor Automated Taxonomy Bootstrapping，V Kashyap, . . . ClinicalInformation R&amp;D，Partners HealthCare System)</p>
+    <p>[0008]	该现有技术的思路包括：(a)文档簇层次的生成；(b)从这些簇层次中抽取主题分层；（C)对主题层次中的节点进行标注。他们采纳了一系列聚类和自然语言处理相关的技术，以及从实验框架中得到的标识参数；同时提供一种度量来测试主题簇的质量，并且评估不同的参数对质量矩阵带来的影响。</p>
+    <p>[0009]分析：</p>
+    <p>[0010]	该方法是从纯文本中得到分类信息，方法和数据源与本申请都明显不同。</p>
+    <p>[0011]	3、一个基于分类的从数据密集型网站中自动抽取数据的爬虫（ATaxonomyBased Crawler for Automated Data Extraction from Data-IntensiveWebsites,H. Davulcu, ...Department of Computer Science and Engineering, Arizona stateUniv.)</p>
+    <p>[0012]	这种现有技术采用启发式规则来发现如下结构中的结构化规律：分类块、产品列表以及单产品页面；这些规律被用于将在线目录转换成分类产品数据库，这种转换不需要人为参与以及额外的封装维护负担。</p>
+    <p>[0013]	上述现有技术从一个大型的网站首页获取分类信息入口，这些分类信息是一个很大的集合但并不具备精细的层次信息；同时，该文档使用的方式本身也与本申请有明显的不同。[0014]	如我们对上述每篇参考文献的分析，我们在权利说明中提到的技术与它们有明显的区别。</p>
+    <p>[0015]	此外，本申请采用综合因素来抽取网页中的具有层次的分类信息，这些因素有&#8226;&#8226;节点序列模式匹配和节点位置等的计算方法，这些能够从单网页中得到更精确和有用的分类信息。</p>
+    <p>[0016]	基于图的方法来集成多个从不同网页而来的分类信息，并且得到单对象的确切分类信息，用于构建对象库；对异构的网页来说，更具合理性。</p>
+    <p>[0017]	现有许多包括分类信息的网页，如产品声明等，这些分类信息是按人类知识来组织的，因此对词典、本体以及对象数据库的构建非常有用。当前的分类信息都是人（专家）来搜集并整理的，这样非常耗时耗力。</p>
+    <p>[0018]	正因为现有的网页分类信息包含了人的知识，因此提供了精确发现对象之间关系的可能的途径，如产品之间的关系。但是网页包含了许多噪声，以及不同网页是异构的，即 使是对同一种对象来说，不同网站的表现形式也是多样的。如何抽取这些分类信息并集成它们是本发明的目的。</p>
+    <p>发明内容</p>
+    <p>[0019]	本发明的另外方面和优点部分将在后面的描述中阐述，还有部分可从描述中明显地看出，或者可以在本发明的实践中得到。</p>
+    <p>[0020]	本发明的应用领域通常包括：构建对象库，并根据分类信息来分类和索引文档。</p>
+    <p>[0021]	本发明提供了一种新的通过层次链和对象标识符来自动对网页中对象进行分类的方法。现在这些分类信息被用来分类对象，更进一步，来为对象库构建分类树。</p>
+    <p>[0022]	为了达到以上目的，我们采用了一种具有6个步骤的创新的方法来从网页中获取分类信息。</p>
+    <p>[0023]	本申请提供一种基于网页分类信息的对象分类方法，包括以下步骤：将每个单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；从每个所述XML树中抽取对象的标识符；从每个所述XML树中抽取单层次链；将来自不同单网页的多个单层次链集成为一棵有向树；以及根据单网页的对象标识符和单层次链，从所述有向树得到此对象的分类信息。</p>
+    <p>[0024]	本申请还提供一种基于网页分类信息的对象分类系统，包括：预处理模块，用于通过转换处理将单网页的HTML文档对象模型DOM树转换成特定的包含渲染结果的可扩展标记语言XML树；对象标识符抽取模块，用于每个从所述XML树中抽取对象的标识符；单层次链抽取模块，用于从每个所述XML树中抽取单层次链；多链集成模块，用于将来自不同网页的多个单层次链集成为一棵有向树；和对象分类模块，用于根据单网页的对象标识符和单层次链，从所述有向树得到此对象的分类信息。</p>
+    <p>附图说明</p>
+    <p>[0025]	通过结合附图对本发明的优选实施例进行详细描述，本发明的上述和其他目的、特性和优点将会变得更加清楚，其中相同的标号指定相同结构的单元，并且在其中：</p>
+    <p>[0026]	图I示出了对象的一个示例。[0027]	图2列举了一个有关对象分类信息以及相对应的网页内容的例子。</p>
+    <p>[0028]	图3是根据本发明实施例的对象分类系统的框图。</p>
+    <p>[0029]图4是根据本发明实施例的对象分类系统的示例性PC系统环境的构架示意图。</p>
+    <p>[0030]	图5示出了根据本发明实施例的对象分类方法的流程图。</p>
+    <p>[0031]	图6示出了节点结构的一个示例。</p>
+    <p>[0032]	图7示出了图5的预处理步骤SlOl的具体实施。 [0033]	图8示出了图5的抽取对象标识符步骤S102的流程图。</p>
+    <p>[0034]	图9示出了根据本发明实施例的图3的系统中的对象标识抽取模块102的示意性实现方框图。</p>
+    <p>[0035]	图10示出了图5的抽取单层次链步骤S103的流程图。</p>
+    <p>[0036]	图11是根据本发明实施例的节点过滤示意图。</p>
+    <p>[0037]	图12表达了根据本发明实施例的模式匹配的过程。</p>
+    <p>[0038]	图13示出了根据本发明实施例的图3的系统中的单层次链抽取模块103的示意性实现方框图。</p>
+    <p>[0039]	图14示出了根据本发明实施例的节点结构。</p>
+    <p>[0040]	图15示出了根据本发明实施例的合并新来的单层次链的过程的流程图。</p>
+    <p>[0041]	图16示出了根据本发明实施例的树的形成的示意图。</p>
+    <p>[0042]图17示出了根据本发明实施例的图3的系统中的多链集成模块104的示意性实现方框图。</p>
+    <p>[0043]	图18示出了根据本发明实施例查找对象的示例。</p>
+    <p>[0044]	图19示出了根据本发明实施例的图3的系统中的对象分类模块105的示意性实现方框图。</p>
+    <p>具体实施方式</p>
+    <p>[0045]	下面将参照示出本发明实施例的附图充分描述本发明。然而，本发明可以以许多不同的形式实现，而不应当认为限于这里所述的实施例。相反，提供这些实施例以便使本公开透彻且完整，并且将向本领域技术人员充分表达本发明的范围。在附图中，为了清楚起见放大了组件。</p>
+    <p>[0046]	除非另有定义，这里使用的所有术语（包括技术和科学术语）具有与本发明所属领域的普通技术人员共同理解的相同含义。还应当理解，诸如在通常字典里定义的那些术语应当被解释为具有与它们在相关技术的上下文中的含义相一致的含义，而不应用理想化或极度形式化的意义来解释，除非这里明确地这样定义。</p>
+    <p>[0047]	这里参照支持根据本发明实施例的方法、装置（系统）和计算机程序产品的方框图和流程图描述本发明示例性实施例。应当理解，流程图和/或方框图的每个方框以及流程图和/或方框图的方框组合可以通过计算机程序指令实现。这些计算机程序指令可以提供给通用计算机、专用计算机或其他可编程数据处理装置的处理器以产生机器，使得通过计算机或其他可编程数据处理装置的处理器执行的指令创建实现流程图和/或方框图方框中指定功能/动作的手段。</p>
+    <p>[0048]	这些计算机程序指令也可以存储在计算机可读存储器中，可以引导计算机或其他可编程数据处理装置以特定方式运行，使得存储在计算机可读存储器中的指令产生包括实现流程图和/或方框图方框中指定功能/动作的指令手段的制造物品。</p>
+    <p>[0049]	计算机程序指令还可以加载到计算机或其他可编程数据处理装置上，导致在计算机或其他可编程装置上执行一系列操作步骤来产生计算机实现的处理，使得计算机或其他可编程装置上执行的指令提供实现流程图和/或方框图方框中指定功能/动作的步骤。每个方框可以表示代码模块、片断或部分，其包括一个或多个用来实现指定逻辑功能的可执行指令。还应当注意，在其他实现中，方框中标出的功能可能不按图中标出的顺序发生。例如，根据所涉及的功能，连续示出的两个方框可能实际上基本上并发地执行，或者方框有时可能以相反的顺序执行。</p>
+    <p>[0050]	本发明的目的是提供一种从单网中抽取对象分类信息的方法和步骤，这些网页主 要描述单个对象，如一个产品。但本领域技术人员应该理解，本发明也可以应用于其他目标网页。</p>
+    <p>[0051]	对术语“对象”来说，它意味着一个结构化的概念，由标识符、分类以及一些属性组成，对应于现实世界中的对象。例如：一个对象叫做“Apple iPhone4 16G”。图I示出了对象的一个示例，其包括了分类smartphone、标识符AppleiPhone 4 16G、以及一些属性width、price 等。</p>
+    <p>[0052]	对于术语“分类”来说，它是一个可控的词汇集合，其结构是层次化的。分类信息由分类单元组成，称之为分类子（单一分类单元），经常表现为层次结构中的某一层，一般可以体现父子之间的关系。在图I中，分类是“smartphone”并且它是分类信息中的一个分类单元。我们可以从适当的网页中得到以下内容，如：</p>
+    <p>[0053]	Home》Reviews》Smartpoes》Apple smartphones》Appe IPhone4-16GB-black(AT&amp;T)</p>
+    <p>[0054]	在一系列的预处理和正规化后，以上内容中的分类信息可以为：</p>
+    <p>[0055]	Smartphone &#8212; Apple smartphone &#8212; Apple iPhone 4 16G。</p>
+    <p>[0056]	因为网页的异构化，达到以下目的是困难的：</p>
+    <p>[0057]	在没有领域知识的情况下，从含大量噪声的网页中发现分类信息；</p>
+    <p>[0058]	即使是对同一种对象来说，层次信息的表现也是多样化的。</p>
+    <p>[0059]	本发明提供一种在没有领域知识的情况下自动抽取分类信息并构建分类树的方法。</p>
+    <p>[0060]	图2列举了一个有关对象分类信息以及相对应的网页内容的例子。</p>
+    <p>[0061]	在图2中，左边是我们的目标，对象分类信息树，而右边是对应的一段HTML内容，其中包含了此对象（PowerShot SXlO IS)的分类信息。我们希望发现这些区块并从中抽取此对象的层次链，并且与从不同页面来的链进行自动而有效的合并。</p>
+    <p>[0062]	图3是根据本发明实施例的对象分类系统的框图。该系统包括：预处理模块101、对象标识符抽取模块102、单层次链抽取模块103、多链集成模块104、对象分类模块105、以及抽取提升模块106。所有的这些模块能够形成一个循环来持续的改进并丰富分类信息。</p>
+    <p>[0063]预处理模块	101 :将单个网页的 HTML DOM (Hyper Text Mark-upLanguageDocument Object Model超文本标记语言文档对象模型）树转换成包含渲染信息的特殊XML(Extensible Markup Language可扩展标记语言)树，这颗树是以下模块102和103的输入。</p>
+    <p>[0064]	对象标识符抽取模块102 :从网页中抽取对象的标识符，该对象的标识符将被用于分类信息查找以及在分类树中的定位；</p>
+    <p>[0065]	单链抽取模块103 :这是本发明的核心模块，用于发现分类区块并且从特定的XML树中抽取层次链；</p>
+    <p>[0066]	多链集成模块104 :合并多个层次链并根据一些规则形成分类树；</p>
+    <p>[0067]	对象分类模块105 :根据对象的标识符以及层次链，从分类树中得到对象的精确分类；  </p>
+    <p>[0068]	抽取提升模块106 :最后得到的分类树可以用来提高从新网页抽取分类信息的精度。</p>
+    <p>[0069]	以上所有模块都可由位于计算机中的基于CPU的软件来实现，该软件部署于PC系统中，其硬件结构如图4所示。图4是根据本发明实施例的对象分类系统的示例性PC系统环境的构架不意图。应当注意，在上述系统的实现中，方框中标出的功能可能不按图中标出的顺序发生。例如，根据所涉及的功能，连续示出的两个方框可能实际上基本上并发地执行，或者方框有时可能以相反的顺序执行。</p>
+    <p>[0070]	图5示出了根据本发明实施例的对象分类方法的流程图。在图5中包括如下步骤：预处理S101、对象标识符抽取S102、单层次链抽取S103、把多个层次链集成为一棵树S104、得到对象的分类信息S105、以及根据分类树来提高抽取精度S106。对每个步骤来说都有相应的输入输出，如图5所示，灰色方框表示对象分类方法的步骤；而白色方框指代输入或输出的结果。应当注意，在图5方法的实现中，方框中标出的功能可能不按图中标出的顺序发生。例如，根据所涉及的功能，连续示出的两个方框可能实际上基本上并发地执行，或者方框有时可能以相反的顺序执行。</p>
+    <p>[0071]	在图5中，每个模块都执行与图3的系统方框中的相对应模块对应的主要步骤，如下：</p>
+    <p>[0072]	V预处理模块101 :执行步骤“预处理” SlOl ；</p>
+    <p>[0073]	V对象标识符抽取模块102 :执行步骤“抽取对象标识符” S102 ；</p>
+    <p>[0074]	V单层次链抽取模块103 :执行步骤“抽取单层次链” S103 ；</p>
+    <p>[0075]	V多链集成模块104 :执行步骤“集成多链成树” S104 ；</p>
+    <p>[0076]	V对象分类模块105 :执行步骤“得到对象的分类” S105 ；</p>
+    <p>[0077]	V抽取提升模块106 :执行步骤“根据分类树来提升抽取结果” S106 ；</p>
+    <p>[0078]	以上所有步骤都由位于计算机中的基于CPU的软件来实现，其硬件结构如图4所</p>
+    <p>/Jn ο</p>
+    <p>[0079]	在以下具体实现中，将参照图6-图18分别描述对象分类方法的各个步骤的具体实现。在以下的实现中，仅仅是示例性的，本领域技术人员应该理解，步骤顺序的变动或根据本实现进行的类似修改都在本申请的范围内。</p>
+    <p>[0080]	在因特网中，产品描述数据的规模是非常大的，这些描述可能是产品规格声明、广告、产品发布新闻或者用户评论，一个单独的文档一般主要描述一个特定的对象，这个对象由标识符和具有值的属性组成。</p>
+    <p>[0081]自然而然，人们组织和提及这些对象时，使用它的名字或者加上相应的生产商。从人类的角度来看，从网页识别并分类这些对象不是一个大的问题，但是对机器来说，就是另外一回事了。一般来说，我们想知道：</p>
+    <p>[0082]	I.是哪一种对象（该对象属于什么分类）；</p>
+    <p>[0083]	2.对构建对象库来说，具有层次化结构的分类才好用。</p>
+    <p>[0084]	如上所述，如果能够得到某些网页的分类信息，那么它可以被上述两个目标使用。问题在于：网页是带有大量无用信息的半结构化数据，非常难以被机器理解和分析。另一个问题是：对同一对象来说，层次 信息的表现形式也是多样的。</p>
+    <p>[0085]	对产品信息而言，虽然现存一些分类信息，但是对新出现的产品就无能为力了。当然，如果人工创建这些分类库是相对比较精确的，但绝对是耗时耗力的。</p>
+    <p>[0086]	本发明提出一种从网页中自动抽取分类信息并用来分类对象的方法，最后这些信息被用来持续的构建分类库。本方法包括接下来的所有步骤。</p>
+    <p>[0087]	首先，我们定义一个概念：节点，它是一棵树中的一个结构单元，由一些成员构成。基本上来说，原始的节点内容来自于HTML DOM树，当然有些内容会被删除，有时则可以被一些计算过的结果所补充。图6示出了节点结构的一个示例。图6的右半部即可看作为一棵简单的树，下文中的特定树的结构与之类似。图6的左半部给出了节点名以及节点的一些</p>
+    <p>属性等。</p>
+    <p>[0088]	下文中，将结合图7描述根据本发明实施例的预处理步骤的实现。图7示出了图5的预处理步骤SlOl的具体实施。</p>
+    <p>[0089]	来自网页的DOM树包含大量的无用信息，本发明的目标是对象标识符和分类信息，仅仅是DOM树中的部分文本节点。所以预处理步骤的目的是从复杂的DOM树中得到一棵简化的树，并且新增该树中没有的渲染结果。</p>
+    <p>[0090]	基本上，预处理步骤输出的特定XML树的框架结构与输入的DOM树类似。</p>
+    <p>[0091]	但是由于以下原因，可能需要进行大量的节点删减：1)为了缩减节点规模；2)许多节点的内容对于XML语法来说是非法的。</p>
+    <p>[0092]	删除规则为：例如，可以根据专家的经验生成的可配置文件中得到的列表名单确定删除哪些名称的节点，这些节点名例如可能包括：“SCRIPT”、“INPUT”、“META”等等。但本领域技术人员应该理解，对于不同的具体任务，可以确定不同的列表。</p>
+    <p>[0093]	另外，一个冗余信息是HTML中大量的属性集合，对我们的算法来说，绝大部分从DOM树中而来的属性都是无用可以被忽略的，除了 “HREF” (hypertext reference超链接）可用以外，因此，只有它在输出XML树中被保留。</p>
+    <p>[0094]	另外一种可选的方案是：所有的从DOM树中来的节点都被保留，但是上述要删除的节点的权重被置为O。</p>
+    <p>[0095]	对节点的可视信息来说，我们从页面的渲染结果中得到，并作为元素保留到输出树中，如绝对位置和字体等；渲染工作可以由现有的网页浏览器核心来完成，如Gecko、WebKit、Trident、Presto等。此外，也可以采用其他现有或将来出现的技术来进行渲染工作。</p>
+    <p>[0096]	为了在一种联合模型中同样对待整棵树中的所有节点,我们按以下方法对输出的XML进行优化调整：</p>
+    <p>[0097]	如果一个节点没有值，而且只有一个文本孩子节点，那么，将该文本看成父的值，并且从输出树中移除该文本孩子节点。如图7所示，节点t和s只有一个文本孩子节点，且该节点没有值，因此，移除它们的文本孩子节点，并将该文本看成t和s的值。</p>
+    <p>[0098]	预处理步骤的输出是一棵包含特定节点的XML树，它们将是接下来步骤的输入。</p>
+    <p>[0099]	下面，将参考图8描述根据本发明实施例的抽取对象标识符步骤的实现。图8示出了图5的抽取对象标识符步骤S102的流程图。应当注意，在以下实现中，方框中标出的功能可能不按图中标出的顺序发生。例如，根据所涉及的功能，连续示出的两个方框可能实际上基本上并发地执行，或者方框有时可能以相反的顺序执行。</p>
+    <p>[0100]	以下，针对目标网页是“详细描述网页”，即，假定每个网页只描述一个对象的情况进行举例说明，并且被步骤SlOl所处理过，其形式变成了一棵树。但本领域技术人员应该理解，本发明也可以应用于其他目标网页。首先，这个对象会被一个文本元素所标识，从树中抽取该标识符的方法由以下步骤组成：</p>
+    <p>[0101]	在步骤S801过滤掉不可能的节点：本步骤的输入为XML树中的所有节点，如果某个节点的值过于长，或过于短，这些节点将不会被考虑，长度的阈值可以凭经验设置；另外一个因素是：停用标签集合，如果任何一个节点的名字在此集合中，则被忽略。经过此步骤，候选节点会被生成。</p>
+    <p>[0102]	在步骤S802计算可视化分值：对可视信息来说，两种因素被考虑：一个是绝对位置坐标，一个是字体信息。</p>
+    <p>[0103]	其中，一种位置计算的方法例如为二维高斯函数,其公式为：</p>
+    <p>[0104]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102646095A/CN102646095AD00131.png"> <img id="idf0001" file="CN102646095AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102646095A/CN102646095AD00131.png" class="patent-full-image" alt="Figure CN102646095AD00131"> </a> </div>
+    <p>[0105]其中：</p>
+    <p>[0106]	u = PositionX (x 轴的位置),v = PositionY (y 轴的位置），U。= 200, V0 = 200,</p>
+    <p>σ = 200ο</p>
+    <p>[0107]	而计算后的H则被看作为位置分值，其中的常量（Utl, ν0, σ )可以根据具体任务调 整。</p>
+    <p>[0108]	对于计算字体分值，一种规则是：越大越好，例如，字体分值T = aX，其中a为常数X为字体大小，字体分值T与字体大小X之间呈线性变化关系。如果是黑体，则加一个额外的分值。</p>
+    <p>[0109]	通过对位置分值和字体分值进行合并，可以得到每个候选节点的可视化分值。其中，该合并可以是线性加权、相乘等的任何一种方式。</p>
+    <p>[0110]	在步骤S803计算标签分值以及节点值分值：除了可视化分值之外，还需要计算更多的针对候选节点的其他分值，对标签因素来说，如果该标签属于头标签集合中，“H1”、“H2”、“H3”等，其分值会增加。</p>
+    <p>[0111]	对值因素来说，与标题的相似程度会被用上，公式如下：</p>
+    <p>[0112]	sim (evalue, etitle) = | {wk | wk e e^wk e ej | / (log (| evalue |) +log (| etitle |))</p>
+    <p>[0113]	其中，变量evalue代表该节点的值，变量etitle代表标题，sim(evalue, etitle)是节点值与标题的相似程度，计算其作为节点值分值；I {wk|wk e e^wk e eJ |表示既属于节点值又属于标题的词的个数，而（log (I evalue I) +log (I etitle |)表示节点值和标题的总长度。</p>
+    <p>[0114]	同时，根据一些特定的正则表达式来验证这些节点值，如符合如下表达式之一，则上述计算的值分值作为该节点的值分值，否则值分值为0，如：[0115]	(" ([0-9]+ [A-z]+)+ [0-9]*")；</p>
+    <p>[0116]	(" ([A-z]+ [0-9]+)+ [A-z]*〃 )；[0117]	(" ([0-9] + [_] {0,1} [A-z] + [_] {0，l}) + [0-9]*〃）；</p>
+    <p>[0118]	(" ([A-z] + [_] {0，1} [0-9] + [_] {0，1}) + [Α-ζ]*〃）；</p>
+    <p>[0119]	经过本步骤后，每个候选节点拥有更多各类的分值了。</p>
+    <p>[0120]	在步骤S804合并上述各类分值并得到排名前η个节点：此步骤开始对以上步骤计算得到的各种分值进行合并。此处，可以采用任何合并方法，例如，可采用加权合并，每个分值的权重由经验赋予。在得到综合分值后进行排序，从而得到排在前η的节点。</p>
+    <p>[0121]	在步骤S805计算频率值：对前η的节点来计算它们的频率值，其方法为：针对所有可能的在树中的节点，如果其中一个节点的值包括目标节点的值，则增加目标节点计数，即频率值加I。频率值计算的基本原则是：频率值越高，就越重要，为了平滑，可以对频率取对数值；通常我们可以选择频率值排在前3的节点作为标识符候选节点。</p>
+    <p>[0122]	在步骤S806移除不必要的部分：在以上步骤得到的几个节点的值中，有些符号和无意义的词，需要移除，剩下的才是最后的标识符。这些符号和无意义的词是通过经验由字典定义在第二列表中，通过查询第二列表来确定需要移除的词。</p>
+    <p>[0123]	在步骤S807得到最终对象标识符：最后，分值排名第一的节点整体或该节点值被视为对象标识符。</p>
+    <p>[0124]	就我们的经验来看，对于产品对象，其标识符一般由以下部分组成：生产商、基本名、系列名以及其它参数；同时，这些特征也可以用来进行标识符的正规化和抽取。</p>
+    <p>[0125]	图9示出了根据本发明实施例的图3的系统中的对象标识抽取模块102的示意性实现方框图。</p>
+    <p>[0126]	如图9所示，对象标识抽取模块102包括：过滤单元901，根据第一规则过滤掉不可能的节点；分值计算单元902，根据可视信息计算每个节点的可视化分值903，根据特定的正规表达式与标题相似度计算每个节点的值分值，并且根据标签因素计算每个节点的标签分值；排序单元904，合并可视化分值、值分值、和标签分值，并得到排名前η的节点作为候选节点；频率分计算单元905，计算每个候选节点的频率分值，并选择频率分值排在前3的节点作为标识符候选节点；和对象标识符获得单元906，移除与第二列表中列举的值相同的节点值，得到分值排名第一的节点作为对象标识符。</p>
+    <p>[0127]	虽然图9中示出了两个计算单元，但本领域技术人员应该理解，分值计算单元902和频率分计算单元905也可以由一个计算单元实现。</p>
+    <p>[0128]	图9中各个单元的具体实现与图8的方法流程类似，因此在此不再赘述。</p>
+    <p>[0129]	下面，将参考图10-12描述根据本发明实施例的抽取单层次链步骤的实现。图10示出了图5的抽取单层次链步骤S103的流程图。应当注意，在以下实现中，方框中标出的功能可能不按图中标出的顺序发生。例如，根据所涉及的功能，连续示出的两个方框可能实际上基本上并发地执行，或者方框有时可能以相反的顺序执行。</p>
+    <p>[0130]	网页中单层次链是本发明的主要目标之一，我们希望能够从即定的树中抽取它。基本上来说，这条链由不同的层组成，且上层比下层寓意更宽的概念。整体任务包括如图10所示的步骤：</p>
+    <p>[0131]	本方法可能的一种实现方案为：[0132]	在步骤SlOOl过滤不可能的节点：本步骤的输入是来自步骤SlOl的XML树中的所有节点，需要过滤掉一些不必要的节点，过滤规则为：自底而上的深度，叶子节点的数目以及停用词列表，具体信息如下：</p>
+    <p>[0133]深度	bottom-up = {下限=I，上限=2}</p>
+    <p>[0134]	深度lea_ = O ；//这意味着所有的叶子节点均被忽略。</p>
+    <p>[0135]	深度mde = max (深度b(rtt(M1-up) -JI从所有孩子中选择最深的一个作为该节点的深度</p>
+    <p>[0136]数目	Ieaves = {最小=2，最大=9}</p>
+    <p>[0137]	所有保留的节点的深度在[1，2]范围内，由于叶子节点的深度为0，所以所有叶子节点都被忽略；而父节点的深度以所有孩子中最深的一个作为该父节点的深度。所有保留的节点的叶子的数目在[2，9]的范围内，叶子数目即所有的孩子中的叶子的数量。</p>
+    <p>[0138]	图11是根据本发明实施例的节点过滤示意图。例如，其中由于节点A的深度为3，不在[1，2]范围内，因此节点A将被过滤掉；同样由于节点B的叶子数目为10，不在[2，9]范围内，因此节点B将被过滤掉；而节点C和D因符合上述过滤规则，将被保留为候选节点。</p>
+    <p>[0139]	虽然图11中仅示出了两个候选节点C、D，本领域技术人员应该理解，图11仅仅是示范性地，图11中其他符合上述过滤规则的节点也被保留为候选节点。</p>
+    <p>[0140]	经过步骤S1001，就可以得到候选节点了。</p>
+    <p>[0141]	在步骤S1002节点类型划分：本步骤将所有的候选节点分成4大类：1、II、II和IV，划分规则为（其中节点名等同HTML中的标签名）：</p>
+    <p>[0142]	I.该节点有值，且节点名为“A”；</p>
+    <p>[0143]	II.该节点有值，且节点名为“TEXT”；</p>
+    <p>[0144]	III.该节点有值，且节点名不是上述两种情况；</p>
+    <p>[0145]	IV.该节点没有值；</p>
+    <p>[0146]	此后，所有的候选节点都具有上述四个类型之一的类型。</p>
+    <p>[0147]	在步骤S1003执行模式匹配。图12表达了根据本发明实施例的模式匹配的过程。</p>
+    <p>[0148]	对执行步骤S1001和S1002之后得到的候选节点实施如下基于模式的方法：</p>
+    <p>[0149]	i.模式匹配的输入是一个目标节点的叶子序列，且每一个叶子都有一种类型，如</p>
+    <p>I、II、II或IV ;以该节点类型来代表节点本身，后续模式匹配过程都基于此类型序列。例如，如图12所示，对于目标节点N，其所有叶子节点序列为Ni、N2, N3&gt; N4, Nlri和Nn。假设该叶子节点序列的类型为I I II II IIIII，则在后续模式匹配过程中用I I II II II III代表节点本身。</p>
+    <p>[0150]	&#971;将上述孩子序列分成头部、中部和尾部三部分；其中头部和尾部可能有也可能无，取决中部的长短；而中部是一个节点类型不断重复的序列，重复的最小单位是两个节点；例如，如图12所示，中部节点类型不断重复的序列是II II II，那么选择N3、N4, Nn^1作为中部，而N。N2和Nn分别为头部和尾部。例如，如果和Nn叶子节点序列的类型为I II III I 11，那么选择&amp;、队、&#20034;、队、1_1和1为中部，而无头部和尾部。 </p>
+    <p>[0151]	iii.根据有无头尾部，中部长短以及重复次数多少，对节点序列进行分值计算；例如，如图12所不，头部、中部、尾部的分值分别为UnitB、Unit1和UnitE,根据头部和尾部序列的长度分别得到UnitB和Unit1，长度越长分值越大；而根据中部序列的长度以及重复次数得到UnitE，长度越大分值越大并且将长度分值与重复次数进行加权合并得到最终UnitE。最终的模式分值PatScore通过对UnitB、Unit1和UnitE进行加权合并而得到。</p>
+    <p>[0152]	在此步骤中，还根据叶子孩子的数目多少计算节点的附加分值，规则为：叶子孩子的数目越多，分值越高；而如果IV类型的孩子越多，则分值越低。同时将该附加分值与上述模式分值合并，得到最终模式分值。</p>
+    <p>[0153]	本领域技术人员应该理解，该加权合并可以为任何形式的合并，例如线性加权、非线性加权、或相乘等。</p>
+    <p>[0154]	经过上述模式匹配后，满足模式分值阈值的节点会被选出并进入下面的步骤。</p>
+    <p>[0155]	在步骤S1004计算可视化分值：对于上述步骤而来的节点，开始计算其可视化分值，其中一种实施方案是只考虑两种因素：绝对位置和字体。  [0156]	i.计算位置分值的一种方案是：二维高斯函数，公式为：</p>
+    <p>[0157]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102646095A/CN102646095AD00161.png"> <img id="idf0002" file="CN102646095AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102646095A/CN102646095AD00161.png" class="patent-full-image" alt="Figure CN102646095AD00161"> </a> </div>
+    <p>[0158]其中：u	= PositionX (x 轴的位置），v = PositionY (y 轴的位置），uO = 200, νΟ=200,	σ = 200。</p>
+    <p>[0159]	而计算后的H则被看作为位置分值，其中的常量（叫，ν0, σ )可以根据具体任务调M</p>
+    <p>iF. O</p>
+    <p>[0160]	&#971;候选节点的所有孩子的同一维位置值必须相同，如果不同，则忽略之；例如，所有位置的X或Y值之一必须相同，如果都不相同，那么该节点的可视化分值为O ;否则该节点的可视化分值为位置分值；</p>
+    <p>[0161]	iii.候选节点的叶子孩子序可视位置必须是递增的，如果不是，则忽略之；例如，如果叶子孩子序的可视位置不是递增的，那么该节点的可视化分值为O ;否则该节点的可视化分值为位置分值；</p>
+    <p>[0162]	iv.候选节点的所有叶子孩子的字体必须相同，如果不同，则忽略之。例如，如果该节点的所有叶子孩子的字体不同，那么该节点的可视化分值为O ;否则该节点的可视化分值为位置分值。</p>
+    <p>[0163]	然后，每一个候选节点都会拥有一个可视化分值了。</p>
+    <p>[0164]	在步骤S1005合并上述步骤S1003和S1004得到的各个分值并得到最高分的节点：合并算法的一种实施方案是求它们的加权和，另一种是直接相乘得到结果；得到结果后按其排序，就可以选出最高分的节点了。但本领域技术人员应该理解，也可以采用其他合并算法。</p>
+    <p>[0165]	在此步骤中，对象标识符可以被视为一个额外的权重：如果一条链包含标识符，则其为一条分类信息链的概率更大。例如，如果一条链包含标识符，则在节点分值中合并一个标识符分值。</p>
+    <p>[0166]	在步骤S1006调整级别：从上述步骤而来的分类链可能会有一些噪声信息，需要移除之，其方案之一为：</p>
+    <p>[0167]	i.移除不必要的层：一些符号和无意义词首先被移除，然后重复的层也被合并；这些将要移除的符号和无意义词定义在第三列表中，该第三列表中的值是经验值，用户可以根据实际需要根据经验设置。</p>
+    <p>[0168]	&#971;添加对象标识符：如果最低层不是对象标识符，则添加一个新层，其值等于对象标识符；例如，对于候选节点，其下层节点构成单层次链节点，如果该单层次链节点的最低层不是对象标识符，那么，在该最低层下添加一个新层，并且该新层的值等于对象标识符。</p>
+    <p>[0169]	在步骤S10 07得到单层次链：最终，排第一的节点被当作单层次链节点，一般它包括几层，高层比低层寓意更宽的概念。</p>
+    <p>[0170]	虽然上述步骤是按照特定顺序描述的，但本领域技术人员应该理解该顺序并非固定的，可以根据需要调整步骤的顺序。例如，在上述步骤中，可以在得到节点分值后先进行排序并根据分值选取候选者，再进行步骤S1006。</p>
+    <p>[0171]	图13示出了根据本发明实施例的图3的系统中的单层次链抽取模块103的示意性实现方框图。</p>
+    <p>[0172]	如图13所示，单层次链抽取模块103包括：过滤单元1301，根据节点的自底而上深度、节点的孩子数目以及停用词列表来过滤掉不可能的节点；划分单元1302，根据分类规则将所有剩下的候选节点分成I、II、II和IV四大类；模式匹配单元1303，将每个候选节点的所有孩子看成一个节点序列，并基于节点序列类型进行模式匹配以得到每个候选节点的模式分值；计算单元1304，根据节点字体和绝对位置信息来计算每个候选节点的可视化分值；选取单元，对上述步骤得到的模式分值和可视化分值进行合并，并根据结果进行排序，选取分值高的和它的孩子为层次链的候选者；以及单层次链获取单元1305，根据第三列表移除不必要的层次，并且如果层次链最低层不是对象标识符则将所述对象标识符抽取模块得到的对象标识符添加到最低层，从而得到最终的单层次链。</p>
+    <p>[0173]	图13中各个单元的具体实现与图10的方法流程类似，因此在此不再赘述。</p>
+    <p>[0174]	下面，将参考图14-图16描述根据本发明实施例的将多链集成为一棵树的实现。</p>
+    <p>[0175]	在分别得到多条单层次链后，就可以将它们集成为一棵树了，在之前，需要重申一个假设：从单网页抽取而来的单链有正确的父子关系，这意味着，高层在概念上包含低层。</p>
+    <p>[0176]	本步骤的输入是含有多个级别的单层次链，即步骤S1007的输出，我们将每一个级别当作一个候选节点。</p>
+    <p>[0177]	在开始的时候，分类信息树并不是严格意义上的树，而是一个有向图，该图的根节点是“Object”节点，图中的每个节点都有图14所示的结构。图14示出了根据本发明实施例的节点结构。</p>
+    <p>[0178]	在图14所示的结构中，每个节点都有多个上层节点（父节点），同时有多个下层结点（孩子节点），其“名字”意味着该节点的值，而“次数”则是此节点出现在几条链中的次数；每一个节点的名字都是唯一的，在整个图中只出现一次。</p>
+    <p>[0179]	图15示出了根据本发明实施例的合并新来的单层次链的过程的流程图。</p>
+    <p>[0180]	在本步骤中，原始的单层链中的关系至始至终都会在图中体现出来，其中一个实施方案为：</p>
+    <p>[0181]	I)规则化节点的值：先做取词干操作，判断同意义词可以使用某些词典，尤其是判断一些缩略词以及不同语言的词。</p>
+    <p>[0182]	2)寻找相同的节点：如果新加入的节点的名字和图中已有的节点相同，那么这两个节点会合并，其“数目”会递增，该节点的所有孩子节点同时被视为已有节点的后代。</p>
+    <p>[0183]	3)寻找相关的节点：如果不相同，则查找相关词，这依赖于一个假设：如果值A包含值B，则B被视为A的上层节点（父节点）；基于此假设，如果新来的节点是已有节点的孩子，那么下层节点的关系就会被建立；相反的，它会被视为已有节点的上层节点，而其父节点为根节点。</p>
+    <p>[0184]	4)如果没有找到上述两种关系，并且没有上下层节点关系，那么该链被视为根节点的孩子。</p>
+    <p>[0185]	在集成所有的链后，输出的图中保留了所有原始链关系，形成一个有向图。应当注意，在以上实现中，方框中标出的功能可能不按图中标出的顺序发生。例如，根据所涉及的功能，连续示出的两个方框可能实际上基本上并发地执行，或者方框有时可能以相反的顺序执行。  </p>
+    <p>[0186]	图16示出了根据本发明实施例的树的形成的示意图。</p>
+    <p>[0187]	基于上述有向图的分类信息树中的父子关系会按以下规则被建立：</p>
+    <p>[0188]	V根据所有上层节点的“次数”来确定最终的父节点，拥有最大频率的节点会被选中。</p>
+    <p>[0189]	V将“次数”少于某个阈值的关系边切掉。</p>
+    <p>[0190]	图16给出了上述步骤的一个示意。例如,如图16所示,对于节点D存在两个上层节点C和G，因此，由于G的次数为1，小于某个阈值，则删除D与G的关系；同样，C存在两个上层节点E和B，因此，由于E的次数为1，小于某个阈值，则删除C与E的关系。最终形成图16右侧所示的树。</p>
+    <p>[0191]图17示出了根据本发明实施例的图3的系统中的多链集成模块104的示意性实现方框图。</p>
+    <p>[0192]	如图17所示，多链集成模块104包括：新树建立单元1701，建立一颗只存在一个根节点的树；相同节点合并单元1002，检查单层次链抽取模块抽取得到的每个单层次链中的每个新来节点是否在树中已经存在，如果已存在，则合并该新来节点到树中对应的节点，并增加该节点的计数，同时将该新来节点的后代视为其下层节点；相关节点合并单元1703，如果树中不存在该新来节点，则检查树中是否存在与新来节点有关系的节点，如果存在有关系的节点，则根据所述关系将新来的节点添加为有关系的节点的上层或下层节点；其他节点合并单元1704，如果不存在相同和有关系的节点，则将此链合并至根节点之下；有向图建立单元1705，当所有单层次链合并完成之后，建立一个有向图；有向树建立单元1706，根据有向图中所有上层节点的计数来确定计数最大的一个为正式父节点，并删除符合该预定条件的关系边，从而得到最终的有向树。</p>
+    <p>[0193]	图17中各个单元的具体实现与图15-16的方法流程类似，因此在此不再赘述。</p>
+    <p>[0194]	下面，将参考图18描述根据本发明实施例的得到对象的分类的实现。</p>
+    <p>[0195]	在所有上述步骤都完成后，一棵分类信息树建立起来了。因为每个链的最低层是对象标识符，因此该树中所有的叶子节点都会是对象标识符。</p>
+    <p>[0196]	如果我们想知道一个对象的分类信息，唯一要做的事是：将其标识符与所有的叶子进行比较，如果找到了，则从它而上的所有节点都是该对象的分类信息。</p>
+    <p>[0197]	图18示出了根据本发明实施例查找对象的示例。图18展示了一个例子：寻找“G”节点的分类信息。</p>
+    <p>[0198]	其中，F是G的分类，A是更大概念上的分类，依次类推，可以得到G的多层次的分类信息。</p>
+    <p>[0199]	图19示出了根据本发明实施例的图3的系统中的对象分类模块105的示意性实现方框图。</p>
+    <p>[0200]	如图19所示，对象分类模块105包括：对象标识符接收单元，接收一个对象标识符；以及分类信息获取单元，从有向树查找该对象标识符，如果存在，则相应节点的祖先节点为此对象的分类信息。</p>
+    <p>[0201]	图19中各个单元的具体实现与参照图18描述的查找对象的方法流程类似，因此在此不再赘述。</p>
+    <p>[0202]	根据分类树来提升抽取结果： [0203]	经过上述步骤后，生成的分类信息树可以看作为其它网页的分类知识库，因此可以当作先验语义知识来提高抽取精度。另外一种使用途径是：如果一个网页没有规则的分类链，则本分类树可以用来辅助找到正确的分类信息。另一方面，新来的抽取结果又可以丰富分类图并且得到更为合理的分类信息图。</p>
+    <p>[0204]	本发明提供了一种新的通过层次链和对象标识符来自动对网页中对象进行分类的方法。现在这些分类信息被用来分类对象，更进一步，来为对象库构建分类树。</p>
+    <p>[0205]	为了达到以上目的，我们采用了一种具有6个步骤的创新的方法来从网页中获取分类信息。根据我们的实际经验，这些结果在实践中足够准确，并且可以当作先验知识来不断提高对新页面的抽取精度。就我们所知，没有发现已有的根据从网页而集成的分类树来对对象自动分类的方法。</p>
+    <p>[0206]	虽然结合目前被认为是最实际和最优的实施例描述了本发明，但本领域技术人员应当理解本发明不限于所公开的实施例，相反，本发明旨在覆盖所附权利要求的精神和范畴之内包括的各种各样的修改和等价结构。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101118553A?cl=zh">CN101118553A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年8月9日</td><td class="patent-data-table-td patent-date-value">2008年2月6日</td><td class="patent-data-table-td ">边 姜</td><td class="patent-data-table-td ">一种策略导向的面向领域的互联网信息采集方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101727498A?cl=zh">CN101727498A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年1月15日</td><td class="patent-data-table-td patent-date-value">2010年6月9日</td><td class="patent-data-table-td ">西安交通大学</td><td class="patent-data-table-td ">一种基于web结构的网页信息自动提取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101944094A?cl=zh">CN101944094A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年7月6日</td><td class="patent-data-table-td patent-date-value">2011年1月12日</td><td class="patent-data-table-td ">富士通株式会社</td><td class="patent-data-table-td ">网页信息提取方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20050050086">US20050050086</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2004年8月9日</td><td class="patent-data-table-td patent-date-value">2005年3月3日</td><td class="patent-data-table-td ">Fujitsu Limited</td><td class="patent-data-table-td ">Apparatus and method for multimedia object retrieval</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=GnGaBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年8月22日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年10月10日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年8月6日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/b090fc6aba819938dbb8/CN102646095A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E7%BD%91%E9%A1%B5%E5%88%86%E7%B1%BB%E4%BF%A1%E6%81%AF%E7%9A%84%E5%AF%B9%E8%B1%A1.pdf?id=GnGaBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2u1WGr-GLh1aAp5gqlw-OZXzUGYg"},"sample_url":"https://www.google.com/patents/reader?id=GnGaBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

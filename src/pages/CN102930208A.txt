@@ -1,0 +1,265 @@
+<!DOCTYPE html><html><head><title>专利 CN102930208A - 一种染毒文件的处理方法和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种染毒文件的处理方法和系统"><meta name="DC.contributor" content="谭合力" scheme="inventor"><meta name="DC.contributor" content="北京奇虎科技有限公司" scheme="assignee"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2012-9-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种染毒文件的处理方法和系统，其中的方法具体包括：获取文件系统读取失败的文件，作为待处理文件；获取所述待处理文件在磁盘上的簇分布信息；依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；将读取出的数据写入临时文件；分析所述临时文件的安全性，若所述临时文件不安全，则对所述临时文件及对应待处理文件执行清理操作；其中，所述获取所述待处理文件在磁盘上的簇分布信息的步骤，包括：以读属性打开所述待处理文件，得到相应的句柄；基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。本发明能够提高杀毒效率。"><meta name="DC.date" content="2013-2-13"><meta name="DC.relation" content="CN:101207627:A" scheme="references"><meta name="DC.relation" content="CN:101286157:A" scheme="references"><meta name="DC.relation" content="CN:101634992:A" scheme="references"><meta name="DC.relation" content="CN:101853363:A" scheme="references"><meta name="DC.relation" content="CN:101997832:A" scheme="references"><meta name="DC.relation" content="CN:102419803:A" scheme="references"><meta name="DC.relation" content="CN:102902925:A" scheme="references"><meta name="DC.relation" content="US:7210041" scheme="references"><meta name="citation_patent_publication_number" content="CN:102930208:A"><meta name="citation_patent_application_number" content="CN:201210380241"><link rel="canonical" href="https://www.google.com/patents/CN102930208A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102930208A?cl=zh"/><meta name="title" content="专利 CN102930208A - 一种染毒文件的处理方法和系统"/><meta name="description" content="本发明公开了一种染毒文件的处理方法和系统，其中的方法具体包括：获取文件系统读取失败的文件，作为待处理文件；获取所述待处理文件在磁盘上的簇分布信息；依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；将读取出的数据写入临时文件；分析所述临时文件的安全性，若所述临时文件不安全，则对所述临时文件及对应待处理文件执行清理操作；其中，所述获取所述待处理文件在磁盘上的簇分布信息的步骤，包括：以读属性打开所述待处理文件，得到相应的句柄；基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。本发明能够提高杀毒效率。"/><meta property="og:title" content="专利 CN102930208A - 一种染毒文件的处理方法和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102930208A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102930208A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=YznLBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102930208A&amp;usg=AFQjCNELJLAY_8twVRSke5D05gGeUmK0Ug" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/1274aefa37c282353d69/CN102930208A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/1274aefa37c282353d69/CN102930208A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102930208A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102930208A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102930208A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102930208B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102930208A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种染毒文件的处理方法和系统，其中的方法具体包括：获取文件系统读取失败的文件，作为待处理文件；获取所述待处理文件在磁盘上的簇分布信息；依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；...</span><span itemprop="url">https://www.google.com/patents/CN102930208A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102930208A - 一种染毒文件的处理方法和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102930208A - 一种染毒文件的处理方法和系统" title="专利 CN102930208A - 一种染毒文件的处理方法和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102930208 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210380241</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年2月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年9月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年9月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102930208B?hl=zh-CN&amp;cl=zh">CN102930208B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210380241.4, </span><span class="patent-bibdata-value">CN 102930208 A, </span><span class="patent-bibdata-value">CN 102930208A, </span><span class="patent-bibdata-value">CN 201210380241, </span><span class="patent-bibdata-value">CN-A-102930208, </span><span class="patent-bibdata-value">CN102930208 A, </span><span class="patent-bibdata-value">CN102930208A, </span><span class="patent-bibdata-value">CN201210380241, </span><span class="patent-bibdata-value">CN201210380241.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B0%AD%E5%90%88%E5%8A%9B%22">谭合力</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E5%A5%87%E8%99%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京奇虎科技有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102930208A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102930208A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102930208A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (8),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=YznLBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210380241&amp;usg=AFQjCNHzFjZQ1rqh0nd69YdPzYgkXnKOsg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=YznLBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102930208A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEcuzqmL7AeL63sX9yqpTE9_-qF6g"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT121468222" lang="ZH" load-source="patent-office">一种染毒文件的处理方法和系统</invention-title>
+      </span><br><span class="patent-number">CN 102930208 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA107408954" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种染毒文件的处理方法和系统，其中的方法具体包括：获取文件系统读取失败的文件，作为待处理文件；获取所述待处理文件在磁盘上的簇分布信息；依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；将读取出的数据写入临时文件；分析所述临时文件的安全性，若所述临时文件不安全，则对所述临时文件及对应待处理文件执行清理操作；其中，所述获取所述待处理文件在磁盘上的簇分布信息的步骤，包括：以读属性打开所述待处理文件，得到相应的句柄；基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。本发明能够提高杀毒效率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(16)</span></span></div><div class="patent-text"><div mxw-id="PCLM51187054" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种染毒文件的处理方法，包括：获取文件系统读取失败的文件，作为待处理文件；获取所述待处理文件在磁盘上的簇分布信息；依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；将读取出的数据写入临时文件；分析所述临时文件的安全性，若所述临时文件不安全，则对所述临时文件及对应待处理文件执行清理操作；其中，所述获取所述待处理文件在磁盘上的簇分布信息的步骤，包括：以读属性打开所述待处理文件，得到相应的句柄；基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述的方法，所述依据所述簇分布信息，从磁盘上读取所述待处理文件的数据的步骤，包括：依据所述待处理文件的路径，获取所述待处理文件对应的磁盘分区；依据所述簇分布信息，得到所述待处理文件在对应的磁盘分区上的簇偏移；在所述待处理文件对应的磁盘分区对应位置上读取与所述簇偏移相应的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求I所述的方法，所述文件系统读取失败的文件包括ERR0R_SHARING_VI0LATI0N32 对应的文件和 ERR0R_L0CK_VI0LATI0N33 对应的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求I所述的方法，所述获取文件系统读取失败的文件，作为待处理文件的步骤，包括：读取文件后缀名，通过文件后缀名来判定所述文件是否为PE文件，若是，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件；或者，判定文件大小，若所述文件大于第一文件阈值，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求I所述的方法，所述分析所述临时文件的安全性的步骤，包括：计算所述临时文件的特征值；根据白名单和所计算的所述临时文件的特征值，监测所述临时文件是否可信任；所述白名单至少包括可信任文件的特征值；在监测结果为肯定的情况下，确定所述临时文件安全；在监测结果为否定的情况下，利用杀毒引擎分析所述临时文件是否安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求I所述的方法，所述清理操作包括：禁用所述临时文件及对应待处理文件的启动项，或者，粉碎所述临时文件及对应待处理文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的方法，所述粉碎所述临时文件及对应待处理文件的步骤，包括:依据所述临时文件及对应待处理文件的路径在对象管理器中查找对应的文件对象解析例程；依据查找得到的文件对象解析例程生成I/O请求包，并发送至预置的文件系统下层设备的原始地址；由文件系统下层设备依据所述I/o请求包对所述临时文件及对应待处理文件执行粉碎操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求5所述的方法，所述分析所述临时文件的安全性的步骤，还包括：在监测结果为否定的情况下，判断所述临时文件的签名是否有效；在所述临时文件的签名有效时，确定所述临时文件安全；在所述临时文件的签名无效时，利用杀毒引擎分析所述临时文件是否安全。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种处理系统，包括：待处理文件获取模块，用于获取文件系统读取失败的文件，作为待处理文件；簇分布获取模块，用于获取所述待处理文件在磁盘上的簇分布信息；簇读取模块，用于依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；临时写入模块，用于将读取出的数据写入临时文件；安全性分析模块，用于分析所述临时文件的安全性；清理模块，用于在临时文件不安全时，对所述临时文件及对应待处理文件执行清理操作；其中，所述簇分布获取模块包括：打开子模块，用于以读属性打开所述待处理文件，得到相应的句柄；控制码功能获取子模块，用于基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的系统，所述簇读取模块包括：磁盘分区获取子模块，用于依据所述待处理文件的路径，获取所述待处理文件对应的磁盘分区；簇偏移获取子模块，用于依据所述簇分布信息，得到所述待处理文件在对应的磁盘分区上的簇偏移；簇偏移读取子模块，用于在所述待处理文件对应的磁盘分区上读取与所述簇偏移相应的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求9所述的系统，所述文件系统读取失败的文件包括ERR0R_SHARING_VI0LATI0N32 对应的文件和 ERR0R_L0CK_VI0LATI0N33 对应的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求9所述的系统，所述待处理文件获取模块包括：后缀名获取子模块，用于读取文件后缀名，通过文件后缀名来判定所述文件是否为PE文件，若是，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件；或者，大小获取子模块，用于判定文件大小，若所述文件大于第一文件阈值，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求9所述的系统，所述安全性分析模块包括：特征值计算子模块，用于计算所述临时文件的特征值；白名单检测子模块，用于根据白名单和所计算的所述临时文件的特征值，监测所述临时文件是否可信任；所述白名单至少包括可信任文件的特征值；第一确定子模块，用于在监测结果为肯定的情况下，确定所述临时文件安全；引擎分析子模块，用于在监测结果为否定的情况下，利用杀毒引擎分析所述临时文件是否安全。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求9所述的系统，所述清理操作模块包括：用于禁用所述临时文件及对应待处理文件的启动项的启动项摘除子模块，或者，用于粉碎所述临时文件及对应待处理文件的粉碎子模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求14所述的系统，所述粉碎子模块包括：例程查找单元，用于依据所述临时文件及对应待处理文件的路径在对象管理器中查找对应的文件对象解析例程；请求包生成单元，用于依据查找得到的文件对象解析例程生成I/O请求包；请求包发送单元，用于将所述I/O请求包发送至预置的文件系统下层设备的原始地址；由文件系统下层设备依据所述I/O请求包对所述临时文件及对应待处理文件执行粉碎操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求13所述的系统，所述安全性分析模块还包括：签名效力判断子模块，用于在监测结果为否定的情况下，判断所述临时文件的签名是否有效；签名有效处理子模块，用于在所述临时文件的签名有效时，确定所述临时文件安全；签名无效处理子模块，用于在所述临时文件的签名无效时，利用杀毒引擎分析所述临时文件是否安全。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58232630" lang="ZH" load-source="patent-office" class="description">
+    <p>一种染毒文件的处理方法和系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及计算机安全技术领域，具体涉及一种染毒文件的处理方法和系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着计算机技术的不断发展，目前无论在日常生活中还是在工作中，计算机都已经成为人们不可或缺的伙伴，为人们的工作和生活带来了很多的便利，但是在这之中有一个不和谐的因素，那就是计算机病毒。</p>
+    <p>[0003]	计算机病毒是指编制或者在计算机程序中插入的破坏计算机功能或者破坏数据，影响计算机使用并且能够自我复制的一组计算机指令或者程序代码。一旦染上病毒，计算机通常表现为其文件被增加、删除、改变名称或属性、移动到其它目录下，病毒对计算机文&#183;件的这些操作，可能会导致正常的程序无法运行、计算机操作系统崩溃、计算机被远程控制、用户信息被盗用等一系列的问题。</p>
+    <p>[0004]	为了保证计算机的安全运行，需要对计算机中感染病毒的文件进行病毒查杀，以防止和清除病毒的破坏。现有技术中的病毒，往往通过占用文件句柄、设置文件只读属性、使文件处于删除状态等手段给染毒文件加上了加锁，采用常规手段无法破解加锁。</p>
+    <p>[0005]	现有技术一种杀毒方法，枚举操作系统下所有的进程，并枚举各进程打开的文件句柄，通过查看文件句柄来找到加上独占锁的染毒文件；该方法能够查杀出加上独占锁的染毒文件，但是进程和文件句柄的枚举比较耗时，杀毒效率不高。</p>
+    <p>[0006]	现有技术另一种杀毒方法，使用一些未公开方法查杀加上内核锁的染毒文件；但是，未公开方法容易与操作系统中其它程序不兼容，引发操作系统出现蓝屏等不稳定的问题，进而影响杀毒效率。</p>
+    <p>[0007]	总之，需要本领域技术人员迫切解决的一个技术问题就是：如何能够提高杀毒效率。</p>
+    <p>发明内容</p>
+    <p>[0008]	鉴于上述问题，提出了本发明以便提供一种克服上述问题或者至少部分地解决上述问题的一种染毒文件的处理方法和系统。</p>
+    <p>[0009]	依据本发明的一个方面，提供了一种染毒文件的处理方法，包括：</p>
+    <p>[0010]	获取文件系统读取失败的文件，作为待处理文件；</p>
+    <p>[0011]	获取所述待处理文件在磁盘上的簇分布信息；</p>
+    <p>[0012]	依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；</p>
+    <p>[0013]	将读取出的数据写入临时文件；</p>
+    <p>[0014]	分析所述临时文件的安全性，若所述临时文件不安全，则对所述临时文件及对应待处理文件执行清理操作；</p>
+    <p>[0015]	其中，所述获取所述待处理文件在磁盘上的簇分布信息的步骤，包括：</p>
+    <p>[0016]	以读属性打开所述待处理文件，得到相应的句柄；[0017]	基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。</p>
+    <p>[0018]	可选地，所述依据所述簇分布信息，从磁盘上读取所述待处理文件的数据的步骤，包括：</p>
+    <p>[0019]	依据所述待处理文件的路径，获取所述待处理文件对应的磁盘分区；</p>
+    <p>[0020]	依据所述簇分布信息，得到所述待处理文件在对应的磁盘分区上的簇偏移；</p>
+    <p>[0021]	在所述待处理文件对应的磁盘分区对应位置上读取与所述簇偏移相应的数据。</p>
+    <p>[0022]	可选地，所述文件系统读取失败的文件包括ERR0R_SHARING_VI0LATI0N32对应的文件和ERR0R_L0CK_VI0LATI0N33对应的文件。</p>
+    <p>[0023]	可选地，所述获取文件系统读取失败的文件，作为待处理文件的步骤，包括：&#183;</p>
+    <p>[0024]	读取文件后缀名，通过文件后缀名来判定所述文件是否为PE文件，若是，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件；或者，</p>
+    <p>[0025]	判定文件大小，若所述文件大于第一文件阈值，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件。</p>
+    <p>[0026]	可选地，所述分析所述临时文件的安全性的步骤，包括：</p>
+    <p>[0027]	计算所述临时文件的特征值；</p>
+    <p>[0028]	根据白名单和所计算的所述临时文件的特征值，监测所述临时文件是否可信任；所述白名单至少包括可信任文件的特征值；</p>
+    <p>[0029]	在监测结果为肯定的情况下，确定所述临时文件安全；</p>
+    <p>[0030]	在监测结果为否定的情况下，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0031]	可选地，所述清理操作包括：禁用所述临时文件及对应待处理文件的启动项，或者，粉碎所述临时文件及对应待处理文件。</p>
+    <p>[0032]	可选地，所述粉碎所述临时文件及对应待处理文件的步骤，包括：</p>
+    <p>[0033]	依据所述临时文件及对应待处理文件的路径在对象管理器中查找对应的文件对象解析例程；</p>
+    <p>[0034]	依据查找得到的文件对象解析例程生成I/O请求包，并发送至预置的文件系统下层设备的原始地址；</p>
+    <p>[0035]	由文件系统下层设备依据所述I/O请求包对所述临时文件及对应待处理文件执行粉碎操作。</p>
+    <p>[0036]	可选地，所述分析所述临时文件的安全性的步骤，还包括：</p>
+    <p>[0037]	在监测结果为否定的情况下，判断所述临时文件的签名是否有效；</p>
+    <p>[0038]	在所述临时文件的签名有效时，确定所述临时文件安全；</p>
+    <p>[0039]	在所述临时文件的签名无效时，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0040]	根据本发明的另一方面，提供了一种染毒文件的处理系统，包括：</p>
+    <p>[0041]	待处理文件获取模块，用于获取文件系统读取失败的文件，作为待处理文件；</p>
+    <p>[0042]	簇分布获取模块，用于获取所述待处理文件在磁盘上的簇分布信息；</p>
+    <p>[0043]	簇读取模块，用于依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；</p>
+    <p>[0044]	临时写入模块，用于将读取出的数据写入临时文件；</p>
+    <p>[0045]	安全性分析模块，用于分析所述临时文件的安全性；[0046]	清理模块，用于在临时文件不安全时，对所述临时文件及对应待处理文件执行清理操作；</p>
+    <p>[0047]	其中，所述簇分布获取模块包括：</p>
+    <p>[0048]	打开子模块，用于以读属性打开所述待处理文件，得到相应的句柄；</p>
+    <p>[0049]	控制码功能获取子模块，用于基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。</p>
+    <p>[0050]	可选地，所述簇读取模块包括：</p>
+    <p>[0051]	磁盘分区获取子模块，用于依据所述待处理文件的路径，获取所述待处理文件对应的磁盘分区；</p>
+    <p>[0052]	簇偏移获取子模块，用于依据所述簇分布信息，得到所述待处理文件在对应的磁 盘分区上的簇偏移；</p>
+    <p>[0053]	簇偏移读取子模块，用于在所述待处理文件对应的磁盘分区上读取与所述簇偏移相应的数据。</p>
+    <p>[0054]	可选地，所述文件系统读取失败的文件包括ERR0R_SHARING_VI0LATI0N32对应的文件和ERR0R_L0CK_VI0LATI0N33对应的文件。</p>
+    <p>[0055]	可选地，所述待处理文件获取模块包括：</p>
+    <p>[0056]	后缀名获取子模块，用于读取文件后缀名，通过文件后缀名来判定所述文件是否为PE文件，若是，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件；或者，</p>
+    <p>[0057]	大小获取子模块，用于判定文件大小，若所述文件大于第一文件阈值，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件。</p>
+    <p>[0058]	可选地，所述安全性分析模块包括：</p>
+    <p>[0059]	特征值计算子模块，用于计算所述临时文件的特征值；</p>
+    <p>[0060]白名单检测子模块，用于根据白名单和所计算的所述临时文件的特征值，监测所述临时文件是否可信任；所述白名单至少包括可信任文件的特征值；</p>
+    <p>[0061]引擎分析子模块，用于在监测结果为否定的情况下，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0062]	可选地，所述清理操作模块包括：用于禁用所述临时文件及对应待处理文件的启动项的启动项摘除子模块，或者，用于粉碎所述临时文件及对应待处理文件的粉碎子模块。</p>
+    <p>[0063]	可选地，所述粉碎子模块包括：</p>
+    <p>[0064]	例程查找单元，用于依据所述临时文件及对应待处理文件的路径在对象管理器中查找对应的文件对象解析例程；</p>
+    <p>[0065]	请求包生成单元，用于依据查找得到的文件对象解析例程生成I/O请求包；</p>
+    <p>[0066]	请求包发送单元，用于将所述I/O请求包发送至预置的文件系统下层设备的原始地址；由文件系统下层设备依据所述I/o请求包对所述临时文件及对应待处理文件执行粉碎操作。</p>
+    <p>[0067]	可选地，所述安全性分析模块还包括：</p>
+    <p>[0068]	签名效力判断子模块，用于在监测结果为否定的情况下，判断所述临时文件的签名是否有效；[0069]	签名有效处理子模块，用于在所述临时文件的签名有效时，确定所述临时文件安全；</p>
+    <p>[0070]	签名无效处理子模块，用于在所述临时文件的签名无效时，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0071]	本发明的一种染毒文件的处理方法和系统具有如下有益效果：</p>
+    <p>[0072]	本发明针对文件系统读取失败的文件，依据其在磁盘上的簇分布信息，从磁盘上读取相应的数据，分析所读取数据的安全性，并对相应不安全的染毒文件执行清理操作；由于文件系统读取失败的文件中包括有独占文件或加锁文件等受文件保护机制保护的文件，而病毒大多采用独占或锁定的方式肆意运行其染毒文件，故本发明对所读取数据的安全性分析，能够识别出与所读取数据相应的被病毒运行的染毒文件，并对所述染毒文件执行清理操作。本发明的方案使用的是公开方法故能够避免引起操作系统的不稳定，并且，本发明无需进行进程和文件句柄的枚举等耗时操作，因此，相对于现有技术，能够提高杀毒效率。</p>
+    <p>[0073]	上述说明仅是本发明技术方案的概述，为了能够更清楚了解本发明的技术手段，而可依照说明书的内容予以实施，并且为了让本发明的上述和其它目的、特征和优点能够更明显易懂，以下特举本发明的具体实施方式。</p>
+    <p>附图说明</p>
+    <p>[0074]	通过阅读下文优选实施方式的详细描述，各种其他的优点和益处对于本领域普通技术人员将变得清楚明了。附图仅用于示出优选实施方式的目的，而并不认为是对本发明的限制。而且在整个附图中，用相同的参考符号表示相同的部件。在附图中：</p>
+    <p>[0075]	图I示出了根据本发明一个实施例的一种染毒文件的处理方法的流程图；以及</p>
+    <p>[0076]	图2示出了根据本发明一个实施例的一种染毒文件的处理系统的结构图。</p>
+    <p>具体实施方式</p>
+    <p>[0077]	下面将参照附图更详细地描述本公开的示例性实施例。虽然附图中显示了本公开的示例性实施例，然而应当理解，可以以各种形式实现本公开而不应被这里阐述的实施例所限制。相反，提供这些实施例是为了能够更透彻地理解本公开，并且能够将本公开的范围完整的传达给本领域的技术人员。</p>
+    <p>[0078]为了提高操作系统的可靠性和稳定性，某些操作系统会提供一些文件保护机制。例如，Windows操作系统在一个线程在操作某个文件的时候，要求其他线程不能对该文件进行读或写操作，那么可以对该文件进行加锁，或者，对该文件进行独占，也即一直打开该文件直至操作完再关闭。上述加锁或者独占就是常见的文件保护机制。</p>
+    <p>[0079]	文件保护机制能够提高操作系统的可靠性和稳定性，但也有可能给病毒文件有机可乘。病毒可能采用独占或锁定的方式，肆意运行其染毒文件。</p>
+    <p>[0080]	例如，木马进程为了躲避杀毒引擎，会建立专门的启动项目，而启动项目被操作系统运行起来后，会把相应的文件独占或锁定等等。这里的启动项目就是开机的时候操作系统在前台或者后台运行的程序。</p>
+    <p>[0081]目前，木马进程建立专门的启动项目的途径可以为：在操作系统存在漏洞，或者， 诱导用户退出杀毒引擎的情况下，往启动文件夹C: \ProgramData\Microsoft\Windows\Start Menu\Programs\Startup写入相应的染毒文件，或者，在注册表HKEY&#8212;LOCAL&#8212;MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 下不断写入染毒文件的路径</p>
+    <p>坐坐寸寸O </p>
+    <p>[0082]	在操作系统的用户层，现有技术通常利用文件系统读取文件。以Windows操作系统为例，可以使用Windows标准API (应用程序编程接口，ApplicationProgrammingInterface)ReadFile函数读取目标文件。但是，目前利用文件系统是无法读取到独占或者加锁的文件的，否则将有悖于文件保护机制的初衷；并且，ReadFile函数会返回相应的调用错误码；例如，独占文件对应的调用错误码为ERR0R_SHARING_VI0LATI0N32，加锁文件对应的调用错误码为ERR0R_L0CK_VI0LATI0N33等等。</p>
+    <p>[0083]	本发明实施例提供一种绕过文件系统读取文件的方案，该方案针对文件系统读取失败的文件读取数据，并分析所读取数据的安全性；由于文件系统读取失败的文件中包括有独占文件或加锁文件等受文件保护机制保护的文件，而病毒大多采用独占或锁定的方式肆意运行其染毒文件；故本发明通过分析所读取数据的安全性，能够识别出与所读取数据相应的被病毒运行的染毒文件。</p>
+    <p>[0084]	参照图1，示出了根据本发明一个实施例的一种染毒文件的处理方法的流程图，具体可以包括：</p>
+    <p>[0085]	步骤101、获取文件系统读取失败的文件，作为待处理文件；</p>
+    <p>[0086]	本发明实施例可以应用于各种杀毒引擎的病毒查杀，在病毒查杀过程中，可以首先尝试利用文件系统读取文件，如果出现读取失败则将相应的文件作为待处理文件进行后续处理。可以理解，本发明的待处理文件具体可以包括：独占文件、加锁文件等文件系统读取失败的文件。具体而言，可以根据文件系统读取失败的文件对应的调用错误码获取待处理文件，例如，调用错误码为ERR0R_SHARING_VI0LATI0N32则表示相应的文件为独占文件，调用错误码为ERR0R_L0CK_VI0LATI0N33则表示相应的文件为加锁文件，独占文件和加锁文件都在本发明待处理文件的处理范围内。</p>
+    <p>[0087]	PE是Windows下的一个32位的文件格式，其是病毒喜欢感染的类型，危害和一般病毒是一样的；只不过病毒通过修改PE文件的代码或者向PE文件中插入病毒代码，导致PE文件运行的时候执行病毒文件。</p>
+    <p>[0088]	故在本发明的一种优选实施例中，本发明可专门处理PE文件；PE文件通常指Windows操作系统上的程序文件，常见的PE文件具体可以包括EXE、DLL、OCX、SYS、COM等类型文件。相应地，所述获取文件系统读取失败的文件，作为待处理文件的步骤，具体可以包括：读取文件后缀名，通过文件后缀名来判定所述文件是否为PE (可移植的执行体，portable executable)文件,若是,则使用文件系统读取所述文件,若读取失败则将所述文件作为待处理文件。</p>
+    <p>[0089]	通常的病毒文件不会太小，例如一般的木马文件会大于两个扇区的大小，故在本发明的一种优选实施例中，所述获取文件系统读取失败的文件，作为待处理文件的步骤，具体可以包括：判定文件大小，若所述文件大于第一文件阈值，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件。</p>
+    <p>[0090]	所述第一文件阈值可由本领域技术人员依据文件系统和欲处理的病毒文件空间的最小值设定。例如，FAT (文件配置表，File Allocation Table)文件系统可以将任意大小的文件放至文件簇中，故FAT文件系统对应的第一文件阈值可仅仅依据欲处理的病毒文件空间的最小值设定，如上述木马文件对应的两个扇区的大小等等。又如，NTFS (NewTechnology File System)通常将不超过文件簇阈值的文件放至MFT (主文件表，MasterFile Table)中，超过4KB的文件才会放至文件簇中，故文件系统对应的第一文件阈值应依据文件系统和欲处理的病毒文件空间的最小值设定，例如，在文件簇阈值和欲处理的病毒文件空间的最小值两者中取较大值，等等。本发明的两个扇区的大小可依据具体的磁盘确定，本发明的文件簇阈值可依据具体的NTFS系统确定，本发明对具体的两个扇区的大小和文件簇阈值不加以限制。</p>
+    <p>[0091]	步骤102、获取所述待处理文件在磁盘上的簇分布信息；</p>
+    <p>[0092]	在开发最初的个人计算机时，为了组织存储设备上数据，最初的DOS系统开发者设计一个表来指示哪个扇区属于哪些文件，以及哪些扇区空闲，这样操作系统可以最大限度地利用这些磁盘空间，使文件可以存储在不连续的扇区上，文件数据可以分散有组织地存储在磁盘的不同扇区，这称为文件分割。</p>
+    <p>&#183;[0093]	由于这个表需要做得足够大，才能标识每个扇区，并预留一些空间以备未来采用更大存储空间的磁盘。但要从这么长的表中得到需要的信息将花太长时间，因此，引入了簇(cluster)的概念，这使设备的最小存储单元从单个扇区增加到固定数量扇区，这些固定数量扇区称为簇。</p>
+    <p>[0094]	簇是在物理上连续的一段存储空间，也是文件系统中基本的储存单位，每个文件由一个或多个簇组成，这些簇在物理上是连续的或不连续的。通常，磁盘对应文件系统包括若干个簇，这些簇具有对应的标识(如编号)，本发明要获取待处理文件在磁盘上的簇分布信息就是待处理文件锁对应簇在磁盘上的标识。</p>
+    <p>[0095]	在本发明的一种优选实施例中，所述获取所述待处理文件在磁盘上的簇分布信息的步骤，具体可以包括：</p>
+    <p>[0096]	步骤S101、以读属性打开所述待处理文件，得到相应的句柄；</p>
+    <p>[0097]	在文件处理领域，只有得到文件句柄，才能获取相应的文件属性。故在实际应用中，可以使用Windows标准API CreateFile函数打开所述待处理文件，以得到所述待处理文件的句柄。CreateFile函数的相关参数说明如下，在具体实现中，访问模式可以指定FILE_READ_ATTRIBUTES，这样，CreateFile函数返回的是可以访问所示待处理文件的句柄。HANDLE CreateFile(</p>
+    <p>   LPCTSTR IpFiieName, //指向文件名的指针   DWORD dwDesi red Access, // 访问模式（写 / 读）</p>
+    <p>   DWORD dwShareMode, // 共享模式</p>
+    <p>   LPSECURΠ&#910;&#8212;ATTRi BUTES IpSecurityAttributes, Il 指向安全属性的指</p>
+    <p>针</p>
+    <p>    DWORD dwCreationDisposition, I/ 如何创建    DWORD dwFlagsAndAttributes, /7 文件属性    HANDLE HTemplateFile //用于复制文件句柄</p>
+    <p>        )；</p>
+    <p>[0098]	步骤S102、基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。</p>
+    <p>[0099]	磁盘为硬件设备，而Windows操作系统中，应用程序可以通过API函数DeviceIoControl来实现对硬件设备的访问一获取信息，发送命令，交换数据等。本发明实施例利用DeviceIoControl这个接口函数向磁盘设备驱动发送正确的驱动码及数据,是为了达到获取信息目的；这里的信息是指文件属性中文件簇分布属性。</p>
+    <p>   DeviceIoControl的函数原型为</p>
+    <p>    BOOL DeviceloControl(</p>
+    <p>HANDLE hDevice,	//设备句柄，用来标识要访问的</p>
+    <p>设备</p>
+    <p>      DWORD dwioControlCode,	// 控制码</p>
+    <p>LPVOID IpInBuffer,	Il输入数据缓冲区指针</p>
+    <p>DWORD nlnBufferSize,	//输入数据缓冲区长度</p>
+    <p>LPVOID IpOutBuffer,	//输出数据缓冲区指针</p>
+    <p>DWORD nOutBufferSize,	//输出数据缓冲区长度</p>
+    <p>LPDWORD IpBytesRetumed, //输出数据实际长度单元长度LPOVERLAPPED IpOverIapped / / 重叠操作结构指针</p>
+    <p>              )；</p>
+    <p>[0100]	具体到本发明实施例，则是将可以访问所示待处理文件的句柄作为设备句柄，利用该接口函数向磁盘驱动发送磁盘驱动控制码，以获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息；其中，Windows操作系统中，磁盘驱动控制码为FSCTL_GET_RETRIEVAL_P0INTERSo</p>
+    <p>[0101]	本发明实施例中，簇分布信息用于表示文件分布在哪个簇上，从而可以读取到簇上文件全部数据。在具体实现中，可以采用数组等数据结构存储一个文件的簇分布信息对应的簇编号，这些簇编号可连续可不连续。</p>
+    <p>[0102]	步骤103、依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；</p>
+    <p>[0103]	通常，簇分布信息记录有哪个簇的标识，则根据所述标识从对应的簇上读取数据即可。</p>
+    <p>[0104]	在本发明的一种优选实施例中，所述依据所述簇分布信息，从磁盘上读取所述待处理文件的数据的步骤，具体可以包括：</p>
+    <p>[0105]	步骤S201、依据所述待处理文件的路径，获取所述待处理文件对应的磁盘分区；</p>
+    <p>&#183;[0106]	步骤S202、依据所述簇分布信息，得到所述待处理文件在对应的磁盘分区上的簇偏移；</p>
+    <p>[0107]	步骤S203、在所述待处理文件对应磁盘分区对应位置上读取与所述簇偏移相应的数据。</p>
+    <p>[0108]	假设所述待处理文件对应的磁盘分区为D，数组中记录的簇分布信息为[4，5,6, 7，10，12，15]，则可以首先获取首簇在D盘上的偏移：4_0=4，也即，需要从D盘其实偏移4个簇，以读取簇编号为4的数据；接下来，可以读取簇编号为5，6，7，10，12，15的数据。</p>
+    <p>[0109]	步骤104、将读取出的数据写入临时文件；</p>
+    <p>[0110]	在实际应用中，可以创建一个临时目录存放临时文件；由于所述待处理文件不能利用文件系统正常读取，故本发明采用临时文件存储所述待处理文件的全部数据，以方便接下来的安全性分析。</p>
+    <p>[0111]	步骤105、分析所述临时文件的安全性，若所述临时文件不安全，则对所述临时文件及对应待处理文件执行清理操作。</p>
+    <p>[0112]	在实际应用中，直接利用杀毒引擎即可分析所述临时文件是否安全，若不安全，则说明所述临时文件为染毒文件。例如，杀毒引擎可以将临时文件的特征转化为自身可识别的行为标识符(包括静态代码等)，然后与病毒库中所存贮的行为信息进行对应，并作出相应处理。或者，杀毒引擎还可以基于特征码的静态扫描技术，即在文件中寻找特定十六进制串，如果找到，就可判定文件感染了某种病毒。</p>
+    <p>[0113]	现有技术中是直接对文件进行分析，并在其不安全时，对其执行清理操作的；由于本发明的待处理文件为文件系统读取失败的文件，普通的杀毒引擎也利用文件系统读取文件，所以是无法读取到所述待读取文件的内容的，从而也无法直接分析所述待处理文件的安全性；因此，本发明采用临时文件存储所述待处理文件的数据，以便普通的杀毒引擎能够分析所述临时文件的安全性。</p>
+    <p>[0114]	由于临时文件存储的是所述待处理文件的数据，所以临时文件的安全性与所述待处理文件的安全性是一致的；所以，在临时文件不安全时，相应的待处理文件也是不安全的，需要对所述临时文件及对应待处理文件均执行清理操作。</p>
+    <p>[0115]	在本发明的一种优选实施例中，所述分析所述临时文件的安全性的步骤，具体可以包括：[0116]	步骤S301、计算所述临时文件的特征值；</p>
+    <p>[0117]	文件的特征值是可以由文件（数据）计算得到的唯一标识该文件的值，其中，无法由该值逆向得到所述文件（数据）。例如，所述特征值可以是根据HASH算法得到的HASH值。HASH算法例如包括MD2、MD4、MD5、HAVAL、SHA等。当然，文件的特征值还可以是标识文件的静态特征串等等，本发明对具体的文件的特征值不加以限制。</p>
+    <p>[0118]	步骤S302、根据白名单和所计算的所述临时文件的特征值，监测所述临时文件是否可信任；所述白名单至少可以包括可信任文件的特征值；</p>
+    <p>[0119]	所述白名单可由客户端和/或服务器端建立。例如，当计算机从外部接收到文件并且用户判断该文件是可信任文件时，可以计算该文件的特征值，并将所计算的特征值存储在用于存储白名单的表中。</p>
+    <p>[0120]	例如，所述监测所述临时文件是否可信任的实现过程可以为：将所述白名单中可信任文件的特征值与所计算的所述临时文件的特征值进行比较。如果相同，则可以认为所述临时文件是可信任的，并且输出肯定的监测结果；否则，如果所述不同，则可以认为所述临时文件是不可信任的，并且输出否定的监测结果。</p>
+    <p>[0121]	在本发明的其它实施例中，还可以将可信任文件的特征值连同文件名一同存储至白名单中。此种情况下，所述白名单至少可以包括可信任文件的文件名和可信任文件的特征值；可以首先根据所述临时文件及对应待处理文件的文件名查找白名单，然后根据所查找的可信任文件的特征值和所计算的临时文件的特征值进行监测。</p>
+    <p>[0122]	步骤S303、在监测结果为肯定的情况下，确定所述临时文件安全；</p>
+    <p>[0123]	步骤S304、在监测结果为否定的情况下，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0124]	在本发明的一种优选实施例中，所述分析所述临时文件的安全性的步骤，还可以包括：</p>
+    <p>[0125]	在监测结果为否定的情况下，判断所述临时文件的签名是否有效；</p>
+    <p>[0126]	在所述临时文件的签名有效时，确定所述临时文件安全；</p>
+    <p>[0127]	在所述临时文件的签名无效时，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0128]	文字签名即文字的数字签名。在本发明的一种应用示例中，可以使用微软标准函数WinVerifyTrust检查一个临时文件是不是一个有效的数字签名；相应的检查过程为：用CreateFile打开临时文件得到相应的文件句柄,传给WinVerifyTrust这个API函数；WinVerifyTrust的返回值有多种，O表示数字签名各项指标都是有效的，其他一切值都表示签名无效。当然该示例并不作为本发明的应用限制。</p>
+    <p>[0129]	本发明实施例中，优选的是，所述清理操作具体可以包括：禁用所述临时文件及对应待处理文件的启动项，或者，粉碎所述临时文件及对应待处理文件。其中，可以在启动文件夹或者注册表启动项中禁用所述临时文件及对应待处理文件的启动项。</p>
+    <p>[0130]	文件粉碎，顾名思义，就是把计算机上的文件彻底删除，不留痕迹。本发明可以提供如下文件粉碎的技术方案：</p>
+    <p>[0131]	文件粉碎方案I、调用操作系统应用程序接口 API删除所述临时文件及对应待处理文件，具体可以包括如下子步骤：</p>
+    <p>[0132]	步骤S401、调用位于用户态的文件删除例程的操作系统应用程序接口 API ：DeleteFile ；</p>
+    <p>[0133]	步骤S402、通过所述DeleteFile例程调用位于用户态的文件删除例程的操作系统原生应用程序接口 Native API ：ZwDeleteFile ；</p>
+    <p>[0134]	步骤S403、通过所述用户态的ZwDeleteFile例程调用位于内核态的文件删除例程ZwDeleteFile,通过所述内核态的ZwDeleteFile例程删除目标文件。</p>
+    <p>[0135]	粉碎方案2、调用自定义的用于删除文件的应用程序接口删除所述目标文件，具体可以包括如下子步骤：</p>
+    <p>[0136]	步骤S501、依据所述临时文件及对应待处理文件的路径在对象管理器中查找对应的文件对象解析例程；</p>
+    <p>[0137]	步骤S502、依据查找得到的文件对象解析例程生成I/O请求包，并发送至预置的文件系统下层设备的原始地址；&#183;</p>
+    <p>[0138]	步骤S503、由文件系统下层设备依据所述I/O请求包对所述临时文件及对应待处理文件执行粉碎操作。</p>
+    <p>[0139]	在本发明的一种实施例中，所述步骤S501依据所述临时文件及对应待处理文件的路径在对象管理器中查找对应的文件对象解析例程的步骤具体包括以下子步骤；</p>
+    <p>[0140]	子步骤S511、判断文件路径是否已经拆解完毕，若否，则执行子步骤S222 ;若是，则执行子步骤S224 ；</p>
+    <p>[0141]	子步骤S512、按照路径分隔符拆解出文件路径中下一个待拆解的路径段；</p>
+    <p>[0142]	子步骤S513、采用当前拆解出的路径段在对象管理器中搜索，判断是否存在对应的文件对象例程；若是，则返回子步骤S221 ;若否，则执行子步骤S225 ；</p>
+    <p>[0143]	子步骤514、获得所述文件路径对应的文件对象解析例程；</p>
+    <p>[0144]	子步骤S515、返回未找到对应文件对象解析例程的信息。</p>
+    <p>[0145]	在具体实现中，可以预先构建对象管理器查询的OpenPacket结构，基于路径分隔符“ \ ”循环拆解文件路径，例如，文件路径为：c:\a\b. txt，则第一次拆解出的路径段为c:，第二次拆解出的路径段为：c:\a，第三次拆解出的路径段为：c:\a\b. txt，即在本发明实施例，是基于递归调用的方式拆解文件路径。</p>
+    <p>[0146]	对象管理器中维护有拉链式的对象Hash表，基于每次拆解出的路径段搜索对象管理器，若能查找到对应的对象解析例程ParseProcedure,则继续下一次的文件路径拆解，并基于下一次拆解出的路径段和之前已拆解出的路径段搜索对象管理器，若当前的文件路径经过循环解析被完全拆解完毕，则经过搜索对象管理器找到的文件对象解析例程ParseRoutine为当前文件路径对应的文件对象解析例程。</p>
+    <p>[0147]	参照图2，示出了根据本发明一个实施例的一种染毒文件的处理系统的结构图，具体可以包括：</p>
+    <p>[0148]	待处理文件获取模块201，用于获取文件系统读取失败的文件，作为待处理文件；</p>
+    <p>[0149]	簇分布获取模块202，用于获取所述待处理文件在磁盘上的簇分布信息；</p>
+    <p>[0150]	簇读取模块203，用于依据所述簇分布信息，从磁盘上读取所述待处理文件的数据；</p>
+    <p>[0151]	临时写入模块204，用于将读取出的数据写入临时文件；</p>
+    <p>[0152]	安全性分析模块205，用于分析所述临时文件的安全性；[0153]	清理模块206，用于在临时文件不安全时，对所述临时文件及对应待处理文件执行</p>
+    <p>清理操作。</p>
+    <p>[0154]	在本发明的一种优选实施例中，所述簇分布获取模块202具体可以包括：</p>
+    <p>[0155]	打开子模块，用于以读属性打开所述待处理文件，得到相应的句柄；</p>
+    <p>[0156]	控制码功能获取子模块，用于基于设备驱动接口函数的磁盘驱动控制码功能，获取与所述句柄相应的所述待处理文件在磁盘上的簇分布信息。</p>
+    <p>[0157]	在本发明的另一种优选实施例中，所述簇读取模块203具体可以包括：</p>
+    <p>[0158]	磁盘分区获取子模块，用于依据所述待处理文件的路径，获取所述待处理文件对 应的磁盘分区；</p>
+    <p>[0159]	簇偏移获取子模块，用于依据所述簇分布信息，得到所述待处理文件在对应的磁盘分区上的簇偏移；</p>
+    <p>[0160]	簇偏移读取子模块，用于在所述待处理文件对应的磁盘分区上读取与所述簇偏移相应的数据。</p>
+    <p>[0161]	在本发明的再一种优选实施例中，所述文件系统读取失败的文件具体可以包括ERR0R_SHARING_VI0LATI0N32 对应的文件和 ERR0R_L0CK_VI0LATI0N33 对应的文件。</p>
+    <p>[0162]	在本发明的一种优选实施例中，所述待处理文件获取模块201具体可以包括：</p>
+    <p>[0163]	后缀名获取子模块，用于读取文件后缀名，通过文件后缀名来判定所述文件是否为PE文件，若是，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件；或者，</p>
+    <p>[0164]	大小获取子模块，用于判定文件大小，若所述文件大于第一文件阈值，则使用文件系统读取所述文件，若读取失败则将所述文件作为待处理文件。</p>
+    <p>[0165]	在本发明的另一种优选实施例中，所述安全性分析模块205可以进一步包括：</p>
+    <p>[0166]	特征值计算子模块，用于计算所述临时文件的特征值；</p>
+    <p>[0167]白名单检测子模块，用于根据白名单和所计算的所述临时文件的特征值，监测所述临时文件是否可信任；所述白名单至少包括可信任文件的特征值；</p>
+    <p>[0168]	第一确定子模块，用于在监测结果为肯定的情况下，确定所述临时文件安全；</p>
+    <p>[0169]引擎分析子模块，用于在监测结果为否定的情况下，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0170]	在本发明的再一种优选实施例中，所述清理操作模块具体可以包括：用于禁用所述临时文件及对应待处理文件的启动项的启动项摘除子模块，或者，用于粉碎所述临时文件及对应待处理文件的粉碎子模块。</p>
+    <p>[0171]	在本发明的一种优选实施例中，所述粉碎子模块可以进一步包括：</p>
+    <p>[0172]	例程查找单元，用于依据所述临时文件及对应待处理文件的路径在对象管理器中查找对应的文件对象解析例程；</p>
+    <p>[0173]	请求包生成单元，用于依据查找得到的文件对象解析例程生成I/O请求包；</p>
+    <p>[0174]	请求包发送单元，用于将所述I/O请求包发送至预置的文件系统下层设备的原始地址；由文件系统下层设备依据所述I/o请求包对所述临时文件及对应待处理文件执行粉碎操作。</p>
+    <p>[0175]	在本发明实施例中，优选的是，所述安全性分析模块还可以包括：[0176]	签名效力判断子模块，用于在监测结果为否定的情况下，判断所述临时文件的签名是否有效；</p>
+    <p>[0177]	签名有效处理子模块，用于在所述临时文件的签名有效时，确定所述临时文件安全；</p>
+    <p>[0178]	签名无效处理子模块，用于在所述临时文件的签名无效时，利用杀毒引擎分析所述临时文件是否安全。</p>
+    <p>[0179]	在此提供的算法和显示不与任何特定计算机、虚拟系统或者其它设备固有相关。各种通用系统也可以与基于在此的示教一起使用。根据上面的描述，构造这类系统所要求 的结构是显而易见的。此外，本发明也不针对任何特定编程语言。应当明白，可以利用各种编程语言实现在此描述的本发明的内容，并且上面对特定语言所做的描述是为了披露本发明的最佳实施方式。</p>
+    <p>[0180]	在此处所提供的说明书中，说明了大量具体细节。然而，能够理解，本发明的实施例可以在没有这些具体细节的情况下实践。在一些实例中，并未详细示出公知的方法、结构和技术，以便不模糊对本说明书的理解。</p>
+    <p>[0181]	类似地，应当理解，为了精简本公开并帮助理解各个发明方面中的一个或多个，在上面对本发明的示例性实施例的描述中，本发明的各个特征有时被一起分组到单个实施例、图、或者对其的描述中。然而，并不应将该公开的方法解释成反映如下意图：即所要求保护的本发明要求比在每个权利要求中所明确记载的特征更多的特征。更确切地说，如下面的权利要求书所反映的那样，发明方面在于少于前面公开的单个实施例的所有特征。因此，遵循具体实施方式的权利要求书由此明确地并入该具体实施方式，其中每个权利要求本身都作为本发明的单独实施例。</p>
+    <p>[0182]	本领域那些技术人员可以理解，可以对实施例中的设备中的模块进行自适应性地改变并且把它们设置在与该实施例不同的一个或多个设备中。可以把实施例中的模块或单元或组件组合成一个模块或单元或组件，以及此外可以把它们分成多个子模块或子单元或子组件。除了这样的特征和/或过程或者单元中的至少一些是相互排斥之外，可以采用任何组合对本说明书(包括伴随的权利要求、摘要和附图）中公开的所有特征以及如此公开的任何方法或者设备的所有过程或单元进行组合。除非另外明确陈述，本说明书(包括伴随的权利要求、摘要和附图）中公开的每个特征可以由提供相同、等同或相似目的的替代特征来代替。</p>
+    <p>[0183]	此外，本领域的技术人员能够理解，尽管在此所述的一些实施例包括其它实施例中所包括的某些特征而不是其它特征，但是不同实施例的特征的组合意味着处于本发明的范围之内并且形成不同的实施例。例如，在下面的权利要求书中，所要求保护的实施例的任意之一都可以以任意的组合方式来使用。</p>
+    <p>[0184]	本发明的各个部件实施例可以以硬件实现，或者以在一个或者多个处理器上运行的软件模块实现，或者以它们的组合实现。本领域的技术人员应当理解，可以在实践中使用微处理器或者数字信号处理器（DSP)来实现根据本发明实施例中的一些或者全部部件的一些或者全部功能。本发明还可以实现为用于执行这里所描述的方法的一部分或者全部的设备或者装置程序(例如，计算机程序和计算机程序产品）。这样的实现本发明的程序可以存储在计算机可读介质上，或者可以具有一个或者多个信号的形式。这样的信号可以从因特网网站上下载得到，或者在载体信号上提供，或者以任何其他形式提供。</p>
+    <p>[0185]	应该注意的是上述实施例对本发明进行说明而不是对本发明进行限制，并且本领域技术人员在不脱离所附权利要求的范围的情况下可设计出替换实施例。在权利要求中，不应将位于括号之间的任何参考符号构造成对权利要求的限制。单词“包含”不排除存在未列在权利要求中的元件或步骤。位于元件之前的单词“一”或“一个”不排除存在多个这样的元件。本发明可以借助于包括有若干不同元件的硬件以及借助于适当编程的计算机来实现。在列举了若干装置的单元权利要求中，这些装置中的若干个可以是通过同一个硬件项来具体体现。单词第一、第二、以及第三等的使用不表示任何顺序。可将这些单词解释为名称。&#183;</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101207627A?cl=zh">CN101207627A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年12月13日</td><td class="patent-data-table-td patent-date-value">2008年6月25日</td><td class="patent-data-table-td ">深圳市迅雷网络技术有限公司</td><td class="patent-data-table-td ">一种过滤下载任务列表的客户端及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101286157A?cl=zh">CN101286157A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年9月28日</td><td class="patent-data-table-td patent-date-value">2008年10月15日</td><td class="patent-data-table-td ">深圳市天朗时代科技有限公司</td><td class="patent-data-table-td ">一种文件检索方法及装置和时间流文件处理器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101634992A?cl=zh">CN101634992A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月11日</td><td class="patent-data-table-td patent-date-value">2010年1月27日</td><td class="patent-data-table-td ">上海交通大学</td><td class="patent-data-table-td ">Ntfs文件系统下轻量级文件加密及其解密恢复方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101853363A?cl=zh">CN101853363A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年5月7日</td><td class="patent-data-table-td patent-date-value">2010年10月6日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">一种文件保护方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101997832A?cl=zh">CN101997832A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年8月10日</td><td class="patent-data-table-td patent-date-value">2011年3月30日</td><td class="patent-data-table-td ">北京多思科技发展有限公司</td><td class="patent-data-table-td ">一种支持安全监控的安全监控装置及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102419803A?cl=zh">CN102419803A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月1日</td><td class="patent-data-table-td patent-date-value">2012年4月18日</td><td class="patent-data-table-td ">成都市华为赛门铁克科技有限公司</td><td class="patent-data-table-td ">计算机病毒查杀方法、系统及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102902925A?cl=zh">CN102902925A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种染毒文件的处理方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US7210041">US7210041</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2001年4月30日</td><td class="patent-data-table-td patent-date-value">2007年4月24日</td><td class="patent-data-table-td ">Mcafee, Inc.</td><td class="patent-data-table-td ">System and method for identifying a macro virus family using a macro virus definitions database</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102902925A?cl=zh">CN102902925A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种染毒文件的处理方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=YznLBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0021560000">G06F21/56</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/1274aefa37c282353d69/CN102930208A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E6%9F%93%E6%AF%92%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%E5%92%8C%E7%B3%BB.pdf?id=YznLBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0paktc4O7a34Q-1yWF3Pc4Y0250A"},"sample_url":"https://www.google.com/patents/reader?id=YznLBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

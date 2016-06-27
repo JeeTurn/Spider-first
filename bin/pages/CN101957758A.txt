@@ -1,0 +1,390 @@
+<!DOCTYPE html><html><head><title>专利 CN101957758A - 面向服务的架构应用系统中实现Web Service快速发布的方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="面向服务的架构应用系统中实现Web Service快速发布的方法"><meta name="DC.contributor" content="王 锋" scheme="inventor"><meta name="DC.contributor" content="陈学平" scheme="inventor"><meta name="DC.contributor" content="上海普元信息技术股份有限公司" scheme="assignee"><meta name="DC.date" content="2010-10-14" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及一种面向服务的架构应用系统中实现Web Service快速发布的方法，其中包括图形化服务装配平台和服务运行平台，该方法包括图形化服务装配处理操作和服务运行处理操作，图形化服务装配处理操作完成图形化装配、编译、编译检查和快速创建一个新的构件实现；服务运行处理操作完成服务装配文件的加载、服务的动态注册、WSDL文件的自动生成以及监听用户的请求。采用该种面向服务的架构应用系统中实现Web Service快速发布的方法，极大的提高了SOA应用系统之间的集成效率，同时运用本发明的方法可以快速、直观的将现有的业务功能发布为Web服务，大大提高了应用系统间的集成效率，而且工作性能稳定可靠、适用范围较为广泛。"><meta name="DC.date" content="2011-1-26"><meta name="DC.relation" content="CN:101763428:A" scheme="references"><meta name="DC.relation" content="CN:101794226:A" scheme="references"><meta name="DC.relation" content="CN:101853156:A" scheme="references"><meta name="DC.relation" content="US:7188158" scheme="references"><meta name="citation_patent_publication_number" content="CN:101957758:A"><meta name="citation_patent_application_number" content="CN:201010507367"><link rel="canonical" href="https://www.google.com/patents/CN101957758A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101957758A?cl=zh"/><meta name="title" content="专利 CN101957758A - 面向服务的架构应用系统中实现Web Service快速发布的方法"/><meta name="description" content="本发明涉及一种面向服务的架构应用系统中实现Web Service快速发布的方法，其中包括图形化服务装配平台和服务运行平台，该方法包括图形化服务装配处理操作和服务运行处理操作，图形化服务装配处理操作完成图形化装配、编译、编译检查和快速创建一个新的构件实现；服务运行处理操作完成服务装配文件的加载、服务的动态注册、WSDL文件的自动生成以及监听用户的请求。采用该种面向服务的架构应用系统中实现Web Service快速发布的方法，极大的提高了SOA应用系统之间的集成效率，同时运用本发明的方法可以快速、直观的将现有的业务功能发布为Web服务，大大提高了应用系统间的集成效率，而且工作性能稳定可靠、适用范围较为广泛。"/><meta property="og:title" content="专利 CN101957758A - 面向服务的架构应用系统中实现Web Service快速发布的方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101957758A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101957758A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=VOaNBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101957758A&amp;usg=AFQjCNFcr2eKg927MGNhPcUCp4ZKfU5G5Q" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/e82d5c2eae26732dcaef/CN101957758A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/e82d5c2eae26732dcaef/CN101957758A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101957758A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101957758A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101957758A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101957758B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101957758A?cl=zh" style="display:none"><span itemprop="description">本发明涉及一种面向服务的架构应用系统中实现Web Service快速发布的方法，其中包括图形化服务装配平台和服务运行平台，该方法包括图形化服务装配处理操作和服务运行处理操作，图形化服务装配处理操作完成图形化装配、编译、编译检查和快速创建一个新的构件实现；服务运行处理操作完成服务装配文件的加载、服务的动态注册、WSDL文件的自动生成以及监听用户的请求。采用该种面向服务的架构应用系统中实现Web...</span><span itemprop="url">https://www.google.com/patents/CN101957758A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101957758A - 面向服务的架构应用系统中实现Web Service快速发布的方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101957758A - 面向服务的架构应用系统中实现Web Service快速发布的方法" title="专利 CN101957758A - 面向服务的架构应用系统中实现Web Service快速发布的方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101957758 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010507367</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年1月26日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年10月14日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年10月14日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101957758B?hl=zh-CN&amp;cl=zh">CN101957758B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010507367.4, </span><span class="patent-bibdata-value">CN 101957758 A, </span><span class="patent-bibdata-value">CN 101957758A, </span><span class="patent-bibdata-value">CN 201010507367, </span><span class="patent-bibdata-value">CN-A-101957758, </span><span class="patent-bibdata-value">CN101957758 A, </span><span class="patent-bibdata-value">CN101957758A, </span><span class="patent-bibdata-value">CN201010507367, </span><span class="patent-bibdata-value">CN201010507367.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%EF%BF%BD%E9%94%8B%22">王 锋</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%88%E5%AD%A6%E5%B9%B3%22">陈学平</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%8A%E6%B5%B7%E6%99%AE%E5%85%83%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">上海普元信息技术股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101957758A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101957758A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101957758A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (12),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=VOaNBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010507367&amp;usg=AFQjCNFttV0zc8Dzh8gFm6m7Lzdd6fw_CQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=VOaNBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101957758A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNG7ZLtcA3KbJj853RihvfxYsMfFCA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT100730008" lang="ZH" load-source="patent-office">面向服务的架构应用系统中实现Web Service快速发布的方法</invention-title>
+      </span><br><span class="patent-number">CN 101957758 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA83016707" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及一种面向服务的架构应用系统中实现Web&#160;Service快速发布的方法，其中包括图形化服务装配平台和服务运行平台，该方法包括图形化服务装配处理操作和服务运行处理操作，图形化服务装配处理操作完成图形化装配、编译、编译检查和快速创建一个新的构件实现；服务运行处理操作完成服务装配文件的加载、服务的动态注册、WSDL文件的自动生成以及监听用户的请求。采用该种面向服务的架构应用系统中实现Web&#160;Service快速发布的方法，极大的提高了SOA应用系统之间的集成效率，同时运用本发明的方法可以快速、直观的将现有的业务功能发布为Web服务，大大提高了应用系统间的集成效率，而且工作性能稳定可靠、适用范围较为广泛。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(20)</span></span></div><div class="patent-text"><ol mxw-id="PCLM34827719" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种面向服务的架构应用系统中实现Web&#160;Service快速发布的方法，所述的面向服务的架构应用系统包括图形化服务装配平台和服务运行平台，其特征在于，所述的方法包括图形化服务装配处理操作和服务运行处理操作，所述的图形化服务装配处理操作，包括以下步骤：(11)所述的图形化服务装配平台新建构件包；(12)所述的图形化服务装配平台在该新建的构件包中创建装配图文件；(13)所述的图形化服务装配平台根据用户的操作，将现有业务功能的实现拖曳到装配图中，并在装配图中生成相应的构件；(14)所述的图形化服务装配平台为所生成的该构件添加一个或多个服务，并指定服务的接口描述；(15)所述的图形化服务装配平台根据需要为所述的添加的服务添加相应的Web&#160;Service绑定；(16)所述的图形化服务装配平台保存装配图文件，且所述的面向服务的架构应用系统对该装配图文件进行编译和编译检查；所述的服务运行处理操作，包括以下步骤：(21)所述的服务运行平台遍历构件包；(22)所述的服务运行平台查找所述的构件包下所有的服务装配文件；(23)所述的服务运行平台解析所述的服务装配文件；(24)所述的服务运行平台查找该构件包下所有的Web&#160;Service类型扩展文件；(25)所述的服务运行平台解析Web&#160;Service类型扩展文件aegis；(26)所述的服务运行平台根据构件的实现类，生成对应的Web&#160;Service描述文件WSDL；(27)所述的服务运行平台将所述的WSDL发布为Web&#160;Service，并动态生成相应的Servlet，同时将该Servlet注册到所述的面向服务的架构应用系统中，监听用户请求；(28)所述的服务运行平台将用户请求数据转换为业务数据类型；(29)所述的服务运行平台将业务逻辑返回数据转换为SOAP信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的构件包是指包含一定功能逻辑的物理单元，且每个构件包作为一个 最小的部署单元部署到面向服务的架构运行系统环境中，构件包下包含实现业务功能的所 有依赖资源。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的图形化服务装配平台将现有业务功能的实现拖曳到装配图中并在 装配图中生成相应的构件，包括以下步骤：(131)所述的图形化服务装配平台从资源管理器中拖拽现有业务功能的实现到可视化 编辑器中；(132)所述的图形化服务装配平台对业务功能实现中的方法进行逐一检查，判断该方 法的参数和返回值中是否包含有复杂数据类型；(133)如果是，则所述的图形化服务装配平台弹出服务装配向导，在向导中输入构件的 名称、服务的名称，配置复杂数据类型中存放的元素的具体类型；(134)所述的图形化服务装配平台在服务装配图中生成相应的构件，该构件中包含了 一个服务。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的判断该方法的参数和返回值中是否包含有复杂数据类型，具体为：判断该方法的参数和返回值的类型是否是List、Map或者Java Bean类型中的一种或 者多种。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的对该装配图文件进行编译，具体为：所述的面向服务的架构应用系统根据装配图的定义，自动生成相应的符合SCA规范的 服务装配文件。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的对该装配图文件进行编译检查，包括以下步骤：(161)所述的面向服务的架构应用系统判断构件的实现是否存在；(162)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；(163)如果是，则所述的面向服务的架构应用系统判断构件的服务接口描述是否存在；(164)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；(165)如果是，则所述的面向服务的架构应用系统判断构件是否实现了服务接口描述 中定义的方法；(166)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；如果是，则直 接结束。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的构件为SCA规范中定义的、能够复用的最小功能单位。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求6所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的构件的实现是指构件的具体功能实现。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的面向服务的架构应用系统中实现Web	Service快速发布的方 法，其特征在于，所述的服务接口描述为描述服务中所包含的业务方法的文件，所述的业务 方法为发布为Web Service后该面向服务的架构应用系统对外所提供的业务方法。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求1所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的服务运行平台遍历构件包，包括以下步骤：(211)所述的服务运行平台查找构件包所在的根路径，遍历所存在的所有构件包；(212)所述的服务运行平台解析构件包的元数据，元数据信息位于构件包META-INF目 录下的文件MANIFEST. MF ；(213)所述的服务运行平台按构件包的依赖关系，对构件包的进行排序，以便于构件包 的加载。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的MANIFEST. MF文件的内容按Java中MANIFEST的定义规则进行定 义。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求10所述的面向服务的架构应用系统中实现Web	Service快速发布的3方法，其特征在于，所述的构件包的排序规则为：如果第一构件包依赖于第二构件包，第二构件包依赖于第三构件包，第四构件包不依 赖其它构件包，则相应的排序列表为：构件包D、构件包C、构件包B、构件包A。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求10所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的服务运行平台查找所述的构件包下所有的服务装配文件，包括以 下步骤：(221)所述的服务运行平台对已经排序的构件包列表进行遍历；(222)所述的服务运行平台遍历构件包所在路径以及子路径下的所有文件，查找其中 的服务装配文件。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求1所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的服务运行平台解析所述的服务装配文件，包括以下步骤：(231)所述的服务运行平台利用XML解析器解析服务装配文件；(232)在服务装配文件中对于结点Component生成构件的内存模型；(233)所述的服务运行平台解析构件的服务，并生成服务的内存模型；(234)所述的服务运行平台解析构件的实现，并生成实现的内存模型；(235)所述的服务运行平台在服务中解析所添加的Web	Service绑定，并生成绑定的 内存模型。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求10所述的面向服务的架构应用系统中实现Web	Service快速发布 的方法，其特征在于，所述的服务运行平台查找该构件包下所有的Web Service类型扩展文 件，包括以下步骤：(241)所述的服务运行平台对已经排序的构件包列表遍历；(242)所述的服务运行平台遍历构件包所在路径下的所有文件，查找Web	Service类 型扩展文件aegis。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的服务运行平台解析Web Service类型扩展文件aegis，包括以下 步骤：(251)所述的服务运行平台利用XML解析器解析Web	Service类型扩展文件aegis ；(252)所述的服务运行平台遍历该Web	Service类型扩展文件aegis中所有Method结 点，解析出方法的输入、输出参数的元数据信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求15所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的服务运行平台根据构件的实现类生成对应的Web Service描述文 件WSDL，包括以下步骤：(261)所述的服务运行平台根据添加Web	Service绑定的服务查找对应的构件；(262)所述的服务运行平台根据构件的元数据查找构件的实现类；(263)所述的服务运行平台根据服务的名称，查找服务对应的类型扩展aegis定义；(264)所述的服务运行平台根据类的定义以及类中方法元数据的定义，生成针对此类 的WSDL描述；(265)所述的服务运行平台建立服务名称与服务生成WSDL的映射关系。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求10所述的面向服务的架构应用系统中实现Web	Service快速发布的方法，其特征在于，所述的步骤（27)包括以下步骤：(271)所述的服务运行平台建立Servlet的缓存ServletHost	；(272)所述的服务运行平台新建HttpServlet，以Web	Service的名称作为key放入缓 存 ServletHost 中；(273)所述的服务运行平台新建Servlet	Filter，负责服务分发，并配置到应用中；(274)所述的服务运行平台接收到Http请求时，根据URL从缓存ServletHost中判断 是否已经注册，如果注册则把请求交由其Servlet进行处理，否则继续原有操作。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求10所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的服务运行平台将用户请求数据转换为业务数据类型，包括以下步 骤：(281)所述的服务运行平台从Servlet中读取输入流，构造为SOAP	Envelope ；(282)所述的服务运行平台从SOAP	Envelope中分离出SOAP Header和SOAP Body数据；(283)所述的服务运行平台查找服务对应构件的业务实现类以及调用的方法；(284)所述的服务运行平台把SOAP	Body数据转换为业务实现类要求的数据类型；(285)所述的服务运行平台调用业务实现类。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求10所述的面向服务的架构应用系统中实现Web	Service快速发布的 方法，其特征在于，所述的服务运行平台将业务逻辑返回数据转换为SOAP信息，包括以下 步骤：(291)所述的服务运行平台将业务返回数据按WSDL的要求进行序列化；(292)所述的服务运行平台生成构件SOAP	Envelope ；(293)所述的服务运行平台将业务数据序列化的结果添加到SOAP	Envelope的Body当中；(294)所述的服务运行平台生成Servlet中的输出流；(295)所述的服务运行平台将SOAP	Envelope按byte数组的方式写到Servlet中输出 流当中。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES40689347" lang="ZH" load-source="patent-office" class="description">
+    <p>面向服务的架构应用系统中实现Web Service快速发布的</p>
+    <p>方法</p>
+    <p>技术领域 </p>
+    <p>[0001]	本发明涉及计算机软件领域，特别涉及面向服务的架构（SOA)应用系统技术领 域，具体是指一种面向服务的架构应用系统中实现Web Service快速发布的方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着现代社会科学技术的发展，计算机系统已经成为各行各业所不可缺少的工 具，而在其中起着核心作用的，则是计算机软件系统。随着企业的不断发展和IT系统的不 断建设，企业的IT应用系统越来越多，应用日益复杂，企业对应用系统间的互联互通也提 出了更高的要求。应用系统如何快速响应企业的业务变化、如何最大限度的重用现有IT资 产是企业IT建设面临的一大难题。</p>
+    <p>[0003]	SOA(Serivce-Oriented Architecture，面向服务的架构），是一种新的构造分布 式应用程序的方法，它将企业应用中分散的功能组织成可以共享的基于标准的服务，这些 服务能够迅速地被组合和重用，从而达到了快速响应业务需求的目的；同时，在企业级应 用开发领域，随着应用规模的不断扩大，各个系统之间的集成和交互变得越来越重要。Web Service由于其特有的平台无关、编程语言无关等特性，成为系统集成中使用非常广泛的 技术，并且Web Service作为一项工业标准，已经得到越来越多厂商的支持。同时，Web Service 对外仅以 WSDL(Web 服务描述语言，Web Services Description Language)作为交 流的中介，它是一门基于XML的语言，描述了 Web Service的服务定义以及服务的通信，是 跨平台的。</p>
+    <p>[0004]	在开发基于SOA应用的系统中，如何方便、快速的将现有业务功能发布成Web Service供外部系统调用，在系统的集成阶段变得日益重要。现有技术中，要将一个已有的 业务功能发布成Web Service,需要手工编写一些配置文件，如：在Axis2中发布一个Web Service需要编写services, xml文件，在Xfire中也需要编写service, xml文件，但与 Axis2的格式却截然不同；这些文件晦涩难懂，手工编写极易出错，降低了生产效率。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明的目的是克服了上述现有技术中的缺点，提供一种直观形象、操作快捷方 便、能够实现动态、快速发布Web Service、有效提高SOA应用系统之间的集成效率、工作性 能稳定可靠、适用范围较为广泛的面向服务的架构应用系统中实现Web Service快速发布 的方法。</p>
+    <p>[0006]	为了实现上述的目的，本发明的面向服务的架构应用系统中实现Web Service快 速发布的方法如下：</p>
+    <p>[0007]	该面向服务的架构应用系统中实现Web Service快速发布的方法，所述的面向服 务的架构应用系统包括图形化服务装配平台和服务运行平台，其主要特点是，所述的方法 包括图形化服务装配处理操作和服务运行处理操作，所述的图形化服务装配处理操作，包括以下步骤： [0008]	(11)所述的图形化服务装配平台新建构件包；</p>
+    <p>[0009]	(12)所述的图形化服务装配平台在该新建的构件包中创建装配图文件；</p>
+    <p>[0010]	(13)所述的图形化服务装配平台根据用户的操作，将现有业务功能的实现拖曳到 装配图中，并在装配图中生成相应的构件；</p>
+    <p>[0011]	(14)所述的图形化服务装配平台为所生成的该构件添加一个或多个服务，并指定 服务的接口描述；</p>
+    <p>[0012]	(15)所述的图形化服务装配平台根据需要为所述的添加的服务添加相应的Web Service 绑定；</p>
+    <p>[0013]	(16)所述的图形化服务装配平台保存装配图文件，且所述的面向服务的架构应用 系统对该装配图文件进行编译和编译检查；</p>
+    <p>[0014]	所述的服务运行处理操作，包括以下步骤：</p>
+    <p>[0015]	(21)所述的服务运行平台遍历构件包；</p>
+    <p>[0016]	(22)所述的服务运行平台查找所述的构件包下所有的服务装配文件；</p>
+    <p>[0017]	(23)所述的服务运行平台解析所述的服务装配文件；</p>
+    <p>[0018]	(24)所述的服务运行平台查找该构件包下所有的Web Service类型扩展文件；</p>
+    <p>[0019]	(25)所述的服务运行平台解析Web Service类型扩展文件aegis ；</p>
+    <p>[0020]	(26)所述的服务运行平台根据构件的实现类，生成对应的Web Service描述文件 WSDL ；</p>
+    <p>[0021]	(27)所述的服务运行平台将所述的WSDL发布为Web Service，并动态生成相应的 Servlet,同时将该Servlet注册到所述的面向服务的架构应用系统中，监听用户请求；</p>
+    <p>[0022]	(28)所述的服务运行平台将用户请求数据转换为业务数据类型；</p>
+    <p>[0023]	(29)所述的服务运行平台将业务逻辑返回数据转换为SOAP信息。</p>
+    <p>[0024]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的构件包是指 包含一定功能逻辑的物理单元，且每个构件包作为一个最小的部署单元部署到面向服务的 架构运行系统环境中，构件包下包含实现业务功能的所有依赖资源。</p>
+    <p>[0025]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的图形化服务 装配平台将现有业务功能的实现拖曳到装配图中并在装配图中生成相应的构件，包括以下 步骤：</p>
+    <p>[0026]	(131)所述的图形化服务装配平台从资源管理器中拖拽现有业务功能的实现到可 视化编辑器中；</p>
+    <p>[0027]	(132)所述的图形化服务装配平台对业务功能实现中的方法进行逐一检查，判断 该方法的参数和返回值中是否包含有复杂数据类型；</p>
+    <p>[0028]	(133)如果是，则所述的图形化服务装配平台弹出服务装配向导，在向导中输入构 件的名称、服务的名称，配置复杂数据类型中存放的元素的具体类型；</p>
+    <p>[0029]	(134)所述的图形化服务装配平台在服务装配图中生成相应的构件，该构件中包 含了一个服务。</p>
+    <p>[0030]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的判断该方法 的参数和返回值中是否包含有复杂数据类型，具体为：[0031]	判断该方法的参数和返回值的类型是否是List、Map或者Java Bean类型中的一 种或者多种。</p>
+    <p>[0032]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的对该装配图 文件进行编译，具体为：</p>
+    <p>[0033]	所述的面向服务的架构应用系统根据装配图的定义，自动生成相应的符合SCA规 范的服务装配文件。</p>
+    <p>[0034]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的对该装配图 文件进行编译检查，包括以下步骤：</p>
+    <p>[0035]	(161)所述的面向服务的架构应用系统判断构件的实现是否存在； </p>
+    <p>[0036]	(162)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；</p>
+    <p>[0037]	(163)如果是，则所述的面向服务的架构应用系统判断构件的服务接口描述是否 存在；</p>
+    <p>[0038]	(164)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；</p>
+    <p>[0039]	(165)如果是，则所述的面向服务的架构应用系统判断构件是否实现了服务接口 描述中定义的方法；</p>
+    <p>[0040]	(166)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；如果是， 则直接结束。</p>
+    <p>[0041]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的构件为SCA 规范中定义的、能够复用的最小功能单位。</p>
+    <p>[0042]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的构件的实现 是指构件的具体功能实现。</p>
+    <p>[0043]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务接口描 述为描述服务中所包含的业务方法的文件，所述的业务方法为发布为Web Service后该面 向服务的架构应用系统对外所提供的业务方法。</p>
+    <p>[0044]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平 台遍历构件包，包括以下步骤：</p>
+    <p>[0045]	(211)所述的服务运行平台查找构件包所在的根路径，遍历所存在的所有构件 包；</p>
+    <p>[0046]	(212)所述的服务运行平台解析构件包的元数据，元数据信息位于构件包 META-INF 目录下的文件 MANIFEST. MF ；</p>
+    <p>[0047]	(213)所述的服务运行平台按构件包的依赖关系，对构件包的进行排序，以便于构 件包的加载。</p>
+    <p>[0048]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的MANIFEST. MF文件的内容按Java中MANIFEST的定义规则进行定义。</p>
+    <p>[0049]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的构件包的排 序规则为：</p>
+    <p>[0050]	如果第一构件包依赖于第二构件包，第二构件包依赖于第三构件包，第四构件包 不依赖其它构件包，则相应的排序列表为：构件包D、构件包C、构件包B、构件包A。</p>
+    <p>[0051]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平台查找所述的构件包下所有的服务装配文件，包括以下步骤：</p>
+    <p>[0052]	(221)所述的服务运行平台对已经排序的构件包列表进行遍历；</p>
+    <p>[0053]	(222)所述的服务运行平台遍历构件包所在路径以及子路径下的所有文件，查找 其中的服务 装配文件。</p>
+    <p>[0054]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平 台解析所述的服务装配文件，包括以下步骤：</p>
+    <p>[0055]	(231)所述的服务运行平台利用XML解析器解析服务装配文件；</p>
+    <p>[0056]	(232)在服务装配文件中对于结点Component生成构件的内存模型；</p>
+    <p>[0057]	(233)所述的服务运行平台解析构件的服务，并生成服务的内存模型；</p>
+    <p>[0058]	(234)所述的服务运行平台解析构件的实现，并生成实现的内存模型；</p>
+    <p>[0059]	(235)所述的服务运行平台在服务中解析所添加的Web Service绑定，并生成绑 定的内存模型。</p>
+    <p>[0060]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平 台查找该构件包下所有的Web Service类型扩展文件，包括以下步骤：</p>
+    <p>[0061]	(241)所述的服务运行平台对已经排序的构件包列表遍历；</p>
+    <p>[0062]	(242)所述的服务运行平台遍历构件包所在路径下的所有文件，查找Web Service 类型扩展文件aegis。</p>
+    <p>[0063]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平 台解析Web Service类型扩展文件aegis，包括以下步骤：</p>
+    <p>[0064]	(251)所述的服务运行平台利用XML解析器解析Web Service类型扩展文件 aegis ；</p>
+    <p>[0065]	(252)所述的服务运行平台遍历该Web Service类型扩展文件aegis中所有 Method结点，解析出方法的输入、输出参数的元数据信息。</p>
+    <p>[0066]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平 台根据构件的实现类生成对应的Web Service描述文件WSDL，包括以下步骤：</p>
+    <p>[0067]	(261)所述的服务运行平台根据添加Web Service绑定的服务查找对应的构件；</p>
+    <p>[0068]	(262)所述的服务运行平台根据构件的元数据查找构件的实现类；</p>
+    <p>[0069]	(263)所述的服务运行平台根据服务的名称，查找服务对应的类型扩展aegis定 义；</p>
+    <p>[0070]	(264)所述的服务运行平台根据类的定义以及类中方法元数据的定义，生成针对 此类的WSDL描述；</p>
+    <p>[0071]	(265)所述的服务运行平台建立服务名称与服务生成WSDL的映射关系。</p>
+    <p>[0072]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的步骤（27) 包括以下步骤：</p>
+    <p>[0073]	(271)所述的服务运行平台建立Servlet的缓存ServletHost ；</p>
+    <p>[0074]	(272)所述的服务运行平台新建HttpServlet，以Web Service的名称作为key放 入缓存ServletHost中；</p>
+    <p>[0075]	(273)所述的服务运行平台新建Servlet Filter，负责服务分发，并配置到应用 中；[0076]	(274)所述的服务运行平台接收到Http请求时，根据URL从缓存ServletHost中 判断是否已经注册，如果注册则把请求交由其Servlet进行处理，否则继续原有操作。 [0077]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平 台将用户请求数据转换为业务数据类型，包括以下步骤：</p>
+    <p>[0078]	(281)所述的服务运行平台从Servlet中读取输入流，构造为SOAP Envelope ；</p>
+    <p>[0079]	(282)所述的服务运行平台从SOAP Envelope中分离出SOAP Header和SOAP Body 数据；</p>
+    <p>[0080]	(283)所述的服务运行平台查找服务对应构件的业务实现类以及调用的方法；</p>
+    <p>[0081]	(284)所述的服务运行平台把SOAP Body数据转换为业务实现类要求的数据类 型；</p>
+    <p>[0082]	(285)所述的服务运行平台调用业务实现类。</p>
+    <p>[0083]	该面向服务的架构应用系统中实现Web Service快速发布的方法中的服务运行平 台将业务逻辑返回数据转换为SOAP信息，包括以下步骤：</p>
+    <p>[0084]	(291)所述的服务运行平台将业务返回数据按WSDL的要求进行序列化；</p>
+    <p>[0085]	(292)所述的服务运行平台生成构件SOAP Envelope ；</p>
+    <p>[0086]	(293)所述的服务运行平台将业务数据序列化的结果添加到SOAP Envelope的 Body当中；</p>
+    <p>[0087]	(294)所述的服务运行平台生成Servlet中的输出流；</p>
+    <p>[0088]	(295)所述的服务运行平台将SOAP Envelope按byte数组的方式写到Servlet中 输出流当中。</p>
+    <p>[0089]	采用了该发明的面向服务的架构应用系统中实现Web Service快速发布的方法， 由于其中在开发期提供一个可视化的Web Service装配工具，直观形象、快捷方便的生成 Web Service装配文件；同时，在运行期能够根据Web Service装配文件的定义，自动对外 发布一个新的Web Service，从而达到动态、快速发布Web Service的能力，极大的提高了 SOA应用系统之间的集成效率，从而不再需要手工为各种不同的Web Service发布系统编 写晦涩难懂、极易出错的服务配置文件；同时运用本发明的方法可以快速、直观的将现有的 业务功能发布为Web服务，大大提高了应用系统间的集成效率，而且工作性能稳定可靠、适 用范围较为广泛。</p>
+    <p>附图说明</p>
+    <p>[0090]	图1为本发明的面向服务的架构应用系统中实现Web Service快速发布的方法中 的服务装配示意图。</p>
+    <p>[0091]	图2为本发明的面向服务的架构应用系统中实现Web Service快速发布的方法中 的复杂类型配置页面示意图。</p>
+    <p>[0092]	图3为本发明的面向服务的架构应用系统中实现Web Service快速发布的方法中 的构件包依赖关系示意图。</p>
+    <p>[0093]	图4为本发明的面向服务的架构应用系统中实现Web Service快速发布的方法的 系统整体功能模块示意图。</p>
+    <p>[0094]	图5为本发明的面向服务的架构应用系统中实现Web Service快速发布的方法中的WebService业务调用的流程示意图。</p>
+    <p>[0095]	图6为本发明的面向服务的架构应用系统中实现Web Service快速发布的方法中 的服务装配的内部模型结构类图。</p>
+    <p>具体实施方式</p>
+    <p>[0096]	为了能够更清楚地理解本发明的技术内容，特举以下实施例详细说明。</p>
+    <p>[0097]	请参阅图1至图6所示，该面向服务的架构应用系统中实现Web Service快速发布 的方法，所述的面向服务的架构应用系统包括图形化服务装配平台和服务运行平台，其中， 所述的方法包括图形化服务装配处理操作和服务运行处理操作，所述的图形化服务装配处 理操作，包括以下步骤： [0098]	(11)所述的图形化服务装配平台新建构件包；所述的构件包是指包含一定功能 逻辑的物理单元，且每个构件包作为一个最小的部署单元部署到面向服务的架构运行系统 环境中，构件包下包含实现业务功能的所有依赖资源；</p>
+    <p>[0099]	(12)所述的图形化服务装配平台在该新建的构件包中创建装配图文件；</p>
+    <p>[0100]	(13)所述的图形化服务装配平台根据用户的操作，将现有业务功能的实现拖曳到 装配图中，并在装配图中生成相应的构件，包括以下步骤：</p>
+    <p>[0101]	(a)所述的图形化服务装配平台从资源管理器中拖拽现有业务功能的实现到可视 化编辑器中；</p>
+    <p>[0102]	(b)所述的图形化服务装配平台对业务功能实现中的方法进行逐一检查，判断该 方法的参数和返回值中是否包含有复杂数据类型，具体为：</p>
+    <p>[0103]	判断该方法的参数和返回值的类型是否是List、Map或者Java Bean类型中的一 种或者多种；</p>
+    <p>[0104]	(c)如果是，则所述的图形化服务装配平台弹出服务装配向导，在向导中输入构件 的名称、服务的名称，配置复杂数据类型中存放的元素的具体类型；</p>
+    <p>[0105]	(d)所述的图形化服务装配平台在服务装配图中生成相应的构件，该构件中包含 了一个服务；</p>
+    <p>[0106]	(14)所述的图形化服务装配平台为所生成的该构件添加一个或多个服务，并指定 服务的接口描述；</p>
+    <p>[0107]	(15)所述的图形化服务装配平台根据需要为所述的添加的服务添加相应的Web Service 绑定；</p>
+    <p>[0108]	(16)所述的图形化服务装配平台保存装配图文件，且所述的面向服务的架构应用 系统对该装配图文件进行编译和编译检查；对该装配图文件进行编译，具体为：</p>
+    <p>[0109]	所述的面向服务的架构应用系统根据装配图的定义，自动生成相应的符合SCA规 范的服务装配文件；</p>
+    <p>[0110]	对该装配图文件进行编译检查，包括以下步骤：</p>
+    <p>[0111]	(a)所述的面向服务的架构应用系统判断构件的实现是否存在；所述的构件为 SCA规范中定义的、能够复用的最小功能单位；所述的构件的实现是指构件的具体功能实 现；</p>
+    <p>[0112]	(b)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；[0113]	(c)如果是，则所述的面向服务的架构应用系统判断构件的服务接口描述是否存 在；</p>
+    <p>[0114]	(d)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；</p>
+    <p>[0115]	(e)如果是， 则所述 的面向服务的架构应用系统判断构件是否实现了服务接口描 述中定义的方法；所述的服务接口描述为描述服务中所包含的业务方法的文件，所述的业 务方法为发布为Web Service后该面向服务的架构应用系统对外所提供的业务方法；</p>
+    <p>[0116]	(f)如果否，则该装配图文件中存在错误，提示用户进行修正，并结束；如果是，则 直接结束；</p>
+    <p>[0117]	所述的服务运行处理操作，包括以下步骤：</p>
+    <p>[0118]	(21)所述的服务运行平台遍历构件包，包括以下步骤：</p>
+    <p>[0119]	(a)所述的服务运行平台查找构件包所在的根路径，遍历所存在的所有构件包；</p>
+    <p>[0120]	(b)所述的服务运行平台解析构件包的元数据，元数据信息位于构件包META-INF 目录下的文件MANIFEST. MF ；所述的MANIFEST. MF文件的内容按Java中MANIFEST的定义 规则进行定义；</p>
+    <p>[0121]	(c)所述的服务运行平台按构件包的依赖关系，对构件包的进行排序，以便于构件 包的加载；所述的构件包的排序规则为：</p>
+    <p>[0122]	如果第一构件包依赖于第二构件包，第二构件包依赖于第三构件包，第四构件包 不依赖其它构件包，则相应的排序列表为：构件包D、构件包C、构件包B、构件包A ；</p>
+    <p>[0123]	(22)所述的服务运行平台查找所述的构件包下所有的服务装配文件，包括以下步 骤：</p>
+    <p>[0124]	(a)所述的服务运行平台对已经排序的构件包列表进行遍历；</p>
+    <p>[0125]	(b)所述的服务运行平台遍历构件包所在路径以及子路径下的所有文件，查找其 中的服务装配文件；</p>
+    <p>[0126]	(23)所述的服务运行平台解析所述的服务装配文件，包括以下步骤：</p>
+    <p>[0127]	(a)所述的服务运行平台利用XML解析器解析服务装配文件；</p>
+    <p>[0128]	(b)在服务装配文件中对于结点Component生成构件的内存模型；</p>
+    <p>[0129]	(c)所述的服务运行平台解析构件的服务，并生成服务的内存模型；</p>
+    <p>[0130]	(d)所述的服务运行平台解析构件的实现，并生成实现的内存模型；</p>
+    <p>[0131]	(e)所述的服务运行平台在服务中解析所添加的Web Service绑定，并生成绑定 的内存模型；</p>
+    <p>[0132]	(24)所述的服务运行平台查找该构件包下所有的Web Service类型扩展文件，包 括以下步骤：</p>
+    <p>[0133]	(a)所述的服务运行平台对已经排序的构件包列表遍历；</p>
+    <p>[0134]	(b)所述的服务运行平台遍历构件包所在路径下的所有文件，查找Web Service 类型扩展文件aegis ；</p>
+    <p>[0135]	(25)所述的服务运行平台解析Web Service类型扩展文件aegis，包括以下步骤：</p>
+    <p>[0136]	(a)所述的服务运行平台利用XML解析器解析Web Service类型扩展文件aegis ；</p>
+    <p>[0137]	(b)所述的服务运行平台遍历该Web Service类型扩展文件aegis中所有Method 结点，解析出方法的输入、输出参数的元数据信息；[0138]	(26)所述的服务运行平台根据构件的实现类，生成对应的Web Service描述文件 WSDL，包括以下步骤：</p>
+    <p>[0139]	(a)所述的服务运行平台根据添加Web Service绑定的服务查找对应的构件；</p>
+    <p>[0140]	(b)所述的服务运行平台根据构件的元数据查找构件的实现类； </p>
+    <p>[0141]	(c)所述的服务运行平台根据服务的名称，查找服务对应的类型扩展aegis定义；</p>
+    <p>[0142]	(d)所述的服务运行平台根据类的定义以及类中方法元数据的定义，生成针对此 类的WSDL描述；</p>
+    <p>[0143]	(e)所述的服务运行平台建立服务名称与服务生成WSDL的映射关系；</p>
+    <p>[0144]	(27)所述的服务运行平台将所述的WSDL发布为Web Service，并动态生成相应的 Servlet，同时将该Servlet注册到所述的面向服务的架构应用系统中，监听用户请求，包 括以下步骤：</p>
+    <p>[0145]	(a)所述的服务运行平台建立Servlet的缓存ServletHost ；</p>
+    <p>[0146]	(b)所述的服务运行平台新建HttpServlet，以Web Service的名称作为key放入 缓存 ServletHost 中；</p>
+    <p>[0147]	(c)所述的服务运行平台新建Servlet Filter，负责服务分发，并配置到应用中；</p>
+    <p>[0148]	(d)所述的服务运行平台接收到Http请求时，根据URL从缓存ServletHost中判 断是否已经注册，如果注册则把请求交由其Servlet进行处理，否则继续原有操作；</p>
+    <p>[0149]	(28)所述的服务运行平台将用户请求数据转换为业务数据类型，包括以下步骤：</p>
+    <p>[0150]	(a)所述的服务运行平台从Servlet中读取输入流，构造为SOAP Envelope ；</p>
+    <p>[0151]	(b)所述的服务运行平台从SOAP Envelope中分离出SOAP Header和SOAP Body 数据；</p>
+    <p>[0152]	(c)所述的服务运行平台查找服务对应构件的业务实现类以及调用的方法；</p>
+    <p>[0153]	(d)所述的服务运行平台把SOAP Body数据转换为业务实现类要求的数据类型；</p>
+    <p>[0154]	(e)所述的服务运行平台调用业务实现类；</p>
+    <p>[0155]	(29)所述的服务运行平台将业务逻辑返回数据转换为SOAP信息，包括以下步骤：</p>
+    <p>[0156]	(a)所述的服务运行平台将业务返回数据按WSDL的要求进行序列化；</p>
+    <p>[0157]	(b)所述的服务运行平台生成构件SOAP Envelope ；</p>
+    <p>[0158]	(c)所述的服务运行平台将业务数据序列化的结果添加到SOAP Envelope的Body 当中；</p>
+    <p>[0159]	(d)所述的服务运行平台生成Servlet中的输出流；</p>
+    <p>[0160]	(e)所述的服务运行平台将SOAP Envelope按byte数组的方式写到Servlet中输 出流当中。</p>
+    <p>[0161]	在实际使用当中，请参阅图1至图5所示，该SOA应用系统中实现Web Service的 快速发布的方法，包括图形化的服务装配平台和服务的运行平台。其中图形化的服务装配 平台包括图形化装配、编译、编译检查和快速创建一个新的构件实现；服务的运行平台包括 服务装配文件的加载、服务的动态注册、WSDL文件的自动生成以及监听用户的请求。</p>
+    <p>[0162]	所述的图形化装配包括以下步骤：</p>
+    <p>[0163]	(1)新建构件包；</p>
+    <p>[0164]	(2)在新建的构件包中，新建装配图文件；[0165]	(3)拖拽现有业务功能的实现到装配图中，将在装配图中生成一个构件。</p>
+    <p>[0166]	(4)为生成的构件添加一个或多个服务，并指定服务的接口描述；</p>
+    <p>[0167]	(5)根据需要为上述新建的服务添加Web Service绑定；</p>
+    <p>[0168]	(6)保存装配图文件，系统会对装配图文件进行编译和编译检查。</p>
+    <p>[0169]	完成服务装配后的装配图如图1所示。</p>
+    <p>[0170]	所述的服务的运行平台包括以下步骤：</p>
+    <p>[0171]	(1)遍历构件包；</p>
+    <p>[0172]	(2)查找构件包下所有的服务装配文件；</p>
+    <p>[0173]	(3)解析服务装配文件；</p>
+    <p>[0174]	(4)查找构件包下所有的Web Service类型扩展文件；</p>
+    <p>[0175]	(5)解析Web Service类型扩展文件aegis</p>
+    <p>[0176]	(6)根据构件的实现类，生成对应的WSDL ；</p>
+    <p>[0177]	(7)发布为Web Service，动态生成Servlet，并注册到系统，监听用户请求</p>
+    <p>[0178]	(8)用户请求数据转换为业务数据类型；</p>
+    <p>[0179]	(9)业务逻辑返回数据转换为SOAP信息。</p>
+    <p>[0180]	所述的构件包是指包含一定功能逻辑的物理单元，每个构件包作为一个最小的部 署单元部署到SOA运行系统环境中，构件包下包含实现业务功能的所有依赖资源，如：实现 业务功能的Java文件、WSDL文件、服务装配图文件等，构件包在物理上同一个文件夹对应。</p>
+    <p>[0181]	在拖拽现有业务功能的实现到装配图的过程中，系统将检查所拖拽的业务功能实 现中的每个方法的参数和返回值，在以下两种情况下，系统将弹出参数类型配置向导：</p>
+    <p>[0182]	(1)参数和返回值是List、Map等复杂数据类型；</p>
+    <p>[0183]	(2)参数和返回值是Java Bean，且Java Bean中含有List、Map等复杂类型数据 类型的属性；</p>
+    <p>[0184]	在弹出的向导中，可以对这些复杂类型进行配置，如图2所示；向导完成后，会将 这些配置保存到特定的配置文件中。通过向导，可以很容易完成对复杂数据类型的配置，从 而做到将含有复杂数据类型的现有业务功能快速发布成Web Service的能力。</p>
+    <p>[0185]	复杂数据类型的配置文件保存规则如下：</p>
+    <p>[0186]	(1)如果业务功能实现类的方法中含有List、Map，则这些参数的配置信息将保存 在构件包的META-INF目录下，文件名格式为：&lt; 服务的名称&gt;.aegis ；</p>
+    <p>[0187]	(2)如果业务功能实现类的方法参数是JavaBean，且JavaBean中含有List、Map 类型的属性，则会在Java Bean的同名包目录下创建一个与Java Bean同名，后缀名为 aegis _ JavaBean KSi：^ ；</p>
+    <p>[0188]	这些配置文件将在运行期生成WSDL的过程中被使用，以便正确的为这些复杂类 型生成XML Schema表示。</p>
+    <p>[0189]	所述的编译是指在保存装配图的过程中系统根据装配图的定义，自动生成一个符 合SCA规范的服务装配文件（composite文件)；</p>
+    <p>[0190]	所述的编译检查是指在保存装配图的过程中对装配图文件进行正确性检查，以便在开发期发现装配文件中存在的错误并及时通知用户进行修正，所做的编译检查包括：</p>
+    <p>[0191]	(1)构件的实现存不存在；[0192]	(2)构件的服务接口描述存不存在；</p>
+    <p>[0193]	(3)构件的实现是否实现了服务接口描述中定义的方法；</p>
+    <p>[0194]	所述的构件是指SCA规范中定义的构件（Component)，构件是可以复用的最小功 能单位，通常一个构件包含了服务定义、引用定义和构件的实现定义； </p>
+    <p>[0195]	所述的构件实现是指构件的具体功能实现，如Java实现类可以作为一个构件的 具体实现；根据不同的构件实现，可以将构件划分为不同的类型，如Java构件（具体实现 是Java类）、Spring构件（具体实现是Spring配置文件）等；</p>
+    <p>[0196]	所述的服务接口描述是指一种文件，这种文件是语言中立的，可以是Java文件、 WSDL文件或其它文件，它描述了服务中包含的业务方法，这些业务方法就是发布为Web Service后，SOA应用系统对外提供的业务方法；</p>
+    <p>[0197]	所述的快速创建一个新的构件实现是指图形化装配平台提供了根据装配图中构 件的定义，自动创建一个新的构件实现，该构件实现将根据构件的服务定义自动生成实现 的代码框架，通过以下两种方式可以快速创建一个新的构件实现：</p>
+    <p>[0198]	(1)装配图中选择一个构件，通过快捷键F4可以快速创建一个新的构件实现；</p>
+    <p>[0199]	(2)装配图中选择一个构件，通过右键菜单“新建构件实现”可以快速创建一个新 的构件实现；</p>
+    <p>[0200]	所述的服务运行平台，主要负责加载服务装配文件，并根据服务装配文件的定义 对外发布Web Service，主要步骤如下：</p>
+    <p>[0201]	(1)解析并加载服务装配文件（composite文件)；</p>
+    <p>[0202]	(2)根据服务装配文件的定义，自动向Web Service引擎中注册新的Web Service ；</p>
+    <p>[0203]	(3)通过特定的URL可以获取所注册的Web Service的描述文件（WSDL)；</p>
+    <p>[0204]	Composite文件是一种符合SCA规范的服务装配文件，在本发明中，使用该文件来 描述应用中的构件和服务，它是一种XM格式的文件。</p>
+    <p>[0205]	所述的遍历构件包包括以下步骤：</p>
+    <p>[0206]	(1)查找构件包所在的根路径，遍历所存在的所有构件包；</p>
+    <p>[0207]	(2)解析构件包的元数据，元数据信息位于构件包META-INF目录下的文件 MANIFEST. MF, MANIFEST. MF文件的内容按Java中MANIFEST的定义规则进行定义，格式如 下：</p>
+    <p>[0208]	Manifest-Version ：1.0</p>
+    <p>[0209]	Bundle-Description ：</p>
+    <p>[0210]	Bundle-Name :com. esb	# 构件包名称</p>
+    <p>[0211]	eos-webCtxPath :esb	# 构件包资源对应 web 路径</p>
+    <p>[0212]	Bundle-Vendor :companyName</p>
+    <p>[0213]	Bundle-SymbolicName :com. esb	# 构件包唯一标识</p>
+    <p>[0214]	Require-Bundle :com. eos. foundation # 依赖构件包标识</p>
+    <p>[0215]	Bundle-Version ：1. 0. 0	# 构件包版本号</p>
+    <p>[0216]	(3)按构件包的依赖关系，对构件包的进行排序，以便于构件包的加载；</p>
+    <p>[0217]	如图3所示，构件包A依赖构件包B，构件包B依赖构件包C，构件包D不依赖其它构件包，则形成的排序列表为：构件包D，构件包C，构件包B，构件包A。</p>
+    <p>[0218]	所述的查找构件包下所有的服务装配文件包括以下步骤：</p>
+    <p>[0219]	(1)对系统中排序的构件包列表进行遍历；</p>
+    <p>[0220]	(2)遍历构件包所在路径以及子路径下的所有文件，查找其中的服务装配文件。</p>
+    <p>[0221]	所述的解析服务装配文件包括以下步骤： [0222]	(1)利用XML解析器解析服务装配文件；</p>
+    <p>[0223]	(2)服务装配文件中对于结点Component生成构件的内存模型；</p>
+    <p>[0224]	(3)解析构件的服务，生成服务的内存模型；</p>
+    <p>[0225]	(4)解析构件的实现，生成实现的内存模型；</p>
+    <p>[0226]	(5)服务中解析添加的Web Service绑定，生成绑定的内存模型。</p>
+    <p>[0227]	所述的查找构件包下所有的Web Service类型扩展文件包括以下步骤：</p>
+    <p>[0228]	(1)对系统中排序的构件包列表遍历；</p>
+    <p>[0229]	(2)遍历构件包所在路径下的所有文件，查找Web Service类型扩展文件aegis。</p>
+    <p>[0230]	所述的解析Web Service类型扩展文件aegis包括以下步骤：</p>
+    <p>[0231]	(1)利用XML解析器解析Web Service类型扩展文件aegis ；</p>
+    <p>[0232]	(2)遍历其中所有Method结点，解析出方法的输入、输出参数的元数据信息；</p>
+    <p>[0233]	所述的根据构件的实现类，生成对应的WSDL包括以下步骤：</p>
+    <p>[0234]	(1)根据添加Web Service绑定的服务查找对应的构件；</p>
+    <p>[0235]	(2)根据构件的元数据查找构件的实现类；</p>
+    <p>[0236]	(3)根据服务的名称，查找服务对应的类型扩展aegis定义；</p>
+    <p>[0237]	(4)根据类的定义以及类中方法元数据的定义，生成针对此类的WSDL描述；</p>
+    <p>[0238]	(5)建立服务名称与服务生成WSDL的映射关系。</p>
+    <p>[0239]	所述的发布为Web Service，动态生成Servlet，并注册到系统，监听用户请求包括 以下步骤：</p>
+    <p>[0240]	(1)建立 Servlet 的缓存 ServletHost ；</p>
+    <p>[0241]	(2)新建HttpServlet，以 Web Service 的名称作为 key 放入缓存 ServletHost 中；</p>
+    <p>[0242]	(3)新建Servlet Filter，负责服务分发，并配置到应用中；</p>
+    <p>[0243]	(4)接收到Http请求时，根据URL从缓存ServletHost中判断是否已经注册，如果 注册则把请求交由其Servlet进行处理，否则继续原有操作。</p>
+    <p>[0244]	所述的用户请求数据转换为业务数据类型，调用业务逻辑包括以下步骤：</p>
+    <p>[0245]	(1)从Servlet中读取输入流，构造为SOAP Envelope ；</p>
+    <p>[0246]	(2)从 SOAPEnvelope 中分离出 SOAPHeader 和 SOAPBody 数据；</p>
+    <p>[0247]	(3)查找服务对应构件的业务实现类以及调用的方法；</p>
+    <p>[0248]	(4)把SOAP Body数据转换为业务实现类要求的数据类型；</p>
+    <p>[0249]	(5)调用业务实现类。</p>
+    <p>[0250]	所述的业务逻辑返回数据转换为SOAP信息，返回给用户包括以下步骤：</p>
+    <p>[0251]	(1)业务返回数据按WSDL的要求进行序列化；</p>
+    <p>[0252]	(2)构件 SOAPEnvelope ；</p>
+    <p>[0253]	(3)业务数据序列化的结果添加到SOAP Envelope的Body当中；[0254]	(4)生成Servlet中输出流；</p>
+    <p>[0255]	(5) SOAP Envelope 按 byte []方式写到 Servlet 中输出流当中。 [0256]	Web Service业务调用的流程参阅图4所示。</p>
+    <p>[0257]	采用了上述的SOA应用系统中Web Service的快速发布方法，使得开发以及发布 WebService变得异常简单，开发效率大大提高，同时通过图形化的开发以及发布方式，使得 用户对Web Service的细节不需要太多的了解，降低了学习和维护的成本。</p>
+    <p>[0258]	其中，在开发期：</p>
+    <p>[0259]	(1)新建构件包；</p>
+    <p>[0260]	(2)在构件中新建服务装配图文件，系统将自动打开该文件的可视化编辑器；</p>
+    <p>[0261]	(3)将现有业务功能实现装配为服务，包括以下步骤：</p>
+    <p>[0262]	a)从资源管理器中，拖拽现有业务功能的实现到可视化编辑器中；</p>
+    <p>[0263]	b)系统对业务功能实现中的方法进行逐一检查，检查方法的参数和返回值的类型 是否是 List、Map 禾口 Java Bean ；</p>
+    <p>[0264]	c)系统弹出服务装配向导，在向导中输入构件的名称、服务的名称，配置复杂数据 类型（List、Map)中存放的元素的具体类型；</p>
+    <p>[0265]	d)系统在服务装配图中生成一个构件，该构件包含了一个服务；</p>
+    <p>[0266]	(4)为要发布成Web Service的服务添加Web Service绑定；</p>
+    <p>[0267]	(5)保存服务装配图；系统将对服务装配图进行编译检查，以及时的发现装配图 中存在的错误；</p>
+    <p>[0268]	(6)编译检查通过后，系统将对服务装配图进行编译，在输出目录下生成符合SCA 规范的服务装配文件（composite文件）；</p>
+    <p>[0269]	(7)部署服务装配文件到服务器上。</p>
+    <p>[0270]	所述的服务的运行平台包括以下步骤：</p>
+    <p>[0271]	(1)遍历构件包，包括以下步骤：</p>
+    <p>[0272]	a)查找构件包所在的根路径，遍历所存在的所有构件包；</p>
+    <p>[0273]	b)解析构件包的元数据，元数据信息位于构件包META-INF目录下的文件 MANIFEST. MF, MANIFEST. MF文件的内容按Java中MANIFEST的定义规则进行定义，格式如 下：</p>
+    <p>[0274]	Manifest-Version ：1.0</p>
+    <p>[0275]	Bundle-Description ：</p>
+    <p>[0276]	Bundle-Name :com. esb	# 构件包名称</p>
+    <p>[0277]	eos-webCtxPath :esb	# 构件包资源对应 web 路径</p>
+    <p>[0278]	Bundle-Vendor :companyName</p>
+    <p>[0279]	Bundle-SymbolicName :com. esb	# 构件包唯一标识</p>
+    <p>[0280]	Require-Bundle :com. eos. foundation #依赖构件包标识</p>
+    <p>[0281]	Bundle-Version ：1. 0. 0	# 构件包版本号</p>
+    <p>[0282]	c)按构件包的依赖关系，对构件包的进行排序，以便于构件包的加载；</p>
+    <p>[0283]	再请参阅图3所示，构件包A依赖构件包B，构件包B依赖构件包C，构件包D不依 赖其它构件包，则形成的排序列表为：构件包D，构件包C，构件包B，构件包A。[0284]	(2)查找构件包下所有的服务装配文件，包括以下步骤：</p>
+    <p>[0285]	a)对系统中排序的构件包列表进行遍历；</p>
+    <p>[0286]	b)遍历 构件包所在路径以及子路径下的所有文件，查找其中的服务装配文件，文 件对应扩展名为compoiste。</p>
+    <p>[0287]	(3)解析服务装配文件，包括以下步骤：</p>
+    <p>[0288]	a)利用XM解析器解析服务装配文件；</p>
+    <p>[0289]	b)服务装配文件中对于结点Component生成构件的内存模型Component ；</p>
+    <p>[0290]	c)解析构件的服务，生成服务的内存模型Service ；</p>
+    <p>[0291]	d)解析构件的实现，生成实现的内存模型Implementation ；</p>
+    <p>[0292]	e)服务中解析添加的Web Service绑定，生成绑定的内存模型Binding，其类图如 图5所示。</p>
+    <p>[0293]	(4)查找构件包下所有的Web Service类型扩展文件，包括以下步骤：</p>
+    <p>[0294]	a)对系统中排序的构件包列表遍历；</p>
+    <p>[0295]	b)遍历构件包所在路径下的所有文件，查找Web Service类型扩展文件aegis。</p>
+    <p>[0296]	(5)解析Web Service类型扩展文件aegis，包括以下步骤：</p>
+    <p>[0297]	a)利用XML解析器解析Web Service类型扩展文件aegis ；</p>
+    <p>[0298]	b)遍历其中所有Method结点，解析出方法的输入、输出参数的元数据信息；</p>
+    <p>[0299]	(6)根据构件的实现类，生成对应的WSDL，包括以下步骤：</p>
+    <p>[0300]	a)根据添加Web Service绑定的服务查找对应的构件；</p>
+    <p>[0301]	b)根据构件的元数据查找构件的实现类；</p>
+    <p>[0302]	c)根据服务的名称，查找服务对应的类型扩展aegis定义；</p>
+    <p>[0303]	d)根据类的定义以及类中方法元数据的定义，生成针对此类的WSDL描述，默认生 成 WSDL	的样式为 document, literal wrapper ；</p>
+    <p>[0304]	e)建立服务名称与服务生成WSDL的映射关系。</p>
+    <p>[0305]	(7)发布为Web Service,动态生成Servlet，并注册到系统，监听用户请求，包括 以下步骤：</p>
+    <p>[0306]	a)建立 Servlet 的缓存 ServletHost ；</p>
+    <p>[0307]	b)新建 HttpServlet，以 Web Service 的名称作为 key 放入缓存 ServletHost 中；</p>
+    <p>[0308]	c)新建Servlet Filter，负责服务分发，并配置到应用中；</p>
+    <p>[0309]	d)接收到Http请求时，根据URL从缓存ServletHost中判断是否已经注册，如果 注册则把请求交由其Servlet进行处理，否则继续原有操作。</p>
+    <p>[0310]	(8)用户请求数据转换为业务数据类型，包括以下步骤：</p>
+    <p>[0311]	a)从Servlet中读取输入流，构造为SOAP Envelope ；</p>
+    <p>[0312]	b)从 SOAP Envelope 中分离出 SOAP Header 和 SOAP Body 数据；</p>
+    <p>[0313]	c)查找服务对应构件的业务实现类以及调用的方法；</p>
+    <p>[0314]	d)把SOAP Body数据转换为业务实现类要求的数据类型；</p>
+    <p>[0315]	e)调用业务实现类。</p>
+    <p>[0316]	(9)业务逻辑返回数据转换为SOAP信息，包括以下步骤：</p>
+    <p>[0317]	a)业务返回数据按WSDL的要求进行序列化；[0318]	b)构件 SOAP Envelope ； </p>
+    <p>[0319]	c)业务数据序列化的结果添加到SOAP Envelope的Body当中；</p>
+    <p>[0320]	d)生成Servlet中输出流；</p>
+    <p>[0321]	e) SOAP Envelope 按 byte 数组(byte[])方式写到 Servlet 中输出流当中。</p>
+    <p>[0322]	经过以上步骤，开发和发布Web Service功能全部完成，从中可以得出采用了该发 明的SOA应用系统中实现服务的快速发布方法，使得开发以及发布Web Service变得异常 简单，开发效率大大提高，同时通过图形化的开发以及发布方式，使得用户对Web Service 的细节不需要太多的了解，降低了学习和维护的成本，不再需要手工为各种不同的Web Service发布系统编写晦涩难懂、极易出错的服务配置文件；运用该系统可以快速、直观的 将现有的业务功能发布为Web服务，大大提高了应用系统间的集成效率。</p>
+    <p>[0323]	采用了上述的面向服务的架构应用系统中实现Web Service快速发布的方法，由 于其中在开发期提供一个可视化的Web Service装配工具，直观形象、快捷方便的生成Web Service装配文件；同时，在运行期能够根据Web Service装配文件的定义，自动对外发布 一个新的WebService，从而达到动态、快速发布Web Service的能力，极大的提高了 SOA应 用系统之间的集成效率，从而不再需要手工为各种不同的Web Service发布系统编写晦涩 难懂、极易出错的服务配置文件；同时运用本发明的方法可以快速、直观的将现有的业务功 能发布为Web服务，大大提高了应用系统间的集成效率，而且工作性能稳定可靠、适用范围 较为广泛。</p>
+    <p>[0324]	在此说明书中，本发明已参照其特定的实施例作了描述。但是，很显然仍可以作出 各种修改和变换而不背离本发明的精神和范围。因此，说明书和附图应被认为是说明性的 而非限制性的。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101763428A?cl=zh">CN101763428A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年1月4日</td><td class="patent-data-table-td patent-date-value">2010年6月30日</td><td class="patent-data-table-td ">山东浪潮齐鲁软件产业股份有限公司</td><td class="patent-data-table-td ">一种SOA对web服务的注册存储管理应用系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101794226A?cl=zh">CN101794226A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年3月8日</td><td class="patent-data-table-td patent-date-value">2010年8月4日</td><td class="patent-data-table-td ">山东大学</td><td class="patent-data-table-td ">一种适应多业务抽象层次的服务化软件构造方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101853156A?cl=zh">CN101853156A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年5月12日</td><td class="patent-data-table-td patent-date-value">2010年10月6日</td><td class="patent-data-table-td ">上海普元信息技术股份有限公司</td><td class="patent-data-table-td ">构件化软件系统中实现Web Service调用的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US7188158">US7188158</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2000年7月15日</td><td class="patent-data-table-td patent-date-value">2007年3月6日</td><td class="patent-data-table-td ">Hewlett-Packard Development Company, L.P.</td><td class="patent-data-table-td ">System and method for component-based software development</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102279754A?cl=zh">CN102279754A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月19日</td><td class="patent-data-table-td patent-date-value">2011年12月14日</td><td class="patent-data-table-td ">山东中创软件商用中间件股份有限公司</td><td class="patent-data-table-td ">一种业务处理执行语言流程部署方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102291464A?cl=zh">CN102291464A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月29日</td><td class="patent-data-table-td patent-date-value">2011年12月21日</td><td class="patent-data-table-td ">上海普元信息技术股份有限公司</td><td class="patent-data-table-td ">BPM中业务流程动态生成Web Service的系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102291464B?cl=zh">CN102291464B</a></td><td class="patent-data-table-td patent-date-value">2011年8月29日</td><td class="patent-data-table-td patent-date-value">2013年11月27日</td><td class="patent-data-table-td ">普元信息技术股份有限公司</td><td class="patent-data-table-td ">BPM中业务流程动态生成Web Service的系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102323884A?cl=zh">CN102323884A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月7日</td><td class="patent-data-table-td patent-date-value">2012年1月18日</td><td class="patent-data-table-td ">山东中创软件商用中间件股份有限公司</td><td class="patent-data-table-td ">一种多Web服务发布的方法及Web服务容器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102323884B?cl=zh">CN102323884B</a></td><td class="patent-data-table-td patent-date-value">2011年9月7日</td><td class="patent-data-table-td patent-date-value">2014年7月9日</td><td class="patent-data-table-td ">山东中创软件工程股份有限公司</td><td class="patent-data-table-td ">一种多Web服务发布的方法及Web服务装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102541565A?cl=zh">CN102541565A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月31日</td><td class="patent-data-table-td patent-date-value">2012年7月4日</td><td class="patent-data-table-td ">深圳中兴网信科技有限公司</td><td class="patent-data-table-td ">一种数据对象与xml等效互转的方法与装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102624766A?cl=zh">CN102624766A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月31日</td><td class="patent-data-table-td patent-date-value">2012年8月1日</td><td class="patent-data-table-td ">无锡华润上华半导体有限公司</td><td class="patent-data-table-td ">系统集成方法及其装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102624766B?cl=zh">CN102624766B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月31日</td><td class="patent-data-table-td patent-date-value">2014年11月5日</td><td class="patent-data-table-td ">无锡华润上华半导体有限公司</td><td class="patent-data-table-td ">系统集成方法及其装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102811257A?cl=zh">CN102811257A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月27日</td><td class="patent-data-table-td patent-date-value">2012年12月5日</td><td class="patent-data-table-td ">南京邮电大学</td><td class="patent-data-table-td ">一种网络服务自动发布和组合方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102811257B?cl=zh">CN102811257B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月27日</td><td class="patent-data-table-td patent-date-value">2015年6月17日</td><td class="patent-data-table-td ">南京邮电大学</td><td class="patent-data-table-td ">一种网络服务自动发布和组合方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102982494A?cl=zh">CN102982494A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月31日</td><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">长江航道局</td><td class="patent-data-table-td ">一种基于电子航道图及水位数据的航道水深信息生成方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102982494B?cl=zh">CN102982494B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月31日</td><td class="patent-data-table-td patent-date-value">2015年8月19日</td><td class="patent-data-table-td ">长江航道局</td><td class="patent-data-table-td ">一种基于电子航道图及水位数据的航道水深信息生成方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=VOaNBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=VOaNBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009440000">G06F9/44</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=VOaNBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009445000">G06F9/445</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年1月26日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年3月23日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年1月23日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年11月20日</td><td class="patent-data-table-td ">C56</td><td class="patent-data-table-td ">Change in the name or address of the patentee</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Owner name: </span><span class="nested-value">PRIMETON INFORMATION TECHNOLOGY CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">FORMER NAME: PRIMETON TECHNOLOGIES LTD.</span></div></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/e82d5c2eae26732dcaef/CN101957758A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%AE%9E.pdf?id=VOaNBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U35qTj__AP_I-ED7-XA7_aKfdEOmw"},"sample_url":"https://www.google.com/patents/reader?id=VOaNBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

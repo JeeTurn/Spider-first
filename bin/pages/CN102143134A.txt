@@ -1,0 +1,390 @@
+<!DOCTYPE html><html><head><title>专利 CN102143134A - 分布式身份认证方法、装置与系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="分布式身份认证方法、装置与系统"><meta name="DC.contributor" content="王占东" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2010-8-5" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例提供一种分布式身份认证方法、装置与系统，该方法包括：UA向应用依赖方RP发送访问请求；接收RP返回的包含了随机数的认证质询消息；采用私钥PK对随机数进行加密，生成加密后的随机数；向RP发送携带加密后的随机数的认证请求消息，使RP对加密后的随机数进行解密，并比较解密后的随机数与认证质询消息中的随机数，若两者一致则认证通过。由于RP验证用户身份所需的公钥信息可由用户标识UUL直接或者间接获得，所以RP对用户身份验证与身份提供方IDP无关，从而实现分布式身份认证。该技术方案能提供更安全、简便、高效的分布式身份认证，使用户身份更加方便携带，用户使用一个身份就能访问所有支持本发明认证方法的应用网站。"><meta name="DC.date" content="2011-8-3"><meta name="DC.relation" content="CN:101552986:A" scheme="references"><meta name="DC.relation" content="CN:101674304:A" scheme="references"><meta name="DC.relation" content="CN:1805341:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102143134:A"><meta name="citation_patent_application_number" content="CN:201010251922"><link rel="canonical" href="https://www.google.com/patents/CN102143134A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102143134A?cl=zh"/><meta name="title" content="专利 CN102143134A - 分布式身份认证方法、装置与系统"/><meta name="description" content="本发明实施例提供一种分布式身份认证方法、装置与系统，该方法包括：UA向应用依赖方RP发送访问请求；接收RP返回的包含了随机数的认证质询消息；采用私钥PK对随机数进行加密，生成加密后的随机数；向RP发送携带加密后的随机数的认证请求消息，使RP对加密后的随机数进行解密，并比较解密后的随机数与认证质询消息中的随机数，若两者一致则认证通过。由于RP验证用户身份所需的公钥信息可由用户标识UUL直接或者间接获得，所以RP对用户身份验证与身份提供方IDP无关，从而实现分布式身份认证。该技术方案能提供更安全、简便、高效的分布式身份认证，使用户身份更加方便携带，用户使用一个身份就能访问所有支持本发明认证方法的应用网站。"/><meta property="og:title" content="专利 CN102143134A - 分布式身份认证方法、装置与系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102143134A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102143134A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=HtBxBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102143134A&amp;usg=AFQjCNEvZVuIC5muGhPfCIeUcObxrYmtlA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/0dbddad6dbe2bbd3d05b/CN102143134A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/0dbddad6dbe2bbd3d05b/CN102143134A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102143134A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102143134A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102143134A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102143134B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102143134A?cl=zh" style="display:none"><span itemprop="description">本发明实施例提供一种分布式身份认证方法、装置与系统，该方法包括：UA向应用依赖方RP发送访问请求；接收RP返回的包含了随机数的认证质询消息；采用私钥PK对随机数进行加密，生成加密后的随机数；向RP发送携带加密后的 ...</span><span itemprop="url">https://www.google.com/patents/CN102143134A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102143134A - 分布式身份认证方法、装置与系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102143134A - 分布式身份认证方法、装置与系统" title="专利 CN102143134A - 分布式身份认证方法、装置与系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102143134 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010251922</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年8月3日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年8月5日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年8月5日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102143134B?hl=zh-CN&amp;cl=zh">CN102143134B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010251922.1, </span><span class="patent-bibdata-value">CN 102143134 A, </span><span class="patent-bibdata-value">CN 102143134A, </span><span class="patent-bibdata-value">CN 201010251922, </span><span class="patent-bibdata-value">CN-A-102143134, </span><span class="patent-bibdata-value">CN102143134 A, </span><span class="patent-bibdata-value">CN102143134A, </span><span class="patent-bibdata-value">CN201010251922, </span><span class="patent-bibdata-value">CN201010251922.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%E5%8D%A0%E4%B8%9C%22">王占东</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102143134A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102143134A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102143134A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (8),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=HtBxBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010251922&amp;usg=AFQjCNE-BI78gxoOIE2nI1dsQ9cCGeL5kA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=HtBxBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102143134A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFjMSjZ5zDF4nz7gCL60iT9mFdTTw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT104338477" lang="ZH" load-source="patent-office">分布式身份认证方法、装置与系统</invention-title>
+      </span><br><span class="patent-number">CN 102143134 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA86241830" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例提供一种分布式身份认证方法、装置与系统，该方法包括：UA向应用依赖方RP发送访问请求；接收RP返回的包含了随机数的认证质询消息；采用私钥PK对随机数进行加密，生成加密后的随机数；向RP发送携带加密后的随机数的认证请求消息，使RP对加密后的随机数进行解密，并比较解密后的随机数与认证质询消息中的随机数，若两者一致则认证通过。由于RP验证用户身份所需的公钥信息可由用户标识UUL直接或者间接获得，所以RP对用户身份验证与身份提供方IDP无关，从而实现分布式身份认证。该技术方案能提供更安全、简便、高效的分布式身份认证，使用户身份更加方便携带，用户使用一个身份就能访问所有支持本发明认证方法的应用网站。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(27)</span></span></div><div class="patent-text"><div mxw-id="PCLM37839354" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种分布式身份认证方法，其特征在于，所述方法包括： 向应用依赖方RP发送访问请求；接收所述RP返回的包含了随机数的认证质询消息；采用私钥Hi对所述随机数进行加密，生成加密后的随机数；向所述RP发送认证请求消息，所述认证请求消息中携带所述加密后的随机数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，在所述访问请求的HTTP From Header字段中携带统一用户标识UUL ；或者，在所述认 证请求消息的HTTP Authorization Header字段中携带所述UUL。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的方法，其特征在于，所述认证质询消息包括：HTTP	401 Unauthorized消息；所述认证质询消息中的Wffff-Authentication Header字段中包含： 所述分布式身份认证方法的标识、至少一个非对称加密算法参数和认证所需的随机数 Nonce ；所述采用私钥1&#190;对所述随机数进行加密包括：解析所述认证质询消息以得到所述分 布式身份认证方法的标识，从所述加密算法参数中选择一个非对称加密算法，采用所述私 钥1&#190;对所述随机数采用选择的非对称加密算法进行加密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的方法，其特征在于，所述认证质询消息中还包含用于传统表 单认证的HTML表单；所述方法还包括：同时提供传统表单认证和所述分布式身份认证方式供用户选择； 当用户选择所述传统表单认证时，接收用户的表单输入，将所述表单输入的身份信息 提交所述RP进行认证；当用户选择所述分布式身份认证时，接收用户选择的用户身份，获得与所述用户身份 对应的统一用户标识UUL以及用户私钥PK，将所述UUL以及加密后的随机数提供给所述RP 进行认证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求2所述的方法，其特征在于，所述方法还包括：提供自动认证的设置， 接收用户设置的默认UUL;向所述RP发送认证请求消息包括：向所述RP发送携带有所述默认UUL的认证请求消</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2所述的方法，其特征在于，所述方法还包括： 在接收到所述认证质询消息后，呈现认证快捷按键；响应用户对该快捷按键的点击操作，呈现用于认证的UUL列表； 向所述RP发送认证请求消息包括：响应用户对所述UUL列表的选择操作，向所述RP发 送包含所述用户选择UUL的认证请求消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1所述的方法，其特征在于，所述方法还包括：通过加密信道SSL从用户身份提供方IDP获取用户私钥文件，或者从包含所述私钥文 件的存储介质中获取用户私钥文件，所述私钥文件中包含了私钥I3K和统一用户标识UUL。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.	一种分布式身份认证方法，其特征在于，所述方法包括：接收用户代理UA发送的访问请求，根据所述访问请求向所述UA返回包含随机数的认 证质询消息；接收所述UA发送的认证请求消息，所述认证请求消息中包含所述UA采用私钥1&#190;对所述随机数加密后的随机数；从所述访问请求或所述认证请求消息中获得统一用户标识UUL ； 根据所述UUL从用户身份提供商IDP处获得包含了公钥信息的用户证书Cert ； 采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数与所述认证质询 消息中的随机数进行比较，如果两者一致则认证通过。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的方法，其特征在于，所述认证质询消息包括：HTTP	401 Unauthorized消息；在所述认证质询消息中的WffW-Authentication Header中包含非对称 加密算法参数，以供所述UA选择；UA提交的所述认证请求中包含了 UA选择的非对称加密算法；根据所述UA选择的非对 称加密算法，采用所述公钥对加密后的随机数进行解密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求8所述的方法，其特征在于，所述UUL为在所述IDP上注册的用户身 份标识ID ；根据所述UUL从用户身份提供商IDP处获得包含了公钥信息的用户证书Cert包括：从 所述IDP中获得与所述用户身份标识ID对应的Cert。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求8所述的方法，其特征在于，所述UUL为包含所述IDP的服务描述信 息的URL地址；所述服务描述信息包括所述IDP的地址和所述用户在所述IDP上注册的用 户身份标识ID ；根据所述UUL从用户身份提供商IDP处获得包含了公钥信息的用户证书Cert还包括： 从所述UUL对应的URL地址中获得IDP的服务描述信息，所述IDP的服务描述信息包 括所述IDP的地址和所述用户在所述IDP上注册的用户身份标识ID ； 从所述IDP中获得与所述用户身份标识ID对应的Cert。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.	&#8212;种分布式身份认证方法，其特征在于，所述方法包括：产生包含公钥信息的用户证书Cert和私钥文件，提供所述私钥文件的分发机制，使用 户代理UA通过所述分发机制获取所述私钥文件；接收应用依赖方RP的证书获取请求，所述证书获取请求中包含已注册的用户身份标 识ID ；向所述RP返回与所述用户身份标识ID对应的包含了所述公钥信息的用户证书Cert。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求12所述的方法，其特征在于，所述提供所述私钥文件的分发机制，使 用户代理UA通过所述分发机制获取所述私钥文件包括：提供可供下载的私钥文件，使用户代理UA下载所述私钥文件并安装于本地；或者 将所述私钥文件存储于USB存储设备，使用户代理UA通过插接所述USB设备获得所述 私钥文件。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.	一种分布式身份认证装置，其特征在于，所述装置包括： 访问请求单元，用于向应用依赖方RP发送访问请求；认证质询接收单元，用于接收所述RP返回的包含了随机数的认证质询消息； 加密单元，用于采用私钥Hi对所述随机数进行加密，生成加密后的随机数； 认证请求单元，用于向所述RP发送认证请求消息，所述认证请求消息中携带所述加密 后的随机数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的装置，其特征在于，所述访问请求单元，用于在所述访问请求的HTTP From Header字段中携带统一用户标 识UUL，向应用依赖方RP发送包含所述UUL的访问请求；或者，所述认证请求单元，用于在所述认证请求消息的HTTP Authorization Header字段中 携带所述UUL，向应用依赖方RP发送包含所述UUL的访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求14所述的装置，其特征在于，所述认证质询消息包括：HTTP	401 Unauthorized消息；所述认证质询消息中的Wffff-Authentication Header字段中包含： 所述分布式身份认证方法的标识、至少一个非对称加密算法参数和认证所需的随机数 Nonce ；所述加密单元，具体用于解析所述认证质询消息以得到所述分布式身份认证方法的标 识，从所述加密算法参数中选择一个非对称加密算法，采用所述私钥1&#190;对所述随机数采用 选择的非对称加密算法进行加密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求15所述的装置，其特征在于，所述认证质询消息中还包含用于传统 表单认证的HTML表单；所述装置还包括：界面显示单元，用于同时提供传统表单认证和所述分布式身份认证方式供用户选择；认证选择单元，用于当用户选择所述传统表单认证时，接收用户的表单输入，将所述表 单输入的身份信息提交所述RP进行认证；当用户选择所述分布式身份认证时，接收用户选 择的用户身份，获得与所述用户身份对应的统一用户标识UUL以及用户私钥1&#190;，将所述UUL 对应的身份信息以及加密后的随机数提供给所述RP进行认证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求15所述的装置，其特征在于，所述装置还包括：设置单元，用于提供自动认证的设置，接收用户设置的默认UUL;所述认证请求单元，用于向所述RP发送携带有所述默认UUL的认证请求消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求18所述的装置，其特征在于，所述界面显示单元，还用于在接收到所述认证质询消息后，呈现认证快捷按键；响应用 户对该快捷按键的点击操作，呈现用于认证的UUL列表；所述认证请求单元，用于响应用户对所述UUL列表的选择操作，向所述RP发送包含所 述用户选择UUL的认证请求消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求14所述的装置，其特征在于，所述装置还包括：私钥获取单元，用于通过加密信道SSL从用户身份提供方IDP获取用户私钥文件，或者 从包含所述私钥文件的存储介质中获取用户私钥文件，所述私钥文件中包含了私钥Hi和 统一用户标识UUL。</div>
+    </div>
+    </div> <div class="claim"> <div num="21" class="claim">
+      <div class="claim-text">21.	&#8212;种分布式身份认证装置，其特征在于，所述装置包括：认证质询发送单元，用于接收用户代理UA发送的访问请求，根据所述访问请求向所述 UA返回包含随机数的认证质询消息；认证请求接收单元，用于接收所述UA发送的认证请求消息，所述认证请求消息中包含 所述UA采用私钥1&#190;对所述随机数加密后的随机数；用户标识获取单元，用于从所述访问请求或所述认证请求消息中获得统一用户标识UUL ；用户证书获取单元，根据所述UUL从用户身份提供商IDP处获得包含了公钥信息的用 户证书Cert ；认证单元，用于采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数 与所述认证质询消息中的随机数进行比较，如果两者一致则认证通过。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求21所述的装置，其特征在于，所述认证质询消息包括：HTTP	401 Unauthorized消息；在所述认证质询消息中的WffW-Authentication Header中包含非对称 加密算法参数，以供所述UA选择；所述UA提交的认证请求中包含了 UA选择的非对称加密 算法；所述认证单元包括：解密单元，用于根据所述UA选择的非对称加密算法，采用所述公钥对加密后的随机数 进行解密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求21所述的装置，其特征在于，所述UUL为在所述IDP上注册的用户身 份标识ID ；用户证书获取单元，用于从所述IDP中获得与所述用户身份标识ID对应的Cert。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求21所述的装置，其特征在于，所述UUL为包含所述IDP的服务描述信 息的URL地址；所述服务描述信息包括所述IDP的地址和所述用户在所述IDP上注册的用 户身份标识ID ；所述用户证书获取单元，用于从所述UUL对应的URL地址中获得IDP的服务描述信息， 所述IDP的服务描述信息包括所述IDP的地址和所述用户在所述IDP上注册的用户身份标 识ID ；从所述IDP中获得与所述用户身份标识ID对应的Cert。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25.	&#8212;种分布式身份认证装置，其特征在于，所述装置包括：认证信息提供单元，用于产生包含公钥信息的用户证书Cert和私钥文件，提供所述私 钥文件的分发机制，使用户代理UA通过所述分发机制获取所述私钥文件；证书获取请求接收单元，用于接收应用依赖方RP的证书获取请求，所述证书获取请求 中包含已注册的用户身份标识ID ；证书发送单元，用于向所述RP返回与所述用户身份标识ID对应的包含了所述公钥信 息的用户证书Cert。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.根据权利要求25所述的装置，其特征在于，所述认证信息提供单元，用于提供可供下载的私钥文件，使用户代理UA下载所述私钥 文件并安装于本地；或者将所述私钥文件存储于USB存储设备，使用户代理UA通过插接所 述USB设备获得所述私钥文件。</div>
+    </div>
+    </div> <div class="claim"> <div num="27" class="claim">
+      <div class="claim-text">27.	&#8212;种分布式身份认证系统，其特征在于，所述系统包括：用户身份提供方IDP、用户 代理UA，以及应用依赖方RP;所述IDP，用于产生包含公钥信息的用户证书Cert和私钥文件，提供所述私钥文件的 分发机制，使用户代理UA通过所述分发机制获取所述私钥文件；接收应用依赖方RP的证书 获取请求，所述证书获取请求中包含已注册的用户身份标识ID ；向所述RP返回与所述用户 身份标识ID对应的包含了所述公钥信息的用户证书Cert ；所述RP，用于接收用户代理UA发送的访问请求，根据所述访问请求向所述UA返回包 含随机数的认证质询消息；接收所述UA发送的认证请求消息，所述认证请求消息中包含所 述UA采用私钥1&#190;对所述随机数加密后的随机数；从所述访问请求或所述认证请求消息中 获得统一用户标识UUL ；根据所述UUL从用户身份提供商IDP处获得包含了公钥信息的用 户证书Cert ；采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数与所述认证质询消息中的随机数进行比较，如果两者一致则认证通过。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES43418394" lang="ZH" load-source="patent-office" class="description">
+    <p>分布式身份认证方法、装置与系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信技术领域，具体涉及一种分布式身份认证方法、装置与系统。 背景技术</p>
+    <p>[0002]	随着TOB2.0技术以及社交网络平台技术的发展，用户以及应用之间的身份认证 问题将成为最重要的问题之一。现有技术一般采用中心化（Centralized)的认证方式，即， 用户访问每个网站都会经历账户注册、身份认证等过程。这些分散的身份注册和认证功能 无论对应用网站的发展还是用户体验都是一种潜在的阻碍。这种认证方式存在一些缺陷和 不足，主要包括：</p>
+    <p>[0003]	1、归属不同网络社群的用户不能进行有效的交流；</p>
+    <p>[0004]	2、用户的身份和用户数据在用户控制之下不能完全开放；</p>
+    <p>[0005]	3、应用不能方便的获得用户身份和用户数据；</p>
+    <p>[0006]	4、用户体验比较差，用户为了和不同网络的用户交往而建立并维护多个账号身 份。</p>
+    <p>[0007]	一种中心化的认证方式为PKI (Public Key hfrastructure，公钥基础设施），PKI 是通过使用公开密钥技术和数字证书来确保系统信息安全并负责验证数字证书持有者身 份的一种体系。PKI采用的是中心授信和层级结构的信任推导机制，各参与方都信任同一 CA (Certificate Authority，认证中心），由该CA来核对和验证各参与方的身份，也可由上 级CA通过签名的方式对下级CA进行授信，这样，各个参与方都通过信任同一个根证书而建 立起来信任链和信任关系。</p>
+    <p>[0008]	由于PKI是一种中心化（Centralized)的认证方式，身份的签发是由CA来完成， 证书的分发由用户完成，其中，签是签署，即用CA的私钥对证书进行签名；发指分发，即下 载或提供存储介质。证书中包含有用户的身份标识，用户身份标识是一种非全局、非统一的 用户标识。这种情况下，用户标识是否被伪造和篡改只能通过用户对签发证书的CA的信任 来确定，而通常情况下，一般用户还是很难清楚到底哪些CA签发的证书是可以信任的。因 此，PKI认证技术存在如下局限：</p>
+    <p>[0009]	1、因为没有规范全局的证书访问机制，用户证书不具有可访问性，因此证书的分 发和获取都非常的困难；</p>
+    <p>[0010]	2、采用层级结构的信任推导机制，来保障用户标识的唯一性及合法性，不能构成 一个自由开放的用户标识提供体系；</p>
+    <p>[0011]	3、用户信息不容易附着和获得，因为用户信息附带在用户证书中，证书中所附着 的用户信息是有限而且难于变化的。</p>
+    <p>[0012]	一种分布式身份认证技术是 YADIS(Yet Another Decentralized Identity Interoperability System，一种分布式身份互操作体系）技术。Yadis制定了一些规范用 于支持：</p>
+    <p>[0013]	1、可以用于多种网络服务的身份标识，该标识可以代表一个人或者是一个网络实体。身份标识使用标准语法和规范的名域空间。</p>
+    <p>[0014]	2、用于描述身份标识所能提供的服务的一整套语法，以及语素定义。</p>
+    <p>[0015]	3、通过该身份标识可以获得描述该标识的XRDS (extensible Resource Descriptor kquence，可扩展资源描述序列）文档，该文档用于描述服务类型和入口地址 的映射关系。</p>
+    <p>[0016]	YADIS主要以URL作为身份标识ID，通过该ID可以发现捆绑在该ID上的服务。具 体地，YADIS标识是一个可访问标识，通过该标识可以获得XRDS文档，XRDS文档可以描述服 务类型和服务地址URI的映射，其中服务是一些能力集。例如：可以通过XRDS文档的描述 发现该用户的Blog是否提供Pingback服务以及提供服务的Pingback地址，这样就可以在 自己的Blog上回复该用户的日志。</p>
+    <p>[0017]	XRDS文档中包含了很多的服务条目，每个条目最主要包含两个信息，一个是服务 类型，一个是服务提供入口地址URI。服务类型代表服务消费方和服务提供方双方必须遵从 的协议；入口地址意指消费方通过使用服务类型所规定的协议访问该地址，可以获得所期 望的结果和信息。基于以上的规范和协议，可以使得身份标识上所描述和提供的多种服务 可以很好的共存和互操作。</p>
+    <p>[0018]	当一个用户提供了一个^dis ID给应用网站Relying Party，应用网站将通过检 索XRDS文档去发现该^dis ID提供了哪些服务。例如“Flickr”网站为用户提供照片服 务，这样可以在该用户的ID所对应的XRDS文档中加入照片分享的服务描述，这样该用户的 朋友就可以给该用户分享照片了。</p>
+    <p>[0019]	Yadis是一个High Level的协议和规范，它规定了如何去发现一个^dis ID上所 提供的服务和信息，但是具体的服务、协议和信息内容等规范不在^dis的规范范畴，而是 由扩展协议规定具体的服务。</p>
+    <p>[0020]	另一种分布式身份认证技术是OpenID技术，OpenID就是基于^dis的一个实现。</p>
+    <p>[0021]	OpenID是目前为止应用最为广泛的去中心化（Decentralized)的分布式认证服 务，目前很多大的ICP (Internet Content Provider，因特网内容提供商）都提供了 OpenID 服务以及对OpenID认证的支持，用户可以在OpenID服务提供商处申请一个OpenID，当然如 果没有严格的身份审查，也可以申请多个，然后就可以在支持OpenID登录的应用网站使用 OpenID进行登录并使用该应用网站提供的服务，OpenID认证不需要繁琐的用户注册过程， 也不要用户记住那么多的账号和密码。</p>
+    <p>[0022]	OpenID认证的相关术语如下：</p>
+    <p>[0023]	(I)OpenID Provider，简称OP :0penID提供者，即提供OpenID注册的服务商，对用 户身份鉴权。</p>
+    <p>[0024]	(2)Relying Party ：应用依赖方，简称RP，也就是用户要访问的网站，RP需要通过 OP鉴权终端用户的身份。</p>
+    <p>[0025]	(3) End User ：终端用户。</p>
+    <p>[0026]	(4) Identifier =OpenID 的具体标识，可以是一个 HTTP、HTTPS 或者 XRI (Extensible Resource Identifier,可扩展的资源标识）。</p>
+    <p>[0027]	(5Wser-Agent ：用户浏览器。</p>
+    <p>[0028]	OpenID的一个典型的应用场景就是：当终端用户登录一个支持OpenID的网站RP时，该用户选择了以OpenID的方式登录该网站，OpenID是该用户在另一个网站OP注册的一 个URL。RP根据用户提供的OpenID去发现0P，然后请求该OP对该用户身份进行鉴权。OP 收到RP请求后，会要求用户登录OP认证页面进行鉴权，鉴权通过后，OP会提醒该用户是否 容许外部网站对该用户鉴权。如果用户同意后，OP将鉴权结果返回给RP。</p>
+    <p>[0029]	下面就OpenID的认证流程进行简要的介绍，图1就是OpenID的认证流程：</p>
+    <p>[0030]	S101、终端用户请求登录RP网站，用户选择了以OpenID方式来登录；</p>
+    <p>[0031]	S102、RP将OpenId的登录界面以表单Http Form形式返回给终端用户；</p>
+    <p>[0032]	S103、终端用户以OpenID登录RP网站；</p>
+    <p>[0033]	S104、RP网站对用户的OpenID进行标准化，确定OpenID的具体格式，如XRI格式 或者是HTTP格式等等；</p>
+    <p>[0034]	S105、RP解析OpenID，根据解析结果发现OP ；如果OpenId是)(RI，就采用XRI解 析，如果是URL，则用Yadis协议解析，若Yadis解析失败，则用Http发现；</p>
+    <p>[0035]	S106、RP跟OP建立一个关联；两者之间可以建立一个安全通道，用于传输信息并 降低交互次数；</p>
+    <p>[0036]	S107、OP处理RP的关联请求；</p>
+    <p>[0037]	S108、RP请求OP对用户身份进行鉴权；</p>
+    <p>[0038]	S109、OP对用户鉴权，请求用户进行登录认证；</p>
+    <p>[0039]	S110、用户登录 0P;</p>
+    <p>[0040]	SllUOP将鉴权结果返回给RP ；</p>
+    <p>[0041]	Sl 12、RP对OP的结果进行分析；</p>
+    <p>[0042]	S113、RP分析后，如用户合法，则返回用户鉴权成功，可以使用RP服务。</p>
+    <p>[0043]	OpenID技术存在一些缺陷和影响用户体验的地方：</p>
+    <p>[0044]	第一类缺陷、OpenID通过表单触发（S102)，用户需要在应用网站提供的表 单中填入OpenID标识来触发OpenID认证过程，这样就需要一个用户干预（end-user intervention)的过程，用户必须填入表单项。虽然也可以使用浏览器插件实现自动表单填 充，但是，遗留的问题是：</p>
+    <p>[0045]	1、表单内容有限，不能提供认证方法及加密算法协商。</p>
+    <p>[0046]	2、不能提供认证方法上的一些参数选项。</p>
+    <p>[0047]	3、不能很好的规范化表单的内容，所以对规范的制定和规范的遵从都存在影响。</p>
+    <p>[0048]	第二类缺陷、OpenID通过浏览器跳转方式在应用网站与OP之间协商认证的签名 Token (Si 11和S112)，而认证的主体由OpenID的OP完成，也就是说由OP完成对用户身份 的确认，然后通过浏览器中转的方式，传递一个签名的Token给应用网站，应用网站通过 Token完成对用户的认证过程，这种方式存在以下一些问题：</p>
+    <p>[0049]	1、通过浏览器跳转方式实现用户认证，其实现复杂、效率低。</p>
+    <p>[0050]	2、用户在应用网站上进行OpenID认证，又必须到跳转到OP进行身份认证，用户干 预环节多，用户操作麻烦。</p>
+    <p>[0051]	3、通过应用网站跳转到OP认证的方式易使用户信息被钓鱼（Phishing)网站获 得、安全性较低。发明内容</p>
+    <p>[0052]	本发明实施例提供一种分布式身份认证方法、装置与系统，解决了现有的分布式 认证方式所存在的上述问题，提供了一种更安全、更简便、更高效的分布式认证方式。</p>
+    <p>[0053]	本发明实施例提供一种分布式身份认证方法，所述方法包括：向应用依赖方RP发 送访问请求；接收所述RP返回的包含了随机数的认证质询消息；采用私钥1&#190;对所述随机 数进行加密，生成加密后的随机数；向所述RP发送认证请求消息，所述认证请求消息中携 带所述加密后的随机数。</p>
+    <p>[0054]	本发明实施例还提供一种分布式身份认证方法，所述方法包括：接收用户代理UA 发送的访问请求，根据所述访问请求向所述UA返回包含随机数的认证质询消息；接收所述 UA发送的认证请求消息，所述认证请求消息中包含所述UA采用私钥1&#190;对所述随机数加密 后的随机数；从所述访问请求或所述认证请求消息中获得统一用户标识UUL ；根据所述UUL 从用户身份提供商IDP处获得包含了公钥信息的用户证书Cert ；采用所述公钥对所述加密 后的随机数进行解密，并将解密后的随机数与所述认证质询消息中的随机数进行比较，如 果两者一致则认证通过。</p>
+    <p>[0055]	本发明实施例还提供一种分布式身份认证方法，所述方法包括：产生包含公钥信 息的用户证书Cert和私钥文件，提供所述私钥文件的分发机制，使用户代理UA通过所述分 发机制获取所述私钥文件；接收应用依赖方RP的证书获取请求，所述证书获取请求中包含 已注册的用户身份标识ID ；向所述RP返回与所述用户身份标识ID对应的包含了所述公钥 信息的用户证书Cert。</p>
+    <p>[0056]	本发明实施例还提供一种分布式身份认证装置，所述装置包括：访问请求单元，用 于向应用依赖方RP发送访问请求；认证质询接收单元，用于接收所述RP返回的包含了随机 数的认证质询消息；加密单元，用于采用私钥Hi对所述随机数进行加密，生成加密后的随 机数；认证请求单元，用于向所述RP发送认证请求消息，所述认证请求消息中携带所述加 密后的随机数。</p>
+    <p>[0057]	本发明实施例还提供一种分布式身份认证装置，所述装置包括：认证质询发送单 元，用于接收用户代理UA发送的访问请求，根据所述访问请求向所述UA返回包含随机数的 认证质询消息；认证请求接收单元，用于接收所述UA发送的认证请求消息，所述认证请求 消息中包含所述UA采用私钥1&#190;对所述随机数加密后的随机数；用户标识获取单元，用于从 所述访问请求或所述认证请求消息中获得统一用户标识UUL;用户证书获取单元，根据所 述UUL从用户身份提供商IDP处获得包含了公钥信息的用户证书Cert ；认证单元，用于采 用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数与所述认证质询消息中 的随机数进行比较，如果两者一致则认证通过。</p>
+    <p>[0058]	本发明实施例还提供一种分布式身份认证装置，所述装置包括：认证信息提供单 元，用于产生包含公钥信息的用户证书Cert和私钥文件，提供所述私钥文件的分发机制， 使用户代理UA通过所述分发机制获取所述私钥文件；证书获取请求接收单元，用于接收应 用依赖方RP的证书获取请求，所述证书获取请求中包含已注册的用户身份标识ID ；证书发 送单元，用于向所述RP返回与所述用户身份标识ID对应的包含了所述公钥信息的用户证 书 Cert0</p>
+    <p>[0059]	本发明实施例还提供一种分布式身份认证系统，所述系统包括：用户身份提供方IDP、用户代理UA，以及应用依赖方RP ；所述IDP，用于产生包含公钥信息的用户证书Cert 和私钥文件，提供所述私钥文件的分发机制，使用户代理UA通过所述分发机制获取所述私 钥文件；接收应用依赖方RP的证书获取请求，所述证书获取请求中包含已注册的用户身份 标识ID ；向所述RP返回与所述用户身份标识ID对应的包含了所述公钥信息的用户证书 Cert ；</p>
+    <p>[0060]	所述RP，用于接收用户代理UA发送的访问请求，根据所述访问请求向所述UA返回 包含随机数的认证质询消息；接收所述UA发送的认证请求消息，所述认证请求消息中包含 所述UA采用私钥1&#190;对所述随机数加密后的随机数；从所述访问请求或所述认证请求中获 得统一用户标识UUL ；根据所述UUL从用户身份提供商IDP处获得包含了公钥信息的用户 证书Cert ；采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数与所述认 证质询消息中的随机数进行比较，如果两者一致则认证通过。</p>
+    <p>[0061]	本发明实施例的分布式身份认证方法、装置与系统，UA在请求RP服务时，与RP之 间直接进行认证，不需要跳转到其他网站进行认证，减少了用户干预的次数，避免了信息被 钓鱼的可能性，相对于其他相关的分布式认证技术，能提供更安全的、更简便、更高效的分 布式身份认证，使得用户身份更加方便携带，用户使用一个身份就能访问所有支持本发明 认证方法的应用网站。</p>
+    <p>附图说明</p>
+    <p>[0062]	图1为与现有技术的一种分布式身份认证技术OpenID的认证流程图；</p>
+    <p>[0063]	图2为本发明实施例的分布式身份认证系统的体系架构图；</p>
+    <p>[0064]	图3为本发明实施例的分布式身份认证系统的一种信令交互流程图；</p>
+    <p>[0065]	图4为本发明实施例的分布式身份认证系统的另一种信令交互流程图；</p>
+    <p>[0066]	图5为本发明实施例依据图3所示认证方法的具体信令交互流程图；</p>
+    <p>[0067]	图6为现有技术中模式对话框的界面图；</p>
+    <p>[0068]	图7为本发明实施例含有表单的认证质询界面图；</p>
+    <p>[0069]	图8为本发明实施例用户选择一个身份标识进行身份认证的界面图；</p>
+    <p>[0070]	图9为本发明实施例UA的整体功能框图；</p>
+    <p>[0071]	图10为本发明实施例UA的另一种功能框图；</p>
+    <p>[0072]	图11为本发明实施例RP的功能框图；</p>
+    <p>[0073]	图12为本发明实施例图11中的认证单元1105的细化功能框图；</p>
+    <p>[0074]	图13为本发明实施例IDP的功能框图；</p>
+    <p>[0075]	图14为本发明实施例系统的一种实现架构图。</p>
+    <p>具体实施方式</p>
+    <p>[0076]	为使本发明实施例的目的、技术方案和优点更加清楚，下面将结合本发明实施例 中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例是 本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员 在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0077]	本发明实施例提供一种分布式身份认证方法、装置与系统，相对于其他相关的分布式认证技术，该技术能提供更安全的、更简便的分布式身份认证，使得用户身份更加方便 携带，用户使用一个身份就能访问所有支持本发明认证方法的应用网站。</p>
+    <p>[0078]	本发明实施例提供了一种分布式身份认证系统。图2为本发明实施例分布式 身份认证系统的体系架构图，如图2所示，该系统中参与认证的实体（Entity)包括：IDP 21 (Identity Provider，用户身份提供方），用来提供用户身份信息；UA 22 (User Agent，用 户代理），为客户端应用程序，一般为浏览器（Browser) ； RP 23 (Relying Party，依赖方）， 一般为用户访问的应用服务器。</p>
+    <p>[0079]	具体地：IDP 21，用于产生包含公钥信息的用户证书Cert和私钥文件，提供所述 私钥文件的分发机制，使UA 22通过所述分发机制获取所述私钥文件；接收RP 23的证书获 取请求，所述证书获取请求中包含已注册的用户身份标识ID ；向RP 23返回与所述用户身 份标识ID对应的包含了所述公钥信息的用户证书Cert。</p>
+    <p>[0080]	UA 22，用于向RP 23发送访问请求；接收RP 23返回的包含了随机数的认证质询 消息；采用私钥1&#190;对所述随机数进行加密，生成加密后的随机数，其中加密采用非对称加 密算法；对所述认证质询消息做出响应，向RP 23发送认证请求消息，所述认证请求消息中 携带所述加密后的随机数。</p>
+    <p>[0081]	RP 23，用于接收UA 22发送的访问请求，根据所述访问请求向UA 22返回包含随 机数的认证质询消息；接收UA 22发送的认证请求消息，所述认证请求消息中包含UA 22采 用私钥Hi对所述随机数加密后的随机数，其中加密采用非对称加密算法；从所述访问请求 或所述认证请求消息中获得统一用户标识UUL ；根据所述UUL从IDP 21处获得包含了公钥 信息的用户证书Cert ；采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机 数与所述认证质询消息中的随机数进行比较，如果两者一致则认证通过，否则，认证失败。 本发明实施例的方法可以利用XRDS(extensible Resource Descriptor kquence，可扩展 资源描述序列）文档来发现用户的证书信息，具体的服务发现过程将在后续实施例中详细 描述。</p>
+    <p>[0082]	本发明实施例用户的身份信息主要包括以下几部分：UUL (Universal User Locator，统一用户定位符）、Cert (Certification，用户证书）和 PK (Private Key，用户私 钥），其中，所述UUL &#8212;般为一个URI (Uniform Resource Identifier,统一资源标识)，如 HTTP URL, XRI等；证书Cert中包含了用户的公钥信息，本发明实施例的证书以采用X. 509 协议为例进行表示；PK(由IDP提供给最终用户，提供的介质不限。</p>
+    <p>[0083]	本发明实施例系统的工作原理为：用户通过用户代理UA，向应用网站RP发送访问 请求，其中用户代理一般为浏览器；如果应用网站RP需要对用户进行认证，RP返回一个需 要认证的质询（Challenge，rfd617)，要求用户认证，该质询中包含必要的认证描述信息， 如本发明认证方法标识、用户签名随机数Nonce和保护域Realm等；UA收到质询后，使用该 用户的私钥对Nonce进行签名，通过认证请求消息提交签名后的Nonce给RP ；其中，本发明 实施例可以在访问请求或认证请求中携带统一用户标识UUL ；RP从访问请求或认证请求中 获取UUL，根据UUL获得用户证书信息；然后，RP根据获取的证书信息对签名后的Nonce解 密，通过比较之前发送的Nonce和解密后的Nonce是否一致来验证用户身份；如果一致则验 证通过，RP返回UA请求的响应。其中，RP根据Realm可区分用户访问范围的信息，相关内 容请本领域技术人员参阅RFC2617规范，在此不赘述。[0084]	下面通过信令交互流程图来进一步详细描述本发明实施例的系统的工作过程，以 及该系统包括的各实体的工作方法。</p>
+    <p>[0085]	图3为本发明实施例的分布式身份认证系统的一种信令交互流程图。如图3所示， 该分布式身份认证系统执行身份认证的过程具体包括如下步骤：</p>
+    <p>[0086]	S301、UA向应用依赖方RP发送访问请求；</p>
+    <p>[0087]	可选地，本发明实施例可以在所述访问请求的HTTP From Header字段中携带统一 用户标识UUL。可选地，也可在该访问请求中不携带UUL，而是通过在后续的认证请求中携 带 UUL。</p>
+    <p>[0088]	可选地，本发明实施例在S301之前还可以包括：通过加密信道SSL从用户身份提 供方IDP获取用户私钥文件，或者从包含所述私钥文件的存储介质中获取用户私钥文件， 所述私钥文件中包含了私钥I3K和统一用户标识UUL。</p>
+    <p>[0089]	具体地，所述IDP，可以用于产生包含公钥信息的用户证书Cert和私钥文件，并提 供所述私钥文件的分发机制，使用户代理UA通过所述分发机制获取所述私钥文件。该IDP 提供的私钥文件的分发机制具体可以包括：提供可供下载的私钥文件，使用户代理UA下载 所述私钥文件并安装于本地；或者将所述私钥文件存储于存储介质，例如USB存储设备等， 使用户代理UA通过插接所述USB设备获得所述私钥文件。</p>
+    <p>[0090]	其中，在用户注册和申请证书通过之后，IDP会生成包含公钥信息的用户证书的私 钥文件。</p>
+    <p>[0091]	S302、RP向根据该访问请求向UA返回包含随机数的认证质询消息；</p>
+    <p>[0092]	可选地，所述认证质询消息可以包括HTTP 401 Unauthorized消息；所述认证质 询消息的WffW-Authentication Header字段中除了包含认证所需的随机数Nonce之外还可 以进一步包含：所述分布式身份认证方法的标识以及至少一个非对称加密算法参数。其中， HTTP 401 Unauthorized消息是RFC2617规范中的内容，应用服务器RP利用这个响应向UA 发起认证质询（Challenge)，UA需对这个认证质询做出认证响应，携带认证信息到应用服 务器，以便通过应用服务器的认证。此外，www Authentication Header在现有的规范中已 经存在了两个认证方法标识，一个是basic，另一个是digest，分别用于标识两种不同的认 证方法，而本发明实施例由于采用了一种新的认证方法，所以需要一个新的认证方法标识， 本发明实施例的认证方法标识可以采用不和已存在的认证方法标识相重复的任意标识。</p>
+    <p>[0093]	可选地，本发明实施例的非对称加密算法参数可以包括RSA(Rivest、Shamir, Adlernan加密算法）非对称加密算法或者ECC(Elliptic Curves Cryptography，椭圆曲线 密码学）非对称加密算法。</p>
+    <p>[0094]	S303、UA采用私钥I3K对所述随机数进行加密，生成加密后的随机数，其中加密采 用非对称加密算法；</p>
+    <p>[0095]	可选地，S303具体包括：从所述认证质询消息中解析出所述分布式身份认证方法 的标识，以及从所述加密算法参数中选择一个非对称加密算法，采用所述私钥Hi对所述随 机数基于选择的非对称加密算法进行加密。</p>
+    <p>[0096]	S304、UA对所述认证质询消息做出响应，向所述RP发送认证请求消息，所述认证 请求消息中携带所述加密后的随机数。</p>
+    <p>[0097]	可选地，所述认证请求中可以包含UA选择的非对称加密算法。[0098]	可选地，本发明实施例还可以在所述认证请求的HTTP Authorization Header字 段中携带所述UUL ；可选地，所述认证请求中携带的UUL为用户设置的默认UUL，或者从UA 提供的UUL列表中选择的一个UUL。采用默认的UUL进行身份认证或者从UA提供的UUL 列表中选择一个UUL进行身份认证这两种方式是由用户设置的。当用户设置了默认的UUL 后，则直接采用默认的UUL进行身份认证；否则，UA会提供给用户一个UUL列表进行UUL选 择，并对用户选择的UUL进行身份认证。这两种方式将会在后续实施例中进行详细描述。</p>
+    <p>[0099]	S305、RP从所述访问请求或所述认证请求消息中获得统一用户标识UUL，然后，向 用户身份提供商IDP发送包含该UUL的证书获取请求，以便根据所述UUL从IDP处获得包 含公钥信息的用户证书Cert;</p>
+    <p>[0100]	可选地，所述UUL可以为在所述IDP上注册的用户身份标识ID ；在这种情况下， S305中具体包括：向IDP发送包含已注册的用户身份标识ID的证书获取请求，以便从所述 IDP中获得与所述用户身份标识ID对应的Cert。</p>
+    <p>[0101]	可选地，所述Cert采用X. 509协议描述。</p>
+    <p>[0102]	S306、IDP向RP返回与所述UUL对应的包含了公钥信息的用户证书Cert。</p>
+    <p>[0103]	可选地，S306的具体过程也可以包括：IDP向RP返回与所述用户身份标识ID对应 的包含了公钥信息的用户证书Cert。</p>
+    <p>[0104]	S307、RP采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数与 所述认证质询消息中的随机数进行比较，如果两者一致则认证通过，否则，认证失败。</p>
+    <p>[0105]	可选地，采用所述公钥对所述加密后的随机数进行解密包括：根据所述UA选择的 非对称加密算法，采用所述公钥对加密后的随机数进行解密。</p>
+    <p>[0106]	S308、RP在完成认证后向UA返回访问请求的结果，完成用户认证过程。</p>
+    <p>[0107]	图4为本发明实施例的分布式身份认证系统的另一种信令交互流程图。如图4所 示，该分布式身份认证系统执行身份认证的过程具体包括如下步骤：</p>
+    <p>[0108]	S401、UA向RP发送访问请求。</p>
+    <p>[0109]	S402、RP根据所述访问请求向UA返回认证质询消息，所述认证质询消息中包含用 于传统表单认证的HTML表单和随机数。</p>
+    <p>[0110]	具体地，S402中认证质询消息包含用于传统表单认证的HTML表单，是为了实现对 传统表单认证方法的兼容。</p>
+    <p>[0111]	S403、UA获得用户的UUL，并对所述随机数进行加密。</p>
+    <p>[0112]	具体地，当用户选择传统表单认证时，接收用户的表单输入，以便将所述表单输入 的身份信息提供给所述RP进行认证；或者，</p>
+    <p>[0113]	当用户选择所述分布式身份认证时，接收用户选择的用户身份，获得与所述用户 身份对应的统一用户标识UUL以及用户私钥PK，以便将所述UUL以及加密后的随机数提供 给所述RP进行认证；或者将用户默认设置的UUL提供给RP进行认证。</p>
+    <p>[0114]	可选地，当用户选择所述分布式身份认证时，接收用户选择的用户身份具体包括： UA响应用户对认证快捷按键的点击操作，呈现用于认证的UUL列表；并接收用户从所述列 表中选择的用户身份。</p>
+    <p>[0115]	对所述随机数进行加密的具体过程包括：采用私钥Hi对所述随机数进行加密，生 成加密后的随机数，其中加密可以采用非对称加密算法。[0116]	S404、UA对所述认证质询消息做出响应，向所述RP发送认证请求消息，所述认证 请求消息中携带所述加密后的随机数以及所述UUL。</p>
+    <p>[0117]	可选地，S404具体可以包括：响应用户对所述UUL列表的选择操作，向所述RP发 送包含所述用户选择UUL的认证请求消息。</p>
+    <p>[0118]	S405-S406、RP根据该认证请求中包含的UUL，获得IDP服务描述信息。</p>
+    <p>[0119]	具体地，本发明实施例的UUL包含所述IDP的服务描述信息的URL地址，RP根据该 URL地址访问该URL对应的网页（例如个人博客），以获得IDP的服务描述信息。所述服务 描述信息包括所述IDP的地址和所述用户在所述IDP上注册的用户身份标识ID。从而，RP 可从所述UUL包含的服务描述信息中获得所述IDP的地址和所述用户在所述IDP上注册的 用户身份标识ID。</p>
+    <p>[0120]	可选地，所述服务描述信息采用XRDS文档或者HTML Link标签描述。</p>
+    <p>[0121]	S407、RP根据获得的IDP地址，向IDP发送包含所述用户身份标识ID的证书获取 请求。</p>
+    <p>[0122]	S408、IDP向RP返回与所述用户身份标识ID对应的包含公钥的Cert。</p>
+    <p>[0123]	S409、RP采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数与 所述认证质询消息中的随机数进行比较，如果两者一致则认证通过，否则，认证失败。</p>
+    <p>[0124]	S410、RP在完成认证后，向UA返回访问请求的结果。</p>
+    <p>[0125]	进一步地，图4所示方法还可以包括如下处理过程：</p>
+    <p>[0126]	UA对所述UUL身份提供口令保护或生物认证保护，这样，用户必须进行口令验证 或者生物验证后才能使用特定的UUL。</p>
+    <p>[0127]	UA根据所述UUL访问用户的基本信息，所述基本信息包含下列信息中的一种或多 种组合：姓名、别名、头像和签名档，所述UUL可选地为用户身份标识ID，UA向IDP发送包含 了所述用户身份标识ID的用户信息请求。IDP接收用户代理UA发送包含了所述用户身份 标识ID的用户信息请求；并根据所述用户身份标识ID向所述UA返回用户基本信息，所述 基本信息包括下列的一种或多种：姓名、别名、头像和签名档。</p>
+    <p>[0128]	UA与IDP交互，注册和/或注销用户的证书Cert，向IDP发送注册和/或注销请 求。IDP接收UA的注册和/或注销请求；根据所述注册和/或注销请求，注册和/或注销 所述用户的Cert。</p>
+    <p>[0129]	以下结合具体的例子对本发明实施例的分布式身份认证的技术方案进行详细说 明。图5为本发明实施例依据图3所示认证方法的具体信令交互流程图，如图5所示，该方 法包括：</p>
+    <p>[0130]	S501、用户代理UA向应用网站RP提交访问请求，并携带用户标识（UUL)，该请求消 息格式举例如下：</p>
+    <p>[0131]	GET/dir/index. html HTTP/1. 1</p>
+    <p>[0132]	Host :www. someRP. com (HTTP 协议中 RP 的域名）</p>
+    <p>[0133]	From :http://someuser. someIDP. com(UA 的 UUL)</p>
+    <p>[0134]	S502、应用网站RP生成一个随机的Nonce值，然后向客户端发起一个包含该随机 的Nonce值的认证质询，要求用户认证；</p>
+    <p>[0135]	该认证质询消息格式举例如下：[0136]	HTTP/1. 1 401 Unauthorized</p>
+    <p>[0137]	Server :HTTPd/0. 9</p>
+    <p>[0138]	Date :Sun,10 Dec 2009 20:28:40 GMT</p>
+    <p>[0139]	ffffff-Authenticate :UUL realm = http://www, somerp. com/someres(realm 为 RFC2617的规范，一个网站上有很多保护域，一个身份只能访问规定的保护域的内容；UUL 为认证方法标识），</p>
+    <p>[0140]	nonce = 〃 dcd98b7102dd2f0e8blld0f600bfb0c093 〃 (nonce 为用户签名随机 数），</p>
+    <p>[0141]	uul = http://someuser. someIDP. com(UA 的 UUL)</p>
+    <p>[0142]	Content-Type ：text/html</p>
+    <p>[0143]	Content-Length :311</p>
+    <p>[0144]	&lt; ！ D0CTYPE HTML PUBLIC" -//W3C//DTD HTML 4.01 TransitionaV/EN"</p>
+    <p>[0145]	“ http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd" &gt;</p>
+    <p>[0146]	&lt;HTML&gt;</p>
+    <p>[0147]	&lt;HEAD&gt;</p>
+    <p>[0148]	&lt;TITLE&gt;Error&lt;/TITLE&gt;</p>
+    <p>[0149]	&lt;META	HTTP-EQUIV =" Content-Type" CONTENT =" text/html;</p>
+    <p>[0150]	charset = IS0-8859-1" &gt;</p>
+    <p>[0151]	&lt;/HEAD&gt;</p>
+    <p>[0152]	&lt;B0DYXH1&gt;401 Unauthorized. &lt;/HlX/B0DY&gt;</p>
+    <p>[0153]	&lt;/HTML&gt;</p>
+    <p>[0154]	可选地，为了兼容现有的表单认证，在HTTP的消息体中还可以包含一个含有表单</p>
+    <p>(Form Authentication)认证的认证页面的HTML文本。</p>
+    <p>[0155]	S503、用户代理接收到应用网站认证质询后，用户代理UA使用用户的私钥 (Private Key)利用非对称加密算法对应用网站RP传来的Nonce进行加密签名，生成 Response。加密算法举例如下：</p>
+    <p>[0156]	Response = RSA encrypt(PK, Nonce)</p>
+    <p>[0157]	S504、用户代理UA再次向应用网站RP发起请求，并携带加密过的Nonce值给服务 器。再次发送的请求消息格式举例如下：</p>
+    <p>[0158]	GET/dir/index. html HTTP/1. 1</p>
+    <p>[0159]	Host :www. somerp. com(表示请求的 RP 域名）</p>
+    <p>[0160]	Authorization UUL uul = 〃 http://someuser. someIDP. com" ， (UUL MTfeiK 本发明实施例的分布式认证方法，uul = http://someuser. someIDP. com表示统一用户标 识）</p>
+    <p>[0161]	realm = " http://www.somerp.com/someres"，（表示用户能够访问的域）</p>
+    <p>[0162]	nonce=" dcd98b7102dd2f0e8blld0f600bfb0c093//，（表示随机数）</p>
+    <p>[0163]	uri =〃 /dir/index. html"，(表示请求 RP 上的目标网页的 URI)</p>
+    <p>[0164]	response = “ 6629fae49393a05397450978507c4ef 1 “(表示力口密过的 nonce)，</p>
+    <p>[0165]	S505、应用网站RP在接收到到用户代理UA的请求后，通过用户标识（UUL)，向IDP请求获取用户证书以及其他用户信息；该请求消息格式举例如下：</p>
+    <p>[0166]	GET/HTTP/1. 1</p>
+    <p>[0167]	Host :someuser. someIDP. com(UA 的 UUL)</p>
+    <p>[0168]	Referer :www. somerp. com(表不请求的源 Host)</p>
+    <p>[0169]	Accept :txt/html, */*</p>
+    <p>[0170]	S506、用户身份提供商IDP返回含有用户证书信息或者含有用户证书信息参考 URI的内容给RP，内容格式可以是HTML文档或者XRDS文档。以返回的是用户证书信息参 考URI为例：</p>
+    <p>[0171]	HTTP/1. 1 2000K</p>
+    <p>[0172]	Server :HTTPd/0. 9</p>
+    <p>[0173]	Date :Sun，IODec 2009 20:26:47 GMT</p>
+    <p>[0174]	Content-Type ： text/html</p>
+    <p>[0175]	Content-Length :453</p>
+    <p>[0176]	&lt; ！ D0CTYPE HTML PUBLIC" -//W3C//DTD HTML 4.01 TransitionaV/EN"</p>
+    <p>[0177]	“ http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd" &gt;</p>
+    <p>[0178]	&lt;HTML&gt;</p>
+    <p>[0179]	&lt;HEAD&gt;</p>
+    <p>[0180]	&lt;TITLE&gt;Personal Page&lt;/TITLE&gt;</p>
+    <p>[0181]	〈link rel=" uul. provider uul. server" (IDP 服务的入口地址标识，表示下 面href所指示的地址是IDP服务的入口地址)</p>
+    <p>[0182]	href = “ http://www. someidp. com/uul/server/&gt;</p>
+    <p>[0183]	&lt;link rel = " uul. local id uul. deleRate77</p>
+    <p>[0184]	href = 〃 http://someuser. someidp. com/" /&gt; (IDP 用户本地标识的指示器， 表示下面href所指示的地址是用户在IDP上的标识，RP使用该标识在上述IDP服务的入 口地址上获取用户证书）</p>
+    <p>[0185]	&lt;/HEAD&gt;</p>
+    <p>[0186]	&lt;B0DY&gt;</p>
+    <p>[0187]	.........</p>
+    <p>[0188]	&lt;/B0DY&gt;</p>
+    <p>[0189]	&lt;/HTML&gt;</p>
+    <p>[0190]	如果通过参考URI获得证书，则还需要利用rel描述的URI地址获取用户证书，获 取的用户证书信息举例如下：</p>
+    <p>[0191]	HTTP/1. 1 2000K</p>
+    <p>[0192]	Server :HTTPd/0. 9</p>
+    <p>[0193]	Date :Sun，IODec 2009 20:27:00 GMT</p>
+    <p>[0194]	Content-Type :text/x509</p>
+    <p>[0195]	Content-Length :1131</p>
+    <p>[0196]	Q2VydGlmaffNhdGU6DQoRlCBEYXRh0R0KICARlCARlFZlcnNpb246IDMRKDB4MikNCiARl CArICBT[0197]	ZX.TpYffwgTnVtYmVy0iAxICgweDEpDQogICAgICAgU21nbmF0dX.TlIEFsZ29yaXRobTogb WQ1V210</p>
+    <p>[0198]	aF.TTQUVuY3.T5cHRpb24NCiAgICAgICB.Tc3NlZXI6IEM9ffkEsIFNUPVdlc3Rlcm4gQ2FwZ SwgTDlD</p>
+    <p>[0199]	YXBlIFRvd24sIE89VGhhd3RlIENvbnNlbHRpbmcgY2MsDQogICAgICAgICAgICAgICBPV T1DZX.T0</p>
+    <p>[0200]	affZpY2F0aff9uIFNlcnZpY2VzIERpdmlzaff9uLA0KICAgICAgICAgICAgICAgQ049VGhhd 3R1IFN1</p>
+    <p>[0201]	cnZlciBDQS91bffFpbEFkZH.Tlc3M9c2VydmVyLffNlcnRzQHRoYXd0ZS5ib20NCiAgICAgI CBffYffxp</p>
+    <p>[0202]	ZG10eQ0KICAgICAgICAgICB0b3QgQmVmb3.T10iBBdffcgIDEgMDA6MDA6MDAgMTk5NiBHT VQNCiAg</p>
+    <p>[0203]	ICAgICAgICAgTm90IEFmdGVyIDogRGViIDMxIDIz0iU50iU5IDIwMiAgR01UDQogICAgI CAgU3Vi</p>
+    <p>[0204]	amVidDogQzlaQSwgUlQ9V2VzdGV (用户证书的 baseM 编码文件)</p>
+    <p>[0205]	......</p>
+    <p>[0206]	上述返回的信息为χ. 509用户证书的base64编码文件，通过BASE64的解码得到 用户证书信息举例如下，具体内容参见X. 509 v3规范：</p>
+    <p>[0207]	......</p>
+    <p>[0208]	Subject Public Key Info ：</p>
+    <p>[0209]	Public Key Algorithm :rsaEncryption</p>
+    <p>[0210]	RSA Public Key ： (1024bit)</p>
+    <p>[0211]	Modulus(1024bit)：</p>
+    <p>[0212]	00	d3	a4	50	6e	c8	ff	56	6b	e6	cf	5d	b6	ea	0c:[0213]	68	75	47	3-2	SlSl	c2	da	84	25	fc	a8	f4	47	51	da:[0214]	85	b5	20	74	94	86	Ie	Of	75	c9	e9	08	61	f5	06:[0215]	6d	30	6e	15	19	02	e9	52	cO	62	db	4d	99	9e	e2:[0216]	6a	Oc	44	38	cd	fe	be	e3	64	09	70	c5	fe	bl	6b:[0217]	29	b6	2f	49	c8	3b	d4	27	04	25	10	97	2f	e7	90:[0218]	6d	cO	28	42	99	d7	4c	43	de	c3	f5	21	6d	54	9f:[0219]	5d	c3	58	el	cO	e4	d9	5b	bO	b8	dc	b4	7b	df	36:</p>
+    <p>[0220]	3a:c2:b5:66:22:12:d6:87:0d(用户证书的解码文件)</p>
+    <p>[0221]	......</p>
+    <p>[0222]	S507、应用网站RP获取用户代理UA请求中的加密过的Nonce值，使用非对称加密 算法，利用之前获取用户的公钥信息对加密后的Nonce进行解密操作，对用户进行认证。解 密算法举例如下：</p>
+    <p>[0223]	Nonce = RSA decrypt (PublicKey, Response)</p>
+    <p>[0224]	应用网站上保留有之前对用户代理发起质询时的Nonce状态，通过匹配（两者相 等），可以确认用户身份；[0225]	S508、应用网站RP返回用户代理UA所访问的目标请求的响应，完成用户认证过 程。认证成功返回请求的目标页面的HTML文本，认证失败返回认证失败的错误页面或再一 次发起质询。</p>
+    <p>[0226]	可选地，本发明实施例的方法还包括：用户证书的注册和注销的过程。在用户私钥 丢失，或者私钥的保护口令遗忘后，用户可以向用户标识提供商IDP申请新的用户证书；在 应用网站RP向用户标识提供商IDP获取该用户证书时，IDP可以向RP返回新的认证证书， 旧的用户证书即被收回。RP为了保证用户的隐私以及数据安全，应该避免使用用户证书的 缓存，或者减少证书缓存刷新时间。缓存证书可以减少认证时间，使用缓存的情况下，如果 用户更换了证书，认证就不能通过了。</p>
+    <p>[0227]	&#8212;般情况下，用户标识提供商（IDP)可以提供开放注册功能，用户可以通过开放 注册功能申请用户标识。另外一种情况是不开放注册功能，如公司为员工提供身份标识服 务、学校为学生和教师提供身份标识服务等。在IDP提供开放注册功能的情况下，用户可以 在网上填写注册申请，提交个人信息给用户标识提供商（IDP)，更为严格的情况，用户可能 必须提供个人的身份证明，以便IDP可以确认用户身份。在填写并提交注册申请给IDP后， IDP可以利用部分HQ (Public Key hfrastructure)相关的技术生成用户证书以及对应的 私钥，其中用户证书中包含有用户的公钥信息，如，X. 509 v3格式的文档。</p>
+    <p>[0228]	可选的，如果为了严格保障用户证书权威性，或者说保障用户身份信息的真实性， IDP在给用户签发用户证书时，可以使用第三方权威的授权中心（CA)的证书对用户证书进 行签名，这样可以声明用户证书的权威性。当然，即便是IDP自签的用户证书，也一样能够 保障用户标识的唯一性与合法性，并不存在身份伪造的可能性，因为，与PKI体系不同，用 户证书是与一个统一资源标识（URI)绑定的，而PKI体系中的用户标识是包含在用户证书 内的。</p>
+    <p>[0229]	可选地，本发明实施例的方法还包括：采用自动认证方式对用户进行认证。自动登 录认证可以认为就是SS0(Single Sign 0η，单点登录认证），即用户只需登录一次，就可以 访问其他网站，但SSO方式有很多。本发明可以支持非用户干预的、自动的用户认证和登录 方式，在用户代理UA的设置选项上，可以提供以下设置选项：</p>
+    <p>[0230]	1、是否使用自动身份认证</p>
+    <p>[0231 ] 2、选择用户身份标识，该标识用于自动登录认证。</p>
+    <p>[0232]	选择用户标识并不是必要的，但是大多数情况下都需要选择用户标识，例如用户 和家人公用了一台电脑，在网吧使用了公共电脑，或者用户有多个IDP的账号，这些情况都 会对用户标识进行选择。</p>
+    <p>[0233]	3、受信任应用网站列表</p>
+    <p>[0234]	在自动认证方式下，用户代理UA接收的所有涉及本发明实施例认证方法的交互 操作都在后台进行，在非用户干预的情况下进行身份认证，这样可以给用户提供更加便捷 身份认证功能和体验。</p>
+    <p>[0235]	在大多数情况下，有条件的自动登录认证是非常重要的，例如以下场景：</p>
+    <p>[0236]	今用户访问应用网站【A】；</p>
+    <p>[0237]	今应用网站【A】要求用户进行身份认证；</p>
+    <p>[0238]	今用户代理UA要求用户选择一个合适的用户身份标识（用户标识和私钥始终是绑定的，不同的标识对应不同的私钥），同时要求用户输入该标识的密码保护（如果不是一 个私人的计算机，用户的身份就需要保护，密码保护就是使用密码对用户的私钥进行加密， 只有输入了正确的密码，才能使用该用户的私钥进行登录认证）；</p>
+    <p>[0239]	今用户代理提交认证请求到应用网站【A】，完成认证过程；</p>
+    <p>[0240]	今用户访问应用网站【B】；</p>
+    <p>[0241]	......</p>
+    <p>[0242]	今用户访问应用网站【C】；</p>
+    <p>[0243]	......</p>
+    <p>[0244]	......</p>
+    <p>[0245]	采用上述方式，用户每次访问不同的应用网站时，用户代理UA都要求用户进行认 证操作，这样的用户体验是非常差的，所以，一般情况下建议，在用户代理（UA，一般为浏览 器Browser)的一个窗口（主进程）不关闭的情况下，在窗口的选项卡中访问其他应用网 站，如果该应用站点在受信任应用网站列表中，则采用自动认证方式，实现更具普遍意义的 单点登录认证(SSO, Single Sign ON)。</p>
+    <p>[0246]	可选地，本发明实施例的方法还支持非自动认证方式并实现与表单认证结合，使 用户能够选择不同的认证方式。如果在用户代理的选项中设置为不使用自动登录认证，或 者一般情况下，用户开始了一个新的用户代理UA(&#8212;般为浏览器Browser)窗口的情况下， 使用非自动登录认证方式。</p>
+    <p>[0247]	在非自动认证方式下，用户利用用户代理访问应用网站，用户代理可以接受来自 应用网站的认证质询（Challenge)，用户代理可以提供一种交互功能，让用户选择身份标 识，并输入该标识的密码保护，然后用户代理利用该用户标识完成用户的身份认证过程。</p>
+    <p>[0248]	现有技术的UA在接收到认证质询后，会呈现一个模式对话框（Modal Dialog), 请参阅图6，用户必须对该模式对话框（Modal Dialog)做出响应，输入或者选择必要的认 证信息后，交由用户代理UA完成身份认证过程，但是由用户代理或者用户代理的宿主系统 提供的模式对话框，通常是简单、单调、缺乏一些丰富的辅助功能给最终用户。而表单认证 (Form Login)所能够带给用户的价值，也成为其流行的原因。表单是HTML文本，可以包含 丰富的界面和功能，用户感觉更友好。</p>
+    <p>[0249]	本发明实施例通过改变用户代理的交互模式，简少了用户干预的次数，可选地，为 了兼容现有的表单认证方式，还将传统的表单认证和本发明实施例的基于质询的认证方式 有机的结合在一起。对此，本发明实施例的方法能取得以下有益技术效果：</p>
+    <p>[0250]	1、用户代理不使用模式对话框与用户交互，完成用户身份认证过程；</p>
+    <p>[0251]	2、应用网站通过HTTP 401 Unauthorized返回表单认证页面，而不是HTTP2000K ； 这样该认证页面中就可以含有一个认证质询（Challenge)；</p>
+    <p>[0252]	3、用户代理在方便而且显著的位置呈现用户对该认证质询操作的快捷方式，如按 钮等，用户点了这个按钮就自动认证，或者多用户的情况下，弹出选择用户身份的对话框或 用户界面；</p>
+    <p>[0253]	4、用户代理能够在呈现本发明实施例的认证快捷按钮的同时呈现出表单认证的 用户界面。因为用户不一定拥有UUL IDP账号，在没有IDP账号的情况下，只能使用RP提 供的账号进行传统的表单登录。例如，如果QQ ^ne支持UUL登录，而用户没有UUL IDP提供的账号，则仍然可以使用传统QQ账号登录该用户的QQ Zone，从而为用户提供了便利，实 现了对传统登录方式的兼容。</p>
+    <p>[0254]	图7为含有表单的认证质询界面，图8为用户选择一个身份标识进行身份认证的 界面。在图7和图8中，在点击用户地址栏的登录按钮后，就会弹出一个UUL列表供用户选 择一个登录的身份UUL，用来呈现和收集用户的选择和输入的信息。用户代理可以利用用户 的输入和选择的结果，获得用户标识（UUL)以及用户的私钥信息，完成本发明所述认证方 法的认证过程。用户代理UA经过以上改变后，用户可以选择使用户本发明中所涉及的认证 方法，也可以使用传统的表单认证方法，并且可以在表单界面中提供更友好的用户界面和 更有价值的用户功能。</p>
+    <p>[0255]	可选地，本发明实施例的方法还支持个性化用户标识与IDP服务发现 (Discovery) 0目前，多数互联网用户都有个人的博客，个人博客的地址作为一个用户的重 要标识，需要能够作为可认证的用户身份标识而存在，但是，博客服务提供者并不一定能够 提供用户身份的认证服务，本发明实施例的方法提供一种简单的服务发现机制，只要在个 人博客的主页（用户标识URL所对应的网页）上描述IDP服务的入口地址，就可以通过该 描述去发现IDP的服务。这样，即便如Wordpress这样的没有IDP服务的个人博客用户，也 可以使用个人博客的主页地址作为自己的身份标识。</p>
+    <p>[0256]	本发明实施例的方法可以在个人博客主页的头域（Header)中插入如下信息：</p>
+    <p>[0257]	&lt;link rel = 〃 uul. provider uul. server"(该 rel 所对应的 href 地址就是 IDP的入口地址)</p>
+    <p>[0258]	href = “ http://www.someidp.com/uul/server" /&gt;</p>
+    <p>[0259]	〈link rel = “ uul. local_id uul. delegate"(该rel 所对应的 href 地址是UA 的UUL，根据该UUL在IDP中查找用户的证书信息）</p>
+    <p>[0260]	href =" http://someuser. someidp. com/" /&gt;</p>
+    <p>[0261]	这样应用网站可以通过该描述信息发现IDP所提供的身份认证服务能力。上述方 法利用了 YADIS的服务发现能力。YADIS可以提供XRDS based Discovery以及HTML based Discovery。上述例子为 HTML based Discovery。</p>
+    <p>[0262]	请再次参阅图4，和图5不同的是，图4增加了两个步骤S405和S406，通过这两个 步骤可以从博客中获得IDP的服务信息，进而从IDP获得用户证书。</p>
+    <p>[0263]	除了个人博客以外，任何一个可访问的URL都可以利用IDP的服务发现能力，成为 一个可认证的用户标识。用户可以在任何可以编辑的网页上插入HTML LINK REL标签，该 标签描述了用户的IDP服务URI和用户的UUL，该网页所在的地址就可以作为用户的个人标 识了。</p>
+    <p>[0264]	本发明实施例的方法还包括用户标识生成与私钥（Private Key)的分发过程。在 IDP生成用户证书和私钥（Private Key)后，用户代理UA可以通过加密信道（SSL)下载 用户私钥到本地，并通过设置密码保护或者通akcure Driver (加密盘）等对用户私钥 进行保护，也可以通过其他安全的途径分发给最终用户，这些途径包括但不限于：USP Key、 Smart Card 以及 SIM Card。</p>
+    <p>[0265]	本发明实施例中用户公钥信息或者公钥的获取途径（Discovery)的描述信息放 在用户的主页上（用户标识对应的页面或者内容），应用网站RP通过访问用户标识所对应的主页获得用户的证书，便可以对用户的身份进行认证。</p>
+    <p>[0266]	本发明实施例还提供一种分布式身份认证装置，该装置对应于UA22。图9为本发 明实施例UA的整体功能框图。如图9所示，该装置90包括：访问请求单元901，用于向应 用依赖方RP发送访问请求；认证质询接收单元902，用于接收所述RP返回的包含了随机数 的认证质询消息；加密单元903，用于采用私钥1&#190;对所述随机数进行加密，生成加密后的随 机数；认证请求单元904，用于向所述RP发送认证请求消息，所述认证请求消息中携带所述 加密后的随机数。</p>
+    <p>[0267]	可选地，所述访问请求单元901，用于在所述访问请求的HTTP From Header字段中 携带统一用户标识UUL，向应用依赖方RP发送包含所述UUL的访问请求。</p>
+    <p>[0268]	可选地，所述认证请求单元904，用于在所述认证请求消息的HTTP Authorization Header字段中携带所述UUL，向应用依赖方RP发送包含所述UUL的访问请求。</p>
+    <p>[0269]	可选地，所述认证质询消息包括：HTTP 401 Unauthorized消息；所述认证质询消 息的WffW-Authentication Header字段中包含：所述分布式身份认证方法的标识至少一个 非对称加密算法参数和认证所需的随机数Nonce ；所述加密单元1303，具体用于解析所述 认证质询消息以得到所述分布式身份认证方法的标识，从所述加密算法参数中选择一个非 对称加密算法，采用所述私钥1&#190;对所述随机数采用选择的非对称加密算法进行加密。可选 地，所述非对称加密算法包括：RSA非对称加密算法或者椭圆曲线ECC非对称加密算法。</p>
+    <p>[0270]	图10为本发明实施例UA的另一种功能框图。和图13的实施例不同的是，图10的 认证质询接收单元1002所接收的认证质询消息中还包含用于传统表单认证的HTML表单； 并且图10的装置在图9的装置基础上新增加了界面显示单元和认证选择单元，用于兼容传 统表单认证的方式。</p>
+    <p>[0271]	具体地，图10的装置100包括：访问请求单元1001，用于向应用依赖方RP发送访 问请求；认证质询接收单元1002，用于接收所述RP返回的认证质询消息，所述认证质询消 息中包含了随机数以及用于传统表单认证的HTML表单；界面显示单元1003，用于同时提供 传统表单认证和所述分布式身份认证方式供用户选择；认证选择单元1004，用于当用户选 择所述传统表单认证时，接收用户的表单输入，将所述表单输入的身份信息提交所述RP进 行认证；当用户选择所述分布式身份认证时，接收用户选择的用户身份，将所述UUL对应的 身份信息以及加密后的随机数提供给所述RP进行认证；加密单元1005，用于采用私钥1&#190; 对所述随机数采用非对称加密算法进行加密，生成加密后的随机数；认证请求单元1006， 用于对所述认证质询消息做出响应，向所述RP发送认证请求消息，所述认证请求消息中携 带所述加密后的随机数；</p>
+    <p>[0272]	可选地，如图10所示，该装置100还包括：设置单元1007，用于提供自动认证的设 置，接收用户设置的默认UUL;所述认证请求单元1004，用于向所述RP发送携带有所述默认 UUL的认证请求消息。</p>
+    <p>[0273]	可选地，所述界面显示单元1003，还用于在接收到所述认证质询消息后，呈现认证 快捷按键；响应用户对该快捷按键的点击操作，呈现用于认证的UUL列表；所述认证请求单 元1006，用于响应用户对所述UUL列表的选择操作，向所述RP发送包含所述用户选择UUL 的认证请求消息。</p>
+    <p>[0274]	可选地，所述装置100还包括：身份保护单元1008，用于对所述UUL身份提供口令保护或生物认证保护。</p>
+    <p>[0275]	可选地，所述装置100还包括：私钥获取单元1009，用于通过加密信道SSL从用户 身份提供方IDP获取用户私钥文件，或者从包含所述私钥文件的存储介质中获取用户私钥 文件，所述私钥文件中包含了私钥I3K和统一用户标识UUL。</p>
+    <p>[0276]	可选地，所述装置100还包括：用户信息获取单元1010，用于根据所述UUL访问 用户的基本信息，所述基本信息包含下列信息中的一种或多种组合：姓名、别名、头像、签名 档。</p>
+    <p>[0277]	可选地，所述装置100还包括：注册注销单元1011，用于与用户身份提供方IDP交 互，注册和/或注销用户的证书Cert。</p>
+    <p>[0278]	本发明实施例还提供一种分布式身份认证装置，该装置对应于RP23，图11为本 发明实施例该装置RP23的功能框图。如图11所示，该装置110包括：认证质询发送单元 1101，用于接收用户代理UA发送的访问请求，根据所述访问请求向所述UA返回包含随机 数的认证质询消息；认证请求接收单元1102，用于接收所述UA发送的认证请求消息，所述 认证请求中包含所述UA采用私钥1&#190;对所述随机数加密后的随机数；用户标识获取单元 1103，用于从所述访问请求或所述认证请求消息中获得统一用户标识UUL;用户证书获取 单元1104，根据所述UUL从用户身份提供商IDP处获得包含了公钥信息的用户证书Cert ； 认证单元1105，用于采用所述公钥对所述加密后的随机数进行解密，并将解密后的随机数 与所述认证质询消息中的随机数进行比较，如果两者一致则认证通过，否则，认证失败。</p>
+    <p>[0279]	可选地，本发明实施例的认证质询消息包括：HTTP 401 Unauthorized消息；在所 述认证质询消息中的WffW-Authentication Header中包含非对称加密算法参数，以供所述 UA选择；所述UA提交的认证请求中包含了 UA选择的非对称加密算法。图12为本发明实 施例认证单元1105的细化功能框图。如图12所示，认证单元1105包括：解密单元1201， 用于根据所述UA选择的非对称加密算法，采用所述公钥对加密后的随机数进行解密；比较 单元1202，将解密后的随机数与所述认证质询消息中的随机数进行比较，如果两者一致则 认证通过，否则，认证失败。可选地，本发明实施例的加密算法为RSA非对称加密算法或者 椭圆曲线ECC非对称加密算法。</p>
+    <p>[0280]	可选地，所述UUL为在所述IDP上注册的用户身份标识ID ；用户证书获取单元 1104，用于从所述IDP中获得与所述用户身份标识ID对应的Cert。</p>
+    <p>[0281 ] 可选地，所述UUL为包含所述IDP的服务描述信息的URL地址；所述服务描述信息 包括所述IDP的地址和所述用户在所述IDP上注册的用户身份标识ID ；所述用户证书获取 单元1104，用于从所述UUL对应的URL地址中获得IDP的服务描述信息，所述IDP的服务描 述信息包括所述IDP的地址和所述用户在所述IDP上注册的用户身份标识ID ；从所述IDP 中获得与所述用户身份标识ID对应的Cert。</p>
+    <p>[0282]	可选地，所述服务描述信息采用XRDS文档或者HTML Link标签描述。</p>
+    <p>[0283]	可选地，所述Cert采用X. 509协议描述。</p>
+    <p>[0284]	本发明实施例还提供一种分布式身份认证装置，该装置对应于IDP21。图13为本 发明实施例IDP的功能框图。如图13所示，该装置130包括：认证信息提供单元1301，用 于产生包含公钥信息的用户证书Cert和私钥文件，提供所述私钥文件的分发机制，使用户 代理UA通过所述分发机制获取所述私钥文件；证书获取请求接收单元1302，用于接收应用依赖方RP的证书获取请求，所述证书获取请求中包含已注册的用户身份标识ID;证书发送 单元1303，用于向所述RP返回与所述用户身份标识ID对应的包含了所述公钥信息的用户 证书Cert0</p>
+    <p>[0285]	可选地，所述认证信息提供单元1301，用于提供可供下载的私钥文件，使用户代理 UA下载所述私钥文件并安装于本地；或者将所述私钥文件存储于USB存储设备，使用户代 理UA通过插接所述USB设备获得所述私钥文件。</p>
+    <p>[0286]	可选地，所述装置130还包括：用户信息请求接收单元1304，用于接收用户代理UA 发送包含了所述用户身份标识ID的用户信息请求；用户信息发送单元1305，用于根据所述 用户身份标识ID向所述UA返回用户基本信息，所述基本信息包括下列的一种或多种：姓 名、别名、头像、签名档。</p>
+    <p>[0287]	可选地，所述装置130还包括：注册注销请求接收单元1306，用于接收UA的注册 和/或注销请求；注册注销单元1307，用于根据所述注册和/或注销请求，注册和/或注销 所述用户的Cert。</p>
+    <p>[0288]	图14为本发明实施例系统的一种实现架构图。本发明实施例可以通过浏览器插 件（ActiveX、XPcom)的方式提供对用户代理UA侧的认证支持。对于应用网站RP侧，可以 提供一组多平台、多语言的标准化的认证组件框架，用来支持本发明实施例所涉及的认证 方法。另外在一些非安全的网络环境中，可以结合一些强认证技术，用来保护用户身份和私 钥的安全，包括但不限于以下一些技术：生物认证、USB key、Smart Card已经SIM Card。</p>
+    <p>[0289]	本发明实施例可以基于SIP协议实现，SIP是一个开放的，分布的呼叫控制协议， 基于本发明实施例提供的UUL认证技术，可以实现SIP协议的双向用户认证，相对于HTTP Digest认证，UUL与SIM卡结合在一起，就可以实现更加安全方便的用户认证机制。</p>
+    <p>[0290]	综上所述，本发明实施例提供的分布式身份认证技术方案，用户身份实现了可携 带（Portability)，即可以使用该身份登录到任何支持本发明认证方法的网站，使用方法更 加简单、方便，丰富及改善了用户认证体验。具体地，本发明实施例提供的分布式身份认证 技术具有以下特点并取得了如下有益的技术效果：</p>
+    <p>[0291]	(1)本发明实施例的方法为每个用户分配一个UUL(通常为统一资源标识URI)， 通过该URL可以获得一个确定的用户证书；该证书与一个公钥（Public Key)唯一对应；通 过非对称加密算法，用户证书与用户私钥（Private Key)可以相互验证；采用“用户标识 (URI)=&gt;用户证书= &gt;用户私钥（Private Key)= &gt;用户”的方式对用户身份进行验证。</p>
+    <p>[0292]	因为URI具有唯一的可访问性，如果想要篡改用户身份标识，只有如下两种比较 大的可能性：</p>
+    <p>[0293]	a、DNS 劫持；</p>
+    <p>[0294]	b、篡改用户主页（用户身份标识对应的页面或内容)。</p>
+    <p>[0295]	一般情况下，以上两种情况都不会发生，所以，一个IDP自签的用户证书所验证的 用户标识（URI)也是一般情况下是可信的。因此，PKI的层级结构在本发明实施例的方法 中并不是一个必要的条件，这样可以大大地促进πα的普及与发展。</p>
+    <p>[0296]	(2)本发明实施例中统一用户标识UUL中所提供的用户信息、用户证书、用户标识 可能提供的其他服务，既可以基于^dis的发现机制获得，也可以采用其它的服务发现机 制，如Html Based Discovery (基于Html的服务发现机制)。[0297]	(3)本发明实施例的认证方法，使用基于质询（rfc 2617)的认证协商机制，从而 可以有效的解决OpenID存在的第一类缺陷，首先、由于RFC2617规定了算法协商，所以可提 供认证方法及加密算法协商；其次、由于RFC2617规定了参数选项，所以可提供认证方式上 的一些参数选项；最后、基于HTTP协议的扩展可以更好的规范化认证协议。另外，采用本 发明实施例的非对称加密认证方法，由RP利用公钥技术对最终用户认证，可以有效的解决 OpenID存在的第二类缺陷，使着分布式认证过程更简单、方便、安全。</p>
+    <p>[0298]	(4)本发明实施例的用户信息和证书是分离的。在DNS不被劫持的情况下，URI也 是不能篡改的。在必要的情况下，本发明实施例可以使用权威的CA对用户证书进行签名， 可以防止因DNS劫持或网页被篡改造成的隐私泄露，而OpenID是不能防止这些漏洞的，因 此，本发明实施例的认证方法更加安全。</p>
+    <p>[0299]	(5)本发明实施例的方法可以通过全局用户标识（URI)获得用户证书，而不是把 用户标识局限在用户证书内，因为URI具有全局唯一性，所以即便是IDP自签的用户证书， 同样具有身份唯一性的效果，而不需要CA的层层签名和授权。</p>
+    <p>[0300]	(6)本发明实施例的方法通过全局用户标识（URI)获得用户证书，使得证书的获 取和分发更加容易。本发明实施例的方法可以通过用户全局标识（URI)获得用户的信息， 而不是把信息附着在用户证书上，信息的附着的数量以及信息的变化频度不再是一个不可 解决的问题。例如，可以同时获得证书信息和其他关于用户的附加信息（在用户已公开这 些附加信息的前提下），包括但不限定于头像、姓名、年龄、电话号码等。</p>
+    <p>[0301]	(7)本发明实施例的方法通过采用非对称加密算法，扩展rfd617基于http质询 (Challenge)的认证方式，通过RP与UA之间的质询一响应方式，利用用户的公钥与私钥信 息，采用非对称加密算法进行认证。由于应用网站RP可以利用用户标识的URI (Universal Resource Identifier)访问一个去中心化的（Decentralized)用户身份提供方IDP上的用 户信息，因此可以实现与用户身份提供方IDP无关的分布式认证功能。与IDP无关是指，无 需知道关于任何IDP的任何信息，任何IDP的用户都可以登录到该应用网站。</p>
+    <p>[0302]	(8)本发明实施例还优化了用户代理（一般为浏览器Browser)对http 401认证 质询（Challenge)的响应方式，改变了 UA (浏览器）对认证质询的交互方式，从而可同时使 用传统表单登录和本发明所涉及的认证质询方式登录，不再弹出传统模式对话框。使得基 于Challenge的认证方式同基于表单（Form)的认证方式可以有机的结合在一起，用户认证 更加简单、方便、灵活，带来了更好的用户认证体验。</p>
+    <p>[0303]	(9)本发明实施例的方法、装置与系统对网络安全以及网络分级等应用有着重要 意义。在目前的互联网上充斥着各种各样的内容，有些内容对于青少年以及儿童是存在负 面影响，所以网络内容分级十分重要。通过采用本发明实施例的UUL认证技术，学校或者学 校托管于授信的用户身份提供商IDP，可以提供学生用户的身份证书，该证书中可以包含用 户的“名字”与“出生年份”信息（参见Rfc2527)，学生用户的私钥可以使用USB key或者 Smart Card的形式发放，在网吧或者公共图书馆等开放上网环境中使用UUL认证方式访问 网络，从而应用服务器就可以有针对性地提供相应级别的分级内容给相匹配的学生用户， 有利于为青少年营造绿色、健康的网络环境。</p>
+    <p>[0304]	本领域普通技术人员可以理解实现上述实施例方法中的全部或部分流程，是可以 通过计算机程序来指令相关的硬件来完成，所述的程序可存储于一计算机可读取存储介质中，该程序在执行时，可包括如上述各方法的实施例的流程。其中，所述的存储介质可为磁 碟、光盘、只读存储记忆体（Read-Only Memory, ROM)或随机存储记忆体（Random Access Memory, RAM)等。</p>
+    <p>[0305] 以上实施例仅用以说明本发明实施例的技术方案，而非对其限制；尽管参照前述 实施例对本发明实施例进行了详细的说明，本领域的普通技术人员应当理解：其依然可以 对前述各实施例所记载的技术方案进行修改，或者对其中部分技术特征进行等同替换；而 这些修改或者替换，并不使相应技术方案的本质脱离本发明实施例各实施例技术方案的精 神和范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1805341A?cl=zh">CN1805341A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年1月11日</td><td class="patent-data-table-td patent-date-value">2006年7月19日</td><td class="patent-data-table-td ">西安电子科技大学</td><td class="patent-data-table-td ">跨安全域的网络认证和密钥分配方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101552986A?cl=zh">CN101552986A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年5月6日</td><td class="patent-data-table-td patent-date-value">2009年10月7日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种流媒体业务的接入认证方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101674304A?cl=zh">CN101674304A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年10月15日</td><td class="patent-data-table-td patent-date-value">2010年3月17日</td><td class="patent-data-table-td ">浙江师范大学</td><td class="patent-data-table-td ">一种网络身份认证系统及方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102624687A?cl=zh">CN102624687A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月28日</td><td class="patent-data-table-td patent-date-value">2012年8月1日</td><td class="patent-data-table-td ">苏州奇可思信息科技有限公司</td><td class="patent-data-table-td ">基于移动终端的联网程序用户验证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102984046A?cl=zh">CN102984046A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月7日</td><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">阿里巴巴集团控股有限公司</td><td class="patent-data-table-td ">一种即时通讯业务的处理方法及相应的网络设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102984046B?cl=zh">CN102984046B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月7日</td><td class="patent-data-table-td patent-date-value">2015年12月16日</td><td class="patent-data-table-td ">阿里巴巴集团控股有限公司</td><td class="patent-data-table-td ">一种即时通讯业务的处理方法及相应的网络设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102984127A?cl=zh">CN102984127A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月5日</td><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">武汉大学</td><td class="patent-data-table-td ">一种以用户为中心的移动互联网身份管理及认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102984127B?cl=zh">CN102984127B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月5日</td><td class="patent-data-table-td patent-date-value">2015年6月3日</td><td class="patent-data-table-td ">武汉大学</td><td class="patent-data-table-td ">一种以用户为中心的移动互联网身份管理及认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103491094A?cl=zh">CN103491094A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月26日</td><td class="patent-data-table-td patent-date-value">2014年1月1日</td><td class="patent-data-table-td ">成都三零瑞通移动通信有限公司</td><td class="patent-data-table-td ">一种基于c/s模式的快速身份认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103501229A?cl=zh">CN103501229A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月27日</td><td class="patent-data-table-td patent-date-value">2014年1月8日</td><td class="patent-data-table-td ">武钢集团昆明钢铁股份有限公司</td><td class="patent-data-table-td ">一种基于供应链管理的电子商务平台安全认证系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015158228A1?cl=zh">WO2015158228A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2015年4月13日</td><td class="patent-data-table-td patent-date-value">2015年10月22日</td><td class="patent-data-table-td ">中国银联股份有限公司</td><td class="patent-data-table-td ">一种服务器、用户设备以及用户设备与服务器的交互方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=HtBxBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年8月3日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年9月28日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年4月30日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/0dbddad6dbe2bbd3d05b/CN102143134A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%88%86%E5%B8%83%E5%BC%8F%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%96%B9%E6%B3%95_%E8%A3%85%E7%BD%AE%E4%B8%8E%E7%B3%BB.pdf?id=HtBxBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2vK-8h0_co9mB8S_YQ9P-qjGj5uA"},"sample_url":"https://www.google.com/patents/reader?id=HtBxBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

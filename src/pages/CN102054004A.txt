@@ -1,0 +1,308 @@
+<!DOCTYPE html><html><head><title>专利 CN102054004A - 一种网页推荐方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种网页推荐方法和装置"><meta name="DC.contributor" content="佟子健" scheme="inventor"><meta name="DC.contributor" content="刘奕群" scheme="inventor"><meta name="DC.contributor" content="张敏" scheme="inventor"><meta name="DC.contributor" content="方奇" scheme="inventor"><meta name="DC.contributor" content="茹立云" scheme="inventor"><meta name="DC.contributor" content="金奕江" scheme="inventor"><meta name="DC.contributor" content="马少平" scheme="inventor"><meta name="DC.contributor" content="北京搜狗科技发展有限公司" scheme="assignee"><meta name="DC.contributor" content="清华大学" scheme="assignee"><meta name="DC.date" content="2009-11-4" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种网页推荐方法和装置，属于数据挖掘领域。所述方法包括：获得网页访问记录；根据网页访问记录获得网页之间的跳转关系信息库；当需要为用户进行网页推荐时，根据所述网页之间的跳转关系信息库为用户进行网页推荐。本发明提供的方案，使得用户可以在推荐网页集中查看摘要或点击浏览，较早地搜索到自己所需的网页，减少了冗余时间，提高了效率，提高了用户的使用体验，此方法的复杂度低，能支持在线实时计算，并在实验测试数据上取得了较好的性能，满足了实际应用中的需要。"><meta name="DC.date" content="2011-5-11"><meta name="citation_patent_publication_number" content="CN:102054004:A"><meta name="citation_patent_application_number" content="CN:200910236869"><link rel="canonical" href="https://www.google.com/patents/CN102054004A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102054004A?cl=zh"/><meta name="title" content="专利 CN102054004A - 一种网页推荐方法和装置"/><meta name="description" content="本发明公开了一种网页推荐方法和装置，属于数据挖掘领域。所述方法包括：获得网页访问记录；根据网页访问记录获得网页之间的跳转关系信息库；当需要为用户进行网页推荐时，根据所述网页之间的跳转关系信息库为用户进行网页推荐。本发明提供的方案，使得用户可以在推荐网页集中查看摘要或点击浏览，较早地搜索到自己所需的网页，减少了冗余时间，提高了效率，提高了用户的使用体验，此方法的复杂度低，能支持在线实时计算，并在实验测试数据上取得了较好的性能，满足了实际应用中的需要。"/><meta property="og:title" content="专利 CN102054004A - 一种网页推荐方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102054004A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102054004A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=duiTBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102054004A&amp;usg=AFQjCNFPQB6mUp6VwwUgDdraWkapZcgJug" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/57b5e0a9f99045599ff2/CN102054004A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/57b5e0a9f99045599ff2/CN102054004A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102054004A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102054004A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102054004A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102054004B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102054004A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种网页推荐方法和装置，属于数据挖掘领域。所述方法包括：获得网页访问记录；根据网页访问记录获得网页之间的跳转关系信息库；当需要为用户进行网页推荐时，根据所述网页之间的跳转关系信息库为用户进...</span><span itemprop="url">https://www.google.com/patents/CN102054004A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102054004A - 一种网页推荐方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102054004A - 一种网页推荐方法和装置" title="专利 CN102054004A - 一种网页推荐方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102054004 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910236869</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年5月11日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年11月4日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年11月4日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102054004B?hl=zh-CN&amp;cl=zh">CN102054004B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910236869.5, </span><span class="patent-bibdata-value">CN 102054004 A, </span><span class="patent-bibdata-value">CN 102054004A, </span><span class="patent-bibdata-value">CN 200910236869, </span><span class="patent-bibdata-value">CN-A-102054004, </span><span class="patent-bibdata-value">CN102054004 A, </span><span class="patent-bibdata-value">CN102054004A, </span><span class="patent-bibdata-value">CN200910236869, </span><span class="patent-bibdata-value">CN200910236869.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BD%9F%E5%AD%90%E5%81%A5%22">佟子健</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E5%A5%95%E7%BE%A4%22">刘奕群</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E6%95%8F%22">张敏</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%96%B9%E5%A5%87%22">方奇</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%8C%B9%E7%AB%8B%E4%BA%91%22">茹立云</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%87%91%E5%A5%95%E6%B1%9F%22">金奕江</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%A9%AC%E5%B0%91%E5%B9%B3%22">马少平</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E6%90%9C%E7%8B%97%E7%A7%91%E6%8A%80%E5%8F%91%E5%B1%95%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京搜狗科技发展有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%22">清华大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102054004A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102054004A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102054004A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (12),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=duiTBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910236869&amp;usg=AFQjCNEWlgQHGKbrKeUIsSgmTPr8Kpm1rw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=duiTBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102054004A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHY14JmYQ0LVv-jeP-99IdR2GVi1A"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT103121087" lang="ZH" load-source="patent-office">一种网页推荐方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 102054004 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA85038978" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种网页推荐方法和装置，属于数据挖掘领域。所述方法包括：获得网页访问记录；根据网页访问记录获得网页之间的跳转关系信息库；当需要为用户进行网页推荐时，根据所述网页之间的跳转关系信息库为用户进行网页推荐。本发明提供的方案，使得用户可以在推荐网页集中查看摘要或点击浏览，较早地搜索到自己所需的网页，减少了冗余时间，提高了效率，提高了用户的使用体验，此方法的复杂度低，能支持在线实时计算，并在实验测试数据上取得了较好的性能，满足了实际应用中的需要。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(24)</span></span></div><div class="patent-text"><div mxw-id="PCLM36014856" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种网页推荐方法，其特征在于，所述方法包括：获得网页访问记录；根据网页访问记录获得网页之间的跳转关系信息库；当需要为用户进行网页推荐时，根据所述网页之间的跳转关系信息库为用户进行网页 推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述网页访问记录至少包括用户会话标 识，目标网页标识以及所述目标网页的跳转来源网页标识，根据网页访问记录获得网页之 间的跳转关系信息包括：至少基于所述用户会话标识对所述网页访问记录进行分类；对拥有相同用户会话标识的网页访问记录，根据目标网页标识以及所述目标网页的跳 转来源网页标识建立代表网页跳转关系的跳转连通分支，在所述跳转连通分支中，各网页 以网页节点的形式存在；汇集各用户标识下对应的所述跳转连通分支，形成网页跳转关系信息库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述网页访问记录还包括：从所述跳转来 源网页跳转至目标网页的跳转时间；所述至少根据所述用户会话标识对所述网页访问记录进行分类还包括：对拥有相同会 话标识的网页访问记录按照所述跳转时间递增的顺序进行排序；所述根据目标网页标识以及所述目标网页的跳转来源网页标识建立代表网页跳转关 系的跳转连通分支还包括：在建立所述跳转连通分支的过程中，参考所述跳转时间对特定 的网页跳转记录进行筛选。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求2所述的方法，其特征在于，所述汇集各用户标识下对应的所述跳转 连通分支，形成网页跳转关系信息库包括：同一用户会话标识下的跳转连通分支构成同一用户会话中的网页跳转关系有向树；汇集所述各有向树构建代表网页跳转关系的点击树模型，所述点击树模型成为网页之 间的跳转关系信息库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其特征在于，所述汇集各有向树构建代表网页跳转关 系的点击树模型包括：汇集所述各有向树构建网页跳转关系森林；为所述构建的网页跳转关系森林添加虚拟根节点，形成点击树模型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2所述的方法，其特征在于，所述方法还包括：根据快速检索需要，对 所述网页跳转关系信息库进行优化。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其特征在于，所述根据快速检索需求，对所述网页跳转 关系信息库进行优化包括：为所述点击树模型中的所有不同的节点建立索引指针，所述索引指针用于指向按照前 序遍历方式遍历时和用户查询的当前网址相同的第一个节点；为所述点击树模型中的每一个节点添加一个链接指针，所述链接指针用于指向按照前 序遍历方式遍历时和当前节点相同的后续最近的节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求1所述的方法，其特征在于，在所述跳转关系信息库中各网页以网页 节点的形式存在，所述根据所述网页之间的跳转关系信息库为用户进行网页推荐包括：获得用户当前访问的网页的第一网页标识；在所述跳转关系信息库中查找所述第一网页标识对应的至少一个第一网页节点，所述 第一网页节点的标识与所述第一网页标识相同；在所述跳转关系信息库中查找从所述第一网页节点经过至少一跳而跳转到的后续网 页节点，所述查找到的后续网页节点构成所述第一网页的推荐网页候选集；根据预置策略在所述推荐网页候选集中选取至少一个网页为所述用户进行推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的方法，其特征在于，根据预置策略在所述推荐网页候选集中 选取至少一个网页为所述用户进行推荐包括：获得所述推荐网页候选集中的网页和当前访问网页之间的平均点击距离； 获得所述推荐网页候选集中的网页和当前访问网页之间的访问概率； 根据所述网页之间的平均点击距离、所述网页之间的访问概率以及所述候选推荐网页 集，为用户进行网页推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的方法，其特征在于，所述根据所述网页之间的平均点击距 离、所述网页之间的访问概率以及所述候选推荐网页集，为用户进行网页推荐包括：对所述网页之间的平均点击距离以及访问概率进行线性加权处理，获得所述候选推荐 网页集中的各网页的得分值；将所述计算出的各网页得分值，根据由高到低的顺序进行排序； 根据所述得分值的排序结果，生成推荐网页。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的方法，其特征在于，所述对所述网页之间的平均点击距离 以及访问概率进行线性加权处理，获得所述候选推荐网页集中的各网页的得分值包括：当访问概率一定时，所述平均点击距离越远，所述网页得分值越高；相应地，当所述平均点击距离一定时，所述访问概率越高，所述网页得分值越高。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的方法，其特征在于，所述网页之间的平均点击距离是通过 平均点击距离公式获得，所述平均点击距离公式包括：n{a,b)平均点击距离&#943;/Ο,δ)= Σ成/&#171;0,的，其中，n(a，b)为同时出现了网页a和网页b的会/=1话个数，d代表两个网页之间的点击距离，a和b代表所述候选推荐网页集中的任意2个网 页；相应地，所述两个网页之间的访问概率是通过网页之间的访问概率的公式获得，所述 网页之间的访问概率的公式包括： Np(a,b) = \og(-&#8212;)xn(a,b)，其中，N是所有会话的总数，n(b)为出现了网页b的会话个Φ)数，η (a, b)为同时出现了网页a和网页b的会话个数；相应地，所述线性加权公式具体为：v(a，b) = λ Xd(a，b) + (l-X)Xp(a，b)，其中，λ 为融合参数，λ的取值范围为λ ( l，d(a，b)代表平均点击距离、ρ (a，b)代表访问概 率、a和b代表所述候选推荐网页集中的任意2个网页。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求1至12中任意一项所述的方法，其特征在于，所述获得网页访问记录 包括：获得Web访问日志。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求3至7中任一项所述的方法，其特征在于，所述目标网页标识具体是目标网页的网址，所述目标网页的跳转来源网页标识具体是所述跳转来源网页的网址。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.	一种网页推荐装置，其特征在于，所述装置包括：网页访问记录模块、网页跳转关 系模块、网页推荐模块；所述网页访问记录模块，用于获得网页访问记录；所述网页跳转关系模块，用于根据所述网页访问记录模块获得的网页访问记录获得网 页之间的跳转关系信息库；所述网页推荐模块，用于当需要为用户进行网页推荐时，根据所述网页跳转关系模块 获得的网页之间的跳转关系信息库为用户进行网页推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的装置，其特征在于，所述网页访问记录模块获得的网页访 问记录至少包括用户会话标识，目标网页标识以及所述目标网页的跳转来源网页标识，所 述网页跳转关系模块包括：分类单元、建立单元、构建单元；所述分类单元，用于基于所述用户会话标识对所述网页访问记录模块获得的网页访问 记录进行分类；所述建立单元，用于对拥有相同用户会话标识的网页访问记录，根据目标网页标识以 及所述目标网页的跳转来源网页标识建立代表网页跳转关系的跳转连通分支，在所述跳转 连通分支中，各网页以网页节点的形式存在；所述构建单元，用于汇集各用户标识下对应的所述跳转连通分支，形成网页跳转关系信息库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求16所述的装置，其特征在于，所述网页访问记录模块获得的网页访 问记录还包括：从所述跳转来源网页跳转至目标网页的跳转时间；所述分类单元还包括：排序子单元；所述排序子单元，用于对拥有相同会话标识的网页访问记录按照所述跳转时间递增的 顺序进行排序；所述建立单元还包括：筛选子单元；所述筛选子单元，用于在建立所述跳转连通分支的过程中，参考所述跳转时间对特定 的网页跳转记录进行筛选。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求16所述的装置，其特征在于，所述构建单元包括：构成子单元、汇集 子单元；所述构成子单元，用于同一用户会话标识下的跳转连通分支构成同一用户会话中的网 页跳转关系有向树；所述汇集子单元，用于汇集所述各有向树构建代表网页跳转关系的点击树模型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求18所述的装置，其特征在于，所述汇集子单元包括：汇集子单元1、汇 集子单元2 ；所述汇集子单元1，用于汇集所述各有向树构建网页跳转关系森林；所述汇集子单元2，用于为所述汇集子单元1构建的网页跳转关系森林添加虚拟根节 点，形成点击树模型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求16所述的装置，其特征在于，所述装置还包括：优化模块；所述优化模块用于根据快速检索需要，对所述网页跳转关系模块获得的网页跳转关系 信息库进行优化。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求20所述的装置，其特征在于，所述优化模块包括：索引指针建立单 元、链接指针添加单元；所述索引指针建立单元，用于为所述点击树模型中的所有不同的节点建立索引指针， 所述索引指针用于指向按照前序遍历方式遍历时和用户查询的当前网址相同的第一个节点所述链接指针添加单元，用于为所述点击树模型中的每一个节点添加一个链接指针， 所述链接指针用于指向按照前序遍历方式遍历时和当前节点相同的后续最近的节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求15至21中任一项所述的装置，其特征在于，在所述跳转关系信息库 中各网页以网页节点的形式存在，所述推荐模块包括：网页标识获得单元、网页节点查找单 元、推荐网页候选集查找单元、推荐网页选取单元；所述网页标识获得单元，用于获得用户当前访问的网页的第一网页标识； 所述网页节点查找单元，用于在所述跳转关系信息库中查找所述第一网页标识对应的 至少一个第一网页节点；所述推荐网页候选集查找单元，用于在所述跳转关系信息库中查找从所述第一网页节 点经过至少一跳而跳转到的后续网页节点，所述查找到的后续网页节点构成所述第一网页 的推荐网页候选集；所述推荐网页选取单元，用于根据预置策略在所述推荐网页候选集中选取至少一个网 页为所述用户进行推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求22所述的装置，其特征在于，所述推荐网页选取单元包括：平均点击 距离计算子单元、访问概率计算子单元、推荐子单元；所述平均点击距离计算子单元，用于获得所述推荐网页候选集中的网页和当前访问网 页之间的平均点击距离；所述访问概率计算子单元，用于获得所述推荐网页候选集中的网页和当前访问网页之 间的访问概率；所述推荐子单元，用于根据所述平均点击距离计算子单元获得的网页和当前访问网页 之间的平均点击距离、所述访问概率计算子单元获得的网页和当前访问网页之间的访问概 率以及所述候选推荐网页集，为用户进行网页推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求23所述的装置，其特征在于，所述推荐子单元包括：线性加权处理子 单元、排序子单元、生成子单元；所述线性加权处理子单元，用于对所述网页之间的平均点击距离以及访问概率进行线 性加权处理，获得所述候选推荐网页集中的各网页的得分值；所述排序子单元，用于将所述计算出的各网页得分值，根据由高到低的顺序进行排序；所述生成子单元，用于根据所述得分值的排序结果，生成推荐网页。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES41792278" lang="ZH" load-source="patent-office" class="description">
+    <p>一种网页推荐方法和装置技术领域</p>
+    <p>[0001]	本发明涉及数据挖掘领域，特别涉及一种网页推荐方法和装置。 背景技术</p>
+    <p>[0002]	随着计算机技术的发展和hternet因特网的普及，Web网络数据突破传统意义上 的数据格式的限制，变得越来越重要，成为Web用户更好的获得信息地一个有效的途径。</p>
+    <p>[0003]	Web访问日志数据是记录用户对Web站点访问信息的数据，保存有大量的路径信 息，通过挖掘这些日志信息所得到的用户访问模式，在个性化信息服务、改进门户站点设计 和服务、开展有针对性的电子商务、构建智能化Web站点、提高网站的声誉和效益等方面都 将起到重要的作用。Web访问日志的内容通常包括以下几项：用户IP、Session标识符、用 户访问的目标站点URL(Uniform Resource Locator,网页地址）、访问时间、跳转来源等等。 用户可以在浏览器地址栏中输入目标网页URL，或点击超链接来搜索得到想要的目标网页。</p>
+    <p>[0004]	发明人在实现本发明的过程中发现，现有技术至少存在以下缺点：用户在搜索时， 一般需要构造并输入查询词，才能引导搜索引擎完成搜索工作，有时由于获得了一些无关 的内容项，使得会获得一些垃圾网站，无法得到用户真正需要的网页。发明内容</p>
+    <p>[0005]	为了使用户能尽快地搜索到自己所需要的网页，得到有价值的推荐网页，减少冗 余时间，提高处理效率，提高用户体验，本发明实施例提供了一种网页推荐方法和装置，所 述技术方案如下：</p>
+    <p>[0006]	一种网页推荐方法，所述方法包括：</p>
+    <p>[0007]	获得网页访问记录；</p>
+    <p>[0008]	根据网页访问记录获得网页之间的跳转关系信息库；</p>
+    <p>[0009]	当需要为用户进行网页推荐时，根据所述网页之间的跳转关系信息库为用户进行 网页推荐。</p>
+    <p>[0010]	所述网页访问记录至少包括用户会话标识，目标网页标识以及所述目标网页的跳 转来源网页标识，根据网页访问记录获得网页之间的跳转关系信息包括：</p>
+    <p>[0011]	至少基于所述用户会话标识对所述网页访问记录进行分类；</p>
+    <p>[0012]	对拥有相同用户会话标识的网页访问记录，根据目标网页标识以及所述目标网页 的跳转来源网页标识建立代表网页跳转关系的跳转连通分支，在所述跳转连通分支中，各 网页以网页节点的形式存在；</p>
+    <p>[0013]	汇集各用户标识下对应的所述跳转连通分支，形成网页跳转关系信息库。</p>
+    <p>[0014]	所述网页访问记录还包括：从所述跳转来源网页跳转至目标网页的跳转时间；</p>
+    <p>[0015]	所述至少根据所述用户会话标识对所述网页访问记录进行分类还包括：对拥有相 同会话标识的网页访问记录按照所述跳转时间递增的顺序进行排序；</p>
+    <p>[0016]	所述根据目标网页标识以及所述目标网页的跳转来源网页标识建立代表网页跳转关系的跳转连通分支还包括：在建立所述跳转连通分支的过程中，参考所述跳转时间对 特定的网页跳转记录进行筛选。</p>
+    <p>[0017]	所述汇集各用户标识下对应的所述跳转连通分支，形成网页跳转关系信息库包 括：</p>
+    <p>[0018]	同一用户会话标识下的跳转连通分支构成同一用户会话中的网页跳转关系有向 树；</p>
+    <p>[0019]	汇集所述各有向树构建代表网页跳转关系的点击树模型，所述点击树模型成为网 页之间的跳转关系信息库。</p>
+    <p>[0020]	所述汇集各有向树构建代表网页跳转关系的点击树模型包括：</p>
+    <p>[0021]	汇集所述各有向树构建网页跳转关系森林；</p>
+    <p>[0022]	为所述构建的网页跳转关系森林添加虚拟根节点，形成点击树模型。</p>
+    <p>[0023]	所述方法还包括：根据快速检索需要，对所述网页跳转关系信息库进行优化。</p>
+    <p>[0024]	所述根据快速检索需求，对所述网页跳转关系信息库进行优化包括：</p>
+    <p>[0025]	为所述点击树模型中的所有不同的节点建立索引指针，所述索引指针用于指向按 照前序遍历方式遍历时和用户查询的当前网址相同的第一个节点；</p>
+    <p>[0026]	为所述点击树模型中的每一个节点添加一个链接指针，所述链接指针用于指向按 照前序遍历方式遍历时和当前节点相同的后续最近的节点。</p>
+    <p>[0027]	在所述跳转关系信息库中各网页以网页节点的形式存在，所述根据所述网页之间 的跳转关系信息库为用户进行网页推荐包括：</p>
+    <p>[0028]	获得用户当前访问的网页的第一网页标识；</p>
+    <p>[0029]	在所述跳转关系信息库中查找所述第一网页标识对应的至少一个第一网页节点， 所述第一网页节点的标识与所述第一网页标识相同；</p>
+    <p>[0030]	在所述跳转关系信息库中查找从所述第一网页节点经过至少一跳而跳转到的后 续网页节点，所述查找到的后续网页节点构成所述第一网页的推荐网页候选集；</p>
+    <p>[0031]	根据预置策略在所述推荐网页候选集中选取至少一个网页为所述用户进行推荐。</p>
+    <p>[0032]	根据预置策略在所述推荐网页候选集中选取至少一个网页为所述用户进行推荐 包括：</p>
+    <p>[0033]	获得所述推荐网页候选集中的网页和当前访问网页之间的平均点击距离；</p>
+    <p>[0034]	获得所述推荐网页候选集中的网页和当前访问网页之间的访问概率；</p>
+    <p>[0035]	根据所述网页之间的平均点击距离、所述网页之间的访问概率以及所述候选推荐 网页集，为用户进行网页推荐。</p>
+    <p>[0036]	所述根据所述网页之间的平均点击距离、所述网页之间的访问概率以及所述候选 推荐网页集，为用户进行网页推荐包括：</p>
+    <p>[0037]	对所述网页之间的平均点击距离以及访问概率进行线性加权处理，获得所述候选 推荐网页集中的各网页的得分值；</p>
+    <p>[0038]	将所述计算出的各网页得分值，根据由高到低的顺序进行排序；</p>
+    <p>[0039]	根据所述得分值的排序结果，生成推荐网页。</p>
+    <p>[0040]	所述对所述网页之间的平均点击距离以及访问概率进行线性加权处理，获得所述 候选推荐网页集中的各网页的得分值包括：[0041]	当访问概率一定时，所述平均点击距离越远，所述网页得分值越高；</p>
+    <p>[0042]	相应地，当所述平均点击距离一定时，所述访问概率越高，所述网页得分值越高。</p>
+    <p>[0043]	所述网页之间的平均点击距离是通过平均点击距离公式获得，所述平均点击距离 公式包括：</p>
+    <p>[0044]	平均点击距离Σ成/"(&#171;^)，其中，n(a，b)为同时出现了网页a和网页b/=1的会话个数，d代表两个网页之间的点击距离，a和b代表所述候选推荐网页集中的任意2 个网页；</p>
+    <p>[0045]	相应地，所述两个网页之间的访问概率是通过网页之间的访问概率的公式获得， 所述网页之间的访问概率的公式包括：N</p>
+    <p>[0046]	p(a,b) = \og(~&#8212;)xn(a,b),其中，N是所有会话的总数，n(b)为出现了网页b的会Φ)话个数，η (a，b)为同时出现了网页a和网页b的会话个数；</p>
+    <p>[0047]	相应地，所述线性加权公式具体为：v(a，b) = λ Xd(a, b) + (1-λ ) Xρ (a, b)，其 中，λ为融合参数，λ的取值范围为λ ( l，d(a，b)代表平均点击距离、ρ (a，b)代表 访问概率、a和b代表所述候选推荐网页集中的任意2个网页。</p>
+    <p>[0048]	所述获得网页访问记录包括：获得Web访问日志。</p>
+    <p>[0049]	所述目标网页标识具体是目标网页的网址，所述目标网页的跳转来源网页标识具 体是所述跳转来源网页的网址。</p>
+    <p>[0050]	一种网页推荐装置，所述装置包括：网页访问记录模块、网页跳转关系模块、网页 推荐模块；</p>
+    <p>[0051]	所述网页访问记录模块，用于获得网页访问记录；</p>
+    <p>[0052]	所述网页跳转关系模块，用于根据所述网页访问记录模块获得的网页访问记录获 得网页之间的跳转关系信息库；</p>
+    <p>[0053]	所述网页推荐模块，用于当需要为用户进行网页推荐时，根据所述网页跳转关系 模块获得的网页之间的跳转关系信息库为用户进行网页推荐。</p>
+    <p>[0054]	所述网页访问记录模块获得的网页访问记录至少包括用户会话标识，目标网页标 识以及所述目标网页的跳转来源网页标识，所述网页跳转关系模块包括：分类单元、建立单 元、构建单元；</p>
+    <p>[0055]	所述分类单元，用于基于所述用户会话标识对所述网页访问记录模块获得的网页 访问记录进行分类；</p>
+    <p>[0056]	所述建立单元，用于对拥有相同用户会话标识的网页访问记录，根据目标网页标 识以及所述目标网页的跳转来源网页标识建立代表网页跳转关系的跳转连通分支，在所述 跳转连通分支中，各网页以网页节点的形式存在；</p>
+    <p>[0057]	所述构建单元，用于汇集各用户标识下对应的所述跳转连通分支，形成网页跳转 关系信息库。</p>
+    <p>[0058]	所述网页访问记录模块获得的网页访问记录还包括：从所述跳转来源网页跳转至 目标网页的跳转时间；</p>
+    <p>[0059]	所述分类单元还包括：排序子单元；[0060]	所述排序子单元，用于对拥有相同会话标识的网页访问记录按照所述跳转时间递 增的顺序进行排序；</p>
+    <p>[0061]	所述建立单元还包括：筛选子单元；</p>
+    <p>[0062]	所述筛选子单元，用于在建立所述跳转连通分支的过程中，参考所述跳转时间对 特定的网页跳转记录进行筛选。</p>
+    <p>[0063]	所述构建单元包括：构成子单元、汇集子单元；</p>
+    <p>[0064]	所述构成子单元，用于同一用户会话标识下的跳转连通分支构成同一用户会话中 的网页跳转关系有向树；</p>
+    <p>[0065]	所述汇集子单元，用于汇集所述各有向树构建代表网页跳转关系的点击树模型。</p>
+    <p>[0066]	所述汇集子单元包括：汇集子单元1、汇集子单元2 ；</p>
+    <p>[0067]	所述汇集子单元1，用于汇集所述各有向树构建网页跳转关系森林；</p>
+    <p>[0068]	所述汇集子单元2，用于为所述汇集子单元1构建的网页跳转关系森林添加虚拟 根节点，形成点击树模型。</p>
+    <p>[0069]	所述装置还包括：优化模块；</p>
+    <p>[0070]	所述优化模块用于根据快速检索需要，对所述网页跳转关系模块获得的网页跳转 关系信息库进行优化。</p>
+    <p>[0071]	所述优化模块包括：索引指针建立单元、链接指针添加单元；</p>
+    <p>[0072]	所述索引指针建立单元，用于为所述点击树模型中的所有不同的节点建立索引指 针，所述索引指针用于指向按照前序遍历方式遍历时和用户查询的当前网址相同的第一个 节点。</p>
+    <p>[0073]	所述链接指针添加单元，用于为所述点击树模型中的每一个节点添加一个链接指 针，所述链接指针用于指向按照前序遍历方式遍历时和当前节点相同的后续最近的节点。</p>
+    <p>[0074]	在所述跳转关系信息库中各网页以网页节点的形式存在，所述推荐模块包括：网 页标识获得单元、网页节点查找单元、推荐网页候选集查找单元、推荐网页选取单元；</p>
+    <p>[0075]	所述网页标识获得单元，用于获得用户当前访问的网页的第一网页标识；</p>
+    <p>[0076]	所述网页节点查找单元，用于在所述跳转关系信息库中查找所述第一网页标识对 应的至少一个第一网页节点；</p>
+    <p>[0077]	所述推荐网页候选集查找单元，用于在所述跳转关系信息库中查找从所述第一网 页节点经过至少一跳而跳转到的后续网页节点，所述查找到的后续网页节点构成所述第一 网页的推荐网页候选集；</p>
+    <p>[0078]	所述推荐网页选取单元，用于根据预置策略在所述推荐网页候选集中选取至少一 个网页为所述用户进行推荐。</p>
+    <p>[0079]	所述推荐网页选取单元包括：平均点击距离计算子单元、访问概率计算子单元、推 荐子单元；</p>
+    <p>[0080]	所述平均点击距离计算子单元，用于获得所述推荐网页候选集中的网页和当前访 问网页之间的平均点击距离；</p>
+    <p>[0081]	所述访问概率计算子单元，用于获得所述推荐网页候选集中的网页和当前访问网 页之间的访问概率；</p>
+    <p>[0082]	所述推荐子单元，用于根据所述平均点击距离计算子单元获得的网页和当前访问网页之间的平均点击距离、所述访问概率计算子单元获得的网页和当前访问网页之间的访 问概率以及所述候选推荐网页集，为用户进行网页推荐。</p>
+    <p>[0083]	所述推荐子单元包括：线性加权处理子单元、排序子单元、生成子单元；</p>
+    <p>[0084]	所述线性加权处理子单元，用于对所述网页之间的平均点击距离以及访问概率进 行线性加权处理，获得所述候选推荐网页集中的各网页的得分值；</p>
+    <p>[0085]	所述排序子单元，用于将所述计算出的各网页得分值，根据由高到低的顺序进行 排序；</p>
+    <p>[0086]	所述生成子单元，用于根据所述得分值的排序结果，生成推荐网页。</p>
+    <p>[0087]	本发明实施例提供的技术方案的有益效果是：通过对访问日志进行数据预处理， 获得只包含对用户有用的内容项；对获得的对用户有用的内容项进行离线构建点击树模 型；利用点击树模型生成候选推荐网页集，从中选择出满足实际需求的网页集合，用户可以 较早地搜索到自己所需的网页，减少了冗余时间，提高了效率，满足了实际应用中的需要。附图说明</p>
+    <p>[0088]	为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现 有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本 发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以 根据这些附图获得其他的附图。</p>
+    <p>[0089]	图1是本发明实施例1提供的一种网页推荐方法的流程图；</p>
+    <p>[0090]	图2是本发明实施例1提供的一种网页推荐方法的示意图；</p>
+    <p>[0091]	图3是本发明实施例2提供的一种网页推荐方法的详细流程图；</p>
+    <p>[0092]	图4是本发明实施例2提供的点击树模型构建示意图；</p>
+    <p>[0093]	图5是本发明实施例2提供的前端浏览器插件demo的截图；</p>
+    <p>[0094]	图6是本发明实施例3提供的一种网页推荐装置的流程图。具体实施方式</p>
+    <p>[0095]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方 式作进一步地详细描述。</p>
+    <p>[0096]	为了协助互联网用户更好地进行网络浏览，提出基于Web访问日志分析的网页推 荐方法。该方法涉及到前端（即用户浏览器客户端）展现方式和后台（网页推荐服务器） 推荐计算两个部分。前端通过开发浏览器插件，实时获取用户当前浏览的网页URL，将其发 送至后台服务器，然后接收后台服务器计算出的推荐结果并在浏览器侧边栏中显示出来。 对于推荐结果，用户可以查看摘要或点击浏览。后台服务器通过对互联网用户访问网页行 为的宏观分析，过滤Web访问日志中可能存在的垃圾和噪音信息，将具有点击跳转关系的 网页相关联，离线构建出点击树模型，在给定某用户已访问过的网页资源情况下，在线计算 出访问概率高且点击距离较远的网页，生成推荐结果。具体内容描述如下：</p>
+    <p>[0097]	1、互联网用户在浏览网页过程中，会在浏览器地址栏输入目标网页URL，或点击当 前浏览网页中的超链接。这些操作都会使浏览器发出对新网页的请求。通过用户主动在浏 览器上安装的工具条，这些操作将会被记录在Web访问日志中，日志数据反映了用户浏览网页的行为习惯；</p>
+    <p>[0098]	2、依照Web访问日志中的网页跳转关系，将日志数据自动划分成大量的点击序 列，每个点击序列称为一个会话，会话之间相对独立，会话内的网页具有点击跳转关系，每 个会话都代表着一个用户在一段时期内的一个访问意图；</p>
+    <p>[0099]	3、从用户的访问意图上看，同一个会话里的网页都有一个共同的主题。两个网页 在所有会话中同时出现的频度越高，说明越多的用户认为它们具有相同的主题，越可能被 同时访问。在给定网页a的条件下，通过计算网页b与网页a共同出现的频度以及一些全 局信息，得到用户访问网页a之后将会访问网页b的概率；</p>
+    <p>[0100]	4、从用户操作上来看，同一个会话中的网页，根据点击跳转关系，将构成一个树结 构。树结构中的点表示该会话中的网页，树结构中的边表示点击跳转关系。当且仅当对应 的网页有直接点击跳转关系，两个点在树中相邻。在给定网页a的条件下，通过计算网页b 在某个树结构中与网页a的距离，得到它们在对应会话里的点击距离。通过计算网页b在 所有会话中与网页a的点击距离，得到它们的平均点击距离。网页b与网页a的平均点击 距离越大，表示用户从网页a访问到达网页b需要进行的点击跳转操作越多；</p>
+    <p>[0101]	5、已知当前浏览的网页a，根据访问概率和平均点击距离两大因素，将所有候选网 页进行排序，选取排名靠前的网页，这就构成了推荐结果。</p>
+    <p>[0102]	6、通过开发前端浏览器插件，实现网页推荐的实际应用，浏览器插件负责输入和 输出任务，即实时将用户当前浏览的网页URL发送至后台服务器，并将推荐结果显示出来， 供用户点击浏览。</p>
+    <p>[0103]	请参见下述实施例，对本方法作进一步的说明。</p>
+    <p>[0104]	实施例1</p>
+    <p>[0105]	本发明实施例提供了一种网页推荐的方法，参见图1，该方法包括：</p>
+    <p>[0106]	步骤101 ：获得网页访问记录。</p>
+    <p>[0107]	其中，网页访问记录可以是Web访问日志。网页访问记录至少包括：用户会话标 识，目标网页标识以及所述目标网页的跳转来源网页标识。为了达到更好的效果，网页访问 记录还可以包括从跳转来源网页跳转至目标网页的跳转时间，后续会对这种优选情况进行 更详细的说明。</p>
+    <p>[0108]	步骤102 ：根据网页访问记录获得网页之间的跳转关系信息库。</p>
+    <p>[0109]	其中，根据网页访问记录获得网页之间的跳转关系信息库具体包括：</p>
+    <p>[0110]	至少基于用户会话标识对网页访问记录进行分类；对拥有相同用户会话标识的网 页访问记录，根据目标网页标识以及目标网页的跳转来源网页标识建立代表网页跳转关系 的跳转连通分支，在跳转连通分支中，各网页以网页节点的形式存在。汇集各用户标识下对 应的跳转连通分支，形成网页跳转关系信息库。</p>
+    <p>[0111]	至少根据用户会话标识对网页访问记录进行分类还包括：对拥有相同会话标识的 网页访问记录按照跳转时间递增的顺序进行排序；根据目标网页标识以及目标网页的跳转 来源网页标识建立代表网页跳转关系的跳转连通分支还包括：在建立跳转连通分支的过程 中，参考跳转时间对特定的网页跳转记录进行筛选。</p>
+    <p>[0112]	汇集各用户标识下对应的跳转连通分支，形成网页跳转关系信息库包括：同一用 户会话标识下的跳转连通分支构成同一用户会话中的网页跳转关系有向树；汇集各有向树构建代表网页跳转关系的点击树模型，点击树模型成为网页之间的跳转关系信息库。汇集 各有向树构建代表网页跳转关系的点击树模型包括：汇集各有向树构建网页跳转关系森 林；为构建的网页跳转关系森林添加虚拟根节点，形成点击树模型。</p>
+    <p>[0113]	步骤103 ：当需要为用户进行网页推荐时，根据网页之间的跳转关系信息库为用 户进行网页推荐。</p>
+    <p>[0114]	其中，根据网页之间的跳转关系信息库为用户进行网页推荐具体包括：获得用户 当前访问的网页的第一网页标识；在跳转关系信息库中查找第一网页标识对应的至少一个 第一网页节点，第一网页节点的标识与第一网页标识相同；在跳转关系信息库中查找从第 一网页节点经过至少一跳而跳转到的后续网页节点，查找到的后续网页节点构成第一网页 的推荐网页候选集；</p>
+    <p>[0115]	根据预置策略在推荐网页候选集中选取至少一个网页为用户进行推荐，具体包 括：获得推荐网页候选集中的网页和当前访问网页之间的平均点击距离；获得推荐网页候 选集中的网页和当前访问网页之间的访问概率；根据网页之间的平均点击距离、网页之间 的访问概率以及候选推荐网页集，为用户进行网页推荐。</p>
+    <p>[0116]	本发明实施例提供的方法，通过对访问日志进行数据预处理，获得网页访问记录， 根据网页访问记录获得网页之间的跳转关系信息库，当需要为用户进行网页推荐时，根据 网页之间的跳转关系信息库为用户进行网页推荐。用户可以在推荐网页集中查看摘要或点 击浏览，较早地搜索到自己所需的网页，减少了冗余时间，提高了效率，提高了用户的使用 体验，此方法的复杂度低，能支持在线实时计算，并在实验测试数据上取得较好性能，满足 实际应用中的需要。</p>
+    <p>[0117]	为了对上述本发明实施例提供的方法进行详细说明，请参见如下实施例：</p>
+    <p>[0118]	实施例2</p>
+    <p>[0119]	为了使用户能尽快地搜索到自己所需要的网页，减少冗余时间，提高处理效率，本 发明实施例提供了一种网页推荐方法，具体内容如下：</p>
+    <p>[0120]	参见图2，图2中给出了网页推荐的示意图，结合图2，对各个部分的主要工作方式 进行详细的描述：[0121 ] 首先，对Web访问日志进行数据预处理，获得网页访问记录，详见下文描述：</p>
+    <p>[0122]	数据预处理部分：网页推荐所依据的数据集合来自于互联网用户的Web访问日 志，对于某个Web访问日志而言，它至少包括JessionID、Dst URL、Src URL、还可以包括 Time，参见表1，表1为供网页推荐的Web访问日志包括的内容，包括记录内容和记录位数两 项内容，其中，记录的位数表明了 kssionID、DstURL、Src URL、Time中的内容通过编码格 式的转换，将统一的编码格式转换为字符串形式所占据的存储空间大小。</p>
+    <p>[0123]	表1供网页推荐的Web访问日志包括的内容[0124]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102054004A/CN102054004AD00131.png"> <img id="idf0001" file="CN102054004AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102054004A/CN102054004AD00131.png" class="patent-full-image" alt="Figure CN102054004AD00131"> </a> </div>
+    <p>[0125]	具体为=Sessi0nID表示用户会话标识符，用以区别不同用户的不同会话；Dst URL表示被访问的目标网页URL ；Src URL表示目标网页的跳转来源URL，其中，nul 1表示为 空；Time表示用户访问目标网页的时间，即从跳转来源网页跳转至目标网页的时间。</p>
+    <p>[0126]	其中，SessionID的位数为32位，即4个字节（32/8 = 4)，给kssionID分配4个 字节的存储空间；同理DstURL的位数为256位，即32个字节，给DstURL分配32个字节的 存储空间；同理Src URL的位数为256位，即32个字节，给Src URL分配32个字节的存储 空间；同理Time的位数为32位，即4个字节，给Time分配4个字节的存储空间。</p>
+    <p>[0127]	然后，根据网页访问记录获得网页之间的跳转关系信息库，详见下文描述：</p>
+    <p>[0128]	构建点击树模型部分：拥有相同kssionID的日志数据，并不一定都具有点击跳 转关系，因为日志中SrcURL可以为null，表示用户并没有点击超链接，而是在地址栏进行 了手工输入操作。此时可以认为用户浏览主题发生了偏移。为了确保推荐网页的相关性， 需要对原始会话作进一步的划分。</p>
+    <p>[0129]	为拥有相同kssionID的日志数据构建点击关系有向图G= (V，E)。其中V代表 访问目标网页集合，E表示点击跳转关系集合。构建方式具体为：</p>
+    <p>[0130]	1、V={}，E={}</p>
+    <p>[0131]	2、按访问时间顺序递增遍历每一条目GessionID，DstURL, SrcURL, Time)，</p>
+    <p>[0132]	if DstURL = VU {DstURL}；</p>
+    <p>[0133]	if SrcURL ^ null and SrcURL e V and (SrcURL,DstURL) ^ E</p>
+    <p>[0134]	E = EU {(SrcURL, DstURL)}</p>
+    <p>[0135]	由于，有向图G是一个森林，用图论里的划分连通分支算法能将森林G切割成若干 棵有向树。其中，划分连通分支算法具体为：对拥有相同用户会话标识的网页访问记录，根 据目标网页网址以及目标网页的跳转来源网页网址建立代表网页跳转关系的跳转连通分 支，在跳转连通分支中，各网页以网页节点的形式存在，汇集各用户标识下对应的跳转连通 分支，形成网页跳转关系信息库。同一用户会话标识下的跳转连通分支构成同一用户会话 中的网页跳转关系有向树；汇集各有向树构建代表网页跳转关系的点击树模型，点击树模 型成为网页之间的跳转关系信息库。汇集各有向树构建代表网页跳转关系的点击树模型包 括：汇集各有向树构建网页跳转关系森林；为构建的网页跳转关系森林添加虚拟根节点， 形成点击树模型。[0136]	其中，具体为：对每一个拥有相同kssionID的日志数据集合都利用划分连通分 支算法对日志数据集合进行划分，这样所有日志数据将被划分成大量的有向树。此时每一 棵有向树对应着一个相对独立的最终会话（区别于从Web访问日志直接得到的原始会话， 以后会话就是指最终会话），树的数目就是最终会话的数目。以树中任一节点a为根的子 树，对应着用户在同一会话中访问完a之后所访问的所有网页集合，全部有向树构成了一 个森林，在对这个森林添加一个虚拟的根节点，就构成了点击树模型。</p>
+    <p>[0137]	最后，根据网页之间的跳转关系信息库为用户进行网页推荐，其中，当运算的数据 量不大时，可以采用离线的方式生成推荐网页，在实际应用中，一般数据量会较大，全部计 算完需要很久，只能在线的计算，本发明实施例优选在线生成推荐网页，具体实现方式，本 发明实施例对此不作限制。详见下文描述：</p>
+    <p>[0138]	1、在线计算平均点击距离部分：用户访问完网页a之后访问网页b，网页a与网页 b在某一会话里的点击距离定义为在该会话对应的点击树的子树中，网页a与网页b对应节 点的距离。假设共有n(a，b)个会话同时出现了网页a和网页b，其中，η代表会话的个数，η{αβ)对应的点击距离为屯、d2... dn(a,b)，则平均点击距离=Σ&#940;&gt;	。/=1</p>
+    <p>[0139]	2、在线计算访问概率部分：网页b对网页a的访问概率p(a，b)定义为：用户访问 完网页a之后将会访问网页b的概率，即p(a，b) = log (N/n (b)) Xn (a, b)，其中N是所有 会话的总数，n(b)为出现了网页b的会话个数，n(a，b)为同时出现了网页a和网页b的会 话个数。</p>
+    <p>[0140]	其中，该访问概率公式借鉴了信息检索中tf-idf公式的思想，能有效地去除网页 b的背景噪音，所谓的背景噪音指的是用户经常点击的网页，浏览率较高的网页，对于用户 而言，当输入一个点击率低的网页的URL时，这个网页一定是用户所需要的，而浏览率较高 的网页不一定是用户所真正需要的，这时可以利用上述公式，去除掉经常点击的网页，推荐 点击率低的网页，满足用户的真正需求。</p>
+    <p>[0141]	根据平均点击距离、访问概率，得到线性加权公式，其中，</p>
+    <p>[0142]	线性加权公式v(a，b) = λ Xd(a，b) + (1-X) Xp(a，b)，其中ν代表得分值，λ为 融合参数，λ的取值范围为λ ( 1，实际应用中可根据需要对λ的取值范围进行调 整，本发明实施例对此不作限制。</p>
+    <p>[0143]	其中，根据线性加权公式得到的得分值，对得到的得分值进行由高到低的排序，根 据实际应用中的需要，选择排名前面的一个或多个网页，生成推荐网页集合。</p>
+    <p>[0144]	下面结合图2中的网页推荐的示意图，对本发明实施例提供的方法进行说明，参 见图3，具体过程如下：</p>
+    <p>[0145]	步骤201 ：进行Web访问日志编码转换，将服务器记录的编码格式转换成统一的编 码格式。</p>
+    <p>[0146]	其中，优选地，服务器所记录的编码格式为URI格式，统一的编码格式为国家标准 汉字编码的GBK格式，本发明实施例以URI格式、GBK格式进行说明，具体实现时，本发明实 施例对此不作限制。</p>
+    <p>[0147]	步骤202 ：去除kssionID、Dst URL、Src URL、Time以外的信息，利用步骤201中 统一的编码格式，将kssionID、Dst URL、Src URL、Time转化成字符串形式。[0148]	其中，在用户日志里可能包括多种内容，例如：URL中出现的title、对网页进行说 明的信息等。按照表1中罗列出的内容，将％SSionID、DSt URL.SrcURL.Time以外的内容 去除掉，利用步骤201中统一的编码格式，将^588丨01110、08〖URL, Src URL、Time转化成字 符串形式，按照分配的存储空间存储到计算机的硬盘中。</p>
+    <p>[0149]	其中，Web访问日志中还会包括IP信息，在某些特定的情况下，有可能存在同一 个kssion ID对应有不同IP的情况，例如kssion ID为111，可能对应的IP地址分别 为192. 168. 30. 148和192. 168. 30. 149。同样地，在某些特定的情况下，也可能存在拥有 同一个IP的记录对应着不同的Session ID，例如IP地址为192. 168. 30. 148，可能对应的 Session ID分别为111和112。当出现上述这两种情况时，这些访问记录将被认为不是同一 个会话，这些记录的信息需要％8^011 ID和IP共同确定，因此，需要将原有的H^nkssion ID联合起来构成新的kssion ID，形成新的区分标准，判断kssion ID和IP是否都相同， 即只有在义^化！！ ID和IP都相同时，才认为在同一个主题下，是同一个会话。</p>
+    <p>[0150]	步骤203 ：通过字符串匹配技术将步骤202中的字符串形式进行过滤，获得网页访 问记录。</p>
+    <p>[0151]	其中，主要过滤掉目标URL和来源URL的噪声信息，包括违禁的网页和垃圾网页寸。</p>
+    <p>[0152]	步骤204 ：对步骤203中获得的网页访问记录进行排序。</p>
+    <p>[0153]	将所有网页访问记录按kssionID递增的顺序进行排序，将相同的kssionID的 条目放在一起，例如，参见图4，其中，图4中共有8组数据，按照kssionID的分类，将这8 组数据分成 2 组，分别为 kssionID A0000000, SessionID B0000000。</p>
+    <p>[0154]	其中，在实际应用中，由于Web访问日志常常涉及整个互联网，因此，日志信息的 数据量巨大，需使用外部排序算法对日志数据进行排序，例如采用C语言中的字符串排序 法。当完成排序之后，若具有相同kssionID的日志数据有多个，再按访问时间递增的顺序 对具有相同kssionID的日志数据进行排序。步骤205 ：拥有相同的kssionID的日志划 分连通分支，形成有向树，所有有向树、就构建成了一个森林。</p>
+    <p>[0155]	例如：参见图4，图4中，A、B、C、D是1个有向树；同理，F、G是1个有向树；同理， C、F、D、B、G是1个有向树，即，图4中有3个有向树，这3个有向树就构成了森林。</p>
+    <p>[0156]	其中，根据访问时间可以对特定的网页跳转记录进行筛选，具体可以为将先前 访问过的网页跳转记录筛选掉，例如：参见图4，当8:10:05时，从A节点跳转到C节点， 8 ： 16 ： 34时，从C节点跳转到D节点，假如8点20时又从A节点跳转到C节点，这时，，因在 树形结构中在8:10:05时经已经建立了 A节点到C节点这一跳转关系，根据访问时间故可 将8点20时A节点到C节点的跳转记录筛掉。</p>
+    <p>[0157]	步骤206 ：根据构建的森林，添加虚拟根节点，构建点击树模型。</p>
+    <p>[0158]	参见图4，往步骤205中构建的森林中添加一个虚拟根节点root，将所有有向树的 根作为其子节点，这样森林就变成了一棵树，称为点击树模型（T)。</p>
+    <p>[0159]	其中，优选地，可以添加链接和索引信息对点击树模型（T)进行优化，来加快访问 概率和点击距离的计算速度，使其加快了快速的检索，具体实现时，本发明实施例对此不作 限制。</p>
+    <p>[0160]	对点击树模型⑴进行优化，主要包括以下两点，具体为：[0161]	一、为点击树模型⑴中的所有不同的节点建立索引指针。</p>
+    <p>[0162]	其中，每一个节点的索引指针，指针指向按前序遍历方式遍历点击树模型（T)时 和用户查询的当前网址相同的第一个节点；例如，参见图4，点击树模型中有两个C节点，即 当用户浏览的当前网页和C节点的网址相同时，索引指针指向了左支树中的C节点。</p>
+    <p>[0163]	二、为点击树模型（T)中的每一个节点增加一个链接指针。</p>
+    <p>[0164]	其中，链接指针指向按前序遍历方式遍历时且和当前节点相同的后续最近的节 点ο</p>
+    <p>[0165]	例如，参见图4，找节点F的下一个链接节点，按照前序遍历的方式，中间树中节点 F的后续最近的节点F位于右树中，即，在中间树节点F处增加一个链接指针，就可以直接连 接到右树中的节点F，若一个点击树模型（T)中有10个F，就可以增加9个链接指针，将这 10个节点F链接在一起，加快了执行速度。例如：给定用户当前浏览的网页，记为a，可以通 过索引指针直接定位到点击树模型（T)中的包含a的第一个节点，对应着a在第一个会话 中的位置。访问以a为根的子树，就能得到对应会话中a的后续点击网页。处理完该会话 之后，可以通过“链接指针”直接定位到下一个包含有a的会话，不需要其他冗余操作，加快 了执行的速度。其中，当点击树模型中没有相同的节点，则对该节点添加的链接指针指向的 内容为空。</p>
+    <p>[0166]	步骤207 ：根据步骤206构建的点击树模型（T)，生成候选推荐网页集。</p>
+    <p>[0167]	假设当前浏览的网页为a，其对应的生成候选推荐网页集的方式是：找出点 击树模型⑴中每一个包含a的节点，假设共有n(a)个，其中，η代表节点的个数，记 为巧、r2... rn(a),以这些节点为根节点，它们的子树记为礼、R2... I?n(a)，子树的集合R = R1 U R2. . . U Rn(a)，即为推荐网页的候选集。例如：共有3个包含a的节点，分别记为Γι、 r2、r3，其中，Γι的子树为礼、R2, r2的子树为R3, r3的子树为R4、R5,贝&gt;J，子树的集合R = R1 U R2 U R3 U R4 U R50</p>
+    <p>[0168]	步骤208 ：计算平均点击距离。</p>
+    <p>[0169]	根据平均点击距离公式，对步骤207中生成的候选推荐网页集中的每一个网页， 都计算出相对当前浏览网页a的平均点击距离d(a，b)。</p>
+    <p>[0170]	例如：共有会话1、会话2、会话3，3个会话同时出现了网页a和网页b，会话1中网 页a与网页b对应节点的距离为Cl1、会话2中网页a与网页b对应节点的距离为d2、会话3中网页a与网页b对应节点的距离为d3，则，平均点击距离3(&#187;) = ^&gt;,./3 =(&#28858;+^)/3。/=1</p>
+    <p>[0171]	步骤209 ：计算网页b对网页a的访问概率ρ (a，b)。</p>
+    <p>[0172]	其中，利用访问概率p(a，b)的计算公式对步骤207中生成的候选推荐网页集中的 每一个网页，都计算出相对当前浏览网页a的访问概率。</p>
+    <p>[0173]	例如：所有会话的总数是10，出现网页b的会话个数是5，同时出现了网页a和网 页b的η (a，b)的会话个数是3，则，网页b对网页a的访问概率;？&#20175;b) = log(y) χ 3 = 3 log(2)</p>
+    <p>[0174]	步骤210 ：根据线性加权公式、步骤208中获得的平均点击距离以及步骤209中获 得的访问概率，对候选集合中的每一个网页，都计算出得分ν值。</p>
+    <p>[0175]	将平均点击距离d(a，b)、访问概率p(a，b)带入到线性加权公式中，其中，从该公式可以看出，当λ &#8212;定时，p(a，b) &#8212;定时，v(a，b)随着d(a，b)的增大而增大；同理，当λ 一定时，d(a，b) &#8212;定时，v(a，b)随着p(a，b)的增大而增大。</p>
+    <p>[0176]	步骤211 ：将步骤210中计算出的得分ν值，按照由高到低的顺序进行排序。</p>
+    <p>[0177]	步骤212 ：根据预置策略，按步骤211中得分ν值的排序结果，选出至少一个网页， 生成推荐网页集合。</p>
+    <p>[0178]	其中，选择网页的个数所依据的选择标准按照实际应用中的需求来决定，可以根 据预先的设定，选取一个或多个网页，生成推荐网页集合，本发明实施例对此不作限制。例 如：候选网页的个数为10个，实际应用中只需要前5个网页，即k = 5，则，将前5个网页生 成推荐网页集合。</p>
+    <p>[0179]	下面以Sogou公司（http://www. sogou. com/)提供的面向全网的Web访问日志为 例，就以上方法进行详细说明：</p>
+    <p>[0180]	本发明实施例所使用的日志包括了在2008年12月19日至2008年12月25日的 7天时间内面向互联网的Web访问日志。在7天时间内，用户浏览的不同的URL约有2.观 亿个，点击跳转次数约有6. 60亿次，计算机硬盘的存储规模约为140G。其中，日志中包括的 信息参见表2，表2中给出了 Web访问日志包含的信息项。</p>
+    <p>[0181]	表2 ：Web访问日志包含的信息项</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102054004A/CN102054004AD00171.png"> <img id="idf0002" file="CN102054004AD00171.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102054004A/CN102054004AD00171.png" class="patent-full-image" alt="Figure CN102054004AD00171"> </a> </div>
+    <p>[0184]	在数据预处理中，对Web访问日志进行了数据预处理，主要包括：对原始Web访问 日志进行统一编码（将日志中记录的UTF-8编码，统一转换为GBK的编码格式），去除掉 SessionID, Dst URL, Src URL、Time以外的信息，将上述日志转换成字符串的形式，利用字 符串匹配技术过滤掉无用的信息（仅保留网页推荐各步骤所需的信息项）和违禁条目。</p>
+    <p>[0185]	对于上述步骤生成的网页访问记录，按kssionID对日志数据进行由高到低排 序，然后构建点击树。具体为：以网页为点，跳转关系为边，具有相同kssionID的条目集合 将构成一个图。对每个图划分连通分支，每个连通分支将是一棵树，这样所有日志数据将被 划分成大量的有向树。最后添加一个虚拟根节点，指向所有有向树的根。为其中，还可以对 点击树的每个节点增加链接指针和索引指针。构建完毕的点击树存储规模约为19G，即存储 规模比较小，参见图4，图4是构建点击树的方法示例。</p>
+    <p>[0186]	利用上述步骤构建的点击树，后台服务器可以针对当前用户浏览的网页高效计算 出其他网页的平均点击距离和访问概率，从而根据线性加权公式生成推荐列表，返回给前 端。参见图5，图5是前端浏览器插件对推荐结果的展示。从图5中的左侧栏中可以获得当前网页推荐的结果，即卡巴斯基反病毒软件20098. 0. 0. 506简体中文版下载排名最高，有 需要的用户可以直接点击进入该网站，无需进行网页搜索。</p>
+    <p>[0187]	综上所述，本发明实施例提供的一种网页推荐方法，通过对访问日志进行数据预 处理，获得网页访问记录，根据网页访问记录获得网页之间的跳转关系信息库，当需要为用 户进行网页推荐时，根据网页之间的跳转关系信息库为用户进行网页推荐。用户可以在推 荐网页集中查看摘要或点击浏览，较早地搜索到自己所需的网页，减少了冗余时间，提高了 效率，提高了用户的使用体验，此方法的复杂度低，能支持在线实时计算，并在实验测试数 据上取得了较好的性能，满足了实际应用中的需要。</p>
+    <p>[0188]	实施例3</p>
+    <p>[0189]	参加图6，本发明实施例还提供了一种网页推荐装置，该装置包括：网页访问记录 模块301、网页跳转关系模块302、推荐模块303 ；</p>
+    <p>[0190]	网页访问记录模块301，用于获得网页访问记录；</p>
+    <p>[0191]	网页跳转关系模块302，用于根据网页访问记录模块301获得的网页访问记录获 得网页之间的跳转关系信息库；</p>
+    <p>[0192]	推荐模块303，用于当需要为用户进行网页推荐时，根据网页跳转关系模块302获 得的网页之间的跳转关系信息库为用户进行网页推荐。</p>
+    <p>[0193]	其中，网页访问记录模块301获得的网页访问记录至少包括用户会话标识，目标 网页标识以及目标网页的跳转来源网页标识；</p>
+    <p>[0194]	网页访问记录模块301获得的网页访问记录还包括：从跳转来源网页跳转至目标 网页的跳转时间；</p>
+    <p>[0195]	网页跳转关系模块302包括：分类单元302A、建立单元302B、构建单元302C ；</p>
+    <p>[0196]	其中，分类单元302A，用于基于用户会话标识对网页访问记录模块301获得的网 页访问记录进行分类；</p>
+    <p>[0197]	建立单元302B，用于对拥有相同用户会话标识的网页访问记录，根据目标网页标 识以及目标网页的跳转来源网页标识建立代表网页跳转关系的跳转连通分支，在跳转连通 分支中，各网页以网页节点的形式存在；</p>
+    <p>[0198]	构建单元302C，用于汇集各用户标识下对应的跳转连通分支，形成网页跳转关系信息库。</p>
+    <p>[0199]	其中，分类单元302A还包括：排序子单元；</p>
+    <p>[0200]	排序子单元，用于对拥有相同会话标识的网页访问记录按照跳转时间递增的顺序 进行排序；</p>
+    <p>[0201]	建立单元302B还包括：筛选子单元；</p>
+    <p>[0202]	筛选子单元，用于在建立跳转连通分支的过程中，参考跳转时间对特定的网页跳 转记录进行筛选。</p>
+    <p>[0203]	其中，构建单元302C包括：构成子单元、汇集子单元；</p>
+    <p>[0204]	构成子单元，用于同一用户会话标识下的跳转连通分支构成同一用户会话中的网 页跳转关系有向树；</p>
+    <p>[0205]	汇集子单元，用于汇集各有向树构建代表网页跳转关系的点击树模型。</p>
+    <p>[0206]	汇集子单元包括：汇集子单元1、汇集子单元2 ；[0207]	汇集子单元1，用于汇集各有向树构建网页跳转关系森林；</p>
+    <p>[0208]	汇集子单元2，用于为汇集子单元1构建的网页跳转关系森林添加虚拟根节点，形 成点击树模型。</p>
+    <p>[0209]	其中，该装置还包括：优化模块；</p>
+    <p>[0210]	优化模块，用于根据快速检索需要，对网页跳转关系模块302获得的网页跳转关 系信息库进行优化。</p>
+    <p>[0211]	优化模块包括：索引指针建立单元、链接指针添加单元；</p>
+    <p>[0212]	索引指针建立单元，用于为点击树模型中的所有不同的节点建立索引指针；</p>
+    <p>[0213]	链接指针添加单元，用于为点击树模型中的每一个节点添加一个链接指针；</p>
+    <p>[0214]	其中，索引指针用于指向按照前序遍历方式遍历时和用户查询的当前网址相同的 第一个节点；</p>
+    <p>[0215]	链接指针用于指向按照前序遍历方式遍历时和当前节点相同的后续最近的节点。</p>
+    <p>[0216]	推荐模块303包括：网页标识获得单元303A、网页节点查找单元3(X3B、推荐网页候 选集查找单元303C、选取单元303D ；</p>
+    <p>[0217]	网页标识获得单元303A，用于获得用户当前访问的网页的第一网页标识；</p>
+    <p>[0218]	网页节点查找单元30;3B，用于在跳转关系信息库中查找第一网页标识对应的至少 一个第一网页节点；</p>
+    <p>[0219]	推荐网页候选集查找单元303C，用于在跳转关系信息库中查找从第一网页节点经 过至少一跳而跳转到的后续网页节点，查找到的后续网页节点构成第一网页的推荐网页候 选集；</p>
+    <p>[0220]	选取单元303D，用于根据预置策略在推荐网页候选集中选取至少一个网页为用户 进行推荐。</p>
+    <p>[0221]	选取单元303D包括：平均点击距离计算子单元、访问概率计算子单元、推荐子单 元；</p>
+    <p>[0222]	平均点击距离计算子单元，用于获得推荐网页候选集中的网页和当前访问网页之 间的平均点击距离；</p>
+    <p>[0223]	访问概率计算子单元，用于获得推荐网页候选集中的网页和当前访问网页之间的 访问概率；</p>
+    <p>[0224]	推荐子单元，用于根据平均点击距离计算子单元获得的的网页之间的平均点击距 离、访问概率计算子单元获得的网页之间的访问概率以及候选推荐网页集，为用户进行网 页推荐。</p>
+    <p>[0225]	推荐子单元包括：线性加权处理子单元、排序子单元、生成子单元；</p>
+    <p>[0226]	线性加权处理子单元，用于对网页之间的平均点击距离以及访问概率进行线性加 权处理，获得候选推荐网页集中的各网页的得分值；</p>
+    <p>[0227]	排序子单元，用于将计算出的各网页得分值，根据由高到低的顺序进行排序；</p>
+    <p>[0228]	生成子单元，用于根据得分值的排序结果，生成推荐网页。</p>
+    <p>[0229]	综上所述，本发明实施例提供的一种网页推荐装置，通过对访问日志进行数据预 处理，获得网页访问记录，根据网页访问记录获得网页之间的跳转关系信息库，当需要为用 户进行网页推荐时，根据网页之间的跳转关系信息库为用户进行网页推荐。用户可以在推荐网页集中查看摘要或点击浏览，较早地搜索到自己所需的网页，减少了冗余时间，提高了 效率，提高了用户的使用体验，此方法的复杂度低，能支持在线实时计算，并在实验测试数 据上取得了较好的性能，满足了实际应用中的需要。</p>
+    <p>[0230] 以上仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和原则 之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102708132A?cl=zh">CN102708132A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月6日</td><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">奇智软件（北京）有限公司</td><td class="patent-data-table-td ">一种网页推荐方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102831148A?cl=zh">CN102831148A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月19日</td><td class="patent-data-table-td patent-date-value">2012年12月19日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种基于浏览器的推荐数据加载方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102938123A?cl=zh">CN102938123A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月24日</td><td class="patent-data-table-td patent-date-value">2013年2月20日</td><td class="patent-data-table-td ">江苏乐买到网络科技有限公司</td><td class="patent-data-table-td ">一种向用户推荐商品信息的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102955788A?cl=zh">CN102955788A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月19日</td><td class="patent-data-table-td patent-date-value">2013年3月6日</td><td class="patent-data-table-td ">英业达股份有限公司</td><td class="patent-data-table-td ">网页浏览跳转系统及其方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103312733A?cl=zh">CN103312733A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月8日</td><td class="patent-data-table-td patent-date-value">2013年9月18日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">信息处理方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103312733B?cl=zh">CN103312733B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月8日</td><td class="patent-data-table-td patent-date-value">2016年3月2日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">信息处理方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103312785A?cl=zh">CN103312785A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年5月16日</td><td class="patent-data-table-td patent-date-value">2013年9月18日</td><td class="patent-data-table-td ">新浪网技术(中国)有限公司</td><td class="patent-data-table-td ">一种访问关系的确定方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103500213A?cl=zh">CN103500213A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月30日</td><td class="patent-data-table-td patent-date-value">2014年1月8日</td><td class="patent-data-table-td ">北京搜狗科技发展有限公司</td><td class="patent-data-table-td ">基于预读取的页面热点资源更新方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103577477A?cl=zh">CN103577477A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月6日</td><td class="patent-data-table-td patent-date-value">2014年2月12日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">浏览器的浏览历史的展示方法及展示系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103699551A?cl=zh">CN103699551A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月27日</td><td class="patent-data-table-td patent-date-value">2014年4月2日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">一种信息的推荐方法、服务器及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103699551B?cl=zh">CN103699551B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月27日</td><td class="patent-data-table-td patent-date-value">2016年5月4日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">一种信息的推荐方法、服务器及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2013131432A1?cl=zh">WO2013131432A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年2月22日</td><td class="patent-data-table-td patent-date-value">2013年9月12日</td><td class="patent-data-table-td ">Beijing Qihoo Technology Company Limited</td><td class="patent-data-table-td ">建立网页数据库的方法及系统和推荐方法及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=duiTBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年5月11日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年5月6日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/57b5e0a9f99045599ff2/CN102054004A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%BD%91%E9%A1%B5%E6%8E%A8%E8%8D%90%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85%E7%BD%AE.pdf?id=duiTBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0wg8ZVnAjmBg3rJFpPOPo9lUMpyQ"},"sample_url":"https://www.google.com/patents/reader?id=duiTBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

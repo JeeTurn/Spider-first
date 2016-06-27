@@ -1,0 +1,781 @@
+<!DOCTYPE html><html><head><title>专利 CN103929400A - 二维码获取方法、生成方法、验证方法、设备和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="二维码获取方法、生成方法、验证方法、设备和系统"><meta name="DC.contributor" content="胡帅" scheme="inventor"><meta name="DC.contributor" content="贺啸" scheme="inventor"><meta name="DC.contributor" content="深圳市腾讯计算机系统有限公司" scheme="assignee"><meta name="DC.date" content="2013-1-11" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种二维码获取方法、生成方法、验证方法、设备和系统，属于网络技术领域。所述方法包括：向验证服务器发送用户信息，以便于验证服务器接收终端发送的用户信息；根据用户信息对终端进行身份验证；在身份验证通过之后，根据用户信息生成验证二维码；向终端发送所述验证二维码；接收并保存验证服务器发送的验证二维码。通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。"><meta name="DC.date" content="2014-7-16"><meta name="DC.relation" content="CN:102289726:A" scheme="references"><meta name="DC.relation" content="CN:102752444:A" scheme="references"><meta name="DC.relation" content="CN:1784063:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103929400:A"><meta name="citation_patent_application_number" content="CN:201310011198"><link rel="canonical" href="https://www.google.com/patents/CN103929400A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103929400A?cl=zh"/><meta name="title" content="专利 CN103929400A - 二维码获取方法、生成方法、验证方法、设备和系统"/><meta name="description" content="本发明公开了一种二维码获取方法、生成方法、验证方法、设备和系统，属于网络技术领域。所述方法包括：向验证服务器发送用户信息，以便于验证服务器接收终端发送的用户信息；根据用户信息对终端进行身份验证；在身份验证通过之后，根据用户信息生成验证二维码；向终端发送所述验证二维码；接收并保存验证服务器发送的验证二维码。通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。"/><meta property="og:title" content="专利 CN103929400A - 二维码获取方法、生成方法、验证方法、设备和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103929400A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103929400A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=KYYQCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103929400A&amp;usg=AFQjCNHKeHDjGzC2MjPXFkL1Vnk64kpvVw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/1f9f33d5c871e85e0fa3/CN103929400A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/1f9f33d5c871e85e0fa3/CN103929400A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103929400A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103929400A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103929400A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种二维码获取方法、生成方法、验证方法、设备和系统，属于网络技术领域。所述方法包括：向验证服务器发送用户信息，以便于验证服务器接收终端发送的用户信息；根据用户信息对终端进行身份验证；在身份...</span><span itemprop="url">https://www.google.com/patents/CN103929400A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103929400A - 二维码获取方法、生成方法、验证方法、设备和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103929400A - 二维码获取方法、生成方法、验证方法、设备和系统" title="专利 CN103929400A - 二维码获取方法、生成方法、验证方法、设备和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103929400 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310011198</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年7月16日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年1月11日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年1月11日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310011198.9, </span><span class="patent-bibdata-value">CN 103929400 A, </span><span class="patent-bibdata-value">CN 103929400A, </span><span class="patent-bibdata-value">CN 201310011198, </span><span class="patent-bibdata-value">CN-A-103929400, </span><span class="patent-bibdata-value">CN103929400 A, </span><span class="patent-bibdata-value">CN103929400A, </span><span class="patent-bibdata-value">CN201310011198, </span><span class="patent-bibdata-value">CN201310011198.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%83%A1%E5%B8%85%22">胡帅</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B4%BA%E5%95%B8%22">贺啸</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B7%B1%E5%9C%B3%E5%B8%82%E8%85%BE%E8%AE%AF%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">深圳市腾讯计算机系统有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103929400A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103929400A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103929400A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=KYYQCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310011198&amp;usg=AFQjCNExcp3HVDpDPgORbmB0PR4UwOJXzg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=KYYQCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103929400A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHtmI7CiPbZR883v9V-bcNiTSHveA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT137951412" lang="ZH" load-source="patent-office">二维码获取方法、生成方法、验证方法、设备和系统</invention-title>
+      </span><br><span class="patent-number">CN 103929400 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA135790875" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种二维码获取方法、生成方法、验证方法、设备和系统，属于网络技术领域。所述方法包括：向验证服务器发送用户信息，以便于验证服务器接收终端发送的用户信息；根据用户信息对终端进行身份验证；在身份验证通过之后，根据用户信息生成验证二维码；向终端发送所述验证二维码；接收并保存验证服务器发送的验证二维码。通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(58)</span></span></div><div class="patent-text"><div mxw-id="PCLM67040728" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种二维码获取方法，其特征在于，所述方法包括:  向验证服务器发送用户信息，所述用户信息用于标识用户身份，以便于所述验证服务器接收终端发送的用户信息；根据所述用户信息对所述终端进行身份验证；在所述身份验证通过之后，根据所述用户信息生成验证二维码；向所述终端发送所述验证二维码；  接收并保存所述验证服务器发送的所述验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的二维码获取方法，其特征在于，所述向验证服务器发送用户信息之后，还包括:  向所述验证服务器发送所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1或2所述的二维码获取方法，其特征在于，所述接收并保存所述验证服务器发送的所述验证二维码之后，还包括:  向所述验证服务器发送查询信息，以便所述验证服务器在接收到所述查询信息之后，根据所述查询信息向所述终端发送对应验证二维码所包含的全部或部分内容数据；  接收所述验证服务器发送的对应验证二维码所包含的全部或者部分内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求2所述的二维码获取方法，其特征在于，所述接收并保存所述验证服务器发送的所述验证二维码之后，还包括:  向所述验证服务器发送修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种，以便所述验证服务器在接收到修改请求之后，根据所述修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在所述使用场景范围内的使用权限进行修改。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1至4任一所述的二维码获取方法，其特征在于，所述接收并保存所述验证服务器发送的所述验证二维码之后，还包括:  向所述验证服务器发送授权请求，所述授权请求包括终止授权命令或者开启授权命令，以便于所述验证服务器在接收到授权请求之后，根据所述授权请求终止对应验证二维码的授权，或者开启对应验证二维码的授权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2或4所述的二维码获取方法，其特征在于，所述方法还包括:  向所述验证服务器发送提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限，以便所述验证服务器在检测到所述终端或者其他终端使用所述验证二维码请求所述提醒设置请求中的使用权限后，向所述终端发送提醒信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.&#8212;种二维码生成方法，其特征在于，所述方法包括:  接收终端发送的用户信息，所述用户信息用于标识用户身份；  根据所述用户信息对所述终端进行身份验证；  在所述身份验证通过之后，根据所述用户信息生成验证二维码；  向所述终端发送所述验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的二维码生成方法，其特征在于，所述根据所述用户信息生成验证二维码，包括:  至少将所述用户信息作为内容数据；  根据所述内容数据来生成验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的二维码生成方法，其特征在于，所述根据所述内容数据来生成验证二维码之前，还包括:  接收所述终端发送的所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  将所述验证二维码的生成属性也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求8或9所述的二维码生成方法，其特征在于，所述根据所述内容数据来生成验证二维码之前，还包括:  生成唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；  将所述唯一标识也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求8至10任一所述的二维码生成方法，其特征在于，所述根据所述内容数据来生成验证二维码之前，还包括:  生成防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；  将所述防伪加密串也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求8至11任一所述的二维码生成方法，其特征在于，所述根据所述内容数据来生成验证二维 码之前，还包括:  生成预定信息，所述预定信息包括介绍信息和网站链接中的至少一种；  将所述预定信息也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求8至11任一所述的二维码生成方法，其特征在于，所述根据所述内容数据来生成验证二维码，包括:  将所述内容数据进行加密，获得加密后的内容数据；  根据所述加密后的内容数据来生成验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求12所述的二维码生成方法，其特征在于，所述根据所述内容数据来生成验证二维码，包括:  将所述内容数据中除所述预定信息以外的内容数据进行加密，获得部分加密后的内容数据；  根据所述部分加密后的内容数据来生成验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求8至14任一所述的二维码生成方法，其特征在于，所述向所述终端发送所述验证二维码之后，还包括:  接收所述终端发送的查询信息；  在接收到所述查询信息之后，根据所述查询信息向所述终端发送对应验证二维码所包含的全部或部分内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求9所述的二维码生成方法，其特征在于，所述向所述终端发送所述验证二维码之后，还包括:  接收所述终端发送的修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  根据所述修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在所述使用场景范围内的使用权限进行修改。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求8至16任一所述的二维码生成方法，其特征在于，所述向所述终端发送所述验证二维码之后，还包括:  接收所述终端发送的授权请求，所述授权请求包括终止授权命令或者开启授权命令；根据所述授权请求终止对应验证二维码的授权，或者开启对应验证二维码的授权。</div>
+    </div>
+    </div> <div class="claim"> <div num="18" class="claim">
+      <div class="claim-text">18.&#8212;种验证方法，其特征在于，所述方法包括:  扫描预设的验证二维码，所述验证二维码的内容数据中包括用户信息；  向验证服务器发送所述验证二维码，以便于所述验证服务器接收终端发送的验证二维码；获取所述验证二维码中的内容数据；根据所述内容数据中包括的用户信息进行身份验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求18所述的验证方法，其特征在于，所述验证二维码的内容数据中还包括所述验证二维码的生成属性、唯一标识和防伪加密串中的至少一种；  所述验证二维码的生成属性，包括:使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  所述唯一标识，用于在所有验证二维码中标识当前验证二维码的身份；  所述防伪加密串，用于辨别当前验证二维码的真伪。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求18或19所述的验证方法，其特征在于，所述验证二维码中的内容数据为加密后的内容数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="21" class="claim">
+      <div class="claim-text">21.一种验证方法，其特征在于，所述方法包括:  接收终端发送的验证二维码，所述验证二维码中的内容数据中至少包括用户信息；  获取所述验证二维码中的内容数据；  至少根据所述内容数据中包括的用户信息进行身份验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求21所述的验证方法，其特征在于，所述获取所述验证二维码中的内容数据，包括:  读取所述验证二维码中的加密后的内容数据；  将所述加密后的内容数据进行解密，获得所述内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求21或22所述的验证方法，其特征在于，所述至少根据所述内容数据中包括的用户信息进行身份验证，包括:  将所述用户信息与预先存储的用户信息进行匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求23所述的验证方法，其特征在于，所述内容数据中还包括所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  所述将所述用户信息与预先存储的用户信息进行匹配之后，还包括:  检测所述验证二维码中的生成属性是否满足预定条件；  所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间属于所述生成属性中的使用时长、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.根据权利要求24所述的验证方法，其特征在于，所述接收终端发送的验证二维码之前，还包括:  接收提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限；  所述至少根据所述内容数据中包括的用户信息进行身份验证之后，还包括检测所述终端是否使用所述验证二维码请求所述提醒设置请求中的使用权限中的至少一种；  若检测到所述终端使用所述验证二维码请求所述提醒设置请求中的使用权限中的至少一种，则向生成所述验证二维码的终端发送提醒信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.根据权利要求23或24所述的验证方法，其特征在于，所述内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；  所述将所述用户信息与预先存储的用户信息进行匹配之前，还包括:  根据所述唯一标识查询与当前验证二维码对应的用户信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.根据权利要求24所述的验证方法，其特征在于，所述内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；  所述检测所述验证二维码中的生成属性是否满足预定条件之前，还包括:  根据所述唯一标识查询与当前验证二维码对应的生成属性。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.根据权利要求26所述的验证方法，其特征在于，所述内容数据中还包括防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；  所述根据所述唯一标识查询所述预先存储的用户信息之前，还包括:  根据所述唯一标识查询与当前验证二维码对应的防伪加密串；  根据所述防伪加密串辨别当前验证二维码的真伪；  若辨别结果为真，则执行所述根据所述唯一标识查询所述预先存储的用户信息的步骤。</div>
+    </div>
+    </div> <div class="claim"> <div num="29" class="claim">
+      <div class="claim-text">29.&#8212;种终端，其特征在于，所述终端包括:  用户信息发送模块，用于向验证服务器发送用户信息，所述用户信息用于标识用户身份，以便于所述验证服务器接收终端发送的用户信息；根据所述用户信息对所述终端进行身份验证；在所述身份验证通过之后，根据所述用户信息生成验证二维码；向所述终端发送所述验证二维码；  二维码接收模块，用于接收并保存所述验证服务器发送的所述验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.根据权利要求29所述的终端，其特征在于，所述终端，还包括:  生成属性发送模块；  所述生成属性发送模块，用于向所述验证服务器发送所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.根据权利要求29或30所述的终端，其特征在于，所述终端，还包括:  查询信息发送模块和反馈信息接收模块；  所述查询信息发送模块，用于向所述验证服务器发送查询信息；   所述反馈信息接收模块，用于接收所述验证服务器发送的对应验证二维码所包含的全部或者部分内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.根据权利要求30所述的终端，其特征在于，所述终端，还包括:  修改请求发送模块；  所述修改请求发送模块，用于向所述验证服务器发送修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.根据权利要求29至32任一所述的终端，其特征在于，所述终端，还包括:  授权请求发送模块；  所述授权请求发送模块，用于向所述验证服务器发送授权请求，所述授权请求包括终止授权命令或者开启授权命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.根据权利要求30或32所述的终端，其特征在于，所述终端，还包括:  提醒请求发送模块；  所述提醒请求发送模块，用于向所述验证服务器发送提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限。</div>
+    </div>
+    </div> <div class="claim"> <div num="35" class="claim">
+      <div class="claim-text">35.一种验证服务器，其特征在于，所述验证服务器，包括:  用户信息接收模块，用于接收终端发送的用户信息，所述用户信息用于标识用户身份；  身份验证模块，用 于根据所述用户信息接收模块接收到的用户信息对所述终端进行身份验证；  二维码生成模块，用于在所述身份验证模块的身份验证通过之后，根据所述用户信息接收模块接收到的用户信息生成验证二维码；  二维码发送模块，用于向所述终端发送所述二维码生成模块生成的验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.根据权利要求35所述的验证服务器，其特征在于，所述二维码生成模块，包括:内容数据生成单元和二维码生成单元；  所述内容数据生成单元，用于至少将所述用户信息接收模块接收到的用户信息作为内容数据；  所述二维码生成单元，用于根据所述内容数据生成单元生成的内容数据来生成验证二维码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37.根据权利要求35所述的验证服务器，其特征在于，所述验证服务器，还包括:  生成属性接收模块；  所述生成属性接收模块，用于接收所述终端发送的所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  所述内容数据生成单元，还用于将所述生成属性接收模块接收到的验证二维码的生成属性也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.根据权利要求36所述的验证服务器，其特征在于，所述二维码生成模块，还包括:  唯一标识生成单元；  所述唯一标识生成单元，用于生成所述验证二维码的唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；  所述内容数据生成单元，还用于将所述唯一标识生成单元生成的唯一标识也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39.根据权利要求36所述的验证服务器，其特征在于，所述二维码生成模块，还包括:  防伪加密串生成单元；  所述防伪加密串生成单元，用于生成所述验证二维码的防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；所述内容数据生成单元，还用于将所述防伪加密串生成单元生成的防伪加密串也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40.根据权利要求36至39任一所述的验证服务器，其特征在于，所述二维码生成模块，还包括:  预定信息生成单元；  所述预定信息生成单元，用于生成预定信息，所述预定信息包括介绍信息和网站链接中的至少一种；  所述内容数据生成单元，还用于将所述预定信息生成单元生成的预定信息也作为所述内容数据的一部分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.根据权利要求36至39任一所述的验证服务器，其特征在于，所述内容数据生成单元，包括:  第一加密子单元和内容数据生成子单元；  所述第一加密子单元，用于将所述内容数据进行加密；  所述内容数据生成子单元，用于将所述第一加密子单元加密后的内容作为内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42.根据权利要求 40所述的验证服务器，其特征在于，所述内容数据生成单元，还包括:  第二加密子单元和内容数据生成子单元；  所述第二加密子单元，用于将所述内容数据中除所述预定信息以外的内容数据进行加密，获得部分加密后的内容数据；  所述内容数据生成子单元，用于将所述第二加密子单元部分加密后的内容作为内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43.根据权利要求35至42任一所述的验证服务器，其特征在于，所述验证服务器，还包括:  查询信息接收模块和反馈信息发送模块；  所述查询信息接收模块，用于接收所述终端发送的查询信息；  所述反馈信息发送模块，用于在接收到所述查询信息之后，根据所述查询信息向所述终端发送对应验证二维码所包含的全部或者部分内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44.根据权利要求37所述的验证服务器，其特征在于，所述验证服务器，还包括:  修改请求接收模块和修改请求处理模块；  所述修改请求接收模块，用于接收所述终端发送的修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  所述修改请求处理模块，用于根据所述修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在所述使用场景范围内的使用权限进行修改。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45.根据权利要求35至44任一所述的验证服务器，其特征在于，所述验证服务器，还包括:  授权请求接收模块和授权请求处理模块；  所述授权请求接收模块，用于接收所述终端发送的授权请求，所述授权请求包括终止授权命令或者开启授权命令；所述授权请求处理模块，用于根据所述授权请求终止对应验证二维码的授权或者开启对应验证二维码的授权。</div>
+    </div>
+    </div> <div class="claim"> <div num="46" class="claim">
+      <div class="claim-text">46.一种终端，其特征在于，所述终端包括:  二维码扫描模块，用于扫描预设的验证二维码，所述验证二维码的内容数据中包括用户信息；  二维码发送模块，用于向验证服务器发送所述验证二维码，以便于所述验证服务器接收终端发送的验证二维码；获取所述验证二维码中的内容数据；根据所述内容数据中包括的用户信息进行身份验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47.根据权利要求46所述的终端，其特征在于，所述二维码扫描模块扫描到的所述验证二维码的内容数据中还包括所述验证二维码的生成属性、唯一标识和防伪加密串中的至少一种；  所述验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；  所述防伪加密串用于辨别当前验证二维码的真伪。</div>
+    </div>
+    </div> <div class="claim"> <div num="48" class="claim">
+      <div class="claim-text">48.根据权利要 求46或47所述的终端，其特征在于，所述二维码扫描模块扫描到的所述验证二维码中的内容数据为加密后的内容数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="49" class="claim">
+      <div class="claim-text">49.一种验证服务器，其特征在于，所述验证服务器包括:  二维码接收模块，用于接收终端发送的验证二维码，所述验证二维码中的内容数据中至少包括用户信息；  内容数据获取模块，用于获取所述二维码接收模块接收到的验证二维码中的内容数据；  身份验证模块，用于至少根据所述内容数据获取模块获取到的内容数据中的用户信息进行身份验证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50.根据权利要求49所述的验证服务器，其特征在于，所述内容数据获取模块，包括:  内容数据读取单元和内容数据解密单元；  所述内容数据读取单元，用于读取所述验证二维码中的加密后的内容数据；  所述内容数据解密单元，用于将所述内容数据读取单元读取到的加密后的内容数据进行解密，获得所述内容数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="51" class="claim">
+      <div class="claim-text">51.根据权利要求49所述的验证服务器，其特征在于，所述身份验证模块包括:  用户信息验证单元，用于将所述内容数据获取模块获取到的内容数据中的用户信息与预先存储的用户信息进行匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="52" class="claim">
+      <div class="claim-text">52.根据权利要求51所述的验证服务器，其特征在于，所述内容数据获取模块获取到的内容数据中还包括所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；  所述身份验证模块，还包括:  生成属性检测单元；  所述生成属性检测单元，用于检测所述二维码接收模块接收到的验证二维码中的生成属性是否满足预定条件；所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间属于所述生成属性中的使用时长、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="53" class="claim">
+      <div class="claim-text">53.根据权利要求52所述的验证服务器，其特征在于，所述验证服务器，还包括:  提醒请求接收模块和提醒请求处理模块；  所述设置请求接收模块，用于接收生成所述验证二维码的终端发送的提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限；  所述提醒请求处理模块，用于检测所述终端是否使用所述验证二维码请求所述提醒设置请求中的使用权限中的至少一种。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="54" class="claim">
+      <div class="claim-text">54.根据权利要求51或52所述的验证服务器，其特征在于，所述内容数据获取模块获取到的内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；  所述身份验证模块，还包括:  第一标识查询单元；  所述第一标识查询单元，用于根据所述内容数据获取模块获取到的内容数据中的唯一标识查询与当前验证二维码对应的用户信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="55" class="claim">
+      <div class="claim-text">55.根据权利要求51所述的验证服务器，其特征在于，所述内容数据获取模块获取到的内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；  所述身份验证模块，还包括:  第二标识查询单元；  所述第二标识查询单元，用于根据所述内容数据获取模块获取到的内容数据中的唯一标识查询与当前验证二维码对应的生成属性。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="56" class="claim">
+      <div class="claim-text">56.根据权利要求54所述的验证服务器，其特征在于，所述内容数据获取模块获取到的内容数据中还包括防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；  所述身份验证模块，还包括:  第三标识查询单元和二维码真伪辨别单元；  所述第三标识查询单元，用于根据所述内容数据获取模块获取到的内容数据中的唯一标识查询与当前验证二维码对应的所述验证二维码的防伪加密串；  所述二维码真伪鉴别单元，用于根据所述第三标识查询单元查询到的防伪加密串辨别当前验证二维码的真伪；  所述用户信息验证单元，具体用于若所述二维码真伪鉴别单元辨别结果为真，则执行所述根据所述唯一标识查询所述预先存储的用户信息的步骤。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="57" class="claim">
+      <div class="claim-text">57.一种二维码生成系统，包括如权利要求29至34任一所述的终端，和权利要求35至45任一所述的验证服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="58" class="claim">
+      <div class="claim-text">58.一种二维码验证系统，包括如权利要求46至48任一所述的终端，和权利要求49至56任一所述的验证服务器。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES75451582" lang="ZH" load-source="patent-office" class="description">
+    <p>二维码获取方法、生成方法、验证方法、设备和系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及网络技术领域，特别涉及一种二维码获取方法、生成方法、验证方法、设备和系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着网络应用的发展，用户使用网络账户在终端上进行游戏、交易和数据交互之类的业务越来越广泛。此处所述的“终端”可以是台式计算机、笔记本、智能手机、平板电脑和电子书阅读器中的任意一种。</p>
+    <p>[0003]	在用户使用网络账户的过程中，出于安全性地考虑，需要进行身份验证。现有的一种验证方法，包括:首先，用户使用终端向验证服务器发送用户信息，该用户信息用于标识用户的身份，通常包括用户名和密码，还可能包括验证码；其次，验证服务器接收终端发送的用户信息，然后将该用户信息与预先存储的多组用户信息进行匹配，如果匹配成功，则通过该终端的身份验证；如果匹配不成功，则不通过该终端的身份验证；最后，终端在通过身份验证之后，执行查看、访问、交易或者数据交互之类的业务。</p>
+    <p>[0004]	在实现本发明的过程中，发明人发现现有技术至少存在以下缺点:若终端是台式计算机或者笔记本时，进行验证过程时的操作相对方便且安全性较高；但是若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复，同时由于智能手机或者平板电脑采用Android之类的开放性操作系统，导致安全性也较差。</p>
+    <p>发明内容</p>
+    <p>[0005]	为了解决用户通过智能手机或者平板电脑进行身份验证时，由于屏幕尺寸较小而且外设较少而带来的验证过程相对繁复的问题，本发明实施例提供了一种二维码获取方法、生成方法、验证方法、设备和系统。所述技术方案如下:</p>
+    <p>[0006]	第一方面，本发明实施例提供了一种二维码获取方法，所述方法包括:</p>
+    <p>[0007]	向验证服务器发送用户信息，所述用户信息用于标识用户身份，以便于所述验证服务器接收终端发送的用户信息；根据所述用户信息对所述终端进行身份验证；在所述身份验证通过之后，根据所述用户信息生成验证二维码；向所述终端发送所述验证二维码；</p>
+    <p>[0008]	接收并保存所述验证服务器发送的所述验证二维码</p>
+    <p>[0009]	在第一方面的第一种可能的实施方式中，所述向验证服务器发送用户信息之后，还包括:</p>
+    <p>[0010]	向所述验证服务器发送所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种。</p>
+    <p>[0011]	结合第一方面或第一方面的第一种可能的实施方式，在第二种种可能的实施方式中，所述接收并保存所述验证服务器发送的所述验证二维码之后，还包括:</p>
+    <p>[0012]	向所述验证服务器发送查询信息，以便所述验证服务器在接收到所述查询信息之后，根据所述查询信息向所述终端发送对应验证二维码所包含的全部或部分内容数据；[0013]	接收所述验证服务器发送的对应验证二维码所包含的全部或者部分内容数据。</p>
+    <p>[0014]	结合第一方面的第二种可能的实施方式，在第三种可能的实施方式中，所述接收并保存所述验证服务器发送的所述验证二维码之后，还包括:</p>
+    <p>[0015]	向所述验证服务器发送修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种，以便所述验证服务器在接收到修改请求之后，根据所述修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在所述使用场景范围内的使用权限进行修改。</p>
+    <p>[0016]	结合第一方面、第一方面的第一种、第二种或者第三种可能的实施方式，在第四种可能的实施方式中，所述接收并保存所述验证服务器发送的所述验证二维码之后，还包括:</p>
+    <p>[0017]	向所述验证服务器发送授权请求，所述授权请求包括终止授权命令或者开启授权命令，以便于所述验证服务器在接收到授权请求之后，根据所述授权请求终止对应验证二维码的授权，或者开启对应验证二维码的授权。</p>
+    <p>[0018]	结合第一方面的第一种或者第三种可能的实施方式，在第五种可能的实施方式中，所述方法还包括:</p>
+    <p>[0019]	向所述验证服务器发送提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限，以便所述验证服务器在检测到所述终端或者其他终端使用所述验证二维码请求所述提醒设置请求中的使用权限后，向所述终端发送提醒信息。</p>
+    <p>[0020]	第二方面，提供了一种二维码生成方法，所述方法包括:</p>
+    <p>[0021]	接收终端发送的用户信息，所述用户信息用于标识用户身份；</p>
+    <p>[0022]	根据所述用户信息对所述终端进行身份验证；</p>
+    <p>[0023]	在所述身份验证通过之后，根据所述用户信息生成验证二维码；</p>
+    <p>[0024]	向所述终端发送所述验证二维码。</p>
+    <p>[0025]	在第二方面的第一种可能的实施方式中，所述用户信息生成验证二维码，包括:</p>
+    <p>[0026]	至少将所述用户信息作为内容数据；</p>
+    <p>[0027]	根据所述内容数据来生成验证二维码。</p>
+    <p>[0028]	结合第二方面的第一种可能的实施方式，在第二种可能的实施方式中，所述根据所述内容数据来生成验证二维码之前，还包括:</p>
+    <p>[0029]	接收所述终端发送的所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0030]	将所述验证二维码的生成属性也作为所述内容数据的一部分。</p>
+    <p>[0031]	结合第二方面的第一种可能的实施方式或者第二种可能的实施方式，在第三种可能的实施方式中，所述根据所述内容数据来生成验证二维码之前，还包括:</p>
+    <p>[0032]	生成唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0033]	将所述唯一标识也作为内容数据的一部分。结合第二方面的第一种、第二种或者第三种可能的实施方式，在第四种可能的实施方式中，所述根据所述内容数据来生成验证二维码之前，还包括:</p>
+    <p>[0034]	生成防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；[0035]	将所述防伪加密串也作为内容数据的一部分。</p>
+    <p>[0036]	结合第二方面的第一种、第二种、第三种或者第四种可能的实施方式，在第五种可能的实施方式中，所述根据所述内容数据来生成验证二维码之前，还包括:</p>
+    <p>[0037]	生成预定信息，所述预定信息包括介绍信息和网站链接中的至少一种；</p>
+    <p>[0038]	将所述预定信息也作为所述内容数据的一部分。</p>
+    <p>[0039]	结合第二方面的第一种、第二种、第三种或者第四种可能的实施方式，在第六种可能的实施方式中，所述根据所述内容数据来生成验证二维码，包括:</p>
+    <p>[0040]	将所述内容数据进行加密，获得加密后的内容数据；</p>
+    <p>[0041 ] 根据所述加密后的内容数据来生成验证二维码。</p>
+    <p>[0042]	结合第二方面的第五种可能的实施方式。在第七种可能的实施方式中，所述根据所述内容数据来生成验证二维码，包括:</p>
+    <p>[0043]	将所述内容数据中除所述预定信息以外的内容数据进行加密，获得部分加密后的内容数据；</p>
+    <p>[0044]	根据所述部分加密后的内容数据来生成验证二维码。</p>
+    <p>[0045]	结合第二方面、第二方面的第一种、第二种、第三种、第四种、第五种、第六种或者第七种可能的实施方式中，在第八种可能的实施方式中，所述向所述终端发送所述验证二维码之后，还包括:</p>
+    <p>[0046]	接收所述终端发送的查询信息；</p>
+    <p>[0047]	在接收到所述查询信息之后，根据所述查询信息向所述终端发送对应验证二维码所包含的全部或部分内容数据。</p>
+    <p>[0048]	结合第二方面的第二种可能的实施方式，在第九种可能的实施方式中，所述向所述终端发送所述验证二维码之后，还包括:</p>
+    <p>[0049]	接收所述终端发送的修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0050]	根据所述修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在所述使用场景范围内的使用权限进行修改。</p>
+    <p>[0051]	结合第二方面、第二方面的第一种、第二种、第三种、第四种、第五种、第六种、第七种、第八种或者第九种可能的实施方式，在第十种可能的实施方式中所述向所述终端发送所述验证二维码之后，还包括:</p>
+    <p>[0052]	接收所述终端发送的授权请求,所述授权请求包括终止授权命令或者开启授权命令；</p>
+    <p>[0053]	根据所述授权请求终止对应验证二维码的授权，或者开启对应验证二维码的授权。</p>
+    <p>[0054]	第三方面，提供了一种验证方法，所述方法包括:</p>
+    <p>[0055]	扫描预设的验证二维码，所述验证二维码的内容数据中包括用户信息；</p>
+    <p>[0056]	向验证服务器发送所述验证二维码，以便于所述验证服务器接收终端发送的验证二维码；获取所述验证二维码中的内容数据；根据所述内容数据中包括的用户信息进行身份验证。</p>
+    <p>[0057]	在第三方面的第一种可能的实施方式中，所述验证二维码的内容数据中还包括所述验证二维码的生成属性、唯一标识和防伪加密串中的至少一种；</p>
+    <p>[0058]	所述验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0059]	所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0060]	所述防伪加密串用于辨别当前验证二维码的真伪。</p>
+    <p>[0061]	结合第三方面或者第三方面的第一种可能的实施方式，在第二种可能的实施方式中，所述验证二维码中的内容数据为加密后的内容数据。第四方面，提供了 一种验证方法，所述方法包括:</p>
+    <p>[0062]	接收终端发送的验证二维码，所述验证二维码中的内容数据中至少包括用户信息；</p>
+    <p>[0063]	获取所述验证二维码中的内容数据；</p>
+    <p>[0064]	至少根据所述内容数据中包括的用户信息进行身份验证。</p>
+    <p>[0065]	在第四方面的第一种可能的实施方式中，所述获取所述验证二维码中的内容数据，包括:</p>
+    <p>[0066]	读取所述验证二维码中的加密后的内容数据；</p>
+    <p>[0067]	将所述加密后的内容数据进行解密，获得所述内容数据。</p>
+    <p>[0068]	结合第四方面或者第四方面的第一种可能的实施方式，在第二种可能的实施方式中，所述至少根据所述内容数据中包括的用户信息进行身份验证，包括:</p>
+    <p>[0069]	将所述用户信息与预先存储的用户信息进行匹配。</p>
+    <p>[0070]	结合第四方面的第二种可能的实施方式，在第三种可能的实施方式中，所述内容数据中还包括所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0071]	所述将所述用户信息与预先存储的用户信息进行匹配之后，还包括:</p>
+    <p>[0072]	检测所述验证二维码中的生成属性是否满足预定条件；</p>
+    <p>[0073]	所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间属于所述生成属性中的使用时长、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</p>
+    <p>[0074]	结合第四方面的第三种可能的实施方式，在第四种可能的实施方式中，所述接收终端发送的验证二维码之前，还包括:</p>
+    <p>[0075]	接收提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限；</p>
+    <p>[0076]	所述至少根据所述内容数据中包括的用户信息进行身份验证之后，还包括检测所述终端是否使用所述验证二维码请求所述提醒设置请求中的使用权限中的至少一种；</p>
+    <p>[0077]	若检测到所述终端使用所述验证二维码请求所述提醒设置请求中的使用权限中的至少一种，则向生成所述验证二维码的终端发送提醒信息。</p>
+    <p>[0078]	结合第四方面的第二种或者第三种可能的实施方式，在第五种可能的实施方式中，所述内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；[0079]	所述将所述用户信息与预先存储的用户信息进行匹配之前，还包括:</p>
+    <p>[0080]	根据所述唯一标识查询与当前验证二维码对应的用户信息。</p>
+    <p>[0081]	结合第四方面的第三种可能的实施方式，在第六种可能的实施方式中，所述内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0082]	所述检测所述验证二维码中的生成属性是否满足预定条件之前，还包括:</p>
+    <p>[0083]	根据所述唯一标识查询与当前验证二维码对应的生成属性。</p>
+    <p>[0084]	结合第四方面的第五种可能的实施方式，在第七种可能的实施方式中，所述内容数据中还包括防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；</p>
+    <p>[0085]	所述根据所述唯一标识查询所述预先存储的用户信息之前，还包括:</p>
+    <p>[0086]	根据所述唯一标识查询与当前验证二维码对应的防伪加密串；</p>
+    <p>[0087]	根据所述防伪加密串辨别当前验证二维码的真伪；</p>
+    <p>[0088]	若辨别结果为真，则执行所述根据所述唯一标识查询所述预先存储的用户信息的步骤。</p>
+    <p>[0089]	第五方面，提供了一种终端，所述终端包括:</p>
+    <p>[0090]	用户信息发送模块，用于向验证服务器发送用户信息，所述用户信息用于标识用户身份，以便于所述验证服务器接收终端发送的用户信息；根据所述用户信息对所述终端进行身份验证；在所述身份验证通过之后，根据所述用户信息生成验证二维码；向所述终端发送所述验证二维码；</p>
+    <p>[0091]	二维码接收模块，用于接收并保存所述验证服务器发送的所述验证二维码。</p>
+    <p>[0092]	在第五方面的第一种可能的实施方式中，所述终端，还包括:</p>
+    <p>[0093]	生成属性发送模块；</p>
+    <p>[0094]	所述生成属性发送模块，用于向所述验证服务器发送所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种。</p>
+    <p>[0095]	结合第五方面或者第五方面的第一种可能的实施方式,在第二种可能的实施方式中，所述终端，还包括:</p>
+    <p>[0096]	查询信息发送模块和反馈信息接收模块；</p>
+    <p>[0097]	所述查询信息发送模块，用于向所述验证服务器发送查询信息；</p>
+    <p>[0098]	所述反馈信息接收模块，用于接收所述验证服务器发送的对应验证二维码所包含的全部或者部分内容数据。</p>
+    <p>[0099]	结合第五方面的第一种可能的实施方式，在第三种可能的实施方式中，所述终端，还包括:</p>
+    <p>[0100]	修改请求发送模块；</p>
+    <p>[0101]	所述修改请求发送模块，用于向所述验证服务器发送修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种。</p>
+    <p>[0102]	结合第五方面、第五方面的第一种、第二种或者第三种可能的实施方式，在第四种可能的实施方式中，所述终端，还包括:[0103]	授权请求发送模块；</p>
+    <p>[0104]	所述授权请求发送模块，用于向所述验证服务器发送授权请求，所述授权请求包括终止授权命令或者开启授权命令。</p>
+    <p>[0105]	结合第五方面的第一种或者第三种可能的实施方式，在第五种可能的实施方式中，所述终端，还包括:</p>
+    <p>[0106]	提醒请求发送模块；</p>
+    <p>[0107]	所述提醒请求发送模块，用于向所述验证服务器发送提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限。</p>
+    <p>[0108]	第六方面，提供了一种验证服务器，所述验证服务器包括:</p>
+    <p>[0109]	用户信息接收模块，用于接收终端发送的用户信息，所述用户信息用于标识用户身份；</p>
+    <p>[0110]身份验证模块，用于根据所述用户信息接收模块接收到的用户信息对所述终端进行身份验证；</p>
+    <p>[0111]	二维码生成模块，用于在所述身份验证模块的身份验证通过之后，根据所述用户信息接收模块接收到的用户信息生成验证二维码；</p>
+    <p>[0112]	二维码发送模块，用于向所述终端发送所述二维码生成模块生成的验证二维码。</p>
+    <p>[0113]	在第六方面的第一种可能的实施方式中，所述二维码生成模块，包括:内容数据生成单元和二维码生成单元；</p>
+    <p>[0114]	所述内容数据生成单元，用于至少将所述用户信息接收模块接收到的用户信息作为内容数据；</p>
+    <p>[0115]	所述二维码生成单元，用于根据所述内容数据生成单元生成的内容数据来生成验</p>
+    <p>证二维码。</p>
+    <p>[0116]	结合第六方面，在第六方面的第二种可能的实施方式中，所述验证服务器，还包括:</p>
+    <p>[0117]	生成属性接收模块；</p>
+    <p>[0118]	所述生成属性接收模块，用于接收所述终端发送的所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0119]	所述内容数据生成单元，还用于将所述生成属性接收模块接收到的验证二维码的生成属性也作为所述内容数据的一部分。</p>
+    <p>[0120]	结合第六方面的第一种可能的实施方式，在第三种可能的实施方式中，所述二维码生成模块，还包括:</p>
+    <p>[0121]	唯一标识生成单元；</p>
+    <p>[0122]	所述唯一标识生成单元，用于生成所述验证二维码的唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0123]	所述内容数据生成单元，还用于将所述唯一标识生成单元生成的唯一标识也作为所述内容数据的一部分。</p>
+    <p>[0124]	结合第六方面的第一种可能的实施方式，在第四种可能的实施方式中，所述二维码生成模块还包括:[0125]	防伪加密串生成单元；所述防伪加密串生成单元，用于生成所述验证二维码的防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；</p>
+    <p>[0126]	所述内容数据生成单元，还用于将所述防伪加密串生成单元生成的防伪加密串也作为所述内容数据的一部分。</p>
+    <p>[0127]	结合第六方面的第一种、第二种、第三种或者第四种可能的实施方式，在第五种可能的实施方式中，所述二维码生成模块，还包括:</p>
+    <p>[0128]	预定信息生成单元；</p>
+    <p>[0129]	所述预定信息生成单元，用于生成预定信息，所述预定信息包括介绍信息和网站链接中的至少一种；</p>
+    <p>[0130]	所述内容数据生成单元，还用于将所述预定信息生成单元生成的预定信息也作为所述内容数据的一部分。</p>
+    <p>[0131]	结合第六方面的第一种、第二种、第三种或者第四种可能的实施方式，在第六种可能的实施方式中，所述内容数据生成单元，包括:</p>
+    <p>[0132]	第一加密子单元和内容数据生成子单元；</p>
+    <p>[0133]	所述第一加密子单元，用于将所述内容数据进行加密；</p>
+    <p>[0134]	所述内容数据生成子单元，用于将所述第一加密子单元加密后的内容作为内容数据。</p>
+    <p>[0135]	结合第六方面的第五种可能的实施方式，在第七种可能的实施方式中，所述内容数据生成单元，还包括:</p>
+    <p>[0136]	第二加密子单元和内容数据生成子单元；</p>
+    <p>[0137]	所述第二加密子单元，用于将所述内容数据中除所述预定信息以外的内容数据进行加密，获得部分加密后的内容数据；</p>
+    <p>[0138]	所述内容数据生成子单元，用于将所述第二加密子单元部分加密后的内容作为内容数据。</p>
+    <p>[0139]	结合第六方面、第六方面的第一种、第二种、第三种、第四种、第五种、第六种或者第七种可能的实施方式，在第八种可能的实施方式中，所述验证服务器，还包括:</p>
+    <p>[0140]	查询信息接收模块和反馈信息发送模块；</p>
+    <p>[0141]	所述查询信息接收模块，用于接收所述终端发送的查询信息；</p>
+    <p>[0142]	所述反馈信息发送模块，用于在接收到所述查询信息之后，根据所述查询信息向所述终端发送对应验证二维码所包含的全部或者部分内容数据。</p>
+    <p>[0143]	结合第六方面的第二种可能的实施方式，在第九种可能的实施方式中，所述验证服务器，还包括:</p>
+    <p>[0144]	修改请求接收模块和修改请求处理模块；</p>
+    <p>[0145]	所述修改请求接收模块，用于接收所述终端发送的修改请求，所述修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0146]	所述修改请求处理模块，用于根据所述修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在所述使用场景范围内的使用权限进行修改。</p>
+    <p>[0147]	结合第六方面、第六方面的第一种、第二种、第三种、第四种、第五种、第六种、第七种、第八种或者第九种可能的实施方式，在第十种可能的实施方式中，所述验证服务器，还包括:</p>
+    <p>[0148]	授权请求接收模块和授权请求处理模块；</p>
+    <p>[0149]	所述授权请求接收模块，用于接收所述终端发送的授权请求,所述授权请求包括终止授权命令或者开启授权命令；</p>
+    <p>[0150]	所述授权请求处理模块，用于根据所述授权请求终止对应验证二维码的授权或者开启对应验证二维码的授权。</p>
+    <p>[0151]	第七方面，提供了一种终端，所述终端包括:</p>
+    <p>[0152]	二维码扫描模块，用于扫描预设的验证二维码，所述验证二维码的内容数据中至少包括用户信息；</p>
+    <p>[0153]	二维码发送模块，用于向验证服务器发送所述验证二维码，以便于所述验证服务器接收终端发送的验证二维码；获取所述验证二维码中的内容数据；至少根据所述内容数据中包括的用户信息进行身份验证。</p>
+    <p>[0154]	在第七方面的第一种可能的实施方式中，所述二维码扫描模块扫描到的所述验证二维码的内容数据中还包括所述验证二维码的生成属性、唯一标识和防伪加密串中的至少一种；</p>
+    <p>[0155]	所述验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0156]	所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0157]	所述防伪加密串用于辨别当前验证二维码的真伪。</p>
+    <p>[0158]	结合第七方面或者第七方面的第一种可能的实施方式，在第二种可能的实施方式中，所述二维码扫描模块扫描到的所述验证二维码中的内容数据为加密后的内容数据。</p>
+    <p>[0159]	第八方面，提供了一种验证服务器，所述验证服务器包括:</p>
+    <p>[0160]	二维码接收模块，用于接收终端发送的验证二维码，所述验证二维码中的内容数据中包括用户信息；</p>
+    <p>[0161 ]内容数据获取模块，用于获取所述二维码接收模块接收到的验证二维码中的内容数据；</p>
+    <p>[0162]	身份验证模块，用于根据所述内容数据获取模块获取到的内容数据中的用户信息进行身份验证。</p>
+    <p>[0163]	在第八方面的第一种可能的实施方式中，所述内容数据获取模块，包括:</p>
+    <p>[0164]	内容数据读取单元和内容数据解密单元；</p>
+    <p>[0165]	所述内容数据读取单元，用于读取所述验证二维码中的加密后的内容数据；</p>
+    <p>[0166]	所述内容数据解密单元，用于将所述内容数据读取单元读取到的加密后的内容数据进行解密，获得所述内容数据。</p>
+    <p>[0167]	结合第八方面，在第八方面的第二种可能的实施方式中，所述身份验证模块包括:</p>
+    <p>[0168]	用户信息验证单元，用于将所述内容数据获取模块获取到的内容数据中的用户信息与预先存储的用户信息进行匹配。</p>
+    <p>[0169]	结合第八方面的第二种可能的实施方式，在第三种可能的实施方式中，所述内容数据获取模块获取到的内容数据中还包括所述验证二维码的生成属性，所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0170]	所述身份验证模块，还包括:</p>
+    <p>[0171]	生成属性检测单元；</p>
+    <p>[0172]	所述生成属性检测单元，用于检测所述二维码接收模块接收到的验证二维码中的生成属性是否满足预定条件；</p>
+    <p>[0173]	所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间属于所述生成属性中的使用时长、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</p>
+    <p>[0174]	结合第八方面的第三种可能的实施方式，在第四种可能的实施方式中，所述验证服务器，还包括:</p>
+    <p>[0175]	提醒请求接收模块和提醒请求处理模块；</p>
+    <p>[0176]	所述设置请求接收模块，用于接收生成所述验证二维码的终端发送的提醒设置请求，所述提醒设置请求包括在所述使用场景范围内的使用权限中的至少一种权限；</p>
+    <p>[0177]	所述提醒请求处理模块，用于检测所述终端是否使用所述验证二维码请求所述提醒设置请求中的使用权限中的至少一种。</p>
+    <p>[0178]	结合第八方面的第二种或者第三种可能的实施方式，在第五种可能的实施方式中，所述内容数据获取模块获取到的内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0179]	所述身份验证模块，还包括:</p>
+    <p>[0180]	第一标识查询单元；</p>
+    <p>[0181]	所述第一标识查询单元，用于根据所述内容数据获取模块获取到的内容数据中的唯一标识查询与当前验证二维码对应的用户信息。</p>
+    <p>[0182]	结合第八方面的第二种可能的实施方式，在第六种可能的实施方式中，所述内容数据获取模块获取到的内容数据中还包括唯一标识，所述唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0183]	所述身份验证模块，还包括:</p>
+    <p>[0184]	第二标识查询单元；</p>
+    <p>[0185]	所述第二标识查询单元，用于根据所述内容数据获取模块获取到的内容数据中的唯一标识查询与当前验证二维码对应的生成属性。</p>
+    <p>[0186]	结合第八方面的第五种可能的实施方式，在第七种可能的实施方式中，所述内容数据获取模块获取到的内容数据中还包括防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪；</p>
+    <p>[0187]	所述身份验证模块，还包括:</p>
+    <p>[0188]	第三标识查询单元和二维码真伪辨别单元；</p>
+    <p>[0189]	所述第三标识查询单元，用于根据所述内容数据获取模块获取到的内容数据中的唯一标识查询与当前验证二维码对应的所述验证二维码的防伪加密串；</p>
+    <p>[0190]	所述二维码真伪鉴别单元，用于根据所述第三标识查询单元查询到的防伪加密串辨别当前验证二维码的真伪；</p>
+    <p>[0191]	所述用户信息验证单元，具体用于若所述二维码真伪鉴别单元辨别结果为真，则执行所述根据所述唯一标识查询所述预先存储的用户信息的步骤。</p>
+    <p>[0192]	本发明实施例提供的技术方案带来的有益效果是:</p>
+    <p>[0193]	通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果。同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。</p>
+    <p>附图说明</p>
+    <p>[0194]	为了更清楚地说明本发明实施例中的技术方案，下面将对实施例描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0195]	图1是本发明实施例一提供的二维码验证方法的方法流程图；</p>
+    <p>[0196]	图2是本发明实施例二提供的二维码验证方法的方法流程图；</p>
+    <p>[0197]	图3是本发明实施例三提供的二维码验证方法的方法流程图；</p>
+    <p>[0198]	图4是本发明实施例四提供的二维码验证方法的方法流程图；</p>
+    <p>[0199]	图5是本发明实施例五提供的二维码验证方法的方法流程图；</p>
+    <p>[0200]	图6是本发明实施例六提供的二维码验证系统的结构方框图；</p>
+    <p>[0201]	图7是本发明实施例七提供的二维码验证系统的结构方框图；</p>
+    <p>[0202]	图8是本发明实施例七、八、九提供的二维码验证系统中的内容数据生成单元的结构方框图；</p>
+    <p>[0203]图9是本发明实施例七、八、九提供的二维码验证系统中的内容数据获取模块的结构方框图；</p>
+    <p>[0204]	图10是本发明实施例八提供的二维码验证系统的结构方框图；</p>
+    <p>[0205]	图11是本发明实施例九提供的二维码验证系统的结构方框图；</p>
+    <p>[0206]	图12是本发明实施例十提供的二维码验证系统的结构方框图；</p>
+    <p>[0207]	图13是本发明实施例十提供的二维码验证系统中的内容数据生成单元的结构方框图。</p>
+    <p>具体实施方式</p>
+    <p>[0208]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方式作进一步地详细描述。</p>
+    <p>[0209]	实施例一</p>
+    <p>[0210]	请参考图1，其示出了本发明实施例一提供的二维码验证方法的方法流程图。该二维码验证方法，包括:</p>
+    <p>[0211]	步骤101，终端向验证服务器发送用户信息；[0212]	用户在使用网络账户在终端进行游戏、交易和数据交互的时候，往往需要进行身份验证。终端可以是电脑、手机或者其他智能电子设备。用户进行身份验证的时候需要输入用户信息。用户信息可以包括用户名和密码，还可能包括验证码、手机短信验证码等。</p>
+    <p>[0213]	相应地，验证服务器接收终端发送的用户信息。</p>
+    <p>[0214]	步骤102，验证服务器根据用户信息对终端进行身份验证；</p>
+    <p>[0215]	验证服务器接收到用户发送的用户信息之后，和预先存储的用户信息进行匹配，如果匹配成功，则验证通过。</p>
+    <p>[0216]	步骤103，验证服务器在身份验证通过之后，根据用户信息生成验证二维码；</p>
+    <p>[0217]	验证服务器对用户身份验证通过以后，根据用户信息生成验证二维码。</p>
+    <p>[0218]	步骤104，验证服务器向终端发送验证二维码；</p>
+    <p>[0219]	验证服务器生成验证二维码以后，将生成的验证二维码发送给用户，以便用户下次需要验证的时候使用。</p>
+    <p>[0220]	步骤105，终端扫描预设的验证二维码；</p>
+    <p>[0221]	若用户需要再次进行身份验证，只需要通过使用的终端设备的摄像头扫描预先存储的二维码。</p>
+    <p>[0222]	步骤106，终端向验证服务器发送验证二维码；</p>
+    <p>[0223]	用户通过所使用终端的摄像头扫描验证二维码之后，将验证二维码发送给验证服务器。</p>
+    <p>[0224]	步骤107，验证服务器获取验证二维码中的用户信息；</p>
+    <p>[0225]	验证服务器收到用户发送的验证二维码后，获取验证二维码中的用户信息。</p>
+    <p>[0226]	步骤108，验证服务器至少根据用户信息进行身份验证；</p>
+    <p>[0227]	网站验证服务器获取到验证二维码中的用户信息，将收到的用户信息与预先存储的用户信息进行匹配，若匹配成功，则验证通过。</p>
+    <p>[0228]	综上所述，本实施例提供的二维码验证方法，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。</p>
+    <p>[0229]	需要补充说明的是，步骤101到104可以单独实施成为终端侧的二维码获取方法、验证服务器侧的二维码生成方法；步骤105到108可以单独实施成为终端侧和/或验证服务器侧的验证方法。实施二维码获取方法的终端可以和实施验证方法的终端是同一个终端或者不同的终端，比如实施二维码获取方法的终端可以是屏幕较大、外设较多的台式电脑或者笔记本，实施验证方法的终端可以是屏幕较小、外设较少的智能手机或者平板电脑。</p>
+    <p>[0230]	实施例二</p>
+    <p>[0231]	请参考图2，其示出了本发明实施例二提供的二维码验证方法的方法流程图，该二维码验证方法，包括:</p>
+    <p>[0232]	步骤201，终端向验证服务器发送用户信息；</p>
+    <p>[0233]	用户在使用网络账户在终端进行游戏、交易和数据交互的时候，往往需要进行身份验证。终端可以是电脑、手机或者其他智能电子设备。用户进行身份验证的时候需要向验证服务器发送用户信息。比如，用户在登录X宝网的时候，需要在X宝网的登录界面输入用户名和密码，可能还包括验证码和手机短信验证码。</p>
+    <p>[0234]	相应地，验证服务器接收终端发送的用户信息。</p>
+    <p>[0235]	优选的是，终端可以采用加密的方式向验证服务器发送用户信息；</p>
+    <p>[0236]	验证服务器可以采用加密的方式接收终端发送的用户信息。</p>
+    <p>[0237]	步骤202，验证服务器根据用户信息对终端进行身份验证；</p>
+    <p>[0238]	验证服务器接收到用户发送的用户信息之后，和预先存储的用户信息进行匹配，如果匹配成功，则验证通过。</p>
+    <p>[0239]	验证服务器对用户的身份验证通过之后，验证服务器可以向终端发送验证通过的结果，并向终端发送是否需要生成验证二维码的询问请求。若终端需要生成验证二维码，则验证服务器可以向终端提供一个设置验证二维码生成属性的窗口或者网页页面。</p>
+    <p>[0240]	步骤203，终端向验证服务器发送验证二维码的生成属性；</p>
+    <p>[0241]	在验证服务器向终端提供设置验证二维码的生成属性窗口之后，用户通过终端向验证服务器发送所要生成验证二维码的生成属性。验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种。使用次数是指验证二维码可以使用的次数，比如，用户可以设置该验证二维码的使用次数为3次；使用时长是指验证二维码的使用时间范围，比如，用户可以设置该验证二维码的使用时长为三个月，那么该验证二维码的使用时间范围即为从生成日期开始算起的三个月之内；使用场景是指验证二维码可以使用的网站范围，比如，用户在X宝网生成的验证二维码的使用场景即为在X宝网使用；在使用场景范围内的使用权限是指验证二维码在使用场景范围内的使用权限，比如，用户在X宝网的验证二维码的使用权限可能包括登录、查询、支付或者修改用户密码等。</p>
+    <p>[0242]	优选的是，终端可以采用加密的方式向验证服务器发送验证二维码的生成属性。</p>
+    <p>[0243]	步骤204，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码；</p>
+    <p>[0244]	在验证服务器接收到终端发送的验证二维码的生成属性之后，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码。具体来讲，验证服务器先将用户信息作为内容数据的一部分，再将验证二维码的生成属性也作为内容数据的一部分，最后根据内容数据生成验证二维码。</p>
+    <p>[0245]	在根据内容数据生成验证二维码的过程中，可以包括如下子步骤:验证服务器将内容数据进行加密，获得加密后的内容数据，根据加密后的内容数据来生成验证二维码。</p>
+    <p>[0246]	tWn，用户登录X宝网时，在身份验证通过以后，X宝网的验证服务器根据用户信息和用户设置的验证二维码的生成属性生成验证二维码。</p>
+    <p>[0247]	步骤205，验证服务器向终端发送验证二维码；</p>
+    <p>[0248]	验证服务器生成验证二维码以后，将生成的验证二维码发送给终端，以便用户保存该验证二维码，在用户需要再次进行身份验证的时候使用。比如，用户可以以电子图片的形式保存该验证二维码，或者以打印成纸质的形式保存该验证二维码。</p>
+    <p>[0249]	优选的是，验证服务器可以采用加密的方式向终端发送验证二维码。[0250]	步骤206，终端扫描预设的验证二维码；</p>
+    <p>[0251]	若用户需要再次进行身份验证，只需要通过终端扫描预先存储的二维码。具体来讲，若预设的验证二维码是以电子图片的形式保存的，则终端可以通过应用程序来扫描验证二维码，比如，用户可以使用智能手机的应用程序读取所保存的验证二维码的电子图片；若预设的验证二维码是打印成纸质形式保存的，则终端可以通过摄像头来扫描验证二维码，比如，用户可以使用智能手机的摄像头扫描纸质的验证二维码。</p>
+    <p>[0252]	步骤207，终端向验证服务器发送验证二维码；</p>
+    <p>[0253]	终端扫描验证二维码之后，将验证二维码发送给验证服务器。</p>
+    <p>[0254]	优选的是，终端可以采用加密的方式向验证服务器发送验证二维码。</p>
+    <p>[0255]	步骤208，验证服务器获取验证二维码中的内容数据；</p>
+    <p>[0256]	验证服务器收到终端发送的验证二维码之后，获取验证二维码中的内容数据；内容数据包括用户信息和验证二维码的生成属性；用户信息包括用户名和密码，还可能包括验证码、手机短信验证码等；验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种。</p>
+    <p>[0257]	步骤209，验证服务器至少根据内容数据中的用户信息进行身份验证；</p>
+    <p>[0258]	本步骤具体可以包括以下两个子步骤:</p>
+    <p>[0259]	第一，验证服务器获取到验证二维码中的用户信息，将获取到的用户信息与预先存储的用户信息进行匹配，若匹配成功，则验证通过。</p>
+    <p>[0260]	比如，X宝网的验证服务器获取到验证二维码中的用户信息，将收到的用户信息与X宝网预先存储的所有用户信息进行匹配，若匹配成功，则验证通过。</p>
+    <p>[0261]	第二，验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件；</p>
+    <p>[0262]	验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件。预定条件包括如下四个条件中的一种或者多种:</p>
+    <p>[0263]	验证二维码的当前已使用次数小于生成属性中的使用次数，比如，验证二维码的当前使用次数为2，小于生成属性中的使用次数3，则视为满足预设条件。</p>
+    <p>[0264]	验证二维码的当前使用时间属于生成属性中的使用时长，比如，验证二维码的当前使用时间为2012年11月31号，根据使用时长计算得到的有效截至日期为2012年12月21号，当前使用时间在有效截至日期之前，视为满足预设条件。</p>
+    <p>[0265]	验证二维码的当前使用场景范围在生成属性中的使用场景范围之内，比如，验证二维码的当前使用场景为X宝网的X猫商城，生成属性中的使用场景为X宝网，则视为满足预设条件。</p>
+    <p>[0266]	验证二维码的使用场景范围内的使用权限小于或等于生成属性中的使用场景范围内的使用权限，比如，验证二维码的当前使用场景范围内的使用权限为支付，生成属性中的使用场景范围内的使用权限为登录，则视为不满足预设条件。</p>
+    <p>[0267]	若验证二维码的生成属性全部满足预定条件，则验证通过。</p>
+    <p>[0268]	综上所述，本实施例提供的二维码验证方法，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。本实施例提供的验证二维码的验证方法，还通过验证二维码的形式保存验证二维码的生成属性，使得在验证二维码的使用过程中的安全性更有保证。</p>
+    <p>[0269]	需要补充说明的是，步骤201到205可以单独实施成为终端侧的二维码获取方法、验证服务器侧的二维码生成方法；步骤206到209可以单独实施成为终端侧和/或验证服务器侧的验证方法。实施验证二维码的生成方法的终端可以和实施验证二维码的验证方法的终端是同一个终端或者不同的终端，比如实施二维码获取方法的终端可以是屏幕较大、外设较多的台式电脑或者笔记本，实施验证方法的终端可以是屏幕较小、外设较少的智能手机或者平板电脑。</p>
+    <p>[0270]	实施例三</p>
+    <p>[0271]	请参考图3，其示出了本发明实施例三提供的二维码验证方法的方法流程图，该二维码验证方法，包括:</p>
+    <p>[0272]	步骤301，终端向验证服务器发送用户信息；</p>
+    <p>[0273]	用户在使用网络账户在终端进行游戏、交易和数据交互的时候，往往需要进行身份验证。使用终端可以是电脑、手机或者其他智能电子设备。用户进行身份验证的时候需要向验证服务器发送用户信息。比如，用户在登录X盘网进行数据共享的时候，首先在X盘网的登录界面输入用户名和密码，可能还包括验证码和手机短信验证码。</p>
+    <p>[0274]	相应地，验证服务器接收终端发送的用户信息。</p>
+    <p>[0275]	优选的是，终端可以采用加密的方式向验证服务器发送用户信息；</p>
+    <p>[0276]	验证服务器可以采用加密的方式接收终端发送的用户信息。</p>
+    <p>[0277]	步骤302，验证服务器根据用户信息对终端进行身份验证；</p>
+    <p>[0278]	验证服务器接收到用户发送的用户信息之后，和预先存储的用户信息进行匹配，如果匹配成功，则验证通过。</p>
+    <p>[0279]	验证服务器对用户的身份验证通过之后，验证服务器可以向终端发送验证通过的结果，并向终端发送是否需要生成验证二维码的询问请求。若终端需要生成验证二维码，则验证服务器可以向终端提供一个设置验证二维码生成属性的窗口或者网页页面。</p>
+    <p>[0280]	步骤303，终端向验证服务器发送验证二维码的生成属性；</p>
+    <p>[0281]	用户通过终端向验证服务器发送所要生成验证二维码的生成属性。验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种；比如，用户可以设置该验证二维码的使用次数为3次；使用时长是指验证二维码的使用时间范围，比如，用户可以设置该验证二维码的使用时长为三个月，那么该验证二维码的使用时间范围即为从生成日期开始算起的三个月之内；使用场景是指验证二维码可以使用的网站范围，比如，用户在X盘网生成的验证二维码的使用场景即为在X盘网使用；在使用场景范围内的使用权限是指验证二维码在使用场景范围内的使用权限，比如，用户在X盘网的验证二维码的使用权限可能包括访问、评论和修改等。</p>
+    <p>[0282]	优选的是，终端可以采用加密的方式向验证服务器发送验证二维码的生成属性。</p>
+    <p>[0283]	步骤304，验证服务器生成验证二维码的唯一标识；[0284]	验证服务器为验证二维码生成唯一标识，唯一标识用于在所有验证二维码中标识当前验证二维码的身份。比如，唯一标识可以是数字标号123。</p>
+    <p>[0285]	步骤305，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码；</p>
+    <p>[0286]	在验证服务器接收到终端发送的验证二维码的生成属性之后，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码。具体来讲，验证服务器先将用户信息作为内容数据的一部分，再将验证二维码的生成属性也作为内容数据的一部分，再将唯一标识也作为内容数据的一部分，最后根据内容数据生成验证二维码。</p>
+    <p>[0287]	在根据内容数据生成验证二维码的过程中，可以包括如下子步骤:验证服务器将内容数据进行加密，获得加密后的内容数据，根据加密后的内容数据来生成验证二维码。</p>
+    <p>[0288]	tWn，用户登录X盘网时，在身份验证通过以后，X盘网的验证服务器根据用户信息、用户设置的验证二维码的生成属性和唯一标识生成验证二维码。</p>
+    <p>[0289]	步骤306，验证服务器向终端发送验证二维码；</p>
+    <p>[0290]	验证服务器生成验证二维码以后，将生成的验证二维码发送给用户以便用户保存该验证二维码。比如，用户A可以将该验证二维码发送给需要分享的用户B。</p>
+    <p>[0291]	优选的是，验证服务器可以采用加密的方式向终端发送验证二维码。</p>
+    <p>[0292]	步骤307，终端扫描预设的验证二维码；</p>
+    <p>[0293]	终端扫描预先存储的二维码。具体来讲，若预设的验证二维码是以电子图片的形式保存的，则终端可以通过应用程序来扫描验证二维码，比如，用户B在登录该用户A在X盘网上的网盘时，可以使用智能手机的应用程序读取所保存的验证二维码的电子图片；若预设的验证二维码是打印成纸质形式保存的，则终端可以通过摄像头来扫描验证二维码，</p>
+    <p>如，用户B在登录该用户A在云盘网上的网盘时，可以使用智能手机的摄像头扫描纸质的验证二维码。</p>
+    <p>[0294]	步骤308，终端向验证服务器发送验证二维码；</p>
+    <p>[0295]	终端扫描验证二维码之后，将验证二维码发送给验证服务器。</p>
+    <p>[0296]	优选的是，终端可以采用加密的方式向验证服务器发送验证二维码。</p>
+    <p>[0297]	步骤309，验证服务器获取验证二维码中的内容数据；</p>
+    <p>[0298]	验证服务器收到用户发送的验证二维码后，获取验证二维码中的内容数据。内容数据包括用户信息、验证二维码的生成属性和验证二维码的唯一标识。用户信息包括用户名和密码，还可能包括验证码、手机短信验证码等；验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种；验证二维码的唯一标识用于在所有验证二维码中标识当前验证二维码的身份。</p>
+    <p>[0299]	步骤310，验证服务器至少根据内容数据中的用户信息进行身份验证；</p>
+    <p>[0300]	本步骤具体可以包括以下四个子步骤:</p>
+    <p>[0301]	第一，验证服务器根据唯一标识查询与当前验证二维码对应的用户信息；</p>
+    <p>[0302]	验证服务器根据获取到的验证二维码中的唯一标识查询与当前验证二维码对应的用户信息。比如，验证服务器根据获取到的验证二维码中的唯一标识123查询与当前验证二维码对应的用户信息。</p>
+    <p>[0303]	第二，验证服务器将获取到的用户信息与预先存储的用户信息进行匹配，若匹配成功，则验证通过。</p>
+    <p>[0304]	比如，X盘网的验证服务器获取到验证二维码中的用户信息，将收到的用户信息与X盘网预先存储的所有用户信息进行匹配，若匹配成功，则验证通过。</p>
+    <p>[0305]	第三，验证服务器根据唯一标识查询与当前验证二维码对应的生成属性；</p>
+    <p>[0306]	验证服务器根据获取到的验证二维码中的唯一标识查询与当前验证二维码对应的生成属性。比如，验证服务器根据获取到的验证二维码中的唯一标识123查询与当前验证二维码对应的生成属性；</p>
+    <p>[0307]	第四，验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件；</p>
+    <p>[0308]	验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件。预定条件包括如下四个条件中的一种或者多种:</p>
+    <p>[0309]	验证二维码的当前已使用次数小于生成属性中的使用次数，比如，验证二维码的当前使用次数为2，小于生成属性中的使用次数3，则视为满足预设条件。</p>
+    <p>[0310]	验证二维码的当前使用时间属于生成属性中的使用时长，比如，验证二维码的当前使用时间为2012年11月31号，根据使用时长计算得到的有效截至日期为2012年12月21号，当前使用时间在有效截至日期之前，视为满足预设条件。</p>
+    <p>[0311]	验证二维码的当前使用场景范围在生成属性中的使用场景范围之内，比如，验证二维码的当前使用场景为X盘网，生成属性中的使用场景为X盘网，则视为满足预设条件。</p>
+    <p>[0312]	验证二维码的使用场景范围内的使用权限小于或等于生成属性中的使用场景范围内的使用权限，比如，验证二维码的当前使用场景范围内的使用权限为修改，生成属性中的使用场景范围内的使用权限为访问和评论，则视为不满足预设条件。</p>
+    <p>[0313]	若验证二维码的生成属性全部满足预定条件，则验证通过。</p>
+    <p>[0314]	综上所述，本实施例提供的二维码验证方法，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。还通过验证二维码的形式保存验证二维码的生成属性，使得在验证二维码的使用过程中的安全性更有保证。本实施例提供的验证二维码的验证方法，还通过保存验证二维码的唯一标识，使得该验证二维码具有唯一性。</p>
+    <p>[0315]	需要补充说明的是，步骤301到306可以单独实施成为终端侧的二维码获取方法、验证服务器侧的二维码生成方法；步骤307到310可以单独实施成终端侧和/或验证服务器侧的验证方法。实施验证二维码的生成方法的终端可以和实施验证二维码的验证方法的终端是同一个终端或者不同的终端，比如实施二维码获取方法的终端可以是屏幕较大、夕卜设较多的台式电脑或者笔记本，实施验证方法的终端可以是屏幕较小、外设较少的智能手机或者平板电脑。</p>
+    <p>[0316]	实施例四</p>
+    <p>[0317]	请参考图4，其示出了本发明实施例四提供的二维码验证方法的方法流程图，该二维码验证方法，包括:</p>
+    <p>[0318]	步骤401，终端向验证服务器发送用户信息；</p>
+    <p>[0319]	用户在使用网络账户在终端进行游戏、交易和数据交互的时候，往往需要进行身份验证。使用终端可以是电脑、手机或者其他智能电子设备。用户进行身份验证的时候需要向验证服务器发送用户信息。比如，用户在登录X涯论坛进行数据共享的时候，首先在X涯论坛的登录界面输入用户名和密码，可能还包括验证码和手机短信验证码。</p>
+    <p>[0320]	相应地，验证服务器接收终端发送的用户信息。</p>
+    <p>[0321]	优选的是，终端可以采用加密的方式向验证服务器发送用户信息；</p>
+    <p>[0322]	验证服务器可以采用加密的方式接收终端发送的用户信息。</p>
+    <p>[0323]	步骤402，验证服务器根据用户信息对终端进行身份验证；</p>
+    <p>[0324]	验证服务器接收到用户发送的用户信息之后，和预先存储的用户信息进行匹配，如果匹配成功，则验证通过。</p>
+    <p>[0325]	验证服务器对用户的身份验证通过之后，验证服务器可以向终端发送验证通过的结果，并向终端发送是否需要生成验证二维码的询问请求。若终端需要生成验证二维码，则验证服务器可以向终端提供一个设置验证二维码生成属性的窗口或者网页页面。</p>
+    <p>[0326]	步骤403，终端向验证服务器发送验证二维码的生成属性；</p>
+    <p>[0327]	用户通过终端向验证服务器发送所要生成验证二维码的生成属性。验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种；比如，用户可以设置该验证二维码的使用次数为3次；使用时长是指验证二维码的使用时间范围，比如，用户可以设置该验证二维码的使用时长为三个月，那么该验证二维码的使用时间范围即为从生成日期开始算起的三个月之内；使用场景是指验证二维码可以使用的网站范围，比如，用户在X涯论坛的验证二维码的使用场景即为在X涯论坛使用；在使用场景范围内的使用权限是指验证二维码在使用场景范围内的使用权限，比如，用户在X涯论坛的验证二维码的使用权限可能包括登录、发帖、回帖，下载资料和上传资料等。</p>
+    <p>[0328]	优选的是，终端可以采用加密的方式向验证服务器发送验证二维码的生成属性。</p>
+    <p>[0329]	步骤404，验证服务器生成验证二维码的唯一标识；</p>
+    <p>[0330]	验证服务器为验证二维码生成唯一标识，唯一标识用于在所有验证二维码中标识当前验证二维码的身份。比如，唯一标识可以是数字标号123。</p>
+    <p>[0331]	步骤405，验证服务器生成验证二维码的防伪加密串；</p>
+    <p>[0332]	验证服务器为验证二维码生成防伪加密串，所述防伪加密串用于辨别当前验证二维码的真伪。比如，防伪加密串可以是根据MD5(Message-Digest Algorithm5,信息摘要算法5)算法得出的MD5值。</p>
+    <p>[0333]	步骤406，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码；</p>
+    <p>[0334]	在验证服务器接收到终端发送的验证二维码的生成属性之后，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码。具体来讲，验证服务器先将用户信息作为内容数据的一部分，再将验证二维码的生成属性也作为内容数据的一部分，再将唯一标识也作为内容数据的一部分，再将防伪加密串也作为内容数据的一部分，最后根据内容数据生成验证二维码。[0335]	在根据内容数据生成验证二维码的过程中，可以包括如下子步骤:验证服务器将内容数据进行加密，获得加密后的内容数据，根据加密后的内容数据来生成验证二维码。</p>
+    <p>[0336]	比如，用户登录X涯论坛时，在身份验证通过以后，X涯论坛的验证服务器根据用户信息、用户设置的验证二维码的生成属性、唯一标识和防伪加密串生成验证二维码。</p>
+    <p>[0337]	步骤407，验证服务器向终端发送验证二维码；</p>
+    <p>[0338]	验证服务器生成验证二维码以后，将生成的验证二维码发送给终端，以便用户保存该验证二维码，在用户需要再次进行身份验证的时候使用。比如，用户可以以电子图片的形式保存该验证二维码，或者以打印成纸质的形式保存该验证二维码。</p>
+    <p>[0339]	优选的是，验证服务器可以采用加密的方式向终端发送验证二维码。</p>
+    <p>[0340]	步骤408，终端扫描预设的验证二维码；</p>
+    <p>[0341]	若用户需要再次进行身份验证，只需要通过终端扫描预先存储的二维码。具体来讲，若预设的验证二维码是以电子图片的形式保存的，则终端可以通过应用程序来扫描验证二维码，比如，用户可以使用智能手机的应用程序读取所保存的验证二维码的电子图片；若预设的验证二维码是打印成纸质形式保存的，则终端可以通过摄像头来扫描验证二维码，比如，用户可以使用智能手机的摄像头扫描纸质的验证二维码。</p>
+    <p>[0342]	步骤409，终端向验证服务器发送验证二维码；</p>
+    <p>[0343]	终端扫描验证二维码之后，将验证二维码发送给验证服务器。</p>
+    <p>[0344]	优选的是，终端可以采用加密的方式向验证服务器发送验证二维码。</p>
+    <p>[0345]	步骤410，验证服务器获取验证二维码中的内容数据；</p>
+    <p>[0346]	验证服务器收到用户发送的验证二维码后，获取验证二维码中的内容数据。内容数据包括用户信息、验证二维码的生成属性、验证二维码的唯一标识和防伪加密串。用户信息包括用户名和密码，还可能包括验证码、手机短信验证码等；验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种；验证二维码的唯一标识用于在所有验证二维码中标识当前验证二维码的身份；防伪加密串用于辨别当前验证二维码的真伪。</p>
+    <p>[0347]	步骤411，验证服务器至少根据内容数据中的用户信息进行身份验证；</p>
+    <p>[0348]	本步骤具体可以包括以下六个个子步骤:</p>
+    <p>[0349]	第一，验证服务器根据唯一标识查询与当前验证二维码对应的防伪加密串；</p>
+    <p>[0350]	验证服务器根据唯一标识查询与当前验证二维码对应的防伪加密串。比如，验证服务器根据获取到的验证二维码中的唯一标识123查询与当前验证二维码对应的防伪加密串MD5值。</p>
+    <p>[0351]	第二，验证服务器根据防伪加密串辨别当前验证二维码的真伪；</p>
+    <p>[0352]	验证服务器根据防伪加密串辨别当前验证二维码的真伪。比如，验证服务器将当前验证二维码的防伪加密串MD5值与预先存储的防伪加密串MD5值进行匹配，若匹配成功，则辨别为真。</p>
+    <p>[0353]	第三，若验证服务器验证当前验证二维码为真，则验证服务器根据唯一标识查询与当前验证二维码对应的用户信息；</p>
+    <p>[0354]	验证服务器根据获取到的验证二维码中的唯一标识查询与当前验证二维码对应的用户信息。比如，验证服务器根据获取到的验证二维码中的唯一标识123查询与当前验证二维码对应的用户信息。</p>
+    <p>[0355]	第四，验证服务器将获取到的用户信息与预先存储的用户信息进行匹配，若匹配成功，则验证通过。比如，X涯论坛的验证服务器获取到验证二维码中的用户信息，将收到的用户信息与X涯论坛预先存储的所有用户信息进行匹配，若匹配成功，则验证通过。</p>
+    <p>[0356]	第五，验证服务器根据唯一标识查询与当前验证二维码对应的生成属性；</p>
+    <p>[0357]	验证服务器根据获取到的验证二维码中的唯一标识查询与当前验证二维码对应的生成属性。比如，验证服务器根据获取到的验证二维码中的唯一标识123查询与当前验证二维码对应的生成属性；</p>
+    <p>[0358]	第六，验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件；</p>
+    <p>[0359]	验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件。预定条件包括如下四个条件中的一种或者多种:</p>
+    <p>[0360]	验证二维码的当前已使用次数小于生成属性中的使用次数，比如，验证二维码的当前使用次数为2，小于生成属性中的使用次数3，则视为满足预设条件。</p>
+    <p>[0361]	验证二维码的当前使用时间在生成属性中的使用时长范围内，比如，验证二维码的当前使用时间为2012年11月31号，根据使用时长计算得到的有效截至日期为2012年12月21号，当前使用时间在有效截至日期之前，视为满足预设条件。</p>
+    <p>[0362]	验证二维码的当前使用场景范围在生成属性中的使用场景范围之内，比如，验证二维码的当前使用场景为X涯论坛，生成属性中的使用场景为X涯论坛，则视为满足预设条件。</p>
+    <p>[0363]	验证二维码的使用场景范围内的使用权限小于或等于生成属性中的使用场景范围内的使用权限，比如，验证二维码的当前使用场景范围内的使用权限为登录，生成属性中的使用场景范围内的使用权限为发帖，则视为满足预设条件。</p>
+    <p>[0364]	若验证二维码的生成属性全部满足预定条件，则验证通过。</p>
+    <p>[0365]	综上所述，本实施例提供的二维码验证方法，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。还通过验证二维码的形式保存验证二维码的生成属性，使得在验证二维码的使用过程中的安全性更有保证。本实施例提供的验证二维码的验证方法，还通过保存验证二维码的唯一标识，使得该验证二维码具有唯一性，还通过保存验证二维码的防伪加密串，使得该验证二维码无法被仿造。</p>
+    <p>[0366]	需要补充说明的是，步骤401到407可以单独实施成为终端侧的二维码获取方法、验证服务器侧的二维码生成方法；步骤408到411可以单独实施成终端侧和/或验证服务器侧的验证方法。实施验证二维码的生成方法的终端可以和实施验证二维码的验证方法的终端是同一个终端或者不同的终端，比如实施二维码获取方法的终端可以是屏幕较大、夕卜设较多的台式电脑或者笔记本，实施验证方法的终端可以是屏幕较小、外设较少的智能手机或者平板电脑。</p>
+    <p>[0367]	实施例五</p>
+    <p>[0368]	请参考图5，其示出了本发明实施例五提供的二维码验证方法的方法流程图。该二维码验证方法，包括:</p>
+    <p>[0369]	步骤501，第一终端向验证服务器发送用户信息；</p>
+    <p>[0370]	用户使用网络账户在第一终端上进行游戏、交易和数据交互的时候，往往需要进行身份验证。第一终端可以是电脑、手机或者其他智能电子设备。用户进行身份验证的时候需要向验证服务器发送用户信息。比如，使用第一终端的用户在使用虚拟账户时，需要在虚拟账户的登录界面输入用户名和密码，可能还包括验证码和手机验证码。</p>
+    <p>[0371]	相应地，验证服务器接收第一终端发送的用户信息。</p>
+    <p>[0372]	优选的是，第一终端可以采用加密的方式向验证服务器发送用户信息；验证服务器可以采用加密的方式接收第一终端发送的用户信息。</p>
+    <p>[0373]	步骤502，验证服务器根据用户信息对第一终端进行身份验证；</p>
+    <p>[0374]	验证服务器接收到用户发送的用户信息之后，和预先存储的用户信息进行匹配，如果匹配成功，则验证通过。</p>
+    <p>[0375]	验证服务器对用户的身份验证通过之后，验证服务器可以向第一终端发送验证通过的结果，并向第一终端发送是否需要生成验证二维码的询问请求。若第一终端需要生成验证二维码，则验证服务器可以向第一终端提供一个设置验证二维码生成属性的窗口或者网页页面。</p>
+    <p>[0376]	步骤503，第一终端向验证服务器发送验证二维码的生成属性；</p>
+    <p>[0377]	使用第一终端的用户向验证服务器发送所要生成验证二维码的生成属性。验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种。比如，使用第一终端的用户可以设置该验证二维码的使用次数为3次；使用时长是指验证二维码的使用时间范围。比如，使用第一终端的用户可以设置该验证二维码的使用时长为三个月，那么该验证二维码的使用时间范围即为从生成日期开始算起的三个月之内；使用场景是指验证二维码可以使用的网站范围。比如，使用第一终端的用户在虚拟账户的验证二维码的使用场景即为在X网的虚拟账户使用；在使用场景范围内的使用权限是指验证二维码在使用场景范围内的使用权限。比如，使用第一终端的用户在虚拟账户的验证二维码的使用权限可能包括登陆、查看、支付和交易等。</p>
+    <p>[0378]	优选的是，第一终端可以采用加密的方式向验证服务器发送验证二维码的生成属性。</p>
+    <p>[0379]	步骤504，验证服务器生成验证二维码的唯一标识；</p>
+    <p>[0380]	验证服务器为验证二维码生成唯一标识，唯一标识用于在所有验证二维码中标识当前验证二维码的身份。比如，唯一标识可以是数字标号123。</p>
+    <p>[0381]	步骤505，验证服务器生成预定信息；</p>
+    <p>[0382]	验证服务器生成验证二维码的预定信息，预定信息包括介绍信息和网站链接中的至少一种。比如，介绍信息可以是一个网站的所提供的功能的信息简介；网站链接可能是该验证二维码使用网站的链接，或者和该网站相关的网站链接。预定信息将作为一种附加信息生成在验证二维码中，以便用户在扫描验证二维码的时候，可以观看到以上信息。[0383]	步骤506，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码；</p>
+    <p>[0384]	在验证服务器接收到终端发送的验证二维码的生成属性之后，验证服务器至少将用户信息作为内容数据，根据内容数据来生成验证二维码。具体来讲，验证服务器先将用户信息作为内容数据的一部分，再将验证二维码的生成属性也作为内容数据的一部分，再将唯一标识也作为内容数据的一部分，再将预定信息也作为内容数据的一部分，最后根据内容数据生成验证二维码。</p>
+    <p>[0385]	在根据内容数据生成验证二维码的过程中，可以包括如下子步骤:验证服务器将除预定信息外的内容数据进行加密，获得部分加密后的内容数据，根据部分加密后的内容数据来生成验证二维码。由于预定信息是希望用户在扫描验证二维码时，能够直接观看到的信息，所以对预定信息不进行加密。</p>
+    <p>[0386]	比如使用第一终端的用户在使用虚拟账户时，在身份验证通过以后，虚拟账户的验证服务器将除预定信息外的内容数据进行加密，获得部分加密后的内容数据，根据部分加密后的内容数据来生成验证二维码。</p>
+    <p>[0387]	步骤507，验证服务器向第一终端发送验证二维码；</p>
+    <p>[0388]	验证服务器生成验证二维码以后，将生成的验证二维码发送给终端，以便用户保存该验证二维码，在用户需要再次进行身份验证的时候使用。</p>
+    <p>[0389]	优选的是，验证服务器可以采用加密的方式向终端发送验证二维码。</p>
+    <p>[0390]	步骤508，第一终端将验证二维码分享给第二终端；</p>
+    <p>[0391]	使用第一终端的用户可以将验证二维码以电子图片的形式发送给使用第二终端的用户，也可以将打印成纸质形式的验证二维码分享给使用第二终端的用户。比如，使用第一终端的用户是父亲，使用第二终端的用户是儿子，父亲可以将该验证二维码的电子图片发送给儿子，儿子根据需要选择以电子图片的形式保存该验证二维码，或者，父亲可以直接将打印成纸质形式的验证二维码给儿子，儿子在收到该验证二维码之后，后续可以使用该验证二维码对该虚拟账户进行登陆、查看、支付或者交易等操作。</p>
+    <p>[0392]	步骤509，第一终端向验证服务器发送提醒设置请求；</p>
+    <p>[0393]	提醒设置请求包括在使用场景范围内的使用权限中的至少一种权限，以便验证服务器在检测到终端或者其他终端使用验证二维码请求提醒设置请求中的使用权限后，向终端发送提醒信息。比如，使用第一终端的用户设置了一个提醒设置请求，该提醒设置请求包括支付权限，则后续过程中如果验证服务器检测到第一终端或者其他终端使用验证二维码进行支付的时候，就会向第一终端发送提醒信息。比如，父亲希望在儿子每次使用验证二维码消费的时候，收到一个提醒信息，可以设置一个提醒设置请求，该提醒设置请求包括支付和交易，则后续过程中如果儿子使用该验证二维码进行支付或者交易，验证服务器就会向使用第一终端的父亲发送提醒信息。</p>
+    <p>[0394]	步骤510，第二终端扫描预设的验证二维码；</p>
+    <p>[0395]	第二终端扫描预先存储的二维码。具体来讲，若预设的验证二维码是以电子图片的形式保存的，则第二终端可以通过应用程序来扫描验证二维码。比如，使用第二终端的用户通过第二终端登录该虚拟账户时，若第二终端是智能手机，则可以使用智能手机的应用程序读取所保存的验证二维码的电子图片；若预设的验证二维码是打印成纸质形式保存的，则第二终端可以通过摄像头来扫描验证二维码。比如，使用第二终端的用户通过第二终端登录该虚拟账户时，可以使用智能手机的摄像头扫描纸质的验证二维码。</p>
+    <p>[0396]	步骤511，第二终端向验证服务器发送验证二维码；</p>
+    <p>[0397]	第二终端扫描验证二维码之后，将验证二维码发送给验证服务器。</p>
+    <p>[0398]	优选的是，终端可以采用加密的方式向验证服务器发送验证二维码。</p>
+    <p>[0399]	步骤512，验证服务器获取验证二维码中的内容数据；</p>
+    <p>[0400]	验证服务器收到第二终端发送的验证二维码后，获取验证二维码中的内容数据。内容数据包括用户信息、验证二维码的生成属性和验证二维码的唯一标识。用户信息包括用户名和密码；验证二维码的生成属性包括使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种；验证二维码的唯一标识用于在所有验证二维码中标识当前验证二维码的身份。</p>
+    <p>[0401]	步骤513，验证服务器至少根据内容数据中的用户信息进行身份验证；</p>
+    <p>[0402]	本步骤具体可以包括以下四个子步骤:</p>
+    <p>[0403]	第一，验证服务器根据唯一标识查询与当前验证二维码对应的用户信息；</p>
+    <p>[0404]	验证服务器根据获取到的验证二维码中的唯一标识查询与当前验证二维码对应的用户信息。比如，验证服务器根据获取到的验证二维码中的唯一标识123在本地查询与当前验证二维码对应的用户信息。</p>
+    <p>[0405]	第二，验证服务器获取到的用户信息与预先存储的用户信息进行匹配，若匹配成功，则验证通过。比如，虚拟账户的验证服务器获取到验证二维码中的用户信息，将收到的用户信息与预先存储的所有用户信息进行匹配，若匹配成功，则验证通过。</p>
+    <p>[0406]	第三，验证服务器根据唯一标识查询与当前验证二维码对应的生成属性；验证服务器根据获取到的验证二维码中的唯一标识查询与当前验证二维码对应的生成属性。比如，验证服务器根据获取到的验证二维码中的唯一标识123查询与当前验证二维码对应的生成属性。</p>
+    <p>[0407]	第四，验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件；</p>
+    <p>[0408]	验证服务器将用户信息与预先存储的用户信息进行匹配成功之后，还需要检测验证二维码中的生成属性是否满足预定条件。预定条件包括如下四个条件中的一种或者多种:</p>
+    <p>[0409]	预定条件包括:验证二维码的当前已使用次数小于生成属性中的使用次数；比如验证二维码的当前使用次数为2，小于生成属性中的使用次数3，则视为满足预设条件。验证二维码的当前使用时间在生成属性中的使用时长范围内；比如，验证二维码的当前使用时间为2012年11月31号，根据使用时长计算得到的有效截至日期为2012年12月21号，当前使用时间在有效截至日期之前，视为满足预设条件。验证二维码的当前使用场景范围在生成属性中的使用场景范围之内；比如，验证二维码的当前使用场景为虚拟账户，生成属性中的使用场景为虚拟账户，则视为满足预设条件。验证二维码的使用场景范围内的使用权限小于或等于生成属性中的使用场景范围内的使用权限；比如，验证二维码的当前使用场景范围内的使用权限为支付，生成属性中的使用场景范围内的使用权限为支付，则视为满足预设条件。[0410]	若验证二维码的生成属性全部满足预定条件，则验证通过。</p>
+    <p>[0411]	步骤514，若检测到终端使用验证二维码请求提醒设置请求中的使用权限中的至少一种，则向生成验证二维码的终端发送提醒信息；</p>
+    <p>[0412]	若验证服务器检测到终端使用验证二维码请求提醒设置请求中的使用权限中的至少一种，则向生成验证二维码的终端发送提醒信息。比如，验证服务器检测到使用第二终端的用户正在使用验证二维码支付或者消费时，则向第一终端发送提醒信息。比如，儿子使用验证二维码支付或者消费时，验证服务器会向父亲发送提醒信息。</p>
+    <p>[0413]	步骤515，第一终端向验证服务器发送查询信息；</p>
+    <p>[0414]	使用第一终端的用户向验证服务器发送查询信息。比如，使用第一终端的父亲希望知道使用第二终端的儿子使用验证二维码消费的信息，通过向验证服务器发送查询信息，查询验证二维码的消费情况。</p>
+    <p>[0415]	步骤516，验证服务器根据查询信息向第一终端发送对应验证二维码所包含的全部或者部分内容数据；</p>
+    <p>[0416]	验证服务器在接收到查询信息之后，根据查询信息向第一终端发送对应验证二维码所包含的全部或者部分内容数据。比如，验证服务器收到使用第一终端的父亲发送的查询验证二维码的消费情况的查询信息之后，将使用该验证二维码的消费情况的信息发送给使用第一终端的父亲，父亲就可以知道儿子使用该验证二维码的消费情况。</p>
+    <p>[0417]	步骤517，第一终端向验证服务器发送修改请求；</p>
+    <p>[0418]	使用第一终端的用户向验证服务器发送修改请求，修改请求中包括欲修改的使用次数、使用时长、使用场景范围和在使用场景范围内的使用权限中的至少一种。比如，使用第二终端的儿子在开学期间需要购置的学习用品较多，可以告诉使用第一终端的父亲修改验证二维码的使用次数和使用时长，父亲可以将验证二维码的使用次数由3次改为5次，使用时长由3个月改为5个月；或者，父亲通过查询信息发现儿子一个月内的消费金额数目太大，希望限制儿子接下来一个月的消费，可以向验证服务器发送将验证二维码的在使用场景范围内的使用权限由消费改为登陆的请求。</p>
+    <p>[0419]	步骤518，验证服务器根据修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在使用场景范围内的使用权限进行修改；</p>
+    <p>[0420]	比如，验证服务器根据使用第一终端的父亲发送的修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在使用场景范围内的使用权限进行修改，比如，父亲将验证二维码的在使用场景范围内的使用权限由消费改为登陆之后，儿子再次使用验证二维码消费的时候，验证服务器会向儿子所使用的终端发送该验证二维码使用权限已经变更的信息。</p>
+    <p>[0421]	步骤519，第一终端向验证服务器发送授权请求；</p>
+    <p>[0422]	使用第一终端的用户向验证服务器发送授权请求，授权请求包括终止授权命令或者开启授权命令。比如，使用第一终端的父亲发现使用第二终端的儿子丢失验证二维码的情况下，可以向验证服务器发送终止该验证二维码的授权；若儿子找回验证二维码的情况下，父亲可以像验证服务器发送开启该验证二维码的授权。</p>
+    <p>[0423]	步骤520，验证服务器根据授权请求终止对应验证二维码的授权，或者开启对应验证二维码的授权；[0424]	比如，验证服务器根据父亲发送的授权请求终止该验证二维码的授权之后，即使该验证二维码被别人捡到，在使用该验证二维码的时候，验证服务器会向别人所使用的终端发送该验证二维码授权已被终止的消息，达到保证财产安全的目的。</p>
+    <p>[0425]	本实施例提供的二维码验证方法，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性；还通过保存验证二维码的唯一标识，使得该验证二维码具有唯一性。本实施例提供的验证二维码的验证方法，还通过查询、提醒设置、修改权限和开启或者终止授权更方便的查询验证二维码的使用情况，更安全的使用验证二维码；同时将预定信息作为一种附加信息生成在验证二维码中，预定信息包括介绍信息和网站链接中的至少一种，以便用户在使用验证二维码的时候可以观看到预定信息。</p>
+    <p>[0426]	下述为本发明设备实施例，其中未详尽描述的内容，可以结合参考上述对应的方法实施例。</p>
+    <p>[0427]	实施例六</p>
+    <p>[0428]	请参考图6，其示出了实施例五提供的二维码验证系统的结构方框图。所述二维码验证系统包括终端620和验证服务器640。</p>
+    <p>[0429]	终端620，包括:用户信息发送模块621、二维码接收模块622、二维码扫描模块623和二维码发送模块624 ；</p>
+    <p>[0430]	所述用户信息发送模块621，用于向验证服务器发送用户信息，以便于验证服务器根据终端发送的用户信息对终端进行身份验证；</p>
+    <p>[0431]	所述二维码接收模块622，用于接收并保存验证服务器发送的验证二维码，以便用户再次需要身份验证的时候使用；</p>
+    <p>[0432]	所述二维码扫描模块623，用于终端扫描预设的验证二维码；</p>
+    <p>[0433]	所述二维码发送模块624，用于用户需要再次验证时向验证服务器发送验证二维码；</p>
+    <p>[0434]	验证服务器640，包括:用户信息接收模块641、第一身份验证模块642、二维码生成模块643、二维码发送模块644、二维码接收模块645、内容数据获取模块646和第二身份验证模块647:</p>
+    <p>[0435]	所述用户信息接收模块641，用于接收终端发送的用户信息；</p>
+    <p>[0436]	所述第一身份验证模块642，用于根据所述用户信息接收模块641接收到的用户信息对终端进行身份验证；</p>
+    <p>[0437]	所述二维码生成模块643，用于第一身份验证模块642对终端进行身份验证通过之后，至少根据用户信息生成验证二维码；</p>
+    <p>[0438]	所述二维码发送模块644，用于所述二维码生成模块643生成验证二维码之后，向终端发送验证二维码；</p>
+    <p>[0439]	所述二维码接收模块645，用于用户需要再次验证时接收终端发送的验证二维码；[0440]	所述内容获取模块646，用于获取所述二维码接收模块645接收到的验证二维码中的内容数据；</p>
+    <p>[0441]	所述第二身份验证模块647，用于至少根据所述内容数据获取模块646获取到的内容数据中的用户信息进行身份验证。</p>
+    <p>[0442]	综上所述，本实施例提供的设备，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。</p>
+    <p>[0443]	需要补充说明的是，终端包括用户信息发送模块621和二维码接收模块622，验证服务器包括用户信息接收模块641、第一身份验证模块642、二维码生成模块643、二维码发送模块644的时候，可以单独实施成为终端侧的二维码获取系统、验证服务器侧的二维码生成方法；终端包括二维码扫描模块623和二维码发送模块624，验证服务器包括二维码接收模块645、内容数据获取模块646和第二身份验证模块647的时候，可以单独实施成为终端侧和/或验证服务器侧的验证方法。</p>
+    <p>[0444]	实施例七</p>
+    <p>[0445]	请参考图7，其示出了实施例六提供的二维码验证系统的结构方框图，所述二维码验证系统包括终端720和验证服务器740。</p>
+    <p>[0446]	终端720，包括:用户信息发送模块721、生成属性发送模块722、二维码接收模块723、二维码扫描模块724和二维码发送模块725 ；</p>
+    <p>[0447]	所述用户信息发送模块721，用于向验证服务器发送用户信息，以便于验证服务器根据终端发送的用户信息对终端进行身份验证；</p>
+    <p>[0448]	所述生成属性发送模块722，用于向验证服务器发送验证二维码的生成属性；生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0449]	所述二维码接收模块723，用于接收并保存验证服务器发送的验证二维码，以便用户再次需要身份验证的时候使用；</p>
+    <p>[0450]	所述二维码扫描模块724，用于终端扫描预设的验证二维码；</p>
+    <p>[0451]	所述二维码发送模块725，用于用户需要再次验证时向验证服务器发送验证二维码；</p>
+    <p>[0452]	验证服务器740，包括:用户信息接收模块741、第一身份验证模块742、生成属性接收模块743、二维码生成模块744、二维码发送模块745、二维码接收模块746、内容数据获取模块747和第二身份验证模块748:</p>
+    <p>[0453]	所述用户信息接收模块741，用于接收终端发送的用户信息；</p>
+    <p>[0454]	所述第一身份验证模块742，用于根据所述用户信息接收模块741接收到的用户信息对终端进行身份验证；</p>
+    <p>[0455]	所述生成属性接收模块743，用于接收终端发送的验证二维码的生成属性；生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；[0456]	所述二维码生成模块744，用于所述第一身份验证模块742根据接收到的用户信息对终端进行身份验证通过之后，至少根据用户信息生成验证二维码；</p>
+    <p>[0457]	具体的讲，所述二维码生成模块744，具体包括:内容数据生成单元744a和二维码生成单元744b ；</p>
+    <p>[0458]	所述内容数据生成单元744a，用于根据所述用户信息接收模块741接收到的用户信息和所述生成属性接收模块743接收到的生成属性生成内容数据；</p>
+    <p>[0459]	具体的讲，所述内容数据生成单元744a，具体包括:第一加密子单元802和内容数据生成子单元804，请参考图8;</p>
+    <p>[0460]	所述第一加密子单元802，用于用于将所述内容数据进行加密；</p>
+    <p>[0461 ] 所述内容数据生成子单元804，用于将所述第一加密子单元802加密后的内容作为内容数据；</p>
+    <p>[0462]	所述二维码生成单元744b，用于根据所述内容数据生成单元744a生成的内容数据生成验证二维码；</p>
+    <p>[0463]	所述二维码发送模块745，用于向终端发送所述二维码生成模块744生成的验证二维码；</p>
+    <p>[0464]	所述二维码接收模块746，用于用户需要再次验证时接收终端发送的验证二维码；</p>
+    <p>[0465]	所述内容数据获取模块747，用于获取二维码接收模块746接收到的验证二维码中的内容数据；</p>
+    <p>[0466]	具体的讲，所述内容数据获取模块747，具体包括:内容数据读取单元902和内容数据解密单元904，请参考图9;</p>
+    <p>[0467]	所述内容数据读取单元902，用于读取所述验证二维码中的加密后的内容数据；</p>
+    <p>[0468]	所述内容数据解密单元904，用于将所述内容数据读取单元902读取到的加密后的内容数据进行解密，获得所述内容数据；</p>
+    <p>[0469]	所述第二身份验证模块748，用于至少根据内容数据获取模块747获取到的内容数据中的用户信息进行身份验证。</p>
+    <p>[0470]	具体的讲，所述第二身份验证模块748，具体包括用户信息验证单元748a和生成属性检测单元748b ；</p>
+    <p>[0471]	所述用户信息验证单元748a，用于将所述内容数据获取模块747获取到的内容数据中的用户信息与预先存储的用户信息进行匹配；</p>
+    <p>[0472]	所述生成属性检测单元748b，用于检测所述内容数据获取模块747获取到的内容数据中的验证二维码中的生成属性是否满足预定条件；</p>
+    <p>[0473]	所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间属于所述生成属性中的使用时长、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</p>
+    <p>[0474]	综上所述，本实施例提供的设备，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。本实施例提供的验证二维码的验证方法，还通过验证二维码的形式保存验证二维码的生成属性，使得在验证二维码的使用过程中的安全性更有保证。</p>
+    <p>[0475]	需要补充说明的是，终端包括用户信息发送模块721、生成属性发送模块722和二维码接收模块723，验证服务器包括用户信息接收模块741、第一身份验证模块742、生成属性接收模块743、二维码生成模块744和二维码发送模块745的时候，可以单独实施成为终端侧的二维码获取系统、验证服务器侧的二维码生成方法；终端包括二维码扫描模块724和二维码发送模块725，验证服务器包括二维码接收模块746、内容数据获取模块747和第二身份验证模块748的时候，可以单独实施成为终端侧和/或验证服务器侧的验证方法。</p>
+    <p>[0476]	实施例八</p>
+    <p>[0477]	请参考图10，其示出了实施例七提供的二维码验证系统的结构方框图，所述二维码验证系统包括终端1020和验证服务器1040。</p>
+    <p>[0478]	终端1020，包括:用户信息发送模块1021、生成属性发送模块1022、二维码接收模块1023、二维码扫描模块1024和二维码发送模块1025 ；</p>
+    <p>[0479]	所述用户信息发送模块1021，用于向验证服务器发送用户信息，以便于验证服务器根据终端发送的用户信息对终端进行身份验证；</p>
+    <p>[0480]	所述生成属性发送模块1022，用于向验证服务器发送验证二维码的生成属性；生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0481]	所述二维码接收模块1023，用于接收并保存验证服务器发送的验证二维码，以便用户再次需要身份验证的时候使用；</p>
+    <p>[0482]	所述二维码扫描模块1024，用于终端扫描预设的验证二维码；</p>
+    <p>[0483]	所述二维码发送模块1025，用于用户需要再次验证时向验证服务器发送验证二维码；</p>
+    <p>[0484]	验证服务器1040，包括:用户信息接收模块1041、第一身份验证模块1042、生成属性接收模块1043、二维码生成模块1044、二维码发送模块1045、二维码接收模块1046、内容数据获取模块1047和第二身份验证模块1048:</p>
+    <p>[0485]	所述用户信息接收模块1041，用于接收终端发送的用户信息；</p>
+    <p>[0486]	所述第一身份验证模块1042，用于根据所述用户信息接收模块1041接收到的用户信息对终端进行身份验证；</p>
+    <p>[0487]	所述生成属性接收模块1043，用于接收终端发送的验证二维码的生成属性；所述生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0488]	所述二维码生成模块1044，用于生成验证二维码；</p>
+    <p>[0489]	具体的讲,所述二维码生成模块1044,具体包括唯一标识生成单元1044a、内容数据生成单元1044b和二维码生成单元1044c ；</p>
+    <p>[0490]	所述唯一标识生成单元1044a，用于生成验证二维码的唯一标识；</p>
+    <p>[0491]	所述内容数据生成单元1044b，用于将所述用户信息接收模块1041接收到的用户信息、所述生成属性接收模块1043接收到的验证二维码的生成属性和所述唯一标识生成单元1044a生成的验证服务器生成的验证二维码的唯一标识作为内容数据；</p>
+    <p>[0492]	具体的讲,所述内容数据生成单元1044b,具体包括:第一加密子单元802和内容数据生成子单元804，请参考图8 ；</p>
+    <p>[0493]	所述第一加密子单元802，用于用于将所述内容数据进行加密；</p>
+    <p>[0494]	所述内容数据生成子单元804，用于将所述第一加密子单元802加密后的内容作为内容数据；</p>
+    <p>[0495]	所述二维码生成单元1044c，用于根据所述内容数据生成单元1044b生成的内容数据生成验证二维码。</p>
+    <p>[0496]	所述二维码发送模块1045，用于向终端发送所述二维码生成模块1044生成的验证二维码；</p>
+    <p>[0497]	所述二维码接收模块1046，用于用户需要再次验证时接收终端发送的验证二维码；</p>
+    <p>[0498]	所述内容获取模块1047，用于获取所述二维码接收模块1046接收到的验证二维码中的内容数据；</p>
+    <p>[0499]	具体的讲，所述内容数据获取模块1047，具体包括:内容数据读取单元902和内容数据解密单元904，请参考图9;</p>
+    <p>[0500]	所述内容数据读取单元902，用于读取所述验证二维码中的加密后的内容数据；[0501 ] 所述内容数据解密单元904，用于将所述内容数据读取单元902读取到的加密后的内容数据进行解密，获得所述内容数据；</p>
+    <p>[0502]	所述第二身份验证模块1048，用于至少根据内容数据获取模块1047获取到的内容数据中的用户信息进行身份验证。</p>
+    <p>[0503]	具体的讲，所述第二身份验证模块1048，具体包括第一标识查询单元1048a、用户信息验证单元1048b、第二标识查询单元1048c和生成属性检测单元1048d ；</p>
+    <p>[0504]	所述第一标识查询单元1048a，用于根据所述内容数据获取模块1047获取到的内容数据中的唯一标识查询与当前验证二维码对应的用户信息；</p>
+    <p>[0505]	所述用户信息验证单元1048b，用于根据所述第一标识查询单元1048a查询到的用户信息与预先存储的用户信息进行匹配；</p>
+    <p>[0506]	所述第二标识查询单元1048c，根据所述内容数据获取模块1047获取到的内容数据中的唯一标识查询与当前验证二维码对应的生成属性；</p>
+    <p>[0507]	所述生成属性检测单元1048d，用于检测所述第二标识查询单元1048c查询到的生成属性是否满足预定条件；</p>
+    <p>[0508]	所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间在所述生成属性中的使用时长范围内、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</p>
+    <p>[0509]	综上所述，本实施例提供的设备，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。还通过验证二维码的形式保存验证二维码的生成属性，使得在验证二维码的使用过程中的安全性更有保证。本实施例提供的验证二维码的验证方法，还通过保存验证二维码的唯一标识，使得该验证二维码具有唯一性。</p>
+    <p>[0510]	需要补充说明的是，终端包括用户信息发送模块1021、生成属性发送模块1022和二维码接收模块1023，验证服务器包括用户信息接收模块1041、第一身份验证模块1042、生成属性接收模块1043、二维码生成模块1044和二维码发送模块1045的时候，可以单独实施成为终端侧的二维码获取系统、验证服务器侧的二维码生成方法；终端包括二维码扫描模块1024和二维码发送模块1025，验证服务器包括二维码接收模块1046、内容数据获取模块1047和第二身份验证模块1048的时候，可以单独实施成为终端侧和/或验证服务器侧的验证方法。</p>
+    <p>[0511]	实施例九</p>
+    <p>[0512]	请参考图11，其示出了实施例八提供的二维码验证系统的结构方框图，所述二维码验证系统包括终端1120和验证服务器1140。</p>
+    <p>[0513]	终端1120，包括:用户信息发送模块1121、生成属性发送模块1122、二维码接收模块1123、二维码扫描模块1124和二维码发送模块1125 ；</p>
+    <p>[0514]	所述用户信息发送模块1121，用于向验证服务器发送用户信息，以便于验证服务器根据终端发送的用户信息对终端进行身份验证；</p>
+    <p>[0515]	所述生成属性发送模块1122，用于向验证服务器发送验证二维码的生成属性；生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0516]	所述二维码接收模块1123，用于接收并保存验证服务器发送的验证二维码，以便用户再次需要身份验证的时候使用；</p>
+    <p>[0517]	所述二维码扫描模块1124，用于终端扫描预设的验证二维码；</p>
+    <p>[0518]	所述二维码发送模块1125，用于用户需要再次验证时向验证服务器发送验证二维码；</p>
+    <p>[0519]	验证服务器1140，包括:用户信息接收模块1141、第一身份验证模块1142、生成属性接收模块1143、二维码生成模块1144、二维码发送模块1145、二维码接收模块1146、内容数据获取模块1147和第二身份验证模块1148:</p>
+    <p>[0520]	所述用户信息接收模块1141，用于接收终端发送的用户信息；</p>
+    <p>[0521]	所述第一身份验证模块1142，用于根据所述用户信息接收模块1141接收到的用户信息对终端进行身份验证；</p>
+    <p>[0522]	所述生成属性接收模块1143，用于接收终端发送的验证二维码的生成属性；生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0523]	所述二维码生成模块1144，用于生成验证二维码；</p>
+    <p>[0524]	具体的讲，所述二维码生成模块1144，具体包括唯一标识生成单元1144a、防伪加密串生成单元1144b、内容数据生成单元1144c和二维码生成单元1144d ；</p>
+    <p>[0525]	所述唯一标识生成单元1144a，用于生成验证二维码的唯一标识；</p>
+    <p>[0526]	所述防伪加密串生成单元1144b，用于生成验证二维码的防伪加密串；</p>
+    <p>[0527]	所述内容数据生成单元1144c，用于将验证服务器所接收到的用户信息、验证二维码的生成属性、验证服务器生成的验证二维码的唯一标识和防伪加密串作为内容数据；</p>
+    <p>[0528]	具体的讲，所述内容数据生成单元1144c，具体包括:第一加密子单元802和内容数据生成子单元804，请参考图8 ；</p>
+    <p>[0529]	所述第一加密子单元802，用于用于将所述内容数据进行加密；</p>
+    <p>[0530]	所述内容数据生成子单元804，用于将所述第一加密子单元802加密后的内容作为内容数据；</p>
+    <p>[0531]	所述二维码生成单元1144d，用于根据内容数据生成验证二维码。</p>
+    <p>[0532]	所述二维码发送模块1145，用于向终端发送所述二维码生成模块1144生成的验证二维码；</p>
+    <p>[0533]	所述二维码接收模块1146，用于用户需要再次验证时接收终端发送的验证二维码；</p>
+    <p>[0534]	所述内容获取模块1147，用于获取所述二维码接收模块1146接收到的验证二维码中的内容数据；</p>
+    <p>[0535]	具体的讲，所述内容数据获取模块1147，具体包括:内容数据读取单元902和内容数据解密单元904，请参考图9;</p>
+    <p>[0536]	所述内容数据读取单元902，用于读取所述验证二维码中的加密后的内容数据；</p>
+    <p>[0537]	所述内容数据解密单元904，用于将所述内容数据读取单元902读取到的加密后的内容数据进行解密，获得所述内容数据；</p>
+    <p>[0538]	所述第二身份验证模块1148，用于至少根据内容数据获取模块1147获取到的内容数据中的用户信息进行身份验证。</p>
+    <p>[0539]	具体的讲，所述第二身份验证模块1148，具体包括第三标识查询单元1148a、二维码真伪辨别单元1148b、第一标识查询单元1148c、用户信息验证单元1148d、第二标识查询单元1148e和生成属性检测单元1148f ；</p>
+    <p>[0540]	所述第三标识查询单元1148a，用于根据所述内容数据获取模块1147获取到的内容数据中的唯一标识查询与当前验证二维码对应的所述验证二维码的防伪加密串；</p>
+    <p>[0541]	所述二维码真伪辨别单元1148b，用于根据所述第三标识查询单元1148a查询到的防伪加密串辨别当前验证二维码的真伪；</p>
+    <p>[0542]	所述第一标识查询单元1148c，用于根据所述内容数据获取模块1147获取到的内容数据中的唯一标识查询与当前验证二维码对应的用户信息；</p>
+    <p>[0543]	所述用户信息验证单元1148d，用于将所述第一标识查询单元1148c查询到的用户信息与预先存储的用户信息进行匹配；</p>
+    <p>[0544]	所述第二标识查询单元1148e，用于根据所述内容数据获取模块1147获取到的内容数据中的唯一标识查询与当前验证二维码对应的生成属性；</p>
+    <p>[0545]	所述生成属性检测单元1148f，用于检测所述第二标识查询单元1148e查询到的验证二维码中的生成属性是否满足预定条件；[0546]	所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间在所述生成属性中的使用时长范围内、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</p>
+    <p>[0547]	综上所述，本实施例提供的设备，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性。还通过验证二维码的形式保存验证二维码的生成属性，使得在验证二维码的使用过程中的安全性更有保证。还通过保存验证二维码的唯一标识，使得该验证二维码具有唯一性。本实施例提供的验证二维码的验证方法，还通过保存验证二维码的防伪加密串，使得该验证二维码无法被伪造。</p>
+    <p>[0548]	需要补充说明的是，终端包括用户信息发送模块1121、生成属性发送模块1122和二维码接收模块1123，验证服务器包括用户信息接收模块1141、第一身份验证模块1142、生成属性接收模块1143、二维码生成模块1144和二维码发送模块1145的时候，可以单独实施成为终端侧的二维码获取系统、验证服务器侧的二维码生成方法；终端包括二维码扫描模块1124和二维码发送模块1125，验证服务器包括二维码接收模块1146、内容数据获取模块1147和第二身份验证模块1148的时候，可以单独实施成为终端侧和/或验证服务器侧的验证方法。</p>
+    <p>[0549]	实施例十</p>
+    <p>[0550]	请参考图12，其示出了实施例八提供的二维码验证系统的结构方框图，所述二维码验证系统包括第一终端1220、验证服务器1240和第二终端1260。</p>
+    <p>[0551]	第一终端1220，包括:用户信息发送模块1221、生成属性发送模块1222、二维码接收模块1223、二维码分享模块1224、提醒请求发送模块1225、查询信息发送模块1226、反馈信息接收模块1227、修改请求发送模块1228和授权请求发送模块1229:</p>
+    <p>[0552]	所述用户信息发送模块1221，用于向验证服务器发送用户信息，以便于验证服务器根据第一终端发送的用户信息对第一终端进行身份验证；</p>
+    <p>[0553]	所述生成属性发送模块1222，用于向验证服务器发送验证二维码的生成属性；生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0554]	所述二维码接收模块1223，用于接收并保存验证服务器发送的验证二维码，以便用户再次需要身份验证的时候使用；</p>
+    <p>[0555]	所述二维码分享模块1224，用于第一终端将验证二维码分享给第二终端；</p>
+    <p>[0556]	所述提醒请求发送模块1225，用于第一终端向验证服务器发送提醒设置请求；</p>
+    <p>[0557]	所述查询信息发送模块1226，用于第一终端向验证服务器发送查询信息；</p>
+    <p>[0558]	所述反馈信息接收模块1227，用于接收验证服务器根据查询信息向第一终端发送对应验证二维码所包含的全部或者部分内容数据；[0559]	所述修改请求发送模块1228，用于第一终端向验证服务器发送修改请求；</p>
+    <p>[0560]	所述授权请求发送模块1229，用于第一终端向验证服务器发送授权请求；</p>
+    <p>[0561]	验证服务器1240，包括，用户信息接收模块1241、第一身份验证模块1242、生成属性接收模块1243、二维码生成模块1244、二维码发送模块1245、提醒请求接收模块1246、二维码接收模块1247、内容数据获取模块1248、第二身份验证模块1249、提醒请求处理模块1250、查询信息接收模块1251、反馈信息发送模块1252、修改请求接收模块1253、修改请求处理模块1254、授权请求接收模块1255和授权请求处理模块1256:</p>
+    <p>[0562]	所述用户信息接收模块1241，用于接收终端发送的用户信息；</p>
+    <p>[0563]	所述第一身份验证模块1242，用于根据所述用户信息接收模块1241接收到的用户信息对终端进行身份验证；</p>
+    <p>[0564]	所述生成属性接收模块1243，用于接收终端发送的验证二维码的生成属性；生成属性包括使用次数、使用时长、使用场景范围和在所述使用场景范围内的使用权限中的至少一种；</p>
+    <p>[0565]	所述二维码生成模块1244，用于生成验证二维码；</p>
+    <p>[0566]	具体的讲，所述二维码生成模块1244，具体包括唯一标识生成单元1244a、预定信息生成单元1244b、内容数据生成单元1244c和二维码生成单元1244d ；</p>
+    <p>[0567]	所述唯一标识生成单元1244a，用于生成验证二维码的唯一标识，唯一标识用于在所有验证二维码中标识当前验证二维码的身份；</p>
+    <p>[0568]	所述预定信息生成单元1244b，生成验证二维码的预定信息，预定信息包括介绍信息和网站链接中的至少一种；</p>
+    <p>[0569]	所述内容数据生成单元1244c，用于将所述用户信息接收模块1241接收到的用户信息、所述生成属性接收模块1243接收到的验证二维码的生成属性、所述唯一标识生成单元1244a生成的验证二维码的唯一标识和所述预定信息生成单元1244b生产的预定信息作为内容数据；</p>
+    <p>[0570]	具体的讲，所述内容数据生成单元1244c，具体包括:第二加密子单元1302和内容数据生成子单元1304，请参考图13 ；</p>
+    <p>[0571 ] 所述第一加密子单元1302，用于将所述内容数据中除所述预定信息以外的内容数据进行加密，获得部分加密后的内容数据；</p>
+    <p>[0572]	所述内容数据生成子单元1304，用于将所述第二加密子单元1302加密后的内容作为内容数据；</p>
+    <p>[0573]	所述二维码生成单元1244d，用于根据内容数据生成单元1244c生产的内容数据生成验证二维码；</p>
+    <p>[0574]	所述二维码发送模块1245，用于向第一终端发送二维码生成模块1244生成的验证二维码；</p>
+    <p>[0575]	所述提醒请求接收模块1246，用于接收第一终端发送的提醒设置请求；</p>
+    <p>[0576]	所述二维码接收模块1247，用于接收第二终端发送的验证二维码；</p>
+    <p>[0577]	所述内容数据获取模块1248，用于获取所述二维码接收模块1247接收到的验证二维码中的内容数据；</p>
+    <p>[0578]	具体的讲，所述内容数据获取模块1248，具体包括:内容数据读取单元902和内容数据解密单元904，请参考图9;</p>
+    <p>[0579]	所述内容数据读取单元902，用于读取所述验证二维码中的加密后的内容数据；</p>
+    <p>[0580]	所述内容数据解密单元904，用于将所述内容数据读取单元902读取到的加密后的内容数据进行解密，获得所述内容数据；</p>
+    <p>[0581]	所述第二身份验证模块1249，用于至少根据所述内容数据获取模块1248获取到的内容数据中的用户信息进行身份验证；</p>
+    <p>[0582]	具体的讲，所述第二身份验证模块1249，具体包括第一标识查询单元1249a、用户信息验证单元1249b、第二标识查询单元1249c和生成属性检测单元1249d ；</p>
+    <p>[0583]	所述第一标识查询单元1249a，用于根据所述内容数据获取模块1248获取到的内容数据中的唯一标识查询与当前验证二维码对应的用户信息；</p>
+    <p>[0584]	所述用户信息验证单元1249b，用于根据所述第一标识查询单元1249a查询到的用户信息与预先存储的用户信息进行匹配；</p>
+    <p>[0585]	所述第二标识查询单元1249c，用于根据所述内容数据获取模块1248获取到的内容数据中的唯一标识查询与当前验证二维码对应的生成属性；</p>
+    <p>[0586]	所述生成属性检测单元1249d，用于根据所述第二标识查询单元1249c查询到的生产属性是否满足预定条件；</p>
+    <p>[0587]	所述预定条件包括:所述验证二维码的当前已使用次数小于所述生成属性中的使用次数、所述验证二维码的当前使用时间属于所述生成属性中的使用时长、所述验证二维码的当前使用场景范围在所述生成属性中的使用场景范围之内、所述验证二维码的所述使用场景范围内的使用权限小于或等于所述生成属性中的所述使用场景范围内的使用权限。</p>
+    <p>[0588]	所述提醒请求处理模块1250，用于根据所述提醒请求接收模块1246接收到的提醒请求进行处理；</p>
+    <p>[0589]	所述查询信息接收模块1251，用于接收第一终端发送的查询信息；</p>
+    <p>[0590]	所述反馈信息发送模块1252，用于根据所述查询信息接收模块1251接收到的查询信息向第一终端发送对应验证二维码所包含的全部或者部分内容数据；</p>
+    <p>[0591]	所述修改请求接收模块1253，用于接收第一终端发送的修改请求；</p>
+    <p>[0592]	所述修改请求处理模块1254，用于根据所述修改请求接收模块1253接收到的修改请求将对应验证二维码中相应的使用次数、使用时长、使用场景范围和/或在使用场景范围内的使用权限进行修改；</p>
+    <p>[0593]	所述授权请求接收模块1255，用于接收第一终端发送的授权请求；</p>
+    <p>[0594]	所述授权请求处理模块1256，用于根据所述授权请求接收模块1255接收到的授权请求终止对应验证二维码的授权，或者开启对应验证二维码的授权；</p>
+    <p>[0595]	第二终端1260，包括分享接收模块1261、二维码扫描模块1262和二维码发送模块1263:</p>
+    <p>[0596]	所述分享接收模块1261，用于接收第一终端分享的验证二维码；</p>
+    <p>[0597]	所述二维码扫描模块1262，用于第二终端扫描预设的验证二维码；</p>
+    <p>[0598]	所述二维码发送模块1263，用于将所述二维码扫描模块1262扫描到的验证二维码发送给验证服务器。</p>
+    <p>[0599]	综上所述，本实施例提供的设备，通过验证二维码的形式保存一次繁琐验证的验证结果，使得再次验证时只需扫描验证二维码即可；解决了若终端是智能手机或者平板电脑，由于屏幕尺寸较小而且外设较少，进行验证过程时的操作相对繁复的问题；达到了使用智能手机或者平板电脑进行身份验证的过程更为简单方便的效果，同时也将安全性较高的验证终端的安全性通过二维码这一载体传递到安全性较弱的终端，提高了安全性；还通过查询、提醒设置、修改权限和开启或者终止授权更方便的查询验证二维码的使用情况，更安全的使用验证二维码；同时将预定信息作为一种附加信息生成在验证二维码中，预定信息包括介绍信息和网站链接中的至少一种，以便用户在使用验证二维码的时候可以观看到预定信息。</p>
+    <p>[0600]	需要说明的是:上述实施例提供的二维码验证系统在验证二维码时，仅以上述各功能模块的划分进行举例说明，实际应用中，可以根据需要而将上述功能分配由不同的功能模块完成，即将系统的内部结构划分成不同的功能模块，以完成以上描述的全部或者部分功能。另外，上述实施例提供的二维码验证系统与二维码验证方法实施例属于同一构思，其具体实现过程详见方法实施例，这里不再赘述。</p>
+    <p>[0601 ] 上述本发明实施例序号仅仅为了描述，不代表实施例的优劣。</p>
+    <p>[0602]	本领域普通技术人员可以理解实现上述实施例的全部或部分步骤可以通过硬件来完成，也可以通过程序来指令相关的硬件完成，所述的程序可以存储于一种计算机可读存储介质中，上述提到的存储介质可以是只读存储器，磁盘或光盘等。</p>
+    <p>[0603]	以上所述仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1784063A?cl=zh">CN1784063A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2004年12月1日</td><td class="patent-data-table-td patent-date-value">2006年6月7日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">一种移动终端验证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102289726A?cl=zh">CN102289726A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月23日</td><td class="patent-data-table-td patent-date-value">2011年12月21日</td><td class="patent-data-table-td ">李元熙</td><td class="patent-data-table-td ">基于二维码和通信技术的设备控制系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102752444A?cl=zh">CN102752444A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月24日</td><td class="patent-data-table-td patent-date-value">2012年10月24日</td><td class="patent-data-table-td ">成都集客宝信息技术有限公司</td><td class="patent-data-table-td ">一种二维码应用方法、移动终端和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103577735A?cl=zh">CN103577735A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年10月24日</td><td class="patent-data-table-td patent-date-value">2014年2月12日</td><td class="patent-data-table-td ">广东欧珀移动通信有限公司</td><td class="patent-data-table-td ">一种多用户快速登录与切换的方法及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=KYYQCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=KYYQCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年7月16日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年8月13日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/1f9f33d5c871e85e0fa3/CN103929400A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%BA%8C%E7%BB%B4%E7%A0%81%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95_%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95_%E9%AA%8C.pdf?id=KYYQCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3uP-l95Xg-vyk7jUdaBQ_AwWhJnA"},"sample_url":"https://www.google.com/patents/reader?id=KYYQCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

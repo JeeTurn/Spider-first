@@ -1,0 +1,227 @@
+<!DOCTYPE html><html><head><title>专利 CN102932171A - 基于License资源控制ONU认证授权管理的方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于License资源控制ONU认证授权管理的方法"><meta name="DC.contributor" content="胡威" scheme="inventor"><meta name="DC.contributor" content="周娟" scheme="inventor"><meta name="DC.contributor" content="李凌" scheme="inventor"><meta name="DC.contributor" content="闭云松" scheme="inventor"><meta name="DC.contributor" content="烽火通信科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2012-10-22" scheme="dateSubmitted"><meta name="DC.description" content="基于License资源控制ONU认证授权管理的方法，涉及ONU的管理方法领域，包括：ONU对License资源进行申请，若申请到License资源，主控盘将该ONU的授权信息和业务配置下发给业务接口盘，否则不会下发；ONU进行替换时，将和OLT同一厂家的ONU设为I类，不同厂家的ONU设为II类，若替换在I类与I类之间、或II类与II类间进行，则被替换ONU和替换后的ONU都不会对License资源进行申请和释放；若替换在I类与II类之间进行，则替换前对被替换的ONU进行License资源的释放，替换后的ONU对License资源进行申请；该方法合理利用License，避免漏洞，降低运营成本。"><meta name="DC.date" content="2013-2-13"><meta name="DC.relation" content="CN:101068145:A" scheme="references"><meta name="DC.relation" content="CN:101146315:A" scheme="references"><meta name="DC.relation" content="CN:101159615:A" scheme="references"><meta name="DC.relation" content="CN:101202752:A" scheme="references"><meta name="DC.relation" content="CN:101467131:A" scheme="references"><meta name="DC.relation" content="CN:1747363:A" scheme="references"><meta name="DC.relation" content="WO:2012079303:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102932171:A"><meta name="citation_patent_application_number" content="CN:201210405094"><link rel="canonical" href="https://www.google.com/patents/CN102932171A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102932171A?cl=zh"/><meta name="title" content="专利 CN102932171A - 基于License资源控制ONU认证授权管理的方法"/><meta name="description" content="基于License资源控制ONU认证授权管理的方法，涉及ONU的管理方法领域，包括：ONU对License资源进行申请，若申请到License资源，主控盘将该ONU的授权信息和业务配置下发给业务接口盘，否则不会下发；ONU进行替换时，将和OLT同一厂家的ONU设为I类，不同厂家的ONU设为II类，若替换在I类与I类之间、或II类与II类间进行，则被替换ONU和替换后的ONU都不会对License资源进行申请和释放；若替换在I类与II类之间进行，则替换前对被替换的ONU进行License资源的释放，替换后的ONU对License资源进行申请；该方法合理利用License，避免漏洞，降低运营成本。"/><meta property="og:title" content="专利 CN102932171A - 基于License资源控制ONU认证授权管理的方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102932171A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102932171A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=iETLBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102932171A&amp;usg=AFQjCNEu9f4mWEepSJ0grXyCeoftUW3ZnQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/f75be319b52229245168/CN102932171A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/f75be319b52229245168/CN102932171A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102932171A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102932171A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102932171A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102932171B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102932171A?cl=zh" style="display:none"><span itemprop="description">基于License资源控制ONU认证授权管理的方法，涉及ONU的管理方法领域，包括：ONU对License资源进行申请，若申请到License资源，主控盘将该ONU的授权信息和业务配置下发给业务接口盘，否则不会下发；ONU进行替换时，将和OLT同一厂家...</span><span itemprop="url">https://www.google.com/patents/CN102932171A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102932171A - 基于License资源控制ONU认证授权管理的方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102932171A - 基于License资源控制ONU认证授权管理的方法" title="专利 CN102932171A - 基于License资源控制ONU认证授权管理的方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102932171 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210405094</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年2月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年10月22日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年10月22日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102932171B?hl=zh-CN&amp;cl=zh">CN102932171B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210405094.1, </span><span class="patent-bibdata-value">CN 102932171 A, </span><span class="patent-bibdata-value">CN 102932171A, </span><span class="patent-bibdata-value">CN 201210405094, </span><span class="patent-bibdata-value">CN-A-102932171, </span><span class="patent-bibdata-value">CN102932171 A, </span><span class="patent-bibdata-value">CN102932171A, </span><span class="patent-bibdata-value">CN201210405094, </span><span class="patent-bibdata-value">CN201210405094.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%83%A1%E5%A8%81%22">胡威</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%91%A8%E5%A8%9F%22">周娟</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%87%8C%22">李凌</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%97%AD%E4%BA%91%E6%9D%BE%22">闭云松</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E7%83%BD%E7%81%AB%E9%80%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">烽火通信科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102932171A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102932171A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102932171A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=iETLBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210405094&amp;usg=AFQjCNF3-cuLMPHh9d3uOEbI9AgMDnqOvg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=iETLBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102932171A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEAYTNWMBDEz-uOHdTX9uV5YlLc-g"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT121465919" lang="ZH" load-source="patent-office">基于License资源控制ONU认证授权管理的方法</invention-title>
+      </span><br><span class="patent-number">CN 102932171 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA107406651" lang="ZH" load-source="patent-office">
+    <div class="abstract">基于License资源控制ONU认证授权管理的方法，涉及ONU的管理方法领域，包括：ONU对License资源进行申请，若申请到License资源，主控盘将该ONU的授权信息和业务配置下发给业务接口盘，否则不会下发；ONU进行替换时，将和OLT同一厂家的ONU设为I类，不同厂家的ONU设为II类，若替换在I类与I类之间、或II类与II类间进行，则被替换ONU和替换后的ONU都不会对License资源进行申请和释放；若替换在I类与II类之间进行，则替换前对被替换的ONU进行License资源的释放，替换后的ONU对License资源进行申请；该方法合理利用License，避免漏洞，降低运营成本。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(19)</span></span></div><div class="patent-text"><div mxw-id="PCLM51184751" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于License资源控制ONU认证授权管理的方法，其特征在于，包括如下几方面：用户开通宽带业务时，对ONU进行完整授权，ONU对License资源进行申请，如果成功申请到License资源，主控盘将该ONU的授权信息和业务配置下发给业务接口盘，否则授权信息和配置只保存在主控盘中，不会下发给业务接口盘，此时该ONU无法开通；当ONU进行替换时，将和OLT同一厂家的ONU设为I类，和OLT不同厂家的ONU设为II 类，若替换是在I类与I类之间、或II类与II类之间进行，则被替换ONU和替换后的ONU 都不会对License资源进行申请和释放；若替换在I类与II类之间进行，则替换前对被替换的ONU进行License资源的释放,释放成功后,替换后的ONU对License资源进行申请；如果用户开通的ONU数目达到License资源数目，再接入ONU时,需要升级License资源文件，升级后License资源增加时,此前申请不到License资源的ONU对License资源进行申请；对完整授权的ONU进行去授权时，ONU对相应的License资源进行释放，释放成功后下发去授权的信息给业务接口盘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述的基于License资源控制ONU认证授权管理的方法，其特征在于： 所述方法还包括PON 口认证模式切换时，原模式下的已完整授权的ONU对相应的License 资源进行释放，新模式下认证通过的ONU给业务接口盘下发授权信息之前，要对License资源进行申请。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求I所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述方法还包括单个ONU认证方式切换时，原有认证模式下已完整授权的ONU对相应的 License资源进行释放，新认证模式下该ONU重新进行完整授权时，给业务接口盘下发授权信息之前，要对License资源进行申请。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求I所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述方法还包括业务接口盘进行热插时，检查该业务接口盘下每一个ONU是否获取到 License资源，若获取到，则主控盘下发授权信息和业务配置给该业务接口盘，否则主控盘不下发授权信息和业务配置给该业务接口盘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1、2、3或4所述的基于License资源控制ONU认证授权管理的方法,其特征在于：若ONU是预授权,则该ONU在预授权时不会对License资源进行申请,该ONU去授权时，也不执行License资源的释放。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的基于License资源控制ONU认证授权管理的方法，其特征在于： 每个预授权或授权的ONU都有一个License资源标识,初始化时设置为未获取状态，当一个 ONU需要进行完整授权时，对License资源进行申请，申请成功后,该ONU的License资源标识设置为已获取到资源状态，否则设置为未获取状态；0NU进行License资源释放成功后， 该ONU的License资源标识设置为未获取状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的基于License资源控制ONU认证授权管理的方法，其特征在于： 所述用户开通宽带业务时，对ONU进行完整授权，其具体步骤如下：Al.判断该ONU下发的授权状态是否是完整授权，若否，结束；若是，进入A2 ；A2.判断该ONU的License资源是否获取到，若是，结束；若否，进入A3 ；A3.该ONU对License资源进行申请；A4.判断申请是否成功，若是，进入A5;若否，进入A7;A5.主控盘将该ONU的授权信息和业务配置下发给业务接口盘；A6.设置该ONU的授权状态为完整授权，将License标识为已获取到资源状态，结束； A7.设置该ONU的License标识为未获取状态，结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的基于License资源控制ONU认证授权管理的方法，其特征在于： 所述业务接口盘每次上报ONU注册信息给主控盘时，如果一个ONU申请不到License资源， 以后业务接口盘每上报一次该ONU的注册信息给主控盘时，该ONU就对License资源进行一次申请，直到该ONU成功申请到License资源为止。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求6所述的基于License资源控制ONU认证授权管理的方法，其特征在于： 当所述ONU进行替换时，释放成功后，替换后的ONU对License资源进行申请，若申请不到 License资源，则分为逻辑标识或密码的自动替换，以及基于MAC地址的手动替换。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述逻辑标识或密码的自动替换时，新替换的ONU删去License资源申请记录，并回滚到被替换的ONU的数据结构，被替换的ONU对License资源进行申请，若申请成功，设置该 ONU的License资源标识为已获取到资源状态，若申请不成功，主控盘下发该ONU的去授权信息给业务接口盘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求9所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述基于MAC地址的手动替换时，主控盘直接下发该ONU的去授权信息给业务接口盘， 并上报替换成功事件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求6所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述ONU进行替换时，替换在I类与II类之间进行的详细步骤如下：BI.判断被替换ONU与新替换的ONU是否为同一类0NU，若否，进入B2 ;若是，进入B5 ； B2.被替换的ONU进行License资源的释放,并设置License资源标识为未获取状态； B3.新替换的ONU对License资源进行申请；B4.判断License资源申请是否成功，若是，进入B5 ;若否，进入B7 ；B5.进行替换流程；B6.向网管发送成功替换事件，结束；B7.判断是否为自动替换，若是，进入B8 ;若否，进入B14 ；B8.新替换的ONU进行License资源申请记录的释放；B9.被替换ONU数据结构重新覆盖新替换的ONU数据结构；B10.被替换的ONU对License资源进行申请；Bll.判断License资源申请是否成功，若否，进入B12 ;若是，进入B13 ；B12.主控盘下发该ONU的去授权信息给业务接口盘，结束；B13.设置该ONU的License资源标识为已获取到资源状态，结束；B14.基于MAC地址的手动替换，主控盘给业务接口盘下发该ONU的去授权信息，进入B6。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求12所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述步骤B2和B8中，若释放失败，则结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求6所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述License资源文件升级后，License资源减少时,对已经获取License资源的ONU 进行License资源的释放，释放成功后，主控盘下发去授权信息给业务接口盘，此时ONU无法开通。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求14所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述进行License资源的调整的详细步骤如下：Cl.升级License文件后,判断是否为License资源的激活,若是,进入Cll ;若否,进入C21 ；Cll.未申请到License资源的ONU进行激活；C12.该ONU的License资源标识设置为已获取到资源状态；C13.该ONU对License资源进行申请；C14.判断申请是否成功，若是，进入C15 ;若否，进入C16 ；C15.主控盘给业务接口盘下发该ONU的授权信息和业务配置，结束；C16.该ONU的License资源标识设置为未获取状态，结束；C21.收回已获取到License的ONU的资源；C22.该ONU的License资源标识设置为未获取状态；C23.该ONU对License资源进行释放；C24.判断释放是否成功，若是，进入C25 ;若否，进入C26 ；C25.主控盘下发该ONU的去授权信息给业务接口盘，结束；C26.该ONU的License资源标识设置为已获取到资源状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求6所述的基于License资源控制ONU认证授权管理的方法,其特征在于：所述对完整授权的ONU进行去授权的具体步骤如下：Dl.获取该ONU的授权状态；D2.判断该ONU的License资源标识是否为未获取状态，若是，结束；若否，进入D3 ; D3.该ONU对License资源进行释放；D4.判断释放是否成功，若是，进入D5;若否，结束；D5.设置该ONU的License资源标识为未获取状态，主控盘下发去授权信息给业务接口盘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求6所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述PON 口认证模式切换具体步骤为：El.判断原模式下的ONU是否完整授权，若是，进入E2 ;若否，结束；E2.该ONU对相应的License资源进行释放；E3.判断释放是否成功，若是，进入E4;若否，结束；E4.设置该ONU的License资源标识为未获取状态；E5.主控盘下发该PON下的ONU的去授权信息给业务接口盘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求6所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述单个ONU认证方式切换时,具体步骤如下：Fl.该ONU对License资源进行释放；F2.判断释放是否成功，若成功，进入F3;否则结束；F3.设置该ONU的License资源标识为未获取状态；F4.主控盘下发该ONU的去授权信息给业务接口盘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求6所述的基于License资源控制ONU认证授权管理的方法，其特征在于：所述业务接口盘进行热拔插的详细步骤为：Gl.检查一个槽位下的ONU是否获取到License资源，若是，进入G2，若否，结束；G2.主控盘下发该ONU的去授权信息给业务接口盘。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58230327" lang="ZH" load-source="patent-office" class="description">
+    <p>基于License资源控制ONU认证授权管理的方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及无源光网络中对ONU的管理方法领域，具体来讲是一种基于License资源控制ONU认证授权管理的方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	无源光网络是一种新型的光纤接入网技术，它采用点到多点结构，无源光纤传输，由 OLT (Optical Line Terminal,光线路终端）、ODN (Optical Distributed Network,光分配网络）和ONU (Optical Network Unit,光网络单元）组成。ODN连接局端的OLT和用户端的0NU，它由光纤和无源分光器组成，在一定的物理限制和带宽限制条件下，让多个终端设备ONU来共享局端设备OLT的各种业务。 [0003]	随着网络技术的迅速发展，基于许可证（License)控制的设备和软件使用越来越广泛。供应商销售产品给客户，通过许可证对产品的使用范围、资源、功能以及期限等进行授权，以避免运营商通过其它方式开通许可之外的业务，从而造成设备提供商的经济损失。现有的厂商对于无源光网络的OLT的控制，是通过网管的License使用期限来使自己持续得到回报，但存在的问题是：一旦使用期限到了，如果管理人员正在进行业务的开通或排除紧急问题，此时网管无法管理OLT设备也不能添加新的网元进行管理，影响业务开通时间和紧急问题排查；并且这样的网管License管理设备也存在漏洞，熟悉设备的人可以避开网管通过CLI (command-line interface,命令行界面)来控制管理OLT设备,而且不管OLT上挂有多少0NU，即使只接有I个0NU，只要被网管管理，都需要购买一个License，会造成License资源的利用不合理并加大运营商的成本。</p>
+    <p>发明内容</p>
+    <p>[0004]	针对现有技术中存在的缺陷，本发明的目的在于提供一种基于License资源控制ONU认证授权管理的方法，用户管理人员不受期限限制，合理利用License，在避免漏洞的同时，降低运营成本。</p>
+    <p>[0005]	为达到以上目的，本发明采取的技术方案是：基于License资源控制ONU认证授权管理的方法，包括如下几方面：用户开通宽带业务时，对ONU进行完整授权，ONU对License资源进行申请，如果成功申请到License资源，主控盘将该ONU的授权信息和业务配置下发给业务接口盘，否则授权信息和配置只保存在主控盘中，不会下发给业务接口盘，此时该ONU无法开通；当ONU进行替换时，将和OLT同一厂家的ONU设为I类，和OLT不同厂家的ONU设为II类，若替换是在I类与I类之间、或II类与II类之间进行，则被替换ONU和替换后的ONU都不会对License资源进行申请和释放；若替换在I类与II类之间进行，则替换前对被替换的ONU进行License资源的释放,释放成功后,替换后的ONU对License资源进行申请；如果用户开通的ONU数目达到License资源数目，再接入ONU时,需要升级License资源文件，升级后License资源增加时,此前申请不到License资源的ONU对License资源进行申请；对完整授权的ONU进行去授权时，ONU对相应的License资源进行释放，释放成功后下发去授权的信息给业务接口盘。</p>
+    <p>[0006]	在上述技术方案的基础上，所述方法还包括PON 口认证模式切换时，原模式下的已完整授权的ONU对相应的License资源进行释放,新模式下认证通过的ONU给业务接口盘下发授权信息之前，要对License资源进行申请。</p>
+    <p>[0007]	在上述技术方案的基础上，所述方法还包括单个ONU认证方式切换时，原有认证模式下已完整授权的ONU对相应的License资源进行释放，新认证模式下该ONU重新进行完整授权时，给业务接口盘下发授权信息之前，要对License资源进行申请。</p>
+    <p>[0008]	在上述技术方案的基础上，所述方法还包括业务接口盘进行热插时，检查该业务接口盘下每一个ONU是否获取到License资源，若获取到，则主控盘下发授权信息和业务配置给该业务接口盘，否则主控盘不下发授权信息和业务配置给该业务接口盘。</p>
+    <p>[0009]	在上述技术方案的基础上，若ONU是预授权，则该ONU在预授权时不会对License 资源进行申请，该ONU去授权时，也不执行License资源的释放。</p>
+    <p>[0010]	在上述技术方案的基础上，每个预授权或授权的ONU都有一个License资源标识，初始化时设置为未获取状态，当一个ONU需要进行完整授权时，对License资源进行申请，申请成功后，该ONU的License资源标识设置为已获取到资源状态，否则设置为未获取状态；0NU进行License资源释放成功后,该ONU的License资源标识设置为未获取状态。</p>
+    <p>[0011]	在上述技术方案的基础上，所述用户开通宽带业务时，对ONU进行完整授权，其具体步骤如下：</p>
+    <p>[0012]	Al.判断该ONU下发的授权状态是否是完整授权，若否，结束；若是，进入A2 ；</p>
+    <p>[0013]	A2.判断该ONU的License资源是否获取到，若是，结束；若否，进入A3 ；</p>
+    <p>[0014]	A3.该ONU对License资源进行申请；</p>
+    <p>[0015]	A4.判断申请是否成功，若是，进入A5 ;若否，进入A7 ；</p>
+    <p>[0016]	A5.主控盘将该ONU的授权信息和业务配置下发给业务接口盘；</p>
+    <p>[0017]	A6.设置该ONU的授权状态为完整授权,将License标识为已获取到资源状态,结束；</p>
+    <p>[0018]	A7.设置该ONU的License标识为未获取状态，结束。</p>
+    <p>[0019]	在上述技术方案的基础上，所述业务接口盘每次上报ONU注册信息给主控盘时，如果一个ONU申请不到License资源，以后业务接口盘每上报一次该ONU的注册信息给主控盘时，该ONU就对License资源进行一次申请，直到该ONU成功申请到License资源为止。</p>
+    <p>[0020]	在上述技术方案的基础上，当所述ONU进行替换时，释放成功后，替换后的ONU对License资源进行申请，若申请不到License资源，则分为逻辑标识或密码的自动替换，以及基于MAC地址的手动替换。</p>
+    <p>[0021]	在上述技术方案的基础上，所述逻辑标识或密码的自动替换时，新替换的ONU删去License资源申请记录,并回滚到被替换的ONU的数据结构,被替换的ONU对License资源进行申请，若申请成功，设置该ONU的License资源标识为已获取到资源状态，若申请不成功,主控盘下发该ONU的去授权信息给业务接口盘。</p>
+    <p>[0022]	在上述技术方案的基础上，所述基于MAC地址的手动替换时，主控盘直接下发该ONU的去授权信息给业务接口盘，并上报替换成功事件。</p>
+    <p>[0023]	在上述技术方案的基础上，所述ONU进行替换时，替换在I类与II类之间进行的详细步骤如下：</p>
+    <p>[0024]	BI.判断被替换ONU与新替换的ONU是否为同一类0NU，若否，进入B2 ;若是，进入B5 ；</p>
+    <p>[0025]	B2.被替换的ONU进行License资源的释放，并设置License资源标识为未获取状态；</p>
+    <p>[0026]	B3.新替换的ONU对License资源进行申请；</p>
+    <p>[0027]	B4.判断License资源申请是否成功,若是,进入B5 ;若否,进入B7 ;</p>
+    <p>[0028]	B5.进行替换流程；</p>
+    <p>[0029]	B6.向网管发送成功替换事件，结束； [0030]	B7.判断是否为自动替换，若是，进入B8 ;若否，进入B14 ;</p>
+    <p>[0031]	B8.新替换的ONU进行License资源申请记录的释放；</p>
+    <p>[0032]	B9.被替换ONU数据结构重新覆盖新替换的ONU数据结构；</p>
+    <p>[0033]	B10.被替换的ONU对License资源进行申请；</p>
+    <p>[0034]	Bll.判断License资源申请是否成功，若否，进入B12 ;若是，进入B13 ;</p>
+    <p>[0035]	B12.主控盘下发该ONU的去授权信息给业务接口盘，结束；</p>
+    <p>[0036]	B13.设置该ONU的License资源标识为已获取到资源状态，结束；</p>
+    <p>[0037]	B14.基于MAC地址的手动替换，主控盘给业务接口盘下发该ONU的去授权信息，进入B6。</p>
+    <p>[0038]	在上述技术方案的基础上，所述步骤B2和B8中，若释放失败，则结束。</p>
+    <p>[0039]	在上述技术方案的基础上，所述License资源文件升级后，License资源减少时，对已经获取License资源的ONU进行License资源的释放,释放成功后,主控盘下发去授权信息给业务接口盘，此时ONU无法开通。</p>
+    <p>[0040]	在上述技术方案的基础上，所述进行License资源的调整的详细步骤如下：</p>
+    <p>[0041]	Cl.升级License文件后,判断是否为License资源的激活,若是,进入Cll ;若否，进入C21	；</p>
+    <p>[0042]	Cll.未申请到License资源的ONU进行激活；</p>
+    <p>[0043]	C12.该ONU的License资源标识设置为已获取到资源状态；</p>
+    <p>[0044]	C13.该ONU对License资源进行申请；</p>
+    <p>[0045]	C14.判断申请是否成功，若是，进入C15 ;若否，进入C16 ；</p>
+    <p>[0046]	C15.主控盘给业务接口盘下发该ONU的授权信息和业务配置，结束；</p>
+    <p>[0047]	C16.该ONU的License资源标识设置为未获取状态，结束；</p>
+    <p>[0048]	C21.收回已获取到License的ONU的资源；</p>
+    <p>[0049]	C22.该ONU的License资源标识设置为未获取状态；</p>
+    <p>[0050]	C23.该ONU对License资源进行释放；</p>
+    <p>[0051]	C24.判断释放是否成功，若是，进入C25 ;若否，进入C26 ；</p>
+    <p>[0052]	C25.主控盘下发该ONU的去授权信息给业务接口盘，结束；</p>
+    <p>[0053]	C26.该ONU的License资源标识设置为已获取到资源状态。</p>
+    <p>[0054]	在上述技术方案的基础上，所述对完整授权的ONU进行去授权的具体步骤如下：</p>
+    <p>[0055]	Dl.获取该ONU的授权状态；[0056]	D2.判断该ONU的License资源标识是否为未获取状态，若是，结束；若否，进入D3 ；</p>
+    <p>[0057]	D3.该ONU对License资源进行释放；</p>
+    <p>[0058]	D4.判断释放是否成功，若是，进入D5 ;若否，结束；</p>
+    <p>[0059]	D5.设置该ONU的License资源标识为未获取状态，主控盘下发去授权信息给业务</p>
+    <p>接口盘。</p>
+    <p>[0060]	在上述技术方案的基础上，所述PON 口认证模式切换具体步骤为：</p>
+    <p>[0061]	El.判断原模式下的ONU是否完整授权，若是，进入E2 ;若否，结束；</p>
+    <p>[0062]	E2.该ONU对相应的License资源进行释放；</p>
+    <p>[0063]	E3.判断释放是否成功，若是，进入E4 ;若否，结束；</p>
+    <p>[0064]	E4.设置该ONU的License资源标识为未获取状态；</p>
+    <p>[0065]	E5.主控盘下发该PON下的ONU的去授权信息给业务接口盘。</p>
+    <p>[0066]	在上述技术方案的基础上，所述单个ONU认证方式切换时，具体步骤如下：&#183;</p>
+    <p>[0067]	Fl.该ONU对License资源进行释放；</p>
+    <p>[0068]	F2.判断释放是否成功，若成功，进入F3 ;否则结束；</p>
+    <p>[0069]	F3.设置该ONU的License资源标识为未获取状态；</p>
+    <p>[0070]	F4.主控盘下发该ONU的去授权信息给业务接口盘。</p>
+    <p>[0071]	在上述技术方案的基础上，所述业务接口盘进行热拔插的详细步骤为：</p>
+    <p>[0072]	Gl.检查一个槽位下的ONU是否获取到License资源，若是，进入G2，若否，结束；</p>
+    <p>[0073]	G2.主控盘下发该ONU的去授权信息给业务接口盘。</p>
+    <p>[0074]	本发明的有益效果在于：在ONU授权、认证模式切换以及替换等各种业务操作中，都能根据License资源数目，方便有效地控制同厂家和不同厂家ONU的授权在线数目，还可以通过升级License增加或减少实际接入的同厂家和不同厂家ONU数目。</p>
+    <p>[0075]	通过License来控制ONU的数目，使运营商可以根据每个区域OLT管理的用户情况来购买控制ONU的License资源,避免不必要的浪费。</p>
+    <p>[0076]	对于设备提供商来说，只要License资源的数目用完，不论是通过网管、远程登陆、CLI等方式都不能再对新的ONU进行授权，避免了漏洞的产生，从未确保设备提供商的经济利益。</p>
+    <p>附图说明</p>
+    <p>[0077]	图I为本发明实施例中用户开通宽带业务时对ONU进行完整授权的流程图；</p>
+    <p>[0078]	图2为本发明实施例中ONU在I类与II类之间进行替换的流程图；</p>
+    <p>[0079]	图3为本发明实施例中进行License资源的调整的流程图；</p>
+    <p>[0080]	图4为本发明实施例中对完整授权的ONU进行去授权的流程图；</p>
+    <p>[0081 ]	图5为本发明实施例中PON 口认证模式切换的流程图；</p>
+    <p>[0082]	图6为本发明实施例中单个ONU认证方式切换的流程图；</p>
+    <p>[0083]	图7为本发明实施例中业务接口盘进行热拔插的流程图。</p>
+    <p>具体实施方式[0084]	以下结合附图及实施例对本发明作进一步详细说明。</p>
+    <p>[0085]	一种基于License资源控制ONU认证授权管理的方法，包括如下几方面：</p>
+    <p>[0086]	A.用户开通宽带业务时,对ONU进行完整授权，ONU对License资源进行申请，如果成功申请到License资源，主控盘将该ONU的授权信息和业务配置下发给业务接口盘，否则授权信息和配置只保存在主控盘中，不会下发给业务接口盘，此时该ONU无法开通。</p>
+    <p>[0087]	当业务接口盘第一次上报ONU注册信息给主控盘时，如果该ONU申请不到License资源，那么以后业务接口盘每上报一次该ONU的注册信息给主控时，该ONU就进行一次License资源的申请,直到该ONU成功申请到License资源为止。</p>
+    <p>[0088]	B.当ONU进行替换时，将和OLT同一厂家的ONU设为I类，和OLT不同厂家的ONU设为II类，方便设备运营商根据自己的需要购买不同厂家ONU的license资源。若替换 是在I类与I类之间、或II类与II类之间进行，则被替换ONU和替换后的ONU都不会对License资源进行申请和释放；若替换在I类与II类之间进行，则替换前对被替换的ONU进行License资源的释放,释放成功后,替换后的ONU对License资源进行申请。</p>
+    <p>[0089]	C.如果用户开通的ONU数目达到License资源数目，再接入ONU时，需要升级License资源文件，升级后License资源增加时，此前申请不到License资源的ONU对License资源进行申请。License资源减少时，对已经获取License资源的ONU进行License资源的释放，释放成功后，主控盘下发去授权信息给业务接口盘，此时ONU无法开通。</p>
+    <p>[0090]	D.对完整授权的ONU进行去授权时，ONU对相应的License资源进行释放，释放成功后下发去授权的信息给业务接口盘。</p>
+    <p>[0091]	E. PON 口认证模式切换时，原模式下的已完整授权的ONU对相应的License资源进行释放，新模式下认证通过的ONU给业务接口盘下发授权信息之前，要对License资源进行申请，申请不成功时，主控盘不会向业务接口盘下发授权信息和业务配置，此时该ONU无法开通。</p>
+    <p>[0092]	F.单个ONU认证方式切换时，原有认证模式下已完整授权的ONU对相应的License资源进行释放，新认证模式下该ONU重新进行完整授权时，给业务接口盘下发授权信息之前，要对License资源进行申请，申请不成功时，不会向业务接口盘下发授权信息和业务配置，此时该ONU无法开通。</p>
+    <p>[0093]	G.业务接口盘进行热插时,检查该业务接口盘下每一个ONU是否获取到License资源，若获取到，则主控盘下发授权信息和业务配置给该业务接口盘，否则主控盘不下发授权信息和业务配置给该业务接口盘，此时该ONU无法开通。</p>
+    <p>[0094]	在上述几方面中，若ONU是预授权,则该ONU在预授权时不会对License资源进行申请，该ONU去授权时，也不执行License资源的释放。每个预授权或授权的ONU都有一个License资源标识，初始化时设置为未获取状态，当一个ONU需要进行完整授权时，对License资源进行申请，申请成功后,该ONU的License资源标识设置为已获取到资源状态，否则设置为未获取状态；0NU进行License资源释放成功后,该ONU的License资源标识设置为未获取状态。</p>
+    <p>[0095]	如图I所示，用户开通宽带业务时，对ONU进行完整授权，其具体步骤如下：</p>
+    <p>[0096]	Al.判断该ONU下发的授权状态是否是完整授权，若否，结束；若是，进入A2 ；</p>
+    <p>[0097]	A2.判断该ONU的License资源是否获取到，若是，结束；若否，进入A3 ；[0098]	A3.该ONU对License资源进行申请；</p>
+    <p>[0099]	A4.判断申请是否成功，若是，进入A5 ;若否,进入A7 ;</p>
+    <p>[0100]	A5.主控盘将该ONU的授权信息和业务配置下发给业务接口盘；</p>
+    <p>[0101]	A6.设置该ONU的授权状态为完整授权,将License标识为已获取到资源状态,结束；</p>
+    <p>[0102]	A7.设置该ONU的License标识为未获取状态，结束。</p>
+    <p>[0103]	上述步骤中，业务接口盘每次上报ONU注册信息给主控盘时，如果一个ONU申请不到License资源，以后业务接口盘每上报一次该ONU的注册信息给主控盘时，该ONU就对License资源进行一次申请,直到该ONU成功申请到License资源为止。 </p>
+    <p>[0104]	所述B.当ONU进行替换时，释放成功后，替换后的ONU对License资源进行申请，申请资源成功后，下发替换命令给业务接口盘。若申请不到License资源，则分为两种情况，即：逻辑标识或密码的自动替换，以及基于MAC地址的手动替换。如果是逻辑标识或密码的自动替换时，新替换的ONU删去License资源申请记录，并回滚到被替换的ONU的数据结构，被替换的ONU对License资源进行申请,若申请成功,设置该ONU的License资源标识为已获取到资源状态，若申请不成功，主控盘下发该ONU的去授权信息给业务接口盘。如果是基于MAC地址的手动替换时，主控盘直接下发该ONU的去授权信息给业务接口盘，并上报替换成功事件。</p>
+    <p>[0105]	如图2所示，替换在I类与II类之间进行的详细步骤如下：</p>
+    <p>[0106]	BI.判断被替换ONU与新替换的ONU是否为同一类0NU，若否，进入B2 ;若是，进入B5 ；</p>
+    <p>[0107]	B2.被替换的ONU进行Li cense资源的释放，并设置Li cense资源标识为未获取状态；</p>
+    <p>[0108]	B3.新替换的ONU对License资源进行申请；</p>
+    <p>[0109]	B4.判断License资源申请是否成功,若是,进入B5 ;若否,进入B7 ;</p>
+    <p>[0110]	B5.进行替换流程；</p>
+    <p>[0111]	B6.向网管发送成功替换事件，结束；</p>
+    <p>[0112]	B7.判断是否为自动替换，若是，进入B8;若否，进入B14;</p>
+    <p>[0113]	B8.新替换的ONU进行License资源申请记录的释放；</p>
+    <p>[0114]	B9.被替换ONU数据结构重新覆盖新替换的ONU数据结构；</p>
+    <p>[0115]	B10.被替换的ONU对License资源进行申请；</p>
+    <p>[0116]	Bll.判断License资源申请是否成功，若否，进入B12 ;若是，进入B13 ;</p>
+    <p>[0117]	B12.主控盘下发该ONU的去授权信息给业务接口盘，结束；</p>
+    <p>[0118]	B13.设置该ONU的License资源标识为已获取到资源状态，结束；</p>
+    <p>[0119]	B14.基于MAC地址的手动替换，主控盘给业务接口盘下发该ONU的去授权信息，进入B6。</p>
+    <p>[0120]	如图3所示，进行License资源的调整的详细步骤如下：</p>
+    <p>[0121]	Cl.升级License文件后,判断是否为License资源的激活,若是,进入Cll ;若否，进入C21 ；</p>
+    <p>[0122]	Cll.未申请到License资源的ONU进行激活；[0123]	C12.该ONU的License资源标识设置为已获取到资源状态；</p>
+    <p>[0124]	C13.该ONU对License资源进行申请；</p>
+    <p>[0125]	C14.判断申请是否成功，若是，进入C15 ;若否，进入C16 ；</p>
+    <p>[0126]	C15.主控盘给业务接口盘下发该ONU的授权信息和业务配置，结束；</p>
+    <p>[0127]	C16.该ONU的License资源标识设置为未获取状态，结束；</p>
+    <p>[0128]	C21.收回已获取到License的ONU的资源；</p>
+    <p>[0129]	C22.该ONU的License资源标识设置为未获取状态；</p>
+    <p>[0130]	C23.该ONU对License资源进行释放；</p>
+    <p>[0131]	C24.判断释放是否成功，若是，进入C25 ;若否，进入C26 ；</p>
+    <p>[0132]	C25.主控盘下发该ONU的去授权信息给业务接口盘，结束；</p>
+    <p>[0133]	C26.该ONU的License资源标识设置为已获取到资源状态。</p>
+    <p>[0134]	如图4所示，对完整授权的ONU进行去授权的具体步骤如下：</p>
+    <p>[0135]	Dl.获取该ONU的授权状态；</p>
+    <p>[0136]	D2.判断该ONU的License资源标识是否为未获取状态，若是，结束；若否，进入D3 ；</p>
+    <p>[0137]	D3.该ONU对License资源进行释放；</p>
+    <p>[0138]	D4.判断释放是否成功，若是，进入D5 ;若否，结束；</p>
+    <p>[0139]	D5.设置该ONU的License资源标识为未获取状态，主控盘下发去授权信息给业务</p>
+    <p>接口盘。</p>
+    <p>[0140]	如图5所示，PON 口认证模式切换具体步骤为：</p>
+    <p>[0141]	El.判断原模式下的ONU是否完整授权，若是，进入E2 ;若否，结束；</p>
+    <p>[0142]	E2.该ONU对相应的License资源进行释放；</p>
+    <p>[0143]	E3.判断释放是否成功，若是，进入E4 ;若否，结束；</p>
+    <p>[0144]	E4.设置该ONU的License资源标识为未获取状态；</p>
+    <p>[0145]	E5.主控盘下发该PON下的ONU的去授权信息给业务接口盘。</p>
+    <p>[0146]	如图6所示，单个ONU认证方式切换时，具体步骤如下：</p>
+    <p>[0147]	Fl.该ONU对License资源进行释放；</p>
+    <p>[0148]	F2.判断释放是否成功，若成功，进入F3 ;否则结束；</p>
+    <p>[0149]	F3.设置该ONU的License资源标识为未获取状态；</p>
+    <p>[0150]	F4.主控盘下发该ONU的去授权信息给业务接口盘。</p>
+    <p>[0151]	如图7所示，业务接口盘进行热拔插的详细步骤为：</p>
+    <p>[0152]	Gl.检查一个槽位下的ONU是否获取到License资源，若是，进入G2，若否，结束；</p>
+    <p>[0153]	G2.主控盘下发该ONU的去授权信息给业务接口盘。</p>
+    <p>[0154]	本发明在对包括PON 口认证模式切换、ONU认证方式切换、授权、去授权、业务接口盘的热拔插、ONU的MAC地址手动替换、ONU逻辑SN或密码的自动替换等ONU相关管理操作中，增加对License认证资源的申请、释放、设置、判断等操作步骤,使其License认证资源能有效的控制I类和II类ONU的认证授权数目。</p>
+    <p>[0155]	本发明不局限于上述实施方式，对于本技术领域的普通技术人员来说，在不脱离本发明原理的前提下，还可以做出若干改进和润饰，这些改进和润饰也视为本发明的保护范围之内。本说明书中未作详细描述的内容属于本 领域专业技术人员公知的现有技术。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1747363A?cl=zh">CN1747363A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2005年10月14日</td><td class="patent-data-table-td patent-date-value">2006年3月15日</td><td class="patent-data-table-td ">方立东</td><td class="patent-data-table-td ">基于开放式接入的光纤到户驻地网系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101068145A?cl=zh">CN101068145A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年7月5日</td><td class="patent-data-table-td patent-date-value">2007年11月7日</td><td class="patent-data-table-td ">杭州华三通信技术有限公司</td><td class="patent-data-table-td ">Epon网元配置方法及epon</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101146315A?cl=zh">CN101146315A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年8月3日</td><td class="patent-data-table-td patent-date-value">2008年3月19日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">许可证文件管理方法、服务器及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101159615A?cl=zh">CN101159615A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2004年12月23日</td><td class="patent-data-table-td patent-date-value">2008年4月9日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">对通信设备进行授权许可的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101202752A?cl=zh">CN101202752A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2004年12月23日</td><td class="patent-data-table-td patent-date-value">2008年6月18日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">对设备进行授权许可的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101467131A?cl=zh">CN101467131A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年7月20日</td><td class="patent-data-table-td patent-date-value">2009年6月24日</td><td class="patent-data-table-td ">美国唯美安视国际有限公司</td><td class="patent-data-table-td ">网络用户验证系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012079303A1?cl=zh">WO2012079303A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年2月24日</td><td class="patent-data-table-td patent-date-value">2012年6月21日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种对光网络单元进行认证控制的方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=iETLBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012240000">H04L12/24</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年7月1日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/f75be319b52229245168/CN102932171A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8ELicense%E8%B5%84%E6%BA%90%E6%8E%A7%E5%88%B6ONU%E8%AE%A4%E8%AF%81%E6%8E%88%E6%9D%83.pdf?id=iETLBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0dTMbDuik_pfdArdb35UR_iNGrKA"},"sample_url":"https://www.google.com/patents/reader?id=iETLBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

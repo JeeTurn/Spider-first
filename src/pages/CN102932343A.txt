@@ -1,0 +1,543 @@
+<!DOCTYPE html><html><head><title>专利 CN102932343A - 一种下载数字证书的方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种下载数字证书的方法和装置"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="飞天诚信科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2012-10-26" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开一种下载数字证书的方法和装置，该方法包括：USB Key判断将要生成的密钥对应的标志位是否置位，是则返回密钥已经存在的信息，否则生成密钥，将密钥所对应的标志位置位，使用指定密钥的私钥对第一数据包进行数字签名，并生成第一申请包，将指定密钥所对应的标志位复位，将第一申请包返回给主机，将证书数据存入相应位置，并记录位置和密钥标识，使用指定密钥的私钥对第一数据包进行数字签名，并生成第一申请包，使用内置证书的私钥对第二数据包进行数字签名，并生成第二申请包，使用当前数字证书的私钥对第三数据包进行数字签名，并生成第三申请包，将指定密钥所对应的标志位复位，将第三申请包返回给主机。"><meta name="DC.date" content="2013-2-13"><meta name="DC.relation" content="CN:101350718:A" scheme="references"><meta name="DC.relation" content="CN:101977193:A" scheme="references"><meta name="DC.relation" content="US:20120159158:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102932343:A"><meta name="citation_patent_application_number" content="CN:201210417183"><link rel="canonical" href="https://www.google.com/patents/CN102932343A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102932343A?cl=zh"/><meta name="title" content="专利 CN102932343A - 一种下载数字证书的方法和装置"/><meta name="description" content="本发明公开一种下载数字证书的方法和装置，该方法包括：USB Key判断将要生成的密钥对应的标志位是否置位，是则返回密钥已经存在的信息，否则生成密钥，将密钥所对应的标志位置位，使用指定密钥的私钥对第一数据包进行数字签名，并生成第一申请包，将指定密钥所对应的标志位复位，将第一申请包返回给主机，将证书数据存入相应位置，并记录位置和密钥标识，使用指定密钥的私钥对第一数据包进行数字签名，并生成第一申请包，使用内置证书的私钥对第二数据包进行数字签名，并生成第二申请包，使用当前数字证书的私钥对第三数据包进行数字签名，并生成第三申请包，将指定密钥所对应的标志位复位，将第三申请包返回给主机。"/><meta property="og:title" content="专利 CN102932343A - 一种下载数字证书的方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102932343A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102932343A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=LkXLBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102932343A&amp;usg=AFQjCNFYOAJQsGiZ4p19o6OVxpproSe8-A" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/0214b009b3288cde4fb5/CN102932343A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/0214b009b3288cde4fb5/CN102932343A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102932343A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102932343A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102932343A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102932343B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102932343A?cl=zh" style="display:none"><span itemprop="description">本发明公开一种下载数字证书的方法和装置，该方法包括：USB Key判断将要生成的密钥对应的标志位是否置位，是则返回密钥已经存在的信息，否则生成密钥，将密钥所对应的标志位置位，使用指定密钥的私钥对第一数据包进行 ...</span><span itemprop="url">https://www.google.com/patents/CN102932343A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102932343A - 一种下载数字证书的方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102932343A - 一种下载数字证书的方法和装置" title="专利 CN102932343A - 一种下载数字证书的方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102932343 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210417183</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年2月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年10月26日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年10月26日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102932343B?hl=zh-CN&amp;cl=zh">CN102932343B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210417183.8, </span><span class="patent-bibdata-value">CN 102932343 A, </span><span class="patent-bibdata-value">CN 102932343A, </span><span class="patent-bibdata-value">CN 201210417183, </span><span class="patent-bibdata-value">CN-A-102932343, </span><span class="patent-bibdata-value">CN102932343 A, </span><span class="patent-bibdata-value">CN102932343A, </span><span class="patent-bibdata-value">CN201210417183, </span><span class="patent-bibdata-value">CN201210417183.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">飞天诚信科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102932343A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102932343A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102932343A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=LkXLBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210417183&amp;usg=AFQjCNGxl6bbOqYICkY_NIVz8iJbW5hGPw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=LkXLBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102932343A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEUFbT_EW-kY-HZeg8729XJ0ASSlQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT121465669" lang="ZH" load-source="patent-office">一种下载数字证书的方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 102932343 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA107406401" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开一种下载数字证书的方法和装置，该方法包括：USB&#160;Key判断将要生成的密钥对应的标志位是否置位，是则返回密钥已经存在的信息，否则生成密钥，将密钥所对应的标志位置位，使用指定密钥的私钥对第一数据包进行数字签名，并生成第一申请包，将指定密钥所对应的标志位复位，将第一申请包返回给主机，将证书数据存入相应位置，并记录位置和密钥标识，使用指定密钥的私钥对第一数据包进行数字签名，并生成第一申请包，使用内置证书的私钥对第二数据包进行数字签名，并生成第二申请包，使用当前数字证书的私钥对第三数据包进行数字签名，并生成第三申请包，将指定密钥所对应的标志位复位，将第三申请包返回给主机。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(15)</span></span></div><div class="patent-text"><div mxw-id="PCLM51184501" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种下载数字证书的方法，其特征在于，所述方法包括：  步骤SI ：USB Key等待接收主机发送的命令；  步骤S2 :所述USB Key判断所述命令类型，若是生成密钥的命令则执行步骤S3，若是生成第一申请包的命令则执行步骤S6，若是存储数字证书命令则执行步骤S9，若是生成第三申请包的命令则执行步骤S10，若是其他命令则执行步骤S15，若是非法命令则执行步骤S16 ；  步骤S3 :所述USB Key判断将要生成的密钥对应的标志位是否置位，是则返回密钥已经存在的信息给所述主机，执行步骤SI，否则执行步骤S4 ；  步骤S4 :所述USB Key生成密钥；  步骤S5 :所述USB Key将所述生成的密钥所对应的标志位置位，返回步骤SI ；  步骤S6 :所述USB Key判断指定密钥所对应的标志位是否置位，是则执行步骤S7，否则返回错误信息，执行步骤SI ；  步骤S7 :所述USB Key使用所述指定密钥的私钥对由所述指定密钥的公钥、生成所述指定密钥的算法标识、第一申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包，将所述指定密钥所对应的标志位复位；  步骤S8 :所述USB key将所述第一申请包返回给所述主机，返回步骤SI ；  步骤S9 :所述USB Key将证书数据存入相应位置，并记录所述位置和密钥标识，返回步骤SI ；  步骤SlO :所述USB Key判断指定密钥所对应的标志位是否为置位，是则执行步骤S11，否则返回错误信息，执行步骤SI ；  步骤Sll :所述USB Key使用所述指定密钥的私钥对由所述指定密钥的公钥、生成指定密钥的算法标识、第三申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包；  步骤S12 :所述USB Key使用内置证书的私钥对由所述内置证书和所述第一申请包组成的第二数据包进行数字签名，并生成第二申请包；  步骤S13 :所述USB Key使用当前数字证书的私钥对由所述第二申请包和当前数字证书组成的第三数据包进行数字签名，并生成第三申请包，将所述指定密钥所对应的标志位复位；  步骤S14:所述USB key将所述第三申请包返回给所述主机，返回步骤SI ；  步骤S15 :所述USB key执行相应命令，将执行结果返回给所述主机，返回步骤SI ；  步骤S16 :所述USB key返回错误信息给所述主机，返回步骤SI。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其特征在于，所述步骤S7中，所述生成指定密钥的算法标识预先存储在USB Key中，所述第一申请包属性字符串预先设置在所述USB Key中；所述版本由所述主机指定，通过所述生成第一申请包的命令发送给所述USB Key ;所述标识信息存储在所述生成第一申请包命令中，由所述主机发送给所述USB Key0</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述步骤S7包括：  步骤S7-1 :所述USB key按照预设格式对所述指定密钥的公钥进行封装，得到第一数据；  步骤S7-2:所述USB key按照所述预设格式对所述USB key中所述生成指定密钥的算法标识、所述第一申请包属性字符串、所述版本和所述标识信息进行封装，得到第二数据；步骤S7-3 :所述USB key按照所述预设格式对所述第一数据和所述第二数据进行封装，得到第三数据；  步骤S7-4 :所述USB key根据摘要算法对所述第三数据进行计算，得到第一摘要；步骤S7-5 :所述USB key使用所述指定密钥的私钥对所述第一摘要进行数字签名，得到第一数字签名，并按照所述预设格式对所述第一数字签名进行封装，得到第四数据；  步骤S7-6 :所述USB key按照所述预设格式对所述第三数据和所述第四数据进行封装，得到所述第一申请包，将所述指定密钥所对应的标志位复位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求I所述的方法，其特征在于，所述步骤Sll中，所述生成指定密钥的算法标识预先存储在USB Key中，所述第三申请包属性字符串预先设置在所述USB Key中；所述版本由所述主机指定，通过所述生成第三申请包的命令发送给所述USB Key ;所述标识信息的获取方式可以是：所述主机将所述标识信息存储在所述生成第三申请包命令中，发送给所述USB Key或所述USB Key根据存储的当前数字证书的位置检索到当前数字证书，从当前数字证书中解析出所述标识信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其特征在于，所述步骤Sll包括：  步骤Sll-I :所述USB key按照预设格式对所述指定密钥的公钥进行封装，得到第一数据；  步骤S11-2 :所述USB key按照所述预设格式对所述USB key中所述生成指定密钥的算法标识、所述第三申请包属性字符串、所述版本和所述标识信息进行封装，得到第二数据；步骤S11-3 :所述USB key按照所述预设格式对所述第一数据和所述第二数据进行封装，得到第三数据；  步骤S11-4:所述USB key根据摘要算法对所述第三数据进行计算，得到第一摘要；步骤S11-5 :所述USB key使用所述指定密钥的私钥对所述第一摘要进行数字签名，得到第一数字签名，并按照所述预设格式对所述第一数字签名进行封装，得到第四数据；  步骤SI 1-6 :所述USB key按照所述预设格式对所述第三数据和所述第四数据进行封装，得到所述第一申请包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，所述步骤S12包括：  步骤S12-1 :所述USB key按照所述预设格式对所述内置证书进行封装，得到第五数据；  步骤S12-2 :所述USB key根据所述摘要算法对所述第一申请包进行计算，得到第二摘要；  步骤S12-3 :所述USB key使用所述内置证书的私钥对所述第二摘要进行数字签名，得到第二数字签名，并按照所述预设格式对所述第二数字签名进行封装，得到第六数据；  步骤S12-4 :所述USB key按照所述预设格式对所述第一申请包、所述第五数据和所述第六数据进行封装，得到所述第二申请包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求I或6所述的方法，其特征在于，所述内置证书在生产过程中预置在所述USB key内部。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求6所述的方法，其特征在于，所述步骤S13包括：  步骤S13-1 :所述USB key按照所述预设格式对当前数字证书进行封装，得到第七数据；  步骤S13-2 :所述USB key根据所述摘要算法对所述第二申请包进行计算，得到第三摘要；  步骤S13-3 :所述USB key使用当前数字证书的私钥对所述第三摘要进行数字签名，得到第三数字签名，并按照所述预设格式对所述第三数字签名进行封装，得到第八数据；  步骤S13-4 :所述USB key按照所述预设格式对所述第二申请包、所述第七数据和所述第八数据进行封装，得到所述第三申请包，将所述指定密钥所对应的标志位复位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求3或5或6或8所述的方法，其特征在于，所述摘要算法可以是所述USB Key中内置的固定算法，或根据所述主机发送的命令在所述USB key内部的预置算法集合中查找对应的算法。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.	一种下载数字证书的装置，其特征在于，所述装置包括接收模块、第一判断模块、第二判断模块、密钥生成模块、置位模块、第三判断模块、第一生成模块、第二生成模块、第三生成模块、复位模块、执行模块、发送模块和存储证书模块；  所述接收模块，用于接收主机发送的命令；  所述第一判断模块，用于判断所述命令类型；  所述第二判断模块，用于判断将要生成的密钥对应的标志位是否置位；&#183;  所述密钥生成模块，用于生成密钥；  所述置位模块，用于将所述生成的密钥所对应的标志位置位；  所述第三判断模块，用于判断指定密钥所对应的标志位是否置位；  所述第一生成模块，用于使用所述指定密钥的私钥对由所述指定密钥的公钥、生成所述指定密钥的算法标识、申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包；  所述第二生成模块，用于使用内置证书的私钥对由所述内置证书和所述第一申请包组成的第二数据包进行数字签名，并生成第二申请包；  所述第三生成模块，使用当前数字证书的私钥对由所述第二申请包和当前数字证书组成的第三数据包进行数字签名，并生成第三申请包；  所述复位模块，用于将所述指定密钥所对应的标志位复位；  所述执行模块，用于执行除生成密钥的命令、生成第一申请包命令、存储数字证书命令和生成第二申请包命令之外的其他命令；  所述发送模块，用于将所述第一申请包、所述第三申请包、执行结果、所述密钥已经存在的信息和错误信息返回给所述主机；  所述存储证书模块，用于根据存储数字证书命令中保存证书数据的偏移，将所述证书数据存入相应位置，并记录所述位置和密钥标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的装置，其特征在于，所述第一生成模块包括第一封装单元、第一摘要单元和第一签名单元；  所述第一封装单元，用于按照预设格式对所述指定密钥的公钥进行封装，得到第一数据；按照所述预设格式对所述USB key中所述生成指定密钥的算法标识、所述申请包属性字符串、所述版本和所述标识信息进行封装，得到第二数据；按照所述预设格式对所述第一数据和所述第二数据进行封装，得到第三数据；按照所述预设格式对第一数字签名进行封装，得到第四数据；按照所述预设格式对所述第三数据和所述第四数据进行封装，得到所述第一申请包；  所述第一摘要单元，用于根据摘要算法对所述第三数据进行计算，得到第一摘要；   所述第一签名单元，用于使用所述指定密钥的私钥对所述第一摘要进行数字签名，得到所述第一数字签名。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的装置，其特征在于，所述第一生成模块还包括查找单元和解析单元；  所述查找单元，用于根据存储的当前数字证书的位置和所述密钥标识查找当前数字证书;  所述解析单元，用于从所述找到的当前数字证书中解析出所述标识信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求11或12所述的装置，其特征在于，所述第二生成模块包括第二封装单元、第二摘要单元和第二签名单元；  所述第二封装单元，用于按照所述预设格式对所述内置证书进行封装，得到第五数据；按照所述预设格式对第二数字签名进行封装，得到第六数据；按照所述预设格式对所述第一申请包、所述第五数据和所述第六数据进行封装，得到所述第二申请包；  所述第二摘要单元，用于根据所述摘要算法对所述第一申请包进行计算，得到第二摘要；  所述第二签名单元，用于使用所述内置证书的私钥对所述第二摘要进行数字签名，得到所述第二数字签名。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的装置，其特征在于，所述第三生成模块包括第三封装单元、第三摘要单元和第三签名单元；  所述第三封装单元，用于按照所述预设格式对当前数字证书进行封装，得到第七数据；按照所述预设格式对第三数字签名进行封装，得到第八数据；按照所述预设格式对所述第二申请包、所述第七数据和所述第八数据进行封装，得到所述第三申请包；  所述第三摘要单元，用于根据所述摘要算法对所述第二申请包进行计算，得到第三摘要；  所述第三签名单元，用于使用当前数字证书的私钥对所述第三摘要进行数字签名，得到所述第三数字签名。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的装置，其特征在于，所述装置还包括查找模块，用于根据所述主机发送的命令在所述USB key内部的预置算法集合中查找对应的摘要算法。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58230077" lang="ZH" load-source="patent-office" class="description">
+    <p>一种下载数字证书的方法和装置技术领域[0001]	本发明涉及信息安全领域，尤其涉及一种下载数字证书的方法和装置。背景技术[0002]	数字证书就是互联网通讯中用来标志和证明网络通信双方身份的数字信息文件， 包含公开密钥拥有者信息以及公开密钥的文件。它由一个权威机构&#8212;&#8212;CA(Certificate Authority，证书授权)中心发行，人们可以在网上用它来识别对方的身份。以数字证书为核心的加密技术可以对网络上传输的信息进行加密和解密、数字签名和签名验证，确保网上传递信息的机密性、完整性。[0003]	现有技术中，申请下发和更新UEB key的数字证书的申请包由主机来组织完成，在这个过程中，他人可以通过主机来修改申请包中的数据，导致CA不能对真正的USB key下发数字证书，使USB key数字证书的下发过程存在安全隐患。发明内容[0004]	本发明的目的是为了克服现有技术的不足，提供一种下载数字证书的方法和装置，提高了下载数字证书的安全性。[0005]	一种下载数字证书的方法，包括：[0006]	步骤SI ：USB Key等待接收主机发送的命令；[0007]	步骤S2 :所述USB Key判断所述命令类型，若是生成密钥的命令则执行步骤S3，若是生成第一申请包的命令则执行步骤S6，若是存储数字证书命令则执行步骤S9，若是生成第三申请包的命令则执行步骤S10，若是其他命令则执行步骤S15，若是非法命令则执行步骤 S16 ；[0008]	步骤S3 :所述USB Key判断将要生成的密钥对应的标志位是否置位，是则返回密钥已经存在的信息给所述主机，执行步骤SI，否则执行步骤S4 ；[0009]	步骤S4 :所述USB Key生成密钥；[0010]	步骤S5 :所述USB Key将所述生成的密钥所对应的标志位置位，返回步骤SI ；[0011]	步骤S6 :所述USB Key判断指定密钥所对应的标志位是否置位，是则执行步骤S7， 否则返回错误信息，执行步骤Si ；[0012]	步骤S7 :所述USB Key使用所述指定密钥的私钥对由所述指定密钥的公钥、生成所述指定密钥的算法标识、第一申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包，将所述指定密钥所对应的标志位复位；[0013]	步骤S8 :所述USB key将所述第一申请包返回给所述主机,返回步骤SI ；[0014]	步骤S9 :所述USB Key将证书数据存入相应位置，并记录所述位置和密钥标识，返回步骤SI ；[0015]	步骤SlO :所述USB Key判断指定密钥所对应的标志位是否为置位，是则执行步骤 S11，否则返回错误信息，执行步骤SI ；[0016]	步骤Sll :所述USB Key使用所述指定密钥的私钥对由所述指定密钥的公钥、生成指定密钥的算法标识、第三申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包；[0017]	步骤S12:所述USB Key使用内置证书的私钥对由所述内置证书和所述第一申请包组成的第二数据包进行数字签名，并生成第二申请包；[0018]	步骤S13 :所述USB Key使用当前数字证书的私钥对由所述第二申请包和当前数字证书组成的第三数据包进行数字签名，并生成第三申请包，将所述指定密钥所对应的标志位复位；[0019]	步骤S14:所述USB key将所述第三申请包返回给所述主机,返回步骤SI ;[0020]	步骤S15:所述USB key执行相应命令，将执行结果返回给所述主机，返回步骤 Si ；[0021]	步骤S16:所述USB key返回错误信息给所述主机,返回步骤SI。[0022]	所述步骤S7中，所述生成指定密钥的算法标识预先存储在USB Key中，所述第一申请包属性字符串预先设置在所述USB Key中；所述版本由所述主机指定，通过所述生成第一申请包的命令发送给所述USB Key ;所述标识信息存储在所述生成第一申请包命令中， 由所述主机发送给所述USB Key0[0023]	所述步骤S7包括：[0024]	步骤S7-1 :所述USB key按照预设格式对所述指定密钥的公钥进行封装，得到第一数据；[0025]	步骤S7-2 :所述USB key按照所述预设格式对所述USB key中所述生成指定密钥的算法标识、所述第一申请包属性字符串、所述版本和所述标识信息进行封装，得到第二数据；[0026]	步骤S7-3 :所述USB key按照所述预设格式对所述第一数据和所述第二数据进行封装，得到第三数据；[0027]	步骤S7-4 :所述USB key根据摘要算法对所述第三数据进行计算，得到第一摘要；[0028]	步骤S7-5 :所述USB key使用所述指定密钥的私钥对所述第一摘要进行数字签名，得到第一数字签名，并按照所述预设格式对所述第一数字签名进行封装，得到第四数据；[0029]	步骤S7-6 :所述USB key按照所述预设格式对所述第三数据和所述第四数据进行封装，得到所述第一申请包，将所述指定密钥所对应的标志位复位。[0030]	所述步骤Sll中，所述生成指定密钥的算法标识预先存储在USB Key中，所述第三申请包属性字符串预先设置在所述USB Key中；所述版本由所述主机指定，通过所述生成第三申请包的命令发送给所述USB Key ;所述标识信息的获取方式可以是：所述主机将所述标识信息存储在所述生成第三申请包命令中，发送给所述USB Key或所述USB Key根据存储的当前数字证书的位置检索到当前数字证书，从当前数字证书中解析出所述标识信肩、O[0031]	所述步骤Sll包括：[0032]	步骤Sll-I :所述USB key按照预设格式对所述指定密钥的公钥进行封装，得到第一数据；[0033]	步骤S11-2 :所述USB key按照所述预设格式对所述USB key中所述生成指定密钥的算法标识、所述第三申请包属性字符串、所述版本和所述标识信息进行封装，得到第二数据；[0034]	步骤S11-3 :所述USB key按照所述预设格式对所述第一数据和所述第二数据进行封装，得到第三数据；[0035]	步骤S11-4 :所述USB key根据摘要算法对所述第三数据进行计算，得到第一摘要；[0036]	步骤S11-5 :所述USB key使用所述指定密钥的私钥对所述第一摘要进行数字签名，得到第一数字签名，并按照所述预设格式对所述第一数字签名进行封装，得到第四数据；[0037]	步骤S11-6 :所述USB key按照所述预设格式对所述第三数据和所述第四数据进行封装，得到所述第一申请包。</p>
+    <p>[0038]所述步骤S12包括：[0039]步骤S12-1 :所述USB key按照所述预设格式对所述内置证书进行封装，得到第五步骤数据；[0040]S12-2 :所述USB key根据所述摘要算法对所述第一申请包进行计算，得到第二摘要；[0041]	步骤S12-3 :所述USB key使用所述内置证书的私钥对所述第二摘要进行数字签名，得到第二数字签名，并按照所述预设格式对所述第二数字签名进行封装，得到第六数据；[0042]	步骤S12-4 :所述USB key按照所述预设格式对所述第一申请包、所述第五数据和所述第六数据进行封装，得到所述第二申请包。[0043]	所述内置证书在生产过程中预置在所述USB key内部。[0044]	所述步骤S13包括：[0045]	步骤S13-1 :所述USB key按照所述预设格式对当前数字证书进行封装，得到第七数据；[0046]	步骤S13-2 :所述USB key根据所述摘要算法对所述第二申请包进行计算，得到第三摘要；[0047]	步骤S13-3 :所述USB key使用当前数字证书的私钥对所述第三摘要进行数字签名，得到第三数字签名，并按照所述预设格式对所述第三数字签名进行封装，得到第八数据；[0048]	步骤S13-4 :所述USB key按照所述预设格式对所述第二申请包、所述第七数据和所述第八数据进行封装，得到所述第三申请包，将所述指定密钥所对应的标志位复位。[0049]	所述摘要算法可以是所述USB Key中内置的固定算法，或根据所述主机发送的命令在所述USB key内部的预置算法集合中查找对应的算法。[0050]	一种下载数字证书的装置，包括接收模块、第一判断模块、第二判断模块、密钥生成模块、置位模块、第三判断模块、第一生成模块、第二生成模块、第三生成模块、复位模块、 执行模块、发送模块和存储证书模块；[0051]	所述接收模块，用于接收主机发送的命令；[0052]	所述第一判断模块，用于判断所述命令类型；[0053]	所述第二判断模块，用于判断将要生成的密钥对应的标志位是否置位；[0054]	所述密钥生成模块，用于生成密钥；[0055]	所述置位模块，用于将所述生成的密钥所对应的标志位置位；[0056]	所述第三判断模块，用于判断指定密钥所对应的标志位是否置位；[0057]	所述第一生成模块，用于使用所述指定密钥的私钥对由所述指定密钥的公钥、生成所述指定密钥的算法标识、申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包；[0058]	所述第二生成模块，用于使用内置证书的私钥对由所述内置证书和所述第一申请包组成的第二数据包进行数字签名，并生成第二申请包；[0059]	所述第三生成模块，使用当前数字证书的私钥对由所述第二申请包和当前数字证书组成的第三数据包进行数字签名，并生成第三申请包；[0060]	所述复位模块，用于将所述指定密钥所对应的标志位复位；[0061]	所述执行模块，用于执行除生成密钥的命令、生成第一申请包命令、存储数字证书命令和生成第二申请包命令之外的其他命令；[0062]	所述发送模块，用于将所述第一申请包、所述第三申请包、执行结果、所述密钥已经存在的信息和错误信息返回给所述主机；[0063]	所述存储证书模块，用于根据存储数字证书命令中保存证书数据的偏移，将所述证书数据存入相应位置，并记录所述位置和密钥标识。[0064]	所述第一生成模块包括第一封装单元、第一摘要单元和第一签名单元；[0065]	所述第一封装单元，用于按照预设格式对所述指定密钥的公钥进行封装，得到第一数据；按照所述预设格式对所述USB key中所述生成指定密钥的算法标识、所述申请包属性字符串、所述版本和所述标识信息进行封装，得到第二数据；按照所述预设格式对所述第一数据和所述第二数据进行封装，得到第三数据；按照所述预设格式对第一数字签名进行封装，得到第四数据；按照所述预设格式对所述第三数据和所述第四数据进行封装，得到所述第一申请包；[0066]	所述第一摘要单元，用于根据摘要算法对所述第三数据进行计算，得到第一摘要；[0067]	所述第一签名单元，用于使用所述指定密钥的私钥对所述第一摘要进行数字签名，得到所述第一数字签名。[0068]	所述第一生成模块还包括查找单元和解析单元；[0069]	所述查找单元，用于根据存储的当前数字证书的位置和所述密钥标识查找当前数字证书；[0070]	所述解析单元，用于从所述找到的当前数字证书中解析出所述标识信息。[0071]	所述第二生成模块包括第二封装单元、第二摘要单元和第二签名单元；[0072]	所述第二封装单元，用于按照所述预设格式对所述内置证书进行封装，得到第五数据；按照所述预设格式对第二数字签名进行封装，得到第六数据；按照所述预设格式对所述第一申请包、所述第五数据和所述第六数据进行封装，得到所述第二申请包；[0073]	所述第二摘要单元，用于根据所述摘要算法对所述第一申请包进行计算，得到第9二摘要；[0074]	所述第二签名单元，用于使用所述内置证书的私钥对所述第二摘要进行数字签名，得到所述第二数字签名。[0075]	所述第三生成模块包括第三封装单元、第三摘要单元和第三签名单元；[0076]	所述第三封装单元，用于按照所述预设格式对当前数字证书进行封装，得到第七数据；按照所述预设格式对第三数字签名进行封装，得到第八数据；按照所述预设格式对所述第二申请包、所述第七数据和所述第八数据进行封装，得到所述第三申请包；[0077]	所述第三摘要单元，用于根据所述摘要算法对所述第二申请包进行计算，得到第三摘要；[0078]	所述第三签名单元，用于使用当前数字证书的私钥对所述第三摘要进行数字签名，得到所述第三数字签名。[0079]	所述装置还包括查找模块，用于根据所述主机发送的命令在所述USB key内部的预置算法集合中查找对应的摘要算法。[0080]	本发明与现有技术相比，具有以下优点：[0081]	申请和更新USB key数字证书用到的申请包均由USB key组织完成，提高数字证书下发的安全 性。附图说明[0082]	图I是本发明实施例I提供的一种下载数字证书的方法流程图；[0083]	图2是本发明实施例2提供的一种下载数字证书的方法流程图；[0084]	图3是本发明实施例3提供的一种下载数字证书的装置的方框示意图。具体实施方式[0085]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。[0086]	实施例I[0087]	本发明的实施例I提供一种下载数字证书的方法，如图I所示，USB key已与主机连接，包括：[0088]	步骤101 ：USB Key等待接收主机发送的命令；[0089]	步骤102 ：USB Key判断命令类型，若是生成密钥的命令则执行步骤103，若是生成第一申请包的命令则执行步骤105，若是存储数字证书命令则执行步骤108，若是生成第三申请包的命令则执行步骤109，若是其他命令则执行步骤114，若是非法命令则执行步骤 115 ；[0090]	步骤103 ：USB Key判断所要生成的密钥对应的标志位是否置位，是则返回密钥已经存在的信息，执行步骤101，否则USB Key生成密钥，执行步骤104 ；[0091]	步骤104 ：USB Key将生成的密钥所对应的标志位置位，返回步骤101 ；[0092]	步骤105 ：USB Key判断指定密钥所对应的标志位是否置位，是则执行步骤106，否则返回错误信息，执行步骤101 ；[0093]	步骤106 ：USB Key使用指定密钥的私钥对由指定密钥的公钥、生成指定密钥的算法标识、第一申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包，将指定密钥所对应的标志位复位；[0094]	本实施例中，该步骤中的生成指定密钥的算法标识预先存储在USB Key中；[0095]	本实施例中，该步骤中的第一申请包属性字符串预先设置在USB Key中；[0096]	本实施例中，该步骤中的版本由主机指定，通过生成第一申请包的命令发送给USB Key ；[0097]	本实施例中，该步骤中的标识信息存储在生成第一申请包命令的数据域中，由主机发送给USB Key ；[0098]	步骤107 ：USB key将第一申请包返回给主机,返回步骤101 ；[0099]	步骤108 ：USB Key根据存储数字证书命令中保存证书数据的偏移，将证书数据存入相应位置，并记录该位置和密钥标识，返回步骤101 ；[0100]	步骤109 ：USB Key判断指定密钥所对应的标志位是否置位，是则执行步骤110，否则返回错误信息，执行步 骤101 ；[0101]	步骤110 ：USB Key使用指定密钥的私钥对由指定密钥的公钥、生成指定密钥的算法标识、第三申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包；[0102]	本实施例中，该步骤中的生成指定密钥的算法标识预先存储在USB Key中；[0103]	本实施例中，该步骤中的第三申请包属性字符串预先设置在USB Key中；[0104]	本实施例中，该步骤中的版本由主机指定，通过生成第三申请包的命令发送给USB Key ；[0105]	本实施例中，该步骤中的获取标识信息的方式可以是：主机将标识信息存储在生成第三申请包命令的数据域中，发送给USB Key ;除此之外，优选地，获取标识信息的方式还可以是：USB Key根据存储的当前数字证书的位置和密钥标识检索到当前数字证书，从当前数字证书中解析出标识信息；[0106]	步骤111:USB Key使用内置证书的私钥对由内置证书和第一申请包组成的第二数据包进行数字签名，并生成第二申请包；[0107]	步骤112 ：USB Key使用当前数字证书的私钥对由第二申请包和当前数字证书组成的第三数据包进行数字签名，并生成第三申请包，将指定密钥所对应的标志位复位；[0108]	步骤113 ：USB key将第三申请包返回给主机，返回步骤101 ；[0109]	步骤114 ：USB key执行相应命令，将执行结果返回给主机，返回步骤101 ；[0110]	步骤115 ：USB key返回错误信息给主机,返回步骤101 ；[0111]	本实施例中，第一申请包中的内容只有版本和标识信息是由主机发送给USB key 的，第三申请包中的内容只有版本是由主机发送给USB key的，其余的内容如算法、指定密钥、内置证书、当前数字证书，都是在USB key内部生成或查找得到的，提高了数字证书下发的安全性。[0112]	实施例2[0113]	本发明的实施例2提供一种下载数字证书的方法，如图2所示，USB key已与主机连接，包括：[0114]	步骤201 ：USB Key等待接收主机发送的命令；[0115]	步骤202:USB Key判断命令类型，若是生成密钥的命令则执行步骤203，若是生成 PKCS#10申请包的命令则执行步骤207，若是存储数字证书命令则执行步骤216，若是生成 PKCS#7申请包的命令则执行步骤217，若是其他命令则执行步骤234，若是非法命令则执行步骤235 ；[0116]	本实施例中，命令包括命令头和数据域，USB Key根据命令头判断命令类型，例如， 生成密钥命令的命令头为0046XX00，生成PKCS#10申请包命令的命令头为004A0000，生成 PKCS#7申请包命令的命令头为004A0100 ;本实施例中，存储数字证书命令包括保存证书数据的偏移，即证书的位置，命令长度，密钥标识和证书数据；[0117]	步骤203 ：USB Key判断所要生成的密钥对应的标志位是否为1，是则执行步骤 204，否则执行步骤205 ；[0118]	本实施例中，密钥标志位在出厂时清空；[0119]	本实施例中，USB Key根据生成密钥命令的数据域中的密钥ID和密钥类型查找将要生成的密钥对应的标志位；[0120]	步骤204 ：USB Key返回密钥已经存在的信息，执行步骤201 ；[0121]	步骤205 ：USB Key按照预设算法生成密钥；[0122]	本实施例中，根据生成密钥命令的命令头中第5、6字节的内容确定预设算法的类型；例如，00表示按照RSA算法生成密钥，01表示按照SM2算法生成密钥；除此之外，USB Key也可以按照其他算法生成密钥；[0123]	本实施例中，预设算法为RSA算法；[0124]	步骤206 ：USB Key将生成的密钥所对应的标志位置1，返回步骤201 ；[0125]	步骤207 ：USB Key判断指定密钥所对应的标志位是否为1，是则执行步骤209，否则执行步骤208 ；[0126]	具体地，USB Key根据生成PKCS#10申请包的命令中的密钥ID和密钥类型查找指定&#174;钥和指定&#174;钥所对应的标志位;[0127]	主机发送的生成PKCS#10申请包的命令包括：命令类型、命令内容、命令参数、命令长度、版本、密钥ID、密钥类型、摘要算法名称、标识信息；[0128]	步骤208 ：USB Key返回错误信息，执行步骤201 ；[0129]	步骤209 ：USB key按照预设格式对指定密钥的公钥进行封装，得到第一数据；[0130]	本实施例中，预设格式为TLV格式；例如，[0131]	02 81 81 00 D6 F8 7B 45 4F 8F 66 15 IA A4 "N;[0132]	例如，本实施例中，得到的第一数据为：[0133]	03	81	8D	00	//	公钥									[0134]	30	81	89	//N和E (大序）											[0135]	02	81	81	00	D6	F8	7B	45	4F	8F	66	15	IA	A4	"N[0136]	66	F4	27	42	88	5F	42	3F	09	19	73	09	76	3B	08 04[0137]	40	03	FA	5C	A7	9A	DE	21	DB	7A	2F	CA	51	D7	BF 38[0138]	37	C4	AA	C4	83	IE	FO	OF	8B	DC	57	A7	F2	FA	C2 8612[0139]	AA 81 9D 83 84 7B 19 93 47 ED 6C FD 82 24 41 D6</p>
+    <p>[0140]	58 BI BO 7A 8C E4 7A 31 BC E9 44 86 7C CD 26 BA</p>
+    <p>[0141]	5C D5 56 B9 53 CB 75 82 59 AB EB 68 63 02 47 71</p>
+    <p>[0142]	9D 95 8E EF DF 57 Fl D3 AO 54 53 7A 59 5D C5 85</p>
+    <p>[0143]	13 BE FF 64 A5 7D</p>
+    <p>[0144]	02 03 01 00 01 //E</p>
+    <p>[0145]	步骤210:USB key按照预设格式对USB key中生成指定密钥的算法标识、PKCS#10申请包属性字符串、版本和标识信息进行封装，得到第二数据； [0146]	本实施例中，该步骤中的生成指定密钥的算法标识预先存储在USB Key中；</p>
+    <p>[0147]	本实施例中，该步骤中的PKCS#10申请包属性字符串预先设置在USB Key ；</p>
+    <p>[0148]	本实施例中，该步骤中的版本由主机指定，通过生成PKCS#10申请包的命令发送给 USB	Key ；</p>
+    <p>[0149]	本实施例中，该步骤中的标识信息存储在生成PKCS#10申请包命令的数据域中，由主机发送给USB Key ；</p>
+    <p>[0150]	例如，本实施例中，得到的第二数据为：</p>
+    <p>[0151]	30 81 C6 //请求信息，begin</p>
+    <p>[0152]	02 01 00 //版本</p>
+    <p>[0153]	30 ID 31 IB 30 19 06 03 55 04 03 13 12 36 31 30 31 32 30 31 39 58 3132 33	34 35 36 37 38 39 //"CN =，c = &#183; &#183; &#183;，ο =…"</p>
+    <p>[0154]	30 81 9F</p>
+    <p>[0155]	30 OD 06 09 2Α 86 48 86 F7 OD 01 01 01 05 00 //公钥算法标识，RSA</p>
+    <p>[0156]	AO 00 //属性(空)//end</p>
+    <p>[0157]	步骤211 ：USB key按照预设格式对第一数据和第二数据进行封装，得到第三数据；</p>
+    <p>[0158]	例如，本实施例中，得到的第三数据为：</p>
+    <p>[0159]	30 81 C6 //请求信息，begin</p>
+    <p>[0160]	02 01 00 //版本</p>
+    <p>[0161]	30 ID 31 IB 30 19 06 03 55 04 03 13 12 36 31 30 31 32 30 31 39 58 3132 33	34 35 36 37 38 39 //"CN =，c = &#183; &#183; &#183;，ο =…"</p>
+    <p>[0162]	30 81 9F</p>
+    <p>[0163]	30 OD 06 09 2Α 86 48 86 F7 OD 01 01 01 05 00 //公钥算法标识，RSA</p>
+    <p>[0164]	03 81 8D 00 //公钥</p>
+    <p>[0165]	30 81 89 //N 和 E (大序）</p>
+    <p>[0166]	02 81 81 00 D6 F8 7Β 45 4F 8F 66 15 IA Α4 "N</p>
+    <p>[0167]	66 F4 27 42 88 5F 42 3F 09 19 73 09 76 3Β 08 04</p>
+    <p>[0168]	40 03 FA 5C Α7 9Α DE 21 DB 7Α 2F CA 51 D7 BF 38</p>
+    <p>[0169]	37 C4 AA C4 83 IE FO OF 8Β DC 57 Α7 F2 FA C2 86</p>
+    <p>[0170]	AA 81 9D 83 84 7Β 19 93 47 ED 6C FD 82 24 41 D6</p>
+    <p>[0171]	58 BI BO 7Α 8C Ε4 7Α 31 BC Ε9 44 86 7C CD 26 BA[0172]	5C D5 56 B9 53 CB 75 82 59 AB EB 68 63 02 47 71</p>
+    <p>[0173]	9D 95 8E EF DF 57 Fl D3 AO 54 53 7A 59 5D C5 85</p>
+    <p>[0174]	13 BE FF 64 A5 7D</p>
+    <p>[0175]	02 03 01 00 01 //E</p>
+    <p>[0176]	AO 00 //属性(空)//end</p>
+    <p>[0177]	步骤212 ：USB key根据摘要算法对第三数据进行计算，得到第一摘要；</p>
+    <p>[0178]	本实施例中，摘要算法为HASH算法，包括MD5、SHA-I等；优选地，本实施例中的摘要算法为SHA-I ;本实施例中，摘要算法可以是USB Key中内置的固定算法，也可以根据主机发送的命令在USB key内部的预置算法集合中查找对应的算法； [0179]	步骤213 ：USB key使用指定密钥的私钥对第一摘要进行数字签名，得到第一数字签名，并按照预设格式对第一数字签名进行封装，得到第四数据；</p>
+    <p>[0180]	例如，本实施例中，得到的第四数据为：</p>
+    <p>[0181]	30 OD //签名算法，begin</p>
+    <p>[0182]	06 09 2A 86 48 86 F7 OD 01 01 05 05 00 //RSAwithSHAl //数字签名算法end</p>
+    <p>[0183]	03 81 81 00 //(签名值，私钥对请求信息摘要（按照算法要求填充padding)的签名）begin</p>
+    <p>[0184]	14 El 62 68 9E 94 35 2C CO 10 OC D6 28 83 4F 65</p>
+    <p>[0185]	El C9 D4 34 37 84 C3 37 41 61 F2 3B 5C 87 3F 65</p>
+    <p>[0186]	5A 37 75 F9 8C 43 CC 9C 70 7A B5 41 8D 9E 8C 29</p>
+    <p>[0187]	07 26 35 FE 32 E3 DF C5 26 7E 26 9D 89 77 AA 16</p>
+    <p>[0188]	ID OD CE 9C 88 73 10 AC B3 B2 BI EC A2 C6 24 OD</p>
+    <p>[0189]	B6 77 5F D6 IF 8A DC 19 B4 28 80 B2 4F 46 44 64</p>
+    <p>[0190]	33 EB 48 F7 6A 65 3F F3 E6 40 F7 19 15 BE AB DF</p>
+    <p>[0191]	DD BF Al AB 65 9B 3E 03 E4 63 7C 18 Al DD C9 EB //end</p>
+    <p>[0192]	步骤214 ：USB key按照预设格式对第三数据和第四数据进行封装，得到PKCS#10申请包，将指定密钥所对应的标志位清O ;</p>
+    <p>[0193]	具体地，USB key按照以下格式编码形成PKCS#10申请包：</p>
+    <p>[0194]	30 82 01 5C</p>
+    <p>[0195]	30 81 C6 //请求信息，begin</p>
+    <p>[0196]	02 01 00 //版本</p>
+    <p>[0197]	30 ID 31 IB 30 19 06 03 55 04 03 13 12 36 31 30 31 32 30 31 39 58 3132 33	34 35 36 37 38 39 //"CN =，c = &#183; &#183; &#183;，ο =…"</p>
+    <p>[0198]	30 81 9F</p>
+    <p>[0199]	30 OD 06 09 2Α 86 48 86 F7 OD 01 01 01 05 00 //公钥算法标识，RSA</p>
+    <p>[0200]	03 81 8D 00 // 公钥</p>
+    <p>[0201]	30 81 89 //N 和 E (大序）</p>
+    <p>[0202]	02 81 81 00 D6 F8 7Β 45 4F 8F 66 15 IA Α4 //N</p>
+    <p>[0203]	66 F4 27 42 88 5F 42 3F 09 19 73 09 76 3Β 08 04[0204]	40 03 FA 5C A7 9A DE 21 DB 7A 2F CA 51 D7 BF 38</p>
+    <p>[0205]	37 C4 AA C4 83 IE FO OF 8B DC 57 A7 F2 FA C2 86</p>
+    <p>[0206]	AA 81 9D 83 84 7B 19 93 47 ED 6C FD 82 24 41 D6</p>
+    <p>[0207]	58 BI BO 7A 8C E4 7A 31 BC E9 44 86 7C CD 26 BA</p>
+    <p>[0208]	5C D5 56 B9 53 CB 75 82 59 AB EB 68 63 02 47 71</p>
+    <p>[0209]	9D 95 8E EF DF 57 Fl D3 AO 54 53 7A 59 5D C5 85 </p>
+    <p>[0210]	13 BE FF 64 A5 7D</p>
+    <p>[0211]	02 03 Ol OO Ol //E</p>
+    <p>[0212]	AO OO //属性（空）//end</p>
+    <p>[0213]	30 OD //签名算法，begin</p>
+    <p>[0214]	06 09 2k 86 48 86 F7 OD 01 01 05 05 00 //RSAwithSHAl //数字签名算法end</p>
+    <p>[0215]	03 81 81 00 //(签名值,私钥对请求信息摘要（按照算法要求填充padding)的签名）begin</p>
+    <p>[0216]	14 El 62 68 9E 94 35 2C CO 10 OC D6 28 83 4F 65</p>
+    <p>[0217]	El C9 D4 34 37 84 C3 37 41 61 F2 3B 5C 87 3F 65</p>
+    <p>[0218]	5A 37 75 F9 8C 43 CC 9C 70 7A B5 41 8D 9E 8C 29</p>
+    <p>[0219]	07 26 35 FE 32 E3 DF C5 26 7E 26 9D 89 77 AA 16</p>
+    <p>[0220]	ID OD CE 9C 88 73 10 AC B3 B2 BI EC A2 C6 24 OD</p>
+    <p>[0221]	B6 77 5F D6 IF 8A DC 19 B4 28 80 B2 4F 46 44 64</p>
+    <p>[0222]	33 EB 48 F7 6A 65 3F F3 E6 40 F7 19 15 BE AB DF</p>
+    <p>[0223]	DD BF Al AB 65 9B 3E 03 E4 63 7C 18 Al DD C9 EB //end</p>
+    <p>[0224]	步骤215 ：USB key将PKCS#10申请包返回给主机，返回步骤201 ；</p>
+    <p>[0225]	步骤216 ：USB Key根据存储数字证书命令中保存证书数据的偏移，将证书数据存入相应位置，并记录该位置和密钥标识，返回步骤201 ；</p>
+    <p>[0226]	步骤217 ：USB Key判断指定密钥所对应的标志位是否为1，是则执行步骤219，否则执行步骤218 ；</p>
+    <p>[0227]	具体地，USB Key根据生成PKCS#7申请包的命令中的密钥ID和密钥类型查找指定S钥和指定S钥所对应的标志位;</p>
+    <p>[0228]	本实施例中，主机发送的生成PKCS#7申请包的命令包括：命令类型、命令内容、命令参数、命令长度、版本、密钥ID、密钥类型、摘要算法名称、标识信息；</p>
+    <p>[0229]	步骤218 ：USB Key返回错误信息，执行步骤201 ；</p>
+    <p>[0230]	步骤219 ：USB key按照预设格式对指定密钥的公钥进行封装，得到第一数据；</p>
+    <p>[0231]	步骤220 ：USB key按照预设格式对USB key中生成指定密钥的算法标识、PKCS#7申请包属性字符串、版本和标识信息进行封装，得到第二数据；</p>
+    <p>[0232]	本实施例中，该步骤中的生成指定密钥的算法标识预先存储在USB Key中；</p>
+    <p>[0233]	本实施例中，该步骤中的PKCS#7申请包属性字符串预先设置在USB Key ；</p>
+    <p>[0234]	本实施例中，该步骤中的版本由主机指定，通过生成PKCS#7申请包的命令发送给USB Key ；[0235]	优选地，本实施例中，该步骤中的获取标识信息的方式可以是：主机将标识信息存储在生成PKCS#7申请包命令的数据域中，发送给USB Key ;除此之外，获取标识信息的方式还可以是，USB Key根据存储的当前数字证书的位置和密钥标识检索到当前数字证书，从当前数字证书中解析出标识信息；</p>
+    <p>[0236]	步骤221 ：USB key按照预设格式对第一数据和第二数据进行封装，得到第三数据；</p>
+    <p>[0237]	步骤222 ：USB key根据摘要算法对第三数据进行计算，得到第一摘要；</p>
+    <p>[0238]	本实施例中，摘要算法为HASH算法，包括MD5、SHA-I等；优选地，本实施例中的摘要算法为SHA-I ;本实施例中，摘要算法可以是USB Key中内置的固定算法，也可以根据主机发送的命令在USB key内部的预置算法集合中查找对应的算法；</p>
+    <p>[0239]	步骤223 ：USB key使用指定密钥的私钥对第一摘要进行数字签名，得到第一数字签名，并按照预设格式对第一数字签名进行封装，得到第四数据； </p>
+    <p>[0240]	步骤224 ：USB key按照预设格式对第三数据和第四数据进行封装，得到PKCS#10申请包；</p>
+    <p>[0241]	具体地，本实施例中的PKCS#10申请包的格式与步骤214中PKCS#10申请包的格式相同，在此不再赘述；</p>
+    <p>[0242]	例如，本实施例中，得到的PKCS#10申请包如下：</p>
+    <p>[0243]	30 82 01 60 (sequence 160 byte)</p>
+    <p>[0244]	06 09 2k 86 48 86 F7 OD 01 07 01 (data)//数据类型</p>
+    <p>[0245]	AO 82 01 51 (OPTIONAL 151 byte) //数据原文</p>
+    <p>[0246]	04 82 01 4D (oct string 14d byte) //8 位组数据格式</p>
+    <p>[0247]	30 32 30 30 30 30 30 30 30 30 30 30 30 30 30 30</p>
+    <p>[0248]	30 34 31 30 30 31 30 31 30 30 30 30 30 30 30 30</p>
+    <p>[0249]	30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30</p>
+    <p>[0250]	30 30 30 30 30 30 30 32 37 35 53 4E 30 30 30 30</p>
+    <p>[0251]	31 30 BD BB D2 D7 C3 FB B3 C6 A3 BA 53 56 30 30</p>
+    <p>[0252]	30 30 31 35 B8 F6 C8 CB DO C5 CF A2 CE AC BB A4</p>
+    <p>[0253]	20 09 OA 53 4E 30 31 30 30 30 36 DO D5 C3 FB A3</p>
+    <p>[0254]	BA 53 56 30 31 30 30 30 36 CD F5 BA A3 B2 A8 53</p>
+    <p>[0255]	4E 30 32 30 30 30 38 BF CD BB A7 BA C5 A3 BA 53</p>
+    <p>[0256]	56 30 32 30 30 31 36 31 36 31 32 35 30 37 34 30</p>
+    <p>[0257]	32 38 36 38 37 35 38 53 4E 30 33 30 30 31 30 BD</p>
+    <p>[0258]	BB D2 D7 CA BI BC E4 A3 BA 53 56 30 33 30 30 31</p>
+    <p>[0259]	39 32 30 31 32 2D 30 33 2D 33 30 20 31 30 3A 34</p>
+    <p>[0260]	39 3A 34 37 44 4E 30 30 30 30 31 31 41 63 74 69</p>
+    <p>[0261]	6F 6E 4E 61 6D 65 3A 44 56 30 30 30 30 31 39 41</p>
+    <p>[0262]	64 6D 43 75 73 74 42 61 73 65 49 6E 66 6F 72 41</p>
+    <p>[0263]	63 74 44 4E 30 31 30 30 30 37 6E 43 6E 4E 61 6D</p>
+    <p>[0264]	65 44 56 30 31 30 30 30 36 CD F5 BA A3 B2 A8 44[0265]	4E 30 32 30 30 31 34 63 75 73 74 6F 6D 65 72 6E</p>
+    <p>[0266]	75 6D 62 65 72 44 56 30 32 30 30 31 36 31 36 31</p>
+    <p>[0267]	32 35 30 37 34 30 32 38 36 38 37 35 38 (原文）//原文结束</p>
+    <p>[0268]	步骤225 ：USB key按照预设格式对内置证书进行封装，得到第五数据；</p>
+    <p>[0269]	本实施例中，内置证书在生产过程中预置在USB key内部；</p>
+    <p>[0270]	例如，本实施例中，得到的第五数据如下：</p>
+    <p>[0271]	AO 82 02 7F //证书集开始</p>
+    <p>[0272]	30 82 02 7B //具体证书开始 [0273]	30 82 01 E4</p>
+    <p>[0274]	AO 03 02 01 02 (证书版本）</p>
+    <p>[0275]	02 OA 7B 97 CA 10 27 5A 05 A8 07 IA(issuerAndSerialNumber)</p>
+    <p>[0276]	30 OD</p>
+    <p>[0277]	06 09 2A 86 48 86 F7 OD 01 01 05 05 00 (null)(shalwithRSAEncryption)</p>
+    <p>[0278]	30 IC (主题）</p>
+    <p>[0279]	31 OC 30 OA 06 03 55 04 03 13 03 41 42 43 (abc)</p>
+    <p>[0280]	31 OC 30 OA 06 03 55 04 OA (organizationName) 1303 (可打印字符串）41 42 43 (abc)</p>
+    <p>[0281]	30 IE (you xiao qi)</p>
+    <p>[0282]	17 OD (utc time)31 32 30 33 32 37 30 37 30 32 3537 5A</p>
+    <p>[0283]	17 OD (utc time)31 33 30 34 30 38 30 34 35 39 3134 5A</p>
+    <p>[0284]	30 4A (ban fa zhe)</p>
+    <p>[0285]	31 IE 30 IC 06 03 55 04 03 13 15 31 32 30 30 3834 36	35 35 35 38 2E 30 30 30 30 2E 30 30</p>
+    <p>[0286]	32 37 31 IA 30 18 06 03 55 04 OB 13 11 50 65 72 73 6F 6E 61 6C 2043 75	73 74 6F 6D 65 72</p>
+    <p>[0287]	31 OC 30 OA 06 03 55 04 OA 13 03 41 42 43</p>
+    <p>[0288]	30 81 9F (证书公钥）</p>
+    <p>[0289]	30 OD</p>
+    <p>[0290]	06 09</p>
+    <p>[0291]	2A 86 48 86 F7 OD 01 01 01 (rsaEncryption )</p>
+    <p>[0292]	05 00</p>
+    <p>[0293]	03 81 8D (bit string下面的00表不没有补位）</p>
+    <p>[0294]	00 30 81 89</p>
+    <p>[0295]	02 81 81 00 DO 25 89 74 43 47 4B C6 E7 14 646C BE	47</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102932343A/CN102932343AD00181.png"> <img id="idf0001" file="CN102932343AD00181.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102932343A/CN102932343AD00181.png" class="patent-full-image" alt="Figure CN102932343AD00181"> </a> </div>
+    <p>[0333]</p>
+    <p>[0334]</p>
+    <p>[0335]</p>
+    <p>[0336]</p>
+    <p>[0337]</p>
+    <p>[0338]</p>
+    <p>[0339]</p>
+    <p>[0340]法</p>
+    <p>[0341]</p>
+    <p>[0342]</p>
+    <p>[0343]</p>
+    <p>[0344]</p>
+    <p>[0345]</p>
+    <p>[0346]</p>
+    <p>[0347]</p>
+    <p>[0348]</p>
+    <p>[0349]</p>
+    <p>[0350]</p>
+    <p>[0351]</p>
+    <p>[0352]</p>
+    <p>31 OC</p>
+    <p>30 OA 06 03 55 04 OA (ο)13 03 41 42 4330 ID 06 03 55 ID OE (subjectKeyldentifier )</p>
+    <p>04 16 04 14 3D 58 90 5E 72E8 61</p>
+    <p>03</p>
+    <p>Fl</p>
+    <p>16</p>
+    <p>B2</p>
+    <p>27</p>
+    <p>2D</p>
+    <p>OB</p>
+    <p>DE</p>
+    <p>CF</p>
+    <p>9F</p>
+    <p>81</p>
+    <p>B9</p>
+    <p>D3</p>
+    <p>CA</p>
+    <p>61</p>
+    <p>7C</p>
+    <p>83</p>
+    <p>68</p>
+    <p>B6</p>
+    <p>B7</p>
+    <p>BA	54	EB	69	90	CA	78	59	F2	05	64	OB	E9	上06	09	2A	86	48	86	F7	OD	01	01	05	05	■ OC	丨I181	00	//证书中的签名值											EC	3A	El	F9	73	48	FC	F3	39	56	A7	C8		EB	6F	77	42	D3	37	C3	20	AB	EB	5B	89	92	AC34	F7	7B	32	2F	4A	EE	ED	B6	28	E6	09	78	DB2E	5B	54	29	E6	36	80	77	06	94	DE	4E	IE	EF66	46	E5	D8	CA	51	7E	OE	IF	D2	51	53	64	2191	5B	8D	8A	01	8E	24	29	7E	61	9A	69	B2	ElCD	4A	2E	E9	OF	D9	8F	05	OF	97	B5	4E	41	3567	19	B6	BC	54	DB	E6	F5	82	IE	A6	2E	DO	A9</p>
+    <p>xUSB Key给证书的签名算</p>
+    <p>Il证书结束</p>
+    <p>步骤226 ：USB key根据摘要算法对PKCS#10申请包进行计算，得到第二摘要；</p>
+    <p>本实施例中，摘要算法为HASH算法，包括MD5、SHA-I等；优选地，本实施例中的摘要算法为SHA-I ；</p>
+    <p>[0353] 步骤227 ：USB key使用内置证书的私钥对第二摘要进行数字签名，得到第二数字签名，并按照预设格式对第二数字签名进行封装，得到第六数据；</p>
+    <p>[0354]</p>
+    <p>[0355]</p>
+    <p>[0356]</p>
+    <p>[0357]</p>
+    <p>[0358]</p>
+    <p>[0359]</p>
+    <p>[0360]</p>
+    <p>[0361]</p>
+    <p>[0362]</p>
+    <p>[0363]</p>
+    <p>[0364]</p>
+    <p>[0365]</p>
+    <p>[0366]</p>
+    <p>[0367]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102932343A/CN102932343AD00191.png"> <img id="idf0002" file="CN102932343AD00191.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102932343A/CN102932343AD00191.png" class="patent-full-image" alt="Figure CN102932343AD00191"> </a> </div>
+    <p>[0369]	6D	69	E4	78	5D	58	EC	4F	85	91	98	8C	AF	B3	A8	FC[0370]	8F	26	78	78	AE	62	CA	09	51	A2	4D	87	13	9A	A3	13[0371]	E8	31	B4	9C	A7	41	88	IE	84	62	D3	E2	88	B5	94	27[0372]	95	FC	55	4B	85	56	40	DA	C2	AF	33	03	00	42	50	50[0373]	A9	AF	9A	90	57	4D	7C	AO	B6	A7	99	BE	Al	27	5A	48[0374]	步骤228 ；			；USB	I key按照预设格式对PKCS#10									申请包、第		</p>
+    <p>装，得到第一 PKCS#7申请包；</p>
+    <p>[0375]	例如，本实施例中，得到的第一 PKCS#7申请包如下：</p>
+    <p>[0376]	30 82 04 E4 (sequence 4e4 byte)</p>
+    <p>[0377]	06 09 (objectid 9 byte) // 数据包类型</p>
+    <p>[0378]	2k 86 48 86 F7 OD 01 07 02 (p7 signdata)//签名包</p>
+    <p>[0379]	AO 82 04 D5 (OPTIONAL 4d5 byte) (Context Specific 上下文相关）随后就是签名包的全部内容</p>
+    <p>[0380]</p>
+    <p>[0381]</p>
+    <p>[0382]</p>
+    <p>生改变</p>
+    <p>[0383]</p>
+    <p>[0384]</p>
+    <p>30 82 04 Dl (sequence 4dl byte)</p>
+    <p>02	01 01 (INTEGER version I byte) //PK7 版本</p>
+    <p>31	OF (set f byte) //请求者期望对方支持的算法,不同算法会发</p>
+    <p>30 OD (sequence d byte)</p>
+    <p>06 09 2A 86</p>
+    <p>48 86 F7 OD OI OI 05</p>
+    <p>(shalwithRSAEncryption) 05 00 (Null) \\hash 算法</p>
+    <p>[0385]</p>
+    <p>[0386]</p>
+    <p>[0387]</p>
+    <p>[0388]</p>
+    <p>[0389]</p>
+    <p>[0390]</p>
+    <p>[0391]</p>
+    <p>[0392]</p>
+    <p>[0393]</p>
+    <p>[0394]</p>
+    <p>[0395]</p>
+    <p>[0396]</p>
+    <p>[0397]</p>
+    <p>[0398]</p>
+    <p>[0399]</p>
+    <p>[0400]</p>
+    <p>[0401]</p>
+    <p>[0402]</p>
+    <p>[0403]</p>
+    <p>0100D1A6226704E</p>
+    <p>3333B305333D334</p>
+    <p>2400009300822AE</p>
+    <p>33333305333D336</p>
+    <p>0000100AE62B99F</p>
+    <p>3333332B453B336</p>
+    <p>30 82 01 60 (sequence 160 byte)</p>
+    <p>06 09 2A 86 48 86 F7 OD 01 07 01 (data)//数据类型AO 82 01 51 (OPTIONAL 151 byte) //数据原文</p>
+    <p>04 82 01 4D (oct string 14d byte) //8 位组数据格式30 30 30 30 30 30 30 30 30 30</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30</p>
+    <p>BB</p>
+    <p>35</p>
+    <p>53</p>
+    <p>30</p>
+    <p>30</p>
+    <p>3038CA</p>
+    <p>313761</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30D2B84E</p>
+    <p>31303037BI</p>
+    <p>32446D</p>
+    <p>1007600015CDE5</p>
+    <p>333DP33333B246</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30C3C8</p>
+    <p>3130383638E430303A</p>
+    <p>3130</p>
+    <p>32FBCB30</p>
+    <p>30BF</p>
+    <p>3153A3</p>
+    <p>333044</p>
+    <p>30</p>
+    <p>30</p>
+    <p>37</p>
+    <p>B3</p>
+    <p>DO</p>
+    <p>30</p>
+    <p>36</p>
+    <p>CD</p>
+    <p>36</p>
+    <p>4E</p>
+    <p>BA</p>
+    <p>2D</p>
+    <p>30</p>
+    <p>56</p>
+    <p>30</p>
+    <p>30</p>
+    <p>35</p>
+    <p>C6</p>
+    <p>C5</p>
+    <p>30CDBB</p>
+    <p>313053333030</p>
+    <p>0033F657236010</p>
+    <p>335AC3FA335333</p>
+    <p>30</p>
+    <p>30</p>
+    <p>4E</p>
+    <p>BA</p>
+    <p>A2</p>
+    <p>DO</p>
+    <p>BA</p>
+    <p>BA</p>
+    <p>35</p>
+    <p>30</p>
+    <p>3020</p>
+    <p>3130</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30</p>
+    <p>53</p>
+    <p>CE</p>
+    <p>D5</p>
+    <p>A3</p>
+    <p>C5</p>
+    <p>30</p>
+    <p>3033</p>
+    <p>314130</p>
+    <p>30</p>
+    <p>30</p>
+    <p>3056ACC3B2A337</p>
+    <p>3130</p>
+    <p>3063</p>
+    <p>31</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30</p>
+    <p>30</p>
+    <p>BB</p>
+    <p>FB</p>
+    <p>A8</p>
+    <p>BA</p>
+    <p>34</p>
+    <p>30</p>
+    <p>30</p>
+    <p>3A</p>
+    <p>74</p>
+    <p>39</p>
+    <p>0000043330D1491</p>
+    <p>33333AA553B3364</p>
+    <p>20</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102932343A/CN102932343AD00211.png"> <img id="idf0003" file="CN102932343AD00211.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102932343A/CN102932343AD00211.png" class="patent-full-image" alt="Figure CN102932343AD00211"> </a> </div>
+    <p>[0435]</p>
+    <p>EF</p>
+    <p>D2 70 42 FA 92 33 A2 22 F2 OA B6 4B AD 64 83</p>
+    <p>[0436]	Al	89	D5	32	59	AE	31	34	BO	57	E8	AF	03	BE	FA	8A[0437]	8D	D9	06	3A	OF	09	OF	D6	61	93	EO	54	AO	68	CE	3A[0438]	FB	02	FF	E6	DC	21	38	FF	66	CF	63	9E	Fl	A3	38	13[0439]	D9	DB	5B	2E	33	FF	BF	OA	72	D3	CO	98	27	F4	ID	9D[0440]	68	55	95	9F	E3	OD	BE	8A	D4	84	81	A6	59	50	5C	B7[0441]	14	53	4E	9A	6E	19	CE	43	8C	91	6D	A7	FA	61	7E	52[0442]	BA	IF	02	03	01	00	01	(n 和 e )								[0443]	A3	81	95	//	证书的扩展项											[0444]		30	81	92												</p>
+    <p>[0445]</p>
+    <p>[0446]</p>
+    <p>[0447]</p>
+    <p>[0448]</p>
+    <p>[0449]</p>
+    <p>[0450]83 6F</p>
+    <p>[0451]</p>
+    <p>[0452]</p>
+    <p>[0453]</p>
+    <p>[0454]</p>
+    <p>[0455]</p>
+    <p>[0456]</p>
+    <p>[0457]</p>
+    <p>[0458]</p>
+    <p>[0459]</p>
+    <p>[0460]</p>
+    <p>[0461]</p>
+    <p>[0462]</p>
+    <p>[0463]</p>
+    <p>[0464]</p>
+    <p>[0465]</p>
+    <p>[0466]</p>
+    <p>[0467]</p>
+    <p>[0468]</p>
+    <p>[0469]</p>
+    <p>[0470]</p>
+    <p>[0471]</p>
+    <p>30 IF</p>
+    <p>06 0355 ID 2304 1830 16</p>
+    <p>80</p>
+    <p>(authorityKeyIdentifier)</p>
+    <p>14	25 9A C6 OC FD E7 87 73 11 04</p>
+    <p>32	68 36 BI Cl 81 OC CC</p>
+    <p>30 OC 06 03</p>
+    <p>55 ID 13 (basicConstraints)04 05</p>
+    <p>30 03 01 01 00</p>
+    <p>30	42 06 03</p>
+    <p>55 ID IF (cRLDistributionPoints )</p>
+    <p>04	3B</p>
+    <p>30	39</p>
+    <p>30 37AO 35AO 33A4 3130 2F</p>
+    <p>31	1130 OF</p>
+    <p>06 03 55 04 03 (cn)</p>
+    <p>13 08</p>
+    <p>63 72 6C 31 38 39 38 30</p>
+    <p>31	OC 30 OA</p>
+    <p>06 03 55 04 OB (ou)</p>
+    <p>13 03 63 72 6C</p>
+    <p>22[0472</p>
+    <p>[0473</p>
+    <p>[0474</p>
+    <p>[0475</p>
+    <p>[0476</p>
+    <p>[0491</p>
+    <p>[0492</p>
+    <p>[0493</p>
+    <p>[0494</p>
+    <p>[0495</p>
+    <p>[0496</p>
+    <p>[0497</p>
+    <p>[0498</p>
+    <p>[0499</p>
+    <p>[0509</p>
+    <p>31 OC</p>
+    <p>30 OA 06 03 55 04 OA (ο)13 03 41 42 4330 ID 06 03 55 ID OE (subjectKeyldentifier )</p>
+    <p>04 16 04 14 3D 58 90 5E 72</p>
+    <p>[0477]	E8	61	BA	54	EB	69	90	CA	78	59	F2	05 64 OB E9 上				[0478]	//															[0479]	30	OD	06	09	2A	86	48	86	F7	OD	01	01	05	05	OC	/法																[0480]	03	81	81	00	//证书中的签名值											[0481]	Fl	B9	EC	3A	El	F9	73	48	FC	F3	39	56	A7	C8		[0482]	16	D3	EB	6F	77	42	D3	37	C3	20	AB	EB	5B	89	92	AC[0483]	B2	CA	34	F7	7B	32	2F	4A	EE	ED	B6	28	E6	09	78	DB[0484]	27	61	2E	5B	54	29	E6	36	80	77	06	94	DE	4E	IE	EF[0485]	2D	7C	66	46	E5	D8	CA	51	7E	OE	IF	D2	51	53	64	21[0486]	OB	83	91	5B	8D	8A	01	8E	24	29	7E	61	9A	69	B2	El[0487]	DE	68	CD	4A	2E	E9	OF	D9	8F	05	OF	97	B5	4E	41	35[0488]	CF	B6	67	19	B6	BC	54	DB	E6	F5	82	IE	A6	2E	DO	A9[0489]	9F	B7						//	证书结束							[0490]	31	81	D3	//	签名集合开始											</p>
+    <p>xUSB Key给证书的签名算</p>
+    <p>30 81 DO //集合中的第一项02 01 01 //</p>
+    <p>30 2A (颁发者和序列号是内置证书的颁发者和序列号）</p>
+    <p>30	IC //颁发者</p>
+    <p>31	OC 30 OA 06 03 55 04 03 13 03 41 42 4331 OC 30 OA 06 03 55 04 OA 13 03 41 42 43</p>
+    <p>02 OA 7B 97 CA 10 27 5A 05 A8 07 IA // 序列号</p>
+    <p>30 OD 06 09 2A 86 48 86 F7 OD 01 01 05 0530 OD 06 09 2A 86 48 86 F7 OD 01 01 01 05</p>
+    <p>00 //摘要算法标识00 // rsa公钥算法</p>
+    <p>[0500]	04	81	80	//	数据原文的签名结果											[0501]	A4	9C	E5	CD	89	FE	E6	CD	4A	B3	16	E6	86	87	CF	2C[0502]	5E	E7	90	OA	60	C3	4E	73	2F	97	B5	04	26	A3	11	D6[0503]	71	29	IC	CC	OF	9A	El	99	CE	48	BA	33	BC	D5	86	A5[0504]	6D	69	E4	78	5D	58	EC	4F	85	91	98	8C	AF	B3	A8	FC[0505]	8F	26	78	78	AE	62	CA	09	51	A2	4D	87	13	9A	A3	13[0506]	E8	31	B4	9C	A7	41	88	IE	84	62	D3	E2	88	B5	94	27[0507]	95	FC	55	4B	85	56	40	DA	C2	AF	33	03	00	42	50	50[0508]	A9	AF	9A	90	57	4D	7C	AO	B6	A7	99	BE	Al	27	5A	48</p>
+    <p>步骤229 ：USB key按照预设格式对当前数字证书进行封装，得到第七数据；[0510]	本实施例中，第七数据的格式与步骤225中第五数据的格式相同，在此不再赘述；</p>
+    <p>[0511]	步骤230 ：USB key根据摘要算法对第一 PKCS#7申请包进行计算，得到第三摘要；</p>
+    <p>[0512]	步骤231 ：USB key使用当前数字证书的私钥对第三摘要进行数字签名，得到第三数字签名，并按照预设格式对第三数字签名进行封装，得到第八数据；</p>
+    <p>[0513]	本实施例中，第八数据的格式与步骤227中第六数据的格式相同，在此不再赘述；</p>
+    <p>[0514]	步骤232 ：USB key按照预设格式对第一PKCS#7申请包、第七数据和第八数据进行封装，得到第二 PKCS#7申请包，将指定密钥所对应的标志位清O ;</p>
+    <p>[0515]	本实施例中，第二 PKCS#7申请包的格式与步骤228中第一 PKCS#7申请包的格式相同，在此不再赘述；</p>
+    <p>[0516]	步骤233 ：USB key将第二 PKCS#7申请包返回给主机，执行步骤201 ；</p>
+    <p>[0517]	步骤234 ：USB key执行相应命令，将执行结果返回给主机，返回步骤201 ；</p>
+    <p>[0518]	步骤235 ：USB key返回错误信息给主机，返回步骤201 ；</p>
+    <p>[0519]	本实施例中，PKCS#10申请包和PKCS#7申请包中的内容只有版本和标识信息是由主机发送给USB key的，其余的内容如算法、指定密钥、第一签名、内置证书、第二签名、当前数字证书和第三签名，都是在USB key内部生成、查找或计算得到的，提高了数字证书下发的安全性。</p>
+    <p>[0520]	实施例3</p>
+    <p>[0521]	本发明的实施例3提供一种下载数字证书的装置，如图3所示，包括：接收模块301、第一判断模块302、第二判断模块303、密钥生成模块304、置位模块305、第三判断模块306、第一生成模块307、第二生成模块308、第三生成模块309、复位模块310、执行模块311、发送模块312和存储证书模块313 ;</p>
+    <p>[0522]	接收模块301，用于接收主机发送的命令；</p>
+    <p>[0523]	第一判断模块302，用于判断命令类型；</p>
+    <p>[0524]	第二判断模块303，用于判断将要生成的密钥对应的标志位是否置位；</p>
+    <p>[0525]	密钥生成模块304，用于生成密钥；</p>
+    <p>[0526]	置位模块305，用于将生成的密钥所对应的标志位置位；</p>
+    <p>[0527]	第三判断模块306，用于判断指定密钥所对应的标志位是否置位；</p>
+    <p>[0528]	第一生成模块307，用于使用指定密钥的私钥对由指定密钥的公钥、生成指定密钥的算法标识、申请包属性字符串、版本和标识信息组成的第一数据包进行数字签名，并生成第一申请包；</p>
+    <p>[0529]	第二生成模块308，用于使用内置证书的私钥对由所述内置证书和第一申请包组成的第二数据包进行数字签名，并生成第二申请包；</p>
+    <p>[0530]	第三生成模块309，使用当前数字证书的私钥对由第二申请包和当前数字证书组成的第三数据包进行数字签名，并生成第三申请包；</p>
+    <p>[0531]	复位模块310，用于将指定密钥所对应的标志位复位；</p>
+    <p>[0532]	执行模块311，用于执行除生成密钥的命令、生成第一申请包命令、存储数字证书命令和生成第二申请包命令之外的其他命令；</p>
+    <p>[0533]	发送模块312，用于将第一申请包、第三申请包、执行结果、密钥已经存在的信息和返回错误信息返回给主机；[0534]	存储证书模块313，用于根据存储数字证书命令中保存证书数据的偏移，将证书数据存入相应位置，并记录该位置和密钥标识。</p>
+    <p>[0535]	第一生成模块307包括：第一封装单元3071、第一摘要单元3072和第一签名单元3073 ；</p>
+    <p>[0536]	第一封装单元3071，用于按照预设格式对指定密钥的公钥进行封装，得到第一数据；按照预设格式对USB key中生成指定密钥的算法标识、申请包属性字符串、版本和标识信息进行封装，得到第二数据；按照预设格式对第一数据和第二数据进行封装，得到第三数据；按照预设格式对第一数字签名进行封装，得到第四数据；按照预设格式对第三数据和第四数据进行封装，得到第一申请包；</p>
+    <p>[0537]	第一摘要单元3072，用于根据摘要算法对第三数据进行计算，得到第一摘要；</p>
+    <p>[0538]	第一签名单元3073，用于使用指定密钥的私钥对第一摘要进行数字签名，得到第</p>
+    <p>一数字签名。</p>
+    <p>[0539]	第一生成模块307还包括查找单元3074和解析单元3075 ；</p>
+    <p>[0540]	查找单元3074，用于根据存储的当前数字证书的位置和密钥标识查找当前数字证书;</p>
+    <p>[0541]	解析单元3075，用于从找到的当前数字证书中解析出标识信息。</p>
+    <p>[0542]	第二生成模块308包括第二封装单元3081、第二摘要单元3082和第二签名单元3083 ；</p>
+    <p>[0543]	第二封装单元3081，用于按照预设格式对内置证书进行封装，得到第五数据；按照预设格式对第二数字签名进行封装，得到第六数据；按照预设格式对第一申请包、第五数据和第六数据进行封装，得到第二申请包；</p>
+    <p>[0544]	第二摘要单元3082，用于根据摘要算法对第一申请包进行计算，得到第二摘要；</p>
+    <p>[0545]	第二签名单元3083，用于使用内置证书的私钥对第二摘要进行数字签名，得到第</p>
+    <p>二数字签名。</p>
+    <p>[0546]	第三生成模块309包括第三封装单元3091、第三摘要单元3092和第三签名单元3093 ；</p>
+    <p>[0547]	第三封装单元3091，用于按照预设格式对当前数字证书进行封装，得到第七数据；按照预设格式对第三数字签名进行封装，得到第八数据；按照预设格式对第二申请包、第七数据和第八数据进行封装，得到第三申请包；</p>
+    <p>[0548]	第三摘要单元3092，用于根据摘要算法对第二申请包进行计算，得到第三摘要；</p>
+    <p>[0549]	第三签名单元3093，用于使用当前数字证书的私钥对第三摘要进行数字签名，得到第三数字签名。</p>
+    <p>[0550]	装置还包括查找模块，用于根据主机发送的命令在USB key内部的预置算法集合中查找对应的摘要算法。</p>
+    <p>[0551]	以上所述，仅为本发明较佳的具体实施方式，但本发明的保护范围并不局限于此，任何熟悉本技术领域的技术人员在本发明公开的技术范围内，可轻易想到的变化或替换，都应涵盖在本发明的保护范围之内。因此，本发明的保护范围应该以权利要求的保护范围为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101350718A?cl=zh">CN101350718A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月5日</td><td class="patent-data-table-td patent-date-value">2009年1月21日</td><td class="patent-data-table-td ">清华大学</td><td class="patent-data-table-td ">一种基于用户识别模块的播放内容权限范围的保护方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101977193A?cl=zh">CN101977193A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年10月28日</td><td class="patent-data-table-td patent-date-value">2011年2月16日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">安全下载证书的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20120159158">US20120159158</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月28日</td><td class="patent-data-table-td patent-date-value">2012年6月21日</td><td class="patent-data-table-td ">Hitachi, Ltd.</td><td class="patent-data-table-td ">Validation server, validation method, and program</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103338185B?cl=zh">CN103338185B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年5月31日</td><td class="patent-data-table-td patent-date-value">2016年2月24日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种文件共享的方法及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=LkXLBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年1月14日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/0214b009b3288cde4fb5/CN102932343A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E4%B8%8B%E8%BD%BD%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85.pdf?id=LkXLBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2KBlDymLZfvhYvpWIA9w4PyK1DtQ"},"sample_url":"https://www.google.com/patents/reader?id=LkXLBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html><html><head><title>专利 CN103345535A - 一种微博用户挖掘方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种微博用户挖掘方法及装置"><meta name="DC.contributor" content="易卉芹" scheme="inventor"><meta name="DC.contributor" content="人民搜索网络股份公司" scheme="assignee"><meta name="DC.date" content="2013-7-26" scheme="dateSubmitted"><meta name="DC.description" content="一种微博用户挖掘方法及装置，包括：判断用户列表中是否存在未处理用户；如果不存在，则按照预设规则从微博网页中抓取用户数据，并判断用户数据对应的抓取用户是否存在于用户列表，如果不存在，则将该抓取用户添加至用户列表，并设置该抓取用户的状态为已处理；如果存在，则判断该未处理用户是否具有下级用户：如果具有，则获取该未处理用户的下级用户，并将下级用户添加到用户列表，设置未处理用户的状态为已处理；将下级用户作为未处理用户，继续执行判断未处理用户是否具有下级用户的步骤；如果不具有，则设置该未处理用户的状态为已处理。一方面可降低挖掘结果对种子用户选取的依赖性；另一方面还可提高用户覆盖面，挖掘出尽量多的微博用户。"><meta name="DC.date" content="2013-10-9"><meta name="DC.relation" content="CN:101551892:A" scheme="references"><meta name="DC.relation" content="CN:102609460:A" scheme="references"><meta name="DC.relation" content="CN:102708176:A" scheme="references"><meta name="DC.relation" content="US:8943053" scheme="references"><meta name="citation_patent_publication_number" content="CN:103345535:A"><meta name="citation_patent_application_number" content="CN:201310321021"><link rel="canonical" href="https://www.google.com/patents/CN103345535A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103345535A?cl=zh"/><meta name="title" content="专利 CN103345535A - 一种微博用户挖掘方法及装置"/><meta name="description" content="一种微博用户挖掘方法及装置，包括：判断用户列表中是否存在未处理用户；如果不存在，则按照预设规则从微博网页中抓取用户数据，并判断用户数据对应的抓取用户是否存在于用户列表，如果不存在，则将该抓取用户添加至用户列表，并设置该抓取用户的状态为已处理；如果存在，则判断该未处理用户是否具有下级用户：如果具有，则获取该未处理用户的下级用户，并将下级用户添加到用户列表，设置未处理用户的状态为已处理；将下级用户作为未处理用户，继续执行判断未处理用户是否具有下级用户的步骤；如果不具有，则设置该未处理用户的状态为已处理。一方面可降低挖掘结果对种子用户选取的依赖性；另一方面还可提高用户覆盖面，挖掘出尽量多的微博用户。"/><meta property="og:title" content="专利 CN103345535A - 一种微博用户挖掘方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103345535A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103345535A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=0LvYCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103345535A&amp;usg=AFQjCNH0oxdlX6kfM0zyOmZ3eZVvNXEMWw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/2a915ae7e40bc66b9120/CN103345535A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/2a915ae7e40bc66b9120/CN103345535A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103345535A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103345535A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103345535A?cl=zh" style="display:none"><span itemprop="description">一种微博用户挖掘方法及装置，包括：判断用户列表中是否存在未处理用户；如果不存在，则按照预设规则从微博网页中抓取用户数据，并判断用户数据对应的抓取用户是否存在于用户列表，如果不存在，则将该抓取用户添加至...</span><span itemprop="url">https://www.google.com/patents/CN103345535A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103345535A - 一种微博用户挖掘方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103345535A - 一种微博用户挖掘方法及装置" title="专利 CN103345535A - 一种微博用户挖掘方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103345535 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310321021</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年10月9日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年7月26日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年7月26日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310321021.9, </span><span class="patent-bibdata-value">CN 103345535 A, </span><span class="patent-bibdata-value">CN 103345535A, </span><span class="patent-bibdata-value">CN 201310321021, </span><span class="patent-bibdata-value">CN-A-103345535, </span><span class="patent-bibdata-value">CN103345535 A, </span><span class="patent-bibdata-value">CN103345535A, </span><span class="patent-bibdata-value">CN201310321021, </span><span class="patent-bibdata-value">CN201310321021.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%98%93%E5%8D%89%E8%8A%B9%22">易卉芹</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%BA%BA%E6%B0%91%E6%90%9C%E7%B4%A2%E7%BD%91%E7%BB%9C%E8%82%A1%E4%BB%BD%E5%85%AC%E5%8F%B8%22">人民搜索网络股份公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103345535A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103345535A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103345535A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=0LvYCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310321021&amp;usg=AFQjCNEHwYnwW0ZDNsQYyP96RT836qdgmw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=0LvYCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103345535A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEeQfazBgdFjs0vBQsyEiqc4SE_Rg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT130972921" lang="ZH" load-source="patent-office">一种微博用户挖掘方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 103345535 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA125101334" lang="ZH" load-source="patent-office">
+    <div class="abstract">一种微博用户挖掘方法及装置，包括：判断用户列表中是否存在未处理用户；如果不存在，则按照预设规则从微博网页中抓取用户数据，并判断用户数据对应的抓取用户是否存在于用户列表，如果不存在，则将该抓取用户添加至用户列表，并设置该抓取用户的状态为已处理；如果存在，则判断该未处理用户是否具有下级用户：如果具有，则获取该未处理用户的下级用户，并将下级用户添加到用户列表，设置未处理用户的状态为已处理；将下级用户作为未处理用户，继续执行判断未处理用户是否具有下级用户的步骤；如果不具有，则设置该未处理用户的状态为已处理。一方面可降低挖掘结果对种子用户选取的依赖性；另一方面还可提高用户覆盖面，挖掘出尽量多的微博用户。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM56451032" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种微博用户挖掘方法，其特征在于，所述方法包括:  判断用户列表中是否存在未处理用户；  如果不存在，则按照预设规则从微博网页中抓取用户数据，并判断所述用户数据对应的抓取用户是否存在于所述用户列表，如果不存在，则将该抓取用户添加至所述用户列表，并设置该抓取用户的状态为已处理；  如果存在，则判断该未处理用户是否具有下级用户:  如果具有，则获取该未处理用户的下级用户，并将所述下级用户添加到所述用户列表，设置所述未处理用户的状态为已处理；将所述下级用户作为未处理用户，继续执行所述判断未处理用户是否具有下级用户的步骤；  如果不具有，则设置该未处理用户的状态为已处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述预设规则为最新发布的微博，则  所述按照预设规则从微博网页中抓取用户数据，包括:  按照微博发布时间对所述微博网页中的微博排序；  抓取最新发布的预设个数的微博作为用户数据，或者抓取最新发布的预设时间段内的微博作为用户数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的方法，其特征在于，所述预设规则为预设关键词，则  所述按照预设规则从微博网页中抓取用户数据，包括:  抓取所述微博网页中含有所述预设关键词的微博和/或评论内容作为用户数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所述的方法`，其特征在于，所述预设规则为预设地理位置，则  所述按照预设规则从微博网页中抓取用户数据，包括:  抓取所述微博网页中具有所述预设地理位置的微博和/或评论内容作为用户数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1-4任一项所述的方法，其特征在于，所述获取该未处理用户的下级用户，包括:  通过所述未处理用户的用户关系网获取所述下级用户；或者，  抓取评论和/或转发所述未处理用户发布的微博的用户作为所述下级用户。</div>
+    </div>
+    </div> <div class="claim"> <div num="6" class="claim">
+      <div class="claim-text">6.一种微博用户挖掘装置，其特征在于，所述装置包括:  第一判断单元，用于判断用户列表中是否存在未处理用户；  抓取单元，用于在所述第一判断单元判断所述用户列表中不存在未处理用户时，按照预设规则从微博网页中抓取用户数据；  第二判断单元，用于判断所述用户数据对应的抓取用户是否存在于所述用户列表；第一添加单元，用于在所述第二判断单元判断所述抓取用户不存在于所述用户列表时，将该抓取用户添加到所述用户列表，并设置该抓取用户的状态为已处理；  第三判断单元，用于在所述第一判断单元判断所述用户列表中存在未处理用户时，判断该未处理用户是否具有下级用户；  获取单元，用于在所述第三判断单元判断所述未处理用户具有下级用户时，获取该未处理用户的下级用户；  第二添加单元，用于将所述下级用户添加到所述用户列表，设置所述未处理用户的状态为已处理；并将所述下级用户作为未处理用户，通知所述第三判断单元继续判断未处理用户是否具有下级用户；设置单元，用于在所述第三判断单元判断所述未处理用户不具有下级用户时，设置该未处理用户的状态为已处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的装置，其特征在于，所述预设规则为最新发布的微博，则所述抓取单元，包括:  排序单元，用于按照微博发布时间对所述微博网页中的微博排序；  抓取子单元，用于抓取最新发布的预设个数的微博作为用户数据，或者抓取最新发布的预设时间段内的微博作为用户数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求6所述的装置，其特征在于，所述预设规则为预设关键词，则  所述抓取单元，具体用于抓取所述微博网页中含有所述预设关键词的微博和/或评论内容作为用户数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的装置，其特征在于，所述预设规则为预设地理位置，则  所述抓取单元，具体用 于抓取所述微博网页中具有所述预设地理位置的微博和/或评论内容作为用户数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求6-9任一项所述的装置，其特征在于，  所述获取单元，具体用于通过所述未处理用户的用户关系网获取所述下级用户；或者，所述获取单元，具体用于抓取评论和/或转发所述未处理用户发布的微博的用户作为所述下级用户。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63436570" lang="ZH" load-source="patent-office" class="description">
+    <p>一种微博用户挖掘方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及网络技术领域，具体涉及一种微博用户挖掘方法及装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	微博，即微博客(MicroBlog)的简称，是一个基于用户关系的信息分享、传播以及获取平台，用户可以通过WEB、WAP等各种客户端组建个人社区，以140字左右的文字更新信息，并实现即时分享。</p>
+    <p>[0003]	随着微博的日趋普及，微博已逐渐成为信息传播、产品推销、广告投放等商业活动的展示平台，为了对微博社交网络进行分析挖掘，对不同用户的兴趣和发帖行为进行分析，挖掘出更多的微博用户就显得尤为重要。</p>
+    <p>[0004]	目前的用户挖掘过程可简述如下:</p>
+    <p>[0005]	首先，确定一批种子用户(种子用户可以是随机抽取的普通用户或者名人用户)，并获取每个种子用户的微博用户关系网，即关注列表和粉丝列表。</p>
+    <p>[0006]	其次，再获取关注列表和粉丝列表中所有用户的微博用户关系网，如此逐级递归处理，最终获得种子用户直接或间接相关的所有的微博用户。</p>
+    <p>[0007]	也就是说，现有技术大多是依赖用户关系网进行微博用户挖掘的，这种方案的缺点是:依赖种子用户的选择，如果种子用户选取恰当，则一次挖掘过程可能会获得较多的微博用户，否则一次挖掘过程出的微博用户较少，挖掘效率较低。另外，这种方案目前还无法对用户进行全面覆盖，只能挖掘出有关联关系的用户。</p>
+    <p>发明内容</p>
+    <p>[0008]	本发明实施例的微博用户挖掘方法及装置，用以提高用户覆盖范围，挖掘出尽量多的微博用户。</p>
+    <p>[0009]	为此，本发明实施例提供如下技术方案:</p>
+    <p>[0010]	一种微博用户挖掘方法，所述方法包括:</p>
+    <p>[0011]	判断用户列表中是否存在未处理用户；</p>
+    <p>[0012]	如果不存在，则按照预设规则从微博网页中抓取用户数据，并判断所述用户数据对应的抓取用户是否存在于所述用户列表，如果不存在，则将该抓取用户添加至所述用户列表，并设置该抓取用户的状态为已处理；</p>
+    <p>[0013]	如果存在，则判断该未处理用户是否具有下级用户:</p>
+    <p>[0014]	如果具有，则获取该未处理用户的下级用户，并将所述下级用户添加到所述用户列表，设置所述未处理用户的状态为已处理；将所述下级用户作为未处理用户，继续执行所述判断未处理用户是否具有下级用户的步骤；</p>
+    <p>[0015]	如果不具有，则设置该未处理用户的状态为已处理。</p>
+    <p>[0016]	优选的，所述预设规则为最新发布的微博，则</p>
+    <p>[0017]	所述按照预设规则从微博网页中抓取用户数据，包括:[0018]	按照微博发布时间对所述微博网页中的微博排序；</p>
+    <p>[0019]	抓取最新发布的预设个数的微博作为用户数据，或者抓取最新发布的预设时间段内的微博作为用户数据。</p>
+    <p>[0020]	优选的，所述预设规则为预设关键词，则</p>
+    <p>[0021]	所述按照预设规则从微博网页中抓取用户数据，包括:</p>
+    <p>[0022]	抓取所述微博网页中含有所述预设关键词的微博和/或评论内容作为用户数据。</p>
+    <p>[0023]	优选的，所述预设规则为预设地理位置，则</p>
+    <p>[0024]	所述按照预设规则从微博网页中抓取用户数据，包括:</p>
+    <p>[0025]	抓取所述微博网页中具有所述预设地理位置的微博和/或评论内容作为用户数据。</p>
+    <p>[0026]	优选的，所述获取该未处理用户的下级用户，包括:</p>
+    <p>[0027]	通过所述未处理用户的用户关系网获取所述下级用户；或者，</p>
+    <p>[0028]	抓取评论和/或转发所述未处理用户发布的微博的用户作为所述下级用户。</p>
+    <p>[0029]	一种微博用户挖掘装置，所述装置包括:</p>
+    <p>[0030]	第一判断单元，用于判断用户列表中是否存在未处理用户；</p>
+    <p>[0031]	抓取单元，用于在所述第一判断单元判断所述用户列表中不存在未处理用户时，按照预设规则从微博网页中抓取用户数据；</p>
+    <p>[0032]	第二判断单元，用于判断所述用户数据对应的抓取用户是否存在于所述用户列表;</p>
+    <p>[0033]	第一添加单元，用于在所述第二判断单元判断所述抓取用户不存在于所述用户列表时，将该抓取用户添加到所述用户列表，并设置该抓取用户的状态为已处理；</p>
+    <p>[0034]	第三判断单元，用于在所述第一判断单元判断所述用户列表中存在未处理用户时，判断该未处理用户是否具有下级用户；</p>
+    <p>[0035]	获取单元，用于在所述第三判断单元判断所述未处理用户具有下级用户时，获取该未处理用户的下级用户；</p>
+    <p>[0036]	第二添加单元，用于将所述下级用户添加到所述用户列表，设置所述未处理用户的状态为已处理；并将所述下级用户作为未处理用户，通知所述第三判断单元继续判断未处理用户是否具有下级用户；</p>
+    <p>[0037]	设置单元，用于在所述第三判断单元判断所述未处理用户不具有下级用户时，设置该未处理用户的状态为已处理。</p>
+    <p>[0038]	优选的，所述预设规则为最新发布的微博，则所述抓取单元，包括:</p>
+    <p>[0039]	排序单元，用于按照微博发布时间对所述微博网页中的微博排序；</p>
+    <p>[0040]	抓取子单元，用于抓取最新发布的预设个数的微博作为用户数据，或者抓取最新发布的预设时间段内的微博作为用户数据。</p>
+    <p>[0041]	优选的，所述预设规则为预设关键词，则</p>
+    <p>[0042]	所述抓取单元，具体用于抓取所述微博网页中含有所述预设关键词的微博和/或评论内容作为用户数据。</p>
+    <p>[0043]	优选的，所述预设规则为预设地理位置，则</p>
+    <p>[0044]	所述抓取单元，具体用于抓取所述微博网页中具有所述预设地理位置的微博和/或评论内容作为用户数据。</p>
+    <p>[0045]	优选的，所述获取单元，具体用于通过所述未处理用户的用户关系网获取所述下级用户；或者，</p>
+    <p>[0046]	所述获取单元，具体用于抓取评论和/或转发所述未处理用户发布的微博的用户作为所述下级用户。</p>
+    <p>[0047]	本发明实施的微博用户挖掘方法及装置，以用户列表中是否存在未处理用户为依据，选择不同的用户挖掘方式，如果存在未处理用户，则通过逐层递归挖掘的方式，不断的挖掘获得下级用户，直至找到底层节点；如果不存在未处理用户，则可通过在微博网页中抓取微博数据的方式挖掘零散用户。如此，一方面就可降低挖掘结果对种子用户选取的依赖性；另一方面还可提高用户覆盖面，挖掘出尽量多的微博用户。</p>
+    <p>附图说明</p>
+    <p>[0048]为了更清楚地说明本申请实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本申请中记载的一些实施例，对于本领域普通技术人员来讲，还可以根据这些附图获得其它的附图。</p>
+    <p>[0049]	图1是本发明微博用户挖掘方法的流程图；</p>
+    <p>[0050]	图2是本发明中微博用户关系网的一种示意图；</p>
+    <p>[0051]	图3是本发明中从微博网页中抓取用户数据的一种实现方式的流程图；</p>
+    <p>[0052]	图4是本发明微博用户挖掘装置的示意图；</p>
+    <p>[0053]	图5是本发明中抓取单元的一种实现方式的示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0054]	为了使本技术领域的人员更好地理解本发明方案，下面结合附图和实施方式对本发明实施例作进一步的详细说明。</p>
+    <p>[0055]	下面先介绍下本发明的应用场景。</p>
+    <p>[0056]	作为微博的核心，微博用户对信息传播、产品营销、社交网络的深入分析等方面都起着至关重要的作用，为了挖掘到更多的微博用户，一般情况下要先确定一批种子用户，以便以这批种子用户为起始点，进行逐层递归挖掘。</p>
+    <p>[0057]	微博用户可大致被分为两种类型:认证用户、普通用户。为了挖掘出尽可能多的微博用户，本发明从影响力大、用户关系网复杂的认证用户中确定种子用户。作为本发明确定种子用户的一种实现方式，可在微博名人堂页面抓取，如将影响力排行或者人气排行的前100名用户作为种子用户，或者，根据营销需要，有针对性的抓取某种分类下的认证用户，如当前需要推广的是一款旅游产品，则可抓取旅游分类下的认证用户作为种子用户。本发明对从认证用户中确定种子用户的具体方式可不做限定。</p>
+    <p>[0058]	确定出种子用户之后，可将这些种子用户添加到用户列表，并将其标识为未处理，即可按照本发明提供的方案进行用户挖掘。</p>
+    <p>[0059]	下面对本发明挖掘微博用户的过程进行解释说明。</p>
+    <p>[0060]	参见图1，示出了本发明微博用户挖掘方法的流程图，可包括:[0061]	步骤101，判断用户列表中是否存在未处理用户，如果存在则执行步骤102，如果不存在则执行步骤106。</p>
+    <p>[0062]	本发明在进行微博用户挖掘时提供了两种处理方式:</p>
+    <p>[0063]	第一种是，以种子用户为起始点，进行逐层递归挖掘，直至找到底层节点，这些与种子用户直接或间接相关的用户就是挖掘出的微博用户；</p>
+    <p>[0064]	第二种是，找到底层节点之后，还可通过在微博网页中随机抓取的方式，获取与种子用户不具有关联关系的零散用户。</p>
+    <p>[0065]	本步骤判断用户列表中是否还存在未处理用户的目的，即是为了明确当前要采用哪种具体方式进行微博用户挖掘。如果用户列表中还存在未处理用户，则说明当前可能还未查找到底层用户，仍可利用第一种方式挖掘出更多的微博用户；如果用户列表中不存在未处理用户，则说明当前已挖掘出第一种方式覆盖的所有微博用户，此时可利用第二种方式继续挖掘微博用户。如此，一方面可降低挖掘结果对种子用户选取的依赖性；另一方面还可提高用户覆盖面，挖掘出尽量多的微博用户。</p>
+    <p>[0066]	需要说明的是，本发明中未处理用户指的是未查找下级用户的用户，可通过标志位来表示，例如，标志位为“ I ”表示已处理，标志位为“O”表示未处理。另外要说明的是，查找之后，不论未处理用户是具有下级用户还是不具有下级用户，均要将其状态设置为已处理，即将标志位从“O”变更为“ I”。</p>
+    <p>[0067]	步骤102，如果存在，则判断该未处理用户是否具有下级用户，如果具有则执行步骤103，如果不具有则执行步骤105。</p>
+    <p>[0068]	步骤103，如果具有，则获取该未处理用户的下级用户，并将所述下级用户添加到所述用户列表，设置所述未处理用户的状态为已处理。</p>
+    <p>[0069]	步骤104，将所述下级用户作为未处理用户，返回执行步骤102。</p>
+    <p>[0070]	步骤105,如果不具有,则设置该未处理用户的状态为已处理。</p>
+    <p>[0071]	如上文所述，如果步骤101判断存在未处理用户，则可查找该未处理用户的下级用户，并根据查找结果进行区别处理:</p>
+    <p>[0072]	(I)如果查找结果表示该未处理用户不具有下级用户，则说明该未处理用户为底层节点，当前已挖掘出所有与种子用户直接或间接相关的所有微博用户，此时可直接将该未处理用户的状态标识为已处理即可，也就是将该用户对应的标志位从“O”变更为“ I ”。</p>
+    <p>[0073]	(2)如果查找结果表示该未处理用户具有下级用户，则说明该未处理用户不是底层节点，还可在其下级用户的基础上进一步进行递归挖掘，此时，可做如下处理:</p>
+    <p>[0074]	a.将该未处理用户的状态标识为已处理，即将其标志位从“O”变更为“I” ；</p>
+    <p>[0075]	b.将该未处理用户的下级用户添加到用户列表中；</p>
+    <p>[0076]	c.将下级用户的标志位设置为未处理状态，即设置为“O”。</p>
+    <p>[0077]	经上述3个处理动作之后，即说明用户列表中还存在未处理用户，应返回执行步骤102，判断这些下级用户作为未处理用户时，其是否存在下级用户，然后再根据判断结果进行区别处理，此处不再赘述。</p>
+    <p>[0078]	需要说明的是，步骤104中除了可按上文所述，返回执行步骤102之外，还可返回执行步骤101，只不过经步骤101判断后必然存在未处理用户，所以本发明直接返回执行步骤 102。[0079]	本发明提供了两种查找未处理用户的下级用户的实现方式，下面分别进行解释说明。</p>
+    <p>[0080]	(I)通过所述未处理用户的用户关系网获取所述下级用户。</p>
+    <p>[0081]	用户关系网指的是微博用户之间的关系，包括关注和粉丝两种关系，一般采用节点图来表示，具体可参见图2所示示例，其中节点A、B、C、D表示微博用户，两节点间的连线表示用户间的关系。在微博中，用户A可以关注、接收其感兴趣的用户B发布的微博，此时，用户A就是用户B的粉丝，相应地用户B就是用户A的关注。</p>
+    <p>[0082]	作为本发明获取用户关系网的一种实现方式，可通过调用微博开放平台API的方式实现，获取某个未处理用户的关注列表和粉丝列表。因为关注列表和粉丝列表中的用户是通过该未处理用户挖掘到的，故关注列表和粉丝列表中的用户都可称为是该未处理用户的下级用户。</p>
+    <p>[0083]	结合图2所示示例，步骤102&#12316;105的处理过程可简述如下:</p>
+    <p>[0084]	若当前未处理用户为用户A，则调用微博开放平台API即可获得其下级用户B、D，此时可将用户A的状态标识为已处理，将用户B、D添加到用户列表，并将二者状态标识为未处理；</p>
+    <p>[0085]	接着，将用户B、D作为未处理用户，分别调用获取二者的下级用户。其中，与用户B有关系的为用户A和D，因二者已存在于用户列表中，故可认为用户B不具有下级用户，用户B为底层节点，将其状态标识为已处理即可结束该分支的挖掘过程。与用户D有关系的为用户A、C，因用户A已存在于用户列表中，故可认为用户D的下级用户仅包含用户C，此时要将用户D的状态标识为已处理，同时还要将用户C添加到用户列表，并将其状态标识为未处理。</p>
+    <p>[0086]	最后，将用户C作为未处理用户，调用获取其下级用户，由图示可知，与用户C有关系的为用户D，而用户D已存在于用户列表中，故可认为用户C不具有下级用户，用户C为底层节点，将其状体标识为已处理后即可结束该分支的挖掘过程。至此就完成了第一种方式下的用户挖掘过程，根据用户A挖掘出了三个用户B、C、D。</p>
+    <p>[0087]	(2)抓取评论和/或转发所述未处理用户发布的微博的用户作为所述下级用户。</p>
+    <p>[0088]	在用户A与用户B之间既不是关注，也不是粉丝关系的情况下，用户A也可能会转发和/或评论用户B发布的微博，此时，我们可以认为用户A与B之间产生了关联关系，这种情况下，用户A也可视为是用户B的下级用户。因此，作为本发明获取下级用户的另一种实现方式，还可通过抓取转发和/或评论了未处理用户发布的微博的用户的方式实现。</p>
+    <p>[0089]	步骤106，如果不存在，则按照预设规则从微博网页中抓取用户数据。</p>
+    <p>[0090]	步骤107，判断所述用户数据对应的抓取用户是否存在于所述用户列表，如果不存在，则执行步骤108 ;如果存在，则丢弃该抓取用户。</p>
+    <p>[0091]	步骤108，将该抓取用户添加到所述用户列表，并设置该抓取用户的状态为已处理。</p>
+    <p>[0092]	如上文所述，如果步骤101判断不存在未处理用户，则说明当前已挖掘出第一种方式覆盖的所有微博用户，此时可利用第二种方式继续挖掘零散用户，以扩大本发明挖掘用户的覆盖面。</p>
+    <p>[0093]	本发明中的零散用户，可以理解为两种情况:[0094]	一种情况是，用户不具有关注和粉丝，这种用户一般是刚注册成功的用户，或是活跃度极低的用户，是绝对意义的零散用户。这种用户无法利用第一种方式挖掘出来。</p>
+    <p>[0095]	一种情况是，用户虽具有关注和/或粉丝，但却与种子用户以及递归挖掘出的下级用户之间不存在任何关联关系(包含关注、粉丝、转发、评论等关系)，是相对意义的零散用户。这种用户也无法利用第一种方式挖掘出来。</p>
+    <p>[0096]	针对零散用户的用户挖掘过程，本发明主要是每隔一定的周期，就利用预设规则从微博网页中随机抓取用户数据的方式实现。根据预设规则的不同，本发明提供了三种具体实现方式，下面一一进行解释说明。</p>
+    <p>[0097]	实现方式一</p>
+    <p>[0098]	如果预设规则为最新发布的微博，则参见图3，示出了从微博网页中抓取用户数据的流程图，可包括:</p>
+    <p>[0099]	步骤201，按照微博发布时间对所述微博网页中的微博排序。</p>
+    <p>[0100]	步骤202，抓取最新发布的预设个数的微博作为用户数据，或者抓取最新发布的预设时间段内的微博作为用户数据。</p>
+    <p>[0101]	零散用户虽不具有关注、粉丝，或者与种子用户、下级用户之间不存在关联关系，但其有可能会发布微博，故本发明提供的第一种实现方式中，利用微博的发布时间对某一微博网页，如新浪微博发布的所有微博进行排序，一般情况下，微博发布的时间越晚(即最新发布的微博)其排序越靠前。需要说明的是，本发明中发布的微博可为原始发布，也可为转发发布。</p>
+    <p>[0102]	对最新发布的微博排序后，即可从中抓取预设个数的微博、或者抓取预设时间段内发布的微博，抓取到的微博即为步骤106中的用户数据。作为该实现方式的一种示例，可选取前10条微博作为抓取到的用户数据，或者，也可以将最近20分钟内发布的所有微博作为抓取到的用户数据。</p>
+    <p>[0103]	在抓取到用户数据后，相应地就能获知发布这些微博的用户，这种通过抓取用户数据获得的用户即被定义为抓取用户。在确定出抓取用户之后，还要判断下这些抓取用户是否已存在于用户列表中，也就是说，最新发布的微博可能是种子用户或递归挖掘出的下级用户所发布的，为了避免重复，还应判断抓取用户是否已存在于用户列表中，如果已存在，则可直接将其丢弃；如果不存在，则说明该抓取用户为零散用户，应将其添加到用户列表中，相应地，还应将其状态标识为已处理。</p>
+    <p>[0104]	需要说明的是，对于绝对意义的抓取用户来说，其不具有关注、粉丝等下级用户，故直接将其标识为已处理不会影响最终挖掘出的用户的覆盖范围。但是，对于相对意义的抓取用户来说，其可能具有下级用户，此时的处理原则为:可如本发明直接将其标识为已处理，不再以其为起始点进行用户挖掘；或者，也可根据实际需求，判断其是否具有下级用户，并按照步骤103、104所示方式进行递归挖掘，只有在不具有下级用户时才将用户状态标识为已处理，结束本次用户挖掘过程。具体处理原则可根据实际情况而定，本发明对此可不做限定。</p>
+    <p>[0105]	另外，需要说明的是，作为本发明抓取最新发布的微博的另一种实现方式，可通过调用微博开放平台API的方式实现，此处不再详述。</p>
+    <p>[0106]	实现方式二[0107]	如果预设规则为预设关键词，则从微博网页中抓取用户数据，包括:抓取所述微博网页中含有所述预设关键词的微博和/或评论内容作为用户数据。</p>
+    <p>[0108]	在挖掘零散用户时，还可根据营销需求进行针对性的抓取，故本发明提供的第二种实现方式中，还可根据需求预先设置一个或若干个关键词，并判断微博网页中的微博正文、评论内容等处是否包含这些预设关键词，如果包含，则可抓取这些微博和/或评论内容作为用户数据。</p>
+    <p>[0109]	在抓取到用户数据后，相应地就能获知发布这些微博、和/或发布这些评论内容的用户，这种通过抓取用户数据获得的用户即被定义为抓取用户。确定出抓取用户之后的处理过程、处理原则与上文实现方式一处的描述相同，此处不再赘述。</p>
+    <p>[0110]	实现方式三</p>
+    <p>[0111]	如果预设规则为预设地理位置，则从微博网页中抓取用户数据，包括:抓取所述微博网页中具有所述预设地理位置的微博和/或评论内容作为用户数据。</p>
+    <p>[0112]	有些情况下，营销可能针对的是某些地区的用户，或者需要统计分析某些地区用户的情况，故本发明提供的第三种实现方式中，还可根据需求预先设置一个或若干个地理位置，并判断发布微博、和/或发布评论的用户的位置信息是否与预设位置相符，如果相符，则可抓取这些具有预设地理位置的微博和/或评论内容作为用户数据。</p>
+    <p>[0113]	在抓取到用户数据后，相应地就能获知这些具有预设地理位置的微博、和/或评论内容对应的用户，这种通过抓取用户数据获得的用户即被定义为抓取用户。确定出抓取用户之后的处理过程、处理原则与上文实现方式一处的描述相同，此处亦不再赘述。</p>
+    <p>[0114]	需要说明的是，预设地理位置可以是城市名称、地区名称，也可以是经纬度坐标，本发明对此可不做限定。</p>
+    <p>[0115]	相应地，本发明还提供一种微博用户挖掘装置，参见图4，示出了本发明微博用户挖掘装置的示意图，可包括:</p>
+    <p>[0116]	第一判断单元301，用于判断用户列表中是否存在未处理用户；</p>
+    <p>[0117]	抓取单元302，用于在所述第一判断单元判断所述用户列表中不存在未处理用户时，按照预设规则从微博网页中抓取用户数据；</p>
+    <p>[0118]	第二判断单元303，用于判断所述用户数据对应的抓取用户是否存在于所述用户列表；</p>
+    <p>[0119]	第一添加单元304，用于在所述第二判断单元判断所述抓取用户不存在于所述用户列表时，将该抓取用户添加到所述用户列表，并设置该抓取用户的状态为已处理；</p>
+    <p>[0120]	第三判断单元305，用于在所述第一判断单元判断所述用户列表中存在未处理用户时，判断该未处理用户是否具有下级用户；</p>
+    <p>[0121]	获取单元306，用于在所述第三判断单元判断所述未处理用户具有下级用户时，获取该未处理用户的下级用户；</p>
+    <p>[0122]	第二添加单元307，用于将所述下级用户添加到所述用户列表，设置所述未处理用户的状态为已处理；并将所述下级用户作为未处理用户，通知所述第三判断单元305继续判断未处理用户是否具有下级用户；</p>
+    <p>[0123]	设置单元308，用于在所述第三判断单元判断所述未处理用户不具有下级用户时，设置该未处理用户的状态为已处理。[0124]	本发明提供了三种抓取单元抓取微博网页中用户数据的实现方式，下面一一进行介绍。</p>
+    <p>[0125]	预设规则为最新发布的微博，参见图5，示出了抓取单元的构成示意图，可包括:</p>
+    <p>[0126]	排序单元401，用于按照微博发布时间对所述微博网页中的微博排序；</p>
+    <p>[0127]	抓取子单元402，用于抓取最新发布的预设个数的微博作为用户数据，或者抓取最新发布的预设时间段内的微博作为用户数据。</p>
+    <p>[0128]或者，</p>
+    <p>[0129]	预设规则为预设关键词，则所述抓取单元，具体用于抓取所述微博网页中含有所述预设关键词的微博和/或评论内容作为用户数据。</p>
+    <p>[0130]或者，</p>
+    <p>[0131]	预设规则为预设地理位置，则所述抓取单元，具体用于抓取所述微博网页中具有所述预设地理位置的微博和/或评论内容作为用户数据。</p>
+    <p>[0132]	另外，本发明还提供了两种获取单元获取未处理用户的下级用户的实现方式，下面 进行介绍。</p>
+    <p>[0133]	所述获取单元，具体用于通过所述未处理用户的用户关系网获取所述下级用户。</p>
+    <p>[0134]或者，</p>
+    <p>[0135]	所述获取单元，具体用于抓取评论和/或转发所述未处理用户发布的微博的用户作为所述下级用户。</p>
+    <p>[0136]	以上所述，仅是本发明的较佳实施例而已，并非对本发明作任何形式上的限制。虽然本发明已以较佳实施例揭露如上，然而并非用以限定本发明。任何熟悉本领域的技术人员，在不脱离本发明技术方案范围情况下，都可利用上述揭示的方法和技术内容对本发明技术方案做出许多可能的变动和修饰，或修改为等同变化的等效实施例。因此，凡是未脱离本发明技术方案的内容，依据本发明的技术实质对以上实施例所做的任何简单修改、等同变化及修饰，均仍属于本发明技术方案保护的范围内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101551892A?cl=zh">CN101551892A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年5月9日</td><td class="patent-data-table-td patent-date-value">2009年10月7日</td><td class="patent-data-table-td ">刘念龙</td><td class="patent-data-table-td ">一种城市生活信息平台及实现方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102609460A?cl=zh">CN102609460A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年1月13日</td><td class="patent-data-table-td patent-date-value">2012年7月25日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">微博客数据采集方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102708176A?cl=zh">CN102708176A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月8日</td><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">山东大学</td><td class="patent-data-table-td ">基于活跃用户的微博数据挖掘方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US8943053">US8943053</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月28日</td><td class="patent-data-table-td patent-date-value">2015年1月27日</td><td class="patent-data-table-td ">Telefonaktiebolaget L M Ericsson (Publ)</td><td class="patent-data-table-td ">Social data ranking and processing</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=0LvYCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年10月9日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年11月6日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/2a915ae7e40bc66b9120/CN103345535A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%BE%AE%E5%8D%9A%E7%94%A8%E6%88%B7%E6%8C%96%E6%8E%98%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85%E7%BD%AE.pdf?id=0LvYCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U27esX3VQ1zw7S1hpyRmexSGwEFsg"},"sample_url":"https://www.google.com/patents/reader?id=0LvYCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

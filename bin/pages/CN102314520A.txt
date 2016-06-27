@@ -1,0 +1,259 @@
+<!DOCTYPE html><html><head><title>专利 CN102314520A - 基于统计回溯定位的网页正文提取方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于统计回溯定位的网页正文提取方法和装置"><meta name="DC.contributor" content="樊庆冲" scheme="inventor"><meta name="DC.contributor" content="莫雅静" scheme="assignee"><meta name="DC.date" content="2011-10-24" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种基于统计回溯定位的网页正文提取方法和装置。所述基于统计回溯定位的网页正文提取方法包括以下步骤：将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；对该DOM树中的所有行根据纯文本长度由高到低进行排序；从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；将目标节点组中的纯文本率大于纯文本率阈值的目标节点定为正文候选节点；输出正文候选节点。本发明通用性强、可维护性好、适用面广，可自适应大多数网页的正文提取需求。"><meta name="DC.date" content="2012-1-11"><meta name="DC.relation" content="CN:101727461:A" scheme="references"><meta name="DC.relation" content="CN:101727498:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102314520:A"><meta name="citation_patent_application_number" content="CN:201110326226"><link rel="canonical" href="https://www.google.com/patents/CN102314520A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102314520A?cl=zh"/><meta name="title" content="专利 CN102314520A - 基于统计回溯定位的网页正文提取方法和装置"/><meta name="description" content="本发明提供了一种基于统计回溯定位的网页正文提取方法和装置。所述基于统计回溯定位的网页正文提取方法包括以下步骤：将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；对该DOM树中的所有行根据纯文本长度由高到低进行排序；从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；将目标节点组中的纯文本率大于纯文本率阈值的目标节点定为正文候选节点；输出正文候选节点。本发明通用性强、可维护性好、适用面广，可自适应大多数网页的正文提取需求。"/><meta property="og:title" content="专利 CN102314520A - 基于统计回溯定位的网页正文提取方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102314520A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102314520A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=yAeFBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102314520A&amp;usg=AFQjCNFQcnu2hqq-R12d6etUEh7PkLiSNA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3384fb1570cc6003c1ec/CN102314520A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3384fb1570cc6003c1ec/CN102314520A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102314520A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102314520A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102314520A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种基于统计回溯定位的网页正文提取方法和装置。所述基于统计回溯定位的网页正文提取方法包括以下步骤：将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；对该DOM树中的所有行根据纯文本长...</span><span itemprop="url">https://www.google.com/patents/CN102314520A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102314520A - 基于统计回溯定位的网页正文提取方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102314520A - 基于统计回溯定位的网页正文提取方法和装置" title="专利 CN102314520A - 基于统计回溯定位的网页正文提取方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102314520 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110326226</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年1月11日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年10月24日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年10月24日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110326226.7, </span><span class="patent-bibdata-value">CN 102314520 A, </span><span class="patent-bibdata-value">CN 102314520A, </span><span class="patent-bibdata-value">CN 201110326226, </span><span class="patent-bibdata-value">CN-A-102314520, </span><span class="patent-bibdata-value">CN102314520 A, </span><span class="patent-bibdata-value">CN102314520A, </span><span class="patent-bibdata-value">CN201110326226, </span><span class="patent-bibdata-value">CN201110326226.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%A8%8A%E5%BA%86%E5%86%B2%22">樊庆冲</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%8E%AB%E9%9B%85%E9%9D%99%22">莫雅静</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102314520A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102314520A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102314520A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=yAeFBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110326226&amp;usg=AFQjCNFcQcGlHeFyjkQf80NErnRztTtFhQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=yAeFBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102314520A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNE7dfW2f3DHKrfPJeH8mG_m_uqlJA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT110105761" lang="ZH" load-source="patent-office">基于统计回溯定位的网页正文提取方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 102314520 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA92334215" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种基于统计回溯定位的网页正文提取方法和装置。所述基于统计回溯定位的网页正文提取方法包括以下步骤：将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；对该DOM树中的所有行根据纯文本长度由高到低进行排序；从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；将目标节点组中的纯文本率大于纯文本率阈值的目标节点定为正文候选节点；输出正文候选节点。本发明通用性强、可维护性好、适用面广，可自适应大多数网页的正文提取需求。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(22)</span></span></div><div class="patent-text"><div mxw-id="PCLM39611508" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于统计回溯定位的网页正文提取方法，其特征在于，包括以下步骤： 解析步骤：将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度； 排序步骤：对该DOM树中的所有行根据纯文本长度由高到低进行排序；回溯步骤：从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；回溯结果分析步骤：将目标节点组中的纯文本率大于纯文本率阈值的目标节点定为正文候选节点；输出步骤：输出正文候选节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的基于统计回溯定位的网页正文提取方法，其特征在于，在回溯步骤中，所述特征值包括标签名和属性。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的基于统计回溯定位的网页正文提取方法，其特征在于，所述回溯步骤还包括：当所述特征值包括ID属性时，将所述ID属性的属性值中的数字去除。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的基于统计回溯定位的网页正文提取方法，其特征在于，在解析步骤和排序步骤之间还包含整理步骤；所述整理步骤包括：将网页中纯文本长度为零的行删除，所述纯文本长度为零的行为仅有换行符的行。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1所述的基于统计回溯定位的网页正文提取方法，其特征在于，在回溯步骤中，以该行中纯文本最长的文本节点为起点进行回溯步骤包括：如果该行有多个文本节点，且该多个文本节点的纯文本长度不同，则以该行中纯文本最长的文本节点为起点进行回溯；如果该行有多个文本节点，且该多个文本节点的纯文本长度相同，则任选该多个文本节点中的一个文本节点为起点进行回溯；如果该行仅有一个文本节点，则以该文本节点为起点进行回溯。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求1所述的基于统计回溯定位的网页正文提取方法，其特征在于，在回溯结果分析步骤和输出步骤之间还包括判断步骤；判断步骤包括：判断一正文候选节点对应的目标节点组内的节点内容是否相似，如果相似则结束，否则转至输出步骤；在判断步骤中，所述判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：判断一正文候选节点对应的目标节点组内的节点内容的相似度是否大于一预先设定的相似度阈值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的基于统计回溯定位的网页正文提取方法，其特征在于，在判断步骤中，判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：判断该正文候选节点的纯文本长度是否大于纯文本长度阈值，如果是则直接输出该正文候选节点，否则采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度，根据该相似度是否大于所述相似度阈值以判断该正文候选节点对应的目标节点组内的节点内容是否相似。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的基于统计回溯定位的网页正文提取方法，其特征在于，在判断步骤中，当所述目标节点组内的节点数大于5时，采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度步骤包括：采用编辑距离算法计算该正文候选节点对应的目标节点组内的两端节点和中间三个节点之间的相似度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求6至8中任一权利要求所述的基于统计回溯定位的网页正文提取方法， 其特征在于，判断步骤还包括：判断该正文候选节点的特征值是否含有隐藏属性，如果含有则结束，否则转至输出步骤。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求6至8中任一权利要求所述的基于统计回溯定位的网页正文提取方法， 其特征在于，在回溯结果分析步骤和判断步骤之间还包括已发现纯文本率判断步骤；已发现纯文本率判断步骤包括：判断当前已发现纯文本长度占全文纯文本长度的比例是否小于一预先设定的已发现纯文本率阈值，如果是则转至回溯结果分析步骤，否则转至判断步骤。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10所述的基于统计回溯定位的网页正文提取方法，其特征在于，在回溯结果分析步骤中，纯文本率阈值是50% ；在判断步骤中，所述相似度阈值是50% ；在所述已发现纯文本率判断步骤中，所述已发现纯文本率阈值是60%，所述纯文本长度阈值是 100。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.	一种基于统计回溯定位的网页正文提取装置，其特征在于，包括依次连接的解析模块，排序模块、回溯模块、回溯结果分析模块和输出模块，其中，所述解析模块，用于将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；所述排序模块，用于对该DOM树中的所有行根据纯文本长度由高到低进行排序；所述回溯模块，用于从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节 ；^^会&#20867;.&#187;所述回溯结果分析模块，用于将目标节点组中的纯文本率大于纯文本率阈值的目标节点定为正文候选节点；所述输出模块，用于输出正文候选节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求12所述的基于统计回溯定位的网页正文提取装置，其特征在于，所述特征值包括标签名和属性。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的基于统计回溯定位的网页正文提取装置，其特征在于，所述回溯模块还用于当所述特征值包括ID属性时将所述ID属性的属性值中的数字去除。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求12所述的基于统计回溯定位的网页正文提取装置，其特征在于，还包括整理模块，其连接于解析模块和排序模块之间；所述整理模块用于将网页中纯文本长度为零的行删除，所述纯文本长度为零的行为仅有换行符的行。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求12所述的基于统计回溯定位的网页正文提取装置，其特征在于，所述回溯模块以该行中纯文本最长的文本节点为起点进行回溯步骤包括：如果该行有多个文本节点，且该多个文本节点的纯文本长度不同，则所述回溯模块以该行中纯文本最长的文本节点为起点进行回溯；如果该行有多个文本节点，且该多个文本节点的纯文本长度相同，则所述回溯模块任选该多个文本节点中的一个文本节点为起点进行回溯；如果该行仅有一个文本节点，则所述回溯模块以该文本节点为起点进行回溯。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求12所述的基于统计回溯定位的网页正文提取装置，其特征在于，还包括判断模块，其连接于回溯结果分析模块和输出模块之间；所述判断模块，用于判断一正文候选节点对应的目标节点组内的节点内容是否相似， 如果相似则控制关闭所述输出模块，否则开启所述输出模块；所述判断模块判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：所述判断模块判断一正文候选节点对应的目标节点组内的节点内容的相似度是否大于一预先设定的相似度阈值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求17所述的基于统计回溯定位的网页正文提取装置，其特征在于，所述判断模块判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：所述判断模块判断该正文候选节点的纯文本长度是否大于纯文本长度阈值，如果是则直接输出该正文候选节点，否则采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度，根据该相似度是否大于所述相似度阈值以判断该正文候选节点对应的目标节点组内的节点内容是否相似。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求18所述的基于统计回溯定位的网页正文提取装置，其特征在于，当所述目标节点组内的节点数大于5时，所述判断模块采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度步骤包括：所述判断模块采用编辑距离算法计算该正文候选节点对应的目标节点组内的两端节点和中间三个节点之间的相似度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求17至19中任一权利要求所述的基于统计回溯定位的网页正文提取装置，其特征在于，所述判断模块还用于判断该正文候选节点的特征值是否含有隐藏属性，如果含有则控制关闭所述输出模块，否则控制开启所述输出模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求17至19中任一权利要求所述的基于统计回溯定位的网页正文提取装置，其特征在于，还包括已发现纯文本率判断模块，其连接于所述回溯结果分析模块和所述判断模块之间；所述已发现纯文本率判断模块，用于判断当前已发现纯文本长度占全文纯文本长度的比例是否小于一预先设定的已发现纯文本率阈值，如果是则控制开启所述回溯结果分析模块，否则控制开启所述判断模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求21所述的基于统计回溯定位的网页正文提取装置，其特征在于，纯文本率阈值是50 %，所述相似度阈值是50 %，所述已发现纯文本率阈值是60 %，所述纯文本长度阈值是100。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES45113830" lang="ZH" load-source="patent-office" class="description">
+    <p>基于统计回溯定位的网页正文提取方法和装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及一种正文提取实现方法和装置，尤其涉及一种基于统计回溯定位的网页正文提取方法和装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着hternet的不断发展，互联网内的数据成指数型增长，已经成为巨大的、分布广泛的信息源。这里面不乏我们需要的信息，但许多信息包含在浩如烟海的Web网页中， 如何帮助人们迅速提取有效信息变成了当前最重要的问题。</p>
+    <p>[0003]	在这种背景下，网页正文的自动化提取也越来越多受到相关研究人员研究与关注，现在主要的研究成果有基于模板的网页正文提取方法，基于视觉特征的网页正文提取方法（VIPS)，基于统计的网页正文提取方法等。下面简单介绍这三种常用网页正文的自动化提取方法，并对每种方法的特点进行分析。</p>
+    <p>[0004]	1、基于模板的网页正文提取方法：这种方法使用包装器（Wrapper)来抽取网页中的有效信息。包装器是一个程序，该程序基于页面的布局特征，针对特定的一类网页，编写解析器，解析出正文在页面中的位置。这种方法的优点是实现简单，文本抽取准确率极高。 缺点是通用性差，每一类网页都要编写特定的包装器，不适合大规模页面的抽取，另外如果某一类页面发生了变化，那么该类页面的包装器就会失效，必须重新修改。</p>
+    <p>[0005]	2、基于视觉特征的网页正文提取方法：微软亚洲研究中心的研究员DengCai等提出了一种基于视觉的语义块提取的方法，主要思路是依据DOM树结构将整个页面逐层迭代分解成语义块，通过他们提出的VIPS算法给每个语义块赋DOC (Degree of Coherence)值， 该值越大说明该语义块内部内容之间的紧密程度越大。然后检测语义块之间的分隔条，并对其设置权重，再从权重最小的分隔条开始合并分隔条两侧的页面块，这个过程迭代进行， 直至构建出页面的整个内容。</p>
+    <p>[0006]	这个方法的优点是通用性强，从人对于网页语义块视觉感知的角度进行分析，是目前最接近人类认知的方法。其准确性由于目前为止还没有成熟的应用，所以还无法检验。 它的缺点是实现过程过于复杂，由于网页视觉特点的复杂性，导致VIPS具有算法规则过于复杂和性能低等缺陷，仅仅是DOC值的赋值过程就要遵循12条规则，在实际应用中可能还会增加更多的规则，因此，基于视觉特征的网页正文提取方法目前还停留在理论层面上，有待实践的检验。</p>
+    <p>[0007]	3、基于统计的网页正文提取方法：该方法对网页特征从不同角度进行统计分析， 采用统计学原理进行正文特征分析并抽取正文。</p>
+    <p>[0008]	这种方法的优点是通用性强、可维护性好。缺点是文本抽取的准确率有限，实际应用的系统往往会借鉴基于模板方法的经验，能够在一定程度上提高文本抽取的准确率。</p>
+    <p>发明内容</p>
+    <p>[0009]	本发明的主要目的在于提供一种基于统计回溯定位的网页正文提取方法和装置，以自适应大多数网页的正文提取需求。</p>
+    <p>[0010]	为了达到上述目的，本发明提供了一种基于统计回溯定位的网页正文提取方法， 包括以下步骤：</p>
+    <p>[0011]	解析步骤：将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；</p>
+    <p>[0012]	排序步骤：对该DOM树中的所有行根据纯文本长度由高到低进行排序；</p>
+    <p>[0013]	回溯步骤：从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；</p>
+    <p>[0014]	回溯结果分析步骤：将目标节点组中的纯文本率大于纯文本率阈值的目标节点定为正文候选节点；</p>
+    <p>[0015]	输出步骤：输出正文候选节点。</p>
+    <p>[0016]	实施时，在回溯步骤中，所述特征值包括标签名和属性。</p>
+    <p>[0017]	实施时，所述回溯步骤还包括：当所述特征值包括ID属性时，将所述ID属性的属性值中的数字去除。</p>
+    <p>[0018]	实施时，本发明所述的基于统计回溯定位的网页正文提取方法在解析步骤和排序步骤之间还包含整理步骤；</p>
+    <p>[0019]	所述整理步骤包括：将网页中纯文本长度为零的行删除，所述纯文本长度为零的行为仅有换行符的行。</p>
+    <p>[0020]	实施时，在回溯步骤中，以该行中纯文本最长的文本节点为起点进行回溯步骤包括：</p>
+    <p>[0021]	如果该行有多个文本节点，且该多个文本节点的纯文本长度不同，则以该行中纯文本最长的文本节点为起点进行回溯；</p>
+    <p>[0022]	如果该行有多个文本节点，且该多个文本节点的纯文本长度相同，则任选该多个文本节点中的一个文本节点为起点进行回溯；</p>
+    <p>[0023]	如果该行仅有一个文本节点，则以该文本节点为起点进行回溯。</p>
+    <p>[0024]	实施时，本发明所述的基于统计回溯定位的网页正文提取方法在回溯结果分析步骤和输出步骤之间还包括判断步骤；</p>
+    <p>[0025]	判断步骤包括：判断一正文候选节点对应的目标节点组内的节点内容是否相似， 如果相似则结束，否则转至输出步骤；</p>
+    <p>[0026]	在判断步骤中，所述判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：判断一正文候选节点对应的目标节点组内的节点内容的相似度是否大于一预先设定的相似度阈值。</p>
+    <p>[0027]	实施时，在判断步骤中，判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：</p>
+    <p>[0028]	判断该正文候选节点的纯文本长度是否大于纯文本长度阈值，如果是则直接输出该正文候选节点，否则采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度，根据该相似度是否大于所述相似度阈值以判断该正文候选节点对应的目标节点组内的节点内容是否相似。[0029]	实施时，在判断步骤中，当所述目标节点组内的节点数大于5时，采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度步骤包括：采用编辑距离算法计算该正文候选节点对应的目标节点组内的两端节点和中间三个节点之间的相似度。</p>
+    <p>[0030]	实施时，判断步骤还包括：判断该正文候选节点的特征值是否含有隐藏属性，如果含有则结束，否则转至输出步骤。</p>
+    <p>[0031]	实施时，本发明所述的基于统计回溯定位的网页正文提取方法在回溯结果分析步骤和判断步骤之间还包括已发现纯文本率判断步骤；</p>
+    <p>[0032]	已发现纯文本率判断步骤包括：判断当前已发现纯文本长度占全文纯文本长度的比例是否小于一预先设定的已发现纯文本率阈值，如果是则转至回溯结果分析步骤，否则转至判断步骤。</p>
+    <p>[0033]	实施时，在回溯结果分析步骤中，纯文本率阈值是50% ；在判断步骤中，所述相似度阈值是50 % ；在所述已发现纯文本率判断步骤中，所述已发现纯文本率阈值是60 %，所述纯文本长度阈值是100。</p>
+    <p>[0034]	本发明还提供了一种基于统计回溯定位的网页正文提取装置，包括依次连接的解析模块，排序模块、回溯模块、回溯结果分析模块和输出模块，其中，</p>
+    <p>[0035]	所述解析模块，用于将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；</p>
+    <p>[0036]	所述排序模块，用于对该DOM树中的所有行根据纯文本长度由高到低进行排序；</p>
+    <p>[0037]	所述回溯模块，用于从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；</p>
+    <p>[0038]	所述回溯结果分析模块，用于将目标节点组中的纯文本率大于纯文本率阈值的目标节点定为正文候选节点；</p>
+    <p>[0039]	所述输出模块，用于输出正文候选节点。</p>
+    <p>[0040]	实施时，所述特征值包括标签名和属性。</p>
+    <p>[0041]	实施时，所述回溯模块还用于当所述特征值包括ID属性时将所述ID属性的属性值中的数字去除。</p>
+    <p>[0042]	实施时，本发明所述的基于统计回溯定位的网页正文提取装置还包括整理模块， 其连接于解析模块和排序模块之间；</p>
+    <p>[0043]	所述整理模块用于将网页中纯文本长度为零的行删除，所述纯文本长度为零的行为仅有换行符的行。</p>
+    <p>[0044]	实施时，所述回溯模块以该行中纯文本最长的文本节点为起点进行回溯步骤包括：</p>
+    <p>[0045]	如果该行有多个文本节点，且该多个文本节点的纯文本长度不同，则所述回溯模块以该行中纯文本最长的文本节点为起点进行回溯；</p>
+    <p>[0046]	如果该行有多个文本节点，且该多个文本节点的纯文本长度相同，则所述回溯模块任选该多个文本节点中的一个文本节点为起点进行回溯；</p>
+    <p>[0047]	如果该行仅有一个文本节点，则所述回溯模块以该文本节点为起点进行回溯。[0048]	实施时，本发明所述的基于统计回溯定位的网页正文提取装置还包括判断模块， 其连接于回溯结果分析模块和输出模块之间；</p>
+    <p>[0049]	所述判断模块，用于判断一正文候选节点对应的目标节点组内的节点内容是否相似，如果相似则控制关闭所述输出模块，否则开启所述输出模块；</p>
+    <p>[0050]	所述判断模块判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：所述判断模块判断一正文候选节点对应的目标节点组内的节点内容的相似度是否大于一预先设定的相似度阈值。</p>
+    <p>[0051]	实施时，所述判断模块判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：</p>
+    <p>[0052]	所述判断模块判断该正文候选节点的纯文本长度是否大于纯文本长度阈值，如果是则直接输出该正文候选节点，否则采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度，根据该相似度是否大于所述相似度阈值以判断该正文候选节点对应的目标节点组内的节点内容是否相似。</p>
+    <p>[0053]	实施时，当所述目标节点组内的节点数大于5时，所述判断模块采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度步骤包括：所述判断模块采用编辑距离算法计算该正文候选节点对应的目标节点组内的两端节点和中间三个节点之间的相似度。</p>
+    <p>[0054]	实施时，所述判断模块还用于判断该正文候选节点的特征值是否含有隐藏属性， 如果含有则控制关闭所述输出模块，否则控制开启所述输出模块。</p>
+    <p>[0055]	实施时，本发明所述的基于统计回溯定位的网页正文提取装置还包括已发现纯文本率判断模块，其连接于所述回溯结果分析模块和所述判断模块之间；</p>
+    <p>[0056]	所述已发现纯文本率判断模块，用于判断当前已发现纯文本长度占全文纯文本长度的比例是否小于一预先设定的已发现纯文本率阈值，如果是则控制开启所述回溯结果分析模块，否则控制开启所述判断模块。</p>
+    <p>[0057]	实施时，所述纯文本率阈值是50%，所述相似度阈值是50%，所述已发现纯文本率阈值是60%，所述纯文本长度阈值是100。</p>
+    <p>[0058]	与现有技术相比，本发明所述的基于统计回溯定位的网页正文提取方法和装置， 通用性强、可维护性好、适用面广，可自适应大多数网页的正文提取需求。</p>
+    <p>附图说明</p>
+    <p>[0059]	图1是本发明所述的基于统计回溯定位的网页正文提取方法的一实施例的流程图；</p>
+    <p>[0060]	图2是本发明所述的基于统计回溯定位的网页正文提取装置的一实施例的结构框图。</p>
+    <p>具体实施方式</p>
+    <p>[0061]	本发明所述的基于统计回溯定位的网页正文提取方法和装置，通过统计网页中各行的纯文本长度，并通过回溯找到正文所在节点。</p>
+    <p>[0062]	网页的正文内容大多数都有一个独享标签，该独享标签是正文所在标签，一般情况下，该独享标签中只含有正文内容，网页正文内容是由一个或多个独享标签组成，因此， 提取网页正文的重点即由找文本变为找独享标签。本发明通过计算文本集中率来找出网页正文的独享标签，文本集中率表示为纯文本长度和文本节点个数的比值，文本节点越少而纯文本越多则文本集中率越大，反之亦然。所述纯文本是指网页中除去标签、样式代码、脚本代码、链接、表单控件的内容。</p>
+    <p>[0063]	在实际应用中，文本集中率的比较是以节点组为单位进行的，该节点组指的是多个节点放在一起的组合。在本发明中，如果正文只分布在一个独享节点中则节点组的长度为1，当正文分布在η个独享节点中时，节点组长度为η。</p>
+    <p>[0064]	所述独享节点是最大程度包含纯文本内容的节点，一个独享节点被某一段正文所独自占有。当有一个文本节点时，判断其是不是独享节点，分别计算本节点和父节点的文本集中率并比对，如果父节点比本节点大，则继续分析父节点，一直回溯遇到文本集中率最大的节点，最大文本集中率的节点我们认为是独享节点，其中添加了一些规则：如果文本节点是&lt;span&gt;或</p>
+    <p>则在比较时忽略本身的文本集中率。</p>
+    <p>[0065]	例如，如果有几个含有纯文本的节点簇拥在一起，那么这几个节点的父节点就很有可能是独享节点。</p>
+    <p>[0066]	在找到网页正文的独享节点后，就要输出该独享节点，此时输出的独享节点可能会含有噪音，对于不同类型的噪音本发明使用了相应的规则进行去噪，规则列举如下：</p>
+    <p>[0067]	规则一（纯文本率规则）：</p>
+    <p>[0068]	如果程序误判独享节点则会造成大量噪音出现，被误判的节点多为广告链接节点或其他非正文节点，这些节点的特征是含有一定量的纯文本或文本集中率较高，想要排除它们的最好方法是计算这些节点的纯文本率，所述纯文本率是指纯文本占所有文本的比例，该所有文本只包括纯文本和链接文本，因此纯文本率表示为纯文本长度和该所有文本长度的比值。如果一节点的链接文本长度大于纯文本长度，则认为该节点为假的独享节点， 则将其抛弃。</p>
+    <p>[0069]	规则二（相似节点规则)：</p>
+    <p>[0070]	出现噪音的另一个原因是独享节点可能会包含一些无用信息，如评论式网页中的用户信息。所述评论式网页是指有不连续的短篇文字的网页，文本内容分布分散。如果该用户信息展示的都是一些用户属性值，而且该些用户属性值大多相似，则该用户信息不能算有效信息。本发明利用相似度判断网页内独享节点组中的节点的内容的相似度是否大于一预先设定的阈值（该阈值例如可以为50%)，如果是则抛弃该节点。如果有很多需要比较的节点，无需全部两两比较一遍，只需要均&#21243;地比较其中几个便可以说明全部情况（如只比较两头的节点和中间的节点）。</p>
+    <p>[0071]	所述独享节点组是指：分析出来独享节点后，程序会把属性名称和属性相同（刨除了属性名为id属性）的独享节点分成独享节点组，相似节点的处理都是在独享节点组内进行的。</p>
+    <p>[0072]	在本发明中，相似度的计算引用了文本编辑距离算法，该算法大致描述如下：</p>
+    <p>[0073]	A和B文本编辑距离就是A变成B要做的增、删、改的操作次数，这个次数越大说明 A和B的差别越大。</p>
+    <p>[0074]	该算法对于短文本的文本距离计算非常适合，因为大文本（文本长度大于100的文本）的比较很耗性能而且大文本在网页的地位肯定重要，所以如果是大文本，则规定不用比较直接输出。</p>
+    <p>[0075]	规则三（隐藏属性规则):</p>
+    <p>[0076]	噪音的另一个原因是输出了应该隐藏的正文内容，在正文提取中，不得不考虑文本在浏览器的实际效果，如果该文本存在但不显示，则认为它不是有效信息最起码不是这篇网页的中心话题，因此在正文提取时也要排除掉。不显示在浏览器则就是隐藏属性的作用，检查标签属性中是否含有display ：none或visibi 1 ity ：hidden便可以达到此目的。</p>
+    <p>[0077]	如图1所示，本发明所述的基于统计回溯定位的网页正文提取方法的一实施例， 包括以下步骤：</p>
+    <p>[0078]	解析步骤11 ：将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；</p>
+    <p>[0079]	排序步骤12 ：对该DOM树中的所有行根据纯文本长度由高到低进行排序；</p>
+    <p>[0080]	回溯步骤13 ：从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；</p>
+    <p>[0081]	回溯结果分析步骤14 ：将目标节点组中的纯文本率比纯文本率阈值低的目标节点筛掉，保留纯文本率大于纯文本率阈值的目标节点，并将其定位正文候选节点；</p>
+    <p>[0082]	输出步骤15 ：输出该正文候选节点的内容。</p>
+    <p>[0083]	实施时，在回溯步骤13中，所述特征值包括标签名和属性。</p>
+    <p>[0084]	实施时，所述回溯步骤13还包括：当所述特征值包括ID属性时，将所述ID属性的属性值中的数字去除。</p>
+    <p>[0085]	实施时，在解析步骤11和排序步骤12之间还包含整理步骤；</p>
+    <p>[0086]	所述整理步骤包括：将网页中纯文本长度为零的行删除，所述纯文本长度为零的行为仅有换行符的行。</p>
+    <p>[0087]	实施时，在回溯步骤中13，以该行中纯文本最长的文本节点为起点进行回溯步骤包括：</p>
+    <p>[0088]	如果该行有多个文本节点，且该多个文本节点的纯文本长度不同，则以该行中纯文本最长的文本节点为起点进行回溯；</p>
+    <p>[0089]	如果该行有多个文本节点，且该多个文本节点的纯文本长度相同，则任选该多个文本节点中的一个文本节点为起点进行回溯；</p>
+    <p>[0090]	如果该行仅有一个文本节点，则以该文本节点为起点进行回溯。</p>
+    <p>[0091]	实施时，在回溯结果分析步骤14和输出步骤15之间还包括判断步骤；</p>
+    <p>[0092]	判断步骤包括：判断一正文候选节点对应的目标节点组内的节点内容是否相似， 如果相似则结束，否则转至输出步骤15 ；</p>
+    <p>[0093]	在判断步骤中，所述判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：判断一正文候选节点对应的目标节点组内的节点内容的相似度是否大于一预先设定的相似度阈值。</p>
+    <p>[0094]	实施时，在判断步骤中，判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：</p>
+    <p>[0095]	判断该正文候选节点的纯文本长度是否大于纯文本长度阈值，如果是则直接输出该正文候选节点，否则采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度，根据该相似度是否大于所述相似度阈值以判断该正文候选节点对应的目标节点组内的节点内容是否相似。</p>
+    <p>[0096]	实施时，在判断步骤中，当所述目标节点组内的节点数大于5时，采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度步骤包括：采用编辑距离算法计算该正文候选节点对应的目标节点组内的两端节点和中间三个节点之间的相似度。</p>
+    <p>[0097]	实施时，判断步骤还包括：判断该正文候选节点的特征值是否含有隐藏属性，如果含有则结束，否则转至输出步骤。</p>
+    <p>[0098]	实施时，在回溯结果分析步骤14和判断步骤之间还包括已发现纯文本率判断步骤；</p>
+    <p>[0099]	已发现纯文本率判断步骤包括：判断当前已发现纯文本长度占全文纯文本长度的比例是否小于一预先设定的已发现纯文本率阈值，如果是则转至回溯结果分析步骤14，否则转至判断步骤。</p>
+    <p>[0100]	实施时，在回溯结果分析步骤14中，纯文本率阈值是50% ；在判断步骤中，所述相似度阈值是50 % ；在所述已发现纯文本率判断步骤中，所述已发现纯文本率阈值是60 %，所述纯文本长度阈值是100。</p>
+    <p>[0101]	根据另一种具体实施方式，本发明所述的基于统计回溯定位的网页正文提取方法包括以下步骤：</p>
+    <p>[0102]	步骤一：将网页解析成DOM树结构，例如可以使用开源组件HtmlParser将网页解析成DOM树结构。</p>
+    <p>[0103]	步骤二（统计与整理步骤）：</p>
+    <p>[0104]	1、统计节点，把相同特征值的节点归为一类；</p>
+    <p>[0105]	所述特征值包括标签名和节点的所有属性；</p>
+    <p>[0106]	把网页解析成DOM树后，每个标签都可以认为是一个节点，标签的属性就是节点的属性。</p>
+    <p>[0107]	然而对于含有ID属性的标签要特殊处理，因为有些论坛网页中的帖子所在节点的ID多为增量的编号，如：</p>
+    <p>[0108]</p>
+    <p>&lt;div id="replyl"&gt;</p>
+    <p>回复1； &lt;/div&gt;</p>
+    <p>[0109]</p>
+    <p>&lt;div id="replylOO"&gt;</p>
+    <p>回复100; &lt;/div&gt;[0110]	本实施例采取的方法是把ID属性值中的数字去掉，即&lt;div id = " replyl" &gt;的特征值为 “div id = reply".,</p>
+    <p>[0111]	2、按行分析网页，得到每一行的纯文本长度。统计全文纯文本长度WholeLength， 这个过程也在解析网页的过程中进行；在解析网页的同时得到原格式每一行的纯文本长度，DOM树的解析过程是把每个标签和文本都转换成节点，并保存节点关系。在解析过程中， 换行符（\n)可以告知每一行的结束。</p>
+    <p>[0112]	3.把一些空文本行（只含换行符）以及长度很小的文本行进行排除，用以提高效率，然后对所有的行根据纯文本长度由高到低排序。</p>
+    <p>[0113]	步骤三（回溯与文本集中度计算步骤）：</p>
+    <p>[0114]	1.依次取出一行（这是一个递归过程，从最长的行开始，取过的不再取），找出行内最重要的文本节点；</p>
+    <p>[0115]	如果这行有多个节点，则纯文本最长的节点是最重要的节点，如果改行只是某个节点的一部分纯文本，则这个该节点就是最重要的节点。</p>
+    <p>[0116]	以该行内最重要的节点为起点回溯，每回溯一层节点，找出与该节点相同特征值的所有节点（前面已作节点统计），放到一个节点组中。</p>
+    <p>[0117]	其中，所述最重要的节点是指：如果这行有多个节点，则纯文本最长的节点是最重要的节点；如果该行只是某个节点的一部分纯文本，则这个该节点就是最重要的节点。</p>
+    <p>[0118]	每层节点泛指节点回溯过程中遇到的每个节点；</p>
+    <p>[0119]	如果取出的是第三行，就以第三行中最重要的节点为起点，回溯它的父节点，回溯在DOM节点中表达的意思是指找父节点；</p>
+    <p>[0120]	2.计算节点组文本集中度。文本集中度是节点组的所含纯文本长度与节点的总个数的比值。公式表示为：</p>
+    <p>[0121]</p>
+    <p>Concentration(文本集中度^她^够；！正^度）</p>
+    <p>NodeCount(节点个数）</p>
+    <p>[0122]	回溯完成后（一般回溯至&lt;body&gt;标签即算完成），取此次回溯过程中遇到的最大文本集中度的节点组，称为目标节点组。</p>
+    <p>[0123]	3.在回溯过程中要记录已处理过的节点特征值，避免下次回溯重复处理。</p>
+    <p>[0124]	步骤四（回溯结果分析步骤)：</p>
+    <p>[0125]	1.迭代回溯返回的目标节点组，计算节点组的纯文本率，纯文本率是纯文本长度与含有链接的纯文本长度的比值：</p>
+    <p>[0126]</p>
+    <p>PlarnTextRatromXifm ~	&#22151;&#36664;</p>
+    <p>料)-MText(总文本长度）</p>
+    <p>[0127]	其中链接文本长度是指纯文本长度+链接文本长度。如果PlainTextRatio大于阈值R(R的取值一般为0. 5比较合适。这个可根据需求而定，当宁缺毋滥时该值可设的大一点，反之亦然）则把该节点定为正文候选节点，等待抽取。如果PlainTextRatio小于R 则认为该节点是噪音节点，将其抛弃。</p>
+    <p>[0128]	2.统计当前已发现纯文本长度kenLength占全文纯文本WholeLength的比例，所述已发现纯文本长度kenLength为所述正文候选节点内的纯文本长度；</p>
+    <p>[0129]	该比例表示为SeenRatio ：</p>
+    <p>[0130]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102314520A/CN102314520AD00131.png"> <img id="idf0001" file="CN102314520AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102314520A/CN102314520AD00131.png" class="patent-full-image" alt="Figure CN102314520AD00131"> </a> </div>
+    <p>[0131]	如果^^1!1?站10小于阈值1?10?1的取值取决于应用需求，当要求不能遗漏数据时， Rl要尽量大，反之亦然，根据一种具体实施方式，Rl =0. 6)，则转至步骤四，否则转至步骤五。</p>
+    <p>[0132]	步骤五（规则限定输出步骤）：</p>
+    <p>[0133]	1.输出节点内容，迭代网页所有节点，取节点特征值并查看该节点是否是正文候选节点，如果不是则跳过该节点的检查，是则用该节点的特征值取出节点组，进行以下2、3 中的规则检查.</p>
+    <p>[0134]	2.判断所述正文候选节点对应的节点组内的节点内容是否相似，相似度算法表示</p>
+    <p>如下：</p>
+    <p>[0135]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102314520A/CN102314520AD00132.png"> <img id="idf0002" file="CN102314520AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102314520A/CN102314520AD00132.png" class="patent-full-image" alt="Figure CN102314520AD00132"> </a> </div>
+    <p>[0136]	LD ：文本编辑距离；T ：较大的文本长度。</p>
+    <p>[0137]	3.判断节点特征值是否含有隐藏属性，即属性值是否含有displaymone或 visibility :hidden，在此用正则表达式实现。</p>
+    <p>[0138]	4.当所述正文候选节点对应的目标节点组内的节点内容的相似度小于一预先设定的阈值时，并且该正文候选节点的特征值不含有隐藏属性时，输出该正文候选节点，处理下个节点直到节点结束。</p>
+    <p>[0139]	另外还可以考虑其他的相似度对比方法，如分词建立向量模型求余弦夹角方法。</p>
+    <p>[0140]	如图2所示，本发明还提供了一种基于统计回溯定位的网页正文提取装置，包括依次连接的解析模块21、排序模块22、回溯模块23、回溯结果分析模块M和输出模块25， 其中，</p>
+    <p>[0141]	解析模块21，用于将网页解析为DOM树结构，按行分析网页，得到每一行的纯文本长度；</p>
+    <p>[0142]	排序模块22，对来自所述解析模块21的DOM树中的所有行根据纯文本长度由长到短进行排序；</p>
+    <p>[0143]	回溯模块23，用于从纯文本长度最长的行开始，依次取出该DOM树中的行，以该行中纯文本最长的文本节点为起点进行回溯，将与该文本节点具有相同特征值的所有文本节点放到一节点组中，并计算该节点组的文本集中度，取文本集中度最高的节点组作为目标节点组；</p>
+    <p>[0144]	回溯结果分析模块M，用于将目标节点组中的纯文本率大于纯文本率阈值低的目标节点定为正文候选节点；</p>
+    <p>[0145]	输出模块25，用于输出该正文候选节点的内容。</p>
+    <p>[0146]	实施时，解析模块21，进一步用于使用开源组件HtmlParser将网页解析成DOM树结构。</p>
+    <p>1[0147]	实施时，所述特征值包括标签名和属性。</p>
+    <p>[0148]	实施时，所述回溯模块23还用于当所述特征值包括ID属性时将所述ID属性的属性值中的数字去除。</p>
+    <p>[0149]	实施时，本发明所述的基于统计回溯定位的网页正文提取装置还包括整理模块， 其连接于解析模块21和排序模块22之间；</p>
+    <p>[0150]	所述整理模块用于将网页中纯文本长度为零的行删除，所述纯文本长度为零的行为仅有换行符的行。</p>
+    <p>[0151]	实施时，所述回溯模块23以该行中纯文本最长的文本节点为起点进行回溯步骤包括：</p>
+    <p>[0152]	如果该行有多个文本节点，且该多个文本节点的纯文本长度不同，则所述回溯模块23以该行中纯文本最长的文本节点为起点进行回溯；</p>
+    <p>[0153]	如果该行有多个文本节点，且该多个文本节点的纯文本长度相同，则所述回溯模块23任选该多个文本节点中的一个文本节点为起点进行回溯；</p>
+    <p>[0154]	如果该行仅有一个文本节点，则所述回溯模块23以该文本节点为起点进行回溯。</p>
+    <p>[0155]	实施时，本发明所述的基于统计回溯定位的网页正文提取装置还包括判断模块， 其连接于回溯结果分析模块M和输出模块25之间；</p>
+    <p>[0156]	所述判断模块，用于判断一正文候选节点对应的目标节点组内的节点内容是否相似，如果相似则控制关闭所述输出模块25，否则开启所述输出模块25 ；</p>
+    <p>[0157]	所述判断模块判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：所述判断模块判断一正文候选节点对应的目标节点组内的节点内容的相似度是否大于一预先设定的相似度阈值。</p>
+    <p>[0158]	实施时，所述判断模块判断一正文候选节点对应的目标节点组内的节点内容是否相似步骤包括：</p>
+    <p>[0159]	所述判断模块判断该正文候选节点的纯文本长度是否大于纯文本长度阈值，如果是则直接输出该正文候选节点，否则采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度，根据该相似度是否大于所述相似度阈值以判断该正文候选节点对应的目标节点组内的节点内容是否相似。</p>
+    <p>[0160]	实施时，当所述目标节点组内的节点数大于5时，所述判断模块采用编辑距离算法计算该正文候选节点对应的目标节点组内的节点之间的相似度步骤包括：所述判断模块采用编辑距离算法计算该正文候选节点对应的目标节点组内的两端节点和中间三个节点之间的相似度。</p>
+    <p>[0161]	实施时，所述判断模块还用于判断该正文候选节点的特征值是否含有隐藏属性， 如果含有则控制关闭所述输出模块，否则控制开启所述输出模块。</p>
+    <p>[0162]	实施时，本发明所述的基于统计回溯定位的网页正文提取装置还包括已发现纯文本率判断模块，其连接于所述回溯结果分析模块M和所述判断模块之间；</p>
+    <p>[0163]	所述已发现纯文本率判断模块，用于判断当前已发现纯文本长度占全文纯文本长度的比例是否小于一预先设定的已发现纯文本率阈值，如果是则控制开启所述回溯结果分析模块对，否则控制开启所述判断模块。</p>
+    <p>[0164]	实施时，纯文本率阈值是50%，所述相似度阈值是50%，所述已发现纯文本率阈值是60%，所述纯文本长度阈值是100。</p>
+    <p>[0165] 以上说明对本发明而言只是说明性的，而非限制性的，本领域普通技术人员理解， 在不脱离所附权利要求所限定的精神和范围的情况下，可做出许多修改、变化或等效，但都将落入本发明的保护范围内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101727461A?cl=zh">CN101727461A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年10月13日</td><td class="patent-data-table-td patent-date-value">2010年6月9日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种网页的正文抽取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101727498A?cl=zh">CN101727498A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年1月15日</td><td class="patent-data-table-td patent-date-value">2010年6月9日</td><td class="patent-data-table-td ">西安交通大学</td><td class="patent-data-table-td ">一种基于web结构的网页信息自动提取方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102779169A?cl=zh">CN102779169A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月27日</td><td class="patent-data-table-td patent-date-value">2012年11月14日</td><td class="patent-data-table-td ">江苏新瑞峰信息科技有限公司</td><td class="patent-data-table-td ">一种基于html标签的网页正文提取方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=yAeFBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017270000">G06F17/27</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=yAeFBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年1月11日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年3月7日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年4月2日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of a patent application after its publication</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3384fb1570cc6003c1ec/CN102314520A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8E%E7%BB%9F%E8%AE%A1%E5%9B%9E%E6%BA%AF%E5%AE%9A%E4%BD%8D%E7%9A%84%E7%BD%91%E9%A1%B5%E6%AD%A3%E6%96%87.pdf?id=yAeFBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2ezo2DsK7LtdVDWOaUHRAK-Jm3BQ"},"sample_url":"https://www.google.com/patents/reader?id=yAeFBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

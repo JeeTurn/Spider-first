@@ -1,0 +1,267 @@
+<!DOCTYPE html><html><head><title>专利 CN103425644A - 网页正文中图片的提取方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="网页正文中图片的提取方法及装置"><meta name="DC.contributor" content="蔡兵" scheme="inventor"><meta name="DC.contributor" content="张凯" scheme="inventor"><meta name="DC.contributor" content="徐羽" scheme="inventor"><meta name="DC.contributor" content="腾讯科技（深圳）有限公司" scheme="assignee"><meta name="DC.date" content="2012-5-14" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种网页正文中图片的提取方法及装置，属于计算机技术领域。所述方法包括：获取网页正文中的图片节点，并获取所述图片节点的文字描述信息；根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片。本发明还公开了一种网页正文中图片的提取装置，所述装置包括：第一获取模块和第一提取模块。本发明提高了提取的图片与网页正文的相关度，从而使得所提取的图片所代表的网页信息主题更明确，极大地提升了用户的体验。"><meta name="DC.date" content="2013-12-4"><meta name="DC.relation" content="CN:101582080:A" scheme="references"><meta name="DC.relation" content="CN:101944109:A" scheme="references"><meta name="DC.relation" content="CN:102156737:A" scheme="references"><meta name="DC.relation" content="CN:102270234:A" scheme="references"><meta name="DC.relation" content="CN:102368266:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103425644:A"><meta name="citation_patent_application_number" content="CN:201210148409"><link rel="canonical" href="https://www.google.com/patents/CN103425644A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103425644A?cl=zh"/><meta name="title" content="专利 CN103425644A - 网页正文中图片的提取方法及装置"/><meta name="description" content="本发明公开了一种网页正文中图片的提取方法及装置，属于计算机技术领域。所述方法包括：获取网页正文中的图片节点，并获取所述图片节点的文字描述信息；根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片。本发明还公开了一种网页正文中图片的提取装置，所述装置包括：第一获取模块和第一提取模块。本发明提高了提取的图片与网页正文的相关度，从而使得所提取的图片所代表的网页信息主题更明确，极大地提升了用户的体验。"/><meta property="og:title" content="专利 CN103425644A - 网页正文中图片的提取方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103425644A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103425644A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=0nrlCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103425644A&amp;usg=AFQjCNHnPd-yWtQvuetVm-gu3_FaYVwvlA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/245d4827a1682e7ac1cb/CN103425644A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/245d4827a1682e7ac1cb/CN103425644A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103425644A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103425644A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN103425644A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN103425644B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103425644A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种网页正文中图片的提取方法及装置，属于计算机技术领域。所述方法包括：获取网页正文中的图片节点，并获取所述图片节点的文字描述信息；根据所述图片节点的文字描述信息在获取的图片节点中提取与所述...</span><span itemprop="url">https://www.google.com/patents/CN103425644A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103425644A - 网页正文中图片的提取方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103425644A - 网页正文中图片的提取方法及装置" title="专利 CN103425644A - 网页正文中图片的提取方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103425644 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210148409</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年12月4日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年5月14日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年5月14日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103425644B?hl=zh-CN&amp;cl=zh">CN103425644B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210148409.9, </span><span class="patent-bibdata-value">CN 103425644 A, </span><span class="patent-bibdata-value">CN 103425644A, </span><span class="patent-bibdata-value">CN 201210148409, </span><span class="patent-bibdata-value">CN-A-103425644, </span><span class="patent-bibdata-value">CN103425644 A, </span><span class="patent-bibdata-value">CN103425644A, </span><span class="patent-bibdata-value">CN201210148409, </span><span class="patent-bibdata-value">CN201210148409.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%94%A1%E5%85%B5%22">蔡兵</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E5%87%AF%22">张凯</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BE%90%E7%BE%BD%22">徐羽</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">腾讯科技（深圳）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103425644A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103425644A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103425644A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=0nrlCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210148409&amp;usg=AFQjCNEbBVk4Mgjs4JfvRdCRozt7UpcHAQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=0nrlCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103425644A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHXvRk1KjIQP-OLeaYrlHWY0jCs6Q"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT131636777" lang="ZH" load-source="patent-office">网页正文中图片的提取方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 103425644 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA126623815" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种网页正文中图片的提取方法及装置，属于计算机技术领域。所述方法包括：获取网页正文中的图片节点，并获取所述图片节点的文字描述信息；根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片。本发明还公开了一种网页正文中图片的提取装置，所述装置包括：第一获取模块和第一提取模块。本发明提高了提取的图片与网页正文的相关度，从而使得所提取的图片所代表的网页信息主题更明确，极大地提升了用户的体验。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(18)</span></span></div><div class="patent-text"><div mxw-id="PCLM57023319" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种网页正文中图片的提取方法，其特征在于，所述方法包括:  获取网页正文中的图片节点，并获取所述图片节点的文字描述信息；  根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片，包括:  计算所述文字描述信息与所述网页正文的网页标题的相似度；  在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的方法，其特征在于，获取所述图片节点的文字描述信息，包括:  获取所述图片节点的属性信息；  在所述属性信息中查找alt字段，从所述alt字段中获取所述图片节点的文字描述信肩、O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所述的方法，其特征在于，获取所述图片节点的文字描述信息，包括:  查找所述网页正文中与所 述图片节点相邻的下一个文字节点；  根据所述文字节点的文字内容获取所述图片节点的文字描述信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其特征在于，根据所述文字节点的文字内容获取所述图片节点的文字描述信息，包括:  获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息；或者，  如果所述图片节点的排版属性和所述文字节点的排版属性均为居中，则获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息；或者，  如果所述文字节点的文字样式与所述图片节点的文字样式相同，则获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2所述的方法，其特征在于，所述方法还包括:  如果未获取到所述图片节点的文字描述信息，或者获取到所述图片节点的文字描述信息但所述文字描述信息与所述网页正文的网页标题的相似度小于预设的阈值，则获取所述图片节点的统一资源定位符URL的长度；  判断获取的所述图片节点中是否具有URL的长度相同的图片节点；  如果获取的所述图片节点中无URL的长度相同的图片节点，则提取所述网页正文中的第一张图片；  如果获取的所述图片节点中有URL的长度相同的图片节点，则在所述URL的长度相同的图片节点中提取在所述网页正文中位置最前的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其特征在于，在所述URL的长度相同的图片节点中提取在所述网页正文中位置最前的图片，包括:  判断URL的长度相同的图片节点是否为多组，其中各组的URL的长度均不同；  如果是，则选取包含图片节点的个数最多的组，在该组内提取在所述网页正文中位置最iu的图片；否则，在所述URL的长度相同的组内提取在所述网页正文中位置最前的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求1所述的方法，其特征在于，获取网页正文中的图片节点之后，还包括:  在获取的所述图片节点中过滤掉广告图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求1所述的方法，其特征在于，根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片之后，还包括:  如果所述提取的图片的属性信息中未包含文字描述信息，则将所述网页正文的网页标题作为文字描述信息添加在所述图片的属性信息中。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.一种网页正文中图片的提取装置，其特征在于，所述装置包括:  第一获取模块，用于获 取网页正文中的图片节点，并获取所述图片节点的文字描述信息；  第一提取模块，用于根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的装置，其特征在于，所述第一提取模块包括:  计算单元，用于计算所述文字描述信息与所述网页正文的网页标题的相似度；  第一提取单元，用于在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求10所述的装置，其特征在于，所述第一获取模块包括:  第一获取单元，用于获取所述图片节点的属性信息；  第二获取单元，用于在所述属性信息中查找alt字段，从所述alt字段中获取所述图片节点的文字描述信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求10所述的装置，其特征在于，所述第一获取模块包括:  查找单元，用于查找所述网页正文中与所述图片节点相邻的下一个文字节点；  第三获取单元，用于根据所述文字节点的文字内容获取所述图片节点的文字描述信肩、O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的装置，其特征在于，所述第三获取单元包括:  第一获取子单元，用于获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息；或者，  第二获取子单元，用于如果所述图片节点的排版属性和所述文字节点的排版属性均为居中，则获取所述文字节点的文字内容作为所述图片节点的文字描述信息；或者，  第三获取子单元，用于如果所述文字节点的文字样式与所述图片节点的文字样式相同，则获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信肩、O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求11所述的装置，其特征在于，所述装置还包括:  第二获取模块，用于如果未获取到所述图片节点的文字描述信息，或者获取到所述图片节点的文字描述信息但所述文字描述信息与所述网页正文的网页标题的相似度小于预设的阈值，则获取所述图片节点的统一资源定位符URL的长度；  判断模块，用于判断所述第一获取模块获取的所述图片节点中是否具有URL的长度相同的图片节点；第二提取模块，用于当所述判断模块判断出获取的所述图片节点中无URL的长度相同的图片节点时，提取所述网页正文中的第一张图片；  第三提取模块，用于当所述判断模块判断出获取的所述图片节点中有URL的长度相同的图片节点时，在所述URL的长度相同的组内提取在所述网页正文中位置最前的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的装置，其特征在于，所述第三提取模块包括:  判断单元，用于判断URL的长度相同的图片节点是否为多组，其中各组的URL的长度均不同；  第二提取单元，用于当所述判断单元判断出URL的长度相同的图片节点为多组时，选取包含图片节点的个数最多的组，在该组内提取在所述网页正文中位置最前的图片；  第三提取单元，用于当所述判断单元判断出URL的长度相同的图片节点为一组时，在所述URL的长度相同的组内提取在所述网页正文中位置最前的图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求10所述的装置，其特征在于，所述装置还包括:  过滤模块，用于在所述第一获取模块获取的所述图片节点中过滤掉广告图片。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求10所述的装置，其特征在于，所述装置还包括:  添加模块，用于在所述第一提取模块提取图片之后，如果提取的图片的属性信息中未包含 文字描述信息，则将所述网页正文的网页标题作为文字描述信息添加在所述图片的属性信息中。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63997124" lang="ZH" load-source="patent-office" class="description">
+    <p>网页正文中图片的提取方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及计算机技术领域，特别涉及一种网页正文中图片的提取方法及装置。背景技术</p>
+    <p>[0002]	随着网络信息量的增长，用户在输入关键字搜索信息时，将获得大量与关键字相关的网页信息，这些网页信息以文本为载体进行显示，使得用户需要浏览网页中的文字进行信息采集，增加了用户获取信息的难度。</p>
+    <p>[0003]	现有技术中，浏览器提供与网页正文相关的多媒体信息，如图片和视频等，向用户展示与网页正文相关的视觉信息。具体来说，如果网页正文中包含图片，则获取网页正文中的所有图片节点，提取该网页正文中第一张图片或者从所有的图片节点中任意提取一张图片作为与该网页的正文相关程度最大的图片，作为网页信息显示给用户，以便用户通过该图片了解网页的相关内容。</p>
+    <p>[0004]	在实现本发明的过程中，发明人发现现有技术至少存在以下缺点:</p>
+    <p>[0005]	提取网页正文中第一张图片或者从所有的图片节点中任意提取一张图片作为代表该网页的图片，可能提取出与网页正文内容无关的图片，导致提取的图片与网页正文的相关度较低，使得该图片所代表的网页信息主题不明确，影响了用户的体验。</p>
+    <p>发明内容</p>
+    <p>[0006]	本发明实施例提供了一种网页正文中图片的提取方法及装置，以提高提取的图片与网页正文的相关度。所述技术方案如下:</p>
+    <p>[0007]	&#8212;方面，提供了一种网页正文中图片的提取方法，所述方法包括:</p>
+    <p>[0008]	获取网页正文中的图片节点，并获取所述图片节点的文字描述信息；</p>
+    <p>[0009]	根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片。</p>
+    <p>[0010]	其中，根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片，包括:</p>
+    <p>[0011]	计算所述文字描述信息与所述网页正文的网页标题的相似度；</p>
+    <p>[0012]	在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片。</p>
+    <p>[0013]	具体地，获取所述图片节点的文字描述信息，包括:</p>
+    <p>[0014]	获取所述图片节点的属性信息；</p>
+    <p>[0015]	在所述属性信息中查找alt字段，从所述alt字段中获取所述图片节点的文字描述信息。</p>
+    <p>[0016]	或者，获取所述图片节点的文字描述信息，包括:</p>
+    <p>[0017]	查找所述网页正文中与所述图片节点相邻的下一个文字节点；</p>
+    <p>[0018]	根据所述文字节点的文字内容获取所述图片节点的文字描述信息。</p>
+    <p>[0019]	进一步地，根据所述文字节点的文字内容获取所述图片节点的文字描述信息，包括:</p>
+    <p>[0020]	获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息；或者，</p>
+    <p>[0021]	如果所述图片节点的属性信息和所述文字节点的排版属性均为居中，则获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息；或者，</p>
+    <p>[0022]	如果所述文字节点的文字样式与所述图片节点的文字样式相同，则获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息。</p>
+    <p>[0023]	另外，所述方法还包括:</p>
+    <p>[0024]	如果未获取到所述图片节点的文字描述信息，或者获取到所述图片节点的文字描述信息但所述文字描述信息与所述网页正文的网页标题的相似度小于预设的阈值，则获取所述图片节点的统一资源定位符URL的长度；</p>
+    <p>[0025]	判断获取的所述图片节点中是否具有URL的长度相同的图片节点；</p>
+    <p>[0026]	如果获取的所述图片节点中无URL的长度相同的图片节点，则提取所述网页正文中的弟一张图片；</p>
+    <p>[0027]	如果获取的所述图片节点中有URL的长度相同的图片节点，则在所述URL的长度相同的图片节点中提取在所述网页正文中位置最前的图片。</p>
+    <p>[0028]	进一步地，在所述URL的长度相同的图片节点中提取在所述网页正文中位置最前的图片，包括:</p>
+    <p>[0029]	判断URL的长度相同的图片节点是否为多组，其中各组的URL的长度均不同；</p>
+    <p>[0030]	如果是，则选取包含图片节点的个数最多的组，在该组内提取在所述网页正文中位置最前的图片；</p>
+    <p>[0031]	否则，在所述URL的长度相同的组内提取在所述网页正文中位置最前的图片。</p>
+    <p>[0032]	优选地，获取网页正文中的图片节点之后，还包括:</p>
+    <p>[0033]	在获取的所述图片节点中过滤掉广告图片。</p>
+    <p>[0034]	可选地，根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片之后，还包括:</p>
+    <p>[0035]	如果所述提取的图片的属性信息中未包含文字描述信息，则将所述网页正文的网页标题作为文字描述信息添加在所述图片的属性信息中。</p>
+    <p>[0036]	另一方面，还提供了一种网页正文中图片的提取装置，所述装置包括:</p>
+    <p>[0037]	第一获取模块，用于获取网页正文中的图片节点，并获取所述图片节点的文字描述信息；</p>
+    <p>[0038]	第一提取模块，用于根据所述图片节点的文字描述信息在获取的图片节点中提取与所述网页正文相关程度最大的图片。</p>
+    <p>[0039]	所述第一提取模块包括:</p>
+    <p>[0040]	计算单元，用于计算所述文字描述信息与所述网页正文的网页标题的相似度；</p>
+    <p>[0041]	第一提取单元，用于在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片。</p>
+    <p>[0042]	所述第一获取模块包括:</p>
+    <p>[0043]	第一获取单元，用于获取所述图片节点的属性信息；[0044]	第二获取单元，用于在所述属性信息中查找alt字段，从所述alt字段中获取所述图片节点的文字描述信息。</p>
+    <p>[0045]	所述第一获取模块包括:</p>
+    <p>[0046]	查找单元，用于查找所述网页正文中与所述图片节点相邻的下一个文字节点；</p>
+    <p>[0047]	第三获取单元，用于根据所述文字节点的文字内容获取所述图片节点的文字描述信息。</p>
+    <p>[0048]	所述第三获取单元包括:</p>
+    <p>[0049]	第一获取子单元，用于获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息；或者，</p>
+    <p>[0050]	第二获取子单元，用于如果所述图片节点的排版属性和所述文字节点的排版属性均为居中，则获取所述文字节点的文字内容作为所述图片节点的文字描述信息；或者，</p>
+    <p>[0051]	第三获取子单元，用于如果所述文字节点的文字样式与所述图片节点的文字样式相同，则获取所述文字节点的文字内容，并将所述文字内容作为所述图片节点的文字描述信息。</p>
+    <p>[0052]	所述装置还包括:</p>
+    <p>[0053]	第二获取模块，用于如果未获取到所述图片节点的文字描述信息，或者获取到所述图片节点的文字描述信息但所述文字描述信息与所述网页正文的网页标题的相似度小于预设的阈值，则获取所述图片节点的统一资源定位符URL的长度；</p>
+    <p>[0054]	判断模块，用于判断所述第一获取模块获取的所述图片节点中是否具有URL的长度相同的图片节点；</p>
+    <p>[0055]	第二提取模块，用于当所述判断模块判断出获取的所述图片节点中无URL的长度相同的图片节点时，提取所述网页正文中的第一张图片；</p>
+    <p>[0056]	第三提取模块，用于当所述判断模块判断出获取的所述图片节点中有URL的长度相同的图片节点时，在所述URL的长度相同的组内提取在所述网页正文中位置最前的图片。</p>
+    <p>[0057]	所述第三提取模块包括:</p>
+    <p>[0058]	判断单元，用于判断URL的长度相同的图片节点是否为多组，其中各组的URL的长度均不同；</p>
+    <p>[0059]	第二提取单元，用于当所述判断单元判断出URL的长度相同的图片节点为多组时，选取包含图片节点的个数最多的组，在该组内提取在所述网页正文中位置最前的图片;</p>
+    <p>[0060]	第三提取单元，用于当所述判断单元判断出URL的长度相同的图片节点为一组时，在所述URL的长度相同的组内提取在所述网页正文中位置最前的图片。</p>
+    <p>[0061]	所述装置还包括:</p>
+    <p>[0062]	过滤模块，用于在所述第一获取模块获取的所述图片节点中过滤掉广告图片。</p>
+    <p>[0063]	所述装置还包括:</p>
+    <p>[0064]	添加模块，用于在所述第一提取模块提取图片之后，如果提取的图片的属性信息中未包含文字描述信息，则将所述网页正文的网页标题作为文字描述信息添加在所述图片的属性信息中。[0065]	本发明实施例提供的技术方案的有益效果是:</p>
+    <p>[0066]	通过获取网页正文中的图片节点，并获取图片节点的文字描述信息，根据图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片，提高了提取的图片与网页正文的相关度，从而使得所提取的图片所代表的网页信息主题更明确，极大地提升了用户的体验。</p>
+    <p>[0067]	通过在获取的图片节点中过滤掉广告图片，可避免将广告图片提取出来，进而提高了提取图片的准确性；另外，如果提取的图片的属性信息中未包含文字描述信息，则将网页正文的网页标题作为文字描述信息添加在该图片的属性信息中，完善了图片的属性信息，从而方便用户根据该文字描述信息搜索图片，降低了后续用户搜索该图片的难度，进一步提升了用户的体验。</p>
+    <p>附图说明</p>
+    <p>[0068]	为了更清楚地说明本发明实施例中的技术方案，下面将对实施例描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0069]	图1是本发明实施例一提供的一种网页正文中图片的提取方法流程图；</p>
+    <p>[0070]	图2是本发明实施例二提供的一种网页正文中图片的提取方法流程图；</p>
+    <p>[0071]	图3是本发明实施例三提供的一种网页正文中图片的提取方法流程图；</p>
+    <p>[0072]	图4是本发明实施例四提供的一种网页正文中图片的提取装置的结构示意图；</p>
+    <p>[0073]	图5是本发明实施例四提供的另一种网页正文中图片的提取装置的结构示意图；</p>
+    <p>[0074]	图6是本发明实施例四提供的一种第一获取模块的结构示意图；</p>
+    <p>[0075]	图7是本发明实施例四提供的另一种第一获取模块的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0076]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方式作进一步地详细描述。</p>
+    <p>[0077]	本实施例涉及网页正文中图片的提取方法，该方法应用于计算机中，或者，应用于移动终端中，所述移动终端包括但不限于:手机、平板电脑、PDA (Personal DigitalAssistant,个人数字助理)等。</p>
+    <p>[0078]	实施例一</p>
+    <p>[0079]	参见图1，本实施例提供了一种网页正文中图片的提取方法，该方法流程具体如下:</p>
+    <p>[0080]	101:获取网页正文中的图片节点，并获取该图片节点的文字描述信息。</p>
+    <p>[0081]	102:根据该图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片。</p>
+    <p>[0082]	其中，根据该图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片，包括:</p>
+    <p>[0083]	计算文字描述信息与网页正文的网页标题的相似度；[0084]	在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片。</p>
+    <p>[0085]	具体地，获取该图片节点的文字描述信息，包括:</p>
+    <p>[0086]	获取该图片节点的属性信息；</p>
+    <p>[0087]	在属性信息中查找alt字段，从该alt字段中获取图片节点的文字描述信息。</p>
+    <p>[0088]	或者，获取该图片节点的文字描述信息，包括:</p>
+    <p>[0089]	查找网页正文中与图片节点相邻的下一个文字节点；</p>
+    <p>[0090]	根据该文字节点的文字内容获取图片节点的文字描述信息。</p>
+    <p>[0091]	另外，所述方法还包括:</p>
+    <p>[0092]	如果未获取到该图片节点的文字描述信息，或者获取到该图片节点的文字描述信息但该文字描述信息与网页正文的网页标题的相似度小于预设的阈值，则获取图片节点的URL (Uniform/Universal Resource Locator,统一资源定位符)的长度；</p>
+    <p>[0093]	判断获取的图片节点中是否具有URL的长度相同的图片节点；</p>
+    <p>[0094]	如果获取的图片节点中无URL的长度相同的图片节点，则提取网页正文中的第一张图片；</p>
+    <p>[0095]	如果获取的图片节点中有URL的长度相同的图片节点，则在URL的长度相同的图片节点中提取在网页正文中位置最前的图片。</p>
+    <p>[0096]	优选地，获取网页正文中的图片节点之后，还包括:</p>
+    <p>[0097]	在获取的图片节点中过滤掉广告图片。</p>
+    <p>[0098]	可选地，根据图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片之后，还包括:</p>
+    <p>[0099]	如果提取的图片的属性信息中未包含文字描述信息，则将网页正文的网页标题作为文字描述信息添加在图片的属性信息中。</p>
+    <p>[0100]	本实施例提供的上述方法，通过获取网页正文中的图片节点，并获取图片节点的文字描述信息，根据图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片，提高了提取的图片与网页正文的相关度，从而使得所提取的图片所代表的网页信息主题更明确，极大地提升了用户的体验。</p>
+    <p>[0101]	通过在获取的图片节点中过滤掉广告图片，可避免将广告图片提取出来，进而提高了提取图片的准确性；另外，如果提取的图片的属性信息中未包含文字描述信息，则将网页正文的网页标题作为文字描述信息添加在该图片的属性信息中，完善了图片的属性信息，从而方便用户根据该文字描述信息搜索图片，降低了后续用户搜索该图片的难度，进一步提升了用户的体验。</p>
+    <p>[0102]	实施例二</p>
+    <p>[0103]	参见图2，本实施例提供了一种网页正文中图片的提取方法，该方法流程具体如下:</p>
+    <p>[0104]	201:获取网页正文中的图片节点。</p>
+    <p>[0105]	本实施例中，图片节点是网页正文的一部分，通常网页正文中包括图片和文字等，为了方便图片提取，可以预先将网页正文进行分割，得到图片节点和文字节点。具体地，可通过网页的DOM (Document Object Model,文档对象模型)树对网页进行分割，当然也可以采用其它方式，本发明对此不限定。相应地，可以利用DOM树的节点特征来获取网页正文中的图片节点，此处不赘述。</p>
+    <p>[0106]	202:获取上述图片节点的属性信息。</p>
+    <p>[0107]	所述图片节点的属性信息至少包括alt字段和图片的URL。优选地，所述属性信息还可以包括以下至少一种:位置属性、排版属性和class属性等。其中，所述alt字段用于存放图片节点的文字描述信息，所述URL是图片的地址信息，所述class属性则定义了图片节点的宽高、图片背景和文字样式等信息。</p>
+    <p>[0108]	203:在该属性信息中查找alt字段，并判断该alt字段中是否包含图片节点的文字描述信息，如果是，执行步骤204 ;否则，执行步骤205。</p>
+    <p>[0109]	具体地，可通过判断alt字段是否为空来实现，如果该alt字段不为空，则确定该alt字段包含该图片节点的文字描述信息；如果该alt字段为空，则确定该alt字段不包含该图片节点的文字描述信息。</p>
+    <p>[0110]	204:从alt字段中获取所述图片节点的文字描述信息，然后执行步骤207。</p>
+    <p>[0111]	205:查找网页正文中与该图片节点相邻的下一个文字节点。</p>
+    <p>[0112]	本实施例中，网页正文中的图片节点和文字节点都有各自的位置，相邻的节点是指两个节点按照排版的顺序在网页正文上相邻。</p>
+    <p>[0113]	206:根据所述文字节点的文字内容获取所述图片节点的文字描述信息。</p>
+    <p>[0114]	具体地，根据所述文字节点的文字内容获取所述图片节点的文字描述信息，包括:</p>
+    <p>[0115]	获取所述文字节点的文字内容，将该文字内容作为图片节点的文字描述信息；或者，</p>
+    <p>[0116]	如果该图片节点的排版属性和该文字节点的排版属性均为居中，则获取该文字节点的文字内容，并将该文字内容作为该图片节点的文字描述信息；或者，</p>
+    <p>[0117]	如果该文字节点的文字样式与该图片节点的文字样式相同，则获取该文字节点的文字内容，并将该文字内容作为该图片节点的文字描述信息。</p>
+    <p>[0118]	例如，对于新闻页面的图片，其相邻的下一个文字节点的文字内容通常包含“XXX摄”、“如图”等文字，则可以获取该文字内容并作为图片节点的文字描述信息；或者，图片节点的文字样式为宋体、五号，如果该文字节点的文字样式也为宋体、五号，则获取该文字节点的文字内容并作为图片节点的文字描述信息。</p>
+    <p>[0119]	其中，图片节点的排版属性可以从图片节点的属性信息中获得，文字节点的排版属性可以从文字节点的属性信息中获得。文字节点的文字样式可以从文字节点的class属性中获得，图片节点的文字样式可以从图片节点的class属性中获得。</p>
+    <p>[0120]	207:计算获取的文字描述信息与网页正文的网页标题的相似度，并在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片，流程结束。</p>
+    <p>[0121]	本实施例中，在计算文字描述信息与网页标题的相似度之前，预先设置相似度阈值，用来判断该图片节点是否与网页正文相关。当相似度大于或等于该阈值时，认为获取的文字描述信息与网页正文相关；当相似度小于该阈值时，认为获取的文字描述信息与网页正文无关；进一步地，在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片可以保证该图片与网页正文最相关，从而可以作为代表网页正文的图片。</p>
+    <p>[0122]	所述阈值可自行设定，例如，将阈值设置为指定字符数3，如果文字描述信息与网页正文的网页标题的相同的字符数大于或等于3，则确定该图片节点与网页正文相关。进一步地，还可对该阈值进行修改，例如，将指定字符数由3改成6等等，本发明对此不作限定。优选地，还可将阈值设定为相似比例，即将文字描述信息与网页标题相同的字符数除以文字描述信息总字符数，判断上述计算得到的相似比例是否大于或等于预设的相似比例，如果是，则确定该图片节点与网页正文相关。所述相似比例可以为50%，或者70%等，本实施例不作限定。</p>
+    <p>[0123]	进一步地，如果上述步骤判断出与网页正文相关的图片节点数为1，则提取该图片，作为与网页正文相关程度最大的图片；如果上述步骤判断出与网页正文相关的图片节点数大于或等于2，则比较所述图片节点相似度，选取相似度最大的图片节点，并提取该图片，作为与网页正文相关程度最大的图片。</p>
+    <p>[0124]	另外，上述方法还可以包括以下步骤:</p>
+    <p>[0125]	如果步骤206中根据所述文字节点的文字内容获取所述图片节点的文字描述信息失败，即未获取到图片节点的文字描述信息，则可以直接提取网页正文中的第一张图片，将其作为与网页正文相关程度最大的图片，流程结束。</p>
+    <p>[0126]	进一步地，上述方法还可以包括:在获取的图片节点中过滤掉广告图片，从而可以避免将广告图片提取出来，提高了图片提取的准确性。</p>
+    <p>[0127]	具体地，对广告图片的过滤方法包括但不限于:</p>
+    <p>[0128]	广告图片的URL的长度普遍较长，则可根据经验值设定过滤阈值，如果图片节点的URL的长度大于或等于该阈值，则认为该图片为广告图片，对其进行过滤；或者，</p>
+    <p>[0129]	广告图片的URL为动态链接且广告图片的域名与网页正文图片的域名不同，例如 http://www.taoba0.com/imgextra/1.jpg,包含 “taobao” 字符，贝U可根据该图片节点的URL的链接状态和域名内容对广告图片进行过滤；或者，</p>
+    <p>[0130]	广告图片的URL的结构与网页正文图片的URL结构不同，例如http://www.xxx.com/ad/1, jpg，包含“ad”特征,则可根据URL的特征对广告图片进行过滤等等,本实施例不对过滤广告图片的方法作限定。</p>
+    <p>[0131]	优选地，上述方法还可以包括:在提取图片之后，如果提取的图片的属性信息中未包含文字描述信息，则将网页正文的网页标题作为文字描述信息添加在该图片的属性信息中。</p>
+    <p>[0132]	本实施例提供的上述方法，通过获取网页正文中的图片节点，并获取图片节点的文字描述信息，根据图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片，提高了提取的图片与网页正文的相关度，从而使得所提取的图片所代表的网页信息主题更明确，极大地提升了用户的体验。</p>
+    <p>[0133]	通过在获取的图片节点中过滤掉广告图片，可避免将广告图片提取出来，进而提高了提取图片的准确性；另外，如果提取的图片的属性信息中未包含文字描述信息，则将网页正文的网页标题作为文字描述信息添加在该图片的属性信息中，完善了图片的属性信息，从而方便用户根据该文字描述信息搜索图片，降低了后续用户搜索该图片的难度，进一步提升了用户的体验。</p>
+    <p>[0134]	实施例三</p>
+    <p>[0135]	参见图3，本实施例提供了一种网页正文中图片的提取方法，与实施例二的区别在于:本实施例通过图片节点的URL的长度对网页正文中的图片进行提取，该方法流程具体如下:</p>
+    <p>[0136]	301:获取网页正文中的图片节点。</p>
+    <p>[0137]	具体地，可利用DOM树的节点特征来获取网页正文中的图片节点，此处不赘述。</p>
+    <p>[0138]	302:如果未获取到该图片节点的文字描述信息，或者获取到该图片节点的文字描述信息但该文字描述信息与网页正文的网页标题的相似度小于预设的阈值，则获取该图片节点的URL的长度。</p>
+    <p>[0139]	具体地，可以从图片节点的属性信息中获取图片节点的URL的长度。</p>
+    <p>[0140]	303:判断上述获取的图片节点中是否具有URL的长度相同的图片节点，如果是，执行步骤304 ;否则，执行步骤305。</p>
+    <p>[0141 ] 本实施例中，网页正文可包含一组相似的图片，例如，介绍产品的一组图片，包括该产品的正视图(http://www.xxx.com/product/1, jpg)、侧视图(http://www.xxx.com/product/2, jpg)和俯视图(http://www.xxx.com/product/3, jpg)等等，则这些图片的 URL的长度相同，为网页正文的相关图片的可能性较大，因此，可根据图片节点的URL的长度提取与网页正文相关程度最大的图片。</p>
+    <p>[0142]	其中，URL的长度相同的图片节点可以是网页正文中的全部图片节点，也可以是网页正文中的部分图片节点，本发明对此不限定。例如，一个网页正文中有5个图片节点，一种场景下5个图片节点的URL长度均相同，另一种场景下，其中有3个图片节点的长度相同，等等。所述没有URL的长度相同的图片节点是指获取的各个图片节点的URL长度均不相同。</p>
+    <p>[0143]	304:在上述URL的长度相同的图片节点中提取在网页正文中位置最前的图片，流</p>
+    <p>程结束。</p>
+    <p>[0144]	其中，在上述URL的长度相同的图片节点中提取在网页正文中位置最前的图片，包括:</p>
+    <p>[0145]	判断URL的长度相同的图片节点是否为多组，其中各组的URL的长度均不同；</p>
+    <p>[0146]	如果是，则选取包含图片节点的个数最多的组，在该组内提取在网页正文中位置最如的图片；</p>
+    <p>[0147]	否则，在所述URL长度相同的组内提取在网页正文中位置最前的图片。</p>
+    <p>[0148]	本实施例中，当URL的长度相同的图片节点为多组时，可以从中任选一组，优选地，选取包含图片节点的个数最多的组，在该组内提取在网页正文中位置最前的图片，作为与网页正文相关程度最大的图片。</p>
+    <p>[0149]	例如，URL的长度相同的图片节点有两组，其中，URL的长度为10的组中有5个图片节点，URL的长度为13的组中有4个图片节点，则选取URL的长度为10的一组提取图片，从该组的5个图片节点中提取在网页正文中位置最前的图片。</p>
+    <p>[0150]	进一步地，如果图片节点的个数最多的组数大于或等于2，即有两个以上的组其中的图片节点的个数相等且均为最多，则将这些组合并组成一个集合从中提取在网页正文中位置最前的图片，作为与网页正文相关程度最大的图片。例如，URL的长度为11的组中有5个图片节点，URL的长度为12的组中也有5个图片节点，组内图片节点的个数相同且均为最多的个数，其余的组内的图片节点的个数均小于5，则将这两个组内的图片节点看成一个集合，从该集合内的10个图片节点中提取在网页正文中位置最前的图片。</p>
+    <p>[0151]	305:这种情况下，获取的所有图片节点的URL的长度都不同，则提取网页正文中的第一张图片，流程结束。</p>
+    <p>[0152]	进一步地，上述方法还包括:在获取的图片节点中过滤掉广告图片。</p>
+    <p>[0153]	具体地，过滤广告图片的方法详见实施例二中的描述，此处不赘述。</p>
+    <p>[0154]	本实施例提供的上述方法，通过获取网页正文中的图片节点的URL的长度，根据图片节点的URL的长度在获取的图片节点中提取与网页正文相关程度最大的图片，提高了提取的图片与网页正文的相关度，从而使得所提取的图片所代表的网页信息主题更明确，极大地提升了用户的体验。另外，通过在获取的图片节点中过滤掉广告图片，可避免将广告图片提取出来，进而提高了提取图片的准确性。</p>
+    <p>[0155]	优选地，还可将实施例二和实施例三结合，对网页正文中的图片进行提取，所述方法如下:</p>
+    <p>[0156]	获取网页正文中的图片节点，并获取该图片节点的属性信息，在该属性信息中查找alt字段，并判断该alt字段中是否包含图片节点的文字描述信息，如果是，则从该alt字段中获取图片节点的文字描述信息；如果否，则查找网页正文中与该图片节点相邻的下一个文字节点，根据所述文字节点的文字内容获取所述图片节点的文字描述信息。</p>
+    <p>[0157]	如果获取到图片节点的文字描述信息，则计算获取的文字描述信息与网页正文的网页标题的相似度，并在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片，流程结束。</p>
+    <p>[0158]	如果未获取到图片节点的文字描述信息，或者获取到该图片节点的文字描述信息但该文字描述信息与网页正文的网页标题的相似度小于预设的阈值，则获取该图片节点的URL的长度，并判断上述获取的图片节点中是否具有URL的长度相同的图片节点，若上述获取的图片节点中具有URL的长度相同的图片节点，则在上述URL的长度相同的图片节点中提取在网页正文中位置最前的图片，流程结束；若上述获取的图片节点中所有图片节点的URL的长度都不同，则提取网页正文中的第一张图片，流程结束。</p>
+    <p>[0159]	实施例四</p>
+    <p>[0160]	参见图4，本实施例提供了一种网页正文中图片的提取装置，该装置包括:</p>
+    <p>[0161]	第一获取模块401，用于获取网页正文中的图片节点，并获取该图片节点的文字描述信息；</p>
+    <p>[0162]	第一提取模块402，用于根据图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片。</p>
+    <p>[0163]	参见图5，本实施例中，第一提取模块402包括:</p>
+    <p>[0164]	计算单元402A，用于计算文字描述信息与网页正文的网页标题的相似度；</p>
+    <p>[0165]	第一提取单元402B，用于在相似度大于或等于预设的阈值的图片节点中，提取相似度最大的图片。</p>
+    <p>[0166]	参见图6,本实施例中，第一获取模块401包括:</p>
+    <p>[0167]	第一获取单元401A，用于获取图片节点的属性信息；</p>
+    <p>[0168]	第二获取单元401B，用于在属性信息中查找alt字段，从该alt字段中获取图片节点的文字描述信息。[0169]	参见图7，本实施例中，第一获取模块401包括:</p>
+    <p>[0170]	查找单元401C，用于查找网页正文中与图片节点相邻的下一个文字节点；</p>
+    <p>[0171 ] 第三获取单元401D，用于根据该文字节点的文字内容获取图片节点的文字描述信</p>
+    <p>肩、O</p>
+    <p>[0172]	本实施例中，第三获取单元401D包括:</p>
+    <p>[0173]	第一获取子单元，用于获取文字节点的文字内容，并将该文字内容作为图片节点的文字描述信息；或者，</p>
+    <p>[0174]	第二获取子单元，用于如果图片节点的排版属性和文字节点的排版属性均为居中，则获取该文字节点的文字内容作为图片节点的文字描述信息；或者，</p>
+    <p>[0175]	第三获取子单元，用于如果文字节点的文字样式与图片节点的文字样式相同，则获取该文字节点的文字内容，并将文字内容作为图片节点的文字描述信息。</p>
+    <p>[0176]	参见图5,本实施例中，所述装置还包括:</p>
+    <p>[0177]	第二获取模块403，用于如果未获取到图片节点的文字描述信息，或者获取到图片节点的文字描述信息但该文字描述信息与网页正文的网页标题的相似度小于预设的阈值，则获取该图片节点的统一资源定位符URL的长度；</p>
+    <p>[0178]	判断模块404，用于判断第一获取模块401获取的图片节点中是否具有URL的长度相同的图片节点；</p>
+    <p>[0179]	第二提取模块405，用于当判断模块404判断出获取的图片节点中无URL的长度相同的图片节点时，提取网页正文中的第一张图片；</p>
+    <p>[0180]	第三提取模块406，用于当判断模块404判断出获取的图片节点中有URL的长度相同的图片节点时，在URL的长度相同的组内提取在网页正文中位置最前的图片。</p>
+    <p>[0181]	其中，图中第二获取模块403或者与第一获取模块401具有连接关系，或者与第一提取模块402具有连接关系，图中把这二个连接关系均画出来了，仅仅为了表示方便，并不代表同时具有这两个连接关系。如果第一获取模块401未获取到图片节点的文字描述信息，则执行第二获取模块403，通过第二获取模块403获取该图片节点的URL的长度；如果第一获取模块401获取到图片节点的文字描述信息，但第一提取模块402计算出该文字描述信息与网页正文的网页标题的相似度小于预设的阈值，则执行第二获取模块403，通过第二获取模块403获取该图片节点的URL的长度。</p>
+    <p>[0182]	参见图5，本实施例中，第三提取模块406包括:</p>
+    <p>[0183]	判断单元406A，用于判断URL的长度相同的图片节点是否为多组，其中各组的URL的长度均不同；</p>
+    <p>[0184]	第二提取单元406B，用于当判断单元406A判断出URL的长度相同的图片节点为多组时，选取包含图片节点的个数最多的组，在该组内提取在网页正文中位置最前的图片；</p>
+    <p>[0185]	第三提取单元406C，用于当判断单元406A判断出URL的长度相同的图片节点为一组时，在该URL的长度相同的组内提取在网页正文中位置最前的图片。</p>
+    <p>[0186]	本实施例中，所述装置还包括:</p>
+    <p>[0187]	过滤模块，用于在第一获取模块401获取的图片节点中过滤掉广告图片。</p>
+    <p>[0188]	本实施例中，所述装置还包括:</p>
+    <p>[0189]	添加模块，用于在第一提取模块402提取图片之后，如果提取的图片的属性信息中未包含文字描述信息，则将网页正文的网页标题作为文字描述信息添加在该图片的属性信息中。</p>
+    <p>[0190]	本实施例提供的上述装置可以是独立的应用程序；或者，也可以内置于某一应用程序中，例如内置于浏览器中，本发明对此不作限定。</p>
+    <p>[0191]	本实施例提供的上述装置，可以执行上述任一方法实施例中提供的网页正文中图片的提取方法，具体过程详见方法实施例中的描述，此处不赘述。</p>
+    <p>[0192]	本实施例提供的装置，通过获取网页正文中的图片节点，并获取图片节点的文字描述信息，根据图片节点的文字描述信息在获取的图片节点中提取与网页正文相关程度最大的图片，对网页正文内容进行概括，明确了网页正文的主题，提高了用户获取网页信息的准确性；另外，通过获取图片节点的文字描述信息，可降低用户搜索图片的难度，极大地提升了用户的体验。</p>
+    <p>[0193]	通过在获取的图片节点中过滤掉广告图片，可避免将广告图片提取出来，进而提高了提取图片的准确性；另外，如果提取的图片的属性信息中未包含文字描述信息，则将网页正文的网页标题作为文字描述信息添加在图片的属性信息中，对该图片节点的文字描述信息进行添加，降低了后续用户搜索该图片的难度，进一步提升了用户的体验。</p>
+    <p>[0194]	需要说明的是:上述实施例提供的网页正文中图片的提取装置在提取图片时，仅以上述各功能模块的划分进行举例说明，实际应用中，可以根据需要而将上述功能分配由不同的功能模块完成，即将装置的内部结构划分成不同的功能模块，以完成以上描述的全部或者部分功能。另外，上述实施例提供的网页正文中图片的提取装置与网页正文中图片的提取方法实施例属于同一构思，其具体实现过程详见方法实施例，这里不再赘述。</p>
+    <p>[0195]	上述本发明实施例序号仅仅为了描述，不代表实施例的优劣。</p>
+    <p>[0196]	本发明实施例中的全部或部分步骤，可以利用软件实现，相应的软件程序可以存储在可读取的存储介质中，如光盘或硬盘等。</p>
+    <p>[0197]	以上所述仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101582080A?cl=zh">CN101582080A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月22日</td><td class="patent-data-table-td patent-date-value">2009年11月18日</td><td class="patent-data-table-td ">浙江大学</td><td class="patent-data-table-td ">一种基于图像和文本相关性挖掘的Web图像聚类方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101944109A?cl=zh">CN101944109A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月6日</td><td class="patent-data-table-td patent-date-value">2011年1月12日</td><td class="patent-data-table-td ">华南理工大学;广州数园网络有限公司</td><td class="patent-data-table-td ">一种基于页面分块的图片摘要提取系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102156737A?cl=zh">CN102156737A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月12日</td><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">华中师范大学</td><td class="patent-data-table-td ">一种中文网页主题内容的提取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102270234A?cl=zh">CN102270234A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月1日</td><td class="patent-data-table-td patent-date-value">2011年12月7日</td><td class="patent-data-table-td ">北京航空航天大学</td><td class="patent-data-table-td ">一种图像搜索方法及其搜索引擎</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102368266A?cl=zh">CN102368266A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年10月21日</td><td class="patent-data-table-td patent-date-value">2012年3月7日</td><td class="patent-data-table-td ">浙江大学</td><td class="patent-data-table-td ">一种用于网络搜索的无标注图片的排序方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=0nrlCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年12月4日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年12月25日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年4月6日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/245d4827a1682e7ac1cb/CN103425644A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%BD%91%E9%A1%B5%E6%AD%A3%E6%96%87%E4%B8%AD%E5%9B%BE%E7%89%87%E7%9A%84%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95%E5%8F%8A.pdf?id=0nrlCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1vyXHyepKAi-ZycLLiYeDomORx4g"},"sample_url":"https://www.google.com/patents/reader?id=0nrlCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

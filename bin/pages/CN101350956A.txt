@@ -1,0 +1,224 @@
+<!DOCTYPE html><html><head><title>专利 CN101350956A - 实现主叫签名业务的方法、装置和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="实现主叫签名业务的方法、装置和系统"><meta name="DC.contributor" content="欣 王" scheme="inventor"><meta name="DC.contributor" content="北京驰纵网络技术有限公司" scheme="assignee"><meta name="DC.date" content="2008-6-27" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了实现主叫签名业务的方法、装置和系统，其中，所述方法为在主叫用户发起呼叫时，主叫方网络侧向主叫用户归属的签名平台发送通知消息，所述签名平台根据通知消息将自身存储的主叫用户的签名信息发送给被叫用户网络侧。在本发明实施例中，主叫用户的签名信息存储在主叫用户归属的签名平台中，节省了HLR的存储空间，提高了系统的效率，此外，本发明实施例能使主叫用户针对不同的被叫用户、不同的时间段等设置不同的签名内容，而且主叫用户可以自主地对签名内容进行修改，充分满足客户需求。"><meta name="DC.date" content="2009-1-21"><meta name="citation_patent_publication_number" content="CN:101350956:A"><meta name="citation_patent_application_number" content="CN:200810115733"><link rel="canonical" href="https://www.google.com/patents/CN101350956A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101350956A?cl=zh"/><meta name="title" content="专利 CN101350956A - 实现主叫签名业务的方法、装置和系统"/><meta name="description" content="本发明实施例公开了实现主叫签名业务的方法、装置和系统，其中，所述方法为在主叫用户发起呼叫时，主叫方网络侧向主叫用户归属的签名平台发送通知消息，所述签名平台根据通知消息将自身存储的主叫用户的签名信息发送给被叫用户网络侧。在本发明实施例中，主叫用户的签名信息存储在主叫用户归属的签名平台中，节省了HLR的存储空间，提高了系统的效率，此外，本发明实施例能使主叫用户针对不同的被叫用户、不同的时间段等设置不同的签名内容，而且主叫用户可以自主地对签名内容进行修改，充分满足客户需求。"/><meta property="og:title" content="专利 CN101350956A - 实现主叫签名业务的方法、装置和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101350956A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101350956A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=ZRFnBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101350956A&amp;usg=AFQjCNE5gBLOcjp-544AY0D4EJ3xHW16Tw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ae3fe139307dbfdd121c/CN101350956A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ae3fe139307dbfdd121c/CN101350956A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101350956A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101350956A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101350956A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了实现主叫签名业务的方法、装置和系统，其中，所述方法为在主叫用户发起呼叫时，主叫方网络侧向主叫用户归属的签名平台发送通知消息，所述签名平台根据通知消息将自身存储的主叫用户的签名信息发送...</span><span itemprop="url">https://www.google.com/patents/CN101350956A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101350956A - 实现主叫签名业务的方法、装置和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101350956A - 实现主叫签名业务的方法、装置和系统" title="专利 CN101350956A - 实现主叫签名业务的方法、装置和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101350956 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810115733</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年1月21日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年6月27日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年6月27日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810115733.4, </span><span class="patent-bibdata-value">CN 101350956 A, </span><span class="patent-bibdata-value">CN 101350956A, </span><span class="patent-bibdata-value">CN 200810115733, </span><span class="patent-bibdata-value">CN-A-101350956, </span><span class="patent-bibdata-value">CN101350956 A, </span><span class="patent-bibdata-value">CN101350956A, </span><span class="patent-bibdata-value">CN200810115733, </span><span class="patent-bibdata-value">CN200810115733.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%AC%A3+%E7%8E%8B%22">欣 王</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E9%A9%B0%E7%BA%B5%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京驰纵网络技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101350956A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101350956A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101350956A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ZRFnBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810115733&amp;usg=AFQjCNFkZj7tA2FO6GlZMOLt54V5OjFFdQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ZRFnBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101350956A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFEb1yvOHPlFFXk0RAmkEii-_DXog"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT84893746" lang="ZH" load-source="patent-office">实现主叫签名业务的方法、装置和系统</invention-title>
+      </span><br><span class="patent-number">CN 101350956 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA61128449" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了实现主叫签名业务的方法、装置和系统，其中，所述方法为在主叫用户发起呼叫时，主叫方网络侧向主叫用户归属的签名平台发送通知消息，所述签名平台根据通知消息将自身存储的主叫用户的签名信息发送给被叫用户网络侧。在本发明实施例中，主叫用户的签名信息存储在主叫用户归属的签名平台中，节省了HLR的存储空间，提高了系统的效率，此外，本发明实施例能使主叫用户针对不同的被叫用户、不同的时间段等设置不同的签名内容，而且主叫用户可以自主地对签名内容进行修改，充分满足客户需求。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(17)</span></span></div><div class="patent-text"><div mxw-id="PCLM13285655" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种实现主叫签名业务的方法，其特征在于，包括：    主叫用户发起呼叫时，主叫方网络侧查询主叫用户是否开通了主叫签名业务；    如果主叫用户开通的了主叫签名业务，主叫方网络侧向主叫用户归属的签名平台发送通知消息，通知所述签名平台查询主叫用户的签名信息；    主叫用户归属的签名平台将查询到的主叫用户的签名信息发送给被叫方网络侧；    被叫方网络侧将接收到的主叫用户的签名信息发送给被叫用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求1所述的方法，其特征在于，在主叫方网络侧向主叫用 户归属的签名平台发送通知消息之前，或者在主叫用户归属的签名平台将查 询到的主叫用户的签名信息发送给被叫方网络侧之前，还包括：判断主叫用 户是否限制显示主叫用户的签名信息，如果否，则继续原流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求2所述的方法，其特征在于，所述判断主叫用户是否限 制显示主叫用户的签名信息包括：判断主叫用户是否设置限制显示标志；或者，判断被叫用户是否属于主叫用户预设的限制显示用户组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求3所述的方法，其特征在于，用户通过加拨预设号码设 置所述限制显示标志。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 根据权利要求1所述的方法，其特征在于，所述主叫方网络侧为主叫 方移动交换中心MSC,被叫方网络侧为被叫方MSC,所述主叫用户归属的签 名平台将查询到的主叫用户的签名信息发送给被叫方网络侧包括：主叫用户归属的签名平台通过主叫方MSC将所查询到的主叫用户的签名 信息发送给被叫方MSC。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求1或5所述的方法，其特征在于，所述主叫方网络侧在 主叫用户归属的归属位置寄存器HLR中查询主叫用户是否开通了主叫签名业 务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 根据权利要求1所述的方法，其特征在于，所述通知消息包括： 主叫用户的号码和/或被叫号码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 根据权利要求1所述的方法，其特征在于，所述签名信息包括： 用户姓名和用户的个性签名信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 根据权利要求8所述的方法，其特征在于，所述个性签名信息包括： 文字签名、照片签名、音频签名或者视频签名。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求1所述的方法，其特征在于，所述主叫方网络侧为智 能网平台，所述被叫方网络侧为被叫方MSC,所述主叫用户归属的签名平台 将查询到的主叫用户的签名信息发送给被叫方网络侧包括：主叫用户归属的签名平台通过非结构化补充数据业务USSD平台将所查 询到的主叫用户的签名信息发送给被叫方MSC。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11、 根据权利要求IO所述的方法，其特征在于，所述主叫用户归属的签 名平台通过非结构化补充数据业务USSD平台将所查询到的主叫用户的签名 信息发送给被叫方MSC包括：主叫用户所属的签名平台将查询到的主叫用户的签名信息发送给USSD平台；USSD平台将所述主叫用户的签名信息发送给被叫方MSC; 或者，主叫用户所属的签名平台将查询到的主叫用户的签名信息发送给智能网平台；智能网平台将接收到的主叫用户的签名信息转发给USSD平台； USSD平台将所述主叫用户的签名信息发送给-故叫方MSC。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12、 一种实现主叫签名业务的网络侧设备，其特征在于，所述网络侧设 备包括：查询单元，用于在主叫用户发起呼叫时，查询主叫用户是否开通了主叫 签名业务；通知单元，用于根据查询单元的确认信息，向主叫用户归属的签名平台 发送通知消息，通知所述签名平台查询主叫用户的签名信息；接收单元，用于接收从主叫用户归属的签名平台发送的主叫用户的签名 信息；发送单元，用于向被叫方网络侧发送接收单元接收到的主叫用户的签名 信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 一种实现主叫签名业务的移动交换中心MSC，其特征在于，包括如 权利要求12所述的网络侧设备。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14、 一种签名平台，其特征在于，包括：业务处理单元、检索单元、数 据库和业务管理单元，其中：业务处理单元，用于接收来自于主叫方网络侧的通知消息，按预设规则 将签名请求信息发送到^^索单元，并在找主叫签名信息后，将主叫签名信息 发送给相应的网络实体；检索单元，用于从数据库中查找用户签名信息；数据库，用于存储用户的签名信息；业务管理单元，用于对注册的用户统一管理，对用户相关签名信息进行 审核。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15、 一种实现主叫签名业务的系统，其特征在于，包括：主叫用户归属 的HLR、主叫方MSC、主叫用户归属的签名平台、被叫方MSC,其中：主叫用户归属的HLR，用于存储主叫用户的业务信息；主叫方MSC,用于在接收到主叫用户的呼叫信息后，向主叫用户归属的 HLR查询主叫用户是否开通了主叫签名业务，当主叫用户开展了主叫签名业 务时，从主叫用户归属的签名平台获取主叫用户的签名信息，将主叫用户的 签名信息发送给被叫方MSC;主叫用户归属的签名平台，用于在收到主叫方网络侧的通知消息时，查 询主叫用户的签名信息，并将查询到的签名信息发送给主叫方MSC;被叫方MSC，用于将接收到的主叫用户的签名信息发送给被叫用户。</div>
+    </div>
+    </div> <div class="claim"> <div num="16" class="claim">
+      <div class="claim-text">16、 一种实现主叫签名业务的系统，其特征在于，包括：主叫方智能网 平台、主叫用户归属的签名平台、USSD平台、被叫方MSC,其中：主叫方智能网平台，用于在接收到主叫用户的呼叫请求后，查询主叫用 户是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主叫 用户归属的签名平台发送通知消息，通知所述签名平台查询主叫用户的签名 信息；主叫用户归属的签名平台，用于在收到主叫方智能网的通知消息时，查询主叫用户的签名信息，并将查询到的签名信息发送给主叫方智能网平台；USSD平台，用于将从智能网接到的主叫用户的签名信息发送给被叫方 MSC;被叫方MSC ，用于将接收到的主叫用户的签名信息发送给被叫用户。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17、 一种用于实现主叫签名业务的系统，所述系统包括：主叫方智能网平台、主叫用户归属的签名平台、USSD平台、被叫方MSC，其中：主叫方智能网平台，用于在接收到主叫用户的呼叫请求后，查询主叫用户是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主叫用户归属的签名平台发送通知消息，通知所述签名平台查询主叫用户的签名4§息;主叫用户归属的签名平台，用于在收到主叫方智能网平台的通知消息时，查询主叫用户的签名信息，并将查询到的签名信息发送给USSD平台；USSD平台，用于将从主叫用户归属的签名平台收到的主叫用户的签名信息发送给^皮叫方MSC;被叫方MSC,用于将接收到的主叫用户的签名信息发送给被叫用户。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES18672691" lang="ZH" load-source="patent-office" class="description">
+    <p>实现主叫签名业务的方法、装置和系统</p>
+    <p>技术领域</p>
+    <p>本发明涉及通信技术领域，更具体地说，涉及实现主叫签名业务的方法、 装置和系统。</p>
+    <p>背景技术</p>
+    <p>随着通信技术的不断发展，电话已经成为人们日常生活中最重要的通信 工具。但是，目前人们在拨打电话的时候，被叫方只能得到正在呼叫的主叫 方的电话号码，不能获得更多的主叫方的信息。</p>
+    <p>当被叫方存储了主叫方的相关信息，例如在手机中存储了主叫方的电话</p>
+    <p>号码和姓名，才能显示主叫方的姓名，知道主叫方是谁；对于陌生的主叫方， 由于被叫方没有预先存储该主叫方的相关信息，将无法显示主叫方姓名，不 利于相互之间的沟通。</p>
+    <p>主叫签名业务是指，在主叫用户发起呼叫时，向被叫用户提供主叫用户 的信息。目前，北美、加拿大、日本等国家的移动和固网运营商已为被叫用 户开通了姓名来电显示服务，其主要功能是不管被叫方电话通讯薄中是否存 在主叫方的信息，让被叫用户始终知道是谁在拨打电话。</p>
+    <p>现有的相关技术都是将主叫方信息，如电话号码和姓名，存储在归属位 置寄存器（HLR, Home Location Register)中，当主叫方发起呼叫时，主叫方 将HLR中存储的主叫方的信息提供给被叫方显示。</p>
+    <p>在实现本发明过程中，发明人发现：将主叫方信息存储在HLR上，增加 了HLR的负担，从而降低了系统的效率，此外，由于HLR容量的限制，主 叫方在HLR中只能存储类似被叫方地址薄中的姓名，缺少多样性。</p>
+    <p>发明内容</p>
+    <p>有鉴于此，本发明实施例提供实现主叫签名的方法、装置和系统，以解 决现有技术中出现的将主叫方信息存储在HLR上，增加了HLR的负担，降低 了系统的效率的问题。</p>
+    <p>本发明实施例是这样实现的： 一种实现主叫签名业务的方法，包括：</p>
+    <p>主叫用户发起呼叫时，主叫方网络侧查询主叫用户是否开通了主叫签名 业务；</p>
+    <p>如果主叫用户开通的了主叫签名业务，主叫方网络侧向主叫用户归属的 签名平台发送通知消息，通知签名平台查询主叫用户的签名信息；</p>
+    <p>主叫用户归属的签名平台将查询到的主叫用户的签名信息发送给被叫方 网络烦ll;</p>
+    <p>被叫方网络侧将接收到的主叫用户的签名信息发送给被叫用户。 优选地，在主叫方网络侧向主叫用户归属的签名平台发送通知消息之前，</p>
+    <p>或者在主叫用户归属的签名平台将查询到的主叫用户的签名信息发送给被叫</p>
+    <p>方网络侧之前，还包括：判断主叫用户是否限制显示主叫用户的签名信息，</p>
+    <p>如果否，则继续原流程。</p>
+    <p>优选地，所述判断主叫用户是否限制显示主叫用户的签名信息包括：</p>
+    <p>判断主叫用户是否设置限制显示标志；或者，</p>
+    <p>判断被叫用户是否属于主叫用户预设的限制显示用户组。</p>
+    <p>优选地，用户通过加拨预设号码设置所述限制显示标志。</p>
+    <p>优选地，所述主叫方网络侧和^f皮叫方网络侧均为移动交换中心MSC,所</p>
+    <p>述主叫用户归属的签名平台将查询到的主叫用户的签名信息发送给被叫方网</p>
+    <p>络侧包括：</p>
+    <p>主叫用户归属的签名平台通过主叫方MSC将所查询到的主叫用户的签名 信息发送给被叫方MSC。</p>
+    <p>优选地，所述主叫方网络侧在主叫用户归属的归属位置寄存器HLR中查 询主叫用户是否开通了主叫签名业务。</p>
+    <p>优选地，所述通知消息包括：</p>
+    <p>主叫用户的号码和/或^f皮叫号码。</p>
+    <p>优选地，所述签名信息包括：</p>
+    <p>用户姓名和用户的个性签名信息。</p>
+    <p>优选地，所述个性签名信息包括：</p>
+    <p>文字签名、照片签名、音频签名或者视频签名。</p>
+    <p>优选地，所述主叫方网络侧为智能网平台，所述被叫方网络侧为被叫方 MSC,所述主叫用户归属的签名平台将查询到的主叫用户的签名信息发送给</p>
+    <p>-陂叫方网络侧包括：</p>
+    <p>主叫用户归属的签名平台通过非结构化补充彩:据业务USSD平台将所查 询到的主叫用户的签名信息发送给^L叫方MSC。</p>
+    <p>优选地，所述主叫用户归属的签名平台通过非结构化补充数据业务USSD 平台将所查询到的主叫用户的签名信息发送给被叫方MSC包括：</p>
+    <p>主叫用户所属的签名平台将查询到的主叫用户的签名信息发送给USSD</p>
+    <p>平台；</p>
+    <p>USSD平台将所述主叫用户的签名信息发送给被叫方MSC; 或者，</p>
+    <p>主叫用户所属的签名平台将查询到的主叫用户的签名信息发送给智能网 平台；</p>
+    <p>智能网平台将接收到的主叫用户的签名信息转发给USSD平台； USSD平台将所述主叫用户的签名信息发送给被叫方MSC。 一种实现主叫签名业务的网络侧设备，所述网络侧设备包括： 查询单元，用于在主叫用户发起呼叫时，查询主叫用户是否开通了主叫 签名业务；</p>
+    <p>通知单元，用于根据查询单元的确认信息，向主叫用户归属的签名平台 发送通知消息，通知所述签名平台查询主叫用户的签名信息；</p>
+    <p>接收单元，用于接收从主叫用户归属的签名平台发送的主叫用户的签名</p>
+    <p>&lt;吕息;</p>
+    <p>发送单元，用于向被叫方网络侧发送接收单元接收到的主叫用户的签名</p>
+    <p>4 §息。</p>
+    <p>一种实现主叫签名业务的移动交换中心MSC,包括上述实现主叫签名业 务的网络侧设备。</p>
+    <p>一种签名平台，包括：业务处理单元、检索单元、数据库和业务管理单 元，其中：</p>
+    <p>业务处理单元，用于接收来自于主叫方网络侧的通知消息，按预设规则 将签名请求信息发送到检索单元，并在找主叫签名信息后，将主叫签名信息</p>
+    <p>发送给相应的网络实体；</p>
+    <p>检索单元，用于从数据库中查找用户签名信息； 数据库，用于存储用户的签名信息；</p>
+    <p>业务管理单元，用于对注册的用户统一管理，对用户相关签名信息进行 审核。</p>
+    <p>一种实现主叫签名业务的系统，包括：主叫用户归属的HLR、主叫方MSC、 主叫用户归属的签名平台、被叫方MSC,其中：</p>
+    <p>主叫用户归属的HLR,用于存储主叫用户的业务信息；</p>
+    <p>主叫方MSC,用于在接收到主叫用户的呼叫信息后，向主叫用户归属的 HLR查询主叫用户是否开通了主叫签名业务，当主叫用户开展了主叫签名业 务时，从主叫用户归属的签名平台获取主叫用户的签名信息，将主叫用户的 签名信息发送给净皮叫方MSC;</p>
+    <p>主叫用户归属的签名平台，用于在收到主叫方网络侧的通知消息时，查 询主叫用户的签名信息，并将查询到的签名信息发送给主叫方MSC;</p>
+    <p>被叫方MSC，用于将接收到的主叫用户的签名信息发送给被叫用户。</p>
+    <p>一种实现主叫签名业务的系统，包括：主叫方智能网平台、主叫用户归 属的签名平台、USSD平台、被叫方MSC，其中：</p>
+    <p>主叫方智能网平台，用于在接收到主叫用户的呼叫请求后，查询主叫用 户是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主叫 用户归属的签名平台发送通知消息，通知所述签名平台查询主叫用户的签名 信息；</p>
+    <p>主叫用户归属的签名平台，用于在收到主叫方智能网的通知消息时，查 询主叫用户的签名信息，并将查询到的签名信息发送给主叫方智能网平台；</p>
+    <p>USSD平台，用于将从智能网接到的主叫用户的签名信息发送给被叫方 MSC;</p>
+    <p>被叫方MSC,用于将接收到的主叫用户的签名信息发送给被叫用户。 一种用于实现主叫签名业务的系统，所述系统包括：主叫方智能网平台、 主叫用户归属的签名平台、USSD平台、净皮叫方MSC,其中：</p>
+    <p>主叫方智能网平台，用于在接收到主叫用户的呼叫请求后，查询主叫用 户是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主叫 用户归属的签名平台发送通知消息，通知所述签名平台查询主叫用户的签名</p>
+    <p>信息；</p>
+    <p>主叫用户归属的签名平台，用于在收到主叫方智能网平台的通知消息时， 查询主叫用户的签名信息，并将查询到的签名信息发送给USSD平台；</p>
+    <p>USSD平台，用于将从主叫用户归属的签名平台收到的主叫用户的签名信 息发送给被叫方MSC;</p>
+    <p>被叫方MSC，用于将接收到的主叫用户的签名信息发送给被叫用户。</p>
+    <p>从上述的技术方案可以看出，与现有技术相比，本发明实施例中，在主 叫用户发起呼叫时，主叫方网络侧向主叫用户归属的签名平台发送通知消息， 所述签名平台根据通知消息将自身存储的主叫用户的签名信息发送给被叫用 户网络侧。主叫用户的签名信息存储在主叫用户归属的签名平台中，节省了 HLR的存储空间，提高了系统的效率，此外，本发明实施例能使主叫用户针 对不同的被叫用户、不同的时间段等设置不同的签名内容，而且主叫用户可 以自主地对签名内容进行修改，充分满足客户需求。</p>
+    <p>附图说明</p>
+    <p>图1为本发明实施例1所提供的方法的流程图； 图2为本发明实施例2所4是供的装置的结构示意图； 图3为本发明实施例3所提供的签名平台的结构示意图； 图4为本发明实施例4所提供的系统的结构示意图； 图5为本发明实施例5所提供的方法的流程图； 图6为本发明实施例6所提供的系统的结构示意图； 图7为本发明实施例7所提供的系统的结构示意图。 具体实施方式</p>
+    <p>为了清楚起见，下面首先对本文中出现的一些技术术语或关键名词进行 筒单介绍和解释：</p>
+    <p>1、移动交换中心（MSC, mobile switching centre ),公众移动电话系统与 公众交换电话网（PSTN)的接口。它可以设在地方或国际入口等层次，有分</p>
+    <p>散交换和集中交换两种结构。对于三级分散交换式网路（单局单站制），每 个基站通过一个小容量移动交换中心与市话网接续。对于三级集中交换式网 路（单局多站制），多个基站集中于一个移动交换中心进行交换接续，然后 再接入市话网的市话局或市话汇接局。</p>
+    <p>2、 归属位置寄存器（HLR， Home Location Register)，管理部门用于移 动用户管理的数据库。每个移动用户都应在其归属位置寄存器注册登记。HLR 主要存储两类信息:有关用户的参数和有关用户目前所处位置的信息。</p>
+    <p>3、 非结构化补充数据业务（USSD, Unstructured Supplementary Service Data)， 一种新型基于GSM网络的交互式数据业务，它是在GSM的短消息 系统技术基础上推出的新业务，和短消息业务构成互补，实现无缝整合应用， 克服了短消息易用性、交互性差的缺点。</p>
+    <p>本发明的核心思想是，将主叫用户的主叫签名信息存储在主叫用户所属 的签名平台上，当主叫用户发起呼叫时，主叫方网络侧向主叫用户归属的签 名平台发送通知消息，所述签名平台根据通知消息将自身存储的主叫用户的 签名信息发送给被叫用户网络侧，该发明具体包括以下步骤：</p>
+    <p>步骤l:主叫用户发起呼叫时，主叫方网络侧查询主叫用户是否开通了主 叫签名业务。</p>
+    <p>步骤2:如果主叫用户开通的了主叫签名业务，主叫方网络侧向主叫用户 归属的签名平台发送通知消息，通知所述签名平台查询主叫用户的签名信息。</p>
+    <p>步骤3:主叫用户归属的签名平台将查询到的主叫用户的签名信息发送给 寻皮叫方网络侧。</p>
+    <p>步骤4:被叫方网络侧将收到的主叫用户的签名信息发送给被叫用户。 优选地，在主叫方网络侧向主叫用户归属的签名平台发送通知消息之前， 或者在主叫用户归属的签名平台将查询到的主叫用户的签名信息发送给被叫 方网络侧之前，还包括：判断主叫用户是否限制显示主叫签名信息。 其中判断主叫用户是否限制显示主叫签名信息包括： 判断被叫用户是否属于主叫用户预设的限制显示用户组；或者 判断主叫用户是否设置了限制显示标志。  优选地，主叫用户预设的限制显示用户组保存在主叫用户所属的主叫签 名平台上。</p>
+    <p>优选地，用户可以通过加拨预设号码，例如在^皮叫用户的电话号码之后 或者之前加拨*或者其他的号码，来设置限制显示标志。</p>
+    <p>在实际应用中，主叫方网络侧有多种网络实体，当主叫方网络侧的网络 实体不同时，步骤3中，主叫用户归属的签名平台向被叫方网络侧发送主叫 用户签名信息的方式也不同，下面，结合附图，对本发明实施例做详细的描 述。</p>
+    <p>实施例1，在该实施例中，主叫签名平台为MSC,参见图1,该实施例具 体包括如下步骤：</p>
+    <p>步骤101:主叫用户发起呼叫时，主叫方MSC在主叫用户归属的HLR查 询主叫用户是否开通了主叫签名业务，如果是，进入步骤102;如果否，进入 步骤105。</p>
+    <p>如前所述，HLR用于存储有关用户的参数和有关用户目前所处位置的信 息。本发明实施例中，主叫用户的主叫签名业务的定制信息存储在HLR中。 主叫用户发起呼叫时，主叫方MSC从主叫用户归属位置寄存器HLR中读取 主叫用户业务信息，根据所读取业务信息，判断主叫用户是否开通了主叫签 名业务。</p>
+    <p>步骤102:主叫方MSC向主叫用户归属的签名平台发送通知消息，通知 主叫用户归属的签名平台查询主叫用户的签名信息。</p>
+    <p>其中，通知消息包括主叫用户的号码和/或4皮叫用户的号码。</p>
+    <p>当主叫用户归属的签名平台收到主叫MSC发送的通知消息后，根据该通 知消息查询主叫用户的签名信息。</p>
+    <p>签名信息包括用户的姓名和用户的个性签名信息。</p>
+    <p>在主叫用户归属的签名平台中，同一个主叫用户可以保存多种类型的个 性签名信息。包括：文字签名、照片签名、音频签名或者^L频签名。</p>
+    <p>主叫用户可以针对不同的被叫用户，设置不同的个性签名。例如，主叫 用户可以将被叫用户分类，对不同的类别设置不同的个性签名。或者，主叫 用户根据不同的时间段，设置不同的个性签名等等。</p>
+    <p>主叫用户根据什么样的原则设置个性签名都不影响本发明实施例的实 现，因此各种设置原则都在本发明实施例的范围内。</p>
+    <p>步骤103:主叫用户归属的签名平台通过主叫方MSC将所查询到的主叫 用户的签名信息发送给被叫方MSC。 步骤103具体为：</p>
+    <p>主叫用户归属的签名平台将所查询到的主叫用户的签名信息发送给主叫 方MSC。</p>
+    <p>主叫方MSC将所述主叫用户的签名信息发送给;陂叫方MSC。 步骤104:被叫方MSC将收到的主叫用户的签名信息发送给被叫用户。 步骤105:主叫方MSC将主叫用户的号码和通话时间发送给被叫方MSC。 步骤106:被叫方MSC将主叫用户的号码和通话时间发送给被叫用户。 优选地，步骤103中，主叫方MSC可以只向被叫方网络侧发送主叫签名</p>
+    <p>信息,也可以同时向被叫方网络侧发送主叫签名信息和主叫用户号码。</p>
+    <p>优选地，在主叫方MSC向主叫用户所属的签名平台发送通知消息之前，</p>
+    <p>或者当主叫方MSC获得了主叫用户的签名信息之后，还包括：判断主叫用户</p>
+    <p>是否限制显示主叫签名信息。</p>
+    <p>其中判断主叫用户是否限制显示主叫签名信息包括：</p>
+    <p>判断被叫用户是否属于主叫用户预设的限制显示用户组；或者</p>
+    <p>判断主叫用户是否提供了限制显示标志。</p>
+    <p>优选地，主叫用户预设的限制显示用户组保存在主叫用户所属的主叫签 名平台上。</p>
+    <p>优选地，用户可以通过加拨预设号码，例如在^皮叫用户的电话号码之后 或者之前加拨*或者其他的号码，作为限制显示标志。</p>
+    <p>如果主叫用户限制限制主叫签名信息，则直接进入步骤105;否则就按原 流程执行。</p>
+    <p>通过本发明实施例，主叫方MSC在主叫用户开通了主叫签名信息后，从 主叫用户归属的签名平台获取主叫用户的签名信息，并将所述签名信息发送 给被叫用户的MSC,再由被叫用户的MSC发送给被叫用户，实现了主叫签 名业务。</p>
+    <p>实施例2，与实施例1的方法实施例相对应，本发明实施例还提供用于实</p>
+    <p>现主叫签名的装置，参见图2，所述装置包括：</p>
+    <p>查询单元201,用于在主叫用户发起呼叫时，查询主叫用户是否开通了主 叫签名业务。</p>
+    <p>通知单元202，用于才艮据查询单元201的确i人信息，向主叫用户归属的签 名平台发送通知消息，通知所述签名平台查询主叫用户的签名信息。</p>
+    <p>接收单元203,用于接收从主叫用户归属的签名平台根据通知单元202的 通知消息发送来的主叫用户的签名信息。</p>
+    <p>发送单元204,用于向被叫方网络侧发送接收单元接收到的主叫用户的签</p>
+    <p>名4吕息o</p>
+    <p>实施例3，图3为本发明实施例提供的签名平台的结构示意图，所述签名 平台接收到主叫用户发送的通知消息后查找相应的签名信息，发送给被叫方 网络侧，所述签名平台包括业务处理单元301、冲企索单元302、数据库303和 业务管理单元304，其中：</p>
+    <p>业务处理单元301，用于接收来自于主叫方网络侧的通知消息，按预设规 则将签名请求信息发送到检索单元302，并在找的主叫签名信息后，将主叫签 名信息发送给相应的网络实体。</p>
+    <p>检索单元302,用于从数据库303中查找用户签名信息。</p>
+    <p>数据库303,用于存储用户的签名信息。</p>
+    <p>业务管理单元304,用于对注册的用户统一管理，对用户相关签名信息进 行审核。</p>
+    <p>实施例4,参见图4,本发明实施例还提供用于实现主叫签名业务的系统， 所述系统包括：主叫用户归属的HLR401、主叫方MSC402、主叫用户归属的 签名平台403、被叫方MSC404。其中：</p>
+    <p>主叫用户归属的HLR401，用于存储主叫用户的业务信息。 主叫方MSC402,用于在接收到主叫用户的呼叫信息后，向主叫用户归属 的HLR401查询主叫用户是否开通了主叫签名业务，当主叫用户开展了主叫 签名业务时，从主叫用户归属的签名平台403获取主叫用户的签名信息，将 主叫用户的签名信息发送给被叫方MSC404。 主叫用户归属的签名平台403,用于在收到主叫方网络侧的通知消息时， 查询主叫用户的签名信息，并将查询到的签名信息发送给主叫方MSC402。 被叫方MSC404,用于将接收到的主叫用户的签名信息发送给被叫用户。 图4所述的系统工作原理为：</p>
+    <p>主叫方MSC402在4^收到主叫用户的呼叫后，向主叫用户归属的HLR401 查询主叫用户是否开通了主叫签名业务，当主叫用户开展了主叫签名业务时， 从主叫用户归属的签名平台403获取主叫用户的签名信息，将主叫用户的签 名信息发送给被叫方网络侧，被叫方MSC404将收到的信息发送给被叫用户。</p>
+    <p>实施例5，在本发明的另一种实现中，主叫方网络实体为智能网平台，参 见图5，本发明实施例的具体步骤为：</p>
+    <p>步骤501:主叫方智能网平台在接收到主叫用户的呼叫请求后，查询主叫 用户是否开通了主叫签名业务，如果是，进入步骤502;如果否，进入步骤 505。</p>
+    <p>步骤502:主叫方智能网平台向主叫用户归属的签名平台发送通知消息， 通知所述签名平台查询主叫用户的签名信息。</p>
+    <p>其中，所述的通知消息与实施例2中基本相同，此处不再赘述。</p>
+    <p>步骤503:主叫用户所属的签名平台将查询到的主叫用户的签名信息通过 USSD平台发送给被叫方MSC。</p>
+    <p>步骤504:被叫方MSC将收到的主叫用户的签名信息发送给被叫用户， 进入步骤505。</p>
+    <p>步骤505:结束流程。</p>
+    <p>其中，步骤503中，主叫用户所属的签名平台将查询到的主叫用户的签 名信息通过USSD平台发送给被叫方MSC可以有多种方式，包括：</p>
+    <p>主叫用户所属的签名平台将查询到的主叫用户的签名信息发送给USSD</p>
+    <p>平台；</p>
+    <p>USSD平台将所述主叫用户的签名信息发送给被叫方MSC; 或者，</p>
+    <p>主叫用户所属的签名平台将查询到的主叫用户的签名信息发送给智能网</p>
+    <p>平台；</p>
+    <p>智能网平台将主叫用户的签名信息发送给USSD平台；</p>
+    <p>USSD平台将所述主叫用户的签名信息发送给被叫方MSC。</p>
+    <p>实施例6，参见图6，本发明实施例提供一种用于实现主叫签名业务的系</p>
+    <p>统，所述系统包括：主叫方智能网平台601、主叫用户归属的签名平台602、</p>
+    <p>USSD平台603、被叫方MSC604,其中：</p>
+    <p>主叫方智能网平台601，用于在接收到主叫用户的呼叫请求后，查询主叫</p>
+    <p>用户是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主</p>
+    <p>叫用户归属的签名平台602发送通知消息，通知所述签名平台602查询主叫</p>
+    <p>用户的签名信息。</p>
+    <p>主叫用户归属的签名平台602,用于在收到主叫方智能网的通知消息后， 查询主叫用户的签名信息，并将查询到的签名信息发送给主叫方智能网平台 601。</p>
+    <p>USSD平台603,用于将从智能网601接到的主叫用户的签名信息发送给 被叫方MSC604。</p>
+    <p>被叫方MSC604，用于将接收到的主叫用户的签名信息发送给被叫用户。 '      图6所示的系统的工作原理为：</p>
+    <p>主叫方智能网平台601在接收到主叫用户的呼叫请求后，查询主叫用户 是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主叫用 户归属的签名平台602发送通知消息，通知所述签名平台602查询主叫用户 的签名信息；主叫用户归属的签名平台602在自身查找主叫用户的签名信息， 并将查询到的签名信息发送给主叫方智能网平台601;智能网平台601将接受 到的主叫用户的签名信息转发给USSD平台603; USSD平台603再将接收到 的主叫用户的签名信息发送给被叫方MSC604;由被叫方MSC604将接收到 的主叫用户的签名信息发送给被叫用户，从而实现主叫签名业务。</p>
+    <p>实施例7,参见图7,本发明实施例提供另一种用于实现主叫签名的系统， 所述系统包括：主叫方智能网平台701、主叫用户归属的签名平台702、 USSD 平台703、；陂叫方MSC704，其中：</p>
+    <p>主叫方智能网平台701,用于在接收到主叫用户的呼叫请求后，查询主叫 用户是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主</p>
+    <p>叫用户归属的签名平台702发送通知消息，通知所述签名平台702查询主叫</p>
+    <p>用户的签名信息。</p>
+    <p>主叫用户归属的签名平台702,用于在收到主叫方智能网的通知消息时， 查询主叫用户的签名信息，并将查询到的签名信息发送给USSD平台703。</p>
+    <p>USSD平台703，用于将从主叫用户归属的签名平台702接到的主叫用户 的签名信息发送给^C叫方MSC704。</p>
+    <p>被叫方MSC704，用于将接收到的主叫用户的签名信息发送给被叫用户。</p>
+    <p>图7所示的系统的工作原理为：</p>
+    <p>主叫方智能网平台701,在接收到主叫用户的呼叫请求后，查询主叫用户 是否开展了主叫签名业务，如果主叫用户开通了主叫签名业务，则向主叫用 户归属的签名平台702发送通知消息，通知所述签名平台702查询主叫用户 的签名信息；签名平台702将查询到的签名信息发送给USSD平台703;USSD 平台703将从主叫用户归属的签名平台702接到的主叫用户的签名信息发送 给-故叫方MSC704,由^皮叫方MSC704将主叫用户的签名信息发送给被叫用 户，实现主叫签名业务。</p>
+    <p>对所公开的实施例的上述说明，使本领域专业技术人员能够实现或使用 本发明。对这些实施例的多种修改对本领域的专业技术人员来说将是显而易 见的，本文中所定义的一般原理可以在不脱离本发明的精神或范围的情况下， 在其它实施例中实现。因此，本发明将不会被限制于本文所示的这些实施例， 而是要符合与本文所公开的原理和新颖特点相一致的最宽的范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101959151A?cl=zh">CN101959151A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年10月21日</td><td class="patent-data-table-td patent-date-value">2011年1月26日</td><td class="patent-data-table-td ">杭州东信北邮信息技术有限公司</td><td class="patent-data-table-td ">一种实现手机签名的系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101959151B?cl=zh">CN101959151B</a></td><td class="patent-data-table-td patent-date-value">2010年10月21日</td><td class="patent-data-table-td patent-date-value">2012年12月5日</td><td class="patent-data-table-td ">杭州东信北邮信息技术有限公司</td><td class="patent-data-table-td ">一种实现手机签名的系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102014355A?cl=zh">CN102014355A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月22日</td><td class="patent-data-table-td patent-date-value">2011年4月13日</td><td class="patent-data-table-td ">中国移动通信集团安徽有限公司</td><td class="patent-data-table-td ">在主叫手机上显示即时通讯软件签名信息的系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102355636A?cl=zh">CN102355636A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月15日</td><td class="patent-data-table-td patent-date-value">2012年2月15日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种电子名片业务的实现方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012151966A1?cl=zh">WO2012151966A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月28日</td><td class="patent-data-table-td patent-date-value">2012年11月15日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种电子名片业务的实现方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id=""></a><div class="patent-section-header"><span class="patent-section-title"></span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"></tr></thead></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年1月21日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年3月11日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年5月30日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of an application for a patent</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ae3fe139307dbfdd121c/CN101350956A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%AE%9E%E7%8E%B0%E4%B8%BB%E5%8F%AB%E7%AD%BE%E5%90%8D%E4%B8%9A%E5%8A%A1%E7%9A%84%E6%96%B9%E6%B3%95_%E8%A3%85%E7%BD%AE.pdf?id=ZRFnBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U04UAi8hDTBiQ6ro2v11CvSVoKZpw"},"sample_url":"https://www.google.com/patents/reader?id=ZRFnBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

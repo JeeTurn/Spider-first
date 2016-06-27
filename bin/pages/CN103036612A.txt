@@ -1,0 +1,329 @@
+<!DOCTYPE html><html><head><title>专利 CN103036612A - 流氓光节点onu检测方法、隔离方法及设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="流氓光节点onu检测方法、隔离方法及设备"><meta name="DC.contributor" content="李南" scheme="inventor"><meta name="DC.contributor" content="董恩升" scheme="inventor"><meta name="DC.contributor" content="刘健" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2012-12-18" scheme="dateSubmitted"><meta name="DC.description" content="本申请公开了一种流氓ONU检测方法，当满足预设检测条件时，在PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU；对所述待检测ONU集合中的ONU执行判定过程：统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非0的次数；当所述输出光指示信号有效的次数或者光功率非0的次数不满足第一预设统计条件时，判定所述待检测ONU集合中存在流氓ONU。应用本发明公开的检测方法，能够及时对PON系统中是否存在流氓ONU进行检测，进而在系统中存在流氓ONU时，对流氓ONU进行隔离，避免系统中存在流氓ONU在非正确授权间隙内进行发光造成数据冲突。"><meta name="DC.date" content="2013-4-10"><meta name="DC.relation" content="CN:101577844:A" scheme="references"><meta name="DC.relation" content="US:5680575" scheme="references"><meta name="citation_patent_publication_number" content="CN:103036612:A"><meta name="citation_patent_application_number" content="CN:201210551591"><link rel="canonical" href="https://www.google.com/patents/CN103036612A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103036612A?cl=zh"/><meta name="title" content="专利 CN103036612A - 流氓光节点onu检测方法、隔离方法及设备"/><meta name="description" content="本申请公开了一种流氓ONU检测方法，当满足预设检测条件时，在PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU；对所述待检测ONU集合中的ONU执行判定过程：统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非0的次数；当所述输出光指示信号有效的次数或者光功率非0的次数不满足第一预设统计条件时，判定所述待检测ONU集合中存在流氓ONU。应用本发明公开的检测方法，能够及时对PON系统中是否存在流氓ONU进行检测，进而在系统中存在流氓ONU时，对流氓ONU进行隔离，避免系统中存在流氓ONU在非正确授权间隙内进行发光造成数据冲突。"/><meta property="og:title" content="专利 CN103036612A - 流氓光节点onu检测方法、隔离方法及设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103036612A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103036612A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=ornvBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103036612A&amp;usg=AFQjCNHzMby6km7hbEJGW3XuNqFVTmer9w" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/631531397d29c1632478/CN103036612A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/631531397d29c1632478/CN103036612A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103036612A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103036612A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN103036612A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN103036612B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103036612A?cl=zh" style="display:none"><span itemprop="description">本申请公开了一种流氓ONU检测方法，当满足预设检测条件时，在PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU；对所述待检测ONU集合中的ONU执行判定过程：统计所述待检测ONU集合中所有ONU在所述预设条...</span><span itemprop="url">https://www.google.com/patents/CN103036612A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103036612A - 流氓光节点onu检测方法、隔离方法及设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103036612A - 流氓光节点onu检测方法、隔离方法及设备" title="专利 CN103036612A - 流氓光节点onu检测方法、隔离方法及设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103036612 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210551591</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年4月10日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年12月18日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年12月18日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103036612B?hl=zh-CN&amp;cl=zh">CN103036612B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210551591.2, </span><span class="patent-bibdata-value">CN 103036612 A, </span><span class="patent-bibdata-value">CN 103036612A, </span><span class="patent-bibdata-value">CN 201210551591, </span><span class="patent-bibdata-value">CN-A-103036612, </span><span class="patent-bibdata-value">CN103036612 A, </span><span class="patent-bibdata-value">CN103036612A, </span><span class="patent-bibdata-value">CN201210551591, </span><span class="patent-bibdata-value">CN201210551591.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%8D%97%22">李南</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%91%A3%E6%81%A9%E5%8D%87%22">董恩升</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E5%81%A5%22">刘健</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103036612A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103036612A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103036612A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ornvBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210551591&amp;usg=AFQjCNEZqw2iJDYCwlet1VDh-H9BEqDeig"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ornvBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103036612A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEjI2oV_yyTQRfsOSr62A_aT8LFNA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT123231856" lang="ZH" load-source="patent-office">流氓光节点onu检测方法、隔离方法及设备</invention-title>
+      </span><br><span class="patent-number">CN 103036612 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA110114895" lang="ZH" load-source="patent-office">
+    <div class="abstract">本申请公开了一种流氓ONU检测方法，当满足预设检测条件时，在PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU；对所述待检测ONU集合中的ONU执行判定过程：统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非0的次数；当所述输出光指示信号有效的次数或者光功率非0的次数不满足第一预设统计条件时，判定所述待检测ONU集合中存在流氓ONU。应用本发明公开的检测方法，能够及时对PON系统中是否存在流氓ONU进行检测，进而在系统中存在流氓ONU时，对流氓ONU进行隔离，避免系统中存在流氓ONU在非正确授权间隙内进行发光造成数据冲突。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(13)</span></span></div><div class="patent-text"><div mxw-id="PCLM52526106" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种流氓光节点ONU检测方法，其特征在于，包括：当满足预设检测条件时，在无源光网络PON系统中确定待检测ONU集合，所述待检测 ONU集合中至少包含一个光节点ONU ；对所述待检测ONU集合中的ONU执行判定过程，所述判定过程包括：统计所述待检测ONU集合中所有ONU在所述预设条件下输出光指示信号有效的次数或者光功率非O的次数；当所述输出光指示信号有效的次数或者光功率非O的次数不满足第一预设统计条件时，判定所述待检测ONU集合中存在流氓ONU ；所述第一预设统计条件包括：所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值；或者所述光指示信号有效的次数与所述PON系统中所有ONU输出光指示信号的次数的比例值小于预设比例阈值；或者所述光功率非O的次数与所述PON系统中所述ONU输出光功率的次数的比例值小于预设比例阈值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述预设检测条件包括：所述PON系统中存在ONU处于上行空闲授权时隙；或者，所述PON系统产生告警或提示信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的方法，其特征在于，所述设定的可配置值为a，所述a为大于或等于I的整数。</div>
+    </div>
+    </div> <div class="claim"> <div num="4" class="claim">
+      <div class="claim-text">4.	一种流氓光节点ONU检测设备，其特征在于，包括：第一确定单元，用于当满足预设检测条件时，在无源光网络PON系统中确定待检测ONU 集合，所述待检测ONU集合中至少包含一个光节点ONU ；第一判定单元，用于对所述待检测ONU集合中的ONU执行判定过程；其中：所述第一判定单元包括：统计子单元，用于统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非O的次数；判定子单元，用于当所述输出光指示信号有效的次数或者光功率非O的次数不满足预设统计条件时，判定所述待检测ONU集合中存在流氓ONU ；所述预设统计条件包括：所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值；或者所述光指示信号有效的次数与所述PON系统中所有ONU输出光指示信号的次数的比例值小于预设比例阈值；或者所述光功率非O的次数与所述PON系统中所述ONU输出光功率的次数的比例值小于预设比例阈值。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.	一种流氓光节点ONU排查方法，其特征在于，包括：50	:将无源光网络PON系统中所有或部分光节点ONU归入排查对象组；51	:将所述排查对象组中的ONU划分为第一 ONU组和第二 ONU组；52	:关闭所述第二 ONU组中ONU的上行发光使能或者上行激光器电源；53	:对所述排查对象组中的ONU执行判定过程，当判定所述排查对象组中存在流氓ONU 时，将所述第一 ONU组作为排查对象组；否则，将所述第二 ONU作为排查对象组；54	:判断所述排查对象组中ONU的个数是否为1，如果否，转步骤SI，如果是，将所述排查对象组中的ONU作为流氓0NU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，在所述步骤SO与步骤SI之间还包括： 发送广播管理报文至所述排查对象组中的各个0NU，对所述排查对象组中的各个ONU进行组播管理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求5所述的方法，其特征在于，还包括：对排查出的流氓ONU进行隔离。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.	一种流氓光节点ONU排查设备，其特征在于，包括：归入单元，用于将无源光网络PON系统中所有或部分光节点ONU归入排查对象组，所述排查对象组至少包括流氓光节点ONU ；划分单元，用于将所述排查对象组中的ONU划分为第一 ONU组和第二 ONU组；第一关闭单元，用于关闭所述第二 ONU组中ONU的上行发光使能或者上行激光器电源；第二判定单元，用于对所述排查对象组中的ONU执行判定过程，当判定所述排查对象组中存在流氓ONU时，将所述第一 ONU组作为排查对象组；否则，将所述第二 ONU作为排查对象组；判断单元，用于判断所述排查对象组中的ONU的个数是否为1，如果是，将所述排查对象组中的ONU作为流氓0NU，否则，控制所述划分单元对所述排查对象组中的ONU进行划分。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的设备，其特征在于，还包括：发送单元，用于发送广播管理报文至所述排查对象组中的各个0NU，对所述排查对象组中的各个ONU进行组播管理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求8所述的设备，其特征在于，还包括：隔离单元，用于对排查出的流氓ONU进行隔离。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.	一种流氓光节点ONU排查方法，其特征在于，包括：将无源光网络PON系统中的各个ONU逐一作为目标ONU ；关闭所述目标ONU的上行发光使能或者上行激光器电源；在所述目标ONU的授权时隙内，统计所述目标ONU连续输出光指示信号有效的次数或者光功率非O的次数；当所述输出光指示信号有效的次数或者光功率非O的次数不满足第二预设统计条件时，将所述目标ONU作为流氓ONU ；所述第二预设统计条件包括：所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求所述11所述的方法，其特征在于，所述设定的可配置值为b，所述b 为大于或等于I的整数。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.	一种流氓光节点ONU排查设备，其特征在于，包括：第二确定单元，用于将无源光网络PON系统中的各个ONU逐一作为目标ONU ；第二关闭单元，用于关闭所述目标ONU的上行发光使能或者上行激光器电源；统计单元，用于在所述目标ONU的授权时隙内，统计所述目标ONU连续输出光指示信号有效的次数或者光功率非O的次数；第三确定单元，用于当所述输出光指示信号有效的次数或者光功率非O的次数不满足第二预设统计条件时，将所述目标ONU作为流氓ONU ；所述第二预设统计条件包括：所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59586568" lang="ZH" load-source="patent-office" class="description">
+    <p>流氓光节点ONU检测方法、隔离方法及设备</p>
+    <p>技术领域</p>
+    <p>[0001]	 本申请涉及光网络领域，特别是涉及一种流氓光节点ONU检测方法、隔离方法及设备。</p>
+    <p>背景技术</p>
+    <p>[0002]无源光网络（PON,	Passive Optical Network)是一种采用点到多点（P2MP, point2 multiple point)结构的单纤双向光接入网络,其典型拓扑结构是树型。</p>
+    <p>[0003]	如图1,PON系统由局侧的光线路终端（OLT,optical line terminal)、用户侧的光网络单兀（0NU,Optical Network Unit)和光分配网络（0DN,Optical Distribution Node)组成，为单纤双向系统。在下行方向（0LT到0NU)，OLT发送的信号通过ODN到达各个0NU。在上行方向（0NU到0LT)，0NU发送的信号只会到达0LT，而不会到达其它0NU。为了避免某些ONU发送的信号同时到达OLT造成数据冲突而提高网络利用效率，上行方向采用TDMA多址接入方式并对各ONU的数据发送进行仲裁。</p>
+    <p>[0004]	上行方向采用TDMA多址接入方式使系统正常工作的一个重要前提是需要ONU有自律，即ONU只有在正确的授权间隙进行发光，其它时间不发光。在非正确授权间隙进行发光的0NU，称为流氓0NU。</p>
+    <p>[0005]	为了避免PON系统中存在流氓ONU在非正确授权间隙内进行发光造成数据冲突，亟需一种流氓ONU检测方法对PON系统中是否存在流氓ONU进行检测。</p>
+    <p>发明内容</p>
+    <p>[0006]	本申请实施例提供一种流氓光节点ONU检测方法及设备，能够及时对PON系统中是否存在流氓光节点ONU进行检测。</p>
+    <p>[0007]	第一方面，本发明实施例提供的一种流氓光节点ONU检测方法，包括：</p>
+    <p>[0008]	当满足预设检测条件时，在无源光网络PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU ；</p>
+    <p>[0009]	对所述待检测ONU集合中的ONU执行判定过程，所述判定过程包括：</p>
+    <p>[0010]	统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非O的次数；</p>
+    <p>[0011]	当所述输出光指示信号有效的次数或者光功率非O的次数不满足第一预设统计条件时，判定所述待检测ONU集合中存在流氓ONU ；</p>
+    <p>[0012]	所述第一预设统计条件包括：</p>
+    <p>[0013]	所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值；</p>
+    <p>[0014]	或者</p>
+    <p>[0015]	所述光指示信号有效的次数与所述PON系统中所有ONU输出光指示信号的次数的比例值小于预设比例阈值；</p>
+    <p>[0016]	或者[0017]	所述光功率非O的次数与所述PON系统中所述ONU输出光功率的次数的比例值小于预设比例阈值。</p>
+    <p>[0018]	第二方面，本发明实施例提供的一种流氓光节点ONU检测设备，包括：</p>
+    <p>[0019]	第一确定单元，用于当满足预设检测条件时，在无源光网络PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU ；</p>
+    <p>[0020]	第一判定单元，用于对所述待检测ONU集合中的ONU执行判定过程；</p>
+    <p>[0021]其中：</p>
+    <p>[0022]	所述第一判定单元包括：</p>
+    <p>[0023]	统计子单元，用于统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非O的次数；</p>
+    <p>[0024]	判定子单元，用于当所述输出光指示信号有效的次数或者光功率非O的次数不满足预设统计条件时，判定所述待检测ONU集合中存在流氓ONU ；</p>
+    <p>[0025]	所述预设统计条件包括：</p>
+    <p>[0026]	所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值；</p>
+    <p>[0027]	或者</p>
+    <p>[0028]	所述光指示信号有效的次数与所述PON系统中所有ONU输出光指示信号的次数的比例值小于预设比例阈值； </p>
+    <p>[0029]	或者</p>
+    <p>[0030]	所述光功率非O的次数与所述PON系统中所述ONU输出光功率的次数的比例值小于预设比例阈值。</p>
+    <p>[0031]	第三方面，本发明实施例提供的一种流氓光节点ONU排查方法，包括：</p>
+    <p>[0032]	SO :将无源光网络PON系统中所有或部分光节点ONU归入排查对象组；</p>
+    <p>[0033]	S1:将所述排查对象组中的ONU划分为第一 ONU组和第二 ONU组；</p>
+    <p>[0034]	S2 :关闭所述第二 ONU组中ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0035]	S3 :对所述排查对象组中的ONU执行判定过程，当判定所述排查对象组中存在流氓ONU时，将所述第一 ONU组作为排查对象组；否则，将所述第二 ONU作为排查对象组；</p>
+    <p>[0036]	S4 :判断所述排查对象组中ONU的个数是否为I,如果否,转步骤SI，如果是，将所述排查对象组中的ONU作为流氓0NU。</p>
+    <p>[0037]	在第一种可能的实现方式中，在所述步骤SO与步骤SI之间还包括：</p>
+    <p>[0038]	发送广播管理报文至所述排查对象组中的各个0NU，对所述排查对象组中的各个</p>
+    <p>ONU进行组播管理。</p>
+    <p>[0039]	第四方面，本发明实施例中一种流氓光节点ONU排查设备，包括：</p>
+    <p>[0040]	归入单元，用于将无源光网络PON系统中所有或部分光节点ONU归入排查对象组，所述排查对象组至少包括流氓光节点ONU ；</p>
+    <p>[0041]	划分单元，用于将所述排查对象组中的ONU划分为第一 ONU组和第二 ONU组；</p>
+    <p>[0042]	第一关闭单元，用于关闭所述第二 ONU组中ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0043]	第二判定单元，用于对所述排查对象组中的ONU执行判定过程，当判定所述排查对象组中存在流氓ONU时，将所述第一 ONU组作为排查对象组；否则，将所述第二 ONU作为排查对象组；</p>
+    <p>[0044]	判断单元，用于判断所述排查对象组中的ONU的个数是否为1，如果是，将所述排查对象组中的ONU作为流氓0NU，否则，控制所述划分单元对所述排查对象组中的ONU进行划分。</p>
+    <p>[0045]	第五方面，本发明实施例提供的一种流氓光节点ONU排查方法，包括：</p>
+    <p>[0046]	将无源光网络PON系统中的各个ONU逐一作为目标ONU ；</p>
+    <p>[0047]	关闭所述目标ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0048]	在所述目标ONU的授权时隙内，统计所述目标ONU连续输出光指示信号有效的次数或者光功率非0的次数；</p>
+    <p>[0049]	当所述输出光指示信号有效的次数或者光功率非0的次数不满足第二预设统计条件时，将所述目标ONU作为流氓ONU ；</p>
+    <p>[0050]	所述第二预设统计条件包括：</p>
+    <p>[0051]	所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值。</p>
+    <p>[0052]	第六方面，本发明实施例提供的一种流氓光节点ONU排查设备，包括：</p>
+    <p>[0053]	第二确定单元，用于将无源光网络PON系统中的各个ONU逐一作为目标ONU ；</p>
+    <p>[0054]	第二关闭单元，用于关闭所述目标ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0055]	统计单元，用于在所述目标ONU的授权时隙内，统计所述目标ONU连续输出光指示信号有效的次数或者光功率非0的次数；</p>
+    <p>[0056]	第三确定单元，用于当所述输出光指示信号有效的次数或者光功率非O的次数不满足第二预设统计条件时，将所述目标ONU作为流氓ONU ；</p>
+    <p>[0057]	所述第二预设统计条件包括：</p>
+    <p>[0058]	所述输出光指示信号有效的次数或者光功率非0的次数小于设定的可配置值。</p>
+    <p>[0059]	由以上本申请实施例提供的技术方案可见，本发明实施例提供的流氓ONU检测方法，当满足预设检测条件时，在无源光网络PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU ;对所述待检测ONU集合中的ONU执行判定过程，所述判定过程包括：统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非0的次数；当所述输出光指示信号有效的次数或者光功率非0的次数不满足第一预设统计条件时，判定所述待检测ONU集合中存在流氓0NU。</p>
+    <p>[0060]	判定过程中，所述可配置值可根据PON系统中ONU在正常工作的情况下所输出光指示信号有效或光功率为0的次数进行设定，因此当检测过程中检测到PON系统在设定条件下输出光指示信号有效或者光功率非O的次数不小于所述统计值时，就可以判定所述PON系统中存在流氓0NU。本申请实施例提供的流氓ONU检测方法，通过统计PON系统中各个ONU输出光指示信号有效或光功率为0的次数即可完成对流氓ONU的检测，检测过程更加及时。</p>
+    <p>附图说明</p>
+    <p>[0061]为了更清楚地说明本申请实施例中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本申请中记载的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0062]	图1为本发明实施例提供的PON系统的结构示意图；</p>
+    <p>[0063]	图2为本发明实施例提供的一种流氓ONU检测方法的方法流程图；</p>
+    <p>[0064]	图3为本发明实施例提供的一种流氓ONU检测设备的结构示意图；</p>
+    <p>[0065]	图4为本发明实施例提供的一种流氓ONU排查方法的方法流程图；</p>
+    <p>[0066]	图5为本发明实施例提供的一种流氓ONU排查设备的结构示意图；</p>
+    <p>[0067]	图6为本发明实施例提供的一种流氓ONU排查设备的又一结构示意图；</p>
+    <p>[0068]	图7为本发明实施例提供的一种流氓ONU排查方法的又一方法流程图；</p>
+    <p>[0069]	图8为本发明实施例提供的一种流氓ONU排查设备的又一结构示意图；</p>
+    <p>[0070]	图9为本发明实施例提供的一种流氓ONU排查设备的又一结构示意图。 具体实施方式</p>
+    <p>[0071]	为了使本技术领域的人员更好地理解本申请方案。下面将结合本申请实施例中的附图，对本申请实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本申请一部分实施例，而不是全部的实施例。基于本申请中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都应当属于本申请保护的范围。</p>
+    <p>[0072]	图2为本发明实施例提供的一种流氓ONU检测方法，该方法可以应用在无源光网络PON系统中的光线路终端OLT中，所述方法可以包括：</p>
+    <p>[0073]	步骤SlOl :判断是否满足预设检测条件；如果是，执行步骤S102 ；</p>
+    <p>[0074]	步骤S102 :在无源光网络PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU ；</p>
+    <p>[0075]	步骤S103 :统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非O的次数；</p>
+    <p>[0076]	步骤S104 :判断所述统计的输出光指示信号有效的次数或者光功率非O的次数是否满足第一预设条件；如果是，执行步骤S105 ；</p>
+    <p>[0077]	步骤S105 :判定所述待检测ONU集合中存在流氓ONU ；</p>
+    <p>[0078]	所述第一预设统计条件包括：</p>
+    <p>[0079]	所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值；</p>
+    <p>[0080]	或者</p>
+    <p>[0081]	所述光指示信号有效的次数与所述PON系统中所有ONU输出光指示信号的次数的比例值小于第一预设比例阈值；</p>
+    <p>[0082]	或者</p>
+    <p>[0083]	所述光功率非O的次数与所述PON系统中所述ONU输出光功率的次数的比例值小于第二预设比例阈值。</p>
+    <p>[0084]	本发明实施例提供的流氓ONU检测方法中，所述预设检测条件主要有两种：</p>
+    <p>[0085]	第一种，当OLT检测到用户侧ONU在发送光信号至OLT时，发生握手超时，OLT产生告警或发出提示信息，此时OLT对PON系统中用户侧的ONU进行流氓ONU检测过程。</p>
+    <p>[0086]	第二种：当用户侧的ONU处于上行空闲授权时隙时，OLT主动对用户侧的ONU进行流氓ONU检测。[0087]	在第一种检测条件中，当OLT与用户侧的ONU出现定时握手超时、线路质量差等告警信息或者提示信息时，本发明实施例中，首先保持所有ONU处于在线状态，对用户侧的ONU进行流氓ONU检测过程，如果检测到用户侧的ONU中存在流氓0NU，则对存在的流氓ONU进行排查隔离操作，否则，对造成握手超时的ONU进行解除注册操作。</p>
+    <p>[0088]	在第二种检测条件中，本发明实施例提供的流氓ONU检测方法中，流氓ONU检测过程是在用户侧ONU上行传输光信号过程中没有授权时隙进行光检测实现的，也就是在没有授权时隙时，是不应该检测到光的，因此在上行空闲授权时隙进行实时检测可以及时发现流氓ONU。</p>
+    <p>[0089]	本发明实施例提供的检测方法中，对于上述两种检测条件，其中至少一个条件成立时，在PON系统中，确定待检测ONU集合，所述待检测集合中可以包含用户侧的所有0NU，也可以根据PON系统运作的实际需求，选择部分ONU进行检测，所述待检测ONU集合中至少包含一个ONU。</p>
+    <p>[0090]	本发明实施例提供的检测方法中，统计所述待检测集合中所有ONU在上行空闲授权时隙中，连续输出光指示信号有效的次数或者光功率非O的次数，当连续至少a次检测光模块ONU输出有光指示信号有效或者光功率非0，判定所述待检测集合中存在流氓ONU ;其中a可以取值范围是大于等于I的整数。</p>
+    <p>[0091]	本发明实施例提供的检测方法中，在统计到连续输出光指示信号有效的次数或者光功率非O的次数后，可以将获得的次数 转换为所有ONU连续输出光指示信号有效与光指示信号无效的比例，及光功率非O与光功率为O的比例，当所述比例值大于某一预设阈值时，判定所述待检测集合中存在流氓0NU。其中，第一预设比例阈值及第二预设比例阈值可以在执行流氓ONU检测过程前进行预先设定，也可以在执行过程中进行设定，所述第一预设比例阈值及第二预设比例阈值的取值根据PON系统中当前注册的ONU的数量进行确定。</p>
+    <p>[0092]	本发明实施例中，对于PON系统中所有ONU输出光指示信号的次数及ONU输出光功率的次数是PON系统中的常数值，一般可以将PON系统中ONU的数量值作为其输出光功率次数或输出光指示信号的次数。</p>
+    <p>[0093]	本发明实施例提供的检测方法中，设定的可配置值a可以在执行流氓ONU检测过程前进行预先设定，也可以在执行过程中根据当前PON系统中的ONU数量在进行流氓ONU的检测过程中进行实时设定。</p>
+    <p>[0094]	应用本发明实施例提供的流氓ONU检测方法，所述可配置值可根据PON系统中ONU在正常工作的情况下所输出光指示信号有效或光功率非O的次数进行设定，因此当检测过程中检测到PON系统在设定条件下输出光指示信号有效或者光功率为O的次数不小于所述统计值时，就可以判定所述PON系统中存在流氓0NU。本申请实施例提供的流氓ONU检测方法，通过统计PON系统中各个ONU输出光指示信号有效或光功率为O的次数即可完成对流氓ONU的检测，检测过程更加及时。</p>
+    <p>[0095]	与图2所示方法相对应的，本发明实施例提供了一种流氓ONU检测设备，该设备可以设置在PON系统中的OLT中，其结构示意图如图3所示，包括：</p>
+    <p>[0096]	第一确定单元201和第一判定单元202 ；</p>
+    <p>[0097]	第一判定单元202包括：统计子单元203和判定子单元204 ；</p>
+    <p>[0098]其中：[0099]	第一确定单元，用于当满足预设检测条件时，在无源光网络PON系统中确定待检测ONU集合，所述待检测ONU集合中至少包含一个光节点ONU ；</p>
+    <p>[0100]	第一判定单元，用于对所述待检测ONU集合中的ONU执行判定过程；</p>
+    <p>[0101] 其中：</p>
+    <p>[0102]	所述第一判定单元包括：</p>
+    <p>[0103]	统计子单元，用于统计所述待检测ONU集合中所有ONU在所述预设条件下连续输出光指示信号有效的次数或者光功率非O的次数；</p>
+    <p>[0104]	判定子单元，用于当所述输出光指示信号有效的次数或者光功率非O的次数不满足预设统计条件时，判定所述待检测ONU集合中存在流氓ONU ；</p>
+    <p>[0105]	所述预设统计条件包括：</p>
+    <p>[0106]	所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值。</p>
+    <p>[0107]	本发明实施例提供的流氓ONU检测设备在检测过程中，所述预设检测条件可以包括两种：</p>
+    <p>[0108]	第一种：Ρ0Ν系统中存在ONU处于上行空闲授权时隙；</p>
+    <p>[0109]	第二种：Ρ0Ν系统产生告警或提示信息。</p>
+    <p>[0110]	其中，在第二种情形中，具体告警或者提示等信息包括但不限于握手超时、线路质量差等告警或者提示信息。</p>
+    <p>[0111]	本发明实施例提供的检测方法中，当所述统计子单元连续至少a次检测到ONU输出有光指示信号有效或者光功率非O时，所述判定子单元判定所述待检测ONU集合中存在流氓0NU，所述其中a可以取值范围是大于等于I的整数。</p>
+    <p>[0112]	应用本发明实施例提供的流氓ONU检测设备，可配置值a可以根据PON系统中ONU在正常工作的情况下所输出光指示信号有效或光功率非O的次数进行设定，因此当检测过程中检测到PON系统在设定条件下输出光指示信号有效或者光功率为O的次数不小于所述统计值时，就可以判定所述PON系统中存在流氓0NU。本申请实施例提供的流氓ONU检测方法，通过统计PON系统中各个ONU输出光指示信号有效或光功率为O的次数即可完成对流氓ONU的检测，检测过程更加及时。</p>
+    <p>[0113]	图4为本发明实施例提供的一种流氓ONU排查方法，该方法可以应用在PON系统中的OLT中，所述方法包括：</p>
+    <p>[0114]	步骤S301 :将无源光网络PON系统中所有或部分光节点ONU归入排查对象组；</p>
+    <p>[0115]	步骤S302 :将所述排查对象组中的ONU划分为第一 ONU组和第二 ONU组；</p>
+    <p>[0116]	步骤S303 :关闭所述第二 ONU组中ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0117]	步骤S304 :对所述排查对象组中的ONU执行判定过程；</p>
+    <p>[0118]	本发明实施例中，对排查对象组中的ONU执行的判定过程与图2所示的一种流氓ONU检测房中的判定过程其执行过程相同。</p>
+    <p>[0119]	步骤S305 :所述排查对象组中是否存在流氓0NU，如果存在，执行步骤S306，否则，执行步骤S307 ；</p>
+    <p>[0120]	步骤S306 :将所述第一 ONU组作为排查对象组；</p>
+    <p>[0121]	步骤S307 :将所述第二 ONU组作为排查对象组；</p>
+    <p>[0122]	步骤S308 :判断所述排查对象组中ONU的个数是否为1，如果是，执行步骤S309 ；否则，执行步骤S302 ；</p>
+    <p>[0123]	步骤S309 :将所述排查对象组中的ONU作为流氓0NU。</p>
+    <p>[0124]	上述各个步骤中，当检测出PON系统中存在流氓ONU时，PON系统中的ONU的初始状态为均处于打开状态，将PON系统中的所有或部分ONU归入排查对象组，所述排查对象组中至少包含流氓0NU，为了保证所述排查对象组中包含流氓0NU，一般在具体执行过程中将所述PON系统中的全部ONU归入排查对象组中。将所述排查对象组中的ONU分为两组，每个分组中ONU的数量不做限定，任意一组中至少包含一个0NU。本发明中，将排查对象组中的ONU分为第一 ONU组和第二 ONU组。</p>
+    <p>[0125]	 本发明实施例中，在进行流氓ONU排查时，关闭第二 ONU组中ONU的上行发光使能或上行激光器电源，重新对排查对象组中的ONU进行流氓ONU检测，即对第一 ONU组和第二ONU组中ONU的总和进行流氓ONU检测；当重新检测，排查对象组中仍然存在流氓ONU时，判定所述第二 ONU组中不存在流氓ONU ;当重新检测，排查对象组不存在流氓ONU时，判定所述第一 ONU组中不存在流氓0NU。</p>
+    <p>[0126]	当判定所述第二 ONU组中不存在流氓ONU时，则流氓ONU在第一 ONU组中，对第</p>
+    <p>一	ONU组中的ONU进行分组，分为两组，然后关闭其中一组的上行发光使能或上行激光器电源，对所述第一 ONU组中的所有ONU重新进行流氓ONU检测，直至排查出所述排查对象组中的流氓ONU。</p>
+    <p>[0127]	同理，当判定所述第一 ONU组中不存在流氓ONU时，则流氓ONU在第二 ONU组中，对第二 ONU组中的ONU进行分组，分为两组，然后打开其中一组的上行发光使能，对所述第</p>
+    <p>二	ONU组中的ONU重新进行流氓ONU检测，直至排查出所述PON系统中的流氓0NU。</p>
+    <p>[0128]	本发明实施例中，在图4所示方法的基础上，在步骤S301与步骤S302之间还包括：向所述排查对象组中的ONU下发广播管理报文，对所述排查对象组中的ONU进行组播管理。</p>
+    <p>[0129]	本发明实施例中，还包括，在排查出存在的流氓ONU后，对排查出的流氓ONU进行隔离，所述隔离可以是解除所述流氓ONU的注册。或者关闭所述流氓ONU的上行发光使能或上行激光器电源。</p>
+    <p>[0130]	本发明实施例中，在PON系统中主要涉及两种类型流氓ONU排查；根据流氓ONU受控性和发光类型，流氓ONU排查阶段分为两个阶段，分为受控常发光流氓ONU排查阶段和非受控常发光流氓ONU排查阶段。</p>
+    <p>[0131]	本发明实施例中，具体受控常发光流氓ONU是指，至少能够正常处理来自OLT系统的控制ONU上行发光行为的管理报文的0NU，并且此ONU出现流氓行为时，上行发光特点是常发光。非受控常发光流氓ONU是指，不满足受控常发光流氓ONU定义的流氓ONU ；</p>
+    <p>[0132]	本发明实施例中，对于图4所示的流氓ONU的排查过程是一种二分法排查过程，以下以二分法对受控常发光流氓ONU进行排查为例：</p>
+    <p>[0133]	对于使用二分法排查受控常发光流氓0NU，即，在OLT判断存在ONU后，建立一个黑名单和白名单，或者类似等价分类；通过下发广播管理报文，实现组播管理，具体根据黑名单和白名单之外的ONU是关闭/打开上行发光使能，进行打开/关闭部分0NU，再重新检测流氓0NU，根据重新检测结果实现部分ONU排除，具体：重新检测仍然检测到流氓0NU，则上行发光使能关闭部分的ONU不存在受控流氓ONU ;重新检测不到流氓0NU，则上行发光使能打开部分的ONU不存在流氓ONU ;可以排除掉是非受控常发光流氓ONU的ONU放入白名单，确认是受控流氓ONU的ONU放入黑名单，直到将全部ONU都覆盖到；在排除部分ONU后，如果仍然有没排查过的0NU，则类似前面所说处理方式进行迭代，直到到全部ONU都被放在黑名单或者白名单内。</p>
+    <p>[0134]	本发明实施例中，关闭ONU上行发光使能可以通过关闭上行发送使能指示信号或关闭ONU上行发光激光器；打开ONU上行发光使能是指，同时打开上行发送使能指示信号或关闭ONU上行发光激光器。</p>
+    <p>[0135]	本发明实施例中，下发广播管理报文，实现组播管理，具体：通过广播标识信息进行下发管理报文，系统下全部ONU都能够正常接收，同时ONU根据解析得到的管理报文内容选择执行约定行为。</p>
+    <p>[0136]	本发明实施例中还提供了一种嫌疑法对流氓ONU进行排查的方法，具体为：在设定的时间间隔内，建立基于ONU的告警或提示记录名单；将所述记录名单中记录的ONU与所述PON系统注册在线的ONU进行一一比对；将所述PON系统中未记录在所述记录名单中的ONU作为嫌疑流氓ONU。</p>
+    <p>[0137]	本发明实施例中，嫌疑法排查受控常发光流氓0NU，具体：建立一个基于ONU的告警或者提示记录名单，或者类似等价记录信息；将记录名单上的ONU与注册在线的ONU进行对比，没有在记录名单上的ONU嫌疑最大，即，系统存在流氓0NU，正常工作的ONU嫌疑最大；进而通过上述二分法针对没有在名单上的ONU进行受控流氓ONU排查。</p>
+    <p> [0138]	本发明实施例中，对于二分法排查非受控常发光流氓0NU，在系统判断存在ONU后，建立一个黑名单和白名单，或者类似等价分类；通过下发广播管理报文，实现组播管理，具体根据黑名单和白名单之外的ONU是关打开上行发光使能；具体保持{ONUi}集在线，OLT正常分配{ONUi}集授权，正常使能{ONUi}集上行发光使能或者上行激光器电源，在上行{ONUi}集授权时隙，根据可配置值C，连续测量并记录c次上行光功率，如果c配置为大于I的值，则剔除c次记录中差异较大的值后进行平均运算，得到的值赋给{pli}，定义{pli}为此场景下测量到的{ONUi}上行授权时隙光功率值，如果c配置为1，则{pli}直接等于上行测量到的值；然后保持{ONUi}集在线，OLT正常分配{ONUi}集授权，关闭{ONUi}上行发光使能或者上行激光器电源，在上行{ONUi}集授权时隙，根据可配置值d，连续测量并记录d次上行光功率，如果d配置为大于I的值，则剔除d次记录中差异较大的值后进行平均运算，得到的值赋给{p2i}，定义{p2i}为此场景下测量到的{ONUi}上行授权时隙光功率值，如果d配置为1，则{p2i}直接等于上行测量到的值；其中c、d可以是取值范围大于等于I的整数；定义Λ i= I pli_p2i I，如果Λ i大于可配置阈值e，则判断ONUi受控，e为大于等于O的正数；经系统排查受控的ONUi，放入白名单，否则放入黑名单。</p>
+    <p>[0139]	上述二分法的实施过程中，{ONUi}集是指系统配置的ONU中的至少一个ONU组成的集合。</p>
+    <p>[0140]	本发明实施例中OLT根据黑名单和白名单情况进行相关隔离处理。</p>
+    <p>[0141]	本发明实施例中，对于受控常发光流氓ONU排查完毕，对于黑名单中的所列ONU进行隔离，具体是先将受控ONU上行长发光使能去使能，同时产生告警，将此ONU用户信息提供给运维人员进行维护。</p>
+    <p>[0142]	本发明实施例中，对于非受控常发光流氓ONU排查完毕，对于黑名单中的所列ONU进行进行告警，并提供对应ONU用户信息，提供给运维人员进行维护，方便运维人员维护。</p>
+    <p>[0143]	本发明实施例中，对于非受控常发光流氓ONU排查完毕，对于全部配置ONU均在白名单，黑名单为空的情况下，则系统中的流氓ONU为非配置流氓0NU，系统对于此类流氓ONU进行告警，提示运维人员系统存在非配置流氓0NU，方便运维人员有针对性的进行维护。</p>
+    <p>[0144]	本发明实施例提供的流氓ONU排查方法，采用循环分组排查的方法，将PON系统中的ONU归入排查对象组后，对所述排查对象组进行分组，分为第一 ONU组和第二 ONU组，然后关闭其中第二组的ONU的上行发光使能或者上行激光器电源，使其不能够进行光信号传播，然后重新对排查对象组中的ONU进行流氓ONU检测，如果仍然发现存在流氓ONU则判定流氓ONU存在第一组ONU中，否则，判定流氓ONU存在第二组ONU中，然后将存在流氓ONU的ONU组，作为新的排查对象组继续进行ONU的排查工作。应用本发明实施例提供的流氓ONU排查方法，排查过程清楚，能够有效及时的排查出PON系统中存在的流氓0NU。</p>
+    <p>[0145]	与图4所示方法，相对应的，本发明实施例提供了一种流氓ONU排查设备，该设备可以设置在PON系统中的OLT中，其结构示意图如图5所示，包括：</p>
+    <p>[0146]	归入单元401、划分单元402、第一关闭单元403、第二判定单元404和判断单元405 ；</p>
+    <p>[0147]	归入单元，用于将无源光网络PON系统中所有或部分光节点ONU归入排查对象组，所述排查对象组至少包括流氓光节点ONU ；</p>
+    <p>[0148]	划分单元，用于将所述排查对象组中的ONU划分为第一 ONU组和第二 ONU组；</p>
+    <p>[0149]	第一关闭单元，用于关闭所述第二 ONU组中ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0150]	第二判定单元，用 于对所述排查对象组中的ONU执行判定过程，当判定所述排查对象组中存在流氓ONU时，将所述第一 ONU组作为排查对象组；否则，将所述第二 ONU作为排查对象组；</p>
+    <p>[0151]	判断单元，用于判断所述排查对象组中的ONU的个数是否为1，如果是，将所述排查对象组中的ONU作为流氓0NU，否则，控制所述划分单元对所述排查对象组中的ONU进行划分。</p>
+    <p>[0152]	本发明实施例提供的流氓ONU排查设备，采用循环分组排查的方法，将PON系统中的ONU归入排查对象组后，对所述排查对象组进行分组，分为第一 ONU组和第二 ONU组，然后关闭其中第二组的ONU的上行发光使能或者上行激光器电源，使其不能够进行光信号传播，然后重新对排查对象组中的ONU进行流氓ONU检测，如果仍然发现存在流氓ONU则判定流氓ONU存在第一组ONU中，否则，判定流氓ONU存在第二组ONU中，然后将存在流氓ONU的ONU组，作为新的排查对象组继续进行ONU的排查工作。应用本发明实施例提供的流氓ONU排查方法，排查过程清楚，能够有效及时的排查出PON系统中存在的流氓0NU。</p>
+    <p>[0153]	在图5所示流氓ONU排查设备的基础上，本发明提供了所述流氓ONU排查设备的又一结构示意图，如图6所示,包括：</p>
+    <p>[0154]	发送单元406用于发送广播管理报文至所述排查对象组中的各个0NU，对所述排查对象组中的各个ONU进行组播管理。</p>
+    <p>[0155]	隔离单元407用于对排查出的流氓ONU进行隔离。</p>
+    <p>[0156]	参考图7，示出了本发明实施例又一种流氓ONU排查方法，其执行主体可以为PON系统中的OLT，包括步骤：</p>
+    <p>[0157]	步骤S501 :将无源光网络PON系统中各个ONU逐一作为目标ONU ；</p>
+    <p>[0158]	步骤S502 :关闭所述目标ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0159]	步骤S503 :在所述目标ONU的授权时隙内，统计所述目标ONU连续输出光指示信号有效的次数或者光功率非O的次数；</p>
+    <p>[0160]	步骤S504 :当所述输出的光指示信号有效的次数或者光功率非O的次数不满足第二预设条件时，将所述目标ONU作为流氓0NU。</p>
+    <p>[0161]	本发明实施例提供的流氓ONU排查方法，对PON系统中的所有ONU逐一进行排查，具体过程可以为：假设PON系统中第i个OUN为ONUi ;保持ONUi在线，OLT正常分配ONUi授权，关闭ONUi上行发光使能或者上行激光器电源，在上行ONUi授权时隙，根据可配置值b，连续至少b次检测到光模块输出有光指示信号有效或者光功率非O时，判定所述ONUi为流氓ONU ;其中b可以取值范围是大于等于I的整数。</p>
+    <p>[0162]	本发明实施例提供的流氓ONU排查方法，可以在PON系统发出警报或提示信息，或者在任何其它情况下，对PON系统中的各个ONU进行单独排查。其排查结果更加准确有效。</p>
+    <p>[0163]	本发明实施例中的可设定值b可以在进行所述流氓ONU排查方法前进行设定，也可以在进行所述流氓ONU排查方法中进行设定。</p>
+    <p>[0164]	与图7相对应的，本发明实施例提供了一种流氓ONU排查设备，其结构示意图如图8所示，该设备可以应用在PON系统中的OLT中，包括：</p>
+    <p>[0165]	第二确定单元601、第二关闭单元602、统计单元603和第三确定单元604 ；</p>
+    <p>[0166]其中：</p>
+    <p>[0167]	第二确定单元601，用于将无源光网络PON系统中的各个ONU逐一作为目标ONU ；</p>
+    <p>[0168]	第二关闭单元602，用于关闭所述目标ONU的上行发光使能或者上行激光器电源；</p>
+    <p>[0169]	统计单元603，用于在所述目标ONU的授权时隙内，统计所述目标ONU连续输出光指示信号有效的次数或者光功率非O的次数；</p>
+    <p>[0170]	第三确定单元604，用于当所述输出光指示信号有效的次数或者光功率非O的次数不满足第二预设统计条件时，将所述目标ONU作为流氓ONU ；</p>
+    <p>[0171]	所述第二预设统计条件包括：</p>
+    <p>[0172]	所述输出光指示信号有效的次数或者光功率非O的次数小于设定的可配置值。</p>
+    <p>[0173]	本发明实施例提供的流氓ONU排查设备，对PON系统中的ONU进行逐一排查，排查结果更加准确有效。</p>
+    <p>[0174]	为了更加详细的对上述流氓ONU检测及排查过程进行说明，本发明实施例提供了以下具体实施例，对本发明流氓ONU检测方法的执行过程进行解释：</p>
+    <p>[0175]	实施例一</p>
+    <p>[0176]	一种流氓ONU检测方法：</p>
+    <p>[0177]	OLT系统下正常配置N个0NU，N大约等于I ;</p>
+    <p>[0178]	OLT系统使能流氓ONU检测、排查和隔离功能；</p>
+    <p>[0179]	OLT系统检测到某事件，例如ONUi握手超时；</p>
+    <p>[0180]	OLT系统需要确认此事件是否因为系统存在流氓ONU引起；</p>
+    <p>[0181 ] OLT系统启动流氓ONU检测；[0182]	如果，检测结果显示系统不存在流氓0NU，则系统正常处理此事件，例如，按照ONUi握手超时，则系统可以对ONUi进行解除注册活动。</p>
+    <p>[0183]	如果，检测结果显示系统存在流氓0NU，则系统忽略或者丢弃此事件，并产生系统存在流氓ONU告警或提示信息；因此系统中ONU依然保持在线状态。</p>
+    <p>[0184]	OLT系统进入流氓ONU排查阶段；（受控流氓ONU排查阶段)。</p>
+    <p>[0185]	如果使用二分法：</p>
+    <p>[0186]	步骤一 ：0LT系统首先建立一个黑名单和白名单，或者类似等价分类表项。</p>
+    <p>[0187]	步骤二 ：0LT通过广播标识信息进行下发管理报文，具体根据黑名单和白名单之外的ONU是关闭/打开上行发光使能，进行打开/关闭部分ONU上行发光使能，为了描述方便，此ONU上行发光使能打开的部分称为partl，另一 ONU上行发光使能关闭的称为part2。</p>
+    <p>[0188]	步骤三：0LT重新进行流氓ONU检测；如果仍然检测到流氓0NU，则将part2中的ONU放入白名单内；如果检测不到流氓0NU，则将parti中的ONU放入白名单。</p>
+    <p>[0189]	步骤四：按照步骤二和步骤三处理，对于最后一个被排查的0NU，如果上行发光使能时刻能检测到流氓0NU，同时去使能上行发光使能后检测不到流氓0NU，则将此ONU放入黑名单，否则，仍然放入白名单。</p>
+    <p>[0190]	步骤五：黑名单非空。</p>
+    <p>[0191]	如果使用嫌疑法：</p>
+    <p>[0192]	步骤一 ：0LT系统首先建立一个黑名单和白名单，或者类似等价分类表项。</p>
+    <p> [0193]	步骤二 ：0LT系统延迟可配置时间t。</p>
+    <p>[0194]	步骤三：0LT系统在时间t内，记录基于ONU的类似告警或者提示等事件；将此类ONU放入白名单。</p>
+    <p>[0195]	步骤四：0LT系统针对没有检测到事件上报的0NU，作为主要嫌疑对象，采用二分法进行排查。</p>
+    <p>[0196]	步骤五：黑名单非空。</p>
+    <p>[0197]	当黑名单非空，则说明系统存在受控ONU ；</p>
+    <p>[0198]	OLT系统将此ONU上行发光使能去使能，同时产生告警信息，提供给运维人员此ONU用户信息，方便运维人员进行较快维护。</p>
+    <p>[0199]	实施例二 (配置非受控流氓ONU检测）</p>
+    <p>[0200]	一种流氓ONU检测方法：</p>
+    <p>[0201 ] OLT系统下正常配置N个0NU，N大约等于I ;</p>
+    <p>[0202]	OLT系统使能流氓ONU检测、排查和隔离功能；</p>
+    <p>[0203]	OLT系统检测到某事件，例如ONUi握手超时；</p>
+    <p>[0204]	OLT系统需要确认此事件是否因为系统存在流氓ONU引起；</p>
+    <p>[0205]	OLT系统启动流氓ONU检测；</p>
+    <p>[0206]	如果，检测结果显示系统不存在流氓0NU，则系统正常处理此事件，例如，按照ONUi握手超时，则系统可以对ONUi进行解除注册活动。</p>
+    <p>[0207]	如果，检测结果显示系统存在流氓0NU，则系统忽略或者丢弃此事件，并产生系统存在流氓ONU告警或提示信息；因此系统中ONU依然保持在线状态。</p>
+    <p>[0208]	OLT系统进入流氓ONU排查阶段；（受控流氓ONU排查阶段)。[0209]	如果使用二分法：</p>
+    <p>[0210]	 步骤一 ：0LT系统首先建立一个黑名单和白名单，或者类似等价分类表项。</p>
+    <p>[0211]	步骤二 ：0LT通过广播标识信息进行下发管理报文，具体根据黑名单和白名单之外的ONU是关闭/打开上行发光使能，进行打开/关闭部分ONU上行发光使能，为了描述方便，此ONU上行发光使能打开的部分称为partl，另一 ONU上行发光使能关闭的称为part2。</p>
+    <p>[0212]	步骤三：0LT重新进行流氓ONU检测；如果仍然检测到流氓0NU，则将part2中的ONU放入白名单内；如果检测不到流氓0NU，则将parti中的ONU放入白名单。</p>
+    <p>[0213]	步骤四：按照步骤二和步骤三处理，对于最后一个被排查的0NU，如果上行发光使能时刻能检测到流氓0NU，同时去使能上行发光使能后检测不到流氓0NU，则将此ONU放入黑名单，否则，仍然放入白名单。</p>
+    <p>[0214]	步骤五：黑名单空。</p>
+    <p>[0215]	如果使用嫌疑法：</p>
+    <p>[0216]	步骤一 ：0LT系统首先建立一个黑名单和白名单，或者类似等价分类表项。</p>
+    <p>[0217]	步骤二 ：0LT系统延迟可配置时间t。</p>
+    <p>[0218]	步骤三：0LT系统在时间t内，记录基于ONU的类似告警或者提示等事件；将此类ONU放入白名单。</p>
+    <p>[0219]	步骤四：0LT系统针对没有检测到事件上报的0NU，作为主要嫌疑对象，采用二分法进行排查。</p>
+    <p>[0220]	步骤五：黑名单空。</p>
+    <p>[0221]	当前阶段排查完毕，黑名单为空，则说明系统存在非受控流氓ONU ；</p>
+    <p>[0222]	则进入非受控流氓ONU排查；</p>
+    <p>[0223]	步骤一：将白名单清空。</p>
+    <p>[0224]	步骤二 ：0LT通过广播标识信息进行下发管理报文，具体根据黑名单和白名单之外的ONU是关闭/打开上行发光使能，进行打开/关闭部分ONU上行发光使能，为了描述方便，此ONU上行发光使能打开的部分称为partl，另一 ONU上行发光使能关闭的称为part2。</p>
+    <p>[0225]	步骤三：具体保持{ONUi}集在线，OLT正常分配{ONUi}集授权，正常使能{ONUi}集上行发光使能或者上行激光器电源，在上行{ONUi}集授权时隙，根据可配置值c，连续测量并记录c次上行光功率，如果c配置为大于I的值，则剔除c次记录中差异较大的值后进行平均运算，得到的值赋给{pli}，定义{pli}为此场景下测量到的{ONUi}上行授权时隙光功率值，如果c配置为1，则{pli}直接等于上行测量到的值；然后保持{ONUi}集在线，OLT正常分配{ONUi}集授权，关闭{ONUi}上行发光使能或者上行激光器电源，在上行{ONUi}集授权时隙，根据可配置值d，连续测量并记录d次上行光功率，如果d配置为大于I的值，则剔除d次记录中差异较大的值后进行平均运算，得到的值赋给{p2i}，定义{p2i}为此场景下测量到的{ONUi}上行授权时隙光功率值，如果d配置为1，则{p2i}直接等于上行测量至IJ的值；其中c、d可以是取值范围大于等于I的整数；定义Λ i=pl1-p2i I，如果Λ i大于可配置阈值e，则判断ONUi受控，e为大于等于O的正数；经系统排查受控的ONUi，放入白名单，否则放入黑名单。</p>
+    <p>[0226]	步骤四：黑名单非空。</p>
+    <p>[0227]	此阶段检测完成，当黑名单非空，则说明系统存在非受控ONU ；[0228]	OLT系统将产生告警信息，提供给运维人员此ONU用户信息，方便运维人员进行较快维护。</p>
+    <p>[0229]	实施例三(非配置流氓ONU检测）</p>
+    <p>[0230]	一种流氓ONU检测、排查与隔离方法：</p>
+    <p>[0231 ] OLT系统下正常配置N个0NU，N大约等于I ;</p>
+    <p>[0232]	OLT系统使能流氓ONU检测、排查和隔离功能；</p>
+    <p>[0233]	OLT系统检测到某事件，例如ONUi握手超时；</p>
+    <p>[0234]	OLT系统需要确认此事件是否因为系统存在流氓ONU引起；</p>
+    <p>[0235]	OLT系统启动流氓ONU检测；</p>
+    <p>[0236]	如果，检测结果显示系统不存在流氓0NU，则系统正常处理此事件，例如，按照ONUi握手超时，则系统可以对ONUi进行解除注册活动。</p>
+    <p>[0237]	如果，检测结果显示系统存在流氓0NU，则系统忽略或者丢弃此事件，并产生系统存在流氓ONU告警或提示信息；因此系统中ONU依然保持在线状态。</p>
+    <p>[0238]	OLT系统进入流氓ONU排查阶段；（受控流氓ONU排查阶段）</p>
+    <p>[0239]	如果使用二分法： </p>
+    <p>[0240]	步骤一 ：0LT系统首先建立一个黑名单和白名单，或者类似等价分类表项。</p>
+    <p>[0241]	步骤二 ：0LT通过广播标识信息进行下发管理报文，具体根据黑名单和白名单之外的ONU是关闭/打开上行发光使能，进行打开/关闭部分ONU上行发光使能，为了描述方便，此ONU上行发光使能打开的部分称为partl，另一 ONU上行发光使能关闭的称为part2。</p>
+    <p>[0242]	步骤三：0LT重新进行流氓ONU检测；如果仍然检测到流氓0NU，则将part2中的ONU放入白名单内；如果检测不到流氓0NU，则将parti中的ONU放入白名单。</p>
+    <p>[0243]	步骤四：按照步骤二和步骤三处理，对于最后一个被排查的0NU，如果上行发光使能时刻能检测到流氓0NU，同时去使能上行发光使能后检测不到流氓0NU，则将此ONU放入黑名单，否则，仍然放入白名单。</p>
+    <p>[0244]	步骤五：黑名单空。</p>
+    <p>[0245]	如果使用嫌疑法：</p>
+    <p>[0246]	步骤一 ：0LT系统首先建立一个黑名单和白名单，或者类似等价分类表项。</p>
+    <p>[0247]	步骤二 ：0LT系统延迟可配置时间t。</p>
+    <p>[0248]	步骤三：0LT系统在时间t内，记录基于ONU的类似告警或者提示等事件；将此类ONU放入白名单。</p>
+    <p>[0249]	步骤四：0LT系统针对没有检测到事件上报的0NU，作为主要嫌疑对象，采用二分法进行排查。</p>
+    <p>[0250]	步骤五：黑名单空。</p>
+    <p>[0251]	当前阶段排查完毕，黑名单为空，则说明系统存在非受控流氓ONU ；</p>
+    <p>[0252]	则进入非受控流氓ONU排查。</p>
+    <p>[0253]	步骤一：将白名单清空。</p>
+    <p>[0254]	步骤二 ：0LT通过广播标识信息进行下发管理报文，具体根据黑名单和白名单之外的ONU是关闭/打开上行发光使能，进行打开/关闭部分ONU上行发光使能，为了描述方便，此ONU上行发光使能打开的部分称为partl，另一 ONU上行发光使能关闭的称为part2。[0255]	步骤三：具体保持{ONUi}集在线，OLT正常分配{ONUi}集授权，正常使能{ONUi}集上行发光使能或者上行激光器电源，在上行{ONUi}集授权时隙，根据可配置值c，连续测量并记录c次上行光功率，如果c配置为大于I的值，则剔除c次记录中差异较大的值后进行平均运算，得到的值赋给{pli}，定义{pli}为此场景下测量到的{ONUi}上行授权时隙光功率值，如果c配置为1，则{pli}直接等于上行测量到的值；然后保持{ONUi}集在线，OLT正常分配{ONUi}集授权，关闭{ONUi}上行发光使能或者上行激光器电源，在上行{ONUi}集授权时隙，根据可配置值d，连续测量并记录d次上行光功率，如果d配置为大于I的值，则剔除d次记录中差异较大的值后进行平均运算，得到的值赋给{p2i}，定义{p2i}为此场景下测量到的{ONUi}上行授权时隙光功率值，如果d配置为1，则{p2i}直接等于上行测量到的值；其中c、d可以是取值范围大于等于I的整数；定义Λ i=|pl1-p2i I，如果Λ i大于可配置阈值e，则判断ONUi受控，e为大于等于O的正数；经系统排查受控的ONUi，放入白名单，否则放入黑名单。</p>
+    <p>[0256]	步骤四：黑名单为空。</p>
+    <p>[0257]	此阶段检测完成，当黑名单为空，则说明系统存在非配置流氓ONU ；</p>
+    <p>[0258]	OLT系统产生告警信息，提供给运维人员存在非配置流氓0NU，方便运维人员进行较快维护。</p>
+    <p>[0259]	本发明实施例提供的流氓ONU检测方法，可以可以快速排查甚至自动隔离流氓ONU ;在发生流氓ONU行为时，下行链路能够正常工作。并且本发明实施例在对流氓ONU检测时，能够保持ONU在线，流氓ONU排除后，不需要重新注册。</p>
+    <p>[0260]	本发明实施例不但可以排查受控流氓0NU，对于不受控流氓0NU，也可以排查并给出ONU信息，方便运维人员进行排查与隔离。</p>
+    <p>[0261]	本发明实施例不但可以排查配置流氓0NU，对于非配置流氓0NU，也可以产生明确告警，提示系统存在ONU类型为非配置流氓0NU，方便运维人员进行排查与隔离。</p>
+    <p>[0262]	图9为本发明实施例提供的又一种流氓ONU排查设备的结构示意图，该排查设备可以设置在PON系统中的OLT中。如图9所示，该排查设备可以包括：</p>
+    <p>[0263]处理器（processor)	510,通信接口（Communications Interface) 520,存储器(memory) 530,通信总线 540。</p>
+    <p>[0264]	处理器510，通信接口 520，存储器530通过通信总线540完成相互间的通信。</p>
+    <p>[0265]	通信接口 520，用于与网元通信，比如用户侧的各个ONU或0DN。</p>
+    <p>[0266]	处理器510，用于执行程序532，具体可以执行上述图4至图7所示的方法实施例中的相关步骤。</p>
+    <p>[0267]	具体地，程序532可以包括程序代码，所述程序代码包括计算机操作指令。</p>
+    <p>[0268]	处理器510可能是一个中央处理器CPU，或者是特定集成电路ASIC (ApplicationSpecific Integrated Circuit),或者是被配置成实施本发明实施例的一个或多个集成电路。</p>
+    <p>[0269]	存储器530， 用于存放程序532。存储器530可能包含高速RAM存储器，也可能还包括非易失性存储器（non-volatile memory),例如至少一个磁盘存储器。程序532具体可以包括：</p>
+    <p>[0270]	归入单元、划分单元、第一关闭单元、第二判定单元和判断单元，或者第二确定单元、第二关闭单元、统计单元和第三确定单元，上述单元的结构与功能具体可参见上述图5、图6或图8所述的实施例，在此不再赘述。</p>
+    <p>[0271]	所属领域的技术人员可以清楚地了解到，为描述的方便和简洁，上述描述的设备和模块的具体工作过程，可以参考前述方法实施例中的对应过程描述，在此不再赘述。</p>
+    <p>[0272]	本领域普通技术人员可以理解：实现上述方法实施例的全部或部分步骤可以通过程序指令相关的硬件来完成，前述的程序可以存储于一计算机可读取存储介质中，该程序在执行时，执行包括上述方法实施例的步骤；而前述的存储介质包括：R0M、RAM、磁碟或者光盘等各种可以存储程序代码的介质。</p>
+    <p>[0273]	在本申请所提供的几个实施例中，应该理解到，所揭露的设备和方法，可以通过其它的方式实现。例如，以上所描述的装置实施例仅仅是示意性的，例如，所述模块的划分，仅仅为一种逻辑功能划分，实际实现时可以有另外的划分方式，例如多个模块或组件可以结合或者可以集成到另一个设备中，或一些特征可以忽略，或不执行。另一点，所显示或讨论的相互之间的耦合或直接耦合或通信连接可以是通过一些通信接口，装置或模块的间接耦合或通信连接，可以是电性，机械或其它的形式。</p>
+    <p>[0274]	所述作为分离部件说明的模块可以是或者也可以不是物理上分开的，作为模块显示的部件可以是或者也可以不是物理单元，即可以位于一个地方，或者也可以分布到多个网络单元上。可以根据实际的需要选择其中的部分或者全部，模块来实现本实施例方案的目的。</p>
+    <p>[0275]	另外，在本发明各个实施例中的各功能模块可以集成在一个处理模块中，也可以是各个模块单独物理存在，也可以两个或两个以上模块集成在一个模块中。</p>
+    <p>[0276]	最后应说明的是：以上各实施例仅用以说明本发明的技术方案，而非对其限制；尽管参照前述各实施例对本 发明进行了详细的说明，本领域的普通技术人员应当理解：其依然可以对前述各实施例所记载的技术方案进行修改，或者对其中部分或者全部技术特征进行等同替换；而这些修改或者替换，并不使相应技术方案的本质脱离本发明各实施例技术方案的范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101577844A?cl=zh">CN101577844A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月5日</td><td class="patent-data-table-td patent-date-value">2009年11月11日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种波分复用网络路径搜索方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US5680575">US5680575</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1995年5月17日</td><td class="patent-data-table-td patent-date-value">1997年10月21日</td><td class="patent-data-table-td ">International Business Machines Corporation</td><td class="patent-data-table-td ">Interconnect failure detection and cache reset apparatus</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103384353B?cl=zh">CN103384353B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年5月30日</td><td class="patent-data-table-td patent-date-value">2016年3月2日</td><td class="patent-data-table-td ">上海斐讯数据通信技术有限公司</td><td class="patent-data-table-td ">无源光网络系统及其的用户端设备的检测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103560823A?cl=zh">CN103560823A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年11月8日</td><td class="patent-data-table-td patent-date-value">2014年2月5日</td><td class="patent-data-table-td ">烽火通信科技股份有限公司</td><td class="patent-data-table-td ">光网络单元长发光检测装置及检测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103560823B?cl=zh">CN103560823B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年11月8日</td><td class="patent-data-table-td patent-date-value">2016年4月13日</td><td class="patent-data-table-td ">烽火通信科技股份有限公司</td><td class="patent-data-table-td ">光网络单元长发光检测装置及检测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103888185A?cl=zh">CN103888185A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年3月24日</td><td class="patent-data-table-td patent-date-value">2014年6月25日</td><td class="patent-data-table-td ">深圳市云猫信息技术有限公司</td><td class="patent-data-table-td ">一种光网络单元的检测方法及装置、系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN104079348A?cl=zh">CN104079348A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年6月20日</td><td class="patent-data-table-td patent-date-value">2014年10月1日</td><td class="patent-data-table-td ">广东东研网络科技股份有限公司</td><td class="patent-data-table-td ">以太网无源光网络长发光光网络单元检测方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=ornvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04B0010070000">H04B10/07</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年4月10日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年5月8日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年7月8日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/631531397d29c1632478/CN103036612A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%B5%81%E6%B0%93%E5%85%89%E8%8A%82%E7%82%B9onu%E6%A3%80%E6%B5%8B%E6%96%B9%E6%B3%95_%E9%9A%94%E7%A6%BB%E6%96%B9.pdf?id=ornvBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1--ySuwZ-_a3HNXy20jN8wVEr9bg"},"sample_url":"https://www.google.com/patents/reader?id=ornvBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html><html><head><title>专利 CN103034724A - 浏览器中进行输入数据恢复的方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="浏览器中进行输入数据恢复的方法及装置"><meta name="DC.contributor" content="唐曦" scheme="inventor"><meta name="DC.contributor" content="陈志 " scheme="inventor"><meta name="DC.contributor" content="李鸣" scheme="inventor"><meta name="DC.contributor" content="任寰" scheme="inventor"><meta name="DC.contributor" content="北京奇虎科技有限公司" scheme="assignee"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2012-12-14" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种浏览器中进行输入数据恢复的方法，包括：在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；在所述文本输入框上的悬浮层中恢复加载所述输入数据。采用本发明能够对数据进行浏览器级别的恢复。本发明还提供了相应的装置。"><meta name="DC.date" content="2013-4-10"><meta name="DC.relation" content="CN:102768683:A" scheme="references"><meta name="DC.relation" content="CN:102789454:A" scheme="references"><meta name="DC.relation" content="CN:102799371:A" scheme="references"><meta name="DC.relation" content="CN:103034568:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103034724:A"><meta name="citation_patent_application_number" content="CN:201210545074"><link rel="canonical" href="https://www.google.com/patents/CN103034724A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103034724A?cl=zh"/><meta name="title" content="专利 CN103034724A - 浏览器中进行输入数据恢复的方法及装置"/><meta name="description" content="本发明公开了一种浏览器中进行输入数据恢复的方法，包括：在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；在所述文本输入框上的悬浮层中恢复加载所述输入数据。采用本发明能够对数据进行浏览器级别的恢复。本发明还提供了相应的装置。"/><meta property="og:title" content="专利 CN103034724A - 浏览器中进行输入数据恢复的方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103034724A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103034724A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=8cDvBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103034724A&amp;usg=AFQjCNF29xUu7Obn0aIo5_ACttGkSZxfog" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/09a35ba14bcb1dc312a7/CN103034724A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/09a35ba14bcb1dc312a7/CN103034724A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103034724A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103034724A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103034724A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种浏览器中进行输入数据恢复的方法，包括：在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件...</span><span itemprop="url">https://www.google.com/patents/CN103034724A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103034724A - 浏览器中进行输入数据恢复的方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103034724A - 浏览器中进行输入数据恢复的方法及装置" title="专利 CN103034724A - 浏览器中进行输入数据恢复的方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103034724 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210545074</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年4月10日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年12月14日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年12月14日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210545074.4, </span><span class="patent-bibdata-value">CN 103034724 A, </span><span class="patent-bibdata-value">CN 103034724A, </span><span class="patent-bibdata-value">CN 201210545074, </span><span class="patent-bibdata-value">CN-A-103034724, </span><span class="patent-bibdata-value">CN103034724 A, </span><span class="patent-bibdata-value">CN103034724A, </span><span class="patent-bibdata-value">CN201210545074, </span><span class="patent-bibdata-value">CN201210545074.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%94%90%E6%9B%A6%22">唐曦</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%88%E5%BF%97%EF%BF%BD%22">陈志 </a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E9%B8%A3%22">李鸣</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BB%BB%E5%AF%B0%22">任寰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E5%A5%87%E8%99%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京奇虎科技有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103034724A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103034724A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103034724A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=8cDvBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210545074&amp;usg=AFQjCNGy59UC6sallfawTilNuAKcl5gnGQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=8cDvBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103034724A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFT_kM52AXMsH8f8PQq_L_KkGoSZA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT123229968" lang="ZH" load-source="patent-office">浏览器中进行输入数据恢复的方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 103034724 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA110113007" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种浏览器中进行输入数据恢复的方法，包括：在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；在所述文本输入框上的悬浮层中恢复加载所述输入数据。采用本发明能够对数据进行浏览器级别的恢复。本发明还提供了相应的装置。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(20)</span></span></div><div class="patent-text"><div mxw-id="PCLM52524218" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种浏览器中进行输入数据恢复的方法，包括：  在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；  检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；  检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；  由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；  在所述文本输入框上的悬浮层中恢复加载所述输入数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层，包括：  在网页的所述文本输入框加载完成事件触发后，调用由网页浏览器提供的定制处理函数生成覆盖所述文本输入框上的悬浮层。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的方法，其特征在于，所述获取所述输入数据并实时地写入到浏览器侧的文件中，包括：  根据所述输入数据的数据类型，在所述文本输入框的悬浮层中生成所述数据的HTML元素和/或自定义HTML元素；  将生成的HTML元素实时写入浏览器侧的文件中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1至3任一项所述的方法，其特征在于，所述检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存，包括：  检测到对所述文本输入框的输入数据的提交事件，结束对所述浏览器侧的临时文件的写入后进行保存。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其特征在于，所述结束对所述浏览器侧的临时文件的写入之后，包括：  若在所有输入数据的写入操作结束之前输入数据输入停止，则保存临时文件中已写入的部分输入数据；  重新加载所述网页时，从所述临时文件读取已存储的部分输入数据，在所述文本输入框上的悬浮层中恢复加载所述输入数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，所述输入数据输入停止的原因包括下列至少之一：  电脑死机断电；  输入信息误删除；  电脑中病毒；  指定文件无法读取；  电脑系统崩溃。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1至6任一项所述的方法，其特征在于，所述浏览器异常包括下列任意之一：  浏览器崩溃；浏览器卡死；  网页所在的页面进程崩溃或卡死。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求1至7任一项所述的方法，其特征在于，所述检测到向所述文本输入框输入数据的事件，包括：  检测到所述悬浮层和/或文本输入框的ondragenter和ondragover事件；或  检测到所述悬浮层和/或文本输入框的onbeforepaste和onpaste事件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求1至8任一项所述的方法，其特征在于，所述输入数据包括文本、图片和/或文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的方法，其特征在于，在所述输入数据为文本时，  生成所述数据的HTML元素和/或自定义HTML元素，包括：  用相应的HTML标签标记所述文本的内容，以将其转换为所述文本对应的HTML元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求9所述的方法，其特征在于，在所述输入数据为图片时，  生成所述数据的HTML元素和/或自定义HTML元素，包括：  将所述图片上传到图床服务器，并从图床服务器获取所述图片的链接地址；并且，  用HTML的IMG标签标记所述图片，以将其转换为所述图片对应的HTML元素，其中所述IMG标签的来源属性为所述图片的链接地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求9所述的方法，其特征在于，在所述输入数据为文件时，  生成所述数据的HTML元素和/或自定义HTML元素，包括：  将所述文件上传到文件服务器，并从文件服务器获取所述文件的链接地址；并且，  用自定义HTML标签标记所述文件，以将其转换为所述文件对应的自定义HTML元素，其中所述自定义标签的来源属性为所述文件的链接地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求9所述的方法，其特征在于，所述文件包括PDF或PPT文件，则所述自定义HTML元素为自定义的PDF或PPT元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求3至13任一项所述的方法，其特征在于，使用BASE64编解码对所述HTML元素和/或自定义HTML元素进行编码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的方法，其特征在于，所述编码的HTML元素和/或自定义HTML元素以PLAIN文本方式上传保存至服务器侧。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求1至15任一项所述的方法，其特征在于，所述输入数据通过以下任意之一的方式在所述文本框兀素上进行输入：  经键盘输入；  剪贴板获取；  经拖拽事件获取。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求16所述的方法，其特征在于，所述输入数据经键盘输入时，  获取所述输入数据并实时地写入到浏览器侧的文件中，包括：  通过网络浏览器webBrowser在编辑模式下接收经键盘输入的数据；  将所述输入数据写入到浏览器侧的文件中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求16所述的方法，其特征在于，所述输入数据经剪贴板获取时，  获取所述输入数据并实时地写入到浏览器侧的文件中，包括：  利用剪贴板复制网页中的文本数据；当所述悬浮层和/或文本输入框的onpaste事件被触发时，将复制的文本数据写入到浏览器侧的文件中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求16所述的方法，其特征在于，所述输入数据经拖拽事件获取时，  获取所述输入数据并实时地写入到浏览器侧的文件中，包括：  利用拖拽事件获取网页中的文本数据；  当所述悬浮层和/或文本输入框的Ondrop事件被触发时，将获取的文本数据写入到浏览器侧的文件中。</div>
+    </div>
+    </div> <div class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20.	一种浏览器中进行输入数据恢复的装置，包括：  生成模块，配置为在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；  写入模块，配置为检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；  保存模块，配置为检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；  读取模块，配置为由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；  加载模块，配置为在所述文本输入框上的悬浮层中恢复加载所述输入数据。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59584680" lang="ZH" load-source="patent-office" class="description">
+    <p>浏览器中进行输入数据恢复的方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及网络应用领域，具体涉及�种浏览器中进行输入数据恢复的方法及装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	用户在使用网页浏览器的过程中，经常需要与web服务器进行交互，例如通过网页浏览器上传、发布各种数据或者信息，其中包括将诸如文字、图片或文件的各种数据上传、保存到服务器，井能够进�步通过网络浏览器显示保存在服务器上的数据。</p>
+    <p>[0003]	在现有的网页浏览器中，通常提供各种输入控件来接收用户的输入数据并提交给服务器。例如，对于文本数据，可以通过文本输入框控件进行文字的输入并上传；对于图片或者文件数据，则可以通过文件上传控件来选择图片或文件进行上传，在上传服务器结束后显示图片或文件递交成功；在显示所上传的图片或文件时，需要根据之前从服务器返回的图片或文件的URL地址，从服务器下载图片或文件，下载成功后再进行显示。</p>
+    <p>[0004]	在用户与web服务器的交互过程中，经常会遇到数据恢复的问题。数据恢复是指用户由于电脑突然死机断电、重要输入信息不小心删掉、电脑中毒、文件无法读取、系统突然崩溃、误操作、计算机病毒的攻击等软硬件故障下的数据找回和数据恢复处理。</p>
+    <p>[0005]	但是，目前在浏览器侧，如果出现软硬件故障，通常其找回的只有部分信息，例如已经保存在浏览器缓存中的信息，对于网页中的输入控件中的输入内容目前没有进行浏览器级别的数据恢复的功能，会造成数据的丢失。例如，用户在某个网页中输入�篇日志，但尚未保存，此时因浏览器故障导致网页页面崩溃。那么，在重启浏览器后，该日志的数据并不会实时得到保存，对于丢失的数据用户只能选择重新输入，影响用户的感受体验。</p>
+    <p>发明内容</p>
+    <p>[0006]	鉴于上述问题，提出了本发明以便提供�种克服上述问题或者至少部分地解决上述问题的一种浏览器中进行输入数据恢复的装置和相应的�种浏览器中进行输入数据恢复的方法。</p>
+    <p>[0007]	依据本发明的�个方面，提供了一种浏览器中进行输入数据恢复的方法，包括：</p>
+    <p>[0008]	在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；</p>
+    <p>[0009]	检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；</p>
+    <p>[0010]	检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；</p>
+    <p>[0011]	由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；</p>
+    <p>[0012]	在所述文本输入框上的悬浮层中恢复加载所述输入数据。</p>
+    <p>[0013]	可选地，在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层，包括：</p>
+    <p>[0014]	在网页的所述文本输入框加载完成事件触发后，调用由网页浏览器提供的定制处理函数生成覆盖所述文本输入框上的悬浮层。</p>
+    <p>[0015]	可选地，获取所述输入数据并实时地写入到浏览器侧的文件中，包括：</p>
+    <p>[0016]	根据所述输入数据的数据类型，在所述文本输入框的悬浮层中生成所述数据的HTML元素和/或自定义HTML元素；</p>
+    <p>[0017]	将生成的HTML元素实时写入浏览器侧的文件中。</p>
+    <p>[0018]	可选地，所述检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存，包括：</p>
+    <p>[0019]	检测到对所述文本输入框的输入数据的提交事件，结束对所述浏览器侧的临时文件的与入后进行保存。</p>
+    <p>[0020]	可选地，所述结束对所述浏览器侧的临时文件的写入之后，包括：</p>
+    <p>[0021]	若在所有输入数据的写入操作结束之前输入数据输入停止，则保存临时文件中已写入的部分输入数据；</p>
+    <p>[0022]	重新加载所述网页时，从所述临时文件读取已存储的部分输入数据，在所述文本输入框上的悬浮层中恢复加载所述输入数据。</p>
+    <p>[0023]	可选地，输入数据输入停止的原因包括下列至少之�：</p>
+    <p>[0024]	电脑死机断电；</p>
+    <p>[0025]	输入信息误删除；</p>
+    <p>[0026]	电脑中病毒；</p>
+    <p>[0027]	指定文件无法读取；</p>
+    <p>[0028]	电脑系统崩溃。</p>
+    <p>[0029]	可选地，所述浏览器异常包括下列任意之一：</p>
+    <p>[0030]	浏览器崩溃；</p>
+    <p>[0031]	浏览器卡死；</p>
+    <p>[0032]	网页所在的页面进程崩溃或卡死。</p>
+    <p>[0033]	可选地，所述检测到向所述文本输入框输入数据的事件，包括：</p>
+    <p>[0034]	检测到所述悬浮层和/或文本输入框的ondragenter和ondragover事件；或</p>
+    <p>[0035]	检测到所述悬浮层和/或文本输入框的onbeforepaste和onpaste事件。</p>
+    <p>[0036]	可选地，所述输入数据包括文本、图片和/或文件。</p>
+    <p>[0037]	可选地，在所述输入数据为文本&#21515;，</p>
+    <p>[0038]	生成所述数据的HTML元素和/或自定义HTML元素，包括：</p>
+    <p>[0039]	用相应的HTML标签标记所述文本的内容，以将其转换为所述文本对应的HTML元素。</p>
+    <p>[0040]	可选地，在所述输入数据为图片时，</p>
+    <p>[0041 ] 生成所述数据的HTML元素和/或自定义HTML元素，包括：</p>
+    <p>[0042]	将所述图片上传到图床服务器，并从图床服务器获取所述图片的链接地址；并且，</p>
+    <p>[0043]	用HTML的MG标签标记所述图片，以将其转换为所述图片对应的HTML元素，其中所述MG标签的来源属性为所述图片的链接地址。[0044]	可选地，在所述输入数据为文件&#21515;，</p>
+    <p>[0045]	生成所述数据的HTML元素和/或自定义HTML元素，包括：</p>
+    <p>[0046]	将所述文件上传到文件服务器，并从文件服务器获取所述文件的链接地址；并且，</p>
+    <p>[0047]	用自定义HTML标签标记所述文件，以将其转换为所述文件对应的自定义HTML元素，其中所述自定义标签的来源属性为所述文件的链接地址。</p>
+    <p>[0048]	可选地，所述文件包括PDF或PPT文件，则所述自定义HTML元素为自定义的TOF或PPT元素。</p>
+    <p>[0049]	可选地，使用BASE64编解码对所述HTML元素和/或自定义HTML元素进行编码。</p>
+    <p>[0050]	可选地，所述编码的HTML元素和/或自定义HTML元素以PLAIN文本方式上传保存至服务器侧。</p>
+    <p>[0051]	可选地，所述输入数据通过以下任意之一的方式在所述文本框元素上进行输入：</p>
+    <p>[0052]	经键盘输入；</p>
+    <p>[0053]	剪贴板获取；</p>
+    <p>[0054]	经拖拽事件获取。</p>
+    <p>[0055]	可选地，所述输入数据经键盘输入&#21515;，</p>
+    <p>[0056]	获取所述输入数据并实时地写入到浏览器侧的文件中，包括：</p>
+    <p>[0057]	通过网络浏览器WebBrowser在编辑模式下接收经键盘输入的数据；</p>
+    <p>[0058]	将所述输入数据写入到浏览器侧的文件中。</p>
+    <p>[0059]	可选地，所述输入数据经剪贴板获取&#21515;，</p>
+    <p>[0060]	获取所述输入数据并实时地写入到浏览器侧的文件中，包括：</p>
+    <p>[0061]	利用剪贴板复制网页中的文本数据；</p>
+    <p>[0062]	当所述悬浮层和/或文本输入框的onpaste事件被触发时，将复制的文本数据写入到浏览器侧的文件中。</p>
+    <p>[0063]	可选地，所述输入数据经拖拽事件获取&#21515;，</p>
+    <p>[0064]	获取所述输入数据并实时地写入到浏览器侧的文件中，包括：</p>
+    <p>[0065]	利用拖拽事件获取网页中的文本数据；</p>
+    <p>[0066]	当所述悬浮层和/或文本输入框的Ondrop事件被触发时，将获取的文本数据写入到浏览器侧的文件中。</p>
+    <p>[0067]	可选地，所述提交事件是所述文本输入框的控件失去焦点，或所述文本输入框的提交按钮被点击。</p>
+    <p>[0068]	依据本发明的另�个方面，提供了 一种浏览器中进行输入数据恢复的装置，包括：</p>
+    <p>[0069]	生成模块，配置为在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；</p>
+    <p>[0070]	写入模块，配置为检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；</p>
+    <p>[0071]	保存模块，配置为检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；</p>
+    <p>[0072]	读取模块，配置为由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；</p>
+    <p>[0073]	加载模块，配置为在所述文本输入框上的悬浮层中恢复加载所述输入数据。</p>
+    <p>[0074]	可选地，所述生成模块还配置为：</p>
+    <p>[0075]	在网页的所述文本输入框加载完成事件触发后，调用由网页浏览器提供的定制处理函数生成覆盖所述文本输入框上的悬浮层。</p>
+    <p>[0076]	可选地，所述写入模块还配置为：</p>
+    <p>[0077]	根据所述输入数据的数据类型，在所述文本输入框的悬浮层中生成所述数据的HTML元素和/或自定义HTML元素；</p>
+    <p>[0078]	将生成的HTML元素实时写入浏览器侧的文件中。</p>
+    <p>[0079]	可选地，所述保存模块还配置为：</p>
+    <p>[0080]	检测到对所述文本输入框的输入数据的提交事件，结束对所述浏览器侧的临时文件的写入后进行保存。</p>
+    <p>[0081]	可选地，所述写入模块还配置为：</p>
+    <p>[0082]	若在所有输入数据的写入操作结束之前输入数据输入停止，则保存临时文件中已写入的部分输入数据；</p>
+    <p>[0083]	重新加载所述网页时，从所述临时文件读取已存储的部分输入数据，在所述文本输入框上的悬浮层中恢复加载所述输入数据。</p>
+    <p>[0084]	可选地，输入数据输入停止的原因包括下列至少之�：</p>
+    <p>[0085]	电脑死机断电；</p>
+    <p>[0086]	输入信息误删除；</p>
+    <p>[0087]	电脑中病毒；</p>
+    <p>[0088]	指定文件无法读取；</p>
+    <p>[0089]	电脑系统崩溃。</p>
+    <p>[0090]	可选地，所述浏览器异常包括下列任意之一：</p>
+    <p>[0091]	浏览器崩溃；</p>
+    <p>[0092]	浏览器卡死；</p>
+    <p>[0093]	网页所在的页面进程崩溃或卡死。</p>
+    <p>[0094]	可选地，所述保存模块还配置为：</p>
+    <p>[0095]	检测到所述悬浮层和/或文本输入框的ondragenter和ondragover事件；或</p>
+    <p>[0096]	检测到所述悬浮层和/或文本输入框的onbeforepaste和onpaste事件。</p>
+    <p>[0097]	可选地，所述输入数据包括文本、图片和/或文件。</p>
+    <p>[0098]	可选地，所述写入模块还配置为：</p>
+    <p>[0099]	在所述输入数据为文本时，</p>
+    <p>[0100]	用相应的HTML标签标记所述文本的内容，以将其转换为所述文本对应的HTML元素。</p>
+    <p>[0101]	可选地，所述写入模块还配置为：</p>
+    <p>[0102]	在所述输入数据为图片时，</p>
+    <p>[0103]	将所述图片上传到图床服务器，并从图床服务器获取所述图片的链接地址；并且，</p>
+    <p>[0104]	用HTML的MG标签标记所述图片，以将其转换为所述图片对应的HTML元素，其中所述MG标签的来源属性为所述图片的链接地址。</p>
+    <p>[0105]	可选地，所述写入模块还配置为：</p>
+    <p>[0106]	在所述输入数据为文件&#21515;，</p>
+    <p>[0107]	将所述文件上传到文件服务器，并从文件服务器获取所述文件的链接地址；并且，</p>
+    <p>[0108]	用自定义HTML标签标记所述文件，以将其转换为所述文件对应的自定义HTML元素，其中所述自定义标签的来源属性为所述文件的链接地址。</p>
+    <p>[0109]	可选地，所述文件包括PDF或PPT文件，则所述自定义HTML元素为自定义的TOF或PPT元素。</p>
+    <p>[0110]	可选地，使用BASE64编解码对所述HTML元素和/或自定义HTML元素进行编码。</p>
+    <p>[0111]	可选地，所述编码的HTML元素和/或自定义HTML元素以PLAIN文本方式上传保存至服务器侧。</p>
+    <p>[0112]	可选地，所述输入数据通过以下任意之一的方式在所述文本框元素上进行输入：</p>
+    <p>[0113]	经键盘输入；</p>
+    <p>[0114]	剪贴板获取；</p>
+    <p>[0115]	经拖拽事件获取。</p>
+    <p>[0116]	可选地，所述输入数据经键盘输入&#21515;，</p>
+    <p>[0117]	获取所述输入数据并实时地写入到浏览器侧的文件中，包括：</p>
+    <p>[0118]	通过网络浏览器WebBrowser在编辑模式下接收经键盘输入的数据；</p>
+    <p>[0119]	将所述输入数据写入到浏览器侧的文件中。</p>
+    <p>[0120]	可选地，所述写入模块还配置为：</p>
+    <p>[0121]	所述输入数据经剪贴板获取&#21515;，</p>
+    <p>[0122]	利用剪贴板复制网页中的文本数据；</p>
+    <p>[0123]	当所述悬浮层和/或文本输入框的onpaste事件被触发时，将复制的文本数据写入到浏览器侧的文件中。</p>
+    <p>[0124]	可选地，所述写入模块还配置为：</p>
+    <p>[0125]	所述输入数据经拖拽事件获取&#21515;，</p>
+    <p>[0126]	利用拖拽事件获取网页中的文本数据；</p>
+    <p>[0127]	当所述悬浮层和/或文本输入框的Ondrop事件被触发时，将获取的文本数据写入到浏览器侧的文件中。</p>
+    <p>[0128]	可选地，所述提交事件是所述文本输入框的控件失去焦点，或所述文本输入框的提交按钮被点击。</p>
+    <p>[0129]	在本发明实施例中，在网页的文本输入框加载完成后，生成覆盖文本输入框上的悬浮层，之后，检测到向文本输入框输入数据的事件，获取输入数据并实时地写入到浏览器侧的文件中。由浏览器异常而重新加载网页时，从被写入的文件中读取网页URL对应的在浏览器发生异常时间时保存的输入数据，并在文本输入框上的悬浮层中恢复加载输入数据。由此可见，本发明实施例能够在浏览器侧提供了数据恢复的功能。在向输入控件中输入数据的同时，在浏览器侧对输入数据进行实时保存。在重新加载网页时，获取的输入数据并未发生数据丢失，其在文本输入框上的悬浮层中恢复加载输入数据就能够得到全部恢复。即，本发明实施例中，对网页中的输入控件进行输入的数据进行实时备份，并且可以进行恢复，实现了在网页中的数据备份和恢复，极大地提高了用户的使用体验。</p>
+    <p>[0130]	上述说明仅是本发明技术方案的概述，为了能够更清楚了解本发明的技术手段，而可依照说明书的内容予以实施，并且为了让本发明的上述和其它目的、特征和优点能够更明显易懂，以下特举本发明的具体实施方式。</p>
+    <p>附图说明</p>
+    <p>[0131]	通过阅读下文优选实施方式的详细描述，各种其他的优点和益处对于本领域普通技术人员将变得清楚明了。附图仅用于示出优选实施方式的目的，而并不认为是对本发明的限制。而且在整个附图中，用相同的&#21443;考符号表示相同的部件。在附图中：</p>
+    <p>[0132]	图1示出了根据本发明一个实施例的浏览器中进行输入数据恢复的方法的处理流程图；</p>
+    <p>[0133]	图2示出了根据本发明一个实施例的所保存的文本输入框编码数据的方法的处理流程图；以及</p>
+    <p>[0134]	图3示出了根据本发明一个实施例的浏览器中进行输入数据恢复的装置的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0135]	在此提供的算法和显示不与任何特定计算机、虚拟系统或者其它设备固有相关。各种通用系统也可以与基于在此的示教一起使用。根据上面的描述，构造这类系统所要求的结构是显而易见的。此外，本发明也不针对任何特定编程语言。应当明白，可以利用各种编程语言实现在此描述的本发明的内容，并且上面对特定语言所做的描述是为了披露本发明的最佳实施方式。</p>
+    <p>[0136]	为解决上述技术问题，本发明实施例提供了一种对于网页中的输入框的输入数据的数据恢复方案，实现在浏览器级别的数据恢复功能。具体的，本发明实施例提供了�种浏览器中进行输入数据恢复的方法。图1示出了根据本发明一个实施例的浏览器中进行输入数据恢复的方法的处理流程图。&#21443;见图1，该流程图包括步骤S102至步骤S110。</p>
+    <p>[0137]	步骤S102、在网页的文本输入框加载完成后，生成覆盖文本输入框上的悬浮层。</p>
+    <p>[0138]	步骤S104、检测到向文本输入框输入数据的事件，获取输入数据并实时地写入到浏览器侧的文件中。</p>
+    <p>[0139]	步骤S106、检测到浏览器异常，在文件中将输入数据与网页的URL和浏览器发生异常时间对应地进行保存。</p>
+    <p>[0140]	步骤S108、由浏览器异常而重新加载网页&#21515;，从被写入的文件中读取网页URL对应的在浏览器发生异常时间时保存的输入数据。</p>
+    <p>[0141]	步骤S110、在文本输入框上的悬浮层中恢复加载输入数据。</p>
+    <p>[0142]	在本发明实施例中，在网页的文本输入框加载完成后，生成覆盖文本输入框上的悬浮层，之后，检测到向文本输入框输入数据的事件，获取输入数据并实时地写入到浏览器侧的文件中。由浏览器异常而重新加载网页时，从被写入的文件中读取网页URL对应的在浏览器发生异常时间时保存的输入数据，并在文本输入框上的悬浮层中恢复加载输入数据。由此可见，本发明实施例能够在浏览器侧提供了数据恢复的功能。在向输入控件中输入数据的同时，在浏览器侧对输入数据进行实时保存。在重新加载网页时，获取的输入数据并未发生数据丢失，其在文本输入框上的悬浮层中恢复加载输入数据就能够得到全部恢复。即，本发明实施例中，对网页中的输入控件进行输入的数据进行实时备份，并且可以进行恢复，实现了在网页中的数据备份和恢复，极大地提高了用户的使用体验。</p>
+    <p>[0143]	对于步骤S102，在网页的文本输入框（textarea)加载完成事件触发后,调用由网页浏览器提供的定制处理函数生成覆盖文本输入框上的悬浮层，其中，悬浮层可以包括一DIV层。其中，定制处理函数可以是在网页浏览器处预先编制好的，用于生成该悬浮层。由于DIV层叠加在textarea上,DIV层能够比textarea先行接收交互事件并进行处理，由此实现了在textarea上对诸如文本、图片或文件的多种类型的数据的接收和处理。</p>
+    <p>[0144]	对于步骤S104，检测文本输入框输入数据的事件包括检测到悬浮层和/或文本输入框的ondragenter和ondragover事件，或检测到悬浮层和/或文本输入框的onbeforepaste 和 onpaste &#25802;件。</p>
+    <p>[0145]	特别地,本地的文件/图片被拖动到包含DIV层的悬浮层时，DIV的ondragenter和ondragover事件被触发。诸如IE的某些浏览器默认情况下禁止向DIV拖拽数据，因此需屏蔽系统的默认处理。当被拖拽的对象在DIV上释放&#21515;，DIV的Ondrop事件被触发，将上述生成的HTML转换数据添加写入到已经生成的DIV中。</p>
+    <p>[0146]	或者，在本地的文件/图片通过剪贴板复制到包含DIV层的悬浮层时，DIV的onbeforepaste和onpaste事件被触发。诸如I E的某些浏览器默认情况下禁止向DIV复制数据，因此需屏蔽系统的默认处理。当DIV的onpaste事件被触发时，将上述生成的HTML转换数据添加写入到到已经生成的DIV中。</p>
+    <p>[0147]	另外，在步骤S104中，还需要说明的是，根据各种不同的数据类型，例如文本，图片或文件，在浏览器的文本输入框的悬浮窗中生成输入数据对应的HTML元素和/或自定义HTML元素，进而将生成的HTML元素实时写入浏览器侧的文件中。特别地，对于拖拽或复制的图片或文件，在DIV的ondrop或onpaste事件中，通过external接ロ，调用客户端程序代码，将对应的文件/图片转换成HTML代码，插入到DIV中。</p>
+    <p>[0148]	下面针对不同的数据类型，详细说明步骤S104。</p>
+    <p>[0149]	I)当入数据是文本时</p>
+    <p>[0150]	用相应的HTML标签标记文本的内容，以将其转换为文本对应的HTML元素。</p>
+    <p>[0151]	在文本对应的HTML元素中,还可以用size、style等属性来对诸如字体大小、显示方式等进行配置。因此，本发明可以支持有格式的文本作为待输入数据。</p>
+    <p>[0152]	2)当输入数据是图片时</p>
+    <p>[0153]	将图片上传到图床服务器，并从图床服务器获取图片的链接地址；并且，用HTML的MG标签标记图片，以将其转换为图片对应的HTML元素，其中MG标签的来源属性为图片的链接地址。</p>
+    <p>[0154]	例如，用标签〈img&gt;来标识该图片，并用src属性来指向该图片的链接地址URL，从而将其转换成对应的HTML元素。</p>
+    <p>[0155]	3)当输入数据是文件时</p>
+    <p>[0156]	将文件上传到文件服务器，并从文件服务器获取文件的链接地址；并且，用自定义HTML标签标记文件，以将其转换为文件对应的自定义HTML元素，其中自定义标签的来源属性为文件的链接地址。</p>
+    <p>[0157]	例如，对于PPT或PDF文件，用网页浏览器可识别的自定义HTML标签如〈PPT〉、&lt;pdf&gt;等标记文件的该链接地址URL，以将其转换为对应的自定义HTML元素。当然，本领域技术人员都了解，文件并不限于PPT，PDF类型的文件。</p>
+    <p>[0158]	对于步骤S108，在检测到输入数据的提交事件时，将生成的各种数据对应的HTML元素和/或自定义HTML元素进行编码，并上传、保存编码的元素至服务器侧。</p>
+    <p>[0159]	其中，提交事件是文本输入框的控件失去焦点，或文本输入框的提交按钮被点击；编码时，可以使用BASE64编解码对HTML元素和/或自定义HTML元素进行编码；然后，被编码的HTML元素和/或自定义HTML元素以PLAIN文本方式上传保存至服务器侧。当然，本领域技术人员也知晓，可以使用其他适合的编解码方法来对元素进行编码，也可以使用其他方式来上传被编码的元素。</p>
+    <p>[0160]	图2示出了用于显示根据本发明所保存的文本输入框编码数据的方法的处理流程图，包括步骤S202至步骤S206。</p>
+    <p>[0161]	步骤S202，从服务器侧下载编码的HTML元素和/或自定义HTML元素。</p>
+    <p>[0162]	步骤S204，对编码的HTML元素和/或自定义HTML元素进行对应解码。</p>
+    <p>[0163]	步骤S206，显示HTML元素对应的数据和/或自定义HTML元素。</p>
+    <p>[0164]	对于步骤S202，S204，从服务器侧下载的编码HTML元素，使用与上传时所用编码方法对应的解码方法对其进行解码，例如在上传时使用BASE64进行编码，则同样使用BASE64对编码HTML元素进行解码，从而得到数据对应的HTML元素和/或自定义HTML元素。</p>
+    <p>[0165]	对于文本类型的数据，由于HTML元素为常规的HTML标准元素，其中包含了文本内容和属性，网页浏览器可直接显示文本内容。</p>
+    <p>[0166]	对于图片类型的数据，由于HTML元素为常规的HTML标准元素，其中包含了图片在图床服务器的链接地址，网页浏览器直接从图床服务器下载图片并直接显示图片内容。</p>
+    <p>[0167]	对于文件类型的数据，其对应的自定义HTML元素包含了自定义HTML标签，自定义HTML标签的来源属性为文件的链接地址。网页浏览器可显示自定义HTML元素，经由用户点击链接地址，以从文件服务器下载文件；然后调用文件的相应浏览器插件或相应浏览器侧应用程序显示文件。</p>
+    <p>[0168]	其中，输入数据是文件或图片之类时，其数据量较大，且以一个整体出现。以文件为例，若该文件为10K，在该文件的写入过程中浏览器出现故障，仅写入5K，那么，选择在临时文件中保存已入写的部分。即，若在所有输入数据的写入操作结束之前输入数据输入停止，则保存临时文件中已写入的部分输入数据。</p>
+    <p>[0169]	随后，在重新加载网页&#21515;，从临时文件读取已存储的部分输入数据，在文本输入框上的悬浮层中恢复加载输入数据。</p>
+    <p>[0170]	需要说明的是，输入数据输入停止的原因有多种，可以包括下列至少之�：</p>
+    <p>[0171]	电脑死机断电；</p>
+    <p>[0172]	输入信息误删除；</p>
+    <p>[0173]	电脑中病毒；</p>
+    <p>[0174]	指定文件无法读取；[0175]	电脑系统崩溃。</p>
+    <p>[0176]	当然，还可能存在其他原因，例如电脑中木马，被黑客攻击，系统缓存空间不足造成文件无法存取等，在此不做赘述。</p>
+    <p>[0177]	本发明实施例中提供浏览器异常需要对网页进行重新恢复，此处的浏览器异常包括下列任意之一：</p>
+    <p>[0178]	浏览器崩溃；</p>
+    <p>[0179]	浏览器卡死；</p>
+    <p>[0180]	网页所在的页面进程崩溃或卡死。</p>
+    <p>[0181]	即浏览器或者浏览器上所打开的网页中任意之一发生状况都属于浏览器异常的情况。若浏览器中的某一插件发生意外状况导致数据丢失，则其也属于浏览器异常的情&#27841;。</p>
+    <p>[0182]	基于上述原理，本发明实施例提供了一个浏览器侧数据恢复的具体实施例。具体描述如下。</p>
+    <p>[0183]1.对于输入控件在其onLoadcomplete事件时的覆盖其上的DIV的生成；</p>
+    <p>[0184]	2.对于输入数据(键盘、拷贝事件的输入的文本数据）的获取，写入DIV中的HTML文本；</p>
+    <p>[0185]	3.对DIV中的输入数据的写入临时文件(与输入是实时进行）；</p>
+    <p>[0186]	4.点击submit之后的临时文件的写入结束；</p>
+    <p>[0187]	5.对于未点击submit前出现的浏览器破溃或者电脑时机操作，都会结束临时文件的输入，并在下一次恢复进入该输入界面时读取所述临时文件，恢复到输入框的DIV中，继续用户的输入。</p>
+    <p>[0188]	基于同一发明构思，本发明实施例还提供了一种浏览器中进行输入数据恢复的装置。图3示出了根据本发明一个实施例的浏览器中进行输入数据恢复的装置的结构示意图。在该图中，本装置至少包括生成模块310、写入模块320、保存模块330、读取模块340以及加载模块350。现对各模块的功能以及架构进行具体分析。</p>
+    <p>[0189]	首先，介绍生成模块310。&#21443;见图3，生成模块310在网页的文本输入框加载完成后，生成覆盖文本输入框上的悬浮层。</p>
+    <p>[0190]	其次，介绍写入模块320。&#21443;见图3，写入模块320与生成模块310相耦合。检测到向文本输入框输入数据的事件时，写入模块320获取输入数据并实时地写入到浏览器侧的文件中。</p>
+    <p>[0191]	然后，介绍保存模块330。&#21443;见图3，保存模块330与写入模块320相耦合。当检测到浏览器异常时，保存模块330在文件中将输入数据与网页的URL和浏览器发生异常时间对应地进行保存。</p>
+    <p>[0192]	进一&#27497;，介绍读取模块340。&#21443;见图3，读取模块340与保存模块330相耦合。在保存模块330对输入数据进行保存后，由浏览器异常而重新加载网页&#21515;，读取模块340从被写入的文件中读取网页URL对应的在浏览器发生异常时间时保存的输入数据。</p>
+    <p>[0193]	最后，介绍加载模块350。&#21443;见图3，加载模块350与读取模块340相耦合。当读取模块340读取到已保存的输入数据后，加载模块350在文本输入框上的悬浮层中恢复加载输入数据。</p>
+    <p>[0194]	在本发明实施例中，在网页的文本输入框加载完成后，生成模块310生成覆盖文本输入框上的悬浮层，之后，检测到向文本输入框输入数据的事件，写入模块320获取输入数据并实时地写入到浏览器侧的文件中。由浏览器异常而重新加载网页&#21515;，读取模块340从被保存模块330写入的文件中读取网页URL对应的在浏览器发生异常时间时保存的输入数据，并由加载模块350在文本输入框上的悬浮层中恢复加载输入数据。由此可见,本发明实施例能够在浏览器侧提供了数据恢复的功能。在向输入控件中输入数据的同时，在浏览器侧对输入数据进行实时保存。在重新加载网页时，获取的输入数据并未发生数据丢失，其在文本输入框上的悬浮层中恢复加载输入数据就能够得到全部恢复。即，本发明实施例中，对网页中的输入控件进行输入的数据进行实时备份，并且可以进行恢复，实现了在网页中的数据备份和恢复，极大地提高了用户的使用体验。</p>
+    <p>[0195]	在一个优选的实施例中，生成模块310还可以配置为：</p>
+    <p>[0196]	在网页的文本输入框加载完成事件触发后，调用由网页浏览器提供的定制处理函数生成覆盖文本输入框上的悬浮层。</p>
+    <p>[0197]	在一个优选的实施例中，写入模块320还可以配置为：</p>
+    <p>[0198]	根据输入数据的数据类型，在文本输入框的悬浮层中生成数据的HTML元素和/或自定义HTML元素；</p>
+    <p>[0199]	将生成的HTML元素实时写入浏览器侧的文件中。</p>
+    <p>[0200]	在一个优选的实施例中，保存模块320还可以配置为：</p>
+    <p>[0201]	检测到对文本输入框的输入数据的提交事件，结束对浏览器侧的临时文件的写入后进行保存。</p>
+    <p>[0202]	在一个优选的实施例中，写入模块320还可以配置为：</p>
+    <p>[0203]	若在所有输入数据的写入操作结束之前输入数据输入停止，则保存临时文件中已写入的部分输入数据；</p>
+    <p>[0204]	重新加载网页&#21515;，从临时文件读取已存储的部分输入数据，在文本输入框上的悬浮层中恢复加载输入数据。</p>
+    <p>[0205]	其中，输入数据输入停止的原因包括下列至少之�：</p>
+    <p>[0206]	电脑死机断电；</p>
+    <p>[0207]	输入信息误删除；</p>
+    <p>[0208]	电脑中病毒；</p>
+    <p>[0209]	指定文件无法读取；</p>
+    <p>[0210]	电脑系统崩溃。</p>
+    <p>[0211]	另外，浏览器异常的状态包括下列任意之一：</p>
+    <p>[0212]	浏览器崩溃；</p>
+    <p>[0213]	浏览器卡死；</p>
+    <p>[0214]	网页所在的页面进程崩溃或卡死。</p>
+    <p>[0215]	在一个优选的实施例中，保存模块320还可以配置为：</p>
+    <p>[0216]	检测到悬浮层和/或文本输入框的ondragenter和ondragover事件；或</p>
+    <p>[0217]	检测到悬浮层和/或文本输入框的onbeforepas te和onpaste事件。</p>
+    <p>[0218]	其中，输入数据包括文本、图片和/或文件。</p>
+    <p>[0219]	在一个优选的实施例中，写入模块320还可以配置为：[0220]	在输入数据为文本时，</p>
+    <p>[0221]	用相应的HTML标签标记文本的内容，以将其转换为文本对应的HTML元素。</p>
+    <p>[0222]	在一个优选的实施例中，写入模块320还可以配置为：</p>
+    <p>[0223]	在输入数据为图片时，</p>
+    <p>[0224]	将图片上传到图床服务器，并从图床服务器获取图片的链接地址；并且，</p>
+    <p>[0225]	用HTML的MG标签标记图片，以将其转换为图片对应的HTML元素，其中MG标签的来源属性为图片的链接地址。</p>
+    <p>[0226]	在一个优选的实施例中，写入模块320还可以配置为：</p>
+    <p>[0227]	在输入数据为文件时，</p>
+    <p>[0228]	将文件上传到文件服务器，并从文件服务器获取文件的链接地址；并且，</p>
+    <p>[0229]	用自定义HTML标签标记文件，以将其转换为文件对应的自定义HTML元素，其中自定义标签的来源属性为文件的链接地址。</p>
+    <p>[0230]	其中，上述任意一个优选的实施例中，文件包括PDF或PPT文件，则自定义HTML元素为自定义的PDF或PPT元素。</p>
+    <p>[0231 ] 其中，上述任意一个优选的实施例中，使用BASE64编解码对HTML元素和/或自定义HTML元素进行编码。</p>
+    <p>[0232]	并且，编码的HTML元素和/或自定义HTML元素以PLAIN文本方式上传保存至服务器侧。</p>
+    <p>[0233]	优选地，输入数据可以通过以下任意之一的方式在文本框元素上进行输入：</p>
+    <p>[0234]	经键盘输入；</p>
+    <p>[0235]	剪贴板获取；</p>
+    <p>[0236]	经拖拽事件获取。</p>
+    <p>[0237]	在一个优选的实施例中，写入模块320还可以配置为：</p>
+    <p>[0238]	输入数据经键盘输入&#21515;，</p>
+    <p>[0239]	通过网络浏览器WebBrowser在编辑模式下接收经键盘输入的数据；</p>
+    <p>[0240]	将输入数据写入到浏览器侧的文件中。</p>
+    <p>[0241]	在一个优选的实施例中，写入模块320还可以配置为：</p>
+    <p>[0242]	输入数据经剪贴板获取&#21515;，</p>
+    <p>[0243]	利用剪贴板复制网页中的文本数据；</p>
+    <p>[0244]	当悬浮层和/或文本输入框的onpaste事件被触发时，将复制的文本数据写入到浏览器侧的文件中。</p>
+    <p>[0245]	在一个优选的实施例中，写入模块320还可以配置为：</p>
+    <p>[0246]	输入数据经拖拽事件获取&#21515;，</p>
+    <p>[0247]	利用拖拽事件获取网页中的文本数据；</p>
+    <p>[0248]	当悬浮层和/或文本输入框的Ondrop事件被触发时，将获取的文本数据写入到浏览器侧的文件中。</p>
+    <p>[0249]	其中，在上述任意一个优选的实施例中，提交事件是文本输入框的控件失去焦点，或文本输入框的提交按钮被点击。</p>
+    <p>[0250]	采用本发明实施例提供的浏览器中进行输入数据恢复的方法及装置可以达到如下有益效果：</p>
+    <p>[0251 ] 在本发明实施例中，在网页的文本输入框加载完成后，生成覆盖文本输入框上的悬浮层，之后，检测到向文本输入框输入数据的事件，获取输入数据并实时地写入到浏览器侧的文件中。由浏览器异常而重新加载网页时，从被写入的文件中读取网页URL对应的在浏览器发生异常时间时保存的输入数据，并在文本输入框上的悬浮层中恢复加载输入数据。由此可见，本发明实施例能够在浏览器侧提供了数据恢复的功能。在向输入控件中输入数据的同时，在浏览器侧对输入数据进行实时保存。在重新加载网页时，获取的输入数据并未发生数据丢失，其在文本输入框上的悬浮层中恢复加载输入数据就能够得到全部恢复。即，本发明实施例中，对网页中的输入控件进行输入的数据进行实时备份，并且可以进行恢复，实现了在网页中的数据备份和恢复，极大地提高了用户的使用体验。</p>
+    <p>[0252]	在此处所提供的说明书中，说明了大量具体细节。然而，能够理解，本发明的实施例可以在没有这些具体细节的情况下实践。在一些实例中，并未详细示出公知的方法、结构和技木，以便不模糊对本说明书的理解。</p>
+    <p>[0253]	类似地，应当理解，为了精简本公开并帮助理解各个发明方面中的�个或多个，在上面对本发明的示例性实施例的描述中，本发明的各个特征有时被一起分组到单个实施例、图、或者对其的描述中。然而，并不应将该公开的方法解释成反映如下意图：即所要求保护的本发明要求比在每个权利要求中所明确记载的特征更多的特征。更确切地说，如下面的权利要求书所反映的那样，发明方面在于少于前面公开的单个实施例的所有特征。因此，遵循具体实施方式的权利要求书由此明确地并入该具体实施方式，其中每个权利要求本身都作为本发明的单独实施例。</p>
+    <p>[0254]	本领域那些技术人员可以理解，可以对实施例中的设备中的模块进行自适应性地改变并且把它们设置在与该实施例不同的一个或多个设备中。可以把实施例中的模块或单元或组件组合成�个模块或单元或组件，以及此外可以把它们分成多个子模块或子单元或子组件。除了这样的特征和/或过程或者&#21336;元中的至少�些是相互排斥之外，可以采用任何组合对本说明书(包括伴随的权利要求、摘要和附图）中公开的所有特征以及如此公开的任何方法或者设备的所有过程或&#21336;元进行组合。除非另外明确陈述，本说明书(包括伴随的权利要求、摘要和附图）中公开的每个特征可以由提供相同、等同或相似目的的替代特征来代替。</p>
+    <p>[0255]	此外，本领域的技术人员能够理解，尽管在此所述的一些实施例包括其它实施例中所包括的某些特征而不是其它特征，但是不同实施例的特征的组合意味着处于本发明的范围之内并且形成不同的实施例。例如，在下面的权利要求书中，所要求保护的实施例的任意之一都可以以任意的组合方式来使用。</p>
+    <p>[0256]	本发明的各个部件实施例可以以硬件实现，或者以在�个或者多个处理器上运行的软件模块实现，或者以它们的组合实现。本领域的技术人员应当理解，可以在实践中使用微处理器或者数字信号处理器（DSP)来实现根据本发明实施例的浏览器中进行输入数据恢复的装置中的一些或者全部部件的一些或者全部功能。本发明还可以实现为用于执行这里所描述的方法的一部分或者全部的设备或者装置程序(例如，计算机程序和计算机程序产品)。这样的实现本发明的程序可以存储在计算机可读介质上，或者可以具有�个或者多个信号的形式。这样的信号可以从因特网网站上下载得到，或者在载体信号上提供，或者以任何其他形式提供。</p>
+    <p>[0257]	应该注意的是上述实施例对本发明进行说明而不是对本发明进行限制，并且本领域技术人员在不脱离所附权利要求的范围的情况下可设计出替换实施例。在权利要求中，不应将位于括号之间的任何&#21443;考符号构造成对权利要求的限制。单词“包含”不排除存在未列在权利要求中的元件或步骤。位于元件之前的单词“一”或“�个”不排除存在多个这样的元件。本发明可以借助于包括有若干不同元件的硬件以及借助于适当编程的计算机来实现。在列举了若干装置的单元权利要求中，这些装置中的若干个可以是通过同一个硬件项来具体体现。单词第一、第二、以及第三等的使用不表示任何顺序。可将这些单词解释为名称。</p>
+    <p>[0258]	本文公开了 Al、一种浏览器中进行输入数据恢复的方法，包括：在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；在所述文本输入框上的悬浮层中恢复加载所述输入数据。A2、根据Al所述的方法，其特征在于，所述在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层，包括：在网页的所述文本输入框加载完成事件触发后，调用由网页浏览器提供的定制处理函数生成覆盖所述文本输入框上的悬浮层。A3、根据Al所述的方法，其特征在于，所述获取所述输入数据并实时地写入到浏览器侧的文件中，包括：根据所述输入数据的数据类型，在所述文本输入框的悬浮层中生成所述数据的HTML元素和/或自定义HTML元素；将生成的HTML元素实时写入浏览器侧的文件中。A4、根据Al至A3任一项所述的方法，其特征在于，所述检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存，包括：检测到对所述文本输入框的输入数据的提交事件，结束对所述浏览器侧的临时文件的写入后进行保存。A5、根据A4所述的方法，其特征在于，所述结束对所述浏览器侧的临时文件的写入之后，包括：若在所有输入数据的写入操作结束之前输入数据输入停止，则保存临时文件中已写入的部分输入数据；重新加载所述网页时，从所述临时文件读取已存储的部分输入数据，在所述文本输入框上的悬浮层中恢复加载所述输入数据。A6、根据A5所述的方法，其特征在于，所述输入数据输入停止的原因包括下列至少之一：电脑死机断电；输入信息误删除；电脑中病毒；指定文件无法读取；电脑系统崩溃。A7、根据Al至A6任一项所述的方法，其特征在于，所述浏览器异常包括下列任意之一：浏览器崩溃；浏览器卡死；网页所在的页面进程崩溃或卡死。AS、根据Al至A7任一项所述的方法，其特征在于，所述检测到向所述文本输入框输入数据的事件，包括：检测到所述悬浮层和/或文本输入框的ondragenter和ondragover事件；或检测到所述悬浮层和/或文本输入框的onbeforepaste和onpaste事件。A9、根据Al至A8任一项所述的方法，其特征在于，所述输入数据包括文本、图片和/或文件。A10、根据A9所述的方法，其特征在干，在所述输入数据为文本&#21515;，生成所述数据的HTML元素和/或自定义HTML元素，包括：用相应的HTML标签标记所述文本的内容，以将其转换为所述文本对应的HTML元素。All、根据A9所述的方法，其特征在于，在所述输入数据为图片时，生成所述数据的HTML元素和/或自定义HTML元素，包括：将所述图片上传到图床服务器，并从图床服务器获取所述图片的链接地址；并且，用HTML的MG标签标记所述图片，以将其转换为所述图片对应的HTML元素，其中所述IMG标签的来源属性为所述图片的链接地址。A12、根据A9所述的方法，其特征在干，在所述输入数据为文件&#21515;，生成所述数据的HTML元素和/或自定义HTML元素，包括：将所述文件上传到文件服务器，并从文件服务器获取所述文件的链接地址；并且，用自定义HTML标签标记所述文件，以将其转换为所述文件对应的自定义HTML元素，其中所述自定义标签的来源属性为所述文件的链接地址。A13、根据A9所述的方法，其特征在于，所述文件包括PDF或PPT文件，则所述自定义HTML元素为自定义的PDF或PPT元素。A14、根据A3至A13任一项所述的方法，其特征在于，使用BASE64编解码对所述HTML元素和/或自定义HTML元素进行编码。A15、根据A14所述的方法，其特征在于，所述编码的HTML元素和/或自定义HTML元素以PLAIN文本方式上传保存至服务器侧。A16、根据Al至A15任一项所述的方法，其特征在于，所述输入数据通过以下任意之一的方式在所述文本框元素上进行输入：经键盘输入；剪贴板获取；经拖拽事件获取。A17、根据A16所述的方法，其特征在于，所述输入数据经键盘输入时，获取所述输入数据并实时地写入到浏览器侧的文件中，包括：通过网络浏览器WebBrowser在编辑模式下接收经键盘输入的数据；将所述输入数据写入到浏览器侧的文件中。A18、根据A16所述的方法，其特征在于，所述输入数据经剪贴板获取时，获取所述输入数据并实时地写入到浏览器侧的文件中，包括：利用剪贴板复制网页中的文本数据；当所述悬浮层和/或文本输入框的onpaste事件被触发时，将复制的文本数据写入到浏览器侧的文件中。A19、根据A16所述的方法，其特征在于，所述输入数据经拖拽事件获取时，获取所述输入数据并实时地写入到浏览器侧的文件中，包括：利用拖拽事件获取网页中的文本数据；当所述悬浮层和/或文本输入框的Ondrop事件被触发时，将获取的文本数据写入到浏览器侧的文件中。A20、根据Al至A19任一项所述的方法，其特征在于，所述提交事件是所述文本输入框的控件失去焦点，或所述文本输入框的提交按钮被点击。</p>
+    <p>[0259]	本文公开了 B21、一种浏览器中进行输入数据恢复的装置，包括：生成模块，配置为在网页的文本输入框加载完成后，生成覆盖所述文本输入框上的悬浮层；写入模块，配置为检测到向所述文本输入框输入数据的事件，获取所述输入数据并实时地写入到浏览器侧的文件中；保存模块，配置为检测到浏览器异常，在所述文件中将所述输入数据与所述网页的URL和浏览器发生异常时间对应地进行保存；读取模块，配置为由浏览器异常而重新加载所述网页时，从所述被写入的文件中读取所述网页URL对应的在浏览器发生异常时间时保存的输入数据；加载模块，配置为在所述文本输入框上的悬浮层中恢复加载所述输入数据。B22、根据B21所述的装置，其特征在于，所述生成模块还配置为：在网页的所述文本输入框加载完成事件触发后，调用由网页浏览器提供的定制处理函数生成覆盖所述文本输入框上的悬浮层。B23、根据B21所述的装置，其特征在于，所述写入模块还配置为：根据所述输入数据的数据类型，在所述文本输入框的悬浮层中生成所述数据的HTML元素和/或自定义HTML元素；将生成的HTML元素实时写入浏览器侧的文件中。B24、根据B21至B23任一项所述的装置，其特征在于，所述保存模块还配置为：检测到对所述文本输入框的输入数据的提交事件，结束对所述浏览器侧的临时文件的写入后进行保存。B25、根据B24所述的装置，其特征在于，所述写入模块还配置为：若在所有输入数据的写入操作结束之前输入数据输入停止，则保存临时文件中已写入的部分输入数据；重新加载所述网页时，从所述临时文件读取已存储的部分输入数据，在所述文本输入框上的悬浮层中恢复加载所述输入数据。B26、根据B25所述的装置，其特征在于，输入数据输入停止的原因包括下列至少之�：电脑死机断电；输入信息误删除；电脑中病毒；指定文件无法读取；电脑系统崩溃。B27、根据B21至B26任一项所述的装置，其特征在于，所述浏览器异常包括下列任意之一：浏览器崩溃；浏览器卡死；网页所在的页面进程崩溃或卡死。B28、根据B21至B27任一项所述的装置，其特征在于，所述保存模块还配置为：检测到所述悬浮层和/或文本输入框的ondragenter和ondragover事件；或检测到所述悬浮层和/或文本输入框的onbeforepaste和onpaste事件。B29、根据B21至B28任一项所述的装置，其特征在于，所述输入数据包括文本、图片和/或文件。B30、根据B29所述的装置，其特征在于，所述写入模块还配置为：在所述输入数据为文本时，用相应的HTML标签标记所述文本的内容，以将其转换为所述文本对应的HTML元素。B31、根据B29所述的装置，其特征在于，所述写入模块还配置为：在所述输入数据为图片时，将所述图片上传到图床服务器，并从图床服务器获取所述图片的链接地址；并且，用HTML的MG标签标记所述图片，以将其转换为所述图片对应的HTML元素，其中所述MG标签的来源属性为所述图片的链接地址。B32、根据B29所述的装置，其特征在于，所述写入模块还配置为：在所述输入数据为文件&#21515;，将所述文件上传到文件服务器，并从文件服务器获取所述文件的链接地址；并且，用自定义HTML标签标记所述文件，以将其转换为所述文件对应的自定义HTML元素，其中所述自定义标签的来源属性为所述文件的链接地址。B33、根据B29所述的装置，其特征在于，所述文件包括PDF或PPT文件，则所述自定义HTML元素为自定义的PDF或PPT元素。B34、根据B23至B 33任一项所述的装置，其特征在于，使用BASE64编解码对所述HTML元素和/或自定义HTML元素进行编码。B35、根据B34所述的装置，其特征在于，所述编码的HTML元素和/或自定义HTML元素以PLAIN文本方式上传保存至服务器侧。B36、根据B21至B35任一项所述的装置，其特征在于，所述输入数据通过以下任意之一的方式在所述文本框元素上进行输入：经键盘输入；剪贴板获取；经拖拽事件获取。B37、根据B36所述的装置，其特征在于，所述写入模块还配置为：所述输入数据经键盘输入时，通过网络浏览器WebBrowser在编辑模式下接收经键盘输入的数据；将所述输入数据写入到浏览器侧的文件中。B38、根据B36所述的装置，其特征在于，所述写入模块还配置为：所述输入数据经剪贴板获取时，利用剪贴板复制网页中的文本数据；当所述悬浮层和/或文本输入框的onpaste事件被触发时，将复制的文本数据写入到浏览器侧的文件中。B39、根据B36所述的装置，其特征在于，所述写入模块还配置为：所述输入数据经拖拽事件获取时，利用拖拽事件获取网页中的文本数据；当所述悬浮层和/或文本输入框的Ondrop事件被触发时，将获取的文本数据写入到浏览器侧的文件中。B40、根据B21至B39任�项所述的装置，其特征在干，所述提交事件是所述文本输入框的控件失去焦点，或所述文本输入框的提交按钮被点击。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102768683A?cl=zh">CN102768683A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月29日</td><td class="patent-data-table-td patent-date-value">2012年11月7日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种图片信息的搜索方法及搜索装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102789454A?cl=zh">CN102789454A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月16日</td><td class="patent-data-table-td patent-date-value">2012年11月21日</td><td class="patent-data-table-td ">腾讯科技（北京）有限公司</td><td class="patent-data-table-td ">一种浏览器网页中的输入框内容即时存储方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102799371A?cl=zh">CN102799371A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月29日</td><td class="patent-data-table-td patent-date-value">2012年11月28日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种扩展的数据输入装置及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103034568A?cl=zh">CN103034568A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月14日</td><td class="patent-data-table-td patent-date-value">2013年4月10日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">用于浏览器的输入数据恢复方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=8cDvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009440000">G06F9/44</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=8cDvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年4月10日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年5月8日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/09a35ba14bcb1dc312a7/CN103034724A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BF%9B%E8%A1%8C%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E7%9A%84.pdf?id=8cDvBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1vpFl1dVgbXp7vzB_7QWgO9NyCGg"},"sample_url":"https://www.google.com/patents/reader?id=8cDvBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

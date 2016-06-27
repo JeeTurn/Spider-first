@@ -1,0 +1,194 @@
+<!DOCTYPE html><html><head><title>专利 CN102118361A - 一种基于网络协议的数据传输控制方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种基于网络协议的数据传输控制方法和装置"><meta name="DC.contributor" content="赖永聪" scheme="inventor"><meta name="DC.contributor" content="北京金山数字娱乐科技有限公司" scheme="assignee"><meta name="DC.contributor" content="北京金山软件有限公司" scheme="assignee"><meta name="DC.contributor" content="成都金山数字娱乐科技有限公司" scheme="assignee"><meta name="DC.date" content="2009-12-31" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了一种网络协议的数据传输控制方法和装置，本发明实施例所提供的方案对网络中传输的第一协议类型的数据包的发送次数进行统计，当该第一协议类型的数据包的发送次数达到预设的阈值时，就对采用第一协议类型的数据包的发送进行控制，具体为将待发送的数据包与之前发送过的第一协议类型的数据包进行比较，如果待发送的数据包的内容与之前发送过的第一协议类型的数据包的内容相同，则取消此次待发送数据包的发送。通过本发明实施例所提供的方法有效地减少了同一协议类型的相同数据的不必要的发送，节约了网络资源，从而有效地提高了对网络资源的利用率。"><meta name="DC.date" content="2011-7-6"><meta name="citation_patent_publication_number" content="CN:102118361:A"><meta name="citation_patent_application_number" content="CN:200910244587"><link rel="canonical" href="https://www.google.com/patents/CN102118361A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102118361A?cl=zh"/><meta name="title" content="专利 CN102118361A - 一种基于网络协议的数据传输控制方法和装置"/><meta name="description" content="本发明实施例公开了一种网络协议的数据传输控制方法和装置，本发明实施例所提供的方案对网络中传输的第一协议类型的数据包的发送次数进行统计，当该第一协议类型的数据包的发送次数达到预设的阈值时，就对采用第一协议类型的数据包的发送进行控制，具体为将待发送的数据包与之前发送过的第一协议类型的数据包进行比较，如果待发送的数据包的内容与之前发送过的第一协议类型的数据包的内容相同，则取消此次待发送数据包的发送。通过本发明实施例所提供的方法有效地减少了同一协议类型的相同数据的不必要的发送，节约了网络资源，从而有效地提高了对网络资源的利用率。"/><meta property="og:title" content="专利 CN102118361A - 一种基于网络协议的数据传输控制方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102118361A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102118361A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=dA-XBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102118361A&amp;usg=AFQjCNFgJWIeG9-j9ORJGIAb3cT6CRaHcw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/9728ad69788b9c2c23ed/CN102118361A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/9728ad69788b9c2c23ed/CN102118361A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102118361A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102118361A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102118361A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102118361B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102118361A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了一种网络协议的数据传输控制方法和装置，本发明实施例所提供的方案对网络中传输的第一协议类型的数据包的发送次数进行统计，当该第一协议类型的数据包的发送次数达到预设的阈值时，就对采用第一协...</span><span itemprop="url">https://www.google.com/patents/CN102118361A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102118361A - 一种基于网络协议的数据传输控制方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102118361A - 一种基于网络协议的数据传输控制方法和装置" title="专利 CN102118361A - 一种基于网络协议的数据传输控制方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102118361 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910244587</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年7月6日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年12月31日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年12月31日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102118361B?hl=zh-CN&amp;cl=zh">CN102118361B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910244587.X, </span><span class="patent-bibdata-value">CN 102118361 A, </span><span class="patent-bibdata-value">CN 102118361A, </span><span class="patent-bibdata-value">CN 200910244587, </span><span class="patent-bibdata-value">CN-A-102118361, </span><span class="patent-bibdata-value">CN102118361 A, </span><span class="patent-bibdata-value">CN102118361A, </span><span class="patent-bibdata-value">CN200910244587, </span><span class="patent-bibdata-value">CN200910244587.X</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B5%96%E6%B0%B8%E8%81%AA%22">赖永聪</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E9%87%91%E5%B1%B1%E6%95%B0%E5%AD%97%E5%A8%B1%E4%B9%90%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京金山数字娱乐科技有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E9%87%91%E5%B1%B1%E8%BD%AF%E4%BB%B6%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京金山软件有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%88%90%E9%83%BD%E9%87%91%E5%B1%B1%E6%95%B0%E5%AD%97%E5%A8%B1%E4%B9%90%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">成都金山数字娱乐科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102118361A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102118361A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102118361A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dA-XBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910244587&amp;usg=AFQjCNFw5uV1DO_cTB3whCuLm3OBA7xm8w"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dA-XBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102118361A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGIVmRnRokXUiJUI93GTPU7w3DNIw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT104250325" lang="ZH" load-source="patent-office">一种基于网络协议的数据传输控制方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 102118361 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA86152484" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了一种网络协议的数据传输控制方法和装置，本发明实施例所提供的方案对网络中传输的第一协议类型的数据包的发送次数进行统计，当该第一协议类型的数据包的发送次数达到预设的阈值时，就对采用第一协议类型的数据包的发送进行控制，具体为将待发送的数据包与之前发送过的第一协议类型的数据包进行比较，如果待发送的数据包的内容与之前发送过的第一协议类型的数据包的内容相同，则取消此次待发送数据包的发送。通过本发明实施例所提供的方法有效地减少了同一协议类型的相同数据的不必要的发送，节约了网络资源，从而有效地提高了对网络资源的利用率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(12)</span></span></div><div class="patent-text"><div mxw-id="PCLM37777874" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于网络协议的数据传输控制方法，其特征在于，包括：在预设统计周期内截获逻辑层和网络传输层之间的数据包，并确定所述数据包采用的 第一协议类型；根据所述第一协议类型统计与所述第一协议类型对应的第一协议应用次数； 在所述预设统计周期结束时，若所述第一协议应用次数超过预设的第一协议应用次数 阈值，则记录第一协议当前发送的数据包的内容；当再次发送第一协议的数据包时，将待发送的数据包与所记录的第一协议数据包进行 比较；当数据内容有更新时执行此次数据包发送并用新的数据包替换原本所记录的数据包， 否则终止此次数据发送。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，还包括：在预设统计周期内，从所述数据包中获取当前数据包的数据量； 将当前数据包的数据量累加至与所述第一协议类型对应的第一协议传输数据量中； 在所述预设统计周期结束时，若所述第一协议传输数据量超过预设的第一协议传输数 据量阈值，则确定第一协议的可删除位；根据所述可删除位形成所述待发送数据包的缩减数据包和补充包； 用所述缩减数据包替代所述待发送数据包进行发送。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，确定第一协议的可删除位包括：预先将第一协议的多个数据包按位进行或运算，确定第一协议的数据包中未被使用的位；将所述第一协议的数据包中未被使用过的位确定为所述第一协议的数据包的可删除位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求2所述的方法，其特征在于，确定第一协议的可删除位包括：预先统计第一协议数据包每个位的被使用率，所述使用率为统计周期内每个位的被使 用次数与第一协议数据包被发送次数的比值；将所述第一协议数据包被使用率低于预设被使用率阈值的位确定为所述第一协议的 可删除位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求2&#12316;4任意一项所述的方法，其特征在于，根据所述可删除位形成所述 待发送数据包的缩减数据包和补充包包括：通过将所述第一协议的数据包中的可删除位从所述待发送数据包中删除获得所述待 发送数据包的缩减数据包；记录该缩减数据包中的可删除位信息的数据包构成该缩减数据包的补充包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，根据所述可删除位形成所述待发送数据 包的缩减数据包和补充包包括：将所述第一协议的数据包中的可删除位与待发送数据包中的对应位进行比较，删除未 被使用的可删除位获得所述待发送数据包的缩减数据包；记录该缩减数据包中的可删除位信息构成该缩减数据包的补充包，在所述补充包中标 记出被使用的可删除位。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.	一种基于网络协议的数据传输控制装置，其特征在于，包括：第一获取单元，用于在预设统计周期内截获逻辑层和网络传输层之间的数据包，并确 定所述数据包采用的第一协议类型；第一统计单元，用于根据所述第一协议类型统计与所述第一协议类型对应的第一协议 应用次数；第一记录单元，用于在所述预设统计周期结束时，若所述第一协议应用次数超过预设 的第一协议应用次数阈值，则记录第一协议当前发送的数据包的内容；第一比较单元，用于当再次发送第一协议的数据包时，将待发送的数据包与所记录的 第一协议数据包进行比较；第一控制单元，用于在数据内容有更新时执行此次数据包发送并用新的数据包替换原 本所记录的数据包，否则终止此次数据发送。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的装置，其特征在于，所述第一获取单元，还用于在预设统计周期内，从所述数据包中获取当前数据包的数据量；所述第一统计单元，还用于将当前数据包的数据量累加至与所述第一协议类型对应的 第一协议传输数据量中； 该装置还包括：第二确定单元，用于在所述预设统计周期结束时，若所述第一协议传输数据量超过预 设的第一协议传输数据量阈值，则确定第一协议的可删除位；第二控制单元，用于根据所述可删除位形成所述待发送数据包的缩减数据包和补充包；第二发送单元，用于用所述缩减数据包替代所述待发送数据包进行发送。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的装置，其特征在于，所述第二确定单元包括：第一统计子单元，用于预先将第一协议的多个数据包按位进行或运算，确定第一协议 的数据包中未被使用的位；第一确定子单元，用于将所述第一协议的数据包中未被使用过的位确定为所述第一协 议的数据包的可删除位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求8所述的方法，其特征在于，所述第二确定单元包括：第二统计子单元，用于预先统计第一协议数据包每个位的被使用率，所述使用率为统 计周期内每个位的被使用次数与第一协议数据包被发送次数的比值；第二确定子单元，用于将所述第一协议数据包被使用率低于预设被使用率阈值的位确 定为所述第一协议的可删除位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求8&#12316;10任意一项所述的装置，其特征在于，所述第二控制单元包括： 第一构成子单元，用于通过将所述第一协议的数据包中的可删除位从所述待发送数据包中删除获得所述待发送数据包的缩减数据包；第二构成子单元，用于记录该缩减数据包中的可删除位信息的数据包构成该缩减数据 包的补充包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求8&#12316;10任意一项所述的装置，其特征在于，所述第二控制单元包括： 第三构成子单元，用于将所述第一协议的数据包中的可删除位与待发送数据包中的对应位进行比较，删除未被使用的可删除位获得缩减数据包；第四构成子单元，用于记录该缩减数据包中的可删除位信息构成该缩减数据包的补充 包，在所述补充包中标记出被使用的可删除位。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES43356914" lang="ZH" load-source="patent-office" class="description">
+    <p>一种基于网络协议的数据传输控制方法和装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本申请涉及网络技术领域，尤其涉及一种网络协议的数据传输控制方法和装置。 背景技术</p>
+    <p>[0002]	协议是通信双方为了实现通信而设计的约定或通话规则。计算机通信网是由许多 具有信息交换和处理能力的节点互连而成的。要使整个网络有条不紊地工作，就要求每个 节点必须遵守一些事先约定好的有关数据格式及时序等的规则。这些为实现网络数据交换 而建立的规则、约定或标准就称为网络协议。</p>
+    <p>[0003]	现有的网络协议种类繁多，网络中的数据包通过各种协议进行传输，最终实现了 网络中各种实体间的通信。网络资源是有限的，比如说一般都有固定的网络带宽，如果以某 种协议传输的数据数量过大或者次数过多，就会占用大量的网络资源，极大地影响了整个 网络资源的利用率。</p>
+    <p>发明内容</p>
+    <p>[0004]	有鉴于此，本申请实施例的目的是提供一种基于网络协议的数据传输控制方法和 装置，通过调整基于协议的数据的传输方式，提高对网络资源的利用率。</p>
+    <p>[0005]	为实现上述目的，本发明实施例提供了如下技术方案：</p>
+    <p>[0006]	一种基于网络协议的数据传输控制方法，包括：</p>
+    <p>[0007]	在预设统计周期内截获逻辑层和网络传输层之间的数据包，并确定所述数据包采 用的第一协议类型；</p>
+    <p>[0008]	根据所述第一协议类型统计与所述第一协议类型对应的第一协议应用次数；</p>
+    <p>[0009]	在所述预设统计周期结束时，若所述第一协议应用次数超过预设的第一协议应用 次数阈值，则记录第一协议当前发送的数据包的内容；</p>
+    <p>[0010]	当再次发送第一协议的数据包时，将待发送的数据包与所记录的第一协议数据包 进行比较；</p>
+    <p>[0011]	当数据内容有更新时执行此次数据包发送并用新的数据包替换原本所记录的数 据包，否则终止此次数据发送。</p>
+    <p>[0012]	该方法还包括：</p>
+    <p>[0013]	在预设统计周期内，从所述数据包中获取当前数据包的数据量；</p>
+    <p>[0014]	将当前数据包的数据量累加至与所述第一协议类型对应的第一协议传输数据量 中；</p>
+    <p>[0015]	在所述预设统计周期结束时，若所述第一协议传输数据量超过预设的第一协议传 输数据量阈值，则确定第一协议的可删除位；</p>
+    <p>[0016]	根据所述可删除位形成所述待发送数据包的缩减数据包和补充包；</p>
+    <p>[0017]	用所述缩减数据包替代所述待发送数据包进行发送。</p>
+    <p>[0018]	确定第一协议的可删除位包括：[0019]	预先将第一协议的多个数据包按位进行或运算，确定第一协议的数据包中未被使 用的位；</p>
+    <p>[0020]	将所述第一协议的数据包中未被使用过的位确定为所述第一协议的数据包的可 删除位。</p>
+    <p>[0021]	确定第一协议的可删除位包括：</p>
+    <p>[0022]	预先统计第一协议数据包每个位的被使用率，所述使用率为统计周期内每个位的 被使用次数与第一协议数据包被发送次数的比值；</p>
+    <p>[0023]	将所述第一协议数据包被使用率低于预设被使用率阈值的位确定为所述第一协 议的可删除位。</p>
+    <p>[0024]	根据所述可删除位形成所述待发送数据包的缩减数据包和补充包包括：</p>
+    <p>[0025]	通过将所述第一协议的数据包中的可删除位从所述待发送数据包中删除获得所 述待发送数据包的缩减数据包；</p>
+    <p>[0026]	记录该缩减数据包中的可删除位信息的数据包构成该缩减数据包的补充包。</p>
+    <p>[0027]	根据所述可删除位形成所述待发送数据包的缩减数据包和补充包包括：</p>
+    <p>[0028]	将所述第一协议的数据包中的可删除位与待发送数据包中的对应位进行比较，删 除未被使用的可删除位获得所述待发送数据包的缩减数据包；</p>
+    <p>[0029]	记录该缩减数据包中的可删除位信息构成该缩减数据包的补充包，在所述补充包 中标记出被使用的可删除位。</p>
+    <p>[0030]	一种基于网络协议的数据传输控制装置，包括：</p>
+    <p>[0031]	第一获取单元，用于在预设统计周期内截获逻辑层和网络传输层之间的数据包， 并确定所述数据包采用的第一协议类型；</p>
+    <p>[0032]	第一统计单元，用于根据所述第一协议类型统计与所述第一协议类型对应的第一 协议应用次数；</p>
+    <p>[0033]	第一记录单元，用于在所述预设统计周期结束时，若所述第一协议应用次数超过 预设的第一协议应用次数阈值，则记录第一协议当前发送的数据包的内容；</p>
+    <p>[0034]	第一比较单元，用于当再次发送第一协议的数据包时，将待发送的数据包与所记 录的第一协议数据包进行比较；</p>
+    <p>[0035]	第一控制单元，用于在数据内容有更新时执行此次数据包发送并用新的数据包替 换原本所记录的数据包，否则终止此次数据发送。</p>
+    <p>[0036]	所述第一获取单元，还用于在预设统计周期内，从所述数据包中获取当前数据包 的数据量；</p>
+    <p>[0037]	所述第一统计单元，还用于将当前数据包的数据量累加至与所述第一协议类型对 应的第一协议传输数据量中；</p>
+    <p>[0038]	该装置还包括：</p>
+    <p>[0039]	第二确定单元，用于在所述预设统计周期结束时，若所述第一协议传输数据量超 过预设的第一协议传输数据量阈值，则确定第一协议的可删除位；</p>
+    <p>[0040]	第二控制单元，用于根据所述可删除位形成所述待发送数据包的缩减数据包和补 充包；</p>
+    <p>[0041]	第二发送单元，用于用所述缩减数据包替代所述待发送数据包进行发送。[0042]	所述第二确定单元包括：</p>
+    <p>[0043]	第一统计子单元，用于预先将第一协议的多个数据包按位进行或运算，确定第一 协议的数据包中未被使用的位；</p>
+    <p>[0044]	第一确定子单元，用于将所述第一协议的数据包中未被使用过的位确定为所述第 一协议的数据包的可删除位。</p>
+    <p>[0045]	所述第二确定单元包括：</p>
+    <p>[0046]	第二统计子单元，用于预先统计第一协议数据包每个位的被使用率，所述使用率 为统计周期内每个位的被使用次数与第一协议数据包被发送次数的比值；</p>
+    <p>[0047]	第二确定子单元，用于将所述第一协议数据包被使用率低于预设被使用率阈值的 位确定为所述第一协议的可删除位。</p>
+    <p>[0048]	所述第二控制单元包括：</p>
+    <p>[0049]	第一构成子单元，用于通过将所述第一协议的数据包中的可删除位从所述待发送 数据包中删除获得所述待发送数据包的缩减数据包；</p>
+    <p>[0050]	第二构成子单元，用于记录该缩减数据包中的可删除位信息的数据包构成该缩减 数据包的补充包。</p>
+    <p>[0051 ] 所述第二控制单元包括：</p>
+    <p>[0052]	第三构成子单元，用于将所述第一协议的数据包中的可删除位与待发送数据包中 的对应位进行比较，删除未被使用的可删除位获得缩减数据包；</p>
+    <p>[0053]	第四构成子单元，用于记录该缩减数据包中的可删除位信息构成该缩减数据包的 补充包，在所述补充包中标记出被使用的可删除位。</p>
+    <p>[0054]	可见，在本发明实施例中，对网络中传输的第一协议类型的数据包的发送次数进 行统计，当该第一协议类型的数据包的发送次数达到预设的阈值时，就对采用第一协议类 型的数据包的发送进行控制，具体为将待发送的数据包与之前发送过的第一协议类型的数 据包进行比较，如果待发送的数据包的内容与之前发送过的第一协议类型的数据包的内容 相同，则取消此次待发送数据包的发送。通过本发明实施例所提供的方法有效地减少了同 一协议类型的相同数据的不必要的发送，节约了网络资源，从而有效地提高了对网络资源 的利用率。</p>
+    <p>附图说明</p>
+    <p>[0055]	为了更清楚地说明本申请实施例或现有技术中的技术方案，下面将对实施例或现 有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本 申请中记载的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提 下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0056]	图1为本申请一实施例所提供的方法流程图；</p>
+    <p>[0057]	图2为本申请另一实施例所提供的方法所应用的场景的示意图；</p>
+    <p>[0058]	图3为本申请一实施例所提供的方法的流程图；</p>
+    <p>[0059]	图4为本申请一实施例所提供的装置的结构示意图；</p>
+    <p>[0060]	图5为本发明另一实施例所提供的装置的结构示意图。具体实施方式</p>
+    <p>[0061]	为了使本技术领域的人员更好地理解本申请中的技术方案，下面将结合本申请实 施例中的附图，对本申请实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施 例仅仅是本申请一部分实施例，而不是全部的实施例。基于本申请中的实施例，本领域普通 技术人员在没有作出创造性劳动前提下所获得的所有其他实施例，都应当属于本申请保护 的范围。</p>
+    <p>[0062]	参见图1，本发明实施例提高的一种基于网络协议的数据传输控制方法，包括：</p>
+    <p>[0063]	S101、在预设统计周期内截获逻辑层和网络传输层之间的数据包，并确定所述数 据包采用的第一协议类型；</p>
+    <p>[0064]	为了描述上的方便和清楚，本发明实施例中用第一协议类型来指代该数据包所归 属的协议类型。本发明实施例所提供的方法以具体的数据传输协议为基础，但是不限定特 定的数据传输协议类型。</p>
+    <p>[0065]	预设统计周期可以根据实际情况确定，例如半个小时或者一个小时等，本发明对 此不做限定。</p>
+    <p>[0066]	本发明实施例所提供的方法在游戏的逻辑层和网络传输层层中间嵌入数据包过 滤层，如图2所示。在数据包过滤层实现原来逻辑层和网络传输层之间的所有通信接口，把 逻辑层和网络传输层之间通讯的数据包全部截获，从而获得分析用的数据。</p>
+    <p>[0067]	S102、根据所述第一协议类型统计与所述第一协议类型对应的第一协议应用次 数；</p>
+    <p>[0068]	在截获的数据包基础上进行简单的统计分析，由于数据包截获层所处的位置比较 特殊，数据量十分庞大，一方面，必须使用简单高效的办法减少其对原系统的影响；另一方 面要控制产生的数据量在一个数据库系统可接受的范围内。本发明实施例中按照协议类型 对所截获的数据包进行分类统计，统计每种协议类型在一段时间内的数据包的发送次数。 这样在一个统计周期内，一个协议会产生一条统计数据。所产生的统计数据需要写入数据 库中。</p>
+    <p>[0069]	实际应用中，为了避免所有协议类型在同一时间内产生统计结果，从而导致写数 据库拥挤，本发明采用按协议类型错开统计时间的方法，使得统计数据比较均&#21243;地产生，保 证写数据库的安全。</p>
+    <p>[0070]	表1为本发明一实施例所提供的数据包信息统计表。从表中可以看出，该表格记 录了被发送的每个数据包的协议号，子协议号、类型、总字节数、数目等信息。通过这些信息 对某个协议类型的数据包进行监控和控制。</p>
+    <p>[0071]表	1</p>
+    <p>[0072]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102118361A/CN102118361AD00081.png"> <img id="idf0001" file="CN102118361AD00081.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102118361A/CN102118361AD00081.png" class="patent-full-image" alt="Figure CN102118361AD00081"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102118361A/CN102118361AD00091.png"> <img id="idf0002" file="CN102118361AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102118361A/CN102118361AD00091.png" class="patent-full-image" alt="Figure CN102118361AD00091"> </a> </div>
+    <p>[0073]</p>
+    <p>[0074]	本发明实施例所提供的方法，一种通信协议在所预定的统计周期内会产生一条统 计数据。以10分钟为一个统计周期，假设服务器的协议类型数为500，则一台服务器一天产 生的数据为6 (每小时6个十分钟)*24 (小时）*500 = 72000条，若全部服务器有50台，则 一天总共产生的数据量为72000*50 = 360万条，以40个字节一条记录计算，则上述50台 服务器每天产生的数据所要占用的存储空间约为138MB，所以本发明实施例所提供的方法 产生数据量一般的服务器都可以承受。</p>
+    <p>[0075]	&#8212;般情况下，如果对所有的协议的统计时间区间一致，则在系统某一个时刻产生 的数据量等于系统协议种类数，在这种情况下，如果发生多台服务器都在同一时间提交统 计数据，则很容易因为数据量太庞大而导致数据库写入错误。为了避免上述情况，采用错开 统计时间的方法，把所有协议统计的起始时间均&#21243;分布在一个时间区间内，如按统计周期 平均分配，则统计数据将会均&#21243;地产生，从而避免数据写入拥塞。</p>
+    <p>[0076]	进行数据统计时，可以创建一个与统计表相一致的数据结构，并用该数据结构创 建一个稳定的数组，该数组以协议号为下标。在接收到一个数据包后，分析其协议类型，并 根据协议类型定位到相应的数据结构，把新数据包的信息统计到该数据结构中。在统计的 过程中，定期遍历数组，把达到统计周期的数据提交到数据库中，并清空对应的数据结构。 采用该方式所耗费的系统资源很低，对原系统的影响几乎可以忽略。</p>
+    <p>[0077]	S103、在所述预设统计周期结束时，若所述第一协议应用次数超过预设的第一协 议应用次数阈值，则记录第一协议当前发送的数据包的内容；</p>
+    <p>[0078]	S104、当再次发送第一协议的数据包时，将待发送的数据包与所记录的第一协议 数据包进行比较；</p>
+    <p>[0079]	S105、当数据内容有更新时执行此次数据包发送并用新的数据包替换原本所记录 的数据包，否则终止此次数据发送。</p>
+    <p>[0080]	本发明实施例所提供的数据传输方法可以应用于多种网络数据传输领域，例如网 络游戏的数据传输中，游戏客户端需要随时获取某一怪物的状态，包括位置、生命值等信 息，游戏服务器需要实时同步该怪物状态，记录该怪物状态的数据包通常会有很高的发送 频率，因为服务器只有通过不断地发送该怪物的实时的状态，才能把怪物不断变化的状态 表现在游戏客户端，一般情况下，为了游戏的流畅性，数据包的发送频率大于或者等于怪物 状态变化的最大速率。但是怪物的状态不一定在每次同步时都发生了变化，因此有些数据 包是不必要发送的。</p>
+    <p>[0081]	当利用本发明实施例所提供的方法处理这类数据包的发送时，可以在过滤层终止 不必要发送的数据传输，具体为：如果本次对某个客户端发送的第一协议类型的数据包与上一次发送的第一协议类型的数据包内容完全一致，则认为是不必要的，可以截断该次数 据传输，直到该协议数据包内容发生变变化时再进行传输，并记录新协议数据包的内容，用 于下一次的判断，从而节省不必要的数据传输，从而节省网络带宽。</p>
+    <p>[0082]	本发明实施例所提供的方法中，对网络中传输的第一协议类型的数据包的发送次 数进行统计，当该第一协议类型的数据包的发送次数达到预设的阈值时，就对采用第一协 议类型的数据包的发送进行控制，具体为将待发送的数据包与之前发送过的第一协议类型 的数据包进行比较，如果待发送的数据包的内容与之前发送过的第一协议类型的数据包的 内容相同，则取消此次待发送数据包的发送。通过本发明实施例所提供的方法有效地减少 了同一协议类型的相同数据的不必要的发送，节约了网络资源，从而有效地提高了对网络 资源的利用率。</p>
+    <p>[0083]	本发明另一实施例中，在对第一协议类型的数据包发送次数进行统计的同时，还 可以对所述第一协议类型的数据包所发送的数据量进行统计，参见图3，该方法具体包括：</p>
+    <p>[0084]	S301、在预设统计周期内，从所述数据包中获取当前数据包的数据量；</p>
+    <p>[0085]	S302、将当前数据包的数据量累加至与所述第一协议类型对应的第一协议传输数 据量中；</p>
+    <p>[0086]	S303、在所述预设统计周期结束时，若所述第一协议传输数据量超过预设的第一 协议传输数据量阈值，则确定第一协议的可删除位；</p>
+    <p>[0087]	S304、根据所述可删除位形成所述待发送数据包的缩减数据包和补充包；</p>
+    <p>[0088]	S305、用所述缩减数据包替代所述待发送数据包进行发送。</p>
+    <p>[0089]	本发明实施例所提供的方法通过减少传输过程中数据包的bit来减少整个数据 包的数据量，从而达到不浪费每一个bit的目标。一个字节由8个位（bit)组成，一个bit 取值为0或1，一个数据包可以看作是由0和1组成的比特数据流。为了最大限度减少网络 带宽，需要减少传输过程中数据包的数据量，本发明实施例所提供的方法需要统计协议数 据包的每一个bit的使用情况，具体包括确定某个协议类型的数据包中的哪些位是可以删 除的，当将可删除位从数据包中删除后，需要对缩短后的数据包做一个补充说明。</p>
+    <p>[0090]	在本发明一实施例中，确定第一协议的可删除位包括：</p>
+    <p>[0091]	预先将第一协议的多个数据包按位进行或运算，确定第一协议的数据包中未被使 用的位；</p>
+    <p>[0092]	将所述第一协议的数据包中未被使用过的位确定为所述第一协议的数据包的可 删除位。</p>
+    <p>[0093]	假设传输的协议类型A的数据包有：A1、A2、A3........An，对这η个数据包按bit</p>
+    <p>进行“或”操作，当η足够大时，所有曾经使用过的bit的值必然会等于1，而“或”操作结果 中的若某个bit的值为零，则可认为该位利用率是极低的，甚至是多余的，在传输过程中通</p>
+    <p>常可以节省。</p>
+    <p>[0094]	当确定第一协议类型的数据包的可删除位后，可以通过如下方式获取待发送数据 包的缩减数据包和补充包，具体为：</p>
+    <p>[0095]	通过将所述第一协议的数据包中的可删除位从所述待发送数据包中删除获得所 述待发送数据包的缩减数据包；</p>
+    <p>[0096]	记录该缩减数据包中的可删除位信息的数据包构成该缩减数据包的补充包。[0097]	在一些实施例中，还可以在每次发送数据包之间将待发送数据包中的对应位与可 删除位进行比较确定当前待发送数据包中的可删除位，并据此形成缩减数据包和对应的补 充包，具体地包括：</p>
+    <p>[0098]	将所述第一协议的数据包中的可删除位与待发送数据包中的对应位进行比较，删 除未被使用的可删除位获得所述待发送数据包的缩减数据包；</p>
+    <p>[0099]	记录该缩减数据包中的可删除位信息构成该缩减数据包的补充包，在所述补充包 中标记出被使用的可删除位。</p>
+    <p>[0100]	本发明实施例所提供的方法通过补充包告诉通信双方对方某种协议包哪些位是 有用的（相应的位用1表示），哪些是没有用的（相应的位用0表示）。</p>
+    <p>[0101]	具体地确定某一协议类型的数据包的可删除位以及该协议的补充包的方法可以 是：通信双方为所有的协议建立一个位（bit)统计结构，每个bit都初始化为0，在传输过 程中每发送一个数据包，都要与它对应的统计结构进行按位“或”。在统计一段时间后（如 半个小时），通信双发把每种协议的统计结果通过补充包告诉对方，收到对方的确认后，发 送方新发送的数据包把相应的位（bit)去掉，接收方按照补充包对接收到的数据包进行还 原，就得到了真实的数据包。</p>
+    <p>[0102]	实际应用中，为了达到最大的控制效果。可以对每个bit进行长时间的采样统计， 得出每个bit真正利用率，按利用率得出某个协议类型的数据包的可删除位和补充包每个 bit的值，如利用率低于5%的位设为0，其余的为1。具体地，该方法为：</p>
+    <p>[0103]	预先统计第一协议数据包每个位的被使用率，所述使用率为统计周期内每个位的 被使用次数与第一协议数据包被发送次数的比值；</p>
+    <p>[0104]	将所述第一协议数据包被使用率低于预设被使用率阈值的位确定为所述第一协 议的可删除位。</p>
+    <p>[0105]	得到稳定补充包后，可以记在通信双方的设定中。双方接收到的数据包的长度等 于与稳定补充包对应的数据包的长度时，按照稳定补充包进行还原，若双方收到的数据包 若等于原数据包长度则不作还原处理。</p>
+    <p>[0106]	通过本发明实施例所提供的方法，某个协议类型的数据包的可删除位和补充包一 般一旦确定后是比较稳定的，所以只要通信双方预先约定好按照某个协议的补充包进行数 据发生，那么就无需每次发送缩减数据包的同时还要发送对应的补充包。</p>
+    <p>[0107]	当发生补充包不一致，即需要启用某个可删除位时，需要在补充包中记录新启用 的可删除位。接收方需要知道此时的发送的具体情况才能正确地解析出数据包中的数据。 实际应用中，一种处理方式是，将新的补充包附加到需要发送的数据包后面，组成一个较大 的数据包进行发送，在接收方接收到以后，按照后面的补充包对数据包进行还原；另一种处 理方式是，得到补充包后，通信双方可以约定。双方接收到的数据包长度小于协议数据结构 所定义的数据包长度时，按照原来约定的补充包进行还原。当发生与稳定补充包不一致时， 即需要启用某个可删除位时，按原数据包结构进行发送和解析。</p>
+    <p>[0108]	当采用后一种处理方式时，通信双方直接根据数据包的长度就可以区分该数据包 是否被压缩过了，不需要通过额外的位来标识，因此不会产生额外数据发送，对网络资源的 占用更少。</p>
+    <p>[0109]	本发明实施例所提供的方法在减少数据传输次数的基础上，进一步通过减少传输过程中数据包的bit来减少整个数据包的数据量，通过对数据包中每个位的使用情况进行 统计，确定某个协议类型的数据包中的可删除位，并将可删除位从待删除数据包中删除，从 而缩短了待传输数据包的长度，达到不浪费每一个bit的目标。最大限度减少数据传输过 程中所占用的网络带宽，极大地提高了每个位的利用率。</p>
+    <p>[0110]	参见图4，本发明一实施例还提供一种基于网络协议的数据传输控制装置，该装置 包括：</p>
+    <p>[0111]	第一获取单元401，用于在预设统计周期内截获逻辑层和网络传输层之间的数据 包，并确定所述数据包采用的第一协议类型；</p>
+    <p>[0112]	第一统计单元402，用于根据所述第一协议类型统计与所述第一协议类型对应的 第一协议应用次数；</p>
+    <p>[0113]	第一记录单元403，用于在所述预设统计周期结束时，若所述第一协议应用次数超 过预设的第一协议应用次数阈值，则记录第一协议当前发送的数据包的内容；</p>
+    <p>[0114]	第一比较单元404，用于当再次发送第一协议的数据包时，将待发送的数据包与所 记录的第一协议数据包进行比较；</p>
+    <p>[0115]	第一控制单元405，用于在数据内容有更新时执行此次数据包发送并用新的数据 包替换原本所记录的数据包，否则终止此次数据发送。</p>
+    <p>[0116]	本发明实施例所提供的装置，对网络中传输的第一协议类型的数据包的发送次数 进行统计，当该第一协议类型的数据包的发送次数达到预设的阈值时，就对采用第一协议 类型的数据包的发送进行控制，具体为将待发送的数据包与之前发送过的第一协议类型的 数据包进行比较，如果待发送的数据包的内容与之前发送过的第一协议类型的数据包的内 容相同，则取消此次待发送数据包的发送。通过本发明实施例所提供的方法有效地减少了 同一协议类型的相同数据的不必要的发送，节约了网络资源，从而有效地提高了对网络资 源的利用率。</p>
+    <p>[0117]	本发明另一实施例中，在对第一协议类型的数据包发送次数进行统计的同时，还 可以对所述第一协议类型的数据包所发送的数据量进行统计，参见图5，</p>
+    <p>[0118]	第一获取单元401，还用于在预设统计周期内，从所述数据包中获取当前数据包的 数据量；</p>
+    <p>[0119]	第一统计单元402，还用于将当前数据包的数据量累加至与所述第一协议类型对 应的第一协议传输数据量中；</p>
+    <p>[0120]	该装置还包括：第二确定单元406，用于在所述预设统计周期结束时，若所述第一 协议传输数据量超过预设的第一协议传输数据量阈值，则确定第一协议的可删除位；</p>
+    <p>[0121]	第二控制单元407，用于根据所述可删除位形成所述待发送数据包的缩减数据包 和补充包；</p>
+    <p>[0122]	第二发送单元408，用于用所述缩减数据包替代所述待发送数据包进行发送。</p>
+    <p>[0123]	进一步地，所述第二确定单元406包括：</p>
+    <p>[0124]	第一统计子单元，用于预先将第一协议的多个数据包按位做或运算，确定第一协 议的数据包中未被使用的位；</p>
+    <p>[0125]	第一确定子单元，用于将所述第一协议的数据包中未被使用过的位确定为所述第 一协议的数据包的可删除位。[0126]	在另一实施例中，所述第二确定单元406包括：</p>
+    <p>[0127]	第二统计子单元，用于预先统计第一协议数据包每个位的被使用率，所述使用率 为统计周期内每个位的被使用次数与第一协议数据包被发送次数的比值；</p>
+    <p>[0128]	第二确定子单元，用于将所述第一协议数据包被使用率低于预设被使用率阈值的 位确定为所述第一协议的可删除位。</p>
+    <p>[0129]	可选地，所述第二控制单元407包括：</p>
+    <p>[0130]	第一构成子单元，用于通过将所述第一协议的数据包中的可删除位从所述待发送 数据包中删除获得所述待发送数据包的缩减数据包；</p>
+    <p>[0131]	第二构成子单元，用于记录该缩减数据包中的可删除位信息的数据包构成该缩减 数据包的补充包。</p>
+    <p>[0132]	在本发明另一实施例中，所述第二控制单元406包括：</p>
+    <p>[0133]	第三构成子单元，用于将所述第一协议的数据包中的可删除位与待发送数据包中 的对应位进行比较，删除未被使用的可删除位获得缩减数据包；</p>
+    <p>[0134]	第四构成子单元，用于记录该缩减数据包中的可删除位信息构成该缩减数据包的 补充包，在所述补充包中标记出被使用的可删除位。</p>
+    <p>[0135]	本发明实施例所提供的装置在减少数据传输次数的基础上，进一步通过减少传输 过程中数据包的bit来减少整个数据包的数据量，通过对数据包中每个位的使用情况进行 统计，确定某个协议类型的数据包中的可删除位，并将可删除位从待删除数据包中删除，从 而缩短了待传输数据包的长度，达到不浪费每一个bit的目标。最大限度减少数据传输过 程中所占用的网络带宽，极大地提高了每个位的利用率。</p>
+    <p>[0136]	为了描述的方便，本发明实施例在描述装置时以功能分为各种单元分别描述。当 然，在实施本申请时可以把各单元的功能在同一个或多个软件和/或硬件中实现。</p>
+    <p>[0137]	通过以上的实施方式的描述可知，本领域的技术人员可以清楚地了解到本申请可 借助软件加必需的通用硬件平台的方式来实现。基于这样的理解，本申请的技术方案本质 上或者说对现有技术做出贡献的部分可以以软件产品的形式体现出来，该计算机软件产品 可以存储在存储介质中，如ROM/RAM、磁碟、光盘等，包括若干指令用以使得一台计算机设备 (可以是个人计算机，服务器，或者网络设备等）执行本申请各个实施例或者实施例的某些 部分所述的方法。</p>
+    <p>[0138]	本说明书中的各个实施例均采用递进的方式描述，各个实施例之间相同相似的部 分互相参见即可，每个实施例重点说明的都是与其他实施例的不同之处。尤其，对于系统实 施例而言，由于其基本相似于方法实施例，所以描述的比较简单，相关之处参见方法实施例 的部分说明即可。</p>
+    <p>[0139]	本申请可用于众多通用或专用的计算系统环境或配置中。例如：个人计算机、服务 器计算机、手持设备或便携式设备、平板型设备、多处理器系统、基于微处理器的系统、置顶 盒、可编程的消费电子设备、网络PC、小型计算机、大型计算机、包括以上任何系统或设备的 分布式计算环境等等。</p>
+    <p>[0140]	本申请可以在由计算机执行的计算机可执行指令的一般上下文中描述，例如程序 模块。一般地，程序模块包括执行特定任务或实现特定抽象数据类型的例程、程序、对象、组 件、数据结构等等。也可以在分布式计算环境中实践本申请，在这些分布式计算环境中，由通过通信网络而被连接的远程处理设备来执行任务。在分布式计算环境中，程序模块可以 位于包括存储设备在内的本地和远程计算机存储介质中。</p>
+    <p>[0141] 虽然通过实施例描绘了本申请，本领域普通技术人员知道，本申请有许多变形和 变化而不脱离本申请的精神，希望所附的权利要求包括这些变形和变化而不脱离本申请的 精神。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102291468A?cl=zh">CN102291468A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月19日</td><td class="patent-data-table-td patent-date-value">2011年12月21日</td><td class="patent-data-table-td ">郑州单点科技软件有限公司</td><td class="patent-data-table-td ">一种实现数据交换的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102340428A?cl=zh">CN102340428A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月29日</td><td class="patent-data-table-td patent-date-value">2012年2月1日</td><td class="patent-data-table-td ">哈尔滨安天科技股份有限公司</td><td class="patent-data-table-td ">基于网络丢包的url检测与拦截方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=dA-XBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012801000">H04L12/801</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=dA-XBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年7月6日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年9月14日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年7月23日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/9728ad69788b9c2c23ed/CN102118361A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93.pdf?id=dA-XBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1qXis7pe_-Nd9DZhRAJ2Yzw1uOWA"},"sample_url":"https://www.google.com/patents/reader?id=dA-XBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

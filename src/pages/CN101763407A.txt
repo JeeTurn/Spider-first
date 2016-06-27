@@ -1,0 +1,242 @@
+<!DOCTYPE html><html><head><title>专利 CN101763407A - 一种基于Brew平台的txt文件阅读方法及其阅读器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种基于Brew平台的txt文件阅读方法及其阅读器"><meta name="DC.contributor" content="常熠" scheme="inventor"><meta name="DC.contributor" content="青岛海信移动通信技术股份有限公司" scheme="assignee"><meta name="DC.date" content="2009-11-19" scheme="dateSubmitted"><meta name="DC.description" content="本发明披露了一种基于Brew平台的txt文件阅读方法及其阅读器。该方法包括如下步骤：依据设定的宏值，对txt文件虚拟划分为若干个文件块；按照阅读的顺序，依次载入文件块并对所述文件块的内容进行解码；依据显示需求，对解码后的文件块进行分页处理并对其页表信息进行保存；对需要阅读的页面，调用Brew平台的接口函数并根据保存的页表信息进行显示。本发明对文本文件的大小没有限制，同时对目标文件进行了自适应编码解析及自适应排版功能，可以使用户多样化操作和使用。"><meta name="DC.date" content="2010-6-30"><meta name="citation_patent_publication_number" content="CN:101763407:A"><meta name="citation_patent_application_number" content="CN:200910230163"><link rel="canonical" href="https://www.google.com/patents/CN101763407A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101763407A?cl=zh"/><meta name="title" content="专利 CN101763407A - 一种基于Brew平台的txt文件阅读方法及其阅读器"/><meta name="description" content="本发明披露了一种基于Brew平台的txt文件阅读方法及其阅读器。该方法包括如下步骤：依据设定的宏值，对txt文件虚拟划分为若干个文件块；按照阅读的顺序，依次载入文件块并对所述文件块的内容进行解码；依据显示需求，对解码后的文件块进行分页处理并对其页表信息进行保存；对需要阅读的页面，调用Brew平台的接口函数并根据保存的页表信息进行显示。本发明对文本文件的大小没有限制，同时对目标文件进行了自适应编码解析及自适应排版功能，可以使用户多样化操作和使用。"/><meta property="og:title" content="专利 CN101763407A - 一种基于Brew平台的txt文件阅读方法及其阅读器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101763407A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101763407A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=vPd-BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101763407A&amp;usg=AFQjCNHc-iOzT7ZbgW5GP9xJIqdKFcUrDA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/4df221dded8c64c3c9b5/CN101763407A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/4df221dded8c64c3c9b5/CN101763407A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101763407A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101763407A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101763407A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101763407B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101763407A?cl=zh" style="display:none"><span itemprop="description">本发明披露了一种基于Brew平台的txt文件阅读方法及其阅读器。该方法包括如下步骤：依据设定的宏值，对txt文件虚拟划分为若干个文件块；按照阅读的顺序，依次载入文件块并对所述文件块的内容进行解码；依据显示需求，对 ...</span><span itemprop="url">https://www.google.com/patents/CN101763407A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101763407A - 一种基于Brew平台的txt文件阅读方法及其阅读器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101763407A - 一种基于Brew平台的txt文件阅读方法及其阅读器" title="专利 CN101763407A - 一种基于Brew平台的txt文件阅读方法及其阅读器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101763407 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910230163</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年6月30日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年11月19日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年11月19日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101763407B?hl=zh-CN&amp;cl=zh">CN101763407B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910230163.8, </span><span class="patent-bibdata-value">CN 101763407 A, </span><span class="patent-bibdata-value">CN 101763407A, </span><span class="patent-bibdata-value">CN 200910230163, </span><span class="patent-bibdata-value">CN-A-101763407, </span><span class="patent-bibdata-value">CN101763407 A, </span><span class="patent-bibdata-value">CN101763407A, </span><span class="patent-bibdata-value">CN200910230163, </span><span class="patent-bibdata-value">CN200910230163.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%B8%B8%E7%86%A0%22">常熠</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%9D%92%E5%B2%9B%E6%B5%B7%E4%BF%A1%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">青岛海信移动通信技术股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101763407A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101763407A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101763407A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=vPd-BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910230163&amp;usg=AFQjCNGXynPNmFQH5GMhWj1GNNlUJ6y2HQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=vPd-BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101763407A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGBYzF13-DxCB-gJDFeQeudc7t3Ng"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT96301696" lang="ZH" load-source="patent-office">一种基于Brew平台的txt文件阅读方法及其阅读器</invention-title>
+    </span><br><span class="patent-number">CN 101763407 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA78905272" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明披露了一种基于Brew平台的txt文件阅读方法及其阅读器。该方法包括如下步骤：依据设定的宏值，对txt文件虚拟划分为若干个文件块；按照阅读的顺序，依次载入文件块并对所述文件块的内容进行解码；依据显示需求，对解码后的文件块进行分页处理并对其页表信息进行保存；对需要阅读的页面，调用Brew平台的接口函数并根据保存的页表信息进行显示。本发明对文本文件的大小没有限制，同时对目标文件进行了自适应编码解析及自适应排版功能，可以使用户多样化操作和使用。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><ol mxw-id="PCLM32331187" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种基于Brew平台的txt文件阅读方法，包括如下步骤：步骤a：依据设定的宏值，对txt文件虚拟划分为若干个文件块；步骤b：按照阅读的顺序，依次载入文件块并对所述文件块的内容进行解码；步骤c：依据显示需求，对解码后的文件块进行分页处理并对其页表信息进行保存；步骤d：对需要阅读的页面，调用Brew平台的接口函数并根据保存的页表信息进行显示。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 如权利要求1所述的txt文件阅读方法，其特征在于，在步骤c之后，在步骤d之前 还包括步骤e :判断需要阅读的页面的起始位置是否超出当前阅读的文件块的内容范围；若是，则进入步骤d;若否，返回步骤b并重新执行后续步骤。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 如权利要求1或2所述的txt文件阅读方法，其特征在于，所述步骤b开始，对所述 文件块采用线程方式进行处理，并在其完成解码及分页并保存后结束线程。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 如权利要求3所述的txt文件阅读方法，其特征在于，所述步骤c中对解码后的文件 块进行分页处理前还包括如下步骤：步骤cl :取出解码后的文件块，并将文件块的内容转化为Unicode字符； 步骤c2 :在文件块的Unicode字符中检测到CR或LF时，均进行分行处理。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 如权利要求4所述的txt文件阅读方法，其特征在于，所述步骤d中调用的Brew平 台的接口函数包括以下类别中的一个或多个：字体颜色、背景颜色、下划线、虚线。</div>
+    </div>
+    </li> <li class="claim"> <div num="6" class="claim">
+      <div class="claim-text">6. &#8212;种基于Brew平台的txt文件阅读器，包括：文件块处理模块：依据设定的宏值，将txt文件虚拟划分为若干个文件块； 内容解析模块：按照阅读的顺序，依次载入文件块处理模块输出的文件块并对文件块 的内容进行解码；内容分页模块：依据显示需求，对内容解析模块解码后的文件块进行分页处理并对其 页表信息进行保存；显示模块：对需要阅读的页面，调用Brew平台的接口函数并根据内容分页模块保存的 页表信息进行显示。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 如权利要求6所述的txt文件阅读器，其特征在于，还包括显示移动处理模块： 当需要阅读的页面的起始位置不超出当前阅读的文件块的内容范围时，同时给显示模块准备需要阅读的页面及相邻页面的页表信息；当需要阅读的页面的起始位置超出当前阅读的文件块的内容范围时，先由内容解析模 块和内容分页模块载入下一个文件块处理后再给显示模块准备要阅读的页面及相邻页面 的页表信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 如权利要求6或7所述的txt文件阅读器，其特征在于，所述内容分页模块还包括如下处理：取出解码后的文件块，并将文件块的内容转化为Unicode字符； 在文件块的Unicode字符中检测到CR或LF时，均进行分行处理。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 如权利要求6或7所述的txt文件阅读器，其特征在于，所述内容解析模块解码的类型包括以下几种中的一种或两种或多种：GB2312/GBK、 unicode、 uincode-BE、 utf-8。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. &#8212;种移动通信终端，其特征在于包括权利要求6或7所述的txt文件阅读器。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES37689394" lang="ZH" load-source="patent-office" class="description">
+    <p>一种基于Brew平台的txt文件阅读方法及其阅读器</p>
+    <p>技术领域</p>
+    <p>[0001] 本发明涉及一种文件阅读方法及其阅读器，尤其是一种基于Brew平台的txt文件阅读方法及其阅读器。</p>
+    <p>背景技术</p>
+    <p>[0002] 当前用户对于手持终端的文本阅读功能要求越来越高，尤其是中低端终端由于内存大小等限制往往对操作的txt文件有文件容量限制。</p>
+    <p>[0003] &#8212;方面，超过终端硬件的限制则无法阅读，需要用户自行切割成多个文件才能阅读，这给用户的使用造成了不便；另一方面，在当前信息量激增的背景下，txt文件的容量越来越大，包含的信息量越来越多，对于这类大容量文件的阅读要求越来越迫切；同时，由于文件容量的增大，对于用户进行翻页，跳转等操作的多样性也越来越多，所以传统的txt</p>
+    <p>文件阅读方法及其阅读器应用已无法满足当前及今后用户的基本要求和常用操作。[0004]     再者，当前终端类电子书应用的第三方软件已有不少，但绝大多数基于java平台的第三方软件；并且，这些软件对文件也有上述的限制和功能缺陷，而针对Brew平台的电子书应用更加匮乏。</p>
+    <p>[0005]     另外，不同的系统生成的txt文件也会有差别。当前主要以Windows系统、苹果</p>
+    <p>Mac系统以及Li皿x系统为主，其生成的文本字符存储规则均不相同，这就造成了 txt文件</p>
+    <p>在系统平台间移植时不能充分识别的问题。</p>
+    <p>[0006]     总的来说，现有电子书应用主要存在以下一些问题：</p>
+    <p>[0007] 1、对目标文件的大小存在限制，或对大容量文件的打开较慢等问题。</p>
+    <p>[0008] 2、对各种编码及不同平台文本文件格式的不完全解析。</p>
+    <p>[0009] 3、无法调节显示效果，如字体大小、前景及背景颜色、下划线等多样显示模式以及随意的跳转浏览，因此无法对阅读文件进行多样化操作处理。</p>
+    <p>[0010] 因此，需要一种新的基于Brew平台的txt文件阅读方法及其阅读器以更好的解决手持终端文本阅读中存在的上述问题。</p>
+    <p>发明内容</p>
+    <p>[0011] 有鉴于此，本发明致力于更好的解决手持终端文本阅读中存在的上述问题，提出了一种基于Brew平台的txt文件阅读方法及其阅读器。</p>
+    <p>[0012] 根据本发明的第一方面，提供了一种基于Brew平台的txt文件阅读方法。该方法包括如下步骤：</p>
+    <p>[0013]      步骤a :依据设定的宏值，对txt文件虚拟划分为若干个文件块；</p>
+    <p>[0014]      步骤b :按照阅读的顺序，依次载入文件块并对所述文件块的内容进行解码；</p>
+    <p>[0015]      步骤c :依据显示需求，对解码后的文件块进行分页处理并对其页表信息进行保</p>
+    <p>存；</p>
+    <p>[0016] 步骤d:对需要阅读的页面，调用Brew平台的接口函数并根据保存的页表信息进行显示。</p>
+    <p>[0017]     上述方法在步骤c之后，在步骤d之前还包括步骤e :</p>
+    <p>[0018]     判断需要阅读的页面的起始位置是否超出当前阅读的文件块的内容范围；[0019] 若是，则进入步骤d;</p>
+    <p>[0020]     若否，返回步骤b并重新执行后续步骤。</p>
+    <p>[0021] 上述步骤b开始，对所述文件块采用线程方式进行处理，并在其完成解码及分页并保存后结束线程。</p>
+    <p>[0022]      上述步骤c中对解码后的文件块进行分页处理前还包括如下步骤：[0023]     步骤cl :取出解码后的文件块，并将文件块的内容转化为Unicode字符；[0024]     步骤c2 :在文件块的Unicode字符中检测到CR或LF时，均进行分行处理。[0025]     根据本发明的第二方面，提供了一种基于Brew平台的txt文件阅读器。该txt文件阅读器包括：</p>
+    <p>[0026]      文件块处理模块：依据设定的宏值，将txt文件虚拟划分为若干个文件块；</p>
+    <p>[0027] 内容解析模块：按照阅读的顺序，依次载入文件块处理模块输出的文件块并对文</p>
+    <p>件块的内容进行解码；</p>
+    <p>[0028] 内容分页模块：依据显示需求，对内容解析模块解码后的文件块进行分页处理并对其页表信息进行保存；</p>
+    <p>[0029] 显示模块：对需要阅读的页面，调用Brew平台的接口函数并根据内容分页模块保存的页表信息进行显示。</p>
+    <p>[0030]      上述阅读器还包括显示移动处理模块：</p>
+    <p>[0031] 当需要阅读的页面的起始位置不超出当前阅读的文件块的内容范围时，同时给显示模块准备需要阅读的页面及相邻页面的页表信息；</p>
+    <p>[0032] 当需要阅读的页面的起始位置超出当前阅读的文件块的内容范围时，先由内容解析模块和内容分页模块载入下一个文件块处理后再给显示模块准备要阅读的页面及相邻页面的页表信息。</p>
+    <p>[0033]     上述txt文件的类型可为Windows平台或苹果Mac平台或Linux系统类型。[0034]     根据本发明的第三方面，提供了一种移动通信终端。该移动通信终端包括本发明第二方面所述的各txt文件阅读器。[0035] 本发明的有益效果是：</p>
+    <p>[0036] 本发明针对已经存在的电子书应用，进一步解决了文本文件的大小限制，同时对目标文件进行了自适应编码解析及自适应排版功能，可以使用户多样化操作和使用。</p>
+    <p>附图说明</p>
+    <p>[0037] 下面将参照附图对本发明的具体实施方案进行更详细的说明，其中：</p>
+    <p>[0038] 图1是本发明的文件块整体处理流程图；</p>
+    <p>[0039] 图2是本发明的自适应解码流程图；</p>
+    <p>[0040] 图3是本发明的文字排版流程图；</p>
+    <p>[0041] 图4是本发明的显示位置移动示意图；</p>
+    <p>[0042] 图5是本发明的显示位置移动流程图；</p>
+    <p>5[0043]      图6是本发明的文本显示流程图；</p>
+    <p>[0044]      图7是本发明阅读器的第一实施例结构图；以及</p>
+    <p>[0045]     图8是本发明阅读器的第二实施例结构图。</p>
+    <p>具体实施方式</p>
+    <p>[0046]     为了解决手持终端文本阅读中存在的容量限制及阅读速度受限的问题，本发明提供了一种基于Brew平台的txt文件阅读方法及其阅读器。[0047] 首先来说明一下本发明的技术术语。</p>
+    <p>[0048] 文件块：将文件分成设定大小的片段进行分析的文件片段，也就是只进行虚拟分块，并不改变原文件的大小和结构。</p>
+    <p>[0049] 虚拟分页：每次按设定的可以显示的最大行数进行分页，并保存相应的页信息，与实际显示的页不一定相同。</p>
+    <p>[0050] Cache :每次读取文件片段后将该片段内的页表信息存储于事先分配好的空间中，这段程序生命周期始终作为快速读写的存储区定义为Cache。</p>
+    <p>[0051] 接下来，结合各附图分多个小部具体说明该阅读方法及其阅读器，其中，具体的函数以及操作均以伪码表示。</p>
+    <p>[0052] 图1示出本发明的文件块整体处理流程图，如图1所示，步骤100开始，读取文件大小信息开始，file_size = Getf ilesize ()。</p>
+    <p>[0053] 步骤102中，根据定义的宏值Fragment&#8212;size，分析计算文件块的数量，Frags =f ile_size/Fragment_size+l。</p>
+    <p>[0054] 步骤104中，创建线程Creat_thread，并初始化线程Init_thread，以开始分析文件块的内容Thread_start。</p>
+    <p>[0055] 步骤106中，从预设偏移量开始读取一个文件块，start&#8212;position为定义的偏移量参数，贝U Read&#8212;block (start&#8212;position)。</p>
+    <p>[0056] 步骤108中，分析该文件块内容，即对文本内容进行解码；然后进行分页，由分页处理函数Block&#8212;pagescale()进行处理，并记忆页表信息到全局变量，即由Block_offset&#8212;reciteO进行保存。其中，页表信息包括页始偏移量和页长度。并由Finish&#8212;pagingscale()函数最终完成分页。</p>
+    <p>[0057] 步骤110中，文件块分析完毕后，并且页表信息也已准备好，发事件通知上层准备显不，SendEvent ()。</p>
+    <p>[0058]     步骤112中，完成该文件块操作后释放线程，即Release&#8212;thread ()。[0059]     由上可知本发明基于Brew平台的txt文件阅读方法基本包括如下步骤：[0060]     步骤a:依据设定的宏值（其大小可以为IK-IM，主要根据硬件的情况而定），对txt文件虚拟划分为若干个文件块。</p>
+    <p>[0061]     步骤b :按照阅读的顺序，依次载入文件块并对所述文件块的内容进行解码。[0062]      步骤C :依据显示需求（主要包括每页显示的最大行数，其相关到显示屏的可显示像素点数和显示字体的大小等），对解码后的文件块进行分页处理并对其页表信息进行保存。</p>
+    <p>[0063]     步骤d :对需要阅读的页面，调用Brew平台的接口函数并根据保存的页表信息进行显示。</p>
+    <p>[0064] 针对硬件对文件大小有相应限制的情况，同时又达到读取速度需要与文件容量无关，故根据使用平台的不同，可以定义每次读取文件块的宏值。不同终端可以根据自身的软硬件配置，设置宏值的大小。</p>
+    <p>[0065] 每次读取时针对高通平台的特点，可以使用线程进行操作，避免使用较长时间的循环导致底层其他任务超时引起的异常。</p>
+    <p>[0066] 每次解析相应文本片段的内容，需要将该段内容进行虚拟分页处理，并将每块的起始绝对位置存储于cache中，以便每次读取时无需再次重新解析，并最小化对终端的cache容量大小需求。</p>
+    <p>[0067] 图2示出本发明的自适应解码流程图，如图2所示，步骤200开始，读取文件块内容，并把读到的内容返回给指针。定义指针Pcontent，使Pcontent = Read_block(start_position)。</p>
+    <p>[0068] 步骤202中，从文件块始偏移量开始读取文件块内容，以进行解码。[0069] 步骤204中，判断编码格式并根据编码格式进行解码，即判断编码格式函数进行判断Ntype = Get_codingtype(Pcontent)，然后由解码函数进行解码Ret = Coding&#8212;convention (Ntype， Pcontent)，也即进行转码转换成统一的码型，本发明采用Unicode码。[0070] 步骤206中，进一步对转换后的码进行字节判断，即Charsjudgement (Ret)，如果在字节判断中遇到断码，则进入步骤208中，返回错误信息error ;如果在字节判断中没有遇到断码，则进入步骤212中，返回success信息，说明整段解析成功，继续分页处理。[0071] 在步骤208之后，进入步骤210，从解析处向后向前偏移一个字节进行二次解析，也即Pcontent指针自动加1或减1，然后返回步骤204中，重新进行解析，并执行后续步骤。[0072] 针对文本文件编码方式的不同，需要对每一片段进行解码时需要进行码转换过程，由于国内常用的编码方式有GB2312/GBK， unicode， uincode-BE， utf-8等，针对含有非ASCII字符的编码格式各有不同。</p>
+    <p>[0073] 由于采用Unicode, unicode-BE及utf_8编码方式的文件在文件头部（即文件最开始的几个字节）有相应的标志位，所以可以根据文件头读取的相应内容进行编码格式的判断，然后根据需要进行相应的转化。</p>
+    <p>[0074] 然而对于以GB2312/GBK编码方式保存的文本文件没有对应的文件头标志位，所以对于读取内容的解析需要加以码值的控制和判断。尤其是对于可以任意跳转的功能很可能导致断码问题，即跳转后的片段起始位置正好位于一个中文字符编码的低位（例如："中"在GB码通过两个字节表示为"D6D0"(均为16进制表示），这里所表述的意思为恰好读取为D0，也就是将其前面的一个字节"D6"漏掉），从而引起后文的码值全部错位，因此导致了断码问题，表现出来均为乱码显示。</p>
+    <p>[0075] 针对上述编码问题，本发明在读取任意文本片段后进行了自适应的微调解码。[0076]     根据GB码的编码规则可以知道，ASCII码值采用单字节表示，汉字等非ASCII码字符采用双字节标志，而双字节有一定的规则：高位字节范围是80-FE，低位字节范围是40-FE。</p>
+    <p>[0077] 另外基于文本中两类编码长度的字符的穿插问题（即普通文本必有标点符号等ASCII字符，如换行符等，或如果没有相应的符号则所有内容均变为了双字节编码文本，紧需要判断偏移量是否为偶数即可），在解码时完全可以根据读取位置的前后两个字节进行多种可能性判断。如果无法判断，则可以往后读取一定内容直到遇到相应的ASCII字符，即可以确定是否解码错误，如果解码有误，则说明遇到断码。紧需要将起始位置向后或向前移动一个字节即可解决当前断码问题。</p>
+    <p>[0078] 本发明为了实现文本的无缝衔接，选择采用向前移动一个字节，然后将所读取内容与前一片段进行无缝衔接。</p>
+    <p>[0079] 上述解码过程在读取某一文本块进行分页，采用了线程的设计，所以对于处理中</p>
+    <p>的灵活跳转可以很好的进行控制，避免了分段分时循环造成的变量控制问题。</p>
+    <p>[0080] 接下来，就分行处理为主说明本发明技术方案中文字排版的处理过程。</p>
+    <p>[0081]     图3示出本发明的文字排版流程图，如图3所示，步骤300开始，通过页表信息</p>
+    <p>取出页面内容，在明确了页起始位置Page&#8212;start和页字符数Page_Char_num等页表信息</p>
+    <p>后，就可以通过内容指针取得页面内容，艮P Pcontent = Read_content (Page_start， Page_</p>
+    <p>char&#8212;皿m)。</p>
+    <p>[0082] 步骤302中，将页面编码转化为Unicode字符统一处理，即由转码函数PUnicode=code&#8212;convertion(Pcontent， Ntype)。</p>
+    <p>[0083]     步骤304中，分行处理开始，初始化行链表，Plink = Init_link()。</p>
+    <p>[0084]     步骤306中，对页面字符进行判断，当检测到CR或LF时，进入步骤308中，作为一</p>
+    <p>段进行自动分行，并可根据需要是否在段落开始处进行字符偏移（即通常所说的首行&#32302;进</p>
+    <p>模式），其具体操作是把该段字符加入到行链表中，其内容包括目标链表、行起始地址和行</p>
+    <p>字节数，即Add_link(Plink， line_start， line_cnt)，然后返回步骤306中重新进行处理并</p>
+    <p>执行后续步骤。</p>
+    <p>[0085] 步骤306中，当没有检测到CR或LF时，进入步骤310中，判断是否检测到结尾，并且该判断只会在页面尾部判断一次。</p>
+    <p>[0086]     步骤312中，分行结束，即Finish&#8212;scale (Plink)，同时把Plink指针传送给全局变</p>
+    <p>[0087]     步骤314中，该页行链表建立完毕，发事件通知上层进行显示，即SendEvent ()。</p>
+    <p>[0088] 由于本发明针对灵活的显示设置进行处理，所以对于移动终端经常采用的全屏或</p>
+    <p>非全屏的自由切换及改变字体样式大小等要求，文字的排版问题是比较关键的。</p>
+    <p>[0089]     排版时充分考虑到不同pc平台采用的文本字符存储规则不同。针对性的进行了</p>
+    <p>自适应处理，主要是指行切换的表示。Windows平台的文本采用"CR+LF"，苹果Mac系统的</p>
+    <p>仅使用"CR"，而Li皿x操作系统采用"LF"，所以需要对不同系统生成文本的换行格式在解</p>
+    <p>析文本时进行统一并实现充分自适应。</p>
+    <p>[0090] 同时，为了更好的显示，采用了链表对终端需要显示的每一行内容进行了记忆，类似于页表信息的处理，这样显示的相关处理就可以具体到行，方便在阅读过程中对阅读模式自由切换以及进行其他多样化操作。</p>
+    <p>[0091] 本发明的技术方案中文字排版处理类似于pc端中文本阅读器中"自动换行"的功能实现，使文本可以针对当前屏幕宽度自动完整显示于屏幕中，免去了段落过长导致的显示不全等问题，或需要滚动条进行拖动的操作。</p>
+    <p>[0092] 而针对字体的变换，仅仅需要在字符串测量函数中更改字体大小即可，因此，在分</p>
+    <p>8页过程完全做到了对字体大小的去相关化。</p>
+    <p>[0093] 图4示出本发明的显示位置移动示意图，如图4所示，黑边窗口为当前显示在屏幕的文本内容，三个显示片段分别为一次载入内存的三个文本信息。</p>
+    <p>[0094] 这里只保存着分行后的行偏移量信息，并非将实际的文本块内容载入；每次上下</p>
+    <p>行滚动或翻页时将当前阴影窗口向前后移动。</p>
+    <p>[0095]     上述的移动包括两种移动方式：</p>
+    <p>[0096]     其一，文件块内的页面之间的显示移动；</p>
+    <p>[0097] 其二，文件块之间页面的显示移动。</p>
+    <p>[0098] 在此统称为显示片段，也就是说显示片段可以是代表不同文件块，也可以代表一个文件块内的不同页面。</p>
+    <p>[0099]     接下来从总体上说明显示片段的切换过程：</p>
+    <p>[0100] 当阴影窗口移动到上图状态时，即阴影窗口的起始位置已不在中间文本显示片段的内时，需要进行显示片段切换。</p>
+    <p>[0101]     具体来说，需要将头片段信息释放，并在尾片段后补充下一片段的信息链，并将原尾片段置为中间片段，原中间片段置为头片段，而新添加的片尾置为尾片段。这样就保证了每次显示内容均处与中间片段有交叠信息，即整个过程始终处于上下文非空的状态。[0102] 上述处理实际是为了保证每次的翻页或翻行动作执行时，可以直接读取下一页需要显示内容的行信息。</p>
+    <p>[0103] 这样也避免了传统操作中对于片段解码后向前翻滚即向前翻页或向前翻行时容易出现乱码的问题。因为对于非ASCII码字符的众多编码方式大多是与ASCII的编码长度不一致，因此向前读取文本内容时容易出现编码判断失误导致的断码问题，从而引起相应的乱码问题。</p>
+    <p>[0104]     图5示出本发明的显示位置移动流程图，如图5所示，较完整的示意该处理过程。</p>
+    <p>[0105]     首先，定义三个buffer,分别为：</p>
+    <p>[0106]     m_pPrev (代表Part I中的文本）；</p>
+    <p>[0107]     m_pMiddle(代表Part II中的文本）；</p>
+    <p>[0108]     m_pNext (代表Part 111中的文本）；</p>
+    <p>[0109]    及行链表：Link*m_LineLink， m_pCurrentNode。</p>
+    <p>[0110] Link节点中存有：</p>
+    <p>[0111]     1、该行文本内容的指针起始位置-pText ;[0112]     2、该行的行字节数-一nLength。</p>
+    <p>[0113]    假定当前终端每页可以显示的行数为LINE_PER_PAGE ;以及[0114]     Link相关的操作函数统一以Link&#8212;开头。[0115]     该部分的几个重要处理过程为：[0116] A、</p>
+    <p>[0117]    nCurrentCnt = Link&#8212;GetCo皿t (&amp;m&#8212;LineLink);</p>
+    <p>[0118] 得到当前链表中的行数；[0119] B、</p>
+    <p>[0120]     如果当前链表中的内容不够现实三页（假定当前处于文本中段，没有显示到尾部），需要补充内容。</p>
+    <p>[0121] If (nCurrentCnt &lt; 2*LINE_PER_PAGE)</p>
+    <p>[0122] {</p>
+    <p>[0123]        Uintl6 nPageOffset，nPageCnt ;</p>
+    <p>[0124] 〃定义临时变量以便取得页的起始偏移位置及字符数</p>
+    <p>[0125]        Link，ewPageLink ;</p>
+    <p>[0126] 〃新载入页面的行信息指针</p>
+    <p>[0127] GetNextPagelnfo(&amp;nPageOffset，&amp;nPageCnt);</p>
+    <p>[0128] 〃取得下一页内容的起始偏移位置及该页所含字符数</p>
+    <p>[0129] pNewPageLink = PageLoad(m_pNext， nPageOffset, nPageCnt);</p>
+    <p>[0130] 〃将下一页内容载入，并将该页行信息内容形成链表返回</p>
+    <p>[0131]        Link&#8212;Add(&amp;m_LineLink，pNewPageLink);</p>
+    <p>[0132] 〃将当前取得的新页的行链表添加到全局链表尾部</p>
+    <p>[0133] }</p>
+    <p>[0134] C、</p>
+    <p>[0135] 将设当前页显示的起始位置如图4a所示，且该起始位置所在行节点为m&#8212;pCurrentNode。</p>
+    <p>[0136] 假如现向后翻页，则页面位置状态会变成图4b :</p>
+    <p>[0137] 可以看到，下一页内容暂时无法显示完全，故需要在翻页前将Parti部分释放掉，并将Part II及Part III顺次前移为Part I及Part II，最后在载入下一页，将其添加到链表中，并将相关变量内容设置到适当的当前位置。</p>
+    <p>[0138] 具体流程如下：</p>
+    <p>[0139] If (FALSE = = JudgeLinkLef t (&amp;m_LineLink， m_pCurrentNode))</p>
+    <p>[0140] {</p>
+    <p>[0141]        FreeHeadPart(&amp;m_LineLink， LINE_PER_PAGE)</p>
+    <p>[0142] 〃将链表中part I部分的节点释放掉[0143]        Free&#8212;Buffer(m_pPrev)</p>
+    <p>[0144] 〃将Part I部分的内容指针释放</p>
+    <p>[0145]        MoveBuffer&#8212;To&#8212;Left (m_pPrev， m_pMiddle， m_pNext)</p>
+    <p>[0146] 〃左移缓存区指针</p>
+    <p>[0147] 〃载入下一页具体过程见B部分</p>
+    <p>[0148] }</p>
+    <p>[0149] m_pCurrentNode = LinkGetNext (&amp;m_LineLink， LINE_PER_PAGE)</p>
+    <p>[0150] 〃从当前节点往后移动一页行数的节点数，得到下一页开始显示的节点位置</p>
+    <p>[0151] Display (&amp;m&#8212;LineLink， m_pCurrentNode)</p>
+    <p>[0152] 〃从pCurrentNode所指位置开始显示下一页内容，具体Display函数实现已分析过。</p>
+    <p>[0153] 图6示出本发明的文本显示流程图，如图6所示，步骤600开始，取出页链表指针，即Plink = Get_page-link()，从头节点读链表。[0154]     步骤602中，读取链表节点，即Pnode = Get_link_start (Plink)。 [0155]     步骤604中，画布指向位置移动到该行位置，</p>
+    <p>[0156]     Idisplay&#8212;setclip (Pdisplay， position)，其中，position初始化值为0 ; [0157]     Idisplay&#8212;drawtext(Pdisplay， Pnode&#8212;text)。</p>
+    <p>[0158] 步骤606中，加字高后，Position = position+Font-Height，画布指向位置移动至lj 字体底部，艮卩Idisplay&#8212;moveto (Pdisplay， position)。</p>
+    <p>[0159]     步骤608中，根据要求显示下划线等内容，即Idisplay_Drawline(Pdisplay)。 [0160]     步骤610中，判断是否读取到链表下一节点，即Pnode = Get_next (PIink,Pnode)， 如果是，则返回步骤604中，重新移动并执行后续步骤；如果不是，则进入步骤612中，该页 显示完毕，结束上述过程。</p>
+    <p>[0161] 在本发明中，由于字体显示等调用高通BREW平台的功用接口函数，使得该应用完</p>
+    <p>全可以将文字主题的显示功能全部实现，并可采用多样化的显示设置，可以显示用户自定</p>
+    <p>义的字体颜色及背景颜色，同时支持下划线、虚线等附加格式的显示要求。</p>
+    <p>[0162] 由于在对文件块解析时已经将内容解码并储存行链表中，所以需要从哪一行的位</p>
+    <p>置开始显示仅仅需要将起始位置置于对应链表的节点处，然后根据显示区域大小对每一行</p>
+    <p>调用Brew显示字体的公共接口函数画于屏幕的对应位置即可，在对每一行进行绘制时，可</p>
+    <p>以根据当前设置的附件显示内容进行额外的处理，如当前行需要显示下划线，则在显示字</p>
+    <p>体后将对应位置下方通过Brew公共接口函数绘制直线。</p>
+    <p>[0163] 图7示出本发明阅读器的第一实施例结构图，如图7所示，该阅读器包括：文件块 处理模块、内容解析模块、内容分页模块和显示模块。</p>
+    <p>[0164]     文件块处理模块依据设定的宏值，将txt文件虚拟划分为若干个文件块。</p>
+    <p>[0165] 内容解析模块按照阅读的顺序，依次载入文件块处理模块输出的文件块并对文件</p>
+    <p>块的内容进行解码。</p>
+    <p>[0166] 内容分页模块依据显示需求，对内容解析模块解码后的文件块进行分页处理并对 其页表信息进行保存。</p>
+    <p>[0167] 显示模块对需要阅读的页面，调用Brew平台的接口函数并根据内容分页模块保 存的页表信息进行显示。</p>
+    <p>[0168]     上述内容分页模块还包括如下处理：</p>
+    <p>[0169]     取出解码后的文件块，并将文件块的内容转化为Unicode字符；</p>
+    <p>[0170]     在文件块的Unicode字符中检测到CR或LF时，均进行分行处理。</p>
+    <p>[0171]     上述txt文件的类型可为Windows平台或苹果Mac平台或Linux系统类型。</p>
+    <p>[0172]     上述内容解析模块解码的类型包括以下几种中的一种或多种：</p>
+    <p>[0173]    GB2312/GBK、 unicode、 uincode-BE、 utf-8。</p>
+    <p>[0174]     图8示出本发明阅读器的第二实施例结构图，如图8所示，该阅读器包括：文件块</p>
+    <p>处理模块、内容解析模块、内容分页模块、显示移动处理模块和显示模块。</p>
+    <p>[0175]     文件块处理模块依据设定的宏值，将txt文件虚拟划分为若干个文件块。</p>
+    <p>[0176] 内容解析模块按照阅读的顺序，依次载入文件块处理模块输出的文件块并对文件</p>
+    <p>块的内容进行解码。</p>
+    <p>[0177] 内容分页模块依据显示需求，对内容解析模块解码后的文件块进行分页处理并对其页表信息进行保存。</p>
+    <p>[0178] 显示移动处理模块，当需要阅读的页面的起始位置不超出当前阅读的文件块的内</p>
+    <p>容范围时，同时给显示模块准备需要阅读的页面及相邻页面的页表信息；</p>
+    <p>[0179] 当需要阅读的页面的起始位置超出当前阅读的文件块的内容范围时，先由内容解</p>
+    <p>析模块和内容分页模块载入下一个文件块处理后再给显示模块准备要阅读的页面及相邻</p>
+    <p>页面的页表信息。</p>
+    <p>[0180] 显示模块对需要阅读的页面，调用Brew平台的接口函数并根据内容分页模块保 存的页表信息进行显示。</p>
+    <p>[0181]     上述内容分页模块还包括如下处理：</p>
+    <p>[0182]     取出解码后的文件块，并将文件块的内容转化为Unicode字符；</p>
+    <p>[0183]     在文件块的Unicode字符中检测到CR或LF时，均进行分行处理。</p>
+    <p>[0184]     上述txt文件的类型可为Windows平台或苹果Mac平台或Linux系统类型。</p>
+    <p>[0185]     上述内容解析模块解码的类型包括以下几种中的一种或多种：</p>
+    <p>[0186]    GB2312/GBK、 unicode、 uincode-BE、 utf-8。</p>
+    <p>[0187] 针对当前移动终端中电子书应用的使用越来越频繁，及当前信息量的不断增加， 对于目前基于BREW平台的手机终端中，尤其是中低端手机对于文本文件电子书的阅读限 制较多，并且功能不够完善；传统的直接载入并解码排版的方式已经不适应当前的应用需 求，并且对用户的多样化操作支持不够完善。该技术将解决终端对文本文件阅读的容量大 小限制，并支持如对各种编码格式的自适应，自动优化排版，及任意跳转，翻页等操作。 [0188] 针对上述问题，该技术设计基于不限制目标文件大小，同时打开速度对与文件大 小无关，并支持对多样式的显示及排版等要求，进行了处理结构的创新，实现了诸如对任意 txt文本文件的解析和排版功能，根据中断支持字库切换字体大小，更改字体颜色及背景颜 色等基本功能，同时也支持用户对文件浏览的多样化操作。</p>
+    <p>[0189] 以上对本发明的具体描述旨在说明具体实施方案的实现方式，不能理解为是对本 发明的限制。本领域普通技术人员在本发明的教导下，可以在详述的实施方案的基础上做 出各种变体，这些变体均应包含在本发明的构思之内。本发明所要求保护的范围仅由所述 的权利要求书进行限制。</p>
+    <p>12</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102081599A?cl=zh">CN102081599A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年2月11日</td><td class="patent-data-table-td patent-date-value">2011年6月1日</td><td class="patent-data-table-td ">广东欧珀移动通信有限公司</td><td class="patent-data-table-td ">基于高通平台的手机主题编辑创建及显示方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102479176A?cl=zh">CN102479176A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月30日</td><td class="patent-data-table-td patent-date-value">2012年5月30日</td><td class="patent-data-table-td ">汉王科技股份有限公司</td><td class="patent-data-table-td ">电子阅读器的快速逼近排版方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102479176B?cl=zh">CN102479176B</a></td><td class="patent-data-table-td patent-date-value">2010年11月30日</td><td class="patent-data-table-td patent-date-value">2014年8月27日</td><td class="patent-data-table-td ">汉王科技股份有限公司</td><td class="patent-data-table-td ">电子阅读器的快速逼近排版方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102567289A?cl=zh">CN102567289A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月31日</td><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">盛乐信息技术（上海）有限公司</td><td class="patent-data-table-td ">一种动态自动翻页系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102929846A?cl=zh">CN102929846A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月26日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">北京小米科技有限责任公司</td><td class="patent-data-table-td ">一种处理长文本的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103186636A?cl=zh">CN103186636A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月31日</td><td class="patent-data-table-td patent-date-value">2013年7月3日</td><td class="patent-data-table-td ">北大方正集团有限公司</td><td class="patent-data-table-td ">一种移动设备中可阅读文件的加载方法及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=vPd-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017220000">G06F17/22</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=vPd-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04M0001725000">H04M1/725</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=vPd-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年6月30日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年11月3日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年5月30日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/4df221dded8c64c3c9b5/CN101763407A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8EBrew%E5%B9%B3%E5%8F%B0%E7%9A%84txt%E6%96%87%E4%BB%B6%E9%98%85%E8%AF%BB.pdf?id=vPd-BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1cuRNSah2XT_W5ckotwaw3ZmGhMw"},"sample_url":"https://www.google.com/patents/reader?id=vPd-BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

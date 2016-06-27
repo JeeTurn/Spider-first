@@ -1,0 +1,322 @@
+<!DOCTYPE html><html><head><title>专利 CN103676649A - 局部自适应小波神经网络训练系统、设备及方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="局部自适应小波神经网络训练系统、设备及方法"><meta name="DC.contributor" content="任世锦" scheme="inventor"><meta name="DC.contributor" content="凌萍" scheme="inventor"><meta name="DC.contributor" content="倪银龙" scheme="inventor"><meta name="DC.contributor" content="王高峰" scheme="inventor"><meta name="DC.contributor" content="杨茂云" scheme="inventor"><meta name="DC.contributor" content="吕俊怀" scheme="inventor"><meta name="DC.contributor" content="江苏师范大学" scheme="assignee"><meta name="DC.date" content="2013-10-9" scheme="dateSubmitted"><meta name="DC.description" content="一种局部自适应小波神经网络训练系统、设备及方法，该局部自适应小波神经网络训练方法包括：在线局部自适应WNN结构调整；在线更新WNN权重；WNN更新选择策略。本发明能够在线更新ＷＮＮ模型，且能够保证模型的推广性能，很好地克服实际中系统受到各种不确定性因素、工况变化而导致的ＷＮＮ模型适配的问题，用于工业过程控制中可以增加系统运行的平稳性，降低产品质量的波动性，提高设备的寿命。"><meta name="DC.date" content="2014-3-26"><meta name="DC.relation" content="CN:103064292:A" scheme="references"><meta name="DC.relation" content="CN:103279038:A" scheme="references"><meta name="DC.relation" content="CN:103324091:A" scheme="references"><meta name="DC.relation" content="GB:2386437" scheme="references"><meta name="DC.relation" content="US:5268834" scheme="references"><meta name="citation_reference" content="S. CHEN等: &quot;Orthogonal-least-squares regression: a unified approach for data modeling&quot;, 《NEUROCOMPUTING》, 31 December 2009 (2009-12-31), pages 2670 - 2681, XP026093474, DOI: doi:10.1016/j.neucom.2008.10.002"><meta name="citation_reference" content="王高峰: &quot;火电厂燃烧系统预测控制技术研究&quot;, 《中国优秀硕士学位论文全文数据库 工程科技Ⅱ辑》, no. 12, 15 December 2011 (2011-12-15), pages 26 - 40"><meta name="citation_patent_publication_number" content="CN:103676649:A"><meta name="citation_patent_application_number" content="CN:201310466382"><link rel="canonical" href="https://www.google.com/patents/CN103676649A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103676649A?cl=zh"/><meta name="title" content="专利 CN103676649A - 局部自适应小波神经网络训练系统、设备及方法"/><meta name="description" content="一种局部自适应小波神经网络训练系统、设备及方法，该局部自适应小波神经网络训练方法包括：在线局部自适应WNN结构调整；在线更新WNN权重；WNN更新选择策略。本发明能够在线更新ＷＮＮ模型，且能够保证模型的推广性能，很好地克服实际中系统受到各种不确定性因素、工况变化而导致的ＷＮＮ模型适配的问题，用于工业过程控制中可以增加系统运行的平稳性，降低产品质量的波动性，提高设备的寿命。"/><meta property="og:title" content="专利 CN103676649A - 局部自适应小波神经网络训练系统、设备及方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103676649A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103676649A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=tE35CAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103676649A&amp;usg=AFQjCNFeiUkr-IM3cYv5obJoB8OG7ZQsww" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/a8e941bde38caa338e83/CN103676649A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/a8e941bde38caa338e83/CN103676649A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103676649A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103676649A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103676649A?cl=zh" style="display:none"><span itemprop="description">一种局部自适应小波神经网络训练系统、设备及方法，该局部自适应小波神经网络训练方法包括：在线局部自适应WNN结构调整；在线更新WNN权重；WNN更新选择策略。本发明能够在线更新ＷＮＮ模型，且能够保证模型的推广性能，...</span><span itemprop="url">https://www.google.com/patents/CN103676649A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103676649A - 局部自适应小波神经网络训练系统、设备及方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103676649A - 局部自适应小波神经网络训练系统、设备及方法" title="专利 CN103676649A - 局部自适应小波神经网络训练系统、设备及方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103676649 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310466382</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年3月26日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年10月9日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年10月9日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310466382.2, </span><span class="patent-bibdata-value">CN 103676649 A, </span><span class="patent-bibdata-value">CN 103676649A, </span><span class="patent-bibdata-value">CN 201310466382, </span><span class="patent-bibdata-value">CN-A-103676649, </span><span class="patent-bibdata-value">CN103676649 A, </span><span class="patent-bibdata-value">CN103676649A, </span><span class="patent-bibdata-value">CN201310466382, </span><span class="patent-bibdata-value">CN201310466382.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BB%BB%E4%B8%96%E9%94%A6%22">任世锦</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%87%8C%E8%90%8D%22">凌萍</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%80%AA%E9%93%B6%E9%BE%99%22">倪银龙</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%E9%AB%98%E5%B3%B0%22">王高峰</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E8%8C%82%E4%BA%91%22">杨茂云</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%90%95%E4%BF%8A%E6%80%80%22">吕俊怀</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B1%9F%E8%8B%8F%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%22">江苏师范大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103676649A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103676649A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103676649A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (1)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=tE35CAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310466382&amp;usg=AFQjCNHj3TXLrfoCK4GZtvW_Y_8jyhvjVw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=tE35CAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103676649A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNELnDOo10K_DpSKGFAxwo7Ccv1X1A"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT134713856" lang="ZH" load-source="patent-office">局部自适应小波神经网络训练系统、设备及方法</invention-title>
+      </span><br><span class="patent-number">CN 103676649 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA132097570" lang="ZH" load-source="patent-office">
+    <div class="abstract">一种局部自适应小波神经网络训练系统、设备及方法，该局部自适应小波神经网络训练方法包括：在线局部自适应WNN结构调整；在线更新WNN权重；WNN更新选择策略。本发明能够在线更新ＷＮＮ模型，且能够保证模型的推广性能，很好地克服实际中系统受到各种不确定性因素、工况变化而导致的ＷＮＮ模型适配的问题，用于工业过程控制中可以增加系统运行的平稳性，降低产品质量的波动性，提高设备的寿命。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(9)</span></span></div><div class="patent-text"><div mxw-id="PCLM59893654" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种局部自适应小波神经网络训练系统，其特征在于，  该局部自适应小波神经网络训练系统由信号连接的离线WNN训练模块和在线更新WNN模块组成。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的局部自适应小波神经网络训练系统，其特征在于，  该离线WNN训练模块建立WNN初始模型；  该在线更新WNN 模块根据新来数据的分布特性，采用不同WNN模型更新策略对数据进行预测。</div>
+    </div>
+    </div> <div class="claim"> <div num="3" class="claim">
+      <div class="claim-text">3.一种局部自适应小波神经网络训练设备，其特征在于，  该局部自适应小波神经网络训练设备由信号连接的数据预处理模块、在线满意G-K模糊聚类模块、小波函数参数设置模块、WNN更新策略选择模块、隐含节点选择模块、扩展卡尔曼(EKF)训练模块、Laplacian正则化LSSVM模块、实验设计Optimum模块、样本增加WNN权重更新模块、样本移除WNN权重更新模块、WNN预测模块组成。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的局部自适应小波神经网络训练设备，其特征在于， 该数据预处理模块的功能与作用:函数输入参数为数据集，输出参数为规格化数据集;  该在线满意G-K模糊聚类模块的功能与作用:  输入参数:数据集，初始隶属度矩阵，聚类数量；  输出参数:聚类数量，隶属度矩阵；  该小波函数参数设置模块的功能与作用:  输入参数:隶属度矩阵，数据集，聚类数量，节点函数生成策略；  输出参数:小波函数参数矩阵；  该WNN更新策略选择模块的功能与作用:  输入参数:过去时刻隶属度矩阵，过去时刻聚类数量，当前隶属度矩阵，当前聚类数量;  输出参数:隶属度矩阵，聚类数量；  该隐含节点选择模块的功能与作用:  输入参数:候选节点集合，WNN权重向量，拟合数据集；  输出参数:小波节点参数，对应权重；  该扩展卡尔曼(EKF)训练模块的功能与作用:  输入参数:小波节点参数，算法终止阈值，训练数据集；  输出参数:小波节点参数，对应权重；  该Laplacian正则化LSSVM模块的功能与作用:  输入参数:训练数据集，模型参数f、F，矩阵Ij ;  输出参数:权重向量；  该实验设计Optimum模块的功能与作用:  输入参数:训练数据集，权重向量，WNN隐含节点组成的参数矩阵,待选节点标记向量；  输出参数:节点选择标记向量；  该样本增加WNN权重更新模块的功能与作用:  滑动宽口数据集，新加数据，Q矩阵，R矩阵WNN隐含节点参数矩阵；输出参数:更新Q矩阵，更新R矩阵；该样本移除WNN权重更新模块的功能与作用:输入参数:Q矩阵，R矩阵，移除数据编号；输出参数:更新Q矩阵，更新R矩阵；该WNN预测模块的功能与作用:输入数据，WNN隐含节点参数矩阵，权重矩阵，输入数据向量；输出参数:预测输出数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.一种局部自适应小波神经网络训练方法，其特征在于，该局部自适应小波神经网络训练方法包括:.531、在线局部自适应WNN结构调整；.532、在线更新WNN权重；.533、WNN更新选择策略。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的局部自适应小波神经网络训练方法，其特征在于，.S31、在线局部自适应WNN结构调整，具体包括:.5311、选取WNN隐含节点；.5312、控制WNN模型复杂度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的局部自适应小波神经网络训练方法，其特征在于，该S312、控制WNN模型复杂度，具体包括:.53121、基于Laplacian正则化LSSVM的WNN权重估计；.53122、基于Optimum的WNN隐含节点序贯选择。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求5所述的局部自适应小波神经网络训练方法，其特征在于，该S32、在线更新WNN权重，具体包括:.5321、样本递增更新阶段；.5322、样本移除更新阶段。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求5所述的局部自适应小波神经网络训练方法，其特征在于，该S33、WNN更新选择策略，具体包括:.5331、初始化；.5332、根据隶属度矩阵聚类；.5333、判断是否结束；.5334、寻找新聚类；.5335、计算相应的新的初始隶属度矩阵；.5336、令，转S332。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES67878725" lang="ZH" load-source="patent-office" class="description">
+    <p>局部自适应小波神经网络训练系统、设备及方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及一种局部自适应小波神经网络训练系统、设备及方法，尤其是一种系统平稳性高的局部自适应小波神经网络训练系统、设备及方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	设有个样本点，其输入-输出关系由小波神经网络(WNN)模型表示</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00041.png"> <img id="idf0001" file="CN103676649AD00041.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00041.png" class="patent-full-image" alt="Figure CN103676649AD00041"> </a> </div>
+    <p>  这里，是径向基小波函数，其形式为，和分别是的平移参数和尺度参数，为WNN的隐含节点数目。在训练WNN时，首先建立小波神经元候选集，候选集中小波神经元参数，小波函数参数初始值由数据集聚类的结果进行确定，细节请参考[Stephen A.Billings, Hua-Liang We1.A new class of wavelet networks for nonlinear systemidentification.1EEE Transaction on Neural Networks, 16 (4):862-870，2005]。</p>
+    <p>[0003]	显然，WNN是一种3层结构神经网络，其模型参数包括隐含层节点数量、隐含层-输出层连接权重及WNN隐含节点参数。WNN具有良好的多个尺度逼近特性和推广性能，并且小波节点参数具有明确的物理含义，小波函数具有优良的局部支撑性，广泛应用于非线性动态系统的建模、非线性分类器建模等领域。推广性能(即对新样本的预测精度)是衡量WNN性能的重要指标，而推广性能直接取决于WNN的结构复杂性(小波网络隐含层节点数目)、小波网络隐含节点参数的选取。</p>
+    <p>[0004]目前WNN训练方法主要分为如下几类方法:</p>
+    <p>  (I)基于AIC、BIC等模型准则的WNN训练方法。</p>
+    <p>[0005]	该类方法主要有两种方法:</p>
+    <p>  a.首先选取大量冗余小波节点，保持小波节点参数不变条件下使用上述模型选择准则确定WNN结构。由于选取合适的小波节点参数是一个非常困难的问题，这种方法难以求取最优的WNN模型；</p>
+    <p>  b.使用遗传算法(GA)基于上述模型选择准则选取最优的小波节点参数和WNN结构。这种方法计算代价太大，在实际中很难应用。</p>
+    <p>[0006]	(2)基于梯度下降方法的经验风险最小化WNN训练方法。</p>
+    <p>[0007]	由于该优化问题是多变量、非线性、非凸优化问题，该方法与常规的基于梯度下降的神经网络训练方法的缺陷相同，均存在训练速度慢、易于收敛到局部极小点、难以确定合适的WNN结构等缺陷。尽管有研究者使用共轭梯下降法能在一定程度上提高WNN训练速度，但是上述弊端仍然没有解决。</p>
+    <p>[0008]	(3)使用支持向量机(SVM)理论方法提高WNN的泛化性能。</p>
+    <p>[0009]	是统计学习理论发展的标志性成果，它不仅具有坚实的理论基础，而且具有良好的推广性能，受到学术界和工业界的极大关注。由于SVM与WNN具有相同的结构，申请人证明了径向基向基核函数就是一种满足Mercer条件的核函数，并提出了一种类似WNN的多尺度小波SVM (WSVM)建模方法，申请者相关成果发表在2008年4期《电路与系统学报》。由于受到计算量的限制，该方法只给出了两个尺度上的WNN建模方法。</p>
+    <p>[0010]	(4 )基于多核学习理论的WNN改进方法。</p>
+    <p>[0011]	近年来有学者提出了多核SVM方法。该方法使用多个核函数的线性组合表示SVM的核函数，通过求解优化问题得到最优的核函数的权重以及SVM模型参数。当核函数为径向基小波函数时，多尺度SVM及多核SVM本质上具有WNN的多尺度逼近特性。虽然该方法继承了 SVM和多尺度逼近的优点，但是无法调整核函数参数，严重影响模型的性能。</p>
+    <p>[0012]	应该指出的是，上述方法均无法在线调整WNN模型结构和参数，在实际应用中会出现样本分布不均匀(有些模态的建模训练数据不是充分的或完备的)、设备工况变化、输入干扰、外界环境、设备老化等不确定因素，导致已经训练好的WNN模型预测精度下降，因而需要在线进行训练WNN模型。</p>
+    <p>[0013]	虽然建模对象在各个工作模态(工作区域)的过程特性表现形式有所差异，但是综合看来，所有过程特性具有类似的潜在特性，即“共同模式(Common part)”部分，以及描述工作模态特有的潜在特性的“变化模式(Specific part)”部分组成。因此本发明根据过程系统的模式变化，采取不同的模型更新策略，可以大大减少模型学习的时间和计算复杂度，从而实现模型的在线学习。</p>
+    <p>[0014]	附录:相关背景知识。</p>
+    <p>[0015]	最优实验设计Optimum准则。</p>
+    <p>[0016]	对给定的数据集，假设它们存在下面的线性关系；</p>
+    <p>  其中，是高斯噪声(注意，是随机变量，其均值为0，方差为)。最优实验设计就是选择包含最多信息的实验数据学习预测函数，使得预测误差最小。令，，则。最优的估计方法就是使用最小均方误差作为代价函数，其最优解为。</p>
+    <p>  为了保证回归模型的泛化性，我们还期望模型参数的方差最小。由于</p>
+    <p> 可以看出上式所示的模型参数估计是无偏估计，其协方差可以表示为</p>
+    <p>Cw(w) = (XXr)&#8212;1 XyyrXr (XXr )"') = cr2 (XrX)"'</p>
+    <p>  因此，预测模型的预测方差为 Ver(J) = x7Cw(w)X = &lt;r2xr(XrX) x</p>
+    <p>  由上式可见，预测方差最小等价于模型估计参数方差最小，即。目前已经出现了多个优化准则度量模型参数方差，其中和D&#8212; Optimum优化准则引起人们广泛的关注。D-</p>
+    <p>Optimum优化准则就是最小化参数协方差矩阵的迹,其等价平均方差。Optimum优化准则方法就是使得参数协方差矩阵的行列式(determinant)最小。</p>
+    <p>[0017]	由于WNN输出与隐含节点输出呈线性关系，如果把WNN的隐含节点看出数据特征，显然控制WNN模型复杂度问题转化为特征选择问题。因此，使用Optimum方法消除WNN冗余隐含节点可以保证WNN的推广性能。</p>
+    <p>[0018]	流形正则化。</p>
+    <p>[0019]	流形学习算法能够从高维数据揭示低维数据的内蕴几何结构，每个内蕴维对应某个解释变量，这样可以根据少量的隐藏变量解释高维数据。根据帕累托定律可知，非线性系统的绝大部分重要特性都是由非线性系统的局部性刻画的。因此，考虑数据集的局部几何性质(如距离，角度)是提高WNN性能的有效途径。流形学习算法与线性投影方法一样均依赖相似度矩阵计算，但其计算复杂度并没有很大的增加。</p>
+    <p>[0020]	对回归数据集，定义ω&#943;=[χ『,及.相似度矩阵使用图矩阵定</p>
+    <p>义，图边权重矩阵定义如下:</p>
+    <p>  这里，为的类标号；为的K-近邻集合。假设样本  在嵌入低维流形上的表示为</p>
+    <p>  根据谱图理论，谱图正则化因子可以使用矩阵度量低维表示的平滑性。Laplacian流形正则化因子可以表示为2 zi~zj sIj = ^(WrXIZXrW)&lt;</p>
+    <p>                      U=I</p>
+    <p>  其中，对角矩阵，，。通过最小化Laplacian流形正则化因子，低维空间内的数据集保持了高维原始数据集的局部几何结构，有效提高学习机的性能。</p>
+    <p>发明内容</p>
+    <p>[0022]为了使系统的平稳性更高，本发明提供了一种系统平稳性高的局部自适应小波神经网络训练设备、系统及方法。</p>
+    <p>[0023]	为实现该目的，本发明提供了一种局部自适应小波神经网络训练系统，</p>
+    <p>  该局部自适应小波神经网络训练系统由信号连接的离线WNN训练模块和在线更新WNN模块组成。</p>
+    <p>`[0024]	优选地，该离线WNN训练模块建立WNN初始模型；</p>
+    <p>  该在线更新WNN模块根据新来数据的分布特性，采用不同WNN模型更新策略对数据进行预测。</p>
+    <p>[0025]	本发明还提供了一种局部自适应小波神经网络训练设备，该局部自适应小波神经网络训练设备由信号连接的数据预处理模块、在线满意G-K模糊聚类模块、小波函数参数设置模块、WNN更新策略选择模块、隐含节点选择模块、扩展卡尔曼滤波(EKF)训练模块、Laplacian流形正则化LSSVM模块、最优实验设计Optimum模块、样本增加WNN权重更新模块、样本移除WNN权重更新模块、WNN预测模块组成。</p>
+    <p>[0026]	优选地，该数据预处理模块的功能与作用:函数输入参数为数据集，输出参数为规格化数据集；</p>
+    <p>  该在线满意G-K模糊聚类模块的功能与作用:</p>
+    <p>  输入参数:数据集，初始隶属度矩阵，聚类数量；</p>
+    <p>  输出参数:聚类数量，隶属度矩阵；</p>
+    <p>  该小波函数参数设置模块的功能与作用:</p>
+    <p>  输入参数:隶属度矩阵，数据集，聚类数量，节点函数生成策略；</p>
+    <p>  输出参数:小波函数参数矩阵；</p>
+    <p>  该WNN更新策略选择模块的功能与作用:</p>
+    <p>  输入参数:过去时刻隶属度矩阵，过去时刻聚类数量，当前隶属度矩阵，当前聚类数  量;</p>
+    <p>  输出参数:隶属度矩阵，聚类数量；</p>
+    <p> 该隐含节点选择模块的功能与作用:</p>
+    <p>  输入参数:候选节点集合，WNN权重向量，拟合数据集；</p>
+    <p>  输出参数:小波节点参数，对应权重；</p>
+    <p>  该扩展卡尔曼滤波(EKF)训练模块的功能与作用:</p>
+    <p>  输入参数:小波节点参数，算法终止阈值，训练数据集；</p>
+    <p>  输出参数:小波节点参数，对应权重；</p>
+    <p>  该Laplacian流形正则化LSSVM模块的功能与作用:</p>
+    <p>  输入参数:训练数据集，模型参数、，矩阵L ;</p>
+    <p>  输出参数:权重向量；</p>
+    <p>  该最优实验设计D- Optimum模块的功能与作用:</p>
+    <p>  输入参数:训练数据集，权重向量，WNN隐含节点组成的参数矩阵,待选节点标记向量；  输出参数:节点选择标记向量；</p>
+    <p>  该样本增加WNN权重更新模块的功能与作用:</p>
+    <p>  滑动宽口数据集，新加数据，Q矩阵，R矩阵WNN隐含节点参数矩阵；</p>
+    <p>  输出参数:更新Q矩阵，更新R矩阵；</p>
+    <p>  该样本移除WNN权重更新模块的功能与作用:</p>
+    <p>  输入参数:Q矩阵，R矩阵，移除数据编号；</p>
+    <p>  输出参数:更新Q矩阵，更新R矩阵；</p>
+    <p>  该WNN预测模块的功能与作用:</p>
+    <p>  输入数据，WNN隐含节点参数矩阵，权重矩阵，输入数据向量；</p>
+    <p>  输出参数:预测输出数据。</p>
+    <p>[0027]	本发明又提供了一种局部自适应小波神经网络训练方法，该局部自适应小波神经网络训练方法包括:</p>
+    <p>  531、在线局部自适应WNN结构调整；</p>
+    <p>  532、在线更新WNN权重；</p>
+    <p>  533、WNN更新选择策略。</p>
+    <p>[0028]	优选地，S31、在线局部自适应WNN结构调整，具体包括:</p>
+    <p>  5311、选取WNN隐含节点；</p>
+    <p>  5312、控制WNN模型复杂度。</p>
+    <p>[0029]	优选地，该S312、控制WNN模型复杂度，具体包括:</p>
+    <p>  53121、基于Laplacian流形正则化LSSVM的WNN权重估计；</p>
+    <p>  53122、基于D-	Optimum的WNN隐含节点序贯选择。</p>
+    <p>[0030]	优选地，该S32、在线更新WNN权重，具体包括:</p>
+    <p>  5321、样本增加更新阶段；</p>
+    <p>  5322、样本移除更新阶段。</p>
+    <p>[0031]	优选地，该S33、WNN更新选择策略，具体包括:S331、初始化；</p>
+    <p>  S332、根据隶属度矩阵进行聚类；</p>
+    <p> S333、判断是否结束；</p>
+    <p> S334、寻找与样本中心最不相似的样本作为新聚类中心</p>
+    <p> S335、计算相应的新的初始隶属度矩阵；</p>
+    <p>  S336、令，转	S332。</p>
+    <p>[0032]	本发明实施例提供的技术方案带来的有益效果是:</p>
+    <p>  1)	&#8226;基于上述思想，在WNN建模过程中描述“共同模式”部分的WNN节点保持不变，只需调整局部WNN结构拟合“变化模式”，大大减少训练WNN所需的计算量，适合在线WNN建模；</p>
+    <p>  2).迭代地从WNN隐含节点候选集选取小波神经元加入到WNN，并采用扩展卡尔曼滤波(EKF)方法调整新增加小波节点的参数及相关权重；</p>
+    <p>  3).基于滑窗QR分解的在线更新WNN权重算法，通过样本增加和消减的递推算法在线修正模型权重；</p>
+    <p>4).引入流形学习思想，首次提出Laplacian正则化与D-	Optimum优化准则结合的</p>
+    <p>WNN复杂度控制方法，较好地考虑了训练数据集的几何结构，保证了 WNN的推广性能。</p>
+    <p>[0033]	这样实际应用中结合预测误差和先验知识，通过在线调整WNN结构以及控制模型复杂度或者WNN权重更新，保证了 WNN的预测精度，有效地克服了现有WNN算法难以在线学习、推广性能难以保证的问题。</p>
+    <p>附图说明</p>
+    <p>[0034]	通过下面结合附图对本发明的一个优选实施例进行的描述，本发明的技术方案及其技术效果将变得更加清楚，且更加易于理解。其中:</p>
+    <p>  图1示出了本发明的实施例的局部自适应小波神经网络训练系统的结构示意图；</p>
+    <p>  图2示出了本发明的实施例的局部自适应小波神经网络训练设备的结构示意图；</p>
+    <p>  图3示出了本发明的实施例的局部自适应小波神经网络训练方法的方法流程图；</p>
+    <p>  图4示出了图3中的控制WNN模型复杂度的方法流程图；</p>
+    <p>  图5示出了图3中的在线更新WNN权重的方法流程图；</p>
+    <p>  图6示出了图3中的WNN更新选择策略的方法流程图。</p>
+    <p>具体实施方式</p>
+    <p>[0035]	以下将结合所附的附图对本发明的优选实施例进行描述。需要指明的是，其中“左”、“右”仅仅是为了结合附图便于说明和描述的目的，并非仅限于此。</p>
+    <p>[0036]	第一实施例</p>
+    <p>  图1示出了本发明的第一实施例的局部自适应小波神经网络训练系统的结构示意图。</p>
+    <p>[0037]	该局部自适应小波神经网络训练系统由信号连接的离线WNN训练模块和在线更新WNN模块组成。</p>
+    <p>[0038]	离线WNN训练模块主要建立WNN初始模型。</p>
+    <p>[0039]	其步骤是，首先使用基于在线满意G-K模糊聚类方法对训练数据集进行聚类，并根据聚类结果确定多个小波函数的参数。小波函数尺度参数和平移参数根据聚类的中心、半径和方差结果随机生成，这些小波节点函数组成WNN隐含节点候选集合；然后使用现有WNN训练算法建立初始WNN模型作为当前WNN。</p>
+    <p>[0040]	在线更新WNN模块根据新来数据的聚类结果，采用不同WNN模型更新策略对WNN更新并对新数据进行预测。</p>
+    <p>[0041]	其步骤是，使用在线满意G-K模糊聚类方法对新来数据进行聚类，根据聚类结果，采用如下3种策略对数据进行预测；</p>
+    <p>  S11、如果新数据与以前时刻数据均属于相同聚类且隶属度&gt;0.5，则仍然使用当前WNN对新数据进行预测。</p>
+    <p>[0042]、如果新数据聚类结果是新增的聚类或者新数据转移到其它聚类(隶属度&gt;0.5)或对原来聚类隶属度〈0.2 (偏离了当前工况模型)，则使用在线局部自适应WNN更新算法，即首先从候选集中选择最优小波函数递归添加到当前WNN模型的隐含层，并使用EKF训练新增隐含节点的参数，直至满足误差阈值；然后Laplacian正则化与Optimum优化准则结合选择WNN隐含节点，并把从WNN模型删除的冗余的节点加入到WNN隐含节点候选集。</p>
+    <p>[0043]、如果新数据对原来聚类的隶属度&gt;	0.2且&lt; 0.5时，表明对象受到了系统动态不确定因素的影响，只需更新WNN模型权重参数。该方法通过在滑动窗口内增加样本更新WNN权重阶段以及老样本移除后WNN权重更新阶段实现WNN权重更新。如果使用Sll或者S12更新WNN模型时，需要把更新后的WNN模型替换已有的WNN模型作为当前WNN预测数据。</p>
+    <p>[0044]	本发明实施例提供的技术方案可以充分利用历史知识(候选WNN隐含节点集合)快速更新WNN模型，便于在线训练WNN。</p>
+    <p>[0045]	第二实施例</p>
+    <p>  图2示出了本发明的第二实施例的局部自适应小波神经网络训练设备的结构示意图。</p>
+    <p>[0046]	该局部自适应小波神经网络训练设备由信号连接的数据预处理模块、在线满意G-K模糊聚类模块、小波函数参数设置模块、WNN更新策略选择模块、隐含节点选择模块、扩展卡尔曼(EKF)训练模块、Laplacian正则化LSSVM模块、实验设计Optimum模块、样本增加WNN权重更新模块、样本移除WNN权重更新模块、WNN预测模块组成。</p>
+    <p>[0047]	数据预处理模块的功能与作用:函数输入参数为数据集，输出参数为规格化数据集。</p>
+    <p>[0048]	在线满意G-K模糊聚类模块的功能与作用:</p>
+    <p>  输入参数:数据集，初始隶属度矩阵，聚类数量；</p>
+    <p>  输出参数:聚类数量，隶属度矩阵。</p>
+    <p>[0049]	小波函数参数设置模块的功能与作用:</p>
+    <p>  输入参数:隶属度矩阵，数据集，聚类数量，节点函数生成策略；</p>
+    <p>  输出参数:小波函数参数矩阵。</p>
+    <p>[0050]	更新策略选择模块的功能与作用:</p>
+    <p>  输入参数:过去时刻隶属度矩阵，过去时刻聚类数量，当前隶属度矩阵，当前聚类数</p>
+    <p>量;</p>
+    <p>  输出参数:隶属度矩阵，聚类数量。</p>
+    <p>[0051]	隐含节点选择模块的功能与作用:</p>
+    <p>  输入参数:候选WNN隐含节点集合，WNN权重向量，拟合数据集；输出参数:小波节点参数，对应权重。</p>
+    <p>[0052]	扩展卡尔曼(EKF)训练模块的功能与作用:</p>
+    <p>  输入参数:小波节点参数，算法终止阈值，训练数据集；</p>
+    <p>  输出参数:小波节点参数，对应权重。</p>
+    <p>[0053]	正则化LSSVM模块的功能与作用:  输入参数:训练数据集，模型参数(交叉验证方法进行选择)，(建议选择范围为[2，20])，矩阵(近邻数量在[3，5]内选择)；</p>
+    <p>  输出参数:权重向量。</p>
+    <p>[0054]	最优实验设计&#163;&gt;- Optimum模块的功能与作用:</p>
+    <p>  输入参数:训练数据集，权重向量，WNN隐含节点组成的参数矩阵,待选节点标记向量(O-该节点移除，1-该节点待选)；</p>
+    <p>  输出参数:节点选择标记向量。</p>
+    <p>[0055]	样本增加WNN权重更新模块的功能与作用:</p>
+    <p>  滑动宽口数据集，新加数据，Q矩阵，R矩阵WNN隐含节点参数矩阵；</p>
+    <p>  输出参数:更新Q矩阵，更新R矩阵。</p>
+    <p>[0056]	样本移除WNN权重更新模块的功能与作用:</p>
+    <p>  输入参数:Q矩阵，R矩阵，移除数据编号；</p>
+    <p>  输出参数:更新Q矩阵，更新R矩阵。</p>
+    <p>[0057]	预测模块的功能与作用:</p>
+    <p>  输入参数:WNN隐含节点参数矩阵，权重矩阵，输入数据向量；</p>
+    <p>  输出参数:预测输出数据。</p>
+    <p>[0058]	根据图2中模块的关系，结合上述模块的输入和输出，很容易分析出各个模块之间的信息交换和处理关系，技术人员无需创造性劳动即可实现本发明方法。</p>
+    <p>[0059]	该设备由上述程序模块完成，无需用户设置系统参数，使用非常方便，具有较好的维护性，在实际应用中无需增加硬件设备，方便对现有系统进行改造。</p>
+    <p>[0060]	第三实施例</p>
+    <p>  图3示出了本发明的第三实施例的局部自适应小波神经网络训练方法的方法流程图。</p>
+    <p>[0061]	该局部自适应小波神经网络训练方法包括:</p>
+    <p>  531、在线局部自适应WNN结构调整；</p>
+    <p>  532、在线更新WNN权重；</p>
+    <p>  533、WNN更新选择策略。</p>
+    <p>[0062]	该S31、在线局部自适应WNN结构调整，具体包括:</p>
+    <p>  5311、选取WNN隐含节点；</p>
+    <p>  5312、控制WNN模型复杂度。</p>
+    <p>  S311、选取WNN隐含节点，即逐步增加WNN的隐含节点并调整节点参数，直至拟合误差满足事先设定阈值；具体包括:</p>
+    <p>  在线局部自适应WNN调整方法用于克服因系统工作模态变换导致系统非线性结构变化而引起的WNN模型与实际系统失配问题。其方法就是从小波节点候选集中逐步选取能够使得WNN逼近误差下降最大的小波节点加入WNN，然后使用EKF方法调整新加隐含节点参数及权重值。其详细描述如下:</p>
+    <p>  假设当前WNN已经有个小波神经元，对于训练样本集，令，为该WNN关于的输出，为WNN逼近误差，，记。首先估计出候选节点集中每个节点的重要性，其重要性通过在上投影产生的误差下降程度进行估计。在上的投影为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00111.png"> <img id="idf0002" file="CN103676649AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00111.png" class="patent-full-image" alt="Figure CN103676649AD00111"> </a> </div>
+    <p>  其中，为规格化向量。注意，上式(2)可以看作在向量上的逼近，因此其相应的投影(逼近)误差为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00112.png"> <img id="idf0003" file="CN103676649AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00112.png" class="patent-full-image" alt="Figure CN103676649AD00112"> </a> </div>
+    <p>  很显然，选择误差减少最大的节点，即</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00113.png"> <img id="idf0004" file="CN103676649AD00113.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00113.png" class="patent-full-image" alt="Figure CN103676649AD00113"> </a> </div>
+    <p>这里，是很小的正数，可以看作是正则化因子，目的是防止因太小而导致过拟合问题。很显然，增加小波神经元会减小WNN对样本的逼近误差。可以证明，该算法是收敛的(分析过程省略)，其收敛速度由下面的定理I (证明省略)给出。</p>
+    <p>[0063]	定理1.设样本集是满足某种有界未知的有界函数关系，若存在正数，使得对所有的成立，则对于任意的逼近误差阈值，本文算法至多经过</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00114.png"> <img id="idf0005" file="CN103676649AD00114.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00114.png" class="patent-full-image" alt="Figure CN103676649AD00114"> </a> </div>
+    <p>次迭代增加小波神经元后，拟合误差不超过，即。其中，；为取整算子。其中，(修改本意是表示节点在数据集上的输出，为与前面一致，故改为)为节点与样本集之间的相关程度，越大表示函数与之间关联程度越大。</p>
+    <p>[0064]	定理I表明，可以通过递增WNN隐含节点使得误差达到设定值。然而在实际中，难以事先设定候选集中小波函数的参数，不可避免地导致隐含节点过多。由奥卡姆剃须刀原理可知，冗余的隐含节点会降低WNN模型的泛化性能。令为具有个隐含节点WNN的拟合误差，增加隐含小波节点后WNN的拟合误差以速率减少，即</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00115.png"> <img id="idf0006" file="CN103676649AD00115.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00115.png" class="patent-full-image" alt="Figure CN103676649AD00115"> </a> </div>
+    <p>  由于相关程度决定误差的下降速度，进而影响WNN隐含节点的数量。因此，有必要对当前选择小波神经元参数进行局部调整，最大程度提高局部小波节点的相关性，从而降低样本拟合误差。本发明采用EKF方法搜索新增加小波节点的最优参数和相关权重。局部小波神经元的平移和尺度以及权重，记。为加快训练算法的收敛速度，本文增加参数学习率因子，基于EKF算法的参数训练方式如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00121.png"> <img id="idf0007" file="CN103676649AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00121.png" class="patent-full-image" alt="Figure CN103676649AD00121"> </a> </div>
+    <p>  其中，与分别为局部小波神经元输出和期望输出；是训练误差；；为学习速率；是Kalman增益向量；估计的噪声协方差，可以由进行递归求取；是状态估计误差协方差矩阵；是EKF算法的迭代次数；。为自适应调整学习速率以加快算法的收敛性，定理2给出了学习速率须要满足的条件，较好地解决了速率自适应选择的问题。</p>
+    <p>[0065]	定理2.令为隐含节点的参数，对给定的新样本为隐含节点的预测输出，是隐含节点的期望输出，是相应参数的学习速率，是EKF增益向量。如果学习速率满足</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00122.png"> <img id="idf0008" file="CN103676649AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00122.png" class="patent-full-image" alt="Figure CN103676649AD00122"> </a> </div>
+    <p>  那么基于EKF的WNN训练算法是一致收敛的，其中。</p>
+    <p>[0066]	我们选取Lyapunov函数很容易证明定理2，其中，为WNN对样本的预测输出。</p>
+    <p>[0067]	由于该方法逐步增加新的隐含节点并使用变步长EKF算法调整局部小波节点参数，收敛速度很快，算法平均运行40s就能取得满意的建模误差。</p>
+    <p>[0068]	在实际应用中，逐步增加WNN隐含节点数量虽然能够有效降低建模误差，但是也不可避免会会出现冗余隐含节点。根据奥姆卡剃须刀原理，WNN过多的冗余节点会降低模型的泛化性能。利用数据局部几何结构信息是提高WNN性能的重要手段。借鉴流形学习理论，本发明提出Laplacian正则化与1- Optimum结合的WNN模型复杂度控制方法。</p>
+    <p>[0069]、控制WNN模型复杂度，即基于Laplacian正则化与I&gt;-	Optimum优化准则结合的</p>
+    <p>WNN复杂度控制方法。</p>
+    <p>[0070]	根据最优实验设计方法，在保持WNN隐含节点参数不变的前提下，最小化期望模型参数的方差等价于选择数据集的重要特征。基于最优实验设计optimum准则，考虑到数据集的局部几何结构，本发明提出两步WNN隐含节点选择方法:首先基于Laplacian流形正则化的最小二乘支持向量机(LSSVM)估计回归模型WNN权重参数，然后根据估计参数方差最/」的Optimum优化准则序贯地选择WNN隐含节点。</p>
+    <p>[0071]	如图4所示，该S312、控制WNN模型复杂度，具体包括:</p>
+    <p>   S3121、基于Laplacian正则化LSSVM的WNN权重估计；</p>
+    <p>  对上面数据集，假设WNN存在个隐含节点，设输入样本，，，WNN输出及其隐含节点输出记为和，。记，令为数据集第个特征组成的向量，特征集。很显然，数据集的第个特征对应WNN的第个隐含节点。因此选择个重要的WNN节点就等价于从数据集选择个重要特征。假设选择个特征为。令为选择特征后组成的样本集，其中，。令，，，其定义如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00131.png"> <img id="idf0009" file="CN103676649AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00131.png" class="patent-full-image" alt="Figure CN103676649AD00131"> </a> </div>
+    <p> 则。那么在选择的特征空间中回归模型为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00132.png"> <img id="idf0010" file="CN103676649AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00132.png" class="patent-full-image" alt="Figure CN103676649AD00132"> </a> </div>
+    <p>  其中，是未知的均值为O的误差。假设不同数据样本的误差是相互独立的，但是有相同的方差。为保证选择节点的泛化性能并考虑到数据的局部几何结构，我们使用基于Laplacian正则化的LSSVM求取的最优值,其优化问题为如下形式:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00133.png"> <img id="idf0011" file="CN103676649AD00133.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00133.png" class="patent-full-image" alt="Figure CN103676649AD00133"> </a> </div>
+    <p>其中，为正则化因子，矩阵和权重定义可参考背景技术相关部分。目标函数对求导并等于ο可得的最优解:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00134.png"> <img id="idf0012" file="CN103676649AD00134.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00134.png" class="patent-full-image" alt="Figure CN103676649AD00134"> </a> </div>
+    <p>其中，为的单位矩阵。令，那么</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00135.png"> <img id="idf0013" file="CN103676649AD00135.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00135.png" class="patent-full-image" alt="Figure CN103676649AD00135"> </a> </div>
+    <p>   S3122、基于D- Optimum的WNN隐含节点序贯选择。</p>
+    <p>[0072]	注意到、正定对称性以及，令  则估计参数的有偏性和方差为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00136.png"> <img id="idf0014" file="CN103676649AD00136.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00136.png" class="patent-full-image" alt="Figure CN103676649AD00136"> </a> </div>
+    <p>  根据式(14)可知预测值为，则预测误差的方差为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00137.png"> <img id="idf0015" file="CN103676649AD00137.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00137.png" class="patent-full-image" alt="Figure CN103676649AD00137"> </a> </div>
+    <p>注意到和，，根据式(16)，参数估计误差的方差为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00138.png"> <img id="idf0016" file="CN103676649AD00138.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00138.png" class="patent-full-image" alt="Figure CN103676649AD00138"> </a> </div>
+    <p>  把上式带入式(17)得</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00139.png"> <img id="idf0017" file="CN103676649AD00139.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00139.png" class="patent-full-image" alt="Figure CN103676649AD00139"> </a> </div>
+    <p>  一般来说，正则化系数设置比较小，而误差惩罚系数设置较大，注意到和是正定矩阵，且，我们有</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00141.png"> <img id="idf0018" file="CN103676649AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00141.png" class="patent-full-image" alt="Figure CN103676649AD00141"> </a> </div>
+    <p>类似地</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00142.png"> <img id="idf0019" file="CN103676649AD00142.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00142.png" class="patent-full-image" alt="Figure CN103676649AD00142"> </a> </div>
+    <p>基于最优实验设计原理，我们期望选择的特征子集能够使得估计参数的协方差矩阵最小。而最小化也能够使得新样本的预测误差最小，该问题可以等价于Optimim优化准则:。</p>
+    <p>[0073]	对矩阵，L是正半定矩阵，是正定、可逆矩阵。令，根据Woodbury公式得</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00143.png"> <img id="idf0020" file="CN103676649AD00143.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00143.png" class="patent-full-image" alt="Figure CN103676649AD00143"> </a> </div>
+    <p>  注意到，我们可以得到</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00144.png"> <img id="idf0021" file="CN103676649AD00144.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00144.png" class="patent-full-image" alt="Figure CN103676649AD00144"> </a> </div>
+    <p>  考虑到是常数，因此选择WNN隐含节点问题就转化为如下优化问题:</p>
+    <p> 既令+ (中1、)	(23)</p>
+    <p>  注意到只包含个选择特征:，因此可以写为。由于，则，因此式(23)所示优化问题转化</p>
+    <p>为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00145.png"> <img id="idf0022" file="CN103676649AD00145.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00145.png" class="patent-full-image" alt="Figure CN103676649AD00145"> </a> </div>
+    <p>我们使用序贯优化方法对上述优化问题进行求解。首先假设已经选择个节点，可以通过下面的优化问题选取第个节点:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00146.png"> <img id="idf0023" file="CN103676649AD00146.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00146.png" class="patent-full-image" alt="Figure CN103676649AD00146"> </a> </div>
+    <p>   令，根据 Woodbury 和 Sherman-Morrison 公式可得</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00147.png"> <img id="idf0024" file="CN103676649AD00147.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00147.png" class="patent-full-image" alt="Figure CN103676649AD00147"> </a> </div>
+    <p>由于和是常矩阵，因此式(25)所示的序贯优化问题转化为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00151.png"> <img id="idf0025" file="CN103676649AD00151.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00151.png" class="patent-full-image" alt="Figure CN103676649AD00151"> </a> </div>
+    <p>  这样，通过求解上面的优化问题可以依次选取WNN重要的隐含节点。</p>
+    <p>[0074]	该方法是申请者首次提出，与现有技术相比，本方法思想和技术方法先进，能够在线调整WNN复杂度，并求取WNN最优参数值，尤其适用于系统非线性结构变化、存在未建模动态不确定性、具有流形结构数据集的系统辨识场合。</p>
+    <p>[0075]、在线更新WNN权重。</p>
+    <p>[0076]	为克服工业对象在运行过程中受到设备动态、不确定性因素影响，避免使用大量计算机内存，降低老样本对模型的影响，本发明采用基于固定长度滑动窗口的在线更新权重算法。滑动窗口在增加新样本后需要从训练样本中移除一个最不重要的样本。在线更新WNN权重算法中，假设WNN模型首先根据训练样本集得到含有个小波神经元的WNN模型。</p>
+    <p>[0077]	如图5所示，S32、在线更新WNN权重，具体包括:</p>
+    <p>  5321、样本递增更新阶段；</p>
+    <p>  5322、样本移除更新阶段。</p>
+    <p>[0078]、样本递增更新阶段，具体包括:</p>
+    <p>  设新样本为，WNN隐含节点输出为，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00152.png"> <img id="idf0026" file="CN103676649AD00152.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00152.png" class="patent-full-image" alt="Figure CN103676649AD00152"> </a> </div>
+    <p>。设的QR分解为，那么的QR分解为</p>
+    <p>的上三角矩阵可逐行通过下式求得:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00153.png"> <img id="idf0027" file="CN103676649AD00153.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00153.png" class="patent-full-image" alt="Figure CN103676649AD00153"> </a> </div>
+    <p>其中，为矩阵的第列。假设要移除第个样本，由于最终预测模型与样本的次序无关，首先把样本与进行对调，然后给出移除样本后的样本递推形式。设矩阵A进行QR分解为。如果对矩阵A的第行和第行交换后矩阵的QR分解为，其中为正交矩阵，为上三角矩阵，那么。这里为矩阵Q第行和第行交换后的矩阵。这样通过上述方法把最不重要的样本移至到第I行，这样只需移除第一行样本即可。</p>
+    <p>[0079]、样本移除更新阶段，具体包括:</p>
+    <p>  移除第一行样本后系统矩阵的递推QR分解。已知样本对应WNN隐含节点输出向量的</p>
+    <p>形式为，的QR分解为</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00154.png"> <img id="idf0028" file="CN103676649AD00154.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00154.png" class="patent-full-image" alt="Figure CN103676649AD00154"> </a> </div>
+    <p>，假设的QR分解为，那么矩</p>
+    <p>阵的QR分解的上三角矩阵可逐行由下式得到:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00155.png"> <img id="idf0029" file="CN103676649AD00155.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00155.png" class="patent-full-image" alt="Figure CN103676649AD00155"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00161.png"> <img id="idf0030" file="CN103676649AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00161.png" class="patent-full-image" alt="Figure CN103676649AD00161"> </a> </div>
+    <p>  其中，为矩阵的第列。通过上面方法很容易求取移除样本后系统矩阵的递推QR分解形式，进而求出更新后的权值。如果只是从个训练样本中移除最老的样本，那么可以把上述样本递增和样本消除的取值更新步骤合并为一步。</p>
+    <p>[0080]	经过上述两个阶段的计算后，WNN权重更新由下式计算</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00162.png"> <img id="idf0031" file="CN103676649AD00162.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00162.png" class="patent-full-image" alt="Figure CN103676649AD00162"> </a> </div>
+    <p>本算法步骤消除对矩阵和求逆的计算，只需递归计算它们的QR分解，且注意到上三角矩阵求逆计算量很小，完全满足在线学习要求。</p>
+    <p>[0081]	、WNN更新选择策略。</p>
+    <p>[0082]	对新来的数据样本，需要根据一定的策略确定WNN模型是否更新以及采取的上述更新策略。现有的更新判别准则就是根据在设定时间段内相对预测误差大于事先定义的阈值判别结果，确定是否更新以及更新的策略。</p>
+    <p>[0083]	常规方法需要事先确定判别时间段长度参数以及两个阈值参数，如何选取这些参数仍然是一个开放的问题。考虑复杂类别数据之间存在大量的交叉重叠，数据聚类结果物理意义明显、可靠，能够很好地解释数据分布特性，本发明使用基于满意的在线满意G-K模糊聚类方法[李拧等，利用模糊满意聚类建立PH中和过程模型.控制与决策，2002]确定WNN权重参数或WNN结构调整学习策略。与现有的更新策略选择准则相比，本发明使用提出数据聚类结果准确选择WNN更新策略的方法，适合复杂数据分布聚类的在线实现，无需选择聚类数量参数，克服了现有方法的缺点。该方法还另外一个显著的优点，根据聚类结果选择小波函数的尺度参数和平移参数，能够大大减少调整参数所需时间。</p>
+    <p>  假设其样本表示为，其中为系统的输入，为系统的输出。如果把系统的输入和输出看作一个样本，即，则样本集表不为。</p>
+    <p>[0084]	如图6所示，S33、WNN更新选择策略，即基于在线满意G-K模糊聚类，其实现步骤如下:</p>
+    <p>  S331、初始化:设初始聚类的个数以及算法结束阈值，初始隶属度矩阵。</p>
+    <p>[0085]、根据隶属度矩阵聚类:根据初始隶属度矩阵，求解满意G-K模糊聚类优化问题；其中，隶属度值，；为样本；为聚类中心;m为模糊度，，其中协方差</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00163.png"> <img id="idf0032" file="CN103676649AD00163.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00163.png" class="patent-full-image" alt="Figure CN103676649AD00163"> </a> </div>
+    <p>。计算得到隶属度矩阵，然后根据</p>
+    <p>样本所属各聚类的隶属度选取最大值进行分类，将样本集分为c个子集。</p>
+    <p>[0086]、判断是否结束:计算给定的系统性能指标的当前值，当(	力预设阈</p>
+    <p>值)时算法结束，否则算法转到下一步。一般取作为性能指标，为爹代次数，一般取</p>
+    <p>  S334、寻找新聚类；根据隶属度矩阵并按找出一个与各聚类均不相似样本。为避免噪声，一般应找出几个类似的样本，求其平均值作为新的聚类中心。</p>
+    <p>[0087]、令为新的聚类初始中心，计算相应的新的初始隶属度矩阵。</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00164.png"> <img id="idf0033" file="CN103676649AD00164.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103676649A/CN103676649AD00164.png" class="patent-full-image" alt="Figure CN103676649AD00164"> </a> </div>
+    <p>[0089]	对于新来的样本，本发明更新策略选择方法如下:  (1)保持WNN不变:计算样本属于当前聚类的隶属度大于0.5 ；</p>
+    <p>  (2)需要调整WNN的局部结构:需要增加一个新的聚类时或者属于另外一个聚类；</p>
+    <p>  (3)	WNN权重更新:当样本在多个聚类的交叉重叠处(一般取当前聚类的隶属度是否位于区间(0.2，0.5))。</p>
+    <p>[0090]	本发明对CPU性能要求不高，可以在嵌入式系统中实现和应用，极大地提高该方法的适用范围，如模式识别中的分类器，复杂非线性系统的插值和拟合等。</p>
+    <p>[0091]	本发明能够在线更新WNN模型，且能够保证模型的推广性能，很好地克服实际中系统受到各种不确定性因素、工况变化而导致的W N N模型适配的问题，用于工业过程控制中可以增加系统运行的平稳性，降低产品质量的波动性，提高设备的寿命，获得良好的经济效益。</p>
+    <p>[0092]	对于所属技术领域的技术人员而言，随着技术的发展，本发明构思可以不同方式实现。本发明的实施方式并不仅限于以上描述的实施例，而且可在权利要求的范围内进行变化。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103064292A?cl=zh">CN103064292A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年1月15日</td><td class="patent-data-table-td patent-date-value">2013年4月24日</td><td class="patent-data-table-td ">镇江市江大科技有限责任公司</td><td class="patent-data-table-td ">基于神经网络逆的生物发酵自适应控制系统及控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103279038A?cl=zh">CN103279038A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月19日</td><td class="patent-data-table-td patent-date-value">2013年9月4日</td><td class="patent-data-table-td ">河海大学常州校区</td><td class="patent-data-table-td ">基于t-s模糊模型的微陀螺仪滑模自适应控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103324091A?cl=zh">CN103324091A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月3日</td><td class="patent-data-table-td patent-date-value">2013年9月25日</td><td class="patent-data-table-td ">上海交通大学</td><td class="patent-data-table-td ">一种零阶接近有界的非线性多变量系统的多模型自适应控制器及控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=tE35CAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DGB%26NR%3D2386437A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNG-CaJWPeJ65xZZzQXFZW0V8nVnwg">GB2386437A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US5268834">US5268834</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1991年6月24日</td><td class="patent-data-table-td patent-date-value">1993年12月7日</td><td class="patent-data-table-td ">Massachusetts Institute Of Technology</td><td class="patent-data-table-td ">Stable adaptive neural network controller</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">S. CHEN等: "<a href='http://scholar.google.com/scholar?q="Orthogonal-least-squares+regression%3A+a+unified+approach+for+data+modeling"'>Orthogonal-least-squares regression: a unified approach for data modeling</a>", 《NEUROCOMPUTING》, 31 December 2009 (2009-12-31), pages 2670 - 2681, XP026093474, DOI: doi:10.1016/j.neucom.2008.10.002</td></tr><tr><td class="patent-data-table-td ">2</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">王高峰: "<a href='http://scholar.google.com/scholar?q="%E7%81%AB%E7%94%B5%E5%8E%82%E7%87%83%E7%83%A7%E7%B3%BB%E7%BB%9F%E9%A2%84%E6%B5%8B%E6%8E%A7%E5%88%B6%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6"'>火电厂燃烧系统预测控制技术研究</a>", 《中国优秀硕士学位论文全文数据库 工程科技Ⅱ辑》, no. 12, 15 December 2011 (2011-12-15), pages 26 - 40</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=tE35CAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0013040000">G05B13/04</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年4月23日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/a8e941bde38caa338e83/CN103676649A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%B1%80%E9%83%A8%E8%87%AA%E9%80%82%E5%BA%94%E5%B0%8F%E6%B3%A2%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E8%AE%AD%E7%BB%83.pdf?id=tE35CAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U15ZEjtyDt6JHB7_FzicpRIeOhc3w"},"sample_url":"https://www.google.com/patents/reader?id=tE35CAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

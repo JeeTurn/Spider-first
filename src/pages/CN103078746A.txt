@@ -1,0 +1,215 @@
+<!DOCTYPE html><html><head><title>专利 CN103078746A - 一种数据包的生成方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种数据包的生成方法"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="飞天诚信科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2013-2-7" scheme="dateSubmitted"><meta name="DC.description" content="本发明提出的一种数据包的生成方法，属于安全认证技术领域；包括：创建一个待填充的数据包，根据读取的硬件设备中的公钥信息生成临时密钥对，根据读取的硬件设备内部信息和接收到的外部参数信息设置所述待填充的数据包的数据；从所述数据包中获取待签名数据，并根据预设签名算法和临时密钥对的私钥对待签名数据进行签名得到第一签名值并将其设置在数据包的数据中；将所述待签名数据发送给所述硬件设备并获取第二签名值；将所述第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换所述数据包中的第一签名值，将当前数据包转换成预设编码类型的数据包。该方法不破坏原有基于开源密码算法库的应用的框架，在使用中具有实际意义。"><meta name="DC.date" content="2013-5-1"><meta name="DC.relation" content="CN:101170407:A" scheme="references"><meta name="DC.relation" content="CN:101527630:A" scheme="references"><meta name="DC.relation" content="CN:101527714:A" scheme="references"><meta name="DC.relation" content="CN:101977193:A" scheme="references"><meta name="DC.relation" content="CN:102143178:A" scheme="references"><meta name="DC.relation" content="US:20080123862:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:103078746:A"><meta name="citation_patent_application_number" content="CN:201310049877"><link rel="canonical" href="https://www.google.com/patents/CN103078746A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103078746A?cl=zh"/><meta name="title" content="专利 CN103078746A - 一种数据包的生成方法"/><meta name="description" content="本发明提出的一种数据包的生成方法，属于安全认证技术领域；包括：创建一个待填充的数据包，根据读取的硬件设备中的公钥信息生成临时密钥对，根据读取的硬件设备内部信息和接收到的外部参数信息设置所述待填充的数据包的数据；从所述数据包中获取待签名数据，并根据预设签名算法和临时密钥对的私钥对待签名数据进行签名得到第一签名值并将其设置在数据包的数据中；将所述待签名数据发送给所述硬件设备并获取第二签名值；将所述第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换所述数据包中的第一签名值，将当前数据包转换成预设编码类型的数据包。该方法不破坏原有基于开源密码算法库的应用的框架，在使用中具有实际意义。"/><meta property="og:title" content="专利 CN103078746A - 一种数据包的生成方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103078746A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103078746A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=9Yz2BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103078746A&amp;usg=AFQjCNG9TF-QpfvBjNsu_P3KlIGs9LkzfQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ce123d295d164634dae4/CN103078746A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ce123d295d164634dae4/CN103078746A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103078746A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103078746A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN103078746A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN103078746B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103078746A?cl=zh" style="display:none"><span itemprop="description">本发明提出的一种数据包的生成方法，属于安全认证技术领域；包括：创建一个待填充的数据包，根据读取的硬件设备中的公钥信息生成临时密钥对，根据读取的硬件设备内部信息和接收到的外部参数信息设置所述待填充的数据...</span><span itemprop="url">https://www.google.com/patents/CN103078746A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103078746A - 一种数据包的生成方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103078746A - 一种数据包的生成方法" title="专利 CN103078746A - 一种数据包的生成方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103078746 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310049877</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年5月1日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年2月7日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年2月7日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103078746B?hl=zh-CN&amp;cl=zh">CN103078746B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310049877.5, </span><span class="patent-bibdata-value">CN 103078746 A, </span><span class="patent-bibdata-value">CN 103078746A, </span><span class="patent-bibdata-value">CN 201310049877, </span><span class="patent-bibdata-value">CN-A-103078746, </span><span class="patent-bibdata-value">CN103078746 A, </span><span class="patent-bibdata-value">CN103078746A, </span><span class="patent-bibdata-value">CN201310049877, </span><span class="patent-bibdata-value">CN201310049877.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">飞天诚信科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103078746A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103078746A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103078746A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=9Yz2BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310049877&amp;usg=AFQjCNGr3AIOhNV5D98rmW9ojWqXeEMGSg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=9Yz2BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103078746A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGnJ3tm8RqNFPZXRE8iGLMnnZfsmQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT124058883" lang="ZH" load-source="patent-office">一种数据包的生成方法</invention-title>
+      </span><br><span class="patent-number">CN 103078746 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA111024088" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提出的一种数据包的生成方法，属于安全认证技术领域；包括：创建一个待填充的数据包，根据读取的硬件设备中的公钥信息生成临时密钥对，根据读取的硬件设备内部信息和接收到的外部参数信息设置所述待填充的数据包的数据；从所述数据包中获取待签名数据，并根据预设签名算法和临时密钥对的私钥对待签名数据进行签名得到第一签名值并将其设置在数据包的数据中；将所述待签名数据发送给所述硬件设备并获取第二签名值；将所述第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换所述数据包中的第一签名值，将当前数据包转换成预设编码类型的数据包。该方法不破坏原有基于开源密码算法库的应用的框架，在使用中具有实际意义。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(15)</span></span></div><div class="patent-text"><div mxw-id="PCLM52802085" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种数据包的生成方法，其特征在于，包括:  步骤S1:数据包生成器创建一个待填充的数据包；  步骤S2:所述数据包生成器根据读取的硬件设备中的公钥信息生成临时密钥对；  步骤S3:所述数据包生成器根据读取的硬件设备内部信息和接收到的外部参数信息设置所述待填充的数据包的数据；  步骤S4:所述数据包生成器从所述数据包中获取待签名数据，并根据预设签名算法，使用所述临时密钥对的私钥对所述待签名数据进行签名得到第一签名值，并将所述第一签名值设置在所述数据包的数据中；  步骤S5:所述数据包生成器将所述待签名数据发送给所述硬件设备，并接收所述硬件设备返回的第二签名值；  步骤S6:所述数据包生成器将所述第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换所述数据包中的第一签名值；  步骤S7:所述数据包生成器验证当前数据包，如正确则执行下一步，否则报错；  步骤S8:所述数据包生成器将当前数据包转换成预设编码类型的数据包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，所述步骤SI具体为创建一个待填充的证书请求数据包并设置所述证书请求数据包的版本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，其特征在于，步骤S2中所述硬件设备中的公钥信息是指硬件设备根据接收到的外部输入参数生成的预设密钥对中的公钥的类型信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的方法，其特征在于，步骤S2具体为:所述数据包生成器根据读取的硬件设备中的公钥的位长生成预设长度的随机数作为临时密钥对。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求2所述的方法，其特征在于，步骤S3所述硬件设备内部信息是指硬件设备根据接收到的外部输入参数生成的预设密钥对中的公钥，所述外部参数信息是指外部传入的主题字符串和摘要算法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的方法，其特征在于，所述步骤S3具体为，根据所述公钥、所述主题字符串和所述摘要算法设置所述证书请求数据包的用户公钥、主题项和摘要算法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求5所述的方法，其特征在于，所述步骤S3具体为，  1)将外部传入的所述主题字符串转换成第一预设类型的数据，根据转换后的主题字符串设置所述证书请求数据包的主题项；  2)根据外部传入的所述摘要算法设置所述证书请求数据包的摘要算法；  3)将所述公钥转换成第二预设类型的数据，根据转换后的公钥设置所述证书请求数据包中的用户公钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求2所述的方法，其特征在于，步骤S4所述待签名数据包括所述证书请求数据包中的用户公钥和主题项。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求1所述的方法，其特征在于，所述步骤SI具体为创建一个待填充的加密消息数据包并设置所述加密消息数据包的类型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的方法，其特征在于，所述步骤S2中所述硬件设备中的公钥信息是指根据外部输入参数选取的导入证书中的公钥的类型信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求9所述的方法，其特征在于，所述步骤S3所述硬件设备内部信息是指根据外部输入参数从硬件设备中选取的导入证书的公钥，所述外部参数信息为外部传入的摘要算法和原文数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11所述的方法，其特征在于，所述步骤S3具体为:根据所述导入证书在所述加密消息数据包中设置用户证书，根据所述外部传入的摘要算法和步骤S2所述临时密钥对在所述加密消息数据包中设置签名值结构，根据外部传入的原文数据在所述加密消息数据包中设置待签名数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求1所述的方法，其特征在于，所述预设签名算法为MD5RSA或SHA1RSA。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求1所述的方法，其特征在于，所述步骤S7所述验证当前数据包具体为:对当前数据包中的待签名数据进行摘要得到第一摘要值，对当前数据包中的第二签名值做公钥解密得到第二摘要值，比对所述第一摘要值和第二摘要值，如果完全一致则验证成功，否则验证失败。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.如权 利要求1所述的方法，其特征在于，步骤S8所述预设编码类型为DER编码类型。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59858245" lang="ZH" load-source="patent-office" class="description">
+    <p>一种数据包的生成方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明属于安全认证技术领域，具体涉及一种数据包的生成方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	现有技术中，在基于开源密码算法库的应用中使用硬件设备存在以下问题:开源密码算法库的版本不同，实现硬件设备的自定义接口也有所改变，不利于代码维护。例如，以开源密码算法库OpenSSL为例,传统情况下,在SSL (安全套接层协议，Secure SocketLayer的缩写）中使用高强度算法的硬件设备，需要做大量的接口修改工作，并要求开发者熟悉硬件的内部结构和相应的开发接口。OpenSSL的引擎机制通过提供通用的加密接口解决了这个难题。</p>
+    <p>[0003]	OpenSSL中的引擎技术虽便于对算法库进行算法扩展，但在实现时发现，随着OpenSSL版本的升级，引擎接口定义也有所不同。且在应用时，实现一个引擎不是一件很容易的事情。所以，现有技术有以下缺陷:版本不同，引擎实现接口有所变化，不利于代码维护；实现引擎难度较大，对在开源密码算法库的应用中嵌入使用硬件设备的开发带来困难。</p>
+    <p>发明内容</p>
+    <p>[0004]	为解决现有技术中存在的问题，本发明提出了结合开源密码算法库和硬件设备的一种数据包的生成方法。</p>
+    <p>[0005]	本发明采用的技术方案如下:一种数据包的生成方法，包括:</p>
+    <p>[0006]	步骤S1:数据包生成器创建一个待填充的数据包；</p>
+    <p>[0007]	步骤S2:所述数据包生成器根据读取的硬件设备中的公钥信息生成临时密钥对；</p>
+    <p>[0008]	步骤S3:所述数据包生成器根据读取的硬件设备内部信息和接收到的外部参数信息设置所述待填充的数据包的数据；</p>
+    <p>[0009]	步骤S4:所述数据包生成器从所述数据包中获取待签名数据，并根据预设签名算法，使用所述临时密钥对的私钥对所述待签名数据进行签名得到第一签名值，并将所述第一签名值设置在所述数据包的数据中；</p>
+    <p>[0010]	步骤S5:所述数据包生成器将所述待签名数据发送给所述硬件设备，并接收所述硬件设备返回的第二签名值；</p>
+    <p>[0011]	步骤S6:所述数据包生成器将所述第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换所述数据包中的第一签名值；</p>
+    <p>[0012]	步骤S7:所述数据包生成器验证当前数据包，正确则执行下一步，否则报错；</p>
+    <p>[0013]	步骤S8:所述数据包生成器将当前数据包转换成预设编码类型的数据包。</p>
+    <p>[0014]	其中，所述步骤SI具体为创建一个待填充的证书请求数据包并设置所述证书请求数据包的版本。步骤S2中所述硬件设备中的公钥信息是指硬件设备根据接收到的外部输入参数生成的预设密钥对中的公钥的类型信息。步骤S3所述硬件设备内部信息是指硬件设备根据接收到的外部输入参数生成的预设密钥对中的公钥，所述外部参数信息是指外部传入的主题字符串和摘要算法。所述步骤S3具体为，根据所述公钥、所述主题字符串和所述摘要算法设置所述证书请求数据包的用户公钥、主题项和摘要算法，进一步具体为，</p>
+    <p>[0015]	I)将外部传入的所述主题字符串转换成第一预设类型，根据转换后的主题字符串设置所述证书请求数据包的主题项；</p>
+    <p>[0016]	2)根据外部传入的所述摘要算法设置所述证书请求数据包的摘要算法；</p>
+    <p>[0017]	3)将所述公钥转换成第二预设类型，根据转换后的公钥设置所述证书请求数据包中的用户公钥。</p>
+    <p>[0018]	步骤S4所述待签名数据包括所述证书请求数据包中的用户公钥和主题项。</p>
+    <p>[0019]	或者:所述步骤SI具体为创建一个待填充的加密消息数据包并设置所述加密消息数据包的类型。步骤S2中所述硬件设备中的公钥信息是指根据外部输入参数选取的导入证书中的公钥的类型信息。步骤S3所述硬件设备内部信息是指根据外部输入参数从硬件设备中选取的导入证书的公钥，所述外部参数信息为外部传入的摘要算法和原文数据。步骤S3具体为，根据所述导入证书在所述加密消息数据包中设置用户证书，根据所述外部传入的摘要算法和所述临时密钥对在所述加密消息数据包中设置签名值结构，根据外部传入的原文数据在所述加密消息数据包中设置待签名数据。</p>
+    <p>[0020]	上述步骤S2具体为:所述数据包生成器根据读取的硬件设备中的公钥的位长生成预设长度的随机数作为临时密钥对。</p>
+    <p>[0021]	上述预设签名算法为MD5RSA或SHA1RSA。</p>
+    <p>[0022]	步骤S7所述验证当前数据包具体为:对当前数据包中的待签名数据进行摘要得到第一摘要值，对当前数据包中的第二签名值做公钥解密得到第二摘要值，比对这两个摘要值，如果完全一致则验证成功，否则验证失败。</p>
+    <p>[0023]	步骤S8所述预设编码类型为DER编码类型。</p>
+    <p>[0024]	采用本发明达到的有益效果是:该方法不破坏原有基于开源密码算法库的应用的框架，在使用中具有实际意义。</p>
+    <p>附图说明</p>
+    <p>[0025]	图1是实施例1提出的一种数据包的生成方法流程图；</p>
+    <p>[0026]	图2是实施例2提供的一种证书请求数据包的生成方法流程图；</p>
+    <p>[0027]	图3是实施例3提供的一种加密消息数据包的生成方法流程图。</p>
+    <p>具体实施方式</p>
+    <p>[0028]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方式作进一步地详细描述。</p>
+    <p>[0029]	实施例1</p>
+    <p>[0030]	结合开源密码算法库和硬件设备，本实施例提出了一种数据包的生成方法，所述开源密码算法库采用普遍使用的OpenSSL，所述硬件设备为硬件加密设备；如图1所示，所述方法包括:</p>
+    <p>[0031]	步骤1:数据包生成器创建一个待填充的数据包；</p>
+    <p>[0032]	例如，通过调用X509_REQ_new O来创建一个待填充的证书请求数据包（X509_REQ);或是通过调用PKCS7_new()来创建一个待填充的加密消息数据包（PKCS7)。</p>
+    <p>[0033]	所述数据包生成器用于根据开源算法库和硬件加密设备生成特定的数据包。</p>
+    <p>[0034]	步骤2:数据包生成器根据读取的硬件设备中的公钥信息生成临时密钥对；</p>
+    <p>[0035]	具体地，当硬件设备中存在导入证书时，所述公钥信息为根据外部输入参数选取的导入证书中的公钥的类型信息；当硬件设备中不存在导入证书时，硬件设备根据接收到的外部输入参数生成预设密钥对，所述公钥信息为根据预设密钥对的公钥句柄导出的公钥的类型信息。</p>
+    <p>[0036]	本实施例中，本步骤具体为:根据读取的硬件设备中的公钥的位长生成预设长度的随机数作为临时密钥对。</p>
+    <p>[0037]	步骤3:数据包生成器根据读取的硬件设备内部信息和接收到的外部参数信息设置所述待填充的数据包的数据；</p>
+    <p>[0038]	具体地，当所述待填充的数据包为X509_REQ时，所述读取的硬件设备内部信息为根据硬件设备中预设密钥对的公钥句柄导出的公钥，所述外部参数信息为外部传入的DN字符串、摘要算法；设置X509_REQ中的数据具体包括根据所述导出的公钥、外部传入的DN字符串和摘要算法设置X509_REQ的用户公钥、主题（即DN项)、摘要算法；当所述待填充的数据包为PKCS7时，所述读取的硬件设备内部信息为硬件设备中存储的导入证书，所述外部参数信息为外部传入的摘要算法；设置PKCS7中的数据具体包括根据导入证书在PKCS7中设置用户证书，根据摘要算法和所述临时密钥对在PKCS7设置签名值结构，根据外部传入的原文数据在PKCS7中设置待签名数据。</p>
+    <p>[0039]	步骤4:数据包生成器从所述数据包中获取待签名数据，并根据预设签名算法，使用临时密钥对的私钥对待签名数据进行签名得到第一签名值，并将该第一签名值设置在数据包的数据中；</p>
+    <p>[0040]	具体地，当所述待填充的数据包为X509_REQ时，待签名数据为X509_REQ中的用户公钥、DN项和摘要算法；当所述待填充的数据包为PKCS7时，待签名数据为外部传入的原文数据，例如外部传入的证书请求数据等。所述预设算法可以为MD5RSA或SHA1RSA。</p>
+    <p>[0041]	步骤5:数据包生成器将所述待签名数据发送给硬件设备，并接收硬件设备返回的第二签名值；</p>
+    <p>[0042]	具体地:硬件设备根据设备中存储的私钥的句柄访问私钥，并根据预设签名算法对接收到的待签名数据进行签名，生成第二签名值，并将所述第二签名值返回给数据包生成器；</p>
+    <p>[0043]	本实施例中具体地，数据包生成器调用标准接口访问硬件设备，硬件设备根据预设签名算法用存储的私钥对所述待签名数据进行签名，生成第二签名值并返回给数据包生成器。所述标准接口为CSP或Pl I等标准接口。</p>
+    <p>[0044]	步骤6:数据包生成器将第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换数据包中的第一签名值；</p>
+    <p>[0045]	步骤7:数据包生成器验证当前数据包，如正确则执行下一步，否则报错；</p>
+    <p>[0046]	具体地验证过程为:数据包生成器对当前数据包中的待签名数据进行摘要得到第一摘要值，对当前数据包中的签名值做公钥解密获取第二摘要值，比对这两个摘要值，如果完全一致则验证成功，否则验证失败。[0047]	步骤8:数据包生成器将当前数据包转换成预设编码类型的数据包。</p>
+    <p>[0048]	本实施例中具体地，数据包生成器将当前数据包转换成DER编码类型。</p>
+    <p>[0049]	实施例2</p>
+    <p>[0050]	在实施例1的基础上以开源密码算法库OpenSSL为例，本实施例提出了一种基于OpenSSL的请求证书应用中使用硬件设备的方法，如图2所示，其中所述设备为硬件加密设备，数据包生成器被外部应用程序调用来生成证书请求数据包时，执行以下操作:</p>
+    <p>[0051]	步骤101:数据包生成器从设备中获得公钥和私钥的句柄，根据公钥句柄导出公钥；</p>
+    <p>[0052]	具体地，所述设备中存储有根据外部输入参数生成的预设密钥对的公钥和私钥的句柄，数据包生成器根据公钥句柄导出公钥。</p>
+    <p>[0053]	本实施例中还包括，将导出的公钥转换成DER编码的公钥。</p>
+    <p>[0054]	步骤102:数据包生成器创建一个待填充的证书请求数据包；</p>
+    <p>[0055]	本实施例中优选的，创建的待填充的证书请求数据包的DER编码如下:</p>
+    <p>[0056]	30 Ia 30 10 02 00 30 00 30 08 30 03 06 01 00 03 01 00 a0 00 30 03 0601 00 03 01 00。</p>
+    <p>[0057]	进一步的，还包括设置该证书请求数据包的版本，优选的，设置版本为2后的证书请求数据包的DER编码如下:</p>
+    <p>[0058]	30 Ib 30 11 02 01 01 30 00 30 08 30 03 06 01 00 03 01 00 a0 00 30 0306 01 00 03 01 00。</p>
+    <p>[0059]	步骤103:数据包生成器根据所述导出的公钥和外部传入的DN字符串、摘要算法设置证书请求数据包的数据；</p>
+    <p>[0060]	本实施例中具体地，所述证书请求数据包的数据包含有用户公钥、主题（即DN项）和摘要算法。本步骤具体包括:</p>
+    <p>[0061]	I)将外部传入的DN字符串的类型转换成第一预设类型，根据转换后的DN字符串设置证书请求数据包的DN项；</p>
+    <p>[0062]	具体地，所述第一预设类型优选为X509_NAME类型，将外部传入的DN字符串转换成X509_NAME类型的过程包括:首先根据分隔符将DN各项分开，然后再解析“=”号，分析出各DN项的“key”和“Value”，最后将DN项转换成OID，并根据Value类型创建类型。</p>
+    <p>[0063]	本实施例中优选的，所述DN项包括countryName、commonName、organizationalUniteName、organizationName。所述 DN 项的 countryName 的 DER 编码为:30 09 06 03 55 04 06 13 02 63 6e ;所述 DN 项的 commonName 的 DER 编码为:30 Ob 06 03 55 04 03 Ie 04 98 de 59 29 ;所述 DN 项的 organizationalUniteName 的DER 编码为:30 10 06 03 55 04 Ob 13 09 43 75 73 74 6f 6d 65 72 73 ;所述 DN 项的organizationName 的 DER 编码为:30 19 06 03 55 04 Oa 13 12 43 46 43 41 20 4f 7065 72 61 74 69 6f 6e 20 43 41 32。</p>
+    <p>[0064]	2)根据外部传入的摘要算法，设置证书请求数据包的摘要算法。</p>
+    <p>[0065]	本实施例中优选的，所述摘要算法为SHA1，设置到证书请求数据包的摘要算法的DER编码为:30 Od 06 09 2a 86 48 86 f7 Od 01 01 01 05 00。所述摘要算法还可以为MD5。[0066]	3)将DER编码的公钥的类型转换成第二预设类型，根据转换后的公钥设置证书请求数据包中的用户公钥；</p>
+    <p>[0067]	具体地，所述第二预设类型优选为EVP_PKEY类型。</p>
+    <p>[0068]	本实施例中优选的，设置到证书请求数据包中的用户公钥的DER编码如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00081.png"> <img id="idf0001" file="CN103078746AD00081.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00081.png" class="patent-full-image" alt="Figure CN103078746AD00081"> </a> </div>
+    <p>[0078]	步骤104:数据包生成器根据所述导出的公钥的类型生成临时密钥对；</p>
+    <p>[0079]	步骤105:数据包生成器根据预设签名算法使用临时密钥对的私钥对当前证书请求数据包的数据进行签名得到第一签名值；</p>
+    <p>[0080]	本实施例中优选的，所述预设签名算法为MD5RSA，所述预设签名算法的DER编码为:30 Od 06 09 2a 86 48 86 f7 Od 01 01 04 05 00。所述预设签名算法还可以为SHAIRSA。</p>
+    <p>[0081]	具体的，执行本步骤后得到的当前证书请求数据包的DER编码如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00082.png"> <img id="idf0002" file="CN103078746AD00082.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00082.png" class="patent-full-image" alt="Figure CN103078746AD00082"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00091.png"> <img id="idf0003" file="CN103078746AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00091.png" class="patent-full-image" alt="Figure CN103078746AD00091"> </a> </div>
+    <p>[0117]	步骤106:数据包生成器从当前证书请求数据包中获取预设签名算法和待签名数据；</p>
+    <p>[0118]	具体地，获取到的所述待签名数据包含有用户公钥和DN项。</p>
+    <p>[0119]	步骤107:数据包生成器将待签名数据发送给设备并接收设备返回的第二签名值；</p>
+    <p>[0120]	具体地，数据包生成器调用预设签名接口访问设备，设备根据存储的私钥的句柄访问私钥，并根据预设签名算法对接收到的待签名数据签名，生成第二签名值并返回给数据包生成器。</p>
+    <p>[0121 ]	所述预设签名接口可以是CSP或Pl I等标准接口，也可以是数据包生成器私有接□。</p>
+    <p>[0122]	本实施例中，优选的所述预设签名算法为MD5RSA，所述预设签名算法的DER编码为:30 Od 06 09 2a 86 48 86 fl Od 01 01 04 05 00。根据预设签名算法，对获取到的待签名数据签名生成的第二签名值的DER编码为:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00092.png"> <img id="idf0004" file="CN103078746AD00092.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00092.png" class="patent-full-image" alt="Figure CN103078746AD00092"> </a> </div>
+    <p>[0132]	步骤108:数据包生成器将第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换证书请求数据包中的第一签名值；</p>
+    <p>[0133]	具体地本步骤包括:创建ASNI_BIT_STRING结构的签名值，并将签名值结构ASNI_BIT_STRING设置到证书请求数据包中，即替换证书请求数据包中的签名值。</p>
+    <p>[0134]	步骤109:数据包生成器验签当前证书请求数据包，如正确则执行步骤110，错误则报错；</p>
+    <p>[0135]	具体验签过程是:首先将当前证书请求数据包中的待签名数据进行摘要，对签名值做公钥解密获取一个摘要值，最后比对这两个摘要值，如果完全一致则说明验证成功。</p>
+    <p>[0136]	步骤110:数据包生成器将当前证书请求数据包转换成DER编码类型的数据包。</p>
+    <p>[0137]	本实施例中优选的，本步骤得到的DER编码类型的证书请求数据包如下:</p>
+    <p>[0138]	30 82 01 86 30 81 fO 02 01 01 30 47 31 45 30 09</p>
+    <p>[0139]	06 03 55 04 06 13 02 63 6e 30 Ob 06 03 55 04 03</p>
+    <p>[0140]	Ie 04 98 de 59 29 30 10 06 03 55 04 Ob 13 09 43</p>
+    <p>[0141]	75 73 74 6f 6d 65 72 73 30 19 06 03 55 04 Oa 13</p>
+    <p>[0142]	12 43 46 43 41 20 4f 70 65 72 61 74 69 6f 6e 20</p>
+    <p>[0143]	43 41 32 30 81 9f 30 Od 06 09 2a 86 48 86 f7 Od</p>
+    <p>[0144]	01 01 01 05 00 03 81 8d 00 30 81 89 02 81 81 00</p>
+    <p>[0145]	b6 73 f2 ff 91 8e ec fI dO 02 e9 ac be 06 Oe dd</p>
+    <p>[0146]	fd 07 f3 b7 3d 82 a6 50 4b bl ba 21 25 fO 75 90</p>
+    <p>[0147]	a4 Ib 2b bO ad 5d 91 dO ba 34 b8 7d ce 6b 80 8f</p>
+    <p>[0148]	36 ab c5 97 08 c4 59 e9 al 49 8b bd 5a 59 6e 32</p>
+    <p>[0149]	a5 52 79 53 fO fc 3f 0a 3b 38 Od 6b f5 8d b8 50</p>
+    <p>[0150]	ff 12 5d e3 20 7b Ie 3b 25 eO bl c7 81 54 9f 74</p>
+    <p>[0151]	c2 cb Ie 35 49 cd a4 3a 24 25 71 53 2f ec 50 10</p>
+    <p>[0152]	bl 77 79 a4 7b 77 c6 85 cl 72 a7 5b eb 3d 03 57</p>
+    <p>[0153]	02 03 01 00 01 aO 00 30 Od 06 09 2a 86 48 86 f7</p>
+    <p>[0154]	Od 01 01 04 05 00 03 81 81 02 14 13 7f ce fl e9</p>
+    <p>[0155]	d4 fb 2f 30 b4 bf 2e 18 84 d5 51 4d eO 81 e2 fb</p>
+    <p>[0156]	4d 50 la 2f 3b 4a c5 be 82 95 cf d3 48 c4 d5 8d</p>
+    <p>[0157]	43 43 85 f6 8d c4 d9 8c 0a 86 5b 8a 45 44 41 c7</p>
+    <p>[0158]	la 5d b9 25 18 92 Ic 3c ee 48 e5 99 d8 49 60 e7</p>
+    <p>[0159]	ff eb f8 Ie fl 5e 69 f8 82 40 24 64 d9 5f 4c 89</p>
+    <p>[0160]	9f aa dO 3d ec c3 3b 21 46 4d Ic 9e 40 55 d8 a3 [0161]	3d 90 Oe 87 4b 4a 9b 79 89 a2 fl 92 c2 d4 9d Id</p>
+    <p>[0162]	c8 7f 78 8a c2 07 02 4e 91 4c 51</p>
+    <p>[0163]	进一步的,在步骤101之前还可以包括:清OpenSSL错误标志,相应的,步骤101至110的执行过程中当有错误发生时所述错误标志被置位。</p>
+    <p>[0164]	实施例3</p>
+    <p>[0165]	在实施例1的基础上以开源密码算法库OpenSSL为例，本实施例提出了一种基于OpenSSL的数据加密应用中使用硬件设备的方法，如图3所示，其中所述设备为硬件加密设备，数据包生成器被外部应用程序调用来生成类型为“签名数据”的加密消息数据包时，执行以下操作:</p>
+    <p>[0166]	步骤201:数据包生成器根据导入证书中的公钥从设备中查找并获得与该公钥对应的私钥的句柄；</p>
+    <p>[0167]	本实施例中优选的，所述导入证书为用于签名数据消息的证书。</p>
+    <p>[0168]	步骤202:数据包生成器创建一个待填充的加密消息数据包；</p>
+    <p>[0169]	本实施例中优选的，创建的待填充的加密消息数据包的DER编码如下:30 03 0601 00。</p>
+    <p>[0170]	进一步的，还包括设置该加密消息数据包类型，本实施例中类型为NID_pkcs7_signed的加密消息数据包的DER编码如下:</p>
+    <p>[0171]	30 Ib 06 09 2a 86 48 86 f7 Od 01 07 02 aO Oe 30 Oc 02 01 01 31 00 3003 06 01 00 31 00。</p>
+    <p>[0172]	步骤203:数据包生成器根据导入证书中的公钥的类型生成临时密钥对；</p>
+    <p>[0173]	本实施例中，导入证书中的公钥为EVP_PKEY类型的公钥。</p>
+    <p>[0174]	步骤204:数据包生成器根据所述临时密钥对和外部传入的摘要算法，在加密消息数据包中设置签名值结构；根据导入证书在加密消息数据包设置用户证书；</p>
+    <p>[0175]	本实施例中，在加密消息数据包中设置的签名值结构，包含证书颁发者信息和摘要算法信息，所述摘要算法优选为MD5。</p>
+    <p>`[0176]	优选的，设置的签名值结构的DER编码如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00111.png"> <img id="idf0005" file="CN103078746AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00111.png" class="patent-full-image" alt="Figure CN103078746AD00111"> </a> </div>
+    <p>[0183]	设置的用户证书的DER编码如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00112.png"> <img id="idf0006" file="CN103078746AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00112.png" class="patent-full-image" alt="Figure CN103078746AD00112"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00121.png"> <img id="idf0007" file="CN103078746AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00121.png" class="patent-full-image" alt="Figure CN103078746AD00121"> </a> </div>
+    <p>[0215]	步骤205:数据包生成器根据外部传入的原文数据在加密消息数据包中设置待签名数据，并用临时密钥对的私钥进行签名得到第一签名值；所述待签名数据即为加密消息数据包的原文数据。</p>
+    <p>[0216]	本实施例中设置的待签名数据的DER编码如下:</p>
+    <p>[0217]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00122.png"> <img id="idf0008" file="CN103078746AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00122.png" class="patent-full-image" alt="Figure CN103078746AD00122"> </a> </div>
+    <p>[0220]	用临时密钥对的私钥对待签名数据进行签名后的签名值的DER编码如下:</p>
+    <p>[0221]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00123.png"> <img id="idf0009" file="CN103078746AD00123.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00123.png" class="patent-full-image" alt="Figure CN103078746AD00123"> </a> </div>
+    <p>[0230]	步骤206:数据包生成器将所述待签名数据发送给设备并接收设备返回的第二签名值；</p>
+    <p>[0231]	具体地，所述第二签名值为根据设备中存储的私钥的句柄访问私钥，并使用该私钥和预设签名算法对待签名数据进行签名，得到第二签名值；[0232]	本实施例中，所述预设签名算法优选采用MD5RSA。</p>
+    <p>[0233]	本步骤得到的第二签名值的DER编码如下:</p>
+    <p>[0234]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00131.png"> <img id="idf0010" file="CN103078746AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00131.png" class="patent-full-image" alt="Figure CN103078746AD00131"> </a> </div>
+    <p>[0243]	步骤207:数据包生成器将第二签名值的类型转换成预设签名值结构类型，并用转换后的第二签名值替换加密消息数据包中的第一签名值；</p>
+    <p>[0244]	具体地，本步骤得到的加密消息数据包的DER编码如下:</p>
+    <p>[0245]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00132.png"> <img id="idf0011" file="CN103078746AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00132.png" class="patent-full-image" alt="Figure CN103078746AD00132"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00141.png"> <img id="idf0012" file="CN103078746AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103078746A/CN103078746AD00141.png" class="patent-full-image" alt="Figure CN103078746AD00141"> </a> </div>
+    <p>[0295]	步骤208:数据包生成器验证当前加密消息数据包，如正确则执行209，否则报错；</p>
+    <p>[0296]	具体验证过程:首先将当前加密消息进行解析，解析出其中包含的用户证书、待签名数据和签名值，对待签名数据进行摘要得到第一摘要值，对签名值做公钥解密获取第二摘要值，最后比对这两个摘要值，如果完全一致则说明验证成功。还包括使用导入证书的根证书，对解析出的用户证书进行有效性验证。</p>
+    <p>[0297]	步骤209:数据包生成器将当前加密消息数据包转换成DER编码类型的数据包。</p>
+    <p>[0298]	本实施例中具体为:将PKCS7类型的加密消息数据包转换成DER编码类型。</p>
+    <p>[0299]	进一步的,在步骤201之前还可以包括:清OpenSSL错误标志,相应的,步骤201至209的执行过程中当有错误发生时所述错误标志被置位报错。</p>
+    <p>[0300]	以上所述仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101170407A?cl=zh">CN101170407A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年12月3日</td><td class="patent-data-table-td patent-date-value">2008年4月30日</td><td class="patent-data-table-td ">北京深思洛克数据保护中心</td><td class="patent-data-table-td ">一种安全地生成密钥对和传送公钥或证书申请文件的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101527630A?cl=zh">CN101527630A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月31日</td><td class="patent-data-table-td patent-date-value">2009年9月9日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">远程制证的方法、服务器及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101527714A?cl=zh">CN101527714A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月31日</td><td class="patent-data-table-td patent-date-value">2009年9月9日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">制证的方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101977193A?cl=zh">CN101977193A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年10月28日</td><td class="patent-data-table-td patent-date-value">2011年2月16日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">安全下载证书的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102143178A?cl=zh">CN102143178A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年3月30日</td><td class="patent-data-table-td patent-date-value">2011年8月3日</td><td class="patent-data-table-td ">天津大学</td><td class="patent-data-table-td ">一种网络教学管理系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20080123862">US20080123862</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年11月27日</td><td class="patent-data-table-td patent-date-value">2008年5月29日</td><td class="patent-data-table-td ">Red Hat, Inc.</td><td class="patent-data-table-td ">Secure information transfer using dedicated public key pairs</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=9Yz2BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年5月1日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年6月5日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年6月17日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ce123d295d164634dae4/CN103078746A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E6%95%B0%E6%8D%AE%E5%8C%85%E7%9A%84%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95.pdf?id=9Yz2BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2_cRndCvgF1V4yca4NmRt9UTNGMQ"},"sample_url":"https://www.google.com/patents/reader?id=9Yz2BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

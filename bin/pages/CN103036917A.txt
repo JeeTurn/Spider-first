@@ -1,0 +1,190 @@
+<!DOCTYPE html><html><head><title>专利 CN103036917A - 客户端平台的实现方法及客户端平台 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="客户端平台的实现方法及客户端平台"><meta name="DC.contributor" content="郝永建" scheme="inventor"><meta name="DC.contributor" content="杨挺" scheme="inventor"><meta name="DC.contributor" content="方顺豹" scheme="inventor"><meta name="DC.contributor" content="北京神州泰岳软件股份有限公司" scheme="assignee"><meta name="DC.date" content="2011-9-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种客户端平台的实现方法及客户端平台，提高了系统的稳定性，改善了系统性能，缩短了平台开发周期，提高了开发效率。本发明实施例提供的客户端平台的实现方法，包括：设置用户界面UI模块、上层业务模块、下层业务模块和网络通道模块，各模块中包括至少一个组件，每个组件具有对外标准接口；利用所述UI模块接收业务请求，并调用上层业务模块根据该业务请求进行相应业务处理，在下层业务模块对业务请求的处理数据按照相应协议封装之后，通过网络通道模块将封装后的请求数据包发送出去。"><meta name="DC.date" content="2013-4-10"><meta name="DC.relation" content="CN:101056202:A" scheme="references"><meta name="DC.relation" content="CN:101291326:A" scheme="references"><meta name="DC.relation" content="CN:101360263:A" scheme="references"><meta name="DC.relation" content="CN:101605143:A" scheme="references"><meta name="DC.relation" content="US:20050015395:A1" scheme="references"><meta name="citation_reference" content="香华冠, 冯刚: &quot;“移动富媒体客户端的研究与设计”&quot;, 《计算机技术与发展》, vol. 20, no. 7, 31 July 2010 (2010-07-31)"><meta name="citation_patent_publication_number" content="CN:103036917:A"><meta name="citation_patent_application_number" content="CN:201110294323"><link rel="canonical" href="https://www.google.com/patents/CN103036917A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103036917A?cl=zh"/><meta name="title" content="专利 CN103036917A - 客户端平台的实现方法及客户端平台"/><meta name="description" content="本发明公开了一种客户端平台的实现方法及客户端平台，提高了系统的稳定性，改善了系统性能，缩短了平台开发周期，提高了开发效率。本发明实施例提供的客户端平台的实现方法，包括：设置用户界面UI模块、上层业务模块、下层业务模块和网络通道模块，各模块中包括至少一个组件，每个组件具有对外标准接口；利用所述UI模块接收业务请求，并调用上层业务模块根据该业务请求进行相应业务处理，在下层业务模块对业务请求的处理数据按照相应协议封装之后，通过网络通道模块将封装后的请求数据包发送出去。"/><meta property="og:title" content="专利 CN103036917A - 客户端平台的实现方法及客户端平台"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103036917A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103036917A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=X7jvBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103036917A&amp;usg=AFQjCNEcre33BmFY-nkY1VTAyAp9wIqphA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/8465642ca2de3a4bf406/CN103036917A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/8465642ca2de3a4bf406/CN103036917A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103036917A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103036917A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN103036917A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN103036917B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103036917A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种客户端平台的实现方法及客户端平台，提高了系统的稳定性，改善了系统性能，缩短了平台开发周期，提高了开发效率。本发明实施例提供的客户端平台的实现方法，包括：设置用户界面UI模块、上层业务模块 ...</span><span itemprop="url">https://www.google.com/patents/CN103036917A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103036917A - 客户端平台的实现方法及客户端平台</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103036917A - 客户端平台的实现方法及客户端平台" title="专利 CN103036917A - 客户端平台的实现方法及客户端平台"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103036917 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110294323</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年4月10日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年9月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年9月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103036917B?hl=zh-CN&amp;cl=zh">CN103036917B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110294323.2, </span><span class="patent-bibdata-value">CN 103036917 A, </span><span class="patent-bibdata-value">CN 103036917A, </span><span class="patent-bibdata-value">CN 201110294323, </span><span class="patent-bibdata-value">CN-A-103036917, </span><span class="patent-bibdata-value">CN103036917 A, </span><span class="patent-bibdata-value">CN103036917A, </span><span class="patent-bibdata-value">CN201110294323, </span><span class="patent-bibdata-value">CN201110294323.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%9D%E6%B0%B8%E5%BB%BA%22">郝永建</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E6%8C%BA%22">杨挺</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%96%B9%E9%A1%BA%E8%B1%B9%22">方顺豹</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E7%A5%9E%E5%B7%9E%E6%B3%B0%E5%B2%B3%E8%BD%AF%E4%BB%B6%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京神州泰岳软件股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103036917A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103036917A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103036917A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=X7jvBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110294323&amp;usg=AFQjCNEqD_rtNoVwJuwFAZAkQJrvVLyImw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=X7jvBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103036917A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGhpcNvDshhiRngbmKjRN56osE4nQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT123232161" lang="ZH" load-source="patent-office">客户端平台的实现方法及客户端平台</invention-title>
+      </span><br><span class="patent-number">CN 103036917 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA110115200" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种客户端平台的实现方法及客户端平台，提高了系统的稳定性，改善了系统性能，缩短了平台开发周期，提高了开发效率。本发明实施例提供的客户端平台的实现方法，包括：设置用户界面UI模块、上层业务模块、下层业务模块和网络通道模块，各模块中包括至少一个组件，每个组件具有对外标准接口；利用所述UI模块接收业务请求，并调用上层业务模块根据该业务请求进行相应业务处理，在下层业务模块对业务请求的处理数据按照相应协议封装之后，通过网络通道模块将封装后的请求数据包发送出去。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM52526411" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种客户端平台的实现方法，其特征在于，所述方法包括：  设置用户界面UI模块、上层业务模块、下层业务模块和网络通道模块，所述UI模块具有界面实现功能，所述上层业务模块具有业务数据和流程处理功能，所述下层业务模块具有协议包封装和解析功能，所述网络通道模块具有网络连接和传输功能，其中，所述各模块中包括至少一个组件，每个组件具有对外标准接口 ；  利用所述UI模块接收业务请求，并调用上层业务模块根据该业务请求进行相应业务处理，在下层业务模块对业务请求的处理数据按照相应协议封装之后，通过网络通道模块将封装后的请求数据包发送出去。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述方法还包括：  利用网络通道模块接收相应于所述业务请求的应答数据包；  调用下层业务模块对所述应答数据包进行解析，得到业务应答数据；  在上层业务模块对所述业务应答数据进行业务处理之后，通过Π模块将业务应答通知用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的方法，其特征在于，所述方法还包括：  利用框架管理器中的界面管理器、上层业务管理器、下层业务管理器和网络通道管理器分别维护相应各模块的配置文件、提供组件之间的查询接口，并对各组件的对外标准接口进行管理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的方法，其特征在于，所述方法还包括：  利用框架管理器中的任务服务管理器对所述各模块所对应的线程进行管理；和/或利用框架管理器中的数据管理器对关联于所述各模块的数据进行管理；和/或，设置安全动态库模块，利用框架管理器中的安全管理器对安全动态库模块进行管理，所述安全动态库模块具有数据安全验证功能；和/或，  利用框架管理器中的更新服务管理器对各组件的对外标准接口进行更新；和/或，  利用框架管理器中的第三方管理器向第三方提供功能接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1至4任一项所述的方法，其特征在于，所述方法还包括：  所述组件中实现一个或多个命令或事件，所述模块在客户端平台中具有唯一标识ID,所述组件在相应模块中具有唯一 ID,所述命令或事件在组件中具有唯一 ID。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1至4任一项所述的方法，其特征在于，  所述各模块采用二进制模块实现；  所述框架管理器与各模块之间、所述不同模块之间以及所述不同组件之间采用松耦合关联方式。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其特征在于，至少通过如下方式实现组件的相关功能：  当第一模块中的组件调用第二模块中的组件时，由第一模块中的组件以执行命令的方式调用；或者，  当组件订阅事件时，由事件激发方发起订阅流程，由事件响应方调用该组件，实现该组件的事件订阅；或者，  为组件设置自定义接口，通过该自定义接口调用组件中的相关功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求6所述的方法，其特征在于，所述方法还包括：  利用所述更新服务管理器对Π模块进行更新；以及，利用上层业务模块对平台上除上层业务模块之外模块的订阅事件进行管理，并将订阅数据存储到数据管理器中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的方法，其特征在于，所述方法还包括：  所述框架管理器在客户端平台启动时加载，所述Π模块、上层业务模块、下层业务模块和网络通道模块中的各组件在客户端平台启动时或者接收到调用命令时加载。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.	一种客户端平台，其特征在于，所述平台包括Π层、上层业务层、下层业务层和网络通道层，  所述UI层，设置有多个UI模块，能够提供所需的界面，接收业务请求并将业务应答通知用户；  所述上层业务层，设置有多个上层业务模块，能够处理所述业务请求的业务数据和流程，并对下层业务层发送来的业务应答数据进行处理；  所述下层业务层，设置有多个下层业务模块，能够按照相应协议对业务请求的处理数据进行封装，得到请求数据包；并对网络通道层发送的应答数据包进行解析；  所述网络通道层，设置有多个网络通道模块，能够将封装后的请求数据包向外发送，并接收来自外部的应答数据包。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59586873" lang="ZH" load-source="patent-office" class="description">
+    <p>客户端平台的实现方法及客户端平台</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及客户端技术领域，尤其是涉及�种客户端平台的实现方法及客户端平台。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着客户端技术的飞速发展，为了提升客户端的性能，开发了多种的客户端系统。</p>
+    <p>[0003]	在现有的客户端系统中，通常都具有用户界面、业务逻辑交互、协议及网络通信等功能，然而，现有的客户端系统中各个功能&#21336;元之间耦合性过强，导致一个功能&#21336;元出现故障时，影响整个客户端系统的运行，并且，现有的客户端系统通常采用整体化的设计，开发人员在创建客户端系统时，需要关注系统中所有功能的实现，导致开发难度过高，开发周期过长。</p>
+    <p>[0004]	如何在客户端上实现�种性能优越的客户端系统仍是业界目前研究的重要课题之一。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明实施例提供了一种客户端平台的实现方法及客户端平台，提高了系统的稳定性，改善了系统性能，缩短了平台开发周期，提高了开发效率。</p>
+    <p>[0006]	为达到上述目的，本发明实施例的技术方案是这样实现的：</p>
+    <p> [0007]	本发明实施例提供了一种客户端平台的实现方法，包括：</p>
+    <p>[0008]	设置用户界面UI模块、上层业务模块、下层业务模块和网络通道模块，所述UI模块具有界面实现功能，所述上层业务模块具有业务数据和流程处理功能，所述下层业务模块具有协议包封装和解析功能，所述网络通道模块具有网络连接和传输功能，其中，所述各模块中包括至少�个组件，姆个组件具有对外标准接ロ ；</p>
+    <p>[0009]	利用所述UI模块接收业务请求，并调用上层业务模块根据该业务请求进行相应业务处理，在下层业务模块对业务请求的处理数据按照相应协议封装之后，通过网络通道模块将封装后的请求数据包发送出去。</p>
+    <p>[0010]	本发明实施例还提供了一种客户端平台，包括n层、上层业务层、下层业务层和网络通道层，</p>
+    <p>[0011]	所述UI层，设置有多个UI模块，能够提供所需的界面，接收业务请求并将业务应答通知用户；</p>
+    <p>[0012]	所述上层业务层，设置有多个上层业务模块，能够处理所述业务请求的业务数据和流程，并对下层业务层发送来的业务应答数据进行处理；</p>
+    <p>[0013]	所述下层业务层，设置有多个下层业务模块，能够按照相应协议对业务请求的处理数据进行封装，得到请求数据包；并对网络通道层发送的应答数据包进行解析；</p>
+    <p>[0014]	所述网络通道层，设置有多个网络通道模块，能够将封装后的请求数据包向外发送，并接收来自外部的应答数据包。[0015]	由上述可见，本发明实施例的技术方案提供了�种新型的分层组件式的客户端平台架构，通过对客户端平台工作原理的分析，划分出UI层、上层业务层、下层业务层和网络通道层四个横向层次，每�层仅负责该层范围内功能的实现，层与层之间相对独立，通过统一的标准接ロ进行交互。利用不同层之间各模块的协同合作，在客户端平台上实现相应的业务。</p>
+    <p>[0016]	由于本方案不同层间以及模块之间的相对独立性，某个功能模块出现故障&#21515;，对整个客户端平台的影响很小，提高了系统的稳定性，改善了系统性能。</p>
+    <p>[0017]	并且，采用本方案的这种分层设计，在开发客户端平台时，可以分层分别实现，在设置每一层中的模块时，无需关注其他层的功能，大大降低了平台开发的技术难度，缩短了开发周期，提高了开发效率。</p>
+    <p>附图说明</p>
+    <p>[0018]	为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0019]	图1为本发明一个实施例提供的一种客户端平台的实现方法流程示意图；</p>
+    <p>[0020]	图2为本发明另�个实施例提供的一种客户端平台结构示意图；</p>
+    <p>[0021]	图3为本发明又一个实施例提供的一种客户端平台结构示意图。 具体实施方式</p>
+    <p>[0022]	下面将结合本发明的附图，对本发明的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有作出创造性劳动的前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0023]	本方案的技术构思主要在干，对客户端平台采用�种分层组件式的架构模型，平台中的主要模块分4层设计:ui层、上层业务层、下层业务层、网络通道层，由多个n模块构成Ui层，由多个上层业务模块构成上层业务层，由多个下层业务模块构成下层业务层，由多个网络通道模块构成网络通道层。UI层与业务无关，只负责业务定义的界面的实现；上层业务层与协议无关，只关心业务数据和流程；下层业务层与连接无关，只关心协议包的封装和解析；网络通道层面向连接，与承载数据体无关。并且，本方案中的客户端平台可以采用插件化的方式实现，实现方式更加灵活。</p>
+    <p>[0024]	本发明�个实施例提供了一种客户端平台的实现方法，&#21443;见图1，该方法包括：</p>
+    <p>[0025]	11 :设置用户界面（User Interface, UI)模块、上层业务模块、下层业务模块和网络通道模块，所述UI模块具有界面实现功能，所述上层业务模块具有业务数据和流程处理功能，所述下层业务模块具有协议包封装和解析功能，所述网络通道模块具有网络连接和传输功能，其中，所述各模块中包括至少�个组件，每个组件具有对外标准接ロ ；</p>
+    <p>[0026]	12 :利用所述UI模块接收业务请求；</p>
+    <p>[0027]	13 :调用上层业务模块根据该业务请求进行相应业务处理；[0028]	14 :利用下层业务模块对业务请求的处理数据按照相应协议封装；</p>
+    <p>[0029]	15 :通过网络通道模块将封装后的请求数据包发送出去。</p>
+    <p>[0030]	由上述可见，本发明实施例的技术方案提供了�种新型的分层组件式的客户端平台架构，通过对客户端平台工作原理的分析，划分出UI层、上层业务层、下层业务层和网络通道层四个横向层次，每�层仅负责该层范围内功能的实现，层与层之间相对独立，通过统一的标准接ロ进行交互。利用不同层之间各模块的协同合作，在客户端平台上实现相应的业务。</p>
+    <p>[0031]	由于本方案不同层间以及模块之间的相对独立性，某个功能模块出现故障&#21515;，对整个客户端平台的影响很小，提高了系统的稳定性，改善了系统性能。</p>
+    <p>[0032]	并且，采用本方案的这种分层设计，在开发客户端平台时，可以分层分别实现，在设置每一层中的模块时，无需关注其他层的功能，大大降低了平台开发的技术难度，缩短了开发周期，提高了开发效率。</p>
+    <p>[0033]	本发明另一实施例提供的一种客户端平台的实现方法，设置了 UI模块、上层业务模块、下层业务模块和网络通道模块，具体包括：</p>
+    <p>[0034]	在接收到用户下发的业务请求的指令后，利用UI模块接收业务请求，并调用上层业务模块根据该业务请求进行相应业务处理，在下层业务模块对业务请求的处理数据按照相应协议封装之后，通过网络通道模块将封装后的请求数据包发送出去。例如，将请求数据包通过网络发送至服务器，由服务器对业务请求作出响应。</p>
+    <p>[0035]	服务器将对上述业务请求的响应按照相关通信协议封装后，生成应答数据包，并该将应答数据包发送至客户端平台。客户端平台利用网络通道模块接收相应于所述业务请求的应答数据包，调用下层业务模块对所述应答数据包进行解析，得到业务应答数据；并在上层业务模块对所述业务应答数据进行业务处理之后，通过UI模块将业务应答通知用户。</p>
+    <p> [0036]	为了清楚说明本客户端平台的实现方法，对本平台中的各部件及其性能进行说明。</p>
+    <p>[0037]	本方案四层中的各个模块设计为标准动态库，一个模块内实现�个或多个组件，�个组件内实现�个或多个命令或事件。为模块、组件和命令都设置具有唯一性的标识(ID)。例如，模块在整个客户端平台中可以具有唯一 ID，组件在相应模块中具有唯一 ID，而命令或事件在组件中具有唯一 ID。各个组件对外提供标准的接ロ。</p>
+    <p>[0038]	组件实现说明</p>
+    <p>[0039]	本方案提供的组件功能的实现方式至少具有如下三种方式：</p>
+    <p>[0040]	I)执行命令方式</p>
+    <p>[0041]	组件间实现某种执行的功能，由调用方以执行命令的方式调用。即当第一模块中的组件调用第二模块中的组件时，由第一模块中的组件以执行命令的方式调用。</p>
+    <p>[0042]	2)订阅事件方式</p>
+    <p>[0043]	组件订阅某个事件，由事件激发方发起，并接受事件响应方调用。即当组件订阅事件&#21515;，由事件激发方发起订阅流程，由事件响应方调用该组件，实现该组件的事件订阅。</p>
+    <p>[0044]	3)自定义接ロ方式</p>
+    <p>[0045]	为组件设置自定义接ロ，通过该自定义接ロ调用组件中的相关功能。</p>
+    <p>[0046]	可以通过在组件中设置自定义功能函数来支持组件的自定义接ロ，不同组件除了彼此相同的对外标准接ロ之外，还可以分别具有自身专有的自定义接ロ，以提供个性化的服务。</p>
+    <p>[0047]	UI 组件</p>
+    <p>[0048]	UI模块中的组件的实现方式具有如下特性：</p>
+    <p>[0049]	(I)组件可以用不同技术方式实现界面。各个组件采用独立动态库，不包含业务逻辑。</p>
+    <p>[0050]	(2)UI组件能够动态更新，以实现界面的动态更新。例如，利用框架管理器中的更新服务管理器对n组件进行更新。</p>
+    <p>[0051]	(3)组件利用其内部 的消息源码模块，实现对外标准接ロ。</p>
+    <p>[0052]	上层业务组件</p>
+    <p>[0053]	上层业务主要用于实现对具体业务数据的处理，上层业务模块中的组件具有如下特性：</p>
+    <p>[0054]	(I)具有对外标准接ロ，处理与界面和用户交互的相关业务和流程，该相关业务可以为登录业务、计费业务、通话业务等多种可基于本平台实现的应用业务。</p>
+    <p>[0055]	(2)管理平台中其他模块的订阅事件。</p>
+    <p>[0056]	(3)存储相关数据（如订阅数据等）到框架管理器的数据管理器中。</p>
+    <p>[0057]	(4)调用下层业务组件的对外标准接ロ发送业务数据，注册订阅事件到下层业务组件以接收相关联的网络数据。</p>
+    <p>[0058]	下层业务组件</p>
+    <p>[0059]	下层业务主要涉及与协议相关的处理，下层业务模块中的组件具有如下特性：</p>
+    <p>[0060]	(I)下层业务组件，能够处理网络数据或本地数据，具有对外标准接ロ，处理与协议相关的下层业务。</p>
+    <p>[0061 ] (2)能够实现网络数据的封装和解析、底层数据的选择和插入。</p>
+    <p>[0062]	(3)能够调用网络通道组件的对外标准接ロ发送网络数据，接收来自网络通道组件的网络数据。</p>
+    <p>[0063]	网络通道组件</p>
+    <p>[0064]	网络通道模块中的组件实现具有如下特性：</p>
+    <p>[0065]	(I)用于网络传输的通道动态库组件，具有对外标准接ロ，实现底层的网络层。</p>
+    <p>[0066]	(2)提供网络数据的连接、发送、接收等。</p>
+    <p>[0067]	(3)能够对接收到的网络数据做初&#27497;分析，再分发至上层业务组件或下层业务组件中。</p>
+    <p>[0068]	进�步的，为了保证客户端平台的成功运行，本方案还设置了框架管理器对平台中各层之间以及同一层中的模块和组件进行协调和服务，&#21443;见图2，显示了本发明实施例所实现客户端平台的一种结构示意图，框架管理器中主要包括如下部件：</p>
+    <p>[0069]	核心管理器</p>
+    <p>[0070]	(I)框架管理器中的核心模块，实现框架管理器的接ロ，对框架管理器中的各具体功能管理器（如界面管理器、上层业务管理器等）进行控制。</p>
+    <p>[0071]	(2)初始化时读取各功能管理器的配置文件，加载并管理各个管理器或组件的动态库模块。[0072]	(3)支持组件间的查询接ロ。</p>
+    <p>[0073]	界面管理器</p>
+    <p>[0074]	(I)读取UI组件的配置文件，加载各UI动态库模块，实现UI界面管理器的接ロ。</p>
+    <p>[0075]	(2)线性化管理n组件的对外标准接ロ，并提供查询。</p>
+    <p>[0076]	上层业务管理器</p>
+    <p>[0077]	(I)读取上层业务组件的配置文件，加载业务模块。</p>
+    <p>[0078]	(2)线性化管理业务组件的对外标准接ロ，并提供查询。</p>
+    <p>[0079]	下层业务管理器</p>
+    <p>[0080]	(I)能够对下层网络协议业务处理进行管理。</p>
+    <p>[0081]	(2)读取配下层业务组件的配置文件，加载动态库模块，线性化管理对外标准接□。</p>
+    <p>[0082]	网络通道管理器</p>
+    <p>[0083]	(I)对网络通道层进行管理，实现网络通道管理器的接ロ。</p>
+    <p> [0084]	(2)读取网络通道层的配置文件，加载动态库模块，线性化管理各网络通道的对外标准接ロ。</p>
+    <p> [0085]	任务服务管理器</p>
+    <p>[0086]	本方案的任务服务管理器的实现具有如下特性：</p>
+    <p>[0087]	(I)完全分离UI主线程。</p>
+    <p>[0088]	(2)创建业务线程，管理全局调度线程。业务处理模块运行在独立�个业务线程中，目的是保持数据的一致性。</p>
+    <p>[0089]	(3)实现任务接ロ，提供创建和添加任务函数接ロ。</p>
+    <p>[0090]	(4)线程实现时调用目标组件的命令执行函数接ロ。</p>
+    <p>[0091]	(5)任务实现由任务服务管理器进行分配、管理并释放，调用者无需释放。</p>
+    <p>[0092]	数据管理器</p>
+    <p>[0093]	本方案的数据管理器的实现具有如下特性：</p>
+    <p>[0094]	(I)数据管理器可以由数据存储动态库模块实现，提供数据接ロ，负责各种数据的存储和查询，负责数据磁盘文件的读写。</p>
+    <p>[0095]	(2)定义数据结构基类。</p>
+    <p>[0096]	安全管理器</p>
+    <p>[0097]	本方案还设置了安全动态库模块，具有数据安全验证功能，上述安全管理器具有如下特性：</p>
+    <p>[0098]	(I)对安全动态库模块进行管理，实现安全管理器接ロ。</p>
+    <p>[0099]	(2)读取安全动态库模块的配置文件，加载并管理各安全模块，提供查询安全接□。</p>
+    <p>[0100]	更新服务管理器</p>
+    <p>[0101]	本方案的更新服务管理器具有如下特性：</p>
+    <p>[0102]	(I)提供更新服务，实现更新接ロ，封装对更新的调用。</p>
+    <p>[0103]	(2)启动后的检查更新，可进一步设直为定时启动检查更新。</p>
+    <p>[0104]	(3)支持用户的手动更新。[0105]	(4)能够接收服务端推送更新消息。</p>
+    <p>[0106]	第三方管理器</p>
+    <p>[0107]	向第三方应用提供功能接ロ，支持第三方组件灵活地接入系统。</p>
+    <p>[0108]	由上所述，本方案能够利用框架管理器中的界面管理器、上层业务管理器、下层业务管理器和网络通道管理器分别维护相应各模块的配置文件、提供组件之间的查询接ロ，并对各组件的对外标准接ロ进行管理。模块的配置文件可以包含：模块（或组件）名称、路径、是否运行时加载等信息。</p>
+    <p>[0109]	进�步的，本方案还能够利用框架管理器执行下述的至少�种管理：</p>
+    <p>[0110]	利用框架管理器中的任务服务管理器对所述各模块所对应的线程进行管理；</p>
+    <p>[0111]	利用框架管理器中的数据管理器对关联于所述各模块的数据进行管理；</p>
+    <p>[0112]	利用框架管理器中的安全管理器对安全动态库模块进行管理；</p>
+    <p>[0113]	利用框架管理器中的更新服务管理器对各组件的对外标准接ロ进行更新；</p>
+    <p>[0114]	利用框架管理器中的第三方管理器向第三方提供功能接ロ。</p>
+    <p>[0115]	通过上述方式，框架管理器能够对平台中各层之间以及同一层中的模块和组件进行协调和服务。上述框架管理器可以在客户端平台启动时加载，n模块、上层业务模块、下层业务模块和网络通道模块中的各组件等可以在客户端平台启动加载时，也可以在接收到调用命令时加载。</p>
+    <p> [0116]	进�步的，本方案中的各模块和组件采用ニ进制模块实现，框架管理器与各模块之间、所述不同模块之间以及所述不同组件之间采用松耦合关联方式，以保证各层之间，同层的模块组件之间具有相对的独立性，不会相互影响。</p>
+    <p>[0117]	由于本方案不同层间以及模块之间的相对独立性，某个功能模块出现故障&#21515;，对整个客户端平台的影响很小，提高了系统的稳定性，改善了系统性能。</p>
+    <p>[0118]	并且，采用本方案的这种分层设计，在开发客户端平台时，可以分层分别实现，在设置每一层中的模块时，无需关注其他层的功能，大大降低了平台开发的技术难度，缩短了开发周期，提高了开发效率。</p>
+    <p>[0119]	本发明又一实施例中以在本客户端平台上实现一次登录业务为例进一步说明本客户端平台的实现方式和工作流程。</p>
+    <p>[0120]	本平台上的登录业务由登录界面模块、登录上层业务模块、登录下层业务模块、网络通道模块四个模块构成，其中前三者为登录业务私有模块，网络通道模块为系统公共模块，即不同的应用业务可以使用同一个网络通道模块。</p>
+    <p>[0121]1.登录界面实现。</p>
+    <p>[0122]	登录界面模块实现登录组件的标准接ロ，所有与登录相关的界面在�个动态库中实现，由登录界面读取用户输入的指令并添加登录任务到业务线程中。</p>
+    <p>[0123]	2.上层业务</p>
+    <p>[0124]	登录上层业务模块可以执行如下操作：</p>
+    <p>[0125]	(I)对登录数据合法性进行检查，允许合法数据的登录系统，禁止非法数据。</p>
+    <p>[0126]	(2)以应用命令方式执行登录，并接收处理用户名与密码的身份合法性检查，保证合法用户使用登录功能。</p>
+    <p>[0127]	(3)添加任务到业务线程中，调用登录下层业务模块。[0128]	3.下层业务</p>
+    <p>[0129] (1)将登录数据封装成登录协议，生成封装后的数据包，然后调用网络通道模块发送数据包。</p>
+    <p>[0130]	(2)当接收到网络通道模块返回的登录应答后，在登录应答的数据流中，解析出登录&#32080;果，返回给登录上层业务模块。</p>
+    <p>[0131]	4.网络处理</p>
+    <p>[0132]	网络通道模块连接网络服务器、发送上层业务封装好的数据包，接收服务器返回的登录应答数据，并发送给登录下层业务模块。</p>
+    <p>[0133]	本发明又�实施例还提供了一种客户端平台，&#21443;见图3，所述平台包括瓜层31、上层业务层32、下层业务层33和网络通道层34，</p>
+    <p>[0134]	所述n层31，设置有多个n模块，能够提供所需的界面，接收业务请求并将业务应答通知用户；</p>
+    <p>[0135]	所述上层业务层32，设置有多个上层业务模块，能够处理所述业务请求的业务数据和流程，并对下层业务层发送来的业务应答数据进行处理；</p>
+    <p>[0136]	所述下层业务层33，设置有多个下层业务模块，能够按照相应协议对业务请求的处理数据进行封装，得到请求数据包；并对网络通道层发送的应答数据包进行解析；</p>
+    <p>[0137]	所述网络通道层34，设置有多个网络通道模块，能够将封装后的请求数据包向外发送，并接收来自外部的应答数据包。</p>
+    <p>[0138]	进�步的，客户端平台中还可以包括框架管理器35，对平台中各层之间以及同一层中的模块和组件进行协调和服务。</p>
+    <p>[0139]	本方案中的各模块和组件采用ニ进制模块实现，框架管理器与各模块之间、所述不同模块之间以及所述不同组件之间采用松耦合关联方式，以保证各层之间，同层的模块组件之间具有相&#23550;的独立性，不会相互影响。</p>
+    <p>[0140]	由上所述本方案至少具有如下有益效果：</p>
+    <p>[0141]1.架构模型分层设计方面</p>
+    <p>[0142]	主要模块分4层设计：n层、上层业务层、下层业务层、网络通道层。随着功能要求的&#22679;加，如不属于四层的模块业务，可进行动态的增加相应模块和功能管理器来满足业务要求。</p>
+    <p>[0143]	2.架构中模块组件式方面</p>
+    <p>[0144]	模块和组件以ニ进制方式提供，框架、模块、组件等之间采用松耦合关联方式。</p>
+    <p>[0145]	3.模块的接入插件化方面</p>
+    <p>[0146]	本方案支持组件的下载、加载与卸载，支持第三方组件灵活的接入系统。</p>
+    <p>[0147]	以上所述仅为本发明的较佳实施例而已，并不用以限制本发明，凡在本发明的精神和原则之内，所做的任何修改、等同替换、改进等，均应包含在本发明保护的范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101056202A?cl=zh">CN101056202A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年5月31日</td><td class="patent-data-table-td patent-date-value">2007年10月17日</td><td class="patent-data-table-td ">武汉虹信通信技术有限责任公司</td><td class="patent-data-table-td ">一种网管监控系统实现多任务轮询的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101291326A?cl=zh">CN101291326A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年5月28日</td><td class="patent-data-table-td patent-date-value">2008年10月22日</td><td class="patent-data-table-td ">珠海中慧微电子有限公司;长沙威胜电子有限公司</td><td class="patent-data-table-td ">通信协议栈动态链接库</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101360263A?cl=zh">CN101360263A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年7月31日</td><td class="patent-data-table-td patent-date-value">2009年2月4日</td><td class="patent-data-table-td ">华源润通（北京）科技有限公司</td><td class="patent-data-table-td ">一种移动查询系统的客户端以及前后台数据处理方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101605143A?cl=zh">CN101605143A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月19日</td><td class="patent-data-table-td patent-date-value">2009年12月16日</td><td class="patent-data-table-td ">杨昕吉</td><td class="patent-data-table-td ">新型网络电子名片系统的实现方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20050015395">US20050015395</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2004年7月13日</td><td class="patent-data-table-td patent-date-value">2005年1月20日</td><td class="patent-data-table-td ">Canon Kabushiki Kaisha</td><td class="patent-data-table-td ">User interface control apparatus and method thereof</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">香华冠, 冯刚: "<a href='http://scholar.google.com/scholar?q="%22%E7%A7%BB%E5%8A%A8%E5%AF%8C%E5%AA%92%E4%BD%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%9A%84%E7%A0%94%E7%A9%B6%E4%B8%8E%E8%AE%BE%E8%AE%A1%22"'>"移动富媒体客户端的研究与设计"</a>", 《计算机技术与发展》, vol. 20, no. 7, 31 July 2010 (2010-07-31)</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015100646A1?cl=zh">WO2015100646A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年12月31日</td><td class="patent-data-table-td patent-date-value">2015年7月9日</td><td class="patent-data-table-td ">北京新媒传信科技有限公司</td><td class="patent-data-table-td ">软件架构的实现方法和实现平台</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=X7jvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009440000">G06F9/44</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=X7jvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年4月10日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年5月8日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年4月20日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/8465642ca2de3a4bf406/CN103036917A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%E5%8F%8A%E5%AE%A2%E6%88%B7.pdf?id=X7jvBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2dpq0q5ywRDNxL4GsxM5uB8vBJHg"},"sample_url":"https://www.google.com/patents/reader?id=X7jvBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

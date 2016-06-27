@@ -1,0 +1,244 @@
+<!DOCTYPE html><html><head><title>专利 CN101668016A - 鉴权方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="鉴权方法及装置"><meta name="DC.contributor" content="谢国军" scheme="inventor"><meta name="DC.contributor" content="谢秀洪" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2009-9-30" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例提供了一种鉴权方法及装置，所述方法包括：接收用户设备UE发送的IP多媒体子系统IMS网络鉴权请求；根据所述IMS网络鉴权请求，从归属用户服务器HSS获取应用服务器鉴权信息；向所述UE发送包含所述应用服务器鉴权信息的IMS网络鉴权响应消息，以触发所述UE利用所述应用服务器鉴权信息到所述应用服务器进行鉴权。本发明实施例的方法通过在IMS网络鉴权返回的结果中携带应用服务器的鉴权信息，实现了IMS和应用服务器的统一鉴权，而不需要用户手动干预应用服务器的鉴权过程。该方法给用户使用和运营商管理都带来很大方便；并且，充分利用现有IMS鉴权流程，实现简单。"><meta name="DC.date" content="2010-3-10"><meta name="citation_patent_publication_number" content="CN:101668016:A"><meta name="citation_patent_application_number" content="CN:200910174570"><link rel="canonical" href="https://www.google.com/patents/CN101668016A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101668016A?cl=zh"/><meta name="title" content="专利 CN101668016A - 鉴权方法及装置"/><meta name="description" content="本发明实施例提供了一种鉴权方法及装置，所述方法包括：接收用户设备UE发送的IP多媒体子系统IMS网络鉴权请求；根据所述IMS网络鉴权请求，从归属用户服务器HSS获取应用服务器鉴权信息；向所述UE发送包含所述应用服务器鉴权信息的IMS网络鉴权响应消息，以触发所述UE利用所述应用服务器鉴权信息到所述应用服务器进行鉴权。本发明实施例的方法通过在IMS网络鉴权返回的结果中携带应用服务器的鉴权信息，实现了IMS和应用服务器的统一鉴权，而不需要用户手动干预应用服务器的鉴权过程。该方法给用户使用和运营商管理都带来很大方便；并且，充分利用现有IMS鉴权流程，实现简单。"/><meta property="og:title" content="专利 CN101668016A - 鉴权方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101668016A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101668016A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=kNN3BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101668016A&amp;usg=AFQjCNHR1nUNec_JFVd_MWDQc_Y34Lo-rw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3d01e2bdec33473d22a9/CN101668016A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3d01e2bdec33473d22a9/CN101668016A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101668016A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101668016A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101668016A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101668016B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101668016A?cl=zh" style="display:none"><span itemprop="description">本发明实施例提供了一种鉴权方法及装置，所述方法包括：接收用户设备UE发送的IP多媒体子系统IMS网络鉴权请求；根据所述IMS网络鉴权请求，从归属用户服务器HSS获取应用服务器鉴权信息；向所述UE发送包含所述应用服务器鉴权...</span><span itemprop="url">https://www.google.com/patents/CN101668016A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101668016A - 鉴权方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101668016A - 鉴权方法及装置" title="专利 CN101668016A - 鉴权方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101668016 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910174570</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年3月10日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年9月30日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年9月30日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101668016B?hl=zh-CN&amp;cl=zh">CN101668016B</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2011038691A1?hl=zh-CN&amp;cl=zh">WO2011038691A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910174570.1, </span><span class="patent-bibdata-value">CN 101668016 A, </span><span class="patent-bibdata-value">CN 101668016A, </span><span class="patent-bibdata-value">CN 200910174570, </span><span class="patent-bibdata-value">CN-A-101668016, </span><span class="patent-bibdata-value">CN101668016 A, </span><span class="patent-bibdata-value">CN101668016A, </span><span class="patent-bibdata-value">CN200910174570, </span><span class="patent-bibdata-value">CN200910174570.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B0%A2%E5%9B%BD%E5%86%9B%22">谢国军</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B0%A2%E7%A7%80%E6%B4%AA%22">谢秀洪</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101668016A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101668016A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101668016A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (5),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=kNN3BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910174570&amp;usg=AFQjCNFF4gGawqdIh6qE1laXXbe8yROJCA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=kNN3BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101668016A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGnVKE8STnk3lsHHrGSNZ-9Q5kb2w"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT92947802" lang="ZH" load-source="patent-office">鉴权方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 101668016 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA74059905" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例提供了一种鉴权方法及装置，所述方法包括：接收用户设备UE发送的IP多媒体子系统IMS网络鉴权请求；根据所述IMS网络鉴权请求，从归属用户服务器HSS获取应用服务器鉴权信息；向所述UE发送包含所述应用服务器鉴权信息的IMS网络鉴权响应消息，以触发所述UE利用所述应用服务器鉴权信息到所述应用服务器进行鉴权。本发明实施例的方法通过在IMS网络鉴权返回的结果中携带应用服务器的鉴权信息，实现了IMS和应用服务器的统一鉴权，而不需要用户手动干预应用服务器的鉴权过程。该方法给用户使用和运营商管理都带来很大方便；并且，充分利用现有IMS鉴权流程，实现简单。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(20)</span></span></div><div class="patent-text"><div mxw-id="PCLM30351610" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种鉴权方法，其特征在于，所述鉴权方法包括：    接收用户设备UE发送的IP多媒体子系统IMS网络鉴权请求；    根据所述IMS网络鉴权请求，从归属用户服务器HSS获取应用服务器鉴权信息；    向所述UE发送包含所述应用服务器鉴权信息的IMS网络鉴权响应消息，以触发所述UE利用所述应用服务器鉴权信息到所述应用服务器进行鉴权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求1所述的方法，其特征在于，根据所述IMS网络鉴权请 求，从归属用户服务器HSS获取应用服务器鉴权信息包括：向归属用户服务器HSS发送SAR消息，以获取所述UE的用户签约信息 User Profile;接收所述HSS发送的SAA消息，所述SAA消息包含所述User Profile, 且所述User Profile携带应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求1所述的方法，其特征在于，向所述UE发送包含所述 应用服务器鉴权信息的MS网络鉴权响应消息包括：向所述UE发送IMS网络鉴权响应消息200 OK，所述200 OK中增加关 联统一资源标识P-Associated-URI头域，所述P-Associated-URI头域携带所述 应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求1所述的方法，其特征在于，向所述UE发送包含所述 应用服务器鉴权信息的IMS网络鉴权响应消息包括：采用校验比特CK或HA1对所述应用服务器鉴权信息进行加密； 向所述UE发送IMS网络鉴权响应消息，所述IMS网络鉴权响应消息包 含采用CK或HA1加密后的所述应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5、 一种鉴权信息传输方法，其特征在于，所述方法包括： 接收呼叫会话控制功能实体CSCF发送的第一消息，所述第一消息中包含请求进行IMS网络鉴权的UE标识；根据所述第一消息，判断是否存在与所述UE对应的应用服务器鉴权信息；当存在与所述UE对应的应用服务器鉴权信息时，向所述CSCF发送包含 所述UE对应的应用服务器鉴权信息的第二消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求5所述的方法，其特征在于，所述第一消息为SAR消 息，所述第二消息为SAA消息；向所述CSCF发送包含所述应用服务器鉴权信息的第二消息包括：向所 述CSCF发送SAA消息，所述SAA消息包含所述UE的用户签约信息User Profile,且所述User Profile携带所述应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7、 一种鉴权方法，其特征在于，所述鉴权方法包括-向呼叫会话控制功能实体CSCF发送IP多媒体子系统IMS网络鉴权请求； 接收所述CSCF发送的IMS网络鉴权响应消息，所述IMS网络鉴权响应 消息携带应用服务器鉴权信息；利用所述应用服务器鉴权信息到所述应用服务器进行鉴权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 根据权利要求7所述的方法，其特征在于，接收所述CSCF发送的IMS 网络鉴权响应消息，所述IMS网络鉴权响应消息携带应用服务器鉴权信息包 括：接收所述CSCF发送的IMS网络鉴权响应消息200 OK,所述200 OK包 含关联统一资源标识P-Associated-URI头域，所述P-Associated-URI头域携带 应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 根据权利要求7所述的方法，其特征在于，接收所述CSCF发送的IMS 网络鉴权响应消息，所述IMS网络鉴权响应消息携带应用服务器鉴权信息包 括：接收所述CSCF发送的IMS网络鉴权响应消息，所述IMS网络鉴权响应 消息携带采用校验比特CK或HA1加密的应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求9所述的方法，其特征在于，利用所述应用服务器鉴 权信息到所述应用服务器进行鉴权之前还包括-采用校验比特CK或HA1解密所述应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11、 一种呼叫会话控制功能实体CSCF，其特征在于，所述呼叫会话控制 功能实体CSCF包括：鉴权请求接收单元，用于接收用户设备UE发送的IP多媒体子系统IMS 网络鉴权请求；鉴权信息获取单元，用于根据所述IMS网络鉴权请求，从归属用户服务 器HSS获取应用服务器鉴权信息；鉴权响应发送单元，用于向所述UE发送包含所述应用服务器鉴权信息的 IMS网络鉴权响应消息，以触发所述UE利用所述应用服务器鉴权信息到所述 应用服务器进行鉴权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12、 根据权利要求11所述的呼叫会话控制功能实体CSCF,其特征在于，所述鉴权信息获取单元包括-请求子单元，用于向归属用户服务器HSS发送SAR消息，以获取所述 UE的用户签约信息User Profile;接收子单元，用于接收所述HSS发送的SAA消息，所述SAA消息包含 所述User Profile,且所述User Profile携带应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 根据权利要求11所述的呼叫会话控制功能实体CSCF，其特征在于， 所述鉴权响应发送单元，用于向所述UE发送IMS网络鉴权响应消息200OK，所述200 OK中增加关联统一资源标识P-Associated-URI头域，所述 P-Associated-URI头域携带所述应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14、 根据权利要求11所述的呼叫会话控制功能实体CSCF，其特征在于， 所述鉴权响应发送单元包括：加密子单元，用于采用校验比特CK或HA1对所述应用服务器鉴权信息进行 加密；发送子单元，用于向所述UE发送IMS网络鉴权响应消息，所述IMS网 络鉴权响应消息包含采用CK或HA1加密后的所述应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15、 一种归属用户服务器，其特征在于，所述归属用户服务器包括： 接收单元，用于接收呼叫会话控制功能实体CSCF发送的第一消息，所述第一消息中包含请求进行IMS网络鉴权的UE标识；判断单元，用于判断是否存在与所述UE对应的应用服务器鉴权信息； 发送单元，用于当存在与所述UE对应的应用服务器鉴权信息时，向所述CSCF发送包含所述UE对应的应用服务器鉴权信息的第二消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16、 根据权利要求15所述的归属用户服务器，其特征在于，所述第一消 息为SAR消息，所述第二消息为SAA消息，所述发送单元，用于当存在与所述UE对应的应用服务器鉴权信息时，向 所述CSCF发送SAA消息,所述SAA消息包含所述UE的用户签约信息User Profile,且所述User Profile携带所述应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17、 一种用户设备，其特征在于，所述用户设备包括： 第一鉴权请求发送单元，用于向呼叫会话控制功能实体CSCF发送IP多媒体子系统IMS网络鉴权请求；鉴权响应接收单元，用于接收所述CSCF发送的IMS网络鉴权响应消息， 所述IMS网络鉴权响应消息携带应用服务器鉴权信息；第二鉴权请求发送单元，用于利用所述应用服务器鉴权信息到所述应用 服务器进行鉴权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18、 根据权利要求17所述的用户设备，其特征在于， 所述鉴权响应接收单元，用于接收所述CSCF发送的IMS网络鉴权响应消息200 OK，所述200 OK包含关联统一资源标识P-Associated-URI头域， 所述P-Associated-URI头域携带应用服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19、 根据权利要求17所述的用户设备，其特征在于， 所述鉴权响应接收单元，用于接收所述CSCF发送的IMS网络鉴权响应消息，所述IMS网络鉴权响应消息携带采用校验比特CK或HA1加密的应用 服务器鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20、根据权利要求19所述的用户设备，其特征在于，所述用户设备还包括: 解密单元，用于采用校验比特CK或HA1解密所述应用服务器鉴权信息。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES36811271" lang="ZH" load-source="patent-office" class="description">
+    <p>鉴权方法及装置</p>
+    <p>技术领域</p>
+    <p>本发明涉及通信领域，具体地涉及一种鉴权方法及装置。 背景技术</p>
+    <p>在IMS (IP multimedia subsystem, IP多媒体子系统）网络中，除了提供 基本电信类业务的网络设备外，还有很多提供增值业务的应用服务器。这类 应用服务器可以独立于IMS网络运行，为保证合法的业务使用以及正确的计 费，很多应用服务器都需要单独对UE (UserEquipment,用户设备）进行鉴 权。比如一个提供通讯录存储和管理的应用服务器GROUP,无论UE是否已 经通过IMS网络的鉴权，UE在正常使用GROUP提供的服务前，都必须提供 正确的用户名和密码以通过GROUP的鉴权。</p>
+    <p>图1为现有技术的IMS网络鉴权和应用服务器鉴权流程图。如图1所示， 其中S101-S104为现有技术的IMS网络标准鉴权流程；S105-S107为现有技 术的应用服务器鉴权流程，其中S105需要用户再次手动输入鉴权信息。</p>
+    <p>发明人在实现本发明的过程中发现，现有技术至少存在以下不足：现有 技术在每次的鉴权过程中都需要用户进行干预，无法实现自动鉴权，不方便 用户的使用；现有技术的方法无法实现对IMS网络和应用服务器的统一鉴权。</p>
+    <p>发明内容</p>
+    <p>本发明实施例提供了一种鉴权方法、鉴权信息传输方法及装置。 一方面，本发明实施例提供了一种鉴权方法，所述方法包括：接收用户 设备UE发送的IP多媒体子系统IMS网络鉴权请求；根据所述IMS网络鉴权 请求，从归属用户服务器HSS获取应用服务器鉴权信息；向所述UE发送包含所述应用服务器鉴权信息的IMS网络鉴权响应消息，以触发所述UE利用</p>
+    <p>所述应用服务器鉴权信息到所述应用服务器进行鉴权。</p>
+    <p>又一方面，本发明实施例提供了一种鉴权信息传输方法，所述方法包括:</p>
+    <p>接收呼叫会话控制功能实体CSCF发送的第一消息，所述第-'消总中包 含请求进行IMS网络鉴权的UE标识；根据所述第一消息，判断是否存在与 所述UE对应的应用服务器鉴权信息；当存在与所述UE对应的应用服务器鉴 权信息时，向所述CSCF发送包含所述UE对应的应用服务器鉴权信息的第二 消息。</p>
+    <p>还有一方面，本发明实施例提供了一种鉴权方法，所述鉴权方法包括： 向呼叫会话控制功能实体CSCF发送IP多媒体子系统IMS网络鉴权请求；接 收所述CSCF发送的IMS网络鉴权响应消息，所述IMS网络鉴权响应消息携 带应用服务器鉴权信息；利用所述应用服务器鉴权信息到所述应用服务器进 行鉴权。</p>
+    <p>另一方面，本发明实施例提供了一种呼叫会话控制功能实体CSCF，所述 呼叫会话控制功能实体CSCF包括：鉴权请求接收单元，用于接收用户设备 UE发送的IP多媒体子系统IMS网络鉴权请求；鉴权信息获取单元，用于根 据所述IMS网络鉴权请求，从归属用户服务器HSS获取应用服务器鉴权信息； 鉴权响应发送单元，用于向所述UE发送包含所述应用服务器鉴权信息的IMS 网络鉴权响应消息，以触发所述UE利用所述应用服务器鉴权信息到所述应用 服务器进行鉴权。</p>
+    <p>再一方面，本发明实施例提供了一种归属用户服务器，所述归属用户服 务器包括：接收单元，用于接收呼叫会话控制功能实体CSCF发送的第一消 息，所述第一消息中包含请求进行IMS网络鉴权的UE标识；判断单元，用 于判断是否存在与所述UE对应的应用服务器鉴权信息；发送单元，用亍当存 在与所述UE对应的应用服务器鉴权信息时，向所述CSCF发送包含所述UE 对应的应用服务器鉴权信息的第二消息。最后一方面，本发明实施例提供了一种用户设备，所述用户设备包括： 第一鉴权请求发送单元，用于向呼叫会话控制功能实体CSCF发送IP多媒体 子系统IMS网络鉴权请求；鉴权响应接收单元，用于接收所述CSCF发送的</p>
+    <p>IMS网络鉴权响应消息，所述IMS网络鉴权响应消息携带应用服务器鉴权信 息；第二鉴权请求发送单元，用于利用所述应用服务器鉴权信息到所述应用 服务器进行鉴权。</p>
+    <p>本发明实施例提供的技术方案，通过在IMS网络鉴权返回的结果中携带 应用服务器的鉴权信息，实现了 IMS网络和应用服务器的统一鉴权，同时实 现了对应用服务器的自动鉴权，即在鉴权过程中无需用户进行干预，给用户 使用和运营商管理都带来很大方便；充分利用现有IMS网络鉴权流程，实现 简单。</p>
+    <p>附图说明</p>
+    <p>为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实 施例或现有技术描述中所需要使用的附图作一简单地介绍，显而易见地，下 面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲， 在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>图1为现有技术的IMS网络鉴权和应用服务器鉴权流程图；</p>
+    <p>图2为本发明实施例1的系统的信令交互流程图；</p>
+    <p>图3为本发明实施例1的系统功能框图；</p>
+    <p>图4为本发明实施例2的方法的整体流程图；</p>
+    <p>图4a本发明实施例2的方法的具体流程图一；</p>
+    <p>图4b为本发明实施例2的方法的具体流程图二；</p>
+    <p>图4c为本发明实施例2的方法的具体流程图三；</p>
+    <p>图5为本发明实施例3的方法流程图；</p>
+    <p>图6为本发明实施例3的User Profile的扩展结构示意图；图7为本发明实施例3的user profile的in-line格式示例图； 图8为本发明实施例3的应用服务器鉴权信息的结构示意图； 图9为本发明实施例3的Add-ons字段的定义图； 图10为本发明实施例4的方法的整体流程图； 图10a为本发明实施例4的方法的具体流程图一； 图10b为本发明实施例4的方法的具体流程图二；</p>
+    <p>图11为本发明实施例5的呼叫会话控制功能实体的功能框图； 图Ua为本发明实施例5的鉴权信息获取单元的功能框图； 图lib为本发明实施例5的鉴权响应发送单元的功能框图； 图12为本发明实施例6的归属用户服务器的功能框图； 图13为本发明实施例7的用户设备的整体功能框图； 图14为本发明实施例7的用户设备的细化功能框图。</p>
+    <p>具体实施方式</p>
+    <p>为使本发明实施例的目的、技术方案和优点更加清楚，下面将结合本发 明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述， 显然，所描述的实施例是本发明一部分实施例，而不是全部的实施例。基于 本发明中的实施例，本领域普通技术人员在没有作出创造性劳动前提下所获 得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>本发明实施例所述的应用服务器主要指其独立于IMS网络，需要独立鉴 权的应用服务器，这类应用服务器通常独立提供增值业务，例如"WEB域应 用服务器"。</p>
+    <p>HSS (Home Subscriber System,归属用户服务器）与CSCF (Call Session Control Functions ，呼叫会话控制功能）之间的接口包括Cx接口，其主要功 能包括位置管理、用户数据下载/更新处理、用户鉴权等。</p>
+    <p>实施例1:</p>
+    <p>10本发明实施例1提供了一种IP多媒体子系统IMS网络和应用服务器统一 鉴权的方法与系统。</p>
+    <p>本发明实施例1利用现有IMS设备和流程，进行适当扩展，支持IMS网 络和应用服务器的统一鉴权。即UE在IMS网络鉴权通过后，利用在IMS网 络鉴权过程中获取到的鉴权信息，对已授权的UE所使用的其它应用服务器进 行自动鉴权，用户不需要进行干预。</p>
+    <p>图2为本发明实施例1的系统的信令交互流程图。如图2所示，该信令 交互流程包括：</p>
+    <p>5201、 用户设备UE进行IP多媒体子系统IMS网络鉴权，UE向CSCF 发送IMS网络鉴权请求；</p>
+    <p>鉴权算法包括：IMSAKA (Authentication and Key Agreement,认证和密 钥协商）、Early AKA、或HTTP Digest (HTTP摘要鉴权算法）等；</p>
+    <p>5202、 CSCF向HSS发送SAR消息，以获取UE的用户签约信息User Profile;</p>
+    <p>5203、 HSS通过扩展的SAA消息向CSCF返回UE的用户签约信息User Profile;如果对应的IMPU (IP Multimedia Public Identity, IP多媒体公有标识） 或IRS (Implicitly Registered Set,隐式注册集）存在关联的应用服务器鉴权信 息，则在User Profile中包含应用服务器鉴权信息；否则在User Profile中不包</p>
+    <p>含应用服务器鉴权信息；</p>
+    <p>5204、 CSCF判断User Profile是否附带应用服务器鉴权信息，如不附带， 则向UE返回与现有技术一致的IMS网络鉴权响应消息200 OK;如附带，则 向UE返回IMS网络鉴权响应消息200 OK，并且该200 OK携带上述应用服 务器鉴权信息；</p>
+    <p>5205、 UE接收200OK时，取出应用服务器鉴权信息；</p>
+    <p>如果在200 OK中增加关联统一资源标识P-Associated-URI头域，并且采 用P-Associated-URI头域携带应用服务器鉴权信息，则UE检&#26619;p-aso-uri-spec列表中是否附带http-usemame、http-token等参数。从第一个带有http-username 参数的URI中，取出http-token及其后的其他参数；并使用CK (CheckBit， 校验比特）进行解密；如果UE和IMS网络采用HTTP Digest鉴权时，则采 用HA1进行解密。</p>
+    <p>5206、 UE根据返回的鉴权信息到应用服务器进行鉴权； 如果应用服务器采用HTTP Digest鉴权方法对用户鉴权。UE使用从IMS</p>
+    <p>网络得到的HTTP username、 HTTP Token (WEB Password),计算鉴权Digest 响应，完成鉴权。</p>
+    <p>5207、 应用服务器返回鉴权结果。</p>
+    <p>当UE需要到多个应用服务器进行鉴权时，重复执行S206-S207。</p>
+    <p>本发明实施例1的系统，利用现有的鉴权流程实现了对IMS网络和应用 服务器的统一鉴权。</p>
+    <p>图3为本发明实施例1的系统功能框图。如图3所示，本发明实施例1 的一种IP多媒体子系统IMS网络和应用服务器统一鉴权的系统10包括：</p>
+    <p>用户设备UEIOI，用于向呼叫会话控制功能实体CSCF102发送IP多媒 体子系统IMS网络鉴权请求；接收所述CSCF102发送的IMS网络鉴权响应 消息200 OK，所述200 OK携带应用服务器的鉴权信息；利用所述应用服务 器鉴权信息到应用服务器进行鉴权；</p>
+    <p>呼叫会话控制功能实体CSCF102，用于接收用户设备UE101发送的IP 多媒体子系统IMS网络鉴权请求；向归属用户服务器HSS103发送SAR消息， 以获取所述UE101的用户签约信息User Profile;接收所述HSS103发送的SAA 消息，所述SAA消息包含所述User Profile,且所述User Profile携带应用服 务器鉴权信息；向所述UE101发送包含所述应用服务器鉴权信息的IMS网络 鉴权响应消息200OK，以触发所述UE101利用所述应用服务器鉴权信息到应 用服务器104进行鉴权；</p>
+    <p>归属用户服务器HSS103,用于接收呼叫会话控制功能实体CSCF102发</p>
+    <p>12送的SAR消息；当存储了与UE101对应的应用服务器鉴权信息时，向所述 CSCF102发送包含所述U101E的用户签约信息User Profile的SAA消息，且 所述User Profile携带所述应用服务器鉴权信息；</p>
+    <p>应用服务器AS104,用于接收所述UE101发送的鉴权请求，对所述UE101 进行鉴权，并向所述UEIOI返回鉴权响应。</p>
+    <p>采用本发明实施例1的系统，HSS通过在Cx接口中扩展SAA消息携带 的User Profile结构，在User Profile结构末尾添加应用服务器鉴权信息结构， 从而将应用服务器鉴权信息通过SAA消息传递给CSCF。</p>
+    <p>CSCF通过在传输200 OK消息的过程中，对应用服务器鉴权信息使用比 特校验CK或HAl方式进行加密，从而保证了应用服务器鉴权信息传输的安 全性。</p>
+    <p>UE通过使用200 OK消息携带过来的应用服务器鉴权信息到应用服务器 进行鉴权，而无需人工手动多次地输入应用服务器鉴权信息，减轻了用户的 操作负担，实现了自动鉴权。</p>
+    <p>综上所述，本发明实施例1的系统实现了对IMS网络和应用服务器的统 一鉴权，给用户使用和运营商管理都带来很大方便；充分利用现有IMS鉴权 流程，实现简单，不需要另外新增鉴权专有设备；对现有应用服务器没有特 殊要求，不需要改变现有鉴权流程。</p>
+    <p>实施例2:</p>
+    <p>本发明实施例2提供了一种鉴权方法，该鉴权方法是一种IP多媒体子系 统IMS网络和应用服务器统一鉴权的方法，该方法的执行主体可以为CSCF。 图4为本发明实施例2的方法的整体流程图。如图4所示，该方法包括: S401 、接收用户设备UE发送的IP多媒体子系统IMS网络鉴权请求； S402、根据所述IMS网络鉴权请求，从归属用户服务器HSS获取应用服 务器鉴权信息；具体地，上述应用服务器鉴权信息包括：应用服务器的鉴权用户名</p>
+    <p>HTTP-Usemame、应用服务器的鉴权密码（可扩展为鉴权凭证)HTTP-Token、 应用服务器的附加参数Add-ons (例如应用服务器的IP地址）。其中Add-ons 为可选参数，上述Add-ons参数包括一个或多个服务器参数Sever-parameter。 S403、向所述UE发送包含所述应用服务器鉴权信息的IMS网络鉴权响 应消息，以触发所述UE利用所述应用服务器鉴权信息到所述应用服务器进行 鉴权。</p>
+    <p>需要说明的是， 一般情况是UE已经定义好需要向哪些应用服务器进行鉴 权，只是UE不知道鉴权所需要的必要信息，例如IP地址、用户名、密码等， 一旦IMS网络把这些信息返回给UE， UE就可以到应用服务器进行鉴权了。</p>
+    <p>图4a为本发明实施例2的方法的具体流程图一。可选地，如图4a所示， 该方法可以包括：</p>
+    <p>S401a、接收用户设备UE发送的IP多媒体子系统IMS网络鉴权请求；</p>
+    <p>S402a、向归属用户服务器HSS发送SAR消息，以获取所述UE的用户 签约信息User Profile;</p>
+    <p>具体地，所述SAR消息包括Server-Assignment-Request消息。 Server-Assignment-Request为Cx接口中CSCF向HSS发送的命令，所述SAR 消息中可以携带UE的IMPU禾口/或IMPI (IP Multimedia Private Identity, IP 多媒体私有标识），以使HSS根据UE的IMPU禾n/或IMPI去查询是否存储了 UE对应的应用服务器鉴权信息。</p>
+    <p>S403a、接收所述HSS发送的SAA消息，所述SAA消息包含所述User Profile,且所述User Profile携带应用服务器鉴权信息；</p>
+    <p>具体地，所述SAA消息即为Server-Assignment-Answer消息，其为Cx 接口中HSS对SAR命令的响应。</p>
+    <p>本发明实施例的User Profile的扩展结构及应用服务器鉴权信息的结构将 在后面的实施例中详细描述，在此暂不描述。</p>
+    <p>14可选地，也可以发送其它消息来获取应用服务器鉴权信息，例如可以通</p>
+    <p>过CSCF和HSS之间自定义的其他过程中的其它消息来传递应用服务器鉴权</p>
+    <p>(曰息。</p>
+    <p>S404a、向所述UE发送包含所述应用服务器鉴权信息的IMS网络鉴权响应消息200 OK，以触发所述UE利用所述应用服务器鉴权信息到应用服务器进行鉴权。</p>
+    <p>图4b为本发明实施例2的方法的具体流程图二。图4b与图4a的不同之处在于S404b。</p>
+    <p>S404b、向所述UE发送IMS网络鉴权响应消息200 OK，所述200 OK消息包含关联统一资源标识P-Associated-URI头域，所述P-Associated-URI头域</p>
+    <p>携带所述应用服务器鉴权信息的，以触发所述UE利用所述应用服务器鉴权信息到应用服务器进行鉴权。</p>
+    <p>具体地，S404b的具体过程也可以包括：</p>
+    <p>将所述HTTP-Username的值赋予所述P-Associated-URI头域包含的第一ai-param参数；</p>
+    <p>将所述HTTP-Token的值赋予所述P-Associated-URI头域包含的第二ai-param参数；</p>
+    <p>向所述UE发送IMS网络鉴权响应消息200 OK，所述200 OK包含关联统一资源标识P-Associated-URI头域，所述P-Associated-URI头域包含所述第&#8212;ai-param参数禾口所述第二 ai-param参数。</p>
+    <p>可选地，还可以将Add-ons包含的一个或多个服务器参数Server-parameter的值分别赋予P-Associated-URI头域包含的其它对应多个ai-param参数；</p>
+    <p>可选地，还可以向所述UE发送IMS网络鉴权响应消息200 OK，所述200OK包含关联统一资源标识P-Associated-URI头域，所述P-Associated-URI头域包含所述第一 ai-param参数、所述第二 ai-param参数以及携带多个Server-parameter的值的其它多个ai-param参数。图4c为本发明实施例2的方法的具体流程图三。图4c与图4的不同之处在于S404c和S405c。</p>
+    <p>S404c、&#37318;用校验比特CK或HA1对所述应用服务器鉴权信息进行加密；</p>
+    <p>S405c、向所述UE发送IMS网络鉴权响应消息200 0K，所述200 OK包含采用校验比特CK或HA1加密后的所述应用服务器鉴权信息，以触发所述UE利用所述应用服务器鉴权信息到应用服务器进行鉴权。</p>
+    <p>在上述200 Ok响应中携带应用服务器鉴权信息的方法可以包括：将应用服务器鉴权信息作为P-Associated-URI头域的ai-param参数进行传递。</p>
+    <p>例如：利用标准中P-Associated-URI定义的参数来携带"应用服务器鉴权信息"°</p>
+    <p>P-Associated-URI在标准中的定义为：</p>
+    <p>P-Associated-URI = "P&#38525;Associated-URT HCOLON</p>
+    <p>(p-aso-uri-spec)</p>
+    <p>* (COMMA p-aso-uri-spec)</p>
+    <p>p-aso-uri-spec = name-addr *(SEMI ai-param)</p>
+    <p>ai-param = generic-param</p>
+    <p>以下举例说明通过P-Associated-URI定义的参数来携带"应用服务器鉴权信息"的过程。</p>
+    <p>CSCF取出应用服务器鉴权信息的HTTP-usemame信元，将其内容复制到http-username参数中，将http-username作为P-Associated-URI的一个ai-param参数；</p>
+    <p>例如，取出应用服务器鉴权信息的HTTP-usemame信元，将该信元的内容"userl@homel.net"复制至U http-username参数中，使得http-usemame="userl@homel.net"，并将该http-username作为P-Associated-URI的一个ai-param参数。</p>
+    <p>16CSCF取出应用服务器鉴权信息的HTTP-Token信元，将其内容复制到http-token参数中，将http-token作为P-Associated-URI的一个ai-param参数；</p>
+    <p>例如，取出应用服务器鉴权信息的HTTP-Token信元，将该信元的内容"PWD "复制到http-token参数中，使得http-token= "PWD"，并将http-token作为P-Associated-URI的一个ai-param参数。</p>
+    <p>CSCF取出应用服务器鉴权信息的Add-ons信元，将上述Add-ons信元包含的1个或多个Server-parameter中的每一个Server-parameter分别作为单独--</p>
+    <p>个ai-param参数，如果有多个Server-parameter,贝ll分另lj--对应多个ai-param参数。</p>
+    <p>例如，取出应用服务器鉴权信息的Add-ons信元，将该信元包含的第1个Server-parameter中内容"group-domain-address"复希'j至(J group-uri参数中，使得group-uri="group-domain-address",并将group-uri作为P-Associated-URI的一个ai-param参数；</p>
+    <p>将该信元包含的第2个Server-parameter中内容"AP-domain-address"复制至'J ap-uri参数中，使得ap-uri-" AP-domain-address";并将ap-uri作为P-Associated-URI的一个ai-param参数。</p>
+    <p>因此，一个携带应用服务器鉴权信息的P-Associated-URI的例子形成为如</p>
+    <p>下：</p>
+    <p>P-Associated-URI:</p>
+    <p>Sip:userl @home 1 .net;http-usemame=，，user 1 @home 1 .net";http-token=，，PWD";group-uri=" group-domain-address";ap-uri="AP-domain-address"</p>
+    <p>进一步地，为保证传输过程的安全性，可以对应用服务器鉴权信息采用CK进行加密；如果UE和IMS采用HTTP Digest鉴权时，则采用HAl (HTTPDigest鉴权过程的中间计算结果）进行加密。</p>
+    <p>本发明实施例的方法，通过接收HSS发送的包含应用服务器鉴权信息的SAA消息，并将该应用服务器鉴权信息通过200OK响应发送给UE，从而使UE可以根据从200 OK响应接收到的应用服务器鉴权信息到应用服务器进行</p>
+    <p>鉴权，这个过程无须人工干预，实现了对应用服务器的自动鉴权，也实现了</p>
+    <p>IMS网络和应用服务器的统一鉴权，方便了用户的使用。</p>
+    <p>通过采用CK或HA1对传输过程中的应用服务器鉴权信息进行加密，有效地保证了数据传递的安全性。</p>
+    <p>由于本发明实施例的方法，并未新增鉴权专用设备，而是在已有设备及已有流程的基础上进行改进，提供了一种实现简单的IMS网络和应用服务器的统一鉴权流程，从而有利于运营商管理和节省运营商的投资。</p>
+    <p>实施例3:</p>
+    <p>本发明实施例3提供了一种应用服务器鉴权信息的传输方法，该方法的执行主体可以为HSS。</p>
+    <p>图5为本发明实施例3的方法流程图。如图5所示，该方法包括-</p>
+    <p>5501、 接收呼叫会话控制功能实体CSCF发送的第一消息，所述第一消息中包含请求进行IMS网络鉴权的UE标识；</p>
+    <p>5502、 根据所述第一消息，判断是否存在与所述UE对应的应用服务器鉴权信息；</p>
+    <p>5503、 当存在与所述UE对应的应用服务器鉴权信息时，向所述CSCF发送包含所述UE对应的应用服务器鉴权信息的第二消息。</p>
+    <p>可选地，所述第一消息可以为SAR消息，所述第二消息可以为SAA消息，所述UE标识包括：UE的IP多媒体公有标识IMPU或IMPI。S503的过程具体可以包括-</p>
+    <p>当存在与所述UE对应的应用服务器鉴权信息时，向所述CSCF发送SAA消息，所述SAA消息包含所述UE的用户签约信息User Profile,且所述UserProfile携带所述应用服务器鉴权信息。</p>
+    <p>可选地，所述SAR消息中可以携带UE的IMPU和/或IMPI，以使HSS根据UE的IMPU和/或IMPI去查询l正对应的应用服务器鉴权信息。其中当 UE包含多个IMPU时，上述多个IMPU可以形成一个IRS。</p>
+    <p>具体地，在IMS用户开户或申请新业务时，如果由局方人工或BOSS (Business and Operation Supporting System,电信业务运营支撑系统）进行判 断后发现，有需要独立鉴权的应用服务器，则把该应用服务器的鉴权信息存 放在HSS中。应用服务器的鉴权信息可以和一个或多个IMPU相关联，即应 用服务器的鉴权信息可以和一个或多个IMPU相对应，可以属于一个或多个 IMPU。</p>
+    <p>当应用服务器的鉴权信息和多个IMPU关联时，可以在HSS中把相关联 的IMPU注册为一个IRS，即相当于把应用服务器鉴权信息和IRS相关联。通 过多个IMPU设置在一个集合中，这样当UE有多个IMPU时，无论以哪个 IMPU登录，都可以得到应用服务器鉴权信息，而不需要把应用服务器鉴权信 息在HSS上保存多次。</p>
+    <p>当HSS判断对应的IMPU或IRS存在关联的应用服务器鉴权信息时，则 在User Profile中包含该应用服务器鉴权信息。</p>
+    <p>例如，在Cx接口中扩展SAA消息携带的User Profile结构，在该User Profile结构末尾添加应用服务器鉴权信息结构，使用UML (Unified Model Language,统一建模语言）表示为图6，图6为本发明实施例3的User Profile</p>
+    <p>的扩展结构示意图。</p>
+    <p>如图6所示，一个IMS用户的IMPI可以对应一个或多个"Service Profile"、 且可以对应一个或0个"应用服务器鉴权信息"。图6中的"l…n"表示一个 或多个，"0...1 "表示没有或一个。图7为本发明实施例3的user profile的in-line 格式示例图。图7中仅示出2个Service profile,对于不同的应用，可以采用 多于2个的Service profile;图7中仅示出3个Public id，对于不同的应用， 可以采用多于3个Public id。图7中的IFC表示初始过滤标准(initial filter criteria)。 Service profile与 user profile中的定义相同。本发明实施例3的应用服务器鉴权信息的结构，使用UML表示为图8， 图8为本发明实施例3的应用服务器鉴权信息的结构示意图。如图8所示， HTTP-Username指示了应用服务器的鉴权用户名；HTTP-Token指示了应用服 务器的鉴权密码（可扩展为鉴权凭证);Add-ons则存储了应用服务器的附加参 数（例如应用服务器的IP地址）。由图8可知， 一个应用服务器鉴权信息例如 可以包括一个HTTP-Username、一个HTTP-Token、 1个或0个Add-ons。在 其它应用中，也可以包括多个HTTP-Usemame、多个HTTP-Token以及多个 Add-ons 。</p>
+    <p>如果有多个应用服务器，则在&#24181;户、申请新业务或其它应用场景，指定 相同的鉴权用户名和鉴权密码，对不同的附加参数（例如应用服务器的IP地 址），在Add-ons字段中进行存储。可选地，应用服务器鉴权信息结构也可以 进行扩展，可以为多个应用服务器指定不相同的鉴权用户名和鉴权密码。</p>
+    <p>应用服务器鉴权信息结构的Add-ons字段可采用图9所示的定义。图9 为本发明实施例3的Add-ons字段的定义图。如图9所示，其中"l…n"表示 一个或多个，即1个Add-ons字段可以包括1个或多个Server-parameter,在 每个Server-parameter中，保存了参数的名称和参数值；例如 group-uri-，，group-domain-address，，形式，其中 group-uri表示参数名称， group-domain-address表示木目应的参数值。</p>
+    <p>总之，HSS通过扩展SAA消息包含的User Profile信息结构，在该User Profile结构末尾添加应用服务器鉴权信息结构，并向CSCF返回携带应用服 务器鉴权信息的SAA消息，从而将应用服务器鉴权信息传递CSCF。可选地， 也可以在User Profile结构的前面添加应用服务器鉴权信息结构。</p>
+    <p>本发明实施例3的方法，通过扩展SAA消息携带的User Profile结构，在 User Profile结构末尾添加应用服务器鉴权信息结构，从而可以将应用服务器 鉴权信息通过SAA消息发送给CSCF，从而CSCF可以将该应用服务器鉴权 信息进一步发送给UE，以使UE根据该应用服务器鉴权信息到应用服务器进</p>
+    <p>20行鉴权，而不需要用户手动干预应用服务器的鉴权过程。该方法给用户使用 和运营商管理都带来很大方便。通过上述技术方案，本发明实施例3的方法 有利于实现IMS网络和应用服务器的统一鉴权。</p>
+    <p>实施例4:</p>
+    <p>本发明实施例4提供了一种鉴权方法，该鉴权方法包括一种IMS多媒体 子系统网络和应用服务器统一鉴权的方法。该方法的执行主体可以为UE。 图10为本发明实施例4的方法的整体流程图。如图10所示，该方法包</p>
+    <p>括：</p>
+    <p>51001、 向呼叫会话控制功能实体CSCF发送IMS网络鉴权请求；</p>
+    <p>51002、 接收所述CSCF发送的IMS网络鉴权响应消息，所述IMS网络 鉴权响应消息携带应用服务器的鉴权信息；</p>
+    <p>51003、 利用所述应用服务器鉴权信息到所述应用服务器进行鉴权。</p>
+    <p>图10a为本发明实施例4的方法的具体流程图一。图10a与图10的不同 之处在于S1002a.</p>
+    <p>S1002a接收所述CSCF发送的IMS网络鉴权响应消息200 OK，所述200 OK包含关联统一资源标识P-Associated-URI头域，所述P-Associated-URI头 域携带应用服务器鉴权信息。</p>
+    <p>具体地，S1002a的过程可以包括：</p>
+    <p>接收所述CSCF发送的IMS网络鉴权响应消息200 OK，所述200 OK包 含关联统一资源标识P-Associated-URI头域，所述P-Associated-URI头域所包 含的多个ai-param参数携带应用服务器的鉴权用户名HTTP-Usemame、应用 服务器的鉴权密码HTTP-Token和一个或零个应用服务器的附加参数 Add-ons 。</p>
+    <p>图10b为本发明实施例4的方法的具体流程图二。如图10b所示，该方</p>
+    <p>法包括：S1001b、向呼叫会话控制功能实体CSCF发送IMS网络鉴权请求； S1002b、接收所述CSCF发送的IMS网络鉴权响应消息，所述IMS网络 鉴权响应消息携带采用校验比特CK或HA1加密的应用服务器鉴权信息； S1003b、采用校验比特CK或HA1解密所述应用服务器鉴权信息； S1004b、利用所述应用服务器鉴权信息到所述应用服务器进行鉴权。 本发明实施例4的方法，通过在IMS网络鉴权响应消息中携带应用服务 器鉴权信息，使UE可以从接收到的IMS网络鉴权响应消息中获得应用服务 器鉴权信息，并根据该应用服务器鉴权信息到应用服务器进行自动鉴权。该 方法简化了鉴权流程，方便了用户使用，用户不需要进行干预，该方法给用 户使用和运营商管理都带来很大方便；。同时通过对传输过程中的应用服务 器鉴权信息使用CK或HA1进行加密，保证了数据传递的安全性。</p>
+    <p>实施例5:</p>
+    <p>本发明实施例5提供了一种呼叫会话控制功能实体CSCF。该CSCF为对 应于实施例2的方法而形成。</p>
+    <p>图11为本发明实施例5的呼叫会话控制功能实体的功能框图。如图11 所示，该CSCF20包括：</p>
+    <p>鉴权请求接收单元201，用于接收用户设备UE发送的IP多媒体子系统 IMS网络鉴权请求；</p>
+    <p>鉴权信息获取单元202，用于根据所述IMS网络鉴权请求，从归属用户 服务器HSS获取应用服务器鉴权信息；</p>
+    <p>鉴权响应发送单元203，用于向所述UE发送包含所述应用服务器鉴权信 息的IMS网络鉴权响应消息，以触发所述UE利用所述应用服务器鉴权信息 到所述应用服务器进行鉴权。</p>
+    <p>图lla为鉴权信息获取单元的功能框图。可选地，所述鉴权信息获取单 元202可以包括：</p>
+    <p>22请求子单元2021，用于向归属用户服务器HSS发送SAR消息，以获取 所述UE的用户签约信息User Profile;</p>
+    <p>接收子单元2022，用于接收所述HSS发送的SAA消息，所述SAA消息 包含所述User Profile,且所述User Profile携带应用服务器鉴权信息。</p>
+    <p>可选地，所述鉴权响应发送单元203，用于向所述UE发送IMS网络鉴权 响应消息200 OK，所述200 OK中增加关联统一资源标识P-Associated-URI 头域，所述P-Associated-URI头域携带所述应用服务器鉴权信息。</p>
+    <p>图lib为鉴权响应发送单元的功能框图。可选地，所述鉴权响应发送单 元203可以包括：</p>
+    <p>加密子单元2031 ，用于采用校验比特CK或HA1对所述应用服务器鉴权信 息进行加密；</p>
+    <p>发送子单元2032，用于向所述UE发送IMS网络鉴权响应消息，所述IMS 网络鉴权响应消息包含采用CK或HA1加密后的所述应用服务器鉴权信息。</p>
+    <p>所述应用服务器鉴权信息包括：应用服务器的鉴权用户名 HTTP-Usemame和应用服务器的鉴权密码HTTP-Token;可选地，应用服务器 鉴权信息还可以包括应用服务器的附加参数Add-ons，所述Add-ons包括1个 或多个服务器参数Server-parameter。</p>
+    <p>本发明实施例5提供的CSCF实体，通过接收扩展了 User Profile结构的 SAA消息，该User Profile结构末尾添加了应用服务器鉴权信息结构，从而可 以从HSS获取相应的应用服务器鉴权信息。</p>
+    <p>CSCF实体通过在应用服务器鉴权信息的传输过程中使用CK进行加密， 或当UE和IMS采用HTTP Digest鉴权时，则采用HA1对应用服务器鉴权信 息进行加密，从而有利于保障传输的安全性。</p>
+    <p>CSCF实体通过在向UE返回的200 OK消息中携带应用服务器鉴权信息， 使UE可以利用该应用服务器鉴权信息到应用服务器进行鉴权，这个过程无需 人工干预，实现了自动鉴权。总之，通过采用本发明实施例的CSCF，实现了对IMS和应用服务器的 统一鉴权给用户使用和运营商管理都带来很大方便；同时节省运营商投资， 不需要另外新增鉴权专有设备。</p>
+    <p>实施例6:</p>
+    <p>本发明实施例提供了一种归属用户服务器，其为由实施例3的方法而对 应形成。</p>
+    <p>图12为本发明实施例6的归属用户服务器的功能框图。如图12所示， 该归属用户服务器30包括：</p>
+    <p>接收单元301，用于接收呼叫会话控制功能实体CSCF发送的第一消息， 所述第一消息中包含请求进行IMS网络鉴权的UE标识；</p>
+    <p>判断单元，用于判断是否存在与所述UE对应的应用服务器鉴权信息；</p>
+    <p>发送单元302，用于当存在与所述UE对应的应用服务器鉴权信息时，向 所述CSCF发送包含所述UE对应的应用服务器鉴权信息的第二消息。</p>
+    <p>可选地，所述第一消息可以为SAR消息，所述第二消息可以为SAA消 息，所述UE的标识包括UE的IP多媒体公有标识IMPU或IMPI。所述发送 单元302，可以用于当存在与所述UE对应的应用服务器鉴权信息时，向所述 CSCF发送SAA消息，所述SAA消息包含所述UE的用户签约信息User Profile,且所述User Profile携带所述应用服务器鉴权信息。</p>
+    <p>关于扩展的User Profile的结构以及应用服务器鉴权信息的结构请参阅图 6-图9,及相应描述，在此不赘述。</p>
+    <p>本发明实施例6的归属用户服务器，通过预先存储UE对应的应用服务器 鉴权信息，并通过扩展User Profile,即在User Profile信息结构的末尾添加在 应用服务器鉴权信息结构，从而可以通过SAA消息向CSCF传递应用服务器 的鉴权信息，有利于实现IMS和应用服务器的统一鉴权。</p>
+    <p>实施例7:本发明实施例7提供了一种用户设备，该用户设备由实施例4的方法而 对应形成。图13为本发明实施例7的用户设备的功能框图。如图13所示，该用户 设备40包括：第一鉴权请求发送单元401 ，用于向呼叫会话控制功能实体CSCF发送IP 多媒体子系统IMS网络鉴权请求；鉴权响应接收单元402，用于接收所述CSCF发送的IMS网络鉴权响应 消息，所述IMS网络鉴权响应消息携带应用服务器的鉴权信息；第二鉴权请求发送单元403，用于利用所述应用服务器鉴权信息到所述应 用服务器进行鉴权。可选地，所述鉴权响应接收单元401，还可以用于接收所述CSCF发送的 IMS网络鉴权响应消息200 0K，所述200 OK包含关联统一资源标识 P-Associated-URI头域，所述P-Associated-URI头域携带应用服务器鉴权信息。可选地，所述鉴权响应接收单元401，还可以用于接收所述CSCF发送的 IMS网络鉴权响应消息，所述IMS网络鉴权响应消息的关联统一资源标识 P-Associated-URI头域所包含的多个ai-param参数携带应用服务器的鉴权用户 名HTTP-Username的值、应用服务器的鉴权密码HTTP-Token的值和一个或 零个应用服务器的附加参数Add-ons的值。关于通过200 OK新增的P-Associated-URI头域来携带应用服务器鉴权信 息的具体方法，请参阅实施例2中的相应描述，在此不赘述。可选地，所述鉴权响应接收单元401，还可以用于接收所述CSCF发送的 IMS网络鉴权响应消息，所述IMS网络鉴权响应消息携带采用校验比特CK 或HA1加密的应用服务器鉴权信息。图14为本发明实施例7的用户设备的细化功能框图。可选地，所述用户 设备40还可以包括：解密单元404，用于采用校验比特CK或HA1解密所述应用服务器鉴权{曰息。本发明实施例7提供的用户设备，可以使用200 OK消息携带过来的应用 服务器鉴权信息到应用服务器进行鉴权，而无需通过人工多次手动的方式来 输入应用服务器鉴权信息，方便了用户使用和运营商管理；本发明实施例的 方法通过在IMS网络鉴权返回的结果中携带应用服务器的鉴权信息，实现了 对IMS网络和应用服务器的统一鉴权。本领域普通技术人员可以理解实现上述实施例方法中的全部或部分流 程，是可以通过计算机程序来指令相关的硬件来完成，所述的程序可存储于 一计算机可读取存储介质中，该程序在执行时，可包括如上述各方法的实施 例的流程。其中，所述的存储介质可为磁碟、光盘、只读存储记忆体（Read-Only Memory, ROM)或随机存储记忆体（Random Access Memory, RAM)等。以上实施例仅用以说明本发明实施例的技术方案，而非对其限制；尽管 参照前述实施例对本发明实施例进行了详细的说明，本领域的普通技术人员 应当理解：其依然可以对前述各实施例所记载的技术方案进行修改，或者对其中部分技术特征进行等同替换；而这些修改或者替换，并不使相应技术方 案的本质脱离本发明实施例各实施例技术方案的精神和范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102440018A?cl=zh">CN102440018A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月30日</td><td class="patent-data-table-td patent-date-value">2012年5月2日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">通用鉴权架构下的用户设备鉴权方法和鉴权装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102916966A?cl=zh">CN102916966A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月30日</td><td class="patent-data-table-td patent-date-value">2013年2月6日</td><td class="patent-data-table-td ">青岛百灵信息科技有限公司</td><td class="patent-data-table-td ">基于云计算和c2d的his通讯拨号模块</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2011038691A1?cl=zh">WO2011038691A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月30日</td><td class="patent-data-table-td patent-date-value">2011年4月7日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">鉴权方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=kNN3BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=kNN3BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L65/1016">H04L65/1016</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=kNN3BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L65/1073">H04L65/1073</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=kNN3BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W12/06">H04W12/06</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">H04W12/06</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年3月10日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年4月28日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3d01e2bdec33473d22a9/CN101668016A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E9%89%B4%E6%9D%83%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85%E7%BD%AE.pdf?id=kNN3BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3ELw3QNaopruOsnL-6vOrN7gLsjA"},"sample_url":"https://www.google.com/patents/reader?id=kNN3BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

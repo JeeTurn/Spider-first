@@ -1,0 +1,360 @@
+<!DOCTYPE html><html><head><title>专利 CN102306204A - 基于文本结构权重的主题区域识别方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于文本结构权重的主题区域识别方法"><meta name="DC.contributor" content="徐武平" scheme="inventor"><meta name="DC.contributor" content="徐爱萍" scheme="inventor"><meta name="DC.contributor" content="杨少博" scheme="inventor"><meta name="DC.contributor" content="武汉大学" scheme="assignee"><meta name="DC.date" content="2011-9-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明提出了基于文本结构权重的主题区域识别方法，该方法基于树结构，将Web网页解析为标签树，在树匹配基础上，改进了数据区域挖掘和语义链接块识别技术，实现了去链接的预处理；提出了文本结构权重的概念，并采用文本结构权重的计算结果识别主题区域；最后采用归一化的方法计算主题区域内的文本结点相对长度值，利用归一化相对长度值，有效的去除和主题内容无关的文本节点实现了主题区域去噪，得到准确的主题内容。应用本发明技术方案能准确快速的挖掘出Web上有价值的信息，有着广阔的应用前景。"><meta name="DC.date" content="2012-1-4"><meta name="DC.relation" content="CN:101582074:A" scheme="references"><meta name="DC.relation" content="CN:101710343:A" scheme="references"><meta name="DC.relation" content="CN:101826105:A" scheme="references"><meta name="DC.relation" content="JP:3873135" scheme="references"><meta name="DC.relation" content="US:20060161525:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102306204:A"><meta name="citation_patent_application_number" content="CN:201110302004"><link rel="canonical" href="https://www.google.com/patents/CN102306204A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102306204A?cl=zh"/><meta name="title" content="专利 CN102306204A - 基于文本结构权重的主题区域识别方法"/><meta name="description" content="本发明提出了基于文本结构权重的主题区域识别方法，该方法基于树结构，将Web网页解析为标签树，在树匹配基础上，改进了数据区域挖掘和语义链接块识别技术，实现了去链接的预处理；提出了文本结构权重的概念，并采用文本结构权重的计算结果识别主题区域；最后采用归一化的方法计算主题区域内的文本结点相对长度值，利用归一化相对长度值，有效的去除和主题内容无关的文本节点实现了主题区域去噪，得到准确的主题内容。应用本发明技术方案能准确快速的挖掘出Web上有价值的信息，有着广阔的应用前景。"/><meta property="og:title" content="专利 CN102306204A - 基于文本结构权重的主题区域识别方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102306204A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102306204A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=DimFBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102306204A&amp;usg=AFQjCNFb2b7SOHAdaa986PZO409UUNXl0A" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/78e02a5417b524a129a2/CN102306204A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/78e02a5417b524a129a2/CN102306204A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102306204A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102306204A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102306204A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102306204B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102306204A?cl=zh" style="display:none"><span itemprop="description">本发明提出了基于文本结构权重的主题区域识别方法，该方法基于树结构，将Web网页解析为标签树，在树匹配基础上，改进了数据区域挖掘和语义链接块识别技术，实现了去链接的预处理；提出了文本结构权重的概念，并采用文...</span><span itemprop="url">https://www.google.com/patents/CN102306204A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102306204A - 基于文本结构权重的主题区域识别方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102306204A - 基于文本结构权重的主题区域识别方法" title="专利 CN102306204A - 基于文本结构权重的主题区域识别方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102306204 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110302004</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年1月4日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年9月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年9月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102306204B?hl=zh-CN&amp;cl=zh">CN102306204B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110302004.1, </span><span class="patent-bibdata-value">CN 102306204 A, </span><span class="patent-bibdata-value">CN 102306204A, </span><span class="patent-bibdata-value">CN 201110302004, </span><span class="patent-bibdata-value">CN-A-102306204, </span><span class="patent-bibdata-value">CN102306204 A, </span><span class="patent-bibdata-value">CN102306204A, </span><span class="patent-bibdata-value">CN201110302004, </span><span class="patent-bibdata-value">CN201110302004.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BE%90%E6%AD%A6%E5%B9%B3%22">徐武平</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BE%90%E7%88%B1%E8%90%8D%22">徐爱萍</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E5%B0%91%E5%8D%9A%22">杨少博</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%AD%A6%E6%B1%89%E5%A4%A7%E5%AD%A6%22">武汉大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102306204A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102306204A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102306204A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=DimFBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110302004&amp;usg=AFQjCNF94O5QmFSS2xQfFlewO_3P-9SfFA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=DimFBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102306204A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNF9fAy2pWxk3OsCCe3_1lD2FVmo_g"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT110075811" lang="ZH" load-source="patent-office">基于文本结构权重的主题区域识别方法</invention-title>
+      </span><br><span class="patent-number">CN 102306204 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA92304974" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提出了基于文本结构权重的主题区域识别方法，该方法基于树结构，将Web网页解析为标签树，在树匹配基础上，改进了数据区域挖掘和语义链接块识别技术，实现了去链接的预处理；提出了文本结构权重的概念，并采用文本结构权重的计算结果识别主题区域；最后采用归一化的方法计算主题区域内的文本结点相对长度值，利用归一化相对长度值，有效的去除和主题内容无关的文本节点实现了主题区域去噪，得到准确的主题内容。应用本发明技术方案能准确快速的挖掘出Web上有价值的信息，有着广阔的应用前景。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(5)</span></span></div><div class="patent-text"><div mxw-id="PCLM39591680" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1. 一种基于文本结构权重的主题区域识别方法，其特征在于，包括以下步骤： 步骤1，将待识别Web网页转换成标签树，具体通过以下步骤实现， 步骤1. 1，通过对待识别Web网页的HTML文档进行字符扫描，识别出起始节点、结束节点、全结构节点和文本节点；所述起始节点是以字符“〈”开始，以字符“〉”为结束，且这两者之间不存在字符“〈”和 “〉”的字符串；所述结束节点是以字符“&lt;/”开始，以字符“〉”为结束，且这两者之间不存在字符“〈”、 “〉”和“/”的字符串；所述全结构节点是以字符“〈”开始，以字符“/&gt;”为结束，且这两者之间不存在字符 “〈”、“〉”和“/”的字符串；所述文本节点是以上三种节点以外的字符串；步骤1. 2，采用解析器，依据步骤1. 1识别出的起始节点、结束节点、全结构节点和文本节点进行标签树的构建，得到的标签树记为A ；构建过程利用堆栈操作来确定各节点的层次关系，包括以下堆栈操作，当解析器发现一个起始节点时，触发入栈操作和在当前标签树中新建标签操作， 当解析器发现一个结束节点时，触发退栈操作，当解析器发现一个全结构节点时，触发入栈操作，同时更新标签树，在更新标签树完成后立刻退栈操作；当解析器发现一个文本节点时，触发入栈操作，入栈操作后立刻退栈操作； 步骤2，在步骤1所得标签树A中搜索相似区域，并进行去链接预处理，得到标签树B， 具体通过以下步骤实现，步骤2. 1，在步骤1所得标签树A中搜索相似区域；所述相似区域是由一组相似节点组成的，相似节点是标签树A中满足以下特性的节点，(1)所有的节点共同拥有同一个父节点；(2)所有节点是相邻的；(3)相似节点是子树的根节点或叶子节点；(4)与同一区域中的其他节点的相似度大于预设的阈值a	；步骤2. 2，在步骤2. 1搜索到的所有相似区域中识别语义链接块，并将识别出的语义链接块从标签树A中摘除，得到标签树B ；所述语义链接块是指由链接组成的，在视觉上呈列表状，每一项表现为超级链接的网页区域；步骤3，对步骤2所得标签树B进行主题内容抽取，具体通过以下步骤实现， 步骤3. 1，求出标签树B中所有节点的文本结构权重，找出某棵子树链下文本结构权重值最大的节点，该节点所在相似区域即主题区域，该节点记为主题区域节点C ；所述文本结构权重是指文本在相似区域中所占的比重；步骤3. 2，对步骤3. 1所得主题区域进行去噪，包括两个步骤； 步骤3. 2. 1，获取步骤3. 1所得主题区域节点C的子树所包含的所有文本节点的长度， 其中最大长度记为maxlength ；步骤3. 2. 2，遍历主题区域节点C的子树，根据最大长度maxlength对子树中每一个文本节点的长度计算归一化值，并与预设的阈值K比较；如果不小于预设的阈值K则保留，否则从主题区域节点C的子树中摘除该文本节点；步骤3. 3，对步骤3. 2所得去噪后的主题区域所对应的节点输出，即输出最底层叶子节点的文本内容，得到待识别Web网页的主题内容。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述基于文本结构权重的主题区域识别方法，其特征在于：步骤1.	2 中，标签树的具体构建方式包括以下步骤，步骤1. 2. 1，声明一个解析器实例和一个单例模式堆栈实例，并从待识别Web网页的 HTML文档中读取一个节点；步骤1. 2. 2，如果读取的节点是结束节点、全结构节点或者文本节点，则将该节点出栈， 然后进入步骤1. 2. 3 ；否则，转步骤1. 2. 4 ；步骤1. 2. 3，层次值减一，并将父节点指针指向步骤1. 2. 2出栈的节点的父节点，更新标签树；步骤1.2. 4，如果读取的节点是起始节点、全结构节点或者文本节点，则声明一个新的堆栈项，并将该节点入栈，然后进入步骤1. 2. 5 ；否则，进入步骤1. 2. 7 ；步骤1. 2. 5，层次值加一，同时将步骤1. 2. 4入栈的节点插入父节点指针当前指向的节点的孩子集中；步骤1. 2. 6，将当前节点指针指向步骤1. 2. 4入栈的节点，并更新标签树； 步骤1. 2. 7，从待识别Web网页的HTML文档中读取下一个节点，重复步骤1. 2. 2至步骤 1. 2. 6，直到待识别Web网页的HTML文档解析完成，构建得到的标签树记为A。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述基于文本结构权重的主题区域识别方法，其特征在于：步骤2.	1 中，在步骤1所得标签树A中搜索相似区域时，采用简单树匹配算法计算相似度，利用堆栈消除递归，对标签树A进行遍历，发现相似节点时进行标记，识别出相似区域；具体遍历实现包括以下步骤，步骤2. 1. 1，初始化当前节点指向标签树的根节点，初始化堆栈； 步骤2. 1. 2，如果当前节点的孩子数不为0，则当前节点入栈，执行步骤2. 1. 3 ；否则从标签树A中取下一节点作为当前节点，返回步骤2. 1. 2，直到取完标签树A中所有节点，进入步骤2. 1. 7 ；步骤2. 1. 3，判断堆栈是否为空，当堆栈不为空时执行步骤2. 1. 4，当堆栈为空时返回步骤2. 1. 2 ；步骤2. 1.4，栈顶元素出栈，赋值给当前节点；步骤2. 1. 5，遍历当前节点的最近一层子节点，依次比较两个相邻子节点代表的子树的相似度，如果相邻节点的相似度小于阈值a，当前两个相邻子节点标记为删除，否则当前两个相邻子节点标记为相似节点；遍历完成后进入步骤2. 1. 5 ；步骤2. 1.6，当前节点标记为相似区域；取当前节点下的所有子节点，依次入栈，然后转步骤2. 1. 3 ；步骤2. 1. 7，对标签树A进行遍历完成，所有相似区域均被发现。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述基于文本结构权重的主题区域识别方法，其特征在于：步骤2.	2 中，识别语义链接块的具体方式包括以下步骤，步骤2. 2. 1，取出当前相似区域DR的根节点root，计算出根节点root所包含的子节点个数；步骤2. 2. 2，以宽度优先的方式，遍历根节点root所包含的子节点，对遍历到的当前子节点执行以下操作，对当前子节点，以宽度优先的方式遍历当前子节点的子树，如果检测到链接标签 “&lt;a&gt;”，则将此标签的深度偏差值存入哈希表，所述深度偏差值等于此标签的深度值减去根节点root的深度值；同时记录此深度偏差值出现的次数，记录方式是以深度偏差值为键， 次数为键所对应的值；步骤2. 2. 3，在步骤2. 2. 2遍历完根节点root所包含的子节点后，求出哈希表中所有次数之和，即得到当前相似区域DR中最低层链接标签“&lt;a&gt;”出现的总次数AT ；步骤2. 2. 4，从哈希表中，找出次数最大的项，此项的键为j，j即是包含最多链接标签 “&lt;a&gt;”的深度偏差值，该键对应的次数值就是最大次数取值LC ；TjC步骤2. 2. 5，计算出链接同层次值LK，ZX=；；如果当前相似区域DR的链接同层次AT值LK大于或等于预设值L，则认为此相似区域是语义链接块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1所述基于文本结构权重的主题区域识别方法，其特征在于：步骤3. 1 中，找出某棵子树链下文本结构权重值最大的节点，具体实现包括以下步骤，步骤3. 1. 1，初始化类实例weight，类实例weight用于指向具有最大文本权重的节点；初始化最大文本权重的变量maxweight，并赋初值0 ；初始化堆栈；申明临时变量 tempweight；步骤3. 1.2,如果输入源标签树source为空，则进入步骤3. 1.9,否则转步骤3. 1. 3 ； 步骤3. 1. 3，源标签树source根节点入栈；步骤3. 1. 4，判断堆栈是否为空，当堆栈不为空时执行步骤3. 1. 5，当堆栈为空时进入步骤3. 1. 9 ；步骤3. 1. 5，当前节点指向栈顶节点；步骤3. 1. 6，计算当前节点的文本权重并赋值给临时变量tempweight ； 步骤3. 1. 7，如果临时变量tempweight的值大于变量maxweight的值，则令变量 maxweight等于临时变量tempweight的值，同时让类实例weight的属性Treenode指向当前节点，转步骤3. 1. 8 ；否则，直接转步骤3. 1. 8 ；步骤3. 1. 8，将当前节点的子节点依次入栈，转步骤3. 1. 4 ； 步骤3. 1. 9，返回类实例weight，即主题区域。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES45099211" lang="ZH" load-source="patent-office" class="description">
+    <p>基于文本结构权重的主题区域识别方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及Web数据挖掘领域的Web信息抽取技术，特别是针对文本为主的半结构化Wfeb网页，抽取Wfeb网页中与其主题相符的文本内容的方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	目前，Web信息抽取按自动化程度分有以下三种方式：</p>
+    <p>[0003]	(1)人工方法：这种方法是通过人工观察出Web页面的特征，然后进行手工标记， 提取目标信息的模式，再根据此模式有针对性的编写程序生成包装器（Wrapper)，然后通过 Wrapper抽取目标信息。这种方法只能针对指定站点，不具通用性。这类系统要求用户具有扎实的计算机编程基础。正因为如此，人工方法适合少量站点的情况，无法适应海量站点的场合。</p>
+    <p>[0004]	(2)半自动抽取：这种方式是半自动的，相对于手工方法，这种方式减轻了人工劳动。它通过从训练网页中提取规则，然后将此规则应用于与此类网页相似的网页中。在这种方法里，如何判断相类似的网页是关键。这类方法不需要用户具有计算机专业基础，只需要用户利用系统提供的用户界面，输入训练用例即可。国外已有许多关于这种方法的研究， 典型的系统有WHISK、STALKER、S0FTMEALY等。WHISK[1]系统适合于结构化、半结构化数据和自由文本，对结构化和半结构化数据，WHISK根据语义项的上下文定位目标信息。对于自由文本，则采用分割方式处理。但是WHISK在规则学习过程中规则不能保证以最优的方式进行扩展，且生成规则集的时间较长。STALKER系统[2][3]将Web数据建模成嵌套关系，利用地标思想，得到SkipToWlR)序列的抽取规则。S0FTMEALY系统M中曾用归纳学习方法学习两个属性间的上下文规则集来确定属性间的顺序，由元组转换机提取信息的内容，但效率较低。</p>
+    <p>[0005]	(3)自动抽取：这种方式起始于1998年，给定一张或者若干网页，程序自动从其中发现规则，然后抽取目标数据。它不需要太多人工干预，因此适合于大量站点的情形。这类系统的代表有RoadRunner[5]，该系统通过对2个或多个样本页面结构的比较，提取一个利用正则表达式表示通用结构模式，然后根据结构模式实现对相似页面的信息抽取，该系统利用了结构模式中文档对象模型（DOM，Document Object Model)标记的关系，如节点之间的嵌套的关系。</p>
+    <p>[0006]	Web信息抽取按照抽取技术路线可以分为以下几种：</p>
+    <p>[0007]	(1)基于HTML解析的数据抽取技术</p>
+    <p>[0008]	基于HTML解析的数据抽取方法可以分为两个类别，第一种是将HTML网页看作是一个由HTML标记和普通字符串构成的序列集合。简单的说就是把整个文档当成一个字符串，利用现在已有的通用编程语言如Perl，Java等设计程序对此字符串进行处理，以文档字符串为输入，利用正则表达式进行模型匹配，输出目标信息字符串。这种方法是基于字符串的，没有利用到HTML网页已有的半结构化特征，不涉及其层次结构。STALKER是利用这种方法的典型系统，此系统基于地标思想。每一个地标是一个连续的标志序列，此标志序列用于定位一个目标项的开头或结尾。例如：对于已知文档</p>
+    <p>Name :&lt;b&gt;Hotel 0ne&lt;/bX/p&gt;, 则利用规则Rl =SkipTo (&lt;b&gt;)可以识别名字的开头。这条规则意味着系统应该从网页的开头开始，跳过所有的字符，直到看到第一个&lt;b&gt;字符串为止，此时&lt;b&gt;就是一个地标。同理， 识别名字的结尾可以使用规则R2 =SkipTo (&lt;/b&gt;)，不同的是R2从文档结尾应用到文档的开头。因此Rl被称为开始规则，R2被称为结束规则。第二种是利用HTML文档的结构，将其转换为一棵有层次的DOM树，然后通过分析和处理树的层次结构，抽取所需要的数据。这类方法的常用代表系统有W4F[6]，XWrapm等。</p>
+    <p>[0009]	(2)基于包装器（Wrapper)归纳的数据抽取技术</p>
+    <p>[0010]	包装器归纳是基于有监督学习的，它从一个标注好的训练样例集合中学习抽取规则。标注通常是手工完成的，包括标记训练网页或样例中用户希望抽取的数据项。随后学到的规则被用于其他相同标记编码或者有相同模板的网页中抽取目标数据。采用这类技术的典型系统有WIEN[8]，WL2[9], SOFTMEALYm等。WL2是一个能够利用文档的不同展示方式的抽取系统。对WL2来说，文档既可以是DOM水平的，也可以是节点水平的，以及几何二维展现的页面（如表格数据）。</p>
+    <p>[0011]	(3)基于自然语言处理的数据抽取技术</p>
+    <p>[0012]	基于自然语言处理的数据抽取技术适合于文档中包含大量文本的情况，它借鉴了自然语言处理技术，通常包括句法分析、语义标注、对象识别和规则生成等步骤。采用这种技术的系统抽取信息速度不够快，典型系统有WHISK[1]，SRV[11]。WHISK系统适用性较广，能同时适合于结构化、半结构化数据和自由文档。其基础为正则表达式，通过正则表达识别出目标短语所在位置和短语之间的分隔符。此系统采用自上而下的方式进行归纳，先用最抽象的规则开始覆盖训练实例，然后通过不断调节，在此规则上添加约束。直到抽取目标信息为止。</p>
+    <p>[0013]	(4)基于本体论的数据抽取技术</p>
+    <p>[0014]	按照斯坦福大学人工智能专家Tom Gruber的定义，本体（Ontology)是程序与人共享知识的概念化规范，描述了代理之间的概念和关系，采用此技术的系统主要利用数据本身的特性，而不太重视这些数据所拥有的结构。但是目前的系统需要相关专家对Web网页进行本体（Ontology)建模。采用这类技术的典型系统有BYU[12]、QUIXOTEm等。BYU是由杨柏翰大学（Brigham Yong University)开发的。在使用时先要某领域专家完成本体 (Ontology)建模，如对象的模式，关键字等。然后根据启发式信息和地标对文档进行分块， 这些块的描述均有同样的抽象特征；在此基础上根据本体中的信息生成规则，最后利用规则抽取结果。</p>
+    <p>[0015]	从抽取技术的智能度来看，手工式的抽取技术几乎不需要智能因素，因为其所要抽取的数据已经通过手工方式进行了标注，比如数据所在位置，是否可选项等信息均人工发现。因此这种技术对使用者要求高，一般只适合于专业人士。半自动抽取和自动抽取技术则降低了使用者的要求，同是提升了智能度。正因为如此，可以自动化的处理大量数据抽取任务。从抽取技术的应用范围来看，手工抽取方法不限于特定领域，其适用范围最广泛， 延伸性最好。而随着智能因素的增加，半自动化和全自动化抽取则逐渐受到应用领域的影响。比如半自动抽取器STALKER是基于HTML解析的数据抽取技术，其对纯文本的抽取显得力不从心。全自动的抽取算法RoadRunner则是基于HTML解析结构的抽取，其对结构不标准的源数据抽取也不尽人意。而且，现有的全自动的抽取技术大多数都&#37318;用的人工智能、机器学习的方法，这些方法计算量大，抽取速度慢，影响实际应用效果。另外这类方法往往需要附加一些前提条件，如RoadRunner需要提供同一模板生成的2个页面，要求页面里含有重复模式，使得其使用受到限制。</p>
+    <p>[0016]	针对上述问题，本技术领域亟待出现文本为主的半结构化Web网页的自动信息抽</p>
+    <p>取方案。</p>
+    <p>[0017]	参考文献：</p>
+    <p>[0018]	[1] S0DERLAND S. Learning Information Extraction Rules for Semi-structured and Free Text[J]. Machine Learning，1999，34(1-3) :233-272.</p>
+    <p>[0019]	[2]Muslea，I.，Minton, S.and Knoblock，C. A hierarchical approach to wrapper induction. Agents&#8212;99，1999.</p>
+    <p>[0020]	[3]Muslea，S&#183; Minton，and C&#183; A&#183; Knoblock，STALKER !Learning Extraction Rules for Semi-structured Web. based Information Sources.In Proc. of AAAI Workshop on AI and Information Integration，July 1998 :74-81.</p>
+    <p>[0021]	[4] C. N. Hsu and Μ. T. dung. Generating finite-state Transducers for Semi-structured Data Extraction from the web Information Systems，23(8)，1998 : 521-538.</p>
+    <p>[0022]	[5]Valter Crescenzi, Giansalvatore Mecca， Paolo Merialdo RoadRunner ： Towards Automatic Data Extraction from Large Web Sites. Proceedings of the 27th VLDB Conference，Roma, Italy, 2001.</p>
+    <p>[0023]	[6]A. Saiiuguet, F Azavant. Building Intelligent Web Applications Using Lightweight Wrappers[J]. Data and Knowledge Eng, 2001, vol.36 (3) :283-316.</p>
+    <p>[0024]	[7]L. Liu, C. Pu, W. Han. XWRAP :An XML-Enabled Wrapper Construction System for Web Information Sources [J]. Proc. 16th IEEE Int，l Conf&#183; Data Eng. (Idffi)，2000.</p>
+    <p>[0025]	[8]N. Kushmerick, D. Weld, R. Doorenbos, Wrapper Induction for Information Extraction[J]. Proc. 15th Int^ 1 Conf. Artificial Intelligence (IJCAI),1997 ： 729-735.</p>
+    <p>[0026]	[9] W. W. Cohen，M. Hurst, and L S. Jensen. A Flexible Learning System for Wrapping Tables and Lists in Html Documents. In Proc. of the Ilth Intl. World Wide Web Conf. (WWW，02)，pp. 232&#8212;241，2002.</p>
+    <p>[0027]	[10] S0DERLAND S. Learning Information Extraction Rules for Semi-structured and Free Text [J]. Machine Learning，1999，34(1-3) :233-272.</p>
+    <p>[0028]	[11]D.Freitag.Information Extraction from HTML-Application of a General Learning Approach [J]. Proc. 15th Conf. Artificial Intelligence(AAAI，98)， 1998.</p>
+    <p>[0029]	[12]Embley D. W. , Jiang Y. S. , NG Y. K. Record-Boundary Discovery in Web Documents[J]. In proceedings ACM SIGMOD International Conference on Management of Data. Pennsylvania, USA,1999.</p>
+    <p>[0030]	[13]Christina Y C. , Michael G，Neel S. Reverse engineering for web data ：From visual to semantic structures[J]. In proceedings of the 18'Th International Conference on Data Engineering. San Jose, California,2002.</p>
+    <p>发明内容</p>
+    <p>[0031]	本发明目的在于解决现有问题不足，针对文本为主的半结构化ffeb网页，基于 HTML解析提供全自动的Web信息抽取技术。</p>
+    <p>[0032]	本发明的技术方案为基于文本结构权重的主题区域识别方法，其特征在于，包括以下步骤：</p>
+    <p>[0033]	步骤1，将待识别Web网页转换成标签树，具体通过以下步骤实现，</p>
+    <p>[0034]	步骤1. 1，通过对待识别Web网页的HTML文档进行字符扫描，识别出起始节点、结束节点、全结构节点和文本节点；</p>
+    <p>[0035]	所述起始节点是以字符“ “〈”和“〉”的字符串；</p>
+    <p>[0036]	所述结束节点是以字符“ &lt; “〈”、“〉”和“/”的字符串；</p>
+    <p>[0037]	所述全结构节点是以字符符“〈”、“〉”和“/”的字符串；</p>
+    <p>[0038]	所述文本节点是以上三种节点以外的字符串；</p>
+    <p>[0039]	步骤1. 2，采用解析器，依据步骤1. 1识别出的起始节点、结束节点、全结构节点和文本节点进行标签树的构建，得到的标签树记为A ；构建过程利用堆栈操作来确定各节点的层次关系，包括以下堆栈操作，</p>
+    <p>[0040]	当解析器发现一个起始节点时，触发入栈操作和在当前标签树中新建标签操作，</p>
+    <p>[0041]	当解析器发现一个结束节点时，触发退栈操作，</p>
+    <p>[0042]	当解析器发现一个全结构节点时，触发入栈操作，同时更新标签树，在更新标签树完成后立刻退栈操作；</p>
+    <p>[0043]	当解析器发现一个文本节点时，触发入栈操作，入栈操作后立刻退栈操作；</p>
+    <p>[0044]	步骤2，在步骤1所得标签树A中搜索相似区域，并进行去链接预处理，得到标签树 B，具体通过以下步骤实现，</p>
+    <p>[0045]	步骤2. 1，在步骤1所得标签树A中搜索相似区域；所述相似区域是由一组相似节点组成的，相似节点是标签树A中满足以下特性的节点，</p>
+    <p>[0046]	(1)所有的节点共同拥有同一个父节点；</p>
+    <p>[0047]	(2)所有节点是相邻的；</p>
+    <p>[0048]	(3)相似节点是子树的根节点或叶子节点；</p>
+    <p>[0049]	(4)与同一区域中的其他节点的相似度大于预设的阈值a ；</p>
+    <p>[0050]	步骤2. 2，在步骤2. 1搜索到的所有相似区域中识别语义链接块，并将识别出的语义链接块从标签树A中摘除，得到标签树B ；所述语义链接块是指由链接组成的，在视觉上呈列表状，每一项表现为超级链接的网页区域；</p>
+    <p>[0051]	步骤3，对步骤2所得标签树B进行主题内容抽取，具体通过以下步骤实现，</p>
+    <p>[0052]	步骤3. 1，求出标签树B中所有节点的文本结构权重，找出某棵子树链下文本结构</p>
+    <p>〈”开始，以字符“〉”为结束，且这两者之间不存在字符 7”开始，以字符“〉”为结束，且这两者之间不存在字符 “〈”开始，以字符“/&gt;”为结束，且这两者之间不存在字权重值最大的节点，该节点所在相似区域即主题区域，该节点记为主题区域节点C ；所述文本结构权重是指文本在相似区域中所占的比重；</p>
+    <p>[0053]	步骤3. 2，对步骤3. 1所得主题区域进行去噪，包括两个步骤；</p>
+    <p>[0054]	步骤3. 2. 1，获取步骤3. 1所得主题区域节点C的子树所包含的所有文本节点的长度，其中最大长度记为maxlength ；</p>
+    <p>[0055]	步骤3. 2. 2，遍历主题区域节点C的子树，根据最大长度maxlength对子树中每一个文本节点的长度计算归一化值，并与预设的阈值K比较；如果不小于预设的阈值K则保留，否则从主题区域节点C的子树中摘除该文本节点；</p>
+    <p>[0056]	步骤3. 3，对步骤3. 2所得去噪后的主题区域所对应的节点输出，即输出最底层叶子节点的文本内容，得到待识别Web网页的主题内容。</p>
+    <p>[0057]	而且，步骤1. 2中，标签树的具体构建方式包括以下步骤，</p>
+    <p>[0058]	步骤1. 2. 1，声明一个解析器实例和一个单例模式堆栈实例，并从待识别Web网页的HTML文档中读取一个节点；</p>
+    <p>[0059]	步骤1. 2. 2，如果读取的节点是结束节点、全结构节点或者文本节点，则将该节点出栈，然后进入步骤1. 2. 3 ；否则，转步骤1. 2. 4 ；</p>
+    <p>[0060]	步骤1. 2. 3，层次值减一，并将父节点指针指向步骤1. 2. 2出栈的节点的父节点， 更新标签树；</p>
+    <p>[0061]	步骤1.2. 4，如果读取的节点是起始节点、全结构节点或者文本节点，则声明一个新的堆栈项，并将该节点入栈，然后进入步骤1. 2. 5 ；否则，直接进入步骤1. 2. 7 ；</p>
+    <p>[0062]	步骤1. 2. 5，层次值加一，同时将步骤1. 2. 4入栈的节点插入父节点指针当前指向的节点的孩子集中；</p>
+    <p>[0063]	步骤1. 2. 6，将当前节点指针指向步骤1. 2. 4入栈的节点，并更新标签树；</p>
+    <p>[0064]	步骤1. 2. 7，从待识别Web网页的HTML文档中读取下一个节点，重复步骤1. 2. 2至步骤1. 2. 6，直到待识别Web网页的HTML文档解析完成，构建得到的标签树记为A。</p>
+    <p>[0065]	而且，步骤2. 1中，在步骤1所得标签树A中搜索相似区域时，采用简单树匹配算法计算相似度，利用堆栈消除递归，对标签树A进行遍历，发现相似节点时进行标记，识别出相似区域；具体遍历实现包括以下步骤，</p>
+    <p>[0066]	步骤2. 1. 1，初始化当前节点指向标签树的根节点，初始化堆栈；</p>
+    <p>[0067]	步骤2. 1. 2，如果当前节点的孩子数不为0，则当前节点入栈，执行步骤2. 1. 3 ；否则从标签树A中取下一节点作为当前节点，返回步骤2. 1. 2，直到取完标签树A中所有节点， 进入步骤2. 1. 7 ；</p>
+    <p>[0068]	步骤2. 1. 3，判断堆栈是否为空，当堆栈不为空时执行步骤2. 1. 4，当堆栈为空时返回步骤2. 1.2 ；</p>
+    <p>[0069]	步骤2. 1. 4，栈顶元素出栈，赋值给当前节点；</p>
+    <p>[0070]	步骤2. 1. 5，遍历当前节点的最近一层子节点，依次比较两个相邻子节点代表的子树的相似度，如果相邻节点的相似度小于阈值a，当前两个相邻子节点标记为删除，否则当前两个相邻子节点标记为相似节点；遍历完成后进入步骤2. 1. 5 ；</p>
+    <p>[0071]	步骤2. 1. 6，当前节点标记为相似区域；取当前节点下的所有子节点，依次入栈， 然后转步骤2. 1. 3 ；[0072]	步骤2. 1. 7，对标签树A进行遍历完成，所有相似区域均被发现。</p>
+    <p>[0073]	而且，步骤2. 2中，识别语义链接块的具体方式包括以下步骤，</p>
+    <p>[0074]	步骤2. 2. 1，取出当前相似区域DR的根节点root，计算出根节点root所包含的子节点个数；</p>
+    <p>[0075]	步骤2. 2. 2，以宽度优先的方式，遍历根节点root所包含的子节点，对遍历到的当前子节点执行以下操作，</p>
+    <p>[0076]	对当前子节点，以宽度优先的方式遍历当前子节点的子树，如果检测到链接标签 “&lt;a&gt;”，则将此标签的深度偏差值存入哈希表，所述深度偏差值等于此标签的深度值减去根节点root的深度值；同时记录此深度偏差值出现的次数，记录方式是以深度偏差值为键， 次数为键所对应的值；</p>
+    <p>[0077]	步骤2. 2. 3，在步骤2. 2. 2遍历完根节点root所包含的子节点后，求出哈希表中所有次数之和，即得到当前相似区域DR中最低层链接标签“&lt;a&gt;”出现的总次数AT ；</p>
+    <p>[0078]	步骤2.2. 4，从哈希表中，找出次数最大的项，此项的键为j，j即是包含最多链接标签“&lt;a&gt;”的深度偏差值，该键对应的次数值就是最大次数取值LC ；</p>
+    <p>[0079]	步骤2. 2. 5，计算出链接同层次值LK，LK = LC/AT；如果当前相似区域DR的链接同层次值LK大于或等于预设值L，则认为此相似区域是语义链接块。</p>
+    <p>[0080]	而且，步骤3. 1中，找出某棵子树链下文本结构权重值最大的节点，具体实现包括以下步骤，</p>
+    <p>[0081]	步骤3. 1. 1，初始化类实例weight，类实例weight用于指向具有最大文本权重的节点；初始化最大文本权重的变量maxweight，并赋初值0 ；初始化堆栈；申明临时变量 tempweight；</p>
+    <p>[0082]	步骤3. 1. 2，如果输入源标签树source为空，则进入步骤3. 1. 9，否则转步骤 3. 1. 3 ；</p>
+    <p>[0083]	步骤3. 1. 3，源标签树source根节点入栈；</p>
+    <p>[0084]	步骤3. 1. 4，判断堆栈是否为空，当堆栈不为空时执行步骤3. 1. 5，当堆栈为空时进入步骤3. 1. 9 ；</p>
+    <p>[0085]	步骤3. 1. 5，当前节点指向栈顶节点；</p>
+    <p>[0086]	步骤3. 1. 6，计算当前节点的文本权重并赋值给临时变量tempweight ；</p>
+    <p>[0087]	步骤3. 1. 7，如果临时变量tempweight的值大于变量maxweight的值，则令变量 maxweight等于临时变量tempweight的值，同时让类实例weight的属性Treenode指向当前节点，转步骤3. 1. 8 ；否则，直接转步骤3. 1. 8 ；</p>
+    <p>[0088]	步骤3. 1. 8，将当前节点的子节点依次入栈，转步骤3. 1. 4 ；</p>
+    <p>[0089]	步骤3. 1. 9，返回类实例weight，即主题区域。</p>
+    <p>[0090]	本发明选择以标签树的形式来处理包含半结构化、自由文本的网页，通过树匹配、 计算文本结构权重识别数据区域、寻找主题，最后通过去噪过程实现主题文本内容的抽取。 与现有方法相比，本发明优点主要表现在：（1)实现简单，不涉及机器学习等智能技术；（2) 由于实现简单，因此运行速度快，实时性好；（3)适应性强，没有附加前提条件。运用本发明技术方案能够在互联网上抽取有用的文本主题信息，为读者节约宝贵的时间和精力。此外，在现实中主题的抽取有着许多具体的应用。比如，转换成网络语音浏览器产品，该产品用于语音新闻浏览，这对视障者（包括盲人和低视力者）来说，获取互联网信息就容易多了。普通的浏览器只提供视觉上的体验，大多数网站只针对视力正常的人制作，一般都没有考虑到为视障者提供服务，因此视障者很难直接浏览WEB页面。基于HTML的TOB页面的一大特点是页面上充满着超级链接，这些链接指向着另外一个页面，视障者也无法正确定位这些链接，也就无法有效的实现网页跳转。为了能让视障者更好的利用互联网资源，可以利用自动化抽取主题的方法并通过TTS技术实现朗读，这样就可以有效的帮助他们从互联网中获取知识。</p>
+    <p>附图说明</p>
+    <p>[0091 ] 图1是本发明实施例的流程图。</p>
+    <p>[0092]	图2是本发明实施例的标签树生成过程示意图。</p>
+    <p>[0093]	图3是本发明实施例的相邻的两条记录示意图。</p>
+    <p>[0094]	图4是本发明实施例的记录边界示意图。</p>
+    <p>[0095]	图5是本发明实施例的节点权重与标签树深度之间的趋势示意图。 具体实施方式</p>
+    <p>[0096]	以下结合附图和实施例详细说明本发明技术方案。</p>
+    <p>[0097]	如图1所示，实施例首先进行网页获取，然后进行网页去噪，从而获得待识别Web 网页。网页获取是最原始的数据来源，负责提供待识别的Web网页。具体实施可以采用一个简易的宽度优先爬虫实现网页获取，首先由种子URL地址从因特网（Internet)获取网页， 然后分析其中链接，将新鲜的链接存入队列中，接着循环从队列中取出链接，直到达到用户目的或者队列为空时停止。网页去噪就是对获取的网页进行标准化，这样可以提高识别准确率。具体实施时，可以按照事先设定的清理规则对待识别Web网页的HTML文档进行标准化，清理对解析有害的标签和无用的标签，如注释、样式和脚本等。</p>
+    <p>[0098]	为便于参考起见，提供实施例对待识别的Web网页进行主题区域识别的流程如下：</p>
+    <p>[0099]	步骤1，将待识别的Web网页转换成标签树。</p>
+    <p>[0100]	首先通过字符扫描，识别出起始节点、结束节点、全结构节点和文本节点。然后依据这三种节点采取不同的策略进行标签树的构建，这个过程利用堆栈的特性来确定各节点的层次关系。</p>
+    <p>[0101]	一个遵守XML标准的Web网页可以用以下两种形态描述：（1) 一个由满足特殊语法结构的（X)HTML(超文本标记语言）标签与文本组成的字符串。（2) &#8212;个由不同标签嵌套形成的树状结构。标签树是利用形态（2)建立起来的一种结构，是一个Web网页的不同描述形态，类似于D0M(文档对象模型），但其与DOM有着明显的不同。标签树是一个Web网页的静态模型，而DOM则可以看作是Web网页的动态模型，下面是标签树的基本特征：</p>
+    <p>[0102]	(1)与标准化的Web网页有相同的层次结构。</p>
+    <p>[0103]	(2)标签树中不存在封闭标签。</p>
+    <p>[0104]	(3)标签树节点名均与（X)HTML标签名一致。[0105]	标签树构建过程如图2所示，对标准化后的待分析网页，经解析器顺序扫描，依次读取HTML标签节点HtmlTag，如果读取的节点HtmlTag是起始节点、全结构节点或者文本节点，则声明一个新的堆栈项，并将其放入堆栈UrlMack，同时层次值加一，同时将该入栈节点插入当前父节点指针指向的节点的孩子集中；如果读取的节点HtmlTag是结束节点、全结构节点或者文本节点，则将堆栈tolStack的顶层项取出，同时层次值减一，并将父节点指针指向出栈节点的父节点，更新标签树。重复此步骤，最终将网页解析成如图2所示的树状结构&#8212;&#8212;称为标签树。</p>
+    <p>[0106]	图2中所示的起始节点、结束节点、全结构节点或文本节点定义如下：</p>
+    <p>[0107]	定义1 ：以“〈”开始，以“〉”为结束，且这两者之间不存在“ &lt;，，和“ &gt;，，的字符串，称为起始节点。起始节点在算法中起着定义边界的作用，即确定层次的起始点。对应到堆栈操作中，它会触发一个入栈操作和在当前标签树中新建标签操作。</p>
+    <p>[0108]	定义2 ：以“ &lt;/ ”开始，以“〉”为结束，且这两者之间不存在“ &lt; ”、“ &gt; ”和“ / ”的字符串，称为结束节点。结束节点即一个完整标签的结束部分。在生成标签树时，解析器凡是检测到结束节点，均会发出退栈命令，此时，是否更新当前标签树有两种策略可供选择，其一是不更新标签树，如果选择此策略，则在最终标签树中，看不到任何结束节点。但这不妨碍对它的显示，因为算法可以根据入栈后的层次确定父子关系。策略二是显示所有结束节点， 这样标签树中节点的数量将有可能增加一倍，这对程序运行效率有极大影响。所以，实施例选择了策略一。</p>
+    <p>[0109]	定义3 ：以“〈”开始，以“/&gt;”为结束，且这两者之间不存在“〈”、“〉”和“/”的字符串，称为全结构节点。全结构节点是一种特殊的节点，因为它具备起始节点和结束节点的部分特性，既起着定义层次边界的作用，也可以看作完整标签的结束部分。由于它兼有这两种特性，程序对它的处理也不相同，其策略如下：当解析器发现一个全结构节点时，会触发一个入栈操作，同时更新标签树。当此操作完成后，立刻发出退栈命令。</p>
+    <p>[0110]	定义4 ：凡是不满足定义1、定义2、定义3的字符串，均称为文本节点。对文本节点采取的策略是入栈后立刻退栈。</p>
+    <p>[0111]	基于以上四个定义，实施例的标签树构建方式包括以下步骤：</p>
+    <p>[0112]	步骤1. 2. 1，声明一个解析器实例和一个单例模式堆栈实例，并从待识别Web网页的HTML文档中读取一个节点；</p>
+    <p>[0113]	步骤1. 2. 2，如果读取的节点是结束节点、全结构节点或者文本节点，则将该节点出栈，然后进入步骤1. 2. 3 ；否则，进入步骤1. 2. 4 ；</p>
+    <p>[0114]	步骤1. 2. 3，层次值减一，并将父节点指针指向步骤1. 2. 2出栈的节点的父节点， 更新标签树；</p>
+    <p>[0115]	步骤1.2. 4，如果读取的节点是起始节点、全结构节点或者文本节点，则声明一个新的堆栈项，并将该节点入栈，然后进入步骤1. 2. 5 ；否则，进入步骤1. 2. 7 ；</p>
+    <p>[0116]	步骤1. 2. 5，层次值加一，同时将步骤1. 2. 4入栈的节点插入父节点指针当前指向的节点的孩子集中；</p>
+    <p>[0117]	步骤1. 2. 6，将当前节点指针指向步骤1. 2. 4入栈的节点，并更新标签树；</p>
+    <p>[0118]	步骤1. 2. 7，从待识别Web网页的HTML文档中读取下一个节点，重复步骤1. 2. 2至步骤1. 2. 6，直到待识别Web网页的HTML文档解析完成，构建得到的标签树记为A。[0119]	为便于实施参考起见，以下提供采用C语言实现标签树构建过程的程序代码：</p>
+    <p>[0120]</p>
+    <p>输入：标准化的Web网页； 输出：标签树</p>
+    <p>AlgorithmBuildTree(source)	//标签树生成算法，source为网页地址</p>
+    <p>(1)	parser = new Parser</p>
+    <p>(2)	int layer = O</p>
+    <p>(3)	treenode = null</p>
+    <p>//实例化解析器 //初始化当前层次 //初始化当前树节点变量</p>
+    <p>[0121]</p>
+    <p>(4) while(parser. pointer is lower than the length of source)</p>
+    <p>度时执行</p>
+    <p>//当解析器指针小于网页长</p>
+    <p>(5)	ch = parser. readChar()</p>
+    <p>(6)	if (ch equal'〈，）</p>
+    <p>(7)	then</p>
+    <p>(8)</p>
+    <p>htmltag = parser. readTagQ</p>
+    <p>(9) if (htmltag is closetag)</p>
+    <p>节点或者文本节点</p>
+    <p>(10) (11) (12)</p>
+    <p>(13)</p>
+    <p>(14)</p>
+    <p>(15)</p>
+    <p>文本节点</p>
+    <p>(16) 项</p>
+    <p>(17)</p>
+    <p>(18)</p>
+    <p>then</p>
+    <p>queueitem = UrlStack.pop() layer = layer - 1</p>
+    <p>//解析器读取网页的当前字符 //如果当前字符等于字符'&lt;’</p>
+    <p>//则解析器读取Html标签 //如果读取的Html标签是结束节点、全结构</p>
+    <p>//则单例模式堆栈UrlStack执行出栈 //当前层次减1</p>
+    <p>treenode = queueitem. parent</p>
+    <p>//当前树节点指向出栈节点的父节点</p>
+    <p>update TagTree</p>
+    <p>Else</p>
+    <p>//更新标签树</p>
+    <p>//如果读取的Html标签是起始节点、全结构节点或者</p>
+    <p>queueitem = new Queueltem(htmltag,layer) //新建一个当前层次的堆栈</p>
+    <p>UrlStack.push(queueitem) layer = layer+1</p>
+    <p>//将新建的堆栈项入栈</p>
+    <p>//当前层次加1</p>
+    <p>(19)	treenode. addchild(queueitem)</p>
+    <p>点插入当前父节点指针指向的节点的孩子集中</p>
+    <p>(20) (21) (22)</p>
+    <p>签树 [0122] [0123]</p>
+    <p>treenode = queueitem.treenode</p>
+    <p>//将入新建的堆栈项所对应的节</p>
+    <p>//当前树节点指向入栈节点</p>
+    <p>update TagTree	//更新标签树</p>
+    <p>return TagTree ///当解析器指针大于网页长度，即解析完成后返回生成的标</p>
+    <p>对于此代码，说明如下： 在步骤（5)中，解析器读取-</p>
+    <p>-个字符前，解析器总是识别出一个节点的起始处，由</p>
+    <p>定义1、2和3可知，步骤（5)读取的字符总应该为“〈”或者文本。解析器在步骤（8)时解析出一个Htmltag，返回的是一个标签节点或文本节点，并且将整个字符串的当前字符指针指向下一个标签节点的起始字符，其过程如下：首先算法跳过空白字符，直到检测到非空白字符。由于算法中定义的标签只有两种，经过分析发现标签节点是以“〈”开始并且以“〉”结束。因此算法利用此特性进行判断，若当前字符为“〈”则扫描指针不断下移，直到出现“〉”， 这时返回一个标签节点。当前字符不是“〈”时，则即将出现的节点是文本节点，停止识别文本节点的条件是遇到了字符“&lt;”。单例模式是本领域术语，表示保证一个类仅有一个实例， 并提供一个访问它的全局访问点。</p>
+    <p>[0124]	步骤2，在步骤1所得标签树A中搜索相似区域，并进行去链接预处理，得到标签树 B0</p>
+    <p>[0125]	相似区域发现是噪声（主要是指超链接块)清理过程核心算法，噪声清理过程是为了提高主题抽取的准确率而进行的预操作。只要清除了链接，即可以得到含有少量杂质的文本主题。它首先利用相似性的数学模型发现相似区域，而语义链接块也可看作一种相似度较大的相似区域，将相似区域的识别方法与语义链接块自身的特征结合起来进行语义链接块的识别。当发现语义链接块时，将其从标签树中摘除，以达到清除链接的目的。</p>
+    <p>[0126]	步骤2. 1，在步骤1所得标签树A中搜索相似区域。</p>
+    <p>[0127]	相似区域这一概念来自于网页列表数据。每个列表页面中的数据记录都具有几乎相同的特征，这一特征可以简要描述为用同一编码函数将每一条记录进行编码，这个编码函数称之为模式（Pattern)，因此相似区域的发现就转化为这个模式的发现。为了发现模式，利用了 DOM结构的两个重要的事实。</p>
+    <p>[0128]	事实1 ：对于满足相似区域要求的一系列子树，它们所描述的对象通常都连续的出现在同一张网页的某一块区域，并且都是用相似的HTML标签格式化的，也就是说每个子树都拥有相似的模式。这样一个区域就代表一个列表。例如，在图3中两条搜索记录（用标签树表示）相邻出现，记录1和记录2结构十分相似。图3中所示标签树中，记录1和记录2的标签代表相似的两个子树，称为相似节点，它们属于包含相似节点的区域&#8212;&#8212;相似区域。标签树中的&lt;div&gt;、&lt;a&gt;、&lt;img&gt;、&lt;h2&gt;是(X) HTML标签，#Text表示文本。</p>
+    <p>[0129]	事实2 ：满足事实1的一系列子树通常有同一个父节点，并且一个数据记录不大可能分别起始和终止于其它两棵子树中间。即数据记录一般会起始于一棵子树的起始处并结束于同一棵或后面某棵子树结束处。</p>
+    <p>[0130]	参见图4说明此事实，设相似区域中的第一个相似节点为DIV1，第二个相似节点为DIV2，设数据记录可以起始或终止于其它两棵子树中间并且存在数据记录DR。如果用 XPath来表示路径，设此DR起始于DIVl子树下的&lt;img&gt;标签，即DIVl/&lt;div&gt;/&lt;a&gt;/&lt;img&gt;， 又设此DR结束于DIV2子树下的&lt;img&gt;标签，即DIV2/&lt;div&gt;/&lt;a&gt;/&lt;img&gt;，则有如图4所示的记录。</p>
+    <p>[0131]	事实上，几乎不会出现图4所示的记录，因为跨子树记录不是一棵正确的子树。由 HTML的嵌套关系可以得知，子树层次高的节点至少有一个处于标签树的最上面。显然，图4 中所示的层次次高的节点为DIV2，但它没有处于最上面，因此跨子树记录一般不存在。</p>
+    <p>[0132]	因此，本发明将相似区域定义为Web网页上富含数据（在本申请中主要是指文本和链接）的块，在标签树中相似区域是由相似节点构成，相似节点的定义如下：</p>
+    <p>[0133]	定义5 ：&#8212;个相似节点是由标签树中满足以下特性的节点：[0134]	(1)所有的节点共同拥有同一个父节点；</p>
+    <p>[0135]	(2)所有节点是相邻的；</p>
+    <p>[0136]	(3)相似节点可以是子树的根节点或叶子节点；</p>
+    <p>[0137]	(4)与同一区域中的其他节点的相似度大于预设的阈值a ；</p>
+    <p>[0138]	在一个Web网页对应的标签树中，这里引入的相似节点非常普遍。一般情况下相似节点代表的是一棵树，因为它的类型是记录类型，而记录类型是基本类型的集合，因此同样可以用标签树来描述相似区域，相似区域的定义为：</p>
+    <p>[0139]	定义6 ：&#8212;个相似区域是由一组相似节点组成的，这些扩展节点具备以下特性：</p>
+    <p>[0140]	(1)所有的相似节点拥有共同的父节点；</p>
+    <p>[0141]	(2)所有组成相似区域的相似节点都是相邻的；</p>
+    <p>[0142]	(3)所有的相似节点之间的相似度应当大于预设的阈值a。</p>
+    <p>[0143]	为了计算相似度，本发明研究比较了基于Levenshtein distance的字符串匹配算法和树匹配算法，实施例采用了基于简单树匹配（STM)的相似度计算方法。</p>
+    <p>[0144]	在STM算法当中，首先比较两颗树的根节点，如果它们的根节点的标记不同，那么这两棵树最大匹配为0，也就是说这两棵树不相似如果根节点的标记相同，则算法递归地计算两棵树第1层子树的最大匹配，并且把得到的值保存在矩阵M中，然后根据M中的值计算矩阵M中的其它值。在相似区域标记算法中，计算子树相似度时，只考虑最大匹配因素是不够的，本发明采用了归一化最大匹配。归一化最大匹配是通过简单树匹配值除以两棵树的节点数的平均值来求得：</p>
+    <p>[0145]	NMM(TreeX5TreeY) =_2 * STM(TreeX, TreeY)_ (式&#19972;）</p>
+    <p>TreeX.Nodes. count + TreeY.Nodes. count</p>
+    <p>[0146]	其中，TreeX. Nodes, count 表示树 X 的节点数，TreeY. Nodes, count 表示树 Y 的节点数，STM(TreeX, TreeY)表示树X和树Y的简单树匹配值。</p>
+    <p>[0147]	当然这里还可以用 max (TreeX. Nodes, count, TreeY. Nodes, count)作为分母，取树X的节点数和树Y的节点数中较大者；分子为STM (TreeX，TreeY)，即有下式：</p>
+    <p>[0148]	NMM(TreeX, TreeY) =-STM(TreeX7TreeY)-(式幻</p>
+    <p>max(TreeX.Nodes. count, TreeY.Nodes. count)</p>
+    <p>[0149]	基于以上定义，有如下相似区域发现算法，该算法的基本原理是利用堆栈来消除递归以对树进行遍历，然后对当前遍历的结点进行标记。用堆栈来消除递归是这部分的主要思想。这其实是采用了现有技术中常用的深度优先的遍历方式，首先将一个节点入栈，然后开始循环，当栈不为空时将栈顶元素弹出。访问此结点，再将被弹出节点的孩子全部节点入栈，循环一直下去，直到栈为空。具体包括以下步骤：</p>
+    <p>[0150]	步骤2. 1. 1，初始化当前节点指向标签树的根节点，初始化堆栈；</p>
+    <p>[0151]	步骤2. 1.2，如果当前节点的孩子数不为0，则当前节点入栈，执行步骤2. 1.3 ；否则从标签树A中取下一节点作为当前节点，返回步骤2. 1. 2，直到取完标签树A中所有节点， 进入步骤2. 1. 7 ；</p>
+    <p>[0152]	步骤2. 1. 3，判断堆栈是否为空，当堆栈不为空时执行步骤2. 1. 4，当堆栈为空时返回步骤2. 1.2 ；</p>
+    <p>[0153]	步骤2. 1.4，栈顶元素出栈，赋值给当前节点；[0154]	步骤2. 1. 5，遍历当前节点的最近一层子节点，依次比较两个相邻子节点代表的子树的相似度，如果相邻节点的相似度小于阈值a，当前两个相邻子节点标记为删除，否则当前两个相邻子节点标记为相似节点；遍历完成后进入步骤2. 1. 5 ；</p>
+    <p>[0155]	步骤2. 1. 6，当前节点标记为相似区域；取当前节点下的所有子节点，依次入栈， 然后转步骤2. 1. 3 ；</p>
+    <p>[0156]	步骤2. 1.7，对标签树A进行遍历完成，所有相似区域均被发现。</p>
+    <p>[0157]	具体实施时，阈值a的建议取值范围为0. 8&#12316;1. 0。</p>
+    <p>[0158]	步骤2. 2，在步骤2. 1搜索到的所有相似区域中识别语义链接块，并将识别出的语义链接块从标签树A中摘除，得到标签树B。</p>
+    <p>[0159]	通过相似区域标记算法识别出所有相似区域。此时标签树被划分为若干块。在此基础上，开始去链接预处理。首先在所有的相似区域中寻找语义链接块，并将其从标签树中摘除，这样就精简了树的结构，在剩余的树结构中，标签节点基本上都是文本节点，其中一定包含与主题内容相关的部分。因此去链接实际上是主题区域发现的预处理过程，达到去噪的目的，语义链接块的定义如下：</p>
+    <p>[0160]	定义7 ：语义链接块是指由链接组成的，在视觉上呈列表状，每一项表现为超级链接的网页区域。</p>
+    <p>[0161]	由定义7可以看出，语义链接实际上就是一种相似区域，理论上可以采用相似区域识别算法来寻找语义链接块，事实上是不够的。语义链接块对其中项相似度要求要低些， 也就是说，在语义链接块中，每一项的链接不要求尽可能保持结构一致。只需要在视觉上呈现重复列表状。</p>
+    <p>[0162]	本发明提出了一个链接同层次值LK，LK用于统计链接标签&lt;a&gt;所在的层次在相似区域中的项中的比例，LK的计算过程如下。</p>
+    <p>[0163]	假设有一个相似区域DR，DR代表一个相似区域的根节点，其每一项所包含的子树中均可能不存在链接标签&lt;a&gt;，设DR的第一层子树数目为N，则在DR中最低层链接标签&lt;a&gt; 出现的总次数AT为：</p>
+    <p>[0164]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00161.png"> <img id="idf0001" file="CN102306204AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00161.png" class="patent-full-image" alt="Figure CN102306204AD00161"> </a> </div>
+    <p>[0165]	其中Xi表示第i棵子树下是否存在链接标签&lt;a&gt;，Xi e {0，1}。</p>
+    <p>[0166]	又设DR中的每一棵子树中层次最低的链接标签&lt;a&gt;的树深度为hiXi，此处乘以Xi 表示第i棵子树是否存在链接标签&lt;a&gt;。设参数j e [1, max^)], j属于正整数集，则存在某个j使满足h = j的i的取值个数LC最大。</p>
+    <p>[0167]	LK的计算表达式如下：</p>
+    <p>[0168]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00162.png"> <img id="idf0002" file="CN102306204AD00162.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00162.png" class="patent-full-image" alt="Figure CN102306204AD00162"> </a> </div>
+    <p>[0169]	语义链接块的识别过程最主要的是计算LK值的过程。实施例的计算实现具体步骤如下：</p>
+    <p>[0170]	步骤2. 2. 1，取出当前相似区域DR的根节点root，计算出根节点root所包含的子节点个数；</p>
+    <p>[0171]	步骤2. 2. 2，以宽度优先的方式，遍历根节点root所包含的子节点，对遍历到的当前子节点执行以下操作，[0172]	对当前子节点，以宽度优先的方式遍历当前子节点的子树，如果检测到链接标签 “&lt;a&gt;”，则将此标签的深度偏差值存入哈希表，所述深度偏差值等于此标签的深度值减去根节点root的深度值；同时记录此深度偏差值出现的次数，记录方式是以深度偏差值为键， 次数为键所对应的值；</p>
+    <p>[0173]	步骤2. 2. 3，在步骤2. 2. 2遍历完根节点root所包含的子节点后，求出哈希表中所有次数之和，即得到当前相似区域DR中最低层链接标签“&lt;a&gt;”出现的总次数AT ；</p>
+    <p>[0174]	步骤2.2. 4，从哈希表中，找出次数最大的项，此项的键为j，j即是包含最多链接标签“&lt;a&gt;”的深度偏差值，该键对应的次数值就是最大次数取值LC ；</p>
+    <p>[0175]	步骤2. 2. 5，计算出链接同层次值LK，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00171.png"> <img id="idf0003" file="CN102306204AD00171.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00171.png" class="patent-full-image" alt="Figure CN102306204AD00171"> </a> </div>
+    <p>如果当前相似区域DR的链接同层次值LK大于或等于预设值L，则认为此相似区域是语义链接块。</p>
+    <p>[0176]	宽度优先的方式是现有技术常用的方式，遍历根节点root所包含的子节点，和遍历子节点的子树时都可以采用。计算出LK值后即可判断DR节点下的相似区域是不是语义链接。实施例中在语义链接块识别过程中，采用的预设值L为0.8。即如果某一相似区域的 LK值大于或等于0. 8，则认为此相似区域是语义链接块，这种方式忽略了 DR中结构不一致的子树带来的影响，并且也认为此子树是语义链接块的一个项。经过实验说明，这种方式有较高的准确率。</p>
+    <p>[0177]	经过去链接预处理后，当前标签树所包含的内容更加接近主题目标了。</p>
+    <p>[0178]	步骤3，对步骤2所得标签树B进行主题内容抽取。</p>
+    <p>[0179]	主题抽取是用户的最终目标，此步骤利用文本结构权重模型进行主题区域识别， 首先计算所有节点的文本结构权重，取得最大权重节点，即主题区域（主题内容所在节点），然后进行归一化去噪，最终输出整个文本节点的内容，即得到文档主题内容。</p>
+    <p>[0180]	步骤3. 1，求出标签树A中所有节点的文本结构权重，基于文本结构权重找到主题区域。</p>
+    <p>[0181]	经过去链接预处理后，剩下的相似区域中仍然可能包含链接内容，但在通常情况下，主题区域中所包含的链接部分会很少，如何去除这部分链接呢？本发明引入了文本结构权重的概念，即文本在相似区域中所占的比重。文本结构权重越高，则此相似区域包含的文本内容越多，该相似区域为主题区域的概率越大。</p>
+    <p>[0182]	文本结构权重是本发明的主要创新点，表示纯文本节点相对链接节点的有效长度，其定义如下：</p>
+    <p>[0183]	定义8文本结构权重：取某一节点R，此节点的子树中不被链接标签包含的文本节点个数与其文本长度的乘积除以此节点的孩子节点数，其形式化表示为：</p>
+    <p>[0184]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00172.png"> <img id="idf0004" file="CN102306204AD00172.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00172.png" class="patent-full-image" alt="Figure CN102306204AD00172"> </a> </div>
+    <p>（式 5)</p>
+    <p>[0185]	式5中涉及四个变量Τ、A、N、C，其中T的含义是节点R的子树中所包含的文本节点个数，A代表节点R的子树中所包含的链接节点，N是节点R的子树中所有的孩子节点数目，CT_A是指不被链接标签包含的文本节点的文本总长度。</p>
+    <p>[0186]	大量实验分析发现，对于新闻、博客类网页，它们均有一个特征，S卩：除主题以外的内容都包含有大量链接，而这些链接通常是用户所不关心的。因此，通过抽象出这类特征， 提出了基于标签树结构的网页链接文本模型，即：[0187]	Web = Link+Text	(式 6)</p>
+    <p>[0188]	对于此类网页可以近似用：网页=链接+文本，这个模型来表示。</p>
+    <p>[0189]	这种模型忽略了其它控制性元素，如表单元素、样式、图片等，因为是基于标签的， 所以结构性标签仍然保留。有了这种模型后，就能理解式5中的T-A是R子树中所有文本节点的数量与所有R子树中链接节点数量之差。实际中，由于一个链接节点常常包含着一个文本节点，但此文本节点不是目标文本节点，所以T-A所代表的是所有纯文本节点的数量，</p>
+    <p>也是最有可能出现主题文本内容的节点。变量N为R子树所有孩子节点的数量，^■可以</p>
+    <p>计算每个标签节点的平均文本节点数，变量CT_A即所有纯文本节点的文本长度，最后作乘积即可以求出有效文本长度，从而得到文本结构权重。</p>
+    <p>[0190]	利用文本结构权重来识别主体区域，即文本结构权重最大的相似区域即是主题区域，是本发明的主要创新点之一。</p>
+    <p>[0191]	由于本发明提出的网页主题识别是基于标签树，在计算所有标签节点的权重时， 可以遍历整个标签树。但计算某个父节点（如节点A的父节点）时，总是要重新统计节点A 中的链接标签和文本标签值，才能计算出节点A的父节点的文本结构权重值。可见这种方式做了许多冗余工作。实施例给出了一种优选计算方法，基于后根遍历方式，避免了这种冗余计算。</p>
+    <p>[0192]	假设有一父节点F，其拥有N棵子树Rl、R2、R3......1&#190;，其中子树的根不是链接节</p>
+    <p>点或者文本节点。首先通过式5计算出R1、R2、R3......Rn的权值，依次得到如下结果：</p>
+    <p>[0193] 	(式 7)</p>
+    <p> [0194]	 (式 8)</p>
+    <p> [0195]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00181.png"> <img id="idf0005" file="CN102306204AD00181.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00181.png" class="patent-full-image" alt="Figure CN102306204AD00181"> </a> </div>
+    <p>(式 9)</p>
+    <p>[0196]	......</p>
+    <p>  [0197]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00182.png"> <img id="idf0006" file="CN102306204AD00182.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00182.png" class="patent-full-image" alt="Figure CN102306204AD00182"> </a> </div>
+    <p>式 10)</p>
+    <p> [0198]	其中&#906;\、Τ2、T3-Tn分别是子树Rl、R2、R3......Rn的子树中所包含的文本节点</p>
+    <p>个数，m.kn分别代表子树Rl、R2、R3......Rn的子树中所包含的链接节点，N” N2,</p>
+    <p>队…Nn分别是子树Rl、R2、R3......Rn的子树中所有的孩子节点数目，Q、C2, (^…Cn分别</p>
+    <p>是指子树Rl、R2、R3......Rn不被链接标签包含的文本节点的文本总长度。</p>
+    <p>Tf - ▲</p>
+    <p>[0199]	为了计算父节点F的权值WF，根据式5，则有&#24677;，TF是父节点F的子</p>
+    <p>Nf</p>
+    <p>树中所包含的文本节点个数，Af代表父节点F的子树中所包含的链接节点，Nf是父节点F的子树中所有的孩子节点数目，Cf是指父节点F不被链接标签包含的文本节点的文本总长度。</p>
+    <p>[0200]	显然，根据父节点F与其子树的关系可知：</p>
+    <p>[0201] 	(式 11)</p>
+    <p>[0202]	 	(式 12)</p>
+    <p>[0203]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00183.png"> <img id="idf0007" file="CN102306204AD00183.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00183.png" class="patent-full-image" alt="Figure CN102306204AD00183"> </a> </div>
+    <p>(式 13)[0204]	Cf = C^C2+. ..+Cn	(式 14)</p>
+    <p>[0205]	由式11、式12、式13、式14得 </p>
+    <p>[0206]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00191.png"> <img id="idf0008" file="CN102306204AD00191.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00191.png" class="patent-full-image" alt="Figure CN102306204AD00191"> </a> </div>
+    <p>[0207]	经转化得： </p>
+    <p>[0208]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00192.png"> <img id="idf0009" file="CN102306204AD00192.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00192.png" class="patent-full-image" alt="Figure CN102306204AD00192"> </a> </div>
+    <p>[0209]	由式16可以看出，父节点的权值可以由它第一层孩子节点来计算得到，如果已经计算出子节点的权重，则可以很快计算出父节点的权重。特殊情况下，如果F节点只有一棵子树，设子树为Rl，则有：</p>
+    <p>[0210]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00193.png"> <img id="idf0010" file="CN102306204AD00193.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00193.png" class="patent-full-image" alt="Figure CN102306204AD00193"> </a> </div>
+    <p>(式 17)</p>
+    <p>[0211]	由式17和式7所得的权重比较发现，Wf &lt; W1,这说明标签树某节点的单一子树链中的节点的文本结构权重是递增的。利用这一特性，可以发现最大的文本结构权重，但这一规律对多子树链不成立。通过实验发现，文本结构权重与树深度之间的规律如图5所示。</p>
+    <p>[0212]	从图5可以发现在树的深度为8时，整体上节点的权重随着树的深度递增，偶尔有微小下降。但在深度为8以后，权重急剧下降。出现上述情况可以从以下两个方面进行解释。第一是由式7所说明的递增关系，在递增的过程中，权重偶尔出现下降情况是因为多子树的出现。平均化了单子树时的权重；第二是当深度大于8后，标签树的深度已经进入了某个文档主题。此主题内标签节点的权重相对小得多，因为大多数节点是权重为O的文本节点，所以导致了权重急剧下降的现象。基于以上两点解释，在求出标签树所有节点的文本结构权重后，只需要找出某棵子树链下的最大文本结构权重值节点就可以发现文档的富文本区域，即主题区域。实施例的实现包括以下步骤：</p>
+    <p>[0213]	步骤3. 1. 1，初始化类实例weight，类实例weight用于指向具有最大文本权重的节点；初始化最大文本权重的变量maxweight，并赋初值O ；初始化堆栈；申明临时变量 tempweight；</p>
+    <p>[0214]	步骤3. 1. 2，如果输入源标签树source为空，则进入步骤3. 1. 9，否则转步骤 3. 1. 3 ；</p>
+    <p>[0215]	步骤3. 1. 3，源标签树source根节点入栈；</p>
+    <p>[0216]	步骤3. 1. 4，判断堆栈是否为空，当堆栈不为空时执行步骤3. 1. 5，当堆栈为空时进入步骤3. 1. 9 ；</p>
+    <p>[0217]	步骤3. 1. 5，当前节点指向栈顶节点；</p>
+    <p>[0218]	步骤3. 1. 6，计算当前节点的文本权重并赋值给临时变量tempweight ；</p>
+    <p>[0219]	步骤3. 1. 7，如果临时变量tempweight的值大于变量maxweight的值，则令变量 maxweight等于临时变量tempweight的值，同时让类实例weight的属性Treenode指向当前节点，转步骤3. 1.8 ；否则，直接转步骤3. 1.8；</p>
+    <p>[0220]	步骤3. 1. 8，将当前节点的子节点依次入栈，转步骤3. 1. 4 ；</p>
+    <p>[0221]	步骤3. 1.9，返回类实例weight，即主题区域。[0222]	为便于实施参考起见，以下提供采用C语言实现程序代码：</p>
+    <p>[0223]</p>
+    <p>输入：源标签树； 输出：最大权值</p>
+    <p>Algorithm asignWeight(source)	//计算源标签树source各个节点的文本权重</p>
+    <p>(1)	weight = newWarser //初始化类实例weight&#8212;&#8212;用于指向具有最大文本权重的树节点</p>
+    <p>(2)	float maxweight = 0	//初始化最大文本权重变量maxweight，并赋初值0</p>
+    <p>(3)	declare temporary variable tempweight Il申明临时变量 tempweight</p>
+    <p>(4)	declare new Stack	//初始化堆栈</p>
+    <p>(5)	IF source is null	//如果源标签树 source 为空</p>
+    <p>(6)	return null	//则结束返回</p>
+    <p>(7)	ELSE	//否则，转（8)</p>
+    <p>(8 ) Push source into Stack //源标签树 source 根节点入栈</p>
+    <p>WHILE(Stack is no empty)	//当堆栈不为空时循环执行</p>
+    <p>(9) [0224]</p>
+    <p>(10) (11)</p>
+    <p>currentNode = Stack.Pop()	//当前节点指向栈顶节点</p>
+    <p>calculate the Weight of currentNode and assign to tempweight //计算当前节 ^</p>
+    <p>的文本权重并赋值给临时变量tempweight</p>
+    <p>(12)	IF tempweight is bigger than maxweight //如果临时变量 tempweight 的值大于变量maxweight的值</p>
+    <p>(13)	maxweight = tempweight	//贝1J让变量 maxweight 等于 tempweight</p>
+    <p>的值</p>
+    <p>(14)	weight.Treenode = currentNode //同时让变量 weight 的属性 Treenode 指向当前节点，属性Treenode是用于指向当前树节点的变量</p>
+    <p>(15)	ENDIF</p>
+    <p>(16)	Push each child of currentNode into Stack //将当前节点的子节点依次入栈</p>
+    <p>(17)	END WHILE	//转(9)</p>
+    <p>(18)	ENDIF</p>
+    <p>(19)	return weight	//循环结束返回weight&#8212;&#8212;具有最大文本权重的节点</p>
+    <p>[0225]	步骤3. 2，对步骤3. 1所得主题区域进行去噪，包括两个步骤；</p>
+    <p>[0226]	步骤3. 2. 1，获取步骤3. 1所得主题区域节点C的子树所包含的所有文本节点的长度，其中最大长度记为maxlength ；</p>
+    <p>[0227]	步骤3. 2. 2，遍历主题区域节点C的子树，根据最大长度maxlength对子树中每一个文本节点的长度计算归一化值，并与预设的阈值K比较；如果不小于预设的阈值K则保留，否则从主题区域节点C的子树中摘除该文本节点。</p>
+    <p>[0228]	很多情况下，发现的主题区域（文本结构权重最大的节点子树）包含有大量的杂质，如简短的日期、作者等信息。为了进一步过滤噪声，本发明实施例采用的归一化去噪方法如下：</p>
+    <p>[0229]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00211.png"> <img id="idf0011" file="CN102306204AD00211.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102306204A/CN102306204AD00211.png" class="patent-full-image" alt="Figure CN102306204AD00211"> </a> </div>
+    <p>[0230]	式18中c代表某文本节点的长度，maxlength即某节点的子树中文本节点的最大文本长度，此式给出了主题区域节点子树中各个文本节点的相对长度值。利用归一化相对长度值，可以有效的去除和主题内容无关的文本节点。预先给定一个阈值K，如果计算某节点的归一化值小于K，则将其从标签树中摘除。具体实施时，K值根据网站页面结构凭经验选取，建议在0. 1&#12316;0. 3取值，根据网站页面的风格不同而具体设置，如新浪为0. 3，腾迅为0.1等等。</p>
+    <p>[0231]	步骤3. 3，对步骤3. 2所得去噪后的主题区域所对应的节点输出，即输出最底层叶子节点的文本内容，得到待识别Web网页的主题内容。</p>
+    <p>[0232]	本文中所描述的具体实施例仅仅是对本发明精神作举例说明。本发明所属技术领域的技术人员可以对所描述的具体实施例做各种各样的修改或补充或采用类似的方式替代，但并不会偏离本发明的精神或者超越所附权利要求书所定义的范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101582074A?cl=zh">CN101582074A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年1月21日</td><td class="patent-data-table-td patent-date-value">2009年11月18日</td><td class="patent-data-table-td ">东北大学</td><td class="patent-data-table-td ">一种DeepWeb响应页面数据抽取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101710343A?cl=zh">CN101710343A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年12月11日</td><td class="patent-data-table-td patent-date-value">2010年5月19日</td><td class="patent-data-table-td ">北京中机科海科技发展有限公司</td><td class="patent-data-table-td ">一种基于文本挖掘的本体自动构建系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101826105A?cl=zh">CN101826105A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年4月2日</td><td class="patent-data-table-td patent-date-value">2010年9月8日</td><td class="patent-data-table-td ">南京邮电大学</td><td class="patent-data-table-td ">基于匈牙利匹配算法的钓鱼网页检测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=DimFBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D3873135B2%26KC%3DB2%26FT%3DD&amp;usg=AFQjCNFW-HJbQxGnLOfbUFQMMBALmOhM9A">JP3873135B2</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20060161525">US20060161525</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2005年1月18日</td><td class="patent-data-table-td patent-date-value">2006年7月20日</td><td class="patent-data-table-td ">Ibm Corporation</td><td class="patent-data-table-td ">Method and system for supporting structured aggregation operations on semi-structured data</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102819586A?cl=zh">CN102819586A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月31日</td><td class="patent-data-table-td patent-date-value">2012年12月12日</td><td class="patent-data-table-td ">北京网康科技有限公司</td><td class="patent-data-table-td ">一种基于高速缓存的url分类方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102819586B?cl=zh">CN102819586B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月31日</td><td class="patent-data-table-td patent-date-value">2015年10月7日</td><td class="patent-data-table-td ">北京网康科技有限公司</td><td class="patent-data-table-td ">一种基于高速缓存的url分类方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN104111987A?cl=zh">CN104111987A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年7月1日</td><td class="patent-data-table-td patent-date-value">2014年10月22日</td><td class="patent-data-table-td ">西安交通大学</td><td class="patent-data-table-td ">基于子树模式挖掘的税务中间指标提取方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=DimFBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年1月4日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年2月22日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年3月13日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年11月26日</td><td class="patent-data-table-td ">C17</td><td class="patent-data-table-td ">Cessation of patent right</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/78e02a5417b524a129a2/CN102306204A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8E%E6%96%87%E6%9C%AC%E7%BB%93%E6%9E%84%E6%9D%83%E9%87%8D%E7%9A%84%E4%B8%BB%E9%A2%98%E5%8C%BA%E5%9F%9F.pdf?id=DimFBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2Wsm7YYJTY8mrzWekBnX4pm0WfjQ"},"sample_url":"https://www.google.com/patents/reader?id=DimFBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

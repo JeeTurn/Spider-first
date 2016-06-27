@@ -1,0 +1,193 @@
+<!DOCTYPE html><html><head><title>专利 CN104092787A - 基于dns的网络访问方法和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于dns的网络访问方法和系统"><meta name="DC.contributor" content="黄斯亮" scheme="inventor"><meta name="DC.contributor" content="腾讯科技（深圳）有限公司" scheme="assignee"><meta name="DC.date" content="2014-6-24" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供一种基于DNS的网络访问方法和系统，其中方法包括步骤：在服务器预存记录多个域名信息的域名配置文件；在发起网络访问请求前从所述服务器上下载所述域名配置文件；根据所述域名配置文件记录的域名信息发起网络访问请求。本发明的技术方案，采用多域名信息的方式进行访问，前端在进行网络访问请求时，利用从服务器下载的域名配置文件中记录的多个域名信息，发起网络访问请求，可以有效降低DNS劫持或故障带来的影响，同时，也可以减少采用默认IP信息方式访问时默认IP服务器负载波动和雪崩现象，提高服务访问的成功率。"><meta name="DC.date" content="2014-10-8"><meta name="DC.relation" content="CN:101841557:A" scheme="references"><meta name="DC.relation" content="CN:102340554:A" scheme="references"><meta name="DC.relation" content="CN:102843445:A" scheme="references"><meta name="DC.relation" content="CN:102882991:A" scheme="references"><meta name="DC.relation" content="US:20110106919:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:104092787:A"><meta name="citation_patent_application_number" content="CN:201410289486"><link rel="canonical" href="https://www.google.com/patents/CN104092787A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN104092787A?cl=zh"/><meta name="title" content="专利 CN104092787A - 基于dns的网络访问方法和系统"/><meta name="description" content="本发明提供一种基于DNS的网络访问方法和系统，其中方法包括步骤：在服务器预存记录多个域名信息的域名配置文件；在发起网络访问请求前从所述服务器上下载所述域名配置文件；根据所述域名配置文件记录的域名信息发起网络访问请求。本发明的技术方案，采用多域名信息的方式进行访问，前端在进行网络访问请求时，利用从服务器下载的域名配置文件中记录的多个域名信息，发起网络访问请求，可以有效降低DNS劫持或故障带来的影响，同时，也可以减少采用默认IP信息方式访问时默认IP服务器负载波动和雪崩现象，提高服务访问的成功率。"/><meta property="og:title" content="专利 CN104092787A - 基于dns的网络访问方法和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN104092787A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN104092787A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=6iIjCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN104092787A&amp;usg=AFQjCNFm3AqHGr1__OFgqsQwoNnQKvScqA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/996eaa48ddba30a560f5/CN104092787A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/996eaa48ddba30a560f5/CN104092787A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN104092787A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN104092787A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN104092787A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN104092787B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN104092787A?cl=zh" style="display:none"><span itemprop="description">本发明提供一种基于DNS的网络访问方法和系统，其中方法包括步骤：在服务器预存记录多个域名信息的域名配置文件；在发起网络访问请求前从所述服务器上下载所述域名配置文件；根据所述域名配置文件记录的域名信息发起网...</span><span itemprop="url">https://www.google.com/patents/CN104092787A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN104092787A - 基于dns的网络访问方法和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN104092787A - 基于dns的网络访问方法和系统" title="专利 CN104092787A - 基于dns的网络访问方法和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN104092787 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201410289486</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年10月8日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2014年6月24日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2014年6月24日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104092787B?hl=zh-CN&amp;cl=zh">CN104092787B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201410289486.5, </span><span class="patent-bibdata-value">CN 104092787 A, </span><span class="patent-bibdata-value">CN 104092787A, </span><span class="patent-bibdata-value">CN 201410289486, </span><span class="patent-bibdata-value">CN-A-104092787, </span><span class="patent-bibdata-value">CN104092787 A, </span><span class="patent-bibdata-value">CN104092787A, </span><span class="patent-bibdata-value">CN201410289486, </span><span class="patent-bibdata-value">CN201410289486.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%BB%84%E6%96%AF%E4%BA%AE%22">黄斯亮</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">腾讯科技（深圳）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104092787A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104092787A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104092787A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=6iIjCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201410289486&amp;usg=AFQjCNFm9zB1WxL7oz-Vki6m57Nr7NEOIQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=6iIjCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D104092787A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGeq935gCkpALOBo85lYXgGGg4JSA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT144690376" lang="ZH" load-source="patent-office">基于dns的网络访问方法和系统</invention-title>
+      </span><br><span class="patent-number">CN 104092787 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA140942244" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供一种基于DNS的网络访问方法和系统，其中方法包括步骤：在服务器预存记录多个域名信息的域名配置文件；在发起网络访问请求前从所述服务器上下载所述域名配置文件；根据所述域名配置文件记录的域名信息发起网络访问请求。本发明的技术方案，采用多域名信息的方式进行访问，前端在进行网络访问请求时，利用从服务器下载的域名配置文件中记录的多个域名信息，发起网络访问请求，可以有效降低DNS劫持或故障带来的影响，同时，也可以减少采用默认IP信息方式访问时默认IP服务器负载波动和雪崩现象，提高服务访问的成功率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(20)</span></span></div><div class="patent-text"><div mxw-id="PCLM75076784" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1. 一种基于DNS的网络访问方法，其特征在于，包括如下步骤：  在服务器预存记录多个域名信息的域名配置文件；  在发起网络访问请求前从所述服务器上下载所述域名配置文件；  根据所述域名配置文件记录的域名信息发起网络访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 根据权利要求1所述的基于DNS的网络访问方法，其特征在于，所述域名配置文件还 记录默认IP信息；其中，所述默认IP信息用于在所述网络访问请求失败时，取代域名信息 发起网络访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 根据权利要求1所述的基于DNS的网络访问方法，其特征在于，还包括： 获取当前网络内多个域名信息及其对应的访问成功率，根据所述访问成功率对各个域 名信息进行排序，并依据所述排序将所述域名信息记录到所述域名配置文件中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 根据权利要求1所述的基于DNS的网络访问方法，其特征在于，所述在发起网络访问 请求前从所述服务器上下载所述域名配置文件的步骤包括： 在客户端启动后，建立客户端与服务器之间的数据通信连接，并从所述服务器上下载 最新的域名配置文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 根据权利要求4所述的基于DNS的网络访问方法，其特征在于，还包括： 当下载最新的域名配置文件成功时，利用所述最新的域名配置文件更新本地保存的域 名配置文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 根据权利要求4所述的基于DNS的网络访问方法，其特征在于，还包括： 当下载最新的域名配置文件失败时，根据客户端本地保存的域名配置文件记录的域名 信息发起网络访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 根据权利要求1所述的基于DNS的网络访问方法，其特征在于，所述根据所述域名配 置文件记录的域名信息发起网络访问请求的步骤包括： 依次从所述域名配置文件中选择域名信息，根据所选择的域名信息发起网络访问请 求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 根据权利要求1所述的基于DNS的网络访问方法，其特征在于，还包括： 当网络访问请求成功时，将相应的域名信息或IP信息设为最近一次成功访问的域名 信息或IP信息保存在本地。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 根据权利要求3所述的基于DNS的网络访问方法，其特征在于，所述根据所述域名配 置文件记录的域名信息发起网络访问请求的步骤包括： 根据所述排序依次从所述域名配置文件中选择域名信息，根据所选择的域名信息发起 网络访问请求；  当发起的网络访问请求成功时，将相应的域名信息或IP信息保存为最近一次成功访 问的域名信息或IP信息；  当所有发起的网络访问请求失败时，发出访问失败提示信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 根据权利要求8或9所述的基于DNS的网络访问方法，其特征在于，所述根据所述 域名配置文件记录的域名信息发起网络访问请求的步骤包括： 利用保存的最近一次成功访问的域名信息或IP信息发起网络访问请求，并在网络访 问请求失败时，选择所述域名配置文件记录的域名信息发起网络访问请求，在网络访问请 求再次失败时，利用默认IP信息发起网络访问请求。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11. 一种基于DNS的网络访问系统，其特征在于，包括： 域名信息配置模块，用于在服务器预存记录多个域名信息的域名配置文件；  配置文件下载模块，用于在发起网络访问请求前从所述服务器上下载所述域名配置文 件；  网络访问请求模块，用于根据所述域名配置文件记录的域名信息发起网络访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 根据权利要求11所述的基于DNS的网络访问系统，其特征在于，所述域名配置文件 还记录默认IP信息；其中，所述默认IP信息用于在所述网络访问请求失败时，取代域名信 息发起网络访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 根据权利要求11所述的基于DNS的网络访问系统，其特征在于，还包括： 域名信息获取模块，用于获取当前网络内多个域名信息及其对应的访问成功率，根据 所述访问成功率对各个域名信息进行排序，并依据所述排序将所述域名信息记录到所述域 名配置文件中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 根据权利要求11所述的基于DNS的网络访问系统，其特征在于，所述配置文件下载 模块，进一步用于在客户端启动后，建立客户端与服务器之间的数据通信连接，并从所述服 务器上下载最新的域名配置文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15. 根据权利要求14所述的基于DNS的网络访问系统，其特征在于，所述配置文件下载 模块，还用于当下载最新的域名配置文件成功时，利用所述最新的域名配置文件更新本地 保存的域名配置文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16. 根据权利要求14所述的基于DNS的网络访问系统，其特征在于，所述配置文件下载 模块，还用于当下载最新的域名配置文件失败时，根据客户端本地保存的域名配置文件记 录的域名信息发起网络访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17. 根据权利要求11所述的基于DNS的网络访问系统，其特征在于，所述网络访问请求 模块，进一步用于依次从所述域名配置文件中选择域名信息，根据所选择的域名信息发起 网络访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18. 根据权利要求11所述的基于DNS的网络访问系统，其特征在于，所述网络访问请求 模块，进一步用于当网络访问请求成功时，将相应的域名信息或IP信息设为最近一次成功 访问的域名信息或IP信息保存在本地。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19. 根据权利要求13所述的基于DNS的网络访问系统，其特征在于，所述网络访问请求 模块，用于： 根据所述排序依次从所述域名配置文件中选择域名信息，根据所选择的域名信息发起 网络访问请求；  当发起的网络访问请求成功时，将相应的域名信息或IP信息保存为最近一次成功访 问的域名信息或IP信息；  当所有发起的网络访问请求失败时，发出访问失败提示信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20. 根据权利要求18或19所述的基于DNS的网络访问系统，其特征在于，所述网络访 问请求模块，进一步用于利用保存的最近一次成功访问的域名信息或IP信息发起网络访 问请求，并在网络访问请求失败时，选择所述域名配置文件记录的域名信息发起网络访问 请求，在网络访问请求再次失败时，利用默认IP信息发起网络访问请求。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES83419942" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">基于DNS的网络访问方法和系统</invention-title>
+    <technical-field>
+      <p>技术领域</p>
+      <p>[0001] 本发明涉及互联网技术领域，特别是涉及一种基于DNS的网络访问方法和系统。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>[0002] 域名是由一串用点分隔的名字组成的Internet上某一台计算机或计算机组的名 称。DNS (Domain Name System，域名系统），是因特网上作为域名和IP地址相互映射的一个 分布式数据库，能够使用户更方便的访问互联网，而不用去记住能够被机器直接读取的IP 数串。DNS服务器，即域名解析服务器，是指保存有该网络中所有主机的域名和对应IP地 址，并具有将域名转换为IP地址功能的服务器。</p>
+      <p>[0003] 在特定的网络范围内，运营商或者网络攻击者，通过修改网络内的DNS服务器配 置，将用户请求的域名解析到错误的服务器IP上，导致用户无法正常使用网络服务。这种 行为也叫DNS劫持，是互联网攻击的一种方式，通过攻击DNS或伪造 DNS的方法，把目标网 站域名解析到错误的地址而达到无法访问目标网站，另外，DNS服务器故障也会导致无法访 问目标网站。</p>
+      <p>[0004] 为了降低DNS劫持或者故障所带来的危害，除了用户手动修改本地DNS配置信 息之外，一般会采用默认IP的方法，来降低劫持带来的影响，一般做法是当网络站点发现 用户无法正常使用服务的时候，直接使用服务器默认IP信息取代域名来访问，这样就无需 DNS对域名进行解析，而直接访问业务服务器，可以避免域名被DNS错误解析的影响。</p>
+      <p>[0005] 使用默认IP信息取代域名来访问的方法，虽然能够避免DNS被劫持后，对域名的 错误解析所带来访问服务无法使用的现象，但默认IP信息一般是写死在前端配置当中，用 户更新操作过程复杂，更新极其不便。另外，当后端服务器发生变更的时候，需要手动更新 前端的默认IP信息配置。当确认默认IP信息后，如果没有发生DNS劫持或故障，前端应用 还是用域名来访问业务服务器，此时网络访问请求将不会发到默认IP信息上，当发生DNS 劫持或故障后，将会切换成默认IP信息来访问服务，此时默认IP服务器的负载将激增，导 致资源短时间内被耗尽，这样就容易会出现服务器雪崩的现象，从而使得服务器会出现迅 速岩机的现象。</p>
+      <p>[0006] 综上所述，在基于DNS的网络访问过程中，现有技术容易受到DNS劫持或者故障影 响，导致服务最终访问成功率低。以及采用默认IP信息进行访问容易导致默认IP信息更 新操作复杂和默认IP服务器负载不均衡的问题，影响了访问成功率。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>[0007] 基于此，有必要针对上述问题，提供一种基于DNS的网络访问方法和系统，可以有 效提升服务最终访问成功率。</p>
+      <p>[0008] -种基于DNS的网络访问方法，包括如下步骤：</p>
+      <p>[0009] 在服务器预存记录多个域名信息的域名配置文件；</p>
+      <p>[0010] 在发起网络访问请求前从所述服务器上下载所述域名配置文件； toon] 根据所述域名配置文件记录的域名信息发起网络访问请求。</p>
+      <p>[0012] 一种基于DNS的网络访问系统，包括：</p>
+      <p>[0013] 域名信息配置模块，用于在服务器预存记录多个域名信息的域名配置文件；</p>
+      <p>[0014] 配置文件下载模块，用于在发起网络访问请求前从所述服务器上下载所述域名配 直文件；</p>
+      <p>[0015] 网络访问请求模块，用于根据所述域名配置文件记录的域名信息发起网络访问请 求。</p>
+      <p>[0016] 上述基于DNS的网络访问方法和系统，采用多域名信息的方式进行访问，前端在 进行网络访问请求时，利用从服务器下载的域名配置文件中记录的多个域名信息，发起网 络访问请求，可以有效降低DNS劫持或故障带来的影响，同时，也可以减少采用默认IP信息 方式访问时默认IP服务器负载波动和雪崩现象，提高服务访问的成功率。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>[0017] 图1为一个实施例的基于DNS的网络访问方法流程图；</p>
+      <p>[0018] 图2为另一个实施例的基于DNS的网络访问方法流程图；</p>
+      <p>[0019] 图3为一个基于DNS的网络访问方法的算法实例示意图；</p>
+      <p>[0020] 图4为一个实施例的基于本发明的技术方案实现的系统框图；</p>
+      <p>[0021] 图5为一个实施例的基于DNS的网络访问系统的结构示意图；</p>
+      <p>[0022] 图6为另一个实施例的基于DNS的网络访问系统的结构示意图；</p>
+      <p>[0023] 图7为一个实施例的终端设备的部分结构框图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>[0024] 下面结合附图对本发明的基于DNS的网络访问方法和系统的具体实施方式作详 细描述。</p>
+      <p>[0025] 参考图1所示，图1为一个实施例的基于DNS的网络访问方法流程图，包括如下步 骤：</p>
+      <p>[0026] 步骤S101，在服务器预存记录多个域名信息的域名配置文件。</p>
+      <p>[0027] 此步骤中，在前端应用访问网络时，采用多域名信息的方案，将当前网络内的多个 域名信息记录到域名配置文件中，并保存在服务器中，以供前端应用进行下载使用。</p>
+      <p>[0028] 作为一个实施例，所述域名配置文件还记录默认IP信息；其中，所述默认IP信息 用于在所述网络访问请求失败时，取代域名信息发起网络访问请求。</p>
+      <p>[0029] 上述实施例中，在多域名信息基础上增加了默认IP信息，可以将一些默认IP信息 也放到域名配置文件中，当网络站点发现前端应用使用多域名信息都失败时，则使用服务 器的默认IP信息取代域名来访问业务服务器，从而确保用户能够正常使用服务，无需用户 手动修改默认IP信息，提高了修改便利性，进一步提升用户体验。</p>
+      <p>[0030] 在一个实施例中，参考图2所示，图2为另一个实施例的基于DNS的网络访问方法 流程图，在步骤S101前还包括获取域名信息的步骤S100。</p>
+      <p>[0031] 步骤S100,获取当前网络内多个域名信息及其对应的访问成功率，根据所述访问 成功率对各个域名信息进行排序，并依据所述排序将所述域名信息记录到所述域名配置文 件中。</p>
+      <p>[0032] 上述实施例中，通过当前网络内多个域名信息，并依据成功率排序，这样前端应用 使用这些域名信息时，可以优先选择成功率最高的域名来使用，提高网络访问速度。</p>
+      <p>[0033] 步骤S102,在发起网络访问请求前从所述服务器上下载所述域名配置文件。</p>
+      <p>[0034] 此步骤中，前端应用在发起网络请求前，先从服务器上下载域名配置文件，用于发 起网络请求时使用。</p>
+      <p>[0035] 需要说明的是，在此处可以不必每次发起网络请求前都需要去下载域名配置文 件，可以在一个合适的时间进行下载，例如，在前端应用启动之后，到服务器下载一次域名 配置文件，之后就缓存该域名配置文件在本地，后续网络访问时就可以多次使用。</p>
+      <p>[0036] 在一个实施例中，步骤S102的过程具体可以包括如下：</p>
+      <p>[0037] 在客户端启动后，建立客户端与服务器之间的数据通信连接，并从所述服务器上 下载最新的域名配置文件。</p>
+      <p>[0038] 上述实施例，作为前端应用的客户端在启动后，可以首先与服务器建立数据通信 连接，然后从服务器拉取最新的域名配置文件，这个域名配置文件一般可以保持在客户端 本地，这样就可以在后续的网络访问中进行使用，用户通过客户端下载的最新的域名配置 文件，可以通过多域名信息方式发起网络访问请求。</p>
+      <p>[0039] 在上述下载最新的域名配置文件过程中，进一步地，当下载最新的域名配置文件 成功时，利用所述最新的域名配置文件更新本地保存的域名配置文件。</p>
+      <p>[0040] 上述处理机制，确保了在客户端本地保存最新的域名配置文件，能够对域名信息 进行及时更新，提高网络访问成功率。</p>
+      <p>[0041] 例如，通过将当前网络内成功率最高的多个域名信息记录在域名配置文件中，从 而客户端每次启动后，都可以得到成功率最高的多个域名信息，从而可以优先选择成功率 更高的域名发起网络访问请求，提高网络访问成功率。</p>
+      <p>[0042] 作为一个实施例，当下载最新的域名配置文件失败时，根据客户端本地保存的域 名配置文件记录的域名信息发起网络访问请求。</p>
+      <p>[0043] 上述实施例，主要是针对下载失败的应对策略，客户端通过保存的上一次下载成 功的域名配置文件，在下载失败时，可以利用客户端本地保存的域名配置文件记录的域名 信息发起网络访问请求，从而可以确保客户端可以应用多域名信息发起网络访问。</p>
+      <p>[0044] 步骤S103,根据所述域名配置文件记录的域名信息发起网络访问请求。</p>
+      <p>[0045] 此步骤中，前端应用可以根据域名配置文件记录的域名信息来发起网络访问请 求，从而降低DNS劫持或故障所带来的影响，提高访问成功率，提升用户应用体验。</p>
+      <p>[0046] 在一个实施例中，步骤S103的过程具体可以如下：</p>
+      <p>[0047] 依次从所述域名配置文件中选择域名信息，根据所选择的域名信息发起网络访问 请求。</p>
+      <p>[0048] 上述网络访问请求方式，可以是每次都选择域名配置文件中记录的域名信息来发 起网络访问，该方法优点是在被劫持域名恢复后，能够快速重新投入使用，提高使用效率。</p>
+      <p>[0049] 作为一种实施方式，进一步地，当网络访问请求成功时，将相应的域名信息或IP 信息设为最近一次成功访问的域名信息或IP信息保存在本地。</p>
+      <p>[0050] 上述实施例的访问方式，通过在本地保存最近一次成功访问的域名信息或IP信 息，可以供下次直接使用，从而减少下一次网络访问时对无效域名选择消耗的时间，提升选 择效率，提高网络访问速度。</p>
+      <p>[0051] 在一个实施例中，步骤S103的过程具体也可以如下：</p>
+      <p>[0052] 1)根据所述排序依次从所述域名配置文件中选择域名信息，根据所选择的域名信 息发起网络访问请求。</p>
+      <p>[0053] 该处理步骤，是基于前述的当前网络内依据成功率排序后的多个域名信息，前端 应用在每次网络访问请求时，都按照域名配置文件中记录的域名信息的排序来发起网络访 问，这样可以优先选择成功率高的域名信息，提高选择域名信息的成功率，从而提高网络访 问速度。</p>
+      <p>[0054] 2)当发起的网络访问请求成功时，将相应的域名信息或IP信息保存为最近一次 成功访问的域名信息或IP信息；当所有发起的网络访问请求失败时，发出访问失败提示信 肩、。</p>
+      <p>[0055] 上述处理步骤，与前述实施例相似，当网络访问请求成功时，将相应的域名信息或 IP信息设为最近一次成功访问的域名信息或IP信息保存在本地，以供下次直接使用，提高 网络访问速度，并且能在当所有访问失败时进行提示。</p>
+      <p>[0056] 在另一个实施例中，步骤S103的过程还可以如下：</p>
+      <p>[0057] 利用保存的最近一次成功访问的域名信息或IP信息发起网络访问请求，并在网 络访问请求失败时，选择所述域名配置文件记录的域名信息发起网络访问请求，在网络访 问请求再次失败时，利用默认IP信息发起网络访问请求，其中，所述默认IP信息可以是如 前述实施例中所述的记录在域名配置文件中的默认IP信息。</p>
+      <p>[0058] 上述实施例的方式，在每次发起网络访问时，是依据"最近一次成功访问的域名信 息或IP信息"一"域名配置文件记录的域名信息"一"默认IP信息"的顺序来发起 网络访问请求。</p>
+      <p>[0059] 即先以最近一次成功访问的域名信息或IP信息来发起网络访问请求，在失败时 再选择所述域名配置文件记录的域名信息来发起网络访问请求，这样方式在最近一次成功 访问的域名信息或IP信息可用的情况下，就无需选择域名配置文件记录的域名信息了，如 果最近一次成功访问的域名信息或IP信息发起网络访问失败，就利用域名配置文件记录 的域名信息发起网络请求访问，如果域名配置文件记录的域名信息均尝试失败，则采用默 认IP信息，通过上述访问机制，可以优化网络访问顺序，从而提高网络访问速度。</p>
+      <p>[0060] 上述各实施例中，所述的前端应用可以各种产生网络访问的应用，如，在线播放 器、网页、浏览器等。其可以运行在计算机终端、移动终端等环境中。</p>
+      <p>[0061] 为了更加清晰本发明的技术方案，参考图3所示，下面阐述一个基于DNS的网络访 问方法的算法实例，包括如下步骤：</p>
+      <p>[0062] 步骤S201，打开前端应用；</p>
+      <p>[0063] 步骤S202,向服务器请求下载最新的域名配置文件（可以命名为domain, conf);</p>
+      <p>[0064] 步骤S203,判断下载是否成功？若是，执行步骤S204,否则执行步骤S205 ;</p>
+      <p>[0065] 步骤S204,更新本地的域名配置文件，然后执行步骤S206 ;</p>
+      <p>[0066] 步骤S205,启用本地保存的域名配置文件，然后执行步骤S206 ;</p>
+      <p>[0067] 步骤S206,使用最近一次成功访问的域名信息或IP信息来发起网络访问请求；</p>
+      <p>[0068] 步骤S207,判断访问请求是否成功？若是，执行步骤S208,否则执行步骤S209 ;</p>
+      <p>[0069] 步骤S208,将对应域名信息或IP信息保存到本地，供下次直接使用；</p>
+      <p>[0070] 步骤S209,顺序选择域名配置文件中的域名信息发起网络访问请求；</p>
+      <p>[0071] 步骤S210,判断是否选择所有域名信息？若是，执行步骤S211，否则转去执行步 骤 S207 ;</p>
+      <p>[0072] 步骤S211，将访问失败信息上报。</p>
+      <p>[0073] 本发明的技术方案，可以用于各种网络访问场合中，减少DNS劫持或者故障的影 响，也可以提升采用默认IP信息进行访问中默认IP信息更新操作便利性，避免默认IP服 务器负载不均衡的问题，提高了服务最终访问成功率。</p>
+      <p>[0074] 参考图4所示，图4为一个实施例的基于本发明的技术方案实现的系统框图，客户 端首先从服务器下载域名配置文件（记录DNS服务器1&#12316;η的域名信息，η彡2)，然后根据 域名配置文件选择DNS服务器1&#12316;η来发起网络访问请求，通过DNS服务器1&#12316;η进行解 析域名后，得到业务服务器的站点IP地址，实现网络访问，另外，当DNS服务器1&#12316;η都失 败时，启用默认IP信息访问默认IP服务器，得到站点IP地址，实现网络访问。</p>
+      <p>[0075] 在上述示例中，可以用于对抗DNS服务器被劫持或故障的问题，假设客户端原对 应的是DNS服务器1，假设DNS服务器1被劫持或故障，这个时候，客户端就可以选择其他 DNS服务器上进行域名解析，从而可以避免某个地区的DNS服务器被劫持或故障给该地区 用户所带来的影响。</p>
+      <p>[0076] 另外，本发明的技术方案除了有效降低DNS劫持或故障带来的影响之外，还具有 容灾的功能，也就是当服务器故障或者某个机房网络故障的时候，可以把前端应用请求通 过其他DNS服务器分配到其他正常工作的机房或者服务器上，确保了用户能够正常访问业 务。</p>
+      <p>[0077] 参考图5所示，图5为一个实施例的基于DNS的网络访问系统的结构示意图，包 括：域名信息配置模块101，配置文件下载模块102和网络访问请求模块103。</p>
+      <p>[0078] 对于域名信息配置模块101，用于在服务器预存记录多个域名信息的域名配置文 件。</p>
+      <p>[0079] 在一个实施例中，所述域名配置文件还记录默认IP信息；其中，所述默认IP信息 用于在所述网络访问请求失败时，取代域名信息发起网络访问请求。</p>
+      <p>[0080] 进一步地，参考图6所不，图6为另个实施例的基于DNS的网络访问系统的结构 示意图，在域名信息配置模块101前还可以包括域名信息获取模块100,用于获取当前网络 内多个域名信息及其对应的访问成功率，根据所述访问成功率对各个域名信息进行排序， 并依据所述排序将所述域名信息记录到所述域名配置文件中。</p>
+      <p>[0081] 对于配置文件下载模块102,用于在发起网络访问请求前从所述服务器上下载所 述域名配置文件。</p>
+      <p>[0082] 在一个实施例中，所述配置文件下载模块102，进一步用于在客户端启动后，建立 客户端与服务器之间的数据通信连接，并从所述服务器上下载最新的域名配置文件。</p>
+      <p>[0083] 在一个实施例中，所述配置文件下载模块102，还用于当下载最新的域名配置文件 成功时，利用所述最新的域名配置文件更新本地保存的域名配置文件。</p>
+      <p>[0084] 进一步地，所述配置文件下载模块102,还用于当下载最新的域名配置文件失败 时，根据客户端本地保存的域名配置文件记录的域名信息发起网络访问请求。</p>
+      <p>[0085] 对于网络访问请求模块103,用于根据所述域名配置文件记录的域名信息发起网 络访问请求。</p>
+      <p>[0086] 在一个实施例中，所述网络访问请求模块103,进一步用于依次从所述域名配置文 件中选择域名信息，根据所选择的域名信息发起网络访问请求。</p>
+      <p>[0087] 进一步地，作为一种实施方式，所述网络访问请求模块103,进一步用于当网络访 问请求成功时，将相应的域名信息或IP信息设为最近一次成功访问的域名信息或IP信息 保存在本地。</p>
+      <p>[0088] 在另一个实施例中，所述网络访问请求模块103,用于根据所述排序依次从所述域 名配置文件中选择域名信息，根据所选择的域名信息发起网络访问请求；</p>
+      <p>[0089] 当发起的网络访问请求成功时，将相应的域名信息或IP信息保存为最近一次成 功访问的域名信息或IP信息；当所有发起的网络访问请求失败时，发出访问失败提示信 肩、。</p>
+      <p>[0090] 在又一个实施例中，所述网络访问请求模块103,进一步用于利用保存的最近一次 成功访问的域名信息或IP信息发起网络访问请求，并在网络访问请求失败时，选择所述域 名配置文件记录的域名信息发起网络访问请求，在网络访问请求再次失败时，利用默认IP 信息发起网络访问请求。</p>
+      <p>[0091] 需要声明的是，本发明的基于DNS的网络访问系统与本发明的基于DNS的网络访 问方法一一对应，在上述基于DNS的网络访问方法的实施例阐述的技术特征及其有益效果 均适用于基于DNS的网络访问系统的实施例中，特此声明。</p>
+      <p>[0092] 本领域普通技术人员可以理解实现上述实施例方法中的全部或部分流程，是可以 通过计算机程序控制相关的硬件来完成的，所述的程序可存储于一计算机可读取存储介质 中，该程序在执行时，可包括如上述各方法的实施例的流程。其中，所述的存储介质可为 磁碟、光盘、只读存储记忆体（Read-Only Memory, ROM)或随机存储记忆体（Random Access Memory，RAM)等。</p>
+      <p>[0093] 根据上述本发明实施例方案，本发明还提供一种包含计算机可读程序的存储介 质，当该存储介质中的计算机可读程序执行时，可以实现上述任何一种方式中的本发明的 基于DNS的网络访问方法。</p>
+      <p>[0094] 如上所述的本发明实施例的方法，可以以软件的形式安装于相应的机器设备上， 并在该软件运行时通过控制相关的处理设备来完成上述的基于DNS的网络访问过程。相应 地，上述客户端可以是设置安装在相应的终端设备上，这里的终端设备可以是手机、平板电 脑、PDA (Personal Digital Assistant，个人数字助理）、P0S (Point of Sales，销售终端）、 车载电脑等任意终端设备。</p>
+      <p>[0095] 据此，基于上述本发明的基于DNS的网络访问方法和系统，本发明还提供一种终 端设备，该终端设备可以是手机、平板电脑、PDA (Personal Digital Assistant,个人数字助 理）、P0S (Point of Sales，销售终端）、车载电脑等任意一种可能需要群组提供服务的终端 设备。</p>
+      <p>[0096] 据此，以下以其中一种终端设备为例，图7中示出了该终端设备的部分结构框图。 参考图7,该终端设备包括：存储器710、输入单元720、显示单元730、处理器740、通信模块 750等部件。本领域技术人员可以理解，图7中示出的结构，仅仅是与本发明实施例方案相 关的部分结构的框图，并不构成对应用在本发明方案中的终端设备的限定，具体的终端设 备可以包括比图示中更多或更少的部件，或者组合某些部件，或者不同的部件布置。</p>
+      <p>[0097] 下面结合图7对该终端设备的各个构成部件进行具体的介绍。</p>
+      <p>[0098] 存储器710可用于存储软件程序以及模块，处理器740通过运行存储在存储器710 的软件程序以及模块，从而执行与该终端设备相关的各种功能应用以及数据处理。存储器 710可主要包括存储程序区和存储数据区，其中，存储程序区可存储操作系统、至少一个功 能所需的应用程序（比如声音播放功能、图像播放功能等）等；存储数据区可存储根据终端 设备的使用所创建的数据等。此外，存储器710可以包括高速随机存取存储器，还可以包括 非易失性存储器，例如至少一个磁盘存储器件、闪存器件、或其他易失性固态存储器件。</p>
+      <p>[0099] 输入单元720可用于接收输入的数字、字符或者其他信息，以及产生与终端设备 的用户设置以及功能控制有关的键信号输入。具体在本发明实施例的方案中，可以通过该 输入单元720来输入用户网络访问操作。</p>
+      <p>[0100] 具体地，以终端设备为手机为例，该输入单元720可包括触控面板以及其他输入 设备。触控面板，也称为触摸屏，可收集用户在其上或附近的触摸操作（比如用户使用手 指、触笔等任何适合的物体或附件在触控面板上或在触控面板附近的操作），并根据预先设 定的程式驱动相应的连接装置。可选的，触控面板可包括触摸检测装置和触摸控制器两个 部分。其中，触摸检测装置检测用户的触摸方位，并检测触摸操作带来的信号，将信号传送 给触摸控制器；触摸控制器从触摸检测装置上接收触摸信息，并将它转换成触点坐标，再送 给处理器740,并能接收处理器740发来的命令并加以执行。此外，可以采用电阻式、电容 式、红外线以及表面声波等多种类型实现触控面板。除了触控面板，输入单元720还可以包 括其他输入设备。具体地，其他输入设备可以包括但不限于物理键盘、功能键（比如音量控 制按键、开关按键等）、轨迹球、鼠标、操作杆等中的一种或多种。</p>
+      <p>[0101] 显示单元730可用于显示由用户输入的信息或提供给用户的信息以及各种菜单。 显示单元730可包括显示面板，可选的，可以采用液晶显示器（Liquid Crystal Display, IXD)、有机发光二极管（Organic Light-Emitting Diode, 0LED)等形式来配置显示面板。具 体在本实施例中，通过该显示单元730,可以将调试结果显示给用户。</p>
+      <p>[0102] 终端设备通过通信模块750可以实现与服务器之间的通信，该通信模块750可以 采用任何可能的方式实现，例如WiFi模块、蓝牙通信、光纤通信等等，通过通信模块750实 现了终端设备与服务器之间的通信，从而可以使得终端设备能够向服务端发送相关信息， 并接收由服务端返回的相关信息。</p>
+      <p>[0103] 例如本发明实施例中，发送客户端向服务器下载域名配置文件的请求，以及客户 端通过DNS服务器发起的网络访问请求，接收域名配置文件以及访问业务服务器成功后返 回的信息。</p>
+      <p>[0104] 处理器740是终端设备的控制中心，利用各种接口和线路连接整个终端设备的各 个部分，通过运行或执行存储在存储器710内的软件程序和/或模块，以及调用存储在存储 器710内的数据，执行终端设备的各种功能和数据处理，从而对终端设备进行整体监控。可 选的，处理器740可包括一个或多个处理单元。</p>
+      <p>[0105] 以上所述实施例仅表达了本发明的几种实施方式，其描述较为具体和详细，但并 不能因此而理解为对本发明专利范围的限制。应当指出的是，对于本领域的普通技术人员 来说，在不脱离本发明构思的前提下，还可以做出若干变形和改进，这些都属于本发明的保 护范围。因此，本发明专利的保护范围应以所附权利要求为准。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101841557A?cl=zh">CN101841557A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年3月2日</td><td class="patent-data-table-td patent-date-value">2010年9月22日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种基于十字链表的p2p流媒体下载方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102340554A?cl=zh">CN102340554A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月29日</td><td class="patent-data-table-td patent-date-value">2012年2月1日</td><td class="patent-data-table-td ">奇智软件（北京）有限公司</td><td class="patent-data-table-td ">一种域名系统dns的最优应用服务器选取方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102843445A?cl=zh">CN102843445A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2012年12月26日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种浏览器及其进行域名解析的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102882991A?cl=zh">CN102882991A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2013年1月16日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种浏览器及其进行域名解析的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20110106919">US20110106919</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value">2011年5月5日</td><td class="patent-data-table-td ">Microsoft Corporation</td><td class="patent-data-table-td ">Automated dns configuration with local dns server</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=6iIjCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029120000">H04L29/12</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年10月8日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年10月29日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年4月13日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/996eaa48ddba30a560f5/CN104092787A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8Edns%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E6%96%B9%E6%B3%95%E5%92%8C%E7%B3%BB%E7%BB%9F.pdf?id=6iIjCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0ldUyNqafTq_g27P6RJW58s42vBw"},"sample_url":"https://www.google.com/patents/reader?id=6iIjCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

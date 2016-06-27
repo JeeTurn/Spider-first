@@ -1,0 +1,211 @@
+<!DOCTYPE html><html><head><title>专利 CN102780385A - 一种级联变换器的控制方法和相关设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种级联变换器的控制方法和相关设备"><meta name="DC.contributor" content="李明才" scheme="inventor"><meta name="DC.contributor" content="郭晓兵" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2012-7-27" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了一种级联变换器的控制方法和相关设备。本发明实施例采用接收主控制器发送的至少包括调制信号的控制信息，根据控制信息和功率单元的配置参数生成载波信号，然后再根据调制信号和载波信号生成PWM控制信号，最后根据PWM控制信号对功率单元的开关半导体功率器件进行控制。采用该方案，不仅可以有效降低主控制器和功率单元之间通信的带宽要求，降低成本，而且可以从整体上提高系统的运行精度和可靠性。"><meta name="DC.date" content="2012-11-14"><meta name="DC.relation" content="CN:101232254:A" scheme="references"><meta name="DC.relation" content="CN:101309012:A" scheme="references"><meta name="DC.relation" content="CN:102075097:A" scheme="references"><meta name="DC.relation" content="CN:102130620:A" scheme="references"><meta name="DC.relation" content="CN:102208810:A" scheme="references"><meta name="DC.relation" content="CN:102474194:A" scheme="references"><meta name="DC.relation" content="CN:1725621:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102780385:A"><meta name="citation_patent_application_number" content="CN:201210264013"><link rel="canonical" href="https://www.google.com/patents/CN102780385A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102780385A?cl=zh"/><meta name="title" content="专利 CN102780385A - 一种级联变换器的控制方法和相关设备"/><meta name="description" content="本发明实施例公开了一种级联变换器的控制方法和相关设备。本发明实施例采用接收主控制器发送的至少包括调制信号的控制信息，根据控制信息和功率单元的配置参数生成载波信号，然后再根据调制信号和载波信号生成PWM控制信号，最后根据PWM控制信号对功率单元的开关半导体功率器件进行控制。采用该方案，不仅可以有效降低主控制器和功率单元之间通信的带宽要求，降低成本，而且可以从整体上提高系统的运行精度和可靠性。"/><meta property="og:title" content="专利 CN102780385A - 一种级联变换器的控制方法和相关设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102780385A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102780385A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=MJ-uBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102780385A&amp;usg=AFQjCNEDloP1ogoQzHPavh6CH8xDW6z3eA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/a85d502a42825ea62ce8/CN102780385A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/a85d502a42825ea62ce8/CN102780385A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102780385A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102780385A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102780385A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了一种级联变换器的控制方法和相关设备。本发明实施例采用接收主控制器发送的至少包括调制信号的控制信息，根据控制信息和功率单元的配置参数生成载波信号，然后再根据调制信号和载波信号生成PWM控制...</span><span itemprop="url">https://www.google.com/patents/CN102780385A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102780385A - 一种级联变换器的控制方法和相关设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102780385A - 一种级联变换器的控制方法和相关设备" title="专利 CN102780385A - 一种级联变换器的控制方法和相关设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102780385 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210264013</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年11月14日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年7月27日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年7月27日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210264013.0, </span><span class="patent-bibdata-value">CN 102780385 A, </span><span class="patent-bibdata-value">CN 102780385A, </span><span class="patent-bibdata-value">CN 201210264013, </span><span class="patent-bibdata-value">CN-A-102780385, </span><span class="patent-bibdata-value">CN102780385 A, </span><span class="patent-bibdata-value">CN102780385A, </span><span class="patent-bibdata-value">CN201210264013, </span><span class="patent-bibdata-value">CN201210264013.0</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E6%98%8E%E6%89%8D%22">李明才</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%AD%E6%99%93%E5%85%B5%22">郭晓兵</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102780385A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102780385A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102780385A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=MJ-uBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210264013&amp;usg=AFQjCNGtJcTcTE3i6CpsfH8uAeyue4PTGw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=MJ-uBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102780385A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNE8yFIbNcbumFMeGU9wkYvbEi5LDQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT117118279" lang="ZH" load-source="patent-office">一种级联变换器的控制方法和相关设备</invention-title>
+      </span><br><span class="patent-number">CN 102780385 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA102266572" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了一种级联变换器的控制方法和相关设备。本发明实施例采用接收主控制器发送的至少包括调制信号的控制信息，根据控制信息和功率单元的配置参数生成载波信号，然后再根据调制信号和载波信号生成PWM控制信号，最后根据PWM控制信号对功率单元的开关半导体功率器件进行控制。采用该方案，不仅可以有效降低主控制器和功率单元之间通信的带宽要求，降低成本，而且可以从整体上提高系统的运行精度和可靠性。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM46287669" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种级联变换器的控制方法，其特征在于，包括：  接收主控制器发送的控制信息，所述控制信息至少包括调制信号；  根据所述控制信息和功率单元的配置参数生成载波信号；  根据所述调制信号和载波信号生成脉冲 宽度调制PWM控制信号；  根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其特征在于，所述控制信息还包括同步信息，则所述根据所述控制信息和功率单元的配置参数生成载波信号之前，还包括：  根据所述同步信息对所述配置参数进行更新和装载；  则所述根据所述控制信息和功率单元的配置参数生成载波信号具体为：根据所述控制信息，以及更新和装载后的配置参数生成载波信号。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述根据所述同步信息对所述预置参数进行更新和装载，包括：  根据所述同步信息对同步操作过程中产生的延时进行计算，得到同步时间补偿信息；  根据所述同步时间补偿信息对所述配置参数进行更新和装载。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求I至3任一项所述的方法，其特征在于，所述配置参数包括载波周期和移相时间，则所述根据所述控制信息和功率单元的配置参数生成载波信号包括：  根据所述控制信息、功率单元预置的载波周期和功率单元预置的移相时间生成载波信号。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.	一种级联变换器的单元控制设备，用于对所述变换器中功率单元的开关半导体功率器进行控制，其特征在于，包括：  接收单元，用于接收主控制器发送的控制信息，所述控制信息至少包括调制信号；  载波生成单元，用于根据所述控制信息和功率单元的配置参数生成载波信号；  信号生成单元，用于根据所述调制信号和载波信号生成脉冲宽度调制PWM控制信号；  控制单元，用于根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的级联变换器的单元控制设备，其特征在于，所述控制信息还包括同步信息，则该级联变换器的单元控制设备还包括配置单元；  配置单元，用于根据所述同步信息对所述配置参数进行更新和装载；  则所述载波生成单元，具体用于根据所述控制信息，以及更新和装载后的配置参数生成载波信号。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的级联变换器的单元控制设备，其特征在于，所述配置单元包括计算子单元和配置子单元；  计算子单元，用于根据所述同步信息对同步操作过程中产生的延时进行计算，得到同步时间补偿信息；  配置子单元，用于根据所述同步时间补偿信息对所述配置参数进行更新和装载。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求5至7任一项所述的级联变换器的单元控制设备，其特征在于，所述配置参数包括载波周期和移相时间，则：  所述载波生成单元，具体用于根据所述控制信息、功率单元预置的载波周期和功率单元预置的移相时间生成载波信号。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求5至7任一项所述的级联变换器的单元控制设备，其特征在于，所述接收单元，具体用于通过光纤接收主控制器发送的控制信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.	一种级联变换器，其特征在于，包括主控制器和功率单元，所述功率单元包括单元控制器和开关半导体功率器件；  所述主控制器，用于根据上层控制算法对采集信号进行采样和计算，得到调制信号，发送控制信息给单元控制器，所述控制信息至少包括调制信号；  单元控制器，用于接收主控制器发送的控制信息，根据控制信息和功率单元的配置参数生成载波信号，根据所述调制信号和载波信号生成脉冲宽度调制PWM控制信号，根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES52626780" lang="ZH" load-source="patent-office" class="description">
+    <p>一种级联变换器的控制方法和相关设备</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信技术领域，具体涉及一种级联变换器的控制方法和相关设备。</p>
+    <p>背景技术</p>
+    <p>[0002]	级联多电平变换器(简称为级联变换器)，指的是可以将信号源发出的信号按一定的目的进行变换的一种系统，其被广泛应用到电机传动、电能质量调节器等场合。 [0003]	级联多电平变换器主要可以包括主控制器和功率单元等部分，其中，功率单元可以包括单元控制器和开关半导体功率器件等部件，其中，主控制器主要用于发送控制信息给各个功率单元的单元控制器，而各个单元控制器则根据接收到的控制信息，对本功率单元的开关半导体功率器件进行相应的控制，从而实现整个系统的协调工作。此外，各功率单元还可以上传自身（即功率单元）的状态信息给主控制器，以便主控制器监测功率单元的状态，然后根据功率单元的状态采取相应的操作，以及发送相应的控制信息。</p>
+    <p>[0004]	在现有技术中，为了实现对功率单元中的开关半导体器件的控制，主控制器会先分别生成各个功率单元的脉冲宽度调制（PWM，Pulse Width Modulation)控制信号，并把得到的PWM控制信号进行数字编码以形成PWM编码信息，然后将形成的PWM编码信息通过光纤通信传输给功率单元的单元控制器，单元控制器在接收到主控制器传输过来的PWM编码信息后，对这些PWM编码信息进行解码，得到PWM控制信号，然后根据PWM控制信号对本功率单元的开关半导体功率器件进行控制。其中，由于通信延迟将会导致解码后的PWM控制信号滞后，因此，在传输PWM编码信息时，对通信传输带宽的要求主要取决于功率单元的开关半导体功率器件的开关特性。</p>
+    <p>[0005]	在对现有技术的研究和实践过程中，本发明的发明人发现，现有技术对主控制器和功率单元之间通信的带宽要求较高，导致成本较高，而且，在PWM编码信息解码后，得到的PWM控制信号的边沿也会存在抖动，这将会导致在系统的输出信号上加入了一个直流分量，从而影响系统的运行精度和可靠性。</p>
+    <p>发明内容</p>
+    <p>[0006]	本发明实施例提供一种级联变换器的控制方法和相关设备，可以降低主控制器和功率单元之间通信的带宽要求，以及提高系统的运行精度和可靠性。</p>
+    <p>[0007]	一种级联变换器的控制方法，包括：</p>
+    <p>[0008]	接收主控制器发送的控制信息，所述控制信息至少包括调制信号；</p>
+    <p>[0009]	根据所述控制信息和功率单元的配置参数生成载波信号；</p>
+    <p>[0010]	根据所述调制信号和载波信号生成PWM控制信号；</p>
+    <p>[0011]	根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0012]	可选的，其中，控制信息还可以包括同步信息，则所述根据所述控制信息和功率单元的配置参数生成载波信号之前还可以包括：根据所述同步信息对所述配置参数进行更新和装载；[0013]	则此时，所述根据所述控制信息和功率单元的配置参数生成载波信号具体可以为：根据所述控制信息，以及更新和装载后的配置参数生成载波信号。</p>
+    <p>[0014]	例如，其中，所述根据所述同步信息对所述预置参数进行更新和装载可以包括：根据所述同步信息对同步操作过程中产生的延时进行计算，得到同步时间补偿信息；根据所述同步时间补偿信息对所述配置参数进行更新和装载。</p>
+    <p>[0015]	可选的，其中，配置参数可以包括载波周期和移相时间，则此时，所述根据所述控制信息和功率单元的配置参数生成载波信号可以包括：</p>
+    <p>[0016]	根据所述控制信息、功率单元预置的载波周期和功率单元预置的移相时间生成载波信号。</p>
+    <p>[0017]	可选的，所述接收主控制器发送的控制信息具体可以为：通过光纤接收主控制器发送的控制信息。  [0018]	相应的，本发明实施例还提供一种级联变换器的单元控制设备，包括：</p>
+    <p>[0019]	接收单元，用于接收主控制器发送的控制信息，所述控制信息至少包括调制信号;</p>
+    <p>[0020]	载波生成单元，用于根据所述控制信息和功率单元的配置参数生成载波信号；</p>
+    <p>[0021]	信号生成单元，用于根据所述调制信号和载波信号生成PWM控制信号；</p>
+    <p>[0022]	控制单元，用于根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0023]	可选的，其中，所述控制信息还可以包括同步信息，则此时，该级联变换器的单元控制设备还可以包括配置单元；</p>
+    <p>[0024]	配置单元，用于根据所述同步信息对所述配置参数进行更新和装载；</p>
+    <p>[0025]	则此时，载波生成单元，具体用于根据所述控制信息，以及更新和装载后的配置参数生成载波信号。</p>
+    <p>[0026]	例如，其中，所述配置单元可以包括计算子单元和配置子单元；</p>
+    <p>[0027]	计算子单元，用于根据所述同步信息对同步操作过程中产生的延时进行计算，得到同步时间补偿信息；</p>
+    <p>[0028]	配置子单元，用于根据所述同步时间补偿信息对所述配置参数进行更新和装载。</p>
+    <p>[0029]	可选的，所述配置参数可以包括载波周期和移相时间，则：</p>
+    <p>[0030]	所述载波生成单元，具体可以用于根据所述控制信息、功率单元预置的载波周期和功率单元预置的移相时间生成载波信号。</p>
+    <p>[0031]	可选的，其中，所述接收单元，具体可以用于通过光纤接收主控制器发送的控制信</p>
+    <p>肩、O</p>
+    <p>[0032]	相应的，本发明实施例提供一种级联变换器，可以包括主控制器和功率单元，所述功率单元包括单元控制器和开关半导体功率器件；</p>
+    <p>[0033]	所述主控制器，用于根据上层控制算法对采集信号进行采样和计算，得到调制信号，发送控制信息给单元控制器，所述控制信息至少包括调制信号；</p>
+    <p>[0034]	单元控制器，用于接收主控制器发送的控制信息，根据控制信息和功率单元的配置参数生成载波信号，根据所述调制信号和载波信号生成脉冲宽度调制PWM控制信号，根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0035]	本发明实施例采用接收主控制器发送的至少包括调制信号的控制信息，根据控制信息和功率单元的配置参数生成载波信号，然后再根据调制信号和载波信号生成PWM控制信号，最后根据PWM控制信号对功率单元的开关半导体功率器件进行控制；由于本方案中主控制器与各个功率单元的单元控制器之间传输的是控制信息，其体现为调制信号，而在控制上，用于传输调制信号的时间要求要比传输PWM编码信息宽裕的多，所以，本方案可以有效降低主控制器和功率单元之间通信的带宽要求，从而降低成本。而且，由于传输的不是PWM编码信息，所以不存在PWM编码信息解码后的边沿抖动问题，能够改善系统的控制输出效果，即采用该方案，不仅可以降低成本，而且可以从整体上提高系统的运行精度和可靠性。</p>
+    <p>附图说明</p>
+    <p>[0036]	为了更清楚地说明本发明实施例中的技术方案，下面将对实施例描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他的附图。 [0037]	图I是本发明实施例提供的级联变换器的控制方法的流程图；</p>
+    <p>[0038]	图2是本发明实施例提供的级联变换器的控制方法的流程图；</p>
+    <p>[0039]	图3a是级联变换器的控制方法的场景示意图；</p>
+    <p>[0040]	图3b是本发明实施例提供的级联变换器的控制方法的另一流程图；</p>
+    <p>[0041]	图3c是主控制器生成调制信号的示意图；</p>
+    <p>[0042]	图3d是各个功率单元的单元控制器的载波周期和移相时间的示意图；</p>
+    <p>[0043]	图3e是各个功率单元的单元控制器的载波同步后的示意图；</p>
+    <p>[0044]	图4a是本发明实施例提供的级联变换器的单元控制设备的结构示意图；</p>
+    <p>[0045]	图4b是本发明实施例提供的级联变换器的单元控制设备的另一结构示意图；</p>
+    <p>[0046]	图5是本发明实施例提供的级联变换器的主控制设备的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0047]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域技术人员在没有作出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0048]	本发明实施例提供一种级联变换器的控制方法和相关设备。以下分别进行详细说明。</p>
+    <p>[0049]	实施例一、</p>
+    <p>[0050]	本实施例将级联变换器的单元控制设备的角度进行描述，该级联变换器的单元控制设备具体可以为功率单元的单元控制器。</p>
+    <p>[0051]	一种级联变换器的控制方法，包括：接收主控制器发送的控制信息，所述控制信息至少包括调制信号，根据所述控制信息和功率单元的配置参数生成载波信号，根据所述调制信号和载波信号生成PWM控制信号，根据PWM控制信号对功率单元的开关半导体功率器件进行控制。[0052]	参见图I，具体流程可以如下：</p>
+    <p>[0053]	101、接收主控制器发送的控制信息，其中，控制信息至少包括调制信号，该调制信号由主控制器根据上层控制算法对采集信号计算得到。</p>
+    <p>[0054]	其中，该控制信息除了可以包括调制信号之外，还可以包括其他信息，比如同步信息等信息，其中，同步信息用于控制主控制器和各个单元控制器之间的同步，以及用于控制各个单元控制器之间的同步。</p>
+    <p>[0055]	具体实施时，主控制器和各单元控制器之间的通信可以采用两线制异步串行通信协议，另外，为了得到更高的数据传输速度，以及提高系统的可靠性，主控制器和各单元控制器之间的通信还可以采用全双工的工作方式，所谓全双工方式，指的是在发送设备的发送方和接收设备的接收方之间采取点到点的连接，并允许数据在两个方向上同时传输。</p>
+    <p>[0056]	此外，主控制器和各单元控制器之间的传输可以采用普通的电缆作为传输的物理介质，也可以采用光纤等其他的介质作为传输的物理介质，即接收主控制器发送的控制信&#183;息（即步骤101)具体可以为：</p>
+    <p>[0057]	通过光纤接收主控制器发送的控制信息。</p>
+    <p>[0058]	其中，采用光纤的方式可以提高传输速度，以及提高抗干扰能力。</p>
+    <p>[0059]	102、根据步骤101中接收到的控制信息和功率单元的配置参数生成载波信号；</p>
+    <p>[0060]	其中，配置参数可以包括载波周期和移相时间等参数，也就是说，根据控制信息和功率单元的配置参数生成载波信号（即步骤102)，具体可以为：</p>
+    <p>[0061]	根据控制信息、功率单元的载波周期和功率单元的移相时间生成载波信号。比如，根据控制信息中的调制信号、功率单元的载波周期和功率单元的移相时间生成载波信号，其中，根据调制信号、功率单元的载波周期和功率单元的移相时间生成载波信号的方法具体可参见现有技术，在此不再赘述。</p>
+    <p>[0062]	其中，配置参数的初始值可以由用户或厂家进行预置，然后后续由主控制器进行更新，或者，该配置参数也可以直接由主控制器进行设置以及更新。例如，如果步骤101中接收到的控制信息中包括了同步信息，则此时还可以根据所述同步信息对这些配置参数进行更新和装载，比如，具体可以如下：</p>
+    <p>[0063]	根据同步信息对同步操作过程中产生的延时进行计算，得到同步时间补偿信息；根据该得到的同步时间补偿信息对配置参数进行更新和装载。</p>
+    <p>[0064]	如果配置参数已经进行了更新，则此时，步骤102具体为：根据步骤101中接收到的控制信息、以及更新和装载后的配置参数生成载波信号。例如，具体可以根据步骤101中接收到的控制信息（比如控制信息中的调制信号)、以及更新和装载后的配置参数（比如更新和装载后的载波周期和移相时间等参数）生成载波信号。</p>
+    <p>[0065]	103、根据步骤101中接收到的调制信号和步骤102中得到的载波信号生成PWM控制信号；例如，具体可以如下：</p>
+    <p>[0066]	从接收到的控制信号中提取出相应的调制信号，根据提取出的调制信号和步骤102中生成的载波信号生成PWM控制信号。其中，根据调制信号和载波信号生成PWM控制信号的方法具体可参见现有技术，在此不再赘述。</p>
+    <p>[0067]	104、根据步骤103中生成的PWM控制信号对功率单元的开关半导体功率器件进行控制。[0068]	其中，功率单元可以包括单元控制器和开关半导体功率器件等器件。</p>
+    <p>[0069]	其中，根据PWM控制信号对功率单元的开关半导体功率器件进行控制的方法具体可参见现有技术，在此不再赘述。</p>
+    <p>[0070]	由上可知，本实施例采用接收主控制器发送的至少包括调制信号的控制信息，根据控制信息和功率单元的配置参数生成载波信号，然后再根据调制信号和载波信号生成PWM控制信号，最后根据PWM控制信号对功率单元的开关半导体功率器件进行控制；由于本方案传输的是控制信息，其体现为调制信号，而在控制上，用于传输调制信号的时间要求要比传输PWM编码信息宽裕的多，所以，本方案可以有效降低主控制器和功率单元之间通信的带宽要求，从而降低成本。而且，由于传输的不是PWM编码信息，所以不存在PWM编码信息解码后的边沿抖动问题，能够改善系统的控制输出效果，即采用该方案，不仅可以降低成本，而且可以从整体上提高系统的运行精度和可靠性。 </p>
+    <p>[0071]	实施例二、</p>
+    <p>[0072]	本实施例将级联变换器的主控制器的角度进行描述。</p>
+    <p>[0073]	&#8212;种级联变换器的控制方法，包括：根据上层控制算法对采集信号进行采样和计算，得到调制信号，发送控制信息给各个功率单元的单元控制器，其中，该控制信息至少包括调制信号，以便单元控制器根据该控制信息和功率单元的配置参数生成载波信号，以及根据该调制信号和载波信号生成PWM控制信号，并根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0074]	参见图2，具体流程可以如下：</p>
+    <p>[0075]	201、根据上层控制算法对采集信号进行采样和计算，得到调制信号；</p>
+    <p>[0076]	202、发送控制信息给各个功率单元的单元控制器，其中，控制信息至少包括调制信号，以便各个功率单元的单元控制器根据该控制信息和功率单元的配置参数生成载波信号，以及根据该调制信号和载波信号生成PWM控制信号，并根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0077]	此外，发送控制信息还可以包括其他信息，比如同步信息等信息，以便各个功率单元的单元控制器根据所述同步信息对所述配置参数进行更新和装载。</p>
+    <p>[0078]	具体实施时，主控制器和各单元控制器之间的通信可以采用两线制异步串行通信协议，另外，为了得到更高的数据传输速度，主控制器和各单元控制器之间的通信还可以采用全双工的工作方式。</p>
+    <p>[0079]	此外，主控制器和各单元控制器之间的传输可以采用普通的电缆作为传输的物理介质，也可以采用光纤等其他的介质作为传输的物理介质，即发送控制信息给各个功率单元的单元控制器（即步骤202)具体可以为：</p>
+    <p>[0080]	通过光纤发送控制信息给各个功率单元的单元控制器。</p>
+    <p>[0081]	其中，采用光纤的方式可以提高传输速度，以及提高抗干扰能力。</p>
+    <p>[0082]	由上可知，本实施例的主控制器可以将至少包括了调制信号的控制信息传输给功率单元的单元控制器，由单元控制器根据该控制信息最终生成PWM控制信号，然后再根据PWM控制信号对功率单元的开关半导体功率器件进行控制；由于本方案传输的是控制信息，其体现为调制信号，而在控制上，用于传输调制信号的时间要求要比传输PWM编码信息宽裕的多（因为在现有技术中，主控制器需要对PWM控制信号进行编码，以得到PWM编码信息，然后单元控制器在接收到PWM编码信息后，还得对PWM编码信息进行解码，所以需要消耗较多的时间，而为了缩短处理时间，只能提高对带宽的要求，即加大带宽；而且，为了保证传输数据的精确度，在对PWM控制信号进行编码时，会尽量提高编码的精度，从而导致数据量的增加，因此也需要提高带宽来进行传输)，所以，本方案可以有效降低主控制器和功率单元之间通信的带宽要求，从而降低成本。而且，由于传输的不是PWM编码信息，所以不存在PWM编码信息解码后的边沿抖动问题，能够改善系统的控制输出效果，即采用该方案，不仅可以降低成本，而且可以从整体上提高系统的运行精度和可靠性。</p>
+    <p>[0083]	实施例三、</p>
+    <p>[0084]	根据实施例一和二所描述的方法，以下将举例进行详细说明。</p>
+    <p>[0085]	在本实施例中，将以主控制器和功率单元的单元控制器之间采用光纤进行通信为例进行说明。参见图3a，该图为级联变换器的控制系统的场景示意图，该级联变换器的控制系统可以包括主控制器和功率单元，其中，功率单元可以包括单元控制器和开关半导体功率器件，其中，各部分的主要功能如下：</p>
+    <p>[0086]	I、主控制器，用于根据控制算法对该接收到的采集信号进行计算，得到调制信号，发送控制信息给功率单元，其中，控制信息包括调制信号，此外，控制信号还可以包括同步信息。</p>
+    <p>[0087]	2、功率单元，用于接收主控制器发送的控制信息，根据该控制信息和功率单元的配置参数生成载波信号，根据调制信号和载波信号生成PWM控制信号，根据PWM控制信号对本功率单元的开关半导体功率器件进行控制，由开关半导体功率器件输出相应的输出信号。</p>
+    <p>[0088]	其中，该功率单元可以包括单元控制器和开关半导体功率器件，如下：</p>
+    <p>[0089]	(I)功率单元的单元控制器，用于接收主控制器发送的控制信息，根据该控制信息和功率单元的配置参数生成载波信号，根据调制信号和载波信号生成PWM控制信号，根据PWM控制信号对本功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0090]	(2)功率单元的开关半导体功率器件，用于接受功率单元的单元控制器的控制，输出相应的输出信号。</p>
+    <p>[0091]	以下对该级联变换器的控制系统的执行流程进行举例说明。</p>
+    <p>[0092]	如图3b所示，级联变换器的控制方法具体可以如下：</p>
+    <p>[0093]	301、主控制器根据控制算法对采集信号进行采样和计算，得到调制信号。例如，具体可以如下：</p>
+    <p>[0094]	参见图3c，其中，h为该控制算法计算时间，t2为下行通信的时间（即发送给各功率单元的单元控制器的时间)，Ts为计算周期（即从一个采样点到下一个采样点之间的时间差)，也称为控制周期，h与t2的时间和为Ts。</p>
+    <p>[0095]	主控制器根据计算周期Ts对该采集信号进行采样，得到采样点，然后根据控制算法对采样点进行计算，得到调制信号的值，从而形成调制信号。其中，计算出调制信号所用的时间为t1;由于计算周期为Ts，而Ts -t1 = t2，所以可知，在计算周期Ts内，除去控制算法计算时间h外，剩余时间为t2，也就是说，在某个采样点处计算得出调制信号后，需要在剩余时间t2时间段内完成调制信号的发送。</p>
+    <p>[0096]	302、主控制器通过光纤发送控制信息给各功率单元的单元控制器，比如，分别发、送给功率单元I的单元控制器、功率单元I的单元控制器、功率单元2的单元控制器……功率单元η的单元控制器，等等。其中，该控制信息中至少包括调制信号，此外，还可以包括同步信息等信息。</p>
+    <p>[0097]	其中，主控制器和各单元控制器之间的通信可以采用两线制异步串行通信协议，另外，为了得到更高的数据传输速度，主控制器和各单元控制器之间的通信还可以采用全双工的工作方式。</p>
+    <p>[0098]	303、功率单元的单元控制器接收到该控制信息后，功率单元的单元控制器从该控制信息中提取出相应的同步信息，根据同步信息和本功率单元的单元控制器的载波周期和</p>
+    <p>移相时间等配置参数生成载波信号。例如，具体可以如下：</p>
+    <p>[0099]	功率单元I的单元控制器从该控制信息中提取出相应的同步信息，根据同步信息和功率单元I的单元控制器的载波周期和移相时间等配置参数生成载波信号I ;</p>
+    <p>[0100]	功率单元2的单元控制器从该控制信息中提取出相应的同步信息，根据同步信息和功率单元2的单元控制器的载波周期和移相时间等配置参数生成载波信号2 ；</p>
+    <p>[0101	]......；</p>
+    <p>[0102]	功率单元η的单元控制器从该控制信息中提取出相应的同步信息，根据同步信息和功率单元η的单元控制器的载波周期和移相时间等配置参数生成载波信号η ；</p>
+    <p>[0103]	以此类推，等等。</p>
+    <p>[0104]	其中，各个功率单元的单元控制器的载波周期和移相时间等配置参数可以由功率单元自身根据实际需求进行设置，也可以由主控制器进行设置，即主控制器分别将各个单元控制器的载波周期和移相时间发送给各个功率单元的单元控制器以进行设置。例如，在本实施例中，各个功率单元的单元控制器的载波周期和移相时间具体可以如图3d所示。</p>
+    <p>[0105]	需说明的是，为了节省信令流量，主控制器在发送控制信息时，可以不在每一条控制信息中都携带同步信息，而是周期性地携带同步信息，即周期性地发送同步信息，然后，各个功率单元的单元控制器在接收到同步信息后，保存该同步信息，直至接收到新的同步信息时，才对同步信息进行更新。其中，发送同步信息的周期可以根据实际应用的需求进行设置，比如，可以两个计算周期Ts同步一次，或者，三个计算周期Ts同步一次，等等。</p>
+    <p>[0106]	例如，以两个计算周期Ts同步一次为例，参见图3e，该图为各个功率单元的单元控制器的载波同步后的示意图，其中，各个功率单元的单元控制器之间，以及各功率单元与主控制器之间的同步方法具体可以如下：</p>
+    <p>[0107]	各功率单元的单元控制器在接收到同步信息后，对同步操作过程中产生的延时进行计算，得到同步时间补偿信息，然后根据该得到的同步时间补偿信息对配置参数进行更新和装载，从而完成各功率单元之间，以及各功率单元与主控制器之间的同步。</p>
+    <p>[0108]	此外，还需说明的是，功率单元还可以返回自身的故障状态信息和/或其他信息给主控制器，以便主控制器进行相应的操作，在此不再赘述。</p>
+    <p>[0109]	304、功率单元的单元控制器从控制信息中提取出调制信号，根据调制信号和步骤303中生成的载波信号生成PWM控制信号。例如，具体可以如下：</p>
+    <p>[0110]	功率单元I的单元控制器从控制信息中提取出调制信号，然后结合调制信号和功率单元I的单元控制器生成的载波信号1，产生PWM控制信号I ;</p>
+    <p>[0111]	功率单元2的单元控制器从控制信息中提取出调制信号，然后结合调制信号和功率单元2的单元控制器生成的载波信号2，产生PWM控制信号2 ;</p>
+    <p>[0112]......；</p>
+    <p>[0113]	功率单元η的单元控制器从控制信息中提取出调制信号，然后结合调制信号和功率单元η的单元控制器生成的载波信号η，产生PWM控制信号η ；</p>
+    <p>[0114]	以此类推，等等。</p>
+    <p>[0115]	305、功率单元的单元控制器根据步骤304中生成的PWM控制信号对本功率单元的开关半导体功率器件进行控制。例如，具体可以如下：</p>
+    <p>[0116]	功率单元I的单元控制器根据本功率单元生成的PWM控制信号对功率单元I的开关半导体功率器件进行控制； [0117]	功率单元2的单元控制器根据本功率单元生成的PWM控制信号对功率单元2的开关半导体功率器件进行控制；</p>
+    <p>[0118]	......</p>
+    <p>[0119]	功率单元η的单元控制器根据本功率单元生成的PWM控制信号对功率单元η的开关半导体功率器件进行控制；</p>
+    <p>[0120]	以此类推，等等。</p>
+    <p>[0121]	其中，单元控制器根据PWM控制信号对本功率单元的开关半导体功率器件进行控制的具体方法可参见现有技术，在此不再赘述。</p>
+    <p>[0122]	由上可知，本实施例采用接收主控制器发送的至少包括调制信号的控制信息，根据控制信息和功率单元的配置参数生成载波信号，然后再根据调制信号和载波信号生成PWM控制信号，最后根据PWM控制信号对功率单元的开关半导体功率器件进行控制；由于本方案传输的是控制信息，其体现为调制信号，而在控制上，用于传输调制信号的时间要求要比传输PWM编码信息宽裕的多，所以，本方案可以有效降低主控制器和功率单元之间通信的带宽要求，从而降低成本。而且，由于传输的不是PWM编码信息，所以不存在PWM编码信息解码后的边沿抖动问题，能够改善系统的控制输出效果，即采用该方案，不仅可以降低成本，而且可以从整体上提高系统的运行精度和可靠性。</p>
+    <p>[0123]	进一步的，由于本实施例的主控制器和功率单元之间的通信采用了全双工的串行通信协议，所以，不仅可以提高数据传输的速度，而且也提高了系统的可靠性。而且，由于采用了优化的同步技术，减弱了各单元控制器时钟信号误差的累积效应，并同时对于同步传输延迟进行了优化补偿，所以，可以实现良好的同步效果。</p>
+    <p>[0124]	实施例四、</p>
+    <p>[0125]	为了更好地实施以上方法，本发明实施例还相应地提供一种级联变换器的单元控制设备(简称单元控制设备)，可以作为功率单元的单元控制器，如图4a所示，该级联变换器的单元控制设备包括接收单元401、载波生成单元402、信号生成单元403和控制单元404 ；</p>
+    <p>[0126]	接收单元401，用于接收主控制器发送的控制信息，其中，控制信息至少包括调制信号，该调制信号由主控制器根据上层控制算法对采集信号计算得到；</p>
+    <p>[0127]	当然，控制信息除了可以包括调制信号之外，还可以包括其他信息，比如同步信息等信息。</p>
+    <p>[0128]	载波生成单元402，用于根据接收单元401接收到的控制信息和功率单元的配置参数生成载波信号。[0129]	信号生成单元403，用于根据接收单元401接收到的调制信号和载波生成单元402生成的载波信号生成PWM控制信号。</p>
+    <p>[0130]	控制单元404，用于根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0131]	其中，配置参数则可以包括载波周期和移相时间等参数，SP ：</p>
+    <p>[0132]	载波生成单元402，具体用于根据控制信息、功率单元的载波周期和功率单元的移相时间生成载波信号。</p>
+    <p>[0133]	其中，该配置参数初始值可以由用户或厂家进行预置，然后后续由主控制器进行更新，或者，该配置参数也可以直接由主控制器进行设置以及更新。例如，如果控制信息中包括了同步信息，则此时还可以根据所述同步信息对这些配置参数进行更新和装载，即，如图4b所示，该级联变换器的单元控制设备还可以包括配置单元405 ； </p>
+    <p>[0134]	配置单元405，用于根据同步信息对配置参数进行更新和装载。例如，具体可以如下：</p>
+    <p>[0135]	如图4b所示，配置单元405可以包括计算子单元4051和配置子单元4052 ；</p>
+    <p>[0136]	计算子单元4051，用于根据所述同步信息对同步操作过程中产生的延时进行计算，得到同步时间补偿信息；</p>
+    <p>[0137]	配置子单元4052，用于根据所述同步时间补偿信息对所述配置参数进行更新和装载。</p>
+    <p>[0138]	则此时，载波生成单元402，具体用于根据接收单元401接收到的控制信息，以及配置单元405更新和装载后的配置参数生成载波信号。</p>
+    <p>[0139]	例如，该载波生成单元402，具体用于根据接收单元401接收到的控制信息（比如调制信号)，以及配置子单元4052更新和装载后的配置参数（比如载波周期和移相时间等参数）生成载波信号。</p>
+    <p>[0140]	其中，主控制器和各单元控制器之间的通信可以采用两线制异步串行通信协议，另外，为了得到更高的数据传输速度，以及提高系统的可靠性，主控制器和各单元控制器之间的通信还可以采用全双工的工作方式。</p>
+    <p>[0141]	此外，主控制器和各单元控制器之间的传输可以采用普通的电缆作为传输的物理介质，也可以采用光纤等其他的介质作为传输的物理介质，即：</p>
+    <p>[0142]	接收单元401，具体用于通过光纤接收主控制器发送的控制信息。</p>
+    <p>[0143]	其中，采用光纤的方式可以提高传输速度，以及提高抗干扰能力。</p>
+    <p>[0144]	具体实施时，以上各个单元可以作为独立的实体来实现，也可以进行任意组合，作为同一或若干个实体来实现。以上各个单元的具体实施可参见前面的方法实施例，在此不再赘述。</p>
+    <p>[0145]	由上可知，本实施例的级联变换器的单元控制设备的接收单元401可以接收主控制器发送的至少包括调制信号的控制信息，然后由载波生成单元402根据控制信息和功率单元的配置参数生成载波信号，然后再由信号生成单元403根据调制信号和载波信号生成PWM控制信号，最后由控制单元403根据PWM控制信号对功率单元的开关半导体功率器件进行控制；由于本方案传输的是控制信息，其体现为调制信号，而在控制上，用于传输调制信号的时间要求要比传输PWM编码信息宽裕的多，所以，本方案可以有效降低主控制器和功率单元之间通信的带宽要求，从而降低成本。而且，由于传输的不是PWM编码信息，所以不存在PWM编码信息解码后的边沿抖动问题，能够改善系统的控制输出效果，即采用该方案，不仅可以降低成本，而且可以从整体上提高系统的运行精度和可靠性。</p>
+    <p>[0146]	实施例五、</p>
+    <p>[0147]	相应的，本发明实施例还提供另一种级联变换器的主控制设备，可以作为级联变换器的主控制器，简称主控制器，如图5所示，该级联变换器的主控制设备包括调制信号获取单元501和发送单元502 ；</p>
+    <p>[0148]	调制信号获取单元501，用于根据上层控制算法对接收到的采集信号进行采样和计算，得到调制信号；</p>
+    <p>[0149]	发送单元502，用于发送控制信息给各个功率单元的单元控制器，其中，控制信息至少包括调制信号，以便级联变换器的单元控制设备（比如单元控制器）根据该控制信息和&#183;功率单元的配置参数生成载波信号，以及根据该调制信号和载波信号生成PWM控制信号，并根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0150]	此外，发送控制信息还可以包括其他信息，比如同步信息等信息，以便级联变换器的单元控制设备（比如单元控制器）根据所述同步信息对配置参数进行更新和装载。</p>
+    <p>[0151]	具体实施时，主控制器和各单元控制器之间的通信可以采用两线制异步串行通信协议，另外，为了得到更高的数据传输速度，主控制器和各单元控制器之间的通信还可以采用全双工的工作方式。</p>
+    <p>[0152]	此外，主控制器和各单元控制器之间的传输可以采用普通的电缆作为传输的物理介质，也可以采用光纤等其他的介质作为传输的物理介质，即：</p>
+    <p>[0153]	发送单元502，具体用于通过光纤发送控制信息给各个功率单元的单元控制器。</p>
+    <p>[0154]	其中，采用光纤的方式可以提高传输速度，以及提高抗干扰能力。</p>
+    <p>[0155]	具体实施时，以上各个单元可以作为独立的实体来实现，也可以进行任意组合，作为同一或若干个实体来实现，以上各个单元的具体实施可参见前面的方法实施例，在此不再赘述。</p>
+    <p>[0156]	由上可知，本实施例的级联变换器的主控制设备的调制信号获取单元501可以根据上层控制算法计算得到调制信号，由发送单元502将至少包括了调制信号的控制信息传输给功率单元的单元控制器，使得单元控制器可以根据该控制信息最终生成PWM控制信号，然后再根据PWM控制信号对功率单元的开关半导体功率器件进行控制；由于本方案传输的是控制信息，其体现为调制信号，而在控制上，用于传输调制信号的时间要求要比传输PWM编码信息宽裕的多，所以，本方案可以有效降低主控制器和功率单元之间通信的带宽要求，从而降低成本。而且，由于传输的不是PWM编码信息，所以不存在PWM编码信息解码后的边沿抖动问题，能够改善系统的控制输出效果，即采用该方案，不仅可以降低成本，而且可以从整体上提高系统的运行精度和可靠性。</p>
+    <p>[0157]	实施例六、</p>
+    <p>[0158]	相应的，本发明实施例还相应地提供一种级联变换器，包括本发明实施例提供的任一种级联变换器的单元控制设备，该级联变换器的单元控制设备可作为级联变换器中的功率单元的单元控制器。其中，功率单元可以包括单元控制器和开关半导体功率器件等器件。[0159]	级联变换器的单元控制设备，比如单元控制器，用于接收主控制器发送的控制信息，其中，该控制信息至少包括调制信号，根据控制信息和功率单元的配置参数生成载波信号，根据该调制信号和载波信号生成PWM控制信号，根据PWM控制信号对功率单元的开关半导体功率器件进行控制。</p>
+    <p>[0160]	其中，配置参数可以包括载波周期和移相时间等参数，配置参数的初始值可以由用户或厂家进行预置，然后后续由主控制器进行更新，或者，该配置参数也可以直接由主控制器进行设置以及更新。</p>
+    <p>[0161]	其中，该控制信息除了可以包括调制信号之外，还可以包括其他信息，比如同步信息等信息，其中，同步信息用于控制主控制器和各个单元控制器之间的同步，以及用于控制各个单元控制器之间的同步，即:</p>
+    <p>[0162]	级联变换器的单元控制设备，比如单元控制器，还用于根据同步信息对配置参数进行更新和装载。例如，具体可以根据同步信息对同步操作过程中产生的延时进行计算，得到同步时间补偿信息，然后根据所述同步时间补偿信息对所述配置参数进行更新和装载。 </p>
+    <p>[0163]	如果配置参数已经进行了更新，则此时，级联变换器的单元控制设备具体可以根据接收到的控制信息、以及更新和装载后的配置参数生成载波信号。例如，具体可以根据接收到的控制信息（比如控制信息中的调制信号)、以及更新和装载后的配置参数（比如更新和装载后的载波周期和移相时间等参数）生成载波信号。</p>
+    <p>[0164]	此外，该级联变换器还可以包括级联变换器的主控制设备，作为级联变换器中的主控制器。</p>
+    <p>[0165]	级联变换器的主控制设备，比如主控制器，用于根据上层控制算法对采集信号进行采样和计算，得到调制信号，发送控制信息给级联变换器的单元控制设备，比如，发送控制信息给各个功率单元的单元控制器。</p>
+    <p>[0166]	以上各个设备的具体实施可参见前面的实施例，在此不再赘述。</p>
+    <p>[0167]	由上可知，本实施例级联变换器中的主控制设备（比如主控制器）可以根据上层控制算法计算得到调制信号，然后将至少包括了调制信号的控制信息传输给功率单元的单元控制器，由单元控制器根据该控制信息最终生成PWM控制信号，然后再根据PWM控制信号对功率单元的开关半导体功率器件进行控制；由于本方案传输的是控制信息，其体现为调制信号，而在控制上，用于传输调制信号的时间要求要比传输PWM编码信息宽裕的多，所以，本方案可以有效降低主控制器和功率单元之间通信的带宽要求，从而降低成本。而且，由于传输的不是PWM编码信息，所以不存在PWM编码信息解码后的边沿抖动问题，能够改善系统的控制输出效果，即采用该方案，不仅可以降低成本，而且可以从整体上提高系统的运行精度和可靠性。</p>
+    <p>[0168]	本领域普通技术人员可以理解上述实施例的各种方法中的全部或部分步骤是可以通过程序来指令相关的硬件来完成，该程序可以存储于一计算机可读存储介质中，存储介质可以包括：只读存储器（ROM, Read Only Memory)、随机存取记忆体（RAM, RandomAccess Memory)、磁盘或光盘等。</p>
+    <p>[0169]	以上对本发明实施例所提供的一种级联变换器的控制方法和相关设备进行了详细介绍，本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变 之处，综上所述，本说明书内容不应理解为对本发明的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1725621A?cl=zh">CN1725621A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2005年7月22日</td><td class="patent-data-table-td patent-date-value">2006年1月25日</td><td class="patent-data-table-td ">清华大学</td><td class="patent-data-table-td ">用于电力电子变流器的通用脉冲宽度调制集成电路</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101232254A?cl=zh">CN101232254A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年2月27日</td><td class="patent-data-table-td patent-date-value">2008年7月30日</td><td class="patent-data-table-td ">中国农业大学</td><td class="patent-data-table-td ">一种功率变换器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101309012A?cl=zh">CN101309012A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年5月19日</td><td class="patent-data-table-td patent-date-value">2008年11月19日</td><td class="patent-data-table-td ">康弗蒂姆有限公司</td><td class="patent-data-table-td ">功率变换器脉宽调制(pwm)策略的同步和相移的控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102075097A?cl=zh">CN102075097A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月29日</td><td class="patent-data-table-td patent-date-value">2011年5月25日</td><td class="patent-data-table-td ">江苏安方电力科技有限公司</td><td class="patent-data-table-td ">一种级联型变流器n+1故障冗余控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102130620A?cl=zh">CN102130620A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月14日</td><td class="patent-data-table-td patent-date-value">2011年7月20日</td><td class="patent-data-table-td ">西门子公司</td><td class="patent-data-table-td ">用于控制功率变换器中的功率变换的方法和控制系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102208810A?cl=zh">CN102208810A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月3日</td><td class="patent-data-table-td patent-date-value">2011年10月5日</td><td class="patent-data-table-td ">华中科技大学</td><td class="patent-data-table-td ">级联多电平有源电力滤波器分散控制系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102474194A?cl=zh">CN102474194A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年7月13日</td><td class="patent-data-table-td patent-date-value">2012年5月23日</td><td class="patent-data-table-td ">株式会社日立制作所</td><td class="patent-data-table-td ">电力变换装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=MJ-uBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H02M0001092000">H02M1/092</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=MJ-uBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H02M0007483000">H02M7/483</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年11月14日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年1月9日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/a85d502a42825ea62ce8/CN102780385A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%BA%A7%E8%81%94%E5%8F%98%E6%8D%A2%E5%99%A8%E7%9A%84%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95%E5%92%8C.pdf?id=MJ-uBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U36VZIgCVKfANPWXEGthdM1s3IQSA"},"sample_url":"https://www.google.com/patents/reader?id=MJ-uBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

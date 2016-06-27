@@ -1,0 +1,302 @@
+<!DOCTYPE html><html><head><title>专利 CN101557380A - 数据同步方法、客户端以及服务器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="数据同步方法、客户端以及服务器"><meta name="DC.contributor" content="刘海涛" scheme="inventor"><meta name="DC.contributor" content="悦 宋" scheme="inventor"><meta name="DC.contributor" content="睿 王" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2008-4-10" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种数据同步方法，包括：获得容量限制信息；根据所述容量限制信息，执行数据过滤操作，生成过滤数据；将生成的过滤数据发送给过滤请求的发送方。同时，本发明还公开了相应的客户端和服务器，本发明实现了服务器通过获得来自客户端的容量限制信息，根据该容量限制信息，执行数据过滤操作，生成过滤数据，从而优化了服务器的数据过滤功能，提升了用户体验感。"><meta name="DC.date" content="2009-10-14"><meta name="citation_patent_publication_number" content="CN:101557380:A"><meta name="citation_patent_application_number" content="CN:200810027322"><link rel="canonical" href="https://www.google.com/patents/CN101557380A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101557380A?cl=zh"/><meta name="title" content="专利 CN101557380A - 数据同步方法、客户端以及服务器"/><meta name="description" content="本发明公开了一种数据同步方法，包括：获得容量限制信息；根据所述容量限制信息，执行数据过滤操作，生成过滤数据；将生成的过滤数据发送给过滤请求的发送方。同时，本发明还公开了相应的客户端和服务器，本发明实现了服务器通过获得来自客户端的容量限制信息，根据该容量限制信息，执行数据过滤操作，生成过滤数据，从而优化了服务器的数据过滤功能，提升了用户体验感。"/><meta property="og:title" content="专利 CN101557380A - 数据同步方法、客户端以及服务器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101557380A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101557380A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=ABN0BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101557380A&amp;usg=AFQjCNGJ7KNPy3nqku4eHEJZIre59Odvpw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/c9fc2b62ae4fa1b577cb/CN101557380A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/c9fc2b62ae4fa1b577cb/CN101557380A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101557380A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101557380A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101557380A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种数据同步方法，包括：获得容量限制信息；根据所述容量限制信息，执行数据过滤操作，生成过滤数据；将生成的过滤数据发送给过滤请求的发送方。同时，本发明还公开了相应的客户端和服务器，本发明实现...</span><span itemprop="url">https://www.google.com/patents/CN101557380A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101557380A - 数据同步方法、客户端以及服务器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101557380A - 数据同步方法、客户端以及服务器" title="专利 CN101557380A - 数据同步方法、客户端以及服务器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101557380 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810027322</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年10月14日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年4月10日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年4月10日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810027322.X, </span><span class="patent-bibdata-value">CN 101557380 A, </span><span class="patent-bibdata-value">CN 101557380A, </span><span class="patent-bibdata-value">CN 200810027322, </span><span class="patent-bibdata-value">CN-A-101557380, </span><span class="patent-bibdata-value">CN101557380 A, </span><span class="patent-bibdata-value">CN101557380A, </span><span class="patent-bibdata-value">CN200810027322, </span><span class="patent-bibdata-value">CN200810027322.X</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E6%B5%B7%E6%B6%9B%22">刘海涛</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%82%A6+%E5%AE%8B%22">悦 宋</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%9D%BF+%E7%8E%8B%22">睿 王</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101557380A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101557380A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101557380A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ABN0BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810027322&amp;usg=AFQjCNGXEY4uzckN7N2OYrn2TRIFPuvUrQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ABN0BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101557380A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNG6N7y2c2rkTMjUS4l9ZpnMCeZLrw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT86475125" lang="ZH" load-source="patent-office">数据同步方法、客户端以及服务器</invention-title>
+      </span><br><span class="patent-number">CN 101557380 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA62748693" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种数据同步方法，包括：获得容量限制信息；根据所述容量限制信息，执行数据过滤操作，生成过滤数据；将生成的过滤数据发送给过滤请求的发送方。同时，本发明还公开了相应的客户端和服务器，本发明实现了服务器通过获得来自客户端的容量限制信息，根据该容量限制信息，执行数据过滤操作，生成过滤数据，从而优化了服务器的数据过滤功能，提升了用户体验感。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(16)</span></span></div><div class="patent-text"><div mxw-id="PCLM23393328" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种数据同步方法，其特征在于，包括：    获得容量限制信息；    根据所述容量限制信息，执行数据过滤操作，生成过滤数据；    向客户端发送所述过滤数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 如权利要求l所述的方法，其特征在于，所述获取容量限制信息包括： 接收携带有容量限制信息的数据过滤请求，从该数据过滤请求中获得所述容量限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 如权利要求l所述的方法，其特征在于，所述获取容量限制信息包括： 接收携带有弹性过滤标志信息的数据过滤请求，从该数据过滤请求中获取所述弹性过滤标志信息以及获取数据过滤条件，根据所述弹性过滤标志信息以 及满足所述数据过滤条件的数据项数获取所述容量限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 如权利要求l所述的方法，其特征在于，所述获取容量限制信息包括： 从客户端中获取弹性过滤标志信息，接收来自所述客户端的数据过滤请求，并从该数据过滤请求中获取数据过滤条件，根据所述弹性过滤标志信息以及满 足所述数据过滤条件的数据项数获取所述容量限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 如权利要求2所述的方法，其特征在于，所述容量限制信息为数据项容 量限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 如权利要求3或4所述的方法，其特征在于，所述容量限制信息为字段 容量限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 如权利要求2至5任意一项所述的方法，其特征在于，所述数据过滤请 求中包括字段最小长度限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 如权利要求1至5任意一项所述的方法，其特征在于，所述根据所述容量限制信息，执行数据过滤操作包括：根据所述容量限制信息以及预设的数据项过滤策略信息，执行数据过滤操作。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9、 如;K利要求8所述的方法，其特征在于，所述数据项过滤策略信息包括字段优先级信息和/或数据项截断策略信息和/或数据项中各字段的截断策略信 自</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10、 一种数据同步方法，其特征在于，包括：接收携带有字段最小长度限制信息的数据过滤请求，并从该数据过滤请求 中获取所述字段最小长度限制信息；根据所述字段最小长度限制信息，执行数据过滤操作，生成过滤数据； 向客户端发送所述过滤数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11、 一种客户端，其特征在于，包括：请求生成单元，用于生成携带有容量限制信息的数据过滤请求； 请求发送单元，用于向服务器发送所述携带有容量限制信息的数据过滤请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12、 如权利要求11所述的客户端，其特征在于，还包括： 过滤数据接收单元，用于接收来自服务器的根据所述数据过滤请求生成的过滤^:据；同步更新单元，用于根据所述过滤数据同步更新本地数据库。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13、 一种服务器，其特征在于，包括： 获得单元，用于获得容量限制信息；过滤数据生成单元，用于根据所述容量限制信息，执行数据过滤操作，生 成过滤数据；发送单元，用于向客户端发送所述过滤数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14、 如权利要求13所述的服务器，其特征在于，所述获得单元包括： 第一接收单元，用于接收携带有容量限制信息的数据过滤请求； 第一容量限制信息获取单元，用于解析所述数据过滤请求，获取所述容量限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15、 如权利要求13所述的服务器，其特征在于，所述获得单元包括： 第二接收单元，用于接收携带有弹性过滤标志信息的数据过滤请求； 第一获取单元，用于从所述数据过滤请求中获取所述弹性过滤标志信息以及数据过滤条件；第二容量限制信息获取单元，用于根据所述弹性过滤标志信息以及满足所 述数据过滤条件的数据项数获取所述容量限制信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16、 如权利要求13所述的服务器，其特征在于，所述获得单元包括： 弹性过滤标志信息获取单元，用于&#20034;人客户端中获取弹性过滤标志信息； 第三接收单元，用于接收来自所i^户端的数据过滤请求； 第二获取单元，用于从所述数据过滤请求获取数据过滤条件； 第三容量限制信息获取单元，用于根据所述弹性过滤标志信息以及满足所述数据过滤条件的数据项数获取所述容量限制信息。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES28347697" lang="ZH" load-source="patent-office" class="description">
+    <p>数据同步方法、客户端以及服务器</p>
+    <p>技术领域</p>
+    <p>本发明涉及通信领域，具体涉及一种数据同步方法、客户端以及服务器。 背景技术</p>
+    <p>数据同步（Data Synchronization, DS )是指在多个设备中的信息保持一致， 当其中一个设备上的数据变化时，可以操作其他设备中的数据做相应的改变。 同步两端可以是任何一种类型的网络设备，在任一种网络上面，同步操作的数 据可以是任何一种网络数据。所述网络设备可以为移动终端，如掌上电脑、个 人数字助理（Personal Digital Assistant, PDA)移动电话、自动计算机和桌面计 算机，同时一个用户可以通过不同的设备访问、操作同样的数据集合。同步标 i己i吾言(Synchronization Makeup Language, SyncML)同步十办i义是为了实J见凄W居 同步这个目标而应运而生的一个新的通用标准。SyncML同步协i义是一套协i义 集。</p>
+    <p>通常由于服务器端比客户端包含更多的数据，而客户端也可能只希望服务 器上的一部分数据，另外，客户端还可以选择数据的一部分字段进行同步。例 如用户需要同步"联系人，，数据库，但服务器上的这个数据库包含很多数据， 因此用户根据客户端能力和自己的需求可以选择其中的一部分来进行同步，例 如只同步"联系人，，下面的"同学，，或"同事"这些分组，用户还可以限制数 据的各个字段，例如同步时不包括每个联系人的照片。</p>
+    <p>过滤技术只用于接收方，例如客户端发起一个过滤请求给服务器，服务器 根据过滤请求中的设置给客户端发送需要的数据，而客户端发送给服务器的数 据是不受这个过滤请求的限制的。</p>
+    <p>发明人在实现本发明的过程中，发现现有的过滤技术限制了数据项中字段 的最大长度，超过长度的部分会被截断或者被丢弃，不能较好的优化过滤功能， 用户体验感较差。</p>
+    <p>发明内容本发明实施例，提供了一种数据同步方法、客户端、服务器以实现优化服 务器过滤功能，提高用户体验。</p>
+    <p>本发明实施例提供了一种数据同步方法，包括：获得容量限制信息；根据 所述容量限制信息，执行数据过滤操作，生成过滤数据；向客户端发送所述过 滤数据。</p>
+    <p>本发明实施例还提供了另一种数据同步方法，包括：接收携带有字段最小 长度限制信息的数据过滤请求，并从该数据过滤请求中获取所述字段最小长度 限制信息；根据所述字段最小长度限制信息，执行数据过滤操作，生成过滤数 据；向客户端发送所述过滤数据。</p>
+    <p>本发明实施例进一步提供了一种客户端，包括：请求生成单元，用于生成 携带有容量限制信息的数据过滤请求；请求发送单元，用于向服务器发送所述 携带有容量限制信息的数据过滤请求。</p>
+    <p>以及一种服务器，包括：获得单元，用于获得容量限制信息；过滤数据生 成单元，用于根据所述容量限制信息，执行数据过滤操作，生成过滤数据；发 送单元，用于向客户端发送所述过滤数据。</p>
+    <p>实施本发明实施例，服务器获得来自客户端的容量限制信息，根据该容量 限制信息，执行数据过滤操作，生成过滤数据，从而优化了服务器的数据过滤 功能，提升了用户体验感。</p>
+    <p>附图说明</p>
+    <p>图l是本发明数据同步方法第一实施例的流程示意图； 图2是本发明教:据同步方法第二实施例的流程示意图； 图3是本发明数据同步方法第三实施例的流程示意图； 图4是本发明数据同步方法第四实施例的流程示意图； 图5是本发明数据同步方法第五实施例的流程示意图； 图6是本发明客户端实施例的组成示意图； 图7是本发明服务器实施例的组成示意图；</p>
+    <p>图8是本发明服务器实施例中获得单元21的第一实施例组成示意图； 图9是本发明服务器实施例中获得单元21的第二实施例组成示意图； 图10是本发明服务器实施例中获得单元21的第三实施例组成示意图。具体实施方式</p>
+    <p>为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明 作进一步地详细描述。</p>
+    <p>本发明实施例提供了一种数据同步方法，包括：获得容量限制信息；根据 所述容量限制信息，执行数据过滤操作，生成过滤数据；向客户端发送所述过 滤数据。本发明实施例还提供了数据同步方法、客户端以及服务器。下面分别 进4亍详细4笛述。</p>
+    <p>参考图1,是本发明数据同步方法第一实施例的流程示意图，包括步骤： Al、获得容量限制信息；</p>
+    <p>A2、根据所述容量限制信息，执行数据过滤操作，生成过滤数据； 此处，所述步骤A1、步骤A2中所述容量限制信息的含义以及如何根据容 量限制信息，执行数据过滤操作将在本文后续实施例中进行详细描述。 A3、向客户端发送所述过滤数据。</p>
+    <p>参考图2，是本发明数据同步方法第二实施例的流程示意图，包括步骤： Bl、接收携带有容量限制信息的数据过滤请求，从该过滤请求中获得所述 容量限制信息。</p>
+    <p>此处，具体实现时，可在来自客户端（数据过滤请求的发送方）的数据过 滤请求中增加一个容量限制元素来实现在数据过滤请求中携带所述容量限制信 息，例如在一具体实施例中，客户端发起的一个数据过滤请求如下： &lt;Alert&gt;</p>
+    <p>&lt;Data&gt;200&lt;/Data&gt; &lt;Item&gt; &lt;Target&gt;</p>
+    <p>&lt;LocURI&gt;./contacts&lt;/LocURI&gt; &lt;Filter&gt; &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;text/x-vcard&lt;/Type&gt; &lt;/Meta&gt;&lt;Capacity&gt; 10000&lt;/Capacity&gt; &lt;R_ccord&gt; &lt;Item&gt; &lt;Meta&gt;</p>
+    <p>&lt;Type〉syncml: filtertype-cgi&lt;/Type&gt; &lt;/Meta&gt; &lt;Data&gt;</p>
+    <p>GROUP&amp;iCON;business&amp;OR;GROUP&amp;iCON; personal &lt;/Data&gt;</p>
+    <p>&lt;/Item&gt; &lt;/Record&gt; &lt;/Filter&gt; &lt;/Target&gt; &lt;Source&gt;</p>
+    <p>&lt;LocURI&gt;dev-contacts&lt;/LocURI&gt; &lt;/Sourcc&gt; &lt;/Item〉 &lt;/Alert&gt;</p>
+    <p>相对于现有技术，在该过滤请求中设置了一个〈Capacity〉容量限制元素，上 述数据过滤请求的代码中所述〈Capacity〉1000(X/Capacity〉的含义为客户端请求 服务器根据10000字节的长度对生成的过滤数据进行限制，也即表示，服务器 为该次数据过滤请求生成的总的数据项数据长度需小于10000字节。</p>
+    <p>在本实施例中，〈Capacity〉作为过滤请求中的 一个元素，可以置于〈Filter〉 元素中，作为〈Filtei^的子元素，以表示对整个〈Filtei^元素需要过滤的数据使用 该限制，也可以置于〈Record〉AcItem〉中，作为〈Item〉的子元素，以表示《又对 〈Item〉中需要过滤的数据使用该限制，当然〈Capacity〉也可以位于同步数据包 中，设置于过滤请求之外的其它部分，〈Capacity〉容量限制的值可根据客户端剩 余存储空间或客户端针对某数据库的剩余存储空间的大小进行设置。</p>
+    <p>B2、根据所述容量限制信息，执行数据过滤操作，生成过滤数据。此处，通过解析来自客户端的所述数据过滤请求，可获得该过滤请求所请</p>
+    <p>求过滤的数据项，在本例中，请求过滤的数据项为联系人数据库中的business 分组和personal分组。这时服务器将根据上述10000字节的容量限制以及预设的 数据项过滤策略，从这两个分组中选择足够的数据项来发送给客户端，所述预 设的数据项过滤策略包括数据项优先级信息和/或数据项截断策略信息，所述数 据项优先级可以是按顺序从后往前、从前往后、按数据项长度从大到小、从小 到大、或是按用户预先对数据项指定的优先级进行。每选择一个数据项后服务 器计算出剩余的容量，若剩余的容量不足以分配给后续的数据项，则服务器可 以根据预设数据项截断策略截断或丢弃该数据项。进一步的，若客户端请求过 滤的数据项包含的是多个字段元素，则服务还可根据预设的字段截断策略截断 或&#19999;弃数据项中某个字段。下面为服务器根据预设的数据项优先级信息按顺序 选择的例子。 表一：</p>
+    <p>&lt;table&gt;table see original document page 9&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>月良务器从两个分&#32068;中^J安顺序选择据项，例如该顺序为 business 1-personall&#35494;business2&#22283;personal2…以it匕类"l侏，当选择了 9个凄t才居项，即 business5时，服务器发现还剩余100字节的容量，而第10个数据项persona15 的长度为500字节，则服务器可以丢弃该数据项，发送9个数据项给客户端， 也可以把personal5截断为100字节，发送10个数据项给客户端。截断的内容， 可以是服务器根据数据中字段的属性来决定，也可以根据用户的预设来决定。</p>
+    <p>B3、向客户端发送所述步骤B2生成的所述过滤数据。</p>
+    <p>此处，客户端接收到所述过滤数据后，将根据该过滤数据同步更新相应的 本地数据库，此处与现有技术类似，在此不予赘述。通过上述描述可知，本例 中所述的在数据过滤请求中携带的容量限制为对联系人数据库中的数据项过滤时的数据项容量限制。当然，若本例中数据过滤请求为对字段进行过滤的字段 过滤请求时，则在数据过滤请求中携带的容量限制信息为数据项中的字段进行 容量限制的字段容量限制信息，本例中的后续具体实施例所述的容量限制即为 字段容量限制。</p>
+    <p>在本例中，若客户端在发送过滤请求时，除了包括对字段的限制外，还加 入了一个字段容量限制，服务器仍然对每个数据项的相应字段进行截断，只是</p>
+    <p>需按照容量限制的值来限制发送的数据项的多少。本例中数据过滤请求如下： 〈Alert〉</p>
+    <p>&lt;Data&gt;200&lt;/Data&gt; &lt;Item&gt; &lt;Target&gt;</p>
+    <p>&lt;LocURI&gt;./calendar/tasks&lt;/LocURI&gt; &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;text/x-vcalendar&lt;/Type&gt; &lt;/Meta&gt; &lt;Filter&gt;</p>
+    <p>&lt;Meta&gt;</p>
+    <p>&lt;Type〉text/x-vcalendar&lt;/Type&gt; &lt;/Meta〉</p>
+    <p>&lt;Capacity&gt;2200&lt;/Capacity&gt; &lt;Field&gt; &lt;Item&gt; &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;application/vnd.syncml-devinf+xml&lt;/Type&gt; &lt;/Meta&gt; &lt;Data&gt;</p>
+    <p>〈![CDATA[ &lt;Property&gt;</p>
+    <p>&lt;PropName&gt;DESCRIPTION&lt;/PropName&gt; &lt;PropInfo&gt;&lt;MaxSize&gt; 100&lt;/MaxSize&gt; &lt;/PropInfo&gt; &lt;/Property&gt; &lt;Property&gt;</p>
+    <p>&lt;PropName&gt;ATTACH&lt;/PropName&gt; &lt;PropInfo&gt;</p>
+    <p>&lt;MaxSize&gt; 1000&lt;/MaxSize&gt; &lt;NoTnmcate/&gt; &lt;/PropInfo&gt; &lt;/Property&gt;</p>
+    <p>]]&gt; &lt;/Data&gt; &lt;/Item〉 &lt;/Field&gt; &lt;/Filter&gt; &lt;/Target&gt; &lt;Source&gt;</p>
+    <p>&lt;LocURI&gt;dev-tasks&lt;/LocURI〉 &lt;/Sourcc〉 &lt;/Item&gt; &lt;/Alert&gt;</p>
+    <p>〈Capacity〉作为过滤请求中的一个元素，可以置于〈Filter〉元素中，作为 〈Filt改〉的子元素，以表示对整个〈Filter〉元素需要过滤的数据使用该限制，也可 以置于〈Record〉/〈Item〉中，作为〈Item〉的子元素，以表示仅对〈Iten^中需要过 滤的数据使用该限制，当然〈Capacity〉也可以位于同步数据包中，设置于过滤请 求之外的其它部分，〈Capacity〉容量限制的值可根据客户端剩余存储空间或客户 端针对某数据库的剩余存储空间的大小进行设置。</p>
+    <p>服务器接收到过滤请求后从日程管理数据库中按优先级选择足够的数据项 发送给客户端，只是在选择数据项时按要求对指定的字段进行截断或&#19999;弃，以 下是服务器按顺序选择数据项并进行处理的具体实施例：表二:</p>
+    <p>&lt;table&gt;table see original document page 12&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>表二中上半部分为数据项在服务器中的实际情况，下半部分为最后服务器 发送给客户端的数据情况。服务器逐个选择数据项并进行相应处理，并计算此</p>
+    <p>时剩余的容量限制，具体操作步骤为：</p>
+    <p>数据项1: DESCRIPTION字段为100字节，保留；ATTACH字段为1500 字节，&#19999;弃；剩余容量2200-100=2100字节；</p>
+    <p>数据项2: DESCRIPTION字段为0字节，保留；ATTACH字段为1000字 节，保留；剩余容量2100-1000=1100字节；</p>
+    <p>数据项3: DESCRIPTION字段为150字节，截断；ATTACH字段为1000 字节，保留；剩余容量1100-1100=0字节；</p>
+    <p>经过以上步骤后服务器发现剩余容量为0,已经达到了过滤请求的最大容量 限制，则不再处理后续的数据项，而只把这3个数据项发送给客户端。</p>
+    <p>若处理完前3个数据项后服务器发现仍有剩余容量，则服务器会继续处理， 如表三所示。</p>
+    <p>表三：</p>
+    <p>&lt;table&gt;table see original document page 12&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;0	1000</p>
+    <p>3	150	900</p>
+    <p>4	150	500</p>
+    <p>A主	400	3900</p>
+    <p>发送数据项	DESCRIPTION字 段长度（单位：字节）	ATTACH字段长 度（单位：字节）</p>
+    <p>1	100	0</p>
+    <p>2	0	1000</p>
+    <p>100	900</p>
+    <p>4	100	0</p>
+    <p>"、主	300	1900</p>
+    <p>可见在对前3个数据项的字段进行截断或丢弃操作后，仍然剩余100字节 的容量，此时服务器把第4个数据项的ATTACH字段丢弃，并把DESCRIPTION 字段截断为100字节，则4个数据项的这两个字段长度正好等于容量限制2200 字节，因此服务器发送了四个数据项给客户端。</p>
+    <p>若服务器发现剩余容量不足以分配给第4个数据项的某字段，也即剩余容 量小于该字段MaxSize值，则可以截断更多的字节，如表四所示：</p>
+    <p>表四：</p>
+    <p>实际数据项	DESCRIPTION字段 长度（单位：字节）	ATTACH字段长 度（单位：字节）</p>
+    <p>1	100	1500</p>
+    <p>2	0	1000</p>
+    <p>3	150	950</p>
+    <p>4	150	500</p>
+    <p>总共	400	3950</p>
+    <p>发送数据项	DESCRIPTION字段 长度（单位：字节）	ATTACH字段长 度（单位：字节）</p>
+    <p>1	100	0</p>
+    <p>2	0	10003	画	950</p>
+    <p>4	50	0</p>
+    <p>总共	250	1950</p>
+    <p>由表四可见在对前3个数据项的字段进行截断或丢弃操作后，只剩余50字 节的容量，此时服务器把第4个数据项的ATTACH字段丢弃，并把 DESCRIPTION字段进行截断，4个数据项的这两个字段长度正好等于容量限制 2200字节，服务器发送了 4个数据项给客户端，此时第4个数据项的 DESCRIPTION字段只有50字节，并不满足过滤请求中对该字段100字节的限 制，但这样处理能使用户在总的容量限制下获得更多的数据信息，当然服务器 也可以根据用户预先的设置选择不发送数据项4。</p>
+    <p>在以表三和表四中，对最后一个数据项的字段进行截断或&#19999;弃的策略可以 有不同的策略，例如可以先丢弃DESCRIPTION字段，然后根据剩余容量选择 发送ATTACH字段。</p>
+    <p>在本例中，在数据过滤请求中，还可进一步设置一个字段最小长度限制信 息，服务器可根据该字段最小长度限制以及字段容量限制进行字段数据过滤， 以使用户可以获得符合自己需求的数据。例如，客户端发送给服务器的一数据 过滤-清求如下： &lt;Alert&gt; &lt;Data&gt;200&lt;/Data〉 &lt;Item〉 &lt;Target&gt;</p>
+    <p>&lt;LocURI&gt;./calendar/tasks&lt;/LocURI&gt; &lt;Meta&gt;</p>
+    <p>&lt;Type〉text/x-vcalendar&lt;/Type〉 &lt;/Meta&gt; &lt;Filter&gt;</p>
+    <p>&lt;Meta&gt;</p>
+    <p>&lt;Type&gt;text/x-vcalendar&lt;/Type〉 &lt;/Meta〉</p>
+    <p>&lt;Capacity&gt;3500&lt;/Capacity&gt;</p>
+    <p>14&lt;Field&gt; &lt;Item&gt; &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;application/vnd.syncml-devinf+xml&lt;/Type&gt; &lt;/Meta&gt; &lt;Data&gt;</p>
+    <p>〈![CDATA[ &lt;Property&gt;</p>
+    <p>&lt;PropName&gt;DESCRIPTION&lt;/PropName〉 〈Proplnfo〉</p>
+    <p>&lt;MinSize&gt; 100&lt;/MinSize&gt; &lt;/PropInfo&gt; &lt;/Property&gt; &lt;Property&gt;</p>
+    <p>&lt;PropName&gt;ATTACH&lt;/PropName&gt; &lt;PropInfo&gt;</p>
+    <p>&lt;MinSize&gt;1000&lt;/MinSize&gt; &lt;NoTruncate/&gt; &lt;/PropInfo&gt; &lt;/Property&gt;</p>
+    <p>]]&gt; &lt;/Data&gt;</p>
+    <p>&lt;/Item&gt;</p>
+    <p>&lt;/Field&gt;</p>
+    <p>&lt;/Filter&gt;</p>
+    <p>&lt;/Target〉</p>
+    <p>&lt;Source&gt;</p>
+    <p>&lt;LocURI&gt;dev-tasks&lt;/LocURI&gt;</p>
+    <p>&lt;/Source&gt;</p>
+    <p>&lt;/Item&gt;&lt;/Alert&gt;</p>
+    <p>本例在过滤请求的 DESCRIPTION 字段部分增加了 〈MinSize〉10(X/MinSize〉描述，在过滤请求的ATTACH字段部分增加了 〈MinSize〉100(X/MinSize〉描述，分别表示只同步DESCRIPTION字段长度大于 IOO字节的那些数据项，ATTACH字段长度大于1000字节的那些数据项。同时 本例中〈Capacity〉350(X/Capacity〉表示生成的过滤数据DESCRIPTION字段和 ATTACH字段总大小不超过3500比特的容量限制，如表五所示：</p>
+    <p>表五：</p>
+    <p>&lt;table&gt;table see original document page 16&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;表五中上半部分为数据项字段在服务器中的实际情况，下半部分为最后服 务器发送给客户端的数据情况。服务器逐个选择数据项并进行相应处理，并计</p>
+    <p>算此时剩余的容量限制，具体操作步骤为：</p>
+    <p>数据项1: DESCRIPTION字段为150字节，选择发送；ATTACH字段为500 字节，不选择；剩余容量3500-150=3350字节；</p>
+    <p>数据项2: DESCRIPTION字段为50字节，不选择；ATTACH字段为1100 字节，选择发送；剩余容量3350-1100=2250字节；</p>
+    <p>数据项3: DESCRIPTION字段为250字节，选择发送；ATTACH字段为1900 字节，选择发送；剩余容量2250-250-1900=100字节；</p>
+    <p>经过以上步骤后服务器发现剩余容量为100，已不能再选择更多的字段，则不再处理后续的数据项，而只把这3个数据项发送给客户端。</p>
+    <p>若处理完前3个数据项后服务器发现仍有剩余容量，则服务器会继续处理,</p>
+    <p>^口下表六,斤示： 表六：</p>
+    <p>实际数据项	DESCRIPTION字段 长度（单位：字节）	ATTACH字段长 度（单位：字节）</p>
+    <p>1	150	500</p>
+    <p>2	50	1500</p>
+    <p>3	250	500</p>
+    <p>4	150	1600</p>
+    <p>总共	600	4100</p>
+    <p>发送数据项	DESCRIPTION字段 长度（单位：字节）	ATTACH字段长 度（单位：字节）</p>
+    <p>1	150	0</p>
+    <p>2	0	1500</p>
+    <p>3	250	0</p>
+    <p>4	0	1600</p>
+    <p>400	3100表9.</p>
+    <p>可见在对前3个数据项的字段进行截断或丢弃操作后，仍然剩余1600字节 的容量，此时服务器把第4个数据项的DESCRIPTION字段丢弃，选择发送 ATTACH字段，则4个数据项的这两个字段长度正好等于容量限制3500字节。 服务器发送这四个数据项给客户端。</p>
+    <p>可见服务器根据一些策略设置，丢弃了 DESCRIPTION字段，而把剩余容 量分配给了 ATTACH字段。</p>
+    <p>参考图3，是本发明数据同步方法第三实施例的流程示意图，包括步骤： Cl、接收携带有弹性过滤标志信息的数据过滤请求，从该数据过滤请求中 获取所述弹性标志位信息，解析该数据过滤请求，获取数据过滤条件，根据所 述弹性过滤标志信息以及满足所述数据过滤条件的数据项数获取所述容量限制</p>
+    <p>174吕息。</p>
+    <p>C2、根据所述容量限制信息，执行数据过滤操作，生成过滤数据。 此处，在步骤C1、步骤C2中，具体实现时，可在来自客户端（数据过滤 请求的发送方）的数据过滤请求中增加一个弹性过滤标志位来实现在数据过滤 请求中携带所述容量限制信息，例如在一具体实施例中，客户端发起的一个数 据过滤请求如下： 〈Alert〉</p>
+    <p>&lt;Data&gt;200&lt;/Data〉 &lt;Item&gt; &lt;Target&gt;</p>
+    <p>&lt;LocURI&gt;./calendar/tasks&lt;/LocURI〉 &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;text/x-vcalendar&lt;/Type〉 &lt;/Meta&gt; &lt;Filter&gt;</p>
+    <p>&lt;Meta&gt;</p>
+    <p>&lt;Type&gt;text/x-vcalendar&lt;/Type&gt; &lt;/Meta&gt;</p>
+    <p>&lt;Flexible&gt;l &lt;/Flexible&gt; &lt;R&#163;cord&gt; &lt;Item〉 &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;syncml: filtertype-cgi&lt;/Type&gt; &lt;/Meta&gt;</p>
+    <p>&lt;Data&gt;DUE&amp;LE;20030728T000000Z&amp;AND;STATUS&amp;N E;COMPLETED &lt;/Data&gt; &lt;/Item&gt; &lt;/Record&gt; &lt;Field&gt;&lt;Item&gt; &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;application/vnd.syncml-devinf+xml&lt;/Type&gt; &lt;/Meta&gt; &lt;Data&gt;</p>
+    <p>〈![CDATA[ &lt;Property&gt;</p>
+    <p>&lt;PropName&gt;DESCRIPTION&lt;/PropName〉 &lt;PropInfo&gt;</p>
+    <p>&lt;MaxSize&gt; 100&lt;/MaxSize&gt; &lt;/PropInfo〉 &lt;/Property&gt; &lt;Property&gt;</p>
+    <p>&lt;PropName&gt;ATTACH&lt;/PropName&gt; &lt;PropInfo&gt;</p>
+    <p>&lt;MaxSize&gt; 1000&lt;/MaxSize&gt; &lt;NoTruncate/&gt; &lt;/PropInfo〉 &lt;/Property&gt;</p>
+    <p>]]&gt; &lt;/Data&gt; &lt;/Item&gt; &lt;/Field〉 &lt;/Filter&gt; &lt;/Target&gt; &lt;Source&gt;</p>
+    <p>&lt;LocURI&gt;dev-tasks&lt;/LocURI&gt; &lt;/Source&gt; &lt;/Item&gt; &lt;/Alert&gt;说明：</p>
+    <p>在所述数据过滤请求中加入了一个〈Flexible〉标志，并设置其值为1,这表</p>
+    <p>字段的容量限制，并将容量限制与这两个字段的实际总长度进行比较，若容量 限制大于或等于实际总长度，则服务器将发送所有字段数据，若容量限制小于 实际总长度，再对字段进行截断或&#19999;弃。〈Flexible〉标志作为数据过滤请求中的 一个元素，可以直接置于〈Filter〉元素中，作为〈Filter〉的子元素，或置于〈Fiek^ 元素中，作为〈Field〉的子元素，以表示对整个〈Field〉元素包括的内容^f吏用该方 法，也可以置于〈Field〉/〈Item〉中，作为《tem〉的子元素，以表示仅对《ten^中 包括的内容使用该方法。若〈Flexible〉标志的值设为0或没有该标志则使用现有 技术的方法。例如，假设该次同步中所限定的2003年7月28日前未完成的曰 程安排的数目为5条，而每个数据项对于DESCRIPTION字段和ATTACH字段 的限制分别是100字节和1000字节，即总共1100字节，这样服务器可以计算 出对所有5个数据项的这两个字段的总限制是1100x5 = 5500字节。现假z没这5 个数据项的这两个字段的实际长度如表七所示： &lt;table&gt;table see original document page 20&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;服务器计算出这5个数据项的DESCRIPTION字段总长度为480字节， ATTACH字段总长度为5010字节，它们的总和为5490字节，这小于从同步请 求中计算出的两个字段的总限制为5500字节，则此时服务器将把5个数据项这 两个字#史的所有5490字节的内容发送^合客户端，完成该次同步。</p>
+    <p>而若采用现有技术中的方法，服务器将会对超长的数据进行截断或丢弃， 这时发送给客户端的5个数据项的情况将如表八所示：表八:</p>
+    <p>数据项	DESCRIPTION字段 长度（单位：字节）	ATTACH字段长 度（单位：字节）</p>
+    <p>1	100	1000</p>
+    <p>2	10	0</p>
+    <p>3	100	500</p>
+    <p>4	100	0</p>
+    <p>30	0</p>
+    <p>总共	340	1500</p>
+    <p>从表八中可以看出，现有技术中服务器发送的这两个字段的的总字节数只</p>
+    <p>有1840字节。相对与现有技术，因此本实施例提供的方法可让用户获得更多的 数据信息，避免了用户希望获得的数据信息被截断，从而优化了服务器的数据 过滤功能，增强了用户体验感。</p>
+    <p>在本发明实施例方法中，若字段的实际总长度超过了长度限制，则服务器 再可以根据预设数据项优先级信息和/或字段截断策略选择截断或丢弃一些字 段，如表九所示：</p>
+    <p>表九：</p>
+    <p>数据项	DESCRIPTION字段 长度（单位：字节）	ATTACH字段长度 (单位：字节）</p>
+    <p>1	100	1000</p>
+    <p>2	150	1500</p>
+    <p>200	500</p>
+    <p>4	50	0</p>
+    <p>100	1940</p>
+    <p>600	4940</p>
+    <p>服务器计算出两字段的实际总长度为5540字节，超出了容量限制40字节， 此时服务器可以所述预设的数据项优先级信息和/或字段截断策略对字段进行截 断或丢弃。</p>
+    <p>在本例的数据过滤请求中，对于ATTACH字段，设置〈NoTruncate/〉标识， 该〈NoTruncate/〉标识表示不允许服务器截断该字#更，若未i殳置该〈NoTruncate/〉</p>
+    <p>21标识，则表示允许服务器对该ATTACH字段进行截断。如在服务器中所述字段 截断策略设置为对允许截断的字段进行截断，则此时服务器可以选择一个数据 项，对它的DESCRIPTION字段进行截断，选择数据项的方法可以是按照数据 项的优先级进行，优先级可以是按顺序从后往前、从前往后、按字段长度从大 到小、从小到大、或是按用户预先对数据项指定的优先级进行。假设按从后往 前的顺序选择，此时对数据项5的该字段进行截断，截断后该字段长度为60字 节。再如按用户预先指定的优先级选择，假设数据项4的优先级最低，则对它 的该字段进行截断，截断后为10字节。若选择一个数据项进行截断后，实际总 长度仍然超过容量限制，则按照优先级选择另 一个数据项进行截断。</p>
+    <p>再如，策略还可以设置为对不能截断的数据字段进行丢弃，选择数据项的 方法仍然是按照上述的优先级进行，例如按字段长度从小到大的顺序，此时服 务器选择对数据项3的ATTACH字段进行丢弃。</p>
+    <p>以上两个过滤策略还可以组合或交叉使用，例如先选择某个数据项的某字 段进行丢弃，仍未满足容量限制时，再选择对某个数据项的某字段进行截断。 或者其它可能的组合方式。通过上述描述可知，本例中所描述的容量限制为对 过滤请求中所指定字段的字段容量限制。</p>
+    <p>C3、向客户端发送所述步骤C2生成的所述过滤数据。 此处，步骤C3与所述步骤B3类似，在此不予赘述。 参考图4，是本发明数据同步方法第四实施例的流程示意图，包括步骤： Dl、从客户端中获取弹性过滤标志信息或容量限制标志信息； 此处，客户端的DS管理对象中存储两个标志位节点，Flexible节点和 Capacity节点，在数据同步之前由服务器主动获取这两个标志位的值。</p>
+    <p>〈x&gt;</p>
+    <p>Filter</p>
+    <p>Flexible</p>
+    <p>Capacity</p>
+    <p>其中：</p>
+    <p>&lt;X&gt;:DS管理对象的根节点；</p>
+    <p>&lt;X&gt;/Filter:是内部节点，用于存放过滤参数；</p>
+    <p>&lt;X&gt;/Filter/Flexible:是本发明实施例同步方法的弹性过滤标志位，有两个可 用取值0或1,值为0时表示不采用弹性过滤，值为1时采用弹性过滤；&lt;X&gt;/Filter/Capacity:是本发明实施例同步方法容量限制标志位，取值类型整 数类型，范围是大于等于O,小于客户端存储器剩余容量，若为0表示不对过滤 请求进行容量限制。</p>
+    <p>此处，〈Capacity〉容量限制的值可根据客户端剩余存储空间或客户端针对某 数据库的剩余存储空间的大小进行设置。</p>
+    <p>在同步操作前服务器使用Get命令从该管理对象中获得相应标志位值，用 以决定在后续的同步操作中，对数据项过滤的处理方法，这两个标志位的值可 以是由用户在本地或通过服务器远程指定的，也可以是客户端根据当前的存储 器情况自动指定。</p>
+    <p>D2、获取容量限制信息。</p>
+    <p>此处，若在所述步骤D1中获取的是来自客户端的弹性过滤标志信息，则接 收来自所述客户端的数据过滤请求后，解析该数据过滤请求，获取数据过滤条 件，根据所述弹性标志位信息以及满足所述数据过滤条件的数据项数获取所述 容量限制信息；若在所述步骤D1中获取的是来自客户端的容量限制标志信息， 则直接才艮据该标志位的值确定容量限制，获取容量限制信息。</p>
+    <p>D3、根据所述容量限制信息，执行数据过滤操作，生成过滤数据。 D4、向客户端发送所述步骤D3生成的所述过滤数据。 参考图五，是本发明数据同步方法第五实施例的流程示意图，包括步骤： El、接收携带有字段最小长度限制信息的数据过滤请求，并从该数据过滤 请求中获取所述字段最小长度限制信息；</p>
+    <p>E2、根据所述字段最小长度限制信息，执行数据过滤操作，生成过滤数据； 此处，在步骤E1、步骤E2中，具体实现时，可在来自客户端（数据过滤 请求的发送方）的数据过滤请求中增加一个字段最小长度限制MinSize元素以限 制服务器下发的数据项的某些字段不能小于一个阈值，这样用户可以灵活的获 得一些上次同步时被丢弃的字段，提升了用户体验。该元素还需被加入到服务 器的设备信息中，以使服务器支持此功能。例如在一具体实施例中，客户端发 起的一个数据过滤请求如下： &lt;Alert&gt;</p>
+    <p>&lt;Data&gt;200&lt;/Data&gt; &lt;Item&gt;&lt;Target&gt;</p>
+    <p>&lt;Filter〉 &lt;Meta&gt;</p>
+    <p>&lt;Type&gt;text/x-vcalendar&lt;/Type&gt; &lt;/Meta&gt; &lt;Field&gt; &lt;Item&gt; &lt;Data〉</p>
+    <p>〈![CDATA[ &lt;Property&gt;</p>
+    <p>&lt;PropName&gt;ATTACH&lt;/PropName&gt; &lt;PropInfo&gt;</p>
+    <p>&lt;MinSize&gt; 1000&lt;/MinSize&gt; &lt;/PropInfo&gt; &lt;/Property&gt;</p>
+    <p>]]&gt; &lt;/Data&gt; &lt;/Item&gt; &lt;/Field〉 &lt;/Filter&gt; &lt;/Target&gt; &lt;Source&gt;</p>
+    <p>&lt;LocURI&gt;dev-tasks&lt;/LocURI〉 &lt;/Source〉 &lt;/Item&gt; &lt;/Alert&gt;</p>
+    <p>本例在过滤请求的ATTACH字段部分增加了〈MinSizeHOO(X/MinSize〉描 述，表示只同步ATTACH字段长度大于IOOO字节的那些数据项。若在本次数据 同步的上一次同步过程中是指定了同步ATTACH字段长度小于1000字节的那些 数据项，也即上次同步会将ATTACH字段长度大于1000字节的那些数据项丢弃，</p>
+    <p>24这样通过本例的同步过程，客户端就可获得了上次同步时一些被&#19999;弃的字段，</p>
+    <p>提升了用户体验。〈MinSize〉与〈Maxsize〉一样，属于〈PropInfo〉元素的子元素， 该元素还需被加入到服务器的设备信息中，以使服务器支持此功能。 E3、向客户端发送所述过滤数据。</p>
+    <p>下面对与上述方法实施例相应客户端、服务器进行详细说明。 参考图6，是本发明客户端实施例的组成示意图，如图所示：本例所述客户 端主要包括：</p>
+    <p>请求生成单元11，用于生成携带有容量限制信息的数据过滤请求； 请求发送单元12，用于向服务器发送所述携带有容量限制信息的数据过滤 请求；</p>
+    <p>过滤数据接收单元13，用于接收来自服务器的根据所述数据过滤请求生成 的过滤数据；</p>
+    <p>同步更新单元14,用于根据所述过滤数据同步更新本地数据库。</p>
+    <p>此处，在本例中，客户端根据用户输入的指示或自动触发方式，由所述请 求生成单元11生成携带有容量限制信息的数据过滤请求，并通过请求发送单元 12向服务器发送该携带有容量限制信息的数据过滤请求，服务器接收到该数据 过滤请求后，根据该请求中携带的容量限制信息，生成过滤数据，并向客户端 发送该生成的过滤数据，客户端通过所述过滤数据接收单元13接收该过滤数据， 然后由同步更新单元14根据所述过滤数据同步更新本地数据库。</p>
+    <p>参考图7，是本发明服务器的实施例组成示意图，如图所示：本例所述服务 器主要包括：</p>
+    <p>获得单元21 ，用于获得容量限制信息；</p>
+    <p>此处，若用于执行本发明数据同步方法第一实施例所述方法时，参考图8,</p>
+    <p>该获得单元21主要包括：</p>
+    <p>第一接收单元2111，用于接收携带有容量限制信息的数据过滤请求； 第一容量限制信息获取单元2112,用于从所述数据过滤请求中获取所述容</p>
+    <p>量限制信息。</p>
+    <p>此处，若用于执行本发明数据同步方法第二实施例所述方法时，参考图9， 所述获得单元21主要包括：</p>
+    <p>第二接收单元2121,用于接收携带有弹性过滤标志信息的数据过滤请求；第一获取单元2122，用于从所述数据过滤请求中获取所述弹性过滤标志信</p>
+    <p>息以及数据过滤条件；</p>
+    <p>第二容量限制信息获取单元2123,用于根据所述弹性过滤标志信息以及满</p>
+    <p>足所述数据过滤条件的数据项数获取所述容量限制信息。</p>
+    <p>此处，若用于执行本发明数据同步方法第三实施例所述方法时，参考图10,</p>
+    <p>所述获得单元21主要包括：</p>
+    <p>弹性过滤标志获取单元2131 ，用于从客户端获取弹性过滤标志信息； 第三接收单元2132，用于接收来自所述客户端的数据过滤请求； 第二获取单元2133,用于从所述数据过滤请求中获取数据过滤条件； 第三容量限制信息获取单元2134，用于根据所述弹性过滤标志信息以及满</p>
+    <p>足所述数据过滤条件的数据项数获取所述容量限制信息。</p>
+    <p>过滤数据生成单元22,用于根据所述容量限制信息，执行数据过滤操作，</p>
+    <p>生成过滤数据；</p>
+    <p>发送单元23，用于向客户端发送所述过滤数据。</p>
+    <p>在本例中，服务器通过所述获得单元21获得容量限制信息，过滤数据生成 单元22根据所述获得单元21获得的所述容量限制信息，执行数据过滤操作， 生成过滤数据，并通过发送单元23向客户端发送所述过滤数据。</p>
+    <p>当本例所述的服务器用于执行本发明数据同步方法第二实施例所述方法 时，本例中所述获得单元21主要包括第一接收单元2111和第一容量限制信息 获取单元2112,此时，服务器通过所述第一接收单元2111接收来自客户端的携 带有容量限制信息的数据过滤请求，并通过所述第一容量限制信息获取单元 2112从所述数据过滤请求中获取所述容量限制信息。</p>
+    <p>当本例所述的服务器用于执行本发明数据同步方法第三实施例所述方法 时，本例中所述获得单元21主要包括第二接收单元2121、第一获取单元2122 和第二容量限制信息获取单元2123,此时，服务器通过所述第二接收单元2121 接收来自客户端的携带有弹性过滤标志信息的数据过滤请求，并通过所述第一 获取单元2122从所述数据过滤请求中获取所述弹性过滤标志信息以及数据过滤 条件，然后通过所述第二容量限制信息获取单元2123 4艮据所述弹性过滤标志信 息以及满足所述数据过滤条件的数据项数获取所述容量限制信息。</p>
+    <p>当本例所述的服务器用于执行本发明数据同步方法第四实施例所述方法时，本例中所述获得单元21主要包括弹性过滤标志获取单元2131、第三接收单 元2132、第二获取单元2133以及第三容量限制信息获取单元2134,此时，月良</p>
+    <p>通过第三接收单元2132接收来自所述客户端的数据过滤请求，由第二获取单元 2133从所述数据过滤请求中获取数据过滤条件，然后通过第三容量限制信息获 取单元2134根据所述弹性过滤标志信息以及满足所述数据过滤条件的数据项数 获取所述容量限制信息。</p>
+    <p>实施本发明实施例，服务器获得来自客户端的容量限制信息，根据该容量 限制信息，执行数据过滤操作，生成过滤数据，从而优化了服务器的数据过滤 功能，提升了用户体验感。</p>
+    <p>以上所揭露的仅为本发明较佳实施例而已，当然不能以此来限定本发明之 权利范围，因此依本发明权利要求所作的等同变化，仍属本发明所涵盖的范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102651683A?cl=zh">CN102651683A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年2月24日</td><td class="patent-data-table-td patent-date-value">2012年8月29日</td><td class="patent-data-table-td ">中国电信股份有限公司</td><td class="patent-data-table-td ">用户分组信息的同步方法、系统及服务器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102752294A?cl=zh">CN102752294A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月19日</td><td class="patent-data-table-td patent-date-value">2012年10月24日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">基于设备能力的多终端数据同步方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102752294B?cl=zh">CN102752294B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月19日</td><td class="patent-data-table-td patent-date-value">2015年1月21日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">基于设备能力的多终端数据同步方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103916509A?cl=zh">CN103916509A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月31日</td><td class="patent-data-table-td patent-date-value">2014年7月9日</td><td class="patent-data-table-td ">北京新媒传信科技有限公司</td><td class="patent-data-table-td ">一种手机通讯录恢复方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014019363A1?cl=zh">WO2014019363A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年3月14日</td><td class="patent-data-table-td patent-date-value">2014年2月6日</td><td class="patent-data-table-td ">Beijing Netqin Technology Co., Ltd</td><td class="patent-data-table-td ">一种数据恢复的方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=ABN0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=ABN0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年10月14日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年9月1日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年11月5日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of an application for a patent</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/c9fc2b62ae4fa1b577cb/CN101557380A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95_%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BB%A5%E5%8F%8A%E6%9C%8D%E5%8A%A1.pdf?id=ABN0BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0Ec9a5ZVX8tMUkappcg9Sq11duhQ"},"sample_url":"https://www.google.com/patents/reader?id=ABN0BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

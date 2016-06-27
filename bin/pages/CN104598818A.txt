@@ -1,0 +1,218 @@
+<!DOCTYPE html><html><head><title>专利 CN104598818A - 一种用于虚拟化环境中的文件检测系统及方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种用于虚拟化环境中的文件检测系统及方法"><meta name="DC.contributor" content="汪圣平" scheme="inventor"><meta name="DC.contributor" content="杨晓东" scheme="inventor"><meta name="DC.contributor" content="北京奇虎科技有限公司" scheme="assignee"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2014-12-30" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及一种用于虚拟化环境中的文件检测系统和方法，其中，该方法包括：轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据，所述轻代理客户端设置于虚拟机中；扫描服务器根据所述前预定数量字节的文件数据确定待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；扫描服务器接收所述特定片段并对所述特定片段进行查杀，将所述查杀结果反馈给所述轻代理客户端。本发明的技术方案能够快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。"><meta name="DC.date" content="2015-5-6"><meta name="DC.relation" content="CN:102571767:A" scheme="references"><meta name="DC.relation" content="CN:102708325:A" scheme="references"><meta name="DC.relation" content="CN:103646062:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:104598818:A"><meta name="citation_patent_application_number" content="CN:201410850353"><link rel="canonical" href="https://www.google.com/patents/CN104598818A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN104598818A?cl=zh"/><meta name="title" content="专利 CN104598818A - 一种用于虚拟化环境中的文件检测系统及方法"/><meta name="description" content="本发明涉及一种用于虚拟化环境中的文件检测系统和方法，其中，该方法包括：轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据，所述轻代理客户端设置于虚拟机中；扫描服务器根据所述前预定数量字节的文件数据确定待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；扫描服务器接收所述特定片段并对所述特定片段进行查杀，将所述查杀结果反馈给所述轻代理客户端。本发明的技术方案能够快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。"/><meta property="og:title" content="专利 CN104598818A - 一种用于虚拟化环境中的文件检测系统及方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN104598818A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN104598818A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=dXxSCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN104598818A&amp;usg=AFQjCNEIc1xK7xfrl4RL0WmE43XmXtF-jw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/b194a2a056f7cc4f1991/CN104598818A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/b194a2a056f7cc4f1991/CN104598818A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN104598818A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN104598818A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN104598818A?cl=zh" style="display:none"><span itemprop="description">本发明涉及一种用于虚拟化环境中的文件检测系统和方法，其中，该方法包括：轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据，所述轻代理客户端设置于虚拟机中；扫描服务器根据所述前预定数量字节...</span><span itemprop="url">https://www.google.com/patents/CN104598818A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN104598818A - 一种用于虚拟化环境中的文件检测系统及方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN104598818A - 一种用于虚拟化环境中的文件检测系统及方法" title="专利 CN104598818A - 一种用于虚拟化环境中的文件检测系统及方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN104598818 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201410850353</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2015年5月6日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2014年12月30日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2014年12月30日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201410850353.0, </span><span class="patent-bibdata-value">CN 104598818 A, </span><span class="patent-bibdata-value">CN 104598818A, </span><span class="patent-bibdata-value">CN 201410850353, </span><span class="patent-bibdata-value">CN-A-104598818, </span><span class="patent-bibdata-value">CN104598818 A, </span><span class="patent-bibdata-value">CN104598818A, </span><span class="patent-bibdata-value">CN201410850353, </span><span class="patent-bibdata-value">CN201410850353.0</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B1%AA%E5%9C%A3%E5%B9%B3%22">汪圣平</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E6%99%93%E4%B8%9C%22">杨晓东</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E5%A5%87%E8%99%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京奇虎科技有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104598818A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104598818A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104598818A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dXxSCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201410850353&amp;usg=AFQjCNHl_kc7QYl2yQlyPSL3VcjBV7WbfQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dXxSCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D104598818A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFO6IXeBMeE7dCOs_UCNyyX6we3qg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT156772340" lang="ZH" load-source="patent-office">一种用于虚拟化环境中的文件检测系统及方法</invention-title>
+      </span><br><span class="patent-number">CN 104598818 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA156732262" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及一种用于虚拟化环境中的文件检测系统和方法，其中，该方法包括：轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据，所述轻代理客户端设置于虚拟机中；扫描服务器根据所述前预定数量字节的文件数据确定待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；扫描服务器接收所述特定片段并对所述特定片段进行查杀，将所述查杀结果反馈给所述轻代理客户端。本发明的技术方案能够快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(12)</span></span></div><div class="patent-text"><div mxw-id="PCLM83696764" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种用于虚拟环境中的文件检测系统，包括扫描服务器和置于虚拟机中的轻代理客户端，其中所述轻代理客户端，向所述扫描服务器发送待查杀文件的前预定数量字节的文件数据；所述扫描服务器根据所述前预定数量字节的文件数据判断待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段； 所述轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；所述扫描服务器接收所述特定片段并对所述特定片段进行查杀，并将所述查收结果反馈给所述轻代理客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的系统，所述轻代理客户端向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1或2所述的系统，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1-3任一项所述的系统，扫描服务器进一步包括:  特征值获取单元，用于获取所述特定片段的特征值；  查杀引擎，用于扫描所述特征值并对所述特征值进行安全检测。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1-4任一项所述的系统，所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取文件扫描请求，其中，所述物理机中设置有多台虚拟机；  和/或， 所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取文件扫描请求，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求1-4任一项所述的系统，所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取所述特定片段，其中，所述物理机中设置有多台虚拟机；  和/或， 所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取所述特定片段，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.一种用于虚拟化环境中的文件检测方法，包括:  轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据，所述轻代理客户端设置于虚拟机中；  扫描服务器根据所述前预定数量字节的文件数据确定待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；  轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；  扫描服务器接收所述特定片段并对所述特定片段进行查杀，将所述查杀结果反馈给所述轻代理客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的方法，该方法在步骤:轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据之前，还包括:  轻代理客户端向扫描服务器发送文件扫描请求； 扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求7或8所述的方法，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求7-9任一项所述的方法，扫描服务器根据所述特定片段对文件进行查杀，进一步包括:  所述扫描服务器获取所述特定片段的特征值；  所述扫描服务器通过查杀引擎扫描所述特征值并对所述特征值进行安全检测。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求7-10任一项所述的方法，该方法在步骤:轻代理客户端向扫描服务器发送文件扫描请求之前，还包括:所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取文件扫描请求，其中，所述物理机中设置有多台虚拟机；  和/或，  所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取文件扫描请求，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求7-10任一项所述的方法，该方法在步骤:轻代理客户端根据所述指示向扫描服务器发送所述文件数据中的特定片段之前，还包括:  所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取所述特定片段，其中，所述物理机中设置有多台虚拟机；  和/或，  所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取所述特定片段，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES91815119" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">一种用于虚拟化环境中的文件检测系统及方法</invention-title>
+    <technical-field>
+      <p>技术领域</p>
+      <p>[0001]	本发明涉及计算机安全技术领域，具体而言，涉及一种用于虚拟化环境中的文件检测系统和一种用于虚拟化环境中的文件检测方法。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>[0002]	虚拟化，是指通过虚拟化技术将一台计算机虚拟为多台逻辑计算机。在一台计算机上同时运行多个逻辑计算机，每个逻辑计算机可运行不同的操作系统，并且应用程序都可以在相互独立的空间内运行而互不影响，从而显著提高计算机的工作效率。</p>
+      <p>[0003]	现有虚拟化环境中的文件检测方案中，若同一台物理机上存在多台虚拟的逻辑计算机(虚拟机)，对多台虚拟机中的信息进行安全检测时，对于小文件大多是通过本地的扫描引擎进行文件的安全性检测，而对于较大的文件则通过设置在每台虚拟机中的查杀服务器，将每台虚拟机中的文件在各自的查杀服务器中进行安全检测，无论是本地扫描引擎对小文件的安全检测还是每台虚拟机中的查杀服务器对大文件的安全检测均需要对整个文件进行整体扫描，文件越大扫描时间越长，导致文件检测过程需要花费大量时间，影响安全检测的效率，如果多台虚拟机同时进行文件安全检测，势必增加了多台虚拟机所在的物理机的资源占用影响，进而影响计算机的整个虚拟化环境的系统性能和工作效率。</p>
+      <p>[0004]	如何提供一种用于虚拟化环境中的文件检测方法，能够快速、准确地实现虚拟化环境中的文件检测，成为目前急需解决的问题之一。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>[0005]	鉴于上述问题，提出了本发明以便提供一种克服上述问题或者至少部分地解决或者减缓上述问题的用于虚拟环境中的文件检测系统和相应的用于虚拟环境中的文件检测方法。</p>
+      <p>[0006]	根据本发明的一个方面，提供了一种用于虚拟环境中的文件检测系统，包括扫描服务器和置于虚拟机中的轻代理客户端，其中所述轻代理客户端，向所述扫描服务器发送待查杀文件的前预定数量字节的文件数据；所述扫描服务器根据所述前预定数量字节的文件数据判断待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；</p>
+      <p>[0007]	所述轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；所述扫描服务器接收所述特定片段并对所述特定片段进行查杀，并将所述查收结果反馈给所述轻代理客户端。</p>
+      <p>[0008]	优选地，所述轻代理客户端向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0009]	优选地，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</p>
+      <p>[0010]	优选地，扫描服务器进一步包括:</p>
+      <p>[0011]	特征值获取单元，用于获取所述特定片段的特征值；</p>
+      <p>[0012]	查杀引擎，用于扫描所述特征值并对所述特征值进行安全检测。</p>
+      <p>[0013]	优选地，所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取文件扫描请求，其中，所述物理机中设置有多台虚拟机；</p>
+      <p>[0014]和	/ 或，</p>
+      <p>[0015]	所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取文件扫描请求，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0016]	优选地，所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取所述特定片段，其中，所述物理机中设置有多台虚拟机；</p>
+      <p>[0017]和	/ 或，</p>
+      <p>[0018]	所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取所述特定片段，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0019]	根据本发明的另一个方面，提供了一种用于虚拟化环境中的文件检测方法，该方法包括:</p>
+      <p>[0020]	轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据，所述轻代理客户端设置于虚拟机中；</p>
+      <p>[0021]	扫描服务器根据所述前预定数量字节的文件数据确定待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；</p>
+      <p>[0022]	轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段;</p>
+      <p>[0023]	扫描服务器接收所述特定片段并对所述特定片段进行查杀，将所述查杀结果反馈给所述轻代理客户端。</p>
+      <p>[0024]	优选地，该方法在步骤:轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据之前，还包括:</p>
+      <p>[0025]	轻代理客户端向扫描服务器发送文件扫描请求；</p>
+      <p>[0026]	扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0027]	优选地，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</p>
+      <p>[0028]	优选地，扫描服务器根据所述特定片段对文件进行查杀，进一步包括:</p>
+      <p>[0029]	所述扫描服务器获取所述特定片段的特征值；</p>
+      <p>[0030]	所述扫描服务器通过查杀引擎扫描所述特征值并对所述特征值进行安全检测。</p>
+      <p>[0031]	优选地，该方法在步骤:轻代理客户端向扫描服务器发送文件扫描请求之前，还包括:所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取文件扫描请求，其中，所述物理机中设置有多台虚拟机；</p>
+      <p>[0032]和	/ 或，</p>
+      <p>[0033]	所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取文件扫描请求，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0034]	优选地，该方法在步骤:轻代理客户端根据所述指示向扫描服务器发送所述文件数据中的特定片段之前，还包括:</p>
+      <p>[0035]	所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取所述特定片段，其中，所述物理机中设置有多台虚拟机；</p>
+      <p>[0036]和	/ 或，</p>
+      <p>[0037]	所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取所述特定片段，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0038]	本发明的有益效果为:</p>
+      <p>[0039]	本发明通过扫描服务器根据轻代理客户端发送的待查杀文件的前预定数量字节的文件数据判断待查杀文件的文件类型，根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段，仅对轻代理客户端发送的所述文件数据中的特定片段进行查杀，减少对整个文件进行整体扫描查杀过程需要花费的大量时间，快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。</p>
+      <p>[0040]	上述说明仅是本发明技术方案的概述，为了能够更清楚了解本发明的技术手段，而可依照说明书的内容予以实施，并且为了让本发明的上述和其它目的、特征和优点能够更明显易懂，以下特举本发明的具体实施方式。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>[0041]	通过阅读下文优选实施方式的详细描述，各种其他的优点和益处对于本领域普通技术人员将变得清楚明了。附图仅用于示出优选实施方式的目的，而并不认为是对本发明的限制。而且在整个附图中，用相同的参考符号表示相同的部件。在附图中:</p>
+      <p>[0042]	图1示意性示出了本发明一个实施例的用于虚拟化环境中的文件检测系统的框图；</p>
+      <p>[0043]	图2示意性示出了本发明另一个实施例的用于虚拟化环境中的文件检测系统的框图；</p>
+      <p>[0044]	图3示意性示出了本发明一个实施例的用于虚拟化环境中的文件检测方法的流程图；以及</p>
+      <p>[0045]	图4示意性示出了本发明另一个实施例的用于虚拟化环境中的文件检测方法的流程图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>[0046]	下面详细描述本发明的实施例，所述实施例的示例在附图中示出，其中自始至终相同或类似的标号表示相同或类似的元件或具有相同或类似功能的元件。下面通过参考附图描述的实施例是示例性的，仅用于解释本发明，而不能解释为对本发明的限制。</p>
+      <p>[0047]	本技术领域技术人员可以理解，除非特意声明，这里使用的单数形式“一”、“一个”、“所述”和“该”也可包括复数形式。应该进一步理解的是，本发明的说明书中使用的措辞“包括”是指存在所述特征、整数、步骤、操作、元件和/或组件，但是并不排除存在或添加一个或多个其他特征、整数、步骤、操作、元件、组件和/或它们的组。</p>
+      <p>[0048]	本技术领域技术人员可以理解，除非另外定义，这里使用的所有术语(包括技术术语和科学术语)，具有与本发明所属领域中的普通技术人员的一般理解相同的意义。还应该理解的是，诸如通用字典中定义的那些术语，应该被理解为具有与现有技术的上下文中的意义一致的意义，并且除非像这里一样被特定定义，否则不会用理想化或过于正式的含义来解释。</p>
+      <p>[0049]	图1示出了本发明一个实施例的用于虚拟化环境中的文件检测系统的框图。</p>
+      <p>[0050]	参照图1，本发明实施例的用于虚拟化环境中的文件检测系统，包括扫描服务器11和置于虚拟机中的轻代理客户端12，其中所述轻代理客户端12，向所述扫描服务器11发送待查杀文件的前预定数量字节的文件数据；所述扫描服务器11根据所述前预定数量字节的文件数据判断待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端12提取文件数据中的特定片段；</p>
+      <p>[0051]	所述轻代理客户端12根据所述指示提取并向扫描服务器11发送所述文件数据中的特定片段；所述扫描服务器11接收所述特定片段并对所述特定片段进行查杀，并将所述查收结果反馈给所述轻代理客户端12。</p>
+      <p>[0052]	其中，扫描服务器可以设置于物理机或虚拟机中。例如，所述轻代理客户端可以设置于多台虚拟机中的一台虚拟机中，所述扫描服务器可以仅设置于一台物理机中，或者，也可以设置于一台虚拟机中，可选地，所述轻代理客户端和所述扫描服务器可以设置于多台虚拟机中的同一台虚拟机中，而其它虚拟机中则无需设置。</p>
+      <p>[0053]	本发明实施例中，所述待查杀文件可以来源于同一台虚拟机中，也可以来源于多台虚拟机中，也就是说，通过在一台虚拟机中的轻代理客户端可以获取其他虚拟机中的待查杀文件。</p>
+      <p>[0054]	本发明实施例中，采用轻代理客户端向扫描服务器发送待查杀文件的前2k或5k字节的文件数据，扫描服务器根据所述前2k或5k字节的文件数据判断待查杀文件的文件类型，所述文件类型除了可以是文本文件外，还可以包括但不限于PDE文件、DAT文件、ESP文件以及GIT文件等，不同文件类型的文件数据中易携带病毒的数据片段不同，但是相同文件类型的文件数据易携带病毒的数据片段是规则的，在通过前预定数量字节，如2k或5k字节的文件数据判断后，得到待查杀文件的文件类型，进而根据文件类型指示轻代理客户端提取待查杀文件的文件数据中常见的易携带病毒的特定片段，轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；扫描服务器接收所述特定片段并对所述易携带病毒的特定片段进行查杀，并将所述查收结果反馈给所述轻代理客户端，减少对整个文件进行整体扫描查杀过程需要花费的大量时间，快速、高效地实现虚拟化环境中的文件检测。</p>
+      <p>[0055]	优选地，所述预定数量字节的文件数据可以选择待查杀文件的前2k_5k字节的文件数据，也可以根据安全监测的准确率以及效率要求进行设置，本发明实施例对预定数量字节的文件数据的具体字节数量不作限制，但通过具体文件数据的分析，选用前4k字节能够极大的同时兼顾病毒检出保障率以及文件扫描效率。</p>
+      <p>[0056]	优选地，待查杀文件的文件类型可以包括文本文件、PDE文件、DAT文件、ESP文件以及GIT文件中的至少一种，本发明实施例待查杀文件的文件类型不作具体限制。</p>
+      <p>[0057]	进一步地，本发明实施例的用于虚拟化环境中的文件检测系统中，所述轻代理客户端向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0058]	本发明实施例中，布置于虚拟机上的轻代理客户端检测到虚拟化环境中存在需要进行安全监测的文件时，首先判断需要进行安全监测的文件的大小，如果是小于预定阈值的小文件，则通过本地的扫描引擎进行文件的安全性检测，如果是需要进行通过扫描服务器进行扫描查杀的大文件，则向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0059]	进一步地，本发明实施例的用于虚拟化环境中的文件检测系统中，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</p>
+      <p>[0060]	本发明实施例中，为了使得扫描服务器能够快速、准确地根据轻代理客户端发送的待查杀文件的前预定数量字节的文件数据识别出所述待查杀文件的文件类型，轻代理客户端在发送待查杀文件的前预定数量字节的文件数据时，以文件类型判断标记对待查杀文件进行标识，扫描服务器根据所述文件类型判断标记进行待查杀文件的文件类型判断。</p>
+      <p>[0061]	本发明实施例提供的用于虚拟化环境中的文件检测系统，通过扫描服务器根据虚拟机中的轻代理客户端发送的待查杀文件的前预定数量字节的文件数据判断待查杀文件的文件类型，根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段，仅对轻代理客户端发送的所述文件数据中的特定片段进行查杀，减少对整个文件进行整体扫描查杀过程需要花费的大量时间，快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。</p>
+      <p>[0062]	在针对不同文件类型，提取不同的文件片段时，一种具体实施方式是在轻代理客户端设置偏移提取器，所述偏移提取器根据扫描服务器所指示的提取特定片段(依据文件类型确定)的指令，根据文件大小自适应地设定偏移量以及提取长度，从待查杀文件提取的所述特定片段数据。通过这样的实施方式，能够简化对文件的识别和处理过程，提高获取所述特定片段的文件数据的效率以及准确率。</p>
+      <p>[0063]	为了进一步体现发明的优越性，如下进一步揭示本发明用于虚拟化环境中的文件检测系统的另一实施例。</p>
+      <p>[0064]	参照图2，本发明实施例提出的用于虚拟化环境中的文件检测系统，包括扫描服务器21和置于虚拟机中的轻代理客户端22，其中所述轻代理客户端22，向所述扫描服务器21发送待查杀文件的前预定数量字节的文件数据；所述扫描服务器21根据所述前预定数量字节的文件数据判断待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端22提取文件数据中的特定片段；</p>
+      <p>[0065]	所述轻代理客户端22根据所述指示提取并向扫描服务器21发送所述文件数据中的特定片段；所述扫描服务器21接收所述特定片段并对所述特定片段进行查杀，并将所述查收结果反馈给所述轻代理客户端22。</p>
+      <p>[0066]	本发明实施例中，扫描服务器可以设置于物理机或虚拟机中。例如，所述轻代理客户端可以设置于多台虚拟机中的一台虚拟机中，所述扫描服务器可以仅设置于一台物理机中，或者，也可以设置于一台虚拟机中，可选地，所述轻代理客户端和所述扫描服务器可以设置于多台虚拟机中的同一台虚拟机中，而其它虚拟机中则无需设置。</p>
+      <p>[0067]	其中，扫描服务器21进一步包括特征值获取单元211以及查杀引擎212:</p>
+      <p>[0068]	所述的特征值获取单元211，用于获取所述特定片段的特征值；</p>
+      <p>[0069]	所述的查杀引擎212，用于扫描所述特征值并对所述特征值进行安全检测。</p>
+      <p>[0070]	本发明实施例中，扫描服务器接收到待查杀文件的文件数据中的特定片段后，获取所述特定片段的特征值，通过查杀引擎扫描所述特征值并对所述特征值进行安全检测，进而得到查杀结果，并将所述查杀结果反馈给所述轻代理客户端。其中，不同类型的待查杀文件的特定片段的特征值为该类型的待查杀文件的常见的病毒携带数据。</p>
+      <p>[0071]	进一步地，本发明实施例的用于虚拟化环境中的文件检测系统中，所述轻代理客户端向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0072]	本发明实施例中，布置于虚拟机上的轻代理客户端检测到虚拟化环境中存在需要进行安全监测的文件时，首先判断需要进行安全监测的文件的大小，如果是小于预定阈值的小文件，则通过本地的扫描引擎进行文件的安全性检测，如果是需要进行通过扫描服务器进行扫描查杀的大文件，则向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0073]	进一步地，本发明实施例的用于虚拟化环境中的文件检测系统中，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</p>
+      <p>[0074]	本发明实施例中，为了使得扫描服务器能够快速、准确地根据轻代理客户端发送的待查杀文件的前预定数量字节的文件数据识别出所述待查杀文件的文件类型，轻代理客户端在发送待查杀文件的前预定数量字节的文件数据时，以文件类型判断标记对待查杀文件进行标识，扫描服务器根据所述文件类型判断标记进行待查杀文件的文件类型判断。</p>
+      <p>[0075]	本发明实施例中，所述文件扫描请求可以来源于同一台虚拟机中，也可以来源于多台虚拟机中，也就是说，通过在一台虚拟机中的轻代理客户端可以获取其他虚拟机中的文件扫描请求。</p>
+      <p>[0076]	优选地，根据文件扫描请求的不同来源，所述轻代理客户端22获取文件扫描请求的过程可以为:</p>
+      <p>[0077]	I)进一步地，本发明实施例的用于虚拟化环境中的文件检测系统中，所述轻代理客户端22从所述轻代理客户端所在的物理机中的至少一台虚拟机获取文件扫描请求，其中，所述物理机中设置有多台虚拟机。</p>
+      <p>[0078]	例如，轻代理客户端Ql所在的物理机Wl中包括虚拟机Xl和X2，则轻代理客户端Ql可以从虚拟机Xl和X2中获取所述文件扫描请求，既可以单独从虚拟机Xl中获取所述文件扫描请求，又可以单独从虚拟机X2中获取所述文件扫描请求。</p>
+      <p>[0079]和	/ 或，</p>
+      <p>[0080]	2)所述轻代理客户端22从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取文件扫描请求，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0081]	例如，轻代理客户端Ql所在的物理机Wl位于集群Jl中，集群Jl还包括物理机W2，物理机Wl包括虚拟机Xl和X2，物理机W2包括虚拟机X3和X4，则轻代理客户端Ql可以从虚拟机X1、X2、X3和X4中获取所述文件扫描请求，既可以单独从虚拟机Xl中获取所述文件扫描请求，又可以单独从虚拟机X2中获取所述文件扫描请求，还可以单独从虚拟机X3中获取所述文件扫描请求，同时，也可以单独从虚拟机X4中获取所述文件扫描请求。</p>
+      <p>[0082]	所述轻代理客户端22获取所述文件扫描请求可以单独选择上述I)中的方式，还可以单独选择上述2)中的方式，也可以同时选择上述I)和2)中的方式。</p>
+      <p>[0083]	本发明实施例中，所述待查杀文件可以来源于同一台虚拟机中，也可以来源于多台虚拟机中，也就是说，通过在一台虚拟机中的轻代理客户端可以获取其他虚拟机中的待查杀文件。</p>
+      <p>[0084]	优选地，根据待查杀文件的文件数据中的特定片段的不同来源，所述轻代理客户端21获取文件数据中的特定片段的过程可以为:</p>
+      <p>[0085]	I)所述轻代理客户端22从所述轻代理客户端所在的物理机中的至少一台虚拟机获取所述特定片段，其中，所述物理机中设置有多台虚拟机。</p>
+      <p>[0086]	例如，轻代理客户端Ql所在的物理机Wl中包括虚拟机Xl和X2，则轻代理客户端Ql可以从虚拟机Xl和X2中获取所述特定片段，既可以单独从虚拟机Xl中获取所述特定片段，又可以单独从虚拟机X2中获取所述特定片段。</p>
+      <p>[0087]和	/ 或，</p>
+      <p>[0088]	2)所述轻代理客户端22从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取所述特定片段，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0089]	例如，轻代理客户端Ql所在的物理机Wl位于集群Jl中，集群Jl还包括物理机W2，物理机Wl包括虚拟机Xl和X2，物理机W2包括虚拟机X3和X4，则轻代理客户端Ql可以从虚拟机X1、X2、X3和X4中获取所述特定片段，既可以单独从虚拟机Xl中获取所述特定片段，又可以单独从虚拟机X2中获取所述特定片段，还可以单独从虚拟机X3中获取所述特定片段，同时，也可以单独从虚拟机X4中获取所述特定片段。</p>
+      <p>[0090]	所述轻代理客户端获取所述特定片段可以单独选择上述I)中的方式，还可以单独选择上述2)中的方式，也可以同时选择上述I)和2)中的方式。</p>
+      <p>[0091]	本发明实施例提供的用于虚拟化环境中的文件检测系统，通过扫描服务器根据虚拟机中的轻代理客户端发送的待查杀文件的前预定数量字节的文件数据判断待查杀文件的文件类型，根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段，获取所述特定片段的特征值，通过扫描所述特征值并对所述特征值进行安全检测，减少对整个文件进行整体扫描查杀过程需要花费的大量时间，快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。</p>
+      <p>[0092]	图3示出了本发明一个实施例的用于虚拟化环境中的文件检测方法的流程图。</p>
+      <p>[0093]	本发明实施例中的用于虚拟化环境中的文件检测方法可以应用于包括轻代理客户端和扫描服务器在内的系统中。</p>
+      <p>[0094]	参照图3，本发明实施例的用于虚拟化环境中的文件检测方法包括以下步骤:</p>
+      <p>[0095]	S11、轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据；</p>
+      <p>[0096]	其中，所述轻代理客户端可以设置于虚拟机中，所述扫描服务器可以设置于虚拟机或物理机中。例如，所述轻代理客户端可以设置于多台虚拟机中的一台虚拟机中，所述扫描服务器可以仅设置于一台物理机中，或者，也可以设置于一台虚拟机中，可选地，所述轻代理客户端和所述扫描服务器可以设置于多台虚拟机中的同一台虚拟机中，而其它虚拟机中则无需设置。</p>
+      <p>[0097]	本发明实施例中，所述待查杀文件可以来源于同一台虚拟机中，也可以来源于多台虚拟机中，也就是说，通过在一台虚拟机中的轻代理客户端可以获取其他虚拟机中的待查杀文件。</p>
+      <p>[0098]	S12、扫描服务器根据所述前预定数量字节的文件数据确定待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；</p>
+      <p>[0099]	S13、轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；</p>
+      <p>[0100]	S14、扫描服务器接收所述特定片段并对所述特定片段进行查杀，将所述查杀结果反馈给所述轻代理客户端。</p>
+      <p>[0101]	本发明实施例中，采用轻代理客户端向扫描服务器发送待查杀文件的前2k或5k字节的文件数据，扫描服务器根据所述前2k或5k字节的文件数据判断待查杀文件的文件类型，所述文件类型除了可以是文本文件外，还可以包括但不限于PDE文件、DAT文件、ESP文件以及GIT文件等，不同文件类型的文件数据中易携带病毒的数据片段不同，但是相同文件类型的文件数据易携带病毒的数据片段是规则的，在通过前预定数量字节，如2k或5k字节，的文件数据判断后，得到待查杀文件的文件类型，进而根据文件类型指示轻代理客户端提取待查杀文件的文件数据中常见的易携带病毒的特定片段，轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；扫描服务器接收所述特定片段并对所述易携带病毒的特定片段进行查杀，并将所述查收结果反馈给所述轻代理客户端，减少对整个文件进行整体扫描查杀过程需要花费的大量时间，快速、高效地实现虚拟化环境中的文件检测。</p>
+      <p>[0102]	进一步地，所述预定数量字节的文件数据可以选择待查杀文件的前2k_5k字节的文件数据，也可以根据安全监测的准确率以及效率要求进行设置，本发明实施例对预定数量字节的文件数据的具体字节数量不作限制。</p>
+      <p>[0103]	进一步地，待查杀文件的文件类型可以包括文本文件、PDE文件、DAT文件、ESP文件以及GIT文件中的至少一种，本发明实施例待查杀文件的文件类型不作具体限制。</p>
+      <p>[0104]	进一步地，本发明实施例的用于虚拟化环境中的文件检测方法在步骤:轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据之前，还包括:</p>
+      <p>[0105]	轻代理客户端向扫描服务器发送文件扫描请求；</p>
+      <p>[0106]	扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0107]	本发明实施例中，布置于虚拟机上的轻代理客户端检测到虚拟化环境中存在需要进行安全监测的文件时，首先判断需要进行安全监测的文件的大小，如果是小于预定阈值的小文件，则通过本地的扫描引擎进行文件的安全性检测，如果是需要进行通过扫描服务器进行扫描查杀的大文件，则向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0108]	进一步地，本发明实施例的用于虚拟化环境中的文件检测方法中，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</p>
+      <p>[0109]	本发明实施例中，为了使得扫描服务器能够快速、准确地根据轻代理客户端发送的待查杀文件的前预定数量字节的文件数据识别出所述待查杀文件的文件类型，轻代理客户端在发送待查杀文件的前预定数量字节的文件数据时，以文件类型判断标记对待查杀文件进行标识，扫描服务器根据所述文件类型判断标记进行待查杀文件的文件类型判断。</p>
+      <p>[0110]	本发明实施例提供的用于虚拟化环境中的文件检测方法，通过扫描服务器根据虚拟机中的轻代理客户端发送的待查杀文件的前预定数量字节的文件数据判断待查杀文件的文件类型，根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段，仅对轻代理客户端发送的所述文件数据中的特定片段进行查杀，减少对整个文件进行整体扫描查杀过程需要花费的大量时间，快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。</p>
+      <p>[0111]	为了进一步体现发明的优越性，如下进一步揭示本发明用于虚拟化环境中的文件检测方法的另一实施例。</p>
+      <p>[0112]	参照图4，本发明另一实施例提出的用于虚拟化环境中的文件检测方法，具体包括:</p>
+      <p>[0113]	S21、轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据；</p>
+      <p>[0114]	其中，所述轻代理客户端可以设置于虚拟机中，所述扫描服务器可以设置于虚拟机或物理机中。例如，所述轻代理客户端可以设置于多台虚拟机中的一台虚拟机中，所述扫描服务器可以仅设置于一台物理机中，或者，也可以设置于一台虚拟机中，可选地，所述轻代理客户端和所述扫描服务器可以设置于多台虚拟机中的同一台虚拟机中，而其它虚拟机中则无需设置。</p>
+      <p>[0115]	S22、扫描服务器根据所述前预定数量字节的文件数据确定待查杀文件的文件类型，并根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段；</p>
+      <p>[0116]	S23、轻代理客户端根据所述指示提取并向扫描服务器发送所述文件数据中的特定片段；</p>
+      <p>[0117]	S24、扫描服务器接收所述特定片段并对所述特定片段进行查杀，将所述查杀结果反馈给所述轻代理客户端。本步骤的细分步骤进一步包括:</p>
+      <p>[0118]	其中，步骤:扫描服务器接收所述特定片段并对所述特定片段进行查杀，具体包括:</p>
+      <p>[0119]	S241、所述扫描服务器获取所述特定片段的特征值；</p>
+      <p>[0120]	S242、所述扫描服务器通过查杀引擎扫描所述特征值并对所述特征值进行安全检测，进而得到查杀结果；</p>
+      <p>[0121]	S243、将所述查杀结果反馈给所述轻代理客户端。</p>
+      <p>[0122]	本发明实施例中，扫描服务器接收到待查杀文件的文件数据中的特定片段后，获取所述特定片段的特征值，通过查杀引擎扫描所述特征值并对所述特征值进行安全检测，进而得到查杀结果，并将所述查杀结果反馈给所述轻代理客户端。其中，不同类型的待查杀文件的特定片段的特征值为该类型的待查杀文件的常见的病毒携带数据。</p>
+      <p>[0123]	进一步地，本发明实施例的用于虚拟化环境中的文件检测方法在步骤:轻代理客户端向扫描服务器发送待查杀文件的前预定数量字节的文件数据之前，还包括:</p>
+      <p>[0124]	轻代理客户端向扫描服务器发送文件扫描请求；</p>
+      <p>[0125]	扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0126]	本发明实施例中，布置于虚拟机上的轻代理客户端检测到虚拟化环境中存在需要进行安全监测的文件时，首先判断需要进行安全监测的文件的大小，如果是小于预定阈值的小文件，则通过本地的扫描引擎进行文件的安全性检测，如果是需要进行通过扫描服务器进行扫描查杀的大文件，则向扫描服务器发送文件扫描请求；所述扫描服务器根据所述文件扫描请求向所述轻代理客户端发送传送前预定数量字节的文件数据的指令。</p>
+      <p>[0127]	进一步地，本发明实施例的用于虚拟化环境中的文件检测方法中，所述待查杀文件的前预定数量字节的文件数据以文件类型判断标记进行标识。</p>
+      <p>[0128]	本发明实施例中，为了使得扫描服务器能够快速、准确地根据轻代理客户端发送的待查杀文件的前预定数量字节的文件数据识别出所述待查杀文件的文件类型，轻代理客户端在发送待查杀文件的前预定数量字节的文件数据时，以文件类型判断标记对待查杀文件进行标识，扫描服务器根据所述文件类型判断标记进行待查杀文件的文件类型判断。</p>
+      <p>[0129]	本发明实施例中，所述文件扫描请求可以来源于同一台虚拟机中，也可以来源于多台虚拟机中，也就是说，通过在一台虚拟机中的轻代理客户端可以获取其他虚拟机中的文件扫描请求。</p>
+      <p>[0130]	优选地，根据文件扫描请求的不同来源，所述轻代理客户端获取文件扫描请求的过程可以为:</p>
+      <p>[0131]	I)进一步地，本发明实施例的用于虚拟化环境中的文件检测系统中，所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取文件扫描请求，其中，所述物理机中设置有多台虚拟机。</p>
+      <p>[0132]	例如，轻代理客户端Ql所在的物理机Wl中包括虚拟机Xl和X2，则轻代理客户端Ql可以从虚拟机Xl和X2中获取所述文件扫描请求，既可以单独从虚拟机Xl中获取所述文件扫描请求，又可以单独从虚拟机X2中获取所述文件扫描请求。</p>
+      <p>[0133]和	/ 或，</p>
+      <p>[0134]	2)所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取文件扫描请求，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0135]	例如，轻代理客户端Ql所在的物理机Wl位于集群Jl中，集群Jl还包括物理机W2，物理机Wl包括虚拟机Xl和X2，物理机W2包括虚拟机X3和X4，则轻代理客户端Ql可以从虚拟机X1、X2、X3和X4中获取所述文件扫描请求，既可以单独从虚拟机Xl中获取所述文件扫描请求，又可以单独从虚拟机X2中获取所述文件扫描请求，还可以单独从虚拟机X3中获取所述文件扫描请求，同时，也可以单独从虚拟机X4中获取所述文件扫描请求。</p>
+      <p>[0136]	所述轻代理客户端获取所述文件扫描请求可以单独选择上述I)中的方式，还可以单独选择上述2)中的方式，也可以同时选择上述I)和2)中的方式。</p>
+      <p>[0137]	本发明实施例中，所述待查杀文件可以来源于同一台虚拟机中，也可以来源于多台虚拟机中，也就是说，通过在一台虚拟机中的轻代理客户端可以获取其他虚拟机中的待查杀文件。</p>
+      <p>[0138]	优选地，根据待查杀文件的文件数据中的特定片段的不同来源，所述轻代理客户端获取文件数据中的特定片段的过程可以为:</p>
+      <p>[0139]	I)所述轻代理客户端从所述轻代理客户端所在的物理机中的至少一台虚拟机获取所述特定片段，其中，所述物理机中设置有多台虚拟机。</p>
+      <p>[0140]	例如，轻代理客户端Ql所在的物理机Wl中包括虚拟机Xl和X2，则轻代理客户端Ql可以从虚拟机Xl和X2中获取所述特定片段，既可以单独从虚拟机Xl中获取所述特定片段，又可以单独从虚拟机X2中获取所述特定片段。</p>
+      <p>[0141]和	/ 或，</p>
+      <p>[0142]	2)所述轻代理客户端从与所述轻代理客户端所在的物理机位于同一集群的至少一台物理机的至少一台虚拟机中获取所述特定片段，其中，所述集群包括至少一台物理机，每台所述物理机包括至少一台虚拟机。</p>
+      <p>[0143]	例如，轻代理客户端Ql所在的物理机Wl位于集群Jl中，集群Jl还包括物理机W2，物理机Wl包括虚拟机Xl和X2，物理机W2包括虚拟机X3和X4，则轻代理客户端Ql可以从虚拟机X1、X2、X3和X4中获取所述特定片段，既可以单独从虚拟机Xl中获取所述特定片段，又可以单独从虚拟机X2中获取所述特定片段，还可以单独从虚拟机X3中获取所述特定片段，同时，也可以单独从虚拟机X4中获取所述特定片段。</p>
+      <p>[0144]	所述轻代理客户端获取所述特定片段可以单独选择上述I)中的方式，还可以单独选择上述2)中的方式，也可以同时选择上述I)和2)中的方式。</p>
+      <p>[0145]	本发明实施例提供的用于虚拟化环境中的文件检测方法，通过扫描服务器根据虚拟机中的轻代理客户端发送的待查杀文件的前预定数量字节的文件数据判断待查杀文件的文件类型，根据所述文件类型指示所述轻代理客户端提取文件数据中的特定片段，获取所述特定片段的特征值，通过扫描所述特征值并对所述特征值进行安全检测，减少对整个文件进行整体扫描查杀过程需要花费的大量时间，快速、高效地实现虚拟化环境中的文件检测，提高了安全检测的效率，降低了物理机的资源占用率。</p>
+      <p>[0146]	综上所述，本发明通过待查杀文件的前预定数量字节的文件数据判断待查杀文件的文件类型，根据文件类型指示轻代理客户端提取待查杀文件的文件数据中常见的易携带病毒的特定片段，仅对该特定片段进行查杀，进而减少文件安全性检测所花费的检测时间，提高虚拟化环境下安全检测的效率，而且将轻代理客户端和扫描服务器设置于多台虚拟机中的一台虚拟机内，只占用一台虚拟机中的系统资源，降低了物理机的资源占用率，进而改善计算机的整个虚拟化环境的系统性能和工作效率。</p>
+      <p>[0147]	应当注意，在此提供的算法和公式不与任何特定计算机、虚拟系统或者其它设备固有相关。各种通用系统也可以与基于在此的示例一起使用。根据上面的描述，构造这类系统所要求的结构是显而易见的。此外，本发明也不针对任何特定编程语言。应当明白，可以利用各种编程语言实现在此描述的本发明的内容，并且上面对特定语言所做的描述是为了披露本发明的最佳实施方式。</p>
+      <p>[0148]	在此处所提供的说明书中，说明了大量具体细节。然而，能够理解，本发明的实施例可以在没有这些具体细节的情况下实践。在一些实例中，并未详细示出公知的方法、结构和技术，以便不模糊对本说明书的理解。</p>
+      <p>[0149]	类似地，应当理解，为了精简本发明并帮助理解本发明各个方面中的一个或多个，在上面对本发明的示例性实施例的描述中，本发明的各个特征有时被一起分组到单个实施例、图、或者对其的描述中。然而，并不应将该公开的方法和装置解释成反映如下意图:即所要求保护的本发明要求比在每个权利要求中所明确记载的特征更多的特征。更确切地说，如权利要求书所反映，发明方面在于少于前面公开的单个实施例的所有特征。因此，遵循具体实施方式的权利要求书由此明确地并入该具体实施方式，其中每个权利要求本身都作为本发明的单独实施例。</p>
+      <p>[0150]	本领域那些技术人员可以理解，可以对实施例中的设备中的模块进行自适应性地改变并且把它们设置在与该实施例不同的一个或多个设备中。可以把实施例中的模块或单元或组件组合成一个模块或单元或组件，以及此外可以把它们分成多个子模块或子单元或子组件。除了这样的特征和/或过程或者单元中的至少一些是相互排斥之外，可以采用任何组合对本说明书(包括伴随的权利要求、摘要和附图)中公开的所有特征以及如此公开的任何方法或者设备的所有过程或单元进行组合。除非另外明确陈述，本说明书(包括伴随的权利要求、摘要和附图)中公开的每个特征可以由提供相同、等同或相似目的的替代特征来代替。</p>
+      <p>[0151]	此外，本领域的技术人员能够理解，尽管在此所述的一些实施例包括其它实施例中所包括的某些特征而不是其它特征，但是不同实施例的特征的组合意味着处于本发明的范围之内并且形成不同的实施例。</p>
+      <p>[0152]	本发明的各个部件实施例可以以硬件实现，或者以在一个或者多个处理器上运行的软件模块实现，或者以它们的组合实现。本领域的技术人员应当理解，可以在实践中使用微处理器或者数字信号处理器(DSP)来实现根据本发明实施例的网站安全检测设备中的一些或者全部部件的一些或者全部功能。本发明还可以实现为用于执行这里所描述的方法的一部分或者全部的设备或者装置程序(例如，计算机程序和计算机程序产品)。这样的实现本发明的程序可以存储在计算机可读介质上，或者可以具有一个或者多个信号的形式。这样的信号可以从因特网网站上下载得到，或者在载体信号上提供，或者以任何其他形式提供。</p>
+      <p>[0153]	以上所述仅是本发明的部分实施方式，应当指出，对于本技术领域的普通技术人员来说，在不脱离本发明原理的前提下，还可以做出若干改进和润饰，这些改进和润饰也应视为本发明的保护范围。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102571767A?cl=zh">CN102571767A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月24日</td><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">成都市华为赛门铁克科技有限公司</td><td class="patent-data-table-td ">文件类型识别方法及文件类型识别装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102708325A?cl=zh">CN102708325A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月17日</td><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">虚拟桌面环境文件杀毒的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103646062A?cl=zh">CN103646062A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年12月2日</td><td class="patent-data-table-td patent-date-value">2014年3月19日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">下载文件的扫描方法与装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=dXxSCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009455000">G06F9/455</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=dXxSCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0021560000">G06F21/56</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=dXxSCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0021530000">G06F21/53</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2015年5月6日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年5月27日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/b194a2a056f7cc4f1991/CN104598818A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%94%A8%E4%BA%8E%E8%99%9A%E6%8B%9F%E5%8C%96%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84%E6%96%87%E4%BB%B6.pdf?id=dXxSCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1JuTxJgPCAj20AAcJtZbOWF0r3cA"},"sample_url":"https://www.google.com/patents/reader?id=dXxSCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html><html><head><title>专利 CN102790807A - 域名解析代理方法和系统、域名解析代理服务器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="域名解析代理方法和系统、域名解析代理服务器"><meta name="DC.contributor" content="李钊" scheme="inventor"><meta name="DC.contributor" content="董斌雁" scheme="inventor"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2011-5-16" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种域名解析代理方法和系统、一种域名解析代理服务器，其中的域名解析代理方法具体包括：客户端发起基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；接收所述域名解析请求；从所述域名解析请求中解析域名参数；依据解析得到的域名参数，向DNS服务器发起DNS查询请求；解析DNS服务器返回的DNS应答，并返回给客户端。本发明能够基于HTTP协议的DNS代理解析技术进行域名解析，从而提高域名解析的安全性。"><meta name="DC.date" content="2012-11-21"><meta name="DC.relation" content="CN:101141422:A" scheme="references"><meta name="DC.relation" content="CN:101228742:A" scheme="references"><meta name="DC.relation" content="CN:101540759:A" scheme="references"><meta name="DC.relation" content="CN:101631133:A" scheme="references"><meta name="DC.relation" content="CN:101867609:A" scheme="references"><meta name="DC.relation" content="CN:1289494:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102790807:A"><meta name="citation_patent_application_number" content="CN:201110126407"><link rel="canonical" href="https://www.google.com/patents/CN102790807A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102790807A?cl=zh"/><meta name="title" content="专利 CN102790807A - 域名解析代理方法和系统、域名解析代理服务器"/><meta name="description" content="本发明提供了一种域名解析代理方法和系统、一种域名解析代理服务器，其中的域名解析代理方法具体包括：客户端发起基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；接收所述域名解析请求；从所述域名解析请求中解析域名参数；依据解析得到的域名参数，向DNS服务器发起DNS查询请求；解析DNS服务器返回的DNS应答，并返回给客户端。本发明能够基于HTTP协议的DNS代理解析技术进行域名解析，从而提高域名解析的安全性。"/><meta property="og:title" content="专利 CN102790807A - 域名解析代理方法和系统、域名解析代理服务器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102790807A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102790807A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=D2WvBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102790807A&amp;usg=AFQjCNFBJ3nQMIRV2gX04zwfKlc3MDubag" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3de8a5d23c9cc6ab12f3/CN102790807A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3de8a5d23c9cc6ab12f3/CN102790807A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102790807A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102790807A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102790807A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种域名解析代理方法和系统、一种域名解析代理服务器，其中的域名解析代理方法具体包括：客户端发起基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；接收所述域名解析请求；从所述域名解 ...</span><span itemprop="url">https://www.google.com/patents/CN102790807A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102790807A - 域名解析代理方法和系统、域名解析代理服务器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102790807A - 域名解析代理方法和系统、域名解析代理服务器" title="专利 CN102790807A - 域名解析代理方法和系统、域名解析代理服务器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102790807 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110126407</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年11月21日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年5月16日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年5月16日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110126407.5, </span><span class="patent-bibdata-value">CN 102790807 A, </span><span class="patent-bibdata-value">CN 102790807A, </span><span class="patent-bibdata-value">CN 201110126407, </span><span class="patent-bibdata-value">CN-A-102790807, </span><span class="patent-bibdata-value">CN102790807 A, </span><span class="patent-bibdata-value">CN102790807A, </span><span class="patent-bibdata-value">CN201110126407, </span><span class="patent-bibdata-value">CN201110126407.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E9%92%8A%22">李钊</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%91%A3%E6%96%8C%E9%9B%81%22">董斌雁</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102790807A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102790807A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102790807A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=D2WvBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110126407&amp;usg=AFQjCNGvEZ-CDeKBkmcOn-8iumZ9VEVU_w"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=D2WvBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102790807A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFG_eFBMaQqA9CzVCsOst5Vl5YHiw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT117391095" lang="ZH" load-source="patent-office">域名解析代理方法和系统、域名解析代理服务器</invention-title>
+      </span><br><span class="patent-number">CN 102790807 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA102558070" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种域名解析代理方法和系统、一种域名解析代理服务器，其中的域名解析代理方法具体包括：客户端发起基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；接收所述域名解析请求；从所述域名解析请求中解析域名参数；依据解析得到的域名参数，向DNS服务器发起DNS查询请求；解析DNS服务器返回的DNS应答，并返回给客户端。本发明能够基于HTTP协议的DNS代理解析技术进行域名解析，从而提高域名解析的安全性。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(21)</span></span></div><div class="patent-text"><div mxw-id="PCLM46466232" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种域名解析代理方法，其特征在于，包括：  客户端发起基于HTTP协议的域名解析请求,所述域名解析请求中包括域名参数；  接收所述域名解析请求；   从所述域名解析请求中解析域名参数；  依据解析得到的域名参数，向DNS服务器发起DNS查询请求；  解析DNS服务器返回的DNS应答，并返回给客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其特征在于，所述客户端通过如下步骤发起域名解析请求：  将需要解析的域名参数进行base64编码，并封装到HTTP GET命令请求的包头中；  向域名解析代理服务器发送所述HTTP GET命令请求；  所述从所述域名解析请求中解析域名参数的步骤，包括：  所述域名解析代理服务器的CGI程序接收所述HTTP GET命令请求；  所述CGI程序通过对所述HTTP GET命令请求进行base64解码，解析出所述域名参数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，在将需要解析的域名参数进行base64编码前，所述客户端发起域名解析请求的步骤，还包括：  将需要解析的域名参数进行加密，以加密后的域名参数进行base64编码；  在所述CGI程序对所述HTTP GET命令请求进行base64解码前，所述从域名解析请求中解析域名参数的步骤，还包括：  对所述HTTP GET命令请求进行解密，以解密后的HTTP GET命令请求进行base64解码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求I所述的方法，其特征在于，所述解析DNS服务器返回的DNS应答，并返回给客户端的步骤，包括：  将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码后，返回给客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其特征在于，所述域名解析请求中还包括客户端请求序列号参数和校验码参数；  在依据解析得到的域名参数，向DNS服务器发起DNS查询请求前，所述方法还包括：根据所述校验码参数，确认客户端是否为可信连接发起者，若是，则参照所述客户端请求序列号参数及检验码参数生成一个消息摘要；  以该消息摘要作为关键字，将相应客户端作为连接节点插入待响应DNS应答map中；  所述解析DNS服务器返回的DNS应答，并返回给客户端的步骤，还包括：  通过查询消息摘要关键字，找到该客户端的连接节点；  将加密和base64编码后的DNS相应数据拷贝给该连接节点；  从待响应DNS应答map中删除该连接节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2所述的方法，其特征在于，还包括：  所述客户端判断所述域名解析代理服务器返回的DNS应答，若该DNS应答的HTTP状态码为200，则解析所述DNS应答；  若该DNS应答的HTTP状态码不为200，则返回错误，并结束本次查询请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其特征在于，所述解析所述DNS应答的步骤，包括：  获取HTTP响应信息数据载荷；将数据载荷进行base64解码，并解密，得到DNS解析数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，其特征在于，所述解析所述DNS应答的步骤，还包括：  解析所述DNS解析数据的字段，得到相应的数据结构；  为所述数据结构申请动态内存，并将该动态内存插入缓存系统。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的方法，其特征在于，还包括：  在该DNS应答的HTTP状态码为200时，记录所述域名解析代理服务器的游标位置，以所述游标位置作为下次域名解析的定向依据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求I所述的方法，其特征在于，所述域名解析请求中还包括查询信息或者超时信息；  其中，所述查询信息包括递归查询或者非递归查询，所述超时信息表示客户端得到DNS应答的最大时间。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.	一种域名解析代理服务器，其特征在于，其分别连接客户端及DNS服务器，包括：  接收模块，用于接收客户端发起的基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；  第一解析模块，用于从所述域名解析请求中解析域名参数；  查询模块，用于依据解析得到的域名参数，向DNS服务器发起DNS查询请求；  第二解析模块，用于解析DNS服务器返回的DNS应答；及  返回模块，用于将所述DNS应答返回给客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的域名解析代理服务器，其特征在于，所述接收模块和所述第一解析模块为CGI程序；  所述CGI程序，具体用于接收所述HTTP GET命令请求，并通过对所述HTTP GET命令请求进行base64解码，解析出所述域名参数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求12所述的域名解析代理服务器，其特征在于，所述CGI程序还用于，在对所述HTTP GET命令请求进行base64解码前，对所述HTTP GET命令请求进行解密，以解密后的HTTP GET命令请求进行base64解码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求11所述的域名解析代理服务器，其特征在于，所述第二解析模块，具体用于将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的域名解析代理服务器，其特征在于，所述域名解析请求中还包括客户端请求序列号参数和校验码参数；  所述方法域名解析代理服务器还包括：  认证模块，用于在所述第二解析模块依据解析得到的域名参数，向DNS服务器发起DNS查询请求前，根据所述校验码参数，确认客户端是否为可信连接发起者，若是，则参照所述客户端请求序列号参数及检验码参数生成一个消息摘要；  节点插入模块，用于以该消息摘要作为关键字，将相应客户端作为连接节点插入待响应DNS应答map中；  所述第二解析模块包括：  查询单元，用于通过查询消息摘要关键字，找到该客户端的连接节点；  拷贝单元，用于将加密和base64编码后的DNS相应数据拷贝给该连接节点 '及  删除单元，用于从待响应DNS应答map中删除该连接节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求11所述的域名解析代理服务器，其特征在于，所述域名解析请求中还包括查询信息或者超时信息；  其中，所述查询信息包括递归查询或者非递归查询，所述超时信息表示客户端得到DNS应答的最大时间。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.	&#8212;种域名解析代理系统，其特征在于，包括客户端、DNS服务器及连接在所述客户端和DNS服务器之间的域名解析代理服务器，其中，所述域名解析代理服务器包括：  接收模块，用于接收客户端发起的基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；  第一解析模块，用于从所述域名解析请求中解析域名参数；  查询模块，用于依据解析得到的域名参数，向DNS服务器发起DNS查询请求；  第二解析模块，用于解析DNS服务器返回的DNS应答；及  返回模块，用于将所述DNS应答返回给客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的域名解析代理系统，其特征在于，所述客户端包括：  判断模块，用于判断所述域名解析代理服务器返回的DNS应答；  应答解析模块，用于在该DNS应答的HTTP状态码为200时，解析所述DNS应答；及  返回模块，用于在该DNS应答的HTTP状态码不为200时，返回错误，并结束本次查询请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求18所述的域名解析代理系统，其特征在于，所述应答解析模块，包括：  获取单元，用于获取HTTP响应信息数据载荷；  解码解密单元，用于将数据载荷进行base64解码，并解密，得到DNS解析数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求19所述的域名解析代理系统，其特征在于，所述应答解析模块，还包括：  字段解析单元，用于解析所述DNS解析数据的字段，得到相应的数据结构；  申请单元，用于为所述数据结构申请动态内存 '及  插入单元，用于将该动态内存插入缓存系统。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求18所述的域名解析代理系统，其特征在于，还包括：  记录模块，用于在该DNS应答的HTTP状态码为200时，记录所述域名解析代理服务器的游标位置，以所述游标位置作为下次域名解析的定向依据。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES52804504" lang="ZH" load-source="patent-office" class="description">
+    <p>域名解析代理方法和系统、域名解析代理服务器</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及数字网络通信技术领域，特别是涉及一种域名解析代理方法和系统、一种域名解析代理服务器。</p>
+    <p>背景技术</p>
+    <p>[0002]	DNS (域名系统，Domain Name System)是一种用于TCP/IP (传输控制协议/因特网互联协议，Transmission Control Protocol/Internet Protocol)的应用程序的分布式数据库，它提供主机名字和IP地址之间的转换信息。</p>
+    <p>[0003]目前通常采用的域名解析方法如下：1)客户端向DNS服务器发送域名解析请求；2)DNS服务器对域名进行解析；3)DNS服务器将解析结果返回给客户端；以及4)客户端从 该结果中选择一个IP地址进行访问。</p>
+    <p>[0004]目前，域名解析的过程需要调用Windows应用层API(应用程序编程接，口，Application Programming Interface),不仅允许正常程序过滤和修改Windows网络协议，而且更令恶意程序有机可乘，因此存在被恶意代码攻击的可能。而DNS是一个开放的系统，可以自由地接收并发送信息，一旦受到攻击，Windows客户端就会连接到指定的恶意服务器，木马或病毒操作集团就会克隆实际服务器的大部分服务，并将一部分内容替换为木马或病毒，从而侵害用户利益。</p>
+    <p>[0005]例如，由于	Winsock SPI(服务商提供接口，Service Provider Interface)和LSP(分层服务提供程序,Layered Service Provider)等API的设计,互联网间谋软件和木马可以通过以下几个方面篡改Windows网络协议：1、修改Winsock 2的LSP的堆栈设置运行木马DLL (动态链接库，Dynamic Link Library)文件；2、添加在Winsock LSP 2额外协议栈运行木马DLL文件。而一旦间谍木马DLL文件进入Winsock LSP2的堆栈，它就会悄悄地过滤互联网通信信息，具体表现在：</p>
+    <p>[0006]	I、窃取并篡改用户名和密码信息等，轻则可以让Windows客户端无法打开网页，重则是网络钓鱼和金融诈骗给Windows客户端造成巨大损失；</p>
+    <p>[0007]	2、可允许未经身份验证的远程攻击者迅速可靠地欺骗响应并将记录插入DNS服务器或者Windows客户端缓存,从而重定向Internet通信量；</p>
+    <p>[0008]	3、可允许未经身份验证的远程攻击者将特制的响应发送给易受攻击的系统的DNS请求，从而使DNS缓存中毒，并将Internet通信量从合法位置重定向至其他位置；</p>
+    <p>[0009]	4、Windows应用层网络很多参数是通过注册表来配置的，这恰恰给了恶意程序随意修改注册表的机会，使得网络失效或服务不能启用或篡改网络配置，从而破坏正常网络应用。</p>
+    <p>[0010]	总之，需要本领域技术人员迫切解决的一个技术问题就是：如何能够防止域名解析过程中恶意代码的攻击，从而提高域名解析的安全性。</p>
+    <p>发明内容[0011]	本发明所要解决的技术问题是提供一种域名解析代理方法和系统、一种域名解析代理服务器，能够基于HTTP协议的DNS代理解析技术进行域名解析，从而提高域名解析的安全性。</p>
+    <p>[0012]	为了解决上述问题，本发明公开了一种域名解析代理方法，包括：</p>
+    <p>[0013]	客户端发起基于HTTP协议的域名解析请求,所述域名解析请求中包括域名参数；</p>
+    <p>[0014]	接收所述域名解析请求；</p>
+    <p>[0015]	从所述域名解析请求中解析域名参数；</p>
+    <p>[0016]	依据解析得到的域名参数，向DNS服务器发起DNS查询请求； [0017]	解析DNS服务器返回的DNS应答，并返回给客户端。</p>
+    <p>[0018]	优选的,所述客户端通过如下步骤发起域名解析请求：</p>
+    <p>[0019]	将需要解析的域名参数进行base64编码，并封装到HTTP GET命令请求的包头中；</p>
+    <p>[0020]	向域名解析代理服务器发送所述HTTP GET命令请求；</p>
+    <p>[0021]	所述从所述域名解析请求中解析域名参数的步骤，包括：</p>
+    <p>[0022]	所述域名解析代理服务器的CGI程序接收所述HTTP GET命令请求；</p>
+    <p>[0023]	所述CGI程序通过对所述HTTP GET命令请求进行base64解码，解析出所述域名参数。</p>
+    <p>[0024]	优选的，在将需要解析的域名参数进行base64编码前，所述客户端发起域名解析请求的步骤，还包括：</p>
+    <p>[0025]	将需要解析的域名参数进行加密，以加密后的域名参数进行base64编码；</p>
+    <p>[0026]	在所述CGI程序对所述HTTP GET命令请求进行base64解码前，所述从域名解析请求中解析域名参数的步骤，还包括：</p>
+    <p>[0027]	对所述HTTP GET命令请求进行解密，以解密后的HTTP GET命令请求进行base64解码。</p>
+    <p>[0028]	优选的，所述解析DNS服务器返回的DNS应答，并返回给客户端的步骤，包括：</p>
+    <p>[0029]	将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码后，返回给客户端。</p>
+    <p>[0030]	优选的,所述域名解析请求中还包括客户端请求序列号参数和校验码参数；</p>
+    <p>[0031]	在依据解析得到的域名参数，向DNS服务器发起DNS查询请求前，所述方法还包括：</p>
+    <p>[0032]	根据所述校验码参数，确认客户端是否为可信连接发起者，若是，则参照所述客户端请求序列号参数及检验码参数生成一个消息摘要；</p>
+    <p>[0033]	以该消息摘要作为关键字，将相应客户端作为连接节点插入待响应DNS应答map中；</p>
+    <p>[0034]	所述解析DNS服务器返回的DNS应答，并返回给客户端的步骤，还包括：</p>
+    <p>[0035]	通过查询消息摘要关键字，找到该客户端的连接节点；</p>
+    <p>[0036]	将加密和base64编码后的DNS相应数据拷贝给该连接节点；</p>
+    <p>[0037]	从待响应DNS应答map中删除该连接节点。</p>
+    <p>[0038]	优选的，所述方法还包括：</p>
+    <p>[0039]	所述客户端判断所述域名解析代理服务器返回的DNS应答，若该DNS应答的HTTP状态码为200，则解析所述DNS应答；</p>
+    <p>[0040]	若该DNS应答的HTTP状态码不为200，则返回错误，并结束本次查询请求。</p>
+    <p>[0041]	优选的,所述解析所述DNS应答的步骤,包括：</p>
+    <p>[0042]	获取HTTP响应信息数据载荷；</p>
+    <p>[0043]	将数据载荷进行base64解码，并解密，得到DNS解析数据。</p>
+    <p>[0044]	优选的,所述解析所述DNS应答的步骤,还包括：</p>
+    <p>[0045]	解析所述DNS解析数据的字段，得到相应的数据结构；</p>
+    <p>[0046]	为所述数据结构申请动态内存，并将该动态内存插入缓存系统。 [0047]	优选的，所述方法还包括：</p>
+    <p>[0048]	在该DNS应答的HTTP状态码为200时，记录所述域名解析代理服务器的游标位置，以所述游标位置作为下次域名解析的定向依据。</p>
+    <p>[0049]	优选的,所述域名解析请求中还包括查询信息或者超时信息；</p>
+    <p>[0050]	其中，所述查询信息包括递归查询或者非递归查询，所述超时信息表示客户端得至Ij DNS应答的最大时间。</p>
+    <p>[0051]	另一方面，本发明还公开了一种域名解析代理服务器，其分别连接客户端及DNS服务器，包括：</p>
+    <p>[0052]	接收模块，用于接收客户端发起的基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；</p>
+    <p>[0053]	第一解析模块，用于从所述域名解析请求中解析域名参数；</p>
+    <p>[0054]	查询模块，用于依据解析得到的域名参数，向DNS服务器发起DNS查询请求；</p>
+    <p>[0055]	第二解析模块，用于解析DNS服务器返回的DNS应答；及</p>
+    <p>[0056]	返回模块，用于将所述DNS应答返回给客户端。</p>
+    <p>[0057]	优选的，所述接收模块和所述第一解析模块为CGI程序；</p>
+    <p>[0058]	所述CGI程序，具体用于接收所述HTTP GET命令请求，并通过对所述HTTP GET命令请求进行base64解码,解析出所述域名参数。</p>
+    <p>[0059]	优选的，所述CGI程序还用于，在对所述HTTP GET命令请求进行base64解码前，对所述HTTP GET命令请求进行解密，以解密后的HTTP GET命令请求进行base64解码。</p>
+    <p>[0060]	优选的，所述第二解析模块，具体用于将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码。</p>
+    <p>[0061]	优选的,所述域名解析请求中还包括客户端请求序列号参数和校验码参数；</p>
+    <p>[0062]	所述方法域名解析代理服务器还包括：</p>
+    <p>[0063]	认证模块，用于在所述第二解析模块依据解析得到的域名参数，向DNS服务器发起DNS查询请求前,根据所述校验码参数,确认客户端是否为可信连接发起者,若是,则参照所述客户端请求序列号参数及检验码参数生成一个消息摘要；</p>
+    <p>[0064]	节点插入模块，用于以该消息摘要作为关键字，将相应客户端作为连接节点插入待响应DNS应答map中；</p>
+    <p>[0065]	所述第二解析模块包括：</p>
+    <p>[0066]	查询单元，用于通过查询消息摘要关键字，找到该客户端的连接节点；</p>
+    <p>[0067]	拷贝单元，用于将加密和base64编码后的DNS相应数据拷贝给该连接节点；及[0068]	删除单元，用于从待响应DNS应答map中删除该连接节点。</p>
+    <p>[0069]	优选的,所述域名解析请求中还包括查询信息或者超时信息；</p>
+    <p>[0070]	其中，所述查询信息包括递归查询或者非递归查询，所述超时信息表示客户端得至Ij DNS应答的最大时间。</p>
+    <p>[0071]	另一方面，本发明还公开了一种域名解析代理系统，包括客户端、DNS服务器及连接在所述客户端和DNS服务器之间的域名解析代理服务器，其中，所述域名解析代理服务器包括：</p>
+    <p>[0072]	接收模块，用于接收客户端发起的基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；</p>
+    <p>[0073]	第一解析模块，用于从所述域名解析请求中解析域名参数； </p>
+    <p>[0074]	查询模块，用于依据解析得到的域名参数，向DNS服务器发起DNS查询请求；</p>
+    <p>[0075]	第二解析模块，用于解析DNS服务器返回的DNS应答；及</p>
+    <p>[0076]	返回模块，用于将所述DNS应答返回给客户端。</p>
+    <p>[0077]	优选的，所述客户端包括：</p>
+    <p>[0078]	判断模块，用于判断所述域名解析代理服务器返回的DNS应答；</p>
+    <p>[0079]	应答解析模块，用于在该DNS应答的HTTP状态码为200时，解析所述DNS应答；及</p>
+    <p>[0080]	返回模块，用于在该DNS应答的HTTP状态码不为200时，返回错误，并结束本次查询请求。</p>
+    <p>[0081]	优选的，所述应答解析模块，包括：</p>
+    <p>[0082]	获取单元，用于获取HTTP响应信息数据载荷；</p>
+    <p>[0083]	解码解密单元，用于将数据载荷进行base64解码，并解密，得到DNS解析数据。</p>
+    <p>[0084]	优选的，所述应答解析模块，还包括：</p>
+    <p>[0085]	字段解析单元，用于解析所述DNS解析数据的字段，得到相应的数据结构；</p>
+    <p>[0086]	申请单元，用于为所述数据结构申请动态内存；及</p>
+    <p>[0087]	插入单元，用于将该动态内存插入缓存系统。</p>
+    <p>[0088]	优选的，所述系统还包括：</p>
+    <p>[0089]	记录模块，用于在该DNS应答的HTTP状态码为200时，记录所述域名解析代理服务器的游标位置，以所述游标位置作为下次域名解析的定向依据。</p>
+    <p>[0090]	与现有技术相比，本发明具有以下优点：</p>
+    <p>[0091]	首先，本发明采用基于HTTP协议的DNS代理解析技术进行域名解析，由于基于HTTP协议的DNS代理解析技术无需调用任意Windows应用层网络API，而是通过DNS报文代理服务，所以不受LSP恶意代码对DNS协议的篡改、拦截、过滤、重定向等影响，不受hosts文件篡改等攻击影响；因此，相对于现有域名解析方法，能够有效防止域名解析过程中恶意代码的攻击，从而提高域名解析的安全性；</p>
+    <p>[0092]	其次，本发明还可以将域名解析请求中的域名参数进行加密后发送给域名解析代理服务器，这样，即使恶意代码劫持HTTP通讯，也无法解密。因此，能够避免基于域名过滤的网络攻击；</p>
+    <p>[0093]	再者，本发明还可以在客户端记录当前成功解析的域名解析代理服务器所在的游标位置，以便在下次解析时，定向到前一个成功域名解析代理服务器；[0094]	另外，本发明还可以由客户端指定域名解析的超时时间，以便客户端程序在指定的时间内得到成功或失败的响应；</p>
+    <p>[0095]	进一步，本发明还可以由客户端指定请求序列号参数和校验码参数，以确保多客户端多服务器情况下的解析同步匹配算法；这样，域名解析代理服务器可以根据客户端的请求序列号参数和校验码参数，把DNS服务器返回的DNS解析信息打包给相应的客户端，保证正确送达到客户端，从而提高域名解析的成功率；</p>
+    <p>[0096]	更进一步,相对于现有技术Windows客户端一般仅支持非递归方式查询的缺陷，本发明能够支持递归方式DNS查询以及非递归方式DNS查询；</p>
+    <p>[0097]	总之，本发明能够实现基于HTTP协议的安全域名解析，能够提高DNS解析的成功率，防止恶意代码针对Windows网络应用层及DNS协议本身的攻击；本发明可应用于众多安全产品中，以起到防范应用层恶意代码攻击DNS的作用，从而面向应用程序提供安全的DNS解析代理服务。 附图说明</p>
+    <p>[0098]	图I是本发明一种域名解析代理方法实施例I的流程图；</p>
+    <p>[0099]	图2是本发明一种域名解析代理服务器与客户端和DNS服务器之间的关系示意图；</p>
+    <p>[0100]	图3是本发明一种域名解析代理方法实施例2的流程图；</p>
+    <p>[0101]	图4是本发明一种域名解析代理方法实施例3的流程图；</p>
+    <p>[0102]	图5是本发明一种域名解析代理方法实施例4的流程图；</p>
+    <p>[0103]	图6是本发明一种域名解析代理服务器实施例的结构图；</p>
+    <p>[0104]	图7是本发明一种域名解析代理系统实施例的结构图。</p>
+    <p>具体实施方式</p>
+    <p>[0105]	为使本发明的上述目的、特征和优点能够更加明显易懂，下面结合附图和具体实施方式对本发明作进一步详细的说明。</p>
+    <p>[0106]	现有域名解析方法被恶意代码攻击的根本原因是，其需要调用Windows应用层API,而Windows应用层API不仅允许正常程序过滤和修改Windows网络协议,而且更令恶意程序有机可乘。</p>
+    <p>[0107]	本专利发明人注意了这一点，因此创造性地提出了本发明实施例的核心构思之一，也即，采用基于HTTP协议的DNS代理解析技术进行域名解析，由于基于HTTP协议的DNS代理解析技术无需调用任意Windows应用层网络API，而是通过DNS报文代理服务，所以不受LSP恶意代码对DNS协议的篡改、拦截、过滤、重定向等影响，不受hosts文件篡改等攻击影响；因此，相对于现有域名解析方法，能够有效防止域名解析过程中恶意代码的攻击，从而提高域名解析的安全性。</p>
+    <p>[0108]	参照图1，示出了本发明域名解析代理方法实施例I的流程图，具体可以包括：</p>
+    <p>[0109]	步骤101、接收客户端发起的基于HTTP协议的域名解析请求,所述域名解析请求中可以包括域名参数；</p>
+    <p>[0110]	本发明实施例中，所述客户端可以为Windows客户端，也可以为Linux客户端，这里仅以Windows客户端为例进行说明，其它系统的客户端相互参照即可。</p>
+    <p>[0111]	HTTP协议定义了与服务器交互的不同方法，最基本的方法是GET和POST。事实上GET适用于多数请求，而保留POST仅用于更新站点。根据HTTP规范，GET用于信息获取，而且应该是安全的和幂等的。</p>
+    <p>[0112]	在本发明的一种优选实施例中，为了提高域名解析的安全性，所述客户端可以通过GET方法发起域名解析请求：</p>
+    <p>[0113]	子步骤Al、将需要解析的域名参数进行base64编码，并封装到HTTPGET命令请求的包头中；</p>
+    <p>[0114]	子步骤A2、向域名解析代理服务器发送所述HTTP GET命令请求。</p>
+    <p>[0115]	当然，除了 GET外，本领域技术人员还可以根据实际需要，采用其他请求，如POST等，本发明对此不加以限制。 </p>
+    <p>[0116]	为了更有效避免基于域名过滤的网络攻击，在本发明的一种优选实施例中，在将需要解析的域名参数进行base64编码前，所述客户端发起域名解析请求的步骤，还可以包括：</p>
+    <p>[0117]	子步骤A3、将需要解析的域名参数进行加密，以加密后的域名参数进行base64编码。</p>
+    <p>[0118]	将域名参数通过加密方式发送给域名解析代理服务器，即使恶意代码劫持HTTP通讯，也无法解密。因此，能够避免基于域名过滤的网络攻击。</p>
+    <p>[0119]	步骤102、从所述域名解析请求中解析主机参数；</p>
+    <p>[0120]	参照图2，示出了域名解析代理服务器与客户端和DNS服务器之间的关系示意图，其中，客户端应用程序可直接通过IP连接该域名解析代理服务器，相对于现有技术客户端与DNS服务器进行之间通信交互，本实施例采用域名解析代理服务器作为代理媒介，用于分别实现与客户端和DNS服务器之间的通信：一方面，其可以基于HTTP协议安全解析来自客户端的域名解析请求，并基于DNS协议传输给DNS服务器；另一方面，其可以基于DNS协议安全解析来自DNS服务器的DNS应答，并基于HTTP协议返回给客户端。</p>
+    <p>[0121]	在本发明的一种优选实施例中，域名解析代理服务器可以指定CGI程序处理来自客户端的HTTP GET命令请求，相应地，域名解析代理服务器可以通过如下步骤从所述域名解析请求中解析域名参数：</p>
+    <p>[0122]	子步骤BI、所述域名解析代理服务器的CGI程序接收所述HTTP GET命令请求；</p>
+    <p>[0123]	子步骤B2、所述CGI程序通过对所述HTTP GET命令请求进行base64解码，解析出所述域名参数。</p>
+    <p>[0124]	CGI (通用网关接口，Common Gate Interface)程序,通常运行在服务器上,提供与客户端应用程序（如浏览器）之间的接口。CGI程序通常被用来解释处理来自表单的输入信息，并在服务器产生相应的处理，或将相应的信息反馈给浏览器。</p>
+    <p>[0125]	CGI程序处理请求的原理通常为：通过Internet把用户请求送到服务器；服务器接收用户请求并交给CGI程序处理；CGI程序把处理结果传送给服务器；服务器把结果送回到用户。依据上述原理，步骤102-步骤104均由CGI程序来完成。</p>
+    <p>[0126]	对应于客户端加密主机域名的情形，在本发明的一种优选实施例中，在所述CGI程序对所述HTTP GET命令请求进行base64解码前，所述从域名解析请求中解析域名参数的步骤，还可以包括：</p>
+    <p>[0127]	对所述HTTP GET命令请求进行解密，以解密后的HTTP GET命令请求进行base64解码。</p>
+    <p>[0128]	步骤103、依据解析得到的域名参数，向DNS服务器发起DNS查询请求； [0129]	步骤104、解析DNS服务器返回的DNS应答，并返回给客户端。</p>
+    <p>[0130]	在本发明的一种优选实施例中，所述步骤104具体可以包括：</p>
+    <p>[0131]	将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码后，返回给客户端。</p>
+    <p>[0132]	总之，由于本发明域名解析的过程无需调用Windows应用层网络API，而是通过DNS报文代理服务，所以不受LSP恶意代码对DNS协议的篡改、拦截、过滤、重定向等影响，不受hosts文件篡改等攻击影响。概括而言，本发明能够实现基于HTTP DNS代理的安全DNS域名解析，从而能够提高域名解析的成功率，防止恶意代码针对Windows网络应用层及DNS协议本身的攻击。</p>
+    <p>[0133]	在实际中，本发明可以应用于众多安全产品（例如，“360卫士”的系统急救箱、木马云查杀引擎、主机防御系统等产品）中，从而可以防范应用层恶意代码攻击DNS的作用，并且能够面向Windows客户端应用程序提供安全的DNS解析服务。</p>
+    <p>[0134]	参照图3，示出了本发明域名解析代理方法实施例2的流程图，具体可以包括：</p>
+    <p>[0135]	步骤301、接收客户端发起的基于HTTP协议的域名解析请求,所述域名解析请求中可以包括域名参数、客户端请求序列号参数和校验码参数；</p>
+    <p>[0136]	步骤302、从所述域名解析请求中解析域名参数；</p>
+    <p>[0137]	步骤303、根据所述校验码参数，确认客户端是否为可信连接发起者，若是，则参照所述客户端请求序列号参数及检验码参数生成一个消息摘要；</p>
+    <p>[0138]	步骤304、以该消息摘要作为关键字，将相应客户端作为连接节点插入待响应DNS应答map中；</p>
+    <p>[0139]	步骤305、依据解析得到的域名参数，向DNS服务器发起DNS查询请求；</p>
+    <p>[0140]	步骤306、将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码；</p>
+    <p>[0141]	步骤307、通过查询消息摘要关键字，找到该客户端的连接节点；</p>
+    <p>[0142]	步骤308、将加密和base64编码后的DNS相应数据拷贝给该连接节点；</p>
+    <p>[0143]	步骤309、从待响应DNS应答map中删除该连接节点。</p>
+    <p>[0144]	相对于实施例1，本实施例可由客户端指定请求序列号参数和校验码参数，以确保多客户端多服务器情况下的解析同步匹配算法。</p>
+    <p>[0145]	首先，域名解析代理服务器可以根据校验码参数对客户端进行认证，只有在确认客户端为可信连接发起者时，才会进行域名参数的解析；</p>
+    <p>[0146]	其次，域名解析代理服务器可以根据请求序列号参数，把DNS服务器返回的DNS应答打包给相应的客户端，以保证正确送达到客户端；本实施中主要通过在待响应DNS应答map设置连接节点的方式来实现。</p>
+    <p>[0147]	对于实施例2而言，由于其与实施例I基本相似，所以描述的比较简单，相关之处参见实施例I的部分说明即可。[0148]	参照图4，示出了本发明域名解析代理方法实施例3的流程图，具体可以包括：</p>
+    <p>[0149]	步骤401、接收客户端发起的基于HTTP协议的HTTP GET命令请求，所述HTTP GET命令请求中可以包括域名参数；</p>
+    <p>[0150]	步骤402、域名解析代理服务器的CGI程序接收所述HTTP GET命令请求；</p>
+    <p>[0151]	步骤403、所述CGI程序通过对所述HTTP GET命令请求进行base64解码，解析出所述域名参数；</p>
+    <p>[0152]	步骤404、所述CGI程序依据解析得到的域名参数，向DNS服务器发起DNS查询请求；</p>
+    <p> [0153]	步骤405、解析DNS服务器返回的DNS应答，并返回给客户端；</p>
+    <p>[0154]	步骤406、所述客户端判断所述域名解析代理服务器返回的DNS应答，若该DNS应答的HTTP状态码为200，则解析所述DNS应答；</p>
+    <p>[0155]	步骤407、若该DNS应答的HTTP状态码不为200，则返回错误，并结束本次查询请求。</p>
+    <p>[0156]	相对于实施例1，本实施例可由客户端根据域名解析代理服务器返回的HTTP状态码，判断之前发送的HTTP GET命令请求是否被域名解析代理服务器成功接收，这些的判断遵从HTTP协议。</p>
+    <p>[0157]	在本发明的一种优选实施例中，所述解析所述DNS应答的步骤，具体可以包括：</p>
+    <p>[0158]	子步骤Cl、获取HTTP响应信息数据载荷；</p>
+    <p>[0159]	子步骤C2、将数据载荷进行base64解码，并解密，得到DNS解析数据。</p>
+    <p>[0160]	在本发明另一种优选实施例中，所述解析所述DNS应答的步骤，还可以包括：</p>
+    <p>[0161]	子步骤D1、解析所述DNS解析数据的字段，得到相应的数据结构；</p>
+    <p>[0162]	子步骤D2、为所述数据结构申请动态内存，并将该动态内存插入缓存系统。</p>
+    <p>[0163]	本优选实施例在客户端中设置缓存系统，并且将查询历史记录插入该缓存系统，以便客户端再次查询相同的域名时，直接查询该缓存系统以提高查询效率。</p>
+    <p>[0164]	在具体实现中，为所述数据结构申请动态内存的步骤具体可以包括：</p>
+    <p>[0165]	子步骤E1、递归释放成员变量m_pHost (数据类型为Phostent_Cache_t)；</p>
+    <p>[0166]	子步骤E2、动态分配数据结构类型为hostent_Cache_t并赋值给成员变量m_pHost ；</p>
+    <p>[0167]	子步骤E3、若分配成功，则清零，否则返回FALSE ；</p>
+    <p>[0168]	子步骤E4、动态申请数据结构类型为struct hostent并赋值给m&#8212;pHost- &gt;host ；</p>
+    <p>[0169]	子步骤E5、若分配成功，则清零，否则返回FALSE ；</p>
+    <p>[0170]	子步骤E6、长度和地址类型相应赋值为sizeof (unsigned long)和AF&#8212;INET ；</p>
+    <p>[0171]	m&#8212;pHost- &gt; host- &gt; h_length = sizeof (unsigned long)；</p>
+    <p>[0172]	m&#8212;pHost- &gt; host- &gt; h_addrtype = AF&#8212;INET ；</p>
+    <p>[0173]	子步骤E7、获取OfficialName字段长度，分配长度加I的字符串数组，并将OfficialName 赋值给 m&#8212;pHost- &gt; host- &gt; h&#8212;name ；</p>
+    <p>[0174]	子步骤E8、申请类型为char*的指针数组，并赋值给m&#8212;pHost- &gt; host- &gt; h_addr_list[0175]	m_pHost- &gt; host- &gt; h_addr_list = new char*[Dff_DNS_MAX_IP]；</p>
+    <p>[0176]	子步骤E9、若分配成功，则清零，否则返回FALSE ；</p>
+    <p>[0177]	子步骤E10、循环赋值解析后的IP地址给m_pHost- &gt; host- &gt; h_addr_list数组；</p>
+    <p>[0178]子步骤	ElI、将 TTL 赋值给 m_pHost- &gt; m_ttl ；</p>
+    <p>[0179]	子步骤E12、调用SetInsertCacheTime (m_pHost),设置插入缓存时的时间戳。</p>
+    <p>[0180]	子步骤E13、返回TRUE。</p>
+    <p>[0181]	需要说明的是，上述TTL(生存时间，Time To Live)生存时间可由DNS服务器根据实际情况指定；这样，只有在TTL未过期的情况下，该缓存系统中的动态内存才能被使用。 [0182]	总之，本优选实施例可以通过在Windows客户端构造DNS解析的数据结构，来得到提供相同语义的编程接口，这样，就可以不受本地域名服务缓存毒害（DNS Cachepoisoning)的影响。</p>
+    <p>[0183]	在本发明的另一优选实施例中，所述方法还可以包括：</p>
+    <p>[0184]	在该DNS应答的HTTP状态码为200时，记录所述域名解析代理服务器的游标位置，以所述游标位置作为下次域名解析的定向依据。</p>
+    <p>[0185]	本优选实施例通过记录当前成功解析域名解析代理服务器游标位置，下次解析时，定向到前一个成功域名解析代理服务器。</p>
+    <p>[0186]	另外，本发明还可以支持编程接口级设置自定义的域名解析代理服务器并且设置访问优先顺序。</p>
+    <p>[0187]	参照图5，示出了本发明域名解析代理方法实施例4的流程图，具体可以包括：</p>
+    <p>[0188]	步骤501、接收客户端发起的基于HTTP协议的域名解析请求,所述域名解析请求中可以包括域名参数、查询信息或者超时信息；其中，所述查询信息可以包括递归查询或者非递归查询，所述超时信息表示客户端得到DNS应答的最大时间；</p>
+    <p>[0189]	步骤502、从所述域名解析请求中解析域名参数；</p>
+    <p>[0190]	步骤503、依据解析得到的域名参数，向DNS服务器发起DNS查询请求；</p>
+    <p>[0191]	步骤504、解析DNS服务器返回的DNS应答，并返回给客户端。</p>
+    <p>[0192]	相对于实施例1，本实施例具有如下优点：</p>
+    <p>[0193]	I、可由客户端指定域名解析的超时，以便客户端应用程序在指定的时间内得到成功或失败的响应；</p>
+    <p>[0194]	2、支持递归方式DNS查询以及非递归方式DNS查询，Windows客户端一般仅支持非递归方式查询。</p>
+    <p>[0195]	由于使用HTTP协议作为客户端与域名解析代理服务器之间的通讯协议，所以不受防火墙禁止DNSP协议或对DNS协议进行特定域名字段过滤的影响，另外，由于后台DNS服务器可使用Bind 9或其他DNS服务器，并可以配置成递归解析模式，从事使得解析DNS的成功率更高，解决了现有技术中Windows客户端系统不支持递归解析的问题。</p>
+    <p>[0196]	为使本领域技术人员更好地理解本发明，以下通过具体的示例来说明本发明在实际中的应用，具体可以包括：</p>
+    <p>[0197]	步骤SI、客户端将自己的IP地址、CPU ID、当前线程ID、需要解析的域名、递归查询方式还是非递归查询方式标记、客户端请求序列号参数和校验码参数等，基于HTTP协议按照一定的组合封装成一个数据结构，这里的数据结构通常为HTTP GET命令请求；</p>
+    <p>[0198]	在具体实现中，域名解析代理服务器可以提供给客户端如下接口函数：</p>
+    <p>[0199]	函数BOOL CHttpDns: : SetOption提供了应用程序根据自身需要对DNS解析各个环节的选项设置，如单次接收、发送UDP数据报的超时时间、是否逐个遍历域名解析代理服务器，设置自定义域名解析代理服务器等；</p>
+    <p>[0200]	函数 BOOL CHttpDns::gethostbyname_by_http_proxy(const char*pUrl,UINT*pIpList,)实现HTTP DNS代理请求服务的封装；</p>
+    <p>[0201]	函数 struct hostent*FAR CHttpDns: : gethostbyname (const char*name)提供对CHttpDns: :gethostbyname_by_http_proxy ()返回成功后将IP地址列表填入新申请分配的struct hostent的相应域里。并将结果保存在缓存中。 [0202]	其中，上述接口函数可以在现有Windows编程界面gethostbyname的基础上实现，也即，本发明可以实现与gethostbyname语义相同的编程界面，易于调用。</p>
+    <p>[0203]	步骤S2、加密该数据结构，，并发送给域名解析代理服务器；</p>
+    <p>[0204]	步骤S3、域名解析代理服务器解密；</p>
+    <p>[0205]	步骤S4、根据所述校验码参数，确认客户端是否为可信连接发起者，若是，则参照所述客户端请求序列号参数及检验码参数生成一个消息摘要；</p>
+    <p>[0206]	步骤S5、以该消息摘要作为关键字，将相应客户端作为连接节点插入待响应DNS应答map中；</p>
+    <p>[0207]	本发明提供了一种DNS解析应答缓存节点描述符的结构示意：</p>
+    <p>[0208]</p>
+    <p>       typedef struct ST_hostent_Cache_t       {</p>
+    <p>     struct hostent *host	; //host</p>
+    <p>time_t m_ttl	; //TTL of parsed DNS reply</p>
+    <p>      time_t m_InsertCacheTime ; //Current insert cache time</p>
+    <p>    DWORD m_HitCount	; //Hit Count</p>
+    <p>      Time_t m_LastAccessTime ; //Last access time</p>
+    <p>       }hostent_Cache_t,*Phostent_Cache_t;</p>
+    <p>[0209]	步骤S6、依据解析得到的域名参数，向DNS服务器发起DNS查询请求；</p>
+    <p>[0210]	步骤S7、将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码；</p>
+    <p>[0211]	步骤S8、通过查询消息摘要关键字，找到该客户端的连接节点；</p>
+    <p>[0212]	步骤S9、将加密和base64编码后的DNS相应数据拷贝给该连接节点；</p>
+    <p>[0213]	步骤S10、从待响应DNS应答map中删除该连接节点。</p>
+    <p>[0214]	总之，本发明通过HTTP DNS的报文代理服务，即基于HTTP协议作为发起DNS请求客户端与域名解析代理服务器之间的DNS解析代理协议，实现了 DNS的安全解析，能够有效防止任何恶意代码在Windows非特权环境下的DNS攻击。[0215]	对于客户端而言，由于其采用HTTP协议发送域名解析请求，并且解析域名解析代理服务器返回的数据载荷，所以能防范所有在客户端攻击DNS协议的恶意程序。</p>
+    <p>[0216]另外，本发明可支持	IPV4 (Internet Protocol Version 4)和 IPV6 (InternetProtocol Version 6),支持 DNS SEC (DNS 安全扩展，Domain Name System SecurityExtensions),且支持各种加解密机制。</p>
+    <p>[0217]	参照图6，示出了本发明一种域名解析代理服务器实施例的结构图，其分别连接客户端及DNS服务器，具体可以包括：</p>
+    <p>[0218]	接收模块601，用于接收客户端发起的基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；</p>
+    <p>[0219]	第一解析模块602，用于从所述域名解析请求中解析域名参数；</p>
+    <p>[0220]	查询模块603，用于依据解析得到的域名参数，向DNS服务器发起DNS查询请求； </p>
+    <p>[0221]	第二解析模块604，用于解析DNS服务器返回的DNS应答；及</p>
+    <p>[0222]	返回模块605，用于将所述DNS应答返回给客户端。</p>
+    <p>[0223]	在本发明的一种优选实施例中，可指定CGI程序执行所述接收模块601和所述第一解析模块602的操作；</p>
+    <p>[0224]	此时，所述CGI程序，可具体用于接收所述HTTP GET命令请求，并通过对所述HTTPGET命令请求进行base64解码，解析出所述域名参数。对于客户端发起HTTP GET命令请求的过程，请参照方法实施例的相关说明，在此不作赘述。</p>
+    <p>[0225]	在本发明的另一种优选实施例中，所述CGI程序还可用于，在对所述HTTP GET命令请求进行base64解码前，对所述HTTP GET命令请求进行解密，以解密后的HTTP GET命令请求进行base64解码。</p>
+    <p>[0226]	在本发明实施例中，优选的是，所述第二解析模块604，可具体用于将DNS服务器返回的DNS应答作为GET应答的内容，进行加密和base64编码。</p>
+    <p>[0227]	在本发明的一种优选实施例中，所述域名解析请求中还可以包括客户端请求序列号参数和校验码参数；</p>
+    <p>[0228]	相应地，所述方法域名解析代理服务器还可以包括：</p>
+    <p>[0229]	认证模块，用于在所述第二解析模块依据解析得到的域名参数，向DNS服务器发起DNS查询请求前,根据所述校验码参数,确认客户端是否为可信连接发起者,若是,则参照所述客户端请求序列号参数及检验码参数生成一个消息摘要；</p>
+    <p>[0230]	节点插入模块，用于以该消息摘要作为关键字，将相应客户端作为连接节点插入待响应DNS应答map中；</p>
+    <p>[0231]	此时，所述第二解析模块604具体可以包括：</p>
+    <p>[0232]	查询单元，用于通过查询消息摘要关键字，找到该客户端的连接节点；</p>
+    <p>[0233]	拷贝单元，用于将加密和base64编码后的DNS相应数据拷贝给该连接节点；及</p>
+    <p>[0234]	删除单元，用于从待响应DNS应答map中删除该连接节点。</p>
+    <p>[0235]	在本发明的再一种优选实施例中，所述域名解析请求中还可以包括查询信息或者超时信息；</p>
+    <p>[0236]	其中，所述查询信息包括递归查询或者非递归查询，所述超时信息表示客户端得至Ij DNS应答的最大时间。[0237]	对于域名解析代理服务器实施例而言，由于其与方法实施例基本相似，所以描述的比较简单，相关之处参见方法实施例的部分说明即可。</p>
+    <p>[0238]	参照图7，示出了本发明一种域名解析代理系统实施例的结构图，具体可以包括客户端701、DNS服务器703及连接在所述客户端和DNS服务器之间的域名解析代理服务器702，其中，所述域名解析代理服务器702具体可以包括：</p>
+    <p>[0239]	接收模块721，用于接收客户端发起的基于HTTP协议的域名解析请求，所述域名解析请求中包括域名参数；</p>
+    <p>[0240]	第一解析模块722，用于从所述域名解析请求中解析域名参数；</p>
+    <p>[0241]	查询模块723，用于依据解析得到的域名参数，向DNS服务器发起DNS查询请求；</p>
+    <p>[0242]	第二解析模块724，用于解析DNS服务器返回的DNS应答；及</p>
+    <p>[0243]	返回模块725，用于将所述DNS应答返回给客户端。 </p>
+    <p>[0244]	在本发明的一种优选实施例中，所述客户端701具体可以包括：</p>
+    <p>[0245]	判断模块，用于判断所述域名解析代理服务器返回的DNS应答；</p>
+    <p>[0246]	应答解析模块，用于在该DNS应答的HTTP状态码为200时，解析所述DNS应答；及</p>
+    <p>[0247]	返回模块，用于在该DNS应答的HTTP状态码不为200时，返回错误，并结束本次查询请求。</p>
+    <p>[0248]	在本发明的另一种优选实施例中，所述应答解析模块，可以进一步包括：</p>
+    <p>[0249]	获取单元，用于获取HTTP响应信息数据载荷；</p>
+    <p>[0250]	解码解密单元，用于将数据载荷进行base64解码，并解密，得到DNS解析数据。</p>
+    <p>[0251]	在本发明的再一种优选实施例中，所述应答解析模块，还可以包括：</p>
+    <p>[0252]	字段解析单元，用于解析所述DNS解析数据的字段，得到相应的数据结构；</p>
+    <p>[0253]	申请单元，用于为所述数据结构申请动态内存；及</p>
+    <p>[0254]	插入单元，用于将该动态内存插入缓存系统。</p>
+    <p>[0255]	在本发明实施例中，优选的是，所述系统还可以包括：</p>
+    <p>[0256]	记录模块，用于在该DNS应答的HTTP状态码为200时，记录所述域名解析代理服务器的游标位置，以所述游标位置作为下次域名解析的定向依据。</p>
+    <p>[0257]	对于域名解析代理服务器702的具体结构，由于其与域名解析代理服务器实施例中的结构模块类似，故在此不作赘述。</p>
+    <p>[0258]	对于系统实施例而言，由于其与方法实施例基本相似，所以描述的比较简单，相关之处参见方法实施例的部分说明即可。</p>
+    <p>[0259]	本说明书中的各个实施例均采用递进的方式描述，每个实施例重点说明的都是与其他实施例的不同之处，各个实施例之间相同相似的部分互相参见即可。</p>
+    <p>[0260]	以上对本发明所提供的一种域名解析代理方法和系统、一种域名解析代理服务器，进行了详细介绍，本文中应用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本发明的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1289494A?cl=zh">CN1289494A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1999年1月27日</td><td class="patent-data-table-td patent-date-value">2001年3月28日</td><td class="patent-data-table-td ">艾普动力公司</td><td class="patent-data-table-td ">在网络上用域名路由选择发送数据到目的端的系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101141422A?cl=zh">CN101141422A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年10月26日</td><td class="patent-data-table-td patent-date-value">2008年3月12日</td><td class="patent-data-table-td ">中国电信股份有限公司</td><td class="patent-data-table-td ">一种访问家庭网关的方法和系统以及家庭网关</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101228742A?cl=zh">CN101228742A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年7月5日</td><td class="patent-data-table-td patent-date-value">2008年7月23日</td><td class="patent-data-table-td ">汤姆森许可贸易公司</td><td class="patent-data-table-td ">远程访问局域网的方法、以及执行该方法的交换节点</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101540759A?cl=zh">CN101540759A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年3月20日</td><td class="patent-data-table-td patent-date-value">2009年9月23日</td><td class="patent-data-table-td ">中国移动通信集团公司</td><td class="patent-data-table-td ">业务服务器地址获取方法及通信系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101631133A?cl=zh">CN101631133A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年7月15日</td><td class="patent-data-table-td patent-date-value">2010年1月20日</td><td class="patent-data-table-td ">华为技术有限公司;中国移动通信集团公司</td><td class="patent-data-table-td ">一种域名解析系统、设备及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101867609A?cl=zh">CN101867609A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年6月3日</td><td class="patent-data-table-td patent-date-value">2010年10月20日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">媒体网关代理的方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102984178A?cl=zh">CN102984178A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月31日</td><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">山石网科通信技术（北京）有限公司</td><td class="patent-data-table-td ">数据报文的检测方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102984178B?cl=zh">CN102984178B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月31日</td><td class="patent-data-table-td patent-date-value">2015年7月29日</td><td class="patent-data-table-td ">山石网科通信技术有限公司</td><td class="patent-data-table-td ">数据报文的检测方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=D2WvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029120000">H04L29/12</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=D2WvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年11月21日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年1月16日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年4月13日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of patent application or patent right or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3de8a5d23c9cc6ab12f3/CN102790807A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E4%BB%A3%E7%90%86%E6%96%B9%E6%B3%95%E5%92%8C%E7%B3%BB%E7%BB%9F_%E5%9F%9F%E5%90%8D.pdf?id=D2WvBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3DXdcayUWn_6RpEWDld5NCnw6_3A"},"sample_url":"https://www.google.com/patents/reader?id=D2WvBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

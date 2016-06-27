@@ -1,0 +1,461 @@
+<!DOCTYPE html><html><head><title>专利 CN102779257A - 一种Android应用程序的安全检测方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种Android应用程序的安全检测方法及系统"><meta name="DC.contributor" content="张旭" scheme="inventor"><meta name="DC.contributor" content="李涛" scheme="inventor"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2012-6-28" scheme="dateSubmitted"><meta name="DC.description" content="本申请提供了一种Android应用程序的安全检测方法及系统，以解决现有的Android平台的杀毒方法扫描速度慢、误报率高的问题。所述方法包括：扫描Android安装包，并从所述Android安装包中提取出指定的特征信息；在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。本申请扫描速度快、查杀准确率高。"><meta name="DC.date" content="2012-11-14"><meta name="DC.relation" content="CN:101287227:A" scheme="references"><meta name="DC.relation" content="CN:101513008:A" scheme="references"><meta name="DC.relation" content="CN:101753316:A" scheme="references"><meta name="DC.relation" content="CN:102195987:A" scheme="references"><meta name="DC.relation" content="CN:102236757:A" scheme="references"><meta name="DC.relation" content="CN:102254120:A" scheme="references"><meta name="DC.relation" content="CN:1900941:A" scheme="references"><meta name="DC.relation" content="JP:2009069959" scheme="references"><meta name="citation_reference" content="张泽衡: &quot;基于Android智能手机的安全检测系统的研究与实现&quot;, 《CNKI优秀硕士学位论文全文库》, 31 May 2012 (2012-05-31), pages 1 - 70"><meta name="citation_patent_publication_number" content="CN:102779257:A"><meta name="citation_patent_application_number" content="CN:201210221959"><link rel="canonical" href="https://www.google.com/patents/CN102779257A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102779257A?cl=zh"/><meta name="title" content="专利 CN102779257A - 一种Android应用程序的安全检测方法及系统"/><meta name="description" content="本申请提供了一种Android应用程序的安全检测方法及系统，以解决现有的Android平台的杀毒方法扫描速度慢、误报率高的问题。所述方法包括：扫描Android安装包，并从所述Android安装包中提取出指定的特征信息；在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。本申请扫描速度快、查杀准确率高。"/><meta property="og:title" content="专利 CN102779257A - 一种Android应用程序的安全检测方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102779257A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102779257A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=vaSuBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102779257A&amp;usg=AFQjCNFb4mMLgqSioPrNYEIeDJhGIpt53A" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/47d2984a9255f7b6472e/CN102779257A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/47d2984a9255f7b6472e/CN102779257A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102779257A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102779257A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102779257A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102779257B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102779257A?cl=zh" style="display:none"><span itemprop="description">本申请提供了一种Android应用程序的安全检测方法及系统，以解决现有的Android平台的杀毒方法扫描速度慢、误报率高的问题。所述方法包括：扫描Android安装包，并从所述Android安装包中提取出指定的特征信息；在预置的安全识别 ...</span><span itemprop="url">https://www.google.com/patents/CN102779257A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102779257A - 一种Android应用程序的安全检测方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102779257A - 一种Android应用程序的安全检测方法及系统" title="专利 CN102779257A - 一种Android应用程序的安全检测方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102779257 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210221959</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年11月14日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年6月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年6月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102779257B?hl=zh-CN&amp;cl=zh">CN102779257B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210221959.9, </span><span class="patent-bibdata-value">CN 102779257 A, </span><span class="patent-bibdata-value">CN 102779257A, </span><span class="patent-bibdata-value">CN 201210221959, </span><span class="patent-bibdata-value">CN-A-102779257, </span><span class="patent-bibdata-value">CN102779257 A, </span><span class="patent-bibdata-value">CN102779257A, </span><span class="patent-bibdata-value">CN201210221959, </span><span class="patent-bibdata-value">CN201210221959.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E6%97%AD%22">张旭</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E6%B6%9B%22">李涛</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102779257A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102779257A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102779257A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (8),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (14),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (6)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=vaSuBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210221959&amp;usg=AFQjCNGJU678wgKRcp3wYF96xfwcg2nr4A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=vaSuBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102779257A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNH6LuX_CRnVoimqD8DDjVeGJ-GaXw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT117117151" lang="ZH" load-source="patent-office">一种Android应用程序的安全检测方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 102779257 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA102265444" lang="ZH" load-source="patent-office">
+    <div class="abstract">本申请提供了一种Android应用程序的安全检测方法及系统，以解决现有的Android平台的杀毒方法扫描速度慢、误报率高的问题。所述方法包括：扫描Android安装包，并从所述Android安装包中提取出指定的特征信息；在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。本申请扫描速度快、查杀准确率高。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(15)</span></span></div><div class="patent-text"><div mxw-id="PCLM46286541" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种Android应用程序的安全检测方法，其特征在于，包括：  扫描Android安装包,并从所述Android安装包中提取出指定的特征信息；  在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；  将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显不O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其特征在于，所述从Android安装包中提取出的指定的特征信息包括以下中的一种或几种组合：  Android安装包的包名，版本号,数字签名，Android组件receiver的特征,Android组件service的特征,Android组件activity的特征,可执行文件中的指令或字符串,Android安装包目录下各文件的MD5值；  其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes,dex文件，扩展名为.jar的文件，以及，Dex格式的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求I所述的方法，其特征在于，所述安全识别库中的特征信息包括以下中的一种或几种组合：  各种样本Android安装包的包名，版本号,数字签名，Android组件receiver的特征，Android组件service的特征,Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值；  其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes,dex文件，扩展名为.jar的文件，以及，Dex格式的文件；  其中，所述样本Android安装包包括各种安全级别下的Android安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求I至3任一所述的方法，其特征在于，所述在安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录，包括：  将所述指定的特征信息进行组合，得到至少包含两个特征的各项特征组合；  从包含最多特征的特征组合开始，在所述安全识别库中查找与所述特征组合相匹配的特征记录，如果未查找到，则  逐个减少特征组合中的特征个数，针对减少了特征个数的特征组合，继续在所述安全识别库中查找与所述特征组合相匹配的特征记录，如果未查找到，则在所述安全识别库中查找与单个特征信息相匹配的特征记录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其特征在于：  在查找过程中，针对特征个数相同的多项特征组合，按照预先设定的先后顺序进行查找；  针对单个特征信息，按照预先设定的先后顺序进行查找。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2所述的方法，其特征在于，所述从Android安装包中提取出指定的特征信息，包括：  从所述Android安装包的AndroidManifest. xml文件中提取出以下中的一种或几种组合：包名，版本号，Android组件receiver的特征，Android组件service的特征，Android组件activity的特征；和/或，  从所述Android安装包的META_INF\目录下的.RSA文件中提取出所述Android安装包的数字签名；  和/或，  从所述Android安装包的classes, dex文件中提取出可执行指令；  和/或，  从所述Android安装包的lib\目录下提取出ELF文件的指令或字符串。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求I所述的方法，其特征在于：  所述安全级别包括安全、危险、谨慎和木马四个级别。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求I所述的方法，其特征在于，所述安全检测结果还包括以下至少一项：  行为描述信息，软件描述信息，时间戳信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种Android应用的安全检测系统，其特征在于，包括：  特征提取模块，用于扫描Android安装包,并从所述Android安装包中提取出指定的特征信息；  检测模块，用于在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；  显示模块，用于将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的系统，其特征在于，所述从Android安装包中提取出的指定的特征信息包括以下中的一种或几种组合：  Android安装包的包名，版本号,数字签名，Android组件receiver的特征,Android组件service的特征,Android组件activity的特征,可执行文件中的指令或字符串,Android安装包目录下各文件的MD5值；  其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes,dex文件，扩展名为.jar的文件，以及，Dex格式的文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求9所述的系统，其特征在于，所述安全识别库中的特征信息包括以下中的一种或几种组合：  各种样本Android安装包的包名，版本号,数字签名，Android组件receiver的特征，Android组件service的特征,Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值；  其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes,dex文件，扩展名为.jar的文件，以及，Dex格式的文件；  其中，所述样本Android安装包包括各种安全级别下的Android安装包。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求9至11任一所述的系统，其特征在于，所述检测模块包括：  特征组合子模块，用于将所述指定的特征信息进行组合，得到至少包含两个特征的各项特征组合；  第一查找子模块，用于从包含最多特征的特征组合开始，在所述安全识别库中查找与所述特征组合相匹配的特征记录；第二查找子模块，用于当第一查找子模块未查找到时，逐个减少特征组合中的特征个数，针对减少了特征个数的特征组合，继续在所述安全识别库中查找与所述特征组合相匹配的特征记录；  第三查找子模块，用于当第二查找子模块未查找到时，在所述安全识别库中查找与单个特征信息相匹配的特征记录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求12所述的系统，其特征在于：  所述第二查找子模块在查找过程中，针对特征个数相同的多项特征组合，按照预先设定的先后顺序进行查找；  所述第三查找子模块针对单个特征信息，按照预先设定的先后顺序进行查找。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求10所述的系统，其特征在于，所述特征提取模块包括：  第一提取子模块，用于从所述Android安装包的AndroidManifest. xml文件中提取出以下中的一种或几种组合：包名，版本号，Android组件receiver的特征，Android组件service的特征，Android组件activity的特征；  和/或，  第二提取子模块，用于从所述Android安装包的META-INF\目录下的.RSA文件中提取出所述Android安装包的数字签名；  和/或，  第三提取子模块，用于从所述Android安装包的classes, dex文件中提取出可执行指令；  和/或，  第四提取子模块，用于从所述Android安装包的lib\目录下提取出ELF文件的指令或字符串。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求9所述的系统，其特征在于：  所述安全级别包括安全、危险、谨慎和木马四个级别。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES52625652" lang="ZH" load-source="patent-office" class="description">
+    <p>&#8212;种Android应用程序的安全检测方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本申请涉及软件安全技术领域，特别是涉及一种Android应用程序的安全检测方法及系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	Android是一种以Linux为基础的开放源码操作系统，主要使用于手机等移动终端，目前尚未有统一中文名称。Android平台由操作系统、中间件、用户界面和应用软件组成，Android应用程序即指Android平台下的应用软件。</p>
+    <p>[0003]	随着Android智能手机的普及，逐渐形成了一条针对Android系统的恶意软件的产业链。这些恶意软件通常伪装成正常的应用软件或者游戏欺骗用户安装，一旦进入用户手机，就在后台悄悄定制SP服务或拨打付费电话吸取用户话费，或者收集用户的隐私，或 者窃取用户的网银和第三方支付密码以实施进一步的盗窃。据统计，目前已有超过8000种Android恶意软件,超过500万部Android手机遭到了感染。</p>
+    <p>[0004]	针对这些众多的Android恶意软件，各个致力于软件杀毒的公司相继推出了Android平台的杀毒软件。但是，它们的杀毒引擎主要移植自PC上的杀毒引擎，采用传统PC杀毒的思路，按照文件进行查杀，甚至对在Android手机上根本无法运行的文件都会进行扫描，导致扫描速度慢、扫描效率低的问题；而且，扫描算法采用提取文件片段计算CRC (Cyclic Redundancy Check,循环冗余校验码）和 MD5 (Message Digest Algorithm,消息摘要算法第五版）再在本地数据库中查找的方法，通用性不高，容易导致误报，误报率较闻。</p>
+    <p>发明内容</p>
+    <p>[0005]	本申请提供了一种Android应用程序的安全检测方法及系统，以解决现有的Android平台的杀毒方法扫描速度慢、误报率高的问题。</p>
+    <p>[0006]	为了解决上述问题，本申请公开了一种Android应用程序的安全检测方法，包括：扫描Android安装包，并从所述Android安装包中提取出指定的特征信息；在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。</p>
+    <p>[0007]	优选地，所述从Android安装包中提取出的指定的特征信息包括以下中的一种或几种组合：Android安装包的包名，版本号，数字签名，Android组件receiver的特征，Android组件service的特征,Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值；其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件，扩展名为.jar的文件，以及,Dex格式的文件。[0008]	优选地，所述安全识别库中的特征信息包括以下中的一种或几种组合：各种样本Android安装包的包名，版本号，数字签名，Android组件receiver的特征，Android组件service的特征，Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值；其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件，扩展名为.jar的文件，以及，Dex格式的文件；其中，所述样本Android安装包包括各种安全级别下的Android安装包。</p>
+    <p>[0009]	优选地，所述在安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录，包括：将所述指定的特征信息进行组合，得到至少包含两个特征的各项特征组合；从包含最多特征的特征组合开始，在所述安全识别库中查找与所述特征组合相匹配的特征记录，如果未查找到，则逐个减少特征组合中的特征个数，针对减少了特征个数的特征组合，继续在所述安全识别库中查找与所述特征组合相匹配的特征记录，如果未查找到，则在所述安全识别库中查找与单个特征信息相匹配的特征记录。</p>
+    <p>[0010]	优选地，在查找过程中，针对特征个数相同的多项特征组合，按照预先设定的先后 顺序进行查找；针对单个特征信息，按照预先设定的先后顺序进行查找。</p>
+    <p>[0011]	优选地,所述从Android安装包中提取出指定的特征信息,包括：从所述Android安装包的AndroidManifest. xml文件中提取出以下中的一种或几种组合：包名，版本号，Android 组件receiver 的特征,Android 组件 service 的特征,Android 组件 activity 的特征；和/或，从所述Android安装包的META-INF\目录下的.RSA文件中提取出所述Android安装包的数字签名；和/或，从所述An droid安装包的classes, dex文件中提取出可执行指令；和/或，从所述Android安装包的lib\目录下提取出ELF文件的指令或字符串。</p>
+    <p>[0012]	优选地，所述安全级别包括安全、危险、谨慎和木马四个级别。</p>
+    <p>[0013]	优选地，所述安全检测结果还包括以下至少一项：行为描述信息，软件描述信息，时间戳信息。</p>
+    <p>[0014]	本申请还提供了一种Android应用的安全检测系统，包括：特征提取模块，用于扫描Android安装包，并从所述Android安装包中提取出指定的特征信息；检测模块，用于在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；显示模块，用于将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。</p>
+    <p>[0015]	优选地，所述从Android安装包中提取出的指定的特征信息包括以下中的一种或几种组合：Android安装包的包名，版本号，数字签名，Android组件receiver的特征，Android组件service的特征,Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值；其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件,扩展名为.jar的文件，以及，Dex格式的文件。</p>
+    <p>[0016]	优选地，所述安全识别库中的特征信息包括以下中的一种或几种组合：各种样本Android安装包的包名，版本号，数字签名，Android组件receiver的特征，Android组件service的特征，Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值；其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件，扩展名为.jar的文件，以及，Dex格式的文件；其中，所述样本Android安装包包括各种安全级别下的Android安装包。</p>
+    <p>[0017]	优选地，所述检测模块包括：特征组合子模块，用于将所述指定的特征信息进行组合，得到至少包含两个特征的各项特征组合；第一查找子模块，用于从包含最多特征的特征组合开始，在所述安全识别库中查找与所述特征组合相匹配的特征记录；第二查找子模块，用于当第一查找子模块未查找到时，逐个减少特征组合中的特征个数，针对减少了特征个数的特征组合，继续在所述安全识别库中查找与所述特征组合相匹配的特征记录；第三查找子模块，用于当第二查找子模块未查找到时，在所述安全识别库中查找与单个特征信息相匹配的特征记录。</p>
+    <p>[0018]	优选地，所述第二查找子模块在查找过程中，针对特征个数相同的多项特征组合，按照预先设定的先后顺序进行查找；所述第三查找子模块针对单个特征信息，按照预先设定的先后顺序进行查找。 [0019]	优选地，所述特征提取模块包括：第一提取子模块，用于从所述Android安装包的AndroidManifest. xml文件中提取出以下中的一种或几种组合：包名，版本号，Android组件receiver的特征，Android组件service的特征，Android组件activity的特征；和/或，第二提取子模块，用于从所述Android安装包的META-INF\目录下的.RSA文件中提取出所述Android安装包的数字签名；和/或,第三提取子模块,用于从所述Android安装包的classes, dex文件中提取出可执行指令；和/或，第四提取子模块，用于从所述Android安装包的lib\目录下提取出ELF文件的指令或字符串。</p>
+    <p>[0020]	优选地，所述安全级别包括安全、危险、谨慎和木马四个级别。</p>
+    <p>[0021]	与现有技术相比，本申请包括以下优点：</p>
+    <p>[0022]	首先，本申请提供的针对Andro i d应用程序的安全检测，并不是对Andro i d系统中的所有文件进行扫描，而是通过扫描Android安装包来进行安全检测。由于Android上的病毒、木马和其他恶意软件想要进入用户的手机，需要打包成Android安装包的形式。反过来说，如果不是一个合法的Android安装包，它就无法安装到用户手机上，也就不会对用户产生危害。基于这一点，杀毒引擎可以把查杀的目标集中到对Android安装包的扫描上，从而大大提闻扫描的效率。</p>
+    <p>[0023]	其次，本申请从Android安装包中提取出指定的特征进行检测，如将包名、版本号、数字签名、Android组件receiver、service、activity中的信息等作为指定的特征,这些指定的特征对于检测最具代表性，因此与移植自PC上的传统杀毒引擎相比，本申请准确抓住了 Android平台下应用的几大关键特征，使得扫描速度快、查杀准确率高。</p>
+    <p>[0024]	再次，本申请进行的检测提供了安全、危险、谨慎和木马四个安全级别，不仅可以检测出病毒、木马和其他恶意软件，还可以将正常的应用、存在安全风险的应用和虽然正常但存在一些问题的应用全部检测出来。因此，本申请对Android应用程序的检测不局限于传统的查毒检测，而是可以为用户提供安全、危险、谨慎等更多的提示。</p>
+    <p>[0025]	最后，本申请对提取出的各项特征进行安全检测时，采用对各项特征进行组合查询的方式，进一步提高了检测效率和检测的准确率。</p>
+    <p>[0026]	当然，实施本申请的任一产品不一定需要同时达到以上所述的所有优点。附图说明</p>
+    <p>[0027]	图I是本申请实施例中Android系统的架构设计图；</p>
+    <p>[0028]	图2是本申请实施例所述一种Android应用程序的安全检测方法流程图；</p>
+    <p>[0029]	图3是本申请实施例所述在安全识别库中进行查找的流程图；</p>
+    <p>[0030]	图4是本申请另一实施例所述在安全识别库中进行查找的流程图；</p>
+    <p>[0031]	图5是本申请实施例所述一种Android应用程序的安全检测系统的结构图；</p>
+    <p>[0032]图6是本申请实施例所述的安全检测系统中检测模块的结构图。</p>
+    <p>具体实施方式 [0033]	为使本申请的上述目的、特征和优点能够更加明显易懂，下面结合附图和具体实施方式对本申请作进一步详细的说明。</p>
+    <p>[0034]	分析现有技术中的各种杀毒引擎，由于移植自PC上的杀毒引擎，主要针对的是PC系统的特性而设计，而PC系统与Android系统既有相同的特性，也有不同的特性，但现有技术并没有深入理解Android系统本身的特点，因此并不完全适合于Android系统的杀毒，存在着扫描速度慢、误报率高的问题。</p>
+    <p>[0035]	基于此,本申请结合Android系统本身的特点，提出一种专门针对Android系统特性而设计的杀毒方法，下面先介绍设计思路。</p>
+    <p>[0036]	在Android系统上，一个可以安装、运行的应用，需要打包成Android系统的APK文件格式。APK 是 Android application package file 的缩写，简称 APK 文件，即 Android安装包，也可以理解为Android终端上安装的应用软件。APK文件其实是ZIP文件格式，但后缀名被修改为apk，通过Unzip等工具解压可以看到其内部的文件结构，如下表所示：</p>
+    <p>[0037]</p>
+    <p>文件名	说明</p>
+    <p>META-INF\ 0 t	该 0 录不一般存 MANIFEST.MF 和</p>
+    <p>                            以.RSA, .SF结尾的文件，这些文件记录了其                            它0录文件的证书签名，Android系统在安装                            APK安装包的时候会逐个检查APK内部各                            文件是否与本目录记录的证节签名一致，如                            果不一致,则认为文件已被葛改,拒绝该APK</p>
+    <p>[0038]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102779257A/CN102779257AD00091.png"> <img id="idf0001" file="CN102779257AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102779257A/CN102779257AD00091.png" class="patent-full-image" alt="Figure CN102779257AD00091"> </a> </div>
+    <p>[0039]表	I</p>
+    <p>[0040]	Android安装包（APK文件）一般通过Android应用市场下载、安装到手机上,也可以通过USB数据线等数据线接口或无线数据传输的方式从PC安装。Android上的病毒、木马和其他恶意软件想要进入用户的手机，也必须打包成APK的形式。反过来说，如果不是一个合法的APK文件，它就无法安装到用户手机上，也就不会对用户产生危害。基于这一点，杀毒引擎就可以把查杀的目标集中到对APK文件的扫描上，从而大大提高扫描的效率。</p>
+    <p>[0041]	那么，Android安装包（APK文件）中的哪些信息可以作为扫描的重点，针对此问题本申请进行了分析，具体如下：</p>
+    <p>[0042]	I)包名</p>
+    <p>[0043]	Andro i d操作系统通过APK的包名（package name)对各个安装的APK进行管理。“包名”源自于Java的package的概念,按照Java的package的命名风格,例如某个Android安装包的包名是com. qihoo360. mobilesafe。Android系统要求每个应用都声明一个唯一的包名。如果要安装的APK的包名和当前手机上某个已有的应用的包名重复了，那么Android系统会拒绝安装。Android平台下的恶意软件也需要声明一个包名，因此,包名就可以作为识别恶意软件的一个重要特征。</p>
+    <p>[0044]	2)数字签名</p>
+    <p>[0045]	出于安全性的目的，Android系统要求每个APK都要包含数字签名（digitalsignature)。Android系统在安装APK文件的时候会检查APK内部各文件的数字签名是否与其预先设定的数字签名一致，如果不一致，或者没有数字签名，则认为文件已被篡改，拒绝该APK的安装和运行。Android平台下的恶意软件也不例外，所以APK文件的数字签名也可以作为识别恶意软件的一个重要特征。</p>
+    <p>[0046]	3)AndroidManifest. xml中列出的各模块的入口信息</p>
+    <p>[0047]	AndroidManifest. xml是每个APK文件所必需的全局描述文件，里面列出了 Android安装包中应用的每个模块的入口信息。在Android系统中，只有在AndroidManifest.xml中列出了的模块,才能够被系统调用。Android平台下的木马，往往会伪装成正常的应用或游戏来诱骗用户安装，其中有很多木马就是寄生在一个正常的应用或游戏中，用户运行它的时候，看上去是原来的软件或游戏，但寄生在其中的木马模块在合适的时机就被激活，从而感染用户的手机。而因为Android系统要求所有的模块都要在AndroidManifest. xml中列出，这就为寻找寄生的木马提高了重要线索。因此，AndroidManifest. xml中列出的各模块的信息，也是识别恶意软件的重要特征。</p>
+    <p>[0048]	4) Dex文件和ELF文件</p>
+    <p>[0049]	在Android系统的架构设计中,Android应用与整个系统平台之间的关系如图I所 示。Android应用通常是用Java语言开发的,它用Android开发工具编译之后变成了二进制的字节码（byte code)，这些字节码被打包成classes, dex文件，由Android平台的Dalvik虚拟机来解释执行。为了能够调用Android系统功能，Android系统提供了一套运行环境(Android Framework) ,Android应用调用系统各功能都是通过调用Android Framework的库来实现的。</p>
+    <p>[0050]	另一方面,Android系统也支持应用程序通过JNI或者native executable直接运行。此时应用执行的是直接在CPU上运行的二进制机器码，不需要经过虚拟机解释，可以直接调用Android库如libc、WebKit、SQLite、OpenGL/ES等来调用系统各功能。如果Android应用要通过JNI或者native executable运行，就需要将要执行的代码编译成ELF文件格式。ELF 是 Executable and Linkable Format 的缩写，是 Android/Linux 操作系统中可执行程序、共享库的文件格式。</p>
+    <p>[0051]	Android上的恶意软件要想在Android系统中运行起来,也要遵循上述架构规范。因此，在识别恶意软件的过程中，可以分别从Dex文件（即字节码文件）和ELF文件提取相应的特征。</p>
+    <p>[0052]	此外，除上述列举之外，Android安装包的版本号、Android安装包目录下各文件的MD5值等信息，也可以作为识别恶意软件的重要特征。其中，上述的恶意软件包括病毒、木马和其他恶意软件。</p>
+    <p>[0053]	本申请实施例综合了以上各个重要特征，提出一种针对Android应用程序的安全检测方法，可以对APK的上述各项特征进行扫描、鉴定，最终识别出各种恶意软件（包括病毒、木马和其他恶意软件）。而且，本申请实施例的安全检测方法，识别结果不局限于此，还可以将正常的应用、存在安全风险的应用和虽然正常但存在一些问题的应用全部检测出来，以提示用户。</p>
+    <p>[0054]	下面通过实施例对本申请所述方法的实现流程进行详细说明。</p>
+    <p>[0055]	参照图2,其示出了本申请实施例所述一种Android应用程序的安全检测方法流程图。</p>
+    <p>[0056]	步骤201，扫描Android安装包，并从所述Android安装包中提取出指定的特征信息；[0057]	所述指定的特征信息即指上述列举的各项重要特征，如包名、版本号、数字签名、AndroidManifest. xml中列出的各模块的入口信息、Dex文件和ELF文件、Android安装包目录下各文件的MD5值等。这些指定的特征信息对于安全检测最具代表性，因此也是用于检测的关键特征。</p>
+    <p>[0058]	其中，AndroidManifest.xml中列出的各模块的入口信息包括Android组件中的特征。Android开发的四大组件分别是：活动（Activity),用于表现功能；服务（Service),后台运行服务，不提供界面呈现；广播接收器（Broadcas tReceiver)，用于接收广播；内容提供商（Content Provider),支持在多个应用中存储和读取数据,相当于数据库。</p>
+    <p>[0059]	因此，所述从Android安装包中提取出的指定的特征信息可以包括：</p>
+    <p>[0060]	Android安装包的包名，和/或,版本号,和/或，数字签名，和/或，Android组件receiver的特征，和/或,Android组件service的特征，和/或,Android组件activity的 特征，和/或，可执行文件中的指令或字符串，和/或，Android安装包目录下各文件的MD5值；</p>
+    <p>[0061]	需要说明的是，所述“和/或”是指从Android安装包中可以单独提取出其中任意一项特征信息用作安全检测，也可以提取出多项特征信息的组合用作安全检测。当然，同时提取多项特征进行检测的效果要明显优于单项特征，这在后面图3所示的实施例中将进行详细说明，所以此处略。</p>
+    <p>[0062]	其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件,扩展名为&#183; jar的文件，以及，Dex格式的文件。</p>
+    <p>[0063]	具体地，在本申请的一种优选实施列中，所述可执行文件包括Dex文件，Dex文件主要是APK中的classes, dex文件，即Dalvik Executable (Dalvik虚拟机可执行文件）。公知的是，Dalvik是用于Android平台的Java虚拟机。Dalvik虚拟机（Dalvik VM)是Android移动设备平台的核心组成部分之一。它可以支持已转换为&#183; dex(即Dalvik Executable)格式的Java应用程序的运行，.dex格式是专为Dalvik设计的一种压缩格式,适合内存和处理器速度有限的系统。Dalvik经过优化，允许在有限的内存中同时运行多个虚拟机的实例，并且每一个Dalvik应用作为一个独立的Linux进程执行。独立的进程可以防止在虚拟机崩溃的时候所有程序都被关闭。</p>
+    <p>[0064]	更为优选的是，所述可执行文件还可以包括扩展名为.jar的文件。Android安装包中的JAR文件其实就是Dex文件,只不过其扩展名为.jar,对于APK中除classes, dex之外的其他文件，只要判定其为Dex文件即可决定是否进行扫描。</p>
+    <p>[0065]	在实际应用中，所述Dex文件还可以包括其它Dex格式的文件。</p>
+    <p>[0066]	此外，上述Android安装包目录下各文件的MD5值可以是数字签名的MD5值，也可以是表I中res\、assets\、lib\等目录下各文件的MD5值。</p>
+    <p>[0067]	基于以上列举的指定特征，可通过以下方式从Android安装包中提取出各项指定的特征信息，参照表I可知：</p>
+    <p>[0068]	从所述Android安装包的AndroidManifest. xml文件中提取出以下信息中的一种或几种组合：：包名，版本号，Android组件receiver的特征，Android组件service的特征，Android组件activity的特征；</p>
+    <p>[0069]和	/ 或，[0070]	从所述Android安装包的META_INF\目录下的.RSA文件中提取出所述Android安装包的数字签名；</p>
+    <p>[0071]和	/ 或，</p>
+    <p>[0072]	从所述Android安装包的classes, dex文件中提取出可执行指令；</p>
+    <p>[0073]和	/ 或，</p>
+    <p>[0074]	从所述Android安装包的lib\目录下提取出ELF文件的指令或字符串。</p>
+    <p>[0075]	其中，所述“和/或”的理解与上相同，即可以从Android安装包中单独提取出其中任意一项特征信息用作安全检测，也可以提取出多项特征信息都用作安全检测。</p>
+    <p>[0076]	关于具体的特征提取方法，将在后面的举例说明中进行解释。</p>
+    <p>[0077]	步骤202，在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；</p>
+    <p>[0078]	步骤203，将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。</p>
+    <p>[0079]	所述安全识别库通常需要预先设置在客户端本地，如手机文件系统中，安全识别库中预置了多条特征记录，其中，单个特征信息可以构成一条特征记录，多个特征信息的组合也可以构成一条特征记录。例如，一个安全识别库中预置了几十条特征记录，其中，第一条特征记录中列出了某种病毒的Android安装包包名，第二条特征记录中列出了某个正常应用的Android安装包版本号及其数字签名的MD5值，第三条特征记录中列出了某个正常应用的Android安装包包名及其receiver特征,第四条特征记录中列出了某种木马的Android安装包包名、版本号及其ELF文件中的特定字符串，等等。</p>
+    <p>[0080]总之，安全识别库中既收集了识别病毒、木马等各种恶意软件的特征信息，也收集了识别正常应用的特征信息，而不同于很多仅仅用于识别恶意软件的数据库。</p>
+    <p>[0081]	因此，所述安全识别库中收集的特征信息可以包括以下列举的：</p>
+    <p>[0082]	各种样本Android安装包的包名，和/或，版本号，和/或，数字签名，和/或，Android组件receiver的特征，和/或,Android组件service的特征，和/或,Android组件activity的特征,和/或，可执行文件中的指令或字符串，和/或，Android安装包目录下各文件的MD5值；</p>
+    <p>[0083]	如前所述，所述“和/或”也是指从各种样本的Android安装包中可以单独提取出其中任意一项特征信息用作安全检测，也可以提取出多项特征信息的组合用作安全检测。</p>
+    <p>[0084]	其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件,扩展名为.jar的文件，以及，Dex格式的文件；</p>
+    <p>[0085]	其中，所述样本Android安装包包括各种安全级别下的Android安装包。</p>
+    <p>[0086]	本申请实施例列举出安全、危险、谨慎和木马四个安全级别。其中，各种安全级别的定义如下：</p>
+    <p>[0087]	安全：该应用是一个正常的应用，没有任何威胁用户手机安全的行为； [0088]	危险：该应用存在安全风险，有可能该应用本身就是恶意软件；也有可能该应用本来是正规公司发布的正常软件，但是因为存在安全漏洞，导致用户的隐私、手机安全受到威胁；[0089]	谨慎：该应用是一个正常的应用，但是存在一些问题，例如会让用户不小心被扣费，或者有不友好的广告遭到投诉等；当发现这类应用之后，会提示用户谨慎使用并告知该应用可能的行为，但是由用户自行决定是否清除该应用；</p>
+    <p>[0090]	木马：该应用是病毒、木马或者其他恶意软件，此处为了简单统称为木马，但并不表示该应用仅仅是木马。 [0091]	所以，在设置安全识别库时，可以将安全、危险、谨慎和木马四个级别下的Android安装包都作为样本Andrο i d安装包,从而由样本中的单个特征或特征组合得到的特征记录可分别对应着一种安全级别及相关的行为和描述等信息。</p>
+    <p>[0092]	例如，上述的第一条特征记录和第四条特征记录分别对应的安全级别均为木马级另IJ，上述的第二条特征记录和第三条特征记录分别对应的安全级别均为安全级别。</p>
+    <p>[0093]	当然，安全识别库中还可以设置一条特征记录,列出某种木马的Android安装包版本号及其数字签名的MD5值，虽然这条特征记录使用的特征组合与上述第二条特征记录相同，都使用了版本号与数字签名MD5值的组合，但是这条特征记录对应的安全级别则为“木马”。</p>
+    <p>[0094]	所以，安全级别并不与某一种特定的特征或特征组合相对应，而是与具体的特征或特征组合的取值相对应。因此，如上所述，对于相同的特征或特征组合，具体取值不同，对应的安全级别也是不同的。</p>
+    <p>[0095]	而且，上述安全、危险、谨慎和木马四个级别的定义仅作为举例说明，根据实际应用，当然也可以有其他的安全级别分类及定义，本申请的保护范围并不限定于此。</p>
+    <p>[0096]	那么，所述在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录，并将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果的步骤，可以理解为：</p>
+    <p>[0097]	在安全识别库中查找特征记录，如果提取出的指定单个特征与第一条特征记录相匹配，则可以判定当前的Android安装包为木马级别；如果提取出的指定特征进行组合后与第二条特征记录或者第三条特征记录相匹配，则可以判定当前的Android安装包为安全级别；如果提取出的指定特征进行组合后与第四条特征记录相匹配，则可以判定当前的Android安装包也为木马级别。</p>
+    <p>[0098]	所以，针对某个Android安装包的安全检测结果可以是包含安全、危险、谨慎或木马四个表示安全级别的信息，此外所述安全检测结果中还可以包括与安全级别相关的行为描述、软件描述、时间戳等至少一项提示信息，如对应“谨慎”级别的提示信息可以是“可能造成扣费，是否选择删除该应用”。</p>
+    <p>[0099]	更具体地，在一优选实施例中，所述安全检测结果可以包含安全级别、行为描述信息、软件描述信息和时间戳信息。其中：</p>
+    <p>[0100]	安全级别：可以用32位整数表示，可表示安全、危险、谨慎或木马四个安全级别，每个安全级别的定义如上所述。</p>
+    <p>[0101]	行为描述信息：也可以用32位（O&#12316;31)整数表示，可以表示出各个安全级别的软件行为描述。其中，可以选取一位表示标志位，标志位为O表示没有恶意行为，如果有恶意行为，则可以定义：第I位代表“后台偷偷下载”，第2位代表“私自发送短信”，第3位代表“包含广告”，等等。即，每一位都可以单独表示一种软件的行为描述。[0102]	例如，对于检测为“木马级别”的Android应用程序，如果恶意行为=3，翻译成二进制就是11，第I位=1，第2位=1，表示的恶意行为是：同时具有后台偷偷下载和私自发送短信的行为。</p>
+    <p>[0103]	再例如，对于检测为“谨慎级别”的Android应用程序，如果行为描述=4，翻译成二进制就是100,第I位=O,第2位=O,第2位=I,表示的行为是：包含广告。由于这个广告可能是用户允许的，也可能是用户不允许的，所以会提示用户谨慎使用，由用户自行决定是否清除。</p>
+    <p>[0104]	软件描述信息：通常表示为字符串，是对Android应用程序的说明，如发布者、发布时间等信息。</p>
+    <p>[0105]	时间戳信息：表明Android应用程序的特征信息（如正常特征、木马特征等）是什么时候入库的。 [0106]	实际应用中，客户端用户界面显示安全检测结果时，可以先弹出安全级别信息，如果用户点击“查看详情”按钮，再为用户展示行为描述信息、软件描述信息和时间戳信息。</p>
+    <p>[0107]	综上所述，上述图2实施例提供的针对Android应用程序的安全检测方法，首先，该方法并不是对Android系统中的所有文件进行扫描，而是通过扫描Android安装包来进行安全检测。这种把查杀的目标集中到Android安装包扫描的方式，可以大大提高扫描的效率。</p>
+    <p>[0108]	其次，该方法从Android安装包中提取出指定的特征进行检测，如将包名、版本号、数字签名、等作为指定的特征，这些指定的特征对于检测最具代表性，因此与移植自PC上的传统杀毒引擎相比，该方法能够准确抓住Android平台下应用的几大关键特征，使得扫描速度快、查杀准确率高。</p>
+    <p>[0109]	再次，该方法进行的检测提供了安全、危险、谨慎和木马四个安全级别，不仅可以检测出病毒、木马和其他恶意软件，还可以将正常的应用、存在安全风险的应用和虽然正常但存在一些问题的应用全部检测出来。因此，本申请对Android应用程序的检测不局限于传统的查毒检测，而是可以为用户提供安全、危险、谨慎等更多的提示。</p>
+    <p>[0110]	基于上述内容，在查询安全识别库的过程中，本申请另一实施例还提供了一种优化的查询方法，这种查询采用对各项特征进行组合查询的方式，可进一步提高检测效率和检测的准确率。</p>
+    <p>[0111]	所述查询的基本思路是：对提取的Android安装包的几项关键特征，在安全识别库中进行组合查询，当发现匹配的特征记录时，返回该特征记录所对应的安全信息。其中，所述安全信息可以包括安全级别的描述，以及与安全级别相对应的提示信息。</p>
+    <p>[0112]	下面结合图3所示的流程，通过具体举例说明这种查询过程。</p>
+    <p>[0113]	参照图3，其示出了本申请实施例所述在安全识别库中进行查找的流程图。</p>
+    <p>[0114]	首先，假设安全识别库中采用了三种特征信息，分别是特征一、特征二和特征三。所述“特征一”、“特征二”和“特征三”并不特指某项特征，而是可根据实际情况来设定。当然，实际情况中采用的特征不限于三种，此处仅用作举例说明。</p>
+    <p>[0115]	基于这三种特征，所述安全识别库中设定了由其中的单个特征和特征组合构成的特征记录，这些特征记录包括：</p>
+    <p>[0116]	包含特征一、特征二、特征三的特征记录；[0117]	包含特征一、特征二的特征记录；</p>
+    <p>[0118]	包含特征一、特征三的特征记录；</p>
+    <p>[0119]	包含特征一的特征记录,是指仅包含特征一；</p>
+    <p>[0120]	包含特征二的特征记录，是指仅包含特征二 ；</p>
+    <p>[0121]	包含特征三的特征记录，是指仅包含特征三。</p>
+    <p>[0122]	由于包含特征二、特征三的特征记录在实际应用中无法起到明显的检测作用，所以此处删除该条特征记录。当然，根据实际应用的需要，也可能将上述给出的某些特征记录省略。</p>
+    <p>[0123]	基于上述设定的安全识别库，下面通过步骤301至步骤306来说明查询安全识别库的过程。具体如下：  </p>
+    <p>[0124]	步骤301，判断是否找到包含特征一、特征二、特征三的特征记录；</p>
+    <p>[0125]	如果找到，则返回结果，所述结果包含了与该条特征记录相对应的安全级别信息；</p>
+    <p>[0126]	如果未找到，继续步骤302 ；</p>
+    <p>[0127]	步骤302，判断是否找到包含特征一、特征二的特征记录；</p>
+    <p>[0128]	如果找到，则返回结果，所述结果包含了与该条特征记录相对应的安全级别信息；</p>
+    <p>[0129]	如果未找到，继续步骤303 ；</p>
+    <p>[0130]	步骤303，判断是否找到包含特征一、特征三的特征记录；</p>
+    <p>[0131]	如果找到，则返回结果，所述结果包含了与该条特征记录相对应的安全级别信息；</p>
+    <p>[0132]	如果未找到，继续步骤304 ；</p>
+    <p>[0133]	步骤304，判断是否找到包含特征一的特征记录；</p>
+    <p>[0134]	如果找到，则返回结果，所述结果包含了与该条特征记录相对应的安全级别信息；</p>
+    <p>[0135]	如果未找到，继续步骤305 ；</p>
+    <p>[0136]	步骤305，判断是否找到包含特征二的特征记录；</p>
+    <p>[0137]	如果找到，则返回结果，所述结果包含了与该条特征记录相对应的安全级别信息；</p>
+    <p>[0138]	如果未找到，继续步骤306 ；</p>
+    <p>[0139]	步骤306，判断是否找到包含特征三的特征记录；</p>
+    <p>[0140]	如果找到，则返回结果，所述结果包含了与该条特征记录相对应的安全级别信息；</p>
+    <p>[0141]	如果未找到，则扫描结束。</p>
+    <p>[0142]	上述流程中，需要注意的是，匹配的特征记录不一定是恶意软件的记录，也可以是正常软件的记录。例如，某安全产品的APK数字签名的MD5特征值始终为dc6dbd6e49682a57a8b82889043b93a8，假设上图中的“特征一”就是指APK数字签名的MD5，那么当检索到MD5值=dc6dbd6e49682a57a8b82889043b93a8的特征记录时，该特征记录对应的返回结果应该为“安全”，因而就不用进行下面的步骤了，直接识别为安全的软件。[0143]	下面通过一个具体的例子说明上述流程。</p>
+    <p>[0144]	假设某手机上有3款应用（实际手机至少有几十款应用，此处为说明方便而简化了）：</p>
+    <p>[0145]	I.手机系统自带的拨号键盘；</p>
+    <p>[0146]	2.某款手机安全产品；</p>
+    <p>[0147]	3.木马 Pico。</p>
+    <p>[0148]	首先分别提取所述3款应用的特征信息，具体如下：</p>
+    <p>[0149]	I.手机系统自带的拨号键盘</p>
+    <p>[0150]特征一	：APK 包名，packageName =com. android, phone ； </p>
+    <p>[0151]特征二	：APK 版本号，versionCode = 8 ；</p>
+    <p>[0152]	特征三：APK数字签名的MD5值，</p>
+    <p>[0153]	sigHash = 8ddb342f2da5408402d7568af21e29f9 ；</p>
+    <p>[0154]	2.某款手机安全产品</p>
+    <p>[0155]特征一	：APK 包名，packageName =com. qihoo360. mobilesafe ；</p>
+    <p>[0156]特征二	：APK 版本号，versionCode = 137 ；</p>
+    <p>[0157]	特征三：APK数字签名的MD5值，</p>
+    <p>[0158]	sigHash = dc6dbd6e49682a57a8b82889043b93a8 ；</p>
+    <p>[0159]	3.木马 Pico</p>
+    <p>[0160]特征一	：APK 包名，packageName =com. svox. pico ；</p>
+    <p>[0161]特征二	：APK 版本号，versionCode = I ；</p>
+    <p>[0162]	特征三：APK数字签名的MD5值，</p>
+    <p>[0163]	sigHash = e89bl58e4bcf988ebd09eb83f5378e87o</p>
+    <p>[0164]	假设安全识别库中有以下特征记录，特征记录以数据表的形式保存：</p>
+    <p>[0165]	表I :特征一 +特征二 +特征三</p>
+    <p>[0166]	Key-com. svox. pico_l_e89bl58e4bcf988ebd09eb83f5378e87 ；</p>
+    <p>[0167]	value-木马；</p>
+    <p>[0168]	表2 :特征一 +特征二</p>
+    <p>[0169]空；</p>
+    <p>[0170]	表3 :特征一 +特征三</p>
+    <p>[0171]	Key-</p>
+    <p>[0172]	com. qihoo360. mobilesafe_dc6dbd6e49682a57a8b82889043b93a8 ；</p>
+    <p>[0173]	value-安全；</p>
+    <p>[0174]	表4 :特征一</p>
+    <p>[0175]空；</p>
+    <p>[0176]	表5:特征二</p>
+    <p>[0177]空；</p>
+    <p>[0178]	表6:特征三</p>
+    <p>[0179]	Key-8ddb342f2da5408402d7568af21e29f9 ；</p>
+    <p>[0180]	Value-安全。[0181]	需要说明的是，上述不为空的表I、表3和表6中，每个表都可能包含多条特征记录，而不仅仅是上述列举出来的情况。例如，表6中，还可以包括特征三的Key和Value为其他值的特征记录。</p>
+    <p>[0182]	查询时，分别将3款应用的特征在安全识别库中按照表I- &gt;表2- &gt; ...的顺序查询，得到以下查询结果：</p>
+    <p>[0183]	对于应用I :手机系统自带的拨号键盘</p>
+    <p>[0184]	表I:没有查询到；</p>
+    <p>[0185]	表2:没有查询到；</p>
+    <p>[0186]	表3:没有查询到；</p>
+    <p>[0187]	表4:没有查询到； </p>
+    <p>[0188]	表5:没有查询到；</p>
+    <p>[0189]	表6 :查询到了，结果是“安全”，查询结束，返回结果。</p>
+    <p>[0190]	对于应用2 :某款手机安全产品</p>
+    <p>[0191]	表I:没有查询到</p>
+    <p>[0192]	表2:没有查询到</p>
+    <p>[0193]	表3 :查询到了，结果是“安全”，查询结束，返回结果。</p>
+    <p>[0194]	对于应用3:木马Pico</p>
+    <p>[0195]	表I :查询到了，结果是“木马”，查询结束，返回结果。</p>
+    <p>[0196]	假设有一款应用，表I&#12316;表6都没有查询到，那么返回结果为“未知”。</p>
+    <p>[0197]	如果value是其它的值，如“危险”、“谨慎”，则按照上述方式依此类推。</p>
+    <p>[0198]	上面图3所示的流程仅是举例说明，用于通过一个具体的例子使本领域技术人员方便了解查询过程，但由上面的例子可以总结出这种查询的本质过程，如图4所示。</p>
+    <p>[0199]	参照图4，其示出了本申请另一实施例所述在安全识别库中进行查找的流程图。</p>
+    <p>[0200]	步骤401，将所述指定的特征信息进行组合，得到至少包含两个特征的各项特征组合；</p>
+    <p>[0201]	所述指定的特征信息是指从待检测的Android安装包中提取出的指定的特征信</p>
+    <p>肩、O</p>
+    <p>[0202]	所述组合是指各种可能的组合，例如，将上述从某个应用中提取出的特征一、特征二、特征三进行三个特征的组合和两两组合，可得到包含特征一、特征二、特征三的特征组合，包含特征一、特征二的特征组合，包含特征一、特征三的特征组合，以及包含特征二、特征三的特征组合，共四项特征组合。但是，上例中根据实际应用的需要没有使用包含特征</p>
+    <p>[0203]	二、特征三的特征组合。</p>
+    <p>[0204]	步骤402，从包含最多特征的特征组合开始，在所述安全识别库中查找与所述特征组合相匹配的特征记录，如果未查找到，则继续步骤403 ；</p>
+    <p>[0205]	例如，从包含特征一、特征二、特征三的特征组合开始查询，针对上述的应用I和应用2，均没有在安全识别库中查找到相匹配的特征记录，则继续步骤403 ;但是对于应用3，则在表I中查询到了匹配的特征记录，则直接返回相应结果。</p>
+    <p>[0206]	步骤403，逐个减少特征组合中的特征个数，针对减少了特征个数的特征组合，继续在所述安全识别库中查找与所述特征组合相匹配的特征记录，如果未查找到，则继续步骤 404 ；</p>
+    <p>[0207]	如果查找到，则返回相应结果。</p>
+    <p>[0208]	例如，对于最多包含三个特征的特征组合，减少一个特征后的特征组合包含两个特征，那么对这些包含两个特征的特征组合进行查找。</p>
+    <p>[0209]	在查找过程中，针对特征个数相同的多项特征组合，可以按照预先设定的先后顺序进行查找。</p>
+    <p>[0210]	例如，图3所示流程中，包含两个特征的特征组合一共有3个，去除不使用的一个特征组合，剩下的两个特征组合的查找顺序是：先对包含特征一、特征二的特征组合进行查找，然后再对包含特征一、特征三的特征组合进行查找。</p>
+    <p>[0211]	需要说明的是，所述预先设定的先后顺序需要根据实际情况下的特征定义、特征组合情况来设定，而不局限于某种设定情况。实际应用中，可能有很多种设定情况，在此不 </p>
+    <p>  列举。</p>
+    <p>[0212]	步骤404，在所述安全识别库中查找与单个特征信息相匹配的特征记录。</p>
+    <p>[0213]	在查找过程中，针对单个特征信息，也可以按照预先设定的先后顺序进行查找。</p>
+    <p>[0214]	例如，图3所示流程中，先查找包含特征一的特征记录，然后查找包含特征二的特征记录，最后查找包含特征三的特征记录。</p>
+    <p>[0215]	如前所述，所述预先设定的先后顺序需要根据实际情况下的特征定义、特征组合情况来设定，而不局限于某种设定情况。实际应用中，可能有很多种设定情况，在此不一一列举。</p>
+    <p>[0216]	图4所示的这种查找的先后顺序，具有以下特点：</p>
+    <p>[0217]	第一，这种查找顺序是按照检测精度从高到低的顺序设置的，可以最大程度地避免恶意软件的漏检、错检；</p>
+    <p>[0218]	如果包含最多特征的一项特征组合能够与安全识别库中包含最多特征的一条特征记录相匹配，那么得到的查找结果是精确的；</p>
+    <p>[0219]	反之，按照流程从上到下的顺序，随着查找条件的放宽，检测精度也逐渐在降低。</p>
+    <p>[0220]	基于此，一个待检测的Android应用程序可能同时匹配上安全识别库中的两条特征记录，但是它在检测精度较高的查找条件时就会被检测出来，因此该流程很好地保证了检测的准确度。</p>
+    <p>[0221]	第二，这种查找顺序几乎可以对所有的Android应用程序进行检测；</p>
+    <p>[0222]	换而言之，按照这个流程，一个木马可以被检测出来，一个安全软件通过检测也可以得到“安全”的识别结果。</p>
+    <p>[0223]	第三，特征一、特征二、...的定义顺序会影响整个流程的查找顺序；</p>
+    <p>[0224]	对每个特征的定义确定后（如“特征一”指APK包名，“特征二”指APK版本号，等等），图4流程中查找的先后顺序也就确定了。如果将“特征二”定义为APK包名，将“特征一”定义为APK版本号，那么图4的流程中，“查找包含特征一、特征三的特征记录”修改为“查找包含特征二、特征三的特征记录”；并且，后面的流程中，查找特征一和查找特征二的先后顺序也要互换一下，即先查找特征二，再查找特征一，最后查找特征三。</p>
+    <p>[0225]	综上所述，由以上几点可以看出，在实际设计安全识别库的时候，选取的特征信息不同，由这些特征组合出来的特征记录也会有很大差别，而且特征的组合还会影响特征个数相同的特征记录的先后查询顺序。由此设计出来的检测流程可能有很多种，但是，所有各种可能的流程都是基于上述图4所述的过程得出来的，因此均在本申请的保护范围之内。</p>
+    <p>[0226]	基于上述内容，为了使本领域技术人员更加了解本申请的内容，下面将通过举例说明特征提取过程。</p>
+    <p>[0227]	本例中提取的特征包括：</p>
+    <p>[0228]	I) Android 安装包包名：packageName</p>
+    <p>[0229]	2) Android 安装包版本号：versionCode</p>
+    <p>[0230]	3) Android 安装包的数字签名的 MD5 signature [0]</p>
+    <p>[0231]	4) Android 组件 receiver </p>
+    <p>[0232]	5) classes, dex 中的指令</p>
+    <p>[0233]	6) ELF文件中的字符串</p>
+    <p>[0234]	7)assets, res, lib 等目录下各文件的 MD5</p>
+    <p>[0235]	8) Android 组件 service, activity</p>
+    <p>[0236]	下面以几个恶意软件的实例，来说明上面几项特征的含义和检测的整个过程。</p>
+    <p>[0237]	I、从Android安装包的AndroidManifest. xml文件中提取出包名，版本号，Android 组件 receiver&gt; service、activity 的特征；</p>
+    <p>[0238]	按照Android系统的设计要求,所有的应用程序,包括木马,其模块（如receiver,service, activity等)要想被Android系统所执行，需要在AndroidManifest. xml文件中声明其模块的类名。特别是很多木马，都是把自己的代码模块嵌入到正常软件中，而显然，正常的软件的代码是不会主动去调用木马的代码模块的，那么木马要想让自己的代码被执行，就必须去修改正常软件的AndroidManifest. xml文件,在其中加入自己的类名，从而就暴露了自己的踪迹，可以作为识别的特征。</p>
+    <p>[0239]样本一	：Android. Geinimi 魔音</p>
+    <p>[0240]	Android. Geinimi木马通常寄生在正常的Android应用里面,例如，在这个样本中，它是寄生在一款叫做“魔音”的应用中。解压缩样本的Android安装包，可以得到根目录下的AndroidManifest. xml文件。这个文件是Android Binary XML(AXML)格式的，可以用AXMLPrinter2工具解码成文本XML格式。</p>
+    <p>[0241]	解码的结果如下：</p>
+    <p>[0242]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102779257A/CN102779257AD00201.png"> <img id="idf0002" file="CN102779257AD00201.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102779257A/CN102779257AD00201.png" class="patent-full-image" alt="Figure CN102779257AD00201"> </a> </div>
+    <p>[0243]	I)其中，package = " com. wbs "中的 com. wbs 就是该 Android 安装包的packageName, android ：versionCode = " I "中的 “ I，，就是 versionCode。</p>
+    <p>[0244]	2) receiver的特征从下面这段提取：</p>
+    <p>[0245]</p>
+    <p>        &lt;receiver andiOid:name="com.geinimi.AdServiceReceiver"&gt;               &lt;intent-filter&gt;</p>
+    <p>                    &lt;action</p>
+    <p>[0246]androidiname-'android.intent.action.BOOT COMPLETED" /&gt;</p>
+    <p>              ^category andiOid:name="android.intent.category.LAUNCHER"</p>
+    <p>/&gt;</p>
+    <p>            &lt;/intent-filter&gt;</p>
+    <p>     〈/receiver〉</p>
+    <p>[0247]这段代码的含义是，当	Android 系统 android, intent, action. Β00Τ_COMPLETED(即手机开机启动)事件发生之后，调用名为com. geinimi. AdServiceReceiver的类。 </p>
+    <p>[0248]	下文把这条特征写成：</p>
+    <p>[0249]	android, intent, action. B00T_C0MPLETED = com. geinimi. AdServiceReceiv er。</p>
+    <p>[0250]	3) service的特征从下面这段提取：</p>
+    <p>[0251]	〈service android ：enabled = " true " android ：name = " com. geinimi.custom. GoogleKeyboard" ...(中间略）/&gt;</p>
+    <p>[0252]	这段代码的含义是，本APK应用中提供了一个Andro i d服务程序，名为com.geinimi. custom. GoogleKeyboarcL</p>
+    <p>[0253]	下文把这条特征写成：</p>
+    <p>[0254]	service = com. geinimi. custom. GoogleKeyboarcL</p>
+    <p>[0255]	4) activity的特征从下面这段提取：</p>
+    <p>[0256]</p>
+    <p>     〈activity android:theme=',@android:style/Therne.Black.NoTitieBar"android:label="@string/app_name"android:name="coni.geinimi.custom. Ad0000_00000006"&gt;</p>
+    <p>            &lt;intent-fllter&gt;</p>
+    <p>               〈action andiOid:name="andiOid.intent.action.MAIN" /&gt;</p>
+    <p>              〈category android:name="android.intent.category.LAUNCHER"</p>
+    <p>/&gt;             &lt;/intent-fllter&gt;</p>
+    <p>     &lt;/activity&gt;</p>
+    <p>[0257]	这段代码的含义是，用户在Android系统的应用列表界面点击“魔音”的图标的时候，调用名为 com. geinimi. custom. Ad000_000000006 的类。</p>
+    <p>[0258]	下文把这条特征写成：</p>
+    <p>[0259]	MAIN_LAUNCHER = com. geinimi. custom. Ad0000_00000006.</p>
+    <p>[0260]	此外，可以注意到前面的XML中，activity其实有两个，除了上面所述的以外，还</p>
+    <p>有一个，如下：</p>
+    <p>[0261]〈activity	android:label="@stnng/app_name"</p>
+    <p>andiOid:name=".MagicVoiceActivity"&gt;</p>
+    <p>           &lt;intent-filter&gt;</p>
+    <p>〈category andiOid.:name="and.iOid.intent.category &#19972; AUNCHER”</p>
+    <p>/&gt;</p>
+    <p>           &lt;/intent-filter&gt;</p>
+    <p>      &lt;/act:ivity&gt;</p>
+    <p>[0262]	其实，这才是真正的“魔音”应用的主程序入口。Android. Geinimi木马为了寄生 到正常的应用中，采用了修改宿主应用的主程序入口指到自己，等木马被启动之后，再跳回宿主应用主程序入口的方法。不过本申请实施例所述的检测方法最初并不对此进行分析，而是先提取、记录特征，到最后统一判断。</p>
+    <p>[0263]	所以这个activity也提取特征,下文记为：</p>
+    <p>[0264]	LAUNCHER = . MagicVoiceActivity</p>
+    <p>[0265]	需要指出的是，上文为了便于理解，介绍的是“手工”从AndroidManifest. xml中提取特征的步骤。而实际应用中，为了提高特征提取的效率，可以通过调用AndroidFramework的相应API来完成的，例如，对于已经安装到手机上的APK文件，直接用PackageManager. getlnstalledPackages ()方法就可以查询到所有已安装的APK文件的packageName, versionCode等特征。显然，提取特征有多种办法，而整个检测逻辑不受具体的提取特征的方法的影响。</p>
+    <p>[0266]	2、从Android安装包的META_INF\目录下的.RSA文件中提取出所述Android安装包的数字签名；</p>
+    <p>[0267]	关于META-INF目录，里面有个.SF文件，内容类似为：</p>
+    <p>[0268]	Signature-Version ： I.O</p>
+    <p>[0269]	SHAl-Digest-Manifest-Main-Attributes ：zasvPbp2Pj22IZ986L4058c4i8Y =</p>
+    <p>[0270]	Created-By ：1.6.0_22 (Sun Microsystems Inc.)</p>
+    <p>[0271]	SHAl-Digest-Manifest ：yyKV+7zSDrmYPqgsQgY0uMvhXCQ =</p>
+    <p>[0272]	Name :res/drawable_hdpi/preview_bg&#183; 9. png</p>
+    <p>[0273]	SHAl-Digest ：EgbD5naOTDIzR7CYM+DPCmn9tjE =</p>
+    <p>[0274]	Name ：res/drawable-hdpi/ic_home_arrows_5_focus. png</p>
+    <p>[0275]	SHAl-Digest ：BzYiVw5rVmyzw9MzKCKaA9QduEk =</p>
+    <p>[0276]	Name ：res/raw/ic_menu_gallery. png</p>
+    <p>[0277]	SHAl-Digest ：dOvnA3rU6DlMuGhA3nzu5FtXaXQ =</p>
+    <p>[0278]	Name :res/drawable/pressed_application_background. 9. png</p>
+    <p>[0279]	SHAl-Digest ：P84RuTx2USq2RIY2h01vEz9X4Ac =</p>
+    <p>[0280]	其中，每一项都是一个文件的校验信息，例如res/raw/ic_menu_gallery. png的校验信息是d0vnA3rU6DlMuGhA3nzu5FtXaXQ =。如果文件被篡改,就会与校验信息不匹配，Android系统就能发现文件被篡改，从而拒绝安装。[0281]	所述校验信息的生成，是用数字证书的私钥生成的，所以无法伪造。META-INF目录下面有个公钥文件，扩展名为.RSA，Android系统用公钥来验证校验信息是否是伪造的。而提取特征，就是去检查.RSA文件的公钥信息，因为私钥和公钥是配对的，所以只要提取了公钥的特征，就能对应上唯一的私钥，而私钥是由应用的开发者自行保管的，所以可以用来区别木马和正常软件的开发者。</p>
+    <p>[0282]	前文已经提到，Android系统要求每个APK都要包含数字签名。这个数字签名的信息可以通过Android的API来完成，例如，已安装到手机上的APK文件，可以通过PackageManager. getlnstalledPackages O 方法查询每个 APK 包含的数字签名。</p>
+    <p>[0283]	一个Android安装包可以被多次签名，最终以最后一次签名为准。如果是通过API获取的数字签名，那么得到的是一个数组，变量名为signature，最后一次签名的数据是 signature [O]。</p>
+    <p>[0284]	此外，还有其它API也可以查询APK包中的数字签名，这里不一一列举。而且，手 工提取signature [O]特征也可以，解压缩样本的Android安装包,在META-INF/目录下会看到CERT. RSA文件,这就是签名证书。用keytool-printcert-file CERT. RSA命令可以查看其中的详细信息，如下：</p>
+    <p>[0285]所有者：CN	= Android Debug, O = Android, C = US</p>
+    <p>[0286]签发人：CN	= Android Debug, 0 = Android, C = US</p>
+    <p>[0287]序列号：4ccd020e</p>
+    <p>[0288]有效期：Sun	Oct 31 13:43:42 CST 2010 至 Mon Oct 31 13:43:42CST 2011</p>
+    <p>[0289]	证书指纹：</p>
+    <p>[0290]	MD5:29:4F:08:AE:04:30:7A:64:93:22:52:47:13:31:85:43</p>
+    <p>[0291]	SHA1:E4:3F:46:1E:36:07:90:00:00:6C:35:FD:F5:21:42:55:0C:35:B8:A3</p>
+    <p>[0292]	签名算法名称：SHAlwithRSA</p>
+    <p>[0293]版本：3</p>
+    <p>[0294]	3、从Android安装包的classes, dex文件中提取出可执行指令；</p>
+    <p>[0295]	前文已经提到，大部分Android应用都主要是由Java语言编写，编译之后生成了Dalvik虚拟机的字节码（byte code),打包成了 classes, dex文件。解析classes, dex文件，反编译其字节码，就可以得到应用程序所要执行的指令。</p>
+    <p>[0296]	可以挑选指令中能代表恶意软件特征的指令作为特征码，当发现classes, dex文件中包含这样的特征码时，就作为一个特征。例如，Android. Geinimi木马为了隐藏自己，将一些关键数据（如木马服务器信息）加密之后写入代码中，这些被加密的数据反而成为了检测识别它的特征。用dexdump工具分析classes, dex文件可看到输出中包含以下片段：</p>
+    <p>[0297]	OOdOOc :0003 0 100 1000 0000 5535 0234 8664 . . . | 02d4 ：array-data(12units)</p>
+    <p>[0298]	00d024 :0003 0 100 1000 0000 Ibea c301 eadf . . . | 02e0 ：array-data(12units)</p>
+    <p>[0299]	上述片段就可以提取作为检测识别的特征。</p>
+    <p>[0300]	当然，dexdump工具只是显示这些特征数据的手段之一，也可以通过其他方式自行实现解析、反编译和识别classes, dex文件的功能。</p>
+    <p>[0301]	综上所述，样本一不包含ELF文件，所以没有提取到ELF特征。</p>
+    <p>[0302]	从样本一中提取了上述特征之后，假设安全识别库中存在以下特征记录：</p>
+    <p>[0303]特征一	：packageName = com. wbs</p>
+    <p>[0304]	特征二 ：无</p>
+    <p>[0305]特征三：MD5	(signature [O]) = 294f08ae04307a649322524713318543</p>
+    <p>[0306]	特征一 +特征三：安全级别为“木马”</p>
+    <p>[0307]	当检测流程走到“找到包含特征一、特征三的木马？ ”时，找到记录，返回结果为 “木马”。</p>
+    <p>[0308]	4、从Android安装包的lib\目录下提取出ELF文件的指令或字符串。</p>
+    <p>[0309]样本二	： An droid. DroidKungFu 功夫木马</p>
+    <p>[0310]	功夫木马有数十种变种，它一般伪装成一个正常的应用（例如“图库锁”之类），诱骗用户安装、运行之后，运行native executable文件,在用户手机上安装后门，使得木马制作者可以远程操纵用户手机。</p>
+    <p>[0311]	对功夫木马各APK的packageName等特征的提取,与样本--致，在此不再赘述。</p>
+    <p>[0312]	下面主要介绍ELF特征的提取：</p>
+    <p>[0313]	在功夫木马的Android安装包的lib/armeabi目录下,有一个libxxx. so文件,文件名随着功夫木马各变种有所变化，例如libadv3. so, libdl. so等。这是一个Linux ELF文件，可以用readelf等工具读取其信息，下面是摘取的片段：</p>
+    <p>[0314]	Symbol table' . dynsym/ contains 44 entries ：</p>
+    <p>[0315]	Num ：Value Size Type Bind Vis Ndx Name</p>
+    <p>[0316]	0 :00000000 0 NOTYPE LOCAL DEFAULT UND</p>
+    <p>[0317]	I ：0000089c 0 SECTI0NL0CAL DEFAULT 7</p>
+    <p>[0318]	2 :00001140 0 SECTI0NL0CAL DEFAULT 13</p>
+    <p>[0319]	3 :00000000 0 FUNC GLOBAL DEFAULT UND popen</p>
+    <p>[0320]	4 ：0000089d 168 FUNC GLOBAL DEFAULT 7 init_predata</p>
+    <p>[0321]	5 :00000000 0 FUNC GLOBAL DEFAULT UND pclose</p>
+    <p>[0322]	6 ：00000c0c 0 NOTYPE GLOBAL DEFAULT ABS_exidx_end</p>
+    <p>[0323]	7 ：0000117c 10 OBJECT GLOBAL DEFAULT 13 PR0P_RUNNING_ID</p>
+    <p>[0324]	8 :00000000 0 OBJECT GLOBAL DEFAULT UND_stack_chk_guard</p>
+    <p>[0325]	9 :00000000 0 FUNC GLOBAL DEFAULT UND_aeabi_unwind_cpp_prO</p>
+    <p>[0326]	10 ：00007b34 0 NOTYPE GLOBAL DEFAULT ABS_bss_end_</p>
+    <p>[0327]	11 ：00001194 27037 OBJECT GLOBAL DEFAULT 13_bindata</p>
+    <p>[0328]	12 :00000945 616 FUNC GLOBAL DEFAULT 7Java_com_catsw_lockgaller</p>
+    <p>[0329]	&#183;&#183;&#183;(中间略)</p>
+    <p>[0330]	40 :00000000 0 FUNC GLOBAL DEFAULT UND open</p>
+    <p>[0331]	41 :00001140 5 OBJECT GLOBAL DEFAULT 13 DEFAULT_CHANNEL</p>
+    <p>[0332]	42 :00001140 0 NOTYPE GLOBAL DEFAULT 13_data_start</p>
+    <p>[0333]	43 :00000000 0 FUNC GLOBAL DEFAULT UND close[0334]	这个片段是libadv3. so文件导出的符号表，其中Type为OBJECT的符号是关注的重点，其中的_1^11(1&amp;七&amp;实际是木马子包，所以可以提取出来作为特征。</p>
+    <p>[0335]	当然，ELF文件是灵活多变的，恶意软件的ELF文件也不仅仅表现为这种形式，所以ELF文件的特征提取可以有多种方式，除了直接从符号表提取特征外，还可以提取代码段的片段、字符串等作为特征。</p>
+    <p>[0336]本实施例提取的特征记为：_bindata	CONTAINS ELF chown unlink /system/bin ;其含义是，在.so文件的符号表中查询_bindata的符号，其指向的数据中包含“ELF”、“chown，，、“unlink，，、“/system/bin，，4 组字符串。</p>
+    <p>[0337]	假设这条特征在安全识别库中记录为：</p>
+    <p>[0338]特征四：_bindata	CONTAINS ELF chown unlink/system/bin [0339]	安全级别：木马</p>
+    <p>[0340]	当检测流程走到“找到包含特征四的木马？ ”时，找到记录，返回结果为“木马”。</p>
+    <p>[0341]	上述实施例是以手机中的应用为例进行说明，但具体应用中也可以应用到等其他基于Android平台的移动终端的应用检测中，其实施原理与上述实施例相似，故不再赘述。</p>
+    <p>[0342]	需要说明的是，对于前述的各方法实施例，为了简单描述，故将其都表述为一系列的动作组合，但是本领域技术人员应该知悉，本申请并不受所描述的动作顺序的限制，因为依据本申请，某些步骤可以采用其他顺序或者同时进行。其次，本领域技术人员也应该知悉，说明书中所描述的实施例均属于优选实施例，所涉及的动作并不一定是本申请所必需的。</p>
+    <p>[0343]	基于上述方法实施例的说明，本申请还提供了相应的系统实施例。</p>
+    <p>[0344]	参照图5，其示出了本申请实施例所述一种Android应用程序的安全检测系统的结构图。</p>
+    <p>[0345]	所述针对Android应用程序的安全检测系统可以包括：特征提取模块10，检测模块20，以及，结果返回模块30。其中，</p>
+    <p>[0346]	特征提取模块10,用于扫描Android安装包,并从所述Android安装包中提取出指定的特征信息；</p>
+    <p>[0347]	检测模块20，用于在预置的安全识别库中查找与指定的单个特征信息或其组合相匹配的特征记录；其中，所述安全识别库中包含特征记录及特征记录对应的安全级别，每条特征记录中包含单个特征信息或特征信息的组合；</p>
+    <p>[0348]	显示模块30，用于将查找到的特征记录对应的安全级别包含在所述Android安装包的安全检测结果中显示。</p>
+    <p>[0349]	所述从Android安装包中提取出的指定的特征信息可以包括以下信息中的一种或几种组合：</p>
+    <p>[0350]	Android安装包的包名，版本号，数字签名，Android组件receiver的特征，Android组件service的特征,Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值。</p>
+    <p>[0351]	其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件,扩展名为&#183; jar的文件，以及，Dex格式的文件。</p>
+    <p>[0352]	所述安全识别库中的特征信息可以包括以下信息中的一种或几种组合：[0353]	各种样本Android安装包的包名，版本号,数字签名,Android组件receiver的特征，Android组件service的特征，Android组件activity的特征,可执行文件中的指令或字符串，Android安装包目录下各文件的MD5值。</p>
+    <p>[0354]	其中，所述可执行文件包括Dex文件，和/或，ELF文件；所述Dex文件包括classes, dex文件,扩展名为.jar的文件，以及，Dex格式的文件；</p>
+    <p>[0355]	其中，所述样本Android安装包包括各种安全级别下的Android安装包。</p>
+    <p>[0356]	其中，所述安全级别包括安全、危险、谨慎和木马四个级别。</p>
+    <p>[0357]	综上所述，上述实施例提供的针对Android应用程序的安全检测系统具有以下优占.</p>
+    <p>[0358]	首先，本申请实施例提供的针对Android应用程序的安全检测，并不是对Android系统中的所有文件进行扫描，而是通过扫描Android安装包来进行安全检测。由于Android 上的病毒、木马和其他恶意软件想要进入用户的手机，需要打包成Android安装包的形式。反过来说，如果不是一个合法的Android安装包，它就无法安装到用户手机上，也就不会对用户产生危害。基于这一点，可以把查杀的目标集中到对Android安装包的扫描上，从而大大提高扫描的效率。</p>
+    <p>[0359]	其次，本申请实施例从Android安装包中提取出指定的特征进行检测，如将包名、版本号、数字签名、Android组件receiver、service、activity中的信息等作为指定的特征，这些指定的特征对于检测最具代表性，因此与移植自PC上的传统杀毒引擎相比，本申请实施例准确抓住了 Android平台下应用的几大关键特征，使得扫描速度快、查杀准确率闻。</p>
+    <p>[0360]	再次，本申请实施例进行的检测提供了安全、危险、谨慎和木马四个安全级别，不仅可以检测出病毒、木马和其他恶意软件，还可以将正常的应用、存在安全风险的应用和虽然正常但存在一些问题的应用全部检测出来。因此，本申请实施例对Android应用程序的检测不局限于传统的查毒检测，而是可以为用户提供安全、危险、谨慎等更多的提示。</p>
+    <p>[0361]	上述安全检测系统可以安装在手机等终端设备中，当用户需要安装一款Android应用程序时，所述安全检测系统可以对其进行检测，并给出相应的提示，提高终端使用的安全性。</p>
+    <p>[0362]	基于以上系统实施例的内容，在本申请的另一优选实施例中，参照图6所示，所述检测模块20可以包括以下子模块：</p>
+    <p>[0363]	特征组合子模块21，用于将所述指定的特征信息进行组合，得到至少包含两个特征的各项特征组合；</p>
+    <p>[0364]	第一查找子模块22，用于从包含最多特征的特征组合开始，在所述安全识别库中查找与所述特征组合相匹配的特征记录；</p>
+    <p>[0365]	第二查找子模块23，用于当第一查找子模块22未查找到时，逐个减少特征组合中的特征个数，针对减少了特征个数的特征组合，继续在所述安全识别库中查找与所述特征组合相匹配的特征记录；</p>
+    <p>[0366]	第三查找子模块24，用于当第二查找子模块23未查找到时，在所述安全识别库中查找与单个特征信息相匹配的特征记录。</p>
+    <p>[0367]	优选地，所述第二查找子模块23在查找过程中，针对特征个数相同的多项特征组合，按照预先设定的先后顺序进行查找；所述第三查找子模块24针对单个特征信息，按照预先设定的先后顺序进行查找。</p>
+    <p>[0368]	图6所示的检测模块20对提取出的各项特征进行安全检测时，采用对各项特征进行组合查询的方式，进一步提高了检测效率和检测的准确率。</p>
+    <p>[0369]	基于以上系统实施例的内容，在本申请的另一优选实施例中，所述特征提取模块10可以包括以下子模块：</p>
+    <p>[0370]	第一提取子模块,用于从所述Android安装包的AndroidManifest. xml文件中提取出以下中的一种或几种组合：包名，版本号，Android组件receiver的特征，Android组件service的特征，Android组件activity的特征； [0371]和	/ 或，</p>
+    <p>[0372]	第二提取子模块，用于从所述Android安装包的META_INF\目录下的.RSA文件中提取出所述Android安装包的数字签名；</p>
+    <p>[0373]和	/ 或，</p>
+    <p>[0374]	第三提取子模块,用于从所述Android安装包的classes, dex文件中提取出可执行指令；</p>
+    <p>[0375]和	/ 或，</p>
+    <p>[0376]	第四提取子模块，用于从所述Android安装包的lib\目录下提取出ELF文件的指令或字符串。</p>
+    <p>[0377]	对于上述安全检测系统实施例而言，由于其与方法实施例基本相似，所以描述的比较简单，相关之处参见图2至图4所示方法实施例的部分说明即可。</p>
+    <p>[0378]	本说明书中的各个实施例均采用递进的方式描述，每个实施例重点说明的都是与其他实施例的不同之处，各个实施例之间相同相似的部分互相参见即可。</p>
+    <p>[0379]	本领域技术人员易于想到的是：上述各个实施例的任意组合应用都是可行的，故上述各个实施例之间的任意组合都是本申请的实施方案，但是由于篇幅限制，本说明书在此就不一一详述了。</p>
+    <p>[0380]	在本文中，诸如第一和第二等之类的关系术语仅仅用来将一个实体或者操作与另一个实体或操作区分开来，而不一定要求或者暗示这些实体或操作之间存在任何这种实际的关系或者顺序。而且，术语“包括”、“包含”，不仅包括那些要素，而且还包括没有明确列出的其他要素，或者是还包括为这种过程、方法、物品或者设备所固有的要素。在没有更多限</p>
+    <p>制的情况下，由语句“包括......”限定的要素，并不排除在包括所述要素的过程、方法、物</p>
+    <p>品或者设备中还存在另外的相同要素。</p>
+    <p>[0381]	而且，上文中的“和/或”表示本文既包含了 “和”的关系，也包含了 “或”的关系，其中：如果方案A与方案B是“和”的关系，则表示某实施例中可以同时包括方案A和方案B ;如果方案A与方案B是“或”的关系，则表示某实施例中可以单独包括方案A，或者单独包括方案B。</p>
+    <p>[0382]	本申请实施例可以实施在任何支持图形处理、互联网内容撷取和渲染的装置（或多个装置）上。这些装置包括但不限于个人计算机、集群服务器、移动电话、工作站、嵌入式系统、游戏机、电视、机顶盒，或任何其它支持计算机图形和内容显示的计算装置。这些装置可以包括但不限于拥有执行和储存指令的一个或多个处理器和存储器的装置。这些装置可以包括软件、固件和硬件。软件可以包括一个或多个应用程序和操作系统。硬件可以包括但不限于处理器、存储器及显示器。</p>
+    <p>[0383]	本领域内的技术人员应明白，本申请的实施例可提供为方法、系统、或计算机程序产品。因此，本申请可采用完全硬件实施例、完全软件实施例、或结合软件和硬件方面的实施例的形式。而且，本申请可采用在一个或多个其中包含有计算机可用程序代码的计算机可用存储介质（包括但不限于磁盘存储器、CD-ROM、光学存储器等）上实施的计算机程序产品的形式。</p>
+    <p>[0384]	本申请是参照根据本申请实施例的方法、设备（系统）、和计算机程序产品的流程图和/或方框图来描述的。应理解可由计算机程序指令实现流程图和/或方框图中的每一流程和/或方框、以及流程图和/或方框图中的流程和/或方框的结合。可提供这些计算机程序指令到通用计算机、专用计算机、嵌入式处理机或其他可编程数据处理设备的处理器以产生一个机器，使得通过计算机或其他可编程数据处理设备的处理器执行的指令产生用于实现在流程图一个流程或多个流程和/或方框图一个方框或多个方框中指定的功能的装置。 </p>
+    <p>[0385]	这些计算机程序指令也可存储在能引导计算机或其他可编程数据处理设备以特定方式工作的计算机可读存储器中，使得存储在该计算机可读存储器中的指令产生包括指令装置的制造品，该指令装置实现在流程图一个流程或多个流程和/或方框图一个方框或多个方框中指定的功能。</p>
+    <p>[0386]	这些计算机程序指令也可装载到计算机或其他可编程数据处理设备上，使得在计算机或其他可编程设备上执行一系列操作步骤以产生计算机实现的处理，从而在计算机或其他可编程设备上执行的指令提供用于实现在流程图一个流程或多个流程和/或方框图一个方框或多个方框中指定的功能的步骤。</p>
+    <p>[0387]	尽管已描述了本申请的优选实施例，但本领域内的技术人员一旦得知了基本创造性概念，则可对这些实施例做出另外的变更和修改。所以，所附权利要求意欲解释为包括优选实施例以及落入本申请范围的所有变更和修改。</p>
+    <p>[0388]	以上对本申请所提供的一种Android应用程序的安全检测方法及系统，进行了详细介绍，本文中应用了具体个例对本申请的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本申请的方法及其核心思想；同时，对于本领域的一般技术人员，依据本申请的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本申请的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1900941A?cl=zh">CN1900941A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年4月28日</td><td class="patent-data-table-td patent-date-value">2007年1月24日</td><td class="patent-data-table-td ">傅玉生</td><td class="patent-data-table-td ">一种基于软件身份认证技术的计算机安全保护方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101287227A?cl=zh">CN101287227A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年5月22日</td><td class="patent-data-table-td patent-date-value">2008年10月15日</td><td class="patent-data-table-td ">德信无线通讯科技（北京）有限公司</td><td class="patent-data-table-td ">移动通信终端及其防止软件安全级别回退的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101513008A?cl=zh">CN101513008A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年7月31日</td><td class="patent-data-table-td patent-date-value">2009年8月19日</td><td class="patent-data-table-td ">意大利电信股份公司</td><td class="patent-data-table-td ">在电信终端上实现安全性的系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101753316A?cl=zh">CN101753316A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月2日</td><td class="patent-data-table-td patent-date-value">2010年6月23日</td><td class="patent-data-table-td ">北京启明星辰信息技术股份有限公司;北京启明星辰信息安全技术有限公司</td><td class="patent-data-table-td ">一种智能特征提取方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102195987A?cl=zh">CN102195987A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月31日</td><td class="patent-data-table-td patent-date-value">2011年9月21日</td><td class="patent-data-table-td ">成都七巧软件有限责任公司</td><td class="patent-data-table-td ">一种基于软件产品库的分布式可信认证方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102236757A?cl=zh">CN102236757A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月30日</td><td class="patent-data-table-td patent-date-value">2011年11月9日</td><td class="patent-data-table-td ">北京邮电大学</td><td class="patent-data-table-td ">一种适用于Android系统的软件保护方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102254120A?cl=zh">CN102254120A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月9日</td><td class="patent-data-table-td patent-date-value">2011年11月23日</td><td class="patent-data-table-td ">成都市华为赛门铁克科技有限公司</td><td class="patent-data-table-td ">恶意代码的检测方法、系统及相关装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=vaSuBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D2009069959A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGRIzaL-W4sVkjDpD3sjPk1DTUfyg">JP2009069959A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">张泽衡: "<a href='http://scholar.google.com/scholar?q="%E5%9F%BA%E4%BA%8EAndroid%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA%E7%9A%84%E5%AE%89%E5%85%A8%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A0%94%E7%A9%B6%E4%B8%8E%E5%AE%9E%E7%8E%B0"'>基于Android智能手机的安全检测系统的研究与实现</a>", 《CNKI优秀硕士学位论文全文库》, 31 May 2012 (2012-05-31), pages 1 - 70</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103268443A?cl=zh">CN103268443A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月27日</td><td class="patent-data-table-td patent-date-value">2013年8月28日</td><td class="patent-data-table-td ">武汉安天信息技术有限责任公司</td><td class="patent-data-table-td ">一种基于符号的Android恶意代码检测方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103279706A?cl=zh">CN103279706A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月7日</td><td class="patent-data-table-td patent-date-value">2013年9月4日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">拦截在移动终端中安装安卓应用程序的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103279709A?cl=zh">CN103279709A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月28日</td><td class="patent-data-table-td patent-date-value">2013年9月4日</td><td class="patent-data-table-td ">武汉安天信息技术有限责任公司</td><td class="patent-data-table-td ">一种基于多特征的广告件综合检测方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103294953A?cl=zh">CN103294953A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月27日</td><td class="patent-data-table-td patent-date-value">2013年9月11日</td><td class="patent-data-table-td ">武汉安天信息技术有限责任公司</td><td class="patent-data-table-td ">一种手机恶意代码检测方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103294953B?cl=zh">CN103294953B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月27日</td><td class="patent-data-table-td patent-date-value">2016年1月13日</td><td class="patent-data-table-td ">武汉安天信息技术有限责任公司</td><td class="patent-data-table-td ">一种手机恶意代码检测方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103324697A?cl=zh">CN103324697A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月7日</td><td class="patent-data-table-td patent-date-value">2013年9月25日</td><td class="patent-data-table-td ">北京掌汇天下科技有限公司</td><td class="patent-data-table-td ">一种基于图标对比的android应用搜索山寨应用剔除方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103400076A?cl=zh">CN103400076A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年7月30日</td><td class="patent-data-table-td patent-date-value">2013年11月20日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">一种移动终端上的恶意软件检测方法、装置和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103400076B?cl=zh">CN103400076B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年7月30日</td><td class="patent-data-table-td patent-date-value">2016年1月6日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">一种移动终端上的恶意软件检测方法、装置和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103561045A?cl=zh">CN103561045A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年11月21日</td><td class="patent-data-table-td patent-date-value">2014年2月5日</td><td class="patent-data-table-td ">北京网秦天下科技有限公司</td><td class="patent-data-table-td ">用于Android系统的安全监测系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103679029A?cl=zh">CN103679029A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年12月11日</td><td class="patent-data-table-td patent-date-value">2014年3月26日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种修复山寨应用程序的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103823751A?cl=zh">CN103823751A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年12月13日</td><td class="patent-data-table-td patent-date-value">2014年5月28日</td><td class="patent-data-table-td ">国家计算机网络与信息安全管理中心</td><td class="patent-data-table-td ">一种基于特征注入的仿冒应用程序监测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN104063660A?cl=zh">CN104063660A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td patent-date-value">2014年9月24日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">一种病毒扫描方法、装置及终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014000696A1?cl=zh">WO2014000696A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月28日</td><td class="patent-data-table-td patent-date-value">2014年1月3日</td><td class="patent-data-table-td ">Beijing Qihoo Technology Company Limited</td><td class="patent-data-table-td ">一种Android应用程序的安全检测方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2016045503A1?cl=zh">WO2016045503A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2015年9月8日</td><td class="patent-data-table-td patent-date-value">2016年3月31日</td><td class="patent-data-table-td ">阿里巴巴集团控股有限公司</td><td class="patent-data-table-td ">一种遥控器按键匹配及信号处理方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=vaSuBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0021220000">G06F21/22</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年11月14日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年12月5日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of patent application or patent right or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年12月5日</td><td class="patent-data-table-td ">COR</td><td class="patent-data-table-td ">Change of bibliographic data</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">CORRECT: ADDRESS; FROM: 100016 CHAOYANG, BEIJING TO: 100088 XICHENG, BEIJING</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年12月5日</td><td class="patent-data-table-td ">ASS</td><td class="patent-data-table-td ">Succession or assignment of patent right</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Owner name: </span><span class="nested-value">BEIJING QIHU TECHNOLOGY CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">FORMER OWNER: QIZHI SOFTWARE (BEIJING) CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Effective date: </span><span class="nested-value">20121101</span></div><div class="nested-key-value"><span class="nested-key">Owner name: </span><span class="nested-value">QIZHI SOFTWARE (BEIJING) CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Effective date: </span><span class="nested-value">20121101</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年1月2日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年10月7日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/47d2984a9255f7b6472e/CN102779257A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8DAndroid%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%AE%89%E5%85%A8%E6%A3%80%E6%B5%8B.pdf?id=vaSuBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0smkC5dXkzrlHfj3Rsqxs0bVNLxQ"},"sample_url":"https://www.google.com/patents/reader?id=vaSuBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

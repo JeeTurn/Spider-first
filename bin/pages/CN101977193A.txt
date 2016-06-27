@@ -1,0 +1,364 @@
+<!DOCTYPE html><html><head><title>专利 CN101977193A - 安全下载证书的方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="安全下载证书的方法及系统"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="北京飞天诚信科技有限公司" scheme="assignee"><meta name="DC.date" content="2010-10-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种安全下载证书的方法及系统，属于信息安全领域。一种安全下载证书的方法，包括：智能密钥设备与客户端建立连接；客户端接收到下载证书的请求后，下发生成交易密钥对的指令；智能密钥设备生成算法生成交易公钥和交易私钥，并根据自身存储的保护私钥对交易公钥进行签名；客户端生成证书请求数据包；客户端获取智能密钥设备自身存储的出生证及交易公钥签名，并将出生证、交易公钥签名及证书请求数据包发送给服务端；服务端判断接收到的出生证是否合法，不合法，向客户端返回错误，合法，则判断交易公钥签名是否合法，不合法，向客户端返回错误，合法，则签发证书，并将证书发送给所述客户端；客户端将证书写入到智能密钥设备中。"><meta name="DC.date" content="2011-2-16"><meta name="DC.relation" content="AU:2002330834" scheme="references"><meta name="DC.relation" content="CN:101340285:A" scheme="references"><meta name="DC.relation" content="CN:101527630:A" scheme="references"><meta name="DC.relation" content="CN:101527633:A" scheme="references"><meta name="DC.relation" content="CN:101527714:A" scheme="references"><meta name="citation_reference" content="张燕燕: &quot;《电子商务中证书认证系统的设计与实现》&quot;, 《中国优秀硕士学位论文全文数据库》, no. 3, 15 September 2007 (2007-09-15)"><meta name="citation_patent_publication_number" content="CN:101977193:A"><meta name="citation_patent_application_number" content="CN:201010523261"><link rel="canonical" href="https://www.google.com/patents/CN101977193A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101977193A?cl=zh"/><meta name="title" content="专利 CN101977193A - 安全下载证书的方法及系统"/><meta name="description" content="本发明公开了一种安全下载证书的方法及系统，属于信息安全领域。一种安全下载证书的方法，包括：智能密钥设备与客户端建立连接；客户端接收到下载证书的请求后，下发生成交易密钥对的指令；智能密钥设备生成算法生成交易公钥和交易私钥，并根据自身存储的保护私钥对交易公钥进行签名；客户端生成证书请求数据包；客户端获取智能密钥设备自身存储的出生证及交易公钥签名，并将出生证、交易公钥签名及证书请求数据包发送给服务端；服务端判断接收到的出生证是否合法，不合法，向客户端返回错误，合法，则判断交易公钥签名是否合法，不合法，向客户端返回错误，合法，则签发证书，并将证书发送给所述客户端；客户端将证书写入到智能密钥设备中。"/><meta property="og:title" content="专利 CN101977193A - 安全下载证书的方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101977193A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101977193A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=-K6OBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101977193A&amp;usg=AFQjCNGayRxBm4dgFILopv2BVUIvUlEjLw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/427728dc78c4470cc86a/CN101977193A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/427728dc78c4470cc86a/CN101977193A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101977193A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101977193A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101977193A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101977193B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101977193A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种安全下载证书的方法及系统，属于信息安全领域。一种安全下载证书的方法，包括：智能密钥设备与客户端建立连接；客户端接收到下载证书的请求后，下发生成交易密钥对的指令；智能密钥设备生成算法生成...</span><span itemprop="url">https://www.google.com/patents/CN101977193A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101977193A - 安全下载证书的方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101977193A - 安全下载证书的方法及系统" title="专利 CN101977193A - 安全下载证书的方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101977193 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010523261</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年2月16日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年10月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年10月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101977193B?hl=zh-CN&amp;cl=zh">CN101977193B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010523261.3, </span><span class="patent-bibdata-value">CN 101977193 A, </span><span class="patent-bibdata-value">CN 101977193A, </span><span class="patent-bibdata-value">CN 201010523261, </span><span class="patent-bibdata-value">CN-A-101977193, </span><span class="patent-bibdata-value">CN101977193 A, </span><span class="patent-bibdata-value">CN101977193A, </span><span class="patent-bibdata-value">CN201010523261, </span><span class="patent-bibdata-value">CN201010523261.3</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京飞天诚信科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101977193A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101977193A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101977193A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=-K6OBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010523261&amp;usg=AFQjCNFvkEU-SzxkLz9fnUu3MPjal0CV9A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=-K6OBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101977193A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEivImMv_lD5-_Kb1PTbPUrcWsYBQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT101216461" lang="ZH" load-source="patent-office">安全下载证书的方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 101977193 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA83328769" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种安全下载证书的方法及系统，属于信息安全领域。一种安全下载证书的方法，包括：智能密钥设备与客户端建立连接；客户端接收到下载证书的请求后，下发生成交易密钥对的指令；智能密钥设备生成算法生成交易公钥和交易私钥，并根据自身存储的保护私钥对交易公钥进行签名；客户端生成证书请求数据包；客户端获取智能密钥设备自身存储的出生证及交易公钥签名，并将出生证、交易公钥签名及证书请求数据包发送给服务端；服务端判断接收到的出生证是否合法，不合法，向客户端返回错误，合法，则判断交易公钥签名是否合法，不合法，向客户端返回错误，合法，则签发证书，并将证书发送给所述客户端；客户端将证书写入到智能密钥设备中。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(19)</span></span></div><div class="patent-text"><ol mxw-id="PCLM35097280" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种安全下载证书的方法，其特征在于，所述方法包括：智能密钥设备与客户端建立连接；所述客户端接收到用户提交的下载证书的请求后，向所述智能密钥设备下发生成交易密钥对的指令；所述智能密钥设备根据内置的密钥生成算法生成交易公钥和交易私钥，并根据自身存储的保护私钥对所述交易公钥进行签名，得到交易公钥签名；所述客户端生成证书请求数据包；所述客户端获取所述智能密钥设备自身存储的出生证及所述交易公钥签名，并将所述出生证、所述交易公钥签名及所述证书请求数据包发送给服务端；所述服务端判断接收到的所述出生证是否合法，如果不合法，向所述客户端返回认证错误信息，如果合法，则判断所述交易公钥签名是否合法，如果不合法，向所述客户端返回认证错误信息，如果合法，则签发证书，并将所述证书发送给所述客户端；所述客户端将所述证书写入到所述智能密钥设备中。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述客户端生成证书请求数据包的步骤， 具体为：读取所述智能密钥设备中的交易公钥信息；生成一个包含有交易公钥信息、用户信息及证书用途信息的数据包并将其发送给所述 智能密钥设备；接收经所述智能密钥设备中的交易私钥对所述数据包进行签名后的签名值；将所述数据包及所述签名值组合生成一个数字证书请求数据包。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述方法还包括：所述服务端在接收到所 述证书请求数据包后，用所述证书请求数据包中携带的交易公钥对所述签名值进行验证。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所述的方法，其特征在于，所述智能密钥设备在根据内置的密钥生 成算法生成交易公钥后，即根据自身存储的保护私钥对所述交易公钥进行签名；或所述智能密钥设备在接收到所述客户端下发的对所述交易公钥进行签名的指令后，根 据自身存储的保护私钥对所述交易公钥进行签名。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的方法，其特征在于，所述智能密钥设备根据自身存储的保护 私钥对所述交易公钥进行签名包括：所述智能密钥设备使用自身存储的保护私钥对第一数据进行签名，得到第一数据签名 值，所述第一数据包括：附加数据、交易公钥第一预设长度部分、第二数据哈希值，所述第二 数据包括：所述附加数据及交易公钥；将保护公钥长度、所述第一数据签名值及交易公钥剩余长度部分进行拼接，得到交易 公钥签名。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，所述附加数据包括所述保护公钥长度、出 生证版本、智能密钥设备外壳号、密钥属性。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1所述的方法，其特征在于，所述出生证包括：智能密钥设备类型编 号、出生证版本信息、出生证时间戳、智能密钥设备外壳号、保护公钥、一级授权密钥信息、 出身证签发密钥信息及出生证签名。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，其特征在于，所述一级授权密钥为认证所述智能密钥 设备时的信任起点；所述出生证签发密钥由所述一级授权密钥签发，用于对所述出生证进行签名。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的方法，其特征在于，所述一级授权密钥信息包括：授权密钥版 本、授权公钥；所述出生证签发密钥信息包括：出生证签发密钥版本、签发公钥及所述出生证签发密 钥信息的签名；其中，所述出生证签发密钥信息的签名是由授权私钥对所述出生证签发密钥信息进行 签名得到的。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的方法，其特征在于，所述服务端判断接收到的出生证是否合 法包括：所述服务端判断接收到的所述出生证中出生证签发密钥信息是否合法，如果不合法， 则判定所述出生证不合法，如果合法，则判断所述出生证中出生证签名是否合法，如果合 法，则判定所述出生证合法，如果不合法，则判定所述出生证不合法。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的方法，其特征在于，所述服务端判断接收到的所述出生证 中出生证签发密钥信息是否合法包括：所述客户端根据所述出生证中一级授权密钥信息中授权公钥对所述出生证签发密钥 信息的签名进行计算，对比所述计算结果是否与所述出生证中出生证签发密钥信息一致， 如果一致，则所述出生证签发密钥信息合法，否则，所述出生证签发密钥信息不合法。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求10所述的方法，其特征在于，所述判断所述出生证中出生证签名是 否合法包括：所述服务端根据接收到的所述出生证中出生证签发密钥信息中的签发公钥对所述出 生证签名进行计算，对比所述计算结果是否与所述出生证信息一致，如果一致，则所述出生 证签名是合法的，否则，所述出生证签名是不合法的。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求5所述的方法，其特征在于，所述判断所述交易公钥签名是否合法包括：将所述交易公钥签名中表示保护公钥长度的部分去掉；根据接收到的所述出生证中的保护公钥对所述交易公钥签名中所述第一数据签名值 部分进行计算，得到所述第一数据；去除所述第一数据中的附加数据，得到交易公钥第一预设长度部分；将所述交易公钥第一预设长度部分与所述交易公钥签名中交易公钥剩余长度部分拼 接得到所述交易公钥；根据所述第一数据拼接出第二数据，对所述第二数据进行哈希运算，将运算结果与所 述第一数据中的第二数据哈希值进行对比，一致，则所述交易公钥签名合法，不一致，则所 述交易公钥签名不合法。</div>
+    </div>
+    </li> <li class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.	一种安全下载证书的系统，其特征在于，所述系统包括：智能密钥设备、客户端及 服务端；智能密钥设备包括：存储单元，用于存储出生证、保护私钥及证书；密钥生成单元，用于根据内置的密钥生成算法生成交易公钥及交易私钥； 签名单元，用于根据存储单元存储的保护私钥对密钥生成单元生成的交易公钥进行签名；证书写入单元，用于将证书写入到存储单元； 发送单元，用于向客户端返回证书及交易公钥签名。 客户端包括：接收单元，用于接收用户输入的下载证书的请求，及所述服务端发送单元发送的证书；证书请求生成单元，用于当所述接收单元接收到下载证书的请求时，生成证书请求数 据包；第一接口单元，用于获取智能密钥设备的出生证； 第二接口单元，用于获取智能密钥设备的交易公钥签名；发送单元，用于向服务端发送证书请求生成单元生成的证书请求数据包、第一接口单 元获取的出生证及第二接口单元获取的交易公钥签名； 服务端包括：接收单元，用于接收客户端发送单元发送的出生证及交易公钥签名； 出生证验证单元，用于验证接收单元接收到的出生证是否合法； 交易公钥验证单元，用于当第一验证单元验证出生证合法后，验证接收单元接收到的 交易公钥签名是否合法；证书签发单元，用于当第二验证单元验证交易公钥签名合法后，签发证书； 发送单元，用于将证书签发单元签发的证书发送给客户端。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的系统，其特征在于，所述签名单元包括：签名模块，用于根据存储单元存储的保护私钥对第一数据进行签名，得到第一数据签 名值，所述第一数据包括：附加数据、交易公钥第一预设长度部分、第二数据哈希值，所述第 二数据包括：所述附加数据及交易公钥；拼接模块，用于将保护公钥长度、所述签名值及交易公钥剩余长度部分进行拼接，得到 交易公钥签名。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求14所述的系统，其特征在于，所述出生证验证单元包括： 第一判断模块，用于判断所述出生证中出生证签发密钥信息是否合法； 第二判断模块，用于判断所述出生证中出生证签名是否合法。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求16所述的系统，其特征在于，所述判断所述出生证中出生证签发密 钥信息是否合法包括：所述服务端根据所述出生证中的一级授权密钥信息中的授权公钥对所述出生证签发 密钥信息的签名进行计算，对比所述计算结果是否与所述出生证中的所述出生证签发密钥 信息一致，如果一致，则所述出生证签发密钥信息合法，否则，所述出生证签发密钥信息不 合法。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求16所述的系统，其特征在于，所述判断所述出生证中出生证签名是 否合法包括：所述服务端根据接收到的所述出生证中所述出生证签发密钥信息中的签发公钥对所述出生证签名进行计算，对比所述计算结果是否与接收到的所述出生证信息一致，如果一 致，则所述出生证签名是合法的，否则，所述出生证签名是不合法的。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求14所述的系统，其特征在于，所述交易公钥验证单元包括： 第一处理模块，用于将所述交易公钥签名中表示保护公钥长度的部分去掉； 第一计算模块，用于根据接收到的所述出生证中的保护公钥对所述交易公钥签名中所 述第一数据签名值部分进行计算，得到所述第一数据；第二处理模块，用于去除所述第一数据中的附加数据，得到交易公钥第一预设长度部分；第一拼接模块，用于将所述第二处理模块得到的交易公钥第一预设长度部分与所述交 易公钥签名中交易公钥剩余长度部分进行拼接，得到所述交易公钥； 第二拼接模块，用于根据所述第一数据拼接出第二数据； 第二计算模块，用于对所述第二数据进行哈希运算；对比模块，用于将所述第二计算模块得到的哈希值与所述第一数据中第二数据哈希值 进行对比，一致，则所述交易公钥签名合法，不一致，则所述交易公钥签名不合法。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES40938031" lang="ZH" load-source="patent-office" class="description">
+    <p>安全下载证书的方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明属于信息安全领域，尤其涉及一种安全下载证书的方法及系统。 背景技术</p>
+    <p>[0002]	现有技术中，用户在柜台将智能密钥设备与服务器进行绑定，S卩服务器中存储有 合法智能密钥设备的编号，证书下载时，服务器对比智能密钥设备的编号是否与保存的编 号一致，一致，则允许证书下载，不一致，则拒绝证书的下载，虽然在某种程度上能够有效防 止用户所使用伪造的智能密钥设备进行证书的下载。但是，毕竟认证方式单一，理论上还是 存在伪造智能密钥设备的可能的，所以，需要加固以确保证书下载的安全性。</p>
+    <p>发明内容</p>
+    <p>[0003]	本发明提供了一种安全下载证书的方法及系统，具体技术方案如下：</p>
+    <p>[0004]	一种安全下载证书的方法，所述方法包括：</p>
+    <p>[0005]	智能密钥设备与客户端建立连接；</p>
+    <p>[0006]	所述客户端接收到用户提交的下载证书的请求后，向所述智能密钥设备下发生成 交易密钥对的指令；</p>
+    <p>[0007]	所述智能密钥设备根据内置的密钥生成算法生成交易公钥和交易私钥，并根据自 身存储的保护私钥对所述交易公钥进行签名，得到交易公钥签名；</p>
+    <p>[0008]	所述客户端生成证书请求数据包；</p>
+    <p>[0009]	所述客户端获取所述智能密钥设备自身存储的出生证及所述交易公钥签名，并将 所述出生证、所述交易公钥签名及所述证书请求数据包发送给服务端；</p>
+    <p>[0010]	所述服务端判断接收到的所述出生证是否合法，如果不合法，向所述客户端返回 认证错误信息，如果合法，则判断所述交易公钥签名是否合法，如果不合法，向所述客户端 返回认证错误信息，如果合法，则签发证书，并将所述证书发送给所述客户端；</p>
+    <p>[0011]	所述客户端将所述证书写入到所述智能密钥设备中。</p>
+    <p>[0012]	所述客户端生成证书请求数据包的步骤，具体为：</p>
+    <p>[0013]	读取所述智能密钥设备中的交易公钥信息；</p>
+    <p>[0014]	生成一个包含有交易公钥信息、用户信息及证书用途信息的数据包并将其发送给 所述智能密钥设备；</p>
+    <p>[0015]	接收经所述智能密钥设备中的交易私钥对所述数据包进行签名后的签名值；</p>
+    <p>[0016]	将所述数据包及所述签名值组合生成一个数字证书请求数据包。</p>
+    <p>[0017]	所述方法还包括：所述服务端在接收到所述证书请求数据包后，用所述证书请求 数据包中携带的交易公钥对所述签名值进行验证。</p>
+    <p>[0018]	所述智能密钥设备在根据内置的密钥生成算法生成交易公钥后，即根据自身存储 的保护私钥对所述交易公钥进行签名；</p>
+    <p>[0019]或[0020]	所述智能密钥设备在接收到所述客户端下发的对所述交易公钥进行签名的指令 后，根据自身存储的保护私钥对所述交易公钥进行签名。</p>
+    <p>[0021]	所述智能密钥设备根据自身存储的保护私钥对所述交易公钥进行签名包括：</p>
+    <p>[0022]	所述智能密钥设备使用自身存储的保护私钥对第一数据进行签名，得到第一数据 签名值，所述第一数据包括：附加数据、交易公钥第一预设长度部分、第二数据哈希值，所述 第二数据包括：所述附加数据及交易公钥；</p>
+    <p>[0023]	将保护公钥长度、所述第一数据签名值及交易公钥剩余长度部分进行拼接，得到 交易公钥签名。</p>
+    <p>[0024]	所述附加数据包括所述保护公钥长度、出生证版本、智能密钥设备外壳号、密钥属 性。</p>
+    <p>[0025]	所述出生证包括：智能密钥设备类型编号、出生证版本信息、出生证时间戳、智能 密钥设备外壳号、保护公钥、一级授权密钥信息、出身证签发密钥信息及出生证签名。</p>
+    <p>[0026]	所述一级授权密钥为认证所述智能密钥设备时的信任起点；</p>
+    <p>[0027]	所述出生证签发密钥由所述一级授权密钥签发，用于对所述出生证进行签名。</p>
+    <p>[0028]	所述一级授权密钥信息包括：授权密钥版本、授权公钥；</p>
+    <p>[0029]	所述出生证签发密钥信息包括：出生证签发密钥版本、签发公钥及所述出生证签 发密钥信息的签名；</p>
+    <p>[0030]	其中，所述出生证签发密钥信息的签名是由授权私钥对所述出生证签发密钥信息 进行签名得到的。</p>
+    <p>[0031]	所述服务端判断接收到的出生证是否合法包括：</p>
+    <p>[0032]	所述服务端判断接收到的所述出生证中出生证签发密钥信息是否合法，如果不合 法，则判定所述出生证不合法，如果合法，则判断所述出生证中出生证签名是否合法，如果 合法，则判定所述出生证合法，如果不合法，则判定所述出生证不合法。</p>
+    <p>[0033]	所述服务端判断接收到的所述出生证中出生证签发密钥信息是否合法包括：</p>
+    <p>[0034]	所述客户端根据所述出生证中一级授权密钥信息中授权公钥对所述出生证签发 密钥信息的签名进行计算，对比所述计算结果是否与所述出生证中出生证签发密钥信息一 致，如果一致，则所述出生证签发密钥信息合法，否则，所述出生证签发密钥信息不合法。</p>
+    <p>[0035]	所述判断所述出生证中出生证签名是否合法包括：</p>
+    <p>[0036]	所述服务端根据接收到的所述出生证中出生证签发密钥信息中的签发公钥对所 述出生证签名进行计算，对比所述计算结果是否与所述出生证信息一致，如果一致，则所述 出生证签名是合法的，否则，所述出生证签名是不合法的。</p>
+    <p>[0037]	所述判断所述交易公钥签名是否合法包括：</p>
+    <p>[0038]	将所述交易公钥签名中表示保护公钥长度的部分去掉；</p>
+    <p>[0039]	根据接收到的所述出生证中的保护公钥对所述交易公钥签名中所述第一数据签 名值部分进行计算，得到所述第一数据；</p>
+    <p>[0040]	去除所述第一数据中的附加数据，得到交易公钥第一预设长度部分；</p>
+    <p>[0041]	将所述交易公钥第一预设长度部分与所述交易公钥签名中交易公钥剩余长度部 分拼接得到所述交易公钥；</p>
+    <p>[0042]	根据所述第一数据拼接出第二数据，对所述第二数据进行哈希运算，将运算结果与所述第一数据中的第二数据哈希值进行对比，一致，则所述交易公钥签名合法，不一致， 则所述交易公钥签名不合法。</p>
+    <p>[0043]	一种安全下载证书的系统，所述系统包括：智能密钥设备、客户端及服务端；</p>
+    <p>[0044]	智能密钥设备包括：</p>
+    <p>[0045]	存储单元，用于存储出生证、保护私钥及证书；</p>
+    <p>[0046]	密钥生成单元，用于根据内置的密钥生成算法生成交易公钥及交易私钥；</p>
+    <p>[0047]	签名单元，用于根据存储单元存储的保护私钥对密钥生成单元生成的交易公钥进 行签名；</p>
+    <p>[0048]	证书写入单元，用于将证书写入到存储单元；</p>
+    <p>[0049]	发送单元，用于向客户端返回证书及交易公钥签名。</p>
+    <p>[0050]	客户端包括：</p>
+    <p>[0051]	接收单元，用于接收用户输入的下载证书的请求，及所述服务端发送单元发送的 证书；</p>
+    <p>[0052]	证书请求生成单元，用于当所述接收单元接收到下载证书的请求时，生成证书请 求数据包；</p>
+    <p>[0053]	第一接口单元，用于获取智能密钥设备的出生证；</p>
+    <p>[0054]	第二接口单元，用于获取智能密钥设备的交易公钥签名；</p>
+    <p>[0055]	发送单元，用于向服务端发送证书请求生成单元生成的证书请求数据包、第一接 口单元获取的出生证及第二接口单元获取的交易公钥签名；</p>
+    <p>[0056]	服务端包括：</p>
+    <p>[0057]	接收单元，用于接收客户端发送单元发送的出生证及交易公钥签名；</p>
+    <p>[0058]	出生证验证单元，用于验证接收单元接收到的出生证是否合法；</p>
+    <p>[0059]	交易公钥验证单元，用于当第一验证单元验证出生证合法后，验证接收单元接收 到的交易公钥签名是否合法；</p>
+    <p>[0060]	证书签发单元，用于当第二验证单元验证交易公钥签名合法后，签发证书；</p>
+    <p>[0061]	发送单元，用于将证书签发单元签发的证书发送给客户端。</p>
+    <p>[0062]	所述签名单元包括：</p>
+    <p>[0063]	签名模块，用于根据存储单元存储的保护私钥对第一数据进行签名，得到第一数 据签名值，所述第一数据包括：附加数据、交易公钥第一预设长度部分、第二数据哈希值，所 述第二数据包括：所述附加数据及交易公钥；</p>
+    <p>[0064]	拼接模块，用于将保护公钥长度、所述签名值及交易公钥剩余长度部分进行拼接， 得到交易公钥签名。</p>
+    <p>[0065]	所述出生证验证单元包括：</p>
+    <p>[0066]	第一判断模块，用于判断所述出生证中出生证签发密钥信息是否合法；</p>
+    <p>[0067]	第二判断模块，用于判断所述出生证中出生证签名是否合法。</p>
+    <p>[0068]	所述判断所述出生证中出生证签发密钥信息是否合法包括：</p>
+    <p>[0069]	所述服务端根据所述出生证中的一级授权密钥信息中的授权公钥对所述出生证 签发密钥信息的签名进行计算，对比所述计算结果是否与所述出生证中的所述出生证签发 密钥信息一致，如果一致，则所述出生证签发密钥信息合法，否则，所述出生证签发密钥信</p>
+    <p>8息不合法。</p>
+    <p>[0070]	所述判断所述出生证中出生证签名是否合法包括：</p>
+    <p>[0071]	所述服务端根据接收到的所述出生证中所述出生证签发密钥信息中的签发公钥 对所述出生证签名进行计算，对比所述计算结果是否与接收到的所述出生证信息一致，如 果一致，则所述出生证签名是合法的，否则，所述出生证签名是不合法的。</p>
+    <p>[0072]	所述交易公钥验证单元包括：</p>
+    <p>[0073]	第一处理模块，用于将所述交易公钥签名中表示保护公钥长度的部分去掉；</p>
+    <p>[0074]	第一计算模块，用于根据接收到的所述出生证中的保护公钥对所述交易公钥签名 中所述第一数据签名值部分进行计算，得到所述第一数据；</p>
+    <p>[0075]	第二处理模块，用于去除所述第一数据中的附加数据，得到交易公钥第一预设长 度部分；</p>
+    <p>[0076]	第一拼接模块，用于将所述第二处理模块得到的交易公钥第一预设长度部分与所 述交易公钥签名中交易公钥剩余长度部分进行拼接，得到所述交易公钥；</p>
+    <p>[0077]	第二拼接模块，用于根据所述第一数据拼接出第二数据；</p>
+    <p>[0078]	第二计算模块，用于对所述第二数据进行哈希运算；</p>
+    <p>[0079]	对比模块，用于将所述第二计算模块得到的哈希值与所述第一数据中第二数据哈 希值进行对比，一致，则所述交易公钥签名合法，不一致，则所述交易公钥签名不合法。</p>
+    <p>[0080]	有益效果：服务器通过对出生证的合法性、交易公钥签名的有效性的验证，保证了 下载证书的请求是由合法的智能密钥设备发出的，从而保证了证书下载的安全性。</p>
+    <p>附图说明</p>
+    <p>[0081]	图1为实施例1提供的一种安全下载证书的方法流程图；</p>
+    <p>[0082]	图2为实施例2提供的一种安全下载证书的系统结构图。</p>
+    <p>具体实施方式</p>
+    <p>[0083]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方 式作进一步地详细描述。</p>
+    <p>[0084]	本发明实施例所提供的安全下载证书的方法中加入了智能密钥设备出生证的概 念，出生证保存在智能密钥设备内部，是证明智能密钥设备合法性的一串数据，包括：智能 密钥设备的类型编号、出生证版本信息、出生证时间戳、外壳号、保护公钥、一级授权密钥、 出生证签发密钥信息及出生证签名。出生证表现为TLV的形式，如表1所示（长度表示不 一定精确，应用中按照实际的数值理解即可）：</p>
+    <p>[0085]	表 1[0086]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00101.png"> <img id="idf0001" file="CN101977193AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00101.png" class="patent-full-image" alt="Figure CN101977193AD00101"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00102.png"> <img id="idf0002" file="CN101977193AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00102.png" class="patent-full-image" alt="Figure CN101977193AD00102"> </a> </div>
+    <p>[0088]	具体地，智能密钥设备的类型编号：由两位ACSII码组成，标识不同的智能密钥设 备，同时，也为了方便查找出生证对应厂商的公钥，例如：编号11，标识该智能密钥设备由 厂商A生产，是无驱有软型的；</p>
+    <p>[0089]	出生证版本信息：扩展字段，如后期需要对出生证的TLV结构做调整，可相应的增 加其版本号，以便后台根据版本号采取不同的处理方式；</p>
+    <p>[0090]	出生证时间戳：指签发此出生证的时间，例如“20100618150100”，表示2010年06 月18日15点01分00秒；</p>
+    <p>[0091]	外壳号：由三部分组成，分别是设备代码、硬件序列号及校验位，外壳号的编码规 则可以是自定义的；例如：</p>
+    <p>[0092]	1、外壳号的读取格式为：2位设备代码+9位全数字硬件序列号（厂商自己提 供）+1位校验位，共12位，其中，设备代码由证书提供者（如银行）统一指定；</p>
+    <p>[0093]	2、智能密钥设备中仅存放9位的硬件序列号，设备代码和检验位可以不存放在智 能密钥设备中；</p>
+    <p>[0094]	3、厂商所提供的9位的硬件序列号能够流水出号，不得提供号码软件修改功能；</p>
+    <p>[0095]	4、检验算法，例如使用2121校验算法。</p>
+    <p>[0096]	其中，2121校验算法如下：</p>
+    <p>[0097]	外壳号：4	5	8	0	6	5	8	8 1	1	0	0	3	0	5[0098]	X	X	X	X	X	X	X	χ X	X	X	X	X	X	X[0099]	2	1	2	1	2	1	2	1 2	1	2	1	2	1	2[0100]	8	5	16	0	12	5	16	8 2	1	0	0	6	0	10[0101]	8+5+1+6+0+1+2+5+1+6+8+2+1+0+0+6+0+1+0									=	53			</p>
+    <p>[0102]校验位	10-(53mod 10) = 7</p>
+    <p>[0103]	保护公钥：由智能密钥设备生成，不可销毁，保护公钥与智能密钥设备的外壳号的 对应关系保存在服务器中；</p>
+    <p>[0104]	另外，需要说明的是，智能密钥设备在生成保护公钥的同时还生成有保护私钥，该 保护私钥保存在智能密钥设备的内部。</p>
+    <p>[0105]	一级授权密钥：由各厂商自主生成，本发明中，该一级授权密钥作为认证的信任起 点，是安全合法的；</p>
+    <p>[0106]	出生证签发密钥：用于对出生证进行签名，使用一级授权密钥对它的公钥信息进 行签名以保证其有效性；</p>
+    <p>[0107]	出生证签名：使用出生证签发密钥（私钥）对标签0001，0002，0003，0004，0005以</p>
+    <p>及数据的签名，出生证签名公式如下：</p>
+    <p>[0108]	具体地，出生证签名=RSASign出生证签发私钥（SHA (出生证厂商编号| |出生证 版本信息11出生证时间戳11外壳号11保护公钥Nl ι保护公钥E 11 一级授权密钥（公 钥）信息11出生证签发密钥（公钥）信息））。</p>
+    <p>[0109]	举例如下：</p>
+    <p>[0110]	RSASign(SHA(000100023532 000200023031 0003000e20100618150100 00040 00c52XXXXXXXXXX| |00050080. . . | |00070003. . . | |8008. . . | |8009. &#183; &#183;))。</p>
+    <p>[0111]	由上述可知，公钥（保护公钥、一级授权密钥（公钥）、出生证签发密钥（公钥））</p>
+    <p>11及智能密钥设备的外壳号就构成了出生证的主体，并使用可信任的上级密钥对出生证进行 签名；在证书下载过程中，智能密钥设备还会产交易公钥，并且使用保护私钥对交易公钥进 行签名。服务器在接收到下载证书的请求后，将会验证出生证的合法性及交易公钥签名的 有效性，且在两者都验证通过时，即智能密钥设备未被伪造，且下载证书的请求是由合法的 智能密钥设备发出的，从而保证了证书下载的安全性。以下将详细说明该过程。</p>
+    <p>[0112]	实施例1</p>
+    <p>[0113]	参见图1，本实施例提供了一种安全下载证书的方法，具体过程如下：</p>
+    <p>[0114]	101、智能密钥设备与客户端建立连接；</p>
+    <p>[0115]	优选地，客户端通过调用CSP(Cryptographic Service Provider，加密服务提供 程序）接口的CryptAcquireContext与智能密钥设备建立连接。</p>
+    <p>[0116]	102、客户端接收到用户提交的下载证书的请求，向智能密钥设备下发生成交易密 钥对的指令；</p>
+    <p>[0117]	103、智能密钥设备在接收到指令后生成交易公钥及交易私钥；</p>
+    <p>[0118]	需要说明的是，该交易私钥在进行交易时，用于对交易信息进行签名。</p>
+    <p>[0119]	104、智能密钥设备根据自身存储的保护私钥对交易公钥进行签名，得到交易公钥 签名；</p>
+    <p>[0120]	具体地，智能密钥设备在出厂时，内部就已经生成并保存有保护密钥对，即保护公 钥与保护私钥。</p>
+    <p>[0121]	优选地，智能密钥设备在生成交易密钥对时，即根据自身存储的保护私钥对生成 的交易公钥进行签名；</p>
+    <p>[0122]	相应地，智能密钥设备在接收到主机下发的签名指令后，当该签名指令中指定待 签名的交易公钥时，根据自身存储的保护私钥对指定的待签名交易公钥进行签名；若，接收 到的签名指令中未指定待签名的交易公钥，则根据自身存储的保护私钥对默认的交易公钥 进行签名，该默认交易公钥是指，多次产生PKCS#10请求后最新产生的交易公钥。</p>
+    <p>[0123]	具体地，根据自身存储的保护私钥对交易公钥进行签名为：</p>
+    <p>[0124]	智能密钥设备使用自身存储的保护私钥对第一数据进行签名，得到第一数据签名 值，其中，第一数据包括：附加数据、交易公钥第一预设长度部分、第二数据哈希值，第二数 据包括：附加数据及交易公钥；</p>
+    <p>[0125]	将保护公钥长度、计算得到的第一数据签名值及交易公钥剩余长度部分进行拼 接，得到交易公钥签名。</p>
+    <p>[0126]	具体地，对交易公钥进行签名采用PKCS#1的方式，上述计算签名的公式表达如 下：</p>
+    <p>[0127]交易公钥签名=HEADER!	PrivateKeyCalculate (DataO) | | 交易公钥的 N 剩余部 分I I交易公钥E ；</p>
+    <p>[0128]	PrivateKeyCalculate ：表示使用保护密钥（私钥）计算；</p>
+    <p>[0129]	HEADER ：00 80表示保护公钥的长度为1024Bit，01 00表示保护公钥的长度为 2048Bit ；</p>
+    <p>[0130]	优选地，保护公钥采用1024BU。</p>
+    <p>[0131]	第一数据DataO内容具体如表2所示：</p>
+    <p>12[0132]表 2</p>
+    <p>[0133]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00131.png"> <img id="idf0003" file="CN101977193AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00131.png" class="patent-full-image" alt="Figure CN101977193AD00131"> </a> </div>
+    <p>[0134]	由表2可知，附加数据包括：保护公钥长度、出生证版本、智能密钥设备外壳号、密 钥属性集服务器随机数；</p>
+    <p>[0135]	其中，HASH值是第二数据DATAl的哈希值，具体为：HASH = SHA (DATAl)，优选地， HASH算法采用SHAl算法。</p>
+    <p>[0136]	第二数据DATAl的内容如表3所示：</p>
+    <p>[0137]表	3</p>
+    <p>[0138]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00132.png"> <img id="idf0004" file="CN101977193AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN101977193A/CN101977193AD00132.png" class="patent-full-image" alt="Figure CN101977193AD00132"> </a> </div>
+    <p>[0139]</p>
+    <p>	1字节	密钥属性	4字节	服务器随机数交易公钥N	128字节	交易公钥N交易公钥E	8字节	交易公钥E</p>
+    <p>[0140] 由表3可知，第二数据包括附加数据及交易公钥。[0141]	105、客户端产生证书请求数据包；</p>
+    <p>[0142]具体地，产生	PKCS#10 (Public-Key Cryptography Standards)证书请求数据包， 包括：公钥信息、用户信息及一些可选属性信息（如证书用途等信息）；</p>
+    <p>[0143]	具体地，产生证书请求数据包的步骤为：</p>
+    <p>[0144]	读取智能密钥设备中的交易公钥信息；</p>
+    <p>[0145]	生成一个包含有交易公钥信息、用户信息及证书用途信息的数据包并将其发送给 智能密钥设备；</p>
+    <p>[0146]	接收经智能密钥设备中的交易私钥对所述数据包进行签名后的签名值；</p>
+    <p>[0147]	将所述数据包及所述签名值组合生成一个数字证书请求数据包。</p>
+    <p>[0148]	具体地，用户通过客户端显示的网上银行证书下载页面提交下载证书的请求。</p>
+    <p>[0149]	优选地，客户端通过调用I^p命令来生成PKCS#10请求；</p>
+    <p>[0150]	具体地，rep命令内容如下：</p>
+    <p>[0151]	openssIreq[-inform PEM|DER][-outform PEM|DER][-in filename][-passin arg][-out filename][-passout arg][-text][-pubkey][-noout][-verify][-modulus] [-new][-rand file (s)] [-newkeyrsa :bits] [-newkey dsa :file] [-nodes][-key filename][-keyform PEM|DER][-keyout filename][-[md5|shal|md2|mdc2]][-config filename][-subj arg][_x509][-days n][_set_serialn][-asnl-kludge][-newhdr] [-extensions section][-reqextssection][~utf8][-nameopt][-batch][-verbose] [-engine id]</p>
+    <p>[0152]	对rep命令的内容进行说明，如下：</p>
+    <p>[0153]	-inform PEM | DER ：用于指定输入的格式是DER还是PEM ；</p>
+    <p>[0154]	-outform PEM | DER ：用于指定输出的的格式是DER还是PEM ；</p>
+    <p>[0155]	-in filename ：用于指定输入的文件名；</p>
+    <p>[0156]	-text ：以文本格式打印证书请求或来自签名证书信息；</p>
+    <p>[0157]	-new:用于生成一个证书请求，提示用户关于一些字段的值，可以通过/usr/ share/ssl/openssl. cnf来查看默认询问的字段，最大/小长度限制等；如果-key选项没 有被指定，则会自动生成一个新的私钥，默认为1024比特；</p>
+    <p>[0158]	-newkey ：建立一个新的证书请求和一个新的private key，格式是rsa :bits或者 dsa filename ；如果用户不知道生成的私钥文件名称，默认采用privkey. pem,生成证书请 求；如果用户不指定输出文件参数格式（-out)，则将证书请求文件打印在屏幕上，生成的 私钥的文件可以用-Keyout来指定；</p>
+    <p>[0159]	-key ：指定输入的私钥；</p>
+    <p>[0160]	-keyform ：指定key的格式是PEM还是DER，默认是PEM ；</p>
+    <p>[0161]	-keyout ：用于把新建立的私钥输出到指定文件；</p>
+    <p>[0162]	-nodes ：表示新建立的私钥不加密；</p>
+    <p>[0163]	-md5 I shal ：用于指定使用的数字摘要算法是md5还是shal ；</p>
+    <p>[0164]	-conf ig ：指定配置文件，默认是 /usr/share/ssl/openssl. cnf ；</p>
+    <p>[0165]	-subj arg ：用于指定生成的证书请求的用户信息，或者处理证书请求时用指定 参数替换；生成证书请求时，如果不指定此选项，将会提示用户来输入各个用户信息，包括：国名、组织等信息，如果采用此选择，则不需要用户输入用户信息了 ；例如：-subj/CN = chian/OU = test/0 = abc/CN = forxy，属性必须大写；</p>
+    <p>[0166]	-x509 ：表示生成一个自签名的证书，而不是一个证书请求，除非使用_set_ serial选项，否则序列号为0;</p>
+    <p>[0167]	-days和_x509选项一起用，表示证书的有效期，默认是30天；</p>
+    <p>[0168]	-set_serial和_x509 &#8212;起使用，设置这个证书的编号，可以是10进制也可以是 16进制的值（Ox开头），可以使用负数的值，但不建议使用负数；</p>
+    <p>[0169]	-utf8 ：表示字段的值作为UTF8编码解读，默认是ASCII编码；</p>
+    <p>[0170]	-batch ：是非交互模式；</p>
+    <p>[0171]	-verbose ：是冗余模式。</p>
+    <p>[0172]	例如：调用req命令建立一个私钥并生成一个证书请求，则Mp命令如下：</p>
+    <p>[0173]	openssl genrsa&#8212;out key. pem 1024openssl req&#8212;new&#8212;key key. pem-out req. pem</p>
+    <p>[0174]	The same but just using req ：</p>
+    <p>[0175]	例如：调用req命令生成一个PEM格式的CSR (证书请求）文件，新建立一个私钥， RSA算法，1024bit，并把新生成的私钥保存为文件key. pem,则r印命令如下：</p>
+    <p>[0176]	openssl req-newkey rsa ： 1024-keyout key. pem-out req.pem</p>
+    <p>[0177]	Generate a self signed root certificate ：</p>
+    <p>[0178]	106、客户端获取智能密钥设备的出生证；</p>
+    <p>[0179]	具体地，客户端通过调用获取出生证接口来获取智能密钥设备的出生证；</p>
+    <p>[0180]	具体地，获取出生证接口包括：管理DLL接口 cdecl GetIDValue和控件调用接口 HRESULT GetIDValue ；</p>
+    <p>[0181]	其中，接口 cdecl GetIDValue的定义如下:</p>
+    <p>[0182]	int__cdecl GetIDValue (char^strMediaID, char^strBirthID, int*nStrBirthID)；</p>
+    <p>[0183]	参数说明如下：</p>
+    <p>[0184]	StrMediaID ：输入参数，为智能密钥设备的外壳号。</p>
+    <p>[0185]	StrBirthID ：输出参数，用来输出外壳号为StrMediaID所对应的出生证信息。</p>
+    <p>[0186]	nStrBirthID ：输出参数。当 StrBirthID 为 NULL 时，nStrBirthID 返回的 StrBirthID应该开辟的空间；当StrBirthID有值时，返回的是StrBirthID的实际长度。</p>
+    <p>[0187]	这样，客户端通过调用接口 cdecl GetIDValue便可以得到指定外壳号的智能密钥 设备的出生证了。</p>
+    <p>[0188]其中，接口	HRESULT GetIDValue 的定义如下：</p>
+    <p>[0189]	HRESULT GetIDValue([IN]BSTR bstrType, [IN]BSTRbstrShelINum, [OUT, retval]BSTR*bstrID)；</p>
+    <p>[0190]	参数说明：</p>
+    <p>[0191]	bstrType ：输入参数，智能密钥设备类型编号。</p>
+    <p>[0192]	bstrShellNum ：输入参数，表示智能密钥设备外壳号。以类似” 52xxxxxxxxxx”的 形式输入。</p>
+    <p>[0193]	bstrID ：输出参数，用来输出外壳号为bstrShellNum对应的出生证信息，为出生证的Base64形式。</p>
+    <p>[0194]	这样，客户端通过调用控件调用接口便可以获取指定外壳号的智能密钥设备的出 生证了。</p>
+    <p>[0195]	107、客户端接收到智能密钥设备返回的出生证信息后，获取交易公钥签名；</p>
+    <p>[0196]	具体地，客户端通过调用获取交易公钥签名接口来获取交易公钥签名；</p>
+    <p>[0197]	具体地，交易公钥签名接口包括：管理DLL接口 cdeclGetPubKeySignValue和控件 调用接口 HRESULT GetPubKeySignValue ；</p>
+    <p>[0198]其中，接口	cdecl GetPubKeySignValue 的定义如下：</p>
+    <p>[0199]	int__cdecl GetPubKeySignValue (char^strMediaID, char*strSign, int&#27706;nStrSign)；</p>
+    <p>[0200]	参数说明：</p>
+    <p>[0201]	StrMediaID ：输入参数，表示智能密钥设备外壳号。以类似” 52XXXXXXXXXX”的形 式输入。</p>
+    <p>[0202]	strSign ：输出参数，表示出生证的保护私钥对交易公钥签名值。</p>
+    <p>[0203]	nStrSign ：输出参数。当strSign为NULL，该值表示应为strSign开辟的空间大 小；当strSign有值时，该值表示strSign实际的大小。</p>
+    <p>[0204]	这样，客户端通过调用接口 cdecl GetPubKeySignValue便可以得到智能密钥设备 中保护私钥对交易公钥签名了。</p>
+    <p>[0205]接口	HRESULT GetPubKeySignValue 的定义如下：</p>
+    <p>[0206]	HRESULT GetPubKeySignValue ([IN]BSTR bstrType ； [IN]BSTRbstrShellNum, [OUT, retval]BSTR*bstrSign)</p>
+    <p>[0207]	参数说明：</p>
+    <p>[0208]	bstrType ：输入参数，表示智能密钥设备类型。</p>
+    <p>[0209]	bstrShellNum ：输入参数，表示智能密钥设备外壳号。以类似” 52xxxxxxxxxx”的 形式输入。</p>
+    <p>[0210]	bstrSign ：输出参数，表示出生证的私钥对bPubKey的签名值。</p>
+    <p>[0211]	这样，客户端通过调用接口 HRESULT GetPubKeySignValue便可以得到智能密钥设 备中保护私钥对交易公钥签名了。</p>
+    <p>[0212]	108、客户端将获取的出生证、交易公钥签名及PKCS#10证书请求数据包发送给服 务器；</p>
+    <p>[0213]	进一步，客户端可以将获取的交易公钥签名、出生证及PKCS#10请求数据包进行 打包，并将打包结果发送给服务器。</p>
+    <p>[0214]	需要说明的是，服务端在接收到PKCS#10证书请求数据包后，还会用所述证书请 求数据包中携带的公钥对所述签名值进行验证，验证通过，继续执行下述操作，否则，向客 户端返回认证错误的信息。</p>
+    <p>[0215]	109、服务器判断接收到的出生证是否合法，如果合法，执行110，否则，执行113 ；</p>
+    <p>[0216]	在对出生证进行说明时，提到：智能密钥设备出生证中一级授权密钥作为信任的 起点，并签发生成出生证签发密钥信息，该出生证签发密钥用于对出生证进行签名，其中， 出生证签发密钥信息包括密钥版本、签发公钥及出生证签发密钥的签名，该出生证签发密</p>
+    <p>16钥的签名是使用一级授权密钥（私钥）对出生证签发密钥信息的签名（如表1所述）；由此 可知，在验证出生证是否合法时，需要验证出生证签发密钥的签名及出生证签名的合法性； 具体如下：</p>
+    <p>[0217]	具体地，服务器验证出生证签发密钥的签名是否合法，包括：用出生证中的一级授 权密钥（公钥）对出生证签发密钥的签名进行计算，并将计算结果与出生证中签发密钥信 息进行对比，一致，则认为出生证签发密钥是合法的，即出生证合法，否则，出生证是不合法 的。</p>
+    <p>[0218]	具体地，服务器验证出生证签名是否合法，包括：用出生证中的签发公钥对出生证 签名进行计算，并将计算结果与出生证信息进行对比，一致，则合法，否则，非法。</p>
+    <p>[0219]	代码表示如下：</p>
+    <p>[0220]	int VerifyBirthCert(string birthCert)</p>
+    <p>[0221]	参数说明：</p>
+    <p>[0222]	birthCert ：出生证</p>
+    <p>[0223]	110、服务器验证接收到的交易公钥签名，如果验证通过，执行111，如果验证失败， 执行113 ；</p>
+    <p>[0224]	具体地，将所述交易公钥签名中表示保护公钥长度的部分去掉；</p>
+    <p>[0225]	根据接收到的所述出生证中的保护公钥对所述交易公钥签名中所述签名值部分 (PrivateKeyCalculate (DataO))进行计算，得到所述第一数据；</p>
+    <p>[0226]	去除所述第一数据中的附加数据，得到交易公钥第一预设长度部分；</p>
+    <p>[0227]	将所述得到的交易公钥第一预设长度部分与所述交易公钥签名中交易公钥剩余 长度部分拼接得到所述交易公钥；</p>
+    <p>[0228]	根据所述第一数据拼接出第二数据，对所述第二数据进行哈希运算，将运算结果 与所述第一数据中的第二数据哈希值进行对比，一致，则所述交易公钥签名合法，不一致， 则所述交易公钥签名不合法。</p>
+    <p>[0229]	代码表示如下：</p>
+    <p>[0230]	struct RstVfy</p>
+    <p>[0231]	{int rst ；</p>
+    <p>[0232]	string random ；</p>
+    <p>[0233]	string η ；</p>
+    <p>[0234]	stirng e ；</p>
+    <p>[0235]	}</p>
+    <p>[0236]	RstVfy VerifyTransSign(string signedText)</p>
+    <p>[0237]	参数说明：</p>
+    <p>[0238]	protectKey ：保护公钥；</p>
+    <p>[0239]	tradeKey ：交易公钥信息；</p>
+    <p>[0240]	signedText ：使用保护私钥对交易公钥进行的签名。</p>
+    <p>[0241]	111、服务器响应证书下载的请求，签发证书，并将证书发送给客户端；</p>
+    <p>[0242]	112、客户端将证书写入到智能密钥设备中；</p>
+    <p>[0243]	113、服务器拒绝执行证书下载的请求，并向客户端返回交易公钥签名验证失败的&#906;η息。</p>
+    <p>[0244]	本发明实施中，服务器通过对出生证的合法性、交易公钥签名的有效性的验证，保 证了下载证书的请求是由合法的智能密钥设备发出的，从而保证了证书下载的安全性。</p>
+    <p>[0245]	实施例2</p>
+    <p>[0246]	本实施例提供了一种安全下载证书的系统，参见图2，包括：智能密钥设备20、客 户端21及服务端22 ；其中，各设备功能如下：</p>
+    <p>[0247]	智能密钥设备20包括：</p>
+    <p>[0248]	存储单元200，用于存储出生证、保护私钥及证书，其中，出生证及保护私钥均在智 能密钥设备出厂时已生成并保存；</p>
+    <p>[0249]	具体地，出生证包括：类型编号、出生证版本信息、出生证时间戳、外壳号、保护公 钥、一级授权密钥、出生证签发密钥信息及出生证签名，其中，有关出生证各项的说明参见 实施例1中的相关说明，此处就不再赘述；</p>
+    <p>[0250]	需要说明的是，智能密钥设备在出厂前生成保护私钥时，同时还生成有保护公 钥；</p>
+    <p>[0251]	密钥生成单元201，用于生成交易公钥及交易私钥；</p>
+    <p>[0252]	需要说明的是，密钥生成单元201在生成交易公钥的同时生成的还有交易私钥， 该交易私钥在进行交易时，用于对交易信息进行签名。</p>
+    <p>[0253]	签名单元202，用于根据存储单元200存储的保护私钥对密钥生成单元201生成的 交易公钥进行签名，得到交易公钥签名；</p>
+    <p>[0254]	具体地，签名单元202包括：</p>
+    <p>[0255]	签名模块2020，用于根据存储单元200存储的保护私钥对第一数据进行签名，得 到签名值，第一数据包括：附加数据、交易公钥第一预设长度部分、第二数据哈希值，所述第 二数据包括：附加数据及交易公钥，有关第一数据及第二数据的详细说明参加实施例1中 的相关说明，此处就不再赘述。</p>
+    <p>[0256]	拼接模块2021，用于将保护公钥长度、签名模块2020计算得到的签名值及交易公 钥剩余长度部分进行拼接，得到交易公钥签名。</p>
+    <p>[0257]	证书写入单元203，用于将下载的证书写入到存储单元；</p>
+    <p>[0258]	发送单元204，用于向客户端21返回证书及交易公钥签名。</p>
+    <p>[0259]	客户端21包括：</p>
+    <p>[0260]	接收单元210，用于接收用户输入的下载证书的请求，及服务端22签发的证书；</p>
+    <p>[0261]	证书请求生成单元211，用于当接收单元210接收到下载证书的请求时，生成证书 请求，具体地，用于生成PKCS#10证书请求；</p>
+    <p>[0262]	具体地，PKCS#10证书请求包含：交易公钥、用户信息及一些可选属性信息；</p>
+    <p>[0263]	第一接口单元212，用于获取智能密钥设备的出生证；</p>
+    <p>[0264]	具体地，第一接口单元212为管理DLL接口 cdecl GetIDValue或控件调用接口 HRESULT GetIDValue ；</p>
+    <p>[0265]其中，有关管理DLL接口	cdecl GetIDValue 或控件调用接口 HRESULT GetIDValue 的说明参见实施例1中的相关描述，此处就不再赘述；</p>
+    <p>[0266]	第二接口单元213，用于获取智能密钥的交易公钥签名；[0267]	具体地，第二接口单元213为管理DLL接口 cdeclGetPubKeySignValue或控件调 用接口 HRESULT GetPubKeySignValue ；</p>
+    <p>[0268]其中，有关管理	DLL 接 口 cdecl GetPubKeySignValue 或控件调用接口 HRESULT GetPubKeySignValue的说明参见实施例1中的相关说明，此处就不再赘述；</p>
+    <p>[0269]	发送单元214，用于向服务端22发送证书请求生成单元211生成的证书请求数据 包、第一接口单元212所获取的出生证及第二接口单元213获取的交易公钥签名；</p>
+    <p>[0270]	服务端22包括：</p>
+    <p>[0271]	接收单元220，用于接收客户端发送单元214发送的证书请求数据包、出生证及交 易公钥签名；</p>
+    <p>[0272]	出生证验证单元221，用于验证接收单元220接收到的出生证是否合法；</p>
+    <p>[0273]	具体包括：</p>
+    <p>[0274]	第一判断模块2210，用于判断出生证中签发密钥信息是否合法；</p>
+    <p>[0275]	具体地，服务器验证出生证签发密钥信息是否合法，包括：根据所述出生证中的一 级授权密钥信息中的授权公钥对出生证签发密钥信息的签名进行计算，对比计算结果是否 与出生证中的出生证签发密钥信息一致，如果一致，则出生证签发密钥信息合法，否则，出 生证签发密钥信息不合法。</p>
+    <p>[0276]	第二判断模块2211，用于判断出生证中出生证签名是否合法；</p>
+    <p>[0277]	具体地，服务端验证出生证签名是否合法，包括：根据接收到的出生证中出生证签 发密钥信息中的签发公钥对出生证签名进行计算，对比计算结果是否与接收到的出生证信 息一致，如果一致，则出生证签名是合法的，否则，出生证签名是不合法的。</p>
+    <p>[0278]	交易公钥验证单元222，用于当出生证验证单元211验证出生证信息合法后，验证 接收单元220接收到的交易公钥签名是否合法；</p>
+    <p>[0279]	具体包括：</p>
+    <p>[0280]	第一处理模块2220，用于将交易公钥签名中表示保护公钥长度的部分去掉；</p>
+    <p>[0281]	第一计算模块2221，用于根据接收到的出生证中的保护公钥对交易公钥签名中签 名值部分进行计算，得到第一数据；</p>
+    <p>[0282]	第二处理模块2222，用于去除第一数据中的附加数据，得到交易公钥第一预设长 度部分；</p>
+    <p>[0283]	第一拼接模块2223，用于将第二处理模块得到的交易公钥第一预设长度部分与交 易公钥签名中交易公钥剩余长度部分进行拼接，得到交易公钥，该交易公钥为智能密钥设 备中真正生成的交易公钥；</p>
+    <p>[0284]	第二拼接模块2224，用于根据第一数据拼接出第二数据；</p>
+    <p>[0285]	第二计算模块2225，采用与第一数据中第二数据哈希值算法相同的哈希算法对第 二数据进行哈希运算，；</p>
+    <p>[0286]	对比模块2226，用于将第二计算模块得到的哈希值与第一数据中第二数据哈希值 进行对比，一致，则交易公钥签名合法，不一致，则交易公钥签名不合法。</p>
+    <p>[0287]	证书签发单元223，用于当交易公钥验证单元222验证交易公钥签名信息合法后， 签发证书；</p>
+    <p>[0288]	发送单元224，用于将证书签发单元223签发的证书发送给客户端；[0289]	服务器通过对出生证的合法性、交易公钥签名的有效性的验证，保证了下载证书 的请求是由合法的智能密钥设备发出的，从而保证了证书下载的安全性。</p>
+    <p>[0290]	以上所述，仅为本发明的具体实施方式，但本发明的保护范围并不局限于此，任何 熟悉本技术领域的技术人员在本发明揭露的技术范围内，可轻易想到的变化或替换，都应 涵盖在本发明的保护范围之内。因此，本发明的保护范围应所述以权利要求的保护范围为 准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101340285A?cl=zh">CN101340285A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年7月5日</td><td class="patent-data-table-td patent-date-value">2009年1月7日</td><td class="patent-data-table-td ">杭州中正生物认证技术有限公司</td><td class="patent-data-table-td ">利用指纹USBkey进行身份验证的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101527630A?cl=zh">CN101527630A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月31日</td><td class="patent-data-table-td patent-date-value">2009年9月9日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">远程制证的方法、服务器及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101527633A?cl=zh">CN101527633A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月31日</td><td class="patent-data-table-td patent-date-value">2009年9月9日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">智能密钥设备获取数字证书的系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101527714A?cl=zh">CN101527714A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月31日</td><td class="patent-data-table-td patent-date-value">2009年9月9日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">制证的方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=-K6OBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DAU%26NR%3D2002330834A1%26KC%3DA1%26FT%3DD&amp;usg=AFQjCNEh6uWYWHzBtX83TIABrQF2L-nTNw">AU2002330834A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">张燕燕: "<a href='http://scholar.google.com/scholar?q="%E3%80%8A%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E4%B8%AD%E8%AF%81%E4%B9%A6%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B"'>《电子商务中证书认证系统的设计与实现》</a>", 《中国优秀硕士学位论文全文数据库》, no. 3, 15 September 2007 (2007-09-15)</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102761420A?cl=zh">CN102761420A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月8日</td><td class="patent-data-table-td patent-date-value">2012年10月31日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种安全认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102761420B?cl=zh">CN102761420B</a></td><td class="patent-data-table-td patent-date-value">2012年8月8日</td><td class="patent-data-table-td patent-date-value">2014年10月29日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种安全认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102932343A?cl=zh">CN102932343A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月26日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种下载数字证书的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102932343B?cl=zh">CN102932343B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月26日</td><td class="patent-data-table-td patent-date-value">2015年1月14日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种下载数字证书的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103078746A?cl=zh">CN103078746A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年2月7日</td><td class="patent-data-table-td patent-date-value">2013年5月1日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种数据包的生成方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103078746B?cl=zh">CN103078746B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年2月7日</td><td class="patent-data-table-td patent-date-value">2015年6月17日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种数据包的生成方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103516524A?cl=zh">CN103516524A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年10月21日</td><td class="patent-data-table-td patent-date-value">2014年1月15日</td><td class="patent-data-table-td ">北京旋极信息技术股份有限公司</td><td class="patent-data-table-td ">安全验证方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=-K6OBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=-K6OBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年2月16日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年3月30日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年11月13日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/427728dc78c4470cc86a/CN101977193A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%AE%89%E5%85%A8%E4%B8%8B%E8%BD%BD%E8%AF%81%E4%B9%A6%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=-K6OBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1ZKNqMKDfmzk_oczchwNuwf8XImA"},"sample_url":"https://www.google.com/patents/reader?id=-K6OBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

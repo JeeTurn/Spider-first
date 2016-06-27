@@ -1,0 +1,222 @@
+<!DOCTYPE html><html><head><title>专利 CN102915328A - 编辑富文本的方法及富文本编辑器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="编辑富文本的方法及富文本编辑器"><meta name="DC.contributor" content="冯黎明" scheme="inventor"><meta name="DC.contributor" content="新浪网技术(中国)有限公司" scheme="assignee"><meta name="DC.date" content="2012-9-4" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种编辑富文本的方法及富文本编辑器。该方法包括：构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；采用JavaScript脚本，初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。应用本发明，可以提高富文本编辑效率、丰富编辑的富文本样式。"><meta name="DC.date" content="2013-2-6"><meta name="DC.relation" content="CN:101118493:A" scheme="references"><meta name="DC.relation" content="CN:101324844:A" scheme="references"><meta name="citation_reference" content="无作者: &quot;UEditor－文档说明&quot;, &lt;HTTP://UEDITOR.BAIDU.COM/WEBSITE/DOCUMENT.HTML&gt;, 11 May 2012 (2012-05-11)"><meta name="citation_patent_publication_number" content="CN:102915328:A"><meta name="citation_patent_application_number" content="CN:201210324774"><link rel="canonical" href="https://www.google.com/patents/CN102915328A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102915328A?cl=zh"/><meta name="title" content="专利 CN102915328A - 编辑富文本的方法及富文本编辑器"/><meta name="description" content="本发明公开了一种编辑富文本的方法及富文本编辑器。该方法包括：构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；采用JavaScript脚本，初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。应用本发明，可以提高富文本编辑效率、丰富编辑的富文本样式。"/><meta property="og:title" content="专利 CN102915328A - 编辑富文本的方法及富文本编辑器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102915328A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102915328A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=83bBBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102915328A&amp;usg=AFQjCNFiiHb7akt3_UWIJ4uJWNDifS4EvQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/006e7e64c1db11108be9/CN102915328A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/006e7e64c1db11108be9/CN102915328A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102915328A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102915328A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102915328A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102915328B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102915328A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种编辑富文本的方法及富文本编辑器。该方法包括：构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；采用JavaScript脚本 ...</span><span itemprop="url">https://www.google.com/patents/CN102915328A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102915328A - 编辑富文本的方法及富文本编辑器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102915328A - 编辑富文本的方法及富文本编辑器" title="专利 CN102915328A - 编辑富文本的方法及富文本编辑器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102915328 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210324774</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年2月6日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年9月4日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年9月4日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102915328B?hl=zh-CN&amp;cl=zh">CN102915328B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210324774.0, </span><span class="patent-bibdata-value">CN 102915328 A, </span><span class="patent-bibdata-value">CN 102915328A, </span><span class="patent-bibdata-value">CN 201210324774, </span><span class="patent-bibdata-value">CN-A-102915328, </span><span class="patent-bibdata-value">CN102915328 A, </span><span class="patent-bibdata-value">CN102915328A, </span><span class="patent-bibdata-value">CN201210324774, </span><span class="patent-bibdata-value">CN201210324774.0</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%86%AF%E9%BB%8E%E6%98%8E%22">冯黎明</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%96%B0%E6%B5%AA%E7%BD%91%E6%8A%80%E6%9C%AF(%E4%B8%AD%E5%9B%BD)%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">新浪网技术(中国)有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102915328A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102915328A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102915328A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=83bBBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210324774&amp;usg=AFQjCNFIISHyz6RH8T-zZM5DoL7sNzqsqg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=83bBBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102915328A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNF82xyXleXOj6r7lQqrA_aybiU4MA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT120603439" lang="ZH" load-source="patent-office">编辑富文本的方法及富文本编辑器</invention-title>
+      </span><br><span class="patent-number">CN 102915328 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA106347578" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种编辑富文本的方法及富文本编辑器。该方法包括：构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；采用JavaScript脚本，初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。应用本发明，可以提高富文本编辑效率、丰富编辑的富文本样式。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(15)</span></span></div><div class="patent-text"><div mxw-id="PCLM50955456" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种编辑富文本的方法，该方法包括：  构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；  采用JavaScript脚本，初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；  响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；  在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其中，所述富文本编辑器操作菜单包括：层片操作按钮控件以及层片属性设置按钮控件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其中，所述层片操作按钮控件包括：删除层片按钮控件、复制层片按钮控件以及新建层片按钮控件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求2所述的方法，其中，所述层片属性设置按钮控件包括：字形按钮控件、层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其中，所述层片按钮控件包括：宽度&#21443;数设置框、高度&#21443;数设置框、内边距&#21443;数设置框、透明度&#21443;数设置框、边框&#38996;色&#21443;数设置框以及边框宽度&#21443;数设置框。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求4所述的方法，其中，所述对层片进行编辑包括：对层片外形的编辑以及对层片中文本内容的编辑。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其中，通过层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件实现对层片外形的编辑。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，其中，所述动画按钮控件包括：直线运动动画、随机移动动画以及随机渐隐渐现动画。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的方法，其中，通过拖拽鼠标的方式实现对层片外形的编辑，具体为：  监测到用户操作与选取的层片接触，确定移动编辑开始；  触发层片跟随用户操作的拖动而移动；  监测到用户操作与选取的层片脱离接触，确定移动编辑结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求I至9任一项所述的方法，其中，所述方法进�步包括：  根据预先设置的排版策略映射关系，将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串，将转换得到的字符串以及各层片包含的文本内容输出至服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的方法，其中，所述将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串包括：  遍历内容容器里的所有层片，对每�层片，获取该层片的层片属性中包含的字体、颜色、宽度、高度、动画信息、层片偏转角度，根据排版策略映射关系，分别用�个字符表示层片属性中的各项值，形成映射的字符串。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的方法，其中，所述方法进�步包括：在展现排版的文本内容&#21515;，通过JavaScript脚本解析转换得到的字符串以及各层片包含的文本内容，渲染各层片，生成页面，并展现生成的页面。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.	一种富文本编辑器，其特征在于，该富文本编辑器包括：框架页面构建模块、处理事件绑定模块、层片编辑模块以及页面生成模块，其中， 框架页面构建模块，用于构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；  处理事件绑定模块，用于采用JavaScript脚本，初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；  层片编辑模块，用于响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；  页面生成模块，用于在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的富文本编辑器，其特征在干，进�步包括：  映射处理模块，用于根据预先设置的排版策略映射关系，将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串，将转换得到的字符串以及各层片包含的文本内容输出至服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的富文本编辑器，其特征在干，进�步包括：  页面展现模块，用于在展现排版的文本内容时，通过JavaScript脚本解析转换得到的字符串以及各层片包含的文本内容，渲染各层片，生成页面，并展现生成的页面。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58010028" lang="ZH" load-source="patent-office" class="description">
+    <p>编辑富文本的方法及富文本编辑器</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及文本编辑技术，尤其涉及�种编辑富文本（Rich Text)的方法及富文本编辑器（RTE, Rich Text Editor)。</p>
+    <p>背景技术</p>
+    <p>[0002]	富文本编辑器是�种可内嵌于浏览器，实现所见即所得的文本编辑器。由于富文本编辑器不同于普通的文本编辑器，用户可到互联网上下载免费的富文本编辑器，井内嵌于自己的网站或程序里，可以提供类似于Microsoft Word的编辑功能，使用户可以在网页上实现内容编写、排版，不会编写超文本标记语言（HTML, Hypertext Markup Language)的用户，也可以根据需要，编辑满足自身个性化需求的各种文本内容，方便用户编辑文章或信息，因而，深受用户喜爱，其应用也越来越广泛。例如，广泛应用于用户日常生活的博客、日志、邮件等业务中。</p>
+    <p>[0003]	图I为现有编辑富文本的方法流程示意图。&#21443;见图1，该流程包括：</p>
+    <p>[0004]	步骤101，在网页上展现预先内嵌的富文本编辑器中的编辑按钮；</p>
+    <p>[0005]	本步骤中，用户可通过互联网，下载免费的富文本编辑器，井内嵌于自己的网页、网站或程序里。这样，在打开网页时，可以在网页里展现富文本编辑器中的各编辑按钮控件，以便于用户选择相应的编辑按钮控件进行文本编辑。</p>
+    <p>[0006]	步骤102，采用JavaScript脚本，为编辑按钮控件绑定用于监听用户操作的处理事件；</p>
+    <p>[0007]	本步骤中，JavaScript脚本为基于对象（Object)和事件驱动（Event Driven)并具有安全性能的脚本语言。</p>
+    <p>[0008]	步骤103,通过JavaScript脚本创建�个用于承载用户输入的文本输入框；</p>
+    <p>[0009]	本步骤中，文本输入框用于为用户提供文本编辑的空间，在文本输入框上方，设置各编辑按钮控件。例如，对于邮件发送，空白网页中包含用于内容输入的正文文本框、以及，对正文文本框中文本内容进行编辑的各编辑按钮控件。</p>
+    <p>[0010]	步骤104，监听到用户触发处理事件，根据用户的操作，触发与处理事件绑定的编辑按钮控件对用户的操作进行相应编辑；</p>
+    <p>[0011]	本步骤中，当用户需要进行文本编辑并进行发布时，点击相应的编辑按钮控件，触发输出处理事件，富文本编辑器根据接收的触发事件，触发与处理事件绑定的编辑按钮控件，对用户的操作进行相应编辑。例如，用户通过点击编辑按钮控件，触发输出编辑处理事件，JavaScript脚本执行相应的脚本，向用户展现预先创建的文本输入框，这样，用户可以在承载用户输入的文本输入框，即空白网页中输入相关内容，并在内容输入完毕后，可以通过其他相应的编辑按钮控件，对输入内容的样式(如字体&#38996;色、大小)、排版(如居中对齐）等文本属性进行修改。</p>
+    <p>[0012]	步骤105，提取用户在文本输入框中输入的内容，进行存储。</p>
+    <p>[0013]	本步骤中，在监测到用户编辑完内容后，首先提取用户编辑完成的文本内容以及文本属性信息，然后提交到服务器端，保存到数据库里。</p>
+    <p>[0014]	这样，即可完成富文本编辑的流程。</p>
+    <p>[0015]	后续中，用户通过点击富文本编辑器的发布按钮控件，服务器将保存到数据库中 的文本内容，按照用户的设置，监测各目标用户的当前状态，当目标用户访问网页时，服务器直接将从数据库中读取的文本内容输出至该目标用户的网页页面，按照设置的文本属性进行展现。当然，实际应用中，服务器也可以对文本内容执行过滤处理，以过滤文本内容中包含的不安全字符。</p>
+    <p>[0016]	由上述可见，现有编辑富文本的方法，由于富文本编辑器创建的文本输入框只能支持文本内容的通用编辑，不支持用户通过鼠标拖拽对文本输入框中的文本内容局部样式进行单独排版，例如，通过鼠标拖拽，对文本输入框中的部分文本内容进行拖动，必然影响其他部分文本内容在文本输入框中的布局，因而，使得编辑效率较低；进�步地，富文本编辑器中的编辑按钮控件数量有限，对应的编辑功能不足，不能对文本内容进行旋转、倾斜或倒置等操作，也不能改变编辑的文本中的文字字距，还不能对文本中的文字进行加阴影操作，更不能将编辑的文本内容生成动画效果进行展现等，编辑方式较为简单、编辑功能少，使得生成的富文本样式较为单一，不能满足用户个性化的需求。</p>
+    <p>发明内容</p>
+    <p>[0017]	本发明的实施例提供一种编辑富文本的方法，提高富文本编辑效率、丰富编辑的富文本样式。</p>
+    <p>[0018]	本发明的实施例还提供一种富文本编辑器，提高富文本编辑效率、丰富编辑的富文本样式。</p>
+    <p>[0019]	为达到上述目的，本发明实施例提供的一种编辑富文本的方法，包括：</p>
+    <p>[0020]	构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；</p>
+    <p>[0021]	采用JavaScript脚本,初始化富文本编辑器操作菜单,绑定用于监听用户操作的处理事件；</p>
+    <p>[0022]	响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；</p>
+    <p>[0023]	在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。</p>
+    <p>[0024]	其中，所述富文本编辑器操作菜单包括：层片操作按钮控件以及层片属性设置按钮控件。</p>
+    <p>[0025]	其中，所述层片操作按钮控件包括：删除层片按钮控件、复制层片按钮控件以及新建层片按钮控件。</p>
+    <p>[0026]	其中，所述层片属性设置按钮控件包括：字形按钮控件、层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件。</p>
+    <p>[0027]	其中，所述层片按钮控件包括：宽度&#21443;数设置框、高度&#21443;数设置框、内边距&#21443;数设置框、透明度&#21443;数设置框、边框&#38996;色&#21443;数设置框以及边框宽度&#21443;数设置框。</p>
+    <p>[0028]	其中，所述对层片进行编辑包括：对层片外形的编辑以及对层片中文本内容的编辑。</p>
+    <p>[0029]	其中，通过层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件实现对层片外形的编辑。</p>
+    <p>[0030]	其中，所述动画按钮控件包括：直线运动动画、随机移动动画以及随机渐隐渐现动画。</p>
+    <p>[0031]	其中，通过拖拽鼠标的方式实现对层片外形的编辑，具体为：</p>
+    <p>[0032]	监测到用户操作与选取的层片接触，确定移动编辑开始；</p>
+    <p>[0033]	触发层片跟随用户操作的拖动而移动；</p>
+    <p>[0034]	监测到用户操作与选取的层片脱离接触，确定移动编辑结束。</p>
+    <p>[0035]	其中，所述方法进�步包括：</p>
+    <p>[0036]	根据预先设置的排版策略映射关系，将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串，将转换得到的字符串以及各层片包含的文本内容输出至服务器。</p>
+    <p>[0037]	其中，所述将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串包括：</p>
+    <p>[0038]	遍历内容容器里的所有层片，对每�层片，获取该层片的层片属性中包含的字体、颜色、宽度、高度、动画信息、层片偏转角度，根据排版策略映射关系，分别用�个字符表示层片属性中的各项值，形成映射的字符串。</p>
+    <p>[0039]	其中，所述方法进�步包括：</p>
+    <p>[0040]	在展现排版的文本内容时，通过JavaScript脚本解析转换得到的字符串以及各层片包含的文本内容，渲染各层片，生成页面，并展现生成的页面。</p>
+    <p>[0041]	一种富文本编辑器，该富文本编辑器包括：框架页面构建模块、处理事件绑定模块、层片编辑模块以及页面生成模块，其中，</p>
+    <p>[0042]	框架页面构建模块，用于构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；</p>
+    <p>[0043]	处理事件绑定模块,用于采用JavaScript脚本,初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；</p>
+    <p>[0044]	层片编辑模块，用于响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；</p>
+    <p>[0045]	页面生成模块，用于在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。</p>
+    <p>[0046]	进�步包括：</p>
+    <p>[0047]	映射处理模块，用于根据预先设置的排版策略映射关系，将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串，将转换得到的字符串以及各层片包含的文本内容输出至服务器。</p>
+    <p>[0048]	进�步包括：</p>
+    <p>[0049]	页面展现模块，用于在展现排版的文本内容时，通过JavaScript脚本解析转换得到的字符串以及各层片包含的文本内容，渲染各层片，生成页面，并展现生成的页面。[0050]	由上述技术方案可见，本发明实施例提供的一种编辑富文本的方法及富文本编辑器，构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScri pt脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；采用JavaScript脚本，初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。这样，可以通过拖拽或设置&#21443;数的方式对整体的层片执行编辑，从而使层片可以随意摆放、旋转等多种动画效果，可以有效降低富文本编辑的复杂流程，提高富文本编辑效率、丰富编辑的富文本样式，满足了用户个性化的需求。</p>
+    <p>附图说明</p>
+    <p>[0051]	为了更清楚地说明本发明实施例或现有技术中的技术方案，以下将对实施例或现有技术描述中所需要使用的附图作简单地介绍。显而易见地，以下描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员而言，还可以根据这些附图所示实施例得到其它的实施例及其附图。</p>
+    <p>[0052]	图I为现有编辑富文本的方法流程示意图。</p>
+    <p>[0053]	图2为本发明实施例编辑富文本的方法流程示意图。</p>
+    <p>[0054]	图3为本发明实施例构建的浮动框架页面结构示意图。</p>
+    <p>[0055]	图4为本发明实施例展现的页面效果示意图。</p>
+    <p>[0056]	图5为本发明实施例编辑富文本的方法具体流程示意图。</p>
+    <p>[0057]	图6为本发明实施例富文本编辑器的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0058]以下将结合附图对本发明各实施例的技术方案进行清楚、完整的描述，显然，所描述的实施例仅仅是本发明的一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动的前提下所得到的所有其它实施例，都属于本发明所保护的范围。</p>
+    <p>[0059]	现有编辑富文本的方法，由于富文本编辑器不支持用户通过鼠标拖拽方式进行局部排版或整体样式排版，且富文本编辑器能够提供的编辑按钮控件数量有限，对应的编辑功能不足，因而，编辑方式较为简单、编辑功能少，使得编辑效率较低，可编辑的富文本样式少，不能满足用户个性化的需求。</p>
+    <p>[0060]	层叠样式表（CSS,Cascading Stylesheet)通过在网页制作时米用CSS技术,可以有效地对页面的布局、字体、&#38996;色、背景和其它效果实现更加精确的控制。进�步地，通过对层叠样式表的相应代码进行�些简单的修改，就可以改变同一页面的不同部分，或者页数不同的网页的外观和格式。CSS3作为CSS技术的升级版本，采用模块化设计思想，更能满足用户个性化的需求。</p>
+    <p>[0061]	DIV元素是用来为HTML文档内大块（block-level)的内容提供结构和背景的元素。DIV的起始标签和结束标签之间的所有内容都用于构成该文档内大块，其中，所包含元素(起始标签和结束标签之间的内容）的特性由DIV标签的属性来控制。</p>
+    <p>[0062]	本发明实施例中，考虑将层叠样式表技术以及DIV元素技术应用到现有的富文本编辑器中：通过JavaScript脚本，设置包含层叠样式表技术的内容容器，根据排版需求，将文本内容对应的页面，按照层叠样式表技术，拆分为包含多个层片的内容容器，每�层片中 包含待排版的文本内容。内容容器中的每�层片通过DIV元素进行存储，从而实现用户通过拖拽文本内容所在的层片来进行排版，使层片可以随意摆放；进�步地，通过采用层叠样式表（Cascading Stylesheet)CSS3技术,使得文本内容所在的各层片可以在O到360度之间进行相互独立旋转，从而实现编辑文本内容中，各部分编辑文本内容各角度相互独立的倾斜摆放，并可以动态改变编辑内容中文字的字距，以及给文字加阴影效果等。这样，通过鼠标拖拽进行排版，可以有效降低实现文本内容编辑的复杂流程，提高了用户的编辑效率;进�步地，展现编辑的文本内容时，可以使得展现的编辑文本内容具有动画效果，而且具有多种动画效果，用户可以选择让展现的编辑文本内容中某一部分文本内容具有�种动画，而另一部分文本内容又具有其他的动画。例如，最简单的动画可以是使展现的编辑文本内容执行直线运动，用户可以从预先设置的40多种运动方向以及10种运动速度的动画策略中，选择相应的运动方向及运动速度。</p>
+    <p>[0063]	图2为本发明实施例编辑富文本的方法流程示意图。&#21443;见图2，该流程包括：</p>
+    <p>[0064]	步骤201,构建浮动的框架页面,在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；</p>
+    <p>[0065]	本步骤中，通过JavaScript脚本，在富文本编辑器中，创建�个宽度和高度固定的&lt;div&gt;层，在这个容器层里放置、展示所有层片内容。在&lt;div&gt;层中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框。</p>
+    <p>[0066]	图3为本发明实施例构建的浮动框架页面结构示意图。&#21443;见图3，该页面通过分栏形成左分栏部分以及右分栏部分，其中，左分栏部分为富文本编辑器操作菜单，右分栏部分上半部为内容容器，右分栏部分下半部为文本输入框，与现有的文本输入框相同。其中，</p>
+    <p>[0067]	富文本编辑器操作菜单中，包括：层片操作按钮控件以及层片属性设置按钮控件。其中，</p>
+    <p>[0068]	层片操作按钮控件用于对层片进行设置，包括：删除层片按钮控件、复制层片按钮控件以及新建层片按钮控件。</p>
+    <p>[0069]	层片属性设置按钮控件用于对层片的格式以及层片中的文本内容进行设置，包括：字形按钮控件、层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件等。其中，</p>
+    <p>[0070]	层片按钮控件中，包含有多个&#21443;数设置框，例如，包括有：宽度&#21443;数设置框、高度&#21443;数设置框、内边距&#21443;数设置框、透明度&#21443;数设置框、边框&#38996;色&#21443;数设置框以及边框宽度&#21443;数设置框等，其中，宽度&#21443;数可以设置为30至500 (pixel)之间，高度&#21443;数可以设置为30至370之间，内边距&#21443;数可以设置为O至5之间，透明度&#21443;数可以设置为20至100之间，边框颜色&#21443;数默认设置为999999，边框宽度&#21443;数可以设置为O至5之间。</p>
+    <p>[0071]	本发明实施例中，选中的层片（当前层片）以粗体显示在内容容器中，层片为�个包裹文本的&lt;div&gt;标签，即层片以&lt;div&gt;标签属性进行标识，对应于上述的层片操作按钮控件以及层片属性设置按钮控件。[0072]	步骤202,采用JavaScript脚本,初始化富文本编辑器操作菜单,绑定用于监听用户操作的处理事件；</p>
+    <p>[0073]	本步骤中，处理事件用于在用户点击相应的按钮控件时，触发富文本编辑器执行相应的操作，包括：层片操作按钮控件处理事件以及层片属性设置按钮控件处理事件，具体来说，包括：</p>
+    <p>[0074]	层片属性设置按钮控件中各菜单项的点击事件、层片属性设置按钮控件中各菜单项输入框值的变化监听事件、新建层片按钮控件的点击事件、复制层片按钮控件的点击事件、删除层片按钮控件的点击事件以及内容容器中滑动条的滑动事件等。</p>
+    <p>[0075]	步骤203，响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；</p>
+    <p>[0076]	本步骤中，当用户需要进行文本编辑并进行发布时，点击相应的编辑按钮控件，触发输出处理事件，富文本编辑器根据接收的触发事件，响应处理事件，根据预先设置的排版策略，将用户分次通过文本输入框输入的文本内容，以层片方式依序承载至内容容器中的各层片中。例如，用户通过点击编辑按钮控件，触发输出编辑处理事件，JavaScript脚本执行相应的脚本，向用户展现预先创建的文本输入框以及内容容器，用户根据预先设置的排版策略，例如，需要对最终形成的页面中不同的文本内容分别进行排版，则拆分每�排版对应的文本内容，通过文本输入框分次输入每一排版对应的文本内容，富文本编辑器将对用户输入的文本内容的操作转化成对层片的操作，每�排版对应的文本内容对应�个层片。这样，可以实现对各层片进行不同的操作，而且也更容易设置层片样式和添加动画。</p>
+    <p>[0077]	本发明实施例中，在文本输入框中输入文本内容后，还可以进�步包括：</p>
+    <p>[0078]	对文本输入框中输入的文本内容，依据字形按钮控件进行编辑。</p>
+    <p>[0079]	步骤204，在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。</p>
+    <p>[0080]	本步骤中，对层片进行编辑包括两方面，一方面是将层片作为�个整体，对整体进行编辑，另一方面是对层片中包含的文本内容进行编辑，即：对层片外形的编辑以及对层片中文本内容的编辑，其中，</p>
+    <p>[0081]	对层片外形的编辑，主要通过层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件，对层片进行操作实现，例如，通过编辑层片按钮控件中的&#21443;数，可以调节设置的层片大小；而通过编辑位置按钮控件中的&#21443;数，可以调节层片在内容容器中的位置，以及，调节各层片之间的相对位置；而通过编辑动画按钮控件以及时间轴按钮控件中的&#21443;数，可以设置层片的动画播放方式，将内容容器中包含的各层片进行组合，即可得到符合排版策略的页面。</p>
+    <p>[0082]	本发明实施例中，用户点击操作菜单中的按钮控件，JavaScript脚本响应和处理相应操作事件，操作实施于当前选中的层片上，操作结果实时展现在内容容器里。</p>
+    <p>[0083]	对于内容容器中包含有多个层片的情形，用户如果需要对某�层片进行编辑，则在内容容器中，选取(例如，点击）需要编辑的层片，则该层片为当前层片。</p>
+    <p>[0084]	如前所述，层片为用�个“&lt;div&gt;”标签包裹纯文本的内容片。这样，对文本内容所放位置的处理以及文本内容旋转、添加动画效果等层片外形的处理，就可以转换成对&lt;div&gt;标签设置样式的处理，即对层片的移动、旋转及动画处理。实际应用中，对&lt;div&gt;标签添加动画效果，即可以使编辑内容产生动画效果。</p>
+    <p>[0085]	本发明实施例中，将动画功能以组件形式集成到富文本编辑器中，可以动态添加动画种类，后续根据实际需要，可以很灵活地开发和添加各种新的动画效果，便于功能扩 展。</p>
+    <p>[0086]	本发明实施例中，动画效果包括：直线运动动画效果、随机移动动画效果以及随机渐隐渐现动画效果，其中，</p>
+    <p>[0087]	直线运动共包括48个方向，且每一方向上可设置10种不同的速度；随机移动包括随机往4个方向运动或原地不动；随机渐隐渐现，在不同位置上随机出现，几秒钟后消失，如此循环。</p>
+    <p>[0088]	实际应用中，对层片外形的编辑，由于是以层片为整体的编辑，因而，对于层片外形编辑中的移动编辑，还可以通过拖拽鼠标的方式实现，具体来说，包括：</p>
+    <p>[0089]	监测到用户操作与选取的层片接触，确定移动编辑开始；</p>
+    <p>[0090]	本步骤中，用户可以通过鼠标选取层片，然后拖动层片实现移动编辑。</p>
+    <p>[0091]	触发层片跟随用户操作的拖动而移动；</p>
+    <p>[0092]	本步骤中，用户通过鼠标选取层片后，将鼠标一直驻留在选取的层片上，并拖动鼠标，使层片随着鼠标的拖动移动。</p>
+    <p>[0093]	监测到用户操作与选取的层片脱离接触，确定移动编辑结束。</p>
+    <p>[0094]	本步骤中，当层片移动到预先设定的目标区域时，松开鼠标按键，使鼠标与层片脱离接触，这时，层片停止移动。</p>
+    <p>[0095]	当然，实际应用中，也可以通过拖拽层片的方式，实现层片的旋转、倾斜以及倒转等编辑操作。</p>
+    <p>[0096]	对层片中文本内容的编辑，主要通过字形按钮控件，对文本输入框中的文本内容进行操作实现。</p>
+    <p>[0097]	本发明实施例中，对层片中文本内容的编辑，既可以是在文本输入框中输入文本内容后，对文本输入框中输入的文本内容进行编辑来实现，也可以是通过选取层片，使层片中包含的文本内容展现在文本输入框中，再对展现在文本输入框中的文本内容进行编辑来实现。</p>
+    <p>[0098]	这样，用户可以在承载用户输入的文本输入框中输入相关文本内容，并在文本内容输入完毕后，可以通过其他相应的编辑按钮控件，对输入文本内容的样式(如字体&#38996;色、大小)、排版(如居中对齐）等文本属性进行修改。</p>
+    <p>[0099]	图4为本发明实施例展现的页面效果示意图。&#21443;见图4，根据预先设置的排版策略，经过对各层片的编辑，可以实现各种不同旋转方式、不同位置的排版，最后生成符合排版策略的页面。</p>
+    <p>[0100]	如前所述，本发明实施例中，层片为一个包裹文本的&lt;div&gt;标签，通过将层片的位置（position)样式设置成绝对（absolute)定位,再利用JavaScript脚本监听用户的鼠标拖拽行为，计算鼠标的相对移动位置，并实时触发将选中的层片根据相对移动位置进行移动，就可通过鼠标拖拽实现编辑内容排版。而现有的方式，并非将文本内容放置到一个绝对定位的&lt;div&gt;标签中，因而不能通过鼠标拖拽，实现改变编辑内容的位置。</p>
+    <p>[0101]	在对承载至内容容器中的层片进行编辑后，还可以进�步包括：[0102]	复制当前编辑的层片，并对复制的层片进行编辑。</p>
+    <p>[0103]	本步骤中，如果需要编辑的层片与当前层片的文本内容以及外形相差不多，则可以通过复制的方式，并对复制的层片进行较少的编辑，以提高编辑效率。</p>
+    <p>[0104]	当前编辑的层片，包括文字内容、样式、动画等。这样，用户可以通过复制，快速地创建样式相同的层片。</p>
+    <p>[0105]	较佳地，该方法还可以进�步包括：</p>
+    <p>[0106]	步骤205，根据预先设置的排版策略映射关系，将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串，将转换得到的字符串以及各层片包含的文本内容输出至服务器。</p>
+    <p>[0107]	本步骤中，符合排版策略的页面由内容容器中，经过编辑的依序排列的层片组成。</p>
+    <p>[0108]	用户编辑完富文本，生成符合排版策略的页面后，需要将页面包含的内容数据提交至服务器，其中，页面包含的内容数据包括：文本内容以及各层片的编辑数据。其中，文本内容的编辑数据具体是指对层片中文本内容进行编辑生成的数据，即文本内容本身；层片的编辑数据具体是指对层片外形进行编辑生成的数据。</p>
+    <p>[0109]	本发明实施例中，为了有效降低上传的内容数据量，节约网络资源开销，对层片的外形数据设置映射的字符串，即设置排版策略映射关系映射的字符串，从而可以对各层片设定的样式、动画等数据进行处理，并将这些数据，根据排版策略映射关系，转换成较短的字符串。例如，对于各层片的字体、颜色、宽度、高度、动画信息、层片偏转角度等，在排版策略映射关系中，分别用�个字符表示各项值，举例来说，字体用“b”表示、&#38996;色用“,表示、宽度用表示、高度用“h”表示，从而形成排版策略映射关系，并在映射的字符后，紧跟对应的值，例如，“ b28”，表示字体大小是28，“cFFD285”，表示颜色是“FFD285”（后续服务器在解析&#21515;，会在颜色值前面加�个“#，，，变成浏览器可识别的&#38996;色)，“w400h98”，表示宽400高98，依此类推。最后将映射转换后得到的数据结果连接在一起，例如，得到字符串“b28cFFD285q0fl，90，8w400h98x40y294”，就可以将对一个层片设定的各种样式或效果，转变成了一个简短的字符串。最后，将这个字符串设置成&lt;div&gt;标签的�个属性值。</p>
+    <p>[0110]	最后，将各层片的内容连同&lt;diV〉标签一起提交到服务器保存，由于&lt;diV〉标签上具有记录该层片的位置、动画效果等信息的属性，因而，展示的网页，通过解析&lt;div&gt;标签上的属性值，即可将层片放到设定的位置，进行动画渲染等。具体来说，</p>
+    <p>[0111]	本步骤的处理流程为：在用户点击保存内容按钮控件时，遍历内容容器里的所有层片，对每�层片，获取该层片的字体、&#38996;色、宽度、高度、动画信息、层片偏转角度等层片属性，根据排版策略映射关系，分别用�个字符表示层片属性中的各项值。</p>
+    <p>[0112]	这样，可以大大减少提交到服务器的数据量，也有利于服务端处理内容，如清除不安全字符串等。</p>
+    <p>[0113]	较佳地，该方法还可以进�步包括：</p>
+    <p>[0114]	步骤206,在展现排版的文本内容时,通过JavaScript脚本解析转换得到的字符串以及各层片包含的文本内容，渲染各层片，生成页面，并展现生成的页面。</p>
+    <p>[0115]	本步骤中，展现文本内容时，读取步骤205中处理过的每�个层片上的字符串，例如，如果字符串为“b28cFFD285q0fl，90，8w400h98x40y294””，解析该字符串：“b28”，即将层片的字体设置成28像素；“《400”，将层片宽度设置成400像素；“Π，90，8”，表示采用第I种动画效果(第一个逗号前面表示动画的种类，I是直线运动)，朝90度方向即正上方（O度表示正右边、180度表示正左边、270度表示正下方)移动，移动速度等级是8 (10个等级，10最快，I最慢）；“x40y294”表示距左40像素，距顶294像素，以此类推，这样，可以还原每�层片的样式效果，然后，将相应的文本内容承载到还原的层片中。</p>
+    <p>[0116]	图5为本发明实施例编辑富文本的方法具体流程示意图。&#21443;见图5，该流程包括：</p>
+    <p>[0117]	步骤501，启动富文本编辑器，接收新建层按钮控件触发输出的处理事件，在内容容器中新建层片；</p>
+    <p>[0118]	本步骤中，在富文本编辑器中，单击“新建层”按钮，触发在内容容器中新建�个层片。本发明实施例中，可新建多个层片，并为每一新建的层片设置层片&#21443;数。</p>
+    <p>[0119]	步骤502，接收通过文本输入框输入的文本内容，将文本内容以层片方式承载至内容容器中的层片；</p>
+    <p>[0120]	本步骤中，用户如果需要在新建的层片中进行内容编辑，则双击该新建的层片，从而选中该层片以及该层片对应的文本输入框。</p>
+    <p>[0121]	输入的文本内容可以是新文本内容，也可以是修改层片的文本内容。</p>
+    <p>[0122]	步骤503，拖动选中的层片至预先设置的位置；</p>
+    <p>[0123]	本步骤中，通过拖动选中的层片，从而可以实现任意摆放层片的位置。这样，便可对所有内容进行任意排版。</p>
+    <p>[0124]	步骤504，点击复制选中层，复制当前选中层；</p>
+    <p>[0125]	本步骤中，复制的当前选中层中，包括文字内容、样式、动画等。这样，用户可以通过复制，快速地创建样式相同的层片。</p>
+    <p>[0126]	步骤505，单击各个菜单，对选中的层片进行编辑；</p>
+    <p>[0127]	本步骤中，编辑包括：改变字体大小、层片的边框、内边距以及设置动画效果等。其中，</p>
+    <p>[0128]	位置菜单，用于设置层片的位置，例如，可以设置层片居左、居中、居右、居顶等，当然，实际应用中，也可以设定层片距左的值以及距顶的值，来精确控制层片的位置。</p>
+    <p>[0129]	动画菜单，用于从预设的动画效果种类中选择动画效果，目前，本发明实施例中，可实现3种动画效果，分别为直线运动、随机移动以及随机渐隐渐现。当然，实际应用中，后续可根据实际应用需要，添加相应的动画效果种类。</p>
+    <p>[0130]	本发明实施例中，每�层片只可选择�种动画效果，不同的层片，可以选择不同的动画效果，当然，也可以不使用动画效果。</p>
+    <p>[0131]	时间轴菜单，用于画出�个时间轴，设定层片到预先设定的时间点才触发对应的动画效果，而不是页面�开始就执行动画。</p>
+    <p>[0132]	步骤506，提交编辑的层片数据，由服务器保存所有数据。</p>
+    <p>[0133]	本步骤中，将编辑的层片数据，根据排版策略映射关系，转换成较短的字符串，以降低传输的数据量。</p>
+    <p>[0134]	这样，经过上述流程，用户即可完成编辑内容的发布。</p>
+    <p>[0135]	由上述可见,本发明实施例编辑富文本的方法，通过JavaScript脚本,设置包含层叠样式表技术的内容容器，在内容容器中，根据排版策略的需要，设置多个待排版的层片，将用户通过文本输入框分次输入的文本内容，以层片方式依序承载至内容容器中的各层片，并对各层片分别进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。这样，可以通过拖拽的方式对整体的层片执行编辑，从而使层片可以随意摆放、旋转，可以有效降低富文本编辑的复杂流程，提高了用户的编辑效率；进�步地，展现编辑的文本内容时，可以使得展现的富文本内容具有动画效果，而且具有多种动画效果，扩展了可编辑的富文本样式，满足了用户个性化的需求；而且，通过将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串，可以有效降低传输的数据量，提升网络资源的利用效率。具体来说，本发明实施例编辑富文本的方法，与现有编辑富文本的方法相比，具有以下优点：</p>
+    <p>[0136]	1)，可动画展现编辑的内容，使展现的内容更加生动和吸引人，提升了展现的内容的视觉效果；而且，动画效果可以自定义，满足了用户个性化的需求。具体来说，</p>
+    <p>[0137]	现有富文本编辑器完全不支持以动画方式展现内容，更不能自定义动画效果。而本发明实施例中，在用户提交内容前，按预先设置的流程处理内容，以字符串方式存放所有内容的样式和动画，这种字符串是一种高效的字符串；当展现内容时，再通过JavaScript脚本解析字符串，实现动画展现内容，提升了用户编辑效率。</p>
+    <p>[0138]	2)，内容的排版方式更灵活，更方便。通过直接鼠标拖拽实现内容排版，而且可以任意摆放内容的位置。</p>
+    <p>[0139]	采用JavaScript脚本技木，以层片方式承载内容，让层片可随意拖拽，从而方便了排版，提升了用户编辑效率。</p>
+    <p>[0140]	3)，采用CSS3技术，使内容的展现样式更加丰富多彩，而这些展现样式是现有的富文本编辑器所没有的。</p>
+    <p>[0141]	由于采用CSS3技术，可以对层片进行360度的旋转，实现倾斜和倒转效果，可以改变字距，改变字体透明度，设置文字阴影等。</p>
+    <p>[0142]	4)，将动画功能以组件形式集成到富文本编辑器中，可以动态添加动画种类，后续根据实际需要，可以很灵活地开发和添加各种新的动画效果，便于功能扩展。</p>
+    <p>[0143]	本发明实施例中，已开发完成的动画效果有：直线运动，共48个方向，且每一方向上可设置10种不同的速度；随机移动，随机往4个方向运动或原地不动；随机渐隐渐现，在不同位置上随机出现，几秒钟后消失，如此循环。</p>
+    <p>[0144]	图6为本发明实施例富文本编辑器的结构示意图。&#21443;见图6，该富文本编辑器包括：框架页面构建模块、处理事件绑定模块、层片编辑模块以及页面生成模块，其中，</p>
+    <p>[0145]	框架页面构建模块，用于构建浮动的框架页面，在构建的浮动框架页面中，通过JavaScript脚本设置富文本编辑器操作菜单、包含层叠样式表的内容容器以及文本输入框；</p>
+    <p>[0146]	本发明实施例中，富文本编辑器操作菜单包括：层片操作按钮控件以及层片属性设置按钮控件。其中，</p>
+    <p>[0147]	层片操作按钮控件包括：删除层片按钮控件、复制层片按钮控件以及新建层片按钮控件；层片属性设置按钮控件包括：字形按钮控件、层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件。</p>
+    <p>[0148]	处理事件绑定模块,用于采用JavaScript脚本,初始化富文本编辑器操作菜单，绑定用于监听用户操作的处理事件；</p>
+    <p>13[0149]	层片编辑模块，用于响应处理事件，根据预先设置的排版策略，接收用户通过文本输入框分次输入的文本内容，将文本内容以层片方式依序承载至内容容器中的各层片；</p>
+    <p>[0150]	本发明实施例中，对层片进行编辑包括：对层片外形的编辑以及对层片中文本内容的编辑。其中，</p>
+    <p>[0151]	可以通过层片按钮控件、位置按钮控件、动画按钮控件以及时间轴按钮控件实现对层片外形的编辑；或者，</p>
+    <p>[0152]	通过拖拽鼠标的方式实现对层片外形的编辑，具体为：</p>
+    <p>[0153]	监测到用户操作与选取的层片接触，确定移动编辑开始；</p>
+    <p>[0154]	触发层片跟随用户操作的拖动而移动；</p>
+    <p>[0155]	监测到用户操作与选取的层片脱离接触，确定移动编辑结束。</p>
+    <p>[0156]	页面生成模块，用于在内容容器中，分别对承载至内容容器中的层片进行编辑，并将经编辑后的各层片进行组合，生成符合排版策略的页面。</p>
+    <p>[0157]	较佳地，该富文本编辑器还可以进�步包括：</p>
+    <p>[0158]	映射处理模块，用于根据预先设置的排版策略映射关系，将符合排版策略的页面中的各层片的编辑数据转换为排版策略映射关系映射的字符串，将转换得到的字符串以及各层片包含的文本内容输出至服务器。</p>
+    <p>[0159]	当然，实际应用中，该富文本编辑器还可以接收来自服务器的信息，进行解析后，向用户展现其他用户发布的富文本信息，进�步包括：</p>
+    <p>[0160]	页面展现模块，用于在展现排版的文本内容时，通过JavaScript脚本解析转换得到的字符串以及各层片包含的文本内容，渲染各层片，生成页面，并展现生成的页面。</p>
+    <p>[0161]	显然，本领域技术人员可以对本发明进行各种改动和变型而不脱离本发明的精神和范围。这样，倘若对本发明的这些修改和变型属于本发明权利要求及其等同技术的范围之内，则本发明也包含这些改动和变型在内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101118493A?cl=zh">CN101118493A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年9月17日</td><td class="patent-data-table-td patent-date-value">2008年2月6日</td><td class="patent-data-table-td ">威 张</td><td class="patent-data-table-td ">一种在网页浏览器中制作动态网站的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101324844A?cl=zh">CN101324844A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年7月10日</td><td class="patent-data-table-td patent-date-value">2008年12月17日</td><td class="patent-data-table-td ">电子科技大学</td><td class="patent-data-table-td ">具备智能感知的富文本控件制作方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">无作者: "<a href='http://scholar.google.com/scholar?q="UEditor%EF%BC%8D%E6%96%87%E6%A1%A3%E8%AF%B4%E6%98%8E"'>UEditor－文档说明</a>", &lt;HTTP://UEDITOR.BAIDU.COM/WEBSITE/DOCUMENT.HTML&gt;, 11 May 2012 (2012-05-11)</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103279559A?cl=zh">CN103279559A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月13日</td><td class="patent-data-table-td patent-date-value">2013年9月4日</td><td class="patent-data-table-td ">北京神鹰城讯科技有限公司</td><td class="patent-data-table-td ">基于安卓系统的富文本编辑方法及富文本编辑器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103838709A?cl=zh">CN103838709A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年3月5日</td><td class="patent-data-table-td patent-date-value">2014年6月4日</td><td class="patent-data-table-td ">天闻数媒科技（北京）有限公司</td><td class="patent-data-table-td ">排版方法和排版引擎</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=83bBBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017220000">G06F17/22</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=83bBBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009440000">G06F9/44</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=83bBBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年2月6日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/006e7e64c1db11108be9/CN102915328A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%BC%96%E8%BE%91%E5%AF%8C%E6%96%87%E6%9C%AC%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%8A%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96.pdf?id=83bBBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3Kg4xqqQYDX9xG4KZu1dpX3x8Ipg"},"sample_url":"https://www.google.com/patents/reader?id=83bBBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

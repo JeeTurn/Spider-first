@@ -1,0 +1,218 @@
+<!DOCTYPE html><html><head><title>专利 CN103581108A - 一种登录验证方法、客户端、服务器及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种登录验证方法、客户端、服务器及系统"><meta name="DC.contributor" content="黄冕" scheme="inventor"><meta name="DC.contributor" content="阿里巴巴集团控股有限公司" scheme="assignee"><meta name="DC.date" content="2012-7-19" scheme="dateSubmitted"><meta name="DC.description" content="本申请提供了一种登录验证方法、客户端、服务器及系统，该方法中，在用户登录时，客户端获取用户发送的登录被保护账户体系的登录请求，并确定与待登录账户相对应的当前关联账户体系的特征信息；生成登录验证信息；发送所述登录验证信息给服务器，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集时，确定所述登录为可信登录。该方法中，服务器根据预先存储的，与待登录账户对应的可信特征信息对用户的登录行为进行验证，无需通过数字证书或U盾来进行额外的操作进行登录验证，简化了登录验证过程，提高了服务器进行登录验证的效率。"><meta name="DC.date" content="2014-2-12"><meta name="DC.relation" content="CN:101067832:A" scheme="references"><meta name="DC.relation" content="CN:101719880:A" scheme="references"><meta name="DC.relation" content="CN:102158465:A" scheme="references"><meta name="DC.relation" content="CN:102238292:A" scheme="references"><meta name="DC.relation" content="US:20080034411:A1" scheme="references"><meta name="DC.relation" content="US:20090158404:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:103581108:A"><meta name="citation_patent_application_number" content="CN:201210251542"><link rel="canonical" href="https://www.google.com/patents/CN103581108A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103581108A?cl=zh"/><meta name="title" content="专利 CN103581108A - 一种登录验证方法、客户端、服务器及系统"/><meta name="description" content="本申请提供了一种登录验证方法、客户端、服务器及系统，该方法中，在用户登录时，客户端获取用户发送的登录被保护账户体系的登录请求，并确定与待登录账户相对应的当前关联账户体系的特征信息；生成登录验证信息；发送所述登录验证信息给服务器，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集时，确定所述登录为可信登录。该方法中，服务器根据预先存储的，与待登录账户对应的可信特征信息对用户的登录行为进行验证，无需通过数字证书或U盾来进行额外的操作进行登录验证，简化了登录验证过程，提高了服务器进行登录验证的效率。"/><meta property="og:title" content="专利 CN103581108A - 一种登录验证方法、客户端、服务器及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103581108A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103581108A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=dnfxCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103581108A&amp;usg=AFQjCNE6mjCSGmp-Jn3uPtDQTT37x1zzgQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/124289659fecf238773e/CN103581108A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/124289659fecf238773e/CN103581108A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103581108A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103581108A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103581108A?cl=zh" style="display:none"><span itemprop="description">本申请提供了一种登录验证方法、客户端、服务器及系统，该方法中，在用户登录时，客户端获取用户发送的登录被保护账户体系的登录请求，并确定与待登录账户相对应的当前关联账户体系的特征信息；生成登录验证信息；发...</span><span itemprop="url">https://www.google.com/patents/CN103581108A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103581108A - 一种登录验证方法、客户端、服务器及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103581108A - 一种登录验证方法、客户端、服务器及系统" title="专利 CN103581108A - 一种登录验证方法、客户端、服务器及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103581108 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210251542</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年2月12日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年7月19日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年7月19日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/US20140026189?hl=zh-CN&amp;cl=zh">US20140026189</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2014015070A2?hl=zh-CN&amp;cl=zh">WO2014015070A2</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210251542.7, </span><span class="patent-bibdata-value">CN 103581108 A, </span><span class="patent-bibdata-value">CN 103581108A, </span><span class="patent-bibdata-value">CN 201210251542, </span><span class="patent-bibdata-value">CN-A-103581108, </span><span class="patent-bibdata-value">CN103581108 A, </span><span class="patent-bibdata-value">CN103581108A, </span><span class="patent-bibdata-value">CN201210251542, </span><span class="patent-bibdata-value">CN201210251542.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%BB%84%E5%86%95%22">黄冕</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%9B%86%E5%9B%A2%E6%8E%A7%E8%82%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">阿里巴巴集团控股有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103581108A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103581108A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103581108A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (1)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dnfxCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210251542&amp;usg=AFQjCNFckre7s_AcUdCFn2oksn_7wi3ZDQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=dnfxCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103581108A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGHTfcCIWQq1-KabH8febHDAT0D-w"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT133408736" lang="ZH" load-source="patent-office">一种登录验证方法、客户端、服务器及系统</invention-title>
+      </span><br><span class="patent-number">CN 103581108 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA129953749" lang="ZH" load-source="patent-office">
+    <div class="abstract">本申请提供了一种登录验证方法、客户端、服务器及系统，该方法中，在用户登录时，客户端获取用户发送的登录被保护账户体系的登录请求，并确定与待登录账户相对应的当前关联账户体系的特征信息；生成登录验证信息；发送所述登录验证信息给服务器，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集时，确定所述登录为可信登录。该方法中，服务器根据预先存储的，与待登录账户对应的可信特征信息对用户的登录行为进行验证，无需通过数字证书或U盾来进行额外的操作进行登录验证，简化了登录验证过程，提高了服务器进行登录验证的效率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(14)</span></span></div><div class="patent-text"><div mxw-id="PCLM59151196" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种登录验证方法，其特征在于，包括:  获取用户发送的登录被保护账户体系的登录请求，所述登录请求中至少包括待登录账户；  从当前登录主机上存储的特征信息中，确定与所述待登录账户相对应的当前关联账户体系的特征信息；  生成至少包括有所述当前关联账户体系的特征信息的登录验证信息；  发送所述登录验证信息给服务器，所述登录验证信息中的当前关联账户体系的特征信息为，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集，且所述交集符合预设条件时，确定所述登录为可信登录的依据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述可信特征信息按照以下步骤获得:  获取用户发送的，首次登录所述待登录账户的登录请求；  从首次登录的主机上存储的特征信息中，确定与所述待登录账户对应的首次关联账户体系的特征信息；  发送所述首次关联账户体系的特征信息给服务器，所述首次关联账户体系的特征信息为所述服务器确定与所述待登录账户对应的可信特征信息的依据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1或2所述的方法，其特征在于，所述特征信息包括:账户体系所对应的网络流量中的预设报文或所述预设报文中的预设字段。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1或2所述的方法，其特征在于，还包括:  将所述当前关联账户体系的特征信息进行不可逆处理。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.一种登录验证方法，其特征在于，包括:  接收客户端发送的登录验证信息，所述登录验证信息至少包括有与待登录账户对应的当前关联账户体系的特征信息的登录验证信息，所述当前关联账户体系的特征信息为客户端获取用户发送的登录请求后，从当前登录主机存储的特征信息中确定的；  将所述当前关联账户体系的特征信息与预先存储的，与所述待登录账户相对应的可信特征信息进行对比；  当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，当两者不存在交集或所述交集不符合预设条件时，还包括:  验证所述当前登录主机是否为可信主机，若是，则确定所述登录为可信登录，若否，则确定所述登录为不可信登录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其特征在于，当所述登录验证信息中还包括有所述当前登录主机的机器特征时，所述验证所述当前登录主机是否为可信主机的过程包括:  当所述当前登录主机的机器特征符合第一可信条件时，所述当前登录主机为可信主机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求6所述的方法，其特征在于，所述验证所述当前登录主机是否为可信主机的过程包括:  获取所述当前登录主机的历史登录记录；  当所述历史登录记录符合第二可信条件时，所述当前登录主机为可信主机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的方法，其特征在于，所述验证所述当前登录主机是否为可信主机的过程包括:  对所述当前登录主机进行二次认证；  当所述当前登录主机二次认证通过时，所述当前登录主机为可信主机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求6-9中任意一项所述的方法，其特征在于，所述可信特征信息按照以下步骤获得；  接收客户端发送的，与所述待登录账户对应的首次关联账户体系的特征信息，所述首次关联账户体系的特征信息为，用户首次登录所述待登录账户时，从首次登录的主机上存储的特征信息中确定的；   依据所述首次关联账户体系的特征信息，确定与所述待登录账户对应的可信特征信肩、O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的方法，其特征在于，当验证所述当前登录主机为可信主机，确定所述登录为可信登录后，还包括:  将所述当前关联账户体系的特征信息添加到所述预先存储的，与所述待登录账户相对应的可信特征信息中，以更新所述待登录账户对应的可信特征信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.&#8212;种登录验证客户端，其特征在于，包括:  登录请求获取模块，用于获取用户发送的登录被保护账户体系的登录请求，所述登录请求中至少包括待登录账户；  当前关联账户体系的特征信息确定模块，用于从当前登录主机上存储的特征信息中，确定与所述待登录账户相对应的当前关联账户体系的特征信息；  登录验证信息生成模块，用于生成至少包括所述当前关联账户体系的特征信息的登录验证信息；  登录验证信息发送模块，用于发送所述登录验证信息给服务器，所述登录验证信息中的当前关联账户体系的特征信息为，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录的依据。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.&#8212;种登录验证服务器，其特征在于，包括:  登录验证信息接收模块，用于接收客户端发送的登录验证信息，所述登录验证信息至少包括与待登录账户对应的当前关联账户体系的特征信息的登录验证信息，所述当前关联账户体系的特征信息为客户端获取用户发送的登录请求后，从当前登录主机存储的特征信息中确定的；  对比模块，用于将所述当前关联账户体系的特征信息与预先存储的，与所述待登录账户相对应的可信特征信息进行对比；  可信登录确定模块，用于当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.一种登录验证系统，其特征在于，包括:如权利要求12所述的客户端和如权利要求13所述的服务器。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES66391944" lang="ZH" load-source="patent-office" class="description">
+    <p>&#8212;种登录验证方法、客户端、服务器及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本申请涉及互联网技术领域，特别涉及一种登录验证方法、客户端、服务器及系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着互联网技术的发展，网络已经与人们的生活密不可分，越来越多的人选择网络作为通信、娱乐和购物的工具。通过申请QQ、MSN账号等与他人进行联系，或者通过注册淘宝等网上购物网站账号进行购物。但是，目前账号被盗现象非常明显，很多用户的QQ、MSN账号被他人利用盗号软件等非法手段盗取，非法登录，影响了用户的正常使用，更有甚者，造成了用户的经济损失，由于网络服务器无法识别用户的账号是正常登录还是非法登录，从而使得网络的安全性大大降低。</p>
+    <p>[0003]目前，各个服务器为了能够准确识别用户登录是否可信，解决账号被非法登录的问题，很多服务提供者选择了数字证书或账号与硬件绑定等方式。数字证书就是互联网通讯中标志通讯各方身份信息的一系列数据，提供了一种通过网络在服务器端验证用户身份的方式，根据用户身份给予相应的网络资源访问权限，用户申请使用数字证书后，如果在其他电脑登录，在没有导入数字证书备份的情况下，用户只能查询账户，不能进行任何操作，从而增强该用户的账户的使用安全性。但是用户更换平常使用的电脑后，就需要重新申请数字证书才能使服务器对其准确识别。</p>
+    <p>[0004]	而账号与硬件绑定的方式还有U盾或移动数字证书，首先用户需要购买U盾，然后建立账号与U盾的联系。当进行网上交易时，银行会向用户发送由时间字串、地址字串、交易信息字串和防重放攻击字串组合在一起进行加密后得到的字串A，用户的U盾将根据用户的个人证书对字串A进行不可逆运算得到字串B，并将字串B发送给银行，银行端也同时进行该不可逆运算，如果银行运算结果和用户的运算结果一致便认为用户登录合法，交易便可以完成，如果不一致便认为用户不合法，交易便会失败，从而保证了网络的安全性。</p>
+    <p>[0005]	但是，综上所述可以看出，在对用户登录进行验证的过程中，无论是申请数字证书的过程还是建立U盾与用户账户间联系的过程都较为繁琐，无法在服务器端实现高效且准确的对用户登录是否可信识别。</p>
+    <p>发明内容</p>
+    <p>[0006]	本申请的目的在于，提供一种登录验证方法，以解决现有技术中无法在服务器端实现高效且准确的对用户登录是否可信识别的问题，具体方案如下:</p>
+    <p>[0007]	一种登录验证方法，包括:</p>
+    <p>[0008]	获取用户发送的登录被保护账户体系的登录请求，所述登录请求中至少包括待登录账户；</p>
+    <p>[0009]	从当前登录主机上存储的特征信息中，确定与所述待登录账户相对应的当前关联账户体系的特征信息；[0010]	生成至少包括有所述当前关联账户体系的特征信息的登录验证信息；</p>
+    <p>[0011]	发送所述登录验证信息给服务器，所述登录验证信息中的当前关联账户体系的特征信息为，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集，且所述交集符合预设条件时，确定所述登录为可信登录的依据。</p>
+    <p>[0012]	优选的，所述可信特征信息按照以下步骤获得:</p>
+    <p>[0013]	获取用户发送的，首次登录所述待登录账户的登录请求；</p>
+    <p>[0014]	从首次登录的主机上存储的特征信息中，确定与所述待登录账户对应的首次关联账户体系的特征信息；</p>
+    <p>[0015]	发送所述首次关联账户体系的特征信息给服务器，所述首次关联账户体系的特征信息为所述服务器确定与所述待登录账户对应的可信特征信息的依据。</p>
+    <p>[0016]	优选的，所述特征信息包括:账户体系所对应的网络流量中的预设报文或所述预设报文中的预设字段。</p>
+    <p>[0017]	优选的，还包括:</p>
+    <p>[0018]	将所述当前关联账户体系的特征信息进行不可逆处理。</p>
+    <p>[0019]	一种登录验证方法，包括:</p>
+    <p>[0020]	接收客户端发送的登录验证信息，所述登录验证信息至少包括有与待登录账户对应的当前关联账户体系的特征信息的登录验证信息，所述当前关联账户体系的特征信息为客户端获取用户发送的登录请求后，从当前登录主机存储的特征信息中确定的；</p>
+    <p>[0021]	将所述当前关联账户体系的特征信息与预先存储的，与所述待登录账户相对应的可信特征信息进行对比；</p>
+    <p>[0022]	当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录。</p>
+    <p>[0023]	优选的，当两者不存在交集或所述交集不符合预设条件时，还包括:</p>
+    <p>[0024]	验证所述当前登录主机是否为可信主机，若是，则确定所述登录为可信登录，若否，则确定所述登录为不可信登录。</p>
+    <p>[0025]	优选的，当所述登录验证信息中还包括有所述当前登录主机的机器特征时，所述验证所述当前登录主机是否为可信主机的过程包括:</p>
+    <p>[0026]	当所述当前登录主机的机器特征符合第一可信条件时，所述当前登录主机为可信主机。</p>
+    <p>[0027]	优选的，所述验证所述当前登录主机是否为可信主机的过程包括:</p>
+    <p>[0028]	获取所述当前登录主机的历史登录记录；</p>
+    <p>[0029]	当所述历史登录记录符合第二可信条件时，所述当前登录主机为可信主机。</p>
+    <p>[0030]	优选的，所述验证所述当前登录主机是否为可信主机的过程包括:</p>
+    <p>[0031]	对所述当前登录主机进行二次认证；</p>
+    <p>[0032]	当所述当前登录主机二次认证通过时，所述当前登录主机为可信主机。</p>
+    <p>[0033]	优选的，所述可信特征信息按照以下步骤获得；</p>
+    <p>[0034]	接收客户端发送的，与所述待登录账户对应的首次关联账户体系的特征信息，所述首次关联账户体系的特征信息为，用户首次登录所述待登录账户时，从首次登录的主机上存储的特征信息中确定的；</p>
+    <p>[0035]	依据所述首次关联账户体系的特征信息，确定与所述待登录账户对应的可信特征信息。</p>
+    <p>[0036]	优选的，当验证所述当前登录主机为可信主机，确定所述登录为可信登录后，还包括:</p>
+    <p>[0037]	将所述当前关联账户体系的特征信息添加到所述预先存储的，与所述待登录账户相对应的可信特征信息中，以更新所述待登录账户对应的可信特征信息。</p>
+    <p>[0038]	本申请还提供了一种登录验证客户端、服务器和系统，用以保证上述方法在实际中的实现及应用</p>
+    <p>[0039]	一种登录验证客户端，包括:</p>
+    <p>[0040]	登录请求获取模块，用于获取用户发送的登录被保护账户体系的登录请求，所述登录请求中至少包括待登录账户；</p>
+    <p>[0041]	当前关联账户体系的特征信息确定模块，用于从当前登录主机上存储的特征信息中，确定与所述待登录账户相对应的当前关联账户体系的特征信息；</p>
+    <p>[0042]	登录验证信息生成模块，用于生成至少包括所述当前关联账户体系的特征信息的登录验证彳目息；</p>
+    <p>[0043]	登录验证信息发送模块，用于发送所述登录验证信息给服务器，所述登录验证信息中的当前关联账户体系的特征信息为，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录的依据。</p>
+    <p>[0044]	一种登录验证服务器，包括:</p>
+    <p>[0045]	登录验证信息接收模块，用于接收客户端发送的登录验证信息，所述登录验证信息至少包括与待登录账户对应的当前关联账户体系的特征信息的登录验证信息，所述当前关联账户体系的特征信息为客户端获取用户发送的登录请求后，从当前登录主机存储的特征信息中确定的；</p>
+    <p>[0046]	对比模块，用于将所述当前关联账户体系的特征信息与预先存储的，与所述待登录账户相对应的可信特征信息进行对比；</p>
+    <p>[0047]	可信登录确定模块，用于当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录。</p>
+    <p>[0048]	一种登录验证系统，包括:如上所述的客户端和如上所述的服务器。</p>
+    <p>[0049]	与现有技术相比，本申请包括以下优点:本申请实施例公开的一种登录验证方法，在用户登录时，客户端获取用户发送的登录被保护账户体系的登录请求，并从当前登录主机上存储的特征信息中，确定与待登录账户相对应的当前关联账户体系的特征信息；生成至少包括有所述登录请求和所述不可逆处理后的当前关联账户体系的特征信息的登录验证信息；发送所述登录验证信息给服务器，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集时，确定所述登录为可信登录。该方法中，服务器根据预先存储的，与待登录账户对应的可信特征信息对用户的登录行为进行验证，无需通过数字证书或U盾来进行额外的操作进行登录验证，简化了登录验证过程，提高了服务器进行登录验证的效率。</p>
+    <p>[0050]	进一步的，由于无需购买U盾或数字证书，降低了用户的使用成本。</p>
+    <p>[0051]	当然，实施本申请的任一产品并不一定需要同时达到以上所述的所有优点。附图说明</p>
+    <p>[0052]	为了更清楚地说明本申请实施例中的技术方案，下面将对实施例描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本申请的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0053]	图1为本申请实施例公开的QQ账户体系与服务器进行数据交互时发送的报文示意图；</p>
+    <p>[0054]	图2为本申请实施例公开的一种登录验证方法的流程图；</p>
+    <p>[0055]	图3为本申请实施例公开可信特征信息建立过程流程图；</p>
+    <p>[0056]	图4为本申请实施例公开的又一登录验证方法的流程图；</p>
+    <p>[0057]	图5为本申请实施例公开的判断当前登录主机的机器特征是否符合第一可信条件的流程图；</p>
+    <p>[0058]	图6为本申请实施例公开的又一判断当前登录主机的机器特征是否符合第一可信条件的流程图；</p>
+    <p>[0059]	图7为本申请实施例公开的判断历史登录记录是否符合第二可信条件的流程图；</p>
+    <p>[0060]	图8为本申请实施例公开的又一判断历史登录记录是否符合第二可信条件的流程图；</p>
+    <p>[0061]	图9为本申请实施例公开的又一验证主机是否为可信主机的流程图；</p>
+    <p>[0062]	图10为本申请实施例公开的又一获得可信特征信息的流程图；</p>
+    <p>[0063]	图11为本申请实施例公开的登录验证客户端的结构示意图；</p>
+    <p>[0064]	图12为本申请实施例公开的登录验证服务器的结构示意图；</p>
+    <p>[0065]	图13为本申请实施例公开的登录验证系统的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0066]	下面将结合本申请实施例中的附图,对本申请实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本申请一部分实施例，而不是全部的实施例。基于本申请中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本申请保护的范围。</p>
+    <p>[0067]	本申请可用于众多通用或专用的计算系统环境或配置中。例如:个人计算机、服务器计算机、手持设备或便携式设备、平板型设备、多处理器系统、包括以上任何系统或设备的分布式计算环境等等。</p>
+    <p>[0068]	本申请可以在由计算机执行的计算机可执行指令的一般上下文中描述，例如程序模块。一般地，程序模块包括执行特定任务或实现特定抽象数据类型的例程、程序、对象、组件、数据结构等等。也可以在分布式计算环境中实践本申请，在这些分布式计算环境中，由通过通信网络而被连接的远程处理设备来执行任务。在分布式计算环境中，程序模块可以位于包括存储设备在内的本地和远程计算机存储介质中。</p>
+    <p>[0069]	本申请的主要思想之一可以包括，客户端获取用户发送的登录被保护账户体系的登录请求，所述登录请求中至少包括待登录账户；从当前登录主机上存储的特征信息中，确定与所述待登录账户相对应的当前关联账户体系的特征信息；生成至少包括有所述登录请求和所述不可逆处理后的当前关联账户体系的特征信息的登录验证信息；发送所述登录验证信息给服务器，所述登录验证信息中的不可逆处理后的当前关联账户体系的特征信息为，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集时，确定所述登录为可信登录的依据。</p>
+    <p>[0070]	在用户进行登录的主机上，通常装很多基于账户体系的软件，如QQ，MSN，0utLook，迅雷、支付宝等，这些软件都会与服务器交互，同时发出含有一定特征流量信息的数据报文。本申请将用户通过这些账户体系与服务器进行信息交互时发送的网络流量中，某些包含有一定流量特征信息的数据报文，或者是，该数据报文中特定字段作为这些账户体系对应的特征信息，本实施例中，数据报文的类型以及特定的字段可以根据情况进行预先设定。以QQ账户体系为例，图1中所示为通过QQ账户体系与服务器进行数据交互时发送的报文，其包含有多个字节。可以将整个报文所包含的内容作为QQ账户体系对应的特征信息，也可以从其包含的多个字节中，选择特定位置处的字节所包含的信息，作为特征信息，例如，选择第7-10个字节所包含的信息，也就是QQ号码，作为QQ账户体系对应的特征信息。本申请也并不限定将账户体系与服务器进行信息交互时发送的数据报文或者数据报文中的字段作为特征信息，同样也可以将账户体系在登录主机上运行时所生成的本地数据作为特征信息，例如，运行QQ时，QQ软件获取的本地系统时间。本申请实施例公开的登录验证方法的基础在于，选择一个账户体系作为被保护账户体系，并确定某一个或某几个其他的账户体系作为被保护账户体系的关联账户体系。例如，确定支付宝为被保护账户体系，确定QQ为关联账户体系。通过关联账户体系的特征信息，来验证用户登录被保护账户体系时是否为可信。其具体的过程如下述实施例所示。</p>
+    <p>[0071]	如图2所示为本申请实施例公开的一种登录验证方法的流程，该流程应用于登录验证客户端，包括:</p>
+    <p>[0072]	步骤S201、获取用户发送的登录被保护账户体系的登录请求，所述登录请求中至少包括待登录账户；</p>
+    <p>[0073]	假设当前被保护账户体系为支付宝，当用户在主机上登录支付宝账户时，运行在主机上的登录验证客户端获取用户的登录请求。</p>
+    <p>[0074]	步骤S202、从当前登录主机上存储的特征信息中，确定与所述待登录账户相对应的当前关联账户体系的特征信息；</p>
+    <p>[0075]	假设与当前登录账户对应的关联账户体系为QQ。从当前登陆主机上存储的特征信息中，获取与登录的支付宝账户对应的当前的QQ特征信息。与支付宝账户对应的当前QQ特征信息可以为存储在当前主机上的，所有QQ账号对应的特征信息，也可以为，在预设时间段内在当前主机上进行登录过的QQ账号对应的特征信息。</p>
+    <p>[0076]	步骤S203、生成至少包括有所述当前关联账户体系的特征信息的登录验证信息；</p>
+    <p>[0077]	步骤S204、发送所述登录验证信息给服务器。</p>
+    <p>[0078]	所述登录验证信息中的当前关联账户体系的特征信息为，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录的依据。</p>
+    <p>[0079]	两者存在交集即表示，可信特征信息中包含有当前关联账户体系的特征信息中的信息，或者，当前关联账户体系的特征信息中包含有可信特征信息中的信息。</p>
+    <p>[0080]	举例说明，假设服务器中预先存储的与待登录账户对应的可信特征信息中包含有QQ号码:A、B和C。本次登录时发送的当前关联账户体系的特征信息中包含有QQ号码AJiJ证明两者间存在交集。</p>
+    <p>[0081]	交集符合预设条件可以为:该交集中所包含的关联账户的个数不小于预设值，例如三个。该预设值可以根据实际情况任意设定，若当前应用的场景需要高度可靠时，该预设值可以为较大值，也就是说，当两者中的交集越多，越可靠。而若当前的应用场景无需高度可靠时，该预设值可以为一个较小值。若交集中所包含的关联账户的个数小于预设值，则虽然两者间存在交集，但是该交集不符合条件。</p>
+    <p>[0082]	进一步的，该交集符合预设条件还可为:交集中是否包含某一个或某几个特定的关联账户特征信息。例如，假设QQ号码A是特定的关联账户特征信息，若可信特征信息中包含有A、B和C，而当前关联账户特征信息中包含有B和C，若以此时的条件进行判断，由于其并不包含有特定的关联账户A，则表明两者间虽然存在交集，但是该交集并不符合预设条件。</p>
+    <p>[0083]	本实施例公开的登录验证方法中，客户端将当前登录主机上存储的，与被保护账户体系中的待登录账户对应的当前关联账户特征信息发送给服务器，从而使得服务器能够根据预先存储的与所述待登录账户对应的可信特征信息进行对比，当两者存在交集时，确定此次登录为可信登录。从而无需通过数字证书或U盾来进行额外的操作进行登录验证，简化了登录验证过程，提高了服务器进行登录验证的效率。</p>
+    <p>[0084]	进一步的，由于无需购买U盾或数字证书，降低了用户的使用成本。</p>
+    <p>[0085]	进一步的，还可以包括:</p>
+    <p>[0086]	将所述当前关联账户体系的特征信息进行不可逆处理；</p>
+    <p>[0087]	具体的操作可以为，将QQ特征信息进行取哈希值处理，得到与其对应的哈希值。</p>
+    <p>[0088]	上述将当前关联账户体系的特征信息进行不可逆处理的过程可以添加在发送所述登录验证信息给服务器之前，从而保证该特征信息传输过程中不被恶意更改，从而保证特征信息的准确性，进一步提高验证过程的准确性。</p>
+    <p>[0089]	进一步的，上述实施例中，服务器中预先存储有与待登录账户对应的可信特征信息，该可信特征信息通过以下步骤建立，具体流程如图3所示，包括:</p>
+    <p>[0090]	步骤S301、获取用户发送的，首次登录所述待登录账户的登录请求；</p>
+    <p>[0091]	用户首次注册所述待登录账户时，客户端获取器登录请求。</p>
+    <p>[0092]	步骤S302、从首次登录的主机上存储的特征信息中，确定与所述待登录账户对应的首次关联账户体系的特征信息；</p>
+    <p>[0093]	假设用户首次注册时所使用的主机上存储有三个QQ号码的特征信息，则这三个QQ号码的特征信息都将作为首次关联账户体系的特征信息。</p>
+    <p>[0094]	步骤S303、发送所述首次关联账户体系的特征信息给服务器，所述首次关联账户体系的特征信息为所述服务器确定与所述待登录账户对应的可信特征信息的依据。</p>
+    <p>[0095]	服务器接收到首次关联账户体系的特征信息后，将其进行存储，可以直接将其作为待登录账户的可信特征信息，也可以对其进行其他处理后，例如将其进行不断的更新，将更新后的内容作为与所述待处理账户对应的可信特征信息。[0096]	本实施例中可以将客户端作为一个后台长期运行的进程，作为关联账户特征信息学习器，该进程提取存储在主机上的关联账户特征信息等，不可逆处理后上传到服务器中。由服务器来进行存储维护，并根据客户端上传的特征信息对可信特征信息进行更新。</p>
+    <p>[0097]	由于用户在首次登录账户时很难出现不可信登录的情况，因此，将用户在首次登录时所利用的主机上存储的关联账户特征信息作为得到可信特征信息的依据是十分可靠的，能够在很大程度上保证验证过程的准确性。</p>
+    <p>[0098]	进一步的，本实施例中还可以包括:将所述首次关联账户体系的特征信息进行不可逆处理的过程。</p>
+    <p>[0099]	该过程可以添加在将所述首次关联账户体系的特征信息发送给服务器的步骤之前，从而保证该特征信息传输过程中不被恶意更改，从而保证特征信息的准确性，进一步提高后续依据该特征信息进行登录验证过程的准确性。</p>
+    <p>[0100]	图4为本申请同时公开的又一登录验证方法的流程，其应用在登录验证服务器端，具体包括:</p>
+    <p>[0101]	步骤S401、接收客户端发送的登录验证信息；</p>
+    <p>[0102]	所述登录验证信息至少包括有与待登录账户对应的当前关联账户体系的特征信息的登录验证信息，该当前关联账户体系的特征信息为客户端获取用户发送的登录请求后，从当前登录主机存储的特征信息中确定的；</p>
+    <p>[0103]	所述特征信息为账户体系所对应的网络流量中的预设报文或所述预设报文中的预设字段；</p>
+    <p>[0104]	步骤S402、将所述当前关联账户体系的特征信息与预先存储的，与所述待登录账户相对应的可信特征信息进行对比；</p>
+    <p>[0105]	假设当前关联账户体系的特征信息为QQ号码:A、B、C和D，而可信特征信息为QQ号码:C和D。</p>
+    <p>[0106]	步骤S403、当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录。</p>
+    <p>[0107]	对比上述两个特征，发现存在公共的交集C和D，若此时的预设条件为该交集中所包含的关联账户的个数不小于两个，则证明两者之间存在交集，并且，该交集符合预设条件，此次登录为可信登录。</p>
+    <p>[0108]	进一步的，当两者不存在交集，或，所述交集不符合预设条件时，还包括:验证所述当前登录主机是否为可信主机，若是，则确定所述登录为可信登录，若否，则确定所述登录为不可信登录。</p>
+    <p>[0109]	具体的，当客户端向服务器发送的登录验证信息中还包括当前登录主机的机器特征时，验证所述当前登录主机是否为可信主机的过程包括:</p>
+    <p>[0110]	判断当前登录主机的及其特征是否符合第一可信条件，如果符合，则当前登录主机为可信，若不符合，则为不可信。本申请实施例中所述的机器特征为主机的ID、主机的MAC地址、主机的硬盘序列号、主机的CPU ID等。</p>
+    <p>[0111]	上述判断当前登录主机的机器特征是否符合第一可信条件过程的一种具体实现方式如图5所示,包括:</p>
+    <p>[0112]	步骤S501、获取预先存储的，与所述待登录账户对应的首次登录机器特征；[0113]	步骤S502、当所述首次机器登录特征与所述当前登录主机的机器特征相同时，确定所述当前登录主机为可信主机。</p>
+    <p>[0114]	也就是说，该当前登录主机为用户第一次登录该待登录账户时的主机，因此，其为可信主机，此次登录也可认定为可信登录。</p>
+    <p>[0115]	上述判断当前登录主机的及其特征是否符合第一可信条件过程的又一实现过程如图6所示,包括:</p>
+    <p>[0116]	步骤S601、获取所述机器特征中的当前登录主机ID ；</p>
+    <p>[0117]	步骤S602、当预先存储的公共主机ID集合中包含有所述当前登录主机的ID时，确定所述当前登录主机为公共主机，所述当前登录主机为不可信主机。</p>
+    <p>[0118]	上述过程中，通过判断当前登录主机是否为公共主机，例如，网吧内的主机或者公共机房内的主机，如果该当前登录主机不是公共主机，则可认定其为可信主机，若其为公共主机，则其为不可信主机。</p>
+    <p>[0119]	验证所述当前登录主机是否为可信主机的过程还可以包括:获取所述当前登录主机的历史登录记录；</p>
+    <p>[0120]	当所述历史登录记录符合第二可信条件时，所述当前登录主机为可信主机。</p>
+    <p>[0121]	上述判断历史登录记录符合第二可信条件的过程的一种实现方式如图7所示，包括:</p>
+    <p>[0122]	步骤S701、获取历史登录记录中，属于被保护账户体系下的历史登录账户个数；</p>
+    <p>[0123]	步骤S702、当所述个数不大于预设登录个数时，所述当前登录主机为可信。</p>
+    <p>[0124]	该过程中，通过当前登录主机的历史登录记录中，历史登录账户个数判断该主机是否为公共主机，若为公共主机，则不可信。</p>
+    <p>[0125]	上述判断历史登录记录符合第二可信条件的过程的又一种实现方式如图8所示，包括:</p>
+    <p>[0126]	步骤S801、获取历史登录记录中，与所述待登录账户对应的登录记录；</p>
+    <p>[0127]	步骤S802、当其登录次数超过预设次数，或者，持续登录时间超过预设时间时，所述当前登录主机为可信。</p>
+    <p>[0128]	本实施例中，通过历史登录记录，判断用户是否多次在该主机上登录，或者用户是否持续在该主机上登录了一段时间来判断该主机是否可信。其预设次数可以为五次或十次等任意设定的值。该预设时间可以为一周或一个月等任意设定的时间值。</p>
+    <p>[0129]	进一步的，验证所述当前登录主机是否为可信主机的过程还可以如图9所述，包括:</p>
+    <p>[0130]	步骤S901、对所述当前登录主机进行二次认证；</p>
+    <p>[0131]	具体的二次认证方式可以有多种，例如发送手机验证码等，在此不再赘述。</p>
+    <p>[0132]	步骤S902、当所述当前登录主机二次认证通过时，所述当前登录主机为可信主机。</p>
+    <p>[0133]	本实施例并不限定只能采用如图5-9中所示的流程来判断当前登录主机是否可信，其他能够验证主机是否可信的方法都是本申请实施例保护的范围。</p>
+    <p>[0134]	并且，本实施例也并不限定只能单独按照图5-9中任意一个流程来验证主机是否可信。本领域技术人员可以根据实际的场景，任意的将其中的判别条件进行组合，利用组合后的条件对主机进行验证，从而进一步的提高验证结果的可靠性。[0135]	本申请实施例同时公开了服务器端获得可信特征信息的过程，如图10所示，包括:</p>
+    <p>[0136]	步骤S1001、接收客户端发送的，与所述待登录账户对应的首次关联账户体系的特征信息；</p>
+    <p>[0137]	所述首次关联账户体系的特征信息为，用户首次登录所述待登录账户时，从首次登录的主机上存储的特征信息中确定的；</p>
+    <p>[0138]	步骤S1002、依据所述首次关联账户体系的特征信息，确定与所述待登录账户对应的可信特征信息。</p>
+    <p>[0139]	本实施例中，确定与所述待登录账户对应的可信特征信息可以为，将所述首次关联账户体系的特征信息进行存储，并将其作为与待登录账户对应的可信特征信息。或者，不断对首次关联账户体系的特征信息进行更新，将更新后的内容作为可信特征信息。</p>
+    <p>[0140]	其具体的更新过程可以为:</p>
+    <p>[0141]	当验证所述当前登录主机为可信主机，确定所述登录为可信登录后，将所述不可逆处理后的当前关联账户体系的特征信息添加到所述预先存储的，与所述待登录账户相对应的可信特征信息中，以更新所述待登录账户对应的可信特征信息。</p>
+    <p>[0142]	假设用户首次关联账户体系的特征信息为QQ号码A、B和C。当前登录主机中的当前关联账户体系的特征信息为QQ号码D、E和F，当该登录主机为可信主机时，将QQ号码D、E和F添加到可信特征信息中，作为更新后可信特征信息。</p>
+    <p>[0143]	本申请实施例同时公开了一种登录验证客户端，该客户端运行在主机上，其结构如图11所示，包括:</p>
+    <p>[0144]	登录请求获取模块111，用于获取用户发送的登录被保护账户体系的登录请求，所述登录请求中至少包括待登录账户；</p>
+    <p>[0145]	当前关联账户体系的特征信息确定模块112，用于从当前登录主机上存储的特征信息中，确定与所述待登录账户相对应的当前关联账户体系的特征信息；</p>
+    <p>[0146]	登录验证信息生成模块113，用于生成至少包括所述不可逆处理后的当前关联账户体系的特征信息的登录验证信息；</p>
+    <p>[0147]	登录验证信息发送模块114，用于发送所述登录验证信息给服务器，所述登录验证信息中的当前关联账户体系的特征信息为，服务器通过与预先存储的、与所述待登录账户相对应的可信特征信息进行对比，当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录的依据。</p>
+    <p>[0148]	进一步的，还可以将当前关联账户体系的特征信息进行不可逆处理。</p>
+    <p>[0149]	进一步的，本实施例并不限定其工作过程如上所述，其具体的工作过程还可参考图2或图3所不流程。</p>
+    <p>[0150]	本实施例公开的登录验证客户端，当获取到用户登录被保护体系的登录请求时，主动获取当前登录主机上的关联账户的特征信息，并发送至服务器，作为验证登录是否可信的依据。从而实现了简化登录验证过程，提高服务器进行登录验证效率的目的。</p>
+    <p>[0151]	本申请同时公开了一种登录验证服务器，其结构如图12所示，包括:</p>
+    <p>[0152]	登录验证信息接收模块121，用于接收客户端发送的登录验证信息，所述登录验证信息至少包括与待登录账户对应的当前关联账户体系的特征信息的登录验证信息，所述当前关联账户体系的特征信息为客户端获取用户发送的登录请求后，从当前登录主机存储的特征信息中确定的；</p>
+    <p>[0153]	对比模块122，用于将所述当前关联账户体系的特征信息与预先存储的，与所述待登录账户相对应的可信特征信息进行对比；</p>
+    <p>[0154]	可信登录确定模块123，用于当两者存在交集且所述交集符合预设条件时，确定所述登录为可信登录。</p>
+    <p>[0155]	进一步的，还包括:主机验证模块124，用于当两者不存在交集或所述交集不符合预设条件时，验证所述当前登录主机是否为可信主机，若主机为可信，则登录为可信登录，若主机为不可信，则登录为不可信登录。</p>
+    <p>[0156]	进一步的，本实施例并不限定其工作过程如上所述，其具体的工作过程还可参考图4-10中所不流程。</p>
+    <p>[0157]	本实施例公开的登录验证服务器，通过将客户端发送的当前关联账户体系特征信息与可信特征信息进行对比，通过是否包含交集判断其是否为可信登录，简化了验证步骤，提闻了验证的效率，并且，进一步提闻了验证的可罪性。</p>
+    <p>[0158]	本申请同时公开了一种登录验证系统,其结构如图13所示,包括:如图11所示的登录验证客户端和如图12所示的登录验证服务器。两者的工作过程在此不再赘述。</p>
+    <p>[0159]	本实施例中的登录验证系统，通过登录验证客户端和登录验证服务器的协同配合，实现用户登录行为的验证，简化了现有验证过程的步骤，提高了验证效率。</p>
+    <p>[0160]	需要说明的是，本说 明书中的各个实施例均采用递进的方式描述，每个实施例重点说明的都是与其他实施例的不同之处，各个实施例之间相同相似的部分互相参见即可。对于系统类实施例而言，由于其与方法实施例基本相似，所以描述的比较简单，相关之处参见方法实施例的部分说明即可。</p>
+    <p>[0161]	最后，还需要说明的是，在本文中，诸如第一和第二等之类的关系术语仅仅用来将一个实体或者操作与另一个实体或操作区分开来，而不一定要求或者暗示这些实体或操作之间存在任何这种实际的关系或者顺序。而且，术语“包括”、“包含”或者其任何其他变体意在涵盖非排他性的包含，从而使得包括一系列要素的过程、方法、物品或者设备不仅包括那些要素，而且还包括没有明确列出的其他要素，或者是还包括为这种过程、方法、物品或者设备所固有的要素。在没有更多限制的情况下，由语句“包括一个……”限定的要素，并不排除在包括所述要素的过程、方法、物品或者设备中还存在另外的相同要素。</p>
+    <p>[0162]	以上对本申请所提供的用户身份识别方法及服务器进行了详细介绍，本文中应用了具体个例对本申请的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本申请的方法及其核心思想；同时，对于本领域的一般技术人员，依据本申请的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本申请的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101067832A?cl=zh">CN101067832A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年6月12日</td><td class="patent-data-table-td patent-date-value">2007年11月7日</td><td class="patent-data-table-td ">广州金山多益网络科技有限公司</td><td class="patent-data-table-td ">网络游戏的关联帐号系统及其登录方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101719880A?cl=zh">CN101719880A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年11月13日</td><td class="patent-data-table-td patent-date-value">2010年6月2日</td><td class="patent-data-table-td ">东南大学</td><td class="patent-data-table-td ">一种多协议多帐号即时消息的融合系统及其工作方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102158465A?cl=zh">CN102158465A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年2月11日</td><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">上海博泰悦臻电子设备制造有限公司</td><td class="patent-data-table-td ">车载设备、车载系统及车载登录方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102238292A?cl=zh">CN102238292A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年4月30日</td><td class="patent-data-table-td patent-date-value">2011年11月9日</td><td class="patent-data-table-td ">上海博泰悦臻电子设备制造有限公司</td><td class="patent-data-table-td ">座席登录管理方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20080034411">US20080034411</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年12月15日</td><td class="patent-data-table-td patent-date-value">2008年2月7日</td><td class="patent-data-table-td ">Fujitsu Limited</td><td class="patent-data-table-td ">Login administration method and server</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20090158404">US20090158404</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年12月17日</td><td class="patent-data-table-td patent-date-value">2009年6月18日</td><td class="patent-data-table-td ">International Business Machines Corporation</td><td class="patent-data-table-td ">Apparatus, system, and method for user authentication based on authentication credentials and location information</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=dnfxCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=dnfxCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/10">H04L63/10</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=dnfxCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/08">H04L63/08</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年2月12日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/124289659fecf238773e/CN103581108A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%99%BB%E5%BD%95%E9%AA%8C%E8%AF%81%E6%96%B9%E6%B3%95_%E5%AE%A2%E6%88%B7%E7%AB%AF_%E6%9C%8D.pdf?id=dnfxCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1OxcNx368UY5_wkhqbZlpXu62-dg"},"sample_url":"https://www.google.com/patents/reader?id=dnfxCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html><html><head><title>专利 CN101374147A - 一种软件升级检测的方法、装置及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种软件升级检测的方法、装置及系统"><meta name="DC.contributor" content="振 钟" scheme="inventor"><meta name="DC.contributor" content="深圳华为通信技术有限公司" scheme="assignee"><meta name="DC.date" content="2008-9-10" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了一种软件升级检测的方法、装置及系统，软件升级检测的方法包括：软件启动时，对软件的运行时间进行计时，并判断升级等待时间是否为零；在判断升级等待时间为零时，生成随机数；将升级等待时间更改为上述随机数；在判断软件的运行时间到达升级等待时间时，从升级服务器检测软件的升级版本。本发明实施例由于设置了升级等待时间，且升级等待时间随机产生，在判断软件运行到达升级等待时间时从升级服务器检测新版本，使得各客户端从升级服务器下载软件的升级文件的时机在一定程度上按照时间均摊，进而对升级服务器带宽的需求进一步降低，从而降低了成本，也提升了用户体验。"><meta name="DC.date" content="2009-2-25"><meta name="citation_patent_publication_number" content="CN:101374147:A"><meta name="citation_patent_application_number" content="CN:200810149520"><link rel="canonical" href="https://www.google.com/patents/CN101374147A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101374147A?cl=zh"/><meta name="title" content="专利 CN101374147A - 一种软件升级检测的方法、装置及系统"/><meta name="description" content="本发明实施例公开了一种软件升级检测的方法、装置及系统，软件升级检测的方法包括：软件启动时，对软件的运行时间进行计时，并判断升级等待时间是否为零；在判断升级等待时间为零时，生成随机数；将升级等待时间更改为上述随机数；在判断软件的运行时间到达升级等待时间时，从升级服务器检测软件的升级版本。本发明实施例由于设置了升级等待时间，且升级等待时间随机产生，在判断软件运行到达升级等待时间时从升级服务器检测新版本，使得各客户端从升级服务器下载软件的升级文件的时机在一定程度上按照时间均摊，进而对升级服务器带宽的需求进一步降低，从而降低了成本，也提升了用户体验。"/><meta property="og:title" content="专利 CN101374147A - 一种软件升级检测的方法、装置及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101374147A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101374147A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=NMxnBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101374147A&amp;usg=AFQjCNE9Hc240bwRqUFOiy-29PbzkgBQEw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/fe623f58d15526a9849e/CN101374147A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/fe623f58d15526a9849e/CN101374147A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101374147A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101374147A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101374147A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101374147B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101374147A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了一种软件升级检测的方法、装置及系统，软件升级检测的方法包括：软件启动时，对软件的运行时间进行计时，并判断升级等待时间是否为零；在判断升级等待时间为零时，生成随机数；将升级等待时间更改...</span><span itemprop="url">https://www.google.com/patents/CN101374147A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101374147A - 一种软件升级检测的方法、装置及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101374147A - 一种软件升级检测的方法、装置及系统" title="专利 CN101374147A - 一种软件升级检测的方法、装置及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101374147 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810149520</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年2月25日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年9月10日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年9月10日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101374147B?hl=zh-CN&amp;cl=zh">CN101374147B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810149520.3, </span><span class="patent-bibdata-value">CN 101374147 A, </span><span class="patent-bibdata-value">CN 101374147A, </span><span class="patent-bibdata-value">CN 200810149520, </span><span class="patent-bibdata-value">CN-A-101374147, </span><span class="patent-bibdata-value">CN101374147 A, </span><span class="patent-bibdata-value">CN101374147A, </span><span class="patent-bibdata-value">CN200810149520, </span><span class="patent-bibdata-value">CN200810149520.3</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%8C%AF+%E9%92%9F%22">振 钟</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B7%B1%E5%9C%B3%E5%8D%8E%E4%B8%BA%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">深圳华为通信技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101374147A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101374147A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101374147A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=NMxnBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810149520&amp;usg=AFQjCNGgnJLdA6QLVnmD5P9rNRGV0wVC7g"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=NMxnBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101374147A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFeanPg1wnuiWJXvh-y2QQdKibe1g"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT84954572" lang="ZH" load-source="patent-office">一种软件升级检测的方法、装置及系统</invention-title>
+    </span><br><span class="patent-number">CN 101374147 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA61189275" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了一种软件升级检测的方法、装置及系统，软件升级检测的方法包括：软件启动时，对软件的运行时间进行计时，并判断升级等待时间是否为零；在判断升级等待时间为零时，生成随机数；将升级等待时间更改为上述随机数；在判断软件的运行时间到达升级等待时间时，从升级服务器检测软件的升级版本。本发明实施例由于设置了升级等待时间，且升级等待时间随机产生，在判断软件运行到达升级等待时间时从升级服务器检测新版本，使得各客户端从升级服务器下载软件的升级文件的时机在一定程度上按照时间均摊，进而对升级服务器带宽的需求进一步降低，从而降低了成本，也提升了用户体验。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(18)</span></span></div><div class="patent-text"><div mxw-id="PCLM13335881" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种软件升级检测的方法，其特征在于，包括:软件启动时，对软件的运行时间进行计时，并判断升级等待时间是否为零；在判断所述升级等待时间为零时，生成随机数；将所述升级等待时间更改为所述随机数；在判断所述软件的运行时间到达所述升级等待时间时，从升级服务器检测所述软件的升级版本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求l所述的软件升级检测的方法，其特征在于，所述方法 还包括：在所述软件启动时判断所述升级等待时间不为零时，减少所述升级等待 时间的值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求2所述的软件升级检测的方法，其特征在于，所述减少 所述升级等待时间的值具体为：将所述升级等待时间除以二，得到变化后的等待时间，将所述升级等待 时间更改为所述变化后的等待时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求l所述的软件升级检测的方法，其特征在于，收到所述 软件的终止运行命令时，若所述软件的运行时间小于所述升级等待时间，减 少所述升级等待时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 根据权利要求4所述的软件升级检测的方法，其特征在于，所述减少 所述升级等待时间具体为：将所述升级等待时间减去所述软件的运行时间，得到变化后的升级等待 时间，将所述升级等待时间更改为所述变化后的升级等待时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求1至5任一项所述的软件升级检测的方法，其特征在于， 所述从升级服务器检测所述软件的升级版本包括：发起新版本纟全查；接收版本描述文件，所述版本描述文件由所述升级服务器一艮据所述新版 本检查发送；才艮据所述版本描述文件检测是否有所述软件的升级版本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 根据权利要求1至5任一项所述的软件升级检测的方法，其特征在于，所述从升级服务器检测所述软件的升级版本之后还包括：若检测到所述软件的升级版本，则从所述升级服务器下载所述软件的升级文件，所述升级文件与所述升级版本对应；若未检测到所述软件的升级版本，则将所述升级等待时间清零。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 根据权利要求7所述的软件升级检测的方法，其特征在于，从所述升 级服务器下载所述软件的升级文件之后还包括：将所述升级等待时间清零。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9、 一种软件升级检测的装置，其特征在于，包括： 计时单元，用于在软件启动时，对软件的运行时间进行计时； 第一判断单元，用于在软件启动时，判断升级等待时间是否为零； 生成单元，用于在所述第一判断单元判断所述升级等待时间为零时，生成随机数；更改单元，用于将所述升级等待时间更改为所述生成单元生成的所述随 机数；第二判断单元，用于判断所述计时单元得到的所述软件的运行时间是否 到达所述升级等待时间；;险测单元，用于在所述第二判断单元判断所述软件的运行时间到达所述 升级等待时间时，从升级服务器^r测所述软件的升级版本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求9所述的软件升级检测的装置，其特征在于，还包括： 减少单元，用于在所述第一判断单元判断所述升级等待时间不为零时，减少所述升级等待时间的值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11、 根据权利要求9所述的软件升级检测的装置，其特征在于，还包括： 终止命令接收单元，用于接收所述软件的终止运行命令； 第三判断单元，用于在所述终止命令接收单元接收到所述软件的终止运行命令时，判断所述软件的运行时间是否小于所述升级等待时间；执行单元，用于在所述第三判断单元判断所述软件的运行时间小于所述 升级等待时间时，减少所述升级等待时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12、 根据权利要求9至11任一项所述的软件升级检测的装置，其特征在于， 所述纟企测单元包括： 发送单元，用于发起新版本检查；接收单元，用于接收版本描述文件，所述版本描述文件由所述升级服务器根据所述发送单元发送的所述新版本检查发送；检测子单元，用于根据所述接收单元接收到的所述版本描述文件检测是 否有所述软件的升级版本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 根据权利要求9至11任一项所述的软件升级检测的装置，其特征在于， 还包括：下载单元，用于在所述检测单元检测到所述软件的升级版本时，从所述 升级服务器下载所述软件的升级文件，所述升级文件与所述检测单元检测到 的所述升级版本对应；清零单元，用于在所述检测单元未检测到所述软件的升级版本时，将所 述等待时间清零。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14、 根据权利要求13所述的软件升级检测的装置，其特征在于，所述清 时间清零。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15、 一种软件升级检测的系统，其特征在于，包括：客户端，用于软件启动时，判断升级等待时间是否为零；在判断所述升 级等待时间为零时，生成随机数；将所述升级等待时间更改为所述随机数； 在判断所述软件的运行时间到达所述升级等待时间时，从升级服务器检测所 述软件的升级版本；升级服务器，用于接收所述客户端发起的所述软件的升级版本的;f企测，软件的版本描述文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16、 根据权利要求15所述的软件升级检测的系统，其特征在于，所述客 户端还用于在启动时判断所述升级等待时间不为零时，减少所述升级等待时 间的值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17、 根据权利要求15所述的软件升级检测的系统，其特征在于，所述客 户端还用于在收到所述软件的终止运行命令时，若所述软件的运行时间小于 所述升级等待时间，减少所述升级等待时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18、根据权利要求15至17任一项所述的软件升级检测的系统，其特征在 于，若检测到所述软件的升级版本，所述客户端还用于从所述升级服务器下载所述软件的升级文件，所述升级文件与所述升级版本对应；所述升级服务器还用于向所述客户端提供所述软件的升级文件。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES18722906" lang="ZH" load-source="patent-office" class="description">
+    <p>一种软件升级检测的方法、装置及系统</p>
+    <p>技术领域</p>
+    <p>本发明涉及电子通讯领域，尤其涉及一种软件升级才企测的方法、装置及 系统。 背景技术</p>
+    <p>随着用户对软件功能的要求越来越高，通过软件升级增加功能的需求也 越来越大。</p>
+    <p>以前的软件升级，通常是发行新光盘、网站提供用户下载等手段，但是 这些手段成本很高且用户使用不方便。</p>
+    <p>目前，软件的在线升级功能是越来越普遍了。在线升级可以让已经发行 到用户手中的软件，通过网络在线升级，从而达到增强软件功能的目的，这 样用户满意度会大大提高，同时也减少了软件发行商的维护成本。目前大部</p>
+    <p>分在线升级的软件流程为：客户端向升级服务器发起新版本检查请求；客户 端从升级服务器获取一个版本描述文件，这个文件定义了服务器上最新版本 的状态，比如版本号、发布时间、文件大小等信息；客户端将版本描述文件 和本地已经安装好的软件进行比较，判断是否要执行升级过程，如果不需要 升级，则结束流程，如果需要升级，客户端从升级服务器下载新的版本，随 后执行升级安装的过程。</p>
+    <p>从上面的流程可以看出，如果客户端要从升级服务器下载新的软件版本， 对服务器带宽的要求较大，如果成千上万的客户端软件同时从升级服务器下 载新的软件版本，则服务器带宽就成为瓶颈，极大影响用户体验。而目前业 界大部分服务器提供商都只能提供100兆共享带宽给几十甚至上百家公司使 用，如果某家公司占用带宽持续超过某个门限，则会警告停止对这家公司的 服务。</p>
+    <p>现有技术中，在客户端软件上增加一个用户选项，用户可以控制发起新 版本检查的周期，不再是每天检查，而可以设置成每周、每两周、每30天等 周期，这样，就可以把升级的周期按照日期均摊。</p>
+    <p>在实现本发明的过程中，发明人发现上述技术方案至少存在如下缺陷：</p>
+    <p>按照日期均摊升级的周期，只能从一定程度上减轻服务器带宽瓶颈的问 题，且&#37318;用按照日期均摊升级的周期的方案，仍然会需要服务器提供一个较 大的服务器带宽，成本很高，对于大部分中小型软件公司来说，他们很难承 担起这个较大的带宽，进而会极大地影响用户体验。 发明内容</p>
+    <p>本发明实施例提供了一种软件升级检测的方法、装置及系统，使用本发 明实施例提供的技术方案，能够降低对升级服务器带宽的需求。</p>
+    <p>本发明实施例的目的是通过以下技术方案实现的： 一种软件升级检测的方法，包括：</p>
+    <p>软件启动时，对软件的运行时间进行计时，并判断升级等待时间是否为</p>
+    <p>令；</p>
+    <p>在判断升级等待时间为零时，生成随机数； 将升级等待时间更改为上述随机数；</p>
+    <p>在判断软件的运行时间到达上述升级等待时间时，从升级服务器检测软 件的升级版本。</p>
+    <p>一种软件升级;险测的装置，包括：</p>
+    <p>计时单元，用于在软件启动时，对软件的运行时间进行计时； 第一判断单元，用于在软件启动时，判断升级等待时间是否为零； 生成单元，用于在第一判断单元判断升级等待时间为零时，生成随机数； 更改单元，用于将升级等待时间更改为生成单元生成的随才凡数； 第二判断单元，用于判断计时单元得到的软件的运行时间是否到达升级</p>
+    <p>等待时间；</p>
+    <p>检测单元，用于在第二判断单元判断软件的运行时间到达升级等待时间 时，从升级服务器检测软件的升级版本。 一种软件升级检测的系统，包括：</p>
+    <p>客户端，用于软件启动时，判断升级等待时间是否为零；在判断升级等 待时间为零时，生成随机数；将升级等待时间更改为上述随机数；在判断软 件的运行时间到达升级等待时间时，从升级服务器检测软件的升级版本；</p>
+    <p>升级服务器，用于接收客户端发起的软件的升级版本的检测，并根据客</p>
+    <p>从本发明实施例提供的以上技术方案可以看出，由于设置了升级等待时 间，且升级等待时间随机产生，在判断软件运行到达升级等待时间时从升级 服务器检测新版本，使得各客户端从升级服务器下载软件的升级文件的时机 在一定程度上按照时间均摊，进而对升级服务器带宽的需求进一步降低，从 而降低了成本，也提升了用户体验。 附图说明</p>
+    <p>为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实 施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面 描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲， 在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>图1是本发明实施例服务器带宽需求对比图；</p>
+    <p>图2是本发明提供的软件升级4全测的方法的实施例一流程图；</p>
+    <p>图3是本发明提供的软件升级检测的方法的实施例二流程图；</p>
+    <p>图4是本发明提供的一种软件升级检测的装置的一个实施例的示意图；</p>
+    <p>图5是本发明提供的一种软件升级检测的系统的一个实施例的组成框图。</p>
+    <p>具体实施方式</p>
+    <p>下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行 清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而 不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有作 出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>本发明实施例提供了一种软件升级检测的方法、装置及系统，使用本发 明实施例提供的技术方案，能够降低对升级服务器带宽的需求。</p>
+    <p>本发明实施例中提及的客户端软件可以是计算机软件，也可以是手机软 件、各种嵌入式软件，例如机顶盒软件等能够在线升级的软件。下面仅以计 算机软件为例进行详细说明。</p>
+    <p>本发明实施例除了按照日期均摊升级时机外，还增加了按照每天内的时 间均摊升级时机。例如，假定某个软件已经发行了 IO万套，新版本有50兆</p>
+    <p>字节大小。通常用户开机并运行这个软件时，就会启动升级检查和下载的流 程。用户开机是有高峰时段的，通常大多数用户会在早上上班时间、晚上下 班时间两个高峰期运行电脑，从而在这些时间形成带宽瓶颈，假定这些高峰 期累计为三小时。参见图1,图1为原始带宽需求、按照日期均摊带宽需求 和再按照时间均摊的带宽需求的对比图。那么，如果IO万用户都要在三小时</p>
+    <p>内升级完，就需要带宽10万&gt;&lt;50兆字节/3小时=3703.7兆比特/秒，这是一个 几乎不可能达到的要求。将3703.7兆比特/秒视为原始带宽需求。按照30天 曰期均摊的带宽需求为3703.7/30=123兆比特/秒，这个带宽对于中小型规4莫 的公司来说，成;M艮高，依旧很难承担。现在按照每天内的时间再进行升级 时机的均摊，即原来是3小时高峰，现在理论上是24小时都能利用，降低了 8倍，因此，按照时间均摊的带宽需求为123/8=15.4兆比特/秒，这已经降低 了绝大部分中小型公司可以接受的程度了 。 实施例一</p>
+    <p>本实施例阐述一种在软件升级检测时降低升级服务器带宽需求的方法， 下面结合附图进行详细描述。</p>
+    <p>参见图2,本实施例的方法包括以下步骤：</p>
+    <p>步骤201:软件启动时，对软件的运行时间进行计时，并判断升级等待 时间是否为零；如果判断升级等待时间为零，则执行步骤202;</p>
+    <p>上述的升级等待时间可以是上次未实现的检查时间，未实现可以是未实 现新版本检查，也可以是未实现下载新版本，其缺省值通常是零。</p>
+    <p>如果判断升级等待时间不为零时，即上次关闭软件时没有向升级服务器 检测软件的升级版本，此时，则减少升级等待时间的值，例如可以是将升级 等待时间除以二，得到变化后的等待时间，将升级等待时间更改为上述变化 后的等待时间。这样就可以减少等待时间，从而可以加大下一次实现检查的 命中率。当然，也可以是将升级等待时间除以其它的数字，例如4、 8等，或 者可以是进行其它的一些变换，使得升级等待时间缩小。</p>
+    <p>步骤202:生成随机it;</p>
+    <p>上述生成随机数可以是在N分钟内随机生成一个表示时间的数字，上述 N可以根据具体情况设定，例如，可以设置成360分钟或150分钟等。步骤203:将升级等待时间更改为随机数；</p>
+    <p>即将步骤202中生成的随机数替换原来的升级等待时间，将原来按照曰 期均摊升级时机进一步按照时间均摊升级时机，使得对升级服务器的带宽需 求进一步减少，这样， 一天之内，只要软件运行的累计时间到达这个升级等 待时间就检测软件的升级版本。这个随机数就作为下次启动检查和下载的时 间。</p>
+    <p>步骤204:在判断软件的运行时间到达升级等待时间时，从升级服务器检 测软件的升级版本。</p>
+    <p>通过上述步骤，升级等待时间已经发生变化，对软件的运行时间进行不 断检测， 一旦软件的运行时间到达升级等待时间，就向升级服务器检测软件 的升级版本。</p>
+    <p>服务器发送的版^4苗述文件;根据版本描述文件判断是否有软件的升级版本； 在判断需要升级时从升级服务器下载软件的升级文件。如果没有检测到软件 的升级版本，则将升级等待时间清零。这样，按照日期均摊升级时机还会起 效，每天内相当于立即检测是否有软件的升级版本，但不一定会下载软件的 升级文件。如果检测软件的升级版本失败，升级等待时间可以清零，也可以 不变，若等待时间不变，则下次不必再产生随机数替换等待时间，可在已分 配的随机数的基础上进行检测。如果下载软件的升级文件失败，等待时间可 以清零，也可以不变，同样，若等待时间不变，则下次不必再产生随机数替 换等待时间，还可以在已分配的随机数的基础上进行检测和下载。为了下次 使用该按照时间均摊升级时机的方法更加准确，下载软件的升级文件完成后 还可以包括一个步骤：将预置的检查时间清零。</p>
+    <p>在收到软件的终止运行命令时，若此时软件的运行时间没有达到升级等 待时间，即软件的运行时间小于升级等待时间，减少升级等待时间，减少升 级等待时间可以是将升级等待时间减去软件的运行时间，得到变化后的升级 等待时间，将升级等待时间更改为变化后的升级等待时间。即在关闭软件之 前，先将升级等待时间减去本次软件的运行时间，下次重新启动该软件时， 就可以减少升级等待的时间。</p>
+    <p>本实施例由于设置了升级等待时间，且升级等待时间随机产生，在判断 软件运行到达升级等待时间时从升级服务器检测新版本，使得各客户端从升 级服务器下载软件的升级文件的时机在一定程度上按照时间均摊，进而对升 级服务器带宽的需求进一步降低，从而降低了成本，也提升了用户体验。进 一步地，不需要增加服务器的硬件配置，也不需要增加服务器的软件需求， 例如要求软件支持补丁下载等，可以大大降低对在线升级服务器的带宽需求。</p>
+    <p>实施例二</p>
+    <p>本实施例阐述了一种具体实现降低服务器带宽需求的方法，下面结合附 图进行详细说明。</p>
+    <p>参见图3，本实施例的方法包括以下步骤：</p>
+    <p>步骤301:客户端软件保存一个"上次未实现的检查时间"，缺省是零； 步骤302:客户端软件判断"上次未实现的检查时间"是否为零； 客户端软件在每次应该检查版本是否要升级时，例如每隔30天的第一次</p>
+    <p>运行软件时，先判断"上次未实现的检查时间" 一次；</p>
+    <p>步骤303:如果"上次未实现的检查时间"等于零，则先在N分钟内随</p>
+    <p>^/L生成一个数字，作为下次启动^r查和下载的时间，同时替代"上次未实现</p>
+    <p>的斗全查时间"；</p>
+    <p>步骤304:如果"上次未实现的检查时间"不等于零，则把此数字除以2， 减少等待时间，将除以2后的新的时间作为"上次未实现的检查时间，，；</p>
+    <p>例如，有可能这一天还没有到达预置的检查时间，用户就关闭该软件了， 下次再启动该软件时要接着判断，将"上次未实现的检查时间，，除以2,可 以加大第二天的命中率，或者说可以加大下一次需要检查和下载的命中率， 减少用户等待的时间，以后每天都是这样除以2递减，那么就可以极大的提 升用户体验。</p>
+    <p>步骤305:如果判断到达"上次未实现的检查时间"，就正常检查和下载； 步骤306:完成软件的升级文件下栽后，将替换后的"上次未实现的&#26545;r 查时间"清零。</p>
+    <p>本实施例通过生成时间随机数代替"上次未实现的检查时间"，通过时间 均摊检测软件的升级版本和下载软件的升级文件的时机，从而降低了对升级</p>
+    <p>服务器带宽的需求，进一步地，考虑到了用户提前关机的可能性，通过对"上 次未实现的检查时间"逐渐递减，减少等待时间，加大了下次检查和下载软 件的升级版本的命中率。</p>
+    <p>实施例二阐述的是在4欠件启动时，如果升级等待时间不为零，可以将升 级等待时间除以2,以减少升级等待时间，下面阐述一种在关闭软件之前， 将升级等待时间减去软件运行时间，以降低对升级服务器带宽需求的实施例。</p>
+    <p>实施例三</p>
+    <p>本实施例阐述一种在软件关闭前将软件的升级等待时间减去软件运行时 间，以减少升级等待时间的方法，在该方法中，软件启动时，判断升级等待</p>
+    <p>时间是否为零；在判断升级等待时间为零时，生成P逸机数，将升级等待时间 更改为上述随机数；在判断软件的运行时间到达升级等待时间时，从升级服 务器检测软件的升级版本。</p>
+    <p>如果收到软件的终止运行命令时，软件的运行时间未到达升级等待时间， 则将升级等待时间减去软件的运行时间。</p>
+    <p>即有可能上述从升级服务器检测软件的升级版本还没有执行，就需要终 止运行该软件了，此时为了减少下次再运行该软件时，等待升级的时间减少， 则可以是将升级等待时间减去软件运行时间，得到变化后的升级等待时间， 将原来的升级等待时间更改为变化后的升级等待时间。当然，也可以是采取 其它的方法减少关闭软件前的升级等待时间。</p>
+    <p>例如，如果开始设置的升级等待时间为4小时，但只运行了半个小时， 软件就需要关闭，或者需要关机了，在关闭软件的时候可以将升级等待时间</p>
+    <p>设置为4-0.5 = 3.5小时，这样，下次启动该软件的时间，如果软件的运行时间 到达3.5小时，就向升级服务器检测软件的升级版本。</p>
+    <p>本实施例通过在关闭软件时将升级等待时间减去软件运行时间，可以是 下次启动该软件时，升级等待时间变短，从而加大了下次启动升级版本4企测 的命中率。</p>
+    <p>需要说明的是，对于前述的各方法实施例，为了筒单描述，故将其都 表述为一系列的动作组合，但是本领域技术人员应该知悉，本发明并不受 所描述的动作顺序的限制，因为依据本发明，某些步骤可以采用其他顺序</p>
+    <p>或者同时进行。其次，本领域技术人员也应该知悉，说明书中所描述的实 施例均属于优选实施例，所涉及的动作和模块并不一定是本发明所必须的。</p>
+    <p>在上述实施例中，对各个实施例的描述都各有侧重，某个实施例中没 有详述的部分，可以参见其他实施例的相关描述。以上提供了一种软件升 级检测的方法，本发明实施例还提供一种软件升级检测的装置和一种软件 升级检测的系统。</p>
+    <p>参见图4， 一种降低服务器带宽需求的装置，包括： 计时单元406,用于在软件启动时，对软件的运行时间进行计时； 第一判断单元401，用于在软件启动时，判断升级等待时间是否为零； 生成单元402，用于在第一判断单元401判断升级等待时间为零时，生成 随机数；</p>
+    <p>更改单元403,用于将升级等待时间更改为生成单元402生成的随才几数； 第二判断单元404，用于判断计时单元406得到的软件的运行时间是否到 达升级等待时间；</p>
+    <p>检测单元405,用于在第二判断单元404判断软件的运行时间到达升级等 待时间时，从升级服务器检测软件的升级版本。 其中，上述装置还包括：</p>
+    <p>减少单元，用于在第一判断单元401判断升级等待时间不为零时，减少升 级等待时间的值。</p>
+    <p>其中，上述装置还包括：</p>
+    <p>终止命令接收单元，用于接收软件的终止运行命令；</p>
+    <p>第三判断单元，用于在终止命令接收单元接收到软件的终止运行命令时， 判断软件的运行时间是否小于升级等待时间，</p>
+    <p>执行单元，用于在第三判断单元判断软件的运行时间小于升级等待时间 时，减少升级等待时间。</p>
+    <p>其中，检测单元405包括：</p>
+    <p>发送单元，用于发起新版本检查；</p>
+    <p>接收单元，用于接收版本描述文件，上述版本描述文件由升级服务器根</p>
+    <p>据发送单元发送的新版本j险查发送；</p>
+    <p>检测子单元，用于根据接收单元接收到的版本描述文件检测是否有软件 的升级版本。</p>
+    <p>上述装置还包括：</p>
+    <p>下载单元，用于在检测单元405检测到软件的升级版本时，从升级服务器 下载软件的升级文件，上述升级文件与检测单元405检测到的升级版本对应；</p>
+    <p>清零单元，用于在检测单元未检测到软件的升级版本时，将升级等待时 间清零。</p>
+    <p>其中，上述清零单元还用于在下载单元下载软件的升级文件后，将升级 等待时间清零。</p>
+    <p>上述装置可以用来实现一种软件升级一企测的方法，但不限于实现该方法。 上面阐述了 一种软件升级检测的装置，下面阐述一种软件升级检测的系统。</p>
+    <p>参见图5， 一种降低服务器带宽需求的系统，包括：</p>
+    <p>客户端501，用于软件启动时，判断升级等待时间是否为零；在判断升级 等待时间为零时，生成随机数；将升级等待时间更改为上述随机数；在判断 软件的运行时间到达升级等待时间时，从升级服务器502检测软件的升级版 本；</p>
+    <p>升级服务器502,用于接收客户端501发起的软件的升级版本的检测，并 述文件。</p>
+    <p>其中，客户端501还用于在启动时判断所述升级等待时间不为零时，减少 所述升级等待时间的值。其中，客户端501还用于在收到所述软件的终止运行 命令时，若所述软件的运行时间小于所述升级等待时间，减少所述升级等待 时间。</p>
+    <p>其中，若检测到软件的升级版本，客户端501还用于从升级服务器502下 载软件的升级文件，上述升级文件与升级版本对应；</p>
+    <p>升级服务器502还用于向客户端501提供软件的升级文件。 其中，客户端501还用于将升级等待时间清零。</p>
+    <p>本发明实施例由于设置了升级等待时间，且升级等待时间随机产生，在 判断软件运行到达升级等待时间时从升级服务器检测新版本，使得各客户端 从升级服务器下载软件的升级文件的时机在一定程度上按照时间均摊，进而 对升级服务器带宽的需求进一步降低，从而降低了成本，也提升了用户体验。</p>
+    <p>进一步地，关闭软件时将升级等待时间减去软件运行时间，可以减少下 次启动软件时升级等待时间，从而加快检测软件的升级版本。</p>
+    <p>进一步地，启动软件时，在判断升级等待时间不为零时，将升级等待时 间除以二，可以增大此次运行软件时，进行软件的升级版知险测的几率。</p>
+    <p>是可以通过程序来指令相关的硬件完成，所述的程序可以存储于一种计算机</p>
+    <p>可读存储介质中，该程序在执行时，包括如下步骤：</p>
+    <p>软件启动时，对软件的运行时间进行计时，并判断升级等待时间是否为+.</p>
+    <p>令；</p>
+    <p>在判断升级等待时间为零时，生成随机数； 将升级等待时间更改为上述随机数；</p>
+    <p>在判断软件的运行时间到达升级等待时间时，从升级服务器检测软件的 升级版本。</p>
+    <p>上述提到的存储介质可以是只读存储器，磁盘或光盘等。 以上对本发明实施例所提供的一种软件升级检测的方法、装置及系统进 行了详细介绍，以上实施例的说明只是用于帮助理解本发明的方法及其思想； 同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及 应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本发明 的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102624771A?cl=zh">CN102624771A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月5日</td><td class="patent-data-table-td patent-date-value">2012年8月1日</td><td class="patent-data-table-td ">北京小米科技有限责任公司</td><td class="patent-data-table-td ">一种客户端升级的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102624771B?cl=zh">CN102624771B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月5日</td><td class="patent-data-table-td patent-date-value">2015年10月28日</td><td class="patent-data-table-td ">小米科技有限责任公司</td><td class="patent-data-table-td ">一种客户端升级的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015176454A1?cl=zh">WO2015176454A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年9月25日</td><td class="patent-data-table-td patent-date-value">2015年11月26日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种软件升级方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=NMxnBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009445000">G06F9/445</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=NMxnBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年2月25日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年4月22日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年8月10日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/fe623f58d15526a9849e/CN101374147A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%8D%87%E7%BA%A7%E6%A3%80%E6%B5%8B%E7%9A%84%E6%96%B9%E6%B3%95_%E8%A3%85%E7%BD%AE.pdf?id=NMxnBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3rfGx6FN4QXFMRMKgEjJtndI5AKQ"},"sample_url":"https://www.google.com/patents/reader?id=NMxnBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

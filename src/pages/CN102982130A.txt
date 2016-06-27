@@ -1,0 +1,211 @@
+<!DOCTYPE html><html><head><title>专利 CN102982130A - 一种nosql与rdbms的数据库同步方法和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种nosql与rdbms的数据库同步方法和系统"><meta name="DC.contributor" content="阮航" scheme="inventor"><meta name="DC.contributor" content="深圳市融创天下科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2012-11-16" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种NOSQL与RDBMS的数据库同步方法和系统。本发明通过将数据操作方法所需要保存的JAVA格式实体实例对象转换为JSON格式，再将JSON格式实体实例对象存储到NOSQL数据库；当检测到NOSQL数据库有更新记录，就将所述JSON格式实体实例对象转换为JAVA格式，再通过所述JAVA格式实体实例对象对应的数据操作方法将所述JAVA格式实体实例对象保存到RDBMS数据库。为现有系统从RDBMS存储方式向NOSQL存储方式提供良好过渡，使得现有系统只需要简单修改数据存储层即可体验NOSQL带来的高性能，且无需修改业务代码，还保留了RDBMS存储支持，使得数据完整性得到良好的保障。"><meta name="DC.date" content="2013-3-20"><meta name="citation_patent_publication_number" content="CN:102982130:A"><meta name="citation_patent_application_number" content="CN:201210460725"><link rel="canonical" href="https://www.google.com/patents/CN102982130A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102982130A?cl=zh"/><meta name="title" content="专利 CN102982130A - 一种nosql与rdbms的数据库同步方法和系统"/><meta name="description" content="本发明公开了一种NOSQL与RDBMS的数据库同步方法和系统。本发明通过将数据操作方法所需要保存的JAVA格式实体实例对象转换为JSON格式，再将JSON格式实体实例对象存储到NOSQL数据库；当检测到NOSQL数据库有更新记录，就将所述JSON格式实体实例对象转换为JAVA格式，再通过所述JAVA格式实体实例对象对应的数据操作方法将所述JAVA格式实体实例对象保存到RDBMS数据库。为现有系统从RDBMS存储方式向NOSQL存储方式提供良好过渡，使得现有系统只需要简单修改数据存储层即可体验NOSQL带来的高性能，且无需修改业务代码，还保留了RDBMS存储支持，使得数据完整性得到良好的保障。"/><meta property="og:title" content="专利 CN102982130A - 一种nosql与rdbms的数据库同步方法和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102982130A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102982130A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=UDHoBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102982130A&amp;usg=AFQjCNHw9msJdvC87G-TTB78oXcwd20Dlg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/aff24d4adb882b34d279/CN102982130A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/aff24d4adb882b34d279/CN102982130A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102982130A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102982130A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102982130A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种NOSQL与RDBMS的数据库同步方法和系统。本发明通过将数据操作方法所需要保存的JAVA格式实体实例对象转换为JSON格式，再将JSON格式实体实例对象存储到NOSQL数据库；当检测到NOSQL数据库有更新记录，就将所述JSON格...</span><span itemprop="url">https://www.google.com/patents/CN102982130A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102982130A - 一种nosql与rdbms的数据库同步方法和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102982130A - 一种nosql与rdbms的数据库同步方法和系统" title="专利 CN102982130A - 一种nosql与rdbms的数据库同步方法和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102982130 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210460725</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年3月20日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年11月16日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年11月16日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210460725.X, </span><span class="patent-bibdata-value">CN 102982130 A, </span><span class="patent-bibdata-value">CN 102982130A, </span><span class="patent-bibdata-value">CN 201210460725, </span><span class="patent-bibdata-value">CN-A-102982130, </span><span class="patent-bibdata-value">CN102982130 A, </span><span class="patent-bibdata-value">CN102982130A, </span><span class="patent-bibdata-value">CN201210460725, </span><span class="patent-bibdata-value">CN201210460725.X</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%98%AE%E8%88%AA%22">阮航</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B7%B1%E5%9C%B3%E5%B8%82%E8%9E%8D%E5%88%9B%E5%A4%A9%E4%B8%8B%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">深圳市融创天下科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102982130A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102982130A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102982130A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (6)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=UDHoBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210460725&amp;usg=AFQjCNGBIZD9y_HWTnZHvfEI_FCilean_g"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=UDHoBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102982130A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHp65BXtmWR2KtPXkCh8i6sJl1krQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT122843387" lang="ZH" load-source="patent-office">一种nosql与rdbms的数据库同步方法和系统</invention-title>
+      </span><br><span class="patent-number">CN 102982130 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109723525" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种NOSQL与RDBMS的数据库同步方法和系统。本发明通过将数据操作方法所需要保存的JAVA格式实体实例对象转换为JSON格式，再将JSON格式实体实例对象存储到NOSQL数据库；当检测到NOSQL数据库有更新记录，就将所述JSON格式实体实例对象转换为JAVA格式，再通过所述JAVA格式实体实例对象对应的数据操作方法将所述JAVA格式实体实例对象保存到RDBMS数据库。为现有系统从RDBMS存储方式向NOSQL存储方式提供良好过渡，使得现有系统只需要简单修改数据存储层即可体验NOSQL带来的高性能，且无需修改业务代码，还保留了RDBMS存储支持，使得数据完整性得到良好的保障。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM52161649" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	�种NOSQL与RDBMS的数据库同步方法，其特征在于，所述方法包括步骤：  获取调用数据操作方法的请求；  根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；  将所述第二实体实例对象存储到NOSQL数据库；  获取NOSQL数据库中变更的第二实体实例对象；  将所述变更的第二实体实例对象转换为第一实体实例对象；  调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的NOSQL与RDBMS的数据库同步方法，其特征在于，所述“将所述第二实体实例对象存储到NOSQL数据库”之后还包括步骤：  获取所述第一实体实例对象的哈希值；  存储所述哈希值与所述数据操作方法的对应关系；  所述步骤“将所述变更的第二实体实例对象转换为第一实体实例对象”之后还包括步骤：  获取所述第一实体实例对象的哈希值；  根据所述对应关系获取所述哈希值对应的数据操作方法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求I或2所述的NOSQL与RDBMS的数据库同步方法，其特征在于，所述步骤“将所述第二实体实例对象存储到NOSQL数据库”具体为：  根据NOSQL数据库中与数据操作方法对应的处理方法将所述第二实体实例对象存储到NOSQL数据库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的NOSQL与RDBMS的数据库同步方法，其特征在于，所述步骤“存储所述哈希值与所述数据操作方法的对应关系”之后还包括步骤：  获取所述数据操作方法中所预置的操作类型；  根据所述操作类型获取NOSQL数据库中与所述数据操作方法对应的处理方法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的NOSQL与RDBMS的数据库同步方法，其特征在于，所述“根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象”包括：  判断所述请求所需调用的数据操作方法是否具有公共权限且预置了拦截注解标识，若是则将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；若否则响应所述请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的NOSQL与RDBMS的数据库同步方法，其特征在于，所述第一实体实例对象为java格式的实体实例对象；  所述第二实体实例对象为JSON格式的实体实例对象。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.	&#8212;种NOSQL与RDBMS的数据库同步系统，其特征在于，所述系统包括获取请求模块、第一转换模块、第一存储模块、获取变更信息模块、第二转换模块和第二存储模块；  所述获取请求模块，与所述第一转换模块相连，用于获取调用数据操作方法的请求；  所述第一转换模块，与所述获取请求模块和第一存储模块相连，用于根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；所述第一存储模块，与所述第一转换模块和获取变更信息模块相连，用于将所述第二实体实例对象存储到NOSQL数据库；  所述获取变更信息模块，与所述第一存储模块和第二转换模块相连，用于获取NOSQL数据库中变更的第二实体实例对象；  所述第二转换模块，与所述获取变更信息模块和第二存储模块相连，用于将所述变更的第二实体实例对象转换为第一实体实例对象；  所述第二存储模块，与所述第二转换模块相连，用于调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的NOSQL与RDBMS的数据库同步系统，其特征在于，所述系统还包括第一哈希模块、第三存储模块、第二哈希模块和获取操作方法模块；  所述第一转换模块还用于将第一实体实例对象发送到所述第一哈希模块；  所述第一哈希模块，与所述第一转换模块和第三存储模块相连，用于接收所述第一转换模块发送的第一实体实例对象，并获取所述第一实体实例对象的哈希值；  所述第三存储模块，与所述第一哈希模块和获取操作方法模块相连，用于存储所述哈希值与所述数据操作方法的对应关系；  所述第二转换模块，还用于将转换后的第一实体实例对象发送到所述第二哈希模块；所述第二哈希模块，与所述第二转换模块和获取操作方法模块相连，用于接收所述第ニ转换模块发送的第一实体实例对象，并获取所述第一实体实例对象的哈希值；  所述获取操作方法模块，与所述第三存储模块、第二哈希模块和第二存储模块相连，用于根据所述对应关系获取所述哈希值对应的数据操作方法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求7或8所述的NOSQL与RDBMS的数据库同步系统，其特征在于，所述系统还包括获取操作类型模块和获取处理方法模块；  所述第三存储模块还用于将所述数据操作方法发送到所述获取操作类型模块；  所述获取操作类型模块，与所述第三存储模块和获取处理方法模块相连，用于接收所述第三存储模块发送的数据操作方法，并获取所述数据操作方法中所预置的操作类型；所述获取处理方法模块，与所述获取操作类型模块和第一存储模块相连，用于根据所述操作类型获取NOSQL数据库中与所述数据操作方法对应的处理方法；  所述第一存储模块还用于根据所述处理方法将所述第二实体实例对象存储到NOSQL数据库。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的NOSQL与RDBMS的数据库同步系统，其特征在于，所述第一转换模块包括判断单元、转换单元和响应单元；  所述判断&#21336;元，与所述转换&#21336;元和响应单元相连，用于判断所述请求所需调用的数据操作方法是否具有公共权限且预置了拦截注解标识，若是则发送转换指令到所述转换单元；若否则发送响应指令到所述响应单元；  所述转换&#21336;元，与所述判断&#21336;元和第一存储模块相连，用于接收所述判断单元发送的转换指令，根据所述转换指令将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；  所述响应&#21336;元，与所述判断&#21336;元相连，用于接收所述判断单元发送的响应指令，根据所述响应指令响应所述请求。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59233118" lang="ZH" load-source="patent-office" class="description">
+    <p>&#8212;种NOSQL与RDBMS的数据库同步方法和系统</p>
+    <p>技术领域</p>
+    <p>[0001 ] 本发明涉及数据库领域，尤其涉及一种NOSQL与RDBMS的数据库同步方法和系统。背景技术</p>
+    <p>[0002]	典型的应用架构是通过Action层接收用户请求处理层，如用户在交互界面上点击“保存”按钮。通过Service层(业务操作/事务处理层）如插入用户数据，涉及到多个数据原子操作。还通过Dao层(数据原子操作处理层)如插入一条数据。其操作性能和处理时间依赖RDBMS数据库。</p>
+    <p>[0003]	随着互联网web2.0网站的兴起，传统的RDBMS数据库（relationaldatabasemanagement system,关系数据库）在应付web2. 0网站时，特别是超大规模和高并发的web2. 0纯动态网站已经显得力不从心，暴露了很多难以克服的问题，比如：</p>
+    <p>[0004]	l、High performance-对数据库高并发读写的需求；</p>
+    <p>[0005]	2、Huge Storage-对海量数据的高效率存储和访问的需求；</p>
+    <p>[0006]	3、High ScalabiIity&amp;&amp;High Availability-对数据库的高可扩展性和高可用性的需求；</p>
+    <p>[0007]	对于上述的三个技术问题，NOSQL数据库（NoSQL (NoSQL=Not Only SQL，非关系数据库）能够很好的解决。</p>
+    <p>[0008]	但是NOSQL数据库无法有效的进行数据复杂计算和数据备份，而且管理复杂。</p>
+    <p>发明内容</p>
+    <p>[0009]	本发明实施例的目的在于提出一种NOSQL与RDBMS的数据库同步方法，旨在解决现有技术中RDBMS数据库无法实现高并发读写、海量数据高效存储的技术问题，还用于解决RDBMS数据库扩展性和可用性差的技术问题。</p>
+    <p>[0010]	本发明实施例是这样实现的，一种NOSQL与RDBMS的数据库同步方法，所述方法包括步骤：</p>
+    <p>[0011]	获取调用数据操作方法的请求；</p>
+    <p>[0012]	根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；</p>
+    <p>[0013]	将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0014]	获取NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0015]	将所述变更的第二实体实例对象转换为第一实体实例对象；</p>
+    <p>[0016]	调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。</p>
+    <p>[0017]	本发明实施例的另一目的在于提出一种NOSQL与RDBMS的数据库同步系统，所述系统包括获取请求模块、第一转换模块、第一存储模块、获取变更信息模块、第二转换模块和第二存储模块；[0018]	所述获取请求模块，与所述第一转换模块相连，用于获取调用数据操作方法的请求；</p>
+    <p>[0019]	所述第一转换模块，与所述获取请求模块和第一存储模块相连，用于根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；</p>
+    <p>[0020]	所述第一存储模块，与所述第一转换模块和获取变更信息模块相连，用于将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0021]	所述获取变更信息模块，与所述第一存储模块和第二转换模块相连，用于获取NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0022]	所述第二转换模块，与所述获取变更信息模块和第二存储模块相连，用于将所述变更的第二实体实例对象转换为第一实体实例对象；</p>
+    <p>[0023]	所述第二存储模块，与所述第二转换模块相连，用于调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。</p>
+    <p>[0024]	本发明通过将数据操作方法所需要保存的JAVA格式实体实例对象转换为JSON格式，再将JSON格式实体实例对象存储到NOSQL数据库；当检测到NOSQL数据库有更新记录，就将所述JSON格式实体实例对象转换为JAVA格式，再通过所述JAVA格式实体实例对象对应的数据操作方法将所述JAVA格式实体实例对象保存到RDBMS数据库。为现有系统从RDBMS存储方式向NOSQL存储方式提供良好过渡，使得现有系统只需要简单修改数据存储层即可体验NOSQL带来的高性能，且无需修改业务代码，还保留了 RDBMS存储支持，使得数据完整性得到良好的保障。</p>
+    <p>附图说明</p>
+    <p>[0025]	图1是本发明NOSQL与RDBMS的数据库同步方法第一优选实施例流程图；</p>
+    <p>[0026]	图2是本发明NOSQL与RDBMS的数据库同步方法第二优选实施例流程图；</p>
+    <p>[0027]	图3是本发明NOSQL与RDBMS的数据库同步方法第三优选实施例流程图；</p>
+    <p>[0028]	图4是本发明NOSQL与RDBMS的数据库同步方法第四优选实施例流程图；</p>
+    <p>[0029]	图5是本发明NOSQL与RDBMS的数据库同步系统结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0030]	为了使本发明的目的、技术方案及优点更加清楚明白，以下结合附图和实施例，对本发明进行进一步详细说明，为了便于说明，仅示出了与本发明实施例相关的部分。应当理解，此处所描写的具体实施例，仅仅用于解释本发明，并不用以限制本发明。</p>
+    <p>[0031]	本发明通过将数据操作方法所需要保存的JAVA格式实体实例对象转换为JSON格式，再将JSON格式实体实例对象存储到NOSQL数据库；当检测到NOSQL数据库有更新记录，就将所述JSON格式实体实例对象转换为JAVA格式，再通过所述JAVA格式实体实例对象对应的数据操作方法将所述JAVA格式实体实例对象保存到RDBMS数据库。为现有系统从RDBMS存储方式向NOSQL存储方式提供良好过渡，使得现有系统只需要简单修改数据存储层即可体验NOSQL带来的高性能，且无需修改业务代码，还保留了 RDBMS存储支持，使得数据完整性得到良好的保障。[0032]	实施例一</p>
+    <p>[0033]	图1是本发明NOSQL数据库与RDBMS数据库的同步方法第一优选实施例流程图。</p>
+    <p>[0034]	S101，获取调用数据操作方法的请求；</p>
+    <p>[0035]	所述数据操作方法包括修改方法和删除方法，还可以包括新增方法等；</p>
+    <p>[0036]	S102，根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象，并将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0037]	所述第一实体实例对象为java格式的实体实例对象；</p>
+    <p>[0038]	所述第二实体实例对象为JSON (JavaScript Object Notation, &#8212;种轻量级的数据交换格式）格式的实体实例对象；</p>
+    <p>[0039]	可以使用google的JSON开源组件Gson进行格式转换；</p>
+    <p>[0040]	S103，获取NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0041]	实时或定时监控NOSQL数据库，检测是否有变更的第二实体实例对象，若是则获取NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0042]	所述变更的第二实体实例对象包括增加、删除、修改的第二实体实例对象；</p>
+    <p>[0043]	S104，将所述变更的第二实体实例对象转换为第一实体实例对象；</p>
+    <p>[0044]	S105,调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。</p>
+    <p>[0045]	从而能够通过异步的方式将保存在NOSQL数据库中的实体实例对象数据通过hibernate开源组件保存到RDBMS数据库中。</p>
+    <p>[0046]	实施例二</p>
+    <p>[0047]	图2是本发明NOSQL数据库与RDBMS数据库的同步方法第二优选实施例流程图。</p>
+    <p>[0048]	S201，获取调用数据操作方法的请求；</p>
+    <p>[0049]	S202，判断所述请求所需调用的数据操作方法是否具有公共权限且预置了拦截注解标识，若是则进入步骤S203 ;若否则进入步骤S208 ；</p>
+    <p>[0050]	所述公共权限指public权限；</p>
+    <p>[0051]	所述拦截注解标识是预置在需要拦截的数据操作方法中的起标识性作用的标识性信息；</p>
+    <p>[0052]	本步骤可以通过Spring AOP处理方式用于预置需要拦截的数据操作方法和拦截后的处理逻辑，未经拦截的数据操作方法按照现有技术公知流程进行处理所述请求；</p>
+    <p>[0053]	S203，将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；</p>
+    <p>[0054]	S204，根据NOSQL数据库中与所述数据操作方法对应的处理方法将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0055]	S205,获取所述NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0056]	S206，将所述变更的第二实体实例对象转换为第一实体实例对象；</p>
+    <p>[0057]	S207,调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库；</p>
+    <p>[0058]	S208,响应所述请求；</p>
+    <p>[0059]	即直接通过java api调用所述数据操作方法(不需要拦截)。[0060]	实施例三</p>
+    <p>[0061]	图3是本发明NOSQL数据库与RDBMS数据库的同步方法第三优选实施例流程图。</p>
+    <p>[0062]	S301，获取调用数据操作方法的请求；</p>
+    <p>[0063]	S302，判断所述请求所需调用的数据操作方法是否具有公共权限且预置了拦截注解标识，若是则进入步骤S303 ;若否则进入步骤S313 ；</p>
+    <p>[0064]	S303,获取所述数据操作方法所需要保存的第一实体实例对象；</p>
+    <p>[0065]	S304，获取所述第一实体实例对象的哈希值；</p>
+    <p>[0066]	S305，存储所述哈希值与所述数据操作方法的对应关系；</p>
+    <p>[0067]	所述对应关系可以存储到方法注册表中；</p>
+    <p>[0068]	所述方法注册表为key (关键词)、value (关键词对应的值)形式，即保存或读取实体实例对象和dao层方法的对应关系，主要用来收集实体实例对象数据的保存行为；</p>
+    <p>[0069]	所述哈希值（hash值）由JAVA Object hashCode方法计算得出，或JAVAJDK定制的底层API计算得出，或者调用实体实例对象的hashcode (hashCode是jdk根据对象的地址或者字符串或者数字算出来的int类型的数值）方法获取到所述hash值；</p>
+    <p>[0070]	S306，将所述第一实体实例对象转换为第二实体实例对象；</p>
+    <p>[0071]	S307，根据NOSQL数据库中与所述数据操作方法对应的处理方法将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0072]可以通过调用	tokyo tyrant (Tokyo Cabinet 是 Mikio Hirabayashi 开发的一款DBM数据库）提供的HTTP接口（或tokyo cabinet提供的网络异步处理接口）进行NOSQL的相关处理操作，所述处理操作包括所有保存操作；</p>
+    <p>[0073]	S308,获取所述NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0074]	S309，将所述变更的第二实体实例对象转换为第一实体实例对象；</p>
+    <p>[0075]	S310，获取所述第一实体实例对象的哈希值；</p>
+    <p>[0076]	S311，根据所述对应关系获取所述哈希值对应的数据操作方法；</p>
+    <p>[0077]	通过存储哈希值与数据操作方法的对应关系，能够快速定位到所述数据操作方法;</p>
+    <p>[0078]	S312，调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库；</p>
+    <p>[0079]	S313,响应所述请求。</p>
+    <p>[0080]	实施例四</p>
+    <p>[0081]	图4是本发明NOSQL数据库与RDBMS数据库的同步方法第四优选实施例流程图。</p>
+    <p>[0082]	S401，获取调用数据操作方法的请求；</p>
+    <p>[0083]	S402，判断所述请求所需调用的数据操作方法是否具有公共权限且预置了拦截注解标识，若是则进入步骤S403 ;若否则进入步骤S415 ；</p>
+    <p>[0084]	S403,获取所述数据操作方法所需要保存的第一实体实例对象；</p>
+    <p>[0085]	S404，获取所述第一实体实例对象的哈希值；</p>
+    <p>[0086]	S405，存储所述哈希值与所述数据操作方法的对应关系；</p>
+    <p>[0087]	S406,获取所述数据操作方法中所预置的操作类型；</p>
+    <p>[0088]	S407，根据所述操作类型获取NOSQL数据库中与所述数据操作方法对应的处理方法;</p>
+    <p>[0089]	拦截注解标识描述了所述处理方法的一系列处理行为，其中操作类型operation属性明确指出需要做出的处理操作，如取值为’add’的时候是新增，’update’的时候是更新，’ del’的时候是删除，上述处理操作都是操作NOSQL数据库中保存的实体实例对象的行为；</p>
+    <p>[0090]	S408，将所述第一实体实例对象转换为第二实体实例对象；</p>
+    <p>[0091]	S409，根据所述处理方法将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0092]	S410，获取所述NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0093]	S411，将所述变更的第二实体实例对象转换为第一实体实例对象；</p>
+    <p>[0094]	S412，获取所述第一实体实例对象的哈希值；</p>
+    <p>[0095]	S413，根据所述哈希值获取所述哈希值对应的数据操作方法；</p>
+    <p>[0096]	S414，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库；</p>
+    <p>[0097]	S415,响应所述请求。</p>
+    <p>[0098]	为便于理解，举例说明，通过Spring AOP拦截方式注入到各种应用架构中，通过java注解方式声明需要拦截的数据操作方法，并在所述数据操作方法中预置拦截注解标识和操作类型；</p>
+    <p>[0099]	AOP拦截处理样例代码如下：</p>
+    <p>[0100]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00091.png"> <img id="idf0001" file="CN102982130AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00091.png" class="patent-full-image" alt="Figure CN102982130AD00091"> </a> </div>
+    <p>[0102]	该代码段的意思是拦截Spring管理的数据操作方法，凡是具有public权限且标注了 com. temob1. nosql. annotation.1njectNOSQL拦截注解标识的数据操作方法都需要拦截，拦截后由getNoSqlAround方法进行处理,后续处理代码不在此处罗列，Spring AOP相关说明可参考官方文档8. 2iAspectJsupport章节,此处不在重复描述。</p>
+    <p>[0103]	Java注解类样例代码如下：</p>
+    <p>[0104]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00101.png"> <img id="idf0002" file="CN102982130AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00101.png" class="patent-full-image" alt="Figure CN102982130AD00101"> </a> </div>
+    <p>[0105]	User实体对象样例代码：</p>
+    <p>[0106]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00102.png"> <img id="idf0003" file="CN102982130AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00102.png" class="patent-full-image" alt="Figure CN102982130AD00102"> </a> </div>
+    <p>[0108]	典型dao层接口样例代码</p>
+    <p>[0109]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00111.png"> <img id="idf0004" file="CN102982130AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00111.png" class="patent-full-image" alt="Figure CN102982130AD00111"> </a> </div>
+    <p>[0110]	具体dao层实现样例代码：</p>
+    <p>[0111]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00112.png"> <img id="idf0005" file="CN102982130AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00112.png" class="patent-full-image" alt="Figure CN102982130AD00112"> </a> </div>
+    <p>[0112]	通过上面UserDao层样例代码可以看出，只需要在原有dao实现增加@InjectNOSQL拦截注解标识，则UserDao的saveUser方法需要进行NOSQL拦截处理，且使用新增方式将数据保存到NOSQL数据库中，拦截成功后不调用原有实体数据保存操作，只是将User对象使用UserDao的saveUser方法进行保存的这一步操作记录下来(将此关系保存到方法注册表中)，最后进行同步到RDBMS。</p>
+    <p>[0113]	&#8212;般情况下，NOSQL数据库中的存储数据格式为Key、Value的存储方式，Key存储数据的ID或者主键，value以JSON格式进行保存，如User实体对象转换成JSON后格式如下：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00121.png"> <img id="idf0006" file="CN102982130AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00121.png" class="patent-full-image" alt="Figure CN102982130AD00121"> </a> </div>
+    <p>[0115]	JSON数据包含以下属性：</p>
+    <p>[0116]</p>
+    <p>[0117]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00122.png"> <img id="idf0007" file="CN102982130AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102982130A/CN102982130AD00122.png" class="patent-full-image" alt="Figure CN102982130AD00122"> </a> </div>
+    <p>[0118]	本实施例通过将数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象，再将所述第二实体实例对象存储到NOSQL数据库；当检测到NOSQL数据库有更新的第二实体实例对象，就将所述第二实体实例对象转换为第一实体实例对象，调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。为现有系统从RDBMS存储方式向NOSQL存储方式提供良好过渡，使得应用系统只需要简单修改数据存储层即可体验NOSQL带来的性能大幅提升，且无需修改业务代码，同时保留了 RDBMS数据存储支持，使得数据完整性得到良好的保障。</p>
+    <p>[0119]	实施例五</p>
+    <p>[0120]	图5是本发明NOSQL数据库与RDBMS数据库的同步系统结构示意图。所述系统包括获取请求模块、第一转换模块、第一存储模块、获取变更信息模块、第二转换模块和第二存储模块；</p>
+    <p>[0121]	所述获取请求模块，与所述第一转换模块相连，用于获取调用数据操作方法的请求；</p>
+    <p>[0122]	所述数据操作方法包括修改方法和删除方法，还可以包括新增方法等；</p>
+    <p>[0123]	所述第一转换模块，与所述获取请求模块和第一存储模块相连，用于根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；</p>
+    <p>[0124]	所述第一实体实例对象为java格式的实体实例对象；</p>
+    <p>[0125]	所述第二实体实例对象为JSON格式的实体实例对象；</p>
+    <p>[0126]	可以使用google的JSON开源组件Gson进行格式转换；</p>
+    <p>[0127]	所述第一存储模块，与所述第一转换模块和获取变更信息模块相连，用于将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0128]	还可以根据NOSQL数据库中与所述数据操作方法对应的处理方法将所述第二实体实例对象存储到NOSQL数据库；</p>
+    <p>[0129]	还可以通过调用tokyo tyrant (tokyo cabinet提供的网络异步处理接口）提供的HTTP接口进行NOSQL的相关处理操作，所述处理操作包括所有保存操作；</p>
+    <p>[0130]	所述获取变更信息模块，与所述第一存储模块和第二转换模块相连，用于获取NOSQL数据库中变更的第二实体实例对象；</p>
+    <p>[0131]	所述第二转换模块，与所述获取变更信息模块和第二存储模块相连，用于将所述变更的第二实体实例对象转换为第一实体实例对象；</p>
+    <p>[0132]	所述第二存储模块，与所述第二转换模块相连，用于调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。</p>
+    <p>[0133]	从而能够通过异步的方式将保存在NOSQL数据库中的实体实例对象数据通过hibernate开源组件保存到RDBMS数据库中。</p>
+    <p>[0134]	对上述方案进一步优化在于，所述系统还包括第一哈希模块、第三存储模块、第二哈希模块和获取操作方法模块；</p>
+    <p>[0135]	所述第一转换模块还用于将第一实体实例对象发送到所述第一哈希模块；</p>
+    <p>[0136]	所述第一哈希模块，与所述第一转换模块和第三存储模块相连，用于接收所述第一转换模块发送的第一实体实例对象，并获取所述第一实体实例对象的哈希值；</p>
+    <p>[0137]	所述哈希值（hash值）由JAVA Object hashCode方法计算得出，或JAVAJDK定制的底层API计算得出，或者调用实体实例对象的hashcode方法获取到所述hash值；</p>
+    <p>[0138]	所述第三存储模块，与所述第一哈希模块和获取操作方法模块相连，用于存储所述哈希值与所述数据操作方法的对应关系；</p>
+    <p>[0139]	所述对应关系可以存储到方法注册表中；</p>
+    <p>[0140]	所述方法注册表为key (关键词)、value (关键词对应的值)形式，即保存或读取实体实例对象和dao层方法的对应关系，主要用来收集实体实例对象数据的保存行为；</p>
+    <p>[0141]	所述第二转换模块，还用于将转换后的第一实体实例对象发送到所述第二哈希模块；</p>
+    <p>[0142]	所述第二哈希模块，与所述第二转换模块和获取操作方法模块相连，用于接收所述第二转换模块发送的第一实体实例对象，并获取所述第一实体实例对象的哈希值；</p>
+    <p>[0143]	所述获取操作方法模块，与所述第三存储模块、第二哈希模块和第二存储模块相连，用于根据所述对应关系获取所述哈希值对应的数据操作方法；</p>
+    <p>[0144]	通过存储哈希值与数据操作方法的对应关系，能够快速定位到所述数据操作方法;</p>
+    <p>[0145]	所述第二存储模块还用于调用所述数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。</p>
+    <p>[0146]	对上述方案进一步优化在于，所述系统还包括获取操作类型模块和获取处理方法模块；</p>
+    <p>[0147]	所述第三存储模块还用于将所述数据操作方法发送到所述获取操作类型模块；</p>
+    <p>[0148]	所述获取操作类型模块，与所述第三存储模块和获取处理方法模块相连，用于接收所述第三存储模块发送的数据操作方法，并获取所述数据操作方法中所预置的操作类型；</p>
+    <p>[0149]	所述获取处理方法模块，与所述获取操作类型模块和第一存储模块相连，用于根据所述操作类型获取NOSQL数据库中与所述数据操作方法对应的处理方法；</p>
+    <p>[0150]	所述第一存储模块还用于根据所述处理方法将所述第二实体实例对象存储到NOSQL数据库。</p>
+    <p>[0151]	拦截注解标识描述了所述处理方法的一系列处理行为，其中操作类型operation属性明确指出需要做出的处理操作，如取值为’add’的时候是新增，’update’的时候是更新，’ del’的时候是删除，上述处理操作都是操作NOSQL数据库中保存的实体实例对象的行为。</p>
+    <p>[0152]	对上述方案进一步优化在于，所述第一转换模块包括判断单元、转换单元和响应单元；</p>
+    <p>[0153]	所述判断单元，与所述转换单元和响应单元相连，用于判断所述请求所需调用的数据操作方法是否具有公共权限且预置了拦截注解标识，若是则发送转换指令到所述转换单元；若否则发送响应指令到所述响应单元；</p>
+    <p>[0154]	所述公共权限指public权限；</p>
+    <p>[0155]	所述拦截注解标识是预置在需要拦截的数据操作方法中的起标识性作用的标识性信息；</p>
+    <p>[0156]	本步骤可以通过Spring AOP处理方式用于预置需要拦截的数据操作方法和拦截后的处理逻辑，未经拦截的数据操作方法按照现有技术公知流程进行处理所述请求；</p>
+    <p>[0157]	所述转换单元，与所述判断单元和第一存储模块相连，用于接收所述判断单元发送的转换指令，根据所述转换指令将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；</p>
+    <p>[0158]	所述响应单元，与所述判断单元相连，用于接收所述判断单元发送的响应指令，根据所述响应指令响应所述请求。即直接通过java api调用所述数据操作方法(不需要拦截)。</p>
+    <p>[0159]	本实施例中的名词解释和举例同实施例一至四，此处不再赘述。</p>
+    <p>[0160]	本实施例中的系统包括获取请求模块、第一转换模块、第一存储模块、获取变更信息模块、第二转换模块和第二存储模块；其中获取请求模块用于获取调用数据操作方法的请求；第一转换模块用于根据所述请求将所述数据操作方法所需要保存的第一实体实例对象转换为第二实体实例对象；第一存储模块用于将所述第二实体实例对象存储到NOSQL数据库；获取变更信息模块用于获取NOSQL数据库中变更的第二实体实例对象；第二转换模块用于将所述变更的第二实体实例对象转换为第一实体实例对象；第二存储模块用于调用所述第一实体实例对象对应的数据操作方法，通过所述数据操作方法将所述第一实体实例对象保存到RDBMS数据库。为现有系统从RDBMS存储方式向NOSQL存储方式提供良好过渡，使得应用系统只需要简单修改数据存储层即可体验NOSQL带来的性能大幅提升，且无需修改业务代码，同时保留了 RDBMS数据存储支持，使得数据完整性得到良好的保障。</p>
+    <p>[0161]	本领域的普通技术人员可以理解，实现上述实施例方法中的全部或部分步骤是可以通过程序指令相关硬件来完成的，所述的程序可以存储于一计算机可读取存储介质中，所述的存储介质可以为ROM、RAM、磁盘、光盘等。</p>
+    <p>[0162]	以上所述仅为本发明的较佳实施例而已，并不用以限制本发明，凡在本发明的精神和原则之内所作的任何修改、等同替换和改进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103209214A?cl=zh">CN103209214A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年4月3日</td><td class="patent-data-table-td patent-date-value">2013年7月17日</td><td class="patent-data-table-td ">蓝盾信息安全技术股份有限公司</td><td class="patent-data-table-td ">一种基于NoSQL的消息中间件的实现方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103414937A?cl=zh">CN103414937A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年8月14日</td><td class="patent-data-table-td patent-date-value">2013年11月27日</td><td class="patent-data-table-td ">内蒙古中大传媒发展有限公司</td><td class="patent-data-table-td ">一种基于数字电视中间件的服务信息数据共享方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014166276A1?cl=zh">WO2014166276A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年12月9日</td><td class="patent-data-table-td patent-date-value">2014年10月16日</td><td class="patent-data-table-td ">Tencent Technology (Shenzhen) Company Limited</td><td class="patent-data-table-td ">Data transferring method and apparatus and storage system</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=UDHoBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年3月20日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年12月10日</td><td class="patent-data-table-td ">C53</td><td class="patent-data-table-td ">Change or modification</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年12月10日</td><td class="patent-data-table-td ">COR</td><td class="patent-data-table-td ">Bibliographic change or correction in the description</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">CORRECT: APPLICANT; FROM: SHENZHEN TEMOBI SCIENCE + TECHNOLOGY CO., LTD. TO: SHENZHEN RONGCHANG TIANXIA TECHNOLOGY CO., LTD.</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年4月29日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年7月22日</td><td class="patent-data-table-td ">ASS</td><td class="patent-data-table-td ">Succession or assignment of patent right</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Owner name: </span><span class="nested-value">RONGCHUANG TIANXIA (SHANGHAI) TECHNOLOGY DEVELOPME</span></div><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">FORMER OWNER: SHENZHEN RONGCHANG TIANXIA TECHNOLOGY CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Effective date: </span><span class="nested-value">20150702</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年7月22日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of the right of patent application or the patent right</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/aff24d4adb882b34d279/CN102982130A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8Dnosql%E4%B8%8Erdbms%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8C%E6%AD%A5%E6%96%B9.pdf?id=UDHoBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2yoBoBiG5XiY1XNU_93xmVXwXYrA"},"sample_url":"https://www.google.com/patents/reader?id=UDHoBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html><html><head><title>专利 CN104468518A - 业务管理方法、装置和系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="业务管理方法、装置和系统"><meta name="DC.contributor" content="邹剑波" scheme="inventor"><meta name="DC.contributor" content="赖中华" scheme="inventor"><meta name="DC.contributor" content="邓生杰" scheme="inventor"><meta name="DC.contributor" content="杨茂巍" scheme="inventor"><meta name="DC.contributor" content="腾讯科技（深圳）有限公司" scheme="assignee"><meta name="DC.date" content="2014-11-10" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种业务管理方法、装置和系统，属于计算机技术领域。所述方法包括：获取用户账号的授权码；向开放平台服务器发送携带有授权码的授权信息获取请求；接收开放平台服务器发送的授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包含用户账号的至少一项业务的托管权限；以授权令牌为凭证，对拥有托管权限的业务进行托管。本发明解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号的部分或全部业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到了节约管理资源和管理成本的效果。"><meta name="DC.date" content="2015-3-25"><meta name="DC.relation" content="CN:101785017:A" scheme="references"><meta name="DC.relation" content="CN:103220344:A" scheme="references"><meta name="DC.relation" content="CN:103927376:A" scheme="references"><meta name="DC.relation" content="US:20130019295:A1" scheme="references"><meta name="DC.relation" content="US:20140245461:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:104468518:A"><meta name="citation_patent_application_number" content="CN:201410629460"><link rel="canonical" href="https://www.google.com/patents/CN104468518A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN104468518A?cl=zh"/><meta name="title" content="专利 CN104468518A - 业务管理方法、装置和系统"/><meta name="description" content="本发明公开了一种业务管理方法、装置和系统，属于计算机技术领域。所述方法包括：获取用户账号的授权码；向开放平台服务器发送携带有授权码的授权信息获取请求；接收开放平台服务器发送的授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包含用户账号的至少一项业务的托管权限；以授权令牌为凭证，对拥有托管权限的业务进行托管。本发明解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号的部分或全部业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到了节约管理资源和管理成本的效果。"/><meta property="og:title" content="专利 CN104468518A - 业务管理方法、装置和系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN104468518A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN104468518A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=fT9LCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN104468518A&amp;usg=AFQjCNFW8C0yNjpti3d1lh1gmfzfRJvJmA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/c6a5e30231b8b32a4862/CN104468518A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/c6a5e30231b8b32a4862/CN104468518A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN104468518A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN104468518A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN104468518A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN104468518B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN104468518A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种业务管理方法、装置和系统，属于计算机技术领域。所述方法包括：获取用户账号的授权码；向开放平台服务器发送携带有授权码的授权信息获取请求；接收开放平台服务器发送的授权信息，该授权信息包括授...</span><span itemprop="url">https://www.google.com/patents/CN104468518A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN104468518A - 业务管理方法、装置和系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN104468518A - 业务管理方法、装置和系统" title="专利 CN104468518A - 业务管理方法、装置和系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN104468518 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201410629460</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2015年3月25日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2014年11月10日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2014年11月10日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104468518B?hl=zh-CN&amp;cl=zh">CN104468518B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201410629460.0, </span><span class="patent-bibdata-value">CN 104468518 A, </span><span class="patent-bibdata-value">CN 104468518A, </span><span class="patent-bibdata-value">CN 201410629460, </span><span class="patent-bibdata-value">CN-A-104468518, </span><span class="patent-bibdata-value">CN104468518 A, </span><span class="patent-bibdata-value">CN104468518A, </span><span class="patent-bibdata-value">CN201410629460, </span><span class="patent-bibdata-value">CN201410629460.0</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%82%B9%E5%89%91%E6%B3%A2%22">邹剑波</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B5%96%E4%B8%AD%E5%8D%8E%22">赖中华</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%82%93%E7%94%9F%E6%9D%B0%22">邓生杰</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E8%8C%82%E5%B7%8D%22">杨茂巍</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">腾讯科技（深圳）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104468518A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104468518A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104468518A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (4),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=fT9LCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201410629460&amp;usg=AFQjCNFPvluiWuIrAMXPH1r17vXEEd7A7A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=fT9LCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D104468518A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHpgF3O1cOXrG7UYW1Y15Rh_Hj7vA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT155160091" lang="ZH" load-source="patent-office">业务管理方法、装置和系统</invention-title>
+      </span><br><span class="patent-number">CN 104468518 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA153383806" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种业务管理方法、装置和系统，属于计算机技术领域。所述方法包括：获取用户账号的授权码；向开放平台服务器发送携带有授权码的授权信息获取请求；接收开放平台服务器发送的授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包含用户账号的至少一项业务的托管权限；以授权令牌为凭证，对拥有托管权限的业务进行托管。本发明解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号的部分或全部业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到了节约管理资源和管理成本的效果。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(25)</span></span></div><div class="patent-text"><div mxw-id="PCLM81818838" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1. 一种业务管理方法，其特征在于，用于第=方客户端中，所述方法包括：  获取社交类应用的用户账号的授权码；  向开放平台服务器发送携带有所述授权码的授权信息获取请求；  接收所述开放平台服务器发送的授权信息，所述授权信息包括授权令牌和权限集标 识，所述权限集标识对应的权限集中包含所述用户账号的至少一项业务的托管权限；  W所述授权令牌为凭证，对拥有所述托管权限的业务进行托管。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 根据权利要求1所述的方法，其特征在于，所述W所述授权令牌为凭证，对拥有所述 托管权限的业务进行托管，包括： 生成业务处理请求，所述业务处理请求中携带有所述授权令牌和所需处理的业务对应 的应用程序编程接口 API地址，所述所需处理的业务是所述拥有所述托管权限的业务中的 至少一项业务；  向所述开放平台服务器发送所述业务处理请求，W便所述开放平台服务器在验证所述 授权令牌可用的情况下，调用所述API地址所对应的API处理所述所需处理的业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 根据权利要求1所述的方法，其特征在于，所述W所述授权令牌为凭证，对拥有所述 托管权限的业务进行托管，包括： 当所述拥有所述托管权限的业务包括消息与事件管理业务时，接收所述开放平台服务 器发送的推送信息，所述推送信息是所述开放平台服务器根据所述用户账号的关注者触发 的消息和/或事件生成的；  回复或响应所述推送消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 根据权利要求3所述的方法，其特征在于，所述接收所述开放平台服务器发送的推 送信息，包括： 接收所述开放平台服务器发送的加密信息，所述加密信息是所述开放平台服务器采用 预定密钥对所述推送信息进行加密得到的；  采用所述预定密钥对所述加密信息进行解密得到所述推送信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 根据权利要求1所述的方法，其特征在于，所述获取用户账号的授权码，包括： 通过用户账号运营者所使用的用户代理向所述开放平台服务器发送授权码获取请求， 所述授权码获取请求中携带有所述第=方客户端的回调域名；  接收所述开放平台服务器通过所述用户代理发送的所述授权码；其中，所述授权码是 所述开放平台服务器获取到所述用户账号运营者通过所述用户代理发送的确认授权指示 后，在重定向所述用户代理至所述回调域名的过程中发送的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 根据权利要求1至5任一所述的方法，其特征在于，所述用户账号的至少一项业务， 包括： 消息与事件管理业务、用户管理业务、账号管理业务、网页授权业务、商户管理业务、多 客服业务中的至少一项。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7. -种业务管理方法，其特征在于，用于开放平台服务器中，所述方法包括； 接收第=方客户端发送的授权信息获取请求，所述授权信息获取请求中携带有用户账 号的授权码；  验证所述授权码是否正确；  若所述授权码正确，则生成授权信息，所述授权信息包括授权令牌和权限集标识，所述  权限集标识对应的权限集中包含所述用户账号的至少一项业务的托管权限；  向所述第=方客户端发送所述授权信息，W便所述第=方客户端W所述授权令牌为凭 证，对拥有所述托管权限的业务进行托管。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 根据权利要求7所述的方法，其特征在于，所述向所述第=方客户端发送所述授权 信息之后，还包括： 接收所述第=方客户端发送的业务处理请求，所述业务处理请求中携带有所述授权令 牌和所需处理的业务对应的应用程序编程接口 API地址，所述所需处理的业务是所述拥有 所述托管权限的业务中的至少一项业务；  验证所述授权令牌是否可用；  若所述授权令牌可用，则调用所述API地址所对应的API处理所述所需处理的业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 根据权利要求7所述的方法，其特征在于，当所述拥有所述托管权限的业务包括消 息与事件管理业务时，所述向所述第=方客户端发送所述授权信息之后，还包括； 获取所述用户账号的关注者触发的消息和/或事件；  根据所述消息和/或事件生成推送信息；  向所述第=方客户端发送所述推送信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 根据权利要求9所述的方法，其特征在于，所述根据所述消息和/或事件生成推送 信息之后，还包括： 采用预定密钥对所述推送信息进行加密得到加密信息；  所述向所述第=方客户端发送所述推送信息，包括：  向所述第=方客户端发送所述加密信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 根据权利要求7所述的方法，其特征在于，所述接收第=方客户端发送的授权信息 获取请求之前，还包括： 接收所述第=方客户端通过用户账号运营者所使用的用户代理发送的授权码获取请 求，所述授权码获取请求中携带有所述第=方客户端的回调域名；  获取所述用户账号运营者通过所述用户代理发送的确认授权指示；  在获取到所述确认授权指示后，重定向所述用户代理至所述第=方客户端的回调域 名，并将所述授权码通过所述用户代理发送给所述第=方客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 根据权利要求7至11任一所述的方法，其特征在于，所述用户账号的至少一项业 务，包括： 消息与事件管理业务、用户管理业务、账号管理业务、网页授权业务、商户管理业务、多 客服业务中的至少一项。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13. -种业务管理装置，其特征在于，用于第=方客户端中，所述装置包括： 授权码获取模块，用于获取用户账号的授权码；  请求发送模块，用于向开放平台服务器发送携带有所述授权码的授权信息获取请求； 信息接收模块，用于接收所述开放平台服务器发送的授权信息，所述授权信息包括授 权令牌和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一项业务 的托管权限；  业务托管模块，用于W所述授权令牌为凭证，对拥有所述托管权限的业务进行托管。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 根据权利要求13所述的装置，其特征在于，所述业务托管模块，包括：请求生成单 元和请求发送单元；  所述请求生成单元，用于生成业务处理请求，所述业务处理请求中携带有所述授权令 牌和所需处理的业务对应的应用程序编程接口 API地址，所述所需处理的业务是所述拥有 所述托管权限的业务中的至少一项业务；  所述请求发送单元，用于向所述开放平台服务器发送所述业务处理请求，W便所述开 放平台服务器在验证所述授权令牌可用的情况下，调用所述API地址所对应的API处理所 述所需处理的业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求13所述的装置，其特征在于，所述业务托管模块，包括：信息接收单 元和回复响应单元； 所述信息接收单元，用于当所述拥有所述托管权限的业务包括消息与事件管理业务 时，接收所述开放平台服务器发送的推送信息，所述推送信息是所述开放平台服务器根据 所述用户账号的关注者触发的消息和/或事件生成的；  所述回复响应单元，用于回复或响应所述推送消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的装置，其特征在于，所述信息接收单元，包括：信息接收子 单元和信息解密子单元； 所述信息接收子单元，用于接收所述开放平台服务器发送的加密信息，所述加密信息 是所述开放平台服务器采用预定密钥对所述推送信息进行加密得到的；  所述信息解密子单元，用于采用所述预定密钥对所述加密信息进行解密得到所述推送 f目息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求13所述的装置，其特征在于，所述授权码获取模块，包括：授权码请 求单元和授权码接收单元； 所述授权码请求单元，用于通过用户账号运营者所使用的用户代理向所述开放平台服 务器发送授权码获取请求，所述授权码获取请求中携带有所述第=方客户端的回调域名；  所述授权码接收单元，用于接收所述开放平台服务器通过所述用户代理发送的所述授 权码；其中，所述授权码是所述开放平台服务器获取到所述用户账号运营者通过所述用户 代理发送的确认授权指示后，在重定向所述用户代理至所述回调域名的过程中发送的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求13至17任一所述的装置，其特征在于，所述用户账号的至少一项业 务，包括： 消息与事件管理业务、用户管理业务、账号管理业务、网页授权业务、商户管理业务、多 客服业务中的至少一项。</div>
+    </div>
+    </div> <div class="claim"> <div num="19" class="claim">
+      <div class="claim-text">19. 一种业务管理装置，其特征在于，用于开放平台服务器中，所述装置包括： 第一请求接收模块，用于接收第=方客户端发送的授权信息获取请求，所述授权信息 获取请求中携带有用户账号的授权码；  授权码验证模块，用于验证所述授权码是否正确；  信息生成模块，用于当所述授权码正确时，生成授权信息，所述授权信息包括授权令牌 和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一项业务的托管 权限；  信息发送模块，用于向所述第立方客户端发送所述授权信息，W便所述第立方客户端 W所述授权令牌为凭证，对拥有所述托管权限的业务进行托管。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20. 根据权利要求19所述的装置，其特征在于，所述装置还包括： 第二请求接收模块，用于接收所述第=方客户端发送的业务处理请求，所述业务处理 请求中携带有所述授权令牌和所需处理的业务对应的应用程序编程接口 API地址，所述所 需处理的业务是所述拥有所述托管权限的业务中的至少一项业务；  令牌验证模块，用于验证所述授权令牌是否可用；  业务处理模块，用于当所述授权令牌可用时，调用所述API地址所对应的API处理所述 所需处理的业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21. 根据权利要求19所述的装置，其特征在于，当所述拥有所述托管权限的业务包括 消息与事件管理业务时，所述装置还包括： 消息事件获取模块，用于获取所述用户账号的关注者触发的消息和/或事件；  推送信息生成模块，用于根据所述消息和/或事件生成推送信息；  推送信息发送模块，用于向所述第=方客户端发送所述推送信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22. 根据权利要求21所述的装置，其特征在于，所述装置还包括： 信息加密模块，用于采用预定密钥对所述推送信息进行加密得到加密信息，所述预定 密钥是所述第=方客户端预先提供给所述开放平台服务器的；  所述推送信息发送模块，还用于向所述第=方客户端发送所述加密信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求19所述的装置，其特征在于，所述装置还包括： 第S请求接收模块，用于接收所述第S方客户端通过用户账号运营者所使用的用户代 理发送的授权码获取请求，所述授权码获取请求中携带有所述第=方客户端的回调域名；  指示获取模块，用于获取所述用户账号运营者通过所述用户代理发送的确认授权指 示；  授权码发送模块，用于在获取到所述确认授权指示后，重定向所述用户代理至所述第 =方客户端的回调域名，并将所述授权码通过所述用户代理发送给所述第=方客户端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求19至23任一所述的装置，其特征在于，所述用户账号的至少一项业 务，包括： 消息与事件管理业务、用户管理业务、账号管理业务、网页授权业务、商户管理业务、多 客服业务中的至少一项。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25. -种业务管理系统，其特征在于，所述系统包括：第=方客户端和开放平台服务 器； 所述第=方客户端包括如权利要求13至18任一所述的业务管理装置；  所述开放平台服务器包括如权利要求19至24任一所述的业务管理装置。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES90009448" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">业务管理方法、装置和系统</invention-title>
+    <technical-field>
+      <p>技术领域</p>
+      <p>[0001] 本发明涉及计算机技术领域，特别涉及一种业务管理方法、装置和系统。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>[0002] 公众号是公众号运营者在公众平台上申请的账号。公众号运营者可通过公众平台 实现与关注者之间进行文字、图片、语音、视频的全方位沟通和互动。</p>
+      <p>[0003] 公众号运营者通常是商家、企业、政府、媒体、名人等关注度较高的机构或个人。公 众号运营者可通过公众平台向关注者发送消息、接收关注者发送的消息、获取关注者的地 理位置信息、向关注者提供各类服务等，形成一种主流的线上线下互动方式。</p>
+      <p>[0004] 在实现本发明的过程中，发明人发现上述技术至少存在以下问题：一方面，公众 号运营者的开发能力或业务处理能力有限，将公众号的各项业务交由公众号运营者管理运 营，不利于业务的开发和管理；另一方面，各个公众号运营者单独管理自身公众号的各项业 务，存在管理资源和管理成本浪费的问题。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>[0005] 为了解决上述技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务 的开发和管理，同时存在管理资源和管理成本浪费的问题，本发明实施例提供了一种业务 管理方法、装置和系统。所述技术方案如下：</p>
+      <p>[0006] 第一方面，提供了一种业务管理方法，用于第三方客户端中，所述方法包括：</p>
+      <p>[0007] 获取用户账号的授权码；</p>
+      <p>[0008] 向开放平台服务器发送携带有所述授权码的授权信息获取请求；</p>
+      <p>[0009] 接收所述开放平台服务器发送的授权信息，所述授权信息包括授权令牌和权限集 标识，所述权限集标识对应的权限集中包含所述用户账号的至少一项业务的托管权限；</p>
+      <p>[0010] 以所述授权令牌为凭证，对拥有所述托管权限的业务进行托管。</p>
+      <p>[0011] 第二方面，提供了一种业务管理方法，用于开放平台服务器中，所述方法包括：</p>
+      <p>[0012] 接收第三方客户端发送的授权信息获取请求，所述授权信息获取请求中携带有用 户账号的授权码；</p>
+      <p>[0013] 验证所述授权码是否正确；</p>
+      <p>[0014] 若所述授权码正确，则生成授权信息，所述授权信息包括授权令牌和权限集标识， 所述权限集标识对应的权限集中包含所述用户账号的至少一项业务的托管权限；</p>
+      <p>[0015] 向所述第三方客户端发送所述授权信息，以便所述第三方客户端以所述授权令牌 为凭证，对拥有所述托管权限的业务进行托管。</p>
+      <p>[0016] 第三方面，提供了一种业务管理装置，用于第三方客户端中，所述装置包括：</p>
+      <p>[0017] 授权码获取模块，用于获取用户账号的授权码；</p>
+      <p>[0018] 请求发送模块，用于向开放平台服务器发送携带有所述授权码的授权信息获取请 求；</p>
+      <p>[0019] 信息接收模块，用于接收所述开放平台服务器发送的授权信息，所述授权信息包 括授权令牌和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一项 业务的托管权限；</p>
+      <p>[0020] 业务托管模块，用于以所述授权令牌为凭证，对拥有所述托管权限的业务进行托 管。</p>
+      <p>[0021] 第四方面，提供了一种业务管理装置，用于开放平台服务器中，所述装置包括：</p>
+      <p>[0022] 第一请求接收模块，用于接收第三方客户端发送的授权信息获取请求，所述授权 信息获取请求中携带有用户账号的授权码；</p>
+      <p>[0023] 授权码验证模块，用于验证所述授权码是否正确；</p>
+      <p>[0024] 信息生成模块，用于当所述授权码正确时，生成授权信息，所述授权信息包括授权 令牌和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一项业务的 托管权限；</p>
+      <p>[0025] 信息发送模块，用于向所述第三方客户端发送所述授权信息，以便所述第三方客 户端以所述授权令牌为凭证，对拥有所述托管权限的业务进行托管。</p>
+      <p>[0026] 第五方面，提供了一种业务管理系统，其特征在于，所述系统包括：第三方客户端 和开放平台服务器；</p>
+      <p>[0027] 所述第三方客户端包括如第三方面所述的业务管理装置；</p>
+      <p>[0028] 所述开放平台服务器包括如第四方面所述的业务管理装置。</p>
+      <p>[0029] 本发明实施例提供的技术方案带来的有益效果是：</p>
+      <p>[0030] 通过第三方客户端从开放平台服务器中获取授权信息，该授权信息包括授权令牌 和权限集标识，权限集标识对应的权限集中包含用户账号的至少一项业务的托管权限，并 以授权令牌为凭证，对拥有托管权限的业务进行托管；解决了相关技术存在的用户账号运 营者需要亲自管理用户账号的各项业务，不利于业务管理和发展的问题；实现了将用户账 号的部分或全部业务交由第三方客户端进行托管运营，有利于用户账号业务的管理和发 展。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>[0031] 为了更清楚地说明本发明实施例中的技术方案，下面将对实施例描述中所需要使 用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于 本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他 的附图。</p>
+      <p>[0032] 图1是本发明各个实施例所涉及的一种实施环境的结构示意图；</p>
+      <p>[0033] 图2是本发明一个实施例提供的业务管理方法的方法流程图；</p>
+      <p>[0034] 图3是本发明另一实施例提供的业务管理方法的方法流程图；</p>
+      <p>[0035] 图4A是本发明再一实施例提供的业务管理方法的方法流程图；</p>
+      <p>[0036] 图4B是本发明再一实施例提供的业务管理方法中步骤401的方法流程图；</p>
+      <p>[0037] 图4C是本发明再一实施例提供的业务管理方法中步骤406的一种可能的实施方 式的方法流程图；</p>
+      <p>[0038] 图4D是本发明再一实施例提供的业务管理方法中步骤406的另一种可能的实施 方式的方法流程图；</p>
+      <p>[0039] 图5是本发明还一实施例提供的业务管理方法的方法流程图；</p>
+      <p>[0040] 图6是本发明一个实施例提供的业务管理装置的结构方框图；</p>
+      <p>[0041] 图7是本发明另一实施例提供的业务管理装置的结构方框图；</p>
+      <p>[0042] 图8是本发明一个实施例提供的业务管理系统的结构方框图；</p>
+      <p>[0043] 图9是本发明一个实施例提供的电子设备的结构示意图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>[0044] 为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方 式作进一步地详细描述。</p>
+      <p>[0045] 请参考图1，其示出了本发明各个实施例所涉及的一种实施环境的结构示意图，该 实施环境包括：第三方设备120、开放平台服务器140和终端160。其中：</p>
+      <p>[0046] 第三方设备120中运行有第三方客户端，该第三方客户端是第三方开发者提供的 第三方组件，用于对用户账号的业务进行托管。第三方设备120可以是膝上型便携计算机、 台式计算机和开放平台服务器等。</p>
+      <p>[0047] 第三方设备120与开放平台服务器140之间通过有线网络或者无线网络相连。</p>
+      <p>[0048] 开放平台服务器140可以是一台服务器，或者由若干台服务器组成的服务器集 群，或者是一个云计算服务中心。在一种可能的实施方式中，开放平台服务器140包括授权 服务器和资源服务器。</p>
+      <p>[0049] 终端160通过有线网络或者无线网络分别与第三方设备120和开放平台服务器 140相连。</p>
+      <p>[0050] 终端160中运行有用户代理，该用户代理通常为浏览器，用于完成用户账号运营 者向第三方客户端的托管授权。终端160可以是手机、平板电脑、电子书阅读器、膝上型便 携计算机、台式计算机等。</p>
+      <p>[0051] 下面，对本发明实施例中涉及的一些名词进行定义和说明：</p>
+      <p>[0052] 1、用户账号：是指机构或个人在公众平台上申请的账号。上述机构或个人通常是 指受用户关注度较高的单位，如商家、企业、政府、媒体、名人等。通常来讲，这类用户账号称 为公众号。</p>
+      <p>[0053] 2、用户账号运营者：是指用户账号的所有者，也即申请上述用户账号的机构或个 人。</p>
+      <p>[0054] 3、公众平台：是指用于与用户账号的关注者进行线上线下互动的开放平台。如微 信公众平台、易信公众平台、来往公众平台、人人网公众平台等。公众平台通常基于社交类 应用实现。用户账号运营者在社交类应用中申请用户账号后，社交类应用中的普通用户便 可关注该用户账号，或者与该用户账号成为好友关系。之后，普通用户和用户账号运营者可 以以社交类应用为媒介，进行文本、图片、语音、视频等信息交互。</p>
+      <p>[0055] 请参考图2,其示出了本发明一个实施例提供的业务管理方法的方法流程图，本实 施例以该业务管理方法应用于图1所示实施环境的第三方客户端中进行举例说明。该业务 管理方法可以包括如下几个步骤：</p>
+      <p>[0056] 步骤202,获取用户账号的授权码。</p>
+      <p>[0057] 步骤204,向开放平台服务器发送携带有授权码的授权信息获取请求。</p>
+      <p>[0058] 步骤206,接收开放平台服务器发送的授权信息，该授权信息包括授权令牌和权限 集标识，权限集标识对应的权限集中包含用户账号的至少一项业务的托管权限。</p>
+      <p>[0059] 步骤208,以授权令牌为凭证，对拥有托管权限的业务进行托管。</p>
+      <p>[0060] 综上所述，本实施例提供的业务管理方法，通过第三方客户端从开放平台服务器 中获取授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包 含用户账号的至少一项业务的托管权限，并以授权令牌为凭证，对拥有托管权限的业务进 行托管；解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的 开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号的部分或全部 业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到了节约管理资 源和管理成本的效果。</p>
+      <p>[0061] 请参考图3,其示出了本发明另一实施例提供的业务管理方法的方法流程图，本实 施例以该业务管理方法应用于图1所示实施环境中的开放平台服务器中进行举例说明。该 业务管理方法可以包括如下几个步骤：</p>
+      <p>[0062] 步骤302,接收第三方客户端发送的授权信息获取请求，该授权信息获取请求中携 带有用户账号的授权码。</p>
+      <p>[0063] 步骤304,验证授权码是否正确。</p>
+      <p>[0064] 步骤306,若授权码正确，则生成授权信息，该授权信息包括授权令牌和权限集标 识，权限集标识对应的权限集中包含用户账号的至少一项业务的托管权限。</p>
+      <p>[0065] 步骤308,向第三方客户端发送授权信息，以便第三方客户端以授权令牌为凭证， 对拥有托管权限的业务进行托管。</p>
+      <p>[0066] 综上所述，本实施例提供的业务管理方法，通过开放平台服务器向第三方客户端 发送授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包含 用户账号的至少一项业务的托管权限，使得第三方客户端以授权令牌为凭证，对拥有托管 权限的业务进行托管；解决了相关技术存在的公众号运营者亲自管理公众号的各项业务， 不利于业务的开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号 的部分或全部业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到 了节约管理资源和管理成本的效果。</p>
+      <p>[0067] 请参考图4A，其示出了本发明再一实施例提供的业务管理方法的方法流程图，本 实施例以该业务管理方法应用于图1所示实施环境中进行举例说明。该业务管理方法可以 包括如下几个步骤：</p>
+      <p>[0068] 步骤401，第三方客户端获取用户账号的授权码。</p>
+      <p>[0069] 用户账号的授权码是在用户账号运营者确认授权给第三方客户端托管权限的情 况下，第三方客户端从开放平台服务器中获取的授权凭证。其中，用户账号是用户账号运营 者在公众平台上申请的账号，也称为公众号。用户账号运营者通常是商家、企业、政府、媒 体、名人等关注度较高的机构或个人。</p>
+      <p>[0070] 用户账号包括但不限于服务号、订阅号和企业号。其中，服务号用于优化企业和组 织的业务服务与用户管理能力，帮助企业快速构建用户账号服务平台。订阅号用于为媒体 和个人提供一种信息传播方式，帮助媒体和个人构建与读者之间更好的沟通与管理模式。 企业号用于为企业或组织提供移动应用入口，帮助企业建立与员工、上下游供应链及企业 应用间的连接。</p>
+      <p>[0071] 请参考图4B，在一种可能的实施方式中，本步骤可以包括如下几个子步骤：</p>
+      <p>[0072] 步骤401a，第三方客户端通过用户账号运营者所使用的用户代理向开放平台服务 器发送授权码获取请求。</p>
+      <p>[0073] 其中，用户代理通常为用户账号运营者所使用的终端中运行的浏览器，用户代理 具备与第三方客户端和开放平台服务器直接沟通的能力。在一种可能的实施方式中，用户 账号运营者使用用户代理打开第三方客户端所对应的网站，如www. ABC. com。该网站上设置 有用户账号登录授权入口，通过该用户账号登录授权入口引导用户账号运营者使用用户代 理打开开放平台服务器提供的授权页面。与此同时，第三方客户端通过用户代理向开放平 台服务器发送授权码获取请求，该授权码获取请求中携带有第三方客户端的回调域名。其 中，授权码获取请求可以是URL (Uniform Resource Locator，统一资源定位符）请求，第三 方客户端的回调域名作为URL参数发送至开放平台服务器。第三方客户端的回调域名用 于在用户账号运营者完成授权操作后，将用户账号运营者引导回第三方客户端所对应的网 站。</p>
+      <p>[0074] 对应地，开放平台服务器接收第三方客户端通过用户账号运营者所使用的用户代 理发送的授权码获取请求。</p>
+      <p>[0075] 步骤401b，开放平台服务器获取用户账号运营者通过用户代理发送的确认授权指 不�</p>
+      <p>[0076] 用户账号运营者在开放平台服务器提供的授权页面中输入用户账号的账号和密 码，并触发确认授权指示。对应地，开放平台服务器获取用户账号的账号和密码，以及确认 授权指示。</p>
+      <p>[0077] 需要说明的一点是：用户代理与开放平台服务器之间具有直接通信的能力，用户 账号运营者通过用户代理直接将用户账号的账号和密码发送给开放平台服务器，在此期间 第三方客户端不会接触到用户账号的账号和密码，确保账户安全性。</p>
+      <p>[0078] 步骤401c，开放平台服务器在获取到确认授权指示后，重定向用户代理至第三方 客户端的回调域名，并将授权码通过用户代理发送给第三方客户端。</p>
+      <p>[0079] 开放平台服务器首先验证用户账号的账号和密码是否正确，若正确，则在获取到 确认授权指示的情况下，生成授权码。授权码通常为开放平台服务器随机生成的字符串。之 后，开放平台服务器根据第三方客户端提供的回调域名重定向用户代理至该回调域名。在 此过程中，开放平台服务器将授权码通过URL参数发送给用户代理，并通过用户代理将授 权码转发给第三方客户端。</p>
+      <p>[0080] 对应地，第三方客户端接收开放平台服务器通过用户代理发送的授权码。</p>
+      <p>[0081] 步骤402,第三方客户端向开放平台服务器发送携带有授权码的授权信息获取请 求。</p>
+      <p>[0082] 第三方客户端获取到经用户账号的用户账号运营者授权的授权码后，以授权码 作为凭证，换取用户账号的授权信息。其中，授权信息获取请求可以是HTTP(Hypertext Transfer Protocol，超文本传输协议）请求，请求参数包括授权码。</p>
+      <p>[0083] 对应地，开放平台服务器接收第三方客户端发送的授权信息获取请求，该授权信 息获取请求中携带有用户账号的授权码。</p>
+      <p>[0084] 步骤403,开放平台服务器验证授权码是否正确。</p>
+      <p>[0085] 开放平台服务器接收到授权信息获取请求后，从中提取授权码，并验证授权码是 否正确。验证流程可以包括：开放平台服务器验证接收到的授权码是否为之前通过用户代 理发送给第三方客户端的授权码；若是，则确认授权码正确。</p>
+      <p>[0086] 步骤404,若授权码正确，则开放平台服务器生成授权信息。</p>
+      <p>[0087] 其中，授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包含用 户账号的至少一项业务的托管权限。用户账号的业务纷繁多样，包括消息收发、事件响应、 CRM (Customer Relationship Management，客户关系管理）、自定义菜单管理、群发管理、网 页授权等等。为了便于用户账号运营者将用户账号的业务授权托管给第三方，可将用户账 号的业务进行分类。比如，将用户账号的业务划分为消息与事件管理业务、用户管理业务、 账号管理业务、网页授权业务、商户管理业务、多客服业务6类。当然，每一类业务下还可细 分一项或多项子业务，本实施例对此不作具体限定。</p>
+      <p>[0088] 开放平台服务器预先为不同类型的业务分配不同的权限集，并为不同的权限集设 置不同的权限集标识。比如，在一种可能的实施方式中，上述对应关系可以如下表-1所示：</p>
+      <p>[0089]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00111.png"> <img id="idf0001" file="CN104468518AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00111.png" class="patent-full-image" alt="Figure CN104468518AD00111"> </a> </div>
+      
+      <p>[0090] 表-1</p>
+      <p>[0091] 用户账号运营者可将上述一项或多项业务的管理权限授权给第三方，由第三方对 该业务进行托管运营。下面，对上述各权限集进行简单说明：</p>
+      <p>[0092] 1、消息与事件管理权限集：第三方客户端拥有消息与事件管理权限集所对应的各 项业务的托管权限后，便可帮助用户账号运营者管理用户消息与事件。消息与事件权利权 限集可以包括如下权限：</p>
+      <p>[0093] 1)接收和回复被动响应消息；</p>
+      <p>[0094] 2)发送客服消息；</p>
+      <p>[0095] 3)发送模板消息；</p>
+      <p>[0096] 4)高级群发；</p>
+      <p>[0097] 5)上传下载多媒体文件；</p>
+      <p>[0098] 6)事件推送，如关注事件、取消关注事件、进入会话事件、地理位置事件、自定义菜</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00112.png"> <img id="idf0002" file="CN104468518AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00112.png" class="patent-full-image" alt="Figure CN104468518AD00112"> </a> </div>
+      
+      <p>单事件、商户相关事件等；</p>
+      <p>[0099] 7)设置语音识别开关；</p>
+      <p>[0100] 8)获取语音识别开关状态。</p>
+      <p>[0101] 2、用户管理权限集：第三方客户端拥有用户管理权限集所对应的各项业务的托管 权限后，便可帮助用户账号运营者管理用户。用户管理权限集可以包括如下权限：</p>
+      <p>[0102] 1)获取用户基本信息；</p>
+      <p>[0103] 2)获取用户列表；</p>
+      <p>[0104] 3)用户分组管理；</p>
+      <p>[0105] 4)用户备注名设置；</p>
+      <p>[0106] 5)设置用户地理位置的开关及上报方式；</p>
+      <p>[0107] 6)获取用户地理位置上报的开关状态及上报方式。</p>
+      <p>[0108] 3、账号管理权限集：第三方客户端拥有账号管理权限集所对应的各项业务的托管 权限后，便可帮助用户账号运营者管理用户账号的账号。账号管理权限集可以包括如下权 限：</p>
+      <p>[0109] 1)自定义菜单设置、修改和删除；</p>
+      <p>[0110] 2)带参数二维码功能；</p>
+      <p>[0111] 3)获取用户账号的账号基础信息，包括头像、昵称、二维码、账号类型、认证类型 等。</p>
+      <p>[0112] 4、网页授权权限集：第三方客户端拥有网页授权权限集所对应的各项业务的托管 权限后，便可帮助用户账号运营者进行网页授权。网页授权权限集可以包括如下权限：</p>
+      <p>[0113] 1)发起网页授权；</p>
+      <p>[0114] 2)根据授权码获取授权用户的基本信息。</p>
+      <p>[0115] 5、商户管理权限集：第三方客户端拥有商户管理权限集所对应的各项业务的托管 权限后，便可帮助用户账号运营者管理商户。商户管理权限集可以包括如下权限：</p>
+      <p>[0116] 1)商户所有事件管理，包括商品管理、库存管理、邮费模板管理、分组管理、货架管 理、订单管理、功能管理等。</p>
+      <p>[0117] 6、多客服权限集：第三方客户端拥有多客服权限集所对应的各项业务的托管权限 后，便可帮助用户账号运营者使用多客服系统。多客服权限集可以包括如下权限：</p>
+      <p>[0118] 1)设置多客服功能开关；</p>
+      <p>[0119] 2)获取多客服功能开关状态。</p>
+      <p>[0120] 开放平台服务器可根据第三方客户端申请的托管权限，以及用户账号运营者确定 授权给第三方客户端的托管权限，决策将一项或多项业务的托管权限授权给第三方客户 端。开放平台服务器根据决策结果生成携带有授权令牌和权限集标识的授权信息。其中， 授权令牌是第三方客户端后续进行业务托管时的凭证。授权令牌可以是开放平台服务器随 机生成的字符串。</p>
+      <p>[0121] 步骤405，开放平台服务器向第三方客户端发送授权信息。</p>
+      <p>[0122] 开放平台服务器生成授权信息后，向第三方客户端反馈HTTP应答，应答参数包括 授权信息。</p>
+      <p>[0123] 对应地，第三方客户端接收开放平台服务器发送的授权信息。</p>
+      <p>[0124] 步骤406,第三方客户端以授权令牌为凭证，对拥有托管权限的业务进行托管。</p>
+      <p>[0125] 第三方客户端从授权信息中提取授权令牌和权限集标识，并根据权限集标识确定 获得了哪个/哪些业务的托管权限。之后，第三方客户端便可以授权令牌为凭证，对拥有托 管权限的业务进行托管，帮助用户账号运营者管理、开发和运营用户账号。其中，拥有托管 权限的业务包括但不限于消息与事件管理业务、用户管理业务、账号管理业务、网页授权业 务、商户管理业务、多客服业务中的至少一种。</p>
+      <p>[0126] 第三方客户端在获得托管权限后，便获得了调用开放平台服务器中某些 API (Application Programming Interface，应用程序编程接口）的能力。第三方客户端通 过调用不同的API可以完成诸如向用户账号的关注者发送消息、获取用户列表、获取用户 地理位置、创建自定义菜单、删除自定义菜单等业务。请参考图4C，在第一种可能的实施方 式中，步骤406可以包括如下几个子步骤：</p>
+      <p>[0127] 步骤406a，第三方客户端生成业务处理请求。</p>
+      <p>[0128] 其中，业务处理请求中携带有授权令牌和所需处理的业务对应的API地址，所需 处理的业务是拥有托管权限的业务中的至少一项业务。比如，若所需处理的业务为发送客 服消息，则第三方客户端获取客服消息接口的API地址，并生成携带有授权令牌和上述客 服消息接口的API地址的业务处理请求。</p>
+      <p>[0129] 当然，业务处理请求中还包括请求内容。比如，当所需处理的业务为发送客服消息 时，请求内容可以包括用户ID(Identity，身份）、消息类型、消息内容等参数。再比如，当所 需处理的业务为创建自定义菜单时，请求内容可以包括菜单数组、菜单的响应动作类型、菜 单标题、菜单KEY值、网页链接等参数。在实际应用中，第三方客户端可依据所需处理的业 务的不同，配置不同的请求内容，对此本实施例不作具体限定。</p>
+      <p>[0130] 可选的，业务处理请求可以是HTTP请求，请求方式可以是POST请求方式或GET请 求方式，请求参数包括授权令牌、所需处理的业务对应的API地址和请求内容。</p>
+      <p>[0131] 步骤406b，第三方客户端向开放平台服务器发送业务处理请求。</p>
+      <p>[0132] 对应地，开放平台服务器接收第三方客户端发送的业务处理请求。</p>
+      <p>[0133] 步骤406c，开放平台服务器验证授权令牌是否可用。</p>
+      <p>[0134] 开放平台服务器从业务处理请求中提取授权令牌，并验证授权令牌是否可用。验 证流程可以包括：开放平台服务器验证授权令牌是否为之前发送给第三方客户端的授权令 牌；若是，则确认授权令牌可用。</p>
+      <p>[0135] 步骤406d，若授权令牌可用，则开放平台服务器调用API地址所对应的API处理所 需处理的业务。</p>
+      <p>[0136] 在授权令牌可用的情况下，开放平台服务器调用API地址所对应的API，通过该 API根据请求内容处理相应的业务。比如，当所需处理的业务为发送客服消息，且请求内容 包括用户ID和消息内容时，开放平台服务器将消息内容发送给上述用户ID所对应的客户 端。</p>
+      <p>[0137] 当第三方客户端拥有托管权限的业务包括消息与事件管理业务时，第三方客户端 也就具备了接收用户账号的关注者触发的消息和/或事件的能力。请参考图4D，在第二种 可能的实施方式中，步骤406可以包括如下几个子步骤：</p>
+      <p>[0138] 步骤406e，开放平台服务器获取用户账号的关注者触发的消息和/或事件。</p>
+      <p>[0139] 用户账号的关注者可编辑消息，并通过客户端向开放平台服务器发送所编辑的消 息。其中，消息的类型包括但不限于文本消息、图片消息、语音消息、视频消息、地理位置消 息、链接消息。用户账号的关注者还可触发事件，如关注事件、取消关注事件、进入会话事 件、地理位置事件、自定义菜单事件、商户相关事件等，并通过客户端向开放平台服务器发 送所触发的事件。</p>
+      <p>[0140] 步骤406f，开放平台服务器根据消息和/或事件生成推送信息。</p>
+      <p>[0141] 当用户账号的消息与事件管理业务交由第三方客户端托管时，开放平台服务器根 据接收到的消息和/或事件生成推送信息，并将推送信息发送给第三方客户端。</p>
+      <p>[0142] 步骤406g，开放平台服务器向第三方客户端发送推送信息。</p>
+      <p>[0143] 对应地，第三方客户端接收开放平台服务器发送的推送信息。</p>
+      <p>[0144] 步骤406h，第三方客户端回复或响应推送消息。</p>
+      <p>[0145] 第三方客户端接收到开放平台服务器发送的推送消息后，读取推送消息，并根据 推送消息的不同做不同的处理。比如，第三方客户端可以回复推送消息，如通过开放平台服 务器向用户账号的关注者所使用的客户端发送回复。或者，第三方客户端还可以响应推送 消息，如存储、分类、计算等处理。</p>
+      <p>[0146] 可选的，为了加强安全性，开放平台服务器可采用预定密钥对推送信息进行加密 得到加密信息，并向第三方客户端发送加密信息。对应地，第三方客户端接收开放平台服 务器发送的加密信息，采用上述预定密钥对加密信息进行解密得到推送信息。其中，预定 密钥是第三方客户端预先提供给开放平台服务器的。加密方式可以采用AES(Ad Vanced Encryption Standard，高级加密标准）加密算法、DES (Data Encryption Standard，数据加 密标准）加密算法等，本实施例对此不作具体限定。</p>
+      <p>[0147] 综上所述，本实施例提供的业务管理方法，通过第三方客户端从开放平台服务器 中获取授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包 含用户账号的至少一项业务的托管权限，并以授权令牌为凭证，对拥有托管权限的业务进 行托管；解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的 开发和管理，同时存在管理资源和管理成本浪费的问题；一方面，通过将用户账号的业务授 权给第三方进行托管运营，第三方往往是开发能力和业务处理能力都较强的开发者，可以 提升用户账号的各项业务的开发质量、管理质量和运营质量；另一方面，面对不同的用户账 号的相同或相似业务，第三方可开发相同或相近的第三方客户端托管上述业务，可以节约 开发资源、管理资源和管理成本。</p>
+      <p>[0148] 另外，还通过将用户账号的业务划分为不同的类型，实现了用户账号运营者将用 户账号的业务有选择性地授权托管给第三方，用户账号运营者可将不同类型的业务托管给 不同的第三方，有利于业务管理和优化，且有利于用户账号的开发，提高用户账号的服务质 量。</p>
+      <p>[0149] 请参考图5,其示出了本发明还一实施例提供的业务管理方法的方法流程图，本实 施例以该业务管理方法应用于图1所示实施环境中进行举例说明。该业务管理方法可以包 括如下几个步骤：</p>
+      <p>[0150] 步骤501，开放平台服务器向第三方客户端定时/不定时推送票据。</p>
+      <p>[0151] 开放平台服务器向第三方客户端预先提供的事件接收URL推送票据，该事件接收 URL是第三方客户端申请托管服务时提供给开放平台服务器的。推送票据用于在后续授权 过程中验证第三方客户端身份的合法性。</p>
+      <p>[0152] 对应地，第三方客户端接收开放平台服务器定时/不定时推送的票据。</p>
+      <p>[0153] 步骤502,第三方客户端生成携带有第三方客户端的应用标识、应用密钥和票据的 服务令牌获取请求。</p>
+      <p>[0154] 其中，第三方客户端的应用标识是指第三方客户端的App id(Application Identity，应用程序标识）。第三方客户端的应用密钥是指第三方客户端的 Appsecret (Application secret，应用程序密钥）。票据是指开放平台服务器最新推送的 票据。服务令牌获取请求可以是HTTP请求，请求参数包括第三方客户端的应用标识、应用 密钥和票据。请求方式可以采用POST请求方式。请求协议可以采用HTTPS(Hyper Text Transfer Protocol over Secure Socket Layer，安全超文本传输协议）。</p>
+      <p>[0155] 比如，服务令牌获取请求的POST数据示例如下：</p>
+      <p>[0156]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00151.png"> <img id="idf0003" file="CN104468518AD00151.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00151.png" class="patent-full-image" alt="Figure CN104468518AD00151"> </a> </div>
+      
+      <p>[0157] 服务令牌获取请求的POST数据中的参数说明如下表-2所示：</p>
+      <p>[0158]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00152.png"> <img id="idf0004" file="CN104468518AD00152.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00152.png" class="patent-full-image" alt="Figure CN104468518AD00152"> </a> </div>
+      
+      <p>[0159] 表 _2</p>
+      <p>[0160] 步骤503,第三方客户端向开放平台服务器发送服务令牌获取请求。</p>
+      <p>[0161] 对应地，开放平台服务器接收第三方客户端发送的服务令牌获取请求。</p>
+      <p>[0162] 步骤504,开放平台服务器根据第三方客户端的应用标识、应用密钥和票据验证第 三方客户端的身份是否合法，若第三方客户端的身份合法，则生成服务令牌。</p>
+      <p>[0163] 开放平台服务器根据第三方客户端的应用标识和应用密钥验证该第三方客户端 是否为预先申请托管服务的第三方客户端，并验证票据是否正确，票据是否超时等，以此确 定第三方客户端身份的合法性。</p>
+      <p>[0164] 在确定第三方客户端的身份合法的情况下，开放平台服务器生成服务令牌。服务 令牌是第三方客户端换取预授权码、授权码、授权令牌和授权信息的凭证。服务令牌通常为 开放平台服务器随机生成的字符串。</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00153.png"> <img id="idf0005" file="CN104468518AD00153.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00153.png" class="patent-full-image" alt="Figure CN104468518AD00153"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00154.png"> <img id="idf0006" file="CN104468518AD00154.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00154.png" class="patent-full-image" alt="Figure CN104468518AD00154"> </a> </div>
+      
+      <p>[0165] 步骤505,开放平台服务器向第三方客户端发送携带有服务令牌的服务令牌获取 应答。</p>
+      <p>[0166] 服务令牌获取应答可以是HTTP应答，应答参数包括服务令牌。可选的，应答参数 还可包括服务令牌对应的有效期。</p>
+      <p>[0167] 比如，服务令牌获取应答的返回结果如下：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00161.png"> <img id="idf0007" file="CN104468518AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00161.png" class="patent-full-image" alt="Figure CN104468518AD00161"> </a> </div>
+      
+      <p>[0170] 服务令牌获取应答的返回结果中的参数说明如下表_3所示：</p>
+      <p>[0171]</p>
+      <p>[0172] 表-3</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00162.png"> <img id="idf0008" file="CN104468518AD00162.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00162.png" class="patent-full-image" alt="Figure CN104468518AD00162"> </a> </div>
+      
+      <p>[0173] 对应地，第三方客户端接收开放平台服务器发送的携带有服务令牌的服务令牌获 取应答。</p>
+      <p>[0174] 步骤506,第三方客户端生成携带有第三方客户端的应用标识和服务令牌的预授 权码获取请求。</p>
+      <p>[0175] 其中，预授权码获取请求可以是HTTP请求，请求参数包括第三方客户端的应用标 识。请求方式可以采用POST请求方式。请求协议可以采用HTTPS协议。</p>
+      <p>[0176] 服务令牌可作为HTTP请求的URL参数。比如，HTTP请求为：https://api. weixin. qq.com/cgi_bin/component/api_create_preauthcode ? component_ac cess_token = xxx</p>
+      <p>[0177] 第三方客户端的应用标识可作为HTTP请求的POST数据。比如，HTTP请求的POST 数据示例如下：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00163.png"> <img id="idf0009" file="CN104468518AD00163.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00163.png" class="patent-full-image" alt="Figure CN104468518AD00163"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00164.png"> <img id="idf0010" file="CN104468518AD00164.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00164.png" class="patent-full-image" alt="Figure CN104468518AD00164"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00165.png"> <img id="idf0011" file="CN104468518AD00165.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00165.png" class="patent-full-image" alt="Figure CN104468518AD00165"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00166.png"> <img id="idf0012" file="CN104468518AD00166.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00166.png" class="patent-full-image" alt="Figure CN104468518AD00166"> </a> </div>
+      
+      <p>[0183] 表-4</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00171.png"> <img id="idf0013" file="CN104468518AD00171.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00171.png" class="patent-full-image" alt="Figure CN104468518AD00171"> </a> </div>
+      
+      <p>[0184] 步骤507,第三方客户端向开放平台服务器发送预授权码获取请求。</p>
+      <p>[0185] 对应地，开放平台服务器接收第三方客户端发送的预授权码获取请求。</p>
+      <p>[0186] 步骤508,开放平台服务器验证第三方客户端的应用标识和服务令牌是否正确，若 正确，则生成预授权码。</p>
+      <p>[0187] 其中，验证流程可以包括：验证应用标识和服务令牌是否匹配，验证服务令牌是否 过期。在确定第三方客户端的应用标识和服务令牌正确的情况下，开放平台服务器生成预 授权码。预授权码是第三方客户端换取授权码的凭证。预授权码通常为开放平台服务器随 机生成的字符串。</p>
+      <p>[0188] 步骤509,开放平台服务器向第三方客户端发送携带有预授权码的预授权码获取 应答。</p>
+      <p>[0189] 预授权码获取应答可以是HTTP应答，应答参数包括预授权码。可选的，应答参数 还可包括预授权码对应的有效期。</p>
+      <p>[0190] 比如，预授权码获取应答的返回结果如下：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00172.png"> <img id="idf0014" file="CN104468518AD00172.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00172.png" class="patent-full-image" alt="Figure CN104468518AD00172"> </a> </div>
+      
+      <p>[0192] 预授权码获取应答的返回结果中的参数说明如下表-5所示：</p>
+      <p>[0193]</p>
+      <p>[0194] 表-5</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00173.png"> <img id="idf0015" file="CN104468518AD00173.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00173.png" class="patent-full-image" alt="Figure CN104468518AD00173"> </a> </div>
+      
+      <p>[0195] 对应地，第三方客户端接收开放平台服务器发送的携带有预授权码的预授权码获 取应答。</p>
+      <p>[0196] 步骤510,第三方客户端生成携带有第三方客户端对应的应用标识、预授权码和回 调域名的授权码获取请求。</p>
+      <p>[0197] 其中，授权码获取请求可以是URL请求，URL参数包括第三方客户端的应用标识、 预授权码和回调域名。比如，URL请求为：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00174.png"> <img id="idf0016" file="CN104468518AD00174.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00174.png" class="patent-full-image" alt="Figure CN104468518AD00174"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00175.png"> <img id="idf0017" file="CN104468518AD00175.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00175.png" class="patent-full-image" alt="Figure CN104468518AD00175"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00176.png"> <img id="idf0018" file="CN104468518AD00176.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00176.png" class="patent-full-image" alt="Figure CN104468518AD00176"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00177.png"> <img id="idf0019" file="CN104468518AD00177.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00177.png" class="patent-full-image" alt="Figure CN104468518AD00177"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00178.png"> <img id="idf0020" file="CN104468518AD00178.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00178.png" class="patent-full-image" alt="Figure CN104468518AD00178"> </a> </div>
+      
+      <p>[0199] 上述URL参数说明如下表-6所示：</p>
+      <p>[0200]</p>
+      <p>[0201] 表 _6</p>
+      <p>[0202] 步骤511，第三方客户端通过用户账号运营者所使用的用户代理向开放平台服务 器发送授权码获取请求。</p>
+      <p>[0203] 其中，用户代理通常为用户账号运营者所使用的终端中运行的浏览器，用户代理 具备与第三方客户端和开放平台服务器直接沟通的能力。在一种可能的实施方式中，用户 账号运营者使用用户代理打开第三方客户端所对应的网站，如WWW. ABC. com。该网站上设置 有用户账号登录授权入口，通过该用户账号登录授权入口引导用户账号运营者使用用户代 理打开开放平台服务器提供的授权页面。与此同时，第三方客户端通过用户代理向开放平 台服务器发送授权码获取请求。第三方客户端的回调域名作为URL参数发送至开放平台服 务器。第三方客户端的回调域名用于在用户账号运营者完成授权操作后，将用户账号运营 者引导回第三方客户端所对应的网站。</p>
+      <p>[0204] 对应地，开放平台服务器接收第三方客户端通过用户账号运营者所使用的用户代 理发送的授权码获取请求。</p>
+      <p>[0205] 步骤512,开放平台服务器获取用户账号运营者通过用户代理发送的确认授权指 不�</p>
+      <p>[0206] 用户账号运营者在开放平台服务器提供的授权页面中输入用户账号的账号和密 码，并触发确认授权指示。对应地，开放平台服务器获取用户账号的账号和密码，以及确认 授权指示。</p>
+      <p>[0207] 需要说明的一点是：用户代理与开放平台服务器之间具有直接通信的能力，用户 账号运营者通过用户代理直接将用户账号的账号和密码发送给开放平台服务器，在此期间 第三方客户端不会接触到用户账号的账号和密码，确保账户安全性。</p>
+      <p>[0208] 步骤513,开放平台服务器在获取到确认授权指示后，重定向用户代理至第三方客 户端的回调域名，并将授权码通过用户代理发送给第三方客户端。</p>
+      <p>[0209] 开放平台服务器首先验证用户账号的账号和密码是否正确，若正确，则在获取到 确认授权指示的情况下，生成授权码。授权码通常为开放平台服务器随机生成的字符串。之 后，开放平台服务器根据第三方客户端提供的回调域名重定向用户代理至该回调域名。在 此过程中，开放平台服务器将授权码通过URL参数发送给用户代理，并通过用户代理将授 权码转发给第三方客户端。</p>
+      <p>[0210] 可选的，开放平台服务器还可生成授权码的有效期，并将授权码的有效期和授权 码一并反馈给第三方客户端。</p>
+      <p>[0211] 对应地，第三方客户端接收开放平台服务器通过用户代理发送的授权码。</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00181.png"> <img id="idf0021" file="CN104468518AD00181.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00181.png" class="patent-full-image" alt="Figure CN104468518AD00181"> </a> </div>
+      
+      <p>[0212] 步骤514,第三方客户端生成携带有第三方客户端的应用标识、服务令牌和授权码 的授权信息获取请求。</p>
+      <p>[0213] 其中，授权信息获取请求可以是HTTP请求，请求参数包括第三方客户端的应用标 识、服务令牌和授权码。请求方式可以采用POST请求方式。请求协议可以采用HTTPS协议。</p>
+      <p>[0214] 服务令牌可作为HTTP请求的URL参数。比如，HTTP请求为：111^口8://^口;[.&#165;61叉;[11. qq.com/cgi_bin/component/api_query_auth? component_access_tok en = xxxx</p>
+      <p>[0215] 第三方客户端的应用标识和授权码可作为HTTP请求的POST数据。比如，HTTP请 求的POST数据示例如下：</p>
+      <p>[0216]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00191.png"> <img id="idf0022" file="CN104468518AD00191.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00191.png" class="patent-full-image" alt="Figure CN104468518AD00191"> </a> </div>
+      
+      <p>[0217] 上述POST数据中的参数说明如下表-7所示：</p>
+      <p>[0218]</p>
+      <p>[0219] 表-7</p>
+      <p>[0220] 步骤515,第三方客户端向开放平台服务器发送授权信息获取请求。</p>
+      <p>[0221] 对应地，开放平台服务器接收第三方客户端发送的授权信息获取请求。</p>
+      <p>[0222] 步骤516,开放平台服务器验证第三方客户端的应用标识、服务令牌和授权码是否 正确，若正确，则生成授权信息。</p>
+      <p>[0223] 其中，验证流程可以包括：验证应用标识和服务令牌是否匹配，验证服务令牌是否 过期，验证授权码是否正确，验证授权码是否过期。在验证通过的情况下，开放平台服务器 生成授权信息。</p>
+      <p>[0224] 授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包含用户账号 的至少一项业务的托管权限。该至少一项业务包括但不限于消息与事件管理业务、用户管 理业务、账号管理业务、网页授权业务、商户管理业务、多客服业务。</p>
+      <p>[0225] 步骤517,开放平台服务器向第三方客户端发送携带有授权信息的授权信息获取 应答。</p>
+      <p>[0226] 授权信息获取应答可以是HTTP应答，应答参数包括授权令牌和权限集标识。可选 的，应答参数还可包括授权令牌对应的有效期、授权方的应用标识（也即用户账号对应的 App id)、刷新令牌。其中，刷新令牌是第三方客户端刷新授权令牌的凭证。</p>
+      <p>[0227] 比如，授权信息获取应答的返回结果包括：</p>
+      <p>[0228]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00192.png"> <img id="idf0023" file="CN104468518AD00192.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00192.png" class="patent-full-image" alt="Figure CN104468518AD00192"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00193.png"> <img id="idf0024" file="CN104468518AD00193.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00193.png" class="patent-full-image" alt="Figure CN104468518AD00193"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00201.png"> <img id="idf0025" file="CN104468518AD00201.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00201.png" class="patent-full-image" alt="Figure CN104468518AD00201"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00211.png"> <img id="idf0026" file="CN104468518AD00211.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00211.png" class="patent-full-image" alt="Figure CN104468518AD00211"> </a> </div>
+      
+      <p>[0232] 表-8</p>
+      <p>[0233] 对应地，第三方客户端接收开放平台服务器发送的携带有授权信息的授权信息获 取应答。</p>
+      <p>[0234] 步骤518,第三方客户端以授权令牌为凭证，对拥有托管权限的业务进行托管。</p>
+      <p>[0235] 第三方客户端从授权信息中提取授权令牌和权限集标识，并根据权限集标识确定 获得了哪个/哪些业务的托管权限。之后，第三方客户端便可以授权令牌为凭证，对拥有托 管权限的业务进行托管，帮助用户账号运营者管理、开发和运营用户账号。其中，拥有托管 权限的业务包括但不限于消息与事件管理业务、用户管理业务、账号管理业务、网页授权业 务、商户管理业务、多客服业务中的至少一种。</p>
+      <p>[0236] 本步骤的两种可能的实施方式在图4A所示实施例中已经详细介绍和说明，具体 参见图4A所示实施例中步骤406的介绍和说明，本实施例对此不再赘述。</p>
+      <p>[0237] 下面，介绍两个具体的业务托管例子：</p>
+      <p>[0238] 在第一个例子中，以第三方客户端托管用户账号的发送消息业务为例。第三方客 户端生成发送消息请求，该发送消息请求中携带有授权令牌、发送消息业务对应的API地 址和消息内容。其中，发送消息请求可以是HTTP请求，请求方式可以采用POST请求方式， 请求协议可以采用HTTPS协议。</p>
+      <p>[0239] 比如，HTTP请求为：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00212.png"> <img id="idf0027" file="CN104468518AD00212.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00212.png" class="patent-full-image" alt="Figure CN104468518AD00212"> </a> </div>
+      
+      <p>[0241] POST数据示例如下：</p>
+      <p>[0242]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00213.png"> <img id="idf0028" file="CN104468518AD00213.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00213.png" class="patent-full-image" alt="Figure CN104468518AD00213"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00214.png"> <img id="idf0029" file="CN104468518AD00214.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00214.png" class="patent-full-image" alt="Figure CN104468518AD00214"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00221.png"> <img id="idf0030" file="CN104468518AD00221.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00221.png" class="patent-full-image" alt="Figure CN104468518AD00221"> </a> </div>
+      
+      <p>[0243] 上述POST数据中的参数说明如下表-9所示：</p>
+      <p>[0244]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00222.png"> <img id="idf0031" file="CN104468518AD00222.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00222.png" class="patent-full-image" alt="Figure CN104468518AD00222"> </a> </div>
+      
+      <p>[0246] 表-9</p>
+      <p>[0247] 开放平台服务器接收到上述消息发送请求后，调用消息发送接口将消息内容发送 给接收方用户所使用的客户端中。</p>
+      <p>[0248] 在第二个例子中，以第三方客户端托管用户账号的接收消息业务为例。开放平台 服务器接收到用户账号的关注者发送的消息后，查询对应的第三方客户端，并将消息发送 给第三方客户端。</p>
+      <p>[0249] 比如，开放平台服务器向第三方客户端发送的消息如下：</p>
+      <p>[0250]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00223.png"> <img id="idf0032" file="CN104468518AD00223.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00223.png" class="patent-full-image" alt="Figure CN104468518AD00223"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00224.png"> <img id="idf0033" file="CN104468518AD00224.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00224.png" class="patent-full-image" alt="Figure CN104468518AD00224"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00231.png"> <img id="idf0034" file="CN104468518AD00231.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00231.png" class="patent-full-image" alt="Figure CN104468518AD00231"> </a> </div>
+      
+      <p>[0251] 上述消息中的参数说明如下表-10所示：</p>
+      <p>[0252]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00232.png"> <img id="idf0035" file="CN104468518AD00232.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00232.png" class="patent-full-image" alt="Figure CN104468518AD00232"> </a> </div>
+      
+      <p>[0254] 表-10</p>
+      <p>[0255] 第三方客户端接收到开放平台服务器发送的消息后，读取消息，并根据消息的不 同做不同的处理。比如，第三方客户端可以回复，如通过开放平台服务器向用户账号的关注 者所使用的客户端发送回复。</p>
+      <p>[0256] 可选的，为了加强安全性，开放平台服务器和第三方客户端之间收发消息时，可采 用预定密钥对消息进行加密。其中，预定密钥是第三方客户端预先提供给开放平台服务器 的。加密方式可以采用AES加密算法。</p>
+      <p>[0257] 综上所述，本实施例提供的业务管理方法，通过第三方客户端从开放平台服务器 中获取授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00233.png"> <img id="idf0036" file="CN104468518AD00233.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00233.png" class="patent-full-image" alt="Figure CN104468518AD00233"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00234.png"> <img id="idf0037" file="CN104468518AD00234.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104468518A/CN104468518AD00234.png" class="patent-full-image" alt="Figure CN104468518AD00234"> </a> </div>
+      
+      <p>含用户账号的至少一项业务的托管权限，并以授权令牌为凭证，对拥有托管权限的业务进 行托管；解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的 开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号的部分或全部 业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到了节约管理资 源和管理成本的效果。</p>
+      <p>[0258] 另外，本实施例提供的业务管理方法，还通过多个步骤的授权、验证，确保了用户 账号运营者向第三方授权的安全性。</p>
+      <p>[0259] 下述为本发明装置实施例，可以用于执行本发明方法实施例。对于本发明装置实 施例中未披露的细节，请参照本发明方法实施例。</p>
+      <p>[0260] 请参考图6,其示出了本发明一个实施例提供的业务管理装置的结构方框图，该业 务管理装置可通过软件、硬件或者两者的结合实现成为图1所示实施环境中的第三方客户 端的部分或者全部。该业务管理装置可以包括：授权码获取模块610、请求发送模块620、信 息接收模块630和业务托管模块640。</p>
+      <p>[0261] 授权码获取模块610,用于获取用户账号的授权码。</p>
+      <p>[0262] 请求发送模块620,用于向开放平台服务器发送携带有所述授权码的授权信息获 取请求。</p>
+      <p>[0263] 信息接收模块630,用于接收所述开放平台服务器发送的授权信息，所述授权信息 包括授权令牌和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一 项业务的托管权限。</p>
+      <p>[0264] 业务托管模块640,用于以所述授权令牌为凭证，对拥有所述托管权限的业务进行 托管。</p>
+      <p>[0265] 综上所述，本实施例提供的业务管理装置，通过第三方客户端从开放平台服务器 中获取授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包 含用户账号的至少一项业务的托管权限，并以授权令牌为凭证，对拥有托管权限的业务进 行托管；解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的 开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号的部分或全部 业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到了节约管理资 源和管理成本的效果。</p>
+      <p>[0266] 请参考图7,其示出了本发明另一实施例提供的业务管理装置的结构方框图，该业 务管理装置可通过软件、硬件或者两者的结合实现成为图1所示实施环境中的开放平台服 务器的部分或者全部。该业务管理装置可以包括：第一请求接收模块710、授权码验证模块 720、信息生成模块730和信息发送模块740。</p>
+      <p>[0267] 第一请求接收模块710,用于接收第三方客户端发送的授权信息获取请求，所述授 权信息获取请求中携带有用户账号的授权码。</p>
+      <p>[0268] 授权码验证模块720,用于验证所述授权码是否正确。</p>
+      <p>[0269] 信息生成模块730,用于当所述授权码正确时，生成授权信息，所述授权信息包括 授权令牌和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一项业 务的托管权限。</p>
+      <p>[0270] 信息发送模块740,用于向所述第三方客户端发送所述授权信息，以便所述第三方 客户端以所述授权令牌为凭证，对拥有所述托管权限的业务进行托管。</p>
+      <p>[0271] 综上所述，本实施例提供的业务管理装置，通过开放平台服务器向第三方客户端 发送授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包含 用户账号的至少一项业务的托管权限，使得第三方客户端以授权令牌为凭证，对拥有托管 权限的业务进行托管；解决了相关技术存在的公众号运营者亲自管理公众号的各项业务， 不利于业务的开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号 的部分或全部业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到 了节约管理资源和管理成本的效果。</p>
+      <p>[0272] 请参考图8,其示出了本发明一个实施例提供的业务管理系统的结构方框图，该业 务管理系统包括：第三方客户端600和开放平台服务器700。其中：</p>
+      <p>[0273] 第三方客户端600可以包括业务管理装置，该业务管理装置可通过软件、硬件或 者两者的结合实现成为第三方客户端600的部分或者全部。该业务管理装置可以包括：授 权码获取模块610、请求发送模块620、信息接收模块630和业务托管模块640。</p>
+      <p>[0274] 授权码获取模块610,用于获取用户账号的授权码。</p>
+      <p>[0275] 可选的，所述授权码获取模块610,包括：授权码请求单元610a和授权码接收单元 610b�</p>
+      <p>[0276] 所述授权码请求单元610a，用于通过用户账号运营者所使用的用户代理向所述开 放平台服务器发送授权码获取请求，所述授权码获取请求中携带有所述第三方客户端的回 调域名。</p>
+      <p>[0277] 所述授权码接收单元610b，用于接收所述开放平台服务器通过所述用户代理发送 的所述授权码；其中，所述授权码是所述开放平台服务器获取到所述用户账号运营者通过 所述用户代理发送的确认授权指示后，在重定向所述用户代理至所述回调域名的过程中发 送的。</p>
+      <p>[0278] 请求发送模块620,用于向开放平台服务器发送携带有所述授权码的授权信息获 取请求。</p>
+      <p>[0279] 信息接收模块630,用于接收所述开放平台服务器发送的授权信息，所述授权信息 包括授权令牌和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一 项业务的托管权限。</p>
+      <p>[0280] 其中，所述用户账号的至少一项业务，包括：</p>
+      <p>[0281] 消息与事件管理业务、用户管理业务、账号管理业务、网页授权业务、商户管理业 务、多客服业务中的至少一项。</p>
+      <p>[0282] 业务托管模块640,用于以所述授权令牌为凭证，对拥有所述托管权限的业务进行 托管。</p>
+      <p>[0283] 可选的，所述业务托管模块640,包括：请求生成单元640a和请求发送单元640b。</p>
+      <p>[0284] 所述请求生成单元640a，用于生成业务处理请求，所述业务处理请求中携带有所 述授权令牌和所需处理的业务对应的应用程序编程接口 API地址，所述所需处理的业务是 所述拥有所述托管权限的业务中的至少一项业务。</p>
+      <p>[0285] 所述请求发送单元640b，用于向所述开放平台服务器发送所述业务处理请求，以 便所述开放平台服务器在验证所述授权令牌可用的情况下，调用所述API地址所对应的 API处理所述所需处理的业务。</p>
+      <p>[0286] 可选的，所述业务托管模块640,包括：信息接收单元640c和回复响应单元640d。</p>
+      <p>[0287] 所述信息接收单元640c，用于当所述拥有所述托管权限的业务包括消息与事件管 理业务时，接收所述开放平台服务器发送的推送信息，所述推送信息是所述开放平台服务 器根据所述用户账号的关注者触发的消息和/或事件生成的。</p>
+      <p>[0288] 在一种可能的实施方式中，所述信息接收单元640c，包括：信息接收子单元640cl 和信息解密子单元640c2。</p>
+      <p>[0289] 所述信息接收子单元640cl，用于接收所述开放平台服务器发送的加密信息，所述 加密信息是所述开放平台服务器采用预定密钥对所述推送信息进行加密得到的。</p>
+      <p>[0290] 所述信息解密子单元640c2,用于采用所述预定密钥对所述加密信息进行解密得 到所述推送信息。</p>
+      <p>[0291] 所述回复响应单元640d，用于回复或响应所述推送消息。</p>
+      <p>[0292] 开放平台服务器700可以包括业务管理装置，该业务管理装置可通过软件、硬件 或者两者的结合实现成为开放平台服务器700的部分或者全部。该业务管理装置可以包 括：第一请求接收模块710、授权码验证模块720、信息生成模块730和信息发送模块740。</p>
+      <p>[0293] 第一请求接收模块710,用于接收第三方客户端发送的授权信息获取请求，所述授 权信息获取请求中携带有用户账号的授权码。</p>
+      <p>[0294] 授权码验证模块720,用于验证所述授权码是否正确。</p>
+      <p>[0295] 信息生成模块730,用于当所述授权码正确时，生成授权信息，所述授权信息包括 授权令牌和权限集标识，所述权限集标识对应的权限集中包含所述用户账号的至少一项业 务的托管权限。</p>
+      <p>[0296] 其中，所述用户账号的至少一项业务，包括：</p>
+      <p>[0297] 消息与事件管理业务、用户管理业务、账号管理业务、网页授权业务、商户管理业 务、多客服业务中的至少一项。</p>
+      <p>[0298] 信息发送模块740,用于向所述第三方客户端发送所述授权信息，以便所述第三方 客户端以所述授权令牌为凭证，对拥有所述托管权限的业务进行托管。</p>
+      <p>[0299] 可选的，所述装置还包括：第二请求接收模块742、令牌验证模块744和业务处理 模块746。</p>
+      <p>[0300] 第二请求接收模块742,用于接收所述第三方客户端发送的业务处理请求，所述业 务处理请求中携带有所述授权令牌和所需处理的业务对应的应用程序编程接口 API地址， 所述所需处理的业务是所述拥有所述托管权限的业务中的至少一项业务。</p>
+      <p>[0301] 令牌验证模块744,用于验证所述授权令牌是否可用。</p>
+      <p>[0302] 业务处理模块746,用于当所述授权令牌可用时，调用所述API地址所对应的API 处理所述所需处理的业务。</p>
+      <p>[0303] 可选的，当所述拥有所述托管权限的业务包括消息与事件管理业务时，所述装置 还包括：消息事件获取模块748、推送信息生成模块750和推送信息发送模块752。</p>
+      <p>[0304] 消息事件获取模块748,用于获取所述用户账号的关注者触发的消息和/或事件。</p>
+      <p>[0305] 推送信息生成模块750,用于根据所述消息和/或事件生成推送信息。</p>
+      <p>[0306] 推送信息发送模块752,用于向所述第三方客户端发送所述推送信息。</p>
+      <p>[0307] 可选的，所述装置还包括：信息加密模块751。</p>
+      <p>[0308] 信息加密模块751，用于采用预定密钥对所述推送信息进行加密得到加密信息，所 述预定密钥是所述第三方客户端预先提供给所述开放平台服务器的；</p>
+      <p>[0309] 所述推送信息发送模块752,还用于向所述第三方客户端发送所述加密信息。</p>
+      <p>[0310] 可选的，所述装置还包括：第三请求接收模块702、指示获取模块704和授权码发 送模块706。</p>
+      <p>[0311] 第三请求接收模块702,用于接收所述第三方客户端通过用户账号运营者所使用 的用户代理发送的授权码获取请求，所述授权码获取请求中携带有所述第三方客户端的回 调域名。</p>
+      <p>[0312] 指示获取模块704,用于获取所述用户账号运营者通过所述用户代理发送的确认 授权指示。</p>
+      <p>[0313] 授权码发送模块706,用于在获取到所述确认授权指示后，重定向所述用户代理至 所述第三方客户端的回调域名，并将所述授权码通过所述用户代理发送给所述第三方客户 端。</p>
+      <p>[0314] 综上所述，本实施例提供的业务管理系统，通过第三方客户端从开放平台服务器 中获取授权信息，该授权信息包括授权令牌和权限集标识，权限集标识对应的权限集中包 含用户账号的至少一项业务的托管权限，并以授权令牌为凭证，对拥有托管权限的业务进 行托管；解决了相关技术存在的公众号运营者亲自管理公众号的各项业务，不利于业务的 开发和管理，同时存在管理资源和管理成本浪费的问题；实现了将用户账号的部分或全部 业务交由第三方客户端进行托管运营，有利于业务的开发和管理，同时达到了节约管理资 源和管理成本的效果。</p>
+      <p>[0315] 另外，还通过将用户账号的业务划分为不同的类型，实现了用户账号运营者将用 户账号的业务有选择性地授权托管给第三方，用户账号运营者可将不同类型的业务托管给 不同的第三方，有利于业务管理和优化，且有利于用户账号的开发，提高用户账号的服务质 量。</p>
+      <p>[0316] 需要说明的是：上述实施例提供的业务管理装置和系统在进行用户账号业务管理 时，仅以上述各功能模块的划分进行举例说明，实际应用中，可以根据需要而将上述功能分 配由不同的功能模块完成，即将设备的内部结构划分成不同的功能模块，以完成以上描述 的全部或者部分功能。另外，上述实施例提供的业务管理装置和系统与业务管理方法的方 法实施例属于同一构思，其具体实现过程详见方法实施例，这里不再赘述。</p>
+      <p>[0317] 请参考图9,其示出了本发明一个实施例提供的电子设备的结构示意图。该电子设 备可以是图1所示实施环境中的第三方设备，也可以是图1所示实施环境中的开放平台服 务器。其中，第三方设备用于实施上述图2、图4A或图5所示实施例提供的第三方客户端侧 的业务管理方法；开放平台服务器用于实施上述图3、图4A或图5所示实施例提供的开放 平台服务器侧的业务管理方法。具体来讲：</p>
+      <p>[0318] 所述电子设备900包括中央处理单元（CPU) 901、包括随机存取存储器（RAM) 902和 只读存储器（ROM) 903的系统存储器904,以及连接系统存储器904和中央处理单元901的 系统总线905。所述电子设备900还包括帮助计算机内的各个器件之间传输信息的基本输 入/输出系统（I/O系统）906，和用于存储操作系统913、应用程序914和其他程序模块915 的大容量存储设备907。</p>
+      <p>[0319] 所述基本输入/输出系统906包括有用于显示信息的显示器908和用于用户输入 信息的诸如鼠标、键盘之类的输入设备909。其中所述显示器908和输入设备909都通过连 接到系统总线905的输入输出控制器910连接到中央处理单元901。所述基本输入/输出 系统906还可以包括输入输出控制器910以用于接收和处理来自键盘、鼠标、或电子触控笔 等多个其他设备的输入。类似地，输入输出控制器910还提供输出到显示屏、打印机或其他 类型的输出设备。</p>
+      <p>[0320] 所述大容量存储设备907通过连接到系统总线905的大容量存储控制器（未示 出）连接到中央处理单元901。所述大容量存储设备907及其相关联的计算机可读介质为 电子设备900提供非易失性存储。也就是说，所述大容量存储设备907可以包括诸如硬盘 或者CD-ROM驱动器之类的计算机可读介质（未示出）。</p>
+      <p>[0321] 不失一般性，所述计算机可读介质可以包括计算机存储介质和通信介质。计算机 存储介质包括以用于存储诸如计算机可读指令、数据结构、程序模块或其他数据等信息的 任何方法或技术实现的易失性和非易失性、可移动和不可移动介质。计算机存储介质包括 RAM、ROM、EPROM、EEPR0M、闪存或其他固态存储其技术，CD-ROM、DVD或其他光学存储、磁带 盒、磁带、磁盘存储或其他磁性存储设备。当然，本领域技术人员可知所述计算机存储介质 不局限于上述几种。上述的系统存储器904和大容量存储设备907可以统称为存储器。</p>
+      <p>[0322] 根据本发明的各种实施例，所述电子设备900还可以通过诸如因特网等网络连接 到网络上的远程计算机运行。也即电子设备900可以通过连接在所述系统总线905上的网 络接口单元911连接到网络912,或者说，也可以使用网络接口单元911来连接到其他类型 的网络或远程计算机系统（未示出）。</p>
+      <p>[0323] 所述存储器还包括一个或者一个以上的程序，所述一个或者一个以上程序存储于 存储器中，且经配置以由一个或者一个以上处理器执行。当所述电子设备900为第三方设 备时，上述一个或者一个以上程序包含用于执行上述图2、图4A或图5所示实施例提供的第 三方客户端侧的业务管理方法的指令。当所述电子设备900为开放平台服务器时，上述一 个或者一个以上程序包含用于执行上述图3、图4A或图5所示实施例提供的开放平台服务 器侧的业务管理方法的指令。</p>
+      <p>[0324] 应当理解的是，在本文中使用的，除非上下文清楚地支持例外情况，单数形式"一 个"（" &amp;"、"811"、"也6"）旨在也包括复数形式。还应当理解的是，在本文中使用的"和/或" 是指包括一个或者一个以上相关联地列出的项目的任意和所有可能组合。</p>
+      <p>[0325] 上述本发明实施例序号仅仅为了描述，不代表实施例的优劣。</p>
+      <p>[0326] 本领域普通技术人员可以理解实现上述实施例的全部或部分步骤可以通过硬件 来完成，也可以通过程序来指令相关的硬件完成，所述的程序可以存储于一种计算机可读 存储介质中，上述提到的存储介质可以是只读存储器，磁盘或光盘等。</p>
+      <p>[0327] 以上所述仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和 原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101785017A?cl=zh">CN101785017A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年8月14日</td><td class="patent-data-table-td patent-date-value">2010年7月21日</td><td class="patent-data-table-td ">费斯布克公司</td><td class="patent-data-table-td ">用于为软件应用提供社交上下文的平台</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103220344A?cl=zh">CN103220344A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年3月29日</td><td class="patent-data-table-td patent-date-value">2013年7月24日</td><td class="patent-data-table-td ">新浪技术（中国）有限公司</td><td class="patent-data-table-td ">微博授权使用方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103927376A?cl=zh">CN103927376A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年4月25日</td><td class="patent-data-table-td patent-date-value">2014年7月16日</td><td class="patent-data-table-td ">广州壹网网络技术有限公司</td><td class="patent-data-table-td ">一种经第三方社交账户进行信息传播的系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20130019295">US20130019295</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value">2013年1月17日</td><td class="patent-data-table-td ">Samsung Electronics Co., Ltd.</td><td class="patent-data-table-td ">Method and system for open authentication</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20140245461">US20140245461</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年2月28日</td><td class="patent-data-table-td patent-date-value">2014年8月28日</td><td class="patent-data-table-td ">Edward Kenneth O&#39;Neill</td><td class="patent-data-table-td ">Techniques for in-app user data authorization</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=fT9LCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=fT9LCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=fT9LCQABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/08">H04L63/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=fT9LCQABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L9/3213">H04L9/3213</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2015年3月25日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年4月20日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/c6a5e30231b8b32a4862/CN104468518A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%9A%E5%8A%A1%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95_%E8%A3%85%E7%BD%AE%E5%92%8C%E7%B3%BB%E7%BB%9F.pdf?id=fT9LCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0Igm_LctOvo-s34GkNLk9zfm7dlg"},"sample_url":"https://www.google.com/patents/reader?id=fT9LCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

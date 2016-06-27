@@ -1,0 +1,233 @@
+<!DOCTYPE html><html><head><title>专利 CN101505276A - 网络应用流量识别方法和装置及网络应用流量管理设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="网络应用流量识别方法和装置及网络应用流量管理设备"><meta name="DC.contributor" content="淞 吴" scheme="inventor"><meta name="DC.contributor" content="邹文宇" scheme="inventor"><meta name="DC.contributor" content="杭州华三通信技术有限公司" scheme="assignee"><meta name="DC.date" content="2009-3-23" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种网络应用流量识别方法、网络应用流量识别装置以及一种网络应用流量管理设备。该方法包括：关联已知网络应用的特征序列模板和相应的特定明文特征；以网络会话的源IP为键值，将DPI识别出的特定明文特征关联的特征序列模板记录到第一列表中；以及，对于现有识别技术无法识别的网络会话，记录当前报文的特征信息并在达到预设阈值时，与相应键值下全部特征序列模板进行适配，获得网络应用流量识别结果。通过本发明，能够对DPI识别法无法识别的网络应用流量加以识别，同时提高了识别效率，降低了识别开销，以及降低了识别误报率。"><meta name="DC.date" content="2009-8-12"><meta name="citation_patent_publication_number" content="CN:101505276:A"><meta name="citation_patent_application_number" content="CN:200910119604"><link rel="canonical" href="https://www.google.com/patents/CN101505276A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101505276A?cl=zh"/><meta name="title" content="专利 CN101505276A - 网络应用流量识别方法和装置及网络应用流量管理设备"/><meta name="description" content="本发明公开了一种网络应用流量识别方法、网络应用流量识别装置以及一种网络应用流量管理设备。该方法包括：关联已知网络应用的特征序列模板和相应的特定明文特征；以网络会话的源IP为键值，将DPI识别出的特定明文特征关联的特征序列模板记录到第一列表中；以及，对于现有识别技术无法识别的网络会话，记录当前报文的特征信息并在达到预设阈值时，与相应键值下全部特征序列模板进行适配，获得网络应用流量识别结果。通过本发明，能够对DPI识别法无法识别的网络应用流量加以识别，同时提高了识别效率，降低了识别开销，以及降低了识别误报率。"/><meta property="og:title" content="专利 CN101505276A - 网络应用流量识别方法和装置及网络应用流量管理设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101505276A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101505276A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=a09sBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101505276A&amp;usg=AFQjCNFRp_LiWz_pXOjL7Cuhi32hTy9mDA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3f2b8a35064f2295cc33/CN101505276A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3f2b8a35064f2295cc33/CN101505276A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101505276A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101505276A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101505276A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101505276B?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101505276K1?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101505276A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种网络应用流量识别方法、网络应用流量识别装置以及一种网络应用流量管理设备。该方法包括：关联已知网络应用的特征序列模板和相应的特定明文特征；以网络会话的源IP为键值，将DPI识别出的特定明文特征 ...</span><span itemprop="url">https://www.google.com/patents/CN101505276A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101505276A - 网络应用流量识别方法和装置及网络应用流量管理设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101505276A - 网络应用流量识别方法和装置及网络应用流量管理设备" title="专利 CN101505276A - 网络应用流量识别方法和装置及网络应用流量管理设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101505276 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910119604</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年8月12日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年3月23日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年3月23日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101505276B?hl=zh-CN&amp;cl=zh">CN101505276B</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101505276K1?hl=zh-CN&amp;cl=zh">CN101505276K1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910119604.7, </span><span class="patent-bibdata-value">CN 101505276 A, </span><span class="patent-bibdata-value">CN 101505276A, </span><span class="patent-bibdata-value">CN 200910119604, </span><span class="patent-bibdata-value">CN-A-101505276, </span><span class="patent-bibdata-value">CN101505276 A, </span><span class="patent-bibdata-value">CN101505276A, </span><span class="patent-bibdata-value">CN200910119604, </span><span class="patent-bibdata-value">CN200910119604.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B7%9E+%E5%90%B4%22">淞 吴</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%82%B9%E6%96%87%E5%AE%87%22">邹文宇</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%9D%AD%E5%B7%9E%E5%8D%8E%E4%B8%89%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">杭州华三通信技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101505276A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101505276A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101505276A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (11),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=a09sBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910119604&amp;usg=AFQjCNHyfQpBRstoFP_CKOqsYIyU6g_f6A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=a09sBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101505276A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFPpspP9k3Wl2y2OcMCDl8NrYkgAA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT85340571" lang="ZH" load-source="patent-office">网络应用流量识别方法和装置及网络应用流量管理设备</invention-title>
+    </span><br><span class="patent-number">CN 101505276 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA61521958" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种网络应用流量识别方法、网络应用流量识别装置以及一种网络应用流量管理设备。该方法包括：关联已知网络应用的特征序列模板和相应的特定明文特征；以网络会话的源IP为键值，将DPI识别出的特定明文特征关联的特征序列模板记录到第一列表中；以及，对于现有识别技术无法识别的网络会话，记录当前报文的特征信息并在达到预设阈值时，与相应键值下全部特征序列模板进行适配，获得网络应用流量识别结果。通过本发明，能够对DPI识别法无法识别的网络应用流量加以识别，同时提高了识别效率，降低了识别开销，以及降低了识别误报率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(15)</span></span></div><div class="patent-text"><div mxw-id="PCLM22735378" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1. 一种网络应用流量识别方法，其特征在于，包括关联已知网络应用的特征序列模板和相应的特定明文特征的步骤；以及，对于通过网络应用流量管理设备的任一网络会话执行以下步骤：步骤S1：采用DPI识别技术对所述网络会话进行识别，识别成功则所述网络会话为所识别网络应用流量；其中，如果命中一所述特定明文特征，则以所述网络会话的源IP为键值，将所述特定明文特征关联的特征序列模板记录到专门设置的第一列表中，结束识别；步骤S2：对于前述识别技术无法识别的网络会话，记录当前报文的特征信息；步骤S3：识别所记录的报文数目是否达到预设的阈值，是则将所述网络会话的源IP和目的IP与所述第一列表中的键值进行适配，提取匹配键值下全部特征序列模板并执行步骤S4；否则步骤S1；步骤S4：将上述所记录的报文特征信息与所提取的特征序列模板进行适配，如果与一已知网络应用的特征序列模板适配成功，则识别所述网络会话为所述已知网络应用流量，结束识别。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 根据权利要求1所述的网络应用流量识别方法，其特征在于，所述当 前报文的特征信息包括：负载长度特征、方向特征和/或位置特征。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 根据权利要求1所述的网络应用流量识别方法，其特征在于，所述 步骤S1中采用DPI识别技术对所述网络会话进行识别的步骤包括：识别是否命中五层以上的协议明文特征，是则所述网络会话为所识 别网络应用流量，并继续执行下述步骤，否则执行步骤S2;识别是否命中特定明文特征，是则以所述网络会话的源IP为键值， 将所述特定明文特征关联的特征序列模板记录到专门设置的第一列表 中，否则结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 根据权利要求1-3任一所述的网络应用流量识别方法，其特征在于， 所述步骤S1中将所述特定明文特征关联的特征序列模板记录到专门设置的第一列表中的步骤具体为：遍历所述第一列表中所述键值下的特征序列模板，如果所述关联的特征序列模板已存在，则不再记录；否则，将 所述关联的特征序列模板记录到所述键值下。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 根据权利要求1-3任一所述的网络应用流量识别方法，其特征在于， 还包括对所述第一列表表项执行老化处理，删除所述第一列表在预设时 间内未被适配成功的特征序列模板。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 根据权利要求1-3任一所述的网络应用流量识别方法，其特征在于， 所述关联已知网络应用的特征序列模板和相应的特定明文特征的步骤包 括：关联已知网络应用的特征序列模板ID和相应的特定明文特征，并将 已知网络应用的特征序列模板存储在特征模板库中；后续需要记录已知 网络应用的特征序列模板时，仅需记录所述特征序列模板ID，通过调用 特征模板库中的相应特征序列模板实现。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 根据权利要求l-3任一所述的网络应用流量识别方法，其特征在于， 所述步骤S2之前还包括：采用基于IP/端口的识别技术对所述网络会话进 行识别，识别成功则所述网络会话为所识别网络应用流量。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8. &#8212;种网络应用流量识别装置，设置于网络应用流量管理设备中，其特 征在于，包括：关联单元，用于关联记录己知网络应用的特征序列模板和相应的特定 明文特征；DPI识别单元，与所述关联单元连接，用于采用DPI识别技术对所述 网络会话进行识别，识别成功则所述网络会话为所识别网络应用流量并 结束识别，其中，如果命中一所述特定明文特征，则触发第一列表记录 单元；否则，记录当前报文的特征信息，如果所记录的报文数目未达到 预设的阈值则对所述网络会话的后续报文继续进行识别，如果达到预设 的阈值则触发特征序列模板提取单元；第一列表记录单元，与所述DPI识别单元和所述关联单元连接，用 于以所述网络会话的源IP为键值，将所述特定明文特征关联的特征序列 模板记录到第一列表中；特征序列模板提取单元，与所述DPI识别单元和所述第一列表连接， 用于接受所述DPI识别单元识别失败的触发，将所述网络会话的源IP和目的IP与所述第一列表中的键值进行适配，提取匹配键值下全部的特征序列模板；特征序列适配单元，与所述特征序列模板提取单元和所述DPI识别单元连接，用于将所述网络会话的报文特征信息与所提取的特征序列模板进行适配，如果与一已知网络应用的特征序列模板适配成功，则识别所述网络会话为所述已知网络应用流量并结束识别。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 根据权利要求8所述的网络应用流量识别装置，其特征在于，所述DPI识别单元包括：协议明文特征识别模块，用于识别所述网络会话是否命中五层以上的协议明文特征，是则所述网络会话为所识别网络应用流量，并触发特定明文特征识别模块，否则触发报文信息记录模块；报文信息记录模块，用于记录所述当前报文的特征信息，并识别所记录的报文数目是否达到预设的阈值，是则触发所述特征序列模板提取单元，否则指令所述协议明文特征识别模块对所述网络会话的后续报文继续进行识别；特定明文特征识别模块，用于识别所述网络会话是否命中关联单元中的一特定明文特征，是则触发所述第一列表记录单元。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 根据权利要求8或9所述的网络应用流量识别装置，其特征在于，所述当前报文的特征信息包括：负载长度特征、方向特征和/或位置特征。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 根据权利要求8或9所述的网络应用流量识别装置，其特征在于，还包括第一列表管理单元，设置在所述第一列表记录单元和所述第一列表之间，用于遍历所述第一列表中所述键值下的特征序列模板，如果关联的特征序列模板已存在，则不再记录；否则，将所述关联的特征序列模板记录到所述键值下。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 根据权利要求8或9所述的网络应用流量识别装置，其特征在于，还包括第一列表老化单元，与所述第一列表连接，用于对所述第一列表表项执行老化处理，删除所述第一列表在预设时间内未被适配成功的特征序列模板。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 根据权利要求8或9所述的网络应用流量识别装置，其特征在于，还包括特征模板库，与所述关联单元连接，用于保存己知网络应用的特征序列模板；所述关联单元中仅关联记录已知网络应用的特征序列模板ID 和相应的特定明文特征。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 根据权利要求8或9所述的网络应用流量识别装置，其特征在于， 还包括IP/端口识别单元，与所述DPI识别单元连接，用于采用基于IP/端口 的识别技术对所述网络会话进行识别，识别成功则所述网络会话为所识 别网络应用流量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15. &#8212;种网络应用流量管理设备，包括网络应用流量处理装置，其特征 在于，还设有权利要求8-14任一所述的网络应用流量识别装置，用于向所 述网络应用流量处理装置发送网络应用流量识别结果。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES27930057" lang="ZH" load-source="patent-office" class="description">
+    <p>网络应用流量识别方法和装置及网络应用流量管理设备</p>
+    <p>技术领域</p>
+    <p>本发明涉及通信网络技术领域，尤其涉及一种网络应用流量识别方法和一种网络应用流量识别装置，还涉及一种网络应用流量管理设备。</p>
+    <p>背景技术</p>
+    <p>网络应用流量识别是许多核心网络业务的关键共性技术，其将不同应用类型或者应用协议的流量区分出来，以便分别进行处理。</p>
+    <p>现有的网络应用流量识别技术主要有以下几种：(1 )基于IP/端口的识别技术：根据TCP数据包或UDP数据包包头的源IP地址、目的IP地址或者源端口号、目的端口号识别网络应用流量；</p>
+    <p>该基于IP/端口的识别术技能够有效识别具有固定通信网络端口号的网络流量，比如早期的Fasttrack使用1214端口进行通信；</p>
+    <p>但是，该方法对于源IP地址、源端口号、目的IP地址、目的端口号没有特征的网络应用流量，则无法进行识别；比如，采用可变端口或者能够进行端口伪装的网络应用流量；</p>
+    <p>(2) DPI (Deep Packet Inspection,深层分组检查）识别技术：通过数据包深层扫描，在TCP数据包或UDP数据包负载中查找特定明文特征来识别网络应用流量，该特定明文特征使某一个协议区别于其它协议；</p>
+    <p>该DPI识别技术对于具有明文特征的网络应用流量，其识别准确度可达95%甚至更高，同时能够很好的识别采用可变端口或者进行端口伪装的网络应用流量；</p>
+    <p>但是，本方法对于无法从TCP或UDP负载中提取明文特征的网络应用流量无效；比如，由于无法从加密流中提取明文特征，因此本方法无法对加密的网络应用流量进行识别；</p>
+    <p>(3) 基于流统计特征的识别技术：比如，如果用户保持的TCP或UDP连接在一段时间内，其目的端口在1024以上连接数与目的端口在1024以下连接数的比值大于预设阈值，则认为用户正在使用P2P (Peer-to-Peer)软件；再比如，如果用户主机的TCP连接数和UDP流数大于某个设定阈值，也可认为用户正在使用P2P软件； "</p>
+    <p>该基于流统计特征的识别技术主要是针对无法提取明文特征的网络应用流量提出的，但效果不佳，存在较大的误报风险；比如说，本方法很难对P2P流量、游戏流和数据库流加以区分。</p>
+    <p>可以看出，对于采用可变端口并同时加密的网络应用流量，现有的网络应用流量识别技术无法实现有效的识别；而随着应用软件和协议的不断发展，网络上出现了越来越多的使用基于IP/端口的识别技术和DPI识别技术所无法识别的网络应用流量。其中，加密P2P流量产生的影响最大:.其"带宽吞噬"特性造成了网络带宽的巨大消耗，甚至会引起网络拥塞，大大降低网络性能，劣化了网络服务质量，妨碍了正常的网络业务开展和关键应用，严重影响了用户正常的Web、 E-mail等应用；同时，由于加密P2P流量无法被有效识别，因此能够轻易穿透现有防火墙和安全代理，使得病毒和恶意代码得以躲过安全审&#26619;入侵内部网络，造成极大的安全隐患。</p>
+    <p>为了克服上述现有技术的缺陷，网络技术人员提出了诸多解决方案。其中，中国专利申请CN200810018164.1 "基于传输层特征的P2P网络流量识别方法"提出了这样一种方案：通过提取双向网络流的特征序列并与P2P特征模板库中相同协议类型下的特征序列模板匹配实现P2P网络流量的识别。这一方案虽然能够实现对加密P2P网络流量的识别，但需要对每一网络应用流量都提取N个数据包并遍历P2P特征模板库中所有的特征序列模板加以匹配，因此效率较低，同时也导致了较大的系统开销。</p>
+    <p>发明内容</p>
+    <p>本发明的实施例旨在克服上述现有技术的缺陷，提供能够高效、迅速识别网络应用流量的技术方案，同时有效降低系统开销。</p>
+    <p>为实现上述目的，本发明的实施例提供了一种网络应用流量识别方法，包括关联已知网络应用的特征序列模板和相应的特定明文特征的步骤；以及，对于通过网络应用流量管理设备的任一网络会话执行以下步骤：</p>
+    <p>步骤S1:采用DPI识别技术对所述网络会话进行识别，识别成功则所</p>
+    <p>述网络会话为所识别网络应用流量；其中，如果命中一所述特定明文特征，</p>
+    <p>则以所述网络会话的源IP为键值，将所述特定明文特征关联的特征序列模板</p>
+    <p>记录到专门设置的第一列表中，结束识别；</p>
+    <p>步骤S2:对于前述识别技术无法识别的网络会话，记录当前报文的特</p>
+    <p>征信息；</p>
+    <p>步骤S3:识别所记录的报文数目是否达到预设的阈值，是则将所述网络会话的源IP和目的IP与所述第一列表中的键值进行适配，提取匹配键值下全部特征序列模板并执行步骤S4;否则步骤SI;</p>
+    <p>步骤S4:将上述所记录的报文特征信息与所提取的特征序列模板进行适配，如果与一已知网络应用的特征序列模板适配成功，则识别所述网络会话为所述己知网络应用流量，结束识别。</p>
+    <p>其中，所述当前报文的特征信息可以包括：负载长度特征、方向特征和/或位置特征。</p>
+    <p>其中，所述步骤S1中采用DPI识别技术对所述网络会话进行识别的步</p>
+    <p>骤可以包括：识别是否命中五层以上的协议明文特征，是则所述网络会话为所识别网络应用流量，并继续执行下述步骤，否则执行步骤S2;识别是否命中特定明文特征，是则以所述网络会话的源IP为键值，将所述特定明文特征关联的特征序列模板记录到专门设置的第一列表中，否则结束。</p>
+    <p>其中，所述步骤Sl中将所述特定明文特征关联的特征序列模板记录到专门设置的第一列表中的步骤具体可以为：遍历所述第一列表中所述键值下的特征序列模板，如果所述关联的特征序列模板已存在，则不再记录；否则，将所述关联的特征序列模板记录到所述键值下。</p>
+    <p>其中，还可以包括对所述第一列表表项执行老化处理，删除所述第一列表在预设时间内未被适配成功的特征序列模板。</p>
+    <p>其中，所述关联已知网络应用的特征序列模板和相应的特定明文特征的步骤可以包括：关联已知网络应用的特征序列模板ID和相应的特定明文特征，并将已知网络应用的特征序列模板存储在特征模板库中；后续需要记录</p>
+    <p>8已知网络应用的特征序列模板时，仅需记录所述特征序列模板ID，通过调用特征模板库中的相应特征序列模板实现。</p>
+    <p>其中，所述步骤S2之前还可以包括：采用基于IP/端口的识别技术对所述网络会话进行识别，识别成功则所述网络会话为所识别网络应用流量。</p>
+    <p>本发明的实施例还提供了 一种网络应用流量识别装置，设置于网络应用流量管理设备中，包括：</p>
+    <p>关联单元，用于关联记录己知网络应用的特征序列模板和相应的特定明文特征；</p>
+    <p>DPI识别单元，与所述关联单元连接，用于采用DPI识别技术对所述网络会话进行识别，识别成功则所述网络会话为所识别网络应用流量并结束识别，其中，如果命中一所述特定明文特征，则触发第一列表记录单元；否则，记录当前报文的特征信息，如果所记录的报文数目未达到预设的阈值则对所述网络会话的后续报文继续进行识别，如果达到预设的阈值则触发特征序列模板提取单元；</p>
+    <p>第一列表记录单元，与所述DPI识别单元和所述关联单元连接，用于以所述网络会话的源IP为键值，将所述特定明文特征关联的特征序列模板记录到第一列表中；</p>
+    <p>特征序列模板提取单元，与所述DPI识别单元和所述第一列表连接，用于接受所述DPI识别单元识别失败的触发，将所述网络会话的源IP和目的IP与所述第一列表中的键值进行适配，提取匹配键值下全部的特征序列模板；</p>
+    <p>特征序列适配单元，与所述特征序列模板提取单元和所述DPI识别单元连接，用于将所述网络会话的报文特征信息与所提取的特征序列模板进行适配，如果与一已知网络应用的特征序列模板适配成功，则识别所述网络会话为所述已知网络应用流量并结束识别。</p>
+    <p>其中，所述DPI识别单元可以包括：协议明文特征识别模块，用于识别</p>
+    <p>所述网络会话是否命中五层以上的协议明文特征，是则所述网络会话为所识别网络应用流量，并触发特定明文特征识别模块，否则触发报文信息记录模块；报文信息记录模块，用于记录所述当前报文的特征信息，并识别所记录的报文数目是否达到预设的阈值，是则触发所述特征序列模板提取单元，否则指令所述协议明文特征识别模块对所述网络会话的后续报文继续进行识别；特定明文特征识别模块，用于识别所述网络会话是否命中关联单元中的一特定明文特征，是则触发所述第一列表记录单元。</p>
+    <p>其中，所述当前报文的特征信息可以包括：负载长度特征、方向特征和/或位置特征。</p>
+    <p>其中，还可以包括第一列表管理单元，设置在所述第一列表记录单元和所述第一列表之间，用于遍历所述第一列表中所述键值下的特征序列模板，如果关联的特征序列模板已存在，则不再记录；否则，将所述关联的特征序列模板记录到所述键值下。</p>
+    <p>其中，还可以包括第一列表老化单元，与所述第一列表连接，用于对所述第一列表表项执行老化处理，删除所述第一列表在预设时间内未被适配成功的特征序列模板。</p>
+    <p>其中，还可以包括特征模板库，与所述关联单元连接，用于保存已知网络应用的特征序列模板；所述关联单元中仅关联记录已知网络应用的特征序列模板ID和相应的特定明文特征。</p>
+    <p>其中，还可以包括IP/端口识别单元，与所述DPI识别单元连接，用于采用基于IP/端口的识别技术对所述网络会话进行识别，识别成功则所述网络会话为所识别网络应用流量。</p>
+    <p>本发明的实施例还提供了 一种网络应用流量管理设备，包括网络应用流量处理装置，还设有上面任一所述的网络应用流量识别装置，用于向所述网络应用流量处理装置发送网络应用流量识别结果。</p>
+    <p>由上述技术方案可知，本发明的实施例基于DPI识别法识别出的特定明文特征，限定了某一IP后续可能产生的网络应用流量，具有以下有益效果-</p>
+    <p>1、 能够对DPI识别技术无法识别的网络应用流量加以识别；</p>
+    <p>2、 无需遍历全部已知网络应用的特征序列模板，而是针对可能使用的特征序列模板加以适配，降低了适配工作量，从而提高了网络应用流量识别</p>
+    <p>的效率，同时降低了系统开销；</p>
+    <p>3、在可能的范围内进行特征序列识别，有效降低了特征序列识别的误报率。</p>
+    <p>通过以下参照附图对优选实施例的说明，本发明的上述以及其它目的、特征和优点将更加明显。</p>
+    <p>附图说明</p>
+    <p>图1为本发明提供的网络应用流量识别方法一实施例的流程图；图2为本发明提供的网络应用流量识别方法另一实施例的流程图；图3为本发明提供的网络应用流量识别装置一实施例的框图；图4为本发明提供的网络应用流量管理设备一实施例的框图。</p>
+    <p>具体实施方式</p>
+    <p>下面将详细描述本发明的具体实施例。应当注意，这里描述的实施例只用于举例说明，并不用于限制本发明。</p>
+    <p>本发明的主要构思在于根据某一 IP产生的特定明文特征预测后续可能使用的网络应用流量，来解决现有采用特征序列进行识别时存在的匹配基数大所导致的效率降低、开销较大以及误报率高的问题。下面将详细介绍本发明所提供的网络应用流量识别方案。</p>
+    <p>本发明提供的网络应用流量识别方法是一种通用的识别方法，主要具有以下特点：</p>
+    <p>(1)利用了网络应用流量的特征序列进行识别：本领域技术人员可以了解，对于任何一种网络应用，无论其在网络传输过程中加密与否，其在数据包层面一直存在着可供识别的一些特征，包括：负载长度特征：即TCP或UDP负载长度为固定值或在指定范围内变化;方向特征：即报文是从客户端到服务器，还是从服务器到客户端；位置特征：即该数据包是会话中的第几个数据包;</p>
+    <p>通过提取一个已知网络应用的一系列数据报文的特征构成一个特征序 列模板，就可以作为一网络会话是否为所述已知网络应用的判断依据，这种 方案可以简称为特征序列识别法；</p>
+    <p>当然，上述提出的特征可以根据实际需要组合，比如可以采用负载长度 特征和方向特征作为特征构成特征序列模板，也可以采用负载长度特征、方 向特征和位置特征共同作为特征构成特征序列模板。只要某网络应用流量能 够与已知的特征序列模板匹配，那么该网络应用流量就能被准确识别。</p>
+    <p>(2) 采用对网络应用流量进行预测来&#32302;小特征序列模板的适配范围：</p>
+    <p>由于已知网络应用的特征序列模板基数庞大， 一一适配无疑需要巨大的</p>
+    <p>工作量，从而导致网络应用流量识别的低效率和高消耗；</p>
+    <p>而在协议分析过程中我们可以发现，由于网络应用需要或者商业需要， 任何的网络应用软件，不管在网络传输过程中是否加密或者进行其他的伪装 处理，其在启动或者使用过程中都存在相应的、能够通过DPI识别技术检测 出特定明文特征的流量；该流量可能为软件启动界面访问固定的一个网址而 产生的HTTP流量，比如，当采用迅雷（Thunder)软件进行下载时，会在软 件启动时访问迅雷特定URL的HTTP流量，这个访问会话所产生的HTTP 流量能够被DPI技术所识别；该流量可能为软件使用过程中进行网站域名&#26619; 询而产生的、能够被DPI技术所识别的DNS流量；或者，该流量也有可能 是其他被DPI技术所识别的、具有特定明文特征的TCP或UDP负载流量；</p>
+    <p>因此，根据某一 IP产生的DPI技术可识别流量判断其正在使用的网络 应用，能够推测其后续可能产生的网络应用流量，从而有效&#32302;小特征序列模 板的适配范围；</p>
+    <p>(3) 与现有的其他网络应用流量识别技术结合使用-</p>
+    <p>现有技术中的特征序列识别法都是独立使用，虽然能够从特征序列的角 度实现流量的准确识别，但事实上，其中有相当一部分流量可以采用现有的 DPI等简单高效的方式实现识别，全部采用特征序列识别法无疑降低了识别 效率，也加重了系统开销；而本发明由于需要DPI技术进行网络应用流量预测，因此可以将特征序</p>
+    <p>列识别法作为DPI识别处理的后续操作，针对DPI识别技术无法识别的网络 应用流量进行处理，从而有效缓解上述问题；</p>
+    <p>下面，就本发明提供的网络应用流量识别方法加以描述，其适用于网络 应用流量管理设备。</p>
+    <p>请结合图1，显示了该网络应用流量识别方法一实施例的流程图，包括 以下步骤：</p>
+    <p>步骤SO:关联已知网络应用的特征序列模板和相应的特定明文特征； 具体的，可以采用脚本或者用户自定义接口的方式来定义已知网络应用</p>
+    <p>的特征序列模板；以及，采用脚本或者用户自定义接口的方式来关联己知网</p>
+    <p>络应用的特征序列模板和相应的特定明文特征；</p>
+    <p>其中，已知网络应用的特征序列模板和相应的特定明文特征可能是一对</p>
+    <p>一的关联；</p>
+    <p>但更多情况下，是一对多关联：比如，使用迅雷软件时产生的特定明文 特征为访问迅雷特定URL的HTTP流量，但软件使用过程中可能综合使用 BT (比特）、迅雷、emule、 FTP等多种网络应用，也就是后续可能发生的 网络应用流量具有多种可能，分别具有各自的特征序列模板；这种情况下， 是将一个特定明文特征与多个网络应用的特征序列模板关联起来；当然，迅 雷协议和FTP协议都是明文的，可以通过DPI识别技术识别出来，因此一般 仅需要关联加密的BT和emule协议；</p>
+    <p>或者，是多对一关联：比如，用户可以采用BitTorrent、比特精灵等等 不用的应用软件，这些软件在启动之初产生的HTTP流量并不相同，因此能 够通过DPI识别技术提取到的特定明文特征也不相同；但这些应用软件所采 用的网络应用协议都是BT协议，其特征序列模板一致；这种情况下，是将 多个特定明文特征与一个网络应用的特征序列模板关联起来；</p>
+    <p>较佳的，由于直接关联特征序列模板需要记录的信息较多，因此可以采 用关联己知网络应用的特征序列模板ID和相应的特定明文特征，并将已知 网络应用的特征序列模板存储在特征模板库中加以替代；后续需要记录已知 网络应用的特征序列模板时，仅需记录所述特征序列模板ID，通过调用特征模板库中的相应特征序列模板实现；这样，可以节约系统的空间开销和处理 开销；其中，特征序列模板ID可以是该已知网络应用的名称，或者该特征 序列模板的编号等等。</p>
+    <p>在执行完成上述已知网络应用的特征序列模板和相应的特定明文特征 关联的步骤之后，就能够基于DPI识别技术识别出的特定明文特征，推测后 续网络会话可能采用的网络应用协议；具体的，是对于通过网络应用流量管 理设备的任一网络会话执行以下步骤：</p>
+    <p>步骤S1:采用DPI识别技术对所述网络会话进行识别，识别成功则所 述网络会话为所识别网络应用流量；其中，如果命中一所述特定明文特征， 则以所述网络会话的源IP为键值，将所述特定明文特征关联的特征序列模板 记录到专门设置的第一列表中，结束识别；</p>
+    <p>在本步骤S1中，DPI识别技术能够实现以下两方面特征的识别-</p>
+    <p>一方面，是五层以上协议明文特征；主要包括普通的HTTP流量、DNS 流量或者其他TCP或者UDP流量，以及未加密的FTP、 BT、 emule、 Maze 等等网络应用协议；上述网络应用协议可以被DPI识别技术正确识别，因此 其网络会话流量类型能够被直接确定；</p>
+    <p>另一方面，是特定明文特征；对于DPI识别技术能够识别出协议明文特 征的网络会话，需要进一步判断其是否为一已定义的特定明文特征，如果是， 那么说明后续将产生关联的网络应用；举例来说，如果用户访问了比特精灵 网站，那么就有可能后续产生BT应用；</p>
+    <p>在实际应用中，能够识别出协议明文特征的报文，其所属会话的流量类 型就可以确定下来，无需进一步的识别处理，因此识别结束；而对于无法识 别出协议明文特征的报文，则后续通过步骤S2加以进一步的识别处理。</p>
+    <p>对上述内容加以总结，本步骤S1可以具体包括：</p>
+    <p>步骤S11:识别是否命中五层以上的协议明文特征，是则所述网络会话 为所识别网络应用流量，并继续执行下述步骤S12;否则说明DPI识别技术 无法进行协议明文特征识别，当然也就更加没有进一步识别特定明文特征的 可能性，因此转入后续步骤S2的特征序列识别处理；</p>
+    <p>步骤S12:识别是否命中特定明文特征，是则以所述网络会话的源IP</p>
+    <p>14为键值，将所述特定明文特征关联的特征序列模板记录到专门设置的第一列 表中；否则说明能够识别出协议明文特征的网络会话没有进一步的特定明文</p>
+    <p>特征，由于基于上述识别出的协议明文特征已经能够确定网络应用流量，因 此无需进一步的处理，识别结束。</p>
+    <p>上述采用五元组信息中的源IP作为键值是一种较为常用的选择；但实 际应用中所采用的键值可以不局限于此：比如，可以以〈源IP、目的0&#187;为键 值进行记录，当后续网络流量具有相同的〈源IP、目的0&gt;&gt;或者&lt;目的0&gt;、源 IP〉时，其可能采用的是该键值下所有的网络应用；但后者由于匹配过于严 格，所以有可能导致部分流量的处理跳过。</p>
+    <p>作为一较佳的实施例，如果在步骤SO中关联的是己知网络应用的特征 序列模板ID和特定明文特征，那么第一列表中所记录的就是特征序列模板 ID，当后续需要进行特征序列模板匹配时，通过所述特征序列模板ID在特 征模板库中调用即可，不再赘述。</p>
+    <p>进一步的，为了避免重复添加，在某一键值下记录特定明文特征关联的 特征序列模板时，需要遍历所述第一列表中所述键值下的特征序列模板，如 果所述关联的特征序列模板己存在，则不再记录；否则，将所述关联的特征 序列模板记录到所述键值下；</p>
+    <p>更进一步的，各键值下所记录的网络应用并不一定会发生，举例来说， 用户虽然打开了BT软件，但由于没找到想要的文件，因此关闭了BT客户 端；或者，用户的BT应用在一段时间后被软件封堵，无法继续下载；等等。 由于网络应用流量管理设备无法进行区分，因此只要发生了打开BT软件的 行为，就会在相应键值下记录该特定明文特征关联的特征序列模板，但这个 流量显然不会发生或者不再继续发生；因此，较佳的实施方式为对第一列表 采取老化处理，删除所述第一列表在预设时间内未被适配成功即在一定时间 内没有被匹配到的特征序列模板，从而避免相应键值下记录过多的无效特征 序列模板。</p>
+    <p>经过上述步骤S1的处理，可以看出，部分能够被DPI识别技术识别的 网络应用流量已经无需进一步的处理，而对于DPI识别技术无法识别的流量， 比如加密流量，继续执行：步骤S2:对于前述识别技术无法识别的网络会话，记录当前报文的特 征信息；</p>
+    <p>其中，当前报文的特征信息可以包括：负载长度特征、方向特征和/或 位置特征；当然，根据实际情况，也可以选择其他的特征信息。</p>
+    <p>步骤S3:识别所记录的报文数目是否达到预设的阈值，是则将所述网 络会话的源IP和目的IP与所述第一列表中的键值进行适配，提取匹配键值 下全部的特征序列模板，即提取所有可能被采用的网络应用的特征序列模 板，然后执行步骤S4;</p>
+    <p>否则，对所述网络会话的后续报文重新执行步骤S1;</p>
+    <p>可以看出，如果在记录报文数目没有达到预设的阈值时，识别出第M 个报文的协议明文特征，那么网络应用流量识别成功，不会再继续进行后续 的处理；</p>
+    <p>只有当检测报文数目达到预设阈值仍然没有任何一个报文被识别出协 议明文特征时，才会触发键值适配的动作；</p>
+    <p>需要说明的是，阈值是由网络管理人员根据实际情况预先设置的；比如， 阈值为30个报文。</p>
+    <p>步骤S4:将上述所记录的报文特征信息与所提取的特征序列模板进行适 配，如果与一已知网络应用的特征序列模板适配成功，则识别所述网络会话 为所述已知网络应用流量，结束识别；</p>
+    <p>有必要指出的是，特征序列模板对应的往往不是一个报文所能包括的信 息；以阈值为30个报文为例，本步骤S4就是用所记录的30个报文的特征 信息共同与所提取的特征序列模板进行适配，只要一特征序列模板能在三十 个报文的全部特征信息中找到对应，那么就认为适配成功；</p>
+    <p>此外，作为补充说明的是，对于步骤S1和S4识别成功的网络会话，都 可以采取进一步的处理动作，比如在相应的会话控制模块上记录识别到的流 量类型信息，在此不再赘述。</p>
+    <p>通过上述步骤S0&#12316;S4可以看出，本发明提供的网络应用流量识别方法利 用现有的DPI识别技术识别网络应用软件在启动或使用过程中产生的特定 HTTP流量、DNS流量或其它具有特定明文特征的TCP或UDP负载流量，推测该源IP后续未知流量可能使用的网络应用协议，从而大大缩小了进行特 征序列匹配的范围，有效提高了网络应用流量识别的效率，同时降低了特征 序列识别的误报率；</p>
+    <p>以及，与现有的DPI识别技术相结合，利用系统开销较低的DPI识别技 术先行过滤一部分网络应用流量，既实现了对DPI识别技术无法识别的网络 应用流量的识别，同时也提高了识别效率，降低了识别开销。</p>
+    <p>作为一较佳的实施例，本发明所提供的网络应用流量识别方法还可以进 一步结合现有的其他识别技术，比如基于IP/端口的识别技术；</p>
+    <p>具体的，可以在步骤S1执行之前，首先采用基于IP/端口的识别技术对 所述网络会话进行识别，识别成功则所述网络会话为所识别网络应用流量； 但是，无论本步骤识别成功还是失败，都会继续执行步骤S1，通过DPI识别 技术进行特定明文特征的识别；</p>
+    <p>或者，可以在步骤S1执行之后，对于DPI识别技术无法识别的网络流 量采用基于IP/端口的识别技术对所述网络会话进行识别，识别成功则所述 网络会话为所识别网络应用流量，然后结束；否则执行步骤S2，通过有限范 围的特征序列识别法进行进一步的处理；</p>
+    <p>上述特征序列识别法与基于IP/端口的识别技术和DPI识别法结合在一 起使用，能够进一步&#32302;小需要进行特征序列识别法进行识别的网络应用流量 范围，以及提高网络应用流量管理设备的效率。</p>
+    <p>为了便于理解，下面以一个具体实施例对本发明提供的网络应用流量识 别方法加以描述。</p>
+    <p>首先，关联已知网络应用的特征序列模板和相应的特定明文特征；具体 的，可以包括：</p>
+    <p>定义各网络应用相应的特定明文特征；</p>
+    <p>使用脚本或用户自定义接口的方法定义各网络应用流量对应的特征序 列模板；</p>
+    <p>使用脚本或用户自定义接口的方法关联特定明文特征和特征序列模板； 然后，请结合图2，示出了基于IP进行后续流量预测的网络应用流量识</p>
+    <p>17别方法后续步骤的流程图，包括以下步骤：</p>
+    <p>(1) 网络应用流量管理设备接收所有通过的网络会话报文；</p>
+    <p>(2) 创建或查找会话管理控制块，用于记录会话五元组信息以及已识 别的流量类型；</p>
+    <p>(3) 采用基于IP/端口的识别技术进行网络应用流量识别，识别成功则 在会话管理控制块上记录识别结果并进入后续处理，识别不成功则直接进入 后续处理；</p>
+    <p>(4) 采用DPI识别法进行网络应用流量识别，包括： 查看是否命中5层以上的协议明文特征，比如HTTP协议、FTP协议、</p>
+    <p>POP3协议以及未加密的BT、 Maze、迅雷等协议；</p>
+    <p>如果是，则识别成功并在会话管理控制块上记录识别结果；然后，&#26619;看 是否命中了预定义的特定明文特征，是则创建基于该会话源IP的表项，并记 录该特定明文特征关联的特征序列模板（为了便于描述，我们称这个用于记 录表项的文件为第一列表），结束；</p>
+    <p>如果否，则进入后续处理；</p>
+    <p>(5) 记录当前报文的特征信息；</p>
+    <p>(6) 识别所记录的报文数目是否达到预设的阈值，是则继续执行，否 则对所述网络会话的后续报文重新执行DPI识别；</p>
+    <p>(7) 采用特征序列法进行网络应用流量识别，包括-基于会话的源IP和目的IP遍历第一列表中的表项键值，确定全部可能</p>
+    <p>使用的网络应用的特征序列模板；</p>
+    <p>将所记录的报文特征信息与上述特征序列模板进行匹配，匹配成功则表' 示该会话命中了该特征序列模板对应的网络应用，在会话管理控制块上记录 识别结果。</p>
+    <p>有必要指出的是，有可能存在匹配不成功的情况，比如一种尚未归纳特 征序列模板的网络应用协议就无法被匹配成功；这种情况下，网络应用流量 识别失败，可以设置相应的警报措施，即如果某一会话在检测了超过预设门 限值的报文后仍然没有识别出所属网络应用流量，那么提交报警日志，由网 络管理员进行后续处理，比如定义相应的特征序列等；对于其他识别成功的情况，则由网络应用流量管理设备根据识别出的网 络应用流量类型采取相应的限流、阻断、告警等流量管理措施。</p>
+    <p>本领域普通技术人员可以理解：实现上述方法实施例的全部或部分&#27497;骤 可以通过程序指令相关的硬件来完成，所述的程序可以存储于一计算机可读 取存储介质中，该程序在执行时，关联已知网络应用的特征序列模板和相应 的特定明文特征，并对于通过网络应用流量管理设备的任一网络会话执行如 下步骤：</p>
+    <p>步骤S1:采用DPI识别技术对所述网络会话进行识别，识别成功则所 述网络会话为所识别网络应用流量；其中，如果命中一所述特定明文特征， 则以所述网络会话的源IP为键值，将所述特定明文特征关联的特征序列模板 记录到专门设置的第一列表中，结束识别；</p>
+    <p>步骤S2:对于前述识别技术无法识别的网络会话，记录当前报文的特 征信息；</p>
+    <p>步骤S3:识别所记录的报文数目是否达到预设的阈值，是则将所述网 络会话的源IP和目的IP与所述第一列表中的键值进行适配，提取匹配键值 下全部特征序列模板并执行步骤S4;否则步骤S1;</p>
+    <p>步骤S4:将上述所记录的报文特征信息与所提取的特征序列模板进行适 配，如果与一己知网络应用的特征序列模板适配成功，则识别所述网络会话 为所述已知网络应用流量，结束识别；</p>
+    <p>所述的存储介质包括：ROM/RAM (Readonly Memory/Random-Access Memory,只读存储器/随机访问内存）、磁碟或者光盘等。</p>
+    <p>继续，对本发明提供的网络应用流量识别装置加以描述。请结合图3，</p>
+    <p>显示了一网络应用流量识别装置300的实施例框图。</p>
+    <p>该网络应用流量识别装置300设置于网络应用流量管理设备中，包括： 关联单元301，用于关联记录已知网络应用的特征序列模板和相应的特</p>
+    <p>定明文特征；</p>
+    <p>DPI识别单元302，与关联单元3(H连接，用于采用DPI识别技术对所述网络会话进行识别，识别成功则所述网络会话为所识别网络应用流量并结</p>
+    <p>束识别；其中，如果命中一所述特定明文特征，则触发第一列表记录单元304;</p>
+    <p>否则，记录当前报文的特征信息，可以包括负载长度特征、方向特征和/或位 置特征（也可以包括其他的特征信息），如果所记录的报文数目未达到预设 的阈值则对所述网络会话的后续报文继续进行识别，如果达到预设的阈值则</p>
+    <p>触发特征序列模板提取单元305;</p>
+    <p>第一列表记录单元304，与所述DPI识别单元302和所述关联单元301 连接，用于以所述网络会话的源IP为键值，将所述特定明文特征关联的特征 序列模板记录到第一列表303中；</p>
+    <p>特征序列模板提取单元305，与所述DPI识别单元302和所述第一列表 303连接，用于接受所述DPI识别单元302识别失败的触发，将所述网络会 话的源IP和目的IP与所述第一列表303中的键值进行适配，提取匹配键值 下全部的特征序列模板；</p>
+    <p>特征序列适配单元306，与所述特征序列模板提取单元305和所述DPI 识别单元302连接，用于将所述网络会话的报文特征信息与所提取的特征序 列模板进行适配，如果与一己知网络应用的特征序列模板适配成功，则识别 所述网络会话为所述已知网络应用流量并结束识别；</p>
+    <p>上述各单元的具体工作方式请参见本发明网络应用流量识别方法的相 应步骤。</p>
+    <p>通过本发明提供的网络应用流量识别装置300，能够基于DPI识别法识 别出的特定明文特征，有效&#32302;小可供进行匹配的特征序列模板，从而提高网 络应用流量管理设备的识别效率，以及有效降低特征序列识别法的误报率；</p>
+    <p>以及，结合DPI识别法一起使用，能够&#32302;小进行特征序列识别的网络应 用流量，进一步降低了识别工作量；</p>
+    <p>较佳的，DPI识别单元302包括：</p>
+    <p>协议明文特征识别模块3021，用于识别所述网络会话是否命中五层以上 的协议明文特征，是则所述网络会话为所识别网络应用流量，并触发特定明 文特征识别模块3022，否则触发报文信息记录模块3023;</p>
+    <p>报文信息记录模块3023，用于记录所述当前报文的特征信息，并识别所记录的报文数目是否达到预设的阈值，是则触发所述特征序列模板提取单元</p>
+    <p>305，否则指令所述协议明文特征识别模块3021对所述网络会话的后续报文 继续进行识别；</p>
+    <p>特定明文特征识别模块3022，用于识别所述网络会话是否命中关联单元 中的一特定明文特征，是则触发所述第一列表记录单元304;</p>
+    <p>需要说明的是，协议明文特征识别模块3021与特定明文特征识别模块 3022可以合并为一个功能块实现，即同时识别协议明文特征和特定明文特征。</p>
+    <p>较佳的，为了避免同一键值下特征序列模板的反复记录，该网络应用流 量识别装置300还可以包括第一列表管理单元307，设置在所述第一列表记 录单元304和所述第一列表303之间，用于遍历所述第一列表303中所述键 值下的特征序列模板，如果关联的特征序列模板已存在，则不再记录；否则， 将所述关联的特征序列模板记录到所述键值下。</p>
+    <p>较佳的，为了避免第一列表303中记录过多无效的特征序列模板，该网 络应用流量识别装置300还可以包括第一列表老化单元308，与所述第一列 表303连接，用于对所述第一列表303表项执行老化处理，删除所述第一列 表303在预设时间内未被适配成功的特征序列模板。</p>
+    <p>较佳的，为了避免特征序列模板的反复记录，该网络应用流量识别装置 300还可以包括特征模板库309，与所述关联单元301连接，用于保存己知 网络应用的特征序列模板；所述关联单元301中仅关联记录已知网络应用的 特征序列模板ID和相应的特定明文特征，在需要特征序列模板时去特征模 板库309中调用。</p>
+    <p>较佳的，还可以进一步结合基于iP/端口的识别技术，以更进一步降低识 别工作量；具体的，该网络应用流量识别装置300还可以包括IP/端口识别 单元310，与所述DPli只别单元302连接；</p>
+    <p>其可以设置于所述DPI识别单元302之前，或者可以设置在所述DPI识 别单元302与所述特征序列模板提取单元305之间，图3以前一种情况为例： 该IP/端口识别单元310采用基于IP/端口的识别技术对所述网络会话进行识 别，识别成功则所述网络会话为所识别网络应用流量，然后触发DPI识别单元302;识别失败则直接触发DPI识别单元302;</p>
+    <p>当然，如果IP/端口识别单元310设置在所述DPI识别单元302与所述 特征序列模板提取单元305之间，则仅在识别失败的时候触发特征序列模板 提取单元305;如果识别成功，就无需进一步的处理。</p>
+    <p>继续，对本发明提供的网络应用流量管理设备加以描述。请结合图4， 显示了一网络应用流量管理设备40的实施例框图。</p>
+    <p>该网络应用流量管理设备40用于对通过本设备的网络会话加以识别和</p>
+    <p>处理，包括：</p>
+    <p>上述本发明提供的网络应用流量识别装置400，用于对网络会话流量加</p>
+    <p>以识别，并将识别结果发送给网络应用流量处理装置410;就本发明提供的</p>
+    <p>网络应用流量识别装置400而言，其IP/端口识别单元、DPI识别单元以及特 征序列适配单元都有可能输出网络会话识别结果；</p>
+    <p>网络应用流量处理装置410，用于根据网络应用流量识别结果，对网络 应用流量采取限流、阻断、告警等流量管理措施。</p>
+    <p>虽然已&#21443;照几个典型实施例描述了本发明，但应当理解，所用的术语是</p>
+    <p>说明和示例性、而非限制性的术语。由于本发明能够以多种形式具体实施而</p>
+    <p>不脱离发明的精神或实质，所以应当理解，上述实施例不限于任何前述的细</p>
+    <p>节，而应在随附权利要求所限定的精神和范围内广泛地解释，因此落入权利 要求或其等效范围内的全部变化和改型都应为随附权利要求所涵盖。</p>
+    <p>22</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102045257A?cl=zh">CN102045257A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月22日</td><td class="patent-data-table-td patent-date-value">2011年5月4日</td><td class="patent-data-table-td ">上海亿煌信息技术有限公司</td><td class="patent-data-table-td ">一种基于多协议双向单连接的p2p软件识别方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102045363A?cl=zh">CN102045363A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月31日</td><td class="patent-data-table-td patent-date-value">2011年5月4日</td><td class="patent-data-table-td ">成都市华为赛门铁克科技有限公司</td><td class="patent-data-table-td ">网络流量特征识别规则的建立方法、识别控制方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102045363B?cl=zh">CN102045363B</a></td><td class="patent-data-table-td patent-date-value">2010年12月31日</td><td class="patent-data-table-td patent-date-value">2013年10月9日</td><td class="patent-data-table-td ">华为数字技术（成都）有限公司</td><td class="patent-data-table-td ">网络流量特征识别规则的建立方法、识别控制方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102195816A?cl=zh">CN102195816A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月24日</td><td class="patent-data-table-td patent-date-value">2011年9月21日</td><td class="patent-data-table-td ">北京网康科技有限公司</td><td class="patent-data-table-td ">一种未识别流量信息反馈的方法及其设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102571486A?cl=zh">CN102571486A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月14日</td><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">上海交通大学</td><td class="patent-data-table-td ">一种基于BoW模型和统计特征的流量识别方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102571486B?cl=zh">CN102571486B</a></td><td class="patent-data-table-td patent-date-value">2011年12月14日</td><td class="patent-data-table-td patent-date-value">2014年8月27日</td><td class="patent-data-table-td ">上海交通大学</td><td class="patent-data-table-td ">一种基于BoW模型和统计特征的流量识别方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102724317A?cl=zh">CN102724317A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月21日</td><td class="patent-data-table-td patent-date-value">2012年10月10日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">一种网络数据流量分类方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102938764A?cl=zh">CN102938764A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月9日</td><td class="patent-data-table-td patent-date-value">2013年2月20日</td><td class="patent-data-table-td ">北京神州绿盟信息安全科技股份有限公司</td><td class="patent-data-table-td ">应用识别处理方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102938764B?cl=zh">CN102938764B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月9日</td><td class="patent-data-table-td patent-date-value">2015年5月20日</td><td class="patent-data-table-td ">北京神州绿盟信息安全科技股份有限公司</td><td class="patent-data-table-td ">应用识别处理方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103582512A?cl=zh">CN103582512A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年2月4日</td><td class="patent-data-table-td patent-date-value">2014年2月12日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">特征提取装置、网络流量识别方法、装置和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014117406A1?cl=zh">WO2014117406A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年2月4日</td><td class="patent-data-table-td patent-date-value">2014年8月7日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">特征提取装置、网络流量识别方法、装置和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=a09sBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012801000">H04L12/801</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=a09sBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012260000">H04L12/26</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=a09sBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012240000">H04L12/24</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年8月12日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年11月4日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年6月1日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3f2b8a35064f2295cc33/CN101505276A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E6%B5%81%E9%87%8F%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85%E7%BD%AE.pdf?id=a09sBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3-dnQLwckwVd1Mg88A21duWH7Tjg"},"sample_url":"https://www.google.com/patents/reader?id=a09sBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

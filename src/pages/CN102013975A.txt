@@ -1,0 +1,1025 @@
+<!DOCTYPE html><html><head><title>专利 CN102013975A - 一种密钥管理方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种密钥管理方法及系统"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="北京飞天诚信科技有限公司" scheme="assignee"><meta name="DC.date" content="2010-6-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种密钥管理方法和系统，属于信息安全领域。该方法包括：当智能密钥装置第一次上电时，生成随机数作为管理密钥，所述管理密钥不可读出，智能密钥装置中预先的装有传输密钥，当接收到写主控密钥的APDU时，使用传输密钥进行解密，并且将主控密钥使用管理密钥进行加密后存储在所述智能密钥装置中，在创建文件系统的过程中将APDU使用主控密钥进行加密，在创建文件系统结束后，将所述智能密钥装置设置为应用状态，当终止智能密钥装置使用时，擦除管理密钥。"><meta name="DC.date" content="2011-4-13"><meta name="DC.relation" content="CN:101009556:A" scheme="references"><meta name="DC.relation" content="CN:101013464:A" scheme="references"><meta name="DC.relation" content="CN:101163014:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102013975:A"><meta name="citation_patent_application_number" content="CN:201010214161"><link rel="canonical" href="https://www.google.com/patents/CN102013975A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102013975A?cl=zh"/><meta name="title" content="专利 CN102013975A - 一种密钥管理方法及系统"/><meta name="description" content="本发明公开了一种密钥管理方法和系统，属于信息安全领域。该方法包括：当智能密钥装置第一次上电时，生成随机数作为管理密钥，所述管理密钥不可读出，智能密钥装置中预先的装有传输密钥，当接收到写主控密钥的APDU时，使用传输密钥进行解密，并且将主控密钥使用管理密钥进行加密后存储在所述智能密钥装置中，在创建文件系统的过程中将APDU使用主控密钥进行加密，在创建文件系统结束后，将所述智能密钥装置设置为应用状态，当终止智能密钥装置使用时，擦除管理密钥。"/><meta property="og:title" content="专利 CN102013975A - 一种密钥管理方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102013975A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102013975A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=i0ZyBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102013975A&amp;usg=AFQjCNElB3WmNJs4CsxHH9J_fHAA5cMs_A" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/44046ba49121399f0daa/CN102013975A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/44046ba49121399f0daa/CN102013975A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102013975A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102013975A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102013975A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102013975B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102013975A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种密钥管理方法和系统，属于信息安全领域。该方法包括：当智能密钥装置第一次上电时，生成随机数作为管理密钥，所述管理密钥不可读出，智能密钥装置中预先的装有传输密钥，当接收到写主控密钥的APDU时 ...</span><span itemprop="url">https://www.google.com/patents/CN102013975A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102013975A - 一种密钥管理方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102013975A - 一种密钥管理方法及系统" title="专利 CN102013975A - 一种密钥管理方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102013975 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010214161</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年4月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年6月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年6月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102013975B?hl=zh-CN&amp;cl=zh">CN102013975B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010214161.2, </span><span class="patent-bibdata-value">CN 102013975 A, </span><span class="patent-bibdata-value">CN 102013975A, </span><span class="patent-bibdata-value">CN 201010214161, </span><span class="patent-bibdata-value">CN-A-102013975, </span><span class="patent-bibdata-value">CN102013975 A, </span><span class="patent-bibdata-value">CN102013975A, </span><span class="patent-bibdata-value">CN201010214161, </span><span class="patent-bibdata-value">CN201010214161.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京飞天诚信科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102013975A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102013975A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102013975A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=i0ZyBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010214161&amp;usg=AFQjCNEmkiAY3by1Ab_n8GAM04rYmm9c_Q"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=i0ZyBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102013975A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHG4A1bWiZYYR-vSeYb96IBD43tLQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT102456405" lang="ZH" load-source="patent-office">一种密钥管理方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 102013975 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA84405799" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种密钥管理方法和系统，属于信息安全领域。该方法包括：当智能密钥装置第一次上电时，生成随机数作为管理密钥，所述管理密钥不可读出，智能密钥装置中预先的装有传输密钥，当接收到写主控密钥的APDU时，使用传输密钥进行解密，并且将主控密钥使用管理密钥进行加密后存储在所述智能密钥装置中，在创建文件系统的过程中将APDU使用主控密钥进行加密，在创建文件系统结束后，将所述智能密钥装置设置为应用状态，当终止智能密钥装置使用时，擦除管理密钥。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(50)</span></span></div><div class="patent-text"><div mxw-id="PCLM35571175" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种密钥管理方法，其特征在于，所述方法包括：智能密钥装置接入主机，卡内操作系统判断所述智能密钥装置为首次上电时，生成 第一随机数作为第一密钥；所述智能密钥装置执行通信初始化操作，等待并接收所述主机下发的APDU(Applica tionProtocolDataUnit,应用协议数据单元）；当接收到所述主机下发的APDU后，判断所述智能密钥装置的生命周期是否终止； 如果所述生命周期没有终止，执行如下操作：所述卡内操作系统判断所述智能密钥装置的使用状态是否为空卡状态，当为空卡状 态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装置的使用状态修 改为初始化状态，继续等待所述主机下发新的APDU ； 或，所述卡内操作系统判断所述智能密钥装置的使用状态是否为初始化状态，当为 初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下发新的 APDU ； 或，所述卡内操作系统判断所述智能密钥装置的使用状态是否为应用状态，当为应用状 态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应用，继续等待所 述主机下发新的APDU ；如果所述生命周期终止，所述智能密钥装置向所述主机返回所述智能密钥装置的生 命周期终止的错误，并继续等待所述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，所述卡内操作系统判断所述智能密钥装置 的使用状态是否为空卡状态，当不为空卡状态时，所述方法还包括：所述卡内操作系统判断所述智能密钥装置的使用状态是否为初始化状态，当为 初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下发新的 APDU,当不为初始化状态时，所述卡内操作系统判断所述智能密钥装置的使用状态是否 为应用状态；当为应用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应 用，继续等待所述主机下发新的APDU;当不为应用状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待所述 主机下发新的APDU; 或，所述卡内操作系统判断所述智能密钥装置的使用状态是否为应用状态，当为应用状 态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应用，继续等待所 述主机下发新的APDU，当不为应用状态时，所述卡内操作系统判断所述智能密钥装置 的使用状态是否为初始化状态；当为初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下 发新的APDU ；当不为初始化状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待所 述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的方法，其特征在于，所述卡内操作系统判断所述智能密钥装置 的使用状态是否为初始化状态，当不为初始化状态时，所述方法还包括：所述卡内操作系统判断所述智能密钥装置的使用状态是否为空卡状态，当为空卡状 态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装置的使用状态修 改为初始化状态，继续等待所述主机下发新的APDU，当不为空卡状态时，所述卡内操 作系统判断所述智能密钥装置的使用状态是否为应用状态；当为应用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应 用，继续等待所述主机下发新的APDU ；当不为应用状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待所述 主机下发新的APDU ； 或，所述卡内操作系统判断所述智能密钥装置的使用状态是否为应用状态，当为应用状 态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应用，继续等待所 述主机下发新的APDU，当不为应用状态时，所述卡内操作系统判断所述智能密钥装置 的使用状态是否为空卡状态；当为空卡状态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装 置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU ；当不为空卡状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待所述 主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的方法，其特征在于，所述卡内操作系统判断所述智能密钥装置 的使用状态是否为应用状态，当不为应用状态时，所述方法还包括：所述卡内操作系统判断所述智能密钥装置的使用状态是否为空卡状态，当为空卡状 态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装置的使用状态修 改为初始化状态，继续等待所述主机下发新的APDU，当不为空卡状态时，所述卡内操 作系统判断所述智能密钥装置的使用状态是否为初始化状态；当为初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下 发新的APDU ；当不为初始化状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待所 述主机下发新的APDU ； 或，所述卡内操作系统判断所述智能密钥装置的使用状态是否为初始化状态，当为 初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下发新的 APDU,当不为初始化状态时，所述卡内操作系统判断所述智能密钥装置的使用状态是否 为空卡状态；当为空卡状态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装 置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU ；当不为空卡状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待所述 主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1-4中的任一权利要求所述的方法，其特征在于，当所述智能密钥装置的使用状态为空卡状态时，所述智能密钥装置执行写第二密钥的指令前，所述方法还包 括：所述卡内操作系统判断所述智能密钥装置接收的APDU是否为写第二密钥的指令， 如果是写第二密钥的指令，所述智能密钥装置使用第三密钥密钥对所述智能密钥装置接 收的APDU进行解密，得到明文的写第二密钥的指令的APDU，进行写所述第二密钥的 操作，将所述第二密钥使用所述第一密钥加密后，保存在所述智能密钥装置的可写存储 区，如果不是写第二密钥的指令，所述智能密钥装置向所述主机返回所述智能密钥装置 处于空卡状态的错误，并继续等待所述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的方法，其特征在于，所述第三密钥为所述智能密钥装置与所述 主机预先约定，并预先存储在所述智能密钥装置的ROM(Read-Only Memory，只读存储 器）中，当所述智能密钥装置生成所述第一密钥后，所述智能密钥装置将所述第三密钥 读出，并使用所述第一密钥加密后保存在所述智能密钥装置的可写存储区中，在所述智 能密钥装置使用第三密钥密钥对所述智能密钥装置接收的APDU进行解密前，所述智能 密钥装置使用所述第一密钥对所述可写存储区中保存的密文的所述第三密钥进行解密， 得到明文的所述第三密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求5所述的方法，其特征在于，所述智能密钥装置得到明文的写第二密钥 的指令的APDU后，进行写所述第二密钥的操作前，所述方法还包括：所述智能密钥装置验证第一消息鉴别码是否正确，所述智能密钥装置根据所述第 二随机数生成第二消息鉴别码，并使用所述第二消息鉴别码与所述第一消息鉴别码进行 比对，如果相同，则所述第一消息鉴别码正确，执行写所述第二密钥的操作，如果不相 同，则所述第一消息鉴别码不正确，向所述主机返回第一消息鉴别码错误的消息，其 中，所述第一消息鉴别码包含在所述明文的写第二密钥的指令的APDU中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的方法，其特征在于，所述智能密钥装置接收到所述主机下发的 APDU前，所述方法还包括：所述主机向所述智能密钥装置发送获取第二随机数的请求，所述智能密钥装置生成 所述第二随机数，并将所述第二随机数发送给所述主机，所述主机使用所述第二随机数 生成第一消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求1-4中的任一权利要求所述的方法，其特征在于，当所述智能密钥装置 的使用状态为初始化状态时，所述智能密钥装置执行创建文件的指令前，所述方法还包 括：所述卡内操作系统判断所述智能密钥装置接收的APDU是否为创建文件的指令；如果是创建文件的指令，所述智能密钥装置使用所述第一密钥对所述保存在可写存 储区中的密文的所述第二密钥进行解密，得到明文的所述第二密钥，所述智能密钥装置 使用所述明文的第二密钥对所述智能密钥装置接收的APDU进行解密，得到明文的创建 文件的指令的APDU，执行所述创建文件的操作，并判断是否所述智能密钥装置的文件 创建全部完成，如果是，将所述智能密钥装置的使用状态修改为应用状态，等待所述主 机下发新的APDU，如果不是，继续等待所述主机下发新的APDU;如果不是创建文件的指令，所述智能密钥装置向所述主机返回所述智能密钥装置未 完成初始化的操作，并继续等待下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的方法，其特征在于，所述智能密钥装置得到明文的创建文件 的指令的APDU后，执行所述创建文件的操作前，所述方法还包括：所述智能密钥装置验证第三消息鉴别码是否正确，所述智能密钥装置根据所述第三 随机数生成第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进行比 对，如果相同，则所述第三消息鉴别码正确，执行所述创建文件的指令，如果不相同， 则所述第三消息鉴别码不正确，向所述主机返回所述第三消息鉴别码错误的消息，其 中，所述第三消息鉴别码包含在所述明文的创建文件的指令的APDU中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10所述的方法，其特征在于，所述智能密钥装置接收到所述主机下发 的APDU前，所述方法还包括：所述主机向所述智能密钥装置发送获取第三随机数的请求，所述智能密钥装置生成 所述第三随机数，并将所述第三随机数发送给所述主机，所述主机使用所述第三随机数 生成第三消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求1所述的方法，其特征在于，所述卡内操作系统判断所述智能密钥装 置为首次上电，具体的包括：所述卡内操作系统判断所述智能密钥装置的可写存储区是否为空白，如果为空白， 则所述智能密钥装置为首次上电，如果不是空白，则所述智能密钥装置不是首次上电。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求1-16中的任一权利要求所述的方法，其特征在于，在所述智能密钥装 置第一次上电后，在所述智能密钥装置的可写存储区中写入所述智能密钥装置的使用状 态标志位，所述卡内操作系统通过读取所述智能密钥装置的使用状态标志位判断所述智 能密钥装置的使用状态是否为空卡状态、初始化状态或应用状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求1所述的方法，其特征在于，所述方法还包括：当所述智能密钥装置的生命周期终止时，所述智能密钥装置擦除所述第一密钥，并 将所述智能密钥装置的使用状态修改为终止使用状态；或，当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智能密 钥装置的使用状态修改为终止使用状态；或，当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述智能 密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状态。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.&#8212;种密钥管理方法，其特征在于，所述方法包括：智能密钥装置接入主机，卡内操作系统判断所述智能密钥装置为首次上电时，生成 第一随机数作为第一密钥；所述智能密钥装置执行通信初始化操作，等待并接收所述主机下发的APDU ；当接收到所述主机下发的APDU后，所述卡内操作系统判断所述智能密钥装置的生 命周期状态和使用状态，并执行如下操作：当所述智能密钥装置的生命周期终止时，所述智能密钥装置向所述主机返回生命周 期终止的错误，继续等待并接收新的APDU ；当所述智能密钥装置的使用状态为空卡状态时，所述智能密钥装置执行写第二密钥 的指令，并将所述智能密钥装置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU ；当所述智能密钥装置的使用状态为初始化状态时，所述智能密钥装置执行创建文件 的指令，继续等待所述主机下发新的APDU ；当所述智能密钥装置的使用状态为应用状态时，所述智能密钥装置执行所述接收到 的所述主机下发的APDU的应用，继续等待所述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求15所述的方法，其特征在于，当所述智能密钥装置的生命周期未终止 时，所述方法还包括：所述卡内操作系统继续判断所述智能密钥装置的使用状态，并执行如下操作：当所述智能密钥装置的使用状态为空卡状态时，所述智能密钥装置执行写第二密钥 的指令，并将所述智能密钥装置的使用状态修改为初始化状态，继续等待所述主机下发 新的APDU ；当所述智能密钥装置的使用状态为初始化状态时，所述智能密钥装置执行创建文件 的指令，继续等待所述主机下发新的APDU ；当所述智能密钥装置的使用状态为应用状态时，所述智能密钥装置执行所述接收到 的所述主机下发的APDU的应用，继续等待所述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求15或16所述的方法，其特征在于，当所述智能密钥装置的使用状态 为空卡状态时，所述智能密钥装置执行写第二密钥的指令前，所述方法还包括：所述卡内操作系统判断所述智能密钥装置接收的APDU是否为写第二密钥的指令， 如果是写第二密钥的指令，所述智能密钥装置使用第三密钥密钥对所述智能密钥装置接 收的APDU进行解密，得到明文的写第二密钥的指令的APDU，进行写所述第二密钥的 操作，将所述第二密钥使用所述第一密钥加密后，保存在所述智能密钥装置的可写存储 区，并继续等待所述主机下发新的APDU，如果不是写第二密钥的指令，所述智能密钥 装置向所述主机返回所述智能密钥装置处于空卡状态的错误，并继续等待所述主机下发 新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求17所述的方法，其特征在于，所述第三密钥为所述智能密钥装置与所 述主机预先约定，并预先存储在所述智能密钥装置的ROM中，当所述智能密钥装置生成 所述第一密钥后，所述智能密钥装置将所述第三密钥读出，并使用所述第一密钥加密后 保存在所述智能密钥装置的可写存储区中，所述智能密钥装置使用第三密钥密钥对所述 智能密钥装置接收的APDU进行解密前，所述智能密钥装置使用所述第一密钥对所述可 写存储区中保存的密文的所述第三密钥进行解密，得到明文的所述第三密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求17所述的方法，其特征在于，所述智能密钥装置得到明文的写第二密 钥的指令的APDU后，进行写所述第二密钥的操作前，所述方法还包括：所述智能密钥装置验证第一消息鉴别码是否正确，所述智能密钥装置根据所述第 二随机数生成第二消息鉴别码，并使用所述第二消息鉴别码与所述第一消息鉴别码进行 比对，如果相同，则所述第一消息鉴别码正确，执行写所述第二密钥的操作，如果不相 同，则所述第一消息鉴别码不正确，向所述主机返回第一消息鉴别码错误的消息，其 中，所述第一消息鉴别码包含在所述明文的写第二密钥的指令的APDU中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的方法，其特征在于，所述智能密钥装置接收到所述主机下发 的APDU前，所述方法还包括：所述主机向所述智能密钥装置发送获取第二随机数的请求，所述智能密钥装置生成 所述第二随机数，并将所述第二随机数发送给所述主机，所述主机使用所述第二随机数 生成第一消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求15或16所述的方法，其特征在于，当所述智能密钥装置的使用状态 为初始化状态时，所述智能密钥装置执行创建文件的指令前，所述方法还包括：所述卡内操作系统判断所述智能密钥装置接收的APDU是否为创建文件的指令；如果是创建文件的指令，所述智能密钥装置使用所述第一密钥对所述保存在可写存 储区中的密文的所述第二密钥进行解密，得到明文的所述第二密钥，所述智能密钥装置 使用所述明文的第二密钥对所述智能密钥装置接收的APDU进行解密，得到明文的创建 文件的指令的APDU，执行所述创建文件的操作，并判断是否所述智能密钥装置的文件 创建全部完成，如果是，将所述智能密钥装置的使用状态修改为应用状态，等待所述主 机下发新的APDU，如果不是，继续等待所述主机下发新的APDU ；如果不是创建文件的指令，所述智能密钥装置向所述主机返回所述智能密钥装置未 完成初始化的操作，并继续等待下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求21所述的方法，其特征在于，所述智能密钥装置得到明文的创建文件 的指令的APDU后，执行所述创建文件的操作前，所述方法还包括：所述智能密钥装置验证第三消息鉴别码是否正确，所述智能密钥装置根据所述第三 随机数生成第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进行比 对，如果相同，则所述第三消息鉴别码正确，执行所述创建文件的指令，如果不相同， 则所述第三消息鉴别码不正确，向所述主机返回所述第三消息鉴别码错误的消息，其 中，所述第三消息鉴别码包含在所述明文的创建文件的指令的APDU中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求22所述的方法，其特征在于，所述智能密钥装置接收到所述主机下发 的APDU前，所述方法还包括：所述主机向所述智能密钥装置发送获取第三随机数的请求，所述智能密钥装置生成 所述第三随机数，并将所述第三随机数发送给所述主机，所述主机使用所述第三随机数 生成第三消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求15或16所述的方法，其特征在于，当所述智能密钥装置的使用状态 为应用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应用前， 所述方法还包括：所述卡内操作系统判断所述智能密钥装置接收的APDU是否为应用类型的APDU指 令，如果是应用类型的APDU指令，所述智能密钥装置执行所述接收到的所述主机下发 的APDU的应用，继续等待并接受新的APDU，如果不是应用类型的APDU指令，所述 智能密钥装置向所述主机返回错误，继续等待并接受新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.如权利要求15或16所述的方法，其特征在于，卡内操作系统判断所述智能密钥 装置为首次上电，具体的包括：所述卡内操作系统判断所述智能密钥装置的可写存储区是否为空白，如果为空白， 则所述智能密钥装置为首次上电，如果不是空白，则所述智能密钥装置不是首次上电。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求15或16所述的方法，其特征在于，在所述智能密钥装置第一次上电 后，在所述智能密钥装置的可写存储区中写入所述智能密钥装置的使用状态标志位，所述卡内操作系统通过读取所述智能密钥装置的使用状态标志位判断所述智能密钥装置的 使用状态是否为空卡状态、初始化状态或应用状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求15或16所述的方法，其特征在于，所述方法还包括：当所述智能密钥装置的生命周期终止时，所述智能密钥装置擦除所述第一密钥，并 将所述智能密钥装置的使用状态修改为终止使用状态； 或，当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智能密 钥装置的使用状态修改为终止使用状态； 或，当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述智能 密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状态。</div>
+    </div>
+    </div> <div class="claim"> <div num="28" class="claim">
+      <div class="claim-text">28.&#8212;种密钥管理方法，其特征在于，所述方法包括：智能密钥装置接入主机，卡内操作系统判断所述智能密钥装置为首次上电时，生成 第一随机数作为第一密钥；所述智能密钥装置执行通信初始化操作，等待并接收所述主机下发的APDU ； 当接收到所述主机下发的APDU后，判断所述智能密钥装置的生命周期是否终止； 如果所述生命周期没有终止，判断所述APDU的类型，并执行如下操作： 当所述APDU为写第二密钥的指令时，判断所述智能密钥装置的使用状态是否为空 卡状态，如果是空卡状态，所述智能密钥装置执行写第二密钥的指令，并将所述智能密 钥装置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU，如果不是空 卡状态，所述智能密钥装置向所述主机返回所述智能密钥装置不是空卡状态的错误，继 续等待并接收新的APDU ；当所述APDU为创建文件的指令时，判断所述智能密钥装置的使用状态是否为初始 化状态，如果是初始化状态，所述智能密钥装置执行创建文件的指令，继续等待所述主 机下发新的APDU，如果不是初始化状态，所述智能密钥装置向所述主机返回所述智能 密钥装置不是初始化状态的错误，继续等待并接收新的APDU ；当所述APDU为应用类型的指令时，判断所述智能密钥装置的使用状态是否为应用 状态，如果是应用状态，所述智能密钥装置执行所述接收到的所述主机下发的APDU的 应用，继续等待所述主机下发新的APDU，如果不是应用状态，所述智能密钥装置向所 述主机返回所述智能密钥装置不是应用状态的错误，，继续等待并接收新的APDU;如果所述生命周期终止，所述智能密钥装置向所述主机返回所述智能密钥装置的生 命周期终止的错误，并继续等待所述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求28所述的方法，其特征在于，所述智能密钥装置执行写第二密钥的操 作，具体的包括：所述智能密钥装置使用第三密钥密钥对所述智能密钥装置接收的APDU进行解密， 得到明文的写第二密钥的指令的APDU，进行写所述第二密钥的操作，将所述第二密钥 使用所述第一密钥加密后，保存在所述智能密钥装置的可写存储区。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求29所述的方法，其特征在于，所述第三密钥为所述智能密钥装置与所 述主机预先约定，并预先存储在所述智能密钥装置的ROM (Read-Only Memory,只读存储器）中，当所述智能密钥装置生成所述第一密钥后，所述智能密钥装置将所述第三密 钥读出，并使用所述第一密钥加密后保存在所述智能密钥装置的可写存储区中，所述智 能密钥装置使用第三密钥密钥对所述智能密钥装置接收的APDU进行解密前，所述智能 密钥装置使用所述第一密钥对所述可写存储区中保存的密文的所述第三密钥进行解密， 得到明文的所述第三密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.如权利要求29所述的方法，其特征在于，所述智能密钥装置得到明文的写第二密 钥的指令的APDU后，进行写所述第二密钥的操作前，所述方法还包括：所述智能密钥装置验证第一消息鉴别码是否正确，所述智能密钥装置根据所述第 二随机数生成第二消息鉴别码，并使用所述第二消息鉴别码与所述第一消息鉴别码进行 比对，如果相同，则所述第一消息鉴别码正确，执行写所述第二密钥的操作，如果不相 同，则所述第一消息鉴别码不正确，向所述主机返回第一消息鉴别码错误的消息，其 中，所述第一消息鉴别码包含在所述明文的写第二密钥的指令的APDU中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.如权利要求31所述的方法，其特征在于，所述智能密钥装置接收到所述主机下发 的APDU前，所述方法还包括：所述主机向所述智能密钥装置发送获取第二随机数的请求，所述智能密钥装置生成 所述第二随机数，并将所述第二随机数发送给所述主机，所述主机使用所述第二随机数 生成第一消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.如权利要求28所述的方法，其特征在于，所述智能密钥装置执行创建文件的指 令，具体的包括：所述智能密钥装置使用所述第一密钥对所述保存在可写存储区中的密文的所述第 二密钥进行解密，得到明文的所述第二密钥，所述智能密钥装置使用所述明文的第二密 钥对所述智能密钥装置接收的APDU进行解密，得到明文的创建文件的指令的APDU， 执行创建文件的操作，并判断是否所述智能密钥装置的文件创建全部完成，如果是，将 所述智能密钥装置的使用状态修改为应用状态，等待所述主机下发新的APDU，如果不 是，继续等待所述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.如权利要求33所述的方法，其特征在于，所述智能密钥装置得到明文的创建文件 的指令的APDU后，执行所述创建文件的操作前，所述方法还包括：所述智能密钥装置验证第三消息鉴别码是否正确，所述智能密钥装置根据所述第三 随机数生成第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进行比 对，如果相同，则所述第三消息鉴别码正确，执行所述创建文件的指令，如果不相同， 则所述第三消息鉴别码不正确，向所述主机返回所述第三消息鉴别码错误的消息，其 中，所述第三消息鉴别码包含在所述明文的创建文件的指令的APDU中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35.如权利要求34所述的方法，其特征在于，所述智能密钥装置接收到所述主机下发 的APDU前，所述方法还包括：所述主机向所述智能密钥装置发送获取第三随机数的请求，所述智能密钥装置生成 所述第三随机数，并将所述第三随机数发送给所述主机，所述主机使用所述第三随机数 生成第三消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.如权利要求28所述的方法，其特征在于，卡内操作系统判断所述智能密钥装置为 首次上电，具体的包括：所述卡内操作系统判断所述智能密钥装置的可写存储区是否为空白，如果为空白， 则所述智能密钥装置为首次上电，如果不是空白，则所述智能密钥装置不是首次上电。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37.如权利要求28所述的方法，其特征在于，在所述智能密钥装置第一次上电后，在 所述智能密钥装置的可写存储区中写入所述智能密钥装置的使用状态标志位，所述卡内 操作系统通过读取所述智能密钥装置的使用状态标志位判断所述智能密钥装置的使用状 态是否为空卡状态、初始化状态或应用状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.如权利要求28所述的方法，其特征在于，所述方法还包括：当所述智能密钥装置的生命周期终止时，所述智能密钥装置擦除所述第一密钥，并 将所述智能密钥装置的使用状态修改为终止使用状态； 或，当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智能密 钥装置的使用状态修改为终止使用状态； 或，当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述智能 密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状态。</div>
+    </div>
+    </div> <div class="claim"> <div num="39" class="claim">
+      <div class="claim-text">39.	一种密钥管理系统，所述系统包括主机和智能密钥装置： 所述主机包括：APDU发送模块、第一接口模块；所述APDU发送模块，用于向智能密钥装置发送APDU ； 所述第一接口模块，用于与智能密钥装置建立连接和进行数据通信； 智能密钥装置包括：上电判断模块、随机数生成模块、APDU接收模块、生命周期 判断模块、空卡判断模块、写第二密钥模块、初始化判断模块、文件创建模块、应用判 断模块、应用模块、错误处理模块、存储模块；所述上电判断模块，用于判断智能密钥装置是否为首次上电； 所述随机数生成模块，用于当所述上电判断模块判断智能密钥装置为首次上电时， 根据算法生成第一随机数，并将第一随机数作为第一密钥；所述APDU接收模块，用于在智能密钥装置生成第一密钥后，等待并接收主机下发 APDU ；所述生命周期判断模块，用于判断智能密钥装置的生命周期是否终止； 所述空卡判断模块，用于判断智能密钥装置的使用状态是否为空卡状态； 所述写第二密钥模块，用于在所述空卡判断模块判断智能密钥装置的使用状态为空 卡状态时，执行写第二密钥的指令，并将智能密钥装置的使用状态修改为初始化状态， 完成后通知所述APDU接收模块继续等待主机下发新的APDU ；所述初始化判断模块，用于判断智能密钥装置的使用状态是否为初始化状态； 所述文件创建模块，用于在所述初始化判断模块判断智能密钥装置的使用状态为初 始化状态时，执行创建文件的指令，完成后通知所述APDU接收模块继续等待主机下发 新的APDU ；所述应用判断模块，用于判断智能密钥装置的使用状态是否为应用状态； 所述应用模块，用于在所述应用判断模块判断智能密钥装置的使用状态为应用状态 时，执行所述APDU接收模块接收的APDU的应用，完成后通知所述APDU接收模块继续等待主机下发新的APDU ；所述错误处理模块，用于当所述生命周期判断模块判断智能密钥装置的生命周期终 止时，向主机返回智能密钥装置生命周期终止的错误，并使所述APDU接收模块继续等 待并接收新的APDU ；所述存储模块，用于存储第一密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40.如权利要求39所述的系统，其特征在于，所述上电判断模块用于判断所述智能密 钥装置是否为首次上电，具体的包括：所述上电判断模块判断所述存储模块中是否未存储任何数据，如果是，则所述智能 密钥装置为首次上电，如果不是，则所述智能密钥装置不是首次上电。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.如权利要求39所述的系统，其特征在于，所述存储模块还用于在所述智能密钥装 置第一次上电后，在所述存储模块中写入所述智能密钥装置的使用状态标志位；所述空卡判断模块具体地通过读取所述存储模块中的使用状态标志位判断所述智能 密钥装置的使用状态是否为空卡状态；所述初始化判断模块具体地通过读取所述存储模块中的使用状态标志位判断所述智 能密钥装置的使用状态是否为初始化状态；所述应用判断模块具体地通过读取所述存储模块中的使用状态标志位判断所述智能 密钥装置的使用状态是否为应用状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42.如权利要求39所述的系统，其特征在于，所述系统还包括写第二密钥判断模块， 所述写第二密钥判断模块用于，在所述写第二密钥模块执行写第二密钥的指令前，判断 所述APDU接收模块接收的APDU是否为写第二密钥的指令，如果是写第二密钥的指 令，所述写第二密钥模块使用所述第一密钥解密所述存储模块中存储的加密后的第三密 钥，得到明文的第三密钥，并使用所述明文的第三密钥对所述写第二密钥指令的APDU 进行解密，得到明文的写第二密钥指令的APDU，进行写所述第二密钥的操作，将所述 第二密钥使用所述第一密钥加密后，保存在所述存储模块中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43.如权利要求42所述的系统，其特征在于，所述存储模块还用于存储所述加密后的 第二密钥和第三密钥，其中所述第三密钥为所述智能密钥装置与所述主机预先约定，并 预先存储在所述智能密钥装置的ROM中，当所述智能密钥装置生成所述第一密钥后，所 述智能密钥装置将所述第三密钥读出，并使用所述第一密钥加密后保存在所述智能密钥 装置的可写存储区中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44.如权利要求42所述的系统，其特征在于，在所述写第二密钥模块得到明文的写 第二密钥指令的APDU后，进行写所述第二密钥的操作前，所述写第二密钥模块还用 于，判断第一消息鉴别码是否正确，所述写第二密钥模块根据所述第二随机数生成第二 消息鉴别码，并使用所述第二消息鉴别码与所述第一消息鉴别码进行比对，如果相同， 则所述第一消息鉴别码正确，所述写第二密钥模块执行写所述第二密钥的操作，如果不 相同，则所述第一消息鉴别码不正确，通过所述错误处理模块向所述主机返回第一消息 鉴别码错误的消息，其中，所述第一消息鉴别码包含在所述明文的写第二密钥的指令的 APDU 中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45.如权利要求44所述的系统，其特征在于，所述APDU接收模块接收所述写第二 密钥指令的APDU前，所述APDU发送模块还用于，向所述随机数生成模块发送获取第二随机数的请求，所述随机数生成模块生成所述第二随机数并发送给所述APDU发送模 块，所述APDU发送模块使用所述第二随机数生成所述第一消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46.如权利要求39所述的系统，其特征在于，所述系统还包括创建文件判断模块， 所述创建文件判断模块用于，在所述文件创建模块执行创建文件的指令前，判断所述 APDU接收模块接收的APDU是否为创建文件的指令，如果是，所述文件创建模块使用 所述第一密钥对所述存储模块中存储的加密后的第二密钥进行解密，得到明文的第二密 钥，再使用所述明文的第二密钥对所述APDU接收模块接收的APDU进行解密，得到明 文的创建文件的指令的APDU，所述文件创建模块执行所述创建文件的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47.如权利要求46所述的系统，其特征在于，所述文件创建模块得到明文的创建文 件的指令的APDU后，所述文件创建模块执行所述创建文件的操作前，所述文件创建模 块还用于，判断第三消息鉴别码是否正确，所述文件创建模块根据所述第三随机数生成 第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进行比对，如果相 同，则所述第三消息鉴别码正确，所述文件创建模块执行所述创建文件的指令，如果不 相同，则所述第三消息鉴别码不正确，通过所述错误处理模块向所述主机返回所述第三 消息鉴别码错误的消息，其中，所述第三消息鉴别码包含在所述明文的创建文件的指令 的APDU中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="48" class="claim">
+      <div class="claim-text">48.如权利要求47所述的系统，其特征在于，所述APDU接收模块接收所述创建文 件的指令的APDU前，所述APDU发送模块还用于，向所述随机数生成模块发送获取第 三随机数的请求，所述随机数生成模块生成所述第三随机数并发送给所述APDU发送模 块，所述APDU发送模块使用所述第三随机数生成所述第三消息鉴别码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="49" class="claim">
+      <div class="claim-text">49.如权利要求46所述的系统，其特征在于，所述文件创建模块执行创建文件的 操作结束后，所述文件创建模块还用于，判断是否所述智能密钥装置的文件创建全部完 成，如果是，将所述智能密钥装置的使用状态修改为应用状态，等待所述主机下发新的 APDU,如果不是，通知所述APDU接收模块继续等待所述主机下发新的APDU。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50.如权利要求39所述的系统，其特征在于，所述系统还包括密钥擦除模块，所述密 钥擦除模块用于当所述智能密钥装置的生命周期终止时，所述智能密钥装置擦除所述第 一密钥，并将所述智能密钥装置的使用状态修改为终止使用状态；或，当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智能密 钥装置的使用状态修改为终止使用状态；或，当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述智能 密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状态。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES41363949" lang="ZH" load-source="patent-office" class="description">
+    <p>一种密钥管理方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及信息安全领域，特别涉及一种密钥管理方法和系统。 背景技术</p>
+    <p>[0002]	密钥是一种参数，通过密钥和加解密算法，可以实现将明文转换为密文，或将 密文转换成明文。从加解密方式进行划分，密钥可以分为对称密钥和非对称密钥，对称 密钥加密又叫专用密钥加密，即发送和接收数据的双方必使用相同的密钥对明文进行加 密和解密运算。对称密钥加密算法主要包括：DES、3DES、IDEA、FEAL、BLOWFISH 等。公开密钥也称为非对称密钥，每个人都有一对唯一对应的密钥：公开密钥（简称公 钥）和私人密钥（简称私钥），公钥对外公开，私钥由个人秘密保存；用其中一把密钥加 密，就只能用另一把密钥解密。非对称密钥加密算法的典型代表是RSA。</p>
+    <p>[0003]	密钥技术广泛的应用于数据通信领域，将需要在公共网络上传输的数据进行加 密传送，增加了数据的安全性。密钥技术还可用于身份认证识别领域，使用基于公钥或 私钥的密码体制，给每个用户分配唯一的密钥对，将数据使用一个密钥进行签名，另一 个密钥验证签名，以判断数据是否可信的，以及数据是否完整和被修改。</p>
+    <p>[0004]	通常情况下，由于计算机接入的不安全性，在计算机中保存的密钥容易被攻击 者窃取，因此出现了智能密钥装置，智能密钥装置是一种利用硬件进行签名操作的设 备，智能密钥装置以USB Key为代表。智能密钥装置内置微型的处理芯片和EEPROM、 ROM等存储芯片，以USB接口等与计算机相连接，通过在USB Key内部完成签名操作， 再将签名结果返回给计算机，把密钥保存在USBKey内部，以保证密钥的安全，但是随 着破解技术的增强，在USBKey内部的密钥也可能被读出，并冒用签名，导致用户密钥 的不安全。</p>
+    <p>[0005]	综上所述，现有技术的缺点是：密钥生成机制不安全，将密钥明文存储在智能 密钥装置中，容易被读出，并冒用签名。</p>
+    <p>发明内容</p>
+    <p>[0006]	为了提高网络数据传输的安全性，本发明实施例提供了一种密钥管理方法和系 统。技术方案如下：</p>
+    <p>[0007]	一种密钥管理方法，所述方法包括：</p>
+    <p>[0008]	智能密钥装置接入主机，卡内操作系统判断所述智能密钥装置为首次上电时， 生成第一随机数作为第一密钥；</p>
+    <p>[0009]	所述智能密钥装置执行通信初始化操作，等待并接收所述主机下发的APDU(Ap plicationProtocolDataUnit,应用协议数据单元）；</p>
+    <p>[0010]	当接收到所述主机下发的APDU后，判断所述智能密钥装置的生命周期是否终 止；</p>
+    <p>[0011]	如果所述生命周期没有终止，执行如下操作：[0012]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为空卡状态，当为空 卡状态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装置的使用状 态修改为初始化状态，继续等待所述主机下发新的APDU ；</p>
+    <p>[0013]或，</p>
+    <p>[0014]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为初始化状态，当为 初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下发新的 APDU ；</p>
+    <p>[0015]或，</p>
+    <p>[0016]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为应用状态，当为应 用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应用，继续等 待所述主机下发新的APDU ；</p>
+    <p>[0017]	如果所述生命周期终止，所述智能密钥装置向所述主机返回所述智能密钥装置 的生命周期终止的错误，并继续等待所述主机下发新的APDU。</p>
+    <p>[0018]	优选地，所述卡内操作系统判断所述智能密钥装置的使用状态是否为空卡状 态，当不为空卡状态时，所述方法还包括：</p>
+    <p>[0019]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为初始化状态，当为 初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下发新的 APDU,当不为初始化状态时，所述卡内操作系统判断所述智能密钥装置的使用状态是否 为应用状态；</p>
+    <p>[0020]	当为应用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU 的应用，继续等待所述主机下发新的APDU ；</p>
+    <p>[0021]	当不为应用状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待 所述主机下发新的APDU ；</p>
+    <p>[0022]或，</p>
+    <p>[0023]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为应用状态，当为应 用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应用，继续等 待所述主机下发新的APDU，当不为应用状态时，所述卡内操作系统判断所述智能密钥 装置的使用状态是否为初始化状态；</p>
+    <p>[0024]	当为初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主 机下发新的APDU;</p>
+    <p>[0025]	当不为初始化状态时，所述智能密钥装置向所述主机返回出错信息，并继续等 待所述主机下发新的APDU。</p>
+    <p>[0026]	优选地，所述卡内操作系统判断所述智能密钥装置的使用状态是否为初始化状 态，当不为初始化状态时，所述方法还包括：</p>
+    <p>[0027]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为空卡状态，当为空 卡状态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装置的使用状 态修改为初始化状态，继续等待所述主机下发新的APDU，当不为空卡状态时，所述卡 内操作系统判断所述智能密钥装置的使用状态是否为应用状态；</p>
+    <p>[0028]	当为应用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU</p>
+    <p>14的应用，继续等待所述主机下发新的APDU ；</p>
+    <p>[0029]	当不为应用状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待 所述主机下发新的APDU ；</p>
+    <p>[0030]或，</p>
+    <p>[0031]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为应用状态，当为应 用状态时，所述智能密钥装置执行所述接收到的所述主机下发的APDU的应用，继续等 待所述主机下发新的APDU，当不为应用状态时，所述卡内操作系统判断所述智能密钥 装置的使用状态是否为空卡状态；</p>
+    <p>[0032]	当为空卡状态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密 钥装置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU ；</p>
+    <p>[0033]	当不为空卡状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待 所述主机下发新的APDU。</p>
+    <p>[0034]	优选地，所述卡内操作系统判断所述智能密钥装置的使用状态是否为应用状 态，当不为应用状态时，所述方法还包括：</p>
+    <p>[0035]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为空卡状态，当为空 卡状态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密钥装置的使用状 态修改为初始化状态，继续等待所述主机下发新的APDU，当不为空卡状态时，所述卡 内操作系统判断所述智能密钥装置的使用状态是否为初始化状态；</p>
+    <p>[0036]	当为初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主 机下发新的APDU;</p>
+    <p>[0037]	当不为初始化状态时，所述智能密钥装置向所述主机返回出错信息，并继续等 待所述主机下发新的APDU ；</p>
+    <p>[0038]或，</p>
+    <p>[0039]	所述卡内操作系统判断所述智能密钥装置的使用状态是否为初始化状态，当为 初始化状态时，所述智能密钥装置执行创建文件的指令，继续等待所述主机下发新的 APDU,当不为初始化状态时，所述卡内操作系统判断所述智能密钥装置的使用状态是否 为空卡状态；</p>
+    <p>[0040]	当为空卡状态时，所述智能密钥装置执行写第二密钥的指令，并将所述智能密 钥装置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU ；</p>
+    <p>[0041]	当不为空卡状态时，所述智能密钥装置向所述主机返回出错信息，并继续等待 所述主机下发新的APDU。</p>
+    <p>[0042]	相应地，当所述智能密钥装置的使用状态为空卡状态时，所述智能密钥装置执 行写第二密钥的指令前，所述方法还包括：</p>
+    <p>[0043]	所述卡内操作系统判断所述智能密钥装置接收的APDU是否为写第二密钥的指 令，如果是写第二密钥的指令，所述智能密钥装置使用第三密钥密钥对所述智能密钥装 置接收的APDU进行解密，得到明文的写第二密钥的指令的APDU，进行写所述第二密 钥的操作，将所述第二密钥使用所述第一密钥加密后，保存在所述智能密钥装置的可写 存储区，如果不是写第二密钥的指令，所述智能密钥装置向所述主机返回所述智能密钥 装置处于空卡状态的错误，并继续等待所述主机下发新的APDU。[0044]	相应地，所述第三密钥为所述智能密钥装置与所述主机预先约定，并预先存储 在所述智能密钥装置的ROM(Read-Only Memory，只读存储器）中，当所述智能密钥装 置生成所述第一密钥后，所述智能密钥装置将所述第三密钥读出，并使用所述第一密钥 加密后保存在所述智能密钥装置的可写存储区中，在所述智能密钥装置使用第三密钥密 钥对所述智能密钥装置接收的APDU进行解密前，所述智能密钥装置使用所述第一密钥 对所述可写存储区中保存的密文的所述第三密钥进行解密，得到明文的所述第三密钥。</p>
+    <p>[0045]	相应地，所述智能密钥装置得到明文的写第二密钥的指令的APDU后，进行写 所述第二密钥的操作前，所述方法还包括：</p>
+    <p>[0046]	所述智能密钥装置验证第一消息鉴别码是否正确，所述智能密钥装置根据所述 第二随机数生成第二消息鉴别码，并使用所述第二消息鉴别码与所述第一消息鉴别码进 行比对，如果相同，则所述第一消息鉴别码正确，执行写所述第二密钥的操作，如果不 相同，则所述第一消息鉴别码不正确，向所述主机返回第一消息鉴别码错误的消息，其 中，所述第一消息鉴别码包含在所述明文的写第二密钥的指令的APDU中。</p>
+    <p>[0047]	相应地，所述智能密钥装置接收到所述主机下发的APDU前，所述方法还包 括：</p>
+    <p>[0048]	所述主机向所述智能密钥装置发送获取第二随机数的请求，所述智能密钥装置 生成所述第二随机数，并将所述第二随机数发送给所述主机，所述主机使用所述第二随 机数生成第一消息鉴别码。</p>
+    <p>[0049]	优选地，当所述智能密钥装置的使用状态为初始化状态时，所述智能密钥装置 执行创建文件的指令前，所述方法还包括：</p>
+    <p>[0050]	所述卡内操作系统判断所述智能密钥装置接收的APDU是否为创建文件的指 令；</p>
+    <p>[0051]	如果是创建文件的指令，所述智能密钥装置使用所述第一密钥对所述保存在可 写存储区中的密文的所述第二密钥进行解密，得到明文的所述第二密钥，所述智能密钥 装置使用所述明文的第二密钥对所述智能密钥装置接收的APDU进行解密，得到明文的 创建文件的指令的APDU，执行所述创建文件的操作，并判断是否所述智能密钥装置的 文件创建全部完成，如果是，将所述智能密钥装置的使用状态修改为应用状态，等待所 述主机下发新的APDU，如果不是，继续等待所述主机下发新的APDU;</p>
+    <p>[0052]	如果不是创建文件的指令，所述智能密钥装置向所述主机返回所述智能密钥装 置未完成初始化的操作，并继续等待下发新的APDU。</p>
+    <p>[0053]	相应地，所述智能密钥装置得到明文的创建文件的指令的APDU后，执行所述 创建文件的操作前，所述方法还包括：</p>
+    <p>[0054]	所述智能密钥装置验证第三消息鉴别码是否正确，所述智能密钥装置根据所述 第三随机数生成第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进 行比对，如果相同，则所述第三消息鉴别码正确，执行所述创建文件的指令，如果不相 同，则所述第三消息鉴别码不正确，向所述主机返回所述第三消息鉴别码错误的消息， 其中，所述第三消息鉴别码包含在所述明文的创建文件的指令的APDU中。</p>
+    <p>[0055]	相应地，所述智能密钥装置接收到所述主机下发的APDU前，所述方法还包 括：</p>
+    <p>16[0056]	所述主机向所述智能密钥装置发送获取第三随机数的请求，所述智能密钥装置 生成所述第三随机数，并将所述第三随机数发送给所述主机，所述主机使用所述第三随 机数生成第三消息鉴别码。</p>
+    <p>[0057]	优选地，所述卡内操作系统判断所述智能密钥装置为首次上电，具体的包括：</p>
+    <p>[0058]	所述卡内操作系统判断所述智能密钥装置的可写存储区是否为空白，如果为空 白，则所述智能密钥装置为首次上电，如果不是空白，则所述智能密钥装置不是首次上电。[0059]	优选地，在所述智能密钥装置第一次上电后，在所述智能密钥装置的可写存储 区中写入所述智能密钥装置的使用状态标志位，所述卡内操作系统通过读取所述智能密 钥装置的使用状态标志位判断所述智能密钥装置的使用状态是否为空卡状态、初始化状 态或应用状态。</p>
+    <p>[0060]	优选地，当所述智能密钥装置的生命周期终止时，所述智能密钥装置擦除所述 第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状态；</p>
+    <p>[0061]或，</p>
+    <p>[0062]	当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智 能密钥装置的使用状态修改为终止使用状态；</p>
+    <p>[0063]或，</p>
+    <p>[0064]	当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述 智能密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状 态。</p>
+    <p>[0065]	一种密钥管理方法，所述方法包括：</p>
+    <p>[0066]	智能密钥装置接入主机，卡内操作系统判断所述智能密钥装置为首次上电时， 生成第一随机数作为第一密钥；</p>
+    <p>[0067]	所述智能密钥装置执行通信初始化操作，等待并接收所述主机下发的APDU ；</p>
+    <p>[0068]	当接收到所述主机下发的APDU后，所述卡内操作系统判断所述智能密钥装置 的生命周期状态和使用状态，并执行如下操作：</p>
+    <p>[0069]	当所述智能密钥装置的生命周期终止时，所述智能密钥装置向所述主机返回生 命周期终止的错误，继续等待并接收新的APDU ；</p>
+    <p>[0070]	当所述智能密钥装置的使用状态为空卡状态时，所述智能密钥装置执行写第二 密钥的指令，并将所述智能密钥装置的使用状态修改为初始化状态，继续等待所述主机 下发新的APDU ；</p>
+    <p>[0071]	当所述智能密钥装置的使用状态为初始化状态时，所述智能密钥装置执行创建 文件的指令，继续等待所述主机下发新的APDU ；</p>
+    <p>[0072]	当所述智能密钥装置的使用状态为应用状态时，所述智能密钥装置执行所述接 收到的所述主机下发的APDU的应用，继续等待所述主机下发新的APDU。</p>
+    <p>[0073]	优选地，当所述智能密钥装置的生命周期未终止时，所述方法还包括：</p>
+    <p>[0074]	所述卡内操作系统继续判断所述智能密钥装置的使用状态，并执行如下操作：</p>
+    <p>[0075]	当所述智能密钥装置的使用状态为空卡状态时，所述智能密钥装置执行写第二 密钥的指令，并将所述智能密钥装置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU;</p>
+    <p>[0076]	当所述智能密钥装置的使用状态为初始化状态时，所述智能密钥装置执行创建 文件的指令，继续等待所述主机下发新的APDU ；</p>
+    <p>[0077]	当所述智能密钥装置的使用状态为应用状态时，所述智能密钥装置执行所述接 收到的所述主机下发的APDU的应用，继续等待所述主机下发新的APDU。</p>
+    <p>[0078]	优选地，当所述智能密钥装置的使用状态为空卡状态时，所述智能密钥装置执 行写第二密钥的指令前，所述方法还包括：</p>
+    <p>[0079]	所述卡内操作系统判断所述智能密钥装置接收的APDU是否为写第二密钥的指 令，如果是写第二密钥的指令，所述智能密钥装置使用第三密钥密钥对所述智能密钥装 置接收的APDU进行解密，得到明文的写第二密钥的指令的APDU，进行写所述第二密 钥的操作，将所述第二密钥使用所述第一密钥加密后，保存在所述智能密钥装置的可写 存储区，，并继续等待所述主机下发新的APDU，如果不是写第二密钥的指令，所述智 能密钥装置向所述主机返回所述智能密钥装置处于空卡状态的错误，并继续等待所述主 机下发新的APDU。</p>
+    <p>[0080]	相应地，所述第三密钥为所述智能密钥装置与所述主机预先约定，并预先存储 在所述智能密钥装置的ROM中，当所述智能密钥装置生成所述第一密钥后，所述智能密 钥装置将所述第三密钥读出，并使用所述第一密钥加密后保存在所述智能密钥装置的可 写存储区中，所述智能密钥装置使用第三密钥密钥对所述智能密钥装置接收的APDU进 行解密前，所述智能密钥装置使用所述第一密钥对所述可写存储区中保存的密文的所述 第三密钥进行解密，得到明文的所述第三密钥。</p>
+    <p>[0081]	相应地，所述智能密钥装置得到明文的写第二密钥的指令的APDU后，进行写 所述第二密钥的操作前，所述方法还包括：</p>
+    <p>[0082]	所述智能密钥装置验证第一消息鉴别码是否正确，所述智能密钥装置根据所述 第二随机数生成第二消息鉴别码，并使用所述第二消息鉴别码与所述第一消息鉴别码进 行比对，如果相同，则所述第一消息鉴别码正确，执行写所述第二密钥的操作，如果不 相同，则所述第一消息鉴别码不正确，向所述主机返回第一消息鉴别码错误的消息，其 中，所述第一消息鉴别码包含在所述明文的写第二密钥的指令的APDU中。</p>
+    <p>[0083]	相应地，所述智能密钥装置接收到所述主机下发的APDU前，所述方法还包 括：</p>
+    <p>[0084]	所述主机向所述智能密钥装置发送获取第二随机数的请求，所述智能密钥装置 生成所述第二随机数，并将所述第二随机数发送给所述主机，所述主机使用所述第二随 机数生成第一消息鉴别码。</p>
+    <p>[0085]	优选地，当所述智能密钥装置的使用状态为初始化状态时，所述智能密钥装置 执行创建文件的指令前，所述方法还包括：</p>
+    <p>[0086]	所述卡内操作系统判断所述智能密钥装置接收的APDU是否为创建文件的指 令；</p>
+    <p>[0087]	如果是创建文件的指令，所述智能密钥装置使用所述第一密钥对所述保存在可 写存储区中的密文的所述第二密钥进行解密，得到明文的所述第二密钥，所述智能密钥 装置使用所述明文的第二密钥对所述智能密钥装置接收的APDU进行解密，得到明文的</p>
+    <p>18创建文件的指令的APDU，执行所述创建文件的操作，并判断是否所述智能密钥装置的 文件创建全部完成，如果是，将所述智能密钥装置的使用状态修改为应用状态，等待所 述主机下发新的APDU，如果不是，继续等待所述主机下发新的APDU;</p>
+    <p>[0088]	如果不是创建文件的指令，所述智能密钥装置向所述主机返回所述智能密钥装 置未完成初始化的操作，并继续等待下发新的APDU。</p>
+    <p>[0089]	相应地，所述智能密钥装置得到明文的创建文件的指令的APDU后，执行所述 创建文件的操作前，所述方法还包括：</p>
+    <p>[0090]	所述智能密钥装置验证第三消息鉴别码是否正确，所述智能密钥装置根据所述 第三随机数生成第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进 行比对，如果相同，则所述第三消息鉴别码正确，执行所述创建文件的指令，如果不相 同，则所述第三消息鉴别码不正确，向所述主机返回所述第三消息鉴别码错误的消息， 其中，所述第三消息鉴别码包含在所述明文的创建文件的指令的APDU中。</p>
+    <p>[0091]	相应地，所述智能密钥装置接收到所述主机下发的APDU前，所述方法还包 括：</p>
+    <p>[0092]	所述主机向所述智能密钥装置发送获取第三随机数的请求，所述智能密钥装置 生成所述第三随机数，并将所述第三随机数发送给所述主机，所述主机使用所述第三随 机数生成第三消息鉴别码。</p>
+    <p>[0093]	优选地，当所述智能密钥装置的使用状态为应用状态时，所述智能密钥装置执 行所述接收到的所述主机下发的APDU的应用前，所述方法还包括：</p>
+    <p>[0094]	所述卡内操作系统判断所述智能密钥装置接收的APDU是否为应用类型的 APDU指令，如果是应用类型的APDU指令，所述智能密钥装置执行所述接收到的所述 主机下发的APDU的应用，，继续等待并接受新的APDU，如果不是应用类型的APDU 指令，所述智能密钥装置向所述主机返回错误，继续等待并接受新的APDU。</p>
+    <p>[0095]	优选地，卡内操作系统判断所述智能密钥装置为首次上电，具体的包括：</p>
+    <p>[0096]	所述卡内操作系统判断所述智能密钥装置的可写存储区是否为空白，如果为空 白，则所述智能密钥装置为首次上电，如果不是空白，则所述智能密钥装置不是首次上括。</p>
+    <p>[0097]	优选地，在所述智能密钥装置第一次上电后，在所述智能密钥装置的可写存储 区中写入所述智能密钥装置的使用状态标志位，所述卡内操作系统通过读取所述智能密 钥装置的使用状态标志位判断所述智能密钥装置的使用状态是否为空卡状态、初始化状 态或应用状态。</p>
+    <p>[0098]	优选地，所述方法还包括：</p>
+    <p>[0099]	当所述智能密钥装置的生命周期终止时，所述智能密钥装置擦除所述第一密 钥，并将所述智能密钥装置的使用状态修改为终止使用状态；</p>
+    <p>[0100]或，</p>
+    <p>[0101]	当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智 能密钥装置的使用状态修改为终止使用状态；</p>
+    <p>[0102]或，</p>
+    <p>[0103]	当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述智能密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状 态。</p>
+    <p>[0104]	一种密钥管理方法，所述方法包括：</p>
+    <p>[0105]	智能密钥装置接入主机，卡内操作系统判断所述智能密钥装置为首次上电时， 生成第一随机数作为第一密钥；</p>
+    <p>[0106]	所述智能密钥装置执行通信初始化操作，等待并接收所述主机下发的APDU ；</p>
+    <p>[0107]	当接收到所述主机下发的APDU后，判断所述智能密钥装置的生命周期是否终 止；</p>
+    <p>[0108]	如果所述生命周期没有终止，判断所述APDU的类型，并执行如下操作：</p>
+    <p>[0109]	当所述APDU为写第二密钥的指令时，判断所述智能密钥装置的使用状态是 否为空卡状态，如果是空卡状态，所述智能密钥装置执行写第二密钥的指令，并将所述 智能密钥装置的使用状态修改为初始化状态，继续等待所述主机下发新的APDU，如果 不是空卡状态，所述智能密钥装置向所述主机返回所述智能密钥装置不是空卡状态的错 误，继续等待并接收新的APDU;</p>
+    <p>[0110]	当所述APDU为创建文件的指令时，判断所述智能密钥装置的使用状态是否为 初始化状态，如果是初始化状态，所述智能密钥装置执行创建文件的指令，继续等待所 述主机下发新的APDU，如果不是初始化状态，所述智能密钥装置向所述主机返回所述 智能密钥装置不是初始化状态的错误，继续等待并接收新的APDU ；</p>
+    <p>[0111]	当所述APDU为应用类型的指令时，判断所述智能密钥装置的使用状态是否 为应用状态，如果是应用状态，所述智能密钥装置执行所述接收到的所述主机下发的 APDU的应用，继续等待所述主机下发新的APDU，如果不是应用状态，所述智能密钥 装置向所述主机返回所述智能密钥装置不是应用状态的错误，，继续等待并接收新的 APDU ；</p>
+    <p>[0112]	如果所述生命周期终止，所述智能密钥装置向所述主机返回所述智能密钥装置 的生命周期终止的错误，并继续等待所述主机下发新的APDU。</p>
+    <p>[0113]	优选地，所述智能密钥装置执行写第二密钥的操作，具体的包括：</p>
+    <p>[0114]	所述智能密钥装置使用第三密钥密钥对所述智能密钥装置接收的APDU进行解 密，得到明文的写第二密钥的指令的APDU，进行写所述第二密钥的操作，将所述第二 密钥使用所述第一密钥加密后，保存在所述智能密钥装置的可写存储区。</p>
+    <p>[0115]	相应地，所述第三密钥为所述智能密钥装置与所述主机预先约定，并预先存储 在所述智能密钥装置的ROM(Read-Only Memory，只读存储器）中，当所述智能密钥装 置生成所述第一密钥后，所述智能密钥装置将所述第三密钥读出，并使用所述第一密钥 加密后保存在所述智能密钥装置的可写存储区中，所述智能密钥装置使用第三密钥密钥 对所述智能密钥装置接收的APDU进行解密前，所述智能密钥装置使用所述第一密钥对 所述可写存储区中保存的密文的所述第三密钥进行解密，得到明文的所述第三密钥。</p>
+    <p>[0116]	优选地，所述智能密钥装置得到明文的写第二密钥的指令的APDU后，进行写 所述第二密钥的操作前，所述方法还包括：</p>
+    <p>[0117]	所述智能密钥装置验证第一消息鉴别码是否正确，所述智能密钥装置根据所述 第二随机数生成第二消息鉴别码，并使用所述第二消息鉴别码与所述第一消息鉴别码进</p>
+    <p>20行比对，如果相同，则所述第一消息鉴别码正确，执行写所述第二密钥的操作，如果不 相同，则所述第一消息鉴别码不正确，向所述主机返回第一消息鉴别码错误的消息，其 中，所述第一消息鉴别码包含在所述明文的写第二密钥的指令的APDU中。</p>
+    <p>[0118]	相应地，所述智能密钥装置接收到所述主机下发的APDU前，所述方法还包 括：</p>
+    <p>[0119]	所述主机向所述智能密钥装置发送获取第二随机数的请求，所述智能密钥装置 生成所述第二随机数，并将所述第二随机数发送给所述主机，所述主机使用所述第二随 机数生成第一消息鉴别码。</p>
+    <p>[0120]	优选地，所述智能密钥装置执行创建文件的指令，具体的包括：</p>
+    <p>[0121]	所述智能密钥装置使用所述第一密钥对所述保存在可写存储区中的密文的所 述第二密钥进行解密，得到明文的所述第二密钥，所述智能密钥装置使用所述明文的 第二密钥对所述智能密钥装置接收的APDU进行解密，得到明文的创建文件的指令的 APDU,执行创建文件的操作，并判断是否所述智能密钥装置的文件创建全部完成，如果 是，将所述智能密钥装置的使用状态修改为应用状态，等待所述主机下发新的APDU， 如果不是，继续等待所述主机下发新的APDU。</p>
+    <p>[0122]	相应地，其特征在于，所述智能密钥装置得到明文的创建文件的指令的APDU 后，执行所述创建文件的操作前，所述方法还包括：</p>
+    <p>[0123]	所述智能密钥装置验证第三消息鉴别码是否正确，所述智能密钥装置根据所述 第三随机数生成第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进 行比对，如果相同，则所述第三消息鉴别码正确，执行所述创建文件的指令，如果不相 同，则所述第三消息鉴别码不正确，向所述主机返回所述第三消息鉴别码错误的消息， 其中，所述第三消息鉴别码包含在所述明文的创建文件的指令的APDU中。</p>
+    <p>[0124]	相应地，所述智能密钥装置接收到所述主机下发的APDU前，所述方法还包 括：</p>
+    <p>[0125]	所述主机向所述智能密钥装置发送获取第三随机数的请求，所述智能密钥装置 生成所述第三随机数，并将所述第三随机数发送给所述主机，所述主机使用所述第三随 机数生成第三消息鉴别码。</p>
+    <p>[0126]	优选地，卡内操作系统判断所述智能密钥装置为首次上电，具体的包括：</p>
+    <p>[0127]	所述卡内操作系统判断所述智能密钥装置的可写存储区是否为空白，如果为空 白，则所述智能密钥装置为首次上电，如果不是空白，则所述智能密钥装置不是首次上电。</p>
+    <p>[0128]	优选地，在所述智能密钥装置第一次上电后，在所述智能密钥装置的可写存储 区中写入所述智能密钥装置的使用状态标志位，所述卡内操作系统通过读取所述智能密 钥装置的使用状态标志位判断所述智能密钥装置的使用状态是否为空卡状态、初始化状 态或应用状态。</p>
+    <p>[0129]	优选地，所述方法还包括：</p>
+    <p>[0130]	当所述智能密钥装置的生命周期终止时，所述智能密钥装置擦除所述第一密 钥，并将所述智能密钥装置的使用状态修改为终止使用状态；</p>
+    <p>[0131]或，[0132]	当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智 能密钥装置的使用状态修改为终止使用状态；</p>
+    <p>[0133]或，</p>
+    <p>[0134]	当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述 智能密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状 态；</p>
+    <p>[0135]	一种签名系统，所述系统包括主机和智能密钥装置：</p>
+    <p>[0136]	所述主机包括：APDU发送模块、第一接口模块；</p>
+    <p>[0137]	所述APDU发送模块，用于向智能密钥装置发送APDU ；</p>
+    <p>[0138]	所述第一接口模块，用于与智能密钥装置建立连接和进行数据通信；</p>
+    <p>[0139]	智能密钥装置包括：上电判断模块、随机数生成模块、APDU接收模块、生命 周期判断模块、空卡判断模块、写第二密钥模块、初始化判断模块、文件创建模块、应 用判断模块、应用模块、错误处理模块、存储模块；</p>
+    <p>[0140]	所述上电判断模块，用于判断智能密钥装置是否为首次上电；</p>
+    <p>[0141]	所述随机数生成模块，用于当所述上电判断模块判断智能密钥装置为首次上电 时，根据算法生成第一随机数，并将第一随机数作为第一密钥；</p>
+    <p>[0142]	所述APDU接收模块，用于在智能密钥装置生成第一密钥后，等待并接收主机 下发APDU ；</p>
+    <p>[0143]	所述生命周期判断模块，用于判断智能密钥装置的生命周期是否终止；</p>
+    <p>[0144]	所述空卡判断模块，用于判断智能密钥装置的使用状态是否为空卡状态；</p>
+    <p>[0145]	所述写第二密钥模块，用于在所述空卡判断模块判断智能密钥装置的使用状态 为空卡状态时，执行写第二密钥的指令，并将智能密钥装置的使用状态修改为初始化状 态，完成后通知所述APDU接收模块继续等待主机下发新的APDU ；</p>
+    <p>[0146]	所述初始化判断模块，用于判断智能密钥装置的使用状态是否为初始化状态；</p>
+    <p>[0147]	所述文件创建模块，用于在所述初始化判断模块判断智能密钥装置的使用状态 为初始化状态时，执行创建文件的指令，完成后通知所述APDU接收模块继续等待主机 下发新的APDU;</p>
+    <p>[0148]	所述应用判断模块，用于判断智能密钥装置的使用状态是否为应用状态；</p>
+    <p>[0149]	所述应用模块，用于在所述应用判断模块判断智能密钥装置的使用状态为应用 状态时，执行所述APDU接收模块接收的APDU的应用，完成后通知所述APDU接收模 块继续等待主机下发新的APDU ；</p>
+    <p>[0150]	所述错误处理模块，用于当所述生命周期判断模块判断智能密钥装置的生命周 期终止时，向主机返回智能密钥装置生命周期终止的错误，并使所述APDU接收模块继 续等待并接收新的APDU;</p>
+    <p>[0151]	所述存储模块，用于存储第一密钥。</p>
+    <p>[0152]	优选地，所述上电判断模块用于判断所述智能密钥装置是否为首次上电，具体 的包括：</p>
+    <p>[0153]	所述上电判断模块判断所述存储模块中是否未存储任何数据，如果是，则所述 智能密钥装置为首次上电，如果不是，则所述智能密钥装置不是首次上电。</p>
+    <p>22[0154]	优选地，所述存储模块还用于在所述智能密钥装置第一次上电后，在所述存储 模块中写入所述智能密钥装置的使用状态标志位；</p>
+    <p>[0155]	所述空卡判断模块具体地通过读取所述存储模块中的使用状态标志位判断所述 智能密钥装置的使用状态是否为空卡状态；</p>
+    <p>[0156]	所述初始化判断模块具体地通过读取所述存储模块中的使用状态标志位判断所 述智能密钥装置的使用状态是否为初始化状态；</p>
+    <p>[0157]	所述应用判断模块具体地通过读取所述存储模块中的使用状态标志位判断所述 智能密钥装置的使用状态是否为应用状态。</p>
+    <p>[0158]	优选地，所述系统还包括写第二密钥判断模块，所述写第二密钥判断模块用 于，在所述写第二密钥模块执行写第二密钥的指令前，判断所述APDU接收模块接收的 APDU是否为写第二密钥的指令，如果是写第二密钥的指令，所述写第二密钥模块使用 所述第一密钥解密所述存储模块中存储的加密后的第三密钥，得到明文的第三密钥，并 使用所述明文的第三密钥对所述写第二密钥指令的APDU进行解密，得到明文的写第二 密钥指令的APDU，进行写所述第二密钥的操作，将所述第二密钥使用所述第一密钥加 密后，保存在所述存储模块中。</p>
+    <p>[0159]	相应地，所述存储模块还用于存储所述加密后的第二密钥和第三密钥，其中所 述第三密钥为所述智能密钥装置与所述主机预先约定，并预先存储在所述智能密钥装置 的ROM中，当所述智能密钥装置生成所述第一密钥后，所述智能密钥装置将所述第三密 钥读出，并使用所述第一密钥加密后保存在所述智能密钥装置的可写存储区中。</p>
+    <p>[0160]	相应地，在所述写第二密钥模块得到明文的写第二密钥指令的APDU后，进 行写所述第二密钥的操作前，所述写第二密钥模块还用于，判断第一消息鉴别码是否正 确，所述写第二密钥模块根据所述第二随机数生成第二消息鉴别码，并使用所述第二消 息鉴别码与所述第一消息鉴别码进行比对，如果相同，则所述第一消息鉴别码正确，所 述写第二密钥模块执行写所述第二密钥的操作，如果不相同，则所述第一消息鉴别码不 正确，通过所述错误处理模块向所述主机返回第一消息鉴别码错误的消息，其中，所述 第一消息鉴别码包含在所述明文的写第二密钥的指令的APDU中。</p>
+    <p>[0161]	相应地，所述APDU接收模块接收所述写第二密钥指令的APDU前，所述 APDU发送模块还用于，向所述随机数生成模块发送获取第二随机数的请求，所述随机 数生成模块生成所述第二随机数并发送给所述APDU发送模块，所述APDU发送模块使 用所述第二随机数生成所述第一消息鉴别码。</p>
+    <p>[0162]	优选地，所述系统还包括创建文件判断模块，所述创建文件判断模块用于，在 所述文件创建模块执行创建文件的指令前，判断所述APDU接收模块接收的APDU是否 为创建文件的指令，如果是，所述文件创建模块使用所述第一密钥对所述存储模块中存 储的加密后的第二密钥进行解密，得到明文的第二密钥，再使用所述明文的第二密钥对 所述APDU接收模块接收的APDU进行解密，得到明文的创建文件的指令的APDU，所 述文件创建模块执行所述创建文件的操作。</p>
+    <p>[0163]	相应地，所述文件创建模块得到明文的创建文件的指令的APDU后，所述文 件创建模块执行所述创建文件的操作前，所述文件创建模块还用于，判断第三消息鉴别 码是否正确，所述文件创建模块根据所述第三随机数生成第四消息鉴别码，并使用所述第四消息鉴别码与所述第三消息鉴别码进行比对，如果相同，则所述第三消息鉴别码正 确，所述文件创建模块执行所述创建文件的指令，如果不相同，则所述第三消息鉴别码 不正确，通过所述错误处理模块向所述主机返回所述第三消息鉴别码错误的消息，其 中，所述第三消息鉴别码包含在所述明文的创建文件的指令的APDU中。</p>
+    <p>[0164]	相应地，所述APDU接收模块接收所述创建文件的指令的APDU前，所述 APDU发送模块还用于，向所述随机数生成模块发送获取第三随机数的请求，所述随机 数生成模块生成所述第三随机数并发送给所述APDU发送模块，所述APDU发送模块使 用所述第三随机数生成所述第三消息鉴别码。</p>
+    <p>[0165]	相应地，所述文件创建模块执行创建文件的操作结束后，所述文件创建模块还 用于，判断是否所述智能密钥装置的文件创建全部完成，如果是，将所述智能密钥装置 的使用状态修改为应用状态，等待所述主机下发新的APDU，如果不是，通知所述APDU 接收模块继续等待所述主机下发新的APDU。</p>
+    <p>[0166]	优选地，所述系统还包括密钥擦除模块，所述密钥擦除模块用于当所述智能密 钥装置的生命周期终止时，所述智能密钥装置擦除所述第一密钥，并将所述智能密钥装 置的使用状态修改为终止使用状态；</p>
+    <p>[0167]或，</p>
+    <p>[0168]	当连续认证解锁码错误次数超过约定次数时，擦除所述第一密钥，并将所述智 能密钥装置的使用状态修改为终止使用状态；</p>
+    <p>[0169]或，</p>
+    <p>[0170]	当所述智能密钥装置接收到用户发出的销毁所述智能密钥装置的指令时，所述智 能密钥装置擦除所述第一密钥，并将所述智能密钥装置的使用状态修改为终止使用状态。</p>
+    <p>[0171]	本发明实施例提供的技术方案带来的有益效果是：本实施例所提供的一种密钥 管理方法，克服了现有技术中的密钥容易被攻击从智能密钥装置中读出的缺点，即使密 钥被读出也为密文，因此增强了 USB Key的安全性，并且在智能密钥装置中的用户敏感 信息使用主控密钥加密保存，同样增加了安全性，在智能密钥装置销毁时，只需擦除主 控密钥就可以使整个智能密钥装置作废，销毁简便。</p>
+    <p>附图说明</p>
+    <p>[0172]	图1为本发明具体实施例一中一种密钥管理方法流程图。</p>
+    <p>[0173]	图2为本发明具体实施例一中USB Key生成管理密钥的方法流程图。</p>
+    <p>[0174]	图3为本发明具体实施例一中在密钥使用过程中USB Key实现验证PIN码的方 法流程图。</p>
+    <p>[0175]	图4为本发明具体实施例二中一种密钥管理方法流程图。</p>
+    <p>[0176]	图5为本发明具体实施例三中一种密钥管理方法流程图。</p>
+    <p>[0177]	图6为本发明具体实施例四中一种密钥管理方法流程图。</p>
+    <p>[0178]	图7为本发明具体实施例二中一种密钥管理系统框图。</p>
+    <p>具体实施方式</p>
+    <p>[0179]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施</p>
+    <p>24方式作进一步地详细描述。</p>
+    <p>[0180]	实施例1</p>
+    <p>[0181]	本实施例提供了一种密钥管理方法，在本实施例中，智能密钥装置以USBKey 为例进行说明，通过对USBKey从上电到进行应用的过程，对USB Key中的主要密钥和 密钥的生成、保存、使用和销毁过程进行说明，参加图1，具体的如下：</p>
+    <p>[0182]	步骤101，USBKey接入主机，上电；</p>
+    <p>[0183]	步骤102，COS判断USBKey是否为首次上电，如果是，执行步骤103，如果不 是，执行步骤104;</p>
+    <p>[0184]	在本实施例中，COS (Chip Operating System)为卡内操作系统，存储于上述USB Key中的ROM中；</p>
+    <p>[0185]	COS判断USB Key是否为首次上电的方法具体的为：COS判断上述USBKey的 数据存储区是否为全0或全F，当USBKey的数据存储区为全0或全F时，说明USBKey 的数据存储区为空白，处于未写入数据状态，则USBKey为首次上电；另外，USBKey 的数据存储区空白时为全0、全F或为其他情况，可以与芯片生产商约定；</p>
+    <p>[0186]	步骤103，USB Key生成管理密钥MKey，执行步骤104 ；</p>
+    <p>[0187]	在本实施例中，参加图2，USBKey生成管理密钥MKey具体的为：</p>
+    <p>[0188]	103a, COS获取由USB Key硬件产生的真随机数R1，并将真随机数R1作为熵 (或 seed)；</p>
+    <p>[0189]	其中，USBKey硬件产生真随机数为通过噪声生成真随机数，上述噪声包括环 境噪声、电流噪声等，具体的为：</p>
+    <p>[0190]	l)COS向USBKey硬件发出获取真随机数的指令；</p>
+    <p>[0191]	2) USBKey硬件采集噪声样点，并对噪声样点进行去除周期性、连续性、相关 性等对随机性有影响的消极特性的操作；</p>
+    <p>[0192]	3) USBKey硬件根据消除消极特性的噪声样点生成固定长度的真随机数R1 ；</p>
+    <p>[0193]	4) USB Key硬件将真随机数R1返回给COS ；</p>
+    <p>[0194]	103b, COS根据真随机数R1生成伪随机数PI ；</p>
+    <p>[0195]	在本实施例中，COS生成伪随机数P1需要使用参数：3DES算法密钥Key、变 量V、熵（seed)，COS根据真随机数R1生成伪随机数P1，具体的为：</p>
+    <p>[0196]	1) COS调用函数update ()，将生成伪随机数需要使用的参数Key、V、熵进行初 始化，Key、V、熵设置为0 ；</p>
+    <p>[0197]	在本实施例中，优选地，Key为24字节长度的3DES密钥，V为8字节长度的 变量，熵为32字节长度的真随机数；</p>
+    <p>[0198]	2)使用Key对V进行3DES算法加密运算，得到一个8字节长度的加密结果 A1 ；</p>
+    <p>[0199]	3)将变量V的值增加一个步长得到VI，使用Key对VI进行3DES算法加密运 算，得到一个8字节长度的加密结果A2 ；</p>
+    <p>[0200]	在本实施例中，优选地，将变量V的值增加一个步长为将V的值增加1，以下增 加一个步长的操作皆相同；</p>
+    <p>[0201]	4)将变量VI的值增加1得到V2，使用Key对V2进行3DES算法加密运算，得到一个8字节长度的加密结果A3 ；</p>
+    <p>[0202]	5)将变量V2的值增加1得到V3，使用Key对V3进行3DES算法加密运算，得 到一个8字节长度的加密结果A4 ；</p>
+    <p>[0203]	6)将Al、A2、A3、A4连接起来得到一个32字节的值N，并使用N与熵进行 异或得到异或结果M，将M的前24个字节作为密钥Keyl，后8个字节作为V5 ；</p>
+    <p>[0204]	7) COS调用函数Generate ()，使用Keyl对V5进行3DES算法加密运算，得到 一个8字节长度的结果A5;</p>
+    <p>[0205]	8)将A5作为伪随机数P1返回给COS。</p>
+    <p>[0206]	在本实施例中，伪随机数P1长度为8个字节，并且伪随机数P1的长度是可控制 的，通过取A5的约定长度或对生成伪随机数的参数进行长度控制，而产生不同长度的伪 随机数；</p>
+    <p>[0207]	103c,将伪随机数P1作为USB Key的管理密钥MKey存储在USB Key的数据存</p>
+    <p>储区；</p>
+    <p>[0208]	其中，USB Key的管理密钥MKey不可被USB Key的外部命令读出；</p>
+    <p>[0209]	步骤104，USB Key进行通信初始化；</p>
+    <p>[0210]	在本实施例中，USB Key进行通信初始化，主要是指将USB Key的Ram中的全</p>
+    <p>局变量等初始化，并向主机发送USB设备描述符，使得主机为上述USB Key设备加载驱 动，以使主机和USB Key能够进行通信；</p>
+    <p>[0211]	在本实施例中，以USB Key进行说明，智能密钥装置还可以为非接触式智能 卡，非接触式智能卡在此步骤中，即为建立无线连接，并进行通信；</p>
+    <p>[0212]	步骤105，USB Key等待并接收APDU ；</p>
+    <p>[0213]	在本实施例中，主机通过下发APDU(ApplicationProtocolDataUnit，应用协议数</p>
+    <p>据单元)控制USB Key进行各种操作；</p>
+    <p>[0214]	步骤106，USB Key判断生命周期状态和使用状态，当USB Key的生命周期终止 时，执行步骤107，当USB Key的使用状态处于空卡状态时，执行步骤108，当USB Key 的使用状态处于初始化状态时，执行步骤111，当USB Key的使用状态处于应用状态时， 执行步骤114;</p>
+    <p>[0215]	在本实施例中，USB Key中保存有两个预设的标志位，这两个标志位分别表示 USB Key的生命周期状态和使用状态，其中，优选地，USB Key的生命周期使用一个字 节表示，USB Key读取该字节，并根据该字节判断是否USB Key的生命周期终止，如果 终止，USB Key将不能执行任何APDU ；</p>
+    <p>[0216]	USB Key的使用状态包括空卡状态、初始化状态、应用状态、终止使用状态， 将使用状态标识位优选地使用一个字节表示，使用0x00、0x01、0x02、0x03分别表示 USB Key的使用状态处于空卡状态、初始化状态、应用状态、终止使用状态，具体地：</p>
+    <p>[0217]	当USB Key未写入主控密钥CKey时，将USB Key设定为空卡状态；</p>
+    <p>[0218]	当USB Key写入主控密钥成功后，未建立文件完成时，USB Key为初始化状 态；</p>
+    <p>[0219]	当USB Key建立文件完成后且生命周期未终止时，USB Key为应用状态；</p>
+    <p>[0220]	当USB Key的生命周期终止后，USB Key为停止使用状态；</p>
+    <p>26[0221 ] 相应地，USB Key通过读取USB Key的使用状态标志位中的数值判断USBKey</p>
+    <p>所处的使用状态；</p>
+    <p>[0222]	在本实施例中，需要注意的是，当USB Key的生命周期终止时，USB Key不能 执行任何APDU，所以在进行USBKey的生命周期和使用状态判断时，优选地，采取如 下办法，先读取USBKey的生命周期标志位，对USB Key的生命周期进行判断，当USB Key的生命周期未结束时，USB Key再读取USB Key的使用状态标志位，判断USB Key 的使用状态处于哪一状态；</p>
+    <p>[0223]	但是，也可以采取先读取USBKey的使用状态标志位，对USBKey的使用状态 进行，然后再读取USBKey的生命周期的标志位，判断USBKey的生命周期是否终止， 如果终止，不能执行任何的APDU，如果没有终止，则按照使用状态的判断结果执行操 作，但是为了节省资源、简化方法，应采用先判断USBKey的生命周期的方法；</p>
+    <p>[0224]	也可以采取将USB Key生命周期的标志位和使用状态标志位统一为一个标志位 的方法，将统一后的标志位设置为五种状态；</p>
+    <p>[0225]	步骤107，向主机返回生命周期终止的错误状态码，返回步骤105，继续等待并 接收新的APDU;</p>
+    <p>[0226]	为了表示USB Key的各种错误，可以与USB Key约定错误状态码，在本实施例 中，当USB Key的生命周期终止时，使用状态码0x6A81表示该错误；</p>
+    <p>[0227]	步骤108，COS判断USB Key接收的APDU是否为写主控密钥CKey的指令的 APDU,如果是，执行步骤109，如果不是，执行步骤110;</p>
+    <p>[0228]	在本步骤中，以接到的APDU为写主控密钥的指令为例进行说明，写主控密钥 CKey的指令的APDU具体的可以为：</p>
+    <p>[0229]	84E4000014 6C5E94DCADD39F1D3AD217812B81E7AD 304F5EDC</p>
+    <p>[0230]	在上述写主控密钥的APDU中，0x84表示该APDU的数据区为密文，0xE4表 示该APDU执行的命令为写主控密钥，0000为参数Parametersl和2，0x14表示其后面 APDU的长度，6C5E94DCADD39F1D3AD217812B81E7AD为该APDU的数据区，为主控 密钥，并且为密文形式，0x304F5EDC为消息鉴别码MAC1，；</p>
+    <p>[0231]	由上可知，判断APDU是否为写主控密钥的指令的APDU的方法为：读取USB Key接收的APDU的第二个字节，如果为E4则为写主控密钥指令；</p>
+    <p>[0232]	步骤109，USB Key使用传输密钥TKey将上述写主控密钥CKey的指令的APDU 进行解密，得到明文的主控密钥CKey，USB Key执行写入主控密钥CKey的操作，将明 文的主控密钥CKey使用管理密钥MKey进行加密，并保存在USBKey的数据存储区，返 回步骤105，继续等待并接收新的APDU;</p>
+    <p>[0233]	在本实施例中，传输密钥TKey为USBKey与主机预先约定的密钥，并且将传输 密钥TKey预先写入USB Key的ROM存储区中，当USB Key第一次上电时，COS将传 输密钥TKey从ROM存储区中读出，使用管理密钥MKey加密后存储在USB Key的数据 存储区中，主机可通过向USB Key发送APDU修改传输密钥TKey ；</p>
+    <p>[0234]	在本实施例中，假设传输密钥TKey为0102030405060708，USBKey使用上述传 输密钥TKey对上述写主控密钥CKey的指令的APDU进行解密，具体的为对上述写主控 密钥CKey的指令的APDU的数据区进行解密，得到明文的主控密钥为：</p>
+    <p>27[0235]	112233445566778899aabbccddeefTO0</p>
+    <p>[0236]	由步骤109中，写主控密钥的APDU中包括消息鉴别码MAC1’，在主机向USB Key发送写入主控密钥CKey的指令的APDU前，还包括：</p>
+    <p>[0237]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P2，并发送给主机，主机由伪随机数P2、传输密钥TKey等生成一个 消息鉴别码（Message Authentication Code，MAC)为MAC1，，上述生成伪随机数P2的 算法与步骤103中生成伪随机数P1的算法相同，这里不再赘述，但是需注意的是每次生 成伪随机数需重新获取真随机数作为熵，以使得计算得出的伪随机数不同。</p>
+    <p>[0238]	相应地，在USB Key对上述接收的写主控密钥CKey的指令的APDU进行解密 后，USBKey执行写入主控密钥CKey的操作前，还包括：</p>
+    <p>[0239]	USB Key判断消息鉴别码MAC 1 ’是否正确，判断的方法为：USB Key按照 于主机生成消息鉴别码MAC1’相同的算法，生成消息鉴别码MAC1，将消息鉴别码 MAC1，与MAC1进行比对，如果相同，则认为消息鉴别码MAC1，正确，USB Key执 行写入主控密钥CKey的操作，如果不相同，则认为消息鉴别码MAC1’不正确，向主机 返回消息鉴别码错误的状态码。</p>
+    <p>[0240]	优选地，主机由伪随机数P2、传输密钥TKey等生成消息鉴别码MAC1’的方法 具体的为：</p>
+    <p>[0241]	将写主控密钥指令的APDU中的标记84、APDU参数Parametersl和2、表 示长度部分、明文的主控密钥、伪随机数P2、传输密钥TKey使用CBC(CipherBlock Concatenation,加密块链接模式）模式进行加密运算，得到消息鉴别码MAC1’。</p>
+    <p>[0242]	上述描述中的CBC的加密模式具体过程如下：首先，将明文分成固定长度（例 如64位）的块（明文块0，明文块1...)，然后，将前面一个加密块输出的密文（例如密文 块0)与下一个要加密的明文块（例如明文块1)进行XOR(异或）操作计算，将计算结果 再用密钥进行加密得到密文。</p>
+    <p>[0243]	在USB Key将明文的主控密钥CKey使用管理密钥MKey进行加密并保存在USB</p>
+    <p>Key的数据存储区后，还包括：</p>
+    <p>[0244]	USB Key将自身使用状态置为初始化状态，在本实施例中具体的为，将USBKey 的使用状态标志位修改为0x01 ；</p>
+    <p>[0245]	步骤110，USBKey向主机返回USBKey为空卡状态的错误状态码，返回步骤 105，继续等待并接收新的APDU;</p>
+    <p>[0246]	在本实施例中，当USB Key的使用状态为空卡状态时，必须先写入主控密钥才 可以进行处理其他APDU的操作，优选地，USB Key向主机返回USB Key为空卡状态的 错误状态码为0x6981 ；</p>
+    <p>[0247]	步骤111，判断USBKey接收的APDU是否为创建文件的指令的APDU，如果 是，执行步骤112，如果不是，执行步骤113;</p>
+    <p>[0248]	步骤112，USBKey执行创建文件的指令，返回步骤105，继续等待并接收新的 APDU ；</p>
+    <p>[0249]	在本实施例中，在对USBKey的文件进行创建时，优选地使用以下文件系统的 结构，使文件系统由主文件MF (Master File)、专用文件DF (Dedicated File)、基本文件EF(ElementFlie)构成，并且为树结构，主文件MF为根节点，专用文件DF为中间节点， 基本文件EF为叶节点，每个专用文件DF都有自己的安全机制，并且单独管理，在对EF 文件进行创建时规定EF文件的读写权限，在存放USB Key的密钥时，将其存储在内部 基本文件EF中，将读写权限设定为不可由外部读出，当获得合法权限后，可在内部使用 USB Key的密钥完成加解密操作；</p>
+    <p>[0250]	其中，在EF文件中，包括秘密文件、二进制文件、循环文件等，在本实施例 中，创建文件的指令主要包括：创建MF文件的指令、创建秘密文件的指令、安装秘密 的指令，下面分别以这三种指令举例进行说明。</p>
+    <p>[0251]	1)当USBKey接收的APDU为创建文件的指令的APDU时，并且为创建MF文 件的指令的APDU时，所述APDU具体的为：</p>
+    <p>[0252]	84 E0 00 00 14 41 28 72 CA 6D 62 CC 6E 0D D5 CB 5C 74 0C 2F 5F 59 E2 3FE55F 4F 502B CC 4F 74 20 BA DB E6 IF B1 EC F6 FC</p>
+    <p>[0253]	其中，在本实施例中APDU全部使用16进制表示，84表示该APDU的数据区 为密文，E0表示该APDU进行的操作为创建MF，0000为参数Parametersl和2，14表示 该字节后 APDU 的长度，412872CA 6D 62CC 6E 0D D5CB 5C 740C 2F 5F 59E23F E55F 4F 502BCC4F 7420BADBE61F为MF文件的参数，包括MF文件的大小、索引等，最后四 个字节B1 EC F6 FC为消息鉴别码MAC2’ ；</p>
+    <p>[0254]	因此，COS判断APDU的方法为，读取所述智能密钥装置接收的APDU的第二 个字节，如果为E0则为创建MF的指令；</p>
+    <p>[0255]	USB Key使用管理密钥MKey将USB Key的数据存储区中保存的主控密钥CKey</p>
+    <p>进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建MF文件的指令 的APDU进行解密，具体的为对创建MF文件的指令的APDU的数据区进行解密，得到 明文的创建MF文件的参数，具体的为：</p>
+    <p>[0256]	3F 00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 31 00 0080 00 00 00 00 00 00</p>
+    <p>[0257]其中，3F	00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 3100 00 为明文的创建MF文件的参数，80 00 00 00 00 00 00为对创建MF文件的参数进行加密时 的补位数据；</p>
+    <p>[0258]	USBKey得到明文的创建MF文件的指令的APDU后，根据MF文件的参数，执 行创建MF文件的操作，并向主机返回创建MF文件成功的状态码；</p>
+    <p>[0259]	在本实施例中，在主机向USBKey发送创建MF文件的指令的APDU前，还包 括：</p>
+    <p>[0260]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P3，并返回给主机，主机由伪随机数P3、主控密钥CKey等生成消息 鉴别码MAC2’，其中，上述生成伪随机数P3的算法与步骤103中生成伪随机数P1的 算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为 熵，以使得USBKey计算得出的伪随机数不同；</p>
+    <p>[0261]	主机由伪随机数P3、主控密钥CKey生成消息鉴别码MAC2’的方法具体的包 括：[0262]	将写主控密钥指令的APDU中的标记84、APDU参数Parameters 1和2、表 示长度部分、明文的创建MF文件的参数和补位、伪随机数P3、主控密钥CKey使用 CBC (Cipher Block Concatenation,加密块链接模式）模式进行加密运算，得到消息鉴别码 MAC2，。</p>
+    <p>[0263]	相应地，在USB Key得到明文的创建MF文件的指令的APDU后，执行创建MF</p>
+    <p>文件的操作前，还包括：</p>
+    <p>[0264]	USBKey判断消息鉴别码MAC2’是否正确，如果正确，则USBKey执行创建 MF文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0265]	上述USBKey判断消息鉴别码MAC2’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P3、主控密钥CKey等利用与主机生成消息鉴别码MAC2’相 同的算法生成消息鉴别码MAC2，将消息鉴别码MAC2’与MAC2进行比对，如果相同， 则认为消息鉴别码MAC2’正确，如果不相同，则认为消息鉴别码MAC2’不正确。</p>
+    <p>[0266]	需要说明的是，MF文件为根文件，只有创建MF文件完成后，才可以创建下一 级文件。</p>
+    <p>[0267]	2)当USBKey接收的APDU为创建文件的指令的APDU时，并且为创建秘密文 件的指令的APDU时，本步骤以创建的秘密文件为存储用户PIN码的秘密文件为例进行 说明，所述APDU具体的为：</p>
+    <p>[0268]	84 E1 00 01 0C 94 2D 21 7F B7 AF 5B 4C 44 1C 8D 2C</p>
+    <p>[0269]	其中，创建秘密文件的指令的APDU中数据区（存放PIN码参数的部分）由主 机使用主控密钥CKey加密，84表示该APDU的数据区为密文，E1表示该APDU执行创 建秘密文件的操作，0001为创建PIN码文件的参数，0C为在这个字节后APDU的长度， 94 2D21 7FB7AF5B4C为PIN码文件的参数的密文，包括PIN码文件的大小、索引等， 441C8D2C为消息鉴别码MAC3’ ；</p>
+    <p>[0270]	因此，COS判断APDU是否为创建秘密文件的方法为，读取APDU的第二个字 节，当为E1时，为创建PIN码文件的指令，创建PIN码文件包含在创建秘密文件的指令 中，因此该APDU为创建秘密文件的指令；</p>
+    <p>[0271]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建秘密文件的指 令的APDU进行解密，得到明文的创建秘密文件参数具体的为：</p>
+    <p>[0272]	7FFF101000000080</p>
+    <p>[0273]	其中，7FFF1010000000为创建PIN码文件的参数，80为主机为所述创建PIN码</p>
+    <p>文件的参数进行加密时，采用的补位；</p>
+    <p>[0274]	USB Key得到明文的创建秘密文件的指令的APDU后，根据创建秘密文件的参 数，创建秘密文件，并向主机返回创建秘密文件成功的状态码；</p>
+    <p>[0275]	在本实施例中，在主机向USB Key发送创建秘密文件的指令的APDU前，还包 括：</p>
+    <p>[0276]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P4，并将伪随机数P4发送给主机，主机由伪随机数P4、主控密钥</p>
+    <p>30CKey等生成消息鉴别码MAC3’，其中，上述生成伪随机数P4的算法与步骤103中生成 伪随机数P1的算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取 真随机数作为熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0277]	上述主机根据伪随机数P4、主控密钥CKey生成消息鉴别码MAC3’的算法与 本步骤112中1)中主机生成消息鉴别码MAC2’的方法相同，这里不再赘述；</p>
+    <p>[0278]	相应地，在USB Key得到明文的创建秘密文件的指令的APDU后，创建秘密文 件前，还包括：</p>
+    <p>[0279]	USBKey判断消息鉴别码MAC3’是否正确，如果正确，则USBKey执行创建 秘密文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0280]	上述USBKey判断消息鉴别码MAC3’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P4、主控密钥CKey等利用与主机生成消息鉴别码MAC3’相 同的算法生成消息鉴别码MAC3，将消息鉴别码MAC3’与MAC3进行比对，如果相同， 则认为消息鉴别码MAC3’正确，如果不相同，则认为消息鉴别码MAC3’不正确。</p>
+    <p>[0281]	3)当USB Key接收的APDU为创建文件的指令的APDU，并且为安装秘密的指 令的APDU时，所述APDU具体的为：</p>
+    <p>[0282]	84 F0 00 00 14 EC A3 30 39 9B DO 6F 41 OD D7 B5 21 19 69 OD FB 23B7965A</p>
+    <p>[0283]	在上述APDU中，84表示该APDU为密文，F0表示该APDU执行安装PIN码 的指令，0000为参数Parametersl和2，14为该字节后APDU的长度，ECA330 39 9BD0 6F410DD7B5 21 19 69 0DFB 为 PIN 码文件，23B7965A 为 MAC4，；</p>
+    <p>[0284]	其中，在本发明中，秘密为用户的敏感数据，需进行加密保护，包括用户的PIN 码、DES密钥、AES密钥等，在2)中以创建PIN码文件为例举例说明了创建秘密文件的 方法，相应地，在这里以在上述PIN码文件中安装PIN码为例进行说明，上述APDU即 为安装PIN码的指令的APDU ；</p>
+    <p>[0285]	USB Key使用管理密钥MKey将USBKey中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述安装秘密的指令的 APDU进行解密，得到明文的PIN码文件，具体的为：</p>
+    <p>[0286]	000000330102030405068000000000</p>
+    <p>[0287]	其中，00000033为PIN码的参数，例如33表示PIN码最大可尝试验证次数为3 次，剩余可连续验证失败次数为3次，010203040506为明文的PIN码，8000000000为对 PIN码文件进行加密时的补位数据；</p>
+    <p>[0288]	USBKey得到明文的安装PIN码的指令的APDU后，执行安装秘密的操作，根 据PIN码文件的位置，将PIN码使用管理密钥MKey加密后存储在2)中创建的PIN码文 件中，并向主机返回安装PIN码成功的状态码；</p>
+    <p>[0289]	在本实施例中，在主机向USBKey发送安装秘密的指令的APDU前，还包括：</p>
+    <p>[0290]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P5，并发送给主机，主机由伪随机数P5、主控密钥CKey等生成消息 鉴别码MAC4’，其中，上述生成伪随机数P5的算法与步骤103中生成伪随机数P1的 算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为</p>
+    <p>31熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0291]	上述主机由伪随机数P5、主控密钥CKey等生成消息鉴别码MAC4’的方法与 本步骤112中1)中主机生成消息鉴别码MAC2’的方法相同，这里不再赘述；</p>
+    <p>[0292]	相应地，在USB Key得到明文的安装PIN码的指令的APDU后，执行安装秘密 的操作前，还包括：</p>
+    <p>[0293]	USBKey判断消息鉴别码MAC4’是否正确，如果正确，则USB Key执行安装</p>
+    <p>秘密的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0294]	上述USBKey判断消息鉴别码MAC4’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P5、主控密钥CKey等利用与主机生成消息鉴别码MAC4’相 同的算法生成消息鉴别码MAC4，将消息鉴别码MAC4’与MAC4进行比对，如果相同， 则认为消息鉴别码MAC4’正确，如果不相同，则认为消息鉴别码MAC4’不正确。</p>
+    <p>[0295]	在步骤112中，还包括：当USB Key中文件系统建立完成，并将全部秘密安装 完成后，将USBKey的使用状态修改为应用状态，并修改USB Key的生命周期，USB Key不可再写入密钥；</p>
+    <p>[0296]	上述将USBKey的使用状态修改为应用状态，在本实施例中具体的为，将USB Key的使用状态为修改为0x02 ；</p>
+    <p>[0297]	步骤113，USBKey向主机返回未进行初始化的错误的状态码，返回步骤105， 继续等待并接收新的APDU;</p>
+    <p>[0298]	步骤114，判断USBKey接收的APDU是否为应用类型的APDU，如果不是，执 行步骤115，如果是，执行步骤116;</p>
+    <p>[0299]	在本实施例中，USBKey根据自身的使用状态，在不同的使用状态时，只可以 执行不同的APDU，当USBKey处于空卡状态时，只能执行写主控密钥的指令，当主 控密钥写入USB Key后，将USB Key修改为初始化状态，当USB Key处于初始化状态 时，USBKey可以执行创建文件和安装文件的APDU，当全部文件创建完成后，将USB Key的使用状态修改为应用状态，当USBKey处于应用状态后，只可以执行应用类型的 APDU,所述应用类型的APDU包括验证PIN码、修改PIN码、签名、验证签名等智能密 钥设备提供的应用；</p>
+    <p>[0300]	步骤115，USBKey向主机返回错误，返回步骤105，继续等待并接收新的 APDU ；</p>
+    <p>[0301]	步骤116，USBKey执行其接收的APDU中的指令中的应用，并返回步骤105，</p>
+    <p>继续等待并接收新的APDU;</p>
+    <p>[0302]	在本实施例中，在USBKey处于应用状态后，用户可使用USB Key进行应用操 作，包括生成RSA密钥对，签名、验证签名、修改PIN码等，主机通过向USBKey下发 应用APDU命令USB Key完成这些操作，并且在主机向USB Key发送APDU时可以采取 将APDU加密和不加密两种方式。下面以USBKey进行签名操作为例进行说明，在USB Key中密钥的使用过程，如下：</p>
+    <p>[0303]	当USB Key接收的为Verify PIN指令（即验证PIN码）的APDU时，参见图3， USB Key的操作为：[0304]	116a，USB Key使用管理密钥MKey对数据存储区中存储的主控密钥CKey进行</p>
+    <p>解密，得到明文的主控密钥CKey ；</p>
+    <p>[0305]	116b，USB Key使用主控密钥CKey对验证PIN码的指令的APDU进行解密， 得到明文的APDU ；</p>
+    <p>[0306]	在本实施例中，上述验证PIN码的指令明文的APDU为：</p>
+    <p>[0307]	00 20 00 00 06 01 02 03 04 05 06</p>
+    <p>[0308]	其中，00表示该APDU为明文，20表示进行验证PIN码的操作，0000为参数 Parametersl和2，06表示该字节后APDU的长度，01 02 03 04 05 06表示用户输入的PIN 码；</p>
+    <p>[0309]	116c, USB Key判断消息鉴别码MAC5’是否正确，如果正确，执行步骤 116e,如果不正确，执行步骤116d;</p>
+    <p>[0310]	在本实施例中，在主机向USB Key下发验证PIN码的指令的APDU前，还包 括：</p>
+    <p>[0311]	主机向USBKey发送APDU，请求一个伪随机数P6，USB Key生成伪随机数</p>
+    <p>P6,并发送给主机，主机由伪随机数P6、主控密钥CKey、验证PIN码的指令生成消息鉴 别码MAC5’，优选地，使用CBC算法生成消息鉴别码MAC5’，与步骤112中使用方 法相同，这里不再赘述；</p>
+    <p>[0312]	USBKey判断消息鉴别码MAC5’的方法，具体的为：USB Key使用与主机生 成消息鉴别码MAC5’相同的算法，使用伪随机数P6、主控密钥CKey、验证PIN码的指 令生成消息鉴别码MAC5并与MAC5’进行比对，如果相同，则MAC5’正确，如果不 相同，则MAC5’不正确；</p>
+    <p>[0313]	116d，USBKey向主机返回消息鉴别码错误的状态码；</p>
+    <p>[0314]	116e，USB Key使用管理密钥MKey将存储于USB Key中的合法PIN码进行解</p>
+    <p>密，得到明文的合法PIN码；</p>
+    <p>[0315]	116f，判断上述APDU中的PIN码是否正确，如果是，执行步骤116g，如果不 是，执行步骤116h;</p>
+    <p>[0316]	上述判断的方法具体的为：将上述验证PIN码指令APDU中的PIN码与USBKey</p>
+    <p>中存储的合法的PIN码进行比对，如果相同，则PIN码正确如果不相同，则PIN码验证 不正确；</p>
+    <p>[0317]	116g，USB Key向主机返回PIN码正确的状态码；</p>
+    <p>[0318]	116h，USBKey向主机返回PIN码错误的状态码，并将PIN码验证计数位减1。</p>
+    <p>[0319]	在本实施例中，如步骤112中所述，在安装PIN码文件时，会在USBKey中存储 有PIN码验证计数位，优选地为两个字节，高位表示USB Key可接收的连续验证PIN码 失败的次数，低位字节表示该USBKey可以验证PIN码的剩余次数，当低字节为0时， USBKey的PIN码锁定，在解锁前不可再进行验证PIN码操作，例如在本实施例中，PIN 码验证计数位在验证PIN码操作前初始化时为33，最多可以尝试连续验证PIN码3次， 当验证PIN码失败一次后，PIN码验证计数位减1为32，当连续第二次验证PIN码失败 后，再减1为31，当PIN码验证计数位为30时，USBKey锁定PIN码，只有解除PIN码 锁定状态后，才可以进行验证PIN码的操作；[0320] 在本实施例中，还可以包括管理密钥MKey的销毁，具体的包括： [0321 ] 当USB Key的生命周期终止时，擦除USB Key中的管理密钥MKey ；</p>
+    <p>[0322]或，</p>
+    <p>[0323]	当外部认证连续验证解锁码超过约定的次数时，擦除USB Key中的管理密钥 MKey ；</p>
+    <p>[0324]或，</p>
+    <p>[0325]	用户发出销毁USB Key的命令时，擦除USB Key中的管理密钥MKey。</p>
+    <p>[0326]	在管理密钥MKey被擦除后，将USB Key的使用状态的标志位设置为终止使用 状态，即将标志位设置为0x03，管理密钥MKey被擦除后，不可能再对USBKey中保存 的其他密钥和加密的数据进行解密，USB Key不能再使用，保证了 USB Key的安全性；</p>
+    <p>[0327]	本实施例所提供的一种密钥管理方法，克服了现有技术中的密钥容易被攻击从 智能密钥装置中读出的缺点，即使密钥被读出也为密文，因此增强了 USBKey的安全 性，并且在智能密钥装置中的用户敏感信息使用主控密钥加密保存，同样增加了安全 性，在智能密钥装置销毁时，只需擦除主控密钥就可以使整个智能密钥装置作废，销毁 简便。</p>
+    <p>[0328]	实施例2</p>
+    <p>[0329]	本实施例提供了一种密钥管理方法，在本实施例中，智能密钥装置以USBKey 为例进行说明，通过对USBKey从上电到进行应用的过程，对USB Key中的主要密钥和 密钥的生成、保存、使用和销毁过程进行说明，区别于实施例1，在本实施例中，USB Key根据接收的APDU，先判断APDU类型，再判断USBKey的使用状态，参加图4，具 体如下：</p>
+    <p>[0330]	步骤201，USBKey接入主机，上电；</p>
+    <p>[0331]	步骤202: COS判断USBKey是否为首次上电，如果是，执行步骤203，如果不 是，执行步骤204;</p>
+    <p>[0332]	在本实施例中，COS (Chip Operating System)为卡内操作系统，存储于上述USB Key中的ROM中；</p>
+    <p>[0333]	COS判断USB Key是否为首次上电的方法具体的为：COS判断上述USBKey的 数据存储区是否为全0或全F，当USBKey的数据存储区为全0或全F时，说明USBKey 的数据存储区为空白，处于未写入数据状态，则USBKey为首次上电；另外，USBKey 的数据存储区空白时为全0、全F或为其他情况，可以与芯片生产商约定；</p>
+    <p>[0334]	步骤203，USB Key生成管理密钥MKey，执行步骤204 ；</p>
+    <p>[0335]	在本实施例中，USB Key生成管理密钥MKey的方法与实施例1中步骤103中相 同，这里不再赘述；</p>
+    <p>[0336]	步骤204，USB Key进行通信初始化；</p>
+    <p>[0337]	在本实施例中，USBKey进行通信初始化，主要是指将USB Key的Ram中的全</p>
+    <p>局变量等初始化，并向主机发送USB设备描述符，使得主机为上述USBKey设备加载驱 动，以使主机和USB Key能够进行通信；</p>
+    <p>[0338]	在本实施例中，以USBKey进行说明，智能密钥装置还可以为非接触式智能 卡，非接触式智能卡在此步骤中，即为建立无线连接，并进行通信；[0339]	步骤205，USB Key等待并接收APDU ；</p>
+    <p>[0340]	在本实施例中，主机通过下发APDU(ApplicationProtocolDataUnit，应用协议数</p>
+    <p>据单元)控制USB Key进行各种操作；</p>
+    <p>[0341]	步骤206，COS判断USB Key的生命周期是否终止，如果是，执行步骤207，如 果不是，执行步骤208;</p>
+    <p>[0342]	在本实施例中，USB Key中写有记载有该USB Key生命周期的标志位，COS通</p>
+    <p>过读取该标志位判断该USB Key的生命周期是否终止，判断方法与实施例1步骤106中 方法相同，这里不再赘述；</p>
+    <p>[0343]	步骤207，向主机返回生命周期终止的错误状态码，返回步骤205，继续等待并 接收新的APDU;</p>
+    <p>[0344]	为了表示USB Key的各种错误，可以与USB Key约定错误状态码，在本实施例 中，当USB Key的生命周期终止时，使用状态码0x6A81表示该错误；</p>
+    <p>[0345]	步骤208，COS判断USBKey接收的APDU类型，当为写主控密钥的APDU时， 执行步骤209，当为创建文件APDU时，执行步骤212，当为应用类型的APDU时，执行 步骤215 ；</p>
+    <p>[0346]	在本实施例中，COS通过读取APDU指令的第二个字节来判断APDU的类型， 在USBKey的应用中，COS和主机应协商APDU，根据APDU结构，使用指定的代号代 表APDU的指令类型，本实施例在以下步骤中详细说明如何判断APDU类型；</p>
+    <p>[0347]	步骤209，COS判断USBKey是否为空卡状态，如果是，执行步骤210，如果不 是，执行步骤211;</p>
+    <p>[0348]	在本实施例中，USBKey中保存有预设的标志位，用于标识该USB Key的使 用状态，其中，USB Key的使用状态包括空卡状态、初始化状态、应用状态、终止使用 状态，将使用状态标识位优选地使用一个字节表示，使用0x00、0x01、0x02、0x03分别 表示USBKey的使用状态处于空卡状态、初始化状态、应用状态、终止使用状态，具体 地：</p>
+    <p>[0349]	当USB Key未写入主控密钥CKey时，将USB Key设定为空卡状态；</p>
+    <p>[0350]	当USBKey写入主控密钥成功后，未建立文件完成时，USB Key为初始化状 态；</p>
+    <p>[0351]	当USB Key建立文件完成后且生命周期未终止时，USB Key为应用状态；</p>
+    <p>[0352]	当USBKey的生命周期终止后，USB Key为停止使用状态；</p>
+    <p>[0353]	相应地，USB Key通过读取USB Key的使用状态标志位中的数值判断USBKey</p>
+    <p>所处的使用状态；</p>
+    <p>[0354]	COS判断USBKey是否为空卡状态，具体的为，COS读取USB Key的使用状态 标志位，如果为0x00，则为空卡状态，如果不为0x00，则不为空卡状态；</p>
+    <p>[0355]	步骤210，USBKey执行写主控密钥的指令，USB Key使用传输密钥TKey将上 述写主控密钥CKey的指令的APDU进行解密，得到明文的主控密钥CKey，USB Key执 行写入主控密钥CKey的操作，将明文的主控密钥CKey使用管理密钥MKey进行加密， 并保存在USBKey的数据存储区，返回步骤205，继续等待并接收新的APDU ；</p>
+    <p>[0356]	在本实施例中，写主控密钥的APDU具体的可以为：[0357]	84 E4000014 6C5E94DCADD39F1D3AD217812B81E7AD 304F5EDC</p>
+    <p>[0358]	在上述写入主控密钥的APDU中，0x84表示该APDU的数据区为密文，0xE4表 示该APDU执行的命令为写主控密钥，0000为参数Parametersl和2，0x14表示其后面 APDU的长度，6C5E94DCADD39F1D3AD217812B81E7AD为该APDU的数据区，为主控 密钥，并且为密文形式，0x304F5EDC为消息鉴别码MAC1，；</p>
+    <p>[0359]	由上可知，判断APDU是否为写主控密钥的APDU的方法为：读取USBKey接 收的APDU的第二个字节，如果为E4则为写主控密钥指令；</p>
+    <p>[0360]	在本实施例中，传输密钥TKey为USBKey与主机预先约定的密钥，并且将传输 密钥TKey预先写入USB Key的ROM存储区中，当USB Key第一次上电时，COS将传 输密钥TKey从ROM存储区中读出，使用管理密钥MKey加密后存储在USB Key的数据 存储区中，主机可通过向USB Key发送APDU修改传输密钥TKey ；</p>
+    <p>[0361]	在本实施例中，假设传输密钥TKey为0102030405060708，USBKey使用上述传 输密钥TKey对上述写主控密钥CKey的指令的APDU进行解密，具体的为对得到明文上 述写主控密钥CKey的指令的APDU的数据区进行解密，得到明文的主控密钥为：</p>
+    <p>[0362]	112233445566778899aabbccddeefTO0</p>
+    <p>[0363]	其中，写主控密钥的APDU中包括消息鉴别码MAC1’，在主机向USBKey发 送写入主控密钥CKey的指令的APDU前，还包括：</p>
+    <p>[0364]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P2，并发送给主机，主机由伪随机数P2、传输密钥TKey等生成一个 消息鉴别码（Message Authentication Code，MAC)为MAC1，，上述生成伪随机数P2的 算法与实施例1中步骤103中生成伪随机数P1的算法相同，这里不再赘述，但是需注意 的是每次生成伪随机数需重新获取真随机数作为熵，以使得计算得出的伪随机数不同。</p>
+    <p>[0365]	相应地，在USB Key对上述接收的写主控密钥CKey的指令的APDU进行解密 后，USBKey执行写入主控密钥CKey的操作前，还包括：</p>
+    <p>[0366]	USB Key判断消息鉴别码MAC 1 ’是否正确，判断的方法为：USB Key按照 于主机生成消息鉴别码MAC1’相同的算法，生成消息鉴别码MAC1，将消息鉴别码 MAC1，与MAC1进行比对，如果相同，则认为消息鉴别码MAC1，正确，USB Key执 行写入主控密钥CKey的操作，如果不相同，则认为消息鉴别码MAC1’不正确，向主机 返回消息鉴别码错误的状态码。</p>
+    <p>[0367]	优选地，主机由伪随机数P2、传输密钥TKey等生成消息鉴别码MAC1’的方法 具体的为：</p>
+    <p>[0368]	将写主控密钥指令的APDU中的标记84、APDU参数Parameters 1和2、表 示长度部分、明文的主控密钥、伪随机数P2、传输密钥TKey使用CBC (Cipher Block Concatenation,加密块链接模式）模式进行加密运算，得到消息鉴别码MAC1’。</p>
+    <p>[0369]	上述描述中的CBC的加密模式具体过程如下：首先，将明文分成固定长度（例 如64位）的块（明文块0，明文块1...)，然后，将前面一个加密块输出的密文（例如密文 块0)与下一个要加密的明文块（例如明文块1)进行XOR(异或）操作计算，将计算结果 再用密钥进行加密得到密文。</p>
+    <p>[0370]	在USB Key将明文的主控密钥CKey使用管理密钥MKey进行加密并保存在USB</p>
+    <p>36Key的数据存储区后，还包括：</p>
+    <p>[0371]	USB Key将自身使用状态置为初始化状态，在本实施例中具体的为，将USBKey 的使用状态标志位修改为0x01 ；</p>
+    <p>[0372]	步骤211，USBKey向主机返回USBKey不为空卡的使用状态的错误信息，返回 步骤205，继续等待并接收新的APDU;</p>
+    <p>[0373]	步骤212，COS判断USBKey的使用状态是否为初始化状态，如果是，执行步 骤213，如果不是，执行步骤214;</p>
+    <p>[0374]	在本实施例中，同步骤209中的方法，COS判断USB Key的使用状态是否为初 始化状态，具体的可以为：</p>
+    <p>[0375]	COS读取USBKey的使用状态标志位，如果为0x01，则为初始化状态，如果不 为0x01，则不为初始化状态；</p>
+    <p>[0376]	步骤213，USBKey执行创建文件的指令，返回步骤205，继续等待并接收新的 APDU ；</p>
+    <p>[0377]	在本实施例中，在对USBKey的文件进行创建时，优选地使用以下文件系统的 结构，使文件系统由主文件MF、专用文件DF、基本文件EF构成，并且为树结构，主文 件MF为根节点，专用文件DF为中间节点，基本文件EF为叶节点，每个专用文件DF都 有自己的安全机制，并且单独管理，在对EF文件进行创建时规定EF文件的读写权限， 在存放USBKey的密钥时，将其存储在内部基本文件EF中，将读写权限设定为不可由外 部读出，当获得合法权限后，可在内部使用USBKey的密钥完成加解密操作；</p>
+    <p>[0378]	其中，在EF文件中，包括秘密文件、二进制文件、循环文件等，在本实施例 中，创建文件的指令主要包括：创建MF文件的指令、创建秘密文件的指令、安装秘密 的指令，下面分别以这三种指令举例进行说明。</p>
+    <p>[0379]	1)当USBKey接收的APDU为创建文件的指令的APDU时，并且为创建MF文 件的指令的APDU时，所述APDU具体的为：</p>
+    <p>[0380]	84 E0 00 00 14 41 28 72 CA 6D 62 CC 6E 0D D5 CB 5C 740C 2F 5F 59 E2 3FE5 5F 4F 50 2B CC 4F 74 20 BA DB E6 IF B1 EC F6 FC</p>
+    <p>[0381]	其中，在本实施例中APDU全部使用16进制表示，84表示该APDU的数据区 为密文，E0表示该APDU进行的操作为创建MF，0000为参数Parametersl和2，14表示 该字节后 APDU 的长度，412872CA 6D 62CC 6E 0D D5CB 5C 740C 2F 5F 59E23F E55F 4F 502BCC4F 7420BADBE61F为MF文件的参数，包括MF文件的大小、索引等，最后四 个字节B1EC F6FC为消息鉴别码MAC2’ ；</p>
+    <p>[0382]	因此，COS判断APDU的方法为，读取所述智能密钥装置接收的APDU的第二 个字节，如果为E0则为创建MF的指令；</p>
+    <p>[0383]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey</p>
+    <p>进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建MF文件的指令 的APDU进行解密，具体的为对创建MF文件的指令的APDU的数据区进行解密，得到 明文的创建MF文件的参数，具体的为：</p>
+    <p>[0384]	3F 00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 31 00 0080 00 00 00 00 00 00</p>
+    <p>37[0385]其中，3F	00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 3100 00 为明文的创建MF文件的参数，80 00 00 00 00 00 00为对创建MF文件的参数进行加密时 的补位数据；</p>
+    <p>[0386]	USBKey得到明文的创建MF文件的指令的APDU后，根据MF文件的参数，执 行创建MF文件的操作，并向主机返回创建MF文件成功的状态码；</p>
+    <p>[0387]	在本实施例中，在主机向USBKey发送创建MF文件的指令的APDU前，还包 括：</p>
+    <p>[0388]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P3，并返回给主机，主机由伪随机数P3、主控密钥CKey等生成消息 鉴别码MAC2’，其中，上述生成伪随机数P3的算法与实施例1中步骤103中生成伪随 机数P1的算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随 机数作为熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0389]	主机由伪随机数P3、主控密钥CKey生成消息鉴别码MAC2’的方法具体的包 括：</p>
+    <p>[0390]	将写主控密钥指令的APDU中的标记84、APDU参数Parametersl和2、表示长</p>
+    <p>度部分、明文的创建MF文件的参数和补位、伪随机数P3、主控密钥CKey使用CBC模 式进行加密运算，得到消息鉴别码MAC2’。</p>
+    <p>[0391]	相应地，在USBKey得到明文的创建MF文件的指令的APDU后，执行创建MF</p>
+    <p>文件的操作前，还包括：</p>
+    <p>[0392]	USBKey判断消息鉴别码MAC2’是否正确，如果正确，则USBKey执行创建</p>
+    <p>MF文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0393]	上述USBKey判断消息鉴别码MAC2’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P3、主控密钥CKey等利用与主机生成消息鉴别码MAC2’相 同的算法生成消息鉴别码MAC2，将消息鉴别码MAC2’与MAC2进行比对，如果相同， 则认为消息鉴别码MAC2’正确，如果不相同，则认为消息鉴别码MAC2’不正确。</p>
+    <p>[0394]	需要说明的是，MF文件为根文件，只有创建MF文件完成后，才可以创建下一 级文件。</p>
+    <p>[0395]	2)当USBKey接收的APDU为创建文件的指令的APDU时，并且为创建秘密文 件的指令的APDU时，本步骤以创建的秘密文件为存储用户PIN码的秘密文件为例进行 说明，所述APDU具体的为：</p>
+    <p>[0396]	84 E1 00 01 0C 94 2D 21 7F B7 AF 5B 4C 441C8D2C</p>
+    <p>[0397]	其中，创建秘密文件的指令的APDU中数据区（存放PIN码参数的部分）由主 机使用主控密钥CKey加密，84表示该APDU的数据区为密文，E1表示该APDU执行创 建秘密文件的操作，0001为创建PIN码文件的参数，0C为在这个字节后APDU的长度， 94 2D21 7FB7AF5B4C为PIN码文件的参数的密文，包括PIN码文件的大小、索引等， 441C8D2C为消息鉴别码MAC3，；</p>
+    <p>[0398]	因此，COS判断APDU是否为创建秘密文件的方法为，读取APDU的第二个字 节，当为E1时，为创建PIN码文件的指令，创建PIN码文件包含在创建秘密文件的指令中，因此该APDU为创建秘密文件的指令；</p>
+    <p>[0399]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建秘密文件的指 令的APDU进行解密，得到明文的创建秘密文件参数具体的为：</p>
+    <p>[0400]	7FFF101000000080</p>
+    <p>[0401]	其中，7FFF1010000000为创建PIN码文件的参数，80为主机为所述创建PIN码</p>
+    <p>文件的参数进行加密时，采用的补位；</p>
+    <p>[0402]	USB Key得到明文的创建秘密文件的指令的APDU后，根据创建秘密文件的参 数，创建秘密文件，并向主机返回创建秘密文件成功的状态码；</p>
+    <p>[0403]	在本实施例中，在主机向USB Key发送创建秘密文件的指令的APDU前，还包 括：</p>
+    <p>[0404]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P4，并将伪随机数P4发送给主机，主机由伪随机数P4、主控密钥 CKey等生成消息鉴别码MAC3’，其中，上述生成伪随机数P4的算法与实施例1中步骤 103中生成伪随机数P1的算法相同，这里不再赘述，但是需注意的是每次生成伪随机数 需重新获取真随机数作为熵，以使得USBKey计算得出的伪随机数不同；</p>
+    <p>[0405]	上述主机根据伪随机数P4、主控密钥CKey生成消息鉴别码MAC3’的算法与 本步骤中1)中主机生成消息鉴别码MAC2’的方法相同，这里不再赘述；</p>
+    <p>[0406]	相应地，在USB Key得到明文的创建秘密文件的指令的APDU后，创建秘密文 件前，还包括：</p>
+    <p>[0407]	USBKey判断消息鉴别码MAC3’是否正确，如果正确，则USBKey执行创建 秘密文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0408]	上述USBKey判断消息鉴别码MAC3’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P4、主控密钥CKey等利用与主机生成消息鉴别码MAC3’相 同的算法生成消息鉴别码MAC3，将消息鉴别码MAC3’与MAC3进行比对，如果相同， 则认为消息鉴别码MAC3’正确，如果不相同，则认为消息鉴别码MAC3’不正确。</p>
+    <p>[0409]	3)当USB Key接收的APDU为创建文件的指令的APDU，并且为安装秘密的指 令的APDU时，所述APDU具体的为：</p>
+    <p>[0410]	84F0000014EC A3 30 39 9B DO 6F 41 OD D7 B5 21 19 69 OD FB 23B7965A</p>
+    <p>[0411]	在上述APDU中，84表示该APDU为密文，F0表示该APDU执行安装PIN码 的指令，0000为参数Parametersl和2，14为该字节后APDU的长度，ECA330 39 9BD0 6F410DD7B5 21 19 69 0DFB 为 PIN 码文件，23B7965A 为 MAC4，；</p>
+    <p>[0412]	其中，在本发明中，秘密为用户的敏感数据，需进行加密保护，包括用户的PIN 码、DES密钥、AES密钥等，在2)中以创建PIN码文件为例举例说明了创建秘密文件的 方法，相应地，在这里以在上述PIN码文件中安装PIN码为例进行说明，上述APDU即 为安装PIN码的APDU ；</p>
+    <p>[0413]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey</p>
+    <p>进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述安装秘密的指令的APDU进行解密，得到明文的PIN码文件，具体的为：</p>
+    <p>[0414]	000000330102030405068000000000</p>
+    <p>[0415]	其中，00000033为PIN码的参数，例如33表示PIN码最大可尝试验证次数为3 次，剩余可连续验证失败次数为3次，010203040506为明文的PIN码，8000000000为对 PIN码文件进行加密时的补位数据；</p>
+    <p>[0416]	USBKey得到明文的安装PIN码的指令的APDU后，执行安装秘密的操作，根 据PIN码文件的位置，将PIN码使用管理密钥MKey加密后存储在2)中创建的PIN码文 件中，并向主机返回安装PIN码成功的状态码；</p>
+    <p>[0417]	在本实施例中，在主机向USBKey发送安装秘密的指令的APDU前，还包括：</p>
+    <p>[0418]	主机向USBKey发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P5，并发送给主机，主机由伪随机数P5、主控密钥CKey等生成消息 鉴别码MAC4’，其中，上述生成伪随机数P5的算法与实施例1中步骤103中生成伪随 机数P1的算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随 机数作为熵，以使得USBKey计算得出的伪随机数不同；</p>
+    <p>[0419]	上述主机由伪随机数P5、主控密钥CKey等生成消息鉴别码MAC4’的方法与 本步骤中1)中主机生成消息鉴别码MAC2’的方法相同，这里不再赘述；</p>
+    <p>[0420]	相应地，在USB Key得到明文的安装PIN码的指令的APDU后，执行安装秘密 的操作前，还包括：</p>
+    <p>[0421]	USBKey判断消息鉴别码MAC4’是否正确，如果正确，则USB Key执行安装</p>
+    <p>秘密的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0422]	上述USBKey判断消息鉴别码MAC4’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P5、主控密钥CKey等利用与主机生成消息鉴别码MAC4’相 同的算法生成消息鉴别码MAC4，将消息鉴别码MAC4’与MAC4进行比对，如果相同， 则认为消息鉴别码MAC4’正确，如果不相同，则认为消息鉴别码MAC4’不正确。</p>
+    <p>[0423]	步骤214，USBKey返回USBKey未处于初始化状态的错误码，返回步骤205， 继续等待并接收新的APDU;</p>
+    <p>[0424]	步骤215，COS判断USBKey是否处于应用状态，如果是，执行步骤216，如果 不是，执行步骤217;</p>
+    <p>[0425]	在本实施例中，由步骤209可知，COS判断USB Key的使用状态是否为应用状 态，具体的可以为：</p>
+    <p>[0426]	COS读取USBKey的使用状态标志位，如果为0x02，则为应用状态，如果不为 0x02，则不为应用状态；</p>
+    <p>[0427]	步骤216，USBKey执行接收的APDU，执行完毕后，返回步骤205，继续等待 并接收新的APDU;</p>
+    <p>[0428]	其中，USBKey处于应用类型的APDU，包括生成RSA密钥对，签名、验证签 名、修改PIN码等，主机通过向USB Key下发应用APDU命令使USB Key完成这些操 作，并且在主机向USB Key发送APDU时可以采取将APDU加密和不加密两种方式，其 处理方式与实施例1中步骤116中相同，这里不再赘述；[0429]	在本实施例中，还可以包括管理密钥MKey的销毁，具体的包括：</p>
+    <p>[0430]	当USB Key的生命周期终止时，擦除USB Key中的管理密钥MKey ；</p>
+    <p>[0431]或，</p>
+    <p>[0432]	当外部认证连续验证解锁码超过约定的次数时，擦除USB Key中的管理密钥 MKey ；</p>
+    <p>[0433]或，</p>
+    <p>[0434]	用户发出销毁USB Key的命令时，擦除USB Key中的管理密钥MKey。</p>
+    <p>[0435]	在管理密钥MKey被擦除后，将USB Key的使用状态的标志位设置为终止使用 状态，即将标志位设置为0x03，管理密钥MKey被擦除后，不可能再对USBKey中保存 的其他密钥和加密的数据进行解密，USB Key不能再使用，保证了 USB Key的安全性；</p>
+    <p>[0436]	本实施例所提供的一种密钥管理方法，克服了现有技术中的密钥容易被攻击从 智能密钥装置中读出的缺点，本发明提供的方法，即使密钥被读出也为英文，因此增强 了 USB Key的安全性，并且在智能密钥装置中的用户敏感信息使用主控密钥加密保存， 同样增加了安全性，在智能密钥装置销毁时，只需擦除主控密钥就可以使整个智能密钥 装置作废，销毁简便。</p>
+    <p>[0437]	实施例3</p>
+    <p>[0438]	本实施例提供了一种密钥管理方法，密钥管理的过程包括多个过程，主要为密 钥生成、密钥存储、密钥使用和密钥销毁四个过程，在本发明的实施例中，智能密钥装 置均以USB Key为例进行说明，并以USB Key从上电到完成USBKey的应用为例说明在 USB Key中各种密钥的管理过程。</p>
+    <p>[0439]	参加图5，具体步骤如下：</p>
+    <p>[0440]	步骤301，USBKey接入主机，上电；</p>
+    <p>[0441]	步骤302，COS判断USBKey是否为首次上电，如果是，执行步骤303，如果不 是，执行步骤304;</p>
+    <p>[0442]	在本实施例中，COS为卡内操作系统，存储于上述USB Key中的ROM中；</p>
+    <p>[0443]	COS判断USB Key是否为首次上电的方法具体的为：COS判断上述USBKey的 数据存储区是否为全0或全F，当USBKey的数据存储区为全0或全F时，说明USBKey 的数据存储区为空白，处于未写入数据状态，则USBKey为首次上电；另外，USBKey 的数据存储区空白时为全0、全F或为其他情况，可以与芯片生产商约定；</p>
+    <p>[0444]	步骤303，USB Key生成管理密钥MKey，执行步骤304 ；</p>
+    <p>[0445]	在本实施例中，USB Key生成管理密钥MKey具体的为：</p>
+    <p>[0446]	303a, COS获取由USB Key硬件产生的真随机数R1，并将真随机数R1作为熵 (或 seed)；</p>
+    <p>[0447]	其中，USBKey硬件产生真随机数为通过噪声生成真随机数，上述噪声包括环 境噪声、电流噪声等，具体的为：</p>
+    <p>[0448]	1) COS向USB Key硬件发出获取真随机数的指令；</p>
+    <p>[0449]	2) USBKey硬件采集噪声样点，并对噪声样点进行去除周期性、连续性、相关 性等对随机性有影响的消极特性的操作；</p>
+    <p>[0450]	3) USBKey硬件根据消除消极特性的噪声样点生成固定长度的真随机数R1 ；</p>
+    <p>41[0451 ] 4) USB Key硬件将真随机数R1返回给COS ；</p>
+    <p>[0452]	303b, COS根据真随机数R1生成伪随机数PI ；</p>
+    <p>[0453]	在本实施例中，COS生成伪随机数P1需要使用参数：3DES算法密钥Key、变 量V、熵（seed)，COS根据真随机数R1生成伪随机数P1，具体的为：</p>
+    <p>[0454]	1) COS调用函数update ()，将生成伪随机数需要使用的参数Key、V、熵进行初 始化，Key、V、熵设置为0 ；</p>
+    <p>[0455]	在本实施例中，优选地，Key为24字节长度的3DES密钥，V为8字节长度的 变量，熵为32字节长度的真随机数；</p>
+    <p>[0456]	2)使用Key对V进行3DES算法加密运算，得到一个8字节长度的加密结果 A1 ；</p>
+    <p>[0457]	3)将变量V的值增加一个步长得到VI，使用Key对VI进行3DES算法加密运 算，得到一个8字节长度的加密结果A2 ；</p>
+    <p>[0458]	在本实施例中，优选地，将变量V的值增加一个步长为将V的值增加1，以下增 加一个步长的操作皆相同；</p>
+    <p>[0459]	4)将变量VI的值增加1得到V2，使用Key对V2进行3DES算法加密运算，得 到一个8字节长度的加密结果A3 ；</p>
+    <p>[0460]	5)将变量V2的值增加1得到V3，使用Key对V3进行3DES算法加密运算，得 到一个8字节长度的加密结果A4 ；</p>
+    <p>[0461]	6)将Al、A2、A3、A4连接起来得到一个32字节的值N，并使用N与熵进行 异或得到异或结果M，将M的前24个字节作为密钥Keyl，后8个字节作为V5 ；</p>
+    <p>[0462]	7) COS调用函数Generate ()，使用Keyl对V5进行3DES算法加密运算，得到 一个8字节长度的结果A5;</p>
+    <p>[0463]	8)将A5作为伪随机数P1返回给COS。</p>
+    <p>[0464]	在本实施例中，伪随机数P1长度为8个字节，并且伪随机数P1的长度是可控制 的，通过取A5的约定长度或对生成伪随机数的参数进行长度控制，而产生不同长度的伪 随机数；</p>
+    <p>[0465]	303c,将伪随机数P1作为USB Key的管理密钥MKey存储在USB Key的数据存</p>
+    <p>储区；</p>
+    <p>[0466]	其中，USB Key的管理密钥MKey不可被USB Key的外部命令读出；</p>
+    <p>[0467]	步骤304，USB Key进行通信初始化；</p>
+    <p>[0468]	在本实施例中，USB Key进行通信初始化，主要是指将USB Key的Ram中的全</p>
+    <p>局变量等初始化，并向主机发送USB设备描述符，使得主机为上述USB Key设备加载驱 动，以使主机和USB Key能够进行通信；</p>
+    <p>[0469]	在本实施例中，以USB Key进行说明，智能密钥装置还可以为非接触式智能 卡，非接触式智能卡在此步骤中，即为建立无线连接，并进行通信；</p>
+    <p>[0470]	步骤305，USB Key等待并接收APDU ；</p>
+    <p>[0471]	在本实施例中，主机通过下发APDU控制USB Key进行各种操作；</p>
+    <p>[0472]	步骤306，COS判断USB Key的生命周期是否终止，如果是，执行步骤307，如 果不是，执行步骤308;[0473]	在本 实施例中，生命周期标识了 USB Key的生命周期长度和USB Key是否写入 密钥的状态；</p>
+    <p>[0474]	步骤307，向主机返回生命周期终止的错误状态码；</p>
+    <p>[0475]	为了表示USB Key的各种错误，可以与USB Key约定错误状态码，在本实施例 中，当USB Key的生命周期终止时，使用状态码0x6A81表示该错误；</p>
+    <p>[0476]	步骤308，COS判断USB Key是否为空卡状态，如果是，执行步骤309，如果不 是，执行步骤312;</p>
+    <p>[0477]	在本实施例中，在USB Key的数据存储区设置一个字节作为该USB Key的使用 状态的标志位，该标志位用以标志该USB Key的使用状态，将USB Key的使用状态分为 四种：空卡状态，初始化状态，应用状态，终止使用状态，具体的：</p>
+    <p>[0478]	当USB Key未写入主控密钥CKey时，将USB Key设定为空卡状态；</p>
+    <p>[0479]	当USB Key写入主控密钥成功后，未建立文件完成时，USB Key为初始化状 态；</p>
+    <p>[0480]	当USB Key建立文件完成后且生命周期未终止时，USB Key为应用状态；</p>
+    <p>[0481]	当USB Key的生命周期终止后，USB Key为停止使用状态；</p>
+    <p>[0482]	优选地，使用0x00、0x01、0x02、0x03分别表示USB Key处于空卡状态、初始</p>
+    <p>化状态、应用状态、终止使用状态；</p>
+    <p>[0483]	因此，判断USB Key是否为空卡状态，具体的为：判断USB Key记录使用状态 的标志位是否为0x00，如果是，则为空卡状态，否则，不为空卡状态；</p>
+    <p>[0484]	步骤309，COS判断USB Key接收的APDU是否为写主控密钥CKey的指令的 APDU,如果是，执行步骤311，如果不是，执行步骤310;</p>
+    <p>[0485]	在本实施例中，写主控密钥CKey的指令的APDU具体的可以为：</p>
+    <p>[0486]	84 E4 000014 6C5E94DCADD39F1D3AD217812B81E7AD 304F5EDC</p>
+    <p>[0487]	在上述命令USB Key写入主控密钥的APDU中，0x84表示该APDU的数据区为 密文，0xE4表示该APDU执行的命令为写主控密钥，0000为参数Parametersl和2，0x14 表示其后面 APDU 的长度，6C5E94DCADD39F1D3AD217812B81E7AD 为该 APDU 的数 据区，为主控密钥，并且为密文形式，0x304F5EDC为消息鉴别码MACl’ ；</p>
+    <p>[0488]	由上可知，判断APDU是否为写主控密钥的指令的APDU的方法为：读取USB Key接收的APDU的第二个字节，如果为E4则为写主控密钥指令；</p>
+    <p>[0489]	步骤310，USBKey向主机返回USB Key为空卡状态的错误状态码，执行步骤 305 ；</p>
+    <p>[0490]	在本实施例中，当USB Key的使用状态为空卡状态时，必须先写入主控密钥才 可以进行处理其他APDU的操作，优选地，USBKey向主机返回USB Key为空卡状态的 错误状态码为0x6981 ；</p>
+    <p>[0491]	步骤311，USB Key使用传输密钥TKey将上述写主控密钥CKey的指令的APDU 进行解密，得到明文的主控密钥CKey，USB Key执行写入主控密钥CKey的操作，将明 文的主控密钥CKey使用管理密钥MKey进行加密，并保存在USBKey的数据存储区，然 后返回到步骤305，继续等待并接收新的APDU ；</p>
+    <p>[0492]	在本实施例中，传输密钥TKey为USB Key与主机预先约定的密钥，并且将传输密钥TKey预先写入USB Key的ROM存储区中，当USB Key第一次上电时，COS将传 输密钥TKey从ROM存储区中读出，使用管理密钥MKey加密后存储在USB Key的数据 存储区中，主机可通过向USB Key发送APDU修改传输密钥TKey ；</p>
+    <p>[0493]	在本实施例中，假设传输密钥TKey为0102030405060708，USB Key使用上述传 输密钥TKey对上述写主控密钥CKey的指令的APDU进行解密，具体的为对得到明文上 述写主控密钥CKey的指令的APDU的数据区进行解密，得到明文的主控密钥为：</p>
+    <p>[0494]	112233445566778899aabbccddeefTO0 </p>
+    <p>[0495]	由步骤309中，写主控密钥的APDU中包括消息鉴别码MAC1，，在主机向USB Key发送写入主控密钥CKey的指令的APDU前，还包括：</p>
+    <p>[0496]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P2，并发送给主机，主机由伪随机数P2、传输密钥TKey等生成一个 消息鉴别码为MAC1’，上述生成伪随机数P2的算法与步骤303中生成伪随机数Pl的 算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为 熵，以使得计算得出的伪随机数不同。</p>
+    <p>[0497]	相应地，在USB Key对上述接收的写主控密钥CKey的指令的APDU进行解密 后，USB Key执行写入主控密钥CKey的操作前，还包括：</p>
+    <p>[0498]	USB Key判断消息鉴别码MAC 1，是否正确，判断的方法为：USB Key按照 于主机生成消息鉴别码MAC1’相同的算法，生成消息鉴别码MAC1，将消息鉴别码 MAC1，与MACl进行比对，如果相同，则认为消息鉴别码MAC1，正确，USB Key执 行写入主控密钥CKey的操作，如果不相同，则认为消息鉴别码MAC1’不正确，向主机 返回消息鉴别码错误的状态码。</p>
+    <p>[0499]	优选地，主机由伪随机数P2、传输密钥TKey等生成消息鉴别码MAC1’的方法 具体的为：</p>
+    <p>[0500]	将写主控密钥指令的APDU中的标记84、APDU参数Parameters 1和2、表 示长度部分、明文的主控密钥、伪随机数P2、传输密钥TKey使用CBC(CipherBlock Concatenation,加密块链接模式）模式进行加密运算，得到消息鉴别码MACl ’。</p>
+    <p>[0501]	上述描述中的CBC的加密模式具体过程如下：首先，将明文分成固定长度（例 如64位）的块（明文块0，明文块1...)，然后，将前面一个加密块输出的密文（例如密文 块0)与下一个要加密的明文块（例如明文块1)进行XOR(异或）操作计算，将计算结果 再用密钥进行加密得到密文。</p>
+    <p>[0502]	在USB Key将明文的主控密钥CKey使用管理密钥MKey进行加密并保存在USB</p>
+    <p>Key的数据存储区后，还包括：</p>
+    <p>[0503]	USB Key将自身使用状态置为初始化状态，在本实施例中具体的为，将USBKey 的使用状态标志位修改为0x01 ；</p>
+    <p>[0504]	步骤312，COS判断USB Key的使用状态是否为初始化状态，如果是，执行步 骤313，如果不是，执行步骤316;</p>
+    <p>[0505]	在本实施例中，COS判断USB Key的使用状态是否为初始化状态的方法具体的 为:COS读取USB Key的使用状态标志位，如果为0x01，则USB Key的使用状态为初始 化状态，如果不是，USB Key的使用状态不为初始化状态；[0506] 	步骤313，判断USB Key接收的APDU是否为创建文件的指令的APDU，如果 是，执行步骤315，如果不是，执行步骤314;</p>
+    <p>[0507]	步骤314，USBKey向主机返回未进行初始化的错误的状态码，执行步骤305 ；</p>
+    <p>[0508]	步骤315，USB Key执行创建文件的指令，执行结束后返回步骤305，继续等待 并接收新的APDU ；</p>
+    <p>[0509]	在本实施例中，在对USB Key的文件进行创建时，优选地使用以下文件系统的 结构，使文件系统由主文件MF、专用文件DF、基本文件EF构成，并且为树结构，主文 件MF为根节点，专用文件DF为中间节点，基本文件EF为叶节点，每个专用文件DF都 有自己的安全机制，并且单独管理，在对EF文件进行创建时规定EF文件的读写权限， 在存放USB Key的密钥时，将其存储在内部基本文件EF中，将读写权限设定为不可由外 部读出，当获得合法权限后，可在内部使用USB Key的密钥完成加解密操作；</p>
+    <p>[0510]	其中，在EF文件中，包括秘密文件、二进制文件、循环文件等，在本实施例 中，创建文件的指令主要包括：创建MF文件的指令、创建秘密文件的指令、安装秘密 的指令，下面分别以这三种指令举例进行说明。</p>
+    <p>[0511]	1)当USB Key接收的APDU为创建文件的指令的APDU时，并且为创建MF文 件的指令的APDU时，所述APDU具体的为：</p>
+    <p>[0512]	84E0000014412872CA 6D 62CC 6E OD D5CB 5C 740C 2F 5F 59E23F E55F 4F 502B CC 4F 7420BA DB E61F B IEC F6FC</p>
+    <p>[0513]	其中，在本实施例中APDU全部使用16进制表示，84表示该APDU的数据区为 密文，EO表示该APDU进行的操作为创建MF，0000为参数Parametersl和2，14表示该 字节后 APDU 的长度，412872CA 6D 62CC 6E OD D5CB 5C 74</p>
+    <p>[0514]	0C2F5F59E23FE55F4F 502BCC4F 7420BADBE61F 为 MF 文件的参数，包括 MF文件的大小、索引等，最后四个字节BlEC F6FC为消息鉴别码MAC2’ ；</p>
+    <p>[0515]	因此，COS判断APDU的方法为，读取所述智能密钥装置接收的APDU的第二 个字节，如果为EO则为创建MF的指令；</p>
+    <p>[0516]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey</p>
+    <p>进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建MF文件的指令 的APDU进行解密，具体的为对创建MF文件的指令的APDU的数据区进行解密，得到 明文的创建MF文件的参数，具体的为：</p>
+    <p>[0517]	3F 00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 31 00 0080 00 00 00 00 00 00</p>
+    <p>[0518]其中，3F	00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 3100 00 为明文的创建MF文件的参数，80 00 00 00 00 00 00为对创建MF文件的参数进行加密时 的补位数据；</p>
+    <p>[0519]	USB Key得到明文的创建MF文件的指令的APDU后，根据MF文件的参数，执 行创建MF文件的操作，并向主机返回创建MF文件成功的状态码；</p>
+    <p>[0520]	在本实施例中，在主机向USB Key发送创建MF文件的指令的APDU前，还包 括：</p>
+    <p>[0521]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey生成一个伪随机数P3，并返回给主机，主机由伪随机数P3、主控密钥CKey等生成消息 鉴别码MAC2’，其中，上述生成伪随机数P3的算法与步骤303中生成伪随机数Pl的 算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为 熵，以使得USBKey计算得出的伪随机数不同；</p>
+    <p>[0522]	主机由伪随机数P3、主控密钥CKey生成消息鉴别码MAC2’的方法具体的包 括：</p>
+    <p>[0523]	将写主控密钥指令的APDU中的标记84、APDU参数Parameters 1和2、表 示长度部分、明文的创建MF文件的参数和补位、伪随机数P3、主控密钥CKey使用 CBC (Cipher Block Concatenation,加密块链接模式）模式进行加密运算，得到消息鉴别码 MAC2，。</p>
+    <p>[0524]	相应地，在USB Key得到明文的创建MF文件的指令的APDU后，执行创建MF</p>
+    <p>文件的操作前，还包括：</p>
+    <p>[0525]	USB Key判断消息鉴别码MAC2’是否正确，如果正确，则USB Key执行创建</p>
+    <p>MF文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0526]	上述USB Key判断消息鉴别码MAC2’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P3、主控密钥CKey等利用与主机生成消息鉴别码MAC2’相 同的算法生成消息鉴别码MAC2，将消息鉴别码MAC2’与MAC2进行比对，如果相同， 则认为消息鉴别码MAC2’正确，如果不相同，则认为消息鉴别码MAC2’不正确。</p>
+    <p>[0527]	需要说明的是，MF文件为根文件，只有创建MF文件完成后，才可以创建下一 级文件。</p>
+    <p>[0528]	2)当USB Key接收的APDU为创建文件的指令的APDU时，并且为创建秘密文 件的指令的APDU时，本步骤以创建的秘密文件为存储用户PIN码的秘密文件为例进行 说明，所述APDU具体的为：</p>
+    <p>[0529]	84 El 00 01 OC 94 2D 21 7F B7 AF 5B 4C 441C8D2C</p>
+    <p>[0530]	其中，创建秘密文件的指令的APDU中数据区（存放PIN码参数的部分）由主 机使用主控密钥CKey加密，84表示该APDU的数据区为密文，El表示该APDU执行创 建秘密文件的操作，0001为创建PIN码文件的参数，OC为在这个字节后APDU的长度， 94 2D21 7FB7AF5B4C为PIN码文件的参数的密文，包括PIN码文件的大小、索引等， 441C8D2C为消息鉴别码MAC3，；</p>
+    <p>[0531]	因此，COS判断APDU是否为创建秘密文件的方法为，读取APDU的第二个字 节，当为El时，为创建PIN码文件的指令，创建PIN码文件包含在创建秘密文件的指令 中，因此该APDU为创建秘密文件的指令；</p>
+    <p>[0532]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建秘密文件的指 令的APDU进行解密，得到明文的创建秘密文件参数具体的为：</p>
+    <p>[0533]	7FFF101000000080</p>
+    <p>[0534]	其中，7FFF1010000000为创建PIN码文件的参数，80为主机为所述创建PIN码</p>
+    <p>文件的参数进行加密时，采用的补位；[0535]	USB Key得到明文的创建秘密文件的指令的APDU后，根据创建秘密文件的参 数，创建秘密文件，并向主机返回创建秘密文件成功的状态码；</p>
+    <p>[0536]	在本实施例中，在主机向USB Key发送创建秘密文件的指令的APDU前，还包 括：</p>
+    <p>[0537]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P4，并将伪随机数P4发送给主机，主机由伪随机数P4、主控密钥 CKey等生成消息鉴别码MAC3’，其中，上述生成伪随机数P4的算法与步骤303中生成 伪随机数Pl的算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取 真随机数作为熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0538]	上述主机根据伪随机数P4、主控密钥CKey生成消息鉴别码MAC3’的算法与 本步骤315中1)中主机生成消息鉴别码MAC2’的方法相同，这里不再赘述；</p>
+    <p>[0539]	相应地，在USB Key得到明文的创建秘密文件的指令的APDU后，创建秘密文 件前，还包括：</p>
+    <p>[0540]	USB Key判断消息鉴别码MAC3’是否正确，如果正确，则USB Key执行创建</p>
+    <p>秘密文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0541]	上述USB Key判断消息鉴别码MAC3’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P4、主控密钥CKey等利用与主机生成消息鉴别码MAC3’相 同的算法生成消息鉴别码MAC3，将消息鉴别码MAC3’与MAC3进行比对，如果相同， 则认为消息鉴别码MAC3’正确，如果不相同，则认为消息鉴别码MAC3’不正确。</p>
+    <p>[0542]	3)当USB Key接收的APDU为创建文件的指令的APDU，并且为安装秘密的指 令的APDU时，所述APDU具体的为：</p>
+    <p>[0543]	84 FO 000014EC A3 30 39 9B DO 6F 41 OD D7 B5 21 19 69 OD FB 23B7965A</p>
+    <p>[0544]	在上述APDU中，84表示该APDU为密文，FO表示该APDU执行安装PIN码 的指令，0000为参数Parametersl和2，14为该字节后APDU的长度，ECA330 39 9BD0 6F 41 OD D7B5 21 19 69 OD FB 为 PIN 码文件，23B7965A 为 MAC4，；</p>
+    <p>[0545]	其中，在本发明中，秘密为用户的敏感数据，需进行加密保护，包括用户的PIN 码、DES密钥、AES密钥等，在2)中以创建PIN码文件为例举例说明了创建秘密文件的 方法，相应地，在这里以在上述PIN码文件中安装PIN码为例进行说明，上述APDU即 为安装PIN码的指令的APDU ；</p>
+    <p>[0546]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述安装秘密的指令的 APDU进行解密，得到明文的PIN码文件，具体的为：</p>
+    <p>[0547]	000000330102030405068000000000</p>
+    <p>[0548]	其中，00000033为PIN码的参数，例如33表示PIN码最大可尝试验证次数为3 次，剩余可连续验证失败次数为3次，010203040506为明文的PIN码，8000000000为对 PIN码文件进行加密时的补位数据；</p>
+    <p>[0549]	USB Key得到明文的安装PIN码的指令的APDU后，执行安装秘密的操作，根 据PIN码文件的位置，将PIN码使用管理密钥MKey加密后存储在2)中创建的PIN码文</p>
+    <p>47件中，并向主机返回安装PIN码成功的状态码；</p>
+    <p>[0550]	在本实施例中，在主机向USB Key发送安装秘密的指令的APDU前，还包括：</p>
+    <p>[0551]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey 生成一个伪随机数P5，并发送给主机，主机由伪随机数P5、主控密钥CKey等生成消息 鉴别码MAC4’，其中，上述生成伪随机数P5的算法与步骤303中生成伪随机数Pl的 算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为 熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0552]	上述主机由伪随机数P5、主控密钥CKey等生成消息鉴别码MAC4’的方法与 本步骤315中1)中主机生成消息鉴别码MAC2’的方法相同，这里不再赘述；</p>
+    <p>[0553]	相应地，在USB Key得到明文的安装PIN码的指令的APDU后，执行安装秘密 的操作前，还包括：</p>
+    <p>[0554]	USB Key判断消息鉴别码MAC4’是否正确，如果正确，则USB Key执行安装</p>
+    <p>秘密的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0555]	上述USB Key判断消息鉴别码MAC4’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P5、主控密钥CKey等利用与主机生成消息鉴别码MAC4’相 同的算法生成消息鉴别码MAC4，将消息鉴别码MAC4’与MAC4进行比对，如果相同， 则认为消息鉴别码MAC4’正确，如果不相同，则认为消息鉴别码MAC4’不正确。</p>
+    <p>[0556]	在步骤315中，还包括：当USB Key中文件系统建立完成，并将全部秘密安装 完成后，将USB Key的使用状态修改为应用状态，并修改USB Key的生命周期，USB Key不可再写入密钥；</p>
+    <p>[0557]	上述将USB Key的使用状态修改为应用状态，在本实施例中具体的为，将USB Key的使用状态为修改为0x02 ；</p>
+    <p>[0558]	步骤316，COS判断USB Key的使用状态是否为应用状态，如果是，执行步骤 318，如果不是，执行步骤317;</p>
+    <p>[0559]	在本实施例中，COS判断USB Key的使用状态是否为应用状态具体的为，当 USB Key的使用状态标志位为0x02时，则USB Key的使用状态为为应用状态；</p>
+    <p>[0560]	步骤317，USBKey向主机返回未处于应用状态的错误的状态码，执行步骤 305 ；</p>
+    <p>[0561]	步骤318，COS判断USB Key接收的APDU是否为应用类型的APDU，如果是， 执行步骤319，如果不是，执行步骤320;</p>
+    <p>[0562]	其中，应用类型的APDU，包括生成RSA密钥对，签名、验证签名、修改PIN 码等指令的APDU，判断方法具体的可以为，依照约定的APDU指令规则，读取APDU 指令类型，判断APDU为进行何种操作，例如在本实施例中，约定APDU的第二个字节 表示APDU指令指定的操作，读取第二字节如果为20，则为验证PIN码的指令，验证 PIN码的指令属于应用类型的APDU，则该APDU为应用类型的APDU，如果第二字节为 E0,则为创建MF文件的指令，不属于应用类型的APDU;</p>
+    <p>[0563]	步骤319，USB Key执行其接收的APDU指令，返回步骤305，继续等待并接收 新的APDU ；</p>
+    <p>48[0564]	在本实施例中，在USB Key处于应用状态后，用户可使用USB Key进行应用操 作，包括生成RSA密钥对，签名、验证签名、修改PIN码等，主机通过向USB Key下发 应用APDU命令USB Key完成这些操作，并且在主机向USB Key发送APDU时可以采 取将APDU加密的方式，和不加密两种方式。下面以USBKey进行签名操作为例进行说 明，在USB Key中密钥的使用过程，如下：当USB Key接收的为Verify PIN指令（即验 证PIN码)的APDU时，USBKey的操作为：</p>
+    <p>[0565]	319a，USB Key使用管理密钥MKey对数据存储区中存储的主控密钥CKey进行</p>
+    <p>解密，得到明文的主控密钥CKey ；</p>
+    <p>[0566]	319b，USB Key使用主控密钥CKey对验证PIN码的指令的APDU进行解密， 得到明文的APDU ；</p>
+    <p>[0567]	在本实施例中，上述验证PIN码的指令明文的APDU为：</p>
+    <p>[0568]	00 20 00 00 06 01 02 03 04 05 06</p>
+    <p>[0569]	其中，00表示该APDU为明文，20表示进行验证PIN码的操作，0000为参数 Parametersl和2，06表示该字节后APDU的长度，010203040506表示用户输入的PIN 码；</p>
+    <p>[0570]	319c, USB Key判断消息鉴别码MAC5’是否正确，如果正确，执行步骤 319e,如果不正确，执行步骤319d;</p>
+    <p>[0571]	在本实施例中，在主机向USB Key下发验证PIN码的指令的APDU前，还包 括：</p>
+    <p>[0572]	主机向1^：8尺巧发送八?01；，请求一个伪随机数P6，USB Key生成伪随机数</p>
+    <p>P6,并发送给主机，主机由伪随机数P6、主控密钥CKey、验证PIN码的指令生成消息鉴 别码MAC5’，优选地，使用CBC算法生成消息鉴别码MAC5’，与步骤315中使用方 法相同，这里不再赘述；</p>
+    <p>[0573]	USB Key判断消息鉴别码MAC5’的方法，具体的为：USB Key使用与主机生 成消息鉴别码MAC5’相同的算法，使用伪随机数P6、主控密钥CKey、验证PIN码的指 令生成消息鉴别码MAC5并与MAC5’进行比对，如果相同，则MAC5’正确，如果不 相同，则MAC5’不正确；</p>
+    <p>[0574]	319d，USBKey向主机返回消息鉴别码错误的状态码；</p>
+    <p>[0575]	319e，USB Key使用管理密钥MKey将存储于USB Key中的合法PIN码进行解</p>
+    <p>密，得到明文的合法PIN码；</p>
+    <p>[0576]	319f，判断上述APDU中的PIN码是否正确，如果是，执行步骤319g，如果不 是，执行步骤319h;</p>
+    <p>[0577]	上述判断的方法具体的为：将上述验证PIN码指令APDU中的PIN码与USBKey</p>
+    <p>中存储的合法的PIN码进行比对，如果相同，则PIN码正确如果不相同，则PIN码验证 不正确；</p>
+    <p>[0578]	319g，USB Key向主机返回PIN码正确的状态码；</p>
+    <p>[0579]	319h，USBKey向主机返回PIN码错误的状态码，并将PIN码验证计数位减1。</p>
+    <p>[0580]	在本实施例中，如步骤315中所述，在安装PIN码文件时，会在USB Key中存储 有PIN码验证计数位，优选地为两个字节，高位表示USB Key可接收的连续验证PIN码失败的次数，低位字节表示该USB Key可以验证PIN码的剩余次数，当低字节为0时， USB Key的PIN码锁定，在解锁前不可再进行验证PIN码操作，例如在本实施例中，PIN 码验证计数位在验证PIN码操作前初始化时为33，最多可以尝试连续验证PIN码3次， 当验证PIN码失败一次后，PIN码验证计数位减1为32，当连续第二次验证PIN码失败 后，再减1为31，当PIN码验证计数位为30时，USB Key锁定PIN码，只有解除PIN码 锁定状态后，才可以进行验证PIN码的操作；</p>
+    <p>[0581]	步骤320，向主机返回APDU错误的消息，返回步骤305，继续等待并接收新的 APDU。</p>
+    <p>[0582]	在本实施例中，还可以包括管理密钥MKey的销毁，具体的包括：</p>
+    <p>[0583]	当USB Key的生命周期终止时，擦除USB Key中的管理密钥MKey ；</p>
+    <p>[0584]或，</p>
+    <p>[0585]	当外部认证连续验证解锁码超过约定的次数时，擦除USB Key中的管理密钥 MKey ；</p>
+    <p>[0586]或，</p>
+    <p>[0587]	用户发出销毁USB Key的命令时，擦除USB Key中的管理密钥MKey。</p>
+    <p>[0588]	在管理密钥MKey被擦除后，将USB Key的使用状态的标志位设置为终止使用 状态，即将标志位设置为0x03，管理密钥MKey被擦除后，不可能再对USBKey中保存 的其他密钥和加密的数据进行解密，USB Key不能再使用，保证了 USB Key的安全性；</p>
+    <p>[0589]	本实施例中，在USB Key的应用过程中，体现出了智能密钥装置中密钥的生 成、保存、使用和销毁的过程，克服了现有技术中的密钥容易被攻击读出，通过对密钥 的管理增强了 USB Key的安全性。</p>
+    <p>[0590]	需要注意的是，在本实施例3中，USB Key接收到APDU后，步骤305之后的 判断中，不一定要按照实施例3中的顺序执行，可以对COS判断生命周期是否终止、判 断USB Key是否为空卡状态、判断USB Key是否为初始化状态、判断USB Key是否为应 用状态，这几个判断的顺序是可调整的，因此在对判断顺序的调整而形成的方法，也应 该落入本发明的保护范围，下面以实施例4为例进行说明。</p>
+    <p>[0591]	实施例4</p>
+    <p>[0592]	本实施例提供了一种密钥管理方法，具体的为对实施例3中步骤305后的顺序进 行了调整，以说明实施例3的范围应不仅仅局限于实施例3中步骤所描述的顺序，具体的 如下：</p>
+    <p>[0593]	步骤401，USB Key接入主机，上电；</p>
+    <p>[0594]	步骤402，COS判断USB Key是否为首次上电，如果是，执行步骤403，如果不 是，执行步骤404;</p>
+    <p>[0595]	在本实施例中，COS为卡内操作系统，存储于上述USB Key中的ROM中；</p>
+    <p>[0596]	COS判断USB Key是否为首次上电的方法具体的为：COS判断上述USBKey的 数据存储区是否为全0或全F，当USB Key的数据存储区为全0或全F时，说明USB Key 的数据存储区为空白，处于未写入数据状态，则USB Key为首次上电；另外，USBKey 的数据存储区空白时为全0、全F或为其他情况，可以与芯片生产商约定；</p>
+    <p>[0597]	步骤403，USB Key生成管理密钥MKey，执行步骤404 ；[0598]	在本实施例中，USB Key生成管理密钥MKey具体的为：</p>
+    <p>[0599]	403a, COS获取由USB Key硬件产生的真随机数Rl，并将真随机数Rl作为熵 (或 seed)；</p>
+    <p>[0600]	其中，USB Key硬件产生真随机数为通过噪声生成真随机数，上述噪声包括环 境噪声、电流噪声等，具体的为：</p>
+    <p>[0601]	DCOS向USB Key硬件发出获取真随机数的指令；</p>
+    <p>[0602]	2)USB Key硬件采集噪声样点，并对噪声样点进行去除周期性、连续性、相关 性等对随机性有影响的消极特性的操作；</p>
+    <p>[0603]	3) USB Key硬件根据消除消极特性的噪声样点生成固定长度的真随机数Rl ；</p>
+    <p>[0604]	4) USB Key硬件将真随机数Rl返回给COS ；</p>
+    <p>[0605]	403b, COS根据真随机数Rl生成伪随机数Pl ；</p>
+    <p>[0606]	在本实施例中，COS生成伪随机数Pl需要使用参数：3DES算法密钥Key、变 量V、熵（seed)，COS根据真随机数Rl生成伪随机数P1，具体的为：</p>
+    <p>[0607]	l)COS调用函数update ()，将生成伪随机数需要使用的参数Key、V、熵进行初 始化，Key、V、熵设置为0 ；</p>
+    <p>[0608]	在本实施例中，优选地，Key为24字节长度的3DES密钥，V为8字节长度的 变量，熵为32字节长度的真随机数；</p>
+    <p>[0609]	2)使用Key对V进行3DES算法加密运算，得到一个8字节长度的加密结果 Al ；</p>
+    <p>[0610]	3)将变量V的值增加一个步长得到VI，使用Key对Vl进行3DES算法加密运 算，得到一个8字节长度的加密结果A2 ；</p>
+    <p>[0611]	在本实施例中，优选地，将变量V的值增加一个步长为将V的值增加1，以下增 加一个步长的操作皆相同；</p>
+    <p>[0612]	4)将变量Vl的值增加1得到V2，使用Key对V2进行3DES算法加密运算，得 到一个8字节长度的加密结果A3 ；</p>
+    <p>[0613]	5)将变量V2的值增加1得到V3，使用Key对V3进行3DES算法加密运算，得 到一个8字节长度的加密结果A4 ；</p>
+    <p>[0614]	6)将Al、A2、A3、A4连接起来得到一个32字节的值N，并使用N与熵进行 异或得到异或结果M，将M的前24个字节作为密钥Keyl，后8个字节作为V5 ；</p>
+    <p>[0615]	7) COS调用函数GenerateO，使用Keyl对V5进行3DES算法加密运算，得到 一个8字节长度的结果A5;</p>
+    <p>[0616]	8)将A5作为伪随机数Pl返回给COS。</p>
+    <p>[0617]	在本实施例中，伪随机数Pl长度为8个字节，并且伪随机数Pl的长度是可控制 的，通过取A5的约定长度或对生成伪随机数的参数进行长度控制，而产生不同长度的伪 随机数；</p>
+    <p>[0618]	403c,将伪随机数Pl作为USB Key的管理密钥MKey存储在USB Key的数据存</p>
+    <p>储区；</p>
+    <p>[0619]	其中，USB Key的管理密钥MKey不可被USB Key的外部命令读出；</p>
+    <p>[0620]	步骤404，USB Key进行通信初始化；[0621]	在本实施例中，USB Key进行通信初始化，主要是指将USB Key的Ram中的全</p>
+    <p>局变量等初始化，并向主机发送USB设备描述符，使得主机为上述USB Key设备加载驱 动，以使主机和USB Key能够进行通信；</p>
+    <p>[0622]	在本实施例中，以USB Key进行说明，智能密钥装置还可以为非接触式智能 卡，非接触式智能卡在此步骤中，即为建立无线连接，并进行通信；</p>
+    <p>[0623]	步骤405，USB Key等待并接收APDU ；</p>
+    <p>[0624]	在本实施例中，主机通过下发APDU控制USB Key进行各种操作；</p>
+    <p>[0625]	步骤406，COS判断USB Key的生命周期是否终止，如果是，执行步骤407，如 果不是，执行步骤408;</p>
+    <p>[0626]	在本实施例中，生命周期标识了 USB Key的生命周期长度和USB Key是否写入 密钥的状态；</p>
+    <p>[0627]	步骤407，向主机返回生命周期终止的错误状态码，返回步骤405，继续等待并 接收新的APDU ；</p>
+    <p>[0628]	为了表示USB Key的各种错误，可以与USB Key约定错误状态码，在本实施例 中，当USB Key的生命周期终止时，使用状态码0x6A81表示该错误；</p>
+    <p>[0629]	步骤408，COS判断USB Key的使用状态是否为初始化状态，如果是，执行步 骤409，如果不是，执行步骤412;</p>
+    <p>[0630]	在本实施例中，在USB Key的数据存储区设置一个字节作为该USB Key的使用 状态的标志位，该标志位用以标志该USB Key的使用状态，将USB Key的使用状态分为 四种：空卡状态，初始化状态，应用状态，终止使用状态，具体的：</p>
+    <p>[0631]	当USB Key未写入主控密钥CKey时，将USB Key设定为空卡状态；</p>
+    <p>[0632]	当USB Key写入主控密钥成功后，未建立文件完成时，USB Key为初始化状 态；</p>
+    <p>[0633]	当USB Key建立文件完成后且生命周期未终止时，USB Key为应用状态；</p>
+    <p>[0634]	当USB Key的生命周期终止后，USB Key为停止使用状态；</p>
+    <p>[0635]	优选地，使用0x00、0x01、0x02、0x03分别表示USB Key处于空卡状态、初始</p>
+    <p>化状态、应用状态、终止使用状态；</p>
+    <p>[0636]	因此，判断USB Key是否为初始化状态，具体的为：判断USB Key记录使用状 态的标志位是否为0x01，如果是，则为初始化状态，否则，不为初始化状态；</p>
+    <p>[0637]	步骤409，判断USB Key接收的APDU是否为创建文件的指令的APDU，如果 是，执行步骤411，如果不是，执行步骤410;</p>
+    <p>[0638]	步骤410，USBKey向主机返回未进行初始化的错误的状态码，返回步骤405， 继续等待并接收新的APDU ；</p>
+    <p>[0639]	步骤411，USB Key执行创建文件的指令，执行结束后返回步骤405，继续等待 并接收新的APDU ；</p>
+    <p>[0640]	在本实施例中，在对USB Key的文件进行创建时，优选地使用以下文件系统的 结构，使文件系统由主文件MF、专用文件DF、基本文件EF构成，并且为树结构，主文 件MF为根节点，专用文件DF为中间节点，基本文件EF为叶节点，每个专用文件DF都 有自己的安全机制，并且单独管理，在对EF文件进行创建时规定EF文件的读写权限，</p>
+    <p>52在存放USB Key的密钥时，将其存储在内部基本文件EF中，将读写权限设定为不可由外 部读出，当获得合法权限后，可在内部使用USB Key的密钥完成加解密操作；</p>
+    <p>[0641]	其中，在EF文件中，包括秘密文件、二进制文件、循环文件等，在本实施例 中，创建文件的指令主要包括：创建MF文件的指令、创建秘密文件的指令、安装秘密 的指令，下面分别以这三种指令举例进行说明。</p>
+    <p>[0642]	1)当USB Key接收的APDU为创建文件的指令的APDU时，并且为创建MF文 件的指令的APDU时，所述APDU具体的为：</p>
+    <p>[0643]	84 EO 00 00 14 41 28 72 CA 6D 62 CC 6E OD D5 CB 5C 74 OC 2F 5F 59 E2 3FE5 5F 4F 50 2B CC 4F 74 20 BA DB E6 IF Bl EC F6 FC</p>
+    <p>[0644]	其中，在本实施例中APDU全部使用16进制表示，84表示该APDU的数据区 为密文，EO表示该APDU进行的操作为创建MF，0000为参数Parametersl和2，14表示 该字节后 APDU 的长度，41 28 72 CA 6D 62 CC 6E OD D5 CB 5C 740C 2F 5F 59E23F E5 5F 4F 50 2BCC4F 74 20 BADBE6 IF为MF文件的参数，包括MF文件的大小、索引等，最 后四个字节BlEC F6FC为消息鉴别码MACl ’ ；</p>
+    <p>[0645]	因此，COS判断APDU是否为创建文件的指令的方法包括，读取所述智能密钥 装置接收的APDU的第二个字节，如果为EO则为创建MF的指令；</p>
+    <p>[0646]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建MF文件的指令 的APDU进行解密，具体的为对创建MF文件的指令的APDU的数据区进行解密，得到 明文的创建MF文件的参数，具体的为：</p>
+    <p>[0647]	3F 00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 31 00 0080 00 00 00 00 00 00</p>
+    <p>[0648]其中，3F	00 04 11 00 50 CO CO 10 31 50 41 59 2E 53 59 53 2E 44 44 46 30 310000 为明文的创建MF文件的参数，80000000000000为对创建MF文件的参数进行加密时的补</p>
+    <p>位数据；</p>
+    <p>[0649]	USB Key得到明文的创建MF文件的指令的APDU后，根据MF文件的参数，执 行创建MF文件的操作，并向主机返回创建MF文件成功的状态码；</p>
+    <p>[0650]	在本实施例中，在主机向USB Key发送创建MF文件的指令的APDU前，还包 括：</p>
+    <p>[0651]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P2，并返回给主机，主机由伪随机数P2、主控密钥CKey等生成消息 鉴别码MAC1’，其中，上述生成伪随机数P2的算法与步骤403中生成伪随机数Pl的 算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为 熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0652]	主机由伪随机数P2、主控密钥CKey生成消息鉴别码MAC1’的方法具体的包 括：</p>
+    <p>[0653]	将写主控密钥指令的APDU中的标记84、APDU参数Parameters 1和2、表 示长度部分、明文的创建MF文件的参数和补位、伪随机数P2、主控密钥CKey使用 CBC (Cipher Block Concatenation,加密块链接模式）模式进行加密运算，得到消息鉴别码MACl'；</p>
+    <p>[0654]	上述描述中的CBC的加密模式具体过程如下：首先，将明文分成固定长度（例 如64位）的块（明文块0，明文块1...)，然后，将前面一个加密块输出的密文（例如密文 块0)与下一个要加密的明文块（例如明文块1)进行XOR(异或）操作计算，将计算结果 再用密钥进行加密得到密文；</p>
+    <p>[0655]	相应地，在USB Key得到明文的创建MF文件的指令的APDU后，执行创建MF</p>
+    <p>文件的操作前，还包括：</p>
+    <p>[0656]	USB Key判断消息鉴别码MAC1’是否正确，如果正确，则USB Key执行创建 MF文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0657]	上述USB Key判断消息鉴别码MACl’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P2、主控密钥CKey等利用与主机生成消息鉴别码MACl ’相 同的算法生成消息鉴别码MAC1，将消息鉴别码MAC1’与MACl进行比对，如果相同， 则认为消息鉴别码MAC1’正确，如果不相同，则认为消息鉴别码MAC1’不正确。</p>
+    <p>[0658]	需要说明的是，MF文件为根文件，只有创建MF文件完成后，才可以创建下一 级文件。</p>
+    <p>[0659]	2)当USB Key接收的APDU为创建文件的指令的APDU时，并且为创建秘密文 件的指令的APDU时，本步骤以创建的秘密文件为存储用户PIN码的秘密文件为例进行 说明，所述APDU具体的为：</p>
+    <p>[0660]	84 El 00 01 OC 94 2D 21 7F B7 AF 5B 4C 441C8D2C</p>
+    <p>[0661]	其中，创建秘密文件的指令的APDU中数据区（存放PIN码参数的部分）由主 机使用主控密钥CKey加密，84表示该APDU的数据区为密文，El表示该APDU执行创 建秘密文件的操作，0001为创建PIN码文件的参数，OC为在这个字节后APDU的长度， 942D217FB7AF5B4C为PIN码文件的参数的密文，包括PIN码文件的大小、索引等， 441C8D2C为消息鉴别码MAC2’ ；</p>
+    <p>[0662]	因此，COS判断APDU是否为创建秘密文件的方法为，读取APDU的第二个字 节，当为El时，为创建PIN码文件的指令，创建PIN码文件包含在创建秘密文件的指令 中，因此该APDU为创建秘密文件的指令；</p>
+    <p>[0663]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述创建秘密文件的指 令的APDU进行解密，得到明文的创建秘密文件参数具体的为：</p>
+    <p>[0664]	7FFF101000000080</p>
+    <p>[0665]	其中，7FFF1010000000为创建PIN码文件的参数，80为主机为所述创建PIN码</p>
+    <p>文件的参数进行加密时，采用的补位；</p>
+    <p>[0666]	USB Key得到明文的创建秘密文件的指令的APDU后，根据创建秘密文件的参 数，创建秘密文件，并向主机返回创建秘密文件成功的状态码；</p>
+    <p>[0667]	在本实施例中，在主机向USB Key发送创建秘密文件的指令的APDU前，还包 括：</p>
+    <p>[0668]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>54生成一个伪随机数P3，并将伪随机数P3发送给主机，主机由伪随机数P3、主控密钥 CKey等生成消息鉴别码MAC2’，其中，上述生成伪随机数P3的算法与步骤403中生成 伪随机数Pl的算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取 真随机数作为熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0669]	上述主机根据伪随机数P3、主控密钥CKey生成消息鉴别码MAC2’的算法与 本步骤中1)中主机生成消息鉴别码MAC1’的方法相同，这里不再赘述；</p>
+    <p>[0670]	相应地，在USB Key得到明文的创建秘密文件的指令的APDU后，创建秘密文 件前，还包括：</p>
+    <p>[0671]	USB Key判断消息鉴别码MAC2’是否正确，如果正确，则USB Key执行创建 秘密文件的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0672]	上述USB Key判断消息鉴别码MAC2’是否正确的方法具体的为，USB Key使 用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P3、主控密钥CKey等利用与主机生成消息鉴别码MAC2’相 同的算法生成消息鉴别码MAC2，将消息鉴别码MAC2’与MAC2进行比对，如果相同， 则认为消息鉴别码MAC2’正确，如果不相同，则认为消息鉴别码MAC2’不正确。</p>
+    <p>[0673]	3)当USB Key接收的APDU为创建文件的指令的APDU，并且为安装秘密的指 令的APDU时，所述APDU具体的为：</p>
+    <p>[0674]	84 FO 000014 EC A3 30 39 9B DO 6F 41 OD D7 B5 21 19 69 OD FB 23B7965A</p>
+    <p>[0675]	在上述APDU中，84表示该APDU为密文，FO表示该APDU执行安装PIN码 的指令，0000为参数Parametersl和2，14为该字节后APDU的长度，ECA330 39 9B DO 6F 41 OD D7B5 21 19 69 OD FB 为 PIN 码文件，23B7965A 为 MAC3，；</p>
+    <p>[0676]	其中，在本发明中，秘密为用户的敏感数据，需进行加密保护，包括用户的PIN 码、DES密钥、AES密钥等，在2)中以创建PIN码文件为例举例说明了创建秘密文件的 方法，相应地，在这里以在上述PIN码文件中安装PIN码为例进行说明，上述APDU即 为安装PIN码的指令的APDU ；</p>
+    <p>[0677]	USB Key使用管理密钥MKey将USB Key中数据存储区中保存的主控密钥CKey 进行解密，得到明文的主控密钥CKey，并使用主控密钥CKey对上述安装秘密的指令的 APDU进行解密，得到明文的PIN码文件，具体的为：</p>
+    <p>[0678]	000000330102030405068000000000</p>
+    <p>[0679]	其中，00000033为PIN码的参数，例如33表示PIN码最大可尝试验证次数为3 次，剩余可连续验证失败次数为3次，010203040506为明文的PIN码，8000000000为对 PIN码文件进行加密时的补位数据；</p>
+    <p>[0680]	USB Key得到明文的安装PIN码的指令的APDU后，执行安装秘密的操作，根 据PIN码文件的位置，将PIN码使用管理密钥MKey加密后存储在2)中创建的PIN码文 件中，并向主机返回安装PIN码成功的状态码；</p>
+    <p>[0681]	在本实施例中，在主机向USB Key发送安装秘密的指令的APDU前，还包括：</p>
+    <p>[0682]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P4，并发送给主机，主机由伪随机数P4、主控密钥CKey等生成消息 鉴别码MAC3’，其中，上述生成伪随机数P4的算法与步骤403中生成伪随机数Pl的</p>
+    <p>55算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为 熵，以使得USB Key计算得出的伪随机数不同；</p>
+    <p>[0683]	上述主机由伪随机数P4、主控密钥CKey等生成消息鉴别码MAC3’的方法与 本步骤中1)中主机生成消息鉴别码MAC3’的方法相同，这里不再赘述；</p>
+    <p>[0684]	相应地，在USB Key得到明文的安装PIN码的指令的APDU后，执行安装秘密 的操作前，还包括：</p>
+    <p>[0685]	USB Key判断消息鉴别码MAC3’是否正确，如果正确，则USB Key执行安装</p>
+    <p>秘密的操作，如果不正确，则返回消息鉴别码错误的状态码；</p>
+    <p>[0686]	上述USB Key判断消息鉴别码MAC3’是否正确的方法具体的为，USB Key使</p>
+    <p>用管理密钥MKey对USB Key中存储的加密的主控密钥CKey进行解密，得到明文的主控 密钥CKey，使用伪随机数P4、主控密钥CKey等利用与主机生成消息鉴别码MAC3’相 同的算法生成消息鉴别码MAC3，将消息鉴别码MAC3’与MAC3进行比对，如果相同， 则认为消息鉴别码MAC3’正确，如果不相同，则认为消息鉴别码MAC3’不正确。</p>
+    <p>[0687]	在步骤中，还包括：当USB Key中文件系统建立完成，并将全部秘密安装完成 后，将USB Key的使用状态修改为应用状态，并修改USB Key的生命周期，USB Key不 可再写入密钥；</p>
+    <p>[0688]	上述将USB Key的使用状态修改为应用状态，在本实施例中具体的为，将USB Key的使用状态为修改为0x02 ；</p>
+    <p>[0689]	步骤412，COS判断USB Key的使用状态是否为应用状态，如果是，执行步骤 413，如果不是，执行步骤416;</p>
+    <p>[0690]	在本实施例中，COS判断USB Key的使用状态是否为应用状态具体的为，当 USB Key的使用状态标志位为0x02时，则USB Key的使用状态为为应用状态；</p>
+    <p>[0691]	步骤413，COS判断USB Key接收的APDU是否为应用类型的APDU，如果是， 执行步骤414，如果不是，执行步骤415;</p>
+    <p>[0692]	其中，应用类型的APDU，包括生成RSA密钥对，签名、验证签名、修改PIN 码等指令的APDU，判断方法具体的可以为，依照约定的APDU指令规则，读取APDU 指令类型，判断APDU为进行何种操作，例如在本实施例中，约定APDU的第二个字节 表示APDU指令指定的操作，读取第二字节如果为20，则为验证PIN码的指令，验证 PIN码的指令属于应用类型的APDU，则该APDU为应用类型的APDU，如果第二字节为 E0,则为创建MF文件的指令，不属于应用类型的APDU;</p>
+    <p>[0693]	步骤414，USB Key执行其接收的APDU中的指令，返回步骤405，继续等待并 接收新的APDU ；</p>
+    <p>[0694]	在本实施例中，在USB Key处于应用状态后，用户可使用USB Key进行应用操 作，包括生成RSA密钥对，签名、验证签名、修改PIN码等，主机通过向USB Key下发 应用APDU命令使USB Key完成这些操作，并且在主机向USBKey发送APDU时可以采 取将APDU加密和不加密两种方式。下面以USB Key进行签名操作为例进行说明，在 USB Key中密钥的使用过程，如下：</p>
+    <p>[0695]	当USB Key接收的为Verify PIN指令（即验证PIN码)的APDU时，USBKey</p>
+    <p>的操作为：</p>
+    <p>56[0696]	414a，USB Key使用管理密钥MKey对数据存储区中存储的主控密钥CKey进行 解密，得到明文的主控密钥CKey ；</p>
+    <p>[0697]	414b，USB Key使用主控密钥CKey对验证PIN码的指令的APDU进行解密， 得到明文的APDU ；</p>
+    <p>[0698]	在本实施例中，上述验证PIN码的指令明文的APDU为：</p>
+    <p>[0699]	00 20 00 00 06 01 02 03 04 05 06</p>
+    <p>[0700]	其中，00表示该APDU为明文，20表示进行验证PIN码的操作，0000为参数 Parametersl和2，06表示该字节后APDU的长度，010203040506表示用户输入的PIN 码；</p>
+    <p>[0701]	414c, USB Key判断消息鉴别码MAC4’是否正确，如果正确，执行步骤 414e,如果不正确，执行步骤414d;</p>
+    <p>[0702]	在本实施例中，在主机向USB Key下发验证PIN码的指令的APDU前，还包 括：</p>
+    <p>[0703]	主机向1^：8尺巧发送八?01；，请求一个伪随机数P6，USB Key生成伪随机数</p>
+    <p>P6,并发送给主机，主机由伪随机数P6、主控密钥CKey、验证PIN码的指令生成消息鉴 别码MAC4’，优选地，使用CBC算法生成消息鉴别码MAC4’，与步骤411中使用方 法相同，这里不再赘述；</p>
+    <p>[0704]	USB Key判断消息鉴别码MAC4’的方法，具体的为：USB Key使用与主机生 成消息鉴别码MAC4’相同的算法，使用伪随机数P5、主控密钥CKey、验证PIN码的指 令生成消息鉴别码MAC4并与MAC4’进行比对，如果相同，则MAC4’正确，如果不 相同，则MAC4’不正确；</p>
+    <p>[0705]	414d，USBKey向主机返回消息鉴别码错误的状态码；</p>
+    <p>[0706]	414e，USB Key使用管理密钥MKey将存储于USB Key中的合法PIN码进行解</p>
+    <p>密，得到明文的合法PIN码；</p>
+    <p>[0707]	414f，判断上述APDU中的PIN码是否正确，如果是，执行步骤414g，如果不 是，执行步骤414h;</p>
+    <p>[0708]	上述判断的方法具体的为：将上述验证PIN码指令APDU中的PIN码与USBKey</p>
+    <p>中存储的合法的PIN码进行比对，如果相同，则PIN码正确，如果不相同，则PIN码验 证不正确；</p>
+    <p>[0709]	414g，USB Key向主机返回PIN码正确的状态码；</p>
+    <p>[0710]	414h，USBKey向主机返回PIN码错误的状态码，并将PIN码验证计数位减1。</p>
+    <p>[0711]	在本实施例中，如步骤411中所述，在安装PIN码文件时，会在USB Key中存储 有PIN码验证计数位，优选地为两个字节，高位表示USB Key可接收的连续验证PIN码 失败的次数，低位字节表示该USB Key可以验证PIN码的剩余次数，当低字节为0时， USB Key的PIN码锁定，在解锁前不可再进行验证PIN码操作，例如在本实施例中，PIN 码验证计数位在验证PIN码操作前初始化时为33，最多可以尝试连续验证PIN码3次， 当验证PIN码失败一次后，PIN码验证计数位减1为32，当连续第二次验证PIN码失败 后，再减1为31，当PIN码验证计数位为30时，USB Key锁定PIN码，只有解除PIN码 锁定状态后，才可以进行验证PIN码的操作；[0712]	步骤415，向主机返回APDU错误的消息，返回步骤405，继续等待并接收新的 APDU ；</p>
+    <p>[0713]	步骤416，COS判断USB Key是否为空卡状态，如果是，执行步骤417，如果不 是，执行步骤420;</p>
+    <p>[0714]	判断USB Key是否为空卡状态，具体的为：判断USB Key记录使用状态的标志 位是否为0x00，如果是，则为空卡状态，否则，不为空卡状态；</p>
+    <p>[0715]	步骤417，COS判断USB Key接收的APDU是否为写主控密钥CKey的指令的 APDU,如果是，执行步骤419，如果不是，执行步骤418;</p>
+    <p>[0716]	在本实施例中，写主控密钥CKey的指令的APDU具体的可以为：</p>
+    <p>[0717]	84 E4000014 6C5E94DCADD39F1D3AD217812B81E7AD 304F5EDC</p>
+    <p>[0718]	在上述命令USB Key写入主控密钥的APDU中，0x84表示该APDU的数据区为 密文，0xE4表示该APDU执行的命令为写主控密钥，0000为参数Parametersl和2，0x14 表示其后面 APDU 的长度，6C5E94DCADD39F1D3AD217812B81E7AD 为该 APDU 的数 据区，为主控密钥，并且为密文形式，0x304F5EDC为消息鉴别码MAC5’ ；</p>
+    <p>[0719]	由上可知，判断APDU是否为写主控密钥的指令的APDU的方法为：读取USB Key接收的APDU的第二个字节，如果为E4则为写主控密钥指令；</p>
+    <p>[0720]	步骤418，USBKey向主机返回USB Key为空卡状态的错误状态码，返回步骤 405，继续等待并接收新的APDU ；</p>
+    <p>[0721]	在本实施例中，当USB Key的使用状态为空卡状态时，必须先写入主控密钥才 可以进行处理其他APDU的操作，优选地，USB Key向主机返回USB Key为空卡状态的 错误状态码为0x6981 ；</p>
+    <p>[0722]	步骤419，USB Key使用传输密钥TKey将上述写主控密钥CKey的指令的APDU 进行解密，得到明文的主控密钥CKey，USB Key执行写入主控密钥CKey的操作，将明 文的主控密钥CKey使用管理密钥MKey进行加密，并保存在USBKey的数据存储区，返 回步骤405，继续等待并接收新的APDU ；</p>
+    <p>[0723]	在本实施例中，传输密钥TKey为USB Key与主机预先约定的密钥，并且将传输 密钥TKey预先写入USB Key的ROM存储区中，当USB Key第一次上电时，COS将传 输密钥TKey从ROM存储区中读出，使用管理密钥MKey加密后存储在USB Key的数据 存储区中，主机可通过向USB Key发送APDU修改传输密钥TKey ；</p>
+    <p>[0724]	在本实施例中，假设传输密钥TKey为01 02 03 04 05 06 07 08，USB Key使用上 述传输密钥TKey对上述写主控密钥CKey的指令的APDU进行解密，具体的为对得到明 文上述写主控密钥CKey的指令的APDU的数据区进行解密，得到明文的主控密钥为：</p>
+    <p>[0725]	112233445566778899aabbccddeefTO0</p>
+    <p>[0726]	由步骤409中，写主控密钥的APDU中包括消息鉴别码MAC1’，在主机向USB Key发送写入主控密钥CKey的指令的APDU前，还包括：</p>
+    <p>[0727]	主机向USB Key发送一个APDU，向USB Key请求获得一个伪随机数，USBKey</p>
+    <p>生成一个伪随机数P6，并发送给主机，主机由伪随机数P6、传输密钥TKey等生成一个 消息鉴别码为MAC5’，上述生成伪随机数P6的算法与步骤403中生成伪随机数Pl的 算法相同，这里不再赘述，但是需注意的是每次生成伪随机数需重新获取真随机数作为</p>
+    <p>58熵，以使得计算得出的伪随机数不同。</p>
+    <p>[0728]	相应地，在USB Key对上述接收的写主控密钥CKey的指令的APDU进行解密 后，USB Key执行写入主控密钥CKey的操作前，还包括：</p>
+    <p>[0729]	USB Key判断消息鉴别码MAC5，是否正确，判断的方法为：USB Key按照 于主机生成消息鉴别码MAC5’相同的算法，生成消息鉴别码MAC5，将消息鉴别码 MAC5’与MAC5进行比对，如果相同，则认为消息鉴别码MAC5’正确，USB Key执 行写入主控密钥CKey的操作，如果不相同，则认为消息鉴别码MAC5’不正确，向主机 返回消息鉴别码错误的状态码。</p>
+    <p>[0730]	优选地，主机由伪随机数P6、传输密钥TKey等生成消息鉴别码MAC5’的方法 具体的为：</p>
+    <p>[0731]	将写主控密钥指令的APDU中的标记84、APDU参数Parametersl和2、表示长</p>
+    <p>度部分、明文的主控密钥、伪随机数P6、传输密钥TKey使用CBC模式进行加密运算， 得到消息鉴别码MAC5’。</p>
+    <p>[0732]	在USB Key将明文的主控密钥CKey使用管理密钥MKey进行加密并保存在USB</p>
+    <p>Key的数据存储区后，还包括：</p>
+    <p>[0733]	USB Key将自身使用状态置为初始化状态，在本实施例中具体的为，将USBKey 的使用状态标志位修改为0x01 ；</p>
+    <p>[0734]	步骤420，向主机返回错误信息，返回步骤405，继续等待并接收新的APDU ；</p>
+    <p>[0735]	在本实施例中，还可以包括管理密钥MKey的销毁，具体的包括：</p>
+    <p>[0736]	当USB Key的生命周期终止时，擦除USB Key中的管理密钥MKey ；</p>
+    <p>[0737]或，</p>
+    <p>[0738]	当外部认证连续验证解锁码超过约定的次数时，擦除USB Key中的管理密钥 MKey ；</p>
+    <p>[0739]或，</p>
+    <p>[0740]	用户发出销毁USB Key的命令时，擦除USB Key中的管理密钥MKey。</p>
+    <p>[0741]	在管理密钥MKey被擦除后，将USB Key的使用状态的标志位设置为终止使用 状态，即将标志位设置为0x03，管理密钥MKey被擦除后，不可能再对USBKey中保存 的其他密钥和加密的数据进行解密，USB Key不能再使用，保证了 USB Key的安全性；</p>
+    <p>[0742]	通过实施例4和实施例3的对比，我们可以得出，USB Key在接收到主机下发 的APDU后，对USB Key的生命周期和使用状态的判断，是可以调换顺序的，而且并不 影响本发明所提出的有益效果，因此，通过对该顺序的调整而形成的方法，都应该属于 本发明的保护范围；</p>
+    <p>[0743]	需要注意的是，在本发明中，优选地，在USB Key接收到APDU后，先判断 USB Key的生命周期，如果生命周期未终止，再进行使用状态的判断，这是优选方案， 因为如果在使用状态判断完成后，再进行生命周期的判断，一旦生命周期为终止，USB Key是不能执行任何APDU的，导致使用状态判断成为冗余步骤；</p>
+    <p>[0744]	本实施例中，在USB Key的应用过程中，体现出了智能密钥装置中密钥的生 成、保存、使用和销毁的过程，克服了现有技术中的密钥容易被攻击读出，通过对密钥 的管理增强了 USB Key的安全性。[0745]	实施例5</p>
+    <p>[0746]	本实施例提供了一种密钥管理系统，系统包括主机1和智能密钥装置2 ：</p>
+    <p>[0747]	主机1包括：APDU发送模块101、第一接口模块102 ；</p>
+    <p>[0748]	APDU发送模块101，用于向智能密钥装置发送APDU ；</p>
+    <p>[0749]	第一接口模块102，用于与智能密钥装置建立连接和进行数据通信；</p>
+    <p>[0750]	智能密钥装置2包括：上电判断模块201、随机数生成模块202、APDU接收模 块203、生命周期判断模块204、空卡判断模块205、写第二密钥模块206、初始化判断模 块207、文件创建模块208、应用判断模块209、应用模块210、错误处理模块211、存储 模块212 ；</p>
+    <p>[0751]	上电判断模块201，用于判断智能密钥装置是否为首次上电；</p>
+    <p>[0752]	随机数生成模块202，用于当上电判断模块201判断智能密钥装置为首次上电 时，根据算法生成第一随机数，并将第一随机数作为第一密钥；</p>
+    <p>[0753]	APDU接收模块203，用于在智能密钥装置生成第一密钥后，等待并接收主机下 发 APDU ；</p>
+    <p>[0754]	生命周期判断模块204，用于判断智能密钥装置的生命周期是否终止；</p>
+    <p>[0755]	空卡判断模块205，用于判断智能密钥装置的使用状态是否为空卡状态；</p>
+    <p>[0756]	写第二密钥模块206，用于在空卡判断模块205判断智能密钥装置的使用状态 为空卡状态时，执行写第二密钥的指令，并将智能密钥装置的使用状态修改为初始化状 态，完成后通知APDU接收模块203继续等待主机下发新的APDU ；</p>
+    <p>[0757]	初始化判断模块207，用于判断智能密钥装置的使用状态是否为初始化状态；</p>
+    <p>[0758]	文件创建模块208，用于在初始化判断模块207判断智能密钥装置的使用状态为 初始化状态时，执行创建文件的指令；</p>
+    <p>[0759]	应用判断模块209，用于判断智能密钥装置的使用状态是否为应用状态；</p>
+    <p>[0760]	应用模块210，用于在应用判断模块209判断智能密钥装置的使用状态为应用状 态时，执行APDU接收模块203接收的APDU的应用；</p>
+    <p>[0761]	错误处理模块211，用于当生命周期判断模块204判断智能密钥装置的生命周期 终止时，向主机返回智能密钥装置生命周期终止的错误，并使APDU接收模块203继续等 待并接收新的APDU ；</p>
+    <p>[0762]	存储模块212，用于存储第一密钥。</p>
+    <p>[0763]	在本实施例中，上电判断模块201用于判断智能密钥装置是否为首次上电，具 体的包括：</p>
+    <p>[0764]	上电判断模块201判断存储模块212中是否未存储任何数据，如果是，则智能密 钥装置为首次上电，如果不是，则智能密钥装置不是首次上电；</p>
+    <p>[0765]	空卡判断模块205用于判断智能密钥装置的使用状态是否为空卡状态，具体的 包括：</p>
+    <p>[0766]	在智能密钥装置第一次上电后，在存储模块212中写入智能密钥装置的使用状 态标志位，卡内操作系统通过读取存储模块212中的使用状态标志位判断智能密钥装置 的使用状态是否为空卡状态；</p>
+    <p>[0767]	相应地，初始化判断模块207用于判断智能密钥装置的使用状态是否为初始化状态，具体的包括：</p>
+    <p>[0768]	初始化判断模块207通过读取存储模块212中的使用状态标志位判断智能密钥装 置的使用状态是否为初始化状态；</p>
+    <p>[0769]	相应地，应用判断模块209用于判断智能密钥装置的使用状态是否为应用状 态，具体的包括：</p>
+    <p>[0770]	应用判断模块209通过读取存储模块212中的使用状态标志位判断智能密钥装置 的使用状态是否为应用状态；</p>
+    <p>[0771]	在本实施例中，系统还包括写第二密钥判断模块213，写第二密钥判断模块213 用于在写第二密钥模块206执行写第二密钥的指令前，判断APDU接收模块203接收的 APDU是否为写第二密钥的指令，如果是写第二密钥的指令，写第二密钥模块206执行写 第二密钥的操作；</p>
+    <p>[0772]	写第二密钥模块206执行写第二密钥的操作具体的包括：</p>
+    <p>[0773]	写第二密钥模块206使用第三密钥对APDU接收模块203接收的APDU进行解 密，得到明文的写第二密钥的指令的APDU，进行写第二密钥的操作，将第二密钥使用 第一密钥加密后，保存在存储模块212中。</p>
+    <p>[0774]	存储模块212还用于存储加密后的第二密钥和第三密钥，其中第三密钥为智能 密钥装置与主机预先约定，并预先存储在智能密钥装置的ROM中，当智能密钥装置生成 第一密钥后，智能密钥装置将第三密钥读出，并使用第一密钥加密后保存在智能密钥装 置的可写存储区中。</p>
+    <p>[0775]	写第二密钥模块206执行向存储模块212中写第二密钥的操作前，写第二密钥模 块206还用于，使用第一密钥解密存储模块212中存储的加密后的第三密钥，得到明文的 第三密钥，并使用第三密钥对写第二密钥指令的APDU进行解密，得到明文的写第二密 钥指令的APDU。</p>
+    <p>[0776]	其中，在写第二密钥模块206得到明文的写第二密钥指令的APDU后，执行写 第二密钥指令前，写第二密钥模块206还用于，判断第一消息鉴别码是否正确，如果正 确，写第二密钥模块206执行写第二密钥的操作，如果不正确，通过错误处理模块211向 主机返回第一消息鉴别码错误的消息，其中，第一消息鉴别码包含在明文的写第二密钥 的指令的APDU中。</p>
+    <p>[0777]	APDU接收模块203接收写第二密钥指令的APDU前，APDU发送模块101还 用于，向随机数生成模块202发送获取第二随机数的请求，随机数生成模块202生成第二 随机数并发送给APDU发送模块101，APDU发送模块101使用第二随机数生成第一消息</p>
+    <p>鉴别码。</p>
+    <p>[0778]	写第二密钥模块206判断第一消息鉴别码是否正确，具体的包括：</p>
+    <p>[0779]	写第二密钥模块206根据第二随机数生成第二消息鉴别码，并使用第二消息鉴 别码与第一消息鉴别码进行比对，如果相同，则第一消息鉴别码正确，如果不相同，则 第一消息鉴别码不正确。</p>
+    <p>[0780]	系统还包括创建文件判断模块214，创建文件判断模块214用于在文件创建模块 208执行创建文件的指令前，判断APDU接收模块203接收的APDU是否为创建文件的指 令，如果是，执行创建文件的指令。</p>
+    <p>61[0781]	文件创建模块208执行创建文件的指令前，文件创建模块208还用于，使用第 二密钥对APDU接收模块203接收的APDU进行解密，得到明文的创建文件的指令的 APDU。</p>
+    <p>[0782]	文件创建模块208使用第二密钥对APDU接收模块203接收的APDU进行解密 前，文件创建模块208还用于，使用第一密钥对存储模块212中存储的加密后的第二密钥 进行解密，得到明文的第二密钥。</p>
+    <p>[0783]	文件创建模块208得到明文的创建文件的指令的APDU后，文件创建模块208执 行创建文件的指令前，文件创建模块208还用于，判断第三消息鉴别码是否正确，如果 正确，文件创建模块208执行创建文件的指令，如果不正确，通过错误处理模块211向主 机返回第三消息鉴别码错误的消息，其中，第三消息鉴别码包含在明文的创建文件的指 令的APDU中。</p>
+    <p>[0784]	APDU接收模块203接收创建文件的指令的APDU前，APDU发送模块101还 用于，向随机数生成模块202发送获取第三随机数的请求，随机数生成模块202生成第三 随机数并发送给APDU发送模块101，APDU发送模块101使用第三随机数生成第三消息</p>
+    <p>鉴别码。</p>
+    <p>[0785]	文件创建模块208判断第三消息鉴别码是否正确，具体的包括：</p>
+    <p>[0786]	文件创建模块208根据第三随机数生成第四消息鉴别码，并使用第四消息鉴别 码与第三消息鉴别码进行比对，如果相同，则第三消息鉴别码正确，如果不相同，则第 三消息鉴别码不正确。</p>
+    <p>[0787]	文件创建模块208执行创建文件的操作结束后，文件创建模块208还用于，判断 是否智能密钥装置的文件创建全部完成，如果是，将智能密钥装置的使用状态修改为应 用状态，等待主机下发新的APDU，如果不是，通知APDU接收模块203继续等待主机下 发新的APDU。</p>
+    <p>[0788]	在本实施例中，所述系统还包括密钥擦除模块215，密钥擦除模块用于当智能密 钥装置的生命周期终止时，智能密钥装置擦除第一密钥，并将智能密钥装置的使用状态 修改为终止使用状态；</p>
+    <p>[0789]或，</p>
+    <p>[0790]	当连续认证解锁码错误次数超过约定次数时，擦除第一密钥，并将智能密钥装 置的使用状态修改为终止使用状态；</p>
+    <p>[0791]或，</p>
+    <p>[0792]	当智能密钥装置接收到用户发出的销毁智能密钥装置的指令时，智能密钥装置 擦除第一密钥，并将智能密钥装置的使用状态修改为终止使用状态。</p>
+    <p>[0793]	以上对本发明所提供的一种密钥管理系方法及系统进行了详细介绍，本文中应 用了具体个例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助 理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思 想，在具体实施方式及应用范围上均会有改变之处，综上，本说明书内容不应理解为对 本发明的限制。</p>
+    <p>[0794]	以上仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和原 则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+    <p>62</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101009556A?cl=zh">CN101009556A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年1月8日</td><td class="patent-data-table-td patent-date-value">2007年8月1日</td><td class="patent-data-table-td ">中国信息安全产品测评认证中心</td><td class="patent-data-table-td ">一种智能卡与u盘复合设备及其基于双向认证机制以提高访问安全性的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101013464A?cl=zh">CN101013464A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年1月24日</td><td class="patent-data-table-td patent-date-value">2007年8月8日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">一种主机与智能卡信息交互的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101163014A?cl=zh">CN101163014A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年11月30日</td><td class="patent-data-table-td patent-date-value">2008年4月16日</td><td class="patent-data-table-td ">中国电信股份有限公司</td><td class="patent-data-table-td ">一种动态口令身份认证系统和方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=i0ZyBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=i0ZyBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009080000">H04L9/08</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年4月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年6月1日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年6月27日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/44046ba49121399f0daa/CN102013975A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%AF%86%E9%92%A5%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=i0ZyBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1kvNmvAVgRIi_ngtpH03_gFI1RmA"},"sample_url":"https://www.google.com/patents/reader?id=i0ZyBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

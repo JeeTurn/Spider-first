@@ -1,0 +1,249 @@
+<!DOCTYPE html><html><head><title>专利 CN101571705A - 位置伺服系统与方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="位置伺服系统与方法"><meta name="DC.contributor" content="扈宏杰" scheme="inventor"><meta name="DC.contributor" content="博 赵" scheme="inventor"><meta name="DC.contributor" content="李德地" scheme="inventor"><meta name="DC.contributor" content="北京航空航天大学" scheme="assignee"><meta name="DC.date" content="2008-4-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明是为了提高伺服系统的控制精度提出一种应用于伺服系统的神经网络自适应控制方法，实现了对伺服系统的非线性补偿和干扰抑制，提高了伺服系统的跟踪精度。本发明主要包括参考模型，自适应控制器和神经网络控制器三个部分。另外，在速度环精确参考模型的基础上，位置环控制器的设计也变得非常简单，使整个系统的设计工作变得相当方便，易于在工程中实施。"><meta name="DC.date" content="2009-11-4"><meta name="citation_patent_publication_number" content="CN:101571705:A"><meta name="citation_patent_application_number" content="CN:200810105421"><link rel="canonical" href="https://www.google.com/patents/CN101571705A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101571705A?cl=zh"/><meta name="title" content="专利 CN101571705A - 位置伺服系统与方法"/><meta name="description" content="本发明是为了提高伺服系统的控制精度提出一种应用于伺服系统的神经网络自适应控制方法，实现了对伺服系统的非线性补偿和干扰抑制，提高了伺服系统的跟踪精度。本发明主要包括参考模型，自适应控制器和神经网络控制器三个部分。另外，在速度环精确参考模型的基础上，位置环控制器的设计也变得非常简单，使整个系统的设计工作变得相当方便，易于在工程中实施。"/><meta property="og:title" content="专利 CN101571705A - 位置伺服系统与方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101571705A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101571705A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=ZaV0BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101571705A&amp;usg=AFQjCNFwqJCJcR3GUOwyudzG-HM2eJMVIQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/cae78ef49899d1854b26/CN101571705A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/cae78ef49899d1854b26/CN101571705A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101571705A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101571705A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101571705A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101571705B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101571705A?cl=zh" style="display:none"><span itemprop="description">本发明是为了提高伺服系统的控制精度提出一种应用于伺服系统的神经网络自适应控制方法，实现了对伺服系统的非线性补偿和干扰抑制，提高了伺服系统的跟踪精度。本发明主要包括参考模型，自适应控制器和神经网络控制器...</span><span itemprop="url">https://www.google.com/patents/CN101571705A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101571705A - 位置伺服系统与方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101571705A - 位置伺服系统与方法" title="专利 CN101571705A - 位置伺服系统与方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101571705 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810105421</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年11月4日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年4月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年4月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101571705B?hl=zh-CN&amp;cl=zh">CN101571705B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810105421.5, </span><span class="patent-bibdata-value">CN 101571705 A, </span><span class="patent-bibdata-value">CN 101571705A, </span><span class="patent-bibdata-value">CN 200810105421, </span><span class="patent-bibdata-value">CN-A-101571705, </span><span class="patent-bibdata-value">CN101571705 A, </span><span class="patent-bibdata-value">CN101571705A, </span><span class="patent-bibdata-value">CN200810105421, </span><span class="patent-bibdata-value">CN200810105421.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%89%88%E5%AE%8F%E6%9D%B0%22">扈宏杰</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%8D%9A+%E8%B5%B5%22">博 赵</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%BE%B7%E5%9C%B0%22">李德地</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E5%A4%A7%E5%AD%A6%22">北京航空航天大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101571705A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101571705A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101571705A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (4),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ZaV0BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810105421&amp;usg=AFQjCNG8AHnYkyhTi9OBRruiohwiwGU5_A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ZaV0BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101571705A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEBXM802w0blV_Onk7-0j8w6KAqXg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT89887611" lang="ZH" load-source="patent-office">位置伺服系统与方法</invention-title>
+      </span><br><span class="patent-number">CN 101571705 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109511339" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明是为了提高伺服系统的控制精度提出一种应用于伺服系统的神经网络自适应控制方法，实现了对伺服系统的非线性补偿和干扰抑制，提高了伺服系统的跟踪精度。本发明主要包括参考模型，自适应控制器和神经网络控制器三个部分。另外，在速度环精确参考模型的基础上，位置环控制器的设计也变得非常简单，使整个系统的设计工作变得相当方便，易于在工程中实施。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(8)</span></span></div><div class="patent-text"><div mxw-id="PCLM51298550" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种位置伺服系统，包括</div>
+      <div class="claim-text">一个位置环控制器(1，201)，用于接收一个位置误差，并产生一个速度指令(r)；</div>
+      <div class="claim-text">一个自适应控制器(6，202)，用于接收所述速度指令(r)、一个模型误差(eω)和一个伺服对象速度信号(ω)，并产生一个自适应控制器输出；</div>
+      <div class="claim-text">一个神经网络控制器(5，203)，用于接收所述伺服对象速度信号(ω)、一个控制信号(u)和所述模型误差(eω)，并输出一个神经网络控制器输出(un)；</div>
+      <div class="claim-text">一个参考模型(4，204)，用于接收所述速度指令(r)并产生一个参考模型输出(ωm)；</div>
+      <div class="claim-text">一个第一加法器(205)，用于把所述自适应控制器输出和所述神经网络控制器的输出相加，从而产生所述控制信号(u)；</div>
+      <div class="claim-text">一个伺服执行装置(207)，用于在所述控制信号(u)的控制下，进行伺服操作；</div>
+      <div class="claim-text">一个速度检测装置(208)，用于测量所述位置伺服系统的伺服对象的速度，从而生成所述伺服对象速度信号(ω)；</div>
+      <div class="claim-text">一个位置测量装置(209)，用于测量所述位置伺服系统的伺服对象的位置，并生成一个控制对象位置输出；</div>
+      <div class="claim-text">一个第二加法器(210)，用于把所述伺服对象速度(ω)与所述参考模型输出(ωm)相减，从而生成所述模型误差(eω)；</div>
+      <div class="claim-text">一个第三加法器(211)，用于把所述控制对象位置输出和所述位置伺服系统所接收到的一个位置指令相减，从而生成所述位置误差。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的位置伺服系统，其特征在于所述自适应控制器进一步包括：</div>
+      <div class="claim-text">一个第一乘法器(101)，用于接收所述速度指令(r)和所述模型误差信号(eω)，并将二者相乘；</div>
+      <div class="claim-text">一个第一积分-放大装置(102)，用于把第一乘法器的输出积分并乘以一个第一学习速率(γ11)的负值，从而生成一个第一自适应参数(θ1)；</div>
+      <div class="claim-text">一个第三乘法器(103)，用于把所述第一自适应参数(θ1)与所述速度指令(r)相乘；</div>
+      <div class="claim-text">一个第二乘法器(104)，用于接收所述伺服对象速度(ω)和所述模型误差信号(eω)，并将二者相乘；</div>
+      <div class="claim-text">一个第二积分-放大器(105)，用于把第二乘法器的输出积分并乘以一个第二学习速率(γ12)，从而生成一个第二自适应参数(θ2)；</div>
+      <div class="claim-text">一个第四乘法器(106)，用于把所述的第二自适应参数(θ2)与所述伺服对象速度(ω)相乘；</div>
+      <div class="claim-text">一个加法器(107)，用于接收所述的第三和第四乘法器的输出，并把两者相减，作为所述自适应控制器输出。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、根据权利要求1所述的位置伺服系统，其特征在于所述神经网络控制器进一步包括：</div>
+      <div class="claim-text">归一化部分，用于对所述控制信号(u)和所述伺服对象速度(ω)的当前采样时刻的值(uk，ωk)和前一采样时刻的值(uk-1，ωk-1)进行归一化，得到相应的归一化结果</div>
+      <div class="claim-text">加权求和部分，用于将各所述归一化结果乘以对应的权值(w1，w2，w3，w4)并求和，从而得到加权求和结果</div>
+      <div class="claim-text">输出部分，用于将所述求和结果(S)通过输出函数进行处理，而获得并输出所述神经网络控制器输出(f(S))，</div>
+      <div class="claim-text">其中，所述权值(w1，w2，w3，w4)的更新算法为其中</div>
+      <div class="claim-text">xi为该权值的对应输入，</div>
+      <div class="claim-text">γ2为一个预设的神经网络学习速率。</div>
+    </div>
+    </div> <div class="claim"> <div num="4" class="claim">
+      <div class="claim-text">4、用于一种位置伺服系统的一种自适应控制器(6，202)，所述位置伺服系统包括</div>
+      <div class="claim-text">一个位置环控制器(1，201)，用于接收一个位置误差，并产生一个速度指令(r)；</div>
+      <div class="claim-text">所述自适应控制器(6，202)，用于接收所述速度指令(r)、一个模型误差(eω)和一个伺服对象速度信号(ω)，并产生一个自适应控制器输出；</div>
+      <div class="claim-text">一个神经网络控制器(5，203)，用于接收所述伺服对象速度信号(ω)、一个控制信号(u)和所述模型误差(eω)，并输出一个神经网络控制器输出；</div>
+      <div class="claim-text">一个参考模型(4，204)，用于接收所述速度指令(r)并产生一个参考模型输出(ωm)；</div>
+      <div class="claim-text">一个第一加法器(205)，用于把所述自适应控制器输出和所述神经网络控制器的输出相加，从而产生所述控制信号(u)；</div>
+      <div class="claim-text">一个伺服执行装置(207)，用于在所述控制信号(u)的控制下，进行伺服操作；</div>
+      <div class="claim-text">一个速度检测装置，用于测量所述位置伺服系统的伺服对象的速度，从而生成所述伺服对象速度信号(ω)；</div>
+      <div class="claim-text">一个位置测量装置，用于测量所述位置伺服系统的伺服对象的位置，并生成一个控制对象位置输出；</div>
+      <div class="claim-text">一个第二加法器(210)，用于把所述所述伺服对象速度(ω)与所述参考模型输出(ωm)相减，从而生成所述模型误差(eω)；</div>
+      <div class="claim-text">一个第三加法器(211)，用于把所述控制对象位置输出和所述位置伺服系统所接收到的一个位置指令相减，从而生成所述位置误差，</div>
+      <div class="claim-text">其特征在于所述自适应控制器进一步包括：</div>
+      <div class="claim-text">一个第一乘法器(101)，用于接收所述速度指令(r)和所述模型误差信号(eω)，并将二者相乘；</div>
+      <div class="claim-text">一个第一积分-放大装置(102)，用于把第一乘法器的输出积分并乘以一个第一学习速率(γ11)的负值，从而生成一个第一自适应参数(θ1)；</div>
+      <div class="claim-text">一个第三乘法器(103)，用于把所述第一自适应参数(θ1)与所述速度指令(r)相乘；</div>
+      <div class="claim-text">一个第二乘法器(104)，用于接收所述伺服对象速度(ω)和所述模型误差信号(eω)，并将二者相乘；</div>
+      <div class="claim-text">一个第二积分-放大器(105)，用于把第二乘法器的输出积分并乘以一个第二学习速率(γ12)，从而生成一个第二自适应参数(θ2)；</div>
+      <div class="claim-text">一个第四乘法器(106)，用于把所述的第二自适应参数(θ2)与所述伺服对象速度(ω)相乘；</div>
+      <div class="claim-text">一个加法器(107)，用于接收所述的第三和第四乘法器的输出，并把两者相减，作为所述自适应控制器输出。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、根据权利要求4所述的自适应控制器，其中所述神经网络控制器进一步包括：</div>
+      <div class="claim-text">归一化部分，用于对所述控制信号(u)和所述伺服对象速度(ω)的当前采样时刻的值(uk，ωk)和前一采样时刻的值(uk-1，ωk-1)进行归一化，得到相应的归一化结果</div>
+      <div class="claim-text">加权求和部分，用于将各所述归一化结果乘以对应的权值(w1，w2，w3，w4)并求和，从而得到加权求和结果</div>
+      <div class="claim-text">输出部分，用于将所述求和结果(S)通过输出函数进行处理，而获得并输出所述神经网络控制器输出(f(S))，</div>
+      <div class="claim-text">其中，所述权值(w1，w2，w3，w4)的更新算法为其中</div>
+      <div class="claim-text">xi为该权值的对应输入，</div>
+      <div class="claim-text">γ2为一个预设的神经网络学习速率。</div>
+    </div>
+    </div> <div class="claim"> <div num="6" class="claim">
+      <div class="claim-text">6、一种位置伺服方法，包括</div>
+      <div class="claim-text">用一个位置环控制器(1，201)接收一个位置误差并产生一个速度指令(r)；</div>
+      <div class="claim-text">用一个自适应控制器(6，202)接收所述速度指令(r)、一个模型误差(eω)和一个伺服对象速度信号(ω)，并产生一个自适应控制器输出；</div>
+      <div class="claim-text">用一个神经网络控制器(5，203)，用于接收所述伺服对象速度信号(ω)、一个控制信号(u)和所述模型误差(eω)，并输出一个神经网络控制器输出；</div>
+      <div class="claim-text">用一个参考模型(4，204)接收所述速度指令(r)并产生一个参考模型输出(ωm)；</div>
+      <div class="claim-text">用一个第一加法器(205)，把所述自适应控制器输出和所述神经网络控制器的输出相加，从而产生所述控制信号(u)；</div>
+      <div class="claim-text">借助一个伺服执行装置(207)，在所述控制信号(u)的控制下，进行伺服操作；</div>
+      <div class="claim-text">借助一个速度检测装置(208)，测量所述位置伺服系统的伺服对象的速度，从而生成所述伺服对象速度信号(ω)；</div>
+      <div class="claim-text">借助一个位置测量装置(209)，测量所述位置伺服系统的伺服对象的位置，并生成一个控制对象位置输出；</div>
+      <div class="claim-text">在一个第二加法器(210)，把所述所述伺服对象速度(ω)与所述参考模型输出(ωm)相减，从而生成所述模型误差(eω)；</div>
+      <div class="claim-text">在一个第三加法器(211)，把所述控制对象位置输出和所述位置伺服系统所接收到的一个位置指令相减，从而生成所述位置误差。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、根据权利要求6所述的位置伺服方法，其特征在于用所述自适应控制器(6，202)产生一个自适应控制器输出的所述步骤进一步包括：</div>
+      <div class="claim-text">在一个第一乘法器(101)，把所述速度指令(r)和所述模型误差信号(eω)相乘；</div>
+      <div class="claim-text">在一个第一积分-放大装置(102)，把第一乘法器的输出积分并乘以一个第一学习速率(γ11)的负值，从而生成一个第一自适应参数(θ1)；</div>
+      <div class="claim-text">在一个第三乘法器(103)，把所述第一自适应参数(θ1)与所述速度指令(r)相乘；</div>
+      <div class="claim-text">在一个第二乘法器(104)，把所述伺服对象速度(ω)和所述模型误差信号(eω)相乘；</div>
+      <div class="claim-text">在一个第二积分-放大器(105)，把第二乘法器的输出积分并乘以一个第二学习速率(γ12)，从而生成一个第二自适应参数(θ2)；</div>
+      <div class="claim-text">在一个第四乘法器(106)，把所述的第二自适应参数(θ2)与所述伺服对象速度(ω)相乘；</div>
+      <div class="claim-text">在一个加法器(107)，把所述的第三和第四乘法器的输出相减，并将相减的结果作为所述自适应控制器输出。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、根据权利要求6所述的位置伺服系统，其特征在于用所述神经网络控制器接收所述伺服对象速度信号(ω)、控制信号(u)和模型误差(eω)并输出所述神经网络控制器输出的所述步骤进一步包括：</div>
+      <div class="claim-text">归一化部分步骤，其对所述控制信号(u)和所述伺服对象速度(ω)的当前采样时刻的值(uk，ωk)和前一采样时刻的值(uk-1，ωk-1)进行归一化，得到相应的归一化结果</div>
+      <div class="claim-text">加权求和步骤，其将各所述归一化结果乘以对应的权值(w1，w2，w3，w4)并求和，从而得到加权求和结果</div>
+      <div class="claim-text">输出步骤，用于将所述求和结果(S)通过输出函数进行处理，而获得并输出所述神经网络控制器输出(f(S))，</div>
+      <div class="claim-text">其中，所述权值(w1，w2，w3，w4)的更新算法为其中</div>
+      <div class="claim-text">xi为该权值的对应输入，</div>
+      <div class="claim-text">γ2为一个预设的神经网络学习速率。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58342004" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">位置伺服系统与方法</invention-title>
+    <technical-field>
+      <p>[0001] 技术领域</p>
+      <p>[0002] 本发明涉及一种应用于伺服系统的神经网络自适应控制方法，用于伺服系统的高精度控制。</p>
+    </technical-field>
+    <background-art>
+      <p>[0003] 技术背景</p>
+      <p>[0004] 伺服系统是复杂的机电控制系统，其本质可以视为一个由电动机拖动的的位置闭环控制系统，其在国民生产和国防建设中起着重要的作用。由于其在各领域中占有十分重要的地位，所以对其性能的要求也不断提高，尤其在国防军事和航空航天等尖端领域。从当前国内外伺服系统总的发展趋势可以看出，“高频响、超低速、高精度”是其主要发展方向。其中，“高频响”是反映伺服系统跟踪高频信号的能力，即在位置指令信号不断变化时系统的跟踪能力。“超低速”，是反映系统的低速平稳性，影响低速特性的主要因素是机械摩擦，必须采用一定的控制方法对摩擦进行补偿。“高精度”是指系统跟踪指令信号的准确程度。</p>
+      <p>[0005] 存在于伺服系统中的机械摩擦、电路参数的飘移、轴系间的力矩耦合、环境干扰、以及轴系间的不垂直度或不交度而引起的系统负载力矩的不平衡、机械装置刚度不足而引起的机械变形、负载的波动以及电机本身的齿槽效应等许多非线性的、不确定性等因素，给伺服系统的控制造成了很多困难，对系统的精度影响很大。因此，消除这些干扰源引起的扰动并克服各种非线性因素对系统带来的影响是实现伺服系统高精度控制的关键。</p>
+      <p>[0006] 经典的伺服系统设计一般采用传统的“三环”结构的PID控制方法(参见图3)，由内到外是电流环、速度环和位置环。电流环和速度环的作用是提高系统的刚度来抑制系统的非线性及外部扰动，控制系统的精度由位置环来保证。但这种传统控制方法的适应性差，在系统受扰的情况下控制精度低，不适合高精度控制的场合。而本发明能够很好的抑制系统的参数摄动、摩擦干扰和负载变化带来的扰动；在对象的非线性和不确定性较强的情况下也可以正常运行，极大的提高了伺服系统的控制精度。</p>
+    </background-art>
+    <disclosure>
+      <p>[0007] 发明内容</p>
+      <p>[0008] 为了提高伺服系统的控制精度，特别是提高伺服系统在存在非线性和不确定性以及系统的参数摄动、摩擦干扰和负载变化等干扰情况下的控制精度，提出一种应用于伺服系统的神经网络自适应控制方法。本发明实现了对伺服系统的非线性补偿和干扰抑制，提高了伺服系统的跟踪精度。本发明是在传统的控制方法的基础上加入了神经网络自适应控制的方法，极大的提高了系统的鲁棒性，使系统对各种干扰都能够进行快速有效的抑制，达到极高的控制精度。并且基于Lyapunov稳定性理论的自适应控制算法确保了该方法的稳定性。另外，在速度环精确参考模型的基础上，位置环控制器的设计也变得非常的简单，使整个系统的设计工作变得相当方便，易于在工程实际中实施。</p>
+      <p>[0009] 根据本发明的一个方面，提供了一种位置伺服系统，包括：一个位置环控制器，用于接收一个位置误差，并产生一个速度指令；一个自适应控制器，用于接收所述速度指令、一个模型误差和一个伺服对象速度信号，并产生一个自适应控制器输出；一个神经网络控制器，用于接收所述伺服对象速度信号、一个控制信号和所述模型误差，并输出一个神经网络控制器输出；一个参考模型，用于接收所述速度指令并产生一个参考模型输出；一个第一加法器，用于把所述自适应控制器输出和所述神经网络控制器的输出相加，从而产生所述控制信号；一个伺服执行装置，用于在所述控制信号的控制下，进行伺服操作；一个速度检测装置，用于测量所述位置伺服系统的伺服对象的速度，从而生成所述伺服对象速度信号；一个位置测量装置，用于测量所述位置伺服系统的伺服对象的位置，并生成一个控制对象位置输出；一个第二加法器，用于把所述所述伺服对象速度与所述参考模型输出相减，从而生成所述模型误差；一个第三加法器，用于把所述控制对象位置输出和所述位置伺服系统所接收到的一个位置指令相减，从而生成所述位置误差。</p>
+      <p>[0010] 根据本发明的一个进一步的方面，上述自适应控制器进一步包括：一个第一乘法器，用于接收所述速度指令和所述模型误差信号，并将二者相乘；一个第一积分-放大装置，用于把第一乘法器的输出积分并乘以一个第一学习速率的负值，从而生成一个第一自适应参数；一个第三乘法器，用于把所述第一自适应参数与所述速度指令相乘；一个第二乘法器，用于接收所述伺服对象速度和所述模型误差信号，并将二者相乘；一个第二积分-放大器，用于把第二乘法器的输出积分并乘以一个第二学习速率，从而生成一个第二自适应参数；一个第四乘法器，用于把所述的第二自适应参数与所述伺服对象速度相乘；一个加法器，用于接收所述的第三和第四乘法器的输出，并把两者相减，作为所述自适应控制器输出。</p>
+      <p>[0011] 根据本发明的一个进一步的方面，上述神经网络控制器进一步包括：归一化部分，用于对所述控制信号和所述伺服对象速度的当前采样时刻的值和前一采样时刻的值进行归一化，得到相应的归一化结果；加权求和部分，用于将各所述归一化结果乘以对应的权值并求和，从而得到加权求和结果；输出部分，用于将所述求和结果通过输出函数进行处理，而获得并输出所述神经网络控制器输出，其中，所述权值的更新算法为其中xi为该权值的对应输入，γ2为一个预设的神经网络学习速率。</p>
+      <p>[0012] 根据本发明的另一个方面，提供了用于一种位置伺服系统的一种自适应控制器，所述位置伺服系统包括：一个位置环控制器，用于接收一个位置误差，并产生一个速度指令；所述自适应控制器，用于接收所述速度指令、一个模型误差和一个伺服对象速度信号，并产生一个自适应控制器输出；一个神经网络控制器，用于接收所述伺服对象速度信号、一个控制信号和所述模型误差，并输出一个神经网络控制器输出；一个参考模型，用于接收所述速度指令并产生一个参考模型输出；一个第一加法器，用于把所述自适应控制器输出和所述神经网络控制器的输出相加，从而产生所述控制信号；一个伺服执行装置，用于在所述控制信号的控制下，进行伺服操作；一个速度检测装置，用于测量所述位置伺服系统的伺服对象的速度，从而生成所述伺服对象速度信号；一个位置测量装置，用于测量所述位置伺服系统的伺服对象的位置，并生成一个控制对象位置输出；一个第二加法器，用于把所述所述伺服对象速度与所述参考模型输出相减，从而生成所述模型误差；一个第三加法器，用于把所述控制对象位置输出和所述位置伺服系统所接收到的一个位置指令相减，从而生成所述位置误差，其特征在于所述自适应控制器进一步包括：一个第一乘法器，用于接收所述速度指令和所述模型误差信号，并将二者相乘；一个第一积分-放大装置，用于把第一乘法器的输出积分并乘以一个第一学习速率的负值，从而生成一个第一自适应参数；一个第三乘法器，用于把所述第一自适应参数与所述速度指令相乘；一个第二乘法器，用于接收所述伺服对象速度和所述模型误差信号，并将二者相乘；一个第二积分-放大器，用于把第二乘法器的输出积分并乘以一个第二学习速率，从而生成一个第二自适应参数；一个第四乘法器，用于把所述的第二自适应参数与所述伺服对象速度相乘；一个加法器，用于接收所述的第三和第四乘法器的输出，并把两者相减，作为所述自适应控制器输出。</p>
+      <p>[0013] 根据本发明的另一个方面，提供了一种位置伺服方法，包括：用一个位置环控制器接收一个位置误差并产生一个速度指令；用一个自适应控制器接收所述速度指令、一个模型误差和一个伺服对象速度信号，并产生一个自适应控制器输出；用一个神经网络控制器，用于接收所述伺服对象速度信号、一个控制信号和所述模型误差，并输出一个神经网络控制器输出；用一个参考模型接收所述速度指令并产生一个参考模型输出；用一个第一加法器，把所述自适应控制器输出和所述神经网络控制器的输出相加，从而产生所述控制信号；借助一个伺服执行装置，在所述控制信号的控制下，进行伺服操作；借助一个速度检测装置，测量所述位置伺服系统的伺服对象的速度，从而生成所述伺服对象速度信号；借助一个位置测量装置，测量所述位置伺服系统的伺服对象的位置，并生成一个控制对象位置输出；在一个第二加法器，把所述所述伺服对象速度与所述参考模型输出相减，从而生成所述模型误差；在一个第三加法器，把所述控制对象位置输出和所述位置伺服系统所接收到的一个位置指令相减，从而生成所述位置误差。</p>
+      <p>[0014] 根据本发明的一个进一步的方面，上述用所述自适应控制器产生一个自适应控制器输出的所述步骤进一步包括：在一个第一乘法器，把所述速度指令和所述模型误差信号相乘；在一个第一积分-放大装置，把第一乘法器的输出积分并乘以一个第一学习速率的负值，从而生成一个第一自适应参数；在一个第三乘法器，把所述第一自适应参数与所述速度指令相乘；在一个第二乘法器，把所述伺服对象速度和所述模型误差信号相乘；在一个第二积分-放大器，把第二乘法器的输出积分并乘以一个第二学习速率，从而生成一个第二自适应参数；在一个第四乘法器，把所述的第二自适应参数与所述伺服对象速度相乘；在一个加法器，把所述的第三和第四乘法器的输出相减，并将相减的结果作为所述自适应控制器输出。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>[0015] 附图说明</p>
+      <p>[0016] 图1是本发明的自适应控制器的详细结构示意图；</p>
+      <p>[0017] 图2是根据本发明的一个实施例的位置伺服系统的示意图；</p>
+      <p>[0018] 图3是传统的“三环”结构的经典伺服系统的示意图；</p>
+      <p>[0019] 图4是根据本发明的另一个实施例的位置伺服系统的示意图；</p>
+      <p>[0020] 图5是图4所示的实施例的系统框图；</p>
+      <p>[0021] 图6用于说明图2、4、5中的神经网络控制器的内部结构；</p>
+      <p>[0022] 图7和8用于比较本发明和现有技术的应用实例的效果对比。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>[0023] 具体实施方式</p>
+      <p>[0024] 根据本发明的一个实施例的伺服系统控制器的理论结构如图4所示。系统由位置闭环和位置闭环内部的模型参考自适应控制结构组成，图5是系统框图。图4、图5中编号部分是对应的。现分别介绍组成系统的几个模块：</p>
+      <p>[0025] 1)位置环控制器</p>
+      <p>[0026] 图4、图5中编号1的模块为位置环控制器。位置环控制器的输入为位置指令和位置输出的差值，其输出为速度环指令。多种类型的控制器可以作为位置环控制器在此处使用，例如PID控制器(比例、积分、微分控制器)和P控制器(比例控制器)，但不仅限于这两种控制器。在本方案中推荐选用简单的P控制器，其输入输出关系可以写为r＝Kp(θd-θ)，Kp为人为选定的常数。该控制器可以由计算机软件实现，也可以用硬件电路实现。</p>
+      <p>[0027] 2)被控对象模块</p>
+      <p>[0028] 图4、图5中编号为2的模块为系统的被控对象，即整个控制系统的控制对象。伺服系统的被控对象通常为电机，以及用于驱动电机的功率放大器装置，同时还可以包含有通过某种形式构成的电流环。图4中所示为该模块的一种可能的结构，但不仅限于这种结构。该模块输入为控制器输出u，输出为电机转速ω。其输入输出关系可由下列微分方程描述：</p>
+      <p>[0029] </p>
+      <p>[0030] 其中J、B表示电机的转动惯量和粘性摩擦系数。Td表示等效干扰转矩，例如摩擦力矩、由于机械形变在而传动轴上产生的弹性力矩等。ia，ua，La分别表示电枢电流，电枢电压和电枢电感。K表示力矩系数。Km为功率放大装置的放大系数。</p>
+      <p>[0031] 3)输出模块</p>
+      <p>[0032] 图4、图5中编号为3的模块为系统的输出模块，这是一个机械传动机构。其作用为将电机的旋转运动转化为其他种类的运动形式，实现伺服运动。通常情况下，这个模块的输入为被控对象模块的输出，输出为伺服运动的线位移或角位移。</p>
+      <p>[0033] 4)参考模型模块</p>
+      <p>[0034] 图4、图5中编号为4的部分是系统的参考模型模块，可以通过计算机软件实现，也可以利用硬件电路实现。该模块的输入为位置环控制器的输出，其输出为参考模型输出。这个模块的输入输出关系为这个关系是按照理想的直流电机模型拟定的。其目的在于提供一个参考的对象给控制器，自适应控制器和神经网络控制器将以此为标准，有目的的调整系统，使速度输出信号与参考模型输出一致。式中ωm是参考模型的输出。am和bm是模型参数，可以利用常用的系统辨识的方法测得。本发明的特点在于不需要被控对象的精确模型，常用的简单的辨识方法测得的对象模型就可以在系统中使用，这是本方法与其他模型参考方法的重要区别。</p>
+      <p>[0035] 5)神经网络控制器模块</p>
+      <p>[0036] 图4、图5中编号为5的部分是神经网络控制器模块，其具体结构参见图6，在系统中用计算机软件实现，也可以用硬件电路实现。该模块的输入为控制信号u，速度输出ω和模型误差eω，输出为神经网络控制器输出un。</p>
+      <p>[0037] 如图6所示，在本发明的神经网络控制器中，首先对u，ω的当前采样时刻的值(uk，ωk)和前一采样时刻的值(uk-1，ωk-1)进行归一化，得到</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>归一化方法可以使用常用的各种归一化方法，这里推荐使用的归一化方法是用某输入的当前值除以该输入历史峰值的绝对值。例如，其中</p>
+      <p>[0038] umax＝max{u1，u2，…，uk}。然后将归一化后的各输入乘以对应的权值并求和，为得到</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>后再通过输出函数输出，这里推荐的输出函数为其他类型的输出函数也是可以使用。f(S)是该模块的最终输出值。其中，神经网络权值w1，w2，w3，w4的更新算法为</p>
+      <p>[0039] </p>
+      <p>[0040] 其中γ2为神经网络学习速率，这个数值可以根据系统的不同做人为的调整。</p>
+      <p>[0041] 以上描述的只是多种适合于本发明的几种神经网络结构中的一种，常用的小脑模型人工神经网络，径向基函数人工神经网络等几种网络也可以用做本发明中的神经网络。</p>
+      <p>[0042] 6)自适应控制器模块</p>
+      <p>[0043] 图4、图5中编号为6的部分为自适应控制器模块，可以由计算机软件实现也可用硬件实现。该模块的输入为速度指令r，速度输出ω和模型误差eω，输出为自适应控制器输出u1。为了保证系统稳定，根据理论推导(详见下文)，本模块的输入输出之间有如下关系：其中，γ11和γ12为人为选取的神经网络学习速率。</p>
+      <p>[0044] 图2显示了本发明的另一种实施方式。与图4和5所示的实施方式相比，图2所示的实施方式没有闭合的电流环(即没有“电流反馈”部分)，而且图2中显示了速度检测装置208和位置检测装置209。图2与图4中相对应的部分均相同，因而不再对它们做重复说明。</p>
+      <p>[0045] 图1显示了图2、4、5中的自适应控制器的结构。如图1所示，该自适应控制器进一步包括：第一乘法器101，用于接收所述速度指令r和模型误差信号eω，并将二者相乘；第一积分-放大装置102，用于把第一乘法器的输出积分并乘以一个第一学习速率γ11的负值，从而生成一个第一自适应参数θ1；第三乘法器103，用于把第一自适应参数θ1与速度指令r相乘；第二乘法器104，用于接收伺服对象速度ω和模型误差信号eω，并将二者相乘；第二积分-放大器105，用于把第二乘法器的输出积分并乘以一个第二学习速率γ12，从而生成一个第二自适应参数θ2；第四乘法器106，用于把第二自适应参数θ2与伺服对象速度ω相乘；加法器107，用于接收第三和第四乘法器的输出，并把两者相减，作为自适应控制器输出。</p>
+      <p>[0046] 神经网络自适应控制器设计的理论依据</p>
+      <p>[0047] 控制系统除了精度要求之外，另外一个很重要的要求是系统的稳定性要求。要实现一个系统的自动控制，就必须保证系统的稳定。反之，一个不稳定的系统在实际生产中可能发生的失控情况将是不可接受的。实际生产中一旦发生系统失控，通常会造成财产损失，有时甚至是人员伤亡。因而，系统稳定性的分析或证明是一个完善的控制系统设计的不可缺的组成部分。</p>
+      <p>[0048] 本发明有着坚实的理论基础和严格的稳定性证明，这可以确保本发明能够很好很安全的应用于实际生产。以下是本发明的理论依据：</p>
+      <p>[0049] 伺服系统的动态特性可以由以下方程描述</p>
+      <p>[0050] </p>
+      <p>[0051] </p>
+      <p>[0052] θ＝∫ωdt&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(3)</p>
+      <p>[0053] 其中J、B表示电机的转动惯量和粘性摩擦系数。ω表示电机的角速。Td表示等效干扰转矩，例如摩擦力矩、由于机械形变在而传动轴上产生的弹性力矩等。ia，ua，La分别表示电枢电流，电枢电压和电枢电感。K表示力矩系数。θ是电机转角的角位置。由于电枢电感很小，即La≈0，在实际中通常将其忽略。从等式(1)到(3)可以得到以下动态方程，</p>
+      <p>[0054] </p>
+      <p>[0055] </p>
+      <p>[0056] 令</p>
+      <p>[0057] 那么等式(1)可以重新写成</p>
+      <p>[0058] </p>
+      <p>[0059] 进一步，令</p>
+      <p>[0060] 可以得到</p>
+      <p>[0061] </p>
+      <p>[0062] 根据上式可以选择速度环参考模型如下</p>
+      <p>[0063] </p>
+      <p>[0064] 其中，am，bm是根据最小二乘算法测得的电机模型估计参数。</p>
+      <p>[0065] 定义模型误差eω＝ω-ωm.</p>
+      <p>[0066] 定义控制器结构如下，</p>
+      <p>[0067] u＝u1+un&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(9)</p>
+      <p>[0068] 其中u1＝θ1r-θ2ω为自适应控制器的输出，un是神经网络控制器的输出。</p>
+      <p>[0069] 定义，un＝WTX，un*＝W*TX，W是神经网络的权值向量，X是神经网络的输入，un*是神经网络的优化输出，W*是优化权值向量。那么根据神经网络的逼近定理有max|un*-udr|＜ε，其中ε是一个给定的任意小的正常数，定义</p>
+      <p>[0070] 那么模型误差对时间的导数为，</p>
+      <p>[0071] </p>
+      <p>[0072] </p>
+      <p>[0073] </p>
+      <p>[0074] </p>
+      <p>[0075] </p>
+      <p>[0076] </p>
+      <p>[0077] </p>
+      <p>[0078] 从上式可以得到，当a+bθ2-am，bθ1-bm，</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>bun**-udr为零时，模型误差eω按指数收敛到零</p>
+      <p>[0079] 定义Lyapunov函数如下，</p>
+      <p>[0080] </p>
+      <p>[0081] 当趋近于零时，V趋近于零。V对时间t的导数为</p>
+      <p>[0082] </p>
+      <p>[0083] 从等式(2)和(3)，可以得到</p>
+      <p>[0084] </p>
+      <p>[0085] </p>
+      <p>[0086] </p>
+      <p>[0087] 根据Lyapunov稳定性理论，当</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>bun*-udr为零时，有系统可以保证稳定。</p>
+      <p>[0088] 因此可以选取MRAC更新算法，如下</p>
+      <p>[0089] </p>
+      <p>[0090] 选取神经网络控制器权值更新算法，</p>
+      <p>[0091] </p>
+      <p>[0092] 其中，γ11，γ12，γ2是人工选定的学习速率，将(5)，(6)带入(4)有，</p>
+      <p>[0093] </p>
+      <p>[0094] </p>
+      <p>[0095] 当时，保证了速度环的稳定性。</p>
+      <p>[0096] 由以上分析推导，速度环的实际动态特性将跟踪参考模型的动态特性。位置环控制器可以按照速度环参考模型来设计。这样，很容易保证整个位置闭环系统的稳定性。</p>
+      <p>[0097] 本发明利用自适应算法可以在线、实时调节参数的特点，通过对参数数值的改变达到对系统稳定控制的目的。同时神经网络算法具有较快的收敛速度、能够逼近复杂的非线性函数和自学习能力等特点，分布并行处理，非线性映射，鲁棒容错和泛化能力强等特性，使得它在学习过程中实现了对伺服系统的噪声抑制作用及非线性补偿。</p>
+      <p>[0098] 本发明与现有技术相比的优点在于：</p>
+      <p>[0099] 采用自适应和神经网络相结合的控制方法，有效地克服了非线性误差对伺服系统控制精度的影响。</p>
+      <p>[0100] 本发明采用自适应算法，可在线调节参数控制系统，具有操作简单，成本低廉的特点。</p>
+      <p>[0101] 本发明对伺服系统的控制不需要建立在对象精确建模的基础上，节省了建模的费用。</p>
+      <p>[0102] 本发明说明书中未作详细描述的内容属于本领域专业技术人员公知的现有技术。</p>
+      <p>[0103] 实施实例</p>
+      <p>[0104] 本实施例中各模块中的参数分别为：am＝150，bm＝1000，γ11＝5，γ12＝5，γ2＝1，Kp＝1。位置指令θd为幅值为0.5°，频率为3Hz的正弦信号。</p>
+      <p>[0105] 图7、图8给出了采用本发明前后在位置误差的实验曲线图。</p>
+      <p>[0106] 图7为未采用本发明的位置跟踪误差曲线，横坐标为时间t(单位：s)，纵坐标为位置误差eθ(单位：度)。</p>
+      <p>[0107] 图8为采用本发明的位置跟踪误差曲线，横坐标为时间t(单位：s)，纵坐标为位置误差eθ(单位：度)。</p>
+      <p>[0108] 通过对比图7、图8可以看出，采用本发明后系统的位置误差小于未采用本发明时系统位置误差的一半。本发明在抑制噪声干扰、非线性方面也有着很好的效果，</p>
+      <p>[0109] 从图7、图8可以看出，伺服系统受到的摩擦等扰动以及上文提及的其他非线性，不确定性因素都可以被本发明有效的抑制，从而得到很高的控制精度。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102156485A?cl=zh">CN102156485A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月22日</td><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">哈尔滨工业大学</td><td class="patent-data-table-td ">重载机器人带加速度及电流前馈的位置控制器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102509887A?cl=zh">CN102509887A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年10月27日</td><td class="patent-data-table-td patent-date-value">2012年6月20日</td><td class="patent-data-table-td ">零八一电子集团有限公司</td><td class="patent-data-table-td ">线性变系数伺服驱动雷达天线跟踪运动目标的伺服系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102509887B?cl=zh">CN102509887B</a></td><td class="patent-data-table-td patent-date-value">2011年10月27日</td><td class="patent-data-table-td patent-date-value">2014年3月26日</td><td class="patent-data-table-td ">零八一电子集团有限公司</td><td class="patent-data-table-td ">线性变系数伺服驱动雷达天线跟踪运动目标的伺服系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102799107A?cl=zh">CN102799107A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月28日</td><td class="patent-data-table-td patent-date-value">2012年11月28日</td><td class="patent-data-table-td ">成都乐创自动化技术股份有限公司</td><td class="patent-data-table-td ">基于微型神经网络的步进电机pid参数自匹配方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102799107B?cl=zh">CN102799107B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月28日</td><td class="patent-data-table-td patent-date-value">2015年3月18日</td><td class="patent-data-table-td ">成都乐创自动化技术股份有限公司</td><td class="patent-data-table-td ">基于微型神经网络的步进电机pid参数自匹配方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102820839A?cl=zh">CN102820839A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月10日</td><td class="patent-data-table-td patent-date-value">2012年12月12日</td><td class="patent-data-table-td ">北京理工大学</td><td class="patent-data-table-td ">一种齿隙传动中电机伺服系统精确定位的方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=ZaV0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0011400000">G05B11/40</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=ZaV0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0011320000">G05B11/32</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=ZaV0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05D0003120000">G05D3/12</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=ZaV0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0013020000">G05B13/02</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年11月4日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年1月27日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年1月11日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年6月17日</td><td class="patent-data-table-td ">C17</td><td class="patent-data-table-td ">Cessation of patent right</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/cae78ef49899d1854b26/CN101571705A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%BD%8D%E7%BD%AE%E4%BC%BA%E6%9C%8D%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%96%B9%E6%B3%95.pdf?id=ZaV0BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2W_ksHBgw0-bXBV-rDyRSzX6cXNA"},"sample_url":"https://www.google.com/patents/reader?id=ZaV0BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

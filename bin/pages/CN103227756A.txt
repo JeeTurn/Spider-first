@@ -1,0 +1,269 @@
+<!DOCTYPE html><html><head><title>专利 CN103227756A - 在线协议优化方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="在线协议优化方法和装置"><meta name="DC.contributor" content="何顺超" scheme="inventor"><meta name="DC.contributor" content="郑明 " scheme="inventor"><meta name="DC.contributor" content="莫默" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2013-4-17" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了一种在线协议优化方法和装置。所述方法包括：采集深度包检测DPI系统在运行过程中产生的计数信息；根据所述计数信息生成优化指令；将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。本发明实施例提供的在线协议优化方法和装置，能够在线获取DPI系统的信息，通过识别失效规则、检测规则优先级，以及识别协议关联项的命中频率，相应地生成规则更新调整的优化指令和/或老化时间调整的优化指令并下发DPI系统执行，实现了对DPI系统在线协议识别优化。"><meta name="DC.date" content="2013-7-31"><meta name="DC.relation" content="CN:102035685:A" scheme="references"><meta name="DC.relation" content="CN:102045347:A" scheme="references"><meta name="DC.relation" content="CN:102045363:A" scheme="references"><meta name="DC.relation" content="US:20070091901:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:103227756:A"><meta name="citation_patent_application_number" content="CN:201310133129"><link rel="canonical" href="https://www.google.com/patents/CN103227756A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103227756A?cl=zh"/><meta name="title" content="专利 CN103227756A - 在线协议优化方法和装置"/><meta name="description" content="本发明实施例公开了一种在线协议优化方法和装置。所述方法包括：采集深度包检测DPI系统在运行过程中产生的计数信息；根据所述计数信息生成优化指令；将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。本发明实施例提供的在线协议优化方法和装置，能够在线获取DPI系统的信息，通过识别失效规则、检测规则优先级，以及识别协议关联项的命中频率，相应地生成规则更新调整的优化指令和/或老化时间调整的优化指令并下发DPI系统执行，实现了对DPI系统在线协议识别优化。"/><meta property="og:title" content="专利 CN103227756A - 在线协议优化方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103227756A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103227756A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=6QPJCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103227756A&amp;usg=AFQjCNFFyK1OQUuFldjvol8NC7uPSvRdDg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/5a5cd75408697a18c7aa/CN103227756A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/5a5cd75408697a18c7aa/CN103227756A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103227756A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103227756A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103227756A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了一种在线协议优化方法和装置。所述方法包括：采集深度包检测DPI系统在运行过程中产生的计数信息；根据所述计数信息生成优化指令；将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令...</span><span itemprop="url">https://www.google.com/patents/CN103227756A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103227756A - 在线协议优化方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103227756A - 在线协议优化方法和装置" title="专利 CN103227756A - 在线协议优化方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103227756 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310133129</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年7月31日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年4月17日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年4月17日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310133129.5, </span><span class="patent-bibdata-value">CN 103227756 A, </span><span class="patent-bibdata-value">CN 103227756A, </span><span class="patent-bibdata-value">CN 201310133129, </span><span class="patent-bibdata-value">CN-A-103227756, </span><span class="patent-bibdata-value">CN103227756 A, </span><span class="patent-bibdata-value">CN103227756A, </span><span class="patent-bibdata-value">CN201310133129, </span><span class="patent-bibdata-value">CN201310133129.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BD%95%E9%A1%BA%E8%B6%85%22">何顺超</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%91%E6%98%8E%EF%BF%BD%22">郑明 </a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%8E%AB%E9%BB%98%22">莫默</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103227756A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103227756A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103227756A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=6QPJCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310133129&amp;usg=AFQjCNHHagpZlc1QyhuSWZS0mpQjsMTppw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=6QPJCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103227756A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNE3Oga-Wi6-3Nf-vWwg6ZWE7rVgYA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT126850259" lang="ZH" load-source="patent-office">在线协议优化方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 103227756 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA118292643" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了一种在线协议优化方法和装置。所述方法包括：采集深度包检测DPI系统在运行过程中产生的计数信息；根据所述计数信息生成优化指令；将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。本发明实施例提供的在线协议优化方法和装置，能够在线获取DPI系统的信息，通过识别失效规则、检测规则优先级，以及识别协议关联项的命中频率，相应地生成规则更新调整的优化指令和/或老化时间调整的优化指令并下发DPI系统执行，实现了对DPI系统在线协议识别优化。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(16)</span></span></div><div class="patent-text"><div mxw-id="PCLM53865665" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种在线协议优化方法，其特征在于，所述方法包括:  采集深度包检测DPI系统在运行过程中产生的计数信息；  根据所述计数信息生成优化指令；  将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述计数信息包括关联项的命中次数、命中时间以及所述关联项与应用层协议的对应关系，所述根据所述计数信息生成优化指令具体包括:  基于所述计数信息中包含的所述关联项的命中次数和命中时间计算得到单位时间内的所述关联项的命中次数，当单位时间内所述关联项的命中次数不小于第一阈值时，生成延长所述关联项所对应的应用层协议的老化时间的第一优化指令；当单位时间内所述关联项的命中次数不大于第二阈值时，生成减少所述关联项所对应的应用层协议的老化时间的第二优化指令；其中，所述第二阈值小于所述第一阈值；  所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:  将所述生成的所述第一优化指令或者所述第二优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述关联项所对应的应用层协议的老化时间。</div>
+    </div>
+    </div> <div class="claim"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利 要求1所述的方法，其特征在于，所述计数信息包括多个关联项的计数信息，其中，每个关联项的计数信息包括:该关联项的命中次数、命中时间以及该关联项与应用层协议的对应关系，所述根据所述计数信息生成优化指令具体包括:  基于各个关联项的命中次数和命中时间，以及关联项与应用层协议的对应关系，计算得到每个应用层协议所对应的所有关联项的平均命中频率；当所述每个应用层协议对应的所有关联项的平均命中频率不小于第三阈值时，生成延长所述每个应用层协议老化时间的第三优化指令；当协议对应的每个关联项的平均命中频率不大于第四阈值时，生成减少所述每个应用层协议老化时间的第四优化指令；其中，所述第四阈值小于所述第三阈值；  所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:  将所述生成的所述第三优化指令或者所述第四优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每个应用层协议的老化时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所述的方法，其特征在于，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的规则ID和每个所述规则的命中时间，所述根据所述计数信息生成优化指令具体包括:  根据所述计数信息中各个规则的最晚命中时间识别失效的规则；  生成用以删除所述失效的规则的第五优化指令；  所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:  将所述生成的所述第五优化指令发送给所述DPI系统，以使所述DPI系统从自身的协议特征库中删除所述失效的规则。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的方法，其特征在于，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的优先级、规则ID和所述规则ID对应的规则的命中次数和命中时间；所述根据所述计数信息生成优化指令，具体包括:  基于每一个规则的命中次数和命中时间，计算得到所述每一个规则的命中频率；当所述每一个规则的命中频率不小于第五阈值时，生成用以提高所述每一个规则的优先级的第六优化指令；  当所述每一个规则的命中频率小于第六阈值时，生成用以降低所述每一个规则的优先级的第七优化指令；  所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:  将所述生成的所述第六优化指令或者所述第七优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每一个规则的优先级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，所述第五阈值具体为所述规则所属协议中所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述规则所属协议中所有规则的命中频率的平均值的一半。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求5所述的方法，其特征在于，所述第五阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的一半。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求1所述的方法，其特征在于，所述方法还包括:  在所述采集深度包检测DPI系统的计数信息之后，将所述计数信息进行汇总，并将汇总的计数信息存放在数据库中。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.一种在线协议优化装置，其特征在于，所述装置包括:  计数信息收集模块，用于采集深度包检测DPI系统在运行过程中产生的计数信息；  处理模块，用于根据计数信息收集模块采集到的所述计数信息生成优化指令；  策略下发模块，用于将所述处理模块生成的所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的装置，其特征在于，所述计数信息包括关联项的命中次数、命中时间以及所述关联项与应用层协议的对应关系，所述处理模块包括:老化时间评估单元，用于根据所述计数信息中包含的所述关联项的命中次数和命中时间计算得到单位时间内的所述关联项的命中次数；  优化指令生成单元，用于当单位时间内所述关联项的命中次数不小于第一阈值时，生成延长所述关联项所对应的应用层协议的老化时间的第一优化指令；当单位时间内所述关联项的命中次数不大于第二阈值时，生成减少所述关联项所对应的应用层协议的老化时间的第二优化指令；其中，所述第二阈值小于所述第一阈值；  所述策略下发模块具体用于，将所述生成的所述第一优化指令或者所述第二优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述关联项所对应的应用层协议的老化时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求9所述的装置，其特征在于，所述计数信息包括多个关联项的计数信息，其中，每个关联项的计数信息包括:该关联项的命中次数、命中时间以及该关联项与应用层协议的对应关系，所述处理模块包括:老化时间评估单元，用于，基于各个关联项的命中次数和命中时间，以及关联项与应用层协议的对应关系，计算得到每个应用层协议所对应的所有关联项的平均命中频率；  优化指令生成单元，用于当所述每个应用层协议对应的所有关联项的平均命中频率不小于第三阈值时，生成延长所述每个应用层协议老化时间的第三优化指令；当协议对应的每个关联项的平均命中频率不大于第四阈值时，生成减少所述每个应用层协议老化时间的第四优化指令；其中，所述第四阈值小于所述第三阈值；  所述策略下发模块具体用于，将所述生成的所述第三优化指令或者所述第四优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每个应用层协议的老化时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求9所述的装置，其特征在于，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的规则ID和每个所述规则的命中时间，所述处理模块包括:  规则状态评估单元，用于根据所述计数信息中各个规则的最晚命中时间识别失效的规则；  优化指令生成单元，用于生成用以删除所述规则状态评估单元识别出的失效的规则的第五优化指令；  所述策略下发模块具体用于，将所述生成的所述第五优化指令发送给所述DPI系统，以使所述DPI系统从自身的协议特征库中删除所述失效的规则。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求9所述的装置，其特征在于，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的优先级、规则ID和所述规则ID对应的规则的命中次数和命中时间，所述处理模块包括:  规则状态评估模块，用于根据每一个规则的命中次数和命中时间，计算得到所述每一个规则的命中频率；  优化指令生成单元，用于当所述每一个规则的命中频率不小于第五阈值时，生成用以提高所述每一个规则的优先级的第六优化指令；当所述每一个规则的命中频率小于第六阈值时，生成用以降低所述每一个规则的优先级的第七优化指令；  所述策略下发模块具体用于，将所述生成的所述第六优化指令或者所述第七优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每一个规则的优先级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的装置，其特征在于，所述第五阈值具体为所述规则所属协议中所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述规则所属协议中所有规则的命中频率的平均值的一半。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求13所述的装置，其特征在于，所述第五阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的一半。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求9所述的装置，其特征在于，所述装置还包括:  数据库管理模块，用于在所述采集深度包检测DPI系统的计数信息之后，将所述计数信息进行汇总，并将汇总的计数信息存放在数据库中。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES60895495" lang="ZH" load-source="patent-office" class="description">
+    <p>在线协议优化方法和装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及网络数据处理技术领域，尤其涉及一种在线协议优化方法和装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着新的网络协议不断涌现,深度包检测(Deep Packet Inspection, DPI)设备需要及时更新协议特征库以支持新协议。而随着特征库中协议和协议规则的增加，DPI设备性能会不断下降，从而导致网络延迟增加、用户体验变差。DPI设备的主要消耗在其对网络流量的识别过程，因此优化DPI识别系统的性能是提升DPI设备竞争力的一个重要途径。</p>
+    <p>[0003]	离线进行识别优化是现有DPI设备提供商进行DPI性能优化的常用技术，通过定期从现网收集样本，进行线下性能评估，经过人工分析和制定优化策略来调整知识库，再将知识库更新到DPI识别系统中。离线进行识别优化离开了真实的运行环境，无法保证优化后的知识库在线网运行的效果。因为分析与优化策略的制定都需要人工参与，因此工作周期长、效率低、时效性差，还存在个人隐私泄露的风险。</p>
+    <p>发明内容</p>
+    <p>[0004]	本发明实施例提供了一种在线协议优化方法和装置，可以实现DPI系统的在线协议优化，提高协议优化的实时性和可靠性。</p>
+    <p>[0005]	在第一方面，本发明实施例提供了一种在线协议优化方法，所述方法包括:</p>
+    <p>[0006]	采集深度包检测DPI系统在运行过程中产生的计数信息；</p>
+    <p>[0007]	根据所述计数信息生成优化指令；</p>
+    <p> [0008]	将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。</p>
+    <p>[0009]	在第一种可能的实现方式中，所述计数信息包括关联项的命中次数、命中时间以及所述关联项与应用层协议的对应关系，所述根据所述计数信息生成优化指令具体包括:</p>
+    <p>[0010]	基于所述计数信息中包含的所述关联项的命中次数和命中时间计算得到单位时间内的所述关联项的命中次数，当单位时间内所述关联项的命中次数不小于第一阈值时，生成延长所述关联项所对应的应用层协议的老化时间的第一优化指令；当单位时间内所述关联项的命中次数不大于第二阈值时，生成减少所述关联项所对应的应用层协议的老化时间的第二优化指令；其中，所述第二阈值小于所述第一阈值；</p>
+    <p>[0011]	所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:</p>
+    <p>[0012]	将所述生成的所述第一优化指令或者所述第二优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述关联项所对应的应用层协议的老化时间。</p>
+    <p>[0013]	在第二种可能的实现方式中，所述计数信息包括多个关联项的计数信息，其中，每个关联项的计数信息包括:该关联项的命中次数、命中时间以及该关联项与应用层协议的对应关系，所述根据所述计数信息生成优化指令具体包括:[0014]	基于各个关联项的命中次数和命中时间，以及关联项与应用层协议的对应关系，计算得到每个应用层协议所对应的所有关联项的平均命中频率；</p>
+    <p>[0015]	当所述每个应用层协议对应的所有关联项的平均命中频率不小于第三阈值时，生成延长所述每个应用层协议老化时间的第三优化指令；当协议对应的每个关联项的平均命中频率不大于第四阈值时，生成减少所述每个应用层协议老化时间的第四优化指令；其中，所述第四阈值小于所述第三阈值；</p>
+    <p>[0016]	所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:</p>
+    <p>[0017]	将所述生成的所述第三优化指令或者所述第四优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每个应用层协议的老化时间。</p>
+    <p>[0018]	在第三种可能的实现方式中，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的规则ID和每个所述规则的命中时间，所述根据所述计数信息生成优化指令具体包括:</p>
+    <p>[0019]	根据所述计数信息中各个规则的最晚命中时间识别失效的规则；</p>
+    <p>[0020]	生成用以删除所述失效的规则的第五优化指令；</p>
+    <p>[0021]	所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:</p>
+    <p>[0022]	将所述生成的所述第五优化指令发送给所述DPI系统，以使所述DPI系统从自身的协议特征库中删除所述失效的规则。</p>
+    <p> [0023]	在第四种可能的实现方式中，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的优先级、规则ID和所述规则ID对应的规则的命中次数和命中时间；所述根据所述计数信息生成优化指令，具体包括:</p>
+    <p>[0024]	基于每一个规则的命中次数和命中时间，计算得到所述每一个规则的命中频率；</p>
+    <p>[0025]	当所述每一个规则的命中频率不小于第五阈值时，生成用以提高所述每一个规则的优先级的第六优化指令；</p>
+    <p>[0026]	当所述每一个规则的命中频率小于第六阈值时，生成用以降低所述每一个规则的优先级的第七优化指令；</p>
+    <p>[0027]	所述将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库规则或协议进行优化，包括:</p>
+    <p>[0028]	将所述生成的所述第六优化指令或者所述第七优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每一个规则的优先级。</p>
+    <p>[0029]	结合第一方面或者第一方面的第四种可能的实现方式，在第五种可能的实现方式中，所述第五阈值具体为所述规则所属协议中所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述规则所属协议中所有规则的命中频率的平均值的一半。</p>
+    <p>[0030]	结合第一方面或者第一方面的第四种可能的实现方式，在第六种可能的实现方式中，所述第五阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的一半。</p>
+    <p>[0031]	在第七种可能的实现方式中，所述方法还包括:[0032]	在所述采集深度包检测DPI系统的计数信息之后，将所述计数信息进行汇总，并将汇总的计数信息存放在数据库中。</p>
+    <p>[0033]	在第二方面，本发明实施例提供了一种在线协议优化装置，所述装置包括:</p>
+    <p>[0034]	计数信息收集模块，用于采集深度包检测DPI系统在运行过程中产生的计数信息；</p>
+    <p>[0035]	处理模块，用于根据所述计数信息生成优化指令；</p>
+    <p>[0036]	策略下发模块，用于将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。</p>
+    <p>[0037]	在第一种可能的实现方式中，所述计数信息包括关联项的命中次数、命中时间以及所述关联项与应用层协议的对应关系；</p>
+    <p>[0038]	所述处理模块包括&#183;:老化时间评估单元，用于根据所述计数信息中包含的所述关联项的命中次数和命中时间计算得到单位时间内的所述关联项的命中次数；</p>
+    <p>[0039]	优化指令生成单元，用于当单位时间内所述关联项的命中次数不小于第一阈值时，生成延长所述关联项所对应的应用层协议的老化时间的第一优化指令；当单位时间内所述关联项的命中次数不大于第二阈值时，生成减少所述关联项所对应的应用层协议的老化时间的第二优化指令；其中，所述第二阈值小于所述第一阈值；</p>
+    <p>[0040]	所述策略下发模块具体用于，将所述生成的所述第一优化指令或者所述第二优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述关联项所对应的应用层协议的老化时间。</p>
+    <p>[0041]	在第二种可能的实现方式中，所述计数信息包括多个关联项的计数信息，其中，每个关联项的计数信息包括:该关联项的命中次数、命中时间以及该关联项与应用层协议的对应关系；</p>
+    <p>[0042]	所述处理模块包括:</p>
+    <p>[0043]	老化时间评估单元，用于，基于各个关联项的命中次数和命中时间，以及关联项与应用层协议的对应关系，计算得到每个应用层协议所对应的所有关联项的平均命中频率；</p>
+    <p>[0044]	优化指令生成单元，用于当所述每个应用层协议对应的所有关联项的平均命中频率不小于第三阈值时，生成延长所述每个应用层协议老化时间的第三优化指令；当协议对应的每个关联项的平均命中频率不大于第四阈值时，生成减少所述每个应用层协议老化时间的第四优化指令；其中，所述第四阈值小于所述第三阈值；</p>
+    <p>[0045]	所述策略下发模块具体用于，将所述生成的所述第三优化指令或者所述第四优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每个应用层协议的老化时间。</p>
+    <p>[0046]	在第三种可能的实现方式中，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的规则ID和每个所述规则的命中时间，所述处理模块包括:</p>
+    <p>[0047]	规则状态评估单元，用于根据所述计数信息中各个规则的最晚命中时间识别失效的规则；</p>
+    <p>[0048]	优化指令生成单元，用于生成用以删除所述规则状态评估单元识别出的失效的规则的第五优化指令；</p>
+    <p>[0049]	所述策略下发模块具体用于，将所述生成的所述第五优化指令发送给所述DPI系统，以使所述DPI系统从自身的协议特征库中删除所述失效的规则。[0050]	在第四种可能的实现方式中，所述计数信息包括所述DPI系统的协议特征库中包含的各个规则的优先级、规则ID和所述规则ID对应的规则的命中次数和命中时间，所述处理模块包括:</p>
+    <p>[0051]	规则状态评估模块，用于根据每一个规则的命中次数和命中时间，计算得到所述每一个规则的命中频率；</p>
+    <p>[0052]	优化指令生成单元，用于当所述每一个规则的命中频率不小于第五阈值时，生成用以提高所述每一个规则的优先级的第六优化指令；当所述每一个规则的命中频率小于第六阈值时，生成用以降低所述每一个规则的优先级的第七优化指令；</p>
+    <p>[0053]	所述策略下发模块具体用于，将所述生成的所述第六优化指令或者所述第七优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每一个规则的优先级。</p>
+    <p>[0054]	结合第二方面或第二方面的第四种可能的实现方式，在第五种可能的实现方式中，所述第五阈值具体为所述规则所属协议中所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述规则所属协议中所有规则的命中频率的平均值的一半。</p>
+    <p>[0055]	结合第二方面或第二方面的第四种可能的实现方式，在第六种可能的实现方式中，所述第五阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的一半。</p>
+    <p>[0056]	在第七种可能的实现方式中，所述装置还包括:</p>
+    <p>[0057]	数据库管理模块，用于在所述采集深度包检测DPI系统的计数信息之后，将所述计数信息进行汇总，并将汇总的计数信息存放在数据库中。</p>
+    <p>[0058]	本发明实施例提供的在线协议优化方法和装置，通过实施采集DPI系统运行过程中产生的计数信息，通过评估该计数信息来处理生成优化指令，并下发DPI系统，从而实现DPI系统的在线协议优化，提高协议优化的实时性和可靠性。</p>
+    <p>附图说明</p>
+    <p>[0059]	图1为本发明实施例提供的一种在线协议优化方法流程图；</p>
+    <p>[0060]图2为本发明实施例提供的一种在线协议优化方法信令图；</p>
+    <p>[0061]	图3为本发明实施例提供的一种在线协议优化装置的框图；</p>
+    <p>[0062]	图4为本发明实施例提供的一种应用在线协议优化装置的系统组网图；</p>
+    <p>[0063]	图5为本发明实施例提供的另一种应用在线协议优化装置的系统组网图；</p>
+    <p>[0064]图6为本发明实施例提供的一种在线协议优化装置的系统示意图。</p>
+    <p>[0065]	下面通过附图和实施例，对本发明实施例的技术方案做进一步的详细描述。</p>
+    <p>具体实施方式</p>
+    <p>[0066]	图1为本发明实施例一提供的一种在线协议优化方法流程图。如图1所示，本实施例包括如下步骤: [0067]	步骤110，采集深度包检测DPI系统的计数信息；</p>
+    <p>[0068]	具体的，采集DPI系统在运行过程中产生的计数信息。优选的，计数信息包括:协议ID、规则ID、命中时间、识别流的字节数、关联项的命中次数等。</p>
+    <p>[0069]	其中，关联项用于表示一个网络节点的地址及协议信息，关联项的作用类似于地址，一个网络节点要想和另外一个网络节点通信，必须要知道其对端网络节点的地址信息和协议信息，比如IP地址、端口号以及协议类型，我们称之为关联项。具体地，在一个实施例中，关联项包括网络节点使用的IP地址、端口号、传输层协议类型(UDP或TCP)。关联项与应用层协议之间存在映射关系，一个或多个关联项对应一个应用层协议。针对一个固定的服务器节点，可以把它使用的关联项与应用层协议关联起来，如果后续的访问流量也具有相同的关联组，那么认为这个流量就是和这个关联项所关联的应用层协议的流量。在一个例子中，DPI以日志形式存放计数信息，该日志形式具体可以包括:识别计数日志(如表I所示)和关联项计数日志(如表2所示)。</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00091.png"> <img id="idf0001" file="CN103227756AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00091.png" class="patent-full-image" alt="Figure CN103227756AD00091"> </a> </div>
+    <p>[0073]表	2</p>
+    <p>[0074]	通过每隔一个固定的时间读取日志文件，从而获得计数信息。相应的，计数信息可以包括识别计数信息(如表3所示)和关联项计数信息(如表4所示)。</p>
+    <p>[0075]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00092.png"> <img id="idf0002" file="CN103227756AD00092.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00092.png" class="patent-full-image" alt="Figure CN103227756AD00092"> </a> </div>
+    <p>[0076]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00101.png"> <img id="idf0003" file="CN103227756AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00101.png" class="patent-full-image" alt="Figure CN103227756AD00101"> </a> </div>
+    <p>[0079]表	4</p>
+    <p>[0080]	上述计数信息被存放在数据库中，并且这些计数信息的汇总信息，即计数汇总信息也存放在数据库中。相应的，计数汇总信息可以包括识别计数汇总信息(如表5所示)和关联项计数汇总信息(如表6所示)。</p>
+    <p>[0081]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00102.png"> <img id="idf0004" file="CN103227756AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00102.png" class="patent-full-image" alt="Figure CN103227756AD00102"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00111.png"> <img id="idf0005" file="CN103227756AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00111.png" class="patent-full-image" alt="Figure CN103227756AD00111"> </a> </div>
+    <p>[0084]	表 6</p>
+    <p>[0085]	步骤120，根据所述计数信息生成优化指令；</p>
+    <p>[0086]	具体的，可以包括如下四种实现方式:</p>
+    <p>[0087]	在第一种实现方式中，根据所述计数信息生成优化指令的方法具体包括:</p>
+    <p>[0088]	步骤120-la，基于所述计数信息中包含的所述关联项的命中次数和命中时间计算得到单位时间内的所述关联项的命中次数，并基于单位时间内的所述关联项的命中次数，识别出需要调整老化时间的协议；</p>
+    <p>[0089]	进一步具体的，</p>
+    <p>[0090]	识别出需要降低老化时间的关联项，也就是不常被命中的关联项，即冷节点；</p>
+    <p> [0091]	识别出需 要延长老化时间的关联项，也就是常被命中的关联项，即热节点。</p>
+    <p>[0092]	冷节点和热节点可以通过关联项每秒命中次数(mps)和命中频率参考系数来识别。</p>
+    <p>[0093]	命中频率参考系数包括延长系数(DelavAgedCoe)和缩小系数(CutAgedCoe)。</p>
+    <p>[0094]其中，DelavAgedCoe=DPI	负荷 /1000:CutAgedCoe=DPI 负荷 /100000。DPI 负荷是指DPI单位时间内可以处理的最大流数。当然，此处的1/1000与1/100000的倍数关系也可以是其他数倌,也可以设定DelayAgedCoe及CutAgedCoe为固定倌。CutAgedCoe必须小于 DelayAgedCoe0</p>
+    <p>[0095]	在一个统计周期(CycTime)内，如果一个关联项的mps&gt;=DelayAgedCoe,则该关联项被识别为热节点；如果一个关联项的mps〈=CutAgedCoe,则该关联项被识别为冷节点。</p>
+    <p>[0096]	上述识别过程可以反复执行，即每隔CycTime的时间，统计一次关联项每秒被命中次数(mps)。</p>
+    <p>[0097]	CycTime可以配置，优选的，如果CycTime小于MinAgedTime/2,则CycTime取值为MinAgedTime/2。</p>
+    <p>[0098]	当单位时间内所述关联项的命中次数不小于DelayAgedCoe时，生成延长所述关联项所对应的应用层协议的老化时间的第一优化指令；当单位时间内所述关联项的命中次数不大于CutAgedCoe时，生成减少所述关联项所对应的应用层协议的老化时间的第二优化指令；</p>
+    <p>[0099]	步骤120-lb，生成老化时间调整的优化指令；</p>
+    <p>[0100]	根据老化时间调整策略，生成相应的老化时间调整的优化指令。</p>
+    <p>[0101]	老化时间调整策略包括:关联项老化时间调整策略和协议关联老化时间调整策略。其中，根据关联项老化时间调整策略生成的关联项老化时间调整的优化指令，仅用于对关联表中的关联项的老化时间进行调整，而根据协议关联老化时间调整策略生成的协议关联老化时间调整的优化指令，用于对关联表中相应协议的所有关联项进行老化时间的更新调整。</p>
+    <p>[0102]	在下述例子中，对关联项老化时间调整的第一、第二优化指令的产生进行说明。[0103]	当通过mps&gt;=DelayAgedCoe识别出热节点后,按照新的关联项老化时间=原来的关联项老化时间+(mps/DelayAgedCoe) XCycTimeXAgedCoe计算该热节点的新的老化时间，如果这个新的老化时间小于最大老化时间(MaxAgedTime),则产生该热节点的关联项老化时间调整的第一优化指令。如果新的老化时间大于等于MaxAgedTime,则不生成优化指令。MaxAgedTime是可以配置的，例如，可以为5400秒。</p>
+    <p>[0104]	当通过mps〈=CutAgedCoe识别出冷节点之后,按照新的关联项老化时间=原来的关联项老化时间-(CutAgedCoe/mps) XCycTimeXAgedCoe计算该冷节点的新的老化时间，如果这个新的老化时间大于最小老化时间(MinAgedTime),则产生该冷节点的关联项老化时间调整的第二优化指令。如果新的老化时间小于等于MinAgedTime,则不生成优化指令。MinAgedTime是可以配置的，例如，可以为30秒。</p>
+    <p>[0105]	此外，还可以在生成关联项老化时间调整的优化指令之前，判断上述热节点/冷节点的更新次数是否小于等于2次，如果超过2次则不再对其老化时间进行调整，即不生成新的优化指令。这样可以避免万一发生误识别的情况下一直更新老化时间，永不发生节点老化的情况发生。</p>
+    <p>[0106]	上述生成的第一优化指令或者第二优化指令发送给DPI系统，可以使DPI系统调整自身的协议特征库中所述关联项所对应的应用层协议的老化时间。</p>
+    <p>[0107]	在第二种实现方式中，根据所述计数信息生成优化指令的方法具体包括:</p>
+    <p>[0108]	步骤120_2a，基于各个关联项的命中次数和命中时间，以及关联项与应用层协议的对应关系，计算得到每个应用层协议所对应的所有关联项的平均命中频率，识别出需要调整老化时间的协议；</p>
+    <p>[0109]	进一步具体的，</p>
+    <p>[0110]	冷节点和热节点可 以通过协议平均每个关联项的命中频率(pmps)和命中频率参考系数来识别。</p>
+    <p>[0111]	pmps=协议包括的关联项的累积命中次数/(协议包括的关联项数量XCycTime)</p>
+    <p>[0112]	如果pmps&gt;=(DelayAgedCoe/2),则该协议包括的关联项均被识别为热节点；</p>
+    <p>[0113]	如果pmps〈=(CutAgedCoe/2),则该协议包括的关联项均被识别为冷节点。</p>
+    <p>[0114]	当每个应用层协议对应的所有关联项的平均命中频率不小于DeIayAgedCoe/2时，生成延长每个应用层协议老化时间的第三优化指令；当协议对应的每个关联项的平均命中频率不大于CutAgedCoe/2时，生成减少所述每个应用层协议老化时间的第四优化指令。其中，CutAgedCoe 小于 DelayAgedCoe ；</p>
+    <p>[0115]	以上举例为本发明实施例提供的冷节点和热节点识别的优选方案。冷节点还可以通过如:关联项的命中次数与最晚命中间隔之积小于等于关联项的老化时间的方法或其他方法来识别；其中最晚命中间隔是指最晚一次命中规则的时间至当前时间的间隔。热节点也可以通过如:关联项的命中次数与老化时间之比大于某一固定值的方法或其他方法来识别，该特定值可以通过配置设定。</p>
+    <p>[0116]	步骤120_2b，生成老化时间调整的优化指令；</p>
+    <p>[0117]	在下述例子中，对协议关联老化时间调整的优化指令的产生进行说明。</p>
+    <p>[0118]	当通过pmps〉= (DelayAgedCoe/2)识别出热节点后，按照新的协议关联老化时间=原来的协议关联老化时间+(pmps/DelayAgedCoe) XCycTimeX (AgedCoe/3)计算该热节点所属协议的新的老化时间，即该协议包括的所有关联项的新的老化时间。如果这个新的老化时间小于最大老化时间(MaxAgedTime),则产生协议关联老化时间调整的第三优化指令。如果新的老化时间大于等于MaxAgedTime,则不生成优化指令。MaxAgedTime是可以配置的，例如，可以为5400秒。其中，AgedCoe为老化系数，可以配置。优选的，AgedCoe=关联表的大小/DPI负荷。通常该值小于等于I。</p>
+    <p>[0119]	当通过pmps〈= (CutAgedCoe/2)识别出冷节点后，按照新的协议关联老化时间=原来的协议关联老化时间-(CutAgedCoe/pmps) XCycTimeX (AgedCoe/3)计算该冷节点所属协议的新的老化时间。如果这个新的老化时间大于最小老化时间(MinAgedTime),则产生协议关联老化时间调整的第四优化指令。如果新的老化时间小于等于MinAgedTime,则不生成优化指令。MinAgedTime是可以配置的，例如，可以为30秒。</p>
+    <p>[0120]	上述生成的第三优化指令或者第四优化指令发送给所述DPI系统，可以使DPI系统调整自身的协议特征库中所述每个应用层协议的老化时间。</p>
+    <p>[0121]	上述第一、第二、第三、第四优化指令均为老化时间调整的优化指令，用于使接收该优化指令的DPI系统执行相应的老化时间调整。延长热节点的老化时间，可以有效减少热节点被重复增加/删除的几率，减少互斥访问的次数，而降低冷节点的老化时间，可以有效降低关联表中关联项的数量，以减少查询关联表所用时间，达到性能优化的目的。以上述表6为例，通过上述方法生成的老化时间调整的优化指令，可以提高热节点58.2.134.123:UDP:2142的关联项老化时间并降低MSN和QQ协议的协议关联老化时间。DPI</p>
+    <p>系统执行优化指令后的调整效果如表7所示。</p>
+    <p>[0122] </p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00131.png"> <img id="idf0006" file="CN103227756AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00131.png" class="patent-full-image" alt="Figure CN103227756AD00131"> </a> </div>
+    <p>[0123]表	7</p>
+    <p>[0124]	上述处理方法通过动态老化时间调整的方法，提高关联表的稳定度和减少关联项的数量，达到性能优化的目的。</p>
+    <p>[0125]	在第三种实现方式中，根据所述计数信息生成优化指令的方法具体包括:</p>
+    <p>[0126]	步骤120_3a，根据所述计数信息中各个规则的最晚命中时间识别失效的规则；</p>
+    <p>[0127]	优选的，当规则的最晚命中时间距离当前时间达到或超过设定的第一阈值时间时，则该规则为失效的规则。</p>
+    <p>[0128]	此外，还可以通过检测所述协议的可用性，获取协议可用性信息，来识别失效的规则。[0129]	优选的，当协议不可用时间超过设定的第二阈值时间时，则该协议为失效协议，该协议包括的规则均为失效的规则。</p>
+    <p>[0130]	其中，协议可用性信息具体可以通过周期性的协议可用性检测来获得。例如，每间隔一定时间执行一次软件的自动运行，当探测到某个软件/服务不可运行的时间达到或超过设定的阈值时间时，则在协议可用性信息中记录相应的协议失效。上述阈值时间可以配置设定。上述协议可用性信息存储在数据库中，具体可以如表8所示。根据表8所示的协议可用性信息可以识别出协议999为失效协议。</p>
+    <p>[0131]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00141.png"> <img id="idf0007" file="CN103227756AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103227756A/CN103227756AD00141.png" class="patent-full-image" alt="Figure CN103227756AD00141"> </a> </div>
+    <p>[0132]表	8</p>
+    <p>[0133]	步骤120_3b，生成用以删除所述失效的规则的第五优化指令。</p>
+    <p>[0134]	当识别出失效规则以及失效协议包含的失效的规则之后，生成用以删除所述失效的规则和所述失效协议所包含规则的规则更新调整的第五优化指令。</p>
+    <p>[0135]	上述生成的第五优化指令发送给DPI系统，可以使DPI系统从自身的协议特征库中删除所述失效的规则。</p>
+    <p>[0136]	在第四种实现方式中，根据所述计数信息生成优化指令的方法具体包括:</p>
+    <p>[0137]	步骤120_4a，基于每一个规则的命中次数和命中时间，计算得到所述每一个规则的命中频率；</p>
+    <p>[0138]	在一个例子中，规则的优先级可以通过当前规则的命中频率和当前规则所属协议中规则的平均命中频率来检测。</p>
+    <p>[0139]	当每一个规则的命中频率不小于第五阈值时，生成用以提高每一个规则的优先级的第六优化指令；其中，第五阈值具体为规则所属协议中所有规则的命中频率的平均值的倍数。</p>
+    <p>[0140]	优选的，如果在M个连续的优先级检测周期内，一个规则的命中频率都不小于该规则所属协议中其他规则平均命中频率的N倍，那么该规则的优先级被评估为高优先级。M、N均为正整数，可以通过配置来设定M、N的具体数值。</p>
+    <p>[0141]	当每一个规则的命中频率小于第六阈值时，生成用以降低每一个规则的优先级的第七优化指令；其中，所述第六阈值具体为规则所属协议中所有规则的命中频率的平均值的几分之一。</p>
+    <p>[0142]	优选的，如果在P个连续的优先级检测周期内，一个规则的命中频率都小于该规则所属协议中其他规则平均命中频率的1/Q，那么该规则的优先级被评估为低优先级。P、Q均为正整数，可以通过配置来设定P、Q的具体数值。</p>
+    <p>[0143]	在另一个例子中，规则的优先级可以通过规则的命中频率和全部规则的平均命中频率来检测。[0144]	当每一个规则的命中频率不小于第五阈值时，生成用以提高每一个规则的优先级的第六优化指令；其中第五阈值具体为DPI系统的协议特征库中包含的所有规则的命中频率的平均值的倍数。</p>
+    <p>[0145]	优选的，如果在M个连续的优先级检测周期内，一个规则的命中频率都高于所有规则的平均命中频率的N倍，那么该规则的优先级被评估为高优先级。M、N均为正整数，可以通过配置来设定M、N的具体数值。</p>
+    <p>[0146]	当每一个规则的命中频率小于第六阈值时，生成用以降低每一个规则的优先级的第七优化指令；其中，第六阈值具体为DPI系统的协议特征库中包含的所有规则的命中频率的平均值的几分之一。</p>
+    <p>[0147]	优选的，如果在P个连续的优先级检测周期内，一个规则的命中频率都低于所有规则的平均命中频率的1/Q，那么该规则的优先级被评估为低优先级。P、Q均为正整数，可以通过配置来设定P、Q的具体数值。</p>
+    <p>[0148]	步骤120_4b，根据规则的优先级生成规则更新调整的优化指令，用以调整所述规则的优先级。</p>
+    <p>[0149]	在下述例子中，对产生用于规则优先级更新调整的优化指令进行说明。</p>
+    <p>[0150]	当检测出规则中高优先级的规则与低优先级的规则之后，对于高优先级的规则，按照生成上调其优先级K个等级的策略生成优化指令。如果提升后的规则的新优先级大于最大优先级(MaxPri),则生成使该规则的新优先级调整为MaxPri的第六优化指令。其中K为可以配置的正整数。对于低优先级的规则，按照生成下调其优先级L个等级的策略生成优化指令。如果降低后的规则的新优先级小于最小优先级(MinPri)，则生成使该规则的新优先级调整为MinPri的第七优化指令。其中L为可以配置的正整数。</p>
+    <p> [0151]	将生成的第六优化指令或者第七优化指令发送给所述DPI系统，可以使所述DPI系统调整自身的协议特征库中所述每一个规则的优先级。</p>
+    <p>[0152]	上述第五、第六、第七优化指令均为规则更新调整的优化指令，用于使接收该优化指令的DPI系统执行相应的失效规则删除及规则优先级调整。删除失效规则可以有效减少协议规则的数量，以减少规则匹配所用时间；规则优先级调整可以决定规则的匹配顺序和识别结果，使网络流量总能被优先级最高的规则先匹配，从而实现对DPI系统性能的高效优化。</p>
+    <p>[0153]	此外，上述四种可能的实现方式还可以任意两种、三种或者四种的相互结合，生成老化时间调整的优化指令和规则更新调整的优化指令，对系统性能进行优化。具体方法同上述两种实现方式，此处不再赘述。</p>
+    <p>[0154]	步骤130，将所述优化指令下发DPI系统，用于对DPI系统的规则或协议进行处理，从而实现对DPI系统的优化。</p>
+    <p>[0155]	将上述步骤120中生成的优化指令下发到DPI系统执行，从而对DPI系统进行协议优化。</p>
+    <p>[0156]	前述实施例说明了实现DPI系统的在线协议优化方法，进一步地，该实现DPI系统的在线协议优化方法的过程可以如图2所示。</p>
+    <p>[0157]	图2为本发明实施例提供一种在线协议优化方法信令图。如图2所示，具体包括如下步骤:[0158]	步骤201，计数信息收集模块采集DPI系统的计数信息；</p>
+    <p>[0159]	具体的，DPI系统以日志方式存放计数信息，计数信息收集模块每隔一段时间去取一次日志文件，读取有用的计数信息。</p>
+    <p>[0160]	步骤202，计数信息收集模块通过数据库管理模块将计数信息存放到数据库中；</p>
+    <p>[0161]	具体的，计数信息收集模块调用数据库管理模块的接口，将采集到的计数信息存放到数据库中。</p>
+    <p>[0162]	步骤203，计数信息收集模块将计数信息汇总为计数汇总信息并存放到数据库中；</p>
+    <p>[0163]	具体的，计数信息收集模块每隔一段时间获取一次数据库中存放的计数信息，将这些计数信息进行汇总，并将汇总后的计数信息页存放到数据库中。</p>
+    <p>[0164]	步骤204，协议可用性探测模块将探测获得的协议可用性信息通过数据库管理模块存放到数据库中；</p>
+    <p>[0165]	具体的，协议可用性探测模块不停地测试一些软件/服务的可用性，获取协议可用性信息，并通过数据库管理模块将协议可用性信息存放到数据库中。</p>
+    <p>[0166]	步骤205，规则状态评估模块通过数据库管理模块访问存储在数据库中的计数信息、计数汇总信息和协议可用性信息；</p>
+    <p>[0167]	步骤206，规则状态评估模块通过访问的信息识别失效的规则，并对规则的优先级进行检测，生成规则更新调整的优化指令。</p>
+    <p>[0168]	具体的，识别失效的规则的过程如上述方法实施例中步骤120_3a所述，检测规则的优先级的过程如上述方法实施例中步骤120-4a所述，生成规则更新调整的优化指令的过程如上述方法实施例中步骤120-3b、120-4b所述，此处不再赘述。</p>
+    <p>[0169]	步骤207，规则状态评估模块传送规则更新调整的优化指令至规则下发模块；</p>
+    <p>[0170]	步骤208，老化时间评估模块通过数据库管理模块访问存储在数据库中的计数信息和计数汇总信息；</p>
+    <p>[0171 ] 步骤209，规则状态评估模块通过访问的信息识别计数信息中的冷节点和热节点，生成老化时间调整的优化指令。</p>
+    <p>[0172]	具体的，识别计数信息中的冷节点和热节点的过程如上述方法实施例中步骤120-la、120-2a所述，生成老化时间调整的优化指令的过程如上述方法实施例中步骤120-lb、120-2b所述，此处不再赘述。</p>
+    <p>[0173]	步骤210，老化时间评估模块生成并传送老化时间调整的优化指令至规则下发模块；</p>
+    <p>[0174]	步骤211，规则下发模块将老化时间调整的优化指令和规则更新调整的优化指令下发到DPI系统。</p>
+    <p>[0175]	本发明实施例提供的在线协议优化方法，能够在线获取DPI系统的信息，通过识别计数信息中的失效规则和检测规则优先级，以及识别协议关联项的命中频率，相应地生成规则更新调整的优化指令和老化时间调整的优化指令并下发DPI系统执行，实现了对DPI系统的在线协议优化。</p>
+    <p> [0176]	本发明实施例还提供了一种在线协议优化装置，用以实现本发明上述实施例提供的在线协议优化方法。如图3所示，在线协议优化装置30包括:计数信息收集模块310，处理模块320和策略下发模块330。计数信息收集模块310用于采集深度包检测DPI系统在运行过程中产生的计数信息；处理模块320，用于根据所述计数信息生成优化指令；策略下发模块330，用于将所述优化指令发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化。</p>
+    <p>[0177]	优选的，处理模块320包括老化时间评估单元321和优化指令生成单元322 ；</p>
+    <p>[0178]	优选的，在一个实施例中，计数信息包括关联项的命中次数、命中时间以及所述关联项与应用层协议的对应关系；</p>
+    <p>[0179]	相应地，老化时间评估单元321具体用于，根据所述计数信息中包含的所述关联项的命中次数和命中时间计算得到单位时间内的所述关联项的命中次数；优化指令生成单元322，具体用于当老化时间评估单元321计算得出的单位时间内所述关联项的命中次数不小于第一阈值时，生成延长所述关联项所对应的应用层协议的老化时间的第一优化指令；当老化时间评估单元321计算得出的单位时间内所述关联项的命中次数小于第二阈值时，生成减少所述关联项所对应的应用层协议的老化时间的第二优化指令；其中，所述第二阈值小于或等于所述第一阈值；</p>
+    <p>[0180]	在这种情形下，策略下发模块330具体用于，将优化指令生成单元322生成的所述第一优化指令或者所述第二优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述关联项所对应的应用层协议的老化时间。</p>
+    <p>[0181]	优选的，在另一个实施例中，计数信息包括多个关联项的计数信息，其中，每个关联项的计数信息包括:该关联项的命中次数、命中时间以及该关联项与应用层协议的对应关系; </p>
+    <p>[0182]	相应地，老化时间评估单元321具体用于，根据各个关联项的命中次数和命中时间，以及关联项与应用层协议的对应关系，计算得到每个应用层协议所对应的所有关联项的平均命中频率；优化指令生成单元322，具体用于当所述每个应用层协议对应的所有关联项的平均命中频率不小于第 三阈值时，生成延长所述每个应用层协议老化时间的第三优化指令；当协议对应的每个关联项的平均命中频率小于第四阈值时，生成减少所述每个应用层协议老化时间的第四优化指令；其中，第四阈值小于或等于第三阈值；</p>
+    <p>[0183]	在这种情形下，策略下发模块330具体用于，将所述生成的所述第三优化指令或者所述第四优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每个应用层协议的老化时间。</p>
+    <p>[0184]	在另一个实施例中，处理模块320包括规则状态评估模块323和优化指令生成单元 322 ；</p>
+    <p>[0185]	优选的，在一个实施例中，计数信息包括所述DPI系统的协议特征库中包含的各个规则的规则ID和每个所述规则的命中时间；</p>
+    <p>[0186]	相应地，规则状态评估模块323，具体用于根据所述计数信息中各个规则的最晚命中时间识别失效的规则；优化指令生成单元322，具体用于生成用以删除规则状态评估模块323识别出的失效的规则的第五优化指令；</p>
+    <p>[0187]	策略下发模块330具体用于，将所述生成的所述第五优化指令发送给所述DPI系统，以使所述DPI系统从自身的协议特征库中删除所述失效的规则。</p>
+    <p>[0188]	优选的，在另一个实施例中，计数信息包括所述DPI系统的协议特征库中包含的各个规则的优先级、规则ID和所述规则ID对应的规则的命中次数和命中时间；</p>
+    <p>[0189]	相应地。规则状态评估模块323具体用于:根据每一个规则的命中次数和命中时间，计算得到所述每一个规则的命中频率；</p>
+    <p>[0190]	优化指令生成单元322，具体用于当规则状态评估模块323计算得到的所述每一个规则的命中频率不小于第五阈值时，生成用以提高所述每一个规则的优先级的第六优化指令；当当规则状态评估模块323计算得到的所述每一个规则的命中频率小于第六阈值时，生成用以降低所述每一个规则的优先级的第七优化指令；</p>
+    <p>[0191]	策略下发模块330具体用于，将优化指令生成单元323生成的所述第六优化指令或者所述第七优化指令发送给所述DPI系统，以使所述DPI系统调整自身的协议特征库中所述每一个规则的优先级。</p>
+    <p>[0192]	进一步优选的，第五阈值具体为所述规则所属协议中所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述规则所属协议中所有规则的命中频率的平均值的一半。</p>
+    <p>[0193]	进一步优选的，第五阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的倍数；所述第六阈值具体为所述DPI系统的协议特征库中包含的所有规则的命中频率的平均值的一半。</p>
+    <p>[0194]	策略下发模块330接收老化时间评估模块321和规则状态评估模块323产生的优化指令，并将上述优化指令下发DPI系统，用以对所述DPI系统中的规则或协议进行处理，从而对所述DPI系统进行优化。</p>
+    <p>[0195]	优选的，上述装置还包括:数据库管理模块340。该模块用于在采集深度包检测DPI系统的计数信息之后，将 所述计数信息进行汇总，并将汇总的计数信息存放在数据库中。</p>
+    <p>[0196]	优选的，上述装置还包括:协议可用性探测模块350。该模块用于通过检测协议的可用性，获取协议可用性信息，从而识别失效的规则。</p>
+    <p>[0197]	协议可用性探测模块350识别出的失效的规则也可以通过规则状态评估模块323生成规则更新调整的优化指令，并执行去除协议可用性探测模块350识别出的失效规则后的未失效规则的优先级评估。</p>
+    <p>[0198]	需要说明的是，本发明实施例提供的在线协议优化装置30，是与本发明实施例提供的在线协议优化方法对应的装置，该线协议优化装置30中各个模块和单元的具体实现细节可以参考前述方法实施例，此处不再赘述。</p>
+    <p>[0199]	应用本发明实施例提供的在线协议优化装置，通过计数信息收集模块在线采集DPI系统中的计数信息，经处理模块对计数信息分析后生成优化指令，通过策略下发模块330下发到DPI系统，实现了对DPI系统的在线协议优化。</p>
+    <p>[0200]	本发明实施例提供的在线协议优化装置可以部署在多种网络环境中。其中，作为示例而非限定，本发明实施例提供的在线协议优化装置可以部署在ISP提供商的全网环境中，同时优化多个网关设备。图4为本发明实施例提供的一种应用在线协议优化装置的组网图。</p>
+    <p>[0201]	如图4所示，该应用环境中包括RNC站点网关420、GGSN网关430和SCG网关440，在线协议优化装置410分别采集RNC站点网关420的DPI设备421、GGSN网关430的DPI设备431和SCG网关440的DPI设备441的计数信息，对这些计数信息进行检测之后，生成相应的优化指令，分别下发到上述各DPI设备，从而可以同时对上述各网关的DPI设备进行优化。</p>
+    <p>[0202]	或者，本发明实施例提供的在线协议优化装置也可以部署在国际互联网络internet中，同时优化多家企业网关上的DPI设备。图5为本发明实施例提供的另一种应用在线协议优化装置的组网图。</p>
+    <p>[0203]	如图5所示，该应用环境中包括企业A网关上的DPI设备520、企业B网关上的DPI设备530和企业C网关上的DPI设备540，在线协议优化装置510分别采集企业A网关上的DPI设备520、企业B网关上的DPI设备530和企业C网关上的DPI设备540的计数信息，对这些计数信息进行检测之后，生成相应的优化指令，分别下发到上述各DPI设备，从而可以同时对上述各企业网关的DPI设备进行优化。</p>
+    <p>[0204]	图6为本发明实施例提供的另一种在线协议优化装置的结构示意图，如图6所示，本实施例的装置包括通信接口 61，至少一个处理器62和存储器63。处理器62、存储器63和通信接口 61通过总线64连接并完成相互间的通信。所述总线64可以是工业标准体系结构(Industry Standard Architecture,简称为 ISA)总线、外部设备互连(PeripheralComponent,简称为PCI)总线或扩展工业标准体系结构(Extended Industry StandardArchitecture，简称为EISA)总线等。所述总线64可以分为地址总线、数据总线、控制总线等。为便于表示，图6中仅用一条粗线表示，但并不表示仅有一根总线64或一种类型的总线64。其中，通信接口 61可以为网口、USB接口、射频单元、天线、w1-fi通信模块等可以实现数据收发功能的器件或单元；存储器63用于存储可执行程序代码，该程序代码包括计算机操作指令。存储器63可能包含高速RAM存储器,也可能还包括非易失性存储器(non-volatilememory)，例如至少一个磁盘存储器。在一个实施例中，处理器62通过读取存储器63中存储的DPI系统在运行过程中产生的计数信息，以用于:根据所述计数信息生成优化指令；将所述优化指令通过通信接口 61发送给所述DPI系统，以使所述DPI系统根据所述优化指令对自身的协议特征库中的规则或协议进行优化处理器62可能是一个中央处理器(CentralProcessing Unit,简称为 CPU),或者是特定集成电路(Application Specific IntegratedCircuit,简称为ASIC)，或者是被配置成实施本发明实施例的一个或多个集成电路。</p>
+    <p>[0205]	上述处理器62除了实现上述功能之外，还可用于执行上述方法实施例中的其他流程，在此不再赘述。</p>
+    <p>[0206]	其中，上述流程的具体细节，可以参照上述方法实施例，此处不再赘述。</p>
+    <p>[0207]	专业人员应该还可以进一步意识到，结合本文中所公开的实施例描述的各示例的单元及算法步骤，能够以电子硬件、计算机软件或者二者的结合来实现，为了清楚地说明硬件和软件的可互换性，在上述说明中已经按照功能一般性地描述了各示例的组成及步骤。这些功能究竟以硬件还是软件方式来执行，取决于技术方案的特定应用和设计约束条件。专业技术人员可以对每个特定的应用来使用不同方法来实现所描述的功能，但是这种实现不应认为超出本发明的范围。</p>
+    <p> [0208]	结合本文中所公开的实施例描述的方法或算法的步骤可以用硬件、处理器执行的软件模块，或者二者的结合来实施。软件模块可以置于随机存储器(RAM)、内存、只读存储器(ROM)、电可编程ROM、电可擦除可编程ROM、寄存器、硬盘、可移动磁盘、CD-ROM、或技术领域内所公知的任意其它形式的存储介质中。</p>
+    <p>[0209]	以上所述的具体实施方式，对本发明的目的、技术方案和有益效果进行了进一步详细说明，所应理解的是，以上所述仅为本发明的具体实施方式而已，并不用于限定本发明的保护范围，凡在本发明的精神和原则之内，所做的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。 &#183;</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102035685A?cl=zh">CN102035685A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月20日</td><td class="patent-data-table-td patent-date-value">2011年4月27日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种告警处理方法及dpi设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102045347A?cl=zh">CN102045347A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月30日</td><td class="patent-data-table-td patent-date-value">2011年5月4日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">协议识别方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102045363A?cl=zh">CN102045363A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月31日</td><td class="patent-data-table-td patent-date-value">2011年5月4日</td><td class="patent-data-table-td ">成都市华为赛门铁克科技有限公司</td><td class="patent-data-table-td ">网络流量特征识别规则的建立方法、识别控制方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20070091901">US20070091901</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年9月18日</td><td class="patent-data-table-td patent-date-value">2007年4月26日</td><td class="patent-data-table-td ">Broadcom Corporation</td><td class="patent-data-table-td ">Packet tag for support of remote network function/ packet classification</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103491025A?cl=zh">CN103491025A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月13日</td><td class="patent-data-table-td patent-date-value">2014年1月1日</td><td class="patent-data-table-td ">北京神州绿盟信息安全科技股份有限公司</td><td class="patent-data-table-td ">一种应用流量识别的方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=6QPJCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=6QPJCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012861000">H04L12/861</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年7月31日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年8月28日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/5a5cd75408697a18c7aa/CN103227756A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9C%A8%E7%BA%BF%E5%8D%8F%E8%AE%AE%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85%E7%BD%AE.pdf?id=6QPJCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2ECMGVEfTpRP1ugFGcd7HleU2cnw"},"sample_url":"https://www.google.com/patents/reader?id=6QPJCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

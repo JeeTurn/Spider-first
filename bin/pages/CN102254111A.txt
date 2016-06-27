@@ -1,0 +1,365 @@
+<!DOCTYPE html><html><head><title>专利 CN102254111A - 恶意网站检测方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="恶意网站检测方法及装置"><meta name="DC.contributor" content="杨冀龙" scheme="inventor"><meta name="DC.contributor" content="北京知道创宇信息技术有限公司" scheme="assignee"><meta name="DC.date" content="2010-8-12" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种恶意网站检测方法及装置。本发明恶意网站检测方法包括获取要访问的URL；抓取所述URL所指向的页面；对所抓取页面的数据进行静态特征分析；如果静态特征分析表明存在危险特征，则在蜜罐集群内进行动态行为分析。本发明恶意网站检测装置包括获取单元，用于获取要访问的URL；抓取单元，用于抓取所述URL所指向的页面；静态分析单元，用于对所抓取页面的数据进行静态特征分析；动态分析单元，用于如果静态分析单元表明存在危险特征则在蜜罐集群内进行动态行为分析。采用本发明的技术方案能够进行全面的网站安全检测。"><meta name="DC.date" content="2011-11-23"><meta name="DC.relation" content="CN:101425016:A" scheme="references"><meta name="DC.relation" content="CN:101692267:A" scheme="references"><meta name="DC.relation" content="WO:2008069945:A2" scheme="references"><meta name="citation_reference" content="《计算机应用》 20070731 孙晓研等 &quot;基于客户端蜜罐的恶意网页检测系统的设计与实现&quot; 第1613-1615页 第27卷, 第7期"><meta name="citation_reference" content="孙晓研等: &quot;“基于客户端蜜罐的恶意网页检测系统的设计与实现”&quot;, 《计算机应用》, vol. 27, no. 7, 31 July 2007 (2007-07-31), pages 1613 - 1615"><meta name="citation_patent_publication_number" content="CN:102254111:A"><meta name="citation_patent_application_number" content="CN:201010254173"><link rel="canonical" href="https://www.google.com/patents/CN102254111A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102254111A?cl=zh"/><meta name="title" content="专利 CN102254111A - 恶意网站检测方法及装置"/><meta name="description" content="本发明公开了一种恶意网站检测方法及装置。本发明恶意网站检测方法包括获取要访问的URL；抓取所述URL所指向的页面；对所抓取页面的数据进行静态特征分析；如果静态特征分析表明存在危险特征，则在蜜罐集群内进行动态行为分析。本发明恶意网站检测装置包括获取单元，用于获取要访问的URL；抓取单元，用于抓取所述URL所指向的页面；静态分析单元，用于对所抓取页面的数据进行静态特征分析；动态分析单元，用于如果静态分析单元表明存在危险特征则在蜜罐集群内进行动态行为分析。采用本发明的技术方案能够进行全面的网站安全检测。"/><meta property="og:title" content="专利 CN102254111A - 恶意网站检测方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102254111A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102254111A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=1_iaBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102254111A&amp;usg=AFQjCNH1qYPuJU_vojiDWzcbbQs6YUmohA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/c4073f8006c8a1d06135/CN102254111A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/c4073f8006c8a1d06135/CN102254111A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102254111A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102254111A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102254111A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102254111B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102254111A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种恶意网站检测方法及装置。本发明恶意网站检测方法包括获取要访问的URL；抓取所述URL所指向的页面；对所抓取页面的数据进行静态特征分析；如果静态特征分析表明存在危险特征，则在蜜罐集群内进行动态行...</span><span itemprop="url">https://www.google.com/patents/CN102254111A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102254111A - 恶意网站检测方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102254111A - 恶意网站检测方法及装置" title="专利 CN102254111A - 恶意网站检测方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102254111 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010254173</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年11月23日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年8月12日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年5月17日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102254111B?hl=zh-CN&amp;cl=zh">CN102254111B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010254173.8, </span><span class="patent-bibdata-value">CN 102254111 A, </span><span class="patent-bibdata-value">CN 102254111A, </span><span class="patent-bibdata-value">CN 201010254173, </span><span class="patent-bibdata-value">CN-A-102254111, </span><span class="patent-bibdata-value">CN102254111 A, </span><span class="patent-bibdata-value">CN102254111A, </span><span class="patent-bibdata-value">CN201010254173, </span><span class="patent-bibdata-value">CN201010254173.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E5%86%80%E9%BE%99%22">杨冀龙</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E7%9F%A5%E9%81%93%E5%88%9B%E5%AE%87%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京知道创宇信息技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102254111A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102254111A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102254111A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (10),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=1_iaBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010254173&amp;usg=AFQjCNHxkp2vN-Ud2MiZNvftWfBvlKKNjQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=1_iaBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102254111A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGSFAY3gfCk28dKupNpGoNUom5EUA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT104728056" lang="ZH" load-source="patent-office">恶意网站检测方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 102254111 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA86635943" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种恶意网站检测方法及装置。本发明恶意网站检测方法包括获取要访问的URL；抓取所述URL所指向的页面；对所抓取页面的数据进行静态特征分析；如果静态特征分析表明存在危险特征，则在蜜罐集群内进行动态行为分析。本发明恶意网站检测装置包括获取单元，用于获取要访问的URL；抓取单元，用于抓取所述URL所指向的页面；静态分析单元，用于对所抓取页面的数据进行静态特征分析；动态分析单元，用于如果静态分析单元表明存在危险特征则在蜜罐集群内进行动态行为分析。采用本发明的技术方案能够进行全面的网站安全检测。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(14)</span></span></div><div class="patent-text"><div mxw-id="PCLM37094741" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种恶意网站检测方法，其特征在于，包括步骤： 获取要访问的URL ；抓取所述URL所指向的页面； 对所抓取页面的数据进行静态特征分析；如果静态特征分析表明存在危险特征，则在蜜罐集群内进行动态行为分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的恶意网站检测方法，其特征在于，所述动态行为分析进一步包括步骤：基于对蜜罐集群所接受的URL进行判别的结果蜜罐集群中的蜜罐虚拟机启动沙箱； 沙箱开启浏览器且浏览器在其中访问所述URL ； 沙箱在浏览器访问URL过程中记录浏览器行为；沙箱分析所记录的浏览器行为并判断是否存在具有可能危害操作系统的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的恶意网站检测方法，其特征在于，所述浏览器行为包括浏览器应用层行为、系统层行为和内核层行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的恶意网站检测方法，其特征在于，所述系统层行为包括文件创建、进程创建、注册表写入、异常网络事件、浏览器内存状况和应用异常事件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的恶意网站检测方法，其特征在于，所述内核层行为包括异常进程创建。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求1至5任一项所述的恶意网站检测方法，其特征在于，还包括步骤：如果所述蜜罐虚拟机在启动以来所接受的URL扫描请求次数超过阈值，或者蜜罐虚拟机运行时间超过预定的阈值，则重置所述蜜罐虚拟机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的恶意网站检测方法，其特征在于，还包括步骤：如果所述蜜罐虚拟机中存在不允许在所述蜜罐虚拟机中存在的进程名，则重置所述蜜罐虚拟机。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.	一种恶意网站检测装置，其特征在于，包括： 获取单元，用于获取要访问的URL ；抓取单元，用于抓取所述URL所指向的页面； 静态分析单元，用于对所抓取页面的数据进行静态特征分析； 动态分析单元，用于如果静态分析单元表明存在危险特征则在蜜罐集群内进行动态行为分析。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求8所述的恶意网站检测装置，其特征在于，所述动态分析单元还包括： 启动单元，基于对蜜罐集群所接受的URL进行判别的结果蜜罐集群中的蜜罐虚拟机启动沙箱；沙箱，其包括：开启单元，用于开启浏览器且浏览器在其中访问所述URL; 记录单元，用于在浏览器访问URL过程中记录浏览器行为；分析单元，用于分析所记录的浏览器行为并判断是否存在具有可能危害操作系统的操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的恶意网站检测装置，其特征在于，所述浏览器行为包括浏览器应用层行为、系统层行为和内核层行为。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10所述的恶意网站检测装置，其特征在于，所述系统层行为包括文件创建、进程创建、注册表写入、异常网络事件、浏览器内存状况和应用异常事件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11所述的恶意网站检测装置，其特征在于，所述内核层行为包括异常进程创建。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求8至12任一项所述的恶意网站检测装置，其特征在于，还包括用于如果所述蜜罐虚拟机在启动以来所接受的URL扫描请求次数超过阈值，或者蜜罐虚拟机运行时间超过预定的阈值，则重置所述蜜罐虚拟机的单元。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的恶意网站检测装置，其特征在于，还包括：用于如果所述蜜罐虚拟机中存在不允许在所述蜜罐虚拟机中存在的进程名则重置所述蜜罐虚拟机的单元。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES42761867" lang="ZH" load-source="patent-office" class="description">
+    <p>恶意网站检测方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明总体上涉及计算机网络安全，尤其涉及一种恶意网站检测方法及装置。 背景技术</p>
+    <p>[0002]	随着计算机及网络技术的发展，互联网已深入到人们工作和生活的各个方面。但是随之而来的安全问题极大地困扰了网络用户。各种针对互联网的恶意行为越来越多而逐渐细化并形成了一个巨大的黑色产业链。当前互联网的整体安全情况令人担忧。在针对互联网的恶意行为中，网站挂马是主要的恶意行为之一。所述网站挂马指网站自身页面源代码内容（包括HTML、CSS、JQ被黑客嵌入恶意的脚本代码，这些脚本代码会在访问网站的网民计算机的浏览器中执行，执行结果导致浏览器安全策略被突破，网民计算机被安装木马病毒程序。</p>
+    <p>[0003]	目前，常用的恶意网站检测方法主要包括：</p>
+    <p>[0004]	一、纯静态特征检测。</p>
+    <p>[0005]	此方法在网站HTML代码中寻找挂马特征。比如挂马早期，挂马具备明显特征 &lt;iframe src = url display = none&gt;,只需查找 iframe,并判另Ij display = none 就能识另ll 部分挂马。但黑客也在采取对抗措施，他们采取大量脚本自加密，自编码等方法，使得纯静态特征检测识别率非常低，为此不得不需要寻求新的检测方法。</p>
+    <p>[0006]	二、使用基于虚拟技术的恶意网站检测技术来进行检查。</p>
+    <p>[0007]	此方法将网站HTML页面文件下载到虚拟机中，通过此网站页面文件在虚拟机中的运行情况进行分析和检测来判定是否为恶意页面。对于流行的恶意网站中嵌入的恶意代码，完全可以通过静态特征匹配技术来进行快速检测，但此方法往往存在因为时效性上的不及时而出现的准确率下降的问题，所以我们需要开发出结合静态特征以外，还能检测未知挂马页面的技术。</p>
+    <p>发明内容</p>
+    <p>[0008]	本发明要解决的主要技术问题是提供一种能够进行全面的网站安全检测的恶意网站检测方法及装置。</p>
+    <p>[0009]	为了解决上述问题，本发明恶意网站检测方法的技术方案包括步骤：</p>
+    <p>[0010]	获取要访问的URL;</p>
+    <p>[0011]	抓取所述URL所指向的页面；</p>
+    <p>[0012]	对所抓取页面的数据进行静态特征分析；</p>
+    <p>[0013]	如果静态特征分析表明存在危险特征，则在蜜罐集群内进行动态行为分析。</p>
+    <p>[0014]	其中，所述动态行为分析进一步包括步骤：</p>
+    <p>[0015]	基于对蜜罐集群所接受的URL进行判别的结果蜜罐集群中的蜜罐虚拟机启动沙箱；</p>
+    <p>[0016]	沙箱开启浏览器且浏览器在其中访问所述URL ；[0017]	沙箱在浏览器访问URL过程中记录浏览器行为；</p>
+    <p>[0018]	沙箱分析所记录的浏览器行为并判断是否存在具有可能危害操作系统的操作。</p>
+    <p>[0019]	所述浏览器行为包括浏览器应用层行为、系统层行为和内核层行为。</p>
+    <p>[0020]	所述系统层行为包括文件创建、进程创建、注册表写入、异常网络事件、浏览器内存状况和应用异常事件。</p>
+    <p>[0021]	所述内核层行为包括异常进程创建。</p>
+    <p>[0022]	此外，本发明恶意网站检测方法还包括步骤：如果所述蜜罐虚拟机在启动以来所接受的URL扫描请求次数超过阈值，或者蜜罐虚拟机运行时间超过预定的阈值，则重置所述蜜罐虚拟机。</p>
+    <p>[0023]	优选地，本发明恶意网站检测方法还包括步骤：如果所述蜜罐虚拟机中存在不允许在所述蜜罐虚拟机中存在的进程名，则重置所述蜜罐虚拟机。</p>
+    <p>[0024]	相应地，本发明恶意网站检测装置包括：</p>
+    <p>[0025]	获取单元，用于获取要访问的URL ；</p>
+    <p>[0026]	抓取单元，用于抓取所述URL所指向的页面；</p>
+    <p>[0027]	静态分析单元，用于对所抓取页面的数据进行静态特征分析；</p>
+    <p>[0028]	动态分析单元，用于如果静态分析单元表明存在危险特征则在蜜罐集群内进行动态行为分析。</p>
+    <p>[0029]	其中，所述动态分析单元还包括：</p>
+    <p>[0030]	启动单元，基于对蜜罐集群所接受的URL进行判别的结果蜜罐集群中的蜜罐虚拟机启动沙箱；</p>
+    <p>[0031]	沙箱，其包括：</p>
+    <p>[0032]	开启单元，用于开启浏览器且浏览器在其中访问所述URL ；</p>
+    <p>[0033]	记录单元，用于在浏览器访问URL过程中记录浏览器行为；</p>
+    <p>[0034]	分析单元，用于分析所记录的浏览器行为并判断是否存在具有可能危害操作系统的操作。</p>
+    <p>[0035]	所述浏览器行为包括浏览器应用层行为、系统层行为和内核层行为。</p>
+    <p>[0036]	所述系统层行为包括文件创建、进程创建、注册表写入、异常网络事件、浏览器内存状况和应用异常事件。</p>
+    <p>[0037]	所述内核层行为包括异常进程创建。</p>
+    <p>[0038]	优选地，本发明恶意网站检测装置还包括用于如果所述蜜罐虚拟机在启动以来所接受的URL扫描请求次数超过阈值，或者蜜罐虚拟机运行时间超过预定的阈值，则重置所述蜜罐虚拟机的单元。</p>
+    <p>[0039]	进一步地，本发明恶意网站检测装置还包括：用于如果所述蜜罐虚拟机中存在不允许在所述蜜罐虚拟机中存在的进程名则重置所述蜜罐虚拟机的单元。</p>
+    <p>[0040]	与现有技术相比，本发明恶意网站检测方法及装置的有益效果为：</p>
+    <p>[0041]	首先，本发明是采用在服务端主动对要访问的URL所指向的页面进行分析，提前获知所述页面是否存在恶意，在客户端可直接阻止对恶意URL的访问，而不是采用传统的在客户端访问URL之后进行恶意判别的方式，从而可以很好地保证了为几乎所有可能的互联网使用者提供了全面的网站安全检测，并且不会在互联网使用者的客户端进行恶意判别，让客户端规避技术对抗的风险。</p>
+    <p>[0042]	其次，由于本发明采用了静态检测和动态检测相结合的方式，其中，静态检测可以排除掉大量页面源代码中没有可疑特征的网站。相比于动态检测，静态检测节省系统资源和网络资源，并且效率高，只是准确率逊色一些。而动态检测准确率高，但是耗费的系统资源和网络资源多且效率低。本发明采用这二者的结合，有效地弥补了各自的缺陷，从而节省了系统资源和网络资源，且极大地减少了误报的可能性。</p>
+    <p>[0043]	再者，由于本发明还采用了自身安全保障策略，假如所述蜜罐虚拟机在启动以来所接受的URL扫描请求次数超过阈值，以及蜜罐虚拟机运行时间超过阈值，则重置所述蜜罐虚拟机，这样防止了蜜罐虚拟机中毒，从而保证了蜜罐虚拟机的绝对安全。</p>
+    <p>[0044]	此外，本发明能对抗黑客未来可能使用的各种挂马变种攻击手段，系统最终判别只与浏览器行为相关。</p>
+    <p>[0045]	另外，本发明能够捕获最新的病毒木马程序。如果浏览器产生写文件操作并且写文件到非临时目录，那么一定是突破了浏览器安全策略，当前绝大部分病毒木马传播都使用网站挂马进行传播。由于我们记录了这些文件内容，那么也就能捕获最新的木马病毒样本。</p>
+    <p>附图说明</p>
+    <p>[0046]	下面参考结合附图所进行的下列描述，以便更透彻地理解本公开内容，在附图中：</p>
+    <p>[0047]	图1是依据本发明的恶意网站检测方法的流程图；</p>
+    <p>[0048]	图2是进行动态行为分析的流程图；</p>
+    <p>[0049]	图3是依据本发明的恶意网站检测装置的示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0050]	下面将详细描述本发明的具体实施例，但本发明并不限于下述具体实施例。</p>
+    <p>[0051]	首先，介绍本发明所采用的技术。</p>
+    <p>[0052]	&#183;蜜罐技术</p>
+    <p>[0053]	蜜罐技术本质上是因为虚拟机技术发展而发展起来的一种衍生物。例如著名的 VMware虚拟机技术公司出品的VMWARE虚拟机软件。其特点是可以根据用户的需求搭建一个可控制并不影响真实机器却可任意恢复到正常状态的技术。利用虚拟机这种技术，在对可能会影响到真实机器的操作时，都会利用虚拟机技术来进行蜜罐的搭建。</p>
+    <p>[0054]	&#183;沙箱技术</p>
+    <p>[0055]	沙箱技术，英文名sandbox。这种技术现在在计算机安全防御中得以运用，是比较新的技术。具体来说沙箱是一种安全软件，可以将一个程序放入沙箱运行，这样它所创建/ 修改/删除的所有文件和注册表都会被虚拟化重定向，也就是说所有操作都是虚拟的，真实的文件和注册表不会被改动，这样可以确保病毒无法对系统关键部位进行改动而破坏系统。结合虚拟机以及沙箱技术，就可以方便搭建出所需要的软件操作环境，来进行对真实机器影响巨大的操作，而不用担心对真实机器造成破坏，并可随时恢复系统状态。</p>
+    <p>[0056]	&#183;内部检测技术[0057]	蜜罐内部运用了两种检测技术：静态特征匹配与动态行为检测。利用蜜罐系统的虚拟真实系统功能，我们将蜜罐与网络相连，通过蜜罐系统的模拟上网方法来验证当前浏览的网站是否存在危害性操作的行为产生。</p>
+    <p>[0058]..静态特征匹配</p>
+    <p>[0059]	静态特征匹配技术，已经是非常成熟并应用非常广泛的检测方法。传统意义上的静态特征处理是收集相关恶意木马或病毒样本的详细信息进行记录，在平时的使用中对收集的样本文件进行相关信息的特征匹配。静态特征匹配在一般的检测中有着检测速度快， 应对大规模数据处理时的简单易行以及方便进行自动化处理上的设置。不过，随着需要处理的数据的结构变化越来越快，这种静态特征匹配随着时间的推移而变得不再准确，因此， 只适用于一般的针对比较流行或使用非常广泛的数据的处理。不过，对于静态特征匹配目前一般都只是在检测数据的初级过滤中使用。由于静态特征匹配技术在实现上非常简单并可以通过内容添加和类型分类以及格式匹配等相对比较灵活的搭配方式来定制，非常适合非人工自动化的检测工作。方便对一些特定服务对象的特别策略定制上的实现工作。</p>
+    <p>[0060]..动态行为检测</p>
+    <p>[0061]	对于静态特征匹配技术在对数据进行检测时的误差问题，又引入了一项新的技术&#8212;&#8212;动态行为检测。</p>
+    <p>[0062]	动态行为检测是为了弥补静态特征匹配在大规模数据处理中存在的不准确问题而提出来的。其作用是将可能存在的误报率降低至一个可以接受的范围内。动态行为检测主要是监视蜜罐所进行的操作中是否有超出常规的可能危害操作系统的行为的出现。由于是对实时操作中出现的一些非常规运行行为的监视，在准确率上也比静态特征匹配要高出很多。由于动态行为检测需要应对的数据类型非常的繁杂，所以，动态行为检测技术是基于计算机网络及计算机操作系统多项数据类型检测技术的合成。</p>
+    <p>[0063]	&#183;正则表达式</p>
+    <p>[0064]	正则表达式（Regular Expression)，在计算机科学中，是指一个用来描述或者匹配一系列符合某个句法规则的字符串的单个字符串。在很多文本编辑器或其他工具里，正则表达式通常被用来检索和/或替换那些符合某个模式的文本内容。许多程序设计语言都支持利用正则表达式进行字符串操作。例如，在Perl中就内建了一个功能强大的正则表达式引擎。正则表达式这个概念最初是由Unix中的工具软件（例如sed和gr印）普及开的。“正则表达式〃通常缩写成〃 regex"，单数有regexp、regex，复数有regexps、 regexes、regexen。</p>
+    <p>[0065]	一个正则表达式通常被称为一个模式（pattern)，为用来描述或者匹配一系列符合某个句法规则的字符串。例如=Handel、H ？ ndel和Haendel这三个字符串，都可以由"H(a| ？ |ae)ndel"这个模式来描述。大部分正则表达式的形式都有如下的结构：</p>
+    <p>[0066]	替换</p>
+    <p>[0067]</p>
+    <p>[0068]	竖直分隔符代表替换。例如“gray | grey"可以匹配grey或gray。</p>
+    <p>[0069]	数量限定</p>
+    <p>[0070]	某个字符后的数量限定符用来限定前面这个字符允许出现的个数。最常见的数量限定符包括〃 +〃，〃？〃和〃 *〃（不加数量限定则代表出现一次且仅出现一次）：[0071]	+</p>
+    <p>[0072]	加号代表前面的字符必须至少出现一次。（1次，或多次）。例如，"goo+gle"可以匹配 google, gooogle, goooogle 等；</p>
+    <p>[0073]	？</p>
+    <p>[0074]	问号代表前面的字符最多只可以出现一次。（0次，或1次）。例如，“colou? r"可以匹配colour或者color ；</p>
+    <p>[0075]	*</p>
+    <p>[0076]	星号代表前面的字符可以不出现，也可以出现一次或者多次。（0次，或1次，或多次）。例如，“0*42〃 可以匹配 42，042，0042，00042 等。</p>
+    <p>[0077]	匹配</p>
+    <p>[0078]	圆括号可以用来定义操作符的范围和优先度。例如，“gr(a|e)y"等价于〃 gray | grey“ ， “ (grand) ？ father"匹配 father 禾口 grandfather。</p>
+    <p>[0079]	上述这些构造都可以自由组合，因此，‘‘H(ae? I ？ )ndel"和〃 H(a|ae| ？) ndel"是相同的。</p>
+    <p>[0080]	精确的语法可能因不同的工具或程序而异。</p>
+    <p>[0081]例子：</p>
+    <p>[0082]	‘‘ a|b&gt;K^^{e，a，b，bb，bbb，&#183;&#183;&#183;}。</p>
+    <p>[0083]	“ (a |b)*指示由包括空串、任意数目个a和b字符组成的所有字符串的集合。</p>
+    <p>[0084]	“ ab*(c| ε )指示开始于一个a接着零或多个b和最终可选的一个c的字符串的集合。</p>
+    <p>[0085]	表达式全集</p>
+    <p>[0086]	正则表达式有多种不同的风格。下表是在PCRE中元字符及其在正则表达式上下文中的行为的一个完整列表：</p>
+    <p>[0087]	字符描述</p>
+    <p>[0088]	\将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“n〃匹配字符〃 η"。“ \η"匹配一个换行符。序列〃 \\〃匹配〃 \〃而〃 \("则匹配〃（〃。</p>
+    <p>[0089]“匹配输入字符串的开始位置。如果设置了	RegExp对象的Multiline属性，“也匹配"W或"\r"之后的位置。</p>
+    <p>[0090]	$匹配输入字符串的结束位置。如果设置了 RegExp对象的Multiline属性，$也匹配〃 \n"或〃 \r"之前的位置。</p>
+    <p>[0091]	*匹配前面的子表达式零次或多次。例如，Z0*能匹配〃 ζ"以及〃 zoo"。*等价于{0，}。</p>
+    <p>[0092]	+匹配前面的子表达式一次或多次。例如，“ZO+"能匹配〃 Z0"以及〃 zoo"， 但不能匹配〃 Z"。+等价于{1，}。</p>
+    <p>[0093]	？匹配前面的子表达式零次或一次。例如，“d0(es) ？“可以匹配〃 do" 或"does"中的〃 do"。？等价于{0,1} ο</p>
+    <p>[0094]	{n}n是一个非负整数。匹配确定的η次。例如，“ο {2} 〃不能匹配〃 Bob"中的"ο"，但是能匹配〃 food"中的两个ο。[0095]	{n，}n是一个非负整数。至少匹配η次。例如，“0{2，}〃不能匹配〃 Bob"中的"O"，但能匹配〃 foooood"中的所有O。“ ο{1，}〃等价于〃 ο+"。“ o{0，}〃则等价于〃 o*〃。</p>
+    <p>[0096]	{n，m}m和η均为非负整数，其中n&lt;=m。最少匹配η次且最多匹配m次。例如，“ο{1，3}〃将匹配〃 fooooood"中的前三个O。“ ο {0,1}"等价于〃 o? 〃。请注意在逗号和两个数之间不能有空格。</p>
+    <p>[0097]	？当该字符紧跟在任何一个其他限制符（*，+，？，In}，In，}，{n，m})后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串〃 0000〃，" ο+?丨‘将匹配单个〃 ο"， 而"ο+"将匹配所有〃 ο"。</p>
+    <p>[0098].匹配除〃	\n"之外的任何单个字符。要匹配包括〃 \n"在内的任何字符，请使用像〃 [&#183;\η]〃的模式。</p>
+    <p>[0099]	(pattern)匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matches 集合得到，在VBkript中使用SubMatches集合，在JScript中则使用$0. &#183; &#183; $9属性。要匹配圆括号字符，请使用"\("或"\)"。</p>
+    <p>[0100]	( ？ :pattern)匹配pattern但不获取匹配结果，也就是说这是一个非获取匹配， 不进行存储供以后使用。这在使用"或"字符（I)来组合一个模式的各个部分是很有用。 例如，“industr(? ： y | ies)就是一个比〃 industry | industries ‘更简略的表达式。</p>
+    <p>[0101]	( ？ = pattern)正向预查，在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，“Windows ( ？ = 95 | 98 | NT | 2000)“能匹配〃 Windows2000“中的〃 Windows"，但不能匹配〃 WindoWS3. 1〃中的〃 Windows"。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</p>
+    <p>[0102]	( ？ ！ pattern)负向预查，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如〃 Windows ( ？! 95 | 98 | NT | 2000)“能匹配〃 Windows3. 1 “中的〃 Windows"，但不能匹配〃 Windows2000//中的〃 Windows"。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</p>
+    <p>[0103]	x|y 匹配 χ 或 y。例如，〃 ζ | food"能匹配〃 ζ 〃或〃 food"。“（Z|f)ood〃 则匹配〃 ZOOd 〃 或〃 food"。</p>
+    <p>[0104]	[xyz]字符集合。匹配所包含的任意一个字符。例如，“[abc]〃可以匹配〃 plain"中的〃 a"。</p>
+    <p>[0105]	["xyz]负值字符集合。匹配未包含的任意字符。例如，“rabc]〃可以匹配〃 plain"中的〃 p〃。</p>
+    <p>[0106]	[a-z]字符范围。匹配指定范围内的任意字符。例如，"[a-z] 〃可以匹配〃 a" 到"ζ"范围内的任意小写字母字符。</p>
+    <p>[0107]	["a-z]负值字符范围。匹配任何不在指定范围内的任意字符。例如，"["a-z]“ 可以匹配任何不在"a"到"ζ"范围内的任意字符。</p>
+    <p>[0108]	\b匹配一个单词边界，也就是指单词和空格间的位置。例如，“er\b〃可以匹配〃 never"中的〃 er〃，但不能匹配〃 verb"中的〃 er〃。</p>
+    <p>[0109]	\B匹配非单词边界。“er\B〃能匹配〃 verb"中的〃 er〃，但不能匹配〃 never"中的〃 er"。</p>
+    <p>[0110]	\cx匹配由χ指明的控制字符。例如，\cM匹配一个Control-M或回车符。χ的值必须为A-Z或a-z之一。否则，将c视为一个原义的〃 c〃字符。</p>
+    <p>[0111]	\d	匹配一	-个数字字符。等价于W-9]。[0112]	\D	匹配一	-个非数字字符。等价于Γ0-9]。[0113]	\f	匹配一	-个换页符。等价于\x0c和\cL。[0114]	\n	匹配一	“个换行符。等价于\x0a和\cj。[0115]	\r	匹配一	-个回车符。等价于\x0c^P\cM。[0116]	\s	匹配任何空白字符，包括空格、制表符、换页符等等。等价于[\f\n\r\t\v]。	[0117]	\s	匹配任何非空白字符。等价于r\f\n\r\t\v]。	[0118]	\t	匹配一	“个制表符。等价于\x09和\cL&#183;[0119]	\v	匹配一	-个垂直制表符。等价于\x0b和\cK。[0120]	\w	匹配包括下划线的任何单词字符。等价于"[A-Za-z0-9_] 〃。	[0121]	\ff	匹配任何非单词字符。等价于〃 rA-Za-zO-9_]“。	[0122]	\xn匹配		n，其中η为十六进制转义值。十六进制转义值必须为确定的两个数</p>
+    <p>长。例如，“\x41〃匹配〃 A"。“ \x041"则等价于〃 \x04" &amp;〃 1"。正则表达式中可以使用ASCII编码。</p>
+    <p>[0123]	\nurn匹配num，其中num是一个正整数。对所获取的匹配的引用。</p>
+    <p>[0124]	例如，“（.）\1〃匹配两个连续的相同字符。</p>
+    <p>[0125]	\n标识一个八进制转义值或一个向后引用。如果Vi之前至少η个获取的子表达式，则η为向后引用。否则，如果η为八进制数字（0-7)，则η为一个八进制转义值。</p>
+    <p>[0126]	\nm标识一个八进制转义值或一个向后弓丨用。如果\nm之前至少有nm个获得子表达式，则nm为向后引用。如果\nm之前至少有η个获取，则η为一个后跟文字m的向后引用。如果前面的条件都不满足，若η和m均为八进制数字（0-7)，则\nm将匹配八进制转义值nm。</p>
+    <p>[0127]	\nml如果η为八进制数字（0_3)，且m和1均为八进制数字（0_7)，则匹配八进制转义值nml。</p>
+    <p>[0128]	\un 匹配n，其中η是一个用四个十六进制数字表示的Unicode字符。例如， \u00A9匹配版权符号（？）。</p>
+    <p>[0129]	由于正则表达式是非常强大的、便捷、高效的文本处理工具。它可以添加、删除、分离、叠加、插入和修整各种类型的文本和数据。同样的，由于目前各大网站的建设都是以网站脚本为基础，如最早的HTML到现在广泛使用的JAVASCRIP等。正是由于这些脚本的存在，如需要对网站进行一些安全项目的检测，如恶意代码的检测，都无法避开对脚本语言的检测。由于脚本语言本身就可以被视为一些可被执行的文本，这就使正则表达式在对这些脚本的检测中，起到了非常大的作用。对于一些特别的或者特殊的字符、字条串的处理，非常高效。</p>
+    <p>[0130]	如图1所示，本发明恶意网站检测方法包括步骤：[0131]	1)获取要访问的URL;</p>
+    <p>[0132]	2)抓取所述URL所指向的页面；</p>
+    <p>[0133]	3)对所抓取页面的数据进行静态特征分析；</p>
+    <p>[0134]	4)如果静态特征分析表明存在危险特征，则在蜜罐集群内进行动态行为分析。</p>
+    <p>[0135]	其中，所述动态行为分析进一步包括步骤：</p>
+    <p>[0136]	40)基于对蜜罐集群所接受的URL进行判别的结果蜜罐集群中的蜜罐虚拟机启动沙箱；</p>
+    <p>[0137]	41)沙箱开启浏览器且浏览器在其中访问所述URL ；</p>
+    <p>[0138]	42)沙箱在浏览器访问URL过程中记录浏览器行为；</p>
+    <p>[0139]	43)沙箱分析所记录的浏览器行为并判断是否存在具有可能危害操作系统的操作。</p>
+    <p>[0140]	另外，所述浏览器行为至少包括浏览器应用层行为、系统层行为和内核层行为。也就是至少在三个层面上对浏览器行为进行检测。在应用层进行检测主要包括脚本行为检测和ACTIVEX加载与调用检测；系统层检测主要包括文件创建检测、进程创建检测、注册表写入检测、异常网络事件检测、浏览器内存状况检测和应用异常事件检测；内核层检测主要包括异常进程创建检测。</p>
+    <p>[0141]	浏览器与系统操作相关API是主要的浏览器行为，即浏览器及操作系统关键API 函数，这些函数调用情况以及传递给这些函数的参数等对于判断是否为恶意网站是重要依据之一。</p>
+    <p>[0142]	如果存在具有可能危害操作系统的操作，即表明该URL为恶意站点。例如，出现了非法的程序执行、出现了诸如下载文件到windows目录之类的非法的下载行为、出现了诸如添加程序开机自动执行之类的非法的注册表更改等等。</p>
+    <p>[0143]	从上述可知，本发明恶意网站检测方法是对要访问的URL进行分析，也就是对服务器端进行分析。抓取所述URL所指向的页面，也即获得页面数据。然后对所获得的页面数据进行静态特征分析，即在页面数据中查找危险特征，也就是进行初级过滤。如果存在危险特征，则在蜜罐虚拟机内进行动态行为分析。因此本发明恶意网站检测方法综合了静态特征分析和动态行为分析这二者来判定网站是否是恶意网站。也就是说，既利用了静态特征分析效率高的特点，又利用了动态特征准确率高的特点。因此，极大地减少了误报的可能性。</p>
+    <p>[0144]	获取要访问的URL，可以使用爬虫模块来实现，当然也可以采用本领域技术人员已知或者将来已知的任何技术。用爬虫模块对指定的互联网网站进行URL爬取，然后对URL 进行静态特征分析，对一切静态分析认为可疑的URL均交给蜜罐虚拟机系统启动沙箱进行行为识别。</p>
+    <p>[0145]	另外，在获得要访问的URL之后，还可以使用静态代码特征来判定网站的安全级别，通过静态特征分析后，如果匹配出当下所检测的URL带有恶意代码特征，则根据该安全级别来确定是否需要启动蜜罐虚拟机。其中，网站的安全级别是根据URL判别请求而进行的。由于例如挂马网站一般都是受当前流行的漏洞所导致的，而各个流行的漏洞所带来的危害是不一样的，通过对产生的危害性定级别，来确定是否需要启动蜜罐虚拟机。本例设为如果该页面存在一个危险特征，则启动蜜罐虚拟机，即向其分配任务。在分配任务的时候，空闲的蜜罐虚拟机将会接收到一条扫描起始地址URL，然后在虚拟系统里，通过模拟打开该 URL,记录并分析该网站对系统进行的任何危险动作。所述蜜罐虚拟机构造了一个遭受攻击的脆弱系统，模拟当前上网用户的系统环境，再通过沙箱来打开网站。</p>
+    <p>[0146]	对于蜜罐虚拟机而言，其主要是用来模拟真实的上网环境，需要具备以下特征：</p>
+    <p>[0147]	&#183;最普遍的操作系统环境，这是因为与普通上网环境一致能加大被攻击成功的几率；</p>
+    <p>[0148]	&#183;常用的软件环境（包括系统自带软件、第三方软件），只要满足攻击中可能需要的软件环境即可；</p>
+    <p>[0149]	&#183;常见的挂马攻击利用的漏洞，只要能够符合攻击针对特定版本的要求即可。</p>
+    <p>[0150]	可以基于上述特征，在虚拟机中制作出蜜罐操作系统母版。蜜罐操作系统母版是指将蜜罐系统搭建了以上的软件环境配置后，使用Vmware的OVF模板导出功能，将该操作系统当前的状态保存至其他存储空间，后续的部署即可直接应用此母版进行Vmware的OVF 模板导入，减少了重复配置软件环境的过程。在母版中加入蜜罐系统初始化程序，以用于自动配置蜜罐系统的IP、网关、DNS配置以及检测蜜罐系统中的软件版本是否需要更新，如果需要更新则进行更新。另外，可以通过Vmware提供的虚拟机克隆技术，对虚拟机进行克隆并部署。克隆功能需要安装Vmware提供的Vcenter软件，通过该软件登陆连接到Vmware ESXI主机，对ESXI主机中存在的虚拟操作系统可进行克隆至主机的操作。部署完毕后蜜罐系统初始化程序会自动完成配置工作。</p>
+    <p>[0151]	注意，沙箱可以采用本领域技术人员已知和将来已知的任何技术。沙箱的功能是实现模拟用户浏览网页行为，并且检测该网页的一切行为，如果发现恶意操作，则利用HOOK 技术对恶意操作进行替换，保护系统不会被恶意操作所破坏，同时也将该动作记录下来，给行为检测提供依据。</p>
+    <p>[0152]	本发明利用蜜罐系统和沙箱技术的结合可以节省系统资源，在一台蜜罐系统里可以使用多个沙箱来模拟多个打开网站的操作并且互不影响。此外，使用沙箱模式也不会致使蜜罐系统遭受病毒攻击。</p>
+    <p>[0153]	另外，为了保障蜜罐系统的绝对安全，本发明恶意网站检测方法还包括步骤：如果所述蜜罐虚拟机在启动以来所接受的URL扫描请求次数超过阈值，则重置所述蜜罐虚拟机；如果所述蜜罐虚拟机中存在不允许在所述蜜罐虚拟机中存在的进程名，则重置所述蜜罐虚拟机；如果所述蜜罐虚拟机中存在不允许在所述蜜罐虚拟机中的沙箱所在目录中存在的文件名，则重置所述蜜罐虚拟机。</p>
+    <p>[0154]	从上述可知，为了防止蜜罐VM中毒，由于蜜罐VM是以软件虚拟机技术为基础所虚拟出的一个仿真的网络环境，所以，蜜罐VM所虚拟出来的这个仿真环境也会和真实的环境是一样的。如果在蜜罐VM浏览一个带有恶意代码信息的网站，也是会受到此网站上的恶意代码攻击的，也就是我们常说的中毒情况的出现。蜜罐VM还记录启动以来接受URL扫描请求的数目，如果该数目超过一定数量（例如300等等）后，则重置。由于蜜罐虚拟机技术可以将其制作出来的虚拟环境进行记录。也就是说可以保存当前虚拟环境的各种系统参数的配备。这样，当此虚拟环境出现各种问题时，都可以很方便的恢复到之前保存的虚拟环境下。此蜜罐虚拟机还可以事先在数据结构中记录蜜罐虚拟机中允许存在的进程名和蜜罐虚拟机中沙箱所在目录中允许存在的文件名，通过检测蜜罐虚拟机中是否有不符合此白名单的条目，如果有则重置蜜罐此虚拟机。</p>
+    <p>[0155]	下面通过具体实施例来更详细地描述本发明恶意网站检测方法的技术方案。</p>
+    <p>[0156]	在本例中蜜罐集群包括多个蜜罐虚拟机。</p>
+    <p>[0157]	蜜罐集群由单个或者多个主机构成，在主机中安装Vmware ESXI操作系统，在 ESXI操作系统中，可以安装、导入Vmware虚拟操作系统。</p>
+    <p>[0158]	通过在PC主机中使用Vmware Workstation，新建虚拟操作系统，在其中安装 Windows XP操作系统用于搭建蜜罐操作系统，在操作系统中，安装常见的第三方软件，如暴风影音、Adobe Reader等，并且挑选软件存在漏洞的版本进行安装。</p>
+    <p>[0159]	安装完软件之后，关闭防火墙、系统自动更新、软件自动更新等服务。在该蜜罐系统中放入系统配置与核心组件初始化程序，并将该程序加入系统自启动设置，随机启动时就会自动根据MAC地址配置IP、DNS等网络环境，并自动连接控制端检查核心组件的更新情况，发现新版本随即下载更新。以上所有操作完成了单个蜜罐环境的配置。</p>
+    <p>[0160]	使用Vmware Conveter将配置完毕的蜜罐系统环境转换导入到Vmware ESXI主机中即完成了单个蜜罐的部署。</p>
+    <p>[0161]在	Vmware ESXI 主机中安装 Vmware Vcenter 集群管理程序，通过 Vmware Vcenter 对单个蜜罐系统进行克隆，复制多个相同的蜜罐系统，修改其MAC地址，启动蜜罐系统让初始化程序进行自动配置网络环境、更新核心组件，之后对所有蜜罐系统制作系统快照。将所有蜜罐系统的IP地址添加到调度程序的配置文件中蜜罐地址列表部分，便完成了蜜罐集群的部署与配置。</p>
+    <p>[0162]	通过命令行的扫描输出结果：</p>
+    <p>[0163]	&gt;&gt; Start Crawling :http：//maolin322. qizai. com/ ^llJJf^n</p>
+    <p>[0164]	http://maolin322. qizai. com/&lt; ！ &gt;50〈！ &gt;2008-10-2901:46:37 对页面检测任务开始具体时间</p>
+    <p>[0165]	http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt; ！ &gt;2008-10&#8212;2901：46：34〈！ &gt;http:// www. tznylsf. cn/llzgs/7.htm&lt; ！ &gt;15&lt; ！ &gt;STATIC&lt; ！ &gt;( ？ i)\&lt;iframe["&gt;&lt;]*\ sheight\s* = \s*[“ ' ] ？ \s*[0-9] [“ ‘ ] ？ [\s&gt;] ["&gt;&lt;]* 页面判别结果为 MAL 即存在挂马，判别依据STATIC即静态特征判别，最后为检测使用的正则表达式，表达式匹配出真正挂马页面弓丨用了 http://www. tznylsf. cn/llzgs/7. htm</p>
+    <p>[0166]	http://maolin322. qizai. com/&lt; ！ &gt;END&lt; ！ &gt;2008-10-2901:46:37检测结束时间</p>
+    <p>[0167]	通过阅读扫描日志，可以看到开始标志以及开始时间，这个时候代表URL已经被传递进去，开始抓取网页数据，给扫描函数进行特征扫描处理，并返回结果。</p>
+    <p>[0168]	http://maolin322. qizai. com/&lt; ！ &gt;START&lt; ！ &gt;2008-10-2901:46:34</p>
+    <p>[0169]	之后还可以看到每行一条的恶意特征，以及经过特征分析出来的恶意挂马地址， 以〈！ &gt;MAL〈！ &gt;作为标志。</p>
+    <p>[0170]	http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt; ！ &gt;2008-10-2901：46：34〈！ &gt;http:// www. tznylsf. cn/llzgs/7.htm&lt; ！ &gt;15&lt; ！ &gt;STATIC&lt; ！ &gt;( ？ i)\&lt;iframe["&gt;&lt;]*\ sheight\s* = \s*["‘ ] ？ \s*[0-9][" ' ] ？ [\s&gt;]["&gt;&lt;]*</p>
+    <p>[0171] http: //maolin322. qizai. com/&lt;</p>
+    <p>&gt;MAL&lt; ！ &gt;2008-10-2901:46:34&lt; ！ &gt;http:</p>
+    <p>www. qqazl. cn/c02. htm&lt; ！ &gt;15〈！ &gt;STATIC&lt; ！ &gt;(? i)\&lt;iframeΓ&gt;&lt;]*\sheight\s* =\s*[〃‘ ] ？ \s*[0-9][“ ‘ ] ？ [\s&gt;]["&gt;&lt;]*</p>
+    <p>[0172]	http://maolin322. qizai.com/&lt; ！ &gt;MAL&lt; ！ &gt;2008-10-2901:46:36〈！ &gt;http:// maolin322. qizai. com/index_files/detail. js&lt; ！ &gt;3&lt; ！ &gt;STATIC&lt; ！ &gt;(? i)document\. writel ？ η ？ \s*\(\s*[“ ‘ ]["&gt;&lt;]*\&lt;script["&gt;&lt;]*\ssrc\s* = \s*[“ ‘ ] ? \s*</p>
+    <p>[0173]	http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt; ！ &gt;2008-10-2901: 46 : 37&lt; ！</p>
+    <p>&gt;http:</p>
+    <p>% 61 % 76 % 65 % 33 % 2E % 63 % 6E&lt; ！ &gt;3&lt; ！ &gt;STATIC&lt; ！ &gt;( ？</p>
+    <p>i)\&lt;iframer&gt;&lt;]*\sheight\s* = \s*["‘ ] ？ \s*[0-9] [“ ‘ ] ？ [\s&gt;] ["&gt;&lt;]*</p>
+    <p>[0174] http ： //maol in322. qizai. com/&lt;</p>
+    <p>&gt;MAL&lt;</p>
+    <p>&gt;2008-10-2901:46:37&lt;</p>
+    <p>&gt;http://% 61% 76% 65% 33% 2E% 63% 6E&lt; ！ &gt;3&lt; ！ &gt;STATIC&lt; ！ &gt;( ？ i)document\. writel ？ η ？ \s*\(\s*[ “ ‘ ]["&gt;&lt;]*\&lt;iframe["&gt;&lt;]*\sheight\s* = \s*[ 〃 ' ] ? \s*[0-9] [‘“ ] ？ [\s&gt;] Γ&gt;&lt;]*</p>
+    <p>[0175] http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt; ！ &gt;2008-10-2901: 46 : 37&lt; ！</p>
+    <p>&gt;http:</p>
+    <p>% 61 % 76 % 65 % 33 % 2E % 63 % 6E&lt;</p>
+    <p>&gt;3&lt;</p>
+    <p>&gt;STATIC&lt;</p>
+    <p>X ？</p>
+    <p>i)\&lt;iframer&gt;&lt;]*\sheight\s* = \s*["‘ ] ？ \s*[0-9] [“ ‘ ] ？ [\s&gt;] ["&gt;&lt;]* [0176] http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt; ！ &gt;2008-10-2901: 46 : 37&lt; ！ &gt;http://% 61% 76% 65% 33% 2E% 63% 6E&lt; ！ &gt;3&lt; ！ &gt;STATIC&lt; ！ &gt;( ？ i)document\.</p>
+    <p>writel ？ η ? \s*\(\s*[</p>
+    <p>]["&gt;&lt;]*\&lt;iframe["X]*\sheight\s* = \s*[</p>
+    <p>]？</p>
+    <p>\s*[0-9]['</p>
+    <p>]? [\s&gt;]["&gt;&lt;]*</p>
+    <p>[0177]	http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt; www. tznylsf. cn&lt; ！ &gt;3&lt; ！ &gt;STATIC&lt; ！ &gt;outside</p>
+    <p>[0178]	http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt;</p>
+    <p>&gt;2008-10-2901:46:37&lt; ！ &gt;http:</p>
+    <p>&gt;2008-10-2901:46:37&lt; ！ &gt;http:</p>
+    <p>&gt;2008-10-2901:46:37&lt; ！ &gt;http:</p>
+    <p>www. qqazl. cn&lt; ！ &gt;3&lt; ！ &gt;STATIC&lt; ！ &gt;outside</p>
+    <p>[0179]	最后以〈！ &gt;END〈！ &gt;标志和结束时间作为结束。</p>
+    <p>[0180]	http://maolin322. qizai. com/&lt; ！ &gt;END&lt; ！ &gt;2008-10-2901:46:37</p>
+    <p>[0181]	特征日志还包含了外域判断：</p>
+    <p>[0182]	http://maolin322. qizai. com/&lt; ！ &gt;MAL&lt; www. qqazl. cn&lt; ！ &gt;3&lt; ！ &gt;STATIC&lt; ！ &gt;outside</p>
+    <p>[0183]	outside为外站关键字。</p>
+    <p>[0184]	扫描该站点的安全危险系数为：</p>
+    <p>[0185]	http://maolin322. qizai. com/&lt; ！ &gt;50〈！ &gt;2008-10-2901:46:37</p>
+    <p>[0186]	50分满分，扫描程序将扫描结果返回给调度程序：</p>
+    <p>[0187]	{' url' ： ‘ http://maolin322. qizai. com/' ， ‘ endTime'：‘ 01:46:37'，‘ risk' :50，‘ startTime' ： ‘ 2008-10-29 01:46:34'， [{' url'：</p>
+    <p>[0188]</p>
+    <p>2008-10-29 suburls‘：</p>
+    <p>http://www. qqazl. cn/c02. htm'</p>
+    <p>info ‘</p>
+    <p>[0189] ‘ ( ？</p>
+    <p>Ws* [0-9] [\ “</p>
+    <p>15， ‘ time' [0190]</p>
+    <p>i) \\&lt;iframe["&gt;&lt;]*\\sheight\\s* = \\s*[ ]？ [\\s&gt;]["&gt;&lt;]* ‘ ， ‘ type ‘ ： ‘ STATIC ‘ 2008-10-29 01:46:34' }, {' url'：</p>
+    <p>risk</p>
+    <p>http://www. tznylsf. cn/llzgs/7. htm'</p>
+    <p>info ‘[0191] ‘ ( ？</p>
+    <p>Ws* [0-9] [\ “</p>
+    <p>15， ‘ time'</p>
+    <p>[0192]</p>
+    <p>[0193]</p>
+    <p>http ： (？</p>
+    <p>i) \\&lt;iframe["&gt;&lt;]*\\sheight\\s* = \\s*[ “ \ ‘ \ ]？ [\\s&gt;]["&gt;&lt;]* ‘ ， ‘ type ‘ ： ‘ STATIC ‘ ， ‘ risk 2008-10-29 01:46:34' }, {' url'： 7maolin322.qizai.com/index_files/detail.js' , ‘ info‘： i) documentW. writel ？ η ？ \\s*\\(\\s*[ ‘‘ \ ‘</p>
+    <p>["&gt;&lt;]*\\&lt;script["X]*\\ssrc</p>
+    <p>\\s*' , ‘ type' {' url'：</p>
+    <p>[0194]</p>
+    <p>[0195]	‘ ( ？</p>
+    <p>Ws* [0-9] [\ “</p>
+    <p>STATIC'</p>
+    <p>risk' ：3,</p>
+    <p>\ s&#27706; =</p>
+    <p>time‘：</p>
+    <p>Λ s * [ ‘‘ \ ‘ ] ？ 2008-10-29 01:46:36' }，</p>
+    <p>http://% 61% 76% 65% 33% 2E% 63% 6E'</p>
+    <p>info ‘</p>
+    <p>3，</p>
+    <p>[0196]</p>
+    <p>[0197]</p>
+    <p>time</p>
+    <p>i) \\&lt;iframe["&gt;&lt;]*\\sheight\\s* = \\s*[ ]？ [\\s&gt;]["&gt;&lt;]* ‘ ， ' type ' ： ' STATIC ' 2008-10-29 01:46:37' }, {' url'：</p>
+    <p>risk</p>
+    <p>http: (？</p>
+    <p>'% 61% 76% 65% 33% 2E% 63% 6E'</p>
+    <p>info ‘</p>
+    <p>i)document\\.writel ？ η ? \\s*\\(\\s*[</p>
+    <p>["&gt;&lt;]*\\&lt;iframe["X]*\\sheight\\s* = \\s*[‘</p>
+    <p>]？ \\s*[0-9] [\" ' ] ？ [\\s&gt;]</p>
+    <p>["&gt;&lt;]*'，' type' ： ' STATIC'，' risk' :3，' time'：</p>
+    <p>[0198] ' 2008-10-2901:46:37' }，{' url' ： ' http://% 61% 76% 65% 33% 2E% 63 % 6E ' , ' info ' ： ' ( ？ i)\\&lt;iframe["&gt;&lt;]*\\sheight\\s* = \\s*[“ \ ' ] ?</p>
+    <p>\\s*[0-9][\</p>
+    <p>]？ [\\s&gt;]["&gt;&lt;]*</p>
+    <p>type</p>
+    <p>STATIC</p>
+    <p>risk</p>
+    <p>3，</p>
+    <p>[0199] [0200]</p>
+    <p>time</p>
+    <p>http: (？</p>
+    <p>2008-10-29 01:46:37' }, {' url'： //% 61% 76% 65% 33% 2E% 63% 6E'， i)document\\.writel ？ η ? \\s*\\(\\s*[</p>
+    <p>info ‘</p>
+    <p>["&gt;&lt;]*\\&lt;iframe["X]*\\sheight\\s* = \\s*[‘</p>
+    <p>]？ \\s*[0-9] [\" ' ] ？ [\\s&gt;]</p>
+    <p>["&gt;&lt;]*'，' type' ： ' STATIC'，' risk' :3，' time'：</p>
+    <p>[0201]	' 2008-10-2901:46:37' }，{' url' ： ' http://www.tznylsf.cn'，' info'： 'outside'，' type' ：' STATIC'，' risk' ：3, ' time' ：' 2008-10-29 01:46:37' }， {' url'：</p>
+    <p>[0202]	' http://www.qqazl.cn' , ' info' ： ' outside',</p>
+    <p>[0203]</p>
+    <p>pe</p>
+    <p>STATIC'</p>
+    <p>risk' :3,</p>
+    <p>time</p>
+    <p>'ty</p>
+    <p>2008-10-29 01:46:37' }]}</p>
+    <p>[0204]	返回数据里面包含了起始URL，扫描开始时间，扫描结束时间，安全风险分值，匹配到的每条特征，发现时间以及挖掘出来的恶意地址。</p>
+    <p>[0205]	Suburls表示不仅仅只是网站主URL会包含恶意代码特征，其下的子URL也有可能包含此类信息。里包含了当前页面包含的所有子url以及其特征信息，扫描开始时间，扫描结束时间，安全风险分值。</p>
+    <p>[0206]	以对：http：//www. kekenet. com/网站进行恶意代码识别为例：</p>
+    <p>[0207]爬虫程序获取并抓取了	URL :http ： //www. kekenet. com/ ；</p>
+    <p>[0208]	然后对该URL进行静态特征分析，由于该页面内部存在非本域名的动态脚本，所以会被判别为可疑，即存在危险特征，接着在蜜罐集群内进行动态行为分析。</p>
+    <p>[0209]	所述动态行为分析进一步包括步骤：</p>
+    <p>15[0210]	40)基于对蜜罐集群所接受的URL进行判别的结果蜜罐集群中的蜜罐虚拟机启动沙箱；</p>
+    <p>[0211]	41)沙箱开启浏览器且浏览器在其中访问所述URL ；</p>
+    <p>[0212]	42)沙箱在浏览器访问URL过程中记录浏览器行为；</p>
+    <p>[0213]	43)沙箱分析所记录的浏览器行为并判断是否存在具有可能危害操作系统的操作。</p>
+    <p>[0214]	当URL在静态扫描中的判定结果为可疑时，URL便被分发至蜜罐中进行动态行为分析。</p>
+    <p>[0215]	蜜罐虚拟机启动沙箱，沙箱调用IE打开URL，并等待URL加载网页完毕或者是超过超时阈值便结束IE，将访问URL过程中的所有浏览器行为进行记录并予以分析，判定结果是否恶思ο</p>
+    <p>[0216]	分析的浏览器行为中假如触发以下任何一个函数则证明该网页存在恶意行为。</p>
+    <p>[0217]	以下为函数列表，包括但不限于以下函数：</p>
+    <p>[0218]	①打开系统服务：</p>
+    <p>[0219]	OpenServiceA (参数为 ascii 形式)</p>
+    <p>[0220]	OpenServiceff (参数为 Unicode 形式)</p>
+    <p>[0221]	②创建系统服务</p>
+    <p>[0222]	CreateServiceA</p>
+    <p>[0223]	CreateServiceff</p>
+    <p>[0224]	③文件下载函数</p>
+    <p>[0225]	URLDownloadToFileA</p>
+    <p>[0226]	URLDownloadToFileff</p>
+    <p>[0227]	本例在访问URL过程中浏览器产生了对c:\windows目录的写操作，试图创建文件 xl. exe，这些行为会被记录并且判定为异常行为，所以该URL会被判别为恶意页面。同时通过对运行过程的记录进行分析，还能给出更进一步信息：</p>
+    <p>[0228]	浏览器访问该页面时会从http://xin254536. 3322. org:89/xl. exe地址下载程序到c:\windows并试图执行。</p>
+    <p>[0229]	上例只是对一个URL进行恶意站点检测，当应用到更多个站点时本发明的效果越明显。</p>
+    <p>[0230]	相应地，本发明恶意网站检测装置，包括：</p>
+    <p>[0231]	获取单元1，用于获取要访问的URL ；</p>
+    <p>[0232]	抓取单元2，用于抓取所述URL所指向的页面；</p>
+    <p>[0233]	静态分析单元3，用于对所抓取页面的数据进行静态特征分析；</p>
+    <p>[0234]	动态分析单元4，用于如果静态分析单元3表明存在危险特征则在蜜罐集群内进行动态行为分析。</p>
+    <p>[0235]	优选地，所述动态分析单元4还包括：</p>
+    <p>[0236]	启动单元，基于对蜜罐集群所接受的URL进行判别的结果蜜罐集群中的蜜罐虚拟机启动沙箱；</p>
+    <p>[0237]	沙箱，其包括：[0238]	开启单元，用于开启浏览器且浏览器在其中访问所述URL ；</p>
+    <p>[0239]	记录单元，用于在浏览器访问URL过程中记录浏览器行为；</p>
+    <p>[0240]	分析单元，用于分析所记录的浏览器行为并判断是否存在具有可能危害操作系统的操作。</p>
+    <p>[0241]	其中，所述浏览器行为包括浏览器应用层行为、系统层行为和内核层行为。</p>
+    <p>[0242]	所述系统层行为包括文件创建、进程创建、注册表写入、异常网络事件、浏览器内存状况和应用异常事件。</p>
+    <p>[0243]	所述内核层行为包括异常进程创建。</p>
+    <p>[0244]	本发明恶意网站检测装置还包括用于如果所述蜜罐虚拟机在启动以来所接受的 URL扫描请求次数超过阈值，或者蜜罐虚拟机运行时间超过预定的阈值，则重置所述蜜罐虚拟机的单元。</p>
+    <p>[0245]	优选地，本发明恶意网站检测装置还包括用于如果所述蜜罐虚拟机中存在不允许在所述蜜罐虚拟机中存在的进程名则重置所述蜜罐虚拟机的单元。</p>
+    <p>[0246]	由于本发明恶意网站检测装置的技术方案与本发明恶意网站检测方法的技术方案相对应，因此在此不再对本发明恶意网站检测装置的技术方案进行详述。</p>
+    <p>[0247]	综上所述，本发明是对恶意网站数据检测技术上的创新。是对已有的非常成熟的软件虚拟机技术加以改进，构建了以软件虚拟机技术为基础的蜜罐集群。VM软件虚拟机技术可以利用磁盘空间，利用软件特性，通过文件的形式在磁盘空间中虚拟出一个极度仿真的操作系统环境出来。并可以设计出各种不同的虚拟环境出来（带有不同的配备参数）。 由于需要对极大规模数据的检测，所以，单个的蜜罐系统是无法满足要求的。所以，在同一个磁盘空间内构建多个蜜罐系统来组成蜜罐集群再配以进程同步并发机理，以创造出一个与真实物理硬件完全一致的运行环境，再加以各种模拟来自于真实的网络的操作行为，对进行蜜罐集群的URLs进行安全检测和分析。</p>
+    <p>[0248]	另外，本发明的对信息收集面的收集方式与众不同。出于对数据应用性的考虑，放弃了传统的从客户端数据的方式，而改为了从服务器端收集数据的方式，这就可以很好的保证可以为几乎全面可能的互联网应用者提供一个全面的网站安全检测。目前为止，还没有见到相类似的产品出现。</p>
+    <p>[0249]	虽然上述已经结合附图描述了本发明的具体实施例，但是本领域技术人员在不脱离本发明的精神和范围的情况下，可以对本发明进行各种改变、修改和等效替代。这些改变、修改和等效替代都意为落入随附的权利要求所限定的精神和范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101425016A?cl=zh">CN101425016A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年11月1日</td><td class="patent-data-table-td patent-date-value">2009年5月6日</td><td class="patent-data-table-td ">珠海金山软件股份有限公司</td><td class="patent-data-table-td ">运行安装软件的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101692267A?cl=zh">CN101692267A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年9月15日</td><td class="patent-data-table-td patent-date-value">2010年4月7日</td><td class="patent-data-table-td ">北京大学</td><td class="patent-data-table-td ">一种大规模恶意网页检测方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2008069945A2?cl=zh">WO2008069945A2</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年11月29日</td><td class="patent-data-table-td patent-date-value">2008年6月12日</td><td class="patent-data-table-td ">Websense, Inc.</td><td class="patent-data-table-td ">System and method of analyzing web addresses</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">《计算机应用》 20070731 孙晓研等 "<a href='http://scholar.google.com/scholar?q="%E5%9F%BA%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%9C%9C%E7%BD%90%E7%9A%84%E6%81%B6%E6%84%8F%E7%BD%91%E9%A1%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0"'>基于客户端蜜罐的恶意网页检测系统的设计与实现</a>" 第1613-1615页 第27卷, 第7期</td></tr><tr><td class="patent-data-table-td ">2</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">孙晓研等: "<a href='http://scholar.google.com/scholar?q="%22%E5%9F%BA%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%9C%9C%E7%BD%90%E7%9A%84%E6%81%B6%E6%84%8F%E7%BD%91%E9%A1%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%22"'>"基于客户端蜜罐的恶意网页检测系统的设计与实现"</a>", 《计算机应用》, vol. 27, no. 7, 31 July 2007 (2007-07-31), pages 1613 - 1615</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102592086A?cl=zh">CN102592086A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月28日</td><td class="patent-data-table-td patent-date-value">2012年7月18日</td><td class="patent-data-table-td ">奇智软件（北京）有限公司</td><td class="patent-data-table-td ">在沙箱中浏览网页方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102592086B?cl=zh">CN102592086B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月28日</td><td class="patent-data-table-td patent-date-value">2015年4月15日</td><td class="patent-data-table-td ">奇智软件（北京）有限公司</td><td class="patent-data-table-td ">在沙箱中浏览网页方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102609649A?cl=zh">CN102609649A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月6日</td><td class="patent-data-table-td patent-date-value">2012年7月25日</td><td class="patent-data-table-td ">北京百度网讯科技有限公司</td><td class="patent-data-table-td ">一种自动采集恶意软件的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102609649B?cl=zh">CN102609649B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月6日</td><td class="patent-data-table-td patent-date-value">2015年9月2日</td><td class="patent-data-table-td ">北京百度网讯科技有限公司</td><td class="patent-data-table-td ">一种自动采集恶意软件的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102930210A?cl=zh">CN102930210A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月14日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">江苏金陵科技集团公司</td><td class="patent-data-table-td ">恶意程序行为自动化分析、检测与分类系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102930210B?cl=zh">CN102930210B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月14日</td><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">江苏金陵科技集团有限公司</td><td class="patent-data-table-td ">恶意程序行为自动化分析、检测与分类系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103345603A?cl=zh">CN103345603A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月28日</td><td class="patent-data-table-td patent-date-value">2013年10月9日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">基于沙箱技术浏览网页的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103428183A?cl=zh">CN103428183A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月23日</td><td class="patent-data-table-td patent-date-value">2013年12月4日</td><td class="patent-data-table-td ">北京新媒传信科技有限公司</td><td class="patent-data-table-td ">恶意网址的识别方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103457916A?cl=zh">CN103457916A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月1日</td><td class="patent-data-table-td patent-date-value">2013年12月18日</td><td class="patent-data-table-td ">阿里巴巴集团控股有限公司</td><td class="patent-data-table-td ">链接文件的管理方法和服务器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014101783A1?cl=zh">WO2014101783A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年12月26日</td><td class="patent-data-table-td patent-date-value">2014年7月3日</td><td class="patent-data-table-td ">Tencent Technology (Shenzhen) Company Limited</td><td class="patent-data-table-td ">Method and server for performing cloud detection for malicious information</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=1_iaBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0021550000">G06F21/55</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=1_iaBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年11月23日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年1月4日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年9月30日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/c4073f8006c8a1d06135/CN102254111A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%81%B6%E6%84%8F%E7%BD%91%E7%AB%99%E6%A3%80%E6%B5%8B%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85%E7%BD%AE.pdf?id=1_iaBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0KWwHIuhjTCKvVZTK1jAiLJc1fPQ"},"sample_url":"https://www.google.com/patents/reader?id=1_iaBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

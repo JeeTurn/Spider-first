@@ -1,0 +1,216 @@
+<!DOCTYPE html><html><head><title>专利 CN103593672A - Adaboost分类器在线学习方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="Adaboost分类器在线学习方法及系统"><meta name="DC.contributor" content="雷明" scheme="inventor"><meta name="DC.contributor" content="万克林" scheme="inventor"><meta name="DC.contributor" content="深圳市智美达科技有限公司" scheme="assignee"><meta name="DC.date" content="2013-5-27" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及一种Adaboost分类器在线学习方法和系统。所述方法包括：采用离线训练得到的强分类器进行目标检测，并得到目标检测结果；采用背景模型进行目标检测，得到运动目标；将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标；将所述错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。上述Adaboost分类器在线学习方法和系统，通过将离线分类器检测的目标结果与背景模型检测的运动目标进行比较，得到错分类器的目标，将错分类器的目标作为在线训练样本，得到更新后的强分类器，有效提高了目标检测分类器的泛化性能，使其能够适应运行时的监控场景，提高了检测率，降低了误报率。"><meta name="DC.date" content="2014-2-19"><meta name="citation_patent_publication_number" content="CN:103593672:A"><meta name="citation_patent_application_number" content="CN:201310202058"><link rel="canonical" href="https://www.google.com/patents/CN103593672A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103593672A?cl=zh"/><meta name="title" content="专利 CN103593672A - Adaboost分类器在线学习方法及系统"/><meta name="description" content="本发明涉及一种Adaboost分类器在线学习方法和系统。所述方法包括：采用离线训练得到的强分类器进行目标检测，并得到目标检测结果；采用背景模型进行目标检测，得到运动目标；将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标；将所述错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。上述Adaboost分类器在线学习方法和系统，通过将离线分类器检测的目标结果与背景模型检测的运动目标进行比较，得到错分类器的目标，将错分类器的目标作为在线训练样本，得到更新后的强分类器，有效提高了目标检测分类器的泛化性能，使其能够适应运行时的监控场景，提高了检测率，降低了误报率。"/><meta property="og:title" content="专利 CN103593672A - Adaboost分类器在线学习方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103593672A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103593672A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=NaHyCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103593672A&amp;usg=AFQjCNEbC7U_4B8kNJorSb6vwE404uKFdg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/739f339b5de91644e57a/CN103593672A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/739f339b5de91644e57a/CN103593672A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103593672A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103593672A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103593672A?cl=zh" style="display:none"><span itemprop="description">本发明涉及一种Adaboost分类器在线学习方法和系统。所述方法包括：采用离线训练得到的强分类器进行目标检测，并得到目标检测结果；采用背景模型进行目标检测，得到运动目标；将强分类器得到的目标检测结果与背景模型检 ...</span><span itemprop="url">https://www.google.com/patents/CN103593672A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103593672A - Adaboost分类器在线学习方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103593672A - Adaboost分类器在线学习方法及系统" title="专利 CN103593672A - Adaboost分类器在线学习方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103593672 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310202058</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年2月19日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年5月27日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年5月27日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310202058.X, </span><span class="patent-bibdata-value">CN 103593672 A, </span><span class="patent-bibdata-value">CN 103593672A, </span><span class="patent-bibdata-value">CN 201310202058, </span><span class="patent-bibdata-value">CN-A-103593672, </span><span class="patent-bibdata-value">CN103593672 A, </span><span class="patent-bibdata-value">CN103593672A, </span><span class="patent-bibdata-value">CN201310202058, </span><span class="patent-bibdata-value">CN201310202058.X</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%9B%B7%E6%98%8E%22">雷明</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%B8%87%E5%85%8B%E6%9E%97%22">万克林</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B7%B1%E5%9C%B3%E5%B8%82%E6%99%BA%E7%BE%8E%E8%BE%BE%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">深圳市智美达科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103593672A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103593672A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103593672A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (1)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=NaHyCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310202058&amp;usg=AFQjCNG_jzRkxNiegIXYRpR2UVoP5rVldw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=NaHyCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103593672A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEGnCP858kwktjqnM2KfQ05VsbYIA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT133571119" lang="ZH" load-source="patent-office">Adaboost分类器在线学习方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 103593672 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA130614928" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及一种Adaboost分类器在线学习方法和系统。所述方法包括：采用离线训练得到的强分类器进行目标检测，并得到目标检测结果；采用背景模型进行目标检测，得到运动目标；将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标；将所述错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。上述Adaboost分类器在线学习方法和系统，通过将离线分类器检测的目标结果与背景模型检测的运动目标进行比较，得到错分类器的目标，将错分类器的目标作为在线训练样本，得到更新后的强分类器，有效提高了目标检测分类器的泛化性能，使其能够适应运行时的监控场景，提高了检测率，降低了误报率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM59263492" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种Adaboost分类器在线学习方法,包括:  采用离线训练得到的强分类器进行目标检测，并得到目标检测结果；  采用背景模型进行目标检测，得到运动目标；  将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标；  将所述错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的Adaboost分类器在线学习方法，其特征在于，所述方法还包括:  离线训练得到的强分类器，包括:  给定N个离线训练样本，并初始化离线训练样本的权重；  根据所述N个离线训练样本和权重循环训练多个弱分类器，并得到每个弱分类器的权重；  根据所述多个弱分类器 及相应的权重得到强分类器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的Adaboost分类器在线学习方法，其特征在于，所述根据所述N个离线训练样本和权重循环训练多个弱分类器，并得到每个弱分类器的权重的步骤包括:  根据所述N个离线训练样本和权重训练多个弱分类器；  计算所述N个离线训练样本在每个弱分类器上的总误差，并根据所述每个弱分类器的总误差得到每个弱分类器的权重；  更新所述离线训练样本的权重，并对所述权重归一化。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所述的Adaboost分类器在线学习方法，其特征在于，所述背景模型为高斯混合模型、背景差分法模型或帧平均背景模型；  当所述背景模型为高斯混合模型时，所述采用背景模型进行目标检测，得到运动目标的步骤包括:  若当前帧为第一帧，则初始化高斯混合模型中的高斯分量；  若当前帧不为第一帧，则利用当前帧的每一个像素更新高斯混合模型中的高斯分量，并根据当前帧和每个高斯分量的比较，得到前景像素，形成前景图；  对所述前景图进行处理，提取联通分量，得到运动目标；  当所述背景模型为背景差分法模型时，所述采用背景模型进行目标检测，得到运动目标的步骤包括:  采用当前帧与前一帧相减得到差分图，根据差分图进行阈值化提取前景图；  对所述前景图进行处理，提取联通分量，得到运动目标；  当所述背景模型为帧平均背景模型时，所述采用背景模型进行目标检测，得到运动目标的步骤包括:  将当前帧之前的所有帧的加权平均作为背景，再用当前帧和所述背景相减得到差分图，根据差分图进行阈值化提取前景图；  对所述前景图进行处理，提取联通分量，得到运动目标。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1至4中任一项所述的Adaboost分类器在线学习方法，其特征在于，所述将所述错分类器的目标作为训练样本，进行在线训练，得到更新后的强分类器的步骤包括:  将所述错分类器的目标作为在线训练样本，初始化训练样本的权重；  根据以权重为参数的泊松分布设置训练的次数；  将弱分类器根据所述在线训练样本按照所述设置的次数进行训练；  若在线训练样本被正确分类，则更新泊松分布的参数，计算正确分类的次数累加值、计算分类器的错误率；  若在线训练样本被错误分类，则更新泊松分布的参数，计算错误分类的次数累加值、计算分类器的错误率；  得到更新后的强分类器。</div>
+    </div>
+    </div> <div class="claim"> <div num="6" class="claim">
+      <div class="claim-text">6.&#8212;种Adaboost分类器在线学习系统,其特征在于,包括:  第一检测模块，用于采用离线训练得到的强分类器进行目标检测，并得到目标检测结果;  第二检测模块，用于采用背景模型进行目标检测，得到运动目标；  比较模块，用于将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标；  在线训练模块，用于将所述错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的Adaboost分类器在线学习系统，其特征在于，所述系统还包括:  离线训练模块，用于离线训练得到的强分类器，包括:  离线初始化单元，用于给定N个离线训练样本，并初始化离线训练样本的权重；  离线训练单元，用于根据所述N个离线训练样本和权重循环训练多个弱分类器，并得到每个弱分类器的权重；  离线输出单元，用于根据所述多个弱分类器及相应的权重得到强分类器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求6所述的Adaboost分类器在线学习系统，其特征在于，所述离线训练单元包括:  弱分类器训练子单元，用于根据所述N个离线训练样本和权重训练多个弱分类器；弱分类器权重计算子单元，用于计算所述N个离线训练样本在每个弱分类器上的总误差，并根据所述每个弱分类器的总误差得到每个弱分类器的权重；  训练样本权重更新子单元，用于更新所述离线训练样本的权重，并对所述权重归一化。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的Adaboost分类器在线学习系统，其特征在于，所述背景模型为高斯混合模型、背景差分法模型或帧平均背景模型；  当所述背景模型为高斯混合模型时，所述第二检测模块包括:  分量初始化单元，用于若当前帧为第一帧，则初始化高斯混合模型中的高斯分量；  提取单元，用于若当前帧不为第一帧，则利用当前帧的每一个像素更新高斯混合模型中的高斯分量，并根据当前帧和每个高斯分量的比较，得到前景像素，形成前景图；  获取单元，用于对所述前景图进行处理，提取联通分量，得到运动目标；  当所述背景模型为背景差分法模型时，所述第二检测模块包括:  提取单元，用于采用当前帧与前一帧相减得到差分图，根据差分图进行阈值化提取前景图；  获取单元，用于对所述前景图进行处理，提取联通分量，得到运动目标；  当所述背景模型为帧平均背景模型时，所述第二检测模块包括:  提取单元，用于将当前帧之前的所有帧的加权平均作为背景，再用当前帧和所述背景相减得到差分图，根据差分图进行阈值化提取前景图；  获取单元，用于对所述前景图进行处理，提取联通分量，得到运动目标。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求6至9中任一项所述的Adaboost分类器在线学习方法，其特征在于，所述在线训练模块包括:  在线初始化单元，用于将所述错分类器的目标作为在线训练样本，初始化训练样本的权重；  设置单元，用于根据以权重为参数的泊松分布设置训练的次数；  在线训练单元，用于将弱分类器根据所述在线训练样本按照所述设置的次数进行训练;  更新单元，用于当在线训练样本被正确分类时，则更新泊松分布的参数，计算正确分类的次数累加值、计算分类器的错误率；以及当在线训练样本被错误分类时，则更新泊松分布的参数，计算错误分类 的次数累加值、计算分类器的错误率，然后得到更新后的强分类器。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES66590743" lang="ZH" load-source="patent-office" class="description">
+    <p>Adaboost分类器在线学习方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及分类器领域，特别是涉及一种Adaboost分类器在线学习方法及系统。背景技术</p>
+    <p>[0002]	人脸检测、行人检测、车辆检测等目标检测技术是智能视频监控的核心技术之一。目前，目标检测有两种主流的方法:基于运动检测和基于分类器检测。基于运动检测是通过背景建模等技术分割出场景中的运动目标(前景)，速度快，但是对光照变化、恶劣天气、干扰物等很敏感，当目标密集如相互粘连时，也无法准确的分割出每个目标，另外，也无法准确的区分出每个目标的类型。基于分类器检测是使用机器学习的方法，事先训练一个特定目标的分类器(如人脸分类器)，运行时，对整个视频帧进行扫描，检测出其中所有的目标。</p>
+    <p>[0003]	在目标检测分类器中，被广泛使用的是Adaboost分类器，该方法准确率高、速度快。Adaboost分类器一般是离线训练生成，即通过对收集的训练样本进行训练，得到分类器模型，然后用于实际的目标检测任务。由于离线训练样本和监控场景存在差异，可能会导致Adaboost分类器的泛化性能差，检测率低，误报率高。例如,如果训练样本中的行人样本是在正常光照条件下拍摄的，那么，当监控场景光线很弱时，无法正确的检测出场景中的行人。</p>
+    <p>发明内容</p>
+    <p>[0004]	基于此，有必要针对传统的Adaboost分类器采用离线训练生成，检测目标任务存在检测率低，误报率高的问题，提供一种Adaboost分类器在线学习方法，采用该Adaboost分类器检测目标任务时能提高检测率且误报率低。</p>
+    <p>[0005]	此外，还有必要提供一种Adaboost分类器在线学习系统，采用该Adaboost分类器检测目标任务时能提高检测率且误报率低。</p>
+    <p>[0006]	一种Adaboost分类器在线学习方法，包括:</p>
+    <p>[0007]	采用离线训练得到的强分类器进行目标检测，并得到目标检测结果；</p>
+    <p>[0008]	采用背景模型进行目标检测，得到运动目标；</p>
+    <p>[0009]	将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标；</p>
+    <p>[0010]	将所述错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。</p>
+    <p>[0011]	一种Adaboost分类器在线学习系统，包括:</p>
+    <p>[0012]	第一检测模块，用于采用离线训练得到的强分类器进行目标检测，并得到目标检测结果；</p>
+    <p>[0013]	第二检测模块，用于采用背景模型进行目标检测，得到运动目标；</p>
+    <p>[0014]	比较模块，用于将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标；[0015]	在线训练模块，用于将所述错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。</p>
+    <p>[0016]	上述Adaboost分类器在线学习方法和系统，通过将离线分类器检测的目标结果与背景模型检测的运动目标进行比较，得到错分类器的目标，将错分类器的目标作为在线训练样本，进行在线学习，得到更新后的强分类器，再通过更新后的强分类器检测目标，有效提高了目标检测分类器的泛化性能，使其能够适应运行时的监控场景，提高了检测率，降低了误报率。</p>
+    <p>附图说明</p>
+    <p>[0017]	图1为一个实施例中Adaboost分类器在线学习方法的流程图；</p>
+    <p>[0018]	图2为一个实施例中采用背景模型进行目标检测，得到运动目标图步骤的流程图；</p>
+    <p>[0019]	图3为另一个实施例中采用背景模型进行目标检测，得到运动目标图步骤的流程图；</p>
+    <p>[0020]	图4为另一个实施例中采用背景模型进行目标检测，得到运动目标图步骤的流程图；</p>
+    <p>[0021]	图5为将该错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器步骤的流程图；</p>
+    <p>[0022]	图6为一个实施例中离线训练得到的强分类器的流程图；</p>
+    <p>[0023]	图7为根据该N个离线训练样本和权重循环训练多个弱分类器，并得到每个弱分类器的权重步骤的具体流程图；</p>
+    <p>[0024]	图8为一个实施例中Adaboost分类器在线学习系统的结构框图；</p>
+    <p>[0025]	图9为图8中第二检测模块的内部结构框图；</p>
+    <p>[0026]	图10为图8中在线训练模块的内部结构框图；</p>
+    <p>[0027]	图11为另一个实施例中Adaboost分类器在线学习系统的结构框图；</p>
+    <p>[0028]	图12为图11中离线训练模块的内部结构框图；</p>
+    <p>[0029]	图13为图12中离线训练单元的内部结构框图。</p>
+    <p>具体实施方式</p>
+    <p>[0030]	下面结合具体的实施例及附图对Adaboost分类器在线学习方法及系统的技术方案进行详细的描述，以使其更加清楚。</p>
+    <p>[0031]	如图1所示，为一个实施例中Adaboost分类器在线学习方法的流程图。该Adaboost分类器在线学习方法,包括:</p>
+    <p>[0032]	步骤S102，采用离线训练得到的强分类器进行目标检测，并得到目标检测结果。</p>
+    <p>[0033]	步骤S104，采用背景模型进行目标检测，得到运动目标。</p>
+    <p>[0034]	具体的，该背景模型为高斯混合模型、背景差分法模型或帧平均背景模型。</p>
+    <p>[0035]	首先，当该背景模型为高斯混合模型时，如图2所示，采用背景模型进行目标检测，得到运动目标的步骤包括:</p>
+    <p>[0036]	步骤S202，若当前帧为第一帧，则初始化高斯混合模型中的高斯分量。[0037]	具体的，初始化高斯混合模型中的每个高斯分量的权重、均值和方差。</p>
+    <p>[0038]	步骤S204，若当前帧不为第一帧，利用当前帧的每一个像素更新高斯混合模型中的高斯分量，并根据当前帧和每个高斯分量的比较，得到前景像素，形成前景图。</p>
+    <p>[0039]	具体的，利用当前帧的每一个像素更新高斯混合模型中的每个高斯分量的权重、方差和均值，且可以替换掉权重最小的高斯分量。</p>
+    <p>[0040]	步骤S206，对该前景图进行处理，提取联通分量，得到运动目标。</p>
+    <p>[0041]	具体的，对前景图进行处理，包括进行形态学膨胀和腐蚀。形态学膨胀，例如图像A被结构元素B膨胀的过程为:(I)用结构元素B，扫描图像A的每一个像素；(2)用结构元素B与其覆盖的二值图像做“与”操作；(3)如果都为0，则图像的该像素为0，否则为I。</p>
+    <p>[0042]	形态学腐蚀，例如，结构元素B对图像A腐蚀的过程为:(1)用结构元素B，扫描图像A的每一个像素；(2)用结构元素B与其覆盖的二值图像做“与”操作；(3)如果都为1，则图像的该像素为1，否则为O。</p>
+    <p>[0043]	联通分量是指前景图中成块的区域，这些区域和其他区域不相连。</p>
+    <p>[0044]	其次，当该背景模型为背景差分法模型时，如图3所示，采用背景模型进行目标检测，得到运动目标的步骤，包括:</p>
+    <p>[0045]	步骤S302，采用当前帧与前一帧相减得到差分图，根据差分图进行阈值化提取前景图。</p>
+    <p>[0046]	具体的，阈值化可通过指定固定阈值，如设定某一固定阈值，然后筛选出大于该固定阈值的像素点，提取出前景图。阈值化也可通过自适应阈值，即每个像素对应的阈值可能不同，如每个像素的阈值由自身为中心的领域窗口确定，把该以某像素为中心的领域窗口的中值或均值或高斯卷积作为该像素的阈值。</p>
+    <p>[0047]	步骤S304，对该前景图进行处理，提取联通分量，得到运动目标。</p>
+    <p>[0048]	具体的，对前景图进行处理，包括进行形态学膨胀和腐蚀。</p>
+    <p>[0049]	再次，当该背景模型为帧平均背景模型时，如图4所示，采用背景模型进行目标检测，得到运动目标的步骤，包括:</p>
+    <p>[0050]	步骤S402，将当前帧之前的所有帧的加权平均作为背景，再用当前帧和该背景相减得到差分图，根据差分图进行阈值化提取前景图。</p>
+    <p>[0051]	具体的，阈值化可通过指定固定阈值，如设定某一固定阈值，然后筛选出大于该固定阈值的像素点，提取出前景图。阈值化也可通过自适应阈值，即每个像素对应的阈值可能不同，如每个像素的阈值由自身为中心的领域窗口确定，把该以某像素为中心的领域窗口的中值或均值或高斯卷积作为该像素的阈值。</p>
+    <p>[0052]	步骤S404，对该前景图进行处理，提取联通分量，得到运动目标。</p>
+    <p>[0053]	具体的，对前景图进行处理，包括进行形态学膨胀和腐蚀。</p>
+    <p>[0054]	步骤S106，将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标。</p>
+    <p>[0055]	具体的，错分类器的目标包括误报的目标和漏报的目标。强分类器在背景图检测出目标，则认为是误报的目标；若在前景图中没有检测出目标，则认为是漏报的目标。对于误报的目标，可将强分类器检测出的假目标作为负训练样本，对于漏报的目标，可从前景图中得到目标，然后将其作为正训练样本。[0056]	此外，在比较后，若没有错分类器目标，则处理下一帧图。</p>
+    <p>[0057]	步骤S108，将该错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。</p>
+    <p>[0058]	在一个实施例中，如图5所示，步骤S108包括:</p>
+    <p>[0059]	步骤S502，将该错分类器的目标作为在线训练样本，初始化在线训练样本的权重。</p>
+    <p>[0060]	具体的，输入在线训练样本(X，y)、在线弱分类器学习算法Ltl和强分类器h(x)。初始化在线训练样本的权重  = 1。</p>
+    <p>[0061]	步骤S504，根据以权重为参数的泊松分布设置训练的次数。</p>
+    <p>[0062]	具体的，以 为参数的泊松分布Poisson (   )设置训练的次数k。</p>
+    <p>[0063]	步骤S506，将弱分类器根据该在线训练样本按照设置的次数进行训练。</p>
+    <p>[0064]	具体的，将弱分类器hm根据训练样本(X，y)训练k次:</p>
+    <p>[0065]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00081.png"> <img id="idf0001" file="CN103593672AD00081.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00081.png" class="patent-full-image" alt="Figure CN103593672AD00081"> </a> </div>
+    <p>[0066]	式(1)中，hm表示第m个弱分类器，共有M个弱分类器，M为自然数。</p>
+    <p>[0067]	步骤S508，若在线训练样本被正确分类，则更新泊松分布的参数，计算正确分类的次数累加值、计算弱分类器的错误率。</p>
+    <p>[0068]	具体的，计算公式如下:</p>
+    <p>[0069]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00082.png"> <img id="idf0002" file="CN103593672AD00082.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00082.png" class="patent-full-image" alt="Figure CN103593672AD00082"> </a> </div>
+    <p>[0070]式(2)中，为当前在线样本被弱分类器正确分类的次数累加值，为当前在线样本被弱分类器错误分类的累加次数，emS弱分类器的错误率，  为泊松分布的参数。&#28858; 和C的初始值都为1。</p>
+    <p>[0071]	步骤S510，若在线训练样本被错误分类，则更新泊松分布的参数，计算错误分类的次数累加值、计算分类器的错误率。</p>
+    <p>[0072]	具体的，计算公式如下:</p>
+    <p>[0073]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00083.png"> <img id="idf0003" file="CN103593672AD00083.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00083.png" class="patent-full-image" alt="Figure CN103593672AD00083"> </a> </div>
+    <p>[0074]	式(3)中，A=为当前在线样本被弱分类器正确分类的次数累加值，/ b当前在线样本被弱分类器错误分类的累加次数，emS弱分类器的错误率， 为泊松分布的参数，e为自然对数。和A的初始值都为I。</p>
+    <p>[0075]	步骤S512，得到更新后的强分类器。</p>
+    <p>[0076]</p>
+    <p>                        [0077]	式(4)中，M为强分类器中弱分类器的个数，C为当前样本被弱分类器正确分类的次数累加值，C为当前样本被弱分类器错误分类的累加次数，emS弱分类器的错误率。Λ和的初始值都为I。</p>
+    <p>[0078]	式(4)中&#163;fl,，表示用每一个弱分类器计算对当前在线待分类样本的输出，然后把</p>
+    <p>被判定为各个弱分类器的输出累加，寻找累加制最大的那个类作为待分类样本的类别。</p>
+    <p>[0079]	然后，采用该强分类器进行目标检测，处理下一帧图。</p>
+    <p>[0080]	此外，上述描述中的弱分类器为Adaboost弱分类器，强分类器为Adaboost强分类器。</p>
+    <p>[0081]	上述Adaboost分类器在线学习方法，通过将离线分类器检测的目标结果与背景模型检测的运动目标进行比较，得到错分类器的目标，将错分类器的目标作为在线训练样本，进行在线学习，得到更新后的强分类器，再通过更新后的强分类器检测目标，有效提高了目标检测分类器的泛化性能，使其能够适应运行时的监控场景，提高了检测率，降低了误&#943;艮率。</p>
+    <p>[0082]	进一步的,在一个实施例中，如图6所示,上述Adaboost分类器在线学习方法,还包括离线训练得到的强分类器的步骤。该离线训练得到的强分类器，包括:</p>
+    <p>[0083]	步骤S602，给定N个离线训练样本，并初始化离线训练样本的权重。</p>
+    <p>[0084]具体的，给定	N 个离线训练样本((XilYi)I, i = I,..., N, Xi e Rk, Yi e {-1,+1},每个离线训练样本包括特征向量与类别标签。特征向量X是一个η向量，表示样本的特征；类别标签y是样本所属的类别，+1为正样本，-1为负样本。初始化离线训练样本权重Wi =1/N, i = 1，...，N,即所有样本具有相同权重。</p>
+    <p>[0085]	步骤S604，根据该N个离线训练样本和权重循环训练多个弱分类器，并得到每个弱分类器的权重。</p>
+    <p>[0086]	进一步的，在一个实施例中，如图7所示，根据该N个离线训练样本和权重循环训练多个弱分类器，并得到每个弱分类器的权重的步骤包括:</p>
+    <p>[0087]	步骤S702，根据该N个离线训练样本和权重训练多个弱分类器。</p>
+    <p>[0088]	具体的，用权重Wi和训练样本集训练一个弱分类器fm(x) e {-1，+1}。</p>
+    <p>[0089]	步骤S704，计算所述N个离线训练样本在每个弱分类器上的总误差，并根据所述每个弱分类器的总误差得到每个弱分类器的权重。</p>
+    <p>[0090]	具体的，计算训练样本在该弱分类器上的总误差</p>
+    <p>[0091]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00091.png"> <img id="idf0004" file="CN103593672AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00091.png" class="patent-full-image" alt="Figure CN103593672AD00091"> </a> </div>
+    <p>[0092]	其中，errm是总误差，cm是第m个弱分类器的权重。ly#fm(x)表示训练样本x被正确分类，即I幸f (X)，则该值为1，否则为0，Ew表示加权数学期望。</p>
+    <p>[0093]	步骤S706，更新该离线训练样本的权重，并对该权重归一化。</p>
+    <p>[0094]	具体的，更新离线训练样本的权重W =	，对权重归一化是指计算</p>
+    <p>所有离线训练样本的更新后的权重和，然后再将每个离线训练样本的权重除以该权重和。</p>
+    <p>[0095]	步骤S606，根据该多个弱分类器及相应的权重得到强分类器。[0096]	具体的，得到强分类器</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00101.png"> <img id="idf0005" file="CN103593672AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00101.png" class="patent-full-image" alt="Figure CN103593672AD00101"> </a> </div>
+    <p>[0097]	如图8所示，为一个实施例中Adaboost分类器在线学习系统的结构框图。该Adaboost分类器在线学习系统,包括第一检测模块820、第二检测模块840、比较模块860和在线训练模块880。其中:</p>
+    <p>[0098]	第一检测模块820用于采用离线训练得到的强分类器进行目标检测，并得到目标检测结果。</p>
+    <p>[0099]	第二检测模块840用于采用背景模型进行目标检测，得到运动目标。</p>
+    <p>[0100]	具体的，该背景模型为高斯混合模型、背景差分法模型或帧平均背景模型。</p>
+    <p>[0101]	首先，当该背景模型为高斯混合模型时，在一个实施例中，如图9所示，第二检测模块840包括分量初始化单元842、提取单元844和获取单元846。其中:</p>
+    <p>[0102]	分量初始化单元842用于若当前帧为第一帧，则初始化高斯混合模型中的高斯分量。</p>
+    <p>[0103]	具体的，初始化高斯混合模型中的每个高斯分量的权重、均值和方差。</p>
+    <p>[0104]	提取单元844用于若当前帧不为第一帧，则利用当前帧的每一个像素更新高斯混合模型中的高斯分量，并根据当前帧和每个高斯分量的比较，得到前景像素，形成前景图。</p>
+    <p>[0105]	具体的，利用当前帧的每一个像素更新高斯混合模型中的每个高斯分量的权重、方差和均值，且可以替换掉权重最小的高斯分量。</p>
+    <p>[0106]	获取单元846用于对该前景图进行处理，提取联通分量，得到运动目标。</p>
+    <p>[0107]	具体的，对前景图进行处理，包括进行形态学膨胀和腐蚀。联通分量是指前景图中成块的区域，这些区域和其他区域不相连。</p>
+    <p>[0108]	其次，当该背景模型为背景差分法模型时，第二检测模块840包括提取单元844和获取单元846。其中:</p>
+    <p>[0109]	提取单元844用于采用当前帧与前一帧相减得到差分图，根据差分图进行阈值化提取如景图。</p>
+    <p>[0110]	具体的，阈值化可通过指定固定阈值，如设定某一固定阈值，然后筛选出大于该固定阈值的像素点，提取出前景图。阈值化也可通过自适应阈值，即每个像素对应的阈值可能不同，如每个像素的阈值由自身为中心的领域窗口确定，把该以某像素为中心的领域窗口的中值或均值或高斯卷积作为该像素的阈值。</p>
+    <p>[0111]	获取单元846用于对该前景图进行处理，提取联通分量，得到运动目标。</p>
+    <p>[0112]	具体的，对前景图进行处理，包括进行形态学膨胀和腐蚀。</p>
+    <p>[0113]当该背景模型为帧平均背景模型时，第二检测模块840包括提取单元844和获取单元846。其中:</p>
+    <p>[0114]	提取单元844用于将当前帧之前的所有帧的加权平均作为背景，再用当前帧和该背景相减得到差分图，根据差分图进行阈值化提取前景图。</p>
+    <p>[0115]	获取单元846用于对该前景图进行处理，提取联通分量，得到运动目标。</p>
+    <p>[0116]	比较模块860用于将强分类器得到的目标检测结果与背景模型检测得到运动目标进行比较，得到错分类器的目标。</p>
+    <p>[0117]	具体的，错分类器的目标包括误报的目标和漏报的目标。强分类器在背景图检测出目标，则认为是误报的目标；若在前景图中没有检测出目标，则认为是漏报的目标。对于误报的目标，可将强分类器检测出的假目标作为负训练样本，对于漏报的目标，可从前景图中得到目标，然后将其作为正训练样本。</p>
+    <p>[0118]	 此外，在比较后，若没有错分类器目标，则处理下一帧图。</p>
+    <p>[0119]	在线训练模块880用于将该错分类器的目标作为在线训练样本，进行在线训练，得到更新后的强分类器。</p>
+    <p>[0120]	在一个实施例中，如图10所示，在线训练模块880包括在线初始化单元882、设置单元884、在线训练单元886和更新单元888。其中:</p>
+    <p>[0121]	在线初始化单元882用于将所述错分类器的目标作为在线训练样本，初始化训练样本的权重。</p>
+    <p>[0122]	具体的，输入在线训练样本(X，y)、在线弱分类器学习算法Ltl和强分类器h(x)。初始化在线训练样本的权重λ = I。</p>
+    <p>[0123]	设置单元884用于根据以权重为参数的泊松分布设置训练的次数。</p>
+    <p>[0124]	具体的，以λ为参数的泊松分布Poisson ( λ )设置训练的次数k。</p>
+    <p>[0125]	在线训练单元886用于将弱分类器根据所述在线训练样本按照该设置的次数进行训练。</p>
+    <p>[0126]	具体的，将弱分类器hm根据训练样本(x，y)训练k次:</p>
+    <p>[0127]	hm &#8212; L0(hm, (X，y))	(I)</p>
+    <p>[0128]	式(I)中，hm表示第m个弱分类器，共有M个弱分类器，M为自然数。</p>
+    <p>[0129]	更新单元888用于当在线训练样本被正确分类时，则更新泊松分布的参数，计算正确分类的次数累加值、计算分类器的错误率；以及当在线训练样本被错误分类时，则更新泊松分布的参数，计算错误分类的次数累加值、计算分类器的错误率，并得到更新后的强分类器。</p>
+    <p>[0130]	具体的，计算公式如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00111.png"> <img id="idf0006" file="CN103593672AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00111.png" class="patent-full-image" alt="Figure CN103593672AD00111"> </a> </div>
+    <p>[0132]	式(2)中，为当前在线样本被弱分类器正确分类的次数累加值，λ；力当前在线样本被弱分类器错误分类的累加次数，emS弱分类器的错误率，λ为泊松分布的参数。/和的初始值都为I。</p>
+    <p>[0133]	计算公式如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00112.png"> <img id="idf0007" file="CN103593672AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00112.png" class="patent-full-image" alt="Figure CN103593672AD00112"> </a> </div>
+    <p>[0135]	式(3)中，&lt;'为当前在线样本被弱分类器正确分类的次数累加值/I力当前在线样本被弱分类器错误分类的累加次数，emS弱分类器的错误率，λ为泊松分布的参数，e</p>
+    <p>为自然对数。4T和芯,的初始值都为I。</p>
+    <p>[0136]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00121.png"> <img id="idf0008" file="CN103593672AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00121.png" class="patent-full-image" alt="Figure CN103593672AD00121"> </a> </div>
+    <p>[0137]	式(4)中，M为强分类器中弱分类器的个数，Λ力当前样本被弱分类器正确分类的次数累加值，为当前样本被弱分类器错误分类的累加次数，^为弱分类器的错误率。</p>
+    <p>  和ΛΤ的初始值都为I。</p>
+    <p>[0138]	式(4)中&#8222;$，表示用每一个弱分类器计算对当前在线待分类样本的输出，然后把</p>
+    <p>被判定为各个弱分类器的输出累加，寻找累加制最大的那个类作为待分类样本的类别。</p>
+    <p>[0139]	然后，采用该强分类器进行目标检测，处理下一帧图。</p>
+    <p>[0140]	此外，上述描述中的弱分类器为Adaboost弱分类器，强分类器为Adaboost强分类器。</p>
+    <p>[0141]	上述Adaboost分类器在线学习系统，通过将离线分类器检测的目标结果与背景模型检测的运动目标进行比较，得到错分类器的目标，将错分类器的目标作为在线训练样本，进行在线学习，得到更新后的强分类器，再通过更新后的强分类器检测目标，有效提高了目标检测分类器的泛化性能，使其能够适应运行时的监控场景，提高了检测率，降低了误&#943;艮率。</p>
+    <p>[0142]	如图11所示，为另一个实施例中Adaboost分类器在线学习系统的结构框图。该Adaboost分类器在线学习系统，除了包括第一检测模块820、第二检测模块840、比较模块860和在线训练模块880，还包括离线训练模块890。其中:</p>
+    <p>[0143]	离线训练模块890用于离线训练得到的强分类器。如图12所示，离线训练模块890包括离线初始化单元892、离线初始化单元894和离线输出单元896。其中:</p>
+    <p>[0144]	离线初始化单元892用于给定N个离线训练样本，并初始化离线训练样本的权重。</p>
+    <p>[0145]具体的，给定	N 个离线训练样本{(Xi，yi)}，i = I,..., N, Xi e Rk, Yi e {-1,+1},每个离线训练样本包括特征向量与类别标签。特征向量X是一个η向量，表示样本的特征；类别标签y是样本所属的类别，+1为正样本，-1为负样本。初始化离线训练样本权重Wi =1/N, i = 1，...，N,即所有样本具有相同权重。</p>
+    <p>[0146]	离线训练单元894用于根据该N个离线训练样本和权重循环训练多个弱分类器，并得到每个弱分类器的权重。</p>
+    <p>[0147]	如图13所示，离线训练单元894包括弱分类器训练子单元894a、弱分类器权重计算子单元894b和训练样本权重更新子单元894c。其中:</p>
+    <p>[0148]	弱分类器训练子单元894a用于根据所述N个离线训练样本和权重训练多个弱分类器。</p>
+    <p> [0149]	具体的，用权重Wi和训练样本集训练一个弱分类器fm(x) e {-1，+1}。</p>
+    <p>[0150]	弱分类器权重计算子单元894b用于计算所述N个离线训练样本在每个弱分类器上的总误差，并根据所述每个弱分类器的总误差得到每个弱分类器的权重。</p>
+    <p>[0151]	具体的，计算训练样本在该弱分类器上的总误差:[0152]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00131.png"> <img id="idf0009" file="CN103593672AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00131.png" class="patent-full-image" alt="Figure CN103593672AD00131"> </a> </div>
+    <p>[0153]	其中，errm是总误差，cm是第m个弱分类器的权重。l_fm(x)表示训练样本x被正确分类，即I幸f (X)，则该值为1，否则为0，Ew表示加权数学期望。</p>
+    <p>[0154]	训练样本权重更新子单元894c用于更新该离线训练样本的权重，并对该权重归一化。</p>
+    <p>[0155]	具体的，更新离线训练样本的权重W = exPbiA^对权重归一化是指计算</p>
+    <p>所有离线训练样本的更新后的权重和，然后再将每个离线训练样本的权重除以该权重和。</p>
+    <p>[0156]	离线输出单元896用于根据该多个弱分类器及相应的权重得到强分类器。</p>
+    <p>[0157]	具体的，得到强分类器</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00132.png"> <img id="idf0010" file="CN103593672AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103593672A/CN103593672AD00132.png" class="patent-full-image" alt="Figure CN103593672AD00132"> </a> </div>
+    <p>[0158]	本领域普通技术人员可以理解实现上述实施例方法中的全部或部分流程，是可以通过计算机程序来指令相关的硬件来完成，所述的程序可存储于一计算机可读取存储介质中，该程序在执行时，可包括如上述各方法的实施例的流程。其中，所述的存储介质可为磁碟、光盘、只读存储记忆体(Read-Only Memory, ROM)或随机存储记忆体(Random AccessMemory, RAM)等。</p>
+    <p>[0159]	以上所述实施例仅表达了本发明的几种实施方式，其描述较为具体和详细，但并不能因此而理解为对本发明专利范围的限制。应当指出的是，对于本领域的普通技术人员来说，在不脱离本发明构思的前提下，还可以做出若干变形和改进，这些都属于本发明的保护范围。因此，本发明专利的保护范围应以所附权利要求为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN104228767A?cl=zh">CN104228767A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年7月30日</td><td class="patent-data-table-td patent-date-value">2014年12月24日</td><td class="patent-data-table-td ">哈尔滨工业大学深圳研究生院</td><td class="patent-data-table-td ">一种基于掌纹认证的汽车启动方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=NaHyCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06K0009620000">G06K9/62</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年2月19日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/739f339b5de91644e57a/CN103593672A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/Adaboost%E5%88%86%E7%B1%BB%E5%99%A8%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E5%8F%8A.pdf?id=NaHyCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1GOvL5FUQCfshyD4B3ZhYMa6nkzQ"},"sample_url":"https://www.google.com/patents/reader?id=NaHyCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

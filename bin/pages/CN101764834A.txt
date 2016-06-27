@@ -1,0 +1,284 @@
+<!DOCTYPE html><html><head><title>专利 CN101764834A - 一种群组中共享文件的方法、用户终端及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种群组中共享文件的方法、用户终端及系统"><meta name="DC.contributor" content="周乃宝" scheme="inventor"><meta name="DC.contributor" content="廖洪銮" scheme="inventor"><meta name="DC.contributor" content="张云飞" scheme="inventor"><meta name="DC.contributor" content="彭晋" scheme="inventor"><meta name="DC.contributor" content="李洋" scheme="inventor"><meta name="DC.contributor" content="中国移动通信集团公司" scheme="assignee"><meta name="DC.date" content="2008-12-24" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种群组中共享文件的方法、用户终端及系统，涉及通信技术，一种群组中共享文件的方法，包括：策略服务器接收群组中提供共享文件的用户终端发送的第一推送命令和该用户终端共享的文件的信息，并将所述共享文件的信息推送给群组中的其他用户终端；群组中的其他用户终端接收到推送的共享文件的信息后，分别从策略服务器中获取群组中在线的各用户终端信息，并从群组中在线的用户终端处通过点对点方式下载所述共享文件。为后续的P2P下载增加了资源数量，从而减少了群成员下载共享文件时由于在线的用户终端较少而占用服务器带宽，并且提高了下载速度及用户的感受度。"><meta name="DC.date" content="2010-6-30"><meta name="citation_patent_publication_number" content="CN:101764834:A"><meta name="citation_patent_application_number" content="CN:200810240823"><link rel="canonical" href="https://www.google.com/patents/CN101764834A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101764834A?cl=zh"/><meta name="title" content="专利 CN101764834A - 一种群组中共享文件的方法、用户终端及系统"/><meta name="description" content="本发明公开了一种群组中共享文件的方法、用户终端及系统，涉及通信技术，一种群组中共享文件的方法，包括：策略服务器接收群组中提供共享文件的用户终端发送的第一推送命令和该用户终端共享的文件的信息，并将所述共享文件的信息推送给群组中的其他用户终端；群组中的其他用户终端接收到推送的共享文件的信息后，分别从策略服务器中获取群组中在线的各用户终端信息，并从群组中在线的用户终端处通过点对点方式下载所述共享文件。为后续的P2P下载增加了资源数量，从而减少了群成员下载共享文件时由于在线的用户终端较少而占用服务器带宽，并且提高了下载速度及用户的感受度。"/><meta property="og:title" content="专利 CN101764834A - 一种群组中共享文件的方法、用户终端及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101764834A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101764834A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=ivJ-BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101764834A&amp;usg=AFQjCNH2xCw0njwiqRsCba_Dn1owN6_nYQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/284aa151dcb6ed0e5f91/CN101764834A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/284aa151dcb6ed0e5f91/CN101764834A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101764834A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101764834A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101764834A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种群组中共享文件的方法、用户终端及系统，涉及通信技术，一种群组中共享文件的方法，包括：策略服务器接收群组中提供共享文件的用户终端发送的第一推送命令和该用户终端共享的文件的信息，并将所述共...</span><span itemprop="url">https://www.google.com/patents/CN101764834A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101764834A - 一种群组中共享文件的方法、用户终端及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101764834A - 一种群组中共享文件的方法、用户终端及系统" title="专利 CN101764834A - 一种群组中共享文件的方法、用户终端及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101764834 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810240823</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年6月30日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年12月24日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年12月24日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810240823.6, </span><span class="patent-bibdata-value">CN 101764834 A, </span><span class="patent-bibdata-value">CN 101764834A, </span><span class="patent-bibdata-value">CN 200810240823, </span><span class="patent-bibdata-value">CN-A-101764834, </span><span class="patent-bibdata-value">CN101764834 A, </span><span class="patent-bibdata-value">CN101764834A, </span><span class="patent-bibdata-value">CN200810240823, </span><span class="patent-bibdata-value">CN200810240823.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%91%A8%E4%B9%83%E5%AE%9D%22">周乃宝</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BB%96%E6%B4%AA%E9%8A%AE%22">廖洪銮</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E4%BA%91%E9%A3%9E%22">张云飞</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BD%AD%E6%99%8B%22">彭晋</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E6%B4%8B%22">李洋</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%AD%E5%9B%BD%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E9%9B%86%E5%9B%A2%E5%85%AC%E5%8F%B8%22">中国移动通信集团公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101764834A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101764834A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101764834A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (12),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ivJ-BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810240823&amp;usg=AFQjCNGs59K7y52KVzAgYygRsmtozEjTuA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ivJ-BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101764834A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGzSbnabPiM1WM9QlHDHFoScUEdJQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT96303123" lang="ZH" load-source="patent-office">一种群组中共享文件的方法、用户终端及系统</invention-title>
+      </span><br><span class="patent-number">CN 101764834 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA78906699" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种群组中共享文件的方法、用户终端及系统，涉及通信技术，一种群组中共享文件的方法，包括：策略服务器接收群组中提供共享文件的用户终端发送的第一推送命令和该用户终端共享的文件的信息，并将所述共享文件的信息推送给群组中的其他用户终端；群组中的其他用户终端接收到推送的共享文件的信息后，分别从策略服务器中获取群组中在线的各用户终端信息，并从群组中在线的用户终端处通过点对点方式下载所述共享文件。为后续的P2P下载增加了资源数量，从而减少了群成员下载共享文件时由于在线的用户终端较少而占用服务器带宽，并且提高了下载速度及用户的感受度。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(22)</span></span></div><div class="patent-text"><ol mxw-id="PCLM32332614" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种群组中共享文件的方法，其特征在于，包括：策略服务器接收群组中提供共享文件的用户终端发送的第一推送命令和该用户终端共享的文件的信息，并将所述共享文件的信息推送给群组中的其他用户终端；群组中的其他用户终端接收到推送的共享文件的信息后，分别从策略服务器中获取群组中在线的各用户终端信息，并从群组中在线的用户终端处通过点对点方式下载所述共享文件。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 如权利要求1所述的方法，其特征在于，所述用户终端提供共享文件的方法包括：用户终端将共享文件的信息上传到文件索引服务器，由文件索引服务器将共享文件的信息保存到共享文件列表中，并将共享文件分片并上传到文件内容服务器中；或者用户终端根据用户仅上传共享文件信息的命令或者确定用户所要上传的共享文件大小超过了设定值时，仅将共享文件的信息上传到文件索引服务器，由文件索引服务器将共享文件的信息保存到共享文件列表中。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 如权利要求2所述的方法，其特征在于，还包括：群组中的其他用户终端根据用户的下载命令，通过文件索引服务器中的共享文件列表下载共享文件。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 如权利要求3所述的方法，其特征在于，群组中的其他用户终端接收到推送的共享文件的信息后下载所述共享文件是下载到缓存中；群组中的其他用户终端根据用户的下载命令下载共享文件具体包括：群组中的其他用户终端查询本地缓存中对用户欲下载的共享文件的存储情况，并在缓存中存储有所述共享文件的分片时，复制缓存中的共享文件分片到指定的下载路径；在缓存中没有所述共享文件或者缓存中存储的共享文件不完整时，群组中的其他用户终端获取在线的各用户终端信息，从在线的用户终端处通过点对点方式将所需的共享文件分片下载到指定的下载路径。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 如权利要求4所述的方法，其特征在于，所述群组中的其他用户终端通过点对点方式下载所述共享文件的过程中，周期性向策略服务器查询各个用户终端的在线情况，并在有新上线的用户终端时，建立与该新上线用户终端的连接并确定该新上线用户终端中存储有所需的共享文件分片后，进行点对点下载。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 如权利要求3&#12316;5任一所述的方法，其特征在于，所述群组中的其他用户终端通过文件索引服务器中的共享文件列表下载文件时，所述方法还包括：群组中的其他用户终端还通知文件索引服务器将该共享文件的下载次数增加一次；文件索引服务器根据用户终端的通知统计用户全部历史共享文件的第一平均下载率、和/或用户所共享文件的所属类别的历史共享文件的第二平均下载率。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 如权利要求6所述的方法，其特征在于，所述用户终端发送第一推送命令之前，还包括：当文件索引服务器统计第一平均下载率时，用户终端在用户提供共享文件时，向文件索引服务器查询该用户的第一下载率，并在确定第一平均下载率达到预先设定的门限值后，发送第一推送命令；或者当文件索引服务器统计第二平均下载率时，用户终端在用户提供共享文件时，向文件索引服务器查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的门限值后，发送第一推送命令；或者当文件索引服务器统计第一平均下载率和第二平均下载率时，用户终端在用户提供共 享文件时，向文件索引服务器查询该用户的第一平均下载率和第二平均下载率，并在确定 第一平均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命令。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 如权利要求6所述的方法，其特征在于，如果所述用户终端将文件分片上传到文件内容服务器中，则所述方法中：当其他用户终端在点对点下载并且下载速度达不到预先设 定的门限值时，还从存储文件内容的文件内容服务器下载文件。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 如权利要求l所述的方法，其特征在于，还包括：用户终端根据用户的发送主动推送命令指示，发送第二推送命令和该用户共享的第二 共享文件的信息；策略服务器在接收到用户终端发送的第二推送命令时，将用户所共享的第二共享文件 的信息作为可选择的共享文件信息推送给其他用户终端；其他用户终端接收到策略服务器推送的可选择共享文件信息，并在用户确定下载所述 可选择共享文件信息对应的共享文件时，从策略服务器中获取在线的各用户终端信息，并 从在线的用户终端处通过点对点方式下载用户所选择的共享文件到指定的路径中。</div>
+    </div>
+    </li> <li class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10. &#8212;种群组中共享文件的系统，其特征在于，包括：第一用户终端，用于发送第一推送命令和该用户终端共享的文件的信息； 策略服务器，用于接收所述第一用户终端发送的第一推送命令和该用户终端共享的文件的信息，并推送所述共享文件的信息，以及管理群组中在线用户的用户终端信息；至少一个第二用户终端，用于接收所述策略服务器推送的共享文件的信息，分别从策略服务器中获取在线的各用户终端信息，并从在线的用户终端处通过点对点方式下载所述共享文件。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 如权利要求IO所述的系统，其特征在于，还包括：文件索引服务器，用于接收所述第一用户终端上传的共享文件的信息，并将共享文件 的信息保存到共享文件列表中；文件内容服务器，用于存储用户终端上传的共享文件；所述第一用户终端还用于，将共享文件的信息上传到文件索引服务器，并将文件分片 并上传到文件内容服务器中；或者根据用户仅上传文件信息的命令或者确定用户所要上传 的文件大小超过了设定值时，仅将文件的信息上传到文件索引服务器。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 如权利要求ll所述的系统，其特征在于，所述第二用户终端还用于，在根据策略 服务器推送的共享文件的信息下载共享文件时，将下载的共享文件分片存储在缓存中，在 根据用户的下载命令连接文件索引服务器并下载所述共享文件列表中的共享文件时，查询 本地缓存中对用户欲下载的共享文件的存储情况，并在缓存中存储有所述共享文件的分片 时，复制缓存中的文件分片到指定的下载路径，并且在缓存中没有所述共享文件的分片或 者缓存中存储的文件不完整时，从策略服务器中获取在线的各用户终端信息，从在线的用 户终端处通过点对点方式下载所需的分片到指定的下载路径。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 如权利要求12所述的系统，其特征在于，所述第二用户终端还用于，在根据用户的 下载命令连接文件索引服务器并下载所述共享文件列表中的共享文件时，发送下载该共享 文件的消息；所述文件索引服务器还用于，接收所述第二用户终端发送的下载该共享文件的消息，统计用户全部历史共享文件的第一平均下载率、和/或用户所共享文件的所属类别的历史 共享文件的第二平均下载率。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 如权利要求13所述的系统，其特征在于，所述第一用户终端还用于： 当文件索引服务器统计第一平均下载率时，在用户提供共享文件时，向文件索引服务器查询该用户的第一下载率，并在确定第一平均下载率达到预先设定的门限值后，发送第 一推送命令；或者当文件索引服务器统计第二平均下载率时，在用户提供共享文件时，向文件索引服务 器查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的门限值后，发 送第一推送命令；或者当文件索引服务器统计第一平均下载率和第二平均下载率时，在用户提供共享文件 时，向文件索引服务器查询该用户的第一平均下载率和第二平均下载率，并在确定第一平 均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命令。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15. 如权利要求IO所述的系统，其特征在于，所述第一用户终端还用于，根据用户的发 送主动推送命令指示，发送第二推送命令和该用户共享的第二共享文件的信息；所述策略服务器还用于，在接收到用户终端发送的第二推送命令时，将用户所共享的 第二共享文件的信息作为可选择的共享文件信息推送给所述第二用户终端；所述第二用户终端还用于，接收策略服务器推送的可选择共享文件信息，并在用户确 定下载所述可选择共享文件信息对应的共享文件时，从策略服务器中获取在线的各用户终 端信息，并在线的用户终端处通过点对点方式下载用户所选择的共享文件到指定的路径 中。</div>
+    </div>
+    </li> <li class="claim"> <div num="16" class="claim">
+      <div class="claim-text">16. &#8212;种用户终端，其特征在于，包括：节点管理单元，用于在接收到查询命令后，向策略服务器查询在线的各用户终端信息；调度单元，用于发送第一推送命令和共享文件的信息给策略服务器，在获得策略服务 器发送的共享文件信息时，发送查询命令，根据节点管理单元查询的在线的各用户信息，从 在线的用户终端处通过点对点方式下载所述共享文件。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17. 如权利要求16所述的用户终端，其特征在于，还包括：文件管理单元，用于接收所述调度单元在下载共享文件的分片时发送的所下载共享文 件的分片的标识，维护用户终端中存储文件情况的列表，在接收到其他用户终端的查询时， 发送所查询的共享文件的存储情况。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18. 如权利要求17所述的用户终端，其特征在于，所述调度单元还用于，将共享文件的 信息上传到文件索引服务器，并将文件分片并上传到文件内容服务器中；或者根据用户仅上传文件信息的命令或者确定用户所要上传的文件大小超过了设定值时， 仅将文件的信息上传到文件索引服务器。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19. 如权利要求18所述的用户终端，其特征在于，所述调度单元还用于，将根据策略服务器发送的共享文件信息下载的共享文件存储到 缓存中，在根据用户的下载命令连接文件索引服务器并下载所述共享文件列表中的共享文 件时，根据缓存中对用户欲下载的共享文件的存储情况，在缓存中存储有所述共享文件的 分片时，复制所述缓存中的文件分片到指定的下载路径，并且在所述缓存中没有所述共享文件的分片或者存储的文件不完整时，发送查询命令，从在线的用户终端处通过点对点方 式下载所需的分片到指定的下载路径；所述文件管理单元还用于，在用户终端根据用户的下载命令连接文件索引服务器并下 载共享文件时，查询用户终端缓存中对用户欲下载的共享文件的存储情况并发送给所述调 度单元。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20. 如权利要求19所述的用户终端，其特征在于，所述文件管理单元还用于，在根据用 户的下载命令连接文件索引服务器并下载所述共享文件列表中的共享文件时，发送提示文 件索引服务器统计用户全部历史共享文件的第一平均下载率、和/或用户所共享文件的所 属类别的历史共享文件的第二平均下载率的下载该共享文件的消息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21. 如权利要求16所述的用户终端，其特征在于，所述调度单元还用于： 当文件索引服务器统计第一平均下载率时，在用户提供共享文件时，向文件索引服务器查询该用户的第一下载率，并在确定第一平均下载率达到预先设定的门限值后，发送第 一推送命令；当文件索引服务器统计第二平均下载率时，在用户提供共享文件时，向文件索引服务 器查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的门限值后，发 送第一推送命令；当文件索引服务器统计第一平均下载率和第二平均下载率时，在用户提供共享文件 时，向文件索引服务器查询该用户的第一平均下载率和第二平均下载率，并在确定第一平 均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命令。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22. 如权利要求16所述的用户终端，其特征在于，所述调度单元还用于，根据用户的发 送主动推送命令指示，发送第二推送命令和该用户共享的第二共享文件的信息；接收策略服务器推送的可选择共享文件信息，并在用户确定下载所述可选择共享文件 信息对应的共享文件时，发送查询命令，根据节点管理单元查询的在线的各用户信息，从在 线的用户终端处通过点对点方式将所述共享文件下载到指定的路径中。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES37690821" lang="ZH" load-source="patent-office" class="description">
+    <p>一种群组中共享文件的方法、用户终端及系统</p>
+    <p>技术领域</p>
+    <p>[0001] 本发明涉及通信技术，尤其涉及通信技术中一种群组中共享文件的方法、用户终</p>
+    <p>端及系统。 背景技术</p>
+    <p>[0002] 近年来，即时通信得到了越来越广泛的应用，即时通信中的群组也受到大多数用 户的欢迎，用户可以根据兴趣爱好、职业等来组建群体，在群体中与其他群组成员方便的进 行交流。</p>
+    <p>[0003] 当群内的用户要在群内共享文件时，首先要把文件信息注册到群文件索引服务器 上，再把文件上传到群文件内容服务器，群内的用户可以访问群文件索引服务器查看上面 的共享文档信息，如果群内用户确定要下载某个共享文件，则该用户需要与群文件内容服 务器建立连接，下载文件数据，即使群内多个用户都要下载，也是各自和群文件内容服务器 建立连接并下载，这样单一的从群文件内容服务器中下载数据占用了大量的服务器带宽， 且速度有限，用户感受度不高。</p>
+    <p>发明内容</p>
+    <p>[0004] 本发明实施例提供一种群组中共享文件的方法、用户终端及系统，以减少群成员 下载共享文件时占用的服务器带宽，提高下载速度及用户的感受度。 [0005] &#8212;种群组中共享文件的方法，包括：</p>
+    <p>[0006] 策略服务器接收群组中提供共享文件的用户终端发送的第一推送命令和该用户</p>
+    <p>终端共享的文件的信息，并将所述共享文件的信息推送给群组中的其他用户终端；</p>
+    <p>[0007] 群组中的其他用户终端接收到推送的共享文件的信息后，分别从策略服务器中获</p>
+    <p>取群组中在线的各用户终端信息，并从群组中在线的用户终端处通过点对点方式下载所述</p>
+    <p>共享文件。</p>
+    <p>[0008]     所述用户终端提供共享文件的方法包括：</p>
+    <p>[0009] 用户终端将共享文件的信息上传到文件索引服务器，由文件索引服务器将共享文 件的信息保存到共享文件列表中，并将共享文件分片并上传到文件内容服务器中；或者 [0010] 用户终端根据用户仅上传共享文件信息的命令或者确定用户所要上传的共享文 件大小超过了设定值时，仅将共享文件的信息上传到文件索引服务器，由文件索引服务器 将共享文件的信息保存到共享文件列表中。</p>
+    <p>[0011] 进一步，群组中共享文件的方法中还包括：群组中的其他用户终端根据用户的下 载命令，通过文件索引服务器中的共享文件列表下载共享文件。</p>
+    <p>[0012] 更进一步，群组中的其他用户终端接收到推送的共享文件的信息后下载所述共享 文件是下载到缓存中；群组中的其他用户终端根据用户的下载命令下载共享文件具体包 括：</p>
+    <p>[0013] 群组中的其他用户终端查询本地缓存中对用户欲下载的共享文件的存储情况，并在缓存中存储有所述共享文件的分片时，复制缓存中的共享文件分片到指定的下载路径； [0014] 在缓存中没有所述共享文件或者缓存中存储的共享文件不完整时，群组中的其他 用户终端获取在线的各用户终端信息，从在线的用户终端处通过点对点方式将所需的共享 文件分片下载到指定的下载路径。</p>
+    <p>[0015] 进一步，所述群组中的其他用户终端通过点对点方式下载所述共享文件的过程 中，周期性向策略服务器查询各个用户终端的在线情况，并在有新上线的用户终端时，建立 与该新上线用户终端的连接并确定该新上线用户终端中存储有所需的共享文件分片后，进 行点对点下载。</p>
+    <p>[0016] 较佳的，所述群组中的其他用户终端通过文件索引服务器中的共享文件列表下载 文件时，所述方法还包括：</p>
+    <p>[0017] 群组中的其他用户终端还通知文件索引服务器将该共享文件的下载次数增加一 次；</p>
+    <p>[0018] 文件索引服务器根据用户终端的通知统计用户全部历史共享文件的第一平均下 载率、和/或用户所共享文件的所属类别的历史共享文件的第二平均下载率。 [0019]      更佳的，所述用户终端发送第一推送命令之前，还包括：</p>
+    <p>[0020] 当文件索引服务器统计第一平均下载率时，用户终端在用户提供共享文件时，向 文件索引服务器查询该用户的第一下载率，并在确定第一平均下载率达到预先设定的门限 值后，发送第一推送命令；或者</p>
+    <p>[0021] 当文件索引服务器统计第二平均下载率时，用户终端在用户提供共享文件时，向 文件索引服务器查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的 门限值后，发送第一推送命令；或者</p>
+    <p>[0022] 当文件索引服务器统计第一平均下载率和第二平均下载率时，用户终端在用户 提供共享文件时，向文件索引服务器查询该用户的第一平均下载率和第二平均下载率，并 在确定第一平均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命 令。</p>
+    <p>[0023]     进一步，如果所述用户终端将文件分片上传到文件内容服务器中，则所述方法中： 当其他用户终端在点对点下载并且下载速度达不到预先设定的门限值时，还从存储文件内 容的文件内容服务器下载文件。 [0024]      较佳的，所述方法中还包括：</p>
+    <p>[0025] 用户终端根据用户的发送主动推送命令指示，发送第二推送命令和该用户共享的 第二共享文件的信息；</p>
+    <p>[0026] 策略服务器在接收到用户终端发送的第二推送命令时，将用户所共享的第二共享 文件的信息作为可选择的共享文件信息推送给其他用户终端；</p>
+    <p>[0027] 其他用户终端接收到策略服务器推送的可选择共享文件信息，并在用户确定下载 所述可选择共享文件信息对应的共享文件时，从策略服务器中获取在线的各用户终端信 息，并在线的用户终端处通过点对点方式下载用户所选择的共享文件到指定的路径中。 [0028]     &#8212;种群组中共享文件的系统，包括：</p>
+    <p>[0029]     第一用户终端，用于发送第一推送命令和该用户终端共享的文件的信息；</p>
+    <p>[0030] 策略服务器，用于接收所述第一用户终端发送的第一推送命令和该用户终端共享的文件的信息，并推送所述共享文件的信息，以及管理群组中在线用户的用户终端信息； [0031] 至少一个第二用户终端，用于接收所述策略服务器推送给共享文件的信息，分别 从策略服务器中获取在线的各用户终端信息，并从在线的用户终端处通过点对点方式下载 所述共享文件。</p>
+    <p>[0032] 较佳的，所述系统中还包括：</p>
+    <p>[0033] 文件索引服务器，用于接收所述第一用户终端上传的共享文件的信息，并将共享 文件的信息保存到共享文件列表中；</p>
+    <p>[0034]     文件内容服务器，用于存储用户终端上传的共享文件；</p>
+    <p>[0035] 所述第一用户终端还用于，将共享文件的信息上传到文件索引服务器，并将文件</p>
+    <p>分片并上传到文件内容服务器中；或者根据用户仅上传文件信息的命令或者确定用户所要</p>
+    <p>上传的文件大小超过了设定值时，仅将文件的信息上传到文件索引服务器。</p>
+    <p>[0036] 进一步，所述第二用户终端还用于，在根据策略服务器推送的共享文件的信息下</p>
+    <p>载共享文件时，将下载的共享文件分片存储在缓存中，在根据用户的下载命令连接文件索</p>
+    <p>引服务器并下载所述共享文件列表中的共享文件时，查询本地缓存中对用户欲下载的共享</p>
+    <p>文件的存储情况，并在缓存中存储有所述共享文件的分片时，复制缓存中的文件分片到指</p>
+    <p>定的下载路径，并且在缓存中没有所述共享文件的分片或者缓存中存储的文件不完整时，</p>
+    <p>从策略服务器中获取在线的各用户终端信息，从在线的用户终端处通过点对点方式下载所</p>
+    <p>需的分片到指定的下载路径。</p>
+    <p>[0037] 更进一步，所述第二用户终端还用于，在根据用户的下载命令连接文件索引服务</p>
+    <p>器并下载所述共享文件列表中的共享文件时，发送下载该共享文件的消息；</p>
+    <p>[0038] 所述文件索引服务器还用于，接收所述第二用户终端发送的下载该共享文件的消</p>
+    <p>息，统计用户全部历史共享文件的第一平均下载率、和/或用户所共享文件的所属类别的</p>
+    <p>历史共享文件的第二平均下载率。</p>
+    <p>[0039]     较佳的，所述第一用户终端还用于：</p>
+    <p>[0040] 当文件索引服务器统计第一平均下载率时，在用户提供共享文件时，向文件索引 服务器查询该用户的第一下载率，并在确定第一平均下载率达到预先设定的门限值后，发 送第一推送命令；或者</p>
+    <p>[0041] 当文件索引服务器统计第二平均下载率时，在用户提供共享文件时，向文件索引 服务器查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的门限值 后，发送第一推送命令；或者</p>
+    <p>[0042] 当文件索引服务器统计第一平均下载率和第二平均下载率时，在用户提供共享文</p>
+    <p>件时，向文件索引服务器查询该用户的第一平均下载率和第二平均下载率，并在确定第一</p>
+    <p>平均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命令。</p>
+    <p>[0043] 进一步，所述第一用户终端还用于，根据用户的发送主动推送命令指示，发送第二</p>
+    <p>推送命令和该用户共享的第二共享文件的信息；</p>
+    <p>[0044] 所述策略服务器还用于，在接收到用户终端发送的第二推送命令时，将用户所共</p>
+    <p>享的第二共享文件的信息作为可选择的共享文件信息推送给所述第二用户终端；</p>
+    <p>[0045] 所述第二用户终端还用于，接收策略服务器推送的可选择共享文件信息，并在用</p>
+    <p>户确定下载所述可选择共享文件信息对应的共享文件时，从策略服务器中获取在线的各用</p>
+    <p>8户终端信息，并在线的用户终端处通过点对点方式下载用户所选择的共享文件到指定的路 径中。</p>
+    <p>[0046] &#8212;种用户终端，包括：</p>
+    <p>[0047] 节点管理单元，用于在接收到查询命令后，向策略服务器查询在线的用户终端信 息；</p>
+    <p>[0048] 调度单元，用于发送第一推送命令和共享文件的信息给策略服务器，在获得策略 服务器发送的共享文件信息时，发送查询命令，根据节点管理单元查询的在线的各用户信 息，从在线的用户终端处通过点对点方式下载所述共享文件。 [0049]     较佳的，所述用户终端还包括：</p>
+    <p>[0050] 文件管理单元，用于接收所述调度单元在下载共享文件的分片时发送的所下载共 享文件的分片的标识，维护用户终端中存储文件情况的列表，在接收到其他用户终端的查 询时，发送所查询的共享文件的存储情况。</p>
+    <p>[0051] 进一步，所述调度单元还用于，将共享文件的信息上传到文件索引服务器，并将文 件分片并上传到文件内容服务器中；或者</p>
+    <p>[0052] 根据用户仅上传文件信息的命令或者确定用户所要上传的文件大小超过了设定 值时，仅将文件的信息上传到文件索引服务器。</p>
+    <p>[0053] 较佳的，所述调度单元还用于，将根据策略服务器发送的共享文件信息下载的共 享文件存储到缓存中，在根据用户的下载命令连接文件索引服务器并下载所述共享文件列 表中的共享文件时，根据缓存中对用户欲下载的共享文件的存储情况，在缓存中存储有所 述共享文件的分片时，复制所述缓存中的文件分片到指定的下载路径，并且在所述缓存中 没有所述共享文件的分片或者存储的文件不完整时，发送查询命令，从在线的用户终端处 通过点对点方式下载所需的分片到指定的下载路径；</p>
+    <p>[0054] 所述文件管理单元还用于，在用户终端根据用户的下载命令连接文件索引服务器 并下载共享文件时，查询用户终端缓存中对用户欲下载的共享文件的存储情况并发送给所 述调度单元。</p>
+    <p>[0055] 进一步，所述文件管理单元还用于，在根据用户的下载命令连接文件索引服务器</p>
+    <p>并下载所述共享文件列表中的共享文件时，发送提示文件索引服务器统计用户全部历史共</p>
+    <p>享文件的第一平均下载率、和/或用户所共享文件的所属类别的历史共享文件的第二平均</p>
+    <p>下载率的下载该共享文件的消息。</p>
+    <p>[0056]     更进一步，所述调度单元还用于：</p>
+    <p>[0057] 当文件索引服务器统计第一平均下载率时，在用户提供共享文件时，向文件索引 服务器查询该用户的第一下载率，并在确定第一平均下载率达到预先设定的门限值后，发 送第一推送命令；</p>
+    <p>[0058] 当文件索引服务器统计第二平均下载率时，在用户提供共享文件时，向文件索引 服务器查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的门限值 后，发送第一推送命令；</p>
+    <p>[0059] 当文件索引服务器统计第一平均下载率和第二平均下载率时，在用户提供共享文 件时，向文件索引服务器查询该用户的第一平均下载率和第二平均下载率，并在确定第一 平均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命令。[0060] 较佳的，所述调度单元还用于，根据用户的发送主动推送命令指示，发送第二推送 命令和该用户共享的第二共享文件的信息；</p>
+    <p>[0061] 接收策略服务器推送的可选择共享文件信息，并在用户确定下载所述可选择共享</p>
+    <p>文件信息对应的共享文件时，发送查询命令，根据节点管理单元查询的在线的各用户信息，</p>
+    <p>从在线的用户终端处通过点对点方式将所述共享文件下载到指定的路径中。</p>
+    <p>[0062] 本发明实施例提供一种群组中共享文件的方法、用户终端及系统，策略服务器将</p>
+    <p>共享文件推送给群内其它用户终端，其他用户终端应用P2P(point topoint，点对点）技术</p>
+    <p>下载所推送的共享文件到缓存中，为后续的P2P下载增加了资源数量，从而减少了群成员</p>
+    <p>下载共享文件时由于在线的用户终端较少而占用服务器带宽，并且提高了下载速度及用户</p>
+    <p>的感受度。</p>
+    <p>附图说明</p>
+    <p>[0063]      图1为本发明实施例中群组共享文件的流程示意图； [0064]      图2为本发明实施例中群组共享文件的系统结构示意图； [0065]      图3为本发明实施例中群组共享文件的用户终端结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0066] 本发明实施例提供一种群组中共享文件的方法，将共享文件推送给群内其它用户</p>
+    <p>终端，以增加点对点下载的资源，提高下载速度，减少服务器带宽的占用。</p>
+    <p>[0067]      如图1所示，推送共享文件的流程包括：</p>
+    <p>[0068]     步骤S101、用户终端根据用户的指示共享一个群文件；</p>
+    <p>[0069] 步骤S102、判断策略服务器是否接收到用户终端发送的第一推送命令和该用户终 端共享的共享文件信息，如果是，执行步骤S103，如果否，结束流程；</p>
+    <p>[0070] 步骤S103、策略服务器将该用户终端所共享的共享文件的信息推送给群组中的其 他用户终端；</p>
+    <p>[0071] 步骤S104、用户终端接收到信息后从策略服务器中获取群组中在线的各用户终端</p>
+    <p>信息，并从群组中在线的用户终端处通过点对点方式将共享文件下载到缓存中。</p>
+    <p>[0072]     这样，即实现了群组共享文件的推送，在终端根据用户的下载命令下载这个共享</p>
+    <p>文件时，同样要在存储文件信息的文件索引服务器中通过共享文件列表选择下载，但选择</p>
+    <p>下载后，首先用户终端会查询缓存中是否存储了用户所要下载的共享文件，如果有，则将该</p>
+    <p>共享文件的分片从缓存中直接复制到用户所指定路径中即可，如果存储的共享文件不完</p>
+    <p>整，则将缓存中存储的分片复制到指定路径中后，还需要从在线的用户终端处通过点对点</p>
+    <p>方式下载共享文件的其他分片，如果缓存中没有用户所要下载的共享文件，则直接从在线</p>
+    <p>的用户终端处通过点对点方式下载共享文件的全部分片到指定的下载路径。</p>
+    <p>[0073]     在步骤S102中，用户终端上传共享文件时，会查询文件索引服务器中该用户历史</p>
+    <p>共享文件的下载情况，当该用户历史共享文件的下载情况满足条件时，发送推送指令和所</p>
+    <p>上传的共享文件的信息，其中，该用户的历史共享文件的下载情况可以为用户的历史共享</p>
+    <p>文件的第一平均下载率，或者用户本次所共享文件的所属类别的历史共享文件的第二平均</p>
+    <p>下载率，用户所上传的文件每经过群组成员下载一次，便重新统计该用户所共享文件的下载情况。例如：某用户共在群组中共享过10个文件，4个是音乐类的，6个是视频类的，每 个文件的下载率为该文件被下载的次数除以该群组中的成员数，推送的条件可以设定为10 个文件的平均下载率超过一个门限值，例如可将门限值设置为60%，也可以是新上传的文 件所属的一类文件的平均下载率超过一个门限值，例如，新上传的文件是一个视频，则判断 曾经上传的6个视频的平均下载率是否超过规定的门限值，还可以既判断第一平均下载率 是否超过规定的门限值，又判断第二平均下载率是否超过规定的门限值，在二者均满足时， 再推送新上传的文件，当然，除上述几种判断方法外，还可以根据不同的需要进行不同的设 置。</p>
+    <p>[0074] 在步骤S103中，策略服务器将共享文件的信息推送给各个用户终端，此时，有些 用户终端可能并没有上线，可以由策略服务器维护一个推送列表，记录所推送的信息和对 应的还未推送的用户终端， 一旦发现有用户终端上线，则查找推送列表中是否有要推送给 该用户终端的共享文件信息，如果有，推送该共享文件信息给该用户，同时将该用户终端从 推送列表中删除。</p>
+    <p>[0075] 用户共享文件时，可以像现有技术中一样上传文件的信息和文件内容，文件的信 息包括文件名称、类型、大小、来源等，若文件有分片，还需上传分片数量和每个分片的大 小，可以根据实际的情况和需要进行设置。</p>
+    <p>[0076] 进一步，当要共享的文件较大时，为消除用户上传较大文件给用户带来的不便，用 户也可以发送仅上传文件信息的命令，使用户终端仅将文件的信息上传到文件索引服务器 中，而不上传文件，其他用户终端通过点对点方式从下载过该文件的用户或共享该文件的 用户处下载。</p>
+    <p>[0077] 更进一步，为防止用户上传过大的共享文件为用户带来不便，同时防止文件内容 服务器存储压力和带宽压力过大，可以在用户终端中设置用户所上传共享文件大小的限制 值，如设置为300M，则在上传时，用户可以上传小于300M的共享文件，若用户所要上传的共 享文件大于300M，则不上传共享文件的内容，仅将共享文件的信息上传至文件索引服务器 中，并提示用户，所要上传的文件过大，未上传到服务器中。</p>
+    <p>[0078] 在步骤S104中，在一个用户终端从其他用户终端处进行点对点下载的同时，也从 文件内容服务器中进行下载，为进一步控制文件内容服务器的流量，缓解带宽压力，可以控 制从文件内容服务器下载时的流量，更进一步可以设置一个下载速度的门限值，当其他用 户终端在点对点下载并且下载速度达不到预先设定的门限值时，再从存储文件内容的文件 内容服务器下载文件。</p>
+    <p>[0079] 为进一步提高下载的速度，在用户终端进行下载时，可以周期性向策略服务器查 询各个用户终端的在线情况，并在有新的用户终端上线时，建立与该用户终端的连接，确定 该用户终端中存储有所需的共享文件分片后，进行点对点下载。</p>
+    <p>[0080] 本发明实施例所采用的点对点下载方式为：由于在上传文件时，已经根据文件的 大小将欲下载的文件进行了分片，并为每个分片做了标识，每个分片的大小可以是128K或 256K、512K、1M等，最小分片可设置为128K，也可以根据实际情况设置最小分片的大小，当 文件较大时，每个分片也比较大， 一般每个较大文件都要分10个以上的分片以保证下载速 度，对于小于最小分片的文件，则不需要进行分片。那么在下载时，首先下载文件的分片情 况，再联系各个在线用户终端，查询各个用户终端中该共享文件的存储情况，即根据每个分片的标识查询每个用户终端中都有哪些分片，查询后根据各个用户终端的存储情况，同时 从不同用户终端中下载不同的分片，以保证下载速度，当在线用户终端较少，或在线用户终 端中存储的该共享文件分片较少，不能达到较理想的下载速度，则从文件内容服务器中下 载部分分片。</p>
+    <p>[0081] 进一步，每个分片都可以设置独立的校验码，这样在下载的文件出现错误时，只要 重新下载出错的分片即可，不需要重新进行大量的下载。</p>
+    <p>[0082] 在下载所推送的文件时，为不影响用户的正常使用，下载的速度可根据用户带宽 的占用情况随时调节。</p>
+    <p>[0083] 用户终端中的缓存一般以最小分片大小为单位进行划分，如最小分片为128K时， 缓存的单位也是128K，这样下载到缓存中的每个分片都占用一个或多个缓存单元，每个缓 存单元都有"已使用"和"未使用"两种状态，当缓存中的分片在一段时间内被下载次数少 于规定值时，就将该分片占用的缓存单元状态设定为"未使用"以下载新的共享文件分片， 下载后再标记为"已使用"。当欲下载的共享文件较大，而缓存中标记有已使用的空间不足 时，则随机下载共享文件的部分分片。</p>
+    <p>[0084] 进一步，为满足用户的不同需求，方便用户的使用，用户在共享文件后可同时选择 主动推送，即发送主动推送命令指示，用户终端则会根据用户的发送主动推送命令指示发 送第二推送命令和用户所共享的文件的信息给策略服务器，策略服务器接收到用户终端发 送的第二推送命令时，将用户所共享的第二共享文件的信息作为可选择的共享文件信息推 送给其他用户终端，其它用户终端接收到策略服务器推送的可选择的共享文件信息后，可 选择接收或拒绝，当选择接收时，同时要选择下载路径，下载时，同样是从在线的用户终端 处通过点对点方式下载共享文件到指定的路径中。</p>
+    <p>[0085]     本发明实施例还提供了一种群组中共享文件的系统，如图2所示，包括：</p>
+    <p>[0086]     第一用户终端，用于发送第一推送命令和该用户终端共享的文件的信息；</p>
+    <p>[0087] 策略服务器203，用于接收第一用户终端发送的第一推送命令以及该用户终端共</p>
+    <p>享的共享文件的信息，推送共享文件的信息，以及管理群组中在线用户的用户终端信息；</p>
+    <p>[0088] 至少一个第二用户终端，用于接收策略服务器203推送给共享文件的信息，分别</p>
+    <p>从策略服务器中获取在线的各用户终端信息，并从在线的用户终端处通过点对点方式将所</p>
+    <p>述共享文件下载到缓存中。</p>
+    <p>[0089] 其中，第一用户终端和第二用户终端均为用户终端204，第一用户终端和第二用户 终端仅为区分在一次文件共享时的共享文件提供方和共享文件下载方，每个用户终端204 均可作为第一用户终端或第二用户终端。</p>
+    <p>[0090] 进一步，系统中还包括：文件索引服务器201，用于接收第一用户终端上传的共享 文件的信息，并将共享文件的信息保存到共享文件列表中； [0091]     文件内容服务器202，用于存储用户上传的共享文件；</p>
+    <p>[0092] 第一用户终端还用于，将共享文件的信息上传到文件索引服务器201，并将文件分 片并上传到文件内容服务器中202 ;或者</p>
+    <p>[0093] 为消除用户上传较大文件给用户带来的不便，同时防止文件内容服务器202存储 压力和带宽压力过大，第一用户终端根据用户仅上传文件信息的命令或者确定用户所要上 传的文件大小超过了设定值时，仅将文件的信息上传到文件索引服务器201，而不上传文件的内容。</p>
+    <p>[0094]     第二用户终端还用于，在根据用户的下载命令连接文件索引服务器201并下载所</p>
+    <p>述共享文件列表中的共享文件时，查询本地缓存中对用户欲下载的共享文件的存储情况，</p>
+    <p>并在缓存中存储有所述共享文件的分片时，复制缓存中的文件分片到指定的下载路径，并</p>
+    <p>且在缓存中没有所述共享文件的分片或者缓存中存储的文件不完整时，从策略服务器203</p>
+    <p>中获取在线的各用户终端204信息，从在线的用户终端204处通过点对点方式下载所需的</p>
+    <p>分片到指定的下载路径。当然在在线的用户终端较少，下载速度较慢或者在在线的用户终</p>
+    <p>端处找不到所需分片时，可以从文件内容服务器202中下载部分分片以提高下载速度。</p>
+    <p>[0095] 进一步，第二用户终端还用于，在根据用户的下载命令连接文件索引服务器201</p>
+    <p>并下载所述共享文件列表中的共享文件时，发送下载该共享文件的消息；</p>
+    <p>[0096]     文件索引服务器201还用于，接收所述第二用户终端发送的下载该共享文件的消</p>
+    <p>息，统计用户全部历史共享文件的第一平均下载率、和/或用户所共享文件的所属类别的</p>
+    <p>历史共享文件的第二平均下载率。</p>
+    <p>[0097]     在发送第一推送命令及共享文件的信息前，第一用户终端还用于：</p>
+    <p>[0098]     当文件索引服务器201统计第一平均下载率时，在用户提供共享文件时，向文件</p>
+    <p>索引服务器201查询该用户的第一下载率，并在确定第一平均下载率达到预先设定的门限</p>
+    <p>值后，发送第一推送命令；</p>
+    <p>[0099] 当文件索引服务器201统计第二平均下载率时，在用户提供共享文件时，向文件 索引服务器201查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的 门限值后，发送第一推送命令；</p>
+    <p>[0100] 当文件索引服务器201统计第一平均下载率和第二平均下载率时，在用户提供 共享文件时，向文件索引服务器201查询该用户的第一平均下载率和第二平均下载率，并 在确定第一平均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命 令。</p>
+    <p>[0101] 为进一步便于用户的使用和文件的共享，第一用户终端还用于，根据用户的发送</p>
+    <p>主动推送命令指示，发送第二推送命令和该用户共享的第二共享文件的信息；</p>
+    <p>[0102] 策略服务器203还用于，在接收到用户终端发送的第二推送命令时，将用户所共</p>
+    <p>享的第二共享文件的信息作为可选择的共享文件信息推送给第二用户终端；</p>
+    <p>[0103] 第二用户终端还用于，接收策略服务器推送的可选择共享文件信息，并在用户确</p>
+    <p>定下载可选择共享文件信息对应的共享文件时，从策略服务器中获取在线的各用户终端信</p>
+    <p>息，并在线的用户终端处通过点对点方式下载用户所选择的共享文件到指定的路径中。</p>
+    <p>[0104] 进一步，为保证用户的下载速度，如果第一用户终端将文件内容上传到文件内容</p>
+    <p>服务器202中，第二用户终端还用于，存储一个下载速度门限值，在下载文件时，如果确定</p>
+    <p>下载的速度未达到预先设定的门限值并确定该文件存储在文件内容服务器202中时，在点</p>
+    <p>对点下载文件的同时，从文件内容服务器202下载文件。</p>
+    <p>[0105] 进一步，为更好的管理缓存，增加缓存空间利用效率，用户终端中的缓存以最小分 片如128K为单位分为各个单元，并根据存储情况标记状态为"未使用"或"已使用"，一个文 件的分片占用一个或多个缓存单元，当下载文件的分片到缓存的各个单元中时，将存储文 件分片的缓存单元标记为"已使用"，若在一段时间内，这个分片被下载的次数少于预先设</p>
+    <p>13定的最低下载次数，则将这个分片所占用的缓存单元标记为"未使用"，以供存储其它文件 分片。</p>
+    <p>[0106] 进一步，为方便用户的下载，第二用户终端还用于，在进行点对点下载过程中，周 期性向策略服务器203查询各个用户终端204的在线情况，并在有新上线用户终端204时， 建立与该新上线用户终端204的连接，确定该新上线用户终端204中存储有所需的共享文 件分片后，进行点对点下载。</p>
+    <p>[0107] 当然文件索引服务器201和策略服务器203可以合并设置，由一个服务器来实现 二者的功能。</p>
+    <p>[0108] 如图3所示，本发明实施例提供的一种用户终端，包括：节点管理单元301、调度单 元302和文件管理单元303，其中：</p>
+    <p>[0109] 节点管理单元301，用于在接收到查询命令后，向策略服务器查询在线的各用户终 端信息；</p>
+    <p>[0110]     调度单元302，用于发送第一推送命令和共享文件的信息给策略服务器；</p>
+    <p>[0111] 在下载文件时，获得策略服务器发送的共享文件信息，发送查询命令，根据节点管</p>
+    <p>理单元301查询的在线的各用户信息，联系各个用户终端，从在线的用户终端处查询获得</p>
+    <p>各个用户终端中共享文件的存储情况，并通过点对点方式下载共享文件到缓存中。</p>
+    <p>[0112]     进一步，用户终端中还包括：文件管理单元303，用于接收调度单元302在下载共</p>
+    <p>享文件的分片时发送的所下载共享文件的分片的标识，维护用户终端中存储文件情况的列</p>
+    <p>表，在接收到其他用户终端的查询时，发送所查询的共享文件的存储情况。</p>
+    <p>[0113] 进一步，调度单元302还用于，将共享文件的信息上传到文件索引服务器，并将文</p>
+    <p>件分片并上传到文件内容服务器中；或者</p>
+    <p>[0114] 为防止上传过大文件给用户带来不便，并减少文件内容服务器的存储压力和服务 器带宽压力，调度单元302根据用户仅上传文件信息的命令或者确定用户所要上传的文件 大小超过了设定值时，仅将文件的信息上传到文件索引服务器。</p>
+    <p>[0115] 进一步，文件管理单元303还用于，在用户终端根据用户的下载命令连接文件索 引服务器并下载共享文件时，查询用户终端缓存中对用户欲下载的共享文件的存储情况并 发送；</p>
+    <p>[0116]     调度单元302还用于，根据文件管理单元303发送的缓存中对用户欲下载的共享</p>
+    <p>文件的存储情况，在缓存中存储有所述共享文件的分片时，复制缓存中的文件分片到指定</p>
+    <p>的下载路径，并且在缓存中没有所述共享文件的分片或者存储的文件不完整时，发送查询</p>
+    <p>命令，从在线的用户终端处通过点对点方式下载所需的分片到指定的下载路径。</p>
+    <p>[0117] 进一步，为便于文件索引服务器统计下载情况，文件管理单元303还用于，在根据</p>
+    <p>用户的下载命令连接文件索引服务器并下载所述共享文件列表中的共享文件时，发送提示</p>
+    <p>文件索引服务器统计用户全部历史共享文件的第一平均下载率、和/或用户所共享文件的</p>
+    <p>所属类别的历史共享文件的第二平均下载率的下载该共享文件的消息。</p>
+    <p>[0118]     更进一步，调度单元还用于：当文件索引服务器统计第一平均下载率时，在用户提</p>
+    <p>供共享文件时，向文件索引服务器查询该用户的第一下载率，并在确定第一平均下载率达</p>
+    <p>到预先设定的门限值后，发送第一推送命令；</p>
+    <p>[0119] 当文件索引服务器统计第二平均下载率时，在用户提供共享文件时，向文件索引服务器查询该用户的第二平均下载率，并在确定第二平均下载率达到预先设定的门限值 后，发送第一推送命令；</p>
+    <p>[0120] 当文件索引服务器统计第一平均下载率和第二平均下载率时，在用户提供共享文</p>
+    <p>件时，向文件索引服务器查询该用户的第一平均下载率和第二平均下载率，并在确定第一</p>
+    <p>平均下载率和第二平均下载率全部达到预先设定的门限值后，发送第一推送命令。</p>
+    <p>[0121] 较佳的，为进一步方便用户进行文件的共享，调度单元302还用于，根据用户的发</p>
+    <p>送主动推送命令指示，发送第二推送命令和该用户共享的第二共享文件的信息；</p>
+    <p>[0122] 接收策略服务器推送的可选择共享文件信息，并在用户确定下载所述可选择共享</p>
+    <p>文件信息对应的共享文件时，发送查询命令，根据节点管理单元301查询的在线的各用户</p>
+    <p>信息，从在线的用户终端处通过点对点方式将所述共享文件下载到指定的路径中。</p>
+    <p>[0123] 为保证用户有较稳定的下载速度，调度单元302还用于，在下载文件时确定下载</p>
+    <p>的速度未达到预先设定的下载速度门限值并确定该文件存储在文件内容服务器中时，在点</p>
+    <p>对点下载文件的同时，从文件内容服务器下载文件。</p>
+    <p>[0124] 进一步，为更好的管理缓存的缓存空间，有效地利用有限的缓存资源，用户终端中 还包括：缓存管理单元，用于将缓存以最小分片大小为单位分为各个单元，并根据各个缓存 单元的存储使用情况标记状态为"未使用"或"已使用"，将缓存单元的存储使用情况由"已 使用"标记"未使用"时，将所标记的缓存单元中的文件分片的标记发送给文件管理单元 303，以使其及时更新用户终端中存储文件情况的列表。</p>
+    <p>[0125] 文件管理单元进一步还用于，接收缓存管理单元发送的文件分片的标识，更新用 户终端中存储文件情况的列表，将该文件分片标识从列表中删除。</p>
+    <p>[0126] 为进一步提高下载速度和文件共享效率，调度单元302还用于，在进行点对点下 载过程中，周期性发送查询命令，但根据节点管理单元301转发的用户终端在线情况确定 有新上线的用户终端时，建立与该新上线用户终端的连接，确定该新上线用户终端中存储 有所需的共享文件分片后，进行点对点下载。</p>
+    <p>[0127] 显然，本领域的技术人员可以对本发明实施例进行各种改动和变型而不脱离本发 明的精神和范围。这样，倘若本发明的这些修改和变型属于本发明权利要求及其等同技术 的范围之内，则本发明也意图包含这些改动和变型在内。</p>
+    <p>15</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101895575A?cl=zh">CN101895575A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年7月8日</td><td class="patent-data-table-td patent-date-value">2010年11月24日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">基站版本下载方法及装置和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101895575B?cl=zh">CN101895575B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年7月8日</td><td class="patent-data-table-td patent-date-value">2015年5月13日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">基站版本下载方法及装置和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102170475A?cl=zh">CN102170475A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月22日</td><td class="patent-data-table-td patent-date-value">2011年8月31日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种基于p2p的文件分发系统及分片方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102710555A?cl=zh">CN102710555A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月28日</td><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">奇智软件（北京）有限公司</td><td class="patent-data-table-td ">一种用于实现即时通讯中传输文件的方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102752397A?cl=zh">CN102752397A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月18日</td><td class="patent-data-table-td patent-date-value">2012年10月24日</td><td class="patent-data-table-td ">北京亿企通信息技术有限公司</td><td class="patent-data-table-td ">一种在企业即时通讯中共享文件的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102882985A?cl=zh">CN102882985A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月23日</td><td class="patent-data-table-td patent-date-value">2013年1月16日</td><td class="patent-data-table-td ">上海够快网络科技有限公司</td><td class="patent-data-table-td ">基于云存储的文件共享方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102882985B?cl=zh">CN102882985B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月23日</td><td class="patent-data-table-td patent-date-value">2015年8月5日</td><td class="patent-data-table-td ">上海够快网络科技有限公司</td><td class="patent-data-table-td ">基于云存储的文件共享方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103118140A?cl=zh">CN103118140A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年3月7日</td><td class="patent-data-table-td patent-date-value">2013年5月22日</td><td class="patent-data-table-td ">珠海金山办公软件有限公司</td><td class="patent-data-table-td ">将文件分享给关系圈外其他用户终端的方法、系统及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103179148A?cl=zh">CN103179148A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月21日</td><td class="patent-data-table-td patent-date-value">2013年6月26日</td><td class="patent-data-table-td ">腾讯数码（天津）有限公司</td><td class="patent-data-table-td ">一种在互联网中分享附件的处理方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103269302A?cl=zh">CN103269302A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月7日</td><td class="patent-data-table-td patent-date-value">2013年8月28日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">用于即时通信的共享文件管理方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103532950A?cl=zh">CN103532950A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年10月15日</td><td class="patent-data-table-td patent-date-value">2014年1月22日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">加载、提供网络多媒体资源的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014082397A1?cl=zh">WO2014082397A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年3月7日</td><td class="patent-data-table-td patent-date-value">2014年6月5日</td><td class="patent-data-table-td ">Beijing Netqin Technology Co., Ltd</td><td class="patent-data-table-td ">应用程序管理方法和服务器</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=ivJ-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=ivJ-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012580000">H04L12/58</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年6月30日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年8月25日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年11月27日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of an application for a patent</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/284aa151dcb6ed0e5f91/CN101764834A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%BE%A4%E7%BB%84%E4%B8%AD%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95_%E7%94%A8.pdf?id=ivJ-BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3Aqpuf17cXhn_fSgVKoRsfuNKr9Q"},"sample_url":"https://www.google.com/patents/reader?id=ivJ-BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

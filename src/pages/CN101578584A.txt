@@ -1,0 +1,1418 @@
+<!DOCTYPE html><html><head><title>专利 CN101578584A - 控制器、观测器及其应用 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="控制器、观测器及其应用"><meta name="DC.contributor" content="高志强" scheme="inventor"><meta name="DC.contributor" content="R&#183;米克罗索维克" scheme="inventor"><meta name="DC.contributor" content="A&#183;拉德克" scheme="inventor"><meta name="DC.contributor" content="周万坤" scheme="inventor"><meta name="DC.contributor" content="青 郑" scheme="inventor"><meta name="DC.contributor" content="克利夫兰州立大学" scheme="assignee"><meta name="DC.date" content="2006-9-18" scheme="dateSubmitted"><meta name="DC.description" content="本发明描述了控制器的参数化与尺度化。应用参数化与尺度化方法改善了包括但不仅限于控制器设计、整定和优化的技术。尺度化和参数化的方法适用于基于传递函数的控制器，包括PID控制器。同样，参数化方法也可用于基于状态反馈和状态观测器的控制器，以及线性自抗扰(ADRC)控制器。参数化的方法简化了ADRC的使用。本发明介绍了离散扩张状态观测器(DESO)和广义扩张状态观测器(GESO)，它们提高了扩张状态观测器(ESO)及其ADRC的性能。本发明还包括提高ADRC控制器性能的跟踪控制算法。描述了将ADRC应用到多输入多输出系统的通用算法。"><meta name="DC.date" content="2009-11-11"><meta name="citation_patent_publication_number" content="CN:101578584:A"><meta name="citation_patent_application_number" content="CN:200680043153"><link rel="canonical" href="https://www.google.com/patents/CN101578584A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101578584A?cl=zh"/><meta name="title" content="专利 CN101578584A - 控制器、观测器及其应用"/><meta name="description" content="本发明描述了控制器的参数化与尺度化。应用参数化与尺度化方法改善了包括但不仅限于控制器设计、整定和优化的技术。尺度化和参数化的方法适用于基于传递函数的控制器，包括PID控制器。同样，参数化方法也可用于基于状态反馈和状态观测器的控制器，以及线性自抗扰(ADRC)控制器。参数化的方法简化了ADRC的使用。本发明介绍了离散扩张状态观测器(DESO)和广义扩张状态观测器(GESO)，它们提高了扩张状态观测器(ESO)及其ADRC的性能。本发明还包括提高ADRC控制器性能的跟踪控制算法。描述了将ADRC应用到多输入多输出系统的通用算法。"/><meta property="og:title" content="专利 CN101578584A - 控制器、观测器及其应用"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101578584A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101578584A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=Kcl0BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101578584A&amp;usg=AFQjCNE5yf2RD2j4t9NFLxt4iqbiojh3cQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/79610f8b0a156396dd31/CN101578584A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/79610f8b0a156396dd31/CN101578584A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101578584A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101578584A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101578584A?cl=zh" style="display:none"><span itemprop="description">本发明描述了控制器的参数化与尺度化。应用参数化与尺度化方法改善了包括但不仅限于控制器设计、整定和优化的技术。尺度化和参数化的方法适用于基于传递函数的控制器，包括PID控制器。同样，参数化方法也可用于基于状...</span><span itemprop="url">https://www.google.com/patents/CN101578584A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101578584A - 控制器、观测器及其应用</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101578584A - 控制器、观测器及其应用" title="专利 CN101578584A - 控制器、观测器及其应用"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101578584 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200680043153</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/US2006/036156</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年11月11日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2006年9月18日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2005年9月19日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200680043153.8, </span><span class="patent-bibdata-value">CN 101578584 A, </span><span class="patent-bibdata-value">CN 101578584A, </span><span class="patent-bibdata-value">CN 200680043153, </span><span class="patent-bibdata-value">CN-A-101578584, </span><span class="patent-bibdata-value">CN101578584 A, </span><span class="patent-bibdata-value">CN101578584A, </span><span class="patent-bibdata-value">CN200680043153, </span><span class="patent-bibdata-value">CN200680043153.8, </span><span class="patent-bibdata-value">PCT/2006/36156, </span><span class="patent-bibdata-value">PCT/US/2006/036156, </span><span class="patent-bibdata-value">PCT/US/2006/36156, </span><span class="patent-bibdata-value">PCT/US/6/036156, </span><span class="patent-bibdata-value">PCT/US/6/36156, </span><span class="patent-bibdata-value">PCT/US2006/036156, </span><span class="patent-bibdata-value">PCT/US2006/36156, </span><span class="patent-bibdata-value">PCT/US2006036156, </span><span class="patent-bibdata-value">PCT/US200636156, </span><span class="patent-bibdata-value">PCT/US6/036156, </span><span class="patent-bibdata-value">PCT/US6/36156, </span><span class="patent-bibdata-value">PCT/US6036156, </span><span class="patent-bibdata-value">PCT/US636156</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%AB%98%E5%BF%97%E5%BC%BA%22">高志强</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22R%C2%B7%E7%B1%B3%E5%85%8B%E7%BD%97%E7%B4%A2%E7%BB%B4%E5%85%8B%22">R&#183;米克罗索维克</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22A%C2%B7%E6%8B%89%E5%BE%B7%E5%85%8B%22">A&#183;拉德克</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%91%A8%E4%B8%87%E5%9D%A4%22">周万坤</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%9D%92+%E9%83%91%22">青 郑</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%85%8B%E5%88%A9%E5%A4%AB%E5%85%B0%E5%B7%9E%E7%AB%8B%E5%A4%A7%E5%AD%A6%22">克利夫兰州立大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101578584A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101578584A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101578584A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (11),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (5)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=Kcl0BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200680043153&amp;usg=AFQjCNG3ArFBB4e0j-vVb2CP8y9NSMB-lA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=Kcl0BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101578584A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFX_gj0hmGuNmzMQVo5_Bqf0tuP5g"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT89962217" lang="ZH" load-source="patent-office">控制器、观测器及其应用</invention-title>
+      </span><br><span class="patent-number">CN 101578584 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109511525" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明描述了控制器的参数化与尺度化。应用参数化与尺度化方法改善了包括但不仅限于控制器设计、整定和优化的技术。尺度化和参数化的方法适用于基于传递函数的控制器，包括PID控制器。同样，参数化方法也可用于基于状态反馈和状态观测器的控制器，以及线性自抗扰(ADRC)控制器。参数化的方法简化了ADRC的使用。本发明介绍了离散扩张状态观测器(DESO)和广义扩张状态观测器(GESO)，它们提高了扩张状态观测器(ESO)及其ADRC的性能。本发明还包括提高ADRC控制器性能的跟踪控制算法。描述了将ADRC应用到多输入多输出系统的通用算法。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(18)</span></span></div><div class="patent-text"><div mxw-id="PCLM51298733" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种计算机实现的方法，用于控制动态系统的速度，该方法包括以下步骤：</div>
+      <div class="claim-text">指定由v(t)＝f(t)+bu(t)所定义的速度值，其中f(t)表示对象的内部动态特性和外部扰动的组合效果，u(t)是控制信号，b是一个近似值的常数；</div>
+      <div class="claim-text">将速度值转换为一阶状态空间模型；</div>
+      <div class="claim-text">利用线性扩张状态观测器估计f(t)的值，该观测器为一个单一性能参数的函数；</div>
+      <div class="claim-text">利用线性扩张状态观测器的估计，消除f(t)对速度的影响。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1的方法，还包括以下步骤：</div>
+      <div class="claim-text">将观测器的特征根指定为一个单一整定参数的函数；</div>
+      <div class="claim-text">简化速度值为近似积分对象以及</div>
+      <div class="claim-text">通过u0(t)＝kp(r(t)-z1(t))控制近似积分对象。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2的方法，还包括以下步骤：</div>
+      <div class="claim-text">建立一个没有有限零点的近似闭环传递函数；</div>
+      <div class="claim-text">利用模型传递函数，求解对应于所述单一整定参数的每一个控制器增益；</div>
+      <div class="claim-text">设定对应于所述单一整定参数的每一个控制器增益。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1的方法，其中所述动态系统是一个带加工系统。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4的方法，其中所述速度值是车架滚轮速度、出口段滚轮速度、和加工段滚轮速度中的至少一个。</div>
+    </div>
+    </div> <div class="claim"> <div num="6" class="claim">
+      <div class="claim-text">6.一种计算机实现的方法，用于离散地实现扩张状态观测器，该方法包括以下步骤：</div>
+      <div class="claim-text">用n阶对象的连续微分方程来表示对象，其中f是系统内部动态特性和外部扰动w的函数，b是一个常数；</div>
+      <div class="claim-text">构建所述n阶对象的n+1阶的状态空间模型；</div>
+      <div class="claim-text">通过应用Euler、零阶保持或一阶保持方法之一，离散化状态空间模型；</div>
+      <div class="claim-text">从离散化状态空间模型建立一个预测离散估计器；以及</div>
+      <div class="claim-text">从离散化状态空间模型建立一个当前离散估计器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6的方法，还包括以下步骤：</div>
+      <div class="claim-text">离散地参数化估计器增益，从而基于一个单一整定变量实现离散估计器。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.一种计算机实现的方法，将扩张状态观测器一般化，该方法包括以下步骤：</div>
+      <div class="claim-text">用n阶对象的连续微分方程来表示对象，其中y(n)表示y的n阶导数，u是控制信号，b是一个估计值；</div>
+      <div class="claim-text">应用h个串联积分器表示扰动f及其h个导数，来构建所述n阶对象的n+h阶状态空间模型；</div>
+      <div class="claim-text">通过应用Euler、零阶保持或一阶保持方法之一，离散化状态空间模型；</div>
+      <div class="claim-text">从离散化状态空间模型建立一个预测离散估计器；以及</div>
+      <div class="claim-text">从离散化状态空间模型建立一个当前离散估计器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8的方法，还包括以下步骤：</div>
+      <div class="claim-text">离散地参数化估计器增益，从而基于一个单一整定变量实现离散估计器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.权利要求8的方法，其中该对象具有多于一个输入和多于一个输出。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.一种通过提供过渡过程跟踪控制来增强自抗扰控制器的性能的方法，包括以下步骤：</div>
+      <div class="claim-text">利用n阶对象的连续微分方程来表示对象，其中y(n)表示y的n阶导数，u是控制信号，b是一个已知值；</div>
+      <div class="claim-text">构建一个扩张状态观测器来估计广义扰动、输出y、及该输出的n-1个导数；</div>
+      <div class="claim-text">通过从ESO估计出的扰动值，应用抗扰控制律来消除扰动；</div>
+      <div class="claim-text">将对象简化为n个串联积分器；</div>
+      <div class="claim-text">对简化后的对象应用点位控制律，来形成一个期望的闭环传递函数；</div>
+      <div class="claim-text">将闭环传递函数的逆加入控制器的参考输入，以形成一个新的等于1的闭环传递函数或者其相对阶等于0。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11的方法，还包括以下步骤：</div>
+      <div class="claim-text">直接向简化后的对象应用一个包含前馈项的跟踪控制律，以形成一个期望的等于1的闭环传递函数或者其相对阶等于0。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.权利要求11中的方法，其中所述对象具有多于一个输入值和多于一个输出值。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.一种向系统提供健康监测的方法，包括以下步骤：</div>
+      <div class="claim-text">确定恰当的控制输入与控制输出对；</div>
+      <div class="claim-text">确定每个输入/输出对的阶数；</div>
+      <div class="claim-text">建立匹配的扩张状态观测器以估计状态和扰动；</div>
+      <div class="claim-text">调整至少一个整定参数的值从而获得稳定的输出跟踪；</div>
+      <div class="claim-text">为估计扰动f确定至少一个标称条件；</div>
+      <div class="claim-text">监视标称条件与估计条件之间的变化；和</div>
+      <div class="claim-text">从估计出的扰动估计值中提取故障信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.一种用于设计一个控制多输入多输出系统的的系统的方法，包括以下步骤：</div>
+      <div class="claim-text">离散化系统模型以描述一个或多个特定的状态，其中每一个输入都有特定的输出和扰动；</div>
+      <div class="claim-text">从离散化系统模型构建扩张状态估计器；</div>
+      <div class="claim-text">确定一个或多个修正项作为单一整定参数的函数；和</div>
+      <div class="claim-text">应用修正项来估计系统状态和一阶或高阶的扩张状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15的系统，所述系统是化学过程、机械过程或电气过程中的至少一种。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.一种控制涡轮喷气引擎的方法，包括以下步骤：</div>
+      <div class="claim-text">建立涡轮喷气引擎系统的一部分的模型作为非线性输入输出向量函数；</div>
+      <div class="claim-text">逼近该建模系统的广义扰动；</div>
+      <div class="claim-text">将系统简化为一个区分瞬时输入和一个或多个要实时估计的动态变量的第二模型；</div>
+      <div class="claim-text">由一个或多个状态向量表示系统，其中分配一个扩张状态来跟踪广义扰动；</div>
+      <div class="claim-text">确定抗扰控制律；</div>
+      <div class="claim-text">利用抗扰控制律使系统解耦，并把它简化为一个或多个并行的积分器；</div>
+      <div class="claim-text">控制简化后的并行积分器系统。</div>
+    </div>
+    </div> <div class="claim"> <div num="18" class="claim">
+      <div class="claim-text">18.一种用于将扰动信息加入到线性扩张状态观测器中的方法，包括以下步骤：</div>
+      <div class="claim-text">用一个n阶对象的连续时间微分方程来表示对象，其中输出y(t)的n阶导数等于广义扰动f(t)加上输入bu(t)，其中b是一个常数；</div>
+      <div class="claim-text">构建所述对象的状态空间模型；</div>
+      <div class="claim-text">基于状态空间模型建立扩张状态观测器，它具有作为一个单一参数的函数的修正项；</div>
+      <div class="claim-text">如果f(t)是已知或部分已知的，则把由它的导数组成的一项加入扩张状态观测器。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58342190" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">控制器、观测器及其应用</invention-title>
+    <p>本项工作至少有一部分是由美国航空航天局支持(政府合同编号：NGT3-52387)。因此，此处美国政府可能拥有某些权利。</p>
+    <p>对相关申请的交叉参考</p>
+    <p>本申请是2003年1月27日提交的、公开号为2003/0199997的美国实用专利申请10/351664的部分继续申请(CIP)并要求其权益。本申请也要求以下申请的权益：2002年4月8日提交的美国临时申请60/373404；2005年9月19日提交的美国临时申请60/718393；2005年9月19日提交的美国临时申请60/718581；2005年9月20日提交的美国临时申请60/718899；2005年10月20日提交的美国临时申请60/728928；和2005年10月20日提交的美国临时申请60/728929；所有这些申请通过引用并入此处。</p>
+    <technical-field>
+      <p>[0004] 技术领域</p>
+      <p>[0005] 此处描述的系统、方法、应用程序界面(API)、图形用户界面(GUI)、计算机可读介质等，一般都与控制器，更确切地说，与尺度化(scaling)和参数化(parameterizing)控制器相关，并使用观测器(observer)和跟踪机制(tracking)以改善控制器设计、整定(tuning)和优化。</p>
+    </technical-field>
+    <background-art>
+      <p>[0006] 背景技术</p>
+      <p>[0007] 反馈(闭环系统)控制系统10，见现有技术附图1，被广泛地应用于修正物理过程(记作对象(plant)110)的行为。因此，它的行为按照特定想要的方式随着时间变化。例如，尽管高速公路上存在有山坡和逆风的影响，可能期望使行驶中的汽车时速尽可能保持接近60英里；也可能期望使一架飞机不受阵风的干扰，飞行于某一想要的高度、方向和预安排的速度；也可能期望使化工过程的反应堆压力容器的温度和压力保持在想要的水平。现在，这一切都可以通过反馈控制来实现，无须人为干预，以上讨论的是设计自动控制系统的实例。</p>
+      <p>[0008] 反馈控制系统的关键部件是控制器120，它确定了被控对象110的输出(例如，温度)和它的期望值的偏差，然后产生相应的控制信号u(例如，把一个加热器打开或关闭)。控制器的设计目标通常是：尽快地使这种偏差变得尽可能小。现在，控制器已广泛地应用于机器人技术、航空航天、马达、运动控制和热力控制等领域。</p>
+      <p>[0009] 经典的控制器</p>
+      <p>[0010] 经典控制理论为工程师们提供了许多控制器设计方法。现有的线性、时不变、单输入单输出对象的控制器，大体可分为三种形式：比例/积分/微分(PID控制)控制器，基于传递函数(TFB)的控制器和基于状态反馈(SF)的控制器。PID控制器可由式(1)定义</p>
+      <p>[0011] </p>
+      <p>[0012] 其中u是控制信号，e为设定值与被控过程输出值的之间的偏差。自二十世纪20年代初以来，这种控制器就被应用于工程和其它领域。这种以偏差为基础的控制器，不需要知道被控对象准确的数学模型。TFB控制器可由式(2)给出</p>
+      <p>[0013] U(s)＝Gc(s)E(s)，</p>
+      <p>[0014] 其中U(s)和E(s)分别为前文定义的u和e的拉氏变换，而n(s)和d(s)则为s的多项式。依赖于被控对象的传递函数模型(Gp(s))，可以应用控制论的方法设计这种TFB控制器。由于PID控制器有下述等价的传递函数形式，所以PID控制器可认为是TFB控制器的一个特例：</p>
+      <p>[0015] </p>
+      <p>[0016] 状态反馈(SF)控制器</p>
+      <p>[0017] SF控制器定义如下</p>
+      <p>[0018] </p>
+      <p>[0019] 并且基于被控对象的状态空间模型：</p>
+      <p>[0020] y(t)＝Cx(t)+Du(t)&#160;&#160;&#160;&#160;(5)</p>
+      <p>[0021] 当状态x不可测量时，通常可使用观测器：</p>
+      <p>[0022] </p>
+      <p>[0023] 来求x的估计</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>。这里的r是输出要跟随的设定值。</p>
+      <p>[0024] 控制器整定</p>
+      <p>[0025] 这么多年以来，控制理论的发展为控制器设计提供了许多有益的分析和设计工具。结果，控制器设计从经验法(如利用齐格勒和尼科尔斯的PID参数整定法)发展为分析法(如极点配置法)。频率响应法(波德和奈奎斯特图法)也促进了分析控制设计。</p>
+      <p>[0026] 在传统上，按照设计准则独立设计控制器，然后再单独整定，直到它们达到给定的性能指标。在实践中，工程师们设计控制器(例如，PID)时，先查表，然后再用试错方法整定控制器参数。但是每个控制器通常是单独设计、整定和测试的。</p>
+      <p>[0027] 整定控制器经常使工程师们不知所措。在硬件实现和测试中，基于对象的数学模型开发的控制器，通常需要其参数能被调整或“整定(tune)”。这是由于数学模型往往并不能准确地反映对象的动态特性。在这种情况下确定适当的控制参数往往会出现问题，如生成的控制方案虽然可行，但会出现“病态”整定，从而导致性能下降和控制能量浪费。</p>
+      <p>[0028] 附加地，和/或另选地，工程师设计时应用分析法(如极点配置)，但在整定时再次使用试错方法。由于许多工业机械及工程应用是建立在内在稳定的基础上，因而，可以应用常规方法设计和整定出可接受的控制器，但是该可接受的性能并不一定是最优的性能。</p>
+      <p>[0029] 一种示例性的设计PID控制器的传统技术包括获取开环响应，以及如果有的话，还要确定需要加以改进的东西。作为示例，设计者需要建立一个有反馈回路的候选系统，并猜想PID中的三个增益(例如，Kp，Kd，Ki)的初始值，再根据上升时间、稳态误差等来观察控制器的性能。然后，设计者也许要通过调整比例增益，来改善上升时间。同样，设计者也可能会增加或修改微分控制器，以改善超调而用积分控制器来消除稳态误差。每个元件都有自己的增益，且需要进行单独整定。因此，在传统上，设计者们常常需要面对选择PID控制器的三个元件，并对每个元件进行单独整定。此外，如果使用TFB或状态反馈状态观测器(SFSOB)控制器，则设计工程师们可能需要整定更多的设计参数。</p>
+      <p>[0030] 控制器设计还存在另一个问题即不可移植的问题。也就是说，每一个控制的问题是独立解决的，因而，不可能轻易地修改它的方案，以解决另一个控制问题。这就意味着，对于每一个控制问题都必须重复进行繁琐的设计和参数整定过程。状态观测器不仅能进行系统的监测和恒值调控，而且也能检测和识别动态系统的故障。由于几乎所有的观测器设计都依赖于对象的数学模型，因此，在实际应用中，现场中存在的扰动、动态不确定性、非线性等因素，对观测器的设计都构成了巨大挑战。为此，近来高性能的鲁棒观测器设计问题，已成为了一个热点话题，并有若干种高级的观测器设计方法被提出来。虽然在某些方面它们也取得了令人满意结果，但是在观测器设计及其在控制系统中应用方面，仍有待于进一步提高。</p>
+      <p>[0031] 状态观测器</p>
+      <p>[0032] 观测器从控制对象的输入-输出数据中提取出对象内部状态的实时信息。由于观测器的性能很大程度上依赖于对象模型的数学精度，所以观测器往往要假设对象具有精确的模型信息。闭环控制器需要这两种类型的信息。在图32的3200中描述了它们的关系。然而，由于作为设计过程的一部分的模型构建，在工业应用中仍面临着挑战，所以，这样的假设常常使该方法在工程应用中变成不切实际。另外，为了分别处理系统非线性和时变问题，而各自加入了增益调度和自适应技术，这样更增加了它的复杂性。</p>
+      <p>[0033] 扰动估计观测器和抗扰</p>
+      <p>[0034] 近来，抗扰方法已被用于处理实际应用中的不确定性问题，并在复杂非线性系统的控制中得到了成功应用。解决模型精度问题的前提是：反过来用一个等效输入扰动d来构建系统模型。这里的扰动d表示实际对象P和对象的导出或选择的模型Pn之间的差异，包括外界干扰w。然后设计观测器以实时地估计出扰动，再提供反馈信号以消除扰动。因此，在低频段时，扩张系统的行为与对象模型Pn相似，使该系统能准确模似Pn，并为Pn设计一个控制器。这个概念体现在图39的3900中。</p>
+      <p>[0035] 这些方法中最常使用的是：扰动观测器(DOB)构架(Endo，S.，H.Kobayashi，C.J.Kempf，S.Kobayashi，M.Tomizuka&#160;and&#160;Y.Hori(1996).″Robust&#160;Digital&#160;Tracking&#160;Controller&#160;Design&#160;for&#160;High-SpeedPositioning&#160;Systems.″Control&#160;Eng.Practice，4：4，527-536；Kim，B.K.，H.-T.Choi，W.K.Chung&#160;and&#160;I.H.Suh(2002).″Analysis&#160;and&#160;Design&#160;ofRobust&#160;Motion&#160;Controllers&#160;in&#160;the&#160;Unified&#160;Framework.″J.of&#160;DynamicSystems，Measurement，and&#160;Control，124，313-321；Lee，H.S.and&#160;M.Tomizuka(1996).″Robust&#160;Motion&#160;Controller&#160;Design&#160;forHigh-Accuracy&#160;Positioning&#160;Systems.″IEEE&#160;Trans.Ind.Electron..43：1，48-55；Tesfaye，A.，H.S.Lee&#160;and&#160;M.Tomizuka(2000).″ASensitivity&#160;Optimization&#160;Approach&#160;to&#160;Design&#160;of&#160;a&#160;DisturbanceObserver&#160;in&#160;Digital&#160;Motion&#160;Control.″IEEE/ASME&#160;Trans，onMechatronics，5：1，32-38；Umeno，T.and&#160;Y.Hori(1991).″RobustSpeed&#160;Control&#160;of&#160;DC&#160;Servomotors&#160;Using&#160;Modern&#160;Two&#160;Degreesof-Freedom&#160;Controller&#160;Design″.IEEE&#160;Trans.Ind.Electron.，38：5，363-368)，它采用一个简单的二项式Q型滤波器，使该观测器参数化，如采用一个单一的带宽参数对它整定。E.Schrijver和J.van&#160;Dijk在文章″Disturbance&#160;Observers&#160;for&#160;Rigid&#160;Mechanical&#160;Systems：Equivalence，Stability，and&#160;Design″Journal&#160;of&#160;Dynamic&#160;Systems，Measurement，and&#160;Control，vol.124，no.4，pp.539-548，2002中，提出完全不同于P的模型来完成设计，但并没有给出除了应该尽量简单之外的设计指南，因而要小心它的稳定性和可能在品质方面无法满足要求。另一障碍是必须设计一个分立观测器来提供状态反馈给控制器。在现有的研究中，控制器采用导数近似的方式实现，但它们对性能和稳定性的影响仍有待分析。此外，该控制器设计依赖于扰动观测器(DOB)的设计，这意味着导数近似不能随意选择。</p>
+      <p>[0036] 利用多个扰动观测器(DOB)控制一个多变量的机器人时，把这个机器人处理成一系列解耦的单输入-输出(SISO)系统，而且每一个都带耦合动态特性的扰动(Bickel，R.and&#160;M.Tomizuka(1999).″Passivity-Based&#160;Versus&#160;Disturbance&#160;Observer&#160;Based&#160;Robot&#160;Control：Equivalence&#160;and&#160;Stability.″J.of&#160;Dynamic&#160;Systems，Measurement，andControl，121，41-47；Hori，Y.，K.Shimura&#160;and&#160;M.Tomizuka(1992).″Position/Force&#160;Control&#160;of&#160;Multi-Axis&#160;Robot&#160;Manipulator&#160;Based&#160;onthe&#160;TDOF&#160;Robust&#160;Servo&#160;Controller&#160;For&#160;Each&#160;Joint.″Proc.ofACC，753-757；Kwon，S.J.andW.K.Chung(2002).″Robust&#160;Performance&#160;ofthe&#160;Multiloop&#160;Perturbation&#160;&#160;Compensator.″IEEE/ASME&#160;Trans.Mechatronics，7：2，190-200；Schrijver，E.and&#160;J.Van&#160;Dijk(2002)Disturbance&#160;Observers&#160;for&#160;Rigid&#160;Mechanical&#160;Systems：Equivalence，Stability，and&#160;Design.″J.of&#160;Dynamic&#160;Systems，Measurement，andControl，124，539-548.)。</p>
+      <p>[0037] 另一种方法，被称为未知输入的观测器(UIO)，它是用一个线性扰动模型扩张一个线性被控对象模型，实现对被控对象状态和扰动的估计。(Burl，J.B.(1999).Linear&#160;Optimal&#160;ConP-ol，pp.308-314.AddisonWesley&#160;Longman，Inc.，California；Franklin，G.F.，J.D.Powell&#160;and&#160;M.Workman(1998).Digital&#160;Control&#160;of&#160;Dynamic&#160;Systems，Third&#160;Edition，Addison&#160;Wesley&#160;Longman，California；Johnson，CD.(1971).″Accommodation&#160;of&#160;External&#160;Disturbances&#160;in&#160;Linear&#160;Regulator&#160;andServomechanism&#160;Problems.″IEEE&#160;Trans.Automatic&#160;Control，AC-16：6，635-644；Liu，C.-S.，and&#160;H.Peng(2002).″Inverse-DynamicsBased&#160;State&#160;and&#160;Disturbance&#160;Observer&#160;for&#160;Linear&#160;Time-InvariantSystems.″/.of&#160;Dynamic&#160;Systems，Measurement，and&#160;Control，124，375-381；Profeta，J.A.Ill，W.G.Vogt&#160;and&#160;&#160;M.H.Mickle(1990).″Disturbance&#160;Estimation&#160;and&#160;Compensation&#160;in&#160;Linear&#160;Systems.″IEEE&#160;Trans.Aerospace&#160;and&#160;Electronic&#160;Systems，26：2，225-231；Schrijver，E.and&#160;J.van&#160;Dijk(2002)″Disturbance&#160;Observers&#160;forRigid&#160;Mechanical&#160;Systems：Equivalence，Stability，and&#160;Design.″J.ofDynamic&#160;Systems，Measurement，and&#160;Control，124，539-548)。它不像DOB结构，而像Luenberger观测器，它的控制器和观测器可以分开设计。但是，它仍然需要一个完好的数学模型，以在设计过程中确定观测器的增益。通常使用多重积分器(1/Sh)来表示外部扰动w。在假定它们为分段常数的条件下，观测器只简单地扩张了一个状态，就可获得很好性能。</p>
+      <p>[0038] 扩张状态观测器(ESO)</p>
+      <p>[0039] 在这里，我们讨论的扩张状态观测器(ESO)大不相同。最初由Han.J.(1999)，″Nonlinear&#160;Design&#160;Methods&#160;for&#160;Control&#160;Systems.″Proc.14th&#160;IF&#160;AC&#160;World&#160;Congi-ess)提出，采用非线性UIO的形式，后来简化为一种单整定参数的线性化版本，见Gao，Z.(2003).″Scaling&#160;and&#160;Parameterization&#160;Based&#160;Controller&#160;Tuning.″Proc.ofACC，4989-4996，ESO集成了UIO的状态与扰动估计的特性和DOB单参数整定的优点，从而实质性地转变了基础的设计概念。传统的观测器是依赖于线性时不变模型，它经常被用于描述一个非线性时变过程。尽管DOB和UIO可以消除了这种标称对象的输入扰动，可是它们仍然没有直接解决系统的动态不确性问题。但是，ESO在一个简单的框架下解决了这两个问题。它为一大类不确定性系统制定一个简单可行的设计模型：Pd＝1/Sn。这种Pd的选择，是为了简化控制器和观测器的设计，并在低频时迫使被控对象P按照Pd而不是Pn特性工作。这样做的结果是：把大部分对象的动态特性和外部扰动的影响集中到一个未知量中。利用ESO可以估计出这个量和输出的导数，从而它为高性能控制器的设计提供了一种直接而有效的方法。</p>
+      <p>[0040] 自抗扰控制(Active&#160;Disturbance&#160;Rejection&#160;Control，ADRC)</p>
+      <p>[0041] Han，J.(1999)最早提出一种采用ESO的非线性非参数化的自抗扰控制方法，见文：″Nonlinear&#160;Design&#160;Methods&#160;for&#160;ControlSystems.″Proc.14th&#160;IFAC&#160;World&#160;Congress，而Gao，Z.提出了ADRC控制器的线性化版本以及一个易于整定的参数化ESO，见文Gao，Z.(2003).″Scaling&#160;and&#160;Parameterization&#160;Based&#160;Controller&#160;Tuning.″Proc.of&#160;ACC，4989-4996.在已经实现的一些典型应用中，可以看出它的实用性并具有广泛的工业应用前景。(Gao，Z.，S.Hu和F.Jiang(2001).″A&#160;Novel&#160;Motion&#160;Control&#160;Design&#160;Approach&#160;Based&#160;on&#160;ActiveDisturbance&#160;Rejection.″Proc.of&#160;40th&#160;IEEE&#160;Conference&#160;on&#160;Decisionand&#160;Control；Goforth，F.(2004).″On&#160;Motion&#160;Control&#160;Design&#160;andTuning&#160;&#160;Techniques.″Proc.of&#160;ACC；Hu，S.(2001).″On&#160;HighPerformance&#160;Servo&#160;Control&#160;Solutions&#160;for&#160;Hard&#160;Disk&#160;Drive.″DoctoralDissertation，Department&#160;of&#160;Electrical&#160;and&#160;Computer&#160;Engineering，Cleveland&#160;State&#160;University；Hou，Y.，Z.Gao，F.Jiang&#160;and&#160;B.T.Boulter(2001).″Active&#160;Disturbance&#160;Rejection&#160;Control&#160;for&#160;WebTension&#160;&#160;Regulation.″Proc.of&#160;40th&#160;IEEE&#160;Conf.on&#160;Decision&#160;andControl；Huang，Y.，K.Xu&#160;and&#160;J.Han(2001).″Flight&#160;Control&#160;DesignUsing&#160;Extended&#160;State&#160;Observer&#160;and&#160;Nonsmooth&#160;Feedback.″Proc.of40th&#160;IEEE&#160;Conf.on&#160;Decision&#160;and&#160;Control；Sun，B&#160;and&#160;Z.Gao(2004).″A&#160;DSP-Based&#160;Active&#160;Disturbance&#160;Rejection&#160;Control&#160;Design&#160;for&#160;a1KW&#160;H-Bridge&#160;DC-DC&#160;Power&#160;Converter.″To&#160;appear&#160;in：IEEE&#160;Trans，on&#160;Ind.Electronics；Xia，Y.，L.Wu，K.Xu，and&#160;J.Han(2004).″ActiveDisturbance&#160;Rejection&#160;Control&#160;for&#160;Uncertain&#160;Multivariable&#160;SystemsWith&#160;Time-Delay.，2004&#160;Chinese&#160;Control&#160;Conference).It&#160;was&#160;alsoapplied&#160;to&#160;a&#160;fairly&#160;complex&#160;multivariable&#160;aircraft&#160;control&#160;problem(Huang，Y.，K.Xu&#160;and&#160;J.Han(2001).″Flight&#160;Control&#160;Design&#160;UsingExtended&#160;State&#160;Observer&#160;and&#160;Nonsmooth&#160;Feedback.″Proc.of&#160;40thIEEE&#160;Conf.on&#160;Decision&#160;and&#160;Control).</p>
+      <p>[0042] 对于负责控制某个系统的人员来说，整个工业应用系统是很复杂且有很多东西他们不知道，需要的是应用系统中的一个控制框架。在缺乏必要的专门知识情况下、比目前流行的方法(如多回路PID控制)需要更少的整定参数，同时保持甚至改善性性和鲁棒性。</p>
+      <p>[0043] 线性自抗扰控制器(LADRC)</p>
+      <p>[0044] 除了上述控制器外，近来从自抗扰控制器(ADRC)演生出来一种更实用的控制器。下面说明用于二阶对象的其线性化形式(LADRC)。下文以为例介绍该控制器。ADRC的特点是，它在很大程度上独立于控制对象的数学模型，因而在实际应用中它的性能和鲁棒性比大多数控制器优秀。</p>
+      <p>[0045] 以控制一个二阶对象为例：</p>
+      <p>[0046] </p>
+      <p>[0047] 其中y和u分别为输出和输入，而w是输入扰动。这里的两个参数a和b都是未知的，不过其中b可能有部分值是已知的(如b0≈b由阶跃响应中y的初始加速度可以导出来)。重写方程(7)可得：</p>
+      <p>[0048] </p>
+      <p>[0049] 式中：</p>
+      <p>[0050] f被称为一般化的扰动或扰动，因为它包含了未知内部动态特性</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>和外部扰动w(t)这二者。</p>
+      <p>[0051] 要是f的估计</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>能够计算出来，则控制律将对象简化为一个带有扰动</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>的双积分单位增益的控制问题：</p>
+      <p>[0052] 重写方程(8)中的对象为状态空间形式：</p>
+      <p>[0053] </p>
+      <p>[0054] 其中x3＝f是一个扩展的状态，同时把看作是一个未知的扰动。至此，我们就可以采用基于状态空间模型的状态观测器估算出f</p>
+      <p>[0055] </p>
+      <p>[0056] y＝Cz&#160;&#160;&#160;&#160;(10)</p>
+      <p>[0057] 其中：</p>
+      <p>[0058] C＝[100]，</p>
+      <p>[0059] 方程(10)的状态空间观测器，记作线性扩张状态观测器(LESO)，可以表示为：</p>
+      <p>[0060] </p>
+      <p>[0061] (11)</p>
+      <p>[0062] </p>
+      <p>[0063] 如果方程中f是已知的或部分已知，则可在观测器中利用它得到以提高估计精度。</p>
+      <p>[0064] </p>
+      <p>[0065] (11a)</p>
+      <p>[0066] </p>
+      <p>[0067] 例如，观测器可以在软件中重构，且可以通过多种方法(如大家所熟悉的极点配置方法)得到观测器的增益向量L：</p>
+      <p>[0068] L＝[β1β2β3]T&#160;&#160;&#160;&#160;(12)</p>
+      <p>[0069] []T表示矩阵转置。在给定状态观测器的条件下，我们可以得到控制律：</p>
+      <p>[0070] </p>
+      <p>[0071] 如果忽略观测器的误差，可以得到：</p>
+      <p>[0072] </p>
+      <p>[0073] 上式为双积分单位增益，可以应用PD控制器来实现</p>
+      <p>[0074] u0＝kp(r-z1)-kdz2&#160;&#160;&#160;&#160;(15)</p>
+      <p>[0075] 跟踪控制</p>
+      <p>[0076] 控制命令的跟踪指的是：当使用一个指定的参考轨迹时，被控制系统的输出满足设计要求。很多时候，它指的是对于任何给定的时间点，输出y跟踪参考输入r的紧密程度，并采用众所周知的误差e＝r-y来度量。</p>
+      <p>[0077] 控制问题可以分为两个主要群体：点位控制(point-to-pointcontrol)和跟踪控制。点位控制要求：系统的阶跃响应过程平稳、超调最小且无稳态误差，例如当一个物体做直线运动时，从一个位置开始，运行到另一个位置，然后停下来。由于这种控制的重点在于目的地的准确性，而不对点与点间的轨迹做要求，因而，传统的设计方法为了使被控对象输出平稳，往往会产生固有的相位滞后。而对于跟踪控制，则要求系统输出能够准确地跟踪参考输入轨迹，使误差尽可能小。例如控制一个连续运动对象。由于这种控制的重点在于准确跟踪点之间参考轨迹的变化，因此，这种情况下任何相位滞后，对于持续期限较长过程的瞬态响应中会产生令人难以接受的大误差。虽然这个过程会产生有超调的响应，但是它比点位控制器产生的误差信号小得多。它的意义在于它能够随幅值的阶数减少误差。虽然阶跃输入可以作为点位控制的输入，但是对于跟踪控制应该使用运动预安排(motion&#160;profile)。</p>
+      <p>[0078] 有许多方法可以消除传统控制系统中的相位滞后。所有这些方法都基本上都是通过修改控制律，建立一个期望值为一的闭环传递函数。因此，输出可以没有任何相位滞后地跟踪参考输入，且改善了系统的有效带宽。最常用的方法是模型求逆，即在想要的闭环传递函数上加入一个预滤波器。另一种方法是，采用零相位误差跟踪控制器(ZPETC)，它通过消除闭环系统的极点和稳定零点，引入不可消除的零点，从而达到相位误差补偿。虽然这里称之为一种跟踪控制器，但是它真正是一个预滤波器，在没有不稳定的零点时，该预滤波器可以简化为想要的闭环传递函数的逆。其他方法由一个带有前馈项的单一跟踪控制律组成，取代传统的反馈控制器和预滤波器，不过它们只用在一些特殊的场所。但是，所有这些和其它先前的方法都只适用于系统模型是已知的情况。</p>
+      <p>[0079] 模型不准确也会产生跟踪问题。基于模型的控制器的性能在很大程度上依赖于模型的精度。当用线性时不变(LTI)模型来描述非线性时变(NTV)系统时，系统的信息会随着时间变得不准确。这就促使为处理非线性、时变问题而各自产生了增益调度和自适应控制技术。然而，从工业应用的时间和专业水平上考虑，由于涉及到了构建准确的数学模型及每一个控制系统的设计，整定和维护，因而，这种复杂的设计过程常常会导致一种不切实际的解决方案。</p>
+      <p>[0080] 目前出现了一些高性能的跟踪算法，它们包括三个主要模块：抗扰、反馈控制、用预滤波器实现相位误差补偿。首先，抗扰方法就是用一个内反馈环路消除模型不准确的。其次，在标称模型基础上构建一个稳定的控制器，并将其应用于外反馈回路中。最后，以预滤波器形式加入一个期望的闭环传递函数的逆，以消除相位滞后。许多研究都集中于将抗扰和控制部分统一，没有把相位误差补偿和控制部分结合起来，如RIC框架。内模控制(CIM)消除了等价的输出扰动。文献：B.Francis&#160;and&#160;W.Wonham，“The&#160;Internal&#160;Model&#160;Principal&#160;ofControl&#160;Theory，”Automatica，vol&#160;12，1976，pp.457-465.E.Schrijver&#160;and&#160;J.van&#160;Dijk，“Disturbance&#160;Observers&#160;for&#160;RigidMechanical&#160;Systems：Equivalence，Stability，and&#160;Design，”Journal&#160;ofDynamic&#160;Systems，Measurement，and&#160;Control，vol.124，December&#160;2002，pp.539-548，用一个带有DOB的基本跟踪控制器实现对多变量机器人的控制。ZPETC方法集成了DOB框架和基于模型的控制器，现已得到了广泛的应用。</p>
+      <p>[0081] 以上简要回顾了控制器和观测器，下面给出一些实例，用于描述与控制器和观测器相关的系统和方法。</p>
+      <p>[0082] 带类(web)加工领域的应用</p>
+      <p>[0083] 带张力恒值调控，是一个具有挑战性的工业控制问题。许多种类的材料，如纸张，塑料薄膜，布织物，甚至钢带，都是以带的形式进行生产或加工的。带张力往往在很大程度上影响了这些产品的最终质量，要是再考虑到带加工过程中不同阶段的速度波动，则这个张力就成为了反馈控制系统设计的一个关键变量。在实际生产中，不断提升质量和效率的要求，激励着业界研究人员和工程师们积极探索如何使用更好的方法来对张力和速度进行控制。然而，由于带类产品在加工过程中存在着高度非线性的特性，且工作条件(温度，湿度，机械磨损，原材料的变化等)的波动，使得这个控制问题极具有挑战性。</p>
+      <p>[0084] 在带类产品加工线上，由于缓冲器(accumulator)主要负责该生产线连续作业的器件，因而，它显得尤其重要。鉴于此，研究和控制缓冲器的动态特性就成为了解决这一特定类型问题的关键。在生产线中，缓冲器的特性和工况、缓冲器车架的动态行为与控制、带的跨距和张力都是已知的。</p>
+      <p>[0085] 在带加工行业中常用开环和闭环方式来控制张力。在开环控制情况下，带跨度上张力的控制是通过间接调控带跨度两端滚轮的速度实现的。这种方法有一个固有的缺点：要依赖于速度和张力之间精确的数学模型，然而这个模型是高度非线性的且对速度波动特别敏感。可是在许多实际应用中，控制器的简单性掩盖了这个缺点。闭环张力反馈为提高控制精度和减少建模误差敏感性，提出了一个显而易见的解决方案。但它需要测量张力，例如，可通过一个测压传感器实现，不过，它有效地改善了张力恒值调控的结果。</p>
+      <p>[0086] 对于大部分的控制系统，不可避免地会遇到内部和外部的扰动，这种扰动往往是开发高性能控制器的一大障碍。对于张力控制来说尤为明显。因此，一个良好的张力恒值调控系统，必须能够处理各种未知扰动。尤其是，张力的动态特性是高度非线性和速度波动敏感性的。还有，这个过程控制的变量还与工作条件和带料材质密切相关。因此，需要有什么样的系统和方法来控制这一过程，不仅要依赖于对象模型的精确性，而且也要考虑如何消除显著的内部和外部扰动。</p>
+      <p>[0087] 喷气式发动机控制应用</p>
+      <p>[0088] 在飞机的发动机中应用了大量的现代多变量控制方法。但大多数的研究都集中在单一工作点的控制方法。这些方法主要包括有：多变量积分饱卷保护方案(Watts，S.R.and&#160;S.Garg(1996).“AnOptimized&#160;Integrator&#160;Windup&#160;Protection&#160;Technique&#160;Applied&#160;to&#160;aTurbofan&#160;Engine&#160;Control，”AIAA&#160;Guidance&#160;Navigation&#160;and&#160;ControlConf.)，针对基于模型的控制，跟踪滤波器和控制模式选择(Adibhatla&#160;S.and&#160;Z.Gastineau(1994).“Tracking&#160;Filter&#160;SelectionAnd&#160;Control&#160;Mode&#160;Selection&#160;For&#160;Model&#160;Based&#160;Control.”AIAA&#160;30thJoint&#160;Propulsion&#160;Conference&#160;and&#160;Exhibit.)，还有Hm方法和线性二次高斯与回路传递恢复法(Watts，S.R.and&#160;S.Garg(1995).”A&#160;ComparisonOf&#160;Multivariable&#160;Control&#160;Design&#160;Techniques&#160;For&#160;A&#160;Turbofan&#160;EngineControl.”International&#160;Gas&#160;Turbine&#160;and&#160;Aeroengine&#160;Congress&#160;andExpo.)，性能寻优控制方法(Adibhatla，S.and&#160;K.L.Johnson(1993).“Evaluation&#160;of&#160;a&#160;Nonlinear&#160;Psc&#160;Algorithm&#160;on&#160;a&#160;Variable&#160;CycleEngine.”AIAA/SAE/ASME/ASEE&#160;29th&#160;Joint&#160;Propulsion&#160;Conferenceand&#160;Exhibit.).人们还研究了用多种方案来减少增益调度以及Hm和多变量积分饱卷保护方案(Garg，S.(1997).“A&#160;Simplified&#160;Scheme&#160;forScheduling&#160;Multivariable&#160;Controllers.”IEEE&#160;Control&#160;Systems；Frederick，D.K.，S.Garg&#160;and&#160;S.Adibhatla(2000).“Turbofan&#160;EngineControl&#160;Design&#160;Using&#160;Robust&#160;Multivariable&#160;Control&#160;Technologies.IEEE&#160;Trans.on&#160;Control&#160;Systems&#160;Technology).</p>
+      <p>[0089] 在传统上，在飞机的整个飞行过程中人们只应用了有限数量的控制方法。(Garg，S.(1997).“A&#160;Simplified&#160;Scheme&#160;for&#160;SchedulingMultivariable&#160;Controllers.”IEEE&#160;Control&#160;Systems；and&#160;Polley，J.A.，S.Adibhatla&#160;and&#160;P.J.Hoffman(1988).“Multivariable&#160;TurbofanEngine&#160;Control&#160;for&#160;Full&#160;Conference&#160;on&#160;Decision&#160;and&#160;Control&#160;FlightOperation.”Gas&#160;Turbine&#160;and&#160;Expo).但是，当这些控制方法被应用到发动机上时，对于性能让人满意的控制器整定方法没有取得任何进展。一般来说，在任何给定的工作点中，对于不同的发动机，模型会有差异。模型越复杂则模型的精度越高，但是，这会增加后续控制器的设计与整定的复杂性。因此，只有很少数的或类似的飞机设计方法应用到车辆中“A&#160;Simplified&#160;Scheme&#160;for&#160;Scheduling&#160;MultivariableControllers.”IEEE&#160;Control&#160;Systems；and&#160;Polley，J.A.，S.Adibhatlaand&#160;P.J.Hoffman(1988).“Multivariable&#160;Turbofan&#160;Engine&#160;Controlfor&#160;Full&#160;Conference&#160;on&#160;Decision&#160;and&#160;Control&#160;Flight&#160;Operation.”GasTurbine&#160;and&#160;Expo)。</p>
+      <p>[0090] 目前，高性能的喷气式发动机仍然采用多变量的比例积分(PI)控制，(Edmunds，J.M.(1979).“Control&#160;System&#160;Design&#160;UsingClosed-Loop&#160;Nyquist&#160;and&#160;Bode&#160;Arrays.”Int.J.on&#160;Control，30：5，773-802，and&#160;Polley，J.A.，S.Adibhatla&#160;and&#160;P.J.Hoffman(1988).“Multivariable&#160;Turbofan&#160;&#160;Engine&#160;Control&#160;for&#160;Full&#160;Conference&#160;onDecision&#160;and&#160;Control.Flight&#160;Operation.”Gas&#160;Turbine&#160;and&#160;Expo).虽然这种控制器是按照波德和奈奎斯特方法设计的，但是在参数整定时，由于参数数量多，因而结合了更为复杂的参数调度方法。</p>
+      <p>[0091] 健康监测与故障检测</p>
+      <p>[0092] 术语“健康”、“故障”、“诊断”、“容错”在广义上被使用。L.H.Chiang，E.Russell，and&#160;R.D.Braatz，Fault&#160;Detection&#160;and&#160;Diagnosis&#160;inIndustrial&#160;Systems，Springer-Verlag，February&#160;2001中，把至少有一种特性或变量产生了不允许的偏差，定义为故障，而文章J.J.Gertler，“Survey&#160;of&#160;model-based&#160;failure&#160;detection&#160;and&#160;isolation&#160;in&#160;complexplants，”IEEE&#160;Control&#160;Systems&#160;Magazine，December&#160;1988给出了更一般化的定义，将系统工作不正常定义为故障。</p>
+      <p>[0093] 复杂系统的故障诊断问题已成为工业应用领域的一个热点问题，大量的文献阐述了故障诊断的重要性。以下列出该研究领域很好的一些综述性文献：(J.J.Gertler，“Survey&#160;of&#160;model-based&#160;failuredetection&#160;and&#160;isolation&#160;in&#160;complex&#160;plants，”IEEE&#160;Control&#160;SystemsMagazine，December&#160;1988.，V.Venkatasubramanian，R.Rengaswamy，K.Yin，and&#160;S.N.Kavuri，“A&#160;review&#160;of&#160;process&#160;fault&#160;detection&#160;anddiagnosis&#160;part&#160;i：Quantitative&#160;model-based&#160;methods，”Computers&#160;andChemical&#160;Engineering，vol.27，pp.293-311，April&#160;2003.，(P.M.Frank，“Fault&#160;diagnosis&#160;in&#160;dynamic&#160;systems&#160;using&#160;analytical&#160;andknowledge-based&#160;redundancy：a&#160;survey&#160;and&#160;some&#160;new&#160;results，”Automatica，vol.26，no.3，pp.459-474，1990.，K.Madani，“A&#160;surveyof&#160;artificial&#160;neural&#160;networks&#160;based&#160;fault&#160;detection&#160;and&#160;fault&#160;diagnosistechniques，”International&#160;Joint&#160;Conference&#160;on&#160;Neural&#160;Networks，vol.5，pp.3442-3446，July&#160;1999.，P.M.Frank，“Analytical&#160;and&#160;qualitativemodel-based&#160;fault&#160;diagnosis-a&#160;survey&#160;and&#160;some&#160;new&#160;results，”European&#160;Journal&#160;if&#160;Control，1996，P.M.Frank&#160;and&#160;X.Ding，“Surveyof&#160;robust&#160;residual&#160;generation&#160;and&#160;evaluation&#160;methods&#160;inobserver-based&#160;fault&#160;detection，”Journal&#160;of&#160;Process&#160;Control，1997.，J.Riedesel，“A&#160;survey&#160;of&#160;fault&#160;diagnosis&#160;technology&#160;[for&#160;space&#160;powersystems]，”in&#160;Proceedings&#160;of&#160;the&#160;24th&#160;Intersociety&#160;IECEC-89.Conversion&#160;Engineering&#160;Conference，1989，pp.183-188.，A.Willsky，“A&#160;survey&#160;of&#160;design&#160;methods&#160;for&#160;failure&#160;detection&#160;in&#160;dynamicsystems，”NASASTI/Recon&#160;Technical&#160;Report&#160;N，vol.76，pp.11347-+，1975.，M.Kinnaert，“Fault&#160;diagnosis&#160;based&#160;on&#160;analytical&#160;models&#160;forlinear&#160;and&#160;nonlinear&#160;systems-a&#160;tutorial，”Department&#160;of&#160;ControlEngineering&#160;and&#160;System&#160;Analysis，Université&#160;Libre&#160;de&#160;Bruxelles，Tech.Rep.，2004.)and&#160;books&#160;by(L.H.Chiang，E.Russell，and&#160;R.D.Braatz，Fault&#160;Detection&#160;and&#160;Diagnosis&#160;in&#160;Industrial&#160;Systems，Springer-Verlag，February&#160;2001.，M.Blanke，M.Kinnaert，J.Junze，M.Staroswiecki，J.Schroder，and&#160;J.Lunze，Diagnosis&#160;and&#160;Fault-Tolerant&#160;Control，Springer-Verlag，August&#160;2003.，R.Patton，P.M.Frank，and&#160;R.N.Clark，Issues&#160;of&#160;Fault&#160;Diagnosis&#160;for&#160;Dynamic&#160;Systems，Springer-Verlag&#160;Telos，2000.，S.Simani，C.Fantuzzi，and&#160;R.Patton，Model-based&#160;Fault&#160;Diagnosis&#160;in&#160;Dynamic&#160;Systems&#160;Using&#160;IdentificationTechniques.Springer-Verlag，January&#160;2003.，E.Russell，L.H.Chiang，and&#160;R.D.Braatz，Data-Driven&#160;Methods&#160;for&#160;Fault&#160;Detection&#160;andDiagnosis&#160;in&#160;Chemical&#160;Processes(Advances&#160;in&#160;Industrial&#160;Control).Springer-Verlag，2000，M.Basseville&#160;and&#160;I.V.Nikiforov，Detection&#160;ofAbrupt&#160;Changes：Theory&#160;and&#160;Application.Prentice-Hall，Inc，April1993.)</p>
+      <p>[0094] 故障诊断主要有四个研究方向。故障检测即寻找系统存在一些问题的迹象。故障隔离探测故障的位置。故障识别确定系统故障的程度。故障调节与修复是校正故障的动作或过程。这个领域的研究大部分都集中在前三个，而且没有对闭环系统做出调整。故障诊断的一般解决办法可归纳为六个主要方面：</p>
+      <p>[0095] 1.冗余分析法：(J.J.Gertler，“Survey&#160;of&#160;model-based&#160;failuredetection&#160;and&#160;isolation&#160;in&#160;complex&#160;plants，”IEEE&#160;Control&#160;SystemsMagazine，December&#160;1988.，A.Willsky，“A&#160;survey&#160;of&#160;design&#160;methodsfor&#160;failure&#160;detection&#160;in&#160;dynamic&#160;systems，”NASA&#160;STI/Recon&#160;TechnicalReport&#160;N，vol.76，pp.11347-+，1975.，E.Y.Chow&#160;and&#160;A.S.Willsky，“Analytical&#160;redundancy&#160;and&#160;the&#160;design&#160;of&#160;robust&#160;failure&#160;detectionsystems，”IEEE&#160;Transactions&#160;on&#160;Automatic&#160;Contiol，October&#160;1982.)</p>
+      <p>[0096] 2.统计分析法(L.H.Chiang，E.Russell，and&#160;R.D.Braatz，FaultDetection&#160;and&#160;Diagnosis&#160;in&#160;Industrial&#160;Systems，Springer-Verlag，February&#160;2001.，E.Russell，L.H.Chiang，and&#160;R.D.Braatz，Data-Driven&#160;Methods&#160;for&#160;Fault&#160;Detection&#160;and&#160;Diagnosis&#160;in&#160;ChemicalProcesses(Advances&#160;in&#160;Industrial&#160;Control).Springer-Verlag，2000，M.Basseville&#160;and&#160;I.V.Nikiforov，Detection&#160;of&#160;Abrupt&#160;Changes：Theory&#160;and&#160;Application.Prentice-Hall，Inc，April&#160;1993.)</p>
+      <p>[0097] 3.基于知识和模糊逻辑的方法</p>
+      <p>[0098] 4.基于神经网络的方法(K.Madani，“A&#160;survey&#160;of&#160;artificialneural&#160;networks&#160;based&#160;fault&#160;detection&#160;and&#160;fault&#160;diagnosistechniques，”International&#160;Joint&#160;Conference&#160;on&#160;Neural&#160;Networks，vol.5，pp.3442-3446，July&#160;1999.，J.W.Hines，D.W.Miller，and&#160;B.K.Hajek，“Fault&#160;detection&#160;and&#160;isolation：A&#160;hybrid&#160;approach，”inAmerican&#160;Nuclear&#160;Society&#160;Annual&#160;Meeting&#160;and&#160;Embedded&#160;TopicalMeeting&#160;on&#160;Computer-Based&#160;Human&#160;Support&#160;Systems：Technology，Methods&#160;and&#160;Future，Philadelphia，PA，Oct&#160;29-Nov&#160;21995.)</p>
+      <p>[0099] 5.混合的方法(J.W.Hines，D.W.Miller，and&#160;B.K.Hajek，“Fault&#160;detection&#160;and&#160;isolation：A&#160;hybrid&#160;approach，”in&#160;AmericanNuclear&#160;Society&#160;Annual&#160;Meeting&#160;and&#160;Embedded&#160;Topical&#160;Meeting&#160;onComputer-Based&#160;Human&#160;Support&#160;Systems：Technology，Methods&#160;andFuture，Philadelphia，PA，Oct&#160;29-Nov&#160;2&#160;1995.)</p>
+      <p>[0100] 6.容错控制的方法(M.Kinnaert，“Fault&#160;diagnosis&#160;based&#160;onanalytical&#160;models&#160;for&#160;linear&#160;and&#160;nonlinear&#160;systems-a&#160;tutorial，”Department&#160;of&#160;Control&#160;Engineering&#160;and&#160;System&#160;Analysis，UniversitéLibre&#160;de&#160;Bruxelles，Tech.Rep.，2004.，M.Blanke，M.Kinnaert，J.Junze，M.Staroswiecki，J.Schroder，and&#160;J.Lunze，Diagnosis&#160;andFault-Tolerant&#160;Control，Springer-Verlag，August&#160;2003)</p>
+      <p>[0101] 这些方法当中有些不需要精确的模型，不过还需要其他的隐式模型。然而，最流行的冗余故障诊断方法却很大程度依赖于模型(E.Y.Chow&#160;and&#160;A.S.Willsky，“Analytical&#160;redundancy&#160;and&#160;the&#160;design&#160;ofrobust&#160;failure&#160;detection&#160;systems，”IEEE&#160;Transactions&#160;on&#160;AutomaticControl，October&#160;1982.)。</p>
+      <p>[0102] 虽然动态控制系统的诊断是很重要的，但是模型的详细信息常常是难以得到的。一个很少涉及但又是很重要的问题是：利用关于对象的少的假设下，对能够从输入和输出数据中确定的内容进行表征？</p>
+      <p>[0103] 在没有足够的对象、扰动、故障和模型误差的知识的条件下，很难建立一个有效的估计器。在大多数情况下，这些问题都只能独立解决。</p>
+    </background-art>
+    <disclosure>
+      <p>[0104] 发明内容</p>
+      <p>[0105] 这一部分简要地介绍了用于尺度化和参数化控制器的方法、系统和计算机可读媒体以便提供对这些项目的基本理解。本概要并不是一个广泛的综述，也不是有意标识出所述方法、系统和计算机可读媒体的关键单元，或界定这些项目的范围。本概要提供了一个简单的概念性介绍作为引论，更详细的描述见后文。</p>
+      <p>[0106] 本申请描述了尺度化和参数化控制器。应用这两种方法，使控制器的设计、整定、优化得到了改善。在一个例子中，这里所描述的系统、方法等借助于控制器的尺度化方法，以便控制器能从一个应用移植到另一个应用来促进对控制器设计再利用。例如，对于不同的对象，可以通过具体的频率尺度因子和/或增益尺度因子，利用有效的尺度化方法，实现控制器移植。虽然此处仅以PID控制器为例，但是我们必须明白，这里讨论的尺度化和参数化方法同样适用于其它控制器。</p>
+      <p>[0107] 熟悉滤波器设计的人都知道：先设计一个滤波器，然后进行尺度化处理，便可得到其它类似场合应用的滤波器。滤波器的设计者们很精通单位滤波器概念，因为它便于滤波器尺度化。在控制器尺度化方法的实例中，首先将被控对象的传递函数简化一个单位增益和单位带宽(UGUB)的形式。然后对用于适当的UGUB对象的已知控制器进行尺度化以将它应用到相似的被控对象中。由于特定对象具有特定的特点，因而在设计出UGUB对象类型情况下，就可以设计出相应类型的尺度化、参数化控制器。</p>
+      <p>[0108] 由于某些类别的被控对象具有相似的特性，因此，有可能通过类内频率尺度化达到控制器设计的目的。例如，一辆重量为2000磅的客车与一辆重量为2500磅客车的防锁死刹车装置具有许多共同的特征。因此，如果能设计出一个这种类型车辆的UGUB，对象则对于这一类的对象就可以设计出频率尺度化的控制器。然后，一旦一个控制器被选定，并应用于这一系列车辆中的一种(例如，2000磅车)，则它将成为一个已知的控制器，这样就可以使用频率尺度化方法，把它应用到其他相似车辆控制器的设计中(例如，2500磅车)。</p>
+      <p>[0109] 这种尺度化的方法使控制器变成“可移植的”。可以用一个单一的控制器为“种子”来为一系列具有相似特性的不同对象生成控制器。余下来的问题是从设计要求的角度如何评价两个系统的不同之处。控制器参数化阐述了这个问题。这里实例中描述的参数化方法，是使控制器的系数变为一个单一设计参数的函数，这个参数叫做交叉频率(也称为带宽)。这样做是为了对于不同的设计要求，当进行控制器整定时只反应在带宽要求上。</p>
+      <p>[0110] 尺度化和参数化方法的组合，就意味着通过这个方法，只要对现有的控制器(包括PID，TFB和SFSOB)进行尺度化处理，就可以应用于不同的被控对象，然后通过调整一个参数，就可以满足不同系统的性能要求，达到特定领域应用的目的。</p>
+      <p>[0111] 在某些实例方法、系统和计算机可读媒体等中，涉及到的说明和附图均在此描述。不过，这些例子都说明方法，系统，计算机可读媒体中应用不同方法的基本原理，它还可以被应用和扩展到其它相当的领域。当考虑到与图形有关时，下列的详细描述可以很明显地表达出它的其它优点和新颖的特点。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>[0112] 附图说明</p>
+      <p>[0113] 图1是现有技术的输出反馈控制系统配置图。</p>
+      <p>[0114] 图2是反馈控制配置图。</p>
+      <p>[0115] 图3示出了控制器生产系统。</p>
+      <p>[0116] 图4示出了控制器尺度化方法实例。</p>
+      <p>[0117] 图5示出了控制器尺度化方法实例。</p>
+      <p>[0118] 图6是控制器响应对比图。</p>
+      <p>[0119] 图7是回路形状图。</p>
+      <p>[0120] 图8是闭环仿真设置图。</p>
+      <p>[0121] 图9是阶跃响应对比图。</p>
+      <p>[0122] 图10示出了过渡过程预安排影响。</p>
+      <p>[0123] 图11是PD控制器和LADRC对比图。</p>
+      <p>[0124] 图12是LESO特性图。</p>
+      <p>[0125] 图13是示例设计方法流程图。</p>
+      <p>[0126] 图14是示例计算环境实例框图。</p>
+      <p>[0127] 图15示出了数据包。</p>
+      <p>[0128] 图16示出了数据包中的子域。</p>
+      <p>[0129] 图17示出了API。</p>
+      <p>[0130] 图18是基于观测器的系统的实例图。</p>
+      <p>[0131] 图19是根据示例性实施例，含有一个工作台(carriage)和多元跨距带的带加工系统(web&#160;processing&#160;system)方框图。</p>
+      <p>[0132] 图20是根据示例性实施例的基于线性ADRC(linear&#160;activedisturburbance&#160;rejection&#160;control)的速度控制系统。</p>
+      <p>[0133] 图21是根据示例性实施例的基于观测器的张力控制系统。</p>
+      <p>[0134] 图22示出了根据示例性实施例，带加工生产线上机架速度和出口段期望速度。</p>
+      <p>[0135] 图23示出了根据示例性实施例，加入带加工系统的机架的模拟扰动。</p>
+      <p>[0136] 图24示出了根据示例性实施例，加入带加工系统的加工段和出口段的模拟扰动。</p>
+      <p>[0137] 图25示出了根据示例性实施例，应用LADRC时机架滚轮的模拟速度和张力的跟踪误差。</p>
+      <p>[0138] 图26示出了根据示例性实施例，应用IC、LBC和LADRC1时机架滚轮的模拟速度的跟踪误差。</p>
+      <p>[0139] 图27示出了根据示例性实施例，应用IC、LBC和LADRC1时机架滚轮的模拟控制信号。</p>
+      <p>[0140] 图28示出了根据示例性实施例，应用LBC、LADRC1和LADRC2时机架滚轮的模拟张力跟踪误差。</p>
+      <p>[0141] 图29示出了根据示例性实施例，有凝聚力的(cohesive)LADRC设计和优化的方法。</p>
+      <p>[0142] 图30为根据示例性实施例，在模块化航空推进系统仿真(MAPSS)中封装一个涡轮风扇的示意图。</p>
+      <p>[0143] 图31为根据示例性实施例，在MAPSS包内组件级别的涡扇发动机模型。</p>
+      <p>[0144] 图32示出应用观测器的闭环控制系统。</p>
+      <p>[0145] 图33示出根据示例性实施例的一阶系统的ADRC。</p>
+      <p>[0146] 图34根据示例性实施例，示出了二阶系统的ADRC。</p>
+      <p>[0147] 图35根据示例性实施例，示出了一个单输入单输出单位增益闭环系统。</p>
+      <p>[0148] 图36根据示例性实施例，示出了一个多重单输入单输出闭环系统。</p>
+      <p>[0149] 图37根据示例性实施例，示出了不同退化程度的发动机，在#1工作点处，不同受控变量的ADRC控制器的响应对比。</p>
+      <p>[0150] 图38根据示例性实施例，示出了不同退化程度的发动机，在#1工作点处，不同受控变量的标称控制器的响应对比。</p>
+      <p>[0151] 图39显示了抗扰模型。</p>
+      <p>[0152] 图40根据示例性实施例，示出了当前的离散估计器系统。</p>
+      <p>[0153] 图41根据示例性实施例，示出了一个开环跟踪误差。</p>
+      <p>[0154] 图42根据示例性实施例，示出了一个带有扰动的规范形式系统的模型。</p>
+      <p>[0155] 图43根据示例性实施例，示出了一个工业运动控制试验台对矩形扭矩扰动的响应。</p>
+      <p>[0156] 图44根据示例性实施例，示出了一个工业运动控制试验台对三角形扭矩扰动的响应。</p>
+      <p>[0157] 图45根据示例性实施例，示出了一个工业运动控制试验台对正弦扭矩扰动的响应。</p>
+      <p>[0158] 图46根据示例性实施例，示出了一个带有相位补偿的二阶自抗扰控制(ADRC)系统的方框图。</p>
+      <p>[0159] 图47根据示例性实施例，示出了一个带有跟踪的二阶ADRC系统的方框图。</p>
+      <p>[0160] 图48根据示例性实施例，示出了过渡过程预安排的跟踪。</p>
+      <p>[0161] 图49根据示例性实施例，示出了一个故障检测和健康监测动态评价系统。</p>
+      <p>[0162] 图50根据示例性实施例，示出了系统诊断输入输出特性。</p>
+      <p>[0163] 图51根据示例性实施例，示出了扰动结构、健康退化和故障情况。</p>
+      <p>[0164] 图52根据示例性实施例，示出了分为估计律、消除律和标称控制律的控制设计图。</p>
+    </description-of-drawings>
+    <disclosure>
+      <p>[0165] 词汇</p>
+      <p>[0166] 在本申请中，″计算机″这个术语指的是一个与计算机有关的实体，无论是硬件、固件、软件，还是它们的组合，或执行中的软件。比如说，一个计算机组件可以是，但并不只限于，运行于处理器的进程、处理器、对象、可执行程序、一个执行的线程，一段程序以及一部计算机。作为示例，服务器及其应用程序，也可以作为计算机组件。一个或一个以上的计算机组件可以放在一个进程和/或线程的执行中，也可以放在一台计算机中，和/或分布于两台或两台以上的计算机。</p>
+      <p>[0167] 在此处使用的″计算机通讯″，指的是两台或两台以上的计算机能够进行通讯，比如说，能够进行网络传输、文件传输，小应用程序传输，电子邮件，超文本传输协议(HTTP的)信息，数据包，对象转移，二进制大对象(Blob)转移，等等。计算机通讯还可以例如通过无线系统(例如，IEEE&#160;802.11标准)，以太网系统(例如，兼容IEEE&#160;802.3)，令牌环网系统(例如，兼容IEEE&#160;802.5)，区域网络(LAN)，广域网(WAN)，点对点系统，电路交换系统，分组交换系统，等等发生。</p>
+      <p>[0168] 此处使用的″逻辑″，包括但不限于硬件、固件、软件和/或执行功能或动作的组合。比如说，基于一个理想的应用或需求，逻辑可以包括一个软件控制的微处理器，离散逻辑，例如一个应用专用集成电路(ASIC)，或其它可编程逻辑器件。逻辑也可以完全以软件形式实施。</p>
+      <p>[0169] ″可操作的连接″，是指在其中可以进行接收、发送信号和/或实际通信流和/或符合逻辑的通信流。通常，一个可操作的连接，包括物理接口，电气接口，和/或数据接口，但是值得注意的是：一个可操作的连接可以由这些连接的不同组合，或其他能够控制的连接方式组成。</p>
+      <p>[0170] 此处使用的″信号″，包括但不限于一个或一个以上的电气或光学信号，模拟或数字，一个或更多的计算机指令，位或比特流，等等。</p>
+      <p>[0171] 此处使用的″软件″，包括但不限于一个或一个以上的计算机可读和/或可执行指令。这些指令能使计算机或其它电子设备按照想要的方式执行功能、动作或行为。这些指令以各种形式嵌入如：子程序、算法、模块、方法、线程、和/或程序。软件也可以在不同的可执行文件和/或加载形式中运行，其中包括但不限于：一个单独的程序、一个函数调用(本地和/或远程)，服务器小程序和应用小程序。指令存放作为操作系统或浏览器等的组成部分在内存中。应该理解，计算机可读和/或可执行指令可被安装在一台计算机和/或分布于两个或更多的通讯、协作、和/或并行处理计算机中，因此，这些指令可以可被串行、并行、混合并行和其他形式来调用和/或执行。本领域技术人员可以理解：软件的形式依赖于它的运行环境(如应用的要求)、和/或设计师或程序员的意图等。</p>
+      <p>[0172] 此处使用的″数据存储″，指的是一个物理和/或逻辑的实体，能够用于存储数据。例如数据存储可能是一个数据库，一张表，一个文件，一个列表，一个队列或一个堆等。数据可能存储在一个逻辑和/或物理的实体，也可能分布于两个或两个以上的逻辑和/或物理实体。</p>
+      <p>[0173] 当术语″包含″用于详细说明或权利要求时，它的意思是具有包容性，当在权利要求中使用时与″包括″具有相似的解释。</p>
+      <p>[0174] ″或″这个词用在权利要求中时(例如A或B)，其意思是指″A或B或两者″。当笔者打算表明″只有A或B，而不同时包含A、B″时，作者将采用″A或B，但不能同时″这种形式表示。因此，在权利要求中使用″或″是包容性的，而不是排斥性的。请参阅字典：BryanA.Garner，A&#160;Dictionary&#160;of&#160;Modern&#160;Legal&#160;Usage&#160;624(2d&#160;Ed.1995)</p>
+    </disclosure>
+    <mode-for-invention>
+      <p>[0175] 具体实施方式</p>
+      <p>[0176] 这里参考附图来描述方法，系统，计算机媒体等的实例，其中相似的附图标记用来表示相似的元素。后文中的描述是为了解释，并列出了许多特定的细节，以便更加深入地理解方法、系统和计算机可读媒体等。然而，即使没有这些具体的细节，这些方法和系统也很显然是可以实现的。在其他实例中，对于众所周知的结构和设备，为了简化描述这里采用方框图表达。</p>
+      <p>[0177] 尺度化(Scaling)</p>
+      <p>[0178] 通常控制器的尺度是不可伸缩的，因此不可能在应用之间进行移植。然而，借助于这里例子中提到的系统和方法的尺度化的方法，就可使控制器变成可移植的。一般来说，被控对象在数学上可用传递函数Gp(s)(其中S是拉普拉斯变换的变量)来表达，故可以按以下形式进行尺度化：</p>
+      <p>[0179] Gp(s)＝kGp(s/ωp)&#160;&#160;&#160;&#160;(16)</p>
+      <p>[0180] 其中ωp为对象频率尺度因子(frequency&#160;scale)，k为增益尺度因子，可以通过频率尺度因子ωp和增益尺度因子k来表达大量与原始对象不同的对象。</p>
+      <p>[0181] 然后，对象Gp(s)所对应的控制器Gc(s)也可以被尺度化为：</p>
+      <p>[0182] Gc(s)＝(1/k)Gc(s/ωp).&#160;&#160;&#160;&#160;(17)</p>
+      <p>[0183] 考虑到一个含有对象Gp(s)210和控制器Gc(s)220的单位反馈控制系统200，见图2所示。假定已经设计出了具有期望的指令跟随、抗扰，噪声抑制和鲁棒稳定的控制器Gc(s)220。现考虑到一类相似的对象：kGp(s/ωp).对于给定的ωp，应用这里例子中提出的系统和方法，通过频率尺度化可以产生一个合适的控制器。因此，我们可以定义ωp和k分别为对象Gp(s)相对于Gp(s/ωp)的频率尺度因子和增益尺度因子。则有：</p>
+      <p>[0184] Gc(s)＝(1/k)Gc(s/ωp)&#160;&#160;&#160;&#160;(18)</p>
+      <p>[0185] 参照图3，示出了应用频率尺度化的示例系统300。该系统300包括一个控制器标识器310，它是用来标识一个与控制已知对象相关联的已知的控制器。控制器可能有一个或更多个可尺度化的参数(如频率，增益)，以便对控制器进行尺度变换。控制器标识器310可以访问控制器信息数据存储器330和/或对象信息数据存储器340，以便表征已知控制器的一个或多个特性。为了更好地加以说明，该控制器标识器310可以确定控制器的频率尺度因子(ωc)和/或受已知控制器控制的对象的频率尺度因子(ωp)以及传递函数(s)。</p>
+      <p>[0186] 控制器信息数据存储器330可以存储，例如，控制器类别的信息和/或尺度化控制器参数相关的信息。同样，对象数据存储器340可存储，例如，对象的信息，如传递函数的形状，频率尺度因子等。</p>
+      <p>[0187] 系统300还可以包括一个控制器尺度变换器(scaler)320，它可以利用已确定的尺度参数产生一个尺度化的控制器。该尺度变换器320可以依据，例如，控制器信息数据存储器330中的信息(如控制器类型、尺度参数和频率尺度因子)，对象信息数据存储器340中的信息(如对象类别、对象传递函数和频率尺度因子)等，做尺度变换的决策。</p>
+      <p>[0188] 尽管示出为两个分立实体，但可以理解，标识器310和尺度变换器320可作为一个单一的计算机组件和/或两个或多个的分布、相互通讯和协作的计算机组件。因此，图3所示的实体可使用信号、载波、数据包等等进行通讯。同样地，尽管示出为两个分立的数据存储器，控制器信息数据存储器330和对象信息数据存储器340可作为一个单一的数据存储单元和/或分布于两个或更多个的相互通讯和协作的数据存储单元。</p>
+      <p>[0189] 控制器尺度化的某些方面与滤波器设计相似。在滤波器设计中，根据给定的带宽、通带和阻带的要求，就可以直接设计出滤波器。一种示例性的滤波器设计方法包括寻找一个单位带宽的滤波器，如一个n阶切比雪夫滤波器H(s)，能够满足通带和阻带的特定要求，然后对滤波器进行频率尺度化(H(s/ω0))就可以达到要求的带宽ω0。</p>
+      <p>[0190] 为了便于理解与控制器相关的频率尺度化和时间尺度化，回到图2中的系统200，并记ωp为对象Gp(s/ωp)相对Gp(s)210的频率尺度因子，而τp＝1/ωp为相应的时间尺度因子。然后记k为对象kGp(s)相对Gp(s)210的增益尺度因子。在上述这些定义的基础上，可以根据频率和增益的尺度因子来描述工业控制问题中的差异。比如说，不同的时间常数的温度控制过程(为一阶传递函数)，具有不同惯性、电机尺寸、摩擦等的运动控制问题，可以用已定义的频率尺度因子和增益尺度因子来描述。</p>
+      <p>[0191] 通过应用这些尺度的概念，使设计人员少注意控制器和对象本身的差异，更着力于研究一类问题的通用解决方案，因为通过尺度化处理可以将线性时不变、且不具有有限零点的系统，简化为以下情形之一：</p>
+      <p>[0192] </p>
+      <p>[0193] 比如一个运动控制对象：Gp(s)＝23.2/s(s+1.41)，它是由一般化的运动控制对象：Gp(s)＝1/s(s+1)利用增益因子k＝11.67和频率因子ωp＝1.41变换而来的。</p>
+      <p>[0194] </p>
+      <p>[0195] 方程(19)描述了许多可以由一阶或二阶传递函数响应来近似的工业控制问题的实例。此外，方程(19)，还有以下的补充形式：</p>
+      <p>[0196] </p>
+      <p>[0197] 包括有限个零点的系统。因此，尽管方程(19)和(21)提到一系列例子，但是，我们必须明白，可以应用更多和/或更少数量的形式来描述这里的系统和方法。此外，在一些例子中，尺度化可以用于反映某些问题的独有特性。比如说，具有显著共振问题的运动控制系统，可以通过以下方式建模和尺度化处理。</p>
+      <p>[0198] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0199] 其中共振动频率满足ωrp＝nωp，ωrz＝mωp。具有多个频率尺度因子ωp，nωp，和mωp的问题可以被称为多尺度因子问题。利用这些定义，下文给出一个控制器尺度化技术的实例。</p>
+      <p>[0200] 假设被控对象Gp(s)有一个稳定的控制器Gc(s)，回路增益交叉频带为ωc，则控制器</p>
+      <p>[0201] Gc(s)＝Gc(s/ωp)/k&#160;&#160;&#160;&#160;(23)</p>
+      <p>[0202] 就可以使对象Gp(s)＝kGp1(s/ωp)稳定。新控制器的新回路增益为：</p>
+      <p>[0203] L(s)＝Gp(s)Gc(s)&#160;&#160;&#160;&#160;(24)</p>
+      <p>[0204] 它的带宽为ωcωp，由于L(s)＝L(s/ωp)，所以它与L(s)＝Gp(s)Gc(s)具有基本上相同的稳定裕度。</p>
+      <p>[0205] 注意新的闭环系统与原始系统具有基础上相同的频率响应形状，除了被平移ωp。因此，反馈控制属性，如带宽、抗扰动和噪声从先前的设计被保持，就象稳定鲁棒性一样，除了频率范围平移了ωp。</p>
+      <p>[0206] 既然我们已经讨论了控制器尺度化，则PID的尺度化也可以得到解决。根据上文讨论的频率尺度化的原理，并假设Gp(s)的原控制器为PID，如</p>
+      <p>[0207] </p>
+      <p>[0208] 则对象kGp(s/ωp)的新控制器可以由公式(25)得到</p>
+      <p>[0209] </p>
+      <p>[0210] 则从原来的PID中可得到新的PID增益，kp，ki，和kd为</p>
+      <p>[0211] </p>
+      <p>[0212] 为了展示以上方法的实际应用和结果，在下面实例中，考虑到一个对象的传递函数为</p>
+      <p>[0213] </p>
+      <p>[0214] 和PID控制增益：kp＝3，ki＝1，和kd＝2。现假设对象变为</p>
+      <p>[0215] </p>
+      <p>[0216] 则新的增益可以利用公式(30)计算得到：kp＝3，ki＝10，kd＝.2。因此，PID控制器的设计师在PID设计时，不是为被控对象从无到有重新设计和整定控制器，而是针对该PID类型选择现有合适的PID，并进行尺度化处理就可以了。因此，可以充分利用以前设计的控制器以及控制器与应用系统两者之间的关系，借助于频率尺度化的方法，完成新系统和方法的控制器设计。</p>
+      <p>[0217] 对于一个PID控制器的例子，PID控制器可能有对象频率尺度因子ωp作为一个尺度化的参数。在另一个例子中，该方法包括产生尺度化的控制器。比如说，一台计算机，可进行编程以执行频率尺度化控制。此外，该方法的计算机可执行部分，可以储存在计算机可读介质中和/或通过编有计算机执行指令的载波在不同计算机组件间传播。</p>
+      <p>[0218] 鉴于以下描述和展示的系统，所实行的示例方法可参照图4、图5和图13流程图更好地理解。而为了简洁的说明，用一系列模块来描述要展示的方法，但我们必须理解，该方法并受这些模块的顺序的限制，因为有些模块可能以不同的顺序出现和/或同时与其他模块出现。此外，不是所有的这里展示出来的模块都要求在一个实例方法中执行。此外，附加的和/或可选择的方法可用在额外的、没有显示出来的模块中。在一个例子中，方法被实施为计算机可执行指令和/或操作，存储在计算机可读媒体上，包括但不限于一个应用专用集成电路(ASIC)，光盘(CD)，数字多功能光盘(DVD)，随机存取存储器(RAM)，只读存储器(ROM)内，可编程只读存储器(PROM)，电子可擦除只读存储器(EEPROM)，磁盘，载波，和记忆棒。</p>
+      <p>[0219] 在流程图中，长方形方块表示可以用软件实现的″处理模块″。类似地，菱形块指的是也可以用软件实现的″决策模块″或″流向控制模块″。另选地，和/或附加地，处理和决策模块在同等功能的电路(如数字信号处理器(DSP)，专用集成电路等)中实现。</p>
+      <p>[0220] 流程图没有体现任何特定编程语言、方法或风格(例如，面向过程的，面向对象的)的语法。相反，流程图示出的是本领域技术人员可以用来编写软件、设计集成电路等等的功能信息。可以理解，在一些例子中，程序单元如临时变量，循环初始化、变量以及子程序等，没有在这里示出。</p>
+      <p>[0221] 转到图5，该图是一个生成控制器的实例方法500的流程图。该方法500包括，在510中识别使对象Gp(s)稳定的控制器Gc(s)，该控制器的频率为ωc，在520中根据Gc(s)＝Gc(s/ωp)/k关系，对控制器Gc(s)进行尺度化，生成一个控制器Gc(s)，其中控制器Gc(s)使对象Gp(s)＝kGp1(s/ωp)稳定，其中ωp是被控对象Gp(s/ωp)的频率尺度因子，而k为被控对象kGp(s)的增益尺度因子。在一个例子中，控制器为PID控制器，它的传递函数为：其中kp、ki、kd分别为比例增益、积分增益和微分增益。在另一个例子中，在又一个例子中，PID增益分别为：kp，ki，and&#160;kd，可以根据公式：由kp，ki和kd得到kp，ki，and&#160;kd。可以理解，这个实例采用的方法可以适用于线性和/或非线性PID。</p>
+      <p>[0222] 在图6给出了一个原控制器和尺度化处理后控制器的单位阶跃函数响应对比图，从图中可以看出，经尺度化处理后的控制器与原控制器的阶跃响应大致相同，但是被τ＝1/ω0尺度化了。两个系统的增益裕量均为无穷大且相位裕量也都约为82.372度。它们的0dB交叉频率分别为2.3935r/s和23.935r/s。因此，在本例中，通过对PID的尺度化，结果表明对该应用是合适的。</p>
+      <p>[0223] 虽然上述讨论的方法只涉及到线性的PID，但是可以理解，这个方法也可应用于非线性PID的尺度化处理。举例来说，用非线性增益取代线性的，PID的性能会得到改善。如：</p>
+      <p>[0224] </p>
+      <p>[0225] 其中，gp(e)，gi(e)和gd(e)均为非线性函数。将非线性PID记作NPID。通过选择非线性参数，可使比例控制对小误差更敏感；并将积分控制限制在小误差区范围内，这样就可以导致相关的相位滞后大大减小；将微分控制限制在大误差区域中，这样就可以使当响应达到稳态值和误差很小时，降低了控制器的信噪比敏感度。</p>
+      <p>[0226] NPID保留了PID的简单性和直观整定。当对象Gp(s)从变为kGp(s/ωp)时，对于NPID控制器可以使用同一个增益尺度化公式(30)。</p>
+      <p>[0227] 尺度化方法集中力量解决了控制范式问题，就像(22)中定义的一样。应用尺度化公式(26)和产生有形结果(例如，尺度化控制器)的相关系统和方法，便于为某一单独的问题选择恰当的控制器。这将有利于进一步着眼于基本的控制问题的研究，如基本的假设、要求和限制。因此，在这里描述的有关尺度化和参数化的系统、方法等的实例，可应用于在给定问题的物理约束的情况下优化个体解决方案。</p>
+      <p>[0228] 参数化</p>
+      <p>[0229] 如果可以用一个比常规方法更少的参数集来描述控制器，则使用控制器就可以简单化了。通常情况下，一个控制器(也可能是一个观测器)，可能会有很多参数(如15个)。在这里描述的与参数化有关的系统和方法利用单一参数来描述控制器。在一个实例中，控制器参数化涉及到构造一个以控制器带宽ωc为单一变量的函数。</p>
+      <p>[0230] 考虑到对象范式(19)，并假设想要的闭环传递函数为：</p>
+      <p>[0231] </p>
+      <p>[0232] 对于二阶对象，阻尼比可以设为单位量，这样就产生了两极点-ωc，这种方法同样也可用于高阶对象。</p>
+      <p>[0233] 对于(22)中的一阶和二阶对象应用极点配置法设计。表I中给出了一系列ωc参数化的控制器。与控制对象和控制器相关的信息可以存储在如数据存储器中。</p>
+      <p>[0234] 表I，ωC参数化的控制器实例</p>
+      <p>[0235] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0236] 回路形状设计也可以被参数化。回路形状是指通过操控回路增益的频率响应L(jω)＝Gp(jω)Gc(jω)，并将它作为一个控制设计的工具。一种示例性的回路形状方法可以包括：将设计规格转换为回路增益约束见图7、并寻求一个控制器Gc(jω)以满足这个要求。</p>
+      <p>[0237] 作为一个回路形状的例子，考虑具有Gp(s)形式的被控对象，见表I。</p>
+      <p>[0238] 期望的回路增益可以被表征为：</p>
+      <p>[0239] </p>
+      <p>[0240] 其中ωc为带宽，且满足</p>
+      <p>[0241] ω1＜ωc，ω2＞ωc，m≥0，和n≥0&#160;&#160;&#160;&#160;(31)</p>
+      <p>[0242] 这些参数的选择要满足图7所示的约束要求，本例中m和n均为整数。一个例子中的默认值为：</p>
+      <p>[0243] ω1＝ωc/10和ω2＝10ωc，&#160;&#160;&#160;&#160;(32)</p>
+      <p>[0244] 则会产生一个大于45度的相位裕度。</p>
+      <p>[0245] 一旦合适的回路增益约束生成并且选择了式(33)中的相应的最低阶L(S)，则可以确定出控制器：</p>
+      <p>[0246] </p>
+      <p>[0247] n的额外约束为</p>
+      <p>[0248] </p>
+      <p>[0249] 对于最小相位的对象，这种设计是有效的。而对于非最小相位的对象，可采用最小相位的近似Gp1(s)。</p>
+      <p>[0250] 由于增加ω1能提高低频性能但减少了相位裕度，因而我们可以通过改变ω1的值达到ω1和相位裕度的折衷。也可以在相位裕量和ω2之间进行类似的折衷。</p>
+      <p>[0251] 转向图4，显示了一个控制器尺度化的实例方法400。在410中，方法400包括在一个控制器类别中识别已知控制器，在这里，已知控制器控制第一对象。在420中，方法400包括识别已知控制器的尺度化参数。在430中，方法400包括在一个控制器类别中识别期望的控制器，它用于控制一个与频率相关的第二对象，并在440中，建立已知控制器和期望的控制器之间的频率关系。在450中，方法400至少部分基于已知控制器和期望的控制器之间的关系对可尺度化参数进行尺度化，对已知控制器进行尺度化处理得到期望的控制器。</p>
+      <p>[0252] 基于混合尺度化和参数化方法的实用优化</p>
+      <p>[0253] 实际控制器优化指的是：在给定的物理约束条件下，从现有的硬件和软件中获得最优化的性能。可以利用性能度量来度量实际控制器优化特性，性能度量包括但不限于，命令跟随的快速性(又叫调节时间)，精确度(瞬态和稳态误差)，以及抗扰能力(例如，衰减幅度和频率范围)。物理约束的例子包含但不仅限于，采样和回路刷新速率、传感器噪声、对象的动态不确定性、饱和效应，以及驱动信号的平滑度要求。</p>
+      <p>[0254] 常规整定例如依赖于最小化代价函数，如H2和H∞。然而，传统的代价函数未必能全面反映实际的控制工程，因此可能会导致次优的整定。例如，有一个常见的代价函数在数学上很有吸引力，但可能会产生次优整定的控制器。因此，必须考虑其它优化的准则，如ωc。</p>
+      <p>[0255] 一个典型的工业控制方法的应用涉及到一个稳定的单输入单输出(SISO)对象，这里的输出表示一个要调控的可测过程变量，而输入表示与输出有一定动态关系的控制驱动信号。虽然在工作点附近，可以通过对某一特定输入(像阶跃信号)激励下的响应，来逼近被控对象，但是这种关系通常是非线性和未知的。</p>
+      <p>[0256] 在物理条件限制下，性能度量的评价得益于控制器带宽ωc最大化。如果能把极点安置在同一位置上，则ωc就成为待整定的唯一参数。因此，可以用单一参数整定实现实际的PID优化。例如，在制造中，一条生产线的设计目标是：使其运行尽可能快，同时最大限度地减少因维修和故障排除的停机时间。同样，在计算机硬盘驱动器伺服系统中，其设计目标是，令读/写磁头尽可能快地跟随设定点，同时保持极高的准确度。汽车防锁死刹车控制设计中，设计目标是使车轮速度尽可能接近想要的速度，以达到最低制动距离。</p>
+      <p>[0257] 在这三个例子中，设计目标能被转换为：使控制器带宽ωc最大化。还有其他一些工业控制的例子，也有同样的结论。因此，ωc最大化似乎是一个实际最优的有用标准。此外，不同于纯粹的数学优化方法，因为ωc受到物理约束的限制，所以它的优化具有实际生产的适用性。比如说，使ωc朝向于无穷大可能不切实际，因为它可能会导致结果信号变得令人无法接受。</p>
+      <p>[0258] 举一个例子，说明物理限制是如何影响ωc优化的，考虑具有最高的采样率和最高回路刷新率的数字控制装置。最高采样率是与模数转换器(ADC)有关的硬件限制，而最大回路刷新率是与中央处理器(CPU)和控制算法的复杂性有关的软件限制。通常情况下，计算速度比采样率快，因此只须考虑取样率的限制。</p>
+      <p>[0259] 再比如，在研究ωc优化的物理限制时，测量噪音也要考虑。比如说，ωc被限定在可以得到过程变量的精确测量值的频率范围内。在这个范围之外的噪声，可以通过模拟或数字滤波器把它滤除。</p>
+      <p>[0260] 同样的，在研究ωc优化的物理限制时，对象的动态不确定性也要考虑。常规的控制设计方法是依赖于对象的数学模型，它可能只有在低频范围内工作是可靠的。在一个相对高的频率范围内工作时，有些物理对象会表现出奇怪的相位扭曲和非线性行为。因此，控制器的带宽仅限于低频率范围内，这种情况下，对象的响应是很好的且可预测的。为了防止系统不稳定，当对象存在不确定性时要减少闭环增益。因此，安全地把带宽增加到最大，相当于把有效(高增益)控制扩展到对象行为已知的频率范围的边缘。</p>
+      <p>[0261] 同样，执行器的饱和度和平稳性也可能影响设计。虽然采用过渡预安排有助于带宽设计和瞬态要求之间解耦，但是像执行器饱和的限制，非线性侧隙和滞后，变化率限制，损耗等因素基础上的平稳性要求都会影响设计。例如，在一个带有齿轮箱侧隙问题的运动控制应用中，过高的带宽将导致在齿轮箱抖振，并极有可能过早破坏。因此，在进行ωc优化时，由于考虑到了物理限制，如采样率，回路更新速率，对象不确定性，执行器饱和等，可能产生更好的性能。</p>
+      <p>[0262] 在一个控制器优化实例中，假设(1)对象是最小相位的(即它的极点和零点都位于左半平面)；(2)对象传递函数已知的；(3)ωc参数化的控制器是已知的且可用表I的形式；(4)根据瞬态响应规格的要求定义了过渡过程预安排；(5)还有一个可以利用的闭环控制系统的模拟器800如图8所示。可以理解，闭环控制系统的模拟器800可以是，例如，硬件，软件或两者的结合。在一个实例中，该模拟器合并了限制因素，这样因素包括但不限于，传感器和量化噪声，采样扰动，执行器限制，等等。</p>
+      <p>[0263] 在这些假设下，一个设计方法的实例包括，从给定对象传递函数分别确定频率尺度因子和增益尺度因子，ωp和k。该方法还包括，根据设计的规格，按照(如表I)要求确定控制器类型。该方法还包括选择与表I对应的尺度化对象的Gc(s；ωc)。该方法还包括把控制器尺度化为</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，Gc(s/ωp&#183;ωc)/k的数字化和在仿真器上实现控制器。该方法还包括根据瞬态响应对带宽的要求确定ωc的初始值，以及在模拟器上执行测试时增加ωc，直到观察到以下二者之一：</p>
+      <p>[0264] a.控制信号变得过于嘈杂和/或过于不平衡；或</p>
+      <p>[0265] b.有不稳定的迹象(振荡行为)</p>
+      <p>[0266] 一个测试台的运动控制例子，运动系统的数学模型为：</p>
+      <p>[0267] </p>
+      <p>[0268] 其中y为输出位置，u为送给驱动电机的功率放大器的控制电压，Td是扰动扭矩。本例的设计目标是带载运行速度为1r/s且无超调。因而，该控制问题的物理特性为：</p>
+      <p>[0269] 1)|u|＜3.5v，</p>
+      <p>[0270] 2)采样频率＝1kHz，</p>
+      <p>[0271] 3)传感器噪声为0.1％的白噪声，</p>
+      <p>[0272] 4)干扰扭矩为最大转矩的10％，</p>
+      <p>[0273] 5)控制信号平滑。</p>
+      <p>[0274] 对象的传递函数为：</p>
+      <p>[0275] k＝11.67且ωp＝1.41。</p>
+      <p>[0276] 现考虑到对应的UGUB对象</p>
+      <p>[0277] </p>
+      <p>[0278] 有一个PD设计：</p>
+      <p>[0279] </p>
+      <p>[0280] 其中：并且kd＝2ωc-1</p>
+      <p>[0281] 产生的闭环传递函数为：</p>
+      <p>[0282] 考虑到对象的增益尺度因子k和频率尺度因子ωp，则PD控制器的增益可尺度化</p>
+      <p>[0283] and</p>
+      <p>[0284] 为了避免控制信号被噪声污染，采用近似微分</p>
+      <p>[0285] </p>
+      <p>[0286] 这里转折频率选定为10ωc，因此，微分逼近不会引入交叉频率处的相位滞后问题。用常规根轨迹法，可得一秒的调节时间，需要的闭环带宽为4rad/sec。例如在此描述的单一参数化设计和整定方法，便于在一定的条件下得到一个产生最佳性能的ωc(20rad/sec)。两种设计相比较，即如图9所示。注意到为了测试抗扰能力，在t＝3秒钟处加入一个1伏特的阶跃扰动。最后，这里用一个梯形的瞬态预安排代替阶跃信号。结果见图10所示。</p>
+      <p>[0287] 状态反馈和状态观测器增益参数化</p>
+      <p>[0288] 背景技术部分介绍的状态反馈观测器：</p>
+      <p>[0289] </p>
+      <p>[0290] 它是基于对象的状态空间模型：</p>
+      <p>[0291] y(t)＝Cx(t)+Du(t)&#160;&#160;&#160;&#160;(37)</p>
+      <p>[0292] 当状态x无法访问时，状态观测器：</p>
+      <p>[0293] </p>
+      <p>[0294] 经常用来估计</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>。这里r是输出要跟随的设定值。状态反馈增益K和观测器增益L可由以下方程确定</p>
+      <p>[0295] eig(A+BK)＝λc(s)，eig(A+LC)＝λo(s)</p>
+      <p>[0296] 其中λc(s)和λo(s)是由设计者选定的s的多项式。通常情况下，由于K和L有许多参数，因而难以整定。</p>
+      <p>[0297] 状态反馈和状态观测器增益的参数化可以通过解以下方程实现</p>
+      <p>[0298] λc(s)＝(s+ωc)n&#160;andλo(s)＝(s+ωo)n</p>
+      <p>[0299] 其中ωc和ωo分别为状态反馈系统和状态观测器的带宽，n为系统的阶数。由于K和L的参数分别为ωc和ωo的函数，因而整定非常简单。</p>
+      <p>[0300] 一个二阶对象的线性自抗扰控制器(LADRC)的参数化</p>
+      <p>[0301] 有些控制器与观测器有关。传统上，对于带有控制器和观测器的二阶系统，它的每一个控制器和观测器都含有大量的(如15个)可整定属性。因此，虽然设计方法如Hah方法，在概念上是可行的，但是由于整定的问题使其实际的执行变得很困难。作为在这里描述的尺度化和参数化的结果，可以使用二个参数：观测器带宽(ω0)和控制器带宽(ωc)来构建的整定基于观测器的系统。</p>
+      <p>[0302] 状态观测器提供对象的内部状态的信息。状态观测器也用作噪声滤波器。状态观测器的一个设计原则涉及观测器跟踪状态的速度应该有多快(例如，其带宽应该是多少)。闭环系统的观测器，或特别是它的修正项</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，可以对付未知初始状态、参数不确定性和扰动等。一个观测器是否能满足控制要求，在很大程度上取决于它能多快地跟踪状态，正如ESO中的扰动f(t，x1，x2，w)。一般来说，首先选用较快速的观测器。在观测器设计中常见的制约因素包括但不仅限于，对象的状态空间模型依赖性、传感器噪声以及固定采样率。</p>
+      <p>[0303] 状态空间模型的依赖性限制了观测器只能用于模型有效的场合，这也使得观测器对模型的不准确性和对象的动态变化敏感。传感器的噪声水平依赖于硬件特性，但假设它为一种峰值是输出信号的0.1％至1％的白噪声是完全合理的。观测器的带宽可以选择的，因此不会因噪声而引起状态的显著振荡。状态观测器是一个自闭环系统，采样频率对状态观测器性能的影响与对反馈控制的影响是相似的。这里描述一个关于不需模型的状态观测器系统的实例。</p>
+      <p>[0304] 通常情况下，观测器依赖于数学模型。这里描述的系统和方法的实例可以应用一个″不需模型″的观测器，见图18所示。例如有一个对象1820可能含有一个控制器1810和一个观测器1830。控制器1810可以实现为计算机组件，因此它是程序可整定的。同样地，观测器1830也可以实现为计算机组件，因此它可能有可以通过程序尺度化的可尺度化参数。此外，利用这里描述的模似尺度化和参数化的方法，可将观测器1830的参数简化为ωo。因此，系统1800的整体优化问题就简化为了对参数ωc和ωo的整定问题。</p>
+      <p>[0305] 考虑一个简单的二阶对象控制例子</p>
+      <p>[0306] </p>
+      <p>[0307] 其中y和u分别为输出和输入，w为输入扰动。虽然存在关于b的部分信息(如，b0≈b，从阶跃响应中y的初始加速度中得到)，但是a和b仍是两个未知的参数。重写式(39)有</p>
+      <p>[0308] </p>
+      <p>[0309] 其中这里的f被称为广义扰动(generalizeddisturbance)或扰动，因为它表示的是未知的内部动态特性</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>和外部扰动w(t)。</p>
+      <p>[0310] 如果可计算出f的估计</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，则可用控制律将该系统简化为一个带有扰动</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>的单位增益双积分控制问题</p>
+      <p>[0311] 因此，将方程(40)的对象重写为状态空间形式</p>
+      <p>[0312] </p>
+      <p>[0313] 其中x3＝f作为扩张状态被加入，可看作未知的扰动。这样f就可以应用基于状态空间模型的状态观测器估计出来</p>
+      <p>[0314] </p>
+      <p>[0315] y＝Cz&#160;&#160;&#160;&#160;(42)</p>
+      <p>[0316] 其中</p>
+      <p>[0317] C＝[1&#160;0&#160;0]，</p>
+      <p>[0318] 现在式(42)的状态空间观测器，表示为线性扩张状态观测器(LESO)，可以被构建为</p>
+      <p>[0319] </p>
+      <p>[0320] (43)</p>
+      <p>[0321] </p>
+      <p>[0322] 这里如果f是已知的或部分已知的，则可在观测器中利用f求出可提高估计精度。</p>
+      <p>[0323] </p>
+      <p>[0324] (43a)</p>
+      <p>[0325] </p>
+      <p>[0326] 观测器例如可以在软件中重构，观测器增益向量L，可以通过多种本领域中熟知的方法(如极点配置)得到该向量值</p>
+      <p>[0327] L＝[β1β2β3]T&#160;&#160;&#160;&#160;(44)</p>
+      <p>[0328] 其中[]T表示转置.</p>
+      <p>[0329] 在给定状态观测器情况下，控制律可表达成：</p>
+      <p>[0330] </p>
+      <p>[0331] 忽略观测器的估计误差，则有</p>
+      <p>[0332] </p>
+      <p>[0333] 上式为一个单位增益双积分器，可用PD控制器实现</p>
+      <p>[0334] u0＝kp(r-z1)-kdz2&#160;&#160;&#160;&#160;(47)</p>
+      <p>[0335] 式中r是设定值。因此可得到一个纯的二阶闭环传递函数</p>
+      <p>[0336] </p>
+      <p>[0337] 其中增益可选择为</p>
+      <p>[0338] kd＝2ξωc并且</p>
+      <p>[0339] (49)</p>
+      <p>[0340] 式中ωc和ξ分别为期望的闭环固有频率和阻尼比。可以从避免振荡角度选择ξ。注意为了避免对设定值进行微分，可用-kdz2，代替</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，从而将闭环传递函数变成一个纯二阶无零点系统。</p>
+      <p>[0341] 在图11中显示的这个例子，说明了基于扰动观测器的PD控制在无PID的积分部分情况下可以获得零稳态误差。这个例子也显示了该方案的设计不需要模型，因为该设计依赖于公式(39)中b的近似值。这个例子还示出了未知扰动和内部动态特性的综合影响被视作广义扰动。通过增加一个观测器的额外状态，并把它主动地估计出再消除掉，从而达到自抗扰的目的。由于内部和外部的扰动都用f表示，且它被主动地估计出来并消除掉，因此，这种以LESO为基础的控制方法被称为线性自抗扰控制(LADRC)。</p>
+      <p>[0342] 这里还检验了控制器的稳定性。令ei＝xi-zi，i＝1，2，3。从式(42)中减去(43)和(44)的合并项。于是误差方程可写为：</p>
+      <p>[0343] </p>
+      <p>[0344] 其中</p>
+      <p>[0345] </p>
+      <p>[0346] E见式(42)中定义。如果Ae的特征根位于左半平面(LHP)，则LESO在有界输入和输出(BIBO)条件下是稳定的，其中h是一个有界量</p>
+      <p>[0347] λ(s)＝s3+β1s2+β2s+β3&#160;&#160;&#160;&#160;(51)</p>
+      <p>[0348] 这一分离原理也适用于LADRC。</p>
+      <p>[0349] 如果(43)和(44)中的观测器和(46)中的反馈控制律各自对双积分器是稳定的，则从(43)到(46)的LADRC设计就会产生BIBO稳定的闭环系统。把方程(45)和(47)组合成一个状态反馈形式：u＝(1/b0)[-kp-kd-1]z＝Fz，其中F＝(1/b0)[-kp&#160;&#160;-kd&#160;&#160;-1]。因此闭环系统可用状态空间方程表示为：</p>
+      <p>[0350] </p>
+      <p>[0351] 其中B＝B/b0，如果它的特征值位于左半平面则它是BIBO稳定的。应用行和列的运算法则可得闭环特征值</p>
+      <p>[0352] </p>
+      <p>[0353] </p>
+      <p>[0354] </p>
+      <p>[0355] 由于r是一个有界的参考信号，则对象的非平凡条件是是有界的。换句话说，扰动一定是可微分的。</p>
+      <p>[0356] ESO带宽参数化</p>
+      <p>[0357] ωo参数化是指观测器带宽为ωo的ESO的参数化。考虑有三个极点都在原点的对象(42)。如果对于一个给定的ωo，(44)中的观测器益较小，则相关的观测器对噪声不敏感。但是观测器增益与对象极点和观测器极点的距离成正比。因此，三个观测器的极点应放置在-ωo处或相当于</p>
+      <p>[0358] λ(s)＝s3+β1s2+β2s+β3＝(s+ωo)3&#160;&#160;&#160;&#160;(53)</p>
+      <p>[0359] 可得</p>
+      <p>[0360] β1＝3ωo，</p>
+      <p>[0361] 可以理解，方程(53)和(54)都可扩展到n阶的ESO。同样地，可以通过获得作为{A，B，C}的可观测典型形式的{A，B，C}和确定观测器增益L，对于任意矩阵A，B，和C的Luenberger观测器使用参数化方法，因此观测器的极点位于-ωo处，且利用状态逆转换求得{A，B，C}的观测器增益L。参数L是ωo的函数。下面讨论一个以优化ωo为基础的设计过程。</p>
+      <p>[0362] 在观测器状态中设定可接受的噪声阈值，增大ωo直到至少有一个阈值将要被超过或者由于采样延时使观测器状态产生振荡。总之。ESO越快，观测器估计扰动和控制律消除扰动也越快。</p>
+      <p>[0363] 需要研究ωo和ωc两者之间关系。下面给出二者关系的一个例子：</p>
+      <p>[0364] ωo≈3□5ωc&#160;&#160;&#160;&#160;(55)</p>
+      <p>[0365] 方程(55)适用于状态反馈控制系统，这里的ωc是根据瞬态响应要求(如调整时间要求)确定的。用一个安排过渡过程代替阶跃输入使控制设计更具有挑战性。在这个例子中需要考虑两个带宽，实际控制环路带宽ωc和含有安排过渡过程的等效带宽ωc。部分的设计过程涉及到选择二者之一并用于式(55)中。由于观测器是根据它与所要跟踪状态的贴近程度来评价的，又因在对象状态移动快速性方面ωc比ωc更有指示性，所以最好选ωc，不过在这里可以理解这二者都是可以使用的。此外，考虑到设计中的其他问题，如采样延时，可以通过仿真和实验得到一个更适当最小的ωo如下</p>
+      <p>[0366] ωo&#160;≈5□10ωc&#160;&#160;&#160;&#160;(56)</p>
+      <p>[0367] 以下讨论一个优化LADRC实例。这是一个LADRC设计和优化方法的实例，它包括设计一个参数化的LESO和含有ωo和ωc两个设计参数的反馈控制律。该方法包括设计一个具有等价带宽ωc的安排过渡过程和从式(56)中选出ωo。这个方法也包括设定ωc＝ωo和在仿真器上模拟和/或测试LADRC。该方法还包括同样数量地逐步提高ωc和ωo，直到噪声水平和/或控制信号振荡和输出超出充许值。该方法还包括单独逐步增加或减少ωc和ωo，如果有需要可以在不同的设计考虑因素之间做出权衡取舍，例如，过渡过程的最大误差、扰动衰减、控制器的幅度和平稳度。</p>
+      <p>[0368] 在一个例子中，如果由于噪声和/或取样局限性使暂态设计规范中所描述的ωc变成了不能维持的，则仿真和/或测试可能不会带来令人满意的结果。在这种情况下，可以通过减少ωc来降低控制目标，因此ωc和ωo也随之减少。本领域技术人员可以理解，这种方法可以推广到以luenberg状态观测器为基础的状态反馈设计中。</p>
+      <p>[0369] 为了更好地加以说明，重新考虑与方程(32)相关联的控制问题的实例，但是把该实例应用在(43)至(48)的LADRC中。注意在这个问题中b＝23.2，但为了使设计更切合实际，现假设设计者取b的估计值b0＝40。现重写对象的微分方程(38)如下</p>
+      <p>[0370] </p>
+      <p>[0371] LESO为</p>
+      <p>[0372] </p>
+      <p>[0373] 并且</p>
+      <p>[0374] </p>
+      <p>[0375] </p>
+      <p>[0376] 控制律定义为</p>
+      <p>[0377] u0＝kp(r-z1)-kdz2</p>
+      <p>[0378] 其中</p>
+      <p>[0379] kd＝2ξωc，ξ＝1，and</p>
+      <p>[0380] 这里ωc是需要整定的唯一设计参数。采用设定时间为1秒或ωc＝4的梯形过渡过程安排。从式(56)中选择ωo为40rad/sec。LADRC使设计更容易，它不需要一个详细数学模型、它在没有PID积分器的前提下获得零稳态误差；它使过渡过程有更好的命令跟踪；它使控制器鲁棒性变得很好。应用扩张状态观测器能够达到上述这些性能。图12中显示出一个性能实例。</p>
+      <p>[0381] n阶对象LADRC的参数化</p>
+      <p>[0382] 本领域技术人员可以理解，基于观测器的设计和整定方法可以被尺度化到任意阶对象。对于一般的带有未知动态特性和外界扰动的n阶对象，有</p>
+      <p>[0383] </p>
+      <p>[0384] 从状态空间方程中很容易得到观测器</p>
+      <p>[0385] </p>
+      <p>[0386] 其中xn+1＝f作为附加的扩张状态，而大多数情况下是未知的。式(43)中观测器的线性化增益为：</p>
+      <p>[0387] L＝[β1β2...βn+1]T&#160;&#160;&#160;&#160;(59)</p>
+      <p>[0388] 则有：</p>
+      <p>[0389] </p>
+      <p>[0390] 这里如果f是已知的或部分已知的，则可在观测器中利用f求出可提高估计精度。</p>
+      <p>[0391] </p>
+      <p>[0392] </p>
+      <p>[0393] .</p>
+      <p>[0394] .</p>
+      <p>[0395] .</p>
+      <p>[0396] </p>
+      <p>[0397] </p>
+      <p>[0398] 通过正确选择增益，则观测器就会跟踪状态且有</p>
+      <p>[0399] </p>
+      <p>[0400] </p>
+      <p>[0401] 与式(45)和(47)中的设计相似，可得控制律为</p>
+      <p>[0402] </p>
+      <p>[0403] 这样就可以把对象简化为一个单位增益串联积分器对象的近似。</p>
+      <p>[0404] y(n)＝(f-zn+1)+u0≈u0&#160;&#160;&#160;&#160;(63)</p>
+      <p>[0405] 且</p>
+      <p>[0406] </p>
+      <p>[0407] 这里增益被选择为使得闭环特征方程有n个位于-ωc的极点。</p>
+      <p>[0408] </p>
+      <p>[0409] ωc是在整定中要进行优化的闭环带宽。可采用下式对ωo进行优化。</p>
+      <p>[0410] sn+β1sn-1+...+βn-1s+βn＝(s+ωo)n&#160;&#160;&#160;&#160;(66)</p>
+      <p>[0411] 以下方法的实例可用于，识别一个对象的阶数和b0。对于给定带有输入u和输出y的″黑匣子″对象，可以通过释放储存在它内部的能量来估计它的阶数n和b0，因而必须要求它具有零初始条件(如)，并假设f(0)＝0。该方法包括采用一系列输入信号和确定初始响应的斜率：</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，...。该方法还包括确定在多种测试条件下与u(0)成正比的y(i)(0+)的斜率，(如y(i)(0+)＝ku(0))。该方法还包括设置n＝i+1和b0＝k.</p>
+      <p>[0412] 基于新型尺度化、参数化和优化方法的自动整定</p>
+      <p>[0413] 自动整定涉及到能自动选择控制参数的数字控制设备中的一个″按钮功能″。自动整定的常规实现过程是，根据阶跃响应的特性(如超调和调整时间)，利用一种算法来计算PID参数。例如，自动整定可应用在闭环系统控制的启动过程(例如，调试工厂中的一条生产线)。自动整定得益于尺度化和参数化方法。</p>
+      <p>[0414] 在某些应用中，工作过程中如果对象的动态特性发生了严重变化，则控制器的参数也会随工作点发生变化。传统上，采用增益调度来处理这类情况。在增益调度中，根据不同的工作点，控制器的增益被预设好，然后对于不同工作点进行切换。附加的，和/或可选择的，根据识别对象的动态特性变化获得的实时数据，主动调整控制参数，从而实现系统的自我整定。</p>
+      <p>[0415] 这些方法的共同目标是：自动确定控制器的参数；针对某一个输入激励(如阶跃函数)的响应，维持控制器在较宽的范围内性能一致性(如使控制器鲁棒不变)。</p>
+      <p>[0416] 在此描述有关尺度化和参数化的系统，方法的实例，便于基于模型的控制器自动尺度化。当一个对象的传递函数模型是已知的，则可以使用极点配置或回路成形方法设计其控制器。因此，在此描述的尺度化方法，便于一些问题的控制器设计和整定的自动化，这些问题包括，但不仅限于，运动控制，它们的对象相似，不同的只是直流增益和带宽；当对象的带宽和增益在工作过程中改变时，可以通过调整控制器参数，以保证高品质的控制性能。</p>
+      <p>[0417] 在这些实例中，对象传递函数可以表示成Gp(s)＝kGp(s/ωp)，其中称Gp(s)为“母”对象而k和ωp可从对象的响应或传递函数中得到。假设设计准则的性质是相似的，只是回路增益带宽ωc，不同，对于相似对象的控制器可以通过对对象Gp(s)已有的控制器Gc(s，ωc)进行尺度化后自动获得。通过综合方程(26)中定义的控制器尺度化和ωc参数化方法得到对象Gp(s)＝kGp(s/ωp)的控制器。</p>
+      <p>[0418] Gc(s，ωc)＝Gc(s/ωp，ωc)/k&#160;&#160;&#160;&#160;(67)</p>
+      <p>[0419] 式(67)中有三个参数需要整定，前两个是k和ωp，它们表示对象的改变或变化，这两个参数可以确定。第三个参数ωc，需要整定完成，在满足实际约束条件下，使控制系统性能最优化。</p>
+      <p>[0420] 下面讨论一个自动整定方法实例。自动整定方法，包括研究一个对象Gp(s)和标称控制器Gc(s，ωc)。给定对象Gp(s)和标称控制器Gc(s，ωc)，该方法包括进行离线测试，以确定对象的k和ωp。该方法也包含了应用公式(67)为对象Gp(s)＝kGp(s/ωp)确定一个新的控制器，这一过程可由前面的步骤得到。该方法还包括为新对象优化ωc。</p>
+      <p>[0421] 接下来讨论一个自适应自整定方法的实例。自适应自整定过程包括研究对象Gp(s)＝kGp(s/ωp)，这里k和ωp的值随对象工作点改变。对于给定的对象Gp(s)＝kGp(s/ωp)，该方法包括实现参数实时估计以保证k和ωp发生变化时确定出它们的值。该方法还包含当控制系统的性能退化，并超出了预定义的可配置阈值时，用方程(67)确定和更新控制器。该方法还包括如果对象的动态特性显著偏离模型kGp(s/ωp)(这种偏离会产生性能和稳定性问题)，则要有选择地降低ωc。该方法还包括如果对象超出了k和ωp的变化能在它的模型更新中体现，则要选择性地增加ωc以满足ωc的优化约束。</p>
+      <p>[0422] LADRC不要求对象的数学模型，相反，它只要在对象的偏微分方程(57)中粗略估计单参数b，它的估计值记作b0。该值是LADRC中唯一的对象参数。当对象的动态特性发生变化时b也会随着改变。因而重写方程(57)，可得到b0的估计</p>
+      <p>[0423] y(n)＝f(t)+bu&#160;&#160;&#160;&#160;(69)</p>
+      <p>[0424] 假设零初始条件(如y(i)(0)＝0，i＝1，2，...n-1和f(0)＝0)。让b0≈b并可由下式估计</p>
+      <p>[0425] b0＝y(n)(0+)/u(0)&#160;&#160;&#160;&#160;(70)</p>
+      <p>[0426] 这里的u(0)为输入的初始值。可以理解，这种方法可以用在开环和闭环系统。为了进行自整定，可以使用离线测试，并应用阶跃输入或u(t)＝常数输入。LADRC不要求b0有很高的精度，因为这个差值b-b0，可以被当作一种干扰源，它可由LESO估计出来并在控制律中将其消除。</p>
+      <p>[0427] b0可以从前文所述的离线估计b中得到。对于自整定的LADRC它可以是自适应的。自整定方法包括离线测试以确定对象阶数和b0；利用离线测试结果，选择LADRC的参数：阶数和b0，并实现计算机自动优化。</p>
+      <p>[0428] 这里讨论了利用控制器尺度化，参数化和优化的方法，例如图13中计算机实施方法1300。它的应用有利于实现各种装置自动控制的设计和优化(ADOAC)的自动化。这些装置包括，但不仅限于，运动控制，热控制，pH值控制，航空航天，伺服控制等。</p>
+      <p>[0429] 在1310中，方法1300接受输入，包括但不仅限于，有关的软、硬件限制的信息，如执行器的饱和极限、噪声的允许范围、采样频率限制、传感器噪声水平、量化、有限字长等相关的东西。该方法也接受设计要求的输入，如调整时间、超调、准确性、干扰衰减，等等。此外，该方法还接受作为输入的优选控制律形式，如PID形式、在传递函数中基于模型的控制器、不需要模型的LADRC形式。在一个例子中，该方法还说明，应该以差分方程形式提供一个控制律。在1320中，确定模型是否可用。如果一个模型可用，则不论它是传递函数，微分方程，还是状态空间形式，在1330中都可以接受该模型。如果一个模型不可用，那么，该方法可以在1340中接受阶跃响应数据。关于没有建模的显著动态特性的信息，如共振模式，也可以被接受。</p>
+      <p>[0430] 一旦该方法收到输入信息，就可以通过评价指标极限值来检查设计的可行性。例如，对于给定执行器的限制，为了检查瞬态指标是否可实现，我们应用各种过渡过程安排，借助于估计控制信号的最大值，来确定输出的导数最大值。因此，在1350中，做出了设计是否可行的决定。在一个实例中，如果设计方案不可行，则处理可以结束。否则，就要转到1360。</p>
+      <p>[0431] 如果输入信息通过了可行性测试，然后在1360中，该方法1300可确定一种或多种形式的ωc参数化解。在一个实例中，ωc的解可以在1370中进行仿真，便于得到最优化解。</p>
+      <p>[0432] 在一个实例中，为了协助工程师或其他用户，ADOAC方法提供了不同类型、阶数、和/或形式的参数化解决方案，作为参考。可以按照简便性、信令跟踪质量、抗扰性等对参考进行分级，以便比较。</p>
+      <p>[0433] 控制算法的计算机处理</p>
+      <p>[0434] 图14说明了计算机1400，它包括一个由总线1408连接的处理器1402、存储器1404、磁盘1406，输入/输出端口1410，网络接口1412。此处介绍的系统可执行部分，可位于一台计算机中像计算机1400一样。同样，这里描述的计算机可执行的组件也可以在一台计算机(像计算机1400)上执行。可以理解，在此描述的方法和系统也可以在其他计算机上执行。该处理器1402可以是多种多样的处理器，包括双核微处理器和其它多处理器架构。存储器1404，可以包括易失性存储器和/或非易失性存储器。非易失性存储器可包括但不限于只读存储器(ROM)，可编程只读存储器(PROM)，电可编程只读存储器(EPROM)，电可擦除可编程只读存储器(EEPROM)等其它相类似的东西。易失性存储器可包括，例如，随机存取存储器(RAM)，同步RAM(SRAM)，动态RAM(DRAM)，同步DRAM(SDRAM)，双倍数据传输率SDRAM(DDR&#160;SDRAM)，和直接RAM总线RAM(DRRAM)。磁盘1406可以包括但不仅限于例如磁盘驱动器，软盘驱动器，磁带机，一个ZIP驱动器，闪存卡，和/或记忆棒的装置。此外，磁盘1406可以包括光驱类的压缩磁盘光盘(CD-ROM)，可录式光盘驱动器(CD-R驱动)，可擦写光盘驱动器(CD-RW驱动)和/或数字多功能光碟机(DVD&#160;ROM)。存储器1404例如可以存储过程1414和/或数据1416。磁盘1406和/或存储器1404可以存储一个控制和分配计算机1400资源的操作系统。</p>
+      <p>[0435] 总线1408可以是一个单一的内部总线互连结构和/或其他总线架构。总线1408可以有多种类型，包括但不仅限于内存总线或内存控制器，外设总线或外部总线，和/或局部总线。局部总线也有多种类型，包括但不仅限于，工业标准体系结构(ISA)总线、微通道架构(MSA)总线、扩展ISA(EISA)总线、外围元件互连(PCI)总线、通用串行(USB)总线和小型计算机系统接口(SCSI)总线。</p>
+      <p>[0436] 计算机1400通过输入/输出端口1410与输入/输出装置1418相互作用。输入/输出设备1418可以包括但不仅限于键盘、麦克风、点选装置、照相机、视频卡、显示器等。输入/输出端口1410可以包括但不仅限于串行端口，并行端口，USB端口。</p>
+      <p>[0437] 计算机1400能够在网络环境下工作，因此它要通过网络接口1412连接到网络1420。通过网络1420，计算机1400可从逻辑上连接到远程计算机1422。网络1420可以包括但不仅限于，局域网(LAN)、广域网(WAN)和其他网络。网络接口1412可以连接到局域网的技术包括但不仅限于光纤分布式数据接口(FDDI)，铜分布式数据接口(CDDI)，以太网/IEEE&#160;802.3，令牌环/IEEE&#160;802.5，以及类似的东西。同样，网络接口1412可以连接到广域网的技术包括但不仅限于，点对点联接，与例如综合业务数字网(ISDN)的电路交换网，分组交换网和数字用户线路(DSL)。</p>
+      <p>[0438] 现参阅图15，在此描述的与控制器尺度化和参数化有关的信息，可以通过数据包1500在各种计算机组件间传递。这里展示一个典型的数据包1500。该数据包1500包括一个头字段1510，该字段中包括信息，如数据包的长度和类型。紧接其后的源标识符1520，它包括例如包1500来源的计算机组件的地址。继源标识符1520之后，包1500还包括一个目的地标识符1530，它包括例如包1500数据最终送达地的计算机组件的地址。源和目的地的标识符可以是全局唯一的标识符(GUIDS)，URLS(统一资源定位器)，路径名称等。数据包1500中的数据字段1540包括各种打算用于接收计算机组件的信息。该数据包1500的结尾有一个错误检测和/或纠正字段1550，由此计算机组件可以确定它是否正确地接收了数据包1500。尽管数据包1500中显示出六个字段，但是可以理解，可以在数据包中可以包括更多或更少数目的字段。</p>
+      <p>[0439] 图16是数据字段1540(图15)内的分字段1600的示意图。该分字段1600讨论的只是一个范例，可以理解，更多和/或更少数量的分字段可以应用于不同类型的数据，这些数据与控制器尺度化和参数化密切相关。分字段1600包括字段1610，例如能存储与一个已知控制器的频率有关的信息，还有一个第二字段1620，存储期望的控制器频率，这个控制器可从已知的控制器尺度化中得到。该分字段1600还包含一个字段1630，它可用于存储从已知频率和所期望频率计算的频率尺度化数据。</p>
+      <p>[0440] 现参见图17，应用编程接口(API)1700为控制器尺度化和/或参数化提供进入系统1710的接口。例如，程序员1720和/或过程1730可以通过API1700访问系统1710。比如说，程序员1720可以写程序来访问系统1710(如，调用它的操作，监视其操作，访问它的功能)，这里如果用到API1700则写程序是很方便的。因此，程序员1720的任务简单化了，他们只要学习系统1710的接口，而不需要理解系统1710的内部结构。这便于封装系统1710的功能并体现它的功能。同样，API1700为系统1710提供数据值和/或从系统1710中取到数据值。</p>
+      <p>[0441] 例如，一个过程1730，从数据存储中取出对象的信息，并将该信息提供给系统1710和/或，通过由API1700提供的调用(call)把信息传给程序员1720。因此，在API1700的一个实例中，一套应用程序接口可以被储存在计算机可读的介质中。该接口可通过计算机组件执行以访问控制器尺度化和参数化的系统。接口可以包括但不仅限于，第一接口1740，以便传递与PID产生有关的控制器信息，第二接口1750，以便传递与PID产生有关的对象信息；第三接口1760，以便传递从对象信息和控制器信息产生的频率尺度化信息。</p>
+      <p>[0442] LADRC应用于带加工</p>
+      <p>[0443] 在另一个实施例中，线性自抗扰控制(LADRC)可以用于带加工生产线的控制。LADRC需要很少的系统动态特性的信息，只有两个待整定的参数，并具有很好的抗扰能力。LADRC控制器具有对对象变动的固有鲁棒性并且在大范围工作方面有效。</p>
+      <p>[0444] 下面说明带加工生产线的数学模型和现有的控制方法。根据示例性实施例，缓冲器动态特性可作为一个测试平台。一般来说，一个带加工生产线布局、包括入口段、加工段和出口段。例如对带的清洗和淬火的操作是在加工段中完成的。在各个段的缓冲器的协助下，出口和入口段分别主要负责带的重绕和展开工作。</p>
+      <p>[0445] 参考图19，显示出口缓冲器1900的实例。当带以连续恒定速度加工时，缓冲器的主要作用是让重绕或展开的中心改变。在整个加工过程中缓冲器的动态特性直接影响到带张力的行为。由于缓冲器车架的作用，这种张力扰动会沿着缓冲器的上游和下游传播。</p>
+      <p>[0446] 除了一个是重绕，另一个是展开的区别外，出、入口缓冲器没有什么区别。因此以出口缓冲器为实例进行讨论。不过，在此描述的系统与方法，可能涉及基本上任何系统内的基本上任何位置的缓冲器(例如，带加工生产线等)。出口缓冲器1900，包括有车架1902和带跨度1904、1906、1908、1910、1912、1914和1916。可以理解，带跨距1904-116是只做说明用途，并且带跨距的数目用N来表示，其中N是一个等于或大于1的整数。</p>
+      <p>[0447] 车架张力和出、入滚轮的动态特性归纳如下：</p>
+      <p>[0448] </p>
+      <p>[0449] </p>
+      <p>[0450] </p>
+      <p>[0451] </p>
+      <p>[0452] </p>
+      <p>[0453] 其中vc(t)，ve(t)and&#160;vp(t)分别为车架速度、出口段和加工段的带速度。xc(t)是车架的位置，tr是带生产线中期望的带张力，tc(t)是带平均张力，uc(t)，ue(t)和up(t)分别是车架和出口段、加工段的驱动滚轮的控制输入。Ff(t)是扰动力，它包括车架导轨摩擦力、杆密封和其它作用在车架上的外部力。Ke和Kp是正的增益。δe(t)和δp(t)是出口段和加工段的扰动。方程(71)到(75)中的系数见表II。</p>
+      <p>[0454] 表II&#160;&#160;对象系数</p>
+      <p>[0455] </p>
+      <p>[0456] 现有带张力控制方法</p>
+      <p>[0457] 控制设计的目的是要确定一个控制律，使得处理速度，vc(t)，ve(t)，vp(t)，以及张力tc(t)，所有这些量都能紧跟它们的期望轨迹或值。假设vc(t)，ve(t)和vp(t)被测量并且可作为反馈变量。</p>
+      <p>[0458] 通常情况下，比例-积分-微分(PID控制)的控制是工业应用中的主要方法，传统的带加工行业中均采用这种控制方法。在一个实例中，一个工业控制器可以应用前馈方法控制缓冲器车架的速度和位置；采用前馈加比例积分(PI)的控制方法控制出口段和加工段的驱动滚轮速度。该控制律可描述为：</p>
+      <p>[0459] </p>
+      <p>[0460] </p>
+      <p>[0461] </p>
+      <p>[0462] 其中ucI(t)，ueI(t)和ipI(t)分别是车架和出口段、加工段的驱动滚轮的控制输入。vcd，ved&#160;and&#160;vpd分别是车架和出口段、加工段的驱动滚轮的期望速度。</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>and</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>是它们的导数。kpe和kpp是比例增益，kie，kip是积分增益。</p>
+      <p>[0463] 另一个基于Lyapunov方法的控制方法：</p>
+      <p>[0464] </p>
+      <p>[0465] (79)</p>
+      <p>[0466] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0467] </p>
+      <p>[0468] (80)</p>
+      <p>[0469] </p>
+      <p>[0470] </p>
+      <p>[0471] (81)</p>
+      <p>[0472] </p>
+      <p>[0473] 其中γ3，γe，和γp是待选择的控制器增益。</p>
+      <p>[0474] 可用以下张力的观测器估计tc(t)：</p>
+      <p>[0475] </p>
+      <p>[0476] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0477] 其中</p>
+      <p>[0478] </p>
+      <p>[0479] </p>
+      <p>[0480] </p>
+      <p>[0481] 在开环系统中由于速度一般都采用传统的PI前馈控制方法控制，所以当工作条件改变和有外部扰动存在时，需要重新整定工业控制器。此外，当有扰动存在时，这种工业控制器的性能变得很差。</p>
+      <p>[0482] 基于Lyapunov的控制器(LBC)，通过加入辅助误差反馈项改善了工业控制器，从而获得更好的性能和抗扰特性。然而，由于LBC专门设计来对付引入到模型中的扰动，因而有其自身的缺点。所以，在实际应用中当有不确定性出现时，LBC可能需要重新设计控制器。</p>
+      <p>[0483] 与传统的系统和方法相比，本发明的实施例是在另一个控制设计的范式框架下开发出来的，在这种构架下其内部的动态特性和外部扰动被实时地估计出来并得到补偿。因此，对于对象的变化它具有内在的鲁棒性，并且对于实际应用中的不确定性以及扰动是有效的。在张力调控中，我们将对开环和闭环控制方案进行探讨。在开环控制方案中，张力不被测量而是根据方程(71)通过操纵速度变量间接控制。在闭环系统的情况下，在张力反馈控制中引入了张力观测器。</p>
+      <p>[0484] 速度和张力恒值调控新方法</p>
+      <p>[0485] 在对于这一棘手的行业问题研发新的解决方案的过程中，强调了性能和简单性。这就是说，新的控制器必须比现有这些控制器具有更好的性能，而且设计、实施和整定应该更为简单。为了提供一个综合的控制结构，该控制器必须涉及到速度和张力。三个速度环路都很相似，寻求一个更好的解决办法将是一个很好的开端。由于张力的重要性和它的动力学非线性，因而，张力的问题是至关重要的。从成本和性能角度考虑，这里讨论了两种解决方案：1)如果(1)中的张力模型是可靠的，则在具有快速、准确的速度环路中张力可以被很好地控制；2)工业用户很愿意安装张力传感器实现张力直接反馈控制，以获取更好的张力性能。图20说明了一个典型的速度控制系统，图21给出了一个张力控制系统。</p>
+      <p>[0486] 图20显示一个基于LADRC的速度控制系统2000，它应用一个线性扩张状态观测器(LESO)2002。扩张状态观测器(ESO)是一种独特的方法，它可用来解决因动态系统发生非期望的变化，而进行故障估计，诊断和监测问题。总的来说，ESO使用极少的对象信息，但可以估算出其余的未知动态特性和未知故障。这就要求观测器在已知最小对象信息情况下仍能估计出系统的基本信息。在一个例子中，对于故障的问题，最重要的信息是故障和扰动。用最少的信息设计ESO，并用它来估计这些构成了故障的未知动态特性的变动。通过分析这些估计的动态特性变动进行故障诊断，而这些变动表示故障或健康状况恶化。因此，如果对系统动态特性与某一特定故障之间的关系知道的越多，则故障就越容易被隔离。故障修复的基本思路是应用估计出来的故障信息来消除故障的影响，再通过调整控制达到去除故障。</p>
+      <p>[0487] ESO能用于多种形式的动态系统。这些系统包括但不限于电力，机械，化工等动态系统，这些系统经常与控制问题有关。如果这个解决方案能使系统闭环包容估计的故障，则可以获得最大的利益。但是，即使不对系统进行动态控制，这种方法仍然为系统健康状况和故障检测提供一个好处，但它不会自动试图修复故障或优化健康。下文通过一个实例，详细讨论ESO用于带加工系统。其他的应用还包含电源管理和分配。</p>
+      <p>[0488] 对于一般的方法ESO显示出它的独特地位。在健康和故障诊断问题方面一般有两种途径可实现。一种是基于模型的冗余分析法。另一种则是无模型的办法，它主要有：模糊逻辑，神经网络和统计成分分析。在这两种极端之间，在没有加入混合设计的情况下，ADRC框架显示了它的独特地位。ESO只要求最小对象信息，就可以估计出其余的未知动态特性和未知故障。此外，嵌入到该方案中的是一种用于自动闭环容错的新方案。</p>
+      <p>[0489] 虽然这里只显示一个单一的速度环，但是可以理解控制系统2000可以分开应用于所有三种速度环vc(t)，ve(t)和vp(t)。在制造业中的一条生产线上，速度调节是一种最常见的控制问题。由于大多数流程都是性能优良系统，所以一般采用PID控制器已经足够。其他方法，如极点配置和回路成形，可能潜在的会比PID有更好的控制性能，但是需要过程的数学模型。一旦把它们用到实际中，整定也是很困难的。以下介绍另一种方法：</p>
+      <p>[0490] 将速度方程(73)-(75)重写成以下形式：</p>
+      <p>[0491] </p>
+      <p>[0492] </p>
+      <p>[0493] </p>
+      <p>[0494] 其中</p>
+      <p>[0495] </p>
+      <p>[0496] </p>
+      <p>[0497] </p>
+      <p>[0498] 在(84)-(86)的对象中有相同的形式</p>
+      <p>[0499] </p>
+      <p>[0500] 其中v(t)为被控制的可测量，u(t)是控制信号，b的近似值是已知的，f(t)表示内部动态特性和外部扰动的综合效果。</p>
+      <p>[0501] 补偿f(t)是控制设计的关键，如果任何给定时刻，它的值都能确定出来，则这种补偿就简单化了。可以用一个扩张状态观测器来确定这个值。</p>
+      <p>[0502] 将(89)中对象重写成状态空间形式</p>
+      <p>[0503] </p>
+      <p>[0504] 令x1＝v，并加入一个扩张状态x2＝f，且作为未知的扰动。它的状态空间模型为</p>
+      <p>[0505] </p>
+      <p>[0506] 式中C＝[1&#160;0]</p>
+      <p>[0507] 现在可以利用基于状态空间模型的观测器来估计f</p>
+      <p>[0508] 根据式(91)，状态观测器可以写为以下形式</p>
+      <p>[0509] </p>
+      <p>[0510] 这里有z→x.这里如果f是已知的或部分已知的，则可在观测器中利用f求出可提高估计精度。</p>
+      <p>[0511] </p>
+      <p>[0512] 观测器可以简化为以下方程组，即是LESO.</p>
+      <p>[0513] </p>
+      <p>[0514] 如果使用局部信息，则观测器可以表达成以下形式</p>
+      <p>[0515] </p>
+      <p>[0516] 通过设定λ(s)＝|sI-(A-LC)|＝s2+L1s+L2等于期望的误差动态特性，(s+ω)2，则观测器增益可以利用解单一整定参数ω0的函数得到。</p>
+      <p>[0517] 我们知道L1＝2ωo，L2＝ωo2可以被参数化，且可以把观测器的特征值配置为ωo.运行一个LESO可得z1→v且z2→f，则控制律可以设计成以下形式：</p>
+      <p>[0518] u＝(-z2+u0)/b&#160;&#160;&#160;&#160;(94)</p>
+      <p>[0519] 这样就将被控对象简化为一个积分对象的近似</p>
+      <p>[0520] </p>
+      <p>[0521] 则就很容易用下面控制律来控制</p>
+      <p>[0522] u0(t)＝kp(r(t)-z1(t))&#160;&#160;&#160;&#160;(96)</p>
+      <p>[0523] 对于给定的设定点r，可以建立一个近似的闭环传递函数，而不需要在控制器上附加零点</p>
+      <p>[0524] </p>
+      <p>[0525] 通过设定上式等于期望的传递函数ωc/(s+ωc)则控制器的增益就成为了一个单一参数ωc的函数。</p>
+      <p>[0526] 取kp＝ωc，其中ωc是期望的闭环带宽。</p>
+      <p>[0527] 下面给一个例子说明z是如何收敛于f。由式(89)计算可以得到通过迭代解方程(92)，(93)和(95)得到z2，其结果是f的滤波器形式。</p>
+      <p>[0528] </p>
+      <p>[0529] LESO可以被进一步简化，只要将(93)代入(92)，就可以去掉代数环从而把z2解耦把ADRC表示成PID的形式</p>
+      <p>[0530] u＝kp(r-z1)-L2∫(y-z1)/b&#160;&#160;&#160;&#160;(99)</p>
+      <p>[0531] 其中v(t)为要控制的可测量，u(t)是控制信号，b的近似值是已知的，f(t)表示内部动态特性和外部扰动的综合作用。</p>
+      <p>[0532] 基于扰动观测器的PD控制器，不需要使用积分器也可达到零稳态误差。</p>
+      <p>[0533] 将未知的外部扰动和内部不确定的动态特性综合在一起，并把它们看作一种广义扰动。</p>
+      <p>[0534] 通过扩张观测器的附加状态，可主动估计并消除掉扰动，从而达到自抗扰的目的。</p>
+      <p>[0535] 如果需要的话，也可以用其它高级的控制器代替PD控制器。它的整定参数是ωo和ωc.</p>
+      <p>[0536] 唯一需要的参数是式(89)中b的近似值。</p>
+      <p>[0537] 下面将讨论张力控制的开环和闭环解决方案。开环系统简单经济，而闭环系统更精确但要求附加传感设备。</p>
+      <p>[0538] 开环张力恒值调控</p>
+      <p>[0539] 如果张力的动态特性(71)是准确的，则在高品质的速度恒值调控情况下，允许在带加工控制系统中采用开环控制张力。由公式(71)，则可以得到张力的计算式</p>
+      <p>[0540] </p>
+      <p>[0541] 其中tc(0)是张力的初始值。由于是开环控制，因而设计速度vcd，ved&#160;and&#160;vpd，的选择应要特别慎重，因此由式(96)可得</p>
+      <p>[0542] </p>
+      <p>[0543] 在给定初始条件tc(0)和给定时间约束t1条件下，如果三个速度环都具有优良性能的话，则实际的张力应该很接近于期望值。以下给出这个方法的仿真，为了这个目的，注意期望速度应该满足以下条件</p>
+      <p>[0544] </p>
+      <p>[0545] 上述方法是一种低成本、开环解决方案。随着工作状况的变化，张力的动特性(1)可能也会发生变化，这就会导致张力变动。如果没有测量张力，这种变动可能会被忽视了，直到产品质量出现可见的影响时才会被发现。为了保持准确的张力控制，工业用户通常都愿意安装张力传感器，利用它在反馈环路中调控张力，现讨论如下。</p>
+      <p>[0546] 基于观测器的闭环张力恒值调控</p>
+      <p>[0547] 图21给出一个基于观测器的闭环张力控制系统2100，这里采用框图形式表达速度和张力控制环路。以这种方式，张力和速度控制可以在相对同步的时间内进行，因而可为带加工生产线提供实时控制。速度控制器2102，作为一个PID控制器，可从三个速度环中接收到信息，这个三个速度环是vc(t)，ve(t)和vp(t)，它们分别表示车架、出口段和进口段驱动滚轮的速度。速度控制器2102，从速度安排数据集2104中接收比例的速度数据，从张力控制器2106中接收微分的速度数据，从对象2108中获得积分的速度数据。这三个输入值使得速度控制器2102分别对不同对象2108，即车架、出口段和入口段的驱动滚轮，保持所要的控制信号(uc(t)，ue(t)and&#160;up(t))的目标值。</p>
+      <p>[0548] 在一个实例中，张力计，如一个载荷传感器，可用于闭环系统张力控制。传统上要求一个或多个物理传感器来测量张力，这需要额外的机器空间，且增加调整工作量。因此，实行无张力传感器的张力控制，可以带来经济效益。所以，用张力观测器2110代替张力传感器硬件来实现闭环系统张力控制。在一个实例中，张力观测器2110从速度控制器2102中接收到滚轮的控制输入信号值(uc(t)，ue(t)和up(t))，并从对象2018中获取滚轮的速度值(vc(t)，ve(t)and&#160;vp(t))。张力观测器2110的输出</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>耦合了平均带张力的导数值tcd(t)，把这两个值输入到张力控制器2106中。张力观测器2110输出值的计算见下文。</p>
+      <p>[0549] 回顾(73)-(75)可知，张力耦合在速度环((vc(t)，ve(t)和vp(t))中，利用自抗扰控制(ADRC)的控制器，可以使张力从速度环中解耦。实际上，张力是f(t)分量的一部分，可用LESO估计并消除f(t)，见图20。</p>
+      <p>[0550] 考虑到三个速度环中的f(t)，如果f(t)的其它部分已知，则张力可以通过方程(86)-(89)估计出来，并表示成如下形式：</p>
+      <p>[0551] </p>
+      <p>[0552] </p>
+      <p>[0553] </p>
+      <p>[0554] 在参数正确设置的条件下，LESO2002能够保证z1→v且z2→f。这也就是说，从LESO2002中能计算出fc(t)，fe(t)和fp(t)，在这个问题中由于f(t)的其它部分都是已知的，因此可以依据公式(103)-(105)，从三个速度环中求出张力估计。</p>
+      <p>[0555] 最后，取三个张力估计的平均值作为张力观测器的输出值。</p>
+      <p>[0556] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0557] 带加工的仿真与对比</p>
+      <p>[0558] 在本节中，通过仿真对比四种类型的控制系统，这四种类型包括：1)常用的工业控制器(IC)，见方程(76)至(78)；2)LBC，见方程(79)到(82)；3)在(91)-(94)中描述的三个速度环的ADRC控制器，它们都带有开环张力恒值调控(LADRC1)；4)相同的LADRC速度控制器，它们在张力反馈回路中附加了LADRC控制器(LADRC2)。</p>
+      <p>[0559] 值得注意的是，在IC和LADRC1中，张力是开环控制，而LADRC2是带有张力反馈的闭环张力控制。LBC是依赖于张力估计器的闭环张力控制。</p>
+      <p>[0560] 在有扰动存在的条件下比较这些控制器。除此之外，为了展示所提出方法的可行性，它们都在采样周期为10毫秒的离散系统中执行。</p>
+      <p>[0561] 在连续带加工生产线上，对三种控制方案进行仿真。在带跨度中的期望张力为5180N。期望的处理速度为650英尺每分钟(fpm)。一个典型的重绕滚轮变化时出口速度和机架速度的情况见图22所示。控制设计的目的是使机架、出口速度和加工速度密切跟踪它们的期望轨迹，同时保持期望的平均张力水平。</p>
+      <p>[0562] 为使仿真结果真实，我们加入了三个正弦扰动。(73)中的Ff(t)是一个频率为0.5Hz和振幅是44N的正弦扰动，而且它只出现在三个短暂的特定时间间隔中，它们分别为20--30秒，106--126秒，318--328秒，见图23所示。在方程(4)和(5)中，δe(t)和δp(t)，也是频率为0.2赫兹和振幅44N的正弦函数，它应用于整个仿真中，见图24。</p>
+      <p>[0563] 上面讨论的参数化和设计过程，这里ωc和ωo是两个需要整定的参数。本领域中公知，ωc与ωo之间的关系是ωo≈3□5ωc。因此，只需要整定一个参数ωc。</p>
+      <p>[0564] 还有一个重要的参数是(89)中b的近似值。对于这个问题，(83)，(84)和(85)中的b可以采用下式进行最优估计。</p>
+      <p>[0565] </p>
+      <p>[0566] bt＝A＊E/5＝3.76×106</p>
+      <p>[0567] 图29给出了一种设计和优化的一个内聚LADRC的方法2900。在2902中，设计了一个参数化的LESO控制器，这里的ωo和ωc是设计参数。在2904中，选择了不同对象中b的近似值。比如说，bc，be，bp，和bt，分别代表在一个带加工系统中不同位置上不一样的已知值。在2906中，ωo等于5ωc。仿真和/或测试LADRC。在一个例子中，应用了仿真器或硬件设备。在2908中，ωc的值是逐步上升，直到噪声水平和/或控制信号振荡和输出超过预期的允差。在2910中，改变ωc和ωo的比值，直到观测到期望的行为为止。</p>
+      <p>[0568] 四个控制器的参数如表III所示。</p>
+      <p>[0569] 表III仿真中使用的增益值</p>
+      <p>[0570] </p>
+      <p>[0571] 这里(76)-(78)中的kpe，kpp，kie和kip是IC的增益。(79)-(81)中的γ3，γe，和γp是LBC的增益。(92)中的bc，be，和bp分别是车架、出口和加工段速度环中b的特定值。同样的，ωoc，ωoe和ωop是方程(91)中观测器的增益，而ωcc，ωce和ωcp是方程(94)中控制器的增益(kp)。bt，ωct和ωot是(109)中张力对象对应的ADRC参数。</p>
+      <p>[0572] 图25显示从ADRC1得到的速度误差(vc，ve和vp)和张力跟踪误差tc。尽管事实上，该控制器的设计不是基于对象的完整数学模型，而且过程中存在着明显的扰动，但是速度和张力的跟踪误差很显然还是相当小的。</p>
+      <p>[0573] 在图26和27中显示出了IC、LBC和ADRC在跟踪误差和机架速度环控制信号方面的比较结果。机架速度误差显示LADRC1远远优于其他两种方法，同时控制信号表明LADRC控制器对扰动做出积极地反应。可以理解，这里讨论的该系统和方法的应用，在出口段和加工段速度环中也可以找到相似的特点。</p>
+      <p>[0574] 由于IC控制器结果很差，在图28中仅给出LBC、LADRC1，LADRC2三者的张力控制比较结果。利用直接的张力测量，则LADRC2会产生可忽略的张力误差。此外，即使在开环控制，LADRC1还是比LBC有更小的误差。这主要是因为LADRC1中有高品质速度控制器。</p>
+      <p>[0575] 所有四种控制系统的速度和张力的误差归纳见表IV。总体上看，这些结果表明，本文提出来的LADRC控制器在有正弦干扰条件下具有鲜明的优势和在张力控制中表现出更优的性能。</p>
+      <p>[0576] 表IV仿真对比</p>
+      <p>[0577] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0578] 本申请提出一种新型的基于自抗扰概念的控制策略，并将它应用带加工应用中。用它解决了速度和张力恒值调控这两个问题。虽然只研究了这个过程的一个部分，包括机架、出口段和入口段，但是所提出的方法既适用于上游和下游段，也可用于整条生产线。基于对象完整的非线性模型的仿真结果已经表明：所提出的控制算法不仅能使速度控制更好，而且还大大减少带张力的波动。与常规系统和方法相比，新提出的方法具有以下优点。例如，1)不需要详细的数学模型；2)在控制器中无积分器的情况下实现零稳态误差；3)提高了过渡过程的命令跟随能力；4)控制器能够处理对象动态特性大范围的变动；5)具有优良的抗扰动能力。</p>
+      <p>[0579] 其他形式的扩张状态观测器</p>
+      <p>[0580] 虽然有许多众所周知的观测器，如高增益观测器，滑模观测器，和扩张状态观测器(ESO)，但是在处理动态的不确定性、扰动及传感器噪声方面，扩张状态观测器被普遍认为具有明显的优势。使用ESO的控制器依赖于实时地快速和准确估计出输出和等效扰动及它们的导数。</p>
+      <p>[0581] 观测器用来估计受控系统的内部变量，即不容易读出的变量。观测器应用具有校正项的系统模型并运行在连续时间领域。但是，为了使连续时间函数能在硬件上运行，则往往要对它们进行离散化，而且在固定采样率下运行。离散观测器常常被称为估计器。</p>
+      <p>[0582] 控制器和估计器的根本制约因素是采样率。改善ESO将会提高整个系统的性能。对于这一点，欧拉逼近已被用于在硬件上实施ESO，不过，当采样率较慢时会严重影响ESO的性能。在这里，详细介绍了几个离散变量的扩张状态观察器，并对它们进一步鉴别和分析。</p>
+      <p>[0583] 有三种主要形式，ESO或DESO的离散实现；广义的ESO和DESO或GESO；离散参数化的DESO和GESO。</p>
+      <p>[0584] 对于ESO在理论和应用两个方面性能都得到了增强。虽然这是被称为DESO，但公开了一系列方法。在这里，首先是采用任何数目的方法来离散系统模型，如欧拉、零阶保持(ZOH)，以及一阶保持(FOH)。然后，从离散的模型构建预测离散估计器(PDE)，并且确定象征性的离散时间校正项，作为一个整定参数的函数(G.F.Franklin，J.D.Powell，and&#160;M.Workman，Digital&#160;Control&#160;of&#160;Dynamic&#160;Systems，3rd&#160;ed.，Menlo&#160;Park，CA：Addison&#160;Wesley&#160;Longman，Inc.，1998，pp.328-337)。也可以把应用当前离散估计(CDE)来保持低采样率稳定运行(G.F.Franklin，J.D.Powell，and&#160;M.Workman，Digital&#160;Control&#160;ofDynamic&#160;Systems，3rd&#160;ed.，Menlo&#160;Park，CA：Addison&#160;WesleyLongman，Inc.，1998，pp.328-337)，对控制系统来说，这是一个重要的制约因素。典型的离散化方法，如PDE，会产生至少一个采样延迟，而CDE通过加入当前时间步更新来估计状态，从而消除了这个延迟。接下来，象征性地确定欧拉，零阶保持(ZOH)，以及一阶保持(FOH)的所有离散矩阵形式，保留了单一整定参数的简单性。在过去，只利用一个欧拉积分做近似，这会带来一个问题，由于校正项是在连续时间下确定的，因而当它变大时或在低采样率情况下，会变得不准确。这里应用一个二阶例子，通过简单测试表明，带有ZOH的CDE取得最好的效果。</p>
+      <p>[0585] DESO可以一般化来估计任意阶的系统，还可以估计多重扩张状态。这被称为广义ESO(GESO)。这个公式列入了任意阶扰动模型，从而针对不同类型的系统允许指定扰动消除量。多重扩张状态，允许估计扰动的高阶导数，这可以改善扰动估计，达到更准确地消除扰动。在过去，扰动被严格地限定在一阶且只用一个扩张状态来估计。标准ESO没有利用这方面的信息。目前的离散版本的GESO存在许多优点。首先，它提供了更好的估计并因此有更高的稳定度。相对于标准ESO，另一个在实现中的益处是，最小的代码空间和运算能力的改变。该GESO在维持类似复杂程度的情况下，它提高了性能并增加了工作点范围。</p>
+      <p>[0586] 在紧接着应用中，将DESO和GESO应用于ADRC控制器。由于目前并最终广泛的推广应用ADRC控制器，强大的GESO也具有重大的现实意义和未来潜力。对于许多对象或其他控制应用，在物理上对采样时间有上限限制，但在这里，它们将受益于在低采样率下稳定和准确的估计。它们也可能需要估计高阶扰动，同时，它们将受益于更高性能的控制。</p>
+      <p>[0587] 在此描述的优选实施例允许这些先进的控制手段为工业领域提供一个切实可行的解决方法，以便在系统中透明地实现高性能控制器。它解决的问题是，控制器的可用性不再因为要达到更高的性能而增加系统的复杂性而遭受严重的结果。这意味着显著地缩短了每一个对象和/或每一个应用的设计、实施、整定以及保持每一个驱动的时间。</p>
+      <p>[0588] 优选实施例的观测器均已在仿真和硬件中得到测试。对简单的测试应用和流行的运动控制问题的测试结果，在低于标准ESO的采样率下表现出稳定控制。它与跟踪控制器应用于ADRC。该控制器在真实仿真和运动控制伺服驱动器硬件上得到了测试。</p>
+      <p>[0589] 扩张状态观测器(DESO)的离散执行</p>
+      <p>[0590] 为了简单起见，以二阶对象的连续微分方程为例，这里的u和y分别为输入和输出，b是一个常数。</p>
+      <p>[0591] </p>
+      <p>[0592] 把内部的动态特性</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>和外部扰动w合并，形成一个广义扰动</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，则系统可重写为</p>
+      <p>[0593] </p>
+      <p>[0594] 构建一个附加状态空间模型</p>
+      <p>[0595] </p>
+      <p>[0596] (109)</p>
+      <p>[0597] y＝Cx+Du</p>
+      <p>[0598] </p>
+      <p>[0599] C＝[1&#160;0&#160;0]，D＝[0]</p>
+      <p>[0600] 其中包含了要估计的扰动。</p>
+      <p>[0601] 状态空间观测器可以从状态空间模型创建。</p>
+      <p>[0602] </p>
+      <p>[0603] (110)</p>
+      <p>[0604] </p>
+      <p>[0605] 注意，由于</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>是未知的且通过校正项可以估计出来，因而式(110)中略去</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>。重写观测器来输出状态</p>
+      <p>[0606] </p>
+      <p>[0607] (111)</p>
+      <p>[0608] </p>
+      <p>[0609] 式中uc＝[u，y]T是组合输入，yc是输出。然后，为了便于实现，将它分别成独立状态方程。为简洁起见，把特征方程的极点放在同一个位置上，然后确定观测器的增益向量L。</p>
+      <p>[0610] λ(s)＝|sI-(A-LC)|＝(s+ωo)3&#160;&#160;&#160;&#160;(112)</p>
+      <p>[0611] </p>
+      <p>[0612] 对(109)中的状态空间模型应用Euler，ZOH，或FOH对它进行离散化(应用离散化公式)。</p>
+      <p>[0613] </p>
+      <p>[0614] (113)</p>
+      <p>[0615] </p>
+      <p>[0616] 由模型可得离散观测器</p>
+      <p>[0617] </p>
+      <p>[0618] (114)</p>
+      <p>[0619] </p>
+      <p>[0620] 这是众所周知的预测离散估计器(G.F.Franklin，J.D.Powell，and&#160;M.Workman，Digital&#160;Control&#160;of&#160;Dynamic&#160;Systems，3rd&#160;ed.，MenloPark，CA：Addison&#160;Wesley&#160;Longman，Inc.，1998，pp.328-337)因为当前估计误差</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>被用于预测下一个状态估计</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0621] 然而，通过定义预测估计器的增益向量</p>
+      <p>[0622] Lp＝ΦLc，&#160;&#160;&#160;&#160;(115)</p>
+      <p>[0623] 则估计状态就可简化为</p>
+      <p>[0624] </p>
+      <p>[0625] 这里新的状态包含了当前时间步的更新，这样减少了延迟</p>
+      <p>[0626] </p>
+      <p>[0627] 这被称为当前离散估计器(G.F.Franklin，J.D.Powell，and&#160;M.Workman，Digital&#160;Control&#160;of&#160;Dynamic&#160;Systems，3rd&#160;ed.，Menlo&#160;Park，CA：Addison&#160;Wesley&#160;Longman，Inc.，1998，pp.328-337)。当采样频率很低时，这在增强闭环系统稳定性方面扮演了非常重要的角色。图40显示4000中的方框图。然后估计器可重写为以输出新的状态</p>
+      <p>[0628] </p>
+      <p>[0629] (118)</p>
+      <p>[0630] </p>
+      <p>[0631] 其中ud(k)＝[u(k)，y(k)]T是组合输入，yd是输出。与预测估计器唯一不同的是</p>
+      <p>[0632] ESO的离散参数化</p>
+      <p>[0633] 为简洁起见，把离散特征方程的极点放在一个位置上，来确定当前估计器增益向量Lc</p>
+      <p>[0634] λ(z)＝|zI-(Φ-ΦLcH)|＝(z-β)3&#160;&#160;&#160;&#160;(119)</p>
+      <p>[0635] 离散估计器极点与连续观测器极点之间的关系为</p>
+      <p>[0636] </p>
+      <p>[0637] 例如，将Euler公式应用到(109)，解(119)就可得Lc</p>
+      <p>[0638] </p>
+      <p>[0639] H＝[1&#160;0&#160;0]，J＝[0]</p>
+      <p>[0640] 其中T是离散采样时间。而T为矩阵的转置。</p>
+      <p>[0641] 过去是通过对(110)中的每一个方程用Euler，然后集成在一起实现ESO(J.Han，“Nonlinear&#160;Design&#160;Methods&#160;for&#160;Control&#160;Systems”，Proc.14th&#160;IFAC&#160;World&#160;Congress，1999；Z.Gao，“Scaling&#160;andBandwidth-Parameterization&#160;Based&#160;Controller&#160;Tuning，”AmericanControl&#160;Conference，pp.4989-4996，June&#160;2003；Z.Gao&#160;and&#160;S.Hu，“A&#160;Novel&#160;Motion&#160;Control&#160;Design&#160;Approach&#160;Based&#160;on&#160;ActiveDisturbance&#160;Rejection，”Proe.of&#160;the&#160;40th&#160;IEEE&#160;Conference&#160;onDecision&#160;and&#160;Control，p.4974，December&#160;2001；Y.Hou，Z.Gao，F.Jiang，and&#160;B.T.Boulter，“Active&#160;Disturbance&#160;Rejection&#160;Control&#160;forWeb&#160;Tension&#160;Regulation，”IEEE&#160;Conference&#160;on&#160;Decision&#160;and&#160;Control，2001；B.Sun，“Dsp-based&#160;Advanced&#160;Control&#160;Algorithms&#160;for&#160;a&#160;DC-DCPower&#160;Converter，”Master’s&#160;Thesis，Cleveland&#160;State&#160;University，June2003；R.Kotina，Z.Gao，and&#160;A.J.van&#160;den&#160;Bogert，“Modeling&#160;andControl&#160;of&#160;Human&#160;Postural&#160;Sway，”XXth&#160;Congress&#160;of&#160;theInternational&#160;Society&#160;of&#160;Biomechanics，Cleveland，Ohio，July&#160;31-August&#160;5，2005；R.Miklosovic&#160;and&#160;Z.Gao，“A&#160;Dynamic&#160;DecouplingMethod&#160;for&#160;Controlling&#160;High&#160;Performance&#160;Turbofan&#160;Engines，”Proc.of&#160;the&#160;16th&#160;IFAC&#160;World&#160;Congress，July&#160;4-8，2005.这个方法的问题是除了Lp＝TL外(当采样频率比较低时观测器会变得不稳定)，也会产生与(121)相同的矩阵。然而在有的情况下，L为非线性函数，这可能是离散实现的唯一办法。为了更深入讨论，我们把过去的方法称为欧拉逼近。</p>
+      <p>[0642] 应用ZOH</p>
+      <p>[0643] </p>
+      <p>[0644] </p>
+      <p>[0645] H＝C，J＝0</p>
+      <p>[0646] 到式(109)得到比Euler公式更准确的估计。</p>
+      <p>[0647] </p>
+      <p>[0648] H＝[1&#160;0&#160;0]，J＝[0]</p>
+      <p>[0649] 离散ESO的仿真与分析</p>
+      <p>[0650] 通过多种不同的对象对多种离散化方法进行分析。首先将ESO用于简单开环运动系统对象模型</p>
+      <p>[0651] </p>
+      <p>[0652] 其中w是一个从0.3sec开始的2.5Hz方波，u是一个持续时间0.125秒的梯形过渡安排，估计器的参数有ωo＝300和T＝0.005。图41的4100显示了跟踪误差图，图中对比了同时使用Euler和ZOH的预测和当前的离散方法。采用积分绝对误差来评价每个轨迹的瞬态和稳态部分，然后归纳在表V中。</p>
+      <p>[0653] 表V&#160;&#160;开环跟踪误差</p>
+      <p>[0654] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0655] 当步长T＝0.005时，Euler近似变得不稳定，因此没有示出。然而，所示的四种方法利用离散极点配置并且直到T＝0.066才变为不稳定。从表中，就跟踪精度而言，最重要的选择看起来是当前离散方法。该表还显示出ZOH优于欧拉，更有趣的是，在估算瞬时速度时效果更显著。</p>
+      <p>[0656] 下面，ESO用在闭环系统(124)，采用一个更复杂的实际伺服电机进行仿真。</p>
+      <p>[0657] Vm＝80(75u-.075Io)，|Vm|＜160，|u|＜8</p>
+      <p>[0658] </p>
+      <p>[0659] </p>
+      <p>[0660] 这里取ωc＝30且ωo＝300，采样周期逐渐增大到不稳定点，然后将结果列于表VI中。</p>
+      <p>[0661] 表VI&#160;&#160;最大闭环步长</p>
+      <p>[0662] </p>
+      <p>[0663] 结果表明，对于低采样周期的要求来说，ZOH是最重要的选择，其次当前离散方法。在这方面，带有ZOH的当前离散ESO比用在先前文献中的欧拉近似看起来好6至10倍。伺服系统(145)也被模拟了，结果是改进了5.3倍。总之，带有ZOH的当前离散ESO应当被用于改善跟踪精度和提高闭环稳定性。</p>
+      <p>[0664] 广义扩张状态观测器</p>
+      <p>[0665] 虽然前面讨论的是二阶例子，从(110)到(120)和(122)也可以用在具有任意个扩张状态的任意阶对象中。例如，类似于(107)的一类广义的nth阶对象可表达成</p>
+      <p>[0666] y(n)＝g(y，...，y(n-1)，t)+w+bu&#160;&#160;&#160;&#160;(126)</p>
+      <p>[0667] 其中y(n)是输出的nth导数，而g(y，...，y(n-1)，t)表示内部动态特性。两个重要的参数是相对阶数n和高频增益b。将未知项组合在一起形成广义扰动f(y，...，y(n-1)，w，t)，则得出</p>
+      <p>[0668] y(n)＝f(y，...，y(n-1)，w，t)+bu&#160;&#160;&#160;&#160;(127)</p>
+      <p>[0669] 注意，当有等效输入扰动d＝f/b时，则设计模型就变成了</p>
+      <p>[0670] Pd(s)＝b/sn&#160;&#160;&#160;&#160;(128)</p>
+      <p>[0671] 作为一个信号，对扰动的分类与经典控制论中系统的分类是相似的。这种分类是根据用多项式来逼近一个信号的方法，而多项式的阶数决定信号的类型。此阶数与该多项式经过几次求导后为零有关，见G.F.Franklin，J.D.Powell，and&#160;A.Emami-Naeni，Feedback&#160;Controlof&#160;Dynamic&#160;Systems，4th&#160;ed.，Upper&#160;Saddle&#160;River，NJ：Prentice-Hall，Inc.，2002，pp.239-242，601-604。有时扰动可以表示成带未知输入的一组串联积分器1/sh。根据这个假设，图42的4200中对象可以用两套串联积分器来表示，一个为设计模型，另一个是扰动模型。它也将证明这一假设产生的估计扰动等效于DOB。</p>
+      <p>[0672] 在(109)中，前面ESO的设计，把扰动视作具有h＝1或一系列步长的片段常数。现在用h＝1，2，3的ESO能分别跟踪方波，三角波，或抛物扰动。因为正弦是无限可微，所以它是一个不同的问题。然而，增加h会增加多项式的自由度，以改进正弦或任何时变扰动的跟踪。对于相对阶为n的对象，一个带有h个扩张状态的ESO，可记作ESOn，h。</p>
+      <p>[0673] 在连续状态空间下表达成新的形式</p>
+      <p>[0674] </p>
+      <p>[0675] (129)</p>
+      <p>[0676] y＝Cx+Du</p>
+      <p>[0677] 这里的状态包含了欲估计的扰动及其各阶导数。</p>
+      <p>[0678] x＝[x1，...，xn，xn+1，...，xn+h]T</p>
+      <p>[0679] (130)</p>
+      <p>[0680] &#160;＝[y(0)，...，y(n-1)，f(0)，...，f(h-1)]T</p>
+      <p>[0681] 由于新的形式是由串联积分器构成的，因而矩阵A就可简化为一个超对角线为1的n+h阶方阵。A的元素定义如下</p>
+      <p>[0682] </p>
+      <p>[0683] 由于输入加在n个积分器之后，且第一状态定义输出，最后一个状态的导数是f(h)，其它矩阵就变为</p>
+      <p>[0684] B＝[0n-1&#160;b&#160;0h]T，C＝[1&#160;0n+h-1]，E＝[0n+h-1&#160;1]T&#160;&#160;&#160;&#160;(132)</p>
+      <p>[0685] 式中0h表示一个1×h零向量，而D＝0.</p>
+      <p>[0686] 为简洁起见，把特征方程的所有极点放在一个位置上，来确定观测器增益向量</p>
+      <p>[0687] λ(s)＝|sI-(A-LC)|＝(s+ωo)n+h&#160;&#160;&#160;&#160;(133)</p>
+      <p>[0688] 结果是L的每一元素为</p>
+      <p>[0689] </p>
+      <p>[0690] 这里二项式系数是</p>
+      <p>[0691] ESO也可表示成滤波器的形式</p>
+      <p>[0692] </p>
+      <p>[0693] (135)</p>
+      <p>[0694] </p>
+      <p>[0695] 其中二项式滤波器</p>
+      <p>[0696] </p>
+      <p>[0697] 它由分子和分母多项式构成，它们都是单一整定参数ωo＝1/τ的函数。</p>
+      <p>[0698] </p>
+      <p>[0699] 此式表明，额外扩张状态提高了观测器的阶数并增加了斜坡的截止频率，同时说明了估计扰动等效于一个DOB，用滤波形式表达的实际f如下：</p>
+      <p>[0700] </p>
+      <p>[0701] GESO的离散实现</p>
+      <p>[0702] 将ZOH应用到(129)，即利用(122)生成一个n+h阶方阵Φ，该方阵的每一个元素为</p>
+      <p>[0703] </p>
+      <p>[0704] 式中γk＝Tk/k！。而矩阵Γ可简化为</p>
+      <p>[0705] Γ＝[bγn...bγ1&#160;0h]T.&#160;&#160;&#160;&#160;(140)</p>
+      <p>[0706] 如果优先选用FOH，则只需要改变矩阵Γ和J，如下式</p>
+      <p>[0707] </p>
+      <p>[0708] </p>
+      <p>[0709] 如果优选使用Euler公式，则矩阵Φ定义如下</p>
+      <p>[0710] </p>
+      <p>[0711] 此时矩阵Γ就简化为</p>
+      <p>[0712] Γ＝[0n-1&#160;bT&#160;0h]T.&#160;&#160;&#160;&#160;(143)</p>
+      <p>[0713] GESO的离散参数</p>
+      <p>[0714] 为简洁起见，把离散特征方程的极点放在一个位置上，来确定当前估计器增益向量Lc</p>
+      <p>[0715] λ(z)＝|zI-(Φ-ΦLcH)|＝(z-β)n+h&#160;&#160;&#160;&#160;(144)</p>
+      <p>[0716] 这样，就可以得到当前估计器增益向量见表VII，它是n+h的函数。对于相对阶为n的系统，一个带有h个扩张状态的当前离散ESO记作CDESOn，h。</p>
+      <p>[0717] 表VII对于ZOH和FOH的CDESO估计器增益</p>
+      <p>[0718] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0719] 在缺乏仿真模型条件下，用工业运动控制测试平台的仿真来展示这个控制的设计过程，及其简单性、结果性能和整体成效。用谐振负载来描述伺服放大器、电动机和驱动链的模型</p>
+      <p>[0720] Vm＝4(Vc-2.05Ia)，|Vc|＜4.5，|Vm|＜10</p>
+      <p>[0721] </p>
+      <p>[0722] Tm＝.5Ia-Td-Tl</p>
+      <p>[0723] (145)</p>
+      <p>[0724] </p>
+      <p>[0725] </p>
+      <p>[0726] </p>
+      <p>[0727] 其中Vc，xl，和Td分别为控制输入的电压、输出载荷的位置和扭矩扰动，存在有一个±0.31μm/sec的间隙，还应用了</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>的死区带宽。应用ESO的控制设计方法是直截了当的，只需要一点点物理学的知识。在最根本的意义上说，伺服电机可以被视为双重积分器。</p>
+      <p>[0728] </p>
+      <p>[0729] 采用一种新的范式，这里f(t)表示在(38)中没有描述到的任何不一致的东西或动态特性。</p>
+      <p>[0730] </p>
+      <p>[0731] 首先，用一个CDESO2，h来估计离散时刻的xl(t)，</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，和f(t)。然后，用估计出来的扰动反馈回去以消除它自己。</p>
+      <p>[0732] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0733] 这样就可以将系统简化为一个双积分器最后，应用一个参数化的控制律来控制这种扩张的系统，其中r(k)为运动预安排的参考项。</p>
+      <p>[0734] </p>
+      <p>[0735] 在(148)和(149)中的观测器和控制律都选定采样频率为10kHz，用以控制(145)中的运动系统模型。增益bm＝25是一个从阶跃响应的初始加速度得到的粗略估计。在时间t＝1秒时，应用各种扰动扭矩来测试抗扰，同时在输出中加入0.1％白噪声。保持控制信号在±4.5V范围内，同时噪声水平控制在±100mV之内，且ωc和ωo各自增加到50和150。对于类型1为方波、类型2为三角波、类型∞为正弦波的扭矩扰动的结果分别显示在图43的4300、图44的4400和图45的4500中。通过将载荷增加到接近于8倍来测试系统的鲁棒性，发现没有明显的差异。结果表明：两个扩张状态比一个扩张状态减少了误差。图44显示，两个扩张状态可使类型II的扰动变为零误差。虽然正弦扰动是无限可微的，但是三个扩张状态可以显著降低它的稳态误差，见图45。</p>
+      <p>[0736] 本发明研究和对比了扩张状态观测器的多种离散应用。结果表明：在采样过程延迟减少方面，当前离散优于预测离散。它还表明在不增加用户额外复杂性条件下，应用ZOH方法提高了估计精度和稳定性。为了方便从业人员实施ESO，我们象征性地导出了一个单一整定参数(即观测器带宽)的算法。另一个重要的成果是为多种类型的系统和扰动提供了广义ESO。最后，滤波器形式表明了估计扰动等价于DOB结构。然而，又与DOB不同，ESO估计的是输出的适当的导数，可直接用于控制器设计。运动控制问题是一个带有许多不确定因素的复杂问题，但是初步研究结果表明，这种观测器能够在较广泛的系统动力学范围内实现高性能且易于使用。</p>
+      <p>[0737] 应用到ADRC的跟踪控制</p>
+      <p>[0738] 此处描述了各种优选实施例的控制器和观测器，它们可以与跟踪组件协作应用，以进一步提高其功能和性能。</p>
+      <p>[0739] 可将跟踪加强即时应用到ADRC控制器中。由于目前并最终广泛推广应用ADRC，作用强大的跟踪加强也具有重大的现实意义和未来潜力。未来的用途还包括跟踪控制方法对新控制器的具体应用。</p>
+      <p>[0740] 我们已经证明了在稳定状态设定点控制中ADRC控制架构运作良好，现在可以通过优选实施例的跟踪策略，将它扩展到瞬态跟踪控制中。这一增强作用将使这些先进的控制手段为工业领域提供一个切实可行的解决方案，从而在它们的系统中透明地实现高性能控制器。它解决的问题是控制器的可用性不再因为要达到更高的性能而增加系统的复杂性而遭受严重的结果。这意味着显著地缩短了每一个对象和/或每一个应用的设计、实施、整定以及保持每一个驱动的时间。</p>
+      <p>[0741] 优选实施例的跟踪策略已经被应用于预滤波器和/或前馈项形式的ADRC，从而使期望的ADRC闭环系统传递函数约等于一，或更为一般化，具有一个等于零的相对阶。在仿真和硬件中的测试结果显示误差减少至80倍。</p>
+      <p>[0742] 跟踪强化应用到使用ADRC和当前离散扩张状态估计器(CDESO)的控制器。该控制器在一个在伺服驱动运动系统的真实仿真和硬件中得到了测试。</p>
+      <p>[0743] 跟踪ADRC应用于二阶对象</p>
+      <p>[0744] 为清晰起见，让我们先考虑一般二阶对象，其中u和y分别是输入和输出，b是一个常数。</p>
+      <p>[0745] </p>
+      <p>[0746] 将内部动态特性</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>和外部扰动w组合成一个广义的扰动</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>，则系统可重写为</p>
+      <p>[0747] </p>
+      <p>[0748] 重构扩张状态空间模型</p>
+      <p>[0749] </p>
+      <p>[0750] y＝Cx&#160;&#160;&#160;&#160;(152)</p>
+      <p>[0751] </p>
+      <p>[0752] C＝[1&#160;0&#160;0]</p>
+      <p>[0753] 其中包含了扰动。</p>
+      <p>[0754] 从(152)中构造出的ESO可用于估计状态</p>
+      <p>[0755] </p>
+      <p>[0756] 其中</p>
+      <p>[0757] 为简洁起见，把特征方程的极点放在一个位置上，来确定观测器的增益向量L</p>
+      <p>[0758] λ(s)＝|sI-(A-LC)|＝(s+ωo)3&#160;&#160;&#160;&#160;(154)</p>
+      <p>[0759] </p>
+      <p>[0760] 将抗扰控制律应用到(151)中的对象，目的是为了应用其估计</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>来动态地消除扰动</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0761] </p>
+      <p>[0762] 在低频时就可以把对象简化为双积分器</p>
+      <p>[0763] </p>
+      <p>[0764] 然后应用一个简单的控制律</p>
+      <p>[0765] </p>
+      <p>[0766] 得到闭环传递函数</p>
+      <p>[0767] </p>
+      <p>[0768] 为了简洁起见，把它设定为一个产生光滑的阶跃响应的理想闭环传递函数</p>
+      <p>[0769] </p>
+      <p>[0770] 则控制器的增益为</p>
+      <p>[0771] kf＝2ωc&#160;&#160;&#160;&#160;(160)</p>
+      <p>[0772] (157)的问题是在(158)中产生了相位滞后。因此，在要求精确的命令跟随的情况下，建议求出闭环系统传递函数的逆，见(161)中的方括号所示。将它以预滤波器的形式加入到控制律的参考输入中。</p>
+      <p>[0773] </p>
+      <p>[0774] 通过使新的闭环传递函数Gry≈1，来弥补预测的相位滞后，使之比原来的控制器产生小得多的误差e＝r-y。这种配置见图46中的4600所示。</p>
+      <p>[0775] 一个更简单的实现方法是将(161)中的新控制律简化为</p>
+      <p>[0776] </p>
+      <p>[0777] 这里应用了速度和加速度的前馈方法。上式中，前两项是使它的误差及其导数为零，而最后一项是提供了一个想要的控制输入u0*，使得</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>跟踪</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>。图47中的4700示出了该等效的跟踪控制配置。尽管这个例子是将跟踪应用到了一个参数化的控制器中，但是请注意在(161)和(162)中的概念适用于不论参数为何值的任何线性时不变控制器。因此，无论是通过(161)中的预滤波器，还是在(162)中的一个带有前馈项的单一控制律，跟踪ADRC的应用与ADRC参数化的应用是相互独立的。</p>
+      <p>[0778] 当应用式(163)生成一个相对自由度为1的闭环传递函数(164)时，可以获得在(157)中的点位控制器和(162)中的跟踪控制器的性能之间的折衷。</p>
+      <p>[0779] </p>
+      <p>[0780] </p>
+      <p>[0781] 跟踪ADRC应用于一个n阶的对象</p>
+      <p>[0782] 将(151)扩张到任意阶次，系统可以表达成</p>
+      <p>[0783] </p>
+      <p>[0784] 其中y(n)是y的n阶导数。</p>
+      <p>[0785] 构建一个ESO</p>
+      <p>[0786] </p>
+      <p>[0787] A是超对角线元素为1的矩阵</p>
+      <p>[0788] </p>
+      <p>[0789] 而其它矩阵就为</p>
+      <p>[0790] B＝[0n-1&#160;b&#160;&#160;0]T，C＝[1&#160;0n]&#160;&#160;&#160;&#160;(168)</p>
+      <p>[0791] 其中0n表示一个1xn的零向量</p>
+      <p>[0792] 为简洁起见，把特征方程的极点放在一个位置上，来确定观测器的增益向量L＝[l1，l2，...，ln+1]T</p>
+      <p>[0793] λ(s)＝|sI-(A-LC)|＝(s+ωo)n+1&#160;&#160;&#160;&#160;(169)</p>
+      <p>[0794] 这样L中的每一个元素为</p>
+      <p>[0795] </p>
+      <p>[0796] 扰动消除控制律应用于(16)中，以便应用估计的</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>来动态地消除</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0797] </p>
+      <p>[0798] 并且在低频下将对象简化为串联积分器。</p>
+      <p>[0799] y(n)≈u0&#160;&#160;&#160;&#160;(172)</p>
+      <p>[0800] 然后应用点位控制律</p>
+      <p>[0801] </p>
+      <p>[0802] 则形成闭环传递函数如下式</p>
+      <p>[0803] </p>
+      <p>[0804] 为了简洁起见，把它设定为等于一个产生光滑的阶跃响应的理想闭环传递函数</p>
+      <p>[0805] </p>
+      <p>[0806] 控制器的增益可由下式确定</p>
+      <p>[0807] </p>
+      <p>[0808] 为使跟踪准确，将(174)的逆加入到参考输入(173)中作为预滤波器，使得Gry≈1。这样跟踪控制律就变为</p>
+      <p>[0809] </p>
+      <p>[0810] 将(171)组合到(177)形成一个单一的控制律</p>
+      <p>[0811] </p>
+      <p>[0812] 这里新的增益和前馈项分别为：k＝[k0，...，kn]/b和</p>
+      <p>[0813] 跟踪ADRC的离散实现</p>
+      <p>[0814] 在硬件上，可以构建一个离散的ESO</p>
+      <p>[0815] </p>
+      <p>[0816] 式中是当前时刻的更新。</p>
+      <p>[0817] 应用零阶保持可以确定矩阵</p>
+      <p>[0818] H＝C&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(180)</p>
+      <p>[0819] 把离散特征方程的极点放在同一个位置上，来确定离散估计器的增益向量Lp</p>
+      <p>[0820] λ(z)＝|zI-(Φ-ΦLcH)|＝(z-β)n+1&#160;&#160;&#160;&#160;(181)</p>
+      <p>[0821] 这里离离散估计器与连续观测器的极点关系如下式</p>
+      <p>[0822] </p>
+      <p>[0823] 例如，二阶系统的矩阵就成为：</p>
+      <p>[0824] </p>
+      <p>[0825] H＝[1&#160;0&#160;0]&#160;&#160;&#160;&#160;(183)</p>
+      <p>[0826] 离散控制律为：</p>
+      <p>[0827] </p>
+      <p>[0828] 这里前馈项为</p>
+      <p>[0829] 前馈项包含了参考输入r及其导数。由于参考输入是由一种算法生成的，不是测量的信号，所以它往往是无噪声。这样，我们用离散差分来求导数。一个典型的速度和加速度前馈计算的例子如下：</p>
+      <p>[0830] </p>
+      <p>[0831] </p>
+      <p>[0832] 由于ESO的状态从(184)的控制律中的这些信号中被减去，因而由ESO状态和前馈项之间的任何导数偏差，都会产生动态误差。这样，我们可以用一个与离散ESO相似的估计器来估计前馈项，因而就会减少误差提高品质。应用一个表示n+1个串联的积分器和h-1个扩张状态的模型来构成一个离散估计器，这里只有模型输出信号r是可用的。</p>
+      <p>[0833] </p>
+      <p>[0834] 其中是当前时间更新</p>
+      <p>[0835] 当它们中的信号变得很大时，ESO和前馈估计器的离散实现就会出现另一个问题，即产生数值误差，甚至由于输入信号的增大会造成不稳定。因此，我们把这两个估计器合并在一起形成一个用误差作为输入的单一估计器。由于控制律只是减去每一个估计器的状态，因而矩阵Φ，Lp，Lc，H是n+h的唯有的函数，且Γ只存在于状态反馈观测器中。在(186)中减去(179)可得</p>
+      <p>[0836] </p>
+      <p>[0837] </p>
+      <p>[0838] 其中e(k)＝r(k)-y(k)。这样就消除了数值误差和不稳定，计算量削减了一半，并让所有的信号在新的估计器和控制律下很小。</p>
+      <p>[0839] (187)的当前离散估计器形式为</p>
+      <p>[0840] </p>
+      <p>[0841] </p>
+      <p>[0842] 其中z(k)是当前时间的更新且Lp＝ΦLc。</p>
+      <p>[0843] 下文给出仿真实例来证明概念。在(145)中的设置被用来跟踪一个带有最终时间tp＝1秒钟的运动预安排参考信号。该系统是在有和无跟踪控制器条件下模拟的，其对比结果将显示在图48中的4800。注意跟踪和参考轨迹，它们是如此贴近，以致它们都叠在一起了。在跟踪控制下，在刚开始的1.5秒中过渡过程中，最大误差减少了80倍，而控制信号的最大值仅稍有增加。此外，从1.5秒后加入一个方波扰动的情况来看，控制器抗扰特性方面也没有负面影响。</p>
+      <p>[0844] 离散跟踪ADRC算法并不需要一个明确的数学模型来获取高品质。它有一个或两个可以迅速调整的整定参数，这就意味着通常在构建模型、设计控制器和维护性能时所要求的专业知识水平、时间和资源，就不再需要了。从而降低了制造成本。</p>
+      <p>[0845] 多变量的ADRC</p>
+      <p>[0846] 给出了一般的控制方法，可应用于任何具有输入大于或等于输出的MIMO系统，而不仅仅是喷气式发动机。为验证概念，这里应用它来动态解耦并控制涡扇发动机，即喷气发动机。由于喷气发动机是现存最复杂系统之一，可以理解，这将是一个很好的例子。如果能在不知道它的数学模型(模型可能需要几千行代码来表示)的条件下控制它，则这种方法就可应用在任何对象中。比如说，该控制系统可应用于化学过程控制、飞机和导弹的飞行控制、数控机床控制、机器人、磁悬浮轴承、卫星姿态控制和过程控制。</p>
+      <p>[0847] 考虑一个由一系列耦合的n阶输入输出方程组构成的系统</p>
+      <p>[0848] </p>
+      <p>[0849] .</p>
+      <p>[0850] .</p>
+      <p>[0851] .</p>
+      <p>[0852] </p>
+      <p>[0853] 式中yi(n)为yi的n阶导数，输入为U＝[u1，...，up]T，输出Y＝[y1，...，yq]T，bi＝[bi，1，...，bi，p](i＝1，2，...，q且q≤p)，每一个方程都由两项组成，即瞬时项：biU和动态项：</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>。方程间的相互作用、内部动态特性和外部扰动都可视作</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>的一部分。系统可以重写为</p>
+      <p>[0854] Y(n)＝F+B0U&#160;&#160;&#160;&#160;(190)</p>
+      <p>[0855] 其中F＝[f1，...，fq]T，和假设n是已知的，而B是一个q×p矩阵，它是B0的近似。它们都是行满秩的，则广义扰动可定义为H≡F+(B0-B)U。这样系统可简化为</p>
+      <p>[0856] Y(n)＝H+BU.&#160;&#160;&#160;&#160;(191)</p>
+      <p>[0857] 理想情况是实时地估计出H，并把它消除掉，这样就把对象简化为一系列串联的积分器。为了用一系列状态方程来表达对象</p>
+      <p>[0858] 令</p>
+      <p>[0859] 使得</p>
+      <p>[0860] </p>
+      <p>[0861] 将对象</p>
+      <p>[0862] 写成状态空间形式</p>
+      <p>[0863] </p>
+      <p>[0864] (193)</p>
+      <p>[0865] </p>
+      <p>[0866] 这里0q和Iq分别是q×q零矩阵和单位矩阵，A是一个q(n+h)维的方阵。</p>
+      <p>[0867] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0868] C＝[Iq&#160;&#160;0q&#160;&#160;0q&#160;&#160;...&#160;0q]</p>
+      <p>[0869] 然后在状态空间模型下设计出观测器</p>
+      <p>[0870] </p>
+      <p>[0871] (195)</p>
+      <p>[0872] </p>
+      <p>[0873] 其中L＝[L1，...，Ln+h]T</p>
+      <p>[0874] 式(195)中，多变量ESO的状态方程就变为</p>
+      <p>[0875] </p>
+      <p>[0876] 一般而言，观测器的增益L1，L2，...，Ln+h是q×q矩阵。然而，为了使整定简单，增益被定义成q个并行的观测器循环，对于j＝1，2，...，n+h有</p>
+      <p>[0877] Lj＝diag(lj，1，lj，2，...，lj，q)&#160;&#160;&#160;&#160;(197)</p>
+      <p>[0878] 为了简洁起见，每一个循环的n+h个极点都放在同一个位置上</p>
+      <p>[0879] </p>
+      <p>[0880] 求解以ωo，i，为变量的增益函数，就可得</p>
+      <p>[0881] </p>
+      <p>[0882] 记B+为B的右逆，将抗扰控制律应用于(191)中，可以有效地消除低频中的H。</p>
+      <p>[0883] </p>
+      <p>[0884] 这允许一种反馈线性化和解耦发生，从而把对象简化为了一系列低频率时并行的n积分器系统。</p>
+      <p>[0885] Y(n)≈U0&#160;&#160;&#160;&#160;(201)</p>
+      <p>[0886] 因而，可以采用任何数量的控制方法。建议采用不带积分器的简单控制律</p>
+      <p>[0887] </p>
+      <p>[0888] 其中Y*是对于Y想要得到的轨迹，而控制器的增益为K0，K1，...，Kn-1，它们一般为q×q矩阵。然而，为了使整定简单，增益被定义成q个并行的观测器循环。对于j＝0，1，...，n-1有</p>
+      <p>[0889] Kj＝diag(kj，1，kj，2，...，kj，q)&#160;&#160;&#160;&#160;(203)</p>
+      <p>[0890] 为了简洁起见，每一个控制循环使得其n个极点都放在同一个位置上。</p>
+      <p>[0891] </p>
+      <p>[0892] 求解以ωc，i为变量的增益函数，可得</p>
+      <p>[0893] </p>
+      <p>[0894] 在通常情况下，由于H中可以计算B中的不准确，因而非奇异的B-1可以用交互元素的对角线矩阵来逼近。</p>
+      <p>[0895] 把(200)代入(196)中，观测器就可以把B去掉而简化</p>
+      <p>[0896] </p>
+      <p>[0897] 常用的SISO形式的ADRC实际上是q＝1的情况</p>
+      <p>[0898] 多变量跟踪ADRC</p>
+      <p>[0899] 跟踪控制器可以代替(202)，以改善跟踪误差</p>
+      <p>[0900] </p>
+      <p>[0901] 多变量离散ESO</p>
+      <p>[0902] 为了输出状态，式(194)和(195)中的ESO可以重写为</p>
+      <p>[0903] </p>
+      <p>[0904] (208)</p>
+      <p>[0905] </p>
+      <p>[0906] 其中Yc是状态输出，然后它可被离散化形成一个多变量的CDESO</p>
+      <p>[0907] </p>
+      <p>[0908] (209)</p>
+      <p>[0909] </p>
+      <p>[0910] 其中Lc＝[Lc，1，...，Lc，n+h]T，Lc，j＝diag(lcj，1，lcj，2，...，lcj，q)，相似的符号表示法对Lp也是成立的。当在(209)等价于q个并行的SISO循环的情况下，可用最简单的方法确定矩阵。用一个实例来显示：如何直接从SISO的对口部分扩张出这个矩阵。对于一个CDESO2，1的矩阵，作为ZOH的结果如下：</p>
+      <p>[0911] </p>
+      <p>[0912] H＝[Iq&#160;&#160;0q&#160;&#160;0q]</p>
+      <p>[0913] 涡扇模型和设计特性</p>
+      <p>[0914] 图30为涡扇发动机3000的示意图。在这个例子中，应用了一个模块化航空推进系统仿真(MAPSS)封装包，它是Parker&#160;and&#160;Guo，(2003)在美国宇航局格林研究中心(NASA&#160;Glenn&#160;Research&#160;Cente)研发出来的。使用该软件包是因为它能够全面地模拟任何两个阀芯喷气发动机。MAPSS中的一个元件层面的模型(CLM)由两个阀芯，高压比，带有混流式加力的低涡扇绕道组成。</p>
+      <p>[0915] 图31显示了涡扇发动机3000的顶层控制框图3100。该模型由数百个耦合方程及图表组成，以确保当描述气体特性时的质量、动量、能量守衡。详细的数学描述，见文献(Mattingly，J.D.(1996).“Elementsof&#160;Gas&#160;Turbine&#160;Propulsion”，McGraw-Hill，Inc.；Boyce，M.P.(2002).“Gas&#160;Turbine&#160;Engineering&#160;Handbook，”Second&#160;Edition，Butterworth-Heinemann；Cumpsty，N.(2002).“Jet&#160;Propulsion：ASimple&#160;Guide，”Cambridge&#160;University&#160;Press。</p>
+      <p>[0916] 一般情况下，可以用两个非线性的向量方程来表达CLM</p>
+      <p>[0917] </p>
+      <p>[0918] (211)</p>
+      <p>[0919] yCLM＝g(xCLM，uCLM，p，alt，xm)</p>
+      <p>[0920] 上式是3×1状态向量(xCLM)、7×1输入向量(uCLM)，、10×1健康参数向量(p)，高度(alt)，和马赫数(xm)的函数。组合了一个22×1的传感器输出向量(yCLM)来计算推力(fn)，涡轮失速(sm2)和过速(pcn2r)的裕量，发动机温比(etr)，发动机压力比(eprs)，轴承(lepr)，核心(cepr)。这些性能参数形成受控的输出。</p>
+      <p>[0921] Y＝[fn，eprs，lepr，etr，sm2，pcn2r，cepr]T&#160;&#160;&#160;&#160;(212)</p>
+      <p>[0922] 七个输入(uCLM)中的每一个都被分立的SISO执行器控制，各个执行器是由扭矩电机和对位置、速度和电流有饱和限制的伺服机构组成。前面三个执行器分别驱动燃料流量(wf36)，可变喷嘴出口区(a8)，和后方通道大门可变区(a16)。这些执行器的输入构成控制信号。</p>
+      <p>[0923] U＝[wf36act，a8act，a16act]T&#160;&#160;&#160;&#160;(213)</p>
+      <p>[0924] 在基本控制回路内用静态表，来处理余下的四个执行器，驱动定子和导流叶片的角度，确保安全工作限制。</p>
+      <p>[0925] 控制系统的目标是在最小的超调和零稳态误差条件下实现推力快速反应，同时保持安全转子速度，压力和温度限制，以及失速的裕量。在MAPSS中，提供的多模式控制器由四个多变量PI调控器组成，每个同时只能控制三个输出。</p>
+      <p>[0926] Y1＝[fn，eprs，lepr]T</p>
+      <p>[0927] Y2＝[fn，etr，lepr]T</p>
+      <p>[0928] (214)</p>
+      <p>[0929] Y3＝[fn，sm2，lepr]T</p>
+      <p>[0930] Y4＝[pcn2r，cepr，lepr]T</p>
+      <p>[0931] 当eprs位于低速时用第一个恒值调控器，而etr处于高速时用第二个恒值调控器。第三和第四个恒值调控器是主动控制与风机元件有关的极限值，这些风机元件主要指风机失速和过速的裕量达到极限值时。通过增、减燃油流量安排表就可以得到与发动机核心有关极限值(Kreiner，A.and&#160;K.Lietzau(2003).“The&#160;Use&#160;of&#160;Onboard&#160;Real-TimeModels&#160;for&#160;Jet&#160;Engine&#160;Control.”MTU&#160;Aero&#160;Engines，Germany.)用这些表和执行器的极限值来制约即将超出的控制信号。</p>
+      <p>[0932] 在喷气式发动机中应用多变量ADRC的设计过程</p>
+      <p>[0933] 对于多变量ADRC给出了一个通用的设计程序，以在MAPPS中应用的喷气发动机见图30中3000为例。然后讨论喷气发动机的试验条件，随后给出新算法和当前算法的仿真对比结果。结果表明，用较少的设计努力能够实现类似性能。</p>
+      <p>[0934] 对于应用任何一种新型的抗扰方法的设计流程是由对象的表达式来唯一地表征。</p>
+      <p>[0935] Y(n)＝H+BU&#160;&#160;&#160;&#160;(215)</p>
+      <p>[0936] 在(215)中，输入向量U和输出向量Y的维度必须已知。设计过程要求确定n和B，同时还确定控制器的整定方法。</p>
+      <p>[0937] 给出了一个通用的设计流程，随后用喷气发动机具体实例详细解释每一步。</p>
+      <p>[0938] 1.确定系统的输入数p和输出数q。如果q＞p，则采用多模式控制；</p>
+      <p>[0939] 2.确定系统的高频增益B。</p>
+      <p>[0940] 3.确定系统的相对阶数n。如果未知，开始时假设n＝1。</p>
+      <p>[0941] 4.确定扩张状态数h。一般情况下h＝1就足够了。</p>
+      <p>[0942] 5.对系统应用新的算法。</p>
+      <p>[0943] 6.为了整定控制器和观测器的带宽，需要进行闭环仿真或硬件测试。</p>
+      <p>[0944] 7.为了整定B+(B的右逆)需要进行闭环仿真或硬件测试，按要求重复第6步。</p>
+      <p>[0945] 第一步，确定对象的控制输入和受控输出的数目p和q。如果q＞p，则应该使用多模式控制，使j个子控制器中的每一个都满足qj≤pj。更优选的是让qj＝pj，则就会产生一个使对角线元素成为整定参数的方阵B。注意到，当B是一个方阵时，就有B+＝B-1。如果B是对角矩阵，则新方法就简化为多重SISO。</p>
+      <p>[0946] 例如，MAPPS中的喷气发动机有3个执行器输入来控制七个性能参数输出。结果是，喷气发动机控制器是由4个独立恒值调控器组成，且每一个一次只能控制三个输出。在这项研究中，一个简单形式的用欧拉整合的多变量ADRC应用到三输入三输出低速恒值调控模块中，并对它进行仿真测试。这一办法将隔离了多种不同模式结合可能会对结果造成的影响。</p>
+      <p>[0947] 第二步是确定系统的高频增益B。对于不同的相对阶数n，这个矩阵可能会发生大幅改变。为了确定B必须知道n，而要确定n又必须知道B，这是一个循环过程。因此，步骤二和三是一个求n和B的相互转化和迭代过程。然而，这里有一个问题，如果两者都是未知数的话。如果是这种情况，先把B定为单位矩阵以首先确定n，然后再迭代。对B矩阵还可以在步骤七中整定。在实践中，B+需要初始处于其真实值的50％以内，有如此广泛的范围应该是已知的。不过，如果是未知的或系统太复杂了，也可以应用各种系统辨识方法。</p>
+      <p>[0948] 在MAPSS中，控制信号被尺度化，且为每一个执行器的输入产生出正确的单位，并允许每一个控制信号必须位于同一相对范围内。于是，在低速恒值调控器中一种合乎逻辑的初始点B就是单位矩阵。</p>
+      <p>[0949] 第三步是要确定对象的相对阶n。观测器和控制器的整体结构都取决于n，它可能是或可能不是系统的实际阶数，这取决于哪一个动态特性占主导地位。理想的是，n＝1，2，或3会产生最小的H，最小的控制信号，或最好的闭环结果。有时候n是已知的或可从物理关系的模型中导出。如果以上这些方法都失效了，最后的解决办法是试错。在这种情况下，首先假设该系统是一阶的，并完成余下的步骤。然后假定该系统是二阶的和重复上面的过程，看看结果是否有改善。然后再试图三阶等，通常情况下低阶效果比较好。</p>
+      <p>[0950] 另外一个考虑是，可以通过每一个对象的输入输出来确定n。对于某一特定的输出，产生最高增益最低阶数的输入是控制的最直接形式，因此应该予以采用。</p>
+      <p>[0951] 由于在MAPPS中并非所有的发动机状态都是可以测量的，所以低速恒值调控器模型可表达为一个非线性输入输出的向量函数。如果没有明确的系统阶数知识，最简单和最低阶的情况是首选。</p>
+      <p>[0952] </p>
+      <p>[0953] 当一个3×3矩阵B被用于逼近实际的高频增益B0，则信号H被定义成</p>
+      <p>[0954] H≡F(Y，U，t)-B0U&#160;&#160;&#160;&#160;(217)</p>
+      <p>[0955] 然后，系统被简化为一种形式，这种形式具有能表达任何内部或外部的动态特性和瞬时输入的独特项。</p>
+      <p>[0956] </p>
+      <p>[0957] 经在高阶情况下运行模拟测试后，发现对于MAPPS一阶就足够了。这也有道理，因为CLM表示为一阶的状态空间方程，同时执行器动态特性足够快时，可以把它忽视。</p>
+      <p>[0958] 第四步，确定扩张状态h的数目。这会影响ESO的整体结构。对于ADRC，选择h＝1，2，或3，依赖于系统扰动H或外部扰动的类型。在大多数情况下，假设h＝1就够了，因此，为了更清晰，在余下的例子中我们使用h＝1。类似的情况是，当使用广义的PID时，也可以这样确定控制律中扩张状态的数目m。</p>
+      <p>[0959] 第五步是对该系统运用新的算法。整体配置见图32。观测器和控制器的结构依赖于为参数n和h选择的整数值。现在明确地给出最常使用的情况是：具有欧拉集成的多变量ADRC。总之，U是一个p×1的向量，Y是一个q×1的向量，B是一个q×p的矩阵，Lj和Kj都是q×q矩阵。</p>
+      <p>[0960] 当n＝1且h＝1时，ESO的方程组就变成</p>
+      <p>[0961] </p>
+      <p>[0962] (219)</p>
+      <p>[0963] </p>
+      <p>[0964] 控制器可表示成：</p>
+      <p>[0965] </p>
+      <p>[0966] 通过应用(219)和(220)，控制配置示于图33。注意由于输入到B+框的基本上是BU，所以我们把它代替U乘以B输入到ESO中。这样的话，只须调整一个B矩阵的元素，就可对对象尺度化，并使其余的算法把它当作单位增益对象。</p>
+      <p>[0967] 当n＝2且h＝1时，ESO的方程变为</p>
+      <p>[0968] </p>
+      <p>[0969] </p>
+      <p>[0970] </p>
+      <p>[0971] 控制器可以用下式表示</p>
+      <p>[0972] </p>
+      <p>[0973] 通过应用(221)和(222)，则控制配置见图34所示。</p>
+      <p>[0974] (218)中的一阶对象用于低速恒值调控，将它表示成状态方程形式，其中扩张状态X2是用来跟踪广义扰动H</p>
+      <p>[0975] </p>
+      <p>[0976] (223)</p>
+      <p>[0977] </p>
+      <p>[0978] 定义一个3×1状态向量X＝[X1，X2]T＝[YT，HT]T。状态向量的估计则从(223)设计ESO</p>
+      <p>[0979] </p>
+      <p>[0980] (224)</p>
+      <p>[0981] </p>
+      <p>[0982] 抗扰控制律为</p>
+      <p>[0983] </p>
+      <p>[0984] 对对象进行解耦，将它在低频时简化为三个并行积分器</p>
+      <p>[0985] </p>
+      <p>[0986] 这里应用一个简单的比例控制律</p>
+      <p>[0987] </p>
+      <p>[0988] 整个算法由(219)和(220)组成，它的实现见图33</p>
+      <p>[0989] </p>
+      <p>[0990] </p>
+      <p>[0991] </p>
+      <p>[0992] 原喷气发动机的恒值调控器集成了PID控制器，这些控制器会经受积分饱卷，因为积分器的输入是控制器误差R-Y的函数，这个误差会收敛到零，它会受对象的饱和效应影响。用ADRC取代这些恒值调控器获得的好处是积分器在ADRC中不会饱卷，因为它们的输入是观测器误差</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>的函数，它会收敛到零，但它不会受对象饱和影响。因此，就不再需要额外的抗饱卷机制。</p>
+      <p>[0993] 第六步是执行闭环系统，以便整定控制器和观测器的带宽。一般来说，Lj和Kj是q×q矩阵。然而，当Lj和Kj选定为对角阵时，ADRC的算法就简化为了一系列SISO的控制器，其中每一个控制器控制一个输出。在图35中给出了一个三输出系统例子。下面提出这种类型配置的整定过程。</p>
+      <p>[0994] 当n＝1且h＝1时，由此产生的观测器和控制器的增益矩阵为</p>
+      <p>[0995] L1＝diag(2ωo，1，2ωo，2，...，2ωo，q)</p>
+      <p>[0996] (229)</p>
+      <p>[0997] </p>
+      <p>[0998] Kp＝diag(ωc，1，ωc，2，...，ωc，q)&#160;&#160;&#160;&#160;(230)</p>
+      <p>[0999] 当n＝2且h＝1时，由此产生的观测器和控制器的增益矩阵为</p>
+      <p>[1000] L1＝diag(3ωo，1，3ωo，2，...，3ωo，q)</p>
+      <p>[1001] </p>
+      <p>[1002] </p>
+      <p>[1003] </p>
+      <p>[1004] (232)</p>
+      <p>[1005] Kd＝diag(2ωc，1，2ωc，2，...，2ωc，q)</p>
+      <p>[1006] 初步进行系统辨识是不必要的，因为仅有的设计参数ωc和b，它们直接影响带宽和输出超调。这意味着用户很容易对它们进行调整。在实践中，1/b需要初始化为它的真实值(二阶系统的总惯量)的50％以内，如此宽广的范围通常是已知的。</p>
+      <p>[1007] 当一个阶跃信号输入系统时，用ωc＝1对调整时间进行规范化，见表VIII.</p>
+      <p>[1008] 表VIII多阶规范化调整时间</p>
+      <p>[1009] </p>
+      <p>[1010] 由于阶跃是可能的最快预安排，对于给定带宽的系统最小调整时间为</p>
+      <p>[1011] ts＝tn/ωc&#160;&#160;&#160;&#160;(233)</p>
+      <p>[1012] 当面对时间的规格时，上式可以作为整定ωc的一个起点，或可以确定解是否可行。</p>
+      <p>[1013] 当使用带有调整时间tp的预安排时，系统的总的调整时间可用下式近似</p>
+      <p>[1014] tt≈tp+ts&#160;&#160;&#160;&#160;(234)</p>
+      <p>[1015] 现给出对于每一个输出i的ωc，i和ωo，i的整定过程。为清晰起见，去掉下标i。理想情况是把控制器的带宽设得尽可能高。然后通常应用预安排，实现较慢的调整时间或满足控制信号的约束要求，但是如果不考虑确切轨迹，则使用一个尽可能快的阶跃响应是理想的。</p>
+      <p>[1016] 1.根据初始的规定值用(233)设定ωc。</p>
+      <p>[1017] 2.作为一条经验法则设定ωo＝2～10ωc。确切的关系将依赖于期望闭环带宽对系统的主导极点的逼近、共振频率和噪声。</p>
+      <p>[1018] 3.运行闭环系统，并同时增加ωc和ωo刚刚好使控制信号达到出现共振点的前一时刻。</p>
+      <p>[1019] 4.调整ωc和ωo之间的关系以满足设计规定的噪声水平和扰动消除要求。</p>
+      <p>[1020] 在MAPPS中，所有三个观测器的带宽被设成相等ωo，1＝ωo，2＝ωo，3＝ωo，为了简洁起见和证明概念。将观测器增益矩阵变成一个单一参数的函数。</p>
+      <p>[1021] L1＝2ωoI3，</p>
+      <p>[1022] 所有三个控制器的带宽被设成相等，ωc，1＝ωc，2＝ωc，3＝ωc，同理，将控制器增益矩阵也变成一个单一参数的函数。</p>
+      <p>[1023] Kp＝ωcI3&#160;&#160;&#160;&#160;(236)</p>
+      <p>[1024] 第七步就是执行闭环系统，以重新整定B+。虽然在步骤二中可以应用系统辨识技术确定B，但是它行为像控制信号增益一样，直接影响闭环系统的超调。因此，B也可以被整定，通过调整它的元素，到刚刚好输出出现超调之前的点。更优选的是输出与输入一样多，这样便于整定。在以下n阶的输入输出方程组中，通过首次扩张向量U＝[u1，...，up]T和bi＝[bi，1，..，bi，p]T来表达</p>
+      <p>[1025] </p>
+      <p>[1026] .</p>
+      <p>[1027] .</p>
+      <p>[1028] .</p>
+      <p>[1029] (237)</p>
+      <p>[1030] </p>
+      <p>[1031] 则有：</p>
+      <p>[1032] </p>
+      <p>[1033] </p>
+      <p>[1034] .</p>
+      <p>[1035] .</p>
+      <p>[1036] .</p>
+      <p>[1037] (238)</p>
+      <p>[1038] </p>
+      <p>[1039] 在第ith个状态方程中，输入ui用于控制输出yi，余下的输入被组合在一起形成一个新的扰动hi</p>
+      <p>[1040] h1＝f1+b1，2&#160;u2+...+b1，q&#160;uq</p>
+      <p>[1041] h1＝f2+b2，1&#160;u2+b2，3&#160;u2+...+b2，q&#160;uq</p>
+      <p>[1042] .</p>
+      <p>[1043] .</p>
+      <p>[1044] .</p>
+      <p>[1045] (239)</p>
+      <p>[1046] hq＝fq+bq，1u1+...+bq-1，q-1uq-1</p>
+      <p>[1047] 只考虑B的对角元素，对象重写为</p>
+      <p>[1048] </p>
+      <p>[1049] </p>
+      <p>[1050] .</p>
+      <p>[1051] .</p>
+      <p>[1052] .</p>
+      <p>[1053] (240)</p>
+      <p>[1054] </p>
+      <p>[1055] 每一个对角元素的逆，成为各个SISO控制循环的整定参数。</p>
+      <p>[1056] </p>
+      <p>[1057] 图36给出一个三输出系统的例子。</p>
+      <p>[1058] 由于每个喷气发动机的恒值调控器有三个输入和三个输出，且系统的参数是未知的。所以，对于低速的恒值调控对象可用(240)来表示，同时用B-1的对角元素来整定。选择单位矩阵作为初始点。每一个对角线元素的相对符号被下一个确定，紧接着进行幅值调整。</p>
+      <p>[1059] 喷气式发动机的仿真结果</p>
+      <p>[1060] 由于不同发动机的制造公差和延长使用引起的恶化不同，使涡扇发动机性能各有不同。即使退化，最终因为达到极限可能需要对发动机进行彻底检修，也要使发动机控制系统应具有足够的鲁棒性，以确保在几千个飞行周期内发动机工作符合安全规定。由于反复使用后，发动机部件磨损和性能退化。例如，涡轮叶片侵蚀及间隙加大。为了达到和新发动机一样的推力水平，一个失效的引擎必须运行更热和/或更快。随着使用的增加，发动机就会产生这一转变，并最终达到在不损害发动机的安全或元件的寿命条件下性能无法维持。通过调整十个健康参数可以在MAPSS中模拟性能退化。</p>
+      <p>[1061] 在大多数涡扇发动机中，由于推力是无法直接测量的，因而它是通过一个调控和非调控变量的函数计算得到。虽然不论发动机是否退化，调控变量都可以维持在它们的设定点，但是非调控参数由于退化就会偏离它们的正常值。结果导致，目前基于模型的控制器，其闭环系统的性能受到发动机磨损的影响。在这里我们的目标之一，就是要控制一个恶化发动机的瞬态推力响应，并使它表现为尽可能接近于一个新的发动机。</p>
+      <p>[1062] 气路分析是一种诊断方法，它是通过检查元件的健康变动情况来估计健康参数及其变化趋势，这一过程主要依赖于气路传感器的测量值，如压力，温度，转子的速度，与它们之间存在的已知的气动热力学关系。健康参数是按照发动机的整个寿命周期的平均退化曲线变化</p>
+      <p>[1063] pi＝ai(1-exp(-biteff))+citeff&#160;&#160;&#160;&#160;(242)</p>
+      <p>[1064] 其中对于每一个健康参数而言ai，bi，和ci是常数，而teff表示发动机有效飞行周期的物理年龄而不是时间年龄。初始的指数上升，是为了模拟碰摩和新发动机磨损机理。随着发动机老化，健康参数退化趋于线性化。</p>
+      <p>[1065] 由于健康参数的变化会产生元件磨损的百分比值见表IX。它们反应中等程度到严重磨损，诸如当发动机该到大修的时候或当发动机放置在一个恶劣的沙漠环境里，则可能发生。</p>
+      <p>[1066] 表IX&#160;&#160;由于健康参数变化引起的磨损值</p>
+      <p>[1067] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[1068] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[1069] 通过有效周期teff来表征退化程度，这里零周期表示一个没有退化的新型发动机，3000周期是中度退化，4500周期是重度的退化，以及5250周期是严重退化。</p>
+      <p>[1070] 试验操作点选择成要涵盖整个MAPSS飞行包络线的一大部分和大部分的亚音速范围。它们列在表X中。测试点#1是地面闲置的情况下，起飞时候pla是从21跳至35。其余的测试点是代表大部分亚音速功率条件。</p>
+      <p>[1071] 表X&#160;&#160;在MAPSS包络中的测试工作点</p>
+      <p>[1072] </p>
+      <p>[1073] 利用欧拉集成对(228)中重新设计的低速恒值调控器进行数字化。MAPSS是一个多速率仿真软件包，这里发动机的采样时间是固定在0.0004秒而控制器的采样时间是固定在0.02秒。为了验证概念，新型的ADRC控制器和提供的标称控制器在表X中前3个工作点的每一个都进行仿真。以标称控制器的结果作为参考，并与ADRC控制器进行比较。在这里比较的目的不是要表明一个控制器的性能比其它控制器更好，而只是想说明，当它们具有相近的性能时，ADRC的设计是很简单的，尤其是标称控制器的精确整定方法是未知的。然后将这种新型的ADRC控制器，在表X中紧接着后3个工作点进行仿真，这样做是为了展示它是如何使低速恒值调控器能在较大幅度的范围内运行。</p>
+      <p>[1074] 对于表IX中六个水平退化的每一个进行所述仿真。如表XI所示，每个仿真都被标上运行号从1到6。</p>
+      <p>[1075] 表XI退化的运行测试</p>
+      <p>[1076] </p>
+      <p>[1077] 虽然高速的恒值调控器和其他两个风扇安全调控器没有进行试验，但是类似的性能是可预见的。对于测试点#1的结果显示在图37的3700和图38的3800中。注意：不同程度的退化轨迹相互间实际上难以辨别。在没有改变新的控制器参数情况下，其他测试点得到了类似的结果。</p>
+      <p>[1078] 虽然ADRC控制器比标称的控制器在满足要求条件下，反应更快、超调更小，但真正的意义在于设计这种新型控制器的简单性和它是怎么能够在较广泛的工作范围内，不受发动机退化的影响，控制发动机的推力。标称控制器的设计程序基本上是在几个工作点上运行CLM，再从每个工作点的Bode和Nyquist阵列中计算出一系列增益。18个增益每个都安排6个参数，当对实际发动机配置一个单一恒值调控器时，总共有108个参数可能需要调整。在仿真期间，这些增益的变化高达200％。</p>
+      <p>[1079] 相反，5个ADRC增益在整个仿真过程中保持常数</p>
+      <p>[1080] ωc＝8，ωo＝16，B-1＝diag(.2，-.5，-.5)&#160;&#160;&#160;&#160;(243)</p>
+      <p>[1081] 这里不存在调度。CLM中的每个增益很快就整定了，就像在实际的发动机上一样。然后在多个工作点下对发动机进行仿真，以验证这种新型控制器的性能。</p>
+      <p>[1082] 对一个相当复杂的涡扇发动机模型进行仿真测试，初步成果显示了这里所提出的动态解耦方法的优势。当要表达非线性多变量系统时数学模型往往是不准确的。在此增益调度可能有帮助，但也可能使整定后的系统比以前更糟糕。在现代多变量控制方案受到限制的地方，这种做法似乎非常适合于具有不完整模型信息的复杂非线性系统。我们的最终目标是提供一个一定范围内的可整定性，以弥补由于不同发动机之间变化造成性能损失，同时保持对老化、或损伤而造成的缓慢退化的足够的鲁棒性。</p>
+      <p>[1083] 用扩张状态观测器进行健康监测与故障检测</p>
+      <p>[1084] 这项研究结合了独特模型扰动估计的概念设计和健康监测与故障诊断。前面所描述的开发的工具可以直接应用于最少模型信息的健康监测。在最少对象信息情况下用ESO作为一个扰动估计器，以估计系统的动力学特性和扰动有着独特的应用。然后，利用估计出来的扰动作为健康监测与故障诊断。大部分的动态健康和故障监测估计器都需要大量的模型信息，才能有效地开展工作。由于ESO使用简单的设计模型，并可应用于各种各样的对象，所以该估计器的设计可简化为单一参数的整定。图49中的4900显示故障监测的一般概念。</p>
+      <p>[1085] 故障诊断的扰动分解</p>
+      <p>[1086] 接下来给出用ESO进行健康监测与故障诊断的详细解释。对于输入u，和输出y，用Han的典型形式表达系统的微分方程</p>
+      <p>[1087] y(n)＝f(t，y，...，y(n-1)，w)+bu.&#160;&#160;&#160;&#160;(244)</p>
+      <p>[1088] 其中y(n)表示y的nth导数而f是一个与对象动态特性和外部扰动w有关的非线性时变函数。图50中的5000展示了依赖于输入输出数据，从输入输出特性中产生未知动态特性f的概念。一旦f被估计出来，它就可以用于分析机器健康、故障检测和性能分析。</p>
+      <p>[1089] 未知部分f，包含模型的不准确fm，故障的影响ff，和外部扰动fd.图51中的5100显示了f是如何包括一些与健康监测和故障检测有关的影响，这里的f涵盖了未知的动态特性，fm,是未建模的动态特性；fd未建模的外部扰动；fs是静态标称模型的不准确性；ft是时变的对象退化；ff是大模型结构变化引起的故障；fp是时变模型参数；fh是健康退化。</p>
+      <p>[1090] 在大多数情况下，论文已经分开讨论了f对未知对象的影响。对于每种情况，总假设其他的影响是可忽略不计。同样，一个集成控制、故障诊断与健康监测和修复整合问题的总体框架，是一个需要研究的热点问题。</p>
+      <p>[1091] 控制健康诊断的扰动估计</p>
+      <p>[1092] 近年来，六西格玛方法应用于控制回路性能的主动健康监测方面取得了大量的研究成果(C.McAnarney&#160;and&#160;G.Buckbee，“Taking&#160;it&#160;tothe&#160;boardroom：Use&#160;performance&#160;supervision。应用扰动估计概念进行闭环控制系统的健康监测，是一种在没有详尽模型资料的条件下，对机器进行健康诊断的有效方法。</p>
+      <p>[1093] 一旦模型的输入u，、输出y，和扰动f用公式表达出来，则控制问题也可用公式表达出来了。</p>
+      <p>[1094] 消除未知扰动和动态特性开始于估计f。主要的想法是用输入输出数据和最小的动态信息来估计</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>然后把它消去。</p>
+      <p>[1095] </p>
+      <p>[1096] 一旦f被估计出来，扰动就可以被消除就像给设计的模型强加上一个新的输入u0</p>
+      <p>[1097] find&#160;u&#160;s.t.y(n)＝fn(y，u0，t)&#160;&#160;&#160;&#160;(246)</p>
+      <p>[1098] 就这一点而言，未知的扰动和对象动态特性就可以被去除，这样一个基于设计模型的常规控制器就可以设计出来，因此，输出y就会跟踪参考r。</p>
+      <p>[1099] 错误！未定义书签。&#160;&#160;&#160;&#160;(247)</p>
+      <p>[1100] 这个概念的概述表明，有3个独立的解决控制问题的数学表达式：1)估计律(245)；2)消除律(246)；3)标称的控制律(247)。这个划分体现在图52中的5200。</p>
+      <p>[1101] 大多数控制范式都把估计和消除律集总到控制律中。由于f是这种控制范式关键，所以本发明为机器健康和故障监测进行f的主动估计研究。</p>
+      <p>[1102] 扰动估计的健康监测</p>
+      <p>[1103] 在健康监测中应用扩张状态观测器的一般方法是：</p>
+      <p>[1104] 1.确定适当的输入与输出对。对于单输入和单输出系统，这一步是不需要的。然而，为了有效的估计多输入多输出的系统，每个输入需要以某种方式与输出动态联系。对每一对进行扰动估计时，包含分独输出输入对的交叉耦合。这样，每一个输入输出对就可以单独考虑。</p>
+      <p>[1105] 2.确定每个输入输出对的阶数，可以通过试错或物理过程的直觉来确定阶数。</p>
+      <p>[1106] 3.建立匹配的扩张状态观测器来估计状态和扰动。</p>
+      <p>[1107] 4.为稳定的输出跟踪选择整定参数。</p>
+      <p>[1108] 5.确定用于扰动估计f的标称条件。</p>
+      <p>[1109] 6.监测估计出来的扰动与正常条件下的差异。</p>
+      <p>[1110] 7.如果模型信息是已知的，则可以通过估计f中提取出具体的故障信息。由于动态信息在f中被估计出来，所以它通常情况下可以由一个代数方程组成。</p>
+      <p>[1111] 这里描述的系统、方法和对象可能储存在例如一台计算机可读媒体中。媒体可以包括，但不仅限于ASIC，CD，DVD，RAM，ROM，PRROM，磁盘，载波，记忆棒等。因此，例如，计算机可读介质可以为一个或一个以上所要求保护的方法存储计算机可执行指令。</p>
+      <p>[1112] 以上所述包括几个例子。为了描述系统、方法和计算机可读介质等，在控制器尺度化和参数化方面的应用，描述所有的元件或方法的每一种可能组合当然是不可能的。但是，本领域技术人员可以理解，进一步组合与排列都是有可能的。因此，本申请意在涵盖落入所附权利要求范围内的所有改变、修改，以及变动。此外，前面描述的不是为了限制发明范围的。相反，发明范围仅由所附权利要求和等同的内容来确定。</p>
+      <p>[1113] 这里引用到的所有文件，在与其相关的地方，以参考文献的形式纳入；但任何文件的引用并不是意味着它是本发明的现有技术。</p>
+      <p>[1114] 尽管在这里通过实例已经展示了这些系统，方法等，而且尽管在这里的实例已经描述的相当详尽了，但申请人并不意图以任何方式将所附权利要求的范围限制到这些细节。对于本领域技术人员而言，额外的优点和修改是很明显的。因此，本发明更广泛地说，并不限于具体细节，代表的设备，显示和描述的实例。因此，可以从这些细节出发做出各种修改，而不偏离申请人的发明构思的精神或范围。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101963668A?cl=zh">CN101963668A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年8月19日</td><td class="patent-data-table-td patent-date-value">2011年2月2日</td><td class="patent-data-table-td ">北京华力创通科技股份有限公司</td><td class="patent-data-table-td ">一种实现模拟卫星导航信号实时闭环同步控制的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102081349A?cl=zh">CN102081349A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月27日</td><td class="patent-data-table-td patent-date-value">2011年6月1日</td><td class="patent-data-table-td ">西北工业大学</td><td class="patent-data-table-td ">多输入-多输出等价气动伺服弹性鲁棒稳定性的飞行试验确定方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102081349B?cl=zh">CN102081349B</a></td><td class="patent-data-table-td patent-date-value">2011年1月27日</td><td class="patent-data-table-td patent-date-value">2012年7月25日</td><td class="patent-data-table-td ">西北工业大学</td><td class="patent-data-table-td ">多输入-多输出等价气动伺服弹性鲁棒稳定性的飞行试验确定方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102176118A?cl=zh">CN102176118A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月27日</td><td class="patent-data-table-td patent-date-value">2011年9月7日</td><td class="patent-data-table-td ">西北工业大学</td><td class="patent-data-table-td ">多输入-多输出飞行器等价稳定裕度鲁棒确定方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102176118B?cl=zh">CN102176118B</a></td><td class="patent-data-table-td patent-date-value">2011年1月27日</td><td class="patent-data-table-td patent-date-value">2012年9月26日</td><td class="patent-data-table-td ">西北工业大学</td><td class="patent-data-table-td ">多输入-多输出飞行器等价稳定裕度鲁棒确定方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102345529A?cl=zh">CN102345529A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月1日</td><td class="patent-data-table-td patent-date-value">2012年2月8日</td><td class="patent-data-table-td ">通用汽车环球科技运作有限责任公司</td><td class="patent-data-table-td ">用于内燃机的egr和增压的基于模型的多变量控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102360176A?cl=zh">CN102360176A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年7月21日</td><td class="patent-data-table-td patent-date-value">2012年2月22日</td><td class="patent-data-table-td ">山东省电力学校</td><td class="patent-data-table-td ">基于简化二阶自抗扰控制器的电厂主汽温度控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103389647A?cl=zh">CN103389647A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年7月17日</td><td class="patent-data-table-td patent-date-value">2013年11月13日</td><td class="patent-data-table-td ">上海电力学院</td><td class="patent-data-table-td ">一种串联校正与状态反馈协调型控制器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103576552A?cl=zh">CN103576552A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年10月24日</td><td class="patent-data-table-td patent-date-value">2014年2月12日</td><td class="patent-data-table-td ">广东电网公司电力科学研究院</td><td class="patent-data-table-td ">单入单出纯滞后自衡对象的自抗扰控制方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103818393A?cl=zh">CN103818393A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年2月26日</td><td class="patent-data-table-td patent-date-value">2014年5月28日</td><td class="patent-data-table-td ">南京恩瑞特实业有限公司</td><td class="patent-data-table-td ">列车牵引制动系统时间滞后特性的补偿方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103818393B?cl=zh">CN103818393B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年2月26日</td><td class="patent-data-table-td patent-date-value">2016年1月6日</td><td class="patent-data-table-td ">南京恩瑞特实业有限公司</td><td class="patent-data-table-td ">列车牵引制动系统时间滞后特性的补偿方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=Kcl0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0011000000">G06F11/00</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年11月11日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年1月6日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年8月20日</td><td class="patent-data-table-td ">REG</td><td class="patent-data-table-td ">Reference to a national code</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Ref country code: </span><span class="nested-value">HK</span></div><div class="nested-key-value"><span class="nested-key">Ref legal event code: </span><span class="nested-value">DE</span></div><div class="nested-key-value"><span class="nested-key">Ref document number: </span><span class="nested-value">1138402</span></div><div class="nested-key-value"><span class="nested-key">Country of ref document: </span><span class="nested-value">HK</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年2月29日</td><td class="patent-data-table-td ">C02</td><td class="patent-data-table-td ">Deemed withdrawal of patent application after publication (patent law 2001)</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年4月15日</td><td class="patent-data-table-td ">REG</td><td class="patent-data-table-td ">Reference to a national code</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Ref country code: </span><span class="nested-value">HK</span></div><div class="nested-key-value"><span class="nested-key">Ref legal event code: </span><span class="nested-value">WD</span></div><div class="nested-key-value"><span class="nested-key">Ref document number: </span><span class="nested-value">1138402</span></div><div class="nested-key-value"><span class="nested-key">Country of ref document: </span><span class="nested-value">HK</span></div></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/79610f8b0a156396dd31/CN101578584A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%8E%A7%E5%88%B6%E5%99%A8_%E8%A7%82%E6%B5%8B%E5%99%A8%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8.pdf?id=Kcl0BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1rTj5EGI6r5PH2-LtmtRdYnWB4Rg"},"sample_url":"https://www.google.com/patents/reader?id=Kcl0BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

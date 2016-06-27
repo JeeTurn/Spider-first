@@ -1,0 +1,431 @@
+<!DOCTYPE html><html><head><title>专利 CN103312519A - 一种动态口令设备及其工作方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种动态口令设备及其工作方法"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="飞天诚信科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2013-7-5" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种动态口令设备及其工作方法，该动态口令设备是一种智能卡读写器，拥有数字键盘和液晶显示屏，与智能卡配合使用。具体地，动态口令设备启动，对智能卡进行上电激活，通过与智能卡之间的信令交互以及对自身保存的种子密钥的使用，获取第一应用密文，并基于事件同步、挑战/应答、交易签名等方式生成一次性动态口令，该动态口令可应用于网银、电话银行和手机银行的身份认证操作，在离线和各种复杂支付场合实现随时随地对应用系统的用户进行身份验证，有效地防止了身份盗用、冒用以及身份欺诈，提高了网络系统的安全性。"><meta name="DC.date" content="2013-9-18"><meta name="DC.relation" content="CN:101051908:A" scheme="references"><meta name="DC.relation" content="CN:101163014:A" scheme="references"><meta name="DC.relation" content="CN:102377783:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103312519:A"><meta name="citation_patent_application_number" content="CN:201310282028"><link rel="canonical" href="https://www.google.com/patents/CN103312519A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103312519A?cl=zh"/><meta name="title" content="专利 CN103312519A - 一种动态口令设备及其工作方法"/><meta name="description" content="本发明公开了一种动态口令设备及其工作方法，该动态口令设备是一种智能卡读写器，拥有数字键盘和液晶显示屏，与智能卡配合使用。具体地，动态口令设备启动，对智能卡进行上电激活，通过与智能卡之间的信令交互以及对自身保存的种子密钥的使用，获取第一应用密文，并基于事件同步、挑战/应答、交易签名等方式生成一次性动态口令，该动态口令可应用于网银、电话银行和手机银行的身份认证操作，在离线和各种复杂支付场合实现随时随地对应用系统的用户进行身份验证，有效地防止了身份盗用、冒用以及身份欺诈，提高了网络系统的安全性。"/><meta property="og:title" content="专利 CN103312519A - 一种动态口令设备及其工作方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103312519A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103312519A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=AmjTCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103312519A&amp;usg=AFQjCNEcoICBsjyZGNGl_UQcyqiwCQg6kw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/f25352ce3ffa1355d58c/CN103312519A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/f25352ce3ffa1355d58c/CN103312519A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103312519A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103312519A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103312519A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种动态口令设备及其工作方法，该动态口令设备是一种智能卡读写器，拥有数字键盘和液晶显示屏，与智能卡配合使用。具体地，动态口令设备启动，对智能卡进行上电激活，通过与智能卡之间的信令交互以及对...</span><span itemprop="url">https://www.google.com/patents/CN103312519A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103312519A - 一种动态口令设备及其工作方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103312519A - 一种动态口令设备及其工作方法" title="专利 CN103312519A - 一种动态口令设备及其工作方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103312519 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310282028</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年9月18日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年7月5日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年7月5日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310282028.4, </span><span class="patent-bibdata-value">CN 103312519 A, </span><span class="patent-bibdata-value">CN 103312519A, </span><span class="patent-bibdata-value">CN 201310282028, </span><span class="patent-bibdata-value">CN-A-103312519, </span><span class="patent-bibdata-value">CN103312519 A, </span><span class="patent-bibdata-value">CN103312519A, </span><span class="patent-bibdata-value">CN201310282028, </span><span class="patent-bibdata-value">CN201310282028.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">飞天诚信科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103312519A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103312519A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103312519A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=AmjTCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310282028&amp;usg=AFQjCNFPPO6JhHGCfS5QVccB1bEcN_cNNw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=AmjTCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103312519A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNF3OWyohp8FMY5EHGmbj3VH_VlOUw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT128289216" lang="ZH" load-source="patent-office">一种动态口令设备及其工作方法</invention-title>
+      </span><br><span class="patent-number">CN 103312519 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA121678389" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种动态口令设备及其工作方法，该动态口令设备是一种智能卡读写器，拥有数字键盘和液晶显示屏，与智能卡配合使用。具体地，动态口令设备启动，对智能卡进行上电激活，通过与智能卡之间的信令交互以及对自身保存的种子密钥的使用，获取第一应用密文，并基于事件同步、挑战/应答、交易签名等方式生成一次性动态口令，该动态口令可应用于网银、电话银行和手机银行的身份认证操作，在离线和各种复杂支付场合实现随时随地对应用系统的用户进行身份验证，有效地防止了身份盗用、冒用以及身份欺诈，提高了网络系统的安全性。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(51)</span></span></div><div class="patent-text"><div mxw-id="PCLM56287954" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种动态口令设备的工作方法，其特征在于，包括以下步骤:  51、动态口令设备启动,对与自身连接的智能卡进行上电激活；  52、所述动态口令检测到用户触发第一按键时，获取与所述第一按键对应的应用标识，根据所述应用标识生成应用选择命令；  53、所述动态口令设备将所述应用选择命令发送给所述智能卡，接收所述智能卡返回的第一响应报文；  54、所述动态口令设备判断所述第一响应报文是否为符合第一预设格式的报文，如果是，则执行步骤S5 ;否则，显示错误信息，结束流程；所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；  55、所述动态口令设备从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令，将所述获取处理选项命令发送给所述智能卡，接收所述智能卡返回的第二响应报文；  56、所述动态口令设备判断所述第二响应报文是否为符合第二预设格式的报文，如果是，则执行步骤S7 ;否则，显示错误信息，结束流程；所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；  57、所述动态口令设备从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令，将所述读记录命令发送给所述智能卡，接收所述智能卡返回的第三响应报文；  58、所述动态口令设备判断所 述第三响应报文是否为符合第三预设格式的报文，如果是，则执行步骤S9 ;否则，显示错误信息，结束流程；所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；  59、所述动态口令设备从所述第三响应报文中获取第一记录数据，根据自身保存的种子密钥和第一预设数据生成第一挑战码，根据所述第一记录数据和所述第一挑战码生成应用密文生成命令，将所述应用密文生成命令发送给所述智能卡，接收所述智能卡返回的第四响应报文；  510、所述动态口令设备判断所述第四响应报文是否为符合第四预设格式的报文，如果是，则执行步骤Sll ;否则，显示错误信息，结束流程；所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；  511、所述动态口令设备从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，  所述动态口令设备启动，具体为:所述动态口令设备在检测到所述智能卡插入时启动；  所述方法还包括:当所述动态口令设备判断所述智能卡与自身匹配时，所述动态口令设备检测用户是否触发按键；  所述动态口令设备检测用户是否触发按键之前，还包括:  所述动态口令设备判断所述智能卡是否与自身匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，其特征在于，还包括:  当所述动态口令设备判断所述智能卡与自身不匹配时，所述动态口令设备显示错误信肩、O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求2所述的方法，其特征在于，所述动态口令设备判断所述智能卡是否与自身匹配，具体为:  所述动态口令设备获取所述智能卡的应用标识符，判断所述智能卡的应用标识符是否包含在自身存储的预设列表中，如果是，则确定所述智能卡与自身匹配；否则，确定所述智能卡与自身不匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1所述的方法，其特征在于，所述动态口令设备根据自身保存的种子密钥和第一预设数据生成第一挑战码，具体为:  所述动态口令设备使用所述种子密钥对所述第一预设数据进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据作为所述第一挑战码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求1所述的方法，其特征在于，所述动态口令设备生成动态口令之后，还包括:`  512、客户端获取所述动态口令，根据所述动态口令和智能卡信息生成身份认证请求，并将所述身份认证请求发送给认证服务器；  513、所述认证服务器从所述身份认证请求中获取所述动态口令和所述智能卡信息，根据所述智能卡信息查询对应的种子密钥；  514、所述认证服务器判断是否查询到相应的种子密钥，如果是，则执行步骤S15;否贝U，所述认证服务器向所述客户端发送认证失败消息，结束流程；  515、所述认证服务器根据查询到的种子密钥和自身存储的第二预设数据生成第三挑战码，根据所述第三挑战码和自身保存的第二记录数据生成第二应用密文，所述第二预设数据与所述第一预设数据的取值相同；  516、所述认证服务器判断所述第二应用密文，是否与对所述动态口令处理得到的第一应用密文相同，如果是，则所述认证服务器向所述客户端发送认证成功消息；否则，所述认证服务器向所述客户端发送认证失败消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的方法，其特征在于，所述认证服务器从所述身份认证请求中获取所述动态口令之后，还包括:  所述认证服务器对所述动态口令进行格式转换，并对转换得到的数据进行解压缩，得到所述第一应用密文。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求6所述的方法，其特征在于，所述认证服务器根据查询到的种子密钥和自身存储的第二预设数据生成第三挑战码，具体包括:  所述认证服务器使用所述查询到的种子密钥对所述第二预设数据进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据作为所述第三挑战码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求6所述的方法，其特征在于，所述认证服务器根据所述智能卡信息查询对应的种子密钥，具体为:  所述认证服务器使用所述智能卡信息作为索引，从自身存储的对应关系表中，查找与所述智能卡信息对应的种子密钥，所述对应关系表用于存储种子密钥与智能卡信息之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的方法，其特征在于，所述对应关系表通过以下步骤生成:  所述认证服务器接收来自所述客户端的注册请求，从所述注册请求中获取智能卡信息和动态口令设备的序列号，根据所述序列号生成密钥获取请求，将所述密钥获取请求发送给设备服务器；  所述认证服务器接收所述设备服务器返回的种子密钥，建立所述种子密钥与所述智能卡信息之间的对应关系，并根据所述对应关系、所述种子密钥和所述智能卡信息生成所述对应关系表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10所述的方法，其特征在于，所述认证服务器将所述密钥获取请求发送给设备服务器之后，还包括:  所述设备服务器从密钥获取请求中获取所述动态口令设备的序列号，根据所述序列号查询对应的种子密钥，将查询到的种子密钥发送给所述认证服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11所述的方法，其特征在于，还包括:  当所述 设备服务器没有查询到对应的种子密钥时，所述设备服务器向认证服务器发送获取密钥失败消息；  所述认证服务器向所述客户端发送注册失败消息。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.&#8212;种生成动态口令的方法，其特征在于，包括以下步骤: . 51、动态口令设备启动,对与自身连接的智能卡进行上电激活； . 52、所述动态口令检测到用户触发第二按键时，获取与所述第二按键对应的应用标识，根据所述应用标识生成应用选择命令； . 53、所述动态口令设备将所述应用选择命令发送给所述智能卡，接收所述智能卡返回的第一响应报文； . 54、所述动态口令设备判断所述第一响应报文是否为符合第一预设格式的报文，如果是，则执行步骤S5 ;否则，显示错误信息，结束流程；所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；.  55、所述动态口令设备从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令，将所述获取处理选项命令发送给所述智能卡，接收所述智能卡返回的第二响应报文； . 56、所述动态口令设备判断所述第二响应报文是否为符合第二预设格式的报文，如果是，则执行步骤S7 ;否则，显示错误信息，结束流程；所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器； . 57、所述动态口令设备从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令，将所述读记录命令发送给所述智能卡，接收所述智能卡返回的第三响应报文；  S8、所述动态口令设备判断所述第三响应报文是否为符合第三预设格式的报文，如果是，则执行步骤S9 ;否则，显示错误信息，结束流程；所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；  S9、所述动态口令设备从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第二挑战码进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令，将所述 应用密文生成命令发送给所述智能卡，接收所述智能卡返回的第四响应报文；  S10、所述动态口令设备判断所述第四响应报文是否为符合第四预设格式的报文，如果是，则执行步骤Sll ;否则，显示错误信息，结束流程；所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；  S11、所述动态口令设备从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的方法，其特征在于，所述动态口令设备启动，具体为:所述动态口令设备在检测到所述智能卡插入时启动；  所述方法还包括:当所述动态口令设备判断所述智能卡与自身匹配时，所述动态口令设备检测用户是否触发按键；  所述动态口令设备检测用户是否触发按键之前，还包括:  所述动态口令设备判断所述智能卡是否与自身匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求14所述的方法，其特征在于，还包括:  当所述动态口令设备判断所述智能卡与自身不匹配时，所述动态口令设备显示错误信</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求14所述的方法，其特征在于，所述动态口令设备判断所述智能卡是否与自身匹配，具体为:  所述动态口令设备获取所述智能卡的应用标识符，判断所述智能卡的应用标识符是否包含在自身存储的预设列表中，如果是，则确定所述智能卡与自身匹配；否则，确定所述智能卡与自身不匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求13所述的方法，其特征在于，所述动态口令设备使用自身保存的种子密钥对用户输入的第二挑战码进行处理，根据处理结果生成应用密文生成命令，具体包括:  所述动态口令设备使用所述种子密钥对所述第二挑战码进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，根据选择的数据生成所述应用密文生成命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求13所述的方法，其特征在于，所述动态口令设备生成动态口令之后，还包括:&#183; 512、客户端获取所述动态口令，根据所述动态口令和智能卡信息生成身份认证请求，并将所述身份认证请求发送给认证服务器； &#183; 513、所述认证服务器从所述身份认证请求中获取所述动态口令和所述智能卡信息，根据所述智能卡信息查询对应的种子密钥；  &#183;514、所述认证服务器判断是否查询到相应的种子密钥，如果是，则执行步骤S15;否贝U，所述认证服务器向所述客户端发送认证失败消息，结束流程；  &#183;515、所述认证服务器使用查询到的种子密钥对自身生成的第四挑战码进行处理，根据处理结果和自身保存的第二记录数据生成第二应用密文；  &#183;516、所述认证服务器判断所述第二应用密文，是否与对所述动态口令处理得到的第一应用密文相同，如果是，则所述认证服务器向所述客户端发送认证成功消息；否则，所述认证服务器向所述客户端发送认证失败消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求18所述的方法，其特征在于，所述认证服务器从所述身份认证请求中获取所述动态口令之后，还包括:  所述认证服务器对所述动态口令进行格式转换，并对转换得到的数据进行解压缩，得到所述第一应用密文。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求18所述的方法，其特征在于，所述认证服务器使用查询到的种子密钥对自身生成的第四挑战码进行处理，根据处理结果和所述智能卡信息生成第二应用密文，具体包括:  所述认证服务器使用所述查询到的种子密钥对所述第四挑战码进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，根据选择的数据和所述智能卡信息生成所述第&#183;二应用密文。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求18所述的方法，其特征在于，所述认证服务器根据所述智能卡信息查询对应的种子密钥，具体为:  所述认证服务器使用所述智能卡信息作为索引，从自身存储的对应关系表中，查找与所述智能卡信息对应的种子密钥，所述对应关系表用于存储种子密钥与智能卡信息之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求21所述的方法，其特征在于，所述对应关系表通过以下步骤生成:  所述认证服务器接收来自所述客户端的注册请求，从所述注册请求中获取智能卡信息和动态口令设备的序列号，根据所述序列号生成密钥获取请求，将所述密钥获取请求发送给设备服务器；  所述认证服务器接收所述设备服务器返回的种子密钥，建立所述种子密钥与所述智能卡信息之间的对应关系，并根据所述对应关系、所述种子密钥和所述智能卡信息生成所述对应关系表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求22所述的方法，其特征在于，所述认证服务器将所述密钥获取请求发送给设备服务器之后，还包括:  所述设备服务器从密钥获取请求中获取所述动态口令设备的序列号，根据所述序列号查询对应的种子密钥，将查询到的种子密钥发送给所述认证服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求23所述的方法，其特征在于，还包括:当所述设备服务器没有查询到对应的种子密钥时，所述设备服务器向认证服务器发送获取密钥失败消息；  所述认证服务器向所述客户端发送注册失败消息。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25.一种生成动态口令的方法，其特征在于，包括以下步骤:  51、动态口令设备启动,对与自身连接的智能卡进行上电激活；  52、所述动态口令检测到用户触发第三按键时，获取与所述第三按键对应的应用标识，根据所述应用标识生成应用选择命令；  53、所述动态口令设备将所述生成应用选择命令发送给所述智能卡，接收所述智能卡返回的第一响应报文；  54、所述动态口令设备判断所述第一响应报文是否为符合第一预设格式的报文，如果是，则执行步骤S5 ;否则，显示错误信息，结束流程；所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；  55、所述动态口令设备从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令，将所述获取处理选项命令发送给所述智能卡，接收所述智能卡返回的第二响应报文；  56、所述动态口令设备判断所述第二响应报文是否为符合第二预设格式的报文，如果是，则执行步骤S7 ;否则，显示错误信息，结束流程；所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；`  57、所述动态口令设备从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令，将所述读记录命令发送给所述智能卡，接收所述智能卡返回的第三响应报文；  58、所述动态口令设备判断所述第三响应报文是否为符合第三预设格式的报文，如果是，则执行步骤S9 ;否则，显示错误信息，结束流程；所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；  59、所述动态口令设备从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第一业务数据进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令，将所述应用密文生成命令发送给所述智能卡，接收所述智能卡返回的第四响应报文；  510、所述动态口令设备判断所述第四响应报文是否为符合第四预设格式的报文，如果是，则执行步骤Sll ;否则，显示错误信息，结束流程；所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；  511、所述动态口令设备从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求25所述的方法，其特征在于，所述动态口令设备启动，具体为:所述动态口令设备在检测到所述智能卡插入时启动；  所述方法还包括:当所述动态口令设备判断所述智能卡与自身匹配时，所述动态口令设备检测用户是否触发按键；  所述动态口令设备检测用户是否触发按键之前，还包括:  所述动态口令设备判断所述智能卡是否与自身匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求26所述的方法，其特征在于，还包括:  当所述动态口令设备判断所述智能卡与自身不匹配时，所述动态口令设备显示错误信肩、O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求26所述的方法，其特征在于，所述动态口令设备判断所述智能卡是否与自身匹配，具体为:  所述动态口令设备获取所述智能卡的应用标识符，判断所述智能卡的应用标识符是否包含在自身存储的预设列表中，如果是，则确定所述智能卡与自身匹配；否则，确定所述智能卡与自身不匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求25所述的方法，其特征在于，所述动态口令设备使用自身保存的种子密钥对用户输入的第一业务数据进行处理，根据处理结果生成应用密文生成命令，具体包括:  所述动态口令设备 使用所述种子密钥对所述第一业务数据中的第一个数据段进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，当所述第一业务数据仅包含一个数据段时，根据选择的数据生成所述应用密文生成命令；当所述第一业务数据包含多个数据段时，根据选择的数据以及所述第一业务数据中除所述第一个数据段之外的其他数据生成所述应用密文生成命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求25所述的方法，其特征在于，所述动态口令设备生成动态口令之后，还包括:  512、客户端获取所述动态口令，根据所述动态口令和智能卡信息生成身份认证请求，并将所述身份认证请求发送给认证服务器；  513、所述认证服务器从所述身份认证请求中获取所述动态口令和所述智能卡信息，根据所述智能卡信息查询对应的种子密钥；  514、所述认证服务器判断是否查询到相应的种子密钥，如果是，则执行步骤S15;否贝U，所述认证服务器向所述客户端发送认证失败消息，结束流程；  515、所述认证服务器使用查询到的种子密钥对用户输入的第二业务数据进行处理，根据处理结果和自身保存的第二记录数据生成第二应用密文；  516、所述认证服务器判断所述第二应用密文，是否与对所述动态口令处理得到的第一应用密文相同，如果是，则所述认证服务器向所述客户端发送认证成功消息；否则，所述认证服务器向所述客户端发送认证失败消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.如权利要求30所述的方法，其特征在于，所述认证服务器从所述身份认证请求中获取所述动态口令之后，还包括:  所述认证服务器对所述动态口令进行格式转换，并对转换得到的数据进行解压缩，得到所述第一应用密文。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.如权利要求30所述的方法，其特征在于，所述认证服务器使用查询到的种子密钥对用户输入的第二业务数据进行处理，根据处理结果和所述智能卡信息生成第二应用密文，具体包括:  所述认证服务器使用所述查询到的种子密钥对所述第二业务数据中的第一个数据段进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，当所述第二业务数据仅包含一个数据段时，根据选择的数据和所述智能卡信息生成所述第二应用密文；当第二业务数据包含多个数据段时，根据选择的数据、所述第二业务数据中除所述第一个数据段之外的其他数据以及所述智能卡信息生成所述第二应用密文。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.如权利要求30所述的方法，其特征在于，所述认证服务器根据所述智能卡信息查询对应的种子密钥，具体为:  所述认证服务器使用所述智能卡信息作为索引，从自身存储的对应关系表中，查找与所述智能卡信息对应的种子密钥，所述对应关系表用于存储种子密钥与智能卡信息之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.如权利要求33所述的方法，其特征在于，所述对应关系表通过以下步骤生成:  所述认证服务器接收来自所述客户端的注册请求，从所述注册请求中获取智能卡信息和动态口令设备的序列号，根据所述序列号生成密钥获取请求，将所述密钥获取请求发送给设备服务器；  所述认证服务器接收所述设备服务器返回的种子密钥，建立所述种子密钥与所述智能卡信息之间的对应关系，并根据所述对应关系、所述种子密钥和所述智能卡信息生成所述对应关系表。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35.如权利要求34所述的方法，其特征在于，所述认证服务器将所述密钥获取请求发送给设备服务器之后，还包括:  所述设备服务器从密钥获取请求中获取所述动态口令设备的序列号，根据所述序列号查询对应的种子密钥，将查询到的种子密钥发送给所述认证服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.如权利要求35所述的方法，其特征在于，还包括:  当所述设备服务器没有查询到对应的种子密钥时，所述设备服务器向认证服务器发送获取密钥失败消息；  所述认证服务器向所述客户端发送注册失败消息。</div>
+    </div>
+    </div> <div class="claim"> <div num="37" class="claim">
+      <div class="claim-text">37.一种动态口令设备，其特征在于，包括:  检测模块，用于检测用户是否触发按键；  第一生成模块，用于在所述检测模块检测到用户触发第一按键时，获取与所述第一按键对应的应用标识，根据所述应用标识生成应用选择命令；第一发送模块，用于将所述第一生成模块生成的所述应用选择命令发送给所述智能卡;  第一接收模块，用于接收所述智能卡返回的第一响应报文；第一判断模块，用于判断所述第一接收模块接收到的第一响应报文是否为符合第一预设格式的报文，所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；  第二生成模块，用于在所述第一判断模块判断所述第一响应报文为符合第一预设格式的报文时，从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令；  第二发送模块，用于将所述第二生成模块生成的所述获取处理选项命令发送给所述智&#20489;泛一；  第二接收模块，用于接收所述智能卡返回的第二响应报文；  第二判断模块，用于判断所述第二接收模块接收到的第二响应报文是否为符合第二预设格式的报文，所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；  第三生成模块，用于在所述第二判断模块判断所述第二响应报文为符合第二预设格式的报文时，从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令；  第三发送模块，用于将所述第三生成模块生成的所述读记录命令发送给所述智能卡；  第三接收模块，用于接收所述智能卡返回的第三响应报文；  第三判断模块，用于判断所述第三接收模块接收到的第三响应报文是否为符合第三预设格式的报文，所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；  第四生成模块，用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，根据自身保存的种子密钥和第一预设数据生成第一挑战码&#183;，根据所述第一记录数据和所述第一挑战码生成应用密文生成命令；  第四发送模块，用于将所述第四生成模块生成的所述应用密文生成命令发送给所述智&#20489;泛一；  第四接收模块，用于接收所述智能卡返回的第四响应报文；  第四判断模块，用于判断所述第四接收模块接收到的第四响应报文是否为符合第四预设格式的报文，所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；  显示模块，用于在所述第一判断模块判断所述第一响应报文不是符合第一预设格式的报文时，显示错误信息；在所述第二判断模块判断所述第二响应报文不是符合第二预设格式的报文时，显示错误信息；在所述第三判断模块判断所述第三响应报文不是符合第三预设格式的报文时，显示错误信息；在所述第四判断模块判断所述第四响应报文不是符合第四预设格式的报文时，显示错误信息；  第五生成模块，用于在所述第四判断模块判断所述第四响应报文为符合第四预设格式的报文时，从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.如权利要求37所述的动态口令设备，其特征在于，还包括:  第五判断模块，用于判断所述智能卡是否与所述动态口令设备匹配；所述检测模块，具体用于在所述第五判断模块判断所述智能卡与所述动态口令设备匹配时，检测用户是否触发按键。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39.如权利要求38所述的动态口令设备，其特征在于，  所述显示模块，还用于在所述第五判断模块判断所述智能卡与所述动态口令设备不匹配时，显示错误信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40.如权利要求38所述的动态口令设备，其特征在于，  所述第五判断模块，具体用于获取所述智能卡的应用标识符，判断所述智能卡的应用标识符是否包含在所述动态口令设备存储的预设列表中，如果是，则确定所述智能卡与所述动态口令设备匹配；否则，确定所述智能卡与所述动态口令设备不匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.如权利要求37所述的动态口令设备，其特征在于，  所述第四生成模块，具体用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用所述种子密钥对所述第一预设数据进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据作为所述第一挑战码，根据所述第一记录数据和所述第一挑战码生成所述应用密文生成命令。</div>
+    </div>
+    </div> <div class="claim"> <div num="42" class="claim">
+      <div class="claim-text">42.一种动态口令设备，其特征在于，包括:  检测模块，用于检测用户是否触发按键；  第一生成模块，用于在所述检测模块检测到用户触发第二按键时，获取与所述第二按键对应的应用标识，根据所述应用标识生成应用选择命令；  第一发送模块，用于将所述第一生成模块生成的所述应用选择命令发送给所述智能`卡;  第一接收模块，用于接收所述智能卡返回的第一响应报文；  第一判断模块，用于判断所述第一接收模块接收到的第一响应报文是否为符合第一预设格式的报文，所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；  第二生成模块，用于在所述第一判断模块判断所述第一响应报文为符合第一预设格式的报文时，从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令；  第二发送模块，用于将所述第二生成模块生成的所述获取处理选项命令发送给所述智&#20489;泛一；  第二接收模块，用于接收所述智能卡返回的第二响应报文；  第二判断模块，用于判断所述第二接收模块接收到的第二响应报文是否为符合第二预设格式的报文，所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；  第三生成模块，用于在所述第二判断模块判断所述第二响应报文为符合第二预设格式的报文时，从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令；  第三发送模块，用于将所述第三生成模块生成的所述读记录命令发送给所述智能卡；第三接收模块，用于接收所述智能卡返回的第三响应报文；  第三判断模块，用于判断所述第三接收模块接收到的第三响应报文是否为符合第三预设格式的报文，所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；  第四生成模块，用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第二挑战码进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令；  第四发送模块，用于将所述第四生成模块生成的所述应用密文生成命令发送给所述智&#20489;泛一；  第四接收模块，用于接收所述智能卡返回的第四响应报文；  第四判断模块，用于判断所述第四接收模块接收到的第四响应报文是否为符合第四预设格式的报文，所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；  显示模块，用于在所述第一判断模块判断所述第一响应报文不是符合第一预设格式的报文时，显示错误信息；在所述第二判断模块判断所述第二响应报文不是符合第二预设格式的报文时，显示错误信息；在所述第三判断模块判断所述第三响应报文不是符合第三预设格式的报文时，显示错误信息；在所述第四判断模块判断所述第四响应报文不是符合第四预设格式的报文时，显示错误信息；  第五生成模块，用于在所述第四判断模块判断所述第四响应报文为符合第四预设格式的报文时，从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43.如权利要求42所述的动 态口令设备，其特征在于，还包括:  第五判断模块，用于判断所述智能卡是否与所述动态口令设备匹配；  所述检测模块，具体用于在所述第五判断模块判断所述智能卡与所述动态口令设备匹配时，检测用户是否触发按键。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44.如权利要求43所述的动态口令设备，其特征在于，  所述显示模块，还用于在所述第五判断模块判断所述智能卡与所述动态口令设备不匹配时，显示错误信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45.如权利要求43所述的动态口令设备，其特征在于，  所述第五判断模块，具体用于获取所述智能卡的应用标识符，判断所述智能卡的应用标识符是否包含在所述动态口令设备存储的预设列表中，如果是，则确定所述智能卡与所述动态口令设备匹配；否则，确定所述智能卡与所述动态口令设备不匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46.如权利要求42所述的动态口令设备，其特征在于，  所述第四生成模块，具体用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用所述种子密钥对所述第二挑战码进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，根据选择的数据生成所述应用密文生成命令。</div>
+    </div>
+    </div> <div class="claim"> <div num="47" class="claim">
+      <div class="claim-text">47.一种动态口令设备，其特征在于，包括:检测模块，用于检测用户是否触发按键；  第一生成模块， 用于在所述检测模块检测到用户触发第三按键时，获取与所述第三按键对应的应用标识，根据所述应用标识生成应用选择命令；  第一发送模块，用于将所述第一生成模块生成的所述应用选择命令发送给所述智能卡;  第一接收模块，用于接收所述智能卡返回的第一响应报文；  第一判断模块，用于判断所述第一接收模块接收到的第一响应报文是否为符合第一预设格式的报文，所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；  第二生成模块，用于在所述第一判断模块判断所述第一响应报文为符合第一预设格式的报文时，从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令；  第二发送模块，用于将所述第二生成模块生成的所述获取处理选项命令发送给所述智&#20489;泛一;  第二接收模块，用于接收所述智能卡返回的第二响应报文；  第二判断模块，用于判断所述第二接收模块接收到的第二响应报文是否为符合第二预设格式的报文，所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；  第三生成模块，用于在所述第二判断模块判断所述第二响应报文为符合第二预设格式的报文时，从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令；  第三发送模块，用于将所述第三生成模块生成的所述读记录命令发送给所述智能卡；  第三接收模块，用于接收所述智能卡返回的第三响应报文；  第三判断模块，用于判断所述第三接收模块接收到的第三响应报文是否为符合第三预设格式的报文，所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；第四生成模块，用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第一业务数据进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令；第四发送模块，用于将所述第四生成模块生成的所述应用密文生成命令发送给所述智&#20489;泛一;  第四接收模块，用于接收所述智能卡返回的第四响应报文；  第四判断模块，用于判断所述第四接收模块接收到的第四响应报文是否为符合第四预设格式的报文，所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；  显示模块，用于在所述第一判断模块判断所述第一响应报文不是符合第一预设格式的报文时，显示错误信息；在所述第二判断模块判断所述第二响应报文不是符合第二预设格式的报文时，显示错误信息；在所述第三判断模块判断所述第三响应报文不是符合第三预设格式的报文时，显示错误信息；在所述第四判断模块判断所述第四响应报文不是符合第四预设格式的报文时，显示错误信息；  第五生成模块，用于在所述第四判断模块判断所述第四响应报文为符合第四预设格式的报文时，从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="48" class="claim">
+      <div class="claim-text">48.如权利要求47所述的动态口令设备，其特征在于，还包括:  第五判断模块，用于判断所述智能卡是否与所述动态口令设备匹配；  所述检测模块，具体用于在所述第五判断模块判断所述智能卡与所述动态口令设备匹配时，检测用户是否触发按键。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="49" class="claim">
+      <div class="claim-text">49.如权利要求48所述的动态口令设备，其特征在于，  所述显示模块，还用于在所述第五判断模块判断所述智能卡与所述动态口令设备不匹配时，显示错误信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50.如权利要求48所述的动态口令设备，其特征在于，  所述第五判断模块，具体用于获取所述智能卡的应用标识符，判断所述智能卡的应用标识符是否包含在所述动态口令设备存储的预设列表中，如果是，则确定所述智能卡与所述动态口令设备匹配；否则，确定所述智能卡与所述动态口令设备不匹配。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="51" class="claim">
+      <div class="claim-text">51.如权利要求47所述的动态口令设备，其特征在于，  所述第四生成模块，具体用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用所述种子密钥对所述第一业务数据中的第一个数 据段进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，当所述第一业务数据仅包含一个数据段时，根据选择的数据生成所述应用密文生成命令；当所述第一业务数据包含多个数据段时，根据选择的数据以及所述第一业务数据中除所述第一个数据段之外的其他数据生成所述应用密文生成命令。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63276087" lang="ZH" load-source="patent-office" class="description">
+    <p>一种动态口令设备及其工作方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及信息安全领域，特别是涉及一种动态口令设备及其工作方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着网络的发展，网络信息安全的重要性也与日俱增，身份认证技术得到了广泛应用。其中，动态口令认证方法越来越受到用户的青睐。动态口令一般由身份认证系统生成并以短信或者邮件的形式下发给用户，客户在登录或者交易认证时候输入该动态口令，从而确保系统身份认证的安全性，有效地避免由于黑客木马盗窃用户账户密码、假网站的出现所造成的网络安全风险。</p>
+    <p>[0003]	发明人在实现本发明的过程中，发现现有技术至少存在以下缺陷:</p>
+    <p>[0004]	由于短信和邮件易被非法截获，进而导致短信和邮件中包含的动态口令泄露，无法保证网络系统的安全性。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明提供了一种动态口令设备及其工作方法，以解决现有技术中的安全性缺陷。</p>
+    <p>[0006]	本发明提供了一种动态口令设备的工作方法，包括以下步骤:</p>
+    <p>[0007]	S1、动态口令设备启动,对与自身连接的智能卡进行上电激活；</p>
+    <p>[0008]	S2、所述动态口令检测到用户触发第一按键时，获取与所述第一按键对应的应用标识，根据所述应用标识生成应用选择命令；</p>
+    <p>[0009]	S3、所述动态口令设备将所述应用选择命令发送给所述智能卡，接收所述智能卡返回的第一响应报文；</p>
+    <p>[0010]	S4、所述动态口令设备判断所述第一响应报文是否为符合第一预设格式的报文，如果是，则执行步骤S5 ;否则，显示错误信息，结束流程；所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；</p>
+    <p>[0011]	S5、所述动态口令设备从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令，将所述获取处理选项命令发送给所述智能卡，接收所述智能卡返回的第二响应报文；</p>
+    <p>[0012]	S6、所述动态口令设备判断所述第二响应报文是否为符合第二预设格式的报文，如果是，则执行步骤S7 ;否则，显示错误信息，结束流程；所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；</p>
+    <p>[0013]	S7、所述动态口令设备从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令，将所述读记录命令发送给所述智能卡，接收所述智能卡返回的第三响应报文；</p>
+    <p>[0014]	S8、所述动态口令设备判断所述第三响应报文是否为符合第三预设格式的报文，如果是，则执行步骤S9 ;否则，显示错误信息，结束流程；所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；</p>
+    <p>[0015]	S9、所述动态口令设备从所述第三响应报文中获取第一记录数据，根据自身保存的种子密钥和第一预设数据生成第一挑战码，根据所述第一记录数据和所述第一挑战码生成应用密文生成命令，将所述应用密文生成命令发送给所述智能卡，接收所述智能卡返回的第四响应报文；</p>
+    <p>[0016]	S10、所述动态口令设备判断所述第四响应报文是否为符合第四预设格式的报文，如果是，则执行步骤Sll ;否则，显示错误信息，结束流程；所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包</p>
+    <p>含第一应用密文；</p>
+    <p>[0017]	S11、所述动态口令设备从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</p>
+    <p>[0018]	本发明还提供了一种生成动态口令的方法，包括以下步骤:</p>
+    <p>[0019]	S1、动态口令设备启动,对与自身连接的智能卡进行上电激活；</p>
+    <p>[0020]	S2、所述动态口令检测到用户触发第二按键时，获取与所述第二按键对应的应用标识，根据所述应用标识生成应用选择命令；</p>
+    <p>[0021]	S3、所述动态口令设备将所述应用选择命令发送给所述智能卡，接收所述智能卡返回的第一响应报文；</p>
+    <p>[0022]	S4、所述动态口令设备判断所述第一响应报文是否为符合第一预设格式的报文，如果是，则执行步骤S5 ;否则，显示错误信息，结束流程；所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；</p>
+    <p>[0023]	S5、所述动态口令设备从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令，将所述获取处理选项命令发送给所述智能卡，接收所述智能卡返回的第二响应报文；</p>
+    <p>[0024]	S6、所述动态口令设备判断所述第二响应报文是否为符合第二预设格式的报文，如果是，则执行步骤S7 ;否则，显示错误信息，结束流程；所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；</p>
+    <p>[0025]	S7、所述动态口令设备从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令，将所述读记录命令发送给所述智能卡，接收所述智能卡返回的第三响应报文；</p>
+    <p>[0026]	S8、所述动态口令设备判断所述第三响应报文是否为符合第三预设格式的报文，如果是，则执行步骤S9 ;否则，显示错误信息，结束流程；所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；</p>
+    <p>[0027]	S9、所述动态口令设备从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第二挑战码进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令，将所述应用密文生成命令发送给所述智能卡，接收所述智能卡返回的第四响应报文；</p>
+    <p>[0028]	S10、所述动态口令设备判断所述第四响应报文是否为符合第四预设格式的报文，如果是，则执行步骤Sll ;否则，显示错误信息，结束流程；所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包</p>
+    <p>含第一应用密文；</p>
+    <p>[0029]	S11、所述动态口令设备从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</p>
+    <p>[0030]	本发明还提供了一种生成动态口令的方法，包括以下步骤:</p>
+    <p>[0031]	S1、动态口令设备启动,对与自身连接的智能卡进行上电激活；</p>
+    <p>[0032]	S2、所述动态口令检测到用户触发第三按键时，获取与所述第三按键对应的应用标识，根据所述应用标识生成应用选择命令；</p>
+    <p>[0033]	S3、所述动态口令设备将所述生成应用选择命令发送给所述智能卡，接收所述智能卡返回的第一响应报文；</p>
+    <p>[0034]	S4、所述动态口令设备判断所述第一响应报文是否为符合第一预设格式的报文，如果是，则执行步骤S5 ;否则，显示错误信息，结束流程；所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；</p>
+    <p>[0035]	S5、所述动态口令设备从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令，将所述获取处理选项命令发送给所述智能卡，接收所述智能卡返回的第二响应报文；</p>
+    <p>[0036]	S6、所述动态口令设备判断所述第二响应报文是否为符合第二预设格式的报文，如果是，则执行步骤S7 ;否则，显示错误信息，结束流程；所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；</p>
+    <p>[0037]	S7、所述动态口令设备从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令，将所述读记录命令发送给所述智能卡，接收所述智能卡返回的第三响应报文；</p>
+    <p>[0038]	S8、所述动态口令设备判断所述第三响应报文是否为符合第三预设格式的报文，如果是，则执行步骤S9 ;否则，显示错误信息，结束流程；所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；</p>
+    <p>[0039]	S9、所述动态口令设备从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第一业务数据进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令，将所述应用密文生成命令发送给所述智能卡，接收所述智能卡返回的第四响应报文；</p>
+    <p>[0040]	S10、所述动态口令设备判断所述第四响应报文是否为符合第四预设格式的报文，如果是，则执行步骤Sll ;否则，显示错误信息，结束流程；所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包</p>
+    <p>含第一应用密文；</p>
+    <p>[0041]	S11、所述动态口令设备从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</p>
+    <p>[0042]	本发明还提供了一种动态口令设备，包括:</p>
+    <p>[0043]	检测模块，用于检测用户是否触发按键；</p>
+    <p>[0044]	第一生成模块，用于在所述检测模块检测到用户触发第一按键时，获取与所述第一按键对应的应用标识，根据所述应用标识生成应用选择命令；</p>
+    <p>[0045]	第一发送模块，用于将所述第一生成模块生成的所述应用选择命令发送给所述智&#20489;泛一;</p>
+    <p>[0046]	第一接收模块，用于接收所述智能卡返回的第一响应报文；</p>
+    <p>[0047]	第一判断模块，用于判断所述第一接收模块接收到的第一响应报文是否为符合第一预设格式的报文，所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；</p>
+    <p>[0048]	第二生成模块，用于在所述第一判断模块判断所述第一响应报文为符合第一预设格式的报文时，从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令；</p>
+    <p>[0049]	第二发送模块，用于将所述第二生成模块生成的所述获取处理选项命令发送给所述智能卡；</p>
+    <p>[0050]	第二接收模块，用于接收所述智能卡返回的第二响应报文；</p>
+    <p>[0051]	第二判断模块，用于判断所述第二接收模块接收到的第二响应报文是否为符合第二预设格式的报文，所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；</p>
+    <p>[0052]	第三生成模块，用于在所述第二判断模块判断所述第二响应报文为符合第二预设格式的报文时，从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令；</p>
+    <p>[0053]	第三发送模块，用于将所述第三生成模块生成的所述读记录命令发送给所述智能卡;</p>
+    <p>[0054]	第三接收模块，用于接收所述智能卡返回的第三响应报文；</p>
+    <p>[0055]	第三判断模块，用于判断所述第三接收模块接收到的第三响应报文是否为符合第三预设格式的报文，所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；</p>
+    <p>[0056]	第四生成模块，用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，根据自身保存的种子密钥和第一预设数据生成第一挑战码，根据所述第一记录数据和所述第一挑战码生成应用密文生成命令；</p>
+    <p>[0057]	第四发送模块，用于将所述第四生成模块生成的所述应用密文生成命令发送给所述智能卡；</p>
+    <p>[0058]	第四接收模块，用于接收所述智能卡返回的第四响应报文；</p>
+    <p>[0059]	第四判断模块，用于判断所述第四接收模块接收到的第四响应报文是否为符合第四预设格式的报文，所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；</p>
+    <p>[0060]	显示模块，用于在所述第一判断模块判断所述第一响应报文不是符合第一预设格式的报文时，显示错误信息；在所述第二判断模块判断所述第二响应报文不是符合第二预设格式的报文时，显示错误信息；在所述第三判断模块判断所述第三响应报文不是符合第三预设格式的报文时，显示错误信息；在所述第四判断模块判断所述第四响应报文不是符合第四预设格式的报文时，显示错误信息；</p>
+    <p>[0061]	第五生成模块，用于在所述第四判断模块判断所述第四响应报文为符合第四预设格式的报文时，从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</p>
+    <p>[0062]	本发明还提供了一种动态口令设备，包括:</p>
+    <p>[0063]	检测模块，用于检测用户是否触发按键；</p>
+    <p>[0064]	第一生成模块，用于在所述检测模块检测到用户触发第二按键时，获取与所述第二按键对应的应用标识，根据所述应用标识生成应用选择命令；</p>
+    <p>[0065]	第一发送模块，用于将所述第一生成模块生成的所述应用选择命令发送给所述智&#20489;泛一;</p>
+    <p>[0066]	第一接收模块，用于接收所述智能卡返回的第一响应报文；</p>
+    <p>[0067]	第一判断模块，用于判断所述第一接收模块接收到的第一响应报文是否为符合第一预设格式的报文，所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；</p>
+    <p>[0068]	第二生成模块，用于在所述第一判断模块判断所述第一响应报文为符合第一预设格式的报文时，从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令；</p>
+    <p>[0069]	第二发送模块，用于将所述第二生成模块生成的所述获取处理选项命令发送给所述智能卡；</p>
+    <p>[0070]	第二接收模块，用于接收所述智能卡返回的第二响应报文；</p>
+    <p>[0071]	第二判断模块，用于判断所述第二接收模块接收到的第二响应报文是否为符合第二预设格式的报文，所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；</p>
+    <p>[0072]	第三生成模块，用于在所述第二判断模块判断所述第二响应报文为符合第二预设格式的报文时，从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令；</p>
+    <p>[0073]	第三发送模块，用于将所述第三生成模块生成的所述读记录命令发送给所述智能卡;</p>
+    <p>[0074]	第三接收模块，用于接收所述智能卡返回的第三响应报文；</p>
+    <p>[0075]	第三判断模块，用于判断所述第三接收模块接收到的第三响应报文是否为符合第三预设格式的报文，所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；</p>
+    <p>[0076]	第四生成模块，用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第二挑战码进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令；</p>
+    <p>[0077]	第四发送模块，用于将所述第四生成模块生成的所述应用密文生成命令发送给所述智能卡；</p>
+    <p>[0078]	第四接收模块，用于接收所述智能卡返回的第四响应报文；</p>
+    <p>[0079]	第四判断模块，用于判断所述第四接收模块接收到的第四响应报文是否为符合第四预设格式的报文，所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；</p>
+    <p>[0080]	显示模块，用于在所述第一判断模块判断所述第一响应报文不是符合第一预设格式的报文时，显示错误信息；在所述第二判断模块判断所述第二响应报文不是符合第二预设格式的报文时，显示错误信息；在所述第三判断模块判断所述第三响应报文不是符合第三预设格式的报文时，显示错误信息；在所述第四判断模块判断所述第四响应报文不是符合第四预设格式的报文时，显示错误信息；</p>
+    <p>[0081]	第五生成模块，用于在所述第四判断模块判断所述第四响应报文为符合第四预设格式的报文时，从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</p>
+    <p>[0082]	本发明还提供了一种动态口令设备，包括:</p>
+    <p>[0083]	检测模块，用于检测用户是否触发按键；</p>
+    <p>[0084]	第一生成模块，用于在所述检测模块检测到用户触发第三按键时，获取与所述第三按键对应的应用标识，根据所述应用标识生成应用选择命令；</p>
+    <p>[0085]	第一发送模块，用于将所述第一生成模块生成的所述应用选择命令发送给所述智&#20489;泛一;</p>
+    <p>[0086]	第一接收模块，用于接收所述智能卡返回的第一响应报文；</p>
+    <p>[0087]	第一判断模块，用于判断所述第一接收模块接收到的第一响应报文是否为符合第一预设格式的报文，所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；</p>
+    <p>[0088]	第二生成模块，用于在所述第一判断模块判断所述第一响应报文为符合第一预设格式的报文时，从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令；</p>
+    <p>[0089]	第二发送模块，用于将所述第二生成模块生成的所述获取处理选项命令发送给所述智能卡；[0090]	第二接收模块，用于接收所述智能卡返回的第二响应报文；</p>
+    <p>[0091]	第二判断模块，用于判断所述第二接收模块接收到的第二响应报文是否为符合第二预设格式的报文，所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；</p>
+    <p>[0092]	第三生成模块，用于在所述第二判断模块判断所述第二响应报文为符合第二预设格式的报文时，从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令；</p>
+    <p>[0093]	第三发送模块，用于将所述第三生成模块生成的所述读记录命令发送给所述智能卡;</p>
+    <p>[0094]	第三接收模块，用于接收所述智能卡返回的第三响应报文；</p>
+    <p>[0095]	第三判断模块，用于判断所述第三接收模块接收到的第三响应报文是否为符合第三预设格式的报文，所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；</p>
+    <p>[0096]	第四生成模块，用于在所述第三判断模块判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第一业务数据进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令；</p>
+    <p>[0097]	第四发送模块，用于将所述第四生成模块生成的所述应用密文生成命令发送给所述智能卡；</p>
+    <p>[0098]	第四接收模块，用于接收所述智能卡返回的第四响应报文；</p>
+    <p>[0099]	第四判断模块，用于判断所述第四接收模块接收到的第四响应报文是否为符合第四预设格式的报文，所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；</p>
+    <p>[0100]	显示模块，用于在所述第一判断模块判断所述第一响应报文不是符合第一预设格式的报文时，显示错误信息；在所述第二判断模块判断所述第二响应报文不是符合第二预设格式的报文时，显示错误信息；在所述第三判断模块判断所述第三响应报文不是符合第三预设格式的报文时，显示错误信息；在所述第四判断模块判断所述第四响应报文不是符合第四预设格式的报文时，显示错误信息；</p>
+    <p>[0101]	第五生成模块，用于在所述第四判断模块判断所述第四响应报文为符合第四预设格式的报文时，从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</p>
+    <p>[0102]	本发明提供的技术方案中，动态口令设备可基于事件同步、挑战/应答、交易签名等方式生成一次性动态口令，该动态口令可应用于网银、电话银行和手机银行的身份认证操作，在离线和各种复杂支付场合实现随时随地对应用系统的用户进行身份验证，有效地防止了身份盗用、冒用以及身份欺诈，提高了网络系统的安全性。</p>
+    <p>附图说明</p>
+    <p>[0103]	图1为本发明实施例中的动态口令设备的注册流程图；</p>
+    <p>[0104]	图2为本发明实施例中的动态口令设备生成并发送动态口令的方法流程图；[0105]	图3为本发明实施例中动态口令设备生成动态口令的方法流程图；</p>
+    <p>[0106]	图4为本发明实施例中的一种对动态口令进行认证的方法流程图；</p>
+    <p>[0107]	图5为本发明实施例中的另一种对动态口令进行认证的方法流程图；</p>
+    <p>[0108]	图6为本发明实施例中的又一种对动态口令进行认证的方法流程图；</p>
+    <p>[0109]	图7为本发明实施例中的一种动态口令设备的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0110]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0111]	本发明实施例提供了一种身份认证系统，包括智能卡、动态口令设备、客户端、认证服务器和设备服务器，其中，动态口令设备是一种智能卡读写器，拥有数字键盘和液晶显示屏，与智能卡配合使用。在进行身份认证之前，需要通过客户端向服务器端注册，以激活动态口令设备，具体的注册过程如图1所示，包括以下步骤:</p>
+    <p>[0112]	步骤101，客户端向认证服务器发送注册请求。</p>
+    <p>[0113]	其中，注册请求中包含智能卡信息和动态口令设备的序列号，智能卡信息可以为智能卡的卡号。</p>
+    <p>[0114]	步骤102，认证服务器从注册请求中获取智能卡信息和动态口令设备的序列号，根据该序列号生成密钥获取请求。</p>
+    <p>[0115]	其中，密钥获取请求中包含动态口令设备的序列号。</p>
+    <p>[0116]	步骤103，认证服务器向设备服务器发送密钥获取请求。</p>
+    <p>[0117]	步骤104，设备服务器从密钥获取请求中获取动态口令设备的序列号，根据该序列号查询对应的种子密钥。</p>
+    <p>[0118]	步骤105，设备服务器判断是否查询到种子密钥，如果查询到，则执行步骤108 ;否则执行步骤106。</p>
+    <p>[0119]	步骤106，设备服务器向认证服务器发送获取密钥失败消息。</p>
+    <p>[0120]	步骤107，认证服务器向客户端发送注册失败消息，结束流程。</p>
+    <p>[0121]	步骤108，设备服务器向认证服务器发送查询到的种子密钥。</p>
+    <p>[0122]	步骤109，认证服务器对接收到的种子密钥进行存储，并建立种子密钥与智能卡信息之间的对应关系。</p>
+    <p>[0123]	本实施例中，认证服务器根据动态口令设备的序列号从设备服务器获取的种子密钥，与该动态口令设备中存储的种子密钥相同。动态口令设备中存储有唯一的种子密钥，且不同的动态口令设备分别存储不同的种子密钥，种子密钥与智能卡信息之间可以是一一对应的关系，也可以是一对多的关系。认证服务器中可以根据种子密钥与智能卡信息之间的对应关系生成对应关系表，并存储该对应关系表，如表I所示。</p>
+    <p>[0124]	表I 种子密钥与智能卡信息之间的对应关系表</p>
+    <p>[0125]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103312519A/CN103312519AD00231.png"> <img id="idf0001" file="CN103312519AD00231.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103312519A/CN103312519AD00231.png" class="patent-full-image" alt="Figure CN103312519AD00231"> </a> </div>
+    <p>[0126]	步骤110，认证服务器向客户端发送注册成功消息。</p>
+    <p>[0127]	通过上述流程完成注册后，动态口令设备被激活，可与智能卡配合进行身份认证。动态口令设备生成并发送动态口令的具体过程如图2所示，包括以下步骤:</p>
+    <p>[0128]	步骤201，动态口令设备在检测到有智能卡插入时启动，对该智能卡进行上电激活。</p>
+    <p>[0129]	步骤202，动态口令设备判断插入的智能卡是否与自身匹配，如果匹配，则执行步骤204 ;否则，执行步骤203。</p>
+    <p>[0130]	具体地，动态口令设备可以获取智能卡的AID (Application Identifier,应用标识符)，判断该智能卡的AID是否包含在自身存储的预设列表中，如果是，则确定该智能卡与自身匹配；否则，则确定该智能卡与自身不匹配。</p>
+    <p>[0131]	例如，预设列表可以如表2所示:</p>
+    <p>[0132]	表2 与动态口令设备匹配的AID列表</p>
+    <p>[0133]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103312519A/CN103312519AD00232.png"> <img id="idf0002" file="CN103312519AD00232.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103312519A/CN103312519AD00232.png" class="patent-full-image" alt="Figure CN103312519AD00232"> </a> </div>
+    <p>[0134]	步骤203，动态口令设备显示错误信息，结束流程。</p>
+    <p>[0135]	步骤204，动态口令设备判断在预设时间内是否有按键按下，如果有，则执行步骤206 ;否则，执行步骤205。</p>
+    <p>[0136]	步骤205，动态口令设备关闭，结束流程。</p>
+    <p>[0137]	步骤206，动态口令设备对获取到的按键信息进行判断，如果是第一按键，则执行步骤207 ;如果是第二按键，则执行步骤208 ;如果是第三按键，则执行步骤212。</p>
+    <p>[0138]	本实施例中，第一按键可以是“CODE”键，第二按键可以是“C&amp;R”键，第三按键可以是 “SIGN” 键。</p>
+    <p>[0139]	步骤207，动态口令设备根据自身保存的种子密钥和第一预设数据生成第一挑战码，根据该第一挑战码生成应用密文生成命令，将该应用密文生成命令发送给智能卡，并执行步骤216。</p>
+    <p>[0140]	步骤208，动态口令设备提示用户输入第二挑战码。</p>
+    <p>[0141]	步骤209，动态口令设备判断是否在预设时间内获取到用户输入的第二挑战码，如果是，则执行步骤211 ;否则，执行步骤210。</p>
+    <p>[0142]	步骤210，动态口令设备显示超时信息，结束流程。</p>
+    <p>[0143]	步骤211，动态口令设备使用自身保存的种子密钥对用户输入的第二挑战码进行处理，根据处理结果生成应用密文生成命令，将该应用密文生成命令发送给智能卡，并执行步骤216。</p>
+    <p>[0144]	步骤212，动态口令设备提示用户输入第一业务数据。</p>
+    <p>[0145]	其中，第一业务数据可以为智能卡信息，也可以为与业务相关的其他信息。</p>
+    <p>[0146]	步骤213，动态口令设备判断是否在预设时间内获取到用户输入的第一业务数据，如果是，则执行步骤215 ;否则，执行步骤214。</p>
+    <p>[0147]	步骤214，动态口令设备显示超时信息，结束流程。</p>
+    <p>[0148]	步骤215，动态口令设备使用自身保存的种子密钥对用户输入的第一业务数据进行处理，根据处理结果生成应用密文生成命令，将该应用密文生成命令发送给智能卡，并执行步骤216。</p>
+    <p>[0149]	步骤216，动态口令设备接收智能卡返回的第一应用密文，对包括第一应用密文在内的令牌数据进行压缩，并对压缩得到的数据进行格式转换，得到动态口令。</p>
+    <p>[0150]	步骤217，客户端获取动态口令，根据该动态口令和智能卡信息生成身份认证请求，并将该身份认证请求发送给认证服务器。</p>
+    <p>[0151]	需要说明的是，上述实施例中动态口令设备生成动态口令的步骤(步骤207和步骤216的组合、步骤211和步骤216的组合，以及步骤215和步骤216的组合)可细化为如图3所示的流程图，包括以下步骤:</p>
+    <p>[0152]	步骤301，动态口令设备获取与按键信息对应的应用标识，根据该应用标识生成应用选择命令。</p>
+    <p>[0153]	具体地，动态口令设备根据按键信息对应的工作模式，从应用选择列表中选择应用标识，根据选择的应用标识生成应用选择命令，该应用选择命令中包含该应用标识。</p>
+    <p>[0154]	步骤302，动态口令设备将应用选择命令发送给智能卡。</p>
+    <p>[0155]	步骤303，智能卡向动态口令设备返回第一响应报文。</p>
+    <p>[0156]	步骤304，动态口令设备判断第一响应报文是否符合第一预设格式，如果符合，则执行步骤305 ;否则，显示错误信息，结束流程。</p>
+    <p>[0157]	具体地，动态口令设备可以判断第一响应报文包含的状态码是否为第一预设值(例如，‘9000’)，如果状态码不是第一预设值，则确定第一响应报文不符合第一预设格式。如果状态码是第一预设值，则动态口令设备判断第一响应报文中是否包含FCI (FileControl Information,文件控制信息),如果不包含FCI,则确定第一响应报文不符合第一预设格式。如果包含FCI，则动态口令设备判断FCI中是否包含roOL(Processing OptionsData Object List,处理选项数据对象列表)和DF (Dedicated File,专用文件)名称,如果不包含，则确定第一响应报文不符合第一预设格式。如果包含，则动态口令设备判断DF名称是否与应用选择命令中的应用标识相同，如果不同，则确定第一响应报文不符合第一预设格式；如果相同，则确定第一响应报文符合第一预设格式。</p>
+    <p>[0158]	步骤305，动态口令设备从第一响应报文中获取roOL，根据TOOL生成获取处理选项命令，向智能卡发送该获取处理选项命令。</p>
+    <p>[0159]	具体地，动态口令设备从第一响应报文的数据域中获取FCI，从FCI中获取TOOL，根据rooL采集相关的rooL数据，将rooL数据作为获取处理选项命令的数据域中的内容，生成并发送获取处理选项命令。</p>
+    <p>[0160]	步骤306，智能卡向动态口令设备返回第二响应报文。</p>
+    <p>[0161]	步骤307，动态口令设备判断第二响应报文是否符合第二预设格式，如果符合，则执行步骤308 ;否则，显示错误信息，结束流程。</p>
+    <p>[0162]	具体地，动态口令设备可以判断第二响应报文包含的状态码是否为第二预设值(例如，‘9000’)，如果状态码不是第二预设值，则确定第二响应报文不符合第二预设格式。如果状态码是第二预设值，则动态口令设备判断第二响应报文中是否同时包含AIP(Application Interchange Profile,应用交互特征)和 AFL(Application File Locator,应用文件定位器)，如果不包含AIP或AFL，则确定第二响应报文不符合第二预设格式。如果包含AIP和AFL，则判断AIP的第5字节是否被置位，如果被置位，则确定第二响应报文符合第二预设格式；否则，确定第二响应报文不符合第二预设格式。</p>
+    <p>[0163]	步骤308，动态口令设备从第二响应报文中获取AFL，根据该AFL生成读记录命令，向智能卡发送该读记录命令。</p>
+    <p>[0164]	具体地，动态口令设备从第二响应报文的数据域中获取AFLJf AFL所包含的记录号作为读记录命令中的预设参数(例如，PD的值，生成并发送读记录命令。</p>
+    <p>[0165]	步骤309，智能卡向动态口令设备返回第三响应报文。</p>
+    <p>[0166]	步骤310，动态口令设备判断第三响应报文是否符合第三预设格式，如果符合，则执行步骤311 ;否则，显示错误信息，结束流程。</p>
+    <p>[0167]	具体地，动态口令设备可以判断第三响应报文包含的状态码是否为第三预设值(例如，‘9000’)，如果状态码不是第三预设值，则确定第三响应报文不符合第三预设格式；如果状态码是第三预设值，则确定第三响应报文符合第三预设格式。</p>
+    <p>[0168]	步骤311，动态口令设备根据自身保存的种子密钥生成挑战码，从第三响应报文中获取第一记录数据，根据挑战码和第一记录数据生成应用密文生成命令。</p>
+    <p>[0169]	具体地，动态口令设备可以从第三响应报文的数据域中获取第一记录数据，根据该第一记录数据以及自身生成的挑战码生成终端数据，将该终端数据作为应用密文生成命令的数据域中的内容，生成应用密文生成命令。</p>
+    <p>[0170]	其中，动态口令设备生成的挑战码可以是动态口令设备根据自身保存的种子密钥和第一预设数据生成的第一挑战码，也可以是动态口令设备使用自身保存的种子密钥对用户输入的第二挑战码处理得到的处理结果，还可以是动态口令设备使用自身保存的种子密钥对用户输入的第一业务数据处理得到的处理结果。</p>
+    <p>[0171]	步骤312，动态口令设备将应用密文生成命令发送给智能卡。</p>
+    <p>[0172]	步骤313，智能卡向动态口令设备返回第四响应报文。</p>
+    <p>[0173]	步骤314，动态口令设备判断第四响应报文是否符合第四预设格式，如果符合，则执行步骤315 ;否则，显示错误信息，结束流程。</p>
+    <p>[0174]	具体地，动态口令设备可以判断第四响应报文包含的状态码是否为第四预设值(例如，‘9000’)，如果状态码不是第四预设值，则确定第四响应报文不符合第四预设格式；如果状态码是第四预设值，则确定第四响应报文符合第四预设格式。</p>
+    <p>[0175]	步骤315，动态口令设备从第四响应报文中获取第一应用密文，根据第一应用密文生成动态口令。</p>
+    <p>[0176]	具体地，动态口令设备从第四响应报文的数据域中获取第一应用密文，对第一应用密文进行压缩，并对压缩得到的数据进行格式转换，得到动态口令。</p>
+    <p>[0177]	需要说明的是，基于步骤206中动态口令设备对获取到的按键信息的判断结果的不同，上述流程的步骤311中动态口令生成应用密文生成命令的过程也不相同，具体过程包括:</p>
+    <p>[0178]	当动态口令设备判断按键信息为第一按键时，动态口令设备根据自身保存的种子密钥和第一预设数据生成第一挑战码，根据该第一挑战码生成应用密文生成命令。具体地，动态口令设备使用种子密钥对第一预设数据进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，将该数据作为第一挑战码，并根据该第一挑战码和第一记录数据生成应用密文生成命令。其中，处理结果中位于第一预设位置的数据可以为处理结果中位置最靠后的4字节的数据，位于第二预设位置的数据为位置最靠后的8位数据。</p>
+    <p>[0179]	例如，当第一预设数据为“OxFF FF FF FF FF FF FF FF”，种子密钥为“0xlA1002DC6489E3E345ADF23B321C2A97”时，动态口令设备使用种子密钥对第一预设数据进行哈希处理后，得到的处理结果为 “0xl3D4CCFCA084107123C077D007FC6B754F32103A”，从处理结果中选择位置最靠后的4字节的数据，即“0x4F32103A”，将选择的数据转换为对应的十进制数据，得到“1328681018”，从转换得到的数据中选择位置最靠后的8位数据，即“28681018”，使用“28681018”作为第一挑战码，生成应用密文生成命令。</p>
+    <p>[0180]	当动态口令设备判断按键信息为第二按键时，动态口令设备根据自身保存的种子密钥和用户输入的第二挑战码，生成应用密文生成命令。具体地，动态口令设备使用种子密钥对用户输入的第二挑战码进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，根据选择的数据和第一记录数据生成应用密文生成命令。其中，处理结果中位于第一预设位置的数据可以为处理结果中位置最靠后的4字节的数据，位于第二预设位置的数据为位置最靠后的8位数据。</p>
+    <p>[0181]例如，种子密钥为	“0xlA1002DC6489E3E345ADF23B321C2A97”，用户输入的第二挑战码为“11347689”时，动态口令设备将该第二挑战码补零至8字节数据“0x00000000 1134 7689”，并使用种子密钥对补零得到的数据进行哈希处理后，得到的处理结果为 “0xBA55 EF3B 1F92 F255 BD96 131A 685A 4F51 2F55 F1D4”，从处理结果中选择位置最靠后的4字节的数据，即“0x2F55 F1D4”，将选择的数据转换为对应的十进制数据，得到“794161620”，从转换得到的数据中选择位置最靠后的8位数据，即“94161620”，使用“94161620”作为挑战码，生成应用密文生成命令。</p>
+    <p>[0182]	当动态口令设备判断按键信息为第三按键时，动态口令设备根据自身保存的种子密钥和用户输入的第一业务数据，生成应用密文生成命令。具体地，动态口令设备使用种子密钥对用户输入的第一业务数据中的第一个数据段进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，当用户输入的第一业务数据仅包含一个数据段时，根据选择的数据和第一记录数据生成应用密文生成命令；当用户输入的第一业务数据包含多个数据段时，根据选择的数据、第一业务数据中除第一个数据段之外的其他数据以及第一记录数据，生成应用密文生成命令。其中，处理结果中位于第一预设位置的数据可以为处理结果中位置最靠后的4字节的数据，位于第二预设位置的数据为位置最靠后的8位数据，第一业务数据为用户输入到动态口令设备中的业务数据。</p>
+    <p>[0183]例如，种子密钥为“0xlA1002DC6489E3E345ADF23B321C2A97	”，用户输入的第一业务数据仅包含一个数据段“ 1234567890”时，动态口令设备将该数据段补零至8字节数据“0x0000 0012 3456 7890”，并使用种子密钥对补零后得到的数据进行哈希处理后，得到的处理结果为 “0x96E4 5587 632F 8D36 5429 2C6F F150 310F 688D E125”，从处理结果中选择位置最靠后的4字节的数据，即“0x688D E125”，将选择的数据转换为对应的十进制数据，得到“1754128677”，从转换得到的数据中选择位置最靠后的8位数据，即“54128677”，并使用“54128677”生成应用密文生成命令。</p>
+    <p>[0184]当种子密钥为	“ Ox 1A1002DC6489E3E345ADF23B321C2A97 ”，用户输入的第一业务数据包含第一个数据段“3344”和第二个数据段“543231”时，动态口令设备将第一个数据段补零至8字节数据“0x0000 0000 0000 3344”，并使用种子密钥对补零后得到的数据进行哈希处理后，得到的处理结果为“0xECD5 09F6 2C7A 846D FD9D 71E1 596C 5191 B5FA6CF2”，从处理结果中选择位置最靠后的4字节的数据，S卩“Ox B5FA 6CF2”，将选择的数据转换为对应的十进制数据，得到“53087986”，从转换得到的数据中选择位置最靠后的8位数据，即“53087986”，并使用“53087986”和用户输入的第一业务数据中的第二数据段“543231”生成应用密文生成命令。</p>
+    <p>[0185]	本实施例中，认证服务器接收到来自客户端的身份认证请求后，对该身份认证请求中的动态口令进行认证，其具体过程如图4所示，包括以下步骤:</p>
+    <p>[0186]	步骤401，认证服务器从身份认证请求中获取动态口令和智能卡信息，根据该智能卡信息查询对应的种子密钥。</p>
+    <p>[0187]	具体地，认证服务器根据智能卡信息，查询自身预先存储的种子密钥与智能卡信息之间的对应关系表，以确定是否有与该智能卡信息对应的种子密钥。</p>
+    <p>[0188]	步骤402，认证服务器判断是否查询到相应的种子密钥，如果是，则执行步骤404 ；否则，执行步骤403。</p>
+    <p>[0189]	步骤403，认证服务器向客户端发送认证失败消息，结束流程。</p>
+    <p>[0190]	步骤404，认证服务器对动态口令进行格式转换，并对转换得到的数据进行解压缩，得到第一应用密文。[0191]	步骤405，认证服务器根据查询到的种子密钥和自身存储的第二预设数据生成第三挑战码，根据第三挑战码和自身保存的第二记录数据生成第二应用密文。</p>
+    <p>[0192]	具体地，认证服务器可以使用查询到的种子密钥对第二预设数据进行哈希(Hash)处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据作为第三挑战码，根据该第三挑战码和自身保存的第二记录数据生成第二应用密文。其中，处理结果中位于第一预设位置的数据可以为处理结果中位置最靠后的4字节的数据，位于第二预设位置的数据为位置最靠后的8位数据；其中，第二预设数据的取值可以与第一预设数据的取值相同，第二记录数据的取值可以与第一记录数据的取值相同。</p>
+    <p>[0193]	例如，当第二预设数据为“OxFF FF FF FF FF FF FF FF”，查询到的种子密钥为“0X1A1002DC6489E3E345ADF23B321C2A97”时，认证服务器使用种子密钥对第二预设数据进行哈希处理后，得到的处理结果为 “0xl3D4CCFCA084107123C077D007FC6B754F32103A”，从处理结果中选择位置最靠后的4字节的数据，即“0x4F32103A”，将选择的数据转换为对应的十进制数据，得到“ 1328681018”，从转换得到的数据中选择位置最靠后的8位数据作为第三挑战码，即“28681018”，使用“28681018”和第二记录数据生成第二应用密文。</p>
+    <p>[0194]	步骤406，认证服务器判断第二应用密文是否与第一应用密文相同，如果是，则执行步骤407 ;否则，执行步骤408。</p>
+    <p>[0195]	步骤407，认证服务器向客户端发送认证成功消息，结束流程。</p>
+    <p>[0196]	步骤408，认证服务器向客户端发送认证失败消息，结束流程。</p>
+    <p>[0197]	需要说明的是，在本发明的其他实施方式中，步骤404可以在步骤402之前执行，也可以在步骤405之后执行，也可以与步骤402或步骤405同时执行，同样可以实现本发明的发明目的。</p>
+    <p>[0198]	如图5所示，为本发明实施例中的另一种对动态口令进行认证的方法流程图，包括以下步骤:</p>
+    <p>[0199]	步骤501，认证服务器从身份认证请求中获取动态口令和智能卡信息，根据该智能卡信息查询对应的种子密钥。</p>
+    <p>[0200]	具体地，认证服务器根据智能卡信息，查询自身预先存储的种子密钥与智能卡信息之间的对应关系表，以确定是否有与该智能卡信息对应的种子密钥。</p>
+    <p>[0201]	步骤502，认证服务器判断是否查询到相应的种子密钥，如果是，则执行步骤504 ；否则，执行步骤503。</p>
+    <p>[0202]	步骤503，认证服务器向客户端发送认证失败消息，结束流程。</p>
+    <p>[0203]	步骤504，认证服务器对动态口令进行格式转换，并对转换得到的数据进行解压缩，得到第一应用密文。</p>
+    <p>[0204]	步骤505，认证服务器使用查询到的种子密钥对自身生成的第四挑战码进行处理，根据处理结果和自身保存的第二记录数据生成第二应用密文。</p>
+    <p>[0205]	具体地，认证服务器可以使用查询到的种子密钥对第四挑战码进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，根据该数据和自身保存的第二记录数据生成第二应用密文。其中，处理结果中位于第一预设位置的数据可以为处理结果中位置最靠后的4字节的数据，位于第二预设位置的数据可以为位置最靠后的8位数据；第二记录数据的取值可以与第一记录数据的取值相同。</p>
+    <p>[0206]例如，种子密钥为	“0xlA1002DC6489E3E345ADF23B321C2A97”，认证服务器生成的第四挑战码为“11347689”时，认证服务器将该第四挑战码补零至8字节数据“0x0000</p>
+    <p>0000	1134 7689”，并使用种子密钥对补零得到的数据进行哈希处理后，得到的处理结果为 “0xBA55 EF3B 1F92 F255 BD96 131A 685A 4F51 2F55 F1D4”，从处理结果中选择位置最靠后的4字节的数据，S卩“0x2F55 F1D4”，将选择的数据转换为对应的十进制数据，得到“794161620”，从转换得到的数据中选择位置最靠后的8位数据，即“94161620”，使用“94161620”和第二记录数据生成第二应用密文。</p>
+    <p>[0207]	步骤506，认证服务器判断第二应用密文是否与第一应用密文相同，如果是，则执行步骤507 ;否则，执行步骤508。</p>
+    <p>[0208]	步骤507，认证服务器向客户端发送认证成功消息，结束流程。</p>
+    <p>[0209]	步骤508，认证服务器向客户端发送认证失败消息，结束流程。</p>
+    <p>[0210]	如图6所示，为本发明实施例中的又一种对动态口令进行认证的方法流程图，包括以下步骤:</p>
+    <p>[0211]	步骤601，认证服务器从身份认证请求中获取动态口令和智能卡信息，根据该智能卡信息查询对应的种子密钥。</p>
+    <p>[0212]	具体地，认证服务器根据智能卡信息，查询自身预先存储的种子密钥与智能卡信息之间的对应关系表，以确定是否有与该智能卡信息对应的种子密钥。</p>
+    <p>[0213]	步骤602，认证服务器判断是否查询到相应的种子密钥，如果是，则执行步骤604 ；否则，执行步骤603。</p>
+    <p>[0214]	步骤603，认证服务器向客户端发送认证失败消息，结束流程。</p>
+    <p>[0215]	步骤604，认证服务器对动态口令进行格式转换，并对转换得到的数据进行解压缩，得到第一应用密文。</p>
+    <p>[0216]	步骤605，认证服务器使用查询到的种子密钥对用户输入的第二业务数据进行处理，根据处理结果和自身保存的第二记录数据生成第二应用密文。</p>
+    <p>[0217]	具体地，认证服务器可以使用查询到的种子密钥对第二业务数据中的第一个数据段进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，当第二业务数据仅包含一个数据段时，根据选择的数据和自身保存的第二记录数据生成第二应用密文；当第二业务数据包含多个数据段时，根据选择的数据、第二业务数据中除第一个数据段之外的其他数据以及第二记录数据生成第二应用密文。其中，处理结果中位于第一预设位置的数据可以为处理结果中位置最靠后的4字节的数据，位于第二预设位置的数据可以为位置最靠后的8位数据，第二业务数据可以为用户通过客户端输入的业务数据；第二记录数据的取值可以与第一记录数据的取值相同。</p>
+    <p>[0218]例如，种子密钥为	“0xlA1002DC6489E3E345ADF23B321C2A97”，用户输入的第二业务数据仅包含一个数据段“1234567890”时，认证服务器将该数据段补零至8字节数据“0x0000 0012 3456 7890”，并使用种子密钥对补零后得到的数据进行哈希处理后，得到的处理结果为 “0x96E4 5587 632F 8D36 5429 2C6F F150 310F 688D E125”，从处理结果中选择位置最靠后的4字节的数据，即“0x688D E125”，将选择的数据转换为对应的十进制数据，得到“1754128677”，从转换得到的数据中选择位置最靠后的8位数据，即“54128677”，并使用“54128677”和第二记录数据生成第二应用密文。</p>
+    <p>[0219]当种子密钥为“	Ox 1A1002DC6489E3E345ADF23B321C2A97 ”，用户输入的第 二业务数据包含第一个数据段“3344”和第二个数据段“543231”时，认证服务器将第一个数据段补零至8字节数据“0x0000 0000 0000 3344”，并使用种子密钥对补零后得到的数据进行哈希处理后，得到的处理结果为“0xECD5 09F6 2C7A 846D FD9D 71E1 596C 5191 B5FA6CF2”，从处理结果中选择位置最靠后的4字节的数据，S卩“Ox B5FA 6CF2”将选择的数据转换为对应的十进制数据，得到“53087986”，从转换得到的数据中选择位置最靠后的8位数据，即“53087986”，并使用“53087986”、用户输入的第二业务数据中的第二数据段“543231”以及第二记录数据生成第二应用密文。</p>
+    <p>[0220]	步骤606，认证服务器判断第二应用密文是否与第一应用密文相同，如果是，则执行步骤607 ;否则，执行步骤608。</p>
+    <p>[0221]	步骤607，认证服务器向客户端发送认证成功消息，结束流程。</p>
+    <p>[0222]	步骤608，认证服务器向客户端发送认证失败消息，结束流程。</p>
+    <p>[0223]	本发明实施例中，动态口令设备可基于事件同步、挑战/应答、交易签名等方式生成一次性动态口令，该动态口令可应用于网银、电话银行和手机银行的身份认证操作，在离线和各种复杂支付场合实现随时随地对应用系统的用户进行身份验证，有效地防止了身份盗用、冒用以及身份欺诈，提高了网络系统的安全性。</p>
+    <p>[0224]	基于上述动态口令设备的工作方法，本发明实施例还提供了一种动态口令设备，如图7所示,包括:</p>
+    <p>[0225]	检测模块701，用于检测用户是否触发按键；</p>
+    <p>[0226]	第一生成模块702，用于在所述检测模块701检测到用户触发第一按键时，获取与所述第一按键对应的应用标识，根据所述应用标识生成应用选择命令；</p>
+    <p>[0227]	第一发送模块703，用于将所述第一生成模块702生成的所述应用选择命令发送给所述智能卡；</p>
+    <p>[0228]	第一接收模块704，用于接收所述智能卡返回的第一响应报文；</p>
+    <p>[0229]	第一判断模块705，用于判断所述第一接收模块704接收到的第一响应报文是否为符合第一预设格式的报文，所述符合第一预设格式的报文包括第一状态码和第一数据域，所述第一状态码的取值为第一预设值，所述第一数据域中包含文件控制信息，所述文件控制信息中包含处理选项数据对象列表以及与所述应用标识相同的专用文件名称；</p>
+    <p>[0230]	第二生成模块706,用于在所述第一判断模块705判断所述第一响应报文为符合第一预设格式的报文时，从所述第一响应报文中获取所述处理选项数据对象列表，根据所述处理选项数据对象列表生成获取处理选项命令；</p>
+    <p>[0231]	第二发送模块707，用于将所述第二生成模块706生成的所述获取处理选项命令发送给所述智能卡；</p>
+    <p>[0232]	第二接收模块708，用于接收所述智能卡返回的第二响应报文；</p>
+    <p>[0233]	第二判断模块709，用于判断所述第二接收模块708接收到的第二响应报文是否为符合第二预设格式的报文，所述符合第二预设格式的报文包括第二状态码和第二数据域，所述第二状态码的取值为第二预设值，所述第二数据域中包含应用文件定位器；</p>
+    <p>[0234]	第三生成模块710，用于在所述第二判断模块709判断所述第二响应报文为符合第二预设格式的报文时，从所述第二响应报文中获取应用文件定位器，根据所述应用文件定位器生成读记录命令；</p>
+    <p>[0235]	第三发送模块711，用于将所述第三生成模块710生成的所述读记录命令发送给所述智能卡；</p>
+    <p>[0236]	第三接收模块712，用于接收所述智能卡返回的第三响应报文；</p>
+    <p>[0237]	第三判断模块713，用于判断所述第三接收模块712接收到的第三响应报文是否为符合第三预设格式的报文，所述符合第三预设格式的报文包括第三状态码和第三数据域，所述第三状态码的取值为第三预设值，所述第三数据域中包含第一记录数据；</p>
+    <p>[0238]	第四生成模块714，用于在所述第三判断模块713判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，根据自身保存的种子密钥和第一预设数据生成第一挑战码，根据所述第一记录数据和所述第一挑战码生成应用密文生成命令；</p>
+    <p>[0239]	或者，在所述第三判断模块713判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第二挑战码进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令；</p>
+    <p>[0240]	或者，在所述第三判断模块713判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用自身保存的种子密钥对用户输入的第一业务数据进行处理，根据处理结果和所述第一记录数据生成应用密文生成命令；</p>
+    <p>[0241]	具体地，第四生成模块714，具体用于在所述第三判断模块713判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用所述种子密钥对所述第一预设数据进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据作为所述第一挑战码，根据所述第一记录数据和所述第一挑战码生成所述应用密文生成命令；</p>
+    <p>[0242]	或者，在所述第三判断模块713判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用所述种子密钥对所述第二挑战码进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，根据选择的数据生成所述应用密文生成命令；</p>
+    <p>[0243]	或者，在所述第三判断模块713判断所述第三响应报文为符合第三预设格式的报文时，从所述第三响应报文中获取第一记录数据，使用所述种子密钥对所述第一业务数据中的第一个数据段进行哈希处理，从处理结果中选择位于第一预设位置的数据，将选择的数据转换为对应的十进制数据，从转换得到的数据中选择位于第二预设位置的数据，当所述第一业务数据仅包含一个数据段时，根据选择的数据生成所述应用密文生成命令；当所述第一业务数据包含多个数据段时，根据选择的数据以及所述第一业务数据中除所述第一个数据段之外的其他数据生成所述应用密文生成命令。</p>
+    <p>[0244]	第四发送模块715，用于将所述第四生成模块714生成的所述应用密文生成命令发送给所述智能卡；</p>
+    <p>[0245]	第四接收模块716，用于接收所述智能卡返回的第四响应报文；</p>
+    <p>[0246]	第四判断模块717，用于判断所述第四接收模块716接收到的第四响应报文是否为符合第四预设格式的报文，所述符合第四预设格式的报文包括第四状态码和第四数据域，所述第四状态码的取值为第四预设值，所述第四数据域中包含第一应用密文；</p>
+    <p>[0247]	显示模块718，用于在所述第一判断模块705判断所述第一响应报文不是符合第一预设格式的报文时，显示错误信息；在所述第二判断模块709判断所述第二响应报文不是符合第二预设格式的报文时，显示错误信息；在所述第三判断模块713判断所述第三响应报文不是符合第三预设格式的报文时，显示错误信息；在所述第四判断模块717判断所述第四响应报文不是符合第四预设格式的报文时，显示错误信息；</p>
+    <p>[0248]	第五生成模块719，用于在所述第四判断模块717判断所述第四响应报文为符合第四预设格式的报文时，从所述第四响应报文中获取第一应用密文，根据所述第一应用密文生成动态口令。</p>
+    <p>[0249]	进一步地,上述动态口令设备,还包括:</p>
+    <p>[0250]	第五判断模块720，用于判断所述智能卡是否与所述动态口令设备匹配；</p>
+    <p>[0251]	具体地，上述第五判断模块720，具体用于获取所述智能卡的应用标识符，判断所述智能卡的应用标识符是否包含在所述动态口令设备存储的预设列表中，如果是，则确定所述智能卡与所述动态口令设备匹配；否则，确定所述智能卡与所述动态口令设备不匹配。</p>
+    <p>[0252]	相应地，上述检测模块701，具体用于在所述第五判断模块720判断所述智能卡与所述动态口令设备匹配时，检测用户是否触发按键。</p>
+    <p>[0253]	上述显示模块718，还用于在所述第五判断模块720判断所述智能卡与所述动态口令设备不匹配时，显示错误信息。</p>
+    <p>[0254]	本发明实施例中，动态口令设备可基于事件同步、挑战/应答、交易签名等方式生成一次性动态口令，该动态口令可应用于网银、电话银行和手机银行的身份认证操作，在离线和各种复杂支付场合实现随时随地对应用系统的用户进行身份验证，有效地防止了身份盗用、冒用以及身份欺诈，提高了网络系统的安全性。</p>
+    <p>[0255]	结合本文中所公开的实施例描述的方法中的步骤可以直接用硬件、处理器执行的软件模块，或者二者的结合来实施。软件模块可以置于随机存储器(RAM)、内存、只读存储器(ROM)、电可编程ROM、电可擦除可编程ROM、寄存器、硬盘、可移动磁盘、CD-ROM、或技术领域内所公知的任意其它形式的存储介质中。</p>
+    <p>[0256]	以上所述，仅为本发明的具体实施方式，但本发明的保护范围并不局限于此，任何熟悉本技术领域的技术人员在本发明揭露的技术范围内，可轻易想到变化或替换，都应涵盖在本发明的保护范围之内。因此，本发明的保护范围应所述以权利要求的保护范围为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101051908A?cl=zh">CN101051908A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年5月21日</td><td class="patent-data-table-td patent-date-value">2007年10月10日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">动态密码认证系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101163014A?cl=zh">CN101163014A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年11月30日</td><td class="patent-data-table-td patent-date-value">2008年4月16日</td><td class="patent-data-table-td ">中国电信股份有限公司</td><td class="patent-data-table-td ">一种动态口令身份认证系统和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102377783A?cl=zh">CN102377783A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月7日</td><td class="patent-data-table-td patent-date-value">2012年3月14日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种动态口令生成及认证的方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015188424A1?cl=zh">WO2015188424A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年7月18日</td><td class="patent-data-table-td patent-date-value">2015年12月17日</td><td class="patent-data-table-td ">北京石盾科技有限公司</td><td class="patent-data-table-td ">一种密钥存储设备及其使用方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=AmjTCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=AmjTCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年9月18日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年10月23日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/f25352ce3ffa1355d58c/CN103312519A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%8A%A8%E6%80%81%E5%8F%A3%E4%BB%A4%E8%AE%BE%E5%A4%87%E5%8F%8A%E5%85%B6%E5%B7%A5%E4%BD%9C%E6%96%B9.pdf?id=AmjTCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3ID4Cbj9LnV09wNDCbBgC_JOl9qw"},"sample_url":"https://www.google.com/patents/reader?id=AmjTCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

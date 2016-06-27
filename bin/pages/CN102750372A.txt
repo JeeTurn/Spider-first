@@ -1,0 +1,208 @@
+<!DOCTYPE html><html><head><title>专利 CN102750372A - 自动获取网页结构化信息的分析方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="自动获取网页结构化信息的分析方法"><meta name="DC.contributor" content="张志强" scheme="inventor"><meta name="DC.contributor" content="张长水" scheme="inventor"><meta name="DC.contributor" content="翁时锋" scheme="inventor"><meta name="DC.contributor" content="翁时锋" scheme="assignee"><meta name="DC.date" content="2012-6-15" scheme="dateSubmitted"><meta name="DC.description" content="本发明提出一种自动获取网页结构化信息的分析方法，包括以下步骤：（1）将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数；（2）根据矩形参数检测T-Point，并将有效T-Point覆盖的范围作为列表区域，所述T-Point为相邻矩形上方公共的顶点；（3）从所述列表区域中检测出所有数据记录，所述数据记录是指网页列表页面中记录数据的单位；（4）将不同数据记录中具有相同类型或相同语义的数据项对应起来，形成数据项列；（5）对数据项列的语义进行确认。本发明可以大大提高网页结构化信息自动分析的精确度、稳定性和时效性。"><meta name="DC.date" content="2012-10-24"><meta name="DC.relation" content="CN:101561802:A" scheme="references"><meta name="DC.relation" content="CN:101727498:A" scheme="references"><meta name="DC.relation" content="CN:102156742:A" scheme="references"><meta name="DC.relation" content="CN:102317937:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102750372:A"><meta name="citation_patent_application_number" content="CN:201210202309"><link rel="canonical" href="https://www.google.com/patents/CN102750372A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102750372A?cl=zh"/><meta name="title" content="专利 CN102750372A - 自动获取网页结构化信息的分析方法"/><meta name="description" content="本发明提出一种自动获取网页结构化信息的分析方法，包括以下步骤：（1）将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数；（2）根据矩形参数检测T-Point，并将有效T-Point覆盖的范围作为列表区域，所述T-Point为相邻矩形上方公共的顶点；（3）从所述列表区域中检测出所有数据记录，所述数据记录是指网页列表页面中记录数据的单位；（4）将不同数据记录中具有相同类型或相同语义的数据项对应起来，形成数据项列；（5）对数据项列的语义进行确认。本发明可以大大提高网页结构化信息自动分析的精确度、稳定性和时效性。"/><meta property="og:title" content="专利 CN102750372A - 自动获取网页结构化信息的分析方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102750372A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102750372A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=mKWqBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102750372A&amp;usg=AFQjCNHnJUOhXo4AatQmlSPnikQtbx7Ymg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/e4030bd4f4a9dd7a44fe/CN102750372A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/e4030bd4f4a9dd7a44fe/CN102750372A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102750372A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102750372A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102750372A?cl=zh" style="display:none"><span itemprop="description">本发明提出一种自动获取网页结构化信息的分析方法，包括以下步骤：（1）将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数；（2）根据矩形参数检测T-Point，并将有效T-Point覆盖的范围作为列表 ...</span><span itemprop="url">https://www.google.com/patents/CN102750372A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102750372A - 自动获取网页结构化信息的分析方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102750372A - 自动获取网页结构化信息的分析方法" title="专利 CN102750372A - 自动获取网页结构化信息的分析方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102750372 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210202309</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年10月24日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年6月15日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年6月15日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210202309.X, </span><span class="patent-bibdata-value">CN 102750372 A, </span><span class="patent-bibdata-value">CN 102750372A, </span><span class="patent-bibdata-value">CN 201210202309, </span><span class="patent-bibdata-value">CN-A-102750372, </span><span class="patent-bibdata-value">CN102750372 A, </span><span class="patent-bibdata-value">CN102750372A, </span><span class="patent-bibdata-value">CN201210202309, </span><span class="patent-bibdata-value">CN201210202309.X</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E5%BF%97%E5%BC%BA%22">张志强</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E9%95%BF%E6%B0%B4%22">张长水</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%BF%81%E6%97%B6%E9%94%8B%22">翁时锋</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E7%BF%81%E6%97%B6%E9%94%8B%22">翁时锋</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102750372A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102750372A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102750372A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=mKWqBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210202309&amp;usg=AFQjCNHCqpFeNAl_11aq2K7F3oB3D4_JSg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=mKWqBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102750372A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHt9F6gmgmddahy2HreLPh1QgjJlg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT116427341" lang="ZH" load-source="patent-office">自动获取网页结构化信息的分析方法</invention-title>
+      </span><br><span class="patent-number">CN 102750372 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA101413578" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提出一种自动获取网页结构化信息的分析方法，包括以下步骤：（1）将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数；（2）根据矩形参数检测T-Point，并将有效T-Point覆盖的范围作为列表区域，所述T-Point为相邻矩形上方公共的顶点；（3）从所述列表区域中检测出所有数据记录，所述数据记录是指网页列表页面中记录数据的单位；（4）将不同数据记录中具有相同类型或相同语义的数据项对应起来，形成数据项列；（5）对数据项列的语义进行确认。本发明可以大大提高网页结构化信息自动分析的精确度、稳定性和时效性。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM45952766" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种自动获取网页结构化信息的分析方法，其特征在于，包括以下步骤：  (1)将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数；  (2)根据矩形参数检测T-Point，并将有效T-Point覆盖的范围作为列表区域，所述T-Point为相邻矩形上方公共的顶点；  (3)从所述列表区域中检测出所有数据记录，所述数据记录是指网页列表页面中记录数据的单位；  (4)将不同数据记录中具有相同类型或相同语义的数据项对应起来，形成数据项列；  (5)对数据项列的语义进行确认。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述的自动获取网页结构化信息的分析方法，其特征在于，步骤（I)中，采用开源引擎WebKit对原始列表页面进行渲染。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求I所述的自动获取网页结构化信息的分析方法，其特征在于，步骤（I)之后还包括步骤：  (11)将原始列表页面的HTML文本中显示效果的功能性节点去除，形成只含有真正内容的DOM树；  (12)将DOM树中结构用途的非显示节点的几何参数设置成包围所有子节点的最小矩形；  (13)将所有的文本都封装入〈text〉元素节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求I所述的自动获取网页结构化信息的分析方法，其特征在于，步骤（2)中，所述T-Point包括相邻矩形上方完全重合的顶点，以及相邻矩形上方没有完全重合，且横向距离不超过S的两个顶点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求I所述的自动获取网页结构化信息的分析方法，其特征在于，步骤（2)中，将有效T-Point覆盖的范围作为列表区域之前包括：从检测到的T-Point中，找出并过滤掉无效的T-Point。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的自动获取网页结构化信息的分析方法，其特征在于，找出并过滤掉无效的T-Point包括以下步骤：  (21)为每一个检测到的T-Point赋予一个权重值，所述T-Point的权重值等于与其相邻的T-Point的数量,所述相邻的T-Point指横坐标或纵坐标相同；  (22)计算所有T-Point的平均权重值；  (23)将权重偏离平均权重值的T-Point作为无效T-Point过滤掉。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求I所述的自动获取网页结构化信息的分析方法，其特征在于，步骤（3)中，从所述列表区域中检测出所有数据记录包括：  (31)形成所述列表区域的DOM子树；  (32)排除所述列表区域DOM子树中，有效T-Point横向形成的行的数目多于2的节点；  (33)排除所述列表区域DOM子树中，有效T-Point只出现在矩形两个竖边界上的节占.  (34)排除所述列表区域DOM子树中，有效T-Point只有一个的节点；  (35)将所述列表区域DOM子树中剩余的每个节点作为数据记录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求I所述的自动获取网页结构化信息的分析方法，其特征在于，步骤（4)中，利用聚类方式将不同数据记录中具有相同类型或相同语义的数据项对应起来，并形成数据项列。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求8所述的自动获取网页结构化信息的分析方法，其特征在于，所述聚类方式所采用的距离函数为：--     dist(no,ni) = y aT(domjiiff(no, &#171;i)) + bT{visualjdif f{nQ,n\))   其中，dom_diff (n0, Ii1)表示节点nQ和Ii1的DOM树结构差异的特征向量，visual_diff (n0, Ii1)表示nQ和Ii1之间显示差异的特征向量，a, b为混合权重向量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求I所述的自动获取网页结构化信息的分析方法，其特征在于，步骤（5) 中，对数据项列的语义进行确认包括：  (51)利用监督学习方法获得语义分析器；  (52)利用语义分析器对数据项列的语义进行确认。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES52307151" lang="ZH" load-source="patent-office" class="description">
+    <p>自动获取网页结构化信息的分析方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及一种互联网网页分析方法，特别涉及一种自动获取网页结构化信息的分析方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着互联网技术的不断发展，Web2. 0概念正在兴起，信息的传递方向变得更加多元。在传统的从少数点（大型新闻媒体，信息提供者）向全网（普通用户，信息消费者）辐射的自顶向下的信息传递模式之后，由普通用户产生而在网络上不断传播的自底向上的信息流动模式正变得越来越普遍。海量的内容由普通用户通过社交网络、博客、微博、论坛等新兴Web2. 0媒介产生出来，并最终被其它用户消费。 </p>
+    <p>[0003]	这些用户产生的海量内容蕴含了大量有价值的信息和知识，潜在的应用包括舆情分析、垂直搜索、知识问答等。为了能够分析和利用它们，我们首要的任务就是要准确地获取它们。而拥有众多用户的传统媒介论坛就成了其中主要的一部分。</p>
+    <p>[0004]	图I绘示了一个典型的论坛列表页。虚线的方框分别标明了文章标题、作者、发帖时间和最后回复时间。文章标题、作者、发帖时间、最后回复时间这些是文章最重要的结构化信息。实线的方框指示了数据记录，每一条数据记录对应一篇论坛文章。所有实线框联合起来的范围，称为列表区域。因此，一个列表区域包含了多条数据记录。</p>
+    <p>[0005]	通常情况下，论坛中的数据存储于后台数据库中，当用户访问某一页面时，网站自动将所需内容填充到特定模板当中，展示给用户。网络数据自动采集器(也叫爬虫、蜘蛛或者Spider)不能直接访问后台数据库，只能通过网页访问论坛，然后对网页数据进行采集。但由于网站的多样性，不同的网站会根据需求采用不同的论坛系统，即便是同一个论坛系统，也存在不同的版本以及个性化更改，这就造成了模板的多样性，相互不一致。这就为数据的自动结构化采集带来了很大的困难。</p>
+    <p>[0006]	对于上述网页结构化信息自动分析问题，已有的技术方案可以分为以下三类：</p>
+    <p>[0007]	I.采集整个网页，保存下来，而对网页中的结构化的字段不作一一分析。在一般的通用搜索引擎中，例如Baidu和Google中，基本上采用这种回避式的策略。这种采集方式获得的结果，无法展现出网页各个细节的结构化字段，大多只能展现整个网页。</p>
+    <p>[0008]	2、直接考察网页的DOM结构的方法。DOM (Document Object Model，文档对象模型)，可以用来表示HTML、XML等文档，使得这些文档便于被处理。在DOM模型中，HTML或XML文档被表达为树状结构，每一个节点对应于文档中的一对标签，分别表示节点的开始和结束。为了在大规模应用中能够自动分析网页的结构化内容，人们提出了一些基于对网页DOM结构的直接考察的列表区域检测方法。考虑包括标签类型以及树相似度等因素。这些方法带有很强的经验性，而网页本身又具有很大的灵活性。同时这些方法往往着眼于甚至只考虑了 html语言的结构特点，而忽视了网页本身的可视化特性(差别极大的代码可能生成在表现视觉上完全一样的网页)，所以会给检测带来较大的不稳定性。</p>
+    <p>[0009]	3、人工标注。当需要精确获取网页数据的很多应用中，前两个方法就不再能满足需求。在这种情况下，人工标注往往成了最可行、甚至是唯一的方法。但通过人工标注，不仅耗费大量人力，而且时效性差，在网站格式发生变动时，响应时间往往会比较长。</p>
+    <p>[0010]	综上所述，现有的网页结构化信息自动分析方法存在精确度低、稳定性低、时效性差的问题。</p>
+    <p>发明内容</p>
+    <p>[0011]	本发明的目的是提供一种自动获取网页结构化信息的分析方法，以解决现有的网页结构化信息自动分析方法存在精确度低、稳定性低、时效性差的问题。</p>
+    <p>[0012]	本发明提出一种自动获取网页结构化信息的分析方法，包括以下步骤：</p>
+    <p>[0013]	(I)将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数； </p>
+    <p>[0014]	(2)根据矩形参数检测T-Point，并将有效T-Point覆盖的范围作为列表区域，所述T-Point为相邻矩形上方公共的顶点；</p>
+    <p>[0015]	(3)从所述列表区域中检测出所有数据记录，所述数据记录是指网页列表页面中记录数据的单位；</p>
+    <p>[0016]	(4)将不同数据记录中具有相同类型或相同语义的数据项对应起来，形成数据项列；</p>
+    <p>[0017]	(5)对数据项列的语义进行确认。</p>
+    <p>[0018]	进一步的，步骤（I)中，采用开源引擎WebKi t对原始列表页面进行渲染。</p>
+    <p>[0019]	进一步的，步骤（I)之后还包括步骤：</p>
+    <p>[0020]	(11)将原始列表页面的HTML文本中显示效果的功能性节点去除，形成只含有真正内容的DOM树；</p>
+    <p>[0021]	(12)将DOM树中结构用途的非显示节点的几何参数设置成包围所有子节点的最小矩形；</p>
+    <p>[0022]	( 13)将所有的文本都封装入〈text〉元素节点。</p>
+    <p>[0023]	进一步的，步骤（2)中，所述T-Point包括相邻矩形上方完全重合的顶点，以及相邻矩形上方没有完全重合，且横向距离不超过5的两个顶点。</p>
+    <p>[0024]	进一步的，步骤（2)中，将有效T-Point覆盖的范围作为列表区域之前包括：从检测到的T-Point中，找出并过滤掉无效的T-Point。</p>
+    <p>[0025]	进一步的，找出并过滤掉无效的T-Point包括以下步骤：</p>
+    <p>[0026]	(21)为每一个检测到的T-Point赋予一个权重值，所述T-Point的权重值等于与其相邻的T-Point的数量,所述相邻的T-Point指横坐标或纵坐标相同；</p>
+    <p>[0027]	(22)计算所有T-Point的平均权重值；</p>
+    <p>[0028]	(23)将权重偏离平均权重值的T-Point作为无效T-Point过滤掉。</p>
+    <p>[0029]	进一步的，步骤（3)中，从所述列表区域中检测出所有数据记录包括：</p>
+    <p>[0030]	(31)形成所述列表区域的DOM子树；</p>
+    <p>[0031]	(32)排除所述列表区域DOM子树中，有效T-Point横向形成的行的数目多于2的节点；</p>
+    <p>[0032]	(33)排除所述列表区域DOM子树中，有效T-Point只出现在矩形两个竖边界上的节点；</p>
+    <p>[0033]	(34)排除所述列表区域DOM子树中，有效T-Point只有一个的节点；</p>
+    <p>[0034]	(35)将所述列表区域DOM子树中剩余的每个节点作为数据记录。</p>
+    <p>[0035]	进一步的，步骤（4)中，利用聚类方式将不同数据记录中具有相同类型或相同语义的数据项对应起来，并形成数据项列。</p>
+    <p>[0036]	进一步的，所述聚类方式所采用的距离函数为：</p>
+    <p>[0037]	dist(m, n-i) = \JaT(domjdif /(no,&#171;i)) 4 bT{visualjiif /(n&#187;,Ri))</p>
+    <p>[0038]	其中，dom_diff (n0, Ii1)表示节点nQ和Ii1的DOM树结构差异的特征向量，visual_diff (n0, Ii1)表示nQ和Ii1之间显示差异的特征向量，a, b为混合权重向量。 </p>
+    <p>[0039]	进一步的，步骤（5)中，对数据项列的语义进行确认包括：</p>
+    <p>[0040]	(51)利用监督学习方法获得语义分析器；</p>
+    <p>[0041]	(52)利用语义分析器对数据项列的语义进行确认。</p>
+    <p>[0042]	相对于现有技术，本发明的有益效果是：</p>
+    <p>[0043]	I、本发明突破性地提出并应用了网页可视化特征点（T-Point)，并利用网页可视化特征点（T-Point)准确地提取检测列表区域，从而大大提高了网页结构化信息自动分析的精确度、稳定性和时效性。</p>
+    <p>[0044]	2、本发明将聚类方法应用于数据项的对齐，可以使得准确率大大提高，同时运行时间大大缩短。</p>
+    <p>[0045]	3、本发明提出计算节点距离的算法框架，这使得我们的方法在实际应用时拥有很高的灵活性，可以适用于不同场合。</p>
+    <p>[0046]	4、本发明使用分类器方法识别数据记录的列表项语义，使数据项的语义分类更加准确。</p>
+    <p>附图说明</p>
+    <p>[0047]	图I为典型的一个论坛列表页示意图；</p>
+    <p>[0048]	图2为本发明自动获取网页结构化信息的分析方法的一种实施例流程图；</p>
+    <p>[0049]	图3为本发明预处理的一种详细流程图；</p>
+    <p>[0050]	图4为图I的页面经渲染后的示意图；</p>
+    <p>[0051]	图5为处于同一高度的两个相邻矩形形成一个T形结构的示意图；</p>
+    <p>[0052]	图6为处于同一高度的两个相邻矩形形成另一个T形结构的示意图；</p>
+    <p>[0053]	图7为本发明列表区域检测的一种详细流程图；</p>
+    <p>[0054]	图8为以图4的页面为基础找出T-Point的页面示意图；</p>
+    <p>[0055]	图9为本发明数据记录检测的一种详细流程图；</p>
+    <p>[0056]	图10为节点两个节点之间的几何距离示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0057]	请参见图2，其为本发明自动获取网页结构化信息的分析方法的一种实施例流程图，其包括预处理S210、列表区域检测S220、数据记录检测S230、数据项对齐S240及数据列语义确认S250五个步骤。预处理S210主要目的是将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数；列表区域检测S220主要目的是根据矩形参数检测T-Point，并将有效T-Point覆盖的范围作为列表区域，所述T-Point为相邻矩形上方公共的顶点；数据记录检测S230主要目的是从所述列表区域中检测出所有数据记录，所述数据记录是指网页列表页面中记录数据的单位；数据项对齐S240主要目的是将不同数据记录中具有相同类型或相同语义的数据项对应起来，形成数据项列；数据列语义确认S250主要目的是对数据项列的语义进行确认。</p>
+    <p>[0058]	以下对本发明进行分步详细说明。</p>
+    <p>[0059]	S210，预处理。</p>
+    <p>[0060]	互联网上广泛地使用超文本标记语言（Hypertext Markup Language, HTML)来描述网页的显示内容。浏览器根据HTML文档中的定义，将文字、图片、视频、超链接等内容可视化地以网页形式呈现在用户面前。需要注意的是，HTML关注于最终的显示效果，而不是实现方法，于是，即使HTML文件有很大的差异，显示效果也有可能是一样的。所以，在得到 网页原始的HTML代码之后，我们首先获取其可视化后的相关信息。</p>
+    <p>[0061]	在预处理过程中，在完成页面渲染(步骤S211)的前提下，优选的还可以清理多余节点（步骤S212)，梳理可视化信息(步骤S213)，将文本节点封装入〈text〉标签中（步骤S214)，以便于后续的计算。具体来说，请参见图3，预处理又可以包括以下步骤：</p>
+    <p>[0062]	S211，将原始列表页面中每一个可显示元素均渲染为矩形，并为每个矩形均赋予坐标参数。</p>
+    <p>[0063]	本发明优选采用开源引擎WebKit对原始页面进行渲染，取得页面真实的显示效果。大部分网页中的元素将会显示在最终的网页中，但也有少部分元素承担着HTML语言本身相关的功能，在最终网页中并没有可显示对象与其对应。同时，在网页最终的渲染结果中，HTML的每一个可显示元素将被显示成一个矩形，以描述其大小及位置，以图I的页面为例，经过渲染后便形成如图4所示的可显示页面。对于可显示元素，开源引擎WebKit将返回其显示矩形的参数(包括位置及大小)，而对于其它具有某些特定功能的非显示元素，开源引擎WebKit返回O。</p>
+    <p>[0064]	S212，将原始列表页面的HTML文本中显示效果的功能性节点去除，形成只含有真正内容的DOM树。</p>
+    <p>[0065]	在HTML中除了包含有真正的网页内容外，还包含大量描述显示效果的参数等功能性节点。在渲染结束后，可以将这些节点去除，从而得到只含有真正内容的DOM树，使后续的计算更加简洁。具体来说，可以去除所有〈style〉，〈script〉，〈comments〉，〈link〉，&lt;meta&gt;等元素的节点，去除了所有嵌入对象,如flash等,和各种处理指令。</p>
+    <p>[0066]	S213，从所述列表区域中检测出所有数据记录，所述数据记录是指网页列表页面中记录数据的单位。</p>
+    <p>[0067]	在清理多余节点之后，仍然存在一些结构用途的非显示节点，它们的显示信息为空。为了让之后的处理保持一致性，将它们的几何参数设置成包围所有子节点的最小矩形。</p>
+    <p>[0068]	S214，将所有的文本都封装入〈text〉元素节点。</p>
+    <p>[0069]	最后，为了简化后面的处理过程，将所有的文本都封装入〈text〉元素节点。这样就得到了以XML表现的原网页包含有可视化信息的DOM树结构。</p>
+    <p>[0070]	S220，列表区域检测。[0071]	以前的列表区域检测方法通常基于对网页DOM结构的直接考察，考虑包括标签类型以及树相似度等因素。这些方法带有很强的经验性，而网页本身又具有很大的灵活性，同时这些方法往往只考虑了 html语言的结构特点，忽视了 html是用于描述可视化界面这一本质特征(差别极大的代码可能都在表现视觉上完全一样的网页)，所以会给检测带来较大的不稳定性。</p>
+    <p>[0072]	本发明提出了使用网页最终的渲染结果作为主要信息来源。基于经过渲染的页面可以发现，T形特征点对列表有良好的区分能力，并对来自不同模板的页面有优秀的自适应性能。</p>
+    <p>[0073]	具体来说，请参见图5，当两个相邻的矩形的一条竖直的边重合，而上方的边处于同一高度时，会形成一个T形结构。当考虑一个经渲染的页面时，由于页面中存在的大量相邻的单元格，所以会相应产生大量这样的微观结构。 [0074]	其中，三条边的交点是T形结构最具代表性的特征，在本发明中定义为：当两个元素的包围矩形相邻，且有公共上方顶点时，共用顶点被称为T-Point。所以本发明以T-Point作为列表区域检测的一个微观特征。</p>
+    <p>[0075]	为了提高稳定性，请参见图6，可以将上方顶点没有完全重合，但横向距离不超过6的两个顶点也同时认为是一个T-Point。在系统实现中，优选取S的值为I。</p>
+    <p>[0076]	列表区域检测共分为两步：第一步就是根据页面的可视化信息和T-Point的定义，检测出所有的T-Point ;第二步则是要估计出属于列表区域的T-Point集合，进而找到列表区域及相应的DOM节点,请参见图7,具体过程如下：</p>
+    <p>[0077]	S221，根据矩形参数检测T-Point。</p>
+    <p>[0078]	由于在预处理过程中，已经将页面中显示矩形的参数(包括位置及大小）输出，所以利用这些矩形参数，很容易就能找出页面中所有的T-Point。请参见图8，其是以图4的页面为基础找出T-Point的页面示意图。其中实心和空心的方块都是页面的T-Point。</p>
+    <p>[0079]	S222，将有效T-Point覆盖的范围作为列表区域。</p>
+    <p>[0080]	本发明所述的列表区域是指页面上数据记录所组成的区域，在图I中实线框构成的区域即列表区域。但是从图4中T-Point的分布位置来看，根据步骤S221找出的T-Point，有一些是在列表区域之外的，因而这里应当从检测到的T-Point中，找出并过滤掉无效的T-Point，以提高检测的准确性。具体确定列表区域的过程如下：</p>
+    <p>[0081]	I)首先为每一个检测到的T-Point赋予一个权重值，所述T-Point的权重值等于与其相邻的T-Point的数量,所述相邻的T-Point指横坐标或纵坐标相同。</p>
+    <p>[0082]	2)计算所有T-Point的平均权重值，并将权重偏离平均权重值的T-Point作为无效T-Point过滤掉。</p>
+    <p>[0083]	以对图8所示页面检测为例，以所有T-Point为顶点（实心和空心的方块)，并按照T-Point间的相邻关系将T-Point进行连接,可以构造出一个无向图。然后找出无向图中的最大连通分量（即虚线标出的部分)，然后将权重偏离平均值较大的点作为噪声过滤掉(即将实心方块过滤掉)，剩下的点（即空心方块)作为有效T-point集合。对比图I发现，此时实心方块T-Point覆盖范围正是原网页中的列表区域。</p>
+    <p>[0084]	3)最后在网页DOM树上寻找到能够包含所有构成有效T-Point的元素的最小子树，并认为其包含列表区域，从而可以确定页面中所有的列表区域。[0085]	S230，数据记录检测。</p>
+    <p>[0086]	本发明的数据记录是指网页列表页面中记录数据的单位，即在图I中，数据记录显示为单个实线框。在获得列表区域以及有效T-Point集合的基础上，通过检测每一个节点来确认所有可能的数据记录项。</p>
+    <p>[0087]	对列表区域DOM子树上的每一个节点，请参见图9，本发明可以采用如下步骤来检测数据记录：</p>
+    <p>[0088]	S231，排除所述列表区域DOM子树中，有效T-Point横向形成的行的数目多于2的节点。 [0089]	经渲染后的页面上，一条数据记录所最外围形成的边界，必然也是由T-Point构成的一个矩形，即由4个T-Point构成两行，而各数据项是包含在数据记录中的一个个小矩形，因此若一个节点的有效T-Point构成的行不止2个，说明该节点中包含多个并排关系的矩形，可能是由多个数据记录组成的，也可能是一个列表区域，所以排除此类节点。</p>
+    <p>[0090]	S232，排除所述列表区域DOM子树中，有效T-Point只出现在矩形两个竖边界上的节点。</p>
+    <p>[0091]	对于一个数据记录，其中必然包括多个数据项，例如图I所示单个实线框所示的数据记录，其中涵盖有“文章标题”、“作者”、“回复时间”等多个数据项所显示的矩形，即一个数据记录中应该包括多个矩形，所以如果一个节点中的有效T-Point只出现在矩形两个竖边界上，则说明这个节点显示的只是单一一个矩形，很有可能只是一个数据项，或者甚至没有形成矩形，所以要过滤掉此类节点。</p>
+    <p>[0092]	S233，排除所述列表区域DOM子树中，有效T-Point只有一个的节点。</p>
+    <p>[0093]	一条数据记录必然会显示为一个矩形，所以只有单一 T-Point的节点无法构成矩形，必然不是数据记录，需要排除。</p>
+    <p>[0094]	S234，将所述列表区域DOM子树中剩余的每个节点作为数据记录。</p>
+    <p>[0095]	S240，数据项对齐。</p>
+    <p>[0096]	本发明的目的是充分分析网页的结构化信息，其中网页中的每一组数据记录都共同包含很多拥有某些意义的数据项，比如“文章标题”、“作者”、“回复时间”等，而这些数据项的排列规则具有一定规律，具体的，他们在显示时会形成列。但同时，在不同的数据记录中，可能存在着自身特有的数据，以及诸如分隔符等辅助元素，使得不同数据记录的格式并不整齐。这种不整齐当只在考虑它们的DOM树结构时，表现的尤为明显。此步骤的任务就是将不同数据记录中具有相同类型或相同语义的数据项提取出来并对齐，形成数据项列。</p>
+    <p>[0097]	对于属于同一意义下的数据项，都具有一定的相似性，如结构上所对应的HTML节点标签相同、相应的DOM子树结构相似，显示上位置都处于同一列、有相近的大小等。本发明同时基于DOM树的结构特征以及相应可视化特征，优选地提出了以聚类方式解决这一问题。</p>
+    <p>[0098]	该任务被分为两个子任务：</p>
+    <p>[0099]	I)计算任意两个节点的距离</p>
+    <p>[0100]	首先给出节点间的距离定义。本发明在距离度量的定义中融合了节点的树结构特征以及可视化特征，使得其性能更加可靠。具体来说，对于不属于同一个数据项的两个节点n0,ni我们的距离函数定义包含了分别描述DOM树结构之间差异与显示效果差异的两部分，如下：</p>
+    <p>[0101]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00101.png"> <img id="idf0001" file="CN102750372AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00101.png" class="patent-full-image" alt="Figure CN102750372AD00101"> </a> </div>
+    <p>[0102]	其中，dom_diff (n0, Ii1)表示节点nQ和Ii1的DOM树结构差异的特征向量，visual_diff (n0, Ii1)表示nQ和Ii1之间显示差异的特征向量，a, b为混合权重向量。在实际系统实施中，可以分别设置a=(100，50，1)T和b=(l，50，10)T。</p>
+    <p>[0103]	dom_diff 的具体形式为：dom_diff = (LPD, nLED, TD)T</p>
+    <p>[0104]	visualdiff 的具体形式为：visual_diff = (LSD, NOL, WR)T</p>
+    <p>[0105]	各项的定义如下：</p>
+    <p>[0106]	i .局部位置距离LPD</p>
+    <p>[0107]	设nQ和Ii1分别属于数据记录rQ和!T1,同时也使用rQ和!T1表示数据记录所对应DOM子树的根节点。再假设在DOM树上从节点&amp;到Iitl和从节点&amp;到Ii1的路径上的节点分</p>
+    <p>别依次是&#8364;0,0 = rOj Co5I5 …，= ?%和&#163;1,0 = rIi eItIj *&#8226;&#8226;? eI,#1 = nI,其中 S。和 S1 为路径长度，且设前k个节点的html标签相同，即</p>
+    <p>[0108]	e0j0 = S1,。，&#8226; &#8226; &#8226;，e0j	eQ,k 幸 ^1,k。我们将局部位直距尚定&#20034;为：</p>
+    <p>[0109]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00102.png"> <img id="idf0002" file="CN102750372AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00102.png" class="patent-full-image" alt="Figure CN102750372AD00102"> </a> </div>
+    <p>[0110]	其中，totalsize = size (rQ)+size Cr1)表示两个节点所在数据记录所包含的总节点数；coversize = size(e0j ^1)+size (e^ ^1)表示包含这两个节点的最小的公共子树的总大小；subsize = size (n0)+size (Ii1)表示这两个节点下子树的大小；size(n)表示以节点n为根的子树的节点总数。</p>
+    <p>[0111]	可以看到如上定义反映了包含nQ和Ii1的最小公共子树在树rQ和!T1中所占比例，一定程度上反映了两个节点在树结构上所处位置的差异。</p>
+    <p>[0112]	ii &#8226;规范化局部编辑距离nLED</p>
+    <p>[0113]	若直接考虑两棵树的差异，对比字符串的编辑距离定义，我们可以类似的定义树之间的编辑距离：对于树^和T1，我们把将树Ttl变换为T1的所有操作所带来的最小代价作为的编辑距离。一般的，被允许的操作包括添加节点、删除节点和替换节点，每一种操作有一个相应的代价，总的代价为所有操作代价的和。例如，若所有的操作代价都为1，则编辑距离为将r(l变为ri所需的最小操作次数。</p>
+    <p>[0114]	结合到我们的问题中，我们希望考察节点nQ和Ii1下方的局部差异。由于DOM树的更多变化存在于树的枝叶处，同时为了惩罚较高层次的差异，我们采用了如上编辑距离的一个变化版本，我们限制所有操作只可以作用在当前的叶节点上，并且只考虑添加和删除两种操作。</p>
+    <p>[0115]	定义：对于树r0和r1;我们对r0依次采用操作a0, a1； . . . , an,直到将其变换为r1；并且所有的％满足：（I) %可以是添加或者删除某节点及以其为根的子树；（2)每一次操作的代价为其添加或删除的子树的大小，则局部编辑距离定义为</p>
+    <p>[0116]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00103.png"> <img id="idf0003" file="CN102750372AD00103.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00103.png" class="patent-full-image" alt="Figure CN102750372AD00103"> </a> </div>
+    <p>[0117]	直观上，在上述定义下，若操作的位置越接近于根节点，则所需的代价越高。例如，若将A删除，则连同其下子树一起被删除，代价达到SizeOJ。于是，最优结果尽量保持了较高层次上的一致性，而去除了较低层次上的不一致性。我们给出算法LED (表I)可以在0(size(n0) Size(Ii1))的时间内求解局部编辑距离。</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00111.png"> <img id="idf0004" file="CN102750372AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00111.png" class="patent-full-image" alt="Figure CN102750372AD00111"> </a> </div>
+    <p>[0118]	 [0119]表	I</p>
+    <p>[0120]同时考虑到树的大小所带来的影响，我们用两棵树的大小对其做归一化，就得到</p>
+    <p>归一化局部编辑距离：</p>
+    <p>[0121]	nLEDM-^.......So.....</p>
+    <p>size {no) + sue(na)</p>
+    <p>[0122]	nLED可以被看作是两棵树不一致的节点所占的比例。</p>
+    <p>[0123]	iii.标签距离TD</p>
+    <p>[0124]	相同意义下的数据项应该由相同的HTML标签封装，所以当两个节点的HTML标签不同时，标签距离定义为1，否则为O。即</p>
+    <p>        , ^ fl same fag</p>
+    <p>[0125]	JD(W05W1) = ]	. [Wl]</p>
+    <p>                   (0 o Iherwise</p>
+    <p>[0126]	iv .左侧位置差LSD</p>
+    <p>[0127]	左侧位置差定义为节点nQ和节点Ii1显示矩形左侧边线的距离(请参见图10)。</p>
+    <p>[0128]	V.非重叠比例NOL</p>
+    <p>[0129]	非重叠比例定义为两个节点在横向坐标轴上不重叠部分长度与两节点宽度和的比例(请参见图10)。</p>
+    <p>[0130]	Vi .宽度比例WR</p>
+    <p>[0131 ]	宽度比例定义为两个节点的宽度差的绝对值与两个节点宽度较大者的比例。[0132]	另外，可以看到，当两个节点可以完美的匹配的时候，以上6个差异特征均为O。于是在考虑相似性的时候，我们希望有更多完美匹配的项，即更多差异特征取0值，所以我们在距离度量中加入差异特征向量的零范数正则项（向量的零范数即为向量中的非零元素的个数)。当非零值较多时，我们认为距离较大。</p>
+    <p>[0133]	再考虑到处于同一个数据记录中的两个节点不会构成一列，因此，当两个结点来自于同一数据记录时，距离为无限大。最终距离定义为：</p>
+    <p>[0134]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00121.png"> <img id="idf0005" file="CN102750372AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00121.png" class="patent-full-image" alt="Figure CN102750372AD00121"> </a> </div>
+    <p>[0135]	其中diff Ovn1)为两个节点的差异特征向量（dom_diff和visual_diff的组合)，c为正则系数。正则系数c在实际实施中，我们取值为10。同时，当iv Ii1来自同一个数据记录时，same_record(n0, Ii1)取值为I,否则为O。</p>
+    <p>[0136]	2)在得到的距离矩阵下进行聚类</p>
+    <p>[0137]	由于无法事先知晓一共含有多少数据列，我们采用层次聚类作为聚类算法，以方便确定最终聚类数量。</p>
+    <p>[0138]	在层次聚类中，我们设计采用如下方式确定聚类距离：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00122.png"> <img id="idf0006" file="CN102750372AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00122.png" class="patent-full-image" alt="Figure CN102750372AD00122"> </a> </div>
+    <p>[0140]	即当分别来自Setci, Set1中的两个点的最大距离为⑴时，这两个聚类的距离也为-，否则为最近的两个点的距离。</p>
+    <p>[0141]	在确定最终聚类类别时，使用阈值方式，并令阈值等于⑴，即将类内距离小于⑴的集合作为最终的聚类，于是就得到了相应的数据列。</p>
+    <p>[0142]	S250，对数据项列的语义进行确认。本发明可以利用监督学习方法获得语义分析器，并利用语义分析器对数据项列的语义进行确认。</p>
+    <p>[0143]	在此步骤中，本发明采用了监督学习方法，以不同语义类别作为标签，实际使用adaboost迭代算法作为分类器以确认数据列的语义信息。</p>
+    <p>[0144]	于是，便会涉及到的是一个N类分类问题，其中包含一个无语义类别以及若干语义类别。同时由于真正有意义的节点属于少数，所以样本具有很强的非平衡性，即无语义样本数目远大于其它类别样本的总和。所以，本发明将此问题分解为N-I个两类分类问题，分别为某类语义标签vs其它类别，最终的标签取为预测响应最大者。</p>
+    <p>[0145]	具体来说，假定类别标签为0，…，N-1，其中0代表无语义类别，其它为语义类别。设i = 1，. . .，N-1，在训练i对其它类的两类分类器IiJc)时，我们将类别i的样本作为正样本，其它类别的样本作为负样本，即把不属于i类的语义样本以及无语义样本当作整体对待。对于数据列C，若Ii,士）&gt;0，则认为c属于第i类，否则认为不是i类。当考虑所有类别时，我们将响应函数值最大的那一类作为最终的预测结果。表2为这个步骤中可以使用的特征：</p>
+    <p>[0146]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00131.png"> <img id="idf0007" file="CN102750372AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102750372A/CN102750372AD00131.png" class="patent-full-image" alt="Figure CN102750372AD00131"> </a> </div>
+    <p>[0147]</p>
+    <p>[0148]表	2</p>
+    <p>[0149]	相比于现有技术，本发明具有以下几个优点：</p>
+    <p>[0150]	I、本发明突破性地提出并应用了网页可视化特征点（T-Point)，并利用网页可视化特征点（T-Point)准确地提取检测列表区域，从而大大提高了网页结构化信息自动分析的精确度、稳定性和时效性。</p>
+    <p>[0151]	2、本发明将聚类方法应用于数据项的对齐，可以使得准确率大大提高，同时运行时间大大缩短。</p>
+    <p>[0152]	3、本发明提出计算节点距离的算法框架，这使得我们的方法在实际应用时拥有很高的灵活性，可以适用于不同场合。</p>
+    <p>[0153]	4、本发明使用分类器方法识别数据记录的列表项语义，使数据项的语义分类更加准确。</p>
+    <p>[0154]	以上公开的仅为本发明的几个具体实施例，但本发明并非局限于此，任何本领域的技术人员能 思之的变化，只要不超出所附权利要求书所述范围，都应落在本发明的保护范围内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101561802A?cl=zh">CN101561802A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年4月18日</td><td class="patent-data-table-td patent-date-value">2009年10月21日</td><td class="patent-data-table-td ">上海复旦光华信息科技股份有限公司</td><td class="patent-data-table-td ">网页结构化数据提取方法与系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101727498A?cl=zh">CN101727498A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年1月15日</td><td class="patent-data-table-td patent-date-value">2010年6月9日</td><td class="patent-data-table-td ">西安交通大学</td><td class="patent-data-table-td ">一种基于web结构的网页信息自动提取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102156742A?cl=zh">CN102156742A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月19日</td><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">北京神州数码思特奇信息技术股份有限公司</td><td class="patent-data-table-td ">支持手机使用自带浏览器展示结构化文档的方法及中间件</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102317937A?cl=zh">CN102317937A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年12月27日</td><td class="patent-data-table-td patent-date-value">2012年1月11日</td><td class="patent-data-table-td ">弗诺瓦有限公司</td><td class="patent-data-table-td ">用于聚集来自多个web站点的数据的系统和方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=mKWqBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年10月24日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年12月19日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年3月11日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of a patent application after its publication</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/e4030bd4f4a9dd7a44fe/CN102750372A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E8%87%AA%E5%8A%A8%E8%8E%B7%E5%8F%96%E7%BD%91%E9%A1%B5%E7%BB%93%E6%9E%84%E5%8C%96%E4%BF%A1%E6%81%AF%E7%9A%84%E5%88%86.pdf?id=mKWqBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1V1kttYkpgwI1qlIBPGav43eJ8sQ"},"sample_url":"https://www.google.com/patents/reader?id=mKWqBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

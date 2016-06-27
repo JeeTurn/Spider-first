@@ -1,0 +1,543 @@
+<!DOCTYPE html><html><head><title>专利 CN102637170A - 一种问题推送方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种问题推送方法及系统"><meta name="DC.contributor" content="姜庭欣" scheme="inventor"><meta name="DC.contributor" content="李连华" scheme="inventor"><meta name="DC.contributor" content="罗建岚" scheme="inventor"><meta name="DC.contributor" content="谢双宾" scheme="inventor"><meta name="DC.contributor" content="北京百度网讯科技有限公司" scheme="assignee"><meta name="DC.date" content="2011-2-10" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种问题推送方法及系统，基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型；其中方法包括：A、对待回答问题进行文本分析提取问题特征；B、利用提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；C、将所述待回答问题推送给排序在前M个的用户，其中M为预设的正整数。通过本发明能够提高知识问答系统提供答案的效率和质量。"><meta name="DC.date" content="2012-8-15"><meta name="DC.relation" content="CN:101257512:A" scheme="references"><meta name="DC.relation" content="CN:101520784:A" scheme="references"><meta name="DC.relation" content="CN:101540739:A" scheme="references"><meta name="DC.relation" content="CN:101719145:A" scheme="references"><meta name="DC.relation" content="CN:101923545:A" scheme="references"><meta name="DC.relation" content="US:20070271519:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102637170:A"><meta name="citation_patent_application_number" content="CN:201110035679"><link rel="canonical" href="https://www.google.com/patents/CN102637170A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102637170A?cl=zh"/><meta name="title" content="专利 CN102637170A - 一种问题推送方法及系统"/><meta name="description" content="本发明提供了一种问题推送方法及系统，基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型；其中方法包括：A、对待回答问题进行文本分析提取问题特征；B、利用提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；C、将所述待回答问题推送给排序在前M个的用户，其中M为预设的正整数。通过本发明能够提高知识问答系统提供答案的效率和质量。"/><meta property="og:title" content="专利 CN102637170A - 一种问题推送方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102637170A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102637170A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=HMCWBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102637170A&amp;usg=AFQjCNFwS75xwrnbwdy2Io7jTMGK6W35cw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/157927629acc7667bd45/CN102637170A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/157927629acc7667bd45/CN102637170A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102637170A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102637170A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102637170A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种问题推送方法及系统，基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统...</span><span itemprop="url">https://www.google.com/patents/CN102637170A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102637170A - 一种问题推送方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102637170A - 一种问题推送方法及系统" title="专利 CN102637170A - 一种问题推送方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102637170 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110035679</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年8月15日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年2月10日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年2月10日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110035679.4, </span><span class="patent-bibdata-value">CN 102637170 A, </span><span class="patent-bibdata-value">CN 102637170A, </span><span class="patent-bibdata-value">CN 201110035679, </span><span class="patent-bibdata-value">CN-A-102637170, </span><span class="patent-bibdata-value">CN102637170 A, </span><span class="patent-bibdata-value">CN102637170A, </span><span class="patent-bibdata-value">CN201110035679, </span><span class="patent-bibdata-value">CN201110035679.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A7%9C%E5%BA%AD%E6%AC%A3%22">姜庭欣</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E8%BF%9E%E5%8D%8E%22">李连华</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%BD%97%E5%BB%BA%E5%B2%9A%22">罗建岚</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B0%A2%E5%8F%8C%E5%AE%BE%22">谢双宾</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E7%99%BE%E5%BA%A6%E7%BD%91%E8%AE%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京百度网讯科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102637170A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102637170A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102637170A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=HMCWBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110035679&amp;usg=AFQjCNFN1fdnT-5LcG_nlEXTJopGbO2QJA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=HMCWBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102637170A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHZnXv6ZqXJ3Iod0UShtYrPstXJXQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT114541001" lang="ZH" load-source="patent-office">一种问题推送方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 102637170 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA99302138" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种问题推送方法及系统，基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型；其中方法包括：A、对待回答问题进行文本分析提取问题特征；B、利用提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；C、将所述待回答问题推送给排序在前M个的用户，其中M为预设的正整数。通过本发明能够提高知识问答系统提供答案的效率和质量。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(46)</span></span></div><div class="patent-text"><div mxw-id="PCLM44819558" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种问题推送方法，其特征在于，基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型；该方法包括：  A、对待回答问题进行文本分析提取问题特征；  B、利用提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；  C、将所述待回答问题推送给排序在前M个的用户，其中M为预设的正整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的方法，其特征在于，所述兴趣模型的建立包括：  51、抓取各用户的问答历史数据；  52、对所述各用户的问答历史数据进行文本分析，抽取各用户的兴趣词；  53、利用抽取的兴趣词建立或更新各用户的兴趣模型，其中兴趣模型中包含：用户的兴趣词以及兴趣词在对应用户的兴趣模型中的权重FeatW。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，步骤S2具体包括：分别针对每一用户分别执行步骤S21至步骤S23 ；  521、对该用户回答的问题、提出的问题、浏览的问题或查询的问题进行基于语义的分词处理；  522、基于对分词处理后得到的各词语的倒文档率以及表意能力，确定所述各词语的表意权重值TermW ；  523、将表意权重值TermW大于预设的兴趣选取权重值的词语确定为该用户的兴趣词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求I所述的方法，其特征在于，所述步骤A具体包括：  Al、对所述待回答问题进行基于语义的分词处理；  A2、基于对分词处理后得到的各词语的倒文档率以及表意能力，确定所述各词语的表意权重值TermW ；  A3、将表意权重值TermW大于预设的特征提取权重值的词语确定为所述待回答问题的特征词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求3或4所述的方法，其特征在于，所述各词语的表意权重值TermW为：   Termff = Termff = a*idf+b*ind,其中，倒文档率idf=log(~^&#8212;+C), c 为预设的大于或                                                                           df + 1等于I的参数，df为词语在所有待回答问题中出现的次数，N为待回答问题的数量，ind标识词语的表意能力，a和b为预设的权重系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求3所述的方法，其特征在于，在所述步骤S22之前，还包括：  将分词处理后得到的各词语中，df不在预设范围内的词语进行过滤，其中df为词语在所有待回答问题中出现的次数；  所述步骤S22中，仅针对df在预设范围内的词语计算表意权重值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求3所述的方法，其特征在于，所述兴趣词在对应用户的兴趣模型中的权重FeatW为：   Featff = 31*161'1111+131*八1'1',其中，ATr为当前时间段抓取的用户问答历史数据中该兴趣词出现的频次相对于上一时间段抓取的用户问答历史数据中该兴趣词出现的频次的变化值或变化率，al和bl为预设的权重系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求2所述的方法，其特征在于， 按照2'=⑷+ /?(+ ZA)更新用户的兴趣模型，其中，Q'表示更新后                   <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00031.png"> <img id="icf0001" file="CN102637170AC00031.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00031.png" class="patent-full-image" alt="Figure CN102637170AC00031"> </a> </div>的兴趣模型，Q表示更新前的兴趣模型，W表示正例样本集合，包括在该用户的问答历史数据中出现频次呈上升趋势的兴趣词及其在兴趣模型中的权重值，Nr表示正例样本数量，Dn表示反例样本集合，包括在该用户的问答历史数据中出现频次呈下降趋势的兴趣词及其在兴趣模型中的权重值，Nn表示反例样本数量，a、P和Y是预先设定的调整系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求2所述的方法，其特征在于，该方法还包括：对用户的兴趣模型中的兴趣词进行扩展；  其中，针对用户u的兴趣模型中兴趣词Ti进行的扩展包括：  Dl、确定所述兴趣词Ti的扩展词Tj ；  D2、计算用户u对所述扩展词L的感兴趣程度Wj,  <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00032.png"> <img id="icf0002" file="CN102637170AC00032.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00032.png" class="patent-full-image" alt="Figure CN102637170AC00032"> </a> </div>  所述7^ YAt T)，其中，r为用户U的兴趣模型中与Tj的相关度超过预设相关度值的兴趣词集合，S (Tn, Tj)为兴趣词Tn与该兴趣词的扩展词L之间的相关度，a I和@ I为预设的调整系数，jnum为扩展词L在所有用户的兴趣模型中出现的次数，Wavg为兴趣词Ti在所有用户兴趣模型中的权重平均值，凡；为兴趣词Ti在用户u的兴趣模型中的权重值；  D3、如果％的值超过预设的兴趣选取权重值，则将所述扩展词L作为兴趣词添加到所述用户u的兴趣模型中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的方法，其特征在于，所述步骤Dl具体包括：  从具有所述兴趣词Ti的其他用户的兴趣模型中，选择其他用户的兴趣模型中与所述兴趣词Ti属于同一兴趣分类中的其他兴趣词；  根据选择的所述其他兴趣词与所述兴趣词Ti的相关度，选择相关度排在前P个的兴趣词作为兴趣词Ti的扩展词，其中P为预设的正整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求I所述的方法，其特征在于，所述属性模型包括：用户属性及用户属性在属性模型中的权重值；  其中，所述用户属性包括以下所列中的一种或任意组合：地理位置、性别、年龄以及行业；  将用户具有的用户属性在属性模型中的权重值设置为一个固定值，将用户不具有的用户属性在属性模型中的权重值设置为0 ;或者，将用户的兴趣模型中权重值最高的具有地理位置属性的兴趣词作为该用户的地理位置属性添加到该用户的属性模型中，且该地理位置属性在属性模型中的权重值与兴趣词在该用户的兴趣模型中的权重值相同。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求I所述的方法，其特征在于，所述不同用户之间关系包括以下所列的一种或任意组合：问答关系、同团关系、相似兴趣关系；  其中，所述同团关系包括：出现在同一个社区、同一个栏目、同一个交流群或者回复同一个帖子。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求11所述的方法，其特征在于，如果关系模型中不同用户之间关系仅包括问答关系或同团关系，则用户ul和用户u2之间的关系权重Rela Rankl (ul, u2)为：Rela Rankl (ul, u2) = log(relaCnt+a 2)/logP 2 ;其中，a 2 和 P 2 为预设的平滑系数，relaCnt为用户ul和u2在设定时间段内问答关系或同团关系出现的次数；  如果关系模型中不同用户之间关系仅包括相似兴趣关系，则用户ul和用户u2之间的关系权重Rela Rank2(ul，u2)为：RelaRank2(ul,u2)= 21 2，其中，为用户 ul<div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00041.png"> <img id="icf0003" file="CN102637170AC00041.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00041.png" class="patent-full-image" alt="Figure CN102637170AC00041"> </a> </div>的兴趣词矩阵向量，^为用户U2的兴趣词矩阵向量；  如果关系模型中不同用户之间关系除了包括相似兴趣关系之外，还包括问答关系或同团关系，贝1J用户ul和用户u2之间的关系权重Rela Rank(ul,u2)为：Rela Rank(ul,u2)=Rela Rankl(ul，u2)*a 3+Rela Rank2 (ul，u2) * P 3，其中 a 3 和 3 3 为预设的权重系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求I所述的方法，其特征在于，所述行为模型包括用户的活跃度等级；其中用户u的活跃度等级Active(U)为：    Active(u) = [log (Sanswer+a 4) *wl+log (Slogin+a 4) *w2+log (Sbrowse+a 4)*w3]/log3 4,    wl、w2和w3是预设的权重系数，a 4和0 4为预设的平滑系数，  S&#8222;、Sltjgin和S&#8212;分别为用户u在设定时间段内回答问题的次数、登陆问答系统的次数、和浏览问答系统页面的次数，或者分别为用户u在设定时间段内回答问题的频率、登陆问答系统的频率、浏览问答系统页面的频率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求I所述的方法，其特征在于，所述步骤B具体包括：  BI、利用提取的问题特征匹配兴趣模型、属性模型和关系模型中的一种或任意组合，确定与所述提取的问题特征匹配的用户；  B2、利用兴趣模型、属性模型、关系模型和行为模型中的一种或任意组合，确定步骤BI确定出的用户与所述待回答问题的匹配程度，根据匹配程度对所述步骤BI确定出的用户进行排序；  其中，所述步骤BI利用的用户模型与步骤B2利用的用户模型不完全相同。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的方法，其特征在于，如果所述步骤BI中利用的用户模型为两个以上，则将分别利用各用户模型确定出的与所述提取的问题特征匹配的用户取并集。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求15或16所述的方法，其特征在于，如果所述步骤BI中利用了兴趣模型，则所述提取的问题特征包括所述待回答问题的特征词；  利用兴趣模型确定与所述提取的问题特征匹配的用户包括：  将所述特征词与各用户的兴趣模型进行匹配，将所述特征词所命中兴趣词对应的用户确定为与所述提取的问题特征匹配的用户；  或者，将所述特征词与各用户的兴趣模型进行匹配，确定所述特征词所命中兴趣词对应的用户以及所命中兴趣词在兴趣1吴型中的权重值，将所命中兴趣词在兴趣1吴型中权重值大于预设匹配权重值的用户确定为匹配的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的方法，其特征在于，该方法还包括：确定所述待回答问题所属的兴趣分类，将该兴趣分类的权重值小于预设的兴趣过滤权重值的用户从所述匹配的用户中过滤掉。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求15或16所述的方法，其特征在于，如果所述步骤BI中利用了属性模型，则所述提取的问题特征包括所述待回答问题的特征词；  利用属性模型确定与所述提取的问题特征匹配的用户包括：  将所述特征词与各用户的属性模型进行匹配，将与所述特征词之间的相关度达到预设相关度要求的用户属性所对应的用户确定为与所述提取的问题特征匹配的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求15或16所述的方法，其特征在于，如果所述步骤BI中利用了关系模型，则所述提取的问题特征包括所述待回答问题的提问用户信息；  利用关系模型确定与所述提取的问题特征匹配的用户包括：  将所述提问用户信息与关系模型进行匹配，将与所述提问用户之间的关系权重值达到预设匹配权重值的用户确定为与所述提取的问题特征匹配的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求15所述的方法，其特征在于，用户U与所述待回答问题的匹配程度Rank(U)为：Rank(U) = Rank(interest)*ffl+Rank(Profile)*W2+Rank(rela)*W3+Rank(behavior)*W4 ；  其中，Wl、W2、W3 和 W4 为预设的权重系数，*FeatWl ’ Tn 为从所述待回答问题中提取的特征词集合，TermWi为第i个特征词的表意权重值，FeatWi为第i个特征词在用户U的兴趣模型中的权重值，Rank(Proflle)= Zlermw1 ^FeaVec1 ’ FeaV                                                                                                  IGTn为第i个特征词在用户U的属性模型中的权重值，Rank (rela)为在所述关系模型中查找的所述待回答问题的提问用户与所述用户U之间的关系权重值,Rank(behavior)由在所述用户U的行为模型中查找的所述用户U的活跃等级Active(U)确定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求I所述的方法，其特征在于，所述步骤C包括：  根据所述步骤B的排序结果，将所述待回答问题推送给排在前M个的用户中处于在线状态的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求14所述的方法，其特征在于，所述步骤C包括：  根据所述步骤B的排序结果，将所述待回答问题推送给排在前M个的用户中活跃度等级超过预设的推送活跃度的用户。</div>
+    </div>
+    </div> <div class="claim"> <div num="24" class="claim">
+      <div class="claim-text">24.	一种问题推送系统，其特征在于，该系统基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型；该系统包括：特征提取单元、用户排序单元和问题推送单元；  所述特征提取单元，用于对待回答问题进行文本分析提取问题特征；  所述用户排序单元，用于利用所述特征提取单元提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；  所述问题推送单元，用于根据所述用户排序单元的排序结果，将所述待回答问题推送给排序在前M个的用户，其中M为预设的正整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.根据权利要求24所述的系统，其特征在于，该系统还包括兴趣模型维护单元；所述兴趣模型维护单元具体包括：数据抓取子单元、文本分析子单元和模型维护子单元;  所述数据抓取子单元，用于抓取各用户的问答历史数据；  所述文本分析子单元，用于对所述各用户的问答历史数据进行文本分析，抽取各用户的兴趣词；  所述模型维护子单元，用于利用所述文本分析子单元抽取的兴趣词建立或更新各用户的兴趣模型，其中兴趣模型中包含：用户的兴趣词以及兴趣词在对应用户的兴趣模型中的权重FeatW。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.根据权利要求25所述的系统，其特征在于，所述文本分析子单元具体包括：分词处理模块、权重确定模块和兴趣词确定模块；  所述分词处理模块，用于对用户回答的问题、提出的问题、浏览的问题或查询的问题进行基于语义的分词处理；  所述权重确定模块，用于基于所述分词处理模块分词处理后得到的各词语的倒文档率以及表意能力，确定所述各词语的表意权重值TermW ；  所述兴趣词确定模块，用于将表意权重值TermW大于预设的兴趣选取权重值的词语确定为该用户的兴趣词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.根据权利要求24所述的系统，其特征在于，所述特征提取单元具体包括：分词处理子单元、权重确定子单元和兴趣词确定子单元；  所述分词处理子单元，用于对所述待回答问题进行基于语义的分词处理；  所述权重确定子单元，用于基于对所述分词处理子单元分词处理后得到的各词语的倒文档率以及表意能力，确定所述各词语的表意权重值TermW ；  所述兴趣词确定子单元，用于将表意权重值TermW大于预设的特征提取权重值的词语确定为所述待回答问题的特征词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.根据权利要求26或27所述的系统，其特征在于，所述各词语的表意权重值TermW为：   Termff = Termff = a*idf+b*ind,其中，倒文档率<div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00061.png"> <img id="icf0004" file="CN102637170AC00061.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00061.png" class="patent-full-image" alt="Figure CN102637170AC00061"> </a> </div>,c 为预设的大于或等于I的参数，df为词语在所有待回答问题中出现的次数，N为待回答问题的数量，ind标识词语的表意能力，a和b为预设的权重系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.根据权利要求26所述的系统，其特征在于，所述文本分析子单元还包括：过滤处理模块，用于将所述分词处理模块分词处理后得到的各词语中，df不在预设范围内的词语进行过滤，其中df为词语在所有待回答问题中出现的次数；  所述权重确定模块仅针对所述过滤处理模块过滤后得到的词语计算表意权重值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.根据权利要求26所述的系统，其特征在于，所述兴趣词在对应用户的兴趣模型中的权重FeatW为：   Featff = 31*161'1111+131*八1'1',其中，ATr为当前时间段抓取的用户问答历史数据中该兴趣词出现的频次相对于上一时间段抓取的用户问答历史数据中该兴趣词出现的频次的变化值或变化率，al和bl为预设的权重系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.根据权利要求25所述的系统，其特征在于，所述模型维护子单元按照<div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00071.png"> <img id="icf0005" file="CN102637170AC00071.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00071.png" class="patent-full-image" alt="Figure CN102637170AC00071"> </a> </div>更新用户的兴趣模型，其中，Q'表示更新后的兴趣模         型，Q表示更新前的兴趣模型，W表示正例样本集合，包括在该用户的问答历史数据中出现频次呈上升趋势的兴趣词及其在兴趣模型中的权重值，队表示正例样本数量，Dn表示反例样本集合，包括在该用户的问答历史数据中出现频次呈下降趋势的兴趣词及其在兴趣模型中的权重值，Nn表示反例样本数量，a、P和Y是预先设定的调整系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.根据权利要求25所述的系统，其特征在于，兴趣模型维护单元还包括：兴趣词扩展子单元，用于对用户的兴趣模型中的兴趣词进行扩展；  所述兴趣词扩展子单元具体包括：扩展词确定模块、兴趣度计算模块和兴趣词扩展模块；  所述扩展词确定模块，用于确定兴趣词Ti的扩展词Tj ；  所述兴趣度计算模块，用于计算用户u对所述扩展词L的感兴趣程度％，其中，           <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00072.png"> <img id="icf0006" file="CN102637170AC00072.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00072.png" class="patent-full-image" alt="Figure CN102637170AC00072"> </a> </div>其中，t'为用户u的兴趣 模型中与L的相关度超过预设相关度值的兴趣词集合，s (Tn, Tj)为兴趣词Tn与该兴趣词的扩展词L之间的相关度，a I和P I为预设的调整系数，jnum为扩展词L在所有用户的兴趣模型中出现的次数，Wavg为兴趣词Ti在所有用户兴趣模型中的权重平均值，凡；为兴趣词Ti在用户u的兴趣模型中的权重值；  所述兴趣词扩展模块，用于判断^的值是否超过预设的兴趣选取权重值，如果是，则将所述扩展词L作为兴趣词添加到所述用户u的兴趣模型中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.根据权利要求32所述的系统，其特征在于，所述扩展词确定模块具体从具有所述兴趣词Ti的其他用户的兴趣模型中，选择其他用户的兴趣模型中与所述兴趣词Ti属于同一兴趣分类中的其他兴趣词，根据选择的所述其他兴趣词与所述兴趣词Ti的相关度，选择相关度排在前P个的兴趣词作为兴趣词Ti的扩展词，其中P为预设的正整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.根据权利要求24所述的系统，其特征在于，该系统还包括：属性模型维护单元，用于基于用户属性建立和更新用户的属性模型；  所述属性模型包括：用户属性及用户属性在属性模型中的权重值；  其中，所述用户属性包括以下所列中的一种或任意组合：地理位置、性别、年龄以及行业；  所述属性模型维护单元将用户具有的用户属性在属性模型中的权重值设置为一个固定值，将用户不具有的用户属性在属性模型中的权重值设置为O ;或者，将用户的兴趣模型中权重值最高的具有地理位置属性的兴趣词作为该用户的地理位置属性添加到该用户的属性模型中，且该地理位置属性在属性模型中的权重值与兴趣词在该用户的兴趣模型中的权重值相同。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35.根据权利要求24所述的系统，其特征在于，该系统还包括：关系模型维护单元，用于基于不同用户之间关系，建立和更新关系模型；  所述不同用户之间关系包括以下所列的一种或任意组合：问答关系、同团关系以及相似兴趣关系；其中，所述同团关系包括：出现在同一个社区、同一个栏目、同一个交流群或者回复同一个帖子。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.根据权利要求35所述的系统，其特征在于，如果关系模型中不同用户之间关系仅包括问答关系或同团关系，则用户ul和用户u2之间的关系权重Rela Rankl (ul, u2)为：Rela Rankl (ul, u2) = log (relaCnt+a 2)/log P 2 ;其中，a 2 和 P 2 为预设的平滑系数，relaCnt为用户ul和u2在设定时间段内问答关系或同团关系出现的次数；  如果关系模型中不同用户之间关系仅包括相似兴趣关系，则用户ul和用户u2之间的关系权重 Rela Rank2(ul，u2)为：RelaRank2(ul,u2)= 21 2，其中，为用户 ul<div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00081.png"> <img id="icf0007" file="CN102637170AC00081.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00081.png" class="patent-full-image" alt="Figure CN102637170AC00081"> </a> </div>的兴趣词矩阵向量，G为用户U2的兴趣词矩阵向量；  如果关系模型中不同用户之间关系除了包括相似兴趣关系之外，还包括问答关系或同团关系，贝1J用户ul和用户u2之间的关系权重Rela Rank(ul,u2)为：Rela Rank(ul,u2)=Rela Rankl (ul, u2)* a 3+Rela Rank2 (ul，u2) * P 3，其中 a 3 和 3 3 为预设的权重系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37.根据权利要求24所述的系统，其特征在于，该系统还包括：行为模型维护单元，用于对用户行为进行统计，建立和更新用户的行为模型；  其中，所述行为模型包括用户的活跃度等级；其中用户u的活跃度等级Active (U)为：  Active(u) = [log (Sanswer+a 4) *wl+log (Slogin+a 4) *w2+log (Sbrowse+a 4)*w3]/log3 4,  wl、w2和w3是预设的权重系数，a 4和0 4为预设的平滑系数，  S&#8222;、Sltjgin和S&#8212;分别为用户u在设定时间段内回答问题的次数、登陆问答系统的次数、和浏览问答系统页面的次数，或者分别为用户u在设定时间段内回答问题的频率、登陆问答系统的频率、浏览问答系统页面的频率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.根据权利要求24所述的系统，其特征在于，所述用户排序单元具体包括：用户匹配子单元和用户排序子单元；  所述用户匹配子单元，用于利用所述特征提取单元提取的问题特征匹配兴趣模型、属性模型和关系模型中的一种或任意组合，确定与所述提取的问题特征匹配的用户；  所述用户排序子单元，用于利用兴趣模型、属性模型、关系模型和行为模型中的一种或任意组合，确定所述用户匹配子单元确定出的用户与所述待回答问题的匹配程度，根据匹配程度对所述用户匹配子单元确定出的用户进行排序；  其中，所述用户匹配子单元利用的用户模型与所述用户排序子单元利用的用户模型不完全相同。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39.根据权利要求38所述的系统，其特征在于，所述用户匹配子单元如果利用的用户模型为两个以上，则还用于将利用各用户模型确定出的与所述提取的问题特征匹配的用户取并集。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40.根据权利要求38或39所述的系统，其特征在于，如果所述用户匹配子单元利用了兴趣模型，则所述提取的问题特征包括所述待回答问题的特征词；  所述用户匹配子单元将所述特征词与各用户的兴趣模型进行匹配，将所述特征词所命中兴趣词对应的用户确定为与所述提取的问题特征匹配的用户；或者，将所述特征词与各用户的兴趣模型进行匹配，确定所述特征词所命中兴趣词对应的用户以及所命中兴趣词在兴趣模型中的权重值，将所命中兴趣词在兴趣模型中权重值大于预设匹配权重值的用户确定为匹配的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.根据权利要求40所述的系统，其特征在于，所述用户排序单元还包括：用户过滤子单元，用于确定所述待回答问题所属的兴趣分类，将该兴趣分类的权重值小于预设的兴趣过滤权重值的用户从所述用户匹配子单元确定出的用户中过滤掉。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42.根据权利要求38或39所述的系统，其特征在于，如果所述用户匹配子单元利用了属性模型，则所述提取的问题特征包括所述待回答问题的特征词；  所述用户匹配子单元将所述特征词与各用户的属性模型进行匹配，将与所述特征词之间的相关度达到预设相关度要求的用户属性所对应的用户确定为与所述提取的问题特征匹配的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43.根据权利要求38或39所述的系统，其特征在于，如果所述用户匹配子单元利用了关系模型，则所述提取的问题特征包括所述待回答问题的提问用户信息；  所述用户匹配子单元将所述提问用户信息与关系模型进行匹配，将与所述提问用户之间的关系权重值达到预设匹配权重值的用户确定为与所述提取的问题特征匹配的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44.根据权利要求38所述的系统，其特征在于，所述用户排序子单元采用如下公式确定用户U与所述待回答问题的匹配程度Rank(U) ：Rank (U) = Rank (interest) *ffl+Rank (Profile)*W2+Rank(rela)*W3+Rank(behavior)*W4 ；   其中，Wl、W2、W3 和W4 为预设的权重系数，<div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00091.png"> <img id="icf0008" file="CN102637170AC00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00091.png" class="patent-full-image" alt="Figure CN102637170AC00091"> </a> </div>’Tn为从所述待回答问题中提取的特征词集合，TermWi为第i个特征词的表意权重值，FeatWi为第i个特征词在用户U的兴趣模型中的权重值，<div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00092.png"> <img id="icf0009" file="CN102637170AC00092.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AC00092.png" class="patent-full-image" alt="Figure CN102637170AC00092"> </a> </div>为第i个特征词在用户U的属性模型中的权重值，Rank (rela)为在所述关系模型中查找的所述待回答问题的提问用户与所述用户U之间的关系权重值,Rank(behavior)由在所述用户U的行为模型中查找的所述用户U的活跃等级Active(U)确定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45.根据权利要求24所述的系统，其特征在于，所述问题推送单元具体包括：状态确定子单元和第一推送子单元；  所述状态确定子单元，用于根据所述用户排序单元的排序结果，确定排在前M个的用户是否处于在线状态；  所述第一推送子单元，用于将所述待回答问题推送给排在前M个的用户中处于在线状态的用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46.根据权利要求37所述的系统，其特征在于，所述问题推送单元具体包括：活跃度确定子单元和第二推送子单元；  所述活跃度确定子单元，用于根据所述用户排序单元的排序结果，从行为模型中查找排在前M个用户的活跃度等级；  所述第二推送子单元，用于将所述待回答问题推送给排在前M个的用户中活跃度等级超过预设的推送活跃度的用户。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES51204713" lang="ZH" load-source="patent-office" class="description">
+    <p>一种问题推送方法及系统</p>
+    <p>【技术领域】[0001]	本发明涉及互联网技术领域，特别涉及一种问题推送方法及系统。</p>
+    <p>【背景技术】</p>
+    <p>[0002]	随着互联网技术的迅速发展，通过互联网获取信息以及进行相互通讯已经成为人们每天生活的一部分。知识问答系统就是一种利用通讯功能实现信息获取的系统，用户可以通过网页在知识问答系统提交各种问题，查询所提交问题的状态，根据问题回答的状况决定采用哪个答案。其他用户可以通过访问该网页查看问题，并根据自己的喜好和知识进行回答。</p>
+    <p>[0003]	在目前的知识问答系统中，问题一旦在知识问答系统中提交，并以提问页面的形式展现，就依靠在该知识问答系统上看到该提问页面的其他用户进行回答。然而，这种方式会造成以下问题：</p>
+    <p>[0004]	其一、需要其他用户登陆知识问答系统后，浏览到该提问页面才可能会对提问页面上的问题进行回答。</p>
+    <p>[0005]	其二、浏览到该提问页面的用户可能并没有回答该问题的兴趣或能力，就不会对提问页面上的问题进行回答，或者，提供的回答可能不是优质答案。</p>
+    <p>[0006]	可以看出，现有知识问答系统中为提问用户提供答案的效率和质量较低。</p>
+    <p>【发明内容】</p>
+    <p>[0007]	有鉴于此，本发明提供了一种问题推送的方法及系统，以便于提高知识问答系统提供答案的效率和质量。</p>
+    <p>[0008]	具体技术方案如下：</p>
+    <p>[0009]	一种问题推送方法，基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型；该方法包括：</p>
+    <p>[0010]	A、对待回答问题进行文本分析提取问题特征；</p>
+    <p>[0011]	B、利用提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；</p>
+    <p>[0012]	C、将所述待回答问题推送给排序在前M个的用户，其中M为预设的正整数。</p>
+    <p>[0013]	其中，所述兴趣模型的建立包括：</p>
+    <p>[0014]	SI、抓取各用户的问答历史数据；</p>
+    <p>[0015]	S2、对所述各用户的问答历史数据进行文本分析，抽取各用户的兴趣词；</p>
+    <p>[0016]	S3、利用抽取的兴趣词建立或更新各用户的兴趣模型，其中兴趣模型中包含：用户的兴趣词以及兴趣词在对应用户的兴趣模型中的权重FeatW。</p>
+    <p>[0017]	具体地，步骤S2可以包括：分别针对每一用户分别执行步骤S21至步骤S23 ；[0018]	S21、对该用户回答的问题、提出的问题、浏览的问题或查询的问题进行基于语义的分词处理；</p>
+    <p>[0019]	S22、基于对分词处理后得到的各词语的倒文档率以及表意能力，确定所述各词语的表意权重值TermW ；</p>
+    <p>[0020]	S23、将表意权重值TermW大于预设的兴趣选取权重值的词语确定为该用户的兴趣词。</p>
+    <p>[0021]	另外,所述步骤A具体包括：</p>
+    <p>[0022]	Al、对所述待回答问题进行基于语义的分词处理；</p>
+    <p>[0023]	A2、基于对分词处理后得到的各词语的倒文档率以及表意能力，确定所述各词语的表意权重值TermW ； </p>
+    <p>[0024]	A3、将表意权重值TermW大于预设的特征提取权重值的词语确定为所述待回答问题的特征词。</p>
+    <p>[0025]	其中,所述各词语的表意权重值TermW为：</p>
+    <p>[0026]	Termff = Termff = a*idf+b*ind,其中，倒文档率idf=log(~^--he)，c 为预设的大</p>
+    <p>                                                                                df + 1</p>
+    <p>于或等于I的参数，df为词语在所有待回答问题中出现的次数，N为待回答问题的数量，ind标识词语的表意能力，a和b为预设的权重系数。</p>
+    <p>[0027]	更进一步地，在所述步骤S22之前，还包括：</p>
+    <p>[0028]	将分词处理后得到的各词语中，df不在预设范围内的词语进行过滤，其中df为词语在所有待回答问题中出现的次数；</p>
+    <p>[0029]	所述步骤S22中，仅针对df在预设范围内的词语计算表意权重值。</p>
+    <p>[0030]	所述兴趣词在对应用户的兴趣模型中的权重FeatW为：</p>
+    <p>[0031]	FeatW = al*TermW+bl* Δ Tr,其中，Δ Tr为当前时间段抓取的用户问答历史数据中该兴趣词出现的频次相对于上一时间段抓取的用户问答历史数据中该兴趣词出现的频次的变化值或变化率，al和bl为预设的权重系数。</p>
+    <p>[0032]	具体地，按照0'=吣+ ΣΑ)-Κ^- ΣΑ)更新用户的兴趣模型，其中，Q'</p>
+    <p>iVr Di^Dr	n Dj^Dn</p>
+    <p>表示更新后的兴趣模型，Q表示更新前的兴趣模型，W表示正例样本集合，包括在该用户的问答历史数据中出现频次呈上升趋势的兴趣词及其在兴趣模型中的权重值，Nr表示正例样本数量，Dn表示反例样本集合，包括在该用户的问答历史数据中出现频次呈下降趋势的兴趣词及其在兴趣模型中的权重值，Nn表示反例样本数量，α、β和Y是预先设定的调整系数。</p>
+    <p>[0033]	较优地，该方法还包括：对用户的兴趣模型中的兴趣词进行扩展；</p>
+    <p>[0034]	其中，针对用户U的兴趣模型中兴趣词Ti进行的扩展包括：</p>
+    <p>[0035]	Dl、确定所述兴趣词Ti的扩展词Tj ；</p>
+    <p>[0036]	D2、计算用户u对所述扩展词L的感兴趣程度W」，</p>
+    <p>[0037]	Wj = a\ *\og(jnum) + Pujj + β\ * Wavg，[0038]	所述</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00121.png"> <img id="idf0001" file="CN102637170AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00121.png" class="patent-full-image" alt="Figure CN102637170AD00121"> </a> </div>
+    <p>其中，^为用户u的兴趣模型中与L的相关度超过</p>
+    <p>预设相关度值的兴趣词集合，s (Tn, Tj)为兴趣词Tn与该兴趣词的扩展词L之间的相关度，α I和β I为预设的调整系数，jnum为扩展词L在所有用户的兴趣模型中出现的次数，Wavg为兴趣词Ti在所有用户兴趣模型中的权重平均值，尺^为兴趣词Ti在用户u的兴趣模型中的权重值；</p>
+    <p>[0039]	D3、如果^的值超过预设的兴趣选取权重值，则将所述扩展词L作为兴趣词添加到所述用户u的兴趣模型中。</p>
+    <p>[0040]	具体地，所述步骤Dl可以包括：</p>
+    <p>[0041]	从具有所述兴趣词Ti的其他用户的兴趣模型中，选择其他用户的兴趣模型中与所述兴趣词Ti属于同一兴趣分类中的其他兴趣词；</p>
+    <p>[0042]	根据选择的所述其他兴趣词与所述兴趣词Ti的相关度，选择相关度排在前P个的兴趣词作为兴趣词Ti的扩展词，其中P为预设的正整数。</p>
+    <p>[0043]	其中，所述属性模型包括：用户属性及用户属性在属性模型中的权重值；</p>
+    <p>[0044]	所述用户属性包括以下所列中的一种或任意组合：地理位置、性别、年龄以及行业；</p>
+    <p>[0045]	将用户具有的用户属性在属性模型中的权重值设置为一个固定值，将用户不具有的用户属性在属性模型中的权重值设置为O ;或者，将用户的兴趣模型中权重值最高的具有地理位置属性的兴趣词作为该用户的地理位置属性添加到该用户的属性模型中，且该地理位置属性在属性模型中的权重值与兴趣词在该用户的兴趣模型中的权重值相同。</p>
+    <p>[0046]	所述不同用户之间关系包括以下所列的一种或任意组合：问答关系、同团关系、相似兴趣关系；</p>
+    <p>[0047]	其中，所述同团关系包括：出现在同一个社区、同一个栏目、同一个交流群或者回复同一个帖子。</p>
+    <p>[0048]	具体地，如果关系模型中不同用户之间关系仅包括问答关系或同团关系，则用户ul和用户u2之间的关系权重Rela Rankl (ul, u2)为：ReIaRankI (ul, u2)=log(relaCnt+a2)/log3 2 ;其中，a 2和β 2为预设的平滑系数，relaCnt为用户ul和u2在设定时间段内问答关系或同团关系出现的次数；</p>
+    <p>[0049]	如果关系模型中不同用户之间关系仅包括相似兴趣关系，则用户Ul和用户U2之</p>
+    <p>间的关系权重</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00122.png"> <img id="idf0002" file="CN102637170AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00122.png" class="patent-full-image" alt="Figure CN102637170AD00122"> </a> </div>
+    <p>其中，为用</p>
+    <p>                    户Ul的兴趣词矩阵向量，ζ为用户u2的兴趣词矩阵向量；</p>
+    <p>[0050]	如果关系模型中不同用户之间关系除了包括相似兴趣关系之外，还包括问答关系或同团关系，贝1J用户Ul和用户u2之间的关系权重Rela Rank (ul, u2)为：Rela Rank (ul,u2) =Rela Rankl (ul，u2)* a 3+Rela Rank2 (ul，u2) * β 3，其中 α3 和 β 3 为预设的权重系数。</p>
+    <p>[0051]	所述行为模型包括用户的活跃度等级；其中用户u的活跃度等级Active(U)为：[0052]	Active(u) = [log (Sanswer+α 4) *wl+log (Slogin+α 4) *w2+log (Sbrowse+α 4) *w3] /Iog^ 4,</p>
+    <p>[0053]	wl,w2和w3是预设的权重系数，α 4和β 4为预设的平滑系数，</p>
+    <p>[0054]	S&#8222;、S1()gin和S&#8212;分别为用户u在设定时间段内回答问题的次数、登陆问答系统的次数、和浏览问答系统页面的次数，或者分别为用户u在设定时间段内回答问题的频率、登陆问答系统的频率、浏览问答系统页面的频率。</p>
+    <p>[0055]	具体地，所述步骤B可以包括：</p>
+    <p>[0056]	BI、利用提取的问题特征匹配兴趣模型、属性模型和关系模型中的一种或任意组合，确定与所述提取的问题特征匹配的用户；</p>
+    <p>[0057]	B2、利用兴趣模型、属性模型、关系模型和行为模型中的一种或任意组合，确定步骤BI确定出的用户与所述待回答问题的匹配程度，根据匹配程度对所述步骤BI确定出的用户进行排序；</p>
+    <p>[0058]	其中，所述步骤BI利用的用户模型与步骤B2利用的用户模型不完全相同。</p>
+    <p>[0059]	如果所述步骤BI中利用的用户模型为两个以上，则将分别利用各用户模型确定出的与所述提取的问题特征匹配的用户取并集。</p>
+    <p>[0060]	如果所述步骤BI中利用了兴趣模型，则所述提取的问题特征包括所述待回答问题的特征词；</p>
+    <p>[0061]	利用兴趣模型确定与所述提取的问题特征匹配的用户包括：</p>
+    <p>[0062]	将所述特征词与各用户的兴趣模型进行匹配，将所述特征词所命中兴趣词对应的用户确定为与所述提取的问题特征匹配的用户；</p>
+    <p>[0063]	或者，将所述特征词与各用户的兴趣模型进行匹配，确定所述特征词所命中兴趣词对应的用户以及所命中兴趣词在兴趣模型中的权重值，将所命中兴趣词在兴趣模型中权重值大于预设匹配权重值的用户确定为匹配的用户。</p>
+    <p>[0064]	更优地，该方法还包括：确定所述待回答问题所属的兴趣分类，将该兴趣分类的权重值小于预设的兴趣过滤权重值的用户从所述匹配的用户中过滤掉。</p>
+    <p>[0065]	如果所述步骤BI中利用了属性模型，则所述提取的问题特征包括所述待回答问题的特征词；</p>
+    <p>[0066]	利用属性模型确定与所述提取的问题特征匹配的用户包括：</p>
+    <p>[0067]	将所述特征词与各用户的属性模型进行匹配，将与所述特征词之间的相关度达到预设相关度要求的用户属性所对应的用户确定为与所述提取的问题特征匹配的用户。</p>
+    <p>[0068]	如果所述步骤BI中利用了关系模型，则所述提取的问题特征包括所述待回答问题的提问用户信息；</p>
+    <p>[0069]	利用关系模型确定与所述提取的问题特征匹配的用户包括：</p>
+    <p>[0070]	将所述提问用户信息与关系模型进行匹配，将与所述提问用户之间的关系权重值达到预设匹配权重值的用户确定为与所述提取的问题特征匹配的用户。</p>
+    <p>[0071]	其中，用户U与所述待回答问题的匹配程度Rank(U)为：Rank(U) = RankQnterest)*W1+Rank(Profile)*W2+Rank(rela)*W3+Rank(behavior)*W4 ；</p>
+    <p>[0072]	Wl、W2、W3 和 W4 为预设的权重系数，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00131.png"> <img id="idf0003" file="CN102637170AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00131.png" class="patent-full-image" alt="Figure CN102637170AD00131"> </a> </div>
+    <p>，tn 为从所述待回答问题中提取的特征词集合，TermWi为第i个特征词的表意权重值，FeatWi为第i个特征词在用户U的兴趣模型中的权重值，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00141.png"> <img id="idf0004" file="CN102637170AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00141.png" class="patent-full-image" alt="Figure CN102637170AD00141"> </a> </div>
+    <p>为第i个特征词在用户U的属性模型中的权重值，Rank (rela)为在所述关系模型中查找的所述待回答问题的提问用户与所述用户U之间的关系权重值,Rank(behavior)由在所述用户U的行为模型中查找的所述用户U的活跃等级Active(U)确定。</p>
+    <p>[0073]	另外，所述步骤C包括：</p>
+    <p>[0074]	根据所述步骤B的排序结果，将所述待回答问题推送给排在前M个的用户中处于 在线状态的用户。</p>
+    <p>[0075]	或者，所述步骤C包括：</p>
+    <p>[0076]	根据所述步骤B的排序结果，将所述待回答问题推送给排在前M个的用户中活跃度等级超过预设的推送活跃度的用户。</p>
+    <p>[0077]	一种问题推送系统，该系统基于预先建立的用户模型，其中所述用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的属性模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型；该系统包括：特征提取单元、用户排序单元和问题推送单元；</p>
+    <p>[0078]	所述特征提取单元，用于对待回答问题进行文本分析提取问题特征；</p>
+    <p>[0079]	所述用户排序单元，用于利用所述特征提取单元提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；</p>
+    <p>[0080]	所述问题推送单元，用于根据所述用户排序单元的排序结果，将所述待回答问题推送给排序在前M个的用户，其中M为预设的正整数。</p>
+    <p>[0081]	更进一步地，该系统还包括兴趣模型维护单元；</p>
+    <p>[0082]	所述兴趣模型维护单元具体包括：数据抓取子单元、文本分析子单元和模型维护子单元；</p>
+    <p>[0083]	所述数据抓取子单元，用于抓取各用户的问答历史数据；</p>
+    <p>[0084]	所述文本分析子单元，用于对所述各用户的问答历史数据进行文本分析，抽取各用户的兴趣词；</p>
+    <p>[0085]	所述模型维护子单元，用于利用所述文本分析子单元抽取的兴趣词建立或更新各用户的兴趣模型，其中兴趣模型中包含：用户的兴趣词以及兴趣词在对应用户的兴趣模型中的权重FeatW。</p>
+    <p>[0086]	具体地，所述文本分析子单元可以包括：分词处理模块、权重确定模块和兴趣词确定模块；</p>
+    <p>[0087]	所述分词处理模块，用于对用户回答的问题、提出的问题、浏览的问题或查询的问题进行基于语义的分词处理；</p>
+    <p>[0088]	所述权重确定模块，用于基于所述分词处理模块分词处理后得到的各词语的倒文档率以及表意能力，确定所述各词语的表意权重值TermW ；</p>
+    <p>[0089]	所述兴趣词确定模块，用于将表意权重值TermW大于预设的兴趣选取权重值的词语确定为该用户的兴趣词。[0090]	其中，所述特征提取单元具体包括：分词处理子单元、权重确定子单元和兴趣词确定子单元；</p>
+    <p>[0091]	所述分词处理子单元，用于对所述待回答问题进行基于语义的分词处理；</p>
+    <p>[0092]	所述权重确定子单元，用于基于对所述分词处理子单元分词处理后得到的各词语的倒文档率以及表意能力，确定所述 各词语的表意权重值TermW ；</p>
+    <p>[0093]	所述兴趣词确定子单元，用于将表意权重值TermW大于预设的特征提取权重值的词语确定为所述待回答问题的特征词。</p>
+    <p>[0094]	所述各词语的表意权重值TermW为：</p>
+    <p>[0095]	Termff = Termff = a*idf+b*ind,其中，倒文档率</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00151.png"> <img id="idf0005" file="CN102637170AD00151.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00151.png" class="patent-full-image" alt="Figure CN102637170AD00151"> </a> </div>
+    <p>为预设的大</p>
+    <p>于或等于I的参数，df为词语在所有待回答问题中出现的次数，N为待回答问题的数量，ind标识词语的表意能力，a和b为预设的权重系数。</p>
+    <p>[0096]	更优地，所述文本分析子单元还包括：过滤处理模块，用于将所述分词处理模块分词处理后得到的各词语中，df不在预设范围内的词语进行过滤，其中df为词语在所有待回答问题中出现的次数；</p>
+    <p>[0097]	所述权重确定模块仅针对所述过滤处理模块过滤后得到的词语计算表意权重值。</p>
+    <p>[0098]	所述兴趣词在对应用户的兴趣模型中的权重FeatW为：</p>
+    <p>[0099]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00152.png"> <img id="idf0006" file="CN102637170AD00152.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00152.png" class="patent-full-image" alt="Figure CN102637170AD00152"> </a> </div>
+    <p>其中，Δ Tr为当前时间段抓取的用户问答历史数据中该兴趣词出现的频次相对于上一时间段抓取的用户问答历史数据中该兴趣词出现的频次的变化值或变化率，al和bl为预设的权重系数。</p>
+    <p>[0100]	具体地，所述模型维护子单元按照</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00153.png"> <img id="idf0007" file="CN102637170AD00153.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00153.png" class="patent-full-image" alt="Figure CN102637170AD00153"> </a> </div>
+    <p>更新用户</p>
+    <p>的兴趣模型，其中，Qi表示更新后的兴趣模型，Q表示更新前的兴趣模型，W表示正例样本集合，包括在该用户的问答历史数据中出现频次呈上升趋势的兴趣词及其在兴趣模型中的权重值，Nr表示正例样本数量,Dn表示反例样本集合,包括在该用户的问答历史数据中出现频次呈下降趋势的兴趣词及其在兴趣模型中的权重值，Nn表示反例样本数量，α、β和Y是预先设定的调整系数。</p>
+    <p>[0101]	更进一步地，兴趣模型维护单元还包括：兴趣词扩展子单元，用于对用户的兴趣模型中的兴趣词进行扩展；</p>
+    <p>[0102]	所述兴趣词扩展子单元具体包括：扩展词确定模块、兴趣度计算模块和兴趣词扩展模块；</p>
+    <p>[0103]	所述扩展词确定模块，用于确定兴趣词Ti的扩展词Tj ；</p>
+    <p>[0104]	所述兴趣度计算模块，用于计算用户u对所述扩展词L的感兴趣程度Wj,</p>
+    <p>[0105]其中，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00154.png"> <img id="idf0008" file="CN102637170AD00154.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00154.png" class="patent-full-image" alt="Figure CN102637170AD00154"> </a> </div>
+    <p>其中，T'   </p>
+    <p>为用户u的兴趣模型中与L的相关度超过预设相关度值的兴趣词集合，s (Tn，TJ为兴趣词Tn与该兴趣词的扩展词L之间的相关度，α I和β I为预设的调整系数，jnum为扩展词Tj在所有用户的兴趣模型中出现的次数，Wavg为兴趣词Ti在所有用户兴趣模型中的权重平均值，凡为兴趣词Ti在用户u的兴趣|吴型中的权重值；</p>
+    <p>[0106]	所述兴趣词扩展模块，用于判断的值是否超过预设的兴趣选取权重值，如果是，则将所述扩展词L作为兴趣词添加到所述用户u的兴趣模型中。</p>
+    <p>[0107]	所述扩展词确定模块具体从具有所述兴趣词Ti的其他用户的兴趣模型中，选择其他用户的兴趣模型中与所述兴趣词Ti属于同一兴趣分类中的其他兴趣词，根据选择的所述其他兴趣词与所述兴趣词Ti的相关度，选择相关度排在前P个的兴趣词作为兴趣词Ti的扩展词，其中P为预设的正整数。</p>
+    <p>[0108]	更进一步地，该系统还包括：属性模型维护单元，用于基于用户属性建立和更新用户的属性模型；</p>
+    <p>[0109]	所述属性模型包括：用户属性及用户属性在属性模型中的权重值；</p>
+    <p>[0110]	其中，所述用户属性包括以下所列中的一种或任意组合：地理位置、性别、年龄以及行业；</p>
+    <p>[0111]	所述属性模型维护单元将用户具有的用户属性在属性模型中的权重值设置为一个固定值，将用户不具有的用户属性在属性模型中的权重值 设置为O ;或者，将用户的兴趣模型中权重值最高的具有地理位置属性的兴趣词作为该用户的地理位置属性添加到该用户的属性模型中，且该地理位置属性在属性模型中的权重值与兴趣词在该用户的兴趣模型中的权重值相同。</p>
+    <p>[0112]	另外，该系统还包括：关系模型维护单元，用于基于不同用户之间关系，建立和更新关系1&#190;型；</p>
+    <p>[0113]	所述不同用户之间关系包括以下所列的一种或任意组合：问答关系、同团关系以及相似兴趣关系；</p>
+    <p>[0114]	其中，所述同团关系包括：出现在同一个社区、同一个栏目、同一个交流群或者回复同一个帖子。</p>
+    <p>[0115]	如果关系模型中不同用户之间关系仅包括问答关系或同团关系，则用户Ul和用户 u2 之间的关系权重 Rela Rankl (ul, u2)为：Rela Rankl (ul, u2) = log(relaCnt+ α 2) /Iog^ 2 ;其中，α 2和β 2为预设的平滑系数，relaCnt为用户ul和u2在设定时间段内问答关系或同团关系出现的次数；</p>
+    <p>[0116]	如果关系模型中不同用户之间关系仅包括相似兴趣关系，则用户Ul和用户u2之</p>
+    <p>间的关系权重Rela Rank2(ul, u2)为：RelaRank2(ul,u2)= r^1 t^2 ,其中，为用</p>
+    <p>                                  Tul X Tu2	Y</p>
+    <p>                                                                                                                                               -iUl</p>
+    <p>户Ul的兴趣词矩阵向量，ζ为用户u2的兴趣词矩阵向量；</p>
+    <p>[0117]	如果关系模型中不同用户之间关系除了包括相似兴趣关系之外，还包括问答关系或同团关系，贝1J用户Ul和用户u2之间的关系权重Rela Rank (ul, u2)为：Rela Rank (ul,u2) =Rela Rankl (ul，u2)* a 3+Rela Rank2 (ul，u2) * β 3，其中 α3 和 β 3 为预设的权重系数。</p>
+    <p>[0118]	该系统还包括：行为模型维护单元，用于对用户行为进行统计，建立和更新用户的行为模型；</p>
+    <p>[0119]	其中，所述行为模型包括用户的活跃度等级；其中用户u的活跃度等级Active (u)为：</p>
+    <p>[0120]	Active(u) = [log (Sanswer+ α 4) *wl+log (Slogin+ α 4) *w2+log (Sbrowse+ α 4) *w3] /Iog^ 4,[0121]	wl,w2和w3是预设的权重系数，α 4和β 4为预设的平滑系数，</p>
+    <p>[0122]	S&#8222;、S1()gin和S&#8212;分别为用户u在设定时间段内回答问题的次数、登陆问答系统的次数、和浏览问答系统页面的次数，或者分别为用户u在设定时间段内回答问题的频率、登陆问答系统的频率、浏览问答系统页面的频率。</p>
+    <p>[0123]	具体地，所述用户排序单元可以包括：用户匹配子单元和用户排序子单元；</p>
+    <p>[0124]	所述用户匹配子单元，用于利用所述特征提取单元提取的问题特征匹配兴趣模型、属性模型和关系模型中的一种或任意组合，确定与所述提取的问题特征匹配的用户；</p>
+    <p>[0125]	所述用户排序子单元，用于利用兴趣模型、属性模型、关系模型和行为模型中的一种或任意组合，确定所述用户匹配子单元确定出的用户与所述待回答问题的匹配程度，根据匹配程度对所述用户匹配子单元确定出的用户进行排序；</p>
+    <p>[0126]	其中，所述用户匹配子单元利用的用户模型与所述用户排序子单元利用的用户模型不完全相同。</p>
+    <p>[0127]	所述用户匹配子单元如果利用的用户模型为两个以上，则还用于将利用各用户模型确定出的与所述提取的问题特征匹配的用户取并集。</p>
+    <p>[0128]	如果所述用户匹配子单元利用了兴趣模型，则所述提取的问题特征包括所述待回答问题的特征词；</p>
+    <p>[0129]	所述用户匹配子单元将所述特征词与各用户的兴趣模型进行匹配，将所述特征词所命中兴趣词对应的用户确定为与所述提取的问题特征匹配的用户；或者，将所述特征词与各用户的兴趣模型进行匹配，确定所述特征词所命中兴趣词对应的用户以及所命中兴趣词在兴趣模型中的权重值，将所命中兴趣词在兴趣模型中权重值大于预设匹配权重值的用户确定为匹配的用户。</p>
+    <p>[0130]	较优地，所述用户排序单元还包括：用户过滤子单元，用于确定所述待回答问题所属的兴趣分类，将该兴趣分类的权重值小于预设的兴趣过滤权重值的用户从所述用户匹配子单元确定出的用户中过滤掉。</p>
+    <p>[0131]	如果所述用户匹配子单元利用了属性模型，则所述提取的问题特征包括所述待回答问题的特征词；</p>
+    <p>[0132]	所述用户匹配子单元将所述特征词与各用户的属性模型进行匹配，将与所述特征词之间的相关度达到预设相关度要求的用户属性所对应的用户确定为与所述提取的问题特征匹配的用户。</p>
+    <p>[0133]	如果所述用户匹配子单元利用了关系模型，则所述提取的问题特征包括所述待回答问题的提问用户信息；</p>
+    <p>[0134]	所述用户匹配子单元将所述提问用户信息与关系模型进行匹配，将与所述提问用户之间的关系权重值达到预设匹配权重值的用户确定为与所述提取的问题特征匹配的用户。</p>
+    <p>[0135]	所述用户排序子单元采用如下公式确定用户U与所述待回答问题的匹配程度Rank (U) ：Rank(U) = Rank(interest)*ffl+Rank(Profile)*W2+Rank(rela)*W3+Rank(behavior)*W4 ；</p>
+    <p>[0136]其中，wi、W2、W3	和 W4 为预设的权重系数</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00181.png"> <img id="idf0009" file="CN102637170AD00181.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00181.png" class="patent-full-image" alt="Figure CN102637170AD00181"> </a> </div>
+    <p>Tn为从所述待回答问题中提取的特征词集合，TermWi为第i个特征词的表意权重值</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00182.png"> <img id="idf0010" file="CN102637170AD00182.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00182.png" class="patent-full-image" alt="Figure CN102637170AD00182"> </a> </div>
+    <p>，为第i个特征词在用户U的兴趣模型中的权重值，Rank(Pn)flle)= Zlermw1 *F^aVec1 ’</p>
+    <p>                                                                                                                    FeaVeci为第i个特征词在用户U的属性模型中的权重值，Rank (rela)为在所述关系模型中查找的所述待回答问题的提问用户与所述用户U之间的关系权重值,Rank(behavior)由在所述用户U的行为模型中查找的所述用户U的活跃等级Active(U)确定。</p>
+    <p>[0137]	具体地，所述问题推送单元可以包括：状态确定子单元和第一推送子单元；</p>
+    <p>[0138]	所述状态确定子单元，用于根据所述用户排序单元的排序结果，确定排在前M个的用户是否处于在线状态；</p>
+    <p>[0139]	所述第一推送子单元，用于将所述待回答问题推送给排在前M个的用户中处于在线状态的用户。</p>
+    <p>[0140]	具体地，所述问题推送单元可以包括：活跃度确定子单元和第二推送子单元；</p>
+    <p>[0141]	所述活跃度确定子单元，用于根据所述用户排序单元的排序结果，从行为模型中查找排在前M个用户的活跃度等级；</p>
+    <p>[0142]	所述第二推送子单元，用于将所述待回答问题推送给排在前M个的用户中活跃度等级超过预设的推送活跃度的用户。</p>
+    <p>[0143]	由以上技术方案可以看出，本发明在对待回答问题进行文本分析提取问题特征后，基于预先建立的多个用户模型，对与待回答问题匹配的用户进行排序，将待回答问题主动推送给排序在前M个的用户，该前M个用户就是对该待回答问题最可能存在兴趣或回答能力的用户。通过本发明提供的方法和系统，使得对待回答问题可能存在兴趣或回答能力的用户即便没有浏览到提问页面也会被推送问题，从而提高了提供答案的效率和质量。</p>
+    <p>【附图说明】</p>
+    <p>[0144]	图I为本发明实施例一提供的兴趣模型的训练过程流程图；</p>
+    <p>[0145]	图2为本发明实施例一中提供的扩展兴趣词的方法流程图；</p>
+    <p>[0146]	图3中（a) (b) (c)分别为兴趣模型、Profile模型以及关系模型的倒排表示意图；</p>
+    <p>[0147]	图4为本发明实施例五提供的确定回答用户的流程图；</p>
+    <p>[0148]	图5为本发明实施例六提供的系统结构示意图；</p>
+    <p>[0149]	图6为本发明实施例六提供的文本分析子单元的结构示意图；</p>
+    <p>[0150]	图7为本发明实施例六提供的兴趣词扩展子单元的结构示意图。</p>
+    <p>【具体实施方式】</p>
+    <p>[0151]	为了使本发明的目的、技术方案和优点更加清楚，下面结合附图和具体实施例对本发明进行详细描述。</p>
+    <p>[0152]	本发明提供的方法主要包括以下两个过程：</p>
+    <p>[0153]	后台的模型训练过程：预先建立用户模型，其中，用户模型包括以下所列中的至少两个：通过对用户的提问和回答进行挖掘建立的兴趣模型、基于用户属性建立的用户属性(Profile)模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型。</p>
+    <p>[0154]	前台针对问题确定回答用户的过程：对问题进行文本分析提取问题特征；利用提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序；将该问题推送给排序在前M个的用户，其中M为预设的正整数。</p>
+    <p>[0155]	下面分别具体对模型训练过程和针对问题确定回答用户的过程进行详细描述。首先通过实施例一对兴趣模型的建立过程进行描述。</p>
+    <p>[0156]	实施例一、</p>
+    <p>[0157]	图I为本发明实施例一提供的兴趣模型的训练过程流程图，在该过程中，兴趣词为兴趣模型中的特征值，如图I所示，该过程可以包括以下步骤：</p>
+    <p>[0158]	步骤101 :抓取各用户的问答历史数据。</p>
+    <p>[0159]	本实施例中，在初次建立兴趣模型后，可以周期性地抓取设定时间段内各用户的问答历史数据，利用抓取到的各用户的问答历史数据对兴趣模型进行更新。</p>
+    <p>[0160]	步骤102 :对各用户的问答历史数据进行文本分析，抽取各用户的兴趣词。</p>
+    <p>[0161]	在本步骤中，用户的问题历史数据中可以包括：用户回答的问题、提出的问题、浏览过的问题、查询过的问题等。其中，最能表现用户兴趣的在于用户回答的问题，在后续的描述中以用户回答的问题为例进行描述。</p>
+    <p>[0162]	本步骤中涉及的文本分析过程可以包括：对用户回答的问题进行基于语义的分词处理，基于对分词处理后得到的各词语的倒文档率以及表意能力，确定各词语的表意权重值，将表意权重值大于预设的兴趣选取权重值的词语确定为该用户的兴趣词。</p>
+    <p>[0163]	其中，词语的表意权重值TermW可以表示为：</p>
+    <p>[0164]	Termff = a*idf+b*ind (I)</p>
+    <p>[0165]	其中，idf表示词语的倒文档率，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00191.png"> <img id="idf0011" file="CN102637170AD00191.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00191.png" class="patent-full-image" alt="Figure CN102637170AD00191"> </a> </div>
+    <p>为预设的大于或等于I的</p>
+    <p>参数，N为待回答问题的数量，df为文档率，即词语在所有待回答问题中出现的次数。ind表示词语的表意能力，词语的表意能力可以根据词语的词性决定，例如通常设置名词具有较高的表意能力、设置连词、虚词具有较低的表意能力，可以通过查询预设的表意能力表来确定，在该表意能力表中可以存储有各词性对应的表意能力值。a和b为预先设置的权重系数。</p>
+    <p>[0166]	更进一步地，在计算词语的表意权重值之前，可以首先计算词语的文档率，将文档率不在设定范围内的词语进行过滤，仅对文档率在设定范围内的词语计算表意权重值，并将表意权重值大于预设的兴趣选取权重值的词语确定为该用户的兴趣词。这么做的原因是：词语的文档率反映了词语在问题中出现的频次，如果出现的很少，则说明该词语并不能重点反映用户的兴趣，如果出现的很多，例如“的”、“什么”等助词、疑问词，也不能重点反映用户的兴趣，因此，可以将这些词语进行过滤，不必计算词语的表意权重值，从而提高效率。</p>
+    <p>[0167]	步骤103 :利用抽取的兴趣词建立或更新各兴趣模型，其中兴趣模型中包含：用户的兴趣词，以及该兴趣词在该用户的兴趣模型中的权重FeatW。</p>
+    <p>[0168]	兴趣词在用户兴趣模型中的权重FeatW是与该兴趣词的表意权重值以及用户对该兴趣词的感兴趣趋势相关的，即</p>
+    <p>[0169]	Featff = a I *Termff+b I * Δ Tr, (2)</p>
+    <p>[0170]	其中ATr为用户对该兴趣词的兴趣趋势，可以采用当前时间段抓取的用户问答历史数据中包含该兴趣词的频次相对于上一时间段抓取的用户问答历史数据中该兴趣词出现的频次的变化值或变化率。如果ATr为正数，说明用户对该兴趣词的感兴趣趋势增力口，如果ATr为负数，说明用户 对该兴趣词的感兴趣趋势降低。al和bl为预设的权重系数。</p>
+    <p>[0171]	在兴趣模型中，还可以进一步对用户的兴趣词进行兴趣分类，并利用兴趣分类中各兴趣词的FeatW计算各兴趣分类在该兴趣模型中的权重值。通常可以将兴趣分类中各兴趣的FeatW取平均值作为该兴趣分类的权重值，或者，兴趣分类的权重值也可以由该兴趣分类中兴趣词的统计分布确定。</p>
+    <p>[0172]	本实施例中对兴趣模型的建立和更新运用了自适应过滤算法的思想，以基于扩展的相关反馈方法（Rocchio算法）为核心，在建立兴趣模型时，可以利用向量空间模型描述用户的兴趣词。通过不断地对用户回答历史进行主动学习，更新兴趣模型，使整个兴趣模型随着用户答复情况的发展趋势而变化，以保持兴趣模型对用户答复兴趣的描述能力。</p>
+    <p>[0173]	采用Ricchio算法更新兴趣模型的公式为：</p>
+    <p>[0174]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00201.png"> <img id="idf0012" file="CN102637170AD00201.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00201.png" class="patent-full-image" alt="Figure CN102637170AD00201"> </a> </div>
+    <p>[0175]	其中，Q'表示更新后的兴趣模型，Q表示更新前的兴趣模型，W表示正例样本集合，凡表示正例样本数量，Dn表示反例样本集合，Nn表示反例样本数量。α、β和Y是预先设定的调整系数，分别反映了修正前兴趣模型、正例样本以及反例样本在更新兴趣模型时的重要程度。其中，正例样本集合包含在该用户的问答历史数据中出现频次呈上升趋势的兴趣词及其在兴趣模型中的权重值，用于对兴趣模型进行扩展，增加相关兴趣特征，有助于提高对回答用户的召回率。反例样本集合包含在该用户的问答历史数据中出现频次呈下降趋势的兴趣词及其在兴趣模型中的权重值，用于减小非相关兴趣特征的重要性，保证推荐结果的准确率。</p>
+    <p>[0176]	更优地，为了提高回答用户的召回率，可以对用户的兴趣词进行扩展，对扩展词进行扩展的方式可以如图2所示，对用户u扩展兴趣词的过程可以包括以下步骤：</p>
+    <p>[0177]	步骤201 :首先确定兴趣词Ti的扩展词Tj。</p>
+    <p>[0178]	在确定兴趣词Ti的扩展词时，可以从具有该兴趣词Ti的其他用户兴趣模型中，选择其他用户模型中与该兴趣词Ti属于同一兴趣分类中的其他兴趣词，根据选择的其他兴趣词与兴趣词Ti之间的相关度，选择相关度排在前P个的兴趣词作为兴趣词Ti的扩展词，其中P为预设的正整数。</p>
+    <p>[0179]	举个例子，用户u具有一个兴趣词“雪碧”，同样存在兴趣词“雪碧”的其他用户兴趣模型中，具有与“雪碧”同属于饮料分类的还具有“可乐”、“醒目”、“百事”，分别计算与“雪碧”之间的相关度，假设依据相关度排序结果为：“醒目”、“可乐”、“百事”，可以选择排在第一个的兴趣词“醒目”作为“雪碧”的扩展词。</p>
+    <p>[0180]	步骤202 :计算用户u对该扩展词Tj的感兴趣程度Wj ：[0181]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00211.png"> <img id="idf0013" file="CN102637170AD00211.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00211.png" class="patent-full-image" alt="Figure CN102637170AD00211"> </a> </div>
+    <p>[0182]	其中</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00212.png"> <img id="idf0014" file="CN102637170AD00212.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00212.png" class="patent-full-image" alt="Figure CN102637170AD00212"> </a> </div>
+    <p>其中，T'为用户u的兴趣模型中与L的相关度超过预设相关度值的兴趣词集合，s (Tn, Tj)为兴趣词Tn与该兴趣词的扩展词L之间的相关度：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00213.png"> <img id="idf0015" file="CN102637170AD00213.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00213.png" class="patent-full-image" alt="Figure CN102637170AD00213"> </a> </div>
+    <p>, α丨和β丨为预设的调整系数，可以根据经验值选取，例</p>
+    <p>如，取α I为2. 1，取β I为O. 45。jnum为扩展词Tj在所有用户的兴趣模型中出现的次数，Wavg为兴趣词Ti在所有用户兴趣模型中的权重平均值。凡j&#183;,为兴趣词Ti在用户u的兴趣模型中的权重值，即上述的FeatW。</p>
+    <p>[0183]	步骤203 :如果Wj的值超过预设的兴趣选取权重值，则将该扩展词Tj作为兴趣词添加到用户u的兴趣模型中。</p>
+    <p>[0184]	该扩展词L在兴趣模型中的权重值同样采用公式（2)进行计算。</p>
+    <p>[0185]	由于兴趣词可以扩展出多个兴趣词，最终扩展出的兴趣词数目可以根据用户更新前的兴趣模型的长度决定，如果更新前的兴趣模型中用户u的兴趣词个数为LEN，则在更新兴趣模型时，扩展出的兴趣词数目可以为（LEN/10+1)*10。</p>
+    <p>[0186]	下面通过实施例二、实施例三和实施例四对建立Profile模型、关系模型和行为模型的过程进行描述。</p>
+    <p>[0187]	实施例二、</p>
+    <p>[0188]	在建立Profile模型时，用户属性作为Profile模型的特征值，获取用户属性集合，包括：地理位置、性别、年龄、行业等。</p>
+    <p>[0189]	上述用户属性通常是静态属性，例如用户在知识问答平台填写的地理位置、性别、年龄、行业等注册信息，此时，如果用户具有某项静态属性，则其静态属性在Profile模型中的权重值就设置为一个固定值，例如固定设置为1，如果用户不具有某项静态属性，则该静态属性在Profile模型中的权重值就是O。</p>
+    <p>[0190]	特别地，对于地理位置这一用户属性，也可以通过用户的兴趣词确定，可以将用户u的兴趣模型中权重值最高的具有地理位置属性的兴趣词作为该用户的地理位置属性。例如，用户u的兴趣模型中权重值最高的具有地理位置属性的兴趣词为“北京”，则可以将“北京”作为该用户U的地理位置属性，此时该地理位置属性在Profile模型中的权重值可以就是其在同一用户的兴趣模型中的权重值，即FeatW。</p>
+    <p>[0191]	实施例三、</p>
+    <p>[0192]	关系模型中，不同用户之间的关系作为关系模型的特征值，可以包含但不限于：问答关系、同团关系、相似兴趣关系。相应地，计算用户之间的关系时，可以考虑上述关系中的一种或任意组合。</p>
+    <p>[0193]	如果关系模型中不同用户之间的关系仅考虑问答关系和同团关系中的一种或组合，贝1J用户ul和用户u2之间的关系权重Rela Rankl (ul, u2)可以由以下公式确定：</p>
+    <p>[0194]	Rela Rank I (ul, u2) = log (relaCnt+ α 2) /log β 2 (5)[0195]	其中，α2和β 2为平滑系数，可以根据经验值进行选取，例如，选取α 2为I. 0，选取β 2为2. O。relaCnt为用户ul和u2在设定时间段内问答关系或同团关系出现的次数，其中同团关系可以包括但不限于：出现在同一个社区、同一个栏目、同一个交流群、回复同一个帖子等。</p>
+    <p>[0196]	如果关系模型中不同用户之间的关系仅考虑相似兴趣关系，则基于兴趣模型计算用户ul和用户u2之间的关系权重Rela Rank2(ul,u2)可以由以下公式确定：</p>
+    <p>[0197]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00221.png"> <img id="idf0016" file="CN102637170AD00221.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00221.png" class="patent-full-image" alt="Figure CN102637170AD00221"> </a> </div>
+    <p>[0198]	其中，^为用户Ul的兴趣词矩阵向量，ζ为用户u2的兴趣词矩阵向量。</p>
+    <p>[0199]	如果关系模型中不同用户之间的关系除了考虑相似兴趣关系之外，还考虑问答关系或同团关系，则用户ul和用户u2之间的关系权重Rela Rank (ul, u2)可以为：</p>
+    <p>[0200]	Rela Rank(uI, u2) =Rela Rankl (ul, u2) * a 3+Rela Rank2 (ul，u2) * β 3。(7)</p>
+    <p>[0201]	其中，α 3和β 3为预先设置的权重系数。</p>
+    <p>[0202]	实施例四、</p>
+    <p>[0203]	在建立行为模型时，首先对设定时间段内各用户的行为数据进行统计，根据统计结果计算各用户的活跃度等级。其中，用户的行为数据包括但不限于：回答问题状况、登陆问答系统的状况、浏览问答系统页面（此处的浏览可以包括通过查询的方式在查询结果中浏览，以及登陆问答系统后的浏览）的状况，此处的状况可以为次数或频率。</p>
+    <p>[0204]	用户u的活跃度等级Active(U)可以采用以下公式计算：</p>
+    <p>[0205]	Active(u) = [log (Sanswer+ α 4) *wl+log (Slogin+ α 4) *w2+log (Sbrowse+ α 4) *w3] /log β 4</p>
+    <p>[0206]</p>
+    <p>(8)</p>
+    <p>[0207]	其中，wl、w2和w3是预设的权重系数，α4和β 4为平滑系数，可以根据经验值设置，例如取α 4为I. 0，取β 4为2. O。</p>
+    <p>                                                  Sanswer、^login 矛口 ^browse</p>
+    <p>                         分别为用户U在设定时间段内回答问题的次数、登陆问答系统的次数、浏览问答系统页面的次数，或者分别为用户U在设定时间段内回答问题的频率、登陆问答系统的频率、浏览问答系统页面的频率。</p>
+    <p>[0208]	在建立上述用户模型后，可以利用用户ID和兴趣模型中的特征值（即用户的兴趣词）建立倒排表，其中，特征值作为倒排索引，用户ID以及该特征值在该兴趣模型中的权重作为倒排拉链，例如图3中的（a)所示。</p>
+    <p>[0209]	同样，也可以利用用户ID和Profile模型中的特征值（即用户属性）建立倒排表，其中，特征值作为倒排索引，用户ID以及该特征值在该Profile模型中的权重作为倒排拉链，例如图3中的（b)所示。</p>
+    <p>[0210]	或者，也可以利用用户ID和关系模型中的特征值（与该用户的关系权重超过预设权重值的其他用户ID)建立倒排表，其中，用户ID作为倒排索引，关系模型中的特征值以及对应关系权重作为倒排拉链，例如图3中的（c)所示。</p>
+    <p>[0211]	上述倒排表的建立可以用于后续确定回答用户时使用，下面通过实施例五将确定回答用户的过程进行描述。</p>
+    <p>[0212]	实施例五、</p>
+    <p>[0213]	图4为本发明实施例五提供的确定回答用户的流程图，通常问答系统会将待回答问题放入待回答问题列表，周期性地对待回答问题列表进行轮询，针对每一个待回答问题确定回答用户，并推送给确定的回答用户。如图4所示，确定回答用户并推送问题的过程可以包括以下步骤：</p>
+    <p>[0214]	步骤401 :对待回答的问题进行文本分析，提取问题的特征词。</p>
+    <p>[0215]	本步骤中，对待回答的问题进行文本分析的过程可以包括：对待回答的问题进行基于语义的分词处理，基于对分词处理后得到的各词语的倒文档率以及表意能力，确定各词语的表意权重值，将表意权重值大于预设的特征提取权重值的词语确定为问题的特征</p>
+    <p>    ο </p>
+    <p>[0216]	其中，词语的权重值的计算过程同样可以采用实施例一中的公式（I)进行计算，在此不再赘述。</p>
+    <p>[0217]	步骤402 :利用提取的特征词与用户模型进行匹配，确定与该特征词匹配的用户。</p>
+    <p>[0218]	在本步骤中，可以用提取的特征词与各用户的兴趣模型进行匹配，确定特征词所命中兴趣词对应的用户以及所命中兴趣词在兴趣模型中的权重值，即在兴趣模型中查找倒排索引，确定命中的倒排拉链。</p>
+    <p>[0219]	可以直接将特征词所命中兴趣词对应的用户作为匹配的用户，更优地，在确定特征词所命中兴趣词对应的用户后，可以选取所命中兴趣词在兴趣模型中权重值大于预设匹配权重值的用户作为匹配的用户。</p>
+    <p>[0220]	由于在某些情况下，虽然待回答问题的特征词可能命中某些用户的兴趣词，但该用户可能感兴趣的并不是该问题所属的兴趣分类，对于这种兴趣分类下的问题，用户也不会感兴趣回答，因此，更进一步地，在本发明实施例中，还可以进一步确定问题所属的兴趣分类，将问题所属兴趣分类的权重值小于预设的兴趣过滤权重值的用户从匹配的用户中过滤掉。举个例子，如果待回答问题为“北京故宫几点开门”，如果“北京”命中了用户A的兴趣词，且该兴趣词在用户A的兴趣模型中权重值很高，则会将该用户A选出来作为与该提问匹配的用户，但该问题属于旅游分类，但用户A的兴趣模型中旅游分类的权重值很低，说明用户A对旅游分类并不感兴趣，因此对于该问题的回答概率较低，此时就可以将用户A从匹配的用户中过滤掉。</p>
+    <p>[0221]	其中，在确定问题所属的兴趣分类时，可以确定问题进行分词处理后得到的各词语分别所属的兴趣分类，按照各词语的权重值为各兴趣分类打分，确定打分值最高的兴趣分类作为该问题所属的兴趣分类。该过程是已有的成熟技术，在此不再详细描述。</p>
+    <p>[0222]	另外，还可以将提取的特征词与各用户的Profile模型进行匹配，确定与该特征词的相关度达到预设相关度要求的用户属性所对应的用户，将该确定的用户作为匹配的用户。例如，假设从待回答问题中提取的特征词“故宫”，某用户的Profile模型中行业属性为旅游，即该特征词与该用户的用户属性具有很高的相关度，如果达到预设相关度要求，则可以将该用户确定为与该待回答问题匹配的用户。</p>
+    <p>[0223]	更进一步地，还可以将问题的提问用户与关系模型进行匹配，确定与该提问用户之间的关系权重值达到预设匹配权重值的用户，将确定的用户作为匹配的用户。即在关系模型中利用提问用户ID查找倒排索引，确定命中的倒排拉链中对应关系权重值达到预设匹配权重值的用户。</p>
+    <p>[0224]	如果采用两个以上的用户模型进行用户匹配，则将采用各用户模型确定的匹配用户取并集。</p>
+    <p>[0225]	步骤403 :利用用户对提问的感兴趣程度Rank (interest)、该提问与用户属性的相关程度Rank (Profile)、用户与提问用户的关系Rank (rela)以及用户的行为状况Rank (behavior),对确定出的用户进行排序。</p>
+    <p>[0226]	用户U的排序权重Rank(U)可以采用如下方式计算：</p>
+    <p>[0227]	Rank(U) = Rank(interest)*ffl+Rank(Profile)*W2+Rank(rela)*W3+Rank(behavior)*W4(9)</p>
+    <p>[0228]其中，W1、W2、W3	和 W4 分别为预设的 Rank (interest)、Rank (Profile)、Rank (rela)以及Rank (behavior)对应的权重系数。</p>
+    <p>[0229]	Rank (interest)可以由待回答问题的各特征词的表意权重值Termff以及该特征词在用户U的兴趣模型中的权重值FeatW综合确定，即</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00241.png"> <img id="idf0017" file="CN102637170AD00241.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00241.png" class="patent-full-image" alt="Figure CN102637170AD00241"> </a> </div>
+    <p>’其中，Tn为提取的待回答问题的特征词集合，Termffi</p>
+    <p>为第i个特征词的表意权重值，Featffi为第i个特征词在用户U的兴趣模型中的权重值。</p>
+    <p>[0230]	Rank (Profile)可以由该提问各特征词的表意权重值TermW以及特征词在用户U</p>
+    <p>的Profile模型中的权重值FeaVec综合确定，即只</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00242.png"> <img id="idf0018" file="CN102637170AD00242.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00242.png" class="patent-full-image" alt="Figure CN102637170AD00242"> </a> </div>
+    <p>，其</p>
+    <p>中，FeaVeci为第i个问题特征词在用户U的Profile模型中的权重值。</p>
+    <p>[0231]	Rank (rela)可以采用用户U与提问用户A之间的关系权重Rela Rank(U，A)，可以通过匹配用户A的关系模型查到。</p>
+    <p>[0232]	Rank (behavior)可以由用户U的活跃等级Active⑶确定，其中活跃等级Active(U)可以通过查找用户U的行为模型查到。</p>
+    <p>[0233]	在对匹配的用户进行排序时，可以仅利用一部分用户模型对用户进行排序，例如仅利用行为模型，确定各匹配的用户的行为状况，利用行为状况对匹配的用户进行排序，此时公式（9)中的W1、W2、W3均为O ;再例如，可以结合兴趣模型和行为模型，确定用户对提问的感兴趣程度和用户的行为状况，然后对匹配的用户进行排序，此时的W2和W3设置为O。可以灵活使用一种或多种用户模型来对匹配的用户进行排序，在此不再穷举。</p>
+    <p>[0234]	也就是说，本步骤实际上是利用兴趣模型、Profile模型、关系模型和行为模型中的一种或任意组合，计算匹配的用户与待回答问题的匹配程度，根据匹配程度对匹配的用户进行排序。需要注意的是，步骤402中确定匹配的用户所使用的用户模型以及步骤403中对匹配的用户进行排序所使用的用户模型不能完全相同。</p>
+    <p>[0235]	步骤404:将排序在前M个的用户确定为该待回答问题的回答用户，将问题推送给确定的回答用户，其中M为预设的正整数。</p>
+    <p>[0236]	更优地，在向回答用户推送问题之前，还可以首先查询回答用户的当前状态，将待回答问题推送给当前处于在线状态的回答用户。</p>
+    <p>[0237]	或者，还可以确定排序在前M个的用户的活跃度等级，将待回答问题推送给排序在前M个的用户中，活跃度超过预设的推送活跃度的用户。例如，可以根据用户的活跃度等级将用户分为核心用户、一般用户和衰退用户，可以将待回答问题推送给排序在前M个的核心用户，也可以将待回答问题推送给核心用户中排在前Ml个的用户，一般用户中排在前M2个的用户以及衰退用户中排在前M3个的用户，或者其他策略。</p>
+    <p>[0238]	在将待回答问题推送给确定的回答用户后，记录回答用户对于该问题的回答状况，即记录为回答用户的问答历史数据和行为数据，用于更新回答用户的兴趣模型和属性模型。另外，回答该问题的回答用户与提问用户产生了新的回答关系，可以用于更新关系模型。基于回答该问题的回答用户的行为，还可以用于更新该回答用户的行为模型。</p>
+    <p>[0239]	举一个具体的例子，假设用户X提问的问题为：“北京故宫几点开门”。对该问题进行文本分析，首先基于语义的分词处理，得到“北京”、“故宫”、“几点”和“开门”。基于分词处理后得到的各词语的倒文档率和表意能力，确定各词语的权重值，参见公式（I)。假设“北京”、“故宫”、“几点”和“开门”对应的表意权重值分别为O. 6,0. 8,0. 5和O. 1，预设的特 征值提取权重值为O. 6，则确定“北京”和“故宫”为问题的特征词。</p>
+    <p>[0240]	将特征词“北京”以及“故宫”分别与各用户模型进行匹配，假设匹配时采用的用户模型为：兴趣模型和关系模型。</p>
+    <p>[0241]	利用“北京”匹配兴趣模型，即以“北京”作为索引查找倒排索引，假设命中的倒排拉链为：[用户A，在用户A的兴趣模型中的权重为O. 7]、[用户B，在用户B的兴趣模型中的权重为O. 3]、[用户C，在用户C的兴趣模型中的权重为O. 6]。利用“故宫”匹配兴趣模型，命中的倒排拉链为[用户A，在用户A的兴趣模型中的权重为0.3]、[用户D，在用户D的兴趣模型中的权重为O. 9]。假设预设匹配权重值为O. 5，则利用兴趣模型确定的与问题特征词匹配的用户为：用户A、用户C、用户D。</p>
+    <p>[0242]	利用用户X匹配关系模型，假设与用户X之间的关系权重值达到预设匹配权重值的用户为：[用户A，与用户X之间的关系权重值为O. 8]、[用户C，与用户X之间的关系权重值为O. 7]。</p>
+    <p>[0243]	将通过兴趣模型和关系模型确定出的用户取并集后得到匹配的用户为：用户A、用户C和用户D。</p>
+    <p>[0244]	然后分别计算用户A、用户C和用户D的排序权重，假设使用的权重系数W1、W2、W3和W4分别为O. 4,0. 2,0. 2,0. 2，假设“北京”作为地理位置在用户A的Profile模型的权重值为O. 8，“故宫”作为旅游行业在用户A的Profile模型的权重值为O. 6，用户A的活跃度等级确定的 Rank (behavior)为 O. 5，则：Rank (A) = (O. 6*0. 7+0. 8*0. 3)*0&#183; 4+(0. 6*0. 8+0.8*0. 6)*0. 2+0. 8*0. 2+0. 5*0. 2 = 0. 716</p>
+    <p>[0245]	采用相同方式分别计算用户C和用户D的排序权重，假设分别为：</p>
+    <p>[0246]	Rank (C) = O. 424</p>
+    <p>[0247]	Rank (D) = O. 628</p>
+    <p>[0248]	按照各用户的排序权重排序结果为：用户A、用户D和用户C。</p>
+    <p>[0249]	将排在前2个的用户确定为回答用户，即用户A和用户D确定为回答用户。查找用户A和用户D的当前状态，确定用户A和用户D都在线，则将问题“北京故宫几点开门”推送给用户A和用户D。</p>
+    <p>[0250]	以上是对本发明所提供的方法进行的描述，下面通过实施例六对本发明所提供的系统进行详细描述。[0251]	实施例六、</p>
+    <p>[0252]	本发明实施例六提供的系统基于预先建立的用户模型，其中用户模型包括以下所列中的至少两个：通过对用户提问的问题和回答进行挖掘建立的兴趣模型、基于用户属性建立的Profile模型、通过对用户行为进行统计建立的行为模型以及基于不同用户之间关系建立的关系模型。如图5所示，该系统可以包括：特征提取单元500、用户排序单元510和问题推送单元520。</p>
+    <p>[0253]	特征提取单元500，用于对待回答问题进行文本分析提取问题特征。</p>
+    <p>[0254]	用户排序单元510，用于利用特征提取单元500提取的问题特征匹配用户模型，根据问题特征在各用户模型中与用户的匹配程度以及预设的各用户模型的排序权重，对用户进行排序。</p>
+    <p>[0255]	问题推送单元520，用于根据用户排序单元510的排序结果，将待回答问题推送给排序在前M个的用户，其中M为预设的正整数。</p>
+    <p>[0256]	为了实现用户模型的建立和维护，该系统还可以包括兴趣模型维护单元530。</p>
+    <p>[0257]	兴趣模型维护单元530可以具体包括：数据抓取子单元531、文本分析子单元532和模型维护子单元533。</p>
+    <p>[0258]	数据抓取子单元531，用于抓取各用户的问答历史数据。</p>
+    <p>[0259]	数据抓取子单元531可以周期性地抓取设定时间段内各用户的问答历史数据，以进行兴趣模型的建立和更新。</p>
+    <p>[0260]	文本分析子单元532，用于对各用户的问答历史数据进行文本分析，抽取各用户的兴趣词。</p>
+    <p>[0261]	模型维护子单元533，用于利用文本分析子单元532抽取的兴趣词建立或更新各用户的兴趣模型，其中兴趣模型中包含：用户的兴趣词以及兴趣词在对应用户的兴趣模型中的权重FeatW。</p>
+    <p>[0262]	更具体地，文本分析子单元532的结构可以如图6所示，具体包括：分词处理模块601、权重确定模块602和兴趣词确定模块603。</p>
+    <p>[0263]	分词处理模块601，用于对用户回答的问题、提出的问题、浏览的问题或查询的问题进行基于语义的分词处理。图6中仅以对用户回答的问题进行基于语义的分词处理为例。</p>
+    <p>[0264]	权重确定模块602，用于基于分词处理模块601分词处理后得到的各词语的倒文档率以及表意能力，确定各词语的表意权重值TermW。</p>
+    <p>[0265]	兴趣词确定模块603,用于将表意权重值TermW大于预设的兴趣选取权重值的词语确定为该用户的兴趣词。</p>
+    <p>[0266]	上述各词语的表意权重值TermW为：TermW = a*idf+b*ind,其中，倒文档率</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00261.png"> <img id="idf0019" file="CN102637170AD00261.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00261.png" class="patent-full-image" alt="Figure CN102637170AD00261"> </a> </div>
+    <p>为预设的大于或等于I的参数，df为词语在所有待回答问题中出现的 </p>
+    <p>次数，N为待回答问题的数量，ind表示词语的表意能力，a和b为预设的权重系数。</p>
+    <p>[0267]	其中词语的表意能力可以根据词语的词性决定，例如通常设置名词具有较高的表意能力、设置连词、虚词具有较低的表意能力。</p>
+    <p>[0268]	另外，可以利用词语的文档率df实现对分词处理后得到的各词语的过滤，即文本分析子单元532还可以包括：过滤处理模块604，用于将分词处理模块601分词处理后得到的各词语中，df不在预设范围内的词语进行过滤，其中df为词语在所有待回答问题中出现的次数。</p>
+    <p>[0269]	此时，权重确定模块602仅针对过滤处理模块604过滤后得到的词语计算表意权重值。</p>
+    <p>[0270]	在图5中，模型维护子单元533按照FeatW = al*TermW+bl* Δ Tr确定兴趣词在对应用户的兴趣模型中的权重FeatW，其中，ATr为当前时间段抓取的用户问答历史数据中该兴趣词出现的频次相对于上一时间段抓取的用户问答历史数据中该兴趣词出现的频次的变化值或变化率，如果ATr为正数，说明用户对该兴趣词的感兴趣趋势增加，如果ATr为负数，说明用户对该兴趣词的感兴趣趋势降低。al和bl为预设的权重系数。</p>
+    <p>[0271]	综上所述，兴趣模型的建立和更新实际上采用了自适应过滤算法的思想，以基于扩展的相关反馈方法（Rocchio算法）为核心，即模型维护子单元533按照</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00271.png"> <img id="idf0020" file="CN102637170AD00271.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00271.png" class="patent-full-image" alt="Figure CN102637170AD00271"> </a> </div>
+    <p>更新用户的兴趣模型，其中，Q'表示更新后的兴趣模</p>
+    <p>型，Q表示更新前的兴趣模型，W表示正例样本集合，包括在该用户的问答历史数据中出现频次呈上升趋势的兴趣词及其在兴趣模型中的权重值，队表示正例样本数量，Dn表示反例样本集合，包括在该用户的问答历史数据中出现频次呈下降趋势的兴趣词及其在兴趣模型中的权重值，Nn表示反例样本数量，α、β和Y是预先设定的调整系数。</p>
+    <p>[0272]	为了提高回答用户的召回率，可以对用户的兴趣模型中进行兴趣词的扩展，为了实现这一目的，兴趣模型维护单元530还可以包括：兴趣词扩展子单元534，用于对用户的兴趣模型中的兴趣词进行扩展。</p>
+    <p>[0273]	兴趣词扩展子单元534具体可以如图7所示包括：扩展词确定模块701、兴趣度计算模块702和兴趣词扩展模块703。</p>
+    <p>[0274]	扩展词确定模块701，用于确定兴趣词Ti的扩展词Tj。</p>
+    <p>[0275]	兴趣度计算模块702，用于计算用户u对扩展词L的感兴趣程度％，其中，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00272.png"> <img id="idf0021" file="CN102637170AD00272.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00272.png" class="patent-full-image" alt="Figure CN102637170AD00272"> </a> </div>
+    <p>α丨和β丨为预设的调整系数，jnum为扩展词Tj在所</p>
+    <p>有用户的兴趣模型中出现的次数，所述= U Y (τ ，其中，T'为用户u的兴趣模</p>
+    <p>              ΣΚ)</p>
+    <p>                                                              r&#8222;er</p>
+    <p>型中与L的相关度超过预设相关度值的兴趣词集合，S (Tn, Tj)为兴趣词Tn与该兴趣词的扩展词L之间的相关度，Wavg为兴趣词Ti在所有用户兴趣模型中的权重平均值，凡A为兴趣词Ti在用户u的兴趣模型中的权重值。</p>
+    <p>[0276]	兴趣词扩展模块703，用于判断^的值是否超过预设的兴趣选取权重值，如果是，则将扩展词L作为兴趣词添加到用户u的兴趣模型中。</p>
+    <p>[0277]	其中，扩展词确定模块701可以具体从具有兴趣词Ti的其他用户的兴趣模型中，选择其他用户的兴趣模型中与兴趣词Ti属于同一兴趣分类中的其他兴趣词，根据选择的其他兴趣词与兴趣词Ti的相关度，选择相关度排在前P个的兴趣词作为兴趣词Ti的扩展词，其中P为预设的正整数。</p>
+    <p>[0278]	仍如图5所示，该系统还包括=Profile模型维护单元540，用于基于用户属性建立和更新用户的Profile模型。</p>
+    <p>[0279]	其中，Profile模型可以包括：用户属性及用户属性在Profile模型中的权重值。</p>
+    <p>[0280]	其中，用户属性可以包括但不限于以下所列中的一种或任意组合：地理位置、性另U、年龄以及行业。</p>
+    <p>[0281]	Profile模型维护单元540可以将用户具有的用户属性在Profile模型中的权重值设置为一个固定值，将用户不具有的用户属性在Profile模型中的权重值设置为O ;或 者，将用户的兴趣模型中权重值最高的具有地理位置属性的兴趣词作为该用户的地理位置属性添加到该用户的Profile模型中，且该地理位置属性在Profile模型中的权重值与兴趣词在该用户的兴趣模型中的权重值相同，这种情况下，Profile模型维护单元540会利用兴趣模型中的兴趣词来形成Profile模型中的地理位置属性，该连接关系在图5中未示出。</p>
+    <p>[0282]	该系统还可以包括：关系模型维护单元550，用于基于不同用户之间关系，建立和更新用户的关系模型。</p>
+    <p>[0283]	不同用户之间关系包括但不限于以下所列的一种或任意组合：问答关系、同团关系以及相似兴趣关系。关系模型维护单元550同样可以从用户问答历史数据或用户行为数据中获取到不同用户之间的关系，该关系模型维护单元550与用户回答历史数据库和用户行为数据库的连接关系在图5中未示出。</p>
+    <p>[0284]	其中，同团关系可以包括但不限于：出现在同一个社区、同一个栏目、同一个交流群或者回复同一个帖子。</p>
+    <p>[0285]	如果关系模型中不同用户之间关系仅包括问答关系或同团关系，则用户Ul和用户 u2 之间的关系权重 Rela Rankl (ul, u2)为：Rela Rankl (ul, u2) = log (relaCnt+ α 2) /Iog^ 2 ;其中，α 2和β 2为预设的平滑系数，relaCnt为用户ul和u2在设定时间段内问答关系或同团关系出现的次数。</p>
+    <p>[0286]	如果关系模型中不同用户之间关系仅包括相似兴趣关系，则用户Ul和用户U2之</p>
+    <p>间的关系权重Rela Rank2(ul, u2)为：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00281.png"> <img id="idf0022" file="CN102637170AD00281.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00281.png" class="patent-full-image" alt="Figure CN102637170AD00281"> </a> </div>
+    <p>,其中，为用</p>
+    <p>户Ul的兴趣词矩阵向量，ζ为用户u2的兴趣词矩阵向量。</p>
+    <p>[0287]	如果关系模型中不同用户之间关系除了包括相似兴趣关系之外，还包括问答关系或同团关系，贝1J用户ul和用户u2之间的关系权重Rela Rank (ul, u2)为：Rela Rank (ul,u2) =Rela Rankl (ul，u2)* a 3+Rela Rank2 (ul，u2) * β 3，其中 α3 和 β 3 为预设的权重系数。</p>
+    <p>[0288]	如图5所示，该系统还可以包括：行为模型维护单元560，用于对用户行为进行统计，建立和更新用户的行为模型。</p>
+    <p>[0289]	其中，行为模型包括用户的活跃度等级；其中用户U的活跃度等级Active (U)可以为：</p>
+    <p>[0290]	Active(u) = [log (Sanswer+ α 4) *wl+log (Slogin+ α 4) *w2+log (Sbrowse+ α 4) *w3] /Iog^ 4,</p>
+    <p>[0291]	wl、w2和w3是预设的权重系数，α 4和β 4为预设的平滑系数，S&#8222;、Sltjgil^P Sbratse分别为用户u在设定时间段内回答问题的次数、登陆问答系统的次数、和浏览问答系统页面的次数，或者分别为用户U在设定时间段内回答问题的频率、登陆问答系统的频率、浏览问答系统页面的频率。[0292]	具体地，特征提取单元500可以具体包括：分词处理子单元501、权重确定子单元502和兴趣词确定子单元503。</p>
+    <p>[0293]	分词处理子单元501，用于对待回答问题进行基于语义的分词处理。</p>
+    <p>[0294]	权重确定子单元502，用于基于对分词处理子单元501分词处理后得到的各词语的倒文档率以及表意能力，确定各词语的表意权重值TermW。</p>
+    <p>[0295]	兴趣词确定子单元503，用于将表意权重值TermW大于预设的特征提取权重值的词语确定为待回答问题的特征词。</p>
+    <p>[0296]	上述的特征提取单元500和文本分析子单元532可以分别设置为独立的单元，也可以通过一个单元来实现。</p>
+    <p>[0297]	图5中用户排序单元510可以具体包括：用户匹配子单元511和用户排序子单元512。</p>
+    <p>[0298]	用户匹配子单元511，用于利用特征提取单元500提取的问题特征匹配兴趣模型、Profile模型和关系模型中的一种或任意组合，确定与提取的问题特征匹配的用户。</p>
+    <p>[0299]	用户排序子单元512，用于利用兴趣模型、Profile模型、关系模型和行为模型中的一种或任意组合，确定用户匹配子单元511确定出的用户与待回答问题的匹配程度，根据匹配程度对用户匹配子单元511确定出的用户进行排序。</p>
+    <p>[0300]	其中，用户匹配子单元511利用的用户模型与用户排序子单元512利用的用户模型不完全相同。</p>
+    <p>[0301]	用户匹配子单元511如果利用的用户模型为两个以上，则还可以用于将利用各用户模型确定出的与提取的问题特征匹配的用户取并集。</p>
+    <p>[0302]	用户匹配子单元511根据采用的不同用户模型，确定匹配的用户存在以下情况：</p>
+    <p>[0303]	如果用户匹配子单元511利用了兴趣模型，则提取的问题特征包括待回答问题的特征词；此时，</p>
+    <p>[0304]	用户匹配子单元511将特征词与各用户的兴趣模型进行匹配，将特征词所命中兴趣词对应的用户确定为与提取的问题特征匹配的用户；或者，将特征词与各用户的兴趣模型进行匹配，确定特征词所命中兴趣词对应的用户以及所命中兴趣词在兴趣模型中的权重值，将所命中兴趣词在兴趣模型中权重值大于预设匹配权重值的用户确定为匹配的用户。</p>
+    <p>[0305]	较优地，用户排序单元510还可以包括：用户过滤子单元513，用于确定待回答问题所属的兴趣分类，将该兴趣分类的权重值小于预设的兴趣过滤权重值的用户从用户匹配子单元511确定出的用户中过滤掉。</p>
+    <p>[0306]	如果用户匹配子单元511利用了 Profile模型，则提取的问题特征包括待回答问题的特征词；此时，</p>
+    <p>[0307]	用户匹配子单元511将特征词与各用户的Profile模型进行匹配，将与特征词之间的相关度达到预设相关度要求的用户属性所对应的用户确定为与提取的问题特征匹配的用户。</p>
+    <p>[0308]	如果用户匹配子单元511利用了关系模型，则提取的问题特征包括待回答问题的提问用户信息；此时，[0309]	用户匹配子单元511将提问用户信息与关系模型进行匹配，将与提问用户之间的关系权重值达到预设匹配权重值的用户确定为与提取的问题特征匹配的用户。</p>
+    <p>[0310]	具体地，用户排序子单元512可以采用如下公式确定用户U与待回答问题的匹配程度 Rank (U) ：Rank (U) = Rank (interest) *Wl+Rank(Profile)*W2+Rank (rela) *W3+Rank(behavior)*W4。</p>
+    <p>[0311 ]其中，Wl、W2、W3 和 W4 为预设的权重系数</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00301.png"> <img id="idf0023" file="CN102637170AD00301.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00301.png" class="patent-full-image" alt="Figure CN102637170AD00301"> </a> </div>
+    <p>为从待回答问题中提取的特征词集合，TermWi为第i个特征词的表意权重值，FeatWi为第i个特征词在用户U的兴趣模型中的权重值，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00302.png"> <img id="idf0024" file="CN102637170AD00302.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102637170A/CN102637170AD00302.png" class="patent-full-image" alt="Figure CN102637170AD00302"> </a> </div>
+    <p>itTN</p>
+    <p>为第i个特征词在用户U的Profile模型中的权重值，Rank (rela)为在关系模型中查找的待回答问题的提问用户与用户U之间的关系权重值，Rank (behavior)由在用户U的行为模型中查找的用户U的活跃等级Active(U)确定。</p>
+    <p>[0312]	如图5所示，问题推送单元520可以采用两种结构，第一种结构中，问题推送单元520可以具体包括：状态确定子单元521和第一推送子单元522。</p>
+    <p>[0313]	状态确定子单元521，用于根据用户排序单元510的排序结果，确定排在前M个的用户是否处于在线状态。</p>
+    <p>[0314]	第一推送子单元522，用于将待回答问题推送给排在前M个的用户中处于在线状态的用户。</p>
+    <p>[0315]	第二种结构（图5中未示出）中，问题推送单元520具体包括：活跃度确定子单元和第二推送子单元。</p>
+    <p>[0316]	活跃度确定子单元，用于根据用户排序单元510的排序结果，从行为模型中查找排在前M个用户的活跃度等级。</p>
+    <p>[0317]	第二推送子单元，用于将待回答问题推送给排在前M个的用户中活跃度等级超过预设的推送活跃度的用户。</p>
+    <p>[0318]	另外，上述系统还包括用户数据记录单元570，用于记录回答用户对于问题的回答状况，即记录为回答用户的问答历史数据和行为数据，可以用于后续更新回答用户的兴趣模型、Profile模型和行为模型，另外回答问题的回答用户与提问用户也产生了新的回答关系，可以用于更新关系模型。用户数据记录570为知识问答系统中的已有单元，在此不再具体描述。</p>
+    <p>[0319]	以上所述仅为本发明的较佳实施例而已，并不用以限制本发明，凡在本发明的精神和原则之内，所做的任何修改、等同替换、改进等，均应包含在本发明保护的范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101257512A?cl=zh">CN101257512A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年2月2日</td><td class="patent-data-table-td patent-date-value">2008年9月3日</td><td class="patent-data-table-td ">黄伟才</td><td class="patent-data-table-td ">用于问答系统的问答匹配方法及问答方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101520784A?cl=zh">CN101520784A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年2月29日</td><td class="patent-data-table-td patent-date-value">2009年9月2日</td><td class="patent-data-table-td ">富士通株式会社</td><td class="patent-data-table-td ">信息发布系统和信息发布方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101540739A?cl=zh">CN101540739A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年4月14日</td><td class="patent-data-table-td patent-date-value">2009年9月23日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">用户推荐方法及用户推荐系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101719145A?cl=zh">CN101719145A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年11月17日</td><td class="patent-data-table-td patent-date-value">2010年6月2日</td><td class="patent-data-table-td ">北京大学</td><td class="patent-data-table-td ">基于图书领域本体的个性化搜索方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101923545A?cl=zh">CN101923545A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月15日</td><td class="patent-data-table-td patent-date-value">2010年12月22日</td><td class="patent-data-table-td ">北京百分通联传媒技术有限公司</td><td class="patent-data-table-td ">一种个性化信息推荐的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20070271519">US20070271519</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年3月12日</td><td class="patent-data-table-td patent-date-value">2007年11月22日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">System and Method for Collecting User Interest Data</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103198155A?cl=zh">CN103198155A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年4月27日</td><td class="patent-data-table-td patent-date-value">2013年7月10日</td><td class="patent-data-table-td ">俞志晨</td><td class="patent-data-table-td ">一种基于移动终端的智能问答交互系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103312704A?cl=zh">CN103312704A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月3日</td><td class="patent-data-table-td patent-date-value">2013年9月18日</td><td class="patent-data-table-td ">苏州阔地网络科技有限公司</td><td class="patent-data-table-td ">一种实现智能客服的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103455592A?cl=zh">CN103455592A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年8月30日</td><td class="patent-data-table-td patent-date-value">2013年12月18日</td><td class="patent-data-table-td ">广州网易计算机系统有限公司</td><td class="patent-data-table-td ">一种问答方法、装置及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=HMCWBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年8月15日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年2月25日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of a patent application after its publication</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/157927629acc7667bd45/CN102637170A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E9%97%AE%E9%A2%98%E6%8E%A8%E9%80%81%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=HMCWBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2QJGZBV0dSZrpftZKdgRq2gkYZJg"},"sample_url":"https://www.google.com/patents/reader?id=HMCWBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html><html><head><title>专利 CN101764828A - 推送会话的建立方法、推送系统和相关设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="推送会话的建立方法、推送系统和相关设备"><meta name="DC.contributor" content="杨健" scheme="inventor"><meta name="DC.contributor" content="王雷" scheme="inventor"><meta name="DC.contributor" content="范姝男" scheme="inventor"><meta name="DC.contributor" content="董挺" scheme="inventor"><meta name="DC.contributor" content="华为终端有限公司" scheme="assignee"><meta name="DC.date" content="2008-12-23" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供推送会话的建立方法、推送系统和相关设备，应用于通信技术领域。本发明推送会话的建立方法是服务器将客户端的设备标识信息添加到会话初始请求消息中发送到客户端；或者服务器将会话初始请求消息发给标识客户端的公共用户身份标识对应的所有客户端，由客户端来判断是否需要和服务器建立基于会话初始协议的推送会话连接，这样对于同一个公共用户身份标识绑定的多个客户端来说，只有需要接收推送请求消息的客户端和服务器建立基于会话初始协议的推送会话连接，和现有技术相比，节省了网络资源，从而防止了现有技术中客户端会连续收到推送会话请求消息的不良体验。"><meta name="DC.date" content="2010-6-30"><meta name="citation_patent_publication_number" content="CN:101764828:A"><meta name="citation_patent_application_number" content="CN:200810187915"><link rel="canonical" href="https://www.google.com/patents/CN101764828A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101764828A?cl=zh"/><meta name="title" content="专利 CN101764828A - 推送会话的建立方法、推送系统和相关设备"/><meta name="description" content="本发明提供推送会话的建立方法、推送系统和相关设备，应用于通信技术领域。本发明推送会话的建立方法是服务器将客户端的设备标识信息添加到会话初始请求消息中发送到客户端；或者服务器将会话初始请求消息发给标识客户端的公共用户身份标识对应的所有客户端，由客户端来判断是否需要和服务器建立基于会话初始协议的推送会话连接，这样对于同一个公共用户身份标识绑定的多个客户端来说，只有需要接收推送请求消息的客户端和服务器建立基于会话初始协议的推送会话连接，和现有技术相比，节省了网络资源，从而防止了现有技术中客户端会连续收到推送会话请求消息的不良体验。"/><meta property="og:title" content="专利 CN101764828A - 推送会话的建立方法、推送系统和相关设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101764828A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101764828A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101764828A&amp;usg=AFQjCNH5fNaeRwKL-tLoGzWmDykQEqHD5A" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/f516932c05ce8b00f62b/CN101764828A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/f516932c05ce8b00f62b/CN101764828A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101764828A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101764828A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101764828A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101764828B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101764828A?cl=zh" style="display:none"><span itemprop="description">本发明提供推送会话的建立方法、推送系统和相关设备，应用于通信技术领域。本发明推送会话的建立方法是服务器将客户端的设备标识信息添加到会话初始请求消息中发送到客户端；或者服务器将会话初始请求消息发给标识客...</span><span itemprop="url">https://www.google.com/patents/CN101764828A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101764828A - 推送会话的建立方法、推送系统和相关设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101764828A - 推送会话的建立方法、推送系统和相关设备" title="专利 CN101764828A - 推送会话的建立方法、推送系统和相关设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101764828 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810187915</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年6月30日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年12月23日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年12月23日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101764828B?hl=zh-CN&amp;cl=zh">CN101764828B</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2375670A1?hl=zh-CN&amp;cl=zh">EP2375670A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2375670A4?hl=zh-CN&amp;cl=zh">EP2375670A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2375670B1?hl=zh-CN&amp;cl=zh">EP2375670B1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2863615A1?hl=zh-CN&amp;cl=zh">EP2863615A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20110258332?hl=zh-CN&amp;cl=zh">US20110258332</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2010072103A1?hl=zh-CN&amp;cl=zh">WO2010072103A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810187915.2, </span><span class="patent-bibdata-value">CN 101764828 A, </span><span class="patent-bibdata-value">CN 101764828A, </span><span class="patent-bibdata-value">CN 200810187915, </span><span class="patent-bibdata-value">CN-A-101764828, </span><span class="patent-bibdata-value">CN101764828 A, </span><span class="patent-bibdata-value">CN101764828A, </span><span class="patent-bibdata-value">CN200810187915, </span><span class="patent-bibdata-value">CN200810187915.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E5%81%A5%22">杨健</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%E9%9B%B7%22">王雷</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%8C%83%E5%A7%9D%E7%94%B7%22">范姝男</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%91%A3%E6%8C%BA%22">董挺</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E7%BB%88%E7%AB%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为终端有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101764828A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101764828A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101764828A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (8),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (8),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810187915&amp;usg=AFQjCNEKedmaxHNkVrMc6-hEQrtEmthwpA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101764828A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNERke-lewcuH5uscCoD06l6E6cc0w"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT96303117" lang="ZH" load-source="patent-office">推送会话的建立方法、推送系统和相关设备</invention-title>
+      </span><br><span class="patent-number">CN 101764828 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA78906693" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供推送会话的建立方法、推送系统和相关设备，应用于通信技术领域。本发明推送会话的建立方法是服务器将客户端的设备标识信息添加到会话初始请求消息中发送到客户端；或者服务器将会话初始请求消息发给标识客户端的公共用户身份标识对应的所有客户端，由客户端来判断是否需要和服务器建立基于会话初始协议的推送会话连接，这样对于同一个公共用户身份标识绑定的多个客户端来说，只有需要接收推送请求消息的客户端和服务器建立基于会话初始协议的推送会话连接，和现有技术相比，节省了网络资源，从而防止了现有技术中客户端会连续收到推送会话请求消息的不良体验。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(24)</span></span></div><div class="patent-text"><ol mxw-id="PCLM32332608" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种推送会话的建立方法，其特征在于，包括：获得客户端的设备标识信息；将所述客户端的设备标识信息添加到会话初始请求消息SIR中；根据所述客户端的设备标识信息将所述会话初始请求消息发送给所述客户端，请求所述客户端根据所述会话初始请求消息向服务器建立基于会话初始协议SIP的推送会话连接。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 如权利要求1所述的方法，其特征在于，所述将所述客户端的设备标识信息添加到会话初始请求消息包括：将所述客户端的设备标识信息添加到所述会话初始请求消息的头域和/或值域和/或 消息体中。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 如权利要求1所述的方法，其特征在于，所述将所述客户端的设备标识信息添加到会话初始请求消息中之后还包括：用超文本传输协议HTTP消息，或SIP消息，或短信息SMS消息，或无线上网协议WSP消 息，或电路域消息，或分组域消息封装所述会话初始请求消息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 如权利要求1所述的方法，其特征在于，所述获得所述客户端的设备标识信息之前还包括：判断绑定所述客户端的公共用户身份标识是否还绑定除所述客户端之外的其它客户端，若是，则执行获得所述客户端的设备标识信息的步骤。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 如权利要求1至4任一项所述的方法，其特征在于，所述会话初始请求消息中还包括：指示所述客户端激活相应应用的应用信息，和/或指示所述客户端根据所述会话初始请求消息返回相应信息或发送相应消息的信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 如权利要求5所述的方法，其特征在于，所述指示所述客户端根据所述会话初始请求消息返回相应信息为：指示所述客户端返回设备能力信息，和/或偏好信息，和/或安全信息，和/或签约信息，和/或拒绝建立连接的信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 如权利要求1至4任一项所述的方法，其特征在于，还包括：将标识所述客户端的公 共用户身份标识添加到所述会话初始请求消息中；则所述方法还包括：将所述会话初始请求消息发送给所述公共用户身份标识对应的所有客户端，请求所述 所有客户端根据所述设备标识信息来确定是否需要根据所述会话初始请求消息向服务器 建立基于会话初始协议SIP的推送会话连接；或根据所述客户端的设备标识信息将所述会话初始请求消息发送给所述客户端，请求 所述客户端根据所述会话初始请求消息向服务器建立基于会话初始协议SIP的推送会话 连接。</div>
+    </div>
+    </li> <li class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8. &#8212;种推送会话的建立方法，其特征在于，包括： 接收会话初始请求消息；若所述会话初始请求消息中包含用户公共身份标识，根据所述会话初始请求消息与自 身的信息判断是否需要和服务器建立基于会话初始协议的推送会话连接，若是，和所述服 务器建立基于会话初始协议的推送会话连接。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 如权利要求8所述的方法，其特征在于，若所述会话初始请求消息中包括设备标识信息，所述根据会话初始请求消息与自身的信息判断是否需要和服务器建立基于会话初始协议的推送会话连接包括：将所述设备标识信息和自身的信息进行匹配，如果所述自身的 信息与所述设备标识信息相符合，则判断为需要和服务器建立基于会话初始协议的推送会 话连接。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 如权利要求9所述的方法，其特征在于，所述自身的信息为安全信息，和/或设置的 偏好信息，和/或能力信息，和/或用户判断。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 如权利要求8至10任一项权利要求所述的方法，其特征在于，若所述会话初始请 求消息中还包含指示客户端根据所述会话初始请求消息返回相应信息或发送相应消息的 信息，所述与所述服务器建立基于会话初始协议的推送会话连接之后还相应的包括：根据 所述会话初始请求消息中的指示信息向所述服务器返回相应信息，或向服务器发送相应消 息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 如权利要求11所述的方法，其特征在于，所述相应信息包括：客户端的设备能力信 息，和/或偏好信息，和/或安全信息，和/或签约信息，和/或拒绝建立连接的信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 如权利要求8至10任一项权利要求所述的方法，其特征在于，若所述会话初始请求 消息中包含应用信息，还包括：激活所述应用信息对应的应用，来获得向所述服务器返回的 相应信息或向客户端进行注册。</div>
+    </div>
+    </li> <li class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14. 一种推送系统，其特征在于，包括：服务器，用于获得客户端的设备标识信息，将所述客户端的设备标识信息添加到会话初始请求消息SIR中，根据所述客户端的设备标识信息将所述会话初始请求消息发送给所述客户端，请求所述客户端根据所述会话初始请求消息向服务器建立基于会话初始协议SIP的推送会话连接；客户端，用于接收到所述服务器发送的会话初始协议消息，和所述服务器建立基于会 话初始协议的推送会话连接。</div>
+    </div>
+    </li> <li class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15. &#8212;种推送系统，其特征在于，包括：服务器，用于添加客户端的公共身份标识到会话初始请求消息中，将所述会话初始请 求消息发送给所述公共用户身份标识对应的所有客户端，请求所述所有客户端根据所述设 备标识信息来确定是否需要向服务器建立基于会话初始协议的推送会话连接；客户端，用于接收所述服务器发送的包含用户公共身份标识的会话初始请求消息，当 根据所述会话初始请求消息与自身的信息确定需要和服务器建立基于会话初始协议的推 送会话连接时，和所述服务器建立基于会话初始协议的推送会话连接。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16. 如权利要求15所述的推送系统，其特征在于，若所述服务器发送的会话初始请求 消息中还包括设备标识信息，则所述客户端将所述设备标识信息与自身的信息进行匹配， 若相符合，则确定为需要和所述服务器建立基于会话初始协议的推送会话连接。</div>
+    </div>
+    </li> <li class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17. &#8212;种服务器，其特征在于，包括： 信息获得单元，用于获得客户端的设备标识信息；消息添加单元，用于将所述信息获得单元获得的客户端的设备标识信息添加到会话初 始请求消息中；请求发送单元，用于根据所述客户端的设备标识信息将所述消息添加单元添加的会话 初始请求消息发送给所述客户端，请求所述客户端根据所述会话初始请求消息向服务器建 立基于会话初始协议SIP的推送会话连接。</div>
+    </div>
+    </li> <li class="claim"> <div num="18" class="claim">
+      <div class="claim-text">18. 如权要求17所述的服务器，其特征在于，还包括：消息封装单元，用于用超文本传 输协议HTTP消息，或SIP消息，或短信息协议SMS消息，或无线上网协议WSP消息，或电路 域消息，或分组域消息封装所述消息添加单元添加的会话初始请求消息。</div>
+    </div>
+    </li> <li class="claim"> <div num="19" class="claim">
+      <div class="claim-text">19. 如权要求17或18所述的服务器，其特征在于，还包括：标识判断单元，用于判断绑 定所述客户端的公共用户身份标识是否还绑定除所述客户端之外的其它客户端，若是，则 通知所述信息获得单元获得所述客户端的设备标识信息。</div>
+    </div>
+    </li> <li class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20. 如权要求17或18所述的服务器，其特征在于，还包括：标识添加单元，用于将标识 所述客户端的公共用户身份标识添加到所述会话初始请求消息中；所述请求发送单元，还用于将所述标识添加单元添加的会话初始请求消息发送给所述 公共用户身份标识对应的所有客户端，请求所述所有客户端根据所述设备标识信息来确定 是否需要根据所述会话初始请求消息向服务器建立基于会话初始协议的推送会话连接。</div>
+    </div>
+    </li> <li class="claim"> <div num="21" class="claim">
+      <div class="claim-text">21. &#8212;种客户端，其特征在于，包括： 请求接收单元，用于接收会话初始请求消息；判断连接单元，用于若所述请求接收单元接收的会话初始请求消息中包含用户公共身 份标识，根据所述会话初始请求消息与自身的信息判断是否需要和服务器建立基于会话初 始协议的推送会话连接，若是，和所述服务器建立基于会话初始协议的推送会话连接。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22. 如权利要求21所述的客户端，其特征在于，所述判断连接单元包括： 匹配单元，用于当所述请求接收单元接收的会话初始请求消息中包含设备标识信息，将所述设备标识信息和自身的信息进行匹配；连接单元，用于当所述匹配单元匹配的结果为所述自身的信息与所述设备标识信息相 符合，则和所述服务器建立基于会话初始协议的推送会话连接。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23. 如权利要求21或22所述的客户端，其特征在于，还包括：回应单元，用于当所述请 求接收单元接收的会话初始请求消息中包含指示客户端根据所述会话初始请求消息返回 相应信息或发送相应消息的信息，根据所述会话初始请求消息中的指示信息向所述服务器 返回相应信息，或向服务器发送相应消息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24. 如权利要求21或22所述的客户端，其特征在于，还包括：应用激活单元，用于当 所述请求接收单元接收的会话初始请求消息中包含应用信息，激活所述应用信息对应的应 用，来获得向所述服务器返回的相应信息或向客户端进行注册。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES37690815" lang="ZH" load-source="patent-office" class="description">
+    <p>推送会话的建立方法、推送系统和相关设备</p>
+    <p>技术领域</p>
+    <p>[0001] 本发明涉及通信技术领域，特别涉及推送会话的建立方法、推送系统和相关设备。</p>
+    <p>背景技术</p>
+    <p>[0002] 推送（Push)是一个内容分发的机制，采用客户端/服务器模式的工作方式，要求 服务器不需要客户端对推送的内容请求就可以将所需要的内容进行分发。服务器对推送 内容的分发具体为：将推送请求消息封装成空中协议（OTA)消息，如无线会话的空中协议 (0TA-WSP)和超文本传输的空中协议（0TA-HTTP)等消息，并将封装后的推送请求消息发送 给客户端。</p>
+    <p>[0003] 现有技术中服务器发送推送请求消息给客户端前，需要判断是否已经与所述客户 端建立连接，如果还未建立连接，则需要在所述客户端和服务器之间建立连接，请求客户端 向网络建立连接来接收相应的推送消息。现有技术中客户端和服务器建立基于会话初始 协议（SIP)的连接具体通过如下步骤实现：服务器将所述用户识别标识（User ID)添加到 会话初始请求消息（SIR)中，并发送给所述客户端，请求所述客户端与服务器建立连接，在 SIR消息中可以包含信息指示所述客户端返回一定信息，如指示客户端返回偏好信息、能力 信息等；客户端在接收到SIR消息，与服务器建立连接，之后可以根据SIR消息中的信息向 服务器返回在所述SIR消息中请求的信息。</p>
+    <p>[0004]     在对上述现有技术实践和研究的过程中，本发明的发明人发现：</p>
+    <p>[0005]     现有的推送会话的建立方法是通过在SIR消息中添加用户识别标识（User ID)来</p>
+    <p>请求所述用户识别标识对应的客户端与服务器建立连接，而用户识别标识为公共用户身份</p>
+    <p>标识，其格式采用SIP统一资源标识（URI)，它通过诸如用户电话号码或主机名等元素来构</p>
+    <p>造（例如：SIP :user@company. com)，可以绑定多个客户端如台式电脑、笔记本、第二代移动</p>
+    <p>通讯技术（2G)手机等，这时SIR消息将会发送给所述用户识别标识对应的所有客户端，所</p>
+    <p>有客户端向服务器建立连接后，都接收一条推送请求消息，或所述所有客户端都向服务器 返回在SIR消息中请求的信息，造成网络资源的浪费；且有的客户端可能并不希望接收服 务器发送的推送请求消息，这样造成不好的用户体验。</p>
+    <p>发明内容</p>
+    <p>[0006] 本发明实施例提供推送会话的建立方法、推送系统和相关设备，节省了网络资源， 防止不良的用户体验。</p>
+    <p>[0007]     本发明实施例提供的一种推送会话的建立方法，包括： [0008]     获得客户端的设备标识信息；</p>
+    <p>[0009]     将所述客户端的设备标识信息添加到会话初始请求消息SIR中；</p>
+    <p>[0010] 根据所述客户端的设备标识信息将所述会话初始请求消息发送给所述客户端，请</p>
+    <p>求所述客户端根据所述会话初始请求消息向服务器建立基于会话初始协议SIP的推送会</p>
+    <p>话连接。[0011]     本发明实施例提供的一种推送会话的建立方法，包括： [0012]     接收会话初始请求消息；</p>
+    <p>[0013] 若所述会话初始请求消息中包含用户公共身份标识，根据所述会话初始请求消息 与自身的信息判断是否需要和服务器建立基于会话初始协议的推送会话连接，若是，和所 述服务器建立基于会话初始协议的推送会话连接 [0014]     本发明实施例提供的一种推送系统，包括：</p>
+    <p>[0015] 服务器，用于获得客户端的设备标识信息，将所述客户端的设备标识信息添加到 会话初始请求消息SIR中，根据所述客户端的设备标识信息将所述会话初始请求消息发送 给所述客户端，请求所述客户端根据所述会话初始请求消息向服务器建立基于会话初始协 议SIP的推送会话连接；</p>
+    <p>[0016] 客户端，用于接收到所述服务器发送的会话初始协议消息，和所述服务器建立基</p>
+    <p>于会话初始协议的推送会话连接。</p>
+    <p>[0017]      本发明还提供了一种推送系统，包括：</p>
+    <p>[0018] 服务器，用于添加客户端的公共身份标识到会话初始请求消息中，将所述会话初</p>
+    <p>始请求消息发送给所述公共用户身份标识对应的所有客户端，请求所述所有客户端根据所</p>
+    <p>述设备标识信息来确定是否需要向服务器建立基于会话初始协议的推送会话连接；</p>
+    <p>[0019] 客户端，用于接收所述服务器发送的包含用户公共身份标识的会话初始请求消</p>
+    <p>息，当根据所述会话初始请求消息与自身的信息确定需要和服务器建立基于会话初始协议</p>
+    <p>的推送会话连接时，和所述服务器建立基于会话初始协议的推送会话连接。</p>
+    <p>[0020]     本发明提供的一种服务器，包括：</p>
+    <p>[0021]     信息获得单元，用于获得客户端的设备标识信息；</p>
+    <p>[0022] 消息添加单元，用于将所述信息获得单元获得的客户端的设备标识信息添加到会 话初始请求消息中；</p>
+    <p>[0023] 请求发送单元，用于根据所述客户端的设备标识信息将所述消息添加单元添加的 会话初始请求消息发送给所述客户端，请求所述客户端根据所述会话初始请求消息向服务 器建立基于会话初始协议SIP的推送会话连接。 [0024]     本发明实施例提供的一种客户端，包括： [0025]     请求接收单元，用于接收会话初始请求消息；</p>
+    <p>[0026] 判断连接单元，用于若所述请求接收单元接收的会话初始请求消息中包含用户公 共身份标识，根据所述会话初始请求消息与自身的信息判断是否需要和服务器建立基于会 话初始协议的推送会话连接，若是，和所述服务器建立基于会话初始协议的推送会话连接。 [0027] 可见，如果用来标识客户端的公共用户身份标识绑定了一个以上的客户端，且需 要服务器与其中特定客户端建立基于会话初始协议的推送会话连接时，本发明实施例的方 法是服务器将客户端的设备标识信息添加到会话初始请求消息中发送到客户端；或者服务 器将会话初始请求消息发给标识客户端的公共用户身份标识对应的所有客户端，由所有客 户端来判断是否需要和服务器建立基于会话初始协议的推送会话连接，这样对于同一个公 共用户身份标识绑定的多个客户端来说，只有需要接收推送请求消息的客户端和服务器建 立基于会话初始协议的推送会话连接，和现有技术相比，节省了网络资源，从而防止了现有 技术中客户端会连续收到推送会话请求消息的不良体验。附图说明</p>
+    <p>[0028] 为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现 有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本 发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可 以根据这些附图获得其他的附图。</p>
+    <p>[0029]      图1是本发明实施例一提供的一种推送会话的建立方法的流程图； [0030]      图2是本发明实施例二提供的一种推送会话的建立方法的信令流程图； [0031]      图3是本发明实施例三提供的一种推送会话的建立方法的信令流程图； [0032]      图4是本发明实施例四提供的一种推送会话的建立方法的信令流程图； [0033]      图5是本发明系统实施例一提供的一种推送系统的结构示意图； [0034]      图6是本发明设备实施例一提供的一种服务器的结构示意图； [0035]      图7是本发明设备实施例二提供的一种服务器的结构示意图； [0036]      图8是本发明设备实施例三提供的一种客户端的结构示意图； [0037]      图9是本发明设备实施例四提供的一种客户端的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0038] 下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完 整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于 本发明中的实施例，本领域普通技术人员在没有作出创造性劳动前提下所获得的所有其他 实施例，都属于本发明保护的范围。</p>
+    <p>[0039] 实施例一、一种推送会话的建立方法，本实施例中推送系统包括服务器和客户端， 信令流程图如图l所示，包括：</p>
+    <p>[0040]     步骤101、服务器获得客户端的设备标识信息；</p>
+    <p>[0041] 可以理解，本流程是服务器在发送会话初始请求消息给客户端前，如果服务器和 所述客户端没有连接，由服务器发起的基于SIP协议的推送会话建立流程。且本实施例的 方法是针对标识客户端的公共用户身份标识绑定了多个客户端，当服务器要发送推送请求 消息（即Push消息）给其中特定的客户端前的推送会话建立方法。因此就需要服务器查 询客户端当前与服务器连接的情况，客户端对业务的签约信息、偏好信息，以及如果客户端 与服务器没有连接，需要激活的客户端的标识及激活方法等信息。</p>
+    <p>[0042] 这里，客户端的设备标识信息是指能路由到客户端的标识信息，如用户代理统一 资源标识符（GRUU)，全局唯一标识符（UUID)，国际移动设备身份码（MEI)，通用资源标识 (URI)，唯一标识符（URN)，（无线）射频识别（RFID)，电子序列编码（ESN)，介质访问控制地 址（MAC)，指纹等标识。</p>
+    <p>[0043] 获得客户端设备标识信息时，服务器可以查询存储用户信息的服务器，如在线 (Presence)服务器中存储有每个公共身份标识绑定的客户端的信息（如状态、通信信息等 信息）；也可以查询自身存储的客户端的签约信息，或所述客户端接收相应业务的策略信 息；这里还可以有其它的获得方式，并不构成对本发明的限制。</p>
+    <p>[0044]     步骤102、服务器将所述客户端的设备标识信息添加到会话初始请求消息中；[0045] 这里的客户端的设备标识信息可以添加到所述会话初始请求消息的头域和/或 值域和/或消息体中。</p>
+    <p>[0046] 可以理解，在所述会话初始请求消息中，还可以在会话初始请求消息的头域和 /或值域或和/消息体中包括以下信息的一种或几种：指示客户端激活相应应用的应用 (Application)信息，如应用标识和应用名称；指示客户端根据所述会话初始请求消息返 回相应信息，如指示客户端返回设备能力信息，和/或偏好信息，和/或安全信息，和/或签 约信息，和/或拒绝建立连接的信息；指示客户端根据所述会话初始请求消息发送相应消 息的信息，如注册发送消息或能力发送消息等。</p>
+    <p>[0047] 步骤103、服务器根据所述客户端的设备标识信息将所述会话初始请求消息发送 给所述客户端，请求所述客户端向服务器建立基于SIP协议的推送会话连接； [0048]     本实施例中，发送给客户端的会话初始请求消息可以为短信消息（SMS)，超文本传 输协议（HTTP)消息，无线上网协议（WSP)消息，电路域消息，分组域消息，非结构化补充数 据业务消息（USSD)，信令消息，业务消息等消息类型。</p>
+    <p>[0049] 步骤104、所述客户端接收到会话初始请求消息后，向服务器建立基于SIP协议的 推送会话连接；</p>
+    <p>[0050] 可以理解，客户端可以判断接收到的会话初始协议消息是否安全，如果安全即与 服务器建立基于SIP协议的推送会话连接。</p>
+    <p>[0051] 如果在会话初始协议消息中还包括指示客户端根据所述会话初始请求消息返回 相应信息，客户端可以在步骤104后进一步执行步骤105，向服务器返回会话初始请求消息 中请求的设备能力信息，和/或偏好信息，和/或安全信息，和/或签约信息等信息，这里返 回相应信息可以通过会话初始协议消息的信令消息，业务消息，短信消息，推送请求消息、 非结构化补充数据业务消息等消息返回。</p>
+    <p>[0052] 如果在会话初始协议消息中包括应用信息，客户端则可以执行步骤106，激活应用 信息对应的应用，由应用向客户端发送会话初始请求消息中请求的相应信息，或向客户端 进行注册。例如，当客户端接收到包含有应用标识为动态业务分发（DCD)应用标识时，可以 激活DCD应用向客户端注册，或返回相应的信息。值得说明的是步骤106与步骤104没有 绝对的顺序关系，即客户端可以在建立推送会话前激活应用，也可以在之后。 [0053] 如果会话初始协议消息中包括指示客户端根据所述会话初始请求消息发送相应 消息的信息，客户端可以在步骤104后进一步执行步骤107，将会话初始协议消息中请求的 能力发送消息或注册发送消息等消息发送给服务器。</p>
+    <p>[0054] 可见，如果用来标识客户端的公共用户身份标识绑定了一个以上的客户端，且需</p>
+    <p>要服务器与其中特定客户端建立基于SIP协议的推送会话连接时，本实施例主要通过服务</p>
+    <p>器将查询到的所述特定客户端的设备标识信息添加到SIR消息中路由到特定客户端，这样</p>
+    <p>只有需要激活的客户端接收SIR消息，并与服务器建立基于SIP协议的推送会话连接，接收</p>
+    <p>服务器的推送请求消息。和现有技术中公共用户身份标识绑定的所有客户端都与服务器建</p>
+    <p>立连接，接收同一条推送消息相比，本实施例只有希望接收推送请求消息的客户端才和服</p>
+    <p>务器建立基于SIP协议的推送会话连接，节省了网络资源，也可以避免多个客户端反复接</p>
+    <p>收相同消息，从而避免因接收多条相同的消息而影响其他业务的正常接收。</p>
+    <p>[0055]     实施例二、一种推送会话的建立方法，本实施例中推送系统包括推送发起者（PI)、推送代理网关（PPG)及用同一公共用户身份标识绑定的三个客户端，例如可以是移动终 端、个人电脑和个人数字助理（PDA)等，各个客户端有不同的能力信息及偏好信息。系统中 PI和PPG的组合相当于实施例一的服务器，假设需要给第一、第二客户端发送推送请求消 息，信令流程图如图2所示，包括：</p>
+    <p>[0056] 步骤201、 PI生成推送请求消息，将所述推送请求消息及用公共用户身份标识一 并发送给PPG。</p>
+    <p>[0057] 步骤202、 PPG查询需要接收推送请求消息的客户端当前与PPG连接的情况、偏好 信息、对业务的签约信息以及如果客户端与PPG没有连接，所述客户端的设备标识信息及 激活方法等信息，本实施例中第一、第二客户端用同一个公共用户身份标识绑定，则查找第 一、第二客户端的相关信息。</p>
+    <p>[0058] 根据查询的信息和接收到的推送请求消息确认需要发送推送请求消息给第一、第 二客户端，且两个客户端都没有和PPG连接，需要先进行基于SIP协议的推送会话连接的建 立过程。</p>
+    <p>[0059] 步骤203、 PPG根据查询的信息判断绑定所述第一、第二客户端的公共用户身份标 识是否还绑定除所述第一、第二客户端之外的其它客户端，如果是，执行步骤204。这里假设 第一客户端和第二客户端被同一个公共用户身份标识绑定，而所述公共用户身份标识还绑 定了第三客户端。</p>
+    <p>[0060] 步骤204、PPG将步骤202中查询到的第一客户端的设备标识信息添加到SIR消息 中，并根据所述第一客户端的设备标识信息发送给第一客户端，方法如实施例一所述，在此 不再赘述。</p>
+    <p>[0061] 可以理解，本步骤中在SIR消息中还可以加入其他信息如公共用户身份标识，而 本步骤中是通过客户端的设备标识信息来路由到第一客户端的。</p>
+    <p>[0062] 步骤205、第一客户端可以判断是否向PPG建立基于SIP协议的推送会话连接，例 如可以根据接收到的SIR消息是否是安全，建立连接的PPG地址是否是第一客户端签约需 要的服务器地址等信息进行判断；也可以不进行判断，直接与PPG建立连接。这样即可接收 PPG发送的推送请求消息，和/或发送消息到给出的PPG地址，和/或发送PPG请求的信息 到给出的PPG地址。</p>
+    <p>[0063] 这里SIR消息给出的PPG地址信息可以是发送此SIR消息的PPG地址，也可以是 其它PPG地址信息，用来通知客户端向给出的PPG地址建立连接，和/或发送消息和/或发 送PPG请求的信息到给出的PPG地址。</p>
+    <p>[0064] 步骤206、 PPG将步骤202中查询到的第二客户端的设备标识信息添加到SIR消 息，并根据所述第二客户端的设备标识信息发送给第二客户端。</p>
+    <p>[0065] 步骤207、第二客户端接收到所述SIR消息，与PPG建立基于SIP协议的推送会话 连接，和/或发送消息到给出的PPG地址，和/或发送PPG请求的信息到给出的PPG地址， 如步骤205中第一客户端的操作方法。</p>
+    <p>[0066] 上述步骤204和步骤206中将SIR消息发送给特定的客户端时，可以用HTTP消息， 或SIP消息，或SMS消息，或WSP消息，或电路域消息，或分组域消息等协议消息封装所述会 话初始请求消息，再发送。</p>
+    <p>[0067] 以上流程为实现该方法的简单描述流程，每条消息可以有相应的响应消息，这里不再累述。且上述步骤之间没有绝对的顺序关系，如步骤204到207，只需要在建立推送会</p>
+    <p>话之前，客户端接收到SIR消息即可，至于哪个先接收到，并不是本发明的重点。</p>
+    <p>[0068] 本实施例中如果用来标识客户端的公共用户身份标识绑定了一个以上的客户端，</p>
+    <p>且需要服务器与其中特定客户端建立基于SIP协议的推送会话连接时，本实施例主要通过</p>
+    <p>服务器将查询到的所述特定客户端的设备标识信息添加到SIR消息中路由到特定客户端，</p>
+    <p>这样只有需要激活的客户端接收SIR消息，并与服务器建立基于SIP协议的推送会话连接，</p>
+    <p>接收服务器的推送消息。和现有技术中公共用户身份标识绑定的所有客户端都与服务器建</p>
+    <p>立连接，接收同一条推送消息相比，只有希望接收推送消息的客户端才和服务器建立推送</p>
+    <p>会话的连接，节省了网络资源。</p>
+    <p>[0069] 实施例三、一种推送会话的建立方法，本实施例中推送系统包括推送发起者（PI)、 推送代理网关（PPG)及用同一公共用户身份标识绑定的三个客户端，例如可以是移动终 端、个人电脑和个人数字助理（PDA)等，各个客户端有不同的能力信息及偏好信息。系统中 PI和PPG的组合相当于实施例一的服务器，假设需要给第一客户端发送推送请求消息，信 令流程图如图3所示，包括：</p>
+    <p>[0070] 步骤301、 PI生成推送请求消息，将所述推送请求消息及接收该消息的客户端对 应的用公共用户身份标识一并发送给PPG。</p>
+    <p>[0071] 步骤302、 PPG查询到需要接收推送请求消息的第一客户端没有与PPG连接，将标 识第一客户端的公共用户身份标识添加到SIR消息中，根据其中包含的公共用户身份标识 路由到该公共用户身份标识绑定的所有客户端。</p>
+    <p>[0072]     步骤303、第一客户端接收到SIR消息，根据自己的信息和策略与SIR消息判断是</p>
+    <p>否需要和PPG建立基于SIP协议的推送会话连接，如果是，则执行步骤304。</p>
+    <p>[0073]     这里自身的信息为安全信息，和/或设置的偏好信息，和/或能力信息，和/或用</p>
+    <p>户判断等，如根据第一客户端的偏好设置信息、与PPG的连接信息和业务签约信息等判断，</p>
+    <p>这个过程可以是由第一客户端自动完成，也可以是由用户触发的行为。</p>
+    <p>[0074]     步骤304、第一客户端向PPG建立基于SIP协议的推送会话连接，接收PPG发送的</p>
+    <p>推送请求消息。</p>
+    <p>[0075] 可以理解，第一客户端在与PPG建立连接后，可以向PPG发送请求的消息或信息， 如注册发送消息，和/或第一客户端的设备能力信息，和/或偏好信息，和/或安全信息，和 /或签约信息，和/或拒绝建立连接的信息等。这些信息可以从应用获得。 [0076] 如果SIR消息中包含应用信息，第一客户端可以激活所述应用信息对应的应用， 来获得向所述服务器返回的相应信息或向客户端进行注册。</p>
+    <p>[0077] 步骤305、第二客户端接收到SIR消息，如步骤303中，如果判断为不需要和PPG建 立基于SIP协议的推送会话连接，则不进行连接PPG的步骤。</p>
+    <p>[0078] 步骤306、第三客户端接收到SIR消息，如步骤303中，如果判断为不需要和PPG建 立基于SIP协议的推送会话连接，则不进行连接PPG的步骤。</p>
+    <p>[0079] 上述步骤302中将SIR消息发送给所有的客户端时，可以用HTTP消息，或SIP消 息，或SMS消息，或WSP消息，或电路域消息，或分组域消息等协议消息封装所述会话初始请 求消息，再发送。</p>
+    <p>[0080]     且上述步骤之间没有绝对的顺序关系，如步骤303到306，只需要在建立基于SIP协议的推送会话连接之前，特定的客户端接收到SIR消息即可，至于哪个先接收到，并不是 本发明的重点。</p>
+    <p>[0081] 以上流程为实现该方法的简单描述流程，每条消息可以有相应的响应消息，这里 不再累述。</p>
+    <p>[0082] 本实施例中服务器将SIR消息发送给公共用户身份标识绑定的所有客户端，由客 户端来判断是否需要和服务器建立基于SIP协议的推送会话连接，能达到与实施例二一样 的技术效果，且不需要对服务器作任何改变，而对于客户端来说实现起来也比较简单。 [0083] 实施例四、一种推送会话的建立方法，本实施例中推送系统包括推送发起者（PI)、 推送代理网关（PPG)及用同一公共用户身份标识绑定的三个客户端，例如可以是移动终 端、个人电脑和个人数字助理（PDA)等，各个客户端有不同的能力信息及偏好信息。系统中 PI和PPG的组合相当于实施例一的服务器，假设需要给第一、第三客户端发送推送请求消 息，信令流程图如图4所示，包括：</p>
+    <p>[0084] 步骤401、 PI生成推送请求消息，将所述推送请求消息及接收该消息的客户端对 应的用公共用户身份标识一并发送给PPG。</p>
+    <p>[0085] 步骤402、PPG查询接收推送请求消息的客户端当前与PPG连接的情况、偏好信息、 对业务的签约信息以及如果客户端与PPG没有连接，所述客户端的设备标识信息及激活方 法等信息，本实施例中需要查询第一和第三客户端的相关信息。</p>
+    <p>[0086] 根据查询的信息和接收到的推送请求消息确认发送推送请求消息给第一和第三 客户端，而第一客户端没有和PPG连接，需要先进行基于SIP协议的推送会话的建立过程， 需要执行步骤403，第三客户端已经和PPG建立连接，可以直接接收推送请求消息。 [0087]     步骤403、PPG将公共用户身份标识和步骤402中查询到的第一客户端的设备标识 信息添加到SIR消息。</p>
+    <p>[0088]     本步骤中的设备标识信息是用来唯一标识第一客户端的信息，可以添加到SIR消 息的消息头域或消息体，而不用来路由该SIP消息。表1和表2分别是将第一客户端的设 备标识信息添加到SIR消息的头域和消息体中，并封装成的SIP消息。 [0089]</p>
+    <p>参数	值</p>
+    <p>客户端地址（Client Address)	sip:+43-8323546@mobilkom. gr = Urn:皿id:f81d4fae-7dec-lld0-a765-00a0c91e6bf6 (设备标识信息）</p>
+    <p>服务器地址（Server Address)</p>
+    <p>推送标识（Push Headers)	X_Wap_Application_Id :x_wap_application:push. sia Content-Type :即plication/vnd. w即.sia</p>
+    <p>内容（SIAContent)</p>
+    <p>11[0090]</p>
+    <p>[0091] 表1在SIR消息的头域添加设备标识信息 [0092]</p>
+    <p>参数	值</p>
+    <p>ClientAddress	sip:+43-8323546@mobilkom.</p>
+    <p>ServerAddress</p>
+    <p>PushHeaders	X_Wap_Application_Id :x_wap_application:push. sia Content-Type邻plic3tion/vncL w即.sia</p>
+    <p>SIAContent	gr =&#35657;：uuid:f81d4fae-7dec-lld0-a765-00a0c91e6bf6(设备 标识信息）</p>
+    <p>[0093]     表2在SIR消息的消息体添加设备标识信息</p>
+    <p>[0094] 步骤404、PPG根据所述公共用户身份标识将SIP消息发送给所述公共用户身份标 识对应的所有客户端。</p>
+    <p>[0095] 步骤405、第一客户端接收到所述SIR消息，解析SIR消息得到设备标识信息，将所 述设备标识信息和第一客户端自身的信息进行匹配，如果第一客户端的信息与所述设备标 识信息相符合，则判断为需要和PPG建立基于SIP协议的推送会话连接，执行步骤406。 [0096]     步骤406、第一客户端向PPG建立基于SIP协议的推送会话，接收PPG发送的推送 请求消息。</p>
+    <p>[0097] 可以理解，第一客户端在与PPG建立连接后，可以向PPG发送请求的消息或信息， 如注册发送消息，和/或第一客户端的设备能力信息，和/或偏好信息，和/或安全信息，和 /或签约信息，和/或拒绝建立连接的信息等。这些信息可以从应用获得。 [0098] 如果SIR消息中包含应用信息，第一客户端可以激活所述应用信息对应的应用， 来获得向所述服务器返回的相应信息或向客户端进行注册。</p>
+    <p>[0099] 步骤407、第二终端接收到该SIR消息后，如步骤405中将所述设备标识信息与第 二客户端的信息进行匹配，发现与自己的设备标识不相符合，则不向PPG发送建立连接的 请求。</p>
+    <p>[0100]     步骤408、第三终端接收到该SIR消息后，发现已经与PPG连接，则不向PPG发送建</p>
+    <p>立连接的请求。</p>
+    <p>[0101] 上述步骤404中将SIR消息发送给所有的客户端时，可以用HTTP消息，或SIP消 息，或SMS消息，或WSP消息，或电路域消息，或分组域消息等协议消息封装所述会话初始请 求消息，再发送。</p>
+    <p>[0102] 且上述步骤之间没有绝对的顺序关系，如步骤405到408，只需要在建立基于SIP 协议的推送会话连接之前，特定的客户端接收到SIR消息即可，至于哪个先接收到，并不是 本发明的重点。</p>
+    <p>[0103] 以上流程为实现该方法的简单描述流程，每条消息可以有相应的响应消息，这里不再累述。</p>
+    <p>[0104] 值得说明的是，上述步骤402中PPG可以将推送请求消息转发给SIP/IP网络侧设 备，由SIP/IP网络侧设备来执行如上述步骤402到步骤404的流程，在此不再赘述。 [0105] 本实施例和实施例三的区别在于服务器发送给公共用户身份标识绑定的所有客 户端的SIR消息中包含需要和服务器建立推送会话连接的客户端的设备标识信息，这样客 户端判断是否需要和服务器建立基于SIP协议的推送会话连接时，只需要判断自己的信息 与所述设备标识信息是否相符合，能达到与实施例三一样的技术效果，且客户端进行判断 的范围比较小。</p>
+    <p>[0106]     系统实施例一、一种推送系统，结构示意图如图5所示，包括： [0107]     服务器IOO，用于获得客户端200的设备标识信息，将所述客户端200的设备标识 信息添加到会话初始请求消息中，根据所述客户端200的设备标识信息将所述会话初始请 求消息发送给所述客户端200，请求所述客户端200根据所述会话初始请求消息向服务器 100建立基于会话初始协议的推送会话连接；</p>
+    <p>[0108] 服务器100发送客户端的会话初始请求消息可以用HTTP消息，或SIP消息，或SMS 消息，或WSP消息，或电路域消息，或分组域消息等消息封装。</p>
+    <p>[0109] 客户端200，用于接收到所述服务器100发送的会话初始协议消息，和所述服务器 建立基于会话初始协议的推送会话连接。</p>
+    <p>[0110]     采用本实施例的推送系统，通过服务器100将客户端200的设备标识信息添加到 会话初始请求消息中，发送给客户端200，由客户端200向服务器100建立基于会话初始协 议的推送会话连接，接收推送请求消息，和现有技术中公共用户身份标识绑定的所有客户 端都与服务器建立连接，接收同一条推送消息相比，本发明节省了网络资源。 [0111]     系统实施例二、一种推送系统，包括：</p>
+    <p>[0112] 服务器，用于添加客户端的公共身份标识到会话初始请求消息中，将所述会话初</p>
+    <p>始请求消息发送给所述公共用户身份标识对应的所有客户端，请求所述所有客户端根据所</p>
+    <p>述设备标识信息来确定是否需要向服务器建立基于会话初始协议的推送会话连接；</p>
+    <p>[0113] 客户端，用于接收所述服务器发送的包含用户公共身份标识的会话初始请求消</p>
+    <p>息，当根据所述会话初始请求消息与自身的信息确定需要和服务器建立基于会话初始协议</p>
+    <p>的推送会话连接时，和所述服务器建立基于会话初始协议的推送会话连接。</p>
+    <p>[0114] 可以理解，在本实施例中若所述服务器发送的会话初始请求消息中还包括设备标</p>
+    <p>识信息，则所述客户端将所述设备标识信息与自身的信息进行匹配，若相符合，则确定为需</p>
+    <p>要和所述服务器建立基于会话初始协议的推送会话连接。</p>
+    <p>[0115] 采用本实施例的推送系统，通过服务器将客户端的公共用户身份标识添加到会话 初始请求消息中，发送给所述公共用户身份标识绑定的所有客户端，由所述所有客户端根 据会话初始请求消息判断是否向服务器建立基于会话初始协议的推送会话连接，并接收推 送请求消息，和现有技术中公共用户身份标识绑定的所有客户端都与服务器建立连接，接 收同一条推送消息相比，本发明只有需要接收推送消息的客户端和服务器建立连接，节省 了网络资源。</p>
+    <p>[0116] 设备实施例一、一种服务器，结构示意图6所示，包括：信息获得单元10、消息添加 单元11和请求发送单元12，其中：[0117]     信息获得单元IO，用于获得客户端的设备标识信息；</p>
+    <p>[0118] 消息添加单元ll，用于将所述信息获得单元10获得的客户端的设备标识信息添加到会话初始请求消息中；</p>
+    <p>[0119] 可以将客户端的设备标识信息添加到会话初始请求消息的头域和/或值域和/或消息体中。也可以在会话初始请求消息中添加其它的应用信息，指示所述客户端返回设备能力信息，和/或偏好信息，和/或安全信息，和/或签约信息，和/或拒绝建立连接的信息等信息。</p>
+    <p>[0120] 请求发送单元12，用于根据所述客户端的设备标识信息将所述消息添加单元11添加的会话初始请求消息发送给所述客户端，请求所述客户端根据所述会话初始请求消息向服务器建立基于会话初始协议的推送会话连接。</p>
+    <p>[0121] 采用本实施例的服务器，通过消息添加单元11将客户端的标识信息添加到推送会话请求消息中，由请求发送单元12将所述会话初始协议消息发送给客户端，这样只有所述标识信息对应的客户端向服务器建立基于会话初始协议的推送会话连接，接收推送请求消息，和现有技术中公共用户身份标识绑定的所有客户端都与服务器建立连接，接收同一条推送消息相比，本发明节省了网络资源。</p>
+    <p>[0122] 设备实施例二、一种服务器，结构示意图如图7所示，本实施和设备实施例一相比增加了标识判断单元13和消息封装单元14，其中：</p>
+    <p>[0123] 标识判断单元13，用于判断绑定所述客户端的公共用户身份标识是否还绑定除所述客户端之外的其它客户端，若是，则通知所述信息获得单元10获得所述客户端的设备标识信息；</p>
+    <p>[0124] 消息封装单元14，用于用超文本传输协议HTTP消息，或SIP消息，或短信息协议SMS消息，或无线上网协议WSP消息，或电路域消息，或分组域消息封装所述消息添加单元11添加的会话初始请求消息。</p>
+    <p>[0125] 可选地，本实施例中服务器还可以包括标识添加单元15，用于将标识所述客户端的公共用户身份标识添加到所述会话初始请求消息中。</p>
+    <p>[0126] 可以理解，上述标识判断单元13在判断为客户端的公共用户身份标识绑定多个客户端时，通知信息获得单元10获得特定客户端的设备标识信息，并通过消息添加单元11将所述设备标识信息添加到会话初始请求消息中，由消息封装单元14将所述会话初始请求消息封装好，最后通过请求发送单元12发送给特定的客户端。</p>
+    <p>[0127] 由于本实施例中服务器还包括标识添加单元15，则服务器可以通过标识添加单元15和消息添加单元11将客户端的公共用户身份标识和设备标识信息都添加到会话初始请求消息中，通过消息封装到那元14封装后，有请求发送单元12将所述会话初始请求消息发送给所述公共用户身份标识对应的所有客户端，请求所述所有客户端根据所述设备标识信息来确定是否需要根据所述会话初始请求消息向服务器建立基于会话初始协议的推送会话连接。</p>
+    <p>[0128]     本实施例的服务器和设备实施例一的服务器相比，通过标识判断单元13进行判</p>
+    <p>断公共用户身份标识是否绑定了多个客户端，这样在公共用户身份标识只标识了一个客户</p>
+    <p>端时，可以不需要获得客户端的设备标识信息，简化了推送建立中的信息处理。</p>
+    <p>[0129] 设备实施例三、一种客户端，结构示意图8所示，包括：请求接收单元21、和判断连接单元22，其中：</p>
+    <p>[0130]     请求接收单元21，用于接收会话初始请求消息；</p>
+    <p>[0131] 判断连接单元22，用于若所述请求接收单元21接收的会话初始请求消息中包含 用户公共身份标识，根据所述会话初始请求消息与自身的信息判断是否需要和服务器建立 基于会话初始协议的推送会话连接，若是，和所述服务器建立基于会话初始协议的推送会 话连接</p>
+    <p>[0132] 这里自身的信息可以为安全信息，和/或设置的偏好信息，和/或能力信息，和/ 或用户判断等。</p>
+    <p>[0133] 采用本实施例的客户端，通过判断连接单元22根据会话初始请求消息判断是否 需要和服务器建立基于会话初始协议的推送会话连接，只有在判断为是的时候，才向服务 器建立基于会话初始协议的推送会话连接，接收推送请求消息，和现有技术中公共用户身 份标识绑定的所有客户端都与服务器建立连接，接收同一条推送消息相比，本发明只有需 要接收推送消息的客户端和服务器建立连接，节省了网络资源。</p>
+    <p>[0134] 设备实施例四、一种客户端，结构示意图9所示，本实施例的客户端和设备实施例 三的客户端比，细化了判断连接单元22，并增加了回应单元23和应用激活单元24，其中： [0135] 所述判断连接单元22包括匹配单元220和连接单元221。比较单元220，用于当 所述请求接收单元21接收的会话初始请求消息中包含设备标识信息，将所述设备标识信 息和自身的信息进行匹配；连接单元221，用于当所述匹配单元220匹配的结果为所述自身 的信息与所述设备标识信息相符合，则和所述服务器建立基于会话初始协议的推送会话连 接。</p>
+    <p>[0136] 会话初始请求消息中相应消息可以设备能力信息，和/或偏好信息，和/或安全信 息，和/或签约信息，和/或拒绝建立连接的信息等信息。</p>
+    <p>[0137] 所述回应单元23，用于当所述请求接收单元21接收的会话初始请求消息中包含 指示客户端根据所述会话初始请求消息返回相应信息或发送相应消息的信息，根据所述会 话初始请求消息中的指示信息向所述服务器返回相应信息，或向服务器发送相应消息。 [0138] 应用激活单元24，用于当所述请求接收单元21接收的会话初始请求消息中包含</p>
+    <p>应用信息，激活所述应用信息对应的应用，来获得向所述服务器返回的相应信息或向客户 端进行注册。</p>
+    <p>[0139] 可以理解上述的回应单元23是在所述判断连接单元22与服务器建立基于会话初 始协议的推送会话连接后，才向服务器进行返回信息或发送消息；而应用激活单元24可以 在与服务器建立连接的任何时刻进行激活。但是在与服务器建立连接之后应用激活单元24 才激活应用，会减少通信息设备之间的信息交互。</p>
+    <p>[0140] 本实施例的客户端和设备实施例三的客户端相比，本实施例中通过比较单元220 通过比较推送会话请求消息中包含的设备标识信息和客户端的信息来判断是否要和服务 器建立连接，简单易于实现，且判断的范围比较小。</p>
+    <p>[0141] 可见，如果用来标识客户端的公共用户身份标识绑定了一个以上的客户端，且需</p>
+    <p>要服务器与其中特定客户端建立基于会话初始协议的推送会话连接时，本发明的方法是服 务器将客户端的设备标识信息添加到会话初始请求消息中，路由到客户端；或者服务器将</p>
+    <p>会话初始请求消息发给标识客户端的公共用户身份标识对应的所有客户端，由客户端来判断是否需要和服务器建立基于会话初始协议的推送会话连接，这样对于同一个公共用户身份标识绑定的多个客户端来说，只有需要接收推送请求消息的客户端和服务器建立基于会话初始协议的推送会话连接，和现有技术相比，节省了网络资源，从而防止了现有技术中客户端会连续收到推送会话请求消息的不良体验。</p>
+    <p>[0142] 以上对本发明实施例所提供的推送会话的建立方法、推送系统和相关设备进行了详细介绍，本文中应用了具体的实施例对本发明的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本发明的方法及其核心思想；同时，对于本领域的一般技术人员，依据本发明的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本发明的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102075531A?cl=zh">CN102075531A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月27日</td><td class="patent-data-table-td patent-date-value">2011年5月25日</td><td class="patent-data-table-td ">北京像素软件科技股份有限公司</td><td class="patent-data-table-td ">一种为客户端传输数据的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102075531B?cl=zh">CN102075531B</a></td><td class="patent-data-table-td patent-date-value">2010年12月27日</td><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td ">北京像素软件科技股份有限公司</td><td class="patent-data-table-td ">一种为客户端传输数据的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102611641A?cl=zh">CN102611641A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年1月20日</td><td class="patent-data-table-td patent-date-value">2012年7月25日</td><td class="patent-data-table-td ">上海量明科技发展有限公司</td><td class="patent-data-table-td ">采集即时通信记录进行汇总的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102611641B?cl=zh">CN102611641B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年1月20日</td><td class="patent-data-table-td patent-date-value">2016年1月20日</td><td class="patent-data-table-td ">上海量明科技发展有限公司</td><td class="patent-data-table-td ">采集即时通信记录进行汇总的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102685724A?cl=zh">CN102685724A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月28日</td><td class="patent-data-table-td patent-date-value">2012年9月19日</td><td class="patent-data-table-td ">北京市大富智慧云技术有限公司</td><td class="patent-data-table-td ">一种内容定制方法，终端及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102685724B?cl=zh">CN102685724B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月28日</td><td class="patent-data-table-td patent-date-value">2015年7月8日</td><td class="patent-data-table-td ">北京市大富智慧云技术有限公司</td><td class="patent-data-table-td ">一种内容定制方法、服务器及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103109509A?cl=zh">CN103109509A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月13日</td><td class="patent-data-table-td patent-date-value">2013年5月15日</td><td class="patent-data-table-td ">诺基亚公司</td><td class="patent-data-table-td ">用于使用接受者标识符提供与服务的通信的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014040244A1?cl=zh">WO2014040244A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td patent-date-value">2014年3月20日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">业务数据缓存处理方法、设备和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0080100000">H04W80/10</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L65/1006">H04L65/1006</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W4/00">H04W4/00</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L67/14">H04L67/14</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=kPJ-BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L67/26">H04L67/26</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">H04W4/00</span>, <span class="nested-value">H04L29/08N25</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年6月30日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年3月16日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年8月7日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/f516932c05ce8b00f62b/CN101764828A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%8E%A8%E9%80%81%E4%BC%9A%E8%AF%9D%E7%9A%84%E5%BB%BA%E7%AB%8B%E6%96%B9%E6%B3%95_%E6%8E%A8%E9%80%81%E7%B3%BB%E7%BB%9F.pdf?id=kPJ-BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3RIHrvPiGwdnWSUc2vbVYFzafIMg"},"sample_url":"https://www.google.com/patents/reader?id=kPJ-BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

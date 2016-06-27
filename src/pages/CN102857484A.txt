@@ -1,0 +1,282 @@
+<!DOCTYPE html><html><head><title>专利 CN102857484A - 一种实现单点登录的方法、系统及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种实现单点登录的方法、系统及装置"><meta name="DC.contributor" content="邓&#26107;辉" scheme="inventor"><meta name="DC.contributor" content="张仲明" scheme="inventor"><meta name="DC.contributor" content="阿里巴巴集团控股有限公司" scheme="assignee"><meta name="DC.date" content="2011-7-1" scheme="dateSubmitted"><meta name="DC.description" content="本申请公开了一种实现单点登录的方法、系统及装置，该技术方案主要包括：网站服务器接收用户终端发送的访问请求；在确定该访问请求中未携带认证服务器在确定该用户终端成功登录后发送的会话标识时，向该认证服务器发送对该用户终端进行登录认证的请求；其中，该会话标识对应的会话为该认证服务器针对该用户终端生成的会话；以及接收该认证服务器在确定该用户终端成功登录后发送的会话标识，保存该会话标识，并将该会话标识发送给该用户终端。采用该技术方案，能够减少网站服务器中存储的冗余数据。"><meta name="DC.date" content="2013-1-2"><meta name="DC.relation" content="CN:101018259:A" scheme="references"><meta name="DC.relation" content="CN:101355527:A" scheme="references"><meta name="DC.relation" content="CN:101605031:A" scheme="references"><meta name="DC.relation" content="CN:102054213:A" scheme="references"><meta name="DC.relation" content="CN:1889488:A" scheme="references"><meta name="DC.relation" content="WO:2006107713:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102857484:A"><meta name="citation_patent_application_number" content="CN:201110185776"><link rel="canonical" href="https://www.google.com/patents/CN102857484A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102857484A?cl=zh"/><meta name="title" content="专利 CN102857484A - 一种实现单点登录的方法、系统及装置"/><meta name="description" content="本申请公开了一种实现单点登录的方法、系统及装置，该技术方案主要包括：网站服务器接收用户终端发送的访问请求；在确定该访问请求中未携带认证服务器在确定该用户终端成功登录后发送的会话标识时，向该认证服务器发送对该用户终端进行登录认证的请求；其中，该会话标识对应的会话为该认证服务器针对该用户终端生成的会话；以及接收该认证服务器在确定该用户终端成功登录后发送的会话标识，保存该会话标识，并将该会话标识发送给该用户终端。采用该技术方案，能够减少网站服务器中存储的冗余数据。"/><meta property="og:title" content="专利 CN102857484A - 一种实现单点登录的方法、系统及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102857484A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102857484A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=l1u3BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102857484A&amp;usg=AFQjCNEAvhm_Os01iNPXkmm1bY71lYKDVg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/1e47e7713c3914dd968d/CN102857484A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/1e47e7713c3914dd968d/CN102857484A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102857484A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102857484A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102857484A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102857484B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102857484A?cl=zh" style="display:none"><span itemprop="description">本申请公开了一种实现单点登录的方法、系统及装置，该技术方案主要包括：网站服务器接收用户终端发送的访问请求；在确定该访问请求中未携带认证服务器在确定该用户终端成功登录后发送的会话标识时，向该认证服务器发...</span><span itemprop="url">https://www.google.com/patents/CN102857484A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102857484A - 一种实现单点登录的方法、系统及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102857484A - 一种实现单点登录的方法、系统及装置" title="专利 CN102857484A - 一种实现单点登录的方法、系统及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102857484 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110185776</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年1月2日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年7月1日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年7月1日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102857484B?hl=zh-CN&amp;cl=zh">CN102857484B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110185776.1, </span><span class="patent-bibdata-value">CN 102857484 A, </span><span class="patent-bibdata-value">CN 102857484A, </span><span class="patent-bibdata-value">CN 201110185776, </span><span class="patent-bibdata-value">CN-A-102857484, </span><span class="patent-bibdata-value">CN102857484 A, </span><span class="patent-bibdata-value">CN102857484A, </span><span class="patent-bibdata-value">CN201110185776, </span><span class="patent-bibdata-value">CN201110185776.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%82%93%E6%97%BB%E8%BE%89%22">邓&#26107;辉</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E4%BB%B2%E6%98%8E%22">张仲明</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E9%9B%86%E5%9B%A2%E6%8E%A7%E8%82%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">阿里巴巴集团控股有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102857484A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102857484A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102857484A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=l1u3BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110185776&amp;usg=AFQjCNH4o6GGGFfYalBxyKMGyRYRkhx5mw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=l1u3BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102857484A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHyX75vp3eUcAcOnogId3Q2vuLw2Q"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT118434540" lang="ZH" load-source="patent-office">一种实现单点登录的方法、系统及装置</invention-title>
+      </span><br><span class="patent-number">CN 102857484 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA103875131" lang="ZH" load-source="patent-office">
+    <div class="abstract">本申请公开了一种实现单点登录的方法、系统及装置，该技术方案主要包括：网站服务器接收用户终端发送的访问请求；在确定该访问请求中未携带认证服务器在确定该用户终端成功登录后发送的会话标识时，向该认证服务器发送对该用户终端进行登录认证的请求；其中，该会话标识对应的会话为该认证服务器针对该用户终端生成的会话；以及接收该认证服务器在确定该用户终端成功登录后发送的会话标识，保存该会话标识，并将该会话标识发送给该用户终端。采用该技术方案，能够减少网站服务器中存储的冗余数据。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(31)</span></span></div><div class="patent-text"><div mxw-id="PCLM47943450" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种实现单点登录的方法，其特征在于，包括：  网站服务器接收用户终端发送的访问请求；以及  在确定所述访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求；  网站服务器接收所述认证服务器根据所述登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识，并将所述会话标识发送给所述用户终端，其中，所述会话标识由所述认证服务器根据针对所述用户终端生成的会话确定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述的方法，其特征在于，网站服务器向所述认证服务器发送对所述用户终端进行登录认证的请求之前，还包括：  网站服务器确定是否保存有令牌token，所述token是所述认证服务器在对所述网站 服务器的权限验证通过后发送的；   若是，网站服务器将所述token携带在对所述用户终端进行登录认证的请求中；  若否，网站服务器向所述认证服务器发送token获取请求，所述token获取请求中携带所述用户终端的信息，并接收所述认证服务器根据所述token获取请求，在对所述网站服务器的权限验证通过后发送的token，并将所述token携带在对所述用户终端进行登录认证的请求中，其中，所述认证服务器发送的所述token与认证服务器根据针对所述用户终端的信息对应的用户终端生成的会话确定的会话标识对应；  网站服务器接收所述认证服务器在确定所述用户终端成功登录后发送的会话标识，包括：  网站服务器接收所述认证服务器在验证携带在所述登录认证的请求中的所述token通过、以及确定所述用户终端成功登录后发送的会话标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，其特征在于，所述token是所述认证服务器在确定所述用户终端成功登录后生成的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求2所述的方法,其特征在于，所述token携带用于标识所述token有效的时间信息；  网站服务器将所述token携带在对所述用户终端进行登录认证的请求中之前，还包括：  根据所述token携带的用于标识所述token有效的时间信息,确定所述token有效。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求I所述的方法，其特征在于，网站服务器将所述会话标识发送给所述用户终端，包括：  网站服务器将所述会话标识封装在为所述用户终端生成的Cookie中，并将所述Cookie发送给所述用户终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求I或5所述的方法，其特征在于，网站服务器接收用户终端发送的访问请求，包括：  网站服务器接收所述用户终端在确定接收的Cookie中包括所述会话标识时发送的携带所述会话标识的访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求I所述的方法，其特征在于，还包括：  网站服务器在确定所述访问请求中携带所述会话标识时，获取设定类型的处理信息；  根据所述访问请求中携带的会话标识，将获取的所述处理信息写入用于确定所述会话标识的会话中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的方法，其特征在于，网站服务器在将获取的所述处理信息写入用于确定所述会话标识的会话中之前，还包括：  网站服务器确定所述访问请求中携带的会话标识与保存的会话标识一致。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求7或8所述的方法，其特征在于，获取设定类型的处理信息，包括：  根据所述访问请求中携带的会话标识，从用于确定所述会话标识的会话中获取保存的处理信息，所述处理信息包括当前网站服务器之外的至少一个网站服务器分别对所述用户终端发送的访问请求进行处理的过程中获取的设定类型的处理信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求7或8所述的方法，其特征在于，将获取的所述处理信息写入用于确定所述会话标识的会话中之后，还包括：  网站服务器接收所述用户终端发送的退出请求；  若所述退出请求指示当前网站服务器退出，则所述网站服务器删除保存的所述会话标识；  若所述退出请求指示认证服务器退出，则所述网站服务器删除保存的所述会话标识，并向所述认证服务器发送携带所述会话标识的退出请求，所述退出请求用于指示所述认证服务器删除所述退出请求中携带的用于确定会话标识的会话。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求I所述的方法，其特征在于，所述会话保存在所述认证服务器或指定存储设备。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.	&#8212;种实现单点登录的方法，其特征在于，包括：  认证服务器接收网站服务器发送的对用户终端进行登录认证的请求后，确定是否保存有针对所述用户终端生成的会话；  若是，认证服务器将根据所述会话确定的会话标识发送给所述网站服务器；  若否，认证服务器在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求12所述的方法，其特征在于，认证服务器接收网站服务器发送的对用户终端进行登录认证的请求之前，还包括：  认证服务器接收所述网站服务器发送的令牌token获取请求，所述token获取请求中携带所述用户终端的信息；以及  在对所述网站服务器的权限验证通过后，向所述网站服务器发送与认证服务器针对所述用户终端的信息对应的用户终端生成的会话确定的会话标识对应的token。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的方法，其特征在于，认证服务器将会话标识发送给所述网站服务器之前，还包括：  认证服务器确定接收的对用户终端进行登录认证的请求中携带token，并对所述token验证通过。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求13所述的方法，其特征在于，认证服务器向所述网站服务器发送的token携带用于标识所述token有效的时间信息；  认证服务器将会话标识发送给所述网站服务器之前，还包括：  认证服务器确定接收的对用户终端进行登录认证的请求中携带token，并根据所述token携带的用于标识所述token有效的时间信息确定所述token有效，以及对所述token验证通过。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求12所述的方法，其特征在于，将所述会话标识发送给所述网站服务器之后，还包括：  接收所述网站服务器发送的携带所述会话标识的退出请求；  根据所述退出请求，删除用于确定所述退出请求中携带的会话标识的会话。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.	一种实现单点登录的系统，其特征在于，包括：  网站服务器以及认证服务器；其中，  所述网站服务器，用于接收用户终端发送的访问请求，以及在确定所述访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求，并接收所述认证服务器根据所述登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识，并将所述会话标识发送给所述用户终端；  所述认证服务器，用于接收网站服务器发送的对用户终端进行登录认证的请求后，确定是否保存有针对所述用户终端生成的会话，若是，将根据所述会话确定的会话标识发送给所述网站服务器，若否，在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。</div>
+    </div>
+    </div> <div class="claim"> <div num="18" class="claim">
+      <div class="claim-text">18.	一种实现单点登录的装置，其特征在于，包括：  接收单元，用于接收用户终端发送的访问请求；  认证请求发送单元，用于在确定所述接收单元接收的访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求；  会话标识获取单元，用于接收所述认证服务器根据所述认证请求发送单元发送的登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识；其中，所述会话标识由所述认证服务器根据针对所述用户终端生成的会话确定；  会话标识提供单元，用于将所述会话标识获取单元获取的会话标识发送给所述用户终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求18所述的装置，其特征在于，所述认证请求发送单元，具体用于：在向所述认证服务器发送对所述用户终端进行登录认证的请求之前，确定是否保存有令牌token,所述token是所述认证服务器在对所述网站服务器的权限验证通过后发送的，若是，将所述token携带在对所述用户终端进行登录认证的请求中；若否，向所述认证服务器发送token获取请求,所述token获取请求中携带所述用户终端的信息,并接收所述认证服务器根据所述token获取请求，在对所述网站服务器的权限验证通过后发送的token，并将所述token携带在对所述用户终端进行登录认证的请求中，其中，所述认证服务器发送的所述token与认证服务器根据针对所述用户终端的信息对应的用户终端生成的会话确定的会话标识对应；  所述会话标识获取单元，具体用于：接收所述认证服务器在验证携带在所述登录认证的请求中的所述token通过、以及确定所述用户终端成功登录后发送的会话标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的装置，其特征在于，所述认证请求发送单元，具体用于：  将所述token携带在对所述用户终端进行登录认证的请求中之前,根据所述token携带的用于标识所述token有效的时间信息，确定所述token有效。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求18所述的装置，其特征在于，所述会话标识提供单元，具体用于：  将所述会话标识封装在为所述用户终端生成的Cookie中，并将所述Cookie发送给所述用户终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求18或21所述的装置，其特征在于，所述接收单元，具体用于：  接收所述用户终端在确定接收的Cookie中包括所述会话标识时发送的携带所述会话标识的访问请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求18所述的装置，其特征在于，还包括：   会话共享单元，用于在确定所述接收单元接收的访问请求中携带所述会话标识时，获取设定类型的处理信息，并根据所述访问请求中携带的会话标识，将获取的所述处理信息写入用于确定所述会话标识的会话中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求23所述的装置，其特征在于，所述会话共享单元，具体用于：  在将获取的所述处理信息写入用于确定所述会话标识的会话中之前，确定所述访问请求中携带的会话标识与保存的会话标识一致。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.如权利要求23或24所述的装置，其特征在于，所述会话共享单元，具体用于：  根据所述访问请求中携带的会话标识，从用于确定所述会话标识的会话中获取保存的处理信息，所述处理信息包括当前网站服务器之外的至少一个网站服务器分别对所述用户终端发送的访问请求进行处理的过程中获取的设定类型的处理信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求23或24所述的装置，其特征在于，还包括：  退出控制单元，用于在所述会话共享单元将获取的所述处理信息写入用于确定所述会话标识的会话中之后，接收所述用户终端发送的退出请求，若所述退出请求指示当前网站服务器退出，则删除保存的所述会话标识；若所述退出请求指示认证服务器退出，则删除保存的所述会话标识，并向所述认证服务器发送携带所述会话标识的退出请求，所述退出请求用于指示所述认证服务器删除所述退出请求中携带的用于确定会话标识的会话。</div>
+    </div>
+    </div> <div class="claim"> <div num="27" class="claim">
+      <div class="claim-text">27.	一种实现单点登录的装置，其特征在于，包括：  接收单元，用于接收网站服务器发送的对用户终端进行登录认证的请求；  判断单元，用于在所述接收单元接收所述请求后，确定是否保存有针对所述用户终端生成的会话；  会话标识提供单元，用于在所述判断单元的判断结果为是时，将根据所述会话确定的会话标识发送给所述网站服务器；以及在所述判断单元的判断结果为否时，在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求27所述的装置，其特征在于，还包括：  令牌提供单元，用于在所述接收单元接收网站服务器发送的对用户终端进行登录认证的请求之前，接收所述网站服务器发送的令牌token获取请求,所述token获取请求中携带所述用户终端的信息；以及在对所述网站服务器的权限验证通过后，向所述网站服务器发送与认证服务器针对所述用户终端的信息对应的用户终端生成的会话确定的会话标识对应的token。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求28所述的装置，其特征在于，所述会话标识提供单元，还用于：在将会话标识发送给所述网站服务器之前，确定接收的对用户终端进行登录认证的请求中携带token,并对所述token验证通过。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求28所述的装置，其特征在于，所述会话标识提供单元，还用于：  在将会话标识发送给所述网站服务器之前，确定接收的对用户终端进行登录认证的请求中携带token,并根据所述token携带的用于标识所述token有效的时间信息确定所述token有效，以及对所述token验证通过。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.如权利要求27所述的装置，其特征在于，还包括：  退出控制单元，用于在所述会话标识提供单元将所述会话标识发送给所述网站服务器之后，接收所述网站服务器发送的携带所述会话标识的退出请求；并根据所述退出请求，删除用于确定所述退出请求中携带的会话标识的会话。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES55034691" lang="ZH" load-source="patent-office" class="description">
+    <p>一种实现单点登录的方法、系统及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本申请涉及网络通信技术领域，尤其涉及一种实现单点登录的方法、系统及装置。背景技术</p>
+    <p>[0002]	在单点登录（Single Sign On，简称为SS0)系统中，用户终端只需要登录到一个应用服务器，就可以在无需登录的情况下访问该系统中的其它应用服务器。在SSO系统中，用户终端在访问系统中的各网站服务器时无需逐个登录，提高了登录效率，并且减少了网站服务器对用户终端的登录请求的处理过程，减轻了网站服务器的负担。</p>
+    <p>[0003]	图I示出了 SSO系统结构示意图。如图I所示，SSO系统主要包括：用户终端101、认证服务器102以及多个网站服务器103。基于该系统实现的SSO认证方式主要包括集中认 证方式和联合认证方式，其中，集中认证方式中，由统一的认证服务器102对用户终端101进行验证，即各网站服务器103在接收到未登录用户终端101的访问请求后，会请求认证服务器102对该用户终端101进行登录认证，并根据认证服务器102的认证结果进行后续处理；联合认证方式中，每个网站服务器103都需要维护一份信任的服务器列表以及相应的信任机制，网站服务器在接收到未登录用户终端101的访问请求后，从维护的服务器列表中选择一个服务器作为认证服务器102，根据信任机制确定选择的该服务器可信后，请求选择的该服务器对该用户终端101进行登录认证，并根据选择的该服务器的认证结果进行后续处理。</p>
+    <p>[0004]	图2示出了基于图I所示的系统实现SSO的流程示意图。如图2所示，基于图I所示的系统实现单点登录的过程，主要包括如下步骤：</p>
+    <p>[0005]	步骤201、用户终端101通过浏览器客户端向网站服务器103发送访问请求。</p>
+    <p>[0006]	步骤202、网站服务器103确定该用户终端101未登录后，向认证服务器102发送对用户终端101进行登录认证的请求。</p>
+    <p>[0007]	该步骤202中，网站服务器103向认证服务器102发送对用户终端101进行登录认证的请求，主要通过网页重定向技术实现，将用户终端101的浏览器客户端显示的页面重定向到认证服务器102，该认证服务器102通过浏览器客户端向用户显示登录页面。</p>
+    <p>[0008]	步骤203、用户终端101通过浏览器客户端显示的登录页面，向认证服务器102发送登录请求。</p>
+    <p>[0009]	步骤204、认证服务器102对用户的登录请求验证通过后，将用户终端101的浏览器客户端显示的页面重定向回网站服务器103提供的页面，并在重定向地址中包含该用户的认证信息。</p>
+    <p>[0010]	步骤205、网站服务器103根据认证服务器102提供的认证信息，确定用户终端101成功登录后，对用户终端101发送的访问请求进行处理。</p>
+    <p>[0011]	至此，SSO流程结束。</p>
+    <p>[0012]	在上述流程中，认证服务器102在对用户终端101完成登录认证后，针对该用户终端101生成Session (会话）并存储，网站服务器接收认证服务器发送的用于标识用户终端成功登录的认证信息后，也会针对该用户终端生成Session以及Cookie,其中，Session存储在网站服务器中，用于保存该用户终端访问该网站服务器的上下文信息；C00kie被发送到用户终端进行存储，该Cookie中包括针对该用户终端生成的Session的Session ID (会话标识）。用户终端101在后续向该网站服务器103发送访问请求时，会携带Cookie中的Session ID 。</p>
+    <p>[0013]	基于上述处理流程，在图I所示的SSO系统中，认证服务器102以及网站服务器103中会分别针对用户终端101生成Session。图3给出了 SSO系统中各服务器与Session的关系示意图，如图3所示，假设用户终端101访问了 n个网站服务器103，则该n个网站服务器103以及认证服务器102 &#8212;共需要生成n+1个Session。每个网站服务器103针对同一用户终端101生成的Session中，通常会写入该用户终端101的登录状态信息以及该用户终端101与该网站服务器103之间交互的上下文信息，其中，各网站服务器针对同一用户终端101保存的Session中的登录状态信息基本相同，此部分基本相同的信息由于被保存多份而导致SSO系统中存在较多的冗余数据，尤其在登录SSO系统的用户数据较多的情况下，保存的冗余数据的数据量会成倍增加，可能会由于网站服务器保存冗余数据而耗用网站服务器的资源。</p>
+    <p>[0014]	综上所述，现有SSO系统中保存的冗余数据较多。</p>
+    <p>发明内容</p>
+    <p>[0015]	有鉴于此，本申请实施例提供一种实现单点登录的方法、系统及装置，采用该技术方案，能够减少单点登录系统中存储的冗余数据。</p>
+    <p>[0016]	本申请实施例通过如下技术方案实现：</p>
+    <p>[0017]	根据本申请实施例的一个方面，提供了一种实现单点登录的方法，包括：</p>
+    <p>[0018]	网站服务器接收用户终端发送的访问请求；以及</p>
+    <p>[0019]	在确定所述访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求；</p>
+    <p>[0020]	网站服务器接收所述认证服务器根据所述登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识，并将所述会话标识发送给所述用户终端，其中，所述会话标识由所述认证服务器根据针对所述用户终端生成的会话确定。</p>
+    <p>[0021]	根据本申请实施例的又一个方面，提供了一种实现单点登录的方法，包括：</p>
+    <p>[0022]	认证服务器接收网站服务器发送的对用户终端进行登录认证的请求后，确定是否保存有针对所述用户终端生成的会话；</p>
+    <p>[0023]	若是，认证服务器将根据所述会话确定的会话标识发送给所述网站服务器；</p>
+    <p>[0024]	若否，认证服务器在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。</p>
+    <p>[0025]	根据本申请实施例的又一个方面，提供了一种实现单点登录的系统，包括：网站服务器以及认证服务器；其中，</p>
+    <p>[0026]	所述网站服务器，用于接收用户终端发送的访问请求，以及在确定所述访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求，并接收所述认证服务器根据所述登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识，并将所述会话标识发送给所述用户终端；</p>
+    <p>[0027]	所述认证服务器，用于接收网站服务器发送的对用户终端进行登录认证的请求后，确定是否保存有针对所述用户终端生成的会话，若是，将根据所述会话确定的会话标识发送给所述网站服务器，若否，在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。</p>
+    <p>[0028]	根据本申请实施例的又一个方面，提供了一种实现单点登录的装置，包括：</p>
+    <p>[0029]	接收单元，用于接收用户终端发送的访问请求；</p>
+    <p>[0030]	认证请求发送单元,用于在确定所述接收单元接收的访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求；</p>
+    <p>[0031]	会话标识获取单元，用于接收所述认证服务器根据所述认证请求发送单元发送的登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识；其中，所述会话标识由所述认证服务器根据针对所述用户终端生成的会话确定；</p>
+    <p>[0032]	会话标识提供单元，用于将所述会话标识获取单元获取的会话标识发送给所述用户终端。</p>
+    <p>[0033]	根据本申请实施例的又一个方面，提供了一种实现单点登录的装置，包括：</p>
+    <p>[0034]	接收单元，用于接收网站服务器发送的对用户终端进行登录认证的请求；</p>
+    <p>[0035]	判断单元，用于在所述接收单元接收所述请求后，确定是否保存有针对所述用户终端生成的会话； [0036]	会话标识提供单元，用于在所述判断单元的判断结果为是时，将根据所述会话确定的会话标识发送给所述网站服务器；以及在所述判断单元的判断结果为否时，在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。</p>
+    <p>[0037]	通过本申请实施例提供的上述至少一个技术方案，网站服务器在接收用户终端发送的访问请求后，如果确定该访问请求中未携带认证服务器在确定用户终端成功登录后发送的会话标识，则向该认证服务器发送对该用户终端进行登录认证的请求，并接收认证服务器发送的会话标识，保存该会话标识，以及将该会话标识发送给用户终端，其中，该会话标识对应的会话为该认证服务器针对所述用户终端生成的会话。根据该技术方案，网站服务器接收到的是认证服务器在确定该用户终端成功登录后发送的针对该用户终端生成的会话的会话标识，网站服务器会保存该会话标识并将该会话标识提供给用户终端。与现有技术相比，网站服务器不会针对该用户终端生成会话，而直接使用认证服务器针对该用户终端生成的会话的会话标识，从而避免了网站服务器由于针对该用户终端生成会话而导致的冗余信息存储，避免了保存冗余数据而对网站服务器资源的占用，提高了网站服务器的响应速度。</p>
+    <p>[0038]	本申请的其它特征和优点将在随后的说明书中阐述，并且，部分地从说明书中变得显而易见，或者通过实施本申请而了解。本申请的目的和其他优点可通过在所写的说明书、权利要求书、以及附图中所特别指出的结构来实现和获得。附图说明</p>
+    <p>[0039]	附图用来提供对本申请的进一步理解，并且构成说明书的一部分，与本申请实施例一起用于解释本申请，并不构成对本申请的限制。在附图中：</p>
+    <p>[0040]	图I为背景技术提供的SSO系统的结构示意图；</p>
+    <p>[0041]	图2为背景技术提供的基于图I所示的系统实现SSO的流程示意图；</p>
+    <p>[0042]	图3为背景技术提供的SSO系统中各服务器与Session的关系示意图；</p>
+    <p>[0043]图4为本申请实施例一提供的单点登录系统 的结构示意图；</p>
+    <p>[0044]	图5为本申请实施例一提供的实现单点登录的流程示意图；</p>
+    <p>[0045]	图6为本申请实施例一提供的单点登录系统中各服务器与会话的关系示意图；</p>
+    <p>[0046]	图7为本申请实施例一提供的网站服务器获取Token的流程示意图；</p>
+    <p>[0047]	图8为本申请实施例一提供的网站服务器对会话更新的流程示意图；</p>
+    <p>[0048]	图9为本申请实施例一提供的网站服务器执行用户终端退出的流程示意图；</p>
+    <p>[0049]	图10为本申请实施例二提供的一种实现单点登录的装置的结构示意图；</p>
+    <p>[0050]	图11为本申请实施例二提供的一种实现单点登录的装置的结构示意图；</p>
+    <p>[0051]	图12为本申请实施例二提供的又一种实现单点登录的装置的结构示意图；</p>
+    <p>[0052]	图13为本申请实施例二提供的又一种实现单点登录的装置的结构示意图；</p>
+    <p>[0053]	图14为本申请实施例二提供的又一种实现单点登录的装置的结构示意图；</p>
+    <p>[0054]	图15为本申请实施例二提供的又一种实现单点登录的装置的结构示意图；</p>
+    <p>[0055]	图16为本申请实施例三提供的实现单点登录的系统的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0056]	为了给出减少网站服务器中存储的冗余数据的实现方案，本申请实施例提供了一种实现单点登录的方法、系统及装置，以下结合说明书附图对本申请的优选实施例进行说明，应当理解，此处所描述的优选实施例仅用于说明和解释本申请，并不用于限定本申请。并且在不冲突的情况下，本申请中的实施例及实施例中的特征可以相互组合。</p>
+    <p>[0057]	实施例一</p>
+    <p>[0058]	本申请实施例一提供了一种实现单点登录的方法，该方法中，若用户终端成功登录到认证服务器，该认证服务器会将针对该用户终端生成的会话的会话标识发送给网站服务器，网站服务器不会再针对该用户终端生成会话，而通过认证服务器发送的会话标识共享认证服务器生成的会话，并将该会话标识提供给该用户终端，该用户终端在后续发送给该网站服务器的访问请求中需要携带该会话标识，用于标识用户终端处于登录状态，即网站服务器在确定用户终端发送的访问请求中携带会话标识后，可以直接对该用户终端的访问请求进行处理。</p>
+    <p>[0059]	本申请实施例一提供的单点登录方法可以应用于如图4所示的单点登录系统中，如图4所示，该单点登录系统包括用户终端401、认证服务器402以及网站服务器403 (图4中示出一个网站服务器403作为示例，实际应用中，系统中可能包括多个网站服务器403)，基于该系统实现的单点登录的认证方式可以为集中认证方式，也可以为联合认证方式或其它认证方式。</p>
+    <p>[0060]	图5示出了实现单点登录的流程示意图，如图5所示，该单点登录过程主要包括如下步骤：</p>
+    <p>[0061]	步骤501、用户终端向网站服务器发送访问请求。</p>
+    <p>[0062]	该步骤501中，用户终端向网站服务器发送访问请求包括两种情况，一种情况是该用户终端得到认证服务器的认证之前发送该访问请求，即该用户终端还未接收到网站服务器发送的会话标识，例如，该用户终端首次向该网站服务器发送访问请求，由于会话标识是认证服务器在确定用户终端成功登录后提供给网站服务器的，因此，网站服务器还未向该用户终端提供会话标识，该用户终端此时发送的访问请求中未携带会话标识；另一种情况是该用户终端得到认证服务器的认证之后发送该访问请求，即认证服务器在确定用户终端成功登录后向网站服务器提供会话标识，网站服务器进一步将该会话标识提供给该用户终端，例如，该用户终端在接收到网站服务器发送的会话标识之后，向该网站服务器发送访问请求，该访问请求中携带会话标识，由于会话标识是认证服务器在确定用户终端成功登录后提供给网站服务器的，因此，网站服务器可以根据用户终端发送的携带会话标识的访问请求，确定该用户终端已经成功登录。 </p>
+    <p>[0063]	步骤502、网站服务器接收用户终端发送的访问请求，并确定该访问请求中是否携带会话标识，所述会话标识是认证服务器生成的，若是，执行步骤503，若否，执行步骤504至步骤507。</p>
+    <p>[0064]	该步骤502中，若网站服务器确定该访问请求中携带会话标识，则确定该用户终端成功登录，若网站服务器确定该访问请求中未携带会话标识，则确定该用户终端未成功登录。</p>
+    <p>[0065]	步骤503、网站服务器对该用户终端发送的访问请求进行处理，至此，流程结束。</p>
+    <p>[0066]	该步骤503中，网站服务器对该用户终端发送的访问请求进行处理，包括根据用户的访问请求向用户提供与该访问请求相应的内容。</p>
+    <p>[0067]	步骤504、网站服务器向认证服务器发送对用户终端进行登录认证的请求。</p>
+    <p>[0068]	步骤505、认证服务器接收网站服务器发送的对用户终端进行登录认证的请求后，确定向网站服务器发送的会话标识。</p>
+    <p>[0069]	该步骤505中，认证服务器确定向网站服务器发送的会话标识，首先确定是否保存有针对该用户终端生成的会话，若是，说明该用户终端已成功登录，则确定保存的该会话对应的会话标识为向网站服务器发送的会话标识；若否，说明该用户终端未登录，则向该用户终端提供登录页面，并对用户终端提交的账号密码进行验证，在确定该用户终端成功登录后，针对该用户终端生成会话，并确定生成的该会话的会话标识为向网站服务器发送的会话标识。其中，针对用户终端生成的会话用于保存该用户终端在整个会话过程中的状态信息，例如，登录信息或用户终端浏览网页的相关信息，一般情况下，会话与其对应的会话标识对应保存。</p>
+    <p>[0070]	步骤506、认证服务器将确定出的会话标识发送给网站服务器。</p>
+    <p>[0071]	该步骤506中，认证服务器将确定出的会话标识发送给网站服务器时，可以根据与网站服务器约定的加密方式对会话标识进行加密，以增加会话标识的安全性。</p>
+    <p>[0072]	步骤507、网站服务器保存认证服务器发送的会话标识，并将该会话标识发送给用户终端。</p>
+    <p>[0073]	该步骤507中，网站服务器将该会话标识发送给用户终端，可以将该会话标识保存在为该用户终端生成的Cookie中，并将该Cookie发送给用户终端。通过该步骤的执行，网站服务器将会话标识发送给用户终端后，用户终端可以保存该会话标识，并在后续发送给该网站服务器的访问请求中携带该会话标识，用于标识该用户终端处于登录状态，即通过认证服务器的登录认证。其中，若网站服务器将会话标识保存在Cookie中发送给用户终端，则用户终端在确定接收的Cookie中包括会话标识时，在后续发送给该网站服务器的访问请求中携带该Cookie中包括的会话标识。</p>
+    <p>[0074]	通过上述步骤507的执行，网站服务器将会话标识发送给用户终端之后，会进一步接收该用户终端发送的携带会话标识的访问请求，并对该用户终端发送的访问请求进行处理。</p>
+    <p>[0075]	至此，单点登录的流程结束。</p>
+    <p>[0076]	根据图5对应流程实现的单点登录过程，在单点登录系统中，无需每个网站服务器都针对用户终端生成对应的会话，通常由认证服务器针对该用户终端生成会话，由各网 站服务器共享认证服务器生成的该会话的会话标识即可。图6给出了单点登录系统中各服务器与会话的关系示意图，如图6所示，假设用户终端访问了 n个网站服务器，则该n个网站服务器以及认证服务器一共需要生成I个会话，每个网站服务器只保存该会话的会话标识，通过该方式，减少了多个网站服务器存储相同的信息，减少了冗余数据的存储。其中，会话通常由认证服务器在确定用户终端成功登录后，针对该用户终端生成会话，该会话可以保存认证服务器中或指定存储设备中，例如，保存在认证服务器的本地硬盘，或采用单独的服务器进行存储，以减轻认证服务器的存储压力。实际应用中，会话的存储必须满足高可用性、高并发性的要求,为满足此要求,可以通过TT (Tokyo Tyrant)来存储会话，TT是一种高性能的存储设备，具有良好的读性能，并且具有灵活的备份机制，所以利用TT来存储会话，能好较好地满足会话的安全性要求。</p>
+    <p>[0077]	根据图5对应流程实现的单点登录过程，网站服务器接收到的是认证服务器在确定该用户终端成功登录后发送的针对该用户终端生成的会话的会话标识，网站服务器会保存该会话标识并将该会话标识提供给用户终端。与现有技术相比，网站服务器不会针对该用户终端生成会话，而直接使用认证服务器针对该用户终端生成的会话的会话标识，避免了网站服务器由于针对该用户终端生成会话而导致的冗余信息存储，从而避免了保存冗余数据而对网站服务器资源的占用。</p>
+    <p>[0078]	以下针对实现上述流程各步骤的优选实施方式进行说明。</p>
+    <p>[0079]	优选实施方式一</p>
+    <p>[0080]	该优选实施方式一给出了上述步骤506中，认证服务器将确定出的会话标识发送给网站服务器的优选实施方式，该优选实施方式一中，为了提高认证服务器针对用户终端生成的会话的安全性，即避免会话被非法网站服务器获取，该优选实施方式一中，认证服务器会针对每个会话标识生成对应的令牌Token，并将生成的token发送给通过权限验证的网站服务器。该优选实施方式一中，认证服务器生成token后，建立该token与所对应的会话标识的对应关系，将token会话标识作为键值对（KV)保存在存储区域，每个token只能生效一次，token被网站服务器获取后，该键值对被清除，从而进一步保证了会话标识只会被经过权限验证的网站服务器获取到。</p>
+    <p>[0081]	具体地，网站服务器获取Token的过程如图7所示，包括如下步骤：[0082]	步骤701、网站服务器向认证服务器发送token获取请求，该token获取请求中携带用户终端的信息。</p>
+    <p>[0083]	该步骤701中，该token获取请求可以优选地在网站服务器向认证服务器发送对用户终端进行登录认证的请求之前发送，这样就可以预先获取到Token，并在发给认证服务器的对用户终端进行登录认证的请求中携带该Token。此处所述仅为优选实施方式，实际应用中，该token获取请求也可以在网站服务器向认证服务器发送对用户终端进行登录认证的请求之后发送，例如，认证服务器在接收到网站服务器发送的对用户终端进行登录认证的请求后，确定该请求中未携带token,则拒绝该请求,并指示该网站服务器发起token获取请求，在对该网站服务器的权限验证通过后，将token发送给该网站服务器，网站服务器收到认证服务器提供的token后，可以重新发送对用户终端进行登录认证的请求，并在该请求中携带token。</p>
+    <p>[0084]	步骤702、认证服务器对该网站服务器进行权限验证，并在对该网站服务器的权限验证通过后，确定针对该token获取请求中携带用户终端的信息对应的用户终端生成的会话的会话标识，向该网站服务器发送该会话标识对应的token。</p>
+    <p>&#183;[0085]	该步骤702中，认证服务器生成token通常在确定用户终端成功登录后生成，且该token与针对该用户终端生成的会话的会话标识对应。因此，该步骤702中，认证服务器在对网站服务器的权限验证通过后，首先根据token获取请求中携带用户终端的信息，确定该用户终端是否成功登录，若是，则将针对该用户终端生成的会话的会话标识所对应的token提供给网站服务器，否则在确定该用户终端成功登录后，将针对该用户终端生成的会话的会话标识所对应的token提供给网站服务器。</p>
+    <p>[0086]	步骤703、网站服务器保存认证服务器提供的token。</p>
+    <p>[0087]	至此，网站服务器获取token的流程结束。</p>
+    <p>[0088]	通过图7对应流程的执行，网站服务器中保存有认证服务器授予的token，该token用于标识网站服务器具备获取会话标识的权限。</p>
+    <p>[0089]	实际应用中，网站服务器在向认证服务器发送对该用户终端进行登录认证的请求之前，首先需要确定是否保存有与该用户终端对应的令牌token，若存在，则将该token携带在预发往认证服务器的对该用户终端进行登录认证的请求中；若不存在，则触发图7对应的流程，通过图7对应的流程获取到与该用户终端对应的token，并将该token携带在预发往认证服务器的对该用户终端进行登录认证的请求中。</p>
+    <p>[0090]	根据该优选实施方式一，网站服务器获取到token后，在向认证服务器发送的对用户终端进行登录认证的请求中携带该token，认证服务器接收该请求后，若确定接收的对用户终端进行登录认证的请求中携带token,则对该token进行验证,若验证通过,认证服务器向该网站服务器发送对应的会话标识，即网站服务器接收的认证服务器发送的会话标识，是认证服务器在验证携带在登录认证请求中的token通过、以及确定用户终端成功登录后发送的。具体地，认证服务器对token进行验证的方式，通常是判断接收的请求中携带的token与保存的token是否匹配,若是,则确定验证通过。</p>
+    <p>[0091]	进一步地，该优选实施方式一中，认证服务器生成并发送给网站服务器的token还携带用于标识token有效的时间信息；相应地，网站服务器将token携带在对用户终端进行登录认证的请求中之前，需要根据token携带的用于标识token有效的时间信息，确定该token有效。即确定token有效时才使用该token,否则需要重新获取token。</p>
+    <p>[0092]	该优选实施方式一中，若认证服务器生成并发送给网站服务器的token还携带用于标识token有效的时间信息，则认证服务器将会话对应的会话标识发送给网站服务器之前，还需要确定接收的对用户终端进行登录认证的请求中携带token,并根据token携带的用于标识所述token有效的时间信息确定该token有效，以及对该token验证通过。</p>
+    <p>[0093]	上述优选实施方式一中，通过引入token机制，提高了会话标识的安全性。该优选实施方式一所提供的技术方案在实际应用中，会话标识传递过程所涉及的参数可以如下表所示：</p>
+    <p>[0094]</p>
+    <p>          参数名~	参数的含义</p>
+    <p>从网站服务器跳转到认证服 target&#8212;url target&#8212;url是认证冗成后跳转的目务器	标页面 </p>
+    <p>从认证服务器返回token到 target&#8212;url token是认证服务器对网站服务器网站服务器	token	的权限验证通过后发送的身份认</p>
+    <p>                             证凭证，target&#8212;url含义同上网站服务器根据token请求 token	Timestamp是标识token有效的时</p>
+    <p>对用户终端进行登录认证 timestamp 间戳，token含义同上认证服务器向网站服务器返 session&#8212;id sessionld是会话标识，用于唯一回会话标识	标识一个会话</p>
+    <p>[0095]	优选实施方式二</p>
+    <p>[0096]	该优选实施方式二给出了基于图5对应的流程实现会话标识后，进一步实现会话内容同步的实现方案。</p>
+    <p>[0097]	在单点登录系统的实际应用中发现，用户终端从访问第一网站服务器跳转到访问第二网站服务器时，往往希望能够共享用户终端访问第一网站服务器时的相关访问信息，例如，用户为了查找一首歌曲，通过用户终端访问第一网站服务器并提交查找条件，但第一网站服务器中不存在与用户提交的查找条件匹配的歌曲，用户终端需要进一步访问第二网站服务器并重新提交查找条件。在此过程中，如果第二网站服务器能够共享该用户访问第一网站服务器的信息，则用户在访问第二网站服务器后无需再次提交查找条件，则可以提高访问效率，基于此目的，该优选实施方式二中提供了共享会话内容的具体实现方式。</p>
+    <p>[0098]	该优选实施方式二中，网站服务器在对用户终端的访问请求进行处理的过程中，能够对认证服务器针对该用户终端生成的会话进行更新，具体地，网站服务器对认证服务器针对该用户终端生成的会话进行更新的过程，如图8所示，主要包括如下步骤：</p>
+    <p>[0099]	步骤801、网站服务器获取设定类型的处理信息。</p>
+    <p>[0100]	该步骤801中，网站服务器获取的处理信息通常为用户在访问请求中包含的搜索条件信息，或者用户请求访问的信息的类型等信息，具体可以根据实际需要灵活确定，此处不再一一列举。</p>
+    <p>[0101]	步骤802、网站服务器根据该访问请求中携带的会话标识，将获取的处理信息写入与该会话标识对应的会话中。</p>
+    <p>[0102]	该步骤802中，网站服务器首先根据访问请求中携带的会话标识，根据预先保存的会话标识与存储位置的对应关系，确定与该会话标识对应的会话的存储位置，并根据确定出的该存储位置，将获取到的处理信息写入会话。</p>
+    <p>[0103]	至此，网站服务器对会话进行更新的流程结束。</p>
+    <p>[0104]	该优选实施方式二中，网站服务器在执行上述步骤802之前，即网站服务器在根据访问请求中携带的会话标识，将获取的处理信息写入与该会话标识对应的会话中之前，还包括： [0105]	网站服务器确定该访问请求中携带的会话标识与保存的会话标识一致。</p>
+    <p>[0106]	通过图8对应流程的执行，网站服务器可以将对用户终端的访问请求进行处理的过程中获取的相关信息写入到认证服务器针对该用户终端生成的会话中，从而达到会话的共享。</p>
+    <p>[0107]	根据该优选实施方式二提供的技术方案，网站服务器对用户终端发送的访问请求进行处理之前，还包括如下步骤：</p>
+    <p>[0108]	根据该访问请求中携带的会话标识，从该会话标识对应的会话中获取保存的处理信息，该处理信息包括当前网站服务器之外的至少一个网站服务器分别对该用户终端发送的访问请求进行处理的过程中获取的设定类型的处理信息，并根据获取的理信息，对该访问请求进行处理。</p>
+    <p>[0109]	通过上述步骤的执行，当前网站服务器能够从会话中获取到其他网站服务器针对该用户终端访问请求的处理情况，从而制定出相应的服务策略，为处理当前的访问请求提供参考，提高对用户访问请求的处理效率。</p>
+    <p>[0110]	优选实施方式三</p>
+    <p>[0111]	该优选实施方式二给出了网站服务器对用户终端发送的访问请求进行处理之后，退出登录的过程。具体地，网站服务器执行用户终端退出过程，如图9所示，包括如下步骤：</p>
+    <p>[0112]	步骤901、网站服务器接收用户终端发送的退出请求。</p>
+    <p>[0113]	该步骤901中，网站服务器接收的退出请求中携带指示全局退出（即认证服务器退出）或部分退出（即当前网站服务器退出）的指示。</p>
+    <p>[0114]	步骤902、网站服务器确定该退出请求所指示的退出类型，若为当前网站服务器退出，则执行步骤903，若为认证服务器退出，执行步骤904至步骤905。</p>
+    <p>[0115]	步骤903、网站服务器删除保存的会话标识，至此，流程结束。</p>
+    <p>[0116]	该步骤903中，网站服务器删除保存的会话标识后，还可以进一步指示用户终端将cookie中保存的会话标识置为空。</p>
+    <p>[0117]	步骤904、网站服务器删除保存的会话标识，并向认证服务器发送携带该会话标识的退出请求。</p>
+    <p>[0118]	该步骤904中，退出请求用于指示认证服务器删除该退出请求中携带的会话标识对应的会话。并且，该网站服务器可以进一步指示用户终端删除保存的cookie。[0119]	步骤905、认证服务器接收网站服务器发送的携带会话标识的退出请求，并根据该退出请求，删除该退出请求中携带的会话标识对应的会话。</p>
+    <p>[0120]	至此，流程结束。</p>
+    <p>[0121]	实施例二</p>
+    <p>[0122]	根据本申请实施例二的一个方面，提供了一种实现单点登录的装置，该装置可以位于网站服务器中。</p>
+    <p>[0123]	图10示出了实现单点登录的装置的结构示意图，如图10所示，该装置包括：</p>
+    <p>[0124]	接收单元1001、认证请求发送单元1002 、会话标识获取单元1003以及会话标识提供单元1004 ；</p>
+    <p>[0125]其中：</p>
+    <p>[0126]	接收单元1001，用于接收用户终端发送的访问请求；</p>
+    <p>[0127]	认证请求发送单元1002,用于在确定所述接收单元接收的访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求；</p>
+    <p>[0128]	会话标识获取单元1003，用于接收所述认证服务器根据所述认证请求发送单元发送的登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识；其中，所述会话标识由所述认证服务器根据针对所述用户终端生成的会话确定；</p>
+    <p>[0129]	会话标识提供单元1004，用于将所述会话标识获取单元获取的会话标识发送给所述用户终端。</p>
+    <p>[0130]	本申请实施例二提供的一个优选实施方式中，图10所示装置包括的认证请求发送单元1002，具体用于：在向所述认证服务器发送对所述用户终端进行登录认证的请求之前，确定是否保存有令牌token，所述token是所述认证服务器在对所述网站服务器的权限验证通过后发送的，若是，将所述token携带在对所述用户终端进行登录认证的请求中；若否，向所述认证服务器发送token获取请求，所述token获取请求中携带所述用户终端的信息，并接收所述认证服务器根据所述token获取请求，在对所述网站服务器的权限验证通过后发送的token，并将所述token携带在对所述用户终端进行登录认证的请求中，其中，所述认证服务器发送的所述token与认证服务器根据针对所述用户终端的信息对应的用户终端生成的会话确定的会话标识对应；</p>
+    <p>[0131]	相应地，会话标识获取单元1003，具体用于：接收所述认证服务器在验证携带在所述登录认证的请求中的所述token通过、以及确定所述用户终端成功登录后发送的会话标识。</p>
+    <p>[0132]	本申请实施例二提供的一个优选实施方式中，图10所示装置包括的认证请求发送单元1002，具体用于：</p>
+    <p>[0133]	将所述token携带在对所述用户终端进行登录认证的请求中之前，根据所述token携带的用于标识所述token有效的时间信息,确定所述token有效。</p>
+    <p>[0134]	本申请实施例二提供的一个优选实施方式中，图10所示装置包括的会话标识提供单元1004，具体用于：</p>
+    <p>[0135]	将所述会话标识封装在为所述用户终端生成的Cookie中，并将所述Cookie发送给所述用户终端。[0136]	本申请实施例二提供的一个优选实施方式中，图10所示装置包括的接收单元1001，具体用于：</p>
+    <p>[0137]	接收所述用户终端在确定接收的Cookie中包括所述会话标识时发送的携带所述会话标识的访问请求。</p>
+    <p>[0138]	如图11所示，本申请实施例二提供的一个优选实施方式中，图10所示装置还可以进一步包括：</p>
+    <p>[0139]	会话共享单元1005,用于在确定接收单元1001接收的访问请求中携带所述会话标识时，获取设定类型的处理信息，并根据所述访问请求中携带的会话标识，将获取的所述处理信息写入用于确定所述会话标识的会话中。</p>
+    <p>[0140]	本申请实施例二提供的一个优选实施方式中，图11所示装置包括的会话共享单元1005，具体用于： [0141]	在将获取的所述处理信息写入用于确定所述会话标识的会话中之前，确定所述访问请求中携带的会话标识与保存的会话标识一致。</p>
+    <p>[0142]	本申请实施例二提供的一个优选实施方式中，图11所示装置包括的会话共享单元1005，具体用于：</p>
+    <p>[0143]	根据所述访问请求中携带的会话标识，从用于确定所述会话标识的会话中获取保存的处理信息，所述处理信息包括当前网站服务器之外的至少一个网站服务器分别对所述用户终端发送的访问请求进行处理的过程中获取的设定类型的处理信息。</p>
+    <p>[0144]	如图12所示，本申请实施例二提供的一个优选实施方式中，图11所示装置还可以进一步包括：</p>
+    <p>[0145]	退出控制单元1006，用于在会话共享单元1005将获取的所述处理信息写入用于确定所述会话标识的会话中之后，接收所述用户终端发送的退出请求，若所述退出请求指示当前网站服务器退出，则删除保存的所述会话标识；若所述退出请求指示认证服务器退出，则删除保存的所述会话标识，并向所述认证服务器发送携带所述会话标识的退出请求，所述退出请求用于指示所述认证服务器删除所述退出请求中携带的用于确定会话标识的会话。</p>
+    <p>[0146]	根据本申请实施例二的又一个方面，提供了一种实现单点登录的装置，该装置可以位于认证服务器中。</p>
+    <p>[0147]	图13示出了实现单点登录的装置的结构示意图，如图13所示，该装置包括：</p>
+    <p>[0148]	接收单元1301、判断单元1302以及会话标识提供单元1303 ；</p>
+    <p>[0149]其中：</p>
+    <p>[0150]	接收单元1301，用于接收网站服务器发送的对用户终端进行登录认证的请求；</p>
+    <p>[0151]	判断单元1302，用于在所述接收单元接收所述请求后，确定是否保存有针对所述用户终端生成的会话；</p>
+    <p>[0152]	会话标识提供单元1303，用于在所述判断单元的判断结果为是时，将根据所述会话确定的会话标识发送给所述网站服务器；以及在所述判断单元的判断结果为否时，在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。</p>
+    <p>[0153]	如图14所示，本申请实施例二提供的一个优选实施方式中，图13所示装置还可以进一步包括：</p>
+    <p>[0154]	令牌提供单元1304，用于在接收单元1301接收网站服务器发送的对用户终端进行登录认证的请求之前，接收所述网站服务器发送的令牌token获取请求，所述token获取请求中携带所述用户终端的信息；以及在对所述网站服务器的权限验证通过后，向所述网站服务器发送与认证服务器针对所述用户终端的信息对应的用户终端生成的会话确定的会话标识对应的token。</p>
+    <p>[0155]	本申请实施例二提供的一个优选实施方式中，图14所示装置包括的会话标识提供单元1303，还用于：</p>
+    <p>[0156]	在将会话标识发送给所述网站服务器之前，确定接收的对用户终端进行登录认证的请求中携带token,并对所述token验证通过。 </p>
+    <p>[0157]	本申请实施例二提供的一个优选实施方式中，图14所示装置包括的会话标识提供单元1303，还用于：</p>
+    <p>[0158]	在将会话标识发送给所述网站服务器之前，确定接收的对用户终端进行登录认证的请求中携带token,并根据所述token携带的用于标识所述token有效的时间信息确定所述token有效，以及对所述token验证通过。</p>
+    <p>[0159]	如图15所示，本申请实施例二提供的一个优选实施方式中，图13所示装置还可以进一步包括：</p>
+    <p>[0160]	退出控制单元1305，用于在会话标识提供单元1303将所述会话标识发送给所述网站服务器之后，接收所述网站服务器发送的携带所述会话标识的退出请求；并根据所述退出请求，删除用于确定所述退出请求中携带的会话标识的会话。</p>
+    <p>[0161]	本实施例二中的实现单点登录的装置还具有能够实现实施例一方案的功能模块，此处不再赘述。</p>
+    <p>[0162]	应当理解，以上实现单点登录的装置包括的单元仅为根据该装置实现的功能进行的逻辑划分，实际应用中，可以进行上述单元的叠加或拆分。并且该实施例提供的实现单点登录的装置所实现的功能与上述实施例一提供的实现单点登录的方法流程一一对应，对于该装置所实现的更为详细的处理流程，在上述方法实施例中已做详细描述，此处不再详细描述。</p>
+    <p>[0163]	实施例三</p>
+    <p>[0164]	本申请实施例三提供了一种实现单点登录的系统，如图16所示，该系统包括：</p>
+    <p>[0165]	网站服务器1601以及认证服务器1602 ;其中，</p>
+    <p>[0166]	网站服务器1601，用于接收用户终端发送的访问请求，以及在确定所述访问请求中未携带认证服务器在确定所述用户终端成功登录后发送的会话标识时，向所述认证服务器发送对所述用户终端进行登录认证的请求，并接收所述认证服务器根据所述登录认证的请求，在确定所述用户终端成功登录后发送的会话标识，保存所述会话标识，并将所述会话标识发送给所述用户终端；</p>
+    <p>[0167]	认证服务器1602，用于接收网站服务器发送的对用户终端进行登录认证的请求后，确定是否保存有针对所述用户终端生成的会话，若是，将根据所述会话确定的会话标识发送给所述网站服务器，若否，在确定所述用户终端成功登录后，针对所述用户终端生成会话，并将根据生成的所述会话确定的会话标识发送给所述网站服务器。[0168]	该实施例三提供的实现单点登录的系统中包括的网站服务器1601以及认证服务器1602所实现的功能与上述实施例二中已做详细描述，此处不再详细描述。</p>
+    <p>[0169]	本申请的实施例所提供的实现单点登录的系统可通过计算机程序实现。本领域技术人员应该能够理解，上述的模块划分方式仅是众多模块划分方式中的一种，如果划分为其他模块或不划分模块，只要实现单点登录的系统具有上述功能，都应该在本申请的保护范围之内。</p>
+    <p>[0170]	本领域的技术人员应明白，本申请的实施例可提供为方法、装置（设备）、或计算机程序产品。因此，本申请可采用完全硬件实施例、完全软件实施例、或结合软件和硬件方面的实施例的形式。而且，本申请可采用在一个或多个其中包含有计算机可用程序代码的计算机可用存储介质（包括但不限于磁盘存储器、CD-ROM、光学存储器等）上实施的计算机程序产品的形式。</p>
+    <p>[0171]	本申请是参照根据本申请实施例的方法、装置（设备）和计算机程序产品的流程 图和/或方框图来描述的。应理解可由计算机程序指令实现流程图和/或方框图中的每一流程和/或方框、以及流程图和/或方框图中的流程和/或方框的结合。可提供这些计算机程序指令到通用计算机、专用计算机、嵌入式处理机或其他可编程数据处理设备的处理器以产生一个机器，使得通过计算机或其他可编程数据处理设备的处理器执行的指令产生用于实现在流程图一个流程或多个流程和/或方框图一个方框或多个方框中指定的功能的装置。</p>
+    <p>[0172]	这些计算机程序指令也可存储在能引导计算机或其他可编程数据处理设备以特定方式工作的计算机可读存储器中，使得存储在该计算机可读存储器中的指令产生包括指令装置的制造品，该指令装置实现在流程图一个流程或多个流程和/或方框图一个方框或多个方框中指定的功能。</p>
+    <p>[0173]	这些计算机程序指令也可装载到计算机或其他可编程数据处理设备上，使得在计算机或其他可编程设备上执行一系列操作步骤以产生计算机实现的处理，从而在计算机或其他可编程设备上执行的指令提供用于实现在流程图一个流程或多个流程和/或方框图一个方框或多个方框中指定的功能的步骤。</p>
+    <p>[0174]	尽管已描述了本申请的优选实施例，但本领域内的技术人员一旦得知了基本创造性概念，则可对这些实施例作出另外的变更和修改。所以，所附权利要求意欲解释为包括优选实施例以及落入本申请范围的所有变更和修改。显然，本领域的技术人员可以对本申请进行各种改动和变型而不脱离本申请的精神和范围。这样，倘若本申请的这些修改和变型属于本申请权利要求及其等同技术的范围之内，则本申请也意图包含这些改动和变型在内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1889488A?cl=zh">CN1889488A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年8月3日</td><td class="patent-data-table-td patent-date-value">2007年1月3日</td><td class="patent-data-table-td ">上海宝钢钢材贸易有限公司</td><td class="patent-data-table-td ">内联网结构以及建立内联网的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101018259A?cl=zh">CN101018259A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年2月8日</td><td class="patent-data-table-td patent-date-value">2007年8月15日</td><td class="patent-data-table-td ">中国电信股份有限公司</td><td class="patent-data-table-td ">电信综合信息系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101355527A?cl=zh">CN101355527A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年8月15日</td><td class="patent-data-table-td patent-date-value">2009年1月28日</td><td class="patent-data-table-td ">深圳市中兴移动通信有限公司</td><td class="patent-data-table-td ">一种跨域名单点登录的实现方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101605031A?cl=zh">CN101605031A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年6月13日</td><td class="patent-data-table-td patent-date-value">2009年12月16日</td><td class="patent-data-table-td ">新奥特（北京）视频技术有限公司</td><td class="patent-data-table-td ">一种面向电视台应用的跨域单点登陆系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102054213A?cl=zh">CN102054213A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年11月5日</td><td class="patent-data-table-td patent-date-value">2011年5月11日</td><td class="patent-data-table-td ">中国移动通信集团公司</td><td class="patent-data-table-td ">一种信息集成方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2006107713A1?cl=zh">WO2006107713A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年3月31日</td><td class="patent-data-table-td patent-date-value">2006年10月12日</td><td class="patent-data-table-td ">Cisco Technology, Inc.</td><td class="patent-data-table-td ">System and method for multi-session establishment</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103209168A?cl=zh">CN103209168A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td patent-date-value">2013年7月17日</td><td class="patent-data-table-td ">广东欧珀移动通信有限公司</td><td class="patent-data-table-td ">一种实现单点登录的方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=l1u3BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=l1u3BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=l1u3BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年1月2日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年2月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年7月5日</td><td class="patent-data-table-td ">REG</td><td class="patent-data-table-td ">Reference to a national code</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Ref country code: </span><span class="nested-value">HK</span></div><div class="nested-key-value"><span class="nested-key">Ref legal event code: </span><span class="nested-value">DE</span></div><div class="nested-key-value"><span class="nested-key">Ref document number: </span><span class="nested-value">1175610</span></div><div class="nested-key-value"><span class="nested-key">Country of ref document: </span><span class="nested-value">HK</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/1e47e7713c3914dd968d/CN102857484A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%AE%9E%E7%8E%B0%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95%E7%9A%84%E6%96%B9%E6%B3%95_%E7%B3%BB%E7%BB%9F.pdf?id=l1u3BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U03WsSYA0K1-LNhOCV7VQgqjjOqZA"},"sample_url":"https://www.google.com/patents/reader?id=l1u3BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

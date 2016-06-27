@@ -1,0 +1,533 @@
+<!DOCTYPE html><html><head><title>专利 CN103391541A - 无线设备的配置方法及装置、系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="无线设备的配置方法及装置、系统"><meta name="DC.contributor" content="庞高昆" scheme="inventor"><meta name="DC.contributor" content="丁志明" scheme="inventor"><meta name="DC.contributor" content="华为终端有限公司" scheme="assignee"><meta name="DC.date" content="2013-8-2" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了无线设备的配置方法及装置、系统，通过第三设备获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；所述第三设备获取第二设备的信息，与所述第二设备共享第二密钥，向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息；以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。克服现有的WPS认证配置对无线设备的性能要求较高的问题。"><meta name="DC.date" content="2013-11-13"><meta name="DC.relation" content="CN:101242323:A" scheme="references"><meta name="DC.relation" content="CN:102932793:A" scheme="references"><meta name="DC.relation" content="US:20090287922:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:103391541:A"><meta name="citation_patent_application_number" content="CN:201310334762"><link rel="canonical" href="https://www.google.com/patents/CN103391541A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103391541A?cl=zh"/><meta name="title" content="专利 CN103391541A - 无线设备的配置方法及装置、系统"/><meta name="description" content="本发明公开了无线设备的配置方法及装置、系统，通过第三设备获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；所述第三设备获取第二设备的信息，与所述第二设备共享第二密钥，向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息；以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。克服现有的WPS认证配置对无线设备的性能要求较高的问题。"/><meta property="og:title" content="专利 CN103391541A - 无线设备的配置方法及装置、系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103391541A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103391541A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103391541A&amp;usg=AFQjCNE4cCMxNjpZfcUmrBDqnAWNe7zZIw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/7ffc7530be8ed6ee839e/CN103391541A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/7ffc7530be8ed6ee839e/CN103391541A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103391541A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103391541A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103391541A?cl=zh" style="display:none"><span itemprop="description">本发明公开了无线设备的配置方法及装置、系统，通过第三设备获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；所述第三设备获取第二设...</span><span itemprop="url">https://www.google.com/patents/CN103391541A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103391541A - 无线设备的配置方法及装置、系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103391541A - 无线设备的配置方法及装置、系统" title="专利 CN103391541A - 无线设备的配置方法及装置、系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103391541 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310334762</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年11月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年8月2日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年5月10日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/US20160080940?hl=zh-CN&amp;cl=zh">US20160080940</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2014180352A1?hl=zh-CN&amp;cl=zh">WO2014180352A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310334762.0, </span><span class="patent-bibdata-value">CN 103391541 A, </span><span class="patent-bibdata-value">CN 103391541A, </span><span class="patent-bibdata-value">CN 201310334762, </span><span class="patent-bibdata-value">CN-A-103391541, </span><span class="patent-bibdata-value">CN103391541 A, </span><span class="patent-bibdata-value">CN103391541A, </span><span class="patent-bibdata-value">CN201310334762, </span><span class="patent-bibdata-value">CN201310334762.0</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BA%9E%E9%AB%98%E6%98%86%22">庞高昆</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%B8%81%E5%BF%97%E6%98%8E%22">丁志明</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E7%BB%88%E7%AB%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为终端有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103391541A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103391541A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103391541A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (11),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310334762&amp;usg=AFQjCNHIGvJyEOfClvGE5jMXeMuvIJNmeg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103391541A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHr1zL7X6WyMIyuMmkVfQecwR-oAw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT131100300" lang="ZH" load-source="patent-office">无线设备的配置方法及装置、系统</invention-title>
+      </span><br><span class="patent-number">CN 103391541 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA125228713" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了无线设备的配置方法及装置、系统，通过第三设备获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；所述第三设备获取第二设备的信息，与所述第二设备共享第二密钥，向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息；以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。克服现有的WPS认证配置对无线设备的性能要求较高的问题。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(33)</span></span></div><div class="patent-text"><div mxw-id="PCLM56725530" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种无线设备的配置方法，其特征在于，包括:  第三设备获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；  所述第三设备获取第二设备的信息，与所述第二设备共享第二密钥，向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息，以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥与所述第一设备建立安全连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述第三设备获取所述第一/第二设备的信息，包括:  所述第三设备通过扫描所述第一/第二设备的二维码获取所述二维码对应的所述第一/第二设备的信息；或者  所述第三设备通过近场通讯NFC方式获取所述第一 /第二设备的信息；或者  所述第三设备通过近距离WiFi通信方式获取所述第一 /第二设备的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述与所述第一	/第二设备共享第一 /第二密钥，包括:  所述第三设备与所述第一/第二设备协商生成所述第一/第二密钥；或者  所述第三设备通过所述近场通讯NFC/近距离WiFi通信方式向所述第一 /第二设备发送所述第一/第二密钥或接收所述第一/第二设备发送的所述第一/第二密钥；或者   所述第三设备通过扫描所述第一/第二设备的二维码获取所述第一/第二设备设置的所述第一 /第二密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1-3任一项所述的方法，其特征在于，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求2所述的方法，其特征在于，所述第一设备的信息中包括所述第一设备的工作信道，所述第二设备的信息中包括所述第二设备的工作信道；  所述第三设备获取所述第一设备的信息之后，或者所述第三设备获取所述第二设备的信息之后，包括:  所述第三设备根据所述第一设备的工作信道，将所述第三设备的工作信道调整为所述第一设备的工作信道；或者  所述第三设备根据所述第二设备的工作信道，将所述第三设备的工作信道调整为所述第二设备的工作信道。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1-5任一所述的方法，其特征在于，所述第一密钥为对称密钥，所述第二密钥为对称密钥；或者，所述第一密钥为非对称密钥的公钥，所述第二密钥为非对称密钥的公钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.一种无线设备的配置方法，其特征在于，包括:  第二设备接收第三设备发送的第二触发消息，所述第二触发消息中包括所述第三设备的信息和第一设备的信息；所述第二触发消息为所述第三设备获取所述第二设备的信息，与所述第二设备共享第二密钥之后，向所述第二设备发送第二触发消息；  所述第二设备根据所述第三设备的信息和第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，并利用所述第三密钥与所述第一设备建立安全连接；  所述第一设备的信息为所述第三设备通过扫描所述第一设备的二维码获取的所述二维码对应的第一设备的信息；或者为所述第三设备通过近场通讯NFC获取的所述第一设备的信息；或者为所述第三设备通过近距离WiFi通信获取的所述第一设备的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，其特征在于，所述第二设备接收第三设备发送的第二触发消息之前，包括:  所述第二设备将所述第二设备的二维码发送给所述第三设备，与所述第三设备共享所述第二密钥；以使所述第三设备获取所述二维码对应的第二设备的信息；或者  通过近场通讯NFC将所述第二设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥；或者  通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求7-8任一项所述的方法，其特征在于，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要7-9任一所 述的方法，其特征在于，所述第一设备的信息中包括所述第一设备的工作信道，所述第三设备的信息中包括所述第三设备的工作信道；  所述第二设备接收第三设备发送的第二触发消息之后，包括:  所述第二设备根据所述第一设备的工作信道，可以将所述第二设备的工作信道调整为所述第一设备的工作信道；或者  所述第二设备根据所述第三设备的工作信道，可以将所述第二设备的工作信道调整为所述第三设备的工作信道。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要7-10任一所述的方法，其特征在于，所述第二密钥为对称密钥，或者，所述第二密钥为非对称密钥的公钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.一种无线设备的配置方法，其特征在于，包括:  第一设备接收第三设备发送的第一触发消息，所述第一触发消息中包括所述第三设备的信息；  所述第一设备根据所述第三设备的信息，基于所述第三设备的认证，与第二设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求12所述的方法，其特征在于，所述第一设备接收第三设备发送的第一触发消息之前，包括:  所述第一设备向所述第三设备发送所述第一设备的二维码，与所述第三设备共享所述第一密钥；以使所述第三设备获取所述二维码对应的第一设备的信息，将所述第一设备的信息发送给所述第二设备；或者  通过近场通讯NFC将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备；或者  通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求12或13所述的方法，其特征在于，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要12-14任一所述的方法，其特征在于，所述第三设备的信息中包括所述第三设备的工作信道；  所述第一设备接收第三设备发送的第一触发消息之后，包括:  所述第一设备根据所述第三设备的工作信道，可以将所述第一设备的工作信道调整为所述第三设备的工作信道；或者  所述第一设备接收所述第二设备发送的所述第二设备的信息，所述第二设备的信息中包括所述第二设备的工作信道，可以将所述第一设备的工作信道调整为所述第二设备的工作信道。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求13所述的方法，其特征在于:  所述第一密钥为对称密钥，或者，所述第一密钥为非对称密钥的公钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.一种无线设备的配置装置，位于第三设备侧，其特征在于，包括:  获取模块，用于获取第一设备`的信息；  共享模块，用于与所述第一设备共享第一密钥；  发送模块，用于向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；  所述获取模块，还用于获取第二设备的信息；  所述共享模块，还用于与所述第二设备共享第二密钥；  所述发送模块，还用于向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息；以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥与所述第一设备建立安全连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的装置，其特征在于，所述获取模块具体用于:  通过扫描所述第一/第二设备的二维码获取所述二维码对应的所述第一/第二设备的信息；或者  通过近场通讯NFC方式获取所述第一 /第二设备的信息；或者  通过近距离WiFi通信方式获取所述第一 /第二设备的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求18所述的装置，其特征在于，所述共享模块具体用于:  与所述第一/第二设备协商生成所述第一/第二密钥；或者  通过所述近场通讯NFC/近距离WiFi通信方式向所述第一 /第二设备发送所述第一 /第二密钥或接收所述第一/第二设备发送的所述第一/第二密钥；或者  通过扫描所述第一/第二设备的二维码获取所述第一/第二设备设置的所述第一/第二密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求17-19任一项所述的装置，其特征在于，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求17-20任一所述的装置，其特征在于，所述第一设备的信息中包括所述第一设备的工作信道，所述第二设备的信息中包括所述第二设备的工作信道；  所述装置还包括:  调整模块，用于根据所述第一设备的工作信道，可以将所述第三设备的工作信道调整为所述第一设备的工作信道；或者  所述调整模块，还用于根据所述第二设备的工作信道，可以将所述第三设备的工作信道调整为所述第二设备的工作信道。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求17-21任一所述的装置，其特征在于，所述第一密钥为对称密钥，所述第二密钥为对称密钥；或者，所述第一密钥为非对称密钥的公钥，所述第二密钥为非对称密钥的公钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="23" class="claim">
+      <div class="claim-text">23.一种无线设备的配置装置，位于第二设备侧，其特征在于，包括:  接收模块，用于接收所述第三设备发送的第二触发消息，所述第二触发消息中包括所述第三设备的信息和第一设备的信息；所述第二触发消息为所述第三设备获取所述第二设备的信息，与所述第二设备共享第二密钥之后，向所述第二设备发送第二触发消息；  连接模块，用于根据所述第三设备的信息和第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥`，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接；  所述第一设备的信息为所述第三设备通过扫描所述第一设备的二维码获取的所述二维码对应的第一设备的信息；或者为所述第三设备通过近场通讯NFC获取的所述第一设备的信息；或者为所述第三设备通过近距离WiFi通信获取的所述第一设备的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求23所述的装置，其特征在于，还包括:  共享模块，用于将所述第二设备的二维码发送给所述第三设备，与所述第三设备共享所述第二密钥；以使所述第三设备获取所述二维码对应的第二设备的信息；或者  通过近场通讯NFC将所述第二设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥；或者  通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.根据权利要求23-24任一项所述的装置，其特征在于，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</div>
+    </div>
+    </div> <div class="claim"> <div num="26" class="claim">
+      <div class="claim-text">26.根据权利要23-25任一所述的装置，其特征在于，所述第一设备的信息中包括所述第一设备的工作信道，所述第三设备的信息中包括所述第三设备的工作信道；  所述装置还包括:  调整模块，用于根据所述第一设备的工作信道，可以将所述第二设备的工作信道调整为所述第一设备的工作信道；或者  根据所述第三设备的工作信道，可以将所述第二设备的工作信道调整为所述第三设备的工作信道。</div>
+    </div>
+    </div> <div class="claim"> <div num="27" class="claim">
+      <div class="claim-text">27.根据权利要23-26任一所述的方法，其特征在于，所述第二密钥为对称密钥，或者，所述第二密钥为非对称密钥的公钥。</div>
+    </div>
+    </div> <div class="claim"> <div num="28" class="claim">
+      <div class="claim-text">28.一种无线设备的配置装置，位于第一设备侧，其特征在于，包括:  接收模块，用于接收第三设备发送的第一触发消息，所述第一触发消息中包括所述第三设备的信息；  连接模块，用于根据所述第三设备的信息，基于所述第三设备的认证，与第二设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.根据权利要求28所述的装置，其特征在于，还包括:共享模块具体用于:  向所述第三设备发送所述第一设备的二维码，与所述第三设备共享所述第一密钥；以使所述第三设备获取所述二维码对应的第一设备的信息，将所述第一设备的信息发送给所述第二设备；或者  通过近场通讯NFC将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备；或者  通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.根据权利要求28-29任一项所述的装置，其特征在于，所述第三设备为可信的第三方无线设备，包括一个 或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</div>
+    </div>
+    </div> <div class="claim"> <div num="31" class="claim">
+      <div class="claim-text">31.根据权利要28-30任一所述的装置，其特征在于，所述第三设备的信息中包括所述第三设备的工作信道；  所述装置还包括:  调整模块，用于根据所述第三设备的工作信道，可以将所述第一设备的工作信道调整为所述第三设备的工作信道；或者  接收所述第二设备发送的所述第二设备的信息，所述第二设备的信息中包括所述第二设备的工作信道，将所述第一设备的工作信道调整为所述第二设备的工作信道。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.根据权利要求29所述的方法，其特征在于:  所述第一密钥为对称密钥，或者，所述第一密钥为非对称密钥的公钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.一种无线设备的配置系统，其特征在于，包括:第一设备、第二设备和第三设备；  所述第一设备包括如权利要求28-32任一项所述的无线设备的配置装置；  所述第二设备包括如权利要求23-27任一项所述的无线设备的配置装置；  所述第三设备包括如权利要求17-22任一项所述的无线设备的配置装置。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63707749" lang="ZH" load-source="patent-office" class="description">
+    <p>无线设备的配置方法及装置、系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明实施例涉及网络技术领域，尤其涉及一种无线设备的配置方法及装置、系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	为了解决用户在配置和使用无线网络时的困惑，无线保真(英文=WirelessFidelity, W1-Fi)联盟推出了无线保真安全设置(英文:Wi_Fi Protected Setup, WPS)规范，旨在简化无线设备通过接入点(英文Access Point, AP)加入到AP设置的无线局域网(英文:Wireless Local Area Network, WLAN)中。WiFi 点对点(Peer to Peer, P2P)通信可以通过WiFi功能实现无线设备之间端到端的直接发现。</p>
+    <p>[0003]	在WPS的认证流程中，一个无线设备可以采用个人身份识别码(personalidentifier number, PIN)方法、按钮控制(push button control, PBC)方法、近场通讯(near field communication, NFC)方法或近距离WiFi通信通过AP加入到无线局域网中。WiFi P2P通信中，无线设备之间的认证也采用WPS的认证流程，即无线设备之间可以通过PIN方法、PBC方法、NFC方法或近距离WiFi通信建立连接。</p>
+    <p>[0004]	然而，在PIN方法或PBC方法中，需要无线设备具有输入设备和显示设备以便输入和显示密钥；在NFC方法中，需要待加入无线局域网的无线设备支持NFC功能，需要待建立WiFi P2P通信的两个无线设备都支持NFC功能；在近距离WiFi通信中，需要待加入无线局域网的无线设备支持近距离WiFi通信功能，需要待建立WiFi P2P通信的两个无线设备都支持近距离WiFi通信功能。</p>
+    <p>[0005]	当待建立WiFiP2P连接的两个无线设备都不具备输入设备和显示设备，且支持的认证配置方法不相同时，就不能通过WPS的认证流程进行P2P的连接；当待加入无线局域网的无线设备不具有输入设备和显示设备，且不支持NFC功能和近距离WiFi通信功能，就不能加入到AP设置的无线局域网中。</p>
+    <p>[0006]	因此，现有的WPS的认证流程对无线设备的要求较高，存在应用局限性。</p>
+    <p>发明内容</p>
+    <p>[0007]	本发明提供一种无线设备的配置方法及装置、系统，用以解决现有的WPS的认证流程对无线设备的要求较高，存在应用局限性的问题。</p>
+    <p>[0008]	第一方面，提供一种无线设备的配置方法，包括:</p>
+    <p>[0009]	第三设备获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；</p>
+    <p>[0010]	所述第三设备获取第二设备的信息，与所述第二设备共享第二密钥，向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息，以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥与所述第一设备建立安全连接。</p>
+    <p>[0011]	基于第一方面，在第一种可能的实现方式中，所述第三设备获取所述第一 /第二设备的信息，包括:</p>
+    <p>[0012]	所述第三设备通过扫描所述第一 /第二设备的二维码获取所述二维码对应的所</p>
+    <p>述第一/第二设备的信息；或者</p>
+    <p>[0013]	所述第三设备通过近场通讯NFC方式获取所述第一 /第二设备的信息；或者</p>
+    <p>[0014]	所述第三设备通过近距离WiFi通信方式获取所述第一 /第二设备的信息。</p>
+    <p>[0015]	基于第一方面的第一种可能的实现方式，在第二种可能的实现方式中，所述与所</p>
+    <p>述第一/第二设备共享第一/第二密钥，包括:</p>
+    <p>[0016]	所述第三设备与所述第一 /第二设备协商生成所述第一 /第二密钥；或者</p>
+    <p>[0017]	所述第三设备通过所述近场通讯NFC/近距离WiFi通信方式向所述第一 /第二设备发送所述第一/第二密钥或接收所述第一/第二设备发送的所述第一/第二密钥；或者</p>
+    <p>[0018]	所述第三设备通过扫描所述第一 /第二设备的二维码获取所述第一 /第二设备设置的所述第一/第二密钥。</p>
+    <p>[0019]	基于第一方面或第一方面的第一或第二种可能的实现方式，在第三种可能的实现方式中，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。所述人机界面包括输入模块或显示模块，或所述二者的结合。</p>
+    <p>[0020]	基于第一方面的第一种可能的实现方式，在第四种可能的实现方式中，所述第一设备的信息中包括所述第一设备的工作信道，所述第二设备的信息中包括所述第二设备的工作信道；</p>
+    <p>[0021]	所述第三设备获取所述第一设备的信息之后，或者所述第三设备获取所述第二设备的信息之后，包括:</p>
+    <p>[0022]	所述第三设备根据所述第一设备的工作信道，将所述第三设备的工作信道调整为所述第一设备的工作信道；或者</p>
+    <p>[0023]	所述第三设备根据所述第二设备的工作信道，将所述第三设备的工作信道调整为所述第二设备的工作信道。</p>
+    <p>[0024]	第二方面，提供一种无线设备的配置方法，包括:</p>
+    <p>[0025]	第二设备接收第三设备发送的第二触发消息，所述第二触发消息中包括所述第三设备的信息和第一设备的信息；所述第二触发消息为所述第三设备获取所述第二设备的信息，与所述第二设备共享第二密钥之后，向所述第二设备发送第二触发消息；</p>
+    <p>[0026]	所述第二设备根据所述第三设备的信息和第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，并利用所述第三密钥与所述第一设备建立安全连接；</p>
+    <p>[0027]	所述第一设备的信息为所述第三设备通过扫描所述第一设备的二维码获取的所述二维码对应的第一设备的信息；或者为所述第三设备通过近场通讯NFC获取的所述第一设备的信息；或者为所述第三设备通过近距离WiFi通信获取的所述第一设备的信息。</p>
+    <p>[0028]	基于第二方面，在第一种可能的实现方式中，所述第二设备接收第三设备发送的第二触发消息之前，包括:</p>
+    <p>[0029]	所述第二设备将所述第二设备的二维码发送给所述第三设备，与所述第三设备共享所述第二密钥；以使所述第三设备获取所述二维码对应的第二设备的信息；或者</p>
+    <p>[0030]	通过近场通讯NFC将所述第二设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥；或者</p>
+    <p>[0031]	通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥。</p>
+    <p>[0032]	基于第二方面或第二方面的第一种可能的实现方式，在第二种可能的实现方式中，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</p>
+    <p>[0033]	基于第二方面，在第三种可能的实现方式中，所述第一设备的信息中包括所述第一设备的工作信道，所述第三设备的信息中包括所述第三设备的工作信道；</p>
+    <p>[0034]	所述第二设备接收第三设备发送的第二触发消息之后，包括:</p>
+    <p>[0035]	所述第二设备根据所述第一设备的工作信道，可以将所述第二设备的工作信道调整为所述第一设备的工作信道；或者</p>
+    <p>[0036]	所述第二设备根据所述第三设备的工作信道，可以将所述第二设备的工作信道调整为所述第三设备的工作信道。</p>
+    <p>[0037]	第三方面，提供一种无线设备的配置方法，包括:</p>
+    <p>[0038]	第一设备接收第三设备发送的第一触发消息，所述第一触发消息中包括所述第三设备的信息；</p>
+    <p>[0039]	所述第一设备根据所述第三设备的信息，基于所述第三设备的认证，与第二设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0040]	基于第三方面，在第一种可能的实现方式中，所述第一设备接收第三设备发送的第一触发消息之前，包括:</p>
+    <p>[0041]	所述第一设备向所述第三设备发送所述第一设备的二维码，与所述第三设备共享所述第一密钥；以使所述第三设备获取所述二维码对应的第一设备的信息，将所述第一设备的信息发送给所述第二设备；或者</p>
+    <p>[0042]	通过近场通讯NFC将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备；或者</p>
+    <p>[0043]	通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备。</p>
+    <p>[0044]	基于第三方面或第三方面的第一种可能的实现方式，在第二种可能的实现方式中，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</p>
+    <p>[0045]	基于第三方面，在第三种可能的实现方式中，所述第三设备的信息中包括所述第三设备的工作信道；[0046]	所述第一设备接收第三设备发送的第一触发消息之后，包括:</p>
+    <p>[0047]	所述第一设备根据所述第三设备的工作信道，可以将所述第一设备的工作信道调整为所述第三设备的工作信道；或者</p>
+    <p>[0048]	所述第一设备接收所述第二设备发送的所述第二设备的信息，所述第二设备的信息中包括所述第二设备的工作信道，可以将所述第一设备的工作信道调整为所述第二设备的工作信道。</p>
+    <p>[0049]	第四方面，提供一种无线设备的配置装置，位于第三设备侧，包括:</p>
+    <p>[0050]	获取模块，用于获取第一设备的信息；</p>
+    <p>[0051]	共享模块，用于与所述第一设备共享第一密钥；</p>
+    <p>[0052]	发送模块，用于向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息；</p>
+    <p>[0053]	所述获取模块，还用于获取第二设备的信息；</p>
+    <p>[0054]	所述共享模块，还用于与所述第二设备共享第二密钥；</p>
+    <p>[0055]	所述发送模块，还用于向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息；以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥与所述第一设备建立安全连接。</p>
+    <p>[0056]	基于第四方面，在第一种可能的实现方式中，所述获取模块具体用于:</p>
+    <p>[0057]	通过扫描所述第一 /第二设备的二维码获取所述二维码对应的所述第一 /第二设备的信息；或者</p>
+    <p>[0058]	通过近场通讯NFC方式获取所述第一 /第二设备的信息；或者</p>
+    <p>[0059]	通过近距离WiFi通信方式获取所述第一 /第二设备的信息。</p>
+    <p>[0060]	基于第四方面的第一种可能的实现方式，在第二种可能的实现方式中，所述共享模块具体用于:</p>
+    <p>[0061]	与所述第一 /第二设备协商生成所述第一 /第二密钥；或者</p>
+    <p>[0062]	通过所述近场通讯NFC/近距离WiFi通信方式向所述第一 /第二设备发送所述第一/第二密钥或接收所述第一/第二设备发送的所述第一/第二密钥；或者</p>
+    <p>[0063]	通过扫描所述第一 /第二设备的二维码获取所述第一 /第二设备设置的所述第一</p>
+    <p>/第二密钥。</p>
+    <p>[0064]	基于第四方面或第四方面的第一或第二种可能的实现方式，在第三种可能的实现方式中所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</p>
+    <p>[0065]	基于第四方面的第一种可能的实现方式，在第四种可能的实现方式中，所述第一设备的信息中包括所述第一设备的工作信道，所述第二设备的信息中包括所述第二设备的工作信道；</p>
+    <p>[0066]	所述装置还包括:</p>
+    <p>[0067]	调整模块，用于根据所述第一设备的工作信道，可以将所述第三设备的工作信道调整为所述第一设备的工作信道；或者[0068]	所述调整模块，还用于根据所述第二设备的工作信道，可以将所述第三设备的工作信道调整为所述第二设备的工作信道。</p>
+    <p>[0069]	第五方面，提供一种无线设备的配置装置，位于第二设备侧，包括:</p>
+    <p>[0070]	接收模块，用于接收所述第三设备发送的第二触发消息，所述第二触发消息中包括所述第三设备的信息和第一设备的信息；所述第二触发消息为所述第三设备获取所述第二设备的信息，与所述第二设备共享第二密钥之后，向所述第二设备发送第二触发消息；</p>
+    <p>[0071]	连接模块，用于根据所述第三设备的信息和第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接；</p>
+    <p>[0072]	所述第一设备的信息为所述第三设备通过扫描所述第一设备的二维码获取的所述二维码对应的第一设备的信息；或者为所述第三设备通过近场通讯NFC获取的所述第一设备的信息；或者为所述第三设备通过近距离WiFi通信获取的所述第一设备的信息。</p>
+    <p>[0073]	基于第五方面，在第一种可能的实现方式中，所述装置还包括:</p>
+    <p>[0074]	共享模块，用于将所述第二设备的二维码发送给所述第三设备，与所述第三设备共享所述第二密钥；以使所述第三设备获取所述二维码对应的第二设备的信息；或者</p>
+    <p>[0075]	通过近场通讯NFC将所述第二设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥；或者</p>
+    <p>[0076]	通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第二密钥。</p>
+    <p>[0077]	基于第五方面或第五方面的第一种可能的实现方式，在第二种可能的实现方式中，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</p>
+    <p>[0078]	基于第五方面，在第三种可能的实现方式中，所述第一设备的信息中包括所述第一设备的工作信道，所述第三设备的信息中包括所述第三设备的工作信道；</p>
+    <p>[0079]	所述装置还包括:</p>
+    <p>[0080]	调整模块，用于根据所述第一设备的工作信道，可以将所述第二设备的工作信道调整为所述第一设备的工作信道；或者</p>
+    <p>[0081]	根据所述第三设备的工作信道，可以将所述第二设备的工作信道调整为所述第三设备的工作信道。</p>
+    <p>[0082]	第六方面，提供一种无线设备的配置装置，位于第一设备侧，包括:</p>
+    <p>[0083]	接收模块，用于接收第三设备发送的第一触发消息，所述第一触发消息中包括所述第三设备的信息；</p>
+    <p>[0084]	连接模块，用于根据所述第三设备的信息，基于所述第三设备的认证，与第二设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0085]	基于第六方面，在第一种可能的实现方式中，所述装置还包括:共享模块具体用于:</p>
+    <p>[0086]向所述第三设备发送所述第一设备的二维码，与所述第三设备共享所述第一密钥；以使所述第三设备获取所述二维码对应的第一设备的信息，将所述第一设备的信息发送给所述第二设备；或者</p>
+    <p>[0087]	通过近场通讯NFC将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备；或者</p>
+    <p>[0088]	通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备。</p>
+    <p>[0089]	基于第六方面或第六方面的第一种可能的实现方式，在第二种可能的实现方式中，所述第三设备为可信的第三方无线设备，包括一个或多个功能模块或软件程序，用于实现人机接口功能、二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的一项或多项。</p>
+    <p>[0090]	基于第六方面的第一种可能的实现方式，在第三种可能的实现方式中，所述第三设备的信息中包括所述第三设备的工作信道；</p>
+    <p>[0091]	所述装置还包括:</p>
+    <p>[0092]	调整模块，用于根据所述第三设备的工作信道，可以将所述第一设备的工作信道调整为所述第三设备的工作信道；或者</p>
+    <p>[0093]	接收所述第二设备发送的所述第二设备的信息，所述第二设备的信息中包括所述第二设备的工作信道，将所述第一设备的工作信道调整为所述第二设备的工作信道。</p>
+    <p>[0094]	第七方面，提供一种无线设备的配置系统，包括:第一设备、第二设备和第三设备;</p>
+    <p>[0095]	所述第一设备包括第六方面所述的无线设备的配置装置；</p>
+    <p>[0096]	所述第二设备包括第五方面所述的无线设备的配置装置；</p>
+    <p>[0097]	所述第三设备包括第四方面所述的无线设备的配置装置。</p>
+    <p>[0098]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥，并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接，从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘)和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>附图说明</p>
+    <p>[0099]	为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作一简单地介绍，显而易见地，下面描述中的附图是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。[0100]	图1为本发明一实施例提供的无线设备的配置方法的流程示意图；</p>
+    <p>[0101]	图2为本发明另一实施例提供的无线设备的配置方法的流程示意图；</p>
+    <p>[0102]	图3为本发明另一实施例提供的无线设备的配置方法的流程示意图；</p>
+    <p>[0103]	图4为本发明另一实施例提供的无线设备的配置方法的信令图；</p>
+    <p>[0104]	图5为本发明另一实施例提供的无线设备的配置方法的信令图；</p>
+    <p>[0105]	图6为本发明另一实施例提供的无线设备的配置装置的结构示意图；</p>
+    <p>[0106]	图7为本发明另一实施例提供的无线设备的配置装置的结构示意图；</p>
+    <p>[0107]	图8为本发明另一实施例提供的无线设备的配置装置的结构示意图；</p>
+    <p>[0108]	图9为本发明另一实施例提供的无线设备的配置装置的结构示意图；</p>
+    <p>[0109]	图10为本发明另一实施例提供的无线设备的配置装置的结构示意图；</p>
+    <p>[0110]	图11为本发明另一实施例提供的无线设备的配置装置的结构示意图；</p>
+    <p>[0111]	图12为本发明另一实施例提供的无线设备的配置系统的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0112]	为使本发明实施例的目的、技术方案和优点更加清楚，下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有作出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0113]	本发明的技术方案，可以应用于各种无线局域网，尤其是基于WPS的应用场景，其中，第一设备、第二设备为不同的无线设备，第三设备为可信的第三方无线设备，具有输入设备和显示设备，且支持二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距离WiFi通信功能中的至少一项。</p>
+    <p>[0114]	当第一设备和第二设备都不具有输入设备(例如键盘)和显示设备(例如显示屏)，且第一设备和第二设备支持的认证配置方法不相同时，第一设备和第二设备就不能执行现有的WPS认证配置，在第一设备和第二设备之间建立WiFiP2P通信的安全连接；</p>
+    <p>[0115]	例如，第一设备支持仅NFC方法，第二设备不支持NFC方法，或者第一设备仅支持二维码方法、第二设备不支持二维码方法，或者第一设备仅支持PIN方法，第二设备不支持PIN方法等；第一设备和第二设备就不能执行现有的WPS认证配置，在第一设备和第二设备之间建立WiFiP2P通信的安全连接；</p>
+    <p>[0116]	又例如，当第一设备为AP时，通常AP不具有输入设备和显示设备，进一步地，若第二设备不具有输入设备和显示设备，且只支持二维码方法时，第二设备就不能执行现有的WPS认证配置，加入到AP设置的无线局域网中。</p>
+    <p>[0117]	因此，现有的WPS认证配置中，对无线设备的性能要求较高，为了使得任何不同性能的无线设备之间能够执行WPS认证配置，在两个无线设备之间建立WiFiP2P通信的安全连接，或者为了使得任何不同性能的无线设备能够加入到AP设置的无线局域网中，本发明实施例提供一种无线设备的配置方法，能够克服现有的WPS认证配置对无线设备的性能要求较高的问题。</p>
+    <p>[0118]	图1为本发明一实施例提供的无线设备的配置方法的流程示意图，如图1所示，本实施例的无线设备的配置方法可以包括:[0119]	101、第三设备获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一触发消息，所述第一触发消息中包括所述第三设备的信息。</p>
+    <p>[0120]	在本发明的一个可选实施方式中，第三设备获取第一设备的信息，包括:</p>
+    <p>[0121]	若所述第一设备具有二维码时，所述第三设备通过扫描所述第一设备的二维码获取所述二维码对应的第一设备的信息；或者</p>
+    <p>[0122]	若所述第一设备支持NFC功能时，所述第三设备通过近场通讯NFC获取所述第一设备的信息；或者</p>
+    <p>[0123]	若所述第一设备支持近距离WiFi通信功能时，所述第三设备通过近距离WiFi通信获取所述第一设备的信息。</p>
+    <p>[0124]	在本发明的一个可选实施方式中，第三设备与所述第一设备共享第一密钥，包括:</p>
+    <p>[0125]	所述第三设备与所述第一设备协商生成所述第一密钥；或者</p>
+    <p>[0126]	所述第三设备通过近场通讯NFC向所述第一设备发送所述第一密钥或接收第一设备发送的第一密钥；或者</p>
+    <p>[0127]	所述第三设备通过第一设备的二维码获取第一设备设置的第一密钥。</p>
+    <p>[0128]	在本发明的一个可选实施方式中，第三设备与所述第一设备共享第一密钥之后，包括:</p>
+    <p>[0129]	第三设备可以利用第一密钥，与第一设备共享第三密钥，例如，第三设备利用第一密钥生成第三密钥，或者第三设备随机产生第三密钥，利用第一密钥加密第三密钥并发送给第一设备(如通过第一触发消息将第三密钥发送给第一设备)，或者第一设备利用第一密钥随机产生第三密钥，利用第一密钥加密第三密钥并发送给第三设备，或者第一设备与第三设备协商产生第三密钥。其中，所述第三密钥用于所述第二设备利用所述第三密钥，在所述第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0130]	其中，第三设备的信息包括但不限于第三设备的标识，第三设备的工作信道等信</p>
+    <p>肩、O</p>
+    <p>[0131]	其中，第三设备获取的第一设备的信息中包括但不限于第一设备的标识、第一设备的工作信道，第一设备支持的认证配置方法等信息。</p>
+    <p>[0132]	若上述第三设备的工作信道与第一设备的工作信息不相同时，为了后续第一设备与第三设备之间传输消息，第三设备可以将第三设备的工作信道调整为第一设备的工作信道，或者第一设备可以将第一设备的工作信道调整为第三设备的工作信道；需要说明的是，若第一设备为AP时，由于AP的工作信道是固定的，第三设备需要将第三设备的工作信道调整为第一设备的工作信道。</p>
+    <p>[0133]	102、第三设备获取第二设备的信息，与所述第二设备共享第二密钥，向所述第二设备发送第二触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息；以使所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0134]	在本发明的一个可选实施方式中，第三设备获取第二设备的信息，包括:</p>
+    <p>[0135]	所述第三设备通过扫描所述第二设备的二维码获取所述二维码对应的所述第二设备的信息；或者</p>
+    <p>[0136]	所述第三设备通过近场通讯NFC获取所述第二设备的信息；或者</p>
+    <p>[0137]	所述第三设备通过近距离WiFi通信获取所述第二设备的信息。</p>
+    <p>[0138]	在本发明的一个可选实施方式中，所述第三设备与所述第二设备共享第二密钥，包括:</p>
+    <p>[0139]	所述第三设备与所述第二设备协商生成所述第二密钥；或者</p>
+    <p>[0140]	所述第三设备通过近场通讯NFC向所述第二设备发送所述第二密钥或接收第二设备发送的第二密钥；或者</p>
+    <p>[0141]	所述第三设备通过所述第二设备的二维码获取所述第二设备发设置的所述第二密钥。</p>
+    <p>[0142]	在本发明的一个可选实施方式中，所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，具体实现时:</p>
+    <p>[0143]	例如，第二设备产生一个随机数NA，利用第二密钥加密所述随机数NA，和会话标识(sess)，第二设备的标识或第一明文(A)，第一设备的标识或第二明文(B)，将加密后的随机数NA, sess, A, B和未加密的A, B, sess 一起发送给第一设备；</p>
+    <p>[0144]	第一设备产生一个随机数NB，利用第一密钥加密随机数NB和会话标识(sess)，第二设备的标识或第一明文(A)，第一设备的标识或第二明文(B)，将加密后的随机数NB和A，B，sess和未加密的A，B, sess以及加密后的随机数NA发送给第三设备；</p>
+    <p>[0145]	第三设备接收到加密后的随机数NB以及加密后的随机数NA之后，利用第一密钥解密随机数NB，利用第二密钥解密NA，根据随机数NA和随机数NB，产生第三密钥，利用第二密钥加密第三密钥和NA，利用第一密钥加密第三密钥和NB，将加密后第三密钥和NB，加密后的第三密钥和NA发送给第一设备；</p>
+    <p>[0146]	第一设备利用第一密钥解密第三密钥，并将第三设备利用第二密钥加密后的第三密钥和NA发送给第二设备；</p>
+    <p>[0147]	第二设备利用第二密钥解密第三密钥。</p>
+    <p>[0148]	又例如,第二设备产生一个随机数ga,所述ga是第二设备产生的第二公钥ga, ga是根据私钥a而产生，第二设备保留私钥a，私钥a是第二设备产生的随机数，利用第二密钥加密随机数ga和SeSS，A，B。其中会话标识(sess)，第二设备的标识或第一明文(A)，第一设备的标识或第二明文(B)。将加密后的随机数ga和sees，A, B和未加密的A，sees, NA发送给第一设备；</p>
+    <p>[0149]	第一设备产生一个随机数gb,所述gb是第一设备产生的第一公钥gb, gb是根据私钥b而产生，第一设备保留私钥b，私钥b是第一设备产生的随机数，利用第一密钥加密随机数gb和sess，A, B和接收到第二设备的加密报文(加密后的随机数ga和sees，A, B)。将加密后的随机数ga和sees，A, B和接收的第二设备的加密报文和未加密的B，sees发送给第三设备；</p>
+    <p>[0150]	第三设备接收到加密后的随机数ga以及加密后的随机数gb之后，利用第一密钥解密随机数gb，利用第二密钥解密随机数ga，利用第二密钥加密随机数ga，gb, sess, A, B得到第一加密值，然后利用第一密钥加密第一加密值和随机数ga, gb, sess, A, B并将所述加密后的第一加密值和随机ga, gb, sess, A, B发送给第一设备；</p>
+    <p>[0151]	第一设备利用第一密钥解密随机数ga和随机数gb，并将所述第一加密值发送给</p>
+    <p>第二设备；</p>
+    <p>[0152]	第二设备利用第二密钥解密随机数ga和随机数gb。</p>
+    <p>[0153]	之后，第一设备利用解密后的随机数ga和随机数gb计算得到第三密钥，第二设备利用解密后的随机数ga和随机数gb计算得到第三密钥。</p>
+    <p>[0154]	其中，获得第三密钥的过程属于公私钥算法安全获得共享密钥的过程，可以采用现有的公私钥算法的各种实现方式。常用的公私钥算法有:a)D-H算法；b)RSA算法；c)EIGamal 算法。</p>
+    <p>[0155]	以上几种算法属于公私钥密码算法中常用的几个例子:设备根据私钥就开始生成一个公钥，公钥可以对外公开，必须保留私钥不公开。</p>
+    <p>[0156]	本实施例中所述第一或第二密钥可以为对称密钥。</p>
+    <p>[0157]	在本发明的一个可选实施方式中，所述第一或第二密钥也可以为非对称密钥的公钥，所述第一或第二设备可以保留所述第一或第二密钥对应的私钥。所述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，具体实现时:</p>
+    <p>[0158]	例如，所述第二设备产生一个随机数NA，利用所述第二密钥对应的私钥加密所述随机数NA，和会话标识(sess)，所述第二设备的标识或第一明文(A)，第一设备的标识或第二明文(B)，将利用所述第二密钥对应的私钥加密后的随机数NA，sesS，A，B和未加密的A，B, sess 一起发送给第一设备；</p>
+    <p>[0159]	所述第一设备产生一个随机数NB，利用所述第一密钥对应的私钥加密随机数NB和会话标识(sess)，所述第二设备的标识或所述第一明文(A)，所述第一设备的标识或所述第二明文(B)，将利用所述第一密钥对应的私钥加密后的随机数NB和A，B, sess和未加密的A，B, sess以及利用所述第二密钥对应的私钥加密后的随机数NA，sess,A, B发送给所述第三设备；</p>
+    <p>[0160]	所述第三设备接收到利用所述第一密钥对应的私钥加密后的随机数NB和A，B，sess和未加密的A，B, sess以及利用所述第二密钥对应的私钥加密后的随机数NA，sess,A，B,利用所述第一密钥解密所述随机数NB，利用第二密钥解密所述随机数NA，根据所述随机数NA和所述随机数NB，产生第三密钥，利用所述第二密钥加密所述第三密钥和NA，利用所述第一密钥加密所述第三密钥和NB，将加密后所述第三密钥和所述NB，加密后的所述第三密钥和所述NA发送给所述第一设备；</p>
+    <p>[0161]	所述第一设备利用所述第一密钥对应的私钥解密得所述第三密钥，并将第三设备利用第二密钥加密后的第三密钥和NA发送给所述第二设备；</p>
+    <p>[0162]	所述第二设备利用所述第二密钥对应的私钥解密所述第三密钥。</p>
+    <p>[0163]或者，</p>
+    <p>[0164]	所述第二设备产生一个随机数ga，所述ga是所述第二设备产生的第二公钥ga，ga是根据私钥a而产生，所述第二设备保留所述私钥a，所述私钥a是所述第二设备产生的随机数，所述第二设备利用所述第二密钥对应的私钥加密所述随机数ga和sess，A, B。其中所述会话标识(sess)，所述第二设备的标识或第一明文(A)，所述第一设备的标识或第二明文(B)。将利用所述第二密钥对应的私钥加密后的所述随机数ga和sesS，A，B和未加密 的所述A，sess, NA发送给所述第一设备；</p>
+    <p>[0165]	所述第一设备产生一个随机数gb，所述gb是所述第一设备产生的第一公钥gb，所 述gb是根据私钥b而产生，所述第一设备保留所述私钥b，所述私钥b是所述第一设备产生 的随机数，利用所述第一密钥对应的私钥加密所述随机数gb和sess，A, B和接收到所述第 二设备的加密报文(利用所述第二密钥对应的私钥后的所述随机数ga和SeSS，A，B)。将所 述利用所述第一密钥对应的私钥加密后的所述随机数ga和SeSS，A，B和接收的所述第二设 备的加密报文和未加密的所述A，B，sess发送给所述第三设备；</p>
+    <p>[0166]	所述第三设备接收到加密后的所述随机数ga以及加密后的所述随机数gb之后， 利用所述第一密钥解密所述随机数gb，利用所述第二密钥解密所述随机数ga，利用所述第 二密钥加密所述随机数ga，gb, sess, A，B得到第一加密值，然后利用第一密钥加密第一加 密值和随机数ga, gb, sess, A, B并将所述加密后的第一加密值和随机ga, gb, sess, A, B发 送给所述第一设备；</p>
+    <p>[0167]	所述第一设备利用所述第一密钥对应的私钥解密随机数ga和随机数gb，并将所 述第一加密值发送给第二设备；</p>
+    <p>[0168]	所述第二设备利用所述第二密钥对应的私钥解密随机数ga和随机数gb。之后，所 述第一设备利用解密后的所述随机数ga和随机数gb计算得到第三密钥，所述第二设备利 用解密后的所述随机数ga和随机数gb计算得到所述第三密钥。</p>
+    <p>[0169]	其中，公私钥算法中:设备产生一对公私钥，公钥可以对外公开，必须保留私钥不 公开。利用公钥加密的信息只能使用公钥对应的私钥解开，利用私钥加密的信息只能使用 私钥对应的公钥解开。</p>
+    <p>[0170]	本发明实施例将所述共享的密钥(共享的第一或第二密钥)设置为公私钥体系中 的公钥，共享的第一密钥是第一设备的公钥，共享的第二密钥是第二设备的公钥。采用第一 密钥加密后的信息需要对应的私钥来解密，采用第一密钥对应的私钥加密后的信息需要使 用第一公钥解密，采用第二密钥加密后的信息需要对应的私钥来解密，采用第二密钥对应 的私钥加密后的信息需要使用第二公钥解密。在第三设备和第一设备，第二设备通信的时 候，由于第三设备能够采集到正确的第一密钥和第二密钥，并且第一密钥对应的私钥被第 一设备保存不外发，第二密钥所对应的私钥被第二设备保存不外发，攻击者只能获得第一 密钥或第二密钥的公钥，但是不能获得第一密钥或第二密钥所对应的私钥，故不能解密用 第一密钥或第二密钥的公钥加密的信息，实施不了偷听和中间人攻击，固不能获得第三设 备和第一设备、第二设备的隐私信息，保护了用户的隐私，同时克服了使用公私钥算法存在 的中间人攻击，进而提高了安全性。</p>
+    <p>[0171 ] 在本发明的一个可选实施方式中，若第三设备利用第一密钥与第一设备共享第三 密钥，则第三设备发送给第二设备的第二触发消息中还可以包括所述第三密钥，进一步地， 第三设备可以利用所述第二密钥加密第三密钥之后发送给第二设备；</p>
+    <p>[0172]	对应地，第二设备可以根据第三设备的信息和第一设备的信息，利用第三密钥，与 第一设备之间建立安全连接，具体实现时，第二设备可以利用第三密钥与第一设备进行WPS 认证配置或四次握手，其中，WPS认证配置或四次握手的具体流程可以参考现有的WPS标 准，不再赘述。[0173]	其中，第三设备获取的第二设备的信息中包括但不限于第二设备的标识、第二设 备的工作信道，第二设备支持的认证配置方法等信息。</p>
+    <p>[0174]	为了后续第一设备、第二设备和第三设备之间传输消息，需要将第一设备、第二设 备和第三设备的工作信道调整为相同的工作信道；即可以将第一设备、第二设备的工作信 道调整为第三设备的工作信道，或者可以将第一设备、第三设备的工作信道调整为第二设 备的工作信道；或者可以将第二设备、第三设备的工作信道调整为第一设备的工作信道；</p>
+    <p>[0175]	需要说明的是，由于AP的工作信道是固定的，若第一设备为AP时，则需要将第二 设备、第三设备的工作信道调整为第一设备的工作信道。若第二设备为AP时，则需要将第 一设备、第三设备的工作信道调整为第二设备的工作信道。</p>
+    <p>[0176]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设 备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0177]	图2为本发明另一实施例提供的无线设备的配置方法的流程示意图；如图2所示， 包括:</p>
+    <p>[0178]	201、第二设备接收所述第三设备发送的第二触发消息，所述第二触发消息中包括 所述第三设备的信息和第一设备的信息；</p>
+    <p>[0179]	在本发明的一个可选实施方式中，步骤201之前，包括:</p>
+    <p>[0180]	所述第二设备将所述第二设备的二维码发送给所述第三设备，与所述第三设备共 享第二密钥；以使所述第三设备获取与所述二维码对应的第二设备的信息；或者</p>
+    <p>[0181]	所述第二设备通过近场通讯NFC将所述第二设备的信息发送给所述第三设备，与 所述第三设备共享第二密钥；或者</p>
+    <p>[0182]	所述第二设备通过近距离WiFi通信将所述第二设备的信息发送给所述第三设 备，与所述第三设备共享第二密钥。</p>
+    <p>[0183]	其中，所述第一设备的信息为所述第三设备通过扫描所述第一设备的二维码获取 的所述二维码对应的第一设备的信息；或者为所述第三设备通过近场通讯NFC获取的所述 第一设备的信息；或者为所述第三设备通过近距离WiFi通信获取的所述第一设备的信息；</p>
+    <p>[0184]	其中，第一设备的信息中包括但不限于第一设备的标识、第一设备的工作信道，第 一设备支持的认证配置方法等信息。第三设备的信息包括但不限于第三设备的标识，第三 设备的工作信道等信息。[0185]	为了后续第一设备、第二设备和第三设备之间传输消息，需要将第一设备、第二设 备和第三设备的工作信道调整为相同的工作信道；即第二设备接收到第一设备的信息和第 三设备的信息之后，可以将第二设备的工作信道调整为第一设备的工作信道或者第三设备 的工作信道，需要说明的是，若第二设备为AP时，由于AP的工作信道是固定的，第二设备需 要将第二设备的工作信道信息通过第二设备的信息发送给第三设备和第一设备，以使第一 设备和第三设备根据第二设备的工作信道信息，将各自的工作信道调整为AP的工作信道。</p>
+    <p>[0186]	在本发明的一个可选实施方式中，若所述第二触发消息还包括第三密钥；所述第 三密钥为所述第三设备获取所述第一设备的信息，根据所述第一设备的信息与所述第一设 备共享第一密钥之后，利用所述第一密钥，与所述第一设备共享的第三密钥；</p>
+    <p>[0187]	则所述第二设备接收第三设备发送的第二触发消息之后，包括:</p>
+    <p>[0188]	所述第二设备利用所述第三密钥在所述第一设备和所述第二设备之间建立安全 连接。具体实现时，第二设备可以利用第三密钥与第一设备进行WPS认证配置或四次握手， 其中，WPS认证配置或四次握手的具体流程可以参考现有的WPS标准，不再赘述。</p>
+    <p>[0189]	202、第二设备根据所述第三设备的信息和第一设备的信息，基于所述第三设备的 认证，与所述第一设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第 二设备之间建立安全连接。</p>
+    <p>[0190]	在本发明的一个可选实施方式中，所述第二设备根据所述第三设备的信息和所述 第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三密钥，具体实现 时:</p>
+    <p>[0191]	例如，第二设备产生一个随机数NA，利用第二密钥加密所述随机数NA，和会话标 识(sess)，第二设备的标识或第一明文(A)，第一设备的标识或第二明文(B)，将加密后的 随机数NA, sess, A, B和未加密的A, B, sess 一起发送给第一设备；</p>
+    <p>[0192]	第一设备产生一个随机数NB，利用第一密钥加密随机数NB和会话标识(sess)，第 二设备的标识或第一明文(A)，第一设备的标识或第二明文(B)，将加密后的随机数NB和A， B，sess和未加密的A，B，sess以及加密后的随机数NA发送给第三设备；</p>
+    <p>[0193]	第三设备接收到加密后的随机数NB以及加密后的随机数NA之后，利用第一密钥 解密随机数NB，利用第二密钥解密NA，根据随机数NA和随机数NB，产生第三密钥，利用第二 密钥加密第三密钥和NA，利用第一密钥加密第三密钥和NB，将加密后第三密钥和NB，加密 后的第三密钥和NA发送给第一设备；</p>
+    <p>[0194]	第一设备利用第一密钥解密第三密钥，并将第三设备利用第二密钥加密后的第三 密钥和NA发送给第二设备；</p>
+    <p>[0195]	第二设备利用第二密钥解密第三密钥。</p>
+    <p>[0196]	又例如,第二设备产生一个随机数ga,所述ga是第二设备产生的第二公钥ga, ga 是根据私钥a而产生，第二设备保留私钥a，私钥a是第二设备产生的随机数，利用第二密 钥加密随机数ga和SeSS，A，B。其中会话标识(sess)，第二设备的标识或第一明文(A)，第 一设备的标识或第二明文(B)。将加密后的随机数ga和sees，A, B和未加密的A，sees, NA 发送给第一设备；</p>
+    <p>[0197]	第一设备产生一个随机数gb,所述gb是第一设备产生的第一公钥gb, gb是根据 私钥b而产生，第一设备保留私钥b，私钥b是第一设备产生的随机数，利用第一密钥加密随机数gb和sess，A, B和接收到第二设备的加密报文(加密后的随机数ga和sees，A, B)。 将加密后的随机数ga和sees，A，B和接收的第二设备的加密报文和未加密的B，sees发送 给第三设备；</p>
+    <p>[0198]	第三设备接收到加密后的随机数ga以及加密后的随机数gb之后，利用第一密钥 解密随机数gb，利用第二密钥解密随机数ga，利用第二密钥加密随机数ga，gb, sess, A, B 得到第一加密值，然后利用第一密钥加密第一加密值和随机数ga, gb, sess, A, B并将所述 加密后的第一加密值和随机ga, gb, sess, A, B发送给第一设备；</p>
+    <p>[0199]	第一设备利用第一密钥解密随机数ga和随机数gb，并将所述第一加密值发送给</p>
+    <p>第二设备；</p>
+    <p>[0200]	第二设备利用第二密钥解密随机数ga和随机数gb。</p>
+    <p>[0201]	之后，第一设备利用解密后的随机数ga和随机数gb计算得到第三密钥，第二设备 利用解密后的随机数ga和随机数gb计算得到第三密钥。</p>
+    <p>[0202]	本实施例中所述第一或第二密钥可以为对称密钥。</p>
+    <p>[0203]	在本发明的一个可选实施方式中，所述第一或第二密钥也可以为非对称密钥的公 钥，所述第一或第二设备可以保留所述第一或第二密钥对应的私钥。所述第二设备根据所 述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协 商生成第三密钥，具体实现时:</p>
+    <p>[0204]	例如，所述第二设备产生一个随机数NA，利用所述第二密钥对应的私钥加密所述 随机数NA，和会话标识(sess)，所述第二设备的标识或第一明文(A)，第一设备的标识或第 二明文(B)，将利用所述第二密钥对应的私钥加密后的随机数NA，sesS，A，B和未加密的A， B, sess 一起发送给第一设备；</p>
+    <p>[0205]	所述第一设备产生一个随机数NB，利用所述第一密钥对应的私钥加密随机数NB 和会话标识(sess)，所述第二设备的标识或所述第一明文(A)，所述第一设备的标识或所 述第二明文(B)，将利用所述第一密钥对应的私钥加密后的随机数NB和A，B，sess和未加 密的A，B，sess以及利用所述第二密钥对应的私钥加密后的随机数NA，sess,A, B发送给所 述第三设备；</p>
+    <p>[0206]	所述第三设备接收到利用所述第一密钥对应的私钥加密后的随机数NB和A，B， sess和未加密的A，B，sess以及利用所述第二密钥对应的私钥加密后的随机数NA，sess, A，B，利用所述第一密钥解密所述随机数NB，利用第二密钥解密所述随机数NA，根据所述随 机数NA和所述随机数NB，产生第三密钥，利用所述第二密钥加密所述第三密钥和NA，利用 所述第一密钥加密所述第三密钥和NB，将加密后所述第三密钥和所述NB，加密后的所述第 三密钥和所述NA发送给所述第一设备；</p>
+    <p>[0207]	所述第一设备利用所述第一密钥对应的私钥解密获得所述第三密钥，并将第三设 备利用第二密钥加密后的第三密钥和NA发送给所述第二设备；</p>
+    <p>[0208]	所述第二设备利用所述第二密钥对应的私钥解密获得所述第三密钥。</p>
+    <p>[0209]或者，</p>
+    <p>[0210]	所述第二设备产生一个随机数ga，所述ga是所述第二设备产生的第二公钥ga，ga 是根据私钥a而产生，所述第二设备保留所述私钥a，所述私钥a是所述第二设备产生的随 机数，所述第二设备利用所述第二密钥对应的私钥加密所述随机数ga和sess，A, B。其中所述会话标识(sess)，所述第二设备的标识或第一明文(A)，所述第一设备的标识或第二 明文(B)。将利用所述第二密钥对应的私钥加密后的所述随机数ga和SeSS，A，B和未加密 的所述A，sess, NA发送给所述第一设备；</p>
+    <p>[0211 ] 所述第一设备产生一个随机数gb，所述gb是所述第一设备产生的第一公钥gb，所 述gb是根据私钥b而产生，所述第一设备保留所述私钥b，所述私钥b是所述第一设备产生 的随机数，利用所述第一密钥对应的私钥加密所述随机数gb和sess，A, B和接收到所述第 二设备的加密报文(利用所述第二密钥对应的私钥后的所述随机数ga和sesS，A，B)。将所 述利用所述第一密钥对应的私钥加密后的所述随机数ga和SeSS，A，B和接收的所述第二设 备的加密报文和未加密的所述A，B，sess发送给所述第三设备；</p>
+    <p>[0212]	所述第三设备接收到加密后的所述随机数ga以及加密后的所述随机数gb之后， 利用所述第一密钥解密所述随机数gb，利用所述第二密钥解密所述随机数ga，利用所述第 二密钥加密所述随机数ga，gb, sess, A，B得到第一加密值，然后利用第一密钥加密第一加 密值和随机数ga, gb, sess, A, B并将所述加密后的第一加密值和随机ga, gb, sess, A, B发 送给所述第一设备；</p>
+    <p>[0213]	所述第一设备利用所述第一密钥对应的私钥解密随机数ga和随机数gb，并将所 述第一加密值发送给第二设备；</p>
+    <p>[0214]	所述第二设备利用所述第二密钥对应的私钥解密随机数ga和随机数gb。之后，所 述第一设备利用解密后的所述随机数ga和随机数gb计算得到第三密钥，所述第二设备利 用解密后的所述随机数ga和随机数gb计算得到所述第三密钥。</p>
+    <p>[0215]	本发明实施例将所述共享的密钥(共享的第一或第二密钥)设置为公私钥体系中 的公钥，共享的第一密钥是第一设备的公钥，共享的第二密钥是第二设备的公钥。采用第一 密钥加密后的信息需要对应的私钥来解密，采用第一密钥对应的私钥加密后的信息需要使 用第一公钥解密，采用第二密钥加密后的信息需要对应的私钥来解密，采用第二密钥对应 的私钥加密后的信息需要使用第二公钥解密。在第三设备和第一设备，第二设备通信的时 候，由于第三设备能够采集到正确的第一密钥和第二密钥，并且第一密钥对应的私钥被第 一设备保存不外发，第二密钥所对应的私钥被第二设备保存不外发，攻击者只能获得第一 密钥或第二密钥的公钥，但是不能获得第一密钥或第二密钥所对应的私钥，故不能解密用 第一密钥或第二密钥的公钥加密的信息，实施不了偷听和中间人攻击，固不能获得第三设 备和第一设备、第二设备的隐私信息，保护了用户的隐私，同时克服了使用公私钥算法存在 的中间人攻击，进而提高了安全性。</p>
+    <p>[0216]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0217]	图3为本发明另一实施例提供的无线设备的配置方法的流程示意图；如图3所示， 包括:</p>
+    <p>[0218]	301、第一设备接收第三设备发送的第一触发消息，所述第一触发消息中包括所述 第三设备的信息；</p>
+    <p>[0219]	在本发明的一个可选实施方式中，步骤301之前，包括:</p>
+    <p>[0220]	所述第一设备向所述第三设备发送所述第一设备的二维码，与所述第三设备共享 第一密钥；以使所述第三设备获取所述二维码对应的第一设备的信息；或者</p>
+    <p>[0221]	所述第一设备通过近场通讯NFC将所述第一设备的信息发送给所述第三设备，与 所述第三设备共享第一密钥；或者</p>
+    <p>[0222]	所述第三设备通过近距离WiFi通信将所述第一设备的信息发送给所述第三设 备，与所述第三设备共享第一密钥。</p>
+    <p>[0223]	其中，上述第一设备的信息中包括但不限于第一设备的标识、第一设备的工作信 道，第一设备支持的认证配置方法等信息。第三设备的信息中包括但不限于第一设备的标 识、第一设备的工作信道。</p>
+    <p>[0224]	需要说明的是，为了在第一设备和第三设备之间传输消息，需要第一设备的工作 信道与第三设备的工作信道是相同的，当第一设备接收第一触发消息之后，根据第一触发 消息中包括的第三设备的信息，将第一设备的工作信道调整为第三设备的工作信道；假设 第一设备为AP时，由于AP的工作信道是固定的，第一设备可以通过第一设备的信息将第一 设备的工作信道信息发送给第三设备，以使第三设备将第三设备的工作信道调整为第一设 备的工作信道。</p>
+    <p>[0225]	在本发明的一个可选实施方式中，假设第一设备与第三设备共享第一密钥之后， 包括:</p>
+    <p>[0226]	第一设备可以利用第一密钥，与第三设备共享第三密钥，例如，第三设备利用第一 密钥生成第三密钥，利用第一密钥加密第三密钥并发送给第一设备(如通过第一触发消息 将第三密钥发送给第一设备)；或者第三设备随机产生第三密钥，利用第一密钥加密第三 密钥并发送给第一设备(如通过第一触发消息将第三密钥发送给第一设备)；或者第一设 备利用第一密钥随机产生第三密钥，利用第一密钥加密第三密钥并发送给第三设备，或者 第一设备与第三设备协商产生第三密钥。</p>
+    <p>[0227]	之后，第三设备可以利用第二密钥加密第三密钥，并将加密后的第三密钥(例如通 过第二触发消息)发送给第二设备，使得第二设备利用所述第三密钥，在所述第一设备和所 述第二设备之间建立安全连接。</p>
+    <p>[0228]	302、第一设备根据所述第三设备的信息，基于所述第三设备的认证，与第二设备 协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连 接。</p>
+    <p>[0229]	在本发明的一个可选实施方式中，当第二设备接收到第一设备的信息和第三设备的信息之后，可以向第一设备发送一个指示消息，以使第一设备发起基于所述第三设备 的认证流程，与第二设备协商生成第三密钥，具体实现时，可以参考图1所示实施例中的相 关描述，不再赘述。</p>
+    <p>[0230]	为了后续第一设备、第二设备和第三设备之间传输消息，需要将第一设备、第二设 备和第三设备的工作信道调整为相同的工作信道；即第二设备接收到第一设备的信息和第 三设备的信息之后，可以将第二设备的工作信道调整为第一设备的工作信道或者第三设备 的工作信道，需要说明的是，若第二设备为AP时，由于AP的工作信道是固定的，第二设备需 要将第二设备的工作信道信息通过第二设备的信息发送给第三设备和第一设备，以使第一 设备和第三设备根据第二设备的工作信道信息，将各自的工作信道调整为AP的工作信道。 其中第二设备的信息可以通过上述第三设备与第二设备进行WPS认证配置过程(即通过二 维码或NFC方法或近距离WiFi通信)中发送给第三设备，第三设备可以将获取的第二设备 的信息发送给第一设备。</p>
+    <p>[0231]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设 备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0232]	图4为本发明另一实施例提供的无线设备的配置方法的信令图；如图4所示，包 括:</p>
+    <p>[0233]	401、第三设备获取第一设备的信息，与所述第一设备共享第一密钥。</p>
+    <p>[0234]	具体实现时，例如，若所述第一设备具有二维码条码时，所述第三设备通过扫描所 述第一设备的二维码获取所述二维码对应的第一设备的信息，与所述第一设备协商生成所 述第一密钥；或者</p>
+    <p>[0235]	若所述第一设备支持NFC功能时，所述第三设备通过近场通讯NFC获取所述第一 设备的信息，与所述第一设备协商生成所述第一密钥；或者</p>
+    <p>[0236]	若所述第一设备支持近距离WiFi通信功能时，所述第三设备通过近距离WiFi通 信获取所述第一设备的信息，与所述第一设备协商生成所述第一密钥。</p>
+    <p>[0237]	其中，第三设备获取的第一设备的信息中包括但不限于第一设备的标识、第一设 备的工作信道，第一设备支持的认证配置方法等信息。</p>
+    <p>[0238]	举例来说，第三设备获取到第一设备的信息之后，可以根据第一设备的信息中包 括的第一设备的工作信息，为了后续第一设备与第三设备之间传输消息，第三设备可以将第三设备的工作信道调整为第一设备的工作信道。假设第一设备为AP时，由于AP的工作 信道是固定的，则第三设备只能将第三设备的工作信道调整为第一设备的工作信道。</p>
+    <p>[0239]	402、第三设备利用第一密钥，与第一设备共享第三密钥。</p>
+    <p>[0240]	具体实现可以参考图1或图2或图3所示实施例中的相关描述，不再赘述。</p>
+    <p>[0241]	403、第三设备向第一设备发送第一触发消息。</p>
+    <p>[0242]	其中，第一触发消息中包括第三设备的信息，进一步地还可以包括第三密钥，其 中，为了提高安全性，第三密钥可以利用第一密钥进行加密。</p>
+    <p>[0243]	其中，第三设备的信息包括但不限于第三设备的标识，第三设备的工作信道等信</p>
+    <p>肩、O</p>
+    <p>[0244]	举例来说，第一设备接收到第三设备的信息之后，可以根据第三设备的信息中包 括的第三设备的工作信息，为了后续第一设备与第三设备之间传输消息，第一设备可以将 第一设备的工作信道调整为第三设备的工作信道。假设第一设备为AP时，由于AP的工作 信道是固定的，则第一设备不需要将第一设备的工作信道调整为第三设备的工作信道，而 是由第三设备将第三设备的工作信道调整为第一设备的工作信道。</p>
+    <p>[0245]	404、第三设备获取第二设备的信息，与所述第二设备共享第二密钥。</p>
+    <p>[0246]	具体实现时，例如，若所述第二设备具有二维码条码时，所述第三设备通过扫描所 述第二设备的二维码获取所述二维码对应的第二设备的信息，与所述第二设备协商生成所 述第二密钥；或者</p>
+    <p>[0247]	若所述第二设备支持NFC功能时，所述第三设备通过近场通讯NFC获取所述第二 设备的信息，与所述第二设备协商生成所述第二密钥；或者</p>
+    <p>[0248]	若所述第二设备支持近距离WiFi通信功能时，所述第三设备通过近距离WiFi通 信获取所述第二设备的信息，与所述第二设备协商生成所述第二密钥。</p>
+    <p>[0249]	其中，第三设备获取的第二设备的信息中包括但不限于第二设备的标识、第二设 备的工作信道，第二设备支持的认证配置方法等信息。</p>
+    <p>[0250]	举例来说，第三设备获取到第二设备的信息之后，可以根据第二设备的信息中包 括的第二设备的工作信息，为了后续第二设备与第三设备之间传输消息，第三设备可以将 第三设备的工作信道调整为第二设备的工作信道。</p>
+    <p>[0251]	假设第二设备为AP时，由于AP的工作信道是固定的，则第三设备只能将第三设备 的工作信道调整为第二设备的工作信道。</p>
+    <p>[0252]	其中，步骤401和步骤404可以没有时间先后顺序之分。</p>
+    <p>[0253]	405、第三设备向第二设备发送第二触发消息，第二触发消息中包括第一设备的信 息、第三设备的信息和第三密钥。</p>
+    <p>[0254]	其中，为了提高安全性，第三密钥可以利用第二密钥进行加密。</p>
+    <p>[0255]	举例来说，为了后续第一设备、第二设备和第三设备之间传输消息，需要将第一设 备、第二设备和第三设备的工作信道调整为相同的工作信道；即第二设备接收到第一设备 的信息和第三设备的信息之后，可以将第二设备的工作信道调整为第一设备的工作信道或 者第三设备的工作信道，需要说明的是，若第二设备为AP时，由于AP的工作信道是固定的， 第二设备需要将第二设备的工作信道信息通过第二设备的信息发送给第三设备和第一设 备，以使第一设备和第三设备根据第二设备的工作信道信息，将各自的工作信道调整为AP的工作信道。其中第二设备的信息可以通过上述第三设备与第二设备进行WPS认证配置过 程(即通过二维码或NFC方法或近距离WiFi通信)中发送给第三设备，第三设备可以将获取 的第二设备的信息发送给第一设备。</p>
+    <p>[0256]	406、第二设备根据第一设备的信息和第三设备的信息，利用第三密钥与第一设备 建立安全连接。</p>
+    <p>[0257]	其中，安全连接的建立可以参考现有的WPS认证配置或四次握手流程，具体不再 赘述。</p>
+    <p>[0258]	本发明实施例通过可信的第三设与第一设备共享第一密钥之后，利用第一密钥与 第一设备共享第三密钥，并将第三密钥发送给第二设备，使得第二设备直接利用第三密钥 在第一设备和第二设备之间建立安全连接；从而可以实现当待建立WiFiP2P通信的两个无 线设备都不具有输入设备(例如键盘)和显示设备(例如显示屏)，且支持的认证配置方法不 相同时，两无线设备可以基于第三设备的认证，在两无线设备之间建立WiFiP2P通信的安 全连接；还可以实现当待加入AP设置的无线局域网中的无线设备不具有输入设备和显示 设备，且只支持二维码方法时，该无线设备可以基于第三设备的认证，加入到AP设置的无 线局域网中。因此，可以克服现有的WPS认证配置对无线设备的性能要求较高的问题，扩充 了现有的WPS认证配置的协议内容。</p>
+    <p>[0259]	图5为本发明另一实施例提供的无线设备的配置方法的信令图；如图5所示，包 括:</p>
+    <p>[0260]	501、第三设备获取第一设备的信息，与所述第一设备共享第一密钥。</p>
+    <p>[0261]	具体实现时可以参考图4所示实施例中的步骤401的相关描述。</p>
+    <p>[0262]	502、第三设备向第一设备发送第一触发消息。</p>
+    <p>[0263]	其中，第一触发消息中包括第三设备的信息。</p>
+    <p>[0264]	其中，第三设备的信息可以包括但不限于第三设备的标识，第三设备的工作信道</p>
+    <p>等信息。</p>
+    <p>[0265]	举例来说，第一设备接收到第三设备的信息之后，可以根据第三设备的信息中包 括的第三设备的工作信息，为了后续第一设备与第三设备之间传输消息，第一设备可以将 第一设备的工作信道调整为第三设备的工作信道。假设第一设备为AP时，由于AP的工作 信道是固定的，则第一设备不需要将第一设备的工作信道调整为第三设备的工作信道，而 是由第三设备将第三设备的工作信道调整为第一设备的工作信道。</p>
+    <p>[0266]	503、第三设备获取第二设备的信息，与所述第二设备共享第二密钥。</p>
+    <p>[0267]	具体实现时可以参考图4所示实施例中的步骤404的相关描述。</p>
+    <p>[0268]	其中，步骤501和步骤503可以没有时间先后顺序之分。</p>
+    <p>[0269]	504、第三设备向第二设备发送第二触发消息。</p>
+    <p>[0270]	其中，第二触发消息中包括第一设备的信息、第三设备的信息。</p>
+    <p>[0271]	举例来说，为了后续第一设备、第二设备和第三设备之间传输消息，需要将第一设 备、第二设备和第三设备的工作信道调整为相同的工作信道；即第二设备接收到第一设备 的信息和第三设备的信息之后，可以将第二设备的工作信道调整为第一设备的工作信道或 者第三设备的工作信道，需要说明的是，若第二设备为AP时，由于AP的工作信道是固定的， 第二设备需要将第二设备的工作信道信息通过第二设备的信息发送给第三设备和第一设备，以使第一设备和第三设备根据第二设备的工作信道信息，将各自的工作信道调整为AP 的工作信道。其中第二设备的信息可以通过上述第三设备与第二设备进行WPS认证配置过 程(即通过二维码或NFC方法或近距离WiFi通信)中发送给第三设备，第三设备可以将获取 的第二设备的信息发送给第一设备。</p>
+    <p>[0272]	505、第二设备基于第三设备的认证，与第一设备协商生成第三密钥。</p>
+    <p>[0273]	具体实现时可以参考图1所示实施例中的相关描述。</p>
+    <p>[0274]	可选地，当第二设备获取到第三设备之后和第一设备的信息之后，第二设备可以 向第一设备发送一个指示消息，以使第一设备发起基于第三设备的认证的流程，与第二设 备协商生成第三密钥。</p>
+    <p>[0275]	其中，基于第三设备的认证例如可以采用Otway-Rees认证算法，可以参考图1或 图2所示实施例中的相关描述，具体算法不再赘述。</p>
+    <p>[0276]	506、第二设备利用第三密钥与第一设备建立安全连接。</p>
+    <p>[0277]	其中，安全连接的建立可以参考现有的WPS认证配置或四次握手流程，具体不再 赘述。</p>
+    <p>[0278]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；从而可以实现当待建立 WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘)和显示设备(例如显示屏)，且 支持的认证配置方法不相同时，两无线设备可以基于第三设备的认证，在两无线设备之间 建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置的无线局域网中的无线设备不 具有输入设备和显示设备，且只支持二维码方法时，该无线设备可以基于第三设备的认证， 加入到AP设置的无线局域网中。因此，可以克服现有的WPS认证配置对无线设备的性能要 求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0279]	图6为本发明另一实施例提供的无线设备的配置装置的结构示意图；位于第三设 备侧，如图6所示,包括:</p>
+    <p>[0280]	获取模块61,用于获取第一设备的信息；</p>
+    <p>[0281]	共享模块62，用于与所述第一设备共享第一密钥；</p>
+    <p>[0282]	发送模块63，用于向所述第一设备发送第一触发消息，所述第一触发消息中包括 所述第三设备的信息；</p>
+    <p>[0283]	所述获取模块61，还用于获取第二设备的信息；</p>
+    <p>[0284]	所述共享模块62，还用于与所述第二设备共享第二密钥；</p>
+    <p>[0285]	所述发送模块63，还用于向所述第二设备发送第二触发消息，所述第二触发消息 中包括所述第三设备的信息和所述第一设备的信息；以使所述第二设备根据所述第三设备 的信息和所述第一设备的信息，基于所述第三设备的认证，与所述第一设备协商生成第三 密钥，利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0286]	举例来说，所述获取模块61具体用于:</p>
+    <p>[0287]	通过扫描所述第一设备的二维码获取所述二维码对应的所述第一设备的信息；或者</p>
+    <p>[0288]	通过近场通讯NFC获取所述第一设备的信息；或者</p>
+    <p>[0289]	通过近距离WiFi通信获取所述第一设备的信息。</p>
+    <p>[0290]	举例来说，所述共享模块62具体用于:</p>
+    <p>[0291]	与所述第一设备协商生成所述第一密钥；或者</p>
+    <p>[0292]	通过近场通讯NFC或近距离WiFi通信向所述第一设备发送所述第一密钥或接收 第一设备发送的第一密钥；或者</p>
+    <p>[0293]	通过扫描所述第一设备的二维码获取所述第一设备设置的所述第一密钥。</p>
+    <p>[0294]	举例来说，所述获取模块61具体还用于:通过扫描所述第二设备的二维码获取所 述二维码对应的所述第二设备的信息；或者</p>
+    <p>[0295]	通过近场通讯NFC获取所述第二设备的信息；或者</p>
+    <p>[0296]	通过近距离WiFi通信获取所述第二设备的信息。</p>
+    <p>[0297]	举例来说，所述共享模块62具体还用于:与所述第二设备协商生成所述第二密 钥；或者</p>
+    <p>[0298]	通过近场通讯NFC或近距离WiFi通信，向所述第二设备发送所述第二密钥或接收 第二设备发送的第二密钥；或者</p>
+    <p>[0299]	扫描所述第二设备的二维码获取所述第二设备设置的所述第二密钥。</p>
+    <p>[0300]	举例来说，所述共享模块62，还用于利用所述第一密钥，与所述第一设备共享第三 密钥；</p>
+    <p>[0301]	则所述第一触发消息中还包括所述第三密钥；所述第二触发消息中还包括所述第 三密钥；</p>
+    <p>[0302]	所述第一触发消息中包括的所述第三密钥可以利用所述第一密钥进行加密；</p>
+    <p>[0303]	所述第二触发消息中包括的所述第三密钥可以利用所述第二密钥进行加密；</p>
+    <p>[0304]	所述第三密钥用于所述第二设备利用所述第三密钥，在所述第一设备和所述第二 设备之间建立安全连接。</p>
+    <p>[0305]	举例来说，所述第三设备为可信的第三方无线设备，具有输入设备和显示设备，且 支持二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距 离WiFi通信功能中的至少一项。</p>
+    <p>[0306]	举例来说，所述第一设备的信息中包括所述第一设备的工作信道，所述第二设备 的信息中包括所述第二设备的工作信道；</p>
+    <p>[0307]	所述装置还包括:</p>
+    <p>[0308]	调整模块64，用于根据所述获取模块61获取的第一设备的工作信道，可以将所述 第三设备的工作信道调整为所述第一设备的工作信道；或者</p>
+    <p>[0309]	根据所述获取模块61获取第二设备的工作信道，可以将所述第三设备的工作信 道调整为所述第二设备的工作信道。</p>
+    <p>[0310]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设 备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0311]	图7为本发明另一实施例提供的无线设备的配置装置的结构示意图；位于第二设 备侧，如图7所示，包括:</p>
+    <p>[0312]	接收模块71，用于接收所述第三设备发送的第二触发消息，所述第二触发消息中 包括所述第三设备的信息和第一设备的信息；</p>
+    <p>[0313]	连接模块72，用于根据所述第三设备的信息和第一设备的信息，基于所述第三设 备的认证，与所述第一设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所 述第二设备之间建立安全连接。</p>
+    <p>[0314]	举例来说，所述第一设备的信息为所述第三设备通过扫描所述第一设备的二维码 获取的所述二维码对应的第一设备的信息；或者为所述第三设备通过近场通讯NFC获取的 所述第一设备的信息；或者为所述第三设备通过近距离WiFi通信获取的所述第一设备的信息。</p>
+    <p>[0315]	举例来说，所述装置还包括:</p>
+    <p>[0316]	共享模块73，用于将所述第二设备的二维码发送给所述第三设备，与所述第三设 备共享第二密钥；以使所述第三设备获取与所述二维码对应的第二设备的信息；或者</p>
+    <p>[0317]	通过近场通讯NFC将所述第二设备的信息发送给所述第三设备，与所述第三设备 共享第二密钥；或者</p>
+    <p>[0318]	通过近距离WiFi通信将所述第二设备的信息发送给所述第三设备，与所述第三</p>
+    <p>设备共享第二密钥。</p>
+    <p>[0319]	举例来说，若所述第二触发消息还包括第三密钥；所述第三密钥为所述第三设备 获取所述第一设备的信息，根据所述第一设备的信息与所述第一设备共享第一密钥之后， 利用所述第一密钥，与所述第一设备共享的第三密钥；</p>
+    <p>[0320]	则所述连接模块72，用于直接利用所述第二触发消息中包括的第三密钥，在所述 第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0321]	举例来说，所述第三设备为可信的第三方无线设备，具有输入设备和显示设备，且 支持二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距 离WiFi通信功能中的至少一项。</p>
+    <p>[0322]	举例来说，所述第一设备的信息中包括所述第一设备的工作信道，所述第三设备 的信息中包括所述第三设备的工作信道；</p>
+    <p>[0323]	所述装置还包括:</p>
+    <p>[0324]	调整模块74，用于根据所述接收模块71接收的第一设备的工作信道，可以将所述第二设备的工作信道调整为所述第一设备的工作信道；或者</p>
+    <p>[0325]	根据所述接收模块71接收的第三设备的工作信道，可以将所述第二设备的工作 信道调整为所述第三设备的工作信道。</p>
+    <p>[0326]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设 备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0327]	图8为本发明另一实施例提供的无线设备的配置装置的结构示意图；位于第一设 备侧，如图8所示,包括:</p>
+    <p>[0328]	接收模块81，用于接收第三设备发送的第一触发消息，所述第一触发消息中包括 所述第三设备的信息；</p>
+    <p>[0329]	连接模块82，用于根据所述第三设备的信息，基于所述第三设备的认证，与第二设 备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全 连接。</p>
+    <p>[0330]	举例来说，所述装置还包括:</p>
+    <p>[0331 ] 共享模块83具体用于:</p>
+    <p>[0332]向所述第三设备发送所述第一设备的二维码，与所述第三设备共享所述第一密 钥；以使所述第三设备获取所述二维码对应的第一设备的信息，将所述第一设备的信息发 送给第二设备；或者</p>
+    <p>[0333]	通过近场通讯NFC将所述第一设备的信息发送给所述第三设备，与所述第三设备 共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给第二设备；或者</p>
+    <p>[0334]	通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三 设备共享所述第一密钥；以使所述第三设备将所述第一设备的信息发送给第二设备。</p>
+    <p>[0335]	举例来说，所述共享模块83，还用于利用所述第一密钥，与所述第三设备共享第三 密钥，以使所述第三设备将所述第三密钥发送给所述第二设备，以使所述第二设备利用所 述第三密钥与所述第一设备建立安全连接。</p>
+    <p>[0336]	举例来说，所述第三设备为可信的第三方无线设备，具有输入设备和显示设备，且 支持二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距 离WiFi通信功能中的至少一项。</p>
+    <p>[0337]	举例来说，所述第三设备的信息中包括所述第三设备的工作信道；[0338]	所述装置还包括:</p>
+    <p>[0339]	调整模块84，用于根据所述接收模块81接收第三设备的工作信道，可以将所述第 一设备的工作信道调整为所述第三设备的工作信道；或者</p>
+    <p>[0340]	通过接收所述第二设备发送的所述第二设备的信息，所述第二设备的信息中包括 所述第二设备的工作信道，将所述第一设备的工作信道调整为所述第二设备的工作信道。</p>
+    <p>[0341]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设 备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0342]	图9为本发明另一实施例提供的无线设备的配置装置的结构示意图；位于第三设 备侧，如图9所示，包括:处理器、存储器和通信总线，存储器中保存有实现无线设备的配置 方法的指令，所述处理器通过通信总线与所述存储器连接，进一步地，还包括通信接口，通 过通信接口与其他网元设备(例如第一设备和第二设备)通信连接；</p>
+    <p>[0343]	当所述处理器调取所述存储器中的指令时，可以执行如下步骤:</p>
+    <p>[0344]	获取第一设备的信息，与所述第一设备共享第一密钥，向所述第一设备发送第一 触发消息，所述第一触发消息中包括所述第三设备的信息；</p>
+    <p>[0345]	获取第二设备的信息，与所述第二设备共享第二密钥，向所述第二设备发送第二 触发消息，所述第二触发消息中包括所述第三设备的信息和所述第一设备的信息；以使所 述第二设备根据所述第三设备的信息和所述第一设备的信息，基于所述第三设备的认证， 与所述第一设备协商生成第三密钥，利用所述第三密钥在所述第一设备和所述第二设备之 间建立安全连接。</p>
+    <p>[0346]	举例来说，所述获取第一设备的信息，包括:</p>
+    <p>[0347]	通过扫描所述第一设备的二维码获取所述二维码对应的所述第一设备的信息；或 者</p>
+    <p>[0348]	通过近场通讯NFC获取所述第一设备的信息；或者</p>
+    <p>[0349]	通过近距离WiFi通信获取所述第一设备的信息。</p>
+    <p>[0350]	举例来说，所述与所述第一设备共享第一密钥，包括:</p>
+    <p>[0351]	与所述第一设备协商生成所述第一密钥；或者</p>
+    <p>[0352]	通过近场通讯NFC或近距离WiFi通信向所述第一设备发送所述第一密钥或接收 第一设备发送的第一密钥；或者[0353]	通过扫描所述第一设备的二维码获取所述第一设备设置的所述第一密钥。</p>
+    <p>[0354]	举例来说，获取第二设备的信息，包括:</p>
+    <p>[0355]	通过扫描所述第二设备的二维码获取所述二维码对应的所述第二设备的信息；或 者</p>
+    <p>[0356]	通过近场通讯NFC获取所述第二设备的信息；或者</p>
+    <p>[0357]	通过近距离WiFi通信获取所述第二设备的信息。</p>
+    <p>[0358]	举例来说，所述与所述第二设备共享第二密钥，包括:</p>
+    <p>[0359]	与所述第二设备协商生成所述第二密钥；或者</p>
+    <p>[0360]	通过近场通讯NFC或近距离WiFi通信向所述第二设备发送所述第二密钥或接收 第二设备发送的第二密钥；或者</p>
+    <p>[0361]	通过扫描所述第二设备的二维码获取所述第二设备设置的所述第二密钥。</p>
+    <p>[0362]	举例来说，获取第一设备的信息，根据所述第一设备的信息与所述第一设备共享 第一密钥之后，包括:</p>
+    <p>[0363]	利用所述第一密钥，与所述第一设备共享第三密钥；</p>
+    <p>[0364]	则所述第一触发消息中还包括所述第三密钥；所述第二触发消息中还包括所述第 三密钥；</p>
+    <p>[0365]	所述第一触发消息中包括的所述第三密钥可以利用所述第一密钥进行加密；</p>
+    <p>[0366]	所述第二触发消息中包括的所述第三密钥可以利用所述第二密钥进行加密；</p>
+    <p>[0367]	所述第三密钥用于所述第二设备利用所述第三密钥，在所述第一设备和所述第二 设备之间建立安全连接。</p>
+    <p>[0368]	举例来说，所述第三设备为可信的第三方无线设备，具有输入设备和显示设备，且 支持二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距 离WiFi通信功能中的至少一项。</p>
+    <p>[0369]	举例来说，所述第一设备的信息中包括所述第一设备的工作信道，所述第二设备 的信息中包括所述第二设备的工作信道；</p>
+    <p>[0370]	获取所述第一设备的信息之后，或者获取所述第二设备的信息之后，包括:</p>
+    <p>[0371]	根据所述第一设备的工作信道，可以将所述第三设备的工作信道调整为所述第一 设备的工作信道；或者</p>
+    <p>[0372]	根据所述第二设备的工作信道，可以将所述第三设备的工作信道调整为所述第二 设备的工作信道。</p>
+    <p>[0373]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0374]	图10为本发明另一实施例提供的无线设备的配置装置的结构示意图；位于第二 设备侧，如图10所示，包括:处理器、存储器和通信总线，存储器中保存有实现无线设备的 配置方法的指令，所述处理器通过通信总线与所述存储器连接，进一步地，还包括通信接 口，通过通信接口与其他网元设备(例如第一设备和第三设备)通信连接；</p>
+    <p>[0375]	当所述处理器调取所述存储器中的指令时，可以执行如下步骤:</p>
+    <p>[0376]	接收所述第三设备发送的第二触发消息，所述第二触发消息中包括所述第三设备 的信息和第一设备的信息；</p>
+    <p>[0377]	根据所述第三设备的信息和第一设备的信息，基于所述第三设备的认证，与所述 第一设备协商生成第三密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建 立安全连接。</p>
+    <p>[0378]	举例来说，所述第一设备的信息为所述第三设备通过扫描所述第一设备的二维码 获取的所述二维码对应的第一设备的信息；或者为所述第三设备通过近场通讯NFC获取的 所述第一设备的信息；或者为所述第三设备通过近距离WiFi通信获取的所述第一设备的信息。</p>
+    <p>[0379]	举例来说，接收第三设备发送的第二触发消息之前，包括:</p>
+    <p>[0380]	将所述第二设备的二维码发送给所述第三设备，与所述第三设备共享第二密钥； 以使所述第三设备获取与所述二维码对应的第二设备的信息，或者</p>
+    <p>[0381]	通过近场通讯NFC将所述第二设备的信息发送给所述第三设备，与所述第三设备 共享第二密钥；或者</p>
+    <p>[0382]	通过近距离WiFi通信将所述第二设备的信息发送给所述第三设备，与所述第三</p>
+    <p>设备共享第二密钥。</p>
+    <p>[0383]	举例来说，若所述第二触发消息还包括第三密钥；所述第三密钥为所述第三设备 获取所述第一设备的信息，根据所述第一设备的信息与所述第一设备共享第一密钥之后， 利用所述第一密钥，与所述第一设备共享的第三密钥；</p>
+    <p>[0384]	则接收第三设备发送的第二触发消息之后，包括:</p>
+    <p>[0385]	利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0386]	举例来说，所述第三设备为可信的第三方无线设备，具有输入设备和显示设备，且 支持二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距 离WiFi通信功能中的至少一项。</p>
+    <p>[0387]	举例来说，所述第一设备的信息中包括所述第一设备的工作信道，所述第三设备 的信息中包括所述第三设备的工作信道；</p>
+    <p>[0388]	接收第三设备发送的第二触发消息之后，包括:</p>
+    <p>[0389]	根据所述第一设备的工作信道，可以将所述第二设备的工作信道调整为所述第一 设备的工作信道；或者</p>
+    <p>[0390]	根据所述第三设备的工作信道，可以将所述第二设备的工作信道调整为所述第三设备的工作信道。</p>
+    <p>[0391]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设 备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0392]	图11为本发明另一实施例提供的无线设备的配置装置的结构示意图；位于第一 设备侧，如图11所示，包括:处理器、存储器和通信总线，存储器中保存有实现无线设备的 配置方法的指令，所述处理器通过通信总线与所述存储器连接，进一步地，还包括通信接 口，通过通信接口与其他网元设备(例如第三设备和第二设备)通信连接；</p>
+    <p>[0393]	当所述处理器调取所述存储器中的指令时，可以执行如下步骤:</p>
+    <p>[0394]	接收第三设备发送的第一触发消息，所述第一触发消息中包括所述第三设备的信 息；</p>
+    <p>[0395]	根据所述第三设备的信息，基于所述第三设备的认证，与第二设备协商生成第三 密钥，并利用所述第三密钥在所述第一设备和所述第二设备之间建立安全连接。</p>
+    <p>[0396]	举例来说，接收第三设备发送的第一触发消息之前，包括:</p>
+    <p>[0397]	向所述第三设备发送所述第一设备的二维码，与所述第三设备共享第一密钥；以 使所述第三设备获取所述二维码对应的第一设备的信息，并将所述第一设备的信息发送给 所述第二设备，或者</p>
+    <p>[0398]	通过近场通讯NFC将所述第一设备的信息发送给所述第三设备，与所述第三设备 共享第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备；或者</p>
+    <p>[0399]	通过近距离WiFi通信将所述第一设备的信息发送给所述第三设备，与所述第三 设备共享第一密钥；以使所述第三设备将所述第一设备的信息发送给所述第二设备。</p>
+    <p>[0400]	举例来说，向所述第三设备发送所述第一设备的信息，与所述第三设备共享第一 密钥之后，包括:</p>
+    <p>[0401]	利用所述第一密钥，与所述第三设备共享第三密钥，以使所述第三设备将所述第 三密钥发送给所述第二设备，以使所述第二设备利用所述第三密钥与所述第一设备建立安 全连接。</p>
+    <p>[0402]	举例来说，所述第三设备为可信的第三方无线设备，具有输入设备和显示设备，且 支持二维码识别功能、个人识别码PIN功能、按钮控制PBC功能、近场通讯NFC功能或近距 离WiFi通信功能中的至少一项。[0403]	举例来说，所述第三设备的信息中包括所述第三设备的工作信道；</p>
+    <p>[0404]	接收第三设备发送的第一触发消息之后，包括:</p>
+    <p>[0405]	根据所述第三设备的工作信道，可以将所述第一设备的工作信道调整为所述第三 设备的工作信道；或者</p>
+    <p>[0406]	接收第二设备发送的所述第二设备的信息，所述第二设备的信息中包括所述第二 设备的工作信道，将所述第一设备的工作信道调整为所述第二设备的工作信道。</p>
+    <p>[0407]	本发明实施例通过可信的第三方无线设备(第三设备)分别与第一设备共享第一 密钥，并向第一设备发送包含第三设备的信息的第一触发消息，与第二设备共享第二密钥， 并向第二设备发送包含第三设备的信息和第一设备的信息的第二触发消息，使得第二设备 根据第三设备的信息和第一设备的信息，基于第三设备的认证，与第一设备协商生成第三 密钥，并利用第三密钥在第一设备和第二设备之间建立安全连接；进一步地，通过可信的第 三设与第一设备共享第一密钥之后，利用第一密钥与第一设备共享第三密钥，并将第三密 钥发送给第二设备，使得第二设备直接利用第三密钥在第一设备和第二设备之间建立安全 连接；从而可以实现当待建立WiFiP2P通信的两个无线设备都不具有输入设备(例如键盘) 和显示设备(例如显示屏)，且支持的认证配置方法不相同时，两无线设备可以基于第三设 备的认证，在两无线设备之间建立WiFiP2P通信的安全连接；还可以实现当待加入AP设置 的无线局域网中的无线设备不具有输入设备和显示设备，且只支持二维码方法时，该无线 设备可以基于第三设备的认证，加入到AP设置的无线局域网中。因此，可以克服现有的WPS 认证配置对无线设备的性能要求较高的问题，扩充了现有的WPS认证配置的协议内容。</p>
+    <p>[0408]	图12为本发明另一实施例提供的无线设备的配置系统的结构示意图，如图12所 不，包括:第一设备31、第二设备32和第三设备33 ；</p>
+    <p>[0409]	其中，第一设备31包括如图8或图11所示实施例中所述的无线设备的配置装置； 第二设备32包括如图7或图10所示实施例中所述的无线设备的配置装置；第三设备33包 括如图6或图9所示实施例中所述的无线设备的配置装置。</p>
+    <p>[0410]	所属领域的技术人员可以清楚地了解到，为描述的方便和简洁，上述描述的系统， 装置和单元的具体工作过程，可以参考前述方法实施例中的对应过程，在此不再赘述。</p>
+    <p>[0411]	在本申请所提供的几个实施例中，应该理解到，所揭露的系统，装置和方法，可以 通过其它的方式实现。例如，以上所描述的装置实施例仅仅是示意性的，例如，所述单元的 划分，仅仅为一种逻辑功能划分，实际实现时可以有另外的划分方式，例如多个单元或组件 可以结合或者可以集成到另一个系统，或一些特征可以忽略，或不执行。另一点，所显示或 讨论的相互之间的耦合或直接耦合或通信连接可以是通过一些接口，装置或单元的间接耦 合或通信连接，可以是电性，机械或其它的形式。</p>
+    <p>[0412]	所述作为分离部件说明的单元可以是或者也可以不是物理上分开的，作为单元显 示的部件可以是或者也可以不是物理单元，即可以位于一个地方，或者也可以分布到多个 网络单元上。可以根据实际的需要选择其中的部分或者全部单元来实现本实施例方案的目 的。</p>
+    <p>[0413]	另外，在本发明各个实施例中的各功能单元可以集成在一个处理单元中，也可以 是各个单元单独物理存在，也可以两个或两个以上单元集成在一个单元中。上述集成的单 元既可以采用硬件的形式实现，也可以采用硬件加软件功能单元的形式实现。[0414]	上述以软件功能单元的形式实现的集成的单元，可以存储在一个计算机可读取存 储介质中。上述软件功能单元存储在一个存储介质中，包括若干指令用以使得一台计算机 设备(可以是个人计算机，服务器，或者网络设备等)执行本发明各个实施例所述方法的部 分步骤。而前述的存储介质包括:U盘、移动硬盘、只读存储器(Read-Only Memory, ROM)、随 机存取存储器(Random Access Memory, RAM)、磁碟或者光盘等各种可以存储程序代码的介 质。</p>
+    <p>[0415]	最后应说明的是:以上实施例仅用以说明本发明的技术方案，而非对其限制；尽 管参照前述实施例对本发明进行了详细的说明，本领域的普通技术人员应当理解:其依然 可以对前述各实施例所记载的技术方案进行修改，或者对其中部分技术特征进行等同替 换；而这些修改或者替换，并不使相应技术方案的本质脱离本发明各实施例技术方案的精 神和范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101242323A?cl=zh">CN101242323A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年2月6日</td><td class="patent-data-table-td patent-date-value">2008年8月13日</td><td class="patent-data-table-td ">华为技术有限公司;北京邮电大学</td><td class="patent-data-table-td ">设备间管道的建立方法和家庭网络系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102932793A?cl=zh">CN102932793A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月15日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">北京易和迅科技有限公司</td><td class="patent-data-table-td ">基于二维码的无线网络认证方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20090287922">US20090287922</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年5月31日</td><td class="patent-data-table-td patent-date-value">2009年11月19日</td><td class="patent-data-table-td ">Ian Herwono</td><td class="patent-data-table-td ">Provision of secure communications connection using third party authentication</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014180352A1?cl=zh">WO2014180352A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年5月12日</td><td class="patent-data-table-td patent-date-value">2014年11月13日</td><td class="patent-data-table-td ">Huawei Device Co., Ltd.</td><td class="patent-data-table-td ">无线设备的配置方法及装置、系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015172288A1?cl=zh">WO2015172288A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年5月12日</td><td class="patent-data-table-td patent-date-value">2015年11月19日</td><td class="patent-data-table-td ">Nokia Technologies Oy</td><td class="patent-data-table-td ">Method, network element, user equipment and system for securing device-to-device communication in a wireless network</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0012040000">H04W12/04</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0076020000">H04W76/02</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0012060000">H04W12/06</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W84/12">H04W84/12</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W12/06">H04W12/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W12/04">H04W12/04</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W4/008">H04W4/008</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W88/04">H04W88/04</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W76/02">H04W76/02</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/205">H04L63/205</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=UCjhCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/0853">H04L63/0853</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年11月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年12月4日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/7ffc7530be8ed6ee839e/CN103391541A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%97%A0%E7%BA%BF%E8%AE%BE%E5%A4%87%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85%E7%BD%AE_%E7%B3%BB.pdf?id=UCjhCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3y8dSXUXEkvrkcfRtZFE3Dxkhk2Q"},"sample_url":"https://www.google.com/patents/reader?id=UCjhCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

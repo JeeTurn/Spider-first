@@ -1,0 +1,266 @@
+<!DOCTYPE html><html><head><title>专利 CN101816821A - 基于蚁群模糊控制器的助行功能性电刺激精密控制方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于蚁群模糊控制器的助行功能性电刺激精密控制方法"><meta name="DC.contributor" content="明东" scheme="inventor"><meta name="DC.contributor" content="张广举" scheme="inventor"><meta name="DC.contributor" content="邱爽" scheme="inventor"><meta name="DC.contributor" content="刘秀云" scheme="inventor"><meta name="DC.contributor" content="徐瑞" scheme="inventor"><meta name="DC.contributor" content="万柏坤" scheme="inventor"><meta name="DC.contributor" content="天津大学" scheme="assignee"><meta name="DC.date" content="2010-5-26" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及康复器械领域。为有效地提高FES系统准确性和稳定性，本发明采用的技术方案是：基于蚁群模糊控制器的助行功能性电刺激精密控制方法，包括下列步骤：首先将模糊控制器的量化因子、比例因子以及隶属函数参量的12个决策变量的选择转化为蚁群算法适用的组合优化问题，并对其进行编码以及随机产生n个个体组成的初始城市群；其次建立合理的实际关节角度与肌肉模型输出关节角度的相应关系目标函数以及确定蚁群算法的参数设置；寻优过程；依据偏差对蚁群信息量进行调整，并进入下次寻优过程，反复此过程，最终实现模糊控制器参数的自适应在线整定，并用于FES系统。本发明主要应用于提高FES系统准确性和稳定性。"><meta name="DC.date" content="2010-9-1"><meta name="DC.relation" content="CN:101596338:A" scheme="references"><meta name="DC.relation" content="CN:1598719:A" scheme="references"><meta name="DC.relation" content="CN:201431704" scheme="references"><meta name="DC.relation" content="US:6171239" scheme="references"><meta name="citation_reference" content="《计算机仿真》 20060331 宋申民等 基于蚁群算法的模糊控制规则的过滤简化 157-163 1-5 第23卷, 第3期"><meta name="citation_patent_publication_number" content="CN:101816821:A"><meta name="citation_patent_application_number" content="CN:201010182215"><link rel="canonical" href="https://www.google.com/patents/CN101816821A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101816821A?cl=zh"/><meta name="title" content="专利 CN101816821A - 基于蚁群模糊控制器的助行功能性电刺激精密控制方法"/><meta name="description" content="本发明涉及康复器械领域。为有效地提高FES系统准确性和稳定性，本发明采用的技术方案是：基于蚁群模糊控制器的助行功能性电刺激精密控制方法，包括下列步骤：首先将模糊控制器的量化因子、比例因子以及隶属函数参量的12个决策变量的选择转化为蚁群算法适用的组合优化问题，并对其进行编码以及随机产生n个个体组成的初始城市群；其次建立合理的实际关节角度与肌肉模型输出关节角度的相应关系目标函数以及确定蚁群算法的参数设置；寻优过程；依据偏差对蚁群信息量进行调整，并进入下次寻优过程，反复此过程，最终实现模糊控制器参数的自适应在线整定，并用于FES系统。本发明主要应用于提高FES系统准确性和稳定性。"/><meta property="og:title" content="专利 CN101816821A - 基于蚁群模糊控制器的助行功能性电刺激精密控制方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101816821A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101816821A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=riB6BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101816821A&amp;usg=AFQjCNEg-INeEUE3kfC_K-dbJVcA0b_0FQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/6d1c89ef78e1cfe243b0/CN101816821A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/6d1c89ef78e1cfe243b0/CN101816821A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101816821A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101816821A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101816821A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101816821B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101816821A?cl=zh" style="display:none"><span itemprop="description">本发明涉及康复器械领域。为有效地提高FES系统准确性和稳定性，本发明采用的技术方案是：基于蚁群模糊控制器的助行功能性电刺激精密控制方法，包括下列步骤：首先将模糊控制器的量化因子、比例因子以及隶属函数参量的...</span><span itemprop="url">https://www.google.com/patents/CN101816821A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101816821A - 基于蚁群模糊控制器的助行功能性电刺激精密控制方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101816821A - 基于蚁群模糊控制器的助行功能性电刺激精密控制方法" title="专利 CN101816821A - 基于蚁群模糊控制器的助行功能性电刺激精密控制方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101816821 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010182215</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年9月1日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年5月26日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年5月26日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101816821B?hl=zh-CN&amp;cl=zh">CN101816821B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010182215.1, </span><span class="patent-bibdata-value">CN 101816821 A, </span><span class="patent-bibdata-value">CN 101816821A, </span><span class="patent-bibdata-value">CN 201010182215, </span><span class="patent-bibdata-value">CN-A-101816821, </span><span class="patent-bibdata-value">CN101816821 A, </span><span class="patent-bibdata-value">CN101816821A, </span><span class="patent-bibdata-value">CN201010182215, </span><span class="patent-bibdata-value">CN201010182215.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%98%8E%E4%B8%9C%22">明东</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E5%B9%BF%E4%B8%BE%22">张广举</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%82%B1%E7%88%BD%22">邱爽</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E7%A7%80%E4%BA%91%22">刘秀云</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BE%90%E7%91%9E%22">徐瑞</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%B8%87%E6%9F%8F%E5%9D%A4%22">万柏坤</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A4%A9%E6%B4%A5%E5%A4%A7%E5%AD%A6%22">天津大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101816821A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101816821A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101816821A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=riB6BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010182215&amp;usg=AFQjCNGZKvmnUmGMdMNs3Ta1c0MUAdfSZA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=riB6BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101816821A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHYdZAvL4hOhxIPGBAlkwNXNf8lQg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT97537063" lang="ZH" load-source="patent-office">基于蚁群模糊控制器的助行功能性电刺激精密控制方法</invention-title>
+      </span><br><span class="patent-number">CN 101816821 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109405174" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及康复器械领域。为有效地提高FES系统准确性和稳定性，本发明采用的技术方案是：基于蚁群模糊控制器的助行功能性电刺激精密控制方法，包括下列步骤：首先将模糊控制器的量化因子、比例因子以及隶属函数参量的12个决策变量的选择转化为蚁群算法适用的组合优化问题，并对其进行编码以及随机产生n个个体组成的初始城市群；其次建立合理的实际关节角度与肌肉模型输出关节角度的相应关系目标函数以及确定蚁群算法的参数设置；寻优过程；依据偏差对蚁群信息量进行调整，并进入下次寻优过程，反复此过程，最终实现模糊控制器参数的自适应在线整定，并用于FES系统。本发明主要应用于提高FES系统准确性和稳定性。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(5)</span></span></div><div class="patent-text"><div mxw-id="PCLM51237190" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种基于蚁群模糊控制器的助行功能性电刺激精密控制方法，其特征是，包括下列步骤：首先将模糊控制器的量化因子、比例因子以及隶属函数参量的12个决策变量的选择转化为蚁群算法适用的组合优化问题，并对其进行编码以及随机产生n个个体组成的初始城市群；</div>
+      <div class="claim-text">其次建立合理的实际关节角度与肌肉模型输出关节角度的相应关系目标函数以及确定蚁群算法的参数设置；</div>
+      <div class="claim-text">寻优过程：利用蚂蚁随机搜索，优化模糊控制器的隶属函数以及量化因子和比例因子，并调用已整定的模糊控制器，验证是否达到预设目标，若无反复重复以上操作，直到蚁群算法的参数收敛或者达到预定的指标，并最终输出即得模糊控制器的决策变量和蚁群运行的次数；</div>
+      <div class="claim-text">依据前述最终输出即得的模糊控制器的决策变量，由模糊控制器计算输出及该输出与肌肉模型输出的偏差，依据偏差对蚁群信息量进行调整，并进入下次寻优过程，反复此过程，最终实现模糊控制器参数的自适应在线整定，并用于FES系统。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的一种基于蚁群模糊控制器的助行功能性电刺激精密控制方法，其特征是，所述转化为蚁群算法适用的组合优化问题，是转化为求解最短路径问题，具体方法为，蚁群模糊控制器的量化因子和比例因子是将模糊控制器的基本量化因子和基本比例因子分别乘以由蚁群算法优化的因子kfuzzi(i)(i＝1，2，3)，蚁群模糊控制器隶属函数的调整即是对基本模糊控制器的隶属函数论域的调整，在模糊控制器的基本论域基础上加上或者减去蚁群算法优化的因子kfuzzi(i)(i＝4，5，6，7，8，9，10，11，12)，并对蚁群算法的优化因子kfuzzi(i)(i＝1，2…12)进行编码以及随机产生n个个体组成的初始城市群，所述编码为二进制编码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的一种基于蚁群模糊控制器的助行功能性电刺激精密控制方法，其特征是，采用如下方法确定所述的模糊控制器：</div>
+      <div class="claim-text">输入模糊控制器初始化模块变量分别为实际输出关节角度和期望关节度的误差e(k)以及误差的变化率ec(k)，其论域为FE＝[-E，E]，FEC＝[-EC，EC]，输出的刺激电流强度u(k)，其论域为FU＝[-U，U]，</div>
+      <div class="claim-text">误差的量化论域为</div>
+      <div class="claim-text">X＝{-n，-n+1，…0，…，n-1，n}&#160;&#160;&#160;&#160;&#160;(1)</div>
+      <div class="claim-text">误差变化率的量化论域为</div>
+      <div class="claim-text">X1＝{-m，-m+1，…0，…，m-1，m}；&#160;&#160;(2)</div>
+      <div class="claim-text">控制量的量化论域为</div>
+      <div class="claim-text">Y＝{-k，-k+1，…0，…，k-1，k}&#160;&#160;&#160;&#160;&#160;(3)</div>
+      <div class="claim-text">量化因子分别为</div>
+      <div class="claim-text">Ke＝n/Xe&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(4)</div>
+      <div class="claim-text">Kec＝m/Xec&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(5)</div>
+      <div class="claim-text">比例因子为</div>
+      <div class="claim-text">Ku＝k/Yu&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(6)</div>
+      <div class="claim-text">采用误差的论论域：{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}；误差变化率的论域为{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}输出值的论域{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}，控制规则表为：如果E1且EC1则U1，如果E2且EC2则U2，……Ep且ECp则Up；</div>
+      <div class="claim-text">其总模糊控制规则为：</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">R＝(Ei×CEi)T1оCi&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(8)</div>
+      <div class="claim-text">其中E1＝(a1i…ani)，EC1＝(b1i…bmi)，U1＝(c1i…cti)(i＝1，…p)</div>
+      <div class="claim-text">采用的反模糊化法是加权平均法：</div>
+      <div class="claim-text">对于每一个具体的观察值偏差E*和其误差变化率EC*，再分别用各自的量化因子公式变成量化论域中的元素，再把其模糊化为E*和EC*，</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">其中E*＝(e1…en)，EC*＝(f1…fm)</div>
+      <div class="claim-text">由公式8可以求输出的精确量；</div>
+      <div class="claim-text">所述确定模糊控制器的方法采用角度误差及其误差变化率在[-90&#160;90]上，论域为[-3&#160;3]，则可以用公式</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所述的一种基于蚁群模糊控制器的助行功能性电刺激精密控制方法，其特征是，所述利用蚂蚁随机搜索使其变量优化模糊控制器的隶属函数以及量化因子和比例因子是：</div>
+      <div class="claim-text">其中kfuzzi(i)为整定的模糊控制器的变化量，l为编码的长度，b∈[0，1]，ximax和ximin分别为决策量的最大值和最小值，</div>
+      <div class="claim-text">蚁群模糊控制器既是利用蚁群算法对模糊控制器的相应参数进行整定优化，具体步骤如下：</div>
+      <div class="claim-text">蚁群算法对模糊控制器参数的控制，如公式(18)，(19)，(20)所示：</div>
+      <div class="claim-text">Ke1＝kfuzzi(1)*Ke&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(18)</div>
+      <div class="claim-text">Kc1＝kfuzzi(2)*Kc&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(19)</div>
+      <div class="claim-text">Ku1＝kfuzzi(3)*Ku&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(20)</div>
+      <div class="claim-text">模糊控制器的误差论域为：</div>
+      <div class="claim-text">{-3-kfuzzi(4)，-2-kfuzzi(5)，-1-kfuzzi(6)，0，1+kfuzzi(6)，2+kfuzzi(5)，3+kfuzzi(4)}</div>
+      <div class="claim-text">模糊控制器的误差变化率论域为：</div>
+      <div class="claim-text">{-3-kfuzzi(7)，-2-kfuzzi(8)，-1-kfuzzi(9)，0，1+kfuzzi(9)，2+kfuzzi(8)，3+kfuzzi(7)}</div>
+      <div class="claim-text">模糊控制器的输出值的论域：</div>
+      <div class="claim-text">{-3-kfuzzi(10)，-2-kfuzzi(11)，-1-kfuzzi(12)，0，1+kfuzzi(12)，2+kfuzzi(11)，3+kfuzzi(10)}</div>
+      <div class="claim-text">所述利用蚂蚁随机搜索使其变量优化模糊控制器的隶属函数以及量化因子和比例因子工作过程是：</div>
+      <div class="claim-text">Step1：参数初始化，令时间t＝0和循环次数Nmax＝0，设置最大循环次数Ncmax，将m个蚂蚁置于起始点；</div>
+      <div class="claim-text">Step2：设置蚂蚁个数和循环次数；</div>
+      <div class="claim-text">Step3：蚂蚁随机搜索，在一次爬行结束后，决定哪些特征变量被选中作为实际输入变量，修改禁忌表指针，即选择好之后将蚂蚁移动到新的元素，并把该元素移动该蚂蚁个体的禁忌表中；</div>
+      <div class="claim-text">Step4：计算隶属函数，蚂蚁个体状态转移概率公式计算的概率选择元素；</div>
+      <div class="claim-text">Step5：利用训练样本提供的信息产生模糊规则的条件，检验模糊模型的正确率；</div>
+      <div class="claim-text">Step6：若蚂蚁元素未遍历完，转Step3，否则为Step7；</div>
+      <div class="claim-text">Step7：更新信息素浓度划分正确率高的特征变量的信息素浓度得到增强，下次搜索时会以更大的概率被选中；</div>
+      <div class="claim-text">Step8：满足结束调节，整定结束。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的一种基于蚁群模糊控制器的助行功能性电刺激精密控制方法，其特征是，所述二进制编码，对应的解码公式为：</div>
+      <div class="claim-text">其中kfuzzi(i)为整定的模糊控制器的变化量，l为编码的长度，b∈[0，1]，ximax和ximin分别为决策量的最大值和最小值。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58278195" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">基于蚁群模糊控制器的助行功能性电刺激精密控制方法</invention-title>
+    <technical-field>
+      <p>[0001] 技术领域</p>
+      <p>[0002] 本发明涉及康复器械领域，尤其是基于蚁群模糊控制器的助行功能性电刺激精密控制方法。</p>
+    </technical-field>
+    <background-art>
+      <p>[0003] 背景技术</p>
+      <p>[0004] 功能性电刺激(Functional&#160;Electrical&#160;Stimulation，FES)是通过电流脉冲序列来刺激肢体运动肌群及其外周神经，有效地恢复或重建截瘫患者的部分运动功能的技术。目前，由于脊髓再生能力微弱，针对脊髓损伤瘫痪患者，尚未有可直接修复损伤的有效医治方法，实施功能康复训练是一有效的措施。据统计，脊髓损伤瘫痪患者人数逐年增多，功能康复训练是亟待需求的技术。20世纪60年代，Liberson首次成功地利用电刺激腓神经矫正了偏瘫患者足下垂的步态，开创了功能性电刺激用于运动和感觉功能康复治疗的新途径。目前，FES已经成为了恢复或重建截瘫患者的部分运动功能，是重要的康复治疗手段。然而，如何精密控制FES的触发时序和脉冲电流强度以保证电刺激作用效果能准确完成预定的功能动作仍是FES的技术关键。据统计，目前FES的触发控制的方式研究尚少，而且根据作用效果与预定动作偏差，用闭环控制来自动调整FES刺激强度和时序参数，从而大大提高了FES系统的实时性、准确性和稳定性，但是现在有效的控制方法仍然在探索之中。</p>
+      <p>[0005] 模糊控制器是一种通过模糊逻辑和近似推理的方法，把人的经验形式化、模型化，变成计算机可以接受的控制模型，让计算机代替人来进行实时地控制被控对象的高级策略和新颖的技术方法，可有效地提高控制算法的可控性、适应性和合理性，尤其是针对复杂而用数学方程难于建模且有丰富手控经验的课题具有奇特的优势，而人体肌肉的复杂性和时变性操作环境使其建立其数学模型，致使传统的控制方法很难适应FES领域的严格要求，模糊控制器为FES的精密控制提供了新方案。模糊控制器核心技术就是确定模糊控制器的结构、所采用的模糊规则、合成推理算法以及模糊决策的方法等因素，模糊控制要取得最优的控制效果的关键既是对模糊控制器量化因子、比例因子以及模糊控制规则等参数的整定。在FES领域，对系统稳定性要求极为严格，所以对模糊控制器参数选择亦尤为重要。</p>
+      <p>[0006] 蚁群算法模拟生物世界中的蚂蚁在没有任何提示下寻找由蚁穴至食物源的最短路径的觅食行为提出基于种群的模拟进化算法，具有较强的适应性，分布式并行计算，易于其他算法集成的优点。目前，肌肉的全部机制还没有完全掌握，经验知识比较欠缺。利用蚁群算法对模糊控制器参数的整定有助于功能性电刺激的精密的控制。</p>
+    </background-art>
+    <disclosure>
+      <p>[0007] 发明内容</p>
+      <p>[0008] 为克服现有技术的不足，本发明的主旨是提出一种新的FES的精密控制方法，准确稳定实时地控制FES系统的电流模式。本发明可有效地提高FES系统准确性和稳定性，并获得可观的社会效益和经济效益。为达到上述目的，本发明采用的技术方案是：基于蚁群模糊控制器的助行功能性电刺激精密控制方法，包括下列步骤：</p>
+      <p>[0009] 首先将模糊控制器的量化因子、比例因子以及隶属函数参量的12个决策变量的选择转化为蚁群算法适用的组合优化问题，并对其进行编码以及随机产生n个个体组成的初始城市群；</p>
+      <p>[0010] 其次建立合理的实际关节角度与肌肉模型输出关节角度的相应关系目标函数以及确定蚁群算法的参数设置；</p>
+      <p>[0011] 寻优过程：利用蚂蚁随机搜索，优化模糊控制器的隶属函数以及量化因子和比例因子，并调用已整定的模糊控制器，验证是否达到预设目标，若无反复重复以上操作，直到蚁群算法的参数收敛或者达到预定的指标，并最终输出即得模糊控制器的决策变量和蚁群运行的次数；</p>
+      <p>[0012] 依据前述最终输出即得的模糊控制器的决策变量，由模糊控制器计算输出及该输出与肌肉模型输出的偏差，依据偏差对蚁群信息量进行调整，并进入下次寻优过程，反复此过程，最终实现模糊控制器参数的自适应在线整定，并用于FES系统。</p>
+      <p>[0013] 所述转化为蚁群算法适用的组合优化问题，是转化为求解最短路径问题，具体方法为，蚁群模糊控制器的量化因子和比例因子是将模糊控制器的基本量化因子和基本比例因子分别乘以由蚁群算法优化的因子kfuzzi(i)(i＝1，2，3)，蚁群模糊控制器隶属函数的调整即是对基本模糊控制器隶属函数论域的整定，在模糊控制器的基本论域基础上加上或者减去蚁群算法优化的因子kfuzzi(i)(i＝4，5，6，7，8，9，10，11，12)，并对蚁群算法的优化因子kfuzzi(i)(i＝1，2…12)进行编码以及随机产生n个个体组成的初始城市群，所述编码为二进制编码。</p>
+      <p>[0014] 所述二进制编码，对应的解码公式为</p>
+      <p>[0015] </p>
+      <p>[0016] 其中kfuzzi(i)为整定的模糊控制器的变化量，l为编码的长度，b∈[0，1]，ximax和ximin分别为决策量的最大值和最小值。</p>
+      <p>[0017] 采用如下方法确定所述的模糊控制器：</p>
+      <p>[0018] 输入模糊控制器初始化模块变量分别为实际输出关节角度和期望关节度的误差e(k)以及误差的变化率ec(k)，其论域为FE＝[-E，E]，FEC＝[-EC，EC]，输出的刺激电流强度u(k)，其论域为FU＝[-U，U]，</p>
+      <p>[0019] 误差的量化论域为</p>
+      <p>[0020] X＝{-n，-n+1，…0，…，n-1，n}&#160;&#160;&#160;&#160;(1)</p>
+      <p>[0021] 误差变化率的量化论域为</p>
+      <p>[0022] X1＝{-m，-m+1，…0，…，m-1，m}；&#160;(2)</p>
+      <p>[0023] 控制量的量化论域为</p>
+      <p>[0024] Y＝{-k，-k+1，…0，…，k-1，k}&#160;&#160;&#160;&#160;(3)</p>
+      <p>[0025] 量化因子分别为</p>
+      <p>[0026] Ke＝n/Xe&#160;&#160;&#160;&#160;&#160;&#160;(4)</p>
+      <p>[0027] Kec＝m/Xec&#160;&#160;&#160;&#160;(5)</p>
+      <p>[0028] 比例因子为</p>
+      <p>[0029] Ku＝k/Yu&#160;&#160;&#160;&#160;(6)</p>
+      <p>[0030] 误差的论论域：{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}；误差变化率的论域为{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}输出值的论域{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}，模糊控制的控制规则为：如果E1且EC1则U1，如果E2且EC2则U2，……Ep且ECp则Up；</p>
+      <p>[0031] 其总模糊控制规则为：</p>
+      <p>[0032] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0033] R＝(Ei×CEi)T1оCi&#160;&#160;&#160;&#160;(8)</p>
+      <p>[0034] 其中E1＝(a1i…ani)，EC1＝(b1i…bmi)，U1＝(c1i…cti)(i＝1，…p)</p>
+      <p>[0035] 采用的反模糊化法是加权平均法：</p>
+      <p>[0036] </p>
+      <p>[0037] 对于每一个具体的观察值偏差E*和其误差变化率EC*，再分别用各自的量化因子公式变成量化论域中的元素，再把其模糊化为E*和EC*，</p>
+      <p>[0038] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0039] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0040] 其中E*＝(e1…en)，EC*＝(f1…fm)</p>
+      <p>[0041] 由公式8可以求输出的精确量；</p>
+      <p>[0042] 所述确定模糊控制器的方法采用角度误差及其误差变化率在[-90&#160;90]上，论域为[-3&#160;3]，则可以用公式</p>
+      <p>[0043] </p>
+      <p>[0044] 所述利用蚂蚁随机搜索使其变量优化模糊控制器的隶属函数以及量化因子和比例因子是，</p>
+      <p>[0045] </p>
+      <p>[0046] 其中kfuzzi(i)为整定的模糊控制器的变化量，l为编码的长度，b∈[0，1]，ximax和ximin分别为决策量的最大值和最小值。</p>
+      <p>[0047] 蚁群模糊控制器既是利用蚁群算法对模糊控制器的相应参数进行整定优化，具体步骤如下：</p>
+      <p>[0048] 蚁群算法对模糊控制器参数的控制，如公式(18)，(19)，(20)所示：</p>
+      <p>[0049] Ke1＝kfuzzi(1)*Ke&#160;&#160;&#160;&#160;(18)</p>
+      <p>[0050] Kc1＝kfuzzi(2)*Kc&#160;&#160;&#160;&#160;(19)</p>
+      <p>[0051] ku1＝kfuzzi(3)*Ku&#160;&#160;&#160;&#160;(20)</p>
+      <p>[0052] 模糊控制器的误差论域为</p>
+      <p>[0053] {-3-kfuzzi(4)，-2-kfuzzi(5)，-1-kfuzzi(6)，0，1+kfuzzi(6)，2+kfuzzi(5)，3+kfuzzi(4)}</p>
+      <p>[0054] 模糊控制器的误差变化率论域为</p>
+      <p>[0055] {-3-kfuzzi(7)，-2-kfuzzi(8)，-1-kfuzzi(9)，0，1+kfuzzi(9)，2+kfuzzi(8)，3+kfuzzi(7)}</p>
+      <p>[0056] 模糊控制器的输出值的论域</p>
+      <p>[0057] {-3-kfuzzi(10)，-2-kfuzzi(11)，-1-kfuzzi(12)，0，1+kfuzzi(12)，2+kfuzzi(11)，3+kfuzzi(10)}。</p>
+      <p>[0058] 所述利用蚂蚁随机搜索使其变量优化模糊控制器的隶属函数以及量化因子和比例因子工作过程是：</p>
+      <p>[0059] Step1：参数初始化。令时间t＝0和循环次数Nmax＝0，设置最大循环次数Ncmax，将m个蚂蚁置于起始点。</p>
+      <p>[0060] Step2：设置蚂蚁个数和循环次数</p>
+      <p>[0061] Step3：蚂蚁随机搜索，在一次爬行结束后，决定哪些特征变量被选中作为实际输入变量，修改禁忌表指针，即选择好之后将蚂蚁移动到新的元素，并把该元素移动该蚂蚁个体的禁忌表中</p>
+      <p>[0062] Step4：计算隶属函数，蚂蚁个体状态转移概率公式计算的概率选择元素</p>
+      <p>[0063] Step5：利用训练样本提供的信息产生模糊规则的条件，检验模糊模型的正确率</p>
+      <p>[0064] Step6：若蚂蚁元素未遍历完，转Step3，否则为Step7</p>
+      <p>[0065] Step7：更新信息素浓度划分正确率高的特征变量的信息素浓度得到增强，下次搜索时会以更大的概率被选中</p>
+      <p>[0066] Step8：满足结束调节，整定结束。</p>
+      <p>[0067] 本发明特点在于：利用蚁群算法整定模糊控制器参数，继而准确稳定实时地有效地控制FES系统的电流强度，并可有效地提高FES系统实时性、准确性和稳定性。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>[0068] 附图说明</p>
+      <p>[0069] 图1蚁群算法整定模糊控制器参数的结构框图。</p>
+      <p>[0070] 图2蚁群算法构造图。</p>
+      <p>[0071] 图3实验场景图。</p>
+      <p>[0072] 图4蚁群算法整定的模糊控制器追踪结果。</p>
+      <p>[0073] 图5蚁群算法整定模糊控制器参数控制下预设输入关节角度与实际输出的相对误差。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>[0074] 具体实施方式</p>
+      <p>[0075] 提出了由蚁群算法(Ant&#160;Algorithm)自适应整定模糊控制器(Fuzzy&#160;Controller)参数以精确控制功能性电刺激(Functional&#160;Electrical&#160;Stimulation，FES)电流模式的新方法。其技术流程是：通过蚁群算法自调整来优化模糊控制器的隶属函数以及量化因子和比例因子，继而控制FES系统的电流模式。该方法是一种全新的功能性电刺激精密控制技术。</p>
+      <p>[0076] 基于蚁群模糊控制器的助行功能性电刺激精密控制方法的应用的结构如图1所示。其工作流程为：首先将模糊控制器的量化因子、比例因子以及隶属函数参量的12个决策变量的选择转化为蚁群算法适用的组合优化问题，并对其进行编码以及随机产生n个个体组成的初始城市群，其次建立合理的实际关节角度与肌肉模型输出关节角度的相应关系目标函数以及确定蚁群算法的参数设置，利用蚂蚁随机搜索使其变量优化模糊控制器的隶属函数以及量化因子和比例因子，并调用已整定的模糊控制器，验证是否达到预设目标，若无反复重复以上操作，直到参数收敛或者达到预定的指标；最终输出即得模糊控制器的决策变量和蚁群运行的次数。在新的模糊控制器下计算系统输出及其与肌肉模型的偏差后对蚁群信息量的调整，使其进入下次寻优过程。反复此过程，最终实现模糊控制器参数的自适应在线整定，并用于FES系统。</p>
+      <p>[0077] 1模糊控制设计</p>
+      <p>[0078] 由于人的特殊性，FES领域对控制器稳定性、鲁棒性、实时性要求严格，设计模糊控制器均衡稳定性和实时性选择了二维模糊控制器，即两个输入变量分别实际输出关节角度和期望关节度的误差e(k)以及误差的变化率ec(k)，其论域为FE＝[-E，E]，FEC＝[-EC，EC]，输出的刺激电流强度u(k)，其论域为FU＝[-U，U]。</p>
+      <p>[0079] 误差的量化论域为</p>
+      <p>[0080] X＝[-n，-n+1，…0，…，n-1，n}&#160;&#160;&#160;&#160;(1)</p>
+      <p>[0081] 误差变化率的量化论域为</p>
+      <p>[0082] X1＝{-m，-m+1，…0，…，m-1，m}；&#160;(2)</p>
+      <p>[0083] 控制量的量化论域为</p>
+      <p>[0084] Y＝{-k，-k+1，…0，…，k-1，k}&#160;&#160;&#160;&#160;(3)</p>
+      <p>[0085] 量化因子分别为</p>
+      <p>[0086] Ke＝n/Xe&#160;&#160;&#160;&#160;&#160;&#160;&#160;(4)</p>
+      <p>[0087] Kec＝m/Xec&#160;&#160;&#160;&#160;&#160;(5)</p>
+      <p>[0088] 比例因子为</p>
+      <p>[0089] Ku＝k/Yu&#160;&#160;&#160;&#160;&#160;&#160;&#160;(6)</p>
+      <p>[0090] 本发明采用误差的论论域：{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}；误差变化率的论域为{-3&#160;-2&#160;-1&#160;0&#160;1&#160;23}输出值的论域{-3&#160;-2&#160;-1&#160;0&#160;1&#160;2&#160;3}。控制规则表为：如果E1且EC1则U1，如果E2且EC2则U2，……Ep且ECp则Up；</p>
+      <p>[0091] 其总模糊控制规则为</p>
+      <p>[0092] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0093] R＝(Ei×CEi)T1оCi&#160;&#160;&#160;&#160;(8)</p>
+      <p>[0094] 其中E1＝(a1i…ani)，EC1＝(b1i…bmi)，U1＝(c1i…cti)(i＝1，…p)</p>
+      <p>[0095] 采用的反模糊化法是加权平均法：</p>
+      <p>[0096] </p>
+      <p>[0097] 对于每一个具体的观察值偏差E*和其误差变化率EC*，再分别用各自的量化因子公式变成量化论域中的元素，再把其模糊化为E*和EC*，</p>
+      <p>[0098] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0099] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0100] 其中E*＝(e1…en)，EC*＝(f1…fm)</p>
+      <p>[0101] 有公式8可以求输出的精确量。</p>
+      <p>[0102] 本发明角度误差及其误差变化率在[-90&#160;90]上，论域为[-3&#160;3]，则可以用公式</p>
+      <p>[0103] </p>
+      <p>[0104] 2蚁群算法整定模糊控制器参数</p>
+      <p>[0105] 蚁群算法是一种源于大自然生物世界的新型仿生算法，用蚁群算法求解最优化问题时，首先将最优化问题转化为了求解最短路径问题。每只蚂蚁从初始接点N00或N01出发，顺序走过N1，N2…，的其中一子结点，直到终结点Nk0、Nk1组成路径(N0t&#160;N1t…Nkt)，t∈[0，1]。其路径可代表一个二进制的可行解。每次蚂蚁访问城市时有以下的特征：</p>
+      <p>[0106] 状态转化规则：蚁群算法使用的状态转化规则为基于TSP问题提出的随机比例规则，它给出位于城市i的蚂蚁k选择移动到城市j的概率，</p>
+      <p>[0107] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0108] 其中τij(i，j)为(i，j)的适应度，ηij(i，j)为距离的倒数。α为残留信息的相对重要程度、β为期望值的相对重要程度。</p>
+      <p>[0109] 在蚁群算法中，选择方式为</p>
+      <p>[0110] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0111] 其中，q为均匀分布在[0，1]上的一个随机数，q0为[0，1]上的参变量。</p>
+      <p>[0112] 全局更新规则：蚂蚁算法有不同的更新算法，蚁群系统采用的全局更新原则，只允许全局最优解的蚂蚁释放信息素，这样是为了使蚂蚁的搜索主要集中在当前循环为止所找出的最好路径的邻域。</p>
+      <p>[0113] τij(i，j)←(1-ρ)□τij(i，j)+ρ&#183;Δτij(i，j)&#160;&#160;&#160;&#160;(14)</p>
+      <p>[0114] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0115] 其中ρ为信息数挥发系数，Lgb为目前为止找到的全局最优路径</p>
+      <p>[0116] 局部更新信息：每只蚂蚁建立一个解的过程中也有进行信息数素迹的更新</p>
+      <p>[0117] τij(i，j)←(1-γ)□τij(i，j)+γ&#183;Δτij(i，j)&#160;&#160;&#160;(16)</p>
+      <p>[0118] 其中γ∈[0，1]。</p>
+      <p>[0119] 基本的模糊控制器稳态性能不能达到FES领域的要求，本发明将对量化因子和比例因子以及模糊控制规则进行整定即是将模糊控制器的相关参数利用二进制编码转化为求解最短路径问题，蚁群算法的构造如图2所示。当基本论域和词集不变时，量化因子变化会导致偏差及其变化率所对应的语言值发生变化，比例因子的变化会直接导致作用于被控对象的控制量发生变化。具体为：Ke越大，系统上升时间越短，反之越长；Kec越大，系统的反应越灵敏，反之越迟钝，Ku越大，系统上升时间越短，但容易导致振荡，而Ku过小易使系统的动态过程变长。</p>
+      <p>[0120] 本发明采用的是二进制编码，则对应的解码公式为</p>
+      <p>[0121] </p>
+      <p>[0122] 其中kfuzzi(i)为整定的模糊控制器的变化量，l为编码的长度，b∈[0，1]，ximax和ximin分别为决策量的最大值和最小值。</p>
+      <p>[0123] 蚁群算法对模糊控制器参数的控制如以下公式：</p>
+      <p>[0124] Ke1＝kfuzzi(1)*Ke&#160;&#160;&#160;&#160;(18)</p>
+      <p>[0125] Kc1＝kfuzzi(2)*Kc&#160;&#160;&#160;&#160;(19)</p>
+      <p>[0126] Ku1＝kfuzzi(3)*Ku&#160;&#160;&#160;&#160;(20)</p>
+      <p>[0127] 误差论域为</p>
+      <p>[0128] {-3-kfuzzi(4)，-2-kfuzzi(5)，-1-kfuzzi(6)，0，1+kfuzzi(6)，2+kfuzzi(5)，3+kfuzzi(4)}</p>
+      <p>[0129] 误差变化率论域为</p>
+      <p>[0130] {-3-kfuzzi(7)，-2-kfuzzi(8)，-1-kfuzzi(9)，0，1+kfuzzi(9)，2+kfuzzi(8)，3+kfuzzi(7)}</p>
+      <p>[0131] 输出值的论域</p>
+      <p>[0132] {-3-kfuzzi(10)，-2-kfuzzi(11)，-1-kfuzzi(12)，0，1+kfuzzi(12)，2+kfuzzi(11)，3+kfuzzi(10)}</p>
+      <p>[0133] 蚁群算法整定模糊控制器参数的具体工作流程为：</p>
+      <p>[0134] Step1：参数初始化。令时间t＝0和循环次数Nmax＝0，设置最大循环次数Ncmax，将m个蚂蚁置于起始点。</p>
+      <p>[0135] Step2：设置蚂蚁个数和循环次数</p>
+      <p>[0136] Step3：蚂蚁随机搜索，在一次爬行结束后，决定哪些特征变量被选中作为实际输入变量，修改禁忌表指针，即选择好之后将蚂蚁移动到新的元素，并把该元素移动该蚂蚁个体的禁忌表中</p>
+      <p>[0137] Step4：计算隶属函数，蚂蚁个体状态转移概率公式计算的概率选择元素</p>
+      <p>[0138] Step5：利用训练样本提供的信息产生模糊规则的条件，检验模糊模型的正确率</p>
+      <p>[0139] Step6：若蚂蚁元素未遍历完，转Step3，否则为Step7</p>
+      <p>[0140] Step7：更新信息素浓度划分正确率高的特征变量的信息素浓度得到增强，下次搜索时会以更大的概率被选中</p>
+      <p>[0141] Step8：满足结束调节，整定结束。</p>
+      <p>[0142] 3实验方案</p>
+      <p>[0143] 实验装置采用美国SIGMEDICS公司生产的Parastep功能性电刺激助行系统以及PASCO公司PS-2137量角器和Data&#160;Studio软件。Parastep系统包含微处理器和刺激脉冲发生电路，含六条刺激通道，电池供电。实验内容为：利用FES系统对下肢相关肌群进行刺激，利用PASCO公司PS-2137量角器采集膝关节角度和Data&#160;Studio软件记录所测量的膝关节角度。要求受试者身体健康，无下肢肌肉、骨骼疾患，无神经疾患及严重心肺疾患。实验时受试者安坐于测试台上，将刺激电极固定于股四头肌的两端位置，将量角器固定在大腿和小腿上，使关节活动点贴近膝关节活动点位置。未施加电刺激时小腿放松、保持垂直悬空状态，FES实验场景如图3所示。电刺激脉冲序列采用经典的Lilly波形，脉冲频率为25Hz、脉宽150μs，脉冲电流在0～120m范围内可调。实验中可通过改变脉冲电流大小来调整刺激强度以改变由刺激产生的膝关节角度。实验前，设定期望的膝关节角度运动轨迹，实验中利用角度测量计实时检测膝关节张角变化。实验数据采样率为128Hz，数据记录时长为60s。</p>
+      <p>[0144] 蚁群整定的模糊控制器参数新算法对FES脉冲电流幅值进行测算和调整，使FES作用所产生的膝关节角度运动贴近预期的运动轨迹。图4为蚁群算法自适应优化整定的模糊控制器追踪结果。图中红线表示预期运动轨迹、蓝线为实际输出关节角度。X轴为时间，Y轴为膝关节运动角度。为更清楚地观察蚁群算法整定模糊控制器的控制误差，如图5蚁群算法整定PID控制下预设输入膝关节角度与实际膝关节角度的相对误差所示，则可以看出误差均在3％之内，可以达到精确的控制。</p>
+      <p>[0145] 本发明的主旨是提出一种新的FES的精密控制方法，通过蚁群算法自适应整定模糊控制器参数，继而准确稳定实时地有效地控制FES系统的电流强度。该项发明可有效地提高FES系统实时性、准确性和稳定性，并获得可观的社会效益和经济效益。最佳实施方案拟采用专利转让、技术合作或产品开发。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1598719A?cl=zh">CN1598719A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2004年9月27日</td><td class="patent-data-table-td patent-date-value">2005年3月23日</td><td class="patent-data-table-td ">北京交通大学</td><td class="patent-data-table-td ">一种神经网络优化控制器及控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101596338A?cl=zh">CN101596338A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年4月29日</td><td class="patent-data-table-td patent-date-value">2009年12月9日</td><td class="patent-data-table-td ">天津大学</td><td class="patent-data-table-td ">基于bp神经网络整定pid的功能性电刺激精密控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN201431704Y?cl=zh">CN201431704Y</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月10日</td><td class="patent-data-table-td patent-date-value">2010年3月31日</td><td class="patent-data-table-td ">燕铁斌;秦  淼</td><td class="patent-data-table-td ">基于人体行走模式的功能性低频电刺激治疗装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US6171239">US6171239</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1998年8月17日</td><td class="patent-data-table-td patent-date-value">2001年1月9日</td><td class="patent-data-table-td ">Emory University</td><td class="patent-data-table-td ">Systems, methods, and devices for controlling external devices by signals derived directly from the nervous system</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">《计算机仿真》 20060331 宋申民等 基于蚁群算法的模糊控制规则的过滤简化 157-163 1-5 第23卷, 第3期</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102274581A?cl=zh">CN102274581A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月18日</td><td class="patent-data-table-td patent-date-value">2011年12月14日</td><td class="patent-data-table-td ">天津大学</td><td class="patent-data-table-td ">一种功能性电刺激的精密控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102274581B?cl=zh">CN102274581B</a></td><td class="patent-data-table-td patent-date-value">2011年5月18日</td><td class="patent-data-table-td patent-date-value">2013年7月10日</td><td class="patent-data-table-td ">天津大学</td><td class="patent-data-table-td ">一种功能性电刺激的精密控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102284137A?cl=zh">CN102284137A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月20日</td><td class="patent-data-table-td patent-date-value">2011年12月21日</td><td class="patent-data-table-td ">天津大学</td><td class="patent-data-table-td ">一种功能性电刺激的多源信息融合控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102662317A?cl=zh">CN102662317A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月27日</td><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td ">中国人民解放军国防科学技术大学</td><td class="patent-data-table-td ">基于原核仿生阵列的pid控制器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102662317B?cl=zh">CN102662317B</a></td><td class="patent-data-table-td patent-date-value">2012年3月27日</td><td class="patent-data-table-td patent-date-value">2014年5月21日</td><td class="patent-data-table-td ">中国人民解放军国防科学技术大学</td><td class="patent-data-table-td ">基于原核仿生阵列的pid控制器</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=riB6BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0013020000">G05B13/02</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=riB6BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=A61N0001360000">A61N1/36</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年9月1日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年10月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年8月15日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/6d1c89ef78e1cfe243b0/CN101816821A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8E%E8%9A%81%E7%BE%A4%E6%A8%A1%E7%B3%8A%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%8A%A9%E8%A1%8C%E5%8A%9F.pdf?id=riB6BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0BZHqzv4zkdRW-oglAWj8n1LuuRA"},"sample_url":"https://www.google.com/patents/reader?id=riB6BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

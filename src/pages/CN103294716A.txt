@@ -1,0 +1,318 @@
+<!DOCTYPE html><html><head><title>专利 CN103294716A - 用于分类器的在线半监督学习方法和装置及处理设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="用于分类器的在线半监督学习方法和装置及处理设备"><meta name="DC.contributor" content="姜涌" scheme="inventor"><meta name="DC.contributor" content="江龙" scheme="inventor"><meta name="DC.contributor" content="胥立丰" scheme="inventor"><meta name="DC.contributor" content="佳能株式会社" scheme="assignee"><meta name="DC.date" content="2012-2-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及用于分类器的在线半监督学习方法和装置及处理设备。公开了一种用于分类器的在线半监督学习的方法，所述分类器使用多个现有的支撑向量，所述方法包括：候选样本选择步骤，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；新支撑向量选择步骤，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量；支撑向量替换步骤，通过所述新的支撑向量替换分类器的一些支撑向量；以及权重更新步骤，更新分类器中所有支撑向量的权重。"><meta name="DC.date" content="2013-9-11"><meta name="DC.relation" content="CN:101256629:A" scheme="references"><meta name="DC.relation" content="CN:102270192:A" scheme="references"><meta name="DC.relation" content="US:7526101" scheme="references"><meta name="citation_reference" content="SHIGEO ABE: &quot;《Advances in Computer Vision and Pattern Recognition》&quot;, 31 December 2010, article &quot;Support Vector Machine for Pattern Classification&quot;"><meta name="citation_reference" content="武妍等: &quot;动态权值预划分实值Adaboost人脸检测算法&quot;, 《计算机工程》, 5 February 2007 (2007-02-05), pages 2"><meta name="citation_patent_publication_number" content="CN:103294716:A"><meta name="citation_patent_application_number" content="CN:201210049537"><link rel="canonical" href="https://www.google.com/patents/CN103294716A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103294716A?cl=zh"/><meta name="title" content="专利 CN103294716A - 用于分类器的在线半监督学习方法和装置及处理设备"/><meta name="description" content="本发明涉及用于分类器的在线半监督学习方法和装置及处理设备。公开了一种用于分类器的在线半监督学习的方法，所述分类器使用多个现有的支撑向量，所述方法包括：候选样本选择步骤，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；新支撑向量选择步骤，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量；支撑向量替换步骤，通过所述新的支撑向量替换分类器的一些支撑向量；以及权重更新步骤，更新分类器中所有支撑向量的权重。"/><meta property="og:title" content="专利 CN103294716A - 用于分类器的在线半监督学习方法和装置及处理设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103294716A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103294716A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103294716A&amp;usg=AFQjCNGYy9yqxwy7iZ-aJnpgO-XroL6l_A" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/6749b82fcd4d11832685/CN103294716A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/6749b82fcd4d11832685/CN103294716A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103294716A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103294716A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103294716A?cl=zh" style="display:none"><span itemprop="description">本发明涉及用于分类器的在线半监督学习方法和装置及处理设备。公开了一种用于分类器的在线半监督学习的方法，所述分类器使用多个现有的支撑向量，所述方法包括：候选样本选择步骤，使用所述多个现有的支撑向量从新添...</span><span itemprop="url">https://www.google.com/patents/CN103294716A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103294716A - 用于分类器的在线半监督学习方法和装置及处理设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103294716A - 用于分类器的在线半监督学习方法和装置及处理设备" title="专利 CN103294716A - 用于分类器的在线半监督学习方法和装置及处理设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103294716 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210049537</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年9月11日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年2月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年2月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/US9147169?hl=zh-CN&amp;cl=zh">US9147169</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20130223727?hl=zh-CN&amp;cl=zh">US20130223727</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210049537.8, </span><span class="patent-bibdata-value">CN 103294716 A, </span><span class="patent-bibdata-value">CN 103294716A, </span><span class="patent-bibdata-value">CN 201210049537, </span><span class="patent-bibdata-value">CN-A-103294716, </span><span class="patent-bibdata-value">CN103294716 A, </span><span class="patent-bibdata-value">CN103294716A, </span><span class="patent-bibdata-value">CN201210049537, </span><span class="patent-bibdata-value">CN201210049537.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A7%9C%E6%B6%8C%22">姜涌</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B1%9F%E9%BE%99%22">江龙</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%83%A5%E7%AB%8B%E4%B8%B0%22">胥立丰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%BD%B3%E8%83%BD%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%22">佳能株式会社</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103294716A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103294716A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103294716A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (5),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210049537&amp;usg=AFQjCNEkQpLRK_eVLMgKRy__nMOqRjAikw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103294716A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFzz7pr7_gc1wA6hEknMPWlzXlhpg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT128244210" lang="ZH" load-source="patent-office">用于分类器的在线半监督学习方法和装置及处理设备</invention-title>
+      </span><br><span class="patent-number">CN 103294716 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA121633383" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及用于分类器的在线半监督学习方法和装置及处理设备。公开了一种用于分类器的在线半监督学习的方法，所述分类器使用多个现有的支撑向量，所述方法包括：候选样本选择步骤，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；新支撑向量选择步骤，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量；支撑向量替换步骤，通过所述新的支撑向量替换分类器的一些支撑向量；以及权重更新步骤，更新分类器中所有支撑向量的权重。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(28)</span></span></div><div class="patent-text"><div mxw-id="PCLM56252345" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种用于分类器的在线半监督学习的方法，所述分类器使用多个现有的支撑向量，所述方法包括:  候选样本选择步骤，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；  新支撑向量选择步骤，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量;  支撑向量替换步骤，通过所述新的支撑向量替换分类器的一些支撑向量；以及  权重更新步骤，更新分类器中所有支撑向量的权重。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其中所述候选样本选择步骤还包括:  估计任意样本与所有支撑向量的中心的最大距离；  估计任意样本与 所述中心的最小距离；  在所述最大距离和最小距离之间设置用以判定新添加的未标记样本是否为正样本的阈值；以及  根据所述阈值确定新添加的未标记样本是否为候选样本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1或2所述的方法，所述阈值被设置成使得任意正样本落在所述阈值之内的概率固定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1或2所述的方法，所述新支撑向量选择步骤还包括:  根据所述多个现有的支撑向量绘制边界超球面；以及  确定所述候选样本是否为新的支撑向量，其中如果候选样本在边界超球面之外，则将该候选样本选择为新的支撑向量；以及如果候选样本在边界超球面之内，则不将该候选样本选择为新的支撑向量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求2所述的方法，其中所述支撑向量替换步骤还包括:  计算每一个支撑向量到所述中心的距离；以及  用新的支撑向量替换具有最近距离的支持向量，并保持支撑向量数恒定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求2所述的方法，其中在估计所述最大距离时使用支撑向量数据描述(SVDD)算法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求2所述的方法，其中在估计所述最大距离和所述最小距离时使用核函数K(.)，其中所述核函数被选择成使得对于任意的归一化的向量ζ，Κ(ζ，ζ)都是恒定的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，其中所述核函数Κ(.)包括直方图交叉核(ΗΙΚ)。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.一种用于分类器的在线半监督学习的装置，所述分类器使用多个现有的支撑向量，所述装置包括:  候选样本选择单元，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；  新支撑向量选择单元，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量;  支撑向量替换单元，通过所述新的支撑向量替换分类器的一些支撑向量；以及  权重更新单元，更新分类器中所有支撑向量的权重。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的装置，其中所述候选样本选择单元还包括:  第一估计单元，估计任意样本与所有支撑向量的中心的最大距离；第二估计单元，估计任意样本与所述中心的最小距离；  设置单元，在所述最大距离和最小距离之间设置用以判定新添加的未标记样本是否为正样本的阈值；以及  第一确定单元，根据所述阈值确定新添加的未标记样本是否为候选样本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求9或10所述的装置，所述阈值被设置成使得任意正样本落在所述阈值之内的概率固定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求9或10所述的装置，所述新支撑向量选择单元还包括:  绘制单元，根据所述多个现有的支撑向量绘制边界超球面；以及  第二确定单元，确定所述候选样本是否为新的支撑向量，其中如果候选样本在边界超球面之外，则将该候选样本选择为新的支撑向量；以及如果候选样本在边界超球面之内，则不将该候选样本选择为新的支撑向量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求10所述的装置，其中所述支撑向量替换单元还包括:  计算单元，计算每一个支撑向量到所述中心的距离；以及  替换单元，用新的支撑向量替换具有最近距离的支持向量，并保持支撑向量数恒定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求10所述的装置，其中在所述第一估计单元中使用支撑向量数据描述(SVDD)算法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求10所述的装置，其中在所述第一估计单元和所述第二估计单元中使用核函数Κ(.)，其中所述核函数被选择成使得对于任意的归一化的向量z，K(z，z)都是恒定的。`</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的装置，其中所述核函数Κ(.)包括直方图交叉核(HIK)。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.&#8212;种处理设备，所述处理设备包括分类器，所述分类器使用多个现有的支撑向量，所述处理设备包括:  接收单元，接收新添加的未标记样本；  候选样本选择单元，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；  新支撑向量选择单元，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量;  支撑向量替换单元，通过所述新的支撑向量替换分类器的一些支撑向量；以及  权重更新单元，更新分类器中所有支撑向量的权重。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的处理设备，其中所述候选样本选择单元还包括:  第一估计单元，估计任意样本与所有支撑向量的中心的最大距离；  第二估计单元，估计任意样本与所述中心的最小距离；  设置单元，在所述最大距离和最小距离之间设置用以判定新添加的未标记样本是否为正样本的阈值；以及  第一确定单元，根据所述阈值确定新添加的未标记样本是否为候选样本。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求18所述的处理设备，所述阈值被设置成使得任意正样本落在所述阈值之内的概率固定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求17或18所述的处理设备，所述新支撑向量选择单元还包括:  绘制单元，根据所述多个现有的支撑向量绘制边界超球面；以及第二确定单元，确定所述候选样本是否为新的支撑向量，其中如果候选样本在边界超球面之外，则将该候选样本选择为新的支撑向量；以及如果候选样本在边界超球面之内，则不将该候选样本选择为新的支撑向量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求17或18所述的处理设备，其中所述支撑向量替换单元还包括:  计算单元，计算每一个支撑向量到所述中心的距离；以及  替换单元，用新的支撑向量替换具有最近距离的支持向量，并保持支撑向量数恒定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求17或18所述的处理设备，其中在所述第一估计单元中使用支撑向量数据描述(SVDD)算法。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求17或18所述的处理设备，其中在所述第一估计单元和所述第二估计单元中使用核函数K(.)，其中所述核函数被选择成使得对于任意的归一化的向量ζ，Κ(ζ,ζ)都是恒 定的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求23所述的处理设备，其中所述核函数Κ(.)包括直方图交叉核(HIK)。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.一种用户注册对象检测方法，包括:  接收要检测的对象；  调用分类器，所述分类器包括根据用户注册对象产生的多个现有的支撑向量；  基于分类器识别所述要检测的对象；以及  使用根据权利要求1-8中任一项所述的方法更新分类器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求25所述的方法，其中所述要检测的对象是图像或视频。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.一种用户注册对象检测系统，包括:  对象接收单元，接收要检测的对象；  对象识别单元，基于分类器识别所述要检测的对象，所述分类器包括根据用户注册对象产生的多个现有的支撑向量；以及  根据权利要求9-16中的任一项的用于分类器的在线半监督学习的装置，其用于更新分类器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.根据权利要求27所述的方法，其中所述要检测的对象是图像或视频。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63240478" lang="ZH" load-source="patent-office" class="description">
+    <p>用于分类器的在线半监督学习方法和装置及处理设备</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及机器学习和模式识别，具体来说，涉及用于分类器的在线半监督学习方法和装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	在对象检测和跟踪领域，在过去的几十年中广泛地采用单类分类方法。如在 Moya, M.and Hush, D.(1996).“Network constraints and mult1-objectiveoptimization for one-class classification”.Neural Networks,9(3):463-474.do1:</p>
+    <p>10.1016/0893-6080(95)00120-4中所述，在单类分类方法中，通过根据仅仅包含一类对象的训练集合进行学习，而尝试将该类对象与所有其它可能的对象区分开。</p>
+    <p>[0003]	支撑向量数据描述(support vector data description, SVDD)法是用于单类分类方法的有效的核心方法。如D.Tax and R.Duin,“Support vector domain description”.Pattern Recognit.Lett.，vol.20, pp.1191-1199, Novemberl999 中所述，SVDD 法旨在找到一个最小体积的球面(也称为最小球面)，使得所有或者大部分目标训练样本被该球面所包围。在图1中示出了 SVDD法的示意图。在所述最小球面上的点称为支撑向量(supportvector)，其用于表征包围训练样本的最小球面。</p>
+    <p>[0004]	由于SVDD法良好的学习能力和归纳性能，近来SVDD法已在多种应用中成功使用。SVDD法的性能和精度依赖于代表性的训练样本数据集的可获得性。但是，在例如视频监测、图像检索的一些在线应用中，由于在初始状态下没有足够的训练样本，因此SVDD法可能失败。</p>
+    <p>[0005]	为了解决上述问题，在本技术领域中引入了在线学习技术。在在线学习技术中，首先通过一个或几个样本学习一个分类器，然后伴随着系统的执行过程更新该分类器。因为在线学习技术具有极好的自适应性并且该技术只需要有限的存储器容量，因此其获得了巨大的成功。在线SVDD法和增量SVDD法是目前广泛地应用于实时对象检测的两种技术，这两种方法均为基于支撑向量法的在线学习方法。</p>
+    <p>[0006]在	D.M.J.Tax and P.Laskov, “Online SVM learning:from classification todata description and back,” In C.et al.Molina,editor,Proc.NNSP,2003,pp.499-508中对在线SVDD法进行了描述。图2(a)示出了在线SVDD法的简要流程图。首先，获取原有的基于SVDD的分类器以及新添加的标记样本，即正样本。所谓的正样本是指判断为属于要分的类的样本。然后，通过分类器计算各个样本的相关性。接着，从针对原有分类器的先前训练样本集中选择最不相关的样本。接着，基于新添加的正样本增加新样本并去除最不相关的样本。最后，使用保留的样本以及新样本对分类器进行重新学习。</p>
+    <p>[0007]	图2(b)示出了在线SVDD法的示意图。从图2(b)中可以看出，在分类器的更新过程中，原有样本集中的样本被新增加的样本所替代，并且关于分类器的超球面在更新过程中不断增大。</p>
+    <p>[0008]	在Xiaopeng Hua,Shifei Ding,“Incremental Learning Algorithm for SupportVector Data Description”，JOURNAL OF SOFTWARE, VOL.6,N0.7, JULY 2011 中对增量SVDD法进行了描述，其中在新的样本增加到训练样本集之后通过分析支撑向量集的可能的变化对分类器进行SVDD增量学习。图3(a)示出了增量SVDD法的简要流程图。首先，获取原有的基于SVDD的分类器以及新添加的标记样本，即正样本。然后，将原有的训练样本集划分为支撑向量集以及非支撑向量集。接着，验证是否存在位于原有分类器的超球面之外的新增加的样本；如果存在，则将这些样本添加到训练样本集中。接下来，在非支撑向量集中寻找最可能成为新的支撑向量的样本。最后，使用原有分类器的超球面之外的新增加的样本、在非支撑向量集中最可能成为新的支撑向量的样本以及支撑向量集对分类器进行重新学习。</p>
+    <p>[0009]	图3(b)示出了增量SVDD法的示意图。从图3(b)中可以看出，在分类器的更新过程中，基于原有分类器的超球面之外的新增加的样本、在非支撑向量集中最可能成为新的支撑向量的样本以及原有支撑向量集更新分类器，并且关于分类器的超球面在更新过程中不断增大。</p>
+    <p>[0010]	从图2(a)和图2(b)中可以看出:当训练样本的多样性小时，通过学习获得的超球面较小，即当分类器通过较小的训练样本集进行训练时，通过学习获得的分类器的阈值较小。当训练样本的多样性增加时，通过学习获得的超球面扩大，即当新样本增加时，通过学习获得的分类器的阈值增大。</p>
+    <p>[0011]	也就是说，随着训练样本数量的增加，用于分类器的超球面将不断扩大，因此通过学习获得的分类器将是不稳定的。另外，如果新添加的样本是错误标记的样本(这种情况通常在分类器的自动判定过程中发生)，通过学习获得的分类器的性能将越来越差。因此，在线SVDD法和增量SVDD法需要样本预先被正确地标记(正或负)，以便相对于较长的运行时间保持分类器的性能稳定。</p>
+    <p>[0012]	因此，需要提出一种新的技术来解决上述现有技术中的任何问题。</p>
+    <p>发明内容</p>
+    <p>[0013]	在本发明中，提供了一种基于支撑向量的新颖的用于分类器的在线半监督学习方法和装置，从而成功地解决了上述问题。</p>
+    <p>[0014]	根据本发明的第一方面，提供了一种用于分类器的在线半监督学习的方法，所述分类器使用多个现有的支撑向量，所述方法包括:候选样本选择步骤，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；新支撑向量选择步骤，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量；支撑向量替换步骤，通过所述新的支撑向量替换分类器的一些支撑向量；以及权重更新步骤，更新分类器中所有支撑向量的权重。</p>
+    <p>[0015]	根据本发明的另一方面，提供了一种用于分类器的在线半监督学习的装置，所述分类器使用多个现有的支撑向量，所述装置包括:候选样本选择单元，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；新支撑向量选择单元，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量；支撑向量替换单元，通过所述新的支撑向量替换分类器的一些支撑向量；以及权重更新单元，更新分类器中所有支撑向量的权重。[0016]	根据本发明的又一方面，提供了一种处理设备，所述处理设备包括分类器，所述分类器使用多个现有的支撑向量，所述处理设备包括:接收单元，接收新添加的未标记样本；候选样本选择单元，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本；新支撑向量选择单元，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量；支撑向量替换单元，通过所述新的支撑向量替换分类器的一些支撑向量；以及权重更新单元，更新分类器中所有支撑向量的权重。</p>
+    <p>[0017]	根据本发明的又一方面，提供一种用户注册对象检测方法，包括:接收要检测的对象；调用分类器，所述分类器包括根据用户注册对象产生的多个现有的支撑向量；基于分类器识别所述要检测的对象；以及使用根据上述用于分类器的半监督学习方法更新分类器。</p>
+    <p>[0018]	根据本发明的又一方面，提供一种用户注册对象检测系统，包括:对象接收单元，接收要检测的对象；对象识别单元，基于分类器识别所述要检测的对象，所述分类器包括根据用户注册对象产生的多个现有的支撑向量；以及上述用于分类器的在线半监督学习的装置，其用于更新分类器。</p>
+    <p>[0019]	本发明的一个优点在于:通过本发明，可以解决现有技术中分类器性能不稳定的问题，并且可以实现快速的计算。</p>
+    <p>[0020]	本发明的另一优点在于:通过本发明，利用不断地添加未标记样本，可以改进通过学习而获得的分类器的性能。通过本发明，不仅确保了学习的准确性，而且减少了空间和时间的复杂性。</p>
+    <p>[0021]	本发明的又一优点在于:通过本发明能够将虚检率稳定地控制在较低的水平，而且避免分类器陷入过训练。</p>
+    <p>[0022]	此外，通过本发明，分类器能够进行快速的学习和更新，从而能够成为用于跟踪数字产品的解决方案。</p>
+    <p>[0023]	通过以下参照附图对本发明的示例性实施例的详细描述，本发明的其它特征及其优点将会变得清楚。</p>
+    <p>附图说明</p>
+    <p>[0024]	构成说明书的一部分的附图描述了本发明的实施例，并且连同说明书一起用于解释本发明的原理。</p>
+    <p>[0025]	参照附图，根据下面的详细描述，可以更加清楚地理解本发明，其中:</p>
+    <p>[0026]	图1是示出现有技术中的SVDD法的示意图。</p>
+    <p>[0027]	图2是示出现有技术中的在线SVDD法的示意图，其中(a)为在线SVDD法的示意流程图，(b)为在线SVDD法的原理示意图。</p>
+    <p>[0028]	图3是示出现有技术中的增量SVDD法的示意图，其中(a)为增量SVDD法的示意流程图，(b)为增量SVDD法的原理示意图。</p>
+    <p>[0029]	图4示出了根据本发明的用于分类器的在线半监督学习方法的原理图。</p>
+    <p>[0030]	图5示出了根据本发明的实施方式用于分类器的在线半监督学习方法的总体流程图。</p>
+    <p>[0031]	图6示出了根据本发明的实施方式的用于选择候选样本的处理的详细流程图。[0032]	图7示出了根据本发明的实施方式，在计算任意样本到支撑向量的中心时fmin、</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00081.png"> <img id="idf0001" file="CN103294716AD00081.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00081.png" class="patent-full-image" alt="Figure CN103294716AD00081"> </a> </div>
+    <p>的关系图。 </p>
+    <p>[0033]	图8示出了根据本发明的实施方式的用于阈值设置的原理图。</p>
+    <p>[0034]	图9示出了根据本发明的实施方式的用于选择新支撑向量的处理的详细流程图。</p>
+    <p>[0035]	图10示出了根据本发明的实施方式的用于更新支撑向量的处理的详细流程图。</p>
+    <p>[0036]	图11示出了根据本发明的实施方式的用于分类器的在线半监督学习的装置的功能框图。</p>
+    <p>[0037]	图12示出了根据本发明的实施方式的处理设备的功能框图。</p>
+    <p>[0038]	图13示出了根据本发明的实施方式的用户注册对象检测方法的流程图。</p>
+    <p>[0039]	图14示出了根据本发明的实施方式的用户注册对象检测系统的功能框图。</p>
+    <p>[0040]	图15是示出能够实施本发明的实施方式的计算机系统的硬件配置的框图。</p>
+    <p>[0041]	图16示出了对于三段视频，根据本发明的方法、在线SVDD法和增量SVDD法的检测率和虚检率的比较图表。</p>
+    <p>[0042]	图17示出根据本发明的方法以及其它三种现有技术方法在跟踪应用中的平均错误率的图表。</p>
+    <p>[0043]	图18示出了根据本发明的方法以及其它三种现有技术方法在跟踪应用中的示例结果。</p>
+    <p>具体实施方式</p>
+    <p>[0044]	现在将参照附图来详细描述本发明的各种示例性实施例。应注意到:除非另外具体说明，否则在这些实施例中阐述的部件和步骤的相对布置、数字表达式和数值不限制本发明的范围。</p>
+    <p>[0045]	以下对至少一个示例性实施例的描述实际上仅仅是说明性的，决不作为对本发明及其应用或使用的任何限制。</p>
+    <p>[0046]	对于相关领域普通技术人员已知的技术、方法和设备可能不作详细讨论，但在适当情况下，所述技术、方法和设备应当被视为授权说明书的一部分。</p>
+    <p>[0047]	在这里示出和讨论的所有示例中，任何具体值应被解释为仅仅是示例性的，而不是作为限制。因此，示例性实施例的其它示例可以具有不同的值。</p>
+    <p>[0048]	应注意到:相似的标号和字母在下面的附图中表示类似项，因此，一旦某一项在一个附图中被定义，则在随后的附图中不需要对其进行进一步讨论。</p>
+    <p>[0049]	本发明旨在提供一种用于分类器的在线半监督学习方法。与现有技术中的方法不同，本发明所针对的样本是未标记的，即未确定为正样本的样本。</p>
+    <p>[0050]	图4示出了根据本发明的实施方式的用于分类器的在线半监督学习方法的原理图。如图4所示，图4中的内圆(即，最小的圆)示出了现有的分类器的用于分类的初始的超球面。该初始超球面是根据原有的样本生成的，并且原有的支撑向量限定其边界。通过该初始超球面可以区分支撑向量和非支撑向量。图4中的外圆(即最大的圆)为所有样本所处的最大可能空间的最大超球面。在本发明中，希望在初始超球面和最大超球面之间确定一个判定超球面，使得任意正样本落在所述判定超球面内的概率稳定。通过对任意正样本落在所述判定超球面内的概率进行设定，可以改变该判定超球面的大小。通过该判定超球面，可以确定所添加的未标记样本是否为正样本。</p>
+    <p>[0051]	如图4中所示，当新添加的未标记样本落在最大超球面与判定超球面之间时，判定该样本不是正样本，并且保持当前的分类器不变。当新添加的未标记样本落在初始超球面之内时，判定这些样本是正样本，但它们不会改变现有的支撑向量集，并且保持当前的分类器不变。当新添加的未标记样本位于初始超球面和判定超球面之间时，判定这些样本是正样本，并且它们将改变现有的支撑向量集。</p>
+    <p>[0052]	换言之，在根据本发明的用于分类器的在线半监督学习方法中，仅仅使用本位于初始超球面和判定超球面之间的样本来更新现有的分类器。通过本发明的方法，可以解决现有技术中分类器性能不稳定的问题，并且可以实现快速的计算。利用不断地添加未标记样本，可以改进通过学习而获得的分类器的性能。通过本发明，不仅确保了学习的准确性，而且减少了空间和时间的复杂性。</p>
+    <p>[0053]	图5示出了根据本发明的实施方式的用于分类器的在线半监督学习方法的总体流程图。如图5所示，希望通过新添加的未标记样本对现有的分类器进行学习，以获得新的分类器。首先在步骤10中，使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本。</p>
+    <p>[0054]	图6示出了根据本发明的实施方式的用于选择候选样本的处理的详细流程图。首先，在步骤110中，估计任 意样本与所有支撑向量的中心的最大距离，即根据现有分类器的支撑向量(特征空间中的支撑向量)生成可能的最大超球面。</p>
+    <p>[0055]	采用如前所述的支撑向量数据描述(SVDD)算法生成可能的最大超球面，即确定相对于超球面的中心a的最大半径Rmax。绝大部分或者所有训练样本都被包括在该最大超球面中。利用下面的公式(I)构建该超球面:</p>
+    <p>[0056]	minR2+C EiIi 条件是 I I x「a I 12 彡 R2+ ξ i 且 ξ i 彡 O	(I)</p>
+    <p>[0057]	其中，Xi为支撑向量，C是惩罚因子，Ii是松弛误差。</p>
+    <p>[0058]	对公式(I)应用拉哥朗日(Lagrangian)乘子,可以得到下面的对偶问题:</p>
+    <p>[0059]	min Σ “α i a jK(Xi.χ」)-Σ i a ^(X1.Xi)条件是 O &lt; a i &lt; C且Σ i a i = I (2)</p>
+    <p>[0060]	其中，Κ(.)是核函数，而且该函数值为非负。在本文中，核函数Κ(.)被选择为针对特征空间中的任意归一化特征向量ζ是恒定的，即Κ(ζ，ζ)是固定的。</p>
+    <p>[0061]	在一个实施例中，可以选择直方图交叉核(HIK)函数(例如参见A simpleguide to libHIK.http://c2inet.see.ntu.edu.sg/Jianxin/projects/libHIK/libHIK_v2.pdf):</p>
+    <p>[0062]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00091.png"> <img id="idf0002" file="CN103294716AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00091.png" class="patent-full-image" alt="Figure CN103294716AD00091"> </a> </div>
+    <p>[0063]	其中，T和Q是两个特征的直方图，N是直方图维数。</p>
+    <p>[0064]	需要注意的是，尽管在本实施例中以公式(3)给出的HIK函数为例进行了说明，但是本领域技术人员应当理解，还可以选择其它核函数，例如HelIinger ’ s核函数和Jensen-Shannon 核函数。</p>
+    <p>[0065]	求解公式⑵的对偶优化问题，可以得到支撑向量Xi e SVs和对应的权重α iD</p>
+    <p>[0066]	利用上述SVDD方法求得的支撑向量Xi和权重a i；我们就可以计算最大超球面半径1?_。对于给定的未标记样本，根据其生成归一化的特征向量Z，其到超球面中心的距离计算如下:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00101.png"> <img id="idf0003" file="CN103294716AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00101.png" class="patent-full-image" alt="Figure CN103294716AD00101"> </a> </div>
+    <p>[0068]	如果/0) = R2z &lt; R2，则特征向量Z就位于该超球面内，并被分类为目标对象类。因此，将超球面半径的平方，即R2，定义为分类器阈值。</p>
+    <p>[0069]	根据公式(4)，对于基于未标记的样本生成的特征向量z，可以计算其与超球面的中心的距离。该距离小于或等于超球面的半径，即</p>
+    <p>[0070]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00102.png"> <img id="idf0004" file="CN103294716AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00102.png" class="patent-full-image" alt="Figure CN103294716AD00102"> </a> </div>
+    <p>[0071]	在这里，我们并不是要找出支撑向量的中心的位置，而仅仅是要确定未标记样本的特征向量到该中心的距离。</p>
+    <p>[0072]	为了求解最大超球面半径Rmax，根据上面的公式(4)，我们得到:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00103.png"> <img id="idf0005" file="CN103294716AD00103.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00103.png" class="patent-full-image" alt="Figure CN103294716AD00103"> </a> </div>
+    <p>[0075]	如前所述，针对任意归一化特征向量z，Κ(ζ, ζ)是固定的。在根据公式(2)计算得出支撑向量Xi e SVs和对应的权重Cii的情况下，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00104.png"> <img id="idf0006" file="CN103294716AD00104.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00104.png" class="patent-full-image" alt="Figure CN103294716AD00104"> </a> </div>
+    <p>是固定值。因</p>
+    <p>此，求解fmax的关键在于求得</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00105.png"> <img id="idf0007" file="CN103294716AD00105.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00105.png" class="patent-full-image" alt="Figure CN103294716AD00105"> </a> </div>
+    <p>的最小值。如前所述，核函数κ(.)非负，因而</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00106.png"> <img id="idf0008" file="CN103294716AD00106.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00106.png" class="patent-full-image" alt="Figure CN103294716AD00106"> </a> </div>
+    <p>[0076]	故而，公式(5)简化为:</p>
+    <p>[0077]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00107.png"> <img id="idf0009" file="CN103294716AD00107.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00107.png" class="patent-full-image" alt="Figure CN103294716AD00107"> </a> </div>
+    <p>[0078]	至此，上述公式(6)确定了最大超球面的半径Rmax。由于K(.)是核函数，并且向量ζ已经被归一化，因此对于任意的ζ，Κ(ζ，ζ)都是固定的。如果所有的支撑向量都是固定</p>
+    <p>的，则</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00108.png"> <img id="idf0010" file="CN103294716AD00108.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00108.png" class="patent-full-image" alt="Figure CN103294716AD00108"> </a> </div>
+    <p>也是固定的。因此，在支撑向量确定的情况下，对于任意的z，fmax都是固定的。</p>
+    <p>[0079]	接着，参照图6中的步骤120，估计任意样本与所述中心的最小距离，即生成可能的最小超球面(确定最小距离fmin)。</p>
+    <p>[0080]	根据上述公式(4)，最小距离fmin表示如下:</p>
+    <p>[0081 ]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00109.png"> <img id="idf0011" file="CN103294716AD00109.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00109.png" class="patent-full-image" alt="Figure CN103294716AD00109"> </a> </div>
+    <p>[0084]	如前所述,在所有支撑向量确定的情况下,针对任何归一化特征向量ζ, 4&#8222;是固定的。因此，求解fmin就转变为求解的最大值。根据核函数的定义可知，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00111.png"> <img id="idf0012" file="CN103294716AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00111.png" class="patent-full-image" alt="Figure CN103294716AD00111"> </a> </div>
+    <p>max(	必然是一个特定值，但不会是正无穷大。</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00112.png"> <img id="idf0013" file="CN103294716AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00112.png" class="patent-full-image" alt="Figure CN103294716AD00112"> </a> </div>
+    <p>[0085]	在本例中，选择HIK函数进行描述。为了加速计算，我们定义一个查找表Iut:</p>
+    <p>     NM	NM</p>
+    <p>[0086]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00113.png"> <img id="idf0014" file="CN103294716AD00113.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00113.png" class="patent-full-image" alt="Figure CN103294716AD00113"> </a> </div>
+    <p>[0087]	其中</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00114.png"> <img id="idf0015" file="CN103294716AD00114.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00114.png" class="patent-full-image" alt="Figure CN103294716AD00114"> </a> </div>
+    <p>，M是支撑向量的个数，而N是特征向量的维数。</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00115.png"> <img id="idf0016" file="CN103294716AD00115.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00115.png" class="patent-full-image" alt="Figure CN103294716AD00115"> </a> </div>
+    <p>[0088]	如上述(8)可知，/wK Z Z ，但是max (Iut)不总是等于ΣΣ ，下面将详</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00116.png"> <img id="idf0017" file="CN103294716AD00116.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00116.png" class="patent-full-image" alt="Figure CN103294716AD00116"> </a> </div>
+    <p>细说明。当max (Iut)可以取到ΣΣ时，意味着在最小超球面内只有一个特征向量。这</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00117.png"> <img id="idf0018" file="CN103294716AD00117.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00117.png" class="patent-full-image" alt="Figure CN103294716AD00117"> </a> </div>
+    <p>种情况下，我们将该特征向量确定为超球面的中心，并确定</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00118.png"> <img id="idf0019" file="CN103294716AD00118.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00118.png" class="patent-full-image" alt="Figure CN103294716AD00118"> </a> </div>
+    <p>[0089]	图7示出了根据本发明的实施方式，在计算任意样本到支撑向量的中心中</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00119.png"> <img id="idf0020" file="CN103294716AD00119.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00119.png" class="patent-full-image" alt="Figure CN103294716AD00119"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001110.png"> <img id="idf0021" file="CN103294716AD001110.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001110.png" class="patent-full-image" alt="Figure CN103294716AD001110"> </a> </div>
+    <p>的关系图。参照图7，在最小超球面中的特征向量不是唯一的时，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001111.png"> <img id="idf0022" file="CN103294716AD001111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001111.png" class="patent-full-image" alt="Figure CN103294716AD001111"> </a> </div>
+    <p>/mrn本/max _ 2ΣΣ^Χ!/，在这种情况下，需要估计fmin，即，估计HiaX (Iut)。</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001112.png"> <img id="idf0023" file="CN103294716AD001112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001112.png" class="patent-full-image" alt="Figure CN103294716AD001112"> </a> </div>
+    <p>[0090]	在HIK核函数的示例中，针对第j维，定义如下:</p>
+    <p>[0091]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001113.png"> <img id="idf0024" file="CN103294716AD001113.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001113.png" class="patent-full-image" alt="Figure CN103294716AD001113"> </a> </div>
+    <p>[0092]	定义％的平均值为石,根据公式(8) JwZ1 = Mti因此，针对N维特征向量\来说，估计Iut的最大值等同于估计Iut的在N个维度上的平均值的最大值，即估计max(^)。下面采用统计学上的样本估计理论来估计石的范围。</p>
+    <p>[0093]	根据中心极限定律，f在样本空间中的分布满足正态分布。因此，概率Φζ是累积分布，具体地如下:</p>
+    <p>[0094]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001114.png"> <img id="idf0025" file="CN103294716AD001114.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD001114.png" class="patent-full-image" alt="Figure CN103294716AD001114"> </a> </div>
+    <p>[0095]	根据中心极限定律，</p>
+    <p>[0096]	max(lut) = N max(/2) = Ν{μ + λσε)	( 11 )</p>
+    <p>[0097]	根据标准误σβ =抚;- μ)2 Imwlil = ii；ax/iV以及概率Φζ，利用标准</p>
+    <p>正态累积分布函数的查找表，可以求得λ ζ，由此确定f的范围在[μ-λ ζ σ ε，μ+λζσε]之间，最后可以确定max(F) = μ + λζσε</p>
+    <p>                                                                ο</p>
+    <p>[0098]	最后，将公式(11)的结果代入公式(7)中，我们可以估计得到fmin。</p>
+    <p>[0099]	接下来，返回到图6，在步骤130中，利用在步骤120中计算的fmin和在步骤110中计算的fmax，生成判定超球面。[0100]	图8示出了根据本发明的实施方式的用于阈值设置的原理图。参见图8，在步骤410中，计算最大超球面的面积:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00121.png"> <img id="idf0026" file="CN103294716AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00121.png" class="patent-full-image" alt="Figure CN103294716AD00121"> </a> </div>
+    <p>[0102]	f (Z)在[fmwf.]范围内是大体相同类型的分布。下面，假定参数P，即描述判定超球面与最大超球面的表面积之比的预定值，利用在步骤20中计算的Rmin和在步骤10中计算的Rmax，来生成判定超球面的半径RT。参数P定义如下:</p>
+    <p>[0103]	P = (fT (z) -fmin) / (fmax-fmin)	(13)</p>
+    <p>[0104]	根据公式(13),可以确定判定超球面的半径Rt为:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00122.png"> <img id="idf0027" file="CN103294716AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00122.png" class="patent-full-image" alt="Figure CN103294716AD00122"> </a> </div>
+    <p>[0108]	根据上述公式(14)，我们针对一个特征向量ζ估计了一个适当的阈值，即fT(z)。最后，针对所有的支撑向量Xi e SVs来估计fT:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00123.png"> <img id="idf0028" file="CN103294716AD00123.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00123.png" class="patent-full-image" alt="Figure CN103294716AD00123"> </a> </div>
+    <p>[0110]	fT即为经训练分类器的阈值，无论训练样本有多少或怎样，都能够通过参数P将分类器的虚检率控制在稳定的水平下，即任何正特征向量落在所生成的判定超球面内的概率固定。即，通过参数P可以控制分类器的性能。</p>
+    <p>[0111]	然后，如图6的步骤140所示，根据在图6的步骤130中所设置的阈值判断新添加的未标记样本是否为候选样本。对于新添加的未标记样本，可以从中提取归一化的特征向量ζ。通过前述公式(4)计算该特征向量ζ到现有分类器的支撑向量的中心的距离。将该距离与在图6的步骤130中所设置的阈值进行比较。</p>
+    <p>[0112]	如果样本的特征向量ζ到中心的距离小于该阈值，则将该样本确定为候选样本；如果样本的特征向量ζ到中心的距离大于等于该阈值，则不将该样本确定为候选样本。</p>
+    <p>[0113]	返回参看图5，在图5的步骤20，使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量。图9示出了根据本发明的用于选择新支撑向量的处理的详细流程图。</p>
+    <p>[0114]	首先，在步骤210，根据原有分类器的多个现有的支撑向量绘制边界超球面。对于已知的分类器，最优解a* = La1, a2，-aj使得每个用于训练的支撑向量Xi满足如下的KKT (Karush-Kuhn-Tucker)条件:</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00124.png"> <img id="idf0029" file="CN103294716AD00124.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00124.png" class="patent-full-image" alt="Figure CN103294716AD00124"> </a> </div>
+    <p>[0116]	其中&lt;是从Xi到支撑向量的中心的距离。因此通过支撑向量得到的边界超球面是具有半径R2的超球面。KKT条件为本领域技术人员所公知，因此不对其进行详细介绍。</p>
+    <p>[0117]	接下来，在步骤220，根据步骤210中所得到的边界超球面确定所述候选样本是否为新的支撑向量。根据上述KKT条件，可以将候选样本，即目标训练数据分为三类:</p>
+    <p>[0118]	I)在球面内的Bi = O的数据点；</p>
+    <p>[0119]	2)在球面边界上的O &lt; &lt; C的数据点；[0120]	3)&#190; = C的落在球面之外并且具有非零ξ i的数据点。</p>
+    <p>[0121]	如图4所示，在最小超球面之内的候选样本将不会改变先前的特征向量集，并且保持原因的分类器不变。在边界超球面和关于阈值的判定超球面之间的候选样本将改变原有的支撑向量集。因此，如果候选样本在边界超球面之外，则将该候选样本选择为新的支撑向量。</p>
+    <p>[0122]	返回参看图5，在图5的步骤30，通过所述新的支撑向量替换分类器的一些支撑向量。图10示出了根据本发明的用于更新支撑向量的处理的详细流程图。</p>
+    <p>[0123]	在图10的步骤310中，将根据公式(4)计算每一个支撑向量到全部原有支撑向量中心的距离。所得到的结果是V= (Cl17Cl2,…心。其中，d为距离，η为支撑向量的个数。</p>
+    <p>[0124]	在步骤320中，对V= (C^d2，…dn)中的距离d进行升序排序，得到V' = ((I1 /，(V，…d/ )，其中(V是最近的距离，d/是最远的距离。然后，用新的支撑向量替换具有最近距离的向量，并保持支撑向量数恒定。例如，如果有三个新的支撑向量，则替换具有最近距离的三个原有的支撑向量。通过图10的操作，可以得到一组新的支撑向量。</p>
+    <p>[0125]	返回参看图5，在图5的步骤40，更新分类器中所有支撑向量的权重。在JohnC.Platt, Sequential Minimal Optimization:A Fast Algorithm for Training SupportVector Machines.http://research.microsoft.com/pubs/69644/tr-98-14.pdf 中公开了一种用于训练支撑向量机器的快速算法，即顺序最小优化(SMO)法。在Chih-Chung Changand Chih-Jen Lin, LIBSVM:a library for support vector machines,2001.Softwareavailable at http://csie.ntu.edu.tw/ &#12316;cjlin/libsvm 中公开了用于支撑向量机器的库LIBSVM。SMO法将较大的二次编程(QP)优化问题分解成一系列最小可能的QP问题。这些小QP问题通过分析解决，这样避免了使用耗时的数字QP优化作为内部循环。LIBSVM是用于SVM的库，它是当前使用最为广泛的SVM软件之一。上述文献的全部内容通过引用包含于本文中。使用SMO法，利用LIBSVM库可以更新分类器中所有支撑向量的权重，即对分类器进行重新学习。 </p>
+    <p>[0126]	图11示出了根据本发明的实施方式的用于分类器的在线半监督学习的装置1000的功能框图。该装置1000的功能模块可以由实现本发明原理的硬件、软件或硬件和软件的结合来实现。本领域技术人员可以理解的是图11中所描述的功能模块可以组合起来或者划分成子模块，从而实现上述发明的原理。因此，本文的描述可以支持对本文描述的功能模块的任何可能的组合、或者划分、或者更进一步的限定。</p>
+    <p>[0127]	如图11所示，根据一种实施方式，用于分类器的在线半监督学习的装置1000可包括:候选样本选择单元1100、新支撑向量选择单元1200、支撑向量替换单元1300以及权重更新单元1400。候选样本选择单元1100使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本。新支撑向量选择单元1200使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量。支撑向量替换单元1300通过所述新的支撑向量替换分类器的一些支撑向量。权重更新单元1400更新分类器中所有支撑向量的权重。</p>
+    <p>[0128]	根据另一种实施方式，所述候选样本选择单元1100还可以包括:第一估计单元1110、1120、设置单元1130和第一确定单元1140。第一估计单元1110估计任意样本与所有支撑向量的中心的最大距离。第二估计单元1120估计任意样本与所述中心的最小距离。设置单元1130在所述最大距离和最小距离之间设置用以判定新添加的未标记样本是否为正样本的阈值。第一确定单元1140根据所述阈值确定新添加的未标记样本是否为候选样本。</p>
+    <p>[0129]	优选地，所述阈值被设置成使得任意正样本落在所述阈值之内的概率固定。</p>
+    <p>[0130]	根据另一种实施方式，所述新支撑向量选择单元1200还可以包括:绘制单元1220和第二确定单元1230。绘制单元1220根据所述多个现有的支撑向量绘制边界超球面。第二确定单元1230确定所述候选样本是否为新的支撑向量，其中如果候选样本在边界超球面之外，则将该候选样本选择为新的支撑向量；以及如果候选样本在边界超球面之内，则不将该候选样本选择为新的支撑向量。</p>
+    <p>[0131]	根据另一种实施方式，所述支撑向量替换单元1300还可以包括:计算单元1310和替换单元1320。计算单元1310计算每一个支撑向量到所述中心的距离。替换单元1320用新的支撑向量替换具有最近距离的支持向量，并保持支撑向量数恒定。</p>
+    <p>[0132]	优选地，在所述第一估计单元中使用支撑向量数据描述(SVDD)算法。</p>
+    <p>[0133]	优选地，在所述第一估计单元和所述第二估计单元中使用核函数K (.)，其中所述核函数被选择成使得对于任意的归一化的向量ζ，Κ(ζ，ζ)都是恒定的。</p>
+    <p>[0134]	优选地，所述核函数Κ(.)包括直方图交叉核(HIK)。</p>
+    <p>[0135]	图12示出了根据本发明的实施方式的处理设备2000的功能框图。该处理设备2000的功能模块可以由实现本发明原理的硬件、软件或硬件和软件的结合来实现。本领域技术人员可以理解的是图12中所描述的功能模块可以组合起来或者划分成子模块，从而实现上述发明的原理。因此，本文的描述可以支持对本文描述的功能模块的任何可能的组合、或者划分、或者更进一步的限定。</p>
+    <p>[0136]	如图12所示，根据一种实施方式，所述处理设备2000可包括:分类器2100、接收单元2200、候选样本选择单元1100、新支撑向量选择单元1200、支撑向量替换单元1300以及权重更新单元1400。所述分类器2100使用多个现有的支撑向量。接收单元2200接收新添加的未标记样本。候选样本选择单元1100使用所述多个现有的支撑向量从新添加的未标记样本中选择候选样本。新支撑向量选择单元1200使用所述多个现有的支撑向量从所述候选样本中选择新的支撑向量。支撑向量替换单元1300通过所述新的支撑向量替换分类器的一些支撑向量。权重更新单元1400更新分类器中所有支撑向量的权重。</p>
+    <p>[0137]	根据另一种实施方式，所述候选样本选择单元1100还可以包括:第一估计单元1110、1120、设置单元1130和第一确定单元1140。第一估计单元1110估计任意样本与所有支撑向量的中心的最大距离。第二估计单元1120估计任意样本与所述中心的最小距离。设置单元1130在所述最大距离和最小距离之间设置用以判定新添加的未标记样本是否为正样本的阈值。第一确定单元1140根据所述阈值确定新添加的未标记样本是否为候选样本。</p>
+    <p>[0138]	优选地，所述阈值被设置成使得任意正样本落在所述阈值之内的概率固定。</p>
+    <p>[0139]	根据另一种实施方式，所述新支撑向量选择单元1200还可以包括:绘制单元1220和第二确定单元1230。绘制单元1220根据所述多个现有的支撑向量绘制边界超球面。第二确定单元1230确定所述候选样本是否为新的支撑向量，其中如果候选样本在边界超球面之外，则将该候选样本选择为新的支撑向量；以及如果候选样本在边界超球面之内，则不将该候选样本选择为新的支撑向量。[0140]	根据另一种实施方式，所述支撑向量替换单元1300还可以包括:计算单元1310和替换单元1320。计算单元1310计算每一个支撑向量到所述中心的距离。替换单元1320用新的支撑向量替换具有最近距离的支持向量，并保持支撑向量数恒定。</p>
+    <p>[0141]	优选地，在所述第一估计单元中使用支撑向量数据描述(SVDD)算法。</p>
+    <p>[0142]	优选地，在所述第一估计单元和所述第二估计单元中使用核函数K (.)，其中所述核函数被选择成使得对于任意的归一化的向量ζ，Κ(ζ，ζ)都是恒定的。</p>
+    <p>[0143]	优选地，所述核函数Κ(.)包括直方图交叉核(HIK)。</p>
+    <p>[0144]	图13示出了根据本发明的实施方式的用户注册对象检测方法的流程图。如图13所示，在步骤3100接收要检测的对象。例如，所述要检测的对象可以是图像或视频。在步骤3200，调用现有的分类器，所述分类器包括根据用户注册的对象产生的多个现有的支撑向量。在步骤3300，基于分类器识别所述要检测的对象。基于分类器识别要检测的对象的处理是本领域技术人员所公知的，在此不再赘述。在步骤3400，使用根据本发明原理的用于分类器的半监督学习方法更新分类器。这样，在下次有新的对象输入时，可以使用更新后的分类器进行检测。</p>
+    <p>[0145]	图14示出了根据本发明的实施方式的用户注册对象检测系统的功能框图。在图14中，用户注册对象检测系统4000，包括:对象接收单元4100、对象识别单元4200以及根据本发明原理的用于分类器的在线半监督学习的装置1000。对象接收单元4100接收要检测的对象。例如，所述要检测的对象可以是图像或视频。对象识别单元4200基于分类器识别所述要检测的对象，所述分类器包括根据用户注册的对象产生的多个现有的支撑向量。基于分类器识别要检测的对象的处理是本领域技术人员所公知的，在此不再赘述。根据本发明原理的用于分类器的在线半监督学习的装置1000更新分类器。这样，在下次有新的对象输入时，可以使用更新后的分类器进行检测。</p>
+    <p>[0146]	图15是示出能够实施本发明的实施例的计算机系统5000的硬件配置的框图。</p>
+    <p>[0147]	如图15中所示，计算机系统包括计算机5110。计算机5110包括经由系统总线5121连接的处理单元5120、系统存储器5130、固定非易失性存储器接口 5140、可移动非易失性存储器接口 5150、用户输入接口 5160、网络接口 5170、视频接口 5190和输出外围接口5195。</p>
+    <p>[0148]	系统存储器5130包括R0M(只读存储器)5131和RAM(随机存取存储器)5132。BIOS(基本输入输出系统)5133驻留在ROM 5131中。操作系统5134、应用程序5135、其它程序模块5136和某些程序数据5137驻留在RAM 5132中。</p>
+    <p>[0149]	诸如硬盘之类的固定非易失性存储器5141连接到固定非易失性存储器接口5140。固定非易失性存储器5141例如可以存储操作系统5144、应用程序5145、其它程序模块5146和某些程序数据5147。</p>
+    <p>[0150]	诸如软盘驱动器5151和⑶-ROM驱动器5155之类的可移动非易失性存储器连接到可移动非易失性存储器接口 5150。例如，软盘5152可以被插入到软盘驱动器5151中，以及⑶(光盘)5156可以被插入到⑶-ROM驱动器5155中。</p>
+    <p>[0151]	诸如麦克风5161和键盘5162之类的输入设备被连接到用户输入接口 5160。</p>
+    <p>[0152]	计算机5110可以通过网络接口 5170连接到远程计算机5180。例如，网络接口5170可以经由局域网5171连接到远程计算机5180。或者，网络接口 5170可以连接到调制解调器(调制器-解调器)5172，以及调制解调器5172经由广域网5173连接到远程计算机5180。</p>
+    <p>[0153]	远程计算机5180可以包括诸如硬盘之类的存储器5181，其存储远程应用程序5185。</p>
+    <p>[0154]	视频接口 5190连接到监视器5191。</p>
+    <p>[0155]	输出外围接口 5195连接到打印机5196和扬声器5197。</p>
+    <p>[0156]	图15所示的计算机系统仅仅是说明性的并且决不意图对本发明、其应用或用途进行任何限制。</p>
+    <p>[0157]图15所示的计算机系统可以被实施于任何实施例，可作为独立计算机，或者也可作为设备中的处理系统，可以移除一个或更多个不必要的组件，也可以向其添加一个或更多个附加的组件。</p>
+    <p>[0158]	下面给出通过利用根据本发明的原理的用于分类器的在线半监督学习方法与现有技术中的其它方法进行的试验对比的示例。特别指出，此处给出的示例仅仅是例示性的，用于示出本发明的有益效果，而绝非限制性的。</p>
+    <p>[0159]	将根据本发明的在线半监督学习方法用于用户注册对象检测(UROD)系统中。由用户给出对于特定对象的一次拍摄样本。通过该给定样本获得用于检测用户注册对象的基于SVDD的分类器。在图像上设定窗口(窗口可具有不同的缩放比例)，并且在图像上滑动窗口，从而将每个这样的局部窗口分类为包含目标或背景。然而，使用检测到的对象更新分类器。用于图像区域描述的特征是颜色和局部三重图案(LTP)。然后通过更新后的检测器检测下一帧图像。</p>
+    <p>[0160]	表I示出了进行试验的硬件和软件配置。</p>
+    <p> [0161]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00161.png"> <img id="idf0030" file="CN103294716AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00161.png" class="patent-full-image" alt="Figure CN103294716AD00161"> </a> </div>
+    <p>[0162]表	1</p>
+    <p>[0163]	评估例1</p>
+    <p>[0164]	随机选择了包括不同动物的8种视频。这些视频是有手持式照相机所拍摄的。由于离焦或运动，这些视频中的很多帧是模糊的，而且视角的变化和目标的形变都非常大。此外，照明还频繁地变化。在评估中，评价标准选择PASCAL标准。PASCAL标准在 M.Everingham, A.Zisserman, C.K.1.Williams, and L.Gool, iiThe PASCAL VisualObject Classes Challenge 2006(V0C2006)Results,，，http://www.pascal-network.0rg/challenges/V0C/voc2006/results.pdf中描述。该文献的全部内容通过引用包含于此。当标记区域与检测区域的交集/标记区域与检测区域的并集&gt; T时，检测区域被认定为争取的检测区域，即检测区域为正样本。在本评估例中，将T选为0.5。将根据本发明的方法与在线SVDD法和增量SVDD法进行比较。比较结果在表2中示出。[0165]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00171.png"> <img id="idf0031" file="CN103294716AD00171.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00171.png" class="patent-full-image" alt="Figure CN103294716AD00171"> </a> </div>
+    <p>[0166]表	2</p>
+    <p>[0167]	如表2所示，当根据本发明的在线半监督检测法用于对象检测时，可以相对于在线SVDD法和增量SVDD法大大地降低虚检率，并且检测率高于在线SVDD法，且与增量SVDD法相当。此外，根据本发明的在线半监督检测法的检测速度要高于在线SVDD法。</p>
+    <p>[0168]	评估例2</p>
+    <p>[0169]	选择三段视频进行评估试验，在每段视频中具有一个对象。对于每个对象的视频，仅仅提供一个样本，并且针对该样本使用立体变换模拟出50个样本，使用这些样本进行训练。分别利用根据本发明的在线半监督检测法、在线SVDD法和增量SVDD法进行检测试验。在检测每一帧的对象后，计算所有帧的检测率和虚检率(FPPI)。</p>
+    <p>[0170]	图16示出了对于三段视频，根据本发明的方法、在线SVDD法和增量SVDD法的检测率和虚检率的比较图表。在图16中，I指示根据本发明的在线半监督检测法，2指示在线SVDD法，3指示增量SVDD法。</p>
+    <p>[0171]	从图16中可以看出，当新样本持续添加时，根据本发明的在线半监督检测法能够将检测率稳定地保持在较高的水平，并`将虚检率稳定地保持在低水平。在线SVDD法和增量SVDD法无法将虚检率稳定地保持在较低的水平。</p>
+    <p>[0172]	评估例3</p>
+    <p>[0173]	下面研究根据本发明的方法在对象跟踪领域的应用。</p>
+    <p>[0174]	在 S.Stalder,H.Grabner,and L.Van Gool.Beyond sem1-supervised tracking.1CCV Workshop, 2009 中公开了超越半激励(beyond sem1-boost)法，在 A.Saffari, etc.0n-line random forests.1n Proc.0n-line Learning for Computer Vision Workshop,2009 中公开了在线随机森林(online Random Forest)法，在 B.Babenko, Μ.H.Yang andS.Belongie.Visual Tracking with Online Multiple Instance Learning.1n CVPR,2009中公开了在线多实例学习(oneline Mult1-1nstance Learning)法。在本技术领域中，上述三种方法被用于对象跟踪中。在评估例3中，在对象跟踪方面，将根据本发明的方法与上述三种方法进行比较。</p>
+    <p>[0175]	选取包括不同种类的动物的10个视频。这些视频是通过手持式摄像机拍摄的。由于这些视频中的很多帧因为离焦或运动而模糊，观察点的变化以及变形都非常多并且发生得很快，因此这些视频很难用于跟踪。</p>
+    <p>[0176]	对于使用本发明的方法以及上述三种方法的系统，我们指定在第一帧中对象的大小和位置，并且截取该图像区域作为用于本发明的分类器的初始教导样本。</p>
+    <p>[0177]	图17示出根据本发明的方法以及其它三种现有技术方法在跟踪应用中的平均错误率。所谓平均错误率是指在总帧数中累积的错误帧的比率。图18示出了根据本发明的方法以及其它三种现有技术方法在跟踪应用中示例结果。在图18中的方框即为在该帧所得到的跟踪对象。在图17和图18中，I指示根据本发明的方法的结果，2指示超越半激励法的结果，3指示在线随机森林法的结果，4指示在线多实例学习法的结果。</p>
+    <p>[0178]	从图17和图18中可以看出，根据本发明的方法在跟踪性能方面优于其它在线跟踪方法，其可以解决跟踪中的漂移问题。</p>
+    <p>[0179]	表3示出了根据本发明的方法与上述三种方法的计算时间的比较。</p>
+    <p>[0180]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00181.png"> <img id="idf0032" file="CN103294716AD00181.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN103294716A/CN103294716AD00181.png" class="patent-full-image" alt="Figure CN103294716AD00181"> </a> </div>
+    <p>[0181]表	3</p>
+    <p>[0182]	从表3可以看出，通过根据本发明的方法进行检测、学习和更新的速度足以满足在线应用的要求。</p>
+    <p>[0183]	可能以许多方式来实现本发明的方法和系统。例如，可通过软件、硬件、固件或者软件、硬件、固件的任何组合来实现本发明的方法和系统。用于所述方法的步骤的上述顺序仅是为了进行说明，本发明的方法的步骤不限于以上具体描述的顺序，除非以其它方式特别说明。此外，在一些实施例中，还可将本发明实施为记录在记录介质中的程序，这些程序包括用于实现根据本发明的方法的机器可读指令。因而，本发明还覆盖存储用于执行根据本发明的方法的程序的记录介质。</p>
+    <p>[0184]	虽然已经通过示例对本发明的一些特定实施例进行了详细说明，但是本领域的技术人员应该理解，以上示例仅是为了进行说明，而不是为了限制本发明的范围。本领域的技术人员应该理解，可在不脱离本发明的范围和精神的情况下，对以上实施例进行修改。本发明的范围由所附权利要求来限定。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101256629A?cl=zh">CN101256629A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年2月28日</td><td class="patent-data-table-td patent-date-value">2008年9月3日</td><td class="patent-data-table-td ">三菱电机株式会社</td><td class="patent-data-table-td ">用于使提升分类器适合于新样本的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102270192A?cl=zh">CN102270192A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年7月27日</td><td class="patent-data-table-td patent-date-value">2011年12月7日</td><td class="patent-data-table-td ">浙江工业大学</td><td class="patent-data-table-td ">一种基于svm主动学习的多标签分类控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US7526101">US7526101</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2005年1月24日</td><td class="patent-data-table-td patent-date-value">2009年4月28日</td><td class="patent-data-table-td ">Mitsubishi Electric Research Laboratories, Inc.</td><td class="patent-data-table-td ">Tracking objects in videos with adaptive classifiers</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">SHIGEO ABE: "<a href='http://scholar.google.com/scholar?q="%E3%80%8AAdvances+in+Computer+Vision+and+Pattern+Recognition%E3%80%8B%22%2C+31+December+2010%2C+article+%22Support+Vector+Machine+for+Pattern+Classification"'>《Advances in Computer Vision and Pattern Recognition》", 31 December 2010, article "Support Vector Machine for Pattern Classification</a>"</td></tr><tr><td class="patent-data-table-td ">2</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">武妍等: "<a href='http://scholar.google.com/scholar?q="%E5%8A%A8%E6%80%81%E6%9D%83%E5%80%BC%E9%A2%84%E5%88%92%E5%88%86%E5%AE%9E%E5%80%BCAdaboost%E4%BA%BA%E8%84%B8%E6%A3%80%E6%B5%8B%E7%AE%97%E6%B3%95"'>动态权值预划分实值Adaboost人脸检测算法</a>", 《计算机工程》, 5 February 2007 (2007-02-05), pages 2</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN104228767A?cl=zh">CN104228767A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年7月30日</td><td class="patent-data-table-td patent-date-value">2014年12月24日</td><td class="patent-data-table-td ">哈尔滨工业大学深圳研究生院</td><td class="patent-data-table-td ">一种基于掌纹认证的汽车启动方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06K9/6285">G06K9/6285</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06K9/6217">G06K9/6217</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06K9/6267">G06K9/6267</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=r4PSCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06N99/005">G06N99/005</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年9月11日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年10月16日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/6749b82fcd4d11832685/CN103294716A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%94%A8%E4%BA%8E%E5%88%86%E7%B1%BB%E5%99%A8%E7%9A%84%E5%9C%A8%E7%BA%BF%E5%8D%8A%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0.pdf?id=r4PSCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U05oNbK3Otb6TTlWM9IiEH-ptpAEw"},"sample_url":"https://www.google.com/patents/reader?id=r4PSCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

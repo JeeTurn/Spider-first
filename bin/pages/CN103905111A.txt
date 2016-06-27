@@ -1,0 +1,341 @@
+<!DOCTYPE html><html><head><title>专利 CN103905111A - 光链路检测方法、装置及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="光链路检测方法、装置及系统"><meta name="DC.contributor" content="冯恩波" scheme="inventor"><meta name="DC.contributor" content="唐利" scheme="inventor"><meta name="DC.contributor" content="深圳市华为安捷信电气有限公司" scheme="assignee"><meta name="DC.date" content="2012-12-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例提供一种光链路检测方法、装置及系统，其中光链路检测方法包括：接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；分别向至少一条光链路发送探测信号；根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立所述目标光链路标识与所述目标ONU的标识之间的对应关系，从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。"><meta name="DC.date" content="2014-7-2"><meta name="DC.relation" content="CN:101154996:A" scheme="references"><meta name="DC.relation" content="CN:101827287:A" scheme="references"><meta name="DC.relation" content="CN:102055523:A" scheme="references"><meta name="DC.relation" content="CN:102244539:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103905111:A"><meta name="citation_patent_application_number" content="CN:201210584779"><link rel="canonical" href="https://www.google.com/patents/CN103905111A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103905111A?cl=zh"/><meta name="title" content="专利 CN103905111A - 光链路检测方法、装置及系统"/><meta name="description" content="本发明实施例提供一种光链路检测方法、装置及系统，其中光链路检测方法包括：接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；分别向至少一条光链路发送探测信号；根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立所述目标光链路标识与所述目标ONU的标识之间的对应关系，从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。"/><meta property="og:title" content="专利 CN103905111A - 光链路检测方法、装置及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103905111A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103905111A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=vUwOCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103905111A&amp;usg=AFQjCNEetp7p-dE6xUMwc0jeXnPalm4Vtg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/decd4ee10f4e0f8031ee/CN103905111A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/decd4ee10f4e0f8031ee/CN103905111A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103905111A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103905111A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103905111A?cl=zh" style="display:none"><span itemprop="description">本发明实施例提供一种光链路检测方法、装置及系统，其中光链路检测方法包括：接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；分别向至少一条光链路发送探测信号；根据接收到的各探测信号的反射信号，分...</span><span itemprop="url">https://www.google.com/patents/CN103905111A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103905111A - 光链路检测方法、装置及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103905111A - 光链路检测方法、装置及系统" title="专利 CN103905111A - 光链路检测方法、装置及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103905111 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210584779</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年7月2日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年12月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年12月28日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210584779.7, </span><span class="patent-bibdata-value">CN 103905111 A, </span><span class="patent-bibdata-value">CN 103905111A, </span><span class="patent-bibdata-value">CN 201210584779, </span><span class="patent-bibdata-value">CN-A-103905111, </span><span class="patent-bibdata-value">CN103905111 A, </span><span class="patent-bibdata-value">CN103905111A, </span><span class="patent-bibdata-value">CN201210584779, </span><span class="patent-bibdata-value">CN201210584779.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%86%AF%E6%81%A9%E6%B3%A2%22">冯恩波</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%94%90%E5%88%A9%22">唐利</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B7%B1%E5%9C%B3%E5%B8%82%E5%8D%8E%E4%B8%BA%E5%AE%89%E6%8D%B7%E4%BF%A1%E7%94%B5%E6%B0%94%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">深圳市华为安捷信电气有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103905111A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103905111A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103905111A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=vUwOCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210584779&amp;usg=AFQjCNHq1I6X0VWTGGyuOhqz4YoLGkAOJw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=vUwOCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103905111A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEsgKhlYhQWiHseWxgSHq0tc2x6OQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT137880951" lang="ZH" load-source="patent-office">光链路检测方法、装置及系统</invention-title>
+      </span><br><span class="patent-number">CN 103905111 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA135720414" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例提供一种光链路检测方法、装置及系统，其中光链路检测方法包括：接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；分别向至少一条光链路发送探测信号；根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立所述目标光链路标识与所述目标ONU的标识之间的对应关系，从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(25)</span></span></div><div class="patent-text"><div mxw-id="PCLM64292903" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种光链路检测方法，其特征在于，包括:  接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；  分别向至少一条光链 路发送探测信号；  根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；  若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的光链路检测方法，其特征在于，所述反射信号为与光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于ONU中，或者以外置的方式与ONU连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1所述的光链路检测方法，其特征在于，所述分别向至少一条光链路发送探测信号包括:  通过光时域反射仪0TDR，分别向至少一条光链路发送探测信号，所述OTDR为波长可调谐的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1-3中任一所述的光链路检测方法，其特征在于，所述接收触发信号包括:  从光线路终端OLT接收所述触发信号；  或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.一种光链路检测方法，其特征在于，包括:  接收触发信号，所述触发信号中携带有目标ONU的标识；  向所述目标ONU的标识对应的光链路发送探测信号；  若未接收到所述探测信号的反射信号，则删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的光链路检测方法，其特征在于，所述反射信号为与所述光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于所述目标ONU中，或者以外置的方式与所述目标ONU连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求5所述的光链路检测方法，其特征在于，所述向所述目标ONU的标识对应的光链路发送探测信号包括:  通过OTDR向所述目标ONU的标识对应的光链路发送所述探测信号，所述OTDR为波长可调谐的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求5-7中任一所述的光链路检测方法，其特征在于，所述接收触发信号包括:  从OLT接收所述触发信号；  或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.一种光链路检测方法，其特征在于，包括:  若检测到目标ONU上线，则向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，分别向至少一条光链路发送探测信号，并根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系；接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系；  根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的光链路检测方法，其特征在于，所述若检测到目标ONU上线，则向光链路检测装置发送触发信号包括:  若检测到所述目标ONU上线，则通过网管设备向所述光链路检测装置发送所述触发信号。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.一种光链路检测方法，其特征在于，包括:  若检测到目标ONU下线，则向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，向所述目标ONU的标识对应的光链路发送探测信号，在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系；  接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系；  根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的光链路检测方法，其特征在于，所述若检测到目标ONU下线，则向光链路检测装置发送触发信号包括:  若检测到所述目标ONU下线，则通过网管设备向所述光链路检测装置发送所述触发信号。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.&#8212;种光链路检测装置，其特征在于，包括:  接收单元，用于接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；  发送单元，用于分别向至少一条光链路发送探测信号；  处理单元，用于根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的光链路检测装置，其特征在于，所述处理单元处理的所述反射信号为与光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于ONU中，或者以外置的方式与ONU连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求13所述的光链路检测装置，其特征在于，所述发送单元具体用于:  通过光时域反射仪0TDR，分别向至少一条光链路发送探测信号，所述OTDR为波长可调谐的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求13-15中任一所述的光链路检测装置，其特征在于，所述接收单元具体用于:  从光线路终端OLT接收所述触发信号；  或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.&#8212;种光链路检测装置，其特征在于，包括:  接收单元，用于接收触发信号，所述触发信号中携带有目标ONU的标识；  发送单元，用于向所述目标ONU的标识对应的光链路发送探测信号；  处理单元，用于在 未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的光链路检测装置，其特征在于，所述处理单元处理的所述反射信号为与所述光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于所述目标ONU中，或者以外置的方式与所述目标ONU连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求17所述的光链路检测装置，其特征在于，所述发送单元具体用于:  通过OTDR向所述目标ONU的标识对应的光链路发送所述探测信号，所述OTDR为波长可调谐的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求17-19中任一所述的光链路检测装置，其特征在于，所述接收单元具体用于:  从OLT接收所述触发信号；  或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</div>
+    </div>
+    </div> <div class="claim"> <div num="21" class="claim">
+      <div class="claim-text">21.一种光线路终端，其特征在于，包括:  发送单元，用于在检测到目标ONU上线时，向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，分别向至少一条光链路发送探测信号，并根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系；  接收单元，用于接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系;  处理单元，用于根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求21所述的光线路终端，其特征在于，所述发送单元还用于:  在检测到所述目标ONU上线时，通过网管设备向所述光链路检测装置发送所述触发信号。</div>
+    </div>
+    </div> <div class="claim"> <div num="23" class="claim">
+      <div class="claim-text">23.一种光线路终端，其特征在于，包括:  发送单元，用于在检测到目标ONU下线时，向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，向所述目标ONU的标识对应的光链路发送探测信号，在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系；  接收单元，用于接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系;  处理单元，用于根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求23所述的光线路终端，其特征在于，所述发送单元还用于:  在检测到所述目标ONU下线时，通过网管设备向所述光链路检测装置发送所述触发信号。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.&#8212;种光链路检测系统,其特征在于,包括:如权利要求13-16中任一所述的光链路检测装置或如权利要求17-20中任一所述的光链路检测装置，如权利要求21或22所述的光线路终端或如权利要求23或24所述的光线路终端，光分配网络以及至少一个光网络单元；所述光线路终端与所述光分配网络连接，所述光分配网络与所述至少一个光网络单元连接；所述光链路 检测装置分别与所述光线路终端和所述光分配网络连接。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES72713851" lang="ZH" load-source="patent-office" class="description">
+    <p>光链路检测方法、装置及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明实施例涉及光纤传输技术，尤其涉及一种光链路检测方法、装置及系统。</p>
+    <p>背景技术</p>
+    <p>[0002]点对多点(Point	to Mult1-Point, P2MP)的无源光网络(Passive OpticalNetwork,PON)的网络拓扑为点对多点的结构。光线路终端(Optical Line Terminal, OLT)的PON端口与多个光网络单元(Optical Network Unit,0NU)之间,通过一级或者多级分光的光分配网络(Optical Distribution Network, 0DN)连接。</p>
+    <p>[0003]	在施工阶段，为了获取P2MP网络的拓扑数据，需要对ODN的拓扑数据进行采集。ODN的拓扑数据包括光纤的长度、损耗信息及与ONU的连接关系。由于在施工阶段，ODN与ONU的连接关系已知，可以利用光时域反射仪(Optical Time-Domain Reflectometer,0TDR)对P2MP网络中各个分光器前后的光纤进行逐段测试，获得各段光纤的长度；采用光功率计对P2MP网络进行端到端的光损耗测试，获得端到端的损耗信息。</p>
+    <p>[0004]	但是，在维护阶段，如果ODN与ONU的连接关系发生变化，例如光纤重新跳线或者光纤重新熔接等，则OLT无法自动检测到ODN与ONU之间的连接关系所发生的变化，相应地，也就无法自动更新ODN的拓扑数据，因此现有技术中的P2MP网络无法实现OLT对ONU的端到端的管理。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明实施例提供一种光链路检测方法、装置及系统，用于解决现有技术中的P2MP网络无法实现OLT对ONU的端到端管理的问题。</p>
+    <p>[0006]	本发明实施例第一个方面是提供一种光链路检测方法，包括:</p>
+    <p>[0007]	接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；</p>
+    <p>[0008]	分别向至少一条光链路发送探测信号；</p>
+    <p>[0009]	根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；</p>
+    <p>[0010]	若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0011]	结合第一个方面提供的光链路检测方法，在第一种可能的实现方式中，所述反射信号为与光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于ONU中，或者以外置的方式与ONU连接。</p>
+    <p>[0012]结合第一个方面提供的光链路检测方法，在第二种可能的实现方式中，所述分别向至少一条光链路发送探测信号包括:</p>
+    <p>[0013]	通过光时域反射仪0TDR，分别向至少一条光链路发送探测信号，所述OTDR为波长</p>
+    <p>可调谐的。</p>
+    <p>[0014]	结合第一个方面或第一至二种可能的实现方式，在第三种可能的实现方式中，所述接收触发信号包括:[0015]	从光线路终端OLT接收所述触发信号；</p>
+    <p>[0016]	或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</p>
+    <p>[0017]	本发明实施例第二个方面是提供一种光链路检测方法，包括:</p>
+    <p>[0018]	接收触发信号，所述触发信号中携带有目标ONU的标识；</p>
+    <p>[0019]	向所述目标ONU的标识对应的光链路发送探测信号；</p>
+    <p>[0020]	若未接收到所述探测信号的反射信号，则删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0021]	结合第二个方面提供的光链路检测方法，在第一种可能的实现方式中，所述反射信号为与所述光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于所述目标ONU中，或者以外置的方式与所述目标ONU连接。</p>
+    <p>[0022]	结合第二个方面提供的光链路检测方法，在第二种可能的实现方式中，所述向所述目标ONU的标识对应的光链路发送探测信号包括:</p>
+    <p>[0023]	通过OTDR向所述目标ONU的标识对应的光链路发送所述探测信号，所述OTDR为波长可调谐的。</p>
+    <p>[0024]	结合第二个方面或第一至二种可能的实现方式，在第三种可能的实现方式中，所述接收触发信号包括:</p>
+    <p>[0025]	从OLT接收所述触发信号；</p>
+    <p>[0026]	或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</p>
+    <p>[0027]	本发明实施例第三个方面是提供一种光链路检测方法，包括:</p>
+    <p>[0028]	若检测到目标ONU上线，则向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，分别向至少一条光链路发送探测信号，并根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系；</p>
+    <p>[0029]	接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系；</p>
+    <p>[0030]	根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</p>
+    <p>[0031]	结合第三个方面提供的光链路检测方法，在第一种可能的实现方式中，所述若检测到目标ONU上线，则向光链路检测装置发送触发信号包括:</p>
+    <p>[0032]	若检测到所述目标ONU上线，则通过网管设备向所述光链路检测装置发送所述触</p>
+    <p>发信号。</p>
+    <p>[0033]	本发明实施例第四个方面是提供一种光链路检测方法，包括:</p>
+    <p>[0034]	若检测到目标ONU下线，则向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，向所述目标ONU的标识对应的光链路发送探测信号，在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系；</p>
+    <p>[0035]	接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系；</p>
+    <p>[0036]	 根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。[0037]	结合第四个方面提供的光链路检测方法，在第一种可能的实现方式中，所述若检测到目标ONU下线，则向光链路检测装置发送触发信号包括:</p>
+    <p>[0038]	若检测到所述目标ONU下线，则通过网管设备向所述光链路检测装置发送所述触</p>
+    <p>发信号。</p>
+    <p>[0039]	本发明实施例第五个方面是提供一种光链路检测装置，包括:</p>
+    <p>[0040]	接收单元，用于接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；</p>
+    <p>[0041]	发送单元，用于分别向至少一条光链路发送探测信号；</p>
+    <p>[0042]	处理单元，用于根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0043]	结合第五个方面提供的光链路检测装置，在第一种可能的实现方式中，所述处理单元处理的所述反射信号为与光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于ONU中，或者以外置的方式与ONU连接。</p>
+    <p>[0044]	结合第五个方面提供的光链路检测装置，在第二种可能的实现方式中，所述发送单元具体用于:</p>
+    <p>[0045]	通过光时域反射仪0TDR，分别向至少一条光链路发送探测信号，所述OTDR为波长</p>
+    <p>可调谐的。</p>
+    <p>[0046]	结合第五个方面或第一至第二种可能的实现方式，在第三种可能的实现方式中，所述接收单元具体用于:</p>
+    <p>[0047]	从光线路终端OLT接收所述触发信号；</p>
+    <p>[0048]	或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</p>
+    <p>[0049]	本发明实施例第六个方面是提供一种光链路检测装置，包括:</p>
+    <p>[0050]	接收单元，用于接收触发信号，所述触发信号中携带有目标ONU的标识；</p>
+    <p>[0051]	发送单元，用于向所述目标ONU的标识对应的光链路发送探测信号；</p>
+    <p>[0052]	处理单元，用于在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0053]	结合第六个方面提供的光链路检测装置，在第一种可能的实现方式中，所述处理单元处理的所述反射信号为与所述光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于所述目标ONU中，或者以外置的方式与所述目标ONU连接。</p>
+    <p>[0054]	结合第六个方面提供的光链路检测装置，在第二种可能的实现方式中，所述发送单元具体用于:</p>
+    <p>[0055]	通过OTDR向所述目 标ONU的标识对应的光链路发送所述探测信号，所述OTDR为波长可调谐的。</p>
+    <p>[0056]	结合第六个方面或第一至第二种可能的实现方式，在第三种可能的实现方式中，所述接收单元具体用于:</p>
+    <p>[0057]	从OLT接收所述触发信号；</p>
+    <p>[0058]	或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</p>
+    <p>[0059]	本发明实施例第七个方面是提供一种光线路终端，包括:[0060]	发送单元，用于在检测到目标ONU上线时，向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，分别向至少一条光链路发送探测信号，并根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系；</p>
+    <p>[0061]	接收单元，用于接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系；</p>
+    <p>[0062]	处理单元，用于根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</p>
+    <p>[0063]	 结合第七个方面提供的光线路终端，在第一种可能的实现方式中，所述发送单元还用于:</p>
+    <p>[0064]	在检测到所述目标ONU上线时，通过网管设备向所述光链路检测装置发送所述触</p>
+    <p>发信号。</p>
+    <p>[0065]	本发明实施例第八个方面是提供一种光线路终端，包括:</p>
+    <p>[0066]	发送单元，用于在检测到目标ONU下线时，向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，向所述目标ONU的标识对应的光链路发送探测信号，在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系；</p>
+    <p>[0067]	接收单元，用于接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系；</p>
+    <p>[0068]	处理单元，用于根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</p>
+    <p>[0069]	结合第八个方面提供的光线路终端，在第一种可能的实现方式中，所述发送单元还用于:</p>
+    <p>[0070]	在检测到所述目标ONU下线时，通过网管设备向所述光链路检测装置发送所述触</p>
+    <p>发信号。</p>
+    <p>[0071]	本发明实施例第九个方面是提供一种光链路检测系统，包括光链路检测装置、光线路终端、光分配网络以及至少一个光网络单元；所述光线路终端与所述光分配网络连接，所述光分配网络与所述至少一个光网络单元连接；所述光链路检测装置分别与所述光线路终端和所述光分配网络连接。</p>
+    <p>[0072]	本发明实施例提供的光链路检测方法、装置及系统，通过在接收到触发信号之后，分别向至少一条光链路发送探测信号，根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立目标光链路标识和目标ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</p>
+    <p>附图说明[0073]	图1为本发明实施例提供的光链路检测方法的流程图；</p>
+    <p>[0074]	图2为本发明实施例提供的另一光链路检测方法的流程图；</p>
+    <p>[0075]	图3为本发明实施例提供的又一光链路检测方法的流程图；</p>
+    <p>[0076]	图4为本发明实施例提供的又一光链路检测方法的流程图；</p>
+    <p>[0077]	图5a为本发明实施例提供的光链路检测装置的结构示意图；</p>
+    <p>[0078]	图5b为本发明实施例提供的另一光链路检测装置的结构示意图；</p>
+    <p>[0079]	图6a为本发明实施例提供的又一光链路检测装置的结构示意图；</p>
+    <p>[0080]	图6b为本发明实施例提供的又一光链路检测装置的结构示意图；</p>
+    <p>[0081]	图7为本发明实施例提供的又一光链路检测装置的结构示意图；</p>
+    <p>[0082]	图8a为本发明实施例提供的光线路终端的结构示意图；</p>
+    <p>[0083]	图Sb为本发明实施例提供的另一光线路终端的结构示意图；</p>
+    <p>[0084]	图9为本发明实施例提供的光链路检测系统的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0085]	本发明各实施例中ODN的末端分别与一个或多个ONU连接，优选地在每个ONU的内部增设反射器，或者在ONU的外部连接反射器。反射器的作用是对从ODN的光链路中接收到的信号进行反射。另外，本发明各实施例中的光链路检测装置可以为服务器等控制设备。主要应用在单独的ONU连接到光链路上，或者单独的ONU断开与光链路的连接关系的情况下，也就是说，本发明各实施例不涉及两个或多个ONU同时连接到各条光链路上，或者同时断开与各条光链路的连接关系的情况。[0086]	图1为本发明实施例提供的光链路检测方法的流程图，如图1所示，该光链路检测方法，包括:</p>
+    <p>[0087]	101、接收触发信号，所述触发信号中携带有目标ONU的标识。</p>
+    <p>[0088]	具体的，在0LT、0DN以及已与ODN的各条光链路连接的ONU均正常工作的情况下，若有新的ONU连接到ODN上，并已上电，则该新的ONU将通过ODN向OLT发起注册请求。在本发明实施例中，将新连接入ODN的0NU，称为目标0NU。</p>
+    <p>[0089]	由于，实际应用中的OLT包括一个或多个PON端口，每个PON端口与一级或多级分光器组成的ODN连接。本发明各实施例中的ODN是指连接在一个PON端口上的0DN，相应地，OLT与ODN连接也是通过该PON端口。对于OLT的多个PON端口而言，每个PON端口均可采用本发明各实施例中所述的实现方式，因此，以一个PON端口为例进行说明。</p>
+    <p>[0090]	目标ONU发送给OLT的注册请求中可以携带该目标ONU的介质访问控制(MediaAccess Control, MAC)地址，或者其他可用于标识ONU的信息。OLT在接收到该目标ONU发送的注册请求之后，优选地，OLT为该目标ONU分配光网络单元标识(Optical NetworkUnitIdentifier, ONU ID)。</p>
+    <p>[0091]	OLT接收到目标ONU发送的注册请求之后，可以获知该目标ONU是请求上线的0NU，相应地，生成触发信号，在该触发信号中携带该目标ONU的标识。目标ONU的标识可以为ONU的MAC地址，也可以为ONU ID等可以唯一标识ONU的信息。OLT将触发信号发送给光链路检测装置。</p>
+    <p>[0092]	进一步地，步骤101可以为，从OLT接收所述触发信号；或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</p>
+    <p>[0093]	具体的，OLT可以直接与光链路检测装置连接，也可以通过网络管理系统(NetworkManagement System, NMS)中的网管设备与光链路检测装置连接。</p>
+    <p>[0094]	若OLT直接与光链路检测装置连接时，直接将触发信号发送给光链路检测装置；若OLT通过网管设备间接地与光链路检测装置连接时，通过网管设备将触发信号发送给光链路检测装置。</p>
+    <p>[0095]	102、分别向至少一条光链路发送探测信号。</p>
+    <p>[0096]	具体的，对于利用本发明实施例中的方法连接到ODN的ONU而言，在光链路检测装置中会存储该ONU的标识与光链路标识的对应关系，该光链路标识为该ONU所连接的ODN中的光链路的标识。相应地，对于新连接到ODN上的目标ODN而言，光链路检测装置中不会存储有与该目标ODN的标识对应的光链路标识。</p>
+    <p>[0097]	因此，OLT发送给光链路检测装置的触发信号可以有如下两种可选的实现方式。</p>
+    <p>[0098]	一种可选的实现方式为，该触发信号中携带有表明目标ONU为新上线的ONU的信息。相应地，光链路检测装置在接收到触发信号之后，可以获知该目标ONU是新上线的0NU，从而向OLT的该PON端口对应各条光链路发送探测信号。</p>
+    <p>[0099]	另一种可选的实现方式为，该触发信号中未携带表明目标ONU为新上线的ONU的信息。相应地，光链路检测装置可以在接收到触发信号之后，在所述存储的ONU的标识与光链路标识的对应关系中进行查找，若未查找到与目标ONU的标识对应的光链路标识，则向OLT的该PON端口对应各条光链路发送探测信号。</p>
+    <p>[0100]	进一步地，通过0TDR，分别向至少一条光链路发送探测信号，所述OTDR为波长可调谐的。</p>
+    <p>[0101]	具体的，光链路检测装置可以将探测信号发送给0TDR，由OTDR将探测信号发送给OLT的该PON端口对应的各条光链路。并且，为了适应多级分光器组成的ODN的需要，优选地采用波长可调谐的0TDR。</p>
+    <p>[0102]	103、根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识。</p>
+    <p>[0103]	具体的，由于本发明各实施例中的ONU优选地内置或外置有反射器，因此无论是已连接在光链路上的ONU还是该目标0NU，均会将接收到的探测信号进行反射。</p>
+    <p>[0104]	各条光链路上的探测信号的反射信号在经过一级或多级分光器返回到一条光链路之后，其中将有部分信号返回至0LT，还有部分信号返回给光链路检测装置，或者通过OTDR返回为光链路检测装置。</p>
+    <p>[0105]	在采用光标签技术的基础上，光链路检测装置可以根据接收到的各探测信号的反射信号，获取到各反射信号所对应的光链路标识，也就是说，光链路检测装置可以获知各反射信号是在哪条光链路上传输的。</p>
+    <p>[0106]	进一步地，所述反射信号为与光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于ONU中，或者以外置的方式与ONU连接。</p>
+    <p>[0107]	具体的，由于本发明各实施例中的ONU均内置或外置有反射器，因此，光链路检测装置所接收到的反射信 号均是经过反射器反射的。</p>
+    <p>[0108]	需要说明的是，在ONU内部或外部设置反射器的方式仅为一种优选的实现方式，可选的对探测信号进行反射，产生反射信号的方式并不仅限于此。</p>
+    <p>[0109]	104、若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0110]	具体的，光链路检测装置将探测信号发送给各条光链路，相应地，连接有ONU光链路上均会返回探测信号的反射信号。由于本发明各实施例针对单独ONU上线或下线的情况，因此，在光链路检测装置接收到的各反射信号对应的光链路标识中，会存在一个目标光链路标识。该目标光链路标识是各条光链路中未与ONU的标识存在对应关系的光链路的标识。</p>
+    <p>[0111]	对于已上线的ONU而言，光链路检测装置存储有与该ONU的标识对应的光链路标识，对于新上线的ONU而言，光链路检测装置尚未存储与该新上线的ONU的标识对应的光链路标识。也就是说，若光链路检测装置接收到了某条光链路上的反射信号，但是不存在与该光链路的光链路标识对应的ONU的标识，则说明目标ONU是连接在该条光链路上的。</p>
+    <p>[0112]	相应地，光链路检测装置建立目标ONU的标识与目标光链路标识之间的对应关系。从而光链路检测装置在各ONU依次上线后，可以建立起各条光链路与各ONU的对应关系O</p>
+    <p>[0113]	对于已上线的ONU在下线后，再次上线的情况，同样可以采用上述实施例中的实现方式，更新各条光链路与各ONU的对应关系，从而能够实时地获知ONU与光链路的连接情况。</p>
+    <p>[0114]	光链路检测装置可以进一步地将光链路的标识与ONU的标识的对应关系，发送给0LT,以供OLT实现对ONU的端到端的管理。</p>
+    <p>[0115]	本发明实施例提供的光链路检测方法，通过在接收到触发信号之后，分别向至少一条光链路发送探测信号，根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立目标光链路标识和目标ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</p>
+    <p>[0116]	图2为本发明实施例提供的另一光链路检测方法的流程图，如图2所示，该方法包括:</p>
+    <p>[0117]	201、接收触发信号，所述触发信号中携带有目标ONU的标识。</p>
+    <p>[0118]	具体的，在0LT、0DN以及已与ODN的各条光链路连接的ONU均正常工作的情况下，若有ONU请求下线，则该ONU将在断开与ODN的连接之前，通过ODN向OLT发起下线请求，并在发送完下线请求之后，断开与ODN的连接。在本发明实施例中，将请求下线的0NU，称为目标ONU。</p>
+    <p>[0119]目标ONU发送给OLT的下线请求中，可以携带该目标ONU的MAC地址，或者其他用于标识ONU的信息。OLT在接收到目标ONU发送的下线请求之后，可以获知该目标ONU是请求下线的0NU，相应地，生成触发信号，在该触发信号中携带该目标ONU的标识。目标ONU的标识可以为ONU的MAC地址，也可以为ONU ID等可以唯一标识ONU的信息。OLT将触发信号发送给光链路检测装置。</p>
+    <p>[0120]	进一步地，步骤201可以为，从OLT接收所述触发信号；或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。[0121]	具体的，OLT可以直接与光链路检测装置连接，也可以通过匪S中的网管设备与光链路检测装置连接。</p>
+    <p>[0122]	若OLT直接与光链路检测装置连接时，直接将触发信号发送给光链路检测装置；若OLT通过网管设备间接地与光链路检测装置连接时，通过网管设备将触发信号发送给光链路检测装置。</p>
+    <p>[0123]	202、向所述目标ONU的标识对应的光链路发送探测信号。</p>
+    <p>[0124]	具体的，对于利用本发明实施例中的方法连接到ODN的ONU而言，在光链路检测装置中会存储该ONU的标识与光链路标识的对应关系，该光链路标识为该ONU所连接的ODN中的光链路的标识。</p>
+    <p>[0125]	因此，光链路检测装置可以根据触发信号中携带的目标ONU的标识，查找到与该目标ONU的标识对应的光链路标识，进而向该光链路标识对应的光链路发送探测信号。</p>
+    <p>[0126]	进一步地，通过OTDR向所述目标ONU的标识对应的光链路发送所述探测信号，所述OTDR为波长可调谐的。</p>
+    <p>[0127]	具体的，光链路检测装置可以将探测信号发送给0TDR，由OTDR将探测信号发送给OLT的该PON端口对应的各条光链路。并且，为了适应多级分光器组成的ODN的需要，优选地采用波长可调谐的0TDR。</p>
+    <p>[0128]	203、若未接收到所述探测信号的反射信号，则删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0129]	具体的，由于本发明各实施例中的ONU优选地内置或外置有反射器，因此对于已与光链路断开连接的0NU，将无法对光链路中的探测信号进行反射。也就是说，当目标ONU已经断开与光链路的连接之后，即使光链路检测装置在目标ONU的标识对应的光链路上发送探测信号，也不会在该条光链路上接收到探测信号的反射信号。</p>
+    <p>[0130]	进一步地，所述反射信号为与所述光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于所述目标ONU中，或者以外置的方式与所述目标ONU连接。</p>
+    <p>[0131]	具体的，由于本发明各实施例中的ONU均内置或外置有反射器，因此，光链路检测装置所接收到的反射信号均是经过反射器反射的。</p>
+    <p>[0132]	需要说明的是，在ONU内部或外部设置反射器的方式仅为一种优选的实现方式，可选的对探测信号进行反射，产生反射信号的方式并不仅限于此。</p>
+    <p>[0133]	光链路检测装置若在预设的时间长度结束之后，仍未接收到该条光链路上的反射信号，则删除该条光链路标识与该目标ONU的标识之间的对应关系。从而，光链路检测装置可以在ONU下线之后，更新各条光链路与各ONU的对应关系，从而能够实时地获知ONU与光链路的连接情况。</p>
+    <p>[0134]	光链路检测装置可以进一步地将光链路的标识与ONU的标识的对应关系，发送给0LT,以供OLT实现对ONU的端到端的管理。</p>
+    <p>[0135]	本发明实施例提供的光链路检测方法，通过在接收到触发信号之后，向目标ONU的标识对应的光链路发送探测 信号，若未接收到探测信号的反射信号，则删除该光链路的光链路标识与目标ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。[0136]	图3为本发明实施例提供的又一光链路检测方法的流程图，如图3所示，该方法包括:</p>
+    <p>[0137]	301、若检测到目标ONU上线，则向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识。</p>
+    <p>[0138]	执行步骤301是为了供所述光链路检测装置在接收到所述触发信号之后，分别向至少一条光链路发送探测信号，并根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0139]	进一步地，若检测到所述目标ONU上线，则通过网管设备向所述光链路检测装置发送所述触发信号。</p>
+    <p>[0140]	具体的，可以参见步骤101-104中所述的实现方式。</p>
+    <p>[0141]	 302、接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系。</p>
+    <p>[0142]	具体的，光链路检测装置在建立了目标光链路标识与目标ONU的标识之间的对应关系之后，可以将新建的对应关系发送给0LT，也可以将全部的对应关系发送给0LT。</p>
+    <p>[0143]	OLT相应地，接收光链路标识与ONU的标识之间的对应关系。</p>
+    <p>[0144]	303、根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</p>
+    <p>[0145]	具体的，由于OLT中预先存储由PON端口与ODN中的各条光链路的光链路标识之间的对应关系，在接收到光链路标识与ONU的标识之间的对应关系之后，在OLT中可以建立PON端口、光链路标识以及ONU的标识三者之间的对应关系，从而实现OLT对ONU的端到端的管理。</p>
+    <p>[0146]	本发明实施例提供的光链路检测方法，通过在检测到目标ONU上线之后，向光链路检测装置发送触发信号，以使光链路检测装置在接收到触发信号之后，分别向至少一条光链路发送探测信号，根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立目标光链路标识和目标ONU的标识之间的对应关系；相应地，OLT根据PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</p>
+    <p>[0147]	图4为本发明实施例提供的又一光链路检测方法的流程图，如图4所示，该方法包括:</p>
+    <p>[0148]	401、若检测到目标ONU下线，则向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识。</p>
+    <p>[0149]	执行步骤401是为了供所述光链路检测装置在接收到所述触发信号之后，向所述目标ONU的标识对应的光链路发送探测信号，在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0150]	进一步地，若检测到所述目标ONU下线，则通过网管设备向所述光链路检测装置发送所述触发信号。</p>
+    <p>[0151]	具体的，可以参见步骤201-203中所述的实现方式。[0152]	402、接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系。</p>
+    <p>[0153]	具体的，可以参见步骤302中所述的实现方式。</p>
+    <p>[0154]	403、根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</p>
+    <p>[0155]	具体的，可以参见步骤302中所述的实现方式。</p>
+    <p>[0156]	本发明实施例提供的光链路检测方法，通过在检测到目标ONU上线之后，向光链路检测装置发送触发信号，以使光链路检测装置在接收到触发信号之后，向目标ONU的标识对应的光链路发送探测信号，若未接收到探测信号的反射信号，则删除该光链路的光链路标识与目标ONU的标识之间的对应关系；相应地，OLT根据PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</p>
+    <p>[0157]	图5a为本发明实施例提供的光链路检测装置的结构示意图，如图5a所示，该光链路检测装置包括:接收单元11、发送单元12和处理单元13。</p>
+    <p>[0158]	接收单元11，用于接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识；</p>
+    <p>[0159]	发送单元12，用于分别向至少一条光链路发送探测信号；</p>
+    <p>[0160]	处理单元13，用于根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0161]	进一步地，所述处理单元13处理的所述反射信号为与光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于ONU中，或者以外置的方式与ONU连接。</p>
+    <p>[0162]	进一步地，所述发送单元12具体用于:</p>
+    <p>[0163]	通过光时域反射仪0TDR，分别向至少一条光链路发送探测信号，所述OTDR为波长</p>
+    <p>可调谐的。</p>
+    <p>[0164]	进一步地,所述接收单元11具体用于:</p>
+    <p>[0165]	从光线路终端OLT接收所述触发信号；</p>
+    <p>[0166]	或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</p>
+    <p>[0167]	具体的，本发明实施例中的光链路检测装置进行光链路检测的方法，可以参见上述对应的方法实施例中所述的操作步骤，此次不再赘述。</p>
+    <p>[0168]	本发明实施例提供的光链路检测装置，通过在接收到触发信号之后，分别向至少一条光链路发送探测信号，根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立目标光链路标识和目标ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</p>
+    <p>[0169]	图5b为本发明实施例提供的另一光链路检测装置的结构示意图，如图5b所示，该光链路检测装置包括:</p>
+    <p>[0170]	 处理器21、存储器22、总线23和通信接口 24。处理器21、存储器22和通信接口24之间通过总线23连接并完成相互间的通信。</p>
+    <p>[0171]	处理器21可能为单核或多核中央处理单元(Central Processing Unit, CPU),或者为特定集成电路(Application Specific Integrated Circuit, ASIC),或者为被配置成实施本发明实施例的一个或多个集成电路。</p>
+    <p>[0172]	存储器22可以为高速RAM存储器，也可以为非易失性存储器(non-volatilememory),例如至少一个磁盘存储器。</p>
+    <p>[0173]	存储器22用于存放程序221。具体的，程序221中可以包括程序代码，所述程序代码包括计算机操作指令。</p>
+    <p>[0174]	通信接口 24，用于接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识。</p>
+    <p>[0175]	处理器21运行程序221，以执行:</p>
+    <p>[0176]	分别向至少一条光链路发送探测信号；</p>
+    <p>[0177]	根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；</p>
+    <p>[0178]	若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立所述目标光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0179]	具体的，本发明实施例中的光链路检测装置进行光链路检测的方法，可以参见上述对应的方法实施例中所述的操作步骤，此次不再赘述。</p>
+    <p>[0180]	图6a为本发明实施例提供的又一光链路检测装置的结构示意图，如图6a示，该光链路检测装置包括:接收单元31、发送单元32和处理单元33。</p>
+    <p>[0181]	接收单元31，用于接收触发信号，所述触发信号中携带有目标ONU的标识；</p>
+    <p>[0182]	发送单元32，用于向所述目标ONU的标识对应的光链路发送探测信号；</p>
+    <p>[0183]	处理单元33，用于在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0184]	进一步地，所述处理单元33处理的所述反射信号为与所述光链路连接的反射器对所述探测信号进行反射所得到的信号，所述反射器内置于所述目标ONU中，或者以外置的方式与所述目标ONU连接。</p>
+    <p>[0185]	进一步地，所述发送单元32具体用于:</p>
+    <p>[0186]	通过OTDR向所述目标ONU的标识对应的光链路发送所述探测信号，所述OTDR为波长可调谐的。</p>
+    <p>[0187]	进一步地,所述接收单元31具体用于:</p>
+    <p>[0188]	从OLT接收所述触发信号；</p>
+    <p>[0189]	或者，从网管设备接收所述触发信号，所述网管设备与所述OLT连接。</p>
+    <p>[0190]	具体的，本发明实施例中的光链路检测装置进行光链路检测的方法，可以参见上述对应的方法实施例 中所述的操作步骤，此次不再赘述。</p>
+    <p>[0191]	本发明实施例提供的光链路检测装置，通过在接收到触发信号之后，向目标ONU的标识对应的光链路发送探测信号，若未接收到探测信号的反射信号，则删除该光链路的光链路标识与目标ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</p>
+    <p>[0192]	图6b为本发明实施例提供的又一光链路检测装置的结构示意图，如图6b所示，该光链路检测装置包括:</p>
+    <p>[0193]	处理器41、存储器42、总线43和通信接口 44。处理器41、存储器42和通信接口44之间通过总线43连接并完成相互间的通信。</p>
+    <p>[0194]	处理器41可能为单核或多核中央处理单元(Central Processing Unit, CPU),或者为特定集成电路(Application Specific Integrated Circuit, ASIC),或者为被配置成实施本发明实施例的一个或多个集成电路。</p>
+    <p>[0195]	存储器42可以为高速RAM存储器，也可以为非易失性存储器(non-volatilememory),例如至少一个磁盘存储器。</p>
+    <p>[0196]	存储器42用于存放程序421。具体的，程序421中可以包括程序代码，所述程序代码包括计算机操作指令。</p>
+    <p>[0197]	通信接口 44，用于接收触发信号，所述触发信号中携带有目标光网络单元ONU的标识。</p>
+    <p>[0198]	处理器41运行程序421，以执行:</p>
+    <p>[0199]	向所述目标ONU的标识对应的光链路发送探测信号；</p>
+    <p>[0200]	若未接收到所述探测信号的反射信号，则删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0201]	具体的，本发明实施例中的光链路检测装置进行光链路检测的方法，可以参见上述对应的方法实施例中所述的操作步骤，此次不再赘述。</p>
+    <p>[0202]	图7为本发明实施例提供的又一光链路检测装置的结构示意图，如图7所示，该光链路检测装置包括面向OLT的接口单元51、面向OLT的处理单元52、面向ODN的接口单元53、面向ODN的处理单元54、拓扑处理单元55和拓扑存储单元56。</p>
+    <p>[0203]	其中，面向OLT的接口单元51和面向OLT的处理单元52可以设置在同一个功能模块中；面向ODN的接口单元53和面向ODN的处理单元54可以设置在同一个功能模块中。</p>
+    <p>[0204]	以下分别以ONU上线和ONU下线的流程对各功能模块的功能进行说明。</p>
+    <p>[0205]	在ONU上线的流程中，面向OLT的接口单元51用于接收触发信号；</p>
+    <p>[0206]	面向OLT的处理单元52用于从所述触发信号中获取目标ONU的标识；</p>
+    <p>[0207]	拓扑处理单元55根据所述触发信号和所述触发信号中的目标ONU的标识，指示面向ODN的处理单元54，通过面向ODN的接口单元53向至少一条光链路发送探测信号；</p>
+    <p>[0208]	面向ODN的接口单元53还用于接收各探测信号的反射信号；</p>
+    <p>[0209]	面向ODN的处理单元54还用于根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识；</p>
+    <p>[0210]	拓扑处理单元55还用于在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系；</p>
+    <p>[0211]拓扑存储单元56用于存储光链路标识与ONU的标识之间的对应关系。</p>
+    <p>[0212]	在ONU下线的流程中，面向OLT的接口单元51用于接收触发信号；</p>
+    <p>[0213]	面向OLT的处理单元52用于从所述触发信号中获取目标ONU的标识；</p>
+    <p>[0214]	拓扑处理单元55根据所述触发信号和所述触发信号中的目标ONU的标识，指示面向ODN的处理单元54，通过面向ODN的接口单元53向所述目标ONU的标识对应的光链路发送探测信号；[0215]	面向ODN的接口单元53还用于接收探测信号的反射信号；</p>
+    <p>[0216]	面向ODN的处理单元54还用于在未接收到所述探测信号的反射信号时，告知拓扑处理单元55 ；</p>
+    <p>[0217]	拓扑处理单元55还用于在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系；</p>
+    <p>[0218]	拓扑存储单元56用于存储光链路标识与ONU的标识之间的对应关系。</p>
+    <p>[0219]	相应地，在上述两种流程中，拓扑处理单元55还用于将光链路标识与ONU的标识之间对应关系的变化，或者更新后的光链路标识与ONU的标识之间的对应关系，通过面向OLT的接口单元51，发送给0LT，以供OLT根据PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系，从而，实现OLT对ONU的端到端的管理。[0220]	具体的，本发明实施例中的光链路检测装置进行光链路检测的方法，可以参见上述对应的方法实施例中所述的操作步骤，此次不再赘述。</p>
+    <p>[0221]	图8a为本发明实施例提供的光线路终端的结构示意图，如图8a所示，该光线路终端包括:发送单元61、接收单元62和处理单元63。</p>
+    <p>[0222]	发送单元61，用于在检测到目标ONU上线时，向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，分别向至少一条光链路发送探测信号，并根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，在各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识时，建立所述目标光链路标识与所述目标ONU的标识之间的对应关系;</p>
+    <p>[0223]	或者，用于在检测到目标ONU下线时，向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识，以供所述光链路检测装置在接收到所述触发信号之后，向所述目标ONU的标识对应的光链路发送探测信号，在未接收到所述探测信号的反射信号时，删除所述光链路的光链路标识与所述目标ONU的标识之间的对应关系。</p>
+    <p>[0224]	接收单元62，用于接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系；</p>
+    <p>[0225]	处理单元63，用于根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</p>
+    <p>[0226]	进一步地，所述发送单元61还用于:</p>
+    <p>[0227]	在检测到所述目标ONU上线时，通过网管设备向所述光链路检测装置发送所述触发信号；</p>
+    <p>[0228]	或者，在检测到所述目标ONU下线时，通过网管设备向所述光链路检测装置发送所述触发信号。</p>
+    <p>[0229]	具体的，本发明实施例中的光线路终端进行光链路检测的方法，可以参见上述对应的方法实施例中所述的操作步骤，此次不再赘述。</p>
+    <p>[0230]	本发明实施例提供的光线路终端，通过在检测到目标ONU上线之后，向光链路检测装置发送触发信号，以使光链路检测装置在接收到触发信号之后，分别向至少一条光链路发送探测信号，根据接收到的各探测信号的反射信号，分别获取各反射信号对应的光链路标识，若各光链路标识中包括未与ONU的标识存在对应关系的目标光链路标识，则建立目标光链路标识和目标ONU的标识之间的对应关系；相应地，OLT根据PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。从而无需人工干预即可实时地检测ONU与光链路的连接情况，使得OLT能够实现对ONU的端到端的管理。</p>
+    <p>[0231]	图Sb为本发明实施例提供的另一光线路终端的结构示意图，如图Sb所示，该光线路终端包括:</p>
+    <p>[0232]	处理器71、存储器72、总线73和通信接口 74。处理器71、存储器72和通信接口74之间通过总线73连接并完成相互间的通信。</p>
+    <p>[0233]	处理器71可能为单核或多核中央处理单元(Central Processing Unit, CPU),或者为特定集成电路(Application Specific Integrated Circuit, ASIC),或者为被配置成实施本发明实施例的一个或多个集成电路。</p>
+    <p>[0234]	存储器72可以为高速RAM存储器，也可以为非易失性存储器(non-vo Iatilememory),例如至少一个磁盘存储器。</p>
+    <p>[0235]	存储器72用于存放程序721。具体的，程序721中可以包括程序代码，所述程序代码包括计算机操作指令。</p>
+    <p>[0236]	通信接口 74，用于在检测到目标ONU上线或者下线时，向光链路检测装置发送触发信号，所述触发信号中携带有所述目标ONU的标识；并接收所述光链路检测装置发送的光链路标识与ONU的标识之间的对应关系。</p>
+    <p>[0237]	处理器71运行程序721，以执行:</p>
+    <p>[0238]	根据无源光网络PON端口与光链路标识之间的对应关系，以及光链路标识与ONU的标识之间的对应关系，更新PON端口与光链路标识以及ONU的标识之间的对应关系。</p>
+    <p>[0239]	具体的，本发明实施例中的光线路终端进行光链路检测的方法，可以参见上述对应的方法实施例中所述的操作步骤，此次不再赘述。</p>
+    <p>[0240]	图9为本发明实施例提供的光链路检测系统的结构示意图，如图9所示，该光链路检测系统包括:如图5a、图5b、图6a、图6b或图7所述的光链路检测装置1，如图8a或8b所述的光线路终端2，以及光分配网络3以及至少一个光网络单元4，所述光分配网络3与所述至少一个光网络单元4连接；所述光链路检测装置I分别与所述光线路终端2和所述光分配网络3连接。</p>
+    <p>[0241]	具体的，在上述各实施例的基础上，本发明实施例以1:32的两级分光网络为例进行说明。第一级分光网络和第二级分光网络均支持光链路拓扑标识，也就是说，在该两级分光网络中可以利用光标签技术。</p>
+    <p>[0242]	第一级分光器为1:4的分光器，各条光链路可以通过光滤波器或者光纤布拉格光栅(Fiber Bragg Grating,FBG)输出；第二级分光器为1:8的分光器,各条光链路可以通过FBG输出。</p>
+    <p>[0243]	在0DN3中的每条光链路的末端，分别部署反射器。反射器还可以内置在各0NU4的内部。 </p>
+    <p>[0244]	光链路检测装置I通过0TDR、光开关单元(optical switch unit, 0SU)连接到波分复用(Wavelength Division Multiplexing, WDM)&#31281;合器(coupIer),进而与 0DN3 连接。光链路检测装置I将探测信号通过OTDR等设备发送至0DN3中的各条光链路。反射器将对接收到的探测信号进行反射。WDM部署在局端，与OLT的PON端口为1:1的连接关系。OTDR将探测信号通过WDM耦合到0DN3中，</p>
+    <p>[0245]	光链路检测装置I采用波长可调谐的OTDR监测0DN3中的各条光链路，可以实时地获知0DN3的拓扑形态，并获取分光级数、分光比和各个分光端口是否使用中的信息。</p>
+    <p>[0246]	在实际的运行过程中，有可能对各条光链路与各0NU4之间的连接关系进行调整。例如，将两个0NU4与光链路的连接关系互换。将原本与光标识(Optical Identification,0ID)为A_l_l的端口连接的ONU ID为a的0NU4，连接到OID为A_l_8的端口 ；将原本与OID为A_l_8的端口连接的ONU ID为b的0NU4，连接到OID为A_l_l的端口。</p>
+    <p>[0247]	在上述互换的过程中，0NU4上线或下线的实现方式，可以分别采用上述各对应的实施例中所述的实现方式，此次不再赘述。</p>
+    <p>[0248]	此外，在上述各实施例中，光链路检测装置通过OTDR自动完成对光纤长度和损耗的检测，具体的检测方法可以采用与现有技术中类似的实现方式，此次不再赘述。</p>
+    <p>[0249]	本领域普通技术人员可以理解:实现上述各方法实施例的全部或部分步骤可以通过程序指令相关的硬件来完成。前述的程序可以存储于一计算机可读取存储介质中。该程序在执行时，执行包括上述各方法实施例的步骤；而前述的存储介质包括:R0M、RAM、磁碟或者光盘等各种可以存储程序代码的介质。</p>
+    <p>[0250]	最后应说明的是:以上各实施例仅用以说明本发明的技术方案，而非对其限制；尽管参照前述各实施例对 本发明进行了详细的说明，本领域的普通技术人员应当理解:其依然可以对前述各实施例所记载的技术方案进行修改，或者对其中部分或者全部技术特征进行等同替换；而这些修改或者替换，并不使相应技术方案的本质脱离本发明各实施例技术方案的范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101154996A?cl=zh">CN101154996A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年9月30日</td><td class="patent-data-table-td patent-date-value">2008年4月2日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">光网络单元及其接入方法、光线路终端及无源光网络系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101827287A?cl=zh">CN101827287A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年5月14日</td><td class="patent-data-table-td patent-date-value">2010年9月8日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">无源光网络及其接入方法、光网络单元和光线路终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102055523A?cl=zh">CN102055523A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年11月9日</td><td class="patent-data-table-td patent-date-value">2011年5月11日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种诊断无源光网络故障的方法、设备及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102244539A?cl=zh">CN102244539A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年5月11日</td><td class="patent-data-table-td patent-date-value">2011年11月16日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">分支光纤检测方法及系统、无源光网络和分光器</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=vUwOCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04B0010071000">H04B10/071</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=vUwOCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04B0010079000">H04B10/079</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=vUwOCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04B0010250000">H04B10/25</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年7月2日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年7月30日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/decd4ee10f4e0f8031ee/CN103905111A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%85%89%E9%93%BE%E8%B7%AF%E6%A3%80%E6%B5%8B%E6%96%B9%E6%B3%95_%E8%A3%85%E7%BD%AE%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=vUwOCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U23eT9MjPwI9quDlbXuwnPSiJb-EA"},"sample_url":"https://www.google.com/patents/reader?id=vUwOCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

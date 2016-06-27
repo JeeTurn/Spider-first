@@ -1,0 +1,329 @@
+<!DOCTYPE html><html><head><title>专利 CN102073654A - 生成与维护网页内容抽取模板的方法和设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="生成与维护网页内容抽取模板的方法和设备"><meta name="DC.contributor" content="于浩" scheme="inventor"><meta name="DC.contributor" content="吴科" scheme="inventor"><meta name="DC.contributor" content="夏迎炬" scheme="inventor"><meta name="DC.contributor" content="张姝" scheme="inventor"><meta name="DC.contributor" content="富士通株式会社" scheme="assignee"><meta name="DC.date" content="2009-11-20" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了生成与维护网页内容抽取模板的方法和设备。所述生成网页内容抽取模板的装置包括：输入单元；权重计算单元，被配置成计算各个输入树中的每种类型的节点的权重；最大对齐关系计算单元；合并单元；确定单元；和选择单元。所述维护网页内容抽取模板的装置包括：相似度计算单元，计算出相似度序列；统计量计算单元，利用预定大小的窗口遍历所述相似度序列并计算窗口中的统计量；统计量判断单元，根据计算的统计量来判断网页内容抽取模板是否已不适应输入网页；和重新计算单元。本发明可以高效地自动生成网页内容抽取模板，并在由于网页发生变化而导致抽取模板失效或者准确度下降时，可以快速地自动重新生成网页内容抽取模板。"><meta name="DC.date" content="2011-5-25"><meta name="citation_patent_publication_number" content="CN:102073654:A"><meta name="citation_patent_application_number" content="CN:200910226108"><link rel="canonical" href="https://www.google.com/patents/CN102073654A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102073654A?cl=zh"/><meta name="title" content="专利 CN102073654A - 生成与维护网页内容抽取模板的方法和设备"/><meta name="description" content="本发明提供了生成与维护网页内容抽取模板的方法和设备。所述生成网页内容抽取模板的装置包括：输入单元；权重计算单元，被配置成计算各个输入树中的每种类型的节点的权重；最大对齐关系计算单元；合并单元；确定单元；和选择单元。所述维护网页内容抽取模板的装置包括：相似度计算单元，计算出相似度序列；统计量计算单元，利用预定大小的窗口遍历所述相似度序列并计算窗口中的统计量；统计量判断单元，根据计算的统计量来判断网页内容抽取模板是否已不适应输入网页；和重新计算单元。本发明可以高效地自动生成网页内容抽取模板，并在由于网页发生变化而导致抽取模板失效或者准确度下降时，可以快速地自动重新生成网页内容抽取模板。"/><meta property="og:title" content="专利 CN102073654A - 生成与维护网页内容抽取模板的方法和设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102073654A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102073654A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=f5WUBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102073654A&amp;usg=AFQjCNGRFleL34iWqx6ejeET7b9HsZn2hQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/d11003d5f58cc172cccd/CN102073654A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/d11003d5f58cc172cccd/CN102073654A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102073654A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102073654A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102073654A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102073654B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102073654A?cl=zh" style="display:none"><span itemprop="description">本发明提供了生成与维护网页内容抽取模板的方法和设备。所述生成网页内容抽取模板的装置包括：输入单元；权重计算单元，被配置成计算各个输入树中的每种类型的节点的权重；最大对齐关系计算单元；合并单元；确定单元...</span><span itemprop="url">https://www.google.com/patents/CN102073654A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102073654A - 生成与维护网页内容抽取模板的方法和设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102073654A - 生成与维护网页内容抽取模板的方法和设备" title="专利 CN102073654A - 生成与维护网页内容抽取模板的方法和设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102073654 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910226108</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年5月25日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年11月20日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年11月20日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102073654B?hl=zh-CN&amp;cl=zh">CN102073654B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910226108.1, </span><span class="patent-bibdata-value">CN 102073654 A, </span><span class="patent-bibdata-value">CN 102073654A, </span><span class="patent-bibdata-value">CN 200910226108, </span><span class="patent-bibdata-value">CN-A-102073654, </span><span class="patent-bibdata-value">CN102073654 A, </span><span class="patent-bibdata-value">CN102073654A, </span><span class="patent-bibdata-value">CN200910226108, </span><span class="patent-bibdata-value">CN200910226108.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E6%B5%A9%22">于浩</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%90%B4%E7%A7%91%22">吴科</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A4%8F%E8%BF%8E%E7%82%AC%22">夏迎炬</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E5%A7%9D%22">张姝</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%AF%8C%E5%A3%AB%E9%80%9A%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%22">富士通株式会社</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102073654A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102073654A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102073654A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (9),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=f5WUBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910226108&amp;usg=AFQjCNG2SSGfM_knCUeS56TEDNSwzG8NTQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=f5WUBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102073654A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFdvRiup-aISZGqxGWLgKs3x8_X-Q"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT103307797" lang="ZH" load-source="patent-office">生成与维护网页内容抽取模板的方法和设备</invention-title>
+      </span><br><span class="patent-number">CN 102073654 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA85216871" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了生成与维护网页内容抽取模板的方法和设备。所述生成网页内容抽取模板的装置包括：输入单元；权重计算单元，被配置成计算各个输入树中的每种类型的节点的权重；最大对齐关系计算单元；合并单元；确定单元；和选择单元。所述维护网页内容抽取模板的装置包括：相似度计算单元，计算出相似度序列；统计量计算单元，利用预定大小的窗口遍历所述相似度序列并计算窗口中的统计量；统计量判断单元，根据计算的统计量来判断网页内容抽取模板是否已不适应输入网页；和重新计算单元。本发明可以高效地自动生成网页内容抽取模板，并在由于网页发生变化而导致抽取模板失效或者准确度下降时，可以快速地自动重新生成网页内容抽取模板。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM36393039" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种生成网页内容抽取模板的装置，包括：输入单元，被配置成根据网页结构相似的多个输入网页中的每个输入网页，建立文档 对象模型树，以作为输入树；权重计算单元，被配置成计算各个输入树中的每种类型的节点的权重； 最大对齐关系计算单元，被配置成使用任何一个输入树作为初始联合树，利用计算出 的权重来计算每个所述输入树和所述联合树之间的最大对齐关系；合并单元，被配置成利用计算出的所述最大对齐关系将所述输入树合并到所述联合树上；确定单元，被配置成确定所述联合树中最可能具有期望文本内容的节点；和 选择单元，被配置成选择所述联合树中包含所确定的节点的子树作为所述网页内容抽 取模板。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的装置，其中所述权重计算单元进一步包括： 输入树相似度计算单元，被配置成计算多个输入树两两之间的相似度；第一计算单元，被配置成计算每种类型的节点的权重，使得所述多个输入树的基于两 两之间的相似度的整体相似度最大。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的装置，其中所述输入树相似度计算单元进一步包括： 对齐单元，被配置成将两个输入树对齐；第二计算单元，被配置成根据所述两个输入树的对齐节点的权重来计算所述两个输入 树之间的相似度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.	一种维护网页内容抽取模板的装置，包括：相似度计算单元，被配置成计算所述网页内容抽取模板与依次输入的网页的文档对象 模型树之间的相似度，以构成相似度序列；统计量计算单元，被配置成利用预定大小的窗口遍历所述相似度序列，计算所述相似 度序列在窗口中的统计量；统计量判断单元，被配置成根据计算的统计量来判断网页内容抽取模板是否已不适应 输入网页；和重新计算单元，被配置成：在统计量判断单元判定所述网页内容抽取模板已不适应输 入网页的情况下，用权利要求1-3中任意一项权利要求的装置来重新计算网页内容抽取模 板。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的装置，所述重新计算单元进一步被配置成：从当前时刻减去基 于所述窗口所确定的时长作为所述网页内容抽取模板变为不适应输入网页的时刻，并从该 时刻起重新计算网页内容抽取模板。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求4所述的装置，其中所述统计量判断单元被配置成：通过将当前窗口的 统计量相对于之前部分或全部样本的统计量的变化与预定的阈值进行比较或者通过判断 计算的统计量是否满足预定的分布，来判断网页内容抽取模板是否已不适应输入网页。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.	&#8212;种生成网页内容抽取模板的方法，包括：根据网页结构相似的多个输入网页中的每个输入网页，建立文档对象模型树，以作为 输入树；计算各个输入树中的每种类型的节点的权重；使用任何一个输入树作为初始联合树，利用计算出的权重来计算每个所述输入树和联 合树之间的最大对齐关系；利用计算出的所述最大对齐关系将所述输入树合并到所述联合树上；确定所述联合树中最可能具有期望文本内容的节点；和选择所述联合树中包含所确定的节点的子树作为所述网页内容抽取模板。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的方法，其中计算各个输入树中的每种类型的节点的权重的步骤 进一步包括：计算多个输入树两两之间的相似度；计算每种类型的节点的权重，使得所述多个输入树的基于所述两两之间的相似度的整 体相似度最大。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种维护网页内容抽取模板的方法，包括：计算所述网页内容抽取模板与依次输入的网页的文档对象模型树之间的相似度，以构 成相似度序列；利用预定大小的窗口遍历所述相似度序列，计算相似度序列在所述窗口中的统计量；根据计算的统计量来判断网页内容抽取模板是否已不适应输入网页；和在判定所述网页内容抽取模板已不适应输入网页的情况下，用权利要求7-8中任意一 项权利要求的方法来重新计算网页内容抽取模板。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的方法，其中根据计算的统计量来判断网页内容抽取模板是否 已不适应输入网页的步骤包括：通过将当前窗口的统计量相对于之前部分或全部样本的统 计量的变化与预定的阈值进行比较或者通过判断计算的统计量是否满足预定的分布，来判 断网页内容抽取模板是否已不适应输入网页。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES42110529" lang="ZH" load-source="patent-office" class="description">
+    <p>生成与维护网页内容抽取模板的方法和设备</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明属于互联网信息处理领域，尤其涉及一种生成网页内容抽取模板的方法和 设备以及维护网页内容抽取模板的方法和设备。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着互联网的快速发展，互联网上的信息量每天都以惊人的速度增长。具有标记 语言格式，例如超文本标记语言HTML格式的Web网页是主要的信息载体。目前的Web网页 多为由数据库和模板生成的动态网页。通常一个网页中，除了包括主要的正文内容外，还包 含广告、导航信息、版权信息等与正文无关的信息。</p>
+    <p>[0003]	在信息搜索、信息过滤、文本分类、文本聚类、文摘等应用中，去除掉网页中的噪声 信息并提取网页内容是非常重要的一步。比如在信息搜索中，在去除掉噪声信息的网页内 容基础上建立索引可以有效地提高搜索的准确率；而在信息过滤、文本分类、文本聚类和文 摘等应用中，准确的网页内容抽取对系统的性能有很大的提升作用。</p>
+    <p>[0004]	可以利用网页内容抽取模板对相似的网页集合进行网页内容抽取。这种技术包括 基于HTML特征来自动地或半自动地生成网页内容抽取模板，并利用生成的网页内容抽取 模板来抽取网页内容。例如在CRESCENZI. V等人的“^Towards Automatic Data Extraction form Large Web Sites", In Proceedings of the 26th International Conference on Very Large Database Systems, Rome, Italy, 2001, ppl09-118)中公开了一种全自动的方 法，其中在网页集合中完成对抽取规则的自动推导。</p>
+    <p>[0005]	此外，在使用网页内容抽取模板进行网页内容抽取的实际过程中，往往会遇到“模 板维护”的问题，即由于网页发生变化而导致抽取模板失效或者准确度下降。</p>
+    <p>发明内容</p>
+    <p>[0006]	在下文中给出了关于本发明的简要概述，以便提供关于本发明的某些方面的基本 理解。应当理解，这个概述并不是关于本发明的穷举性概述。它并不是意图确定本发明的 关键或重要部分，也不是意图限定本发明的范围。其目的仅仅是以简化的形式给出某些概 念，以此作为稍后论述的更详细描述的前序。</p>
+    <p>[0007]	本发明的一个目的在于提供一种生成网页内容抽取模板的方法及设备。该方法及 设备可以高效地自动生成网页内容抽取模板。</p>
+    <p>[0008]	本发明的另一个目的在于提供一种维护网页内容抽取模板的方法及设备，以便可 以快速地自动判断当前网页内容抽取模板是否适应输入的网页。并在判定不适应的情况 下，从计算的发生变化的时刻起重新计算网页内容抽取模板。</p>
+    <p>[0009]	本发明的另一个目的是提供在被计算设备执行时使计算设备能够执行上述方法 的处理过程的计算机程序代码，以及其上存储有该计算机程序代码的计算机可读存储介质 及计算机程序产品。</p>
+    <p>[0010]	因此，本发明可以提高生成网页内容抽取模板的效率。此外，在被处理网页发生变化的情况下，本发明可以快速地自动重新生成网页内容抽取模板，这样实现了在不需要人 工干预的情况下保持较高的准确率。</p>
+    <p>[0011]	为了实现上述目的，根据本发明的一个方面，提供了一种生成网页内容抽取模板 的装置，包括：输入单元，被配置成根据网页结构相似的多个输入网页中的每个输入网页， 建立文档对象模型树，以作为输入树；权重计算单元，被配置成计算各个输入树中的每种类 型的节点的权重；最大对齐关系计算单元，被配置成使用任何一个输入树作为初始联合树， 利用计算出的权重来计算每个所述输入树和所述联合树之间的最大对齐关系；合并单元， 被配置成利用计算出的所述最大对齐关系将所述输入树合并到所述联合树上；确定单元， 被配置成确定所述联合树中最可能具有期望文本内容的节点；和选择单元，被配置成选择 所述联合树中包含所确定的节点的子树作为所述网页内容抽取模板。</p>
+    <p>[0012]	根据本发明的又一个方面，提供一种维护网页内容抽取模板的装置，包括：相似度 计算单元，被配置成计算所述网页内容抽取模板与依次输入的网页的文档对象模型树之间 的相似度，以构成相似度序列；统计量计算单元，被配置成利用预定大小的窗口遍历所述相 似度序列，计算所述相似度序列在窗口中的统计量；统计量判断单元，被配置成根据计算的 统计量来判断网页内容抽取模板是否已不适应输入网页；和重新计算单元，被配置成：在 统计量判断单元判定所述网页内容抽取模板已不适应输入网页的情况下，用上述装置来重 新计算网页内容抽取模板。</p>
+    <p>[0013]	根据本发明的另一个方面，提供一种生成网页内容抽取模板的方法，包括：根据网 页结构相似的多个输入网页中的每个输入网页，建立文档对象模型树，以作为输入树；计算 各个输入树中的每种类型的节点的权重；使用任何一个输入树作为初始联合树，利用计算 出的权重来计算每个所述输入树和联合树之间的最大对齐关系；利用计算出的所述最大对 齐关系将所述输入树合并到所述联合树上；确定所述联合树中最可能具有期望文本内容的 节点；和选择所述联合树中包含所确定的节点的子树作为所述网页内容抽取模板。</p>
+    <p>[0014]	根据本发明的再一个方面，提供一种维护网页内容抽取模板的方法：计算所述网 页内容抽取模板与依次输入的网页的文档对象模型树之间的相似度，以构成相似度序列； 利用预定大小的窗口遍历所述相似度序列，计算相似度序列在所述窗口中的统计量；根据 计算的统计量来判断网页内容抽取模板是否已不适应输入网页；和在判定所述网页内容抽 取模板已不适应输入网页的情况下，用上述方法来重新计算网页内容抽取模板。</p>
+    <p>[0015]	根据本发明的其它方面，还提供了相应的计算机程序代码、计算机可读存储介质 和计算机程序产品。</p>
+    <p>附图说明</p>
+    <p>[0016]	图1的框图示出根据本发明第一实施例的生成网页内容抽取模板的设备100的示 例性结构。</p>
+    <p>[0017]	图2是示出HTML代码和相应文档对象模型树的一个例子的示意图。</p>
+    <p>[0018]	图3是示出根据本发明第一实施例的生成网页内容抽取模板的方法的流程图。</p>
+    <p>[0019]	图4是示出权重计算单元的具体结构的示意图。</p>
+    <p>[0020]	图5是示出计算输入树中的每种类型的节点的权重的流程图。</p>
+    <p>[0021]	图6是示出根据本发明第二实施例的维护网页内容抽取模板的装置600的示意图。</p>
+    <p>[0022]	图7是示出根据本发明第二实施例的维护网页内容抽取模板的方法的流程图。</p>
+    <p>[0023]	图到图8c是示出两个输入树的匹配过程的示意图。</p>
+    <p>[0024]	图9是示出相似度序列随时间变化的示意图。</p>
+    <p>[0025]	图IOa到图IOj是示出一个示例性合并算法的示意图。</p>
+    <p>[0026]	图11是示出寻找重复模式的示例性情形的示意图。</p>
+    <p>[0027]	图12是示出了在其中可以实现根据本发明实施例的方法和/或装置的通用个人 计算机的示例性结构的方框图。</p>
+    <p>具体实施方式</p>
+    <p>[0028]	下面参照附图来说明本发明的实施例。应当注意，为了清楚的目的，附图和说明中 省略了与本发明无关的、本领域普通技术人员已知的部件和处理的表示和描述。</p>
+    <p>[0029]	图1的框图示出根据本发明第一实施例的生成网页内容抽取模板的设备100的示 例性结构。以下结合图1来描述根据本发明第一实施例的生成网页内容抽取模板的设备 100。</p>
+    <p>[0030]	如图1所示，设备100包括输入单元101、权重计算单元102、最大对齐关系计算单 元103、合并单元104、确定单元105和选择单元106。</p>
+    <p>[0031]	输入单元101针对网页结构相似的多个输入网页集合中的每个输入网页，建立文 档对象模型树，以作为输入树。对于一个网页，可以对其进行分析以得到其文档对象模型 树。文档对象模型树是一个树结构，具有便于操作访问以及重新恢复原始网页的优点。通 过依次读入网页的内容，识别每一个标签的名称、类别、参数和内容，通过父子关系来反映 嵌套关系，可以得到这种文档对象模型树。</p>
+    <p>[0032]	图2是示出HTML代码和相应文档对象模型树的一个例子的示意图。</p>
+    <p>[0033]	图加示出了示例性的HTML代码，其中通过缩进来表示嵌套关系。图2b示出了根 据图加示出的HTML代码获得的文档对象模型树，其中用圆圈表示节点，节点旁边的文字表 示节点所对应的HTML元素，节点间的连线表示节点间的父子关系（即相应标签间的嵌套关 系）。</p>
+    <p>[0034]	目前大部分的网页（新闻、BBS(电子布告栏系统）、Blog(博客））是基于数据库 和网页生成程序（例如脚本）生成的动态网页。由于存在这个特点，相同或类似网页生 成程序所生成的网页会表现出结构方面的相似性。例如搜狐的论坛（http://club.sohu. com/)和新浪的论坛（http:/Abs. sina. com. cn/)。或者进一步细分，比如搜狐的母婴论坛 (http://club. baby. sohu. com/)禾口搜狐的汽车社区(http://bbs. auto. sohu. com/)、新浪 的亲子论坛(http://bbs.baby. sina. com. cn/)禾口汽车论坛(http://bbs. auto. sina. com. cn/)等。</p>
+    <p>[0035]	另外，同一类的网页在结构上是相似的。例如对于BBS帖子而言，帖子的格式（原 帖的格式和回帖的格式）是统一的，变化的是帖子的内容和其它噪声信息（广告、其它链 接）；对于新闻网页而言，正文的格式往往是统一的，变化的是除正文以外的如广告和相关 链接的信息。一般说来，网页的布局也相对稳定，对于同一版面下面同一时期的网页尤其如 此。这些格式相对稳定和一致的正文或帖子的内容正是我们要抽取的内容。为了达到这个</p>
+    <p>6目的，可以根据一定数量的网页结构相似的网页来统计其规律，最终得到一个准确的抽取 模板。</p>
+    <p>[0036]	可以有各种方法来准备网页结构相似的多个输入网页。例如，可以确定特定URL， 并且根据URL目录层次关系获取相似网页的集合。例如当得到搜狐的“车行天下”论坛中 的某个网页时，可以找到其索引页面，通过索引页面下载在这个论坛中的其它的网页。将这 些网页作为输入网页。再例如，在URL信息不是很明确或者在某个子目录下面网页太少的 情况下，可以从已获得的网页集合中，通过计算与输入树中任意指定的初始联合树所基于 的网页结构的相似度或差异度的办法，来获得输入网页。如果一个网页与初始联合树所基 于的网页结构的相似度大于给定阈值（或差异度小于给定阈值），可以将该网页作为输入 网页。当然，也可以预先人为指定输入网页。</p>
+    <p>[0037]	文档对象模型树中的节点对应于HTML文档中的元素，而HTML文档中的元素在重 要性上是有区别的。</p>
+    <p>[0038]	例如，在语法上，HTML文档中的元素可以分为块元素（block level elements)和 内联元素（inline elements)两种类型。块元素和内联元素的区别主要体现在两个方面。 在内容模型方面，块元素可以包含其它块元素或者内联元素，而内联元素通常只能够包含 内联元素或者数据。块元素通常表示了比内联元素更大的结构。在展现格式方面，块元素 通常在新的一行上开始显示，而内联元素并不是这样的。因此，块元素的重要性显然应大于 内联元素。</p>
+    <p>[0039]	主要的块元素如下：</p>
+    <p>[0040]	address、blockquote、center、dir、div、dl、fieldset、form、hi、h2、h3、h4、h5、 h6、hr、isindex、menu、no frame s&gt; noscript、ol、p、pre、table、ul。</p>
+    <p>[0041]	主要的内联元素如下：</p>
+    <p>[0042]	abbr、acronym、b、bdo、big、br、cite、code、dfn、em、font、i、img、input、kbd、 label、q、s、samp、select、small、span、strike、strong、sub、sup、textarea、tt、U、var。</p>
+    <p>[0043]	因此，在网页内容抽取模板的生成过程中，需要对不同的类型的HTML元素给予不 同的权重以便体现HTML标签的区别，从而使生成的网页内容抽取模板更具实际意义。</p>
+    <p>[0044]	因此，根据本发明的第一实施例中，利用权重计算单元102来精确地自动计算多 个输入网页的输入树中出现的各种类型的节点的权重。</p>
+    <p>[0045]	如上所述，给不同类型的节点设置权重可以体现出节点的实际重要性，但另一方 面，权重设置会影响在随后的查找最大对齐关系的步骤中找到的最大对齐关系。不同的权 重设置对应于不同的最大对齐关系。因为综合权重（一般来说是权重之和）最大的对齐关 系对应于涵盖信息量最大的对齐关系，所以最优的权重设置应该是对应于综合权重最大的 对齐关系的权重设置。</p>
+    <p>[0046]	图5是示出计算输入树中的每种类型的节点的权重的流程图。在具体计算中，首 先计算出输入网页集合的整体相似度，接着，计算可以使得该整体相似度最大的权重值。</p>
+    <p>[0047]	如图5所示，处理在步骤S3021开始。接着，在步骤S3022，将多个输入网页的多 个输入树中的两个输入树对齐。可以考虑节点的层次顺序以及以下因素中的至少一个来实 现对齐：不同节点类型的优先级关系、预定的对齐层数、对齐节点的数量等等。接着，在步骤 S3023，根据权重来计算这两个输入树的输入树相似度。接着，在步骤S30M判断是否还有未计算的输入树。如果还有未计算的输入树，则返回到步骤步骤S3022。如果已经完成多个 输入树中两两之间的输入树相似度的计算，则处理进行到步骤S3025，其中将多个输入树中 两两之间的输入树相似度之和作为多个输入网页集合的整体相似度，并计算出可以使该整 体相似度最大的权重值作为权重值。可以利用许多方法进行计算。在本发明的一个优选实 施例中，采用线性回归的方法进行计算。最后，处理在步骤S3(^6结束。</p>
+    <p>[0048]	以下详细描述计算权重的具体处理过程。</p>
+    <p>[0049]	首先，在步骤S3022，将两颗输入树对齐。图8示出了两个输入树的匹配过程。在 图8中，示出了两颗输入树：图2所示的以节点201为根的输入树（以下称为树1)，以及以 节点301为根的输入树（以下称为树2)。</p>
+    <p>[0050]	在开始匹配的时候，对于树1中的节点201(&lt;div&gt;)，树2中有节点302、307、</p>
+    <p>311	&#171;div&#187;可以与之匹配。对树1中的节点202(&lt;form&gt;)，树2中有节点303、308、</p>
+    <p>312	&#171;form&#187;可以与之匹配。当匹配到树1的节点203 (</p>
+    <p>)的时候，树2中只有节点309 和313 (</p>
+    <p>)和其匹配。在继续匹配的时候，对于树1中的节点204 (〈input〉），树2中只有 节点314 &#171;input&#187;可以与之匹配。节点310 &#171;input&#187;虽然与其标签相同，但由于节点310 和节点309 &#171;ρ&#187;是兄弟关系，而在树1中，节点204 &#171;input&#187;和节点203 &#171;ρ&#187;是父子关 系，所以节点310无法匹配上。匹配到目前状态下，活动路径上有4个标签（&lt;diV&gt;，&lt;f0rm&gt;， </p>
+    <p>，〈input&#187;，各个标签在树1中的序号依次为（1，2，3，4)，在树2中的序号依次为（11， 12,13,14) 0序号满足顺序关系。图8a示出了该状态下的匹配关系，其中虚线表示匹配关 系。</p>
+    <p>[0051]	在继续匹配的时候，对树1中的节点205(&lt;table&gt;)，在树2中可以找到节点 304 &#171;table&#187;与之匹配。但由于在树1中，节点205 (〈table〉）的下标比前一个节点 204(标签〈input&#187;的序号大，而在树2中节点304(&lt;table&gt;)的序号就要比前一个节点 310 &#171;input&#187;的序号小，因而不满足序号的顺序关系，故而进行回溯，并将序列（&lt;div&gt;， &lt;form&gt;,&lt;table&gt;)加到一个新建的路径上。图8b示出了该状态下的匹配关系，其中虚线表 示匹配关系。</p>
+    <p>[0052]	按照这样的操作继续匹配下去，还可以得到匹配路径（&lt;div&gt;，&lt;form&gt;,〈table〉， &lt;tr&gt;, &lt;td&gt;)。图8c示出了该状态下的匹配关系，其中虚线表示匹配关系。</p>
+    <p>[0053]	以上是通过层次关系和顺序关系得到的匹配关系，在得到这些匹配关系后，需要 进一步考虑其它因素从中选出对齐关系。可以有很多种考虑的因素，例如节点的优先级、对 齐的层数、对齐节点的数量等等。</p>
+    <p>[0054]	在本发明的一个实施例中，可以考虑对齐节点的数量选出对齐关系。即将对齐节 点的数量最多的匹配关系视为对齐关系。在这种情况下，树1和树2的对齐关系是图8c所 示的匹配关系(&lt;div&gt;, &lt;form&gt;, &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;)。</p>
+    <p>[0055]	在本发明的另一个实施例中，可以考虑匹配节点的优先级关系来选出对齐关系。 例如，如上所述，块元素的优先级应大于内联元素，因此，可以选出块元素数目最多的匹配 关系作为对齐关系。在块元素数目相同的情况下，才进一步比较内联元素的数目。例如， 在图8示出的节点中，div、form, ρ是具有较高优先级的块元素，在三种匹配关系即图8a 所示的匹配关系(&lt;div&gt;, &lt;form&gt;, </p>
+    <p>,〈input&#187;、图8b所示的匹配关系(&lt;div&gt;, &lt;form&gt;, 〈table&#187;、图 8c 所示的匹配关系(&lt;div&gt;, &lt;form&gt;, &lt;table&gt;, &lt;tr&gt;, &lt;td&gt;)中，图 8a 所示的匹</p>
+    <p>8配关系（&lt;div&gt;，&lt;form&gt;，</p>
+    <p>，〈input&#187;中包含的具有较高优先级的块元素的数目最多。因 此，树1和树2的对齐关系则是图8a所示的匹配关系(&lt;div&gt;, &lt;form&gt;, </p>
+    <p>，〈input&#187;。</p>
+    <p>[0056]	还可以有很多其它方法来选择对齐关系。例如，还可以通过对齐的层数来选择匹 配关系作为对齐关系。当两棵树中出现某一层的节点完全对应一致的情况时，称为两颗树 中的某一层对齐。因此，可以选择包含最多数目的对齐层的匹配关系（即选择对齐层数最 多的匹配关系）作为对齐关系。</p>
+    <p>[0057]	尽管在上文中只是描述了根据多个因素（例如节点的优先级、对齐的层数、对齐 节点的数量等）中的一个因素来从匹配关系中选择对齐关系，但显然，也可以利用上述因 素中的任意两个或更多个的组合来从匹配关系中选择对齐关系。</p>
+    <p>[0058]	接着，在步骤S3023，根据权重来计算两个输入树的输入树相似度。</p>
+    <p>[0059]	在计算中，用Wi来表示某种类型节点的权重。</p>
+    <p>[0060]	对于两个输入树Tm和Tn，用Dmn来表示二者的相似度。此处，相似度Dnm被定义为： 两颗对象树Tm和Tn在对齐关系上的对齐节点的权重和。因此，Dnm可以被表示为：</p>
+    <p> [0061]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00091.png"> <img id="idf0001" file="CN102073654AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00091.png" class="patent-full-image" alt="Figure CN102073654AD00091"> </a> </div>
+    <p>[0062]	在式（1)中，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00092.png"> <img id="idf0002" file="CN102073654AD00092.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00092.png" class="patent-full-image" alt="Figure CN102073654AD00092"> </a> </div>
+    <p>表示在两个输入树T1^PTn的对齐关系上权重为Wi的节点出现的 次数。</p>
+    <p>[0063]	在判定已经针对网页集合的输入树中的每两个输入树进行了对齐步骤和计算输 入树的相似度的步骤之后，处理进行到步骤S3025。</p>
+    <p>[0064]	在步骤S3025，计算权重。</p>
+    <p>[0065]	首先，将网页集合中的多个输入树两两之间的相似度的总和定义为网页集合的整 体相似度，用f表示该整体相似度为：</p>
+    <p>[0066]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00093.png"> <img id="idf0003" file="CN102073654AD00093.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00093.png" class="patent-full-image" alt="Figure CN102073654AD00093"> </a> </div>
+    <p>[0067] 另外，权重应该满足归一化要求，因此，可以加入以下的约束：</p>
+    <p>[0068]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00094.png"> <img id="idf0004" file="CN102073654AD00094.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00094.png" class="patent-full-image" alt="Figure CN102073654AD00094"> </a> </div>
+    <p>[0069]</p>
+    <p>如上所述，最优的权重设置应该是可以使多个输入网页集合的整体相似度最大的 权重设置。因此，在保持f值最大的情况下求解上述方程（1)-03)便可以计算出最优的权重值。</p>
+    <p>[0070]	可以有很多方法来对上述方程（1)-03)进行求解。在本发明的一个优选实施例 中，通过线性回归的方法求解上述方程组来计算每种类型的节点的权重。</p>
+    <p>[0071]	图4是示出权重计算单元具体结构的示意图。如图4所示，权重计算单元102包 括：输入树相似度计算单元1021，被配置成计算多个输入树两两之间的相似度；第一计算 单元1022，被配置成计算每种类型的节点的权重，使得所述多个输入树的基于两两之间相 似度的整体相似度最大。其中，输入树相似度计算单元1021进一步包括：对齐单元10211， 被配置成将两个输入树对齐；第二计算单元10212，被配置成根据所述两个输入树的对齐 节点的权重来计算所述两个输入树之间的相似度。[0072]	回到图1，在权重计算单元102计算出每种类型的节点的权重后，最大对齐关系计 算单元103可以利用权重来进一步地计算每个输入树和联合树之间的最大对齐关系。</p>
+    <p>[0073]	最大对齐关系计算单元103首先使用多个输入树中的任何一个输入树作为初始 联合树。接着，按照以上结合图8描述的方式，在初始联合树和另一输入树之间查找匹配关 系。接着，根据权重计算单元102计算出的权重，在查找出的匹配关系中找出其中各个节点 的权重和最大的匹配关系作为最大对齐关系。这样，最大对齐关系计算单元103计算出输 入树和联合树之间的最大对齐关系。</p>
+    <p>[0074]	回到图1，在得到两棵树的最大对齐关系后，合并单元104将输入树合并到联合树 中。具体而言，合并单元104将输入树中每个对齐节点的内容累计到所述联合树中的相应 对齐节点，并且根据输入树中的每个对齐节点在联合树中的相应对齐节点的位置以及输入 树中的未对齐节点和对齐节点的位置关系，将输入树的未对齐节点插入到联合树中。</p>
+    <p>[0075]	将输入树合并到联合树的目的是统计对齐节点的信息。对齐节点的比例越大，抽 取出来的模板也就越准确。在合并的过程中也处理未对齐的节点。最终合并的结果就是将 最大对齐子树体现在联合树上，并且未对齐的节点也要体现在联合树上。在将节点合并到 联合树上的时候，可以有很多方法。</p>
+    <p>[0076]	下面结合图10说明一个示例性合并算法。</p>
+    <p>[0077]	假定联合树中前次操作的节点表示为pl^revSrc，本次操作的节点表示为pSrc，输 入树中前次操作的节点表示为pPrevDst，本次操作的节点表示为pDst。循环退出标志为 quit ο</p>
+    <p>[0078]	算法的基本处理包括：</p>
+    <p>[0079]	初始化：将两棵树的根节点和根节点的第一个子节点分别赋给pPrevSrc、pSrc、 pPrevDst、pDst。 quit = 0。</p>
+    <p>[0080]	在quit = 0的情况下，确定两棵树当前节点之间的关系（“联合树左向”、“联合 树右向”等）。如果是“对齐状态”，则在联合树的相应节点上标明对齐状态。如果是“具有 相同的对齐父节点”，则将输入树的节点PDst插入到联合树的节点pSrc的兄弟节点处，将 pSrc插入到输入树pDst的兄弟节点处，将这两个节点都打上未对齐标记。如果是“联合树 左向”，则查找PSrc的父节点在输入树上的对齐节点pParentDst，查找pSrc的左兄弟节点 在输入树上的对齐节点pLeftDst，将pSrc插入到pParentDst的子节点pLeftDst的右侧 (如果pLeftDst为空，则将pSrc插入到pParentDst的第一个子节点处）。如果是“联合树 右向”，则查找PDst的父节点在输入树上的对齐节点pParentSrc，查找pSrc的左兄弟节点 在输入树上的对齐节点pLeftSrc，将pDst插入到pParentSrc的子节点pLeftSrc的右侧 (如果pLeftSrc为空，则将pDst插入到pParentSrc的第一个子节点处）。将当前的节点 设为前次操作节点（pl^revSrc = pSrc ；pPrevDst = pDst ；)。从联合树和输入树上按先序 遍历方式取下一个节点赋给当前节点PSrc和pDst并继续确定节点间关系及后续的处理。</p>
+    <p>[0081]	如果pSrc和pDst都为空，则设置循环退出标志（quit = 1)。</p>
+    <p>[0082]	图10具体示出节点间各种关系的示例性情形。在图10中，一个圆圈代表一个节 点。在每种关系中，如果某个节点在另外一棵树上找不到匹配的节点，则将这样的节点中间 画上叉，以表明该节点找不到相匹配的节点。在这里，只表示出节点之间的父子关系，用一 条实斜线连接的同一棵树上的两个节点，上面的节点是下面节点的父节点。另外，也表示出两棵树之间的节点的关系。用一个水平的虚线连接的两个节点是对齐的节点。</p>
+    <p>[0083]	在上述算法的过程中，依次遍历两棵树，根据节点之间的不同关系来合并树。图 IOa&#12316;IOj示出了这些关系的定义。在合并的过程中，根据前次处理的节点O^reSrc和 PreDst分别表示前次处理的联合树节点和输入树节点）和本次处理的节点（Src和Dst分 别表示本次处理的联合树节点和输入树节点）的关系来判断如何操作。</p>
+    <p>[0084]	图IOa和图IOb表示出了当前的两个节点（Src和Dst)是对齐节点，且其父节点 也是对齐的情况。所不同的是图IOa中的当前节点的父节点就是前次处理的节点而且前次 处理的节点是对齐的。而图IOb中的当前节点的父节点不是前次处理的节点。这种情况， 我们称之为“对齐状态”，在这种情况下，我们不需要任何的插入操作，只是在联合树的相应 节点上标明对齐状态，例如累积输入树对齐节点的信息、对齐次数等等。</p>
+    <p>[0085]	图IOc和IOd表示出了当前的两个节点（Src和Dst)都是在对应的树上找不到对 齐节点的，但其父节点却是对齐节点的情况。所不同的是图IOc中的当前节点的父节点就 是前次处理的节点而且前次处理的节点是对齐的。而图IOd中的当前节点的父节点不是前 次处理的节点。这种情况我们称之为“具有相同的对齐父节点”。在这种情况下，相应的操 作是：将输入树的节点Dst插入到联合树的节点Src的兄弟节点处，同时也将Src插入到输 入树Dst的兄弟节点处（为了便于在联合树和输入树上的继续遍历），并将这两个节点都打 上未对齐标记。</p>
+    <p>[0086]	图IOe&#12316;IOg示出了输入树的当前节点（Dst)的对齐节点不是联合树的当前节点 (Src)的情况，图IOe中，Src在输入树上找不到对齐节点，PreSrc和I^reDst是对齐的且分 别是Src和Dst的父节点。图IOf中，Src在输入树上找不到对齐节点，PreSrc和PreDst 是对齐的，Src和Dst的父节点不是对齐的。图IOg中，Src和Dst都能在对方树上找到对 齐节点，但Src和Dst不是对齐节点，而Src和I^reSrc是父子关系，但Dst和I^reDst却不 是父子关系。这种情况，称之为“联合树左向”，相应的操作是：将联合树的节点Src插入到 输入树处，查找与Src节点的父节点对齐的输入树上的节点，通过该节点将Src插入到输入 树上。将Src节点标记为未对齐节点。</p>
+    <p>[0087]	图IOh&#12316;IOj示出了联合树的当前节点（Src)的对齐节点不是输入树的当前节点 (Dst)的情况，图IOh中，Dst在联合树上找不到对齐节点，PreSrc和I^reDst是对齐的且分 别是Src和Dst的父节点。图IOi中，Dst在联合树上找不到对齐节点，PreSrc和PreDst 是对齐的，Src和Dst的父节点不是对齐的。图IOj中，Src和Dst都能在对方树上找到对 齐节点，但Src和Dst不是对齐节点，而Dst和I^reDst是父子关系，但Src和I^reSrc却不 是父子关系。这种情况，称之为“联合树右向”，相应的操作是：查找与Dst节点的父节点对 齐的联合树上的节点，通过该节点将Dst插入到联合树上。将Dst节点标记为未对齐节点。</p>
+    <p>[0088]	通过针对每个输入网页重复最大对齐关系计算单元103的查找最大对齐关系的 处理以及合并单元104的将输入树合并到联合树上的处理，可以得到一棵经过多次合并的 联合树。该联合树上各个节点经过了多次合并获得了对齐次数以及未对齐次数、累积的节 点的内容等统计信息。</p>
+    <p>[0089]	回到图1，根据这些统计信息，确定单元105确定联合树中最可能具有期望文本内 容的节点。可以根据不同的标准来确定最可能具有期望文本内容的节点。</p>
+    <p>[0090]	以最可能文本内容块为例，在联合树上抽取模板的过程中，首先确定容易判断的大块内容文本位置（内容文本是指希望抽出的网页中的内容文本），然后通过大块内容文 本的位置的标签查找可能的重复模式，通过这样的步骤找到所有的内容文本位置。通过这 样的方法，不但可以抽取仅包含单一正文的网页的内容（比如新闻网页，其中只有一块集 中的正文内容，其它的则为广告或相关链接等和网页正文内容关系不大的信息），而且通过 查找重复模式（如下文所述），可以抽取出包含多个正文内容的网页（比如bbs上的帖子， 一个Wds的网页往往包含多个帖子，如果只抽取一个帖子的内容，则会丢失很多信息，而如 果将所有的帖子当作一个帖子内容来处理的话，又会带来很多噪声）。</p>
+    <p>[0091]	本发明一个具体实施例所采用的方法是，通过联合树上的节点的链接文本信息、 固定文本信息、可变文本信息占整个节点所有文本长度的比例来确定该节点作为内容文本 节点的可能性。由于联合树是由多个网页统计得来的，每个节点上的各种统计信息都是大 量网页统计的结果，这样就避免了在个别网页上得来的信息可能会有偏差的现象。举例说 来，对于bbs的帖子而言，每个帖子的长度差别很大，有的帖子很长，会有几千或上万字。对 包含这样帖子的网页，其中内容文本占整个文本的比例自然很大，也就很容易识别。但对有 些帖子而言，却可能只包含几个字，如果使用文本长度所占比例这个方法的话，就会把这样 的帖子当作噪声而忽略。但是，如果我们在很多帖子上进行统计的话，就可以消除个别帖子 带来的噪声，大量的统计的结果是稳定的。</p>
+    <p>[0092]	在本发明的一个具体的实施例中，我们采用如下的公式来确定内容文本块。</p>
+    <p>[0093]	Tl =链接文本长度/整个节点文本长度</p>
+    <p>[0094]	Tf =固定文本长度/整个节点文本长度</p>
+    <p>[0095]	Tc =除固定文本以外的文本长度/整个节点的文本长度</p>
+    <p>[0096]	score = cl * Tl+c2 * Tf+c3 * Tc</p>
+    <p>[0097]	cl+c2+c3=l。</p>
+    <p>[0098]	在本发明的一个具体的实施例中，采用cl = c2 = c3 = 1/3。</p>
+    <p>[0099]	判别内容文本块分两步。首先确定一个阈值，大于该阈值的节点被判定为内容文 本节点。在所有的节点的score都小于该阈值的情况下，选取score最大的一个节点当作内 容文本节点。这是因为，我们默认每个网页至少有一个内容文本块。如果所取的样本中，内 容文本块中正文的长度都比较小，比如我们的样本中，恰好每个帖子的长度都比较短（当 然这种情况不会经常发生，特别是在我们样本数量足够大的时候），这时我们还是要从中选 择一个内容文本块的。这时我们就采用score最大的节点当作内容节点。</p>
+    <p>[0100]	回到图1，选择单元106选择联合树中包含所确定的最可能具有期望文本内容的 节点的子树作为网页内容抽取模板。</p>
+    <p>[0101]	优选地，选择单元106可以在联合树中查找包含所确定的节点、重复出现的子树， 作为网页内容抽取模板。</p>
+    <p>[0102]	在得到最可能的内容文本块的节点以后，查找和该节点具有相同结构的重复模式 (即子树）。利用重复模式来发现那些由于特征不明显而很难通过常规的手段发现的内容 文本块节点。例如，在图11所示的模式中，如果在第一个块701中的div处判断为内容文 本块，通过查找重复模式，可在块703处找到块701所示的模式，因而将第3个块703的div 处也判断为内容文本块。</p>
+    <p>[0103]	在查找的过程中，可以约束具备重复模式的节点：其子节点也应该具有同样的结构。比如块701中的tr和第三个块703中tr因为子节点是一样的所以被判定为具有相同 模式的节点。而第一个块701中的tr和第二个块702中的tr因为子节点的结构不完全相 同，所以没有被认定为重复节点。也就是说，在查找重复模式的过程中，对重复模式中的每 一个节点的子节点采用元素名称一致性、层次一致性的约束。只有节点本身以及其所有的 子节点都满足元素名称一致性、层次一致性的约束的节点才被列为候选的重复模式中的节 点ο</p>
+    <p>[0104]	优选地，在判断的过程中，可以为重复模式的次数作限制。使用一个阈值DEF_ COUNTER，规定只有重复次数大于该值才能被判定为重复模式。</p>
+    <p>[0105]	图3是示出根据本发明第一实施例的生成网页内容抽取模板的方法的流程图。</p>
+    <p>[0106]	如图3所示，方法从步骤S300开始。在步骤S301，针对多个相似输入网页中的每 个输入网页建立输入树。在步骤S302，计算各个输入树中的每种类型的节点的权重。可通 过参照图1的实施例描述的方法来计算各种节点的权重。在步骤S303，计算输入树和联合 树之间的最大对齐关系。在步骤S304，利用计算的最大对齐关系，将输入树合并到联合树 上。在步骤S305，确定是否还有未处理的输入网页。如果有，则返回步骤S303;否则执行步 骤S306，在步骤S306，确定联合树中最可能具有期望文本内容的节点。在步骤S307，选择 联合树中包含所确定的最可能具有期望文本内容的节点的子树作为网页内容抽取模板。然 后，方法在步骤S308结束。</p>
+    <p>[0107]	在通过上述方法得到网页内容抽取模板后，可以利用网页内容抽取模板对输入网 页进行抽取。利用网页内容抽取模板来对输入网页进行内容抽取的方法包括：根据输入网 页建立文档对象模型树；在所述文档对象模型树中搜索与所述网页内容抽取模板匹配的子 树；和从所述子树中与所述网页内容抽取模板的最可能具有期望文本内容的节点相对应的 节点抽取内容。</p>
+    <p>[0108]	但是，在抽取过程中，当网页模板改变后，如果仍使用当前模板进行抽取，则会造 成抽取结果不准确甚至是完全错误。针对这个问题，在本发明第二实施例中，进一步提出了 维护网页内容抽取模板的方法和装置，其用于判断当前的网页内容抽取模板是否已经不适 应输入网页，并在判定不适应的情况下重新计算网页内容抽取模板。</p>
+    <p>[0109]	在根据本发明第二实施例的技术方案中，首先计算当前网页内容抽取模板与依次 输入的网页的文档对象模型树之间的相似度，由此得到一个相似度序列。然后，通过统计方 法来分析该相似度序列，以便判断当前的网页内容抽取模板是否已经不适应输入网页。</p>
+    <p>[0110]	在通过统计方法进行判断的过程中，可以根据任意合适的统计量进行分析。例如， 可以使用似然比、均值、方差等任意合适的统计量。在本发明的一个优选实施例中，选择对 数似然比作为统计量。选择对数似然比的优势在于：（1)它既适用于大量样本的统计，也适 用于小样本量的统计；（&#190;可以把那些从大量样本统计出来的数据跟那些从少量样本统计 出来的数据直接比较；C3)渐进性好于传统的同现统计模型。</p>
+    <p>[0111]	此外，可以使用任意合适的分析方法进行分析。例如，可以使用假设检验的方法、 阈值比较的方法等。在本发明的一个优选实施例中，使用假设检验的方法。而在本发明的 另一个优选实施例中，则使用阈值比较的方法。</p>
+    <p>[0112]	以下结合图6具体地描述根据本发明第二实施例的维护网页内容抽取模板的设 备 200。[0113]	图6的框图示出根据本发明第二实施例的维护网页内容抽取模板的设备600的示 例性结构。如图6所示，维护网页内容抽取模板的设备600包括相似度计算单元601、统计 量计算单元602、统计量判断单元603以及重新计算单元604。</p>
+    <p>[0114]	参见图6，相似度计算单元601计算依次输入的网页和当前的网页内容抽取模板 之间的相似度，由此得到一个相似度序列。如前所述，网页内容抽取模板实际上是最终得到 的联合树上的一颗子树，因此也呈现为文档对象模型树的形式。因此，输入网页与网页内容 抽取模板的相似度被定义为输入网页的输入树与网页内容抽取模板的最大对齐关系上的 权重之和。可以根据本发明第一实施例的计算权重的方法和查找最大对齐关系的方法，来 计算输入树与网页内容抽取模板中的节点权重以及二者之间的最大对齐关系。这样，针对 依次输入的网页，可以得到一个相似度序列。</p>
+    <p>[0115]	得到该相似度序列之后，需要利用统计方法对该相似度序列进行分析，以便判断 当前的网页内容抽取模板是否已经不适应输入网页。</p>
+    <p>[0116]	参见图6，在得到相似度序列之后，统计量计算单元602计算该相似度序列的统计 量在时间窗口的值。具体来说，利用预定大小的窗口遍历所述相似度序列，并计算相似度序 列的统计量在该窗口中的值，得到相应的统计量序列。</p>
+    <p>[0117]	该预定大小的窗口可以是任意的预定大小的时间窗口。例如，如图9所示，该时间 窗口为从、时刻到ta时刻的时间段，且设定该时间段的长度为m，即m = ta-t0O或者，在输 入网页是按时间顺序输入的情况下，该窗口可以是包含预定数量的网页的窗口。</p>
+    <p>[0118]	此外，该统计量可以是任意合适的统计量，例如可以是均值、方差、对数似然比等。 在本发明的一个优选实施例中，统计量为对数似然比。</p>
+    <p>[0119]	回到图6，统计量判断单元603根据计算的统计量来判断网页内容抽取模板是否 已不适应输入网页。可以采用许多的判断方法来进行判断。</p>
+    <p>[0120]	在一个优选实施例中，可以利用阈值比较的方法进行判断。具体阈值比较的方法 有很多种。例如，在统计量为似然比的情况下，通过判断在窗口中的似然比之和相对于该窗 口之前的样本在相同大小的窗口中的似然比之和的变化是否超过预定阈值，来判断网页内 容抽取模板是否已不适应输入网页。再例如，在统计量为均值的情况下，可以通过判断在窗 口中的均值相对于该窗口之前的窗口中的均值的变化或者该窗口之前所有样本的均值的 变化是否超过预定阈值，来判断网页内容抽取模板是否已不适应输入网页。再例如，也可以 通过判断在窗口中的方差相对于该窗口之前所有样本的方差的变化或者相对于该窗口之 前的窗口的方差的变化是否超过预定阈值，来判断网页内容抽取模板是否已不适应输入网 页。</p>
+    <p>[0121]	在另一个优选实施例中，可以采用假设检验的方法进行判断。具体的假设检验方 法有很多种。例如，在统计量为对数似然比的情况下，可以根据窗口中的似然比之和来进行 检验，进而判断网页内容抽取模板是否已不适应输入网页。在下文中将结合图9详细说明 对数似然比假设检验。</p>
+    <p>[0122]	统计量判断单元603还可以在判定网页内容抽取模板是否已不适应输入网页的 情况下，进一步计算出输入网页模板发生变化的时刻即需要重新计算网页内容抽取模板的 时刻。</p>
+    <p>[0123]	例如，在基于某一时间窗口中的统计量判定网页内容抽取模板已不适应输入网页的情况下（例如，该时间窗口中的统计量超过阈值或不符合假定分布），可以在该时间窗口 中任意选择一个时刻作为判定的输入网页模板发生变化的时刻。优选地，可以选择该时间 窗口的开始时刻作为输入网页模板发生变化的时刻。或者，也可以选择该时间窗口的中间 时刻作为输入网页模板发生变化的时刻。</p>
+    <p>[0124]	回到图6，在统计量判断单元603判定网页内容抽取模板已不适应输入网页的情 况下，重新计算单元604从输入网页模板发生变化的时刻重新计算网页内容抽取模板。可 以采用各种方法来重新计算网页内容抽取模板。优选地，可以采用根据本发明第一实施例 的方法来重新计算网页内容抽取模板。</p>
+    <p>[0125]	以下将结合图9来详细描述根据对数似然比判断网页内容抽取模板是否已经不 适应当前的输入网页的情况。</p>
+    <p>[0126]	图9示出了一个得到的相似度序列。可以有很多方法来得到上述的相似度序列。 优选地，可以通过以上结合相似度计算单元201描述的方法得到该相似度序列。在图9中， 时间窗口被示出为任意的从、到ta的时间段，且时长为：、-、=m。</p>
+    <p>[0127]	在判断过程中，以此窗口遍历该相似度序列，顺序地计算出相似度序列的统计量 在时长为m的窗口中的值，得到相应的统计量序列。根据计算的统计量的值来进行判断。 在以下的描述中，采用对数似然比作为统计量。如上所述，显然也可以采用其它形式的统计 量。</p>
+    <p>[0128]	可以采用任意合适的方法来根据对数似然比进行判断。如上所述，可以采用阈值 比较或假设检验的方法根据对数似然比进行判断。</p>
+    <p>[0129]	在本发明的一个优选实施例中，根据对数似然比采用阈值比较的方法进行判断。 具体来说，以预定长度的窗口遍历该相似度序列，并分别计算相似度序列在该窗口中的对 数似然比之和。将各个窗口的对数似然比之和与预先设定的阈值进行判断。当某一窗口中 的对数似然比之和大于预定阈值时，则判定网页模板发生了变化，并可以将该窗口中的任 意一个时刻作为网页模板发生变化的时刻。优选地，可以将该窗口的开始时刻作为网页模 板发生变化的时刻。或者，也可以将该窗口的中间时刻作为网页模板发生变化的时刻。</p>
+    <p>[0130]	在本发明的另一个优选实施例中，根据对数似然比利用假设检验的方法进行判 断。具体来说，以预定长度的窗口遍历该相似度序列，并分别计算相似度序列在该窗口中的 对数似然比之和；通过判断计算出的对数似然比之和是否满足假定的分布，来判定当前网 页内容抽取模板是否已经不适应输入网页的模板。当发现从某一窗口开始、窗口中的对数 似然比之和已经不符合假定的分布时，就判定网页模板发生了变化。并可以将该窗口中的 任意一个时刻作为网页模板发生变化的时刻。优选地，可以将该窗口的开始时刻作为网页 模板发生变化的时刻。或者，也可以将该窗口的中间时刻作为网页模板发生变化的时刻。</p>
+    <p>[0131]	以下给出根据对数似然比利用假设检验的方法进行判断的详细描述。</p>
+    <p>[0132]	首先，需要确定原假设和备择假设。可以进行任意的假设。例如，可以假设网页模 板是在ta时刻发生变化，也可以假设网页模板是在、时刻发生变化。优选地，将原假设设 为：网页模板没有发生变化；将备择假设设为：网页模板在、时刻发生变化。可以通过以长 度为m的窗口（窗口的开始点和结束点分别为、和、）来遍历该相似度序列，根据计算出 的统计量来判断上述假设是否成立。</p>
+    <p>[0133]	因此，原假设和备择假设可以分别表示如下。</p>
+    <p>15[0134]</p>
+    <p>[0135]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00161.png"> <img id="idf0005" file="CN102073654AD00161.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00161.png" class="patent-full-image" alt="Figure CN102073654AD00161"> </a> </div>
+    <p>[0136]</p>
+    <p>原假设Htl</p>
+    <p>PeiyiIyt ,".，λ)=Α0(成，&#183;&#183;.λ)ι 仍</p>
+    <p>备择假设H1</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00162.png"> <img id="idf0006" file="CN102073654AD00162.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00162.png" class="patent-full-image" alt="Figure CN102073654AD00162"> </a> </div>
+    <p>[0138]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00163.png"> <img id="idf0007" file="CN102073654AD00163.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00163.png" class="patent-full-image" alt="Figure CN102073654AD00163"> </a> </div>
+    <p>[0139]	其中，θ、Qtl和θ工分别表示网页模板相似度序列的概率分布。yi表示相似度 序列中的第i个相似度值，i为自然数，而{yta... yj表示从开始时刻到ta的相似度序列， Iyto-!- &#183; &#183; yj表示从开始时刻到、-1的相似度序列，{yta... yt0}表示从、到ta的相似度序 列。这里，ta、V t0-i等既表示相似度序列中相应相似度值的序号，又代表相应的时刻，二 者是等价的，但在本说明书中一般仅提及时刻。</p>
+    <p>[0140]	等式（4)左边部分表示相似度值yi属于相似度序列{yta... yj的概率是P0 ；等 式右边部分表示在相似度序列{yta...yj满足θ ^分布时、相似度值71属于相似度序列 {yta... yj的概率是p0(l。等式⑷表明：从开始到ta的时段期间，Yi满足θ ^分布。</p>
+    <p>[0141]	等式（5)左边部分表示相似度值yi属于相似度序列{&#12316;_” .. yj的概率是P0 ；等 式右边部分表示在相似度序列.. yj满足θ ^分布时、相似度值Ji属于相似度序列 Iyto-!. &#183; &#183; yj的概率是ρ0(ι。等式（5)表明：从开始到、-1的时段期间，Yi满足θ ^分布。</p>
+    <p>[0142]	等式（6)左边部分表示相似度值yi属于相似度序列{yta... yt0}的概率是P0 ；等 式右边部分表示在相似度序列{yta... ytol满足θ ！分布时、相似度值Yi属于相似度序列 {yta. . . yt0}的概率是P0 i。等式（6)表明：从t0到ta的时段期间，Yi满足θ工分布。</p>
+    <p>[0143]</p>
+    <p>[0144]</p>
+    <p>为：</p>
+    <p>[0145]</p>
+    <p>[0146]</p>
+    <p>[0147]</p>
+    <p>可以看出，等式（4)对应于原假设Htl，而等式（5)-(6)则对应于备择假设。 此外，在两种假设情况下，相似度序列的分布都应该满足正态分布，因此可以认</p>
+    <p>θ0 &#12316;Ν(μ。，σ) (7) θ &#19972;&#12316;Ν(μ σ )	(8)</p>
+    <p>其中，μ『σ为相似度序列yi在θ ^分布下的均值和方差；而μ ρ σ为相似度序 列71在θ工分布下的均值和方差。可以根据检验窗口之前的序列{y^... yj以及检验窗 口中的序列{yta. . . yj，计算出μ r μ i、σ。可以想到，在两种分布情况下的方差变化不大， 因此此处近似认为在θ ^分布和Q1分布下的方差均为σ以便简化计算。当然，也可以分 别计算两种分布下的方差％和O2，在这种情况下只需将后面描述的相应公式做相应调整 即可。</p>
+    <p>[0148]	接着，根据对数似然比来检验上述的假设是否成立。</p>
+    <p>[0149]	对数似然比Si可以表示为：</p>
+    <p>Lex (yi)</p>
+    <p>[0150]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00164.png"> <img id="idf0008" file="CN102073654AD00164.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00164.png" class="patent-full-image" alt="Figure CN102073654AD00164"> </a> </div>
+    <p>[0151]	其中L0 Jyi)表示相似度序列71在θ工分布的情况下的似然函数；而L0 Jyi)表示 相似度序列Yi在θ ^分布的情况下的似然函数。通过对两个似然函数的比求对数，可以得 到对数似然比S”</p>
+    <p>[0152]	为了简化数学表达，令</p>
+    <p>[0153]</p>
+    <p>[0154]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00171.png"> <img id="idf0009" file="CN102073654AD00171.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00171.png" class="patent-full-image" alt="Figure CN102073654AD00171"> </a> </div>
+    <p>[0155]	通过数学推导，进一步可以将对数似然比简化为：</p>
+    <p>[0156]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00172.png"> <img id="idf0010" file="CN102073654AD00172.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00172.png" class="patent-full-image" alt="Figure CN102073654AD00172"> </a> </div>
+    <p>[0157]	因此，在从、到ta的时间窗口上，对数似然比的和St广可以表示为</p>
+    <p>[0158]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00173.png"> <img id="idf0011" file="CN102073654AD00173.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00173.png" class="patent-full-image" alt="Figure CN102073654AD00173"> </a> </div>
+    <p>[0159]为了便于检验，利用数学推导，可以根据St广来将原假设和备择假设表示如下：</p>
+    <p>[0160]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00174.png"> <img id="idf0012" file="CN102073654AD00174.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00174.png" class="patent-full-image" alt="Figure CN102073654AD00174"> </a> </div>
+    <p>[0161] </p>
+    <p>[0162]	这样，只需要检验St广是否符合式（14)所示的分布就可以判断原假设是否成立。</p>
+    <p>[0163]	有许多种判断方法可以用来判断原假设是否成立。作为一种优选方式，可以采用 假设检验方法中的t检验方法来检验。</p>
+    <p>[0164]	在具体的t检验中，为了简化拒绝域，构造检验量t ：</p>
+    <p>[0165]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00175.png"> <img id="idf0013" file="CN102073654AD00175.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00175.png" class="patent-full-image" alt="Figure CN102073654AD00175"> </a> </div>
+    <p>[0166]</p>
+    <p>其中，</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00176.png"> <img id="idf0014" file="CN102073654AD00176.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00176.png" class="patent-full-image" alt="Figure CN102073654AD00176"> </a> </div>
+    <p>η表示在、到、的时间窗口中</p>
+    <p>计算的相似度的数目。</p>
+    <p>[0167]	通过数学推导和简化，可以将拒绝域表示为</p>
+    <p>[0168]	</p>
+    <p>[0169]		</p>
+    <p>[0170]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00177.png"> <img id="idf0015" file="CN102073654AD00177.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102073654A/CN102073654AD00177.png" class="patent-full-image" alt="Figure CN102073654AD00177"> </a> </div>
+    <p>[0171] 其中，可以根据式（16)具体地计算出在时长为m的时间窗口中的t值或其绝对值 t|。而{分布值、（111-1)、、/2(111-1)、、（111-1)则可以基于α值通过查询t分布表得出。 其中，α值可对应于不同的检验精度，可以根据需要来设置α值。在根据本发明的一个实施例中，α值为0.05。</p>
+    <p>[0172]	这样，通过计算时间窗口中t的值，并通过将计算出的t值和相应的t分布值进行 比较来判断检验原假设是否成立。当在一个时间窗口中发现t值处于拒绝域中，则可以判 定当前的网页内容抽取模板已经不适应输入网页，即输入网页的模板发生了变化。</p>
+    <p>[0173]	此外，可以在发现t值处于拒绝域中的第一个时间窗口中任意选择一个时刻作为 输入网页模板发生变化的时刻。优选地，可以选择该时间窗口的开始时刻作为输入网页模 板发生变化的时刻。或者，也可以选择该时间窗口的中间时刻作为输入网页模板发生变化 的时刻。</p>
+    <p>[0174]	在判定网页内容抽取模板是否已不适应输入网页的情况下，可以从输入网页模板 发生变化的时刻重新计算网页内容抽取模板。可以采用各种方法来重新计算网页内容抽取 模板。优选地，可以采用根据本发明第一实施例的方法来重新计算网页内容抽取模板。这 样，实现了对输入网页模板的检测和对网页内容抽取模板的及时更新。</p>
+    <p>[0175]	图7是示出根据本发明第二实施例的维护网页内容抽取模板的方法的示意图。该 维护网页内容抽取模板的方法在步骤S700开始。接着，在步骤S701，计算网页内容抽取模 板与依次输入的网页的输入树的相似度，由此得到一个相似度的序列。例如，可以利用以上 结合相似度计算单元601描述的方法来得到该相似度的序列。在步骤S702，利用预定大小 的窗口遍历相似度序列，计算相似度序列在所述窗口中的统计量。在步骤S703，判断网页内 容抽取模板是否已不适应输入网页。例如，可以利用以上结合统计量计算单元602和统计 量判断单元603描述的方法来实现步骤S702和S703。如果在步骤S703判定当前网页内容 抽取模板不适应输入网页，处理进行到步骤S704，开始重新计算网页内容抽取模板。如果在 步骤S703判定当前网页内容抽取模板仍然适应输入网页，处理进行到步骤S705，继续使用 当前的网页内容抽取模板。之后，方法在步骤S706结束。</p>
+    <p>[0176]	可以想到，可以以在线方式来实施上述的维护网页内容抽取模板的方法。即，在利 用网页内容抽取模板对网页内容进行抽取的同时，从当前时刻起选取预定大小的窗口，利 用该窗口以及该窗口以前的上述统计量进行判断，在判定不适应的情况下重新计算网页内 容抽取模板。另一方面，也可以非在线的方式来实施上述的维护网页内容抽取模板的方法。 即，针对已经进行过内容抽取处理的多个网页，以预定大小的窗口遍历所述多个网页，来判 断所使用的网页内容抽取模板是否不适应所述多个网页，在判定不适应的情况下重新计算 网页内容抽取模板。可以认为，在线方式也是一种遍历方式，只不过遍历是伴随着内容抽取 过程进行的，遍历窗口的边界ta大致就是当前已经完成内容抽取的最后一个网页；而以非 在线方式进行遍历时，ta由小变大，遍历结束时ta值才等于当前已经完成内容抽取的最后 一个网页。</p>
+    <p>[0177]	本发明的实施例可以应用于移动终端浏览、搜索引擎、信息提取等方面。</p>
+    <p>[0178]	另外，应理解，本文所述的各种示例和实施例均是示例性的，本发明不限于此。在 本说明书中，“第一”、“第二”等表述仅仅是为了将所描述的特征在文字上区分开，以清楚地 描述本发明。因此，不应将其视为具有任何限定性的含义。</p>
+    <p>[0179]	上述装置中各个组成模块、单元可通过软件、固件、硬件或其组合的方式进行配 置。配置可使用的具体手段或方式为本领域技术人员所熟知，在此不再赘述。在通过软件 或固件实现的情况下，从存储介质或网络向具有专用硬件结构的计算机（例如图12所示的通用计算机1200)安装构成该软件的程序，该计算机在安装有各种程序时，能够执行各种 功能等。</p>
+    <p>[0180]	在图12中，中央处理单元（CPU) 1201根据只读存储器（ROM) 1202中存储的程序或 从存储部分1208加载到随机存取存储器（RAM) 1203的程序执行各种处理。在RAM 1203中， 也根据需要存储当CPU 1201执行各种处理等等时所需的数据。CPU 120UR0M 1202和RAM 1203经由总线1204彼此连接。输入/输出接口 1205也连接到总线1204。</p>
+    <p>[0181]	下述部件连接到输入/输出接口 1205 ：输入部分1206 (包括键盘、鼠标等等)、输 出部分1207(包括显示器，比如阴极射线管（CRT)、液晶显示器（LCD)等，和扬声器等）、存 储部分1208 (包括硬盘等)、通信部分1209 (包括网络接口卡比如LAN卡、调制解调器等)。 通信部分1209经由网络比如因特网执行通信处理。根据需要，驱动器1210也可连接到输 入/输出接口 1205。可拆卸介质1211比如磁盘、光盘、磁光盘、半导体存储器等等根据需要 被安装在驱动器1210上，使得从中读出的计算机程序根据需要被安装到存储部分1208中。</p>
+    <p>[0182]	在通过软件实现上述系列处理的情况下，从网络比如因特网或存储介质比如可拆 卸介质511安装构成软件的程序。</p>
+    <p>[0183]	本领域的技术人员应当理解，这种存储介质不局限于图12所示的其中存储有程 序、与设备相分离地分发以向用户提供程序的可拆卸介质1211。可拆卸介质1211的例子 包含磁盘（包含软盘（注册商标））、光盘（包含光盘只读存储器（⑶-ROM)和数字通用盘 (DVD))、磁光盘（包含迷你盘（MD)(注册商标））和半导体存储器。或者，存储介质可以是 ROM 1202、存储部分1208中包含的硬盘等等，其中存有程序，并且与包含它们的设备一起 被分发给用户。</p>
+    <p>[0184]	本发明还提出一种存储有机器可读取的指令代码的程序产品。所述指令代码由机 器读取并执行时，可执行上述根据本发明实施例的方法。</p>
+    <p>[0185]	相应地，用于承载上述存储有机器可读取的指令代码的程序产品的存储介质也包 括在本发明的公开中。所述存储介质包括但不限于软盘、光盘、磁光盘、存储卡、存储棒等寸。</p>
+    <p>[0186]	最后，还需要说明的是，术语“包括”、“包含”或者其任何其他变体意在涵盖非排他 性的包含，从而使得包括一系列要素的过程、方法、物品或者设备不仅包括那些要素，而且 还包括没有明确列出的其他要素，或者是还包括为这种过程、方法、物品或者设备所固有的</p>
+    <p>要素。此外，在没有更多限制的情况下，由语句“包括一个......”限定的要素，并不排除在</p>
+    <p>包括所述要素的过程、方法、物品或者设备中还存在另外的相同要素。</p>
+    <p>[0187]	以上虽然结合附图详细描述了本发明的实施例，但是应当明白，上面所描述的实 施方式只是用于说明本发明，而并不构成对本发明的限制。对于本领域的技术人员来说，可 以对上述实施方式作出各种修改和变更而没有背离本发明的实质和范围。因此，本发明的 范围仅由所附的权利要求及其等效含义来限定。</p>
+    <p>[0188]	通过以上的描述不难看出，根据本发明的实施例，提供了如下的方案。</p>
+    <p>[0189]	附记1. 一种生成网页内容抽取模板的装置，包括：</p>
+    <p>[0190]	输入单元，被配置成根据网页结构相似的多个输入网页中的每个输入网页，建立 文档对象模型树，以作为输入树；</p>
+    <p>[0191]	权重计算单元，被配置成计算各个输入树中的每种类型的节点的权重；[0192]	最大对齐关系计算单元，被配置成使用任何一个输入树作为初始联合树，利用计 算出的权重来计算每个所述输入树和所述联合树之间的最大对齐关系；</p>
+    <p>[0193]	合并单元，被配置成利用计算出的所述最大对齐关系将所述输入树合并到所述联 合树上；</p>
+    <p>[0194]	确定单元，被配置成确定所述联合树中最可能具有期望文本内容的节点；和</p>
+    <p>[0195]	选择单元，被配置成选择所述联合树中包含所确定的节点的子树作为所述网页内 容抽取模板。</p>
+    <p>[0196]	附记2.如附记1所述的装置，其中所述权重计算单元被配置成计算每种类型的节 点的权重，使得多个输入树的整体相似度最大。</p>
+    <p>[0197]	附记3.如附记1所述的装置，其中所述权重计算单元进一步包括：</p>
+    <p>[0198]	输入树相似度计算单元，被配置成计算多个输入树两两之间的相似度；</p>
+    <p>[0199]	第一计算单元，被配置成计算每种类型的节点的权重，使得所述多个输入树的基 于两两之间的相似度的整体相似度最大。</p>
+    <p>[0200]	附记4.如附记3所述的装置，其中所述输入树相似度计算单元进一步包括：</p>
+    <p>[0201]	对齐单元，被配置成将两个输入树对齐；</p>
+    <p>[0202]	第二计算单元，被配置成根据所述两个输入树的对齐节点的权重来计算所述两个 输入树之间的相似度。</p>
+    <p>[0203]	附记5.如附记4所述的装置，其中所述对齐单元被配置为：在对齐两个输入树时 考虑节点的层次顺序以及以下因素中的至少一个：</p>
+    <p>[0204]	节点的优先级；</p>
+    <p>[0205]	对齐的层数；</p>
+    <p>[0206]	对齐节点的数量。</p>
+    <p>[0207]	附记6. &#8212;种维护网页内容抽取模板的装置，包括：</p>
+    <p>[0208]	相似度计算单元，被配置成计算所述网页内容抽取模板与依次输入的网页的文档 对象模型树之间的相似度，以构成相似度序列；</p>
+    <p>[0209]	统计量计算单元，被配置成利用预定大小的窗口遍历所述相似度序列，计算所述 相似度序列在窗口中的统计量；</p>
+    <p>[0210]	统计量判断单元，被配置成根据计算的统计量来判断网页内容抽取模板是否已不 适应输入网页；和</p>
+    <p>[0211]	重新计算单元，被配置成：在统计量判断单元判定所述网页内容抽取模板已不适 应输入网页的情况下，用附记1-5中任意一项的装置来重新计算网页内容抽取模板。</p>
+    <p>[0212]	附记7.如附记6所述的装置，所述重新计算单元进一步被配置成：从当前时刻减 去基于所述窗口所确定的时长作为所述网页内容抽取模板变为不适应输入网页的时刻，并 从该时刻起重新计算网页内容抽取模板。</p>
+    <p>[0213]	附记8.如附记6所述的装置，其中所述统计量判断单元被配置成：通过将当前 窗口的统计量相对于之前部分或全部样本的统计量的变化与预定的阈值进行比较或者通 过判断计算的统计量是否满足预定的分布，来判断网页内容抽取模板是否已不适应输入网 页。</p>
+    <p>[0214]	附记9.如附记6-8中任意一项所述的装置，其中所述统计量是相似度序列的对数</p>
+    <p>20似然比或相似度序列的平均值。</p>
+    <p>[0215]	附记10. &#8212;种生成网页内容抽取模板的方法，包括：</p>
+    <p>[0216]	根据网页结构相似的多个输入网页中的每个输入网页，建立文档对象模型树，以 作为输入树；</p>
+    <p>[0217]	计算各个输入树中的每种类型的节点的权重；</p>
+    <p>[0218]	使用任何一个输入树作为初始联合树，利用计算出的权重来计算每个所述输入树 和联合树之间的最大对齐关系；</p>
+    <p>[0219]	利用计算出的所述最大对齐关系将所述输入树合并到所述联合树上；</p>
+    <p>[0220]	确定所述联合树中最可能具有期望文本内容的节点；和</p>
+    <p>[0221]	选择所述联合树中包含所确定的节点的子树作为所述网页内容抽取模板。</p>
+    <p>[0222]	附记11.如附记10所述的方法，其中计算各个输入树中的每种类型的节点的权重 的步骤包括：计算各个输入树中的每种类型的节点的权重，使得多个输入树的整体相似度 最大。</p>
+    <p>[0223]	附记12.如附记10所述的方法，其中计算各个输入树中的每种类型的节点的权重</p>
+    <p>的步骤进一步包括：</p>
+    <p>[0224]	计算多个输入树两两之间的相似度；</p>
+    <p>[0225]	计算每种类型的节点的权重，使得所述多个输入树的基于所述两两之间的相似度 的整体相似度最大。</p>
+    <p>[0226]	附记13.如附记12所述的方法，其中计算多个输入树两两之间的相似度的步骤包 括：</p>
+    <p>[0227]	将两个输入树对齐；</p>
+    <p>[0228]	根据所述两个输入树的对齐节点的权重来计算所述两个输入树之间的相似度。</p>
+    <p>[0229]	附记14.如附记13所述的方法，其中在对齐两个输入树时考虑节点的层次顺序以 及以下因素中的至少一个：</p>
+    <p>[0230]	节点的优先级；</p>
+    <p>[0231]	对齐的层数；</p>
+    <p>[0232]	对齐节点的数量。</p>
+    <p>[0233]	附记15. &#8212;种维护网页内容抽取模板的方法：</p>
+    <p>[0234]	计算所述网页内容抽取模板与依次输入的网页的文档对象模型树之间的相似度， 以构成相似度序列；</p>
+    <p>[0235]	利用预定大小的窗口遍历所述相似度序列，计算相似度序列在所述窗口中的统计 量；</p>
+    <p>[0236]	根据计算的统计量来判断网页内容抽取模板是否已不适应输入网页；和</p>
+    <p>[0237]	在判定所述网页内容抽取模板已不适应输入网页的情况下，用附记10-14中任意 一项的方法来重新计算网页内容抽取模板。</p>
+    <p>[0238]	附记16.如附记15所述的方法，重新计算网页内容抽取模板的步骤包括：从当前 时刻减去基于所述窗口所确定的时长作为所述网页内容抽取模板变为不适应输入网页的 时刻，并从该时刻起重新计算网页内容抽取模板。</p>
+    <p>[0239]	附记17.如附记15所述的方法，其中根据计算的统计量来判断网页内容抽取模板是否已不适应输入网页的步骤包括：通过将当前窗口的统计量相对于之前部分或全部样本 的统计量的变化与预定的阈值进行比较或者通过判断计算的统计量是否满足预定的分布， 来判断网页内容抽取模板是否已不适应输入网页。</p>
+    <p>[0240]	附记18.如附记15-17中任意一项所述的方法，其中所述统计量是相似度序列的 对数似然比或相似度序列的平均值。</p>
+    <p>[0241]	附记19. 一种程序产品，该程序产品包括机器可执行的指令，当在信息处理设备 上执行所述指令时，所述指令使得所述信息处理设备执行如附记10或15所述的方法。</p>
+    <p>[0242]	附记20. &#8212;种存储介质，该存储介质包括机器可读的程序代码，当在信息处理设 备上执行所述程序代码时，所述程序代码使得所述信息处理设备执行如附记10或15所述 的方法。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102314494A?cl=zh">CN102314494A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月24日</td><td class="patent-data-table-td patent-date-value">2012年1月11日</td><td class="patent-data-table-td ">百度在线网络技术（北京）有限公司</td><td class="patent-data-table-td ">一种用于处理网页内容的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102314494B?cl=zh">CN102314494B</a></td><td class="patent-data-table-td patent-date-value">2011年8月24日</td><td class="patent-data-table-td patent-date-value">2014年4月2日</td><td class="patent-data-table-td ">百度在线网络技术（北京）有限公司</td><td class="patent-data-table-td ">一种用于处理网页内容的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102314497A?cl=zh">CN102314497A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月26日</td><td class="patent-data-table-td patent-date-value">2012年1月11日</td><td class="patent-data-table-td ">百度在线网络技术（北京）有限公司</td><td class="patent-data-table-td ">一种用于识别标记语言文件主体内容的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102314497B?cl=zh">CN102314497B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月26日</td><td class="patent-data-table-td patent-date-value">2014年12月10日</td><td class="patent-data-table-td ">百度在线网络技术（北京）有限公司</td><td class="patent-data-table-td ">一种用于识别标记语言文件主体内容的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102436472A?cl=zh">CN102436472A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月30日</td><td class="patent-data-table-td patent-date-value">2012年5月2日</td><td class="patent-data-table-td ">北京航空航天大学</td><td class="patent-data-table-td ">一种基于关系机制的多类别web对象抽取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102436472B?cl=zh">CN102436472B</a></td><td class="patent-data-table-td patent-date-value">2011年9月30日</td><td class="patent-data-table-td patent-date-value">2013年10月30日</td><td class="patent-data-table-td ">北京航空航天大学</td><td class="patent-data-table-td ">一种基于关系机制的多类别web对象抽取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102929930A?cl=zh">CN102929930A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月24日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">南京大学</td><td class="patent-data-table-td ">小样本自动化Web文本数据抽取模板生成与抽取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103064966A?cl=zh">CN103064966A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月31日</td><td class="patent-data-table-td patent-date-value">2013年4月24日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种从单记录网页中抽取规律噪音的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103064966B?cl=zh">CN103064966B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月31日</td><td class="patent-data-table-td patent-date-value">2016年1月27日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种从单记录网页中抽取规律噪音的方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=f5WUBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年5月25日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年7月6日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年12月19日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/d11003d5f58cc172cccd/CN102073654A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%94%9F%E6%88%90%E4%B8%8E%E7%BB%B4%E6%8A%A4%E7%BD%91%E9%A1%B5%E5%86%85%E5%AE%B9%E6%8A%BD%E5%8F%96%E6%A8%A1%E6%9D%BF.pdf?id=f5WUBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3IcnoWj9hbbtjrxTDZ6U0t2gaPaA"},"sample_url":"https://www.google.com/patents/reader?id=f5WUBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

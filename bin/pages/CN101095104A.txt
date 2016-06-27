@@ -1,0 +1,300 @@
+<!DOCTYPE html><html><head><title>专利 CN101095104A - 终端数据格式和使用该终端数据格式的通信控制系统及方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="终端数据格式和使用该终端数据格式的通信控制系统及方法"><meta name="DC.contributor" content="朴宰&#22893;" scheme="inventor"><meta name="DC.contributor" content="沈贤植" scheme="inventor"><meta name="DC.contributor" content="金惠正" scheme="inventor"><meta name="DC.contributor" content="姜宝贤" scheme="inventor"><meta name="DC.contributor" content="三星电子株式会社" scheme="assignee"><meta name="DC.date" content="2005-12-27" scheme="dateSubmitted"><meta name="DC.description" content="提供一种能够有效地控制在基于URC(无处不在的机器人伙伴)的基础架构中的各种基于网络的机器人的终端数据格式、使用该终端数据格式的通信控制系统及其方法。所述数据格式包括：协议鉴别标志字段，包括关于协议标识符(ID)的信息以便允许在机器人、服务器和客户端之间的接口连接；会话ID字段，用于标识当前连接的会话；概要ID字段，用于标识由所述机器人、所述服务器和所述客户端中的任何一个执行的概要；MSG类型字段，包括关于在所述机器人、所述服务器和所述客户端之间收发的消息的类型的信息；以及有效负载字段，用于根据在MSG类型字段中定义的数据和在所述概要ID字段中包括的概要信息来执行相应功能的服务。"><meta name="DC.date" content="2007-12-26"><meta name="citation_patent_publication_number" content="CN:101095104:A"><meta name="citation_patent_application_number" content="CN:200580045403"><link rel="canonical" href="https://www.google.com/patents/CN101095104A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101095104A?cl=zh"/><meta name="title" content="专利 CN101095104A - 终端数据格式和使用该终端数据格式的通信控制系统及方法"/><meta name="description" content="提供一种能够有效地控制在基于URC(无处不在的机器人伙伴)的基础架构中的各种基于网络的机器人的终端数据格式、使用该终端数据格式的通信控制系统及其方法。所述数据格式包括：协议鉴别标志字段，包括关于协议标识符(ID)的信息以便允许在机器人、服务器和客户端之间的接口连接；会话ID字段，用于标识当前连接的会话；概要ID字段，用于标识由所述机器人、所述服务器和所述客户端中的任何一个执行的概要；MSG类型字段，包括关于在所述机器人、所述服务器和所述客户端之间收发的消息的类型的信息；以及有效负载字段，用于根据在MSG类型字段中定义的数据和在所述概要ID字段中包括的概要信息来执行相应功能的服务。"/><meta property="og:title" content="专利 CN101095104A - 终端数据格式和使用该终端数据格式的通信控制系统及方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101095104A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101095104A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=wpCIAAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101095104A&amp;usg=AFQjCNF1zkAeRUuAPYJJsKW8rJ6ZeWF2Sg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/b842338bee2695a61d0c/CN101095104A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/b842338bee2695a61d0c/CN101095104A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101095104A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101095104A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101095104A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101095104B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101095104A?cl=zh" style="display:none"><span itemprop="description">提供一种能够有效地控制在基于URC(无处不在的机器人伙伴)的基础架构中的各种基于网络的机器人的终端数据格式、使用该终端数据格式的通信控制系统及其方法。所述数据格式包括：协议鉴别标志字段，包括关于协议标识符(ID)...</span><span itemprop="url">https://www.google.com/patents/CN101095104A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101095104A - 终端数据格式和使用该终端数据格式的通信控制系统及方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101095104A - 终端数据格式和使用该终端数据格式的通信控制系统及方法" title="专利 CN101095104A - 终端数据格式和使用该终端数据格式的通信控制系统及方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101095104 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200580045403</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/KR2005/004589</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2007年12月26日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2005年12月27日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2004年12月30日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101095104B?hl=zh-CN&amp;cl=zh">CN101095104B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200580045403.7, </span><span class="patent-bibdata-value">CN 101095104 A, </span><span class="patent-bibdata-value">CN 101095104A, </span><span class="patent-bibdata-value">CN 200580045403, </span><span class="patent-bibdata-value">CN-A-101095104, </span><span class="patent-bibdata-value">CN101095104 A, </span><span class="patent-bibdata-value">CN101095104A, </span><span class="patent-bibdata-value">CN200580045403, </span><span class="patent-bibdata-value">CN200580045403.7, </span><span class="patent-bibdata-value">PCT/2005/4589, </span><span class="patent-bibdata-value">PCT/KR/2005/004589, </span><span class="patent-bibdata-value">PCT/KR/2005/04589, </span><span class="patent-bibdata-value">PCT/KR/5/004589, </span><span class="patent-bibdata-value">PCT/KR/5/04589, </span><span class="patent-bibdata-value">PCT/KR2005/004589, </span><span class="patent-bibdata-value">PCT/KR2005/04589, </span><span class="patent-bibdata-value">PCT/KR2005004589, </span><span class="patent-bibdata-value">PCT/KR200504589, </span><span class="patent-bibdata-value">PCT/KR5/004589, </span><span class="patent-bibdata-value">PCT/KR5/04589, </span><span class="patent-bibdata-value">PCT/KR5004589, </span><span class="patent-bibdata-value">PCT/KR504589</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9C%B4%E5%AE%B0%E5%A5%AD%22">朴宰&#22893;</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B2%88%E8%B4%A4%E6%A4%8D%22">沈贤植</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%87%91%E6%83%A0%E6%AD%A3%22">金惠正</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A7%9C%E5%AE%9D%E8%B4%A4%22">姜宝贤</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%89%E6%98%9F%E7%94%B5%E5%AD%90%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%22">三星电子株式会社</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101095104A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101095104A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101095104A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=wpCIAAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200580045403&amp;usg=AFQjCNGv8CLPh1ocPGs4CfBJMYzr_GWR6g"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=wpCIAAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101095104A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHPG-6V4--KB-npD4nZVE4J8eoM9A"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT122083775" lang="ZH" load-source="patent-office">终端数据格式和使用该终端数据格式的通信控制系统及方法</invention-title>
+      </span><br><span class="patent-number">CN 101095104 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA108317249" lang="ZH" load-source="patent-office">
+    <div class="abstract">提供一种能够有效地控制在基于URC(无处不在的机器人伙伴)的基础架构中的各种基于网络的机器人的终端数据格式、使用该终端数据格式的通信控制系统及其方法。所述数据格式包括：协议鉴别标志字段，包括关于协议标识符(ID)的信息以便允许在机器人、服务器和客户端之间的接口连接；会话ID字段，用于标识当前连接的会话；概要ID字段，用于标识由所述机器人、所述服务器和所述客户端中的任何一个执行的概要；MSG类型字段，包括关于在所述机器人、所述服务器和所述客户端之间收发的消息的类型的信息；以及有效负载字段，用于根据在MSG类型字段中定义的数据和在所述概要ID字段中包括的概要信息来执行相应功能的服务。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(37)</span></span></div><div class="patent-text"><div mxw-id="PCLM50905088" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种数据格式，用于在终端和服务器之间传输数据，所述数据格式包括：协议鉴别标志字段，用于允许在所述终端和所述服务器之间的接口连接；会话标识ID字段，用于设置ID以标识所述终端；数据方向字段，用于设置在所述终端和所述服务器之间传输数据的方向；数据类型字段，用于代表性地定义所述数据的格式和内容中的至少一个；服务ID字段，用于确定是否使用要由所述终端和所述服务器中的至少一个执行的消息服务，并且用于设置ID以标识所述确定；以及有效负载字段，用于设置在所述数据类型字段中定义的数据和在所述服务ID字段中确定的可用服务，分配消息以使得所述终端和所述服务器可以使用该服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的数据格式，其中所述有效负载字段的消息被划分成用于视频的消息、用于音频的消息和用于运动的消息，所述用于视频的消息和用于音频的消息具有文件编号、尺寸、和视频数据，以及所述用于运动的消息根据用于控制运动的控制形式而具有机器人运动、机器人状态控制、机器人状态报告、机器人出错状态和摄像头控制的命令类型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的数据格式，其中：所述文件号由客户端类型、客户端ID和文件产生顺序形成；所述机器人运动是用于控制运动的消息，并且具有所述终端的X轴运动距离和Y轴运动距离、所述终端的位置角度、和用于控制移动的摄像头角度；所述机器人状态控制具有所述终端的状态报告和报告周期以便实时地确认所述终端的当前状态；所述机器人状态报告是指示所述终端的服务结果的消息，并且其具有根据机器人运动状态的诸如无人报警设置状态之类的状态信息、所述终端的运动状态、监视状态、异常状态、识别确认状态、报警状态、所述终端的位置信息、和动作完成信息的消息；所述机器人出错状态是指示所述终端的运行条件以确定是否至少一个终端异常的消息；和所述摄像头控制是与视频传输相关的消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求2所述的数据格式，其中所述有效负载字段还包括：客户端类型字段；客户端ID字段；用户ID字段；验证码字段；和消息类型字段，提供用于识别语音的ASR数据、用于输出语音的TTS数据、用于标识面部和检测运动的FR/MD数据、用于验证的验证数据、运动数据和VoIP数据，其中ASR是自动语音识别的英文缩写、TTS是文本到语音的英文缩写、FR是面部识别的英文缩写、MD是运动检测的英文缩写。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的数据格式，其中：所述客户端类型字段，对所述数据方向字段的方向性信息进行补充，并且指示与所述数据方向字段的方向性信息对应的终端的种类；所述客户端ID字段设置对应于至少一个终端的ID并且用于标识与所述数据方向字段的方向性信息对应的终端；所述用户ID字段设置所述服务器利用其识别至少一个终端的ID，所述ID具有对应于多个所注册的用户的消息；和所述验证码字段提供所述至少一个终端的每一个的验证数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求4所述的数据格式，其中所述消息类型字段提供用于在所述终端和所述服务器之间的连接初始化、响应、同步、验证、和数据传输的处理，和其中在所述终端和服务器之间传输的消息包括用于第一消息组的消息以连接所述终端至所述服务器；第二消息组，用于在所述终端和所述服务器之间进行验证；用于所述第一和第二消息组的连续性的消息；要在所验证的终端和服务器之间传输的有效负载消息；和终止消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的数据格式，其中所述第一消息组包括：请求消息；确认响应消息；和出错确认响应消息，所述第二消息组包括：验证消息；肯定验证消息；和否定验证消息，用于连续性的消息是同步消息，其中有效负载消息是数据消息，并且所述终端消息是结束报告消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求1所述的数据格式，其中所述终端包括至少一个机器人和至少一个客户终端中的至少一个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求1所述的数据格式，还包括协议版本字段，用于指示所述数据格式的更新状态。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.一种通信控制系统，其基于有线和无线通信而利用专用数据格式，所述系统包括：终端，用于根据所述专用数据格式的有效负载内容来执行视频、音频和运动的至少一种服务；和服务器，用于识别通过终端的用户命令以根据相应协议向终端发送和从终端接收专用数据格式，并且控制以利用所述数据格式执行服务，其中，所述专用数据格式包括：协议鉴别标志字段，用于允许在所述终端和所述服务器之间的接口连接；会话标识ID字段，用于设置ID以标识所述终端；数据方向字段，用于设置在所述终端和所述服务器之间传输数据的方向；数据类型字段，用于定义所述数据的格式和内容中的至少一个；服务ID字段，用于确定是否使用要由所述终端和所述服务器中的至少一个执行的消息服务，并且用于设置ID以标识所述确定；以及有效负载字段，用于设置在所述数据类型字段中定义的数据和在所述服务ID字段中确定的可用服务，并且分配消息以使得所述终端和所述服务器可以使用该服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10所述的通信控制系统，其中所述终端包括至少一个机器人和至少一个客户终端中的至少一个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11所述的通信控制系统，其中所述至少一个机器人将来自用户的语音消息处理成数据格式以由自己操作，向服务器提供所述数据格式，并且执行相应的服务消息以向用户通知所述结果，和所述客户终端将用户的期望服务消息处理成所述数据格式以便控制所述机器人，向所述服务器发送所述数据格式，并且从所述服务器接收所述机器人的服务结果以向所述用户通知所述结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求12所述的通信控制系统，其中所述消息是有效负载消息，其包括：用于验证数和过程的消息、视频识别消息、语音识别消息、和用于运动的控制消息，并向用户提供无人操纵安全保护和远程监视服务。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.一种基于有线和无线通信、利用相应协议在至少一个终端和服务器之间传输终端数据格式的方法，所述方法包括步骤：根据验证过程，利用所述终端数据格式确认在所述终端和服务器之间的验证；在验证之后利用所述终端数据格式分配用于标识所述至少一个终端的每一个的会话标识ID；向被分配所述会话ID的相应终端输入用户的语音命令；向所述服务器发送具有语音数据的所述终端数据格式的有效负载消息；分析所述有效负载消息以便回叫所述服务ID；和执行操作的相应终端根据所述服务ID向所述服务器发送作为所述分组的有效负载消息的所述结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求14所述的方法，其中对应于所述服务ID的服务执行无人操纵安全保护、远程监视、语音识别、视频识别和运动控制。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求14所述的方法，其中所述验证过程包括步骤：所述终端通过顺序执行与所述数据格式的有效负载消息的内部字段对应的消息类型的请求消息、确认响应消息和出错确认响应消息而试图访问所述服务器；和在进行连接之后，通过顺序执行消息类型的验证消息、肯定验证消息和否定验证消息而根据所述终端的验证请求来分配验证数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求16所述的方法，其中当所述终端包括多个终端时，所述分配验证数的步骤还包括步骤：接收所述多个终端的列表；和利用选择消息向期望的相应终端发送验证请求消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求14所述的方法，其中所述终端由至少一个机器人和至少一个客户终端中的至少一个形成。</div>
+    </div>
+    </div> <div class="claim"> <div num="19" class="claim">
+      <div class="claim-text">19.一种用于终端的数据格式，其中所述数据格式在机器人、服务器和客户端之间收发以便控制所述机器人，所述数据格式包括：协议鉴别标志字段，包括关于协议标识符ID的信息以便允许在所述机器人、所述服务器和所述客户端之间的接口连接；会话ID字段，包括用于标识当前连接的会话的唯一ID信息；概要ID字段，包括用于标识由所述机器人、所述服务器和所述客户端中的任何一个执行的概要的信息；MSG类型字段，包括关于在所述机器人、所述服务器和所述客户端之间收发的消息的类型的信息；以及有效负载字段，包括用于根据在MSG类型字段中定义的数据和在所述概要ID字段中包括的概要信息来执行相应功能的服务的消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的数据格式，其中所述服务器的概要包括下述项中的至少一个：验证概要，用于验证所述机器人和所述客户端；远程控制概要，用于提供使得所述客户端能够远程控制所述机器人的接口；事件概要，用于使得所述服务器和所述客户端中的至少一个能够控制所述机器人的事件；语音识别概要，用于识别从所述机器人接收的语音命令的语音；语音合成概要，用于合成语音识别数据和文本数据；图像识别概要，用于识别从所述机器人发送的图像信息；和运动检测概要，用于检测所述机器人的运动。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求19所述的数据格式，其中所述机器人的概要包括下述项中的至少一个：用于机器人位置移动的移动概要；导航概要；语音命令的语音检测概要；用于输出数据到从所述服务器提供的语音合成的声音概要；用于控制所述机器人的运动的运动概要；和表情概要，用于执行机器人的表情表达功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求21所述的数据格式，其中，所述机器人的概要还包括：事件提供概要，用于当从所述服务器和客户端中的一个接收到机器人的运动控制消息以及所述机器人的每一部件的运动状态处于转换之中时，向所述服务器和客户端中的一个提供关于运动转换事件的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求22所述的数据格式，其中，所述运动转换事件将所述机器人的每一部件的运动状态分成IDLE和ACTIVE状态，并且当所述机器人状态中的一个向另一个转换时划分START和END事件，其中IDLE和ACTIVE状态即是指空闲和激活状态，并且START和END事件即是指开始和结束事件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求20所述的数据格式，其中所述服务器的概要还包括用于周期地发送心跳请求消息以便检测机器人的网络连接状态的心跳请求概要。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.如权利要求21所述的数据格式，其中所述机器人的概要还包括根据从服务器周期发送的心跳请求消息而向服务器发送心跳响应消息以便检测机器人的网络连接状态的心跳响应概要。</div>
+    </div>
+    </div> <div class="claim"> <div num="26" class="claim">
+      <div class="claim-text">26.一种通信控制系统，包括：机器人，用于根据先前设置的数据格式的有效负载内容来执行视频、音频和运动服务中的至少一个；服务器，用于识别通过机器人的用户的命令，根据相应协议收发关于机器人的数据格式，并且利用所述数据格式执行服务；和客户端，用于在远程位置通过服务器执行对机器人的服务的远程控制和监视。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求26所述的通信控制系统，其中，当从所述服务器和客户端中的一个接收到用于控制在机器人中包含的每一部件的控制消息以驱动相应部件并且所述相应部件的运动状态处于转换中时，所述机器人向所述服务器和客户端中的一个提供关于运动转换事件的信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求27所述的通信控制系统，其中，所述运动转换事件信息将所述机器人的每一部件的运动状态分成IDLE和ACTIVE状态，并且当所述状态中的一个向另一个转换时包括关于START和END事件的信息，其中IDLE和ACTIVE状态即是指空闲和激活状态，并且START和END事件即是指开始和结束事件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求26所述的通信控制系统，其中所述服务器周期地发送心跳请求消息以便检测机器人的网络连接状态，并且根据是否从机器人接收到心跳响应消息来检测机器人的网络连接状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求29所述的通信控制系统，其中所述机器人根据从服务器周期发送的心跳请求消息而向服务器发送心跳响应消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.如权利要求26所述的通信控制系统，其中所述服务器执行对客户端的验证以便使得所述客户端能够远程控制所述机器人，向客户端提供关于与所述服务器连接的机器人的列表的信息，以及当所述客户端分配要控制的机器人时提供在所述机器人和所述客户端之间的接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.如权利要求26所述的通信控制系统，其中在机器人、服务器和客户端之间预先设置的所述数据格式包括：协议鉴别标志字段，包括关于协议标识符ID的信息以便允许在所述机器人、所述服务器和所述客户端之间的接口连接；会话ID字段，包括用于标识当前连接的会话的唯一信息；概要ID字段，包括用于标识由所述机器人、所述服务器和所述客户端中的任何一个执行的概要以及由其他装置执行的其他概要的信息；MSG类型字段，包括关于在所述机器人、所述服务器和所述客户端之间收发的消息的类型的信息；以及有效负载字段，包括用于根据在MSG类型字段中定义的数据和在所述概要ID字段中包括的概要信息来执行相应功能的服务的消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.如权利要求32所述的通信控制系统，其中所述服务器的概要包括下述项中的至少一个：验证概要，用于执行所述机器人和所述客户端的验证；远程控制概要，用于提供使得所述客户端能够远程控制所述机器人的接口；事件概要，用于使得所述服务器和所述客户端中的一个能够控制所述机器人的事件；语音识别概要，用于识别从所述机器人接收的语音命令的语音；语音合成概要，用于合成语音识别数据和文本数据；图像识别概要，用于识别从所述机器人发送的图像信息；和运动检测概要，用于检测所述机器人的运动。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.如权利要求32所述的通信控制系统，其中所述机器人的概要包括下述项中的至少一个：用于机器人位置运动的运动概要；导航概要；用于语音命令的语音检测概要；用于输出数据到从所述服务器提供的语音合成的声音概要；用于控制所述机器人的运动的运动概要；和表情概要，用于执行机器人的表情表达功能。</div>
+    </div>
+    </div> <div class="claim"> <div num="35" class="claim">
+      <div class="claim-text">35.一种在通信控制系统中，使用至少一个远程客户端来控制至少一个机器人的方法，所述通信控制系统具有所述至少一个远程客户端、所述至少一个机器人，以及在所述至少一个远程客户端和所述至少一个机器人之间提供接口的服务器，所述方法包括步骤：所述至少一个远程客户端提供到所述服务器的连接以便执行远程控制的服务；监视所述至少一个机器人的任何一个；请求验证和关于连接到服务器的至少一个机器人的列表信息；服务器执行对所述至少一个远程客户端的验证，向所述至少一个远程客户端发送与所述服务器连接的至少一个机器人的列表信息；所述至少一个远程客户端利用从所述服务器发送的机器人列表信息来选择要控制的至少一个机器人；向所述服务器发送相应信息；所述服务器在所述至少一个远程客户端和由所述至少一个远程客户端选择的机器人之间设置接口以便收发所述机器人远程控制的消息；和监视服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.如权利要求35所述的方法，其中当在由所述至少一个客户端选择的至少一个机器人和所述至少一个远程客户端之间设置接口时，所述方法还包括步骤：所述至少一个远程客户端预订用于通过服务器控制机器人的多种服务信道；所述至少一个远程客户端在预定信道之后，通过所述服务器向机器人请求关于由所述机器人拾取的图像的信息和关于机器人的状态的信息；发送根据从所述机器人周期发送的图像信息和状态信息来控制机器人的任意功能的控制消息；所述机器人根据通过所述服务器从所述至少一个远程客户端发送的控制消息来执行相应功能；通过所述服务器向所述客户端发送关于相应功能的开始时间点和结束时间点的事件的信息；当完成机器人远程控制和监视服务时，所述至少一个远程客户端向所述服务器发送用于请求终止与所述机器人的连接的消息，和退出与所述机器人的连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37.如权利要求36所述的方法，还包括步骤：服务器周期地向机器人发送心跳请求消息以便检查所述机器人的网络连接状态；根据从所述服务器发送的心跳请求消息，所述机器人发送心跳响应消息；以及向所述服务器通知关于网络连接状态的信息。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES57964427" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">终端数据格式和使用该终端数据格式的通信控制系统及方法</invention-title>
+    <technical-field>
+      <p>技术领域</p>
+      <p>本发明一般涉及一种终端数据格式、使用该终端数据格式的通信控制系统及其方法，具体而言，本发明涉及一种能够在基于URC(无处不在的机器人伙伴)的基础架构中有效地控制各种基于网络的机器人、并且使得基于服务扩展的开发有用的终端数据格式、使用该终端数据格式的通信控制系统及其方法。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>通常，机器人装备有各种传感器，并且通过基于可识别指令(如语音或写入指令)来运行程序而可以执行用户所命令的任务。因而，根据分配给机器人的任务，机器人已逐渐发展成类人机器人，诸如清洁机器人、玩偶机器人等。而且，每一机器人已发展成能同时执行多种功能的程度。</p>
+      <p>此外，这样的机器人已发展成通过与人通信而提供各种服务。对于这种通信，许多组织和研究机构已提出通过使用因特网、开放网络来建立机器人接口的方法和体系结构。近来建议的一种间接代理的(proxy-mediated)人机接口(HRI)的体系结构包括通过因特网、利用间接代理的人机接口的在用户接口代理(IA)和嵌入代理(EA)之间的通信。</p>
+      <p>图1图解了在传统间接代理人机接口的体系结构中的网络连接。参照图1，受托代理(proxy&#160;agent)减少了用于与接口相关的任务的、IA的通信负荷和EA计算的资源百分比。而且，受托代理动态地产生或取消在IA和EA之间的链接，并且异步发送上流数据(upstream&#160;data)。</p>
+      <p>在图1中，使用RoboML，所述RoboML是用于机器人的标记语言，即修改的XML。XML由于适用性、便利性和兼容性而被用于代理通信和信息表达，其中适用性体现在XML可由公知语言来表达以编写程序，便利性体现在用户可以容易地处理或操作XML，兼容性体现在XML可用于其它平台中的应用程序。</p>
+      <p>代理通信语言包括AOP(面向代理的编程)、Telescript、KQML(知识查询操作语言)、FIPA(智能物理代理基金会)等等，其中，利用所述AOP，代理可被编程以进行通信和发展，所述Telescript定义在网络上的软件应用之间的事务的环境。</p>
+      <p>机器人语言包括TCA(任务控制体系结构)、PRS(过程推理系统)、GOLOG等，其中所述TCA组合任务级别的控制和通信，并且在处理器之间传送消息以实现并行性。所述PRS基于过程推理专家系统的原理，所述GOLOG是基于逻辑的行为语言，其被开发来对移动的导航、操作、感知和交互等进行编程。</p>
+      <p>因此，编程的机器人语言可以通过使用可被接口的传输协议来传达用户命令以便远程控制机器人。可以通过框架定义任意机器人的结构和行为，所述机器人可以用于通过使用现有通信协议来进行机器人数据通信。</p>
+      <p>然而，由于机器人制造商自定义用于机器人的传输协议，所以难以将该协议应用于其它机器人。结果，几乎不可能在机器人和服务器之间进行交互工作。</p>
+      <p>而且，现有的用于机器人的传输协议不能统一地应用于多种机器人。因此，所述传输协议显示出低通用性、以及由于缺乏兼容性导致的低开发可能性。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>技术问题因此，本发明的一个目的是提供在机器人、URC服务器和远程客户端之间的通信协议以使得基于URC的各种机器人可以通过基于URC的基础架构向用户提供智能的、主动的、和适合于状态的服务，以及提供能够利用这样的通信协议平滑地控制机器人的通信控制系统和方法。</p>
+      <p>本发明的另一目的是提供一种通信控制系统及方法，其中，服务提供者(或远程客户端)利用所述通信协议在远程位置控制机器人，由此提高了在开发服务中的灵活性。</p>
+      <p>技术方案根据本发明的一个方面，提供一种数据格式，用于在终端和服务器之间传输数据，所述数据格式包括：协议鉴别标志字段，用于允许在所述终端和所述服务器之间的接口连接；会话ID字段，用于设置ID以标识所述终端；数据方向字段，用于设置在所述终端和所述服务器之间传输数据的方向；数据类型字段，用于代表性地定义所述数据的格式和内容中的至少一个；服务ID字段，用于确定是否使用要由所述终端和所述服务器中的至少一个执行的消息服务，并且用于设置ID以标识所述确定；以及有效负载字段，用于设置在所述数据类型字段中定义的数据和在所述服务ID字段中确定的可用服务，分配消息以使得所述终端和所述服务器可以使用该服务。</p>
+      <p>根据本发明的另一方面，提供一种使用终端的数据格式的通信控制系统。所述通信控制系统包括：终端，用于根据所述数据格式的有效负载内容来执行视频、音频和运动的至少一种服务；和服务器，用于识别通过终端的用户命令以根据相应协议向终端发送和从终端接收所述数据格式，并且控制以利用所述数据格式执行服务。</p>
+      <p>仍根据本发明的另一方面，提供一种利用相应协议在至少一个终端和服务器之间传输终端数据格式的方法，所述方法包括步骤：根据验证过程，利用所述终端数据格式确认在所述终端和服务器之间的验证；在验证之后利用所述数据格式来分配会话ID以便标识所述至少一个终端的每一个；向被分配所述会话ID的相应终端输入用户的语音命令；向所述服务器发送具有语音数据的所述数据格式的有效负载消息；和分析所述有效负载消息以便回叫所述服务ID；和执行操作的相应终端根据所述服务ID向所述服务器发送作为所述分组的有效负载消息的所述结果。</p>
+      <p>仍根据本发明的另一方面，提供一种用于终端的数据格式，其中所述数据格式在机器人、服务器和客户端之间收发以便控制所述机器人，所述数据格式包括：协议鉴别标志字段，包含关于协议标识符的信息以便允许在所述机器人、所述服务器和所述客户端之间的接口连接；会话ID字段，包括用于标识当前连接的会话的唯一信息(ID)；概要ID字段，包括用于标识由所述机器人、所述服务器和所述客户端中的任何一个执行的概要的信息；MSG类型字段，包括关于在所述机器人、所述服务器和所述客户端之间收发的消息的类型的信息；以及有效负载字段，包括用于根据在MSG类型字段中定义的数据和在所述概要ID字段中包括的概要信息来执行相应功能的服务的消息。</p>
+      <p>仍根据本发明的另一方面，提供一种通信控制系统，包括：机器人，用于根据先前设置的数据格式的有效负载内容来执行视频、音频和运动服务中的至少一个；服务器，用于识别通过机器人的用户的命令，根据相应协议收发关于机器人的数据格式，并且利用所述数据格式对执行服务进行控制；和客户端，用于在远程位置通过服务器执行对机器人的服务的远程控制和监视。</p>
+      <p>仍根据本发明的另一方面，提供一种在通信控制系统中，使用至少一个远程客户端来控制至少一个机器人的方法，所述通信控制系统具有客户端、机器人，以及在所述客户端和所述机器人之间提供接口的服务器，所述方法包括步骤：所述远程客户端提供到所述服务器的连接以便执行远程控制的服务，以及监视所述机器人的任何一个；请求验证和关于连接到服务器的机器人的列表的信息；服务器执行对所述客户端的验证，向所述客户端发送与所述服务器连接的机器人的列表信息；所述客户端利用从所述服务器发送的机器人列表信息来选择要控制的机器人；向所述服务器发送相应信息；所述服务器在由所述客户端选择的机器人和所述客户端之间设置接口以便收发用于所述机器人的远程控制的消息以及监视服务。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>当结合附图思考时，通过下面的详细描述，本发明的更全面的理解和许多伴随的优点将是显而易见的，在所述附图中，相似的参考符号指代相同或类似的单元，其中：图1图解了根据现有技术的、在机器人和用户主机之间接口连接以便控制所述机器人的网络；图2图解了根据本发明的、用于控制机器人的URC协议的物理体系结构；图3图解了根据本发明实施例的、通过URC协议在机器人和URC服务器之间收发以用于控制机器人的分组的报头格式；图4是图解根据本发明的、根据在机器人和URC服务器之间收发的消息的消息类型变型的图；图5图解了根据本发明一个实施例的、利用URC协议的机器人控制系统的网络连接；图6图解了根据本发明的、在机器人控制系统中为服务收发的消息的序列，其中，当机器人和客户端连接到URC服务器时，所述URC服务器可以向所述机器人和所述客户端提供所述服务；图7图解了根据本发明的、在机器人控制方法中在机器人和URC服务器之间的、用于机器人的语音识别服务的消息序列；图8图解了根据本发明的、在机器人控制方法中在机器人和URC服务器之间收发的、用于图像识别服务和运动检测(跟踪)服务的消息序列；图9图解了根据本发明的、在机器人控制方法中在机器人和URC服务器之间收发的、用于机器人的验证的消息序列；图10图解了根据本发明的、在机器人控制方法中在远程机器人和服务器之间收发的、用于机器人的远程监视的验证消息的序列；图11图解了根据本发明的、在机器人控制方法中在机器人和URC服务器之间收发以便控制机器人的消息的类型；图12图解了根据本发明的、在机器人控制方法中在远程客户端和URC服务器之间收发以便在远程客户端上通过URC服务器控制机器人的消息的类型；图13是图解根据本发明一个实施例的机器人控制系统的连接的示意图；图14图解了根据本发明一个实施例的、在机器人、URC服务器和客户端之间收发的消息的公共报头的格式；图15图解了根据本发明一个实施例的、在机器人、客户端和URC服务器之间的URC协议概要体系结构；图16图解了根据本发明一个实施例的、在通信控制系统中，当在机器人上产生事件时的ACK操作；图17图解了根据本发明的、在通信控制系统中，检查在URC机器人和URC服务器之间的连接的方法；和图18图解了根据本发明一个实施例的、被收发以在客户端远程控制机器人的消息的序列。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>下文中，将参照附图详细说明根据本发明的终端数据格式、使用该终端数据格式的通信控制系统及其方法。</p>
+      <p>图2图解了根据本发明的用于控制机器人的基于TCP/IP的URC协议的物理层体系结构。如在图2中所图解的，基于以太网，URC协议属于在TCP/IP层、网络和传输层之上的应用层，确认服务器是否被验证使用终端(即基于TCP/IP的客户端和机器人)，并因而使用期望的服务命令来控制服务器以便使得机器人能够执行被确认客户端的期望操作。这里，诸如简单邮件传输协议(SMTP)、域名系统(DNS)等的其它协议与本发明的技术概念没有关系，并因而省略对它们的说明。</p>
+      <p>基于嵌入式网络、用于有效地管理和操作机器人的URC协议使得可以在URC服务器和机器人以及在URC服务器和客户端或其它终端之间容易地交互工作，并且也可以简单地执行各种服务操作。URC协议还使得可以通过基于TCP/IP的应用层之间的通信、在机器人和URC服务器之间以及在URC服务器和客户端之间收发数据来在客户端控制机器人，并且也可以通过使得用户直接经由机器人输入命令来平滑地执行机器人的服务操作。</p>
+      <p>可以通过在机器人和URC服务器之间以及在URC服务器和客户端之间的协议匹配、接口同步和数据收发来平滑地执行用户期望的服务。所收发的数据具有用于在机器人和URC服务器之间以及在URC服务器和客户端之间进行接口连接的数据格式。</p>
+      <p>虽然该数据格式具有用于在机器人、URC服务器和URC客户端之间的通信的预定规则，但是因为其遵循通常的分组规则，所以其在后面的说明中被称为分组。</p>
+      <p>图3图解了根据本发明的、通过用于控制机器人的URC协议在机器人和URC服务器之间收发的分组的报头格式。更具体而言，根据有效负载，具有如图3所图解的格式的分组被分成用于视频、音频、VoIP、运动等的分组。相应的端口发送这些分组。所述分组具有用于这些端口的公共报头。</p>
+      <p>分组的公共报头具有多个字段，即协议鉴别标志41、协议版本42、会话ID&#160;43、数据方向44、数据类型45、服务ID&#160;46、有效负载长度47、保留项48和有效负载49。这里，有效负载49包含2个字节的有效负载报头，并且具有由客户端类型、客户端ID、用户ID、消息类型和验证码组成的内部字段。</p>
+      <p>协议鉴别标志41被分配2个字节，其是用于指明消息数据是在协议中定义的消息的第一字段值。只有当输入数据具有相同的协议鉴别标志(即相同的第一字段值)时，才能在接口连接被授权之后处理该数据。然而，如果接口连接没有被授权，则数据被丢弃，而不是对其进行处理。例如，协议鉴别标志具有0x7E7E的格式。</p>
+      <p>协议版本42被分配2个字节，其代表协议的版本。协议版本42初始设置为0x0001(版本1.0)，每当协议被更新时，该协议版本增加1。</p>
+      <p>会话ID&#160;43被分配4个字节，并且由被初始设置为0x00000000的会话编号形成。在完成对用户的验证之后，服务器自动向机器人分配会话ID&#160;43，并且该会话ID&#160;43用于分别地将机器人与其它终端(例如用户终端和PDA)区分和标识开来。例如，存在使用一个端口或几个端口的方法。当使用一个端口时，使用该端口来将该机器人与其他机器人标识开。然而，当使用几个端口时，这些端口用于标识各个端口，以及将该机器人与其他机器人区分开。</p>
+      <p>在下面说明中，会话ID&#160;43将被描述成为使用一个端口标识机器人。</p>
+      <p>数据方向44是被分配一个字节的字段，其标识数据的最终目的地。更具体而言，数据方向44用于确定数据是从机器人发送到URC服务器，还是从客户端发送到URC服务器。因此，数据方向44用于标识哪一个实体发送数据。例如，当在数据方向44字段中出现0x01时，这表示该数据从机器人发送到URC服务器。</p>
+      <p>数据类型45，其被分配一个字节，具有根据数据的格式和内容的不同类型。例如，该不同类型可以包括：表示用于语音识别的数据的ASR(自动语音识别)、表示用于语音输出的数据的TTS(文本到语音)、表示用于面部识别和运动检测的数据的FR(面部识别)/MD(运动检测)、表示用于授权的数据的Authorization(授权)、用于机器人控制的数据、用于PDA的数据、用于VoIP的数据等。根据数据类型45的数据格式，可以从不同的端口传送所述数据。</p>
+      <p>服务ID&#160;46，其被分配2个字节，是由URC服务器分配以便标识机器人和远程客户端的服务会话的ID。服务ID&#160;46用于确定是否可以使用有效负载服务，以及用于标识该确定结果。存在根据服务ID字段的值的多种服务，其被划分成无人操纵安全保护服务、远程监视服务、语音识别服务和视频识别服务。服务ID初始从0x0000开始，并且然后每当服务启动时增加1。</p>
+      <p>有效负载长度47具有2个字节，指示除报头之外的有效负载的实际尺寸(以字节为单位)。</p>
+      <p>保留项48是具有4个字节的未使用的额外字段，其没有被用做附加字段项，以确保将来的分组的QoS(服务质量)。</p>
+      <p>有效负载49是包含对应于每一服务的API(应用程序接口)的附加字段以及实际的视频和音频数据的部分。在定义了公共报头之后需要额外地区分发送到端口的消息。发送具有如在数据类型45中定义的类型数据的有效负载，所述数据类型诸如作为用于语音识别的数据的ASR、作为用于语音输出(组合)的数据的TTS、作为用于面部识别和运动检测的数据的FR/MD、作为用于授权的数据的Authorization、用于机器人控制的数据、用于PDA的数据、用于VoIP的数据等。</p>
+      <p>虽然未示出，但是有效负载49可以被划分成多个消息，所述多个消息表示作为用于语音识别的数据的ASR、作为用于语音输出(组合)的数据的TTS、作为用于面部识别和运动检测的数据的FR/MD、作为用于授权的数据的Authorization、用于机器人控制的数据、用于PDA的数据、和用于VoIP的数据。因此，有效负载49额外地包括用于客户端类型、客户端ID、用户ID、验证码、和消息类型的字段。</p>
+      <p>客户端类型被分配1个字节，表示终端的类型。例如，机器人或远程客户终端分别由0x01、0x02、0x03和0x04表示。也就是说，如果根据由数据方向44指示的数据发送方向，客户终端是源或是目的地，则客户端类型指示客户终端。</p>
+      <p>客户端ID被分配4个字节，用于通过向客户终端分配唯一ID来标识客户终端。为了分配该ID，组合产生顺序、用户的区域、用户的ID等来产生合适的ID。</p>
+      <p>用户ID被分配1个字节，表示由URC服务器识别的ID。用户ID初始设置为000000，然后每当用户的数量增加时增加1。要注册的ID在由URC服务器验证之后被分配给用户。在多个用户的情况下，除了一个用户作为主设备之外，其余作为从设备。</p>
+      <p>验证码是包括机器人的验证消息的验证数的字段，在消息报头部分的消息类型字段不指示验证消息时具有缺省值。当消息报头部分的消息类型字段指示验证消息时，用户提前输入提供给个体的验证密钥，并且仅当验证被确认时才可以提供服务。</p>
+      <p>消息类型被分配2个字节，用于根据是否发送数据，或是否执行连接初始化、响应、同步、验证等而在机器人和客户端和URC服务器之间进行过程区分。</p>
+      <p>图4是图解根据本发明的在机器人和URC服务器之间收发的消息类型中的变型的图。参照图4，当根据消息类型在过程之间进行区分时，存在请求消息50、确认响应消息51、出错确认响应消息52、同步消息53、验证消息54、肯定验证消息55、否定验证消息56、数据消息57和结束报告消息58。</p>
+      <p>如图4中所图解，请求消息50是在机器人尝试连接URC服务器时发送给该URC服务器的消息。确认响应消息51是当机器人发送请求消息50以请求连接并因而成功地与URC服务器连接时从URC服务器向机器人发送的消息。出错确认响应消息52是当机器人未成功地与URC服务器连接时从URC服务器向机器人发送的消息。同步消息53是用于在完成URC服务器和机器人之间的连接之后检查在URC服务器和机器人之间的连接是否被连续地维持的消息。验证消息54用于当从URC服务器接收到指示与机器人的网络连接正常的消息(确认响应消息52)时向URC服务器请求对机器人的验证。</p>
+      <p>肯定验证消息55是当URC服务器成功对机器人进行了验证时发送给机器人的消息。否定验证消息56是当URC服务器未成功验证机器人时发送给机器人的消息。数据消息57是在视频、音频、TTS、VoIP中使用的的消息，当传送通常的数据时其控制以相应格式的数据传输。结束报告消息58是当用户向机器人发出终止与URC的连接的命令时从机器人向URC服务器发送的断开消息。</p>
+      <p>有效负载消息被划分成用于视频的有效负载消息、用于音频的有效负载消息、和用于运动的有效负载消息。用于视频的有效负载消息字段包括文件编号部分、尺寸指示部分和实际二进制数据部分。文件编号部分由1字节的客户端类型、4字节的客户端ID和3字节的文件产生顺序组成。尺寸指示部分由4字节组成，指示实际视频的尺寸。所述数据部分是实际数据。</p>
+      <p>用于音频的有效负载消息字段具有与用于视频的有效负载消息字段相同的形式。因此，用于音频的有效负载消息字段包括文件编号部分、尺寸指示部分和实际二进制数据部分。文件编号部分由1字节的客户端类型、4字节的客户端ID和3字节的文件产生顺序组成。尺寸指示部分由4字节组成，指示实际语音的尺寸。所述数据部分是实际数据。</p>
+      <p>例如，如果用于视频和音频的有效负载消息字段具有文件编号0x01(客户端类型)000000001(客户端ID)000009(文件产生顺序)，则这意味着第九次从第一机器人产生音频和视频数据。如果在报头的数据方向的值是0x01，则表示要从机器人的摄像头和麦克风向服务器发送音频和视频数据。如果数据方向的值是0x02，则表示要在相反方向上发送音频和视频数据。</p>
+      <p>用于运动的有效负载消息字段包括根据控制命令类型(即机器人运动、机器人状态控制、机器人状态报告、机器人出错状态和摄像头控制)的五种命令类型。如果命令类型是机器人运动，则分配总共123个字节，即用于机器人的X轴移动距离的4个字节、用于机器人的Y轴移动距离的4个字节、用于机器人的位置角度的2个字节和用于摄像头角度的2个字节。距离和角度分别以毫米和度为单位。</p>
+      <p>如果命令类型是机器人状态控制，则分配总共56个字节，即指示是否对机器人状态进行报告的1个字节和用于报告的周期的4个字节。</p>
+      <p>如果命令类型是机器人状态报告，则分配总共156个字节，即用于与使用关于机器人运动的信息的机器人的当前位置有关的信息的12个字节，用于与机器人的当前状态有关的信息的2个字节，以及指示是否完成动作的1个字节。这里，当前状态是无人操纵安全保护设置状态、机器人运动状态、监视状态、机器人异常状态、标识确认状态和报警状态中的一个。</p>
+      <p>如果命令类型是机器人出错状态，则分配总共3个字节，并具有机器人自己确定该机器人是否异常的结果。该结果以“无故障”、“机器人运动单元故障”、“由于障碍导致运动受限”和“电池不足”的消息给出。</p>
+      <p>如果命令类型是摄像头控制，则分配总共23个字节，即用于与视频数据传输开始等相关的命令状态的1个字节，和用于视频数据传输的1个字节。</p>
+      <p>下面将对根据本发明的使用上述数据格式的机器人控制系统进行描述。</p>
+      <p>图5图解了使用根据本发明的数据格式的机器人控制系统的网络连接。如图5中所图解，机器人控制系统包括客户端10、URC服务器20和机器人30。客户端10和URC服务器20、URC服务器20和机器人30通过基于TCP/IP的网络(例如以太网)彼此连接，发送和接收分组以执行根据语音识别数据、图像识别数据和用于运动的控制数据的操作。</p>
+      <p>当用户通过网络传送控制分组以便经由客户端10操作机器人30时，URC服务器20解析所接收分组的有效负载。当用户的命令是语音或键盘命令时，URC服务器20控制机器人30以执行对应于所述命令的服务。</p>
+      <p>其后，机器人30完成该服务，并向URC服务器20提供对应于该服务的分组。URC服务器20解析从机器人30接收的服务完成分组，并通过网络向请求服务的客户端10提供对应于所述解析的结果消息。</p>
+      <p>因此，客户端10显示从URC服务器20接收的结果消息以便使得用户可以执行监视。</p>
+      <p>当用户以语音向机器人30输入服务命令时，机器人30将用户输入的语音输入信号转换成TCP/IP分组，并且将该转换的TCP/IP分组发送给URC服务器20。URC服务器20解析从机器人30接收的分组的音频数据，并识别由用户请求的服务。URC服务器20将具有音频数据的分组转换成用于运动控制命令的分组，并将该转换的分组通过网络发送给机器人30。机器人30执行与从URC服务器20接收的分组的有效负载对应的服务。当机器人30向URC服务器20发送对该服务的响应时，URC服务器20将所发送响应的结果生成为语音分组，并将该语音分组发送给机器人30。因此，用户可以通过从机器人30输出的语音消息来确认结果。</p>
+      <p>图6图解URC服务器可以向机器人和客户端提供的服务、以及在根据本发明的机器人控制系统中机器人和客户端连接到URC服务器时收发用于服务的基本消息的过程。再次，分组包括多个不同字段，即协议鉴别标志41、协议版本42、会话ID&#160;43、数据方向44、数据类型45、服务ID&#160;46、有效负载长度47、保留项48和有效负载49。特别的，有效负载49字段具有内部字段：客户端类型、客户端ID、用户ID、验证码、和消息类型。</p>
+      <p>如图6中所示，机器人30和客户端10两者仅当它们在URC服务器20上被授权时，才可以执行由用户请求的服务。首先，针对在分组的有效负载的内部字段当中的验证码和消息类型来设置用于验证的数据，并根据代码和消息的每一个来执行验证处理。</p>
+      <p>更具体而言，最初不验证机器人30，因而它向URC服务器20发送用于验证的连接请求消息。从机器人30发送到URC服务器20的消息具有验证数，其被缺省设置为验证码。而且，有效负载的消息类型具有请求消息以便尝试互连，并且对于除请求消息之外的其他字段设置根据初始连接的数据。</p>
+      <p>接收连接请求消息的URC服务器20确认有效负载的消息类型是请求消息，并向机器人30发送响应消息(确认响应消息)，其指示连接是成功的。当连接不成功时，URC服务器20向机器人30发送具有出错确认响应消息的分组。当所收发消息的有效负载的消息类型指示同步消息时，在URC服务器20和机器人30之间连续地执行网络连接。</p>
+      <p>URC服务器20确定网络正常，并向机器人30发送确认响应消息。接收到确认响应消息的机器人30识别出连接是成功的，并且向URC服务器20发送验证消息，其通过所接收消息的有效负载的消息类型指示验证请求。</p>
+      <p>其后，URC服务器20根据机器人30的验证请求执行对机器人30的验证。当验证成功时，URC服务器20向机器人30发送指示验证成功的肯定验证消息。所发送的消息包括关于机器人30的验证数的信息，并因而向机器人30分配验证数。如果机器人30的验证由于内部或外部因素造成的故障而结束，则URC服务器20向机器人30发送指示验证失败的否定验证消息。</p>
+      <p>因此，在确认在URC服务器20和机器人30之间的验证是否成功之后，可以通过在URC服务器20和机器人30之间收发任意的服务请求分组来执行用户期望的对于视频、音频、运动等的服务。</p>
+      <p>客户端10的验证过程和机器人30的上述验证过程相同。因此，不再描述客户端10的验证过程。而且，假定通过与机器人30的验证过程相同的过程来完成客户端10的验证。</p>
+      <p>当完成对机器人30和客户端10的验证过程时，URC服务器20向会话ID字段分配ID，以便在至少一个客户端10和URC服务器20之间以及在URC服务器20和至少一个机器人30之间进行区分，并且然后向机器人30和客户端10发送分组。相应的机器人30和客户端10通过利用由URC服务器20分配的会话ID，以期望服务请求消息或用于控制机器人30的控制请求消息向URC服务器20发出请求。URC服务器20根据所接收的服务请求消息执行相应的服务，或根据所接收的控制请求消息来控制机器人30。</p>
+      <p>更具体而言，机器人30向URC服务器20发送包括用户的语音命令的相应音频数据的分组。URC服务器20解析所接收分组的语音命令，从数据库(DB)中提取对应于语音命令的相应服务ID，并且向机器人30分配相应的服务ID。也就是说，相应于分组的会话ID，向机器人30发送服务ID。</p>
+      <p>被分配服务ID的相应机器人30执行对应于服务ID的服务(即无人操纵安全保护、远程监视、语音识别、视频识别和运动控制中的一个)，同时向URC服务器20发送该对应服务的指定运行模式的分组。机器人30向URC服务器20发送执行结果的分组。服务ID可以设立可由机器人30执行的多个其他服务。</p>
+      <p>例如，服务ID的功能如下。</p>
+      <p>在终止对终端(机器人和客户端)的验证之后，当用户以语音请求通过机器人30的特定服务(例如无人操纵安全保护)，URC服务器20通过解析过程将所接收的音频数据识别为特定服务呼叫，并确定机器人30是否具有使用该服务的权限。结果，当相应机器人30被给予使用相应服务的权限时，URC服务器20向被呼叫的机器人30分配会话ID。被分配服务ID的机器人30在使用该服务时使用所分配的服务ID。</p>
+      <p>当机器人30使用所分配的服务ID向URC服务器20发送分组以便请求任意服务时，URC服务器20解析从机器人30发送的分组的报头部分的服务ID，驱动用于执行相应服务的应用程序，并执行相应的服务。</p>
+      <p>由于客户端10不是象机器人30那样的移动物体，所以它被分配对应于用于远程监视的服务的服务ID。其后，客户端10通过发送针对服务ID的分组来接收机器人30的操作状态、监视图像、音频数据等，并执行监视。</p>
+      <p>更具体而言，客户端10简单地监视机器人30的状态等，而不是通过URC服务器20与机器人30通信来控制机器人30。在这种情况下，URC服务器20还通过与机器人30的分组通信来获得相应信息以便向客户端10提供关于机器人30的状态的信息(例如，包括关于机器人状态的图像信息、语音信息等的监视信息)。</p>
+      <p>为了获得如上所述的对应于服务ID的服务，在URC服务器20和机器人30之间收发分组的有效负载消息的实施例被分类成语音识别的实施例、图像识别的实施例、验证的实施例、运动控制的实施例、控制客户终端的实施例等等。将参照附图详细描述在URC服务器20和客户端30之间的用于所述服务的消息流。</p>
+      <p>图7图解了在根据本发明的机器人控制方法中的、在机器人和URC服务器之间的用于机器人的语音识别服务(诸如ASR(自动语音识别)和TTS(文本到语音))的消息序列。如图7中所图解的，在步骤S101，机器人30向URC服务器20发送消息ASR_SVC_RECG_WLST以便识别用户输入的语音命令。ASR_SVC_RECG_WLST消息包括用户语音的词汇列表，这是识别语音命令所需的。在步骤S102，URC服务器20根据从机器人30接收的ASR_SVC_RECG_WLST消息向机器人30发送其中包括语音识别词汇表的文件名称的消息ASR_SVC_RECG_FLST。在步骤S103，机器人30向URC服务器20发送包括语音识别数据的消息ASR_SVC_RECG_PROC，然后在步骤S104，URC服务器20分析从机器人30接收的所述语音识别数据，并且向机器人30发送包括所识别出的词汇表和音调(score)信息的消息ASR_SVC_RECG_PROC_RESULT。</p>
+      <p>在步骤S105，机器人30使用消息TTS_SVC_TEXT_BUFF请求URC服务器20合成文本，并且在步骤S106，URC服务器20根据合成文本的结果向机器人30发送消息TTS_SVC_TEXT_BUFF_RESULT。</p>
+      <p>在步骤S107，机器人30向URC服务器20发送TTS_SVC_TEXT_FILE，以便根据从URC服务器20接收的文本合成结果消息来请求具有指定文件名称的文本。</p>
+      <p>在步骤S108，URC服务器20发送包括根据机器人30的TTS_SVC_TEXT_FILE消息合成的语音文件的消息TTS_SVC_TEXT_FILE_RESULT到URC服务器20，并且在步骤S109，机器人30通过使用消息TTS_SVC_TEXT_STREAM请求利用语音合成发送到URC服务器20的文本。</p>
+      <p>因此，在步骤S110，URC服务器20使用消息TTS_SVC_TEXT_STREAM_RESULT向机器人30发送机器人30请求的利用文本合成的音频数据和ID。</p>
+      <p>在步骤S111，机器人30利用消息TTS_SVC_NAME_BUFF请求URC服务器20合成个人的名称，并且在步骤S112，URC服务器20通过有效负载消息TTS_SVC_NAME_BUFF_RESULT向机器人30发送所合成的个人名称的数据。</p>
+      <p>图8图解了在根据本发明的机器人控制方法中的、在机器人和URC服务器之间收发的、用于图像识别服务和运动检测(跟踪)服务的消息的序列。参照图8，在步骤S201，机器人30利用消息HCI_VISION_InitServer向URC服务器20发送其会话ID(即机器人ID)。在步骤S202，URC服务器20通过利用消息(HCI_VISION_InitServer_RESULT消息)，根据从机器人30接收的机器人ID的HCI_VISION_InitServer消息向机器人30发送关于下述确定结果的信息：确定是否给出关于利用相应机器人ID的服务是否是可能的权限。在步骤S203，机器人30通过利用消息HCI_VISION_FRCONF向URC服务器20发送关于在执行面部注册模式之前是否可以根据所注册的用户ID来注册用户的面部的信息。</p>
+      <p>在步骤S204，URC服务器20通过利用消息HCI_VISION_FRCONF_PROC向机器人30请求当根据机器人30的用户ID可以注册面部时要注册的面部图像。在步骤S205，机器人30利用消息HCI_VISION_FRMODE，向URC服务器20发送为根据URC服务器20请求的面部识别而拾取的面部图像，并且向URC服务器20注册所述面部图像。在步骤S206，URC服务器20向机器人30发送消息HCI_VISION_FR_PROC，通知面部图像被注册。</p>
+      <p>在步骤S207，机器人30通过使用消息HCI_VISION_FI_MODE向URC服务器20发送用于图像识别的实际面部数据。在步骤S208，URC服务器20向机器人30发送包括关于是否可以由从机器人30接收的面部数据来识别出面部的信息的消息HCI_VISION_FI_PROC。</p>
+      <p>在步骤S209，当机器人30利用消息HCI_VISION_SV_MODE向URC服务器20发送用于无人操纵安全保护的视频数据，在步骤S210，URC服务器20分析从机器人30发送的用于无人操纵安全保护的视频数据，并且根据对于无人操纵安全保护的分析结果向机器人30发送消息HCI_VISION_SV_PROC。因此，完成相应的服务。</p>
+      <p>图9图解了在根据本发明的机器人控制方法中的、在机器人和URC服务器之间收发的、用于机器人的验证的消息的序列，并且图10图解了在根据本发明的机器人控制方法中的、在远程机器人和服务器之间收发的用于远程监视机器人的验证消息的序列。如图9和10所图解的，当发出初始化连接的请求时发送用于验证的数据，并且验证被分成两类，即用于机器人30的验证，和用于客户端10的验证。</p>
+      <p>参照图9，对于机器人30的验证，在步骤S301，机器人30向URC服务器20发送包括验证所需的信息的消息AUTH_INITIATE。</p>
+      <p>在步骤S302，URC服务器20分析从机器人30所发送的验证所需的信息，发送包括关于分析结果的信息(即验证结果信息)的消息AUTH_RESULT，并执行验证以及然后执行其他服务。</p>
+      <p>参照图10，对于客户端10的验证，在步骤S401，客户端10通过使用消息AUTH_INITIATE发送在向主URC服务器20发出初始化连接的请求时的验证所需的信息，并且在步骤S402，主URC服务器20根据客户端10的验证请求，向客户端10发送包括关于可连接机器人30的列表的信息和关于每一机器人30的当前状态的信息的消息AUTH_ROBOT_LIST。</p>
+      <p>在步骤S403，客户端10向主URC服务器20发送消息AUTH_SELECTED_ROBOT以便执行由用户从几个机器人30中选择的机器人30的验证。在步骤S404，主URC服务器20向客户端10发送包括关于其它URC服务器21的相应信息的消息AUTH_ROBOT_LOCATION，以便定位由用户所选择的机器人30所连接的URC服务器21。该处理用于获得关于要控制的机器人30连接的URC服务器21的信息，但其可以被省略。</p>
+      <p>在步骤S405，客户端10向主URC服务器20发送消息AUTH_BYE以便终止与主URC服务器20的连接，由此可以终止与主URC服务器20的连接。在步骤S406，客户端10向URC服务器21发送作为验证请求消息的消息AUTH_RE_INITIATE以便访问由用户选择的机器人30所连接的URC服务器21并且得到期望的服务。因此，在步骤S407，URC服务器21向客户端10发送包括关于验证结果的信息的消息AUTH_RESULT，由此完成验证，以便进行到后面的过程。</p>
+      <p>图11图解了在根据本发明的机器人控制方法中的、在机器人和URC服务器之间收发以控制机器人的消息的类型。参照图11，从机器人30发送到URC服务器20的消息可以包括：Robot_Movement消息，用于发出对机器人30的运动控制的请求；Robot_Report&#160;Frequency消息，用于决定检查机器人30的状态的周期；Robot&#160;Status&#160;Report消息，用于报告关于机器人30的当前状态的信息；Robot&#160;Error&#160;Status消息，用于检查关于机器人30的错误状态的信息。</p>
+      <p>从URC服务器20发送到机器人30的消息可以包括：Camera&#160;Control消息，用于控制机器人30的摄像头的运动；Status_Info&#160;Report消息，用于向机器人30通知机器人30或URC服务器20的状态；和Close_Info&#160;Report消息，用于通知终止在机器人30和URC服务器20之间的连接的原因。从机器人30发送到URC服务器20的其他消息可以包括：DB_Update消息，用于更新URC服务器20的数据；Robot_Attri&#160;Update消息，用于更新机器人的属性DB，其从机器人30发送到URC服务器20；User&#160;Info消息，用于发送用户ID和口令；和Authorization消息，用于验证机器人30。</p>
+      <p>图12图解了在根据本发明的机器人控制方法中的、远程客户端和URC服务器之间收发以便在远程客户端通过URC服务器来控制机器人的消息的类型。参照图12，URC服务器20发送Map_Version_Req消息，其用于向客户端10请求关于映射版本的信息。</p>
+      <p>响应于来自URC服务器20的请求，客户端10通过Map_Version_Resp消息向URC服务器20发送其自己的映射版本信息。在这种情况下，URC服务器20比较其自己的映射版本信息和通过Map_Version_Resp消息从客户端10接收的映射版本信息，分析比较结果，并通过Client_For_Image消息向客户端10发送关于映射版本的匹配结果的信息。而且，当映射版本不匹配时，URC服务器20通过Client_For_Image消息向客户端10发送该映射版本信息。</p>
+      <p>URC服务器20首先通过Client_For_Robot_Status消息通知客户端10机器人的状态。而且，客户端10向URC服务器20发送Client_Sampling_Freq，Client_For_Image、Client_For_Button_Control、Client_Map_Control和Client_For_Robot_Camera_Control消息，当控制机器人摄像头向服务器发送和请求终止时，在向URC服务器20请求关于多长时间从URC服务器20接收信息的视频数据的情况下发送上述每一消息。</p>
+      <p>如上所述，本发明提出了用于适合在机器人、服务器和用户终端(客户端)之间平滑地交互工作，从而使得机器人和客户端能够平滑和方便地利用服务器来监视通过机器人的所期望服务的终端数据格式。</p>
+      <p>而且，本发明适合于具有在服务中专用的消息格式以便实现该服务。然而，该消息格式具有下述缺点：每次应当建立或增加所述消息格式以便展开所述服务。而且，所增加的消息格式不适合于实现其他的所应用的服务，因此，不可能重用所增加的消息格式。</p>
+      <p>而且，如图3中所图解的，该消息格式具有服务ID字段，因此，机器人、URC服务器和得到该服务的客户端根据特定服务而被分配该服务ID并利用所分配的服务ID而实现该服务。如此，为了得到特定服务，对于每一服务需要不同的消息格式。</p>
+      <p>而且，在上面的本发明中，没有提供用于对执行服务进行同步的机制。如果对执行服务的同步不正确，则开始和终止服务的时间点可能变得不准确。也就是说，可能在不正确的时间在URC服务器侧提供了服务，并因此，可能导致机器人的误操作。</p>
+      <p>而且，没有提供克服可能在机器人和URC服务器之间发生的异常状态的机制。更具体而言，当在网路不稳定的状态下终止了机器人的连接时，URC服务器可能不能检测到这样的状态，因而识别出机器人连续地连接到网络。因此，用户不能识别出网络的不稳定状态，并且URC服务器不能采取正确的步骤，例如，输出出错消息，执行强制终止等。</p>
+      <p>如此，下面将描述本发明的可替代实施例，其旨在解决如上所述的、在本发明中出现的问题。</p>
+      <p>图13示意性地图解了根据本发明的另一实施例的机器人控制系统的连接。如图13所图解的，多个机器人200通过网络连接到URC服务器100，以及在远程位置，多个客户端300通过网络连接到URC服务器100。机器人200获得语音命令或状态信息(诸如从用户或外部输入的图像)，并向URC服务器100发送所获得的信息。</p>
+      <p>URC服务器100处理从机器人200发送的的语音命令或图像信息以确定用户的意图以便提供智能的且适合于状态的URC服务。</p>
+      <p>对于URC服务，除了诸如信息传送的服务之外，还可以利用移动性向用户提供有形的服务。</p>
+      <p>而且，远程客户端300在远程位置可以利用每一机器人200的识别功能和移动性提供多种服务。这些服务由URC服务器100提供，以及在远程位置的服务提供者提供，从而在URC基础架构中可以创建多种商业模式。</p>
+      <p>遵循URC标准的机器人200可以利用在URC基础架构中提供的多种服务。在URC基础架构中交互工作的许多机器人200可以提供能够使服务提供者得到收益的市场。</p>
+      <p>URC机器人200和远程客户端300收发消息以便与URC服务器100通信。该消息具有在URC机器人200或远程客户端300和URC服务器100之间的通信协议中使用的格式。</p>
+      <p>图14图解了根据本发明一个实施例的在机器人、URC服务器和客户端之间收发的消息的公共报头的格式。参照图14，URC协议使用利用TCP/IP的消息来通信，其中消息的单元称为URC消息。为了通信效率，对URC消息的成帧处理采用二进制格式的消息配置。根据使用，URC消息被划分成四种类型，即URC请求、URC响应、URC心跳(heartbeat)和URC事件。所有四种消息类型具有公共报头格式。在URC公共报头消息的报头字段中的数据的类型和意义如下表1所示。</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>根据其功能和使用，在URC协议中定义的消息被分类成多种概要(profile)。在URC协议中提供的这些概要如图15所示。</p>
+      <p>图15图解了根据本发明一个实施例的、在机器人、客户端和URC服务器之间的URC协议概要体系结构。参照图15，URC服务器100的概要提供实现智能服务所需的多种功能(诸如语音/图像识别、语音合成等)、以及使得客户端300能够远程控制机器人的接口。因此，例如，URC服务器概要可以包括验证概要、远程接口概要、事件概要、语音识别概要、图像识别概要和运动检测概要。</p>
+      <p>如图14所示的URC公共机器人概要提供了用于控制机器人200的通用接口。URC服务基于在URC公共机器人概要中提供的功能，可以向用户提供利用机器人的有形服务。因此，例如，URC公共机器人概要可以包括移动概要、导航概要、EPD(结束点检测)概要、声音概要、运动概要和表情概要。</p>
+      <p>URC公共机器人概要是指下述功能：对于要通过URC基础架构而被提供服务的URC机器人，机器人开发者必须实现所述功能。实现URC公共机器人概要的机器人可被提供相同的服务，而与它们的类型和性能无关。</p>
+      <p>其后，将描述在本发明中的在机器人、URC服务器和客户端之间的URC通信协议操作机制。</p>
+      <p>URC通信协议操作机制可以包括URC消息成帧机制、URC消息编码机制、URC验证机制、URC机器人ACK(确认)、和HB(心跳)机制。</p>
+      <p>在URC消息成帧机制中，URC协议使用关于TCP的消息来通信，其中，消息单元被称为URC消息。为了通信效率，对URC消息的成帧采用二进制格式的消息配置，并且在URC消息中包含的多条信息以UDR(URC协议数据表达)的数据格式来表示。</p>
+      <p>在URC消息编码机制中，利用“little-endian”格式来编码URC消息，并且其韩文编码使用“KSC-5601”。</p>
+      <p>在URC验证机制中，可以接入URC基础架构的每个URC机器人和URC客户端通过识别用户和机器人200的验证过程，并且授予它们自己必要的权利。预注册的ROBOT&#160;ID标识URC机器人200，并且URC客户端300通过基于用户ID和口令来执行验证而验证它们自己。</p>
+      <p>在称为事件通知和确认的URC机器人ACK中，当在URC环境中发生诸如语音命令和运动的事件时，URC机器人200必须能够异步地向URC服务器100通知该信息。使用这样的异步事件，URC服务器100感知用户的意图和状态，并且然后产生适合于该意图和状态的充分的服务。</p>
+      <p>而且，由于由URC机器人200提供的大多数功能需要某种程度的从功能的开始到结束的耗时工作，所以URC服务器100必须以事件的形式通过工作的开始和结束进行确认以便使得URC机器人的功能能够与其他功能同步。URC服务器100通过ACK执行实现服务所需的同步。</p>
+      <p>在图16中图解了URC机器人ACK操作。如图16所示，由于URC机器人200的每一功能可以由每一部件来定义，每一部件执行其在状态机(例如如图16所示的URC机器人200的组成)中的操作，并且应当向URC服务器100通知在URC机器人200的状态处于转换的时间点的相应事件。</p>
+      <p>也就是说，由于每一URC机器人200的功能可以由每一部件来定义，URC机器人的每一部件执行其在状态机中的操作，并且必须在状态处于转换的时间点通知相应事件。</p>
+      <p>在URC协议中，URC机器人200的每一部件的状态被划分成两类，即“IDLE(空闲)”和“ACTIVE(激活)”。当每一状态转换到另一状态时，URC服务器10应当被通知“START(开始)”、“END(结束)”或“STOP(停止)”的事件。因此，URC服务器100根据从URC机器人200发送的事件消息，可以容易地检测到机器人的当前运行状态。</p>
+      <p>在URC&#160;HB机制中，基本上，URC机器人200被驱动和同时连接到URC服务器100。URC机器人200保持连接直到它们停止驱动。因此，对于由在执行服务时的异常网络环境导致的连接断开，重要的是迅速检测到异常状态和采取正确的步骤。为了继续监视在URC服务器100和URC机器人200之间是否保持正常的网络连接，URC协议定义了在URC服务器100和URC机器人200之间的HB(心跳)协议，由此管理由这样的网络环境导致的异常状态。相应地，在图17中图解检测在异常网络环境中的URC机器人200和URC服务器100之间的连接。</p>
+      <p>图17图解了检查在URC机器人和URC服务器之间的连接的方法。如图17所示，URC服务器100周期地(例如以N秒的间隔)向URC机器人200发送心跳请求消息。每一URC机器人200根据从URC服务器100发送的心跳请求消息而向URC服务器100发送心跳响应消息。因此，URC服务器100可以检查与URC机器人200的网络连接。</p>
+      <p>尽管发送了心跳请求消息，但是URC服务器100可能在预定时间段内没有接收到心跳响应消息。在这种情况下，URC服务器100确定网络连接异常。然而，当在预定时间段内接收到心跳响应消息时，URC服务器100确定与URC机器人200的连接正常。因此，当确定网络连接异常时，URC服务器100试图与URC机器人200重连接，由此持续地控制URC机器人200。</p>
+      <p>将参照图18描述使用如上所述的机制和URC协议消息、在远程客户端上通过URC服务器控制机器人的方法。</p>
+      <p>图18图解了根据本发明一个实施例的、被收发以在客户端上远程控制机器人的消息的序列。参照图18，URC机器人200开始连接至URC服务器100，并且向URC服务器100发送语音命令或状态信息(诸如其获得的当前图像信息)。URC机器人200从URC服务器100接收控制命令，并且执行在URC协议中规定的动作。</p>
+      <p>远程客户端300在远程位置上连接到URC服务器100，选择其希望控制的URC机器人200，并且从URC机器人200获得必需的信息，或者根据其希望实现的服务的逻辑来控制URC机器人200。</p>
+      <p>在远程控制和监视服务的情况下，远程客户端300向URC机器人200发出发送图像信息和状态信息的请求，从而它可以检查URC机器人200的图像和状态。而且，远程客户端300可以控制URC机器人200。例如，远程客户端300可以通过机器人控制命令在远程位置移动URC机器人200，或者产生来自URC机器人200的声音。</p>
+      <p>将参照图18顺序描述在客户端控制或监视机器人的操作流程。参照图18，在步骤S501，远程URC客户端300向URC服务器100发送URC_CLIENT_LOGIN消息以便远程控制URC机器人200或提供对URC机器人200的监视服务，并且连接到URC服务器100。URC客户端300从URC服务器100获得验证。已在前面说明了客户端的验证过程，因此将不再对其进行详细描述。</p>
+      <p>在步骤S502，在完成验证之后，URC客户端300向URC服务器100发送URC_GET_ROBOT_LIST消息，以便请求关于连接到URC服务器100的URC机器人200的列表的信息。在步骤S503，URC服务器100向URC客户端300发送包括URC客户端300所请求的机器人列表信息的URC_ROBOT_LIST消息。</p>
+      <p>在步骤S504，URC客户端300根据从URC服务器100发送的机器人列表信息来分配要控制的机器人，并且向URC服务器100发送URC_ALLOCATE_ROBOT消息以便请求关于机器人分配和相应机器人的使用权限的信息。</p>
+      <p>在步骤S505和S506，当URC服务器100授予对于机器人控制的用户授权时，URC客户端300向相应的机器人200发送SUBSCRIBE_EVENT_CHANNEL(VISION，SYSTEM，ROBOT，STATUS)消息以便预订每一相应的事件信道，以便它可以监视用于控制或远程监视相应机器人200所需的状态和图像信息。URC服务器100作为到由URC客户端300分配的相应机器人200的、从URC客户端300发送的相应消息的接口。</p>
+      <p>而且，在步骤S507和S508，在其预定了期望的事件信道之后，URC客户端300通过URC服务器100向相应机器人200发送OPEN_VISION消息和OPEN_STATUS_MONITOR消息以便向相应的机器人200请求状态和图像信息。</p>
+      <p>在步骤S509到S512，根据URC客户端300的请求，URC机器人200周期地向URC客户端300发送包括其拾取的图像的信息和状态信息的EVENT_NOTIFICATION(VISION，STATUS)消息。</p>
+      <p>在步骤S513，URC客户端300向机器人200发送MOVE_ROBOT(FORWARD)消息以便使用从机器人200发送的图像和状态信息来控制机器人200的移动。</p>
+      <p>在步骤S514和S515，URC机器人200执行由URC客户端300请求的相应运动。在这种情况下，URC机器人200向URC客户端300发送EVENT_NOTIFICATION(MOVE_START)和EVENT_NOTIFICATION(MOVE_END)消息以正确地通知运动的开始和结束，以便URC客户端300容易地检查机器人200的运动状态，从而实现服务同步。</p>
+      <p>利用上述方法，URC客户端300可以利用从机器人200发送的图像和状态信息来实时地远程控制URC机器人200。</p>
+      <p>其后，在步骤S516，如果服务终止，即当在URC客户端300上终止对机器人200的远程控制时，则URC客户端300向URC服务器100发送URC_RELEASE_ROBOT消息以便释放对远程控制的机器人200的分配。而且，在步骤S517，URC客户端300向URC服务器100发送URC_CLIENT_LOGOUT消息以便终止到URC服务器100的连接。相应地，终止所有的服务。</p>
+      <p>如上所述，在本发明中，专用的消息格式被改进为公共概要类型的协议，因此，服务提供者可以通过利用协议层来执行面向服务逻辑的开发。因此，提供公共接口和基础架构，而不增加新消息，从而可以增加更多的便利的服务。而且，通过利用这些概要可以在远程位置提供能够配置服务逻辑的接口，从而提供者可以容易地添加服务。</p>
+      <p>而且，为了提供服务执行同步，改进了提供的消息原语Request(请求)和Response(响应)的新格式，并增加了Event(事件)消息。更具体而言，利用正在所有机器人上执行的服务相关的事件消息来发送明确的应答，以便减少错误的发生，并且更容易地配置服务逻辑。</p>
+      <p>而且，增加URC&#160;HB消息，并因此检查机器人或服务器的异常状态，从而可以采取由此引起的步骤。这使得可以以更有效率的方式来检查在用户和机器人服务器之间的状态。</p>
+      <p>基于网络的机器人遵循在本发明中提出的协议，从而通过利用在URC基础架构中提供的多种功能，可以向用户提供智能的和适合于环境的服务。</p>
+      <p>而且，URC客户端可以利用机器人的传感功能和移动性提供多种服务。这使得可以由URC服务器和在远程位置的服务提供者单独提供服务，以便可以在URC基础架构中创建多种商业模式。</p>
+      <p>结果，遵循URC协议的机器人可以利用在URC基础架构中提供的各种服务。在URC基础架构中交互工作的多个机器人可以提供对服务提供者产生收益的市场，从而可以有利于推行智能机器人服务。</p>
+      <p>如上阐述的本发明提出了一种用于使得在机器人、服务器和用户客户端之间可以平滑交互工作、由此有效地确保甚至是在多种机器人和客户端之间的兼容性以促进广泛使用的协议的数据格式。</p>
+      <p>而且，为了提供对执行服务的同步，增加事件消息。使用正在所有机器人上执行的服务相关的事件消息来发送明确的确认，以便减少错误的发生，并且更容易地配置服务逻辑。</p>
+      <p>而且，提供克服在URC机器人和URC服务器之间可能发生的异常状态的机制。更具体而言，增加URC&#160;HB消息，并因而检查机器人或服务器的异常状态，从而可以容易地采取相应步骤。这使得可以以更有效的方式来检查在用户和机器人服务器之间的状态。</p>
+      <p>而且，基于网络的机器人遵循在本发明中提出的协议，从而通过利用在URC基础架构中提供的多种功能，可以向用户提供智能的和适合于环境的服务。</p>
+      <p>而且，URC客户端可以利用机器人的传感功能和移动性提供多种服务。这使得可以由URC服务器和在远程位置的服务提供者单独提供服务，以便可以在URC基础架构中创建多种商业模式。</p>
+      <p>结果，遵循URC协议的机器人可以利用在URC基础架构中提供的各种服务。在URC基础架构中交互工作的多个机器人可以提供对服务提供者产生收益的市场，从而可以有利于推行智能机器人服务。</p>
+      <p>虽然已参照本发明的示范性实施例来描述了本发明，但是本领域技术人员应当理解：在不脱离由后面的权利要求所定义的本发明的范围的情况下，可以在形式上和细节上进行各种修改。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102014122A?cl=zh">CN102014122A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月10日</td><td class="patent-data-table-td patent-date-value">2011年4月13日</td><td class="patent-data-table-td ">上海复控华龙微系统技术有限公司</td><td class="patent-data-table-td ">基于双向安全认证的点对点协议的IP Camera服务系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102014122B?cl=zh">CN102014122B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月10日</td><td class="patent-data-table-td patent-date-value">2015年4月22日</td><td class="patent-data-table-td ">上海复控华龙微系统技术有限公司</td><td class="patent-data-table-td ">基于双向安全认证的点对点协议的IP Camera服务系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102333071A?cl=zh">CN102333071A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月26日</td><td class="patent-data-table-td patent-date-value">2012年1月25日</td><td class="patent-data-table-td ">浙江大学</td><td class="patent-data-table-td ">一种工程机械车辆联网通信方法及工程机械车辆联网系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014101022A1?cl=zh">WO2014101022A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月26日</td><td class="patent-data-table-td patent-date-value">2014年7月3日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">远程唤醒方法、装置及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=wpCIAAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009060000">G06F9/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2007年12月26日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2008年2月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年12月8日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/b842338bee2695a61d0c/CN101095104A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%BB%88%E7%AB%AF%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%92%8C%E4%BD%BF%E7%94%A8%E8%AF%A5%E7%BB%88%E7%AB%AF%E6%95%B0.pdf?id=wpCIAAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1PC70sIxQlYFnI2jK4YnGqKzbxJA"},"sample_url":"https://www.google.com/patents/reader?id=wpCIAAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html><html><head><title>专利 CN103354634A - 信息处理方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="信息处理方法及系统"><meta name="DC.contributor" content="苏辉东" scheme="inventor"><meta name="DC.contributor" content="邱琦" scheme="inventor"><meta name="DC.contributor" content="闵晓琼" scheme="inventor"><meta name="DC.contributor" content="上海方付通商务服务有限公司" scheme="assignee"><meta name="DC.date" content="2013-5-8" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供一种信息处理方法及系统。根据本发明的方法，在移动通讯设备端，先基于运算因子对第一密钥进行第一运算以获得第二密钥；随后基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息，再基于第二密钥的第二部分对第二信息进行第二运算以获得第一验证信息，随后基于第一验证信息、运算因子及第二信息来形成待发送短消息，并予以发送；在网络设备端，则基于由接收的短消息中所提取的运算因子、第一验证信息等来对接收的短消息进行验证及解密，由此实现基于短消息的通信双方的安全通信，尤其能确保短消息中的交易信息的安全。"><meta name="DC.date" content="2013-10-16"><meta name="DC.relation" content="CN:101098225:A" scheme="references"><meta name="DC.relation" content="CN:101436280:A" scheme="references"><meta name="DC.relation" content="CN:102184446:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103354634:A"><meta name="citation_patent_application_number" content="CN:201310167319"><link rel="canonical" href="https://www.google.com/patents/CN103354634A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103354634A?cl=zh"/><meta name="title" content="专利 CN103354634A - 信息处理方法及系统"/><meta name="description" content="本发明提供一种信息处理方法及系统。根据本发明的方法，在移动通讯设备端，先基于运算因子对第一密钥进行第一运算以获得第二密钥；随后基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息，再基于第二密钥的第二部分对第二信息进行第二运算以获得第一验证信息，随后基于第一验证信息、运算因子及第二信息来形成待发送短消息，并予以发送；在网络设备端，则基于由接收的短消息中所提取的运算因子、第一验证信息等来对接收的短消息进行验证及解密，由此实现基于短消息的通信双方的安全通信，尤其能确保短消息中的交易信息的安全。"/><meta property="og:title" content="专利 CN103354634A - 信息处理方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103354634A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103354634A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=phHaCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103354634A&amp;usg=AFQjCNH8kMLGKrug-AYBe5pbeaOxGcDGJQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/4cba77bc22c53226548c/CN103354634A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/4cba77bc22c53226548c/CN103354634A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103354634A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103354634A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103354634A?cl=zh" style="display:none"><span itemprop="description">本发明提供一种信息处理方法及系统。根据本发明的方法，在移动通讯设备端，先基于运算因子对第一密钥进行第一运算以获得第二密钥；随后基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密...</span><span itemprop="url">https://www.google.com/patents/CN103354634A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103354634A - 信息处理方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103354634A - 信息处理方法及系统" title="专利 CN103354634A - 信息处理方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103354634 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310167319</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年10月16日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年5月8日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年5月8日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310167319.9, </span><span class="patent-bibdata-value">CN 103354634 A, </span><span class="patent-bibdata-value">CN 103354634A, </span><span class="patent-bibdata-value">CN 201310167319, </span><span class="patent-bibdata-value">CN-A-103354634, </span><span class="patent-bibdata-value">CN103354634 A, </span><span class="patent-bibdata-value">CN103354634A, </span><span class="patent-bibdata-value">CN201310167319, </span><span class="patent-bibdata-value">CN201310167319.9</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%8B%8F%E8%BE%89%E4%B8%9C%22">苏辉东</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%82%B1%E7%90%A6%22">邱琦</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%97%B5%E6%99%93%E7%90%BC%22">闵晓琼</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%8A%E6%B5%B7%E6%96%B9%E4%BB%98%E9%80%9A%E5%95%86%E5%8A%A1%E6%9C%8D%E5%8A%A1%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">上海方付通商务服务有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103354634A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103354634A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103354634A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=phHaCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310167319&amp;usg=AFQjCNHY4MyGJHU8dHaccI1kAn8fNH7c8g"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=phHaCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103354634A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEigHgI7jQIAbIoG9QNEmo-exbPEw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT130990181" lang="ZH" load-source="patent-office">信息处理方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 103354634 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA125118594" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供一种信息处理方法及系统。根据本发明的方法，在移动通讯设备端，先基于运算因子对第一密钥进行第一运算以获得第二密钥；随后基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息，再基于第二密钥的第二部分对第二信息进行第二运算以获得第一验证信息，随后基于第一验证信息、运算因子及第二信息来形成待发送短消息，并予以发送；在网络设备端，则基于由接收的短消息中所提取的运算因子、第一验证信息等来对接收的短消息进行验证及解密，由此实现基于短消息的通信双方的安全通信，尤其能确保短消息中的交易信息的安全。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(16)</span></span></div><div class="patent-text"><div mxw-id="PCLM56555512" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种用于移动通讯设备端的信息处理方法，其特征在于，所述用于移动通讯设备端的信息处理方法至少包括:  1)基于运算因子对第一密钥进行第一运算以获得第二密钥；  2)基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二息；  3)基于第二密钥的第二部分对所述第二信息进行第二运算以获得第一验证信息；  4)基于所述第一验证信息、所述运算因子及所述第二信息来形成待发送短消息，并予以发送。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的用于移动通讯设备端的信息处理方法，其特征在于，还包括步骤:  基于随机数来由多个预存的密钥中确定一者作为第一密钥；  所述步骤I)包括:  基于所述随机数及运算因子对所述第一密钥进行第一运算以获得第二密钥；  所述步骤4)包括:  基于所述第一验证信息、所述随机数、运算因子及所述第二信息来形成待发送短消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1或2所述的用于移动通讯设备端的信息处理方法，其特征在于，还包括步骤:`  基于第三密钥、采用第二加密算法对第三信息中的重要信息进行加密后，再基于预定格式  对经过加密的第三信息进行封装以形成第一信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1或2所述的用于移动通讯设备端的信息处理方法，其特征在于:所述运算因子包括待生成短消息的编号。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.一种用于网络设备端的信息处理方法，其特征在于，所述用于网络设备端的信息处理方法至少包括:  A)基于由接收的短消息中所提取的运算因子对第一密钥进行第一运算以获得第二密钥；  B)基于所述第二密钥的第二部分对由所述短消息中提取的第二信息进行第二运算以获得第二验证信息；  C)将所述第二验证信息与由所述短消息中提取的第一验证信息进行比对以确定所述短消息是否异常；  D)当确定所述短消息没有异常时，则基于所述第二密钥的第一部分、采用第一解密算法对所述第二信息进行解密以获得第一信息，并基于所述第一信息来进行后续处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的用于网络设备端的信息处理方法，其特征在于，还包括:  基于由所述短消息中所提取的随机数来由多个密钥中确定一者作为第一密钥；  所述步骤A)包括:  基于所述随机数及所述运算因子对第一密钥进行第一运算以获得第二密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求5所述的用于网络设备端的信息处理方法，其特征在于，还包括:  基于第四密钥、采用第二解密算法对由所述第一信息中提取的第三信息中的重要信息进行解密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求5所述的用于网络设备端的信息处理方法，其特征在于，在步骤D)之N /.^-7&#8212;目U还  包括:  将由所述短消息中获取的移动设备号码信息与用户信息库中的信息进行比对以确定该移动设备是否真实存在。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.一种用于移动设备端的信息处理系统，其特征在于，所述用于移动设备端的信息处理系统至少包括:  第一运算模块，用于基于运算因子对第一密钥进行第一运算以获得第二密钥；  加密模块，用于基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息；  第二运算模块，用于基于第二密钥的第二部分对所述第二信息进行第二运算以获得第一验证信息；  生成模块，用于基于所述第一验证信息、所述运算因子及所述第二信息来形成待发送短消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的用于移动通讯设备端的信息处理系统，其特征在于，还包括:   第一选择模块，用于基于随机数来由多个密钥中确定一者作为第一密钥；  所述第一运算模块包括:  第一子运算单元，用于基于所述随机数及运算因子对所述第一密钥进行第一运算以获得第二密钥；  所述生成模块包括:  子生成单元，用于基于所述第一验证信息、所述随机数、运算因子及所述第二信息来形成待发送短消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求9或10所述的用于移动通讯设备端的信息处理系统，其特征在于，还包括:  封装模块，用于基于第三密钥、采用第二加密算法对第三信息中的重要信息进行加密后，  再基于预定格式对经过加密的第三信息进行封装以形成第一信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求9或10所所述的用于移动通讯设备端的信息处理系统，其特征在于:  所述运算因子包括待生成短消息的编号。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.一种用于网络设备端的信息处理系统，其特征在于，所述用于网络设备端的第二信息处理系统至少包括:  第三运算模块，用于基于由接收的短消息中所提取的运算因子对第一密钥进行第一运算以获得第二密钥；  第四运算模块，用于基于所述第二密钥的第二部分对由所述短消息中提取的第二信息进行第二运算以获得第二验证信息；  验证模块，用于将所述第二验证信息与由所述短消息中提取的第一验证信息进行比对以确定所述短消息是否异常；第一解密模块，用于当确定所述短消息没有异常时，则基于所述第二密钥的第一部分、采用第一解密算法对所述第二信息进行解密以获得第一信息，并基于所述第一信息来进行后续处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的用于网络设备端的信息处理系统，其特征在于，还包括:  第二选择模块，用于基于由所述短消息中所提取的随机数来由多个密钥中确定一者作为第一密钥；  所述第三运算模块包括:  第二子运算单元，用于基于所述随机数及所述运算因子对第一密钥进行第一运算以获得第二密钥。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求13所述的用于网络设备端的信息处理系统，其特征在于，还包括:  第二解密模块，用于基于第四密钥、采用第二解密算法对由所述第一信息中提取的第三信息中的重要信息进行解密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求13所述的用于网络设备端的信息处理系统，其特征在于，在第一解密模块执行操作之前还包括:  比对模块，用于将 由所述短消息中获取的移动设备号码信息与用户信息库中的信息进行比对以确定该移动设备是否真实存在。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63538197" lang="ZH" load-source="patent-office" class="description">
+    <p>信息处理方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信领域，特别是涉及一种信息处理方法及系统。</p>
+    <p>背景技术</p>
+    <p>[0002]	随着通信技术的快速发展，移动电子商务已经成为电子商务发展的一个方向，而手机支付的大规模商用将逐渐成为移动电子商务的重要支付结算方式。目前的手机支付产品种类繁多，比如:客户端App手机银行、电话银行、Wap版手机银行等等都是比较常见的手机端自助支付产品。</p>
+    <p>[0003]	上述产品中，客户端App手机银行和Wap版手机银行一般使用的都是手机软件来实现，大部分系统在实现上均是基于互联网的通信方式进行数据传输，由于互联网是一个开放的、公共的网络，不存在一个专门的机构去进行管理，因此容易受到来自各方的不同形式的攻击，安全度不高；而电话银行主要是通过语音方式进行沟通，能支持的功能有限且不够方便，不能最大限度满足用户的需求。</p>
+    <p>[0004]	此外，在申请号为201110097740.8的中国专利文献中，公开了一种应用于RF-SM卡手机支付的手机贴膜卡，基于该贴膜卡与POS交易终端的通信可进行手机支付，方便用户。由于贴膜卡采用贴膜芯片技术，使手机一个SIM卡槽能同时插入两张SIM卡，其成本较低，且安装快捷方便，只需将贴膜卡直接贴设在SIM卡上即可正常使用，因此，如何基于贴膜卡技术来实现手机银行的安全交易，实已经成为本领域技术人员极为关注的一个焦点。</p>
+    <p>发明内容</p>
+    <p>[0005]	鉴于以上所述现有技术的缺点，本发明的目的在于提供一种信息处理方法及系统，以确保基于短消息的通信的安全。</p>
+    <p>[0006]	为实现上述目的及其他相关目的，本发明提供一种用于移动通讯设备端的信息处理方法，其至少包括:</p>
+    <p>[0007]	I)基于运算因子对第一密钥进行第一运算以获得第二密钥；</p>
+    <p>[0008]	2)基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息；</p>
+    <p>[0009]	3)基于第二密钥的第二部分对所述第二信息进行第二运算以获得第一验证信息；</p>
+    <p>[0010]	4)基于所述第一验证信息、所述运算因子及所述第二信息来形成待发送短消息，并予以发送。</p>
+    <p>[0011]	本发明还提供一种用于网络设备端的信息处理方法，其至少包括:</p>
+    <p>[0012]	A)基于由接收的短消息中所提取的运算因子对第一密钥进行第一运算以获得第二密钥；</p>
+    <p>[0013]	B)基于所述第二密钥的第二部分对由所述短消息中提取的第二信息进行第二运算以获得第二验证信息；[0014]	C)将所述第二验证信息与由所述短消息中提取的第一验证信息进行比对以确定所述短消息是否异常；</p>
+    <p>[0015]	D)当确定所述短消息没有异常时，则基于所述第二密钥的第一部分、采用第一解密算法对所述第二信息进行解密以获得第一信息，并基于所述第一信息来进行后续处理。</p>
+    <p>[0016]	本发明还提供一种用于移动通讯设备端的信息处理系统，其至少包括:</p>
+    <p>[0017]	第一运算模块，用于基于运算因子对第一密钥进行第一运算以获得第二密钥；</p>
+    <p>[0018]	加密模块，用于基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息；</p>
+    <p>[0019]	第二运算模块，用于基于第二密钥的第二部分对所述第二信息进行第二运算以获得第一验证信息；</p>
+    <p>[0020]	生成模块，用于基于所述第一验证信息、所述运算因子及所述第二信息来形成待发送短消息。</p>
+    <p>[0021]	本发明还提供一种用于网络设备端的信息处理系统，其至少包括:</p>
+    <p>[0022]	第三运算模块，用于基于由接收的短消息中所提取的运算因子对第一密钥进行第一运算以获得第二密钥；</p>
+    <p>[0023]	第四运算模块，用于基于所述第二密钥的第二部分对由所述短消息中提取的第二信息进行第二运算以获得第二验证信息；</p>
+    <p>[0024]	验证模块，用于将所述第二验证信息与由所述短消息中提取的第一验证信息进行比对以确定所述短消息是否异常；</p>
+    <p>`[0025]	第一解密模块，用于当确定所述短消息没有异常时，则基于所述第二密钥的第一部分、采用第一解密算法对所述第二信息进行解密以获得第一信息，并基于所述第一信息来进行后续处理。</p>
+    <p>[0026]	如上所述，本发明的信息处理方法及系统，具有以下有益效果:能确保接收的短消息的真实性、完整性、顺序性和时效性等。</p>
+    <p>附图说明</p>
+    <p>[0027]	图1显示为本发明的一种优选信息处理方法流程图。</p>
+    <p>[0028]	图2显示为本发明的另一种优选信息处理方法流程图。</p>
+    <p>[0029]	图3显示为本发明的一种优选信息处理系统示意图。</p>
+    <p>[0030]	图4显示为本发明的另一种优选信息处理系统示意图。</p>
+    <p>[0031]	元件标号说明</p>
+    <p>[0032]	I	第一信息处理系统</p>
+    <p>[0033]	10	第一选择模块</p>
+    <p>[0034]	11	第一运算模块</p>
+    <p>[0035]	11’	第一子运算单元</p>
+    <p>[0036]	12	加密模块</p>
+    <p>[0037]	13	第二运算模块</p>
+    <p>[0038]	14	生成模块</p>
+    <p>[0039]	14’	子生成单元[0040]	2	第二信息处理系统</p>
+    <p>[0041]	20	第二选择模块</p>
+    <p>[0042]	21	第三运算模块</p>
+    <p>[0043]	21’	第二子运算单元</p>
+    <p>[0044]	22	第四运算模块</p>
+    <p>[0045]	23	验证模块</p>
+    <p>[0046]	24	第一解密模块</p>
+    <p>[0047]	S11-S15、S10、S11’	步骤</p>
+    <p>[0048]	S21_S25、S20、S21，、S22’ 步骤</p>
+    <p>具体实施方式</p>
+    <p>[0049]	以下通过特定的具体实例说明本发明的实施方式，本领域技术人员可由本说明书所揭露的内容轻易地了解本发 明的其他优点与功效。本发明还可以通过另外不同的具体实施方式加以实施或应用，本说明书中的各项细节也可以基于不同观点与应用，在没有背离本发明的精神下进行各种修饰或改变。</p>
+    <p>[0050]	请参阅图1至图4。需要说明的是，本实施例中所提供的图示仅以示意方式说明本发明的基本构想，遂图式中仅显示与本发明中有关的组件而非按照实际实施时的组件数目、形状及尺寸绘制，其实际实施时各组件的型态、数量及比例可为一种随意的改变，且其组件布局型态也可能更为复杂。</p>
+    <p>[0051]	如图1所示，本发明提供一种信息处理方法。根据本发明的方法，其主要包括用于移动通讯设备端的信息处理方法以及用于网络设备端的信息处理方法。所述信息处理方法主要由信息处理系统来完成，该信息处理系统主要包括用于移动通讯设备端的第一信息处理系统及用于网络设备端的第二信息处理系统。</p>
+    <p>[0052]	其中，所述第一信息处理系统包括但不限于安装在移动通讯设备端且能够实现本发明方案的诸如应用模块、操作系统、处理控制器等的装置；第二信息处理系统包括但不限于安装在网络设备端且能够实现本发明方案的诸如应用模块、操作系统、处理控制器等的</p>
+    <p>&gt;J-U ρ&#962;α装直。</p>
+    <p>[0053]	优选地，该移动通讯设备包括但不限于:智能手机、PDA等，该网络设备包括但不限于:单个网络服务器、多个网络服务器组成的服务器组或基于云计算(Cloud Computing)的由大量计算机或网络服务器构成的云；其中，云计算是分布式计算的一种，由一群松散耦合的计算机集组成的一个超级虚拟计算机等。</p>
+    <p>[0054]	例如，该移动通讯设备为设置有贴膜卡的手机，所述第一信息处理系统设置在该贴膜卡内；该网络设备为能进行信息认证的网络服务器。</p>
+    <p>[0055]	在步骤Sll中，所述第一信息处理系统基于运算因子对第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0056]	其中，所述第二密钥包括能进行拆分为至少一个对称密钥的密钥，所述运算因子包括任何能用于进行密钥转换的因子，优选地，包括但不限于:待生成的短消息的编号信息等，例如，所述第一信息处理系统已生成过8个短消息，则所述第一信息处理系统基于待生成的短消息的编号信息为9，确定所述运算因子也为9。[0057]	其中，所述第一运算包括任何能基于运算因子将第一密钥转换为第二密钥的运算，优选地，包括但不限于:分散运算等。</p>
+    <p>[0058]	其中，第一密钥为预定密钥、或者是所述第一信息处理系统基于第一预定密钥规则由多个预存的密钥中选取等，其中，所述第一预定密钥规则包括但不限于:选择的密钥的编号与待生成的短消息的编号相同或成预定比例等等。</p>
+    <p>[0059]	需要说明的是，本领域技术人员应该理解，上述所述仅仅只是列示，而非对本发明的限制，事实上，任何能用于进行密钥转换的因子，例如，当前时间等，均包含在本发明的范围内。</p>
+    <p>[0060]	例如，所述第一信息处理系统基于运算因子Al对第一密钥BI进行分散运算，获得第二密钥Cl。</p>
+    <p>[0061]	接着，在步骤S12中，所述第一信息处理系统基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息。</p>
+    <p>[0062]	其中，所述第一加密算法包括任何一种采用对称密钥进行加密的算法，优选地，包括但不限于:DES算法、3DES算法、IDEA算法、FEAL算法、BL0WFISH算法等。</p>
+    <p>[0063]	其中，所述第二密钥的第一部分为由所述第二密钥拆分出的一个对称密钥，例如，第二密钥Cll的左8位与右8位均可作为对称密钥，则所述第一信息处理系统可选择第二密钥Cll的左8位或右8位来对第一信息进行加密。</p>
+    <p>[0064]	其中，所述第一信息包括任何待发送的信息，优选地，包括但不限于:包含交易信息的信息。</p>
+    <p>[0065]	例如，所述第一信息处理系统基于第二密钥Cll的右8位采用DES算法对第一信息Dl进行加密后,获得第二信息El。</p>
+    <p>[0066]	接着，在步骤S13中，所述第一信息处理系统基于第二密钥的第二部分对所述第</p>
+    <p>二信息进行第二运算以获得第一验证信息。</p>
+    <p>[0067]	其中，所述第二运算包括任何能对信息进行处理的运算，优选地，包括但不限于:基于DES CBC算法的MAC运算等。</p>
+    <p>[0068]	其中，当所述第二运算包含采用对称密钥的加密算法时，所述第二密钥的第二部分也为由所述第二密钥拆分出的一个对称密钥，例如，第二密钥Cll的左8位与右8位均可作为对称密钥，则所述第一信息处理系统可选择第二密钥Cll的左8位或右8位来对第二信息进行第二运算；其中，所述第一信息处理系统用于对第一信息加密的第二密钥的部分与用于对第二信息进行第二运算的第二密钥的部分可以相同，也可不同，优选是两者不同。</p>
+    <p>[0069]	例如，所述第一信息处理系统基于第二密钥Cll的左8位，采用DES CBC算法对第二信息El进行MAC运算，获得第一验证信息Fl。</p>
+    <p>[0070]	接着，在步骤S14中，所述第一信息处理系统基于所述第一验证信息、所述运算因子及所述第二信息来形成待发送短消息。</p>
+    <p>[0071]	具体地，所述第一信息处理系统将所述第一验证信息及运算因子放置在报文的报头区、将第二信息作为报文来形成待发送短消息。</p>
+    <p>[0072]	接着，在步骤S15中，所述第一信息处理系统所属的移动通讯设备，例如，手机，将待发送短消息发送至网络服务器。</p>
+    <p>[0073]	接着，在步骤S21中，所述第二信息处理系统所属的网络设备，例如，网络服务器接收短消息。</p>
+    <p>[0074]	接着，在步骤S22中，所述第二信息处理系统基于由接收的短消息中所提取的运算因子对第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0075]	其中，第一密钥为预定密钥；或者是所述第二信息处理系统基于第二预定密钥规则由多个预存的密钥中选取等，其中，所述第二预定密钥规则包括但不限于:选择的密钥的编号与由接收的短消息中提取的运算因子相同或成预定比例等等。</p>
+    <p>[0076]	需要说明的是，所述第二信息处理系统所采用的第一密钥与前述第一信息处理系统所采用的第一密钥相同。</p>
+    <p>[0077]	例如，所述第二信息处理系统由接收的短消息中提取运算因子A21，并基于该运算因子A21对第一密钥B21进行分散运算获得第二密钥C21。</p>
+    <p>[0078]	接着，在步骤S23中，所述第二信息处理系统基于所述第二密钥的第二部分对由所述短消息中提取的第二信息进行第二运算以获得第二验证信息。</p>
+    <p>[0079]	其中，所述第二信息处理系统为获得第二验证信息所采用的第二密钥的第二部分与前述第一信息处理系统为获得第一验证信息所采用的第二密钥的第二部分相同。例如，前述第一信息处理系统选取第二密钥的左8位来获得第一验证信息，则所述第二信息处理系统也选取第二密钥的左8位来获得第二验证信息。</p>
+    <p>[0080]	其中，所述第二运算已在前述步骤S13中予以详述，并以引用的方式包含于此，在此不再赘述。</p>
+    <p>[0081]	例如，所述第二信息处理系统基于第二密钥C21的左8位，采用DES CBC算法对由所述短消息中提取的第二信息E21进行MAC运算，获得第二验证信息F21。</p>
+    <p>[0082]	接着，在步骤S24中，所述第二信息处理系统将所述第二验证信息与由所述短消息中提取的第一验证信息进行比对以确定所述短消息是否异常。</p>
+    <p>[0083]	具体地，所述第二信息处理系统将第二验证信息与由所述短消息中提取的第一验证信息进行比对，如果两者相同，则确定所述短消息正常，未被篡改，如果异常则确定所述短消息被篡改，则不再对该短消息进行后续处理。</p>
+    <p>[0084]	接着，在步骤S25中，当确定所述短消息没有异常时，所述第二信息处理系统基于所述第二密钥的第一部分、采用第一解密算法对所述第二信息进行解密以获得第一信息，并基于所述第一信息来进行后续处理。</p>
+    <p>[0085]	其中，所述第二信息处理系统为对所述第二信息进行解密所采用的第二密钥的第一部分与所述第一信息处理系统为对所述第一信息进行加密所采用的第二密钥的第一部分相同。例如，前述第一信息处理系统采用第二密钥的右8位来加密第一信息，则所述第二信息处理系统也采用第二密钥的右8位由来解密第二信息。</p>
+    <p>[0086]	其中，所述第一解密算法基于第一加密算法来确定，例如，第一加密算法为DES算法，则所述第一解密算法也为DES算法。</p>
+    <p>[0087]	例如，所述第二信息处理系统基于所述第二密钥的右8位、采用DES算法对所述第二信息E21进行解密后获得第一信息D21,随后再基于所述第一信息D21中的交易信息来向相应的银行服务器发送相应的用户交易信息，以便银行服务器进行相应账户的扣款。</p>
+    <p>[0088]	图2示出了本发明的信息处理方法的另一优选流程图。所述信息处理方法包括:步骤S10、步骤S11’、步骤S12、步骤S13、步骤S14’、步骤S15、步骤S20、步骤S21，、步骤S22’、步骤S23、步骤S24、步骤S25，其中，步骤S12、S13、S15、S23、S24及S25已在图1所示的实施例中予以详述，并以引用的方式包含于此，不再赘述。</p>
+    <p>[0089]	在步骤SlO中，所述第一信息处理系统基于随机数来由多个预存的密钥中确定一者作为第一密钥。</p>
+    <p>[0090]	其中，所述第一信息处理系统获取所述随机数的方式包括:自行生成、由所述第一信息处理系统所属的移动通讯设备提供等，例如，由所述第一信息处理系统所属的手机的SIM卡中的应用程序生成后，提供给设置在该手机的贴膜卡内的第一信息处理系统。</p>
+    <p>[0091]	例如，所述第一信息处理系统对随机数Gl进行取模运算，获得运算结果gl，再由预存的多个密钥中选择密钥编号与运算结果gl相同的密钥作为第一密钥。</p>
+    <p>[0092]	需要说明的是，本领域技术人员应该理解，上述所述并非对本发明的限制，事实上，任何基于随机数来由多个预存的密钥中确定一者作为第一密钥的方式，例如，选择密钥编号与随机数相同的密钥作为第一密钥等，均包含在本发明的范围内。</p>
+    <p>[0093]	接着，在步骤SlT中，所述第一信息处理系统基于所述随机数及运算因子对所述第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0094]	其中，第一运算已在前述步骤Sll中予以详述，并以引用的方式包含于此，不再重述。</p>
+    <p>[0095]	例如，所述第一信息处理系统基于运算因子A31及随机数G2对第一密钥B31进行两次分散运算，获得第二密钥C31。</p>
+    <p>[0096]	接着，所述第一信息处理系统执行步骤S12、S13。</p>
+    <p>[0097]	接着，在步骤S14’中，所述第一信息处理系统基于所述第一验证信息、所述随机数、运算因子及所述第二信息来形成待发送短消息。</p>
+    <p>[0098]	具体地，所述第一信息处理系统将所述随机数、运算因子及步骤S13中获得的第一验证信息放置在报文的报头区、将步骤S12中获得的第二信息作为报文来形成待发送短消息。</p>
+    <p>[0099]	接着，在步骤S15中，所述第一信息处理系统所属的移动通讯设备，例如，手机，发送所形成的待发送短消息。</p>
+    <p>[0100]	接着，在步骤S20中，所述第二信息处理系统所属的网络服务器接收短消息。</p>
+    <p>[0101]	接着，在步骤S21’中，所述第二信息处理系统基于由所接收的短消息中所提取随机数由多个预存的密钥中确定一者作为第一密钥。</p>
+    <p>[0102]	本领域技术人员应该理解，为使所述第二信息处理系统基于随机数由多个预存的密钥确定的密钥与前述第一信息处理系统基于随机数来由多个预存的密钥确定的密钥相同，预存在所述第二信息处理系统所属网络设备中的多个密钥应与预存在所述第一信息处理系统所属移动通讯设备中的多个密钥一一对应且相同。</p>
+    <p>[0103]	接着，在步骤S22’中，所述第二信息处理系统基于所述随机数及由所接收的短消息中所提取运算因子对第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0104]	其中，第一运算在前述步骤SlT中予以详述，并以引用的方式包含于此，不再重述。</p>
+    <p>[0105]	接着，所述第二信息处理系统执行步骤S23、S24、及S25。</p>
+    <p>[0106]	作为一种优选方式，根据本发明的方法，在前述步骤S12之前还包括步骤S3;在前述步骤S25之后还包括步骤S4。</p>
+    <p>[0107]	在步骤S3中，所述第一信息处理系统基于第三密钥、采用第二加密算法对第三信息中的重要信息进行加密后，再基于预定格式对经过加密的第三信息进行封装以形成第一信息。</p>
+    <p>[0108]	其中，第三密钥为预定密钥或依照生成短消息的次数由多个预存密钥中按顺序选取等；所述第二加密算法包括任何能对信息进行加密的算法，优选地，包括但不限于:3DES算法。</p>
+    <p>[0109]	其中，所述重要信息包括但不限于:银行账户密码、支付密码等等；所述预定格式包括但不限于:手机银行卡的报文格式等。</p>
+    <p>[0110]	例如，所述第一信息处理系统基于第三密钥K1、采用3DES算法对用户交易信息中的支付密码进行加密后，再按照Z银行的手机银行卡报文格式将经过加密的该用户交易信息封装成第一信息D31，随后再基于第二密钥C31的右8位采用DES算法对第一信息D31进行加密。</p>
+    <p>[0111]	随后，所述第一信息处理系统执行步骤S12时，优选基于第二密钥只对第一信息中经过加密的第三信息进行加密。</p>
+    <p>[0112]	随后，所述第二信息系统执行步骤S25后，接着执行步骤S4，即:所述第二信息系统基于第四密钥、采用第二解密算法对由所述第一信息中提取的第三信息中的重要信息进行解密。</p>
+    <p>[0113]	其中，所述第二信息系统所采用的第四密钥及第二解密算法基于所述第一信息系统采用的第三密钥及第二加密算法来确定；例如，第二加密算法为3DES算法，则第四密钥与第三密钥相同，第二解密算法为3DES算法。</p>
+    <p>[0114]	作为本发明的另一优选方式，根据本发明的方法，在前述步骤S25之前还包括步骤S5。</p>
+    <p>[0115]	在步骤S5中，所述第二信息系统将由接收的短消息中获取的移动设备号码信息与用户信息库中的信息进行比对，以确定该移动设备是否真实存在。</p>
+    <p>[0116]	例如，所述第二信息系统在图1所示的实施例的步骤S21之后执行步骤S5，并当确定移动设备真实存在时，则继续执行步骤S22，否则不再执行步骤S22。</p>
+    <p>[0117]	如图3所示，本发明提供一种信息处理系统，该信息处理系统主要包括用于移动通讯设备端的第一信息处理系统及用于网络设备端的第二信息处理系统。其中，所述第一信息处理系统I至少包括；第一运算模块11、加密模块12、第二运算模块13、及生成模块14 ;所述第二信息处理系统2至少包括；第三运算模块21、第四运算模块22、验证模块23、及第一解密模块24。</p>
+    <p>[0118]	所述第一运算模块11基于运算因子对第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0119]	其中，所述第二密钥包括能进行拆分为至少一个对称密钥的密钥，所述运算因子包括任何能用于进行密钥转换的因子，优选地，包括但不限于:待生成的短消息的编号信息等，例如，所述第一信息处理系统I已生成过8个短消息，则所述第一运算模块11基于待生成的短消息的编号信息为9，确定所述运算因子也为9。</p>
+    <p>[0120]	其中，所述第一运算包括任何能基于运算因子将第一密钥转换为第二密钥的运算，优选地，包括但不限于:分散运算等。[0121]	其中，第一密钥为预定密钥、或者是所述第一运算模块11基于第一预定密钥规则由多个预存的密钥中选取等，其中，所述第一预定密钥规则包括但不限于:选择的密钥的编号与待生成的短消息的编号相同或成预定比例等等。</p>
+    <p>[0122]	需要说明的是，本领域技术人员应该理解，上述所述仅仅只是列示，而非对本发明的限制，事实上，任何能用于进行密钥转换的因子，例如，当前时间等，均包含在本发明的范围内。</p>
+    <p>[0123]	例如，所述第一运算模块11基于运算因子Al对第一密钥BI进行分散运算，获得第二密钥Cl。</p>
+    <p>[0124]	接着，所述加密模块12基于第二密钥的第一部分、采用第一加密算法对第一信息中的至少部分信息进行加密以获得第二信息。</p>
+    <p>[0125]	其中，所述第一加密算法包括任何一种采用对称密钥进行加密的算法，优选地，包括但不限于:DES算法、3DES算法、IDEA算法、FEAL算法、BL0WFISH算法等。</p>
+    <p>[0126]	其中，所述第二密钥的第一部分为由所述第二密钥拆分出的一个对称密钥，例如，第二密钥Cll的左8位与右8位均可作为对称密钥，则所述加密模块12可采用第二密钥Cll的左8位或右8位来对第一信息进行加密。</p>
+    <p>[0127]	其中，所述第一信息包括任何待发送的信息，优选地，包括但不限于:包含交易信息的信息。</p>
+    <p>[0128]	例如，所述加密模块12基于第二密钥Cll的右8位采用DES算法对第一信息Dl进行加密后，获得第二信息El。</p>
+    <p>[0129]	接着，所述第二运算模块13基于第二密钥的第二部分对所述第二信息进行第二运算以获得第一验证信息。</p>
+    <p>[0130]	其中，所述第二运算包括任何能对信息进行处理的运算，优选地，包括但不限于:基于DES CBC算法的MAC运算等。</p>
+    <p>[0131]	其中，当所述第二运算包含采用对称密钥的加密算法时，所述第二密钥的第二部分也为由所述第二密钥拆分出的一个对称密钥，例如，第二密钥Cll的左8位与右8位均可作为对称密钥，则所述第二运算模块13可选择第二密钥Cll的左8位或右8位来对第二信息进行第二运算；其中，所述加密模块12用于对第一信息加密的第二密钥的部分与第二运算模块13用于对第二信息进行第二运算的第二密钥的部分可以相同，也可不同，优选是两者不同。</p>
+    <p>[0132]	例如，所述第二运算模块13基于第二密钥Cll的左8位，采用DES CBC算法对第二信息El进行MAC运算，获得第一验证信息Fl。</p>
+    <p>[0133]	接着，所述生成模块14基于所述第一验证信息、所述运算因子及所述第二信息来形成待发送短消息。</p>
+    <p>[0134]	具体地，所述生成模块14将所述第一验证信息及运算因子放置在报文的报头区、将第二信息作为报文来形成待发送短消息。</p>
+    <p>[0135]	接着，所述第一信息处理系统I所属的移动通讯设备，例如，手机，将待发送短消息发送至网络服务器。</p>
+    <p>[0136]	接着，所述第二信息处理系统2所属的网络设备，例如，网络服务器接收短消息。</p>
+    <p>[0137]	接着，所述第三运算模块21基于由接收的短消息中所提取的运算因子对第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0138]	其中，第一密钥为预定密钥；或者是所述第三运算模块21基于第二预定密钥规则由多个预存的密钥中选取等，其中，所述第二预定密钥规则包括但不限于:选择的密钥的编号与由接收的短消息中提取的运算因子相同或成预定比例等等。</p>
+    <p>[0139]	需要说明的是，所述第三运算模块21所采用的第一密钥与前述第一运算模块11所采用的第一密钥相同。</p>
+    <p>[0140]	例如，所述第三运算模块21由接收的短消息中提取运算因子A21，并基于该运算因子A21对第一密钥B21进行分散运算获得第二密钥C21。</p>
+    <p>[0141]	接着，所述第四运算模块22基于所述第二密钥的第二部分对由所述短消息中提取的第二信息进行第二运算以获得第二验证信息。</p>
+    <p>[0142]	其中，所述第四运算模块22为获得第二验证信息所采用的第二密钥的第二部分与前述第二运算模块13为获得第一验证信息所采用的第二密钥的第二部分相同。例如，前述第二运算模块13选取第二密钥的左8位来获得第一验证信息，则所述第四运算模块22也选取第二密钥的左8位来获得第二验证信息。</p>
+    <p>[0143]	其中，所述第二运算已在前述第二运算模块13中予以详述，并以引用的方式包含于此，在此不再赘述。</p>
+    <p>[0144]	例如，所述第四运算模块22基于第二密钥C21的左8位，采用DES CBC算法对由所述短消息中提取的第二信息E21进行MAC运算，获得第二验证信息F21。</p>
+    <p>[0145]	接着，所述验证模块23将所述第二验证信息与由所述短消息中提取的第一验证信息进行比对以确定所述短消息是否异常。</p>
+    <p>[0146]	具体地，所述验证模块23将第二验证信息与由所述短消息中提取的第一验证信息进行比对，如果两者相同，则确定所述短消息正常，未被篡改，如果异常则确定所述短消息被篡改，则不再对该短消息进行后续处理。</p>
+    <p>[0147]	接着，当确定所述短消息没有异常时，所述第一解密模块24基于所述第二密钥的第一部分、采用第一解密算法对所述第二信息进行解密以获得第一信息，并基于所述第一信息来进行后续处理。</p>
+    <p>[0148]	其中，所述第一解密模块24为对所述第二信息进行解密所采用的第二密钥的第一部分与前述加密模块12为对所述第一信息进行加密所采用的第二密钥的第一部分相同。例如，前述加密模块12采用第二密钥的右8位来加密第一信息，则所述第一解密模块24也采用第二密钥的右8位来解密第二信息。</p>
+    <p>[0149]	其中，所述第一解密算法基于第一加密算法来确定，例如，第一加密算法为DES算法，则所述第一解密算法也为DES算法。</p>
+    <p>[0150]	例如，所述第一解密模块24基于所述第二密钥的右8位、采用DES算法对所述第二信息E21进行解密后获得第一信息D21,随后再基于所述第一信息D21中的交易信息来向相应的银行服务器发送相应的用户交易信息，以便银行服务器进行相应账户的扣款。</p>
+    <p>[0151]	图4示出了本发明的信息处理系统的另一优选示意图。所述信息处理系统包括:所述第一信息处理系统I与所述第二信息处理系统2，其中，所述第一信息处理系统I至少包括:第一选择模块10、第一运算模块11、加密模块12、第二运算模块13、及生成模块14，所述第一运算模块11又包括:第一子运算单元11’，所述生成模块14又包括:子生成单元14’ ;所述第二信息处理系统2至少包括:第二选择模块20、第三运算模块21、第四运算模块22、验证模块23、及第一解密模块24，所述第三运算模块21又包括:第二子运算单元21’。</p>
+    <p>[0152]	其中，加密模块12、第二运算模块13、第四运算模块22、验证模块23、及第一解密模块24已在图3所示的实施例中予以详述，并以引用的方式包含于此，不再赘述。</p>
+    <p>[0153]	所述第一选择模块10基于随机数来由多个预存的密钥中确定一者作为第一密钥。</p>
+    <p>[0154]	其中，所述第一选择模块10获取所述随机数的方式包括:自行生成、由所述第一信息处理系统I所属的移动通讯设备提供等，例如，由所述第一信息处理系统所属的手机的SIM卡中的应用程序生成后，提供给设置在该手机的贴膜卡内的第一选择模块10。</p>
+    <p>[0155]	例如，所述第一选择模块10对随机数Gl进行取模运算，获得运算结果gl，再由预存的多个密钥中选择密钥编号与运算结果gl相同的密钥作为第一密钥。</p>
+    <p>[0156]	需要说明的是，本领域技术人员应该理解，上述所述并非对本发明的限制，事实上，任何基于随机数来由多个预存的密钥中确定一者作为第一密钥的方式，例如，选择密钥编号与随机数相同的密钥作为第一密钥等，均包含在本发明的范围内。</p>
+    <p>[0157]	接着，所述第一子运算单元11’基于所述随机数及运算因子对所述第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0158]	其中，第一运算已在前述第一运算模块11中予以详述，并以引用的方式包含于此，不再重述。</p>
+    <p>[0159]	例如，所述第一子运算单元11’基于运算因子A31及随机数G2对第一密钥B31进行两次分散运算，获得第二密钥C31。</p>
+    <p>[0160]	接着，所述加密模块12及第二运算模块13各自执行各自的操作。</p>
+    <p>[0161]	接着，所述子生成单元14’基于所述第一验证信息、所述随机数、运算因子及所述第二信息来形成待发送短消息。</p>
+    <p>[0162]	具体地，所述子生成单元14’将所述随机数、运算因子及第二运算模块13获得的第一验证信息放置在报文的报头区、将加密模块12获得的第二信息作为报文来形成待发送短消息。</p>
+    <p>[0163]	接着，所述第一信息处理系统I所属的移动通讯设备，例如，手机，发送所形成的待发送短消息。</p>
+    <p>[0164]	接着，所述第二信息处理系统2所属的网络服务器接收短消息。</p>
+    <p>[0165]	接着，所述第二选择模块20基于由所接收的短消息中所提取随机数由多个预存的密钥中确定一者作为第一密钥。</p>
+    <p>[0166]	本领域技术人员应该理解，为使所述第二选择模块20基于随机数由多个预存的密钥确定的密钥与前述第一选择模块10基于随机数来由多个预存的密钥确定的密钥相同，预存在所述第二信息处理系统2所属网络设备中的多个密钥应与预存在所述第一信息处理系统I所属移动通讯设备中的多个密钥一一对应且相同。</p>
+    <p>[0167]	接着，所述第二子运算单元21’基于所述随机数及由所接收的短消息中所提取运算因子对第一密钥进行第一运算以获得第二密钥。</p>
+    <p>[0168]	其中，第一运算在前述第三运算模块21中予以详述，并以引用的方式包含于此，不再重述。[0169]	接着，所述第四运算模块22、验证模块23、及第一解密模块24依序执行各自的操作。</p>
+    <p>[0170]	作为一种优选方式,所述第一信息处理系统I还包括:封装模块；所述第二信息处理系统2还包括:第二解密模块。</p>
+    <p>[0171]	所述封装模块基于第三密钥、采用第二加密算法对第三信息中的重要信息进行加密后，再基于预定格式对经过加密的第三信息进行封装以形成第一信息。</p>
+    <p>[0172]	其中，第三密钥为预定密钥或依照生成短消息的次数由多个预存密钥中按顺序选取等；所述第二加密算法包括任何能对信息进行加密的算法，优选地，包括但不限于:3DES算法。</p>
+    <p>[0173]	其中，所述重要信息包括但不限于:银行账户密码、支付密码等等；所述预定格式包括但不限于:手机银行卡的报文格式等。</p>
+    <p>[0174]	例如，所述封装模块基于第三密钥K1、采用3DES算法对用户交易信息中的支付密码进行加密后，再按照Z银行的手机银行卡报文格式将经过加密的该用户交易信息封装成第一信息D31，随后再基于第二密钥C31的右8位采用DES算法对第一信息D31进行加密。</p>
+    <p>[0175]	随后，所述加密模块12优选基于第二密钥只对第一信息中经过加密的第三信息进行加密。</p>
+    <p>[0176]	随后，所述第一解密模块24解密第二信息后，所述第二解密模块基于第四密钥、采用第二解密算法对由所述第一信息中提取的第三信息中的重要信息进行解密。</p>
+    <p>[0177]	其中，所述第二解密模块所采用的第四密钥及第二解密算法基于所述封装模块采用的第三密钥及第二加密算法来确定；例如，第二加密算法为3DES算法，则第四密钥与第三密钥相同，第二解密算法为3DES算法。</p>
+    <p>[0178]	作为本发明的另一优选方式，所述第二信息处理系统还包括比对模块。</p>
+    <p>[0179]当所述短消息来自移动设备时，在第一解密模块执行操作之前，所述比对模块将由接收的短消息中获取的移动设备号码信息与用户信息库中的信息进行比对，以确定该移动设备是否真实存在。</p>
+    <p>[0180]	例如，所述比对模块在图3所示的实施例的第三运算模块21执行操作之后执行比对操作，并当确定移动设备真实存在时，则第四运算模块22继续执行第二运算操作，否则不再执行第二运算操作。</p>
+    <p>[0181]	综上所述，本发明的信息处理方法及系统通过消息头中的签名数据，例如，验证信息等，确保了接收的短消息的合法性，确保是由合法用户的通信设备所发送，同时还能确保接收的短消息的完整性，即未被篡改、插入、或删除等，而作为运算因子的短消息编号能保证短消息的顺序性和时效性，尤其能确保携带交易信息的短消息该短消息未重排、重发、或延迟等，确保交易的安全可靠，从而使收发短消息，尤其是收发包含交易信息的短消息的移动通讯设备与网络设备能够进行安全可靠的信息交互；此外，本发明优选采用DES、3DES、AES这种运算速度快、内存消耗较小的加密算法，能更好地适用于诸如手机贴膜卡等所采用的单片机系统。所以，本发明有效克服了现有技术中的种种缺点而具高度产业利用价值。</p>
+    <p>[0182]	上述实施例仅例示性说明本发明的原理及其功效，而非用于限制本发明。任何熟悉此技术的人士皆可在不违背本发明的精神及范畴下，对上述实施例进行修饰或改变。因此，举凡所属技术领域中具有通常知识者在未脱离本发明所揭示的精神与技术思想下所完成的一切等效修饰或改变，仍应由本发明的权利要求所涵盖。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101098225A?cl=zh">CN101098225A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年6月29日</td><td class="patent-data-table-td patent-date-value">2008年1月2日</td><td class="patent-data-table-td ">中国银联股份有限公司</td><td class="patent-data-table-td ">安全数据传输方法及支付方法、支付终端和支付服务器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101436280A?cl=zh">CN101436280A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月15日</td><td class="patent-data-table-td patent-date-value">2009年5月20日</td><td class="patent-data-table-td ">北京华大智宝电子系统有限公司</td><td class="patent-data-table-td ">实现移动终端电子支付的方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102184446A?cl=zh">CN102184446A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月19日</td><td class="patent-data-table-td patent-date-value">2011年9月14日</td><td class="patent-data-table-td ">东信和平智能卡股份有限公司</td><td class="patent-data-table-td ">应用于rf-sim卡手机支付的手机贴膜卡</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=phHaCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06Q0020320000">G06Q20/32</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=phHaCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0004140000">H04W4/14</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=phHaCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009000000">H04L9/00</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年10月16日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年11月13日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/4cba77bc22c53226548c/CN103354634A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%BF%A1%E6%81%AF%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=phHaCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U34T3sHIM9zdi7Tpzgj88dcD2y1tw"},"sample_url":"https://www.google.com/patents/reader?id=phHaCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html><html><head><title>专利 CN102131114A - 一种播放列表提供方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种播放列表提供方法及系统"><meta name="DC.contributor" content="甘漠" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2010-11-17" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供一种播放列表提供方法，第一流媒体服务器接收播放器发送的媒体报告描述MPD请求，MPD请求中携带播放列表；第一流媒体服务器读取MPD请求中播放列表，并判断播放列表中各内容所在的第二流媒体服务器；第一流媒体服务器分别向第二流媒体服务器发送对应内容的MPD请求；第一流媒体服务器分别接收各内容所在的第二流媒体服务器返回的MPD描述文件；第一流媒体服务器将第二流媒体服务器返回的MPD描述文件组合成总的MPD描述文件，返回给播放器。同时，本发明还提供一种播放列表提供系统和流媒体服务器。通过本发明实施例可使播放器可以根据组合后的MPD描述文件向不同的内容服务器请求媒体，有效避免了系统资源的浪费，媒体播放列表的请求也更加灵活。"><meta name="DC.date" content="2011-7-20"><meta name="DC.relation" content="CN:101087403:A" scheme="references"><meta name="DC.relation" content="CN:101212673:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102131114:A"><meta name="citation_patent_application_number" content="CN:201010547561"><link rel="canonical" href="https://www.google.com/patents/CN102131114A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102131114A?cl=zh"/><meta name="title" content="专利 CN102131114A - 一种播放列表提供方法及系统"/><meta name="description" content="本发明提供一种播放列表提供方法，第一流媒体服务器接收播放器发送的媒体报告描述MPD请求，MPD请求中携带播放列表；第一流媒体服务器读取MPD请求中播放列表，并判断播放列表中各内容所在的第二流媒体服务器；第一流媒体服务器分别向第二流媒体服务器发送对应内容的MPD请求；第一流媒体服务器分别接收各内容所在的第二流媒体服务器返回的MPD描述文件；第一流媒体服务器将第二流媒体服务器返回的MPD描述文件组合成总的MPD描述文件，返回给播放器。同时，本发明还提供一种播放列表提供系统和流媒体服务器。通过本发明实施例可使播放器可以根据组合后的MPD描述文件向不同的内容服务器请求媒体，有效避免了系统资源的浪费，媒体播放列表的请求也更加灵活。"/><meta property="og:title" content="专利 CN102131114A - 一种播放列表提供方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102131114A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102131114A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=BnCXBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102131114A&amp;usg=AFQjCNHhz5f8Fq0MldTvm_N3irJKibUkFw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/c13e8ca2a3f6c95ab905/CN102131114A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/c13e8ca2a3f6c95ab905/CN102131114A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102131114A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102131114A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102131114A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102131114B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102131114A?cl=zh" style="display:none"><span itemprop="description">本发明提供一种播放列表提供方法，第一流媒体服务器接收播放器发送的媒体报告描述MPD请求，MPD请求中携带播放列表；第一流媒体服务器读取MPD请求中播放列表，并判断播放列表中各内容所在的第二流媒体服务器；第一流媒体...</span><span itemprop="url">https://www.google.com/patents/CN102131114A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102131114A - 一种播放列表提供方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102131114A - 一种播放列表提供方法及系统" title="专利 CN102131114A - 一种播放列表提供方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102131114 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010547561</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年7月20日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年11月17日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年11月17日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102131114B?hl=zh-CN&amp;cl=zh">CN102131114B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010547561.5, </span><span class="patent-bibdata-value">CN 102131114 A, </span><span class="patent-bibdata-value">CN 102131114A, </span><span class="patent-bibdata-value">CN 201010547561, </span><span class="patent-bibdata-value">CN-A-102131114, </span><span class="patent-bibdata-value">CN102131114 A, </span><span class="patent-bibdata-value">CN102131114A, </span><span class="patent-bibdata-value">CN201010547561, </span><span class="patent-bibdata-value">CN201010547561.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%94%98%E6%BC%A0%22">甘漠</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102131114A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102131114A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102131114A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=BnCXBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010547561&amp;usg=AFQjCNGbxxCVLN4XKIN1hnKJpJzeWDlZqQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=BnCXBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102131114A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGYP_dkoZbFn6ZGxeHKb8HV7LpnMw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT104305933" lang="ZH" load-source="patent-office">一种播放列表提供方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 102131114 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA86195743" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供一种播放列表提供方法，第一流媒体服务器接收播放器发送的媒体报告描述MPD请求，MPD请求中携带播放列表；第一流媒体服务器读取MPD请求中播放列表，并判断播放列表中各内容所在的第二流媒体服务器；第一流媒体服务器分别向第二流媒体服务器发送对应内容的MPD请求；第一流媒体服务器分别接收各内容所在的第二流媒体服务器返回的MPD描述文件；第一流媒体服务器将第二流媒体服务器返回的MPD描述文件组合成总的MPD描述文件，返回给播放器。同时，本发明还提供一种播放列表提供系统和流媒体服务器。通过本发明实施例可使播放器可以根据组合后的MPD描述文件向不同的内容服务器请求媒体，有效避免了系统资源的浪费，媒体播放列表的请求也更加灵活。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM37808312" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种播放列表提供方法，其特征在于，该方法包括：第一流媒体服务器接收播放器发送的媒体报告描述MPD请求，所述MPD请求中携带播 放列表；所述第一流媒体服务器读取MPD请求中播放列表，并判断所述播放列表中各内容所在 的第二流媒体服务器；所述第一流媒体服务器分别向所述第二流媒体服务器发送对应内容的MPD请求；所述第一流媒体服务器分别接收所述各内容所在的第二流媒体服务器返回的MPD描 述文件；以及所述第一流媒体服务器将所述第二流媒体服务器返回的MPD描述文件组合成总的MPD 描述文件，返回给所述播放器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，所述第一流媒体服务器将所述第二流媒体 服务器返回的MPD描述文件组合成总的MPD描述文件包括：将不同内容中相同码率，编码格 式及分辨率不同的分片描述信息拼接到一起，每个分片描述信息对应的URL地址不变，仍 然指向对应分片所在的所述第二流媒体服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的方法，其特征在于，同一内容的分片在不同的第二流媒体服器上。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的方法，其特征在于，该方法还包括：若在相同码率、相同编码格 式及相同分辨率下，播放列表中部分内容缺少所述码率、所述编码格式及所述分辨率的描 述信息时，所述第一流媒体服务器丢弃所述部分内容所述缺少的码率、所述编码格式及所 述分片率的描述信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1所述的方法，其特征在于，所述MPD请求包括：所述内容的播放顺序、 所述内容所在的服务器地址及所述内容播放的统一资源定位器URL。</div>
+    </div>
+    </div> <div class="claim"> <div num="6" class="claim">
+      <div class="claim-text">6.	一种播放列表提供系统，其特征在于，包括：第一流媒体服务器（204)和多个内容所 在的第二流媒体服务器O06)；所述第一流媒体服务器（204)，用于接收播放器发送的媒体报告描述MPD请求，所述 MPD请求中携带播放列表，读取播放列表，并判断所述播放列表中各内容所在的流媒体服务 器，向所述各内容所在的流媒体服务器分别发送对应内容的MPD请求，分别接收所述各内 容所在的流媒体服务器返回的MPD描述文件，组合成总的MPD描述文件，返回给所述播放 器；所述第二流媒体服务器（206)，用于接收所述第一流媒体服务器发送的MPD请求，并返 回MPD描述文件给所述第一流媒体服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求6所述的系统，其特征在于，所述组成总的MPD描述文件包括：将不同内 容中相同码率，编码格式及分辨率不同的分片描述信息拼接到一起，每个分片描述信息对 应的URL地址不变，仍然指向对应分片所在的第二流媒体服务器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求6所述的系统，其特征在于，该系统还包括：若在相同码率、相同编码格 式及相同分辨率下，播放列表中部分内容缺少该码率、编码格式及分辨率的描述信息时，所 述第一流媒体服务器丢弃所述部分内容所述缺少的码率、编码格式及分片率的描述信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种流媒体服务器004)，其特征在于，包括：接收模块（30&#190;，用于接收播放器发送的媒体报告描述MPD请求，所述MPD请求携带播放列表；播放列表读取模块（304)，用于读取播放列表，并判断所述播放列表中各内容所在的第 二流媒体服务器；内容请求模块（308)，用于向所述各内容所在的第二流媒体服务器分别发送对应内容 的MPD请求；响应接收模块（310)，用于分别接收所述各内容所在的服务器返回的MPD描述文件； 组合模块（312)，用于组合成总的MPD描述文件； 应答模块（314)，用于将组合后的MPD描述文件返回给所述播放器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的流媒体服务器004)，其特征在于，还包括： 列表存储模块（306)，用于存储播放列表及所对应内容所在第二流媒体服务器的对应 关系表。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES43387352" lang="ZH" load-source="patent-office" class="description">
+    <p>一种播放列表提供方法及系统</p>
+    <p>技术领域</p>
+    <p> [0001]	本发明涉及通信技术领域，尤其涉及一种播放列表提供方法及系统。 背景技术</p>
+    <p>[0002]	随着科学的发展和技术的进步，互联网视讯业务逐渐走进千家万户。互联网视频 一般是通过媒体服务器或下载服务器的下载后，在终端的播放器上进行播放。传统的互联 网视讯业务通常是采用客户端的播放器向流媒体服务器请求播放，流媒体服务器通过媒体 分片的形式下发给终端的播放器，终端的播放器将接收到分片进行组合形成新的媒体文 件。这样处理由于新文件是基于分片形成，与老文件没有关联，系统需要同时存储新文件和 老文件，多占用了存储空间，浪费了系统资源。</p>
+    <p>发明内容</p>
+    <p>[0003]	有鉴于此，有必要提供一种节省系统资源的播放列表提供方法。</p>
+    <p>[0004]	同时提供一种节省系统资源的播放列表提供系统及流媒体服务器。</p>
+    <p>[0005]	一种播放列表提供方法，包括：</p>
+    <p>[0006]	第一流媒体服务器接收播放器发送的媒体报告描述MPD请求，所述MPD请求中携 带播放列表；</p>
+    <p>[0007]	所述第一流媒体服务器读取MPD请求中播放列表，并判断所述播放列表中各内容 所在的第二流媒体服务器；</p>
+    <p>[0008]	所述第一流媒体服务器分别向所述第二流媒体服务器发送对应内容的MPD请求；</p>
+    <p>[0009]	所述第一流媒体服务器分别接收所述各内容所在的第二流媒体服务器返回的MPD 描述文件；以及</p>
+    <p>[0010]	所述第一流媒体服务器将所述第二流媒体服务器返回的MPD描述文件组合成总 的MPD描述文件，返回给所述播放器。</p>
+    <p>[0011]	一种播放列表提供系统，包括：第一流媒体服务器和多个内容所在的第二流媒体 服务器；</p>
+    <p>[0012]	所述第一流媒体服务器，用于接收播放器发送的媒体报告描述MPD请求，所述MPD 请求中携带播放列表，读取播放列表，并判断所述播放列表中各内容所在的流媒体服务器， 向所述各内容所在的流媒体服务器分别发送对应内容的MPD请求，分别接收所述各内容所 在的流媒体服务器返回的MPD描述文件，组合成总的MPD描述文件，返回给所述播放器；</p>
+    <p>[0013]	所述第二流媒体服务器，用于接收所述第一流媒体服务器发送的MPD请求，并返 回MPD描述文件给所述第一流媒体服务器。</p>
+    <p>[0014]	一种流媒体服务器，包括：</p>
+    <p>[0015]	接收模块，用于接收播放器发送的媒体报告描述MPD请求，所述MPD请求携带播放 列表；</p>
+    <p>[0016]	播放列表读取模块，用于读取播放列表，并判断所述播放列表中各内容所在的第二流媒体服务 器；</p>
+    <p>[0017]	内容请求模块，用于向所述各内容所在的第二流媒体服务器分别发送对应内容的 MPD请求；</p>
+    <p>[0018]	响应接收模块，用于分别接收所述各内容所在的服务器返回的MPD描述文件；</p>
+    <p>[0019]	组合模块，用于组合成总的MPD描述文件；</p>
+    <p>[0020]	应答模块，用于将组合后的MPD描述文件返回给所述播放器。</p>
+    <p>[0021]	本发明实施例通过向各内容所在的服务器分别发送对应内容的MPD请求，分别接 收各内容所在的服务器返回的MPD请求，组合成总的MPD描述文件，并将组合后的MPD描 述文件返回给播放器，使播放器可以根据组合后的MPD描述文件向不同的内容服务器请求 媒体，有效避免了系统资源的浪费，媒体播放列表的请求也更加灵活。有利于视频业务的推 广。</p>
+    <p>附图说明</p>
+    <p>[0022]	图1为本发明实施例播放列表提供方法流程图。</p>
+    <p>[0023]	图2为本发明实施例播放列表提供系统示意图。</p>
+    <p>[0024]	图3为本发明实施例流媒体服务器内部结构框图。</p>
+    <p>[0025]	图4为本发明实施例播放列表提供方法信令图。</p>
+    <p>具体实施方式</p>
+    <p>[0026]	为了使用户可以在个人电脑（PC，Personal Computer)、手机（HS，Handset)等多 种不同终端上体验到直播、点播的视频业务。并且保证系统侧的性能，本发明实施例提供了 播放列表提供方法。以解决新老文件没有直接必然关系，导致系统资源浪费的问题。</p>
+    <p>[0027]	请结合参看图1，本发明实施例的播放列表提供方法包括如下步骤：</p>
+    <p>[0028]	步骤102，第一流媒体服务器接收播放器发送的媒体报告描述（MPD，Media Presentation Description)请求，所述MPD请求中携带播放列表。</p>
+    <p>[0029]	步骤104，流媒体服务器读取播放列表，并判断播放列表中各内容所在的第二流媒 体服务器，其中η可以为大于等于1的自然数。</p>
+    <p>[0030]	步骤106，第一流媒体服务器向各内容所在第二流媒体服务器分别发送对应内容 的MPD请求。</p>
+    <p>[0031]	步骤108，各内容所在第二流媒体服务器分别向第一流媒体服务器返回MPD描述 文件。</p>
+    <p>[0032]	步骤110，第一流媒体服务器将收到的MPD描述文件组合成一个总的MPD描述文件 返回给终端播放器。</p>
+    <p>[0033]	本发明实施例通过向各内容所在的第二流媒体服务器分别发送对应内容的MPD 请求，分别接收各内容所在的第二流媒体服务器返回的MPD描述文件，组合成总的MPD描述 文件，并将组合后的MPD描述文件返回给播放器，使播放器可以根据组合后的MPD描述文件 向不同的第二流媒体服务器请求媒体，有效避免了系统资源的浪费，媒体播放列表的请求 也更加灵活，有利于视频业务的推广。</p>
+    <p>[0034]	目前HTTP Streaming协议未定义流媒体服务器侧播放列表的实现方式，一般只能通过 在源端转码时将多个文件转码为一个文件进行播放，新生成的文件和老文件无关系， 多占用了存储，而且也不够灵活，如果需要形成新的播放列表，则又要重新生成新的文件。 另外，播放列表常常引用在连续视频播放或音乐专辑播放中。比如管理员将一个连续剧的 多部内容或一部音乐专辑的多个内容编辑成一个播放列表，用户点击该播放列表时可以顺 序收看该连续剧的所有子集或者该专辑的所有音乐。如果多个内容分部在一台服务器或多 台服务器上，如果需要组成服务器侧的播放列表，可以发布播放列表的描述文件到一台服 务器。MPD描述文件可以包括以下信息：1、内容播放顺序；2、内容所在服务器地址；3、该内 容播放的统一资源定位器（URL，Uniform Resource Locator)等信息。</p>
+    <p>[0035]	传统的流媒体服务器在终端请求播放列表的节目时，如果该内容不在本服务器， 则存放播放列表文件的流媒体服务器Streaming Server向存放内容的服务器发起请求，获 取媒体数据后转发给播放器。播放列表所在的流媒体服务器需要一直维护和播放器间的会 话，同时需要和不和终端播放器通话的内容所在的服务器交互，将内容获取到本地后再转 给终端的播放器。这样的话也是增加了流媒体服务器的性能消耗，并且需要维护与播放器 的会话。</p>
+    <p>[0036]	本发明实施例很好的解决了在HTTP Streaming协议交互下实现服务器侧播放列 表的能力，并且解决了传统服务器侧播放列表同时需要多台流媒体服务器参与，增加性能 消耗的问题。</p>
+    <p>[0037]	请结合参看图2，本发明实施例播放列表提供系统包括：包含有播放列表描述文 件的流媒体服务器Streaming Server 204即第一流媒体服务器，和多台内容所在的流媒体 服务器Streaming Serverl-n即第二流媒体服务器。其中η可以为大于等于1的自然数， 若η等于1，则包含内容所在的流媒体服务器为1台。该播放列表提供系统可以向播放器 202提供播放请求播放的媒体。</p>
+    <p>[0038]	流媒体服务器Streaming Server 204，用于接收播放器发送的媒体报告描述MPD 请求，读取播放列表，并判断播放列表中各内容所在的流媒体服务器，向各内容所在的流媒 体服务器Streaming Server-n 206分别发送对应内容的MPD请求，分别接收各内容所在的 流媒体服务器Streaming Server-n206返回的MPD描述文件，组合成总的MPD描述文件，返 回给播放器202。内容所在的流媒体服务器Streaming Server-n 206，用于接收所述流媒体 服务器Streaming Server 204发送的MPD请求，并返回MPD描述文件给所述流媒体服务器 Streaming Server 204。其中该内容分片的MPD信息描述可以在Streaming Server 204提 供的播放列表中，Streaming Server 204通过MPD请求，获取各内容所在服务器Streaming Server-n 206。</p>
+    <p>[0039]	请结合参看图3，其中流媒体服务器Streaming ServerfCM可以包括：接收模块 302、播放列表读取模块304、列表存储模块306、内容请求模块308、响应接收模块310、组合 模块312和应答模块314。</p>
+    <p>[0040]	接收模块302，用于播放器202发送的媒体报告描述MPD请求，其中MPD请求中携 带播放列表。播放列表读取模块304，用于读取播放列表，并判断播放列表中各内容所在的 第二流媒体服务器。列表存储模块306，用于存储播放列表及所对应内容所在第二流媒体服 务器对应关系表。其中，对应关系表包含了请求播放的内容及对应服务器所在的URL或IP 地址。流媒体服务器204可以包含列表存储模块306也可以没有，放在其他存储设备上存储，或不存储，不再赘述。内容请求模块308，用于向各内容所在的服务器分别发送对应内容 的MPD请求。响应接收模块310，用于分别接收各内容所在的第二流媒体服务器返回的MPD 描述文件。组合模块312，用于将各内容所在服务器返回的MPD描述文件组合成总的MPD描 述文件。应答模块314，用于将组合后的MPD描述文件返回给播放器202。</p>
+    <p>[0041] 	本发明实施例可以存储播放列表，以保持播放列表和各内容所在第二流媒体服务 器对应关系的完整性，当网络出现连接问题的时候，可以根据存储的对应关系继续连接，这 样避免了终端的播放器再次发送请求的情况。</p>
+    <p>[0042]	请继续结合参看图4，本实施例中为了实现服务器侧列表提供方法，需要有播放 器、存放有播放列表描述文件的第一流媒体服务器StreamingServer、及各内容所在的第二 流媒体服务器Streaming Server-I和StreamingServer-2参与。播放列表提供方法包括 如下步骤：</p>
+    <p>[0043]	步骤402，第一流媒体服务器Streaming Server接收终端播放器发送的MPD请 求。播放器拿到了播放列表内容的URL，该URL指向存放有播放列表描述文件的第一流媒 体服务器Streaming Server,播放器向该第一流媒体服务器Streaming Server发起MPD Request请求，请求播放该播放列表。</p>
+    <p>[0044]	步骤404，第一流媒体服务器Streaming Server读取本地播放列表，判断列 表中的内容所在的第二流媒体服务器。存放有播放列表描述文件的第一流媒体服务器 Streaming Server解析播放列表描述文件，判断播放列表中有哪些媒体内容存放在哪些第 二流媒体服务器Streaming Server上。</p>
+    <p>[0045]	步骤406，第一流媒体服务器Streaming Server向有内容的第二流媒体服务器 Streaming Server-I发送MPD Request请求。存放有播放列表描述文件的第一流媒体服 务器Streaming Sever通过HTTP Streaming协议向原始内容所在的第二流媒体服务器 Streaming Server-I发起MPD请求，请求该第二流媒体服务器Streaming Server上内容所 对应的不同码率和分片的描述文件。</p>
+    <p>[0046]	步骤408，第二流媒体服务器Streaming Server-I向第一流媒体服务器 Streaming Server返回该内容的MPD response 口向应消息。</p>
+    <p>[0047]	步骤410，第一流媒体服务器Streaming Server向有内容的服务器Streaming Server-2发送MPD Request。存放有播放列表描述文件的第一流媒体服务器Streaming Sever通过HTTP Streaming协议向原始内容所在的第二流媒体服务器Streaming Server-2发起MPD请求，请求该第二流媒体服务器Streaming Server上内容所对应的不同 码率和分片的描述文件。</p>
+    <p>[0048]	步骤412，第二流媒体服务器Streaming Server-2向第一流媒体服务器 Streaming Server返回该内容的MPD response 口向应消息。</p>
+    <p>[0049]	步骤414，第一流媒体服务器Streaming Server将第二流媒体服务器Streaming Server-I和第二流媒体服务器Streaming Server-2返回的MPDresponse响应消息中不同 内容的分片描述文件组合为一个总的描述文件，组合过程中需要考虑不同码率的组合和不 同文件分片的组合，每个分片的URL仍然是指向内容所在的第二流媒体服务器。将这些内 容对应的MPD描述文件组合包括：</p>
+    <p>[0050]	a)将相同码率、相同编码格式、相同分辨率的分片描述组合到一起。[0051]	比如内容1和内容2均有以下码率、编码格式、分辨率的描述：</p>
+    <p>[0052]	&lt;QualityLevel Bitrate = “ 350000 “ FourCC = “ WVCl “ Width ="320" Height = " 176" COdecPrivateData = “ 250000010FC38A09F0578A09F815E80 450808AADEACF400000010E5AE7F840“ /&gt;</p>
+    <p>[0053]	 内容1该码率、编码格式、分辨率下的分片描述信息如下：</p>
+    <p>[0054]	&lt;cn = 〃 0 〃 d = 〃 20000000 “ /&gt;</p>
+    <p>[0055]	&lt;cn = 〃 I" d = 〃 20000000“ /&gt;</p>
+    <p>[0056]	&lt;cn = 〃 2" d = 〃 20000000“ /&gt;</p>
+    <p>[0057]	&lt;cn=〃 3〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0058]	&lt;cn=〃 4〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0059]	&lt;cn = 〃 5 〃 d = 〃 20000000 “ /&gt;</p>
+    <p>[0060]	&lt;cn = 〃 6 〃 d = 〃 20000000 “ /&gt;</p>
+    <p>[0061]	&lt;cn=〃 7〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0062]	&lt;cn = 〃 8" d = 〃 20000000 “ /&gt;</p>
+    <p>[0063]	&lt;cn = 〃 9" d = 〃 20000000 “ /&gt;</p>
+    <p>[0064]	&lt;cn=〃 10〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0065]	&lt;cn=〃 11〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0066]	&lt;cn=〃 12〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0067]	&lt;cn=〃 13〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0068]	&lt;cn=〃 14〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0069]	&lt;cn=〃 15〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0070]	&lt;cn=〃 16〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0071]	&lt;cn=〃 17〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0072]	&lt;cn=〃 18〃 d=〃 20000000" /&gt;</p>
+    <p>[0073]	&lt;cn=〃 19〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0074]	&lt;cn=〃 20〃 d=〃 20000000" /&gt;</p>
+    <p>[0075]	内容2该码率、编码格式、分辨率下的分片描述信息如下：</p>
+    <p>[0076]	&lt;cn=〃 0〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0077]	&lt;cn=〃 1" d=〃 30000000〃 /&gt;</p>
+    <p>[0078]	&lt;cn=〃 2" d=〃 30000000〃 /&gt;</p>
+    <p>[0079]	&lt;cn=〃 3〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0080]	&lt;cn=〃 4〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0081]	&lt;cn=〃 5〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0082]	&lt;cn = 〃 6 〃 d = 〃 30000000 “ /&gt;</p>
+    <p>[0083]	&lt;cn = 〃 7" d = 〃 30000000 “ /&gt;</p>
+    <p>[0084]	&lt;cn = 〃 8" d = 〃 30000000 “ /&gt;</p>
+    <p>[0085]	&lt;cn = 〃 9" d = 〃 30000000 “ /&gt;</p>
+    <p>[0086]	&lt;cn=〃 10〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0087]	内容3该码率、编码格式、分辨率下的分片描述信息如下：[0088]	&lt;cn = 〃	0 〃 d = 〃 50000000 “ /&gt;</p>
+    <p>[0089]	&lt;cn = 〃	I" d = 〃 50000000“ /&gt;</p>
+    <p>[0090]	&lt;cn = 〃	2" d = 〃 50000000“ /&gt;</p>
+    <p>[0091]	&lt;cn=〃	3〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0092]	&lt;cn=〃	4〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0093]	&lt;cn = 〃	5 〃 d = 〃 50000000 “ /&gt;</p>
+    <p>[0094]	&lt;cn = 〃	6 〃 d = 〃 50000000 “ /&gt;</p>
+    <p>[0095]	&lt;cn = 〃	7 〃 d = 〃 50000000 “ /&gt;</p>
+    <p>[0096]	&lt;cn=〃	8" d=〃 50000000〃 /&gt;</p>
+    <p>[0097]	&lt;cn=〃	9〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0098]	&lt;cn=〃	10〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0099]	组合后的描述文件部分结构如下：</p>
+    <p>[0100]	&lt;QualityLevel Bitrate=" 350000〃 FourCC = “ WVCl “ Width=" 320〃</p>
+    <p>[0101]	Height = “ 176〃</p>
+    <p>[0102]	CodecPrivateData = “ 250000010FC38A09F0578A09F815E80450808AADEACF40000 0010E5AE7F840"	/&gt;</p>
+    <p>[0103]	&lt;cn=〃	0〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0104]	&lt;cn=〃	1〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0105]	&lt;cn=〃	2" d=〃 20000000〃 /&gt;</p>
+    <p>[0106]	&lt;cn=〃	3〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0107]	&lt;cn=〃	4〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0108]	&lt;cn=〃	5〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0109]	&lt;cn=〃	6〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0110]	&lt;cn=〃	7〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0111]	&lt;cn=〃	8" d=〃 20000000〃 /&gt;</p>
+    <p>[0112]	&lt;cn=〃	9〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0113]	&lt;cn=〃	10〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0114]	&lt;cn=〃	11〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0115]	&lt;cn=〃	12〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0116]	&lt;cn=〃	13〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0117]	&lt;cn=〃	14〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0118]	&lt;cn=〃	15〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0119]	&lt;cn=〃	16〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0120]	&lt;cn=〃	17〃 d=〃 20000000" /&gt;</p>
+    <p>[0121]	&lt;cn=〃	18〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0122]	&lt;cn=〃	19〃 d=〃 20000000〃 /&gt;</p>
+    <p>[0123]	&lt;cn=〃	20〃 d=〃 2 0000000〃 /&gt;</p>
+    <p>[0124]	&lt;cn=〃	21〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0125]	&lt;cn=〃	22〃 d=〃 30000000〃 /&gt;[0126]	&lt;cn=〃 23〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0127]	&lt;cn=〃 24〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0128]	&lt;cn=〃 25〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0129]	&lt;cn=〃 26〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0130]	&lt;cn=〃 27〃 d=〃 30000000" /&gt;</p>
+    <p>[0131]	&lt;cn=〃 28〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0132]	&lt;cn=〃 29〃 d=〃 30000000〃 /&gt; </p>
+    <p>[0133]	&lt;cn=〃 30〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0134]	&lt;cn=〃 31〃 d=〃 30000000〃 /&gt;</p>
+    <p>[0135]	&lt;cn=〃 32〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0136]	&lt;cn=〃 33〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0137]	&lt;cn=〃 34〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0138]	&lt;cn=〃 35〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0139]	&lt;cn=〃 36〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0140]	&lt;cn=〃 37〃 d=〃 50000000" /&gt;</p>
+    <p>[0141]	&lt;cn=〃 38〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0142]	&lt;cn=〃 39〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0143]	&lt;cn=〃 40〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0144]	&lt;cn=〃 41〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0145]	&lt;cn=〃 42〃 d=〃 50000000〃 /&gt;</p>
+    <p>[0146]	b)在相同码率、相同编码格式、相同分辨率下，播放列表中如果部分内容缺少该码 率、编码格式、分辨率的描述信息，需要丢弃掉此码率、编码格式、分辨率的描述，这样终端 播放器无需做任何修改，但在进行码率适配时由于终端播放器看不到该码率，则此码率将 无法播放。</p>
+    <p>[0147]	步骤416，第一流媒体服务器Streaming Server向终端播放器返回组合后的MPD response响应消息。对于终端播放器来说，不同的流媒体服务器Streaming Server间的交 互，终端播放器仍然可以认为点播的是一个文件，并按照不同的码率和不同分片向内容所 在的第二流媒体服务器Streaming Server-I和第二流媒体服务器Streaming Server-2发 起下载请求。由于不同分片仍然指向了其所在的不同第二流媒体服务器，因此播放过程中 终端会和不同的第二流媒体服务器进行交互，因此节省了系统的性能。</p>
+    <p>[0148]	对于终端来说，从存放有播放列表描述文件的第一流媒体服务器Streaming Server上请求到MPD描述文件后，按照原有处理方式处理，无需变化。由于分片URL仍然指 向了分片所在的第二流媒体服务器Streaming Server，终端在请求不同内容的过程中，会 从各自内容和分片所在的第二流媒体服务器Streaming Server请求。终端在拿到MPD文 件后，如果不需要更新MPD文件，将断开和存放有播放列表描述文件的第一流媒体服务器 Streaming Server的连接，第一流媒体服务器Streaming Server不需要维持和终端播放器 的会话和状态。由于所有内容都是其所在第二流媒体服务器直接发流给终端，不需要经过 其它流媒体服务器转发，也不需要将所有内容拷贝到同一台流媒体服务器上，节省了存储 和流媒体服务器性能。[0149]	本领域普通技术人员可知，上述方法中的全部或部分步骤可以通过程序指令相关 的硬件完成，该程序可以存储一计算机可读存储介质中，该计算机可读存储介质如R0M、RAM寸。</p>
+    <p>[0150]	综上所述，以上仅为本发明的较佳实施例而已，并非用于限定本发明的保护范围。 凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的 保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101087403A?cl=zh">CN101087403A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年5月31日</td><td class="patent-data-table-td patent-date-value">2007年12月12日</td><td class="patent-data-table-td ">吴彬</td><td class="patent-data-table-td ">基于p2p技术上的分布式流媒体点播系统及其点播流媒体节目的实现方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101212673A?cl=zh">CN101212673A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年12月29日</td><td class="patent-data-table-td patent-date-value">2008年7月2日</td><td class="patent-data-table-td ">盛趣信息技术（上海）有限公司</td><td class="patent-data-table-td ">一种在音视频播放中插播广告并控制的装置和方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102665128A?cl=zh">CN102665128A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年4月27日</td><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td ">北京人民广播电台</td><td class="patent-data-table-td ">时间轴形式的内容定制方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102665128B?cl=zh">CN102665128B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年4月27日</td><td class="patent-data-table-td patent-date-value">2015年5月27日</td><td class="patent-data-table-td ">北京人民广播电台</td><td class="patent-data-table-td ">时间轴形式的内容定制方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102665129A?cl=zh">CN102665129A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年4月27日</td><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td ">北京人民广播电台</td><td class="patent-data-table-td ">定制播放内容的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102665129B?cl=zh">CN102665129B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年4月27日</td><td class="patent-data-table-td patent-date-value">2015年5月27日</td><td class="patent-data-table-td ">北京人民广播电台</td><td class="patent-data-table-td ">定制播放内容的方法和装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=BnCXBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0021437000">H04N21/437</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=BnCXBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0021438000">H04N21/438</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=BnCXBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0021431000">H04N21/431</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年7月20日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年8月31日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年4月24日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/c13e8ca2a3f6c95ab905/CN102131114A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E6%92%AD%E6%94%BE%E5%88%97%E8%A1%A8%E6%8F%90%E4%BE%9B%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=BnCXBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1AWIPD61w878bZd637eoYJG0YjEQ"},"sample_url":"https://www.google.com/patents/reader?id=BnCXBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

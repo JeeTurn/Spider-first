@@ -1,0 +1,170 @@
+<!DOCTYPE html><html><head><title>专利 CN103400173A - 一种含隐私信息的二维码生成及读取方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种含隐私信息的二维码生成及读取方法"><meta name="DC.contributor" content="张锐" scheme="inventor"><meta name="DC.contributor" content="张雪" scheme="inventor"><meta name="DC.contributor" content="中国科学院信息工程研究所" scheme="assignee"><meta name="DC.date" content="2013-7-25" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及一种含隐私信息的二维码生成方法及读取方法，生成步骤包括：1）将待编码信息划分为公开信息和隐私信息，对所述公开信息和隐私信息分别进行比特流变换得到两者的信息位流串；2）设定隐私信息指示符；3）按照“公开信息位流串+终止符+隐私信息指示符+隐私信息位流串+终止符”顺序连接成最终位流串。读取二维码时，读取完公开信息位流串遇到终止符后，根据隐私信息指示符，继续读取隐私信息。本发明能够较好的防止个人隐私信息的泄露，将二维码信息按照隐私程度进行有效分离，保障了隐私信息的安全。"><meta name="DC.date" content="2013-11-20"><meta name="DC.relation" content="CN:101488195:A" scheme="references"><meta name="DC.relation" content="CN:102902997:A" scheme="references"><meta name="DC.relation" content="CN:1885316:A" scheme="references"><meta name="DC.relation" content="JP:2011049690" scheme="references"><meta name="citation_patent_publication_number" content="CN:103400173:A"><meta name="citation_patent_application_number" content="CN:201310316517"><link rel="canonical" href="https://www.google.com/patents/CN103400173A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103400173A?cl=zh"/><meta name="title" content="专利 CN103400173A - 一种含隐私信息的二维码生成及读取方法"/><meta name="description" content="本发明涉及一种含隐私信息的二维码生成方法及读取方法，生成步骤包括：1）将待编码信息划分为公开信息和隐私信息，对所述公开信息和隐私信息分别进行比特流变换得到两者的信息位流串；2）设定隐私信息指示符；3）按照“公开信息位流串+终止符+隐私信息指示符+隐私信息位流串+终止符”顺序连接成最终位流串。读取二维码时，读取完公开信息位流串遇到终止符后，根据隐私信息指示符，继续读取隐私信息。本发明能够较好的防止个人隐私信息的泄露，将二维码信息按照隐私程度进行有效分离，保障了隐私信息的安全。"/><meta property="og:title" content="专利 CN103400173A - 一种含隐私信息的二维码生成及读取方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103400173A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103400173A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=4-biCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103400173A&amp;usg=AFQjCNGasUWS4u9mS0mEdIgoqe_yoV2rSw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3ec8abf432f8ad28c06c/CN103400173A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3ec8abf432f8ad28c06c/CN103400173A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103400173A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103400173A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103400173A?cl=zh" style="display:none"><span itemprop="description">本发明涉及一种含隐私信息的二维码生成方法及读取方法，生成步骤包括：1）将待编码信息划分为公开信息和隐私信息，对所述公开信息和隐私信息分别进行比特流变换得到两者的信息位流串；2）设定隐私信息指示符；3）按照...</span><span itemprop="url">https://www.google.com/patents/CN103400173A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103400173A - 一种含隐私信息的二维码生成及读取方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103400173A - 一种含隐私信息的二维码生成及读取方法" title="专利 CN103400173A - 一种含隐私信息的二维码生成及读取方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103400173 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310316517</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年11月20日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年7月25日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年7月25日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310316517.7, </span><span class="patent-bibdata-value">CN 103400173 A, </span><span class="patent-bibdata-value">CN 103400173A, </span><span class="patent-bibdata-value">CN 201310316517, </span><span class="patent-bibdata-value">CN-A-103400173, </span><span class="patent-bibdata-value">CN103400173 A, </span><span class="patent-bibdata-value">CN103400173A, </span><span class="patent-bibdata-value">CN201310316517, </span><span class="patent-bibdata-value">CN201310316517.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E9%94%90%22">张锐</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E9%9B%AA%22">张雪</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80%22">中国科学院信息工程研究所</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103400173A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103400173A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103400173A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=4-biCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310316517&amp;usg=AFQjCNGiojz7vG7gCCP3_GazRjgLNXW9gw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=4-biCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103400173A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHQENSnIVd98pdwHb8WRywIZ5OxnQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT131191258" lang="ZH" load-source="patent-office">一种含隐私信息的二维码生成及读取方法</invention-title>
+      </span><br><span class="patent-number">CN 103400173 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA125561888" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及一种含隐私信息的二维码生成方法及读取方法，生成步骤包括：1）将待编码信息划分为公开信息和隐私信息，对所述公开信息和隐私信息分别进行比特流变换得到两者的信息位流串；2）设定隐私信息指示符；3）按照“公开信息位流串+终止符+隐私信息指示符+隐私信息位流串+终止符”顺序连接成最终位流串。读取二维码时，读取完公开信息位流串遇到终止符后，根据隐私信息指示符，继续读取隐私信息。本发明能够较好的防止个人隐私信息的泄露，将二维码信息按照隐私程度进行有效分离，保障了隐私信息的安全。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(9)</span></span></div><div class="patent-text"><div mxw-id="PCLM56841497" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种含隐私信息的二维码生成方法，其步骤包括:  1)将待编码信息划分为公开信息和隐私信息，对所述公开信息和隐私信息分别进行比特流变换得到两者的信息位流串；  2)根据公钥对隐私信息位流串进行加密，设定隐私信息指示符；  3)按照“公开信息位流串+终止符+隐私信息指示符+隐私信息位流串+终止符”顺序连接成最终位流串。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的含隐私信息的二维码生成方法，其特征在于，所述隐私信息指示符为继续读指示符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的含隐私信息的二维码生成方法，其特征在于，将两者信息合并成信息最终位流串后再进行RS编码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的含隐私信息的二维码生成方法，其特征在于，对所述隐私信息的比特流分段进行异或运算加密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.一种对如权利要求1所述的含有隐私信息的二维码的读取方法，其步骤包括:  读取二维码时，读取完公开信息位流串遇到终止符后，根据隐私信息指示符，继续读取隐私信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的二维码读取方法，其特征在于，读取隐私信息时根据私钥进行解密。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求5所述的二维码读取方法，其特征在于，根据公开或隐私信息位流串中预置的的模式指示符对位流串进行解码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求5所述的二维码读取方法，其特征在于，读取完公开信息位流串遇到终止符，将信息存入公开信息存储空间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求5所述的二维码读取方法，其特征在于，读取完隐私信息位流串遇到终止符，将信息存入隐私信息存储空间。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63820745" lang="ZH" load-source="patent-office" class="description">
+    <p>一种含隐私信息的二维码生成及读取方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信领域中的QR(Quick Response)二维码的编码、译码技术领域。可以应用于QR 二维码相关技术行业编解码软件开发技术中。</p>
+    <p>背景技术</p>
+    <p>[0002]	本发明中涉及的QR 二维码，是一种将信息存储于图像，再由图像转换为信息的信息编解码技术。QR二维码编解码技术广泛应用于货物监管、广告投放、车票信息存取等环节，给信息的获取与录入带来了极大的便捷。</p>
+    <p>[0003]	QR码之所以能够被各行业领域广泛的应用，是因为自身必须具备相关的规范与标准。且QR码本身是一种开放性质的二维码。任何用户可以自由的使用。QR码本身的规范与标准由日本DENSO公司制定并在DENSO WAVE上发布。关于QR码的国际化标准，请参照国际标准化组织ISO (IS0/IEC18004)标准。每个QR码符号由名义上的正方形模块构成，组成一个正方形阵列，它由编码区域和包括寻象图形、分隔符、定位图形和校正图形在内的功能图形组成。功能图形不能用于数据编码。编码区域包括表示数据码字、纠错码字、版本信息和格式信息的符号字符。二维码的编码步骤如下:</p>
+    <p>[0004]	在编码过程中，将输入的信息按照QR 二维码编码标准，判断信息模式，加入模式指示符和字符计数指示符，随后加入信息码字比特流。所有不同模式的信息全部存入后，其位流串结构如图1所示。最后加入终止符，流程如图3所示。而在解码的过程中，首先读取信息比特流，根据不同的模式指示符，进行相应的解码操作，并以终止符为读取结束标志。</p>
+    <p>[0005]	第一步数据分析</p>
+    <p>[0006]	分析所输入的数据流，确定要进行编码的字符的类型。选择所需的错误检测和纠正等级。如果用户没有指定所采用的符号版本，则选择与数据相适应的最小的版本。</p>
+    <p>[0007]	第二步数据编码</p>
+    <p>[0008]	对于不同模式采用以下的规则，将数据字符转换为位流。</p>
+    <p>[0009]	数字模式</p>
+    <p>[0010]	将输入的数据每三位分为一组，将每组数据转换为10位二进制数。如果所输入的数据的位数不是3的整数倍，所余的I位或2位数字应分别转换为4位或7位二进制数。将二进制数据连接起来并在前面加上模式指示符和字符计数指示符。数字模式中字符计数指示符如表3中定义的有10、12或14位。输入的数据字符的数量转换为10、12或14位二进制数后，放置在模式指示符之后，二进制数据序列之前。</p>
+    <p>[0011]	字母数字模式</p>
+    <p>[0012]	将输入的数据分为两个字符一组，用11位二进制表示。将前面字符的值乘以45与第二个字符的值相加，将所得的结果转换为11位二进制数。如果输入的数据的字符数不是2的整数倍，将最后一个字符编码为6位二进制数。将所得的二进制数据连接起来并在前面加上模式指示符和字符计数指示符，按表3的规定在字母数字模式中，字符计数指示符的长度为9、11或13位，其定义见表3。将输入的字符数编码为9、11或13位二进制数，放在模式指示符之后，二进制数据序列之前。</p>
+    <p>[0013]	8位字节模式</p>
+    <p>[0014]	将二进制数据连接起来并在前面加上模式指示符和字符计数指示符。按表3的规定，8位字节模式的字符计数指示符为8位或16位，将输入字符数转换为8位或16位二进制数据放在模式指示符之后，二进制数据序列之前。</p>
+    <p>[0015]	中文模式</p>
+    <p>[0016]	在输入的数据字符的二进制队列前加上模式指示符(I 101)、中国汉字自己指示符(4位，对应GB2312的子集指示符为0001)和字符计数指示符的二进制表示(8、10、12)；</p>
+    <p>[0017]	混合模式</p>
+    <p>[0018]	根据数据内容的要求或者为了增加编码密度，可以从一种模式转换到另一种模式来表示数据。每一段数据按相应模式进行编码。基本结构为模式指示符&#8212;&#8212;)字符计数指示符&#8212;&#8212;)数据，其后紧跟下一段的模式指示符开始另一段。</p>
+    <p>[0019]	在当需要进行模式转换时，在新的模式段开始前加入模式指示符进行模式转换。在数据序列后面加入终止符。将产生的位流分为每8位一个码字。必要时加入填充字符以填满按照版本要求的数据码字数。</p>
+    <p>[0020]	第二步纠错编码</p>
+    <p>[0021]	按需要将码字序列分块，以便按块生成相应的纠错码字，并将其加入到相应的数据码字序列的后面。</p>
+    <p>[0022]	第四步构造最终信息</p>
+    <p>[0023]	在每一块中置入数据和纠错码字，必要时加剩余位。</p>
+    <p>[0024]	第五步在矩阵中布置模块</p>
+    <p>[0025]	将寻象图形、分隔符、定位图形、校正图形与码字模块一起放入矩阵。</p>
+    <p>[0026]	第六步掩模</p>
+    <p>[0027]	依次将掩模图形用于符号的编码区域。评价结果，并选择其中使深色浅色模块比率最优且使不希望出现的图形最少化的结果。</p>
+    <p>[0028]	第七步格式和版本信息</p>
+    <p>[0029]	生成格式和版本信息，形成符号。</p>
+    <p>[0030]	随着二维码的发展，个人隐私信息的泄露也逐渐成为了隐患。比如应用在火车票上QR 二维码中包含的隐私信息如身份证号被犯罪分子读取利用，因此在QR 二维码中进行信息的二次加密已成为QR 二维码制作过程中极大的需求。</p>
+    <p>发明内容</p>
+    <p>[0031]	为了克服现有的二维码中隐私信息泄露问题，本发明将二维码中的信息分为公开信息和隐私信息两部分，使二维码扫描后只能看到公开信息部分，而隐私信息需要输入二维码编时设置的的密钥才可以读取。</p>
+    <p>[0032]	本发明的技术方案如下:一种含隐私信息的二维码生成方法，其步骤包括:</p>
+    <p>[0033]	I)将待编码信息划分为公开信息和隐私信息，对所述公开信息和隐私信息分别进行比特流变换得到两者的信息位流串；</p>
+    <p>[0034]	2)根据公钥对隐私信息位流串进行加密设定隐私信息指示符；[0035]	3)按照“公开信息位流串+终止符+隐私信息指示符+加密的隐私信息位流串+终止符”顺序连接成最终位流串。</p>
+    <p>[0036]	更进一步，所述隐私信息指示符为继续读指示符。</p>
+    <p>[0037]	更进一步，对最终位流串进行RS编码。。</p>
+    <p>[0038]	更进一步，用密钥对隐私信息比特流进行加密，运算方法可有多种选择，比如对隐私信息比特流分段进行异或运算。</p>
+    <p>[0039]	一种对含有隐私信息的二维码的读取方法，其步骤包括:</p>
+    <p>[0040]	读取二维码时，读取完公开信息位流串遇到终止符后，根据隐私信息指示符，继续读取隐私信息。</p>
+    <p>[0041]	更进一步，读取公开信息后设置初始模式，继续读取公开或隐私信息判断所属模式，若与当前初始模式相同，则加入模式字串，继续读取。</p>
+    <p>[0042]	更进一步，读取隐私信息时根据私钥进行解密。</p>
+    <p>[0043]	更进一步，读取二维码时，根据模式指示符对位流串进行解码。</p>
+    <p>[0044]	更进一步，读取二维码时，读取完公开信息位流串遇到终止符，将信息存入公开信息存储空间。</p>
+    <p>[0045]	更进一步，读取二维码时，读取完隐私信息遇到终止符，将信息存入隐私信息存储空间。</p>
+    <p>[0046]	本发明的有益效果:</p>
+    <p>[0047]	将二维码信息按照隐私程度进行有效分离，保障了隐私信息的安全。比如将车票信息分为公开信息:姓名，车次，座位号。和隐私信息:身份证号。检票口扫描二维码时，既可以解出公开信息，也可以解出隐私信息。而车票被遗弃或丢失后，被他人扫描后只能显示公开信息。这样就保证了 二维码中乘客信息的安全。</p>
+    <p>附图说明</p>
+    <p>[0048]	图1是现有技术中的位流串结构图。</p>
+    <p>[0049]	图2是本发明一实施例中加入隐私信息后的位流串结构图。</p>
+    <p>[0050]	图3是现有技术中QR 二维码数据编码流程图。</p>
+    <p>[0051]	图4是本发明一实施例中加入私密信息的QR 二维码编码流程图。</p>
+    <p>具体实施方式</p>
+    <p>[0052]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，可以理解的是，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0053]	本发明在QR 二维码编码标准中增加一种信息模式判断类型一READC0NTINUE，提供一种含隐私信息的二维码生成方法，步骤具体如下:</p>
+    <p>[0054]	I)在进行二维码编码前首先进行公开信息和隐私信息的划分，设定好需要保护的隐私信息；</p>
+    <p>[0055]	2)将所述公开信息和隐私信息分别进行二维码编码；[0056]	2-1)先对公开信息编码进行比特流变换得到位流串，对所述位流串加入终止符，</p>
+    <p>[0057]	2-2)判断是否需要编码隐私信息，如果是需要编码隐私信息则在原有的公开信息位流串后加入信息模式判断类型:READC0NTINUE“继续读指示符”;具体操作为:在编码软件中加入两个输入框，一个输入框输入公开信息，一个隐私输入框输入隐私信息，读取隐私信息并放入m_strSecret (Cstring类型)，判断m_strSecret的长度是否为O就可以判断是否有隐私信息。</p>
+    <p>[0058]	3)对所述隐私信息进行比特流变换得到位流串，同时将所述公开信息位流串添加到该隐私输数据位流串。隐私信息和公开信息分开读取，但只有一个数组变量来放入公开信息和隐私信息，因为之后要对这个变量数组进行RS编码。假设这个数组变量是m_C0deW0rd[]，先读取公开信息，放入数组中后，放入截至符，再放入隐私信息指示符READC0NTINUE,然后再放入隐私信息。信息全部放入后，m_CodeWord□，进行RS纠错编码，编码后的码字也要放Am_CodeWord[]的。</p>
+    <p>[0059]	在二维码编码过程中，将信息按照QR 二维码编码标准转换为位流信息，加入终止符后判断是否要编码隐私信息，如果编码隐私信息则加入READC0NTINUE “继续读指示符”，指示符的类型如表I所示，然后按照二维码标准继续进行编码，结束后放入终止符。加入隐私信息的位流结构示意图如图2所示，这样就成功的分离了公开信息和隐私信息，使二维码的安全性得到了保障，。加入私密信息的QR 二维码编码流程如图4所示，其中，“已读完”步骤用来判断输入公开信息或隐私信息是否已经都进行了位流转换。“判断所属模式”作用为将混杂模式的字符串分成各种单一模式的字符子串以便于按照不同的模式，用不同的方法进行位流转换。因为如果当前模式相同，位流串当中的模式指示符不用改变即:加入模式子串。如果模式改变了，则需要重新建立一个字串，子串前边的模式标示符需要改变。</p>
+    <p>[0060]	二维码读取过程中，读取二维码时，读取完公开信息位流串遇到终止符后，根据隐私信息指示符，继续读取隐私信息 。读取完公开信息遇到终止符后，判断是否有“继续读指示符”，如果有则继续读取隐私信息，读取隐私信息过程中需要输入正确的密钥才能正确解码，以终止符结束。如果没有则读取结束。读取二维码时，读取公开信息后设置初始模式，继续读取公开或隐私信息判断所属模式，若与当前初始模式相同，则加入模式字串，继续读取。</p>
+    <p>[0061]表	I</p>
+    <p>      模式	指示符</p>
+    <p>           ECI	0111</p>
+    <p>  ___OOOi_</p>
+    <p>       字母数字	0010_</p>
+    <p>    _8位字节__0100_</p>
+    <p>[0062]	_曰本汉字__1000_</p>
+    <p>中国汉字	1101</p>
+    <p>结构链接	0011</p>
+    <p>                                        0101 (第一位罡)</p>
+    <p>                                        1001 (第二位置)</p>
+    <p>终止符(信息结尾)	0000</p>
+    <p>[0063]	读取二维码时，根据模式指示符对位流串进行解码。读取二维码时，读取完公开信息位流串遇到终止符，将信息存入公开信息存储空间。读取二维码时，读取完隐私开信息遇到终止符，将信息存入隐私信息存储空间。</p>
+    <p>[0064]	假设将以下信息放入QR 二维码中:</p>
+    <p>[0065]	公开信息部分:AC_42</p>
+    <p>[0066]	隐私信息部分:1234567</p>
+    <p>[0067]	信息编码步骤为:</p>
+    <p>[0068]	一.将公开信息进行按照图一所示流程进行比特流变换</p>
+    <p>[0069]	输入的数据:AC_42</p>
+    <p>[0070]	I)查出字符的值:AC-41 -(10,12,41,4,2)</p>
+    <p>[0071]	2)将结果分为 2 个一组:(10,12) (41,4) (2)</p>
+    <p>[0072]	3)将每组数据转换为11位二进制数:</p>
+    <p>[0073]	(10，12) 10*45+12 &#8212; 462 &#8212; 00111001110</p>
+    <p>[0074]	(41,4) 41*45+4 &#8212; 1849 &#8212; 11100111001</p>
+    <p>[0075]	(2) &#8212; 2 &#8212; 000010</p>
+    <p>[0076]	4) 二进制数据顺次连接:00111001110 11100111001 000010</p>
+    <p>[0077]	5)将字符计数指示符转换为二进制(版本1-H为9位):</p>
+    <p>[0078]	输入的字符数5 &#8212; 000000101</p>
+    <p>[0079]	6)在二进制数据前加上模式指示符0010和字符计数指示符:</p>
+    <p>[0080]	0010 000000101 00111001110 11100111001 000010</p>
+    <p>[0081]	二.加入终止符0000</p>
+    <p>[0082]	0010 000000101 00111001110 11100111001 000010 0000</p>
+    <p>[0083]	三.判断有隐私信息加入“READC0NTINUE”指示符1111</p>
+    <p>[0084]	0010 000000101 00111001110 11100111001 000010 0000 1111</p>
+    <p>[0085]	四.继续编码隐私信息</p>
+    <p>[0086]	输入的数据:01234567</p>
+    <p>[0087]	I)分为 3 位一组:012 345 67</p>
+    <p>[0088]	2)将每组转换为二进制:</p>
+    <p>[0089]	012 &#8212; 0000001100</p>
+    <p>[0090]	345 &#8212; 0101011001</p>
+    <p>[0091]	67 &#8212; 1000011</p>
+    <p>[0092]	3)将二进制数连接为一个序列:0000001100 0101011001 1000011</p>
+    <p>[0093]	4)将字符计数指示符转换为二进制(版本1-H为10位):</p>
+    <p>[0094]字符数为:8	&#8212; 0000001000</p>
+    <p>[0095]	5)加入模式指示符0001以及字符计数指示符的二进制数据:</p>
+    <p>[0096]	0001 0000001000 0000001100 0101011001 1000011</p>
+    <p>[0097]	6)放入公开信息之后的二进制数据:</p>
+    <p>[0098]	0010 000000101 00111001110 11100111001 000010 0000 1111 00010000001000 0000001100 0101011001 1000011</p>
+    <p>[0099]	则信息解码步骤为:[0100]	一.解码公开信息</p>
+    <p>[0101]	I)判断数据模式:0010 &#8212;字母数字型</p>
+    <p>[0102]	2)要读取的字符数000000101 &#8212; 5</p>
+    <p>[0103]	3)读取5个字符长度的位流并转换:</p>
+    <p>[0104]	00111001110 &#8212; 462 &#8212; 10*45+12 (10，12)</p>
+    <p>[0105]	11100111001 &#8212; 1849 &#8212; 41*45+4 (41,4)</p>
+    <p>[0106]	000010 &#8212; 2 &#8212;(2)</p>
+    <p>[0107]	4)转换成信息 10，12，41，4，2 &#8212; AC-41</p>
+    <p>[0108]	5)遇到终止符0000将信息存入公开信息存储空间</p>
+    <p>[0109]	6)继续读取模式指示符，如果是1111则继续读隐私信息，如果不是1111则结束读取。</p>
+    <p>[0110]	二.读取到“READC0NTINUE”指示符后继续读取隐私信息</p>
+    <p>[0111]	7)判断数据模式:0001 &#8212;数字型</p>
+    <p>[0112]	8)要读取的字符数0000001000 &#8212; 8</p>
+    <p>[0113]	9)读取8个字符长度的位流并转换:</p>
+    <p>[0114]	0000001100 &#8212; 012</p>
+    <p>[0115]	0101011001 &#8212; 345</p>
+    <p>[0116]	1000011 &#8212; 67</p>
+    <p>[0117]	10)遇到终止符0000将信息存入隐私信息存储空间。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1885316A?cl=zh">CN1885316A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年7月12日</td><td class="patent-data-table-td patent-date-value">2006年12月27日</td><td class="patent-data-table-td ">中国物品编码中心</td><td class="patent-data-table-td ">数据信息的编码方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101488195A?cl=zh">CN101488195A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月30日</td><td class="patent-data-table-td patent-date-value">2009年7月22日</td><td class="patent-data-table-td ">深圳华为通信技术有限公司</td><td class="patent-data-table-td ">一种二维码中声明数据信息类型的方法、装置及终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102902997A?cl=zh">CN102902997A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月21日</td><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td ">华南农业大学</td><td class="patent-data-table-td ">一种二维码混合编码、解码装置及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=4-biCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D2011049690A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFdSzNoA0pk2haBX-C2-FRcKLtznw">JP2011049690A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103646121A?cl=zh">CN103646121A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年12月27日</td><td class="patent-data-table-td patent-date-value">2014年3月19日</td><td class="patent-data-table-td ">税友软件集团股份有限公司</td><td class="patent-data-table-td ">一种标识码及使用方法和装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=4-biCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06K0019060000">G06K19/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年11月20日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年12月18日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3ec8abf432f8ad28c06c/CN103400173A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%90%AB%E9%9A%90%E7%A7%81%E4%BF%A1%E6%81%AF%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81%E7%94%9F%E6%88%90.pdf?id=4-biCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0K-ams8VhzLYlvYZupRiyS-FF8sw"},"sample_url":"https://www.google.com/patents/reader?id=4-biCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

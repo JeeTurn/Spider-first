@@ -1,0 +1,461 @@
+<!DOCTYPE html><html><head><title>专利 CN103605688A - 一种网页广告的拦截方法、装置和浏览器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种网页广告的拦截方法、装置和浏览器"><meta name="DC.contributor" content="曹龙" scheme="inventor"><meta name="DC.contributor" content="任寰" scheme="inventor"><meta name="DC.contributor" content="北京奇虎科技有限公司" scheme="assignee"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2013-11-1" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种网页广告的拦截方法、装置和浏览器，所述方法包括：在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生成当前网页的第二加载请求；采用预置的第一判断规则查找当前网页中需要拦截的网页元素；当查找到时，采用所述第二浏览器内核拦截所述网页元素。本发明避免了多内核浏览器在内核切换时对广告拦截的无序性、拦截规则的不通用性导致的实用性差，提高了广告拦截的效率和成功率，实用性强，将广告拦截后减少系统资源的占用，提高网页加载效率。"><meta name="DC.date" content="2014-2-26"><meta name="DC.relation" content="CN:102436455:A" scheme="references"><meta name="DC.relation" content="CN:102932356:A" scheme="references"><meta name="DC.relation" content="CN:103052950:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103605688:A"><meta name="citation_patent_application_number" content="CN:201310535916"><link rel="canonical" href="https://www.google.com/patents/CN103605688A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103605688A?cl=zh"/><meta name="title" content="专利 CN103605688A - 一种网页广告的拦截方法、装置和浏览器"/><meta name="description" content="本发明公开了一种网页广告的拦截方法、装置和浏览器，所述方法包括：在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生成当前网页的第二加载请求；采用预置的第一判断规则查找当前网页中需要拦截的网页元素；当查找到时，采用所述第二浏览器内核拦截所述网页元素。本发明避免了多内核浏览器在内核切换时对广告拦截的无序性、拦截规则的不通用性导致的实用性差，提高了广告拦截的效率和成功率，实用性强，将广告拦截后减少系统资源的占用，提高网页加载效率。"/><meta property="og:title" content="专利 CN103605688A - 一种网页广告的拦截方法、装置和浏览器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103605688A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103605688A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=CtfzCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103605688A&amp;usg=AFQjCNGREdq3wCuhcFEc4bKV43jR0O_40w" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/e2fcaa724524a33f38b7/CN103605688A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/e2fcaa724524a33f38b7/CN103605688A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103605688A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103605688A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103605688A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种网页广告的拦截方法、装置和浏览器，所述方法包括：在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；当监听到所述...</span><span itemprop="url">https://www.google.com/patents/CN103605688A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103605688A - 一种网页广告的拦截方法、装置和浏览器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103605688A - 一种网页广告的拦截方法、装置和浏览器" title="专利 CN103605688A - 一种网页广告的拦截方法、装置和浏览器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103605688 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201310535916</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年2月26日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2013年11月1日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2013年11月1日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/WO2015062366A1?hl=zh-CN&amp;cl=zh">WO2015062366A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2015062527A1?hl=zh-CN&amp;cl=zh">WO2015062527A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201310535916.2, </span><span class="patent-bibdata-value">CN 103605688 A, </span><span class="patent-bibdata-value">CN 103605688A, </span><span class="patent-bibdata-value">CN 201310535916, </span><span class="patent-bibdata-value">CN-A-103605688, </span><span class="patent-bibdata-value">CN103605688 A, </span><span class="patent-bibdata-value">CN103605688A, </span><span class="patent-bibdata-value">CN201310535916, </span><span class="patent-bibdata-value">CN201310535916.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9B%B9%E9%BE%99%22">曹龙</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BB%BB%E5%AF%B0%22">任寰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E5%A5%87%E8%99%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京奇虎科技有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103605688A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103605688A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103605688A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (4),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (1)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=CtfzCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201310535916&amp;usg=AFQjCNGpDM8vlYkzoGlU4tWjQTh-8lxPLg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=CtfzCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103605688A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEFEKlRFQGb2GUHxM0FDOJUInjDHQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT133718841" lang="ZH" load-source="patent-office">一种网页广告的拦截方法、装置和浏览器</invention-title>
+      </span><br><span class="patent-number">CN 103605688 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA130766392" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种网页广告的拦截方法、装置和浏览器，所述方法包括：在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生成当前网页的第二加载请求；采用预置的第一判断规则查找当前网页中需要拦截的网页元素；当查找到时，采用所述第二浏览器内核拦截所述网页元素。本发明避免了多内核浏览器在内核切换时对广告拦截的无序性、拦截规则的不通用性导致的实用性差，提高了广告拦截的效率和成功率，实用性强，将广告拦截后减少系统资源的占用，提高网页加载效率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM59383839" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种网页广告的拦截方法，包括:在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生成当前网页的第二加载请求；采用预置的第一判断规则查找当前网页中需要拦截的网页元素；当查找到时，采用所述第二浏览器内核拦截所述网页元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，还包括:当判定当前网页适于采用第一浏览器内核加载时，采用预置的第二判断规则查找当前网页中需要拦截的网页元素；当查找到时，采用所述第一浏览器内核拦截所述网页元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的方法，其特征在于，所述当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生成当前网页的第二加载请求的步骤包括:调用网络编程接口 WinInet启动管理会话类CInternetSession ；当在所述管理会话类CInternetSession中监听到所述第二浏览器内核加载网页的请求时，提取所述请求中的URL;判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前网页的URL传输到所述第二浏览器内核中；采用所述第二浏览器内 核针对当前网页的URL生成当前网页的第二加载请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的方法，其特征在于，所述采用预置的第一判断规则查找当前网页中需要拦截的网页元素的步骤包括:采用当前网页的URL在预置的黑名单中进行匹配；当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；和/或，采用当前网页的URL在预置的白名单中进行匹配；当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1所述的方法，其特征在于，所述采用所述第二浏览器内核拦截所述网页元素的步骤包括:返回错误码或者透明的图像数据至所述第二浏览器内核；采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；采用所述错误码或者透明的图像数据替换所述DOM元素节点；或者，采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；或者，采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；删除所述DOM元素节点。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求2所述的方法，其特征在于，所述采用预置的第二判断规则查找当前网页中需要拦截的网页元素的步骤包括:采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中和/或第三方插件的拦截名单中进行匹配；当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；和/或，将当前网页的URL发送至服务器侧；接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网页元素为所述服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中和/ 或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求2所述的方法，其特征在于，所述采用所述第一浏览器内核拦截所述网页元素的步骤包括:返回错误码或者透明的图像数据至所述第一浏览器内核；采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；采用所述错误码或者透明的图像数据替换所述DOM元素节点；或者，采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；或者，采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；`删除所述DOM元素节点。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.&#8212;种网页广告的拦截装置，包括:第一加载请求接收模块，适于在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；第二浏览器内核启动模块，适于在判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；第二加载请求生成模块，适于在监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生成当前网页的第二加载请求；第一网页元素查找模块，适于采用预置的第一判断规则查找当前网页中需要拦截的网页元素；第一网页元素拦截模块，适于在查找到时，采用所述第二浏览器内核拦截所述网页元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求8所述的装置，其特征在于，还包括:第二页元素查找模块，适于在判定当前网页适于采用第一浏览器内核加载时，采用预置的第二判断规则查找当前网页中需要拦截的网页元素；第二网页元素拦截模块，适于在查找到时，采用所述第一浏览器内核拦截所述网页元素。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.一种浏览器，包括:第一加载请求接收模块，适于在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；第二浏览器内核启动模块，适于在判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；第二加载请求生成模块，适于在监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生成当前网页的第二加载请求；第一网页元素查找模块，适于采用预置的第一判断规则查找当前网页中需要拦截的网页元素；第一网页元素拦截模块，适于在查找到时，采用所述第二浏览器内核拦截所述网页元素。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES66892221" lang="ZH" load-source="patent-office" class="description">
+    <p>&#8212;种网页广告的拦截方法、装置和浏览器</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及浏览器的技术领域，具体涉及一种网页广告的拦截方法、一种网页广 告的拦截装置、一种浏览器。</p>
+    <p>背景技术</p>
+    <p>[0002]	浏览器从架构上可以分为两个部分，即内核和外壳。浏览器内核是指浏览器的 核心部分，可以分成两部分:渲染引擎(layout engineer或者Rendering Engine)和JS (JavaScript)引擎。渲染引擎主要负责取得网页的内容(包括HTML、XML、图像等)、整理信 息(如加入CSS (Cascading Style Sheets,层叠样式表单)等)，以及计算网页的显示方式， 然后会输出至显示器或打印机。浏览器内核的不同对于网页的语法解释会有不同，所以渲 染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的 应用程序都需要内核。JS引擎则是解析Javascript语言,执行Javascript语言来实现网 页的动态效果。</p>
+    <p>[0003]	浏览器内核的种类有很多，目前比较常见的浏览器内核有微软的IE浏览器使用 的Trident内核，Firefox浏览器使用的Gecko内核,苹果的Safari浏览器和Google的 Chrome浏览器使用的Webkit内核，以及，Opera浏览器采用的Presto内核。</p>
+    <p>[0004]	网页往往是按照某个内核支持的网络标准制作的，对于某个特定内核支持的网络 标准，其他内核可能无法很好地支持(甚至无法支持)。例如，用户使用Firefox浏览器浏 览网页，Firefox的浏览器内核能够很好地支持W3C标准，因此使用该浏览器可以浏览按照 W3C标准制作的网页。但如果用户想要浏览银行网页使用网络银行，Firefox浏览器就无法 满足这个用户需求。因为很多网络银行、在线支付系统需要ActiveX插件功能，而该功能可 能只有IE浏览器的Trident内核才能支持,这样用户在使用Firefox浏览器的情况下就无 法使用网络银行了。</p>
+    <p>[0005]	为了让用户能够享受到更好的浏览体验，浏览器厂商发明了“双核”这一浏览器模 式，即一个浏览器具有两个内核。</p>
+    <p>[0006]	在使用浏览器浏览网站时，很多网站经常先弹出两三个广告窗口，例如占据了整 个浏览器窗口页面显示区域的巨幅Flash广告，然后再显示网页主体，而网页主题也有许 多通栏的横幅广告条、悬停广告、飘浮广告等等。时不时还会弹出的ActiveX控件与插件安 装下载、运行提示对话框、Java小程序要求安装Java虚拟机提示框等等，严重影响用户浏 览网页，还增加了系统的运行负担。</p>
+    <p>发明内容</p>
+    <p>[0007]	鉴于上述问题，提出了本发明以便提供一种克服上述问题或者至少部分地解决上 述问题的一种网页广告的拦截方法和相应的一种网页广告的拦截装置以及一种浏览器。</p>
+    <p>[0008]	依据本发明的一个方面，提供了一种网页广告的拦截方法，包括:</p>
+    <p>[0009]	在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；[0010]	当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；</p>
+    <p>[0011]	当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生 成当前网页的第二加载请求；</p>
+    <p>[0012]	采用预置的第一判断规则查找当前网页中需要拦截的网页元素；</p>
+    <p>[0013]	当查找到时，采用所述第二浏览器内核拦截所述网页元素。</p>
+    <p>[0014]	可选地，还包括:</p>
+    <p>[0015]	当判定当前网页适于采用第一浏览器内核加载时，采用预置的第二判断规则查找 当前网页中需要拦截的网页元素；</p>
+    <p>[0016]	当查找到时，采用所述第一浏览器内核拦截所述网页元素。</p>
+    <p>[0017]	可选地，所述当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一 浏览器内核生成当前网页的第二加载请求的步骤包括:</p>
+    <p>[0018]	调用网络编程接口 WinInet启动管理会话类CInternetSession ；</p>
+    <p>[0019]	当在所述管理会话类CInternetSession中监听到所述第二浏览器内核加载网页 的请求时，提取所述请求中的URL ；</p>
+    <p>[0020]	判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前网页的URL传 输到所述第二浏览器内核中；</p>
+    <p>[0021]	采用所述第二浏览器内核针对当前网页的URL生成当前网页的第二加载请求。</p>
+    <p>[0022]	可选地，所述采用预置的第一判断规则查找当前网页中需要拦截的网页元素的步 骤包括:</p>
+    <p>[0023]	采用当前网页的URL在预置的黑名单中进行匹配；</p>
+    <p>[0024]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0025]和	/ 或，</p>
+    <p>[0026]	采用当前网页的URL在预置的白名单中进行匹配；</p>
+    <p>[0027]	当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</p>
+    <p>[0028]	可选地，所述采用所述第二浏览器内核拦截所述网页元素的步骤包括:</p>
+    <p>[0029]	返回错误码或者透明的图像数据至所述第二浏览器内核；</p>
+    <p>[0030]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0031]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0032]或者，</p>
+    <p>[0033]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0034]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0035]或者，</p>
+    <p>[0036]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0037]	删除所述DOM元素节点。</p>
+    <p>[0038]	可选地，所述采用预置的第二判断规则查找当前网页中需要拦截的网页元素的步 骤包括:</p>
+    <p>[0039]	采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、浏览器提供 方的拦截名单中和/或第三方插件的拦截名单中进行匹配；</p>
+    <p>[0040]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；[0041]和	/ 或，</p>
+    <p>[0042]	将当前网页的URL发送至服务器侧；</p>
+    <p>[0043]	接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网页元素为所述 服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中 和/或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</p>
+    <p>[0044]	可选地，所述采用所述第一浏览器内核拦截所述网页元素的步骤包括:</p>
+    <p>[0045]	返回错误码或者透明的图像数据至所述第一浏览器内核；</p>
+    <p>[0046]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0047]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0048]或者，</p>
+    <p>[0049]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0050]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0051]或者，</p>
+    <p>[0052]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0053]	删除所述DOM元素节点。</p>
+    <p>[0054]	根据本发明的另一方面，提供了一种网页广告的拦截装置，包括:</p>
+    <p>[0055]	第一加载请求接收模块，适于在浏览器侧采用第一浏览器内核接收当前网页的第 一加载请求；</p>
+    <p>[0056]	第二浏览器内核启动模块，适于在判定当前网页适于采用第二浏览器内核加载 时，启动所述第二浏览器内核；</p>
+    <p>[0057]	第二加载请求生成模块，适于在监听到所述第二浏览器内核请求加载当前网页 时，采用所述第一浏览器内核生成当前网页的第二加载请求；</p>
+    <p>[0058]	第一网页元素查找模块，适于采用预置的第一判断规则查找当前网页中需要拦截 的网页元素；</p>
+    <p>[0059]	第一网页元素拦截模块，适于在查找到时，采用所述第二浏览器内核拦截所述网 页元素。</p>
+    <p>[0060]	可选地，还包括:</p>
+    <p>[0061]	第二页元素查找模块，适于在判定当前网页适于采用第一浏览器内核加载时，采 用预置的第二判断规则查找当前网页中需要拦截的网页元素；</p>
+    <p>[0062]	第二网页元素拦截模块，适于在查找到时，采用所述第一浏览器内核拦截所述网 页元素。</p>
+    <p>[0063]	可选地，所述第二加载请求生成模块还适于:</p>
+    <p>[0064]	调用网络编程接口 WinInet启动管理会话类CInternetSession ；</p>
+    <p>[0065]	当在所述管理会话类CInternetSession中监听到所述第二浏览器内核加载网页 的请求时，提取所述请求中的URL ；</p>
+    <p>[0066]	判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前网页的URL传 输到所述第二浏览器内核中；</p>
+    <p>[0067]	采用所述第二浏览器内核针对当前网页的URL生成当前网页的第二加载请求。</p>
+    <p>[0068]	可选地，所述第一网页元素查找模块还适于:[0069]	采用当前网页的URL在预置的黑名单中进行匹配；</p>
+    <p>[0070]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0071]和	/ 或，</p>
+    <p>[0072]	采用当前网页的URL在预置的白名单中进行匹配；</p>
+    <p>[0073]	当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</p>
+    <p>[0074]	可选地，所述第一网页元素拦截模块还适于:</p>
+    <p>[0075]	返回错误码或者透明的图像数据至所述第二浏览器内核；</p>
+    <p>[0076]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0077]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0078]或者，</p>
+    <p>[0079]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0080]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0081]或者，</p>
+    <p>[0082]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0083]	删除所述DOM元素节点。</p>
+    <p>[0084]	可选地，所述第二页元素查找模块还适于:</p>
+    <p>[0085]	采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、浏览器提供 方的拦截名单中和/或第三方插件的拦截名单中进行匹配；</p>
+    <p>[0086]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0087]和	/ 或，</p>
+    <p>[0088]	将当前网页的URL发送至服务器侧；</p>
+    <p>[0089]	接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网页元素为所述 服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中 和/或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</p>
+    <p>[0090]	可选地，所述第二网页元素拦截模块还适于:</p>
+    <p>[0091]	返回错误码或者透明的图像数据至所述第一浏览器内核；</p>
+    <p>[0092]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0093]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0094]或者，</p>
+    <p>[0095]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0096]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0097]或者，</p>
+    <p>[0098]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0099]	删除所述DOM元素节点。</p>
+    <p>[0100]	根据本发明的另一方面，提供了一种浏览器，包括:</p>
+    <p>[0101]	第一加载请求接收模块，适于在浏览器侧采用第一浏览器内核接收当前网页的第 一加载请求；</p>
+    <p>[0102]	第二浏览器内核启动模块，适于在判定当前网页适于采用第二浏览器内核加载 时，启动所述第二浏览器内核；[0103]	第二加载请求生成模块，适于在监听到所述第二浏览器内核请求加载当前网页 时，采用所述第一浏览器内核生成当前网页的第二加载请求；</p>
+    <p>[0104]	第一网页元素查找模块，适于采用预置的第一判断规则查找当前网页中需要拦截 的网页元素；</p>
+    <p>[0105]	第一网页元素拦截模块，适于在查找到时，采用所述第二浏览器内核拦截所述网 页元素。</p>
+    <p>[0106]	本发明通过在一个浏览器中至少集成两个浏览器内核，基于每个浏览器都有自身 的优缺点，在判定当前网页适于采用第二浏览器内核加载时，启动第二浏览器内核加载当 前网页，可以提高加载网页的效率。在采用第二浏览器内核加载当前网页时，采用适于第二 浏览器内核的广告拦截规则进行广告的拦截，避免了多内核浏览器在内核切换时对广告拦 截的无序性、拦截规则的不通用性导致的实用性差，提高了广告拦截的效率和成功率，实用 性强，将广告拦截后减少系统资源的占用，提高网页加载效率。</p>
+    <p>[0107]	本发明的第一判断规则可以为黑名单和/或白名单，基于网页的URL进行正则表 达式的匹配，操作简便、快捷，占用系统资源少。</p>
+    <p>[0108]	本发明在判定当前网页适于采用第一浏览器内核加载时，直接采用第一浏览器内 核加载当前网页，采用适于第一浏览器内核的广告拦截规则进行广告的拦截，实现了拦截 规则根据浏览器内核切换的动态转换，实现了多内核浏览器对广告的无缝转换拦截，提高 了广告拦截的效率和成功率，实用性强，将广告拦截后减少系统资源的占用，提高网页加载 效率。</p>
+    <p>[0109]	本发明的第二判断规则可以为用户自定义的拦截名单、浏览器提供方的拦截名单 中和/或第三方插件的拦截名单，判断形式多样化，实用性强，基于网页的URL进行匹配，操 作简便、快捷，拦截广告的准确率高，占用系统资源少。</p>
+    <p>[0110]	上述说明仅是本发明技术方案的概述，为了能够更清楚了解本发明的技术手段， 而可依照说明书的内容予以实施，并且为了让本发明的上述和其它目的、特征和优点能够 更明显易懂，以下特举本发明的具体实施方式。</p>
+    <p>附图说明</p>
+    <p>[0111]	通过阅读下文优选实施方式的详细描述，各种其他的优点和益处对于本领域普通 技术人员将变得清楚明了。附图仅用于示出优选实施方式的目的，而并不认为是对本发明 的限制。而且在整个附图中，用相同的参考符号表示相同的部件。在附图中:</p>
+    <p>[0112]	图1示出了根据本发明一个实施例的一种网页广告的拦截方法实施例1的步骤流 程图；</p>
+    <p>[0113]	图2示出了根据本发明一个实施例的一种网页广告的拦截方法实施例2的步骤流 程图；以及，</p>
+    <p>[0114]	图3示出了根据本发明一个实施例的一种网页广告的拦截装置实施例的结构框 图。</p>
+    <p>具体实施方式</p>
+    <p>[0115]	下面将参照附图更详细地描述本公开的示例性实施例。虽然附图中显示了本公开的示例性实施例，然而应当理解，可以以各种形式实现本公开而不应被这里阐述的实施例 所限制。相反，提供这些实施例是为了能够更透彻地理解本公开，并且能够将本公开的范围 完整的传达给本领域的技术人员。</p>
+    <p>[0116]	参照图1，示出了根据本发明一个实施例的一种网页广告的拦截方法实施例1的 步骤流程图，具体可以包括如下步骤:</p>
+    <p>[0117]	步骤101，在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；</p>
+    <p>[0118]	需要说明的是，本发明实施例的浏览器可以包括两个或两个以上的浏览器内核， 第一浏览器内核可以为浏览器当前默认使用的浏览器内核，该默认的浏览器内核可以是系 统设置的，也可以使用户设置的，具体可以是Webkit内核等高性能的浏览器内核。当然，还 可以是Gecko内核、Presto内核等等,本发明实施例对此不加以限制。</p>
+    <p>[0119]	第二浏览器内核可以为浏览器内置的除第一浏览器内核外的其他浏览器内核，可 以在某些情况适配当前网页的加载，可以为Trident内核(即IE内核)，包括IE-com内核(兼 容的IE内核)和/或IE-stand内核。当然,还可以是Gecko内核、Presto内核等等，本发 明实施例对此不加以限制。</p>
+    <p>[0120]	当前网页的第一加载请求可以是指用户发出的加载某个网页的指示。例如，用户 可以通过点击某链接来打开一个网页，或者在地址栏输入网址来打开一个网页等等。当用 户点击某链接的指示时，就相当于接收到了用户加载网页的加载请求；同样，当在地址栏输 入某网址并点击确定按钮或按下回车键时，也相当于接收到了用户加载网页的加载请求。</p>
+    <p>[0121]	其中，加载请求的内容可以包括用户请求加载的网页的标识和/或网页的特征。 网页标识可以是能够代表一个唯一确定的网页的信息，例如统一资源标识符(Uniform Resource Identifier, URI),统一资源标识符又具体可以包括统一资源定位符(Uniform Resource Locator, URL),或者统一资源名称(Uniform Resource Name, URN)等等。</p>
+    <p>[0122]	为使本领域技术人员更好地理解本发明实施例，在本说明书中，将URL作为网页 的标识的一种示例进行说明。</p>
+    <p>[0123]	步骤102，当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器 内核；</p>
+    <p>[0124]	在具体实现中，获知用户请求的网页与浏览器内核之间的适配关系(即当前网页 适于采用哪个浏览器内核进行加载)的方法可以有多种。</p>
+    <p>[0125]	其中一种方法，可以根据从请求信息获得的内容以及预置规则，获知用户请求的 网页与所述浏览器内核之间的适配关系。</p>
+    <p>[0126]	具体而言，预置规则可以包括特定适配规则、通用适配规则和/或不适配规则，在 请求加载网页的过程中，可以根据特定适配规则、通用适配规则和/或不适配规则，获知用 户请求的网页与浏览器内核之间的适配关系。其中，特定适配规则可以包括网页与浏览器 内核之间的适配关系，通用适配规则可以包括为用户选择平均加载速度最快的浏览器内核 或为用户选择对网络标准支持最好的浏览器内核，不适配规则可以包括网页与浏览器内核 之间的不适配关系。</p>
+    <p>[0127]	由于浏览器还会根据接收到的加载请求向对应的服务器发送关于加载网页的加 载请求信息，服务器会针对加载请求信息返回响应信息，在响应信息中会携带一些网页的 页面内容等信息，因此在此种情形下，还可以根据从服务器返回的针对加载请求信息的响应信息获得的内容以及预置规则，重新获知与用户请求的网页适配的浏览器内核；如果重 新获知的适配的浏览器内核与此前基于请求信息获知的适配浏览器内核不同，则选择重新 获知的适配浏览器内核加载用户请求的网页。</p>
+    <p>[0128]	另外一种方法中，由于浏览器还会根据接收到的加载请求向对应的服务器发送关 于加载网页的加载请求信息，服务器会针对加载请求信息返回响应信息，在响应信息中会 携带一些网页的页面内容等信息，因此在该方法中，可以直接根据从服务器返回的针对加 载请求信息返回的响应信息获取的内容以及预置规则，获知用户请求的网页与浏览器内核 之间的适配关系。</p>
+    <p>[0129]	当然，也可以根据从加载请求获得的内容、从服务器返回的针对加载请求信息返 回的响应信息获取的内容以及预置规则，共同获知用户请求的网页与浏览器内核之间的适 配关系。</p>
+    <p>[0130]	另外，在使用上述各实施例提供的方法加载网页时，还可以对加载用户请求的网 页的情况进行检测；如果出现符合预置的浏览器内核切换条件的现象，则根据预置规则重 新获知与该网页适配的浏览器内核；选择重新获知的适配的浏览器内核加载用户请求的网 页。其中，符合预置的浏览器内核切换条件的现象可以包括:在加载过程中检测所加载速度 较慢，或者在加载完毕后检测到网页没有正常显示，等等。</p>
+    <p>[0131]	当判定当前网页适于采用第二浏览器内核加载时，便可以启动所述第二浏览器内 核对应的进程。</p>
+    <p>[0132]	步骤103，当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览 器内核生成当前网页的第二加载请求；</p>
+    <p>[0133]	在切换到第二浏览器内核后，可以通过第二浏览内核使用当前网页的URL去发起 一个新的浏览器导航。</p>
+    <p>[0134]	在本发明的一种优选实施例中，所述步骤103具体可以包括如下子步骤:</p>
+    <p>[0135]	子步骤Sll,调用网络编程接口 WinInet启动管理会话类CInternetSession ；</p>
+    <p>[0136]	子步骤S12,当在所述管理会话类CInternetSession中监听到所述第二浏览器内 核加载网页的请求时，提取所述请求中的URL ；</p>
+    <p>[0137]	子步骤S13，判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前 网页的URL传输到所述第二浏览器内核中；</p>
+    <p>[0138]	子步骤S14，采用所述第二浏览器内核针对当前网页的URL生成当前网页的第二 加载请求。</p>
+    <p>[0139]	本发明实施例可以在第二浏览器内核中注册监听HTTP请求或者HTTPS请求。在 具体实现中，可以在WinInet (是Windows Internet扩展应用程序编程接口，是专为开发具 有Internet功能的客户端应用程序而提供的，可以支持HTTP协议，FTP协议和GOPHER协 议)中进行一个CinternetSession对象,对每一个监听到的HTTP请求或者HTTPS请求,识 别出该HTTP请求中或者HTTPS请求中的URL。若判断该URL为当前网页的URL，则依据当 前网页的URL进行IPC( Inter-Process Communication,进程间通信,指至少两个进程或线 程间传送数据或信号的一些技术或方法)将第一浏览器内核中的URL传递给第二浏览器内 核中。在第二浏览器内核中依据该URL进行一个基于第一浏览器内核的HTTP请求。</p>
+    <p>[0140]	步骤104，采用预置的第一判断规则查找当前网页中需要拦截的网页元素；[0141]	第一判断规则可以为适用于第二浏览器内核的拦截IFRAME (HTML标签，作用是文 档中的文档，或者浮动的框架)或DIV (HTML标签，可定义文档中的分区或节把文档分割为 独立的、不同的部分)浮层的广告的拦截规则。</p>
+    <p>[0142]	在本发明的一种优选实施例中，所述步骤104具体可以包括如下子步骤:</p>
+    <p>[0143]	子步骤S21，采用当前网页的URL在预置的黑名单中进行匹配；</p>
+    <p>[0144]	子步骤S22，当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0145]	黑名单中可以记载了过滤元素，即需要拦截的URL链接。该URL链接可以从当前 网页的源代码中获取，该URL链接可以以http://开头，这个链接可以是完整的，也可以是 通配的，具有完整的一级域名。</p>
+    <p>[0146]	过滤元素的示例可以如下:</p>
+    <p>[0147]	http://*, guize.com/*, js</p>
+    <p>[0148]	http://www.guize.com/gg/*</p>
+    <p>[0149]	http://ww*.guize.com/gg/tuiguang_0*.swf</p>
+    <p>[0150]	http://c.guize.com/gg/tuiguang.g_01.gif</p>
+    <p>[0151]	http://www.guize.com/guanggao/html</p>
+    <p>[0152]	只要在打开网页时，页面中只要存在以上链接，该链接指示的网页元素即可被拦 截。</p>
+    <p>[0153]	在实际应用时，例如某网站首页上的一个广告的URL链接地址为http://www.abcl23.com/gg/xiaoyouxi/id=Pffm4Pln4n0.gif,则其的过滤规则可以是 http://www.abcl23.com/*,或，http://www.abcl23.com/gg/xiaoyouxi/*.gif,或，http://&#27706;.abcl23.com/gg/* 等等。</p>
+    <p>[0154]	这三条过滤元素都可以过滤这个广告,但http://www.abcl23.com/*过滤的范围 较广，容易过滤掉其他非广告内容。过滤元素越具体，过滤广告的效果也就越有效。</p>
+    <p>[0155]和	/ 或，</p>
+    <p>[0156]	子步骤S23，采用当前网页的URL在预置的白名单中进行匹配；</p>
+    <p>[0157]	子步骤S24，当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</p>
+    <p>[0158]	一些网页元素在过滤的同时可能会过滤掉非广告的网页元素。此时就需要再添加 一些例外元素，从而保证在过滤广告的网页元素的同时，非广告的网页元素不被过滤。此例 外元素具体可以记载在白名单上，而白名单的优先级可以高于黑名单的优先级。</p>
+    <p>[0159]	其中，例外元素的格式和过滤元素可以相同，例如想过滤http: //www.gize.com/gg/*下的网页元素，但同时不想过滤http://www.guize.com/gg/tui jian.js,则设 http://www.guize.com/gg/tui jian.js 为例外元素，效果为过滤 guize.com/ gg 下的所有 网页元素，但tuijian.js这个网页元素除外。</p>
+    <p>[0160]	在实际应用中，黑名单和白名单可以单个使用，也可以组合使用，具体可以采用正 则表达式进行黑名单和/或白名单的匹配。</p>
+    <p>[0161]	正则表达式是用于进行文本匹配的工具，通常由一些普通字符和一些元字符 (metacharacters)组成。普通字符包括大小写的字母和数字,而元字符则具有特殊的含义。 正则表达式的匹配可以理解为，在给定的字符串中，寻找与给定的正则表达式相匹配的部 分。有可能字符串里有不止一个部分满足给定的正则表达式，这时每一个这样的部分被称为一个匹配。匹配在本文里可以包括三种含义:一种是形容词性的，比如说一个字符串匹配 一个表达式；一种是动词性的，比如说在字符串里匹配正则表达式；还有一种是名词性的， 就是刚刚说到的“字符串中满足给定的正则表达式的一部分”。</p>
+    <p>[0162]	以下通过举例对正则表达式的生成规则进行说明。</p>
+    <p>[0163]	假设要查找hi，则可以使用正则表达式hi。这个正则表达式可以精确匹配这样的 字符串:由两个字符组成，前一个字符是h，后一个是i。在实际中，正则表达式是可以忽略 大小写的。如果很多单词里都包含hi这两个连续的字符，比如him, history, high等等。 用hi来查找的话，这此单词里面的hi也会被找出来。如果要精确地查找hi这个单词的话， 则应该使用\bhi\b。</p>
+    <p>[0164]	其中，\b是正则表达式的一个元字符，它代表着单词的开头或结尾，也就是单词的 分界处。虽然通常英文的单词是由空格或标点符号或换行来分隔的，但是\b并不匹配这些 单词分隔符中的任何一个，它只匹配一个位置。</p>
+    <p>[0165]	假如要找的是hi后面不远处跟着一个Lucy,贝U应该用\bhi\b.*\bLucy\b。其 中，.是另一个元字符，匹配除了换行符以外的任意字符。*同样是元字符，它代表的是 数量&#8212;&#8212;即指定*前边的内容可以连续重复出现任意次以使整个表达式得到匹配。现在 \bhi\b.*\bLucy\b的意思就很明显了:先是一个单词hi,然后是任意个任意字符(但不能 是换行)，最后是Lucy这个单词。</p>
+    <p>[0166]	本发明的第一判断规则可以为黑名单和/或白名单，基于网页的URL进行正则表 达式的匹配，操作简便、快捷，占用系统资源少。</p>
+    <p>[0167]	步骤105，当查找到时，采用所述第二浏览器内核拦截所述网页元素。</p>
+    <p>[0168]	当查找到时，可以判定该需要拦截的网页元素为广告，则可以对其进行拦截。</p>
+    <p>[0169]	在本发明的一种优选实施例中，所述步骤105具体可以包括如下子步骤:</p>
+    <p>[0170]	子步骤S31，返回错误码或者透明的图像数据至所述第二浏览器内核；</p>
+    <p>[0171]	子步骤S32，采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0172]	子步骤S33，采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0173]	在一种情形中，可以采用第二浏览器内核错误码替换被拦截的网页元素。错误码 可以为HTTP状态码中的请求错误(4字头)，这类的状态码代表了客户端看起来可能发生了 错误，妨碍了服务器的处理。例如404Not Found，即请求失败，请求得到的网页元素未被在 服务器上发现；400NotReqUest，即语义有误，当前请求无法被服务器理解，或者，请求参数 有误；405Method Not Allowed,即请求行中指定的请求方法不能被用于请求相应的资源，</p>
+    <p>坐坐 寸寸o</p>
+    <p>[0174]	但是，错误码在网页上会显示“X”形的图标，为了网页更加美观，可以使用透明图 像数据，例如1*1像素的PNG图片替换被拦截的网页元素。</p>
+    <p>[0175]	DOM (文件对象模型,Document Object Model)是处理可扩展置标语言的标准编程 接口。DOM可以以一种独立于平台和语言的方式访问和修改一个文档的内容和结构，是表示 和处理一个HTML或XML文档的常用方法。</p>
+    <p>[0176]	DOM实际上是以面向对象方式描述的文档模型。DOM定义了表示和修改文档所需 的对象、这些对象的行为和属性以及这些对象之间的关系。可以把DOM认为是页面上数据 和结构的一个树形表示，不过页面当然可能并不是以这种树的方式具体实现。[0177]	通过JavaScript可以重构整个HTML文档，可以添加、移除、改变或重排页面上的项目。</p>
+    <p>[0178]	要改变页面的某个东西，JavaScript就需要获得对HTML文档中所有元素进行访问的入口。这个入口，连同对HTML元素进行添加、移动、改变或移除的方法和属性，都是通过文档对象模型来获得的(D0M)。</p>
+    <p>[0179]	可以将HTML文档视作树结构，而这种结构被称为节点树(THML D0M)&#8222;通过HTML D0M，树中的所有节点均可通过JavaScript进行访问。所有HTML元素(节点)均可被修改， 也可以创建或删除节点。</p>
+    <p>[0180]	节点树中的节点彼此拥有层级关系。可以采用父(parent)、子(child)和同胞 (sibling)等术语用于描述这些关系。其中，父节点拥有子节点。同级的子节点被称为同胞 (兄弟或姐妹)。在节点树中，顶端节点被称为根(root)。每个节点都有父节点、除了根(它没有父节点)。一个节点可拥有任意数量的子，同胞是拥有相同父节点的节点。</p>
+    <p>[0181]	具体可以通过若干种方法在节点树来查找希望操作的网页元素:</p>
+    <p>[0182]例如，可以通过使用	getElementByldO 和 getElementsByTagName ()方法进行查找。</p>
+    <p>[0183]	又例如，可以通过使用一个元素节点的parentNode、firstChild以及IastChild属性。</p>
+    <p>[0184]其中，getElementByldO	和 getElementsByTagName ()这两种方法，可查找整个 HTML文档中的任何HTML元素。而这两种方法会忽略文档的结构。假如查找文档中所有的 〈P〉元素,getElementsByTagName ()会把它们全部找到,不管〈P〉元素处于文档中的哪个层次。同时，getElementByldO方法也会返回正确的元素，不论它被隐藏在文档结构中的什么位置。这两种方法会提供任何所需要的HTML元素，不论它们在文档中所处的位置。</p>
+    <p>[0185]	此外，getElem entByldO可通过指定的ID来返回网页元素。</p>
+    <p>[0186]或者，</p>
+    <p>[0187]	子步骤S34，采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0188]	子步骤S35，采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为 true ；</p>
+    <p>[0189]	CSS0</p>
+    <p>[0190]	在另外一种情形中，在确定需要拦截的网页元素的DOM元素节点后，可以通过第二浏览器内核采用CSS(Cascading Style Sheet，级联样式，表是一种用来表现HTML或XML 等文件样式的计算机语言)选择器(Selector)将其透明属性改为“true”，对其进行隐藏。</p>
+    <p>[0191]或者，</p>
+    <p>[0192]	子步骤S36，采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0193]	子步骤S37，删除所述DOM元素节点。</p>
+    <p>[0194]	在另外一种情形中，在确定需要拦截的网页元素的DOM元素节点后，可以通过第二浏览器内核直接将该DOM元素节点删除。</p>
+    <p>[0195]	在对需要拦截的网页元素进行拦截处理后，可以形成新的stylesheet (样式表)， 可以通过第二浏览器内核采用该新的stylesheet重新渲染加载当前网页，进而将该网页元素，即广告进行拦截。[0196]	本发明通过在一个浏览器中至少集成两个浏览器内核，基于每个浏览器都有自身 的优缺点，在判定当前网页适于采用第二浏览器内核加载时，启动第二浏览器内核加载当 前网页，可以提高加载网页的效率。在采用第二浏览器内核加载当前网页时，采用适于第二 浏览器内核的广告拦截规则进行广告的拦截，避免了多内核浏览器在内核切换时对广告拦 截的无序性、拦截规则的不通用性导致的实用性差，提高了广告拦截的效率和成功率，实用 性强，将广告拦截后减少系统资源的占用，提高网页加载效率。</p>
+    <p>[0197]	参照图2，示出了根据本发明一个实施例的一种网页广告的拦截方法实施例2的 步骤流程图，具体可以包括如下步骤:</p>
+    <p>[0198]	步骤201，在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；</p>
+    <p>[0199]	步骤202，当判定当前网页适于采用第一浏览器内核加载时，采用预置的第二判断 规则查找当前网页中需要拦截的网页元素；</p>
+    <p>[0200]	第二判断规则可以为适用于第一浏览器内核的拦截IFRAME或DIV浮层的广告的 拦截规则。</p>
+    <p>[0201]	在本发明的一种优选实施例中，所述步骤202具体可以包括如下子步骤:</p>
+    <p>[0202]	子步骤S41，采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、 浏览器提供方的拦截名单中和/或第三方插件的拦截名单中进行匹配；</p>
+    <p>[0203]	子步骤S42，当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0204]	在一种情形中，用户自定义的拦截名单、浏览器提供方的拦截名单中和第三方插 件的拦截名单可以存储在浏览器侧本地。</p>
+    <p>[0205]	用户自定义的拦截名单可以记载用户根据个人行为喜好而进行设定的需要拦截 的URL链接，其优先级可以为最高。</p>
+    <p>[0206]	浏览器提供方的拦截名单可以记载浏览器提供方进行设定的需要拦截的URL链 接，该URL链接可以为接收用户上传的用户自定义的拦截名单所生成的，或者在其基础上 进行补充完善的，还可以是自己定义的，其优先度可以较用户自定义的拦截名单次之。</p>
+    <p>[0207]	第三方插件的拦截名单可以记载第三方插件设定的需要拦截的URL链接，例如 Adblock (ADB), Adblock Plus (ABP)等等，其优先级可以为最低。</p>
+    <p>[0208]	在具体实现中，用户自定义的拦截名单、浏览器提供方的拦截名单中和第三方插 件的拦截名单可以单个使用，也可以多个同时按照优先级使用。同样可以采用正则表达式 在用户自定义的拦截名单、浏览器提供方的拦截名单中和/或第三方插件的拦截名单进行 URL的匹配。</p>
+    <p>[0209]和	/ 或，</p>
+    <p>[0210]	子步骤S43，将当前网页的URL发送至服务器侧；</p>
+    <p>[0211]	子步骤S44，接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网 页元素为所述服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方 的拦截名单中和/或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</p>
+    <p>[0212]	需要说明的是，该服务器可以为当前浏览器对应的服务器，也可以是其他指定的 服务器，本发明实施例对此不加以限制。</p>
+    <p>[0213]	在此种情形中，用户自定义的拦截名单、浏览器提供方的拦截名单中和第三方插 件的拦截名单可以存储在浏览器侧。[0214]	在具体实现中，用户自定义的拦截名单、浏览器提供方的拦截名单中和第三方插 件的拦截名单可以单个使用，也可以多个同时按照优先级使用。同样可以采用正则表达式 在用户自定义的拦截名单、浏览器提供方的拦截名单中和/或第三方插件的拦截名单进行 URL的匹配。</p>
+    <p>[0215]	本发明的第二判断规则可以为用户自定义的拦截名单、浏览器提供方的拦截名单 中和/或第三方插件的拦截名单，判断形式多样化，实用性强，基于网页的URL进行匹配，操 作简便、快捷，拦截广告的准确率高，占用系统资源少。</p>
+    <p>[0216]	步骤203，当查找到时，采用所述第一浏览器内核拦截所述网页元素。</p>
+    <p>[0217]	当查找到时，可以判定该需要拦截的网页元素为广告，则可以对其进行拦截。</p>
+    <p>[0218]	在本发明的一种优选实施例中，所述步骤203具体可以包括如下子步骤:</p>
+    <p>[0219]	子步骤S51，返回错误码或者透明的图像数据至所述第一浏览器内核；</p>
+    <p>[0220]	子步骤S52，采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0221]	子步骤S53，采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0222]	在一种情形中，可以通过第一浏览器内核采用错误码或者透明的图像数据替换被 拦截的网页元素。</p>
+    <p>[0223]或者，</p>
+    <p>[0224]	子步骤S54，采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0225]	子步骤S55，采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为 true ；</p>
+    <p>[0226]	在另外一种情形中，在确定需要拦截的网页元素的DOM元素节点后，可以通过第 一浏览器内核采用CSS(Cascading Style Sheet，级联样式，表是一种用来表现HTML或XML 等文件样式的计算机语言)选择器(Selector)将其透明属性改为“true”，对其进行隐藏。</p>
+    <p>[0227]或者，</p>
+    <p>[0228]	子步骤S56，采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0229]	子步骤S57，删除所述DOM元素节点。</p>
+    <p>[0230]	在另外一种情形中，在确定需要拦截的网页元素的DOM元素节点后，可以通过第 一浏览器内核直接将该DOM元素节点删除。</p>
+    <p>[0231]	在对需要拦截的网页元素进行拦截处理后，可以形成新的stylesheet (样式表)， 可以通过第一浏览器内核采用该新的stylesheet重新渲染加载当前网页，进而将该网页 元素，即广告进行拦截。</p>
+    <p>[0232]	本发明在判定当前网页适于采用第一浏览器内核加载时，直接采用第一浏览器内 核加载当前网页，采用适于第一浏览器内核的广告拦截规则进行广告的拦截，实现了拦截 规则根据浏览器内核切换的动态转换，实现了多内核浏览器对广告的无缝转换拦截，提高 了广告拦截的效率和成功率，实用性强，将广告拦截后减少系统资源的占用，提高网页加载 效率。</p>
+    <p>[0233]	对于方法实施例，为了简单描述，故将其都表述为一系列的动作组合，但是本领域 技术人员应该知悉，本发明实施例并不受所描述的动作顺序的限制，因为依据本发明实施 例，某些步骤可以采用其他顺序或者同时进行。其次，本领域技术人员也应该知悉，说明书 中所描述的实施例均属于优选实施例，所涉及的动作并不一定是本发明实施例所必须的。[0234]	参照图3，示出了根据本发明一个实施例的一种网页广告的拦截装置实施例的结 构框图，具体可以包括如下模块:</p>
+    <p>[0235]	第一加载请求接收模块301，适于在浏览器侧采用第一浏览器内核接收当前网页 的第一加载请求；</p>
+    <p>[0236]	第二浏览器内核启动模块302，适于在判定当前网页适于采用第二浏览器内核加 载时，启动所述第二浏览器内核；</p>
+    <p>[0237]	第二加载请求生成模块303，适于在监听到所述第二浏览器内核请求加载当前网 页时，采用所述第一浏览器内核生成当前网页的第二加载请求；</p>
+    <p>[0238]	第一网页元素查找模块304，适于采用预置的第一判断规则查找当前网页中需要 拦截的网页元素；</p>
+    <p>[0239]	第一网页元素拦截模块305，适于在查找到时，采用所述第二浏览器内核拦截所述 网页元素。</p>
+    <p>[0240]	在本发明的一种优选实施例中，所述装置还可以包括如下模块:</p>
+    <p>[0241]	第二页元素查找模块，适于在判定当前网页适于采用第一浏览器内核加载时，采 用预置的第二判断规则查找当前网页中需要拦截的网页元素；</p>
+    <p>[0242]	第二网页元素拦截模块，适于在查找到时，采用所述第一浏览器内核拦截所述网 页元素。</p>
+    <p>[0243]	在本发明的一种优选实施例中，所述第二加载请求生成模块还可以适于:</p>
+    <p>[0244]	调用网络编程接口 WinInet启动管理会话类CInternetSession ；</p>
+    <p>[0245]	当在所述管理会话类CInternetSession中监听到所述第二浏览器内核加载网页 的请求时，提取所述请求中的URL ；</p>
+    <p>[0246]	判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前网页的URL传 输到所述第二浏览器内核中；</p>
+    <p>[0247]	采用所述第二浏览器内核针对当前网页的URL生成当前网页的第二加载请求。</p>
+    <p>[0248]	在本发明的一种优选实施例中，所述第一网页元素查找模块还可以适于:</p>
+    <p>[0249]	采用当前网页的URL在预置的黑名单中进行匹配；</p>
+    <p>[0250]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0251]和	/ 或，</p>
+    <p>[0252]	采用当前网页的URL在预置的白名单中进行匹配；</p>
+    <p>[0253]	当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</p>
+    <p>[0254]	在本发明的一种优选实施例中，所述第一网页元素拦截模块还可以适于:</p>
+    <p>[0255]	返回错误码或者透明的图像数据至所述第二浏览器内核；</p>
+    <p>[0256]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0257]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0258]或者，</p>
+    <p>[0259]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0260]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0261]或者，</p>
+    <p>[0262]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；[0263]	删除所述DOM元素节点。</p>
+    <p>[0264]	在本发明的一种优选实施例中，所述第二页元素查找模块还可以适于:</p>
+    <p>[0265]	采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、浏览器提供 方的拦截名单中和/或第三方插件的拦截名单中进行匹配；</p>
+    <p>[0266]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0267]和	/ 或，</p>
+    <p>[0268]	将当前网页的URL发送至服务器侧；</p>
+    <p>[0269]	接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网页元素为所述 服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中 和/或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</p>
+    <p>[0270]	在本发明的一种优选实施例中，所述第二网页元素拦截模块还可以适于:</p>
+    <p>[0271]	返回错误码或者透明的图像数据至所述第一浏览器内核；</p>
+    <p>[0272]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0273]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0274]或者，</p>
+    <p>[0275]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0276]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0277]或者，</p>
+    <p>[0278]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0279]	删除所述DOM元素节点。</p>
+    <p>[0280]	对于装置实施例而言，由于其与方法实施例基本相似，所以描述的比较简单，相关 之处参见方法实施例的部分说明即可。</p>
+    <p>[0281]	本发明还提供了一种浏览器，具体可以包括如下模块:</p>
+    <p>[0282]	第一加载请求接收模块，适于在浏览器侧采用第一浏览器内核接收当前网页的第 一加载请求；</p>
+    <p>[0283]	第二浏览器内核启动模块，适于在判定当前网页适于采用第二浏览器内核加载 时，启动所述第二浏览器内核；</p>
+    <p>[0284]	第二加载请求生成模块，适于在监听到所述第二浏览器内核请求加载当前网页 时，采用所述第一浏览器内核生成当前网页的第二加载请求；</p>
+    <p>[0285]	第一网页元素查找模块，适于采用预置的第一判断规则查找当前网页中需要拦截 的网页元素；</p>
+    <p>[0286]	第一网页元素拦截模块，适于在查找到时，采用所述第二浏览器内核拦截所述网 页元素。</p>
+    <p>[0287]	在本发明的一种优选实施例中，所述浏览器还可以包括如下模块:</p>
+    <p>[0288]	第二页元素查找模块，适于在判定当前网页适于采用第一浏览器内核加载时，采 用预置的第二判断规则查找当前网页中需要拦截的网页元素；</p>
+    <p>[0289]	第二网页元素拦截模块，适于在查找到时，采用所述第一浏览器内核拦截所述网 页元素。</p>
+    <p>[0290]	在本发明的一种优选实施例中，所述第二加载请求生成模块还可以适于:[0291]	调用网络编程接口 WinInet启动管理会话类CInternetSession ；</p>
+    <p>[0292]	当在所述管理会话类CInternetSession中监听到所述第二浏览器内核加载网页 的请求时，提取所述请求中的URL ；</p>
+    <p>[0293]	判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前网页的URL传 输到所述第二浏览器内核中；</p>
+    <p>[0294]	采用所述第二浏览器内核针对当前网页的URL生成当前网页的第二加载请求。</p>
+    <p>[0295]	在本发明的一种优选实施例中，所述第一网页元素查找模块还可以适于:</p>
+    <p>[0296]	采用当前网页的URL在预置的黑名单中进行匹配；</p>
+    <p>[0297]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0298]和	/ 或，</p>
+    <p>[0299]	采用当前网页的URL在预置的白名单中进行匹配；</p>
+    <p>[0300]	当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</p>
+    <p>[0301]	在本发明的一种优选实施例中，所述第一网页元素拦截模块还可以适于:</p>
+    <p>[0302]	返回错误码或者透明的图像数据至所述第二浏览器内核；</p>
+    <p>[0303]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0304]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0305]或者，</p>
+    <p>[0306]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0307]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0308]或者，</p>
+    <p>[0309]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0310]	删除所述DOM元素节点。</p>
+    <p>[0311]	在本发明的一种优选实施例中，所述第二页元素查找模块还可以适于:</p>
+    <p>[0312]	采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、浏览器提供 方的拦截名单中和/或第三方插件的拦截名单中进行匹配；</p>
+    <p>[0313]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0314]和	/ 或，</p>
+    <p>[0315]	将当前网页的URL发送至服务器侧；</p>
+    <p>[0316]	接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网页元素为所述 服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中 和/或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</p>
+    <p>[0317]	在本发明的一种优选实施例中，所述第二网页元素拦截模块还可以适于:</p>
+    <p>[0318]	返回错误码或者透明的图像数据至所述第一浏览器内核；</p>
+    <p>[0319]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0320]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0321]或者，</p>
+    <p>[0322]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0323]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0324]或者，[0325]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0326]	删除所述DOM元素节点。</p>
+    <p>[0327]	在此提供的算法和显示不与任何特定计算机、虚拟系统或者其它设备固有相关。 各种通用系统也可以与基于在此的示教一起使用。根据上面的描述，构造这类系统所要求 的结构是显而易见的。此外，本发明也不针对任何特定编程语言。应当明白，可以利用各种 编程语言实现在此描述的本发明的内容，并且上面对特定语言所做的描述是为了披露本发 明的最佳实施方式。</p>
+    <p>[0328]	在此处所提供的说明书中，说明了大量具体细节。然而，能够理解，本发明的实施 例可以在没有这些具体细节的情况下实践。在一些实例中，并未详细示出公知的方法、结构 和技术，以便不模糊对本说明书的理解。</p>
+    <p>[0329]	类似地，应当理解，为了精简本公开并帮助理解各个发明方面中的一个或多个，在 上面对本发明的示例性实施例的描述中，本发明的各个特征有时被一起分组到单个实施 例、图、或者对其的描述中。然而，并不应将该公开的方法解释成反映如下意图:即所要求保 护的本发明要求比在每个权利要求中所明确记载的特征更多的特征。更确切地说，如下面 的权利要求书所反映的那样，发明方面在于少于前面公开的单个实施例的所有特征。因此， 遵循具体实施方式的权利要求书由此明确地并入该具体实施方式，其中每个权利要求本身 都作为本发明的单独实施例。</p>
+    <p>[0330]	本领域那些技术人员可以理解，可以对实施例中的设备中的模块进行自适应性地 改变并且把它们设置在与该实施例不同的一个或多个设备中。可以把实施例中的模块或单 元或组件组合成一个模块或单元或组件，以及此外可以把它们分成多个子模块或子单元或 子组件。除了这样的特征和/或过程或者单元中的至少一些是相互排斥之外，可以采用任 何组合对本说明书(包括伴随的权利要求、摘要和附图)中公开的所有特征以及如此公开的 任何方法或者设备的所有过程或单元进行组合。除非另外明确陈述，本说明书(包括伴随的 权利要求、摘要和附图)中公开的每个特征可以由提供相同、等同或相似目的的替代特征来 代替。</p>
+    <p>[0331]	此外，本领域的技术人员能够理解，尽管在此所述的一些实施例包括其它实施例 中所包括的某些特征而不是其它特征，但是不同实施例的特征的组合意味着处于本发明的 范围之内并且形成不同的实施例。例如，在下面的权利要求书中，所要求保护的实施例的任 意之一都可以以任意的组合方式来使用。</p>
+    <p>[0332]	本发明的各个部件实施例可以以硬件实现，或者以在一个或者多个处理器上运行 的软件模块实现，或者以它们的组合实现。本领域的技术人员应当理解，可以在实践中使用 微处理器或者数字信号处理器(DSP )来实现根据本发明实施例的网页广告的拦截设备中的 一些或者全部部件的一些或者全部功能。本发明还可以实现为用于执行这里所描述的方法 的一部分或者全部的设备或者装置程序(例如，计算机程序和计算机程序产品)。这样的实 现本发明的程序可以存储在计算机可读介质上，或者可以具有一个或者多个信号的形式。 这样的信号可以从因特网网站上下载得到，或者在载体信号上提供，或者以任何其他形式 提供。</p>
+    <p>[0333]	应该注意的是上述实施例对本发明进行说明而不是对本发明进行限制，并且本领 域技术人员在不脱离所附权利要求的范围的情况下可设计出替换实施例。在权利要求中，不应将位于括号之间的任何参考符号构造成对权利要求的限制。单词“包含”不排除存在 未列在权利要求中的元件或步骤。位于元件之前的单词“一”或“一个”不排除存在多个这 样的元件。本发明可以借助于包括有若干不同元件的硬件以及借助于适当编程的计算机来 实现。在列举了若干装置的单元权利要求中，这些装置中的若干个可以是通过同一个硬件 项来具体体现。单词第一、第二、以及第三等的使用不表示任何顺序。可将这些单词解释为 名称。</p>
+    <p>[0334]	本发明公开了 Al、一种网页广告的拦截方法，包括:</p>
+    <p>[0335]	在浏览器侧采用第一浏览器内核接收当前网页的第一加载请求；</p>
+    <p>[0336]	当判定当前网页适于采用第二浏览器内核加载时，启动所述第二浏览器内核；</p>
+    <p>[0337]	当监听到所述第二浏览器内核请求加载当前网页时，采用所述第一浏览器内核生 成当前网页的第二加载请求；</p>
+    <p>[0338]	采用预置的第一判断规则查找当前网页中需要拦截的网页元素；</p>
+    <p>[0339]	当查找到时，采用所述第二浏览器内核拦截所述网页元素。</p>
+    <p>[0340]	A2、如Al所述的方法，还包括:</p>
+    <p>[0341]	当判定当前网页适于采用第一浏览器内核加载时，采用预置的第二判断规则查找 当前网页中需要拦截的网页元素；</p>
+    <p>[0342]	当查找到时，采用所述第一浏览器内核拦截所述网页元素。</p>
+    <p>[0343]	A3、如Al所述的方法，所述当监听到所述第二浏览器内核请求加载当前网页时， 采用所述第一浏览器内核生成当前网页的第二加载请求的步骤包括:</p>
+    <p>[0344]	调用网络编程接口 WinInet启动管理会话类CInternetSession ；</p>
+    <p>[0345]	当在所述管理会话类CInternetSession中监听到所述第二浏览器内核加载网页 的请求时，提取所述请求中的URL ；</p>
+    <p>[0346]	判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前网页的URL传 输到所述第二浏览器内核中；</p>
+    <p>[0347]	采用所述第二浏览器内核针对当前网页的URL生成当前网页的第二加载请求。</p>
+    <p>[0348]	A4、如Al所述的方法，所述采用预置的第一判断规则查找当前网页中需要拦截的 网页元素的步骤包括:</p>
+    <p>[0349]	采用当前网页的URL在预置的黑名单中进行匹配；</p>
+    <p>[0350]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0351]和	/ 或，</p>
+    <p>[0352]	采用当前网页的URL在预置的白名单中进行匹配；</p>
+    <p>[0353]	当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</p>
+    <p>[0354]	A5、如Al所述的方法，所述采用所述第二浏览器内核拦截所述网页元素的步骤包 括:</p>
+    <p>[0355]	返回错误码或者透明的图像数据至所述第二浏览器内核；</p>
+    <p>[0356]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0357]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0358]或者，</p>
+    <p>[0359]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；[0360]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0361]或者，</p>
+    <p>[0362]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0363]	删除所述DOM元素节点。</p>
+    <p>[0364]	A6、如A2所述的方法，所述采用预置的第二判断规则查找当前网页中需要拦截的 网页元素的步骤包括:</p>
+    <p>[0365]	采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、浏览器提供 方的拦截名单中和/或第三方插件的拦截名单中进行匹配；</p>
+    <p>[0366]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0367]和	/ 或，</p>
+    <p>[0368]	将当前网页的URL发送至服务器侧；</p>
+    <p>[0369]	接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网页元素为所述 服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中 和/或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</p>
+    <p>[0370]	A7、如A2所述的方法，所述采用所述第一浏览器内核拦截所述网页元素的步骤包 括:</p>
+    <p>[0371]	返回错误码或者透明的图像数据至所述第一浏览器内核；</p>
+    <p>[0372]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0373]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0374]或者，</p>
+    <p>[0375]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0376]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0377]或者，</p>
+    <p>[0378]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0379]	删除所述DOM元素节点。</p>
+    <p>[0380]	本发明还公开了 B8、一种网页广告的拦截装置，包括:</p>
+    <p>[0381]	第一加载请求接收模块，适于在浏览器侧采用第一浏览器内核接收当前网页的第 一加载请求；</p>
+    <p>[0382]	第二浏览器内核启动模块，适于在判定当前网页适于采用第二浏览器内核加载 时，启动所述第二浏览器内核；</p>
+    <p>[0383]	第二加载请求生成模块，适于在监听到所述第二浏览器内核请求加载当前网页 时，采用所述第一浏览器内核生成当前网页的第二加载请求；</p>
+    <p>[0384]	第一网页元素查找模块，适于采用预置的第一判断规则查找当前网页中需要拦截 的网页元素；</p>
+    <p>[0385]	第一网页元素拦截模块，适于在查找到时，采用所述第二浏览器内核拦截所述网 页元素。</p>
+    <p>[0386]	B9、如B8所述的装置，还包括:</p>
+    <p>[0387]	第二页元素查找模块，适于在判定当前网页适于采用第一浏览器内核加载时，采 用预置的第二判断规则查找当前网页中需要拦截的网页元素；[0388]	第二网页元素拦截模块，适于在查找到时，采用所述第一浏览器内核拦截所述网页元素。</p>
+    <p>[0389]	BlO^n B8所述的装置，所述第二加载请求生成模块还适于:</p>
+    <p>[0390]	调用网络编程接口 WinInet启动管理会话类CInternetSession ；</p>
+    <p>[0391]	当在所述管理会话类CInternetSession中监听到所述第二浏览器内核加载网页的请求时，提取所述请求中的URL ；</p>
+    <p>[0392]	判断所述请求中的URL与当前网页的URL是否相同；若是，则将当前网页的URL传输到所述第二浏览器内核中； [0393]	采用所述第二浏览器内核针对当前网页的URL生成当前网页的第二加载请求。</p>
+    <p>[0394]	B11、如B8所述的装置，所述第一网页元素查找模块还适于:</p>
+    <p>[0395]	采用当前网页的URL在预置的黑名单中进行匹配；</p>
+    <p>[0396]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0397]和	/ 或，</p>
+    <p>[0398]	采用当前网页的URL在预置的白名单中进行匹配；</p>
+    <p>[0399]	当匹配成功时，判定匹配成功的网页元素不为需要拦截的网页元素。</p>
+    <p>[0400]	B12、如B8所述的装置，所述第一网页元素拦截模块还适于:</p>
+    <p>[0401]	返回错误码或者透明的图像数据至所述第二浏览器内核；</p>
+    <p>[0402]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0403]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0404]或者，</p>
+    <p>[0405]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0406]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0407]或者，</p>
+    <p>[0408]	采用所述第二浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0409]	删除所述DOM元素节点。</p>
+    <p>[0410]	B13、如B9所述的装置，所述第二页元素查找模块还适于:</p>
+    <p>[0411]	采用当前网页的URL在浏览器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中和/或第三方插件的拦截名单中进行匹配；</p>
+    <p>[0412]	当匹配成功时，判定匹配成功的网页元素为需要拦截的网页元素；</p>
+    <p>[0413]和	/ 或，</p>
+    <p>[0414]	将当前网页的URL发送至服务器侧；</p>
+    <p>[0415]	接收所述服务器侧返回的需要拦截的网页元素；所述需要拦截的网页元素为所述服务器侧采用在服务器侧本地预置的用户自定义的拦截名单、浏览器提供方的拦截名单中和/或第三方插件的拦截名单中进行匹配，并匹配成功的网页元素。</p>
+    <p>[0416]	B14、如B9所述的装置，所述第二网页元素拦截模块还适于:</p>
+    <p>[0417]	返回错误码或者透明的图像数据至所述第一浏览器内核；</p>
+    <p>[0418]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0419]	采用所述错误码或者透明的图像数据替换所述DOM元素节点；</p>
+    <p>[0420]或者，[0421]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0422]	采用CSS的选择器将所述DOM元素节点的CSS属性中的透明属性改为true ；</p>
+    <p>[0423]或者，</p>
+    <p>[0424]	采用所述第一浏览器内核确定所述网页元素的对应的DOM元素节点；</p>
+    <p>[0425]	删除所述DOM元素节点。</p>
+    <p>[0426]	本发明还公开了 C15、一种浏览器，包括B8至B14中任一项所述的网页广告的拦截</p>
+    <p>&gt;J-U装直。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102436455A?cl=zh">CN102436455A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月29日</td><td class="patent-data-table-td patent-date-value">2012年5月2日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">实现文字浏览的方法、系统和客户端浏览器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102932356A?cl=zh">CN102932356A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月7日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">多核浏览器中恶意网址拦截方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103052950A?cl=zh">CN103052950A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年8月20日</td><td class="patent-data-table-td patent-date-value">2013年4月17日</td><td class="patent-data-table-td ">惠普发展公司，有限责任合伙企业</td><td class="patent-data-table-td ">用于过滤网页内容的系统和方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015062366A1?cl=zh">WO2015062366A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年9月12日</td><td class="patent-data-table-td patent-date-value">2015年5月7日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种网页广告的拦截方法、装置和浏览器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015062527A1?cl=zh">WO2015062527A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年10月30日</td><td class="patent-data-table-td patent-date-value">2015年5月7日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种网页广告的拦截方法、装置和浏览器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015149570A1?cl=zh">WO2015149570A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2015年1月4日</td><td class="patent-data-table-td patent-date-value">2015年10月8日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">浏览器中的文件下载方法和浏览器装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=CtfzCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=CtfzCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06Q30/0277">G06Q30/0277</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=CtfzCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F17/3089">G06F17/3089</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=CtfzCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F17/30905">G06F17/30905</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年2月26日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/e2fcaa724524a33f38b7/CN103605688A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%BD%91%E9%A1%B5%E5%B9%BF%E5%91%8A%E7%9A%84%E6%8B%A6%E6%88%AA%E6%96%B9%E6%B3%95_%E8%A3%85%E7%BD%AE.pdf?id=CtfzCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3hBdghjamL--BMLndiRNZtxoK8Kg"},"sample_url":"https://www.google.com/patents/reader?id=CtfzCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

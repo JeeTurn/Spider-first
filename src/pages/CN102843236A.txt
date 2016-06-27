@@ -1,0 +1,245 @@
+<!DOCTYPE html><html><head><title>专利 CN102843236A - 一种动态口令的生成及认证方法与系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种动态口令的生成及认证方法与系统"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="飞天诚信科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2012-9-12" scheme="dateSubmitted"><meta name="DC.description" content="本发明公布了一种动态口令生成及认证的方法及系统，涉及身份认证领域，包括：令牌接收到生成动态口令命令，根据第一计时器生成第一动态因子；根据第一偏移指针从第一数据组中获取当前数据，并根据第一动态因子、当前数据生成第一动态口令；服务器接收到用户输入的第二动态口令，根据第二计时器得到第二动态因子；根据第二动态因子及认证窗口值，得到认证窗口；根据所述认证窗口中的动态因子及第二数据组中的各数据，计算生成一组动态口令，验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令。通过上述方案，解决了时间型令牌不能在短时间内多次生成的问题，又避免了事件型令牌不断生成动态口令与服务器产生失步的情况。"><meta name="DC.date" content="2012-12-26"><meta name="DC.relation" content="CN:101355426:A" scheme="references"><meta name="DC.relation" content="CN:101783731:A" scheme="references"><meta name="DC.relation" content="CN:102377783:A" scheme="references"><meta name="DC.relation" content="WO:2004051585:A2" scheme="references"><meta name="citation_patent_publication_number" content="CN:102843236:A"><meta name="citation_patent_application_number" content="CN:201210337308"><link rel="canonical" href="https://www.google.com/patents/CN102843236A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102843236A?cl=zh"/><meta name="title" content="专利 CN102843236A - 一种动态口令的生成及认证方法与系统"/><meta name="description" content="本发明公布了一种动态口令生成及认证的方法及系统，涉及身份认证领域，包括：令牌接收到生成动态口令命令，根据第一计时器生成第一动态因子；根据第一偏移指针从第一数据组中获取当前数据，并根据第一动态因子、当前数据生成第一动态口令；服务器接收到用户输入的第二动态口令，根据第二计时器得到第二动态因子；根据第二动态因子及认证窗口值，得到认证窗口；根据所述认证窗口中的动态因子及第二数据组中的各数据，计算生成一组动态口令，验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令。通过上述方案，解决了时间型令牌不能在短时间内多次生成的问题，又避免了事件型令牌不断生成动态口令与服务器产生失步的情况。"/><meta property="og:title" content="专利 CN102843236A - 一种动态口令的生成及认证方法与系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102843236A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102843236A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102843236A&amp;usg=AFQjCNFzwle_ViBm6SlgdHtsKrHxgn-DPA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/67ef2c1fe65c244cacf2/CN102843236A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/67ef2c1fe65c244cacf2/CN102843236A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102843236A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102843236A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102843236A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102843236B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102843236A?cl=zh" style="display:none"><span itemprop="description">本发明公布了一种动态口令生成及认证的方法及系统，涉及身份认证领域，包括：令牌接收到生成动态口令命令，根据第一计时器生成第一动态因子；根据第一偏移指针从第一数据组中获取当前数据，并根据第一动态因子、当前...</span><span itemprop="url">https://www.google.com/patents/CN102843236A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102843236A - 一种动态口令的生成及认证方法与系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102843236A - 一种动态口令的生成及认证方法与系统" title="专利 CN102843236A - 一种动态口令的生成及认证方法与系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102843236 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210337308</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年12月26日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年9月12日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年9月12日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102843236B?hl=zh-CN&amp;cl=zh">CN102843236B</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20150207790?hl=zh-CN&amp;cl=zh">US20150207790</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2014040501A1?hl=zh-CN&amp;cl=zh">WO2014040501A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210337308.6, </span><span class="patent-bibdata-value">CN 102843236 A, </span><span class="patent-bibdata-value">CN 102843236A, </span><span class="patent-bibdata-value">CN 201210337308, </span><span class="patent-bibdata-value">CN-A-102843236, </span><span class="patent-bibdata-value">CN102843236 A, </span><span class="patent-bibdata-value">CN102843236A, </span><span class="patent-bibdata-value">CN201210337308, </span><span class="patent-bibdata-value">CN201210337308.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">飞天诚信科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102843236A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102843236A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102843236A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (8),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210337308&amp;usg=AFQjCNHc7PVg4pZf3moi9XWwOAauMWbI_Q"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102843236A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHqHQckJte8APhSmFtoQkiBC--7zw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT118334407" lang="ZH" load-source="patent-office">一种动态口令的生成及认证方法与系统</invention-title>
+      </span><br><span class="patent-number">CN 102843236 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA103755108" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公布了一种动态口令生成及认证的方法及系统，涉及身份认证领域，包括：令牌接收到生成动态口令命令，根据第一计时器生成第一动态因子；根据第一偏移指针从第一数据组中获取当前数据，并根据第一动态因子、当前数据生成第一动态口令；服务器接收到用户输入的第二动态口令，根据第二计时器得到第二动态因子；根据第二动态因子及认证窗口值，得到认证窗口；根据所述认证窗口中的动态因子及第二数据组中的各数据，计算生成一组动态口令，验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令。通过上述方案，解决了时间型令牌不能在短时间内多次生成的问题，又避免了事件型令牌不断生成动态口令与服务器产生失步的情况。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(19)</span></span></div><div class="patent-text"><div mxw-id="PCLM47848351" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种动态口令的生成及认证方法，其特征在于，包括：  Si:令牌接收到生成动态口令命令，根据所述令牌内部的第一计时器所计时间生成第一动态因子；  所述令牌检查到预设条件时，对所述第一偏移指针进行初始化；  52	:所述令牌判断第一偏移指针是否为无效状态，是则报错，否则继续；  53	:所述令牌根据所述第一偏移指针从第一数据组中获取当前数据，调用预设算法，根据所述第一动态因子、所述当前数据，计算得到第一动态口令，并判断所述当前数据是否为所述第一组数据组中的最后一个数据，是则将所述第一偏移指针设为无效状态，否则将所述第一偏移指针指向当前数据的下一个数据；  S4:服务器接收到用户输入的第二动态口令，根据服务器内部的第二计时器所计时间得到第二动态因子；  55	:根据所述第二动态因子及认证窗口值，生成一组动态因子，得到认证窗口 ；  56	:调用所述预设算法，根据所述认证窗口中的动态因子及服务器内部存储的第二数据组中的各数据，计算生成一组动态口令，验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令，是则认证通过，否则认证失败。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述的方法，其特征在于，所述第一数据组与所述第二数据组一致，包含预设个数的有顺序且各不相同的数据；  所述当前数据为所述第一偏移指针指向的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，其特征在于，所述步骤SI中根据所述令牌内部的第一计时器所计时间生成第一动态因子具体为：用所述第一计时器所计秒数除以第一预设时长值，对得到的商取整得到所述第一动态因子；  所述步骤S4中，根据服务器内部的第二计时器所计时间得到第二动态因子具体为：用所述第二计时器所计秒数除以所述第一预设时长值，对得到的商取整得到所述第二动态因子。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的方法，其特征在于，所述令牌检查到预设条件时，对所述第一偏移指针进行初始化具体为：所述令牌实时监测所述第一计时器所计时间，每隔所述第一预设时长，对所述第一偏移指针进行初始化；  所述对所述第一偏移指针进行初始化具体为：将所述第一偏移指针指向所述第一数据组中的第一个数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求3所述的方法，其特征在于，所述令牌检查到预设条件时，对所述第一偏移指针进行初始化具体为：所述令牌生成第一动态因子之后，判断所述第一动态因子与第一缓存区中的数据是否一致，若不一致则对所述第一偏移指针进行初始化；  所述令牌对所述第一偏移指针进行初始化之后，用所述第一动态因子更新所述第一缓存区中的数据；  所述对所述第一偏移指针进行初始化具体为：将所述第一偏移指针指向所述第一数据组中的第一个数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求2所述的方法，其特征在于，所述步骤S6中计算生成一组动态口令具体为：调用所述预设算法，对所述认证窗口中的每个动态因子与第二数据中的各个数据的组合得到的数据分别进行计算，得到所述一组动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求2所述的方法，其特征在于，所述步骤S6具体包括：  步骤a:按预设顺序调用所述认证窗口中的第一个动态因子；  步骤b:依次将所述第二数据组中的各个数据与调用的动态因子组合，调用预设算法对组合得到的各个数据进行计算得到所述�组动态ロ令；  步骤c:验证所述�组动态ロ令中是否存在与所述第二动态ロ令一致的动态ロ令，是则认证通过，否则执行步骤d ；  步骤d:判断所述调用的动态因子是否为所述认证窗口中的最后�个动态因子，是则认证失败，否则调用下一个动态因子，返回步骤b。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求6或7所述的方法，其特征在于，所述步骤S6中，当验证所述�组动态ロ令中存在与所述第二动态ロ令一致的动态ロ令时，还包括：  57	:所述服务器调用第二缓存区中的数据，将与所述第二动态ロ令一致的动态ロ令对应的动态因子与所述第二缓存区中的数据进行比较，若大于，则认证通过，执行步骤S8 ;若小于，则认证失败；若等于则执行S9 ；  58	:用与所述第二动态ロ令一致的动态ロ令对应的动态因子更新所述第二缓存区中的数据，并设置第二偏移指针指向第二数据组中与所述第二动态ロ令一致的动态ロ令对应的数据；  59	:判断与所述第二动态ロ令一致的动态ロ令对应的数据在第二数据组中的顺序是否在所述第二偏移指针指向的数据之后，是则认证通过，设置第二偏移指针指向第二数据组中与所述第二动态ロ令一致的动态ロ令对应的数据，否则认证失败。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求I所述的方法，其特征在于，所述步骤SI之后还包括令牌提示用户输交易账号、交易金&#38989;、挑战码的步骤；  所述步骤S4之前还包括服务器生成挑战码的步骤；  所述步骤S3中根据所述第一动态因子、所述当前数据，计算得到第一动态ロ令具体为：  将所述第一动态因子、所述当前数据与令牌密钥、用户输入令牌的账号、金&#38989;、挑战码进行组合，并用所述预设算法对组合得到的数据进行计算得到所述第一动态ロ令；  所述步骤S6中调用所述预设算法，根据所述认证窗口中的动态因子及服务器内部存储的第二数据组中的各数据，计算生成一组动态ロ令具体为：  依次将所述认证窗口中的各个动态因子与第二数据组中的各数据、令牌密钥、服务器接收到的用户输入的账号、金&#38989;、服务器生成的挑战码分别进行组合，并用所述预设算法对组合得到的各数据分别进行计算得到所述�组动态ロ令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求I所述的方法，其特征在于，所述步骤S6中生成一组动态ロ令具体包括：  将第二缓存区中的数据与所述认证窗ロ中的动态因子进行比对，从所述认证窗ロ中获取等于或大于所述第二缓存区中的数据的动态因子；  依次将大于所述第二缓存区中的数据的各动态因子与所述第二数据组中的各个数据分别进行组合，调用所述预设算法对组合得到的数据分别进行计算，得到第一部分动态ロ令；将等于所述第二缓存区中的数据的动态因子分别与所述第二数据组中第二偏移指针指向的数据之后的各个数据分别进行组合，调用所述预设算法，对组合得到各数据分别进行计算得到第二部分动态口令；  所述第一部分动态口令与所述第二部分动态口令组成所述一组动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10所述的方法，其特征在于，所述步骤S6中，当验证所述一组动态口令中存在与所述第二动态口令一致的动态口令时，还包括：  用与所述第二动态口令一致的动态口令对应的动态因子更新所述第二缓存区中的数据，并将所述第二偏移指针指向与所述第二动态口令一致的动态口令对应的第二数据组中的数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.	一种动态口令的生成及认证系统，其特征在于，包括令牌和服务器，所述令牌包括：  第一接收模块，用于接收生成动态口令命令；  第一生成模块，用于当所述第一接收模块接收到生成动态口令命令时，根据令牌内部的第一计时器所计时间生成第一动态因子；  操作模块，用于每隔第一预设时长，对所述第一偏移指针初始化一次；或者当判断所述第一动态因子与第一缓存区中的数据不一致时，对所述第一偏移指针进行初始化，并用所述第一动态因子更新第一缓存区中的数据；  第一计算模块，用于根据所述第一偏移指针从第一数据组中获取当前数据，调用预设算法，根据所述第一动态因子及所述当前数据，计算得到第一动态口令；  第一判断模块，用于在所述第一计算模块计算得到第一动态口令后，判断当前数据是否为第一数据组中的最后一个数据；  设置模块，用于当所述当前数据不为最后一个数据时，将所述第一偏移指针指向所述第一数据组中当前数据的下一个数据；当所述当前数据为最后一个数据时，将所述第一偏移指针设为无效状态，等待初始化；  所述服务器包括：  第二接收模块，用于接收用户通过主机输入的第二动态口令；  第二生成模块，用于根据所述服务器内部的第二计时器所计时间得到第二动态因子；并根据所述第二动态因子及认证窗口值，生成一组动态因子，得到认证窗口 ；  第二计算模块，用于调用所述预设算法，根据所述认证窗口中的动态因子及服务器内部存储的第二数据组中的各数据，计算生成一组动态口令；  验证模块：用于验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求12所述的系统，其特征在于，所述第二计算模块包括：  第一调用单元，用于调用所述预设算法及所述认证窗口中的第一动态因子；  第一组合单元，用于依次将所述认证窗口中的各个动态因子与所述第二数据组中的各个数据分别进行组合；  第一处理单元，用于用所述预设算法对所述第一组合单元组合得到的各数据分别进行计算，得到所述一组动态口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求12所述的系统，其特征在于，所述第二计算模块包括：  第二调用单元，用于调用所述预设算法及依次调用所述认证窗口中的动态因子；  第二组合单元，用于将所述第二数据组中的各个数据分别与调用的动态因子组合；第二处理单元，用于用所述预设算法对所述组合单元组合得到的数据进行计算得到所述�组动态ロ令；  所述验证模块包括：  第一验证单元，用于验证所述第二处理单元计算得到的所述�组动态ロ令中，是否存在与所述第二动态ロ令一致的动态ロ令；  第一判断&#21336;元，用于当所述第一验证单元验证所述�组动态ロ令中不存在与所述第二动态ロ令一致的动态ロ令时，判断调用的动态因子是否为所述认证窗口中的最后�个动态因子，当判断当前动态因子不为最后一个动态因子时，调用下一个动态因子，所述第二&#32068;合单元工作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求13或14所述的系统，其特征在于，所述系统还包括：  比较模块，用于当所述验证模块验证所述一组动态ロ令中有与所述第二动态ロ令一致的动态ロ令时，将与所述第二动态ロ令一致的动态ロ令对应的动态因子与第二缓存区中的数据进行比较，若大于则认证通过，第一更新模块工作，若小于则认证失败，若等于则第二判断模块工作；  所述第一更新模块，用于用与所述第二动态ロ令一致的动态ロ令对应的动态因子更新所述第二缓存区中的数据，并设置第二偏移指针指向所述第二数据组中与所述第二动态ロ令一致的动态ロ令对应的数据；  所述第二判断模块，用于判断在所述第二数据组中与所述第二动态ロ令一致的动态ロ令对应的数据在第二数据组中的顺序是否在所述第二偏移指针指向的数据之后，是则认证通过，设置第二偏移指针指向第二数据组中与所述第二动态ロ令一致的动态ロ令对应的数据，否则认证失败。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求12所述的系统，其特征在于，所述第二计算模块包括：  查找单元，用于从所述认证窗口中查找到等于或大于第二缓存区中的数据的动态因子;  第三处理单元，用于将大于所述第二缓存区中的数据的动态因子依次分别与所述第二数据组中的各个数据进行组合，调用所述预设算法对组合得到的数据分别进行计算，得到第一部分动态ロ令；将等于所述第二缓存区中的数据的动态因子分别与所述第二数据组中第二偏移指针指向的数据之后的各个数据进行组合，调用所述预设算法，对组合得到各数据分别进行计算得到第二部分动态ロ令；将所述第一部分动态ロ令与所述第二部分动态ロ令组成所述�组动态ロ令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求16所述的系统，其特征在于，所述系统还包括：  第二更新模块，用于当所述验证模块验证所述一组动态ロ令中存在与所述第二动态ロ令一致的动态ロ令时，用与所述第二动态ロ令一致的动态ロ令对应的动态因子更新所述第ニ缓存区中的数据，并将所述第二偏移指针指向与所述第二动态ロ令一致的动态ロ令对应的第二数据组中的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求12所述的系统，其特征在干，  所述第一接收模块还用于接收用户输入令牌的数据；  所述第二接收模块还用于接收用户通过主机输入到服务器的数据；  所述第二生成模块还用于生成挑战码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求18所述的系统，其特征在于，所述第一计算模块包括：  第三组合单元，用于将所述第一动态因子、所述当前数据、令牌密钥与用户输入令牌的数据进行组合；  第四处理单元，用于调用所述预设算法对所述第三组合单元组合得到的数据进行计算得到所述第一动态口令。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES54896182" lang="ZH" load-source="patent-office" class="description">
+    <p>&#8212;种动态口令的生成及认证方法与系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及身份认证领域，特别涉及一种动态口令的生成及认证方法与系统背景技术</p>
+    <p>[0002]	动态口令在身份认证领域的应用日益广泛，现有技术中，动态口令分为时间型动态口令、事件型动态口令及挑战应答型动态口令。普通时间型动态口令或者带时间参与计算的挑战应答型动态口令，在一个动态口令变化周期仅能产生一个动态口令，出于安全性考虑，如果口令被认证服务器认证通过后，就不能重复使用了。如果想进行认证，必须等待一段时间，等到达下一个时间周期开始，生成下一个不同的动态口令才能进行，不能满足在短时间内进行多次身份认证的场合的需要；</p>
+    <p>[0003]	普通事件型的动态口令，存在动态令牌不断产生动态口令而不与服务器做认证 时，令牌与服务器失步的情况，且普通事件型的动态口令引入的次数为可预测动态因子，存在一定的安全隐患。</p>
+    <p>发明内容</p>
+    <p>[0004]	为解决现有技术中存在的问题，本发明提供了一种动态口令的生成及认证方法及系统，引入一组数据，参与时间型动态口令的产生，且在一个时间周期内该组数据中的各个数据可以循环参与动态口令的生成。</p>
+    <p>[0005]	根据本发明的一方面，提供了一种动态口令生成及认证的方法，包括：</p>
+    <p>[0006]	SI :令牌接收到生成动态口令命令，根据所述令牌内部的第一计时器所计时间生成第一动态因子；</p>
+    <p>[0007]	所述令牌检查到预设条件时，对所述第一偏移指针进行初始化；</p>
+    <p>[0008]	S2 :所述令牌判断第一偏移指针是否为无效状态，是则报错，否则继续；</p>
+    <p>[0009]	S3:所述令牌根据所述第一偏移指针从第一数据组中获取当前数据，调用预设算法，根据所述第一动态因子、所述当前数据，计算得到第一动态口令，并判断所述当前数据是否为所述第一组数据组中的最后一个数据，是则将所述第一偏移指针设为无效状态，否则将所述第一偏移指针指向当前数据的下一个数据；</p>
+    <p>[0010]	S4:服务器接收到用户输入的第二动态口令，根据服务器内部的第二计时器所计时间得到第二动态因子；</p>
+    <p>[0011]	S5 :根据所述第二动态因子及认证窗口值，生成一组动态因子，得到认证窗口 ；</p>
+    <p>[0012]	S6:调用所述预设算法，根据所述认证窗口中的动态因子及服务器内部存储的第二数据组中的各数据，计算生成一组动态口令，验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令，是则认证通过，否则认证失败。</p>
+    <p>[0013]	具体地，所述第一数据组与所述第二数据组一致，包含预设个数的有顺序且各不相同的数据；</p>
+    <p>[0014]	所述当前数据为所述第一偏移指针指向的数据。[0015]	进一步地，所述步骤SI中根据所述令牌内部的第一计时器所计时间生成第一动态因子具体为：用所述第一计时器所计秒数除以第一预设时长值，对得到的商取整得到所述第一动态因子；</p>
+    <p>[0016]	所述步骤S4中，根据服务器内部的第二计时器所计时间得到第二动态因子具体为：用所述第二计时器所计秒数除以所述第一预设时长值，对得到的商取整得到所述第二动态因子。</p>
+    <p>[0017]	其中，所述令牌检查到预设条件时，对所述第一偏移指针进行初始化具体为：所述令牌实时监测所述第一计时器所计时间，每隔所述第一预设时长，对所述第一偏移指针进行初始化； [0018]	所述对所述第一偏移指针进行初始化具体为：将所述第一偏移指针指向所述第一数据组中的第一个数据。</p>
+    <p>[0019]	或者，所述令牌检查到预设条件时，对所述第一偏移指针进行初始化具体为：所述令牌生成第一动态因子之后，判断所述第一动态因子与第一缓存区中的数据是否一致，若不一致则对所述第一偏移指针进行初始化；</p>
+    <p>[0020]	所述令牌对所述第一偏移指针进行初始化之后，用所述第一动态因子更新所述第一缓存区中的数据；</p>
+    <p>[0021]	所述对所述第一偏移指针进行初始化具体为：将所述第一偏移指针指向所述第一数据组中的第一个数据。</p>
+    <p>[0022]	进一步地，所述步骤S6中计算生成一组动态口令具体为：调用所述预设算法，对所述认证窗口中的每个动态因子与第二数据中的各个数据的组合得到的数据分别进行计算，得到所述一组动态口令。</p>
+    <p>[0023]	或者,所述步骤S6具体包括：</p>
+    <p>[0024]	步骤a:按预设顺序调用所述认证窗口中的第一个动态因子；</p>
+    <p>[0025]	步骤b:依次将所述第二数据组中的各个数据与调用的动态因子组合，调用预设算法对组合得到的各个数据进行计算得到所述一组动态口令；</p>
+    <p>[0026]	步骤c:验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令，是则认证通过，否则执行步骤d ；</p>
+    <p>[0027]	步骤d:判断所述调用的动态因子是否为所述认证窗口中的最后一个动态因子，是则认证失败，否则调用下一个动态因子，返回步骤b。</p>
+    <p>[0028]	进一步地，所述步骤S6中，当验证所述一组动态口令中存在与所述第二动态口令一致的动态口令时，还包括：</p>
+    <p>[0029]	S7:所述服务器调用第二缓存区中的数据，将与所述第二动态口令一致的动态口令对应的动态因子与所述第二缓存区中的数据进行比较，若大于，则认证通过，执行步骤S8 ;若小于，则认证失败；若等于则执行S9 ；</p>
+    <p>[0030]	S8 :用与所述第二动态口令一致的动态口令对应的动态因子更新所述第二缓存区中的数据，并设置第二偏移指针指向第二数据组中与所述第二动态口令一致的动态口令对应的数据；</p>
+    <p>[0031]	S9 :判断与所述第二动态口令一致的动态口令对应的数据在第二数据组中的顺序是否在所述第二偏移指针指向的数据之后，是则认证通过，设置第二偏移指针指向第二数据组中与所述第二动态口令一致的动态口令对应的数据，否则认证失败。</p>
+    <p>[0032]	优选地，所述步骤SI之后还包括令牌提示用户输交易账号、交易金额、挑战码的步骤；</p>
+    <p>[0033]	所述步骤S4之前还包括服务器生成挑战码的步骤；</p>
+    <p>[0034]	所述步骤S3中根据所述第一动态因子、所述当前数据，计算得到第一动态口令具体为：</p>
+    <p>[0035]	将所述第一动态因子、所述当前数据与令牌密钥、用户输入令牌的账号、金额、挑战码进行组合，并用所述预设算法对组合得到的数据进行计算得到所述第一动态口令；</p>
+    <p>[0036]	所述步骤S6中调用所述预设算法，根据所述认证窗口中的动态因子及服务器内部存储的第二数据组中的各数据，计算生成一组动态口令具体为： [0037]	依次将所述认证窗口中的各个动态因子与第二数据组中的各数据、令牌密钥、月艮务器接收到的用户输入的账号、金额、服务器生成的挑战码分别进行组合，并用所述预设算法对组合得到的各数据分别进行计算得到所述一组动态口令。</p>
+    <p>[0038]	或者,所述步骤S6中生成一组动态口令具体包括：</p>
+    <p>[0039]	将第二缓存区中的数据与所述认证窗口中的动态因子进行比对，从所述认证窗口中获取等于或大于所述第二缓存区中的数据的动态因子；</p>
+    <p>[0040]	依次将大于所述第二缓存区中的数据的各动态因子与所述第二数据组中的各个数据分别进行组合，调用所述预设算法对组合得到的数据分别进行计算，得到第一部分动态口令；将等于所述第二缓存区中的数据的动态因子分别与所述第二数据组中第二偏移指针指向的数据之后的各个数据分别进行组合，调用所述预设算法，对组合得到各数据分别进行计算得到第二部分动态口令；</p>
+    <p>[0041 ] 所述第一部分动态口令与所述第二部分动态口令组成所述一组动态口令。</p>
+    <p>[0042]	进一步地，所述步骤S6中，当验证所述一组动态口令中存在与所述第二动态口令一致的动态口令时，还包括：</p>
+    <p>[0043]	用与所述第二动态口令一致的动态口令对应的动态因子更新所述第二缓存区中的数据，并将所述第二偏移指针指向与所述第二动态口令一致的动态口令对应的第二数据组中的数据。</p>
+    <p>[0044]	根据本发明的另外一个方面，提供了一种动态口令生成及认证的系统，包括：令牌和服务器；</p>
+    <p>[0045]	所述令牌包括：</p>
+    <p>[0046]	第一接收模块，用于接收生成动态口令命令；</p>
+    <p>[0047]	第一生成模块，用于当所述第一接收模块接收到生成动态口令命令时，根据令牌内部的第一计时器所计时间生成第一动态因子；</p>
+    <p>[0048]	操作模块，用于每隔第一预设时长，对所述第一偏移指针初始化一次；或者当判断所述第一动态因子与第一缓存区中的数据不一致时，对所述第一偏移指针进行初始化，并用所述第一动态因子更新第一缓存区中的数据；</p>
+    <p>[0049]	第一计算模块，用于根据所述第一偏移指针从第一数据组中获取当前数据，调用预设算法，根据所述第一动态因子及所述当前数据，计算得到第一动态口令；</p>
+    <p>[0050]	第一判断模块，用于在所述第一计算模块计算得到第一动态口令后，判断当前数据是否为第一数据组中的最后一个数据；</p>
+    <p>[0051]	设置模块，用于当所述当前数据不为最后一个数据时，将所述第一偏移指针指向所述第一数据组中当前数据的下一个数据；当所述当前数据为最后一个数据时，将所述第一偏移指针设为无效状态，等待初始化；</p>
+    <p>[0052]	所述服务器包括：</p>
+    <p>[0053]	第二接收模块，用于接收用户通过主机输入的第二动态口令；</p>
+    <p>[0054]	第二生成模块，用于根据所述服务器内部的第二计时器所计时间得到第二动态因子；并根据所述第二动态因子及认证窗口值，生成一组动态因子，得到认证窗口 ；</p>
+    <p>[0055]	第二计算模块，用于调用所述预设算法，根据所述认证窗口中的动态因子及服务器内部存储的第二数据组中的各数据，计算生成一组动态口令； [0056]	验证模块：用于验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令。</p>
+    <p>[0057]	进一步地，所述第二计算模块包括：</p>
+    <p>[0058]	第一调用单元，用于调用所述预设算法及所述认证窗口中的第一动态因子；</p>
+    <p>[0059]	第一组合单元，用于依次将所述认证窗口中的各个动态因子与所述第二数据组中的各个数据分别进行组合；</p>
+    <p>[0060]	第一处理单元，用于用所述预设算法对所述第一组合单元组合得到的各数据分别进行计算，得到所述一组动态口令。</p>
+    <p>[0061]	或者，所述第二计算模块包括：</p>
+    <p>[0062]	第二调用单元，用于调用所述预设算法及依次调用所述认证窗口中的动态因子；</p>
+    <p>[0063]	第二组合单元，用于将所述第二数据组中的各个数据分别与调用的动态因子组合；</p>
+    <p>[0064]	第二处理单元，用于用所述预设算法对所述组合单元组合得到的数据进行计算得到所述一组动态口令；</p>
+    <p>[0065]	所述验证模块包括：</p>
+    <p>[0066]	第一验证单元，用于验证所述第二处理单元计算得到的所述一组动态口令中，是否存在与所述第二动态口令一致的动态口令；</p>
+    <p>[0067]	第一判断单元，用于当所述第一验证单元验证所述一组动态口令中不存在与所述第二动态口令一致的动态口令时，判断调用的动态因子是否为所述认证窗口中的最后一个动态因子，当判断当前动态因子不为最后一个动态因子时，调用下一个动态因子，所述第二组合单元工作。</p>
+    <p>[0068]	进一步地,所述系统还包括：</p>
+    <p>[0069]	比较模块，用于当所述验证模块验证所述一组动态口令中有与所述第二动态口令一致的动态口令时，将与所述第二动态口令一致的动态口令对应的动态因子与第二缓存区中的数据进行比较，若大于则认证通过，第一更新模块工作，若小于则认证失败，若等于则第二判断模块工作；</p>
+    <p>[0070]	所述第一更新模块，用于用与所述第二动态口令一致的动态口令对应的动态因子更新所述第二缓存区中的数据，并设置第二偏移指针指向所述第二数据组中与所述第二动态口令一致的动态口令对应的数据；[0071]	所述第二判断模块，用于判断在所述第二数据组中与所述第二动态口令一致的动态口令对应的数据在第二数据组中的顺序是否在所述第二偏移指针指向的数据之后，是则认证通过，设置第二偏移指针指向第二数据组中与所述第二动态口令一致的动态口令对应的数据，否则认证失败。</p>
+    <p>[0072]	或者，所述第二计算模块包括：</p>
+    <p>[0073]	查找单元，用于从所述认证窗口中查找到等于或大于第二缓存区中的数据的动态因子；</p>
+    <p>[0074]	第三处理单元，用于将大于所述第二缓存区中的数据的动态因子依次分别与所述第二数据组中的各个数据进行组合，调用所述预设算法对组合得到的数据分别进行计算，得到第一部分动态口令；将等于所述第二缓存区中的数据的动态因子分别与所述第二数据组中第二偏移指针指向的数据之后的各个数据进行组合，调用所述预设算法，对组合得到各数据分别进行计算得到第二部分动态口令；将所述第一部分动态口令与所述第二部分动态口令组成所述一组动态口令。 </p>
+    <p>[0075]	进一步地，所述系统还包括：</p>
+    <p>[0076]	第二更新模块，用于当所述验证模块验证所述一组动态口令中存在与所述第二动态口令一致的动态口令时，用与所述第二动态口令一致的动态口令对应的动态因子更新所述第二缓存区中的数据，并将所述第二偏移指针指向与所述第二动态口令一致的动态口令对应的第二数据组中的数据。</p>
+    <p>[0077]	所述第一接收模块还用于接收用户输入令牌的数据；</p>
+    <p>[0078]	所述第二接收模块还用于接收用户通过主机输入到服务器的数据；</p>
+    <p>[0079]	所述第二生成模块还用于生成挑战码。</p>
+    <p>[0080]	进一步地，所述第一计算模块包括：</p>
+    <p>[0081]	第三组合单元，用于将所述第一动态因子、所述当前数据、令牌密钥与用户输入令牌的数据进行组合；</p>
+    <p>[0082]	第四处理单元，用于调用所述预设算法对所述第三组合单元组合得到的数据进行计算得到所述第一动态口令。</p>
+    <p>[0083]	通过本发明提供的方案，在时间型动态令牌及事件型动态令牌的基础上，提高了动态口令认证的安全性，且满足了短时间内需要进行多次身份认证的场合的需要，为身份认证过程中认证模式提供了多种选择。</p>
+    <p>附图说明</p>
+    <p>[0084]	图I为本发明实施例I提供的一种动态口令的生成及认证方法流程图；</p>
+    <p>[0085]	图2为本发明实施例I提供的一种动态口令的生成及认证方法的另一种实现过程流程图；</p>
+    <p>[0086]	图3为本发明实施例I提供的一种动态口令的生成及认证方法的再一种实现过程流程图；</p>
+    <p>[0087]	图4为本发明实施例2提供的一种动态口令的生成及认证系统方框图。</p>
+    <p>具体实施方式[0088]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0089]	实施例I</p>
+    <p>[0090]	本发明实施例I提供了一种动态口令的生成及认证方法，具体包括：</p>
+    <p>[0091]	步骤101 :令牌接收到触发生成动态口令的命令；</p>
+    <p>[0092]	优选地，在本实施例中，所述生成动态口令的命令可以为按键触发信息，该步骤之后还可以包括令牌提示用户输入到令牌的挑战码、交易账号、交易金额等数据。</p>
+    <p>[0093]	在本实施例中，所述令牌可以有多种动态口令类型选择，例如有不同的按键以供用户选择生成登录账户、修改账户信息、转账、交易等类型的动态口令，并按照与服务器事 先约定，提示用户输入相应的数据。</p>
+    <p>[0094]	步骤102 :令牌根据内部第一计时器所计时间及第一预设时长，生成第一动态因子;</p>
+    <p>[0095]	优选地，在本实施例中，所述第一动态因子为所述第一计时器所计时间包含的完整的所述第一预设时长的个数，具体地，在本实施例中，生成动态因子具体为：用所述计时器所计时间值除以所述第一预设时长值，对得到的商取整即得到所述第一动态因子。</p>
+    <p>[0096]	步骤103 :判断所述第一动态因子是否与第一缓存区中的数据一致，是则执行步骤104，否则初始化第一偏移指针，并用所述第一动态因子更新所述第一缓存区中的数据，执行步骤104 ；</p>
+    <p>[0097]	优选地，在本实施例中，所述第一偏移指针指向第一数据组中的某个数据，当所述第一偏移指针被初始化后，所述第一偏移指针指向所述第一数据组中的第一个数据。</p>
+    <p>[0098]	所述第一缓存区中存储的数据可以为令牌上一次生成动态口令时所生成的动态因子，还可以为上一次初始化第一偏移指针时对应的动态因子。</p>
+    <p>[0099]	在本实施例中，所述第一偏移指针还可以根据所述计时器所计时间进行初始化，根据所述计时器，每隔所述第一预设时长将所述第一偏移指针初始化一次，相应地，删除步骤103，步骤102之后直接执行步骤104。</p>
+    <p>[0100]	步骤104 :根据第一偏移指针从所述第一数据组中获取当前数据，并调用预设算法对当前数据与第一动态因子进行计算，生成第一动态口令，所述第一偏移指针指向所述第一数据组中当前数据的下一数据；</p>
+    <p>[0101]	优选地，在本实施例中，当步骤101之前还包括令牌提示用户输入挑战码、交易账号、交易金额等数据时，用户输入到令牌的数据、当前数据、所述第一动态因子、令牌密钥均参与生成动态口令。生成第一动态口令的具体为：调用预设的算法如SHA1、SM3等，对上述数据组合得到的数据进行计算，从计算结果中提取预设位数的数据得到所述第一动态口令。</p>
+    <p>[0102]	特别地，在本实施例中，本步骤中所述第一偏移指针指向当前数据的下一个数据之前还包括：验证当前数据是否为第二数据组中的最后一个数据，是则将所述第一偏移指针设为无效状态，等待初始化，否则再将所述第一偏移指针执行当前数据的下一数据。相应地，该步骤之前还包括令牌判断所述第一偏移指针是否为无效状态的步骤，若为无效状态则报错，若不为无效状态再执行步骤104。</p>
+    <p>[0103]	所述第一数据组中的数据各不相同，顺序、个数固定，可以为一组不规则的数据，也可以为一组规则变化的数据，如递增、递减的数据等。</p>
+    <p>[0104]	步骤105 :服务器接收到用户输入的第二动态口令，根据服务器内部的第二计时器所计时间及第一预设时长生成第二动态因子；</p>
+    <p>[0105]	优选地，在本实施例中，服务器通过主机接收到用户输入的第二动态口令。</p>
+    <p>[0106]	生成第二动态因子具体为：第二计时器所计时间除以所述预设时长得到的商取整后加服务器记录的漂移值得到。</p>
+    <p>[0107]	步骤105之前还包括，服务器接收到用户发送的操作请求，通过主机提示用户输入动态口令的步骤，特别地，当事先约定需要挑战码参与生成动态口令时，该步骤前还包括 服务器生成挑战码的步骤。</p>
+    <p>[0108]	步骤106 :根据所述第二动态因子及认证窗口值，生成一组动态因子，得到认证窗Π ；</p>
+    <p>[0109]	优选地，在本实施例中，以所述认证窗口值为2为例，则生成的一组动态因子包括：所述第二动态因子的值减I得到的第三动态因子、第二动态因子、所述第二动态因子的值加I得到的第四动态因子。</p>
+    <p>[0110]	步骤107 :服务器调用认证窗口中的第二动态因子，根据所述第二动态因子及服务器内部的第二数据组中的各数据，生成第一组动态口令；</p>
+    <p>[0111]	优选地，在本实施例中，所述第二数据组中的数据、数据个数及数据顺序与所述第一数据组相同。服务器生成第一组动态口令具体为：调用预设的算法，将第二动态因子与第二数据组中的各个数据分别进行组合，对组合得到的各数据分别进行计算得到第一组动态口令；生成每个动态口令的算法及过程与步骤104中生成方式一致。特别地，当所述令牌与所述服务器事先约定用户输入的信息或挑战码参与生成动态口令时，则该步骤中，与令牌生成第一动态口令的实现过程相同，用户通过主机输入到服务器中的数据及服务器生成的挑战码中相应的数据参与生成第一组动态口令。</p>
+    <p>[0112]	本实施例提供一种优选地方式以清楚说明该生成动态口令的过程，以所述第二数据组中各数据依次为：0x 00 00 00 00&#12316;00 00 00 09十个数据、第二动态因子为Ox 0000 00 00 01 56 56 01、挑战码为 Ox 31 32 33 34 35 36 37 38-39 30、令牌密钥为 Ox 80d0 3f 19 3f e5 Oc 2d_de 8a 84 46 bf a2 88 dc 35 92 65 lc，所述预设算法SM3为例，具体过程为：将所述密钥与所述第二动态因子顺序拼接、再分别与第二数据组中的10个数据分别进行顺序拼接得到10个拼接数据、分别在10个拼接数据后再拼接挑战码得到10个组合数据，用所述预设算法对上述10个组合数据分别进行计算，得到10份摘要，分别从各份摘要中截取低位端4个字节数据，均转化为十进制数，分别从10个十进制数中截取低位8位数据得到所述第一组动态口令。</p>
+    <p>[0113]	步骤108 :服务器验证第一组动态口令中是否存在与第二动态口令一致的动态口令，是则执行步骤111，否则执行步骤109 ；</p>
+    <p>[0114]	步骤109 :所述服务器调用认证窗口中的第二动态因子的下一个动态因子，并根据调用的动态因子及第二数据组，生成第二组动态口令，判断所述第二组动态口令中是否有与第二动态口令一致的动态口令，是则执行步骤111，否则执行步骤110 ；[0115]	本实施例中，生成第二组动态口令的过程参见步骤107。</p>
+    <p>[0116]	步骤110 :所述服务器调用认证窗口中当前调用的动态因子的下一个动态因子，根据当前调用的动态因子及所述第二数据组生成第三组动态口令，判断所述第三组动态口令中是否有与所述第二动态口令一致的动态口令，是则执行步骤111 ;否则认证失败，报错;</p>
+    <p>[0117]	生成第三组动态口令的过程参见步骤107。</p>
+    <p>[0118]	优选地，在本实施例中，所述认证窗口值为2，从而认证窗口中有三个动态因子，调用动态因子的先后顺序为：先调用第二动态因子、再第二动态因子加减I得到的动态因子。所述认证窗口值还可以为其他值，则相应地，所述认证窗口中还包括其他动态因子，在该步骤中第三组动态口令中没有与所述第二动态口令一致的动态口令时，逐次调用所述其  他动态因子来生成动态口令并认证，调用其余动态因子的顺序按与第二动态因子差值的绝对值由小到大的顺序。</p>
+    <p>[0119]	步骤111 :用与所述第二动态口令一致的动态口令对应的动态因子与服务器中第二缓存区中的数据比较；</p>
+    <p>[0120]	若对应的动态因子小于第二缓存区中的数据，则认证失败，报错；</p>
+    <p>[0121]	若等于，则执行步骤112;</p>
+    <p>[0122]	若大于，则认证通过，用所述对应的动态因子更新第二缓存区中的数据，并将第二偏移指针初始化。</p>
+    <p>[0123]	优选地，在本实施例中，所述第二偏移指针初始化后指向第二数据组中的第一个数据。</p>
+    <p>[0124]	步骤112 :判断与所述第二动态口令一致的动态口令对应的第二数据组中的数据在第二数据组中的顺序是否在第二偏移指针指向的数据之后，是则认证通过，用所述对应的动态因子的值更新第二缓存区中的数据，并将第二偏移指针指向所述对应的第二数据组中的数据，否则认证失败，报错。</p>
+    <p>[0125]	优选地，在本实施例中，所述第二偏移指针指向的数据为上一次认证通过的动态口令对应的第二数据组中的数据。</p>
+    <p>[0126]	参见图2，步骤107&#8212;&#8212;步骤110可以替换为：</p>
+    <p>[0127]	步骤207 :根据第二数据组及认证窗口中的动态因子，生成第四组动态口令；</p>
+    <p>[0128]	优选地，在本实施例中，根据所述认证窗口中的各个动态因子、第二数据组中的各个数据得到上述第四组动态口令组，具体地，所述第四组动态口令包括第一组动态口令、第二组动态口令及第三组动态口令的所有动态口令，生成动态口令的方式参见步骤107。</p>
+    <p>[0129]	具体地，在本实施例中，所述认证窗口值为2，所述第二数据组中有10个数据，则相应地，将第二动态因子上下浮动I得到三个不同的动态因子，分别根据三个动态因子与第二数据组中的各个数据生成的第四组动态口令，得到的所述第四组动态口令组中包含30个动态口令。</p>
+    <p>[0130]	步骤208 :判断上述第四组动态口令中是否存在与所述第二动态口令一致的动态口令，是则继续执行步骤111，否则认证失败，报错。</p>
+    <p>[0131]	参见图3，优选地，在本实施例中，步骤107&#8212;&#8212;112还可以替换为：</p>
+    <p>[0132]	步骤307 :判断所述认证窗口中是否存在与所述第二缓存区中的数据一致的动态因子，</p>
+    <p>[0133]	若否，则执行步骤308 ；</p>
+    <p>[0134]	若是，则执行步骤309 ；</p>
+    <p>[0135]	步骤308 :根据第二数据组及认证窗口中的各个动态因子，生成第四组动态口令，执行步骤310 ；</p>
+    <p>[0136]	优选地，该步骤具体参见步骤207。</p>
+    <p>[0137]	步骤309 :获取所述认证窗口中大于或等于第二缓存区中的数据的动态因子，根据获取到的各动态因子、第二偏移指针及第二数据组中的各数据，生成第五组动态口令，执行步骤310 ；</p>
+    <p>[0138]	具体地，在本实施例中，所述认证窗口的值为2，若所述认证窗口中的第二动态因 子与所述第二缓存区中的数据一致，则该步骤具体为：对第二动态因子与第二数据组中各个数据分别进行计算得到第一部分动态口令；根据第二偏移指针指向的数据，取该数据之后的各个数据分别与获取到的大于第二动态因子的各动态因子生成第二部分动态口令，所述第一部分动态口令与第二部分动态口令组成所述第五组动态口令。</p>
+    <p>[0139]	步骤310 :判断生成的一组动态口令中是否存在与所述第二动态口令一致的动态口令，是则认证通过，用与所述第二动态口令一致的动态口令对应的动态因子更新第二缓存区中的数据，并将第二偏移指针指向第二数据组中与第二动态口令一致的动态口令对应的数据，否则认证失败，报错。</p>
+    <p>[0140]	实施例2</p>
+    <p>[0141]	参见图4，本发明实施例2提供了一种动态口令的生成及认证系统，包括令牌和服务器，其中令牌包括：</p>
+    <p>[0142]	第一接收模块401，用于接收生成动态口令命令；</p>
+    <p>[0143]	第一生成模块402，用于当所述第一接收模块401接收到生成动态口令命令时，根据令牌内部的第一计时器所计时间生成第一动态因子；</p>
+    <p>[0144]	操作模块403，用于每隔第一预设时长，对所述第一偏移指针初始化一次；或者当判断所述第一动态因子与第一缓存区中的数据不一致时，对所述第一偏移指针进行初始化，并用所述第一动态因子更新第一缓存区中的数据；</p>
+    <p>[0145]	第一计算模块404，用于根据第一偏移指针从第一数据组中获取当前数据，调用预设算法，根据所述第一动态因子及所述当前数据，计算得到第一动态口令；</p>
+    <p>[0146]	第一判断模块405，用于在所述第一计算模块404计算得到第一动态口令后，判断当前数据是否为第一数据组中的最后一个数据；</p>
+    <p>[0147]	设置模块406，用于当所述当前数据不为最后一个数据时，将所述第一偏移指针指向第一数据组中当前数据的下一个数据；当所述当前数据为最后一个数据时，将所述第一偏移指针设为无效状态，等待初始化；</p>
+    <p>[0148]	其中，服务器包括：</p>
+    <p>[0149]	第二接收模块407，用于接收用户通过主机输入的第二动态口令；</p>
+    <p>[0150]	第二生成模块408，用于根据服务器内部的第二计时器所计时间得到第二动态因子；并根据所述第二动态因子及认证窗口值，生成一组动态因子，得到认证窗口 ；</p>
+    <p>[0151 ] 第二计算模块409，用于调用所述预设算法，根据所述认证窗口中的动态因子及服务器内部存储的第二数据组中的各数据，计算生成一组动态口令；</p>
+    <p>[0152]	验证模块410，用于验证所述一组动态口令中是否存在与所述第二动态口令一致的动态口令。</p>
+    <p>[0153]	本实施例系统中的服务器还包括：</p>
+    <p>[0154]	比较模块411，用于当所述验证模块410验证所述一组动态口令中有与所述第二动态口令一致的动态口令时，将与所述第二动态口令一致的动态口令对应的动态因子与第二缓存区中的数据进行比较，若大于则认证通过，第一更新模块工作412，若小于则认证失败，若等于则第二判断模块413工作；</p>
+    <p>[0155]	所述第一更新模块412，用于用与所述第二动态口令一致的动态口令对应的动态因子更新所述第二缓存区中的数据，并设置第二偏移指针指向所述第二数据组中与所述第二动态口令一致的动态口令对应的数据； [0156]	所述第二判断模块413，用于判断与所述第二动态口令一致的动态口令对应的数据在第二数据组中的顺序是否在所述第二偏移指针指向的数据之后，是则认证通过，设置第二偏移指针指向第二数据组中与所述第二动态口令一致的动态口令对应的数据，否则认证失败。</p>
+    <p>[0157]	所述第一接收模块401还用于接收用户输入的令牌数据；</p>
+    <p>[0158]	所述第二接收模块407还用于接收用户通过主机输入到服务器的数据；</p>
+    <p>[0159]	所述第二生成模块408还用于生成挑战码。</p>
+    <p>[0160]	所述第一计算模块404包括：</p>
+    <p>[0161]	第三组合单元4041，用于将所述第一动态因子、所述当前数据、令牌密钥与用户输入令牌的数据进行组合；</p>
+    <p>[0162]	第四处理单元4042，用于调用所述预设算法对所述第三组合单元4041组合得到的数据进行计算得到所述第一动态口令。</p>
+    <p>[0163]	所述第二计算模块409包括：</p>
+    <p>[0164]	第一调用单元4091，用于调用所述预设算法及所述认证窗口中的第一动态因子；</p>
+    <p>[0165]	第一组合单元4092，用于将所述第二数据组中的各个数据依次分别与所述认证窗口中的各个动态因子进行组合；</p>
+    <p>[0166]	第一处理单元4093，用于用所述预设算法对所述第一组合单元4092组合得到的各数据分别进行计算，得到所述一组动态口令。</p>
+    <p>[0167]	优选地，在本实施例中所述第二计算模块409还可以替换为包括：</p>
+    <p>[0168]	第二调用单元，用于调用所述预设算法，用于依次调用所述认证窗口中的动态因子;</p>
+    <p>[0169]	第二组合单元，用于将所述第二数据组中的各个数据分别与调用的动态因子组合；</p>
+    <p>[0170]	第二处理单元，用于用所述预设算法对所述第一组合单元组合得到的数据进行计算得到所述一组动态口令；</p>
+    <p>[0171 ] 相应地，所述验证模块410包括：</p>
+    <p>[0172]	第一验证单元，用于验证所述第二处理单元计算得到的所述一组动态口令中是否存在与所述第二动态口令一致的动态口令；[0173]	第一判断单元，用于当所述第一验证单元4101验证所述一组动态口令中不存在与所述第二动态口令一致的动态口令时，判断当前调用的动态因子是否为所述认证窗口中的最后一个动态因子，当判断当前动态因子不为最后一个动态因子时，调用下一个动态因子，所述第二组合单元工作。</p>
+    <p>[0174]	或者，所述第二计算模块409包括：</p>
+    <p>[0175]	查找单元，用于从所述认证窗口中查找到等于或大于第二缓存区中的数据的动态因子；</p>
+    <p>[0176]	第三处理单元，用于将大于所述第二缓存区中的数据的动态因子依次分别与所述第二数据组中的各个数据进行组合，调用所述预设算法对组合得到的数据分别进行计算，得到第一部分动态口令；将等于所述第二缓存区中的数据的动态因子分别与所述第二数据组中第二偏移指针指向的数据之后的各个数据进行组合，调用所述预设算法，对组合得到各数据分别进行计算得到第二部分动态口令；将所述第一部分动态口令与所述第二部分动 态口令组成所述一组动态口令。</p>
+    <p>[0177]	相应地，所述系统还包括：</p>
+    <p>[0178]	第二更新模块，用于当所述验证模块410验证所述一组动态口令中存在与所述第二动态口令一致的动态口令时，用与所述第二动态口令一致的动态口令对应的动态因子更新所述第二缓存区中的数据，并将所述第二偏移指针指向与所述第二动态口令一致的动态口令对应的第二数据组中的数据。</p>
+    <p>[0179]	以上所述仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101355426A?cl=zh">CN101355426A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月10日</td><td class="patent-data-table-td patent-date-value">2009年1月28日</td><td class="patent-data-table-td ">中国工商银行股份有限公司</td><td class="patent-data-table-td ">基于动态口令的身份认证方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101783731A?cl=zh">CN101783731A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年12月28日</td><td class="patent-data-table-td patent-date-value">2010年7月21日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">动态口令的显示方法及动态令牌</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102377783A?cl=zh">CN102377783A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月7日</td><td class="patent-data-table-td patent-date-value">2012年3月14日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种动态口令生成及认证的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2004051585A2?cl=zh">WO2004051585A2</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2003年11月26日</td><td class="patent-data-table-td patent-date-value">2004年6月17日</td><td class="patent-data-table-td ">Rsa Security Inc</td><td class="patent-data-table-td ">Identity authentication system and method</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103354499A?cl=zh">CN103354499A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月21日</td><td class="patent-data-table-td patent-date-value">2013年10月16日</td><td class="patent-data-table-td ">樊晓东</td><td class="patent-data-table-td ">一种动态口令的合法性实时验证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014040501A1?cl=zh">WO2014040501A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年8月30日</td><td class="patent-data-table-td patent-date-value">2014年3月20日</td><td class="patent-data-table-td ">Feitian Technologies Co., Ltd.</td><td class="patent-data-table-td ">一种动态口令的生成及认证方法与系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L9/3228">H04L9/3228</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/44">G06F21/44</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/108">H04L63/108</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/0838">H04L63/0838</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/0853">H04L63/0853</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/46">G06F21/46</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=wGu2BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L63/0846">H04L63/0846</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年12月26日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年12月10日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/67ef2c1fe65c244cacf2/CN102843236A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%8A%A8%E6%80%81%E5%8F%A3%E4%BB%A4%E7%9A%84%E7%94%9F%E6%88%90%E5%8F%8A%E8%AE%A4%E8%AF%81%E6%96%B9.pdf?id=wGu2BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2cSzotEfdHW7N6v4ZYCAtEBdCOsQ"},"sample_url":"https://www.google.com/patents/reader?id=wGu2BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

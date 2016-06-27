@@ -1,0 +1,296 @@
+<!DOCTYPE html><html><head><title>专利 CN101820346A - 一种安全数字签名方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种安全数字签名方法"><meta name="DC.contributor" content="于华章" scheme="inventor"><meta name="DC.contributor" content="陆舟" scheme="inventor"><meta name="DC.contributor" content="北京飞天诚信科技有限公司" scheme="assignee"><meta name="DC.date" content="2010-5-4" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种安全数字签名方法，属于信息安全领域。该方法包括：客户端主机向交易服务器发送交易信息；所述交易服务器根据所述交易信息生成图像和/或音频形式的交易确认数据；所述客户端主机向usbkey下发签名指令和交易确认数据；所述usbkey输出所述交易确认数据，等待确认信号；如果所述usbkey接收到所述确认信号，对所述交易确认数据进行数字签名操作；将所述数字签名的结果通过所述客户端主机返回给所述交易服务器，所述交易服务器验证所述数字签名的结果正确后执行交易操作。"><meta name="DC.date" content="2010-9-1"><meta name="DC.relation" content="CN:101374049:A" scheme="references"><meta name="DC.relation" content="CN:101409622:A" scheme="references"><meta name="DC.relation" content="WO:2006078738:A2" scheme="references"><meta name="citation_patent_publication_number" content="CN:101820346:A"><meta name="citation_patent_application_number" content="CN:201010168206"><link rel="canonical" href="https://www.google.com/patents/CN101820346A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101820346A?cl=zh"/><meta name="title" content="专利 CN101820346A - 一种安全数字签名方法"/><meta name="description" content="本发明公开了一种安全数字签名方法，属于信息安全领域。该方法包括：客户端主机向交易服务器发送交易信息；所述交易服务器根据所述交易信息生成图像和/或音频形式的交易确认数据；所述客户端主机向usbkey下发签名指令和交易确认数据；所述usbkey输出所述交易确认数据，等待确认信号；如果所述usbkey接收到所述确认信号，对所述交易确认数据进行数字签名操作；将所述数字签名的结果通过所述客户端主机返回给所述交易服务器，所述交易服务器验证所述数字签名的结果正确后执行交易操作。"/><meta property="og:title" content="专利 CN101820346A - 一种安全数字签名方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101820346A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101820346A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=JhF6BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101820346A&amp;usg=AFQjCNF2jKwyUHrNcoMjMJJzbBofOG_VnQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/e8892e325fe0d59458c7/CN101820346A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/e8892e325fe0d59458c7/CN101820346A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101820346A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101820346A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101820346A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101820346B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101820346A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种安全数字签名方法，属于信息安全领域。该方法包括：客户端主机向交易服务器发送交易信息；所述交易服务器根据所述交易信息生成图像和/或音频形式的交易确认数据；所述客户端主机向usbkey下发签名指令 ...</span><span itemprop="url">https://www.google.com/patents/CN101820346A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101820346A - 一种安全数字签名方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101820346A - 一种安全数字签名方法" title="专利 CN101820346A - 一种安全数字签名方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101820346 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010168206</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年9月1日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年5月4日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年5月4日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101820346B?hl=zh-CN&amp;cl=zh">CN101820346B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010168206.7, </span><span class="patent-bibdata-value">CN 101820346 A, </span><span class="patent-bibdata-value">CN 101820346A, </span><span class="patent-bibdata-value">CN 201010168206, </span><span class="patent-bibdata-value">CN-A-101820346, </span><span class="patent-bibdata-value">CN101820346 A, </span><span class="patent-bibdata-value">CN101820346A, </span><span class="patent-bibdata-value">CN201010168206, </span><span class="patent-bibdata-value">CN201010168206.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BA%8E%E5%8D%8E%E7%AB%A0%22">于华章</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%86%E8%88%9F%22">陆舟</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E9%A3%9E%E5%A4%A9%E8%AF%9A%E4%BF%A1%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京飞天诚信科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101820346A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101820346A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101820346A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (16),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (4),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=JhF6BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010168206&amp;usg=AFQjCNG9iI7jZtww-J0TW9iTlfVb9FP6yA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=JhF6BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101820346A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFeCias_7ap_u6SDwrN-Tvgwd9y8g"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT97540588" lang="ZH" load-source="patent-office">一种安全数字签名方法</invention-title>
+      </span><br><span class="patent-number">CN 101820346 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA80049723" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种安全数字签名方法，属于信息安全领域。该方法包括：客户端主机向交易服务器发送交易信息；所述交易服务器根据所述交易信息生成图像和/或音频形式的交易确认数据；所述客户端主机向usbkey下发签名指令和交易确认数据；所述usbkey输出所述交易确认数据，等待确认信号；如果所述usbkey接收到所述确认信号，对所述交易确认数据进行数字签名操作；将所述数字签名的结果通过所述客户端主机返回给所述交易服务器，所述交易服务器验证所述数字签名的结果正确后执行交易操作。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(14)</span></span></div><div class="patent-text"><ol mxw-id="PCLM33037257" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种安全数字签名方法，所述方法包括：客户端主机向交易服务器发送交易信息；所述交易服务器根据所述交易信息生成图像和/或音频形式的待签名数据，并将所述待签名数据发送给所述客户端主机；所述客户端主机向usbkey下发签名指令和所述待签名数据；所述usbkey输出所述待签名数据，等待确认信号；如果所述usbkey接收到所述确认信号，对所述待签名数据进行数字签名操作；将所述数字签名的结果通过所述客户端主机返回给所述交易服务器，所述交易服务器验证所述数字签名的结果正确后执行交易操作，结束。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1中所述的安全数字签名方法，其特征在于，所述客户端主机向所述交 易服务器发送的交易信息具体包括但不限于交易帐号、交易金额、交易类型。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1中所述的安全数字签名方法，其特征在于，所述交易服务器根据所述 交易信息生成图像和/或音频形式的待签名数据，所述方法还包括：所述待签名数据中使用的语言为所述交易信息中指定的语言；或 所述交易服务器判断所述客户端主机所在地域，使用所述客户端主机所在地域的语言 作为所述待签名数据中使用的语言。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1中所述的安全数字签名方法，其特征在于，所述交易服务器根据所述 交易信息生成图像和/或音频形式的待签名数据，所述方法还包括：所述交易服务器根据所述交易信息中指定的待签名数据类型生成所述图像和/或音 频形式的待签名数据；或者所述交易服务器根据预先认定的默认的待签名数据类型生成所述图像和/或音频形 式的待签名数据。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1中所述的安全数字签名方法，其特征在于，所述交易服务器根据所述 交易信息生成图像和/或音频形式的待签名数据，所述图像包括静态图片和动态视频。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5中所述的安全数字签名方法，其特征在于， 所述静态图片的格式包括但不限于位图格式；所述动态视频和/或音频的格式包括但不限于流媒体格式。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求1中所述的安全数字签名方法，其特征在于，所述usbkey输出所述待签 名数据，所述方法具体包括：所述usbkey通过自身带有的屏幕和/或音频播放装置输出所述图像和/或音频形式 的待签名数据。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求1中所述的安全数字签名方法，其特征在于，所述usbkey输出所述待签 名数据，所述方法还包括：所述usbkey判断所述待签名数据的类型，并根据判断结果选择适当的方式输出所述 待签名数据；或者所述usbkey根据接收到的客户端主机下发的对所述待签名数据的类型的说明，选择 相应的方式输出所述待签名数据。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求1中所述的安全数字签名方法，其特征在于，在所述usbkey接收到所述 签名指令之后，所述方法还包括：所述usbkey接收到所述签名指令后开始计时；如果所述usbkey没有接收到所述确认信号，判断计时得到的时间是否超过预定时间；如果计时得到的时间超过了预定时间，则取消对接收到的签名指令的执行。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求1中所述的安全数字签名方法，其特征在于，在所述usbkey接收到所述 签名指令之后、对所述待签名数据进行数字签名操作之前，所述方法还包括：所述usbkey对用户进行身份认证。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10中所述的安全数字签名方法，其特征在于，所述usbkey对用户进行 身份认证的方法具体包括：所述usbkey接收用户输入的PIN码或生物特征信息；若所述usbkey验证所述PIN码或生物特征信息正确，则所述用户身份合法。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11中所述的安全数字签名方法，其特征在于，所述usbkey接收用户输 入的PIN码或生物特征信息的方法包括：所述usbkey通过自身的键盘或生物特征接收装置接收所述用户输入的PIN码或生物 特征信息；或所述客户端主机接收所述用户输入的PIN码或生物特征信息，并将所述用户输入的 PIN码或生物特征信息发送给所述usbkey。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求1中所述的安全数字签名方法，其特征在于，在所述usbkey对所述待签 名数据进行数字签名之前，所述方法还包括：所述usbkey接收客户端主机发送的所述待签名数据，对所述待签名数据进行hash运 算，为hash运算得到的hash值添加算法标识串、对添加算法标识串后的hash值按照公钥 密码学标准进行补位；或者所述usbkey接收客户端主机发送的对所述待签名数据进行hash运算后的hash值，为 该hash值添加算法标识串、对添加算法标识串后的hash值按照公钥密码学标准进行补位； 或者所述usbkey接收客户端主机发送的对所述待签名数据进行hash运算并添加算法标识 串后的hash值，对添加算法标识串后的hash值按照公钥密码学标准进行补位；或者所述usbkey接收客户端主机发送的由所述待签名数据依次经过hash运算、添加算法 标识串、按照公钥密码学标准进行补位得到的hash值。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求1中所述的安全数字签名方法，其特征在于，所述将所述数字签名的结 果通过所述客户端主机返回给所述交易服务器，所述方法还包括：如果所述交易服务器验证所述数字签名的结果错误，则所述交易服务器向客户端主机 返回错误信息，中止交易操作。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES38338726" lang="ZH" load-source="patent-office" class="description">
+    <p>一种安全数字签名方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及信息安全领域，具体而言，涉及一种安全数字签名方法。 背景技术</p>
+    <p>[0002]	网上银行的推广方便了人们的生活，但由于网上银行的交易需要通过网络进行，使得网上银行交易存在安全隐患，并且不法分子针对网上银行的攻击手段也变化多端，因 此，网络银行健康发展首要解决的是安全问题。</p>
+    <p>[0003]	为了保证用户的资金安全，银行采取了多种措施来提高用户身份认证的安全 性。目前网上银行使用最普遍的是基于智能卡的usbkey (智能密钥设备）安全数字证书。 usbkey结合了智能卡技术与PKI (Public Key Infrastructure，公开密钥体系）技术，使 用内置操作系统的智能卡芯片来保护用户的私钥，可以实现可靠的数字身份认证和数字签名。</p>
+    <p>[0004]	为了进一步保证交易的安全性，新一代的usbkey通常具有显示功能，即将本次 交易中的一些比较敏感的交易信息以文字的形式通过显示屏显示给用户，由用户确认后 usbkey执行数字签名操作。但是，现在这种usbkey至少存在如下问题：目前的具有显示功 能的usbkey通常都内置有庞大的字库，以保证能够完整、正确地输出交易信息；同时可能 还要求usbkey具有部分文字处理功能，如英文字符大小不一、单词换行等。这些问题都限 制了 usbkey的适用范围。</p>
+    <p>[0005]	Crypto API是微软提供的一套公共接口，包含了一系列的函数，为应用程序提供 加解密、数字签名、hash (哈希）等安全服务，而应用程序不必关心其具体实现。不同的供 应商可以开发独立的加密模块，这些模块称为加密服务提供程序（Cryptographic Service Provider, CSP)，完成密钥生成/交换、数据的加/解密、数字签名、认证等服务。一个系统 中可以加载多个CSP模块，它们相互独立。应用程序可以使用任意一个CSP模块，而不必关 心它的具体实现，每个CSP都对Crypto API进行不同的实现。</p>
+    <p>发明内容</p>
+    <p>[0006]	本发明提供了一种安全数字签名方法。所述技术方案如下：</p>
+    <p>[0007]	一种安全数字签名方法，所述方法包括：</p>
+    <p>[0008]	客户端主机向交易服务器发送交易信息；</p>
+    <p>[0009]	所述交易服务器根据所述交易信息生成图像和/或音频形式的待签名数据，并将 所述待签名数据发送给所述客户端主机；</p>
+    <p>[0010]	所述客户端主机向usbkey下发签名指令和所述待签名数据；</p>
+    <p>[0011]	所述usbkey输出所述待签名数据，等待确认信号；</p>
+    <p>[0012]	如果所述usbkey接收到所述确认信号，对所述待签名数据进行数字签名操作；</p>
+    <p>[0013]	将所述数字签名的结果通过所述客户端主机返回给所述交易服务器，所述交易服 务器验证所述数字签名的结果正确后执行交易操作，结束。[0014]	所述客户端主机向所述交易服务器发送的交易信息具体包括但不限于交易帐号、 交易金额、交易类型。</p>
+    <p>[0015]	所述交易服务器根据所述交易信息生成图像和/或音频形式的待签名数据，所述 方法还包括：</p>
+    <p>[0016]	所述待签名数据中使用的语言为所述交易信息中指定的语言；或</p>
+    <p>[0017]	所述交易服务器判断所述客户端主机所在地域，使用所述客户端主机所在地域的 语言作为所述待签名数据中使用的语言。</p>
+    <p>[0018]	所述交易服务器根据所述交易信息生成图像和/或音频形式的待签名数据，所述 方法还包括：</p>
+    <p>[0019]	所述交易服务器根据所述交易信息中指定的待签名数据类型生成所述图像和/ 或音频形式的待签名数据；或者 [0020]	所述交易服务器根据预先认定的默认的待签名数据类型生成所述图像和/或音 频形式的待签名数据。</p>
+    <p>[0021]	所述交易服务器根据所述交易信息生成图像和/或音频形式的待签名数据，所述 图像包括静态图片和动态视频；</p>
+    <p>[0022]	所述静态图片的格式包括但不限于位图格式；</p>
+    <p>[0023]	所述动态视频和/或音频的格式包括但不限于流媒体格式。</p>
+    <p>[0024]	所述usbkey输出所述待签名数据，所述方法具体包括：</p>
+    <p>[0025]	所述usbkey通过自身带有的屏幕和/或音频播放装置输出所述图像和/或音频 形式的待签名数据。</p>
+    <p>[0026]	所述usbkey输出所述待签名数据，所述方法还包括：</p>
+    <p>[0027]	所述usbkey判断所述待签名数据的类型，并根据判断结果选择适当的方式输出 所述待签名数据；或者</p>
+    <p>[0028]	所述usbkey根据接收到的客户端主机下发的对所述待签名数据的类型的说明， 选择相应的方式输出所述待签名数据。</p>
+    <p>[0029]	在所述usbkey接收到所述签名指令之后，所述方法还包括：</p>
+    <p>[0030]	所述usbkey接收到所述签名指令后开始计时；</p>
+    <p>[0031]	如果所述usbkey没有接收到所述确认信号，判断计时得到的时间是否超过预定 时间；</p>
+    <p>[0032]	如果计时得到的时间超过了预定时间，则取消对接收到的签名指令的执行。</p>
+    <p>[0033]	在所述usbkey接收到所述签名指令之后、对所述待签名数据进行数字签名操作 之前，所述方法还包括：</p>
+    <p>[0034]	所述usbkey对用户进行身份认证。</p>
+    <p>[0035]	所述usbkey对用户进行身份认证的方法具体包括：</p>
+    <p>[0036]	所述usbkey接收用户输入的PIN码或生物特征信息；</p>
+    <p>[0037]	若所述usbkey验证所述PIN码或生物特征信息正确，则所述用户身份合法。</p>
+    <p>[0038]	所述usbkey接收用户输入的PIN码或生物特征信息的方法包括：</p>
+    <p>[0039]	所述usbkey通过自身的键盘或生物特征接收装置接收所述用户输入的PIN码或 生物特征信息；[0040]或</p>
+    <p>[0041]	所述客户端主机接收所述用户输入的PIN码或生物特征信息，并将所述用户输入 的PIN码或生物特征信息发送给所述usbkey。</p>
+    <p>[0042]	在所述usbkey对所述待签名数据进行数字签名之前，所述方法还包括： [0043]	所述usbkey接收客户端主机发送的所述待签名数据，对所述待签名数据进行 hash运算，为hash运算得到的hash值添加算法标识串、对添加算法标识串后的hash值按 照公钥密码学标准进行补位；或者</p>
+    <p>[0044]	所述usbkey接收客户端主机发送的对所述待签名数据进行hash运算后的hash 值，为该hash值添加算法标识串、对添加算法标识串后的hash值按照公钥密码学标准进行 补位；或者</p>
+    <p>[0045]	所述usbkey接收客户端主机发送的对所述待签名数据进行hash运算并添加算法 标识串后的hash值，对添加算法标识串后的hash值按照公钥密码学标准进行补位；或者</p>
+    <p>[0046]	所述usbkey接收客户端主机发送的由所述待签名数据依次经过hash运算、添加 算法标识串、按照公钥密码学标准进行补位得到的hash值。</p>
+    <p>[0047]	所述将所述数字签名的结果通过所述客户端主机返回给所述交易服务器，所述方 法还包括：</p>
+    <p>[0048]	如果所述交易服务器验证所述数字签名的结果错误，则所述交易服务器向客户端 主机返回错误信息，中止交易操作。</p>
+    <p>[0049]	本发明提供的技术方案带来的有益效果是：</p>
+    <p>[0050]	在交易服务器端采用了图像、声音等多媒体数据的形式封装交易信息，usbkey只 需要按照既定的格式输出图片或声音形式的交易信息，而不需要对数据进行其它处理，提 高了交易系统的安全性和可维护性。</p>
+    <p>附图说明</p>
+    <p>[0051]	图1为本发明实施1提供的一种安全数字签名方法流程图；</p>
+    <p>[0052]	图2为本发明实施1提供的另一种安全数字签名方法流程图；</p>
+    <p>[0053]	图3为本发明实施1提供的一种安全数字签名方法中待签名数据显示图；</p>
+    <p>[0054]	图4为本发明实施1提供的一种安全数字签名方法中待签名数据显示图；</p>
+    <p>[0055]	图5为本发明实施1提供的一种安全数字签名方法中待签名数据显示图。</p>
+    <p>具体实施方式</p>
+    <p>[0056]	为使本发明的目的、技术方案和优点更加清楚，下面将结合附图对本发明实施方 式作进一步地详细描述。</p>
+    <p>[0057]	实施例1</p>
+    <p>[0058]	本实施例中的usbkey内置了 SHAl (Secure Hash Algorithm安全哈希算法）和 RSA算法。usbkey从客户端主机中接收指令，接收到的指令一般为APDU (应用协议数据单 元）格式的指令，usbkey根据指令完成各种操作。客户端主机中安装有配合usbkey使用 的中间件，它向上层应用程序（如IE浏览器）提供微软定义的Crypto API接口。当上层 应用程序调用接口时，中间件生成相应的APDU指令并发给usbkey，通知usbkey进行操作。参见图1，本发明实施例1提供了一种安全数字签名方法，该方法包括：</p>
+    <p>[0059]	步骤101.客户端主机向交易服务器发送交易请求和交易信息；</p>
+    <p>[0060]	在本发明实施例中，客户端主机作为交易客户端将用户的交易请求和交易信息提交给交易服务器；</p>
+    <p>[0061]	具体地，交易信息包括但不限于交易类型、交易金额、交易账号、指定语言信息、待 签名数据类型等；</p>
+    <p>[0062]	其中，指定语言信息用于指定本次交易过程中使用的语言，包括交易服务器中生 成的待签名数据使用的语言；</p>
+    <p>[0063]	待签名数据类型包括图片、流媒体格式的视频和/或音频等多媒体数据；</p>
+    <p>[0064]	其中，指定语言信息和待签名数据类型也可以为缺省。</p>
+    <p>[0065]	在本实施例中，交易类型为转账交易，客户端主机提交的交易信息包括交易类型 (转账）、转账目的账号、交易金额。</p>
+    <p>[0066]	步骤102.交易服务器根据接收到的交易信息生成待签名数据，将待签名数据下 发给客户端主机；</p>
+    <p>[0067]	在本步骤中，交易服务器根据接收到的客户端主机提交的交易信息生成包含有部 分或全部交易信息的待签名数据，方法具体为：</p>
+    <p>[0068]	交易服务器按照预定的格式对交易信息中所包含的数据进行处理生成待签名数 据；</p>
+    <p>[0069]	交易服务器生成的待签名数据是包含全部或部分的交易信息的一个或多个图片， 图片可以采用位图的格式；另外，交易服务器生成的待签名数据还可以是一段流媒体格式 的视频和/或音频的多媒体数据。</p>
+    <p>[0070]	当客户端主机提交的交易信息中的待签名数据类型为缺省时，交易服务器则按照 预先约定的格式生成待签名数据；</p>
+    <p>[0071]	在本实施例中，待签名数据类型为缺省时交易服务器生成的待签名数据的格式为 位图。</p>
+    <p>[0072]	交易服务器生成的待签名数据中使用的语言为客户端主机提交的交易信息中指 定语言信息中指定的语言；</p>
+    <p>[0073]	当客户端主机提交的交易信息中的指定语言信息为缺省时，交易服务器根据客户 端主机的IP地址判断出客户的地域，在生成的待签名数据中使用该地域的母语；或者使用 交易服务器中的默认语言生成待签名数据，如英语、中文（简体、普通话）等，例如可以使用 英语生成一条待签名数据后下发，也可以同时使用英语、中文、日本语分别生成三条意义相 同的待签名数据后下发。</p>
+    <p>[0074]	步骤103.客户端主机接收到待签名数据后，上层应用程序调用Crypto API接口 创建上下文；</p>
+    <p>[0075]	具体地，客户端主机中的上层应用程序调用Crypto API接口中的函数 CryptAcquireContext (&amp;hProv, szContainerName, sζCSPName, dwKeySpec, 0)创建上下文， 即进行数字签名的初始化操作；</p>
+    <p>[0076]	当上层应用程序调用CryptAcquireContext函数获取一个CSP操作句柄时，可以 指定CSP的类型和名字。如果指定了类型和名字，则只有这两个属性匹配的CSP模块会被调用。调用成功后，函数返回CSP的操作句柄，之后上层应用程序就可以通过句柄访问CSP 和CSP中的密钥容器了。</p>
+    <p>[0077]	步骤104.上层应用程序向usbkey发送待签名数据及hash(哈希）命令；</p>
+    <p>[0078]具体地，上层应用程序调用	CryptCreateHash (hProv, ALG_ID，0，0，&amp;hHash)函数 创建hash对象；</p>
+    <p>[0079]	其中，CryptCreateHash函数的ALG_ID参数是hash算法标识符。常用的hash算 法标识符包括 CALG_MD5、CALG_SHA1、CALG_SSL3_SHAMD5 等。CALG_MD5 和 CALG_SHA1 分别 对应MD5和SHAl算法，而CALG_SSL3_SHAMD5对应的是对同一段数据分别用MD5和SHAl进 行hash运算，再将两段hash结果拼接在一起。</p>
+    <p>[0080]	在本发明实施例中，上层应用程序设置算法标识符为CALG_SHA1，中间件向 usbkey下发的APDU指令大致如下：</p>
+    <p>[0081]	//hash指令，在此指令中传入待签名的数据</p>
+    <p>[0082]	00 2a 90 80......</p>
+    <p>[0083]	在本步骤中，客户端主机接收到交易服务器下发的待签名数据后可以不做任何处 理直接发送给usbkey ；</p>
+    <p>[0084]	另外，客户端主机还可以对接收到的待签名数据进行分析，分析出该待签名数据 的类型为图片、声音或其它类型，并将分析得到的结果发送给usbkey，使usbkey可以根据 该结果直接选择正确的方式输出该待签名数据。</p>
+    <p>[0085]	步骤105. usbkey使用hash命令中指定的SHAl算法对待签名数据进行hash运算， 并将运算结果和待签名数据缓存在usbkey内部；</p>
+    <p>[0086]	另外，hash运算后usbkey向客户端主机返回操作成功的状态码0x9000，此时也可 以把hash运算结果返回给客户端主机。</p>
+    <p>[0087]步骤	106.客户端主机向 usbkey 下发 MSE (Make Security Environment 创建安全 环境）指令；</p>
+    <p>[0088]	客户端主机下发的MSE指令为APDU指令序列，该MSE指令指示usbkey采用 SHAl-RSA作为签名算法，并且指示了 RSA密钥ID，则该APDU指令序列的所包含的内容依次 为：MSE指令标识、签名算法为SHAl-RSA的算法标识、RSA的密钥ID，具体指令序列大致如 下：</p>
+    <p>[0089]	//MSE指令，设置算法标识及RSA密钥ID</p>
+    <p>[0090]	00 22 41 B6 07 80 01 12 81 02 00 01...</p>
+    <p>[0091]	其中，MSE指令中所指定的RSA的密钥ID为步骤103中上层应用程序调用Crypto API接口的CryptAcquireContext函数创建上下文时指定的。</p>
+    <p>[0092]	步骤107. usbkey接收到MSE指令后，根据上述指令中的的密钥ID设置当前使用 的RSA密钥；</p>
+    <p>[0093]	usbkey设置完成后，向客户端主机返回预先约定的表示操作成功的状态码 0x9000。</p>
+    <p>[0094]	步骤108.客户端主机向usbkey下发签名指令；</p>
+    <p>[0095]	客户端主机向usbkey下发以APDU格式表示的签名指令，该客户端主机下发的 APDU 指令序列为：00 2a 9E 00 00 00。[0096]	步骤109. usbkey输出待签名数据，等待确认签名数据的信号；</p>
+    <p>[0097]	usbkey接收到签名指令后，需要输出待签名数据同时等待用户输入确认信号，本 过程中usbkey向客户端主机返回事先约定的表示“需要等待按键的”状态码0x6666，同时 usbkey开始计时；</p>
+    <p>[0098]	usbkey可以在液晶屏上输出图片、视频或通过usbkey的语音播放 器输出音频的 待签名数据，等待用户输入确认信号；</p>
+    <p>[0099]	若usbkey接收到的待签名数据是位图格式的，usbkey根据像素大小整屏或分屏 显示待签名数据，也可以通过图片压缩技术缩屏显示待签名数据。</p>
+    <p>[0100]	同时，客户端主机还可以根据usbkey返回的状态码，通过图像、文字、声音等方式 提示用户确认待签名数据正确后输入确认信号。</p>
+    <p>[0101]	位图格式的待签名数据在usbkey中显示的效果如图3、4、5所示。</p>
+    <p>[0102]	步骤110. usbkey判断是否接收到用户通过usbkey输入的确认信号；如果接收到 用户输入的确认信号，则执行113 ；如果没有接收到用户输入的确认信号，则执行步骤111 ；</p>
+    <p>[0103]	用户根据usbkey输出的待签名数据判断交易信息是否正确无误，判断正确后向 usbkey输入确认信号；</p>
+    <p>[0104]	具体地，输入确认信号的方法包括：</p>
+    <p>[0105]	用户通过usbkey上的键盘输入确认信号，usbkey接收到确认信号后执行步骤 113。</p>
+    <p>[0106]	为了保证用户具有操作权限，还可以在用户输入确认信号之前由usbkey对用户 进行身份认证，具体认证方式包括但不限于：PIN(Personal IdentificationNumberfAS 识码）码验证方式、生物特征验证方式等，PIN码或生物特征可以由usbkey通过自身的键盘 或生物特征接收装置获取，也可以通过客户端主机获取，然后传入到usbkey中进行验证。 例如：</p>
+    <p>[0107]	用户通过usbkey上的键盘输入usbkey的PIN码，usbkey验证该PIN码正确后执 行步骤113 ；</p>
+    <p>[0108]或者，</p>
+    <p>[0109]	用户通过客户端主机输入usbkey的PIN码，并发送给usbkey验证该PIN码是否 正确，usbkey验证该PIN码正确后执行步骤113。</p>
+    <p>[0110]	步骤111. usbkey判断计时得到的当前时间是否超过预定时间，如果计时得到的 当前时间没有超过了预定时间，则执行112 ；如果计时得到的当前时间超过了预定时间，则 执行步骤117 ；</p>
+    <p>[0111]	步骤112. usbkey接收客户端主机下发的获取签名结果的指令；</p>
+    <p>[0112]	由于客户端主机收到状态码0x6666后，客户端主机可以向usbkey反复发送获取 签名结果的指令；</p>
+    <p>[0113]	获取签名结果的指令对应的APDU指令序列为：80 E3 00 00 00 00</p>
+    <p>[0114]	usbkey接收到客户端主机发送的获取签名结果的指令，则返回执行111。</p>
+    <p>[0115]	另外，客户端主机收到状态码0x6666后，还可以向usbkey发送取消签名的指令， 故而usbkey需要判断是否接收到客户端主机发送的获取签名结果的指令或取消签名的指 令；如果接收到客户端主机发送的获取签名结果的指令，则执行111 ；如果接收到客户端主机发送的取消签名的指令，则usbkey停止进行数字签名的操作；</p>
+    <p>[0116]	上述的取消签名指令对应APDU指令序列为：80 E5 00 00 00 00。</p>
+    <p>[0117]	步骤113. usbkey对待签名数据进行签名，将签名结果发送给客户端主机；</p>
+    <p>[0118]	usbkey根据MSE指令所指定的算法标识，在步骤105中计算得到的hash值前面加 上X. 509规范所定义的算法标识串，再按照公钥密码学标准（PKCS#1)进行补位； [0119]例如：SHAl	算法标识串是 30 20 30 Oc 06 08 2a 86 48 86 f7 Od 02 05 0500 04 10。</p>
+    <p>[0120]	对补位后的数据进行RSA运算得到签名结果，并同时需要向客户端机发送该签名 结果，并返回操作成功的状态码0x9000。</p>
+    <p>[0121]	步骤114客户端主机将数字签名的结果发送给交易服务器，交易服务器验证接收 到的签名结果是否正确，若验证签名结果正确，则执行步骤115 ；否则执行步骤116 ；</p>
+    <p>[0122]	交易服务器接到签名结果后，使用该用户的公钥对接收到的签名结果解密、并去 掉补位，交易服务器再对在步骤102中生成的待签名数据进行与usbkey中相同的hash运 算，交易服务器将签名结果解密后去掉补位后得到的数据与交易服务器中经过hash运算 得到的hash值进行比对，若二者相同，则交易服务器接收到的签名结果是正确的。</p>
+    <p>[0123]	步骤115.执行后续的交易操作，结束交易流程。</p>
+    <p>[0124]	步骤116.交易服务器将错误信息返回给客户端主机，中止本次交易操作，结束交 易流程。</p>
+    <p>[0125]	客户端主机接收到交易服务器返回的错误信息后输出该错误信息。</p>
+    <p>[0126]	步骤117. usbkey向客户端主机发送取消交易的信号。</p>
+    <p>[0127]	usbkey向客户端主机返回事先约定的表示取消交易的状态码0x7777，客户端主 机向交易服务器发送取消交易信息，结束交易流程。</p>
+    <p>[0128]	在本发明实施例1中，对待签名数据进行hash运算的过程是在usbkey中完成的， 除此以外，还可以由客户端主机根据事先约定的hash算法对待签名数据进行hash运算， 并在hash值前面加上X. 509规范所定义的算法标识串、按照公钥密码学标准（PKCS#1)进 行补位；相应地，进行数字签名时客户端主机将待签名数据和补位后的待签名数据的hash 运算结果发送给usbkey，usbkey输出待签名数据，在接收到确认信号后对接收到的补位 后的待签名数据的hash运算结果进行数字签名；或者也可以由客户端主机根据事先约定 的hash算法对待签名数据进行hash运算，客户端主机将该hash运算结果发送给usbkey， 由usbkey在hash值前面加上X. 509规范所定义的算法标识串、按照公钥密码学标准 (PKCS#1)进行补位，然后进行数字签名。</p>
+    <p>[0129]	实施例2</p>
+    <p>[0130]	本实施例中的usbkey从客户端主机中接收指令，接收到的指令一般为APDU(应 用协议数据单元）格式的指令，usbkey根据指令完成各种操作。客户端主机中安装有配合 usbkey使用的中间件，它向上层应用程序（如FireFox)提供PKCS#11接口。当上层应用程 序调用接口时，中间件生成相应的APDU指令并发给usbkey，通知usbkey进行操作。参见图 1，本发明实施例2提供了一种安全数字签名方法，该方法包括：</p>
+    <p>[0131]	步骤201.客户端主机中的上层应用程序向交易服务器发送交易请求和交易信 息；[0132]	在本发明实施例中，客户端主机作为交易客户端将用户的交易请求和交易信息提 交给交易服务器；</p>
+    <p>[0133]	具体地，交易信息包括但不限于交易类型、交易金额、交易账号、指定语言信息、待 签名数据类型等；</p>
+    <p>[0134]	其中，指定语言信息和待签名数据类型也可以为缺省。</p>
+    <p>[0135]	在本实施例中，交易类型为转账交易，客户端主机提交的交易信息包括交易类型 (转账）、转账目的账号、交易金额。</p>
+    <p>[0136]	步骤202.交易服务器根据接收到的交易信息生成待签名数据，并将待签名数据 下发给客户端主机；</p>
+    <p>[0137]	在本步骤中，交易服务器根据接收到的客户端主机提交的交易信息生成包含有部 分或全部交易信息的待签名数据，方法具体为：</p>
+    <p>[0138]	交易服务器按照预定的格式对交易信息中所包含的数据进行处理生成待签名数 据；待签名数据中包含全部或部分的交易信息。 [0139]	交易服务器生成的待签名数据可以是包含文字信息的一个或多个图片，图片可以 采用位图的格式；另外，交易服务器生成的待签名数据还可以是一段多媒体数据，例如可以 采用流媒体格式的音频多媒体文件。</p>
+    <p>[0140]	当交易信息中的待签名数据类型为缺省时，交易服务器则按照预先约定的格式生 成待签名数据；</p>
+    <p>[0141]	在本实施例中，待签名数据类型为缺省时交易服务器生成的待签名数据的格式为 图片。</p>
+    <p>[0142]	交易服务器生成的待签名数据中使用的语言为客户端主机提交的交易信息中指 定语言信息中指定的语言；</p>
+    <p>[0143]	或者，交易服务器根据客户端的IP地址判断出客户的地域，在待签名数据中使用 该地域的母语；或者使用交易服务器中的默认语言生成一条或多条待签名数据，如英语、中 文（简体、普通话）等，例如可以使用英语生成一条待签名数据后下发，也可以同时使用英 语、中文、日本语分别生成三条意义相同的待签名数据后下发。</p>
+    <p>[0144]	步骤203.客户端主机接收到待签名数据后，上层应用程序调用PKCS#11接口进行 签名前的初始化操作，与usbkey建立会话；</p>
+    <p>[0145]	上层应用程序调用以下的PKCS#11接口函数，进行签名前的初始化操作，与 usbkey建立会话：</p>
+    <p>[0146]	//接口初始化</p>
+    <p>[0147]	C_Initialize(NULL_PTR)；</p>
+    <p>[0148]	//获取插槽列表</p>
+    <p>[0149]	C_GetSlotList(TRUE, pSlotList, &amp;ulCount)；</p>
+    <p>[0150]	//建立会话</p>
+    <p>[0151]	C_0penSession(m_pSlotList[0]，CKF_Rff_SESSION|CKF_SERIAL_SESSION,</p>
+    <p>[0152]	NULL_PTR, NULL_PTR, &amp;hSession)；</p>
+    <p>[0153]	步骤204.客户端主机根据约定的hash算法对待签名数据进行hash运算；</p>
+    <p>[0154]	客户端主机调用PKCS#11接口，将hash算法设置为预先约定的算法，然后对待签名数据进行hash运算；</p>
+    <p>[0155]	调用的PKCS#11接口函数如下：</p>
+    <p>[0156]	//设置hash算法</p>
+    <p>[0157]	CK_MECHANISM ckMechanismHash = {CKM_SHA_1, NULL_PTR,0}；</p>
+    <p>[0158]	C_DigestInit(hSession, &amp;ckMechanismHash)；</p>
+    <p>[0159]	//进行hash运算</p>
+    <p>[0160]	C_Digest(hSession, pbMsg, ulMsgLen, pDigest, &amp;ulDigestLen)；</p>
+    <p>[0161]	C_DigestFinal(hSession, pDigest, &amp;ulDigestLen)；</p>
+    <p>[0162]	客户端主机还要将hash运算后得到的hash值前面加上X. 509规范所定义的算法标识串，再按照公钥密码学标准（PKCS#1)进行补位；</p>
+    <p>[0163]例如：SHAl	算法标识串是 30 20 30 Oc 06 08 2a 86 48 86 f7 Od 02 05 0500 04 10。</p>
+    <p>[0164]	在本发明实施例2中，预先约定的hash算法为SHAl算法，对应的算法标识符为 CKM_SHA_1ο</p>
+    <p>[0165]	步骤205.客户端主机向usbkey下发MSE指令，设置签名算法和签名使用的密钥；</p>
+    <p>[0166]	客户端主机在向usbkey下发MSE指令之前，调用PKCS#11接口的C_Login函数， 登录usbkey获取密钥的使用权限，然后调用CIUffiCHANISMckMechanismSign函数设置数字 签名使用的算法、调用C_SignInit函数设置签名使用的密钥；</p>
+    <p>[0167]	客户端主机所调用的PKCS#11接口函数具体如下：</p>
+    <p>[0168]	//登录，获取密钥使用权限</p>
+    <p>[0169]	C_Login(hSession, CKU_USER, ucPin,lstrlen (ucPin))；</p>
+    <p>[0170]	H设置签名算法和签名密钥</p>
+    <p>[0171]	CK_MECHANISM ckMechanismSign = {CKM_RSA_PKCS，NULL_PTR，0}；</p>
+    <p>[0172]	C_SignInit(hSession, &amp;ckMechanismSign, hPriKey)；</p>
+    <p>[0173]	客户端主机调用PKCS#11接口完成以上操作后，向usbkey下发MSE指令，设置签 名算法和签名使用的密钥；</p>
+    <p>[0174]	//MSE指令，设置签名算法和密钥</p>
+    <p>[0175]	00 22 41 B6 80 01 12 84 02 00 23</p>
+    <p>[0176]	步骤206. usbkey根据接收到的MSE指令设置签名算法和密钥；</p>
+    <p>[0177]	usbkey设置完成后，向客户端主机返回预先约定的表示操作成功的状态码 0x9000。</p>
+    <p>[0178]	步骤207.客户端主机向usbkey下发待签名数据的hash值和签名指令；</p>
+    <p>[0179]	在客户端主机向usbkey下发待签名数据的hash值和签名指令之前，还将待签名 数据发送给usbkey。</p>
+    <p>[0180]	客户端主机的调用了 PKCS#11接口的C_Sign函数，通过该函数传入待签名数据的 hash值并获取签名结果，具体为：</p>
+    <p>[0181]	//签名，获取签名结果</p>
+    <p>[0182]	C_Sign (hSession, pDigest, ulDigestLen, bSignatureBuffer, &amp;ulSignatureLen)；[0183]	其中的参数“pDigest”表示需要进行数字签名的数据，即待签名数据的hash值；“bSignatureBuffer”为数字签名的结果。</p>
+    <p>[0184]	客户端主机向usbkey下发以APDU格式表示的签名指令，该客户端主机下发的 APDU 指令序列为：00 2a 9E 00 00 00。</p>
+    <p>[0185]	步骤208. usbkey输出待签名数据，等待确认签名数据的信号；</p>
+    <p>[0186]	usbkey接收到签名指令后，需要输出待签名数据同时等待用户输入确认信号，本 过程中usbkey向客户端主机返回事先约定的表示“需要等待按键的”状态码0x6666，同时 usbkey开始计时；</p>
+    <p>[0187]	usbkey可以在液晶屏上输出图片、视频或通过usbkey的语音播放器输出音频的 待签名数据，等待用户输入确认信号；</p>
+    <p>[0188]	若usbkey接收到的待签名数据是位图格式的，usbkey根据像素大小整屏或分屏 显示，也可以通过图片压缩技术缩屏显示待签名数据。</p>
+    <p>[0189]	同时，客户端主机还可以根据usbkey返回的状态码，通过图像、文字、声音等方式 提示用户确认待签名数据正确后输入确认信号。</p>
+    <p>[0190]	位图格式的待签名数据在usbkey中显示的效果如图3、4、5所示。</p>
+    <p>[0191]	步骤209. usbkey判断是否接收到用户通过usbkey输入的确认信号；如果接收到 用户输入的确认信号，则执行212 ；如果没有接收到用户输入的确认信号，则执行步骤210 ；</p>
+    <p>[0192]	用户根据usbkey输出的待签名数据判断交易信息是否正确无误，判断正确后向 usbkey输入确认信号；</p>
+    <p>[0193]	具体地，输入确认信号的方法包括：</p>
+    <p>[0194]	用户通过usbkey上的键盘输入确认信号，usbkey接收到确认信号后执行步骤 212。</p>
+    <p>[0195]	为了保证用户具有操作权限，还可以在用户输入确认信号之前由usbkey对用户 进行身份认证，具体认证方式包括但不限于：PIN(Personal IdentificationNumberfAS 识码）码验证方式、生物特征验证方式等，PIN码或生物特征可以由usbkey通过自身的键盘 或生物特征接收装置获取，也可以通过客户端主机获取，然后传入到usbkey中进行验证。</p>
+    <p>[0196]例如：</p>
+    <p>[0197]	用户通过usbkey上的键盘输入usbkey的PIN码，usbkey验证该PIN码正确后执 行步骤212 ；</p>
+    <p>[0198]或者，</p>
+    <p>[0199]	用户通过客户端主机输入usbkey的PIN码，并发送给usbkey验证该PIN码是否 正确，usbkey验证该PIN码正确后执行步骤212。</p>
+    <p>[0200]	步骤210. usbkey判断计时得到的当前时间是否超过预定时间，如果计时得到的 当前时间没有超过了预定时间，则执行211 ；如果计时得到的当前时间超过了预定时间，则 执行步骤216 ；</p>
+    <p>[0201]	步骤211. usbkey接收客户端主机下发的获取签名结果的指令；</p>
+    <p>[0202]	由于客户端主机收到状态码0x6666后，客户端主机可以向usbkey反复发送获取 签名结果的指令；</p>
+    <p>[0203]	获取签名结果的指令对应的APDU指令序列为：80 E3 00 00 00 00[0204]	usbkey接收到客户端主机发送的获取签名结果的指令，则返回执行210。</p>
+    <p>[0205]	另外，客户端主机收到状态码0x6666后，还可以向usbkey发送取消签名的指令， 故而usbkey需要判断是否接收到客户端主机发送的获取签名结果的指令或取消签名的指 令；如果接收到客户端主机发送的获取签名结果的指令，则返回执行210 ；如果接收到客户 端主机发送的取消签名的指令，则usbkey停止进行数字签名的操作；</p>
+    <p>[0206]	上述的取消签名指令对应APDU指令序列为：80 E5 00 00 00 00。</p>
+    <p>[0207]	步骤212. usbkey执行数字签名操作，将签名结果发送给客户端主机；</p>
+    <p>[0208]	usbkey使用步骤206中设置的（即步骤205中客户端主机指定的)算法和密钥对 接收到的待签名数据的hash值进行RSA运算，RSA运算的结果就是数字签名的结果；</p>
+    <p>[0209]	usbkey将该数字签名的结果发送给客户端主机，并返回操作成功的状态码 0x9000。</p>
+    <p>[0210]	步骤213.客户端主机将数字签名的结果发送给交易服务器，交易服务器验证接 收到的签名结果是否正确，若验证签名结果正确，则执行步骤214 ；否则执行步骤215 ；</p>
+    <p>[0211]	交易服务器接到签名结果后，使用该用户的公钥对接收到的签名结果解密、并去 掉补位，交易服务器再对在步骤202中生成的待签名数据进行与客户端主机中相同的hash 运算，交易服务器将签名结果解密后去掉补位得到的数据与交易服务器中经过hash运算 得到的hash值进行比对，若二者相同，则交易服务器接收到的签名结果是正确的。</p>
+    <p>[0212]	步骤214.执行后续的交易操作，结束交易流程。</p>
+    <p>[0213]	步骤215.交易服务器将错误信息返回给客户端主机，中止本次交易操作，结束交 易流程。</p>
+    <p>[0214]	客户端主机接收到交易服务器返回的错误信息后输出该错误信息。</p>
+    <p>[0215]	步骤216. usbkey向客户端主机发送取消交易的信号。</p>
+    <p>[0216]	usbkey向客户端主机返回事先约定的表示取消交易的状态码0x7777，客户端主 机向交易服务器发送取消交易信息，结束交易流程。</p>
+    <p>[0217]	在本发明实施例2中，对待签名数据进行hash运算的过程是在客户端主机中完成 的，除此以外，还可以由usbkey对待签名的数据进行hash运算及补位，相应的签名过程及 调用的PKCS#11接口有所变化，大致如下：</p>
+    <p>[0218]	相应地，在上述步骤201至步骤216的基础之上，可以分别对以下各步骤进行替 换：步骤204和步骤205可替换为步骤204 \步骤207替换为步骤207 \步骤212替换 为步骤212 \</p>
+    <p>[0219]	步骤204 \客户端主机向usbkey下发MSE指令，设置hash算法、签名算法和签名使用的密钥；</p>
+    <p>[0220]	调用的PKCS#11接口函数为：</p>
+    <p>[0221]	Il登录，获取密钥使用权限</p>
+    <p>[0222]	C_Login (hSession, CKU_USER，ucPin, lstrlen (ucPin))；</p>
+    <p>[0223]	H设置签名算法和签名密钥</p>
+    <p>[0224]	CK_MECHANISM ckMechanismSign = {CKM_SHA1_RSA_PKCS, NULL_PTR,0}；</p>
+    <p>[0225]	C_SignInit(hSession, &amp;ckMechanismSign, hPriKey)；</p>
+    <p>[0226]常用的签名算法标识符包括	CKM_SHA1_RSA_PKCS、CKM_MD5_RSA_PKCS、CKM_MD2_RSA_PKCS 等；</p>
+    <p>[0227]	在本发明实施例2中，客户端主机的上层应用程序设置算法标识符为CKM_SHA1_ RSA_PKCS，表示hash运算使用SHAl算法、数字签名使用RSA算法，中间件向智能密钥设备 下发的APDU指令大致如下：</p>
+    <p>[0228]	//MSE指令，设置hash算法以及RSA密钥ID</p>
+    <p>[0229]	00 22 41 B6 80 01 32 83 02 00 23</p>
+    <p>[0230]	步骤207、.客户端主机向usbkey下发待签名数据和签名指令；</p>
+    <p>[0231]	客户端主机的调用PKCS#11接口的C_Sign函数，通过该函数传递待签名数据并获 取签名结果，具体为：</p>
+    <p>[0232]	//签名，获取签名结果</p>
+    <p>[0233]	C_Sign (hSession, pDigest, ulDigestLen, bSignatureBuffer, &amp;ulSignatureLen)；</p>
+    <p>[0234]	其中的参数“pDigest”表示需要进行数字签名的数据，即待签名数据； “bSignatureBuffer”为数字签名的结果。</p>
+    <p>[0235]	客户端主机向usbkey下发以APDU格式表示的签名指令，该客户端主机下发的 APDU 指令序列为：00 2a 9E 00 00 00。</p>
+    <p>[0236]	步骤212、. usbkey执行数字签名操作，将签名结果发送给客户端主机；</p>
+    <p>[0237]	在usbkey执行数字签名操作之前，usbkey使用步骤206中设置的（即在步骤 204、中客户端主机指定的）hash算法、签名算法和密钥对接收到的待签名数据进行hash 运算；</p>
+    <p>[0238]	在本发明实施例2中，usbkey接收到的算法标识符为CKM_SHA1_RSA_PKCS，表示 hash运算使用SHAl算法、数字签名使用RSA算法；</p>
+    <p>[0239]	然后，在hash运算得到的hash值前面加上X. 509规范所定义的算法标识串，再按 照公钥密码学标准（PKCS#1)进行补位；</p>
+    <p>[0240]例如：SHA1	算法标识串是 30 20 30 Oc 06 08 2a 86 48 86 f7 Od 02 05 0500 04 10。</p>
+    <p>[0241]	最后，usbkey对补位后的数据进行RSA运算以得到签名结果，向客户端机发送该 签名结果，并返回操作成功的状态码0x9000。</p>
+    <p>[0242]	在上述的技术方案中，对待签名数据的hash运算由usbkey执行，但在具体的实现 过程中usbkey对待签名数据进行hash运算可以根据需要对技术方案进行调整，既可以在 接收到签名指令以后进行hash运算，也可以在usbkey接收到MSE指令并设置了 hash算法、 签名算法和密钥之后进行hash运算。</p>
+    <p>[0243]	在现有技术中，采用的方案是在usbkey中内植字库的方法，但是这种方法的实现过程中要求usbkey里需要较大的存储空间用于存储字库，以保证可以正确输出所有的交 易信息，同时这种usbkey中对文字的处理也存在很多问题，消耗了大量的硬件资源；</p>
+    <p>[0244]	在本发明中，在交易服务器端采用了图片或声音等多媒体数据的形式封装交易信 息，usbkey只需要按照既定的格式输出图片或声音形式的交易信息，而不需要对数据进行 其它处理；另一方面，本发明之所以没有采用客户端主机封装交易信息的方法，是由于是实 际的应用中交易服务器随时可能因服务扩展的需要而进行升级，交易服务器升级后难以保证客户端主机完全支持新的交易处理，升级维护的难度很大，因此不予采用。</p>
+    <p>[0245] 以上所述仅为本发明的较佳实施例，并不用以限制本发明，凡在本发明的精神和</p>
+    <p>原则之内，所作的任何修改、等同替换、改进等，均应包含在本发明的保护范围之内 。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101374049A?cl=zh">CN101374049A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年10月24日</td><td class="patent-data-table-td patent-date-value">2009年2月25日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">提高签名安全性的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101409622A?cl=zh">CN101409622A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年11月26日</td><td class="patent-data-table-td patent-date-value">2009年4月15日</td><td class="patent-data-table-td ">北京飞天诚信科技有限公司</td><td class="patent-data-table-td ">一种数字签名系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2006078738A2?cl=zh">WO2006078738A2</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年1月12日</td><td class="patent-data-table-td patent-date-value">2006年7月27日</td><td class="patent-data-table-td ">International Business Machines Corporation</td><td class="patent-data-table-td ">Method and apparatus for adding signature information to electronic documents</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102075547A?cl=zh">CN102075547A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年2月18日</td><td class="patent-data-table-td patent-date-value">2011年5月25日</td><td class="patent-data-table-td ">北京天地融科技有限公司</td><td class="patent-data-table-td ">动态口令生成方法及装置、认证方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102324008A?cl=zh">CN102324008A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月23日</td><td class="patent-data-table-td patent-date-value">2012年1月18日</td><td class="patent-data-table-td ">郑州信大捷安信息技术股份有限公司</td><td class="patent-data-table-td ">基于usb安全存储加密卡的网上银行客户端系统及使用方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102347942A?cl=zh">CN102347942A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年7月1日</td><td class="patent-data-table-td patent-date-value">2012年2月8日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种基于图像采集的信息安全方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102420829A?cl=zh">CN102420829A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月15日</td><td class="patent-data-table-td patent-date-value">2012年4月18日</td><td class="patent-data-table-td ">北京握奇数据系统有限公司</td><td class="patent-data-table-td ">业务数据签名的方法、装置和系统及数字认证终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102420829B?cl=zh">CN102420829B</a></td><td class="patent-data-table-td patent-date-value">2011年12月15日</td><td class="patent-data-table-td patent-date-value">2014年7月2日</td><td class="patent-data-table-td ">北京握奇数据系统有限公司</td><td class="patent-data-table-td ">业务数据签名的方法、装置和系统及数字认证终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102571335A?cl=zh">CN102571335A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月8日</td><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">中国科学院研究生院</td><td class="patent-data-table-td ">双因素数字签名方法和系统以及服务器和客户端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102571335B?cl=zh">CN102571335B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月8日</td><td class="patent-data-table-td patent-date-value">2016年2月17日</td><td class="patent-data-table-td ">中国科学院信息工程研究所</td><td class="patent-data-table-td ">双因素数字签名方法和系统以及服务器和客户端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102651058A?cl=zh">CN102651058A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月30日</td><td class="patent-data-table-td patent-date-value">2012年8月29日</td><td class="patent-data-table-td ">恒宝股份有限公司</td><td class="patent-data-table-td ">具有确认数据签名功能的装置中实现防范跟随攻击的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102761420A?cl=zh">CN102761420A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月8日</td><td class="patent-data-table-td patent-date-value">2012年10月31日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种安全认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102761420B?cl=zh">CN102761420B</a></td><td class="patent-data-table-td patent-date-value">2012年8月8日</td><td class="patent-data-table-td patent-date-value">2014年10月29日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种安全认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102938034A?cl=zh">CN102938034A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月26日</td><td class="patent-data-table-td patent-date-value">2013年2月20日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种转换装置的工作方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102938034B?cl=zh">CN102938034B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月26日</td><td class="patent-data-table-td patent-date-value">2015年3月4日</td><td class="patent-data-table-td ">飞天诚信科技股份有限公司</td><td class="patent-data-table-td ">一种转换装置的工作方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103020506A?cl=zh">CN103020506A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月22日</td><td class="patent-data-table-td patent-date-value">2013年4月3日</td><td class="patent-data-table-td ">北京握奇数据系统有限公司</td><td class="patent-data-table-td ">一种结合拍照和条形码识别技术的Key设备和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103020506B?cl=zh">CN103020506B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月22日</td><td class="patent-data-table-td patent-date-value">2015年10月7日</td><td class="patent-data-table-td ">北京握奇数据系统有限公司</td><td class="patent-data-table-td ">一种结合拍照和条形码识别技术的Key设备和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103166924A?cl=zh">CN103166924A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月14日</td><td class="patent-data-table-td patent-date-value">2013年6月19日</td><td class="patent-data-table-td ">中国银联股份有限公司</td><td class="patent-data-table-td ">基于特征参数分析的安全性信息交互系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2013004065A1?cl=zh">WO2013004065A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月30日</td><td class="patent-data-table-td patent-date-value">2013年1月10日</td><td class="patent-data-table-td ">Feitian Technologies Co., Ltd.</td><td class="patent-data-table-td ">一种基于图像采集的信息安全方法及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=JhF6BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=JhF6BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009300000">H04L9/30</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=JhF6BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06K0009000000">G06K9/00</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=JhF6BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年9月1日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年10月20日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年6月27日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/e8892e325fe0d59458c7/CN101820346A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%AE%89%E5%85%A8%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E6%96%B9%E6%B3%95.pdf?id=JhF6BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3ygHeuhFUpcXMBg02rfhquYdfhAg"},"sample_url":"https://www.google.com/patents/reader?id=JhF6BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

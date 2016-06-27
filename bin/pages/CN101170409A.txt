@@ -1,0 +1,267 @@
+<!DOCTYPE html><html><head><title>专利 CN101170409A - 实现设备访问控制的方法、系统、业务设备和认证服务器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="实现设备访问控制的方法、系统、业务设备和认证服务器"><meta name="DC.contributor" content="进 陈" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2006-10-24" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了一种设备访问控制方法，该方法包括：用户向认证设备发起业务请求；所述认证设备根据所述业务请求和预置的用户权限表中的鉴权信息为用户鉴权授权；业务设备根据该鉴权授权结果为所述用户提供服务。该方法降低了业务设备访问控制的复杂程度。本发明还公开了一种设备访问控制系统、实现设备访问控制的业务设备以及实现设备访问控制的认证服务器，简单的实现了业务设备访问控制的鉴权、授权和管理过程，降低了设备访问控制的复杂程度，安全有效，且方便用户使用。"><meta name="DC.date" content="2008-4-30"><meta name="citation_patent_publication_number" content="CN:101170409:A"><meta name="citation_patent_application_number" content="CN:200610150723"><link rel="canonical" href="https://www.google.com/patents/CN101170409A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101170409A?cl=zh"/><meta name="title" content="专利 CN101170409A - 实现设备访问控制的方法、系统、业务设备和认证服务器"/><meta name="description" content="本发明实施例公开了一种设备访问控制方法，该方法包括：用户向认证设备发起业务请求；所述认证设备根据所述业务请求和预置的用户权限表中的鉴权信息为用户鉴权授权；业务设备根据该鉴权授权结果为所述用户提供服务。该方法降低了业务设备访问控制的复杂程度。本发明还公开了一种设备访问控制系统、实现设备访问控制的业务设备以及实现设备访问控制的认证服务器，简单的实现了业务设备访问控制的鉴权、授权和管理过程，降低了设备访问控制的复杂程度，安全有效，且方便用户使用。"/><meta property="og:title" content="专利 CN101170409A - 实现设备访问控制的方法、系统、业务设备和认证服务器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101170409A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101170409A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=3KRcBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101170409A&amp;usg=AFQjCNGOle5RbILMfDwrRu15_8l0qFohsg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/0a6fcb9f19939b17a284/CN101170409A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/0a6fcb9f19939b17a284/CN101170409A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101170409A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101170409A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101170409A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101170409B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101170409A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了一种设备访问控制方法，该方法包括：用户向认证设备发起业务请求；所述认证设备根据所述业务请求和预置的用户权限表中的鉴权信息为用户鉴权授权；业务设备根据该鉴权授权结果为所述用户提供服务。...</span><span itemprop="url">https://www.google.com/patents/CN101170409A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101170409A - 实现设备访问控制的方法、系统、业务设备和认证服务器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101170409A - 实现设备访问控制的方法、系统、业务设备和认证服务器" title="专利 CN101170409A - 实现设备访问控制的方法、系统、业务设备和认证服务器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101170409 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200610150723</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2008年4月30日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2006年10月24日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2006年10月24日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101170409B?hl=zh-CN&amp;cl=zh">CN101170409B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200610150723.5, </span><span class="patent-bibdata-value">CN 101170409 A, </span><span class="patent-bibdata-value">CN 101170409A, </span><span class="patent-bibdata-value">CN 200610150723, </span><span class="patent-bibdata-value">CN-A-101170409, </span><span class="patent-bibdata-value">CN101170409 A, </span><span class="patent-bibdata-value">CN101170409A, </span><span class="patent-bibdata-value">CN200610150723, </span><span class="patent-bibdata-value">CN200610150723.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%BF%9B+%E9%99%88%22">进 陈</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101170409A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101170409A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101170409A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (14),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (7)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=3KRcBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200610150723&amp;usg=AFQjCNFwRCzArjU9SRmMUeAlKDnBVnJ5Yw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=3KRcBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101170409A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEJoc4XjtbYlEE0V_kIrx_XJWDynA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT70606962" lang="ZH" load-source="patent-office">实现设备访问控制的方法、系统、业务设备和认证服务器</invention-title>
+      </span><br><span class="patent-number">CN 101170409 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA38376650" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了一种设备访问控制方法，该方法包括：用户向认证设备发起业务请求；所述认证设备根据所述业务请求和预置的用户权限表中的鉴权信息为用户鉴权授权；业务设备根据该鉴权授权结果为所述用户提供服务。该方法降低了业务设备访问控制的复杂程度。本发明还公开了一种设备访问控制系统、实现设备访问控制的业务设备以及实现设备访问控制的认证服务器，简单的实现了业务设备访问控制的鉴权、授权和管理过程，降低了设备访问控制的复杂程度，安全有效，且方便用户使用。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(27)</span></span></div><div class="patent-text"><div mxw-id="PCLM5836957" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种设备访问控制方法，其特征在于，该方法包括以下步骤：    用户向认证设备发起业务请求；    所述认证设备根据所述业务请求和预置的用户权限表中的鉴权信息为所述用户鉴权授权；    业务设备根据该鉴权授权结果为所述用户提供服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求1所述的方法，其特征在于，所述认证设备为向用户提供 服务的业务设备，该业务设备中预置用户权限子表；该方法具体包括：用户向业务设备发起业务请求；所述业务设备根据所述业务请求和所述用户权限子表中的筌权信息，在本 地为用户鉴权授权；所述业务设备根据该鉴权授权结果为所述用户提供服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求1所述的方法，其特征在于，所述认证设备为认证服务器， 该认证服务器中预置用户权限总表；该方法具体包括：用户向业务设备发起业务请求；当所述业务设备不能为用户鉴权时，该业务设备向认证服务器转发所述用 户的所述业务请求；所述认证服务器根据接收到的所述业务请求和所述用户权限总表中所述业 务设备的鉴权信息为用户鉴权授权；并将该鉴权授权结果返回给该业务设备；所述业务设备根据所述鉴权授权结果为所述用户提供服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求l、 2或3所述的方法，其特征在于，所述为用户鉴权包 括：判断用户是否为合法用户，并判断合法用户的当前状态是否允许使用业务 设备。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 根据权利要求2所述的方法，其特征在于，该方法进一步包括： 在认证服务器中预置用户权限总表，该用户权限总表中存储各业务设备的鉴权信息；所述认证服务器根据所述用户权限总表，向各业务设备分发相关的鉴权信 息，由各业务设备存储在本地所述用户权限子表中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求3或5所述的方法，其特征在于，所述业务设备与所述认 证服务器通过家庭网络或小型办公网络进行通信。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 根据权利要求5所述的方法，其特征在于，当所述业务设备为用户鉴权 失败时，还包括以下步骤：所述业务设备向认证服务器请求最新鉴权信息；所述认证服务器根据所述用户权限总表，向所述业务设备发送相关的最新 鉴权信息；所述业务设备接收到所述最新鉴权信息后，更新本地所述用户权限子表， 并根据本地更新后的用户权限子表中的鉴权信息为所述用户鉴权授权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 根据权利要求5所述的方法，其特征在于，密码或加密的口令；所述用户向业务设备发起业务请求后进一步包括：所述业务设备将业务请 求中的密码或口令加密；所述业务设备根据业务请求和所述用户权限子表中的鉴权信息在本地为用 户鉴权授权为：业务设备根据业务请求中的加密密码和用户权限子表中的加密 密码为用户鉴权授权，或者业务设备根据业务请求中的加密口令和用户权限子 表中的加密口令为用户鉴权授权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 根据权利要求3所述的方法，其特征在于，该方法进一步包括： 在认证服务器中预置用户权限总表，该用户权限总表中存储各业务设备的鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求9所述的方法，其特征在于，所述用户权限总表中各业 务设备的鉴权信息包括密码或口令，该方法进一步包括：认证服务器将所述用户权限总表中各业务设备的密码或口令加密； 所述业务设备向认证服务器转发的业务请求包括加密密码或加密口令； 所速认证服务器根据接收到的所述业务请求和所迷用卢权限总表中所速业 务设备的鉴权信息为用户鉴权授权为：所述认证服务器根据接收到的业务请求 中的加密密码和所述用户权限总表中所述业务设备的加密密码为用户鉴权授 权，或所述认证服务器根据接收到的业务请求中的加密口令和所述用户权限总 表中所述业务设备的加密口令为用户鉴权授权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11、 根据权利要求8或IO所述的方法，其特征在于，所述加密方法为函数 转换法；该函数转换法为哈希函数法、或者消息摘译法、或者密钥法、或者设 置一个共享密钥并附在要加密的内容后 一起参加哈希函数运算或者消息摘译运算。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12、 根据权利要求5或9所述的方法，其特征在于，该方法进一步包括： 通过所述认证服务器对所述用户权限总表中各业务设备鉴权信息进行管理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 根据权利要求4所述的方法，其特征在于，所述鉴权信息包括鉴权信 息的用户信息；所述业务请求包括业务请求的用户信息；所述判断用户是否为合法用户为：比较所述鉴权信息的用户信息与所述业 务请求的用户信息是否相同，结果相同则用户为合法用户；否则用户为非法用 户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14、 根据权利要求13所述的方法，其特征在于，所述鉴权信息进一步包括 沐又限信息；所述权限信息包括有效日期，或者有效时段，或者持续时间，或者以上任 意组合；所述判断合法用户的当前状态是否允许使用业务设备为：根据所述有 效曰期，或者根据所述有效时段，或者根据所述持续时间，或者根据所述任意 组合判断合法用户的当前状态是否允许使用业务设备；所述权限信息还包括服务等级和服务质量；所述服务等级用于确定用户享 受业务设备提供服务的优先级；所述服务质量用于确定用户享受业务设备提供 服务的服务质量。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15、 一种实现设备访问控制的业务设备，其特征在于，该业务设备包括业 务设备UAT子表存储单元和业务设备认证单元；所述业务设备UAT子表存储单元，用于存储用户权限子表，该用卢权限子表存储本业务设备的鉴权信息；所述业务设备认证单元，用于根据用户向该业务设备发起的业务请求和所 述用户权限子表中的鉴权信息为用户鉴权授权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16、 根据权利要求15所述的业务设备，其特征在于，该业务设备进一步包 括业务设备本地接口单元，用于通过非网络方式接收用户的业务请求，并发送 给所述业务设备认证单元。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17、 根据权利要求15所述的业务设备，其特征在于，该业务设备进一步包 括业务设备网络接口单元，用于与认证服务器进行信息交互，将认证服务器分 发的鉴权信息发送给所述业务设备存储单元；并在业务设备请求认证服务器筌 权授权时，将所述认证服务器返回的鉴权授权结果发送给所述业务设备认证单 元。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18、 根据权利要求15所述的业务设备，其特征在于，该业务设备进一步包 括业务设备加密单元，用于加密业务设备认证单元接收所述业务请求中的密码 或口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19、 根据权利要求15所述的业务设备，其特征在于，该业务设备进一步包 括业务设备状态表存储单元，与所述业务设备认证单元相连，用于存储本业务 设备用户使用状态表；该用户使用状态表存储各用户使用该业务设备的历史状 态信息，用于与所述用户权限子表中的鉴权信息结合，为用户鉴权授权。</div>
+    </div>
+    </div> <div class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20、 一种实现设备访问控制的认证服务器，其特征在于，该认证服务器包 括认证服务器UAT总表存储单元和认证服务器认证单元；所述认证服务器UAT总表存储单元，用于存储用户权限总表，该用户权限 总表存储各业务设备的鉴权信息；所述认证服务器认证单元，用于在用户向业务设备发起业务请求时，根据 该业务设备转发的所述业务请求和所述用户权限总表中该业务设备的鉴权信息 为用户鉴权授权；并将所述鉴权授权结果返回给业务设备。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21、 根据权利要求20所述的认证服务器，其特征在于，该认证服务器进一 步包括认证服务器本地接口单元，用于通过非网络方式接收用卢输入的鉴权信 息，并发送给所述认证服务器存储单元。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22、 根据权利要求21所述的认证服务器，其特征在于，该认证服务器进一 步包括用户权限总表管理单元，用于根据所述认证服务器本地接口单元发来的 管理信息，管理所述用户权限总表中各业务设备的鉴权信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23、 根据权利要求20所述的认证服务器，其特征在于，该认证服务器进一 步包括用户权限总表加密单元，与所述认证服务器存储单元相连，用于加密所 述用户权限总表存储的鉴权信息中的密码或口令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24、 根据权利要求20所述的认证服务器，其特征在于，该认证服务器进一 步包括认证服务器状态表存储单元，与所述认证服务器认证单元相连，用于存 储各业务设备用户使用状态表；该各业务设备用户使用状态表存储各业务设备 的所有用户使用该业务设备的历史状态信息，用于与所述用户权限总表中的鉴 权信息结合，为用户鉴权授权。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25、 一种设备访问控制系统，其特征在于，该系统包括：业务设备，用于根据用户发起的业务请求和预置的用户权限子表中的鉴权 信息为用户鉴权授权；并根据该鉴权授权结果为所述用户提供服务；认证服务器，用于将预置的用户权限总表中的各业务设备鉴权信息分发给 各业务设备；并在业务设备无法为用户鉴权时，根据业务设备转发的业务请求 和所述用户权限总表中请求鉴权的业务设备的鉴权信息为用户鉴权授权。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26、 根据权利要求25所述的系统，其特征在于，所述业务设备与所述认证 服务器通过家庭网络或小型办公网络进行通信。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27、 根据权利要求25所述的系统，其特征在于，所述认证服务器内置于网 关或计算机或机顶盒或媒体服务器中。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES10545238" lang="ZH" load-source="patent-office" class="description">
+    <p>实现设备访问控制的方法、系统、业务设备和认证服务器</p>
+    <p>技术领域</p>
+    <p>本发明涉及网络安全技术，更具体的涉及实现设备访问控制的方法、系统、 业务设备和认证服务器。</p>
+    <p>背景技术</p>
+    <p>随着数字化家庭、个人网络和小型办公网络等网络的发展和普及，更多的 网络应用进入到人们的生活中。这些网络所连接的网络设备为用户提供更多的 业务和应用。为了方便用户的使用，减小这些网络的配置和管理的复杂性，业 务设备在联网时可以采用自动发现、自动联网的方法，在无需人工配置的情况 下实现用户对业务设备的顺畅访问和业务设备间的资源共享。但是这种方便的 设备访问方法和设备间资源共享有可能导致网络安全问题，业务设备不能限制 非法用户的使用，或者限制合法用户使用业务设备提供的某些功能。因此，如 何处理这些网络中出现的设备访问安全问题，是十分重要的课题。</p>
+    <p>现有的网络安全措施一般包括复杂的认证、授权和管理（3A, Authentication 、 Authorization 、 Administration)内容。3见有的i殳备^方问4空制系统 采用3A方法实现设备访问控制，该系统一般包括连接网络、提供业务的业务 设备、用户终端和安全认证服务器。其中安全认证服务器作为设备访问控制的 实现装置。用户如果要使用网络中业务设备N的某些资源或服务，首先要通过 终端向安全认证服务器请求身份认证；认证通过后，安全认证服务器再向用户 终端颁发权证，之后用户便携带这个权证向业务设备N提出服务申请；业务设 备N接到服务申请后，先要向安全认证服务器确认这个权证的真伪，也可以是 安全认证服务器向业务设备N传达有关该用户的权证，然后与用户的权证进行 比较，确认这个权证的真伪。如果权证为真，业务设备N为用户授权。此时，</p>
+    <p>用户才可以使用业务设备N的规定资源，并且只具有权证中规定的权限。可见， 用户每次使用业务设备，业务设备都需要与认证服务器进行信息交互，在认证 服务器的协助下实现设备访问控制，并且在上述设备访问控制过程的开始和进 行中，还牵涉到权限管理、密钥产生和分发、设备认证、协议协商、加密通道 和传输等等更为复杂的过程。</p>
+    <p>用户身份认证是设备访问控制的重要环节，目前一般采用的用户名加密码</p>
+    <p>(User ID+Password )、数字证书、生物技术、媒介终端等技术进行身份认证。 这些身份认证技术各有优缺点。例如，数字证书需要有可信的颁发机构或服务 器，且同时区分同一终端上的不同用户也有困难；生物技术需要有信息转换设 备，实现代价较高；媒介终端除了有成本较高的问题外，还有"只认帽子不认 人，，的缺点，易于失效。相比而言，采用用户名加密码的身份认证方式，是比 较实用和有效的。但是在实际应用中，加密信息的存储、管理、分发和传输过 程都有一系列方法和规程，较为复杂。当认证通过，进行权限颁发时，还涉及 到身份挑战、协议或密钥协商等程序。</p>
+    <p>可见，上述的设备访问控制系统和方法实现起来比较复杂，需要专业人 员实现。但是， 一些家庭网络和小型办公网络的所有者和使用者往往是普通 用户，对于他们来说，希望在不需要付出较大代价的情况下就能建立、运行 和维护设备访问控制系统，并且简单可靠的实现设备访问控制。因此，现有 的设备访问控制系统和方法对普通用户来说过于复杂，不能够满足普通用户 建立和使用维护的要求。</p>
+    <p>发明内容</p>
+    <p>有鉴于此，本发明实施例第一个主要目的在于提供一种设备访问控制方法， 能够降低设备访问控制的复杂程度。</p>
+    <p>本发明实施例第二个主要目的在于提供 一 种实现业务访问控制的业务设 备，能够筒单的实现对访问业务设备用户的鉴权和授权。</p>
+    <p>本发明实施例第三个主要目的在于提供一种实现业务访问控制的认证服务</p>
+    <p>器，能够简单的实现对访问业务设备用户的鉴权和授权。</p>
+    <p>本发明实施例第四个主要目的在于提供一种设备访问控制系统，能够降低 设备访问控制的复杂程度。</p>
+    <p>为达到上述发明目的的第一个方面，本发明实施例提供了一种设备访问控</p>
+    <p>制方法，该方法包括以下步骤：</p>
+    <p>用户向认证设备发起业务请求；</p>
+    <p>所述认证设备根据所述业务请求和预置的用户权限表中的鉴权信息为用户 鉴权授权；</p>
+    <p>业务设备根据该鉴权授权结果为所述用户提供服务。</p>
+    <p>为达到上述发明目的的第二个方面，本发明实施例提供了一种实现设备访 问控制的业务设备，该业务设备包括业务设备存储单元和业务设备认证单元；</p>
+    <p>所述业务设备存储单元，用于存储用户权限子表，该用户权限子表存储本 业务设备的鉴权信息；</p>
+    <p>所述业务设备认证单元，用于根据用户向该业务设备发起的业务请求和所 述用户权限子表中的鉴权信息为用户鉴权授权。</p>
+    <p>为达到上述发明目的的第三个方面，本发明实施例提供了一种实现设备访</p>
+    <p>证单元；</p>
+    <p>所述认证服务器存储单元，用于存储用户权限总表，该用户权限总表存储 各业务设备的鉴权信息；</p>
+    <p>所述认证服务器认证单元，用于在用户向业务设备发起业务请求时，根据 该业务设备转发的所述业务请求和所述用户权限总表中该业务设备的鉴权信息 为用户鉴权授权；并将所述鉴权授权结果返回给业务设备。</p>
+    <p>为达到上述发明目的的第四个方面，本发明实施例提供了一种设备访问控 制系统，该系统包括：</p>
+    <p>业务设备，用于根据用户发起的业务请求和预置的用户权限子表中的鉴权 信息为用户鉴权授权；并根据该鉴权授权结果为所述用户提供服务；</p>
+    <p>认证服务器，用于将预置的用户权限总表中的各业务设备鉴权信息分发给</p>
+    <p>各业务设备；并在业务设备无法为用户鉴权时，根据业务设备转发的业务请求</p>
+    <p>和所述用户权限总表中请求鉴权的业务设备的鉴权信息为用户鉴权授权。</p>
+    <p>与现有技术相比，本发明实施例在认证设备中存储用户权限表，该用户权 限表中存储了鉴权信息。当作为认证设备的业务设备在接收到用户发起的业务 请求时，可以通过读取自身存储的鉴权信息在本地直接对用户进行鉴权和授权， 从而简单、有效、低成本的实现了设备访问控制。即使认证服务器不在线，也 不影响用户的认证、授权和使用业务设备，为用户的使用提供了方便。</p>
+    <p>对于没有存储能力的业务设备，作为认证设备的认证服务器根据用户权限 总表存储的鉴权信息为这类业务设备进行用户鉴权。因此，本发明实施例的设 备访问控制系统充分考虑到业务设备的具体情况，为能力有限的业务设备提供 了实现设备访问控制的可能性，具备较好的兼容性。</p>
+    <p>附图说明</p>
+    <p>图1为本发明实施例设备访问控制方法的方法流程图。</p>
+    <p>图2为本发明实施例设备访问控制方法第一较佳实施例的方法流程图。 图3为图2中步骤120具体实现的方法流程图。</p>
+    <p>图4为本发明实施例设备访问控制方法第二较佳实施例的方法流程图。 图5为本发明实施例设备访问控制系统的组成结构框图。 图6为本发明实施例实现设备访问控制的认证服务器的组成结构框图。 图7为本发明实施例实现设备访问控制的业务设备的组成结构框图。 图8为图5中无UAT子表业务设备的组成结构框图。</p>
+    <p>具体实施方式</p>
+    <p>为使本发明的目的、技术方案和优点更加清楚明白，下面结合实施例和 附图，对本发明进一步详细说明。</p>
+    <p>本发明实施例的核心思想是用户发起业务请求后，认证设备根据用户发</p>
+    <p>起的业务请求和预置的用卢权限表中的鉴权信息为用卢鉴权授权，业务设备 根据该餐权授权结果为用户提供服务，从而实现了设备访问控制。</p>
+    <p>其中，鉴权信息包括用户信息和权限信息。用户信息用于判断用户是否</p>
+    <p>为合法用户，即为用户认证；权限信息表示合法用户具有哪些使用业务设备</p>
+    <p>的权限，用于判断合法用户当前状态是否允许使用该业务设备，即为用户进 行权限判断。该权限信息还用于为用户授权规定的使用业务设备权限。因此 为用户鉴权包括认证和权限判断两部分，都通过则根据权限信息为用户授</p>
+    <p>权。用户信息和权限信息都存储在 一 张用户权限表（UAT ， User Access-Control Table )内。该用户权限表分为UAT总表和UAT子表。UAT 子表存储业务设备所有用户的用户信息及其权限信息，该表存放在各业务设 备中，由认证服务器向业务设备分发。UAT总表汇总所有业务设备中所有 用户的用户信息及其权限信息，该表存放在认证服务器中，由管理员建立、 分发和管理。例如在家庭网络中，由家长管理UAT总表。</p>
+    <p>因此，认证设备可以是业务设备，也可以是认证服务器。业务设备根据 用户发起的业务请求和UAT子表中的鉴权信息为用户鉴权授权；当业务设 备不能对用户鉴权时，认证服务器协助该业务设备为用户鉴权授权，此时认 证服务器根据该业务设备发送的用户发起的业务请求和UAT总表中该业务 设备的鉴权信息为用户鉴权授权。</p>
+    <p>采用业务设备鉴权情况下，图1为本发明实施例设备访问控制方法的方 法流程图。采用该方法实现设备访问控制的具体步骤如下：</p>
+    <p>步骤ll,在认证服务器中存储UAT总表，并分发给业务设备，业务设 备将其存储到UAT子表中。</p>
+    <p>步骤12,在用户请求使用业务设备时，输入用户信息。</p>
+    <p>步骤13，业务设备根据UAT子表中的用户信息对用户进行认证，并根</p>
+    <p>据权限信息对用户进行权限判断。用户认证成功且权限判断通过，则执行步</p>
+    <p>骤14;否则执行步骤15，业务设备拒绝用户使用，流程结束。</p>
+    <p>步骤14，业务设备根据权限信息授予用户规定的使用权限，用户在规</p>
+    <p>定的权限内使用该业务设备。</p>
+    <p>基于以上设备控制访问方法的思想，图2为本发明实施例设备控制访问 方法的第一较佳实施例。该实施例中，认证服务器与业务设备通过局域网进</p>
+    <p>行信息交互，该局域网可以是家庭网络。业务设备不仅包括有UAT子表业 务设备，还包括无UAT子表业务设备。无UAT子表业务设备的用户信息和 权限信息存储在认证服务器的UAT总表中，当用户请求使用时，业务设备 请求服务器协助其进行用户认证和权限判断。本实施例实现设备访问控制方 法的具体步骤如下：</p>
+    <p>步骤101,在认证服务器中存储UAT总表，并分发给有存储能力的各 业务设备。</p>
+    <p>本步骤的UAT表分发过程在业务设备初始化时执行一次。业务设备在 为用户鉴权、授权过程中， 一般不用再与认证服务器进行通信。</p>
+    <p>本步骤中，认证服务器中存储的UAT总表主要包括以下几个域：</p>
+    <p>用户名（UID， User Identification),表示用户或用户组的身份，用来 区分不同的用户； 一个用户可以有一个或一个以上的用户名， 一个用户名可 以为 一个或者一组用户共有。</p>
+    <p>用户密码（Password )，用来对用户的身份进行认证。用户名与密码也 可以合为一个域，此时密码其实是隐含在用户名中，称为口令（Access Code)。 对于用户输入能力有限的业务设备，如微波炉的控制面板，使用口令作为用 户身份认证是比较合适和方便的。</p>
+    <p>设备标识（DID, Device Identification)，用于表示各个业务设备。该 设备标识与用户名连在一起表示某用户被允许访问的业务设备。在UAT总 表中，可以有一个或者一个以上的DID,也可以是DID组或所有的DID, 也可以采用通配符的形式进行设备匹配。管理员可以根据业务设备自动发现 的结果，选择DID,以简化管理。UAT子表中没有这一项。</p>
+    <p>服务标识(SID, Service Identification),用于表示允许访问的服务。 SID可以限制用户可以访问的服务，由于一个业务设备可能会提供多个服</p>
+    <p>务，因此SID可以是一个或者一个以上。UID、 DID与SID联合一起表示某 用户被允许访问的某个业务设备的某个服务或者某项功能。</p>
+    <p>访问权限，表示用户对业务设备或业务设备提供的服务所允许进行的操 作，包括读取权、改写权、使用权和配置权等。</p>
+    <p>有效日期，用于定义UAT表项的有效日期，在有效日期外，本表项将 失效。</p>
+    <p>有效时段，用于定义UAT表项在一天中的有效时段，在有效时段外， 本表项失效。例如，家长可以通过设置有效时段来控制孩子在一天中允许看 电视、上网或玩游戏等活动的时段。</p>
+    <p>持续时间，用于控制用户使用业务设备或服务的持续时间。该域可以按 次、按天或按周进行累计。例如，家长可以通过设置持续时间来控制孩子在 一段时间内看电视、上网或玩游戏等活动的最长时间。</p>
+    <p>月良务等级（COS, Class of Service )，用来设置不同用户在使用某业务 设备或业务设备所提供的某项服务时所享受的优先等级，以及在网络繁忙时 是否允许用户接入的控制，从而区分出不同用户或应用对网络和设备资源的 优先权。 一般局域网内可以分为2级或4级或8级，用以区分家庭办公、安 全监控和报警、网络电话、视频、上网等业务流的报文在局域网内传输时所 享有的优先级。例如，对于使用虚拟专用网进行家庭办公的业务设备，其服 务等级可设为0,也就是最高优先级，其报文在局域网内传输时享受最高优 先级；对于使用网络电话的用户或业务设备，其COS可设为0，也就是最高 优先级，其报文也享受最高优先级，但在网络繁忙的时候，由于话音质量受 到了影响，为了保证用户服务质量，可不允许该用户接入。而对于COS为1 的使用网络电话的用户，此时可允许接入。在实现时，可以采用局域网内的 路由器、交换机或网关按照流分类，或按照识别设备端口、源地址和目的地 址，如网际协议IP地址、媒体接入控制MAC地址，等方法对用户的业务流 进行识别，然后给相应的报文打上COS标志，并按各类报文各自的COS优 先级来处理和转发报文。</p>
+    <p>服务质量（QOS, Quality of Service ),用于区分在用卢使用本业务设 备或业务设备所提供的服务时所享受的服务质量，可以定义为量化的网络带 宽，其实现方法与COS的实现相似，即在局域网内的路由器、交换机或网 关采用流分类，或按照设备端口、源地址和目的地址等方法对用户的业务流 进行识别，然后给相应的报文打上QOS标志，为其分配不同的带宽。</p>
+    <p>当然，以上所述的域不能理解为限制本发明，可以根据不同的需要添加 其它的域，用于表示更为丰富的内容，或者划分更为细致的权限。</p>
+    <p>一个UAT总表的表项由上述域的全部或一部分组成。在这些域中，用 户信息包括用户名和密码或口令，用于用户的认证；权限信息包括服务标识、 访问权限、有效日期、有效时段、持续时间、服务等级和服务质量，用于表 示该用户能获得的具体权限。如果对于某业务设备不一定使用的权限或者暂 时不想加以限制的权限，可以不对某些域加以定义，在表项中将其定义成"不 限制"。UAT总表可以按用户或按设备进行排列，以便于管理。表1是一 个按用户进行排序的UAT总表的例子，表2是一个按设备进行排序的UAT 总表的例子。如表1所示， 一个用户名对应一个密文形式的用户密码或口令， 以及一系列的具体权限。对于口令类用户，用户名栏可以为空白，只采用口 令进行用户身份的认证。</p>
+    <p>UAT子表所包含的表项与UAT总表相似，不同之处在于UAT子表没 有设备标识这一项。 一个UAT子表的表项由用户名、密码或口令、访问权 限、有效日期、有效时段、持续时间、服务等级和服务质量这些域的一部分 或者全部组成。UAT子表可以按用户进行排序。</p>
+    <p>&lt;table&gt;table see original document page 14&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;&lt;table&gt;table see original document page 15&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;表2</p>
+    <p>认证服务器将UAT总表中的表项分发给所涉及的业务设备，业务设备 存储与相关的表项。完成了 UAT表的存储和分发，业务设备就可以在用户 请求使用时，在本地对用户进行鉴权和授权了。</p>
+    <p>步骤102,当用户请求使用业务设备时，业务设备要求用户输入用户名 和密码，此时用户输入自己的用户名和密码。</p>
+    <p>本步骤中，以带有机顶盒的电视机为例，机顶盒将电视机接入局域网， 用户可以通过电视遥控器输入用户名和密码。在电视画面上会出现要求用户 输入的提示信息，对用户身份验证的结果也是通过电视画面的形式反馈给用 户的。</p>
+    <p>步骤103,业务设备用预先确定的加密方法将密码转换为密文。 本步骤中，将密码加密是为了保证UAT表中关键信息的安全性。UAT 表中，用户密码或口令这些需要保密的关键信息都是以密文形式出现的。只 有在用户申请设备或服务，或管理员进行UAT表管理时才会输入关键信息 的明文。在其他任何时候，关键信息都是以密文形式存在和传输的。因而， 即使UAT总表或子表被盗取或在传输时被截获，关键信息将不会失密。在 实际应用中，包括用户名的其它各域也可以被加密，以密文的形式保存。 根据局域网络的特点，本发明采用简化的统一加密方法来保证密码、口 令等关键信息在存储、分发、管理和使用时的姿仝和可信。为关键信息加密 的方法是一种字符转换方法，将密码等要加密的内容转换成其他字符串，并 且不能轻易地从转换后的结果推导出转换前的结果。可以采用函数转换作为 加密方法，该函数转换法包括但不限于单向哈希函数法、消息摘译法和密钥</p>
+    <p>法等。哈希函数类算法可以采用循环冗余检验（CRC， Cyclical Redundancy Check)类算法，如IEEE802定义的输出为32比特的CRC-32算法；还可以 采用扰码法（Scrambler)、随机函数法等。消息摘译（MD, Message Digest) 法可以采用输出为128比特的MD4或MD5、安全散列算法等方法。密钥类 算法可以使用如数据加密标准（DES， Data Encryption Standard)、三重数 才居力口密才示〉隹（3DES )禾口高级力口密&#27706;示〉侏（AES， Advanced Encryption Standard ) 等方法。密钥可以是网络环境下所有设备共享的。为了增强加密效果，可以 采用哈希函数或消息摘译法与密钥结合，在网络环境下所有设备共享一个密 钥，这个共享密钥附加在要加密的内容后， 一起参与哈希或消息摘译运算。 其中，哈希或消息摘译的算法以及共享密钥都可以在网络初始化时、有业务 设备加入时由管理员选定，或者定期由管理员更新。</p>
+    <p>本实施例采用CRC-32哈希函数算法与密钥结合对密码或口令进行加 密。设要加密的内容为用户密码P,长度为64比特；共享密钥K，长度为 64比特；将K附加到P后，组成一个长度为128比特的新字符串，称为EP; 将EP用如下CRC-32的生成多项式的方法进行处理，</p>
+    <p>G(x) = x32 +x26 +x23 +x22 +x16 +x12 +x" +x10 +x8 +jc7 +x5 +x4 +jc2 +x' +1 ,</p>
+    <p>得到的32比特EP的CRC-32比特串，即为明文P经由密钥K加密后 的密文，表示为CRC32 (P，K)。在UAT总表和子表中，以及在UAT表项 内容传输的过程中，P将以其密文CRC32(P，K)的形式存在。由于采用单向 的哈希函数，以及除管理员外的其他人员不知道事先定义的加密算法具体内 容，因此即使得到密文也无法获取对应明文。需要加密的内容、加密算法和 密钥都是在网络初始化或业务设备加入网络时由管理员设置的，并且可以根</p>
+    <p>据管理员的要求进行更改。</p>
+    <p>步骤104,判断业务设备中是否有UAT子表。如果有则执行步骤105; 否则执行步骤120，业务设备请求认证服务器对用户进行认证和用户使用状 态判断，并根据返回的认证和使用状态判断结果为用户授权或拒绝用户使用。</p>
+    <p>本步骤中，用户使用状态是指用户使用该业务设备的历史使用状态信 息。例如累计使用时间。本实施例中，首先对用户请求使用有UAT子表业 务设备的情况进行说明，因此执行步骤105。</p>
+    <p>步骤105,判断业务设备的UAT子表是否可用。如果可用则执行步骤 106;否则执行步骤140，业务设备请求认证服务器对用户进行认证；认证 通过，则从UAT总表中读取该用户对应该业务设备的用户信息和权限信息， 发送给业务设备，执行步骤108，及其后续流程。</p>
+    <p>本步骤中，要判断UAT子表是否可用的原因是，有些业务设备中有UAT 子表，但是出于某些原因，业务设备无法获得自身存储的UAT表项内容， 比如说业务设备的UAT子表溢出，则业务设备会请求认证服务器协助进行 用户认证，再将与用户相关的用户信息和权限信息发送给业务设备，由业务 设备根据接收的权限信息进行权限判断。此时，业务设备也可以用接收的用 户信息和权限信息更新UAT子表。</p>
+    <p>步骤106 ~ 107，业务设备将用户密码与UAT子表的对应内容进行比较。 如果结果相同则执行步骤108;否则执行步骤130，业务设备拒绝用户使用， 通知原因，流程结束。</p>
+    <p>本步骤中，业务设备将步骤103中生成的用户密码密文与UAT子表中 申请使用业务设备用户的用户密码密文进行比较，以实现对用户身份的认 证。比较结果相同则认证通过，执行步骤108;否则执行步骤130。本实施 例中，假设结果相同，通过认证，则执行步骤108。</p>
+    <p>步骤108，业务设备判断用户使用状态是否为允许。如果允许则执行步 骤109;否则执行步骤130，业务设备拒绝用户使用，通知用户原因，流程</p>
+    <p>结束。</p>
+    <p>本步骤中，用户使用状态的判断是判断合法用户的当前状态是否允许使 用业务设备，也就是对用户的权限判断。认证成功和用户使用状态用户允许</p>
+    <p>才能够为用户授权。使用状态是否为允许是由UAT表项中所有有关权限内 容的域值决定的，只要有一个域的条件不满足，即表明该用户的用户使用状 态为不允许，则即使是合法用户，业务设备也会拒绝其使用请求。</p>
+    <p>本实施例中，UAT表中存储有关用户权限的内容包括服务标识、访问 权限、有效日期、有效时段、持续时间、服务等级和服务质量。在判断用户 使用状态是否为允许的时候，要判断用户是否能使用业务设备中用户要求使 用的功能，要求执行的操作是否允许，当天是否为使用业务设备的有效日期， 当时是否为使用该业务设备的有效时段等。由于权限信息还包括持续时间， 对该用户权限的判断采用持续时间与用户使用业务设备的累计时间进行比 较。在其它域的条件都满足的情况下，如果累计时间超过持续时间，则认为 用户使用状态为允许，否则用户使用状态为不允许。其中，累计时间存储在 用户使用状态表中，对于有UAT子表的业务设备该用户使用状态表存储在 业务设备中，对于无UAT子表的业务设备该用户使用状态表存储在认证服 务器中。</p>
+    <p>举个例子，在家庭网络中，家长希望控制孩子在一天中的使用电视的累 计时间，因此在对应电视这个业务设备的UAT表项当中，针对孩子用户将 持续时间设置为2小时，其它域值可设置为不限制。当孩子想要看电视时， 输入密码或口令，通过认证后，业务设备从用户使用状态表中读取孩子用户 的累计时间，根据孩子用户的累计时间和持续时间判断孩子的使用状态是否 为允许。当发现累计时间已经满2小时，超过了持续时间，则判断孩子对电 视的使用状态为不允许，执行步骤130,设备拒绝孩子使用，并告知原因， 流程结束。</p>
+    <p>本实施例中假设判断结果为用户使用状态为允许使用，则执行步骤109。 步骤109，业务设备授予用户规定的使用权限，用户在其权限规定范围</p>
+    <p>内使用该业务设备。</p>
+    <p>步骤IIO，用户使用结束后，业务设备维护用户使用状态表，结束流程。 本步骤中，当用户使用完业务设备，业务设备清除自身的 一些使用标记，</p>
+    <p>同时记录下当前的用户使用状态，更新用户使用状态表中相应的内容。例如</p>
+    <p>当孩子使用电脑游戏后电脑游戏应更新累计时间值。根据UAT子表中的这</p>
+    <p>名孩子用户的持续时间域的规定，如果累计时间超过持续时间，则此名用户 今天内再次使用电脑游戏，则电脑游戏将拒绝其使用要求。</p>
+    <p>当本实施例的步骤104判断出业务设备中没有UAT子表，会执行步骤 120，业务设备携带用户名和密码请求认证服务器对用户进行认证和使用状 态判断，并根据认证服务器返回的认证和用户使用状态的判断结果为用户授 权或拒绝用户使用。此时认证设备为认证服务器。参见图3,步骤120的具 体^l行过程如下：</p>
+    <p>步骤1201，业务设备查询认证服务器是否为可用。如果可用，则执行 步骤1202,进入认证服务器认证流程；否则执行步骤130,业务设备拒绝用 户使用，通知其原因，结束流程。</p>
+    <p>本步骤中，如果因网络故障，或认证服务器故障等原因，导致业务设备 无法与认证服务器进行通信，则认为认证服务器不可用。当认证服务器不可 用时执行的步骤130与图2中的步骤130相同。</p>
+    <p>步骤1202 - 1203,业务设备将用户名和密码送往认证服务器，请求其 给予认证。认证服务器根据用户名读取UAT总表中对应表项，判断该用户 输入的密码是否与UAT总表中该用户对应该业务设备的密码一致，并判断</p>
+    <p>用户状态是否允许。</p>
+    <p>本步骤中，由于业务设备没有存储UAT子表的能力，因此也没有存储</p>
+    <p>用户使用状态表。在使用过程中，用户认证和用户使用状态的判断是通过查 认证服务器的UAT总表和用户使用状态表实现的，而用户使用状态表则存 储在认证服务器中。认证服务器通过用户认证后，读取用户使用状态表的内 容，这里是累计时间，根据累计时间结合该用户权限信息的具体内容判断用</p>
+    <p>户的使用状态是否为允许。</p>
+    <p>步骤1204,判断用户密码正确且使用状态允许，如果是，则执行步骤</p>
+    <p>1205，否则执行步骤1208和步骤130，认证服务器通知业务设备用户鉴权 或授权失败及原因，业务设备拒绝用户使用，通知用户原因，流程结束。</p>
+    <p>步骤1205，认证服务器将UAT总表中该用户的权限信息发往业务设备， 通知业务设备用户通过认证且使用状态允许。</p>
+    <p>步骤1206,业务设备根据收到的该用户的权限信息，授予用户规定的 使用权限，用户使用业务设备。</p>
+    <p>步骤1207,用户使用结束，业务设备通知认证服务器，认证服务器维 护用户使用状态表的相关内容。</p>
+    <p>本步骤中，用户使用业务设备结束。业务设备清除自身的一些使用标志， 并通知认证服务器使用结束，由认证服务器记录当前用户使用状态，维护用 户使用状态表。</p>
+    <p>在实际应用中，业务设备中存储的UAT子表的表项有可能与认证服务 器中UAT总表的相应内容不同。这是因为如果某个时候管理员在认证服务 器处更新或维护了 UAT总表，然后主动下发给各业务设备，这时，如果某 个业务设备没有联网，或者处于关机状态，则错过了 UAT子表的更新。当 用户使用新的密码或口令请求使用该业务设备时，用户不能通过认证，因而 不能正常使用该业务设备，这就给用户使用带来了不便。为了改善这种情况， 在业务设备采用UAT子表认证用户失败时，允许业务设备向认证服务器提 出更新UAT子表请求，认证服务器对该业务设备的UAT子表进行更新。</p>
+    <p>以下举实施例来说明业务设备用户认证不成功，申请更新UAT子表的</p>
+    <p>情况。参见图4,图4为本发明设备访问控制方法的第二较佳实施例的方法 流程图。实现本发明设备访问控制的方法的具体步骤如下：</p>
+    <p>步骤201 ~ 205与第一较佳实施例中步骤101 ~ 105相同；步骤220与第 一较佳实施例中步骤120相同；步骤240与第 一较佳实施例中步骤140相同。</p>
+    <p>步骤206- 207,业务设备将用户名密码与业务设备内UAT子表的对应</p>
+    <p>内容进行比较，结杲相同则认证通过，执行步骤208;否则执行步骤211。 本实施例中，业务设备对用户认证不通过，执行步骤211。 步骤211,业务设备查询认证服务器是否为可用。如果是则执行步骤</p>
+    <p>212;否则执行步骤230，业务设备拒绝用户使用，通知用户原因，结束流程。</p>
+    <p>步骤212~214,业务设备请求认证服务器更新UAT子表，认证服务器 向业务设备发送相关的UAT子表更新项，其中含有最新用户信息和权限信 息信息。业务设备收到更新表项后查新的UAT子表并再次认证，即将表中 该用户密码与步骤203中转换的密码密文相比较。</p>
+    <p>步骤215，判断比较结果，如果结果相同则认证成功执行步骤208;否 则，认证失败，执行步骤230，业务设备拒绝用户使用，通知用户原因，流 程结束。</p>
+    <p>步骤208及其后续流程与第 一较佳实施例中的步骤108及其后续流程相同。</p>
+    <p>为了保证业务设备UAT子表的正确性，业务设备也可以定期、或者开 机时主动向认证服务器请求更新UAT子表。业务设备请求更新UAT子表的 步骤也可以在步骤208判断用户使用状态为不允许后进行。</p>
+    <p>本发明还能够简单的实现对用户鉴权信息的管理。管理员只要对认证服 务器中的UAT总表存储的用户信息和权限信息进行增加、删除、修改和分 发等操作，就可以实现对设备访问控制的管理，操作筒单，方便用户使用。 管理操作由管理员或者被授予权限的用户进行。例如在家庭网络中可以由家 长进行管理。为了便于UAT表的管理，在认证服务器中，针对UAT操作可 以设置一些命令，如表3所示。用户在管理的时候只要使用即可。</p>
+    <p>&lt;table&gt;table see original document page 21&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt; &lt;table&gt;table see original document page 22&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;表3</p>
+    <p>这些命令在用户界面上，可以用网页WEB的形式表现出来，以便于操 作。如再加上设备和服务自动发现的功能，只要会上网的用户就会管理UAT 表了。其中，用户界面预先建立和存储在认证服务器中。</p>
+    <p>为了实现本发明的设备访问控制方法，本发明提供了设备访问控制系 统。图5为本发明设备访问控制系统的实施例。</p>
+    <p>如图5所示，该设备访问控制系统包括局域网50、认证服务器51、有 UAT子表业务设备52和无UAT子表业务设备53。在局域网50与外网相连 的情况下，图5所示的设备访问控制系统还包括网关54,图5中以虚线表 示。在实际应用中，设备访问控制系统所连接的业务设备可以只包括有UAT</p>
+    <p>子表业务设备52,而没有无UAT子表业务设备53。当然，设备访问控制系 统所连接的业务设备也可以只包括无UAT子表业务设备53。</p>
+    <p>连接在局域网50上的各联网设备通过局域网50进行信息的交互。该局 域网可以是家庭网络，或者小型办公网络。</p>
+    <p>认证服务器51,用于实现用户权限总表的建立、加密、分发和管理功 能，并负责协助业务设备为用户鉴权授权。认证服务器51中设置有UAT总 表，该UAT总表存储有各个业务设备的鉴权信息，并通过局域网50分发给 系统中各个有UAT子表业务设备52。协助业务设备为用户鉴权时，接收无 UAT子表业务设备53发送来的用户输入的用户名和密码，并根据该用户名 和密码和UAT总表中请求鉴权的业务设备的用户名、密码和权限信息为用 户鉴权；鉴权成功则向无UAT子表业务设备53返回相关权限信息。在实际 应用中，有UAT子表设备52在UAT子表不能正常读取的时候也可以申请 认证服务器51协助其进行鉴权。</p>
+    <p>该认证服务器51还可以设置在网关54内，对于认证服务器设置于网关 的情况，网关不仅具有分隔局域网与外网的功能，还负责UAT表的分发和 协助业务设备为用户鉴权授权，与认证服务器的功能相同。此外，认证服务 器51还可以设置在其它联网的功能设备中，例如计算机，或者机顶盒，或 者媒体服务器。</p>
+    <p>有UAT子表业务设备52，存储有UAT子表；在用户发起业务请求时， 有UAT子表业务设备52接收用户输入的用户名和密码，对密码进行加密后， 根据该密码密文和UAT子表中该用户的密码密文为用户进行认证，并根据 UAT子表中该用户的权限信息为用户进行权限判断，并在权限判断通过后 授予用户规定的权限。</p>
+    <p>无UAT子表业务设备53，用于接收用户输入的用户名和密码，对密码 进行加密后，将用户名和密码密文发送给认证服务器51,并接收认证服务 器51返回的认证和权限判断结果。认证成功且权限判断通过，则根据同时 接收的该业务设备的权限信息为用户授权。</p>
+    <p>认证服务器51可以采用本发明的实现设备访问控制的认证服务器。图 6为本发明实施例实现设备访问控制的认证服务器的结构框图。该认证服务</p>
+    <p>器包括网络接口单元601、本地接口单元602、认证单元611、管理单元612、 加密单元613、 UAT总表存储单元621、和状态表存储单元622。</p>
+    <p>其中，UAT总表存储单元621,用于存储UAT总表。UAT总表的存储 格式如表1或者表2所示。</p>
+    <p>状态表存储单元622,用于存储各业务设备用户使用状态表；该各业务 设备用户使用状态表存储各业务设备的所有用户使用该业务设备的历史状 态信息，用于与所述UAT总表中的鉴权信息结合，为用户鉴权授权。本实 施例中，用户使用状态表存储的用户使用状态是用户使用业务设备的累计时 间。该用户使用状态表可以包括用户名域、设备标识域和累计时间域；对于 使用口令的业务设备来说，用户名域可以存储口令；用户使用状态表可以根 据需要扩充。如果不需要存储用户使用状态，认证服务器中也可以不设置状 态表存储单元622。</p>
+    <p>网络接口单元601，用于认证服务器与业务设备实现信息交互。网络接</p>
+    <p>口单元601向业务设备发送UAT总表中相关该业务设备的鉴权信息。在业 务设备请求认证服务器鉴权授权时，将该业务设备转发的用户输入的用户名 和密码发送给认证单元611，并向该业务设备返回鉴权授权结果。同时，该 单元还负责进行报文处理。</p>
+    <p>本地接口单元602,与UAT总表存储单元621相连，用于通过非网络 方式与用户进行信息交互。本地接口单元602可以将用户终端通过串口或者 串行总线（USB)接口等本地连接方式接入认证服务器。用户可以通过对用 户终端的操作，通过本地接口单元602向UAT总表输入鉴权信息，或者向 管理单元612输入管理信息，实现对UAT总表的管理。当然，通过网络接 口单元601传送来的信息也可以作为UAT总表的管理信息，只需将网络接 口单元601与管理单元612相连。但是为了安全起见，推荐规定只有从本地 接入的管理员才被允许建立、修改、维护UAT总表。认证单元611,用于在业务设备无法使用UAT子表为用户鉴权时，通 过网络接口单元601接收业务设备转发的用户输入的用户名和密码，并从</p>
+    <p>UAT总表存储单元621读取该用户的用户名和密码，通过比较两个密码为 用户认证，认证通过，从UAT总表存储单元621读取该用户权限信息，并</p>
+    <p>判断；认证通过和权限判断成功，则将该用户权限信息通过网络接口单元 601返回给业务设备。此处，无法使用UAT子表为用户鉴权的业务设备为 无UAT子表的业务设备53。对于有UAT子表的业务设备52,认证单元611 只要进行用户认证，认证通过，将用户名和密码以及权限信息返回给业务设 备，由业务设备进行权限判断。并选择是否根据收到的用户名和密码以及权 限信息更新UAT子表内容。</p>
+    <p>管理单元612,用于根据用户通过本地接口单元602发来的管理信息， 管理UAT总表中各业务设备的鉴权信息。对鉴权信息的管理包括对鉴权信 息的增加、删除、修改或分发给各业务设备。该管理单元中预先设置了一些 UAT操作命令，这些命令定义和功能如表3所示。用户只要通过用户终端 输入这些命令即可实现相应的管理操作。</p>
+    <p>加密单元613，用于加密UAT总表中用户的密码。本实施例中，在管 理员创建和维护UAT总表时，对输入的密码进行加密。</p>
+    <p>有UAT子表业务设备52采用本发明提供的实现设备访问控制的业务设 备。图7为本发明实现设备访问控制的业务设备的组成结构框图。这类业务 设备本身具有鉴权功能。如图7所示，该业务设备网络接口单元701、本地 接口单元702、设备功能单元703、认证单元711、加密单元713、 UAT子 表存储单元721和状态表存储单元722。</p>
+    <p>其中，UAT子表存储单元721,与认证单元711相连，用于存储UAT 子表。在设备初始化或者认证服务器分发UAT表项时，接收认证服务器51 通过网络接口单元721发来的用户名、密码和权限信息，并将本业务设备相 关内容存储在UAT子表中。</p>
+    <p>状态表存储单元722,用于存储本业务设备用卢使用状态表；该用户使</p>
+    <p>用状态表存储各用户使用该业务设备的历史状态信息，用于与所述用户权限 子表中的鉴权信息结合，为用户鉴权授权。如果不需要存储用户使用状态，</p>
+    <p>有UAT子表业务设备中也可以不设置状态表存储单元722。本实施例中，</p>
+    <p>设备的累计时间。需要说明的是，对于无UAT子表的设备53,其用户使用 状态表存储在认证服务器51中。</p>
+    <p>网络接口单元701,与认证单元711和UAT子表存储单元721相连， 用于将本业务设备接入局域网50。接收网上信息，并为该信息所承载的业 务流进行识别，然后给相应的报文打上COS标志和QOS标志。其中，网上 信息包括业务流信息、认证服务器51通过局域网分发给业务设备的鉴权信 息等。如果有UAT子表业务设备不以网络方式与认证服务器进行信息交互， 则采用其它形式的接口单元。</p>
+    <p>本地接口单元702，与认证单元711相连，用于通过非网络方式与用户 进行信息交互。本地接口单元702可以采用遥控接口、串口、 USB接口等本 地接口连接如遥控器、键盘等本地用户终端，该用户终端作为用户名和密码 的输入装置。当用户需要使用本业务设备时，可以通过遥控器、键盘输入用 户名和密码。当然，如果业务设备本身具有输入装置，则可以通过该输入装 置进行用户名和密码的输入。业务设备本身的输入装置是包含在设备功能单 元703中的，例如电话的键盘、微波炉的操作面板。</p>
+    <p>加密单元713，用于为认证单元711接收的用户输入的密码进行加密。</p>
+    <p>认证单元711，用于接收用户输入的用户名和密码。加密单元713对该 密码进行加密。然后认证单元713从UAT子表存储单元721中读取该用户 的用户名、密码和权限信息。判断用户输入的密码密文与UAT子表存储单 元721中存储的密码密文是否相同，以实现对用户的认证。认证通过，认证 单元711还需要从状态表存储单元722中读取该用户的用户使用状态，根据 用户使用状态和权限信息判断合法用户的当前状态是否允许使用该业务设</p>
+    <p>备。如杲允许，则根据权限信息为该用户授权，并将该授权结果发送给设备</p>
+    <p>功能单元703。</p>
+    <p>设备功能单元703在认证单元711为用户授权后，为用户提供其权限范 围内的服务。</p>
+    <p>图5中连接在局域网中的业务设备还有无UAT子表的业务设备53,此 类业务设备本身不具备鉴权功能。图8为无UAT子表业务设备的组成结构 框图。由图8中可以看出，无UAT子表业务设备与图7所示的有UAT子表 业务设备结构相似，不同之处在于，无UAT子表业务设备中不包括存储UAT 子表和用户使用状态表的单元，且认证单元811不能用于认证，只能用于授 权。当用户请求使用无UAT子表业务设备53时，认证单元811接收用户输 入的用户名和密码信息，该密码信息经加密单元813加密后，转发用户名和 密码密文给认证服务器。认证服务器51认证成功且权限判断通过，则认证 单元811根据认证服务器51返回的权限信息为用户授权。</p>
+    <p>由以上技术方案可以看出，本发明所提供的设备访问控制方法和系统以 及实现业务访问控制的认证服务器和业务设备简单有效的解决了访问设备 时对用户的鉴权、授权问题，不仅保证了网络安全，而且降低了设备访问控 制实现的复杂程度。当在业务设备对用户鉴权失败时，允许业务设备请求认证 服务器向业务设备发送鉴权信息，并再次对用户进行鉴权。保证业务设备中鉴 权信息的正确性。</p>
+    <p>其次，本发明实施例还将关键信息采用统一的函数转换方法对关键信息进 行加密。关键信息在存储、管理、分发和传输过程中都以密文形式存在，即使 用户权限表泄漏，关键数据也不会被破解，系统安全不会因此受到威胁。且加 密算法简单，并可以由管理员更新，因此进一步增加了系统的安全性。</p>
+    <p>此外，管理员只要对认证服务器用户权限总表的内容进行增加、删除、 修改或分发操作，就能实现对设备访问控制系统的管理，方法简单，普通用 户即可完成。</p>
+    <p>综上所述，以上仅为本发明的较佳实施例而已，并非用于限定本发明的</p>
+    <p>保护范围。凡在本发明的精神和原则之内，所作的任何修改、等同替换、改 进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101296086B?cl=zh">CN101296086B</a></td><td class="patent-data-table-td patent-date-value">2008年6月18日</td><td class="patent-data-table-td patent-date-value">2010年12月8日</td><td class="patent-data-table-td ">成都市华为赛门铁克科技有限公司</td><td class="patent-data-table-td ">接入认证的方法、系统和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101729541B?cl=zh">CN101729541B</a></td><td class="patent-data-table-td patent-date-value">2009年11月26日</td><td class="patent-data-table-td patent-date-value">2014年8月13日</td><td class="patent-data-table-td ">广东宇天科技有限公司</td><td class="patent-data-table-td ">多业务平台的资源访问方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101827110A?cl=zh">CN101827110A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年5月13日</td><td class="patent-data-table-td patent-date-value">2010年9月8日</td><td class="patent-data-table-td ">中国工商银行股份有限公司</td><td class="patent-data-table-td ">一种企业局域网中的应用服务器访问系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101827110B?cl=zh">CN101827110B</a></td><td class="patent-data-table-td patent-date-value">2010年5月13日</td><td class="patent-data-table-td patent-date-value">2012年9月26日</td><td class="patent-data-table-td ">中国工商银行股份有限公司</td><td class="patent-data-table-td ">一种企业局域网中的应用服务器访问系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101951368A?cl=zh">CN101951368A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月10日</td><td class="patent-data-table-td patent-date-value">2011年1月19日</td><td class="patent-data-table-td ">深圳市同洲电子股份有限公司</td><td class="patent-data-table-td ">基于子网络的服务权限控制方法、终端及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101951403A?cl=zh">CN101951403A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年9月16日</td><td class="patent-data-table-td patent-date-value">2011年1月19日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种信息终端中基于分级的集中式认证与授权方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102025747A?cl=zh">CN102025747A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月29日</td><td class="patent-data-table-td patent-date-value">2011年4月20日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">家庭信息机及其认证方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102065439A?cl=zh">CN102065439A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月13日</td><td class="patent-data-table-td patent-date-value">2011年5月18日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">干扰协调方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102307097A?cl=zh">CN102307097A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月2日</td><td class="patent-data-table-td patent-date-value">2012年1月4日</td><td class="patent-data-table-td ">深圳中兴网信科技有限公司</td><td class="patent-data-table-td ">一种用户身份认证方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102804733A?cl=zh">CN102804733A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年2月9日</td><td class="patent-data-table-td patent-date-value">2012年11月28日</td><td class="patent-data-table-td ">特维欧互动有限公司</td><td class="patent-data-table-td ">混合终端机的用户验证方法及实现该方法的装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103067463A?cl=zh">CN103067463A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月19日</td><td class="patent-data-table-td patent-date-value">2013年4月24日</td><td class="patent-data-table-td ">新浪网技术(中国)有限公司</td><td class="patent-data-table-td ">用户root权限集中管理系统和管理方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103491072A?cl=zh">CN103491072A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月6日</td><td class="patent-data-table-td patent-date-value">2014年1月1日</td><td class="patent-data-table-td ">北京信息控制研究所</td><td class="patent-data-table-td ">一种基于双单向隔离网闸的边界访问控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103765843A?cl=zh">CN103765843A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月16日</td><td class="patent-data-table-td patent-date-value">2014年4月30日</td><td class="patent-data-table-td ">特维欧互动有限公司</td><td class="patent-data-table-td ">混合终端机的用户验证方法及实现该方法的装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2010006555A1?cl=zh">WO2010006555A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年7月17日</td><td class="patent-data-table-td patent-date-value">2010年1月21日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">System and method for creating multiple mobility profiles per subscriber in wireless communications systems</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=3KRcBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009320000">H04L9/32</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=3KRcBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2008年4月30日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2008年6月25日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年11月3日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年6月10日</td><td class="patent-data-table-td ">COR</td><td class="patent-data-table-td ">Change of bibliographic data</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">CORRECT: ADDRESS; FROM: 518129 SHENZHEN, GUANGDONG PROVINCE TO: 518057 SHENZHEN, GUANGDONG PROVINCE</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年6月10日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of patent application or patent right or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年6月10日</td><td class="patent-data-table-td ">ASS</td><td class="patent-data-table-td ">Succession or assignment of patent right</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Owner name: </span><span class="nested-value">TENGXUN SCI-TECH (SHENZHEN) CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">FORMER OWNER: HUAWEI TECHNOLOGY CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Effective date: </span><span class="nested-value">20150518</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年2月3日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of patent application or patent right or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/0a6fcb9f19939b17a284/CN101170409A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%AE%9E%E7%8E%B0%E8%AE%BE%E5%A4%87%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%9A%84%E6%96%B9%E6%B3%95_%E7%B3%BB%E7%BB%9F.pdf?id=3KRcBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1Sl5o-JWPof3lITqD8yXRhWRdzIQ"},"sample_url":"https://www.google.com/patents/reader?id=3KRcBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

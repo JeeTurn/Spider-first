@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head><title>专利 CN102694747A - 即时通信中实现点评操作的方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="即时通信中实现点评操作的方法及系统"><meta name="DC.contributor" content="马宇尘" scheme="inventor"><meta name="DC.contributor" content="上海量明科技发展有限公司" scheme="assignee"><meta name="DC.date" content="2012-6-12" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种即时通信中实现点评操作的方法及系统，属于通信、软件技术领域。该方法包括有如下步骤：步骤1，采集发起方的点评申请，通过发起方客户端向点评接收方所在的接收方客户端推送；步骤2，通过接收方客户端中的联系人列表对应着前述发起方的ITEM项或点评汇总结构，输出前述发起方点评申请的点评提示信息；步骤3，采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；步骤4，输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端输出。利用本发明能够便利地在用户和联系人对象之间，对待点评信息进行点评操作。"><meta name="DC.date" content="2012-9-26"><meta name="citation_patent_publication_number" content="CN:102694747:A"><meta name="citation_patent_application_number" content="CN:201210193308"><link rel="canonical" href="https://www.google.com/patents/CN102694747A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102694747A?cl=zh"/><meta name="title" content="专利 CN102694747A - 即时通信中实现点评操作的方法及系统"/><meta name="description" content="本发明提供了一种即时通信中实现点评操作的方法及系统，属于通信、软件技术领域。该方法包括有如下步骤：步骤1，采集发起方的点评申请，通过发起方客户端向点评接收方所在的接收方客户端推送；步骤2，通过接收方客户端中的联系人列表对应着前述发起方的ITEM项或点评汇总结构，输出前述发起方点评申请的点评提示信息；步骤3，采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；步骤4，输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端输出。利用本发明能够便利地在用户和联系人对象之间，对待点评信息进行点评操作。"/><meta property="og:title" content="专利 CN102694747A - 即时通信中实现点评操作的方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102694747A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102694747A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=W0-lBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102694747A&amp;usg=AFQjCNGvU2VvvifKC-98LQiGTeyntc_XFg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/46517a900b678bf1659d/CN102694747A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/46517a900b678bf1659d/CN102694747A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102694747A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102694747A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102694747A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种即时通信中实现点评操作的方法及系统，属于通信、软件技术领域。该方法包括有如下步骤：步骤1，采集发起方的点评申请，通过发起方客户端向点评接收方所在的接收方客户端推送；步骤2，通过接收方客户 ...</span><span itemprop="url">https://www.google.com/patents/CN102694747A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102694747A - 即时通信中实现点评操作的方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102694747A - 即时通信中实现点评操作的方法及系统" title="专利 CN102694747A - 即时通信中实现点评操作的方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102694747 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210193308</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年9月26日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年6月12日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年6月12日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210193308.3, </span><span class="patent-bibdata-value">CN 102694747 A, </span><span class="patent-bibdata-value">CN 102694747A, </span><span class="patent-bibdata-value">CN 201210193308, </span><span class="patent-bibdata-value">CN-A-102694747, </span><span class="patent-bibdata-value">CN102694747 A, </span><span class="patent-bibdata-value">CN102694747A, </span><span class="patent-bibdata-value">CN201210193308, </span><span class="patent-bibdata-value">CN201210193308.3</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%A9%AC%E5%AE%87%E5%B0%98%22">马宇尘</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%8A%E6%B5%B7%E9%87%8F%E6%98%8E%E7%A7%91%E6%8A%80%E5%8F%91%E5%B1%95%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">上海量明科技发展有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102694747A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102694747A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102694747A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=W0-lBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210193308&amp;usg=AFQjCNHrldBr6PU8Xtny8VsiFDQJGEAuqQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=W0-lBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102694747A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHNY30DceyOfVOrUZlMMKrVDNJ_5g"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT115906422" lang="ZH" load-source="patent-office">即时通信中实现点评操作的方法及系统</invention-title>
+    </span><br><span class="patent-number">CN 102694747 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA100788287" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种即时通信中实现点评操作的方法及系统，属于通信、软件技术领域。该方法包括有如下步骤：步骤1，采集发起方的点评申请，通过发起方客户端向点评接收方所在的接收方客户端推送；步骤2，通过接收方客户端中的联系人列表对应着前述发起方的ITEM项或点评汇总结构，输出前述发起方点评申请的点评提示信息；步骤3，采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；步骤4，输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端输出。利用本发明能够便利地在用户和联系人对象之间，对待点评信息进行点评操作。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(17)</span></span></div><div class="patent-text"><div mxw-id="PCLM45486132" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种即时通信中实现点评操作的方法，其特征在于该方法包括有如下步骤：  步骤1，采集发起方的点评申请，通过发起方客户端向点评接收方所在的接收方客户端推送；  步骤2，通过接收方客户端中的联系人列表对应着前述发起方的ITEM项或点评汇总结构，输出前述发起方点评申请的点评提示信息；  步骤3，采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；  步骤4，输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端输出。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求I所述的�种即时通信中实现点评操作的方法，其特征在于：通过发起方所在的发起方客户端，设置用以触发点评操作的点评控件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求I所述的�种即时通信中实现点评操作的方法，其特征在于：所述的点评申请，是未进行待点评数据采集的点评预约申请，或是采集获得待点评数据后的点评申请。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的�种即时通信中实现点评操作的方法，其特征在于：所述的点评预约申请，设置有用以触发发起方和点评接收方之间预约实时交互界面的预约时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求I所述的�种即时通信中实现点评操作的方法，其特征在于：在触发了点评申请后，生成发起点评操作界面，通过该界面输出有待点评信息采集控件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求I所述的�种即时通信中实现点评操作的方法，其特征在于：所述的点评接收方，通过发起方基于所在即时通信客户端的联系人列表进行设定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求I所述的�种即时通信中实现点评操作的方法，其特征在于：所述的点评提示信息通过接收方客户端上的点评提示结构进行输出。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的�种即时通信中实现点评操作的方法，其特征在于：所述的点评提示结构，包括有用以输出待点评对象数据的待点评对象栏，和/或用以输出点评&#21443;与人数的点评&#21443;与统计栏，和/或用以输出点评截止时间的点评截止时间栏。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的�种即时通信中实现点评操作的方法，其特征在于：对应所述的点评提示结构，设置有实时点评提示栏，用以输出实时点评提示信息，或预约实时点评提示信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求7所述的�种即时通信中实现点评操作的方法，其特征在于：所述的点评提示结构，是用以触发执行点评操作界面的控件结构。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的�种即时通信中实现点评操作的方法，其特征在于：对应着所述的点评操作界面，设置有待点评信息输出窗口和点评信息输入窗ロ。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求10所述的�种即时通信中实现点评操作的方法，其特征在于：对应着所述的点评操作界面，设置有已有点评输出窗ロ，用以输出已经建立的点评信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求I所述的�种即时通信中实现点评操作的方法，其特征在于：所述的点评界面，是发起方和点评接收方之间的实时交互界面。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的�种即时通信中实现点评操作的方法，其特征在于：所述的实时交互界面为预约实时交互界面，其生成的步骤为，  设置用以触发预约实时交互界面的预约时间；  采集时间信息；判定是否达到预约时间；  在达到预约时间的情况下，触发发起方和点评接收方之间开启预约实时交互界面。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的�种即时通信中实现点评操作的方法，其特征在于：所述的时间信息，为即时通信的系统服务器所提供的系统时间。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求I所述的�种即时通信中实现点评操作的方法，其特征在于：所述的实时交互界面为预约实时交互界面，其生成的步骤为，  设置触发预约实时交互界面的&#21443;与人数阈值；  采集&#21443;与的即时通信客户端的数量，每个即时通信客户端视为�个&#21443;加人数；  判定是否达到前述的&#21443;与人数阈值；  在达到&#21443;与人数阈值的情况下，触发发起方和点评接收方之间开启预约实时交互界面。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.	&#8212;种即时通信中实现点评操作的系统，其特征在于该系统包括：  点评发起&#21336;元，用以通过发起方客户端采集发起方的点评申请，向点评接收方所在的接收方客户端推送；  点评提示输出单元，用以通过接收方客户端中的联系人列表对应前述发起方的ITEM项或点评汇总结构，输出前述发起方点评申请的点评提示信息；  点评操作触发单元，用以通过接收方客户端采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；  点评回馈&#21336;元，用以通过接收方客户端输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端；  点评输出&#21336;元，用以通过发起方客户端接收来自于接收方客户端的点评信息后输出。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES51841341" lang="ZH" load-source="patent-office" class="description">
+    <p>即时通信中实现点评操作的方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001 ] 本发明属于通信、软件技术领域。</p>
+    <p>技术背景</p>
+    <p>[0002]	即时通信（InstantMessaging,简称IM),大多数情况下,指的是能够即时发送或接收互联网消息等功能的业务。它已成为人们通过网络进行交互通信的平台，用以实现包括文本、图片、语音、视频、多媒体等多种数据格式的交互操作，并能够对已有的文档数据利用即时通信工具便利地进行传输操作。在交互通信的基础上，通过即时通信工具还逐步发展出了个人页面、博客、微博、电子邮件、音乐、图片、游戏、影视和搜索等多种功能。即时通信工具已不再单纯作为聊天工具，还实现了资讯、娱乐、搜索、电子商务、办公、网络社区等更加广泛的用途。能够实现即时通信接入功能的设备是多种多样的。典型的设备类型，包括个人电脑、平板电脑，以及智能手机，等等。</p>
+    <p>[0003]目前即时通信软件的类型也多种多样，典型的包括腾讯科技公司的QQ、微软公司的MSN、AOL的ICQ，以及淘宝旺旺、网易泡泡、飞信，等等。</p>
+    <p>[0004]	即时通信在目前的技术条件下，具有很强大的交互通信功能。但用户和联系人对象之间，不以直接通信为目的的互动操作很少，不利于交互各方交流环境的营造，也不利于用户通过即时通信工具实现网上社区体验。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明的目的，是提供一种即时通信中实现点评操作的方法，以及对应的系统，利用本发明能够便利地在用户和联系人对象之间，对待点评信息进行点评操作。</p>
+    <p>[0006]	本发明提供一种即时通信中实现点评操作的方法，该方法包括有如下步骤：</p>
+    <p>[0007]	步骤1，采集发起方的点评申请，通过发起方客户端向点评接收方所在的接收方客户端推送；</p>
+    <p>[0008]	步骤2，通过接收方客户端中的联系人列表对应着前述发起方的ITEM项或点评汇总结构，输出前述发起方点评申请的点评提示信息；</p>
+    <p>[0009]	步骤3，采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；</p>
+    <p>[0010]	步骤4，输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端输出。</p>
+    <p>[0011]	进一步，通过发起方所在的发起方客户端，设置用以触发点评操作的点评控件。 </p>
+    <p>[0012]	进一步，所述的点评申请，是未进行待点评数据采集的点评预约申请，或是采集获得待点评数据后的点评申请。</p>
+    <p>[0013]	进一步，所述的点评预约申请，设置有用以触发发起方和点评接收方之间预约实时交互界面的预约时间。</p>
+    <p>[0014]	进一步，在触发了点评申请后，生成发起点评操作界面，通过该界面输出有待点评信息采集控件。[0015]	进一步，所述的点评接收方，通过发起方基于所在即时通信客户端的联系人列表进行设定。</p>
+    <p>[0016]	进一步，所述的点评提示信息通过接收方客户端上的点评提示结构进行输出。</p>
+    <p>[0017]	进一步，所述的点评提示结构，包括有用以输出待点评对象数据的待点评对象栏，和/或用以输出点评参与人数的点评参与统计栏，和/或用以输出点评截止时间的点评截止时间栏。</p>
+    <p>[0018]	进一步，对应所述的点评提示结构，设置有实时点评提示栏，用以输出实时点评提示信息，或预约实时点评提示信息。</p>
+    <p>[0019]	进一步，所述的点评提示结构，是用以触发执行点评操作界面的控件结构。 [0020]	进一步，对应着所述的点评操作界面，设置有待点评信息输出窗口和点评信息输入窗口。</p>
+    <p>[0021]	进一步，对应着所述的点评操作界面，设置有已有点评输出窗口，用以输出已经建立的点评彳目息。</p>
+    <p>[0022]	进一步，所述的点评界面，是发起方和点评接收方之间的实时交互界面。</p>
+    <p>[0023]	进一步，所述的实时交互界面为预约实时交互界面，其生成的步骤为，</p>
+    <p>[0024]	设置用以触发预约实时交互界面的预约时间；</p>
+    <p>[0025]	采集时间信息；</p>
+    <p>[0026]	判定是否达到预约时间；</p>
+    <p>[0027]	在达到预约时间的情况下，触发发起方和点评接收方之间开启预约实时交互界面。</p>
+    <p>[0028]	进一步，所述的时间信息，为即时通信的系统服务器所提供的系统时间。</p>
+    <p>[0029]	进一步，所述的实时交互界面为预约实时交互界面，其生成的步骤为，</p>
+    <p>[0030]	设置触发预约实时交互界面的参与人数阈值；</p>
+    <p>[0031]	采集参与的即时通信客户端的数量，每个即时通信客户端视为一个参加人数；</p>
+    <p>[0032]	判定是否达到前述的参与人数阈值；</p>
+    <p>[0033]	在达到参与人数阈值的情况下，触发发起方和点评接收方之间开启预约实时交互界面。</p>
+    <p>[0034]	本发明还提供一种即时通信中实现点评操作的系统，该系统包括：</p>
+    <p>[0035]	点评发起单元，用以通过发起方客户端采集发起方的点评申请，向点评接收方所在的接收方客户端推送；</p>
+    <p>[0036]	点评提示输出单元，用以通过接收方客户端中的联系人列表对应前述发起方的ITEM项或点评汇总结构,输出前述发起方点评申请的点评提示信息；</p>
+    <p>[0037]	点评操作触发单元，用以通过接收方客户端采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；</p>
+    <p>[0038]	点评回馈单元，用以通过接收方客户端输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端；</p>
+    <p>[0039]	点评输出单元，用以通过发起方客户端接收来自于接收方客户端的点评信息后输出。附图说明</p>
+    <p>[0040]	图I是本发明所述即时通信中实现点评操作的方法的流程图，为实施例I。</p>
+    <p>[0041]	图2是本发明所述即时通信中实现点评操作的方法的流程图，为实施例2。</p>
+    <p>[0042]	图3是本发明所述即时通信中实现点评操作的方法的流程图，为实施例3。</p>
+    <p>[0043]	图4是本发明所述即时通信中实现点评操作的系统的结构框图，为实施例4。 具体实施方式</p>
+    <p>[0044]	在本发明中，实现了一种能够便利地由发起方发起点评操作的技术。通过该方法，用户可以触发相应的点评申请，并将该点评申请发送至联系人对象所在的即时通信客户端中输出。联系人对象触发了前述的点评申请之后，进入到相应的操作界面进行点评操作。进而将点评信息反馈至发起方所在的发起方客户端输出。</p>
+    <p>[0045]	实施例I</p>
+    <p>[0046]	参图I所示，在本实施例中，所述的即时通信中实现点评操作的方法通过如下步骤实施：</p>
+    <p>[0047]	步骤1，采集发起方的点评申请，通过发起方客户端向点评接收方所在的接收方客户端推送；</p>
+    <p>[0048]	步骤2，通过接收方客户端中的联系人列表对应着前述发起方的ITEM项或点评汇总结构，输出前述发起方点评申请的点评提示信息；</p>
+    <p>[0049]	步骤3，采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；</p>
+    <p>[0050]	步骤4，输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端输出。</p>
+    <p>[0051]	在前述步骤I中，发起方的点评申请，可以包括有待点评数据的详细内容，也可以不包括，仅仅包含代表着相应的点评申请中少量的字符信息也是可以的，或者对待点评数据进行截图也是可以的。将点评申请发送到接收方客户端中，对应着发起方的ITEM项输出点评提示信息。另外，也可以通过接收方主面板上的点评汇总结构来输出点评提示信息。</p>
+    <p>[0052]	下面对ITEM项的背景知识进行描述：即时通信客户端在终端设备上运行时，为了进行操作的便利，通常设置有即时通信主面板。在即时通信主面板上设置有各种功能控件，还包括有联系人列表。在该联系人列表中设置着各个联系人对象的数据信息。按照常见的方式，联系人对象的数据信息中包括有联系人图标和联系人用户名。所述的联系人图标通常设置的是联系人对象的头像信息；当然也不限定；而所述的联系人用户名既可以由联系人对象来设定，也可以由用户自己进行修改后设定，另外也可以采用即时通信工具的默认名称。联系人图标和联系人用户名所在的区域大多为矩形的方框，习惯上将该区域称为ITEM 项。</p>
+    <p>[0053]	前面所述的点评汇总结构，是用以输出点评汇总信息的界面形式或者控件结构。作为常见的实施例，适合通过设置在即时通信主面板上的窗口形式来实现，通过该窗口能够载入点评提示信息，比如说，当有联系人对象发出点评提示信息后，能够通过该窗口显示相应的符号或者文字或者图像来进行标识，进一步，通过该点评汇总结构，对应点评汇总界面进行设置。在该点评汇总界面中，展示有所接收到的所有待点评数据，以及已点评数据。在实施时，可以通过所述的点评汇总结构，关联点评汇总界面所对应窗口的句柄信息。通过触发点评汇总结构，获取前述的句柄信息后生成点评汇总界面所对应的窗口，进而采集相关的已点评数据或待点评数据载入到该窗口中，输出给用户。</p>
+    <p>[0054]	进而，用户通过前述的已点评数据或待点评数据所构成的内容，在触发了其中的相应选项后，就可以进入到与其相对应的操作界面，获取更详细的数据信息。</p>
+    <p>[0055]	下面通过实施例2和实施例3，对本发明的实施方式作进一步描述。</p>
+    <p>[0056]	实施例2</p>
+    <p>[0057]	参图2所示,在该实施例中，发起方A通过发起方客户端,来向点评接收方展示自己佩戴项链时的视频数据，接受点评接收方的点评操作。具体说来，它包括有如下步骤：</p>
+    <p>[0058]	步骤S110，通过发起方A的发起方客户端，设置用以触发点评操作的点评控件； </p>
+    <p>[0059]	这儿所述的点评控件，用以接受发起方的点评申请。所述的点评申请，有多种触发方式。比如，可以通过预设的快捷键进行触发，或者通过预设的语音内容进行触发。作为优选的实施例，可以通过所在发起方客户端设置点评控件的方式来实现。该点评控件适合设置在发起方所在的即时通信主面板上。该点评控件并不需要针对于特定的联系人设置，因为点评操作可以选择各个联系人对象来实施。但需要指出的是，也可以针对于特定联系人对象的ITEM项，来设置该点评控件。</p>
+    <p>[0060]	本发明中的点评申请，按照是否进行预约来进行区分，包括有两种：第一种是未进行待点评数据采集的点评预约申请；第二种是采集获得待点评数据后的点评申请。其中的第一种，发起方只需要进行点评预约就可以了，不需要详细录入待进行点评的数据内容。其中第二种，需要发起方录制好待点评信息，然后由点评接收方进行查看及点评操作。</p>
+    <p>[0061]	本实施例中采用的是第二种方案。</p>
+    <p>[0062]	步骤S120，采集发起方通过发起方客户端的即时通信主面板，对点评控件的触发消息；</p>
+    <p>[0063]	这儿所述的触发消息，可以是鼠标的点击消息，或者是通过触摸屏所实现的触摸输入消息。</p>
+    <p>[0064]	步骤S130，生成发起点评操作界面，通过该界面输出待点评信息采集控件；</p>
+    <p>[0065]	所述的待点评信息采集控件，作为举例而非限定，包括有三种类型：</p>
+    <p>[0066]	(I)图文采集控件；（2)音频采集控件；（3)多媒体采集控件。</p>
+    <p>[0067]	其中的图文采集控件，适合以具有采集栏的控件形式来实现，用以采集发起方A所输入的字符信息，或采集发起方A所上传的文档，比如文本、音频数据或视频数据等文件类型。</p>
+    <p>[0068]	其中的音频采集控件，适合以控件按钮的形式来呈现，在触发之后启动所在终端设备上的音频采集结构，采集发起方A的音频信息。</p>
+    <p>[0069]	其中的多媒体采集控件，也适合通过控件按钮的形式来实现，触发之后用以启动所在终端上的音频采集结构和视频采集结构，对用户的音视频信息进行采集操作。</p>
+    <p>[0070]	步骤S140，触发用以采集视频信息的多媒体采集控件，启动所在终端实施多媒体数据采集功能；</p>
+    <p>[0071 ] 在本实施例中，发起方A触发了多媒体采集控件，用以实现多媒体数据的采集操作。</p>
+    <p>[0072]	步骤S150，采集发起方A的视频信息，其中该视频信息中包括有对发起方A所佩戴项链的拍摄图像；</p>
+    <p>[0073]	在本实施例中，发起方A希望由点评接收方来评价一下自己新买的项链，于是，就可以通过多媒体采集控件，来录制一段自己佩戴着项链的视频数据。</p>
+    <p>[0074]	步骤S160，采集待点评信息完成后，触发生成点评接收方设置界面，采集发起方A对点评接收方的设置信息，以及触发点评截止时间设置界面，采集点评截止时间信息； [0075]	发起方A进行项链视频的录制完成后，点击录制完成的操作按钮。于是，该操作消息就可以触发点评接收方的设置操作。</p>
+    <p>[0076]	具体来说，触发生成了点评接收方设置界面，通过该界面用以向发起方A提供设置点评接收方的操作接口。举例来说，该界面的设置方式包括如下方式至少其一：</p>
+    <p>[0077]	(I)选择所有联系人对象为点评接收方的设置控件；</p>
+    <p>[0078]	用户触发了该控件后，就可以选择所在即时通信客户端的所有联系人对象为点评接收方。</p>
+    <p>[0079]	(2)输出已有点评接收方设置列表，通过该列表输出曾经设置的点评接收方选项；</p>
+    <p>[0080]	采集用户针对于点评接收方选项的选择信息，即可参照着以往所存储的设置形式，完成对点评接收方的设定操作。</p>
+    <p>[0081]	(3)输出包括有所有联系人对象的选择列表，每一个联系人对象为一个选择项，采集发起方A的选择信息，将所选择的联系人对象设置为点评接收方。</p>
+    <p>[0082]	比如，发起方A通过曾经设置的点评接收方选项，已经预设了四位好朋友所对应的联系人对象作为默认的点评接收方，于是，就可以直接按照这种设置方式来获取对应的点评接收方。</p>
+    <p>[0083]	而前述的点评截止时间界面，用以设置截止进行点评操作的时间量。比如，可以直接采集用户所输入的截止时间，或通过时间设置方面的控件进行设定操作。</p>
+    <p>[0084]	步骤S170，向所设置的点评接收方对应的接收方客户端，发送来自于发起方A的待点评息;</p>
+    <p>[0085]	这儿所述的待点评信息，并不需要将前面所录制的项链视频内容进行整体发送，而只需要发送与待点评数据相关的内容，比如发起方A的用户识别号，以及待点评对象的介绍信息、点评截止时间，就可以了。</p>
+    <p>[0086]	步骤S180，通过接收方B所在的接收方客户端，对应着联系人列表中的发起方A的ITEM项A，生成用以输出点评提示信息的点评提示结构，通过该点评提示结构中的待点评对象栏输出待点评的项链截图，通过点评参与统计栏输出已点评人数的统计信息，以及通过点评截止时间栏输出点评截止时间；</p>
+    <p>[0087]	在本实施例中，将接收方B作为点评接收方，在接收方B的即时通信客户端的即时通信主面板中，展示有联系人列表。在该联系人列表中包括有和发起方A相对应的ITEM项，将其称为ITEM项A。</p>
+    <p>[0088]	对应在ITEM项A上，设置有点评提示结构，它作为一个设置在ITEM项A区域内的小型输出窗口的方式进行呈现。在该输出窗口中输出预设的信息内容。在本实施例中，就输出了待点评的对象信息，也就是项链的截图信息，另外，也可以是发起方A所输入的字符内容，比如“评价一下我的新项链吧”，等等形式，具体是不限定的。[0089]	另一方面，还输出了已经参与到该点评事件中的人数统计信息，或者已经接收到的点评数量的统计信息，比如说，已经有五个联系人对象进行点评操作的话，那么，就可以对累计点评操作的人数，通过点评参与统计栏进行输出，即输出字符“5”。进一步，采集发起方A所设置的点评截止时间，进行输出操作。所述的点评截止时间在输出时，既可以用具体的时间值来表达，也可以用其它的图形来表达，比如说通过沙漏一类能随时间进程改变的图标形式，来代表大致时间量，等等形式，是不限定的。</p>
+    <p>[0090]	另外，前述的点评参与统计栏，既可以输出已进行点评操作的人数的统计信息，也可以将参与到点评操作的用户进行统计。其中，参与到点评操作的行为，并不代表着已经完成了点评操作。</p>
+    <p>[0091 ] 步骤SI90，在点评截止时间的范围内，采集获得接收方B针对前述ITEM项A中的点评提示结构的触发信息，生成包括有待点评信息输出窗口和点评信息输入窗口的点评操作界面； </p>
+    <p>[0092]	在接收方B触发了点评提示结构之后，获取发起方A预先录制的待点评数据。在本实施例中，待点评数据为一段发起方A录制的佩戴项链的视频数据。该待点评数据的获取方式有两种，其中之一是通过发起方A所在的即时通信客户端，通过客户端-客户端的方式，或者客户端-系统服务器-客户端的方式进行获取。其中之二是由发起方A将前述的待点评数据预先传送到系统服务器中，通过系统服务器下载待点评数据。</p>
+    <p>[0093]	进一步，对应着前述的点评操作界面，还可以设置已有点评输出窗口，用以输出已经建立起来的点评信息。比如说，发起方A有五个联系人对象已经作了点评，就可以通过该已有点评输出窗口，输出已有的点评数据，接收方B可以查看这些已有的点评数据来作为参考。</p>
+    <p>[0094]	步骤S200，通过前述的点评信息输入窗口，触发多媒体点评控件后，采集接收方B的首视频点评彳目息；</p>
+    <p>[0095]	这儿所述的点评操作界面，包括有待点评信息输出窗口，通过该输出窗口能够输出发起方A所预先录制的项链的视频数据。以及设置有点评信息输入窗口，通过该输入窗口，接收方B可以输入自己的评价信息。通过所述的点评信息输入窗口，能够以不同的数据格式进行输入，比如，可以输入字符形式的内容，如“太漂亮了！”，或者触发对应的音频数据采集控件，采集接收方B所输入的音频数据；另外，也可以设置多媒体信息采集控件，采集一段接收方B所发出的音视频内容，作为评价信息。</p>
+    <p>[0096]	步骤S210，将前述的点评信息推送至发起方A所在的发起方客户端，经由发起点评操作界面中的已有点评输出窗口，进行数据汇总及输出。</p>
+    <p>[0097]	由接收方B所载入的音视频点评信息，连同接收方B的用户识别号，以及进行操作时的时间戳，通过数据打包，在发起方A的发起方客户端在线的情况下，获取发起方客户端的IP地址和端口号，生成发送套接字，通过异步数据传输的方式向发起方客户端进行发送操作。如果发起方客户端不在线，可以将点评信息传输至系统服务器进行存储，通过系统服务器校验发起方客户端的登录状态，在处于登录状态的情况下，将其评价数据推送至发起方客户端输出。</p>
+    <p>[0098]	当然，在发起方客户端进行评价信息输出时，也可以通过相应的点评控件进行触发。在触发了点评控件之后，生成相应的发起点评操作界面，输出所接收的点评数据信息。[0099]	进一步，在对包括接收方B在内的各个点评接收方的点评信息进行接收后，还可以进行统计，比如，可以统计发出好评的有多少人，以及发出差评的有多少人。为了方便进行该统计，还可以对应在点评接收方的点评信息输入窗口，设置相应的点评选择控件，这些点评选择控件中，可以有相应的“好评”、“差评”等控件形式，在选择相应的控件后，将选择信息发送至发起方所在的发起方客户端，经由发起方客户端能够更方便地进行统计。</p>
+    <p>[0100]	实施例3</p>
+    <p>[0101]	参图3所示，在该实施例中，发起方A通过发起方客户端，通过预约的方式，在达到预约条件的情况下，实时向点评接收方展示自己佩戴项链时的视频数据，接受点评接收方的点评操作。具体说来，该实施例包括有如下步骤：</p>
+    <p>[0102]	步骤S310，通过发起方A的发起方客户端，设置用以触发点评操作的点评控件；</p>
+    <p>[0103]	步骤S320，采集发起方A通过发起方客户端的即时通信主面板，对点评控件的触 发消息；</p>
+    <p>[0104]	步骤S330，生成发起点评操作界面，通过该界面输出有点评预约控件；</p>
+    <p>[0105]	这儿所述的点评预约控件，是用以实现点评预约功能的触发结构。所述的点评预约，指的是所触发的点评行为不在当前进行，而是在满足预约条件的情况下才实施。所述的预约条件，作为举例而非限定，有两种类型，其中之一是时间预约条件，在达到预定的时间后，就可以触发相应的点评操作；其中之二是人数预约条件，在点评接收方的人数达到预设的数量时，触发点评操作。其中，触发点评操作的方式之一，作为举例，就是触发预约实时交互界面。在触发预约实时交互界面时，作为举例而非限定，可以通过如下的步骤来实现：</p>
+    <p>[0106]	设置触发预约实时交互界面的参与人数阈值；</p>
+    <p>[0107]	采集参与的即时通信客户端的数量，每个即时通信客户端视为一个参加人数；</p>
+    <p>[0108]	判定是否达到前述的参与人数阈值；</p>
+    <p>[0109]	在达到参与人数阈值的情况下，触发发起方和点评接收方之间开启预约实时交互界面。</p>
+    <p>[0110]	比如预设的参与人数阈值为5人，于是，在有5个即时通信客户端触发了点评预约后，就可以在所述的发起方和各个参与方之间，触发生成预约实时交互界面，供各个参与方来进行实时点评，也供发起方实时发布待点评数据和查看所接收到的点评信息。</p>
+    <p>[0111]	在本实施例中，是采用时间预约条件的方式来实施的。</p>
+    <p>[0112]	步骤S340，触发点评预约控件后，载入待点评对象的字符说明信息“新项链”，并采集发起方A所设置预约时间为三个小时后的15:00，取截止时间为14:50 ;</p>
+    <p>[0113]	步骤S350，触发生成点评接收方设置界面，采集获得发起方A将所有联系人对象均设置为点评接收方的设置信息；</p>
+    <p>[0114]	步骤S360，向发起方A的所有联系人对象所在的接收方客户端，发送来自于发起方客户端的点评预约信息；</p>
+    <p>[0115]	步骤S370，通过各接收方客户端，对应着所在联系人列表中发起方A的ITEM项A，生成用以输出点评提示信息的点评提示结构，通过该点评提示结构中的待点评对象栏输出待点评对象的字符说明信息“新项链”，通过点评参与统计栏输出已加入点评预约的人数统计，以及通过点评截止时间栏输出点评预约的截止时间为14:50 ；</p>
+    <p>[0116]	步骤S380，在点评预约截止时间的范围内，采集获得接收方M针对于所在联系人列表中ITCM项A的点评提示结构的触发消息，获得接收方M的预约点评操作消息；</p>
+    <p>[0117]	步骤S390，采集即时通信系统服务器所提供的系统时间信息，判定在达到预约时间的情况下，触发发起方A和接收方M之间，以及发起方A和其他已预约接收方之间构成多媒体实时通信的联络关系，生成预约实时交互界面；</p>
+    <p>[0118]	在本实施例中，判定时间条件的方式，是需要采集时间信息量，然后和预约时间进行比对。具体说来，作为举例而非限定，包括有如下步骤：</p>
+    <p>[0119]	设置用以触发预约实时交互界面的预约时间；</p>
+    <p>[0120]	采集时间信息； [0121]	判定是否达到预约时间；</p>
+    <p>[0122]	在达到预约时间的情况下，触发发起方和点评接收方之间开启预约实时交互界面。</p>
+    <p>[0123]	其中，在采集时间信息时，既可以采集发起方客户端所在终端设备上的时间值，也可以采集接收方客户端所在终端设备上的时间值，但作为优选的实施例，是通过即时通信工具的系统服务器所提供的时间值，这样便于各方进行操作，而且数据准确。</p>
+    <p>[0124]	在符合时间条件的情况下，且在发起方A与对应的接收方M两者均在线的情况下，就可以触发发起方A和接收方M之间建立起通信的联络关系，该通信的联络关系是通过预约实时交互界面来实现的。该预约实时交互界面，能够实现发起方A和接收方M之间的实时通信交流，通过该界面能够设置有待点评数据输出窗口，来输出由发起方A所实时拍摄的自己佩戴项链时的视频数据；以及设置有点评数据输入窗口，来采集接收方M所输入的评价信息。接收方M所输入的评价信息，既可以是文本信息的形式，也可以是其它的数据形式，比如音频数据或者视频数据。</p>
+    <p>[0125]	当然，接收方M和其他的接收方之间的预约实时交互界面也采用类似的形式来实现。</p>
+    <p>[0126]	步骤S400，发起方A通过所在发起方客户端上的预约实时交互界面触发多媒体采集结构，采集佩戴着项链的视频图像，实时推送至接收方M和其他已预约接收方所在的即时通信客户端，通过所在的预约实时交互界面输出；</p>
+    <p>[0127]	这儿所述的预约实时交互界面，类似于已有即时通信交互界面中的视频通信状态的交互界面。</p>
+    <p>[0128]	但通过预约实时交互界面所设置的待点评数据输出窗口，还可以将发起方A所录制的视频信息进行存储，供用户以回播的方式查看，方便于接收方进行点评操作。</p>
+    <p>[0129]	步骤S410，采集接收方M和其他已预约接收方实时输入的音视频信息或字符信息，作为点评信息发送至发起方客户端所在的预约实时交互界面输出。</p>
+    <p>[0130]	将接收方M或其他的已预约接收方录制的点评信息，发送到发起方A所在的发起方客户端。通过发起方客户端上的预约实时交互界面中所设置的待点评信息输出窗口进行数据输出。比如说，如果所接收到的点评信息为字符内容的话，就可以将该字符内容对应着不同的点评接收方的用户名或头像图标进行输出。如果所获得的点评信息的内容为音频或视频信息的话，则可以对应着点评接收方的用户名或头像图标生成相应的音频或者视频文件的播放文件来输出。在触发了该图标之后，就可以将所对应的音频或者视频数据进行播放了。[0131]	实施例4</p>
+    <p>[0132]	参图4所示，本实施例中，对应着前述的方法，提供了一种即时通信中实现点评操作的系统100，该系统100包括有即时通信单元101，用以在发起方客户端、接收方客户端和即时通信的系统服务器之间行使即时通信的各种功能。进一步，所述的系统100还包括有如下结构：</p>
+    <p>[0133]	点评发起单元110,用以通过发起方客户端采集发起方的点评申请，向点评接收方所在的接收方客户端推送；</p>
+    <p>[0134]	点评提示输出单元120，用以通过接收方客户端中的联系人列表对应前述发起方的ITEM项或通过接收方主面板中的点评汇总结构，输出前述发起方点评申请的点评提示 信息；</p>
+    <p>[0135]	点评操作触发单元130，用以通过接收方客户端采集接收方针对于前述点评提示信息的触发操作，进入到点评界面；</p>
+    <p>[0136]	点评回馈单元140，用以通过接收方客户端输出来自于发起方的待点评数据，采集接收方的点评信息，推送至发起方客户端；</p>
+    <p>[0137]	点评输出单元150，用以通过发起方客户端接收来自于接收方客户端的点评信息后输出。</p>
+    <p>[0138]	通过所述的点评发起单元110，发起方通过所在的发起方客户端能够发出点评申请，进而将点评申请的数据信息向选择的点评接收方所在的接收方客户端进行推送操作。通过点评提示输出单元120，经由接收方客户端中和发起方相对应的ITEM项，输出和点评申请相关的点评提示信息。另外，也可以通过设置在接收方客户端的接收方主面板中的点评汇总结构，来进行点评提示信息的输出操作，以及进行各个点评数据的汇总输出操作。</p>
+    <p>[0139]	点评接收方通过所在接收方客户端中的点评操作触发单元130，在触发了点评提示信息之后，就能够进入到点评界面，通过该点评界面获取待点评数据。进而通过点评回馈单元140，点评接收方查看了待点评数据之后，通过点评界面中的点评信息输入窗口采集点评接收方的点评信息，进而推送至发起方客户端。通过发起方客户端中的点评输出单元150，将所接收到的点评信息进行输出。</p>
+    <p>[0140]	以上是对本发明的描述而非限定，基于本发明思想的其它任何实施方式，亦均在本发明的保护范围之中。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102970337A?cl=zh">CN102970337A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年10月30日</td><td class="patent-data-table-td patent-date-value">2013年3月13日</td><td class="patent-data-table-td ">腾讯科技（深圳）有限公司</td><td class="patent-data-table-td ">获取客户端评论的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103064888A?cl=zh">CN103064888A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月10日</td><td class="patent-data-table-td patent-date-value">2013年4月24日</td><td class="patent-data-table-td ">北京小米科技有限责任公司</td><td class="patent-data-table-td ">一种信息发布方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=W0-lBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012580000">H04L12/58</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年9月26日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年6月12日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/46517a900b678bf1659d/CN102694747A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%8D%B3%E6%97%B6%E9%80%9A%E4%BF%A1%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%82%B9%E8%AF%84%E6%93%8D%E4%BD%9C%E7%9A%84%E6%96%B9.pdf?id=W0-lBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3iFVUER0Dul0t79ngLvXyLqwHZqg"},"sample_url":"https://www.google.com/patents/reader?id=W0-lBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

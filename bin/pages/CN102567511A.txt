@@ -1,0 +1,458 @@
+<!DOCTYPE html><html><head><title>专利 CN102567511A - 一种应用自动推荐的方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种应用自动推荐的方法及装置"><meta name="DC.contributor" content="叶松" scheme="inventor"><meta name="DC.contributor" content="常富洋" scheme="inventor"><meta name="DC.contributor" content="秦吉胜" scheme="inventor"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2011-12-27" scheme="dateSubmitted"><meta name="DC.description" content="本申请提供了一种应用自动推荐的方法和装置，其中，所述方法包括：接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；根据所述用户行为信息确定向用户推荐的应用类别；在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。本申请能够满足用户的个性化需求，并提高推荐效率和覆盖率。"><meta name="DC.date" content="2012-7-11"><meta name="DC.relation" content="CN:101141607:A" scheme="references"><meta name="DC.relation" content="CN:101551825:A" scheme="references"><meta name="DC.relation" content="CN:101959179:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102567511:A"><meta name="citation_patent_application_number" content="CN:201110444798"><link rel="canonical" href="https://www.google.com/patents/CN102567511A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102567511A?cl=zh"/><meta name="title" content="专利 CN102567511A - 一种应用自动推荐的方法及装置"/><meta name="description" content="本申请提供了一种应用自动推荐的方法和装置，其中，所述方法包括：接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；根据所述用户行为信息确定向用户推荐的应用类别；在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。本申请能够满足用户的个性化需求，并提高推荐效率和覆盖率。"/><meta property="og:title" content="专利 CN102567511A - 一种应用自动推荐的方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102567511A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102567511A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=b5aDBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102567511A&amp;usg=AFQjCNHWB1r86Y6oFLnxwMF6dWwotoEc_Q" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3e139543dfc7127bc827/CN102567511A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3e139543dfc7127bc827/CN102567511A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102567511A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102567511A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102567511A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102567511B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102567511A?cl=zh" style="display:none"><span itemprop="description">本申请提供了一种应用自动推荐的方法和装置，其中，所述方法包括：接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户...</span><span itemprop="url">https://www.google.com/patents/CN102567511A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102567511A - 一种应用自动推荐的方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102567511A - 一种应用自动推荐的方法及装置" title="专利 CN102567511A - 一种应用自动推荐的方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102567511 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110444798</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年7月11日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年12月27日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年12月27日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102567511B?hl=zh-CN&amp;cl=zh">CN102567511B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110444798.5, </span><span class="patent-bibdata-value">CN 102567511 A, </span><span class="patent-bibdata-value">CN 102567511A, </span><span class="patent-bibdata-value">CN 201110444798, </span><span class="patent-bibdata-value">CN-A-102567511, </span><span class="patent-bibdata-value">CN102567511 A, </span><span class="patent-bibdata-value">CN102567511A, </span><span class="patent-bibdata-value">CN201110444798, </span><span class="patent-bibdata-value">CN201110444798.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%8F%B6%E6%9D%BE%22">叶松</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%B8%B8%E5%AF%8C%E6%B4%8B%22">常富洋</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%A7%A6%E5%90%89%E8%83%9C%22">秦吉胜</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102567511A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102567511A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102567511A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (18),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=b5aDBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110444798&amp;usg=AFQjCNEis1GPL_f1OKvceVBrV_jLGtdaqg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=b5aDBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102567511A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFne8eZfOBXX-IrdpU-TVqPVW0nNA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT114035764" lang="ZH" load-source="patent-office">一种应用自动推荐的方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 102567511 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA98383865" lang="ZH" load-source="patent-office">
+    <div class="abstract">本申请提供了一种应用自动推荐的方法和装置，其中，所述方法包括：接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；根据所述用户行为信息确定向用户推荐的应用类别；在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。本申请能够满足用户的个性化需求，并提高推荐效率和覆盖率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(12)</span></span></div><div class="patent-text"><div mxw-id="PCLM44207643" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	�种应用自动推荐的方法，其特征在干，包括：接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识； 根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；根据所述用户行为信息确定向用户推荐的应用类别；在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，还包括：采集提交所述应用获取请求后的用户行为信息，按用户标识写入用户特征库中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的方法，其特征在干，所述用户行为信息还包括用户的本地操作行为信息，和/或，用户的网上操作行为信息；所述根据用户行为信息确定向用户推荐的应用类别的步骤包括： 从所述用户的本地操作行为信息和/或网上操作行为信息中，提取分类标签和对应的第一操作频次；将所述分类标签按预设的关联规则转换为对应的应用类别；所述预设的关联规则为分类标签及应用类别的转换规则；从所述用户针对在先推荐应用的操作信息中，提取用户在预设时间段内所操作的应用信息及对应的第二操作频次，所述应用信息中包括应用类别；根据所述第一操作频次和第二操作频次计算各应用类别的权重，按所述应用类别的权重从高到低进行排序；提取预设数量的前η个应用类别为向用户推荐的应用类别；其中，所述η为大于1的正整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的方法，其特征在干，通过以下步骤生成某个应用类别的应用数据集：获取同一应用类别的应用，所述应用具有分类标签；在所述应用中确定主应用及待推荐应用，井根据各应用的分类标签计算待推荐应用与主应用的相似度；获取所述待推荐应用的质量评分&#21443;数；分别提取同一主应用所对应的待推荐应用，按各待推荐应用的相似度和质量评分&#21443;数从高到低进行排序，并提取预设数量前m个的待推荐应用；其中，所述m为大于1的正整数； 将主应用及所提取的对应待推荐应用&#32068;成当前应用类别的应用数据集。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的方法，其特征在干，所述在应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用的步骤包括：根据用户针对在先推荐应用的操作信息，统计主应用及对应的第三操作频次，所述主应用为用户所操作的应用；在对应应用类别的应用数据集中，根据所述主应用提取匹配的待推荐应用，并在所述匹配的待推荐应用中，将所述第三操作频次作为应用提取的权重分别提取一定数量的待推荐应用，总共提取满足第一预设数量的待推荐应用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的方法，其特征在干，所述在应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用的步骤还包括：获取主应用对应的应用类别，在同一应用类别内，按所述第三操作频次对所述主应用进行排序，提取预设数量的前k个主应用；其中，所述k为大于1的正整数；将所提取的主应用两两配对，计算所述两两配对的主应用同时出现的总次数，生成频繁2项集；计算每个主应用&#21336;独出现的次数，生成频繁1项集；根据所述频繁2项集和频繁1项集计算各主应用的置信度，并按置信度对主应用进行排序；将所提取的满足第一预设数量的待推荐应用，以及，所述按置信度排序的主应用进行匹配，生成最终推荐的匹配应用。</div>
+    </div>
+    </div> <div class="claim"> <div num="7" class="claim">
+      <div class="claim-text">7.	�种应用自动推荐的装置，其特征在干，包括：请求接收模块，用于接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；在先行为信息提取模块，用于根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；应用类别确定模块，用于根据所述用户行为信息确定向用户推荐的应用类别； 匹配应用获取模块，用于在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；应用推荐模块，用于按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求7所述的装置，其特征在于，还包括：行为统计模块，用于采集提交所述应用获取请求后的用户行为信息，按用户标识写入用户特征库中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求7所述的装置，其特征在干，所述用户行为信息还包括用户的本地操作行为信息，和/或，用户的网上操作行为信息；所述应用类别确定模块包括：第一特征提取子模块，用于从所述用户的本地操作行为信息和/或网上操作行为信息中，提取分类标签和对应的第一操作频次；转换子模块，用于将所述分类标签按预设的关联规则转换为对应的应用类别；所述预设的关联规则为分类标签及应用类别的转换规则；第二特征提取子模块，用于从所述用户针对在先推荐应用的操作信息中，提取用户在预设时间段内所操作的应用信息及对应的第二操作频次，所述应用信息中包括应用类别；排序子模块，用于根据所述第一操作频次和第二操作频次计算各应用类别的权重，按所述应用类别的权重从高到低进行排序；类别选定子模块，用于提取预设数量的前η个应用类别为向用户推荐的应用类别；其中，所述η为大于1的正整数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的装置，其特征在于，还包括：应用数据集生成模块，用于生成各个应用类别的应用数据集：具体包括： 同类应用获取子模块，用于获取同一应用类别的应用，所述应用具有分类标签； 相似度计算子模块，用于在所述应用中确定主应用及待推荐应用，井根据各应用的分类标签计算待推荐应用与主应用的相似度；质量评分&#21443;数获取子模块，用于获取所述待推荐应用的质量评分&#21443;数； 待推荐应用提取子模块，用于分别提取同一主应用所对应的待推荐应用，按各待推荐应用的相似度和质量评分&#21443;数从高到低进行排序，并提取预设数量前m个的待推荐应用； 其中，所述m为大于1的正整数；应用数据集形成子模块，用于将主应用及所提取的对应待推荐应用&#32068;成当前应用类别的应用数据集。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求10所述的装置，其特征在干，所述匹配应用获取模块包括：主应用统计子模块，用于根据用户针对在先推荐应用的操作信息，统计主应用及对应的第三操作频次，所述主应用为用户所操作的应用；待推荐应用确定子模块，用于在对应应用类别的应用数据集中，根据所述主应用提取匹配的待推荐应用，并在所述匹配的待推荐应用中，将所述第三操作频次作为应用提取的权重分别提取一定数量的待推荐应用，总共提取满足第一预设数量的待推荐应用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11所述的装置，其特征在干，所述匹配应用获取模块还包括：主应用选取子模块，用于获取主应用对应的应用类别，在同一应用类别内，按所述第三操作频次对所述主应用进行排序，提取预设数量的前k个主应用；其中，所述k为大于1的正整数；频繁2项集计算子模块，用于将所提取的主应用两两配对，计算所述两两配对的主应用同时出现的总次数，生成频繁2项集；频繁1项集计算子模块，用于计算每个主应用单独出现的次数，生成频繁1项集； 置信度计算子模块，用于根据所述频繁2项集和频繁1项集计算各主应用的置信度，并按置信度对主应用进行排序；匹配应用确定子模块，用于将所提取的满足第一预设数量的待推荐应用，以及，所述按置信度排序的主应用进行匹配，生成最终推荐的匹配应用。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES49829323" lang="ZH" load-source="patent-office" class="description">
+    <p>�种应用自动推荐的方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本申请涉及信息处理技术领域，特&#21029;是涉及�种应用自动推荐的方法和一种应用自动推荐的装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	互联网是人们获取信息的�个重要途径，传统互联网的主要特点在于用户寻找自己感兴趣的事物&#21515;，需要通过浏览器进行大量的&#25436;索，同时需要人工地过滤掉大量不相关的&#32080;果，操作繁琐，且耗费时间和精力。</p>
+    <p>[0003]	随着互联网技术的飞速发展，人们对各种网络应用（Application)的需求也越来越广泛，但随着需求的&#22679;加，人们在终端客户机中安装的终端应用也越来越多，各种应用在客户端的部署越来越臃肿庞大，这不但造成对终端资源的浪费，而且也不便于管理。即使采用客户端-服务器架构进行部署管理，服务器端在完成客户端的部署后也缺乏对后续使用的管理能力。</p>
+    <p>[0004]	尽管现在出现了所谓“瘦客户端（Thin Client) ”的概念，瘦客户端将其鼠标、键盘等输入传送到服务器处理，服务器再把处理结果回传至客户端显示。但这种处理模式受制于网络传输速度，以及服务器的处理能力等限制，因此，更多的是应用于企业级的商用局域网中，目前还不适合普通用户的娱乐需求。</p>
+    <p>[0005]	为使用户获得更好的使用体验，现有技术提出了为用户提供感兴趣的应用自动推荐的方案，即通过获知用户的兴趣所在，主动为其推荐、提供其感兴趣的应用。然而，这种应用推荐的方式，主要都是通过编辑人员手工推荐的，这种编辑人员手工推荐的方式，主要存在以下缺陷：</p>
+    <p>[0006]	1、效率过低，对于应用的推荐覆盖率太低，例如，对于平台上数十万的应用，每天采用人工推荐，也只能推荐几百个。如若想推荐全部应用实际上无法实现，而且覆盖率太低，因为所占比例太低。</p>
+    <p>[0007]	2、这种推荐完全是基于编辑人员的统一推荐原则进行，对于每个用户都一祥，无法满足用户个性化的需求。因为有些推荐的应用对于某些用户而言是合适的，而对于某些用户却是不喜欢的。</p>
+    <p>[0008]	因此，目前需要本领域技术人员迫切解决的�个技术问题就是：提出一种应用自动推荐的机制，以满足用户的个性化需求，并提高推荐效率和覆盖率。</p>
+    <p>发明内容</p>
+    <p>[0009]	本申请所要解决的技术问题是提供�种应用自动推荐的方法，用以满足用户的个性化需求，并提高推荐效率和覆盖率。</p>
+    <p>[0010]	本申请还提供了一种应用自动推荐的装置，用以保证上述方法在实际中的应用及实现。</p>
+    <p>[0011]	为了解决上述问题，本申请实施例公开了�种应用自动推荐的方法，包括：[0012]	接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；</p>
+    <p>[0013]	根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；</p>
+    <p>[0014]	根据所述用户行为信息确定向用户推荐的应用类别；</p>
+    <p>[0015]	在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；</p>
+    <p>[0016]	按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。</p>
+    <p>[0017]	优选的是，所述的方法，还可以包括：</p>
+    <p>[0018]	采集提交所述应用获取请求后的用户行为信息，按用户标识写入用户特征库中。</p>
+    <p>[0019]	优选的是，所述用户行为信息还包括用户的本地操作行为信息，和/或，用户的网上操作行为信息；</p>
+    <p>[0020]	所述根据用户行为信息确定向用户推荐的应用类别的步骤可以包括：</p>
+    <p>[0021]	从所述用户的本地操作行为信息和/或网上操作行为信息中，提取分类标签和对应的第一操作频次；</p>
+    <p>[0022]	将所述分类标签按预设的关联规则转换为对应的应用类别；所述预设的关联规则为分类标签及应用类别的转换规则；</p>
+    <p>[0023]	从所述用户针对在先推荐应用的操作信息中，提取用户在预设时间段内所操作的应用信息及对应的第二操作频次，所述应用信息中包括应用类别；</p>
+    <p>[0024]	根据所述第一操作频次和第二操作频次计算各应用类别的权重，按所述应用类别的权重从高到低进行排序；</p>
+    <p>[0025]	提取预设数量的前η个应用类别为向用户推荐的应用类别；其中，所述η为大于1 的正整数。</p>
+    <p>[0026]	优选的是，通过以下步骤可以生成某个应用类别的应用数据集：</p>
+    <p>[0027]	获取同一应用类别的应用，所述应用具有分类标签；</p>
+    <p>[0028]	在所述应用中确定主应用及待推荐应用，井根据各应用的分类标签计算待推荐应用与主应用的相似度；</p>
+    <p>[0029]	获取所述待推荐应用的质量评分&#21443;数；</p>
+    <p>[0030]	分别提取同一主应用所对应的待推荐应用，按各待推荐应用的相似度和质量评分&#21443;数从高到低进行排序，并提取预设数量前m个的待推荐应用；其中，所述m为大于1的正整数；</p>
+    <p>[0031]	将主应用及所提取的对应待推荐应用&#32068;成当前应用类别的应用数据集。</p>
+    <p>[0032]	优选的是，所述在应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用的步骤可以包括：</p>
+    <p>[0033]	根据用户针对在先推荐应用的操作信息，统计主应用及对应的第三操作频次，所述主应用为用户所操作的应用；</p>
+    <p>[0034]	在对应应用类别的应用数据集中，根据所述主应用提取匹配的待推荐应用，并在所述匹配的待推荐应用中，将所述第三操作频次作为应用提取的权重分别提取一定数量的待推荐应用，总共提取满足第一预设数量的待推荐应用。[0035]	优选的是，所述在应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用的步骤还可以包括：</p>
+    <p>[0036]	获取主应用对应的应用类别，在同一应用类别内，按所述第三操作频次对所述主应用进行排序，提取预设数量的前k个主应用；其中，所述k为大于1的正整数；</p>
+    <p>[0037]	将所提取的主应用两两配对，计算所述两两配对的主应用同时出现的总次数，生成频繁2项集；</p>
+    <p>[0038]	计算每个主应用&#21336;独出现的次数，生成频繁1项集；</p>
+    <p>[0039]	根据所述频繁2项集和频繁1项集计算各主应用的置信度，并按置信度对主应用进行排序；</p>
+    <p>[0040]	将所提取的满足第一预设数量的待推荐应用，以及，所述按置信度排序的主应用进行匹配，生成最终推荐的匹配应用。</p>
+    <p>[0041]	本申请实施例同时公开了一种应用自动推荐的装置，包括：</p>
+    <p>[0042]	请求接收模块，用于接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；</p>
+    <p>[0043]	在先行为信息提取模块，用于根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；</p>
+    <p>[0044]	应用类别确定模块，用于根据所述用户行为信息确定向用户推荐的应用类别；</p>
+    <p>[0045]	匹配应用获取模块，用于在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；</p>
+    <p>[0046]	应用推荐模块，用于按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。</p>
+    <p>[0047]	优选的是，所述的装置，还包括：</p>
+    <p>[0048]	行为统计模块，用于采集提交所述应用获取请求后的用户行为信息，按用户标识写入用户特征库中。</p>
+    <p>[0049]	优选的是，所述用户行为信息还包括用户的本地操作行为信息，和/或，用户的网上操作行为信息；</p>
+    <p>[0050]	所述应用类别确定模块可以包括：</p>
+    <p>[0051]	第一特征提取子模块，用于从所述用户的本地操作行为信息和/或网上操作行为信息中，提取分类标签和对应的第一操作频次；</p>
+    <p>[0052]	转换子模块，用于将所述分类标签按预设的关联规则转换为对应的应用类别；所述预设的关联规则为分类标签及应用类别的转换规则；</p>
+    <p>[0053]	第二特征提取子模块，用于从所述用户针对在先推荐应用的操作信息中，提取用户在预设时间段内所操作的应用信息及对应的第二操作频次，所述应用信息中包括应用类&#21029;；</p>
+    <p>[0054]	排序子模块，用于根据所述第一操作频次和第二操作频次计算各应用类别的权重，按所述应用类别的权重从高到低进行排序；</p>
+    <p>[0055]	类别选定子模块，用于提取预设数量的前η个应用类别为向用户推荐的应用类别；其中，所述η为大于1的正整数。</p>
+    <p>[0056]	优选的是，所述的装置，还可以包括：[0057]	应用数据集生成模块，用于生成各个应用类别的应用数据集：具体包括：</p>
+    <p>[0058]	同类应用获取子模块，用于获取同一应用类别的应用，所述应用具有分类标签；</p>
+    <p>[0059]	相似度计算子模块，用于在所述应用中确定主应用及待推荐应用，并根据各应用的分类标签计算待推荐应用与主应用的相似度；</p>
+    <p>[0060]	质量评分参数获取子模块，用于获取所述待推荐应用的质量评分参数；</p>
+    <p>[0061]	待推荐应用提取子模块，用于分别提取同一主应用所对应的待推荐应用，按各待推荐应用的相似度和质量评分参数从高到低进行排序，并提取预设数量前m个的待推荐应用；其中，所述m为大于1的正整数；</p>
+    <p>[0062]	应用数据集形成子模块，用于将主应用及所提取的对应待推荐应用组成当前应用类别的应用数据集。</p>
+    <p>[0063]	优选的是，所述匹配应用获取模块可以包括：</p>
+    <p>[0064]	主应用统计子模块，用于根据用户针对在先推荐应用的操作信息，统计主应用及对应的第三操作频次，所述主应用为用户所操作的应用；</p>
+    <p>[0065]	待推荐应用确定子模块，用于在对应应用类别的应用数据集中，根据所述主应用提取匹配的待推荐应用，并在所述匹配的待推荐应用中，将所述第三操作频次作为应用提取的权重分别提取一定数量的待推荐应用，总共提取满足第一预设数量的待推荐应用。</p>
+    <p>[0066]	优选的是，所述匹配应用获取模块还可以包括：</p>
+    <p>[0067]	主应用选取子模块，用于获取主应用对应的应用类别，在同一应用类别内，按所述第三操作频次对所述主应用进行排序，提取预设数量的前k个主应用；其中，所述k为大于1的正整数；</p>
+    <p>[0068]	频繁2项集计算子模块，用于将所提取的主应用两两配对，计算所述两两配对的主应用同时出现的总次数，生成频繁2项集；</p>
+    <p>[0069]	频繁1项集计算子模块，用于计算每个主应用单独出现的次数，生成频繁1项集；</p>
+    <p>[0070]	置信度计算子模块，用于根据所述频繁2项集和频繁1项集计算各主应用的置信度，并按置信度对主应用进行排序；</p>
+    <p>[0071]	匹配应用确定子模块，用于将所提取的满足第一预设数量的待推荐应用，以及，所述按置信度排序的主应用进行匹配，生成最终推荐的匹配应用。</p>
+    <p>[0072]	与现有技术相比，本申请具有以下优点：</p>
+    <p>[0073]	本申请基于已向用户推荐过的应用，分析用户针对所述在先推荐应用的操作信息，结合用户的网上操作行为信息和/或本地操作行为信息，确定用户行为信息所偏好的应用类别，然后在对应应用类别的应用数据集中，根据上述用户针对所述在先推荐应用的操作信息，结合用户的网上操作行为信息和/或本地操作行为信息，提取最符合用户兴趣的应用，将这些应用放入对应应用类别的文件夹中进行推荐，从而在应用和用户之间建立联系，充分满足了用户的个性化需求，并有效提高了应用的推荐效率和覆盖率。</p>
+    <p>[0074]	再者，本申请以用户界面作为入口，直接在界面上或通过界面上的链接通过应用文件夹图标向用户推荐应用，以便用户更快更容易的获取所需的应用，方便了用户操作；并且，通过图标作为应用入口的方式可以提示用户对该应用的使用，但在用户真正选择使用之前，并不实际安装该应用对应的配置文件，这样，可以在使用前并不过多占用客户端资源。此外，用户界面中的图标可以由网络侧中心服务器集中部署或推送，这就防止了恶意程序在界面中随意添加恶意图标，进一步提高了安全性。附图说明</p>
+    <p>[0075]	图1是本申请的一种应用自动推荐的方法实施例的步骤流程图；</p>
+    <p>[0076]	图2是本申请的一种应用自动推荐的装置实施例的结构框图。</p>
+    <p>具体实施方式</p>
+    <p>[0077]	为使本申请的上述目的、特征和优点能够更加明显易懂，下面结合附图和具体实施方式对本申请作进一步详细的说明。</p>
+    <p>[0078]	本申请实施例的核心构思在于，基于已向用户推荐过的应用，分析用户针对所述在先推荐应用的操作信息，结合用户的网上操作行为信息和/或本地操作行为信息，确定用户行为信息所偏好的应用类别，然后在对应应用类别的应用数据集中，根据上述用户针对所述在先推荐应用的操作信息，结合用户的网上操作行为信息和/或本地操作行为信息，提取最符合用户兴趣的应用，将这些应用放入对应应用类别的文件夹中进行推荐，从而在应用和用户之间建立联系。</p>
+    <p>[0079]	参照图1，其示出了本申请的一种应用自动推荐的方法实施例的步骤流程图，具体可以包括如下步骤：</p>
+    <p>[0080]	步骤101、接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；</p>
+    <p>[0081]	在具体实现中，用户启动客户端可触发应用获取请求，用户也可以手动触发应用获取请求，本申请对此不作限制。</p>
+    <p>[0082]	步骤102、根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；</p>
+    <p>[0083]	所述用户特征库中可以记录如下信息：用户标识Mid，用户行为信息的分类标签tag,以及，对应的操作频次weight。</p>
+    <p>[0084]	在本申请的一种优选实施例中，所述用户的行为信息可以包括用户的本地操作行为信息，和/或，用户的网上操作行为信息，以及，用户针对在先推荐应用的操作信息。所述用户的本地操作行为信息和网上操作行为信息通常会带有分类标签（tag)信息，例如，对于用户在本地操作所打开的视频，带有火影忍者、动漫、连续剧、幻想、冒险、岸本齐史等分类标签信息；或如，对于用户在网上所访问的网址，带有视频、电影、喜剧电影、喜剧之王等分类标签信息。所述应用也具有应用类别和分类标签的信息。</p>
+    <p>[0085]	所述用户的本地操作行为信息和网上操作行为信息可以由安装在用户设备上的客户端软件进行采集，其中，所述用户设备可以包括计算机、笔记本电脑、手机、PDA、平板电脑等各类智能终端。以下提供几种采集用户的本地操作行为信息，和/或，用户的网上操作行为信息的示例：</p>
+    <p>[0086]	例1，通过浏览器采集用户一段时间内的网上操作行为信息，包括访问的网址及相应的访问次数等；</p>
+    <p>[0087]	如通过浏览器采集用户15天内的网上操作行为信息为：[0088]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00101.png"> <img id="idf0001" file="CN102567511AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00101.png" class="patent-full-image" alt="Figure CN102567511AD00101"> </a> </div>
+    <p>[0089]</p>
+    <p>[0090]	例2，通过安装在用户设备上的安全软件采集用户的本地操作行为信息，如通过360网盾采集用户15天内的网上操作行为信息和本地行为信息为：打开暴风影音及其次数，打开某个游戏及其次数等。</p>
+    <p>[0091]	当然，上述采集的方法及采集的信息均只用作示例，本领域技术人员根据实际情况采用任一种方式采集所需的用户行为信息均是可行的，本申请实施例对此无需加以限制。</p>
+    <p>[0092]	步骤103、根据所述用户行为信息确定向用户推荐的应用类别；</p>
+    <p>[0093]	在本申请的一种优选实施例中，所述步骤103具体可以包括如下子步骤：</p>
+    <p>[0094]	子步骤S11、从所述用户的本地操作行为信息和/或网上操作行为信息中，提取分类标签和对应的第一操作频次；</p>
+    <p>[0095]	子步骤S12、将所述分类标签按预设的关联规则转换为对应的应用类别；所述预设的关联规则为分类标签及应用类别的转换规则；</p>
+    <p>[0096]	子步骤S13、从所述用户针对在先推荐应用的操作信息中，提取用户在预设时间段内所操作的应用信息及对应的第二操作频次，所述应用信息中包括应用类别；</p>
+    <p>[0097]	子步骤S14、根据所述第一操作频次和第二操作频次计算各应用类别的权重，按所述应用类别的权重从高到低进行排序；</p>
+    <p>[0098]	子步骤S15、提取预设数量的前η个应用类别为向用户推荐的应用类别；其中，所述η为大于1的正整数。</p>
+    <p>[0099]	在实际中，可以根据由技术人员预先设置应用类别，通过分析用户行为信息，获得用户行为信息符合的应用类别。例如，预先设置的应用文件夹基本分类有20个，而通过分析用户行为信息，发现有一些基本分类对于当前用户是不需要的，则可以划分用户行为信息所归属的应用类别为更加贴近用户之前行为习惯的3个或者5个。例如，视频、游戏、教育等。</p>
+    <p>[0100]	为使本领域技术人员更好地理解本申请，以下通过一个具体示例说明根据用户行为信息确定向用户推荐的应用类别的过程：</p>
+    <p>[0101]	数据来源：</p>
+    <p>[0102]	(1)最近15天的网盾数据=Datall ；</p>
+    <p>[0103]	(2)最近15天的用户使用安全桌面的应用添加或点击日志：Datal2 ；</p>
+    <p>[0104]	Datall的数据格式为：</p>
+    <p>[0105]	用户标识Mid分类标签化16仪8{第一操作频次weightl[0106]	Datall的数据示例如下：</p>
+    <p>[0107]	0000175873530b93d848614a0cl88c5b novel-dm 1 ；</p>
+    <p>[0108]	000020218613d5fc8e05c314dba32956 comic-dm 4 ；</p>
+    <p>[0109]	00002e3bb9037870973b328078971c98 4399-dm 1 ；</p>
+    <p>[0110]	Datal2的数据格式为：</p>
+    <p>[0111]	原始日志</p>
+    <p>[0112]	Datal2的数据示例如下：</p>
+    <p>[0113]	123. 97. 168. 210&#8212;[15/0ct/2011 ： 23 ： 00 ： 01+0800] “ GET/stat. html ？ type =open&amp;action = yingyongdianji&amp;fangshi = 2&amp;Appid = 102000032&amp;fenleiid = 4&amp;from=O&amp;leixing = 2&amp;style = fullscreen&amp;uid = l&amp;pid = softmgr&amp;m = 45c06dc58f5ccb64cl62b646fcecc541&amp;modulever = 1.4.0. 1103&amp;appver = 1. 4. 0. 1103HTTP/1. 1 “ 2000" -" “ Mozilla/4. 0 (compatible ；MSIE 7. 0 ；Windows NT 6. 1 ；Trident/4. 0 ；GTB7. 1 ；SLCC2 ；. NET CLR 2. 0. 50727 ；. NET CLR 3. 5. 30729 ；. NET CLR 3. 0. 30729 ；Media CenterPC 6. 0)“</p>
+    <p>[0114]	Stepl :将从网盾数据Datall中提取分类标签Interest，通过预设的转换规则表(yunCatToZhuoMianCat. conf)转换为应用文件夹分类体系下的用户兴趣的基本分类，即将所述类标签转换为对应的应用类别。所述预设的转换规则表yimCatToamoMianCat. conf格式中可以包括：分类标签、应用类别名称AppName以及应用类别标识Appid的信息，如下表所示：</p>
+    <p>[0115]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00111.png"> <img id="idf0002" file="CN102567511AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00111.png" class="patent-full-image" alt="Figure CN102567511AD00111"> </a> </div>
+    <p>[0116]</p>
+    <p>[0117]	Datall转换的结果如下表所示：</p>
+    <p>[0118]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00112.png"> <img id="idf0003" file="CN102567511AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00112.png" class="patent-full-image" alt="Figure CN102567511AD00112"> </a> </div>
+    <p>[0119]	St印2 ：通过解析原始日志Datal2，计算每个Mid在最近15天内点击或添加各个应用的操作频次（第二操作频次），并根据AppicLname分类对照表，确定用户兴趣所对应的应用类别。</p>
+    <p>[0120]	其中，AppicLname分类对照表格式如下：[0121]	应用标识Appid应用类别标识fenleiid分类标签tag应用名称AppNamet</p>
+    <p>[0122]	Appid_name分类对照表的数据示例如下：</p>
+    <p>100026002 5 小游戏其它棋牌卡通英语单人拖拉机100013330 4 电视剧古装剧情宫心计100114314 6 健康家庭医生自诊家庭医生100114370 6 美食红烧肉菜谱食谱做饭红烧肉的做法100013349 4 电视剧军事悬疑告密者</p>
+    <p>若通过解析原始日志Datal2，计算每个Mid在最近15天内点击或添加各个应用的</p>
+    <p>[0129]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00121.png"> <img id="idf0004" file="CN102567511AD00121.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00121.png" class="patent-full-image" alt="Figure CN102567511AD00121"> </a> </div>
+    <p>[0130]</p>
+    <p>[0131]	对照上述AppicLname分类对照表，确定用户兴趣所对应的应用类别如下表所示：</p>
+    <p>[0132]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00122.png"> <img id="idf0005" file="CN102567511AD00122.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102567511A/CN102567511AD00122.png" class="patent-full-image" alt="Figure CN102567511AD00122"> </a> </div>
+    <p>[0133]	St印3 ：把&#20034;印1和&#20034;印2的结果按照第一操作频次和第二操作频次进行加权平均，然后按照最终得分进行排序，取top9为向用户推荐的应用类别，即最终展示的分类应用文件夹的应用类别。</p>
+    <p>[0134]	例如：对于某一个Mid而言，Stepl的结果为:typel点击nl次，type2点击n2次，type3点击n3次......；</p>
+    <p>[0135]	st印2结果为:typel行为Nl次，type2点击N2次，type3点击N3次......则</p>
+    <p>scorel = nl*0. 6+Ν1*0. 4，score2 = n2*0. 6+N2*0. 4，score3 = n3*0. 6+N3*0. 4......</p>
+    <p>[0136]	按score进行排序，取前9位的应用类别为向当前用户推荐的应用类别。</p>
+    <p>[0137]	在具体实现中，若对用户行为信息进行分析所划分的应用类别无法达到指定数量，如若采用上例只能生成三个类别，无法满足9个应用类别的需求，则可以按照云端所统计的网络用户实际使用次数最多的应用类别或最新设置的应用类别作为推荐的应用类别进行补齐。</p>
+    <p>[0138]	当然，上述划分用户行为信息所归属类别的方法仅仅用作示例，本领域技术人员根据实际情况采用一种方式都是可行的，例如，不提取主分类标签，直接将用户行为信息所带的标签按照预置规则转换为应用类别；或者，直接提取分类标签作为应用类别等，本申请对此不作限制。</p>
+    <p>[0139]	步骤104、在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；</p>
+    <p>[0140]	所述应用（Application)是指用户在网络上所使用的各种服务，如应用程序、网页、视频、小说、音乐、游戏、新闻、购物和邮箱等。应用数据集包含多个应用，来源于各个开放平台。在本申请实施例中，应用会带上类别信息（应用类别）和一些分类标签。</p>
+    <p>[0141]	在申请的一种优选实施例中，可以通过以下子步骤生成某个应用类别的应用数据集：</p>
+    <p>[0142]	子步骤S21、获取同一应用类别的应用，所述应用具有分类标签；</p>
+    <p>[0143]	子步骤S22、在所述应用中确定主应用及待推荐应用，并根据各应用的分类标签计算待推荐应用与主应用的相似度；</p>
+    <p>[0144]	子步骤S23、获取所述待推荐应用的质量评分参数；</p>
+    <p>[0145]	子步骤S24、分别提取同一主应用所对应的待推荐应用，按各待推荐应用的相似度和质量评分参数从高到低进行排序，并提取预设数量前m个的待推荐应用；其中，所述m为大于1的正整数；</p>
+    <p>[0146]	子步骤S25、将主应用及所提取的对应待推荐应用组成当前应用类别的应用数据集。</p>
+    <p>[0147]	上述优选实施例即针对同一应用类别的应用，根据其分类标签计算应用之间的相似性，形成一个包括主应用和待推荐应用的应用数据集。</p>
+    <p>[0148]	为使本领域技术人员更好地理解本申请，以下通过一个具体示例说明上述生成应用数据集的过程。</p>
+    <p>[0149]	1).根据应用的应用类别以及应用的分类标签tag计算应用app之间的相似度：</p>
+    <p>[0150]输入数据的数据格式为：Appid	fenleiID tagl tag2 tag3 tag4 tag5 tag6 tag7tag8......；</p>
+    <p>[0151]	结果文件Datal的数据格式为：主应用标识（主Appid)待推荐应用标识（待推荐Appid)相似度 Similarity</p>
+    <p>[0152]	相似度计算方法为：</p>
+    <p>[0153]	在相同的应用类别内，以前i个tag作为类标记，在相同的标记内，app进行两两组合，计算其相似度，计算公式为Similarity = i/(nl+n2-i)；其中，nl为聊1(应用1)后面tag的个数，n2为app2(应用2、后面tag的个数；i最小为2，最大为nl，进行循环遍历。例如：</p>
+    <p>[0154]	输入数据为：</p>
+    <p>[0155]	100030071 4 电影剧情喜剧爱情吴辰君刘彦君谢晓明其它2010大陆</p>
+    <p>[0156]	100030073 4 电影剧情喜剧动作金荷娜姜志焕申太罗其它2009韩国</p>
+    <p>[0157]	100030074 4电影悬疑科幻惊悚尼古拉斯&#183;凯奇钱德勒&#183;坎特布瑞亚历克斯&#183;普罗亚斯其它2009美国</p>
+    <p>[0158]	......[0159]	结果文件Datal为：</p>
+    <p>[0160]	100030071 100030073 0. 25</p>
+    <p>[0161]	100030071 100030074 0. 11</p>
+    <p>[0162]	100030073 100030074 0. 11</p>
+    <p>[0163]	......</p>
+    <p>[0164]	2).在同一个主Appid内，对待推荐Appid按相似度以及Appid的质量得分（每日下载量、用户评分）进行综合排序，即Appid相似度*相似度权重+Appid质量得分* (1-相似度权重），截取综合得分最高的前50个待推荐Appid，然后合并为一行；</p>
+    <p>[0165]	输入数据：Datal (上一步的结果文件)</p>
+    <p>[0166]	输出数据Data2的格式如下：主Appid待推荐Appidl待推荐Appid2待推荐Appid3 待推荐 Appid4......</p>
+    <p>[0167]例如：</p>
+    <p>[0168]	输入数据Datal为：</p>
+    <p>[0169]	100030071 100030073 0.25</p>
+    <p>[0170]	100030071 100030074 0.11</p>
+    <p>[0171]	100030073 100030074 0.11</p>
+    <p>[0172]	100030073 100030071 0.25</p>
+    <p>[0173]	100030074 100030071 0.11</p>
+    <p>[0174]	100030074 100030073 0.11</p>
+    <p>[0175]	......</p>
+    <p>[0176]	输出数据Data2为：</p>
+    <p>[0177]	100030071 100030073 100030074......</p>
+    <p>[0178]	100030073 100030071 100030074......</p>
+    <p>[0179]	100030074 100030071 100030073......</p>
+    <p>[0180]	在申请的一种优选实施例中，所述步骤104可以进一步包括如下子步骤：</p>
+    <p>[0181]	子步骤S31、根据用户针对在先推荐应用的操作信息，统计主应用及对应的第三操作频次，所述主应用为用户所操作的应用；</p>
+    <p>[0182]	子步骤S32、在对应应用类别的应用数据集中，根据所述主应用提取匹配的待推荐应用，并在所述匹配的待推荐应用中，将所述第三操作频次作为应用提取的权重分别提取一定数量的待推荐应用，总共提取满足第一预设数量的待推荐应用。</p>
+    <p>[0183]	为使本领域技术人员更好地理解本申请，以下通过一个具体示例说明上述子步骤S31-S32。</p>
+    <p>[0184]	Stepl ：</p>
+    <p>[0185]	3).根据Mid的应用操作行为日志，统计Mid添加或者点击每个app的次数；</p>
+    <p>[0186]	输入数据：Mid添加或者点击应用的日志记录（最近30天的应用操作行为日志）；</p>
+    <p>[0187]	输出数据Data3的格式为：Mid主Appid(点击或者添加的app的id)</p>
+    <p>[0188]	weight3 (第三操作频次)</p>
+    <p>[0189]	若输入数据为：</p>
+    <p>[0190]	27. 185. 166. 230&#8212;[20/Aug/2011 ： 10:11:47+0800] ‘’ GET/stat. html ？ type =open&amp;action = yingyongdianji&amp;fangshi = 2&amp;Appid = 103352&amp;fenleiid = lOOOl&amp;from=O&amp;leixing = l&amp;style = fullscreen&amp;uid = l&amp;pid = h_home_inst&amp;m = 71ddd8f9flc84el6438efl09f4b6d77b&amp;modulever = 1. 4. 0. 1041&amp;appver = 1.4. 0. 1041 HTTP/1. 1" 200O " - “ “ Mozilla/4. O(compatible ；MSIE 7. O ；Windows NT 6. 0 ；SLCCl ；. NETCLR2. 0. 50727 ；Media Center PC 5. O ；&#183; NET CLR 3. 5. 30729 ；&#183; NET CLR 3. 0. 30618)“</p>
+    <p>[0191]	111. 127.218. 150&#8212; [20/Aug/2011:10:11:47+0800] “ GET/stat. html ？ type =open&amp;action = tianjiayingyong&amp;Appid = 100018815&amp;fenleiid = 4&amp;sort = % b6% af %bb% ad&amp;from = 5&amp;style = fullscreen&amp;uid = l&amp;pid = h_home_inst&amp;m = 9e236bafel3c8348247781c2d0fab7a7&amp;modulever = 1. 0. 2. 1025&amp;appver = 1. 4. 0. 1040 HTTP/1. 1" 2000" -" “ Mozilla/4. 0(compatible ；MSIE 6. 0 ；Windows NT 5. 1 ；SVl ；4399Box. 909)“</p>
+    <p>[0192]	58. 50. 201. 130&#8212;[20/Aug/2011:10:11:47+0800] “ GET/stat. html ？ type =open&amp;action = yingyongdianji&amp;fangshi = 2&amp;Appid = 103352&amp;fenleiid = lOOOl&amp;from=6&amp;leixing = l&amp;style = iphone&amp;uid = l&amp;pid = h_home&amp;m = 3d3e77348ff2fbfa6af7c3751a00edae&amp;modulever = 1. 4. 0. 1040&amp;appver = 1. 4. 0. 1040HTTP/1. 1 “ 2000〃 -〃 “ Mozilla/4. 0 (compatible ；MSIE 6. 0 ；Windows NT 5.1)"</p>
+    <p>[0193]	110. 178. 40. 7&#8212;[20/Aug/2011:10:11:47+0800] “ GET/stat. html ？ type =open&amp;action = yingyongdianji&amp;fangshi = 2&amp;Appid = 100000525&amp;fenleiid = 4&amp;from=O&amp;leixing = 2&amp;style = fullscreen&amp;uid = l&amp;pid = softmgr&amp;m = f16b5a2c01d64fcfa3ff5f035ce74677&amp;modulever = 1. 4. 0. 1041&amp;appver = 1.4.0.1041 HTTP/1. 1 “ 2000〃 -〃 “ Mozilla/4. 0 (compatible ；MSIE 7.0 ；Windows NT 5. 1 ；Trident/4. 0)“</p>
+    <p>[0194]	58. 50. 201. 130&#8212;[20/Aug/2011:10:11:47+0800] “ GET/stat. html ？ type=open&amp;action = zuixiaohuazhuomian&amp;count = 90468&amp;uid = l&amp;pid = h_home&amp;m=3d3e77348ff2fbfa6af7c3751a00edae&amp;modulever = 1.4.0.1040&amp;appver =1. 4. 0. 1040HTTP/1. 1 〃 200 0〃 -〃 “ Mozilla/4. 0 (compatible ；MSIE 6. 0 ；Windows NT5. 1)“</p>
+    <p>[0195]	......</p>
+    <p>[0196]	输出数据Data3为：		[0197]	0004a218f3b8a96b59f67a8fl4be5e98	100000289	102[0198]	0004ce91dc7726afdc420a97ad050f5a	100103087	1[0199]	0004cfe7c72aa83bfa20e561b6a00823	102020214	2[0200]	0004ec5290131cf7fa6d5al8833e06a5	102005903	3[0201]	0004f55c24b9fb8745b6d7595d94972d	120033743	1[0202]	00051004579f67de2066dc94f8952fd4	100000275	5[0203]	00054c7ba3cflb45330444cbb737cac4	100114758	4</p>
+    <p>[0204]	......</p>
+    <p>[0205]	4).根据Data2和Data3，通过主app进行匹配，然后根据权重排序</p>
+    <p>[0206]	Midi fenleiidl Appidl Appid2 Appid3 Appid4......weight</p>
+    <p>[0207]	Midi fenleiid2 Appidll Appid22 Appid33 Appid44......weight</p>
+    <p>[0208]	根据权重大小，权重越大，该类里面截取app越多，采用随机截取的方式，总共截取50个Appid，然后以Mid和f^nleiid为关键字进行合并，生成结果文件为</p>
+    <p>[0209]	Midl fenleiid Appidl Appid2 Appid3 Appid4......Appid20</p>
+    <p>[0210]例如：</p>
+    <p>[0211 ]输入数据：Data2 和 Data3</p>
+    <p>[0212]	Jt^,Data2 % ：</p>
+    <p>[0213]	001(100 101 102 103 104 105 106 107 108 109......)</p>
+    <p>[0214]	002(201 202 203 204 205 206 207 208 209 210......)</p>
+    <p>[0215]	003(301 302 303 304 305 306 307 308 309 310......)</p>
+    <p>[0216]	008(801 802 803 804 805 806 807 808 809 810......)</p>
+    <p>[0217]	......</p>
+    <p>[0218]	假设上述Data2中括号内的部分为与主app相似度最高的前50个Appid</p>
+    <p>[0219]	Data3 % ：</p>
+    <p>[0220]	Xxl 00 15</p>
+    <p>[0221]	Xxl 002 3</p>
+    <p>[0222]	Xxl 003 2</p>
+    <p>[0223]	Xxl 008 5</p>
+    <p>[0224]	.......</p>
+    <p>[0225]	通过Appid_name分类对照表，映射出其类别，获得Data33为：</p>
+    <p>[0226]	Xxl 1 001 5</p>
+    <p>[0227]	Xxl 1 002 3</p>
+    <p>[0228]	Xxl 1 003 2</p>
+    <p>[0229]	Xxl 2 008 5</p>
+    <p>[0230]	......</p>
+    <p>[0231]	中间输出数据：</p>
+    <p>[0232]第	1 条数据：Xxl 1 100 101 102 103 104 105 106 107 108 109......5</p>
+    <p>[0233]第	2 条数据：Xxl 1 201 202 203 204 205 206 207 208 209 210......3</p>
+    <p>[0234]第	3 条数据：Xxl 1 301 302 303 304 305 306 307 308 309 310......2</p>
+    <p>[0235]第	4 条数据：Xxl 2 801 802 803 804 805 806 807 808 809 810......5</p>
+    <p>[0236]	......</p>
+    <p>[0237]	按照权重计算方法：</p>
+    <p>[0238]	第1条数据中随机抽取5/(5+3+2)*20 = 10fAppid ；</p>
+    <p>[0239]	第2条数据中随机抽取3/(5+3+2)*20 = 6fAppid ；</p>
+    <p>[0240]	第3条数据中随机抽取2/(5+3+2)*20 = 4fAppid ；</p>
+    <p>[0241]	最终输出数据为：</p>
+    <p>[0242]	Xxl 1 100 101 102 103 104 105 106 107 108 109 204 205 206 207 208 209306	307 308 303</p>
+    <p>[0243]	Xx2 2 801 802 803 804 805 806 807 808 809 810......</p>
+    <p>[0244]	......</p>
+    <p>[0245]	更为优选的是，所述步骤104可以进�步包括如下子步骤：[0246]	子步骤S33、获取主应用对应的应用类别，在同一应用类别内，按所述第三操作频次对所述主应用进行排序，提取预设数量的前k个主应用；其中，所述k为大于1的正整数；</p>
+    <p>[0247]	子步骤S34、将所提取的主应用两两配对，计算所述两两配对的主应用同时出现的总次数，生成频繁2项集；</p>
+    <p>[0248]	子步骤S35、计算每个主应用单独出现的次数，生成频繁1项集；</p>
+    <p>[0249]	子步骤S36、根据所述频繁2项集和频繁1项集计算各主应用的置信度，并按置信度对主应用进行排序；</p>
+    <p>[0250]	子步骤S37、将所提取的满足第一预设数量的待推荐应用，以及，所述按置信度排序的主应用进行匹配，生成最终推荐的匹配应用。</p>
+    <p>[0251]	本实施例的核心构思之一在于，基于用户添加或者点击应用的行为即其对应用的偏好找到相似的应用，然后根据用户的历史偏好即历史添加或者点击的应用，向其推荐相似的应用。从计算的角度看，就是将所有用户对某个应用的偏好作为一个向量来计算应用之间的相似度，得到应用的相似应用后，根据用户历史的偏好预测当前用户还没有表示偏好的应用，计算得到一个排序的应用列表作为推荐。</p>
+    <p>[0252]	为使本领域技术人员更好地理解本申请，以下通过一个具体示例说明上述子步骤S33-S37。</p>
+    <p>[0253]	Step2 ：</p>
+    <p>[0254]	1).根据Mid添加和点击应用的行为日志，统计Mid添加或者点击每个app的次数；</p>
+    <p>[0255]	输入数据：Mid添加或者点击应用日志（最近30天的应用操作行为日志)；</p>
+    <p>[0256]	输出数据Datal的格式为：Mid主Appid(点击或者添加的app)</p>
+    <p>[0257]	weight3 (第三操作频次)</p>
+    <p>[0258]	例如：输入数据为：</p>
+    <p>[0259]	27. 185. 166. 230&#8212;[20/Aug/2011 ： 10:11:47+0800] “ GET/stat. html ？ type =open&amp;action = yingyongdianji&amp;fangshi = 2&amp;Appid = 103352&amp;fenleiid = lOOOl&amp;from =O&amp;leixing = l&amp;style = fullscreen&amp;uid = l&amp;pid = h_home_inst&amp;m = 71ddd8f9f lc84el6438efl09f4b6d77b&amp;modulever = 1. 4. 0. 1041&amp;appver = 1.4.0.1041 HTTP/1. 1" 2000"-〃 “Mozilla/4. 0 (compatible ；MSIE 7. 0 ；Windows NT 6. 0 ；SLCCl ；. NET CLR2. 0. 50727 ；Media Center PC 5. 0 ；&#183; NET CLR 3. 5. 30729 ；&#183; NET CLR 3. 0. 30618)“</p>
+    <p>[0260]	111. 127.218. 150&#8212; [20/Aug/2011:10:11:47+0800] “ GET/stat. html ？ type =open&amp;action = tianjiayingyong&amp;Appid = 100018815&amp;fenleiid = 4&amp;sort = % b6% af %bb% ad&amp;from = 5&amp;style = fullscreen&amp;uid = l&amp;pid = h_home_inst&amp;m = 9e236bafel3c8348247781c2d0fab7a7&amp;modulever = 1. 0. 2. 1025&amp;appver = 1. 4. 0. 1040 HTTP/1. 1" 2000" -" “ Mozilla/4. 0(compatible ；MSIE 6. 0 ；Windows NT 5. 1 ；SVl ；4399Box. 909)“</p>
+    <p>[0261]	58. 50. 201. 130&#8212;[20/Aug/2011:10:11:47+0800] “ GET/stat. html ？ type =open&amp;action = yingyongdianji&amp;fangshi = 2&amp;Appid = 103352&amp;fenleiid = lOOOl&amp;from=6&amp;leixing = l&amp;style = iphone&amp;uid = l&amp;pid = h_home&amp;m = 3d3e77348ff2fbfa6af7c3751a00edae&amp;modulever = 1. 4. 0. 1040&amp;appver = 1. 4. 0. 1040HTTP/1. 1 “ 2000〃 -〃 ‘’ Mozilla/4. 0 (compatible ；MSIE 6. 0 ；Windows NT 5.1)"[0262]	110. 178. 40. 7&#8212;[20/Aug/2011 ： 10:11:47+0800] “ GET/stat. html ？ type =open&amp;action = yingyongdianji&amp;fangshi = 2&amp;Appid = 100000525&amp;fenleiid = 4&amp;from=O&amp;leixing = 2&amp;style = fullscreen&amp;uid = l&amp;pid = softmgr&amp;m = f16b5a2c01d64fcfa3ff5f035ce74677&amp;modulever = 1. 4. 0. 1041&amp;appver = 1.4.0.1041 HTTP/1. 1 “ 2000〃 -〃 “ Mozilla/4. 0(compatible ；MSIE 7. 0 ；Windows NT 5. 1 ；Trident/4. 0)“</p>
+    <p>[0263]	58. 50. 201. 130&#8212;[20/Aug/2011:10:11:47+0800] “ GET/stat. html ？ type=open&amp;action = zuixiaohuazhuomian&amp;count = 90468&amp;uid = l&amp;pid = h_home&amp;m=3d3e77348ff2fbfa6af7c3751a00edae&amp;modulever = 1.4.0.1040&amp;appver =1. 4. 0. 1040HTTP/1. 1 〃 200 0〃 -〃 “ Mozilla/4. 0 (compatible ；MSIE 6. 0 ；Windows NT5. 1)“</p>
+    <p>[0264]	输出数据Datal为：		[0265]	00062ee80feec92758b8be8d3e4b9cl6	100113997	2[0266]	0006d880a38f687c3fcal0e8c4efa227	102019670	2[0267]	0007400ba8300fc80b7210a0e66de257	102022805	2[0268]	0007bda041324ee53b83f0343daf84d2	102005801	2[0269]	00080118032d30ad28a9bce8232dl7c8	100013133	3[0270]	0008020587ea4fecf08ad58b09ef5904	110195914	2[0271]	00082bf0489199360bce8a06693ef3f5	100115004	3</p>
+    <p>[0272]	......</p>
+    <p>[0273]	与AppicLname对照表进行映射，找出各个Appid对应的应用类别，结果如下：</p>
+    <p>[0274]	00062ee80feec92758b8be8d3e4b9cl6	1	100113997	2[0275]	0006d880a38f687c3fcal0e8c4efa227	1	102019670	2[0276]	0007400ba8300fc80b7210a0e66de257	2	102022805	2[0277]	0007bda041324ee53b83f0343daf84d2	9	102005801	2[0278]	00080118032d30ad28a9bce8232dl7c8	6	100013133	3[0279]	0008020587ea4fecf08ad58b09ef5904	6	110195914	2[0280]	00082bf0489199360bce8a06693ef3f5	4	100115004	3</p>
+    <p>[0281] ......</p>
+    <p>[0282]	2).在同一个Mid和feileid内，对其点击或者添加过的app按点击或者添加次数进行排序，取前20的Appid，并归入一行。</p>
+    <p>[0283]	输入数据：Datal (上一步的输出数据）</p>
+    <p>[0284]输出数据	Data2 的数据结构为：Mid fenleiid Appidl weightl Appid2weight2Appid3 weight3......</p>
+    <p>[0285]	例如：输入数据：</p>
+    <p>[0286]	00082bf0489199360bce8a06693ef3f5 1 100115004 3</p>
+    <p>[0287]	00083ebafe4eb71596f45dfa821f73d5 1 102028904 5</p>
+    <p>[0288]	000887c0d3498c7c43cecb566a6333e4 8 102020030 3</p>
+    <p>[0289]	0008ce3ael3aa6332794861b275861ad 10 102005157 2</p>
+    <p>[0290]	......[0291]	输出数据Data2为：</p>
+    <p>[0292]	007a2663bacl0378bcaa874be36a2d97 11100000913 1</p>
+    <p>[0293]	007abe31bll7a554df0fefc2a91200c2 22100000568 2 102010364 1 100115004 1</p>
+    <p>[0294]	007b3dc8a31a6627a6e2468f789aa078 86102007664 6 102028968 4 100012183 3102022076 2 102000032 2 102031006 2110004672</p>
+    <p>2	110091072 2100030320 2 102044509 22102044665 2 100040423 2</p>
+    <p>[0295]	007bb8043a487ed3a690aa6d461a3cl0 10 102019572 3</p>
+    <p>[0296]	007d072a6bfe28591f0eb4c5d533784c 18 100000525 31 10000028919101000053 16 102005903 6 100000625 4 102020030 4102020628 3 120055003</p>
+    <p>3	100000913 3 102001686 2100034506 2 102005985 2 100000801 2102044292 2110153628 2 100115575 2 100045261 2 100115650 21001037732 100102029 2</p>
+    <p>[0297]	3).在同一对Mid和fenleiid内，Appid两两配对，记共同出现1次，然后以两个Appid为1类，计算两个Appid同时出现的总次数，生成频繁2项集。</p>
+    <p>[0298]	输入数据：Data2 (上一步的输出数据）</p>
+    <p>[0299]	输出数据Data3的数据结构为：Appidl Appid2 weight (出现次数)</p>
+    <p>[0300]	例如：输入数据</p>
+    <p>[0301]	Xxl 1 001 002 003 004......</p>
+    <p>[0302]	Xx2 2 001 002 003......</p>
+    <p>[0303]	Xx3 15 002 004......</p>
+    <p>[0304]	......</p>
+    <p>[0305]	中间结果文件：</p>
+    <p>[0306]	001 002 1</p>
+    <p>[0307]	001 003 1</p>
+    <p>[0308]	001 004 1</p>
+    <p>[0309]	002 003 1</p>
+    <p>[0310]	002 004 1</p>
+    <p>[0311]	003 004 1</p>
+    <p>[0312]	001 002 1</p>
+    <p>[0313]	002 005 1</p>
+    <p>[0314]	002 004 1</p>
+    <p>[0315]	输出数据Data3为：</p>
+    <p>[0316]	001 002 2</p>
+    <p>[0317]	001 003 1</p>
+    <p>[0318]	001 004 1</p>
+    <p>102006053 2 102028976</p>
+    <p>120042762 11 102023358</p>
+    <p>102007826 19 102020628100012315 3102043563 22 102007377 2 101000009102043791 2 102044243[0319]	002 003 2</p>
+    <p>[0320]	002 004 2</p>
+    <p>[0321]	003 004 1</p>
+    <p>[0322]	4).计算频繁1项集，记计算每个Appid出现的次数</p>
+    <p>[0323]	输入数据：Datal (第1)步的输出数据）</p>
+    <p>[0324]	输出数据Data4的数据结构为：Appid weight (出现次数）</p>
+    <p>[0325]例如：</p>
+    <p>[0326]	输入数据：</p>
+    <p>[0327]	Xxl 001 10</p>
+    <p>[0328]	Xxl 002 8</p>
+    <p>[0329]	Xxl 003 5</p>
+    <p>[0330]	Xx2 002 8</p>
+    <p>[0331]	Xx2 003 9</p>
+    <p>[0332]	Xx3 003 7</p>
+    <p>[0333]	......</p>
+    <p>[0334]	输出数据Data4为：</p>
+    <p>[0335]	001 1</p>
+    <p>[0336]	002 2</p>
+    <p>[0337]	003 3</p>
+    <p>[0338]	......</p>
+    <p>[0339]	5).计算置信度，并按置信度进行排序</p>
+    <p>[0340]	例如：频繁2项集中应用A和应用B出现的次数为N，频繁1项集中应用A出现的次数为M,则相对于A来说，B的置信度为N/M，根据置信度进行排序，取排序前50的应用，并以首应用为类，合并到一行，结构为：</p>
+    <p>[0341]	AB CD ......</p>
+    <p>[0342]输入数据：Data3	和 Data4</p>
+    <p>[0343]	输出数据Data5的数据结构为：Appid Appidl weightlAppid2weight2...... Appid50 weight50</p>
+    <p>[0344]例如：</p>
+    <p>[0345]	输入数据Data3为：</p>
+    <p>[0346]	001 100 20</p>
+    <p>[0347]	001 101 18</p>
+    <p>[0348]	001 102 16</p>
+    <p>[0349]	001 103 14</p>
+    <p>[0350]	001 104 12</p>
+    <p>[0351]	001 106 10</p>
+    <p>[0352]	002 201 50</p>
+    <p>[0353]	002 202 30</p>
+    <p>[0354]	002 101 10[0355]	002 102 5</p>
+    <p>[0356]	输入数据Data4为：</p>
+    <p>[0357]	001 100</p>
+    <p>[0358]	002 200</p>
+    <p>[0359]	输出数据Data5为：</p>
+    <p>[0360]	001 100 101 102 103 104 106......</p>
+    <p>[0361]	002 201 201 101 102 ......</p>
+    <p>[0362]	6).根据Datal和Data5，按照用户Appid进行匹配，生成推荐结果。</p>
+    <p>[0363]例如：</p>
+    <p>[0364]	Datal ：</p>
+    <p>[0365]	Xxl 1 Mi 10</p>
+    <p>[0366]	Xxl 2 002 5</p>
+    <p>[0367]	......</p>
+    <p>[0368]	Data5 ：</p>
+    <p>[0369]	Mi 100 101 102 103 104 105 106 107......</p>
+    <p>[0370]	002 200 201 202 203 204 205 206 207......</p>
+    <p>[0371]	按照标有下划线的Appid进行匹配，生成中间结果为：</p>
+    <p>[0372]	Xxl 1 100 101 102 103 104 105 106 107...... 10</p>
+    <p>[0373]	Xxl 2 200 201 202 203 204 205 206 207......5</p>
+    <p>[0374]	在同一对Mid和fenleiid内，按照权重进行排序取前50个应用如下：</p>
+    <p>[0375]	Xxl 1 100 101 102 103 104 105 106 107...... 200 201 202 203 204 205206</p>
+    <p>207......</p>
+    <p>[0376]	在具体实现中，可以进一步将上述示例中Stepl和&#20034;印2的结果按照Mid和fenleiid进行合并，用步骤103确定的应用类别进行过滤，只取确定的应用类别的应用数据，然后在每个应用类别内随机取50个应用作为推荐结果。如果某个应用类别内没有数据，则可以采用任一机制进行补齐，例如，放入最热门的应用，最新的应用等。</p>
+    <p>[0377]	当然，上述查找与用户行为信息匹配应用的方法仅仅用作示例，本领域技术人员采用其它计算方法也是可行的，例如，通过计算用户行为信息的分类标签与相应类别应用数据集中应用的分类标签的匹配度等，本申请对此无需加以限制。</p>
+    <p>[0378]	步骤105、按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。</p>
+    <p>[0379]	应用本申请实施例，将按类别生成应用文件夹，相应类别下的，与用户行为信息匹配的应用即在对应类别的应用文件夹中向用户进行推荐，从而有利于节省用户设备的资源。</p>
+    <p>[0380]	在具体实现中，对于推荐给用户的应用文件夹，可以在桌面的不同分屏中进行展现，优选的是，还可以依据用户分屏的高度和宽度，确定每个分屏中推荐的应用文件夹的个数。应用本申请实施例，所述应用文件夹的展现顺序是根据各应用类别对应主分类标签的操作频次从高到低设置的，因此应用文件夹是根据用户兴趣的匹配度从高到低展现给用户；并且，应用文件夹中的应用也按权重进行了排序，即也是根据用户兴趣的匹配度从高到低展现给用户，从而能更方便用户的操作，使用户获得更好的使用体验。</p>
+    <p>[0381]	在具体实现中，可以在终端桌面的用户界面中统一展示与多个应用文件夹相对应的图标，每个图标代表一个应用文件夹，通过图标作为与应用入口的方式。这种图形化的展示方式对于用户来说非常直观，而且便于使用和管理。例如，用户界面中展示应用文件夹的图标包括“视频”，“小说”，“教育”和“游戏”，在用户点击“视频”应用文件夹的图标后，进入该应用文件夹的子窗口，在子窗口中展示有电视剧、电影、动漫、综艺等多个应用图标。通过图标作为应用入口的方式可以提示用户对该应用的使用，但在用户真正选择使用之前，并不实际安装该应用对应的配置文件，这样，不仅可以方便用户的使用，而且在使用前并不过多占用客户端资源。</p>
+    <p>[0382]	用户界面中的图标可以由网络侧中心服务器集中部署或推送，这就防止了恶意程序在界面中随意添加恶意图标，进一步提高了安全性。有中心服务器集中管理的配置文件可以包括对应应用的访问地址、呈现规格，及所述应用的打开方式，或者它们的任何组合。</p>
+    <p>[0383]	例如，对于web应用来说，web访问的地址由中心服务器通过配置文件的方式发送至终端侧，这就防止了终端侧的恶意程序对访问地址的篡改。</p>
+    <p>[0384]	而且，网络侧中心服务器可以通过与第三方内容服务器的交互获得更新的配置文件信息，例如，如果某个应用的访问地址发生变化，服务器会通过与内容服务器的交互获得更新后的地址信息，并通过配置文件发送过来，杜绝了因访问地址变更给恶意程序留下的可乘之机。</p>
+    <p>[0385]	此外，用户设备在获得与所述图标相对应的应用的配置文件后，还可以更新该图标的展示状态，以进一步提示用户。例如，未获得配置文件前，图标可以是黑白色，或暗色，而在获得后，可以变为彩色或亮色。</p>
+    <p>[0386]	还需说明的是，在终端侧用户界面中展示的应用文件夹图标，可以是一个或多个，可以根据不同的展示规则来确定。例如，当使用一个图标时，该图标可以作为多个下级应用或下级图标的统一入口，其中任何一个应用获得更新信息时，在该入口图标处均可以获得提示。</p>
+    <p>[0387]	在本申请的一种优选实施例中，还可以包括如下步骤：</p>
+    <p>[0388]	采集提交所述应用获取请求后的用户行为信息，按用户标识写入用户特征库中。</p>
+    <p>[0389]	通过建立用户特征库，则可以将用户行为信息统一在服务器端或云端进行处理，在这种实施例中，将可以在用户特征库中记录用户当次的操作行为信息，并根据用户特征库往次的操作行为信息确定应向用户推荐的应用文件夹及相应的应用。</p>
+    <p>[0390]	需要说明的是，对于方法实施例，为了简单描述，故将其都表述为一系列的动作组合，但是本领域技术人员应该知悉，本申请并不受所描述的动作顺序的限制，因为依据本申请，某些步骤可以采用其他顺序或者同时进行。其次，本领域技术人员也应该知悉，说明书中所描述的实施例均属于优选实施例，所涉及的动作和模块并不一定是本申请所必须的。</p>
+    <p>[0391]	参照图2，示出了本申请的一种应用自动推荐的装置实施例的结构框图，具体可以包括如下模块：</p>
+    <p>[0392]	请求接收模块201，用于接收用户从客户端提交的应用获取请求，所述应用获取请求中包括用户标识；</p>
+    <p>[0393]	在先行为信息提取模块202，用于根据所述用户标识从用户特征库中提取相应用户已有的用户行为信息，所述用户行为信息包括用户针对在先推荐应用的操作信息；</p>
+    <p>[0394]	应用类别确定模块203，用于根据所述用户行为信息确定向用户推荐的应用类别；</p>
+    <p>[0395]	匹配应用获取模块204，用于在所述应用类别的应用数据集中，根据用户针对在先推荐应用的操作信息提取匹配的应用；</p>
+    <p>[0396]	应用推荐模块205，用于按所述应用类别生成对应的应用文件夹，将所述匹配的应用放入对应的应用文件夹中进行推荐。</p>
+    <p>[0397]	在具体实现中，本申请实施例还可以包括如下模块：</p>
+    <p>[0398]	行为统计模块，用于采集提交所述应用获取请求后的用户行为信息，按用户标识写入用户特征库中。</p>
+    <p>[0399]	作为本申请实施例具体应用的一种示例，所述用户行为信息还包括用户的本地操作行为信息，和/或，用户的网上操作行为信息；在这种情况下，所述应用类别确定模块203可以包括如下子模块：</p>
+    <p>[0400]	第一特征提取子模块，用于从所述用户的本地操作行为信息和/或网上操作行为信息中，提取分类标签和对应的第一操作频次；</p>
+    <p>[0401]	转换子模块，用于将所述分类标签按预设的关联规则转换为对应的应用类别；所述预设的关联规则为分类标签及应用类别的转换规则；</p>
+    <p>[0402]	第二特征提取子模块，用于从所述用户针对在先推荐应用的操作信息中，提取用户在预设时间段内所操作的应用信息及对应的第二操作频次，所述应用信息中包括应用类别；</p>
+    <p>[0403]	排序子模块，用于根据所述第一操作频次和第二操作频次计算各应用类别的权重，按所述应用类别的权重从高到低进行排序；</p>
+    <p>[0404]	类别选定子模块，用于提取预设数量的前η个应用类别为向用户推荐的应用类别；其中，所述η为大于1的正整数。</p>
+    <p>[0405]	在本申请的一种优选实施例中，所述装置还可以包括如下模块：</p>
+    <p>[0406]	应用数据集生成模块，用于生成各个应用类别的应用数据集：</p>
+    <p>[0407]	所述应用数据集生成模块与匹配应用获取模块204连接，具体可以包括如下子模块：</p>
+    <p>[0408]	同类应用获取子模块，用于获取同一应用类别的应用，所述应用具有分类标签；</p>
+    <p>[0409]	相似度计算子模块，用于在所述应用中确定主应用及待推荐应用，并根据各应用的分类标签计算待推荐应用与主应用的相似度；</p>
+    <p>[0410]	质量评分参数获取子模块，用于获取所述待推荐应用的质量评分参数；</p>
+    <p>[0411]	待推荐应用提取子模块，用于分别提取同一主应用所对应的待推荐应用，按各待推荐应用的相似度和质量评分参数从高到低进行排序，并提取预设数量前m个的待推荐应用；其中，所述m为大于1的正整数；</p>
+    <p>[0412]	应用数据集形成子模块，用于将主应用及所提取的对应待推荐应用组成当前应用类别的应用数据集。</p>
+    <p>[0413]	在本申请的一种优选实施例中，所述匹配应用获取模块204可以包括如下子模块：[0414]	主应用统计子模块，用于根据用户针对在先推荐应用的操作信息，统计主应用及对应的第三操作频次，所述主应用为用户所操作的应用；</p>
+    <p>[0415]	待推荐应用确定子模块，用于在对应应用类别的应用数据集中，根据所述主应用提取匹配的待推荐应用，并在所述匹配的待推荐应用中，将所述第三操作频次作为应用提取的权重分别提取一定数量的待推荐应用，总共提取满足第一预设数量的待推荐应用。</p>
+    <p>[0416]	更为优选的是，所述匹配应用获取模块204还可以包括如下子模块：</p>
+    <p>[0417]	主应用选取子模块，用于获取主应用对应的应用类别，在同一应用类别内，按所述第三操作频次对所述主应用进行排序，提取预设数量的前k个主应用；其中，所述k为大于1的正整数；</p>
+    <p>[0418]	频繁2项集计算子模块，用于将所提取的主应用两两配对，计算所述两两配对的主应用同时出现的总次数，生成频繁2项集；</p>
+    <p>[0419]	频繁1项集计算子模块，用于计算每个主应用单独出现的次数，生成频繁1项集；</p>
+    <p>[0420]	置信度计算子模块，用于根据所述频繁2项集和频繁1项集计算各主应用的置信度，并按置信度对主应用进行排序；</p>
+    <p>[0421]	匹配应用确定子模块，用于将所提取的满足第一预设数量的待推荐应用，以及，所述按置信度排序的主应用进行匹配，生成最终推荐的匹配应用。</p>
+    <p>[0422]	本申请实施例不仅可以应用于单台设备的应用环境中，还可以应用于服务器-客户端的应用环境，或者进一步应用于基于云技术的应用环境中。</p>
+    <p>[0423]	由于所述装置实施例基本相应于前述方法实施例，故本实施例的描述中未详尽之处，可以参见前述实施例中的相关说明，在此就不赘述了。本申请装置实施例和系统实施例中所涉及的模块、子模块和单元可以为软件，可以为硬件，也可以为软件和硬件的组合。</p>
+    <p>[0424]	本申请可用于众多通用或专用的计算系统环境或配置中。例如：个人计算机、服务器计算机、手持设备或便携式设备、平板型设备、多处理器系统、基于微处理器的系统、置顶盒、可编程的消费电子设备、网络PC、小型计算机、大型计算机、包括以上任何系统或设备的分布式计算环境等等。</p>
+    <p>[0425]	本申请可以在由计算机执行的计算机可执行指令的一般上下文中描述，例如程序模块。一般地，程序模块包括执行特定任务或实现特定抽象数据类型的例程、程序、对象、组件、数据结构等等。也可以在分布式计算环境中实践本申请，在这些分布式计算环境中，由通过通信网络而被连接的远程处理设备来执行任务。在分布式计算环境中，程序模块可以位于包括存储设备在内的本地和远程计算机存储介质中。</p>
+    <p>[0426]	最后，还需要说明的是，在本文中，诸如第一和第二等之类的关系术语仅仅用来将一个实体或者操作与另一个实体或操作区分开来，而不一定要求或者暗示这些实体或操作之间存在任何这种实际的关系或者顺序。而且，术语“包括”、“包含”或者其任何其他变体意在涵盖非排他性的包含，从而使得包括一系列要素的过程、方法、物品或者设备不仅包括那些要素，而且还包括没有明确列出的其他要素，或者是还包括为这种过程、方法、物品或</p>
+    <p>者设备所固有的要素。在没有更多限制的情况下，由语句“包括一个......”限定的要素，</p>
+    <p>并不排除在包括所述要素的过程、方法、物品或者设备中还存在另外的相同要素。</p>
+    <p>[0427]	以上对本申请所提供的一种应用自动推荐的方法和一种应用自动推荐的装置进行了详细介绍，本文中应用了具体个例对本申请的原理及实施方式进行了阐述，以上实施例的说明只是用于帮助理解本申请的方法及其核心思想；同时，对于本领域的一般技术人员，依据本申请的思想，在具体实施方式及应用范围上均会有改变之处，综上所述，本说明书内容不应理解为对本申请的限制。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101141607A?cl=zh">CN101141607A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年9月8日</td><td class="patent-data-table-td patent-date-value">2008年3月12日</td><td class="patent-data-table-td ">百视通网络电视技术发展有限责任公司;Ut斯达康通讯有限公司</td><td class="patent-data-table-td ">可用于iptv的互动关联方法及其实现系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101551825A?cl=zh">CN101551825A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年5月15日</td><td class="patent-data-table-td patent-date-value">2009年10月7日</td><td class="patent-data-table-td ">中国科学技术大学</td><td class="patent-data-table-td ">基于属性描述的个性化影片推荐系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101959179A?cl=zh">CN101959179A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年7月17日</td><td class="patent-data-table-td patent-date-value">2011年1月26日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">一种提供移动终端应用程序的方法、服务器和移动终端</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102855309A?cl=zh">CN102855309A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月21日</td><td class="patent-data-table-td patent-date-value">2013年1月2日</td><td class="patent-data-table-td ">亿赞普(北京)科技有限公司</td><td class="patent-data-table-td ">一种基于用户行为关联分析的信息推荐方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102855309B?cl=zh">CN102855309B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月21日</td><td class="patent-data-table-td patent-date-value">2016年2月10日</td><td class="patent-data-table-td ">亿赞普(北京)科技有限公司</td><td class="patent-data-table-td ">一种基于用户行为关联分析的信息推荐方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102866904A?cl=zh">CN102866904A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td patent-date-value">2013年1月9日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">免安装ActiveX插件加载、发送方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102866904B?cl=zh">CN102866904B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">免安装ActiveX插件加载、发送方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102866945A?cl=zh">CN102866945A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月25日</td><td class="patent-data-table-td patent-date-value">2013年1月9日</td><td class="patent-data-table-td ">百度时代网络技术（北京）有限公司</td><td class="patent-data-table-td ">用于提供用户所对应的第一应用测试信息的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102866945B?cl=zh">CN102866945B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月25日</td><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">百度时代网络技术（北京）有限公司</td><td class="patent-data-table-td ">用于提供用户所对应的第一应用测试信息的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102880501A?cl=zh">CN102880501A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年7月24日</td><td class="patent-data-table-td patent-date-value">2013年1月16日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">应用推荐的实现方法、装置和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102999588A?cl=zh">CN102999588A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月15日</td><td class="patent-data-table-td patent-date-value">2013年3月27日</td><td class="patent-data-table-td ">广州华多网络科技有限公司</td><td class="patent-data-table-td ">一种多媒体应用的推荐方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103227791A?cl=zh">CN103227791A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年4月26日</td><td class="patent-data-table-td patent-date-value">2013年7月31日</td><td class="patent-data-table-td ">亿赞普(北京)科技有限公司</td><td class="patent-data-table-td ">一种无线数据采集的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103227791B?cl=zh">CN103227791B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年4月26日</td><td class="patent-data-table-td patent-date-value">2016年4月13日</td><td class="patent-data-table-td ">亿赞普(北京)科技有限公司</td><td class="patent-data-table-td ">一种无线数据采集的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103279540A?cl=zh">CN103279540A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月4日</td><td class="patent-data-table-td patent-date-value">2013年9月4日</td><td class="patent-data-table-td ">北京小米科技有限责任公司</td><td class="patent-data-table-td ">推送应用的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103428076A?cl=zh">CN103428076A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年8月22日</td><td class="patent-data-table-td patent-date-value">2013年12月4日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">向多类型终端或应用发送信息的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103475644A?cl=zh">CN103475644A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年8月22日</td><td class="patent-data-table-td patent-date-value">2013年12月25日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">一种网络应用的推送方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103488510A?cl=zh">CN103488510A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月24日</td><td class="patent-data-table-td patent-date-value">2014年1月1日</td><td class="patent-data-table-td ">长沙裕邦软件开发有限公司</td><td class="patent-data-table-td ">一种输入法的控制方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103501485A?cl=zh">CN103501485A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月22日</td><td class="patent-data-table-td patent-date-value">2014年1月8日</td><td class="patent-data-table-td ">小米科技有限责任公司</td><td class="patent-data-table-td ">推送应用的方法、装置和终端设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103595758A?cl=zh">CN103595758A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年10月11日</td><td class="patent-data-table-td patent-date-value">2014年2月19日</td><td class="patent-data-table-td ">北京奇虎科技有限公司</td><td class="patent-data-table-td ">推荐软件的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015007185A1?cl=zh">WO2015007185A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年7月11日</td><td class="patent-data-table-td patent-date-value">2015年1月22日</td><td class="patent-data-table-td ">Tencent Technology (Shenzhen) Company Limited</td><td class="patent-data-table-td ">一种推荐多媒体信息的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2015032334A1?cl=zh">WO2015032334A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年9月4日</td><td class="patent-data-table-td patent-date-value">2015年3月12日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">一种内容推荐的方法及移动终端</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=b5aDBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年9月12日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年10月2日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3e139543dfc7127bc827/CN102567511A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%BA%94%E7%94%A8%E8%87%AA%E5%8A%A8%E6%8E%A8%E8%8D%90%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85.pdf?id=b5aDBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0FrfJjSc7JBcXGUIWxXt4OC-7C_w"},"sample_url":"https://www.google.com/patents/reader?id=b5aDBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

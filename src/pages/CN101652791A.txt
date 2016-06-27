@@ -1,0 +1,258 @@
+<!DOCTYPE html><html><head><title>专利 CN101652791A - 在分布式会议系统中模拟房间锁定和休息室特征 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="在分布式会议系统中模拟房间锁定和休息室特征"><meta name="DC.contributor" content="D&#183;D&#183;塞卡莱" scheme="inventor"><meta name="DC.contributor" content="D&#183;怀亚特" scheme="inventor"><meta name="DC.contributor" content="K&#183;沃尔夫" scheme="inventor"><meta name="DC.contributor" content="微软公司" scheme="assignee"><meta name="DC.date" content="2008-3-31" scheme="dateSubmitted"><meta name="DC.description" content="用于会议会话的分布式会议框架中的会话锁定和休息室特征的体系结构。在锁定情景中，一旦用户进入会话，则可以锁定该会话以阻止其他个人进入，即使这些个人被邀请到该会话。锁定可以由会话参与者手动地实现和/或基于准则来自动地实现。休息室特征通过提供试图获得对会话的访问的用户的通知和/或标识，来允许会话参与者知晓休息室中的用户和待处理的对该会话的访问。会话负责人可以有选择地允许对会话的访问。该体系结构方便共同形成分布式会议系统的多个同等的、无负责人的会议服务器中的锁定和休息室特征。锁定和休息室特征可以使用媒体会话协议，诸如会话发起协议(SIP)和集中式会议控制协议(C3P)。"><meta name="DC.date" content="2010-2-17"><meta name="citation_patent_publication_number" content="CN:101652791:A"><meta name="citation_patent_application_number" content="CN:200880011472"><link rel="canonical" href="https://www.google.com/patents/CN101652791A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101652791A?cl=zh"/><meta name="title" content="专利 CN101652791A - 在分布式会议系统中模拟房间锁定和休息室特征"/><meta name="description" content="用于会议会话的分布式会议框架中的会话锁定和休息室特征的体系结构。在锁定情景中，一旦用户进入会话，则可以锁定该会话以阻止其他个人进入，即使这些个人被邀请到该会话。锁定可以由会话参与者手动地实现和/或基于准则来自动地实现。休息室特征通过提供试图获得对会话的访问的用户的通知和/或标识，来允许会话参与者知晓休息室中的用户和待处理的对该会话的访问。会话负责人可以有选择地允许对会话的访问。该体系结构方便共同形成分布式会议系统的多个同等的、无负责人的会议服务器中的锁定和休息室特征。锁定和休息室特征可以使用媒体会话协议，诸如会话发起协议(SIP)和集中式会议控制协议(C3P)。"/><meta property="og:title" content="专利 CN101652791A - 在分布式会议系统中模拟房间锁定和休息室特征"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101652791A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101652791A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=bC1zBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101652791A&amp;usg=AFQjCNGLIfSBJ66AwfW4GFEfoJdWylNIMA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/34116d89fa8220d6b239/CN101652791A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/34116d89fa8220d6b239/CN101652791A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101652791A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101652791A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101652791A?cl=zh" style="display:none"><span itemprop="description">用于会议会话的分布式会议框架中的会话锁定和休息室特征的体系结构。在锁定情景中，一旦用户进入会话，则可以锁定该会话以阻止其他个人进入，即使这些个人被邀请到该会话。锁定可以由会话参与者手动地实现和/或基于 ...</span><span itemprop="url">https://www.google.com/patents/CN101652791A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101652791A - 在分布式会议系统中模拟房间锁定和休息室特征</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101652791A - 在分布式会议系统中模拟房间锁定和休息室特征" title="专利 CN101652791A - 在分布式会议系统中模拟房间锁定和休息室特征"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101652791 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200880011472</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/US2008/058960</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年2月17日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年3月31日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2007年4月10日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/EP2150927A1?hl=zh-CN&amp;cl=zh">EP2150927A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2150927A4?hl=zh-CN&amp;cl=zh">EP2150927A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/US8880598?hl=zh-CN&amp;cl=zh">US8880598</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20080256182?hl=zh-CN&amp;cl=zh">US20080256182</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2008124373A1?hl=zh-CN&amp;cl=zh">WO2008124373A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200880011472.X, </span><span class="patent-bibdata-value">CN 101652791 A, </span><span class="patent-bibdata-value">CN 101652791A, </span><span class="patent-bibdata-value">CN 200880011472, </span><span class="patent-bibdata-value">CN-A-101652791, </span><span class="patent-bibdata-value">CN101652791 A, </span><span class="patent-bibdata-value">CN101652791A, </span><span class="patent-bibdata-value">CN200880011472, </span><span class="patent-bibdata-value">CN200880011472.X, </span><span class="patent-bibdata-value">PCT/2008/58960, </span><span class="patent-bibdata-value">PCT/US/2008/058960, </span><span class="patent-bibdata-value">PCT/US/2008/58960, </span><span class="patent-bibdata-value">PCT/US/8/058960, </span><span class="patent-bibdata-value">PCT/US/8/58960, </span><span class="patent-bibdata-value">PCT/US2008/058960, </span><span class="patent-bibdata-value">PCT/US2008/58960, </span><span class="patent-bibdata-value">PCT/US2008058960, </span><span class="patent-bibdata-value">PCT/US200858960, </span><span class="patent-bibdata-value">PCT/US8/058960, </span><span class="patent-bibdata-value">PCT/US8/58960, </span><span class="patent-bibdata-value">PCT/US8058960, </span><span class="patent-bibdata-value">PCT/US858960</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22D%C2%B7D%C2%B7%E5%A1%9E%E5%8D%A1%E8%8E%B1%22">D&#183;D&#183;塞卡莱</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22D%C2%B7%E6%80%80%E4%BA%9A%E7%89%B9%22">D&#183;怀亚特</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22K%C2%B7%E6%B2%83%E5%B0%94%E5%A4%AB%22">K&#183;沃尔夫</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%BE%AE%E8%BD%AF%E5%85%AC%E5%8F%B8%22">微软公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101652791A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101652791A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101652791A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (5),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=bC1zBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200880011472&amp;usg=AFQjCNFYEj1Rgs08F4q-iNIzk6Y0M9H0qA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=bC1zBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101652791A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFeTYXA9i5y-ACO9gByR9j3KxVhgw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT92721835" lang="ZH" load-source="patent-office">在分布式会议系统中模拟房间锁定和休息室特征</invention-title>
+    </span><br><span class="patent-number">CN 101652791 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA73845274" lang="ZH" load-source="patent-office">
+    <div class="abstract">用于会议会话的分布式会议框架中的会话锁定和休息室特征的体系结构。在锁定情景中，一旦用户进入会话，则可以锁定该会话以阻止其他个人进入，即使这些个人被邀请到该会话。锁定可以由会话参与者手动地实现和/或基于准则来自动地实现。休息室特征通过提供试图获得对会话的访问的用户的通知和/或标识，来允许会话参与者知晓休息室中的用户和待处理的对该会话的访问。会话负责人可以有选择地允许对会话的访问。该体系结构方便共同形成分布式会议系统的多个同等的、无负责人的会议服务器中的锁定和休息室特征。锁定和休息室特征可以使用媒体会话协议，诸如会话发起协议(SIP)和集中式会议控制协议(C3P)。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(20)</span></span></div><div class="patent-text"><div mxw-id="PCLM29206150" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种计算机实现的会议管理系统(100)，包括：    用于建立会话参与者的会议会话的会议组件(102)，所述参与者经由分布式媒体访问组件并基于会话协议连接至所述会议会话；以及    用于管理与会话休息室相关的未来的会话参与者对所述会议会话的访问的会话管理组件(112)。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 如权利要求1所述的系统，其特征在于，所述会话协议是会话发起协议 (SIP)。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 如权利要求1所述的系统，其特征在于，所述会话协议是集中式会议控 制协议（C3P)。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 如权利要求1所述的系统，其特征在于，所述会话组件方便在所述未来 的会话参与者与所述会话休息室相关联时将该未来的会话参与者通知给所述 会话参与者之一。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 如权利要求4所述的系统，其特征在于，所述会话参与者之一拒绝所述 未来的会话参与者对所述会话的访问。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 如权利要求4所述的系统，其特征在于，所述会话参与者之一允许所述 未来的会话参与者对所述会话的访问。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 如权利要求1所述的系统，其特征在于，所述未来的会话参与者在与所 述会话休息室相关联之前由所述会议组件认证。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 如权利要求7所述的系统，其特征在于，基于不成功的认证，所述会议 组件向与所述未来的会话参与者相关联的分布式媒体访问组件之一发信号，以 拒绝未来的会话参与者对所述会议会话的访问。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 如权利要求7所述的系统，其特征在于，基于成功的认证，所述会议组 件向与所述未来的会话参与者相关联的分布式媒体访问组件之一发信号，以允 许未来的会话参与者对所述会议会话的访问。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10. &#8212;种计算机实现的管理会议会话的方法，包括： 通过分布式访问组件建立会话参与者的会议会话（200); 通过所述分布式媒体访问组件之一从新用户接收会话访问的请求（202); 启用会话锁定以阻止对所述会话的访问（204);以及基于所述锁定来控制所述新用户对所述会话的访问（206)。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 如权利要求IO所述的方法，其特征在于，还包括通过SIP或者C3P中的至少一个来控制所述新用户对所述会议会话的访问。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 如权利要求IO所述的方法，其特征在于，还包括通过所述分布式媒体 访问组件之一使用企业凭证来认证所述新用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 如权利要求IO所述的方法，其特征在于，还包括通过所述分布式媒体 访问组件之一使用摘要数据来认证所述新用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 如权利要求IO所述的方法，其特征在于，还包括基于认证过程的启动， 发送较小量的会话信息给所述新用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15. 如权利要求IO所述的方法，其特征在于，还包括基于所述新用户的成 功认证，发送较大量的会话信息给所述新用户。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16. 如权利要求IO所述的方法，其特征在于，还包括在所述会议会话期间 向所述会话参与者通知所述新用户的请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17. 如权利要求IO所述的方法，其特征在于，还包括基于所述新用户的会 话访问，允许来自所述分布式媒体访问组件之一的完整的媒体流，所述访问是 由所述会话参与者之一授予的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18. 如权利要求IO所述的方法，其特征在于，还包括向所述会话参与者的 子集通知所述新用户正在试图获得对所述会议会话的访问，并且基于所述子集 来授予对所述会话的访问。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19. 如权利要求IO所述的方法，其特征在于，还包括管理所述会议会话的 休息室特征的存在。</div>
+    </div>
+    </div> <div class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20. &#8212;种计算机实现的系统，包括：用于通过分布式访问组件建立会话参与者的会议会话的计算机实现的装 置(102);用于通过所述分布式媒体访问组件之一从新用户接收会话访问的请求的 计算机实现的装置（102);用于启用会话锁定以控制对所述会话的访问的计算机实现的装置（112);以及用于控制所述新用户对所述会话的访问的计算机实现的装置（112)。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES35671990" lang="ZH" load-source="patent-office" class="description">
+    <p>在分布式会议系统中模拟房间锁定和休息室特征</p>
+    <p>背景</p>
+    <p>计算设备和连网方面的技术进步继续提供对各种各样的信息和服务的更 多访问，从而实际上允许从世界上的任何地方进行访问。由于需要完成的工作 可从大多数位置来完成，因此虚拟办公室变得更加常见。企业认识到会议对于 例如有效解决客户需求和推动产品开发的重要性。然而，将用户从他们所处的 多个远程位置聚在一起进行商务活动并支持多种可用的通信设备和媒体类型， 其前景还是很有挑战性。</p>
+    <p>会议可以是例如公司企业的职员进行会晤的有效手段。然而，给定任意时</p>
+    <p>间上:的位置和连接能力，参与者可能想要通过不同的媒体类型来加入。随着便 携式无线计算设备的存储和计算能力的进步，用户现在能够与多种类型的不同 数据类型进行交互，诸如例如图像、视频剪辑、音频数据和文本数据。这是由 用户现在可以使用并用于连接至会话的若干类型的设备来促进的。例如， 一个 用户可以从会议室通过音频/视频来参与，另一个用户可以经由台式计算机通过 语音来参与，而又一个用户可以使用蜂窝电话通过文本输入来参与。</p>
+    <p>一般而言，常规会议系统通常使用参与者通行码和负责人通行码来作为管 理会话访问和该会话的一种方式。然而，这些技术至少在访问方式范围内受到 限制，并且考虑了缺少会话参与者标识。</p>
+    <p>概述</p>
+    <p>下面提出简化概述以便提供对在此描述的各新颖实施例的基本理解。本概 述不是详尽的综述，并且它不旨在标识关键/重要的元素，也不旨在描绘其范围。</p>
+    <p>其唯一目的是以简化形式来提出一些概念，作为稍后提出的更详细的描述的序曰。</p>
+    <p>所公开的体系结构在会议会话的分布式会议框架中引入会话锁定和休息 室特征。在锁定情景中， 一旦用户进入会话，则可以锁定该会话以阻止其他个 人进入，即使这些个人被邀请到该会话。锁定可以由现有的会话参与者（例如</p>
+    <p>4会话负责人）手动实现，和/或基于准则（例如会话开始时间）来自动实现。休息室特征通过提供试图获得对会话的访问的用户的通知和/或标识，来 允许会话参与者知晓已经被锁在外面的用户。换言之，会话负责人或出席者（其他会话参与者）可被通知，用户A和用户B已经或者正在试图获得对该会话的访问，但被锁在外面并且以休息室模式或状态等待。会话负责人随后可以有选择地允许对该会话的访问。例如，可以允许用户A进行访问，但不允许用户 B。然而，根据典型的休息室情景，可以自动地或者手动地调度用户B在稍后 的时候（例如15分钟后）进行访问。该体系结构方便共同形成分布式会议系统的多个同等的、无负责人的会议 服务器中的锁定和休息室特征。例如，可以使用会话发起协议（SIP)和集中 式会议控制协议（C3P或CCCP)来方便锁定和/或休息室功能。SIP实现针对 在当前被解决的因特网草案中的缺点，特别是针对多个前端体系结构的支持。为实现上述及相关目的，在此结合下面的描述和附图来描述一些说明性方 面。然而这些方面仅指示可以使用此处公开的原理的各种方式中的少数几种， 并且旨在包括所有这些方面及其等效方面。通过结合附图阅读下面的详细描 述，其它优点和新颖特征将变得显而易见。附图简述图1示出计算机实现的会议管理系统。 图2示出管理会议会话的方法。 图3A和图3B示出管理会议会话的更详细方法。 图4示出根据预定准则自动地允许会话访问的方法。 图5示出可用于根据所公开的体系结构执行锁定和休息室协议体系结构 的计算系统的框图。图6示出用于锁定和休息室协议体系结构的示例性计算环境的示意框图。详细描述所公开的体系结构支持可以便于虚拟web会议的内部部署会议系统。在 真实物理世界类比中，当会议在会议室中发生时，会议负责人（或者出席者）话负责人时所处的位置可被称为休息 室，或者就在会议室外面。当会议被设置在锁定状态中时，不容许用户进入会 议。而且，有可能还将用户锁在外面而无法获得对休息室的访问。继续物理类 比，可以允许新用户进入休息室，或者可以通过拒绝新用户访问休息室来一起 拒绝其访问会议。在本体系结构的虚拟示例中，当启用休息室特征时，未来的会话参与者可 以进入会议（或者虚拟）休息室，并且等待会话负责人（或者任何会话参与者） 授予会话访问。如果会话负责人还没有在会话中，则一旦负责人进入会议，就 可以通知该负责人未来的参与者正在休息室中等待。负责人随后可以有选择地 授予/拒绝休息室用户中的每一个的访问。在会议正在进行的同时，还可以通过例如控制台警报或者消息将休息室中 未来的参与者通知负责人。负责人随后可以锁定会话"门"以阻止更多的干扰。 作为 一种更专用的控制手段，负责人（或者出席者）可以启用或禁用每一独立 会议的休息室。 一旦被授予访问，则休息室参与者的控制台自动地启动并且休 息室（或者未来的）参与者被授予对所有会话通信的访问。可以向被拒绝访问 或者可能超时的参与者呈现适当的消息。该会议体系结构是用于多方多媒体会议的可伸&#32302;、可插入的体系结构。通 过集中式策略和控制组件（会议组件）提供锁定和休息室功能，控制组件允许 无缝地插入不同的分布式媒体访问组件。该会议体系结构支持供客户机参与会 话的不同媒体类型（例如数据、音频/视频、即时消息收发）的多个可插入分布 式媒体组件。现在参考附图，在各附图中相同的参考标号用于指相同的元素。在下面的 描述中，为解释起见，阐述众多具体细节以便提供对本发明的全面理解。然而， 显然，可在没有这些具体细节的情况下实践这些新颖实施例。在其它情况下， 以框图形式示出众所周知的结构和设备以便于描述它们。最初参考附图，图1示出计算机实现的会议管理系统100。系统100包括用于建立会话参与者和未来的参与者106的会议会话104的会议组件102。参与者106通过分布式媒体访问组件110 (示为媒体访问组件p……，媒体访 问组件N，其中N是正整数）并基于会话协议来使用客户机（或客户机设备）</p>
+    <p>108连接至会议会话104。</p>
+    <p>媒体组件110可以位于网络（例如因特网）中的任何地方，从而允许通过 例如HTTP来访问。会议组件102可以是网络的许多这样的组件之一，它们独 立地或者协作地运作以提供会话104，并且不需要知道关于其它媒体访问组件 的任何事情。媒体访问组件IIO包括用于与客户机连接以传递数据、音频/视频 媒体、单独的音频、即时消息收发以及其它媒体类型、组合和格式的能力。</p>
+    <p>会话管理组件112提供对已允许的会话参与者和与会话休息室114相关的 未来的会话参与者访问会议会话104的管理。换言之，期望成为会话104的一 部分的用户可以通过休息室114来处理，或者在最初直接进入会话104。稍后 的未来的参与者则可通过会话休息室114来处理。</p>
+    <p>客户机（或客户机设备）108可以使用媒体会话协议与适当的媒体访问组 件110通信，媒体会话协议可以是会话发起协议（SIP)和/或集中式会议控制 协议（C3P)。会话管理组件112便于在未来的会话参与者与会话休息室114 相关联时，将该未来的会话参与者通知会话参与者之一。 一个或多个会话参与 者（例如出席者或者监视者）可以允许或者拒绝来自休息室114的未来的会话 参与者访问会话104。</p>
+    <p>作为连接过程的一部分，未来的会话参与者可以在与会话休息室114相关 联之前由会议组件102进行认证。为此，基于相应的成功或者不成功的认证， 会议组件102向与该未来的会话参与者相关联的对应的分布式媒体访问组件 110发信号以允许或者拒绝该未来的会话参与者对会议会话104的访问。</p>
+    <p>例如，为了满足会议需求，用户106中的一个或多个（例如经由因特网连 接）访问集中式会议组件102以请求创建、调度会议会话104或者请求参与当 前的会话。媒体访问组件IIO包括为用户106所使用的客户机108 (或客户机 设备）连接和分配适当的媒体接口 （例如音频、视频、数据），配置该媒体接 口以满足所请求的客户机媒体类型，提供对会议会话104的会话管理，以及管 理所有相关联的客户机108和系统的会话104的关闭和清除的能力。</p>
+    <p>集中式会议组件102可以是例如网络或者企业中许多这样的组件之一，并且它还提供会话实例的调度服务和创建。会议组件102还包括用于向会议会话 104分配最可用的分布式媒体访问组件110中的一个或多个的功能。会议组件</p>
+    <p>102还用作会议策略和登记表控制服务。会议策略是管控会议操作的规则的总</p>
+    <p>集合，并且可以分解成成员资格策略和媒体策略。会议策略服务是可以存储和 操纵会议策略和登记表的逻辑功能。</p>
+    <p>会议组件102还包括会议通知服务，它是允许进行通知、接受对会议状态 的订阅以及将关于该状态的改变通知订阅者的逻辑功能。会议控制组件还用于 基于诸如身份信息、企业凭证、和/或PIN等认证信息来通过用户授权和/或认 证服务提供会话安全。</p>
+    <p>会议控制器102还与分布式媒体访问组件110接口以用于会议策略和登记 表管理服务。该会议体系结构使用单个综合登记表来向会议参与者或者未来的 参与者提供单个会议画面。</p>
+    <p>要理解的是，尽管所公开的锁定和休息室实现是在会议系统的上下文中描 述的，但该一般技术可应用于多个用户寻求访问共同位置或空间的其它上下 文。例如，锁定和休息室体系结构可以应用于其中许多用户访问中心虚拟游戏 场地或环境的虚拟在线游戏。给定其中公共访问可以填充游戏的可用位置的这 些场景，可使用休息室来有选择地允许某些玩家进入并且阻止其它玩家访问该 虚拟环境。因此，这提供了对玩家访问以及当前玩家通知的更多的控制，而不 需要服务器管理员访问特殊的控制台来将玩家推出服务器。</p>
+    <p>图2示出管理会议会话的方法。尽管为了简化解释，将在此处以例如流图 或流程图形式示出的一个或多个方法示为和描述为一系列动作，但要理解的 是，这些方法不受动作的次序的限制，因为本发明， 一些动作可以按与以此处 所示和描述的不同的次序和/或与其它动作同时发生。例如，本领域技术人员将 理解和明白，方法可被替换地表示为一系列相互关联的状态或事件，诸如以状</p>
+    <p>态图的形式。而且，并非一方法中所示的所有动作都是对于新颖实现所必需的。 在200，通过分布式媒体访问组件中的一个或多个建立会话参与者的会议 会话。在202，从新用户接收会话访问的请求，该请求是从分布式媒体访问组 件之一接收的。在204，启用会话锁定以通过阻止对该会话的访问来控制对该 会话的访问。在206，基于该锁定来控制新用户对会话的访问。</p>
+    <p>8图3A和图3B示出管理会议会话的更详细的方法。在300，会议组件建 立会话并且启动会议锁定以阻止其他用户或者未来的参与者进入该会话。在 302，会话参与者之一启用休息室特征。在304，通过控制台界面（例如HTTP) 从未来的参与者（WBP)接收加入会话的请求。该请求可以从用户客户机（或 者客户机设备）处理至对应的媒体访问组件，且随后至会议组件。该请求可以 是加入邀请（INVITE)形式的。在306，启动认证过程以使用认证数据认证 WBP。例如该数据可包括企业凭证和/或用户信息。基于成功的认证，会议组 件处理来自WBP的加入会话的请求，如在308所示。在310，会议组件向要 加入会话的WBP发出最小量的会话信息。该会话信息可以基于对会议信息的 订阅（SUBSCRIBE)消息来获得。</p>
+    <p>移至图3B，在312，会议组件向一个或多个会话参与者发送关于WBP的 通知。在314，会话参与者处理请求。在316，系统检查以确定是否允许该WBP。 如果是，则在318，会话参与者向会议组件发送命令以允许该WBP。在320， 会议组件向该WBP发送完整的会话细节。这可以包括会话参与者、会话负责 人（如果有的话）、当前会话状态（例如主题）等等。在322，会议组件允许 WBP连接至分布式媒体访问组件以用于来自WBP设备（例如蜂窝电话、便携 计算机）的完整媒体通信。另选地，如果不允许WBP访问，则流程从316至 324，在此会话参与者向会议组件发送命令以拒绝该WBP。该命令可以使用 C3P来发送。在326，会议组件向WBP发送访问拒绝的通知。WBP可以在加 入邀请对话上发送再见（BYE)并在订阅对话上发送具有适当短语的通知 (NOTIFY)   (exp:0)。在328， WBP登出控制台。</p>
+    <p>在一个更具体的上下文中，想要加入会议会话的WBP通过控制台界面访 问加入URL。例如，WBP可以使用域凭证或者基于PIN的摘要机制来进行认 证。WBP发送加入邀请，该加入邀请被接受并且将WBP状态标记为在休息室 中待处理/挂起（on-hold) 。 WBP发送对会议包的订阅。由于WBP处于挂起 状态，因此WBP接收到包含最小量的会议细节的文档和声明WBP处于待处 理/挂起状态的信息。</p>
+    <p>会议组件向会话的所有会话参与者（或者监视者）发送关于会话休息室中 的待处理/挂起的WBP的通知。接收到关于休息室中的待处理/挂起的WBP的</p>
+    <p>9通知的一个或多个会话负责人（或者出席者）可以决定拒绝或者允许要加入会 话的WBP中的一个或多个的访问。出席者向会议组件发送C3P请求以允许/</p>
+    <p>拒绝WBP进入会议会话。如果出席者允许WBP，则该WBP将从挂起改变为 已允许状态，并且向该WBP发送具有所有细节的会议状态完整通知。另选地， 如果出席者拒绝WBP，则在加入邀请对话上向该WBP发送再见并且在订阅对 话上发送具有适当原因短语的通知（exp:0)。例如，这可以是使用SIP的C3P。</p>
+    <p>替换的通信对话使用临时响应。例如，当会议组件从WBP接收到邀请并 且会议处于锁定状态时，出席者（或者会话参与者）可以批准该新参与者。在 该情形中，邀请消息可以停留在会议组件上，并且可以发送临时响应以指示进 展。随后可以使用会议组件通知服务将通知发送至出席者。出席者随后可以允 许该WBP加入，响应于此，会议组件随后接受该邀请。</p>
+    <p>除了除非参与者被授权否则不建立订阅对话之外，该呼叫流程遵循图3A 和3B的流程。另外，挂起邀请对话，并且除非被授权否则不建立。</p>
+    <p>图4示出根据预定准则自动地允许会话访问的方法。在400，通过一个或 多个分布式媒体访问组件建立会话参与者的会议会话。在402，允许会话参与 者访问会话，并且随后锁定会话以阻止更多的会话访问。在404，确定并配置 用于自动地允许所有或者所选择的WBP的访问的准则。在406，通过分布式 媒体访问组件从WBP (或者新用户）接收一个或多个会话访问的请求。在408， 认证WBP，并且将经成功认证的用户的状态设置为休息室。在410，基于准则 来自动地允许休息室WBP的访问。</p>
+    <p>下面是对未来的参与者的、该参与者在会话休息室中处于挂起状态的通知 的示例代码。</p>
+    <p>&lt;!&#8212;参与者sip:userl@rtcdev.nttest.mic.com从中心接收他在休息室中挂起 的初始通知。--〉</p>
+    <p>&lt;conference一inf� entity="sip:conf&#8212;4.pool@c�nfdomain.com/user=ms&#8212; conf" state="full" version=''�，，&gt;</p>
+    <p>&lt;conference-description〉 &lt;display-text〉conf-name&lt;/display-text&gt; &lt;/conference-description〉&lt;user entity='，sip: userl0rtcdev . nttest .mic . c�m，， state="full'，&gt;</p>
+    <p>&lt;endpoint entity='，sip: userl@rtcdev . nttest .microsoft. com"〉</p>
+    <p>&lt;status〉�n&#8212;h�ld&lt;/status&gt;</p>
+    <p>&lt;/endpoint&gt;</p>
+    <p>&lt;/user〉</p>
+    <p>&lt;/users&gt;</p>
+    <p>&lt;/c�nference&#8212;info〉</p>
+    <p>下面是允许来自会话休息室的未来的参与者的访问的C3P命令的示例代码。</p>
+    <p>&lt; re que st ;requestld=，'2 " f rom二，'sip: presenter" t�="sip : conf uri"〉 &lt;setUserAccess〉</p>
+    <p>&lt;userKeys conf Entity=" sip : c�nf uri " use;rEntity='，sip :userl"/〉</p>
+    <p>下面是拒绝来自会话休息室的未来的参与者的访问的C3P命令的示例代</p>
+    <p>&lt;request requestld='，2，， f rom二，'sip : presenter" to='，sip : conf uri，，&gt; &lt;setUserAccess〉</p>
+    <p>&lt;usei:Keys c�nf Entity="sip : conf uri " userEntity=，，sip : userl '， /&gt; &lt;access&gt;denied&lt;/access〉 &lt;/setUserAccess&gt; &lt;/request〉</p>
+    <p>C3P命令可用于锁定和解除锁定会议会话。该命令可以由会议组件执行并 且分支到所有媒体访问组件。</p>
+    <p>会议组件和媒体访问组件中的会议状态可以适当地在会议状态文档中传 达。下面是在会议状态（conference-state)元素中的锁定状态的示例代码。</p>
+    <p>&lt;/setUserAccess&gt;</p>
+    <p>&lt;/request&gt;码。&lt;conf erence-inf o entity='， sip : conf uri '，&gt;</p>
+    <p>&lt;c�nference-state&gt;</p>
+    <p>&lt;l�cked〉false&lt;/l�cked〉 &lt;/c�nference-st3te&gt;</p>
+    <p>&lt; c o n f e r e n c e - i n f o &gt;</p>
+    <p>这可以用于表示会议的视图并且还可用于允许每个媒体访问组件表示会</p>
+    <p>议会话的锁定状态。因为会议视图（conference-view)元素是媒体访问组件用 于发布其会议的状态的元素，因此这也可以扩展来表示锁定状态。</p>
+    <p>&lt;conference-view  .. &gt;</p>
+    <p>〈entity-view entity="AV"〉 &lt;entity-state&gt;</p>
+    <p>&lt;locked&gt;false&lt;/l�cked&gt; &lt;/entity-state&gt; &lt;/entity-view〉</p>
+    <p>&lt;entity-view entity="Data"〉</p>
+    <p>&lt;entity-state&gt;</p>
+    <p>&lt;locked&gt;false&lt;/locked&gt;</p>
+    <p>&lt;/entity-state&gt; &lt;/entity-view〉</p>
+    <p>&lt;/conference-view〉</p>
+    <p>中心也可以具有会议视图元素中的条目。考虑基于两个媒体访问组件的锁</p>
+    <p>定命令的端到端呼叫流程： 一个是音频/视频单元，而另一个是数据单元，在一 开始，会议处于未锁定状态。</p>
+    <p>初始会议状态可以在代码中表示为，</p>
+    <p>&lt;conf erence-inf &#9702; entity="sip : confuri，'〉&lt;conference-view  ..〉</p>
+    <p>&lt;entity-view entity-"Focus"〉 &lt;entity-state&gt;</p>
+    <p>&lt;l�ckeci〉f alse&lt;/locked&gt; &lt;/entity-st3te&gt; &lt;/entity&#8212;view&gt;</p>
+    <p>&lt;entity-view entity=''AV"〉</p>
+    <p>&lt;entity-state〉</p>
+    <p>&lt;locked〉false&lt;/l�cked&gt;</p>
+    <p>&lt;/entity-state〉 &lt;/entity-view〉</p>
+    <p>&lt;entity-view entity=，'Data"&gt;</p>
+    <p>&lt;entity-state&gt;</p>
+    <p>&lt;locked&gt;false&lt;/locked&gt;</p>
+    <p>&lt;/entity-state&gt; &lt;/entity-view&gt;</p>
+    <p>&lt;/conference-view&gt;</p>
+    <p>&lt;users〉</p>
+    <p>&lt;/conference-inf�&gt;</p>
+    <p>'当会话出席者发出锁定会议命令时，使用下面的示例性代码发出C3P命 令以锁定会议。</p>
+    <p>&lt;request requestld=''3'， from="sip:presenter" to=''sip: confuiri''〉 &lt;modifyConferenceLock〉</p>
+    <p>&lt;c�nf erenceKeys conf Entity=" sip : c�nf uri ，， /&gt; &lt;locked&gt;true&lt;/locked&gt; &lt;/modifyConferenceL�ck&gt; &lt;/request&gt;</p>
+    <p>13当在中心上执行该命令之后，会议状态看起来可以像下面的代码，示出从 假（在删除线中）到真的改变值。</p>
+    <p>&lt;c�nfe;rence-info entity='，sip:confur"i"&gt;</p>
+    <p>&lt;c�nference-view  ..〉</p>
+    <p>&lt;entity-view entity="Focus"&gt; &lt;entity&#8212;state〉</p>
+    <p>&lt;l�ckeci&gt; faloctrue&lt;/lock:ed&gt; &lt;/entity-state〉 &lt;/entity-view〉</p>
+    <p>&lt;entity-view entity="AV"&gt;</p>
+    <p>&lt;entity-state&gt;</p>
+    <p>&lt;locked&gt;false&lt;/locked&gt;</p>
+    <p>&lt;/entity-state〉 &lt;/entity-view〉</p>
+    <p>&lt;entity-view entity=，， Data，'〉</p>
+    <p>&lt;entity&#8212;st3te〉</p>
+    <p>&lt;l�cked&gt;false&lt;/locked&gt;</p>
+    <p>&lt;/entity-state&gt; &lt;/entity-view〉</p>
+    <p>&lt;/c�nference-view〉</p>
+    <p>&lt;users&gt;</p>
+    <p>&lt;/users〉</p>
+    <p>&lt;/c�nference-info&gt;</p>
+    <p>当在音频/视频媒体访问组件上执行该命令之后，会议状态可以如下呈现， 示出从假（在删除线中）到真的改变值。</p>
+    <p>&lt;c�nf erence-inf o entity='，sip : confuri"&gt;&lt;c�nference-view  .. &gt;</p>
+    <p>&lt;entity-view entity='，Focus'，&gt; &lt;entity-state&gt;</p>
+    <p>&lt;locked&gt;t:rue&lt;/l�ck:ed&gt; &lt;/entity-state〉 &lt;/entity-view&gt;</p>
+    <p>&lt;entity-view entity="AV"&gt;</p>
+    <p>&lt;entity-state〉</p>
+    <p>&lt;locked&gt; fdlcsctrue&lt;/locked&gt;</p>
+    <p>&lt;/entity-state&gt; &lt;/entity-view〉</p>
+    <p>&lt;entity&#8212;view entity二，'Data'，〉</p>
+    <p>&lt;entity-state〉</p>
+    <p>&lt;l�cked&gt;false&lt;/l�cked&gt;</p>
+    <p>&lt;/entity-state〉 &lt;/entity&#8212;view&gt;</p>
+    <p>&lt;/conference-view〉</p>
+    <p>&lt;users&gt;</p>
+    <p>&lt;/users〉</p>
+    <p>&lt;/conference-inf&#9702;〉</p>
+    <p>当在数据媒体访问组件上执行该命令之后，会议状态（其也是最终状态) 可以如下表示，示出从假（在删除线中）到真的改变值。</p>
+    <p>&lt;c�nference-info entity="sip:ccmfuri'，&gt;</p>
+    <p>&lt;c�nference-view  ..〉</p>
+    <p>〈entity-view entity="Focus"&gt; &lt;entity&#8212;state&gt;</p>
+    <p>15&lt;locked&gt;true&lt;/locked〉 &lt;/entity-state&gt; &lt;/entity-view&gt;</p>
+    <p>&lt;entity-view entity="AV"〉</p>
+    <p>&lt;entity-state&gt;</p>
+    <p>&lt;l�ckedt:rue&lt;/l�ck:ed&gt;</p>
+    <p>&lt;/entity-state〉 &lt;/entity&#8212;view〉</p>
+    <p>&lt;entity-view entity=，，Data "&gt;</p>
+    <p>&lt;entity-state&gt;</p>
+    <p>&lt;locked&gt; falGctrue&lt;/locked&gt;</p>
+    <p>&lt;/entity-state&gt; &lt;/entity-view&gt;</p>
+    <p>&lt;/conference-view〉</p>
+    <p>&lt;users&gt;</p>
+    <p>&lt;/users〉</p>
+    <p>&lt;/conference-inf�〉</p>
+    <p>出席者随后发出解除锁定会议命令。该命令可以是解除锁定会议的C3P</p>
+    <p>命令，并且可以由下面的代码表示。</p>
+    <p>&lt;request requestId="3"  fr�m="sip:presenter"</p>
+    <p>to="sip:confuri"〉</p>
+    <p>&lt;m�dif y Conference :Lock&gt;</p>
+    <p>&lt;c�nf erenceKeys c�nf Entity='，sip : conf uri" /〉</p>
+    <p>&lt;l�cked&gt;false&lt;/locked&gt;</p>
+    <p>&lt;/modifyConferenceLock〉</p>
+    <p>&lt;/request&gt;</p>
+    <p>当在会议组件和所有的媒体访问组件上执行该命令之后，会议状态可以由 下面的代码表示，示出从真（在删除线中）到假的改变值。&lt;conf erence-inf� entity="sip: confuri，，&gt;</p>
+    <p>&lt;conference-view  .. &gt;</p>
+    <p>&lt;entity-view entity=，，Focus"&gt; &lt;entity-state〉</p>
+    <p>&lt;locked&gt; truofalse&lt;/l�cked&gt; &lt;/entity-state&gt; &lt;/entity-view〉</p>
+    <p>&lt;entity-view entity="AV"&gt;</p>
+    <p>&lt;entity-state&gt;</p>
+    <p>&lt;l�cked&gt; truefalse&lt;/l�cked〉</p>
+    <p>&lt;/entity&#8212;state&gt; &lt;/entity-view〉</p>
+    <p>&lt;entity-view entity="Data，，〉 &lt;entity-state&gt;</p>
+    <p>&lt;locked〉 truofalse&lt;/locked&gt;</p>
+    <p>&lt;/entity-state〉 &lt;/entity-view&gt;</p>
+    <p>&lt;/conference-view〉</p>
+    <p>&lt;users&gt; &lt;/users&gt;</p>
+    <p>&lt;/c�nference&#8212;inf�〉</p>
+    <p>如在本申请中所使用的，术语"组件"和"系统"旨在指计算机相关的实 体，其可以是硬件、硬件和软件的组合、软件、或者执行中的软件。例如，组 件可以是但不限于，在处理器上运行的进程、处理器、硬盘驱动器、多个存储 驱动器（光和/或磁存储介质）、对象、可执行对象、执行的线程、程序、和/或计算机。作为说明，在服务器上运行的应用程序和服务器两者都可以是组件。 一个或多个组件可以驻留在迸程和/或执行的线程中，并且组件可以定位在一个 计算机中和/或分布在两个或多个计算机之间。</p>
+    <p>现在参考图5，示出了可用于根据所公开的体系结构执行锁定和休息室协 议体系结构的计算系统500的框图。为了提供用于其各方面的附加上下文，图</p>
+    <p>5和下面的讨论旨在提供其中可实现该各方面的合适计算系统500的简要概括</p>
+    <p>描述。尽管上面的描述是在可在一个或多个计算机上运行的计算机可执行指令 的一般上下文中进行的，但本领域技术人员将认识到，新颖实施例还可以结合 其它程序模块和/或作为硬件和软件的组合来实现。</p>
+    <p>一般而言，程序模块包括执行特定任务或者实现特定抽象数据类型的例 程、程序、组件、数据结构等。而且，本领域技术人员将了解，本发明的方法 可以通过其它计算机系统配置来实践，包括单处理器或者多处理器计算机系 统、小型计算机、大型计算机、以及个人计算机、手持式计算设备、基于微处 理器的或者可编程消费电子产品等等，其每一个都可以在操作上耦合到一个或 多个相关联的设备。</p>
+    <p>所示各方面也可以在其中某些任务由通过通信网络链接的远程处理设备 来执行的分布式计算环境中实践。在分布式计算环境中，程序模块可以位于本 地和远程存储器存储设备中。</p>
+    <p>计算机一般包括各种计算机可读介质。计算机可读介质可以是可由计算机 访问的任何可用介质，并且包括易失性和非易失性介质、可移动和不可移动介 质。作为示例而非限制，计算机可读介质可以包括计算机存储介质和通信介质。 计算机存储介质包括以用于存储诸如计算机可读指令、数据结构、程序模块或 其它数据等信息的任何方法和技术实现的易失性和非易失性、可移动和不可移</p>
+    <p>动介质。计算机存储介质包括但不限于，RAM、 ROM、 EEPROM、闪存或其 它存储器技术、CD-ROM、数字视频盘（DVD)或其它光盘存储、磁盒、磁带、 磁盘存储或者其它磁存储设备、或者可用于存储所需信息且可由计算机访问的 任何其它介质。</p>
+    <p>再次参考图5，用于实现各方面的示例性计算系统500包括计算机502， 计算机502包括处理单元504、系统存储器506和系统总线508。系统总线508向包括但不限于系统存储器506的各系统组件提供到处理单元504的接口。处 理单元504可以是市场上可购买到的各种处理器中的任一种。双微处理器和其 它多处理器架构也可用作处理单元504。</p>
+    <p>系统总线508可以是若干类型的总线结构的任何一种，它可进一步互连至 存储器总线（带有或者不带有存储器控制器）、外围总线、以及使用市场上可 购买到的各种总线体系结构中的任一种的局部总线。系统存储器506包括只读 存储器（ROM) 510和随机存取存储器（RAM) 512。基本输入/输出系统（BIOS) 存储在诸如ROM、 EPROM、 EEPROM的非易失性存储器510中，其中BIOS 包含诸如在启动时帮助在计算机502的元件之间传送信息的基本例程。RAM 512还包括诸如静态RAM等高速RAM以用于高速缓存数据。</p>
+    <p>计算机502还包括内置硬盘驱动器（HDD) 514 (例如EIDE、 SATA)， 内置硬盘驱动器514还可被配置成在合适的机壳（未示出）中供外部使用；磁 软盘驱动器（FDD) 516 (例如读写可移动磁盘518);和光盘驱动器520 (例 如读CD-ROM盘522，或者读写其它高容量光介质，诸如DVD)。硬盘驱动 器514、磁盘驱动器516和光盘驱动器520可以分别通过硬盘驱动器接口 524、 磁盘驱动器接口 526和光盘驱动器接口 528连接至系统总线508。用于外置驱 动器实现的接口 524包括通用串行总线（USB)和IEEE 1394接口技术中的至 少一种或两者。</p>
+    <p>驱动器及其相关联的计算机可读介质提供对数据、数据结构、计算机可执 行指令等的非易失性存储。对于计算机502，驱动器和介质容纳合适的数字格 式的任何数据的存储。尽管上面对计算机可读介质描述涉及HDD、可移动磁 盘和诸如CD或DVD等可移动光学介质，但本领域技术人员应当了解，计算 机可读的任何其它类型的介质，诸如zip驱动器、磁盒、闪存卡、盒式磁带等 等也可在示例性操作环境中使用，并且此外，任何这样的介质可包含用于执行 所公开的体系结构的新颖方法的计算机可执行指令。</p>
+    <p>多个程序模块可存储在驱动器和RAM 512中，包括操作系统530、 一个 或多个应用程序532、其它程序模块534和程序数据536。例如， 一个或多个 应用程序532和其它程序模块534可以包括客户机108、媒体访问组件110、 和会议组件102。所有或部分操作系统、应用程序、模块和/或数据也可以高速缓存在RAM512中。要理解的是，所公开的体系结构可以用&#24063;场上可购得的各种操作系统或者操作系统组合来实现。</p>
+    <p>用户可以通过一个或多个有线/无线输入设备，例如键盘538和诸如鼠标540等定点设备将命令和信息输入到计算机502中。其它输入设备（未示出）可包括话筒、IR遥控器、操纵杆、游戏垫、指示笔、触摸屏等等。这些和其它输入设备通常通过耦合到系统总线508的输入设备接口 542连接至处理单元504，但也可通过其它接口来连接，诸如并行端口、 IEEE 1394串行端口、游戏端口、 USB端口、 IR接口等。</p>
+    <p>监视器544或其它类型的显示设备也通过接口 ，诸如视频适配器546连接至系统总线508。除了监视器544之外，计算机一般包括诸如扬声器、打印机等其它外设输出设备（未示出）。</p>
+    <p>计算机502可使用经由有线和/或无线通信至一个或多个远程计算机，诸如远程计算机548的逻辑连接在网络化环境中操作。远程计算机548可以是工作站、服务器计算机、路由器、个人计算机、便携式计算机、基于微处理器的娱乐设备、对等设备或者其它常见网络节点，并且一般包括相对于计算机502所描述的许多或全部元件，尽管为了简明起见仅示出了存储器/存储设备550。所描绘的逻辑连接包括到局域网（LAN) 552和/或例如广域网（WAN) 554等较大网络的有线/无线连接。这样的LAN和WAN连网环境在办公室和公司是很常见的，并且方便了诸如内联网等企业范围计算机网络，所有这些都可连接至全球通信网络，例如因特网。</p>
+    <p>当在LAN连网环境中使用时，计算机502通过有线和/或无线通信网络接口或适配器556连接至局域网552。适配器556可方便到LAN 552的有线或无线通信，并且还可包括在其中设置的用于与无线适配器556通信的无线接入点。</p>
+    <p>当在WAN连网环境中使用时，计算机502可包括调制解调器558，或者连接至WAN 554上的通信服务器，或者具有用于通过WAN 554，诸如通过因特网建立通信的其它装置。调制解调器558可以是内置或外置的以及有线和/或无线设备，它通过串行端口接口 542连接至系统总线508。在网络化环境中，相对于计算机502描述的程序模块或其部分可以存储在远程存储器/存储设备550中。应该理解，所示网络连接是示例性的，并且可以使用在计算机之间建立通信链路的其它手段。</p>
+    <p>计算机502可用于与操作上设置在无线通信中的任何无线设备或者实体通信，这些实体例如打印机、扫描仪、台式和/或便携式计算机、便携式数据助理、通信卫星、与无线可检测标记相关联的任何设备或位置（例如公用电话亭、报亭、休息室）、以及电话机。这至少包括Wi-Fi和蓝牙TM无线技术。因而，</p>
+    <p>通信可以如对于常规网络那样是预定义结构，或者仅仅是至少两个设备之间的自组织（adhoc)通信。</p>
+    <p>Wi-Fi，即无线保真，允许从家里的沙发、酒店房间的床上或者工作的会议室连接至因特网而不需要线缆。Wi-Fi是一种与在蜂窝电话中所使用的相似的无线技术，它使得诸如计算机等设备能够在室内和室外、在基站范围内的任何地方收发数据。Wi-Fi网络使用称为IEEE 802.1 lx (a、 b、 g等）的无线电技术来提供安全、可靠、快速的无线连接。Wi-Fi网络可以用于将计算机相互连接、连接至因特网以及连接至有线网络（它使用IEEE 802.3或者以太网）。</p>
+    <p>现在参考图6，示出了用于锁定和休息室协议体系结构的示例性计算环境600的不意框图。系统600包括一个或多个客户机602。客户机602可以是硬件和/或软件（例如线程、进程、计算设备）。例如，客户机602可以容纳cookie和/或相关联的上下文信息。</p>
+    <p>系统600还包括一个或多个服务器604。服务器604也可以是硬件和/或软件（例如线程、进程、计算设备）。例如，服务器640可以通过使用本体系结构来容纳线程以执行变换。在客户机602和服务器604之间的一种可能的通信可以是适于在两个或多个计算机进程之间传输的数据分组的形式。例如，数据分组可包括cookie和/或相关联的上下文信息。系统600包括可以用于促进客户机602与服务器604之间的通信的通信框架606 (例如全球通信网络，如因特网）。</p>
+    <p>通信可以通过有线（包括光纤）和/或无线技术来促进。客户机602操作上被连接至可用于存储客户机602本地的信息（例如cookie和/或相关联的上下文信息）的一个或多个客户机数据存储608。同样，服务器604可在操作上连接至可用于存储服务器604本地的信息的一个或多个服务器数据存储器610。客户机602可包括图1的客户机108，并且媒体访问组件IIO和会议组件102可以是服务器604的一部分。</p>
+    <p>上面所描述的内容包括所公开的体系结构的各示例。当然，描述每---个可以想到的组件和/或方法的组合是不可能的，但本领域的普通技术人员可认识到，许多其它组合和置换是有可能的。因此，本新颖体系结构旨在涵盖落在所附权利要求书的精神与范围内的所有这样的更改、修改和变化。此外，就在说明书或者权利要求书中使用术语"包括"而言，这一术语旨在以与术语"包含"在被用作权利要求书中的过滤词时所解释的相似方式为包含性的。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102685096A?cl=zh">CN102685096A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年1月30日</td><td class="patent-data-table-td patent-date-value">2012年9月19日</td><td class="patent-data-table-td ">微软公司</td><td class="patent-data-table-td ">使用视觉标签的多设备会话配对</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102685096B?cl=zh">CN102685096B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年1月30日</td><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">微软技术许可有限责任公司</td><td class="patent-data-table-td ">使用视觉标签的多设备会话配对</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103609095A?cl=zh">CN103609095A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月8日</td><td class="patent-data-table-td patent-date-value">2014年2月26日</td><td class="patent-data-table-td ">索尼公司</td><td class="patent-data-table-td ">无线通信设备、信息处理设备、通信系统和用于无线通信设备的控制方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=bC1zBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06Q0010060000">G06Q10/06</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=bC1zBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06Q10/10">G06Q10/10</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=bC1zBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L12/1822">H04L12/1822</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">G06Q10/10</span>, <span class="nested-value">H04L12/18D2</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年2月17日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年4月21日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年8月12日</td><td class="patent-data-table-td ">ASS</td><td class="patent-data-table-td ">Succession or assignment of patent right</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Owner name: </span><span class="nested-value">MICROSOFT TECHNOLOGY LICENSING LLC</span></div><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">FORMER OWNER: MICROSOFT CORP.</span></div><div class="nested-key-value"><span class="nested-key">Effective date: </span><span class="nested-value">20150722</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年8月12日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of the right of patent application or the patent right</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/34116d89fa8220d6b239/CN101652791A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9C%A8%E5%88%86%E5%B8%83%E5%BC%8F%E4%BC%9A%E8%AE%AE%E7%B3%BB%E7%BB%9F%E4%B8%AD%E6%A8%A1%E6%8B%9F%E6%88%BF%E9%97%B4.pdf?id=bC1zBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1JukNdVgLcUMF5visWf1GvhFtlbQ"},"sample_url":"https://www.google.com/patents/reader?id=bC1zBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

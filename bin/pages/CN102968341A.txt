@@ -1,0 +1,438 @@
+<!DOCTYPE html><html><head><title>专利 CN102968341A - 基于多内核浏览器的不同版本ie内核切换的方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于多内核浏览器的不同版本ie内核切换的方法和装置"><meta name="DC.contributor" content="闻功岭" scheme="inventor"><meta name="DC.contributor" content="任寰" scheme="inventor"><meta name="DC.contributor" content="北京奇虎科技有限公司" scheme="assignee"><meta name="DC.contributor" content="奇智软件（北京）有限公司" scheme="assignee"><meta name="DC.date" content="2012-10-25" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种基于多内核浏览器的不同版本IE内核切换的方法和装置，其中所述浏览器包括至少两种内核，其中一种内核为IE内核，所述方法包括：接收加载网页的请求信息，所述请求信息中包括URL信息；获知所述请求的网页面与浏览器内核之间的适配关系，选择对应的浏览器内核，当选择为IE内核时，判断当前适配的IE内核版本；若为IE6内核，则调用IE内核重定向模组加载预置的IE6内核文件；若为新型IE内核，则调用IE内核重定向模组加载预置的新型IE内核文件。本发明可以解决在浏览器包括至少两种内核，并且其中一种为IE内核的情况下，IE6内核浏览器和IE8内核浏览器的兼容性和适配性问题。"><meta name="DC.date" content="2013-3-13"><meta name="DC.relation" content="CN:101655863:A" scheme="references"><meta name="DC.relation" content="CN:102156709:A" scheme="references"><meta name="DC.relation" content="CN:102508710:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102968341:A"><meta name="citation_patent_application_number" content="CN:201210413968"><link rel="canonical" href="https://www.google.com/patents/CN102968341A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102968341A?cl=zh"/><meta name="title" content="专利 CN102968341A - 基于多内核浏览器的不同版本ie内核切换的方法和装置"/><meta name="description" content="本发明公开了一种基于多内核浏览器的不同版本IE内核切换的方法和装置，其中所述浏览器包括至少两种内核，其中一种内核为IE内核，所述方法包括：接收加载网页的请求信息，所述请求信息中包括URL信息；获知所述请求的网页面与浏览器内核之间的适配关系，选择对应的浏览器内核，当选择为IE内核时，判断当前适配的IE内核版本；若为IE6内核，则调用IE内核重定向模组加载预置的IE6内核文件；若为新型IE内核，则调用IE内核重定向模组加载预置的新型IE内核文件。本发明可以解决在浏览器包括至少两种内核，并且其中一种为IE内核的情况下，IE6内核浏览器和IE8内核浏览器的兼容性和适配性问题。"/><meta property="og:title" content="专利 CN102968341A - 基于多内核浏览器的不同版本ie内核切换的方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102968341A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102968341A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=hj_XBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102968341A&amp;usg=AFQjCNGluABpKveQEZMdznY-ixT6pnPB5w" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/7004ec8b8c2d00f9c4e8/CN102968341A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/7004ec8b8c2d00f9c4e8/CN102968341A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102968341A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102968341A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102968341A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种基于多内核浏览器的不同版本IE内核切换的方法和装置，其中所述浏览器包括至少两种内核，其中一种内核为IE内核，所述方法包括：接收加载网页的请求信息，所述请求信息中包括URL信息；获知所述请求的网 ...</span><span itemprop="url">https://www.google.com/patents/CN102968341A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102968341A - 基于多内核浏览器的不同版本ie内核切换的方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102968341A - 基于多内核浏览器的不同版本ie内核切换的方法和装置" title="专利 CN102968341A - 基于多内核浏览器的不同版本ie内核切换的方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102968341 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210413968</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年3月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年10月25日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年10月25日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210413968.8, </span><span class="patent-bibdata-value">CN 102968341 A, </span><span class="patent-bibdata-value">CN 102968341A, </span><span class="patent-bibdata-value">CN 201210413968, </span><span class="patent-bibdata-value">CN-A-102968341, </span><span class="patent-bibdata-value">CN102968341 A, </span><span class="patent-bibdata-value">CN102968341A, </span><span class="patent-bibdata-value">CN201210413968, </span><span class="patent-bibdata-value">CN201210413968.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%97%BB%E5%8A%9F%E5%B2%AD%22">闻功岭</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BB%BB%E5%AF%B0%22">任寰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E5%A5%87%E8%99%8E%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京奇虎科技有限公司</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%87%E6%99%BA%E8%BD%AF%E4%BB%B6%EF%BC%88%E5%8C%97%E4%BA%AC%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">奇智软件（北京）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102968341A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102968341A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102968341A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=hj_XBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210413968&amp;usg=AFQjCNGGnEMK9VGzepsty_Bt0Cy9rYgm3w"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=hj_XBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102968341A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGPVcMau2UGJrxHOL7ZWthjJihGsg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT122638900" lang="ZH" load-source="patent-office">基于多内核浏览器的不同版本ie内核切换的方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 102968341 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109540131" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种基于多内核浏览器的不同版本IE内核切换的方法和装置，其中所述浏览器包括至少两种内核，其中一种内核为IE内核，所述方法包括：接收加载网页的请求信息，所述请求信息中包括URL信息；获知所述请求的网页面与浏览器内核之间的适配关系，选择对应的浏览器内核，当选择为IE内核时，判断当前适配的IE内核版本；若为IE6内核，则调用IE内核重定向模组加载预置的IE6内核文件；若为新型IE内核，则调用IE内核重定向模组加载预置的新型IE内核文件。本发明可以解决在浏览器包括至少两种内核，并且其中一种为IE内核的情况下，IE6内核浏览器和IE8内核浏览器的兼容性和适配性问题。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(27)</span></span></div><div class="patent-text"><div mxw-id="PCLM52001838" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于多内核浏览器的不同版本IE内核切换的方法，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本：  所述的方法包括：  接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL信息；  按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；  根据所述适配关系选择对应的浏览器内核，当所选择的浏览器内核为IE内核时，浏览器进程依据所述统一资源定位符URL信息，判断当前适配的IE内核版本；  若当前适配的IE内核版本为IE6内核，则浏览器进程调用预设的IE内核重定向模组，重定向至相应位置加载预置的IE6内核文件；  若当前适配的IE内核版本为新型IE内核，则浏览器进程调用预设的IE内核重定向模组，重定向至相应位置加载预置的新型IE内核文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述的方法，所述新型IE内核为IE8内核，所述新型IE内核文件为IE8内核文件；  或者，所述新型IE内核为IE8以上版本的IE内核，所述新型IE内核文件为IE8以上版本的IE内核文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，所述IE6内核文件和IE8内核文件包括：  IE6内核的动态链接库DLL和IE8内核的动态链接库DLL ；  IE6内核的数据文件和IE8内核的数据文件；  IE6内核的语言包文件和IE8内核的语言包文件；  以及，IE6内核的注册表配置文件和IE8内核的注册表配置文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的方法，所述预置的IE6内核文件和新型IE内核文件存储于客户端中，具体通过以下子步骤实现：  从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL ；  经调试分析生成IE6内核的数据文件和语言包文件，以及，IE8内核的数据文件和IE8内核的语言包文件；  将所述IE6内核的动态链接库DLL、数据文件和语言包文件，以及，IE8内核的动态链接库DLL、数据文件和语言包文件安装至客户端的指定位置；  生成IE6内核和IE8内核的注册表配置文件，并导入所述客户端的注册表中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求4所述的方法，所述从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL的子步骤包括：  重载所有与IE6内核加载相关的系统应用程序接口 API ；  通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；  排除系统底层的动态链接库DLL，提取IE6内核的动态链接库DLL ；  以及，  重载所有与IE8内核加载相关的系统应用程序接口 API ；  通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；  排除系统底层的动态链接库DLL，提取IE8内核的动态链接库DLL。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求I&#8212;5中任一项权利要求所述的方法，所述浏览器进程依据用户提交的统一资源定位符URL信息，判断当前适配的IE内核版本号的步骤进一步包括：  若当前用户提交的统一资源定位符URL信息为局域网地址，则判定当前适配的IE内核版本号为IE6内核；  若当前用户提交的统一资源定位符URL信息包含IP地址，则判定当前适配的IE内核版本号为IE6内核；  若当前用户提交的统一资源定位符URL信息包含在IE8内核兼容域名列表中，则判定当前适配的IE内核版本号为IE8内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求I&#8212;5中任一项权利要求所述的方法，所述浏览器进程依据用户提交的统一资源定位符URL信息，判断当前适配的IE内核版本号的步骤还包括：  若当前用户提交的统一资源定位符URL信息包含在新型IE内核兼容域名列表中，则判 定当前适配的IE内核版本号为对应的新型IE内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求3、4或5所述的方法，所述预设的IE内核重定向模组通过以下子步骤执行重定向至相应位置加载预置的IE6内核文件的操作：  当监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE6内核的注册表配置文件；若查询IE内核文件的路径，则返回IE6内核文件所导入的客户端指定位置的信息；  当监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；  当监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；  当监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤；  当监视到浏览器进程访问DLL内核句柄时，调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求3、4或5所述的方法，所述预设的IE内核重定向模组通过以下子步骤执行重定向至相应位置加载预置的IE8内核文件的操作：  当监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE8内核的注册表配置文件；若查询IE内核文件的路径，则返回IE8内核文件所导入的客户端指定位置的信息；  当监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；  当监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；当监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤；  当监视到浏览器进程访问DLL内核句柄时，调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求I所述的方法，还包括：  将所述IE6内核文件和新型IE内核文件写入内存；  所述重定向至相应位置加载预置的IE6内核文件的步骤为，重定向至内存中的相应位置加载所述预置的IE6内核文件；  所述重定向至相应位置加载预置的IE8内核文件的步骤为，重定向至内存中的相应位置加载所述预置的IE8内核文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求I所述的方法，所述预设的IE内核重定向模组为动态链接库文件Tridentcore. dll。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求I所述的方法，还包括：  采用当前适配的浏览器内核加载所述请求的网页。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求I所述的方法，所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤包括：按照预置规则获知与所述请求加载的网页适配的所述浏览器内核；  所述根据适配关系选择对应的浏览器内核的步骤包括：选择与所述请求加载的网页适配的浏览器内核；  和/或，  所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤包括：按照预置规则获知与所述请求加载的网页不适配的浏览器内核；  所述根据适配关系选择对应的浏览器内核的步骤包括：选择所述不适配的内核之外的浏览器内核加载所述请求加载的网页；  和/或，  所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤包括：按照预置规则获知所述请求加载的网页与当前默认的浏览器内核之间的适配关系;  所述根据适配关系选择对应的浏览器内核的步骤包括：如果所述请求加载的网页与当前默认的浏览器内核适配，则选择所述当前默认的浏览器内核加载；否则，选择当前默认内核之外的浏览器内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求I或13所述的方法，所述预置规则包括预置的特定适配规则和/或通用适配规则，其中，所述预置的特定适配规则包括网页与内核之间的适配关系，所述通用适配规则包括为用户选择平均加载速度最快的浏览器内核或为用户选择对网络标准适配的浏览器内核。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15.	一种基于多内核浏览器的不同版本IE内核切换的装置，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本：所述的装置包括：  请求接收模块，适于接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL /[目息；  适配关系获取模块，适于按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；  内核选择模块，适于根据所述适配关系选择对应的浏览器内核，  浏览器进程，适于在所选择的浏览器内核为IE内核时，依据所述统一资源定位符URL信息判断当前适配的IE内核版本；  IE内核重定向模组，适于在当前适配的IE内核版本为IE6内核时，重定向至相应位置加载预置的IE6内核文件；以及，在当前适配的IE内核版本为新型IE内核时，重定向至相 应位置加载预置的新型IE内核文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求15所述的装置，所述新型IE内核为IE8内核，所述新型IE内核文件为IE8内核文件；  或者，所述新型IE内核为IE8以上版本的IE内核，所述新型IE内核文件为IE8以上版本的IE内核文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求16所述的装置，所述IE6内核文件和IE8内核文件包括：  IE6内核的动态链接库DLL和IE8内核的动态链接库DLL ；  IE6内核的数据文件和IE8内核的数据文件；  IE6内核的语言包文件和IE8内核的语言包文件；  以及，IE6内核的注册表配置文件和IE8内核的注册表配置文件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求17所述的装置，所述预置的IE6内核文件和新型IE内核文件存储于客户端中，具体通过以下子步骤实现：  从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL ；  经调试分析生成IE6内核的数据文件和语言包文件，以及，IE8内核的数据文件和IE8内核的语言包文件；  将所述IE6内核的动态链接库DLL、数据文件和语言包文件，以及，IE8内核的动态链接库DLL、数据文件和语言包文件安装至客户端的指定位置；  生成IE6内核和IE8内核的注册表配置文件，并导入所述客户端的注册表中；  其中，所述从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL的子步骤包括：  重载所有与IE6内核加载相关的系统应用程序接口 API ；  通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；  排除系统底层的动态链接库DLL，提取IE6内核的动态链接库DLL ；  以及，  重载所有与IE8内核加载相关的系统应用程序接口 API ；  通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；  排除系统底层的动态链接库DLL，提取IE8内核的动态链接库DLL。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求15&#8212;18中任一项权利要求所述的装置，所述浏览器进程包括：第一判断子模块，适于在当前用户提交的统一资源定位符URL信息为局域网地址时，判定当前适配的IE内核版本号为IE6内核；  第二判断子模块，适于在当前用户提交的统一资源定位符URL信息包含IP地址时，判定当前适配的IE内核版本号为IE6内核；  第三判断子模块，适于在当前用户提交的统一资源定位符URL信息包含在IE8内核兼容域名列表中时，判定当前适配的IE内核版本号为IE8内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的装置，所述浏览器进程还包括：  第四判断子模块，适于在当前用户提交的统一资源定位符URL信息包含在新型IE内核兼容域名列表中时，判定当前适配的IE内核版本号为对应的新型IE内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.如权利要求17或18所述的装置，所述预设的IE内核重定向模组包括：  第一注册表操作子模块，适于在监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE6内核的注册表配置文件；若查询IE内核文件的路径，则返回IE6内核文件所导入的客户端指定位置的信息；  第一 DLL操作子模块，适于在监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；  第一相关文件操作子模块，适于在监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；  第一 COM对象创建子模块，适于在监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述第一 DLL操作子模块；第一DLL内核句柄操作子模块，适于当监视到浏览器进程访问DLL内核句柄时，调用所述第一 DLL操作子模块；  第二注册表操作子模块，适于在监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE8内核的注册表配置文件；若查询IE内核文件的路径，则返回IE8内核文件所导入的客户端指定位置的信息；  第二 DLL操作子模块，适于在监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；  第二相关文件操作子模块，适于在监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；  第二 COM对象创建子模块，适于在监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述第二 DLL操作子模块；第二DLL内核句柄操作子模块，适于当监视到浏览器进程访问DLL内核句柄时，调用所述第二 DLL操作子模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求15所述的装置，还包括：内存写入模块，适于将所述IE6内核文件和新型IE内核文件写入内存。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.如权利要求15所述的装置，所述预设的IE内核重定向模组为动态链接库文件Tridentcore. dll。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求15所述的装置，还包括：  网页加载模块，适于采用当前适配的浏览器内核加载所述请求的网页。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.如权利要求15所述的装置，所述适配关系获取模块包括：  第一获取子模块，适于按照预置规则获知与所述请求加载的网页适配的所述浏览器内核；  所述内核选择模块包括：  第一选择子模块，适于选择与所述请求加载的网页适配的浏览器内核；  和/或，  所述适配关系获取模块包括：  第二获取子模块，适于按照预置规则获知与所述请求加载的网页不适配的浏览器内核；  所述内核选择模块包括：  第二选择子模块，适于选择所述不适配的内核之外的浏览器内核加载所述请求加载的网页；  和/或，  所述适配关系获取模块包括：  第三获取子模块，适于按照预置规则获知所述请求加载的网页与当前默认的浏览器内核之间的适配关系；  所述内核选择模块包括：  第三选择子模块，适于如果所述请求加载的网页与当前默认的浏览器内核适配，则选择所述当前默认的浏览器内核加载；否则，选择当前默认内核之外的浏览器内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求15或25所述的装置，所述预置规则包括预置的特定适配规则和/或通用适配规则，其中，所述预置的特定适配规则包括网页与内核之间的适配关系，所述通用适配规则包括为用户选择平均加载速度最快的浏览器内核或为用户选择对网络标准适配的浏览器内核。</div>
+    </div>
+    </div> <div class="claim"> <div num="27" class="claim">
+      <div class="claim-text">27.	一种浏览器，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本：  所述浏览器包括：  请求接收模块，适于接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL /[目息；  适配关系获取模块，适于按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；  内核选择模块，适于根据所述适配关系选择对应的浏览器内核，  浏览器进程，适于在所选择的浏览器内核为IE内核时，依据所述统一资源定位符URL信息判断当前适配的IE内核版本；  IE内核重定向模组，适于在当前适配的IE内核版本为IE6内核时，重定向至相应位置加载预置的IE6内核文件；以及，在当前适配的IE内核版本为新型IE内核时，重定向至相 应位置加载预置的新型IE内核文件。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59078059" lang="ZH" load-source="patent-office" class="description">
+    <p>基于多内核浏览器的不同版本IE内核切换的方法和装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及浏览器的技术领域，特别是涉及一种基于多内核浏览器的不同版本IE内核切换的方法，一种基于多内核浏览器的不同版本IE内核切换的装置，以及，一种浏览器。</p>
+    <p>背景技术</p>
+    <p>[0002]	浏览器最重要的部分是“Rendering Engine”，可大概译为“解释引擎”，一般习惯将之称为“浏览器内核”。浏览器内核负责对网页语法的解释（如HTML、JavaScript)并渲染（显示）网页。所以，通常所谓的浏览器内核也就是对页面进行下载、解析、执行、渲染的引擎，该引擎决定了浏览器如何显示网页的内容以及页面的格式信息。</p>
+    <p>[0003]目前比较常见的浏览器内核有微软的IE浏览器使用的IE内核（Trident内核），Firefox浏览器使用的Gecko内核,苹果的Safari浏览器和Google的Chrome浏览器使用的Webkit内核，以及，Opera浏览器采用的Presto内核。这些常见的浏览器可以按实现方式做如下划分：</p>
+    <p>[0004]	第一种，浏览器的开发者既进行浏览器内核的开发，也进行浏览器产品的开发。如：chrome浏览器、firefox浏览器、Safari浏览器、Internet Explore浏览器等。</p>
+    <p>[0005]	第二种，浏览器的开发者，仅进行浏览器产品的开发，使用其他浏览器厂商实现的内核。将内核嵌入到自己浏览器内来使用。如：360安全浏览器、遨游浏览器、世界之窗浏览器、搜狗浏览器等。这种浏览器通常采用Internet Explorer浏览器内核，即采用IE内核的浏览器。</p>
+    <p>[0006]	当用户通过浏览器发起一个浏览网页的请求时，浏览器通过内核从目标网站下载网页的内容，然后分析网页内容，执行脚本，计算排版，最后输出到显示器显示给用户。每个浏览器具有一个内核，不管用户通过一个浏览器进程打开多少个网页，浏览器都使用同一个内核解释执行。 </p>
+    <p>[0007]	但是，这种单内核浏览器有很大的局限性，因为网页往往是按照某个内核支持的网络标准制作的，对于某个特定内核支持的网络标准，其他内核可能无法很好地支持（甚至无法支持)。例如，用户使用Firefox浏览器浏览网页，Firefox的内核能够很好地支持W3C标准，因此使用该浏览器可以浏览按照W3C标准制作的网页。但如果用户想要浏览招商银行网页使用网络银行，Firefox浏览器就无法满足这个用户需求。因为招商银行网站的网络银行功能需要ActiveX插件功能，而该功能只有IE内核的浏览器才能支持，这样用户在使用Firefox浏览器的情况下就无法使用招商银行的网络银行功能了。</p>
+    <p>[0008]	再者,普通使用IE内核的浏览器包括采用IE6 (Internetexplorer 6)内核的浏览器和采用IE8 (Internetexplorer 8)内核的浏览器。具体而言，Internetexplorer 6于2001年10月发布，距今已10年有余。但采用IE6内核的浏览器至今仍然占据我国主流浏览器市场50%以上份额，由于环境变化、年代久远等问题，采用IE6内核的浏览器在面对当下互联网中大量使用脚本、图片、Flash等素材的环境中性能表现低下，无法使用户获得流畅体验。Internetexplorer 8于2008年发布以来得到长足应用，如今采用IE8内核的浏览器已经逐渐取代采用IE6内核的浏览器的市场份额，成为用户主流的网页浏览器。WindowsVista以上的系统甚至直接取消了对IE8以下版本的支持，但基于我国互联网较为复杂的构成，显然用户会面临诸多问题。其中较为典型的就是自2001年以来，大量个人、团队基于IE6不严谨的标准规范构建了大量只能在采用IE6内核的浏览器下正常运行的网站、服务。这样一来，就直接导致了用户在享受新一代浏览器全新技术的同时，无法正常实现自己的工作、娱乐等需求。</p>
+    <p>[0009]	总之，需要本领域技术人员迫切解决的技术问题就是：如何充分利用各种浏览器内核的优点，避免各种浏览器内核的缺点对加载网页的影响，以及，如何解决在浏览器包括至少两种浏览器内核，并且其中一种浏览器内核为IE内核的情况下，IE6内核浏览器和IE8内核浏览器的兼容性和适配性问题，从而使用户获得更好的网页浏览体验。</p>
+    <p>发明内容</p>
+    <p>[0010]	鉴于上述问题，提出了本发明以便提供一种克服上述问题或者至少部分地解决上 述问题的一种基于多内核浏览器的不同版本IE内核切换的方法，一种基于多内核浏览器的不同版本IE内核切换的装置，以及，一种浏览器。</p>
+    <p>[0011]	依据本发明的一个方面，提供了 I、一种基于多内核浏览器的不同版本IE内核切换的方法，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本：</p>
+    <p>[0012]	所述的方法包括：</p>
+    <p>[0013]	接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL信息；</p>
+    <p>[0014]	按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；</p>
+    <p>[0015]	根据所述适配关系选择对应的浏览器内核，当所选择的浏览器内核为IE内核时，浏览器进程依据所述统一资源定位符URL信息，判断当前适配的IE内核版本；</p>
+    <p>[0016]	若当前适配的IE内核版本为IE6内核，则浏览器进程调用预设的IE内核重定向模组，重定向至相应位置加载预置的IE6内核文件；</p>
+    <p>[0017]	若当前适配的IE内核版本为新型IE内核，则浏览器进程调用预设的IE内核重定向模组，重定向至相应位置加载预置的新型IE内核文件。</p>
+    <p>[0018]	可选地，所述新型IE内核为IE8内核，所述新型IE内核文件为IE8内核文件；</p>
+    <p>[0019]	或者，所述新型IE内核为IE8以上版本的IE内核，所述新型IE内核文件为IE8以上版本的IE内核文件。</p>
+    <p>[0020]	可选地，所述IE6内核文件和IE8内核文件包括：</p>
+    <p>[0021]	IE6内核的动态链接库DLL和IE8内核的动态链接库DLL ；</p>
+    <p>[0022]	IE6内核的数据文件和IE8内核的数据文件；</p>
+    <p>[0023]	IE6内核的语言包文件和IE8内核的语言包文件；</p>
+    <p>[0024]	以及，IE6内核的注册表配置文件和IE8内核的注册表配置文件。</p>
+    <p>[0025]	可选地，所述预置的IE6内核文件和新型IE内核文件存储于客户端中，具体通过以下子步骤实现：</p>
+    <p>[0026]	从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库 DLL ；</p>
+    <p>[0027]	经调试分析生成IE6内核的数据文件和语言包文件，以及，IE8内核的数据文件和IE8内核的语言包文件；</p>
+    <p>[0028]	将所述IE6内核的动态链接库DLL、数据文件和语言包文件，以及，IE8内核的动态链接库DLL、数据文件和语言包文件安装至客户端的指定位置；</p>
+    <p>[0029]	生成IE6内核和IE8内核的注册表配置文件，并导入所述客户端的注册表中。</p>
+    <p>[0030]	可选地，所述从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL的子步骤包括：</p>
+    <p>[0031]	重载所有与IE6内核加载相关的系统应用程序接口 API ； [0032]	通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；</p>
+    <p>[0033]	排除系统底层的动态链接库DLL，提取IE6内核的动态链接库DLL ；</p>
+    <p>[0034]以及，</p>
+    <p>[0035]	重载所有与IE8内核加载相关的系统应用程序接口 API ；</p>
+    <p>[0036]	通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；</p>
+    <p>[0037]	排除系统底层的动态链接库DLL，提取IE8内核的动态链接库DLL。</p>
+    <p>[0038]	可选地，所述浏览器进程依据用户提交的统一资源定位符URL信息，判断当前适配的IE内核版本号的步骤进一步包括：</p>
+    <p>[0039]	若当前用户提交的统一资源定位符URL信息为局域网地址，则判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0040]	若当前用户提交的统一资源定位符URL信息包含IP地址，则判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0041]	若当前用户提交的统一资源定位符URL信息包含在IE8内核兼容域名列表中，则判定当前适配的IE内核版本号为IE8内核。</p>
+    <p>[0042]	可选地，所述浏览器进程依据用户提交的统一资源定位符URL信息，判断当前适配的IE内核版本号的步骤还包括：</p>
+    <p>[0043]	若当前用户提交的统一资源定位符URL信息包含在新型IE内核兼容域名列表中，则判定当前适配的IE内核版本号为对应的新型IE内核。</p>
+    <p>[0044]	可选地，所述预设的IE内核重定向模组通过以下子步骤执行重定向至相应位置加载预置的IE6内核文件的操作：</p>
+    <p>[0045]	当监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE6内核的注册表配置文件；若查询IE内核文件的路径，则返回IE6内核文件所导入的客户端指定位置的信息；</p>
+    <p>[0046]	当监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；</p>
+    <p>[0047]	当监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0048]	当监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤；</p>
+    <p>[0049]	当监视到浏览器进程访问DLL内核句柄时，调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤。</p>
+    <p>[0050]	可选地，所述预设的IE内核重定向模组通过以下子步骤执行重定向至相应位置加载预置的IE8内核文件的操作：</p>
+    <p>[0051]	当监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE8内核的注册表配置文件；若查询IE内核文件的路径，则返回IE8内核文件所导入的客户端指定位置的信息；</p>
+    <p>[0052]	当监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ； </p>
+    <p>[0053]	当监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0054]	当监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤；</p>
+    <p>[0055]	当监视到浏览器进程访问DLL内核句柄时，调用所述在监视到浏览器进程访问动态链接库DLL时的处理子步骤。</p>
+    <p>[0056]	可选地，所述的方法，还包括：</p>
+    <p>[0057]	将所述IE6内核文件和新型IE内核文件写入内存；</p>
+    <p>[0058]	所述重定向至相应位置加载预置的IE6内核文件的步骤为，重定向至内存中的相应位置加载所述预置的IE6内核文件；</p>
+    <p>[0059]	所述重定向至相应位置加载预置的IE8内核文件的步骤为，重定向至内存中的相应位置加载所述预置的IE8内核文件。</p>
+    <p>[0060]	可选地，所述预设的IE内核重定向模组为动态链接库文件Tridentcore. dll。</p>
+    <p>[0061]	可选地，所述的方法，还包括：</p>
+    <p>[0062]	采用当前适配的浏览器内核加载所述请求的网页。</p>
+    <p>[0063]	可选地，所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤包括：按照预置规则获知与所述请求加载的网页适配的所述浏览器内核；</p>
+    <p>[0064]	所述根据适配关系选择对应的浏览器内核的步骤包括：选择与所述请求加载的网页适配的浏览器内核；</p>
+    <p>[0065]和	/ 或，</p>
+    <p>[0066]	所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤包括：按照预置规则获知与所述请求加载的网页不适配的浏览器内核；</p>
+    <p>[0067]	所述根据适配关系选择对应的浏览器内核的步骤包括：选择所述不适配的内核之外的浏览器内核加载所述请求加载的网页；</p>
+    <p>[0068]和	/ 或，[0069]	所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤包括：按照预置规则获知所述请求加载的网页与当前默认的浏览器内核之间的适配关系;</p>
+    <p>[0070]	所述根据适配关系选择对应的浏览器内核的步骤包括：如果所述请求加载的网页与当前默认的浏览器内核适配，则选择所述当前默认的浏览器内核加载；否则，选择当前默认内核之外的浏览器内核。</p>
+    <p>[0071]	可选地，所述预置规则包括预置的特定适配规则和/或通用适配规则，其中，所述预置的特定适配规则包括网页与内核之间的适配关系，所述通用适配规则包括为用户选择平均加载速度最快的浏览器内核或为用户选择对网络标准适配的浏览器内核。</p>
+    <p>[0072]	根据本发明的另一方面，提供了一种基于多内核浏览器的不同版本IE内核切换 的装置，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本：</p>
+    <p>[0073]	所述的装置包括：</p>
+    <p>[0074]	请求接收模块，适于接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL信息；</p>
+    <p>[0075]	适配关系获取模块，适于按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；</p>
+    <p>[0076]	内核选择模块，适于根据所述适配关系选择对应的浏览器内核，</p>
+    <p>[0077]	浏览器进程，适于在所选择的浏览器内核为IE内核时，依据所述统一资源定位符URL信息判断当前适配的IE内核版本；</p>
+    <p>[0078]	IE内核重定向模组，适于在当前适配的IE内核版本为IE6内核时，重定向至相应位置加载预置的IE6内核文件；以及，在当前适配的IE内核版本为新型IE内核时，重定向至相应位置加载预置的新型IE内核文件。</p>
+    <p>[0079]	可选地，所述新型IE内核为IE8内核，所述新型IE内核文件为IE8内核文件；</p>
+    <p>[0080]	或者，所述新型IE内核为IE8以上版本的IE内核，所述新型IE内核文件为IE8以上版本的IE内核文件。</p>
+    <p>[0081]	可选地，所述IE6内核文件和IE8内核文件包括：</p>
+    <p>[0082]	IE6内核的动态链接库DLL和IE8内核的动态链接库DLL ；</p>
+    <p>[0083]	IE6内核的数据文件和IE8内核的数据文件；</p>
+    <p>[0084]	IE6内核的语言包文件和IE8内核的语言包文件；</p>
+    <p>[0085]	以及，IE6内核的注册表配置文件和IE8内核的注册表配置文件。</p>
+    <p>[0086]	可选地，所述预置的IE6内核文件和新型IE内核文件存储于客户端中，具体通过以下子步骤实现：</p>
+    <p>[0087]	从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库 DLL ；</p>
+    <p>[0088]	经调试分析生成IE6内核的数据文件和语言包文件，以及，IE8内核的数据文件和IE8内核的语言包文件；</p>
+    <p>[0089]	将所述IE6内核的动态链接库DLL、数据文件和语言包文件，以及，IE8内核的动态链接库DLL、数据文件和语言包文件安装至客户端的指定位置；[0090]	生成IE6内核和IE8内核的注册表配置文件，并导入所述客户端的注册表中；</p>
+    <p>[0091]	其中，所述从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL的子步骤包括：</p>
+    <p>[0092]	重载所有与IE6内核加载相关的系统应用程序接口 API ；</p>
+    <p>[0093]	通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；</p>
+    <p>[0094]	排除系统底层的动态链接库DLL，提取IE6内核的动态链接库DLL ；</p>
+    <p>[0095]以及，</p>
+    <p>[0096]	重载所有与IE8内核加载相关的系统应用程序接口 API ；</p>
+    <p>[0097]	通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ； </p>
+    <p>[0098]	排除系统底层的动态链接库DLL，提取IE8内核的动态链接库DLL。</p>
+    <p>[0099]	可选地，所述浏览器进程包括：</p>
+    <p>[0100]	第一判断子模块，适于在当前用户提交的统一资源定位符URL信息为局域网地址时，判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0101]	第二判断子模块，适于在当前用户提交的统一资源定位符URL信息包含IP地址时，判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0102]	第三判断子模块，适于在当前用户提交的统一资源定位符URL信息包含在IE8内核兼容域名列表中时，判定当前适配的IE内核版本号为IE8内核。</p>
+    <p>[0103]	可选地，所述浏览器进程还包括：</p>
+    <p>[0104]	第四判断子模块，适于在当前用户提交的统一资源定位符URL信息包含在新型IE内核兼容域名列表中时，判定当前适配的IE内核版本号为对应的新型IE内核。</p>
+    <p>[0105]	可选地，所述预设的IE内核重定向模组包括：</p>
+    <p>[0106]	第一注册表操作子模块，适于在监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE6内核的注册表配置文件；若查询IE内核文件的路径，则返回IE6内核文件所导入的客户端指定位置的信息；</p>
+    <p>[0107]	第一 DLL操作子模块，适于在监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；</p>
+    <p>[0108]	第一相关文件操作子模块，适于在监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0109]	第一 COM对象创建子模块，适于在监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述第一 DLL操作子模块；</p>
+    <p>[0110]	第一DLL内核句柄操作子模块，适于当监视到浏览器进程访问DLL内核句柄时，调用所述第一 DLL操作子模块；</p>
+    <p>[0111]	第二注册表操作子模块，适于在监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE8内核的注册表配置文件；若查询IE内核文件的路径，则返回IE8内核文件所导入的客户端指定位置的信息；[0112]	第二 DLL操作子模块，适于在监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；</p>
+    <p>[0113]	第二相关文件操作子模块，适于在监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0114]	第二 COM对象创建子模块，适于在监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述第二 DLL操作子模块；</p>
+    <p>[0115]	第二 DLL内核句柄操作子模块，适于当监视到浏览器进程访问DLL内核句柄时，调用所述第二 DLL操作子模块。 [0116]	可选地，所述的装置，还包括：</p>
+    <p>[0117]	内存写入模块，适于将所述IE6内核文件和新型IE内核文件写入内存。</p>
+    <p>[0118]	可选地,所述预设的IE内核重定向模组为动态链接库文件Tridentcore. dll。</p>
+    <p>[0119]	可选地，所述的装置，还包括：</p>
+    <p>[0120]	网页加载模块，适于采用当前适配的浏览器内核加载所述请求的网页。</p>
+    <p>[0121]	可选地，所述适配关系获取模块包括：</p>
+    <p>[0122]	第一获取子模块，适于按照预置规则获知与所述请求加载的网页适配的所述浏览器内核；</p>
+    <p>[0123]	所述内核选择模块包括：</p>
+    <p>[0124]	第一选择子模块，适于选择与所述请求加载的网页适配的浏览器内核；</p>
+    <p>[0125]和	/ 或，</p>
+    <p>[0126]	所述适配关系获取模块包括：</p>
+    <p>[0127]	第二获取子模块，适于按照预置规则获知与所述请求加载的网页不适配的浏览器内核；</p>
+    <p>[0128]	所述内核选择模块包括：</p>
+    <p>[0129]	第二选择子模块，适于选择所述不适配的内核之外的浏览器内核加载所述请求加载的网页；</p>
+    <p>[0130]和	/ 或，</p>
+    <p>[0131 ] 所述适配关系获取模块包括：</p>
+    <p>[0132]	第三获取子模块，适于按照预置规则获知所述请求加载的网页与当前默认的浏览器内核之间的适配关系；</p>
+    <p>[0133]	所述内核选择模块包括：</p>
+    <p>[0134]	第三选择子模块，适于如果所述请求加载的网页与当前默认的浏览器内核适配，则选择所述当前默认的浏览器内核加载；否则，选择当前默认内核之外的浏览器内核。</p>
+    <p>[0135]	可选地，所述预置规则包括预置的特定适配规则和/或通用适配规则，其中，所述预置的特定适配规则包括网页与内核之间的适配关系，所述通用适配规则包括为用户选择平均加载速度最快的浏览器内核或为用户选择对网络标准适配的浏览器内核。[0136]	根据本发明的另一方面，提供了一种浏览器，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核,所述IE内核至少包括IE6内核和新型IE内核两个版本：</p>
+    <p>[0137]	所述浏览器包括：</p>
+    <p>[0138]	请求接收模块，适于接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL信息；</p>
+    <p>[0139]	适配关系获取模块，适于按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；</p>
+    <p>[0140]	内核选择模块，适于根据所述适配关系选择对应的浏览器内核， </p>
+    <p>[0141]	浏览器进程，适于在所选择的浏览器内核为IE内核时，依据所述统一资源定位符URL信息判断当前适配的IE内核版本；</p>
+    <p>[0142]	IE内核重定向模组，适于在当前适配的IE内核版本为IE6内核时，重定向至相应位置加载预置的IE6内核文件；以及，在当前适配的IE内核版本为新型IE内核时，重定向至相应位置加载预置的新型IE内核文件。</p>
+    <p>[0143]	与现有技术相比，本发明具有以下优点：</p>
+    <p>[0144]	根据一种基于多内核浏览器的不同版本IE内核切换的方法,一种基于多内核浏览器的不同版本IE内核切换的装置，以及，一种浏览器，通过在同一浏览器中集成至少两种内核，基于每种内核有其自身的优缺点，因此,这种多内核浏览器相对于单内核浏览器而言，在一定程度上，增强了浏览器加载网页的成功率。而且，由于本发明实施例的多内核浏览器，能够主动根据预置规则为用户访问的网页选择适配的内核，而不是完全由用户自己盲目选择加载网页的内核，因此在一定程度上避免了用户自己选择的盲目性（因为多数用户并不是很清楚哪个网页适配哪个内核），更进一步提高了加载网页的成功率。由此可见，本发明实施例能够对浏览器中的各内核进行智能选择，充分利用各个内核的优点，尽量避免了各个内核的缺点对用户加载网页的影响，进而地达到了浏览器内多个内核之间智能的进行优势互补，在一定程度上提高了通过浏览器浏览网页的效果。</p>
+    <p>[0145]	本发明的一种优选实施例在于提供一种双核浏览器，并且其中一种浏览器内核为IE内核。针对IE内核多版本切换的问题，所述双核浏览器可以通过URL信息判断当前适配的IE内核版本，并针对适配的IE内核版本分别调用预设的IE内核重定向模组，重定向至相应位置加载预置的相应版本的IE内核文件。这种双核浏览器的实现可以在不影响用户IE使用的前提下，对适合IE6显示的页面加载IE6内核，适合IE8显示的页面加载IE8内核，以达到复杂环境下用户浏览最完整的兼容性和适配性。</p>
+    <p>[0146]	并且，这种双核浏览器充分结合了 IE6对银行/大型门户网站的普遍支持、IE8的安全、渲染、速度方面提升的优点，实现了一种IE6内核与IE8内核最完整的兼容方式。再者，通过智能判定自动切换内核，无须重新启动浏览器，无须更换操作系统、或升级IE、或安装多款软件，使用方便。此外，本发明的扩展性好，可以支持IE其它版本内核自动切换。</p>
+    <p>附图说明</p>
+    <p>[0147]	通过阅读下文优选实施方式的详细描述，各种其他的优点和益处对于本领域普通技术人员将变得清楚明了。附图仅用于示出优选实施方式的目的，而并不认为是对本发明的限制。而且在整个附图中，用相同的参考符号表示相同的部件。在附图中：</p>
+    <p>[0148]	图I示出了根据本发明一个实施例的一种基于多内核浏览器的不同版本IE内核切换的方法实施例I的步骤流程图；</p>
+    <p>[0149]	图2示出了根据本发明一个实施例的一种基于多内核浏览器的不同版本IE内核切换的方法实施例2的步骤流程图；</p>
+    <p>[0150]	图3示出了根据本发明一个实施例的一种基于多内核浏览器的不同版本IE内核切换的系统实施例I的结构框图；</p>
+    <p>[0151]	图4示出了根据本发明一个实施例的一种基于多内核浏览器的不同版本IE内核切换的系统实施例2的结构框图； </p>
+    <p>[0152]	图5示出了根据本发明一个实施例的一种IE内核重定向模组的结构框图；</p>
+    <p>[0153]	图6示出了根据本发明一个实施例的一种浏览器的结构框图。</p>
+    <p>具体实施方式</p>
+    <p>[0154]	下面将参照附图更详细地描述本公开的示例性实施例。虽然附图中显示了本公开的示例性实施例，然而应当理解，可以以各种形式实现本公开而不应被这里阐述的实施例所限制。相反，提供这些实施例是为了能够更透彻地理解本公开，并且能够将本公开的范围完整的传达给本领域的技术人员。</p>
+    <p>[0155]	本发明的核心构思在于，通过在同一浏览器中集成至少两个内核，使浏览器能够主动根据预置规则为用户访问的网页选择适配的内核，而不是完全由用户自己盲目选择加载网页的内核，并在不影响用户IE使用的前提下，对适合IE6显示的页面加载IE6内核，适合IE8显示的页面加载IE8内核，以达到复杂环境下用户浏览最完整的兼容性和适配性。</p>
+    <p>[0156]	参考图1，示出了本发明的一种基于多内核浏览器的不同版本IE内核切换的方法实施例I的步骤流程图，具体可以包括以下步骤：</p>
+    <p>[0157]	步骤101，接收加载网页的请求信息，所述请求信息中包括URL信息；</p>
+    <p>[0158]	作为一种示例，所述加载网页的请求信息可以为用户发出的加载某网页的指示，例如，用户可以通过点击某链接来打开一个网页，或者在地址栏输入网址来打开一个网页。当用户点击某链接的指示时，就相当于接收到了用户加载网页的请求信息；同样，当在地址栏输入某网址并点击确定按钮或按下回车键时，也相当于接收到了用户加载网页的请求信肩、O</p>
+    <p>[0159]	URL (Uniform Resoure Locator统一资源定位器）是Wffff网页的地址，URL使用数字和字母按一定顺序排列以确定一个地址。URL的第一个部分httD: //表示的是要访问的文件的类型。在网上，这几乎总是使用http (意思是超文本转换协议,hypertext transferprotocol，因为它是用来转换网页的协议。)</p>
+    <p>[0160]	URL从左到右由下述部分组成：</p>
+    <p>[0161]	Internet资源类型（scheme):指出WWW客户程序用来C作的工具。々[!“http://，，表示Wffff服务器,“ ftp: // ”表示FTP服务器,“ gopher: // ”表示Gopher服务器,而“ new : ”表示Newgroup新闻组。</p>
+    <p>[0162]	服务器地址（host):指出WWW网页所在的服务器域名。</p>
+    <p>[0163]	端口（port):有时（并非总是这样），对某些资源的访问来说，需给出相应的服务器提供端口号。</p>
+    <p>[0164]	路径（path):指明服务器上某资源的位置（其格式与DOS系统中的格式一样，通常有目录/子目录/文件名这样结构组成)。与端口一样，路径并非总是需要的。</p>
+    <p>[0165]	URL 地址格式排列为：scheme: //host:port/path,例如 http: //www. maogoo. com/bbs就是一个典型的URL地址。浏览器首先看到http (超文本传送协议)，便知道处理的是HTML链接。接下来的www. maogoo. com是站点地址,最后是目录/bbs。</p>
+    <p>[0166]	步骤102，按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系;</p>
+    <p>[0167]	步骤103，根据所述适配关系选择对应的浏览器内核；</p>
+    <p>[0168]	在本发明的一种优选实施例中，所述按照预置规则获知所述请求加载的网页与所 述浏览器内核之间的适配关系的步骤可以为，按照预置规则获知与所述请求加载的网页适配的所述浏览器内核；在这种情况下，所述根据适配关系选择对应的浏览器内核的步骤可以为，选择与所述请求加载的网页适配的浏览器内核。</p>
+    <p>[0169]	在本发明的另一种优选实施例中，所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤可以为，按照预置规则获知与所述请求加载的网页不适配的浏览器内核；所述根据适配关系选择对应的浏览器内核的步骤可以为，选择所述不适配的内核之外的浏览器内核加载所述请求加载的网页。例如，浏览器有内核A、B、C，获知请求加载的网页与内核A不适配，则在内核B、C中任选一个内核来加载该网页即可];或者，按照预置规则获知与所述请求加载的网页适配的浏览器内核，选择所述适配的浏览器内核加载所述请求加载的网页（例如，浏览器有内核A、B、C，获知请求加载的网页与内核A不适配，而且获知C内核与网页适配，于是选择C内核来加载该网页即可。</p>
+    <p>[0170]	在本发明的又一种优选实施例中，所述按照预置规则获知所述请求加载的网页与所述浏览器内核之间的适配关系的步骤可以为，按照预置规则获知所述请求加载的网页与当前默认的浏览器内核之间的适配关系；所述裉据适配关系选择对应的浏览器内核的步骤可以为，如果所述请求加载的网页与当前默认的浏览器内核适配，则选择所述当前默认的浏览器内核加载；否则，选择当前默认内核之外的浏览器内核。</p>
+    <p>[0171]	由于多内核浏览器可能会具有一个当前默认的内核（这个默认的内核可以是用户设置的，也可以是浏览器自行设置的），即在不做任何操作的情况下，浏览器使用该当前默认的内核加载网页。在该实施例中，按照预置规则获知的是所述请求加载的网页与当前默认的浏览器内核之间的适配关系，即，可以判断所述请求加载的网页与当前默认的浏览器内核是否适配，如果适配，则选择所述当前默认的浏览器内核加载所述请求加载的网页；否则，选择当前默认内核之外的浏览器内核加载所述请求加载的网页。、关于获知所述请求加载的网页与所述浏览器内核之间的适配关系的具体方法可以有多种，例如，可以根据预置的特定适配规则和/或通用适配规则，获知所述请求加载的网页与所述浏览器内核之间的适配关系；其中，所述预置的特定适配规则包括网页与内核之间的适配关系，所述通用适配规则包括为用户选择平均加载速度最快的浏览器内核或为用户选择对网络标准适配的浏览器内核。当然，上述方法仅仅用作示例，本领域技术人员依据实际情况采用任一种获知所述请求加载的网页与浏览器内核之间的适配关系的方法都是可行的，例如，根据于浏览器根据接收到的所述请求信息向对应的服务器发送关于加载所述网页的新请求信息，月艮务器会针对所述新请求信息返回响应信息，在响应信息中会携带一些网页的页面内容等信息，因此在这种方法下，还可以根据从服务器返回的针对所述新请求信息的响应信息获得的内容以及预置规则，重新获知与所述请求加载的网页适配的浏览器内核等方式，本发明对此无需加以限制。</p>
+    <p>[0172]	步骤104，当所选择的浏览器内核为IE内核时，浏览器进程依据所述URL信息，判断当前适配的IE内核版本；</p>
+    <p>[0173]	在本发明实施例中，所述IE内核指采用IE(Internet Explorer)浏览器内核，IE6内核即指采用IE6 (Internet Explorer 6)的浏览器内核,新型IE内核包括IE8内核以及IE8以上版本的IE内核，IE8内核即指采用IE8 (Internet Explorer 8)的浏览器内核，IE8以上版本的IE内核即指采用IE9、IElO等可能出现的更高版本的浏览器内核。</p>
+    <p>[0174]	为使本领域技术人员更好地理解本发明，在本说明书中，将IE8内核作为新型IE内核的一种示例进行说明。 [0175]	公知的是，进程是一个正在执行的程序，即计算机中正在运行的程序实例；其可以分配给处理器并作为一个实体由处理器执行。从用户角度来看，浏览器进程可以理解为在任务管理器内所启动的浏览器代表的进程。</p>
+    <p>[0176]	在本发明的一种优选实施例中，所述步骤104具体可以包括如下子步骤：</p>
+    <p>[0177]	子步骤S121、若当前用户提交的统一资源定位符URL信息为局域网地址，则判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0178]	子步骤S122、若当前用户提交的统一资源定位符URL信息包含IP地址，则判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0179]	子步骤S123、若当前用户提交的统一资源定位符URL信息包含在IE8内核兼容域名列表中，则判定当前适配的IE内核版本号为IE8内核。</p>
+    <p>[0180]	即每个页面开始连接前，浏览器进程会判断访问域名的信息，若为局域网地址或为纯IP地址的HTTP请求，则开启IE6模式；根据实际中IE8内核的兼容域名列表，判定开启IE8模式。在具体实现中，对于其它情况，可以使用系统自带的其它IE内核。</p>
+    <p>[0181]	需要说明的是，上述子步骤S121&#8212;&#8212;S123仅用于描述浏览器进程依据URL信息判断当前适配的IE内核版本的几种处理方式，并不受所描述的动作顺序的限制，本领域技术人员可以理解的是，某些步骤可以采用其他顺序或者同时进行。</p>
+    <p>[0182]	在实际中，若新型IE内核为IE8以上版本的IE内核，则所述步骤104还可以包括如下子步骤：</p>
+    <p>[0183]	若当前用户提交的统一资源定位符URL信息包含在新型IE内核兼容域名列表中，则判定当前适配的IE内核版本号为对应的新型IE内核。</p>
+    <p>[0184]	在具体实现中，可以在客户端预置IE6内核文件和新型IE内核文件，在本发明的一种优选实施例中，所述新型IE内核文件可以为IE8内核文件，则所述IE6内核文件和IE8内核文件可以包括：</p>
+    <p>[0185]	IE6内核的动态链接库DLL和IE8内核的动态链接库DLL ；</p>
+    <p>[0186]	IE6内核的数据文件和IE8内核的数据文件；</p>
+    <p>[0187]	IE6内核的语言包文件和IE8内核的语言包文件；</p>
+    <p>[0188]	以及，IE6内核的注册表配置文件和IE8内核的注册表配置文件。[0189]	其中，动态链接库DLL,是Dynamic Link Library的缩写形式，DLL是一个包含可由多个程序同时使用的代码和数据的库，DLL不是可执行文件。动态链接提供了一种方法，使进程可以调用不属于其可执行代码的函数。函数的可执行代码位于一个DLL中，该DLL包含一个或多个已被编译、链接并与使用它们的进程分开存储的函数。DLL还有助于共享数据和资源。多个应用程序可同时访问内存中单个DLL副本的内容。通过使用DLL，程序可以实现模块化，由相对独立的组件组成。</p>
+    <p>[0190]	在本实施例中，可以通过如下子步骤将预置的IE6内核文件和新型IE内核文件存储于客户端中：</p>
+    <p>[0191]	子步骤S01、从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL ；</p>
+    <p>[0192]	子步骤S02、经调试分析生成IE6内核的数据文件和语言包文件，以及，IE8内核的数据文件和IE8内核的语言包文件； [0193]	子步骤S03、将所述IE6内核的动态链接库DLL、数据文件和语言包文件，以及，IE8内核的动态链接库DLL、数据文件和语言包文件安装至客户端的指定位置；</p>
+    <p>[0194]	例如，将所述IE6内核的动态链接库DLL、数据文件和语言包文件，以及，IE8内核的动态链接库DLL、数据文件和语言包文件安装至客户端的某个目录下。</p>
+    <p>[0195]	在具体实现中，上述IE6内核的相关文件，以及，IE8内核的相关文件可以分别存储在客户端的不同目录下；或者，也可以存储至同一目录，但针对各文件分别标注其版本号标识，本发明对此不作限制。</p>
+    <p>[0196]	子步骤S04、生成IE6内核和IE8内核的注册表配置文件，并导入所述客户端的注册表中。</p>
+    <p>[0197]	基于IE内核的浏览器，通过静态、动态方式加载的内核DLL非常多，这些DLL可能与操作系统底层相关，可能还需要引用一些注册表项、数据文件、或者语言包文件，需要通过调试逐步分析生成。</p>
+    <p>[0198]	更为优选的是，所述子步骤SOl可以进一步包括以下子步骤：</p>
+    <p>[0199]	子步骤S01-11、重载所有与IE6内核加载相关的系统应用程序接口 API ；</p>
+    <p>[0200]	子步骤S01-12、通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；</p>
+    <p>[0201]	例如，通过监视LoadLibrary接口（或其它模块查看器)，获得浏览器加载的所有DLL。</p>
+    <p>[0202]	子步骤S01-13、排除系统底层的动态链接库DLL，提取IE6内核的动态链接库DLL。</p>
+    <p>[0203]以及，</p>
+    <p>[0204]	子步骤S01-21、重载所有与IE8内核加载相关的系统应用程序接口 API ；</p>
+    <p>[0205]	子步骤S01-22、通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；</p>
+    <p>[0206]	子步骤S01-23、排除系统底层的动态链接库DLL，提取IE8内核的动态链接库DLL。</p>
+    <p>[0207]	需要说明的是，上述子步骤仅示例性地描述将预置的IE6内核文件和新型IE内核文件存储于客户端中的处理过程，并不受所描述的动作顺序的限制，本领域技术人员可以理解的是，某些步骤可以采用其他顺序或者同时进行。[0208]	步骤105、若当前适配的IE内核版本号为IE6内核，则浏览器进程调用预设的IE内核重定向模组，重定向至相应位置加载预置的IE6内核文件；</p>
+    <p>[0209]	重定向，字面即为对某A文件的操作直接转移到B文件。比如读、写、设置长度或文件结尾指针等属性、甚至是删除操作。</p>
+    <p>[0210]	在本发明的一种优先实施例中，所述预设的IE内核重定向模组可以通过以下子步骤执行重定向至相应位置加载预置的IE6内核文件的操作：</p>
+    <p>[0211]	子步骤S11、当监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE6内核的注册表配置文件；若查询IE内核文件的路径，则返回IE6内核文件所导入的客户端指定位置的信息；</p>
+    <p>[0212]	子步骤S12、当监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同 名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；</p>
+    <p>[0213]	子步骤S13、当监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0214]	子步骤S14、当监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述子步骤S12 ；</p>
+    <p>[0215]	其中，COM对象（The Component Object Model组件对象模型）是遵循COM规范编写、以Win32动态链接库（DLL)或可执行文件（EXE)形式发布的可执行二进制代码，能够满足对组件架构的所有需求。遵循COM的规范标准，组件与应用、组件与组件之间可以互操作，极其方便地建立可伸缩的应用系统。COM对象是一个使用COM规格的可以重复使用的软件组件。使用COM规格可以确保COM对象很好的工作，并且很容易的结合到你的应用程序中。事实上，COM基本相当于一个黑匣子，这个黑匣子能为你的应用程序完成很多的工作。COM对象一般用动态连接库（DLL)实现。和普通的DLL&#8212;样，COM对象暴露一些方法，应用程序能够呼叫它，以便完成任何支持的操作。</p>
+    <p>[0216]	子步骤S15、当监视到浏览器进程访问DLL内核句柄时，调用所述子步骤S12。</p>
+    <p>[0217]	其中，句柄是windows用来标志应用程序中建立的或是使用的唯一整数，windows使用了大量的句柄来标志很多对象。但是，句柄不是一个指针，程序不能利用它句柄来直接阅读文件中的信息。</p>
+    <p>[0218]	需要说明的是，上述子步骤S11-S15仅用于描述预设的IE内核重定向模组执行重定向操作的几种方式，并不受所描述的动作顺序的限制，本领域技术人员可以理解的是，某些步骤可以采用其他顺序或者同时进行。</p>
+    <p>[0219]	步骤106、若当前适配的IE内核版本为新型IE内核，则浏览器进程调用预设的IE内核重定向模组，重定向至相应位置加载预置的新型IE内核文件。</p>
+    <p>[0220]	在本发明的一种优先实施例中，所述预设的IE内核重定向模组可以通过以下子步骤执行重定向至相应位置加载预置的IE8内核文件的操作：</p>
+    <p>[0221]	子步骤S21、当监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE8内核的注册表配置文件；若查询IE内核文件的路径，则返回IE8内核文件所导入的客户端指定位置的信息；</p>
+    <p>[0222]	子步骤S22、当监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；</p>
+    <p>[0223]	子步骤S23、当监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0224]	子步骤S24、当监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述子步骤S22 ；</p>
+    <p>[0225]	子步骤S25、当监视到浏览器进程访问DLL内核句柄时，调用所述子步骤S22。 </p>
+    <p>[0226]	需要说明的是，上述子步骤S21-S25仅用于描述预设的IE内核重定向模组执行重定向操作的几种方式，并不受所描述的动作顺序的限制，本领域技术人员可以理解的是，某些步骤可以采用其他顺序或者同时进行。</p>
+    <p>[0227]	具体而言，在本发明实施例中，所述IE内核文件的重定向主要是指在浏览器创建时，转向程序指定路径加载文件，主要包括：</p>
+    <p>[0228]	UIE内核重定向。使浏览器加载指定版本内核对象，重载实现系统API，具体可以米用：</p>
+    <p>[0229]	CoCreateInstance :创建文档及框架组件</p>
+    <p>[0230]	CoGetClassO bject :创建脚本引擎及脚本对象</p>
+    <p>[0231]	CoCreateInstanceEx :创建文字系统等扩展接口</p>
+    <p>[0232]	2、DLL重定向。一些功能模块可能以DLL方式实现，也需要重载系统API以重定向，具体可以采用：</p>
+    <p>[0233]	LoadLibrary/LoadLibrary :实现 DLL 加载</p>
+    <p>[0234]	FreeLibrary :实现 DLL 释放</p>
+    <p>[0235]	3、注册表重定向。使浏览器加载/保存指定版本的配置数据，重载实现系统API，具体可以采用：</p>
+    <p>[0236]	RegOpenKeyEx :打开注册表键值以读写</p>
+    <p>[0237]	当然，上述方法仅仅用作示例，在具体实现中，本领域技术人员采用预设的IE内核重定向模组应用其它内核重定向的方法加载对应版本的IE内核文件均是可行的，本发明对此无需加以限制。</p>
+    <p>[0238]	作为本发明实施例具体应用的一种示例，所述预设的IE内核重定向模组可以为动态链接库文件Tridentcore. dll。</p>
+    <p>[0239]	在本发明实施例中，还可以包括如下步骤：</p>
+    <p>[0240]	采用当前适配的浏览器内核加载所述请求的网页。</p>
+    <p>[0241]	由于按照预置规则获知的是与所述请求加载的网页适配的所述浏览器内核，因此，可以直接调用与所述请求加载的网页适配的浏览器内核加载所述请求加载的网页。本发明实施例所述浏览器为多内核浏览器，即浏览器中至少包含两种内核。由于每种内核对应一份代码，因此多内核浏览器在浏览器中实现多份代码，在选择某个内核加载网页时，调用相应的代码即可。</p>
+    <p>[0242]	参考图2，示出了本申请的一种IE6内核与新型IE内核的切换方法实施例2的步骤流程图，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本，本实施例具体可以包括以下步骤：</p>
+    <p>[0243]	步骤201、接收加载网页的请求信息，所述请求信息中包括URL信息；</p>
+    <p>[0244]	步骤202、按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系;</p>
+    <p>[0245]	步骤203、根据所述适配关系选择对应的浏览器内核；</p>
+    <p>[0246]	步骤204、当所选择的浏览器内核为IE内核时，在浏览器进程启动时，将所述IE6内核文件和IE8内核文件写入内存；并且，浏览器进程依据所述URL信息，判断当前适配的IE内核版本； </p>
+    <p>[0247]	步骤205、若当前适配的IE内核版本为IE6内核，则浏览器进程调用预设的IE内核重定向模组，重定向至客户端内存中的相应位置加载预置的IE6内核文件；</p>
+    <p>[0248]	步骤206、若当前适配的IE内核版本为新型IE内核，则浏览器进程调用预设的IE内核重定向模组，重定向至相客户端内存中的应位置加载预置的新型IE内核文件。</p>
+    <p>[0249]	为使本领域技术人员更好地理解本发明，以下通过一个完整示例说明本发明的IE6内核与IE8内核的切换过程。</p>
+    <p>[0250]	步骤A、将IE6内核的主要模块文件和IE8内核的主要模块文件，安装到客户端的指定目录中；</p>
+    <p>[0251]	其中，所述IE6内核的主要模块文件和IE8内核的主要模块文件包括：IE6内核的动态链接库DLL和IE8内核的动态链接库DLL ；IE6内核的数据文件和IE8内核的数据文件；IE6内核的语言包文件和IE8内核的语言包文件等。</p>
+    <p>[0252]	步骤B、将IE6内核的注册表配置文件和IE8内核的注册表配置文件，导入客户端的注册表中；</p>
+    <p>[0253]	步骤C、浏览器启动时，执行以下子步骤：</p>
+    <p>[0254]	子步骤Cl、监视注册表、DLL、内存、网页（用户输入或点击的URL)的访问；</p>
+    <p>[0255]	子步骤C2、加载IE6内核的主要模块文件和IE8内核的主要模块文件到内存中；</p>
+    <p>[0256]	步骤D、当浏览器接收到用户提交的URL时，按照如下方式计算适合该URL的IE内核版本号：</p>
+    <p>[0257]	如果URL为局域网地址，则返回IE内核版本号为IE6 (使用IE6内核）；</p>
+    <p>[0258]	如果URL包含IP地址，则返回IE内核版本号为IE6 (使用IE6内核）；</p>
+    <p>[0259]	如果URL在IE8的兼容域名列表中，则返回IE内核版本号为IE8(使用IE8内核）；</p>
+    <p>[0260]	其它情况返回0 (使用系统自有的IE内核）。</p>
+    <p>[0261]	步骤E、浏览器开始加载内核，创建页面时，会读写注册表、加载DLL及数据文件、创建COM对象，具体涉及以下操作：</p>
+    <p>[0262]	I、当监视到浏览器访问注册表时，若访问IE配置项，则引导其读写步骤B中导入的对应项；若查询IE内核模块路径，则返回步骤C中的内存指定位置；</p>
+    <p>[0263]	2、当监视到浏览器访问DLL时，根据步骤D中计算的IE内核版本号，定位到内存中对应的内核文件目录，到该内核目录中查找相同名称的DLL，若找到，则引导浏览器进程加载对应的内核文件；否则，引导浏览器加载系统的缺省模块；</p>
+    <p>[0264]	3、当监视到浏览器访问数据文件、语言包文件时，根据步骤D中计算的IE内核版本号，到内存中对应的内核文件目录中查找相应文件；</p>
+    <p>[0265]	4、当监视到浏览器创建COM对象时，从步骤B的注册表中，查找实现该COM对象的DLL，执行以上步骤2 ；</p>
+    <p>[0266]	5、当监视到浏览器访问DLL内核句柄时，执行以上步骤2。</p>
+    <p>[0267]	在本例中，步骤A、B可以在安装过程中完成，每次浏览器进程启动时执行C项，步骤D、E在每次浏览页面时均执行。</p>
+    <p>[0268]	需要说明的是，对于方法实施例，为了简单描述，故将其都表述为一系列的动作组合，但是本领域技术人员应该知悉，本发明并不受所描述的动作顺序的限制，因为依据本发明，某些步骤可以采用其他顺序或者同时进行。其次，本领域技术人员也应该知悉，说明书 中所描述的实施例均属于优选实施例，所涉及的动作和模块并不一定是本发明所必须的。</p>
+    <p>[0269]	参考图3，示出了本发明的一种基于多内核浏览器的不同版本IE内核切换的系统实施例I的结构框图，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本：</p>
+    <p>[0270]	所述的装置具体可以包括如下模块：</p>
+    <p>[0271]	请求接收模块301，适于接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL信息；</p>
+    <p>[0272]	适配关系获取模块302，适于按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；</p>
+    <p>[0273]	内核选择模块303，适于根据所述适配关系选择对应的浏览器内核，</p>
+    <p>[0274]	浏览器进程304，适于在所选择的浏览器内核为IE内核时，依据所述统一资源定位符URL信息判断当前适配的IE内核版本；</p>
+    <p>[0275]	IE内核重定向模组305，适于在当前适配的IE内核版本为IE6内核时，重定向至相应位置加载预置的IE6内核文件；以及，在当前适配的IE内核版本为新型IE内核时，重定向至相应位置加载预置的新型IE内核文件。</p>
+    <p>[0276]	在具体实现中，所述新型IE内核可以为IE8内核，所述新型IE内核文件可以为IE8内核文件；</p>
+    <p>[0277]	或者，所述新型IE内核可以为IE8以上版本的IE内核，所述新型IE内核文件可以为IE8以上版本的IE内核文件。</p>
+    <p>[0278]	在本发明的一种优选实施例中，所述IE6内核文件和IE8内核文件可以包括如下内容：</p>
+    <p>[0279]	IE6内核的动态链接库DLL和IE8内核的动态链接库DLL ；</p>
+    <p>[0280]	IE6内核的数据文件和IE8内核的数据文件；</p>
+    <p>[0281]	IE6内核的语言包文件和IE8内核的语言包文件；</p>
+    <p>[0282]	以及，IE6内核的注册表配置文件和IE8内核的注册表配置文件。</p>
+    <p>[0283]	作为本发明具体应用的一种示例，所述预置的IE6内核文件和新型IE内核文件存储于客户端中，具体通过以下方式实现：</p>
+    <p>[0284]	从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库 DLL ；</p>
+    <p>[0285]	经调试分析生成IE6内核的数据文件和语言包文件，以及，IE8内核的数据文件和IE8内核的语言包文件；</p>
+    <p>[0286]	将所述IE6内核的动态链接库DLL、数据文件和语言包文件，以及，IE8内核的动态链接库DLL、数据文件和语言包文件安装至客户端的指定位置；</p>
+    <p>[0287]	生成IE6内核和IE8内核的注册表配置文件，并导入所述客户端的注册表中；</p>
+    <p>[0288]	其中，所述从IE6内核提取IE6内核的动态链接库DLL，从IE8内核提取IE8内核的动态链接库DLL的子步骤进一步包括：</p>
+    <p>[0289]	重载所有与IE6内核加载相关的系统应用程序接口 API ； [0290]	通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；</p>
+    <p>[0291]	排除系统底层的动态链接库DLL，提取IE6内核的动态链接库DLL ；</p>
+    <p>[0292]以及，</p>
+    <p>[0293]	重载所有与IE8内核加载相关的系统应用程序接口 API ；</p>
+    <p>[0294]	通过监视动态链接库DLL查看接口，获得浏览器加载的所有动态链接库DLL ；</p>
+    <p>[0295]	排除系统底层的动态链接库DLL，提取IE8内核的动态链接库DLL。</p>
+    <p>[0296]	参考图4，示出了本发明的一种基于多内核浏览器的不同版本IE内核切换的系统实施例2的结构框图，其中所述浏览器包括至少两种浏览器内核，其中一种浏览器内核为IE内核，所述IE内核至少包括IE6内核和新型IE内核两个版本：</p>
+    <p>[0297]	所述的装置具体可以包括如下模块：</p>
+    <p>[0298]	请求接收模块401，适于接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL信息；</p>
+    <p>[0299]	适配关系获取模块402，适于按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；</p>
+    <p>[0300]	内核选择模块403，适于根据所述适配关系选择对应的浏览器内核，</p>
+    <p>[0301]	内存写入模块404，适于将所述IE6内核文件和新型IE内核文件写入内存；</p>
+    <p>[0302]	浏览器进程405，适于在所选择的浏览器内核为IE内核时，依据所述统一资源定位符URL信息判断当前适配的IE内核版本；</p>
+    <p>[0303]	在本发明的一种优选实施例中，所述浏览器进程405可以包括以下子模块：</p>
+    <p>[0304]	第一判断子模块4051，适于在当前用户提交的统一资源定位符URL信息为局域网地址时，判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0305]	第二判断子模块4052，适于在当前用户提交的统一资源定位符URL信息包含IP地址时，判定当前适配的IE内核版本号为IE6内核；</p>
+    <p>[0306]	第三判断子模块4053，适于在当前用户提交的统一资源定位符URL信息包含在IE8内核兼容域名列表中时，判定当前适配的IE内核版本号为IE8内核。</p>
+    <p>[0307]	更为优选的是，所述浏览器进程还可以包括以下子模块：</p>
+    <p>[0308]	第四判断子模块4054，适于在当前用户提交的统一资源定位符URL信息包含在新型IE内核兼容域名列表中时，判定当前适配的IE内核版本号为对应的新型IE内核。</p>
+    <p>[0309]	IE内核重定向模组406，适于在当前适配的IE内核版本为IE6内核时，重定向至相应位置加载预置的IE6内核文件；以及，在当前适配的IE内核版本为新型IE内核时，重定向至相应位置加载预置的新型IE内核文件。</p>
+    <p>[0310]	参考图5，示出了在本发明的一种优选实施例中，所述IE内核重定向模组406包括的子模块：</p>
+    <p>[0311]	第一注册表操作子模块4061，适于在监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE6内核的注册表配置文件；若查询IE内核文件的路径，则返回IE6内核文件所导入的客户端指定位置的信息；</p>
+    <p>[0312]	第一 DLL操作子模块4062，适于在监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ； [0313]	第一相关文件操作子模块4063，适于在监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE6内核的版本号，定位到对应的IE6内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0314]	第一 COM对象创建子模块4064，适于在监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述第一 DLL操作子模块4062 ；</p>
+    <p>[0315]	第一 DLL内核句柄操作子模块4065，适于当监视到浏览器进程访问DLL内核句柄时，调用所述第一 DLL操作子模块4062 ；</p>
+    <p>[0316]	第二注册表操作子模块4066，适于在监视到浏览器进程访问注册表时，若访问IE配置项，则引导浏览器进程读写IE8内核的注册表配置文件；若查询IE内核文件的路径，则返回IE8内核文件所导入的客户端指定位置的信息；</p>
+    <p>[0317]	第二 DLL操作子模块4067，适于在监视到浏览器进程访问动态链接库DLL时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的动态链接库DLL，若找到，则引导浏览器进程加载该动态链接库DLL ；</p>
+    <p>[0318]	第二相关文件操作子模块4068，适于在监视到浏览器进程访问数据文件、语言包文件时，根据当前适配的IE8内核的版本号，定位到对应的IE8内核文件所导入的客户端指定位置，并到该位置查找相同名称的数据文件和语言包文件，若找到，则引导浏览器进程加载该数据文件和语言包文件；</p>
+    <p>[0319]	第二 COM对象创建子模块4069，适于在监视到浏览器进程创建COM对象时，从所述客户端的注册表中，查找实现该COM对象的动态链接库DLL，然后调用所述第二 DLL操作子模块4067 ；</p>
+    <p>[0320]	第二 DLL内核句柄操作子模块4070，适于当监视到浏览器进程访问DLL内核句柄时，调用所述第二 DLL操作子模块4067。</p>
+    <p>[0321]	作为本发明实施例具体应用的一种示例，所述预设的IE内核重定向模组可以为动态链接库文件Tridentcore. dll。</p>
+    <p>[0322]	在本发明实施例中，还可以包括网页加载模块，适于采用当前适配的浏览器内核加载所述请求的网页。[0323]	在本发明的一种优选实施例中，所述适配关系获取模块402可以包括如下子模块：</p>
+    <p>[0324]	第一获取子模块，适于按照预置规则获知与所述请求加载的网页适配的所述浏览器内核；</p>
+    <p>[0325]	所述内核选择模块403可以包括如下子模块：</p>
+    <p>[0326]	第一选择子模块，适于选择与所述请求加载的网页适配的浏览器内核；</p>
+    <p>[0327]和	/ 或，</p>
+    <p>[0328]	所述适配关系获取模块402可以包括如下子模块：</p>
+    <p>[0329]	第二获取子模块，适于按照预置规则获知与所述请求加载的网页不适配的浏览器内核； </p>
+    <p>[0330]	所述内核选择模块403可以包括如下子模块：</p>
+    <p>[0331]	第二选择子模块，适于选择所述不适配的内核之外的浏览器内核加载所述请求加载的网页；</p>
+    <p>[0332]和	/ 或，</p>
+    <p>[0333]	所述适配关系获取模块402可以包括如下子模块：</p>
+    <p>[0334]	第三获取子模块，适于按照预置规则获知所述请求加载的网页与当前默认的浏览器内核之间的适配关系；</p>
+    <p>[0335]	所述内核选择模块403可以包括如下子模块：</p>
+    <p>[0336]	第三选择子模块，适于如果所述请求加载的网页与当前默认的浏览器内核适配，则选择所述当前默认的浏览器内核加载；否则，选择当前默认内核之外的浏览器内核。</p>
+    <p>[0337]	作为一种示例，所述预置规则可以包括预置的特定适配规则和/或通用适配规贝U，其中，所述预置的特定适配规则包括网页与内核之间的适配关系，所述通用适配规则包括为用户选择平均加载速度最快的浏览器内核或为用户选择对网络标准适配的浏览器内核。</p>
+    <p>[0338]	对于装置实施例而言，由于其与前述方法实施例基本相似，所以描述的比较简单，相关之处参见方法实施例的部分说明即可。</p>
+    <p>[0339]	参考图6，示出了本发明的一种浏览器的结构框图，其中所述浏览器50包括至少两种浏览器内核,其中一种浏览器内核为IE内核51，另一种浏览器内核为除IE内核之外的其它内核52，所述IE内核至少包括IE6内核和新型IE内核两个版本：所述浏览器包括：</p>
+    <p>[0340]	请求接收模块501，适于接收加载网页的请求信息，所述请求信息中包括统一资源定位符URL信息；</p>
+    <p>[0341]	适配关系获取模块502，适于按照预置规则获知所述请求加载的网页与浏览器内核之间的适配关系；</p>
+    <p>[0342]	内核选择模块503，适于根据所述适配关系选择对应的浏览器内核，</p>
+    <p>[0343]	浏览器进程504，适于在所选择的浏览器内核为IE内核时，依据所述统一资源定位符URL信息判断当前适配的IE内核版本；</p>
+    <p>[0344]	IE内核重定向模组505，适于在当前适配的IE内核版本为IE6内核时，重定向至相应位置加载预置的IE6内核文件；以及，在当前适配的IE内核版本为新型IE内核时，重定向至相应位置加载预置的新型IE内核文件。[0345]	对于上述实施例而言，由于其与前述方法实施例基本相似，所以描述的比较简单，相关之处参见方法实施例的部分说明即可。</p>
+    <p>[0346]	本说明书中的各个实施例均采用递进的方式描述，每个实施例重点说明的都是与其他实施例的不同之处，各个实施例之间相同相似的部分互相参见即可。</p>
+    <p>[0347]	在此提供的算法和显示不与任何特定计算机、虚拟系统或者其它设备固有相关。各种通用系统也可以与基于在此的示教一起使用。根据上面的描述，构造这类系统所要求的结构是显而易见的。此外，本发明也不针对任何特定编程语言。应当明白，可以利用各种编程语言实现在此描述的本发明的内容，并且上面对特定语言所做的描述是为了披露本发明的最佳实施方式。</p>
+    <p>[0348]	在此处所提供的说明书中，说明了大量具体细节。然而，能够理解，本发明的实施例可以在没有这些具体细节的情况下实践。在一些实例中，并未详细示出公知的方法、结构和技术，以便不模糊对本说明书的理解。</p>
+    <p>[0349]	类似地，应当理解，为了精简本公开并帮助理解各个发明方面中的一个或多个，在 上面对本发明的示例性实施例的描述中，本发明的各个特征有时被一起分组到单个实施例、图、或者对其的描述中。然而，并不应将该公开的方法解释成反映如下意图：即所要求保护的本发明要求比在每个权利要求中所明确记载的特征更多的特征。更确切地说，如下面的权利要求书所反映的那样，发明方面在于少于前面公开的单个实施例的所有特征。因此，遵循具体实施方式的权利要求书由此明确地并入该具体实施方式，其中每个权利要求本身都作为本发明的单独实施例。</p>
+    <p>[0350]	本领域那些技术人员可以理解，可以对实施例中的设备中的模块进行自适应性地改变并且把它们设置在与该实施例不同的一个或多个设备中。可以把实施例中的模块或单元或组件组合成一个模块或单元或组件，以及此外可以把它们分成多个子模块或子单元或子组件。除了这样的特征和/或过程或者单元中的至少一些是相互排斥之外，可以采用任何组合对本说明书（包括伴随的权利要求、摘要和附图）中公开的所有特征以及如此公开的任何方法或者设备的所有过程或单元进行组合。除非另外明确陈述，本说明书（包括伴随的权利要求、摘要和附图）中公开的每个特征可以由提供相同、等同或相似目的的替代特征来代替。</p>
+    <p>[0351]	此外，本领域的技术人员能够理解，尽管在此所述的一些实施例包括其它实施例中所包括的某些特征而不是其它特征，但是不同实施例的特征的组合意味着处于本发明的范围之内并且形成不同的实施例。例如，在下面的权利要求书中，所要求保护的实施例的任意之一都可以以任意的组合方式来使用。</p>
+    <p>[0352]	本发明的各个部件实施例可以以硬件实现，或者以在一个或者多个处理器上运行的软件模块实现，或者以它们的组合实现。本领域的技术人员应当理解，可以在实践中使用微处理器或者数字信号处理器（DSP)来实现根据本发明实施例的终端安全维护设备中的一些或者全部部件的一些或者全部功能。本发明还可以实现为用于执行这里所描述的方法的一部分或者全部的设备或者装置程序（例如，计算机程序和计算机程序产品）。这样的实现本发明的程序可以存储在计算机可读介质上，或者可以具有一个或者多个信号的形式。这样的信号可以从因特网网站上下载得到，或者在载体信号上提供，或者以任何其他形式提供。[0353]	应该注意的是上述实施例对本发明进行说明而不是对本发明进行限制，并且本领域技术人员在不脱离所附权利要求的范围的情况下可设计出替换实施例。在权利要求中，不应将位于括号之间的任何参考符号构造成对权利要求的限制。单词“包含”不排除存在未列在权利要求中的元件或步骤。位于元件之前的单词“一”或“一个”不排除存在多个这样的元件。本发明可以借助于包括有若干不同元件的硬件以及借助于适当编程的计算机来实现。在列举了若干装置的单元权利要求中，这些装置中的若干个可以是通过同一个硬件项来具体体现。单词第一、第二、以及第三等的使用不表示任何顺序。可将这些单词解释为 名称。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101655863A?cl=zh">CN101655863A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年5月8日</td><td class="patent-data-table-td patent-date-value">2010年2月24日</td><td class="patent-data-table-td ">北京搜狗科技发展有限公司</td><td class="patent-data-table-td ">在浏览器中加载网页的方法及浏览器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102156709A?cl=zh">CN102156709A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年2月28日</td><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">奇智软件（北京）有限公司</td><td class="patent-data-table-td ">一种浏览器引擎模式的切换方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102508710A?cl=zh">CN102508710A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月28日</td><td class="patent-data-table-td patent-date-value">2012年6月20日</td><td class="patent-data-table-td ">奇智软件（北京）有限公司</td><td class="patent-data-table-td ">一种ie6内核与新型ie内核的切换方法和系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103559024A?cl=zh">CN103559024A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年10月17日</td><td class="patent-data-table-td patent-date-value">2014年2月5日</td><td class="patent-data-table-td ">常熟市华安电子工程有限公司</td><td class="patent-data-table-td ">一种浏览器</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=hj_XBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0009480000">G06F9/48</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年3月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年4月10日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/7004ec8b8c2d00f9c4e8/CN102968341A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8E%E5%A4%9A%E5%86%85%E6%A0%B8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%ACi.pdf?id=hj_XBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3XKvjHZlovMH7gAdQxYl21qf30mg"},"sample_url":"https://www.google.com/patents/reader?id=hj_XBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

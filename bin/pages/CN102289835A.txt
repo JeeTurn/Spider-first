@@ -1,0 +1,548 @@
+<!DOCTYPE html><html><head><title>专利 CN102289835A - 微动画效果查看方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="微动画效果查看方法及装置"><meta name="DC.contributor" content="吕子茹" scheme="inventor"><meta name="DC.contributor" content="北京瑞信在线系统技术有限公司" scheme="assignee"><meta name="DC.date" content="2011-8-30" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供一种微动画效果查看方法及装置，其中方法包括：读取微动画的XML配置文件；XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值；利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值；加载获取了所述数据模型中对象的变量的值之后的所述微动画代码，从而使得在所述处理设备中形成微动画场景及微动画场景中的各种元素。本发明提供的方法及装置，使得编辑人员方便地在预设操作系统上浏览微动画应用软件效果，简化了调试过程，提高了软件开发效率，减少了软件开发所需时间。"><meta name="DC.date" content="2011-12-21"><meta name="DC.relation" content="CN:101436185:A" scheme="references"><meta name="DC.relation" content="CN:1996395:A" scheme="references"><meta name="DC.relation" content="JP:2007509420" scheme="references"><meta name="DC.relation" content="US:20020075270:A1" scheme="references"><meta name="citation_reference" content="赵航涛: &quot;在Flash中访问XML数据&quot;, 《中小学电教》, 31 May 2005 (2005-05-31), pages 59 - 60"><meta name="citation_patent_publication_number" content="CN:102289835:A"><meta name="citation_patent_application_number" content="CN:201110253421"><link rel="canonical" href="https://www.google.com/patents/CN102289835A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102289835A?cl=zh"/><meta name="title" content="专利 CN102289835A - 微动画效果查看方法及装置"/><meta name="description" content="本发明提供一种微动画效果查看方法及装置，其中方法包括：读取微动画的XML配置文件；XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值；利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值；加载获取了所述数据模型中对象的变量的值之后的所述微动画代码，从而使得在所述处理设备中形成微动画场景及微动画场景中的各种元素。本发明提供的方法及装置，使得编辑人员方便地在预设操作系统上浏览微动画应用软件效果，简化了调试过程，提高了软件开发效率，减少了软件开发所需时间。"/><meta property="og:title" content="专利 CN102289835A - 微动画效果查看方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102289835A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102289835A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=NzmcBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102289835A&amp;usg=AFQjCNH3wmUsVi7x_lhBWrqYbQvqLISs6Q" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/0cda8c7c34847bda33a9/CN102289835A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/0cda8c7c34847bda33a9/CN102289835A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102289835A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102289835A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102289835A?cl=zh" style="display:none"><span itemprop="description">本发明提供一种微动画效果查看方法及装置，其中方法包括：读取微动画的XML配置文件；XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；解析所述XML配置文件，利用解析出的各标签的属性...</span><span itemprop="url">https://www.google.com/patents/CN102289835A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102289835A - 微动画效果查看方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102289835A - 微动画效果查看方法及装置" title="专利 CN102289835A - 微动画效果查看方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102289835 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110253421</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年12月21日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年8月30日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年8月30日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110253421.1, </span><span class="patent-bibdata-value">CN 102289835 A, </span><span class="patent-bibdata-value">CN 102289835A, </span><span class="patent-bibdata-value">CN 201110253421, </span><span class="patent-bibdata-value">CN-A-102289835, </span><span class="patent-bibdata-value">CN102289835 A, </span><span class="patent-bibdata-value">CN102289835A, </span><span class="patent-bibdata-value">CN201110253421, </span><span class="patent-bibdata-value">CN201110253421.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%90%95%E5%AD%90%E8%8C%B9%22">吕子茹</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E7%91%9E%E4%BF%A1%E5%9C%A8%E7%BA%BF%E7%B3%BB%E7%BB%9F%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京瑞信在线系统技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102289835A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102289835A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102289835A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=NzmcBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110253421&amp;usg=AFQjCNHw9UayzIu2zNjivGxlKsmD-4m1Ig"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=NzmcBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102289835A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHmT8PS4kwoRrQhErJNwxVv6Uk3Fg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT105999770" lang="ZH" load-source="patent-office">微动画效果查看方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 102289835 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA87788560" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供一种微动画效果查看方法及装置，其中方法包括：读取微动画的XML配置文件；XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值；利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值；加载获取了所述数据模型中对象的变量的值之后的所述微动画代码，从而使得在所述处理设备中形成微动画场景及微动画场景中的各种元素。本发明提供的方法及装置，使得编辑人员方便地在预设操作系统上浏览微动画应用软件效果，简化了调试过程，提高了软件开发效率，减少了软件开发所需时间。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM38312379" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种微动画效果查看方法，用于具有一操作系统的处理设备中，包括：读取微动画的XML配置文件；所述XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值；利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值；加载获取了所述数据模型中对象的变量的值之后的所述微动画代码，从而使得在所述处理设备中形成微动画场景及微动画场景中的各种元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，所述数据模型中各对象之间的继承关系与所述XML配置文件中各标签之间的继承关系一致。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其中，所述XML配置文件包括场景标签，所述场景标签的子标签包括用于描述所述微动画的运动物体的标签、界面文字标签和按钮标签中的至少一个。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的方法，其中，所述预设的与所述操作系统相匹配的微动画代码，包括用于描述所述运动物体的代码、用于生成界面文字的代码和用于生成按钮的代码中的至少一种。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的方法，还包括：检测点击操作；检测到点击操作后，判断所述点击操作是否是在微动画场景中所述运动物体所在的背景区域；如果所述点击操作是在微动画场景中运动物体所在的背景区域，则判断所述数据模型中是否有与所述运动物体相关的整体动作对象；如果所述数据模型中有与所述运动物体相关的整体动作对象，则利用所述微动画代码获取所述数据模型中与所述运动物体相关的整体动作对象的变量的值，在微动画场景中显示所述运动物体的整体动作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其中，如果所述数据模型中没有与所述运动物体相关的整体动作对象，则判断所述点击操作是否是在微动画场景中运动物体的局部区域；如果所述点击操作是在微动画场景中运动物体的局部区域，则判断所述数据模型中是否有与所述运动物体相关的位于所述局部区域中的局部动作对象；如果所述数据模型中有与所述运动物体相关的位于所述局部区域中的局部动作对象， 则利用所述微动画代码获取所述数据模型中与所述运动物体相关的局部动作对象的变量的值，在微动画场景中显示运动物体的局部动作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求5或6所述的方法，在检测到点击操作后，还包括：判断所述数据模型中是否有与所述点击操作所在区域相关的音乐对象、音效对象或文字对象；如果所述数据模型中有与所述点击操作所在区域相关的音乐对象、音效对象或文字对象，则利用所述微动画代码获取所述点击操作所在区域相关的音乐对象、音效对象或文字对象的变量的值，在微动画场景中显示音乐、音效或文字。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求4所述的方法，其中，解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值，包括：读取XML配置文件的场景标签，获取场景标签的属性值，并利用所述场景标签的属性值为所述数据模型中与场景标签对应的对象的变量赋值；读取XML配置文件中的场景标签的各子标签的属性值以及各子标签的下一层子标签的属性值，利用获取的属性值为所述数据模型中对应的对象的变量赋值。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种微动画效果查看装置，具有一操作系统，包括：读取模块，用于读取微动画的XML配置文件；所述XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；解析模块，用于解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值；第一处理模块，用于利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值；加载模块，用于加载获取了所述数据模型中对象的变量的值之后的所述微动画代码， 从而使得在该微动画效果查看装置中形成微动画场景及微动画场景中的各种元素。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的装置，还包括： 检测模块，用于检测点击操作；第一判断模块，用于在所述检测模块检测到点击操作后，判断所述点击操作是否是在微动画场景中运动物体所在的背景区域；第二判断模块，用于在所述第一判断模块判断所述点击操作是在微动画场景中运动物体所在的背景区域的情况下，判断所述数据模型中是否有与所述运动物体相关的整体动作对象；第二处理模块，用于在所述第二判断模块判断所述数据模型中有与所述运动物体相关的整体动作对象的情况下，利用所述微动画代码获取所述数据模型中与所述运动物体相关的整体动作对象的变量的值，在微动画场景中显示运动物体的整体动作。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES43856637" lang="ZH" load-source="patent-office" class="description">
+    <p>微动画效果查看方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及微动画技术，尤其涉及一种微动画效果查看方法及装置。 背景技术</p>
+    <p>[0002]	动画是经由创作者的安排，使原本不具生命的东西像获得生命一般的活动。所以动画是让整幅图片都活动起来。而所谓微动画，区别于动画产品，是在动画中的某个局部位置进行动作的动画产品。</p>
+    <p>[0003]	微动画应用软件开发过程中，编辑人员可以配置微动画中的场景、精灵以及按钮等的属性。然后，编程人员可以根据编辑人员配置的场景、精灵以及按钮等的属性编写能够被某种操作系统识别的代码，形成微动画应用软件。</p>
+    <p>[0004]	在微动画应用软件开发过程中存在如下问题：</p>
+    <p>[0005]	为了使得微动画应用软件能够在不同的操作系统上运行，例如在iOS系统或者 Android系统上运行，编程人员需要分别形成能够被iOS系统或者Android系统识别的代码。而且，需要在使用iOS系统或者使用Android系统的手机或电脑上才能看到微动画应用软件的效果。经过如此复杂的过程之后，编辑人员才能看到微动画的效果，这样，给编辑人员查看微动画效果带来了极大的不便。</p>
+    <p>[0006]	另外，如果在使用iOS系统或者使用Android系统的手机或电脑上运行后，发现微动画应用软件存在某些设计上的不足，则需要编辑人员重新修改场景、精灵以及按钮等的属性，再由编程人员重新生成程序，如此反复修改来查看微动画应用软件的效果。一方面增加了软件开发所需的时间，另一方面导致编辑人员和编程人员反复修改，调试过程复杂，软件开发的效率低。</p>
+    <p>发明内容</p>
+    <p>[0007]	本发明针对现有技术存在的问题，提供一种微动画效果查看方法及装置，能够使得编辑人员方便地在预设操作系统上浏览微动画应用软件效果，简化调试过程，提高软件开发效率，减少软件开发所需时间。</p>
+    <p>[0008]	本发明提供了一种微动画效果查看方法，包括：</p>
+    <p>[0009]	读取微动画的XML配置文件；所述XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；</p>
+    <p>[0010]	解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值；</p>
+    <p>[0011]	利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值；</p>
+    <p>[0012]	加载获取了所述数据模型中对象的变量的值之后的所述微动画代码，从而使得在所述处理设备中形成微动画场景及微动画场景中的各种元素。</p>
+    <p>[0013]	本发明还提供了一种微动画效果查看装置，具有一操作系统，包括：[0014]	读取模块，用于读取微动画的XML配置文件；所述XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签；</p>
+    <p>[0015]	解析模块，用于解析所述XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值；</p>
+    <p>[0016]	第一处理模块，用于利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值；</p>
+    <p>[0017]	加载模块，用于加载获取了所述数据模型中对象的变量的值之后的所述微动画代码，从而使得在该微动画效果查看装置中形成微动画场景及微动画场景中的各种元素。</p>
+    <p>[0018]	本发明提供的微动画效果查看方法，对于具有一预设操作系统的处理设备来说， 通过解析反映微动画场景中各元素的属性的XML配置文件，为预先建立的数据模型中各对象的变量赋值，利用预设的与该处理设备的操作系统相匹配的微动画代码获取数据模型中对象的变量的值，加载微动画代码使得在处理设备中形成微动画场景及微动画场景中的各种元素。编辑人员无需依靠编程人员形成应用于特定操作系统（例如iOS系统或Android 系统）的代码，而是借助于预先获取的与编辑人员当前所使用的预设操作系统相匹配的微动画代码即可以查看微动画效果。这样，编辑人员无需在特定操作系统（iOS或者Android) 上查看微动画效果，而是可以在通常的windows等操作系统上查看微动画效果。</p>
+    <p>[0019]	另外，编辑人员通过在他所使用的处理设备上运行能够实现本发明提供的微动画效果查看方法的指令，可以形成微动画场景。如果发现微动画场景或者微动画场景中的各元素存在某种设计缺陷，可以通过修改微动画场景或微动画场景中的各元素的属性，即，生成新的XML配置文件，来查看修改后的微动画效果，而无需交由编程人员修改代码来查看修改后的微动画效果，在调试阶段编辑人员几乎无需与编程人员交互，简化了调试过程，提高了软件开发的效率。</p>
+    <p>[0020]	通过以下参照附图对优选实施例的说明，本发明的上述以及其它目的、特征和优点将更加明显。</p>
+    <p>附图说明</p>
+    <p>[0021]	图1示例性示出了本发明微动画效果查看方法实施例一的流程图；</p>
+    <p>[0022]	图2示例性示出了本发明中涉及到的微动画中的各种元素的层次结构示意图；</p>
+    <p>[0023]	图3示例性示出了本发明的实施例中&lt;play&gt;标签的解析流程；</p>
+    <p>[0024]	图4示例性示出本发明的实施例中〈scene〉标签的解析流程；</p>
+    <p>[0025]	图5示例性示出了本发明的实施例中〈scene〉标签的子标签henus〉的解析流程；</p>
+    <p>[0026]	图6示例性示出了本发明的实施例中〈scene〉标签的子标签〈labels〉的解析流程；</p>
+    <p>[0027]	图7示例性是出了本发明的实施例中〈scene〉标签的子标签〈sprites〉的解析流程；</p>
+    <p>[0028]	图8示例性示出了本发明的实施例中〈group〉标签的解析流程；</p>
+    <p>[0029]	图9示例性示出了本发明的实施例中〈action〉标签的解析流程；</p>
+    <p>[0030]	图10示例性示出了本发明微动画效果查看方法实施例二的流程图；[0031]	图11示例性示出了本发明的实施例中微动画场景的一个例子；</p>
+    <p>[0032]	图12示例性示出了本发明微动画效果查看装置的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0033]	图1示例性示出了本发明微动画效果查看方法实施例一的流程图，该方法可以应用于具有一预设操作系统的处理设备，包括：</p>
+    <p>[0034]	步骤101、读取微动画的XML配置文件。该XML配置文件包括用于描述待形成的微动画场景以及微动画场景中的各元素的属性的标签。</p>
+    <p>[0035]	具体地，该XML配置文件可以包括场景标签，场景标签的子标签可以包括用于描述微动画的运动物体标签、界面文字标签和按钮标签中的至少一个。在二维计算机图形中， 运动物体常被称为“精灵”，一个精灵是一个有位置的图像，每个帧之间的精灵的位置或者角度稍有改变，使得精灵看起来像在动。在下文中，将这种微动画中的运动物体采用“精灵” 这一术语来描述。</p>
+    <p>[0036]	XML配置文件可以是预先形成的，例如，可以由编辑人员预先人工编辑好描述待形成的微动画场景以及微动画场景中各元素的属性的XML配置文件，或者也可以根据一些微动画设计程序自动生成XML配置文件。</p>
+    <p>[0037]	步骤102、解析XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值。</p>
+    <p>[0038]	在解析XML配置文件时，可以依照XML配置文件中各标签的层次结构来解析，具体可以包括：读取XML配置文件的场景标签，获取场景标签的属性值，并利用场景标签的属性值为数据模型中与场景标签对应的对象的变量赋值；读取XML配置文件中的场景标签的各子标签的属性值以及各子标签的下一层子标签的属性值，利用获取的属性值为数据模型中对应的对象的变量赋值。</p>
+    <p>[0039]	根据本发明的一个实施例，可以预先人工建立一个数据模型，该数据模型包括多个对象，数据模型中的各对象分别对应于XML配置文件中的各个标签和属性，各对象均配置有自己的变量。该数据模型中各对象之间的继承关系与XML配置文件中各标签的继承关</p>
+    <p>系一致[0040]	初始建立的数据模型中，各对象的变量还没有赋值或者是系统默认值，在解析完 XML配置文件后，可以利用解析出的XML配置文件的属性值为各对象的变量赋值。</p>
+    <p>[0041]	如下是一个XML配置文件的例子：</p>
+    <p>[0042]</p>
+    <p>〈menu zlndex="0" tag="0" fontSize="25" position=" {47,47}" showStyle="horizontally"&gt;</p>
+    <p>〈item normalImage="upl_343687c4-41 df-46dc-be 1 d-f2c41 d61 dcb4.png" selectedImage="upl_343687c4-41 df-46dc-be 1 d-f2c41 d61 dcb4 .png" disablelmage="" isEnable="Y" target=" self' selector="" tag=" 100" sceneName="" /&gt;</p>
+    <p>[0043]这段	XML 配置文件中，&lt;menu&gt; 的属性包括 zhdex、fontSize、position 等，&lt;menu&gt; 标签包括子标签&lt;item&gt;，&lt;item&gt;也包括自身的属性，例如normallmage、isEnable、tag等。[0044]	预先建立的数据模型示例如下：</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102289835A/CN102289835AD00071.png"> <img id="idf0001" file="CN102289835AD00071.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102289835A/CN102289835AD00071.png" class="patent-full-image" alt="Figure CN102289835AD00071"> </a> </div>
+    <p>[0047]	该数据模型中，对象Menu与XML配置文件中的标签&amp;enu&gt;对应，Menu对象中定义了 tag_、position,, fontSiZe_等变量，这些变量分别与XML配置文件中的属性tag、 position 禾口 fontSize 等对应。</p>
+    <p>[0048]	在执行步骤102之前，数据模型中各变量均未赋值或者是系统默认值，在执行步骤102之后，各变量的值就变为XML配置文件中的各属性值。例如，数据模型中，赋值后 fontSize_ = 25，position&#8212; = {47,47}。[0049]	该数据模型中包括对象Menu，该对象中定义了一个列表对象CCMutableArray&lt;CC Object*&gt;*menuItemSet_，该列表对象中包括item对象。在该数据模型中体现了对象item 与Menu对象之间的继承关系，与XML配置文件中&lt;item&gt;标签与&amp;enu&gt;标签之间的继承关系是一致的。</p>
+    <p>[0050]	步骤103、利用预设的与该预设操作系统相匹配的微动画代码获取数据模型中对象的变量的值。</p>
+    <p>[0051]	在本发明的实施例中，预设操作系统指的是编辑人员在编辑微动画时所使用的操作系统。例如，如果编辑人员使用windows系统编辑微动画，形成XML配置文件，则预设操作系统为windows系统。</p>
+    <p>[0052]	可以预先人工编写与预设操作系统相匹配的微动画代码，预先编写的微动画代码通过获取数据模型中变量的值，即可以在预设操作系统中形成微动画场景。微动画代码与预设操作系统匹配是指该微动画代码可以通过在预设操作系统中运行而形成微动画。</p>
+    <p>[0053]	如下是一段预先获取的与windows系统相匹配的微动画代码的例子：</p>
+    <p>[0054]bool LayerManage ： ： init() { bool bRet = false; //返回值</p>
+    <p>if (TouchEventLayer: :init()) {</p>
+    <p>this-&gt;setIsTouchEnabled(true); time(&amp;touchEndTime); //角军析scene</p>
+    <p>scene&#8212; = Scene:: sceneWithXmlFile(xmlPath_);</p>
+    <p>//精灵配置字典</p>
+    <p>SpriteManage:: spriteManageWithScene(sceneJ);</p>
+    <p>//背景图片</p>
+    <p>string backgroundpic = scene&#8212;-&gt;getBackgroundPic();</p>
+    <p>//背景音乐	&#8212;</p>
+    <p>string music = scene&#8212;-&gt;getMusic();</p>
+    <p>//背景声音	&#8212;</p>
+    <p>string backgroundsound = scene&#8212;-&gt;getBackgroundSound(); //加载背景图片	&#8212;</p>
+    <p>if(backgroundpic != ""){</p>
+    <p>CCSprite *sp = Buildltems: :buildBackground(backgroundpic); this-&gt;addChild(sp, 0, 1);</p>
+    <p>}</p>
+    <p>//播放背景声音 if(backgroundsound != ""){</p>
+    <p>PlaySound::playBackGroundSound(backgroundsound);</p>
+    <p>}</p>
+    <p>//播放背景音乐 if(music != ""){</p>
+    <p>PlaySound::playSoundByScene(music);</p>
+    <p>}</p>
+    <p>//取自动翻页时间</p>
+    <p>float times = scene&#8212;-&gt;getDelay();</p>
+    <p>if (times &gt;0) {</p>
+    <p>this-&gt;schedule(schedule_selector(LayerManage:: startGame), 1.0 );</p>
+    <p>[0055]//标题构建</p>
+    <p>CCMutableArray&lt;CCObject*&gt; *lables = scene&#8212;-&gt;getLabelSet(); if(lables-&gt;count()&gt;0) {</p>
+    <p>for (int i = 0; i &lt; lables-&gt;count(); i++) {</p>
+    <p>Label *label = (Label *)lables-&gt;getObjectAtIndex(i); if(label-&gt;getType() == "Text"){</p>
+    <p>CCLabelTTF *labell = BuildItems::buildLabel(label); if(label-&gt;getName() == "default"){//直接显示 this-&gt;addChild(labell, label-&gt;getZIndex(),</p>
+    <p>label-&gt;getTag());</p>
+    <p>}</p>
+    <p>lableLabels-&gt;setObject(label,label-&gt;getName()); allLabels-&gt;setObject(labell,label-&gt;getName());//点击显示 }else if(label-&gt;getType() == "LRC"){</p>
+    <p>CCMutableArray&lt;CCLabelTTF*&gt; *IabelArr = BuildItems:: buildLabelArr(label);</p>
+    <p>CCLabelTTF *labell = labelArr-&gt;getObjectAtIndex(O); lableLabels-&gt;setObject(label,label-&gt;getName()); al ILabel s-&gt;setObj ect(l abe11,l abel-&gt;getNam e()) ；// 点击显示 allLRCLabel s-&gt;setObj ect(1 abel Arr,1 abel -&gt;getNam e())；</p>
+    <p>}</p>
+    <p>}</p>
+    <p>}</p>
+    <p>//精灵构建及精灵动作</p>
+    <p>CCMutableArray&lt;CCObject*&gt; * sprites = scene -&gt;getSpriteSet(); if (sprites-&gt;count() &gt; 0) {</p>
+    <p>//所有精灵默认时间动作</p>
+    <p>timeActions = generateTimeCC Action(sprites)；</p>
+    <p>//构建精灵及默认动作</p>
+    <p>CCMutableDictionary&lt;string, CCSprite*&gt;* die = new CCMutableDictionary&lt;string, CCSprite*&gt;();</p>
+    <p>CCMutableArray&lt;CCSprite*&gt;* arr = new CCMutableArray&lt;CCSpnte*&gt;();</p>
+    <p>for (int i = 0; i &lt; sprites-&gt;count(); i++) {</p>
+    <p>Sprite *sprite = (Sprite *)sprites-&gt;getObjectAtlndex(i)； CCSprite *touchableSpritel = Buildltems::buildSprite(sprite); BuildItems:: setAllSpriteDic(sprite-&gt;getName(),touchableSpritel);</p>
+    <p>[0056]Buildltems: ： setAll Sprite Arr(touchable Sprite 1); CCFiniteTimeAction* action = this-&gt;generateCCAction(sprite)； if (action !=NULL) {</p>
+    <p>touchable Sprite 1 -&gt;runAction(action);</p>
+    <p>}</p>
+    <p>this-&gt;addChild(touchableSprite 1, sprite-&gt;getZIndex(),</p>
+    <p>sprite-&gt;getTag()); }</p>
+    <p>CCMutableDictionary&lt;string, CCSprite*&gt;* dicl = new CCMutableDictionary&lt;string, CCSprite*&gt;();</p>
+    <p>dicl = Buildltems: :getAllSpriteDic(); CCMutableArray&lt;CCSprite*&gt;* arrl = new CCMutableArray&lt;CCSprite*&gt;();</p>
+    <p>arrl = Buildltems:: getAll SpriteArrQ;</p>
+    <p>allTouchSprites = TouchableSprites::getAllTouchableSprites();</p>
+    <p>[0057]	例如,在上述代码中，通过get函数可以获取BackgroundPic、BackgroundSouncU Music等这些变量的值，通过generateCCAction(sprite)这一函数可以生成精灵默认动作。</p>
+    <p>[0058]	需要注意的是，上述的微动画代码的例子并非创建微动画场景的全部代码，是为了说明书微动画代码如何获取数据模型的对象的变量的值而给出的一个例子。</p>
+    <p>[0059]	本申请的实施例中，微动画代码相当于一个代码框架，可以包括用于创建场景的代码，还可以包括用于生成精灵的代码、用于生成界面文字的代码和用于生成按钮的代码中的至少一种。如果数据模型中的变量还没有赋值，则这个代码框架无法获取变量的值，也就无法生成微动画。在通过解析XML配置文件将数据模型中各对象的变量赋值后，这个代码框架就可以通过调用函数或变量，生成微动画。</p>
+    <p>[0060]	为了使得预先编写的微动画代码能够适用于各种情况的XML配置文件，该微动画代码可以预先包括尽可能多的微动画元素（例如精灵、文字、音乐等）创建模块，这样，无论编辑人员如何更改XML配置文件，只要获取了数据模型中的变量，即可以形成微动画。</p>
+    <p>[0061]	步骤104、加载获取了数据模型中对象的变量的值之后的微动画代码，从而使得在处理设备中形成微动画场景及微动画场景中的各种元素。</p>
+    <p>[0062]	例如，如果预设操作系统为windows系统，则在windows系统中加载该微动画代码，就可以在处理设备中形成微动画场景及微动画场景中的各种元素。</p>
+    <p>[0063]	本发明提供的微动画效果查看方法，通过解析反映微动画的场景及微动画中各元素的属性的XML配置文件，为预先建立的数据模型中各对象的变量赋值，利用预先获取的与预设操作系统相匹配的微动画代码获取数据模型中对象的变量的值，加载微动画代码使得在具有预设操作系统的处理设备中形成微动画场景及微动画场景中的各种元素。编辑人员无需依靠编程人员形成应用于特定操作系统（例如iOS系统或Android系统）的代码， 而是借助于预先获取的与编辑人员当前所使用的预设操作系统相匹配的微动画代码即可以查看微动画效果。这样，编辑人员无需在特定操作系统（iOS或者Android)上查看微动画效果，而是可以在通常的windows等操作系统上查看微动画效果。</p>
+    <p>[0064]	另外，编辑人员通过在他所使用的处理设备上运行能够实现本发明提供的微动画效果查看方法的指令，可以形成微动画场景。如果发现微动画场景或者微动画场景中的各元素存在某种设计缺陷，可以通过修改微动画场景或微动画场景中的各元素的属性，即，生成新的XML配置文件，来查看修改后的微动画效果，而无需交由编程人员修改代码来查看修改后的微动画效果，在调试阶段编辑人员几乎无需与编程人员交互，简化了调试过程，提高了软件开发的效率。</p>
+    <p>[0065]	本发明的实施例中，数据模型中各对象的继承关系与XML配置文件中各标签的继承关系一致，数据模型中各对象的变量反映了 XML配置文件中各标签的属性，这样，数据模型的数据结构反映了 XML配置文件的数据结构。预先建立的数据模型和微动画代码相当于为形成微动画搭建好了框架，在解析出XML配置文件中的属性值后，数据模型和微动画代码中的各变量即被赋予了能够体现编辑人员设计思路的值，加载微动画代码即可以形成微动画场景。在编辑人员调试阶段，无论XML配置文件如何更改，数据模型和微动画代码均可以不修改，只需要重新解析XML配置文件，重新获取变量的值即可。</p>
+    <p>[0066]	可以看出，本发明提供的方法极大地方便了编辑人员查看微动画效果，提高了微动画应用软件开发效率。</p>
+    <p>[0067]	下面结合具体的XML配置文件的例子来介绍本发明的实现过程。首先介绍本发明中涉及到的XML配置文件。</p>
+    <p>[0068]	在微动画应用软件开发过程中，编辑人员可以配置微动画中的场景、精灵以及按钮等的属性，这些场景、精灵以及按钮等的属性可以包括在XML配置文件中。</p>
+    <p>[0069]	编辑人员配置的微动画中的各种元素的层次如图2所示。在一个场景中可以包括精灵集合、界面文字集合和按钮集合。精灵集合可以包括一个或多个精灵，每个精灵可以对应于一个或多个动作集合，每个动作集合可以包括一个或多个动作。动作类型可以包括：移动到、移动至、缩放到、缩放至、摇摆、旋转、贝塞尔曲线、跳跃、循环播放等。每个界面文字集合可以包括一种或多种文字。每个按钮集合可以包括一种或多种按钮，每一种按钮可以包括一个或多个按钮项。</p>
+    <p>[0070]	本发明中的XML配置文件中各个标签的设置也遵循上述的元素层次。下面详细介绍XML配置文件中各标签及其属性。</p>
+    <p>[0071]	1、〈play&gt; 标签</p>
+    <p>[0072]	&lt;play&gt;标签可以是XML配置文件中最外层大标签。&lt;play&gt;标签的属性可以包 括：name、width、height、configFilepath、picPath、musicPath、sceneHome、url 禾口 originType。</p>
+    <p>[0073]	属性含义：</p>
+    <p>[0074]	name-微动画名称</p>
+    <p>[0075]	width&#8212;&#8212;微动画屏幕的宽度</p>
+    <p>[0076]	height&#8212;&#8212;微动画屏幕的高度[0077]	configFilepath&#8212;&#8212;场景配置文件文件夹名</p>
+    <p>[0078]	picPath&#8212;&#8212;图片保存文件夹名</p>
+    <p>[0079]	musicPath-音乐保存文件夹名</p>
+    <p>[0080]	sceneHome-首页场景名称</p>
+    <p>[0081]	url&#8212;&#8212;网络资源下载路径</p>
+    <p>[0082]	originType&#8212;&#8212;微动画屏幕的原点位置</p>
+    <p>[0083]	&lt;play&gt;标签可以包括一个或多个子标签&lt;scene&gt;，&lt;scene&gt;为场景标签，属性包含 name,该属性的含义是指场景名称，即存储的针对每个场景的XML配置文件的文件名。</p>
+    <p>[0084]	&lt;play&gt;标签的属性配置的例子可以如下：</p>
+    <p>[0085]</p>
+    <p>&lt;play name="test" width=" 1024" height="768" configFilePath="configfile" picPath="pic" musicPath="music" sceneHome="" url="" originType="lowerLeft"&gt; &lt;scene name="index" /&gt; &lt;/play&gt;</p>
+    <p>[0086]	2、&lt;scene&gt; 标签</p>
+    <p>[0087]	&lt;play&gt;标签可以作为最外层大标签，设定微动画应用软件需要的系统条件。也可以将针对单个微动画场景中各元素的属性进行设置的〈scene〉标签作为最外层大标签。该 &lt;scene&gt;标签不同于上述&lt;play&gt;标签的子标签〈scene〉。在XML配置文件中允许有名称相同的标签，名称相同的标签可以有不同的属性。</p>
+    <p>[0088]	每个场景都有自己的场景图片、场景声音、场景音乐、翻页方式、进入时间、停留时间等。可以对这些属性进行个性化配置，以满足不同场景的展示效果。</p>
+    <p>[0089]	&lt;scene&gt; 标签的属个生可以包括：id、delay&gt; name、prev&gt; next、backgroundPic&gt; backgroundSound&gt; music&gt; tranTime&gt; tranModePre 禾口 tranModeNext。</p>
+    <p>[0090]	属性含义：</p>
+    <p>[0091]	id&#8212;&#8212;场景序号</p>
+    <p>[0092]	delay&#8212;&#8212;场景停留时间</p>
+    <p>[0093]	name-场景名称</p>
+    <p>[0094]	prev&#8212;&#8212;上一场景名称</p>
+    <p>[0095]	next-下一场景名称</p>
+    <p>[0096]	backgroundPic-背景图片</p>
+    <p>[0097]	backgroundSound-背景声音</p>
+    <p>[0098]	music-背景音乐</p>
+    <p>[0099]	tranTime&#8212;&#8212;场景切换执行时间</p>
+    <p>[0100]	tranModePre-向上一场景切换的方式</p>
+    <p>[0101]	tranModeNext-向下一场景切换的方式</p>
+    <p>[0102]	&lt;scene&gt;标签的属性配置的例子可以如下：</p>
+    <p>[0103]〈scene id="8" delay="0" name="ba" prev="qi" next="jiu" backgroundPic="changjingjia2.png" backgroundSound="" music="" tranTime="0" tranModePre="CCTransitionSlideInL" tranModeNext="CCTransitionSlideInR"&gt;</p>
+    <p>[0104]	3、&lt;sprites&gt; 标签</p>
+    <p>[0105]	每个场景中可以有一个或多个精灵，每个精灵都可以有位置、精灵图片、精灵大小等属性，这些属性可以进行个性化配置。此外，每个精灵还可以包含动作类的子标签，从而使得精灵动作也可以根据需要进行配置以完成相应的效果。〈sprite〉标签是〈sprites〉标签的子标签。〈sprites〉标签是&lt;scene&gt;标签的子标签，表示一个精灵集合。〈sprites〉标签可以包括多个〈sprite〉标签。〈sprite〉标签的属性可以包括：name、imagePath、position、 scale、zlndex、tag 禾口 opacity。</p>
+    <p>[0106]	属性含义：</p>
+    <p>[0107]	name-精灵名称</p>
+    <p>[0108]	imagePath-精灵图片名称</p>
+    <p>[0109]	position-精灵坐标</p>
+    <p>[0110]	scale&#8212;&#8212;精灵图片相对原始图片的大小</p>
+    <p>[0111]	zlndex-精灵显示索引</p>
+    <p>[0112]	tag&#8212;&#8212;精灵标签</p>
+    <p>[0113]	opacity&#8212;&#8212;精灵透明度</p>
+    <p>[0114]	下面介绍〈sprite〉标签中包含的子标签&#8212;&#8212;动作配置标签。动作配置标签可以包括四种并列的子标签：</p>
+    <p>[0115]	默认动作标签〈actions〉</p>
+    <p>[0116]	点击动作标签&lt;touch&gt;</p>
+    <p>[0117]热区集合标签〈miniTouchkt〉</p>
+    <p>[0118]	调用其他精灵动作标签〈touchTrigger〉</p>
+    <p>[0119]	3.1、&lt;touchTrigger&gt; 标签</p>
+    <p>[0120]	&lt;touchTrigger&gt; 标签可以包括属性：actionSprite 禾口 actionName。</p>
+    <p>[0121]	属性含义：</p>
+    <p>[0122]	actionSprite&#8212;&#8212;被调用的动作精灵名</p>
+    <p>[0123]	actionName&#8212;&#8212;被调用的精灵的动作名</p>
+    <p>[0124]	〈touchTrigger〉标签的属性配置的例子如下：</p>
+    <p>[0125]	&lt;touchTrigger actionSprite = “ zhuomuniao“ actionName = “ running" /&gt;</p>
+    <p>[0126]	3. 2、&lt;miniTouchSet&gt; 标签</p>
+    <p>[0127]	〈minil^ouct^et〉标签可以包括属性：rect。</p>
+    <p>[0128]	属性含义：</p>
+    <p>[0129]	rect&#8212;&#8212;第一个花括号内的坐标表示与精灵中心点位置的相对位置χ坐标和y坐标，第二个花括号内的坐标表示热区区域的宽和高。</p>
+    <p>[0130]	&lt;miniTouchSet&gt;标签属性配置的例子如下：</p>
+    <p>[0131]	&lt;miniTouch rect =“ {{-10，80}，{180，170}} 〃 &gt;。[0132]	4、动作组标签&lt;group&gt;</p>
+    <p>[0133]	〈actions〉、&lt;miniTouchSet&gt;及&lt;touch&gt;标签下面都可以包括动作组来完成相应动作的配置。</p>
+    <p>[0134]	&lt;group&gt; 标签可以包括属性：type、repeatCount、actionName、 touchScreenlazyTime。</p>
+    <p>[0135]	属性含义：</p>
+    <p>[0136]	type&#8212;&#8212;动作组类型，分为sequence (顺序执行）和spawn (同时执行）两种</p>
+    <p>[0137]	repeatCount&#8212;&#8212;动作组重复执行的次数</p>
+    <p>[0138]	actionName&#8212;&#8212;组动作名称，默认为default，如被其他精灵调用则修改为相应的名称（可以只是作为〈touch〉标签的子标签时〈group〉中才配置该属性，如果作为非 &lt;touch&gt;标签的子标签时，&lt;group)标签中的actionName可以为默认值)</p>
+    <p>[0139]	touchScreenlazyTime&#8212;&#8212;场景加载后，默认动作等待运行时间（只有在默认动作中设定才起作用，如果不是默认动作，则touchScreenlazyTime取值为0)</p>
+    <p>[0140]	&lt;group&gt;标签属性配置的例子如下：</p>
+    <p>type=" sequence“</p>
+    <p>repeatCount =“ 1 ‘</p>
+    <p>actionName</p>
+    <p>[0141]	&lt; group =“default “ touchScreenlazyTime =，，5，，&gt;</p>
+    <p>[0142]	下面将分别介绍〈group〉标签包含的各种类型的动作子标签的属性及含义。</p>
+    <p>[0143]	4. U moveto/moveby 类型的 &lt;action&gt; 标签</p>
+    <p>[0144]	moveto/moveby g M 白勺〈action〉fe ^ nj 1&#190; &#169; M :type&gt; time、 duration、 targetPosition&gt; repeatCount 禾口 reverse。</p>
+    <p>[0145]属性含义：</p>
+    <p>[0146]  type&#8212;动作类型</p>
+    <p>[0147]  time&#8212;动作执行总时间</p>
+    <p>[0148]  durati on&#8212;&#8212;动作执行时间</p>
+    <p>[0149]targetPosition&#8212;&#8212;动作之后的目标位置（moveby类型的〈action〉标签中指相</p>
+    <p>对位置）</p>
+    <p>[0150]repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0151]reverse&#8212;&#8212;是否反向执行（只在moveby类型的〈action〉标签中设置此属性） </p>
+    <p>[0152] moveto/moveby类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0153]</p>
+    <p>&lt;action</p>
+    <p>type="moveto'</p>
+    <p>time=" 15"</p>
+    <p>duration=" 15"</p>
+    <p>duration=" 15"</p>
+    <p>targetPosition=" {400,300}" repeatCount=M0" /&gt;</p>
+    <p>〈action	type="moveby"	time=" 15"</p>
+    <p>targetPosition=" {400,300}" reverse="N" repeatCount="0" /&gt;</p>
+    <p>[0154]	4. 2、scaleto/scaleby 类型的 &lt;action&gt; 标签</p>
+    <p>[0155]	scaleto/scaleby ^IMW &lt;action&gt; fe^ nj ^,^&#169;Mft :type、 time、 durati on &gt; scale、repeatCount 禾口 reverse。</p>
+    <p>[0156]	属性含义：</p>
+    <p>[0157]	type&#8212;&#8212;动作类型[0158]	time&#8212;&#8212;动作执行总时间</p>
+    <p>[0159]	duration-动作执行时间</p>
+    <p>[0160]	scale&#8212;&#8212;放大/缩小的比例，1为不缩放 [0161 ] repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0162]	reverse&#8212;&#8212;是否反向执行（只在scaleby类型的〈action〉标签中设置该属性）</p>
+    <p>[0163]	scaleto/scaleby类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0164]</p>
+    <p>〈action type="scaleto" time=" 10" duration=" 10" scale="0.8" repeatCount=" 0" /&gt;</p>
+    <p>〈action type="scaleby" time="20" duration=" 10" scale="0.8" reverse="Y" repeatCount=" 0" /&gt;</p>
+    <p>[0165]	4. 3、wag 类型的〈action〉标签</p>
+    <p>[0166]	wag gM白勺 &lt;action&gt; fe^nT^^SMft :type、time、IeftDuration、leftAngle、 rightDuration&gt; rightAngle 禾口 repeatCount。</p>
+    <p>[0167]	属性含义：</p>
+    <p>[0168]	type&#8212;&#8212;动作类型</p>
+    <p>[0169]	time&#8212;&#8212;动作执行总时间</p>
+    <p>[0170]	IeftDuration&#8212;&#8212;向左摇摆的时间</p>
+    <p>[0171]	IeftAngle&#8212;&#8212;向左摇摆的角度，一般应该填负数</p>
+    <p>[0172]	r i ghtDurat i on&#8212;&#8212;向右摇摆的时间</p>
+    <p>[0173]	rightAngle&#8212;&#8212;向右摇摆的角度（与左摆角度成相反关系，即一个为正，一个为负）</p>
+    <p>[0174]	repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0175]	wag类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0176]	&lt;action type = “ wag"	time = “ 10〃	IeftDuration = “ 5" leftAngle = “ 180 “ rightDuration = “ 5 “ rightAngle = “ 180 “ repeatCount</p>
+    <p>=〃 0〃 /&gt;</p>
+    <p>[0177]	4. 4、whirl 类型的〈action〉标签</p>
+    <p>[0178]	whirl 类型的 &lt;action&gt; 标签可以包括属性：type、time、duration 禾口 repeatCountο</p>
+    <p>[0179]	属性含义：</p>
+    <p>[0180]	type&#8212;&#8212;动作类型</p>
+    <p>[0181]	time&#8212;&#8212;动作执行总时间</p>
+    <p>[0182]	duration-动作执行时间</p>
+    <p>[0183]	repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0184]	whirl类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0185]	〈action type = ‘‘ whirl ‘‘ time = ‘‘ 10 ‘‘ duration = ‘‘ 10 ‘‘ repeatCount ="2" /&gt;</p>
+    <p>[0186]	4. 5、blink 类型的〈action〉标签[0187]	blink 类型的〈action〉标签可以包括属性：type、time、duration 和 repeatCounto</p>
+    <p>[0188]	属性含义：</p>
+    <p>[0189]	type&#8212;&#8212;动作类型</p>
+    <p>[0190]	time&#8212;&#8212;动作执行总时间</p>
+    <p>[0191]	duration-动作执行时间</p>
+    <p>[0192]	repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0193]	blink类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0194]	〈action type = “ blink" time = " 10" duration = “ 10" repeatCount =〃 5〃	/&gt;</p>
+    <p>[0195]	4. 6、jumpby 类型的 &lt;action&gt; 标签</p>
+    <p>[0196]	jumpby 类型的〈action〉标签可以包括属性：type、time、duration、 targetPosition&gt;height、jumps 禾口 repeatCount。</p>
+    <p>[0197]	属性含义：</p>
+    <p>[0198]	type&#8212;&#8212;动作类型</p>
+    <p>[0199]	time&#8212;&#8212;动作执行总时间</p>
+    <p>[0200]	duration-动作执行时间</p>
+    <p>[0201]	targetPosition&#8212;&#8212;目标位置（相对位置）</p>
+    <p>[0202]	height&#8212;&#8212;每次跳跃的高度</p>
+    <p>[0203]	jumps&#8212;&#8212;到达目标点，所需跳跃的次数</p>
+    <p>[0204]	repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0205]	jumpby类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0206]	〈action type = ‘‘ jumpby ‘‘	time = ‘‘ 10 ‘‘	duration =〃 10〃	targetPosition = “ {755,876} “ height = “ 60〃 jumps = " 4〃 repeatCount</p>
+    <p>=〃 0〃	/&gt;</p>
+    <p>[0207]	4. 7、贝赛尔曲线（bezierby)类型的〈action〉标签</p>
+    <p>[0208]	bezierby g M 白勺 &lt;action&gt; fe ^ nj 1&#190; &#169; M :type、 time、 duration、 targetPosition、controlPointl、controlPoint2 禾口 repeatCount。</p>
+    <p>[0209]	属性含义：</p>
+    <p>[0210]	type&#8212;&#8212;动作类型</p>
+    <p>[0211]	time&#8212;&#8212;动作执行总时间</p>
+    <p>[0212]	duration-动作执行时间</p>
+    <p>[0213]	targetPosition&#8212;&#8212;动作后的目标位置（相对位置）</p>
+    <p>[0214]	controlPointl&#8212;&#8212;控制点1的坐标（相对位置）</p>
+    <p>[0215]	controlPoint2&#8212;&#8212;控制点2的坐标（相对位置）</p>
+    <p>[0216]	repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0217]	bezierby类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0218]	〈action type = “ bezierby “	time = “ 10 “	duration ="10〃	targetPosition = “ {759,649} “ controlPointl = “ {584，362}〃 controlPoint2 =“ {679,445}“ r印eatCount =〃 2" /&gt;</p>
+    <p>[0219]	4. 8、cycle 类型的〈action〉标签</p>
+    <p>[0220]	cycle 类型的 &lt;action&gt; 标签可以包括属性：type、time、delay 禾口 r印eatCount。</p>
+    <p>[0221]	属性含义：</p>
+    <p>[0222]	type&#8212;&#8212;动作类型</p>
+    <p>[0223]	time&#8212;&#8212;动作执行总时间</p>
+    <p>[0224]	delay&#8212;&#8212;图片播放的总时间</p>
+    <p>[0225]	repeatCount&#8212;&#8212;动作重复执行的次数</p>
+    <p>[0226]	cycle类型的〈action〉标签的属性配置的例子如下：</p>
+    <p>[0227]</p>
+    <p>〈action type="cycle" time="0.2" delay="0.2" repeatCount="75"&gt; &lt;images&gt;</p>
+    <p>&lt;image path="f77e610d-ff3b-43c0-8ade-cda4d2c6cfc4.png" /&gt; &lt;image path="4e57ald0-afi9-498d-8bc0-8efb3d8d3683.jpg" /&gt; &lt;image path="47dfl5e9-a42a-4808-93a4-79ae0e8fc230.png" /&gt; &lt;image path="7914b706-f04e-4e96-8ac7-977262980867.png" /&gt; &lt;image path="ed657923-b53b-4bf7-b08c-6909c79a2f8f.jpg" /&gt; &lt;/images&gt; &lt;/action&gt;</p>
+    <p>[0228]	其中，〈image〉标签可以包括属性：path，该属性含义是指图片路径。</p>
+    <p>[0229]	4. 9、effect 类型的〈action〉标签</p>
+    <p>[0230]	effect gM 白勺 &lt;action&gt; fe^ nj ^,^&#169;Mft :type、 time、music、repeatCount&gt; IabelName 禾口 isMusic。</p>
+    <p>[0231]	属性含义：</p>
+    <p>[0232]	type&#8212;&#8212;动作类型</p>
+    <p>[0233]	music-音乐名称</p>
+    <p>[0234]	IabelName&#8212;&#8212;配合音乐显示的界面文字名称</p>
+    <p>[0235]	isMusic&#8212;&#8212;是否为音乐（Y表示音乐，N表示音效)</p>
+    <p>[0236]	effect类型的〈action〉标签的属性配置例子如下：</p>
+    <p>[0237]	&lt;action type = “ effect“ time = “ 10〃 music = “ companyLogo. mp3" r印eatCount=" 1" IabelName=" e" isMusic=" Y" /&gt;</p>
+    <p>[0238]	4. 10、event 类型的〈action〉标签</p>
+    <p>[0239]	event类型的〈action〉标签可以包括属性：type、time禾口 tag。</p>
+    <p>[0240]	属性含义：</p>
+    <p>[0241]	type&#8212;&#8212;动作类型</p>
+    <p>[0242]	time&#8212;&#8212;动作执行的时间。</p>
+    <p>[0243]	tag&#8212;&#8212;事件执行动作类型，例如，“100”表示向前一页翻页模式；“101”表示向后翻页模式；“102”表示向主页翻页模式。</p>
+    <p>[0244]	event类型的〈action〉标签的属性配置的例子如下：[0245]	〈action type = 〃 event" time = “ 10〃 tag=" 101〃 /&gt;</p>
+    <p>[0246]	5、&lt;menus&gt; 标签</p>
+    <p>[0247]	每个场景中都可以有按钮（menu)，每个按钮里面又可以有一组按钮项。按钮项的排列顺序由按钮的基本属性来确定，每个按钮项会对应有自己的处理事件等基本属性。这些属性都可以进行个性化配置，以满足不同场景对按钮需要完成的效果的配置。</p>
+    <p>[0248]	&lt;menus&gt;标签的属性配置的例子如下：</p>
+    <p>[0249]</p>
+    <p>&lt;menus&gt;</p>
+    <p>〈menu zlndex="0" tag=M0" fontSize="25" position=" {53,49}" showStyle="horizontally"&gt;</p>
+    <p>〈item normalImage="up.png" selectedlmage="up.png" disablelmage="" isEnable="Y" target="self' selector="" tag=" 100" /&gt; &lt;/menu&gt; &lt;/menus&gt;</p>
+    <p>[0250]	&lt;menu&gt;标签是&lt;menus&gt;标签的子标签。&lt;menu&gt;标签可以包括属性：zhdex、tag、 fontSize、position 禾口 showStyle。</p>
+    <p>[0251]	属性含义：</p>
+    <p>[0252]	zlndex&#8212;&#8212;显示索引，数字越大越靠上显示</p>
+    <p>[0253]	tag&#8212;&#8212;标签，调用按钮时使用，不同的按钮要有不同的标签值</p>
+    <p>[0254]	fontSize&#8212;&#8212;如果按钮选用的是文字的话，设置按钮中的字体的大小</p>
+    <p>[0255]	position&#8212;&#8212;按钮位于场景中的坐标，即按钮中心点的位置</p>
+    <p>[0256]	showStyle&#8212;&#8212;按钮项的排列方式，即一个按钮中的各个按钮项的排列方式： horizontally (水平排列)或者vertically (垂直排列)</p>
+    <p>[0257]	&lt;item&gt;标签即按钮项标签，是&amp;enu&gt;标签的子标签。&lt;item&gt;标签可以包括属性： normalImage&gt;selectedlmage&gt;disabIeImage&gt;isEnable&gt;target、selector 禾口 tag。</p>
+    <p>[0258]	属性含义：</p>
+    <p>[0259]	normal Image&#8212;&#8212;按钮项显示的默认图片</p>
+    <p>[0260]	selectedlmage&#8212;&#8212;按钮项选择后显示的图片</p>
+    <p>[0261]	disablelmage&#8212;&#8212;按钮项不可用时显示的图片</p>
+    <p>[0262]	isEnable&#8212;&#8212;按钮项是否可用</p>
+    <p>[0263]	target&#8212;&#8212;默认值为 self</p>
+    <p>[0264]	selector&#8212;&#8212;预留操作字段</p>
+    <p>[0265]	tag&#8212;&#8212;menu按钮的按钮项的标签值，调用时使用，不同的按钮项要有不同的tag 值，用于触发不同的事件</p>
+    <p>[0266]	6、〈labels〉标签</p>
+    <p>[0267]	每个场景都可能有默认显示的界面文字，或者某些精灵发声时需要对应显示相应的文字。这些文字有字体、字号、颜色、位置、对齐方式等相关的基本属性。这些属性都可以进行个性化配置，以满足不同的场景的界面文字需要完成的效果。</p>
+    <p>[0268]	〈labels〉标签的属性配置的例子如下：[0269]</p>
+    <p>〈labels〉</p>
+    <p>〈label type="LRC" name="e" position=" {513,40}" color=" {255,0,0,255}"	fontSize="30"	font=" JQZhongYuanJT"</p>
+    <p>alignment="center" demension=" {700,100}" opacity="255" tag="0" zlndex="0" content="karaoke :=CreateKaraokeObject;&amp;#xD;&amp;#xA;karaoke.rows :=2;&amp;#xD; &amp;#xA;karaoke.clear;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;karaoke.add(O0:00.377’， '00:09.044’,’鹅大哥，鹅大哥，红帽子，白围脖，鹅鹅鹅鹅上山坡，’，</p>
+    <p>'171,248,256,576,496,297,255,713,223,256,239,529,336,248,248,952,304,32 0,304,599,321,263,281,232') “ /&gt;</p>
+    <p>[0270]</p>
+    <p>〈/labels〉</p>
+    <p>[0271]	&lt;label&gt;标签是〈labels〉标签的子标签。&lt;label&gt;标签可以包括属性：type、 name、position、color、fontSize、font、alignment、demension、opacity&gt; tag、zlndex 禾口 content。</p>
+    <p>[0272]	属性含义：</p>
+    <p>[0273]	type&#8212;&#8212;文字界面类型，可以包括普通text (文本)和LRC (歌词)两种类型</p>
+    <p>[0274]	name&#8212;&#8212;文字界面名称，默认为default</p>
+    <p>[0275]	position&#8212;&#8212;文字界面坐标位置，文字界面中心点的坐标</p>
+    <p>[0276]	color&#8212;&#8212;文字界面中文字的颜色</p>
+    <p>[0277]	fontSize&#8212;&#8212;文字界面中文字的字号</p>
+    <p>[0278]	font&#8212;&#8212;文字界面中文字的字体</p>
+    <p>[0279]	alignment&#8212;&#8212;文字界面中文字的对齐方式：居中对齐方式、左对齐方式、右对齐方式</p>
+    <p>[0280]	demension-文字界面区域范围</p>
+    <p>[0281]	opacity&#8212;&#8212;文字界面中文字的透明度</p>
+    <p>[0282]	tag&#8212;&#8212;文字界面的标签</p>
+    <p>[0283]	zlndex&#8212;&#8212;文字界面在场景中的显示索引</p>
+    <p>[0284]	content-文字界面中显示的内容</p>
+    <p>[0285]	下面结合具体的例子介绍XML配置文件的解析过程。</p>
+    <p>[0286]	XML配置文件的解析对应于XML配置文件中各标签的层次。首先解析最外层的 &lt;play&gt; 标签。</p>
+    <p>[0287]	&lt;play&gt;标签的属性信息反映了微动画应用软件的产品基本信息，&lt;play&gt;标签的属性配置的例子如下：</p>
+    <p>[0288]&lt;play name="test" width=" 1024" height="768" configFilePath="configfile" picPath="pic" musicPath="music" sceneHome="" url="" originType="lowerLeft"&gt;</p>
+    <p>〈scene name="index" /&gt;</p>
+    <p>&lt;/play&gt;</p>
+    <p>[0289]	&lt;play&gt;标签的解析过程如图3所示。该过程包括：</p>
+    <p>[0290]	步骤201、判断是否读取&lt;play&gt;标签的属性值。如果是，执行步骤202 ；如果不是， 执行步骤220。</p>
+    <p>[0291]	步骤202、判断属性名是否是name。如果是，执行步骤203 ；如果不是，执行步骤 204。</p>
+    <p>[0292]	步骤203、利用属性名name的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤203之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0293]	步骤204、判断属性名是否是originType。如果是，执行步骤205 ；如果不是，执行步骤206。</p>
+    <p>[0294]	步骤205、利用属性名originType的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤205之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0295]	步骤206、判断属性名是否是sceneCount。如果是，执行步骤207 ；如果不是，执行步骤208。</p>
+    <p>[0296]	步骤207、利用属性名sceneCount的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤207之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0297]	步骤208、判断属性名是否是width。如果是，执行步骤209 ；如果不是，执行步骤 210。</p>
+    <p>[0298]	步骤209、利用属性名width的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤209之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0299]	步骤210、判断属性名是否是height。如果是，执行步骤211 ；如果不是，执行步骤 212。</p>
+    <p>[0300]	步骤211、利用属性名height的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤211之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0301]	步骤212、判断属性名是否是configFilePath。如果是，执行步骤213 ；如果不是， 执行步骤214。</p>
+    <p>[0302]	步骤213、利用属性名configFilePath的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤213之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0303]	步骤214、判断属性名是否是picPath。如果是，执行步骤215 ；如果不是，执行步骤 216。</p>
+    <p>[0304]	步骤215、利用属性名picl^th的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤215之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0305]	步骤216、判断属性名是否是musicPath。如果是，执行步骤217 ；如果不是，执行步骤218。[0306]	步骤217、利用属性名musicPath的属性值为数据模型中&lt;play&gt;标签对应的对象中的变量赋值。步骤217之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0307]	步骤218、判断属性名是否是sceneHome。如果是，执行步骤219 ；如果不是，执行步骤201。</p>
+    <p>[0308]	步骤219、利用属性名sceneHome的属性值为数据模型中与&lt;play&gt;标签对应的对象中的变量赋值。步骤219之后，执行步骤201，继续判断是否读取&lt;play&gt;标签的属性值。</p>
+    <p>[0309]	步骤220、读取&lt;play&gt;标签的子标签。</p>
+    <p>[0310]	步骤221、判断&lt;play&gt;标签的子标签的名称是否是scene。如果是，执行步骤223 ； 如果不是，执行步骤222。</p>
+    <p>[0311]	步骤222、结束&lt;play&gt;标签解析。</p>
+    <p>[0312]	步骤223、判断〈scene〉标签的属性名是否是name。如果是，执行步骤224 ；如果不是，执行步骤220。</p>
+    <p>[0313]	步骤224、将属性名name的属性值保存到数据模型中与〈scene〉标签对应的列表对象中。步骤2&#190;之后执行步骤220。</p>
+    <p>[0314]	从上述的解析过程可以看出，&lt;play&gt;标签的解析实质上是依次读取各个预设属性的属性值，利用获取的各属性值为数据模型中与&lt;play&gt;标签对应的对象中的各变量赋值； 直到遍历完&lt;play&gt;标签的所有预设属性以及子标签的属性，则可以跳出&lt;play&gt;标签的解析过程。具体到图3，当读取完属性名sceneHome的属性值之后，已经遍历完了 &lt;play&gt;标签的所有预设属性值，流程跳转到步骤201，由于之前已经读取过一次&lt;play&gt;标签，因而不需要再次读取&lt;play&gt;标签，执行完步骤219并跳转到步骤201后，下一步可以执行步骤220， 继续&lt;play&gt;标签的子标签的解析过程。</p>
+    <p>[0315]	一个微动画场景可以配置一个XML配置文件，针对单个微动画场景的XML配置文件中，&lt;scene&gt;标签可以作为最外层大标签，该〈scene〉标签的属性配置的例子如下：</p>
+    <p>[0316]</p>
+    <p>〈scene id="2" delay="0" name="er" prev="index" next="san" backgroundPic="2changjing768.png" backgroundSound="haininghaoa.mp3" music="" tranTime="0" tranModePre="CCTransitionSlideInL" tranModeNext="CCTransitionSlideInR"&gt; &lt;menus&gt;</p>
+    <p>〈menu zlndex="0" tag="0" fontSize="25" position=" {53,49}"</p>
+    <p>[0317]showStyle="horizontally"&gt;</p>
+    <p>〈item normalImage="up.png" selectedlmage="up.png" disablelmage="" isEnable="Y" target="self selector="" tag=" 100" /&gt; &lt;/menu&gt; 〈/menus〉 〈sprites〉</p>
+    <p>〈sprite name="men" imagePath="menl @menl .png" position="{178,570}" scale=" 1" zlndex="0" tag=Ml" opacity="255"&gt; &lt;touch&gt;</p>
+    <p>〈group type="sequence" repeatCount=" 1 “ touchScreenlazyTime="0" actionName="default" groupsCount="0"&gt;</p>
+    <p>〈action type="moveto" time=" 10" duration=" 10" targetPosition=" {548,430}" repeatCount=" 1" /&gt;</p>
+    <p>〈action type="wag" time=" 10" IeftDuration="5" IeftAngle=" 180" rightDuration=M5" nghtAngle=M180" repeatCount=" 1" /&gt; &lt;/group&gt; 〈/touch〉 &lt;actions&gt;</p>
+    <p>〈group type="sequence" repeatCount=" 1" touchScreenlazyTime="0" actionName="default" groupsCount="0"&gt;</p>
+    <p>〈action type="cycle" time="4" delay="4" repeatCount=" 1"&gt; 〈images〉</p>
+    <p>〈image path="menl@menl.png" /&gt; 〈image path="men2@men2.png" /&gt; 〈image path="men3 @men3 .png" /&gt; 〈image path="men4@men4.png" /&gt; &lt;/images&gt; &lt;/action&gt; &lt;/group&gt; 〈/actions〉 &lt;miniTouchSet&gt; &lt;miniTouch rect=" {{0,0} ,{200,200}}"&gt; 〈group type=" sequence" repeatCount=" 1" touchScreenlazyTime="0" actionName="default" groupsCount="0"&gt; &lt;action type="jumpby" time=" 10" duration=" 10" targetPosition=" {1024,768}" height="50" jumps=" 1" repeatCount=" 1" /&gt; &lt;/group&gt; &lt;/miniTouch&gt; &lt;/miniTouchSet&gt;</p>
+    <p>[0318]&lt;/sprite&gt; 〈/sprites〉 〈labels〉</p>
+    <p>〈label type="LRC" name="xiaosongshu" position=" {516,40}" color="{255,0,0,255}" fontSize="30" font="JQZhongYuanJT" alignment="center" demension=" {690,100}" opacity="255" tag=" 1000" zlndex="0" content="karaoke := CreateKaraokeObject;&amp;#xD;&amp;#xA;karaoke.rows :=</p>
+    <p>2;&amp;#xD;&amp;#xA;karaoke.clear;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;karaoke.add(O0:00.390’， '00:06.078’,’小松鼠，尾巴大，轻轻跳上又跳下，’，</p>
+    <p>'199,287,354,768,272,224,248,824,215,328,272,672,256,272,255,242’);&amp;#xD;&amp;# xA;karaoke.add(O0:06.685’,'00:12.454’,’ 我帮你，你帮我，采到松果送回家。’, '216,240,239,649,303,232,257,895,361,288,297,799,288,264,225,216’);&amp;#xD;&amp;# xA;&amp;#xD;&amp;#χΑ;" /&gt; 〈/labels〉 &lt;/scene&gt;</p>
+    <p>[0319]	图4示例性示出本发明的实施例中〈scene〉标签的解析流程，包括：</p>
+    <p>[0320]	步骤301、判断是否读取〈scene〉标签的属性值。如果是，执行步骤302 ；如果不是，执行步骤303。</p>
+    <p>[0321]	步骤 302、断属个生名是否是 delay、name、prev、next、backgroundPic、 backgroundSound&gt; tranTime&gt; tranModePre禾口 tranModeNext其中之一。如果是,利用属性值为数据模型中与〈scene〉标签对应的对象中的变量赋值。</p>
+    <p>[0322]	步骤303、判断是否读取〈scene〉标签的子标签。如果是，执行步骤304 ；如果不是，结束〈scene〉标签解析。</p>
+    <p>[0323]	步骤304、判断子标签的名称是否是menus。如果是，执行如图5所示的步骤501。 在图5中示出了〈scene〉标签的子标签henus〉的解析过程。如果不是，执行步骤305。</p>
+    <p>[0324]	步骤305、判断子标签的名称是否是labels。如果是，执行如图6所示的步骤601。 在图6中示出了〈scene〉标签的子标签〈labels〉的解析过程。如果不是，执行步骤306。</p>
+    <p>[0325]	步骤306、判断子标签的名称是否是sprites。如果是，执行如图7所示的步骤701。 在图7中示出了〈scene〉标签的子标签〈sprites〉的解析过程。如果不是，执行步骤303， 继续判断是否读取〈scene〉标签的子标签。如果之前已经读取过〈scene〉标签的子标签， 则可以确定不需要再次读取〈scene〉标签的子标签，结束〈scene〉标签的解析。</p>
+    <p>[0326]	需要说明的是，在图4示出的流程中，对于〈scene〉标签的各个子标签是按照henus〉一〈labels〉一〈sprites〉这样的顺序顺次解析的，当然本发明的实施例中不限于这种顺序，先解析〈scene〉标签的哪个子标签，可以由本领域技术人员根据解析需要来设置。例如，也可以按照这样的顺序来解析〈scene〉标签的各个子标签： &lt;labels&gt; &#8212; &lt;menus&gt; &#8212; &lt;sprites&gt;。</p>
+    <p>[0327]	图5示例性示出了本发明的实施例中〈scene〉标签的子标签henus〉的解析流程，&lt;menu&gt;是&lt;menus&gt;的子标签，&lt;menus&gt;标签的解析主要包括对&lt;menu&gt;标签的解析。该流程包括：</p>
+    <p>[0328]	步骤501、判断是否读取henu〉标签的属性值。如果是，执行步骤506 ；如果不是， 执行步骤502。</p>
+    <p>[0329]	步骤502、判断是否读取henu〉标签的子标签&lt;item&gt;的属性值。如果是，执行步骤503 ；如果不是，执行步骤505。</p>
+    <p>[0330]	步骤 503、判断属性名是否是 tag、normal Image &gt; slectedlmage、di sab Ie Image &gt; target、selector和isEnable其中之一。如果是，执行步骤504 ；如果不是，执行步骤502。</p>
+    <p>[0331]	步骤504、利用各属性名对应的属性值为数据模型中与&lt;item&gt;标签对应的对象中的变量赋值。步骤504之后，执行步骤502。</p>
+    <p>[0332]	步骤505、将menu对象保存到数据模型的menus列表对象中。步骤505之后执行步骤306。</p>
+    <p>[0333]	步骤505之后，执行步骤306。在数据模型中，与〈menus〉对应的对象中可以设置一个menus列表对象，在该列表对象中可以保存与&amp;enu&gt;标签对应的menu对象。</p>
+    <p>[0334]步骤	506、判断属性名是否是 zhdex、tag、fontSize、position 和 showStyle 其中之一。如果是，执行步骤507 ；如果不是，执行步骤501。</p>
+    <p>[0335]	步骤507、利用各属性名对应的属性值为数据模型中与henu〉标签对应的对象中的变量赋值。步骤507之后，执行步骤501。</p>
+    <p>[0336]	图6示例性示出了本发明的实施例中〈scene〉标签的子标签〈labels〉的解析流程，〈label〉是〈labels〉的子标签，〈labels〉标签的解析主要包括对〈label〉标签的解析。 该流程包括：</p>
+    <p>[0337]	步骤601、判断是否读取〈label〉标签的属性值。如果是，执行步骤603 ；如果不是，执行步骤602。</p>
+    <p>[0338]	步骤602、将label保存到labels列表对象中。在数据模型中，与〈labels〉对应的对象中可以设置一个labels列表对象，在该列表对象中可以保存与〈label〉标签对应的 label对象。步骤602后执行步骤307。</p>
+    <p>[0339]	pM 603、_l」HiM个生名:&#190;&#190;&#190; name&gt; type、tag、zlndex、opacity、fontSize、font、 content、color、alignment、position 禾口 demension 其中之&#8212;&#8212;。如果是,执行步骤 604。如果不是，执行步骤601。</p>
+    <p>[0340]	步骤604、利用各属性值为数据模型中与〈label〉标签对应的对象中的变量赋值。 步骤604之后，执行步骤601。</p>
+    <p>[0341]	需要说明的是，在步骤603中，如果当前解析的〈label〉标签的属性名是content， 则需要结合type的属性值做判断。如果type的属性值为LRC时，首先要将content的属性值中的一些标记性文字去掉，然后再利用content的属性值为数据模型中与〈label〉标签对应的对象中的变量赋值。</p>
+    <p>[0342]	图7示例性示出了本发明的实施例中〈scene〉标签的子标签〈sprites〉的解析流程，〈sprite〉是〈sprites〉的子标签，〈sprites〉标签的解析主要包括对〈sprite〉标签的解析。该流程包括：</p>
+    <p>[0343]	步骤701、判断是否读取〈sprite〉标签的属性值。如果是，执行步骤702。如果不是，执行步骤704。[0344]	步骤 702、判断属性名是否是 name、imagePath、position、scale、zlndex、tag、禾口 opacity其中之一。如果是，执行步骤703 ；如果不是，执行步骤701。</p>
+    <p>[0345]	步骤703、利用各属性值为数据模型中与〈sprite〉标签对应的对象中的变量赋值。步骤703后执行步骤701。</p>
+    <p>[0346]	步骤704、判断是否读取〈sprite〉标签的子标签的属性值。如果是，执行步骤706 ； 如果不是，执行步骤705。</p>
+    <p>[0347]	步骤705、将sprite保存到sprites列表中。在数据模型中，与〈sprites〉对应的对象中可以设置一个sprites列表对象，在该列表对象中可以保存与〈sprite〉标签对应的 sprite对象。步骤705后执行步骤303。</p>
+    <p>[0348]	步骤706、判断子标签的名称是否是touch。如果是，执行步骤707 ；如果不是，执行步骤708。</p>
+    <p>[0349]	步骤707、读取〈touch〉标签的子标签〈group〉的属性值。关于如何读取〈touch〉 标签的子标签〈group〉的属性值的步骤参见图8。步骤707之后执行步骤704。</p>
+    <p>[0350]	步骤708、判断子标签名称是否是actions。如果是，执行步骤709 ；如果不是，执行步骤710。</p>
+    <p>[0351 ] 步骤709、读取〈actions〉标签的子标签〈group〉的属性值。关于如何读取 〈actions〉标签的子标签〈group〉的属性值的步骤参见图8。步骤709后执行步骤704。</p>
+    <p>[0352]	步骤710、判断子标签名称是否是miniTouchSet。如果是，执行步骤711 ；如果不是，执行步骤714。</p>
+    <p>[0353]	步骤711、判断属性名是否是rect。如果是，执行步骤712 ；如果不是，执行步骤 713。</p>
+    <p>[0354]	步骤712、利用hiniTouchkt〉标签的rect属性值为数据模型中与 ainiTouchkt〉标签对应的对象中的变量赋值。</p>
+    <p>[0355]	步骤713、读取hiniTouchkt〉标签的子标签〈group〉的属性值。关于如何读取 &lt;miniTouchSet&gt;标签的子标签〈group〉的属性值的步骤参见图8。步骤713后执行步骤 704。</p>
+    <p>[0356]	步骤714、判断子标签名称是否是touchTrigger。如果是，执行步骤715 ；如果不是，执行步骤704。</p>
+    <p>[0357]	步骤715、判断属性名是否是actionSprite和actionName其中之一。如果是，执行步骤716 ；如果不是，执行步骤714。</p>
+    <p>[0358]	步骤716、利用各属性值为数据模型中与〈touchTrigger〉标签对应的对象中的变</p>
+    <p>量赋值。</p>
+    <p>[0359]	图8示例性示出了本发明的实施例中〈group〉标签的解析流程，包括：</p>
+    <p>[0360]	步骤801、判断是否读取〈group〉标签的属性值。如果是，执行步骤802 ；如果不是，执行步骤804。</p>
+    <p>[0361]	步骤 802、判断属性名是否是 Type、r印eatCount、touchScreenlazyTime 禾口 actionName其中之一。如果是，执行步骤803 ；如果不是，执行步骤801。</p>
+    <p>[0362]	步骤803、利用各属性值保存到数据模型中与〈group〉标签对应的对象中的变量赋值。步骤803后执行步骤801。[0363]	步骤804、判断是否读取〈group〉标签的子标签。如果是，执行步骤806 ；如果不是，执行步骤805。</p>
+    <p>[0364]	步骤805、将group保存到与sprite相应的动作类型的groups列表对象中。数据模型中，每个精灵可以对应一个或多个相应动作类型的groups列表对象，在该列表对象中可以保存与精灵对应的group对象。</p>
+    <p>[0365]	步骤806、判断子标签的名称是否是action。如果是，执行步骤807 ；如果不是，执行步骤804。</p>
+    <p>[0366]	步骤807、判断属性名称是否是type。如果是，执行步骤808 ；如果不是，执行步骤 809。</p>
+    <p>[0367]	步骤808、处理不同类型的〈action〉标签。从前述的介绍可以看出，XML配置文件可以包括moveto、blink、jumpby等各种类型的〈action〉标签。针对不同类型的〈action〉 标签，可以进行相应的处理。对于不同类型的〈action〉标签的处理可以参见图9。步骤808 后执行步骤804。</p>
+    <p>[0368]	步骤809、判断属性名称是否是time、repeatCount和music其中之一。如果是， 执行步骤810 ；如果不是，执行步骤804。</p>
+    <p>[0369]	步骤810、利用各属性值为数据模型中与〈action〉标签对应的对象中的变量赋值。步骤810后执行步骤804。</p>
+    <p>[0370]	需要说明的是，图8示出的解析〈group〉标签的流程，可以应用于图7中的步骤 707,709和713中，因为&lt;touch&gt;标签的子标签包括&lt;group&gt;，〈actions〉标签的子标签也包括&lt;group&gt;，&lt;miniTouchSet&gt;标签的子标签还包括〈group〉。如果将图8示出的流程应用于图7中的步骤707，则步骤801是在步骤706后执行，步骤805后执行步骤704。如果将图8示出的流程应用于图7中的步骤709，则步骤801可以在步骤708后执行，步骤805 后执行步骤704。如果将图8示出的流程应用于图7中的步骤713，则步骤801可以在步骤 711后执行，步骤805后执行步骤704。</p>
+    <p>[0371]	图9示例性示出了本发明的实施例中〈action〉标签的解析流程，包括：</p>
+    <p>[0372]	步骤901、判断type是否是moveto。如果是，执行步骤902 ；如果不是，执行步骤 903。</p>
+    <p>[0373]	步骤902、利用属性值为数据模型中与moveto类型的〈action〉标签对应的对象中的变量赋值。步骤902后执行步骤804。</p>
+    <p>[0374]	步骤903、判断type是否是moveby。如果是，执行步骤904 ；如果不是，执行步骤 905。</p>
+    <p>[0375]	步骤904、利用属性值为数据模型中与moveby类型的〈action〉标签对应的对象中的变量赋值。步骤904后执行步骤804。</p>
+    <p>[0376]	步骤905、判断type是否是cycle。如果是，执行步骤906 ；如果不是，执行步骤 907。</p>
+    <p>[0377]	步骤906、利用属性值为数据模型中与cycle类型的〈action〉标签对应的对象中的变量赋值。步骤906后执行步骤804。</p>
+    <p>[0378]	步骤907、判断type是否是blink。如果是，执行步骤908 ；如果不是，执行步骤 909。[0379]	步骤908、利用属性值为数据模型中与blink类型的〈action〉标签对应的对象中的变量赋值。步骤908后执行步骤804。</p>
+    <p>[0380]	步骤909、判断type是否是scaleto。如果是，执行步骤910 ；如果不是，执行步骤 911。</p>
+    <p>[0381]	步骤910、利用属性值为数据模型中与sacaleto类型的〈action〉标签对应的对象中的变量赋值。步骤910后执行步骤804。</p>
+    <p>[0382]	步骤911、判断type是否是scaleby。如果是，执行步骤912 ；如果不是，执行步骤 913。</p>
+    <p>[0383]	步骤912、利用属性值为数据模型中与sacaleby类型的〈action〉标签对应的对象中的变量赋值。步骤912后执行步骤804。</p>
+    <p>[0384]	步骤913、判断type是否是wag。如果是，执行步骤914 ；如果不是，执行步骤915。</p>
+    <p>[0385]	步骤914、利用属性值为数据模型中与wag类型的〈action〉标签对应的对象中的变量赋值。步骤914后执行步骤804。</p>
+    <p>[0386]	步骤915、判断type是否是whirl。如果是，执行步骤916 ；如果不是，执行步骤 917。</p>
+    <p>[0387]	步骤916、利用属性值为数据模型中与whirl类型的〈action〉标签对应的对象中的变量赋值。步骤914后执行步骤804。</p>
+    <p>[0388]	步骤917、判断type是否是jumpby。如果是，执行步骤918 ；如果不是，执行步骤 919。</p>
+    <p>[0389]	步骤918、利用属性值为数据模型中与jumpby类型的〈action〉标签对应的对象中的变量赋值。步骤918后执行步骤804。</p>
+    <p>[0390]	步骤919、判断type是否是bezierby。如果是，执行步骤920 ；如果不是，执行步骤 921。</p>
+    <p>[0391]	步骤920、利用属性值为数据模型中与bezierby类型的〈action〉标签对应的对象中的变量赋值。步骤920后执行步骤804。</p>
+    <p>[0392]	步骤921、判断type是否是effect。如果是，执行步骤922 ；如果不是，执行步骤 923。</p>
+    <p>[0393]	步骤922、利用属性值为数据模型中与effect类型的〈action〉标签对应的对象中的变量赋值。步骤922后执行步骤804。</p>
+    <p>[0394]	步骤923、判断type是否是event。如果是，执行步骤924 ；如果不是，执行步骤 804。</p>
+    <p>[0395]	步骤924、利用属性值为数据模型中与event类型的〈action〉标签对应的对象中的变量赋值。步骤拟4后执行步骤804。</p>
+    <p>[0396]	经过如图3-图9所示的流程之后，即可完成XML配置文件的解析，数据模型中各对象的变量均已赋值。</p>
+    <p>[0397]	根据本发明的实施例，在步骤103中形成的微动画场景中，精灵的动作、音乐、音效以及文字均是默认的。在有的微动画应用软件中，可以在检测到点击操作之后，生成与点击区域相对应的精灵动作、音乐、音效或文字等。</p>
+    <p>[0398]	为了使得编辑人员能够查看到点击操作之后的效果，优选地，在步骤103之后还可以包括步骤104-111，如图10所示，图10示例性示出了本发明计算机实施的微动画效果</p>
+    <p>查看方法实施例二的流程图。</p>
+    <p>[0399]	步骤101-步骤103分别与图1中相同，不再赘述。</p>
+    <p>[0400]	步骤104、检测点击操作。该点击操作可以是编辑人员使用鼠标点击微动画场景中的某个区域的点击操作。</p>
+    <p>[0401]	步骤105、检测到点击操作后，判断该点击操作是否是在微动画场景中精灵所在的背景区域。如果是，执行步骤106 ；如果不是，执行步骤108。</p>
+    <p>[0402]	精灵所在的背景区域是指精灵在微动画场景中所占据的整个区域，如图11所示。 如图11示出本发明实施例中的一个微动画场景的示意图，该微动画场景21中有一朵花，这朵花是该微动画场景中的一个精灵，该朵花占据的区域是该精灵的背景区域21a(图11中用点划线框住的区域）。</p>
+    <p>[0403]	步骤106、判断数据模型中是否有与精灵相关的整体动作对象。如果有，执行步骤 107 ；如果没有，执行步骤108。</p>
+    <p>[0404]	在前述解析XML配置文件时，已经将与XML配置文件中的各个〈group〉标签对应的group对象保存到了与精灵相应动作类型对应的groups列表对象中，例如，参见步骤 805。在步骤106中，可以通过查看数据模型中与该精灵整体点击动作对应的精灵对象的 group列表对象中是否包括动作对象来确定数据模型中是否有与该精灵相关的整体动作对象。</p>
+    <p>[0405]	步骤107、利用微动画代码获取数据模型中与所述精灵相关的整体动作对象的变量的值，在微动画场景中显示精灵整体动作。</p>
+    <p>[0406]	步骤108、判断点击操作是否是在微动画场景中精灵的局部区域。如果是，执行步骤109 ；如果不是，执行步骤111。</p>
+    <p>[0407]	微动画场景中精灵的局部区域是指精灵背景区域中的一部分，如图11中花朵的叶片所在的区域21b即为精灵的一个局部区域。如果编辑人员点击该局部区域（如图11 中箭头所示），可以触发该精灵的局部动作，例如，叶片抖动。</p>
+    <p>[0408]	步骤109、判断数据模型中是否有与精灵相关的位于所述局部区域中的局部动作对象。具体可以通过查找数据模型中与该精灵局部点击动作对应的group对象列表来判断。如果有，执行步骤110 ；如果没有，执行步骤111。</p>
+    <p>[0409]	步骤110、利用微动画代码获取数据模型中与精灵相关的局部动作对象的变量的值，在微动画场景中显示精灵局部动作。</p>
+    <p>[0410]	步骤111、结束。</p>
+    <p>[0411]	另外，在检测到点击操作之后，还可以判断数据模型中是否有与点击操作所在区域相关的音乐对象、音效对象或文字对象，如果有，则可以用微动画代码获取点击操作所在区域相关的音乐对象、音效对象或文字对象的变量的值，在微动画场景中显示音乐、音效或文字。例如，如果点击图11中花朵所在的背景区域，则可以在微动画场景中显示一些音乐、 音效和文字。在显示音乐时，可以采用类似卡拉OK的效果显示，可以逐字显示歌词。</p>
+    <p>[0412]	在本发明提供的方法中，在检测到编辑人员的点击操作之后，会生成与该点击操作的点击区域相对应的精灵动作、文字、音乐或音效，从而提供了丰富的微动画的效果查看方式。[0413]	图12示例性示出了本发明微动画效果查看装置的结构示意图，该装置包括：读取模块11、解析模块12、第一处理模块13和加载模块18。读取模块11用于读取微动画的XML 配置文件。解析模块12与读取模块11连接，用于解析XML配置文件，利用解析出的各标签的属性值为预先建立的数据模型中与各标签对应的对象的变量赋值。第一处理模块13与解析模块12连接，用于利用预设的与所述操作系统相匹配的微动画代码获取所述数据模型中对象的变量的值。加载模块18与第一处理模块13连接，用于加载获取了所述数据模型中对象的变量的值之后的所述微动画代码，从而使得在该微动画效果查看装置中形成微动画场景及微动画场景中的各种元素。</p>
+    <p>[0414]	该微动画效果查看装置还可以包括检测模块14、第一判断模块15、第二判断模块 16和第二处理模块17。检测模块14用于检测点击操作。第一判断模块15与检测模块14 连接，用于在检测模块14检测到点击操作后，判断点击操作是否是在微动画场景中在精灵所在的背景区域。第二判断模块16与第一判断模块15和解析模块12连接，用于在第一判断模块15判断点击操作是在微动画场景中精灵所在的背景区域的情况下，判断数据模型中是否有与精灵相关的整体动作对象。第二处理模块17与第二判断模块16和解析模块12 连接，用于在第二判断模块16判断数据模型中有与精灵相关的整体动作对象的情况下，利用微动画代码获取所述数据模型中与精灵相关的整体动作对象的变量的值，在微动画场景中显示精灵整体动作。</p>
+    <p>[0415]	在第二判断模块16判断数据模型中没有与精灵相关的整体动作对象的情况下， 第二处理模块17可以判断该点击操作是否是在微动画场景中精灵的局部区域，并且在点击操作是否是在微动画场景中精灵的局部区域的情况下，利用微动画代码获取所述数据模型中与精灵相关的局部动作对象的变量的值，在微动画场景中显示精灵局部动作。</p>
+    <p>[0416]	本发明提供的微动画效果查看方法及其步骤可以由具有数据处理能力的一个或多个处理设备例如一个或多个计算机运行计算机可执行指令（该计算机可执行指令反映了本发明提出的微动画效果查看方法的思想）来实现。该处理设备可以包括存储前述计算机可执行指令的存储介质。</p>
+    <p>[0417]	本申请的微动画效果查看装置可以是运行前述计算机可执行指令的一个或多个处理设备。</p>
+    <p>[0418]	虽然已参照典型实施例描述了本发明，但应当理解，所用的术语是说明和示例性、 而非限制性的术语。由于本发明能够以多种形式具体实施而不脱离发明的精神或实质，所以应当理解，上述实施例不限于任何前述的细节，而应在随附权利要求所限定的精神和范围内广泛地解释，因此落入权利要求或其等效范围内的全部变化和改型都应为随附权利要求所涵盖。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1996395A?cl=zh">CN1996395A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年9月14日</td><td class="patent-data-table-td patent-date-value">2007年7月11日</td><td class="patent-data-table-td ">浙江大学</td><td class="patent-data-table-td ">基于运动脚本的三维人体动画自动生成方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101436185A?cl=zh">CN101436185A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年11月12日</td><td class="patent-data-table-td patent-date-value">2009年5月20日</td><td class="patent-data-table-td ">北大方正集团有限公司;北京北大方正电子有限公司</td><td class="patent-data-table-td ">一种利用xml内存树实现多种文件兼容的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=NzmcBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D2007509420A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGHZs-C4e5y-WNCIb-Qt6pXqUXgoQ">JP2007509420A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20020075270">US20020075270</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2000年12月18日</td><td class="patent-data-table-td patent-date-value">2002年6月20日</td><td class="patent-data-table-td ">Alden Jeffrey Morgan</td><td class="patent-data-table-td ">Visualization of complex system interactions</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">赵航涛: "<a href='http://scholar.google.com/scholar?q="%E5%9C%A8Flash%E4%B8%AD%E8%AE%BF%E9%97%AEXML%E6%95%B0%E6%8D%AE"'>在Flash中访问XML数据</a>", 《中小学电教》, 31 May 2005 (2005-05-31), pages 59 - 60</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=NzmcBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06T0013000000">G06T13/00</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年12月21日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年2月8日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/0cda8c7c34847bda33a9/CN102289835A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%BE%AE%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C%E6%9F%A5%E7%9C%8B%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85%E7%BD%AE.pdf?id=NzmcBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U33Hog9-nF_KXfcrckEec9AqV-6RA"},"sample_url":"https://www.google.com/patents/reader?id=NzmcBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

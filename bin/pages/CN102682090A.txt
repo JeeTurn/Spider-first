@@ -1,0 +1,202 @@
+<!DOCTYPE html><html><head><title>专利 CN102682090A - 一种基于聚合词树的敏感词匹配处理系统及方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种基于聚合词树的敏感词匹配处理系统及方法"><meta name="DC.contributor" content="邹铁鹏" scheme="inventor"><meta name="DC.contributor" content="陶富成" scheme="inventor"><meta name="DC.contributor" content="焦点科技股份有限公司" scheme="assignee"><meta name="DC.date" content="2012-4-26" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种基于聚合词树的敏感词匹配处理系统及方法，该系统包括敏感词库单元、聚合词树算法处理器、语义分析单元、行业领域分析单元。通过聚合词树的方式对敏感词库中的敏感词进行聚合，形成词树结构，使敏感词库的数据结构有序，节省了内存空间，提高了匹配效率。本发明结合了行业规则的运用，并结合语义分析和行业环境进行过滤的方式，排除了那些在相应行业领域不属于敏感词范畴的关键词，减少了敏感词匹配的错误，提高了匹配准确率。"><meta name="DC.date" content="2012-9-19"><meta name="DC.relation" content="CN:101458694:A" scheme="references"><meta name="DC.relation" content="CN:101472250:A" scheme="references"><meta name="DC.relation" content="CN:101692639:A" scheme="references"><meta name="DC.relation" content="CN:102208992:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102682090:A"><meta name="citation_patent_application_number" content="CN:201210123747"><link rel="canonical" href="https://www.google.com/patents/CN102682090A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102682090A?cl=zh"/><meta name="title" content="专利 CN102682090A - 一种基于聚合词树的敏感词匹配处理系统及方法"/><meta name="description" content="本发明提供了一种基于聚合词树的敏感词匹配处理系统及方法，该系统包括敏感词库单元、聚合词树算法处理器、语义分析单元、行业领域分析单元。通过聚合词树的方式对敏感词库中的敏感词进行聚合，形成词树结构，使敏感词库的数据结构有序，节省了内存空间，提高了匹配效率。本发明结合了行业规则的运用，并结合语义分析和行业环境进行过滤的方式，排除了那些在相应行业领域不属于敏感词范畴的关键词，减少了敏感词匹配的错误，提高了匹配准确率。"/><meta property="og:title" content="专利 CN102682090A - 一种基于聚合词树的敏感词匹配处理系统及方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102682090A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102682090A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=ShWkBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102682090A&amp;usg=AFQjCNHRd0Uxl1m0kB_lPrQ1hkRwr_cAFA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/a63536385d9b8f92f54f/CN102682090A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/a63536385d9b8f92f54f/CN102682090A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102682090A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102682090A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102682090A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102682090B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102682090A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种基于聚合词树的敏感词匹配处理系统及方法，该系统包括敏感词库单元、聚合词树算法处理器、语义分析单元、行业领域分析单元。通过聚合词树的方式对敏感词库中的敏感词进行聚合，形成词树结构，使敏感...</span><span itemprop="url">https://www.google.com/patents/CN102682090A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102682090A - 一种基于聚合词树的敏感词匹配处理系统及方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102682090A - 一种基于聚合词树的敏感词匹配处理系统及方法" title="专利 CN102682090A - 一种基于聚合词树的敏感词匹配处理系统及方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102682090 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210123747</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年9月19日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年4月26日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年4月26日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102682090B?hl=zh-CN&amp;cl=zh">CN102682090B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210123747.7, </span><span class="patent-bibdata-value">CN 102682090 A, </span><span class="patent-bibdata-value">CN 102682090A, </span><span class="patent-bibdata-value">CN 201210123747, </span><span class="patent-bibdata-value">CN-A-102682090, </span><span class="patent-bibdata-value">CN102682090 A, </span><span class="patent-bibdata-value">CN102682090A, </span><span class="patent-bibdata-value">CN201210123747, </span><span class="patent-bibdata-value">CN201210123747.7</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%82%B9%E9%93%81%E9%B9%8F%22">邹铁鹏</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%B6%E5%AF%8C%E6%88%90%22">陶富成</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E7%84%A6%E7%82%B9%E7%A7%91%E6%8A%80%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">焦点科技股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102682090A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102682090A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102682090A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ShWkBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210123747&amp;usg=AFQjCNHpSNiUuUHE4Uh2pT25qd6r9rcjyw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=ShWkBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102682090A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFYgxE1yCbd-FevlveatMUZcLGBsA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT115312420" lang="ZH" load-source="patent-office">一种基于聚合词树的敏感词匹配处理系统及方法</invention-title>
+      </span><br><span class="patent-number">CN 102682090 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA100223957" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种基于聚合词树的敏感词匹配处理系统及方法，该系统包括敏感词库单元、聚合词树算法处理器、语义分析单元、行业领域分析单元。通过聚合词树的方式对敏感词库中的敏感词进行聚合，形成词树结构，使敏感词库的数据结构有序，节省了内存空间，提高了匹配效率。本发明结合了行业规则的运用，并结合语义分析和行业环境进行过滤的方式，排除了那些在相应行业领域不属于敏感词范畴的关键词，减少了敏感词匹配的错误，提高了匹配准确率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM45254450" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于聚合词树的敏感词匹配处理的系统，其特征在于，包括：  敏感词库单元，用于保存长期积累的各类行业敏感词，以及具有敏感政治倾向、暴力倾向、不健康内容的词语；  聚合词树算法处理器，用于根据敏感词库中的敏感词，进行生成词树的处理，以及对目标信息进行敏感词匹配的处理；  语义分析单元，用于处理初步匹配成功的关键词，结合这些关键词在目标信息中上下文的内容进行语义分析，根据业务规则，判断这些关键词在文中是否是敏感词；  行业领域分析单元，用于根据目标信息的属性确定其行业领域，通过事先设置的行业规则，判断初步匹配成功的关键词，在对应的行业领域内是否属于敏感词，通过业务规则进行过滤后，排除对于所在领域不属于敏感词的关键词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求I所述系统，其特征在于，所述聚合词树算法处理器包括：  聚合词树生成单元，用于将敏感词库中的每个敏感词按照聚合词方式建立词链，然后将多条词链聚合成一棵词树，整个敏感词库中的所有敏感词会聚合成多棵词树；  目标信息匹配单元，用于扫描目标信息中每个字，判断这个字的特征码地址是否在内存地址表中，如果在，则取出这个字对应的词树，这个字在这棵词树的根结点上；再判断下一个字在不在这棵词树中所有词链的第二个结点上，如果在，则在这棵词树上提取相对应的词链，在提取的这条词链上，判断这个字后是否有结束标志，如果有结束标志，则表示已经成功匹配敏感词；如依此类推，直到目标信息中的字构成词树上的一条完整的词链。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求I所述系统，其特征在于，还包括：  匹配结果输出单元，用于在匹配工作结束后，根据用户事先自定义的标识规则，确定对匹配成功的敏感词进行标识处理方式，并获取这些敏感词的相关属性，输出给信息系统中的信息审核子系统。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述系统，其特征在于，所述匹配结果输出单元的输出包括：  布尔数据，表示目标信息中是否含有敏感词，用于在信息审核系统的列表中，区分显示含有敏感词的目标信息和不含敏感词的目标信息；  字符串数据，表示目标信息中所含有的所有敏感词，用于在信息审核系统中，显示每条目录信息中包含的敏感词；  整数型数组，表示敏感词的首字在目标信息中的位置，以及敏感词的长度，用于在信息审核系统的目标信息详细页中，以选择好的标识处理方式对目标信息中的敏感词进行标识，以方便快速辨认。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.	一种基于聚合词树的敏感词匹配处理的方法，其特征在于，包括  将敏感词库中的每个敏感词建立为词链，将多条首字相同的词链聚合成一棵词树，整个敏感词库中的所有敏感词会聚合成多棵词树；根据这些词树根结点的特征码算出它们的地址，存入一个内存地址表中备用；  读入目标信息进行扫描查找，按顺序扫描其中的每个字，判断如果目标信息中的字能构成词树上的一条完整的词链，就获得初步匹配成功的关键词；  根据业务规则，判断这个关键词在目标信息中是否是敏感词；如果是，对目标信息中的敏感词进行处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述方法，其特征在于，敏感词库中增加新的敏感词后，这些新的敏感词形成新的词链，添加到所对应的词树中，如不存在对应的词树，那么具有首字相同的新词链就形成新的词树。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求5所述方法，其特征在于，扫描目标信息中每个字，判断这个字的特征码地址是否在内存地址表中，如果在，则取出这个字对应的词树，这个字在这棵词树的根结点上；再判断下一个字在不在这棵词树中所有词链的第二个结点上，如果在，则在这棵词树上提取相对应的词链，在提取的这条词链上，判断这个字后是否有结束标志，如果有结束标志，则表示已经成功匹配敏感词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求5所述方法，其特征在于，结合关键词在目标信息上下文的内容进行语义分析，根据业务规则，判断这个关键词在文中是否是敏感词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求5所述方法，其特征在于，根据目标信息属性确定其行业领域，通过事先设置的行业规则，判断初步匹配成功的关键词，在所在的行业领域内是否属于敏感词。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求5所述方法，其特征在于，当完成目标信息的敏感词匹配工作后，针对目标信息中包含敏感词，确定专门的标识处理方式，并获取敏感词的相关属性，把这些属性以及标识方式作为结果输出；输出数据包括：  布尔数据，表示目标信息中是否含有敏感词，用于在信息审核系统的列表中，区分显示含有敏感词的目标信息和不含敏感词的目标信息；  字符串数据，表示目标信息中所含有的所有敏感词，用于在信息审核系统中，显示每条目录信息中包含的敏感词；  整数型数组，表示敏感词的首字在目标信息中的位置，以及敏感词的长度，用于在信息审核系统的目标信息详细页中，以选择好的标识处理方式对目标信息中的敏感词进行标识，以方便快速辨认。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES51619481" lang="ZH" load-source="patent-office" class="description">
+    <p>&#8212;种基于聚合词树的敏感词匹配处理系统及方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及信息系统数据处理领域，特别涉及一种基于聚合词树的敏感词匹配处理系统及方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	在互联网应用日益发达的今天，互联网信息越来越丰富，与此同时，带有敏感政治倾向、暴力倾向、不健康内容等不良信息也随之泛滥，为了净化网络环境，因此在需要对外发布信息的互联网场合中，其内容是要经过审查，审查通过后才能在互联网上公开。信息内容审查初期，都是通过人工进行审核，这种审核方式虽然准确，但随着信息的快速增长，这种方式凸显审查效率低、人员负荷重的缺点，在这种情况下，自动化的系统处理方式的需求 越来越强烈。</p>
+    <p>[0003]	随着各种自动化处理系统的产生，其处理方式都是针对敏感词库，基于敏感词库对目标信息进行敏感词提取操作，而对于敏感词匹配来说，有两个关键点：匹配效率和匹配准确率。匹配效率体现了在对大量敏感词以及大量目标信息处理时的响应时间；匹配准确率体现了对于一个敏感词要尽量区分语境，不能误将非敏感词判断为敏感词而进行处理。</p>
+    <p>[0004]目前较为流行且成熟的处理方法有：</p>
+    <p>  I、简单文本搜索与替换。</p>
+    <p>[0005]	这种方式是以敏感词库为主体，对目标信息进行匹配，就是循环把每个敏感词在目标信息中从头到尾搜索一遍，如果在目标信息中有匹配成功的敏感词，那就找到一个就处理一个。</p>
+    <p>[0006]	优点：算法简单，实现方法简单。</p>
+    <p>[0007]	缺点：（1)匹配效率太低。因为需要遍历敏感词库中的每个敏感词，当敏感词数量很多、目标信息容量很大时，其匹配效率是该算法的致命问题。</p>
+    <p>[0008]	(2)匹配准确率太低。比如,有一个敏感词为as，那目标信息中包含hash、class等词语中的as都会被匹配、处理，导致错误的处理结果。</p>
+    <p>[0009]	2、DFA 算法</p>
+    <p>  这个算法是以目标信息为主体，将所有敏感词构建为词图，以任意一个字开始，都可以查出以该字为开头的敏感词。对目标信息进行逐一搜索，并判断每个字是否在词图中存在，如果存在看是否有对应的词存在，如果存在，则匹配成功，记录下来，继续往下搜索直到搜索完整个目标信息。</p>
+    <p>[0010]	优点：比“简单文本搜索与替换”方法效率高。</p>
+    <p>[0011]	缺点：（I)算法复杂，实现成本高。</p>
+    <p>[0012]	(2)匹配准确率比较低。</p>
+    <p>[0013]	(3)内存占用高，使系统启动速度慢。</p>
+    <p>[0014]	现有技术中“一种敏感词匹配方法和系统”（申请号：201110181501. 0 ;公布号：CN102207979A)，根据敏感词库中的所有敏感词汇生成多个确定有限自动机DFA图，对于给定的待判定信息，从首字开始，逐字从DFA图的入口开始匹配，直到到达该DFA的出口，则匹配成功。这种技术方案不需要反复遍历，提高了性能。由于生成DFA图消耗大量资源，因此针对敏感词库中的敏感词是动态变化、持续增长的情况，此专利提出的技术方案还是会由于反复重构DFA图，造成大量资源的反复被消耗，还是会造成内存占用高，使系统启动速度慢。</p>
+    <p>[0015]	敏感词匹配处理应用的范围很广，包括电子商务平台，企业内部管理系统，企业展示网站等，在这些系统中，敏感词匹配处理都起着重要的作用。因此，如何实现提高敏感词的匹配效率和匹配准确率是一个亟待解决的问题。</p>
+    <p>发明内容</p>
+    <p>[0016]	本发明提供了一种基于聚合词树的敏感词匹配处理的系统及方法，用以解决现有技术方法中在敏感词匹配方面效率低和准确率低的问题。</p>
+    <p>[0017]	本发明技术方案如下：一种基于聚合词树的敏感词匹配处理系统，包括敏感词库单元、聚合词树算法处理器、语义分析单元、行业领域分析单元，匹配结果输出单元。</p>
+    <p>[0018]	敏感词库单元，用于保存长期积累的各类行业敏感词，以及具有敏感政治倾向、暴力倾向、不健康内容的词语。敏感词库单元由专门的管理系统进行维护。</p>
+    <p>[0019]	聚合词树算法处理器，用于对敏感词库进行预处理，形成多棵词树的结构，然后通过词树对目标信息进行敏感词匹配。其中包括聚合词树生成单元、目标信息匹配单元。</p>
+    <p>[0020]	聚合词树生成单元，用于将敏感词库中的每个敏感词按照聚合词方式建立词链，词链上的每个结点就是该词的每个字对应的特征码，每个词链的结尾都有一个结尾标志。然后将多条词链聚合成一棵词树，这样，整个敏感词库中的所有敏感词通过聚合词树的方法会聚合成多棵词树。再根据这些词树的根结点特征码算出它们的地址，存入内存地址表中备用。</p>
+    <p>[0021]目标信息匹配单元，用于读入目标信息，进行敏感词查找。扫描目标信息中的每个字，按顺序判断这些字的特征码地址是否在内存地址表中，如果不在，则直接扫描下一个字；如果在，则取出这个字对应的词树，这个字在这棵词树的根结点上。再判断下一个字是否在这棵词树中所有词链的第二个结点上，如果不在，则重新判断这个字的特征码的地址是否在内存地址表中，如果在，则在这棵词树上提取相对应的词链。在提取的这条词链上，判断这个字后是否有结束标志，如果有结束标志，则表示已经在目标信息中成功匹配一个关键词。如果没有结束标志，则按顺序判断目标信息中下一个字是否在这条词链的第三个结点上，如果在，判断这个字后是否有结束标志，如果不在，则表示匹配不成功，重新判断词链上第二个结点的特征码的地址在不在内存地址表中。依此类推，直到目标信息中的字一直能构成这棵词树上的一条完整的词链。</p>
+    <p>[0022]	语义分析单元，用于对初步匹配成功的关键词，结合关键词在目标信息中上下文的内容进行语义分析，根据业务规则，判断这个关键词在文中是否是敏感词，例如，尽管“黄色”是敏感词库中的敏感词，但结合目标信息上下文进行语义分析，发现在目标信息中是“黄色的玫瑰”、“淡黄色”，那么这种情况下，“黄色”就不属于敏感词。 </p>
+    <p>[0023]	行业领域分析单元，用于根据目标信息的属性确定其行业领域，通过事先设置的行业规则，判断初步匹配成功的关键词，在对应的行业领域内是否属于敏感词，例如关键词“黄色”在文化娱乐领域属于敏感词，而在服装领域却不属于敏感词。通过业务规则进行过滤后，排除对于所在领域不属于敏感词的关键词，提高敏感词匹配准确率。</p>
+    <p>[0024]	匹配结果输出单元，用于在匹配工作结束后，根据用户事先自定义的标识处理规贝U，对匹配成功的敏感词确定标识处理方式，并获取敏感词的相关属性，包括敏感词全称、敏感词位置、敏感词长度等，把这些属性以及标识方式作为输出结果传递给信息系统的信息审核子系统，信息审核子系统根据这些输出结果来确定对目标信息中敏感词的处理方式。对于标识处理规则，用户可以进行自定义，包括：对目标信息中的敏感词以特定颜色标出，对敏感词用特定字体标出，或对敏感词以高亮的形式标出等多种方式。本单元输出包括：</p>
+    <p>  (I)布尔数据，表示目标信息中是否含有敏感词。</p>
+    <p>[0025]	(2)字符串数据，表示目标信息中所含有的所有敏感词。</p>
+    <p>[0026]	( 3 )整数型数组，表示敏感词的首字在目标信息中的位置，以及敏感词的长度。 </p>
+    <p>[0027]	一种基于聚合词树的敏感词匹配处理的方法，包括：</p>
+    <p>  将敏感词库中的每个敏感词建立成一条条的词链，词链上的每个点就是该词中每个字对应的特征码，例如hash码或机器码，每个词链的结尾都有一个结束标志。</p>
+    <p>[0028]	将多条首字相同的词链聚合成一棵“词树”，这样，整个敏感词库中的所有敏感词会聚合成几十棵，甚至几百棵词树。根据这些词树根结点的特征码算出它们的地址，存入一个内存地址表中。</p>
+    <p>[0029]	敏感词库中增加新的敏感词后，这些新的敏感词形成新的词链，添加到所对应的词树中，如果不存在对应的词树，那么具有相同首字的多条新词链就形成新的词树。</p>
+    <p>[0030]	读入目标信息进行扫描，按顺序扫描其中的每个字时，判断这个字的特征码地址是否在内存地址表中，如果不在，则直接扫描下一个字；如果在，则取出这个字对应的词树，这个字在这棵词树的根结点上。</p>
+    <p>[0031]	再判断目标信息中下一个字是否在这棵词树中所有词链的第二个结点上，如果不在，则重新判断这个字的特征码地址是否在内存地址表中；如果在，则从这棵词树上提取相对应的词链。</p>
+    <p>[0032]	在这条被提取的词链上，判断这个字后是否有结束标志，如果有结束标志，则表示已经在目标信息中成功匹配一个关键词，进行后续处理。如果没有结束标志，则在目标信息中按顺序取下一个字，判断是否在这条词链的第三个结点上，如果在，判断这个字后是否有结束标志，如果不在，则表示匹配不成功，重新判断词链上第二个结点的特征码的地址在不在内存地址表中。</p>
+    <p>[0033]	依此类推，直到后面的字一直能构成这棵词树上的一条完整的词链，表示找到初步匹配成功的关键词。</p>
+    <p>[0034]	初步匹配成功后的关键词需要根据语境以及行业规则进行进一步识别：</p>
+    <p>  对于初步匹配成功的关键词，结合关键词在目标信息中的上下文内容进行语义分析，</p>
+    <p>根据业务规则，判断这个关键词在文中是否是敏感词，例如，尽管“黄色”是敏感词库中的敏感词，但在目标信息中，结合“黄色”的上下文进行语义分析，发现在目标信息中是“黄色的玫瑰”或“淡黄色”，那么这种情况下，“黄色”在目标信息中不属于敏感词。</p>
+    <p>[0035]	对于扫描的目标信息，根据其属性确定其行业领域，通过事先设置的行业规则，判断初步匹配成功的敏感词，在所在的行业领域内是否属于敏感词，例如关键词“黄色”在文化娱乐领域属于敏感词，而在服装领域却不属于敏感词。通过业务规则进行过滤后，排除掉那些对于所在领域来说不属于敏感词范畴的关键词。</p>
+    <p>[0036]	当完成目标信息的敏感词匹配工作后，匹配结果输出单元开始工作，针对目标信息中包含敏感词，确定专门的标识处理方式，并获取敏感词的相关属性，包括敏感词全称、敏感词位置、敏感词长度等，把这些属性以及标识方式作为输出结果传递给信息系统的信息审核子系统。其中，标识处理规则可以进行用户自定义，包括：对目标信息中的敏感词以特定颜色标出，对敏感词用特定字体标出，或对敏感词以高亮的形式标出等多种方式。匹配结果输出单元输出数据包括：</p>
+    <p>  (I)布尔数据，表示目标信息中是否含有敏感词。用于在信息审核系统的列表中，区分显示含有敏感词的目标信息和不含敏感词的目标信息。</p>
+    <p>[0037]	(2)字符串数据，表示目标信息中所含有的所有敏感词。用于在信息审核系统中，显示每条目录信息中包含的敏感词。</p>
+    <p>[0038]	(3)整数型数组，表示敏感词的首字在目标信息中的位置，以及敏感词的长度。用于在信息审核系统的目标信息详细页中，以选择好的标识处理方式对目标信息中的敏感词进行标识，以方便快速辨认。</p>
+    <p>[0039]	本发明的有益效果如下：</p>
+    <p>  (I)本发明对敏感词库中的敏感词进行聚合，形成词链和词树，使敏感词库的数据结构更加有序，节省了内存空间，提高了敏感词的匹配速度，从而提高了匹配效率。</p>
+    <p>[0040]	(2)本发明结合了行业规则的运用，排除了那些在相应行业领域来说不属于敏感词范畴的关键词，并根据关键词的上下文进行语义分析，减少了敏感词匹配的错误，提高了系统的匹配准确率。</p>
+    <p>[0041 ] ( 3)本发明可以适应大数量规模的敏感词，并且可以适应不同长度敏感词。</p>
+    <p>[0042]	(4)敏感词随着时间的变化会发生变化，随着互联网应用的深入，敏感词的数量不断增加，本发明能够对不断变化着的敏感词库进行快速、实时的聚合词处理，适应性强。</p>
+    <p>附图说明</p>
+    <p>[0043]	图I为本发明实施例中的系统结构图。</p>
+    <p>[0044]	图2为本发明实施例中的聚合词树算法处理器结构示意图。</p>
+    <p>[0045]	图3为本发明实施例中的词树示意图。</p>
+    <p>[0046]	图4为本发明实施例中的敏感词库预处理流程图。</p>
+    <p>[0047]	图5为本发明实施例中的关键词匹配流程图。</p>
+    <p>[0048]	图6为本发明实施例中关键词过滤处理流程图。</p>
+    <p>具体实施方式</p>
+    <p>[0049]	本发明提供了一种基于聚合词树的敏感词匹配处理的系统及方法，利用聚合词树的算法，提高的敏感词的匹配效率，并结合语义分析和行业规则进行过滤的方式，提升了敏感词匹配准确率。</p>
+    <p>[0050]	参阅图I所示，本发明实施例中的系统包括信息系统10、敏感词匹配处理系统11。[0051]	所述信息系统10，信息系统的范围比较广，例如电子商务平台，企业展示网站，以及企业内部管理系统等都属于信息系统范畴。它包括信息审核子系统100、信息发布子系统101。</p>
+    <p>[0052]	所述信息审核子系统100，用于信息系统的用户输入各类信息，例如在电子商务平台中，输入公司信息、产品信息、商情信息等信息。除此之外，还用于信息系统的管理人员查看目标信息中包含的敏感词情况，其中的敏感词以醒目的方式标识以利于快速辨认。</p>
+    <p>[0053]	所述信息发布子系统101,用于在信息系统中，对外公布审核合格的各类目标信</p>
+    <p>肩、O</p>
+    <p>[0054]	所述敏感词匹配处理系统11，包括敏感词库单元110、聚合词树算法处理器111、语义分析单元112、行业领域分析单元113、匹配结果输出单元114。 </p>
+    <p>[0055]	所述敏感词库单元110，用于保存信息系统运行中长期积累的各类敏感词，包括行业敏感词，以及具有敏感政治倾向、暴力倾向、不健康内容的词语等。敏感词库单元由专门的管理系统进行长期维护。</p>
+    <p>[0056]	所述聚合词树算法处理器111，用于对敏感词库进行预处理，以及对目标信息内容进行敏感词匹配的处理工作。</p>
+    <p>[0057]	所述语义分析单元112，用于针对初步匹配成功后的关键词，结合关键词在目标信息上下文的内容进行语义分析，根据业务规则，判断这个关键词在文中是否是敏感词，例如，尽管“黄色”是结果敏感词库匹配成功的关键词，但结合上下文进行语义分析，发现在文中是“黄色的玫瑰”、“淡黄色”，那么这种情况下，“黄色”不属于敏感词。</p>
+    <p>[0058]	行业领域分析单元113，用于根据目标信息的属性确定其所在的行业领域，根据事先设置的行业规则，对于通过语义分析单元判断的关键词，判断这些关键词在目标信息对应行业领域内是否属于敏感词，例如关键词“黄色”在文化娱乐领域属于敏感词，而在服装领域却不属于敏感词。通过业务规则进行过滤后，排除对于所在领域不属于敏感词的关键</p>
+    <p>      o</p>
+    <p>[0059]	匹配结果输出单元114，用于在匹配工作结束后，根据用户事先自定义的处理规贝U，对匹配成功的敏感词，确定其标识处理方式，并获取敏感词的相关属性，包括敏感词全称、敏感词位置、敏感词长度等，把这些属性和标识处理方式作为输出结果传递给信息系统的信息审核子系统100，由信息审核子系统根据这些输出结果来确定对目标信息中敏感词的处理及表现方式。对于标识处理规则，用户可以进行自定义，包括：对目标信息中的敏感词以特定颜色标出，对敏感词用特定字体标出，或对敏感词以高亮的形式标出等多种方式。本单元输出包括：</p>
+    <p> (I)布尔数据，表示目标信息中是否含有敏感词。用于在信息审核系统的列表中，区分显示含有敏感词的目标信息和不含敏感词的目标信息。</p>
+    <p>[0060]	(2)字符串数据，表示目标信息中所含有的所有敏感词。用于在信息审核系统中，显示每条目录信息中包含的敏感词。</p>
+    <p>[0061]	(3)整数型数组，表示敏感词的首字在目标信息中的位置，以及敏感词的长度。用于在信息审核系统的目标信息详细页中，以选择好的标识处理方式对目标信息中的敏感词进行标识，以方便快速辨认。</p>
+    <p>[0062]	参阅图2所示，本发明实施例中的的聚合词树算法处理器结构包括聚合词树生成单元20、目标信息匹配单元21。</p>
+    <p>[0063]	聚合词树生成单元20，用于将敏感词库中的每个敏感词按照聚合方式建立词链，词链上的每个结点就是该词中每个字对应的特征码，每个词链的结尾都有一个结尾标志。然后将多条词链聚合成一棵词树，这样，整个词库中的所有词会聚合成几十棵，甚至几百棵词树。再根据这些棵词树的根结点特征码算出它们的地址，存入一个内存地址表中备用。</p>
+    <p>[0064]目标信息匹配单元21，用于读入目标信息，按顺序扫描其中每个字，判断这个字的特征码的地址是否在内存地址表中，如果不在，则直接扫描下一个字；如果在，则提取这个字对应的词树，这个字在这棵词树的根结点上。再判断目标信息的下一个字是否在这棵词树中所有词链的第二个结点上，如果不在，则重新判断这个字的特征码的地址是否在内存地址表中；如果在，则在这棵词树上提取相对应的词链。在提取的这条词链上，判断这个字后是否有结束标志，如果有结束标志，则表示已经在目标信息中成功匹配一个关键词，然后进行后续处理。如果没有结束标志，则继续判断目标信息中按顺序后一个字是否在这条词链的第三个结点上，如果在，判断这个字后是否有结束标志，如果不在，则表示匹配不成功，重新判断该词链上第二个结点的特征码的地址是否在内存地址表中。依此类推，直到目标 信息中存在连续的字一直能对应构成这棵词树上的一条完整的词链。</p>
+    <p>[0065]	参阅图3所示，本发明实施例中的词树包括根结点30，中间结点31、结束标志32，词链33，子词链34。</p>
+    <p>[0066]	所述根结点30，是多个敏感词中首字相同的字对应的结点。</p>
+    <p>[0067]	所述中间结点31，是指敏感词中除首字外，其他字对应的结点。</p>
+    <p>[0068]	所述结束标志32，指对应词链的末尾标志。</p>
+    <p>[0069]	所述词链33，是由一个完整敏感词按照顺序形成，由一个根结点30，一个或多个中间结点31、以及一个结束标志32组成。</p>
+    <p>[0070]	所述子词链34，对于词树中的词链来说，当前面几个结点相同，而后面的结点不相同时，一条词链上出现了分支，其中的分支就构成了子词链，它由一个或多个中间结点31、以及一个结束标志32组成。</p>
+    <p>[0071]	参阅图4所示，本发明实施例中的敏感词库预处理流程如下：</p>
+    <p>  步骤401，根据敏感词库中的敏感词，建立多条词链。</p>
+    <p>[0072]	步骤402，将首字相同的词链进行聚合，形成词树。</p>
+    <p>[0073]	步骤403，处理整个敏感词库，形成多棵词树。</p>
+    <p>[0074]	步骤404，根据每棵词树的根结点特征码，算出它们的地址。</p>
+    <p>[0075]	步骤405，把这些地址存入内存地址表中，以备随时调用。</p>
+    <p>[0076]	例如，其处理代码如下：</p>
+    <p>  /林</p>
+    <p>  *初始使用时，构造、聚合生成词库树。并返回所有敏感词中最短的词的长度(文本过短时直接判断是否可能存在敏感词，而不需要查找，以提高效率)。</p>
+    <p>[0077]	&gt;!&lt; &#169;param sensitiveWords 词库</p>
+    <p>   *	&#169;param wordsTree聚合词库的树</p>
+    <p>  *	&#169;return返回所有敏感词中最短的词的长度。</p>
+    <p>[0078]	/public int generalTree (Set&lt;Keyword&gt; sensitiveWords, Map〈String，Map&gt;wordsTree) {</p>
+    <p>    int Ien = 0;</p>
+    <p>    if (wordsTree == null) {    return Ien;</p>
+    <p>        }</p>
+    <p>  //如果敏感词表为空，则清空词树</p>
+    <p>    if (sensitiveWords == null || sensitiveWords. isEmptyO) {     wordsTree. clear ();    return Ien;</p>
+    <p>        }</p>
+    <p>    wordsTreeTmp. clear ();</p>
+    <p>    for (Keyword w : sensitiveWords) {</p>
+    <p>    if (len == 0) {</p>
+    <p>    Ien = w. getWordLength ();</p>
+    <p>        }</p>
+    <p>    else if (w. getWordLength() &lt; len) {    len = w. getWordLength ();</p>
+    <p>        }</p>
+    <p>    Map〈String，Map&gt; cateTree = wordsTreeTmp. get (w. getModule () &#8226; toString ());</p>
+    <p>    if (cateTree == null) {</p>
+    <p>    cateTree = new HashMap〈String， Map&gt;();</p>
+    <p>        }</p>
+    <p>   AnalysisUtils. makeTreeByWord(cateTree, w. getWord(), w) ;// 这里将词分解成一个个的词元组成一个链存入树中</p>
+    <p>    wordsTreeTmp. put (w. getModule (). toString ()，cateTree);</p>
+    <p>        }</p>
+    <p>    wordsTree. clear ();    wordsTree. putAll(wordsTreeTmp);    return len;</p>
+    <p>        }</p>
+    <p>  参阅图5所示，本发明实施例中的敏感词匹配流程如下：</p>
+    <p>  步骤500，读入要进行审核的目标信息。</p>
+    <p>[0079]	步骤501，对目标信息中的每个字，按顺序进行扫描。</p>
+    <p>[0080]	步骤502，判断这个字的特征码地址是否在内存地址表中。如果在，那么进行步骤503，如果不在，返回到步骤501，进行扫描信息内容中的下一个字。</p>
+    <p>[0081]	步骤503，提取这个字所对应的词树。</p>
+    <p>[0082]	步骤504，按顺序扫描目标信息中的下一个字。</p>
+    <p>[0083]	步骤505，判断这个字是否在这棵词树中所有词链的次一级结点上，如果在，进行步骤506，否则，执行步骤502。</p>
+    <p>[0084]	步骤506，在这棵词树上提取相对应的词链。</p>
+    <p>[0085]	步骤507，判断这个字后面是否有结束标志，如果有，执行步骤514，如果没有，执行步骤508.</p>
+    <p>  步骤508，扫描目标信息内容中的下一个字。</p>
+    <p>[0086]	步骤509，判断此结点往下是否有分支，如果没有，执行步骤510，如果有，执行步骤 512。</p>
+    <p>[0087]	步骤510，判断这个字是否在这条词链的次一级结点上，如果在，执行步骤507，如果不在，执行步骤511。</p>
+    <p>[0088]	步骤511，重新提取这条词链的第二结点对应的字，然后执行步骤502. </p>
+    <p>  步骤512，判断这个字是否在这条词链中所有子词链的次一级结点上，如果是，执行步骤513，如果不是，执行步骤511。</p>
+    <p>[0089]	步骤513，提取对应的字词链，然后执行步骤507。</p>
+    <p>[0090]	步骤514，成功匹配一条敏感词。</p>
+    <p>[0091]	参阅图6所示，本发明实施例中的关键词过滤处理流程如下：</p>
+    <p>  步骤601，语义分析单元读取初步匹配成功的关键词。</p>
+    <p>[0092]	步骤602，结合关键词在目标信息中的上下文进行语义分析。</p>
+    <p>[0093]	步骤603，判断是否付合敏感词条件，如果是，执彳了步骤604，如果不是，执彳了步骤608。</p>
+    <p>[0094]	步骤604，进入行业领域分析单元。</p>
+    <p>[0095]	步骤605，根据目标信息的属性确定行业领域。</p>
+    <p>[0096]	步骤606，根据行业特点判断是否是敏感词，如果是，执行步骤607，如果不是，执行步骤608。</p>
+    <p>[0097]	步骤607，确认此关键词是一个敏感词。</p>
+    <p>[0098]	步骤608，对目标信息中确认后的敏感词进行标识处理，并获取这些敏感词的属性，包括敏感词全称、敏感词在目标信息中的位置，以及敏感词长度等，以便传递给信息审核子系统。</p>
+    <p>[0099]	步骤609，结束。</p>
+    <p>[0100]	例如，其处理代码如下：</p>
+    <p>  /林</p>
+    <p>  *根据级别、行业、结合业务的规则等各种匹配方式返回相应的实际敏感词。</p>
+    <p>[0101]	* Oparam baseffords查找到的词库中定义的词！</p>
+    <p>  *	Oparam pre文本中词的前面的内容</p>
+    <p>  *	Oparam sufix文本中词的后面的内容</p>
+    <p>  *	Oparam rule自定义或扩展的验证规则  &#27706; Oreturn</p>
+    <p>    */</p>
+    <p>    private static Matchedfford checkAndReturn(List&lt;Matchedfford&gt; baseffords,String pre, String sufix, MatchRule rule) {Il匹配符合条件，则返回对应的词</p>
+    <p>    return rule, matchfford(baseffords, pre, sufix);</p>
+    <p>        }</p>
+    <p>  本发明提供了一种基于聚合词树的敏感词匹配处理系统及方法，通过聚合词树的方式对敏感词库中的敏感词进行聚合，使敏感词库的数据结构更加有序，节省了内存空间，提高  了匹配效率。本发明结合了行业规则的运用，排除了那些在相应行业领域来说不属于敏感词范畴的关键词，并结合语义分析和行业规则进行过滤的方式，减少了敏感词匹配的错误，提高了系统的匹配准确率。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101458694A?cl=zh">CN101458694A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年10月9日</td><td class="patent-data-table-td patent-date-value">2009年6月17日</td><td class="patent-data-table-td ">浙江大学</td><td class="patent-data-table-td ">一种基于树形词库的中文分词方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101472250A?cl=zh">CN101472250A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年12月29日</td><td class="patent-data-table-td patent-date-value">2009年7月1日</td><td class="patent-data-table-td ">北京大唐高鸿数据网络技术有限公司</td><td class="patent-data-table-td ">针对不良短消息的关键词防范方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101692639A?cl=zh">CN101692639A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年9月15日</td><td class="patent-data-table-td patent-date-value">2010年4月7日</td><td class="patent-data-table-td ">西安交通大学</td><td class="patent-data-table-td ">一种基于url的不良网页识别方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102208992A?cl=zh">CN102208992A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年6月13日</td><td class="patent-data-table-td patent-date-value">2011年10月5日</td><td class="patent-data-table-td ">天津海量信息技术有限公司</td><td class="patent-data-table-td ">面向互联网的不良信息过滤系统及其方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102930041A?cl=zh">CN102930041A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月12日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">江苏外博资讯有限公司</td><td class="patent-data-table-td ">一种基于用户行为信息的检索结果实时更新方法及其系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=ShWkBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年9月19日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年11月14日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年9月2日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/a63536385d9b8f92f54f/CN102682090A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E8%81%9A%E5%90%88%E8%AF%8D%E6%A0%91%E7%9A%84%E6%95%8F%E6%84%9F%E8%AF%8D%E5%8C%B9.pdf?id=ShWkBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U29VoyBCtE4RNy6vUUX2RBWY73NSQ"},"sample_url":"https://www.google.com/patents/reader?id=ShWkBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html><html><head><title>专利 CN101846975A - 带有动态摩擦补偿的伺服系统自适应鲁棒控制器 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="带有动态摩擦补偿的伺服系统自适应鲁棒控制器"><meta name="DC.contributor" content="张国柱" scheme="inventor"><meta name="DC.contributor" content="甘明刚" scheme="inventor"><meta name="DC.contributor" content="陈杰" scheme="inventor"><meta name="DC.contributor" content="北京理工大学" scheme="assignee"><meta name="DC.date" content="2010-5-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种带有动态摩擦补偿的伺服系统自适应鲁棒控制器。用于改善电机伺服系统的输出跟踪精度与快速响应，特别适用于要求精度高、响应快速的精密电机伺服系统。本发明包括参数自适应调整模块、动态摩擦补偿器与鲁棒控制模块。采用由LuGre动态摩擦模型Lipschitz系数构造出的摩擦模型逼近器，通过摩擦逼近器参数的自适应调整，实现摩擦力值的在线估计，并据此进行摩擦补偿，以克服摩擦力对伺服系统的输出跟踪精度与快速响应的不利影响。控制器采用鲁棒控制律，保证伺服系统具有足够的抗扰动能力。由于该控制器能实现快速而准确的摩擦补偿，并能有效地抑制外部扰动的影响，因此能大大改善伺服系统的输出跟踪精度与快速响应。"><meta name="DC.date" content="2010-9-29"><meta name="DC.relation" content="CN:101145027:A" scheme="references"><meta name="DC.relation" content="CN:101339406:A" scheme="references"><meta name="DC.relation" content="CN:101369133:A" scheme="references"><meta name="DC.relation" content="CN:101488010:A" scheme="references"><meta name="DC.relation" content="CN:101510072:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:101846975:A"><meta name="citation_patent_application_number" content="CN:201010194303"><link rel="canonical" href="https://www.google.com/patents/CN101846975A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101846975A?cl=zh"/><meta name="title" content="专利 CN101846975A - 带有动态摩擦补偿的伺服系统自适应鲁棒控制器"/><meta name="description" content="本发明公开了一种带有动态摩擦补偿的伺服系统自适应鲁棒控制器。用于改善电机伺服系统的输出跟踪精度与快速响应，特别适用于要求精度高、响应快速的精密电机伺服系统。本发明包括参数自适应调整模块、动态摩擦补偿器与鲁棒控制模块。采用由LuGre动态摩擦模型Lipschitz系数构造出的摩擦模型逼近器，通过摩擦逼近器参数的自适应调整，实现摩擦力值的在线估计，并据此进行摩擦补偿，以克服摩擦力对伺服系统的输出跟踪精度与快速响应的不利影响。控制器采用鲁棒控制律，保证伺服系统具有足够的抗扰动能力。由于该控制器能实现快速而准确的摩擦补偿，并能有效地抑制外部扰动的影响，因此能大大改善伺服系统的输出跟踪精度与快速响应。"/><meta property="og:title" content="专利 CN101846975A - 带有动态摩擦补偿的伺服系统自适应鲁棒控制器"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101846975A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101846975A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=pRt7BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101846975A&amp;usg=AFQjCNFDy3f0jw55eIavmL4Hd-Gx8wlplw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/bdbd491b8242ed766b7c/CN101846975A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/bdbd491b8242ed766b7c/CN101846975A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101846975A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101846975A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101846975A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101846975B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101846975A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种带有动态摩擦补偿的伺服系统自适应鲁棒控制器。用于改善电机伺服系统的输出跟踪精度与快速响应，特别适用于要求精度高、响应快速的精密电机伺服系统。本发明包括参数自适应调整模块、动态摩擦补偿器...</span><span itemprop="url">https://www.google.com/patents/CN101846975A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101846975A - 带有动态摩擦补偿的伺服系统自适应鲁棒控制器</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101846975A - 带有动态摩擦补偿的伺服系统自适应鲁棒控制器" title="专利 CN101846975A - 带有动态摩擦补偿的伺服系统自适应鲁棒控制器"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101846975 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010194303</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年9月29日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年5月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年5月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101846975B?hl=zh-CN&amp;cl=zh">CN101846975B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010194303.3, </span><span class="patent-bibdata-value">CN 101846975 A, </span><span class="patent-bibdata-value">CN 101846975A, </span><span class="patent-bibdata-value">CN 201010194303, </span><span class="patent-bibdata-value">CN-A-101846975, </span><span class="patent-bibdata-value">CN101846975 A, </span><span class="patent-bibdata-value">CN101846975A, </span><span class="patent-bibdata-value">CN201010194303, </span><span class="patent-bibdata-value">CN201010194303.3</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E5%9B%BD%E6%9F%B1%22">张国柱</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%94%98%E6%98%8E%E5%88%9A%22">甘明刚</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%99%88%E6%9D%B0%22">陈杰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%22">北京理工大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101846975A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101846975A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101846975A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (5)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=pRt7BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010194303&amp;usg=AFQjCNE8RiTOLQCmOoTSKMnzQWiDN5duKQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=pRt7BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101846975A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNH6IhtzuQq8_eXe-5cA4uN_Ljr3sA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT98249656" lang="ZH" load-source="patent-office">带有动态摩擦补偿的伺服系统自适应鲁棒控制器</invention-title>
+      </span><br><span class="patent-number">CN 101846975 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA80729538" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种带有动态摩擦补偿的伺服系统自适应鲁棒控制器。用于改善电机伺服系统的输出跟踪精度与快速响应，特别适用于要求精度高、响应快速的精密电机伺服系统。本发明包括参数自适应调整模块、动态摩擦补偿器与鲁棒控制模块。采用由LuGre动态摩擦模型Lipschitz系数构造出的摩擦模型逼近器，通过摩擦逼近器参数的自适应调整，实现摩擦力值的在线估计，并据此进行摩擦补偿，以克服摩擦力对伺服系统的输出跟踪精度与快速响应的不利影响。控制器采用鲁棒控制律，保证伺服系统具有足够的抗扰动能力。由于该控制器能实现快速而准确的摩擦补偿，并能有效地抑制外部扰动的影响，因此能大大改善伺服系统的输出跟踪精度与快速响应。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求</span>&nbsp;&nbsp;<span class="language-not-available"><a href="/patents/CN101846975A?cl=un&amp;hl=zh-CN">现有版</a></span></div><div class="patent-text"></div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES38689046" lang="ZH" load-source="patent-office" class="description">
+    <p>带有动态摩擦补偿的伺服系统自适应鲁棒控制器</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及鲁棒控制技术领域，尤其涉及一种带有动态摩擦补偿的伺服系统自适 应鲁棒控制器。 背景技术</p>
+    <p>[0002]	对于有接触运动的伺服系统，摩擦是影响其精度与响应速度的一个重要因素。因 受摩擦力的影响，伺服系统在低速运动时输出速度常会不平稳，甚至出现滞滑现象。影响伺 服系统的另一个重要因素是外部扰动。在扰动作用下，伺服系统的精度会下降。因此，为提 高伺服系统的精度与快速性，其控制器既要实现对摩擦的补偿，又要克服外部扰动对系统 的影响。</p>
+    <p>[0003]	为消除摩擦力与扰动对电机性能的影响，Teeter J T等人在一种提高直流电机控 制系统性能的新型模糊摩擦补偿方法（A novel fuzzy frictioncompensation approach to improve the performance of a DC motor controlsystem[J]. IEEE Trans on Industrial Electronics，1996，43 (1) :113_120.)的文献中设计了启发式的模糊逻辑控制 器，以提高直流电机的控制性能。然而，该方法采用固定的模糊模型，缺乏自适应能力，因此 仅对特定对象有效。</p>
+    <p>[0004]	为使控制器能适应不同的电机伺服系统，并减少对摩擦模型先验知识的依赖，公 开号为CN1974325A的专利提出了一种基于最小二乘估计的自适应摩擦补偿控制器。该方 法采用离散最小二乘算法对摩擦模型进行在线辨识，并据此对摩擦力进行补偿。然而，该方 法虽然采用在线辨识技术提高了控制器的适应能力，但并没有考虑到伺服系统的闭环稳定 性，当参数设置与实际对象不匹配时系统将出现不稳定的震荡现象。</p>
+    <p>[0005]	为了加快自适应摩擦补偿器的参数调整速率，名称为直线电机伺服系统的自适应 模糊摩擦补偿（电机与控制学报，Vol. 13，No. 1，154-160，2009)的文献提出了一种基于复 合自适应律的模糊摩擦补偿方法。虽然该方法不仅具有摩擦模型在线估计能力，还具有较 快的参数调整速率，但其模糊模型往往具有较多的未知参数，因而大大增加了控制器复杂 度。</p>
+    <p>[0006]	现有的伺服系统控制器的摩擦补偿模块一般采用简化的非线性摩擦模型，如：库 仑摩擦模型、库仑加滑动摩擦模型或Stribeck模型等。然而，实际的摩擦具有更复杂的非 线性特性与动态特性，采用简化的摩擦模型难以描述真实的摩擦特性，故难以对电机伺服 系统的摩擦力实现精确补偿。此外，一般的伺服系统控制器不能保证存在有界扰动时系统 的控制性能。因此目前的伺服系统控制器往往不能满足伺服系统高精度与快速响应的要 求。</p>
+    <p>发明内容</p>
+    <p>[0007]	本发明的目的是提供一种带有动态摩擦补偿的伺服系统自适应鲁棒控制器。该控 制器针对不同工作环境下（如：润滑状况，温度，气压的差异等）摩擦模型的变化，运用自适应算法对摩擦进行估计与补偿，并抑制外部扰动对系统性能的影响，从而提高伺服系统的 输出跟踪精度与响应快速性。特别适用于要求精度高、响应快速的精密电机伺服系统。</p>
+    <p>[0008]	本发明的目的是通过下述技术方案实现的。</p>
+    <p>[0009]	一种带有动态摩擦补偿的伺服系统自适应鲁棒控制器，包括：参数自适应调整模 块、动态摩 擦补偿器、鲁棒控制模块、加法器与减法器；其中，所述参数自适应调整模块包括 回归向量产生模块和自适应律模块；</p>
+    <p>[0010]	所述减法器，用期望位置Xld减去被控对象位置的测量值xl，得到跟踪误差el，将 其发送给参数自适应调整模块和鲁棒控制模块；</p>
+    <p>[0011]	所述参数自适应调整模块，用于在线调整动态摩擦补偿器的参数；</p>
+    <p>[0012]	其中，所述回归向量产生模块，用于根据被控对象转速的测量值x2与动态摩擦补 偿器输出的摩擦补偿量ua，实时地计算出由LuGre动态摩擦模型Lipschitz系数构造的回 归向量P ；所述自适应律模块，用于根据回归向量产生模块给出的回归向量识以及所述跟踪 误差el，实时计算含有投影算子的自适应律，利用该自适应律在线调整动态摩擦补偿器参 数，将调整后的动态摩擦补偿器参数^发给所述动态摩擦补偿器；</p>
+    <p>[0013]	所述动态摩擦补偿器，用于根据所述动态摩擦补偿器参数^和测得的被控对象转 速x2，实时计算摩擦补偿量ua，并发送给加法器和参数自适应调整模块；</p>
+    <p>[0014]	所述鲁棒控制模块，用于根据所述跟踪误差el获得鲁棒控制量Us ；</p>
+    <p>[0015]	所述加法器，用于将摩擦补偿量Ua和鲁棒控制量Us相加，得到总控制量，发送给被 控对象；</p>
+    <p>[0016]	其中，动态摩擦模型Lipschitz系数L(x2)满足如下约束：</p>
+    <p>[0017]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0018]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0019]	上式中，eE为e2的过原点递增函数，4 = ^ + ^e1为与跟踪误差力有关的中间变 量，kp为角度调节的增益系数；</p>
+    <p>[0020]	Tfn(χ2, σ #，β )为LuGre动态摩擦模型的非线性部分，ζ为动态摩擦的内部状态， O C1代表接触面刚毛的硬度，Tmax为已知的最大静摩擦的上界，β为LuGre动态摩擦模型中 非线性参数化的参数向量，々=[凡&#29234;,属,&#29234;]"=[1/人巧/7；,7；/7；，1/&#32004;2广，3_= [β1ω&#943;η,</p>
+    <p>βω&#943;η, βΜη，β&#171;η]τ为β的最小值，3jmin为β j的已知下界，j = 1，...，，J为电机轴与负 载的总惯量，SStribeck速度，σ工为接触面刚毛的阻尼系数，T。与Ts分别为库仑摩擦 与静摩擦的幅值；</p>
+    <p>[0021]	f(x2, βω&#943;η)为描述摩擦Stribeck效应的非线性函数，定义为：</p>
+    <p>[0022]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0023]	其中，所述动态摩擦补偿器包括非线性参数化模型补偿模块、线性参数化模型补 偿模块和相加模块；</p>
+    <p>[0024]	所述非线性参数化模型补偿模块，用于根据所述动态摩擦补偿器参数^和测得的被控对象转速x2，实时计算摩擦补偿量的非线性部分，产生非线性补偿量；</p>
+    <p>[0025]	所述线性参数化模型补偿模块，用于根据所述动态摩擦补偿器参数^和测得的被 控对象转速x2，实时计算摩擦补偿量的线性部分，产生线性补偿量；</p>
+    <p>[0026]	所述相加模块，用于将所述非线性补偿量和所述线性补偿量相加，得到摩擦补偿</p>
+    <p>量ua。 </p>
+    <p>[0027]	由以上所述可以看出，本发明方案具有如下有益效果：</p>
+    <p>[0028]	1、本发明考虑了摩擦的非线性特性与动态特性，提出了基于LuGre动态摩擦模型 的摩擦补偿方法。LuGre动态摩擦模型比简化的摩擦非线性模型（如：库仑摩擦模型、库仑 加滑动摩擦模型或Stribeck模型等）能以更高的精度描述摩擦特性，包括摩擦的滞后、滑 动前位移(presliding displacement)禾口变化分离力(varying break-away force)等动 力学特性均得以考虑。这样一方面能保证本发明可更精确地估计出摩擦力值，另一方面能 使摩擦补偿具有更好的效果，即：更精确地抵消未知摩擦，提高控制系统的精度。</p>
+    <p>[0029]	2、本发明在自适应鲁棒控制方法的框架下进行摩擦补偿，能保证伺服系统的闭环 稳定性与预期的瞬态响应性能。常规伺服系统控制器的摩擦补偿模块往往并不考虑系统的 闭环稳定性，因此需要调整好摩擦补偿模块的参数以避免系统出现震荡现象。由于本发明 能保证系统的闭环稳定性，因此大大减轻了参数调整的工作量。此外，本发明能使系统具有 期望的瞬态响应性能，从而有效地提高了电机伺服系统的响应速度。</p>
+    <p>[0030]	3、对参数未知的伺服系统进行自适应动态摩擦补偿，往往会采用模糊系统或神经 网络等逼近器，对摩擦进行泛化逼近。然而，这些逼近器往往参数个数较多，算法比较复杂， 工程中难以应用。而本发明是根据LuGre动态摩擦模型各非线性参数的Lipschitz系数构 造线性化的摩擦逼近器，其参数个数与摩擦模型非线性参数的个数相等，这样使得该逼近 器比一般的模糊逼近器或神经网络逼近器更为简单，更便于工程应用。</p>
+    <p>[0031]	4、本发明采用的鲁棒自适应律比常规的自适应律具有更强的抗干扰能力，因此在 传感器噪声或外界扰动的影响下，该方法仍能保证对摩擦具有良好的在线辨识效果。因此， 本发明具有较强的鲁棒性。</p>
+    <p>附图说明</p>
+    <p>[0032]	图1是带有动态摩擦补偿的伺服系统自适应鲁棒控制器的结构图；</p>
+    <p>[0033]	图2是带有动态摩擦补偿的伺服系统自适应鲁棒控制器及被控对象；</p>
+    <p>[0034]	图3是参数自适应调整模块内部原理图；</p>
+    <p>[0035]	图4是动态摩擦补偿器的内部原理图；</p>
+    <p>[0036]	图5是电机伺服系统实验平台的原理图；</p>
+    <p>[0037]	图6是带有动态摩擦补偿的伺服系统自适应鲁棒控制器与固定模型摩擦补偿控 制器对比实验的输出误差曲线，其中图6(a)为带有动态摩擦补偿的伺服系统自适应鲁棒 控制器的输出误差曲线；图6(b)为固定模型摩擦补偿控制器的输出误差曲线。</p>
+    <p>具体实施方式</p>
+    <p>[0038]	下面结合附图并举实施例，对本发明进行详细描述。</p>
+    <p>[0039]	本发明提供一种电机伺服系统的自适应动态摩擦补偿方案，其基本思想为：采用由LuGre动态摩擦模型的Lipschitz系数构造出的摩擦模型逼近器，并通过鲁棒自适应律， 根据系统输出误差对摩擦逼近器的参数调整，使参数收敛到最优值。动态摩擦补偿器根据 参数估计值对摩擦进行补偿，抑制摩擦对电机伺服系统输出跟踪精度与响应速度的不良影 响，提高电机伺服系统的控制性能。</p>
+    <p>[0040]	图1为本发明带有动态摩擦补偿的伺服系统自适应鲁棒控制器的结构示意图。如 图1所示，该控制器包括：参数自适应调整模块、动态摩擦补偿器、鲁棒控制模块、加法器与 减法器。</p>
+    <p>[0041]	减法器，用于将期望位置Xld减去被控对象位置的测量值X1，得到跟踪误差力，将其 发送给参 数自适应调整模块和鲁棒控制模块。其中，所述的位置可以是直线位置，也可以是 角度。本发明实施例以控制对象为角度为例。</p>
+    <p>[0042]	参数自适应调整模块，用于在线调整动态摩擦补偿器的参数，使控制器适应不同 的被控对象与环境。其中，参见图3，参数自适应调整模块包括回归向量产生模块和自适应 律模块。这两个子模块分别具有如下功能：回归向量产生模块，用于根据被控对象转速的 测量值X2与动态摩擦补偿器输出的摩擦补偿量Ua，实时地计算出由LuGre动态摩擦模型的 Lipschitz系数构造的回归向量P,将其发送给自适应律模块。自适应律模块，用于根据回 归向量产生模块给出的回归向量识以及伺服系统的跟踪误差ei，实时计算含有投影算子的 自适应律，利用自适应律在线调整动态摩擦补偿器参数，将调整后的动态摩擦补偿器参数g 发给动态摩擦补偿器。</p>
+    <p>[0043]	其中，LuGre动态摩擦模型Lipschitz系数L(x2)满足如下约束：</p>
+    <p>[0044]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0045]	sgn(e2 )TmsiiLT (x2 )(β &#8212; β&#8212; ) + sgn(e2 Fmax/(x2, /?min) oe2 oe2</p>
+    <p>[0046]	上式中，eE为e2的过原点递增函数，e2 =么+ A^e1为与跟踪误差力有关的中间变 量，kp为角度调节的增益系数；</p>
+    <p>[0047]	Tfn(χ2, σ #，β )为LuGre动态摩擦模型的非线性部分，ζ为动态摩擦的内部状态， 该内部状态是指LuGre动态摩擦模型的内部状态，对应于刚毛的形变，LuGre动态摩擦模型 只有一个内部状态。％为接触面刚毛的硬度，Tmax为已知的最大静摩擦的上界，β为LuGre 摩擦模型中非线性参数化的参数向量^&#8212;辟，&#29234;，</p>
+    <span class="patent-image-not-available"> </span>
+    <p>_，βΜη，旦-&#19972;为β的最小值，为β j的已知下界，j = 1，...，4，J为 电机轴与负载的总惯量，OsSStribeck速度，ο工为接触面刚毛的阻尼系数，T。与Ts分别为 库仑摩擦与静摩擦的幅值；f(X2，βω&#943;η)为描述摩擦Stribeck效应的非线性函数，定义为：</p>
+    <p>[0048]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0049]	动态摩擦补偿器，用于消除动态摩擦对系统性能的影响。其中，参见图4，动态摩 擦补偿器包括非线性参数化模型补偿模块、线性参数化模型补偿模块和相加模块。这三个 子模块分别具有如下功能：非线性参数化模型补偿模块，用于根据动态摩擦补偿器参数6和 测得的被控对象转速X2，实时计算摩擦补偿量中的非线性部分，产生非线性补偿量。线性参数化模型补偿模块，用于根据动态摩擦补偿器参数^和测得的被控对象转速X2，实时计算摩 擦补偿量中的线性部分（包括粘性摩擦与动态摩擦的阻尼部分），产生线性补偿量。相加 模块，用于将所述非线性补偿量和所述线性补偿量相加，得到摩擦补偿量Ua，并发送给加法 器。这种分为线性和非线性方式，保证对不同的摩擦模型具有不同的参数，从而能适应不同 的工作环境，其中非线性参数化模型补偿模块补偿摩擦模型中的非线性部分，线性参数化 模型补偿模块补偿摩擦模型中的线性部分。 [0050] 鲁棒控制模块，用于根据跟踪误差ei获得鲁棒控制量Us，并发送给加法器。，其作 用是消除外部扰动力的影响，保证控制具有足够的抗干扰能力；</p>
+    <p>[0051 ] 加法器，用于将摩擦补偿量Ua和鲁棒控制量Us相加，得到总控制量，发送给被控对 象。</p>
+    <p>[0052]	图2是带有动态摩擦补偿的伺服系统自适应鲁棒控制器及被控对象。整个伺服系 统由带有动态摩擦补偿的伺服系统自适应鲁棒控制器和被控对象组成。如图2所示，控制 器中各模块与被控对象之间的连接关系为：减法器与被控对象相连，以获取控对象角度的 测量值X1 ；参数自适应调整模块与被控对象相连，以获取控对象转速的测量值X2 ；动态摩擦 补偿器与被控对象相连，以获取控对象转速的测量值X2 ；加法器与被控对象相连，向被控输 出总的鲁棒控制量。由于带有动态摩擦补偿的伺服系统自适应鲁棒控制器的输出被驱动电 路接收被转化为驱动电流，因此伺服电机将产生一个抵消摩擦的转矩，以抑制摩擦对电机 伺服系统精度与响应快速性的不利影响。</p>
+    <p>[0053]	下面根据动态摩擦模型Lipschitz系数的选择条件，以一个选取的具体 Lipschitz系数为例，对本发明各模块内部的信号处理方式进行详细描述。</p>
+    <p>[0054]	首先介绍一些伺服系统对象的参数与变量表示：Xl、X2分别为被控对象的角度和 转速；XldS期望跟踪轨迹；ei = X1-XldS伺服系统的跟踪误差；d为外部扰动力矩；J为电机 轴与负载的总惯量；σ『σ i与σ 2为三个正的摩擦模型参数，分别代表接触面刚毛的硬度、 刚毛的阻尼系数与粘性摩擦系数；ω s为Stribeck速度；T。与Ts分别为库仑摩擦与静摩擦 的幅值；Tmax表示Ts的已知上界，即已知的最大静摩擦的上界。</p>
+    <p>[0055]	&#8226;参数自适应调整模块中的回归向量识的输出为：</p>
+    <p>[0056]</p>
+    <span class="patent-image-not-available"> </span>
+    <span class="patent-image-not-available"> </span>
+    <p>[0061]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>b &gt; 0为可选参数，其取值应与X2绝对值的最大值处于同一数量级。</p>
+    <p>[0062]	式（1)中，σ ε (e2)定义如下：[0063]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0064]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0065]	上式中的ε与、均为可选的正值参数，其中ε为待选的正参数，其取值应为期 望稳态跟踪误差幅值的0. 02&#12316;0. 9倍。kp为角度调节的增益系数。</p>
+    <p>[0066]	式（1)中，Ua为摩擦补偿量，其产生方式将在下面关于动态摩擦补偿器的叙述中给</p>
+    <p>出ο</p>
+    <p>[0067]	&#8226;参数自适应调整模块中的自适应律模块的输出量为0 = 尸：Γ ,通过执行如 下计算获得：</p>
+    <p>[0068]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>	(2)</p>
+    <p>[0069]	式⑵中，Γ为一正定矩阵，代表了自适应律调整参数的速率；Prc^为向量的投 影算子，定义为々ojAXPrOUroj^yf。其中，ρ为未知参数向量θ的维数。</p>
+    <p>pra^(^)的定义如下：</p>
+    <p>[0070]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0071]上式中	θ = [ατ, γτ]τ;其中，α ：= [α1? α 2, α3]τ = [VJ，( σ 1+σ 2)/J, VJ] τ，K1代表电机的电流力矩系数，T1代表负载力矩；γ =	θωη和θ一分别为Oi 取值范围的已知最小值和最大值，θ』θ的第i个元素。</p>
+    <p>[0072]	式⑵中，自适应函数τ为：</p>
+    <p>[0073]t=es.ae/ae2*θ[0074]其中， </p>
+    <p>[0075]	ee=e2-~i=c(e2)</p>
+    <p>[0076]	上式中c(e2)的形式如下：</p>
+    <p>[0077]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0078]其中，sgn	为符号函数。</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0079]	&#8226;动态摩擦补偿器的非线性参数化模型补偿模块执行如下计算：</p>
+    <p>[0080]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0081]	其中f(x2，βω&#943;η)为描述摩擦Stribeck效应的非线性函数，定义为</p>
+    <p>[0082] </p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0083]	&#8226;动态摩擦补偿器的线性参数化模型补偿模块执行如下计算：</p>
+    <p>[0084]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>	(4)</p>
+    <p>[0085]	&#8226;动态摩擦补偿器的输出量Ua为非线性参数化模型补偿模块输出Uan与非线性参 数化模型补偿模块输出Ual之和，即：</p>
+    <p>[0086]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>。 (5)</p>
+    <p>[0087]	&#8226;鲁棒控制模块通过执行以下计算获得鲁棒控制量Us ：</p>
+    <p>[0088]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0089]	其中ksl为转速调节的增益系数，应取正值；&#163;。&gt;()为可选的参数，其取值应为期 望稳态跟踪误差幅值的5&#12316;&#943;ο倍^为任意满足弋&gt;Il^ll2||0max -1η||2 +沪的函数或常数，δ 为伺服系统所受扰动与惯量之比d/j的幅值上界。当％为满足&gt;W2I^max-0min|2的 函数时，回归向量产生模块将生成的回归向量输出给鲁棒控制模块。其中，H的上界在一般 情况下可取为定值，当IMI取Ihnaxll时，h0也能取定值，那么参数自适应调整模块不需要将回 归向量ρ发送给鲁棒控制模块。如果表达式弋&gt; W2 pmax -^minI2+沪中的ρ采用实时值，即从 参数自适应调整模块中获取的，那么参数自适应调整模块需要进一步将回归向量识发送给 鲁棒控制模块（如图1所示参数自适应调整模块与鲁棒控制模块之间需要增加传递识的连 线）。</p>
+    <p>[0090]	&#8226;带有动态摩擦补偿的伺服系统自适应鲁棒控制器输出的总控制量U1为：</p>
+    <p>[0091]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>	(7)</p>
+    <p>[0092]	以上各模块按照以下步骤协调工作：</p>
+    <p>[0093]	步骤1 ：根据伺服系统的跟踪误差ei、转速的测量值X2与摩擦补偿量Ua，通过执行 式（1)的计算得到用于参数调整的回归向量0，以作为自适应律模块的输入。根据该回归向 量识的值以及伺服系统的跟踪误差ei，通过执行式（2)的计算得到动态摩擦补偿器的参数θ</p>
+    <p>[0094]	步骤2 ：动态摩擦补偿器根据参数自适应调整模块提供的动态摩擦补偿器参数g 与伺服系统转速的测量值X2，通过执行式（3)、⑷与（5)的计算，得到摩擦补偿量。[0095]	步骤3 ：鲁棒控制模块根据系统的输出跟踪误差ei，通过执行式（6)的计算，得到</p>
+    <p>鲁棒控制量us。 </p>
+    <p>[0096]	步骤4 ：通过把摩擦补偿量Ua与鲁棒控制量Us相加得到带有动态摩擦补偿的伺服 系统自适应鲁棒控制器的总控制量。然后，返回步骤1。</p>
+    <p>[0097]	由本发明技术方案可以看出，该控制器的设计方法是根据动态摩擦模型各非线性 参数的Lipschitz系数构造线性化摩擦的逼近器，以逼近摩擦的非线性参数化部分，因此 逼近器的参数个数与摩擦模型非线性参数的个数相等。根据摩擦逼近器的线性参数化形 式，可按照自适应鲁棒控制方法，将摩擦逼近器对摩擦的逼近误差看成系统的外部扰动，设 计出鲁棒控制律；使该鲁棒控制律在任何自适应律下电机伺服系统均具有闭环稳定性与预 期的瞬态响应性能。</p>
+    <p>[0098]	下面对本发明带有动态摩擦补偿的伺服系统自适应鲁棒控制器的工作原理进行 描述。</p>
+    <p>[0099]	电流受控的伺服系统可用如下方程描述其动态特性</p>
+    <p>[0100]	Jq = Tm-Tf-T1-Tdis	(B)</p>
+    <p>[0101]	Tm = K1U1 (9)</p>
+    <p>[0102]	其中q为伺服系统的角度输出；Tm、Tf、T1和Tdis分别代表电磁力矩、摩擦力矩、负 载力矩和扰动力矩；J为电机轴与负载的总惯量A1代表电机的电流力矩系数。U1代表总控制量。</p>
+    <p>[0103]	而反映摩擦动态特性的动态摩擦模型中最常用的一种是LuGre模型，其形式如 下：</p>
+    <p>[0104]	Tf =σ0ζ + σ,ζ + σ2^	(10)</p>
+    <p>[0105]	ζ = &#942;-σ0-^-ζ	(11)</p>
+    <p>[0106]	g{q) = Tc+{Ts-Tc)e-{i"°^	(12)</p>
+    <p>[0107]	以上模型可化简为</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0108]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0109]	其中Xl、X2分别为角度和转速；y为系统输出；Δ = d/J为集中参数扰 动；α = [αι，α2，α3]τ = [K1Zj, ( ο ^ ο 2)/J，T1/J]τ 为线性参数化的参数向量； 々=[辟，人。/7；,7；/7；，1/心：f为非线性参数化的参数向量。已知α 一与 Qimin分别为、的上、下界、β」ΜΧ与Pjmin分别为β」的上、下界（i = 1，...，3，j = 1，...， 4)。</p>
+    <p>[0110]	根据（13)式可得：[0111]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0112]	定义误差变量eE如下：</p>
+    <p>[0113]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0114]	定义Lyapimov函数= (1/2)&lt; ,则由上式可知：</p>
+    <p>[0115]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0116]	其中f由下式给出 </p>
+    <p>[0117]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0118]	由式（15)可见非线性参数化项</p>
+    <span class="patent-image-not-available"> </span>
+    <p>对Lyapimov函数V的导数存 在影响。为此，我们进一步分析该非线性参数化项的特性。实际上，</p>
+    <p>[0119]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0120]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0121]	分析上式的Lipschitz系数，可知 </p>
+    <p>[0122]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0123]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>	(16)</p>
+    <p>[0124]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0125]	其中L(X2)定义为：</p>
+    <p>[0126]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0127] </p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0128]	结合式(15)与(16)可得：</p>
+    <p>[0129]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0130]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0131]	根据式（17)，控制量U1可设计为：  </p>
+    <p>[0132]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0133]	上式中us为鲁棒控制量，ua为摩擦补偿量。这样便得到了鲁棒控制量与摩擦补偿 量的具体形式。结合式（17)与（18)可得，</p>
+    <p>[0134]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>	(19)</p>
+    <p>[0135]	可见，控制器的总控制量可以保证系统闭环稳定。为得到自适应律的具体形式，我 们考虑如下Lyapunov函数：</p>
+    <p>[0136]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>	(20)</p>
+    <p>[0137]	其中S = S-&#27794;为参数估计误差。在无扰动的情况下，S卩Δ =0，则根据（15)可知， V0的导数满足</p>
+    <p>[0138]	</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0139]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0140]	由式（21)可知，若把参数自适应律设计为式（2)，则能以保证&amp;&lt;0。根据 Barbar Iat引理可知，当t&#8212;c&#171;，有eE &#8212; 0，从而有系统输出跟踪误差θι &#8212; 0。由以上分析 过程可见，本发明所提出的带有动态摩擦补偿的伺服系统自适应鲁棒控制器不仅能保证系 统闭环的稳定性，还能使系统具有较高的稳态跟踪精度。</p>
+    <p>[0141]	在实际设计过程中，本发明带有动态摩擦补偿的伺服系统自适应鲁棒控制器可由 数字信号处理器（如：TMS320F2812、TMS320LF2407)、8051单片机等嵌入式处理器及其外围 电路实现。由于本发明提出的算法为连续时间算法，在嵌入式处理器中的软件实现需要用 龙格库塔法、欧拉法等数值方法把连续时间算法转换为离散算法。通过嵌入式处理器及其 外围电路对测速电机与角度传感器的测量值进行实时采集，对于带有自适应动态摩擦补偿 的伺服系统控制器而言，伺服系统的输出转速值、输出角度值、给定角度均是可用的。嵌入 式处理器根据给定角度与测得的系统输出角度值可计算出系统的输出跟踪误差。根据输出 跟踪误差、系统的输出转速与控制器部分中的总控制量，参数自适应调整模块可实时调整 动态摩擦补偿器的参数，使动态摩擦补偿器能输出准确的摩擦补偿量。该摩擦补偿量与鲁棒控制模块输出的鲁棒控制量相叠加，产生总控制量并输入到驱动电路中，驱动电路产生 驱动电流，使伺服电机运转。</p>
+    <p>[0142]	图5是电机伺服系统实验平台的原理图。电机伺服系统实验平台包括：伺服控制 器、感应同步器、测速电机、驱动电路、电机、负载，伺服控制器包括：模数转换电路、数字信 号处理器TMS320F2812和数模转换电路。感应同步器、测速电机均与电机输出轴相连，分别 把电机输出轴的角度与转速转化为模拟电信号，再把此模拟电信号接入到模数转换电路， 转化为数字信号处理器TMS320F2812可以接收的数字信号。根据此数字信号，数字信号处 理器TMS320F2812采用本发明提出的自适应动态摩擦补偿方法算出控制量，输送到数模转 换电路，转化为模拟信号，再接入到驱动电路，生成驱动电机的电流，使电机运转。  [0143]	图6是带有动态摩擦补偿的伺服系统自适应鲁棒控制器与固定模型摩擦补偿控 制器对比实验的输出误差曲线。该对比实验中，直流电机伺服系统要跟踪幅值为1度，频率 为0.5赫兹的正弦角度信号，分别用上述两种控制器进行实验，将输出响应角度与给定的 角度信号相减，得到两种方法的输出误差曲线。由于参数自适应调整模块在电机伺服系统 的运行过程中不断调整动态摩擦补偿器的参数，使在线辨识的摩擦模型不断逼近实际摩擦 特性，从而能实现越来越精确的摩擦补偿，因此随着时间的增长，本发明所提出的控制器能 使电机伺服系统的输出角度误差逐渐减小。由带有动态摩擦补偿的伺服系统自适应鲁棒控 制器对应的输出误差曲线（a)可以看出，输出角度误差随时间增长而减小的效果（当启动 时间大于5秒时最大输出跟踪误差小于0. 02度）。而由固定模型摩擦补偿控制器对应的输 出误差曲线（b)可以看出，随着时间增长该方法的输出角度误差是固定的（最大跟踪误差 为0. 085度），其输出角度误差明显大于带有动态摩擦补偿的伺服系统自适应鲁棒控制器。 从上述对比实验得到的输出误差曲线可见，带有动态摩擦补偿的伺服系统自适应鲁棒控制 器比固定模型摩擦补偿控制器具有更高的输出跟踪精度。</p>
+    <p>[0144]	以上所述的仅为本发明的较佳实施例而已，本发明不仅仅局限于上述实施例，凡 在本发明的精神和原则之内所做的局部改动、等同替换、改进等均应包含在本发明的保护 范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101145027A?cl=zh">CN101145027A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年10月17日</td><td class="patent-data-table-td patent-date-value">2008年3月19日</td><td class="patent-data-table-td ">北京航空航天大学</td><td class="patent-data-table-td ">一种高精度磁悬浮控制力矩陀螺框架伺服控制系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101339406A?cl=zh">CN101339406A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年7月4日</td><td class="patent-data-table-td patent-date-value">2009年1月7日</td><td class="patent-data-table-td ">中国科学院自动化研究所</td><td class="patent-data-table-td ">一种自适应控制器及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101369133A?cl=zh">CN101369133A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月24日</td><td class="patent-data-table-td patent-date-value">2009年2月18日</td><td class="patent-data-table-td ">上海大学</td><td class="patent-data-table-td ">基于灰色预估器的低速摩擦伺服系统滑模变结构控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101488010A?cl=zh">CN101488010A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年3月6日</td><td class="patent-data-table-td patent-date-value">2009年7月22日</td><td class="patent-data-table-td ">北京理工大学</td><td class="patent-data-table-td ">一种伺服系统本质非线性补偿控制器</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101510072A?cl=zh">CN101510072A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年3月6日</td><td class="patent-data-table-td patent-date-value">2009年8月19日</td><td class="patent-data-table-td ">北京理工大学</td><td class="patent-data-table-td ">带有自适应模糊摩擦补偿的伺服系统控制器</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103095204B?cl=zh">CN103095204B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年1月9日</td><td class="patent-data-table-td patent-date-value">2014年11月26日</td><td class="patent-data-table-td ">重庆交通大学</td><td class="patent-data-table-td ">伺服电机抗干扰补偿控制系统及控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103345151A?cl=zh">CN103345151A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年5月10日</td><td class="patent-data-table-td patent-date-value">2013年10月9日</td><td class="patent-data-table-td ">广东电网公司电力科学研究院</td><td class="patent-data-table-td ">Tornambe型非线性鲁棒控制器及参数整定方法、系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103345151B?cl=zh">CN103345151B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年5月10日</td><td class="patent-data-table-td patent-date-value">2015年11月18日</td><td class="patent-data-table-td ">广东电网公司电力科学研究院</td><td class="patent-data-table-td ">Tornambe型非线性鲁棒控制器及参数整定方法、系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103941632A?cl=zh">CN103941632A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年4月29日</td><td class="patent-data-table-td patent-date-value">2014年7月23日</td><td class="patent-data-table-td ">西北工业大学</td><td class="patent-data-table-td ">一种基于自适应法抑制钻杆粘滑振动的系统及方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=pRt7BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0013020000">G05B13/02</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年9月29日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年11月17日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年6月20日</td><td class="patent-data-table-td ">C53</td><td class="patent-data-table-td ">Change or modification</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年6月20日</td><td class="patent-data-table-td ">COR</td><td class="patent-data-table-td ">Bibliographic change or correction in the description</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">CORRECT: INVENTOR; FROM: CHEN JIE GAN MINGGANG ZHANG GUOZHU TO: CHEN JIE GAN MINGGANG ZHANG GUOZHU DENG FANG DOU LIHUA PENG ZHIHONG CAI TAO BAI YONGQIANG CHEN WENJIE ZHANG JIA XIN BIN SUN JIAN</span></div></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/bdbd491b8242ed766b7c/CN101846975A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%B8%A6%E6%9C%89%E5%8A%A8%E6%80%81%E6%91%A9%E6%93%A6%E8%A1%A5%E5%81%BF%E7%9A%84%E4%BC%BA%E6%9C%8D%E7%B3%BB%E7%BB%9F.pdf?id=pRt7BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2MIS6HA-1dd_4cf5bjD1x5GuG7uA"},"sample_url":"https://www.google.com/patents/reader?id=pRt7BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

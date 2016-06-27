@@ -1,0 +1,202 @@
+<!DOCTYPE html><html><head><title>专利 CN101661483A - 一种推荐系统及推荐方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种推荐系统及推荐方法"><meta name="DC.contributor" content="史达飞" scheme="inventor"><meta name="DC.contributor" content="尹悦燕" scheme="inventor"><meta name="DC.contributor" content="刚 李" scheme="inventor"><meta name="DC.contributor" content="燕 李" scheme="inventor"><meta name="DC.contributor" content="鲁耀杰" scheme="inventor"><meta name="DC.contributor" content="株式会社理光" scheme="assignee"><meta name="DC.date" content="2008-8-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种推荐系统及推荐方法，该推荐方法包括：保存从源历史数据集中选择的部分源历史数据组成的样本历史数据集；建立样本历史数据集中的样本历史数据与源历史数据集中的源历史数据之间的链接，每一个样本历史数据与每一个源历史数据之间的链接具有各自的第一权值；基于用户当前输入的查询信息，从样本历史数据集中选择至少一个样本历史数据组成第一推荐结果，第一推荐结果中的每个样本历史数据对于用户当前输入的查询信息具有各自的第二权值；根据第一权值和第二权值从源历史数据中选择至少一个源历史数据组成第二推荐结果。本发明在不显著增加计算成本的情况下，基于全部的历史信息进行推荐，推荐结果完整。"><meta name="DC.date" content="2010-3-3"><meta name="citation_patent_publication_number" content="CN:101661483:A"><meta name="citation_patent_application_number" content="CN:200810212684"><link rel="canonical" href="https://www.google.com/patents/CN101661483A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101661483A?cl=zh"/><meta name="title" content="专利 CN101661483A - 一种推荐系统及推荐方法"/><meta name="description" content="本发明公开了一种推荐系统及推荐方法，该推荐方法包括：保存从源历史数据集中选择的部分源历史数据组成的样本历史数据集；建立样本历史数据集中的样本历史数据与源历史数据集中的源历史数据之间的链接，每一个样本历史数据与每一个源历史数据之间的链接具有各自的第一权值；基于用户当前输入的查询信息，从样本历史数据集中选择至少一个样本历史数据组成第一推荐结果，第一推荐结果中的每个样本历史数据对于用户当前输入的查询信息具有各自的第二权值；根据第一权值和第二权值从源历史数据中选择至少一个源历史数据组成第二推荐结果。本发明在不显著增加计算成本的情况下，基于全部的历史信息进行推荐，推荐结果完整。"/><meta property="og:title" content="专利 CN101661483A - 一种推荐系统及推荐方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101661483A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101661483A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=76x3BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101661483A&amp;usg=AFQjCNHrMcdKV6d0vc3bYnLcm7WZ9KigNw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/69109a01fe0a99aac077/CN101661483A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/69109a01fe0a99aac077/CN101661483A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101661483A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101661483A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101661483A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101661483B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101661483A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种推荐系统及推荐方法，该推荐方法包括：保存从源历史数据集中选择的部分源历史数据组成的样本历史数据集；建立样本历史数据集中的样本历史数据与源历史数据集中的源历史数据之间的链接，每一个样本历...</span><span itemprop="url">https://www.google.com/patents/CN101661483A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101661483A - 一种推荐系统及推荐方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101661483A - 一种推荐系统及推荐方法" title="专利 CN101661483A - 一种推荐系统及推荐方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101661483 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810212684</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年3月3日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年8月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年8月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101661483B?hl=zh-CN&amp;cl=zh">CN101661483B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810212684.6, </span><span class="patent-bibdata-value">CN 101661483 A, </span><span class="patent-bibdata-value">CN 101661483A, </span><span class="patent-bibdata-value">CN 200810212684, </span><span class="patent-bibdata-value">CN-A-101661483, </span><span class="patent-bibdata-value">CN101661483 A, </span><span class="patent-bibdata-value">CN101661483A, </span><span class="patent-bibdata-value">CN200810212684, </span><span class="patent-bibdata-value">CN200810212684.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%8F%B2%E8%BE%BE%E9%A3%9E%22">史达飞</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%B0%B9%E6%82%A6%E7%87%95%22">尹悦燕</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%9A+%E6%9D%8E%22">刚 李</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%87%95+%E6%9D%8E%22">燕 李</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%B2%81%E8%80%80%E6%9D%B0%22">鲁耀杰</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E7%90%86%E5%85%89%22">株式会社理光</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101661483A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101661483A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101661483A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=76x3BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810212684&amp;usg=AFQjCNG4-kvjUPu-Kbf6vZKVAEnyKyvhVQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=76x3BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101661483A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFBXaPu4UM9M1LfpivaPjAY5eYNdA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT92754454" lang="ZH" load-source="patent-office">一种推荐系统及推荐方法</invention-title>
+    </span><br><span class="patent-number">CN 101661483 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA73877893" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种推荐系统及推荐方法，该推荐方法包括：保存从源历史数据集中选择的部分源历史数据组成的样本历史数据集；建立样本历史数据集中的样本历史数据与源历史数据集中的源历史数据之间的链接，每一个样本历史数据与每一个源历史数据之间的链接具有各自的第一权值；基于用户当前输入的查询信息，从样本历史数据集中选择至少一个样本历史数据组成第一推荐结果，第一推荐结果中的每个样本历史数据对于用户当前输入的查询信息具有各自的第二权值；根据第一权值和第二权值从源历史数据中选择至少一个源历史数据组成第二推荐结果。本发明在不显著增加计算成本的情况下，基于全部的历史信息进行推荐，推荐结果完整。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(13)</span></span></div><div class="patent-text"><div mxw-id="PCLM29293824" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种推荐方法，其特征在于，包括：    步骤A，保存由源历史数据组成的源历史数据集；    步骤B，从由源历史数据组成的源历史数据集中选择部分源历史数据作为样本历史数据；    步骤C，保存由所述样本历史数据组成的样本历史数据集；    步骤D，建立所述样本历史数据集中的每一个样本历史数据与所述源历史数据集中的每一个源历史数据之间的链接，每一个样本历史数据与每一个源历史数据之间的链接具有各自的第一权值；    步骤E，基于用户当前输入的查询信息，从所述样本历史数据集中选择至少一个样本历史数据组成第一推荐结果，所述第一推荐结果中的每个样本历史数据对于用户当前输入的查询信息具有各自的第二权值；    步骤F，根据所述第一权值和第二权值从源历史数据中选择至少一个源历史数据组成第二推荐结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 根据权利要求1所述的方法，其特征在于，所述步骤A具体为：步骤Al,将所述源历史数据组织成基于用户查询数据结构的记录，每条 所述记录包括一次查询以及用户查询后的操作历史； 步骤A2，保存组织得到的所述记录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 根据权利要求2所述的方法，其特征在于，每条所述记录包括主数据 信息和与所述主数据信息对应的从数据信息；所述步骤D中建立所述样本历史数据集中的每一个记录与所述源历史数 据集中的每一个记录之间的链接，每个链接的第一权值为根据对应的两个记录 的主数据信息计算得到的权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 根据权利要求3所述的方法，其特征在于，所述主数据信息为查询信 息时，所述链接的权值义U,.， 如下：&lt;formula&gt;formula see original document page 2&lt;/formula&gt;其中，&#20175;为样本历史数据集中一条纪录的查询信息，^;为所述源历史数据集中的一条记录的查询信息，；^,表示词组w,的权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 根据权利要求3所述的方法，其特征在于，所述主数据信息为查询信息时，所述链接的权值义（&#20175;.，如下：&lt;formula&gt;formula see original document page 3&lt;/formula&gt;其中，&#20175;为样本历史数据集中一条纪录的查询信息，^为所述源历史数据 集中的一条记录的查询信息，to/^r(《,）表示用《,从数据库检索得到的前K篇文 档，卜l表示取模，其计算结果为文档数目。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 根据权利要求3所述的方法，其特征在于，所述主数据信息为查询信 息时，所述链接的权值X",， 如下：&lt;formula&gt;formula see original document page 3&lt;/formula&gt;其中，《,为样本历史数据集中一条纪录的查询信息，^为所述源历史数据 集中的一条记录的查询信息，visdocs(qi)表示用《,从数据库检索得到的文档中 用户访问的文档，而卜I表示取J漠，其计算结果为文档数目。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 根据权利要求2所述的方法，其特征在于，所述步骤B具体包括： 步骤B1，计算保存的每条所述记录的得分；分记录作为样本历史数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 根据权利要求7所述的方法，其特征在于，每条记录的得分为：&lt;formula&gt;formula see original document page 3&lt;/formula&gt;其中&lt;formula&gt;formula see original document page 3&lt;/formula&gt;其中，a、 -、厂《、e、 ^、 ；/、 e均为预先设置的参数，A为当前记录的 查询信息下用户访问的文档的数目，B为当前记录的查询信息的执行时间到当 前时间的时间差，C表示与当前记录的查询信息相似的查询信息的数目，D表 示用户的活跃程度，即用户单位时间内平均查询数量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 根据权利要求2所述的方法，其特征在于，所述步骤F具体包括： 步骤Fl,从所述第一推荐结果中选择一条推荐记录；步骤F2，获取源历史数据集中每个历史记录相对于该推荐记录的得分，所述历史记录的得分为两个权值的乘积，其中一个权值为所述推荐记录在所述第一推荐结果中的第二权值，另外一个权值为所述推荐记录与所述历史记录的链接的第一权值；步骤F3，根据计算得到的源历史数据集中每个历史记录相对于该推荐记 录的得分，从所述源历史数据中选择至少一个记录组成所述第二推荐结果。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10. &#8212;种推荐系统，其特征在于，包括：第 一保存模块，用于保存由源历史数据组成的源历史数据集； 数据选择模块，用于从所述源历史数据集中选择部分源历史数据作为样本 历史数据；第二保存模块，用于保存由所述样本历史数据组成的样本历史数据集；链接建立模块，用于建立所述样本历史数据集中的每一个样本历史数据与 所述源历史数据集中的每一个源历史数据之间的链接，每一个样本历史数据与 每一个源历史数据之间的链接具有各自的第一权值；第一推荐模块，用于基于用户当前输入的查询信息，从所述样本历史数据 集中选择至少一个样本历史数据组成第 一推荐结果，所述第 一推荐结果中的每 个样本历史数据对于用户当前输入的查询信息具有各自的第二权值；第二推荐模块，用于根据所述第 一权值和第二权值从所述第 一源历史数据中选择至少一个源历史数据组成第二推荐结果，所述第一源历史数据为与所述 第一推荐结果中样本历史数据具有链接的源历史数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 根据权利要求10所述的推荐系统，其特征在于，所述第一保存模块具体包括：组织单元，用于将所述源历史数据组织成基于用户查询数据结构的记录，每条所述记录包括一次查询以及用户查询后的操作历史； 第一保存单元，用于保存组织得到的所述记录。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 根据权利要求11所述的推荐系统，其特征在于： 每条所述记录包括主数据信息和与所述主数据信息对应的从数据信息； 所述链接建立模块具体用于建立所述样本历史数据集中的每一个记录与所述源历史数据集中的每一个记录之间的链接，每个链接的第一权值为根据对 应的两个记录的主数据信息计算得到的权值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 根据权利要求11所述的推荐系统，其特征在于，所述数据选择模块 具体包括：计算单元，用于计算所述第一保存单元中的每条记录的得分；选择单元，用于利用每个记录的得分从所述第一保存单元中以记录方式保存的源历史数据中选择部分源历史数据作为样本历史数据。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES35757386" lang="ZH" load-source="patent-office" class="description">
+    <p>一种推荐系统及推荐方法</p>
+    <p>技术领域</p>
+    <p>本发明涉及信息检索技术领域，特别是一种推荐系统及推荐方法。 背景技术</p>
+    <p>推荐搜索所应用的信息一般为用户的历史信息，随着时间的推移，历史数 据会越来越大。</p>
+    <p>现有技术的推荐搜索方法在计算的时候仅使用历史数据库中的部分数据 进行推荐搜索，虽然其能够降低计算复杂度，但由于其用于推荐搜索的数据仅 仅只是原始数据的 一部分，因此其推荐搜索的输出结果不可避免的具有不完全 的缺点。</p>
+    <p>发明内容</p>
+    <p>本发明的目的是提供一种推荐系统及推荐方法，基于全部的历史信息进行 推荐，而计算成本不高。</p>
+    <p>为了实现上述目的，本发明实施例提供了一种推荐方法，包括： 步骤A,保存由源历史数据组成的源历史数据集； 步骤B，从由源历史数据组成的源历史数据集中选择部分源历史数据作为 样本历史数据；</p>
+    <p>步骤C，保存由所述样本历史数据组成的样本历史数据集；</p>
+    <p>步骤D，建立所述样本历史数据集中的每一个样本历史数据与所述源历史</p>
+    <p>数据集中的每一个源历史数据之间的链接，每一个样本历史数据与每一个源历</p>
+    <p>史数据之间的链接具有各自的第一权值；</p>
+    <p>步骤E，基于用户当前输入的查询信息，从所述样本历史数据集中选择至</p>
+    <p>少一个样本历史数据组成第一推荐结果，所述第一推荐结果中的每个样本历史</p>
+    <p>数据对于用户当前输入的查询信息具有各自的第二权值；步骤F,根据所述第 一权值和第二权值从源历史数据中选择至少 一个源历史数据组成第二推荐结果。</p>
+    <p>上述的方法，其中，所述步骤A具体为：</p>
+    <p>步骤Al,将所述源历史数据组织成基于用户查询数据结构的记录，每条所述记录包括一次查询以及用户查询后的操作历史；步骤A2，保存组织得到的所述记录。</p>
+    <p>上述的方法，其中，每条所述记录包括主数据信息和与所述主数据信息对应的从数据信息；</p>
+    <p>所述步骤D中建立所述样本历史数据集中的每一个记录与所述源历史数据集中的每一个记录之间的链接，每个链接的第一权值为根据对应的两个记录的主数据信息计算得到的权值。</p>
+    <p>上述的方法，其中，所述主数据信息为查询信息时，所述链接的权值Z(&#20175;，如下：</p>
+    <p>H&#187;4e《,ri(^ ^e力</p>
+    <p>其中，&#20175;为样本历史数据集中一条纪录的查询信息，》为所述源历史数据集中的一条记录的查询信息，xWs表示词组w,的权值。</p>
+    <p>上述的方法，其中，所述主数据信息为查询信息时，所述链接的权值义(&#20175;，如下：</p>
+    <p>其中，&#20175;为样本历史数据集中一条纪录的查询信息，^/为所述源历史数据集中的一条记录的查询信息，似/7iT(&#20175;）表示用&#20175;从数据库检索得到的前K篇文档，h表示取模，其计算结果为文档数目。</p>
+    <p>上述的方法，其中，所述主数据信息为查询信息时，所述链接的权值Z",，</p>
+    <p>如下：</p>
+    <p>《3(《/&#187;《&#20034;)= v/sctocs (qr,) n v&amp;rfocs        / visrfoc^ (《,)uv/&#171;/ocy (《&#20034;)</p>
+    <p>其中，《,.为样本历史数据集中一条纪录的查询信息，^;为所述源历史数据</p>
+    <p>集中的一条记录的查询信息，visdocs(qi)表示用《,从数据库检索得到的文档中</p>
+    <p>用户访问的文档，而h表示取模，其计算结果为文档数目。</p>
+    <p>7上述的方法，其中，所述步骤B具体包括：步骤B1，计算保存的每条所述记录的得分；</p>
+    <p>步骤B2,利用每条记录的得分从以记录方式保存的源历史数据中选择部分记录作为样本历史数据。</p>
+    <p>上述的方法，其中，每条记录的得分为：</p>
+    <p>其中：</p>
+    <p>&lt;formula&gt;formula see original document page 8&lt;/formula&gt;</p>
+    <p>其中，or、尽产&amp; e、《、7/、 0均为预先设置的参数，A为当前记录的查询信息下用户访问的文档的数目，B为当前记录的查询信息的"l丸行时间到当前时间的时间差，C表示与当前记录的查询信息相似的查询信息的数目，D表示用户的活跃程度，即用户单位时间内平均查询数量。</p>
+    <p>上述的方法，其中，所述步骤F具体包括：步骤F1，从所述第一推荐结果中选择一条推荐记录；步骤F2,获取源历史数据集中每个历史记录相对于该推荐记录的得分，所述历史记录的得分为两个权值的乘积，其中一个权值为所述推荐记录在所述第 一推荐结果中的第二权值，另外一个权值为所述推荐记录与所述历史记录的链接的第一权值；</p>
+    <p>步骤F3，根据计算得到的源历史数据集中每个历史记录相对于该推荐记录的得分，从所述源历史数据中选择至少一个记录组成所述第二推荐结果。为了实现上述目的，本发明实施例还提供了一种推荐系统，包括：第 一保存模块，用于保存由源历史数据组成的源历史数据集； 数据选择模块，用于从所述源历史数据集中选择部分源历史数据作为样本 历史数据；</p>
+    <p>第二保存模块，用于保存由所述样本历史数据组成的样本历史数据集；</p>
+    <p>链接建立模块，用于建立所述样本历史数据集中的每一个样本历史数据与 所述源历史数据集中的每一个源历史数据之间的链接，每一个样本历史数据与 每一个源历史数据之间的链接具有各自的第一权值；</p>
+    <p>第一推荐模块，用于基于用户当前输入的查询信息，从所述样本历史数据 集中选择至少一个样本历史数据组成第一推荐结果，所述第一推荐结果中的每 个样本历史数据对于用户当前输入的查询信息具有各自的第二权值；</p>
+    <p>第二推荐模块，用于根据所述第 一权值和第二权值从所述第 一源历史数据 中选择至少一个源历史数据组成第二推荐结果，所述第一源历史数据为与所述 第 一推荐结果中样本历史数据具有链接的源历史数据。</p>
+    <p>上述的推荐系统，其中，所述第一保存模块具体包括：</p>
+    <p>组织单元，用于将所述源历史数据组织成基于用户查询数据结构的记录， 每条所述记录包括一次查询以及用户查询后的操作历史；</p>
+    <p>第一保存单元，用于保存组织得到的所述记录。</p>
+    <p>上述的推荐系统，其中，</p>
+    <p>每条所述记录包括主数据信息和与所述主数据信息对应的从数据信息； 所述链接建立;f莫块具体用于建立所述样本历史数据集中的每一个记录与</p>
+    <p>所述源历史数据集中的每一个记录之间的链接，每个链接的第一权值为根据对</p>
+    <p>应的两个记录的主数据信息计算得到的权值。</p>
+    <p>上述的推荐系统，其中，所述数据选择模块具体包括：</p>
+    <p>计算单元，用于计算所述第一保存单元中的每条记录的得分；</p>
+    <p>选择单元，用于利用每个记录的得分从所述第一保存单元中以记录方式保</p>
+    <p>存的源历史数据中选择部分源历史数据作为样本历史数据。 本发明实施例具有以下的有益效果：</p>
+    <p>本发明实施例的方法和系统在部分源历史数据的基础上得到一初始推荐 结果，进而利用该部分源历史数据和所有源历史数据之间的链接来丰富该初始推荐结果，所以本发明实施例的方法和系统得到的推荐结果是基于所有的源历</p>
+    <p>史数据得到，避免了现有技术中的推荐结果不完全的缺点；</p>
+    <p>本发明实施例的方法和系统中，需要利用该部分源历史数据和所有源历史 数据之间的链接来丰富该初始推荐结果，然而，由于该部分源历史数据和所有 源历史数据之间的链接可以预先计算得到，所以在实际的推荐查询过程中，并 不会显著增加推荐过程的计算量。</p>
+    <p>附图说明</p>
+    <p>图1为本发明实施例的推荐系统的结构示意图； 图2为本发明实施例的推荐方法的流程示意图。</p>
+    <p>具体实施方式</p>
+    <p>本发明实施例的推荐系统及推荐方法中，首先基于从源历史数据中选择一 部分历史数据作为样本历史数据，并在新搜索开始时，基于样本历史数据进行 推荐，输出一第一推荐结果，然而根据样本历史数据和源历史数据之间的关系， 丰富第一推荐结果。</p>
+    <p>本发明实施例的推荐系统如图1所示，包括：</p>
+    <p>第 一保存模块，用于保存由源历史数据组成的源历史数据集；</p>
+    <p>数据选择模块，用于从所述源历史数据集中选择部分源历史数据作为样本</p>
+    <p>历史数据；</p>
+    <p>第二保存模块，用于保存由所述样本历史数据组成的样本历史数据集；</p>
+    <p>链接建立模块，用于建立所述样本历史数据集中的每一个样本历史数据与 所述源历史数据集中的每一个源历史数据之间的链接，每一个样本历史数据与 每一个源历史数据之间的链接具有各自的第一权值；</p>
+    <p>第一推荐模块，用于基于用户当前输入的查询信息，从所述样本历史数据 集中选择至少一个样本历史数据组成第一推荐结果，所述第一推荐结果中的每 个样本历史数据对于用户当前输入的查询信息具有各自的第二权值；</p>
+    <p>第二推荐模块，用于根据所述第一权值和第二权值从所述第一源历史数据 中选择至少 一个源历史数据组成第二推荐结果；</p>
+    <p>10所述第 一源历史数据为与所述第 一推荐结果中样本历史数据具有链接的 源历史数据。</p>
+    <p>本发明实施例的推荐方法如图2所示，包括：</p>
+    <p>步骤21,从由源历史数据组成的源历史数据集中选择部分源历史数据作 为样本历史数据；</p>
+    <p>步骤22,保存由所述样本历史数据组成的样本历史数据集；</p>
+    <p>步骤23,建立所述样本历史数据集中的每一个样本历史数据与所述源历 史数据集中的每一个源历史数据之间的链接，每一个样本历史数据与每一个源 历史数据之间的链接具有各自的第 一权值；</p>
+    <p>步骤24，基于用户当前输入的查询信息，从所述样本历史数据集中选择 至少一个样本历史数据，组成第一推荐结果，所述第一推荐结果中的每个样本 历史数据对于用户当前输入的查询信息具有各自的第二权值；</p>
+    <p>步骤25,根据所述第一权值和第二权值从所述第一源历史数据中选择至 少一个源历史数据组成第二推荐结果后输出，所述第 一源历史数据为与所述第 一推荐结果中样本历史数据具有链接的源历史数据。</p>
+    <p>下面对本发明实施例的方法和系统进行进一步的详细说明。</p>
+    <p>一般来说，源历史数据中包括很多数据信息，如：用户信息、查询信息、 用户访问文档信息、用户查看文档的时间信息和用户鼠标轨迹信息等，在本发 明的具体实施例中，为了后续步骤的实现更加简单，首先将这些信息进行组织， 以一定的结构进行保存。</p>
+    <p>在本发明的具体实施例中，第一保存模块具体包括：</p>
+    <p>组织单元，用于将所述源历史数据集中的源历史数据组织成基于用户查询 数据结构的记录，每条所述记录包括一次查询以及用户查询后的操作历史；</p>
+    <p>第一保存单元，用于保存所述记录。</p>
+    <p>所谓基于用户查询的数据结构，就是一次查询以及用户查询后的操作历史 作为一个数据单位，详细如下所述。</p>
+    <p>为方便说明，以源历史数据中的数据信息包括用户信息、查询信息和用户 访问文档信息为例说明该基于用户查询的数据结构。</p>
+    <p>首先从历史数据的数据信息中选择其中一个数据信息作为主数据信息，其</p>
+    <p>ii他信息作为从数据信息；如选择用户信息作为主数据信息时，则查询信息和用 户访问文档信息为从数据信息，而选择查询信息作为主数据信息时，则用户信 息和用户访问文档信息为从数据信息；</p>
+    <p>对每个主数据信息执行如下操作：获取与这个主数据信息相应的所有从数 据信息，并对应保存主数据信息和从数据信息，举例说明如下：</p>
+    <p>如选择查询信息作为主数据信息时，首先选择一个查询信息；然后对于该 查询信息，获取该查询信息相应的用户信息，同时获取该查询信息对应的用户 访问文档信息，最后将该查询信息、该查询信息相应的用户信息和该查询信息 对应的用户访问文档信息作为 一条记录保存。</p>
+    <p>在完成上述的操作后，就需要从基于用户查询的数据结构保存的源历史数 据中选择出样本历史数据。</p>
+    <p>本发明实施例的系统和方法，首先需要从源历史数据集中选择部分源历史 数据作为样本历史数据，样本历史数据的选择是实现本发明实施例的方法和系 统的基础，同时，选择出来的样本历史数据也会对本发明实施例的系统和方法 的性能产生较大的影响，下面对如何选择样本历史数据进行详细说明。</p>
+    <p>下面以主数据信息为查询信息（Query )，而从数据信息为用户信息（User )、 用户访问文档信息（Visit)和用户查看文档的时间信息（Time)为例来详细说 明本发明实施例如何选择样本历史数据，其包括如下步骤：</p>
+    <p>首先，根据如下公式计算每条记录的得分Score:</p>
+    <p>&lt;formula&gt;formula see original document page 12&lt;/formula&gt;</p>
+    <p>其中：^    = f / c</p>
+    <p>Query</p>
+    <p>&#8212;{ A/77 A&lt;7/ ^visit = l 1 A2t;</p>
+    <p>其中，a、 A ,、 &amp; s、《、77、 0均为预先设置的参数，而A、 B、 C和</p>
+    <p>D的意义如下所述：</p>
+    <p>A表示该查询信息下用户访问的文档的数目；</p>
+    <p>B表示该查询信息执行时间到当前时间的时间差；</p>
+    <p>C表示所有记录中与该条记录的查询信息相似的查询信息的数目；</p>
+    <p>D表示用户的活跃程度，即用户单位时间内平均查询数量。</p>
+    <p>利用上述的公式计算得到每条记录的得分后，即可利用该得分从第一保存</p>
+    <p>模块以记录方式保存的源历史数据中选择部分源历史数据作为样本历史数据，</p>
+    <p>其中该步骤中可以利用经典赌盘选择算法从源历史数据中选择部分源历史数</p>
+    <p>据作为样本历史数据。</p>
+    <p>当然，在本发明的具体实施例中，从源历史数据中选择部分源历史数据作</p>
+    <p>为样本历史数据还可以采用其他的算法，如：</p>
+    <p>随机选取，从源历史数据中随机抽取预定数目的数据；</p>
+    <p>按时间选取，从源历史数据中按生成时间抽取预定数目的数据，如抽取某</p>
+    <p>一个时间段的数据，每间隔预定时间段抽取数据；</p>
+    <p>等间隔过滤选取等，从源历史数据中每间隔一定数目的源历史数据抽取一</p>
+    <p>个或多个。</p>
+    <p>在上述的具体实施例中，是以主数据信息为查询信息进行的说明，但该主 数据信息也可以是用户信息、查询信息、用户访问文档信息、用户查看文档的 时间信息或用户鼠标轨迹信息等数据信息，其具体实现方式与主数据信息为查 询信息时的实现方式基本相同，在此不再赘述。</p>
+    <p>13当然，也可以先使用主数据信息为查询信息进行一次选择，然后对选择得 到的数据利用其他数据信息作为主数据信息进行二次选择，然后得到最终的样 本历史数据，该二次选择可以是一次或多次。</p>
+    <p>通过上述的处理流程，已经得到了样本历史数据组成的样本历史数据集， 需要基于该样本历史数据集进行第一次推荐处理，其基于用户当前输入的查询 信息，从所述样本历史数据集中选择至少一个样本历史数据（以基于用户查询 的数据结构保存时，为至少一条纪录），组成第一推荐结果，所述第一推荐结</p>
+    <p>果中的每个样本历史数据对于用户当前输入的查询信息具有各自的第二权值； 这些推荐算法有：</p>
+    <p>协同过滤推荐算法（如周军锋汤显郭景峰.一种优化的协同过滤推荐算 法.计算机研究与发展2004年41&#24059;10期）</p>
+    <p>带回溯的随机游走推荐算法（如Hanghang Tong， Christos Faloutsos， Jia漏Yu Pan. Fast Random Walk with Restart and Its Applications.)</p>
+    <p>基于关联规则的推荐算法（如蔡淑琴，林森，梁凯.An Algorithm for Knowledge Recommendation Based on Association Rules.武汉3里工大学学&#27706;艮(4言 息与管理工程版）2007年O3期）</p>
+    <p>上述仅仅是举例说明可以应用的推荐算法，但本发明实施例不局限于上述 的推荐算法。</p>
+    <p>通过上述的处理，已经得到了样本历史数据组成的样本历史数据集，也得 到了一个初步的推荐结果，但该推荐结果仅仅只是基于样本历史数据集的推荐 结果，而该样本历史数据集的数据仅仅是源历史数据集中的数据的一部分，所 以粗推荐结果同样具有信息的损失，推荐结果不准确。</p>
+    <p>因此，本发明的具体实施例需要对该粗推荐结果进行丰富，使之更加准确。</p>
+    <p>在本发明的具体实施例中，通过建立样本历史数据集的样本历史数据与源历史</p>
+    <p>数据集中的源历史数据之间的链接，并确定权值，然后在基于该得到的权值进</p>
+    <p>行丰富，下面对其进行详细说明。</p>
+    <p>在上面已经描述了 ，在第一保存模块和第二保存模块中的源历史数据和样</p>
+    <p>本历史数据都是以基于用户查询的数据结构保存的，也就是历史数据中的每一 条记录都已经包括了主数据信息和其它信息之间的链接，因此，在本发明的具体实施例中只需要建立样本历史数据的每一条记录的主数据信息与所述源历 史数据集中的每一条记录的主数据信息的链接，并确定权值即可，建立了主数 据信息之间的链接，就隐式建立了其他数据信息之间的链接。 下面以主数据信息为查询信息为例进行详细说明。</p>
+    <p>样本历史数据的查询信息&#20175;与所述源历史数据集中的一条记录的查询信</p>
+    <p>息的链接的链接权值I (&#20175;，&amp;)如下所示：</p>
+    <p>其中，举例说明如下，假设&#20175;.包括A、 B和C三个词组，而&amp;.包括A、 B 和D三个词组，则&#20175;和&amp;.的交集为词组A和B。</p>
+    <p>A^,表示利用类似于QTF.IDF (查询词词频与方向文档频率）算法的权重计</p>
+    <p>算算法测量得到的词组w,的权值。</p>
+    <p>根据上述的算法即完成了建立样本历史数据集中的每一个样本历史数据 与所述源历史数据集中的每一个源历史数据之间的链^^妄，并确定权值。</p>
+    <p>上述描述了 一种建立样本历史数据与所述源历史数据集中的每一个源历 史数据之间的链接，并确定权值的方法，但本发明实施例的方法也可以采用其 它的方式建立链接，如下所示的客观反馈算法并确定链接的链接权值，如下所 示。</p>
+    <p>X2(《,，^.) = l&#37129;X (《,&#8226;）n卿《（《》|/|,&lt;V^T (《,.）u (力）|</p>
+    <p>其中，to/^(&#20175;)表示用《,.从数据库检索得到的前K篇文档，而卜l表示取模， 其计算结果为文档数目，举例说明如下。</p>
+    <p>假设用g,从某一数据库检索得到的与&#20175;相关的文档为3篇，分别为Al、 Bl和Cl,而用^从某一数据库检索得到的与^相关的文档为3篇，分别为 Al、 Cl和Dl，则to/?/r(^)nto/^T(力）为Al，而to/7兀(&#20175;）u/印;r(力）为Al、 Bl、</p>
+    <p>Cl和Dl,则链接的权值为1/4。</p>
+    <p>本发明实施例的方法还可以采用下述的方式建立链接，并利用主观反馈算 法确定链接的链接权值，如下所示。</p>
+    <p>其中，v&amp;rfocs(&#20175;）表示用《,从数据库检索得到的文档中用户访问的文档，</p>
+    <p>15而卜l表示取模，其计算结果为文档数目，举例说明如下。</p>
+    <p>假设用&#20175;从某一数据库检索得到的与《,相关的文档为3篇，分别为A2、 B2和C2，而用户访问过A2和B2，而用^从某一数据库检索得到的与&amp;.相 关的文档为3篇，分别为A2、 C2和D2,而用户访问过A2和C2，则 v/油cs(《》。W油cs(&amp;)为A2， 而v油cy(&#20175;)uW油cs(幻)为A2、 B2和C2,贝'J链接 的权值为1/3。</p>
+    <p>当然，还可以综合采用多种方式来计算链接权值，如下： 14^,力）="《(&#20175;,力）+ "《(&#20175;,力）+ (1-"-&gt;^)^(《,,力)</p>
+    <p>其中，a和p可才艮据需要预先设置。</p>
+    <p>在建立上述的链接和链接的权值后，第二推荐模块根据所述第一权值和第 二权值从所述第 一源历史数据中选择至少 一个源历史数据组成第二推荐结果， 所述第 一源历史数据为与所述第 一推荐结果中样本历史数据具有链接的源历 史数据，上述步骤的具体处理中，对于第一推荐结果中的每个记录执行如下流 程：</p>
+    <p>从所述第 一推荐结果中选择一条推荐记录；</p>
+    <p>获取源历史数据集中每个历史记录相对于该推荐记录的得分，所述历史记 录的得分为两个权值的乘积，其中一个权值为所述推荐记录在所述第一推荐结 果中的第二权值，另外一个权值为所述推荐记录与所述历史记录的链接的第一 权值；</p>
+    <p>根据计算得到的源历史数据集中每个历史记录相对于该推荐记录的得分， 利用选择算法从与所述第 一推荐结果中样本历史数据具有链接的源历史数据 中选择一定数量的数据进行推荐。</p>
+    <p>在本发明的具体实施例中，该选择算法可以为经典赌盘选择算法，或者根 据推荐得分选取较大的得分的一定数量数据等，但不限于上述举例的算法。</p>
+    <p>在上述的描述中，是以主数据信息为查询信息为例进行详细说明，但应当 了解的是，上述的方法同样适用于主数据信息为用户信息、用户访问文档信息、 用户查看文档的时间信息或用户鼠标轨迹信息等数据信息的情况，其差别仅在 于计算权值的处理对象的差别，在此不再详细说明。</p>
+    <p>以上所述仅是本发明的优选实施方式，应当指出，对于本^^支术领域的普通技术人员来说，在不脱离本发明原理的前提下，还可以作出若干改进和润饰， 这些改进和润饰也应^L为本发明的保护范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101957834A?cl=zh">CN101957834A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年8月12日</td><td class="patent-data-table-td patent-date-value">2011年1月26日</td><td class="patent-data-table-td ">百度在线网络技术（北京）有限公司</td><td class="patent-data-table-td ">一种基于用户特征进行内容推荐的方法与设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101957834B?cl=zh">CN101957834B</a></td><td class="patent-data-table-td patent-date-value">2010年8月12日</td><td class="patent-data-table-td patent-date-value">2013年8月7日</td><td class="patent-data-table-td ">百度在线网络技术（北京）有限公司</td><td class="patent-data-table-td ">一种基于用户特征进行内容推荐的方法与设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102231158A?cl=zh">CN102231158A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月17日</td><td class="patent-data-table-td patent-date-value">2011年11月2日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种数据集推荐方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102243494A?cl=zh">CN102243494A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月8日</td><td class="patent-data-table-td patent-date-value">2011年11月16日</td><td class="patent-data-table-td ">台湾积体电路制造股份有限公司</td><td class="patent-data-table-td ">异常处理的方法以及用于工艺控制的异常处理方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103337028A?cl=zh">CN103337028A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年6月21日</td><td class="patent-data-table-td patent-date-value">2013年10月2日</td><td class="patent-data-table-td ">中国科学院深圳先进技术研究院</td><td class="patent-data-table-td ">一种推荐方法、装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103455613A?cl=zh">CN103455613A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月6日</td><td class="patent-data-table-td patent-date-value">2013年12月18日</td><td class="patent-data-table-td ">南京大学</td><td class="patent-data-table-td ">基于MapReduce模型的兴趣感知服务推荐方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103455613B?cl=zh">CN103455613B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年9月6日</td><td class="patent-data-table-td patent-date-value">2016年3月16日</td><td class="patent-data-table-td ">南京大学</td><td class="patent-data-table-td ">基于MapReduce模型的兴趣感知服务推荐方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=76x3BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年3月3日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年6月2日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/69109a01fe0a99aac077/CN101661483A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%8F%8A%E6%8E%A8%E8%8D%90%E6%96%B9%E6%B3%95.pdf?id=76x3BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2zTadUQzt8El4YqNI_0EZ2yWkBJA"},"sample_url":"https://www.google.com/patents/reader?id=76x3BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

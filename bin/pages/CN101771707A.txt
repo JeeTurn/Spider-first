@@ -1,0 +1,282 @@
+<!DOCTYPE html><html><head><title>专利 CN101771707A - 实现终端间资源共享的方法、资源处理系统及终端 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="实现终端间资源共享的方法、资源处理系统及终端"><meta name="DC.contributor" content="吴俊 " scheme="inventor"><meta name="DC.contributor" content="中兴通讯股份有限公司" scheme="assignee"><meta name="DC.date" content="2010-2-8" scheme="dateSubmitted"><meta name="DC.description" content="本发明的目的在于提供一种实现终端间资源共享的方法、资源处理系统及终端，该方法包括：第一终端与第二终端建立连接后，获取第二终端可共享的资源信息；第一终端接收到用户输入的用于操作第二终端上的特定共享资源的指令后，创建一个与所述特定共享资源相应的虚拟资源，将用户输入的对虚拟资源进行操作的操作指令发送给第二终端；第二终端接收到所述操作指令后，根据所述操作指令操作相应资源，然后将相应资源的操作结果信息发送给所述第一终端；所述第一终端接收到所述操作结果信息后，显示所述相应资源的操作结果信息。根据本发明能够使不同的终端之间不需要第三方软件的支持即可以相互共享和使用彼此间的数据和功能。"><meta name="DC.date" content="2010-7-7"><meta name="citation_patent_publication_number" content="CN:101771707:A"><meta name="citation_patent_application_number" content="CN:201010112245"><link rel="canonical" href="https://www.google.com/patents/CN101771707A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101771707A?cl=zh"/><meta name="title" content="专利 CN101771707A - 实现终端间资源共享的方法、资源处理系统及终端"/><meta name="description" content="本发明的目的在于提供一种实现终端间资源共享的方法、资源处理系统及终端，该方法包括：第一终端与第二终端建立连接后，获取第二终端可共享的资源信息；第一终端接收到用户输入的用于操作第二终端上的特定共享资源的指令后，创建一个与所述特定共享资源相应的虚拟资源，将用户输入的对虚拟资源进行操作的操作指令发送给第二终端；第二终端接收到所述操作指令后，根据所述操作指令操作相应资源，然后将相应资源的操作结果信息发送给所述第一终端；所述第一终端接收到所述操作结果信息后，显示所述相应资源的操作结果信息。根据本发明能够使不同的终端之间不需要第三方软件的支持即可以相互共享和使用彼此间的数据和功能。"/><meta property="og:title" content="专利 CN101771707A - 实现终端间资源共享的方法、资源处理系统及终端"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101771707A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101771707A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=VDV_BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101771707A&amp;usg=AFQjCNEyLAbysjGYV7lcnAVLGkEm_O3OVQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ac56c62f7bb68d8d7d90/CN101771707A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ac56c62f7bb68d8d7d90/CN101771707A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101771707A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101771707A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101771707A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101771707B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101771707A?cl=zh" style="display:none"><span itemprop="description">本发明的目的在于提供一种实现终端间资源共享的方法、资源处理系统及终端，该方法包括：第一终端与第二终端建立连接后，获取第二终端可共享的资源信息；第一终端接收到用户输入的用于操作第二终端上的特定共享资源的...</span><span itemprop="url">https://www.google.com/patents/CN101771707A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101771707A - 实现终端间资源共享的方法、资源处理系统及终端</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101771707A - 实现终端间资源共享的方法、资源处理系统及终端" title="专利 CN101771707A - 实现终端间资源共享的方法、资源处理系统及终端"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101771707 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010112245</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年7月7日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年2月8日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年2月8日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101771707B?hl=zh-CN&amp;cl=zh">CN101771707B</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2011095038A1?hl=zh-CN&amp;cl=zh">WO2011095038A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010112245.5, </span><span class="patent-bibdata-value">CN 101771707 A, </span><span class="patent-bibdata-value">CN 101771707A, </span><span class="patent-bibdata-value">CN 201010112245, </span><span class="patent-bibdata-value">CN-A-101771707, </span><span class="patent-bibdata-value">CN101771707 A, </span><span class="patent-bibdata-value">CN101771707A, </span><span class="patent-bibdata-value">CN201010112245, </span><span class="patent-bibdata-value">CN201010112245.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%90%B4%E4%BF%8A%EF%BF%BD%22">吴俊 </a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%AD%E5%85%B4%E9%80%9A%E8%AE%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">中兴通讯股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101771707A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101771707A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101771707A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (15),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (4),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=VDV_BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010112245&amp;usg=AFQjCNHmESPrLaugEaTZdParjVW8DE5uVQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=VDV_BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101771707A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGZO2m_F-a5ml9ayAqGF1QYT0OS-w"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT96528019" lang="ZH" load-source="patent-office">实现终端间资源共享的方法、资源处理系统及终端</invention-title>
+      </span><br><span class="patent-number">CN 101771707 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA79171935" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明的目的在于提供一种实现终端间资源共享的方法、资源处理系统及终端，该方法包括：第一终端与第二终端建立连接后，获取第二终端可共享的资源信息；第一终端接收到用户输入的用于操作第二终端上的特定共享资源的指令后，创建一个与所述特定共享资源相应的虚拟资源，将用户输入的对虚拟资源进行操作的操作指令发送给第二终端；第二终端接收到所述操作指令后，根据所述操作指令操作相应资源，然后将相应资源的操作结果信息发送给所述第一终端；所述第一终端接收到所述操作结果信息后，显示所述相应资源的操作结果信息。根据本发明能够使不同的终端之间不需要第三方软件的支持即可以相互共享和使用彼此间的数据和功能。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(12)</span></span></div><div class="patent-text"><ol mxw-id="PCLM32362649" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种实现终端间资源共享的方法，其特征在于，包括：第一终端与第二终端建立连接后，获取所述第二终端可共享的资源信息；所述第一终端接收到用户输入的用于操作所述第二终端上的特定共享资源的指令后，创建一个与所述特定共享资源相应的虚拟资源，将用户输入的对所述虚拟资源进行操作的操作指令发送给所述第二终端；所述第二终端接收到所述操作指令后，根据所述操作指令操作相应资源，然后将相应资源的操作结果信息发送给所述第一终端；所述第一终端接收到所述操作结果信息后，显示所述相应资源的操作结果信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 如权利要求1所述的方法，其特征在于：所述第一终端将用户输入的对所述虚拟资源进行操作的操作指令发送给所述第二终 端之前还包括：将用户输入的对所述虚拟资源进行操作的操作指令打包成特定格式的第一 数据包；所述第二终端接收到所述第一数据包后，若识别出所述第一数据包为所述特定格式， 则根据所述第一数据包中的操作指令操作相应资源，然后将相应资源的操作结果打包成所 述特定格式的第二数据包后发送给所述第一终端；所述第一终端接收到所述第二数据包后，若识别出所述第二数据包为所述特定格式， 则显示所述第二数据包中的相应资源的操作结果。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 如权利要求1或2所述的方法，其特征在于：所述第一终端创建一个与所述特定共 享资源相应的虚拟资源之前还包括：判断本地是否具备驱动所述特定共享资源的应用模块，若不具备，则向所述第二终端 发送应用能力协商信息；所述第二终端接收到所述应用能力协商信息后，将与所述特定共享资源相匹配的应用 模块信息发送给所述第一终端；所述第一终端接收到所述应用模块信息后，加载与所述特定共享资源相匹配的应用模块。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 如权利要求1或2所述的方法，其特征在于：所述第一终端与第二终端建立连接具 体为：所述第一终端接收到与所述第二终端的连接请求信息后，以预定的安全策略检测所述 连接请求信息是否符合要求，若符合要求，则与所述第二终端建立连接。</div>
+    </div>
+    </li> <li class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5. &#8212;种资源处理系统，应用于第一终端中，其特征在于，包括，连接管理器，用于当检测到下层接口与目标终端建立连接时，获取所述目标终端上可 供共享的资源信息，并将获取到的资源信息输出给资源管理器；资源管理器，用于将接收到的所述目标终端上可供共享的资源信息输出给上层应用； 接收并显示所述接口驱动模块发来的所述第一操作结果信息；资源虚拟器，接收到用户输入的用于操作所述目标终端上特定共享资源的指令后，创 建一个与所述特定共享资源相应的虚拟资源，将用户对所述虚拟资源的操作指令输出给接 口驱动模块；及接口驱动模块，将接收到所述操作指令发送给所述目标设备；接收到所述目标终端返 回的所述特定共享资源根据所述操作指令进行操作的第一操作结果信息后，将所述第一操作结果信息输出给所述资源管理器。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 如权利要求5所述的资源处理系统，其特征在于：所述资源虚拟器，将用户对所述虚拟资源的操作指令输出给接口驱动模块之前还用 于，将用户对所述虚拟资源的操作指令打包成特定格式的第一数据包；所述接口驱动模块，接收到所述目标终端返回的所述特定共享资源根据所述操作指令 进行操作的第一操作结果信息后还用于，识别承载所述第一操作结果信息的数据包是否为 所述特定格式，若是，则将所述第一操作结果信息输出给所述资源管理器。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 如权利要求6所述的资源处理系统，其特征在于：所述接口驱动模块，用于将接收到所述第一数据包发送给所述目标设备具体为，根据 下层接口协议将所述第一数据包转换成与下层接口相匹配的数据包后发送给目标终端。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 如权利要求5所述的资源处理系统，其特征在于：还包括应用管理器， 所述连接管理器，还用于检测本地是否具备用于驱动所述特定共享资源的应用模块，若不具备，则向所述应用管理器输出一信号；所述应用管理器，用于接收到所述连接管理器输出的信号后，向所述目标终端发送应 用能力协商信息；接收到所述目标终端返回的应用能力信息后，加载与所述特定共享资源 相匹配的应用模块，然后向所述资源虚拟器输出一信号；所述资源虚拟器，用于接收到所述应用管理器输出的信号后，创建一个与所述特定共 享资源相应的虚拟资源。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 如权利要求5所述的资源处理系统，其特征在于：所述连接管理器，还用于接收到与所述目标终端的连接请求信息后，根据预定的安全 策略检测所述连接请求是否符合要求，若符合要求，则与所述目标终端建立连接。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 如权利要求5-9任一项所述的资源处理系统，其特征在于：所述资源管理器，还用于枚举本地可供共享的资源信息，将本地可供共享的资源信息 输出给所述接口驱动模块；所述接口驱动模块，还用于若接收到目标终端发来的获取本地资源信息的指令，则将 所述本地可供共享的资源信息发送给目标终端。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 如权利要求10所述的资源处理系统，其特征在于：所述接口驱动模块，还用于若接收到目标终端发来操作本地资源的指令，则将操作本 地资源的指令传输给所述资源管理器；将所述资源管理器发来的第二操作结果信息发送给 所述目标终端；所述资源管理器，还用于根据接收到的指令操作相应资源，将所述相应资源的第二操 作结果信息返回给所述接口驱动模块。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. &#8212;种终端，其特征在于：包括如权利要求5-11任一项所述的资源处理系统。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES37719637" lang="ZH" load-source="patent-office" class="description">
+    <p>实现终端间资源共享的方法、资源处理系统及终端</p>
+    <p>技术领域</p>
+    <p>[0001] 本发明涉及通信领域，特别是涉及实现终端间资源共享的方法、资源处理系统及终端。背景技术</p>
+    <p>[0002] 随着生活水平的提高，家电和消费类电子产品的种类和功能日益增多，不同电子产品往往偏重于不同的功能点，相互之间不能很好地共享彼此的功能，如果个人电脑与移动通讯及娱乐类电子产品间数据功能共享能力可以进一步提高，快速连接、方便共享的话，将给人们的使用带来新的体验。</p>
+    <p>[0003]     现有终端之间共享数据和功能的方法主要有USB、蓝牙、红外、WIFI (Wireless</p>
+    <p>Fidelity,又称802. lib标准）、以太网等，使用这些方法共享资源存在如下缺点：</p>
+    <p>[0004]     1、依赖驱动和上层软件：比如用户有手机和PC，如果用户想访问存在手机闪存卡</p>
+    <p>中的文件，那么用户连上数据线以后，先得保证在电脑上安装好这种手机型号的驱动和同</p>
+    <p>步软件，然后才能访问插在手机闪存卡中的文件资源，如果用户更换了别的型号的手机，那</p>
+    <p>么又得重新安装驱动和同步软件。</p>
+    <p>[0005] 2、共享模式单一 ：现在设备之间的共享，往往采用主从模式，手机在被电脑上的同步软件访问资源的同时无法访问电脑的资源，手机和手机之间也不能方便地共享资源。[0006] 3、使用不方便：如同第1点所述，用户的个人电脑和终端间共享数据往往是依赖同步软件来实现的，用户使用某种功能前还必须熟悉这个同步软件的说明书，如果用户有一部国外版的手机，那么同步软件还可能没有其当地的语言界面，那么在使用同步软件的各种功能时就存在困难。</p>
+    <p>[0007] 4、共享程度有限：现在的消费类产品存在很多功能点无法共享的缺点，比如手机、数码相机、摄像头都有摄像头和麦克，但是在用户的电脑上却无法共享摄像头和麦克风。</p>
+    <p>发明内容</p>
+    <p>[0008] 本发明的目的在于提供一种实现终端间资源共享的方法、资源处理系统及终端，使不同的终端之间可以相互共享和使用彼此间的数据和功能。</p>
+    <p>[0009] 为了解决上述技术问题，本发明提供了一种实现终端间资源共享的方法，包括：[0010]      第一终端与第二终端建立连接后，获取所述第二终端可共享的资源信息；[0011] 所述第一终端接收到用户输入的用于操作所述第二终端上的特定共享资源的指令后，创建一个与所述特定共享资源相应的虚拟资源，将用户输入的对所述虚拟资源进行操作的操作指令发送给所述第二终端；</p>
+    <p>[0012] 所述第二终端接收到所述操作指令后，根据所述操作指令操作相应资源，然后将相应资源的操作结果信息发送给所述第一终端；</p>
+    <p>[0013] 所述第一终端接收到所述操作结果信息后，显示所述相应资源的操作结果信息。[0014]     进一步地，上述方法还具有下面特点：[0015] 所述第一终端将用户输入的对所述虚拟资源进行操作的操作指令发送给所述第二终端之前还包括：将用户输入的对所述虚拟资源进行操作的操作指令打包成特定格式的第一数据包；</p>
+    <p>[0016] 所述第二终端接收到所述第一数据包后，若识别出所述第一数据包为所述特定格式，则根据所述第一数据包中的操作指令操作相应资源，然后将相应资源的操作结果打包成所述特定格式的第二数据包后发送给所述第一终端；</p>
+    <p>[0017] 所述第一终端接收到所述第二数据包后，若识别出所述第二数据包为所述特定格式，则显示所述第二数据包中的相应资源的操作结果。</p>
+    <p>[0018] 进一步地，上述方法还具有下面特点：所述第一终端创建一个与所述特定共享资源相应的虚拟资源之前还包括：</p>
+    <p>[0019] 判断本地是否具备驱动所述特定共享资源的应用模块，若不具备，则向所述第二终端发送应用能力协商信息；</p>
+    <p>[0020] 所述第二终端接收到所述应用能力协商信息后，将与所述特定共享资源相匹配的应用模块信息发送给所述第一终端；</p>
+    <p>[0021] 所述第一终端接收到所述应用模块信息后，加载与所述特定共享资源相匹配的应用模块。</p>
+    <p>[0022] 进一步地，上述方法还具有下面特点：所述第一终端与第二终端建立连接具体为：</p>
+    <p>[0023] 所述第一终端接收到与所述第二终端的连接请求信息后，以预定的安全策略检测</p>
+    <p>所述连接请求信息是否符合要求，若符合要求，则与所述第二终端建立连接。</p>
+    <p>[0024] 本发明还提供一种资源处理系统，应用于第一终端中，包括，</p>
+    <p>[0025] 连接管理器，用于当检测到下层接口与目标终端建立连接时，获取所述目标终端上可供共享的资源信息，并将获取到的资源信息输出给资源管理器；</p>
+    <p>[0026] 资源管理器，用于将接收到的所述目标终端上可供共享的资源信息输出给上层应用；接收并显示所述接口驱动模块发来的所述第一操作结果信息；</p>
+    <p>[0027] 资源虚拟器，接收到用户输入的用于操作所述目标终端上特定共享资源的指令后，创建一个与所述特定共享资源相应的虚拟资源，将用户对所述虚拟资源的操作指令输出给接口驱动模块；及</p>
+    <p>[0028] 接口驱动模块，将接收到所述操作指令发送给所述目标设备；接收到所述目标终</p>
+    <p>端返回的所述特定共享资源根据所述操作指令进行操作的第一操作结果信息后，将所述第</p>
+    <p>一操作结果信息输出给所述资源管理器。</p>
+    <p>[0029]      进一步地，上述资源处理系统还具有下面特点：</p>
+    <p>[0030] 所述资源虚拟器，将用户对所述虚拟资源的操作指令输出给接口驱动模块之前还</p>
+    <p>用于，将用户对所述虚拟资源的操作指令打包成特定格式的第一数据包；</p>
+    <p>[0031] 所述接口驱动模块，接收到所述目标终端返回的所述特定共享资源根据所述操作</p>
+    <p>指令进行操作的第一操作结果信息后还用于，识别承载所述第一操作结果信息的数据包是</p>
+    <p>否为所述特定格式，若是，则将所述第一操作结果信息输出给所述资源管理器。</p>
+    <p>[0032]     进一步地，上述资源处理系统还具有下面特点：</p>
+    <p>[0033] 所述接口驱动模块，用于将接收到所述第一数据包发送给所述目标设备具体为，</p>
+    <p>5根据下层接口协议将所述第一数据包转换成与下层接口相匹配的数据包后发送给目标终</p>
+    <p>&#19972;山顺。</p>
+    <p>[0034]      进一步地，上述资源处理系统还具有下面特点：还包括应用管理器，</p>
+    <p>[0035] 所述连接管理器，还用于检测本地是否具备用于驱动所述特定共享资源的应用模</p>
+    <p>块，若不具备，则向所述应用管理器输出一信号；</p>
+    <p>[0036] 所述应用管理器，用于接收到所述连接管理器输出的信号后，向所述目标终端发送应用能力协商信息；接收到所述目标终端返回的应用能力信息后，加载与所述特定共享资源相匹配的应用模块，然后向所述资源虚拟器输出一信号；</p>
+    <p>[0037] 所述资源虚拟器，用于接收到所述应用管理器输出的信号后，创建一个与所述特定共享资源相应的虚拟资源。</p>
+    <p>[0038]     进一步地，上述资源处理系统还具有下面特点：</p>
+    <p>[0039] 所述连接管理器，还用于接收到与所述目标终端的连接请求信息后，根据预定的安全策略检测所述连接请求是否符合要求，若符合要求，则与所述目标终端建立连接。[0040]      进一步地，上述资源处理系统还具有下面特点：</p>
+    <p>[0041] 所述资源管理器，还用于枚举本地可供共享的资源信息，将本地可供共享的资源信息输出给所述接口驱动模块；</p>
+    <p>[0042] 所述接口驱动模块，还用于若接收到目标终端发来的获取本地资源信息的指令，</p>
+    <p>则将所述本地可供共享的资源信息发送给目标终端。</p>
+    <p>[0043]      进一步地，上述资源处理系统还具有下面特点：</p>
+    <p>[0044] 所述接口驱动模块，还用于若接收到目标终端发来操作本地资源的指令，则将操作本地资源的指令传输给所述资源管理器；将所述资源管理器发来的第二操作结果信息发送给所述目标终端；</p>
+    <p>[0045] 所述资源管理器，还用于根据接收到的指令操作相应资源，将所述相应资源的第</p>
+    <p>二操作结果信息返回给所述接口驱动模块。</p>
+    <p>[0046] 本发明还提供一种终端，包括上述的资源处理系统。</p>
+    <p>[0047] 综上，根据本发明的一种实现终端间资源共享的方法、资源处理系统和终端，能够使不同的终端之间不需要第三方软件的支持即可以相互共享和使用彼此间的数据和功能。</p>
+    <p>附图说明</p>
+    <p>[0048] 图1为本发明实施例的终端的示意图。</p>
+    <p>[0049] 图2为本发明实施例的资源处理系统的示意图。</p>
+    <p>[0050] 图3为本发明实施例的实现终端间资源共享的方法的流程图。</p>
+    <p>[0051] 图4为本发明实施例的资源处理系统的应用示意图。</p>
+    <p>[0052] 图5为本发明实施例的闪连数据包的格式示意图。</p>
+    <p>[0053] 图6为本发明应用示例的传输驱动模块的处理流程图。</p>
+    <p>[0054] 图7为本发明应用示例的传输驱动模块的建立连接的处理流程图。</p>
+    <p>[0055] 图8为本发明应用示例的传输驱动模块接收数据的处理流程图。</p>
+    <p>[0056] 图9为本发明的实现终端间资源共享的方法的应用示例的流程图。具体实施方式</p>
+    <p>[0057] 针对以上问题，本发明提出了让不同终端间数据和功能高度共享的资源处理系统，拥有该资源处理系统的设备可以相互间方便地通过有线或无线便捷地共享数据和功能，可以跨操作系统平台及跨硬件通讯接口进行数据功能共享。</p>
+    <p>[0058] 本发明的终端是在原有终端的操作系统的下层接口驱动层与上层应用层中加入一些中间层（即，资源处理系统），如图l所示，用统一的中间层协议去描述资源对象的数据信息和控制信息，并且将这种数据信息和控制信息打包转换为与系统平台和硬件接口无关的信息流，让这种信息流（闪连数据包）通过中间层在不同终端之间进行传递，不同终端的中间层协议都支持本终端的资源管理、连接管理、驱动管理以及虚拟资源的功能，这样连接的终端的功能和数据信息可以相互收集和传递，相互之间枚举、操作对方的功能和数据。[0059] 本发明实施例的第一终端与第二终端建立连接后，若判断连接的第二终端也支持共享资源功能，则向所连接的第二终端获取可共享的资源信息，同时，本实施例的第一终端也可以将本地可供共享的资源信息发送给所连接的第二终端。</p>
+    <p>[0060] 第一终端接收到用户输入的用于使用所连接的第二终端的某一共享资源的指令</p>
+    <p>后，创建与所述选定共享资源相应的虚拟资源，若本地上未具备驱动所述选定共享资源的</p>
+    <p>应用模块，则第一终端与所连接的终端协商加载与所述选定共享资源相匹配的应用模块，</p>
+    <p>加载应用模块后即允许在本地创建与所述特定共享资源相应的虚拟资源。</p>
+    <p>[0061] 然后，第一终端可以将用户输入的对所述虚拟资源的操作命令打包成特定格式的</p>
+    <p>数据包后发送给所连接的第二终端；</p>
+    <p>[0062] 所述第二终端接收到所述操作命令后，根据所述操作命令操作选定的资源，然后将相应资源的操作结果发送给第一终端；</p>
+    <p>[0063] 第一终端显示接收到的第二终端上的选定共享资源的操作结果。</p>
+    <p>[0064] 这样，本实施例的第一终端即可共享第二终端上的资源，同理第二终端也可共享</p>
+    <p>第一终端上的资源。</p>
+    <p>[0065] 下面详细介绍一下本发明实施例的资源处理系统，如图2所示，本实施例的资源</p>
+    <p>处理系统包括：连接管理器、资源管理器、资源虚拟器和接口驱动模块，其中，</p>
+    <p>[0066] 连接管理器，用于当检测到下层接口与目标终端建立连接时，获取所述目标终端</p>
+    <p>上可供共享的资源信息发给资源管理器；</p>
+    <p>[0067] 资源管理器，用于将接收到的所述目标终端上可供共享的资源信息输出给上层应用；接收并显示所述接口驱动模块发来的所述第一操作结果信息；</p>
+    <p>[0068] 资源虚拟器，接收到用户输入的用于操作所述目标终端上特定共享资源的指令后，创建一个与所述特定共享资源相应的虚拟资源，将用户对所述虚拟资源的操作指令打包成第一数据包后输出给接口驱动模块；及</p>
+    <p>[0069] 接口驱动模块，将接收到所述第一数据包发送给所述目标设备，具体为，根据下层</p>
+    <p>接口协议将所述第一数据包转换成与下层接口相匹配的数据包后发送给目标终端；接收到</p>
+    <p>所述目标终端返回的所述特定共享资源根据所述指令进行操作的第一操作结果信息后，将</p>
+    <p>所述第一操作结果信息输出给所述资源管理器。</p>
+    <p>[0070]     进一步地，本实施例的资源处理系统还包括：应用管理器，</p>
+    <p>[0071] 所述连接管理器，还用于检测本地是否具备用于驱动所述特定共享资源的应用模</p>
+    <p>7向所述应用管理器输出一信号；</p>
+    <p>[0072] 所述应用管理器，用于接收到所述连接管理器输出的信号后，向所述目标终端发送应用能力协商信息；接收到所述目标终端返回的应用能力信息后，加载与所述特定共享资源相匹配的应用模块，然后向所述资源虚拟器输出一信号；</p>
+    <p>[0073] 所述资源虚拟器，用于接收到所述应用管理器输出的信号后，创建一个与所述特定共享资源相应的虚拟资源。</p>
+    <p>[0074] 进一步地，连接管理器，还用于接收到与所述目标终端的连接请求信息后，根据预定的安全策略检测所述连接请求是否符合要求，若符合要求，则与所述目标终端建立连接，若不符合要求，则拒绝连接，以防止非法连接。</p>
+    <p>[0075] 进一步地，资源管理器，还用于枚举本地可供共享的资源信息，将本地可供共享的资源信息输出给所述接口驱动模块；</p>
+    <p>[0076] 接口驱动模块，还用于若接收到目标终端发来的获取本地资源信息的指令，则将所述本地可供共享的资源信息发送给目标终端。</p>
+    <p>[0077] 进一步地，接口驱动模块，还用于若接收到目标终端发来操作本地资源的指令，则将操作本地资源的指令传输给所述资源管理器；将所述资源管理器发来的第二操作结果信息发送给所述目标终端；</p>
+    <p>[0078] 资源管理器，还用于根据接收到的指令操作相应资源，将所述相应资源的第二操作结果信息返回给所述接口驱动模块。</p>
+    <p>[0079] 这样，本实施例的资源处理系统所在的终端上的资源也可以被其他终端共享。</p>
+    <p>[0080] 下面是本发明实施例的一种实现终端间资源共享的方法，假设用户想通过终端A</p>
+    <p>共享终端B上的资源，如图3所示，该方法可以包括下面步骤：</p>
+    <p>[0081]     S11、终端A与终端B建立连接后，获取终端B可共享的资源信息；</p>
+    <p>[0082]     具体地，终端A可以基于一定的安全策略来获取终端B可共享的资源信息，终端</p>
+    <p>B将可共享的资源信息打包成特定格式的数据包，将该特定格式的数据包发送给终端A ;终</p>
+    <p>端A接收到数据包后，若判断该数据包为特定格式的数据包，则解析出该数据包中的可共</p>
+    <p>享的资源信息，将该可共享的资源信息显示给用户。</p>
+    <p>[0083] S12、终端A接收到用户输入的用于使用终端B上的特定共享资源的指令后，创建与所述特定共享资源相应的虚拟资源；</p>
+    <p>[0084] 具体地，终端A接收到使用特定共享资源的指令后，判断本地的应用能力是否与</p>
+    <p>该特定共享资源相匹配，若匹配，则在本地创建与该特定共享资源相应的虚拟资源；若不匹</p>
+    <p>配，则与终端B协商应用能力，终端B接收到终端A发来的协商应用能力请求后，将该特定</p>
+    <p>共享资源相应的应用模块、或者将该特定共享资源相应的应用模块的下载地址信息发送给</p>
+    <p>终端A，然后终端A加载该应用模块后，在本地创建与该特定共享资源相应的虚拟资源。</p>
+    <p>[0085]     S13、终端A将用户输入的对所述虚拟资源的操作命令发送给终端B ;</p>
+    <p>[0086] 具体地，终端A将用户输入的对所述虚拟资源的操作命令打包成特定格式的数据</p>
+    <p>包由相应的接口发送给终端B 。</p>
+    <p>[0087]     S14、终端B接收到终端A发来的操作命令后，根据所述操作命令操作相应资源；[0088]     具体地，若终端B判断接收到的数据包为特定格式的数据包，则解析出所述数据包中的操作命令，根据所述操作命令操作相应的资源。</p>
+    <p>8[0089]     S15、终端B将相应资源的操作结果发送给终端A ;</p>
+    <p>[0090] 具体地，终端B将相应资源的操作结果打包成特定格式的数据包由相应的接口发送给终端A。</p>
+    <p>[0091] S16、终端A显示接收到的操作结果。</p>
+    <p>[0092] 终端A接收到特定格式的数据包后，进行解析，将解析出的对共享资源的操作结果显示给用户。</p>
+    <p>[0093]     现基于本发明提出一种实施方案，但本发明不限于这种具体实施方案。</p>
+    <p>[0094] 图4为本发明的资源处理系统的应用示意图，如图4所示，本应用示例的资源处理</p>
+    <p>系统可以包括但不局限于以下几个部分：</p>
+    <p>[0095] 本应用示例中将接口驱动模块分为传输驱动模块和功能驱动模块。[0096] 1、传输驱动模块：</p>
+    <p>[0097] 传输驱动模块向上与功能驱动模块通过闪连数据包交互，向下调用操作系统的接口驱动和资源驱动。</p>
+    <p>[0098] A、传输驱动模块对资源驱动的调用，</p>
+    <p>[0099] 传输驱动模块解析功能驱动模块下发的操作命令和数据，转化为对具体资源驱动的调用或输入，同时将从资源驱动获得的相应资源的操作事件和输出数据打包为闪连数据包分发给相关接口。</p>
+    <p>[0100]     B、传输驱动模块对接口驱动的调用，完成闪连数据包的传输功能，</p>
+    <p>[0101]     传输驱动模块将不同类型的接口 （比如USB、蓝牙、串口 ）的连接管理、数据收发、</p>
+    <p>质量控制等具体机制的实现都统一起来，支持闪连数据包的解析，并通过下层接口进行传</p>
+    <p>输，例如，根据相应接口协议将闪连数据包转换成相应接口要求格式的数据包后由相应的</p>
+    <p>下层接口进行传输，也支持将下层接口获得的数据打包为闪连数据包发给上层功能驱动模</p>
+    <p>块，传输驱动模块即可实现了不同平台，不同接口之间的统一数据流和控制流的传输。</p>
+    <p>[0102]     闪连数据包的格式示意图如图5所示，其中，包类型可以定义为：连接请求、连接</p>
+    <p>应答、断开连接、异常、功能驱动等；操作码若定义为文件操作，则子操作码可以定义为：读、写、删除、定位、创建等；操作码若定义为媒体操作，则子操作码可以定义为播放、停止、定位、前进、后退等；操作码最高位为0时用于表示命令，为1时用于表示对操作码的响应；资源ID为资源在操作系统中的编号；资源类别可以定义为摄像头、音频设备等；序列号为操作命令的序号，可以从低到高排序，允许设置优先级。</p>
+    <p>[0103] 闪连数据包是在低层的通信数据包基础上以协议层封装的形式增加描述终端设备上的功能性和资源数据，将设备上不同的功能性和资源数据以双方都可以理解的数据结构或约定统一起来，同时包括了处理这些资源和功能的方法，使得资源具有高度的共享性，跨平台和接口，打个比方，比如说摄象头功能，所有支持本发明描述的设备相互间都可以发送接收和处理摄象头的控制命令和视频数据，而无须低层驱动的支持[0104] 2、功能驱动模块：</p>
+    <p>[0105] 为上层功能模块（包括但不限于资源管理器、连接管理器、应用管理器、资源虚拟器等）提供统一的接口 ，并将这些接口的实现操作转化为闪连数据包发给传输驱动模块，同时将传输驱动模块接收相关闪连数据包，根据解析结果分发到相关接口 ，作为上层接口的调用，并返回必要参数信息和数据信息。[0106] 3、资源管理器：</p>
+    <p>[0107] 支持对端和本端资源枚举功能，用于枚举当前终端中支持共享的资源；提供界面显示对端可供共享的资源，及显示对端共享资源的操作结果；监视资源的状态，包括空闲和使用的情况；设置资源访问的安全策略，当有其他终端连接时，可以根据安全策略获取其他终端支持的资源列表，查询双方终端下层驱动的匹配情况等。[0108]      4、连接管理器：</p>
+    <p>[0109]     A、用于处理下层接口上报的连接事件；</p>
+    <p>[0110] 对于远程设备发起的连接，查询远程设备的接口的类型及应用能力，例如，远程设备上有哪些功能资源，比如文件管理，摄像头，FM收音机，GPS等应用资源，将连接的消息通知远程设备；对于本终端发起的连接，会自动获取或通过人机方式得到连接的参数，根据连接的参数发命令给功能驱动模块去建立连接。如果设备或接口的类型或应用能力不匹配的话，则通知应用管理器，让应用管理器进行应用能力匹配的协商工作。[0111]     B、用于实现连接过程的安全策略，拒绝非法连接；</p>
+    <p>[0112] 比如，可以实现对终端的某些资源访问进行密码保护，或者设置某些资源的访问权限等。</p>
+    <p>[0113] C、用于管理已建立的连接，监视连接的状态。[0114] 4、应用管理器：</p>
+    <p>[0115]     用于查询远程设备应用能力的支持情况，可以为远程设备发送相应的应用资源。</p>
+    <p>[0116] 比如，某个用户用手机通过蓝牙共享火车上的公共媒体播放器，但是手机本身的</p>
+    <p>媒体播放器不支持闪连协议的媒体流，即手机不支持将音视频流数据包再加一层闪连协议</p>
+    <p>包进行封装以描述媒体流的类型信息等，那么手机的应用管理器就会与火车上的媒体播放</p>
+    <p>器进行交互，火车上应用管理器设备就会查询到手机的平台、操作系统和软件信息，给手机</p>
+    <p>发送相应的软件或补丁包，这样用户就可以在旅行中用手机点播火车上的媒体服务提供的</p>
+    <p>电影了。</p>
+    <p>[0117] 5、资源虚拟器：</p>
+    <p>[0118] 可以在资源处理系统中虚拟一个资源，并把资源处理系统对这个资源的访问和操作通过命令发到远程目标设备上，目标设备的资源虚拟器可以配合和响应这些命令的操作，而且共享的这些功能是可以跨平台通过不同接口方便的使用，不需要第三方软件的支持。</p>
+    <p>[0119] 例如，用户的手机既可以通过蓝牙来与别的手机建立文件共享，也可以通过GPRS上网，输入目标PC的IP地址和文件路径及访问密码就可以建立共享，对用户来说非常方便。</p>
+    <p>[0120] 为了让用户获得一个好的使用体验，资源虚拟器能够让用户使用原有操作系统中的应用来访问共享的资源，比如用户的手机不支持外接存储卡的功能，其可以通过手机的资源处理系统来共享其他手机中的存储卡或是一个文件夹，那么用户在自已的手机上就可以在文件管理器看到共享的这个存储卡，这种共享对用户来说可能是完全透明的，就像这张存储卡是用户的手机中的存储卡一样。</p>
+    <p>[0121] 图6为本发明应用示例的传输驱动模块的处理流程图；如图6所示，包括下面步骤：[0122]     传输驱动模块对下层接口上报的驱动事件的处理流程包括下面步骤：</p>
+    <p>[0123] S501、传输驱动模块接收到下层接口上报的事件后，判断下层接口的类型，根据不</p>
+    <p>同接口类型协议将所述驱动事件转换为统一的传输信号事件。</p>
+    <p>[0124] 例如，下层接口是USB接口 ，则根据USB接口协议将上报的事件转换为统一格式的数据包，以使上层能够透明地处理传输数据，而不用去管下层接口传输的数据采用的是哪种接口协议，例如USB、蓝牙、INTERNET (因特网）等协议</p>
+    <p>[0125] S502、判断转换后的传输信号事件的类型，传输信号事件的类型可以有连接请求，断开请求，数据接收，各种异常消息等，根据事件类型的不同分别调用不同类型的处理过程，分别有连接请求，断开请求，数据接收，各种异常消息的处理。</p>
+    <p>[0126] S503、处理过程最后将传输数据打包变成闪连数据包，闪连数据包格式所上文所述，请参考图5。</p>
+    <p>[0127]     S504 、将闪连数据包发给功能驱动模块。</p>
+    <p>[0128]     传输驱动模块对功能驱动模块下发的数据包的处理流程包括下面步骤：</p>
+    <p>[0129]     S505、功能驱动模块将上层功能模块（例如，资源管理器、连接管理器、应用管理</p>
+    <p>器和资源虚拟器等）下发的命令和数据封装成闪连数据包下发到传输驱动模块。</p>
+    <p>[0130] S506、传输驱动模块对接收到的闪连数据包的进行分析，根据解析出的闪连数据</p>
+    <p>包的内容进行不同的传输处理。</p>
+    <p>[0131] 解析出的闪连数据包的内容比如包括：发送连接请求、发送断开请求、发送数据、发送异常消息等，每个处理过程最后都要根据闪连数据包解析出来的源地址、目的地址、下层接口驱动协议的不同将数据包通过具体的接口协议封装后发送到目标设备。[0132]     S507、目标终端的接口驱动接收到数据包，之后的操作在目标设备上重复步骤S501的操作。</p>
+    <p>[0133] 图7为本发明应用示例的传输驱动模块的建立连接的处理流程图，如图7所示，包括下面步骤：</p>
+    <p>[0134]     S601 ，传输驱动模块通过下层接口协议与下层接口建立连接。</p>
+    <p>[0135] 比如，USB接口可以通过控制端点O建立连接，以太网可以通过TCP/IP的套接字建立连接。</p>
+    <p>[0136] S602，下层接口的连接建立好以后，传输驱动模块利用建立好的下层接口连接开始接收数据包，判断接收到的数据包格式，可以通过图5的闪连数据包的标志位进行判断，如果是合法的闪连数据包，则转入步骤S603，如果是非闪连数据包，则丢弃或透传给上层应用，也就是在接口中不断地监听闪连数据包。</p>
+    <p>[0137] S603，对接收到的闪连数据包的功能进行判断，若发现是连接包，则开始解析连接包参数，</p>
+    <p>[0138] 主要解析连接包的源设备平台类型（例如，源硬件平台号、源操作系统号、源接口类型、源接口版本、源地址类型、源地址偏移、校验和等）和目的设备平台类型（例如，目标硬件平台号、目标操作系统号、目标接口类型、目标接口版本、目标地址类型、目标地址偏移、校验和等）。</p>
+    <p>[0139] 判断该连接包是否合法，即判断目的地址和接口类型是否匹配，校验和等。</p>
+    <p>[0140]     闪连数据包的功能包括但不限于图5所描述的字段，闪连数据包的目的在于建立一个统一的协议，让闪连数据包能够描述数据包通信双方的不同的接口和资源类型所能包</p>
+    <p>含的足够的信息，比如连接的双方是什么硬件平台，资源是什么类型，格式等等。有了这样</p>
+    <p>的信息，本闪连数据包可以描述各种资源数据，无论是视频、音频、摄像头、文件共享的等等</p>
+    <p>都可以利用本闪连数据包的结构让通信双方理解，实现跨系统、跨接口传输。如JAVA是跨</p>
+    <p>平台的语言，利用了在各个平台搭好的虚拟机来实现上层JAVA代码的执行，闪连数据包也</p>
+    <p>就类以于JAVA代码，由各个平台上的资源管理装置来对其进行解析和执行，不同的是闪连</p>
+    <p>数据包不是代码，而是资源数据的描述，实现的是跨平台的资源和功能的共享。</p>
+    <p>[0"1]     S604，根据上层应用（例如，连接管理器）的设置（例如，安全策略、系统状态等）</p>
+    <p>决定是否接收连接，若不允许连接，则向目标终端发送连接失败应答数据包；若允许建立连</p>
+    <p>接，则转向步骤S605。</p>
+    <p>[0142]     S605 ，向目标终端发送连接成功应答数据包。</p>
+    <p>[0143] S606，构造闪连数据包，将闪连数据包发给功能驱动模块，功能驱动层会把该连接包分析以后发给连接管理器，由连接管理器记录连接的参数。</p>
+    <p>[0144] 图8为本发明应用示例的传输驱动模块接收数据的处理流程图，如图8所示，包括下面步骤：</p>
+    <p>[0145] S701、传输驱动模块接收包，如果接收到的包类型是数据包，则将该数据包的数据解析出来并填入与连接请求相绑定的缓冲区。</p>
+    <p>[0146] S702、在接收完成或缓冲区满的情况下构建闪连数据包，发给功能驱动模块，闪连数据包的数据区可以填入缓冲区的数据指针，然后发给功能驱动模块，然后执行步骤S703。[0147] S703、判断传输过程中是否有异常，若存在异常，则进行异常处理，例如，丢包或报错；若无异常，则返回步骤S701。</p>
+    <p>[0148] S704、功能驱动模块接收到该闪连数据包后进行处理，通过数据区指针和连接参</p>
+    <p>数取得数据内容，或直接把数据指针以API参数的方式再向上返回给上层应用。</p>
+    <p>[0149] 闪连传输模块发送数据的处理流程与接收数据的原理相同，方式相反，与上层功</p>
+    <p>能驱动模块都是通过闪连数据包交互，与下层交互是根据具体的下层接口协议进行数据发</p>
+    <p>送操作。</p>
+    <p>[0150] 基于以上处理流程，这里例举一个具体的实例更好地说明每个模块的功能和作用，但本发明的应用场景不限于以下列举的具体场景。</p>
+    <p>[0151] 手机和PC机都安装了本发明实施例的资源管理装置，将安装有本发明实施例的资源管理装置的手机和PC统称为"闪连设备"。手机上内置了摄像头和USB通讯功能，那么用户可以通过资源管理装置在PC上共享手机的摄像头功能，如图9所示，具体包括下面步骤：</p>
+    <p>[0152] S801 、手机通过USB数据线插入PC的USB接口 ，假设PC使用WindowsXP操作系统。[0153]     S802 、 PC发起USB枚举，与手机进行通信；</p>
+    <p>[0154]     具体地，PC的Windows XP操作系统的USB设备驱动发起USB枚举，若识别手机为</p>
+    <p>闪连设备，则调用对应注册的USB功能驱动与手机进行通信。</p>
+    <p>[0155]     S803、PC与手机建立数据连接，手机向PC发送共享资源信息；</p>
+    <p>[0156]     具体地，PC的传输驱动模块与手机的传输驱动模块建立数据连接，手机的资源管</p>
+    <p>理器通过功能驱动模块将自身可共享的资源列表发给手机的传输驱动模块，手机上的传输驱动模块将资源列表等数据封装为闪连数据包发给PC。</p>
+    <p>[0157]     在本实施例中，PC与手机上的连接管理器管理对端和本端的各种连接，包括USB</p>
+    <p>接口上的闪连连接，记录本端和对端的连接参数，创建与连接相关的数据缓冲区。</p>
+    <p>[0158]     PC与手机上的传输驱动模块用于监听下层USB驱动包的传输，捕捉闪连相关的数</p>
+    <p>据包。对于非闪连数据包，直接向原上层应用透传；对于闪连数据包进行连接、发送、接收的</p>
+    <p>处理，将接收的闪连数据包发给功能驱动模块，发送的闪连数据包通过USB驱动发送。</p>
+    <p>[0159] S804、PC识别出闪连数据包，解析该闪连数据包，将手机可共享的资源列表显示给</p>
+    <p>用户；</p>
+    <p>[0160] 具体地，PC侧的传输驱动模块接收到数据包，若识别为闪连资源描述包（即闪连 数据包），则将该闪连数据包输出给功能驱动模块，功能驱动模块解析该闪连数据包，分析 出手机上有哪些共享资源，然后将分析出的资源数据传送给资源管理器，再由资源管理器 提供的界面显示手机上可供共享的资源。</p>
+    <p>[0161]     本实施例中，PC和手机上的资源管理器都能够支持对端和本端的资源枚设举功</p>
+    <p>能、返回对端可用的资源列表、记录资源的参数、控制资源的访问权限、同时提供界面显示</p>
+    <p>对端可供共享的资源，用户可以从共享资源列表中选择共享的对象进行操作。</p>
+    <p>[0162] S805、若PC的用户希望共享摄像头的功能，则当PC接收到用户输入的共享摄像头</p>
+    <p>请求时，创建一个本地USB摄像头的驱动。</p>
+    <p>[0163] 具体地，PC侧的应用管理器接收到共享摄像头请求后，根据共享资源的类型（如， 摄像头），查找并加载与该资源类型相匹配的应用模块，比如摄像头应用，然后由资源虚拟 器创建一个本地的摄像头驱动，对该摄像头的实际控制和数据通过闪连功能驱动模块来调 用对端手机侧相应的驱动而实现。</p>
+    <p>[0164] 若PC上的应用管理器查找不到与该资源类型相匹配的应用模块，说明PC上的应 用能力与待共享资源的应用能力不匹配，则PC可以与手机进行应用能力协商，支持应用包 的下载、安装及更新。</p>
+    <p>[0165]     手机侧的应用管理器支持应用能力协商，当接收到PC发来的能力协商请求时，根 据对端平台的操作系统类型（例如，Windows XP)和语言环境等给PC发送摄像头应用包； 如果手机空间有限，不必支持给PC发送应用包，则可以告诉PC相应的应用包的下载地址。 [0166]     S806、 PC接收到用户在本地创建的USB摄像头上的操作指令后，将该操作指令打 包为闪连数据包后发送给手机。</p>
+    <p>[0167] 具体地，PC上的资源虚拟器接收到用户在本地创建的USB摄像头上的操作指令 后，将该操作指令输出给功能驱动模块，由功能驱动模块打包为闪连数据包后，通过传输驱 动模块转换为与下层接口协议相应的数据后发送给手机。</p>
+    <p>[0168] S807、手机接收到PC发来的操作指令后，根据操作指令操作摄像头，将摄像头的 操作结果信息打包为闪连数据包后发送给PC。</p>
+    <p>[0169] 具体地，手机的功能驱动模块接收到PC侧的资源功能调用请求后，操作手机的摄 像头，打开预览，并将预览的图像数据以及格式信息打包成闪连数据包，然后通过传输驱动 模块将闪连数据包发给PC。</p>
+    <p>[0170] S808、PC收到手机的闪连数据包，若判断是摄像头资源数据，分析出图像数据和图 像格式，显示摄像头获取的图像。</p>
+    <p>13[0171] 具体地，PC上的传输驱动模块接收到该闪连数据包后，将闪连数据包发送给功能 驱动模块，由功能驱动模块驱动资源管理器显示摄像头摄下的图像。</p>
+    <p>[0172] 下面列举一些使用本发明的资源处理系统的场景，实际的使用场景包括但不限于 以下几种：</p>
+    <p>[0173]      1、家用电器智能集成控制中心；</p>
+    <p>[0174] 智能家用电器通过通信线连入带有本发明的资源处理系统的智能家电控制中心， 智能家电控制中心实时收集各个家电提供的状态数据，比如洗衣机是否洗好衣服了，电饭 堡是否煮好饭了，某个房间的电灯是否还亮着，水表和电表的读数等，智能家电控制家电中 心对用户的各种闪连设备提供无线或有线接口 ，这样用户在某个房间看电视时候，带有本 发明的资源管理系统的电视机会自动提示用户，楼下的水已烧开了，是否关闭电源，有客人 按门铃，主人不必跑下楼去到大门旁的可视门禁去按下门钮，用电视遥控器就可以完成这 个操作，控制功能也可以随时转到主人支持带有本发明的资源管理系统的手机上，主人用 手机就可以选择电视的频道，控制洗衣机和微波炉等。 [0175]     2、手机变无线U盘，无线摄像头，远程办公；</p>
+    <p>[0176] 传统的手机需要通过USB插入计算机上，然后在计算机装好驱动和同步软件才能 访问手机上的文件，如果计算机安装了不同的操作系统，家人使用的手机型号都不同，那么 要安装一大堆驱动和软件很麻烦，装有本发明的资源管理系统的手机和个人电脑可以方便 的把手机提供的U盘和摄像头功能透明无缝地与个人计算机的操作系统相整合。这可以通 过有线或无线方式，把手机放在计算机旁边，计算机就会提示有U盘和摄像头接入，本发明 的资源管理系统会自动把手机的U盘和摄像头虚拟化为一个本地的资源，即使通过远程网 络也可以实现。本发明的资源管理系统共享的资源具有传递性和网络性的特点，如果上班 时您的手机忘在家里了 ，只要您的手机连在上网的电脑上，您也通过WAP PUSH消息让您的 手机接入3G网络，这样你就可以通过公司的互联网把家中的手机虚拟化为正连在办公室 电脑上的U盘，而且可以在电脑上读电话本，收发短信等，远程共享的摄像头还可以帮忙照 看家中的孩子。</p>
+    <p>[0177]     3、公共场所的多媒体点播系统；</p>
+    <p>[0178] 装有本发明的资源处理系统的多媒体点播系统可以装在长途汽车和列车中，旅客 只要拥有具有本发明的资源处理系统的移动终端就可以与多媒体点播系统的进行连接，随 意选择点播系统中提供电影、电视、音乐、广播等，如果同伴的手机具有GPS定位或移动电 视的功能，那么使用闪连可以共享他的电视和GPS的服务功能。 [0179] 4、多媒体教学系统；</p>
+    <p>[0180] 老师可以将课件放在自己的手机上，通过本发明的资源处理系统与电子白板进行 无线连接，在白板上播放自己的课件，学生也可以加入白板资源的共享，把手机或计算机触 摸屏映射到白板上，在上面进行教学互动。</p>
+    <p>[0181] 当然，本发明还可有其他多种实施例，在不背离本发明精神及其实质的情况下，熟 悉本领域的技术人员当可根据本发明作出各种相应的改变和变形，但这些相应的改变和变 形都应属于本发明所附的权利要求的保护范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101908989A?cl=zh">CN101908989A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年8月16日</td><td class="patent-data-table-td patent-date-value">2010年12月8日</td><td class="patent-data-table-td ">海尔集团公司;青岛海尔智能家电科技有限公司</td><td class="patent-data-table-td ">一种智能家电的控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101908989B?cl=zh">CN101908989B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年8月16日</td><td class="patent-data-table-td patent-date-value">2016年1月13日</td><td class="patent-data-table-td ">海尔集团公司</td><td class="patent-data-table-td ">一种智能家电的控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102394920A?cl=zh">CN102394920A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年10月24日</td><td class="patent-data-table-td patent-date-value">2012年3月28日</td><td class="patent-data-table-td ">深圳市智慧宇宙管理咨询有限公司</td><td class="patent-data-table-td ">一种共享电脑网络的方法、移动终端及电脑</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102394920B?cl=zh">CN102394920B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年10月24日</td><td class="patent-data-table-td patent-date-value">2015年7月29日</td><td class="patent-data-table-td ">深圳市智慧宇宙管理咨询有限公司</td><td class="patent-data-table-td ">一种共享电脑网络的方法、移动终端及电脑</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102421100A?cl=zh">CN102421100A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月2日</td><td class="patent-data-table-td patent-date-value">2012年4月18日</td><td class="patent-data-table-td ">巴比禄股份有限公司</td><td class="patent-data-table-td ">数据转送方法及终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102469089A?cl=zh">CN102469089A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年11月17日</td><td class="patent-data-table-td patent-date-value">2012年5月23日</td><td class="patent-data-table-td ">金蝶软件（中国）有限公司</td><td class="patent-data-table-td ">一种动态数据共享与隔离的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102819614A?cl=zh">CN102819614A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月29日</td><td class="patent-data-table-td patent-date-value">2012年12月12日</td><td class="patent-data-table-td ">深圳市茁壮网络股份有限公司</td><td class="patent-data-table-td ">一种局域网中共享目录分类显示方法、装置及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102932383A?cl=zh">CN102932383A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月8日</td><td class="patent-data-table-td patent-date-value">2013年2月13日</td><td class="patent-data-table-td ">联想(北京)有限公司</td><td class="patent-data-table-td ">一种数据传输方法、终端及终端系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102932383B?cl=zh">CN102932383B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年8月8日</td><td class="patent-data-table-td patent-date-value">2015年7月29日</td><td class="patent-data-table-td ">联想(北京)有限公司</td><td class="patent-data-table-td ">一种数据传输方法、终端及终端系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103118068A?cl=zh">CN103118068A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月26日</td><td class="patent-data-table-td patent-date-value">2013年5月22日</td><td class="patent-data-table-td ">珠海金山办公软件有限公司</td><td class="patent-data-table-td ">由当前应用设备从其它数据源设备获取数据的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103167343A?cl=zh">CN103167343A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月14日</td><td class="patent-data-table-td patent-date-value">2013年6月19日</td><td class="patent-data-table-td ">宏&#30849;股份有限公司</td><td class="patent-data-table-td ">电子装置、电子系统以及共享数据的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103327459A?cl=zh">CN103327459A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月23日</td><td class="patent-data-table-td patent-date-value">2013年9月25日</td><td class="patent-data-table-td ">宇龙计算机通信科技(深圳)有限公司</td><td class="patent-data-table-td ">共享短、彩信的方法、系统和移动终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103986504A?cl=zh">CN103986504A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年5月20日</td><td class="patent-data-table-td patent-date-value">2014年8月13日</td><td class="patent-data-table-td ">深圳市同洲电子股份有限公司</td><td class="patent-data-table-td ">一种图像共享的方法及电子设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2011095038A1?cl=zh">WO2011095038A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月20日</td><td class="patent-data-table-td patent-date-value">2011年8月11日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">实现终端间资源共享的方法、资源处理系统及终端</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012152010A1?cl=zh">WO2012152010A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月22日</td><td class="patent-data-table-td patent-date-value">2012年11月15日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种网络设备功能共享的方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=VDV_BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=VDV_BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=VDV_BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L67/303">H04L67/303</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">H04L29/08N29T</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年7月7日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年12月28日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年8月12日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ac56c62f7bb68d8d7d90/CN101771707A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%AE%9E%E7%8E%B0%E7%BB%88%E7%AB%AF%E9%97%B4%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB%E7%9A%84%E6%96%B9%E6%B3%95_%E8%B5%84.pdf?id=VDV_BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2JjRZyELi4AJ0ijCSzGskTTQQPvQ"},"sample_url":"https://www.google.com/patents/reader?id=VDV_BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

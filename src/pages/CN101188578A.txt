@@ -1,0 +1,242 @@
+<!DOCTYPE html><html><head><title>专利 CN101188578A - 组群邮件/消息转换装置及方法、和组群信息交互系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="组群邮件/消息转换装置及方法、和组群信息交互系统"><meta name="DC.contributor" content="莹 王" scheme="inventor"><meta name="DC.contributor" content="郑志昊" scheme="inventor"><meta name="DC.contributor" content="腾讯科技（深圳）有限公司" scheme="assignee"><meta name="DC.date" content="2007-12-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种组群邮件转换方法，包括：提取组群即时消息中的组群信息；根据所述组群信息，获取组群中成员的电子邮件地址；根据所述电子邮件地址，将所述组群即时消息转换为组群电子邮件；发送所述组群电子邮件。本发明又公开了一种组群消息转换方法，包括：提取组群电子邮件中的组群信息；根据所述组群信息，获取组群中成员的即时通信身份标识；根据所述即时通信身份标识，将所述组群电子邮件转换为组群即时消息；发送所述组群即时消息。同时，本发明还提供了一种组群邮件转换装置、一种组群消息转换装置，以及一种组群信息交互系统。本发明解决了网络即时通信系统与电子邮件系统中的组群信息无法实现交互操作的问题。"><meta name="DC.date" content="2008-5-28"><meta name="citation_patent_publication_number" content="CN:101188578:A"><meta name="citation_patent_application_number" content="CN:200710160699"><link rel="canonical" href="https://www.google.com/patents/CN101188578A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101188578A?cl=zh"/><meta name="title" content="专利 CN101188578A - 组群邮件/消息转换装置及方法、和组群信息交互系统"/><meta name="description" content="本发明公开了一种组群邮件转换方法，包括：提取组群即时消息中的组群信息；根据所述组群信息，获取组群中成员的电子邮件地址；根据所述电子邮件地址，将所述组群即时消息转换为组群电子邮件；发送所述组群电子邮件。本发明又公开了一种组群消息转换方法，包括：提取组群电子邮件中的组群信息；根据所述组群信息，获取组群中成员的即时通信身份标识；根据所述即时通信身份标识，将所述组群电子邮件转换为组群即时消息；发送所述组群即时消息。同时，本发明还提供了一种组群邮件转换装置、一种组群消息转换装置，以及一种组群信息交互系统。本发明解决了网络即时通信系统与电子邮件系统中的组群信息无法实现交互操作的问题。"/><meta property="og:title" content="专利 CN101188578A - 组群邮件/消息转换装置及方法、和组群信息交互系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101188578A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101188578A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=2SxdBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101188578A&amp;usg=AFQjCNFZyGWncTSX7pOVbK_DTDUaDEiLLQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/8851c8d067844f8b2526/CN101188578A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/8851c8d067844f8b2526/CN101188578A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101188578A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101188578A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101188578A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101188578B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101188578A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种组群邮件转换方法，包括：提取组群即时消息中的组群信息；根据所述组群信息，获取组群中成员的电子邮件地址；根据所述电子邮件地址，将所述组群即时消息转换为组群电子邮件；发送所述组群电子邮件。...</span><span itemprop="url">https://www.google.com/patents/CN101188578A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101188578A - 组群邮件/消息转换装置及方法、和组群信息交互系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101188578A - 组群邮件/消息转换装置及方法、和组群信息交互系统" title="专利 CN101188578A - 组群邮件/消息转换装置及方法、和组群信息交互系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101188578 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200710160699</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2008年5月28日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2007年12月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2007年12月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101188578B?hl=zh-CN&amp;cl=zh">CN101188578B</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2009086765A1?hl=zh-CN&amp;cl=zh">WO2009086765A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200710160699.8, </span><span class="patent-bibdata-value">CN 101188578 A, </span><span class="patent-bibdata-value">CN 101188578A, </span><span class="patent-bibdata-value">CN 200710160699, </span><span class="patent-bibdata-value">CN-A-101188578, </span><span class="patent-bibdata-value">CN101188578 A, </span><span class="patent-bibdata-value">CN101188578A, </span><span class="patent-bibdata-value">CN200710160699, </span><span class="patent-bibdata-value">CN200710160699.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%8E%B9+%E7%8E%8B%22">莹 王</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%91%E5%BF%97%E6%98%8A%22">郑志昊</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%85%BE%E8%AE%AF%E7%A7%91%E6%8A%80%EF%BC%88%E6%B7%B1%E5%9C%B3%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">腾讯科技（深圳）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101188578A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101188578A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101188578A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (5),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=2SxdBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200710160699&amp;usg=AFQjCNG4t9Pi2jqatOD6HAuQo0KdxuoNZg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=2SxdBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101188578A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNF14jHKjZMu9yhTC0YM50BTN4Ijpg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT70654459" lang="ZH" load-source="patent-office">组群邮件/消息转换装置及方法、和组群信息交互系统</invention-title>
+      </span><br><span class="patent-number">CN 101188578 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA38424147" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种组群邮件转换方法，包括：提取组群即时消息中的组群信息；根据所述组群信息，获取组群中成员的电子邮件地址；根据所述电子邮件地址，将所述组群即时消息转换为组群电子邮件；发送所述组群电子邮件。本发明又公开了一种组群消息转换方法，包括：提取组群电子邮件中的组群信息；根据所述组群信息，获取组群中成员的即时通信身份标识；根据所述即时通信身份标识，将所述组群电子邮件转换为组群即时消息；发送所述组群即时消息。同时，本发明还提供了一种组群邮件转换装置、一种组群消息转换装置，以及一种组群信息交互系统。本发明解决了网络即时通信系统与电子邮件系统中的组群信息无法实现交互操作的问题。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(15)</span></span></div><div class="patent-text"><div mxw-id="PCLM5872401" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种组群邮件转换装置，其特征在于，包括：    组群消息解析单元，用于提取组群即时消息中的组群信息；    成员信息获取单元，用于根据所述组群消息解析单元提取的所述组群信息，获取所述组群中成员的电子邮件地址；    组群邮件转换单元，用于根据所述成员信息获取单元获取的所述电子邮件地址，将所述组群即时消息转换为组群电子邮件；    组群邮件发送单元，用于发送组群邮件转换单元生成所述组群电子邮件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 如权利要求l所述的装置，其特征在于，进一步包括：组群消息接收单 元，用于接收即时通信系统中用户发送的组群即时消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 如权利要求2所述的装置，其特征在于，所述成员信息获取单元，用于 根据组群消息解析单元提取的所述组群信息，查询即时通信系统中所述组群的 成员的在线状态，并查询存储组群信息的系统数据库，获取所述组群中处于离 线状态的成员用户的电子邮件地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 如权利要求1至3任一项所述的装置，其特征在于，进一步包括：组群 邮件归类单元，用于对电子邮件系统中用户收到的、同类的组群电子邮件进行 聚合归类。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5、 一种组群邮件转换方法，其特征在于，包括： 提取组群即时消息中的组群信息； 冲艮据所述组群信息，获取组群中成员的电子邮件地址； 才艮据所述电子邮件地址，将所述组群即时消息转换为组群电子邮件； 发送所述组群电子邮件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 如权利要求5所述的方法，其特征在于，进一步包括： 接收即时通信系统中用户发送的组群即时消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 如权利要求6所述的方法，其特征在于，提取组群即时消息中的组群信 息包括：提取所述组群即时消息中的组群身份标识、发送者即时通信身份标识、 发送时间以及该组群即时消息的内容。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 如权利要求6所述的方法，其特征在于，根据所述组群信息，获取组群中成员的电子邮件地址包括：根据所述组群信息，获取组群中当前时刻处于离线状态的成员的即时通信身份标识；根据所述身份标识获取当前时刻处于离线状态的成员的电子邮件地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 如权利要求5至8任一项所述的方法，其特征在于，进一步包括： 对电子邮件系统中的组群电子邮件进行聚合归类。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10、 一种组群消息转换装置，其特征在于，包括： 组群邮件解析单元，用于提取组群电子邮件中的组群信息；成员信息获取单元，用于根据所述组群邮件解析单元提取的所述组群信息， 获取组群的成员的即时通信身份标识；组群消息转换单元，用于根据所述成员信息获取单元获取的所述即时通信 身份标识，将所述组群电子邮件转换为组群即时消息；组群消息发送单元，用于发送组群消息转换单元生成的所述组群即时消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11、 如权利要求IO所述的装置，其特征在于，进一步包括：组群邮件接收 单元，用于接收电子邮件系统中用户发送的组群电子邮件。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12、 一种组群消息转换方法，其特征在于，包括： 提取组群电子邮件中的组群信息；根据所述组群信息，获取组群中成员的即时通信身份标识； 根据所述即时通信身份标识，将所述组群电子邮件转换为组群即时消息； 发送所述组群即时消息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 如权利要求12所述的方法，其特征在于，进一步包括： 接收电子邮件系统中用户发送的组群电子邮件。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14、 如权利要求12或13所述的方法，其特征在于，提取组群电子邮件中 的组群信息包括：提取该组群电子邮件中的组群身份标识、发送者电子邮件地 址、该组群电子邮件的主题、发送时间以及该组群电子邮件在各个接收者用户 邮箱中的超级链接地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15、 一种组群信息交互系统，其特征在于，包括: 如权利要求1所述的组群邮件转换装置； 如权利要求10所述的组群消息转换装置。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES10580680" lang="ZH" load-source="patent-office" class="description">
+    <p>组群邮件/消息转换装置及方法、和组群信息交互系统</p>
+    <p>技术领域</p>
+    <p>本发明涉及电通信技术领域，特别涉及一种组群邮件转换装置及方法， 一种组群消息转换装置及方法，以及一种组群信息交互系统。</p>
+    <p>背景技术</p>
+    <p>网络即时通信（IM)服务是一种基于互联网的通信服务， 一般以实现 网络上即时通信功能为主。即时通信工具是指实现网络即时通信服务的软 件，也可以认为是即时通信客户端软件，例如，目前用户所使用的即时通信 工具包括QQ、 ICQ、 MSN Messenger等等。由于使用起来方便灵活，即时 通信工具在互联网上得到了广泛的应用和认可。</p>
+    <p>在即时通信系统中，不^又可以通过点对点:汰术实现互耳关网上两个用户间 的即时沟通，甚至还可以将具有相同特征或者爱好的用户组成一个组群进行 沟通。 一般来说，该组群中的所有成员会有共同关心的焦点和共同话题，这 样该组群中的一个成员发言时，该组群中的其他成员都可以收到该成员发送 的消息，从而可以实现多个用户就相关主题展开讨论。例如， 一个班级的同 学可以申请、加入该班级的组群；又如，对法律感兴趣的成员可以申请、加 入"法律"群组。</p>
+    <p>同时，电子邮件（Email)服务也是一种广泛应用于互联网的通信服务， 人们可以通过电子邮件既方便又快捷地传递信息、讨论问题。</p>
+    <p>随着用户对电子邮件功能需求的多样化，许多电子邮件服务商也开始提 供组群邮件服务。组群邮件可以结合某应用系统，如即时通信系统、网络游 戏系统、网络论坛系统等，提供服务，使得该应用系统中具有相同特征或者 爱好的用户参与到同一主题的组群邮件中，更高效地利用组群邮件进行交流。</p>
+    <p>目前上面所述的即时通信系统提供的组群功能，必须在用户启动并登陆 即时通信客户端软件后，通过该客户端软件提供的组群聊天功能实现。而电 子邮件系统提供的组群功能，也必须在用户启动并登陆与某应用系统相结合 的电子邮件系统的客户端软件后，通过该客户端软件提供的组群邮件功能实</p>
+    <p>现。由于这两种系统各自采用自己的客户端软件，这样就存在一个问题：网 络即时通信系统与电子邮件系统中的组群信息无法实现交互操作。</p>
+    <p>例如，用户在即时通信系统的组群聊天窗口中与该组群成员进行对话 时，如果有人针对该组群成员发送了邮件，该用户无法立即获得该邮件的到 达通知，更无法直接了解该邮件的内容，只有启动并登陆与该即时通信系统 相关的电子邮件客户端软件后，通过该电子邮件客户端软件提供的功能，才 能进行查看、回复邮件等相应的操作。同理，当用户由于各种原因只能登录 电子邮件客户端软件而无法登录即时通信客户端软件时，该用户就无法获得 即时通信系统中组群聊天的信息内容，更无法与该组群中的成员进行交流。</p>
+    <p>由上所述，在现有技术中，由于网络即时通信系统与电子邮件系统中的 组群信息无法实现交互操作，因此，用户操作时十分不便。</p>
+    <p>发明内容</p>
+    <p>有鉴于此，本发明的实施例提供了一种组群邮件/消息转换装置及方法、</p>
+    <p>和组群信息交互系统，解决了网络即时通信系统与电子邮件系统中的组群信</p>
+    <p>息无法实现交互操作的问题。</p>
+    <p>根据本发明实施例的组群邮件转换装置，包括：</p>
+    <p>&#32068;群消息解析单元，用于提:取组群即时消息中的组群信息；</p>
+    <p>成员信息获取单元，用于根据所述组群消息解析单元提取的所述组群信息，</p>
+    <p>获取所述组群中成员的电子邮件地址；</p>
+    <p>组群邮件转换单元，用于根据所述成员信息获取单元获取的所述电子邮件</p>
+    <p>地址，将所述组群即时消息转换为组群电子邮件；</p>
+    <p>组群邮件发送单元，用于发送组群邮件转换单元生成所述组群电子邮件。 根据本发明实施例的组群邮件转换方法，包括：</p>
+    <p>提取组群即时消息中的组群信息； 根据所述组群信息，获取组群中成员的电子邮件地址； 才艮据所述电子邮件地址，将所述组群即时消息转换为组群电子邮件； 发送所述组群电子邮件。</p>
+    <p>根据本发明另 一 实施例的组群消息转换装置，包括： 组群邮件解析单元用于提取组群电子邮件中的组群信息；</p>
+    <p>获取组群的成员的即时通信身份标识；</p>
+    <p>组群消息转换单元用于根据所述成员信息获取单元获取的所述即时通信身 份标识，将所述组群电子邮件转换为组群即时消息；</p>
+    <p>组群消息发送单元用于发送组群消息转换单元生成的所述组群即时消息。</p>
+    <p>根据本发明另 一 实施例的组群消息转换方法，包括：</p>
+    <p>提取组群电子邮件中的组群信息；</p>
+    <p>根据所述组群信息，获取组群中成员的即时通信身份标识； 根据所述即时通信身份标识，将所述组群电子邮件转换为组群即时消息； 发送所述组群即时消息。</p>
+    <p>根据本发明又一实施例的组群信息交互系统，包括：</p>
+    <p>上述组群邮件转换装置；</p>
+    <p>上述组群消息转换装置。</p>
+    <p>由上述的技术方案可见，相比现有技术，本发明实施例提供的组群邮件 /消息转换装置及方法、和组群信息交互系统，可以将即时通信系统中的组 群即时消息转换为电子邮件系统中的组群电子邮件，并对该组群的成员用户 发送由组群即时消息转换得到的组群电子邮件；和/或可以将电子邮件系统 中的组群电子邮件转换为即时通信系统中的组群即时消息，并对该组群的成 员用户发送由组群电子邮件转换得到的组群即时消息。这样就解决了网络即</p>
+    <p>时通信系统与电子邮件系统中的组群信息无法实现交互操作的问题。 附图说明</p>
+    <p>图1为本发明实施例中组群邮件转换装置的结构示意图； 图2为本发明实施例中组群邮件转换方法的流程示意图； 图3为本发明实施例一中组群邮件转换装置的结构示意图； 图4为本发明实施例 一 中组群邮件转换方法的流程示意图； 图5为本发明实施例二中组群邮件转换装置的结构示意图； 图6为本发明实施例二中组群邮件转换方法的流程示意图； 图7为本发明实施例三中组群邮件转换装置的结构示意图； 图8为本发明实施例三中组群邮件转换方法的流程示意图； 图9为本发明实施例四中组群邮件转换装置的结构示意图； 图10为本发明实施例四中组群邮件转换方法的流程示意图； 图11为本发明实施例中组群消息转换装置的结构示意图； 图12为本发明实施例中组群邮件转换方法的流程示意图； 图13为本发明实施例五中组群消息转换装置的结构示意图； 图14为本发明实施例五中组群消息转换方法的流程示意图； 图15为本发明实施例五中组群即时消息的示意图； 图16为本发明实施例中组群信息交互系统的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>为使本发明的目的、技术方案和优点更加清楚，下面将结合附图及具体 实施例对本发明作进一 步地详细描述。</p>
+    <p>为实现即时通信系统向电子邮件系统的信息传送功能，本发明实施例提 供了一种组群邮件转换装置及方法。</p>
+    <p>参见图1,图1为本发明实施例中组群邮件转换装置的结构示意图。该 装置用于从IM系统发送的组群即时消息中，提取该组群即时消息中的组群 信息；根据该组群信息，获取该组群中成员的电子邮件地址；将该组群即时 消息转换为组群电子邮件；发送该组群电子邮件。</p>
+    <p>由图l可见，该装置包括：组群消息解析单元102、成员信息获取单元 103、组群邮件转换单元104、组群邮件发送单元105。</p>
+    <p>其中，组群消息解析单元102用于提取组群即时消息中的组群信息。</p>
+    <p>成员信息获取单元103用于根据组群消息解析单元102提取的该组群信 息，获取该组群中成员的电子邮件地址。</p>
+    <p>组群邮件转换单元104用于根据所述成员信息获取单元103获取的所述 电子邮件地址，将该组群即时消息转换为组群电子邮件。</p>
+    <p>组群邮件发送单元105用于发送组群邮件转换单元104生成的该组群电 子邮件。</p>
+    <p>参见图2,图2为本发明实施例中组群邮件转换方法的流程示意图。由</p>
+    <p>图2可见，该方法包括：</p>
+    <p>步骤202、提耳又组群即时消息中的组群信息。</p>
+    <p>步骤203、根据该组群信息，获取组群中成员的电子邮件地址。</p>
+    <p>步骤204、根据所述电子邮件地址，将该组群即时消息转换为组群电子邮件。</p>
+    <p>步骤205、发送该组群电子邮件。</p>
+    <p>下面，通过实施例对本发明提供的组群邮件转换装置及方法进行详细说明。</p>
+    <p>实施例一</p>
+    <p>参见图3，图3为本发明实施例一中组群邮件转换装置的结构示意图。 该装置用于接收IM系统中用户发送的组群即时消息，提取该组群即时消息 中的组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容等 信息；根据该组群ID,获取该组群中成员的电子邮件地址；将该组群即时 消息转换为组群邮件；向电子邮件服务器发送该组群电子邮件。</p>
+    <p>由图3可见，该装置包括：组群消息接收单元301、组群消息解析单元</p>
+    <p>302、成员信息获取单元303、组群邮件转换单元304、组群邮件发送单元 305。</p>
+    <p>其中，组群消息接收单元301用于接收IM系统中用户发送的组群即时 消息。</p>
+    <p>组群消息解析单元302用于解析组群消息接收单元301接收到的组群即 时消息，提取该组群即时消息中的组群ID 、发送者即时通信ID 、发送时间 以及该组群即时消息的内容等信息。</p>
+    <p>成员信息获取单元303用于根据组群消息解析单元302提取的该组群 ID,查询存储组群信息的系统数据库，获取该组群中成员的电子邮件地址。</p>
+    <p>组群邮件转换单元304用于将成员信息获取单元303获取的该组群的成 员的电子邮件地址作为电子邮件的收件人地址，将组群消息解析单元302提 取出的该组群即时消息的组群ID、发送者即时通信ID、发送时间以及该组 群即时消息的内容作为电子邮件的邮件内容，形成组群电子邮件。</p>
+    <p>组群邮件发送单元305用于向电子邮件服务器发送组群邮件转换单元 304生成的该组群电子邮件。由电子邮件服务器进一步将所收到的组群电子 邮件发送给该组群中的各个用户。</p>
+    <p>参见图4，图4为本发明实施例一中组群邮件转换方法的流程示意图。 由图4可见，该方法包括：</p>
+    <p>步骤401、接收IM系统中用户发送的组群即时消息。</p>
+    <p>即时通信系统中，某组群中某用户向该组群发送即时消息；即时通信服 务器在该用户和该组群中其他在线用户之间建立直连机制或服务器转发机 制，将该即时消息发送给该组群中其他在线用户，并在即时通信服务器中对 未在线用户保存相应的消息。此处操作与目前即时通信系统实现方法相同， 在此不作详细介绍。同时，即时通信服务器将该即时消息发送到本实施例中 的组群邮件转换装置。</p>
+    <p>步骤402、从IM系统发送的组群即时消息中，提取该组群即时消息中 的组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容。</p>
+    <p>组群邮件转换装置接收IM系统发送的组群即时消息，解析该组群即时</p>
+    <p>消息，从该组群即时消息中提取所包含的组群ID、发送者即时通信ID、发 送时间以及该组群即时消息的内容等信息。</p>
+    <p>步骤403、根据该组群ID，获取组群的成员的电子邮件地址。</p>
+    <p>组群邮件转换装置根据所提取的组群ID，查询存储组群信息的系统数 据库，获取该组群中所有成员用户的即时通信ID。组群邮件转换装置进一 步根据所有成员用户的即时通信ID查询存储用户信息的系统数据库，获取 该组群中所有成员用户的电子邮件地址。</p>
+    <p>用户在即时通信系统中注册时，即时通信系统会分配给该用户 一个即时 通4言ID,同时分配给该用户 一个电子邮件地址，该即时通信ID与该邮件地 址唯一对应，并在系统数据库中保存该即时通信ID、该ID对应的用户信息 (如用户的昵称、年龄、地址等）以及对应的电子邮件地址。</p>
+    <p>用户可以根据关心的焦点注册一个组群，即时通信系统会分配给该组群 一个组群ID,其他用户对该组群关心的焦点感兴趣时，可以申"i青加入该组 群。在系统数据库中会保存该组群ID、该组群ID对应的成员信息（如成员 用户的即时通信ID)。</p>
+    <p>步骤404、根据所述电子邮件地址，将该组群即时消息转换为组群电子 邮件。</p>
+    <p>组群邮件转换装置将步骤2中提取出的组群ID、发送者即时通信ID、 发送时间以及该组群即时消息的内容等信息，作为组群电子邮件的内容，并</p>
+    <p>件的收件人栏中，从而生成组群电子邮件。</p>
+    <p>步骤405、向电子邮件服务器发送该组群电子邮件。</p>
+    <p>组群邮件转换装置向电子邮件服务器发送该组群电子邮件。电子邮件服 务器进一步将所收到的组群电子邮件发送给该组群中的各个用户。</p>
+    <p>本实施例将即时通信系统中的组群即时消息转换为电子邮件系统中的 组群电子邮件，并对该组群的成员用户发送由组群即时消息转换得到的组群</p>
+    <p>电子邮件，从而实现了即时通信系统向电子邮件系统的信息传送功能。 实施例二</p>
+    <p>本实施例在实施例一的基础上，进一步对即时通信系统中组群成员的在 线状态进行查询，仅对处于离线状态的成员用户发送由组群即时消息转换得 到的组群电子邮件。</p>
+    <p>参见图5，图5为本发明实施例二中组群邮件转换装置的结构示意图。</p>
+    <p>该装置用于接收IM系统中用户发送的组群即时消息，提取该组群即时消息 的组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容等信 息；根据该组群ID，获取该组群中当前时刻处于离线状态的成员的电子邮 件地址；将该组群即时消息转换为组群电子邮件；向电子邮件服务器发送该 纟且群电子邮件。</p>
+    <p>由图5可见，在实施例一的基础上，该装置包括：组群消息接收单元 501、组群消息解析单元502、成员信息获取单元503、组群邮件转换单元 504、组群邮件发送单元505。</p>
+    <p>其中，组群消息接收单元501、组群消息解析单元502与实施例一中相 应单元的功能相同。</p>
+    <p>成员信息获取单元503用于根据组群消息解析单元502提取的该组群 ID ，查询IM系统中该组群的成员的在线状态，并查询存储组群信息的系统 数据库，获取该组群中处于离线状态的成员用户的电子邮件地址。</p>
+    <p>组群邮件转换单元504与实施例一 中相应单元的功能相同，用于将成员 信息获取单元503获取的该组群中处于离线状态的成员用户的电子邮件地 址作为电子邮件的收件人地址，将组群消息解析单元502提取出的该组群即 时消息的组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内 容作为电子邮件的邮件内容，形成组群电子邮件。</p>
+    <p>组群邮件发送单元505与实施例一中相应单元的功能相同，用于向电子</p>
+    <p>器进一 步将所收到的组群电子邮件发送给该组群中的各个用户。</p>
+    <p>参见图6,图6为本发明实施例二中组群邮件转换方法的流程示意图。</p>
+    <p>由图6可见，该方法包括：</p>
+    <p>步骤601 、接收IM系统中用户发送的组群即时消息。 此步骤与实施例一中的步骤301相同。</p>
+    <p>步骤602、从IM系统发送的组群即时消息中，提耳又该组群即时消息的 组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容等信息。 此步骤与实施例一 中的步骤302相同。</p>
+    <p>步骤603、根据该组群ID，获取该组群中当前时刻处于离线状态的成员 的电子邮件地址。</p>
+    <p>组群邮件转换装置根据所提取的组群ID,查询存储组群信息的系统数 据库，获取该组群中所有成员用户的即时通信ID。组群邮件转换装置进一 步查询即时通信服务器，判断该组群中的各个成员的在线状态（包括在线、 离开、隐身、离线状态），并根据处于离线状态的成员用户的即时通信ID 查询存储用户信息的系统数据库，获取该组群中所有处于离线状态的成员用 户的电子邮件地址。</p>
+    <p>步骤604、根据所述电子邮件地址，将该组群即时消息转换为组群电子 邮件。</p>
+    <p>此步骤与实施例一中的步骤304相同。组群邮件转换装置将步骤2中提 取出的组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容， 写入组群电子邮件的内容等信息，并将步骤3中所获得的该组群中所有处于 离线状态的成员用户的电子邮件地址填写在收件人栏中，从而生成组群电子 邮件。</p>
+    <p>步骤605、向电子邮件服务器发送该组群电子邮件。</p>
+    <p>此步骤与实施例一中的步骤305相同。组群邮件转换装置向电子邮件服 务器发送该组群电子邮件，电子邮件服务器进一步将所收到的组群电子邮件 发送给该组群中的各个处于离线状态的用户。</p>
+    <p>本实施例将即时通信系统中的组群即时消息转换为电子邮件系统中的 组群电子邮件，并对该组群中成员用户的在线状态进行查询，仅对处于离线 状态的成员用户发送由组群即时消息转换得到的组群电子邮件，从而实现了 即时通信系统向电子邮件系统的信息传送功能，并进一步避免了组群用户接 收内容重复的组群邮件。 实施例三</p>
+    <p>本实施例在实施例 一 的基础上，进 一 步对电子邮件系统中用户收到的、 同类的组群电子邮件进行聚合归类。</p>
+    <p>参见图7，图7为本发明实施例三中组群邮件转换装置的结构示意图。 该装置用于从IM系统发送的组群即时消息中，提取该组群即时消息的组群 ID、发送者即时通信ID、发送时间以及该组群即时消息的内容等信息；根 据该组群ID，获取组群的成员的电子邮件地址；将该组群即时消息转换为 组群邮件；向电子邮件服务器发送该组群电子邮件；并对同类的组群电子进 行聚合归类。</p>
+    <p>由图7可见，在实施例一的基础上，该装置包括：组群消息接收单元 701、组群消息解析单元702、成员信息获取单元703、组群邮件转换单元 704、组群邮件发送单元705。</p>
+    <p>上述单元与实施例一中相应单元的功能相同。</p>
+    <p>该装置进一步包括：组群邮件归类单元706，用于对电子邮件系统中用 户收到的、同类的组群电子邮件进行聚合归类。</p>
+    <p>该单元包括有会话处理模块以及会话显示模块，所述会话处理模块用于 为每一电子邮件设置会话标识，其中同一邮件会话中的所有邮件具有相同会 话标识，所述邮件会话由 一个初始邮件和一个或多个回复邮件组成或者由一 个初始邮件组成，所述会话显示模块在显示包括有多个邮件的邮件会话中的 一个邮件时显示与所述邮件具有相同会话标识且接收时间早于当前邮件接 收曰期的所有邮件。</p>
+    <p>参见图8,图8为本发明实施例三中组群邮件转换方法的流程示意图。 由图8可见，该方法包括： 步骤801 、接收IM系统中用户发送的组群即时消息。</p>
+    <p>步骤802、从IM系统发送的组群即时消息中，提取该组群即时消息的 组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容。 步骤803、根据该组群ID，获取组群的成员的电子邮件地址。 步骤804、根据所述电子邮件地址，将该组群即时消息转换为组群电子 邮件。</p>
+    <p>步骤805、向电子邮件服务器发送该组群电子邮件。 步骤801至805与实施例一中的步骤301至305相同。 该方法进一步包括：步骤806、对电子邮件系统中用户收到的、同类的 组群电子邮件进行聚合归类。</p>
+    <p>例如：将该组群电子邮件放到该组群中各用户的同一个文件夹中（此文 件夹可以由系统自动生成，或者用户自行设置），或者将历史邮件合并成一 个邮件保存在服务器中等等。</p>
+    <p>在组群电子邮件中包括用于标记不同邮件会话的会话标识，其中同一邮 件会话中的所有邮件具有相同会话标识，所述邮件会话由一个初始邮件和一 个或多个回复邮件组成或者由一个初始邮件组成，所述由初始邮件构成的邮 件会话的会话标识为默认值。同一邮件会话的邮件汇集在一起，并以折叠方 式显示于邮件列表中，即在邮件列表中显示初始邮件标题及接收时间等，而 回复邮件则只有在点击列表中初始邮件前的折叠标记（例如"+"号）时才 展开显示。</p>
+    <p>本实施例将即时通信系统中的组群即时消息转换为电子邮件系统中的 组群电子邮件，对该组群的成员用户发送由组群即时消息转换得到的组群电 子邮件，并对电子邮件系统中用户收到的、同类的组群电子邮件进行聚合归 类，从而实现了即时通信系统向电子邮件系统的信息传送功能，并进一步方 便了组群用户对组群邮件的查找和浏览。 实施例四</p>
+    <p>本实施例结合实施例二和实施例三的技术特征上，进一步对即时通信系</p>
+    <p>统中组群成员的在线状态进行查询，仅对处于离线状态的成员用户发送由组 群即时消息转换得到的组群电子邮件，并对电子邮件系统中用户收到的、同 类的组群电子邮件进行聚合归类。</p>
+    <p>参见图9，图9为本发明实施例四中组群邮件转换装置的结构示意图。 该装置用于接收IM系统中用户发送的组群即时消息，提耳又该组群即时消息 的组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容等信 息；根据该组群ID，获取该组群中当前时刻处于离线状态的成员的电子邮 件地址；将该组群即时消息转换为组群电子邮件；向电子邮件服务器发送该 组群电子邮件；并对同类的组群电子进行聚合归类。</p>
+    <p>由图9可见，该装置包括：组群消息接收单元901、组群消息解析单元 902、成员信息获取单元903、组群邮件转换单元904、组群邮件发送单元 905、和组群邮件归类单元906。</p>
+    <p>参见图10,图IO为本发明实施例四中组群邮件转换方法的流程示意图。 由图IO可见，该方法包括：</p>
+    <p>步骤1001、接收IM系统中用户发送的组群即时消息。</p>
+    <p>步骤1002、从IM系统发送的组群即时消息中，提取该组群即时消息的 组群ID、发送者即时通信ID、发送时间以及该组群即时消息的内容等信息。</p>
+    <p>步骤1003、根据该组群ID，获取该组群中当前时刻处于离线状态的成 员的电子邮件地址。</p>
+    <p>步骤1004、根据所述电子邮件地址，将该组群即时消息转换为组群电 子邮件。</p>
+    <p>步骤1005、向电子邮件服务器发送该组群电子邮件。 步骤1006、对电子邮件系统中用户收到的、同类的组群电子邮件进行 聚合归类。</p>
+    <p>本实施例将即时通信系统中的组群即时消息转换为电子邮件系统中的 组群电子邮件，对该组群中成员用户的在线状态进行查询，仅对处于离线状 态的成员用户发送由组群即时消息转换得到的组群电子邮件，并对电子邮件</p>
+    <p>系统中用户收到的、同类的组群电子邮件进行聚合归类，从而实现了即时通 信系统向电子邮件系统的信息传送功能，并进一步避免了组群用户接收内容 重复的组群邮件，且方便了组群用户对组群邮件的查找和浏览。 以上为本发明实施例提供的一种组群邮件转换装置及方法。 为实现电子邮件系统向即时通信系统的信息传送功能，本发明实施例提 供了一种组群消息转换装置及方法。</p>
+    <p>参见图11，图11为本发明实施例中组群消息转换装置的结构示意图。 该装置用于从与某应用系统相结合的电子邮件系统发送的组群电子邮件中， 提取该组群电子邮件中的组群信息；根据该组群信息，获取该组群中成员的</p>
+    <p>即时通信ID;将该组群电子邮件转换为组群即时消息；发送该组群即时消 自</p>
+    <p>由图11可见，该装置包括：组群邮件解析单元1102、成员信息获取单 元11(B、组群消息转换单元1104、组群消息发送单元1105。</p>
+    <p>其中，组群邮件解析单元1102用于提耳又组群电子邮件中的组群信息。</p>
+    <p>成员信息获耳又单元1103用于根据组群邮件解析单元1102 4是取的该组群 信息，获取该组群的成员的即时通信ID。</p>
+    <p>组群消息转换单元1104用于根据所述成员信息获取单元1103获取的所 述ID,将该组群电子邮件转换为组群即时消息。</p>
+    <p>组群消息发送单元1105用于发送组群消息转换单元1104生成的该组群 即时消息。</p>
+    <p>参见图12，图12为本发明实施例中组群邮件转换方法的流程示意图。</p>
+    <p>由图12可见，该方法包括：</p>
+    <p>步骤1202、提取组群电子邮件中的组群信息。</p>
+    <p>步骤1203、根据该组群信息，获取组群中成员的即时通信ID。</p>
+    <p>步骤1204、根据所述即时通信ID，将该组群电子邮件转换为组群即时消息。</p>
+    <p>步骤1205、发送该组群即时消息。</p>
+    <p>下面，通过实施例对本发明提供的组群消息转换装置及方法进行详细说明。</p>
+    <p>实施例五</p>
+    <p>参见图13,图13为本发明实施例五中组群消息转换装置的结构示意图。 该装置用于接收与某应用系统（如即时通信系统、网络游戏系统、网络论坛 系统等）相结合的电子邮件系统中某用户发送的组群电子邮件，提取该组群 电子邮件中的组群ID、发送者电子邮件地址、该组群电子邮件的主题、发 送时间以及该组群电子邮件在各个接收者用户邮箱中的超级链接地址等信 息；根据该组群ID,获取该组群中成员的即时通信ID;将该组群电子邮件 转换为组群即时消息；向即时通信服务器发送该组群即时消息。</p>
+    <p>由图13可见，该装置包括：组群邮件接收单元1301、组群邮件解析单 元1302、成员信息获取单元1303、组群消息转换单元1304、组群消息发送 单元1305。</p>
+    <p>其中，组群邮件接收单元1301用于接收与某应用系统（如即时通信系 统、网络游戏系统、网络论坛系统等）相结合的电子邮件系统中用户发送的 组群电子邮件。</p>
+    <p>组群邮件解析单元1302用于解析组群邮件接收单元1301接收到的组群 电子邮件，提取该组群电子邮件中的组群ID、发送者电子邮件地址、该组 群电子邮件的主题、发送时间以及该组群电子邮件在各个接收者用户邮箱中 的超级链接地址等信息。</p>
+    <p>成员信息获取单元1303用于根据组群邮件解析单元1302提取的该组群 ID,查询存储组群信息的系统数据库，获取该组群中成员的即时通信ID; 根据组群邮件解析单元1302提取的该发送者电子邮件地址，查询存储用户 信息的系统数据库，获取该邮件发送者的即时通信用户信息，如昵称等。</p>
+    <p>组群消息转换单元1304用于将成员信息获取单元1303获取的该组群中 成员的即时通信ID作为即时消息的接收者，将组群邮件解析单元1302提取 出的该组群电子邮件的主题、发送时间和该组群电子邮件在各个接收者用户</p>
+    <p>邮箱中的超级链接地址，以及成员信息获取单元1303获取的该组群电子邮 件的发送者的昵称作为即时消息的内容，形成组群即时消息。</p>
+    <p>组群消息发送单元1305用于向即时通信服务器发送组群消息转换单元 1304生成的该组群即时消息。由即时通信服务器进一步将所收到的组群即 时消息发送给该组群中的各个用户。</p>
+    <p>参见图14，图14为本发明实施例五中组群消息转换方法的流程示意图。 由图14可见，该方法包括：</p>
+    <p>步骤1401、 4妄收电子邮件系统中用户发送的组群电子邮件。</p>
+    <p>与某应用系统（如即时通信系统、网络游戏系统、网络论坛系统等）相 结合的电子邮件系统中，某组群中某用户向该组群发送组群电子邮件；电子 邮件服务器将该电子邮件发送给该组群中其他用户。电子邮件服务器在判断 出该电子邮件是组群电子邮件时，也可以对这些邮件信息进行聚合归类，例 如：将该组群电子邮件放到该组群中各用户的同一个文件夹中（此文件夹可 以由系统自动生成，或者用户自行设置），或者将历史邮件合并成一个邮件 保存在服务器中等等。此处操作与目前电子邮件系统实现方法相同，在此不 作详细介绍。同时，电子邮件服务器将该电子邮件发送到本实施例中的组群 消息转换装置。</p>
+    <p>步骤1402、从电子邮件系统发送的组群电子邮件中，提取该组群电子 邮件中的组群ID、发送者电子邮件地址、该组群电子邮件的主题、发送时 间以及该组群电子邮件在各个接收者用户邮箱中的超级链接地址。</p>
+    <p>组群消息转换装置接收电子邮件系统发送的组群电子邮件，解析该组群 电子邮件，从该组群电子邮件中提取所包含的组群ID、发送者电子邮件地 址、该组群电子邮件的主题、发送时间以及该组群电子邮件在各个接收者用 户邮箱中的超级链接地址等信息。</p>
+    <p>步骤1403、根据组群邮件解析单元提取的该组群ID,查询存储组群信 息的系统数据库，获取该组群中成员的即时通信ID。</p>
+    <p>组群消息转换装置根据所提取的组群ID,查询存储组群信息的系统数</p>
+    <p>据库，获取该组群中所有成员用户的即时通信ID。组群消息转换装置进一 步根据组群邮件解析单元提取的该发送者电子邮件地址，查询存储用户信息 的系统数据库，获取该邮件发送者的即时通信用户信息，如昵称等。</p>
+    <p>步骤1404、将该组群电子邮件转换为组群即时消息。</p>
+    <p>组群消息转换装置将步骤2中提取出的组群ID、发送者电子邮件地址、 该组群电子邮件的主题、发送时间和该组群电子邮件在各个接收者用户邮箱 中的超级链接地址，以及步骤3中获得的该组群电子邮件的发送者的昵称写 入组群即时消息的内容，并将步骤3中所获得的该组群中所有成员用户的即 时通信ID作为即时消息的接收者，从而生成组群即时消息。</p>
+    <p>步骤1405、向即时通信服务器发送该组群即时消息。</p>
+    <p>组群消息转换装置向即时通信服务器发送该组群即时消息。即时通信服 务器进一步将所收到的组群即时消息发送给该组群中的各个用户。</p>
+    <p>当即时通信系统中，某组群中的某用户处于在线状态，并打开该组群聊 天窗口时， 一旦有该组群的电子邮件到达，则由组群电子邮件转换生成的即 时消息将即时地显示在群聊天窗口中。</p>
+    <p>参见图15,图15为本发明实施例五中组群即时消息的示意图。由图15 可见，该组群即时消息包括：组群电子邮件的主题1501、发送时间1502、 发送者昵称1503和该组群电子邮件查看入口 1504，即该组群电子邮件在各 个接收者用户邮箱中的超级链接地址。</p>
+    <p>用户在收到该组群电子邮件的即时消息通知后，可以根据该即时消息中 显示的电子邮件主题1501,简略了解到该组群电子邮件的大致内容，并可 以点击查看入口 1504，进入电子邮件系统，读取该组群电子邮件。</p>
+    <p>若该用户处于离线状态时， 一旦有该组群的电子邮件到达，则由即时通 信系统保存由该组群电子邮件转换生成的即时消息，当用户上线并打开群聊 天窗口时，到即时通信服务器去读取相关即时消息，并显示在群聊天窗口中。</p>
+    <p>本实施例将电子邮件系统中的组群电子邮件转换为即时通信系统中的 组群即时消息，并对该组群的成员用户发送由组群电子邮件转换得到的组群</p>
+    <p>即时消息，因此当有人针对该组群的成员用户发送了邮件，该组群的成员用</p>
+    <p>户能够立即获得该邮件的到达通知，从而实现了电子邮件系统向即时通信系</p>
+    <p>统的信息传送功能。</p>
+    <p>以上为本发明实施例提供的一种组群消息转换装置及方法。</p>
+    <p>为实现电子邮件系统与即时通信系统的信息交互功能，本发明实施例提</p>
+    <p>供了 一种组群信息交互系统及方法。</p>
+    <p>参见图16，图16为本发明实施例中组群信息交互系统的结构示意图。</p>
+    <p>该系统用于接收组群即时消息，将该组群即时消息转换为组群电子邮件，发</p>
+    <p>送该组群电子邮件；并接收组群电子邮件，将该组群电子邮件转换为组群即 时消息，发送该组群即时消息。由图16可见，该系统包括：组群邮件转换 装置1601、组群消息转换装置1602。</p>
+    <p>其中，组群邮件转换装置1601可以为实施例一至四中的任一组群邮件 转换装置。</p>
+    <p>组群消息转换装置1602为实施例五中的组群消息转换装置。 在即时通信系统中，某组群中的某用户向该组群发送即时消息，即时通 信服务器在该用户和该组群中其他在线用户之间建立直连机制或服务器转 发机制，将该即时消息发送给该组群中其他在线用户，并在即时通信服务器 中对未在线用户保存相应的消息，同时，即时通信服务器将该即时消息发送 到本实施例中的组群信息交互系统。组群信息交互系统从即时通信系统发送 的组群即时消息中，提取该组群即时消息中的组群ID 、发送者即时通信ID 、 发送时间以及该组群即时消息的内容等信息，根据该组群ID，获取组群的 成员的电子邮件地址，将该组群即时消息转换为组群电子邮件，并向电子邮 件服务器发送该组群电子邮件，最终由电子邮件服务器进一步将所收到的组 群电子邮件发送给该组群中的各个用户。</p>
+    <p>组群信息交互系统还可以进一步仅对处于离线状态的成员用户发送由 组群即时消息转换得到的组群电子邮件，并可以进一步对电子邮件系统中用 户收到的、同类的组群电子邮件进行聚合归类。</p>
+    <p>因此，当用户由于各种原因只能登录电子邮件客户端软件而无法登录即 时通信客户端软件时，用户仍然可以获得即时通信系统中组群聊天的信息内 容。</p>
+    <p>在电子邮件系统中，用户可以选择回复上述由组群即时消息转换得到的 组群电子邮件，或者新建一封向该组群发送的组群电子邮件，电子邮件服务 器将该电子邮件发送给该组群中其他用户。同时，电子邮件服务器将该电子 邮件发送到本实施例中的组群信息交互系统。组群信息交互系统从电子邮件</p>
+    <p>系统发送的组群电子邮件中，提取该组群电子邮件中的组群ID、发送者电</p>
+    <p>子邮件地址、该组群电子邮件的主题、发送时间以及该组群电子邮件在各个</p>
+    <p>接收者用户邮箱中的超级链接地址等信息；根据所提取的组群ID,查询存 储组群信息的系统数据库，获取该组群中所有成员用户的即时通信ID，根 据组群邮件解析单元提取的该发送者电子邮件地址，查询存储用户信息的系 统数据库，获取该邮件发送者的即时通信用户信息，如昵称等；将该组群电 子邮件转换为组群即时消息；并向即时通信服务器发送该组群即时消息，最 终由即时通信服务器进一步将所收到的组群即时消息发送给该组群中的各 个用户。当即时通信系统中，某组群中的某用户处于在线状态，并打开该组 群聊天窗口时， 一旦有该组群的电子邮件到达，则由该组群电子邮件转换生 成的即时消息即时地显示在群聊天窗口中。若该用户处于离线状态时， 一旦 有该组群的电子邮件到达，则由即时通信系统保存由该组群电子邮件转换生 成的即时消息，当用户上线并打开群聊天窗口时，到即时通信服务器去读取 相关即时消息，并显示在群聊天窗口中。</p>
+    <p>因此，当用户在即时通信系统的组群聊天窗口中与该组群成员进行对话 时，如果有人针对该组群成员发送了邮件，该用户可以立即获得该邮件的到 达通知，进而可以查看该邮件。</p>
+    <p>由上所述，本系统可以将即时通信系统中的组群即时消息转换为电子邮 件系统中的组群电子邮件，并对该组群的成员用户发送由组群即时消息转换 得到的组群电子邮件；和/或可以将电子邮件系统中的组群电子邮件转换为</p>
+    <p>即时通信系统中的组群即时消息，并对该组群的成员用户发送由组群电子邮 件转换得到的组群即时消息，从而实现了电子邮件系统与即时通信系统的信 息交互功能。</p>
+    <p>综上所述，以上仅为本发明的较佳实施例而已，并非用于限定本发明的 保护范围。凡在本发明的精神和原则之内，所作的任何修改、等同替换、改 进等，均应包含在本发明的保护范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101594318B?cl=zh">CN101594318B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月15日</td><td class="patent-data-table-td patent-date-value">2015年8月12日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种实现邮件和即时消息互通的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102263852A?cl=zh">CN102263852A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年10月20日</td><td class="patent-data-table-td patent-date-value">2011年11月30日</td><td class="patent-data-table-td ">Lg电子株式会社</td><td class="patent-data-table-td ">移动终端及其群组聊天控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102263852B?cl=zh">CN102263852B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年10月20日</td><td class="patent-data-table-td patent-date-value">2015年4月22日</td><td class="patent-data-table-td ">Lg电子株式会社</td><td class="patent-data-table-td ">移动终端及其群组聊天控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103036767A?cl=zh">CN103036767A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月7日</td><td class="patent-data-table-td patent-date-value">2013年4月10日</td><td class="patent-data-table-td ">深圳市金立通信设备有限公司</td><td class="patent-data-table-td ">一种实现即时通讯工具互通的方法和系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US8667403">US8667403</a></td><td class="patent-data-table-td patent-date-value">2010年6月28日</td><td class="patent-data-table-td patent-date-value">2014年3月4日</td><td class="patent-data-table-td ">Lg Electronics Inc.</td><td class="patent-data-table-td ">Mobile terminal and group chat controlling method thereof</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2009086765A1?cl=zh">WO2009086765A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月3日</td><td class="patent-data-table-td patent-date-value">2009年7月16日</td><td class="patent-data-table-td ">Tencent Technology (Shenzhen) Company Limited</td><td class="patent-data-table-td ">群组信息转换装置、方法及群组信息交互系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014134987A1?cl=zh">WO2014134987A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年1月24日</td><td class="patent-data-table-td patent-date-value">2014年9月12日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种融合即时通讯和邮箱通讯的通讯方法及通讯装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=2SxdBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012580000">H04L12/58</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=2SxdBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L12/1813">H04L12/1813</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=2SxdBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L12/5835">H04L12/5835</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=2SxdBwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L51/066">H04L51/066</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">H04L12/18D</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2008年5月28日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2008年7月23日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年6月16日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/8851c8d067844f8b2526/CN101188578A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%BB%84%E7%BE%A4%E9%82%AE%E4%BB%B6_%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E8%A3%85%E7%BD%AE%E5%8F%8A%E6%96%B9%E6%B3%95.pdf?id=2SxdBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0uQS6g7teenBko3Yg_pYH-ii33Mg"},"sample_url":"https://www.google.com/patents/reader?id=2SxdBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

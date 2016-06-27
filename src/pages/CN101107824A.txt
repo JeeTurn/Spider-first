@@ -1,0 +1,740 @@
+<!DOCTYPE html><html><head><title>专利 CN101107824A - 针对无连接通信流量的面向连接的通信方案 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="针对无连接通信流量的面向连接的通信方案"><meta name="DC.contributor" content="安德鲁&#183;布赖森&#183;迪克&#183;里德" scheme="inventor"><meta name="DC.contributor" content="艾伦&#183;麦奎尔" scheme="inventor"><meta name="DC.contributor" content="英国电讯有限公司" scheme="assignee"><meta name="DC.date" content="2005-12-30" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供了一种针对无连接通信流量的面向连接的通信方案。一种用于对包括多个连接的交换装置的网络进行配置以选择性地为所接收的通信流量提供面向连接的服务的通信方案，其中每个交换装置都拥有对所接收的通信流量实施无连接转发的功能，该方案包括：在控制平面中确定索引头字段值，以识别在交换装置处接收的流量，要为该流量在源节点与目的地节点之间建立连接；从所述控制平面为实施所述连接所需的每个交换装置提供信息，该信息使得可以将与所述交换装置的所述输出端口相关联的所述索引头字段值增添到每个交换装置的数据转发表中；以及禁能所述交换装置的能够将与建立所述连接所需的交换装置的所述输出端口相关联的索引信息增添至所述数据转发表的所有其他功能。"><meta name="DC.date" content="2008-1-16"><meta name="citation_patent_publication_number" content="CN:101107824:A"><meta name="citation_patent_application_number" content="CN:200580045526"><link rel="canonical" href="https://www.google.com/patents/CN101107824A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101107824A?cl=zh"/><meta name="title" content="专利 CN101107824A - 针对无连接通信流量的面向连接的通信方案"/><meta name="description" content="本发明提供了一种针对无连接通信流量的面向连接的通信方案。一种用于对包括多个连接的交换装置的网络进行配置以选择性地为所接收的通信流量提供面向连接的服务的通信方案，其中每个交换装置都拥有对所接收的通信流量实施无连接转发的功能，该方案包括：在控制平面中确定索引头字段值，以识别在交换装置处接收的流量，要为该流量在源节点与目的地节点之间建立连接；从所述控制平面为实施所述连接所需的每个交换装置提供信息，该信息使得可以将与所述交换装置的所述输出端口相关联的所述索引头字段值增添到每个交换装置的数据转发表中；以及禁能所述交换装置的能够将与建立所述连接所需的交换装置的所述输出端口相关联的索引信息增添至所述数据转发表的所有其他功能。"/><meta property="og:title" content="专利 CN101107824A - 针对无连接通信流量的面向连接的通信方案"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101107824A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101107824A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=euRZBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101107824A&amp;usg=AFQjCNEuBzFF55x45h0929MB3axBRRxkLg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/c5ea8d4b1fb5875db55e/CN101107824A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/c5ea8d4b1fb5875db55e/CN101107824A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101107824A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101107824A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101107824A?cl=zh" style="display:none"><span itemprop="description">本发明提供了一种针对无连接通信流量的面向连接的通信方案。一种用于对包括多个连接的交换装置的网络进行配置以选择性地为所接收的通信流量提供面向连接的服务的通信方案，其中每个交换装置都拥有对所接收的通信流量...</span><span itemprop="url">https://www.google.com/patents/CN101107824A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101107824A - 针对无连接通信流量的面向连接的通信方案</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101107824A - 针对无连接通信流量的面向连接的通信方案" title="专利 CN101107824A - 针对无连接通信流量的面向连接的通信方案"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101107824 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200580045526</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/GB2005/005100</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2008年1月16日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2005年12月30日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2004年12月31日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200580045526.0, </span><span class="patent-bibdata-value">CN 101107824 A, </span><span class="patent-bibdata-value">CN 101107824A, </span><span class="patent-bibdata-value">CN 200580045526, </span><span class="patent-bibdata-value">CN-A-101107824, </span><span class="patent-bibdata-value">CN101107824 A, </span><span class="patent-bibdata-value">CN101107824A, </span><span class="patent-bibdata-value">CN200580045526, </span><span class="patent-bibdata-value">CN200580045526.0, </span><span class="patent-bibdata-value">PCT/2005/5100, </span><span class="patent-bibdata-value">PCT/GB/2005/005100, </span><span class="patent-bibdata-value">PCT/GB/2005/05100, </span><span class="patent-bibdata-value">PCT/GB/5/005100, </span><span class="patent-bibdata-value">PCT/GB/5/05100, </span><span class="patent-bibdata-value">PCT/GB2005/005100, </span><span class="patent-bibdata-value">PCT/GB2005/05100, </span><span class="patent-bibdata-value">PCT/GB2005005100, </span><span class="patent-bibdata-value">PCT/GB200505100, </span><span class="patent-bibdata-value">PCT/GB5/005100, </span><span class="patent-bibdata-value">PCT/GB5/05100, </span><span class="patent-bibdata-value">PCT/GB5005100, </span><span class="patent-bibdata-value">PCT/GB505100</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%AE%89%E5%BE%B7%E9%B2%81%C2%B7%E5%B8%83%E8%B5%96%E6%A3%AE%C2%B7%E8%BF%AA%E5%85%8B%C2%B7%E9%87%8C%E5%BE%B7%22">安德鲁&#183;布赖森&#183;迪克&#183;里德</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%89%BE%E4%BC%A6%C2%B7%E9%BA%A6%E5%A5%8E%E5%B0%94%22">艾伦&#183;麦奎尔</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%8B%B1%E5%9B%BD%E7%94%B5%E8%AE%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">英国电讯有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101107824A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101107824A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101107824A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (10),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=euRZBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200580045526&amp;usg=AFQjCNEt_FSUOrSukMY9eQGMPAKEhYmoPA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=euRZBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101107824A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEyIwPvqP6AWwNh-7OFgtqMQuAI-Q"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT70430796" lang="ZH" load-source="patent-office">针对无连接通信流量的面向连接的通信方案</invention-title>
+    </span><br><span class="patent-number">CN 101107824 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA38200483" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供了一种针对无连接通信流量的面向连接的通信方案。一种用于对包括多个连接的交换装置的网络进行配置以选择性地为所接收的通信流量提供面向连接的服务的通信方案，其中每个交换装置都拥有对所接收的通信流量实施无连接转发的功能，该方案包括：在控制平面中确定索引头字段值，以识别在交换装置处接收的流量，要为该流量在源节点与目的地节点之间建立连接；从所述控制平面为实施所述连接所需的每个交换装置提供信息，该信息使得可以将与所述交换装置的所述输出端口相关联的所述索引头字段值增添到每个交换装置的数据转发表中；以及禁能所述交换装置的能够将与建立所述连接所需的交换装置的所述输出端口相关联的索引信息增添至所述数据转发表的所有其他功能。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(111)</span></span></div><div class="patent-text"><div mxw-id="PCLM5700977" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种通信网络中的交换装置，该交换装置包括：    多个输入端口，被构造用于接收协议数据单元形式的流量，该协议数据单元遵守无连接通信协议；    多个输出端口，用于转发所接收的流量；    接口装置，被构造用于从控制平面处理器接收信息；以及    数据存储装置，其中存储有所述控制平面所提供的信息，被构造用于将所述交换装置的输出端口与索引字段关联起来，    其中，所述交换装置从所述控制平面接收到的信息使得所述交换装置能够进行操作，为接收流量提供面向连接模式的传输，从而通过经所述控制平面配置的多个其他交换装置在所述通信网络中的源节点与端节点之间建立连接，其中所述交换装置不具备能够对经所述控制平面配置的所述交换装置的接口的数据转发功能进行控制，从而为所述接收流量提供面向连接模式的传输的其他功能，其中所述源和所述目的地之间的接收流量的传输模式可由所述控制平面针对所述通信网络中的所述多个交换装置而确定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求l所述的交换装置，其中，所述传输模式是由所述 控制平面确定的，所述控制平面在所述数据存储装置中增添多个索引字 段标识符，至少一个索引字段标识符包括要为所述接收流量建立的连接 的目的地地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求1或2所述的交换装置，其中，所述传输模式是由 所述控制平面确定的，所述控制平面在所述数据存储装置中增添多个不 同索引字段标识符，至少一个索引字段标识符包括要为所述接收流量建 立的连接的目的地地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求2或3所述的交换装置，其中，所述多个索引字段 标识符按等级布置，并且位于该等级的不同级别上的索引字段标识符与 所述交换装置的不同输出端口相关联。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 根据权利要求1至4中任意一项所述的交换装置，其中，从所述控制平面处理器接收的信息还对所述交换装置对接收流量执行的数据过 滤功能进行控制，其中所述交换装置不具备能够对所述交换装置的已由 控制平面提供了信息的接口的数据过滤功能进行控制，从而对数据过滤 功能进行控制的其他功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求1至5中任意一项所述的交换装置，其中，通过所 述控制平面来控制所述交换装置所执行的转发和/或过滤功能，所述控制 平面向所述交换装置使用的转发表中添加内容，使所述接收流量按照一 条或更多条预定路径穿过所述通信网络。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 根据权利要求6所述的交换装置，其中，所述转发表具有使所述 接收流量以面向连接的模式进行转发的条目，该条目优先于针对无连接 流量的条目。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 根据权利要求1至7中任意一项所述的交换装置，其中，所述接收流量包括以太网帧或IP分组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 根据权利要求3至8中任意一项所述的交换装置，其中，对于所 述交换装置的一个或更多个输出端口，由所述控制平面提供的信息向数 据转发表中增添汇总地址信息，该汇总地址信息包括与所述交换装置的 输出端口相关联的头字段值的组合。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求9所述的交换装置，其中，所述汇总地址信息包 括至少一个本地唯一地址和至少一个全局唯一地址，其中所述控制平面 提供信息，将所述接收流量沿着取决于一个或更多个本地唯一地址的路 径路由到全局唯一地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11、 根据权利要求9或10所述的交换装置，其中，所述汇总地址信 息包括从所述交换装置接收到的通过所述控制平面而与所述交换装置的 输出端口相关联的分组的头中的一个或更多个字段中提取的信息，由此 所述交换装置被构造成基于遵守无连接通信协议的接收分组的以下字段 中的一个或更多个来将所述接收帧转发至所述交换装置的输出端口：一个或更多个目的地地址字段；一个或更多个源地址字段；一个或更多个源路由地址字段；  一个或更多个以太类型字段；一个或更多个优先级字段； 一个或更多个服务类型字段； 一个或更多个流标识符字段；以及 一个或更多个能够标识虚拟私有网络的字段； 一个或更多个协议字段；一个或更多个TCP/UDP目的地端口标识符字段； 一个或更多个TCP/UDP源端口标识符字段。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12、 根据权利要求9所述的交换装置，其中，所述流量包括IP分组， 而所述汇总地址包括一组IP地址和与所述交换装置的输出端口相关联的 适当地址掩码信息，其中对于每个汇总地址，IP子网都提供了目的地地 址，而且每个子网内的地址都唯一地标识了通过所述通信网络的路径。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 根据权利要求9所述的交换装置，其中，所述全局有效地址是 由存储在所述接收流量的头字段中的数据的组合来提供的，其中所述本 地有效汇总地址信息包括硬件地址。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14、 根据权利要求9所述的交换装置，其中，所述控制平面除了提 供所述汇总地址以外还提供唯一路径标识符，该唯一路径标识符包括与 IP地址相关联的TCP/UDP端口标识符，所述控制平面将所述TCP/UDP端 口标识符与所述交换装置的输出端口关联起来。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15、 根据权利要求9所述的交换装置，其中，所述控制平面为所述 转发表提供与所述交换装置的输出端口相关联的IPv6路由，并且所述唯 一路径标识符包括IPv6地址的所述流标识符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16、 根据权利要求l至ll中任意一项所述的交换装置，其中，所述无连接协议包括以太网。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17、 根据权利要求16所述的交换装置，其中，所述本地唯一地址信 息包括一个或更多个MAC头字段。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18、 根据上述权利要求中任意一项所述的交换装置，其中，所述交 换装置被构造为能够通过激活功能来重新激活输出端口的无连接工作模 式，该激活功能能够对所述交换装置的转发表进行配置，从而在从所述  控制平面接收到适当信令后工作在无连接模式下。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19、 根据权利要求1至18中任意一项所述的交换装置，该交换装置 还包括：用于从每个接收分组的头提取头信息的装置；用于执行&#26619;找操作以确定所提取的头信息是否与所存储的转发信息 相匹配的装置，所述转发信息被设置用于根据所述提取的头信息而为每 个所述接收分组提供数据转发功能；其中从所述控制平面源接收的所述信息由所述交换装置进行处理， 以增添所述数据存储装置而存储转发信息，从而使所述控制平面源能够 对所述交换装置对每个所述接收分组执行的面向连接的数据转发功能进 行控制。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20、 根据权利要求1至19中任意一项所述的交换装置，其中，所述 交换装置布置在通信网络中，并且之前通过所述通信网络只提供了无连 接服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21、 根据权利要求1至19中任意一项所述的交换装置，其中，所述 交换装置在所述通信网络上提供透明的点到点服务。20、 根据权利要求1至29中任意一项所述的交换装置，其中，所述 交换装置在所述通信网络上提供透明的点到多点服务。21、 根据权利要求18至20中任意一项所述的交换装置，其中，由 所述交换装置接收的分组的头中的字段与所述交换装置的输出端口相关 联，并且所述交换装置基于遵守无连接通信协议的接收分组的以下字段 中的一个或更多个来将所述接收的帧转发至所述交换装置的输出端口 ：一个或更多个目的地地址字段；一个或更多个源地址字段；一个或更多个源路由地址字段；一个或更多个以太类型字段；一个或更多个优先级字段；一个或更多个服务类型字段；一个或更多个流标识符字段；以及  一个或更多个能够标识虚拟私有网络的字段；一个或更多个协议字段；一个或更多个TCP/UDP目的地地端口标识符字段； 一个或更多个TCP/UDP源端口标识符字段。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22、 根据权利要求21所述的交换装置，其中，所述交换装置将所接 收的接收分组的头封装在一个或更多个其他头中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23、 根据权利要求22所述的交换装置，其中，所述接收分组包括IP 分组，该IP分组具有包括第一IP地址信息的IP分组头，该IP分组头 封装在包括第二 IP地址信息的第二 IP分组头中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24、 根据上述权利要求中任意一项所述的交换装置，其中，只在所 述通信网络的所述控制平面内提供与由所述通信网络中的所述交换装置 提供的连接有关的信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25、 一种对部署在通信网络中的交换装置进行修改以在所述通信网 络上提供无连接服务的方法，其中所述方法包括禁能所述交换装置的数 据转发功能，使之无法使用通过无连接路由协议计算出的信息来实现无 连接路由的步骤，其中增添到所述转发表中的所述信息是由所述交换装 置的控制平面提供的，其中所述提供的信息使所述交换装置能够对接收 分组实施其数据转发功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26、 根据权利要求25所述的修改交换装置的方法，其中，在禁能数 据转发功能的所述步骤中，以正常无连接模式将所述交换装置自身的工P 地址保留在各个转发表中，其中以无连接模式来实现包括自动发现的控 制平面传输和路由协议。</div>
+    </div>
+    </div> <div class="claim"> <div num="27" class="claim">
+      <div class="claim-text">27、 一种对部署在通信网络中的交换装置进行修改以在所述通信网 络上提供无连接服务的方法，其中所述方法包括通过将优先级高于无连 接转发条目的面向连接的条目增添到转发表中来阻止以无连接模式进行 数据转发的步骤，其中增添到所述转发表中的所述信息是由所述交换装 置的控制平面提供的，其中所述提供的信息使所述交换装置能够对接收 分组实施其数据转发功能。</div>
+    </div>
+    </div> <div class="claim"> <div num="28" class="claim">
+      <div class="claim-text">28、 一种在包括多个互连的交换装置的通信网络上交换分组的方法，  该方法包括：在连接至所述通信网络的交换装置处接收分组；通过将与所述交换装置相关联的一个或更多个控制平面处理器所提 供的信息增添到被构造用于将接收分组的头的至少一个字段中提供的信 息与所述交换装置的输出端口关联起来的数据存储器中，而在所述交换 装置处转发所述分组，所述一个或更多个控制平面处理器包括所述通信 网络的控制平面，从而通过所述通信网络的所述控制平面来控制所述交 换装置的数据转发和/或路由过滤功能。</div>
+    </div>
+    </div> <div class="claim"> <div num="29" class="claim">
+      <div class="claim-text">29、 一种通信网络，该通信网络包括多个互连的交换装置，以在数 据源和数据宿之间提供可交换的数据传输，其中通过包括一个或更多个 控制平面处理器的控制平面来控制各个交换装置对接收分组执行的数据 转发和数据过滤功能，所述控制平面为每个交换装置提供使该交换装置 能够对接收分组实施其数据转发和数据过滤功能的控制数据，所述接收 分组包括具有遵守无连接协议的地址信息的头信息，所述控制数据使所 述交换装置能够为所述接收分组提供面向连接的服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30、 一种被构造用于为根据权利要求1至24中任意一项所述的交换 装置提供控制数据的控制平面处理器，所述控制数据使所述交换装置能 够对接收分组实施其数据转发和数据过滤功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31、 一种通信网络，其包括根据权利要求1至24中任意一项所述的 多个互连的交换装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32、 根据权利要求31所述的网络，其中由所述控制平面生成的控制数据被带外传输至各个交换装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33、 根据权利要求31或32所述的网络，其中，所述通信网络的所述控制平面为通过所述网络从至少一个数据源到至少一个数据宿的流量 建立多条路径。</div>
+    </div>
+    </div> <div class="claim"> <div num="34" class="claim">
+      <div class="claim-text">34、 一种通过将能够提供无连接服务的交换装置重新配置成提供面 向连接的服务而在通信网络上提供服务差异的方法，该方法包括以下步 骤：禁能所述交换装置的所有预先配置的数据转发和预先配置的数据过  滤功能；为所述交换装置提供经由控制接口来转发从关闭切换的数据源接收 来的分组所需的所有路由信息，其中这些路由信息替换了由所述交换装 置所支持的无连接协议之前提供的信息，其中为每个流量流确定的路由取决于该流量流的特性。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35、 根据权利要求34所述的方法，其中，每个所述路由都取决于包括请求所述流量流的多个服务的特性。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36、 根据权利要求34所述的方法，其中，所述特性是所述流量流的优先级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37、 根据权利要求35所述的方法，其中，所述特性是所述流量流所 需的带宽。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38、 根据权利要求35所述的方法，其中，所述特性是所述流量流的 以太类型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39、 根据权利要求35所述的方法，其中，所述特性是所述流量流的 逻辑链路控制（LLC)头。</div>
+    </div>
+    </div> <div class="claim"> <div num="40" class="claim">
+      <div class="claim-text">40、 一种在通信网络中选择路径以平衡该网络中的流量负荷的方法， 该方法包括以下步骤：识别抵达交换装置的流量流，其中所述交换装置已被重新配置成在 通信网络上提供面向连接的服务而非无连接服务； 将所述流量流与各个连接标识符关联起来；将所述各个连接标识符与另外的头字段信息关联起来，从而为所述 流量流提供全局标识符；使用控制平面为所述全局标识流确定路径；以及为所述通信网络内的多个经重新配置的交换装置提供信息，使得能 够为每个所述流量流都确定出多条路径，其中由所述控制平面处理器来 选择所述多条路径中的一条或更多条。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41、 根据权利要求40所述的方法，其中，所述流量是以太网流量， 所述各个连接标识符包括虚拟局域网标识符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42、 根据权利要求40所述的方法，其中，所述流量是IP流量。</div>
+    </div>
+    </div> <div class="claim"> <div num="43" class="claim">
+      <div class="claim-text">43、 一种在通信网络上生成端到端连接的方法，所述通信网络包括 被预先配置成支持无连接通信协议的多个交换装置，该方法包括以下步 骤：通过以下操作对所述交换装置进行重新配置：禁能任何支持使用所述无连接通信协议来转发所接收的通信流量流 的功能；使能支持使用面向连接的通信协议来转发所接收的通信流量流的功能；为所述流量流确定针对从源到宿的所述端到端连接的路径； 经由控制接口来传送所述路径，从而为所述接收的通信流量流提供路由信息，由此所述使能功能在所述通信网络上朝向所述宿转发所述接收的流量流。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44、 根据权利要求39所述的方法，其中，经由控制接口将使能支持 面向连接的通信协议的所述功能的所述步骤提供至所述交换装置。</div>
+    </div>
+    </div> <div class="claim"> <div num="45" class="claim">
+      <div class="claim-text">45、 在包括通过广域网互连的多个局域网的通信网络中， 一种为从 所述多个LAN中的第一 LAN接收到的分组数据提供到所述多个LAN中的 第二LAN的不同转发模式的方法，该方法包括-在被设置用于从可以接入所述WAN的所述第一 LAN提供数据的第--装置处，对所述数据的多个头字段执行&#26619;找操作；确定是否所述多个头字段中的每一个都与存储在数据存储器中的路 由信息相关联，该数据存储器是由所述第一装置的控制平面来增添的；根据由所述控制平面提供的路由信息，在所述广域网上将所述数据 路由到被配置用于从所述WAN向所述第二 LAN提供对于数据的访问的第 二装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46、 根据权利要求45所述的方法，其中，所述分组数据包括多个以 太帧，所述多个头字段至少包括VLAN-ID/DA MAC元组，其中所述第一和 第二交换装置分别包括第一和第二独立VLAN学习以太网交换机。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47、 根据权利要求46所述的方法，其中，所述第一和第二独立VLAN 学习以太网交换机通过独立VL&#35469;学习以太网交换装置的连续序列而互 连，所述独立VL&#32210;学习以太网交换装置的连续序列被配置用于转发所接收的与本地有效VLAN-ID有关的以太网帧，从而形成单向连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="48" class="claim">
+      <div class="claim-text">48、 根据权利要求47所述的方法，其中，由所述控制平面提供的所 述路由信息还在所述第二以太网交换机和所述第一以太网交换机之间提 供反向路径，从而在所述第一以太网交换装置和第二以太网交换装置之 间提供双向连接。</div>
+    </div>
+    </div> <div class="claim"> <div num="49" class="claim">
+      <div class="claim-text">49、 一种以太网交换装置，该以太网交换装置被设置用于从控制平 面处理器接收数据，从而控制所述交换装置对所接收的以太网流量执行 的数据转发和数据过滤功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50、 根据权利要求49所述的以太网交换装置，其中，所述控制平面 建立连接并在交换装置上添加一个或更多个桥接表，从而所述以太网交 换装置自身的媒介访问控制地址学习功能被禁能，并且生成树协议被无 效，所以没有提供任何桥接协议数据单元。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="51" class="claim">
+      <div class="claim-text">51、 根据权利要求49或50所述的以太网交换装置，其中，所述控 制平面包括面向连接的控制平面，该面向连接的控制平面被设置用于控 制被假定为无连接的以太网交换装置技术，这样就转换了所述以太网交 换装置技术的行为。</div>
+    </div>
+    </div> <div class="claim"> <div num="52" class="claim">
+      <div class="claim-text">52、 一种控制平面处理器，该控制平面处理器被设置用于为以太网 交换装置提供控制数据，该控制数据使所述以太网交换装置能够对所接 收的以太网流量实施其数据转发和数据过滤功能。</div>
+    </div>
+    </div> <div class="claim"> <div num="53" class="claim">
+      <div class="claim-text">53、 一种通信网络，该通信网络包括多个互连的以太网交换装置， 以在数据源和数据宿之间提供可交换的数据传输，其中通过为每个以太 网交换装置提供控制数据的控制平面来控制各个以太网交换装置对所接 收的以太网流量执行的数据转发和数据过滤功能，所述控制数据使以所 述太网交换装置能够对所接收的以太网流量实施其数据转发和数据过滤 功能。</div>
+    </div>
+    </div> <div class="claim"> <div num="54" class="claim">
+      <div class="claim-text">54、 一种通信网络，该通信网络包括多个互连的以太网交换装置， 以在数据源和数据宿之间提供可交换的数据传输，其中通过控制平面处 理器来集中控制所有以太网交换装置对所接收的以太网流量执行的数据  转发和数据过滤功能，所述控制平面处理器被设置用于向所有以太网交 换装置提供控制数据，以使每个交换装置都能够对所接收的以太网流量 实施其数据转发和数据过滤功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="55" class="claim">
+      <div class="claim-text">55、 根据权利要求53或54所述的网络，其中，由每个所述控制平面处理器生成的控制数据都被带外传输至每个以太网交换装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="56" class="claim">
+      <div class="claim-text">56、 根据权利要求55所述的网络，其中，在所述以太网交换装置之 间建立VLAN以传输所述控制数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="57" class="claim">
+      <div class="claim-text">57、 根据权利要求53至56中任意一项所述的网络，其中，所述控 制平面从至少一个数据源到至少一个数据宿为流量流建立多条路径。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="58" class="claim">
+      <div class="claim-text">58、 根据权利要求49至51中任意一项所述的以太网交换装置，其 中，由控制平面提供的信息包括至少一个索引标识符类型，以将所述标 识符与所述交换装置的输出端口关联起来，所述标识符类型是所述交换 装置被设置要接收的流量的头字段标识符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="59" class="claim">
+      <div class="claim-text">59、 根据权利要求58所述的以太网交换装置，其中，所述控制平面 提供给多个输出端口的所述转发信息包括不同类型的索引标识符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="60" class="claim">
+      <div class="claim-text">60、 根据权利要求58或59所述的以太网交换装置，其中，所述控 制平面分配所述索引标识符类型以实施负荷平衡方案。</div>
+    </div>
+    </div> <div class="claim"> <div num="61" class="claim">
+      <div class="claim-text">61、 一种在通信网络中沿着源与目的地之间的通信连接来实施OAM 流的方法，该方法包括以下步骤：从附属处理器向第一交换装置注入分组流量流，该分组流量流包括 OAM流量，其中所述OAM流量为标签字段值类型，与沿所述通信连接流动 的用户平面流量是相同的标签字段值类型；交换所述OAM分组，使得所述源和所述目的地之间的中间交换装置 能够转发所述OAM分组，就好像它们是用户平面分组一样；在第二交换装置处接收所述OAM和用户平面分组流量流；从所述用户平面分组中分离出所述OAM分组；由所述交换装置根据其标准功能从所述远端交换装置的附属处理器 中切换出所述OAM分组以供处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="62" class="claim">
+      <div class="claim-text">62、 根据权利要求61所述的方法，其中，为遵守无连接通信协议的 用户平面流量提供所述0AM流，其中通过所述附属处理器对所述第一交 换装置进行配置，从而在连接的远端为所述用户平面流量建立到所述第 二交换装置的连接。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="63" class="claim">
+      <div class="claim-text">63、 根据权利要求61或62所述的方法，其中，从所述用户平面分 组中分离出所述0AM分组的所述步骤是如下执行的：在位于连接的远端的所述第二交换装置处对所述头字段信息进行处理，以确定所述头信息中的表示所接收的分组是0AM分组的一个或更多个标识符。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="64" class="claim">
+      <div class="claim-text">64、 根据权利要求61或62所述的方法，其中，所述OAM分组包含 表示其目的地地址是与位于连接的远端的所述第二交换装置相关联的附 属处理器的头信息，因而在所述远端交换装置处，从所述用户平面分组 中分离出所述0AM分组的所述步骤还包括将所述0AM分组转发至所述附 属控制平面处理器。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="65" class="claim">
+      <div class="claim-text">65、 根据权利要求61至64中任意一项所述的方法，其中，所述分 组流量流包括OSI第2层分组的流。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="66" class="claim">
+      <div class="claim-text">66、 根据权利要求65所述的方法，其中，所述0SI第2层分组包括 以太网帧。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="67" class="claim">
+      <div class="claim-text">67、 根据权利要求61至64中任意一项所述的方法，其中，所述分 组流量流包括OSI第3层分组的流。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="68" class="claim">
+      <div class="claim-text">68、 根据权利要求67所述的方法，其中，所述0SI第3层分组包括 互连网协议分组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="69" class="claim">
+      <div class="claim-text">69、 根据权利要求61至68中任意一项所述的方法，其中，控制平 面处理器将所述分组OAM注入所述交换装置中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="70" class="claim">
+      <div class="claim-text">70、 根据权利要求61至69中任意一项所述的方法，其中，所述0AM 流是根据需要而实施的。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="71" class="claim">
+      <div class="claim-text">71、 根据权利要求70所述的方法，其中当所述控制平面为在所述第 二交换装置处接收的流量建立连接时，根据需要而实施所述OAM流。</div>
+    </div>
+    </div> <div class="claim"> <div num="72" class="claim">
+      <div class="claim-text">72、 一种在通信网络中实施OAM流的方法，该方法包括： 从附属处理器向以太网交换机注入以太网帧，该以太网帧包括OAM流和用户平面流量，其中所述OAM流的标签字段值与用户平面连接的标签字段值相同，使得中间以太交换装置能够对所述0AM帧进行交换，就好像它们是用户帧一样；在所述连接的远端，从所述用户平面帧中分离出所述OAM帧；以及 由以太网交换机根据其标准功能在附属处理器中切换出所述0AM帧以供处理。</div>
+    </div>
+    </div> <div class="claim"> <div num="73" class="claim">
+      <div class="claim-text">73、 一种能够在通信网络中提供无连接服务的以太网交换装置，其 中通过该以太网交换装置的控制平面来修改其功能，从而为其端口中的 至少某些提供面向连接的服务，其中使用与被配置用于实施由所述以太 网交换机的端口的至少某些为非0AM流量提供的面向连接的服务的处理 器不同的处理器来实施支持所述以太网装置的面向连接的功能的运行、 管理和维护（0AM)协议。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="74" class="claim">
+      <div class="claim-text">74、 根据权利要求73所述的以太网交换装置，其中，所述分离处理 硬件由与支持所述以太网交换机对于非0AM流量的交换功能的平台不同 的平台来支持。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="75" class="claim">
+      <div class="claim-text">75、 根据权利要求73或74所述的以太网交换装置，其中，由所述 以太网交换机提供的面向连接的服务包括透明的点到点服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="76" class="claim">
+      <div class="claim-text">76、 根据权利要求73或74所述的以太网交换装置，其中，由所述以太网交换装置提供的面向连接的服务包括透明的点到多点服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="77" class="claim">
+      <div class="claim-text">77、 根据权利要求75或76所述的以太网交换装置，其中，所述OAM协议适用于与所述以太网交换机提供的透明服务相关联的汇总流。</div>
+    </div>
+    </div> <div class="claim"> <div num="78" class="claim">
+      <div class="claim-text">78、 一种用于对以太网交换装置实施运行、管理和维护（0AM)协议 的系统，该系统包括：设置用于支持被配置成为所述以太网交换装置提供0AM型操作的软 件的平台，其中所述以太网交换装置被设置用于提供透明的点到点服务。</div>
+    </div>
+    </div> <div class="claim"> <div num="79" class="claim">
+      <div class="claim-text">79、 一种用于对以太网交换装置实施运行、管理和维护（0AM)协议 的系统，该系统包括：设置用于支持被配置成为以太网交换装置提供0AM型操作的软件的 平台，其中所述以太网交换装置被设置用于提供透明的点到多点服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="80" class="claim">
+      <div class="claim-text">80、 根据权利要求78或79所述的系统，该系统被设置用于为与所 述以太网交换装置所提供的所述透明服务相关联的汇总流提供0AM协议。</div>
+    </div>
+    </div> <div class="claim"> <div num="81" class="claim">
+      <div class="claim-text">81、 一种设置用于为通信网络中的交换装置提供运行、管理和维护 (0AM)协议的处理器，其中通过控制平面来控制所述交换装置的数据转发功能，使所述交换装置能够在所述通信网络中经由多条路径将所接收 的以太网流量转发至目的地，其中所述0AM处理器不为所述交换装置所 接收的非0AM流量提供所述数据转发功能。</div>
+    </div>
+    </div> <div class="claim"> <div num="82" class="claim">
+      <div class="claim-text">82、 一种用于通信网络中的交换装置的带外交换控制系统，所述通 信网络包括多个互连的交换装置，以在数据源和数据宿之间提供可交换 的数据传输，其中通过控制平面处理器来带外控制每个交换装置对所接 收的流量执行的数据转发功能，所述控制平面处理器将从在所述数据源 与所述数据宿之间传输的数据中逻辑分离出的控制数据提供给每个交换 装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="83" class="claim">
+      <div class="claim-text">83、 根据权利要求82所述的带外交换控制系统，其中，所述交换装置包括以太网交换装置，所述流量包括以太网帧。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="84" class="claim">
+      <div class="claim-text">84、 根据权利要求82所述的带外交换控制系统，其中，所述交换装置包括IP路由器，所述流量包括IP分组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="85" class="claim">
+      <div class="claim-text">85、 根据权利要求82或83所述的带外交换控制方案，其中，利用 虚拟局域网将控制数据传送至每个交换装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="86" class="claim">
+      <div class="claim-text">86、 根据权利要求82至85中任意一项所述的带外交换控制方案， 其中，使用设置在所述通信网络中的一个或更多个虚拟网络将控制信息 传送至构成所述通信网络的所述交换装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="87" class="claim">
+      <div class="claim-text">87、 根据权利要求82至85中任意一项所述的带外交换控制方案， 其中，所述通信网络中的控制平面处理器为多个交换装置提供控制数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="88" class="claim">
+      <div class="claim-text">88、 一种被设置用于根据权利要求82至87中任意一项所述的带外 交换控制方案从控制平面处理器接收带外交换控制数据的交换装置，其 中所述接收控制数据使所述交换机能够对接收流量实施其数据转发功 能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="89" class="claim">
+      <div class="claim-text">89、 一种被设置用于根据权利要求82至87中任意一项所述的带外 交换控制方案从控制平面处理器接收带外交换控制数据的交换装置，其 中所述交换装置包括接收控制数据的以太网交换装置，所述控制数据使 所述交换机能够对所接收的以太网流量实施其数据转发和数据过滤功 能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="90" class="claim">
+      <div class="claim-text">90、 根据权利要求89所述的交换装置，其中，所述交换装置包括： 设置用于通过所述通信网络将所接收的以太网流量转发至交换装置的输出端口的数据存储器，所述数据存储器包括多条数据记录，每条数 据记录都基于从所接收的以太网帧的头中提取的信息，将所接收的以太网帧与所述交换装置的输出端口关联起来；以及用于将所述交换装置的控制平面处理器所提供的信息增添到所述数 据存储器记录中，由此通过所述通信网络的所述控制平面来控制所述以 太网交换装置的数据转发功能的装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="91" class="claim">
+      <div class="claim-text">91、 根据权利要求90所述的交换装置，其中，由所述控制平面提供 的所述信息包括至少一个与输出端口相关联的索引标识符，所述索引标 识符的类型是所述交换装置能够从所接收的以太网帧的头提取出的标识 符的类型。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="92" class="claim">
+      <div class="claim-text">92、 根据权利要求89至91中任意一项所述的交换装置，其中，所 述交换装置包括部署在通信网络中的以太网交换装置，其中所述以太网 交换装置之前在所述通信网络上只提供无连接以太网服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="93" class="claim">
+      <div class="claim-text">93、 一种被设置用于根据权利要求82至87中任意一项所述的带外 交换控制方案从控制平面处理器接收带外交换控制数据的交换装置，其 中所述交换装置包括接收控制数据的互联网协议（IP)交换装置，所述 控制数据使所述交换机能够对所接收的互联网协议（IP)流量实施其数 据转发和数据过滤功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="94" class="claim">
+      <div class="claim-text">94、 根据权利要求93所述的交换装置，其中，所述互联网协议（IP) 交换装置包括：设置用于通过所述通信网络将所接收的互联网协议（IP)流量转发 至所述交换装置的输出端口的数据存储器，所述数据存储器包括多条数 据记录，每条数据记录都基于从所接收的互联网协议（IP)分组的头中  提取出的信息，将所接收的互联网协议（工P)分组与所述交换装置的输 出端口关联起来；以及用于将所述交换装置的控制平面处理器所提供的信息增添到所述数 据存储器记录中，由此通过所述通信网络的所述控制平面来控制所述互 联网协议（IP)交换装置的数据转发功能的装置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="95" class="claim">
+      <div class="claim-text">95、 根据权利要求93或94所述的交换装置，其中，所述交换装置 包括部署在通信网络中的互联网协议（IP)交换装置，其中所述互联网 协议（IP)交换装置之前在所述通信网络上只提供无连接互联网协议（IP) 服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="96" class="claim">
+      <div class="claim-text">96、 根据权利要求88至95中任意一项所述的交换装置，其中，所 述交换装置在所述通信网络上提供透明的点到点服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="97" class="claim">
+      <div class="claim-text">97、 根据权利要求88至95中任意一项所述的交换装置，其中，所 述交换装置在所述通信网络上提供透明的点到多点服务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="98" class="claim">
+      <div class="claim-text">98、 根据权利要求88至95中任意一项所述的交换装置，其中，由 所述交换装置接收的流量帧或分组的头中的字段与所述交换装置的输出 端口相关联，并且所述交换装置基于以下字段中的一个或更多个将所述 接收帧或分组转发至所述交换装置的输出端口 ：一个或更多个全局唯一 目的地地址字段； 一个或更多个全局唯一源地址字段； 一个或更多个本地唯一 目的地地址字段； 一个或更多个本地唯一源地址字段； 一个或更多个以太类型字段； 一个或更多个IPV6流标识符字段； 一个或更多个优先级字段；以及 一个或更多个VLAN-ID字段。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="99" class="claim">
+      <div class="claim-text">99、 根据权利要求98所述的交换装置，其中所述接收帧或分组封装 有对于所述接收帧或分组的源局域网来讲本地唯一的帧或分组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="100" class="claim">
+      <div class="claim-text">100、 根据权利要求88至99中任意一项所述的交换装置，其中，所 述交换装置被配置成根据接收帧或分组的头中所包含的信息，经由所述  交换装置的被配置成提供无连接服务的输出端口，或者经由被配置成提 供面向连接的服务的输出端口来转发所述接收帧或分组。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="101" class="claim">
+      <div class="claim-text">101、 一种控制平面处理器，该控制平面处理器被设置用于根据权利 要求1至6中任意一项所述的带外交换控制方案，向根据权利要求88至 100中任意一项所述的交换装置提供带外交换控制数据，所接收的控制数 据使所述交换机能够对所接收的流量帧或分组实施其数据转发和过滤功 能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="102" class="claim">
+      <div class="claim-text">102、 一种通信网络，该通信网络包括多个根据权利要求88至100 中任意一项所述的交换装置，所述交换装置进行互连，以在数据源和数 据宿之间提供可交换的数据传输，该通信网络为所述多个以太网交换机 中的每一个都提供了带外控制系统。</div>
+    </div>
+    </div> <div class="claim"> <div num="103" class="claim">
+      <div class="claim-text">103、 一种生成虚拟局域网以在通信网络中的多个交换装置之间传送控制平面流量的方法，该方法包括：在所述多个交换装置中的每一个上，将至少一个端口配置成与传送所述控制平面流量的所述VLAN相关联；在所述交换控制平面上，从与所述交换装置相关联的控制平面处理 器接收信令；在与所述VLAN相关联的所述端口上，将所述控制平面信令流量转发 至端口被配置成用于所述VL脂流量的所述多个交换装置中的每一个，由 此当所述控制平面信令是所述多个交换装置的目的地控制平面信令时， 所述交换装置被配置成能够与和所述交换装置相关联的控制平面处理器 交流所述控制平面信令。</div>
+    </div>
+    </div> <div class="claim"> <div num="104" class="claim">
+      <div class="claim-text">104、 一种使控制平面能够自动发现通信网络中的多个交换装置的互 连的方法，通过禁能支持无连接模式通信的所有功能将所述交换装置重 新配置成为面向连接模式的通信提供支持，该方法包括以下步骤：除了管理和控制信息以外，在所述交换装置的至少一个的一部分中 重新使能无连接模式；通过管理部分进行广播而从所述控制平面发出消息； 在位于新链路端部的已有交换装置处，以及/或者在所述通信网络的 新交换装置处接收至少一个所述消息；通过与所述控制平面进行通信而在所述已有或新交换装置处对所接 收的所述至少一个消息进行响应，所述通信使得能够实现对所述新交换 装置和/或所述新链路的所述互连的所述发现。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="105" class="claim">
+      <div class="claim-text">105、 一种在通信网络中建立管理连接的方法，该方法包括以下步骤-首先，生成虚拟局域网，以传送权利要求103中所述的管理流量；以及然后，利用权利要求104中所述的方法来发现所述交换装置之间的连接。</div>
+    </div>
+    </div> <div class="claim"> <div num="106" class="claim">
+      <div class="claim-text">106、 一种将交换装置配置成接收管理和/或信令信息的方法，该方法包括以下步骤：在所述交换装置的一个或更多个特定端口上保留广播功能； 禁能所述交换装置的其他端口的所有预先存在的支持预先配置的无连接协议的功能，通过从在所述一个或更多个特定端口上接收的所述管理和信令信息中得到的信息对所述其他端口进行重新配置，从而为在所述其他端口处接收的流量提供一种或更多种面向连接模式的传输，在所述其他端口处接收的所述流量遵守无连接通信协议，由此，所述交换装置的所述一个或更多个特定端口被配置成将所述接收的管理和/或信令信息与所述交换装置所接收的其他流量在逻辑上隔离。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="107" class="claim">
+      <div class="claim-text">107、 根据权利要求106所述的配置交换装置的方法，其中，所述保 留的广播功能使所述交换装置能够以无连接方式来转发所述接收的管理 和信令流量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="108" class="claim">
+      <div class="claim-text">108、 根据权利要求106或107所述的配置交换装置的方法，其中， 所述交换装置通过将从携带所接收的管理和/或信令信息的分组或帧的 头中提取出的标识符与所述交换装置的所述一个或更多个特定端口关联 起来，而对所述信息进行逻辑上的隔离。</div>
+    </div>
+    </div> <div class="claim"> <div num="109" class="claim">
+      <div class="claim-text">109、 一种用于对包括多个连接的交换装置的网络进行配置以选择性 地为所接收的通信流量提供面向连接的服务的通信方案，其中每个交换装置都拥有对所接收的通信流量实施无连接转发的功能，该方案包括：确定索引头字段值，以识别在交换装置处接收的流量，要为该流量在源节点与目的地节点之间建立连接；为实施所述连接所需的每个交换装置提供信息，该信息使得可以将与所述交换装置的所述输出端口相关联的所述索引头字段值增添到每个交换装置的数据转发表中；以及禁能所述交换装置的能够将与建立所述连接所需的交换装置的所述 输出端口相关联的索引信息增添至所述数据转发表的所有其他功能。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="110" class="claim">
+      <div class="claim-text">110、 根据权利要求109所述的通信方案，其中，通过所述控制平面提供了多个不同类型的索引头字段值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="111" class="claim">
+      <div class="claim-text">111、 根据权利要求110所述的通信方案，其中，所述不同类型的索 引头字段值按照等级来布置，等级的不同级别与所述交换装置的不同输 出端口相关联。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES10409260" lang="ZH" load-source="patent-office" class="description">
+    <p>针对无连接通信流量的面向连接的通信方案</p>
+    <p>技术领域</p>
+    <p>本发明涉及用于在通信网络上交换无连接流量的面向连接的通信方 案。本发明具体地但不排他地涉及被构造用于对所述通信网络中的所述 无连接流量实施面向连接的通信方案的交换装置，和诸如提供适当的信</p>
+    <p>令信息和o&#35469;控制信息以支持该通信方案的方法的相关方面。</p>
+    <p>背景技术</p>
+    <p>在过去几十年中，通信网络从过去的使用点到点连接的面向连接的 电路交换系统到几乎所有商业和消费者都可使用的无连接数字通信网络 得到了令人瞩目的发展。因此，目前存在着多种通信系统的混合，每一 种通信系统都拥有其满足不同类型用途的自身专有特性。</p>
+    <p>最早形式的通信网络可以称为面向连接的电路交换（CO-cs)网络， 这种网络的示例包括公共交换电话网（PSTN)和光网络。光网络和同轴 电缆网络例如比包括铜双绞线的网络的带宽更高，并将承载时分复用 (TDM)信道，以使得可以在单根电缆或单根光纤上传输多个通信。根据 所使用的网络的结构和组织，通常也将TDM网络称为准同步数字系列 (PDH)和同步数字系列（SDH)网络。</p>
+    <p>面向连接的分组交换网络（CO-PS)用于在终端之间实现高带宽或高 速率数据的传输，其示例包括帧中继网络、异步传输模式（ATM)网络和 X. 25网络。</p>
+    <p>无连接网络（CNLS)通常不在于其上进行通信的最终用户终端之间 预先建立路由，而是依靠具有专用地址的各个终端和寻找通过任意可用 路由来转发信息的路由器。CNLS的最知名的示例是支持万维网（WWW或 W3)的所谓互联网，但是诸如以太网的其他网络使用了相同的原理，即 逐个分组地经由"任意可用路由"向其终点传输数据。</p>
+    <p>交换装置（例如，集线器、路由器、桥接器和/或交换机）需要由相 关协议数据单元（PDU)承载的适当地址信息来确定所接收的PDU在朝向 其目的地地址行进时应转发到哪个接口。要在位于同一局域网中的节点 之间传输的数据可以设置有目的地地址信息，该目的地地址信息只基于</p>
+    <p>开放系统互连0SI第2层寻址方案。但是，要在位于不同局域网上的节</p>
+    <p>点之间传输，以及要在包含路由器的网络间传输的数据必须设置有目的 地地址信息，该目的地地址信息在网络级上是唯一的，即，该目的地地</p>
+    <p>址信息基于0SI第3层（网络层）寻址方案。0SI第2层寻址方案的示例 包括媒介访问控制（MAC)寻址方案，0SI第3层寻址方案的示例包括互 联网协议（IP)寻址方案（例如，IETF IPv4或IPv6)。</p>
+    <p>为提取适当的寻址信息而对所接收的PDU进行的处理产生了延迟。 用于确定所接收的分组要到达其目的地应当经由交换机结构前往哪个端 口的&#26619;找处理需要尽快地执行，这对可以处理的寻址信息的复杂性施加 了限制。另外，如果采用了交换装置从而需要广播行为（如果分组以未 知目的地地址被接收）（此处也称为"基于未知广播"型功能），则任意 广播域的大小都可能影响网络的性能。</p>
+    <p>本领域技术人员将意识到，广播具有淹没网络资源的潜力，并且在 逻辑上限制广播域可以在一定程度上对此进行缓解。施加这样的逻辑限 制的一种手段是实现虚拟局域网（VLAN)。通过在PDU的头中提供额外的 信息，可以由接收到PDU的交换装置识别出PDU被分配到的VLAN，并将 流量内部地交换到VLAN，即只在VL&#35469;上的其他节点之间交换流量。</p>
+    <p>为了实现VLAN，接收到被指示为属于特定VLAN的PDU的交换装置必 须将接口与该特定VLAN相关联（即，将该VL&#35469;分配给"本地"端口）。 这样，当交换装置接收到与特定VUN-ID相关联的流量时，该流量将被 排他地转发至与接收的PDU所隶属的VL&#33126;相关联的适当本地端口 。如果 PDU包含已经不与交换装置的特定输出端口相关联的0SI第2层目的地地 址，则交换装置只需在与PDU的VLAN-ID相关联的接口上进行广播，而 无需在交换装置的全部端口上进行广播。如本领域技术人员所理解的， 以太帧（0SI第2层PDU)可以在其头字段中并入额外的信息，该额外信</p>
+    <p>息包括作为VLAN标签的一部分的VL&#35469;-ID。</p>
+    <p>不幸的是，由简单VLAN识别方案提供的解决办法不容易升级，并在 网络中被限制为4096个单独VLAN实例（instance),因为VLAN ID在局 域网的环境中是唯一的。为了进一步提高可升级性，可以利用分级或堆 叠的VLAN。</p>
+    <p>按照每个分组对具有相同源地址和目的地地址的PDIJ(由交换装置基 于无连接而转发来）分配路由，使得各个PDU独立于先前接收的具有相 同源地址和目的地地址的PDU所&#37318;用的路径而被转发。为了确保在以太 网中不发生循环，生成树协议对以太网络拓扑进行逻辑配置，这还防止 了为相同目的地地址建立多条路径。首先对去往MAC地址的流量进行广 播， 一旦确定了位置就增添至（p邻ulate)转发表，使得该流量沿着相 同的路由被转发（除非作为拓扑故障的结果，生成树协议确定了另外的 路由）。</p>
+    <p>在数据倾向于是突发性的（即从数据源向接收器以不均匀的方式发 送有效数据块）的任意通信网络中，存在这样的可能性：特定选择的路 由变得严重过载、延迟了数据的传输、而其他路由将会明显使用不充分。 这是因为具有新的源-宿（sink)头的第一消息可以到达交换机、被广播 并通过路由接收第一 ACK，而之前的源-宿组合是相对安静的。沿某--路 由的传输时间通常在分配给相同路由的其他源开始传输更高流量负荷时 会缩短。如果这种&#32302;短足够严重，就可能使所需服务不能使用该路由。 源与目的地地之间为平衡流量负荷而存在多个路由在传统以太网中是不 允许的，因为生成树协议（STP)在可能的情况下利用源与目的地之间仅 有的一个路由来确定无循环拓扑。</p>
+    <p>如果总容量大于宿的容量的服务需要保证的服务质量（QOS)，则需 要一种将所需带宽分配给一个以上链路的另选方式。当作为控制消息而 提供了带内控制信息从而交换机功能可能受到黑客攻击时，以太网交换 机的固有性质使其易受攻击。当应该闭塞的端口反而正在转发流量时， 尤其是当存在桥接回路时，在以太网中使用生成树处理对于网络可能是 有害的。重要的是，局域网中使用的生成树处理与核心网中使用的生成</p>
+    <p>树处理之间没有发生相互作用。通常不能简单地切断生成树算法，因为 这只能导致广播"风暴"和循环。</p>
+    <p>0SI第2层和第3层交换装置可以提取对如何转发所接收的PDU进行 区分的信息，例如可以提取与PDU要接收的服务类型有关的信息和/或优 先级信息。不同类型的PDU可以由交换装置进行不同处理（例如，对操 作维护管理(OAM)流量可以进行与承载最终用户数据的PDU不同的处理）。</p>
+    <p>尽管无连接协议历史上已提供了对弹性应用的足够支持，弹性应用 适于具有可变延迟、潜在错序和无真正服务质量（QoS)的通信，但许多 应用是非弹性的，并需要面向连接的服务以及保证的带宽、弹性和QoS。 因而存在着对于以下应用提供安全的面向连接的服务的需求，这些应用 例如是交互视频应用（如视频会议）以及流媒体应用。为了满足该需求 而用面向连接的设备替换已安装的设备来支持无连接通信协议，这不仅 费用高而且存在问题。</p>
+    <p>提出的一个解决方案是诸如CiscoTM所提供的多协议标签交换(MPLS) 系统的实现。MPLS系统为网络提供了这样的路由器，该路由器使用标签 在所限定的使用与无连接路由相同的路由协议但是使用诸如LDP(标签分 布协议）的信令协议的网络节点之间来路由分组。这样，在这种MPLS系 统中从信令的角度来看，通过网络进行的路由可以表现为面向连接。MPLS 为面向连接的交换装置的设置提供了部分解决方案，并且由于MPLS系统 的复杂性，与使用以太网交换系统相比，MPLS是较昂贵的解决方案。以 太网是提供局域网（LAN)和广域网（W&#35469;）的更广泛的方案。以太网交 换机因而比能进行MPLS的路由器更容易获得且更廉价。互联网协议（IP) 路由器也被广泛采用，但是，IP是支持无连接通信的其他协议的示例。</p>
+    <p>2005 年1月27日公布的题为"Arrangements for Connection-Oriented Transport in a Packet Switched Communications Network"的国际专利申请TO2005/008971涉及一种控制系统和通信系统， 该控制系统和通信系统使得可以使用常规无连接网络的网络基础设施和 硬件按照面向连接的方式来传输流量。WO'8971将常规无连接帧中的地址 字段的地址空间分割为与面向连接模式相关联的地址子集，以及与无连</p>
+    <p>接模式相关联的地址子集。此处通过引用将W02005/008971的内容并入到 本说明书中。</p>
+    <p>题为"Method for Supporting Ethernet MAC Circuits"的国际专 利申请W02003027807描述了一种用于在以太网中支持以太网MAC电路的 以太网&#21312;C子层，其中该MAC子层处理并建立电路。MAC子层支持更高级 信令和路由应用，以实现MAC电路功能和为WAN学习和电路结构提供中 断。MAC子层还提供了地址表条目扩展，以使得可以在节点之间使用多条 链路。路由应用用于管理路由信息、维护MAC到端口映射数据库并且管 理端口资源。信令应用用于建立和管理电路。此处通过引用将 W02003027807的内容并入到本说明书中。</p>
+    <p>在上述现有技术中，也必须提供中断来使能交换装置，该交换装置 被预先配置成用于提供无连接服务和/或保留的传统无连接服务。例如， 在WO2003027807中，将面向连接的子集中的地址用作由面向连接的控制 平面建立的连接的路径标签。但是，为识别面向连接的标签交换路径而 保留地址空间子集，除了传统交换功能以外，还需要地址管理器和多个 控制平面（专用于支持面向连接模式的控制平面必须由无连接控制平面 来补充，以支持无连接模式）。此外，为了支持无连接模式，不能针对适 当的子组切断生成树功能，在面向连接的路径可以使用由生成树协议禁 能的链路之前，面向连接的控制平面必须对网络有一个全面的了解。</p>
+    <p>本领域技术人员将了解电气和电子工程师协会的题为"Local and metropolitan area networks, Virtual Bridged Local Area Networks" 的标准IEEE 802. 1Q&#8482;，该标准描述了一种针对虚拟桥接LAN、针对虚拟桥 接LAN中所提供的服务，以及在提供这些服务时所涉及的协议和算法的 架构。该标准描述了应该如何配置以太网交换装置来支持该标准，例如 应如何实现生成树算法以及应如何通过交换装置来实现数据转发和数据 过滤处理。此处通过引用将IEEE 802. IQTM的内容并入到本说明书中。</p>
+    <p>IEEE 802. 1Q的8. 10.节描述了过滤数据库如何支持转发处理，这种 支持是通过基于目的地媒体访问控制（&#21312;C)地址和虚拟LAN (VLAN)标 识符（VID)来确定如何将所接收的以太帧通过给定接口 （即，通过可能</p>
+    <p>的发送端口）进行转发来实现的。</p>
+    <p>IEEE 802.10"标准描述了过滤数据库如何包括静态条目（即，数据</p>
+    <p>库条目是通过管理动作显式设置的）或动态条目（即，过滤条目是通过 以太网交换装置的正常操作及其支持的协议被自动输入到过滤数据库中</p>
+    <p>的）。针对单个和针对组MAC地址的IEEE 802. 1QTM静态过滤信息包括两种 信息， 一种信息用于实现对如何转发具有特定目的地地址的帧进行管理 控制，另一种信息用于实现对如何转发具有特定VLAN-ID的帧，以及如 何向/从转发的帧中增添/提取VLAN标签条目进行管理控制。</p>
+    <p>按照IEEE 802. 1Q&#8482;，在显式管理控制下，在过滤数据库中对诸如MAC 地址信息、VID和端口映射表（具有针对各端口的控制元素，以指定针对 该MAC地址和VID进行过滤）的静态过滤信息进行增添、修改或去除。 例如，使用按照IEEE 802. KT的远程桥接管理能力，资源可以被识别、 初始化、重置/关闭、确定资源关系和提供运行参数。</p>
+    <p>但是，尽管IEEE 802.1QTM描述了使用远程桥接管理来将静态条目增</p>
+    <p>添到过滤数据库中，但这通常是在对自动生成的动态过滤信息进行补充 的环境中。此外，IEEE 802. 1QTM通常需要生成树和其他协议来操作以确 保不出现循环，即，每个桥接器都必须通过对特定端口进行配置来操作 生成树协议计算出一个或多个没有循环的充分连接的活动拓扑，从而逻 辑上去除与其他桥接器的任何物理上的环状连接。</p>
+    <p>US 2005/0220096描述了一种在基于帧的网络（如以太网络）中进行 流量调配的方法，在基于帧的网络中，连接是通过在各个节点中构造用 于转发数据帧（如以太帧）的映射而建立的。该映射将对应于连接的目 的地节点的目的地地址和标识符（如VLAN标签）的组合与交换机装置的 所选输出端口关联起来。在US 2005/0220096中，该映射利用目的地地址 和标识符的组合使属于不同连接的数据帧在节点处被不同地转发（尽管 它们具有相同的目的地节点）。</p>
+    <p>在US 2005/0220096中，解决在以太网交换机中构造转发表时所产 生的问题的一种手段是改变形成承载网络的以太网交换机的行为，使得 以太网交换机丢弃分组并可能发出告警、日志或对被丢弃的分组进行计</p>
+    <p>数，而不是对未知流量进行广播。但是，尽管在一些Cisc,交换机中可 以将广播量速率设置为零，但目前为止还不存在将广播量设置得如此低 的动机，因为这通常会导致数量不可接受的分组被丢弃（由于其转发地 址未知）。</p>
+    <p>在US 2005/0220096中，直接使用新的以太网控制平面来构成转发 表，而不是使用自动学习来构成以太网交换机中的转发表。在US 2005/0220096中，控制平面包括与各个以太网交换机相对应的多个连接 控制器。各个连接控制器使用连接控制接口信令来控制其相应的交换机 的交换，该信令用于直接构成承载网络的以太网交换机所使用的转发表。 在US 2005/0220096中，通过基于各个接收到的流量帧的虚拟局域网标 识符（即，基于VLAN-ID)区分去往相同目的地地址的流，来实现流控制。</p>
+    <p>在US 2005/0220096中，连接控制器可以使用网络到网络接口 （NNI) 在它们自己之间进行通信，通常使用丽I信令来交换与它们的运行状态 和它们的通信链路的状态有关的信息。还描述了诸如在Y. 17eth0AM中描 述的其他控制平面功能。此处通过引用将US 2005/0220096及其后续PCT 专利申请的内容并入本说明书中。</p>
+    <p>在Kawakami等人的2004年3月29日的IETF草案建议 draft&#8212;kawakami&#8212;卿ls&#8212;lsp&#8212;vlan&#8212;oo. txt中提出了&#8212;&#8212;禾中方法，该方法基于 以太网技术在网络上建立第2层隧道。Kawakami等人描述了以下内容： 使用VLAN标签信息对以太网交换机的端口进行设置，以将从特定端口进 入的标有VLAN标签的分组转发到另一明确端口 。以太网交换机自身是标 签交换路由器（LSR)的一部分，LSR使用标签分布协议（LDP)来分布 VIAN标签。为了使LDP能够实现该功能而提出了 LDP扩展。</p>
+    <p>Kawakami等人提出使用VLAN标签交换在以太网上设置LSP，在VLAN 标签交换中信息在转发平面和控制平面中进行传输。转发平面使用 VLAN-LSR的转发部件，而控制平面对LSP标签分布进行控制并对LSP提 供管理。Kawakami还描述了一种计算路径（VLAN-LSP信息）并控制网络 负荷的网络管理实体。此处通过引用将Kawakami等人的2004年3月29 日的IETF草案建议draft-kawakami-mpls-lsp-vlan-oo. txt中的内容</p>
+    <p>并入本说明书中。</p>
+    <p>上述现有技术涉及对地址空间进行分割以提供无连接或面向连接的 服务，或要求在流量源处保留地址范围等，使得特定流量可由交换装置 识别，并以面向连接的方式被路由，即使流量格式符合通常以无连接方 式进行路由的流量格式也是如此。</p>
+    <p>本发明力求缓解和/或消除与使用被预先设置为支持无连接通信协 议的交换装置（这里称为传统交换设备）有关的问题，以提供端到端的 面向连接的服务。</p>
+    <p>发明内容</p>
+    <p>本发明的多个方面在所附独立权利要求进行了阐明，而本发明的优 选实施方式在从属权利要求中进行了阐明。</p>
+    <p>因此，本发明的一个方面力求提供一种使用传统交换装置来提供面 向连接的服务的方法，其中建立端到端连接所需的信息已由控制平面处 理器提供。这免去了提供中断和/或使用任何地址学习和/或循环避免功 能的任何需要。相反，从控制平面向各交换装置提供数据。从控制平面 提供的路由信息涉及被预先配置为保证交换装置提供面向连接的服务的 路由。</p>
+    <p>在本发明的一些实施例中，被配置成支持无连接传输模式的常规交 换装置可能需要修改，以使其命令线路接口能够提供用于增添到交换装 置的转发表中的信息，从而提供端到端的面向连接的传输模式。但在本 发明的一些实施例中，这种修改限于使用软件来重新配置接口。这样， 命令线路接口使得源自控制平面的信息能够被增添到交换装置的转发表 中（而常规上是按照本领域技术人员公知的方式将来自数据平面的信息 增添到数据转发表中的）。</p>
+    <p>因此，在一个方面，本发明力求使用控制平面将传统交换装置配置</p>
+    <p>成在通信网络和/或internet网络上提供端到端的面向连接的服务。实 施本发明以便在连接了多个局域网（LAN)的通信网络上提供面向连接的 服务，这需要提供一致的路由信息来增添到internet网络中的各个交换</p>
+    <p>装置的转发表中。这可以由与该internet网络中的所有交换装置相关联 的集中式控制平面来提供，或由分布式控制平面来提供，分布式控制平 面要求在分布的处理器控制平面之间交流信息。</p>
+    <p>本发明的一个方面提供了这样的方案，在该方案中，通过在交换装 置的特定端口上保留一些功能以使得可以保留广播功能，确保了管理信 息和信令信息被安全地传输到交换装置。该方案在要提供面向连接的传 输模式的其他端口上去除了支持预先配置的协议的所有预先存在的功 能。</p>
+    <p>本发明的特定实施例提供了一种控制平面，该控制平面被配置为 对部署在通信网络中的多个交换装置的一个或更多个端口的功能进行 动态控制，从而为从通信网络的源边缘节点到通信网络的目的地边缘 节点的遵守无连接协议的流量建立连接。所述边缘节点可提供对于/ 来自一个或更多个局域网的访问。这样，通过选择性地恢复与无连接 模式传输相关联的功能（即，保留生成树和MAC地址学习协议）和停 止从控制平面提供路由信息，交换装置就能够将用于路由流量的端口 的工作模式从面向连接改变为无连接。这样，在一些实施例中，可以 通过使用控制平面对交换装置的特定端口上的无连接功能进行无效/ 去除/卸载，由此从控制平面提供路由信息，来远程地和/或动态地控 制面向连接模式。</p>
+    <p>控制平面处理器所提供的数据被配置成至少控制交换装置对接收分 组实施的数据转发功能。接收分组遵守无连接协议。交换装置从控制平 面接收的数据使交换装置能够进行操作，以在通信网络上为接收分组提 供面向连接模式的传输。分组的头信息保留了无连接协议的格式，而按 照面向连接的方式在网络上传输。</p>
+    <p>通过对如何从控制平面来增添通信网络上的交换装置的转发表进行 调整，将交换装置（可以包括桥接器、路由器、交换机或集线器或能够 执行适当数据转发和/或过滤和/或交换功能的任何装置）配置为提供面 向连接的环境，即，可以使用控制平面来改变交换装置提供数据转发的 模式（无连接或面向连接）。</p>
+    <p>因此，对于以太网，诸如生成树和桥接器学习处理的无连接处理在 用于在通信网络上建立连接的交换装置的那些端口上变得不再需要，这 是因为提供了来自控制平面的信令，并且该控制平面信令可用于确定路 径是否已被通过，这能够避免循环。在本发明的一些实施例中，如果接 收了未预先配置路径的分组，则丢弃该分组，并且在接收到任何分组之 前，必须将建立面向连接的服务所需的所有信息增添到地址表中以避免 分组损失。因而在这些实施例中，交换装置被配置成针对那些所接收的 并且没有在地址和转发表中为其提供任何信息的分组具有默认丢弃功 能。</p>
+    <p>控制平面可以是带内的，但优选为带外的，因为带内更易于受到攻 击。有利的是，不需要保留可用地址空间的子集以充当实施面向连接的 服务的标签。由于控制平面现在增加了通信网络中的交换装置转发表的 至少一部分，所以控制平面可以选择性地格式化索引字段，之后交换装 置执行查找操作以提供更大的通用性和灵活性。这可以通过包括另外索 引字段、替换索引字段或具有多个不同索引字段而获得，可以设置成基 于等级来执行转发。在一些实施例中，提供多个不同类型的索引字段使 得在交换机的输出端口拥塞的情况下可自动地执行流控制。</p>
+    <p>本领域技术人员将会理解，独立权利要求中阐述的各方面可以按照 本领域技术人员可以想到的任意适当方式与从属权利要求中阐述的从属 特征进行组合。</p>
+    <p>本发明提供了与多协议标签交换（MPLS)所提供的益处相类似的益</p>
+    <p>处，而不必付出将无连接和面向连接的分组交换进行混合而使用MPLS方 法所隐含的相关代价。</p>
+    <p>附图说明</p>
+    <p>现在将参照仅作为示例的附图来描述本发明的实施例，在附图中：</p>
+    <p>图1A示出了根据本发明的控制平面对以太网交换装置的MAC地址表 进行增添；</p>
+    <p>图1B示意性示出了根据本发明实施例的由控制平面进行增添的转发</p>
+    <p>表的另选实施例；</p>
+    <p>图2示出了根据本发明一个实施例的以太网通信网络；</p>
+    <p>图3示出了根据本发明一个实施例，控制平面如何与通信网络的数 据平面相连接；</p>
+    <p>图4示出了图3的控制平面接口的实施例； 图5更详细地示出了图4的分布式控制平面；</p>
+    <p>图6A、 6B和6C示出了本领域人员公知的标准以太网帧的示例； 图7更详细地示出如何在标准以太网帧中传递VLAN标签； 图8示出了如何在以太网帧中传递Q-in-Q; 图9示出了如何在以太网帧中传递MAC-in-MAC; 图IOA示出了其中提供了面向连接的以太网的本发明的实施例； 图IOB示出了在图10A的面向连接的以太网中如何设置以太网交换 机之间的多个连接；</p>
+    <p>图IOC示出了在本发明实施例中运营商（carrier)帧如何封装用户</p>
+    <p>顿{曰息；</p>
+    <p>图11示出了根据本发明实施例的集中控制平面；</p>
+    <p>图12示出了根据本发明另一实施例的控制平面处理器的等级； 图13示出了根据本发明一个实施例的控制平面处理器之间的信令； 图14示出了根据本发明另一实施例的控制平面处理器之间的信令； 图15示出了根据本发明一个实施例控制平面如何与IP通信网络的 数据平面相连接；</p>
+    <p>图16示出了 IPv4帧头的格式； 图17示出了 IPv4帧头的格式； 图18示出了符合RFC 1853的IP-in-IP帧头的格式；</p>
+    <p>图19示出了在本发明实施例中IP运营商帧如何封装用户IP帧信息;</p>
+    <p>图20和21示出了在本发明的两个实施例中如何在控制平面处理器 之间提供信令；</p>
+    <p>图22A示出了根据本发明一个实施例控制平面如何增添转发表；</p>
+    <p>图22B示出了根据本发明另一实施例控制平面如何增添转发表；而 图23示出了根据本发明实施例如何将用户流量帧封装在供应商帧内。</p>
+    <p>具体实施方式</p>
+    <p>现将参照附图来描述本发明人当前考虑的包括本发明最佳模式在内 的本发明多个实施方式。在下面的描述中，为了进行说明，阐述了多个 具体细节以提供对本发明的彻底理解。但对于本领域技术人员显然的是， 在没有这些具体细节的情况下也可以实践本发明。在其他情况下，以简 化图的形式示出公知的结构和装置以有助于说明，并为了简明，本领域 普通技术人员公知的附加细节己被省略。当具有等效功能的可能的另选 部件对于本领域技术人员是显而易见时，除非明确地予以排除，否则本 描述旨在隐含地包括这样的功能等效物。对于图中具有等效功能的所有 部件使用一致的编号方法，除非另外指出。为了简明，除非需要在不同</p>
+    <p>部件之间进行区分，否则例如将特征称为交换装置20和网络18，而不称 为交换装置20a、 20b、 20c、 20d、 20e、 20f和网络18a、 18b、 18c、 18d、 18e、 18f等。</p>
+    <p>现在参照附图，图1A和1B示意性地示出了根据本发明的控制平面 如何增添以太网交换装置的MAC地址表。</p>
+    <p>图1A示意性地示出了控制平面12如何用于增添以太网交换装置20 的地址转发表la、 lb和地址过滤表3。与以太网交换装置20按照常规方 式（例如，通过学习哪些端口与哪些MAC地址相关联）来增添转发表不 同，使用控制平面来直接配置MAC地址表，以将特定端口标识符与所接 收的以太网MAC帧关联起来。在对本领域普通技术人员显而易见的背景 下，术语"端口"等效于"接口"。类似的是，当描述特定形式的PDU (如 分组）时，术语"分组"应被理解为对任何等效PDU (例如，可实施本发 明的帧）的提喻。</p>
+    <p>由于将与交换装置的流出（outgoing)端口相关联的地址信息直接 提供给了交换装置的转发表，所以不需要执行"地址学习处理"来使交</p>
+    <p>换装置能够将目的地地址未知的接收流量与该交换装置的流出端口关联 起来。相反，如果不知道地址与流出端口的关联，则交换装置将丢弃该 接收分组。</p>
+    <p>尽管在IEEE 802. lq中，使用对控制平面的接口来提供静态地址信 息，但在IEEE 802. lq中，诸如生成树和MAC地址学习协议的现有协议 保持有效（acUve)。相反，本发明对交换装置进行重新配置，使得控制 平面提供给交换装置的转发地址表的信息不能够被与目前未使用的无连 接控制平面相关联的预先存在的协议自动地改写（overirite)。</p>
+    <p>MAC地址一般被假设为与节点的网络适配器相关联的唯一值，并且唯 一地标识局域网（L脂）上的适配器。MAC地址的示例是12位十六进制数 (长度为48位X例如图1A中，由表la中的MM:腿:腿:SS:SS:SS所示的）。 地址字段的前半段是适配器制造商的ID号。地址字段的后半段是制造商 分配给适配器的序列号。</p>
+    <p>以太网交换装置20能够在半双工模式或全双工模式下工作，并能够 在完全无冲突模式下支持全双工、点到点0SI-第2层协议服务。以太网 交换装置20从LAN A接收以太网帧，并利用过滤表3和与以太网交换装 置20的各个端口相关联的地址表la、 lb将这些帧路由到LANB。过滤表 3将流量限制为特定逻辑端口关联，例如，被用于配置虚拟局域网。</p>
+    <p>图1B示出了转发表的另选版本，其中除了目的地地址字段外，控制 平面12还用至少一个其他以太网头字段来增添转发表中的条目。在图1B 中，控制平面还将VLAN与交换机的流出端口或输出端口关联起来。该 VLAN-Id用于区分通信网络（其包括多个连接的以太网交换装置）的多条 路径。然而，如后文将更详细阐述的，可以提供许多其他另选的以太网 头字段来增添到交换装置的转发表中。</p>
+    <p>根据本发明，不需要分配地址空间的子集或任何其他头字段来标记 特定分组以接收面向连接的转发。相反，通过为地址空间（该地址空间 被分配给要为其提供连接的流量）提供交换装置中的合适转发信息，由 控制平面在通信网络上建立连接。流量可以由控制平面利用任何适当的 头字段或头字段的组合来识别，并且可以给不同流量提供不同的字段组</p>
+    <p>合。核心网络的网络操作员或服务提供商可以有选择地在核心网络上为 无连接协议流量提供面向连接的服务。这通常可以根据核心网络的状况 来进行，或者在到特定目的地地址的流量使网络失衡等情况下进行。为 流量提供面向连接的服务的决定也可以自动执行。另选地，连接请求可 以按照本领域技术人员所公知的方式来设置。</p>
+    <p>一旦确定了应该在核心网络上建立到特定目的地地址的连接，就使 用控制平面对通信网络上的交换装置进行配置，以基于将索引条目与交 换装置的流出端口或接口相关联来为该流量建立连接。索引条目的示例 包括：目的地地址，或者目的地地址和一个或更多个其他头字段信息（诸</p>
+    <p>如VLAN-ID，或者以太网类型，或者头中是否有优先级标记，或者服务的</p>
+    <p>IP流标签或类型）的组合。</p>
+    <p>图1C和1D示出了根据本发明实施方式的转发表的另选实施方式， 控制平面可以被配置成向该转发表提供转发信息。在图1C中，控制平面 己用不同索引类型的组合增加了索引字段。在该情况下可以将交换装置 配置成查找待匹配的不同字段，或者在首次匹配的特定输出端口拥塞时 继续查找其条目。这还使得可以为流量建立不同的路径。因此，在图1C 中，以示例的方式，如果所接收的分组带有与交换装置的端口 1D #1相 关联的特定目的地地址接收分组的VLAN-ID类型# 1，则交换装置可以检 &#26619;接收分组的以太网类型，如果其与下一个索引字段条目相匹配，则经 由端口 ID井2将该端口发送出去，或者如果该端口拥塞等或如果没有找 到针对以太网类型的匹配，则检查分组的优先级等。另选地（或另外地）， 可以基于以太网类型或某些其他头字段等来转发没有VLAN-ID字段的分 组。&#26619;询的信息类型仅受交换装置从头字段中可以提取出的信息类型以 及控制平面以适当的形式用索引条目来增添转发表的能力（和任意所需 软件存根(stub))的限制。</p>
+    <p>图1D示出了转发表的另选形式，其中控制平面为各个端口提供了元 组类型的索引标识符，在该情况下为目的地地址以及第一和第二索引标 识符。例如，各个端口可以与DA、 VLAN-ID和另一索引标识符（例如， 以太网类型）相关联。</p>
+    <p>现在参照附图的图2和图3，以太网通信网络功能是由管理平面10、</p>
+    <p>控制平面12和数据/转发平面14 (参见图3)来提供的。管理平面10提 供用于配置、控制和管理以太网网络的适当接口。控制平面12提供逻辑 接口和物理接口 ，以经由命令线路接口或通过任何一个IEEE标准（例如， IEEE 802.1)中指定的任何其他方式来建立和控制数据/转发平面14 (参 见图3)的活动。管理和/或控制平面12可以执行呼叫控制和连接控制功 能，并使用信令来建立和释放连接，以及例如通过建立软永久连接而在 出现失败时恢复连接。数据/转发平面14提供用于传输网络数据的过滤 和转发功能。</p>
+    <p>本发明通过向传统交换装置提供路由信息和禁能交换装置的可以改 写或另外提供其他路由信息的功能，使得能够以面向连接的模式在通信 网络中传输遵守无连接协议的分组。提供的路由信息使交换装置能够提 供面向连接的服务，因为交换装置的可能导致无连接服务的所有功能都 被禁能了。这种交换装置是容易得到的并且是相对廉价的，而被构造为 支持诸如MPLS的面向连接的协议的交换装置是相对昂贵的。本发明的潜 在益处在于，其使得被配置为支持无连接通信协议的传统设备可以升级 为支持面向连接的通信模式。有利地是，本发明还使得可以在服务质量、 优先级、带宽等方面来区分服务。</p>
+    <p>根据本发明，控制平面提供路由信息，例如，为交换装置生成控制 信息的设备用于向交换装置提供路由和信令信息。该控制信息包括可以 用来增添交换装置的&#26619;找路由表的信息。因此，最初设计和/或安装在通 信网络中支持无连接通信协议的交换装置能够为接收分组提供面向连接 的服务。</p>
+    <p>对本领域技术人员显而易见的是，同义地使用术语"分组"来表示 分组或信元（例如，固定长度的分组），或者在本发明的一些实施方式中 表示帧。要通过网络传输的数据被集合为分组，每个分组都承载了头和 有效载荷，头指示了源地址和宿地址，而有效载荷承载了待传输的数据。 分组还将承载涉及正传输的全部分组的有效性的其他数据字段。这些分 组不需要修改它们的头信息就能够得益于交换装置所提供的面向连接的</p>
+    <p>服务。符合本发明的交换装置可为其提供面向连接的服务的无连接协议 的示例包括标准以太网协议和标准互联网协议（例如，IPv4和IPv6)。</p>
+    <p>根据本发明，交换装置设置有用于接收控制信息的装置，控制平面 (这里使用的术语指的是能够向交换装置提供这样的控制信息的装置的 任何适当设置）通过交换部来引导信道数据信号，以实现从"源"到"宿" 的数据传输。源可以是PC或服务器（可以为宿），源指的是发送单元， 而宿指的是接收器。应该理解的是，在大多数通信中，源和宿出现在链 路的两端，即它们被协同定位，并且可以简单地是计算机的发送器/接收 器或电话机的收发器电路。</p>
+    <p>这里使用的所有术语都保留了在国际电信联盟（ITU)的ITU-T建议 G. 805 "Generic functional architecture of transport networks"中 给出的定义，此处通过引用将其内容并入，除非明确地表示具有与G.805 中给出的含义不一致的不同含义。</p>
+    <p>当帧到达以太网交换装置时，对头进行处理，提取信息以使得能够 确定出分组的源-宿组合。在本发明的一个实施方式中，这是通过将从多 个头字段中提取出的信息传输到控制平面来确定的。然后控制平面确定 这是否为针对已知源-宿组合的消息。在另选实施方式中，控制平面已传 输了足够的信息，使得可以在交换装置处确定源-宿组合。如果源-宿组 合是已知的，即表示如果从头提取出的信息与交换装置可访问的数据存 储器中已保存的信息相匹配，则使用先前建立的单个路由通过数据交换 部来传输该消息。</p>
+    <p>现在参照图2，其示出了本发明的实施方式，其中包括本地主机的 第一网络18a (例如，用户LAN)的通信网络16 (例如，广域网（WAN)) 经由多个互连的以太网交换装置20连接到本地主机的第二网络18b (例 如，另一用户LAN)。为清楚起见，在图2中示出四个以太网交换装置20， 它们被标记为A、 B、 C禾口D。</p>
+    <p>在图2中，网络18a提供流量的源22，该流量经由适当的边缘设备 24(例如，提供某些复用功能的流量集中装置）被传输到以太网交换机A。 图2中所示的网络18d充当以太网流量宿26,并经由适当的边缘设备28</p>
+    <p>(例如，提供解复用功能的流量分散装置）从以太网交换机D接收以太 网流量。然而，局域网实际上可以既充当以太网流量的源又充当以太网 流量的宿，这对于本领域的技术人员是公知的。</p>
+    <p>在图2中，网络管理器30利用适当的命令线路接口 （CLI)32a来输 入针对以太网交换装置A的路由表的路由信息。经由CLI32b、 32c、 32d 类似地提供路由信息，以增添各个以太网交换装置20B、 20C和20D的转 发表。例如，可以在以太网交换装置上实现其他功能，诸如以太网交换 装置D上的分组嗅探器34。</p>
+    <p>如前面所述，为了正确地充当面向连接的以太网交换装置，在交换 装置被预先配置为支持无连接通信协议的情况下，必须为提供面向连接 的服务的以太网交换装置上的所有端口关闭这些预先配置的协议（例如， 桥接器学习和生成树协议，以及本发明不需要的任意VLAN特定控制协 议）。</p>
+    <p>在本发明的最佳模式下，交换装置的所有端口上的支持预先配置的 协议的所有功能被禁能。在本发明的其他实施方式中，交换装置的特定 端口上保留有特定功能。这使得可以利用虚拟局域网（VLAN)来进行管 理。例如，这使得广播设备可以实现对新链路和新节点的自动发现，而 并不限于管理VLAN。</p>
+    <p>使用控制平面经由命令线路接口 （CLI)提供的信息，或通过IEEE 标准（例如IEEE 802.1)中指定的任何其他方式来增添与提供面向连接 的服务的所有端口相关联的路由表条目。通过使用接口 （该接口用于向 交换装置传输标准控制信息）来提供用于增添路由表的路由信息，可以 将符合支持无连接通信协议的流行标准要求的任何交换装置重新配置为 支持面向连接模式的通信。因此，对于以太网交换装置，为了提供端到 端连接，将适合端到端连接的转发表条目增添到各个交换机A、 B、 C、 D 中，因为以太网路由头信息在各个交换机中是相同的。</p>
+    <p>端到端连接可以通过利用以太网MAC寻址方案中己固有的全局唯一 性而从控制平面指定。如果MAC地址由于某种原因不是唯一的，则提供 向流量源赋予唯一身份的某些其他方式，例如利用VLAN头，下文将对其</p>
+    <p>进行更详细的描述。</p>
+    <p>图3示意性地示出了本发明的实施方式，其中控制平面网络12被配</p>
+    <p>置成向数据平面14提供路由信息。图3中示出了标有A、 B、 C、 D、 E和 F的多个互连的以太网交换装置20。以太网网络在图3、 4和11中被表 示为完全互连，但为了受益于本发明，在以太网交换装置之间有多条路 径就足够了。</p>
+    <p>在图3中，每个以太网交换装置20都连接到局域网18 (LAN)，并且 还连接到一个或更多个以太网交换装置20，以提供更大的通信网络16， 例如广域网（W&#35469;）。当特定LAN与特定虚拟LAN (VLAN)相关联时，流量 将被标记，以将其标识为属于VL&#35469;（参见图6、 7)，并且VLAN流量将仅 经由与该VLAN相关联的以太网交换装置20上的本机端口来接入以太网 网络16。</p>
+    <p>在图3中，经由与各个以太网交换装置20相关联的命令线路接口 32a、 32b、 32c、 32d、 32e、 32f通过控制平面网络12对设置在数据平面 14中的各个以太网交换装置20的所有端口上的以太网数据转发和过滤功 能进行控制。控制平面网络12包括端到端控制平面通信网络，其使将提 供面向连接的服务的通信网络中的各个以太网交换装置20的所有端口的 学习和生成树数据转发/过滤功能无效并对其进行配置，终止这些端口上 的所有关联的桥接协议数据单元（BDPU)。</p>
+    <p>控制平面网络12可以按照集中方式或按照分布方式来实现，这取决 于控制平面处理器（CPP) 36 (图3中未示出）的数量、它们在网络中如 何部署，以及它们与各个以太阿交换装置20的关系。</p>
+    <p>一旦MAC地址学习和生成树功能被禁能（例如由控制平面12禁能或 在交换机处人工禁能），控制平面12就创建并提供增添MAC地址和 VLAN-ID表以及任何其他头字段表条目所需的路由信息。以太网交换装置 随后使用该信息在以太网交换装置自身之间建立适当的以太网链路连接 42。以太网交换装置可以同时支持单向和/或双向链路连接（并且因此提 供全双工服务，这对于本领域技术人员是公知的）。</p>
+    <p>各个以太网交换装置20基于通过在其转发表中对VLAN的标识符</p>
+    <p>(VL&#33126;-ID)进行查找操作而接收的以太网流量的各个帧中的最低VLAN 头来实现数据转发。由于VLAN-ID表现在由从交换装置的控制平面得到 的信息来增添，所以数据将按照提供面向连接的服务的方式被转发。如 果不存在VL&#35469;头，则交换装置使用至少目的地MAC地址来转发所接收的 以太网帧。在该交换装置处从VLAN协议堆栈中移除了与在特定以太网交 换装置20上终止的网络层相关联的VLAN头之后，提供转发处理。另外， 一个或更多个新的VLAN头可以在以太网交换装置20的输出端口处增添 到VLAN协议堆&#26719;中。实际上，可以对以太网头的许多字段执行用于提供 面向连接的服务的查找操作，同样使得能够为不同的VLAN/流量流提供有 区别的服务，例如在服务质量、优先级、带宽等方面不同的服务。</p>
+    <p>由控制平面12提供的交换装置控制实现了在标题为"Architecture of the automatically switched optical network(ASON)，，的国际电信 联盟ITU-T建议G.8080中所标别和描述的控制功能（或适当的子集）， 此处通过引用并入其内容。本发明的优选实施方式按照与G.8080 (其考 虑了连接和呼叫的概念、控制平面和用户平面的分离，以及呼叫控制和 连接控制的分离）相同的方式来实现控制平面。另选地，可以使用GMPLS、 MPLS或传统的PSTN控制平面，或者网络管理系统。</p>
+    <p>控制平面12在以太网网络上具有可见性，因此知道哪些资源是自由 的。 一旦发信号通知了从A到D的路径，控制平面12就需要知道在D处 哪些资源是可用于建立连接的，即确定哪些资源是自由的。例如，如果 VLAN-ID 50是自由的，则控制平面12经由控制平面处理器（CPP) 36 (图 3中未明确示出）通知所有交换装置20来使用VLAN 50。当CPP 36接收 到连接请求时，CPP36处理该请求，以确定如何与控制平面12的远端处 的CPP 36(即流量离开以太网核心网络处的以太网交换装置20的CPP 36) 和所有中间CPP 36进行对话。该请求可以提供特定路由或识别终点，并 可以询问CPP 36以找到路由。</p>
+    <p>在控制平面处理器（CPP) 36经由以太网交换装置20 (CPP 20控制 其数据转发和过滤功能）接收针对连接的请求的实施方式中，当向CPP 36 转发该针对连接的请求时，以太网交换装置20默默地运行（即，CPP 36</p>
+    <p>不对以太网交换装置20如何向控制平面12转发所接收的连接请求进行 控制）。</p>
+    <p>现在参照附图的图4，控制平面12被示意性地示出为包括多个互连 的附属控制平面处理器（CPP) 36a、 36b、 36c、 36d、 36e、 36f。这里使 用术语"附属"表示处理器没有"开启交换（on-switch)"，即，不是原 来预先配置的交换机的一部分。各个以太网交换装置20均连接到包括互 连本地主机的局域网18 (例如用户LAN)。与VLAN ID关联的各个网络18 都在以太网交换装置20上设置有默认（或本机）端口，并且现在用控制 平面12所提供的信息来增添VLAN表。控制平面12保留路由信息，该路 由信息用于利用数据转发信息来增添设置在数据转发平面中的数据转发 表（即，图lC中所示的MAC地址表la、 lb和/或过滤表3)。在图4中， 经由各个以太网交换装置20的各自命令线路接口 （CLI) 32 (在图4中 被示为连接各个控制平面处理器36和其关联的以太网交换装置20的虚 线上的条）为各个以太网交换装置20提供路由信息。</p>
+    <p>在图4中，各个CPP 36都被配置成与其控制的以太网交换装置一一 对应。通过合适的信令网络在CPP36之间交换信息（例如参见图5)。图 5示出了在控制平面12中如何将多个CPP 36之间的信令网络配置成有助 于连接的建立。多个CPP 36之一接收连接请求并将其传输给管理平面或 其他路由设备，该管理平面或其他路由设备为流量确定合适的路由（或 者在要走的路径为多个时进行选择路由）以通过数据平面14沿源节点流 向目的地节点。信令网络可以按照VLAN的形式实现，VLAN将数据平面内 的多个或所有交换装置互连，以使信令信息与非信令流量分开进行路由。 这样，就可以将交换装置配置成保留一些被配置成工作于无连接模式下 和/或为信令信息保留路由协议（诸如生成树等），即使生成树和任何其 他无连接路由协议在交换装置的其他端口上可能被禁能也是如此，艮P， 使得正常流量按照面向连接的方式进行交换。</p>
+    <p>现在再参照图4，各个CPP 36都包括附属处理器，附属处理器生成 对如何更新以太网交换装置20的数据转发表进行控制的信息。各个CPP 36都还防止了具有MAC地址或VLAN头的欺诈帧（rogue frame),该MAC 地址或VLAN头没有被经由提供面向连接的服务的端口通过交换装置而提</p>
+    <p>供的信令信息识别。例如，没有识别出MAC地址或VLAN的帧可能被丢弃。 除了现在能够提供面向连接的服务之外，以太网交换装置20的其余</p>
+    <p>功能没有改变，因为提供面向连接的服务所需的交换装置行为的改变仅</p>
+    <p>仅是改变转发表条目以提供这样的服务的结果。</p>
+    <p>当控制平面12正在增添转发表，并且现在生成树算法被禁能时，生</p>
+    <p>成树算法不再防止建立多个路由，从而可以使用网络上的以太网干道42</p>
+    <p>在以太网源与宿之间建立多条路径。这使得可以在网络上实现诸如负载</p>
+    <p>平衡的功能。</p>
+    <p>图4示出了以太网交换装置A和D之间的两条路径c^、 cl2。路径a i经由以太网交换装置B和C，路径a2经由以太网交换装置F和E。现在 可以使用提供面向连接的服务的以太网交换装置20来设置多个连接。</p>
+    <p>作为示例，因为可以使用控制平面来动态地重新配置从A到D的流 量流，所以如果其当前路径经历了不可接受的劣化程度，则将流量动态 地切换到新路径。例如，在如图2所示分组嗅探器34探测到以太网交换 装置20d处的拥塞时，网络操作员30可以重新配置流量流。</p>
+    <p>这使得以太网流量的高带宽源可以对其宿保持其服务的质量，即使 当随后产生影响网络上的原始路径a ,的其他流量也是如此。</p>
+    <p>同时如果要求带宽，流量还可以同时沿两条路径（例如a,、 a 2)或 更多条路径传输，并且可以在目的地以太网交换装置20 D处执行适当的 排序等操作。在本发明的又一个实施方式中，与两条路径a" ct2关联的 所有以太网交换装置的数据转发表条目都被预先增添，从而如果a ,出现 故障则仅需要重新增添源以太网交换装置20 A的转发表，就可以实现从 ^路由到a2路由的变化。</p>
+    <p>控制平面处理器CPP 36除了提供路由信息之外还提供呼叫连接控制 功能。在图4中，控制交换装置A的CPP 36a被示为接收连接请求。然 后，CPP 36a为从源客户网络18a到宿客户网络18d的流量确定合适的路 由。CPP 36a还保证在已确定的路由CPP 36a上把合适的信令发送到其他 以太网交换装置20   (例如，对于路径(i"发送到以太网交换装置B、 C</p>
+    <p>和D)，以使它们的转发表被适当地更新。</p>
+    <p>如果以太网分组头中存在VLAN标签，则在本发明的一个实施方式中， 使用VL脂标签来分离流量流。这使得可以实现合适的流量管理（例如， 使网络负载平衡）。VLAN标签不需要被交换，并且如果它们没有被交换， 则如果它们与VL&#35469;地址组合就可以用作全局标识符的一部分。这样，用 于管理可升级网络的全部可升级方案例如可以通过基于目的地地址和 VLAN标签的组合来转发流量而提供，或通过堆叠VLAN标签来提供（例如， 当按照本领域技术人员公知的方式来实现Q-in-Q时发生）。如果VLAN标 签由以太网交换装置来交换，则VLAN-ID将只在本地意义上保留。</p>
+    <p>因此，通过沿路径（例如cn和/或a2)用适当转发表条目为各个以 太网交换装置20增添MAC地址学习表和VL&#32048;-ID表而提供了源以太网交 换装置A和宿以太网交换装置D之间的端到端连接。转发是由将以太网 分组的有关头信息和以太网交换装置的输出端口相匹配的转发表来实现 的。</p>
+    <p>图6A、 6B和6C &#8212;同示意性地示出了目前本领域技术人员公知的标 准版本的以太网帧，图7示意性地示出了标准格式的以太网帧是如何使 用虚拟局域网标识符（VLAN ID)来标记的，并且还示出了VLAN ID标签 结构。</p>
+    <p>图6A示出了以太网V2. 0帧格式，图6B示出了具有电气和电子工程 师协会推荐标准IEEE 802.2 LLC头的电气和电子工程师协会推荐标准 IEEE 802. 3帧格式，图6C中示出的以太网帧符合具有LLC/SNAP变量的 电气和电子工程师协会推荐标准802.3。然而，这里所指的术语以太网帧 并不限于这些给定的实施方式，而是指能够实现本发明的任何类型的以 太网帧格式。</p>
+    <p>在常规的以太网网络中，诸如图6A、 B、 C中所示以太网帧之一的基 本未标记以太网帧基本上由源媒体访问控制（MAC)地址（SA)和目的地 MAC地址（DA)、类型字段和形成以太网分组的有效载荷的数据组成。标 准VLAN标签头（例如，符合IEEE 802. 1Q的VLAN标签头）插入在源MAC 地址和类型字段之间，如图7所示。标准以太网帧的格式对于本领域技</p>
+    <p>术人员是公知的，为清楚起见在此省略所有字段和关联功能的全部说明。 当流量标记有VL&#33126;-ID时，以太网交换装置20被配置成对各个分组</p>
+    <p>进行交换，使流量仅传输到与通信网络16中的各个以太网交换装置20 上的相同VLAN相关联的端口。为了不同VLAN之间的交换流量，在以太 网交换装置20上设置或未设置另外的功能（例如，互联网协议地址转发 功能或某一其他形式的OSI第3层转发功能）。</p>
+    <p>可以单独或组合地使用以太网帧头中的任何有关字段，例如VLAN头 的DA、 SA、以太网类型、优先级、VLAN-ID。在本发明的一个实施方式中， 控制平面仅考虑MAC地址，并基于以太网类型来建立多个虚拟网络，以 提供多种QoS。这导致逻辑上存在的控制平面的两个实例，即，提供两个 虚拟网络，并且根据本发明的一些实施方式，控制的域对于各个虚拟网 络可以不同。这样，在核心网络16上提供以太网服务的运营商网络的用 户可以被提供对虚拟网络之一的访问，以使这些用户在核心网络内有一 定程度的控制。</p>
+    <p>12位VLAN-ID字段受到了限制：在任意时刻，仅能有4096个VL&#35469; 用户。标记为相同以太网分组以创建VLAN ID的堆栈的多个VLAN使不同 实体能够实现在VL&#35469;-ID堆栈的不同层级上的第2层交换（这常常被称 为Q-in-Q)，并且能够在以太网分组内进行等级VLAN标记。</p>
+    <p>图8示意性地示出了 Q-in-Q是如何在标准以太网帧中实现的，图9 示意性地示出了 MAC-in-MAC是如何在标准以太网帧中实现的，这对于本 领域技术人员是公知的。实现这些方案的帧格式对于本领域技术人员是 已知的，因此为简短起见，忽略图8和图9中所示的所有字段和它们关 联功能的完全描述。</p>
+    <p>在本发明的一些实施方式中，通过封装用户的信息和提供等级寻址 方案（如Q-in-Q和MAC-in-MAC)(参见上面描述的图8和图9)，控制平 面与用户分离。由于控制平面通过将源以太网交换装置20a处的常规头 信息提供给外头而运行其自身的寻址方案，所以增强了网络上的安全性。</p>
+    <p>本发明的一个实施方式实现了 Q-in-Q，其中将附加标签按照本领域 技术人员公知的方式插入到用户的以太网帧中。在该实施方式中，以太</p>
+    <p>网交换装置20对各个所接收的以太网帧进行处理，只基于外VLAN头在</p>
+    <p>以太网网络16上转发数据，这样就忽略了内VLAN头（如图8的上半部 所示）。另选地，以太网交换装置20可以检查外VLAN头和内VLAN头， 并且做出转发的决定，该决定是基于控制平面为各个以太网交换装置20 的VLAN-ID转发表中的两个VLAN-ID提供的条目而作出的。</p>
+    <p>在本发明的一个实施方式中，MAC-in-MAC封装方案由控制平面12 来控制。在该实施方式中，客户源和目的地MAC地址封装在网络边缘以 太网交换装置20处的MAC地址字段内。当执行MAC-in-MAC封装时，封装 用户帧并且不与控制平面相互作用，相反，控制平面对以太网交换装置 所提供的封装MAC地址起作用，使用户MAC地址可以在以太网核心网络 16之上有效地保持不可见。</p>
+    <p>在图9中，供应商（P)帧被示为与用户帧相邻。供应商帧包括诸如 VLAN或MAC字段的字段，这些字段完全独立于用户帧（其例如可包含非 VLAN标签，或者VLAN标签或Q-in-Q)。如此，可以提供增强的安全性， 因为在网络核心内使用的MAC地址是由MAC寻址方案正被使用的运营商 提供的地址，如果需要的话，仅在网络边缘交换装置处将用户MAC地址 解封装。</p>
+    <p>附图的图10A示出了其中提供了面向连接的以太网的本发明实施方 式。图10A示出了端到端控制平面12，如可以利用自动交换光网络（ASON) 来提供端到端控制平面12，以控制多个互连的交换装置20。</p>
+    <p>控制平面建立连接，按照上文所述的方式来增添交换装置上的桥接 表，以使以太网交换装置的MAC学习被禁能，因此使生成树协议无效， 因此不提供BPDU。根据交换装置的能力使用以太网帧中的一个或更多个 字段来分离流（例如，VLAN标签），使得可以实现适当的流量管理（例如， 使网络负载平衡）。VLAN标签没有被交换，并且仅具有本地意义，这保证 它们实际上并不受到网络升级的限制。</p>
+    <p>这使得可以在以太网交换装置之间提供多个连接，如图IOB所示。 在图IOB中，在交换装置A、 B、 C和E之间示出了第一路径，在交换装 置A、 D和E之间示出了第二路径。在节点A处，控制平面将输出端口配</p>
+    <p>置成沿第一路径转发与VLAN工D 100相关联的流量，沿第二路径转发具 有VLAN ID 120的流量。</p>
+    <p>图10C中所示的本发明实施方式提供了多服务复用技术。该实施方 式使运营商网络可以使用映射技术（如GFP和ATM层适配）在网络边缘 处实现以太网的多服务复用和其他服务。交换装置A接收用户以太网帧， 其在交换装置A处（或在图10A中未示出的某个其他边缘设备处）被封 装到服务供应商帧中。在本发明的一些实施方式中，与服务供应商关联 的地址被增添到封装头。在其他实施方式中，封装的头地址信息继续用 于通过交换装置20来转发被封装的帧。</p>
+    <p>图10C示出了本发明的具体实施方式，其中示出了针对核心网络的 packet-in-ethernet服务，然而，本领域技术人员将理解的是，对运营 商的以太网帧内的用户帧进行包装的原理可适用于其他技术。由于未接 触用户帧，所以提供了透明度。运营商自由使用它们自己的寻址方案（提 供定标、安全、隔离和默认检测）。在本发明的该实施方式中，运营商OAM (特别是管理）流量区别于用户流量，因为0AM帧仅有单个头（例如 Y. 17ethoam)。</p>
+    <p>在一个实施方式中，仅边缘以太网交换装置能够理解用户地址空间。 然而，如果提供点到点服务，这就不是必要的，在该情况下，核心以太 网交换装置20仅需要理解供应商地址空间。</p>
+    <p>如图10A至10C所示，本发明提供的以太网网络16使用媒体访问控 制（MAC)源地址（SA)和目的地地址（DA)来（在最高以太网层网络中） 提供终端用户面向连接的分组（CO-PS)服务，VLAN头字段用于限定传输 更高CO-PS层之下的服务器层。这使得服务供应商/网络运营商可以提供 "租用线路"类型的服务，其中用户MAC层和任何更高VLAN层被透明地 传输（例如，参见附图的图IOC)。在本发明的一个实施方式中，服务供 应商/网络运营商能够增添另一专用服务器层，以实现诸如流量调配等专 用服务。</p>
+    <p>本领域技术人员将知道G. 8080描述了一种用于面向连接的网络的控 制平面的架构，并且它是通过实现可以在无连接以太网网络环境下提供</p>
+    <p>面向连接的服务的G. 8080控制平面的面向连接的功能。G. 8080面向连接</p>
+    <p>控制平面用于控制无连接以太网技术，并且在这样做的过程中对以太网 交换装置的行为进行转换。</p>
+    <p>在本发明的一个实施方式中，遵照G.8080来提供适当的接口，以分 离呼叫/连接控制平面处理器（CPP) 36和以太网交换装置20,例如，各 个以太网交换装置20可以经由其现有的专用命令线路接口 （CLI) 32而 被控制。该实施方式要求在CLI上翻译命令（即，对命令线路接口或控 制平面的变化进行处理，以及在接口的每一侧上使用的"语言"间进行 翻译）的存根或间介器（mediator)在该图中未示出。G. 8080架构还考 虑了要集成到交换装置平台中的控制平面。尽管这可能需要对交换装置 平台进行修改以增添控制平面功能，但无需改变提供数据转发功能的硬 件。</p>
+    <p>在本发明的另一实施方式中，交换装置和控制平面之间的标准化接 口 （如通用交换装置管理协议（GSMP))用于实现控制平面功能。例如， GMPLS和网络管理协议或者类似的控制或管理面协议可用于实现必要的 功能，例如，可扩展标记语言（XML)或国际电信联盟（ITU)电信（ITU-T) 建议M. 3100。</p>
+    <p>运行、管理和维护</p>
+    <p>运行、管理和维护或OAM是任何服务供应商网络的基本部分。这是 因为通过告警检测和通知而允许进行设备和装置远程监控和故障检修而 降低了服务的成本。因此，故障定位较快并且解决较快，使得增加了用 户满意度。</p>
+    <p>本发明的一个实施方式在关闭切换（off-switch)的软件平台上（即， 在向针对非OAM流量的以太网交换装置处理硬件提供针对OAM流量的独 立硬件的不同平台上）实现OAM功能。这使得可以提供本发明所需的OAM 功能，而不需要对根据本发明的以太网交换装置的实施方式做任何直接 修改。此外，作为本领域中提供的标准，通过例如在软件平台上实现关 闭切换的OAM服务，容易适应所提供的OAM功能，以符合适当的标准协 议。</p>
+    <p>目前，不存在任何标准以太网OAM，仅存在卖方专用解决方案。三个</p>
+    <p>标准实体工EEE、 ITU-T和Metro Ethernet Forum目前正在开发在提供无 连接服务的以太网意义上将0AM弓l入到以太网段中的标准。这些标准有 望与可用于帧中继和ATM的标准一致，并且包括诸如发现、继续检查、 回送（lo叩back)、路径跟踪、性能管理和告警防护的功能。然而，无连 接以太网环境下的以太网0AM将提高以太网的故障隔离能力时，同时它 不提供在类似SDH和ATM的面向连接的网络中提供的相同层级的信息。</p>
+    <p>本发明的一个实施方式通过执行工TU-T推荐文本Y.1711中的题为 "Operation &amp; Maintenance mechanism for MPLS networks"的运行禾口 维护机制提议方案的稍加修改版本，实现了与国际电信联盟（ITU-T)推 荐文本Y, 1710中指定的题为"Requirements for Operation &amp; Maintenance functionality for MPLS networks"的要求一致的0AM功 能。</p>
+    <p>实现类似Y. 1710 0AM的本发明实施方式实现了一种0AM系统，其中 用户平面功能架构中的最一般实体是进行广播/多播的源（和/或在流域 中位于源之后的分割源）和进行过滤的宿（和/或在流域中位于宿之前的 分割源）。在其最一般意义上的标签化对于该实体是必需的，这是由于源 和目的地地标签使宿能够过滤掉唯一源/目的地通信。子网络和流域是该 实体的示例。然而，链路也是该实体的特别实例。在链路中，不需要显 式目的地标签，因为仅有一个目的地。宿进行解复用需要源标签。另外， 按照定义，链路不合并流量。因此，源在链路的复用的完全控制下。基 于该实体，成层和分割之间的区别更微小。为了实现子网络或流域，需 要按照与支持链路的服务器层完全相同的方式使用适应功能来创建标签 的"服务器"组。具有过滤宿的加标签广播域是堆栈的真正底部。</p>
+    <p>ITU-T推荐文本G. 805中有两种可能类型的0雄流：端到端路径0AM 流和中间串接监控0&#35469;流。</p>
+    <p>以太网协议数据单元（PDU)中有两级标签（或层）：以太网MAC源 地址（SA) /目的地地址（DA)和VLAN头层（如果有更多的子层，其还 可以进一步划分），因此需要四种类型的0AM流： -路径MAC SA/DA层0AM流（允许呼叫该OAM流类型A); -串接监控&#21312;C SA/DA层OASM流（OAM流类型B); -路径VLAN层OAM流（OAM流类型C); -TCM VLAN层OAM流（OAM流D)。</p>
+    <p>在OAM流类型A中，各分组中的SA和DA是全局唯一的，因此不需 要进一步的接入点标识。另外，各个帧都具有可用于性能监控的FCS。可 以使用EthertypeID来设计显式OAM分组，然而，另选地，可以使用IP 和用户数据报协议（UDP)端口号。</p>
+    <p>其他三个流基本上具有相同的基本实现。以太网帧由相关的以太网 边缘（或核心）交换装置20的附属处理器（CPP 36、 38)注入，并且这 可以与建立连接的信令控制相联系。在远端处，从用户平面流量中分离 出OAM帧并在附属处理器（CPP 36、 38)中切换出来以供处理。</p>
+    <p>因此，为了实现上述的OAM流，首先，OAM流应该在标签字段中具有 与用户面连接相同的值，以使任何中间以太网交换装置对OAM帧进行转 换，就好像它们是用户帧一样。另选地，可以为每个连接提供一个以上 标签值，但这不必按照相同的方式测试信令和转发表的准确性和完整性。 次之，OAM帧必须从用户平面来提取并根据以太网交换装置的标准功能在 以太网交换装置中被交换。</p>
+    <p>有几种方式可以达到这两个要求，然而，在本发明的优选实施方式 中，使用在OAM帧的SA字段中指出OAM流的源的附属处理器（CPP 36、 38)接口的MAC地址。</p>
+    <p>FDI和AIS</p>
+    <p>如在任意CO-PS网络中那样，从属标签没有被硬件化，因此告警指 示信号（AIS)和/或故障检测&amp;识别（FDI)的插入要求OAM处理查找标 签表，以找到哪个标签是当前的且有效的。在本发明的该实施方式中， OAM处理由位于控制平面中的并且不在与用户平面相同的硬件中的附属 处理器（CPP 36、 38)来执行。AIS和/或FDI现在是对于端到端流的额 外指示器。</p>
+    <p>通常，根据在来自服务器层的适应中检测到的故障来触发A工S和</p>
+    <p>FDI。它们不替代客户端层中的端到端O&#35469;流，因为有且仅有该流可以监 控该客户端连接的完整性。当存在关联的0AM流的相应丢失时，推断出</p>
+    <p>客户端连接的失去。如果除了丢失主0AM流之外还接收到AIS和/或FD工 信号，则宿可以推断出故障对于宿而言不是本地的。由于A工S和/或FDI 现在是额外信息而不是基本信息，所以其插入的丢失或恶化不是致命的 并且不易于曲解。</p>
+    <p>面向连接意味着"寻址和加标签"可以彼此分离，而信令系统用于 将它们关联起来。本发明将MAC地址视为仅在控制平面中可见的"标签"。 原则上可使用任何寻址方案，因为寻址仅对于以太网交换装置的附属处 理器是可见的，即仅在控制平面中是可见的。然而，为了与无连接网络 兼容，可使用互联网协议版本4 (IPv4)寻址，或另选地可使用互联网协 议版本6 (IPv6)。假定广泛使用专用寻址，已经以两种形式中的一种来 隐式地创建全局唯一地址。第一种形式是互联网协议（IP)虚拟专用网 络（VPN)中所用的隐式全局地址VPN/IPv4地址。全局唯一地址的第二 种形式是网络地址转换（NAT)地址。该全局唯一地址隐式地形成为随后 是专用IPv4地址的网关的公共IPv4地址的级联。在本发明的另选实施 方式中还可使用诸如网络服务接入点NSAP地址、E. 164地址或任何适用 的全局唯一地址格式的另选地址。</p>
+    <p>可以使用人工形式的寻址，如基于交换装置接口的地理和/或物理地 址的寻址，这对于进行网络操作领域的技术人员而言是公知的。</p>
+    <p>信令</p>
+    <p>根据本发明一个实施方式，控制平面12向数据平面14发送的信令 符合目前标准信令协议中的一种。例如，利用简单扩展（其允许以太网 传输专用的参数），可以使用诸如由ATM论坛定义的专用网络节点接口 (PNNI)的协议、资源储备协议（RSVP)或为通过网络请求和接收优选 服务的应用提供信令机制的其他协议，例如，（RSVP-TE)、诸如由RFC 3473 定义的通用多协议标签交换（GMPLS)协议、由RFC 3209定义的多协议标 签交换（MPLS)协议、诸如在ITU-T G.7713.3中定义的基于约束的路由 标签分布协议（CR-LDP)或ITU-Q-系列SS7协议或具有必要功能的任何</p>
+    <p>协议。</p>
+    <p>在本发明的其他实施方式中，实现另一种类型的控制平面架构，其 提供了与G.8080的功能类似的功能（或者完全地或作为子集或专门变</p>
+    <p>量）。例如，可以在重叠模式下使用如由互联网工程任务组（IETF)的标 准建议RFC 3945定义的GMPLS协议。在本发明的另一实施方式中，网络 管理协议用于为控制平面提供路由信息和为控制平面12与以太网交换装 置20之间的0AM提供后向定义的指示。在该实施方式中，在对于以太网 通信网络16独立的网络中发送信令消息。例如，在控制平面组件36与 以太网交换装置20分离的实施方式中，独立的管理数据通信网络可用于 提供信令。</p>
+    <p>另选地，控制平面信令在共享相同的物理链路的意义上可设置有以 太网流量，但可设置在带外网络中。带外（OOB)网络的目的是有效地提 供安全的网络来控制信息，以使控制信息与控制信息涉及的流量的路径 在逻辑上分离。因此，使用核心网络上的OOB网络（即逻辑上不同的网 络）来承载用于在核心以太网网络上交换局域网流量的控制信息，以使 仅运营商（即，该核心网络的网络操作员）能够访问控制平面，并且如 果需要的话，中断控制平面的操作。局域网客户端（即，客户网络）不 能对控制平面进行控制。在该实施方式中，可以将信令信息与VL&#35469;相关 联，因此在VLAN内，信令信道与所有以太网交换装置都相关联。这也可 以被使用（或用于后向OAM流量，特别是对于单向流量的另一VLAN)。</p>
+    <p>路由协议通常与信令协议或寻址方案的任一或两者相关联。对于路 由协议不优先需要面向连接的服务（静态路由是可以的）。路由可以基于 逐步的、域分级或基于源的方案。</p>
+    <p>可以使用基于IP的协议(诸如开放最短路径优先流量调配(OSPF-TE) 协议）或以与ASON架构一致的方式来分布控制平面所提供的路由信息。 在本发明一个实施方式中，提供静态路由信息。然而，在本发明的另选 实施方式中，使用本领域技术人员公知的合适的动态路由协议来实现动 态路由。在本发明的一个实施方式中，网络管理员手动地配置网络路由。</p>
+    <p>如果采用动态路由，则使用路由算法来自动地增添控制平面中的路</p>
+    <p>由表，并且信令协议将路由表条目读出，并增添以太网交换装置的转发 表条目。对于一些路径还可以在动态路由环境下经由控制平面来显式地 配置。静态路由和动态路由可以使用本发明的实施方式的分布式控制平 面（参见图4)或集中式控制平面（参见图11)来实现。</p>
+    <p>在本发明一个实施方式中，网络管理员（或操作员）在控制平面中 手动地输入面向连接的路由信息，该信息由信令系统经由命令线路接口 输出，以增添设置在以太网交换装置上的数据转发表。该信息由合适的 存根（未示出）传达，该存根将提供的信息翻译成合适的形式，以更新 以太网交换装置的转发表条目。</p>
+    <p>例如，现在暂时考虑图3和图4中所示的本发明实施方式。在该实 施方式中，路由信息由作为多个处理器而实现的控制平面来提供，各控 制平面处理器34向单个太网交换装置提供输入，这可以经由命令线路接</p>
+    <p>口 32 (如图3所示）来实现。该信息可以使用合适的交换装置控制协议 来提供，或显式地经由为通信网络16中的各个以太网交换装置20提供 的命令线路接口来提供。</p>
+    <p>在本发明的一个实施方式中，OAM可以与路由结合，以使控制平面可 以自动地发现以太网交换装置的互连，并使用该信息在控制平面中构建 和保持路由信息。本领域技术人员所称的这些"hello"消息有效地集合 了0AM和路由，使得控制平面具有最新的网络画面。</p>
+    <p>端到端控制平面通信</p>
+    <p>图11示出了控制平面架构，其被构造为使集中式控制平面功能（由 CPP 38和备用CPP 40 (其是冗余的但在CPP 38故障的情况下提供弹性） 示意性地示出）提供端到端控制平面通信网络。在本发明的该实施方式 中，控制平面的各个组件38、 40为一个以上的以太网交换装置20提供 控制平面功能。</p>
+    <p>图11示出了包括信号控制平面处理器38(其被设置为充当数据平面 14的所有以太网交换装置20的呼叫和连接控制器）的控制平面。实际上， 呼叫和连接控制器38与以太网交换装置20的比例可以选择为任何适当 的比例（这对于本领域技术人员是公知的）。因此，CPP处理器（M)与以</p>
+    <p>太网交换装置（N)的比例是M:N，其中M〈N是根据如何要求集中式或分</p>
+    <p>布式控制平面功能而变化的。</p>
+    <p>除了控制平面处理器的功能现在或多或少程度上是集中式的之外， 在该实施方式中提供端到端通信网络的集中式控制平面的实现按照与图</p>
+    <p>3和图4中所示的本发明实施方式相同的方式来进行。</p>
+    <p>参考分布式控制平面实施方式的上述特点也被认为是在更集中式控 制平面的上下文中公开，该更集中式控制平面的功能是由一个或更多个 控制平面组件来实现的，各个组件与数据平面的一个以上的以太网交换 装置相关联，换言之，控制平面处理组件与以太网交换装置的比例可以 随着构建到控制平面中的冗余度而变化。例如，在图ll所示的本发明实 施方式中，仅一个控制平面处理器CPP 40被设置为提供备用控制平面服 务，以在发生（例如，在图11中所示的任何一个以太网交换装置20与 中央控制平面处理器38之间）信令故障的情况下增加控制平面的弹性， 但在另选的实施方式中，可在控制平面中提供一个以上的备用控制平面 处理器40。</p>
+    <p>现在更详细地描述图11，在核心以太网网络16' CPP 38</p>
+    <p>充当数据平面网络14中所示的以太网交换装置20A、 20B、 20C、 20D、 20E 和20F中的每一个的附属处理器。单一备用CPP 40还提供给数据平面通 信网络14中的所有交换装置20。</p>
+    <p>在图ll中所示的实施方式中，CPP38确定各个连接请求的路由，并 且发送适当的信令消息，以（例如，使用CLI)增添各以太网交换装置 20的数据转发表条目。CPP 38包含适当的网络模型，例如网络资源（如 交换装置、链路、拓扑和连接）的数据库，CPP 38使用该网络模型来激 活服务请求。</p>
+    <p>可以使用具体的层级处互连的具有诸如全局分层或多个本地分层的 任何适当关系的CPP来实现控制平面，从而形成控制平面处理器的簇。 图12示出了本发明的一实施方式，在该实施方式中，将CPP"0"、"A"、 "B"和"C"设置成分层地与CPP "0"交互，CPP "0"提供了对局部化 的各CPP "A、 B、 C"责任域的对等控制。形成控制平面的CPP可以使用</p>
+    <p>任意适当的通信网络来向以太网交换装置的网络中的各以太网交换装置 传送适当的控制消息，以适当增添它们的数据转发表，尽管在某些点处 路由控制信息（其被保留在控制平面中）被转换为用于增添以太网交换 装置的数据转发表条目的地适当形式。</p>
+    <p>如上面在分布式控制平面实施方式的背景中所讨论的，可以使用能 够向以太网交换装置传送控制信息的任何适当的协议，例如，可以使用 管理或控制平面协议网络。控制平面协议可以基于管理协议或另选地基</p>
+    <p>于诸如GNPLS、 AS0N-RSUP-TE、 CR-LDP、 P丽I、 SS7等标准控制协议而为 专用的，如此处己描述的，正如本领域技术人员所显见的那样，假设这 些协议适用于本发明所需要的以太网相关的参数。</p>
+    <p>本领域技术人员将理解，如果对以太网交换装置的命令线路接口 (CLI)做出变化，则将需要更新控制平面与CLI之间的交换装置软件存 根（stub)。这需要对软件进行更新，而对于控制平面，需要单独的通信 网络来与交换装置进行会话（talk to)。</p>
+    <p>在本发明的一个实施方式中，为了克服CLI的变化和为控制平面12 提供适当的通信网络以与以太网交换装置20会话，用基于控制平面12 的接口的标准（例如，可以使用GSMP-通用交换装置管理协议）来替代 CLI 32。</p>
+    <p>GSMP提供主-从协议，在该协议中交换装置20充当对包括适当平台 的主设备的从设备，例如，诸如个人计算机的计算机。GSMP允许主设备 来建立和解除跨越交换装置20的以太网连接，以执行管理会话、请求信 息或允许交换装置向主设备通知任何问题。在本发明一个实施方式中， 设置主设备来同时对控制平面12自身和GSMP如何操作进行控制以允许 连接管理及邻接。无论是使用CLI还是使用GSMP (或其功能等同物），在 本发明一个实施方式中， 一些或全部控制平面流量流都共同地在同一基 础设施上传输流量。</p>
+    <p>本发明一些实施方式示出了在交换装置20之间创建针对控制平面的 VLAN。控制平面的VL&#35469;逻辑上与传输流量分离，并在以太网交换装置20 之间承载控制平面流量。通过使用以太网作为用于控制平面信令信息的</p>
+    <p>通信网络，分布式控制平面网络16中的各CPP 36能够与网络中的其他</p>
+    <p>CPP36会话。通过适当配置的相关以太网交换装置20的端口，将该信息 传递到有关VLAN。</p>
+    <p>图13中示出了三个以太网交换装置A、 B和C，各交换装置都具有相 关联的CPP。图13示出了在本发明一个实施方式中，如何经由适当的命 令线路接口 （CLI)(由图13中的"x"示出）将各CPP连接到以太网交 换装置。在该示例中，没有对以太网交换装置进行改变。图13中还示出 了另一接口 "y"，其包括本发明的一个实施方式中的GSMP接口 （在另选 实施方式中，可以使用类似的协议来远程控制交换装置）。</p>
+    <p>但是，如果使用交换装置管理协议接口来远程控制交换装置，则需 要修改交换装置软件以便与CPP通信，例如可能需要存根或间介器。</p>
+    <p>图14示出了本发明的另选实施方式，其中按照不同的拓扑来连接 CPP。在该实施方式中，针对不同的CPP可以使用不同的通信网络来进行 通信。在该情况下，用于在CPP与以太网交换装置之间传送控制消息的 VLAN由网络运营商来设置，这使得可以区分每一个控制VL&#35469;。本发明的 一些实施方式例如具有在不同的VLAN中实现的不同控制平面。这样就可 以逻辑上提供带外以太网控制。本领域技术人员还将理解，VLAN还可用 于其他用途，例如来传送运行与维护（OAM)分组。图14示出了 CPP与 以太网交换装置具有共同拓扑的情况，在该情况下，控制平面功能可以 被集成到各以太网交换装置中。</p>
+    <p>双模式以太网交换装置</p>
+    <p>在本发明另一实施方式中，设置混合的以太网交换装置来提供无连 接服务和面向连接的服务二者。该混合的以太网交换装置提供一些无连 接功能，只针对要提供面向连接的服务的混合以太网交换装置的端口， 提供路由信息（该信息增添数据转发表）的控制平面12提供面向连接的 功能。在该实施方式中，数据转发/过滤平面针对指定为提供无连接服务 的端口将保留其无连接功能。</p>
+    <p>只针对与面向连接的服务相关联的端口，用从控制平面得到的信息 来更新数据转发表条目，其余的端口继续提供无连接以太网服务。通过</p>
+    <p>去除与设置为提供无连接以太网服务的各以太网交换装置的端口相关联 的路由表条目中的冗余路径，适当的生成树算法确保了没有冗余的路径 存在。</p>
+    <p>尽管可以实现提供了无连接和面向连接的以太网二者的混合交换装 置，但生成树协议的使用易于受到不经意的误操作或蓄意攻击的影响。 这意味着STP的使用代表了在通信网络中易受攻击的操作点。通过使用</p>
+    <p>MAC-in-MAC来封装客户的生成树功能，并从以太网核心网中去除所有的 STP功能，核心网对于STP误操作或攻击的易受攻击性显著降低。在核心 以太网网络上使用MAC-in-MAC没有防止局域网在该域内执行STP。因而 在核心网上使用了封装的本发明实施方式增加了该域中的流量的安全 性。</p>
+    <p>第3层交换装置的重新配置</p>
+    <p>现在参照附图中的图15至21，本发明的交换装置包括原来旨在能够 支持无连接的开放系统互连（0SI)第3层路由的交换装置。</p>
+    <p>开放系统互连（0SI)第3层（也称为网络层）是处理端到端流量和 具有端到端意义的寻址的第一层。第3层协议的示例包括互联网协议 (IP)、和互联网分组交换（IPX)。但一般来说，第3层描述了寻址、路 由选择和过滤功能，这些功能是保证终端系统（计算机）之间的连接以 及限定利用第2层所提供的帧的分组格式所需要的。这里使用的术语"IP" 是指IP版本4和IP版本6 二者。</p>
+    <p>因此在下面的示例中，根据本发明的交换装置包括原来设置的来支 持互联网协议版本4或版本6流量的无连接路由的IP路由器。本发明使 这些路由器能够提供面向连接的服务，作为对无连接服务的替代或增添， 该面向连接的服务在一些实施方式中能够提供多路径路由选择。</p>
+    <p>因此， 一般来说，将术语交换装置定义为包括能够充当转发装置和 能够解析0SI-第3层（网络层）地址的所有路由选择装置（例如，能够 解析0SI-第3层（网络层）IP地址的IP路由器）。这里使用的所有术语 都保留了在国际电信联盟（ITU) ITU-T建议G.805 "Generic functional architecture of transport networks"中纟合出的定义，此处通过弓l用并</p>
+    <p>入其内容，除非明确地指出具有与G.805中给出的含义不一致的不同意 义。</p>
+    <p>互联网协议交换装置</p>
+    <p>使用标准IP路由器作为其节点硬件的本发明一个实施方式传输面向</p>
+    <p>连接的分组交换服务。面向连接的分组交换所需的全部信令和0AM是在 单独的处理平台（例如UNIX服务器平台）上实现的。理想的是，IP路 由器自身是未修改的，这样就可以从任何标准供应商获得"现货"。</p>
+    <p>本发明提供的服务类型在核心IP网络上提供透明传输意义上是面向 连接的分组交换（CO-PS)，并能够提供点对点或点对多点服务。这不排 除将多点对点和多点对多点约束用作端到端透明服务的传输的一部分。 同样，点对点服务可以被例示为点对点或点对多点单向服务或双向服务。 为了在IP路由器之间可交换，协议数据单元（PDU)必须符合IP分组格 式，即，为标准IP PDU。</p>
+    <p>图15示出了包括为支持无连接通信模式而建立的多个第3层交换装 置62的第3层通信网络50。在通信网络50中，管理平面52、控制平面 54和数据/转发平面56按照与针对OSI第2层类型通信流量的上面描述 的方式等同的针对OSI第3层流量的方式来提供网络功能。</p>
+    <p>上面在无连接以太网通信设备的背景中，与增添交换装置的路由表 的控制平面有关的概念和此处描述的实施方式的有关VLAN与OAM的概念 适用于支持提供使用IP通信设备（包括为了提供无连接服务的目的而在 网络中预先建立的IP通信设备）的面向连接的服务。</p>
+    <p>在图15中，管理平面52提供适当的接口来配置、控制和管理IP网 络50。控制平面54提供逻辑和物理接口，以经由命令线路接口或通过本 领域技术人员公知的任意其他适当方式（例如，在如GMPLS的IETF标准 之一中指定的方式）来建立和控制IP数据/转发平面56的活动。</p>
+    <p>控制平面54执行呼叫控制和连接控制功能，并使用信令来建立和释 放连接以及在故障情况下恢复连接。数据转发平面56提供用于传输网络 数据流量的过滤和转发功能。</p>
+    <p>在图15中，通信网络50包括本地主机的第一网络60a (例如用户</p>
+    <p>LAN),其能够经由多个互连的IP路由器62连接到本地主机的第二网络</p>
+    <p>60d (例如另一用户LAN)。图15中示出了示例性数量（为了简明，只有 四个）的IP路由器20 (标记为A、 B、 C和D)。</p>
+    <p>在图15中，本地局域网60a提供了流量（例如IP流量）的源64， 该流量是经由适当边缘设备66 (例如，提供一些复用功能的路由器）发 送到路由器A的。另选地，边缘设备66可以将不同协议类型的流量封装 到适于经由数据平面56在核心网上路由的IP流量中。</p>
+    <p>图2中所示的网络60d充当IP流量宿68，经由适当设备70 (例如， 提供解复用功能的路由器）从IP路由器D接收IP流量。此外，如有需 要，边缘设备78可以对流量进行解封装。此外，局域网实际上可以同时 充当IP流量的源和宿，如本领域技术人员公知的那样。</p>
+    <p>为了使IP路由器62正确地充当面向连接的IP路由器，必须关闭预 先设置的路由协议，或将其配置成由路由协议增添的所有转发表条目都 在优先级上低于针对面向连接的服务的协议。相反，与所有面向连接的 服务相关联的转发表条目都是使用控制平面经由CLI所提供的信息来增 添的，或者是通过本领域技术人员公知的任何其他方式来增加的。为了 提供端到端连接，控制平面利用适于端到端连接的转发表条目来增添各 个路由器（或等效的交换装置）A、 B、 C和D。这是可能的，因为IP路 由头信息与各个IP路由器62中的相同。</p>
+    <p>在图15中，数据平面56中设置的各个IP交换装置62上针对面向 连接的流量的IP数据转发功能是由控制平面54使用与各个IP路由器62 相关联的命令线路74a、 b、 c、 d来控制的。</p>
+    <p>在图15示出的实施方式中，针对IP交换装置A的转发表的路由信 息是在管理平面52中生成的，并经由控制平面54与路由器62通信。例 如，可由网络管理器72生成路由信息，并使用适当的命令线路接口（CLI) 74a发送至交换装置。经由74a、 74b、 74c、 74d类似地提供路由信息， 以增添各个IP路由器62B、 62C和62D的转发表。在IP路由器（例如IP 交换装置D上的分组嗅探器）上例如可以执行其他功能。</p>
+    <p>端到端控制平面通信网络使网络中的各个IP路由器20的路由表功</p>
+    <p>能无效并进行配置，该网络中要提供面向连接的服务（通过关闭这些功 能或将它们的优先级降低到适当的水平（例如保证它们实际上不被执 行））。在本发明的优选实施方式中，IP路由器62只提供面向连接的服务， 无连接路由被完全关闭，但另选地可以提供混合交换装置（参见下文）。</p>
+    <p>一旦如上所述地例如由控制平面使路由协议无效，控制平面就基于 IP地址、端口和任何其他头字段表条目创建并提供增添IP转发表所需的</p>
+    <p>路由信息。接着，IP路由器使用该信息来建立IP路由器62a、 62b、 62c、 62d自身之间的适当IP链路连接（由图15中的深黑色箭头所示）。IP路 由器可以支持单向和/或双向链路连接（如本领域技术人员公知的，因而 提供了全双工服务）。</p>
+    <p>各个IP路由器62基于通过对其转发表中的IP地址执行&#26619;找操作而 接收的IP流量的各个分组中的最外侧IP头，来执行数据转发。由于现 在是用从交换装置的控制平面得到的信息来增添转发表，所以将按照提 供面向连接的服务的方式来转发数据。</p>
+    <p>当用于面向连接的服务的寻址方案与IP网络所使用的寻址方案相同 时，控制平面可以直接使用该地址，使用该控制平面路由表是为了计算 出各个IP路由器上的输出端口。接着这在IP路由器中被配置为IP路由 器的转发表中的静态条目，如本领域技术人员理解的那样。当用于面向 连接的服务的寻址方案不同于IP网络所使用的寻址方案时，控制平面必 须首先执行目录转换&#26619;找，以发现连接的终端点的正确IP地址。接着， 控制平面使用该IP地址以及该路由表来制作IP路由器的转发表中的静 态条目。</p>
+    <p>在本发明的优选实施方式中，当面向连接的流量是IP路由器唯一支 持的流量时，IP路由器的转发表中的静态条目是只对终端用户的流量有 效的条目。这给出了高度的安全性，因为只有流量上的终端流量才是明 确被许可进入网络的流量。</p>
+    <p>在本发明的另选实施方式中，面向连接的流量与无连接流量在相同 IP路由器上混合。在该实施方式中，通过使转发表中的静态条目的优先 级高于无连接流量的条目的优先级，可以区分面向连接的流量与无连接</p>
+    <p>流量。例如通过使面向连接的分组在队列缓冲器中具有较高的优先级， 可以进行流量之间的进一步区分，以支持面向连接的服务的服务质量特 性。除了简单的优先级，还可以使用针对IP流量管理开发的许多技术和 本领域技术人员公知的技术来对面向连接的流量和无连接流量进行区</p>
+    <p>分，并提供针对面向连接的流量的正常面向连接的QoS。</p>
+    <p>控制平面54所提供的交换装置控制实现了在题为"Architecture of the automatically switched optical network(AS0N)"的国际电信联盟 ITU-T建议G.8080 (其内容通过引用而并入）中标识和描述的控制功能 (或适当的子集）。本发明的优选实施方式以与G.8080相一致的方式实 现了控制平面，G.8080考虑了连接和呼叫概念、控制与用户平面的分离 以及呼叫控制和连接控制的分离。另选地，可以使用GMPLS、 MPLS或传 统PSTN控制平面，或者网络管理系统。</p>
+    <p>控制平面具有对IP网络的可见性，其知道哪些资源是自由的。 一旦 从A到D的路径己被发送信号，控制平面就需要知道在D处哪些资源可 用于建立连接，即，确定哪些资源是自由的，例如，如果在IP版本6中 流标识符是自由的，则控制平面经由CPP通知全部交换装置使用该自由 流标识符。当CPP接收到请求时，CPP处理该请求以确定如何与在控制平 面的远端处的CPP (即，流量离开IP核心网络的IP交换装置的CPP)和 所有中间CPP会话。该请求可以提供专用路由或识别终端点，并可以要 求CPP找到路由。</p>
+    <p>本领域技术人员将理解，对连接的请求可以由控制平面处理器经由 IP路由器（CPP控制其数据转发功能）来接收，但是，当向CPP转发对 连接的请求时IP路由器将默默工作（即，CPP不控制IP路由器如何向控 制平面转发所接收的连接请求）。</p>
+    <p>现简要地参照图21，控制平面可以包括多个互连的附属控制平面处 理器（CPP) 78，或者按照集中化的方式来实现（在该情况下，控制平面 处理器与交换装置之间的映射可以不同于1: 1，其中设置了多个控制平 面处理器，可以有复杂的分层控制处理关系）。类似的是，可以通过拥有 一个或更多个空闲CPP (其资源只在另一 CPP故障时才被利用）而提供冗</p>
+    <p>余。为简明起见，除非需要在不同部件之间进行区分，否则特征将被称</p>
+    <p>为例如路由器62、局域网60，而不称为路由器62a、 62b、 62c、 62d和局 域网60a、 60b等。</p>
+    <p>尽管在图15中只示出了 LAN60a和60b，但是通信网络50中的各个 IP路由器62都连接到包括互连的本地主机（例如用户LAN)的两个或更 多个局域网60。控制平面54保留路由信息，该信息用于以数据转发信息 来增添数据转发平面中提供的数据转发表。经由其相应命令线路接口 (CLI) 74 (在图15中被示为连接控制平面与相关联的IP交换装置62 的虚线上的条）为各个IP路由器62提供路由信息。控制平面的结构没 有在图15中示出，根据控制平面处理器78与IP路由器62的比例，该 结构可以是分布式或集中式的。</p>
+    <p>在完全分布式控制平面中（例如图20和21中所示），各个CPP 78 按照与其控制的IP路由器62的一一对应关系来设置。通过适当的信令 网络在CPP 78之间交换信息（例如参见图20、 21)。这些附属处理器78 生成信息，该信息控制IP路由器62的数据转发表如何被更新，还防止 带IP地址的欺诈帧，或在这样的情况下：没有被经由提供面向连接的服 务的端口从通过交换装置而提供的信令信息所标识的IP版本6流标识 符。</p>
+    <p>除了现在能够提供面向连接的服务以外，IP路由器62的其余功能都 未改变，因为提供面向连接的服务所必需的交换装置行为的变化只是改 变转发表条目的以提供这样的服务的结果。</p>
+    <p>提供了面向连接的IP传输模式的本发明实施方式的多条路径建立的 方式类似于图4中针对以太网所示意性示出的方式。因而在图15中，可 以在IP路由器A和D之间建立两条路径， 一条经过路由器交换装置B和 C，而另一条仅经过IP路由器B (在图15中路径ABD表示为B与D之间 的虚线箭头）。</p>
+    <p>现在可以使用提供面向连接的服务的IP路由器62来提供多个连接。 如果流量的当前路径遭受了不可接受的劣化则可以将其动态地切换到新 的路径，因为控制平面可用于在沿着路径的任意点处动态地重新配置从A</p>
+    <p>到D的流量流。这使得IP流量的高带宽源能够维持对于其宿的服务质量， 即使随后产生了影响网络上原始路径1的其他流量也是如此。</p>
+    <p>如果需要带宽，还可以沿着两个或更多个路径同时发送流量，并可 以在目的地IP路由器62D处执行一些操作，如提供适当的排序等。在本</p>
+    <p>发明的又一实施方式中，所有IP路由器62的数据转发表条目都与预先</p>
+    <p>增添的两条路径相关联，这样，如果第一路由故障，则控制平面需要再</p>
+    <p>增添的唯一转发表就是源IP路由器62A的转发表，以实现从第一路由到 第二路由的转换。</p>
+    <p>在一些实施方式中，控制平面处理器CPP 78除了提供路由信息以外， 还提供呼叫连接控制功能。例如，如果控制IP路由器A的CPP 78a接收 到连接请求，则它为源自源LAN 60a去往宿LAN 60d的流量确定适当的 路由。CPP 78a还保证将适当的信令发送到CPP 78a已确定的路由上的其 他以太网交换装置62 (例如，对于图15中示出的第一路径，这将是IP 路由器A、 B、 C和D)，从而适当地更新它们的转发表。</p>
+    <p>当存在流标签时，如同在IP分组头中的IP版本6，在本发明的一个 实施方式中，使用流标签来分离流量流。这使得可以实现适当的流量管 理（例如，使网络负荷平衡）。不需要交换流标签，并且如果不交换流标 签，则它们可用作全局标识符的一部分(如果它们与IP地址相组合的话）。 这样，可充分升级的用于管理可升级网络的解决方案就可以由例如基于 目的地地址与流标签的组合来转发流量而提供。如果流标签被IP交换装 置交换（swap),则流标签将只保留本地意义。</p>
+    <p>因而，通过用适当的转发表条目沿路径（如第一和/或第二路径）来 增添各个IP路由器20的各个转发表条目，提供了源IP路由器和宿IP 路由器D之间的端到端连接。通过将IP的相关头信息与IP路由器的输 出端口进行匹配的转发表来实现转发。</p>
+    <p>IPv4流控制</p>
+    <p>在使用以太网交换装置的以上描述中，按照与这里使用IPv6流标签 的方式相同的方式使用VLAN标记，以获得多条路径。还存在以IPv4实 现该多路径流标签的许多方式。 一个选择是使用作为目的地地址的子网</p>
+    <p>地址和具有子网的地址来识别各条路径。接着控制平面可以适当地设置 各IP路由器的转发表中的子网掩码，以控制各条路径的路由选择。第二 选择是使用IP源路由一宽松源路由或者严格源路由。第三选择是使用IP</p>
+    <p>映射中的UDP中的IP,并使用IP路由器中的TCP/UDP端口转发来区分终 端路径。其他的选择可以使用IPv4头中的其他可选字段。</p>
+    <p>图16和17分别示意性地示出了当前本领域技术人员公知的有关标 准IP版本，图16示出了 IP版本4格式，图17示出了 IP版本6基本头 格式。将图16和17包括进来是为了例示这些协议头，该协议头对于本 领域技术人员是公知的，这里不再更多地详细描述。本领域技术人员将 发现，很明显，术语IP分组不应限于这里描述的具体实施方式，而是可 以指其特征能够实现本发明的任何类型的功能上等效的分组格式。</p>
+    <p>通过堆叠地址字段从而封装IP头信息可以减轻IP地址字段的长度 所施加的限制。这在图18中示意性地示出。对于IP的封装方案的更详 细情况，该头可参照对互联网工程任务组（IETF)现有的意见标准文件 RFC 1853的请求、欧洲电信标准协会（ETSI)或者国际电信联盟（ITU) 现有的等同的标准文件，这对于本领域技术人员是公知的。存在许多的 其他封装方案（除了 IP-in-IP)，这也使得一个IP分组可在另一个IP分 组中被运送，并可用于各种应用（将来会定义更多的应用）。例如，存在 IP-in-UDP-in-IP的封装，这可用于支持上述多路径特征。在本说明书中， IP-in-IP包括任意适当的这些封装，而不仅仅是RFC 1853中描述的 IP-in-IP封装。</p>
+    <p>在用户可见IP头信息被封装在例如运营商提供的IP头信息内，并 且实现了等级寻址方案的本发明的实施方式中，安全地将控制平面与用 户分离。通过将外头提供到源IP路由器62a处的常规头信息，封装了用</p>
+    <p>户的该外头可以由运行其自身的寻址方案的控制平面来提供。</p>
+    <p>在本发明的该实施方式中，IP-in-IP封装方案是由控制平面12控制 的。用户源IP地址和目的地IP地址封装在网络边缘IP路由器62处的 IP地址字段内。当执行IP-in-IP封装时，封装用户分组并且不与控制平 面交互，相反，控制平面作用于IP交换装置所提供的封装IP头，使用</p>
+    <p>户IP地址能够在IP核心网络上有效地保持不可见。</p>
+    <p>图19中示出了针对核心IP网络的IP-in-IP服务，但是在运营商的 IP分组内包装用户IP分组的原理可应用于其他技术。由于未接触用户的 分组，所以提供了透明性。于是运营商可自由地使用其自己的寻址方案 (提供升级、安全性、隔离和故障检测）。</p>
+    <p>图19示出了供应商（P) IP分组如何可以包括完全独立于用户头的 其他字段。按照该方式，由于使用的核心网络内IP地址是由那些其IP 寻址方案正在被使用的运营商提供的IP地址，所以可以提供增强的安全 性，而用户IP地址只是在有需要时才在网络边缘交换装置处被解封装。</p>
+    <p>针对图19中具有相同或等同功能的元件保留之前描述中使用的编号方案。</p>
+    <p>在图19中，用户IP分组（在图中表示为c-IP分组）被示为随着流</p>
+    <p>量在网络中流动而保留在运营商IP分组内。在一个实施方式中，只有边</p>
+    <p>缘IP路由器62理解该用户地址空间。但是，如果提供了点对点服务的 话就不必如此。核心IP网络路由器62只需要理解供应商的地址空间。</p>
+    <p>本发明提供的IP网络使用IP源地址（SA)和目的地地址（DA)来 提供终端用户面向连接的分组交换（CO-PS)服务（使用外IP头)。这使 得服务供应商/网络运营商能够提供"租用线路"类型的服务，其中用户 IP分组透明地传输（例如参见附图中的图19)。内IP头是使用常规IP 路由器和IP路由协议来处理的并作为常规无连接IP来操作。在本发明 的一个实施方式中，服务供应商/网络运营商能够增添另外服务器层来实 现诸如流量调配等专用服务。</p>
+    <p>在本发明的另一实施方式中，内头和外头可以是不同的IP版本。 内头和外头逻辑上是分离的，本发明的许多实施方式是可能的。前 面已描述了外头是以太网（MAC)的实施方式，在该情况下，还存在着均 具有不同内头的组成实施方式。实施方式包括MAC中的IPv4、 MAC中的 IPv6、 MAC中的IPX和MAC中的MAC。在此处描述的实施方式中，外头是 IP (例如IPv4或IPv6)，还存在许多组成实施方式。类似的是，实施方 式包括IPv4-in-IP、 IPv6-in-IP、 IPX-in-IP和MAC-in-IP 。</p>
+    <p>本领域技术人员将理解，G. 8080描述了针对面向连接的网络的控制</p>
+    <p>平面的架构，正是通过执行G.8080控制平面的面向连接的功能，才可以 在无连接IP网络环境中提供面向连接的服务。G. 8080面向连接的控制平 面被用于控制无连接IP技术，这样就转变了 IP路由器的行为。</p>
+    <p>在本发明的一个实施方式中，提供符合G.8080的适当接口以分离呼 叫/连接控制平面处理器（CPP) 36和IP路由器62，例如，可以经由其 现有的专用命令线路接口 （CLI) 32来控制各IP路由器62 (参见图20)。 在该图中未示出该实施方式所需存根或间介器，其用于在CLI上翻译命 令（即，处理对命令线路接口或对控制平面的改变并在接口的两侧使用 的"语言"之间进行翻译）。G. 8080架构还允许控制平面被集成到交换装 置平台中。尽管这可能需要对交换装置平台进行修改以增添控制平面功 能，但并不需要改变提供数据转发功能的硬件。</p>
+    <p>在本发明的另一实施方式中，使用交换装置与诸如通用交换装置管 理协议（GSMP)的控制平面之间的标准化接口来实现控制平面功能。例 如，GMPLS和网络管理协议或类似的控制或管理平面协议可用于实现必要 的功能，例如可扩展标记语言（XML)或国际电信联盟（ITU)通信（ITU-T) 推荐文本M. 3100。</p>
+    <p>面向连接意味着"寻址和标签化"可以彼此分离（decouple),而信 令系统将它们关联起来。本发明将IP地址视为只在控制平面中可见的"标 签"。原则上可以使用任何寻址方案，因为寻址只对于IP交换装置的附 属处理器是可见的，即，只在控制平面是可见的。但为了与无连接网络 兼容，可以使用互联网协议版本4 (IPv4)寻址，或者另选地使用互联网 协议版本6 (IPv6)。在专用寻址被广泛使用的情况下，全局唯一地址是 以两种形式之一隐式地创建的。第一种形式为在互联网协议（IP)虚拟 专用网（VPN)中使用的隐式全局地址VPNid/IPv4地址。全局唯一地址的 第二种形式为网络地址转换（NAT)地址。该全局唯一地址被隐式地形成 为网关公共IPv4地址（后面跟着专用IPv4地址）的级联（concatenation)。</p>
+    <p>在本发明的另选实施方式中，也可以另选地使用诸如网络服务接入点 NSAP地址、E. 164地址或任意可用的全局唯一地址格式。</p>
+    <p>可以使用人工形式的寻址，如基于交换装置接口的地理和/或物理位 置的人工形式的寻址，这是执行网络操作的本领域技术人员所公知的。</p>
+    <p>控制平面54发送到数据平面56的信令符合根据本发明的当前标准 信令协议之一，这些当前标准信令协议在以太网流量的背景中在上文已 详细描述，但在这里具有必要功能以具有容许专用于工P传输的参数的简 单扩展。</p>
+    <p>按照旨在以太网交换装置的实施方式的背景中描述的方式相类似的 方式来实现路由选择功能。</p>
+    <p>动态路由选择的具体实施方式可以使用路由器内的路由协议。在该 实施方式中，路由器可以运行其通常的路由协议来计算路由表，但是终 端用户流量的转发不直接基于该路由表，因为它处于通常的无连接路由 中。相反，控制平面使用路由器上的该路由表作为其路由表来计算转发 表中的转发条目。在该实施方式中，路由器被配置成，除了路由器自身 的地址以外路由表正常复制为转发表被禁能，这是因为路由器自身的地 址是路由协议的正常运行所需要的。路由器禁能该复制的方式可以根据</p>
+    <p>路由器的具体实现和CLI能力而变化。为有助于此而可以采用的一种具</p>
+    <p>体技术是从不同于面向连接的服务的端点的IP地址的IP地址空间中分 配路由器IP地址。如果得到IP路由器的支持，则可以设置过滤器从而 只允许路由器自身IP地址的无连接转发。这样的实施方式自动实现了自 动发现以及链路及节点的故障检测。</p>
+    <p>因而，在图15所示的本发明实施方式中，由实现为多个处理器的控 制平面来提供路由信息，每个控制平面处理器78都向单个IP路由器62 提供输入（可以经由命令线路74进行）。可以使用适当的路由器或使用 交换装置控制协议或者显式地经由为通信网络中各个IP路由器62提供 的命令线路接口来提供该信息。</p>
+    <p>如果按照分布式控制平面功能提供端到端控制平面通信网络的方式 来配置控制平面架构，则控制平面的各部件都为一个以上的交换装置提 供控制平面功能，这样对于IP路由器62的控制平面就可以按照与以上 针对IP交换装置的以太网交换装置而描述的方式相同的方式来实现。如</p>
+    <p>上面在其他实施方式的背景中已讨论的，可以使用任意适当的能够向IP 路由器运送控制信息的协议，例如可以使用管理或控制平面协议网络。</p>
+    <p>基于管理协议或另选地基于诸如GMPLS、 AS0N-RSVP-TE、 CR-LDP、 PNN工、 SS7等的标准控制协议，控制平面协议可以是专用的，如本领域技术人员 显见的，假设这些控制平面协议是适合作为针对本发明所需要的IP相关 参数。</p>
+    <p>本领域技术人员将理解，如果对IP交换装置的命令线路接口 （CL工） 做出改动，则控制平面与CLI之间的交换装置软件存根将需要更新。这 需要对软件进行更新，并且控制平面与交换装置进行对话需要单独的通 信网络。</p>
+    <p>图20中示出了三个IP路由器62A、 62B和62C，每个都具有关联的 CPP 78。各CPP 78都经由适当的接口 ，通过由x表示的命令线路接口 （CLI) 和/或包括GSMP接口的接口 y而连接到IP路由器62。另选地可以使用能 够从控制平面远程控制IP路由器62的任何其他己知的协议。但是，如 果使用交换装置管理协议接口来远程控制交换装置，则将需要修改交换 装置软件以与CPP通信，例如可能需要存根或其他间介器。</p>
+    <p>图21示出了本发明的另选实施方式，其中以不同的拓扑连接了 CPP 78，这使得不同CPP 78可以使用不同通信网络来通信。例如，CPP78可 以使用ipv6分组中的流标识符来标识虚拟专用网，该虚拟专用网可用于 在CPP 78与IP路由器62之间运送控制消息。网络运营商将虚拟专用网 设置成，使其可以区分各个控制VPN。这样，例如就可以具有在不同VPN 中实现的不同控制平面功能。以该方式可以在逻辑上提供针对面向连接 的IP传输模式的带外控制。此外，如本领域技术人员将理解的，还可以 将VPN用于其他用途，例如来运送运行和维护（OAM)分组。</p>
+    <p>双模式/混合IP交换装置</p>
+    <p>在本发明的另一实施方式中，IP路由器被设置成提供无连接服务和 面向连接的服务二者。IP路由器直接提供一些无连接功能。在该实施方 式中，数据转发平面将保留其无连接服务的无连接功能。只针对面向连 接的服务利用从控制平面得到的信息对数据转发表条目进行更新。</p>
+    <p>本领域技术人员将发现以上本发明实施方式的详细描述中描述的特 征的许多明显的等同物和变型例。因此本发明的范围由所附的权利要求 来解释，而不是由上述具体实施方式来解释。</p>
+    <p>在全部说明书和权利要求中，除非上下文有明确的要求，否则词"包</p>
+    <p>括（comprise/comprising)"等将被解释为包括性，而不是排除性的或穷 举性的意义；就是说，为"包括但并不限于"的意义。</p>
+    <p>前面的描述清楚地指出了可以使用常规IP网络中现成的所有现有工 具、技术和协议来对已封装IP流量进行转发，同时可以使用其自己的控 制平面和地址空间对IP流量进行封装。但是，封装流量和其控制流量的 一些或全部不需要按照相伺方式被转发。</p>
+    <p>对于与用户流量一起传输其流量的控制平面解决方案（即，它使用 与路由器之间的流量相同的链路），可以简单地手动预先设置专用于控制 和管理流量的连接（在提供封装的层中），使得可以在网络中随处发送控 制流量。为了创建针对用户流量的连接，这是先决条件。但是，也可以 设想其他方案。正是由于不同的转发行为在其正在应用于不同层的意义 上可以应用于己封装的和正封装的IP流量（IP-on-IP可以被认为是在 ITU建议G. 809的意义上全部的客户机/服务器封装，其中已封装流量与 客户机层相关联，正封装流量与服务器层相关联），所以才可以水平地应 用。除了预先提供针对管理和控制流量的连接，还可以按照无连接方式 来发送控制流量，而用户流量是沿着（正封装的层中的）连接而发送的。</p>
+    <p>同样，正在提供封装的层可以被分割，以使得根据常规工P转发技术 来转发控制流量，而使用新的控制平面来转发有连接特征 (connection-like)流量。区分转发行为的优点在于，控制平面流量可 以使用常规IP网络中可用的所有工具和协议。同样，可以针对控制平面 流量而部署诸如互联网控制消息协议（ICMP)的协议及其属性（如 traceroute和Ping)，控制平面还可以利用用于增添路由表的IP路由协 议，以有助于转发控制流量。通过只过滤掉不与控制流量相关联的IP地 址，可以使用针对控制流量的路由协议来只增添针对控制平面流量的路 由表。</p>
+    <p>还应该看到，诸如ICMP的工具还可以在连接内部使用。在该情况下， 它们受限于连接的环境，但是，常规IP诊断工具和技术现在可以"连接 着"运行，以提供用于监测连接的0AM措施。此外，这些工具可以用于 单向连接。这里返回路径不需要跟随连接，返回消息可以在控制平面中 发送。另选的是，针对相关联以形成双向连接的两个单向连接，返回路 径可以在另一方向上跟随该连接。</p>
+    <p>如果控制处理器之间的控制流量运行在与用户流量相分离的网络 (即，单独且不同的链路）上，则控制平面流量的转发在任何情况下都 完全与用户流量分离。该流量的寻址空间也是分离的，并且实际上甚至</p>
+    <p>不需要是相同类型的（在一个空间中为IPv4，在另一空间中为IPv6)。</p>
+    <p>本发明的上述实施方式清楚地指出了可以使用原来设计用于无连接</p>
+    <p>传输模式的交换装置来提供面向连接的服务。原来设计为支持0SI第2 层或第3层无连接传输模式（其依赖于能够从控制平面远程增添的路由 表）的任意第2层通信设备现在都可以用于提供面向连接的服务。原来 的无连接寻址方案可以保留，但各帧头中包含地址信息的一个或更多个 字段将由控制平面使用，以通过适当的与交换装置的接口来更新路由表。 通过在核心（如运营商）网络的边缘的交换装置处封装地址信息，可以 将用户地址信息封装在运营商提供的地址信息中，从而更安全地在网络 上传输。</p>
+    <p>图22A和22B示出了 IP路由器的转发表80如何由控制平面54来增 添。在IP中，转发表通常称为路由表，并包含与IP路由器的特定输出 端口相关联的路由的优先级列表（有效的地址集合）。根据本发明，控制 平面54利用按照保证默认路由是无连接的方式进行优先级排列的路由来 增添IP转发表80 (在设置了默认路由的情况下）。IP路由器的转发引擎 简单地查看图22A中示出的转发表80中的路由条目，并针对接收的IP 分组来选择与路由器的特定输出端口相关联的路由。在图22A所示的实 施方式中，路由82a是最高优先级的路由，而路由82b具有较低的优先 级。路由84是默认路由，在本发明的该实施方式中它是无连接的。</p>
+    <p>为了实现图22A中所示实施方式中的多路径路由选择，可以向目的</p>
+    <p>地地址分配IP地址空间的子网，于是IP子网的地址空间中的各单独地 址就可以用于区分不同的路径。这样，就可以按照面向连接的方式为符 合标准IP协议的流量设立多条路径。例如，在本领域技术人员公知的工P</p>
+    <p>寻址方案中，Class C子网可以用作目的地地址，可以使用单独的Class C地址来指定多达256条路径。</p>
+    <p>图22B示出了根据本发明的IP路由器的转发/路由表的另选实施方 式，其中控制平面54利用包括标准IP路由地址串和掩码地址空间的路 由信息以图22A的方式来增添转发表，另外提供了 TCP/UDP端口标识符 以使得可以在源与特定IP目的地地址之间建立多条路径。</p>
+    <p>上述实施方式都展示了本发明提供了这样的机制：使得被设置为支 持无连接流量模式的0SI第2层或第3层交换装置可以支持面向连接的 流量模式作为默认传输模式，而无连接流量模式不是被丢弃，就是只有 在被某些装置（例如，使用特定VLAN标签或默认路由表条目）识别时才 被允许。</p>
+    <p>因而，本发明允许将现有的无连接设备重新用于面向连接的服务， 这些设备包括通常与面向连接的服务相关联的所有的多路径特征和路径 恢复特征，而不对现有设备或对与设备相关联的标准做任何改动。为了 实现多路径特征和路径恢复，需要一种多路径标识符，其无法通过单个 目的地地址或者通过源和目的地地址对而到达。为此需要另外的字段， 如VL&#35469;id、 IPv6流id或针对下面描述的IPv6的多种可能，这是现有技 术中缺失的。对于面向连接的流量的控制完全与任意现有的无连接控制 协议（例如以太网桥接器学习和生成树协议或IP路由协议）分离，从而 给出了通常与面向连接的服务相关联的安全性。</p>
+    <p>因此，通过禁能常规控制平面协议，本发明可以将硬件重新配置成 在面向连接模式下操作。无论面向连接的的形式是电路交换类型（如TDM 或波长）还是分组交换类型（如ATM)，都存在着一组许多人都认为是定 义面向连接的特性。这些特性包括在传输信息之前请求和分配资源。在 数据平面中，假设转发是基于具有链路本地意义的连接标识符而进行的。 示例包括TDM网络中的时隙、光网络中的波长、ATM中的VCI和VPI字段、</p>
+    <p>帧中继中的DLCI字段和基于RSVP-TEMPLS的网络中的标签。该连接标识 符还被本领域技术人员称为"标签"，并与通过网络传输的各流量单元相 关联。本领域公知的是，在面向连接的分组交换（CO-PS)网络中例如使 用标签来转发流量，标签交换（swapping)可以获得可升级性。标签可 以是显式的或隐式的（如时隙）。</p>
+    <p>IEEE目前正在开发MAC-in-MAC封装，该封装使得：供应商的地址空 间能够与用户的地址空间相分离，用户帧将可以不被标记或被标记，用 户可以使用自己的控制协议（如生成树协议），可以使用等级通过在网络 的边缘处封装用户帧而提供安全性。例如，等级的使用还使得可以从管 理中分离出控制，使得等级的一个层中的管理控制独立于其他层中执行 的控制。</p>
+    <p>在本发明的一些实施方式中，客户机层可以是无连接的，并且转发 与桥接功能可以如IEEE在客户机层中所定义的那样。这同时适用于未标 记和已标记的帧。不需要求助于面向连接的构造来描述VLAN (因为VLAN 不是连接），从用户的角度来看，该层处的网络看起来像任何其他的以太 网网络。但是，在这样的实施方式中，在服务器层中维持了以太网帧的 通常格式，但切断了桥接功能（例如对未知分组的MAC学习和广播）。还 禁能了生成树。因此，这里提出的概念可应用于VLAN范围的全部或一些。</p>
+    <p>尽管IEEE规范允许通过静态地配置实现无连接路由的使用而增添转 发表，但本发明利用该机制来增添转发表，以在以太网或IP流量的源与 宿之间执行面向连接的路由选择。这允许使用现有硬件的面向连接的转 发。如果存在转发表中无条目的协议数据单元（如帧或分组），则简单地 丢弃该PDU。这样，流量就不被允许进入到网络中，除非它与连接相关联。</p>
+    <p>现在参照附图中的图23，其示出了本发明的一种实施方式，该实施 方式实现了针对OSI第2层处的流量（如具有以太网地址信息的流量） 的在核心网络中的交换装置之间的多路径路由选择。等同的实施方式可 以提供给OSI第3层（例如具有IP地址信息的流量）。</p>
+    <p>图23中，在交换装置A、 B、 C和E之间示出了第一路径，在交换装 置A、 D和E之间示出了第二路径。图23中示出了本发明的实施方式，</p>
+    <p>其中用户流量包括以太网流量。用户以太网流量帧是使用适当的封装方 案被封装到以太网帧中的，该以太网帧在核心网络的以太网交换装置20 之间运送供应商地址信息。类似的封装方案也可针对工P流量来实施。</p>
+    <p>因而，在图23所示的实施方式中，在节点A处，管理平面IO (和/ 或控制平面12)已将输出端口配置成沿着第一路径来转发与VLAN ID100 相关联的流量，而沿着第二路径来转发具有VLAN ID 120的流量。在图 23中，网络元件A和E对应于网络边缘设备，例如符合802. lah的设备， 该设备为用户提供面对的端口，其中在A处将用户流量封装到所设置的 以太网交换路径上，并在E处提取该用户流量。</p>
+    <p>在设置（provisioning)和管理平面中已对分配了 VLAN-ID 120的 流量计算出了第一路径。因而，在插入的P交换机中配置的转发表将 VID二120/MAC二E映射到各设备的适当输出端口，以定义邻近的路径。关于 第二路径，使用VID=100/MAC=E，同样的处理导致在交换机中配置的路径。 可以使用类似的处理来配置从E到A的对称返回路径。</p>
+    <p>在该实施方式中，路径在节点D处有意地合并/分离，以例示正是VID 与MAC 二者的组合才提供了转发条目。正是二者的级联确定了转发路径。 诸如与另一 MAC地址一起使用的VID 100或120的任一空间中的冲突或 如在路径120/E和100/E交叉的上述实施方式中的冲突仍唯一地解析为 单个输出端口。</p>
+    <p>现在使用VLAN ID来标识到目的地地址的多条平行路径中的一个。 当以该方式使用时VLAN ID字段不再是全局有效的，各VLAN ID值可以 重新用于不同的目的地地址。但是，对各交换装置处的转发没有影响。</p>
+    <p>根据本发明，可以使用由控制平面并入到转发表中的任何索引头字 段标识符值或这些的值的组合，尽管在上述示例中这是基于转发的MAC 地址和VLAN ID的组合。这允许在VLAN标签级处"合并"，同时利用字 段的组合来保证全局唯一性。这提供了具有吸引力的升级行为，同时避 免了源可见性的丧失，这种丧失发生在合并时只使用标签的面向连接的 技术中。与VLAN交换相比，这不需要引入任何新形式的转发机制。</p>
+    <p>通过采用现有的MAC地址加上诸如VLAN标签的另一头标识符和通过</p>
+    <p>利用在网络上的交换装置之间的各跳（hop)上的MAC地址和VLAN ID的 相同值，显著地简化了针对通信网络上的连接的OAM。例如，诸如误配置 的转发错误的自我识别是立即的。具体来说，附加的头加上MAC目的地 地址接入使得可以向以太网增添流量调配能力。这展现了对现有以太网 解决方案的显著利益。诸如带宽管理和连接许可控制的面向连接的能力 提供了资源管理。</p>
+    <p>与现有的面向连接的技术相比，不是通过单个隐式的或显式的标签 而是通过目的地地址和现在充当路由区分器的头标识符标签的组合来进 行转发，例如，较高优先级流量可以被分配面向连接的的传输模式，而 具有较低优先级的流量可以继续按照无连接模式在网络上进行路由。显 然，尽管标签对于面向连接的转发是足够的，但如果还使用地址则可以 获得附加的功能。对于多数面向连接的技术而言这是不可能的，但作为 帧/分组格式的结果，对于以太网这是可能的。地址与标签的组合还表明 不需要交换。因此，单靠转发并不能确定面向连接的或无连接行为，任 意形式的行为都可以使用相同的帧格式和相同的硬件获得。</p>
+    <p>根据本发明，可以应用配置为实现基于自组织的无连接路由的并且 具有与控制平面连接的装置的0SI第2层和第3层交换装置，来实现面 向连接的路由，假设无连接路由/地址学习功能在要实现面向连接的服务 的交换装置的全部端口或端口的子集上被禁能。这使得在全部端口或一 定范围内的端口上实现了面向连接的路由（或VLAN-ID或交换装置能够 被交换装置审&#26619;的其他字段标识符），其中使用控制或管理平面来直接增 添交换装置的转发表。在一些实施方式中交换装置的操作选择性地处于 控制平面的控制下，而不是静态确定的。</p>
+    <p>通过在通信网络中提供按照该方式直接增添了转发表的多个以太网 交换装置，针对头字段标识符值匹配控制平面已配置交换机来提供面向 连接的服务的值的所有流量，交换装置都有效地以CO-PS模式进行操作。 尽管这是针对基于VLAN-ID的一些条目来执行的，但其他条目可包括其 他头标识符，例如以太网类型、优先级或其组合，实际上，是这样的任 何信息，该信息可以由控制平面提供并且以适当方式被格式化以使得它</p>
+    <p>可以占用由交换装置使用的转发表，并且可以与交换装置从流量头字段 中提取出的信息相匹配。因此，可以将交换装置配置成具有这样的表，</p>
+    <p>这些表具有输出端口与VLAN-ID和DA相关联的一些条目，以及在将输出 端口与以太网类型和DA相关联或者与优先级和DA等相关联的同一表中 的其他条目。条目的多样化可导致针对流量的多条路径（例如，如果与 特定VLAN-ID及DA相关联的输出端口出现拥塞，则该流量可以基于DA、 以太网类型或优先级沿着另选路径而路由，如果这些是与不同输出端口 相关联的话）。</p>
+    <p>控制平面将配置所有有关交换装置的转发表以在通信网络上建立连 接（即，各邻近的交换装置系列将有效地增添其转发表，以使得各条目 设立单向连接（或者如果也映射到相反方向，则为双向连接，即，从SA 到DA是单向的，而SA-DA和DA-SA条目提供了双向连接）。转发表中的 标识符可以是标识符的系列或范围的一部分，例如对具体MAC DA是唯一 的VLAN-ID的系列或范围。如果这样，它们就可标识在任意给定DA处的 可能的连接终端的数量。</p>
+    <p>由于转发表通常通过溢流（flooding)而响应于未知的地址，所以 必须禁能该功能以保证避免溢流，用来自管理平面（或等效地为控制平 面）的信息来直接增添转发表。这尤其适用于在由交换装置进行中继之 前需要过滤（或丢弃）的任何广播或多播流量。</p>
+    <p>当与呼叫许可控制以及排队（例如基于等级排队的802. 1Q)组合时</p>
+    <p>跨越网络的显式连接路由实现了各连接的QoS。此外，需要从网络可获得 (例如，使用ITU-802. lab标准技术）的一些拓扑信息以提供CO-PS服务。 还必须提供所需连接的信令，例如，可以使用0雄流量（例如使用 ITU-802. lag)从管理平面用信号通知连接。</p>
+    <p>因此，本发明涉及使用控制平面来配置交换装置，而使得可以独立 于接入网络中利用的传输模式来决定所接收的流量是以面向连接的方式 还是以无连接方式在网络上进行路由。同样可以使用管理平面来适当地 配置控制平面，并且管理平面能够确定何时要执行面向连接的服务。局 域网服务供应商或用户不需要对于要在核心网络上以面向连接的方式进</p>
+    <p>行路由的流量分配具体的头字段范围值（尽管他们可以这样做）。</p>
+    <p>本发明的一些实施方式使服务供应商经由控制平面来控制交换装置 的操作，以选择性地针对核心网络上的流量来提供面向连接的或无连接 服务。例如，按照该方式，不根据所接收分组/帧的头字段中的具体信息， 而可以根据日期时间和核心网络上的流量负荷（到具体目的地地址的流 量）来选择性地提供面向连接的传输模式。</p>
+    <p>通过无连接协议（例如，生成树协议和地址学习协议或任意具有针 对非以太网流量的等效功能的协议）是运行在交换装置的专用接口上还 是这些协议己被禁能/去除来简单地确定转发流量的模式，以使得控制平 面能够提供等效路由信息而为核心网络上的特定接收流量建立连接。</p>
+    <p>这使交换装置能够进行操作以按照无连接和/或面向连接的方式在 同一时间（即，以混合模式）或选择性地在控制平面确定的不同时间向 同一 目的地地址转发流量。在其源处流量不需要在其头字段中来指定专 用标识符，因为交换装置的操作模式只由以下内容来控制：连接是否由 控制平面建立。控制平面可以将交换装置配置成丢弃所有未知的流量， 或者交换装置可以将未知流量传输至已保留了适当地址协议的输出端 口，例如这是通过将所接收的分组/帧的VLAN-ID交换到与输出端口相关</p>
+    <p>联的VLAN-ID而实现的，针对该端口，未知功能的广播未被禁能/去除。</p>
+    <p>当生成树和地址学习功能可远程配置时，可以使用控制平面来远程 激活/无效该功能。这样，交换装置就可以根据它从控制平面接收到的信 息来动态地修改其行为，以针对接收的流量来提供端到端面向连接的路 由或无连接路由，这是通过激活或无效交换装置的一个或更多个接口的 功能来实现的，该交换装置使各个所述一个或更多个接口不再以无连接 方式来操作。</p>
+    <p>本领域技术人员将理解，存在上文中未详细描述的常规交换装置的 许多方面，例如交换装置的数据存储装置例如可以是被设置为提供地址 "查找"功能的数据库。假设这样的数据库装置与交换装置相关联和/或 与交换装置集成，以使得控制平面能够提供适当的信息来增添数据库（将 控制平面信息假设为按照本领域技术人员公知的方式由适当存根适当地</p>
+    <p>进行格式化/配置/转换，而成为适于包括在数据库中的形式）。这样，将 交换装置的输出接口 （或输出端口）与信息相关联的数据库记录就可以 由控制平面来增添，该信息与所接收流量的一个或更多个预定头字段相 关联。交换装置常规上设置有转发表，该转发表至少包含与输出端口相 关联的目的地地址。例如，以太网交换装置通常包含转发信息，该转发</p>
+    <p>信息包括VLAN-ID、目的地地址信息和相关联的交换装置的输出端口 。</p>
+    <p>但是，由于现在是由控制平面来增添数据库，所以在数据库的全部 或部分中可以利用来自头信息的另一字段（例如以太网类型或优先级头</p>
+    <p>字段）的信息来替代或补充VLAN-ID信息。这是因为无论是否简单地提 供信息，针对与交换装置的输出端口相关联的所接收分组，都需要与数 据库中的适当头信息相关联。</p>
+    <p>例如，如果控制平面己增添了交换装置上的桥接表中的该条目，而 使得以太网交换装置的输出端口禁能了其MAC学习功能并无效了生成树 协议（因此不提供BPDU)，则分组基于面向连接而前进。但是，如果控制 平面未针对该输出端口选择性地提供面向连接的信息，则生成树协议等 针对该端口而保留功能，分组基于无连接方式前进。</p>
+    <p>在使用控制平面来远程激活和/或无效生成树协议的一些实施方式 中，通信网络中的交换装置的相同输出端口可以动态地以无连接或面向 连接的方式来改变功能。这样，通信网络就可以包括支持无连接通信协 议的多个接入网（如局域网）和根据对核心网络中的交换装置进行控制 的服务供应商的要求、其功能可以是无连接或面向连接的方式的核心网 络。例如，来自一个源的流量可以由服务供应商以无连接模式选择路由 到目的地地址，来自同一源的但在不同时间发送的流量可以按照面向连 接的模式来发送。作为另一实施方式，来自一个源的流量可以按照无连 接方式发送到目的地地址，而来自另一源的、在相同时间发送到周一目 的地地址的流量可以按照面向连接的模式来发送。不需要留出头字段值 的范围或利用预定的头信息来配置流量头，以接收面向连接的服务，相 反，以面向连接的方式来为流量选择路由的决定是由控制平面根据诸如 在核心网络中确定的一个或更多个条件的标准而确定的。</p>
+    <p>因此在一些实施方式中，流量在到达其目的地地址之前可以从一个 交换装置到另一交换装置动态地改变其传输模式。例如，从图23中的交 换机A到交换机C，特定类型的流量可以按照无连接方式来路由，而从交 换机C到交换机E按照面向连接的方式来路由。同时，不同类型的流量</p>
+    <p>从交换机A到C可以按照面向连接的方式来路由，而从交换机C到交换 机E按照无连接方式来路由。但是，在本发明的最佳实施方式中，由控 制平面按照端到端的方式来确定传输模式，该控制平面直接增添交换装 置的数据转发表，通过该交换装置利用适当的路由信息已建立了连接。</p>
+    <p>为了使服务供应商实现针对无连接协议流量的端到端面向连接的服 务，控制平面对核心网络交换装置进行配置以建立源边缘节点与目的地 边缘节点之间的适当连接。这是通过将特定头信息字段与交换装置的预 定输出端口相关联，以使得在其头字段中包含相同信息的所接收的流量 可以按照面向连接的方式来路由而获得的。因此，基于一个头字段或头 字段的组合（例如， 一个或更多个目的地地址字段和/或一个或更多个源 地址字段和/或一个或更多个源路由地址字段和/或一个或更多个以太网 类型字段和/或一个或更多个优先级字段和/或一个或更多个服务类型字 段和/或一个或更多个流标识符字段和/或能够标识虚拟专用网络的一个 或更多个字段和/或一个或更多个协议字段和/或一个或更多个TCP/UDP 目的地端口标识符字段和/或一个或更多个TCP/UDP源端口标识符字段）， 可以确定所接收的流量是应该按照无连接模式转发还是应该按照面向连 接的模式转发，如果是后者，则沿着一条或更多条路径到达目的地地址。 因此，例如通过配置控制平面，核心网络服务供应商可以根据多个 可能的标准来选择性地为特定流量提供面向连接的服务，并且可以相应 地针对控制平面来配置核心网络的交换装置。这意味着接入服务供应商 可以简单地请求针对特定流量的面向连接的服务，而不需要保证具体的 预定标识符是包括在头信息中，以确保接收面向连接的服务。这使得能 够以无中断方式在源与目的地地址之间虚拟地进行控制来实现面向连接 的服务。例如，如果无连接流量的网络拥塞超过一定水平，有利的是， 无连接流量以相对无中断的方式改变到面向连接的的传输模式，例如通</p>
+    <p>过动态地重新配置交换装置以使得它可以按照面向连接的模式对所接收 流量进行路由。</p>
+    <p>对优选实施方式的描述不是要限制所附权利要求的范围。对本领域 技术人员明显的是，对本发明的上述特征和与这些特征具有等同效果的 特征的修改是固有地包含在本描述中。因此，本发明的范围应该由所附 的权利要求来解释，而不是由上文描述的具体实施方式来解释。容易并 入到其他实施方式的在一个实施方式的上下文中描述的特征或者对本领 域普通技术人员明显的在功能上等效的特征或在能够替代其他实施方式 中的特征是固有地并入到其他实施方式的描述中。</p>
+    <p>尽管本发明主要实施方式己讨论了诸如以太网和工P的无连接协议的 提供，但本领域技术人员将理解，本发明不限于这两个传输协议的任何 一个或这些协议的版本，相反是由所附权利要求来阐明本发明。本领域 技术人员将理解，对这里描述的本发明实施方式的特征存在许多可能的 修改和变型，并且在适用的一个实施方式的上下文中描述的特征可以并 入到其他实施方式中。</p>
+    <p>除非上下文中明确地另外要求，否则贯穿说明书和权利要求，"包括</p>
+    <p>(comprise/comprising)"等词汇要被解释为包含性，而不是排他性的或 穷举性的意义；就是说，为"包括但不限于"的意义。 此处将摘要的内容并入到说明书中：</p>
+    <p>一种用于对包括多个连接交换装置的网络进行配置的通信方案，每 个交换装置都具有用于实现对所接收的通信流量实施无连接转发，从而 为所述接收通信流量选择性地提供面向连接的服务的功能，所述方案包 括：在控制平面中确定索引头字段值以识别在交换装置处接收的无连接 流量，要为该流量建立源节点与目的地节点之间的连接；向实现该连接 所必需的各个交换装置提供来自控制平面的信息，该信息使得可以用与 所述交换装置的输出端口相关联的所述索引头字段值来增添所述交换的 数据转发表；以及禁能所述交换装置上的能够用与建立所述连接所必需 的交换装置的所述输出端口相关联的索引信息来增添数据转发表所有其 他功能。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102118316A?cl=zh">CN102118316A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年3月7日</td><td class="patent-data-table-td patent-date-value">2011年7月6日</td><td class="patent-data-table-td ">杭州华三通信技术有限公司</td><td class="patent-data-table-td ">学习mac地址的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102118316B?cl=zh">CN102118316B</a></td><td class="patent-data-table-td patent-date-value">2011年3月7日</td><td class="patent-data-table-td patent-date-value">2013年9月25日</td><td class="patent-data-table-td ">杭州华三通信技术有限公司</td><td class="patent-data-table-td ">学习mac地址的方法和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102291248A?cl=zh">CN102291248A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年6月18日</td><td class="patent-data-table-td patent-date-value">2011年12月21日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种实现系统自恢复的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102356604A?cl=zh">CN102356604A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年3月9日</td><td class="patent-data-table-td patent-date-value">2012年2月15日</td><td class="patent-data-table-td ">日本电气株式会社</td><td class="patent-data-table-td ">网络通信系统、通信设备、网络链接方法及其程序</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102356604B?cl=zh">CN102356604B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年3月9日</td><td class="patent-data-table-td patent-date-value">2014年12月24日</td><td class="patent-data-table-td ">日本电气株式会社</td><td class="patent-data-table-td ">网络通信系统、通信设备、网络链接方法及其程序</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102447629A?cl=zh">CN102447629A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月27日</td><td class="patent-data-table-td patent-date-value">2012年5月9日</td><td class="patent-data-table-td ">上海顶竹通讯技术有限公司</td><td class="patent-data-table-td ">路由切换方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102447629B?cl=zh">CN102447629B</a></td><td class="patent-data-table-td patent-date-value">2011年12月27日</td><td class="patent-data-table-td patent-date-value">2014年7月2日</td><td class="patent-data-table-td ">上海顶竹通讯技术有限公司</td><td class="patent-data-table-td ">路由切换方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102484604A?cl=zh">CN102484604A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年6月8日</td><td class="patent-data-table-td patent-date-value">2012年5月30日</td><td class="patent-data-table-td ">罗克之星Bidco有限合伙公司</td><td class="patent-data-table-td ">用于在网络区域之间路由数据的技术</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103460666A?cl=zh">CN103460666A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月21日</td><td class="patent-data-table-td patent-date-value">2013年12月18日</td><td class="patent-data-table-td ">日本电气株式会社</td><td class="patent-data-table-td ">网络系统和vlan标签数据获取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US9001829">US9001829</a></td><td class="patent-data-table-td patent-date-value">2012年4月20日</td><td class="patent-data-table-td patent-date-value">2015年4月7日</td><td class="patent-data-table-td ">Rpx Clearinghouse Llc</td><td class="patent-data-table-td ">Techniques for routing data between network areas</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=euRZBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029120000">H04L29/12</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=euRZBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012640000">H04L12/64</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2008年1月16日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2008年3月5日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年4月6日</td><td class="patent-data-table-td ">C02</td><td class="patent-data-table-td ">Deemed withdrawal of patent application after publication (patent law 2001)</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/c5ea8d4b1fb5875db55e/CN101107824A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E9%92%88%E5%AF%B9%E6%97%A0%E8%BF%9E%E6%8E%A5%E9%80%9A%E4%BF%A1%E6%B5%81%E9%87%8F%E7%9A%84%E9%9D%A2%E5%90%91%E8%BF%9E.pdf?id=euRZBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3lvkV4tv6kvqNH7qT8sWhq_Pi59Q"},"sample_url":"https://www.google.com/patents/reader?id=euRZBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

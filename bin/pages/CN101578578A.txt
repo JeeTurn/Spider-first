@@ -1,0 +1,500 @@
+<!DOCTYPE html><html><head><title>专利 CN101578578A - 用于滚动操作的应用编程接口 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="用于滚动操作的应用编程接口"><meta name="DC.contributor" content="安德鲁&#183;普拉姿尔" scheme="inventor"><meta name="DC.contributor" content="斯科特&#183;赫兹" scheme="inventor"><meta name="DC.contributor" content="苹果公司" scheme="assignee"><meta name="DC.date" content="2008-1-4" scheme="dateSubmitted"><meta name="DC.description" content="本发明的至少某些实施例包括具有与软件应用进行交互的用户接口软件的环境。该环境中通过应用编程接口(API)而工作的方法包括传送设定弹回调用。该方法还包括设定最大和最小弹回值中的至少一者。设定弹回调用造成：在滚动结束时，基于超过滚动区域边缘的区域是否在显示区域中可见，而使滚动区域沿与滚动相反的方向弹回。"><meta name="DC.date" content="2009-11-11"><meta name="citation_patent_publication_number" content="CN:101578578:A"><meta name="citation_patent_application_number" content="CN:200880001827"><link rel="canonical" href="https://www.google.com/patents/CN101578578A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101578578A?cl=zh"/><meta name="title" content="专利 CN101578578A - 用于滚动操作的应用编程接口"/><meta name="description" content="本发明的至少某些实施例包括具有与软件应用进行交互的用户接口软件的环境。该环境中通过应用编程接口(API)而工作的方法包括传送设定弹回调用。该方法还包括设定最大和最小弹回值中的至少一者。设定弹回调用造成：在滚动结束时，基于超过滚动区域边缘的区域是否在显示区域中可见，而使滚动区域沿与滚动相反的方向弹回。"/><meta property="og:title" content="专利 CN101578578A - 用于滚动操作的应用编程接口"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101578578A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101578578A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101578578A&amp;usg=AFQjCNGketDNb9jBoJI0eMJS38DJc_Z4WQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/7be71bebdd97b4ce16a4/CN101578578A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/7be71bebdd97b4ce16a4/CN101578578A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101578578A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101578578A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101578578A?cl=zh" style="display:none"><span itemprop="description">本发明的至少某些实施例包括具有与软件应用进行交互的用户接口软件的环境。该环境中通过应用编程接口(API)而工作的方法包括传送设定弹回调用。该方法还包括设定最大和最小弹回值中的至少一者。设定弹回调用造成：在滚 ...</span><span itemprop="url">https://www.google.com/patents/CN101578578A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101578578A - 用于滚动操作的应用编程接口</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101578578A - 用于滚动操作的应用编程接口" title="专利 CN101578578A - 用于滚动操作的应用编程接口"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101578578 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200880001827</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/US2008/000089</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年11月11日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年1月4日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2007年1月7日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103345351A?hl=zh-CN&amp;cl=zh">CN103345351A</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2102738A1?hl=zh-CN&amp;cl=zh">EP2102738A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/US7844915?hl=zh-CN&amp;cl=zh">US7844915</a>, </span><span class="patent-bibdata-value"><a href="/patents/US8429557?hl=zh-CN&amp;cl=zh">US8429557</a>, </span><span class="patent-bibdata-value"><a href="/patents/US8661363?hl=zh-CN&amp;cl=zh">US8661363</a>, </span><span class="patent-bibdata-value"><a href="/patents/US9037995?hl=zh-CN&amp;cl=zh">US9037995</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20080168384?hl=zh-CN&amp;cl=zh">US20080168384</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20100325575?hl=zh-CN&amp;cl=zh">US20100325575</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20130239046?hl=zh-CN&amp;cl=zh">US20130239046</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20140181731?hl=zh-CN&amp;cl=zh">US20140181731</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20150248205?hl=zh-CN&amp;cl=zh">US20150248205</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2008085871A1?hl=zh-CN&amp;cl=zh">WO2008085871A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200880001827.7, </span><span class="patent-bibdata-value">CN 101578578 A, </span><span class="patent-bibdata-value">CN 101578578A, </span><span class="patent-bibdata-value">CN 200880001827, </span><span class="patent-bibdata-value">CN-A-101578578, </span><span class="patent-bibdata-value">CN101578578 A, </span><span class="patent-bibdata-value">CN101578578A, </span><span class="patent-bibdata-value">CN200880001827, </span><span class="patent-bibdata-value">CN200880001827.7, </span><span class="patent-bibdata-value">PCT/2008/89, </span><span class="patent-bibdata-value">PCT/US/2008/000089, </span><span class="patent-bibdata-value">PCT/US/2008/00089, </span><span class="patent-bibdata-value">PCT/US/8/000089, </span><span class="patent-bibdata-value">PCT/US/8/00089, </span><span class="patent-bibdata-value">PCT/US2008/000089, </span><span class="patent-bibdata-value">PCT/US2008/00089, </span><span class="patent-bibdata-value">PCT/US2008000089, </span><span class="patent-bibdata-value">PCT/US200800089, </span><span class="patent-bibdata-value">PCT/US8/000089, </span><span class="patent-bibdata-value">PCT/US8/00089, </span><span class="patent-bibdata-value">PCT/US8000089, </span><span class="patent-bibdata-value">PCT/US800089</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%AE%89%E5%BE%B7%E9%B2%81%C2%B7%E6%99%AE%E6%8B%89%E5%A7%BF%E5%B0%94%22">安德鲁&#183;普拉姿尔</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%96%AF%E7%A7%91%E7%89%B9%C2%B7%E8%B5%AB%E5%85%B9%22">斯科特&#183;赫兹</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%8B%B9%E6%9E%9C%E5%85%AC%E5%8F%B8%22">苹果公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101578578A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101578578A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101578578A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (13),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (8),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200880001827&amp;usg=AFQjCNHT_Vl2ON_z5tB5id6Hid2hYrmSXA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101578578A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNE1LwqV_OVatJj0bvTTuv5b3EBJiQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT89962211" lang="ZH" load-source="patent-office">用于滚动操作的应用编程接口</invention-title>
+      </span><br><span class="patent-number">CN 101578578 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA66699244" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明的至少某些实施例包括具有与软件应用进行交互的用户接口软件的环境。该环境中通过应用编程接口(API)而工作的方法包括传送设定弹回调用。该方法还包括设定最大和最小弹回值中的至少一者。设定弹回调用造成：在滚动结束时，基于超过滚动区域边缘的区域是否在显示区域中可见，而使滚动区域沿与滚动相反的方向弹回。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(88)</span></span></div><div class="patent-text"><div mxw-id="PCLM27333719" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种用于在便携式数据处理装置的显示器上滚动的计算机实现的方法，该方法包括：    接收用户输入；    响应于所述用户输入而创建事件对象；    确定所述事件对象是否引起滚动或手势操作；    基于引起所述滚动或手势操作，发起至少一个滚动或手势调用；    如果至少一个滚动调用被发起，则通过将窗口基于滚动量滚动来响应所述至少一个滚动调用，所述窗口具有与所述事件对象相关的视图，所述滚动量使所述滚动停止在相对于所述用户输入的预定位置；和    如果至少一个手势调用被发起，则基于以所述用户输入的形式对多个输入点的接收，通过将与所述事件对象相关的视图进行缩放，来响应所述至少一个手势调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 如权利要求l所述的方法，还包括：当所述窗口内显示的滚动区域超出窗口边缘时，基于所述滚动，使所 述滚动区域拉伸预定的最大位移。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 如权利要求l所述的方法，还包括： 将滚动指示器附着到所述窗口的内容边缘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 如权利要求l所述的方法，还包括： 将滚动指示器附着到所述窗口边缘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 如权利要求1所述的方法，其中，确定所述事件对象是否引起滚 动或手势操作是基于某一段时间段内对拖动用户输入的接收。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 如权利要求l所述的方法，还包括：如果至少一个手势调用被发起，则基于以所述用户输入的形式对多个 输入点的接收，通过将与所述事件对象相关的视图旋转，来响应所述至少 一个手势调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 如权利要求1所述的方法，其中，所述装置是下列之一：数据处 理装置、便携装置、便携式数据处理装置、多点触摸装置、多点触摸便携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8. &#8212;种存储可执行程序指令的计算机可读介质，所述可执行程序指 令在执行时使得数据处理系统执行一种方法，该方法包括：接收用户输入；响应于所述用户输入而创建事件对象； 确定所述事件对象是否引起滚动或手势操作；基于引起所述滚动或手势操作，发起至少一个滚动或手势调用； 如果至少一个滚动调用被发起，则通过将窗口基于滚动量滚动来响应所述至少一个滚动调用，所述窗口具有与所述事件对象相关的视图，所述滚动量使所述滚动停止在相对于所述用户输入的预定位置；和如果被发起至少一个手势调用，则基于以所述用户输入的形式对多个输入点的接收，通过将与所述事件对象相关的视图进行&#32302;放，来响应所述至少一个手势调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 如权利要求8所述的计算机可读介质，还包括：当所述窗口内显示的滚动区域超出窗口边缘时，基于所述滚动，使所 述滚动区域拉伸预定的最大位移。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 如权利要求8所述的计算机可读介质，还包括-将滚动指示器附着到所述视图的内容边缘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 如权利要求8所述的计算机可读介质，还包括： 将滚动指示器附着到所述视图的窗口边缘。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 如权利要求8所述的计算机可读介质，其中，确定所述事件对象是否引起滚动或手势操作是基于某一段时间段内对拖动用户输入的接收。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 如权利要求8所述的计算机可读介质，还包括：如果至少一个手势调用被发起，则基于以所述用户输入的形式对多个 输入点的接收，通过将与所述事件对象相关的视图旋转，来响应所述至少 一个手势调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 如权利要求8所述的计算机可读介质，其中，所述装置是下列之一：数据处理装置、便携装置、便携式数据处理装置、多点触摸装置、多点触摸便携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="15" class="claim">
+      <div class="claim-text">15. &#8212;种通过应用编程接口 （API)操作的方法，该方法用于下述环 境中：该环境带有与软件应用交互的用户接口软件，该方法包括：传送设定弹回调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16. 如权利要求15所述的方法，还包括：设定最大弹回值和最小弹回值中的至少一者。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17. 如权利要求15所述的方法，其中，传送所述设定弹回调用使得 在滚动结束时，基于超过滚动区域边缘的区域在装置的显示区域中的可见 情况，所述滚动区域沿所述滚动的相反方向弹回。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18. 如权利要求15所述的方法，其中，传送所述设定弹回调用是下列之一：发起、产生、引起或接收所述设定弹回调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19. 如权利要求15所述的方法，其中，所述装置是下列之一：数据 处理装置、便携装置、便携式数据处理装置、多点触摸装置、多点触摸便 携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20. &#8212;种存储可执行程序指令的计算机可读介质，所述可执行程序指令在执行时使得数据处理系统执行一种方法，该方法包括： 传送设定弹回调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21. 如权利要求20所述的计算机可读介质，还包括： 设定最大弹回值和最小弹回值中的至少一者。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22. 如权利要求20所述的计算机可读介质，其中，传送所述设定弹 回调用使得在滚动结束时，基于超过滚动区域边缘的区域在装置的显示区 域中的可见情况，所述滚动区域沿所述滚动的相反方向弹回。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23. 如权利要求20所述的计算机可读介质，其中，传送所述设定弹回调用是下列之一：发起、产生、引起或接收所述设定弹回调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24. 如权利要求20所述的计算机可读介质，其中，所述装置是下列之一：数据处理装置、便携装置、便携式数据处理装置、多点触摸装置、多点触摸便携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25. &#8212;种设备，该设备用于下述环境中：该环境带有与软件应用交互 的用户接口软件，该设备包括：传送设定弹回调用的装置。</div>
+    </div>
+    </div> <div class="claim"> <div num="26" class="claim">
+      <div class="claim-text">26. &#8212;种通过应用编程接口 （API)操作的方法，该方法用于下述环境中：该环境带有与软件应用交互的用户接口软件，该方法包括： 接收设定弹回调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27. 如权利要求26所述的方法，还包括： 设定最大弹回值和最小弹回值中的至少一者。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28. 如权利要求26所述的方法，其中，接收所述设定弹回调用使得 在滚动结束时，基于超过滚动区域边缘的区域在显示区域中的可见情况， 所述滚动区域沿所述滚动的相反方向弹回。</div>
+    </div>
+    </div> <div class="claim"> <div num="29" class="claim">
+      <div class="claim-text">29. &#8212;种存储可执行程序指令的计算机可读介质，所述可执行程序指令在执行时使得数据处理系统执行一种方法，该方法包括：接收设定弹回调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30. 如权利要求20所述的计算机可读介质，还包括：设定最大弹回值和最小弹回值中的至少一者。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31. 如权利要求20所述的计算机可读介质，其中，接收所述设定弹 回调用使得在滚动结束时，基于超过滚动区域边缘的区域在显示区域中的 可见情况，所述滚动区域沿所述滚动的相反方向弹回。</div>
+    </div>
+    </div> <div class="claim"> <div num="32" class="claim">
+      <div class="claim-text">32. &#8212;种设备，该设备用于下述环境中：该环境带有与软件应用交互 的用户接口软件，该设备包括：接收设定弹回调用的装置。</div>
+    </div>
+    </div> <div class="claim"> <div num="33" class="claim">
+      <div class="claim-text">33. &#8212;种通过应用编程接口 （API)操作的方法，该方法用于下述环境中：该环境带有与软件应用交互的用户接口套件，该方法包括：传送拉伸调用，使得在装置的显示区域内显示的滚动区域拉伸。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34. 如权利要求33所述的方法，其中，当所述滚动区域超过显示区 域时，使所述滚动区域基于所述滚动而被拉伸预定的最大位移。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35. 如权利要求33所述的方法，还包括： 传送边缘拉伸调用，以设定用于至少一个显示边缘的位移值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36. 如权利要求33所述的方法，其中，在所述滚动结束时，与内容 相关的所述滚动区域返回所述显示区域内。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37. 如权利要求33所述的方法，其中，传送所述拉伸调用是下列之一：发起、产生、引起或接收所述拉伸调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38. 如权利要求33所述的方法，其中，所述装置是下列之一：数据 处理装置、便携装置、便携式数据处理装置、多点触摸装置、多点触摸便 携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="39" class="claim">
+      <div class="claim-text">39. &#8212;种存储可执行程序指令的计算机可读介质，所述可执行程序指令在执行时使得数据处理系统执行一种方法，该方法包括：传送拉伸调用，使得在装置的显示区域内显示的滚动区域拉伸。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40. 如权利要求39所述的计算机可读介质，其中，当所述滚动区域 超过视图的窗口边缘时，使所述滚动区域基于所述滚动而被拉伸预定的最 大位移。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41. 如权利要求39所述的计算机可读介质，还包括： 传送边缘拉伸调用，以设定用于至少一个显示边缘的位移值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42. 如权利要求39所述的计算机可读介质，其中，传送所述拉伸调用是下列之一：发起、产生、引起或接收所述拉伸调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43. 如权利要求39所述的计算机可读介质，其中，所述装置是下列之一：数据处理装置、便携装置、便携式数据处理装置、多点触摸装置、多点触摸便携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="44" class="claim">
+      <div class="claim-text">44. 一种设备，该设备用于下述环境中：该环境带有与软件应用交互 的用户接口软件，该设备包括：传送拉伸调用的装置，所述拉伸调用使得在视图内显示的滚动区域拉伸。</div>
+    </div>
+    </div> <div class="claim"> <div num="45" class="claim">
+      <div class="claim-text">45. &#8212;种通过应用编程接口 （API)操作的方法，该方法用于下述环境中：该环境带有与软件应用交互的用户接口套件，该方法包括：接收拉伸调用，使得在装置的显示区域内显示的滚动区域拉伸。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46. 如权利要求45所述的方法，其中，当所述滚动区域超过视图的窗口边缘时，使所述滚动区域基于所述滚动而被拉伸预定的最大位移。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47. 如权利要求45所述的方法，还包括： 接收边缘拉伸调用，以设定用于至少一个显示边缘的位移值。</div>
+    </div>
+    </div> <div class="claim"> <div num="48" class="claim">
+      <div class="claim-text">48. &#8212;种存储可执行程序指令的计算机可读介质，所述可执行程序指令在执行时使得数据处理系统执行一种方法，该方法包括： 接收拉伸调用，使得在视图内显示的滚动区域拉伸。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="49" class="claim">
+      <div class="claim-text">49. 如权利要求48所述的计算机可读介质，其中，当所述滚动区域 超过所述视图的窗口边缘时，使所述滚动区域基于所述滚动而被拉伸预定 的最大位移。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50. 如权利要求48所述的计算机可读介质，还包括：接收边缘拉伸调用，以设定用于至少一个显示边缘的位移值。</div>
+    </div>
+    </div> <div class="claim"> <div num="51" class="claim">
+      <div class="claim-text">51. &#8212;种设备，该设备用于下述环境中：该环境带有与软件应用交互 的用户接口软件，该设备包括：接收拉伸调用的装置，所述拉伸调用使得视图内显示的滚动区域拉伸。</div>
+    </div>
+    </div> <div class="claim"> <div num="52" class="claim">
+      <div class="claim-text">52. &#8212;种通过应用编程接口 （API)操作的方法，该方法用于下述环境中：该环境带有与软件应用交互的用户接口软件和用户输入，所述用户 输入包含一个装置的显示器的视图，该方法包括：传送方向滚动调用，以确定方向滚动是否被允许。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="53" class="claim">
+      <div class="claim-text">53. 如权利要求52所述的方法，还包括：传送方向滚动角度调用，以设定用于将所述滚动锁定在水平方向和竖 直方向中的至少一者的滚动角度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="54" class="claim">
+      <div class="claim-text">54. 如权利要求52所述的方法，其中，相对于水平方向形成的角度 小于或等于第一滚动角度的拖动用户输入将所述滚动锁定在所述水平方 向。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="55" class="claim">
+      <div class="claim-text">55. 如权利要求52所述的方法，其中，相对于竖直方向形成的角度 小于或等于第二滚动角度的拖动用户输入将所述滚动锁定在所述竖直方 向。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="56" class="claim">
+      <div class="claim-text">56. 如权利要求52所述的方法，其中，传送所述方向滚动角度调用 是下列之一：发起、产生、引起或接收所述方向滚动角度调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="57" class="claim">
+      <div class="claim-text">57. 如权利要求49所述的方法，其中，所述装置是下列之一：数据 处理装置、便携装置、便携式数据处理装置、多点触摸装置、多点触摸便 携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="58" class="claim">
+      <div class="claim-text">58. &#8212;种存储可执行程序指令的计算机可读介质，所述可执行程序指令在执行时使得数据处理系统执行一种方法，该方法包括： 传送方向滚动调用，以确定方向滚动是否被允许。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="59" class="claim">
+      <div class="claim-text">59. 如权利要求58所述的计算机可读介质，还包括：传送方向滚动角度调用，以设定用于将所述滚动锁定在水平方向和竖 直方向中的至少一者的滚动角度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="60" class="claim">
+      <div class="claim-text">60. 如权利要求58所述的计算机可读介质，其中，相对于水平方向 形成的角度小于或等于第一滚动角度的拖动用户输入将所述滚动锁定在所 述水平方向。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="61" class="claim">
+      <div class="claim-text">61. 如权利要求58所述的计算机可读介质，其中，相对于竖直方向 形成的角度小于或等于第二滚动角度的拖动用户输入将所述滚动锁定在所 述竖直方向。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="62" class="claim">
+      <div class="claim-text">62. 如权利要求58所述的计算机可读介质，其中，传送所述方向滚 动角度调用是下列之一：发起、产生、引起或接收所述方向滚动角度调 用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="63" class="claim">
+      <div class="claim-text">63. 如权利要求49所述的计算机可读介质，其中，所述装置是下列 之一：数据处理装置、便携装置、便携式数据处理装置、多点触摸装置、 多点触摸便携装置、无线装置和蜂窝电话。</div>
+    </div>
+    </div> <div class="claim"> <div num="64" class="claim">
+      <div class="claim-text">64. &#8212;种设备，该设备用于下述环境中：该环境带有与软件应用交互 的用户接口软件，该设备包括：传送方向滚动调用的装置，所述方向滚动调用确定方向滚动是否被允许。</div>
+    </div>
+    </div> <div class="claim"> <div num="65" class="claim">
+      <div class="claim-text">65. &#8212;种通过应用编程接口 （API)操作的方法，该方法用于下述环境中：该环境带有与软件应用交互的用户接口软件和用户输入，所述用户 输入接触装置的显示器的视图，该方法包括：接收方向滚动调用，以确定方向滚动是否被允许。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="66" class="claim">
+      <div class="claim-text">66. 如权利要求65所述的方法，还包括：接收方向滚动角度调用，以设定用于将所述滚动锁定在水平方向和竖 直方向中的至少一者的滚动角度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="67" class="claim">
+      <div class="claim-text">67. 如权利要求65所述的方法，其中，相对于水平方向形成的角度小于或等于第一滚动角度的拖动用户输入将所述滚动锁定在所述水平方 向。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="68" class="claim">
+      <div class="claim-text">68. 如权利要求65所述的方法，其中，相对于竖直方向形成的角度 小于或等于第二滚动角度的拖动用户输入将所述滚动锁定在所述竖直方 向。</div>
+    </div>
+    </div> <div class="claim"> <div num="69" class="claim">
+      <div class="claim-text">69. &#8212;种存储可执行程序指令的计算机可读介质，所述可执行程序指 令在执行时使得数据处理系统执行一种方法，该方法包括：接收方向滚动调用，以确定方向滚动是否被允许。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="70" class="claim">
+      <div class="claim-text">70. 如权利要求69所述的计算机可读介质，还包括： 接收方向滚动角度调用，以设定用于将所述滚动锁定在水平方向和竖直方向中的至少一者的滚动角度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="71" class="claim">
+      <div class="claim-text">71. 如权利要求69所述的计算机可读介质，其中，相对于水平方向 形成的角度小于或等于第一滚动角度的拖动用户输入将所述滚动锁定在所 述水平方向。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="72" class="claim">
+      <div class="claim-text">72. 如权利要求69所述的计算机可读介质，其中，相对于竖直方向 形成的角度小于或等于第二滚动角度的拖动用户输入将所述滚动锁定在所 述竖直方向。</div>
+    </div>
+    </div> <div class="claim"> <div num="73" class="claim">
+      <div class="claim-text">73. &#8212;种设备，该设备用于下述环境中：该环境带有与软件应用交互的用户接口软件，该设备包括：接收方向滚动调用的装置，所述方向滚动调用确定方向滚动是否被允许。</div>
+    </div>
+    </div> <div class="claim"> <div num="74" class="claim">
+      <div class="claim-text">74. &#8212;种包含可执行指令的计算机可读介质，包括：程序代码，其配置为在执行时通过应用编程接口传送弹回调用，所述 弹回调用使得在滚动结束时，基于超过滚动区域边缘的区域在显示区域中 的可见情况，所述滚动区域沿所述滚动的相反方向弹回。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="75" class="claim">
+      <div class="claim-text">75. 如权利要求74所述的计算机可读介质，其中，传送所述弹回调用是下列之一：发起、产生、引起或接收所述弹回调用。</div>
+    </div>
+    </div> <div class="claim"> <div num="76" class="claim">
+      <div class="claim-text">76. &#8212;种包含可执行指令的计算机可读介质，包括：程序代码，其配置为在执行时通过应用编程接口传送拉伸调用，基于 滚动，当滚动区域超过显示边缘时，所述拉伸调用对所述滚动区域造成预 定的最大位移的拉伸效果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="77" class="claim">
+      <div class="claim-text">77. 如权利要求76所述的计算机可读介质，其中，传送所述拉伸调用是下列之一：发起、产生、引起或接收所述拉伸调用。</div>
+    </div>
+    </div> <div class="claim"> <div num="78" class="claim">
+      <div class="claim-text">78. &#8212;种包含可执行指令的计算机可读介质，包括：程序代码，其配置为在执行时通过应用编程接口传送方向滚动调用， 所述方向滚动调用设定用于将滚动锁定在水平方向和竖直方向中的至少一 者的滚动角度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="79" class="claim">
+      <div class="claim-text">79. 如权利要求78所述的计算机可读介质，其中，传送所述方向滚动调用是下列之一：发起、产生、引起或接收所述方向滚动调用。</div>
+    </div>
+    </div> <div class="claim"> <div num="80" class="claim">
+      <div class="claim-text">80. &#8212;种用于执行滚动操作的平台，包括： 处理单元，其耦联到输入面板；存储器，其耦联到所述处理器；和一个或多个程序，其中，所述一个或多个程序存储在所述存储器中，并配置为由所述处理单元执行，所述程序包括：用于通过应用编程接口传送弹回调用的指令，所述弹回调用使得 在滚动结束时，基于超过滚动区域边缘的区域在显示区域中的可见情况， 所述滚动区域沿所述滚动的相反方向弹回。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="81" class="claim">
+      <div class="claim-text">81. 如权利要求80所述的平台，其中，所述一个或多个程序还包括 用于通过应用编程接口传送拉伸调用的指令，基于滚动，当滚动区域超过 显示边缘时，所述拉伸调用对所述滚动区域造成预定的最大位移的拉伸效 果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="82" class="claim">
+      <div class="claim-text">82. 如权利要求80所述的平台，其中，所述一个或多个程序还包括 用于通过应用编程接口传送方向滚动调用的指令，所述方向滚动调用设定 用于将所述滚动锁定在水平方向和竖直方向中的至少一者的滚动角度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="83" class="claim">
+      <div class="claim-text">83. 如权利要求80所述的平台，其中，传送所述弹回调用是下列之 一：发起、产生、引起或接收所述弹回调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="84" class="claim">
+      <div class="claim-text">84. 如权利要求81所述的平台，其中，传送所述拉伸调用是下列之一：发起、产生、引起或接收所述拉伸调用。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="85" class="claim">
+      <div class="claim-text">85. 如权利要求82所述的平台，其中，传送所述方向滚动调用是下列之一：发起、产生、引起或接收所述方向滚动调用。</div>
+    </div>
+    </div> <div class="claim"> <div num="86" class="claim">
+      <div class="claim-text">86. &#8212;种用于执行滚动操作的构架，包括：目录，其用于存储一个或多个程序及相关的资源，其中，所述程序包 括下述指令：所述指令在执行时提供应用编程接口以指定弹回操作，使得 在滚动结束时，基于超过滚动区域边缘的区域在显示区域中的可见情况， 所述滚动区域沿所述滚动的相反方向弹回。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="87" class="claim">
+      <div class="claim-text">87. 如权利要求86所述的构架，其中，所述一个或多个程序还包括下述指令：所述指令在执行时提供应用编程接口以指定拉伸操作，基于滚 动，当滚动区域超过显示边缘时，所述拉伸操作对所述滚动区域造成预定 的最大位移的拉伸效果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="88" class="claim">
+      <div class="claim-text">88. 如权利要求86所述的构架，其中，所述一个或多个程序还包括下述指令：所述指令在执行时提供应用编程接口以指定方向滚动操作，以设定用于将所述滚动锁定在水平方向和竖直方向中的至少一者的滚动角度。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES33231321" lang="ZH" load-source="patent-office" class="description">
+    <p>用于滚动操作的应用编程接口</p>
+    <p>技术领域</p>
+    <p>[l]本发明涉及提供滚动（scrolling)操作的应用编程接口。 计算机程序列表</p>
+    <p>[2]本专利文献公开内容的一部分包含受到版权保护的材料。版权拥有者 不反对任何人以本专利文献或专利公开在专利商标局文档或记录中出现的 形式对其进行复制，但是在其他任何方面保留所有的版权。</p>
+    <p>[3]申请人在此提交所附的附录A中所包括的计算机程序列表。</p>
+    <p>背景技术</p>
+    <p>[4]API是计算机系统或程序库提供的源代码接口，用于支持来自软件应 用的服务请求。API在含义方面解释为：能够在建立应用时被解释或编译 的编程语言，而不是对数据如何被布置在存储器中进行的显式低层描述。 提供了由API所描述的功能的软件被称为API的实现形式。</p>
+    <p>[5]各种装置（例如电子装置、计算系统、便携式装置以及手持式装置） 具有软件应用。API在软件应用与用户接口软件之间作为接口，以给装置 的用户提供特定的特性和操作。用户可能希望对于装置的显示器有特定的 操作，例如滚动、选择、手势（gesturing)和动画操作。</p>
+    <p>[6]滚动是使内容（例如文本、图画或图像）的方向性（例如水平或垂 直）展示形式在屏幕或显示窗口上进行滑动的动作。在通常的图形用户接 口中，滚动是在滚动条的帮助下或者利用键盘快捷方式（通常是箭头键） 来进行的。手势是具有两个或更多个输入点的用户输入类型。动画操作包 括在给定的时间段内改变内容。</p>
+    <p>[7]各种装置可能具有有限的显示器尺寸、用户接口、软件、API接口和/ 或处理能力，这限制了装置的易用性。装置的用户接口实现API以提供所请求的功能和特性。这些用户接口可能难以解释各种用户输入并提供与这 些用户输入相关的所需功能。</p>
+    <p>发明内容</p>
+    <p>[8]本发明的至少某些实施例包括下述环境中的一个或多个应用编程接 口：该环境具有与软件应用进行交互的用户接口软件。各种函数调用或消 息通过这些应用编程接口而在用户接口软件与软件应用之间传送。示例性 的应用编程接口传送函数调用以实现装置的滚动、手势和动画操作。</p>
+    <p>[9]本发明的至少某些实施例包括具有与软件应用进行交互的用户接口软 件的环境。该环境中通过应用编程接口 （API)而工作的方法包括传送设 定弹回调用。该方法还包括设定最大和最小弹回值中的至少一者。设定弹 回调用造成：在滚动结束时，基于超过滚动区域边缘的区域是否在显示区 域中可见，而使滚动区域沿与滚动相反的方向弹回。</p>
+    <p>[IO]本发明的至少某些实施例包括具有与软件应用进行交互的用户接口软 件的环境。该环境中通过应用编程接口 （API)而工作的方法包括传送拉 伸调用。当滚动区域超过了显示边缘时，滚动区域在显示区域内拉伸一个 预定的最大位移。该方法还包括传送边缘拉伸调用，以设定用于显示器至 少一个边缘（例如上下边缘、左右边缘）的位移值。</p>
+    <p>[ll]本发明的至少某些实施例包括用于装置的显示器的手势操作。手势操 作包括响应于具有两个或更多个输入点的用户输入而执行&#32302;放变换，例如 放大或&#32302;小。手势操作还包括响应于具有两个或更多个输入点的用户输入 而执行旋转变换以使图像或视图旋转。</p>
+    <p>[12]本发明的至少某些实施例包括用于给装置的显示器执行动画的方法。 该方法包括开始至少一个动画。该方法还包括判定各个动画的进展。该方 法还包括基于单一的定时器而完成各个动画。该单一的定时器可以基于显 示硬件的重绘间隔。</p>
+    <p>[13]还描述了执行前述方法中一种或多种的各种装置以及在由处理系统执 行时使处理系统执行这些方法的机器可读介质。</p>
+    <p>[14]还描述了其他方法、装置和机器可读介质。</p>
+    <p>13附图说明</p>
+    <p>[15]本发明是通过参照附图来说明的，其中：</p>
+    <p>[16]图1是用于对数据处理装置的用户输入进行响应的方法的流程图； [17]图2以流程图的形式图示了根据本发明某些教导的应用编程接口的细 节；</p>
+    <p>[18]图3以流程图的形式图示了根据本发明某些教导的应用编程接口的细 节；</p>
+    <p>[19]图4的示意图图示了具有触摸敏感显示器408的便携式电子装置400 的用户接口的一种实施例；</p>
+    <p>[20]图5A&#8212;图5C图示了具有触摸敏感显示器的便携式电子装置400的用 户接口的至少一些实施例；</p>
+    <p>[21]图6A&#8212;图6D图示了根据一些实施例，将条目的列表滚动至列表终 点，在该终点处超过该终点的区域被显示，然后列表被沿相反的方向滚动 直到超过该终点的区域不再被显示；</p>
+    <p>[22]图7以流程图的形式图示了根据本发明某些教导的应用编程接口的细</p>
+    <p>[23]图8图示了根据本发明的某些教导，用于将装置显示器的滚动锁定在 水平或垂直方向的第一和第二滚动角度；</p>
+    <p>[24]图9以流程图的形式图示了根据本发明某些教导的应用编程接口的细 节；</p>
+    <p>[25]图10以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；</p>
+    <p>[26]图11以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；</p>
+    <p>[27]图12以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；</p>
+    <p>[28]图13以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；[29]图14以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；</p>
+    <p>[30]图15图示了一种装置的显示器，其具有视图的&#32302;放变换； [31]图16A和图16B图示了一种装置的显示器，其带有具有第一和第二&#32302; 放因子的视图；</p>
+    <p>[32]图17以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；</p>
+    <p>[33]图18以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；</p>
+    <p>[34]图19是用于对装置的显示器上显示的视图进行动画的方法的流程 图；</p>
+    <p>[35]图20是用于对装置的显示器上显示的视图进行动画的方法的流程 图；</p>
+    <p>[36]图21以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节；</p>
+    <p>[37]图22A和图22B图示了对装置的显示器的窗口的调整大小进行同步； [38]图23图示了用于对数据处理装置的显示器上显示的应用的视图的拥 有者进行切换的方法；</p>
+    <p>[39]图24图示了用于对装置的显示器上显示的应用的视图进行内存管理 的方法；</p>
+    <p>[40]图25A和图25B图示了具有层的层级的数据结构，层与视图相关联； [41]图26图示了用于将用户接口的媒体和非媒体内容进行合成以在装置 上显示的方法；</p>
+    <p>[42]图27图示了数据结构或层次树，其具有层的层级； [43]图28是根据本发明一种实施例的装置的立体图； [44]图29是根据本发明一种实施例的装置的立体图； [45]图30是根据本发明一种实施例的无线装置的立体图； [46]图31是可以实施根据本发明的实施例的系统的框图； [47]图32示出了根据本发明一种实施例的装置的另一种示例；[48]图33A是根据本发明一种实施例处于第一构造（例如在膝上型构造 中）的装置的立体图；</p>
+    <p>[49]图33B是根据本发明的一种实施例处于第二构造（例如过渡构造）的 图33A的装置的立体图；</p>
+    <p>[50]图33C是根据本发明一种实施例处于第三构造（例如平板构造）的图 33A的装置的立体图；</p>
+    <p>[51]图34以流程图的形式图示了根据本发明某些教导的应用编程接口的 细节。</p>
+    <p>具体实施方式</p>
+    <p>[52]下面将参照下述细节对本发明的各种实施例和各个方面进行说明，附 图将图示各种实施例。下面的说明和附图是对本发明的示例性说明，而不 应看作对本发明的限制。描述了大量具体细节以提供对本发明各种实施例 的详尽理解。但是在某些情况下，将不对公知的或传统的细节进行描述， 以对本发明的实施例提供简要的说明。</p>
+    <p>[53]下文具体实施方式的某些部分是以算法的形式展现的，这些算法包括 对于计算机存储器内储存的数据进行的操作。算法大体上是指造成所需结 果的操作的自洽序列。这些操作通常需要或涉及到物理操纵或物理量。通 常（但不是必然），这些量采取电信号或磁信号的形式，这些信号能够被 储存、传输、合并、比较和以其他方式受到操纵。业已证明，有时（主要 是为了通常使用的原因），将这些信号称为位、值、元素、符号、字符、 项、数等等是方便的。</p>
+    <p>[54]但是应当牢记，这些以及类似的所有术语是与适当的物理量相关联 的，并且仅仅是应用于这些量的方便的标号。除非下文中明显地以其他形 式另有说明外，整个说明书中使用诸如"处理"或"计算"或"判定"或</p>
+    <p>"显示"等术语所进行的说明可以指数据处理系统或类似电子装置进行的 动作和处理，所述动作和处理操纵计算机的寄存器和存储器内以物理（电 子）量表示的数据并将其转换成该系统的存储器或寄存器（或其他这类信 息存储、传输或显示的装置）内类似地以物理量的形式表示的其他数据。[55]本发明可以涉及用于执行本申请中所述操作中的一项或多项操作的设 备。该设备可以为所需的目的而专门构造，或者也可以包括通用计算机， 所述通用计算机由储存在该计算机中的计算机程序选择性地激活</p>
+    <p>(activate)或重构（reconfigure)。这样的计算机程序可以被储存在机器 (例如计算机）可读介质中或者存储在适于储存电子指令并分别耦联到总</p>
+    <p>线的任何类型介质中，所述计算机可读介质包括但不限于任何类型的盘 (包括软盘、光盘、CD-ROM、和磁光盘）、只读存储器（ROM)、随机</p>
+    <p>存取存储器（RAM)、可擦除可编程ROM (EPROM)、电可擦除可编程</p>
+    <p>ROM (EEPROM)、闪存、磁性卡片或光学卡片。</p>
+    <p>[56]机器可读介质包括用于以由机器（例如计算机）可读的形式储存或传 输信息的任何机构。例如，机器可读介质包括只读存储器（ROM);随机 存取存储器（RAM)、磁盘储存介质、光学储存介质、闪存装置、以电 的、光的、声的或其他的形式传播的信号（例如载波、红外信号、数字信 号等）等。</p>
+    <p>[57]本发明的至少某些实施例包括下述环境中一个或多个应用编程接口： 该环境具有与软件应用进行交互的用户接口软件。各种函数调用（function call)或消息通过应用编程接口而在用户接口软件与软件应用之间进行传 输。传输这些函数调用或消息可以包括发起（issue)、产生（initiate)、 引起（invoke)或接收这些函数调用或消息。示例性应用编程接口传输函 数调用，用于给具有显示区域的装置实现滚动、手势和动画操作。API还 可以实现具有参数、变量或指针的函数。API可以接收所公开的参数或其 他的参数组合。除了所公开的API之外，其他API也可以单独地或组合地 执行与所公开的API类似的功能。</p>
+    <p>[58]显示区域是窗口的形式。窗口是这样的显示区域：其可以不具有边 界，并可以是显示器的整个显示区域或范围。在某些实施例中，显示区域 可以具有至少一个窗口和/或至少一个视图（例如网页、文本或图像内 容）。窗口可以具有至少一个视图。所公开的方法、系统和设备可以实现 为具有显示区域、窗口和/或视图。</p>
+    <p>[59]本发明的至少某些实施例包括用于对装置的显示器进行滚动的滚动操</p>
+    <p>17作。滚动操作包括当滚动完成时使滚动区域沿与滚动相反的方向弹回</p>
+    <p>(bounce )、当滚动区域超出了显示边界时将滚动区域拉伸 (rubberband) &#8212;段预定的最大位移、以及设定将滚动锁定在水平或垂直 方向的滚动角度。</p>
+    <p>[60]本发明的至少某些实施例包括用于装置显示器的手势操作。手势操作 包括响应于具有两个或更多个输入点的用户输入而执行&#32302;放变换（例如放 大或&#32302;小）。手势操作还包括响应于具有两个或更多个输入点的用户输入 而执行旋转变换来使图像或视图旋转。</p>
+    <p>[61]本发明的至少某些实施例包括用于给装置的显示器执行动画的方法。 该方法包括启动至少一个动画。该方法还包括确定每个动画的进展</p>
+    <p>(progress)。该方法还包括根据单一的定时器完成每个动画。该单一的定 时器可以基于显示硬件的重绘间隔。</p>
+    <p>[62]本发明的至少某些实施例可以是数字媒体播放器（例如便携式音乐和/ 或视频媒体播放器）的一部分，该数字媒体播放器可以包括展现媒体的媒 体处理系统、储存媒体的存储装置，并且还可以包括与天线系统和媒体处 理系统耦联的射频（RF)收发器（例如用于蜂窝电话的RF收发器）。在 某些实施例中，储存在远程储存装置上的媒体可以通过RF收发器传输到 媒体播放器。媒体例如可以是音乐或其他音频、静止图像或运动图像中的 一者或多者。</p>
+    <p>[63]便携式媒体播放器可以包括媒体选择装置，例如来自Cupertino, CA 的Apple Computer, Inc.的iPod⑧或iPod Nano⑧上的点击轮输入装置、触摸 屏输入装置、按钮装置、可动指点输入装置或其他输入装置。媒体选择装 置可以用来对储存在储存装置和/或远程储存装置上的媒体进行选择。至少 在某些实施例中，便携式媒体播放器可以包括显示装置，该显示装置耦联 到媒体处理系统以显示被通过输入装置选择并被展现的媒体的标题或其他 标志物，所述展现是通过扬声器或（一个或多个）耳机进行、在该显示装 置上进行或既在该显示装置上又通过扬声器或（一个或多个）耳机进行 的。在某些实施例中，显示装置和输入装置是一体的，而在其他实施例 中，显示装置和输入装置是分开的装置。美国专利申请公开No.2003/0095096和No.2004/0224638中描述了便携式媒体播放器的示例， 这些文献通过引用方式结合在本申请中。</p>
+    <p>[64]这里所述发明的实施例可以是其他类型数据处理系统的一部分，这些 数据处理系统例如娱乐系统或个人数字助理（PDA)、通用计算机系统、 专用计算机系统、嵌入其他装置中的嵌入式装置、不包含媒体播放器的蜂 窝电话、多点触摸平板装置、其他多点触摸装置或者将这些装置的各方面 或功能相结合的装置（例如将PDA、娱乐系统和蜂窝电话结合在一个装置 中的媒体播放器，例如iPod&#174;)。在本发明中，电子装置和消费装置是装 置的典型示例。</p>
+    <p>[65]图1是用于对装置的用户输入进行响应的方法的流程图。该方法100 包括在方框102处接收用户输入。用户输入的形式可以是输入键、按钮、 轮、触摸或用于与该装置进行交互的其他方式。该方法100还包括在方框 104处响应于该用户输入而创建事件对象。该方法100还包括在方框106 处判定该事件对象是否引起滚动或手势操作。例如，在装置的显示器上拖 动一端距离的单一触摸可以被解释为滚动操作。在一种实施例中，两个或 更多个手指对显示器的触摸可以被解释为手势操作。在某些实施例中，判 定事件对象是否引起滚动或手势操作是根据对于给定的时间长度对拖动用 户输入的接收而进行的。该方法100还包括在方框108处基于引起滚动或 手势操作而发起至少一个滚动或手势调用。该方法100还包括：在方框 110处，基于停在预定位置处的滚动相对于用户输入的滚动量，通过使具 有与该事件对象相关的视图（例如网页、文本或图像内容）的窗口滚动，</p>
+    <p>来响应至少一个滚动调用（如果已发起）。滚动可以持续到相对于从用户 接收到的最后的输入达到预定位置为止。方法100还包括：在方框112 处，基于以用户输入的形式对多个输入点的接收，通过改变与该事件对象 相关的视图，来响应至少一个手势调用（如果已发起）。 [66]在本发明的某些实施例中，滚动操作包括将滚动指示器附着到显示器 的内容边缘。或者，滚动指示器可以被附着到显示边缘。在某些实施例 中，鼠标/手指按下的形式的用户输入使滚动指示器显示在滚动区域的显示 边缘、内容边缘或窗口边缘处。如果随后检测到鼠标/手指抬起，则滚动指</p>
+    <p>19示器从滚动区域的显示边缘、内容边缘或窗口边缘淡出。</p>
+    <p>[67]在本发明的某些实施例中，手势操作包括基于以用户输入的形式对多 个输入点的接收，通过使与事件对象相关的视图旋转，来响应至少一个手 势调用（如果已发起）。手势操作可以包括基于对用户输入的接收，通过 放大或&#32302;小来对与事件对象相关的视图进行&#32302;放。</p>
+    <p>[68]在某些实施例中，装置包括具有多个视图或窗口的显示区域。每个窗 口可以具有包括主视图（superview)和子视图（subview)在内的多个视 图。必须确定哪个窗口、视图、主视图或子视图被鼠标抬起、鼠标按下或 拖动等形式的用户输入所接触。API可以设定用于进行这种判定的各种模 式。在一种实施例中，"总是通过"模式（pass always mode)向最接近的 子视图发送鼠标按下、鼠标抬起和拖动输入。在另一种实施例中，"拖动 时截获"模式（intercept on drag mode)在鼠标抬起和按下的输入被发送到 子视图的同时向主视图发送拖动输入。在另一种实施例中，"总是截获" 模式（intercept always mode)向主视图发送全部的拖动、鼠标抬起和按下 输入。主视图可以是作为视图软件的子集（subclass)而工作的滚动器</p>
+    <p>(scroller)软件。子视图可以是作为用户接口软件的子集而工作的视图软 件。</p>
+    <p>[69]根据本发明的某些教导，图2以流程图的形式图示了应用编程接口的 细节。该应用编程接口工作于下述环境中以提供弹回操作：该环境具有与 软件应用进行交互的用户接口软件。用于提供弹回操作的方法200包括在 方框202处传送设定弹回调用。方法200还包括在方框204处设定最大和 最小弹回值中的至少一者。最大和最小弹回值可以与已接收了用户输入的 窗口的至少一个边缘相关联。方法200还包括：在方框206处，在滚动结 束时，基于超过滚动区域边缘的区域是否在显示区域中可见，而使滚动区 域沿与滚动相反的方向弹回。滚动区域可以是内容区域。</p>
+    <p>[70]在本发明的某些实施例中，发送固定弹回调用可以是下列任一者：发 起、产生、引起或接收该固定弹回调用。</p>
+    <p>[71]根据本发明的某些教导，图3以流程图的形式图示了应用编程接口的 细节。该引用编程接口工作于下述环境中以提供拉伸操作：该环境具有与软件应用进行交互的用户接口软件。用于提供拉伸操作的方法300包括在</p>
+    <p>方框302处传送拉伸调用，以造成对显示器内显示的滚动区域进行拉伸。 方法300还包括在方框304处传送边缘拉伸调用以给显示器的至少一个边 缘设定位移值。在某些实施例中，给上下边缘、左右边缘或全部边缘设定 位移值。</p>
+    <p>[72]基于滚动，当滚动区域超过了装置显示器的显示边缘时，根据方法 300对滚动区域进行的拉伸进行预定的最大位移值。如果用户对显示器的 内容进行滚动，使得超过该内容的边缘的区域在显示器中可见，则该位移 值对该内容外部的区域的最大量进行限制。在滚动结束时，该内容滑动回 去，使得该内容外部的区域不再在显示器上可见。</p>
+    <p>[73]在本发明的某些实施例中，传输拉伸调用是下列任一者：发起、产 生、引起或接收该拉伸调用。</p>
+    <p>[74]图4的示意图图示了具有触摸敏感显示器408的便携式电子装置400 的用户接口的一种实施例。显示器408可以包括窗口 410。窗口 410可以 包括一个或多个显示对象，例如信息对象412-1至412-4。在一种示例性实 施例中，信息对象412可以对应于条目列表中的一个或多个个体的联系人</p>
+    <p>(contact)信息。显示对象可以响应于对与显示器的接触点的运动414</p>
+    <p>(例如与用户的一个或多个手指416相关联，图4中的手指没有按比例绘 制）进行的检测或判定而运动。在某些实施例中，响应于对接触点的加速 运动进行的检测或判定，显示对象的运动可以被加速。尽管实施例400包 括一个窗口 410，但是在其他实施例中可以有两个或更多个显示窗口。另 外，尽管实施例400图示了沿特定方向的运动414，但是在其他实施例 中，显示对象的运动可以响应于沿一个或多个其他方向的运动414或者响 应于一个标量（即被确定的或被检测的与方向无关的运动）。</p>
+    <p>[75]图5A&#8212;图5C图示了将装置上条目的列表滚动到列表的终点，在该位 置，列表末端处的一个或多个显示条目平滑地从显示器的末端弹回，翻转 方向，然后可选地停止。图5A的示意图图示了具有触摸敏感显示器的便 携式电子装置400的用户接口的一种实施例。 一个或多个显示对象（例如 信息对象412-1)可以与条目列表的终点514 (是滚动区域的边缘）有一段距离512-1，并可以在该列表被滚动的时候以速度510-1运动。注意，终点 514是与显示对象相关的虚拟边界，这和与窗口 410和/或显示器408相关 的物理边界不同。如图5B所示，当一个或多个显示对象（例如信息对象 412-1)到达终点514或与之相交时，与滚动相对应的运动可以停止，艮口， 滚动速度可以在瞬时为零。如图5C所示，这一个或多个显示对象（例如 信息412-1)可以随后翻转方向。在与终点514相交之后，信息对象412-1 可以具有速度510-2并可以离终点514&#8212;段距离512-2。在某些实施例中， 当距离512-2等于距离512-1时，速度510-2的大小可以小于速度510-1的 大小，即在滚动列表到达其终点并在该处"弹回"之后，所述一个或多个 显示对象的运动受到阻尼（damp)。</p>
+    <p>[76]在本发明的至少某些实施例中，方法200执行图5A&#8212;图5C所述的弹 回操作。方框202处传送的弹回调用判定是否允许（enable)弹回操作。 最大和最小弹回值确定滚动区域沿与滚动相反的方向的弹回量。</p>
+    <p>[77]图6A&#8212;图6D图示了根据本发明的某些实施例，将条目列表滚动到列 表的终点，该终点处超过该终点的区域被显示，随后该列表被沿相反方向 滚动，直到超过该终点的区域不再被显示。图6A&#8212;图6D的示例中以电子 邮件消息作为所列条目来图示了方法300的拉伸操作。图6A&#8212;图6D图示 了根据某些实施例，用于对收件箱（inbox)进行管理的示例性用户接口 3500A。类似的用户接口可以用来显示和管理其他邮箱（例如草稿的、已 发送的、垃圾的、个人的等）。另外，也可以有其他类型的列表，包括但 不限于即时消息会话、常用电话号码、联系人信息、标签、电子邮件文件 夹、电子邮件地址、实际地址、铃声或相册名称的列表。</p>
+    <p>[78]如果电子邮件的列表填充了比所分配的屏幕区域更多的地方，则用户 可以在触摸屏上用垂直向上和/或垂直向下刷（swipe)的手势对这些电子 邮件进行滚动。在图6A的示例中，电子邮件列表的一部分被显示在屏幕 区域中，包括显示在顶部的来自Bruce Walker的电子邮件3530以及显示 在底部的来自Kim Brook的电子邮件3532。用户执行垂直向下的刷手势 3514以向列表的顶部滚动。垂直向下的手势3514不需要精确地垂直；大 体上垂直的手势就足够了。在某些实施例中，与精确垂直相差预定角度范围内的手势造成垂直滚动。</p>
+    <p>[79]作为对垂直向下的手势3514进行检测的结果，在图6B中，所显示的 电子邮件已经向下移位，使得此前显示在底部的来自Kim Brook的电子邮 件3532不再被显示，此前显示在顶部的来自Bruce Walker的电子邮件 3530现在成为从顶部数的第二个，而图6A中未显示的、来自Aaron Jones 的电子邮件3534现在被显示在列表的顶部。</p>
+    <p>[80]在该示例中，来自Aaron Jones的电子邮件3534是列表中的第一个电 子邮件，因此是列表的终点。在到达该电子邮件3534时，响应于对垂直 向下的手势3514的持续检测，该第一个电子邮件3534上方（即超过了该 列表的终点）的区域3536 (图6C)被显示。在某些实施例中，超过了列 表终点的被显示的区域与列表的背景在视觉上截然不同。在图6C中，区 域3536以及电子邮件（即电子邮件3534和3530)的背景都是白色，因此 在视觉上截然不同。</p>
+    <p>[81]&#8212;旦完成了垂直向下的手势3514，使得触摸屏上或其附近不再检测到 相应的对象，则列表被沿相反的方向滚动，直到该区域3536不再被显 示。图6D图示了沿相反方向的这种滚动的结果，现在来自Aaron Jones的 电子邮件3534被显示在分配给该列表的屏幕区域的顶部，而区域3536不 被显示。</p>
+    <p>[82]在图6A&#8212;图6D的示例中，垂直向下的手势使得列表中第一个条目之 外的区域被显示。如图3所示，在方框304对于上下边缘，或者在方框 306处对窗口的全部边缘，设定用于预定最大位移的值（例如对列表中第 一个条目之外的区域进行显示）。</p>
+    <p>[83]类似地，如果在列表已经被滚动到最后一个条目时垂直向上的手指在 继续，则垂直向上的手势可以使得列表中最后一个条目之外的区域被显 示。与第一个条目类似，该最后一个条目可以被看作是列表的终点。如上 所述，手势不需要精确垂直以造成垂直滚动；与完全垂直相差预定角度范 围内的手势就足够了。</p>
+    <p>[84]根据本发明的某些教导，图7以流程图的形式图示了应用编程接口的 细节。该应用编程接口工作于下述环境中以提供方向性滚动操作：该环境</p>
+    <p>23具有与软件应用进行交互的用户接口软件。用于通过应用编程接口</p>
+    <p>(API)工作的方法700包括在方框702传送方向性滚动角度调用，以判 定是否允许方向性滚动。方法700还包括在方框704处传送方向性滚动角 度调用，以设定滚动角度，所述滚动角度用于将滚动锁定在垂直方向或水 平方向中至少一者。该方法700还包括在方框706处，如果用户输入与水 平方向形成的角度小于或等于第一滚动角度，则将滚动锁定在水平方向。 该方法700还包括在方框708处，如果用户输入与垂直方向形成的角度小 于或等于第二滚动角度，则将滚动锁定在垂直方向。</p>
+    <p>[85]在某些实施例中，以拖动的形式进行的用户输入与水平方向形成的角 度小于第一滚动角度。在此情况下，用户可能希望沿水平方向滚动。滚动 将被锁定在水平方向，直到用户输入超过了第一滚动角度。可以用第二滚 动角度来将用户输入锁定在垂直方向。第二滚动角度可以被设定成等于第 一滚动角度。</p>
+    <p>[S6]图8图示了用于将装置显示器的滚动锁定在水平或垂直方向的第一和 第二滚动角度。水平方向802和垂直方向804是相对于装置的窗口或显示 器而言的。如方法700中所述，与水平方向802形成的角度小于或等于第 一滚动角度806或808的用户输入（例如拖动运动）将把用户输入锁定在 水平方向。类似地，与垂直方向804形成的角度小于或等于第二滚动角度 810或812的用户输入将把用户输入锁定在垂直方向。第一和第二滚动角 度可以设定成相同角度，也可以设定在不同角度。例如，第一和第二滚动 角度可以被设定在25度。相对于水平或垂直方向小于或等于25度的用户 输入将把滚动锁定在合适的方向。</p>
+    <p>[87]在某些实施例中，水平和垂直锁定角度可以部分地由内容的朝向 (aspect)来确定。例如，瘦高页面（tall page)形式的内容可以接收比水 平锁定角度更大的垂直锁定角度。</p>
+    <p>[88]根据本发明的某些教导，图9以流程图的形式图示了应用编程接口的 细节。该应用编程接口工作于下述环境中以提供减速滚动操作：该环境具 有与软件应用进行交互的用户接口软件。用于提供减速滚动操作的方法 900包括在方框902处传送减速滚动调用以设定用于拖动用户输入的减速因子。该方法900还包括在方框904处根据该拖动用户输入的速度以及该 减速因子来将滚动减慢直到停止。</p>
+    <p>[89]在某些实施例中，拖动形式的用户输入引起特定时间长度的滚动操 作。用户输入具有特定速度。通过将减速因子应用于拖动运动期间用户输 入的速度，在用户输入停止之后，装置显示器的窗口或显示区域的滚动区 域将停止滚动。</p>
+    <p>[90]根据本发明的某些教导，图10以流程图的形式图示了应用编程接口 的细节。该用户编程接口工作于下述环境中以提供滚动滞后（hysteresis) 操作：该环境具有与软件应用进行交互的用户接口软件。用于提供滚动滞 后操作的方法IOOO包括在方框1002处传送滚动滞后调用以判定用户输入 是否引起滚动。该方法IOOO还包括在方框1004处设定用于对用户输入是 否引起滚动进行判定的滞后值。</p>
+    <p>[91]在某些实施例中，在装置的显示器或显示器内的窗口上拖动特定距离 的形式的用户输入引起滚动操作。滞后值确定了该特定距离，这个距离是 在引起滚动操作之前，用户输入必须在显示器或窗口上拖动的距离。没有 拖动该特定距离的用户输入将不会引起滚动操作，并且可以被认为是鼠标 抬起或按下输入，或者其他类型的输入。</p>
+    <p>[92]根据本发明的某些教导，图11以流程图的形式图示了应用编程接口 的细节。该应用编程接口工作于下述环境中以将滚动指示器附着到装置的 滚动区域边缘或窗口边缘：该环境具有与软件应用进行交互的用户接口软 件。在某些实施例中，滚动区域边缘与内容边缘相关联。窗口或显示边缘 可以与显示区域的边缘相关联。用于提供滚动指示器的方法1100包括在 方框1102处传送滚动指示器调用以判定是否有至少一个滚动指示器附着 到滚动区域的边缘或窗口边缘。滚动指示器可以被显示在任何显示边缘、 窗口边缘或滚动区域边缘上。该方法IIOO还包括在方框1104处根据该滚 动指示器调用来可选地将至少一个滚动指示器附着到滚动区域的边缘。或 者，该方法IIOO还可以包括在方框1106处根据该滚动指示器调用来可选 地将至少一个滚动指示器附着到视图的窗口边缘。</p>
+    <p>[93]在某些实施例中，方法1100的这些操作可以被交替、更改、组合或删除。例如，方框1104可以被删除。类似地，方框1106可以从方法1100 中删去。或者，方框1104和方框1106的次序可以被交换。具有本发明中 已经讨论过的各种操作的其他方法也可以被交替、更改、重排、分解、组 合或删除。</p>
+    <p>[94]在本发明的某些实施例中，传送滚动指示器调用是下列任一者：发 起、产生、引起或接收滚动指示器调用。例如，用户接口软件（例如软件 包或库）可以从软件应用接收滚动指示器调用。</p>
+    <p>[95]根据本发明的某些教导，图12以流程图的形式图示了应用编程接口 的细节。该应用编程接口工作于下述环境中以判定是否有无意的用户输入 接触到装置显示器的视图：该环境具有与软件应用进行交互的用户接口软 件。该方法1200包括在方框1202处传送无意用户输入调用，以判定用户 输入是否是无意的。该方法1200还包括在方框1204处根据对无意用户输 入调用的判定而忽略该无意用户输入。在一种实施例中，无意用户输入调 用包括拇指检测调用，以判定用户输入是否是无意的拇指行为。</p>
+    <p>[96]在本发明的某些实施例中，传送无意用户输入调用是下列任一者：发 起、产生、引起或接收无意用户输入调用。</p>
+    <p>[97]手势API在应用与用户软件之间提供接口以处理手势。手势可以包括 对视图、窗口或显示器的&#32302;放、旋转或其他变化。掩码（mask)可以只允 许特定的改变而限制或不允许其他的改变。所有类型的事件都通过图形构 架进入该应用。这些事件被查询、分解（在必要时）、分派（dispatch)。 如果这些事件是系统级事件（例如，应用应当被挂起、装置方向已经改变 等等），则它们被引导至具有用户接口软件的类的实例（instance)的应 用。如果这些事件是基于用户输入的手事件，则这些事件被引导至发生它 们的窗口。窗口然后通过对实例的鼠标和手势方法进行调用，来将这些事 件引导至合适的控制部分。接收了鼠标按下或鼠标输入函数的控制部分将 继续得到将来的全部调用，直到手被抬起。如果检测到第二个手指，则引 起手势方法或函数。这些函数可以包括开始、改变和结束手势调用。将来 的全部改变手势调用将被发送到接收了开始手势的控制部分，直到该手势结束。</p>
+    <p>26[98]根据本发明的某些教导，图13以流程图的形式图示了应用编程接口 的细节。该应用编程接口工作于下述环境中以提供手势操作：该环境具有 与软件应用进行交互的用户接口软件。用于提供手势操作的方法1300包</p>
+    <p>括在方框1302处传送处理手势（handle gesture)事件调用。该方法1300 还包括在方框1304处响应于处理手势事件调用而传送手势变化调用。 [99]在某些实施例中，由装置的显示器以两个或更多个点的形式接收用户 输入。装置的多点触摸驱动器接收该用户输入并将该事件包装成事件对 象。窗口服务器接收该事件对象并判定该事件对象是否是手势事件对象。 如果窗口服务器确定已经接收了手势事件对象，则在方框1302处，用户 接口软件向与视图相关的软件应用发起或传送该处理手势调用。该软件应 用确认已经接收到手势事件并将处理手势调用传递给用户接口软件的库。 窗口服务器还将该手势事件对象与接收了该用户输入的视图相关联。在方 框1304处，库通过响应于处理手势事件调用来传送手势变化调用，从而 作出响应。</p>
+    <p>[100]在一种实施例中，与用户输入相关联的窗口或视图接收这种变化以执 行手势事件。提供该视图的用户软件接收手势开始事件调用、手势变化事 件调用、用于该视图的&#32302;放设定、以及手势结束调用。这些手势调用接收 手势事件的输入，该手势事件可以是具有类型（例如手事件、键盘事件、 系统事件等）的基础（base)事件。与该应用相关联的委托（delegate)接 收开始手势调用、手势已变化调用、以及手势已完成调用。在手势处理的 运行时间期间，用户软件被动态地链接到该应用中。 [101]在某些实施例中，手势变化函数调用包含与手势有关的下列信息：</p>
+    <p>当前按下的手指的数目；</p>
+    <p>最初按下的手指的数目；</p>
+    <p>手的旋转；</p>
+    <p>手的&#32302;放；</p>
+    <p>手的平移；</p>
+    <p>内侧和最外的手指的位置；以及 第一个手指的按压。在某些实施例中，可以如下地包括与各个手指按下有关的更多信息。</p>
+    <p>手指的阶段（刚刚触摸、完全按压、正在抬起等）；</p>
+    <p>手指的位置；</p>
+    <p>手指的接近度（触摸有多猛烈）； 手指的方向（卵形接触部分处于什么角度）； 长轴和短轴的长度； 手指的速度；以及</p>
+    <p>手指的卵形接触部分的偏心率（eccentricity)。 [102]手势事件对象可以是和弦（chord)事件对象，该和弦事件对象具有和 弦数目（例如与视图或显示器接触的手指的数目）、和弦开始事件、和弦 变化事件、和弦结束事件。和弦变化事件可以包括&#32302;放变换或旋转变换。 [103]根据本发明的某些教导，图14以流程图的形式图示了应用编程接口 的细节。该应用编程接口工作于下述环境中以提供装置的显示器的显示区 域、窗口或视图的&#32302;放变换：该环境具有与软件应用进行交互的用户接口 软件。用于提供&#32302;放变换的方法1400包括在方框1402处传送&#32302;放变换调 用，以确定对于与具有多个输入点的用户输入相关联的视图的&#32302;放变换。 该方法1400还包括在方框1404处传送&#32302;放手势开始调用。该方法1400还 包括在方框1406处传送&#32302;放手势进展调用。该方法1400还包括在方框 1408处传送&#32302;放手势结束调用。</p>
+    <p>[104]在某些实施例中，两个或更多个输入点（例如手指）的形式的用户输 入移近或移远，以引起手势事件，所述手势事件对与该用户输入相关联的 视图执行&#32302;放变换。&#32302;放变换包括最小和最大&#32302;放因子。图15图示了装 置的显示器1502，其具有视图的&#32302;放变换。视图1504 (例如网页、文本 或图像内容）具有第一&#32302;放因子。与该视图1504相关联的用户输入（例 如两个手指移远）被解释为从视图1504向视图1508进行放大的手势事 件，所述视图1508具有的第二&#32302;放因子超过了视图1516的最大&#32302;放因 子。快速返回（snapback)标志确定了在快速返回与视图1516相关联的最 大&#32302;放因子之前，上述放大是否可以超过最大&#32302;放因子而达到视图1508。 [105]图16A图示了装置的显示器1604，其具有视图1616的第一&#32302;放因子。与视图1614相关联的用户输入（例如两个手指1608和1610移近）被 解释为从视图1614向视图1664进行放大的手势事件，所述视图1664具有 如图16B所示的第二&#32302;放因子。虚线区域1602和1650表示内容的全部区 域，此时显示区域1604和1652中只显示了该内容。在执行从图16A向图 16B的&#32302;放变换时，手势事件的中心（对于图16A是中心1612，对于图 16B是中心1660)相对于显示器1604保持在相同的位置。在变换过程 中，滚动指示器1606收&#32302;成滚动指示器1654，以表明由于放大操作，显 示器1604上正在显示全部内容1650的更少部分。虚线区域1650比虚线区 域1602大，以表明由于放大操作，内容的更多部分未被显示在图16B中 的显示器1652上。</p>
+    <p>[106]在本发明的至少一些实施例中，如图16C所示，用户希望将视图1670 从&#32302;放因子2x变化到&#32302;放因子lx。第一组用户输入1672和1674向第二 组用户输入1676和1678移动将使&#32302;放因子从2x减小到lx。用户可能希 望从2x&#32302;到lx而不必将用户输入在视图1670上移动很大距离。在具有与 软件应用进行交互的用户接口软件的环境中，可以设定手势&#32302;放变换标志 以确定对于与具有多个输入点的用户输入相关联的视图进行的&#32302;放变换。 该&#32302;放变换标志或者从当前&#32302;放因子&#32302;放到最小&#32302;放因子，或者从当前&#32302; 放因子变换到最大&#32302;放因子。例如，可以在与1.5x的&#32302;放因子和第三组用 户输入1680、 1682相关联的位置设定标志。如果手势&#32302;放变换标志已经 被设定在1.5x的&#32302;放因子处，则希望将&#32302;放因子从2x变化到lx的用户只 需将其手指（用户输入）从第一组1672和1674移动到第三组1680和 1682。</p>
+    <p>[107]根据本发明的某些教导，图17以流程图的形式图示了应用编程接口 的细节。应用编程接口工作于下述环境中以提供装置的显示器的视图、窗</p>
+    <p>口或显示区域的旋转变换：该环境具有与软件应用进行交互的用户接口软</p>
+    <p>件。用于提供旋转变换的方法1700包括在方框1702处传送旋转变换调 用，以确定对于与具有多个输入点的用户输入相关的视图进行旋转变换。 该方法1700还包括在方框1704处传送旋转手势开始调用。该方法1700还 包括在方框1706处传送旋转手势进展调用。该方法1700还包括在方框1708处传送旋转手势结束调用。</p>
+    <p>[108]在某些实施例中，两个或更多个输入点的形式的用户输入进行旋转以 引起手势事件，该手势事件对于与该用户输入相关联的视图执行旋转变 换。旋转变换包括最小和最大旋转程度，用于相关的最小和最大旋转视 图。在视图快速返回到最大旋转程度之前，用户输入可以暂时地将视图旋 转到超过旋转的最大程度。</p>
+    <p>[109]根据本发明的某些教导，图18以流程图的形式图示了应用编程接口 的细节。该应用编程接口工作于下述环境中，以向委托通知与装置显示器</p>
+    <p>的显示区域、窗口或视图相关的至少一个动画：该环境具有与软件应用进</p>
+    <p>行交互的用户接口软件。该API可以指定动画的延迟。另外，该API可以 给多个动画赋予优先度。用于通知委托的方法1800包括在方框1802处确 定是否发生了任何动画。该方法1800还包括在方框1804处检查动画的进 展。如果已经发生了进展，则在方框1806处可以计算该动画的下一阶段 (例如位置、不透明性（opacity)或者变形）。如果在方框1804处进展己 经完成，则在方框1808处判定与该完成的动画相关的视图是否与委托相 关联。如果是，则在方框1810处传送委托调用，以向该委托通知对于该 视图的动画。在该软件应用的控制下工作的委托可以响应于由该动画改动 的视图而使其他视图变化。</p>
+    <p>[IIO]在某些实施例中，软件引起动画，所述动画对与用户输入相关的视图 执行&#32302;放变换。显示器可以包括多个视图。由&#32302;放变换增大了尺寸的视图 可能阻挡其他视图，在此情况下，可能需要减小其他视图的尺寸。或者， 由&#32302;放变换减小了尺寸的视图可能产生多余的区域供其他视图增大尺寸。 [lll]图19是用于使装置的显示器上显示的显示区域、窗口或视图进行动 画（animate)的方法的流程图。该方法1900包括在方框1902处开始至少 两个动画。该方法1900还包括在方框1904处确定各个动画的进展。该方 法1900还包括在方框1906处根据单一的定时器而完成各个动画。 [112]在本发明的某些实施例中，所述单一的定时器包括基于重绘间隔的定 时器，所述重绘间隔是装置的显示器显示当前帧与下一帧之间的事件长 度。在此情况下，动画的变化在重绘间隔期间被更新至显示器，以显示显</p>
+    <p>30示器的下一帧期间的变化。各个动画的进展可以被周期性地计算或者基于 进展调用来计算。</p>
+    <p>[113]该方法1900还可以包括判定各个动画是否与委托相关联。然后向该 委托通知该动画。不与动画相关联的其他视图可以取决于对该委托进行控 制的软件应用而变化。</p>
+    <p>[U4]图20是用于对装置的显示器上显示的显示区域、窗口或视图进行动 画的方法的流程图。该方法2000包括在方框2002处提供单一的动画定时 器。该方法2000还包括在方框2004处用该单一的动画定时器对多个动画 进行动画。例如，单一的定时器可以控制同时发生的全部动画。这些动画 可以包括变形的、帧的以及不透明性的动画。动画变形可以包括&#32302;放变换 或旋转变换。帧的动画可以包括帧的调整大小（resize)。不透明性的动画 使不透明性从不透明变化到透明，或者反过来。</p>
+    <p>[115]根据本发明的某些教导，图21以流程图的形式图示了应用编程接口 的细节。该应用编程接口工作于下述环境中，以对与装置的显示器的多个 视图或窗口相关的动画进行同步：该环境具有与多个软件应用或进程进行 交互的用户接口软件。用于对动画进行同步的方法2100包括在方框2102 处给正与进程相关联的各个视图独立地设定视图的属性。例如，视图的属 性或特性可以包括位置、大小、不透明性等等。该方法2100还包括在方 框2104处传送同步调用，从而针对显示器的多个视图对动画进行同步。 同步调用可以包括输入参数或变量，例如进程的同&#27497;的标识、以及正在请 求对多个视图进行动画的那些进程的列表。在一种实施例中，同步调用包 括正在请求进行动画的进程的数目和标识。在一种实施例中，每个应用或 进程在不同的事件发送同步调用。方法2100还包括在方框2106处当同步 标志被允许时传送同步确认消息。当要被同步的这些进程已经各自向操作 该用户接口软件的窗口服务器发送了消息时，同步标志可以被允许。该方 法2100还包括在方框2108处将这些视图的属性独立地从第一状态更新至 第二状态。在一种实施例中，窗口服务器在不同的事件从各个进程接收经 更新的属性。该方法2100还包括在方框2110处，当两个进程都具有与第 二状态相关联的经更新的属性时，传送开始动画调用以绘制所请求的动画。</p>
+    <p>[116]在一些实施例中，第一数据结构或层次树表示与这些进程的视图或窗</p>
+    <p>口相对应的那些层的层级（hierarchy)。第二数据结构或渲染树（render tree)表示该层次树的类似拷贝。但是，渲染树不被更新，直到这些独立 的处理已经完成其各自的动画为止。此时，渲染树用新的动画对屏幕进行 更新和重绘。</p>
+    <p>[117]图22A和图22B图示了对装置的显示器的各个视图或窗口的调整大小 进行同步。例如，通过从第一状态（图22A中的窗口 2210)变化到第二 状态（图22B中的窗口 2210)，具有尺寸属性的、与第一进程相关联的窗 口2210可以增大尺寸。大致同时，第二窗口 2220可以与第一窗口 2210的 尺寸增大成比例地减小尺寸。该方法2100对图22A和图22B所示的窗口 2210和2220的调整大小提供同步。从第一状态向第二状态变化的动画可 以渐增地发生，也可以在方法2100进行同步的情况下发生。 [U8]图23图示了对数据处理装置的显示器上显示的应用的视图的拥有者 进行切换的方法。该方法2300包括在方框2302处构造数据结构，该数据 结构具有层的层级，层与视图相关联并拥有该视图。这些层可以是用于该 应用的用户接口的内容、窗口、视频、图像、文本、媒体或任何其他类型 的对象。该方法2300还包括在方框2304处从数据结构除去层。该方法 2300还包括在方框2306处将视图的拥有者从层切换到视图。 [119]在某些实施例中，来自该数据结构的每个层与视图相关联。与视图相 关联的层向该视图发送委托函数调用，以生成由该视图提供的内容。第一 指针引用从该层指向该视图。第二指针引用从该视图指向该层。指向对象 (例如该视图）的引用的数目被定义为该对象的保留数（retained count)。该视图可以接收将要从该数据结构除去该层的通知。从数据结构 除去层可以基于与从装置的显示器除去的层相关联的视图而发生。当从数 据结构或层次树除去层时，从该层指向该视图的指针将被除去。该视图将 具有为零的保留数，并且在视图的拥有者不被撤销（reverse)的情况下从 存储器解除分配（deallocate)或除去。如果拥有者被撤销，则该视图将具 有至少为一的保留数。[120]图24图示了在装置的显示器上显示的应用的视图的存储器管理的方</p>
+    <p>法。方法2400包括在方框2402处构造数据结构，该数据结构具有层的层 级，至少一个层与该视图相关联。方法2400还包括在方框2404处在存储 器中储存数据结构。方法2400还包括在方框2406处维持从其他对象到该 视图的引用的数目的保留数。方法2400还包括在方框2408处，如果保留 数为零，则将视图从存储器解除分配。如上所述，如果从数据结构除去 层，则视图的保留数将递减。从数据结构除去层可以基于与从装置的显示 器除去的层相关联的视图而发生。</p>
+    <p>[121]图25A和图25B图示了一种数据结构，其具有层的层级，层与视图相 关联。该数据结构包括层2502、 2504和2506。层2506与视图2510相关 联。与视图2510相关联的层2506向该视图发送委托调用，以生成由该视 图提供的内容。第一指针引用2508从层2506指向视图2510。第二指针引 用2512从视图2510指向层2506。第三指针引用2532可以从用户接口 (UI)控制器2530指向视图2510。 UI控制器2530可以控制与视图2510 相关的操作，例如响应于用户输入而滚动视图2510。基于指针引用2508 和2532，图25A中的视图2510具有至少为二的保留数。 [122]如果如图25B所示从该数据结构除去层2506，则指针2508被除去。 视图2510将如图25B所示具有更低的保留数。如果视图2510具有为零的 保留数，则储存该视图2510的存储器将被解除分配。</p>
+    <p>[123]图26图示了用于对用户接口的媒体和非媒体内容进行合成以在装置 上显示的方法。该方法2600包括在方框2602处构造数据结构，该数据结 构具有与装置的用户接口相关联的各层的层级。该方法2600还包括在方 框2604处判定该数据结构的各个层与媒体还是非媒体内容相关联。该数 据结构或层次树被遍历（traverse)，以确定该数据结构的各个层与媒体还 是非媒体内容相关联。该方法2600还包括在方框2606处从该数据结构将 与媒体内容相关联的层分离（detach)。该方法2600还包括在方框2606 处将媒体内容储存在第一存储器位置。该方法2600还包括在方框2608处 将非媒体内容储存在第二存储器位置。该方法2600还包括在方框2610处 对该媒体和非媒体内容进行合成以在装置上显示。</p>
+    <p>33[124]在一些实施例中，对媒体和非媒体内容进行合成包括从第一存储器位 置取回媒体内容、从第二存储器位置取回非媒体内容、并将媒体和非媒体 内容直接扫描到显示器。存储器^^置可以是位于缓存器、主存储器、图形 处理单元或装置内其他位置中的任何类型的存储器。媒体内容可以包括视 频、视频插件、音频、图像或其他随事件而变的媒体。媒体内容可以是</p>
+    <p>YUV模型的形式，其中Y代表亮度成分（明亮度），而U和V代表色度 (色彩）成分。媒体内容可以以每秒大约20至40帧的速率被扫描到显示 器。媒体内容可以在被扫描到装置的显示器之前受到&#32302;放。 [125]非媒体内容可以包括不需要频繁更新的内容、视图和图像。非媒体内 容可以是作为加色（additive)模型的RGB模型的形式，其中红色、绿色 和蓝色（经常用在加色光模型中）被以各种方式组合以产生其他颜色。非 媒体内容可以以比媒体内容更低的速率被扫描到显示器。 [126]图27图示了数据结构或层次树，其具有层的层级。这些层与媒体和 非媒体内容相关联。例如，层2704与媒体内容2706 (例如视频）关联。 层2710与非媒体内容2712关联，非媒体内容2712可以是用于该视频的用 户接口视图。层2720、 2730和2740分别与形成非媒体内容2712的各组成 部分的非媒体内容2722、 2732和2742相关联。方法2600将确定该数据结 构的每个层是否与媒体或非媒体内容相关联。与媒体内容相关联的任何层 (例如层2704)将被从该数据结构除去，并在另外的存储器位置受到处 理。</p>
+    <p>[127]在一些实施例中，本发明的方法、系统和设备可以在各种装置中实 现，这些装置包括电子装置、消费装置、数据处理装置、台式计算机、便 携式计算机、无线装置、蜂窝装置、平板装置（tablet device)、手持装 置、多点触摸装置、多点触摸数据处理装置、这些装置的任意组合或者其 他类似的装置。图4一6和图28 &#8212; 33图示了一些这些装置的示例。 [128]图28图示了根据本发明一种实施例的装置2800。图28示出了一种具 有"糖块"样式的电话构造的无线装置。在图28中，无线装置2800可以 包括壳体2832、显示装置2834、输入装置2836 (可以是字母数字键区 (keypad))、扬声器2838、麦克风2840和天线2842。无线装置2800还以包括接近度传感器2844和加速度计2846。可以理解，图28的实施例可 以使用更多或更少的传感器，并可以具有与图28所示形状因素（form factor)不同的形状因素。</p>
+    <p>[129]所示的显示装置2834位于壳体2832的上部，所示输入装置2836位于 壳体2832的下部。所示天线2842在壳体2832的上部从壳体2832延伸。 所示扬声器2838也在壳体2832的上部处于显示装置2834上方。所示麦克 风2840在壳体2832的下部处于输入装置3286下方。可以理解，扬声器 2838和麦克风2840可以位于壳体上任何位置处，但是通常分别位于与用 户的耳朵和嘴巴相对应的位置。</p>
+    <p>[130]显示装置2834例如可以是不具备接收输入的能力的液晶显示器 (LCD)，也可以是包括LCD的触摸输入屏。输入装置2836例如可以包 括按钮、开关、拨号盘（dial)、滑动件（slider)、键或键区、导航板、 触摸板、触摸屏等。可以把任何公知的扬声器、麦克风和天线分别用于扬 声器2838、麦克风2840和天线2842。</p>
+    <p>卩31]从接近度传感器2844和加速度计2846获取的数据可以被组合或单独 使用，以收集与用户的行为有关的信息。来自接近度传感器2844、加速度 计2846或这二者的数据例如可以用来激活/关断（activate/deactivate)显示 器背光，产生命令，作出选择，对显示器上的滚动、手势、动画或其他运 动进行控制，对输入装置设定进行控制，或者对装置的一个或多个设定进 行其他变化。在本发明的某些实施例中，装置2800可以用来实施本发明 中所述方法的至少一部分。</p>
+    <p>[132]图29示出了根据本发明一种实施例的装置2950。装置2950可以包括 壳体2952、显示/输入装置2954、扬声器2956、麦克风2958和可选的天 线2960 (可以在壳体外部可见，也可以隐藏在壳体内部）。装置2950还 可以包括接近度传感器2962和加速度计2964。装置2950可以是蜂窝电 话，或者PDA与蜂窝电话集成为一体的装置，或者媒体播放器与蜂窝电 话集成为一体的装置，或者既是娱乐系统（例如用于玩游戏）又是蜂窝电 话的装置，或者装置2950可以是本申请中所述其他类型的装置。在一种 具体实施例中，装置2950可以包括蜂窝电话、媒体播放器和PDA,它们都包含在壳体2952内。装置2950可以具有这样的形状因素：其足够小以</p>
+    <p>适合握在正常成年人的手掌中，并且足够轻以能够由成年人用一只手携 带。可以理解，术语"便携"表示该装置能够容易地握持在成年人的手掌</p>
+    <p>(一只或两只）中，例如，膝上型计算机和iPod是便携式装置。 [133]在一种实施例中，显示/输入装置2954除了作为显示器（例如LCD) 之外，还可以包括多点触摸输入屏。在一种实施例中，多点触摸屏是电容 感知介质，构造成对在触摸面板的平面内的不同位置处同时发生的多个触 摸（例如从用户的脸在显示器上的接触形状（blob)，或者多个手指同时 触摸或接近触摸该显示器）或者接近触摸（例如显示器上的接触形状）进 行检测并产生不同的信号，这些信号代表触摸面板的平面上对于多个触摸 中每个触摸的触摸位置。</p>
+    <p>[134]在本发明的某些实施例中，装置2800可以用于实施本发明中讨论的 方法中的至少一部分。</p>
+    <p>[135]图30A和图30B图示了根据本发明一种实施例的装置3070。装置 3070可以是包括铰链3087的蜂窝电话，铰链3087将显示器壳体3089连 接到键区壳体3091。铰链3087使用户能够开启和关闭蜂窝电话，使之可 以被置于图30A和图30B所示两种不同构造中的至少一者。在一种具体实 施例中，铰链3087可以将显示器壳体以可旋转方式连接到键区壳体。具 体而言，用户可以开启蜂窝电话，使之处于图30A所示的开启构造，也可 以关闭蜂窝电话，使之处于图30B所示的关闭构造。键区壳体3091可以 包括键区3095和麦克风3097，键区3095接收来自用户的输入（例如电话 号码输入或其他字母数字输入），麦克风3097接收来自用户的语音输 入。显示器壳体3089可以在其内部表面上包括显示器3093 (例如 LCD)、扬声器3098和接近度传感器3084;在其外部表面上，显示器壳 体3089可以包括扬声器3096、温度传感器3094、显示器3088 (例如另一 个LCD)、环境光传感器3092以及接近度传感器3084A。因此，在本实 施例中，显示器壳体3089可以在其内部表面上包括第一接近度传感器并 在其外部表面上包括第二接近度传感器。</p>
+    <p>[136]在至少某些实施例中，装置3070可以包含提供下列一项或多项功能</p>
+    <p>36的部件：无线通信装置（例如蜂窝电话）、媒体播放器、娱乐系统、PDA 或本申请中所述的其他类型装置。在一种实施例的实现形式中，装置3070</p>
+    <p>可以是一体地集成了媒体播放器的蜂窝电话，所述媒体播放器播放MP3文 件，例如MP3音乐文件。</p>
+    <p>[137]图4、 5A、 5B、 5C、 6A、 6B、 6C、 6D、 28、 29、 30A和30B所示的</p>
+    <p>各种装置可以是无线通信装置（例如蜂窝电话），并可以包括提供无线通 信能力的多个部件。图31示出了无线装置3070的一种实施例，其包括用 于无线通信的能力。无线装置3070可以包括在图4、 5A、 5B、 5C、 6A、 6B、 6C、 6D、 28、 29、 30A和30B所示的任一装置中，不过图4、 5A、 5B、 5C、 6A、 6B、 6C、 6D、 28、 29、 30A和30B的那些装置的替换实施 例也可以包括比无线装置3070更多或更少的部件。</p>
+    <p>[138]无线装置3070可以包括天线系统3101。无线装置3070还可以包括数 字和/或模拟射频（RF)收发器3102，其耦联到天线系统3101以通过天线 3101发送和/或接收语音、数字数据和/或媒体信号。</p>
+    <p>卩39]无线装置3070还可以包括数字处理系统3103，以控制数字RF收发 器和管理语音、数字数据和/或媒体信号。数字处理系统3103可以是通用 处理装置，例如微处理器或控制器。数字处理系统3103还可以是专用处 理装置，例如ASIC (专用集成电路）、FPGA (现场可编程门阵列）或 DSP (数字信号处理器）。数字处理系统3103还可以包括本领域已知的其 他装置以与无线装置3070的其他部件进行接口。例如，数字处理系统 3103可以包括模拟一数字转换器和数字一模拟转换器，以与无线装置 3070的其他部件进行接口。数字处理系统3103可以包括媒体处理系统 3109，媒体处理系统3109可以包括通用或专用处理装置以管理媒体，例 如音频数据文件。</p>
+    <p>[140]无线装置3070还可以包括存储装置3104，存储装置3104耦联到数字 处理系统以储存数据和/或用于无线装置3070的操作程序。存储装置3104 例如可以是任何类型的固态或磁性存储器装置。</p>
+    <p>[141]无线装置3070还可以包括一个或多个输入装置3105,该输入装置耦 联到数字处理系统3103以接受用户输入（例如电话号码、名称、地质、媒体选择等等）。输入装置3105例如可以是下列一项或多项：键区、触 摸板、触摸屏、与显示装置结合的指点装置或类似的输入装置。</p>
+    <p>[142]无线装置3070还可以包括至少一个显示装置3106，显示装置3106耦 联到数字处理系统3103以显示信息，例如消息、电话呼入信息、联系人 信息、图片、电影和/或通过输入装置3105而选择的媒体的标题或其他标 志物。显示装置3106例如可以是LCD显示装置。在一种实施例中，显示 装置3106和输入装置3105可以一体集成在同一装置中（例如触摸屏LCD (例如多点触摸输入面板），其与显示装置（例如LCD显示装置） 一体 集成）。显示装置3106可以包括背光3106A，以在特定状况下对显示装 置3106进行照明。可以理解，无线装置3070可以包括多个显示器。 [143]无线装置3070还可以包括电池3107，以向系统的各个部件提供工作 电力，这些部件包括：数字RF收发器3102、数字处理系统3103、存储装 置3104、输入装置3105、麦克风3105A、音频换能器3108、媒体处理系 统3109、（一个或多个）传感器3110、显示装置3106。电池3107例如可 以是可充电的或不可充电的锂离子电池或镍金属氢化物电池。无线装置 3070还可以包括音频换能器3108和至少一个麦克风3105A，音频换能器 3108可以包括一个或多个扬声器。在本发明的某些实施例中，无线装置 3070可以用来实施本发明中所述各种方法的至少一部分。 [144]图32示出了根据本发明实施例的装置的另一种示例。该装置3200可 以包括处理器（例如微处理器3202)和存储器3204，处理器和存储器通 过总线3206彼此耦联。装置3200可以可选地包括耦联到微处理器3202的 缓存器3208。该装置还可以可选地包括显示控制器和显示装置3210，其 通过总线3206耦联到其他部件。 一个或多个输入/输出控制器3212也可以 耦联到总线3216，以提供用于输入/输出装置3214的接口并提供用于一个 或多个传感器3216的接口，传感器3216可以用于感知用户行为。总线 3206可以包括如本领域所知通过各种桥、控制器和/或适配器而彼此连接 的一个或多个总线。输入/输出装置3214可以包括键区、键盘或例如触摸 输入面板的光标控制装置。而且，输入/输出装置3214可以包括网络接 口，网络接口可以用于有线网络或无线网络（例如RF收发器）。传感器3216可以是本申请中所述那些传感器中的任一种，例如包括接近度传感器</p>
+    <p>或环境光传感器。在装置3200的至少某些实施方式中，微处理器3202可 以接收来自一个或多个传感器3216的数据并可以以本申请中所述的方式 对该数据执行分析。例如，可以通过人工智能处理或以本申请中所述的其 他方式对该数据进行分析。作为分析的结果，微处理器3202然后可以自 动地使得对装置的一个或多个设定进行调整。</p>
+    <p>[145]在本发明的某些实施例中，装置3200可以用来实施本申请中所述那 些方法的至少一部分。</p>
+    <p>[146]图33A&#8212;图33C示出了根据本发明至少某些实施例的装置的另一种示 例。图33A图示了膝上型装置3300，其具有键盘3302、主体3304、显示 器框架3306和显示器3308。膝上型装置3300可以被转变成图33B和图 33C所示的平板装置。图33B图示了该膝上型装置向平板装置的转变。包 含显示器3358的显示器框架3356的边缘在主体3354内滑过键盘3352的 顶部，直到形成如图33C所示的平板装置。该平板装置的显示器3362和 显示器框架3366置于主体3360的顶上。</p>
+    <p>[147]在本发明的某些实施例中，膝上型装置3300可以用来实施本申请中 所述那些方法的至少一部分。</p>
+    <p>[148]根据本发明的某些教导，图34以流程图的形式图示了应用编程接口 的细节。该应用编程接口工作于具有与软件应用进行交互的用户接口软件 的环境中。在一些实施例中，视图的层级工作于用户接口软件内的层的层 级之上。API以如方法3400所示的方式工作，该方法包括在方框3402处 构造视图的层级，该层级工作于层的层级之上。该方法3400还包括在方 框3404处提供对于视图层级的访问（access)而不提供对于层的层级的访 问。应用可以通过该API与视图的层级进行交互，而不访问在视图层级之 下工作的层的层级。</p>
+    <p>[149]在某些实施例中，平台提供各种滚动、手势和动画操作。该平台包括 硬件部件和操作系统。硬件部件可以包括耦联到输入面板的处理单元以及 耦联到处理器的存储器。操作系统包括一个或多个程序，所述程序储存在 存储器中并构造成由处理单元执行。 一个或多个程序包括各种指令，用于通过应用编程接口来传送函数调用或消息，以执行各种滚动、手势和动画 操作。</p>
+    <p>[150]在一种实施例中，这一个或多个程序包括用于通过API传送弹回调用 的指令，以在滚动结束时，基于超过滚动区域边缘的区域是否在显示区域 中可见，而使滚动区域沿与滚动相反的方向弹回。在一种实施例中，这一 个或多个程序包括用于通过API传送拉伸调用的指令，以基于滚动，在滚 动区域超过了显示边缘时，对滚动区域造成预定的最大位移的拉伸效果。 在一种实施例中，这一个或多个程序包括用于通过API传送方向性滚动调 用的指令以设定滚动角度，用于将滚动锁定在垂直方向或水平方向的至少 一者中。</p>
+    <p>[151]在一种实施例中，这一个或多个程序包括用于通过API传送滚动滞后 调用的指令，以判定用户输入是否引起滚动。在一种实施例中，这一个或 多个程序包括用于通过API传送减速滚动调用的指令，以基于引起滚动的 用户输入而设定用于用户输入的减速因子。在一种实施例中，这一个或多 个程序包括通过API传送滚动指示器调用的指令，以判定是否有至少一个 滚动指示器附着到显示区域的内容边缘或显示边缘。</p>
+    <p>[152]在 一 些实施例中，该平台包括包含库或软件代码的构架 (framework)。该构架与平台的程序进行交互，以提供应用编程接口，用 于执行各种滚动、手势和动画操作。该构架还包括储存在单个目录中的相 关的资源（例如图像、文本等）。</p>
+    <p>[153旌一种实施例中，该构架的库提供API以指定弹回操作，使得在滚动 结束时，基于超过滚动区域边缘的区域是否在显示区域中可见，而使滚动 区域沿与滚动相反的方向弹回。在一种实施例中，该构架的库提供API以 指定拉伸操作，基于滚动，该拉伸操作在滚动区域超过了显示边缘时，对 滚动区域造成预定的最大位移的拉伸效果。在一种实施例中，该构架的库 提供API以指定方向性滚动操作，以设定滚动角度，用于将滚动锁定在垂 直方向或水平方向的至少一者中。</p>
+    <p>[154]在一种实施例中，该构架的库提供API以指定滚动滞后操作，以判定 用户输入是否引起滚动。在一种实施例中，该构架的库提供API以指定减</p>
+    <p>40速滚动操作，以基于引起滚动的用户输入而设定用于该用户输入的减速因 子。在一种实施例中，该构架的库提供API以指定滚动指示器操作，以判 定是否有至少一个滚动指示器附着到显示区域的内容边缘或显示边缘。 [155]在前述说明中，已经参照本发明的具体示例性实施例对本发明进行了 说明。显然，在不脱离由所附权利要求阐述的发明精神和范围的情况下， 可以对其进行各种修改。因此，说明书和附图应当认为是举例说明性的， 而不是限制性的。附录A API软件代码 09PI1288</p>
+    <p>-(AffineTransform)transform;</p>
+    <p>-(void)setTransform:(AffineTransform)transform: 〃 animatable 砂nterface UIView( Animation)</p>
+    <p>+ (void)beginAnimation: (String*)animationIDS;   〃       animationID can be nil if you don，t want to have an identifer for the group</p>
+    <p>+ (void)beginAnimations: (String"animationID context: (void*) context 〃 additional context info passed to will start/did stop selectors 十(void)end Animations;</p>
+    <p>+(void)setAnimationDelegate:(id)de】egate;</p>
+    <p>+(void)setAnimationDuration:(TimeInterval)duration;</p>
+    <p>+(void)setAnimationDelay:(TimeInterval)delay;</p>
+    <p>+(void)setAnimationStartTime:(AbsoluteTime)start;</p>
+    <p>+(void)setAnimationCurve:(UIViewAnimationCurve)curve;</p>
+    <p>-(BOOL)handleEvent: (Event)event;</p>
+    <p>〃 this is called if the app is going to be suspending back to a previous application.</p>
+    <p>〃 the app should return YES if it is going to perform animation, otherwise it should 〃 return NO. The startTime argument is a start time for any animations to begin so that 〃 the animations are synchronized with a window server. If the application's 〃 implementation of this method returns YES, it should later call [UIApp suspendWith ANimation:NO] when 〃 it is finished animating.</p>
+    <p>(BOOL)animateSuspensionReturningToLastApp:AbsoluteTime)startTime;</p>
+    <p>〃 Set the status bar mode， orientation over duration. If processSynchID is non-zero, used as sync ID.</p>
+    <p>-(void) setStatusBarMode: (UIStatusBarMode) mode</p>
+    <p>orientation: (UIStatusBarOrientation) orientation duration: (float)duration</p>
+    <p>processSynchID: (int)processSynchID;</p>
+    <p>7/ Sets the status bar mode. 0 duration means no animation</p>
+    <p>-(void) setStatusBarMode: (UIStatusBarMode)mode</p>
+    <p>orientation: (UIStatusBarOrientation)orientation duration: (float)duration;</p>
+    <p>-(void) setStatusBarMode: (UIStatusBarMode)mode duration:(float)duration; 〃</p>
+    <p>uses the default orientation.</p>
+    <p>-(UIStatusBarOrientation) statusBarOrientation;</p>
+    <p>- (UIStatusBarOrientation) statusBarMode;</p>
+    <p>〃 Status bar rect in non-rotated window coordinates.</p>
+    <p>-(void) synchronizedDrawingWithID: (int)processSynchID; 〃 used for status bar resize</p>
+    <p>〃sndiD // "^g(looa)：s^pge.sqq^a^A\."sdtsAVO-vps(p〖OA)-</p>
+    <p>ss加勺9 uswoq pis d2 joj 1HOI3HlaMva&#8212;^HQSrTa</p>
+    <p>XSM :s&amp;p3J0J:pu"g.s&lt;sn.aps〖IB3 // "^UCIOOS)"su一PIae,cq^FasAvqlvps(PPA)-</p>
+    <p>"^u(looa)"§s03OJ.U&#163;s;s:^:^PUIJ9-0.3s3s(PPA)-</p>
+    <p>;P3J(P9-W)：.supl:q.l9n§sps(p!0&gt;) ■</p>
+    <p>"^g(loos)"22sypuI.S-§slw&#174;s(t^oA)-</p>
+    <p>"^UCIOOS)：tslqdu3uo一pspaq曰rupps(PPA)-</p>
+    <p>"s8unoq(qoos)"sosss3s(p一OA)-</p>
+    <p>!JO:PBJ(：^oy)：JO:PBJl5pstq9:SQ〖IIOJQS^S(PPA)-</p>
+    <p>!s。u(sosb〖suv9u30JOSI2sp:SJSP3s(PPA)-</p>
+    <p>aducIOOH)：seHIO.GSl2s一】CSJtKIPS(PPA)-</p>
+    <p>59POUI(9po5plBA3J9-o:u5SIn)：9力OP^PISA3ps(力〖OA)-</p>
+    <p>P9§^。jf&gt; 一。u J一 SAV3〖Aqtls</p>
+    <p>(looa) .sq日nM // SUIOOZ91nqpwv9,s;s90Irl</p>
+    <p>M9一A (* M9一AIn) 〕^syAU〖3忌(3dxH2n;s9QIn) ：9,mls9Ql:fs一usp一p(pyoA)-</p>
+    <p>A5yA (* AS屮AJn3 "^SIAUlf 9dAX9dAJPJnJS3OIr0 :9sxsq〕p〖Q9J3s3s(力一0A)-</p>
+    <p>AV9一A (* Acy/Jfl} :AV3一AU屮3dxl(3dxJL9J5s30In) ：OJl;us30y5SIlI^(勺〖OA)-</p>
+    <p>^TSA3(1ISA3SD) ：jisa3joj AV9〖A(* AV:9〖AIn} :s9Jn;sso5.!^sln&amp;(p!OA)-&lt;table&gt;table see original document page 44&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;-(void)setEndAlpha: (float)end;</p>
+    <p>-(void)alphaForFraction: (float)fraction;</p>
+    <p>@end</p>
+    <p>敏nterface UIRotationAnimation    :        UIAnimation {</p>
+    <p>float 一startAngle;</p>
+    <p>float   &#8212;endAngle; -(void)setStartRotationAngle: (float)degrees; -(void)setEndRotationAngle: (float) degrees;</p>
+    <p>45</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102194245A?cl=zh">CN102194245A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年3月17日</td><td class="patent-data-table-td patent-date-value">2011年9月21日</td><td class="patent-data-table-td ">微软公司</td><td class="patent-data-table-td ">诸如弹跳缓动的无状态动画</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102236521A?cl=zh">CN102236521A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月13日</td><td class="patent-data-table-td patent-date-value">2011年11月9日</td><td class="patent-data-table-td ">南昊（北京）科技有限公司</td><td class="patent-data-table-td ">交互系统的显示方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102486713A?cl=zh">CN102486713A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月2日</td><td class="patent-data-table-td patent-date-value">2012年6月6日</td><td class="patent-data-table-td ">联想(北京)有限公司</td><td class="patent-data-table-td ">显示方法和电子设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102646117A?cl=zh">CN102646117A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月20日</td><td class="patent-data-table-td patent-date-value">2012年8月22日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">文件数据传送的方法与装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102646117B?cl=zh">CN102646117B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月20日</td><td class="patent-data-table-td patent-date-value">2015年7月8日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">文件数据传送的方法与装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102722337A?cl=zh">CN102722337A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月11日</td><td class="patent-data-table-td patent-date-value">2012年10月10日</td><td class="patent-data-table-td ">三星电子株式会社</td><td class="patent-data-table-td ">滚动操作的折叠显示方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103176716A?cl=zh">CN103176716A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年11月20日</td><td class="patent-data-table-td patent-date-value">2013年6月26日</td><td class="patent-data-table-td ">索尼电脑娱乐公司</td><td class="patent-data-table-td ">使画面滚动操作高效化的信息处理装置和信息处理方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103677564A?cl=zh">CN103677564A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年11月20日</td><td class="patent-data-table-td patent-date-value">2014年3月26日</td><td class="patent-data-table-td ">小米科技有限责任公司</td><td class="patent-data-table-td ">滑动操作响应方法、装置及终端设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103677564B?cl=zh">CN103677564B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年11月20日</td><td class="patent-data-table-td patent-date-value">2016年3月30日</td><td class="patent-data-table-td ">小米科技有限责任公司</td><td class="patent-data-table-td ">滑动操作响应方法、装置及终端设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US8749586">US8749586</a></td><td class="patent-data-table-td patent-date-value">2012年7月18日</td><td class="patent-data-table-td patent-date-value">2014年6月10日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">Method and apparatus for providing folder item information based on touch operation</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US8850364">US8850364</a></td><td class="patent-data-table-td patent-date-value">2013年9月18日</td><td class="patent-data-table-td patent-date-value">2014年9月30日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">Method and device for sending file data</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US9262855">US9262855</a></td><td class="patent-data-table-td patent-date-value">2010年3月18日</td><td class="patent-data-table-td patent-date-value">2016年2月16日</td><td class="patent-data-table-td ">Microsoft Technology Licensing, Llc</td><td class="patent-data-table-td ">Stateless animation, such as bounce easing</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012167658A1?cl=zh">WO2012167658A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年4月5日</td><td class="patent-data-table-td patent-date-value">2012年12月13日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">一种基于触摸式操作提供文件夹项目信息的方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0003048000">G06F3/048</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F3/04845">G06F3/04845</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F3/04883">G06F3/04883</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F3/0485">G06F3/0485</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=L8l0BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F3/0488">G06F3/0488</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">G06F3/0488G</span>, <span class="nested-value">G06F3/0484M</span>, <span class="nested-value">G06F3/0485</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年11月11日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年1月6日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/7be71bebdd97b4ce16a4/CN101578578A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%94%A8%E4%BA%8E%E6%BB%9A%E5%8A%A8%E6%93%8D%E4%BD%9C%E7%9A%84%E5%BA%94%E7%94%A8%E7%BC%96%E7%A8%8B%E6%8E%A5%E5%8F%A3.pdf?id=L8l0BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1fQ-pPOgNegXKQHGvgKzkq-q6Jhg"},"sample_url":"https://www.google.com/patents/reader?id=L8l0BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

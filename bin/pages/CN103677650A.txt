@@ -1,0 +1,255 @@
+<!DOCTYPE html><html><head><title>专利 CN103677650A - 盘符漂移预防及处理方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_50a6672b5f82ffbd39b7a9e87fd4594c/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_50a6672b5f82ffbd39b7a9e87fd4594c__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="盘符漂移预防及处理方法及装置"><meta name="DC.contributor" content="胡殿明" scheme="inventor"><meta name="DC.contributor" content="刘雨亮" scheme="inventor"><meta name="DC.contributor" content="魏伟" scheme="inventor"><meta name="DC.contributor" content="北京百度网讯科技有限公司" scheme="assignee"><meta name="DC.date" content="2012-9-12" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开一种盘符漂移预防及处理方法，包括以下步骤：内核中的设备管理工具Udev以守护进程的形式侦听内核发出的Uevent；当设备管理工具Udev监控到删除磁盘的Uevent时，则检查磁盘设备在系统中的挂载点是否已被卸载，如果磁盘设备处于挂载状态，则卸载对应的盘符；当设备管理工具Udev监控到加载磁盘设备的Uevent时，如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将磁盘的内核模块名称和设备文件名称一致。本发明还公开一种盘符漂移预防及处理装置、预防方法及装置、处理方法及装置。本发明避免再次加载磁盘时盘符顺序发生漂移。"><meta name="DC.date" content="2014-3-26"><meta name="DC.relation" content="CN:101520792:A" scheme="references"><meta name="DC.relation" content="CN:102521114:A" scheme="references"><meta name="DC.relation" content="EP:1164475:A2" scheme="references"><meta name="DC.relation" content="US:6053739" scheme="references"><meta name="citation_patent_publication_number" content="CN:103677650:A"><meta name="citation_patent_application_number" content="CN:201210337890"><link rel="canonical" href="https://www.google.com/patents/CN103677650A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103677650A?cl=zh"/><meta name="title" content="专利 CN103677650A - 盘符漂移预防及处理方法及装置"/><meta name="description" content="本发明公开一种盘符漂移预防及处理方法，包括以下步骤：内核中的设备管理工具Udev以守护进程的形式侦听内核发出的Uevent；当设备管理工具Udev监控到删除磁盘的Uevent时，则检查磁盘设备在系统中的挂载点是否已被卸载，如果磁盘设备处于挂载状态，则卸载对应的盘符；当设备管理工具Udev监控到加载磁盘设备的Uevent时，如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将磁盘的内核模块名称和设备文件名称一致。本发明还公开一种盘符漂移预防及处理装置、预防方法及装置、处理方法及装置。本发明避免再次加载磁盘时盘符顺序发生漂移。"/><meta property="og:title" content="专利 CN103677650A - 盘符漂移预防及处理方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103677650A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103677650A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=N1P5CAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103677650A&amp;usg=AFQjCNEIkRc40mkeiJKMDJFDPT0UyOtGww" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ddfcc1ec04a42429b57f/CN103677650A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ddfcc1ec04a42429b57f/CN103677650A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103677650A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103677650A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103677650A?cl=zh" style="display:none"><span itemprop="description">本发明公开一种盘符漂移预防及处理方法，包括以下步骤：内核中的设备管理工具Udev以守护进程的形式侦听内核发出的Uevent；当设备管理工具Udev监控到删除磁盘的Uevent时，则检查磁盘设备在系统中的挂载点是否已被卸载，如果 ...</span><span itemprop="url">https://www.google.com/patents/CN103677650A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103677650A - 盘符漂移预防及处理方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103677650A - 盘符漂移预防及处理方法及装置" title="专利 CN103677650A - 盘符漂移预防及处理方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103677650 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210337890</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年3月26日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年9月12日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年9月12日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210337890.6, </span><span class="patent-bibdata-value">CN 103677650 A, </span><span class="patent-bibdata-value">CN 103677650A, </span><span class="patent-bibdata-value">CN 201210337890, </span><span class="patent-bibdata-value">CN-A-103677650, </span><span class="patent-bibdata-value">CN103677650 A, </span><span class="patent-bibdata-value">CN103677650A, </span><span class="patent-bibdata-value">CN201210337890, </span><span class="patent-bibdata-value">CN201210337890.6</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%83%A1%E6%AE%BF%E6%98%8E%22">胡殿明</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E9%9B%A8%E4%BA%AE%22">刘雨亮</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%AD%8F%E4%BC%9F%22">魏伟</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E7%99%BE%E5%BA%A6%E7%BD%91%E8%AE%AF%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">北京百度网讯科技有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103677650A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103677650A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103677650A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (1)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=N1P5CAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210337890&amp;usg=AFQjCNEK9mvsAXlhw1B9jWlqB9vw4YOZpg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=N1P5CAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103677650A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNG-6lYFrmoBHmHH2xswv6ECxgm0zA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT134713041" lang="ZH" load-source="patent-office">盘符漂移预防及处理方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 103677650 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA132096755" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开一种盘符漂移预防及处理方法，包括以下步骤：内核中的设备管理工具Udev以守护进程的形式侦听内核发出的Uevent；当设备管理工具Udev监控到删除磁盘的Uevent时，则检查磁盘设备在系统中的挂载点是否已被卸载，如果磁盘设备处于挂载状态，则卸载对应的盘符；当设备管理工具Udev监控到加载磁盘设备的Uevent时，如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将磁盘的内核模块名称和设备文件名称一致。本发明还公开一种盘符漂移预防及处理装置、预防方法及装置、处理方法及装置。本发明避免再次加载磁盘时盘符顺序发生漂移。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(20)</span></span></div><div class="patent-text"><div mxw-id="PCLM59892839" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种盘符漂移预防及处理方法，其特征在于，包括以下步骤:  内核中的设备管理工具Udev以守护进程的形式侦听所述内核发出的Uevent ；  当所述设备管理工具Udev监控到删除磁盘的Uevent时，则检查所述磁盘设备在系统中的挂载点是否已被卸载，如果所述磁盘设备处于挂载状态，则卸载对应的盘符；以及当所述设备管理工具Udev监控到加载磁盘设备的Uevent时,如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的盘符漂移预防及处理方法，其特征在于，所述设备管理工具Udev根据所述Uevent对设备管理目录下的设备文件进行管理，当删除或加载所述磁盘时，所述设备管理工具Udev的守护进程对所述设备管理目录下的设备文件进行添加或删除操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的盘符漂移预防及处理方法，其特征在于，所述内核为Linux内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求1所述的盘符漂移预防及处理方法，其特征在于，如果所述初始盘符的顺序与原有盘符的顺序不一致，或者所述磁盘所在的槽位顺序对应的盘符不能被使用，则判断发生盘符漂移。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.一种盘符漂移预防及处理装置:包括:   内核，用于发出Uevent ；  设备管理工具Udev,用于以守护进程的形式侦听所述内核发出的Uevent,记录磁盘插拔行为，并当Uevent为对磁盘的操作时，如果所述设备管理工具Udev监控到删除磁盘的Uevent时，则检查所述磁盘设备在系统中的挂载点是否已被卸载，如果所述磁盘设备处于挂载状态，则卸载对应的盘符；如果所述设备管理工具Udev监控到加载磁盘设备的Uevent时，如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的盘符漂移预防及处理装置，其特征在于，所述设备管理工具Udev还用于根据所述Uevent对设备管理目录下的设备文件进行管理，  当删除或加载所述磁盘时，所述设备管理工具Udev的守护进程对所述设备管理目录下的设备文件进行添加或删除操作。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求5所述的盘符漂移预防及处理装置，其特征在于，所述内核为Linux内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求5所述的盘符漂移预防及处理装置，其特征在于，所述设备管理工具Udev在所述初始盘符的顺序与原有盘符的顺序不一致，或者所述磁盘所在的槽位顺序对应的盘符不能被使用。</div>
+    </div>
+    </div> <div class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.一种盘符漂移预防方法，其特征在于，包括以下步骤:  内核中的设备管理工具Udev以守护进程的形式侦听所述内核发出的Uevent ;以及当Uevent为对磁盘的操作时,如果所述设备管理工具Udev监控到删除磁盘的Uevent时，所述设备管理工具Udev对系统中所述磁盘的挂载情况进行检查，并在所述磁盘处于挂载状态时卸载所述磁盘对应的挂载点以使所述内核释放对应的磁盘在所述内核中的驱动模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的盘符漂移预防方法，其特征在于，所述内核为Linux内核。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.一种盘符漂移预防装置，包括:   内核，用于发出Uevent ；  设备管理工具Udev，用于以守护进程的形式侦听所述内核发出的Uevent，并当所述Uevent为对磁盘的操作时,如果所述设备管理工具Udev监控到删除磁盘的Uevent时,对所述系统中所述磁盘的挂载情况进行检查，并在所述磁盘处于挂载状态时卸载所述磁盘对应的挂载点以使所述内核释放对应的磁盘在所述内核中的驱动模块。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求11所述的盘符漂移预防装置，其特征在于，所述内核为Linux内核。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.一种盘符漂移处理方法，其特征在于，包括以下步骤:  内核中的设备管理工具Udev以守护进程的形式侦听所述内核发出的Uevent ;以及  当所述设备管理工具Udev监控到加载磁盘设备的Uevent时,如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的盘符漂移处理方法，其特征在于，所述设备管理工具Udev根据所述Uevent对设备管理目录下的设备文件进行管理，当加载所述磁盘时，所述设备管理工具Udev的守护进程对所述设备管理目录下的设备文件进行添加。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求13所述的盘符漂移处理方法，其特征在于，所述内核为Linux内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求13所述的盘符漂移处理方法，其特征在于，如果所述初始盘符的顺序与原有盘符的顺序不一致，或者所述磁盘所在的槽位顺序对应的盘符不能被使用。</div>
+    </div>
+    </div> <div class="claim"> <div num="17" class="claim">
+      <div class="claim-text">17.一种盘符漂移处理装置，包括:   内核，用于发出Uevent ；  设备管理工具Udev，用于以守护进程的形式侦听所述内核发出的Uevent以及记录磁盘的插拔行为，如果所述设备管理工具Udev监控到加载磁盘设备的Uevent时,如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求17所述的盘符漂移处理装置，其特征在于，所述设备管理工具Udev根据所述设备事件Uevent对设备管理目录下的设备文件进行管理，当加载所述磁盘时，所述设备管理工具Udev的守护进程对所述设备管理目录下的设备文件进行添加。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求17所述的盘符漂移处理装置，其特征在于，所述内核为Linux内核。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求17所述的盘符漂移处理装置，其特征在于，所述设备管理工具在所述初始盘符的顺序与原有盘符的顺序不一致，或者所述磁盘所在的槽位顺序对应的盘符不能被使用。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES67877910" lang="ZH" load-source="patent-office" class="description">
+    <p>盘符漂移预防及处理方法及装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及服务器技术领域，特别涉及一种盘符漂移预防处理方法及装置、盘符漂移预防方法及装置、盘符漂移处理方法及装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	磁盘被系统加载时，内核会依次分配磁盘驱动模块名。设备管理工具Udev会根据磁盘在内核中的驱动模块名，生成相应的块设备文件名，如第三块磁盘，内核中的驱动模块名为sdc，块设备文件名为sdc，第四块磁盘的驱动模块名及块设备文件名就是Sdd ;当磁盘被从系统拔出时，如果其对应的挂载点已经被卸载，则内核就释放相应的磁盘设备文件数据，否则将继续持有。</p>
+    <p>[0003]	磁盘被从系统拔出前，如果其挂载点没有被卸载，则内核持有的磁盘设备模块就不会被释放，再次加载磁盘时，内核会自动向后分配一个新的驱动模块名，设备管理工具Udev就会产生相应的块设备文件名，例如对于配置12块磁盘的服务器，正常设备文件名为sda到sdl,相应的挂载点为diskl到diskl2,如果不卸载disk3,直接将sdc拔出，再次插入磁盘后其获得的设备文件名将是sdm，即盘符发生了漂移。因为系统没有sdm对应的挂载点，所以该磁盘将无法被使用，同时disk3对应已经被删除的sdc，后续的IO请求均会报错，而且盘符顺序与实际槽位顺序不一致，对磁盘的运维操作也带来麻烦。</p>
+    <p>发明内容</p>
+    <p>[0004]	本发明旨在至少在一定程度上解决上述技术问题之一或至少提供一种有用的商业选择。为此，本发明的第一个目的在于提供一种盘符漂移预防及处理方法，该方法可以避免盘符漂移，保证系统加载的磁盘可以被正常使用。本发明的第二个目的在于提供一种盘符漂移预防及处理装置。本发明的第三个目的在于提供一种盘符漂移预防方法。本发明第四个目的在于提供一种盘符漂移预防装置。本发明第五个目的在于提供一种盘符漂移处理方法。本发明的第四个目的在于提供一种盘符漂移处理装置。</p>
+    <p>[0005]	为实现上述目的，本发明第一方面的实施例提供了盘符漂移预防及处理方法，包括如下步骤:</p>
+    <p>[0006]	内核中的设备管理工具Udev以守护进程的形式侦听所述内核发出的Uevent ；</p>
+    <p>[0007]	当所述设备管理工具Udev监控到删除磁盘的Uevent时，则检查所述磁盘设备在系统中的挂载点是否已被卸载，如果所述磁盘设备处于挂载状态，则卸载对应的盘符；以及</p>
+    <p>[0008]	当所述设备管理工具Udev监控到加载磁盘设备的Uevent时,如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。</p>
+    <p>[0009]	根据本发明式实施例的盘符漂移预防及处理方法，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的方法避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0010]	本发明第二方面的实施例提供一种盘符漂移预防及处理装置，包括:内核，用于发出Uevent ;设备管理工具Udev,用于以守护进程的形式侦听所述内核发出的Uevent,记录磁盘插拔行为，并当Uevent为对磁盘的操作时，如果所述设备管理工具Udev监控到删除磁盘的Uevent时，则检查所述磁盘设备在系统中的挂载点是否已被卸载，如果所述磁盘设备处于挂载状态，则卸载对应的盘符；如果所述设备管理工具Udev监控到加载磁盘设备的Uevent时，如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。</p>
+    <p>[0011]	根据本发明实施例的盘符漂移预防及处理装置，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的方法避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0012]	本发明第三方面的实施例提供了一种盘符漂移预防方法，包括如下步骤:</p>
+    <p>[0013]	内核中的设备管理工具Udev以守护进程的形式侦听所述内核发出的Uevent ;以及</p>
+    <p>[0014]	当Uevent为对磁盘的操作时，如果所述设备管理工具Udev监控到删除磁盘的Uevent时，所述设备管理工具Udev对系统中所述磁盘的挂载情况进行检查，并在所述磁盘处于挂载状态时卸载所述磁盘对应的挂载点以使所述内核释放对应的磁盘在所述内核中的驱动模块。</p>
+    <p>[0015]	根据本发明实施例的盘符漂移预防方法，通过Uevent事件机制，卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。通过本发明的方法避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0016]	本发明第四方面的实施例提供一种盘符漂移预防装置，包括:内核，用于发出Uevent ;设备管理工具Udev,用于以守护进程的形式侦听所述内核发出的Uevent,并当所述Uevent为对磁盘的操作时,如果所述设备管理工具Udev监控到删除磁盘的Uevent时，对所述系统中所述磁盘的挂载情况进行检查，并在所述磁盘处于挂载状态时卸载所述磁盘对应的挂载点以使所述内核释放对应的磁盘在所述内核中的驱动模块。</p>
+    <p>[0017]	根据本发明实施例的盘符漂移预防装置，通过Uevent事件机制，卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。通过本发明的方法避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0018]	本发明第五方面的实施例提供一种盘符漂移处理方法，包括如下步骤:[0019]	内核中的设备管理工具Udev以守护进程的形式侦听所述内核发出的Uevent ;如果所述设备管理工具Udev监控到加载磁盘设备的Uevent时,如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。根据本发明实施例的盘符漂移处理方法，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的装置避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0020]	本发明第六方面的实施例提供一种盘符漂移处理装置，包括:内核，用于发出Uevent ;设备管理工具Udev,用于以守护进程的形式侦听所述内核发出的Uevent以及记录磁盘的插拔行为，如果所述设备管理工具Udev监控到加载磁盘设备的Uevent时,如果检查到被分配的盘符发生了漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在所述内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将所述磁盘的内核模块名称和设备文件名称一致。</p>
+    <p>[0021]	根据本发明实施例的盘符漂移处理装置，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的装置避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0022]	本发明的附加方面和优点将在下面的描述中部分给出，部分将从下面的描述中变得明显，或通过本发明的实践了解到。</p>
+    <p>附图说明</p>
+    <p>[0023]	本发明的上述和/或附加的方面和优点从结合下面附图对实施例的描述中将变得明显和容易理解，其中:</p>
+    <p>[0024]	图1为根据本发明实施例的盘符漂移预防及处理方法的流程图；</p>
+    <p>[0025]	图2为根据本发明实施例的盘符漂移预防及处理方法的工作流程；</p>
+    <p>[0026]	图3为根据本发明实施例的磁盘下线的处理策略的示意图；</p>
+    <p>[0027]	图4为根据本发明实施例的磁盘加载策的处理策略的示意图；</p>
+    <p>[0028]	图5为根据本发明实施例的盘符漂移的示意图；</p>
+    <p>[0029]	图6根据本发明实施例的盘符漂移预防及处理装置的示意图；</p>
+    <p>[0030]	图7为根据本发明实施例的盘符漂移预防方法的流程图；以及</p>
+    <p>[0031]	图8为根据本发明实施例的盘符漂移处理方法的流程图。</p>
+    <p>具体实施方式</p>
+    <p>[0032]	下面详细描述本发明的实施例，所述实施例的示例在附图中示出，其中自始至终相同或类似的标号表示相同或类似的元件或具有相同或类似功能的元件。下面通过参考附图描述的实施例是示例性的，旨在用于解释本发明，而不能理解为对本发明的限制。</p>
+    <p>[0033]	在本发明中，除非另有明确的规定和限定，术语“安装”、“相连”、“连接”、“固定”等术语应做广义理解，例如，可以是固定连接，也可以是可拆卸连接，或一体地连接；可以是机械连接，也可以是电连接；可以是直接相连，也可以通过中间媒介间接相连，可以是两个元件内部的连通。对于本领域的普通技术人员而言，可以根据具体情况理解上述术语在本发明中的具体含义。</p>
+    <p>[0034]	下面参考图1至图5描述根据本发明实施例的盘符漂移预防及处理方法。其中，该盘符漂移预防及处理方法可以应用于服务器及磁盘运维管理方面。</p>
+    <p>[0035]	如图1所示，本发明实施例提供的盘符漂移预防及处理方法，包括如下步骤:</p>
+    <p>[0036]	步骤S101，内核中的设备管理工具Udev以守护进程的形式侦听内核发出的Uevent (user space event)。在本发明的一个实施例中，内核可以为Linux内核,例如Linux 2.6及更高版本。</p>
+    <p>[0037]	其中，设备管理工具Udev为在用户空间以守护进程的形式运行，通过侦听内核发出的设备事件Uevent管理设备管理目录(/dev)下的设备文件。</p>
+    <p>[0038]	在本发明的一个实施例中，设备管理工具Udev根据Uevent对设备管理目录下的设备文件进行管理。当删除或加载磁盘时，设备管理工具Udev的守护进程侦听来自内核的Uevent，对设备管理目录(/dev)下的设备文件进行添加或删除操作。</p>
+    <p>[0039]	设备管理工具Udev在接收到Uevent后，匹配Udev规则(rule)。对Uevent的类型进行判断，判断Uevent为对磁盘的操作。其中，无论磁盘是被系统踢出(reject)、重置(reset)或者被人为拔出，均会检测到Uevent的行为action为remove行为，即判断Uevent的类型为操作行为。</p>
+    <p>[0040]	当磁盘被添加至系统时，则判断Uevent的类型为添加操作行为(add)。</p>
+    <p>[0041]	根据Uevent的类型的不同,触发相应的Udev rule调用策略。在本发明的一个实例中，本发明实施例的盘符漂移预防及处理方法涉及到的Udev rule策略以udev script的形式实现。</p>
+    <p>[0042]	如图2所示，设备管理工具Udev匹配rule，并判断Udev action的类型，包括如下步骤:</p>
+    <p>[0043]	步骤S201,设备管理工具Udev从内核接收到Uevent0</p>
+    <p>[0044]	设备管理工具Udev侦听内核发出的Uevent，从而管理设备管理目录(/dev)下的设备文件。</p>
+    <p>[0045]步骤	S202,匹配 Udev rule (规则)。</p>
+    <p>[0046]步骤	S203, Udev action (行为)为添加(add)或移动(remove)。</p>
+    <p>[0047]	根据接收到的设备事件Uevent，判断Udev行为的类型为移动操作或添加操作。</p>
+    <p>[0048]步骤	S204,调用 Udev script。</p>
+    <p>[0049]	根据判断出的Udev行为的类型，触发相应的Udev rule调用策略。其中，触发相应的Udev rule调用策略是通过调用相应的Udev script的形式实现。</p>
+    <p>[0050]	步骤S 102,当设备管理工具Udev监控到删除磁盘的Uevent时,则检查磁盘设备在系统中的挂载点是否已被卸载，如果磁盘设备处于挂载状态，则卸载对应的盘符。[0051]	当检测到remove行为时,设备管理工具Udev对系统中的磁盘的挂载情况进行检查，检查磁盘设备在系统中的挂载点是否已经被卸载。</p>
+    <p>[0052]	如果磁盘处于挂载状态，则卸载磁盘对应的盘符，以便内核成功释放磁盘在内核中的驱动模块。当磁盘下线时，本发明可以及时释放磁盘设备在内核中的数据，从而在下次加载磁盘时，内核驱动模块的名称可以顺利被重新分配，从而可以预防盘符漂移。</p>
+    <p>[0053]	图3示出了磁盘下线的处理策略。</p>
+    <p>[0054]步骤	S301,磁盘下线(disk offline)。</p>
+    <p>[0055]步骤	S3O2,内核删除(kernel delete)。</p>
+    <p>[0056]	内核从系统中删除磁盘。</p>
+    <p>[0057]步骤	S303, Udev 行为为移动(Udev action remove)。</p>
+    <p>[0058]	此时设备管理工具Udev监控到的内核发出的Uevent为remove操作。</p>
+    <p>[0059]步骤	S304, Udev 脚本检查挂载(Udev script check mount)。</p>
+    <p>[0060]	设备管理工具Udev对系统中的磁盘的挂载情况进行检查。</p>
+    <p>[0061]步骤	S305, Udev 脚本卸载(Udev script umount)。</p>
+    <p>[0062]	设备管理工具Udev在检查到磁盘处于挂载状态时卸载磁盘对应的盘符，从而使得内核释放对应的磁盘在内核中的驱动模块。</p>
+    <p>[0063]	步骤S103，当设备管理工具Udev监控到加载磁盘设备的Uevent时，设备管理工具Udev判断磁盘是否发生盘符漂移，如果未发生盘符漂移，则执行步骤S1031，如果发生盘符漂移，则执行步骤S1032。</p>
+    <p>[0064]	当磁盘被加载时，设备管理工具Udev会检测到Uevent的action:add,即Uevent为添加操作。在缺省规则下，在设备管理目录/dev下会使用内核驱动模块名作为设备文件名。</p>
+    <p>[0065]	设备管理工具Udev根据内核分配的初始盘符判断是否发生盘符漂移。具体地，当出现以下情况之一时，设备管理工具Udev判断发生盘符漂移:</p>
+    <p>[0066]	( I)初始盘符的顺序与与原有盘符的顺序不一致。</p>
+    <p>[0067]	例如，磁盘的初始盘符为3，而原有盘符顺序为第4，则可以判断发生了盘符漂移。</p>
+    <p>[0068]	(2)磁盘所在的槽位顺序对应的盘符不能被使用。</p>
+    <p>[0069]	例如，系统包括12个槽位，可以放置12个磁盘。如果磁盘的初始盘符被分配至第13的盘符，可以判断磁盘所在的槽位顺序对应的盘符超出了槽位的范围，磁盘所在的槽位顺序对应的盘符不能被使用，则判断发生了盘符漂移。</p>
+    <p>[0070]	步骤S1031，如果未发生盘符漂移，则将初始盘符作为添加磁盘的最终盘符。</p>
+    <p>[0071]	步骤S1032，如果发现盘符漂移，则卸载原有盘符对应的挂载点以使原有磁盘设备在内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将磁盘的内核模块名称和设备文件名称一致。</p>
+    <p>[0072]	在本发明的实施例中，设备管理工具Udev对于磁盘的每次插拔行为均有记录，从而通过查询设备管理工具Udev中的磁盘插拔记录可以获知是否初始盘符的顺序与原有盘符的顺序不一致，或者磁盘所在的槽位顺序对应的盘符不能被使用，从而可以判断是否发生盘符漂移。</p>
+    <p>[0073]	根据设备管理工具Udev记录的磁盘插拔记录卸载原有盘符对应的挂载点，为添加磁盘分配新的盘符，从而使得原有磁盘设备(已经被删除了)在内核中的引用得以释放，再以模拟热插拔的方式重新加载硬盘，从而使得磁盘的内核模块名和设备文件名与原有的盘符保持一致，从而避免盘符漂移。</p>
+    <p>[0074]	下面对模拟热插拔进行解释。模拟热插拔是指设备管理工具Udev先将添加磁盘模拟拔出，但实际的磁盘并未被拔出，故而称之为模拟拔出。由于，磁盘的插拔动作均在设备管理工具Udev中有记录，从而根据该记录可以获知哪个磁盘被拔出。然后根据磁盘插拔记录查找之前被拔出的磁盘的盘符，并将之前拔出的磁盘的盘符分配给该添加磁盘的盘符。</p>
+    <p>[0075]	如图5所示,磁盘包括Diskl、Disk2、Disk3、Disk4、Disk5,其中，上述磁盘分别对应的盘符号及设备文件名为sda、sdb、sdc、sdd和sde。Disk6为添加的磁盘，Disk2为被拔出的磁盘。</p>
+    <p>[0076]	从图中可以看出，系统包括五个槽位，可以放置五个磁盘。如果要向系统中添加磁盘Disk6，为了避免出现设备管理工具Udev向磁盘Disk6顺序分配新的盘符号及设备文件名为sdf而导致盘符漂移，需要将添加磁盘Disk6模拟拔出，即将Disk6模拟拔出，而实际并未拔出。然后查询设备管理工具Udev中的设备插拔记录，查询之前设备插拔记录，获知Disk2为被拔出的磁盘，并查找到Disk2对应的盘符为sdb。然后，将sdb分配给Disk6，即添加磁盘Disk6的盘符为sdb，从而避免了盘符漂移。</p>
+    <p>[0077]	图4示出了磁盘加载的处理策略。</p>
+    <p>[0078]步骤	S401,添加磁盘(disk add)。</p>
+    <p>[0079]步骤	S402,内核加载(kernel load)。</p>
+    <p>[0080]	内核加载磁盘。</p>
+    <p>[0081]步骤	S403, Udev 行为为添加(Udev action add)。</p>
+    <p>[0082]	当磁盘被加载时，设备管理工具Udev会检测到Uevent的action:add,即Uevent为添加操作。</p>
+    <p>[0083]步骤S404,	Udev脚本检查磁盘盘符的槽位(Udev script check disk label withslot)。</p>
+    <p>[0084]步骤	S405, Udev 脚本卸载(Udev script umount)。</p>
+    <p>[0085]	如果发现盘符发生了漂移，则先卸载槽位对应的挂载点，使得原有磁盘设备在内核中的引用得以释放</p>
+    <p>[0086]步骤	S406, Udev 脚本重新加载磁盘(Udev script reload disk)。</p>
+    <p>[0087]	Udev脚本以模拟热插拔的方式重新加载磁盘。</p>
+    <p>[0088]	根据本发明实施例的盘符漂移预防及处理方法，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的方法避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0089]	下面参考图6描述根据本发明实施例的盘符漂移预防及处理装置600。其中，该盘符漂移预防及处理装置可以应用于服务器及磁盘运维管理方面。[0090]	如图6所示，本发明实施例的盘符漂移预防及处理装置600，包括:内核610和设备管理工具Udev 620。</p>
+    <p>[0091]	内核610用于发出Uevent(user space event)。在本发明的一个实施例中，内核可以为Linux内核,例如Linux 2.6及更高版本。</p>
+    <p>[0092]	设备管理工具Udev 620以守护进程的形式侦听所述内核发出的Uevent,记录磁盘插拔行为。其中，设备管理工具Udev620为在用户空间以守护进程的形式运行，通过侦听内核610发出的Uevent管理设备管理目录(/dev)下的设备文件。</p>
+    <p>[0093]	在本发明的一个实施例中，设备管理工具Udev620根据Uevent对设备管理目录下的设备文件进行管理。当删除或加载磁盘时，设备管理工具Udev620的守护进程侦听来自内核610的Uevent，对设备管理目录(/dev)下的设备文件进行添加或删除操作。</p>
+    <p>[0094]	设备管理工具Udev620在接收到Uevent后，匹配Udev规则(rule)。对Uevent的类型进行判断，判断Uevent为对磁盘的操作。其中，无论磁盘是被系统踢出(reject)、重置(reset)或者被人为拔出，均会检测到Uevent的行为action为remove行为，即判断Uevent的类型为操作行为。</p>
+    <p>[0095]	当磁盘被添加至系统时，则判断Uevent的类型为添加操作行为(add)。</p>
+    <p>[0096]	根据Uevent的类型的不同,触发相应的Udev rule调用策略。在本发明的一个实例中，本发明实施例的盘符漂移预防及处理装置涉及到的Udev rule策略以udev script的形式实现。</p>
+    <p>[0097]	设备管理工具Udev620当Uevent为对磁盘的操作时，当设备管理工具Udev监控到删除磁盘的Uevent时，对内核610中磁盘的挂载情况进行检查，并在磁盘处于挂载状态时卸载磁盘对应的盘符以使内核释放对应的磁盘在内核中的驱动模块，以及当设备事件Uevent为对磁盘的添加操作时，根据内核分配的初始盘符判断是否发生盘符漂移。</p>
+    <p>[0098]	当检测到remove行为时,设备管理工具Udev620对内核610中的磁盘的挂载情况进行检查，检查磁盘设备在系统中的挂载点是否已经被卸载。</p>
+    <p>[0099]	如果磁盘处于挂载状态，则卸载磁盘对应的盘符，以便内核610成功释放磁盘在内核中的驱动模块。当磁盘下线时，本发明可以及时释放磁盘设备在内核中的数据，从而在下次加载磁盘时，内核驱动模块的名称可以顺利被重新分配，从而可以预防盘符漂移。</p>
+    <p>[0100]	当磁盘被加载时，设备管理工具Udev会检测到设备事件Uevent的action:add,即Uevent为添加操作。在缺省规则下，在设备管理目录/dev下会使用内核驱动模块名作为设备文件名。</p>
+    <p>[0101]	设备管理工具Udev620判断磁盘是否发生盘符漂移。具体地，当出现以下情况之一时，设备管理工具Udev620判断发生盘符漂移:</p>
+    <p>[0102]	( I)初始盘符的顺序与原有盘符的顺序不一致。</p>
+    <p>[0103]	例如，磁盘的初始盘符为3，而原有盘符顺序为第4，则可以判断发生了盘符漂移。</p>
+    <p>[0104]	(2)磁盘所在的槽位顺序对应的盘符不能被使用。</p>
+    <p>[0105]	例如，系统包括12个槽位，可以放置12个磁盘。如果磁盘的初始盘符被分配至第13的盘符，可以判断磁盘所在的槽位顺序对应的盘符超出了槽位的范围，磁盘所在的槽位顺序对应的盘符不能被使用，则判断发生了盘符漂移。</p>
+    <p>[0106]	如果设备管理工具Udev620判断未发生漂移，则设备管理工具Udev 620将初始盘符作为添加磁盘的最终盘符。如果判断已发生盘符漂移，则设备管理工具Udev 620卸载原有盘符对应的挂载点以使原有磁盘设备在内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将磁盘的内核模块名称和设备文件名称一致。</p>
+    <p>[0107]	在本发明的实施例中，设备管理工具Udev620对于磁盘的每次插拔行为均有记录，从而通过查询设备管理工具Udev620中的磁盘插拔记录可以获知是否初始盘符的顺序与原有盘符的顺序不一致，或者磁盘所在的槽位顺序对应的盘符不能被使用，从而可以判断是否发生盘符漂移。</p>
+    <p>[0108]	根据设备管理工具Udev620记录的磁盘插拔记录卸载原有盘符对应的挂载点，为添加磁盘分配新的盘符，从而使得原有磁盘设备(已经被删除了)在内核中的引用得以释放，再以模拟热插拔的方式重新加载硬盘，从而使得磁盘的内核模块名和设备文件名与原有的盘符保持一致，从而避免盘符漂移。</p>
+    <p>[0109]	下面对模拟热插拔进行解释。模拟热插拔是指设备管理工具Udev620先将添加磁盘模拟拔出，但实际的磁盘并未被拔出，故而称之为模拟拔出。由于，磁盘的插拔动作均在设备管理工具Udev620中有记录，从而根据该记录可以获知哪个磁盘被拔出。然后根据磁盘插拔记录查找之前被拔出的磁盘的盘符，并将之前拔出的磁盘的盘符分配给该添加磁盘的盘符。</p>
+    <p>[0110]	根据本发明实施例的盘符漂移预防及处理装置，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的装置避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0111]	下面参考图7描述根据本发明实施例的盘符漂移预防方法。其中，该盘符漂移预防方法可以应用于服务器及磁盘运维管理方面。</p>
+    <p>[0112]	如图7所示，本发明实施例提供的盘符漂移预防方法，包括如下步骤:</p>
+    <p>[0113]	步骤S701,内核中的设备管理工具Udev对内核发出的设备事件Uevent (userspace event)进行监控。在本发明的一个实施例中，内核可以为Linux内核,例如Linux</p>
+    <p>2.6及更高版本。</p>
+    <p>[0114]	其中，设备管理工具Udev为在用户空间以守护进程的形式运行，通过侦听内核发出的设备事件Uevent管理设备管理目录(/dev)下的设备文件。</p>
+    <p>[0115]	在本发明的一个实施例中，设备管理工具Udev根据Uevent对设备管理目录下的设备文件进行管理。当删除或加载磁盘时，设备管理工具Udev的守护进程侦听来自内核的Uevent，对设备管理目录(/dev)下的设备文件进行添加或删除操作。</p>
+    <p>[0116]	设备管理工具Udev在接收到Uevent后，匹配Udev规则(rule)。对Uevent的类型进行判断，判断Uevent为对磁盘的操作。其中，无论磁盘是被系统踢出(reject)、重置(reset)或者被人为拔出，均会检测到Uevent的行为action为remove行为，即判断Uevent的类型为操作行为。</p>
+    <p>[0117]	当磁盘被添加至系统时，则判断Uevent的类型为添加操作行为(add)。</p>
+    <p>[0118]	根据Uevent的类型的不同,触发相应的Udev rul e调用策略。在本发明的一个实例中，本发明实施例的盘符漂移预防及处理方法涉及到的Udev rule策略以udev script的形式实现。</p>
+    <p>[0119]	步骤S702，当设备管理工具Udev监控到删除磁盘的Uevent时，则检查磁盘设备在系统中的挂载点是否已被卸载，如果磁盘设备处于挂载状态，则卸载对应的盘符。</p>
+    <p>[0120]	当检测到remove行为时，设备管理工具Udev对系统中的磁盘的挂载情况进行检查，检查磁盘设备在系统中的挂载点是否已经被卸载。</p>
+    <p>[0121]	如果磁盘处于挂载状态，则卸载磁盘对应的盘符，以便内核成功释放磁盘在内核中的驱动模块。当磁盘下线时，本发明可以及时释放磁盘设备在内核中的数据，从而在下次加载磁盘时，内核驱动模块的名称可以顺利被重新分配，从而可以预防盘符漂移。</p>
+    <p>[0122]	根据本发明实施例的盘符漂移预防方法，通过Uevent事件机制，卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。通过本发明的方法避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0123]	本发明实施例还提供了一种盘符漂移预防装置，包括内核和设备管理工具Udev。其中，该盘符漂移预防装置可以应用于服务器及磁盘运维管理方面。</p>
+    <p>[0124]	内核用于发出Uevent user space event)。在本发明的一个实施例中，内核可以为Linux内核,例如Linux 2.6及更高版本。</p>
+    <p>[0125]	设备管理工具Udev用于以守护进程的形式侦听所述内核发出的Uevene，记录磁盘插拔行为。其中，设备管理工具Udev为在用户空间以守护进程的形式运行，通过侦听内核发出的Uevent管理设备管理目录(/dev)下的设备文件。</p>
+    <p>[0126]	在本发明的一个实施例中，设备管理工具Udev根据Uevent对设备管理目录下的设备文件进行管理。当删除或加载磁盘时，设备管理工具Udev的守护进程侦听来自内核的Uevent，对设备管理目录(/dev)下的设备文件进行添加或删除操作。</p>
+    <p>[0127]	设备管理工具Udev在接收到Uevent后，匹配Udev规则(rule)。对Uevent的类型进行判断，判断Uevent为对磁盘的操作。其中，无论磁盘是被系统踢出(reject)、重置(reset)或者被人为拔出，均会检测到Uevent的行为action为remove行为，即判断Uevent的类型为操作行为。</p>
+    <p>[0128]	根据Uevent的类型的不同,触发相应的Udev rule调用策略。在本发明的一个实例中，本发明实施例的盘符漂移预防及处理装置涉及到的Udev rule策略以udev script的形式实现。</p>
+    <p>[0129]	设备管理工具Udev当Uevent为对磁盘的操作时，当设备管理工具Udev监控到删除磁盘的Uevent时，对内核中磁盘的挂载情况进行检查，并在磁盘处于挂载状态时卸载磁盘对应的盘符以使内核释放对应的磁盘在内核中的驱动模块。</p>
+    <p>[0130]	当检测到remove行为时，设备管理工具Udev对系统中的磁盘的挂载情况进行检查，检查磁盘设备在系统中的挂载点是否已经被卸载。</p>
+    <p>[0131]	如果磁盘处于挂载状态，则卸载磁盘对应的盘符，以便内核成功释放在内核中的驱动模块。当磁盘下线时，本发明可以及时释放磁盘设备在内核中的数据，从而在下次加载磁盘时，内核驱动模块的名称可以顺利被重新分配，从而可以预防盘符漂移。</p>
+    <p>[0132]	根据本发明实施例的盘符漂移预防装置，通过Uevent事件机制，卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。通过本发明的方法避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0133]	下面参考图8描述根据本发明实施例的盘符漂移处理方法。其中，该盘符漂移处理方法可以应用于服务器及磁盘运维管理方面。</p>
+    <p>[0134]	如图8所示，本发明实施例提供的盘符漂移处理方法，包括如下步骤；</p>
+    <p>[0135]	步骤S801，内核中的设备管理工具Udev以守护进程的形式侦听所述内核发出的Uevent (user space event)。在本发明的一个实施例中，内核可以为Linux内核,例如Linux 2.6及更高版本。</p>
+    <p>[0136]	其中，设备管理工具Udev为在用户空间以守护进程的形式运行，通过侦听内核发出的设备事件Uevent管理设备管理目录(/dev)下的设备文件。</p>
+    <p>[0137]	在本发明的一个实施例中，设备管理工具Udev根据Uevent对设备管理目录下的设备文件进行管理。当删除或加载磁盘时，设备管理工具Udev的守护进程侦听来自内核的Uevent，对设备管理目录(/dev)下的设备文件进行添加或删除操作。</p>
+    <p>[0138]	设备管理工具Udev在接收到Uevent后，匹配Udev规则(rule)。对Uevent的类型进行判断，判断Uevent为移动操作或添加操作。其中，无论磁盘是被系统踢出(reject)、重置(reset)或者被人为拔出，均会检测到Uevent的行为action为remove行为，即判断Uevent的类型为操作行为。</p>
+    <p>[0139]	当磁盘被添加至系统时，则判断Uevent的类型为添加操作行为(add)。</p>
+    <p>[0140]	根据Uevent的类型的不同,触发相应的Udev rule调用策略。在本发明的一个实例中，本发明实施例的盘符漂移预防及处理方法涉及到的Udev rule策略以udev script的形式实现。</p>
+    <p>[0141]	步骤S802,当Uevent为对磁盘的添加操作时,设备管理工具Udev判断磁盘是否发生盘符漂移。如果判断未发生盘符漂移，则执行步骤S8021。如果判断发生盘符漂移，则执行步骤S8022。</p>
+    <p>[0142]	当磁盘被加载时，设备管理工具Udev会检测到Uevent的action:add,即设备事件Uevent为添加操作。在缺省规则下，在设备管理目录/dev下会使用内核驱动模块名作为设备文件名。</p>
+    <p>[0143]	设备管理工具Udev判断磁盘是否发生盘符漂移。具体地，当出现以下情况之一时，设备管理工具Udev判断发生盘符漂移:</p>
+    <p>[0144]	( I)初始盘符的顺序与原有盘符的顺序不一致。</p>
+    <p>[0145]	例如，磁盘的初始盘符为3，而原有盘符顺序为第4，则可以判断发生盘符漂移。</p>
+    <p>[0146]	(2)磁盘所在的槽位顺序对应的盘符不能被使用。</p>
+    <p>[0147]	例如，系统包括12个槽位，可以放置12个磁盘。如果磁盘的初始盘符被分配至第13的盘符，可以判断磁盘所在的槽位顺序对应的盘符超出了槽位的范围，磁盘所在的槽位顺序对应的盘符不能被使用，则判断发生了盘符漂移。</p>
+    <p>[0148]	步骤S8021，如果判断发生盘符漂移，则将初始盘符作为添加磁盘的最终盘符。</p>
+    <p>[0149]	步骤S8022，如果判断已发生盘符漂移，则设备管理工具Udev 620卸载原有盘符对应的挂载点以使原有磁盘设备在内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将磁盘的内核模块名称和设备文件名称一致。</p>
+    <p>[0150]	在本发明的实施例中，设备管理工具Udev对于磁盘的每次插拔行为均有记录，从而通过查询设备管理工具Udev中的磁盘插拔记录可以获知是否初始盘符的顺序与原有盘符的顺序不一致，或者磁盘所在的槽位顺序对应的盘符不能被使用，从而可以判断是否发生盘符漂移。</p>
+    <p>[0151]	根据设备管理工具Udev记录的磁盘插拔记录卸载原有盘符对应的挂载点，为添加磁盘分配新的盘符，从而使得原有磁盘设备(已经被删除了)在内核中的引用得以释放，再以模拟热插拔的方式重新加载硬盘，从而使得磁盘的内核模块名和设备文件名与原有的盘符保持一致，从而避免盘符漂移。</p>
+    <p>[0152]	下面对模拟热插拔进行解释。模拟热插拔是指设备管理工具Udev先将添加磁盘模拟拔出，但实际的磁盘并未被拔出，故而称之为模拟拔出。由于，磁盘的插拔动作均在设备管理工具Udev中有记录，从而根据该记录可以获知哪个磁盘被拔出。然后根据磁盘插拔记录查找之前被拔出的磁盘的盘符，并将之前拔出的磁盘的盘符分配给该添加磁盘的盘符。</p>
+    <p>[0153]	根据本发明实施例的盘符漂移处理方法，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的装置避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0154]	本发明实施例的盘符漂移处理装置，包括:内核和设备管理工具Udev。其中，该盘符漂移处理方法可以应用于服务器及磁盘运维管理方面。内核用于发出Uevent (userspace event)ο在本发明的一个实施例中，内核可以为Linux内核,例如Linux 2.6及更高版本。</p>
+    <p>[0155]	设备管理工具Udev用于以守护进程的形式侦听所述内核发出的Uevent以及记录磁盘的插拔记录。其中，设备管理工具Udev为在用户空间以守护进程的形式运行，通过侦听内核发出的设备事件Uevent管理设备管理目录(/dev)下的设备文件。</p>
+    <p>[0156]	在本发明的一个实施例中，设备管理工具Udev根据Uevent对设备管理目录下的设备文件进行管理。当删除或加载磁盘时，设备管理工具Udev620的守护进程侦听来自内核的Uevent，对设备管理目录(/dev)下的设备文件进行添加或删除操作。</p>
+    <p>[0157]	设备管理工具Udev在接收到Uevent后，匹配Udev规则(rule)。对Uevent的类型进行判断，判断Uevent为对磁盘的操作。其中，无论磁盘是被系统踢出(reject)、重置(reset)或者被人为拔出，均会检测到Uevent的行为action为remove行为，即判断Uevent的类型为操作行为。</p>
+    <p>[0158]	当磁盘被添加至系统时，则判断Uevent的类型为添加操作行为(add)。</p>
+    <p>[0159]	根据Uevent的类型的不同,触发相应的Udev rule调用策略。在本发明的一个实例中，本发明实施例的盘符漂移预防及处理装置涉及到的Udev rule策略以udev script的形式实现。</p>
+    <p>[0160]	当磁盘被加载时，设备管理工具Udev会检测到Uevent的action:add,即Uevent为添加操作。在缺省规则下，在设备管理目录/dev下会使用内核驱动模块名作为设备文件名。</p>
+    <p>[0161]	设备管理工具Udev620当Uevent为对磁盘的添加操作时,判断磁盘是否发生漂移。</p>
+    <p>[0162]	具体地，当出现以下情况之一时，设备管理工具Udev620判断发生盘符漂移:</p>
+    <p>[0163]	( I)初始盘符的顺序与原有盘符的顺序不一致。</p>
+    <p>[0164]	例如，磁盘的初始盘符为3，而原有盘符顺序为第4，则可以判断发生了盘符漂移。</p>
+    <p>[0165]	(2)磁盘所在的槽位顺序对应的盘符不能被使用。</p>
+    <p>[0166]	例如，系统包括12个槽位，可以放置12个磁盘。如果磁盘的初始盘符被分配至第13的盘符，可以判断磁盘所在的槽位顺序对应的盘符超出了槽位的范围，磁盘所在的槽位顺序对应的盘符不能被使用，则判断发生了盘符漂移。</p>
+    <p>[0167]	如果设备管理工具Udev判断为发生盘符漂移，则将初始盘符作为添加磁盘的最终盘符。如果判断已发生盘符漂移，则设备管理工具Udev卸载原有盘符对应的挂载点以使原有磁盘设备在内核中的引用得到释放，并且以模拟热插拔的方式重新加载磁盘以将磁盘的内核模块名称和设备文件名称一致。</p>
+    <p>[0168]	在本发明的实施例中，设备管理工具Udev对于磁盘的每次插拔行为均有记录，从而通过查询设备管理工具Udev中的磁盘插拔记录可以获知是否初始盘符的顺序与原有盘符的顺序不一致，或者磁盘所在的槽位顺序对应的盘符不能被使用，从而可以判断是否发生盘符漂移。</p>
+    <p>[0169]	根据设备管理工具Udev记录的磁盘插拔记录卸载原有盘符对应的挂载点，为添加磁盘分配新的盘符，从而使得原有磁盘设备(已经被删除了)在内核中的引用得以释放，再以模拟热插拔的方式重新加载硬盘，从而使得磁盘的内核模块名和设备文件名与原有的盘符保持一致，从而避免盘符漂移。</p>
+    <p>[0170]	下面对模拟热插拔进行解释。模拟热插拔是指设备管理工具Udev先将添加磁盘模拟拔出，但实际的磁盘并未被拔出，故而称之为模拟拔出。由于，磁盘的插拔动作均在设备管理工具Udev中有记录，从而根据该记录可以获知哪个磁盘被拔出。然后根据磁盘插拔记录查找之前被拔出的磁盘的盘符，并将之前拔出的磁盘的盘符分配给该添加磁盘的盘符。</p>
+    <p>[0171]	根据本发明实施例的盘符漂移处理装置，通过Uevent事件机制，可检测到磁盘的插拔行为，及时卸载在上述情况发生时磁盘在系统中的设备挂载点，使得磁盘在内核中的设备文件数据得以释放，从而避免再次加载磁盘时盘符顺序发生漂移。当磁盘加载后，如果发现盘符发生了漂移，该方法可以及时处理，保证磁盘重新加载后能被分配到正确的盘符。通过本发明的装置避免了盘符漂移，从而可以保证系统加载的磁盘能够被正常使用，更换故障磁盘时，也能杜绝拔错磁盘的问题。</p>
+    <p>[0172]	流程图中或在此以其他方式描述的任何过程或方法描述可以被理解为，表示包括一个或更多个用于实现特定逻辑功能或过程的步骤的可执行指令的代码的模块、片段或部分，并且本发明的优选实施方式的范围包括另外的实现，其中可以不按所示出或讨论的顺序，包括根据所涉及的功能按基本同时的方式或按相反的顺序，来执行功能，这应被本发明的实施例所属技术领域的技术人员所理解。[0173]	在流程图中表示或在此以其他方式描述的逻辑和/或步骤，例如，可以被认为是用于实现逻辑功能的可执行指令的定序列表，可以具体实现在任何计算机可读介质中，以供指令执行系统、装置或设备(如基于计算机的系统、包括处理器的系统或其他可以从指令执行系统、装置或设备取指令并执行指令的系统)使用，或结合这些指令执行系统、装置或设备而使用。就本说明书而言，"计算机可读介质"可以是任何可以包含、存储、通信、传播或传输程序以供指令执行系统、装置或设备或结合这些指令执行系统、装置或设备而使用的装置。计算机可读介质的更具体的示例(非穷尽性列表)包括以下:具有一个或多个布线的电连接部(电子装置)，便携式计算机盘盒(磁装置)，随机存取存储器(RAM)，只读存储器(R0M)，可擦除可编辑只读存储器(EPR0M或闪速存储器)，光纤装置，以及便携式光盘只读存储器(⑶ROM)。另外，计算机可读介质甚至可以是可在其上打印所述程序的纸或其他合适的介质，因为可以例如通过对纸或其他介质进行光学扫描，接着进行编辑、解译或必要时以其他合适方式进行处理来以电子方式获得所述程序，然后将其存储在计算机存储器中。</p>
+    <p>[0174]	应当理解，本发明的各部分可以用硬件、软件、固件或它们的组合来实现。在上述实施方式中，多个步骤或方法可以用存储在存储器中且由合适的指令执行系统执行的软件或固件来实现。例如，如果用硬件来实现，和在另一实施方式中一样，可用本领域公知的下列技术中的任一项或他们的组合来实现:具有用于对数据信号实现逻辑功能的逻辑门电路的离散逻辑电路，具有合适的组合逻辑门电路的专用集成电路，可编程门阵列(PGA)，现场可编程门阵列(FPGA)等。</p>
+    <p>[0175]	本技术领域的普通技术人员可以理解实现上述实施例方法携带的全部或部分步骤是可以通过程序来指令相关的硬件完成，所述的程序可以存储于一种计算机可读存储介质中，该程序在执行时，包括方法实施例的步骤之一或其组合。</p>
+    <p>[0176]	此外，在本发明各个实施例中的各功能单元可以集成在一个处理模块中，也可以是各个单元单独物理存在，也可以两个或两个以上单元集成在一个模块中。上述集成的模块既可以采用硬件的形式实现，也可以采用软件功能模块的形式实现。所述集成的模块如果以软件功能模块的形式实现并作为独立的产品销售或使用时，也可以存储在一个计算机可读取存储介质中。</p>
+    <p>[0177]	上述提到的存储介质可以是只读存储器，磁盘或光盘等。</p>
+    <p>[0178]	在本说明书的描述中，参考术语“一个实施例”、“一些实施例”、“示例”、“具体示例”、或“一些示例”等的描述意指结合该实施例或示例描述的具体特征、结构、材料或者特点包含于本发明的至少一个实施例或示例中。在本说明书中，对上述术语的示意性表述不一定指的是相同的实施例或示例。而且，描述的具体特征、结构、材料或者特点可以在任何的一个或多个实施例或示例中以合适的方式结合。</p>
+    <p>[0179]	尽管上面已经示出和描述了本发明的实施例，可以理解的是，上述实施例是示例性的，不能理解为对本发明的限制，本领域的普通技术人员在不脱离本发明的原理和宗旨的情况下在本发明的范围内可以对上述实施例进行变化、修改、替换和变型。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101520792A?cl=zh">CN101520792A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年12月17日</td><td class="patent-data-table-td patent-date-value">2009年9月2日</td><td class="patent-data-table-td ">康佳集团股份有限公司</td><td class="patent-data-table-td ">一种自动挂载与识别系统文件的方法及其系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102521114A?cl=zh">CN102521114A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年11月30日</td><td class="patent-data-table-td patent-date-value">2012年6月27日</td><td class="patent-data-table-td ">华中科技大学</td><td class="patent-data-table-td ">一种虚拟化环境下的文件系统日志存储系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/EP1164475A2?cl=zh">EP1164475A2</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2001年5月10日</td><td class="patent-data-table-td patent-date-value">2001年12月19日</td><td class="patent-data-table-td ">Deutsche Telekom AG</td><td class="patent-data-table-td ">Verfahren zur Installation von Software in einer Hardware</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US6053739">US6053739</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1997年4月10日</td><td class="patent-data-table-td patent-date-value">2000年4月25日</td><td class="patent-data-table-td ">Stewart; Donald B.</td><td class="patent-data-table-td ">Measurement of attention span and attention deficits</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=N1P5CAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0011000000">G06F11/00</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=N1P5CAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0003060000">G06F3/06</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年4月23日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ddfcc1ec04a42429b57f/CN103677650A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_50a6672b5f82ffbd39b7a9e87fd4594c.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E7%9B%98%E7%AC%A6%E6%BC%82%E7%A7%BB%E9%A2%84%E9%98%B2%E5%8F%8A%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85.pdf?id=N1P5CAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2ySQJTFo10TK22mx-sNeH3hygbBA"},"sample_url":"https://www.google.com/patents/reader?id=N1P5CAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

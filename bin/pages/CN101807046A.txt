@@ -1,0 +1,270 @@
+<!DOCTYPE html><html><head><title>专利 CN101807046A - 一种基于结构可调极限学习机的在线建模方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5115ea495017d9115e613207d3810e5a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5115ea495017d9115e613207d3810e5a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种基于结构可调极限学习机的在线建模方法"><meta name="DC.contributor" content="刘民" scheme="inventor"><meta name="DC.contributor" content="李国虎" scheme="inventor"><meta name="DC.contributor" content="董明宇" scheme="inventor"><meta name="DC.contributor" content="吴澄" scheme="inventor"><meta name="DC.contributor" content="清华大学" scheme="assignee"><meta name="DC.date" content="2010-3-8" scheme="dateSubmitted"><meta name="DC.description" content="一种基于结构可调极限学习机的在线建模方法，属于自动控制、信息技术和先进制造领域，具体涉及在极限学习机的在线学习过程中调整其结构和参数以容纳新获得数据的方法。其特征在于包括以下步骤：定义类别球概念，在每次学习过程中，判断新获得的数据是否在类别球外且会导致建模精度下降，若是则添加新隐层节点，否则仅调整类别球的球心和半径，最后更新极限学习机的输出层权值。本发明首先引入类别球概念用以包含之前训练过程已用过的数据，在确定新增隐层节点参数时，通过使该节点在距类别球最近点的输出足够小，以确保该节点在上述已用过的数据上的输出值为0，并给出了输出层权值更新公式。本发明可通过增加隐层节点以提高在线建模精度。"><meta name="DC.date" content="2010-8-18"><meta name="DC.relation" content="CN:101504736:A" scheme="references"><meta name="DC.relation" content="CN:101576734:A" scheme="references"><meta name="DC.relation" content="US:5621648" scheme="references"><meta name="citation_reference" content="《山东大学学报（理学版）》 20100531 李彬等 ELM_RBF神经网络的智能优化策略 48-51 1 第45卷, 第5期"><meta name="citation_reference" content="《电网技术》 20020430 丁坚勇等 基于ELMAN神经网络的同步电机动态参数在线辨识 22-25 1 第26卷, 第4期"><meta name="citation_reference" content="《系统仿真学报》 20071231 常玉清等 基于极限学习机的生化过程软测量建模 5587-5590 1 第19卷, 第23期"><meta name="citation_patent_publication_number" content="CN:101807046:A"><meta name="citation_patent_application_number" content="CN:201010119408"><link rel="canonical" href="https://www.google.com/patents/CN101807046A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101807046A?cl=zh"/><meta name="title" content="专利 CN101807046A - 一种基于结构可调极限学习机的在线建模方法"/><meta name="description" content="一种基于结构可调极限学习机的在线建模方法，属于自动控制、信息技术和先进制造领域，具体涉及在极限学习机的在线学习过程中调整其结构和参数以容纳新获得数据的方法。其特征在于包括以下步骤：定义类别球概念，在每次学习过程中，判断新获得的数据是否在类别球外且会导致建模精度下降，若是则添加新隐层节点，否则仅调整类别球的球心和半径，最后更新极限学习机的输出层权值。本发明首先引入类别球概念用以包含之前训练过程已用过的数据，在确定新增隐层节点参数时，通过使该节点在距类别球最近点的输出足够小，以确保该节点在上述已用过的数据上的输出值为0，并给出了输出层权值更新公式。本发明可通过增加隐层节点以提高在线建模精度。"/><meta property="og:title" content="专利 CN101807046A - 一种基于结构可调极限学习机的在线建模方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101807046A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101807046A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=uaJ5BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101807046A&amp;usg=AFQjCNFjSBBRh_M_eHP-VZKP0iCiRqvpUw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/a2ec6885c906511a2d09/CN101807046A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/a2ec6885c906511a2d09/CN101807046A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101807046A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101807046A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101807046A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101807046B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101807046A?cl=zh" style="display:none"><span itemprop="description">一种基于结构可调极限学习机的在线建模方法，属于自动控制、信息技术和先进制造领域，具体涉及在极限学习机的在线学习过程中调整其结构和参数以容纳新获得数据的方法。其特征在于包括以下步骤：定义类别球概念，在每...</span><span itemprop="url">https://www.google.com/patents/CN101807046A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101807046A - 一种基于结构可调极限学习机的在线建模方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101807046A - 一种基于结构可调极限学习机的在线建模方法" title="专利 CN101807046A - 一种基于结构可调极限学习机的在线建模方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101807046 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010119408</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年8月18日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年3月8日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年3月8日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101807046B?hl=zh-CN&amp;cl=zh">CN101807046B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010119408.2, </span><span class="patent-bibdata-value">CN 101807046 A, </span><span class="patent-bibdata-value">CN 101807046A, </span><span class="patent-bibdata-value">CN 201010119408, </span><span class="patent-bibdata-value">CN-A-101807046, </span><span class="patent-bibdata-value">CN101807046 A, </span><span class="patent-bibdata-value">CN101807046A, </span><span class="patent-bibdata-value">CN201010119408, </span><span class="patent-bibdata-value">CN201010119408.2</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E6%B0%91%22">刘民</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%9B%BD%E8%99%8E%22">李国虎</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%91%A3%E6%98%8E%E5%AE%87%22">董明宇</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%90%B4%E6%BE%84%22">吴澄</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6%22">清华大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101807046A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101807046A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101807046A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=uaJ5BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010119408&amp;usg=AFQjCNFmY8KBGRfA3_kXQmpztqckxLB-HQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=uaJ5BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101807046A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGIDlDxBlBLoZh50fCQ8mXlCAxPSw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT97090946" lang="ZH" load-source="patent-office">一种基于结构可调极限学习机的在线建模方法</invention-title>
+      </span><br><span class="patent-number">CN 101807046 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109403915" lang="ZH" load-source="patent-office">
+    <div class="abstract">一种基于结构可调极限学习机的在线建模方法，属于自动控制、信息技术和先进制造领域，具体涉及在极限学习机的在线学习过程中调整其结构和参数以容纳新获得数据的方法。其特征在于包括以下步骤：定义类别球概念，在每次学习过程中，判断新获得的数据是否在类别球外且会导致建模精度下降，若是则添加新隐层节点，否则仅调整类别球的球心和半径，最后更新极限学习机的输出层权值。本发明首先引入类别球概念用以包含之前训练过程已用过的数据，在确定新增隐层节点参数时，通过使该节点在距类别球最近点的输出足够小，以确保该节点在上述已用过的数据上的输出值为0，并给出了输出层权值更新公式。本发明可通过增加隐层节点以提高在线建模精度。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(1)</span></span></div><div class="patent-text"><div mxw-id="PCLM51235931" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种基于结构可调极限学习机(ELM)的在线建模方法，其特征在于，所述方法是在计算机上依次按如下步骤实现的：</div>
+      <div class="claim-text">步骤(1)：模型选择和参数初始化</div>
+      <div class="claim-text">设置单隐层极限学习机的隐层节点数M，输入层节点个数与训练样本维数n相同，输出节点个数与训练目标的维数m相同；</div>
+      <div class="claim-text">隐层节点的激励函数G(ai，bi，x)采用高斯函数，随机确定每个隐层节点的中心ai和宽度bi，i＝1，2，…M；</div>
+      <div class="claim-text">根据最初的N个样本</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">训练极限学习机，获得初始的隐层输出矩阵H0和输出层连接矩阵β0，其中，</div>
+      <div class="claim-text">β0＝(H0TH0)-1H0T0</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">初始化矩阵K，使得</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">计算</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">保存β0、K0和P0；</div>
+      <div class="claim-text">用一个类别球O包围初始训练样本集X0，使该球恰好将X0中的所有样本点包围在其内部，确定此球的球心C0和半径R0；</div>
+      <div class="claim-text">步骤(2)：在线学习过程</div>
+      <div class="claim-text">新增训练数据x1＝(xN+1，tN+1)到来时，按照如下步骤训练ELM，使其既能保存X0的知识，又可以容纳x1所包含的新知识</div>
+      <div class="claim-text">步骤(2.1)：维持网络结构不变，仅根据x1调整输出层连接矩阵β0，更新后的输出层权值连接矩阵为β1，同时更新矩阵K0和P0为K1和P1，</div>
+      <div class="claim-text">其中，H1和T1分别为ELM对新样本x1的隐层输出矩阵和训练目标矩阵，即</div>
+      <div class="claim-text">H1＝[G(a1，b1，xN+1)…G(aM，bM，xN+1)]1×M</div>
+      <div class="claim-text">步骤(2.2)：计算调整参数后的ELM对新增样本x1的训练误差e，判断新样本x1是否在球O外，若在球O外且e大于设定阈值，放弃上述所有调整，转向步骤(2.3)，否则，转向步骤(3)；</div>
+      <div class="claim-text">步骤(2.3)：增加一个隐层节点，设定其中心a为x1，宽度b由下式确定，即</div>
+      <div class="claim-text">其中，ε为预设定的阈值，xc为类别球O上距新样本点x1最近点的坐标，可由下式确定</div>
+      <div class="claim-text">xc＝xo+λ1(xa-xo)</div>
+      <div class="claim-text">其中，xo为球O的球心坐标，λ1可由下式确定</div>
+      <div class="claim-text">上式中的xa即为新样本点x1的坐标；重新调整输出层连接矩阵β0为β1，并相应地更新矩阵K0和P0为K1和P1，使得</div>
+      <div class="claim-text">A22＝R-1</div>
+      <div class="claim-text">其中，H01和H11分别为新增隐层节点对原样本集X0和新样本点x1的隐层输出矩阵，即</div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">
+        <span class="patent-image-not-available"> </span>
+      </div>
+      <div class="claim-text">N1和L分别为x1中的样本点个数和新增隐层节点个数，本方法仅考虑新样本点逐个到达的情况，故N1＝L＝1；</div>
+      <div class="claim-text">步骤(3)：更新类别球O的参数</div>
+      <div class="claim-text">更新类别球O的参数，即更新其球心坐标和半径，使得新球O1恰好将X0和x1中的所有样本点都包围在其中，其更新公式为：</div>
+      <div class="claim-text">其中，xa和xb分别为新样本点x1的坐标和球O上距x1最远点的坐标，xb可由下式计算，</div>
+      <div class="claim-text">xb＝xo+λ2(xo-xa)</div>
+      <div class="claim-text">其中，xo为球心O的坐标，λ2可由下式计算，</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58276936" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">一种基于结构可调极限学习机的在线建模方法</invention-title>
+    <technical-field>
+      <p>[0001] 技术领域</p>
+      <p>[0002] 本发明属于自动控制、信息技术和先进制造领域，具体涉及在极限学习机的在线学习过程中调整其结构和参数以容纳新获得数据的方法。</p>
+    </technical-field>
+    <background-art>
+      <p>[0003] 背景技术</p>
+      <p>[0004] 在面向实际工业过程检测、控制与优化的许多建模环境中，建模所需数据常常具有依次到达的特点。针对上述特点，学术界和工业界提出了在线建模方法(或在线学习方法)，如RAN、RANEKF、MRAN、GAP-RBF、GGAP-RBF，此类方法可根据新产生的数据在线调整模型结构和参数，以容纳新数据信息，而无需针对已获得的所有数据重新建模。但上述方法大多存在待调节参数多、训练速度慢等不足，严重影响其实际应用效果。最近出现的OS-ELM方法虽然将待调节参数减少至一个，但是其缺乏结构可调性，使得其容纳新信息的能力相对有限，模型精度无法进一步提高。</p>
+    </background-art>
+    <disclosure>
+      <p>[0005] 发明内容</p>
+      <p>[0006] 为解决上述在线建模难题，本发明提出一种基于结构可调极限学习机的在线建模方法(简称SAO-ELM)。在SAO-ELM中，网络的基本结构和ELM(Extreme&#160;Learning&#160;Machine：极限学习机)网络相同，但其隐层节点数可在在线建模过程中进行调节。在建模过程中增加隐层节点的主要难点在于，SAO-ELM的训练目标是使得调整后的模型相对于所有训练数据的误差和达到最小，但在每次在线学习过程中，之前用过的训练数据必须丢弃，这使得新增隐层节点在那些已丢弃的数据上的输出未知。为此，本发明定义了类别球概念，用以包围所有已用过的训练数据，并随时记录且根据新增数据更新该球的球心和半径。增加隐层节点时，其激励函数选为高斯函数，然后选择适当的激励函数的中心和宽度，使得该节点在距类别球最近点的输出足够小，从而可将新增隐层节点在已丢弃的数据上的输出视为0。在上述条件下，可推导出增加隐层节点时的迭代式输出层权值更新公式，从而实现基于结构可调极限学习机的在线建模。</p>
+      <p>[0007] 一种基于结构可调极限学习机的在线建模方法，其特征在于该方法是按照如下步骤实现的：</p>
+      <p>[0008] 步骤(1)：模型选择和参数初始化</p>
+      <p>[0009] 设置单隐层极限学习机的隐层节点数M，输入层节点个数与训练样本维数n相同，输出节点个数与训练目标的维数m相同；</p>
+      <p>[0010] 隐层节点的激励函数G(ai，bi，x)采用高斯函数，随机确定每个隐层节点的中心ai和宽度bi，i＝1，2，…M；</p>
+      <p>[0011] 根据最初的N个样本</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>训练极限学习机，获得初始的隐层输出矩阵H0和输出层连接矩阵β0，其中，</p>
+      <p>[0012] β0＝(H0TH0)-1H0T0</p>
+      <p>[0013] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0014] </p>
+      <p>[0015] 初始化矩阵K，使得</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>计算</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>保存β0、K0和P0；</p>
+      <p>[0016] 用一个类别球O包围初始训练样本集X0，使该球恰好将X0中的所有样本点包围在其内部，确定此球的球心C0和半径R0；</p>
+      <p>[0017] 步骤(2)：在线学习过程</p>
+      <p>[0018] 新增训练数据x1＝(xN+1，tN+1)到来时，按照如下步骤训练ELM，使其既能保存X0的知识，又可以容纳x1所包含的新知识</p>
+      <p>[0019] 步骤(2.1)：维持网络结构不变，仅根据x1调整输出层连接矩阵β0，更新后的输出层权值连接矩阵为β1，同时更新矩阵K0和P0为K1和P1，</p>
+      <p>[0020] </p>
+      <p>[0021] </p>
+      <p>[0022] </p>
+      <p>[0023] 其中，H1和T1分别为ELM对新样本x1的隐层输出矩阵和训练目标矩阵，即</p>
+      <p>[0024] H1＝[G(a1，b1，xN+1)…G(aM，bM，xN+1)]1×M</p>
+      <p>[0025] </p>
+      <p>[0026] 步骤(2.2)：计算调整参数后的ELM对新增样本x1的训练误差e，判断新样本x1是否在球O外，若在球O外且e大于设定阈值，放弃上述所有调整，转向步骤(2.3)，否则，转向步骤(3)；</p>
+      <p>[0027] 步骤(2.3)：增加一个隐层节点，设定其中心a为x1，宽度b由下式确定，即</p>
+      <p>[0028] </p>
+      <p>[0029] 其中，ε为预设定的阈值，xc为类别球O上距新样本点x1最近点的坐标，可由下式确定</p>
+      <p>[0030] xc＝xo+λ1(xa-xo)</p>
+      <p>[0031] 其中，xo为球O的球心坐标，λ1可由下式确定</p>
+      <p>[0032] </p>
+      <p>[0033] 上式中的xa即为新样本点x1的坐标；重新调整输出层连接矩阵β0为β1，并相应地更新矩阵K0和P0为K1和P1，使得</p>
+      <p>[0034] </p>
+      <p>[0035] </p>
+      <p>[0036] </p>
+      <p>[0037] </p>
+      <p>[0038] 其中，H01和H11分别为新增隐层节点对原样本集X0和新样本点x1的隐层输出矩阵，即</p>
+      <p>[0039] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0040] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0041] N1和L分别为x1中的样本点个数和新增隐层节点个数，本方法仅考虑新样本点逐个到达的情况，故N1＝L＝1；</p>
+      <p>[0042] 步骤(3)：更新类别球O的参数</p>
+      <p>[0043] 更新类别球O的参数，即更新其球心坐标和半径，使得新球O1恰好将X0和x1中的所有样本点都包围在其中，其更新公式为：</p>
+      <p>[0044] </p>
+      <p>[0045] </p>
+      <p>[0046] 其中，xa和xb分别为新样本点x1的坐标和球O上距x1最远点的坐标，xb可由下式计算，</p>
+      <p>[0047] xb＝xo+λ2(xo-xa)</p>
+      <p>[0048] 其中，xo为球心O的坐标，λ2可由下式计算，</p>
+      <p>[0049] </p>
+      <p>[0050] 根据上述在线建模方法，本发明做了大量的仿真试验，从仿真结果中可看出，本发明提出的在线建模方法相比于其他在线建模方法具有更高的学习精度，用此方法建立的模型也具有更好的泛化性能。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>[0051] 附图说明</p>
+      <p>[0052] 图1：算法流程图，是本发明提出的基于结构可调极限学习机的在线建模方法具体实现的各个步骤。</p>
+      <p>[0053] 图2：包围训练过程已用过的所有数据的类别球的示意图，其中，小类别球O是包围除新增训练数据之外的所有已用过数据的类别球，大类别球O1是包围所有已用过数据和新增数据的类别球。</p>
+      <p>[0054] 图3：高斯函数示意图，其中，中间的峰值是其在高斯函数中心处的输出，边缘处较小的输出值是其在离高斯函数中心较远处的输出。</p>
+      <p>[0055] 图4：仿真实验中训练精度和验证精度随隐层节点数变化的关系图，其中，红色曲线是训练精度随隐层节点数的变化关系，绿色曲线是验证精度随隐层节点数的变化关系。</p>
+      <p>[0056] 图5：仿真实验中在线建模过程示意图，其中，图5.1为验证精度随训练数据增加的变化关系，图5.2为隐层节点数随训练数据增加的变化关系。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>[0057] 具体实施方式</p>
+      <p>[0058] 本发明提出的基于结构可调极限学习机的在线建模方法，其主要优势在于在线建模过程中可根据需要调整网络结构。根据在线建模的特点，若有新增训练数据到达时便进行学习，否则就使用现有模型进行预测，且随着训练数据的增加，预测精度可逐步得到提高。</p>
+      <p>[0059] 以下对本发明提出的基于结构可调极限学习机的在线建模方法所涉及的步骤进行详细说明：</p>
+      <p>[0060] 第一步，模型选择</p>
+      <p>[0061] 对于本发明提出的方法，模型选择只涉及确定初始的ELM隐层节点数M。本发明采用交叉验证的方法确定初始隐层节点个数：将初始训练数据分为两部分，一部分用于训练，另一部分用于验证；从一个较小的隐节点数开始，先用训练数据训练ELM，然后用验证数据获得验证误差，再逐步增加隐层节点个数，并重复上述训练和验证步骤，最后，选择使验证误差最小的隐层节点数为初始的隐层节点数。</p>
+      <p>[0062] 第二步，模型的初始化</p>
+      <p>[0063] 模型的初始化即为模型参数的初始化。本发明提出的方法采用ELM网络结构，隐层节点的激励函数采用高斯函数，故首先要初始化的参数有高斯函数的中心ai和宽度bi，i＝1，2，…M，ai和bi分别从符合特定分布的随机数中选取。其次，要确定最初参加训练的样本数目。在本发明中，对用于分类问题的模型，最初训练样本数选为M+100；对于用于回归问题的模型，则选为M+50。确定初始训练样本数的原则是使得H0列满秩。最后，用一个半径最小的类别球S0包围初始训练数据，记其球心和半径分别为C0和R0。</p>
+      <p>[0064] 第三步，确定训练过程数据的初始值</p>
+      <p>[0065] 所谓训练过程初始数据，包括隐层输出矩阵H、输出层连接矩阵β、计算输出层连接矩阵需要的中间矩阵K及其逆矩阵K-1。</p>
+      <p>[0066] 若初始训练数据为</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>则相应的隐层输出矩阵为</p>
+      <p>[0067] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0068] 根据经验风险最小化(ERM)原则，求取输出层连接矩阵β的目标函数为min(‖F-T0‖)＝min(‖H0(N×M)β(M×m)-T0(N×m)‖)，其中，T0为训练目标，即</p>
+      <p>[0069] </p>
+      <p>[0070] 根据矩阵的知识，容易求解上述优化问题的解为</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>其中</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>为H0矩阵的伪逆。当矩阵H0列满秩时，即rank(H0)＝M时，有</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>为方便推导，引入中间矩阵K，使得K＝HTH，则</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>记P＝K-1，则</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0071] 第四步，不调整ELM结构，仅通过调整ELM输出层权值来拟合新增数据</p>
+      <p>[0072] 若新增数据为</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>(实际上，在本方法中N1选为1；而N1大于1的情况则都可转化为N1等于1的情形处理)，则与此相应的隐层输出矩阵和训练目标分别为：</p>
+      <p>[0073] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0074] </p>
+      <p>[0075] 此时，求取新的输出层连接矩阵β的目标函数为</p>
+      <p>[0076] </p>
+      <p>[0077] ，得到上述优化问题的解为</p>
+      <p>[0078] </p>
+      <p>[0079] 为实现在线建模的目标，β1必须与H0、T0无关，而仅是关于P0、K0、β0的函数。通过简单的数学推导可得，</p>
+      <p>[0080] </p>
+      <p>[0081] </p>
+      <p>[0082] 上述两公式即为不调整ELM结构而仅调整其参数情况下的ELM训练算法。</p>
+      <p>[0083] 第五步，判断用第四步的训练方法得到的ELM在新增数据X1上的训练误差是否符合要求，同时还需要判断数据X1是否在类别球S0之外。若训练误差不满足要求，且X1在S0之外，则转向第六步，否则，转向第七步。</p>
+      <p>[0084] 第六步，增加一个隐层节点，然后调整输出层连接权值</p>
+      <p>[0085] 在增加一个隐层节点的情况下，隐层输出矩阵变为</p>
+      <p>[0086] </p>
+      <p>[0087] 其中，H01为新增隐节点相对于训练过程已用过的数据集X0的输出，H11为新增隐层节点相对于新增加且未用过的数据集X1的输出。相应地，求取新的输出层连接矩阵β的目标函数变为</p>
+      <p>[0088] </p>
+      <p>[0089] 但由于已用过的数据集X0在隐节点增加之前已被丢弃，这导致H01未知，故要求取β必须先处理好H01未知的问题。</p>
+      <p>[0090] 从高斯函数的示意图(图3)可以看出，隐节点在远离其中心处的输出可视为0。假若数据集X0和X1示意图如图2所示，图中，S0包围的为训练过程已用过的数据，A点为新增数据所处位置。故若将新增隐层节点的中心选为A点，则只要其在C点的输出足够小即可，也即要求</p>
+      <p>[0091] </p>
+      <p>[0092] 其中ε为预先选定的阈值，xc为C点坐标，可由以下两式确定</p>
+      <p>[0093] xc＝xo+λ1(xa-xo)</p>
+      <p>[0094] </p>
+      <p>[0095] 其中，xo为类别球S0的球心坐标，xa为A点的坐标，R为类别球S0半径。</p>
+      <p>[0096] 根据上述方法选择新增隐层节点的中心a和宽度b之后，新增隐层节点在C点的输出便小于一个很小的实数ε，其在类别球S0之内的输出则更加小，以至可视为0，故H01可视为0矩阵。此时，增加隐层节点后的隐层输出矩阵为</p>
+      <p>[0097] </p>
+      <p>[0098] 求解上述优化问题，可得</p>
+      <p>[0099] </p>
+      <p>[0100] 若令</p>
+      <p>[0101] </p>
+      <p>[0102] 则</p>
+      <p>[0103] </p>
+      <p>[0104] 此时，</p>
+      <p>[0105] </p>
+      <p>[0106] 令</p>
+      <p>[0107] </p>
+      <p>[0108] 其中，矩阵A的各个元素为</p>
+      <p>[0109] A11＝(HTH)-1+(HTH)-1(HTδH)×R-1(δHTH)(HTH)-1</p>
+      <p>[0110] A12＝-(HTH)-1(HTδH)R-1，</p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>A22＝R-1</p>
+      <p>[0111] 其中，R＝δHTδH-(δHTH)(HTH)-1(HTδH)，将H和δH的表达式代入得：</p>
+      <p>[0112] </p>
+      <p>[0113] A22＝R-1</p>
+      <p>[0114] </p>
+      <p>[0115] 综合以上各式可得在增加隐层节点的情况下，K、P以及β的更新公式为：</p>
+      <p>[0116] </p>
+      <p>[0117] A22＝R-1</p>
+      <p>[0118] </p>
+      <p>[0119] </p>
+      <p>[0120] 第七步，更新类别球S0为S1，使得S1包含了S0中的数据X0和新增数据X1</p>
+      <p>[0121] 从图2可以看出，S1的球心应在A和B的中点，半径应为线段AB的一半。其中，A点为新数据所在位置，B点为球S0上距A点最远点。故新的类别球中心和半径分别为</p>
+      <p>[0122] </p>
+      <p>[0123] </p>
+      <p>[0124] xb为B点的坐标，其可由以下两式确定</p>
+      <p>[0125] xb＝xo+λ2(xo-xa)</p>
+      <p>[0126] </p>
+      <p>[0127] 本发明提出的方法流程图如图1所示。</p>
+      <p>[0128] 根据上述基于结构可调极限学习机的在线建模方法，本发明做了大量仿真实验，限于篇幅，这里仅给出上述方法在实际炼钢连铸质量预报数据的应用效果。该数据集来源于工业现场，输入维数为84，输出维数为1；训练样本数为1056，测试样本数为508。</p>
+      <p>[0129] 本发明比较了上述SAO-ELM方法与批处理式算法&#8212;&#8212;BP神经网络算法以及OS-ELM方法的应用效果。BP神经网络算法是经典的神经网络训练方法，但它不是在线学习算法，OS-ELM方法是一种在线学习算法，其与本发明提出的算法的差别在于它没有结构可调性，即缺乏本发明中的第五步、第六步和第七步。比较结果见表1：</p>
+      <p>[0130] 表1SAO-ELM和其他算法的性能比较</p>
+      <p>[0131] </p>
+      <p>
+        <span class="patent-image-not-available"> </span>
+      </p>
+      <p>[0132] 从表1可以看出，SAO-ELM的训练精度和测试精度与其它两种建模方法相比均是最好的，而其训练时间则比BP算法少了将近一个数量级。图5给出了在线建模过程，从其变化趋势比较可知，随着建模过程的推进，隐层节点数在不断增加，而学习精度也在不断改善，且两者的变化趋势相一致，这也表明本发明提出的SAO-ELM的有效性。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101504736A?cl=zh">CN101504736A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年2月27日</td><td class="patent-data-table-td patent-date-value">2009年8月12日</td><td class="patent-data-table-td ">江汉大学</td><td class="patent-data-table-td ">基于Delphi软件实现神经网络算法的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101576734A?cl=zh">CN101576734A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年6月12日</td><td class="patent-data-table-td patent-date-value">2009年11月11日</td><td class="patent-data-table-td ">北京工业大学</td><td class="patent-data-table-td ">基于动态径向基神经网络的溶解氧的控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US5621648">US5621648</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1994年8月2日</td><td class="patent-data-table-td patent-date-value">1997年4月15日</td><td class="patent-data-table-td ">Crump; Craig D.</td><td class="patent-data-table-td ">Apparatus and method for creating three-dimensional modeling data from an object</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">《山东大学学报（理学版）》 20100531 李彬等 ELM_RBF神经网络的智能优化策略 48-51 1 第45卷, 第5期</td></tr><tr><td class="patent-data-table-td ">2</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">《电网技术》 20020430 丁坚勇等 基于ELMAN神经网络的同步电机动态参数在线辨识 22-25 1 第26卷, 第4期</td></tr><tr><td class="patent-data-table-td ">3</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">《系统仿真学报》 20071231 常玉清等 基于极限学习机的生化过程软测量建模 5587-5590 1 第19卷, 第23期</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102708381A?cl=zh">CN102708381A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月9日</td><td class="patent-data-table-td patent-date-value">2012年10月3日</td><td class="patent-data-table-td ">江南大学</td><td class="patent-data-table-td ">融合最小二乘向量机回归学习思想的改进极限学习机</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102708381B?cl=zh">CN102708381B</a></td><td class="patent-data-table-td patent-date-value">2012年5月9日</td><td class="patent-data-table-td patent-date-value">2014年2月19日</td><td class="patent-data-table-td ">江南大学</td><td class="patent-data-table-td ">融合最小二乘向量机回归学习思想的改进极限学习机</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103106331A?cl=zh">CN103106331A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月17日</td><td class="patent-data-table-td patent-date-value">2013年5月15日</td><td class="patent-data-table-td ">清华大学</td><td class="patent-data-table-td ">基于降维和增量式极限学习机的光刻线宽智能预测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103106331B?cl=zh">CN103106331B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年12月17日</td><td class="patent-data-table-td patent-date-value">2015年8月5日</td><td class="patent-data-table-td ">清华大学</td><td class="patent-data-table-td ">基于降维和增量式极限学习机的光刻线宽智能预测方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2013182176A1?cl=zh">WO2013182176A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年4月18日</td><td class="patent-data-table-td patent-date-value">2013年12月12日</td><td class="patent-data-table-td ">Kisters Ag</td><td class="patent-data-table-td ">Verfahren zum trainieren eines künstlichen neuronalen netzes und computerprogrammprodukte</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=uaJ5BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G05B0013040000">G05B13/04</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年8月18日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年10月6日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年5月6日</td><td class="patent-data-table-td ">C17</td><td class="patent-data-table-td ">Cessation of patent right</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/a2ec6885c906511a2d09/CN101807046A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5115ea495017d9115e613207d3810e5a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%9F%BA%E4%BA%8E%E7%BB%93%E6%9E%84%E5%8F%AF%E8%B0%83%E6%9E%81%E9%99%90%E5%AD%A6%E4%B9%A0%E6%9C%BA.pdf?id=uaJ5BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2tVq6jiKXb-ivhiu3gAFJbrL6H9w"},"sample_url":"https://www.google.com/patents/reader?id=uaJ5BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

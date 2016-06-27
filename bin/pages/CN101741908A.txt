@@ -1,0 +1,252 @@
+<!DOCTYPE html><html><head><title>专利 CN101741908A - 一种应用层协议特征的识别方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_6e802a6b2b28d51711baddc2f3bec198/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_6e802a6b2b28d51711baddc2f3bec198__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种应用层协议特征的识别方法"><meta name="DC.contributor" content="刘荣烨" scheme="inventor"><meta name="DC.contributor" content="青岛朗讯科技通讯设备有限公司" scheme="assignee"><meta name="DC.date" content="2009-12-25" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种应用层协议特征的识别方法，包括流量数据包的捕获过程、识别方式选择过程、流量数据包的预处理过程、结合特征数据库中的特征集合对当前网络流量进行识别的过程以及识别结果展示过程。通过采用一套基于Apriori算法的数据挖掘AC算法对特征数据库中的特征集合进行及时更新，从而提高了应用层协议识别的准确率，克服了传统采用手动分析方法进行网络协议识别所存在的种种不足，促进了企业和公司应用层协议分析工作的信息化和智能化，为企业和公司减轻了人力资源的负担，提高了工作效率和进度。"><meta name="DC.date" content="2010-6-16"><meta name="citation_patent_publication_number" content="CN:101741908:A"><meta name="citation_patent_application_number" content="CN:200910260106"><link rel="canonical" href="https://www.google.com/patents/CN101741908A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101741908A?cl=zh"/><meta name="title" content="专利 CN101741908A - 一种应用层协议特征的识别方法"/><meta name="description" content="本发明公开了一种应用层协议特征的识别方法，包括流量数据包的捕获过程、识别方式选择过程、流量数据包的预处理过程、结合特征数据库中的特征集合对当前网络流量进行识别的过程以及识别结果展示过程。通过采用一套基于Apriori算法的数据挖掘AC算法对特征数据库中的特征集合进行及时更新，从而提高了应用层协议识别的准确率，克服了传统采用手动分析方法进行网络协议识别所存在的种种不足，促进了企业和公司应用层协议分析工作的信息化和智能化，为企业和公司减轻了人力资源的负担，提高了工作效率和进度。"/><meta property="og:title" content="专利 CN101741908A - 一种应用层协议特征的识别方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&sa=N&tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?cl=zh&hl=zh-CN&tbm=isch&source=og&sa=N&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?cl=zh&hl=zh-CN&sa=N&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?cl=zh&hl=zh-CN&sa=N&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?cl=zh&hl=zh-CN&sa=N&tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101741908A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101741908A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=9Yl-BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101741908A&amp;usg=AFQjCNHf8SK21Briw8S8_kRmJtwgM5z-bw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/089d673c1e195838cd27/CN101741908A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/089d673c1e195838cd27/CN101741908A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101741908A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101741908A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101741908A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101741908B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101741908A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种应用层协议特征的识别方法，包括流量数据包的捕获过程、识别方式选择过程、流量数据包的预处理过程、结合特征数据库中的特征集合对当前网络流量进行识别的过程以及识别结果展示过程。通过采用一套基...</span><span itemprop="url">https://www.google.com/patents/CN101741908A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101741908A - 一种应用层协议特征的识别方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101741908A - 一种应用层协议特征的识别方法" title="专利 CN101741908A - 一种应用层协议特征的识别方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101741908 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200910260106</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年6月16日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2009年12月25日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2009年12月25日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101741908B?hl=zh-CN&amp;cl=zh">CN101741908B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200910260106.4, </span><span class="patent-bibdata-value">CN 101741908 A, </span><span class="patent-bibdata-value">CN 101741908A, </span><span class="patent-bibdata-value">CN 200910260106, </span><span class="patent-bibdata-value">CN-A-101741908, </span><span class="patent-bibdata-value">CN101741908 A, </span><span class="patent-bibdata-value">CN101741908A, </span><span class="patent-bibdata-value">CN200910260106, </span><span class="patent-bibdata-value">CN200910260106.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E8%8D%A3%E7%83%A8%22">刘荣烨</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%9D%92%E5%B2%9B%E6%9C%97%E8%AE%AF%E7%A7%91%E6%8A%80%E9%80%9A%E8%AE%AF%E8%AE%BE%E5%A4%87%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">青岛朗讯科技通讯设备有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101741908A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101741908A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101741908A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=9Yl-BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200910260106&amp;usg=AFQjCNEUzqdnhOwYxsynVU3wlKiXgVpAVg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=9Yl-BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101741908A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGEi75iAMN-j5mVU7X2LUuQZhdLKw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT95935791" lang="ZH" load-source="patent-office">一种应用层协议特征的识别方法</invention-title>
+      </span><br><span class="patent-number">CN 101741908 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA78463375" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种应用层协议特征的识别方法，包括流量数据包的捕获过程、识别方式选择过程、流量数据包的预处理过程、结合特征数据库中的特征集合对当前网络流量进行识别的过程以及识别结果展示过程。通过采用一套基于Apriori算法的数据挖掘AC算法对特征数据库中的特征集合进行及时更新，从而提高了应用层协议识别的准确率，克服了传统采用手动分析方法进行网络协议识别所存在的种种不足，促进了企业和公司应用层协议分析工作的信息化和智能化，为企业和公司减轻了人力资源的负担，提高了工作效率和进度。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><ol mxw-id="PCLM32051136" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种应用层协议特征的识别方法，包括以下步骤：(1)捕获待监听的流量数据包，并对捕获的网络流量进行上行网络流量和下行网络流量的分流；(2)对分流后的网络流量进行预处理，去除上行网络流量和下行网络流量中的每一个流量数据包的链路层、网络层、传输层的头文件信息，只保留应用层数据信息，并且截取所述数据信息中的控制信息部分，形成应用层协议信息数据包；(3)将上行网络流量的应用层协议信息数据包中的数据信息依次与特征数据库中保存的各个协议的上行网络流量的特征集合进行匹配，若在与某一个特征集合进行匹配的过程中，该网络数据包协议特征的匹配率高于设定的匹配阈值M，则认为该网络数据包为符合该协议特征的数据包；(4)将下行网络流量的应用层协议信息数据包中的数据信息依次与特征数据库中保存的各个协议的下行网络流量特征集合进行匹配，若在与某一个特征集合进行匹配的过程中，该网络数据包协议特征的匹配率高于设定的匹配阈值M，则认为该网络数据包为符合该协议特征的数据包；最终，总体网络流量识别率最高的应用层协议，即为当前网络流量所代表的协议。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 根据权利要求1所述的应用层协议特征的识别方法，其特征在于：在所述步骤（3)和（4)中，若应用层协议信息数据包中的数据信息与特征数据库中的多个特征集合的匹配率均高于设定的匹配阈值M，则选择匹配率最高的特征集合所代表的协议作为当前应用层协议信息数据包的应用层协议。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 根据权利要求2所述的应用层协议特征的识别方法，其特征在于：所述匹配阈值M在O. 2到0. 5之间取值。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 根据权利要求1所述的应用层协议特征的识别方法，其特征在于：在所述步骤（1)中，根据客户端主机的IP地址为源IP地址或目的IP地址对捕获到的网络流量进行分流；如果为从客户端向服务器端发送的流量，则分流为上行网络流量；如果为从服务器端向客户端发送的流量，则分流为下行网络流量。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 根据权利要求1所述的应用层协议特征的识别方法，其特征在于：在所述步骤（2)中，所述数据信息的截取过程为：结合控制信息的最大长度设置一个长度阈值L，然后根据设定的长度阈值L对应用层数据信息进行截取，使得形成的每一个应用层协议信息数据包只保留长度为L的数据信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 根据权利要求1所述的应用层协议特征的识别方法，其特征在于：在所述步骤（1)、(2)之间还包括对识别方式进行选择的步骤；若选择在线识别方式，则直接将步骤（1)捕获的流量数据包与特征数据库中保存的各个协议的特征集合进行匹配，以进行协议识别；若选择离线识别方式，则执行步骤（2) 、 （3) 、 （4)。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 根据权利要求6所述的应用层协议特征的识别方法，其特征在于：所述在将步骤（1)捕获的流量数据包直接与特征数据库中保存的各个协议的特征集合进行匹配的过程中，若存在多个特征集合的匹配率均高于设定的匹配阈值M，则选择匹配率最高的特征集合所代表的协议作为当前流量数据包的应用层协议。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 根据权利要求1至7中任一项所述的应用层协议特征的识别方法，其特征在于：所述特征数据库中的特征集合在每一轮流量数据包的捕获、识别过程中，通过应用层协议特征提取步骤对每一轮流量数据包中的协议特征进行提取，进而对特征数据库中的特征集合进行更新。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 根据权利要求8所述的应用层协议特征的识别方法，其特征在于：所述应用层协议特征提取步骤包括：a、 提取应用层协议信号数据包中的频繁1项集，所述频繁1项集的长度设定为2的整数倍；b、 采用如下合并过程将频繁k项集合并成候选k+l项集，k &gt; 1 := Lines[x]+Lines[y]. substring(Lines[y]. length()_1， Lines [y].length ());b2 = Lines[y]+Lines[x]. substring(Lines[x]. length()_1， Lines[x]. length());其中，Lines[x]、 Lines[y]分别为第x个和第y个频繁k项集，频繁k项集的长度为LEN ;substring (p， q)表示提取从序列的第p位开始到第q位的子序列，^和b2为得到的候选k+l项集，其长度为LEN+2 ;c、 计算候选k+l项集的支持度su卯ort，提取满足支持度条件support &gt; minimum_sup的候选k+l项集，作为频繁k+l项集；所述minimUm_SUp为频繁项集支持度的最小阈值；d、 根据频繁k+l项集，删除频繁k项集中冗余的频繁项集，其过程为：令fz为 一 个频繁k+l项集；fx和fy为两个频繁k项集，且fx = fz. substring (1 ，fz. length ()-2) ， fy = fz. substring (3， fz. length ())，那么删除频繁k项集fx和fy ;由步骤a、 b、 c、 d获取的各个频繁项集即构成该应用层协议的特征集合，将其与特征数据库中保存的相应协议的特征集合进行比较，如果有新的协议特征产生，则将新的协议特征保存到特征数据库中，完成对特征数据库中该协议的特征集合的更新。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 根据权利要求9所述的应用层协议特征的识别方法，其特征在于：在获取到当前应用层协议的特征集合后，对所述特征集合进行优化，删除协议特征集合中不具代表性的协议特征和应用层通用的协议特征，然后对特征数据库进行更新。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES37418085" lang="ZH" load-source="patent-office" class="description">
+    <p>一种应用层协议特征的识别方法</p>
+    <p>技术领域</p>
+    <p>[0001] 本发明属于互联网技术领域，具体地说，是涉及一种对应用层的协议特征进行识</p>
+    <p>别的系统和方法。背景技术</p>
+    <p>[0002] 随着互联网的逐步发展，网上用户和业务流量在不断增长，除传统数据业务外，P2P、网络游戏、IPTV等新兴业务占用了互联网的大部分带宽，一方面使得运营商的服务质量出现问题，另一方面也使得运营商的基础网络建设陷入了"拥塞_扩容_再拥塞"的非正常局面，盈利能力相应降低。</p>
+    <p>[0003] 在同一网络内，如果某些用户严重占用带宽进行网游、BT下载等活动，就会影响别人对网络资源的正常使用，或者对他人的工作造成影响。毕竟现在互联网的发展，已经使很多工作都要求在网络上交互和完成。</p>
+    <p>[0004]     应用层软件造成的带宽拥塞问题已经引起了中小型企业，多分支机构企业和网络</p>
+    <p>运营商的注意，而他们就是促使网络带宽产品不断发展的最大推动者。随着市场的不断发</p>
+    <p>展，网络带宽控制产品具有极大的市场潜力，而且市场份额也越来越大。</p>
+    <p>[0005] 目前，国内的主要带宽管理和流量控制产品包括Panabit、P2P终结者、聚生网管</p>
+    <p>等。但是，这些产品只能从网络流量控制方面给用户提供流量控制方面的应用。当然普通</p>
+    <p>用户也不会关心其内部的识别原理和方法，更不用说应用层的协议特征了 。但另一方面，一</p>
+    <p>些应用和分析应用层协议的企业和公司，提出了分析应用层协议和获取相应协议特征的需</p>
+    <p>求，而现有的网络流量控制产品只提供了流量控制的功能，并没有提供应用层协议提取和</p>
+    <p>分析功能的方法和接口。而且如果聘请专门人员手动分析应用层协议特征，将会影响工作</p>
+    <p>效率和进度，并给企业和公司带来人力资源的负担。</p>
+    <p>[0006] 当前，最流行的流量监测技术为DPI(De印Packet Inspection)深度包检测技术，相对于传统的基于端口、协议类型的流量检测技术，DPI增加了应用层分析功能，是一种基于应用层的流量检测和控制技术，它通过深入读取IP包载荷的内容来对0SI7层协议中的应用层信息进行重组，从而得到整个应用的内容，然后按照系统定义的管理策略对流量进行整形操作，通过识别各种应用层的内容达到高效地识别出网络上的各种应用的目的。[0007] 数据挖掘技术作为一种数据信息处理关键技术，其主要特点是对数据库中的海量数据进行抽取、转换、分析和其他模型化处理，从中提取关键性和决策性的数据。将数据挖掘技术运用到网络流量分析，在极度膨胀地网络带宽需求中，根据用户的网络带宽使用情况、实时地对带宽进行分配，从占据带宽重要比重的应用层软件中提取和挖掘出应用层协议和软件的重要识别特征，以分析出影响网络带宽的软件和用户，具有重大的意义。[0008] 很多学者从数据挖掘的角度对DPI技术进行了理论和科学实验研究。但是，随着网络流量分析和特征提取工程应用需求的增加，对理论研究转换成实际工程应用提出了市场需求。发明内容</p>
+    <p>[0009]     本发明的目的在于提供一种适于实际工程应用的应用层协议特征识别方法，以克服现有应用层协议特征识别在工程应用中的不足，提高协议特征识别的准确率和有效性。[0010]     为解决上述技术问题，本发明采用以下技术方案予以实现：[0011]     &#8212;种应用层协议特征的识别方法，包括以下步骤：</p>
+    <p>[0012] (1)捕获待监听的流量数据包，并对捕获的网络流量进行上行网络流量和下行网络流量的分流；</p>
+    <p>[0013] (2)对分流后的网络流量进行预处理，去除上行网络流量和下行网络流量中的每一个流量数据包的链路层、网络层、传输层的头文件信息，只保留应用层数据信息，并且截取所述数据信息中的控制信息部分，形成应用层协议信息数据包；</p>
+    <p>[0014] (3)将上行网络流量的应用层协议信息数据包中的数据信息依次与特征数据库中保存的各个协议的上行网络流量的特征集合进行匹配，若在与某一个特征集合进行匹配的过程中，该网络数据包协议特征的匹配率高于设定的匹配阈值M，则认为该网络数据包为符合该协议特征的数据包；</p>
+    <p>[0015] (4)将下行网络流量的应用层协议信息数据包中的数据信息依次与特征数据库中保存的各个协议的下行网络流量特征集合进行匹配，若在与某一个特征集合进行匹配的过程中，该网络数据包协议特征的匹配率高于设定的匹配阈值M，则认为该网络数据包为符合</p>
+    <p>该协议特征的数据包；</p>
+    <p>[0016]     最终，总体网络流量识别率最高的应用层协议，即为当前网络流量所代表的协议。[0017]     其中，所述特征的匹配率定义为：当前应用层协议信息数据包包含的某一个特征集合的特征的个数与该特征集合的特征总数的比值。</p>
+    <p>[0018] 所述的总体网络流量识别率定义为：满足匹配率M的属于某一个特征集合的网络数据包总数与当前研究的网络数据包总数的比值。</p>
+    <p>[0019]     为了提高识别的准确率，在所述步骤（3)、 （4)中，若应用层协议信息数据包中的数据信息与特征数据库中的多个特征集合的匹配率均高于设定的匹配阈值M，则选择匹配率最高的特征集合所代表的协议作为当前网络数据包的应用层协议。[0020]     优选的，所述匹配阈值M优选在0. 2到0. 5之间取值；</p>
+    <p>[0021] 其中，所述对网络流量进行上行网络流量和下行网络流量的分流的过程为：根据客户端主机的IP地址为源IP地址或目的IP地址对网络流量进行分流。从客户端向服务器端发送的流量，分流为上行网络流量；从服务器端向客户端发送的流量，分流为下行网络</p>
+    <p>流量。</p>
+    <p>[0022]      进一步的，所述数据信息的截取过程可以具体采用以下方式实现：[0023] 结合控制信息的最大长度设置一个合适的长度阈值L，然后根据设定的长度阈值L对应用层数据信息进行截取，使得形成的每一个应用层协议信息数据包只保留长度为L的数据信息。所述长度阈值L可以在200byte到400byte之间取值，即可包含一个应用层流量数据包中的全部控制信息。</p>
+    <p>[0024] 又进一步的，在所述步骤（1) 、 （2)之间还包括对识别方式进行选择的步骤；若选择在线识别方式，则直接将步骤（1)分流后的上行流量数据包和下行流量数据包，分别与特征数据库中保存的各个协议的上行流量特征集合和下行流量特征集合进行匹配，以进行协议识别；若选择离线识别方式，则执行步骤（2) 、 （3) 、 （4)。</p>
+    <p>[0025] 同样的，为了提高在线识别的准确率，若特征数据库中存在多个特征集合与捕获的流量数据包的匹配率均高于设定的匹配阈值M，则选择匹配率最高的特征集合所代表的协议作为当前网络数据包的应用层协议。</p>
+    <p>[0026] 为了实现特征数据库的及时更新，所述特征数据库中的特征集合在每一轮流量数据包的捕获、识别过程中，通过应用层协议特征提取步骤对每一轮流量数据包中的协议特征进行提取，进而对特征数据库中的特征集合进行更新。[0027]     再进一步的，所述应用层协议特征提取步骤包括：</p>
+    <p>[0028] a、提取应用层协议信号数据包中的频繁1项集，所述频繁1项集的长度设定为2的整数倍；</p>
+    <p>[0029]     b、采用如下合并过程将频繁k项集合并成候选k+l项集，k &gt; 1 :</p>
+    <p>[0030]     、 = Lines [x]+Lines [y]. substring (Lines [y]. length 0 _1 ， Lines [y].</p>
+    <p>length());</p>
+    <p>[0031] b2 = Lines [y]+Lines [x]. substring (Lines [x]. length () _1 ， Lines [x].length ());</p>
+    <p>[0032] 其中，Lines [x] 、Lines[y]分别为第x个和第y个频繁k项集，频繁k项集的长度为LEN ;substring (p， q)表示提取从序列的第p位开始到第q位的子序列，^和b2为得到的候选k+l项集，其长度为LEN+2 ;</p>
+    <p>[OO33] c、计算候选k+l项集的支持度su卯ort，提取满足支持度条件su卯ort^minimum&#8212;sup的候选k+l项集，作为频繁k+l项集；所述minimum&#8212;sup为频繁项集支持度的最小阈值；</p>
+    <p>[0034]     d、根据频繁k+l项集，删除频繁k项集中冗余的频繁项集，其过程为：</p>
+    <p>[0035]     令fz为一个频繁k+l项集；fx和fy为两个频繁k项集，且fx = fz. substring (1，</p>
+    <p>fz. length ()-2) ， fy = fz. substring (3， fz. length ())，那么删除频繁k项集fx和fy ;</p>
+    <p>[0036] 由步骤a、b、c、d获取的各个频繁项集即构成该应用层协议的特征集合，将其与特</p>
+    <p>征数据库中保存的相应协议的特征集合进行比较，如果有新的协议特征产生，则将新的协</p>
+    <p>议特征保存到特征数据库中，完成对特征数据库中该协议的特征集合的更新。</p>
+    <p>[0037] 更进一步的，在获取到当前应用层协议的特征集合后，对所述特征集合进行优化，</p>
+    <p>删除协议特征集合中不具代表性的协议特征和应用层通用的协议特征，然后对特征数据库</p>
+    <p>进行更新。</p>
+    <p>[0038] 与现有技术相比，本发明的优点和积极效果是：本发明从工程应用角度提出了一套较完整的应用层协议特征提取识别方法，丰富了应用层协议特征提取识别在工程中的应用，克服了手动分析的不足，促进了企业和公司应用层协议分析工作的信息化和智能化，为企业和公司减轻了人力资源的负担，提高了工作效率。通过在协议识别的过程中同时进行应用层协议特征的提取，并对特征数据库进行周期性更新，以不断丰富应用层特征数据库的内容，从而提高了应用层协议识别的准确率。</p>
+    <p>[0039] 结合附图阅读本发明实施方式的详细描述后，本发明的其他特点和优点将变得更加清楚。</p>
+    <p>6附图说明</p>
+    <p>[0040]      图1是本发明所提出的应用层协议特征识别方法的一种实施例的流程图；[0041]      图2是应用层协议特征提取方法的一种实施例的流程图；</p>
+    <p>[0042] 图3是基于图1、图2所示协议特征提取和识别方法所构建的应用层协议特征识别系统的一种实施例的系统架构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0043] 下面结合附图对本发明的具体实施方式进行详细地描述。</p>
+    <p>[0044] 本发明针对现有应用层协议特征提取和识别方法在工程应用中的不足，及其企业和公司提出用智能方法（即自动分析方法）分析应用层协议的需求，提出了一种适于工程应用的应用层协议特征提取和识别的数据挖掘系统和方法。将数据挖掘的思想和方法实际应用到应用层协议特征的提取和识别过程中，并根据应用层协议流量数据量大的特点，从应用层协议数据包的有效包长、有效流量和无用流量等角度出发，提出了对流量数据包进行限制预处理的策略。通过周期性地更新特征数据库中的协议特征集合，可以有效地提高应用层协议识别的准确率。</p>
+    <p>[0045]     下面通过一个具体的实施例来详细阐述所述应用层协议特征提取和识别方法的具体设计过程以及基于该设计思想所构建的应用层协议特征识别系统的具体组建结构。[0046]     实施例一，参见图1所示，本实施例的应用层协议特征识别方法主要由以下步骤设计实现：</p>
+    <p>[0047]     St印l、设置使用权限，对系统的安全使用进行管理；</p>
+    <p>[0048] 出于对系统使用的安全性考虑，本实施例优选在系统正常运行前，对登录用户的合法身份进行验证，即要求用户输入用户名和密码，进行身份验证，进而根据事先保存的权限信息验证用户输入的用户名和密码是否正确，如果用户名和密码与保存的权限信息相符，则用户通过验证，进入系统；如果用户名或密码错误，则提醒用户确认输入的用户名或密码是否正确，并重新要求用户输入用户名和密码，直到身份验证通过后，再执行后续步骤。</p>
+    <p>[0049]     St印2、捕获待监听的流量数据包；</p>
+    <p>[0050] 用户在选择启动应用层协议特征提取功能时，首先选择需要监听的网卡，并设置流量数据包的过滤条件，然后启动流量捕获功能，开始捕获待监听网卡的流量数据包。与此同时，对捕获的网络流量数据包进行分流：根据客户端主机的IP地址为源IP地址或目的IP地址对网络流量进行分流。从客户端向服务器端发送的流量，分流为上行网络流量；从服务器端向客户端发送的流量，分流为下行网络流量。</p>
+    <p>[0051] 所述流量捕获功能可以直接应用现有的Pc即功能函数库进行软件开发应用，对应用层协议的网络流量进行实时捕获。在调用该函数库时，输入捕获网络流量数据包的过滤条件，比如捕获全部网络数据包、捕获TCP数据包和捕获UDP数据包等，即可获得满足过滤条件的流量数据包。</p>
+    <p>[0052] 根据经验获悉：应用层的协议特征主要存在于协议进行连接时的前几个数据包中，而在下载时的流量数据包包含的协议特征信息较少。因此，只需要提取应用协议在连接时的流量数据包的特征，即可以达到较好的特征提取和识别效果。对下载时的流量数据包</p>
+    <p>7进行特征提取，反而会增加数据处理和特征提取的难度。基于此，本实施例优选只捕获应用协议连接时的流量数据包。</p>
+    <p>[0053] 在本实施例中，根据用户选择的协议识别方式可以设计两种流量数据包传输方</p>
+    <p>式，即当用户选择在线识别方式，则将捕获到的流量数据包直接传送到应用层协议识别分</p>
+    <p>析模块，对应用层协议进行识别，跳转至St印4 ;若用户选择离线识别方式，则将捕获到的</p>
+    <p>流量数据包另存为.pcap文件，进而将该文件传送到应用层协议流量预处理模块进行离线</p>
+    <p>预处理后，再进行协议识别，转到St印3执行。</p>
+    <p>[0054]     St印3、对捕获到的流量数据包进行预处理；</p>
+    <p>[0055] 本步骤是为了提高后续协议特征提取和识别速度而专门设计的，主要对接收到的.pc即文件做以下两部分流量预处理：</p>
+    <p>[0056] (1)提取应用层数据信息。通过步骤St印2捕获到的网络流量数据包其实包括了0SI7层模型的全部数据，而只有应用层部分的网络数据对我们研究应用层协议特征有用。所以，在该数据预处理阶段对捕获到的流量数据包（即.pcap文件）进行应用层协议信息的提取，即将捕获到的每一个流量数据包的链路层、网络层、传输层的头文件信息去除，只保留应用层协议数据，进而形成应用层协议信息数据包供后续步骤使用。[0057] (2)对应用层协议信息数据包的大小进行限制。应用层协议信息数据包由两部分组成：控制信息+数据。当前应用层协议的有用信息基本集中在控制信息部分，而数据部分基本是下载时的数据信息，提供特征的信息较少。所以，在流量预处理阶段可以根据协议的定义或者特点设置一个阈值L，以对应用层协议信息数据包的大小进行限制和截取，使得每个应用层协议信息数据包只保留从数据包开始到长度为L的数据信息，即包括全部的控制信息部分和少量的数据部分，并保存到.txt文件中。</p>
+    <p>[0058] 其中，阈值L的大小范围是根据各应用层协议的定义而确定的，不同的应用层协议其控制信息的有效长度L也是不一样。 一般来讲，L在200byte到400byte之间取值即可满足控制信息的提取要求，比如L = 380byte。[0059]     St印4、应用层协议的识别过程；</p>
+    <p>[0060] 在此过程中，若用户选择在线识别方式，则直接将步骤St印2分流后的网络流量数据包分别与特征数据库中保存的各个协议的上行流量特征集合和下行流量特征集合进行匹配，若在与某一个特征集合进行匹配的过程中，其匹配率高于设定的匹配阈值M，则认为当前网络数据包的应用层协议为该特征集合所代表的协议。经试验证明：所述匹配阈值M在0. 2和0. 5之间（包括端点），基本能满足识别要求。</p>
+    <p>[0061] 所述特征的匹配率M定义为：当前应用层协议信息数据包包含的某一个特征集合的特征的个数与该特征集合的特征总数的比值。</p>
+    <p>[0062] 为了进一步提高在线协议识别的准确率，在将捕获到的流量数据包依次与特征数据库中的多个特征集合进行匹配的过程中，如果存在有多个特征集合在匹配过程中其匹配率均高于设定的匹配阈值M的情况时，那么应选择匹配率最高的特征集合所代表的协议作为当前流量数据包的应用层协议。</p>
+    <p>[0063]     最终，总体网络流量识别率最高的应用层协议，即为当前网络流量所代表的协议。[0064]      所述的网络流量识别率I定义为：满足匹配率M的属于某一个特征集合的网络数据包总数与当前研究的网络数据包总数的比值。[0065] 在识别过程中，将满足匹配率的流量数据包标记为l，不满足匹配率的流量数据包标记为0。然后将识别结果（包括用户IP、协议类别信息等）以柱状图、饼图等方式进行展示，并将识别结果保存到识别结果数据库中。</p>
+    <p>[0066] 若用户选择离线识别方式，则将通过步骤St印3生成的上行流量和下行流量的应用层协议信息数据包（即.txt文件）与特征数据库中保存的各个协议的上行流量特征集合和下行流量特征集合进行匹配，选择匹配率高于设定的匹配阈值M的特征集合所代表的协议作为当前网络数据包的应用层协议。所述匹配阈值M可以在0. 2到0. 5之间取值（包括端点）。</p>
+    <p>[0067] 同样的，为了进一步提高离线协议识别的准确率，在将传送来的应用层协议信息数据包依次与特征数据库中的多个特征集合进行匹配的过程中，如果存在多个特征集合的匹配率均高于设定的匹配阈值M，则应选择匹配率最高的特征集合所代表的协议作为当前网络数据包的应用层协议。</p>
+    <p>[0068]     最终，总体网络流量识别率最高的应用层协议，即为当前网络流量所代表的协议。[0069]     在识别过程中，将匹配成功的应用层协议信息数据包标记为l，未匹配成功的应用层协议信息数据包标记为0，并记录标记为1和标记为0的数据包个数。利用识别结果和流量的统计量（以包或者byte为单位）作识别准确性的分析比较，最后将准确率等结果以柱状图、饼图等方式进行展示，并将识别结果保存到识别结果数据库中。</p>
+    <p>[0070]     应用层协议的准确识别有赖于特征数据库中保存的应用层协议的特征集合。为了实现应用层协议的准确识别，对特征数据库中的特征集合进行及时更新至关重要。基于此，本实施例在设计协议特征识别方法的过程中，对每一轮捕获到的流量数据包都进行了协议特征的提取过程，以此来对特征数据库中的特征集合进行及时更新。[0071] 下面对应用层协议特征的具体提取过程进行详细阐述。</p>
+    <p>[0072]     为了实现应用层协议特征的准确、快速提取，本实施例对现有的Apriori频繁模</p>
+    <p>式挖掘算法进行改进，提出了 一种基于Apriori的数据挖掘算法，并命名为AC(Apriori</p>
+    <p>FrequentSignature and Constraint)算法，以完善应用层协议特征的提取设计。</p>
+    <p>[0073]     Apriori算法作为数据挖掘中关联规则挖掘算法的典型代表，由Agrawal等人在</p>
+    <p>1993年提出。Apriori算法分为两部分：频繁项集产生+关联规则挖掘。频繁项集产生过</p>
+    <p>程用于挖掘海量数据中频繁出现的数据项，为关联规则的建立提供数据对象。</p>
+    <p>[0074]     频繁模式挖掘算法的基本原理如下：</p>
+    <p>[0075] 频繁模式挖掘是关联规则挖掘里的一个重要内容，挖掘待研究事务的频繁项集，</p>
+    <p>是产生关联规则的重要前提和保证。应用关联规则里产生频繁项集的方法来提取应用层流</p>
+    <p>量数据包中的协议特征。其基本思想是：不考虑流量数据的结构信息，只关注流量数据的内</p>
+    <p>容，而内容具体含义事先也不考虑，在这种模糊的条件下，提取流量数据包的频繁子串，并</p>
+    <p>作为待考虑的应用层协议特征。</p>
+    <p>[0076]      频繁项集挖掘的数据集和支持度定义：</p>
+    <p>[0077]     频繁模式挖掘的数据集定义如下：</p>
+    <p>[0078] 令I = Up i2， . . . . id}是数据中所有项的集合，T = &amp;， t2， . . . . td}是所有事务的集合，每个事务ti包含的项集都是I的子集，包含O个或多个项的集合S被称为项集。如果一个项集S包含k个项，则称它为k项集。项集S在事务中的出现频率用支持度support来描述，support = P &amp; (S) /T)，分子ti (S)表示项集S在事务中出现的次数，分母T表示事务个数。给定一个支持度的最小阈值minimum&#8212;sup，若support &gt; minimum_sup，那么项集S为频繁项集。</p>
+    <p>[0079]     频繁项集挖掘过程：</p>
+    <p>[0080] 频繁项集挖掘过程都是根据原创性算法Apriori衍生出来的，因此他们的总体挖掘过程都大同小异。Apriori算法使用一种逐层搜索的迭代方法，用k项集探索（k+1)项集。</p>
+    <p>[0081] 第一次迭代挖掘所有长度为1且支持度support大于等于最小支持度minimum&#8212;sup的项集作为频繁1项集。第二次迭代挖掘长度为2的频繁2项集。在第二次迭代过程中，算法会基于第一次迭代的结果来生成长度为2的候选2项集，然后计算每个候选2项集的支持度su卯ort，将满足su卯ort &gt; minimum_sup的候选2项集选出来作为频繁2项集。重复第二次迭代过程可以挖掘大小分别为3、4、5...的频繁项集，直到没有满足最小支持度条件support &gt; minimum_sup的项集产生为止。</p>
+    <p>[0082] 本实施例所提出的应用层协议特征提取方法采用AC算法实现，AC算法定义的应用层流量数据包的频繁项集数据模型为：</p>
+    <p>[0083] 令I = {ip i2， ....ij，每个项ig(g二 l到d)由两位十六进制数组成，是应用层流量数据包的最小单位；T = {、， t2， . . . . td}为所有数据包的集合，ti = {I的子集构成的序列}，为一个应用层协议信息数据包；令S = substring(ti)， S表示应用层协议信息数据包ti的一个子串，为I的项集；频繁项集的支持度su卯ort = P(ti(S)/T);若su卯ort &gt; minimum&#8212;sup，那么应用层流量数据包ti的项集S为该应用层的协议特征。[0084]     AC算法相比其它算法的独特之处体现在以下两个方面：</p>
+    <p>[0085] &#8212;、引入Bloom Filter函数改进Apriori算法，产生频繁1项集，以加快产生频繁项集的过程。</p>
+    <p>[0086] 引入Bloom Filter算法对Apriori算法进行改进，Bloom Filter算法用多个哈希函数（即Hash函数）提高识别频繁项的准确性。Bloom Filter算法最初是由Fang Hao等人提出来的，目的是加快对频繁项集的提取。AC算法引入Bloom Filter的思想对Apriori算法产生频繁1项集的过程进行改进，在执行效率和精确度方面都有了很大的提高。[0087] 二、在AC算法中引入产生协议特征即频繁项集的限制条件，以加快应用协议特征的提取过程。</p>
+    <p>[0088] By皿g-Chul Park等人提出LASER (IXS-based (Longest common subsequence)Application Signature ExtRaction algorithm)算法，艮卩基于最长公共子序列的应用特征提取算法，来提取应用层特征。在LASER算法产生应用层特征的过程中，引入最小子串长度的限制条件算法将要产生的特征的最小长度进行限制。AC算法在沿用最小子串长度的限制条件，即协议特征长度的限制条件的基础上，再提出了两个限制条件：屏蔽不提供协议特征的应用层协议信息数据包和删除冗余的应用层协议特征，以对Apriori算法进行改进，从而加快协议特征的提取过程和优化提取得到的应用层协议特。</p>
+    <p>[0089] 下面结合图2对将AC算法应用于应用层协议特征提取过程的具体实现步骤阐述如下：</p>
+    <p>[0090]     本实施例的应用层协议特征提取过程在St印3之后进行。</p>
+    <p>10[0091]     1、导入经过步骤St印3预处理后的应用层协议信息数据包，即.txt文件。[0092]     2、设定频繁1项集的长度len。</p>
+    <p>[0093] 由于流量数据包是按原始捕获的流量数据格式即十六进制的格式保存的，每两个十六进制符号表示一个十进制ASCII码字符，因此，频繁1项集的长度取值应该为2的整数倍。</p>
+    <p>[0094] 此处引入协议特征长度的限制条件：在频繁项集的产生过程中，前面的项集的产生是为后面项集的产生服务的，但是这些前面的项集往往是些过渡项集，对最终项集的产生很少或不产生影响。如果在产生频繁l项集时，项集的大小|S| =2，产生频繁2项集时，项集的大小|S| = 4...，那么将会影响后续项集的递增处理效率，而且协议特征过短没有实际意义和参考价值。因此，本实施例通过对频繁1项集的长度len进行限制，从而对协议特征最小长度进行限制，使其不产生过短的没有实际意义的协议特征。这样不但可以提高提取效率，也为最终产生更高质量的协议特征提供重要保障。</p>
+    <p>[0095]     基于此，本实施例提出将频繁1项集的长度len设定为2的整数倍，且大于等于4</p>
+    <p>的值，优选len = 4。</p>
+    <p>[0096]     3、提取频繁1项集。</p>
+    <p>[0097] 即提取应用层协议信息数据包中满足支持度条件support &gt; minimum_sup的频繁项集。在频繁l项集的提取过程中，引入Bloom Filter算法来判断重复频繁项集，以提高产生频繁1项集的效率。</p>
+    <p>[0098]     Bloom Filter算法提取频繁1项集的原理和过程为：</p>
+    <p>[0099] Bloom Filter是一个M位的二进制字符串，每位初始为0。为每个候选1项集设定h个哈希函数，h个哈希函数的值与Bloom Filter的二进制字符串的位置相对应。当判断一个候选1项集是否已经为频繁1项集时，只要计算这h个Hash函数的值，然后根据得到的函数值去寻找Bloom Filter二进制字符串的对应位，如果h个对应位的值都为l，则说明该候选1项集已经为频繁1项集，这样Bloom Filter就将其过滤掉，而不用做进一步的支持度计算来判断该候选1项集是否为频繁1项集；如果h个对应位的值只要有一位不为l，则说明要做进一步的支持度计算才能判断该候选1项集是否为频繁1项集。[0100] Bloom Filter算法过滤候选1项集的准确度和错误率由Hash函数的个数h决定，FangHao等人已证明：h = 6时Bloom Filter算法过滤的错误率已接近极小化。[0101]     Bloom Filter算法使用的Hash函数定义为：</p>
+    <p>[0102] 假设候选1项集为C = (Q， C2， . . . ， Ck)，根据以下的哈希函数计算候选1项集C所有长度为k(k &gt; 1)的子集的哈希值。假设一个素数q，则第一个长度为k的子集的哈希函数为：</p>
+    <p>[0103]     &amp; = Ciqk&#8212;^(^qk&#8212;2+...+Ck&#8212;iq+Ck(Mod M)</p>
+    <p>[0104]     其中，M为Bloom Filter的二进制字符串的长度；</p>
+    <p>[0105]     第二个长度为k的子集的哈希函数为：</p>
+    <p>[0106]     H2 = C2qk&#8212;'+C3qk&#8212;2+... +Ckq+Ck+1 (Mod M)。</p>
+    <p>[0107] 最小支持度阈值minimum&#8212;sup的取值范围根据具体的应用而定，不同的应用层协议数据其最小支持度阈值也不同，根据实验经验可知：minimUm_SUp的取值范围优选为0. 2 &lt; minimum&#8212;sup &lt; 0. 8。</p>
+    <p>11[0108] 此处引入限制条件：屏蔽不提供协议特征的应用层协议信息数据包。如果已提取的频繁1项集没有一个包含在一个应用层协议信息数据包中，那么该应用层协议数据包被认为是不包含频繁1项集的数据包，则在以后的频繁项集的挖掘过程中，该应用层协议信息数据包也不会包含频繁项集。因此，将不提供协议特征的应用层协议信息数据包屏蔽，在后面的频繁项集挖掘过程中不再进行频繁项集的计算和挖掘。[0109]      4、由频繁k项集提取频繁k+1项集。</p>
+    <p>[0110] 假设：Lines [x] 、Lines [y]分别为第x个和第y个频繁k项集，频繁k项集的长度为LEN。 substring (p， q)表示提取从序列的第p位开始到第q位的子序列，h和b2为得到的候选k+1项集，其长度为LEN+2。</p>
+    <p>[0111] 我们知道流量数据包的内容是一个有序序列，各项间的顺序和位置是固定的。因此，不能简单地像集合一样合并各k项集，来产生候选（k+1)项集。而候选k+l项集是由频繁k项集间合并生成的，且在频繁k项集的基础上增加2个十六进制字符，即候选k+1项集的长度为LEN+2。根据频繁项集产生的先验原理：如果一个项集是频繁的，那么它的所有子集一定也是频繁的。由此，我们知道候选k+1项集长度为LEN的子序列必为频繁k项集，艮卩Lines[x]. substring(1，Lines[x]. length-2)禾口 Lines [x].substring (3，Lines[x].length)必为频繁k项集。因此，我们可以通过以下方式由频繁k项集合并为候选k+l项集：</p>
+    <p>[0112] 如果Lines[x]频繁k项集从第3个字符开始到最后一个字符结束的子序列与Lines[y]频繁k项集的从第1个字符开始到倒数第三个字符结束的子序列相等，艮卩Lines[x]. substring(3， Lines[x]. length0) = Lines[y]. substring(1， Lines[y].length () _2)，那么Lines [x]和Lines [y]用以下方式合并为候选k+1项集:[0113] 、 = Lines [x]+Lines [y]. substring (Lines [y]. length () _1 ， Lines [y].length ());</p>
+    <p>[0114]     如果Lines[x]频繁k项集从第1个字符开始到倒数第3个字符结束的子序列与Lines[y]频繁k项集的从第3个字符开始到最后一个字符结束的子序列相等，即Lines [x].substring (1， Lines[x]. length 0_2)  = Lines[y]. substring(3， Lines[y].length ())，那么Lines [x]和Lines [y]用以下方式合并为候选k+1项集:[0115]     b2 = Lines [y]+Lines [x]. substring (Lines [x]. length () _1 ， Lines [x].length ());</p>
+    <p>[0116] Hong Han等人将该合并过程应用于病毒特征的提取过程中，他们提出当产生频繁2项集时，直接由频繁1项集间的合并产生，因为此时的频繁1项集为项集的最小单位；当产生频繁3项集开始以后的项集时，根据项集间子序列的相等性来合并频繁k项集为候选k+1项集。当产生频繁3项集以后项集的方法对AC算法产生长度为2的频繁项集时已经开始适用，因为本实施例定义的应用层流量数据包的最小单位长度为2，而AC算法初始设定频繁1项集的长度len &#8212;般大于等于4，因此此时频繁1项集不是项集的最小单位，由频繁1项集生成候选2项集，可直接应用以上合并过程。</p>
+    <p>[0117]    然后，计算候选k项集的支持度su卯ort，将满足支持度条件support &gt; minimum&#8212;</p>
+    <p>sup的候选k项集提取出来，作为频繁k+1项集。</p>
+    <p>[0118]     5、根据频繁k+1项集，删除频繁k项集中的项集。[0119] 此处引入限制条件：删除冗余的应用层协议特征。根据提取得到的频繁k+1项集删除频繁k+1项集中已经挖掘的频繁k项集。</p>
+    <p>[0120] 为了得到更优的应用层协议特征集合并将冗余的应用层协议特征删除，本实施例根据频繁项集产生的先验原理：如果一个项集是频繁的，那么它的所有子集一定也是频繁的，设计了删除冗余的应用层协议特征的过程，即在完成频繁K+1项集的提取过程后，紧接着进行删除冗余的频繁K项集的删除过程。</p>
+    <p>[0121] 因为频繁k+1项集是由频繁k项集挖掘产生的，那么每个频繁k+1项集的子序列，一定也包含在频繁k项集中，频繁k+1项集已经包含了其对应的频繁k项集的挖掘项集。相反的，频繁k项集不一定都包含在频繁k+1项集中，因为由频繁k项集产生的候选k+1项集并不一定能成为频繁k+1项集。因此在频繁k项集中删除频繁k+1项集包含的项集，即如</p>
+    <p>果满足以下条件，那么对应的频繁k项集将被删除：</p>
+    <p>[0122]     fz为一个频繁k+l项集；fx和fy为两个频繁k项集，且fx = fz. substring(1，fz. length ()-2) ， fy = fz. substring (3， fz. length ())，那么删除频繁k项集fx和fy。[0123] 在这个过程中，删除了频繁k项集中重复出现的频繁k+l项集的子序列，且保留了频繁k项集中不产生频繁k+1项集的项集。</p>
+    <p>[0124]     6、如此反复执行步骤4和步骤5，直到没有新的频繁项集产生为止。[0125] 通过以上步骤获取的各个频繁项集即构成应用层的协议特征集合。[0126]     7 、对获取的应用层的协议特征集合进行优化处理。</p>
+    <p>[0127] 在此步骤中，包括删除协议特征集合中不具代表性的协议特征和应用层通用的协议特征，使得到更优的协议特征集合。</p>
+    <p>[0128]     8 、将经过优化处理后的协议特征结果以图表或者文字等形式进行展示。</p>
+    <p>[0129] 9、将经过优化处理后的协议特征与特征数据库中已保存的协议特征进行比较，以</p>
+    <p>不断更新特征数据库，进而为应用层协议的准确识别提供支持。</p>
+    <p>[0130] 基于上述应用层协议特征提取和识别方法，本实施例又提出了一种应用层协议特征提取和识别系统，参见图3所示，具体包括以下主要组成部分：</p>
+    <p>[0131] 权限管理模块：提供系统的用户、用户组的定义及其各自权限的管理，保证数据库的安全访问，即完成St印l的功能。其中，用户管理，用于定义系统的用户及相应的用户权限；用户组管理，用于定义系统的用户组及相应的权限。设置的各权限数据保存在权限数据库中。</p>
+    <p>[0132] 流量捕获模块：捕获待监听的网络流量数据包，并对网络数据包进行上行网络流量和下行网络流量的分流，即完成St印2的功能。</p>
+    <p>[0133] 应用层协议流量预处理模块：根据流量数据包的特点对流量数据包进行预处理，去掉无用或不相关的流量数据，即完成St印3的功能。</p>
+    <p>[0134] 应用层协议识别分析模块：包括在线识别和离线识别两个应用层协议识别功能。在线识别对流量捕获模块捕获得到的流量数据包进行实时识别和标记；离线识别对经过应用层协议流量预处理模块进行数据预处理后产生的应用层协议信息数据包进行识别。离线识别功能是为应用层协议识别准确率的分析提供服务的。</p>
+    <p>[0135] 应用层协议识别准确率分析模块：分析和验证应用层协议特征提取模块提取得到的协议特征的准确率。</p>
+    <p>13[0136] 应用层协议识别结果与准确率展示模块：以图表等形式展示应用层协议识别模块</p>
+    <p>识别应用层协议的识别结果及其识别准确率。用户结合图表对识别结果进行分析，并将识</p>
+    <p>别结果和用户的分析和补充说明信息输出到识别结果数据库中进行保存。</p>
+    <p>[0137]      应用层协议特征提取模块：应用数据挖掘AC算法实现对应用层协议特征的提取</p>
+    <p>功能。在此模块中还可以包括数据挖掘算法的选择、数据挖掘算法的实现与应用模块等。此</p>
+    <p>模块提供一个公用的接口支持数据挖掘算法的扩展。</p>
+    <p>[0138]     参数配置模块：提供应用层协议特征提取数据挖掘算法的参数，如特征长度len、 支持度最小阈值minimUm_SUp以及选择的特征提取数据挖掘算法的其他各相关参数等。 [0139] 应用层协议特征优化模块：优化应用层协议特征提取模块提取得到的协议特征， 将冗余的和通用的协议特征删除，使得到更优的协议特征集合。</p>
+    <p>[0140] 应用层协议特征提取结果展示模块：将经过优化后的协议特征及其流量识别准确 率I(I =包含协议特征的流量数据包总数/捕获流量中总的数据包个数）以图形、表格等 方式输出展示。</p>
+    <p>[0141] 应用层协议特征周期性更新模块：实现最新协议特征数据库更新。将最新提取得 到的协议特征与特征数据库相应协议特征进行比较，如果有新的协议特征产生，则将该新 特征更新到特征数据库中。</p>
+    <p>[0142] 下面结合图1、图2、图3，以提取PPStream应用软件特征为例对本实施例的协议特 征提取和识别过程进行详细的说明。</p>
+    <p>[0143]     以PPStream应用层软件为实例，在实验主机上必须首先打开PPStream软件。 [0144] 1、用户登录系统</p>
+    <p>[0145] 用户输入用户名和密码，系统从权限数据库查找相应的用户登录信息，并进行用 户验证。用户验证通过，则允许用户进入系统，否则提醒用户再次输入用户名和密码。 [0MS] 2、流量捕获</p>
+    <p>[0147] 在应用层协议流量捕获模块中，选择应用层协议提取功能，并选择当前需要监听 的网卡Realtek RTL8139/810x Family Fast Ethernet NIC，输入流量数据包过滤条件"TCP &amp;&amp; notsmb &amp;&amp; not nbss"，即捕获TCP数据包，开始捕获应用层协议流量数据包。流量捕获 结束后，可随时点击"停止流量捕获"按钮，最后将捕获的流量数据包另存为PPStream. pc即 文件。在捕获流量数据包的同时，根据客户端的IP地址做为源IP地址或目的IP地址对网 络流量进行上行网络流量和下行网络流量的分流。</p>
+    <p>[0148] 由于本实施例要对PPStream软件特征进行准确率分析，因此选择离线识别方式。 捕获的PPStream流量数据以PPStream. pc即文件的形式传送到应用层协议流量预处理模 块。</p>
+    <p>[0149] 3、应用层协议流量预处理</p>
+    <p>[0150] 将PPStream. pc即文件导入应用层协议流量预处理模块，设置预处理参数：截取 流量数据包大小L = 380byte。分流出PPStream. pcap流量数据包的上行网络流量，并提取 该上行网络流量的应用层协议信息数据包，并对每个应用层协议信息数据包进行截取，只 保留L长度的数据信息。然后，将流量数据预处理后的结果以PPStream. txt文件的形式发 送给应用层协议特征提取模块。进行预处理后，流量数据包的格式为（每个流量数据包用 #号隔开）：[0151]	#73		2F 2E 30 36 25 44 30 25 41	31	25	43	39	25	46	32	25	44	31	25	46	34</p>
+    <p>25 43	3925 45 44 25 42 43 25 44 42 25			42	31	25	41	39	25	44	35	25	43	37	36	30</p>
+    <p>30 25	42	3125 42 36 25 42 37 25 41 32		25	43	41	25	43	34	25	42	32	25	42	42	25</p>
+    <p>43 35	25	44	3725 43 36 25 44 45 2E 6A	70	67	20	48	54	54	50	2F	31	2E	31	OD	OA</p>
+    <p>48 6F	73	74	3A 2070 6C 2E 70 70 73 2E	74	76	OD	OA	41	63	63	65	70	74	3A	20	2A</p>
+    <p>2F 2A	0D	OA	55 73 6572 2D 41 67 65 6E	74	3A	20	50	50	53	74	72	65	61	6D	2D	43</p>
+    <p>6C 69	65	6E	74 2F 31 2E30 0D OA 0D OA</p>
+    <p>[0152]	#30		25 41 31 25 43 39 25 46 32	25	44	31	25	46	34	25	43	39	25	45	44	25</p>
+    <p>42 43	2544 42 25 42 31 25 41 39 25 44			35	25	43	37	36	30	30	25	42	31	25	42	36</p>
+    <p>25 42	37	2541 32 25 43 41 25 43 34 25		42	32	25	42	42	25	43	35	25	44	37	25	43</p>
+    <p>36 25	44	45	2E78 6D 6C 20 48 54 54 50	2F	31	2E	31	OD	OA	48	6F	73	74	3A	20	70</p>
+    <p>6C 2E	70	70	73 2E74 76 0D OA 41 63 63	65	70	74	3A	20	2A	2F	2A	OD	OA	55	73	65</p>
+    <p>72 2D	41	67	65 6E 743A 20 50 50 53 74	72	65	61	6D	2D	43	6C	69	65	6E	74	2F	31</p>
+    <p>2E 30	0D	OA	OD OA</p>
+    <p>[0153]	#69		73 74 2F 6C 69 73 74 2F 30	32	30	36	25	44	30	25	41	31	25	43	39	25</p>
+    <p>46 32	2544 31 25 46 34 25 43 39 25 45			44	25	42	43	25	44	42	25	42	31	25	41	39</p>
+    <p>25 44	35	2543 37 36 30 30 25 42 31 25		42	36	25	42	37	25	41	32	25	43	41	25	43</p>
+    <p>34 25	42	32	2542 42 25 43 35 25 44 37	25	43	36	25	44	45	2E	68	74	6D	6C	20	48</p>
+    <p>54 54	50	2F	31 2E31 OD OA 41 63 63 65	70	74	3A	20	2A	2F	2A	OD	OA	41	63	63	65</p>
+    <p>70 74	2D	4C	61 6E 6775 61 67 65 3A 20	7A	68	2D	63	6E	OD	OA	55	41	2D	43	50	55</p>
+    <p>3A 20	78	38	36 OD OA 4163 63 65 70 74	2D	45	6E	63	6F	64	69	6E	67	3A	20	67	7A</p>
+    <p>69 70	2C	20	64 65 66 6C 6174 65 OD OA	55	73	65	72	2D	41	67	65	6E	74	3A	20	4D</p>
+    <p>6F 7A	69	6C	6C 61 2F 34 2E 3020 28 63	6F	6D	70	61	74	69	62	6C	65	3B	20	4D	53</p>
+    <p>49 45	20	37	2E 30 3B 20 57 69 6E64 6F	77	73	20	4E	54	20	35	2E	31	3B	20	61	66</p>
+    <p>66 2D	6B	69	6E 67 73 6F 66 74 2D 6369	62	61	29	OD	OA	48	6F	73	74	3A	20	76	6F</p>
+    <p>64 67	75	69	64 65 2E 70 70 73 2E 74 760D		OA	43	6F	6E	6E	65	63	74	69	6F	6E	3A</p>
+    <p>20 4B	65	65	70 2D 41 6C 69 76 65 OD OA 436F			6F	6B	69	65	3A	20	70	70	73	6C	6F</p>
+    <p>67 69	6E	32	3D 2D 31 3B 20 70 70 73 5F 63 6C69				65	6E	74	5F	69	64	3D	41	41	4E</p>
+    <p>33 53	36	35	55</p>
+    <p>[0154]</p>
+    <p>[0155]	4、应用层协议特征提取</p>
+    <p>[0156]	选择AC算法，配置AC算法的参数			:频繁l项集长度len二							:6，最小支持度阈值					minimum_sup = 0. 2。启动应用层协议特征提取模块的分析功能，从PPStream. txt文件中 提取出PPStream软件的特征，并将提取得到的协议特征集合输出到应用层协议特征优化 模块。</p>
+    <p>[0157]     表1是提取得到的PPStream软件的协议特征及其支持度： [0158]</p>
+    <p>15&lt;table&gt;table see original document page 16&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0160] 表l</p>
+    <p>[0161]     5、 PPStream软件特征优化</p>
+    <p>[0162] 应用层协议特征优化模块接收应用层协议特征提取模块送来的协议特征集合，对 协议特征集合进行优化处理，删除多余的、不具代表性的和应用层通用的协议特征。表2是优化后的PPStream软件的协议特征及其支持度： [0163]</p>
+    <p>&lt;table&gt;table see original document page 17&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0164] 表2</p>
+    <p>[0165] 6、将经过优化处理后的协议特征传送给应用层协议特征提取结果展示模块，以图 表和文字的形式展示提取得到的协议特征结果。</p>
+    <p>[0166] 7、将协议特征结果发送给应用层协议特征周期性更新模块，通过应用层协议特征</p>
+    <p>周期性更新模块对提取得到的协议特征与特征数据库的协议特征进行比较和更新。</p>
+    <p>[0167] 8、对应用层协议信息数据包进行识别</p>
+    <p>[0168]     对PPStream. txt中的流量数据包进行识别，将识别结果和流量的统计量（以包 或byte为单位）发给应用层协议准确率分析模块。如果在应用层协议信息数据包中找到 PPStream的协议特征，则将该数据包标记为l，否则标记为0。 [0169] 9、分析应用层协议识别结果的准确率</p>
+    <p>[0170] 通过应用层协议准确率分析模块对提取得到的应用层协议特征的准确性进行 分析，最后将准确率等结果发送到应用层软件识别结果展示模块。对当前捕获得到的 PPStream. txt流量，用特征数据库里的PPStream特征识别的准确率为65. 1 % (该准确率 随捕获的网络流量数据包的不同而浮动）。</p>
+    <p>[0171] 10、通过应用层软件识别结果展示模块以柱状图、饼图等方式展示识别结果。 [0172] 本发明的应用层协议特征识别方法可以充分满足实际工程应用的需求，提高了网 络协议分析处理的效率和进度，为网络运营商实时监控网络资源、解决网络拥堵问题提供 了技术上的支持。</p>
+    <p>[0173] 当然，以上所述仅是本发明的一种优选实施方式，应当指出的是，对于本技术领域 的普通技术人员来说，在不脱离本发明原理的前提下，还可以做出若干改进和润饰，这些改 进和润饰也应视为本发明的保护范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102045363A?cl=zh">CN102045363A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月31日</td><td class="patent-data-table-td patent-date-value">2011年5月4日</td><td class="patent-data-table-td ">成都市华为赛门铁克科技有限公司</td><td class="patent-data-table-td ">网络流量特征识别规则的建立方法、识别控制方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102045363B?cl=zh">CN102045363B</a></td><td class="patent-data-table-td patent-date-value">2010年12月31日</td><td class="patent-data-table-td patent-date-value">2013年10月9日</td><td class="patent-data-table-td ">华为数字技术（成都）有限公司</td><td class="patent-data-table-td ">网络流量特征识别规则的建立方法、识别控制方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102185762A?cl=zh">CN102185762A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年4月19日</td><td class="patent-data-table-td patent-date-value">2011年9月14日</td><td class="patent-data-table-td ">北京网康科技有限公司</td><td class="patent-data-table-td ">用户数据发送行为的识别与提取及其处理设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102185762B?cl=zh">CN102185762B</a></td><td class="patent-data-table-td patent-date-value">2011年4月19日</td><td class="patent-data-table-td patent-date-value">2014年4月16日</td><td class="patent-data-table-td ">北京网康科技有限公司</td><td class="patent-data-table-td ">用户数据发送行为的识别与提取方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102209032A?cl=zh">CN102209032A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月24日</td><td class="patent-data-table-td patent-date-value">2011年10月5日</td><td class="patent-data-table-td ">北京网康科技有限公司</td><td class="patent-data-table-td ">一种用户自定义的应用识别方法及其设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102624548A?cl=zh">CN102624548A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月29日</td><td class="patent-data-table-td patent-date-value">2012年8月1日</td><td class="patent-data-table-td ">大连梯耐德网络技术有限公司</td><td class="patent-data-table-td ">一种双向配置的网络行为监控方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103095718B?cl=zh">CN103095718B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年1月29日</td><td class="patent-data-table-td patent-date-value">2015年7月15日</td><td class="patent-data-table-td ">电子科技大学</td><td class="patent-data-table-td ">一种基于Hadoop的应用层协议特征提取方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=9Yl-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029060000">H04L29/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=9Yl-BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年6月16日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年9月1日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年7月11日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/089d673c1e195838cd27/CN101741908A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_6e802a6b2b28d51711baddc2f3bec198.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E5%BA%94%E7%94%A8%E5%B1%82%E5%8D%8F%E8%AE%AE%E7%89%B9%E5%BE%81%E7%9A%84%E8%AF%86%E5%88%AB%E6%96%B9.pdf?id=9Yl-BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1g-U_B5MPo0y0jt0XG9iwemd-oRQ"},"sample_url":"https://www.google.com/patents/reader?id=9Yl-BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>
