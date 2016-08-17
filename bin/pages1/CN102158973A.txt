@@ -1,0 +1,390 @@
+<!DOCTYPE html><html><head><title>专利 CN102158973A - 半持续调度、传输及处理方法、系统和设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="半持续调度、传输及处理方法、系统和设备"><meta name="DC.contributor" content="许芳丽" scheme="inventor"><meta name="DC.contributor" content="赵亚利" scheme="inventor"><meta name="DC.contributor" content="电信科学技术研究院" scheme="assignee"><meta name="DC.date" content="2010-2-11" scheme="dateSubmitted"><meta name="DC.description" content="本发明实施例公开了一种半持续调度SPS、传输及处理的方法、系统和设备，涉及无线通信领域，用于解决现有技术中终端如何确定网络侧分配的SPS资源所针对的业务的问题。本发明中，网络侧确定SPS业务与待配置给终端的SPS资源之间的绑定关系，并按照该SPS业务对应的SPS信令发送方式和/或发送内容向终端发送SPS信令，终端接收该SPS信令，根据该SPS信令的发送方式和/或发送内容，确定该SPS信令对应的SPS业务，并利用该SPS信令所指示的SPS资源传输该SPS业务的数据。可见，采用本发明，终端能够根据SPS信令的发送方式和/或发送内容，确定该SPS信令指示的SPS资源所针对的SPS业务，进而利用SPS信令所指示的SPS资源传输该SPS业务的数据。"><meta name="DC.date" content="2011-8-17"><meta name="DC.relation" content="CN:101388748:A" scheme="references"><meta name="DC.relation" content="CN:101478381:A" scheme="references"><meta name="DC.relation" content="CN:101499887:A" scheme="references"><meta name="DC.relation" content="CN:101616403:A" scheme="references"><meta name="DC.relation" content="US:20090197610:A1" scheme="references"><meta name="DC.relation" content="WO:2009152637:A1" scheme="references"><meta name="citation_reference" content="CATT: &quot;Collision avoidance in uplink semi-persistent scheduling for TDD&quot;, 《3GPP TSG-RAN WG2 MEETING #60BIS》, 18 January 2008 (2008-01-18)"><meta name="citation_reference" content="ERICSSON: &quot;Configuration of semi-persistent scheduling&quot;, 《TSG-RAN WG2 MEETING #60BIS》, 18 January 2008 (2008-01-18)"><meta name="citation_reference" content="QUALCOMM EUROP: &quot;Semi-persistent scheduling allocation，2008-01-18&quot;, 《3GPP TSG-RAN WG2 #60-BIS》, 18 January 2008 (2008-01-18)"><meta name="citation_patent_publication_number" content="CN:102158973:A"><meta name="citation_patent_application_number" content="CN:201010111880"><link rel="canonical" href="https://www.google.com/patents/CN102158973A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102158973A?cl=zh"/><meta name="title" content="专利 CN102158973A - 半持续调度、传输及处理方法、系统和设备"/><meta name="description" content="本发明实施例公开了一种半持续调度SPS、传输及处理的方法、系统和设备，涉及无线通信领域，用于解决现有技术中终端如何确定网络侧分配的SPS资源所针对的业务的问题。本发明中，网络侧确定SPS业务与待配置给终端的SPS资源之间的绑定关系，并按照该SPS业务对应的SPS信令发送方式和/或发送内容向终端发送SPS信令，终端接收该SPS信令，根据该SPS信令的发送方式和/或发送内容，确定该SPS信令对应的SPS业务，并利用该SPS信令所指示的SPS资源传输该SPS业务的数据。可见，采用本发明，终端能够根据SPS信令的发送方式和/或发送内容，确定该SPS信令指示的SPS资源所针对的SPS业务，进而利用SPS信令所指示的SPS资源传输该SPS业务的数据。"/><meta property="og:title" content="专利 CN102158973A - 半持续调度、传输及处理方法、系统和设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102158973A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102158973A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=PTWGBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102158973A&amp;usg=AFQjCNGaJ5LSNJbKO6yTH9_Kwe0P6k_ABA" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3cdebb1ff5bcefd08c2a/CN102158973A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3cdebb1ff5bcefd08c2a/CN102158973A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102158973A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102158973A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102158973A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102158973B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102158973A?cl=zh" style="display:none"><span itemprop="description">本发明实施例公开了一种半持续调度SPS、传输及处理的方法、系统和设备，涉及无线通信领域，用于解决现有技术中终端如何确定网络侧分配的SPS资源所针对的业务的问题。本发明中，网络侧确定SPS业务与待配置给终端的SPS资源...</span><span itemprop="url">https://www.google.com/patents/CN102158973A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102158973A - 半持续调度、传输及处理方法、系统和设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102158973A - 半持续调度、传输及处理方法、系统和设备" title="专利 CN102158973A - 半持续调度、传输及处理方法、系统和设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102158973 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010111880</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年8月17日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年2月11日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年2月11日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102158973B?hl=zh-CN&amp;cl=zh">CN102158973B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010111880.1, </span><span class="patent-bibdata-value">CN 102158973 A, </span><span class="patent-bibdata-value">CN 102158973A, </span><span class="patent-bibdata-value">CN 201010111880, </span><span class="patent-bibdata-value">CN-A-102158973, </span><span class="patent-bibdata-value">CN102158973 A, </span><span class="patent-bibdata-value">CN102158973A, </span><span class="patent-bibdata-value">CN201010111880, </span><span class="patent-bibdata-value">CN201010111880.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%AE%B8%E8%8A%B3%E4%B8%BD%22">许芳丽</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B5%B5%E4%BA%9A%E5%88%A9%22">赵亚利</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E7%94%B5%E4%BF%A1%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%99%A2%22">电信科学技术研究院</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102158973A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102158973A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102158973A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (6),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=PTWGBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010111880&amp;usg=AFQjCNGD2uarWSbH6ka3Gc73Qp1mNvHmQg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=PTWGBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102158973A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHL9QGr-0YgBfgDBHpLr8x6EFWwqQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT104393194" lang="ZH" load-source="patent-office">半持续调度、传输及处理方法、系统和设备</invention-title>
+      </span><br><span class="patent-number">CN 102158973 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA86297672" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明实施例公开了一种半持续调度SPS、传输及处理的方法、系统和设备，涉及无线通信领域，用于解决现有技术中终端如何确定网络侧分配的SPS资源所针对的业务的问题。本发明中，网络侧确定SPS业务与待配置给终端的SPS资源之间的绑定关系，并按照该SPS业务对应的SPS信令发送方式和/或发送内容向终端发送SPS信令，终端接收该SPS信令，根据该SPS信令的发送方式和/或发送内容，确定该SPS信令对应的SPS业务，并利用该SPS信令所指示的SPS资源传输该SPS业务的数据。可见，采用本发明，终端能够根据SPS信令的发送方式和/或发送内容，确定该SPS信令指示的SPS资源所针对的SPS业务，进而利用SPS信令所指示的SPS资源传输该SPS业务的数据。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(36)</span></span></div><div class="patent-text"><div mxw-id="PCLM37879919" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种半持续调度SPS方法，其特征在于，该方法包括：网络侧确定SPS业务与待配置给终端的SPS资源之间的绑定关系； 网络侧按照所述SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送SPS 信令，以指示终端在接收到该SPS信令后利用所述SPS资源传输所述SPS业务的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其特征在于，网络侧按照所述SPS业务对应的SPS信令发送方式和/或发送内容向终端发送SPS信令包括以下方式一&#12316;方式八中的一种：方式一：网络侧向终端发送用于配置SPS资源的无线资源控制RRC信令，该RRC信令中携带所述SPS业务的业务标识；通过物理下行控制信道PDCCH向终端发送SPS激活信令，该 SPS激活信令中携带所述SPS业务的业务标识；方式二 ：网络侧根据预先配置的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；方式三：网络侧根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；方式四：网络侧根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令； 利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述 SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；方式五：网络侧根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；方式六：网络侧根据预先配置的业务标识与下行载波标识的绑定关系，确定与所述 SPS业务的业务标识绑定的下行载波标识；在确定的下行载波标识对应的下行载波上，向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送SPS激活信令；所述绑定关系中不同业务标识绑定的下行载波标识不同；方式七：网络侧确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送携带所述SPS业务的业务标识、用于配置SPS资源的RRC信令，在该下行载波上通过PDCCH向终端发送SPS激活信令；方式八：网络侧确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送携带所述SPS业务的业务标识的SPS激活信令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求2所述的方法，其特征在于，在采用方式一或方式四或方式五向终端发送SPS信令之后，该方法进一步包括：网络侧向终端发送携带所述SPS业务的业务标识的SPS释放信令，以指示终端在接收到该SPS释放信令后释放所述SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求2所述的方法，其特征在于，在采用方式六或方式七向终端发送SPS信令之后，该方法进一步包括：网络侧在确定的下行载波上向终端发送SPS释放信令，以指示终端在接收到该SPS释放信令后释放所述SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求2所述的方法，其特征在于，在采用方式八向终端发送SPS信令之后，该方法进一步包括：网络侧在确定的下行载波上向终端发送携带所述SPS业务的业务标识的SPS释放信令，以指示终端在接收到该SPS释放信令后释放所述SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求2所述的方法，其特征在于，在采用方式二或方式三向终端发送SPS信令之后，该方法进一步包括：网络侧利用确定的C-RNTI对SPS释放信令进行加扰，向终端发送加扰后的SPS释放信令，以指示终端在接收到该SPS释放信令后释放所述SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求2所述的方法，其特征在于，在采用方式二向终端发送SPS信令时，该方法进一步包括：网络侧将预先配置的业务标识与C-RNTI的绑定关系的信息发送给终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求2所述的方法，其特征在于，在采用方式六向终端发送SPS信令时，该方法进一步包括：网络侧将预先配置的业务标识与下行载波标识的绑定关系的信息发送给终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.如权利要求2-8中任一所述的方法，其特征在于，所述业务标识为：逻辑信道标识LCID，或与LCID具有绑定关系的SPS资源标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求8所述的方法，其特征在于，在所述业务标识为所述SPS资源标识时，该方法进一步包括：网络侧将预先配置的LCID与SPS资源标识的绑定关系的信息发送给终端。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求7或8或10所述的方法，其特征在于，网络侧通过专用信令将绑定关系的信息发送给终端。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.	&#8212;种半持续调度SPS传输方法，其特征在于，该方法包括：终端接收网络侧发来的SPS信令；终端根据所述SPS信令的发送方式和/或发送内容，确定所述SPS信令对应的SPS业务；终端利用所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.如权利要求12所述的方法，其特征在于，在所述SPS信令包括用于配置SPS资源的无线资源控制RRC信令和SPS激活信令时，所述终端根据所述SPS信令的发送方式和/或发送内容确定所述SPS信令对应的SPS业务包括以下方式一&#12316;方式七中的一种：方式一：在所述RRC信令和所述SPS激活信令中携带业务标识时，终端确定所述RRC信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述RRC信令对应的SPS业务； 确定所述SPS激活信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述SPS 激活信令对应的SPS业务；方式二 ：在所述RRC信令中携带C-RNTI时，终端根据网络侧下发的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述RRC信令中携带的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；根据所述绑定关系，确定与网络侧加扰所述SPS激活信令所使用的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；方式三：在所述RRC信令中携带C-RNTI和业务标识时，终端将该业务标识对应的SPS 业务确定为所述RRC信令对应的SPS业务；确定网络侧加扰所述SPS激活信令所使用的 C-RNTI为所述RRC信令中携带的C-RNTI后，将所述RRC信令中携带的业务标识对应的SPS 业务确定为所述SPS激活信令对应的SPS业务；方式四：在所述RRC信令中携带C-RNTI、所述SPS激活信令中携带业务标识时，终端将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；确定所述RRC信令中携带的C-RNTI为网络侧加扰所述SPS激活信令所使用的C-RNTI后，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；方式五：终端确定网络侧发送所述RRC信令和SPS激活信令所使用的下行载波，根据网络侧下发的业务标识与下行载波标识的绑定关系，确定与所述使用的下行载波的标识绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS 业务；方式六：在所述RRC信令中携带业务标识、并且网络侧在同一个下行载波上发送所述 RRC信令和SPS激活信令时，终端将所述业务标识对应的SPS业务确定为所述RRC信令和 SPS激活信令对应的SPS业务；方式七：在所述SPS激活信令中携带业务标识、并且网络侧在同一个下行载波上发送所述RRC信令和SPS激活信令时，终端将所述业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.如权利要求13所述的方法，其特征在于，在采用方式一或方式四确定所述SPS信令对应的SPS业务后，该方法进一步包括：终端接收到携带所述业务标识的SPS释放信令，释放网络侧为所述业务标识对应的 SPS业务分配的SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.如权利要求13所述的方法，其特征在于，在采用方式五或方式六确定所述SPS信令对应的SPS业务后，该方法进一步包括：终端在所述下行载波上接收到SPS释放信令，释放网络侧为所述业务标识对应的SPS 业务分配的SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.如权利要求13所述的方法，其特征在于，在采用方式七确定所述SPS信令对应的 SPS业务后，该方法进一步包括：终端在所述下行载波上接收到携带所述业务标识的SPS释放信令，释放网络侧为所述业务标识对应的SPS业务分配的SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.如权利要求13所述的方法，其特征在于，在采用方式二确定所述SPS信令对应的 SPS业务后，该方法进一步包括：终端接收利用C-RNTI加扰的SPS释放信令，根据网络侧下发的业务标识与C-RNTI的绑定关系，确定与所述C-RNTI绑定的业务标识，释放网络侧为该业务标识对应的SPS业务分配的SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.如权利要求13所述的方法，其特征在于，在采用方式三确定所述SPS信令对应的 SPS业务后，该方法进一步包括：终端接收利用C-RNTI加扰的SPS释放信令，确定该C-RNTI为所述RRC信令中携带的 C-RNTI后，释放网络侧为所述RRC信令中携带的业务标识对应的SPS业务分配的SPS资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.如权利要求13-18中任一所述的方法，其特征在于，所述业务标识为：逻辑信道标识LCID，或与LCID具有绑定关系的SPS资源标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.如权利要求19所述的方法，其特征在于，在所述业务标识为SPS资源标识时，所述确定所述业务标识对应的SPS业务包括：根据网络侧下发的LCID与SPS资源标识的绑定关系，确定与所述SPS资源标识绑定的 LCID，将该LCID对应的SPS业务确定为所述SPS资源标识对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim"> <div num="21" class="claim">
+      <div class="claim-text">21.	&#8212;种网络设备，其特征在于，该网络设备包括：业务确定单元，用于确定SPS业务与待配置给终端的SPS资源之间的绑定关系；信令发送单元，用于按照所述SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送SPS信令，以指示终端在接收到该SPS信令后利用所述SPS资源传输所述SPS业务的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.如权利要求21所述的网络设备，其特征在于，所述信令发送单元用于：向终端发送用于配置SPS资源的无线资源控制RRC信令，该RRC信令中携带所述SPS 业务的业务标识；通过物理下行控制信道PDCCH向终端发送SPS激活信令，该SPS激活信令中携带所述SPS业务的业务标识；或者，根据预先配置的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述 SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的 RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的 SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的 C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的 C-RNTI不同；或者，根据预先配置的业务标识与下行载波标识的绑定关系，确定与所述SPS业务的业务标识绑定的下行载波标识；在确定的下行载波标识对应的下行载波上，向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送SPS激活信令；所述绑定关系中不同业务标识绑定的下行载波标识不同；或者，确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送携带所述SPS业务的业务标识、用于配置SPS资源的RRC信令，在该下行载波上通过PDCCH向终端发送SPS激活信令；或者，确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送携带所述SPS业务的业务标识的SPS 激活信令。</div>
+    </div>
+    </div> <div class="claim"> <div num="23" class="claim">
+      <div class="claim-text">23.	&#8212;种终端，其特征在于，该终端包括：信令接收单元，用于接收网络侧发来的SPS信令；业务确定单元，用于根据所述SPS信令的发送方式和/或发送内容，确定所述SPS信令对应的SPS业务；SPS传输单元，用于利用所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.如权利要求23所述的终端，其特征在于，所述信令接收单元用于：接收网络侧发来的用于配置SPS资源的无线资源控制RRC信令和SPS激活信令；所述业务确定单元用于：在所述RRC信令和所述SPS激活信令中携带业务标识时，确定所述RRC信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述RRC信令对应的SPS业务；确定所述 SPS激活信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述SPS激活信令对应的SPS业务；或者，在所述RRC信令中携带C-RNTI时，根据网络侧下发的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述RRC信令中携带的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；根据所述绑定关系，确定与网络侧加扰所述SPS激活信令所使用的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；或者，在所述RRC信令中携带C-RNTI和业务标识时，将该业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；确定网络侧加扰所述SPS激活信令所使用的C-RNTI为所述 RRC信令中携带的C-RNTI后，将所述RRC信令中携带的业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；或者，在所述RRC信令中携带C-RNTI、所述SPS激活信令中携带业务标识时，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；确定所述RRC信令中携带的 C-RNTI为网络侧加扰所述SPS激活信令所使用的C-RNTI后，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；或者，确定网络侧发送所述RRC信令和SPS激活信令所使用的下行载波，根据网络侧下发的业务标识与下行载波标识的绑定关系，确定与所述使用的下行载波的标识绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务；或者，在所述RRC信令中携带业务标识、并且网络侧在同一个下行载波上发送所述RRC信令和SPS激活信令时，将所述业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务；或者，在所述SPS激活信令中携带业务标识、并且网络侧在同一个下行载波上发送所述RRC 信令和SPS激活信令时，将所述业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim"> <div num="25" class="claim">
+      <div class="claim-text">25.	一种无线通信系统，其特征在于，该系统包括：网络设备，用于确定SPS业务与待配置给终端的SPS资源之间的绑定关系；按照所述 SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送指示该终端根据所述SPS资源传输所述SPS业务的数据的SPS信令；终端，用于接收所述SPS信令，根据所述SPS信令的发送方式和/或发送内容，确定所述SPS信令对应的SPS业务；利用所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.如权利要求25所述的系统，其特征在于，所述网络设备用于：向终端发送用于配置SPS资源的无线资源控制RRC信令，该RRC信令中携带所述SPS 业务的业务标识；通过物理下行控制信道PDCCH向终端发送SPS激活信令，该SPS激活信令中携带所述SPS业务的业务标识；或者，根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的 C-RNTI 不同；所述终端用于：接收所述RRC信令和所述SPS激活信令，确定所述RRC信令中携带的业务标识对应的 SPS业务，将该SPS业务确定为所述RRC信令对应的SPS业务；确定所述SPS激活信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.如权利要求25所述的系统，其特征在于，所述网络设备用于：根据预先配置的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述 SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的 RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的 SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；所述终端用于：接收所述RRC信令和所述SPS激活信令，根据所述绑定关系，确定与所述RRC信令中携带的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令对应的 SPS业务；根据所述绑定关系，确定与网络侧加扰所述SPS激活信令所使用的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.如权利要求25所述的系统，其特征在于，所述网络设备用于：根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；所述终端用于：接收所述RRC信令和所述SPS激活信令，将所述RRC信令中携带的业务标识对应的SPS 业务确定为所述RRC信令对应的SPS业务；确定网络侧加扰所述SPS激活信令所使用的 C-RNTI为所述RRC信令中携带的C-RNTI后，将所述RRC信令中携带的业务标识对应的SPS 业务确定为所述SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.如权利要求25所述的系统，其特征在于，所述网络设备用于：根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的 C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同所述终端用于：接收所述RRC信令和所述SPS激活信令，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；确定所述RRC信令中携带的C-RNTI 为网络侧加扰所述SPS激活信令所使用的C-RNTI后，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.如权利要求25所述的系统，其特征在于，所述网络设备用于：根据预先配置的业务标识与下行载波标识的绑定关系，确定与所述SPS业务的业务标识绑定的下行载波标识；在确定的下行载波标识对应的下行载波上，向终端发送用于配置 SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送SPS激活信令；所述绑定关系中不同业务标识绑定的下行载波标识不同；所述终端用于：在所述下行载波上接收所述RRC信令和所述SPS激活信令，根据所述绑定关系，确定与所述下行载波的标识绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31.如权利要求25所述的系统，其特征在于，所述网络设备用于：确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送携带所述SPS业务的业务标识、用于配置SPS资源的RRC信令，在该下行载波上通过PDCCH向终端发送SPS激活信令；所述终端用于：在所述下行载波上接收所述RRC信令和所述SPS激活信令，将所述RRC信令中携带的业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.如权利要求25所述的系统，其特征在于，所述网络设备用于：确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送携带所述SPS业务的业务标识的SPS 激活信令所述终端用于：在所述下行载波上接收所述RRC信令和所述SPS激活信令，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</div>
+    </div>
+    </div> <div class="claim"> <div num="33" class="claim">
+      <div class="claim-text">33.	一种逻辑信道优先级处理LCP方法，其特征在于，该方法包括：终端确定网络侧在上行成员载波上配置了半持续调度SPS资源，并且网络侧未在该上行成员载波上配置动态调度资源；终端在该上行成员载波上为所述SPS资源组织媒体接入控制协议数据单元MAC PDU0</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.如权利要求33所述的方法，其特征在于，该方法还包括：终端确定网络侧在除所述上行成员载波之外的一个或多个其他上行成员载波上配置了动态调度资源；将在所述一个或多个上行成员载波上配置的动态调度资源之和作为总的可用资源， 根据所述总的可用资源以及动态调度资源所针对的各业务的优先级，为所述各业务分配资源；在所述一个或多个上行成员载波上，为所述各业务分配的资源组织MACPDU。</div>
+    </div>
+    </div> <div class="claim"> <div num="35" class="claim">
+      <div class="claim-text">35.	一种终端，其特征在于，该终端包括：第一确定单元，用于确定网络侧在上行成员载波上配置了半持续调度SPS资源，并且网络侧未在该上行成员载波上配置动态调度资源；第一组织单元，用于在所述上行成员载波上为所述SPS资源组织媒体接入控制协议数据单元MAC PDUo</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.如权利要求35所述的终端，其特征在于，该终端还包括：第二确定单元，用于确定网络侧在除所述上行成员载波之外的一个或多个其他上行成员载波上配置了动态调度资源；第二组织单元，用于将在所述一个或多个上行成员载波上配置的动态调度资源之和作为总的可用资源，根据所述总的可用资源以及动态调度资源所针对的各业务的优先级，为所述各业务分配资源；在所述一个或多个上行成员载波上，为所述各业务分配的资源组织MAC PDU。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES43465575" lang="ZH" load-source="patent-office" class="description">
+    <p>半持续调度、传输及处理方法、系统和设备</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及无线通信领域，尤其涉及一种半持续调度、传输及处理方法、系统和设备。</p>
+    <p>背景技术</p>
+    <p>[0002]	为了减少控制信令的开销，长期演进（LTE)系统针对数据包大小基本相同且到达时间间隔比较有规律的业务引入了半持续调度（SPQ且规定一个UE只能配置一套SPS资源。</p>
+    <p>[0003]	半持续调度是指网络侧预先将半持续调度的周期和半持续调度小区无线网络临时标识（SPS C-RNTI)配置给终端（UE)，并向UE发送半持续调度激活信令。UE根据配置的 SPS C-RNTI检测到针对本UE的半持续调度激活信令后，按照配置的半持续调度的周期每隔一定时间，利用半持续调度激活信令所指示的SPS资源进行数据的收发。后续网络侧会向UE发送半持续调度释放信令，以释放该SPS资源。</p>
+    <p>[0004]	半持续调度的周期和使用的SPS C-RNTI通过无线资源控制（RRC)信令配置给UE， 如表1和表2所示。半持续调度激活/释放信令通过物理下行控制信道（PDCCH，physical downlink control channel)发送给 UE0</p>
+    <p>[0005]	PDCCH 具有多种下行控制信息（DCI，Downlink Control Information)格式（DCI format), DCI formatO用于上行，其余DCI formatl/lA/2/2A等格式均用于下行。用于激活/释放SPS资源的PDCCH DCI格式中某些域需要取特殊值，需要取特殊值的各个域如表 3和表4所示。</p>
+    <p>[0006]	SPS的RRC配置信令格式以及SPS资源激活/释放的PDCCH信令格式如下表1至表4所示：</p>
+    <p>[0007]</p>
+    <p>域名	含义semiPersistSchedC-RNTI	用于SPS调度的C-RNTIsemiPersistSchedlntervalDL	下行SPS资源的周期，一般配置为下行数据包到达的时间间隔nuinberOf Conf SPS - Processes	下行半持续调度使用的HARQ进程个数nl-PUCCH-AN-PersistentList	下行半持续调度数据传输的ACK反馈使用的上行控制信道（PUCCH，physical uplink control channel)资源编号</p>
+    <p>[0008]	表1配置下行SPS的RRC信令包含的内容</p>
+    <p>[0009]域名	含义semiPersistSchedC-RNTI	用于SPS调度的C-RNTIsemiPersistSchedlntervalUL	上行SPS资源的周期，一般配置为上行数据包到达的时间间隔implicitReleaseAfter	表示经过几次空传输后SPS资源隐式释放pO-NominalPUSCH-Persistent	用于进行上行功率控制的相关参数pO-UE-PUSCH-Persistent	用于进行上行功率控制的相关参数twoIntervalsConfig	是否使用多模SPS (仅适用于TDD系统）</p>
+    <p>[0010]	表2配置上行SPS的RRC信令包含的内容</p>
+    <p>[0011]</p>
+    <p>	DCI format 0	DCI format 1/1A	DCI format 2/2ATPC command for scheduled PUSCH (PUSCH的功控调整命令）	设置为‘00’	N/A  (表示没有该域）	N/A  (表示没有该域）Cyclic shift DM RS (解调参考符号的循环移位）	设置为‘000，	N/A  (表示没有该域）	N/A  (表示没有该域）Modulation and coding scheme and redundancy version(调制编码方式以及冗余版本）	MSB被设置为‘0，	N/A  (表示没有该域）	N/A  (表示没有该域）HARQ process number (HARQ进程编号）	Ν/Α  (表示没有该域）	FDD ：设置为 ‘000，  TDD ：设置为 ‘0000，	FDD ：设置为 ‘000，  TDD ：设置为 ‘0000，Modulation and coding scheme (调制编码机制）	N/A  (表示没有该域）	MSB被设置为 '0，	对于激活传输块=MSB被设置为‘0，Redundancy version (冗余版本）	N/A  (表示没有该域）	设置为‘00’	对于激活传输块：被设置为 '00'[0012]</p>
+    <p>[0013]	表3 SPS资源激活PDCCH信令各个特殊域的取值</p>
+    <p>[0014]</p>
+    <p>	DCI format 0	DCI format IATPC command for scheduled PUSCH (PUSCH的功控调整命令）	设置为‘00’	N/A  (表示没有该域）Cyclic shift DM RS (解调参考符号的循环移位）	设置为‘000，	N/A  (表示没有该域）Modulation and coding scheme and redundancy version  (调制编码方式以及冗余版本）	设置为‘11111，	N/A  (表示没有该域）Resource block assignment and hopping resource allocation  (资源分配以及跳频资源分配）	全部比特设置为‘1’	N/A  (表示没有该域）HARQ process number (HARQ进程编号）	N/A  (表示没有该域）	FDD ：设置为‘000， TDD ：设置为 ‘0000’Modulation and coding scheme (调制编码机制）	N/A  (表示没有该域）	设置为‘11111，Redundancy version (冗余版本）	N/A  (表示没有该域）	设置为‘00’Resource block assignment  (资源块分配）	N/A  (表示没有该域）	全部比特设置为‘1’</p>
+    <p>[0015]</p>
+    <p>[0016]	表4 SPS资源释放PDCCH信令各个特殊域的取值</p>
+    <p>[0017]	LTE系统只有一个成员载波，如果针对UE将某个子帧配置为SPS资源，此时又接收到针对该子帧的PDCCH动态调度信令，则UE只能按照PDCCH动态调度信令的指示进行数据传输，忽略SPS分配的资源。[0018]	长期演进升级（LTE Advanced, LTE-A)系统的峰值速率较LTE有很大提高，要求达到下行l(ibps，上行500Mbps。同时，LTE-A系统要求和LTE系统很好地兼容。基于提高峰值速率、与LTE系统兼容和充分利用频率资源的需要，LTE-A系统引入了载波聚合（Carrier Aggregation, CA)技术。</p>
+    <p>[0019]	CA技术是指在一个小区内上下行各包含多个成员载波（ComponentCarrier，CC)， 而不是LTE及之前的无线通信系统中只有一套成员载波的模式。基站（eNB)对小区内的多套成员载波统一管理和调度。成员载波可以是连续或者非连续的，为了和LTE兼容，每个成员载波的最大带宽为20MHz。</p>
+    <p>[0020]	从UE角度，一个UE可以同时在多个下行成员载波上接收下行数据和调度信息，在多个上行成员载波上发送上行数据和对下行数据的反馈。</p>
+    <p>[0021]	CA机制下LTE-A系统的下行和上行层2结构与LTE系统相同之处在于：</p>
+    <p>[0022]分组数据集中协议（Packet	Data Convergence Protocol，PDCP)、无线链路控制层(radio link control, RLC)的结构与LTE系统相同；媒体接入控制(mediumaccess control, MAC)层功能和LTE系统相同，主要对UE进行调度，包括优先级以及资源分配等。</p>
+    <p>[0023]	不同之处在于：</p>
+    <p>[0024]	针对每个成员载波都有一个独立的混合自动重传请求（HARQ)实体；每个成员载波对应一条独立的传输信道；每个成员载波独立组织传输块（Transport Block, TB)，重传不可以交换成员载波。</p>
+    <p>[0025]	目前公开的LTE-A系统的逻辑信道优先级处理（logical channel procedure, LCP)机制的方案如下，如图1所示：</p>
+    <p>[0026]	步骤0 ：将基站通过上行调度许可（UL grant)信令为UE分配的所有上行成员载波（UL CC)上的传输资源合并为总的可用上行资源；</p>
+    <p>[0027]	步骤1 ：业务（radio bearer, RB)按照RRC层配置的优先（priority)值从小到大进行优先级排序，然后按照RB优先级依次进行第一轮资源分配，即按照RRC层配置的优先化比特速率(Prioritized Bit Rate, PBR)分配资源；</p>
+    <p>[0028]	步骤2 ：如果还有剩余资源且RB还有剩余未分配资源的数据，则按照RB的优先级进行再第二轮资源分配直到资源耗尽或者RB所有数据都分配到资源，第二轮资源分配不考虑PBR ；</p>
+    <p>[0029]	步骤3 ：将分配给一个RB的资源进行合并；</p>
+    <p>[0030]	步骤4 ：对分配了上行传输资源的UL CC按照某种原则排序，可能的原则：信道质量原则；随机排序原则；UL CC编号原则；</p>
+    <p>[0031]	步骤5 ：将分配给RB的资源映射为媒体接入控制协议数据单元（MACPDU)，资源分</p>
+    <p>配结束。</p>
+    <p>[0032]	在实现本发明的过程中，发明人发现现有技术中存在以下技术问题：</p>
+    <p>[0033]	在多载波系统中每个载波上的数据传输是独立的，如果一个UE同时有多个符合 SPS资源分配特征的业务，则为了节省控制信令的开销，对多个业务都可以使用SPS方式， 但是针对不同业务分配的SPS资源的周期和大小可能是不同的，而且针对多个业务的SPS 资源既可以配置在同一个CC上，也可以分别配置在不同CC上。因此UE如何确定网络侧为本UE配置的SPS资源所针对的业务，成为需要解决的问题。[0034]	同时，现有技术中的LCP方案同时考虑SPS资源和动态调度资源，并为SPS资源和动态调度资源组织MAC PDU,如何为SPS资源单独组织MACPDU，也是需要解决的问题。</p>
+    <p>发明内容</p>
+    <p>[0035]	本发明实施例提供一种半持续调度及传输的方法、系统和设备，用于解决现有技术中终端无法确定利用网络侧为本UE配置的SPS资源传输何种业务数据的问题。</p>
+    <p>[0036]	一种半持续调度SPS方法，该方法包括：</p>
+    <p>[0037]	网络侧确定SPS业务与待配置给终端的SPS资源之间的绑定关系；</p>
+    <p>[0038]	网络侧按照所述SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送 SPS信令，以指示终端在接收到该SPS信令后根据所述SPS资源传输所述SPS业务的数据。</p>
+    <p>[0039]	一种半持续调度SPS传输方法，该方法包括：</p>
+    <p>[0040]	终端接收网络侧发来的SPS信令；</p>
+    <p>[0041]	终端根据所述SPS信令的发送方式和/或发送内容，确定所述SPS信令对应的SPS 业务；</p>
+    <p>[0042]	终端根据所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</p>
+    <p>[0043]	一种网络设备，该网络设备包括：</p>
+    <p>[0044]	SPS业务确定单元，用于确定SPS业务与待配置给终端的SPS资源之间的绑定关系；</p>
+    <p>[0045]	信令发送单元，用于按照所述SPS业务对应的SPS信令发送方式和/或发送内容， 向终端发送SPS信令，以指示终端在接收到该SPS信令后根据所述SPS资源传输所述SPS 业务的数据。</p>
+    <p>[0046]	一种终端，该终端包括：</p>
+    <p>[0047]	信令接收单元，用于接收网络侧发来的SPS信令；</p>
+    <p>[0048]	SPS业务确定单元，用于根据所述SPS信令的发送方式和/或发送内容，确定所述 SPS信令对应的SPS业务；</p>
+    <p>[0049]	SPS传输单元，用于根据所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</p>
+    <p>[0050]	一种无线通信系统，该系统包括：</p>
+    <p>[0051]	网络设备，用于确定SPS业务与待配置给终端的SPS资源之间的绑定关系；按照所述SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送指示该终端根据所述SPS 资源传输所述SPS业务的数据的SPS信令；</p>
+    <p>[0052]	终端，用于接收所述SPS信令，根据所述SPS信令的发送方式和/或发送内容，确定所述SPS信令对应的SPS业务；根据所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</p>
+    <p>[0053]	本发明实施例还提供一种逻辑信道优先级处理LCP方法和设备，用于解决载波聚合系统中如何为SPS资源单独组织MAC PDU的问题。</p>
+    <p>[0054]	一种逻辑信道优先级处理LCP方法，该方法包括：</p>
+    <p>[0055]	终端确定网络侧在上行成员载波上配置了半持续调度SPS资源，并且网络侧未在该上行成员载波上配置动态调度资源；[0056]	终端在该上行成员载波上为所述SPS资源组织媒体接入控制协议数据单元MAC PDU。</p>
+    <p>[0057]	一种终端，该终端包括：</p>
+    <p>[0058]	第一确定单元，用于确定网络侧在上行成员载波上配置了半持续调度SPS资源， 并且网络侧未在该上行成员载波上配置动态调度资源；</p>
+    <p>[0059]	第一组织单元，用于在所述上行成员载波上为所述SPS资源组织媒体接入控制协议数据单元MAC PDU。</p>
+    <p>[0060]	本发明中，网络侧确定SPS业务与待配置给终端的SPS资源之间的绑定关系，并按照该SPS业务对应的SPS信令发送方式和/或发送内容向终端发送SPS信令，终端接收该 SPS信令，根据该SPS信令的发送方式和/或发送内容，确定该SPS信令对应的SPS业务，并利用该SPS信令所指示的SPS资源传输该SPS业务的数据。可见，采用本发明，终端能够根据SPS信令的发送方式和/或发送内容，确定该SPS信令所针对的SPS业务，进而利用SPS 信令所指示的SPS资源传输该SPS业务的数据。</p>
+    <p>[0061]	同时，终端确定网络侧在上行成员载波上配置了 SPS资源，并且网络侧未在该上行成员载波上配置动态调度资源后，在该上行成员载波上为该SPS资源组织MAC PDU，可见，本发明实现在仅分配了 SPS资源的CC上单独为SPS资源组织MAC PDU的方案。</p>
+    <p>附图说明</p>
+    <p>[0062]	图1为现有技术中的LCP流程示意图；</p>
+    <p>[0063]	图2为本发明实施例提供的方法流程示意图；</p>
+    <p>[0064]	图3为本发明实施例提供的系统结构示意图；</p>
+    <p>[0065]	图4为本发明实施例提供的网络设备结构示意图；</p>
+    <p>[0066]	图5为本发明实施例提供的终端结构示意图；</p>
+    <p>[0067]	图6为本发明实施例提供的方法流程示意图；</p>
+    <p>[0068]	图7为本发明实施例中LCP流程示意图；</p>
+    <p>[0069]	图8为本发明实施例提供的终端结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0070]	为了使得UE能够区分网络侧为本UE配置的SPS资源所针对的业务，本发明实施例提供一种SPS及传输方法，本方法中，网络侧确定SPS业务与待配置给终端的SPS资源之间的绑定关系，向终端发送指示终端根据该SPS资源传输该SPS业务的数据的SPS信令，终端利用该SPS信令指示的SPS资源传输该SPS业务的数据。</p>
+    <p>[0071]	参见图2，本发明实施例提供的SPS及传输方法，具体包括以下步骤：</p>
+    <p>[0072]	步骤20 ：网络侧确定SPS业务和待配置给终端的SPS资源之间的绑定关系；</p>
+    <p>[0073]	步骤21 ：网络侧按照所述SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送SPS信令，以指示终端在接收到该SPS信令后利用所述SPS资源传输所述SPS业务的数据；</p>
+    <p>[0074]	步骤22 ：终端接收网络侧发来的SPS信令；根据该SPS信令的发送方式和/或发送内容，确定该SPS信令对应的SPS业务；[0075]	步骤23 ：终端利用该SPS信令所指示的SPS资源传输所述SPS业务的数据。</p>
+    <p>[0076]	在网络侧：</p>
+    <p>[0077]	步骤21的具体实现可以采用以下方式一&#12316;方式八中的一种：</p>
+    <p>[0078]	方式一：网络侧向终端发送用于配置SPS资源的无线资源控制RRC信令，该RRC信令中携带所述SPS业务的业务标识；通过物理下行控制信道PDCCH向终端发送SPS激活信令，该SPS激活信令中携带所述SPS业务的业务标识；或者，</p>
+    <p>[0079]	方式二 ：网络侧根据预先配置的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，</p>
+    <p>[0080]	方式三：网络侧根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS 业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过 PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI 不同；或者，</p>
+    <p>[0081]	方式四：网络侧根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS 业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC 信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI 不同；或者，</p>
+    <p>[0082]	方式五：网络侧根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS 业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过 PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，</p>
+    <p>[0083]	方式六：网络侧根据预先配置的业务标识与下行载波标识的绑定关系，确定与所述SPS业务的业务标识绑定的下行载波标识；在确定的下行载波标识对应的下行载波上， 向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送SPS激活信令；所述绑定关系中不同业务标识绑定的下行载波标识不同；或者，</p>
+    <p>[0084]	方式七：网络侧确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送携带所述SPS业务的业务标识、用于配置SPS资源的RRC信令，在该下行载波上通过 PDCCH向终端发送SPS激活信令；或者，</p>
+    <p>[0085]	方式八：网络侧确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送携带所述SPS业务的业务标识的SPS激活信令。</p>
+    <p>[0086]	在采用方式一或方式四或方式五向终端发送SPS信令之后，该方法进一步包括：</p>
+    <p>[0087]	网络侧向终端发送携带所述SPS业务的业务标识的SPS释放信令，以指示终端在接收到该SPS释放信令后释放所述SPS资源。[0088]	在采用方式六或方式七向终端发送SPS信令之后，该方法进一步包括：</p>
+    <p>[0089]	网络侧在确定的下行载波上向终端发送SPS释放信令，以指示终端在接收到该 SPS释放信令后释放所述SPS资源。</p>
+    <p>[0090]	在采用方式八向终端发送SPS信令之后，该方法进一步包括：</p>
+    <p>[0091]	网络侧在确定的下行载波上向终端发送携带所述SPS业务的业务标识的SPS释放信令，以指示终端在接收到该SPS释放信令后释放所述SPS资源。</p>
+    <p>[0092]	在采用方式二或方式三向终端发送SPS信令之后，该方法进一步包括：</p>
+    <p>[0093]	网络侧利用确定的C-RNTI对SPS释放信令进行加扰，向终端发送加扰后的SPS释放信令，以指示终端在接收到该SPS释放信令后释放所述SPS资源。</p>
+    <p>[0094]	在采用方式二向终端发送SPS信令时，该方法进一步包括：</p>
+    <p>[0095]	网络侧将预先配置的业务标识与C-RNTI的绑定关系的信息发送给终端。</p>
+    <p>[0096]	在采用方式六向终端发送SPS信令时，该方法进一步包括：</p>
+    <p>[0097]	网络侧将预先配置的业务标识与下行载波标识的绑定关系的信息发送给终端。</p>
+    <p>[0098]	所述业务标识为：</p>
+    <p>[0099]	逻辑信道标识LCID，或与LCID具有绑定关系的SPS资源标识。</p>
+    <p>[0100]	在所述业务标识为所述SPS资源标识时，该方法进一步包括：</p>
+    <p>[0101]	网络侧将预先配置的LCID与SPS资源标识的绑定关系的信息发送给终端。</p>
+    <p>[0102]	网络侧可以通过专用信令将业务标识与C-RNTI的绑定关系、业务标识与下行载波标识的绑定关系、LCID与SPS资源标识的绑定关系的信息发送给终端。</p>
+    <p>[0103]	在终端侧：</p>
+    <p>[0104]	对应于上述方式一和方式五，步骤22的具体实现采用如下方式1 :</p>
+    <p>[0105]	方式1 ：在所述RRC信令和所述SPS激活信令中携带业务标识时，终端确定所述 RRC信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述RRC信令对应的SPS 业务；确定所述SPS激活信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述 SPS激活信令对应的SPS业务；</p>
+    <p>[0106]	对应于上述方式二，步骤22的具体实现采用如下方式2 ：</p>
+    <p>[0107]	方式2 ：在所述RRC信令中携带C-RNTI时，终端根据网络侧下发的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述RRC信令中携带的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；根据所述绑定关系，确定与网络侧加扰所述SPS激活信令所使用的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；</p>
+    <p>[0108]	对应于上述方式三，步骤22的具体实现采用如下方式3 ：</p>
+    <p>[0109]	方式3 ：在所述RRC信令中携带C-RNTI和业务标识时，终端将该业务标识对应的 SPS业务确定为所述RRC信令对应的SPS业务；确定网络侧加扰所述SPS激活信令所使用的C-RNTI为所述RRC信令中携带的C-RNTI后，将所述RRC信令中携带的业务标识对应的 SPS业务确定为所述SPS激活信令对应的SPS业务；</p>
+    <p>[0110]	对应于上述方式四，步骤22的具体实现采用如下方式4:</p>
+    <p>[0111]	方式4 ：在所述RRC信令中携带C-RNTI、所述SPS激活信令中携带业务标识时，终端将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；确定所述RRC信令中携带的C-RNTI为网络侧加扰所述SPS激活信令所使用的C-RNTI后，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；</p>
+    <p>[0112]	对应于上述方式六，步骤22的具体实现采用如下方式5 ：</p>
+    <p>[0113]	方式5:终端确定网络侧发送所述RRC信令和SPS激活信令所使用的下行载波，根据网络侧下发的业务标识与下行载波标识的绑定关系，确定与所述使用的下行载波的标识绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务；</p>
+    <p>[0114]	对应于上述方式七，步骤22的具体实现采用如下方式6 ：</p>
+    <p>[0115]	方式6 ：在所述RRC信令中携带业务标识、并且网络侧在同一个下行载波上发送所述RRC信令和SPS激活信令时，终端将所述业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务；</p>
+    <p>[0116]	对应于上述方式八，步骤22的具体实现采用如下方式7 ：</p>
+    <p>[0117]	方式7 ：在所述SPS激活信令中携带业务标识、并且网络侧在同一个下行载波上发送所述RRC信令和SPS激活信令时，终端将所述业务标识对应的SPS业务确定为所述RRC 信令和SPS激活信令对应的SPS业务。</p>
+    <p>[0118]	在采用方式1或方式4确定所述SPS信令对应的SPS业务后，该方法进一步包括：</p>
+    <p>[0119]	终端接收到携带所述业务标识的SPS释放信令，释放网络侧为所述业务标识对应的SPS业务分配的SPS资源。</p>
+    <p>[0120]	在采用方式5或方式6确定所述SPS信令对应的SPS业务后，该方法进一步包括：</p>
+    <p>[0121]	终端在所述下行载波上接收到SPS释放信令，释放网络侧为所述业务标识对应的 SPS业务分配的SPS资源。</p>
+    <p>[0122]	在采用方式7确定所述SPS信令对应的SPS业务后，该方法进一步包括：</p>
+    <p>[0123]	终端在所述下行载波上接收到携带所述业务标识的SPS释放信令，释放网络侧为所述业务标识对应的SPS业务分配的SPS资源。</p>
+    <p>[0124]	在采用方式二确定所述SPS信令对应的SPS业务后，该方法进一步包括：</p>
+    <p>[0125]	终端接收利用C-RNTI加扰的SPS释放信令，根据网络侧下发的业务标识与C-RNTI 的绑定关系，确定与所述C-RNTI绑定的业务标识，释放网络侧为该业务标识对应的SPS业务分配的SPS资源。</p>
+    <p>[0126]	在采用方式三确定所述SPS信令对应的SPS业务后，该方法进一步包括：</p>
+    <p>[0127]	终端接收利用C-RNTI加扰的SPS释放信令，确定该C-RNTI为所述RRC信令中携带的C-RNTI后，释放网络侧为所述RRC信令中携带的业务标识对应的SPS业务分配的SPS 资源。</p>
+    <p>[0128]	所述业务标识为：</p>
+    <p>[0129]	逻辑信道标识LCID，或与LCID具有绑定关系的SPS资源标识。</p>
+    <p>[0130]	在所述业务标识为SPS资源标识时，所述确定所述业务标识对应的SPS业务包括：</p>
+    <p>[0131]	根据网络侧下发的LCID与SPS资源标识的绑定关系，确定与所述SPS资源标识绑定的LCID，将该LCID对应的SPS业务确定为所述SPS资源标识对应的SPS业务。</p>
+    <p>[0132]	下面以具体实施例对本发明进行说明：</p>
+    <p>18[0133]	与LTE系统针对一个UE只能配置一套SPS资源不同，LTE-A引入了载波聚合技术， 因此针对同一个UE可以配置多套SPS资源，但是多套SPS资源的周期和大小可能不同。为了使终端能够区分针对不同业务配置的SPS资源，本发明提出了一种SPS资源和业务绑定的方法。在LTE系统中每个业务具有唯一的LCID，因此可以通过LCID来区分业务，基于此可能的SPS资源和业务绑定的方法可以具体化为如下几种方案：</p>
+    <p>[0134]	方案一：使用同一个SPS C-RNTI，RRC层SPS配置中携带LCID指示，PDCCH SPS激活/释放信令中携带LCID指示；</p>
+    <p>[0135]	方案二 ：使用同一个SPS C-RNTI，RRC层SPS配置信令中增加SPSresource index, PDCCH SPS 激活 / 释放信令中携带该 SPS resource index, SPSresource index 和 LCID 绑定，绑定关系通过信令通知UE ；</p>
+    <p>[0136]	方案三：使用多个SPS C-RNTI, SPS C-RNTI和LCID绑定，绑定关系通过信令通知 UE，利用SPS业务对应的SPS C-RNTI对PDCCH CRC进行加扰；</p>
+    <p>[0137]	方案四：使用多个SPS C-RNTI，每个SPS的RRC配置信令中携带LCID，利用SPS业务对应的SPS C-RNTI对PDCCH CRC进行加扰；</p>
+    <p>[0138]	方案五：使用多个SPS C-RNTI，利用SPS业务对应的SPS C-RNTI对PDCCH CRC进行加扰，PDCCH激活/释放信令中携带LCID指示；</p>
+    <p>[0139]	方案六：使用多个SPS C-RNTI，PDCCH激活/释放信令和SPS资源的RRC配置信令中都携带LCID。</p>
+    <p>[0140]	除上述SPS资源和SPS业务绑定的方法之外，如果是在不同CC上配置不同的DL SPS资源，还可以通过CC和LCID绑定实现SPS资源和SPS业务的绑定。比如：</p>
+    <p>[0141]	方案七：使用同一个SPS C-RNTI，每个CC上单独发送针对该CC上SPS的RRC配置消息和PDCCH激活/释放信令，CC和LCID绑定，绑定关系通过信令通知UE ；</p>
+    <p>[0142]	方案八：使用同一个SPS (^^11，1^(：信令中携带^：10，5?5 RRC配置信令和PDCCH SPS激活/释放信令配置的SPS资源针对哪个DL CC,则在哪个DL CC上发送；</p>
+    <p>[0143]	方案九：使用同一个SPS C-RNTI,PDCCH SPS激活/释放信令中携带LCID，SPS RRC 配置信令和PDCCH SPS激活/释放信令配置的SPS资源针对哪个DL CC，则在哪个DL CC上发送；</p>
+    <p>[0144]	上述方案中，方案一&#12316;方案六具有通用性，适合任何情况，方案七&#12316;方案九适用情况受限。</p>
+    <p>[0145]	基于上述SPS业务和资源绑定的方法，多载波系统的LCP过程也可以有如下两种实现方式：</p>
+    <p>[0146]	方式1 ：不单独考虑SPS，将所有CC上的UL grant之和统一考虑进行LCP分配（和背景描述的LTE-A的LCP机制一致)；</p>
+    <p>[0147]	方式2 ：单独考虑只分配了 SPS资源的CC，LCP过程计算总的上行许可资源时只考虑未分配SPS资源但是有UL grant的CC上的资源以及即使有SPS资源分配但是有新的UL grant的CC上的资源，且LCP业务排队也不考虑SPS业务，即：有SPS资源分配的UL CC上单独组织MAC PDU,其它所有CC 一起考虑如何组织MAC PDU ；</p>
+    <p>[0148]	SPS资源和SPS业务绑定的一些实施例如下：</p>
+    <p>[0149]	实施例一（方案一）：[0150] 方案一下SPS配置较LTE系统SPS配置区别如下：</p>
+    <p>[0151 ] 配置SPS资源的RRC信令格式需要增加一个LCID域，其它域不变，同LTE (如表5、 6所示)；</p>
+    <p>[0152]	激活/释放SPS资源的PDCCH也需要增加一个LCID域，其它域不变，同LTE (各个特殊域取值以及增加的域如表7所示，需要注意PDCCH DCI中与LTE &#8212;致的域没有列出）。</p>
+    <p>[0153]	实施例2(方案二）：</p>
+    <p>[0154]	方案二下的思想与方案一类似，只是新增了 LCID和SPS resource index的对应关系，这样在RRC信令和PDCCH中就不需要携带LCID 了，只需要携带该SPS resource index 即可。LCID和SPS resource index的对应关系可以通过专用信令通知UE，比如采用RRC</p>
+    <p>[0155]	实施例3(方案三）：</p>
+    <p>[0156]	方案三下配置SPS资源的RRC信令格式和PDCCH信令格式都不需要改变（如表1、 表2、表2配置上行SPS的RRC信令包含的内容</p>
+    <p>[0157]、表3	SPS资源激活PDCCH信令各个特殊域的取值</p>
+    <p>[0158]	所示），只是需要扩展SPS C-RNTI的个数，并且用于激活/释放SPS资源的PDCCH 的CRC需要使用该SPS业务对应的SPS C-RNTI进行加扰。需要注意基站需要将SPS C-RNTI 和LCID的对应关系通过专用信令通知UE，比如使用RRC信令。</p>
+    <p>[0159]	实施例四（方案四）：</p>
+    <p>[0160]	方案四下SPS配置较LTE系统SPS配置区别如下：</p>
+    <p>[0161 ]	配置SPS资源的RRC信令格式需要增加一个LCID域，其它域不变，同LTE (如表1、 2所示）；</p>
+    <p>[0162]	激活/释放SPS资源的PDCCH的DCI信令格式不变，同表3和表4 ；</p>
+    <p>[0163]	激活/释放SPS资源的PDCCH CRC需要用针对该SPS业务的SPS C-RNTI进行加扰。</p>
+    <p>[0164]	实施例5(方案五）：</p>
+    <p>[0165]	方案五下SPS配置较LTE系统SPS配置区别如下：</p>
+    <p>[0166]	配置SPS资源的RRC信令格式同LTE (如表1、2所示）；</p>
+    <p>[0167]	激活/释放SPS资源的PDCCH的DCI信令格式中需增加LCID，参见表7和表8。</p>
+    <p>[0168]	激活/释放SPS资源的PDCCH CRC需要用针对该SPS业务的SPS C-RNTI进行加扰。</p>
+    <p>[0169]</p>
+    <p>域名	含义semiPersistSchedC-RNTI	用于SPS调度的C-RNTIsemiPersistSchedlntervalDL	下行SPS资源的周期，一般配置为下行数据包到达的时间间隔numberOfConfSPS-Processes	下行半持续调度使用的HARQ进程个数</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00211.png"> <img id="idf0001" file="CN102158973AD00211.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00211.png" class="patent-full-image" alt="Figure CN102158973AD00211"> </a> </div>
+    <p>[0170]	表5配置下行SPS的RRC信令包含的内容</p>
+    <p>[0171]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00212.png"> <img id="idf0002" file="CN102158973AD00212.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00212.png" class="patent-full-image" alt="Figure CN102158973AD00212"> </a> </div>
+    <p>[0172]	表6配置上行SPS的RRC信令包含的内容</p>
+    <p>[0173]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00213.png"> <img id="idf0003" file="CN102158973AD00213.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00213.png" class="patent-full-image" alt="Figure CN102158973AD00213"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00221.png"> <img id="idf0004" file="CN102158973AD00221.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00221.png" class="patent-full-image" alt="Figure CN102158973AD00221"> </a> </div>
+    <p>[0174]</p>
+    <p>[0175]	表7 SPS资源激活PDCCH信令各个特殊域的取值</p>
+    <p>[0176]</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00222.png"> <img id="idf0005" file="CN102158973AD00222.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00222.png" class="patent-full-image" alt="Figure CN102158973AD00222"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00231.png"> <img id="idf0006" file="CN102158973AD00231.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102158973A/CN102158973AD00231.png" class="patent-full-image" alt="Figure CN102158973AD00231"> </a> </div>
+    <p>[0177]</p>
+    <p>[0178]	表8 SPS资源释放PDCCH信令各个特殊域的取值</p>
+    <p>[0179]	参见图3，本发明实施例还提供一种无线通信系统，该系统包括：</p>
+    <p>[0180]	网络设备30，用于确定SPS业务与待配置给终端的SPS资源之间的绑定关系；按照所述SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送指示该终端利用所述SPS资源传输所述SPS业务的数据的SPS信令；</p>
+    <p>[0181]	终端31，用于接收所述SPS信令，根据所述SPS信令的发送方式和/或发送内容， 确定所述SPS信令对应的SPS业务；根据所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</p>
+    <p>[0182]	所述网络设备30用于：</p>
+    <p>[0183]	向终端发送用于配置SPS资源的无线资源控制RRC信令，该RRC信令中携带所述 SPS业务的业务标识；通过物理下行控制信道PDCCH向终端发送SPS激活信令，该SPS激活信令中携带所述SPS业务的业务标识；或者，</p>
+    <p>[0184]	根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS 资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；</p>
+    <p>[0185]	相应的，所述终端31用于：</p>
+    <p>[0186]	接收所述RRC信令和所述SPS激活信令，确定所述RRC信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述RRC信令对应的SPS业务；确定所述SPS激活信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述SPS激活信令对应的SPS业务。</p>
+    <p>[0187]	所述网络设备30用于：</p>
+    <p>[0188]	根据预先配置的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；</p>
+    <p>[0189]	相应的，所述终端31用于：</p>
+    <p>[0190]	接收所述RRC信令和所述SPS激活信令，根据所述绑定关系，确定与所述RRC信令中携带的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；根据所述绑定关系，确定与网络侧加扰所述SPS激活信令所使用的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务。</p>
+    <p>[0191]	所述网络设备30用于：</p>
+    <p>[0192]	根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS 资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；</p>
+    <p>[0193]	相应的，所述终端31用于：</p>
+    <p>[0194]	接收所述RRC信令和所述SPS激活信令，将所述RRC信令中携带的业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；确定网络侧加扰所述SPS激活信令所使用的C-RNTI为所述RRC信令中携带的C-RNTI后，将所述RRC信令中携带的业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务。</p>
+    <p>[0195]	所述网络设备30用于：</p>
+    <p>[0196]	根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的 C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同</p>
+    <p>[0197]	相应的，所述终端31用于：</p>
+    <p>[0198]	接收所述RRC信令和所述SPS激活信令，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；确定所述RRC信令中携带的 C-RNTI为网络侧加扰所述SPS激活信令所使用的C-RNTI后，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务。</p>
+    <p>[0199]	所述网络设备30用于：</p>
+    <p>[0200]	根据预先配置的业务标识与下行载波标识的绑定关系，确定与所述SPS业务的业务标识绑定的下行载波标识；在确定的下行载波标识对应的下行载波上，向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送SPS激活信令；所述绑定关系中不同业务标识绑定的下行载波标识不同；</p>
+    <p>[0201]	相应的，所述终端用于：</p>
+    <p>[0202]	在所述下行载波上接收所述RRC信令和所述SPS激活信令，根据所述绑定关系，确定与所述下行载波的标识绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC 信令和SPS激活信令对应的SPS业务。</p>
+    <p>[0203]	所述网络设备30用于：</p>
+    <p>[0204]	确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送携带所述SPS业务的业务标识、用于配置SPS资源的RRC信令，在该下行载波上通过PDCCH向终端发送 SPS激活信令；</p>
+    <p>[0205]	相应的，所述终端31用于：</p>
+    <p>[0206]	在所述下行载波上接收所述RRC信令和所述SPS激活信令，将所述RRC信令中携带的业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</p>
+    <p>[0207]	所述网络设备30用于：</p>
+    <p>[0208]	确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送用于配置SPS 资源的RRC信令；在该下行载波上通过PDCCH向终端发送携带所述SPS业务的业务标识的 SPS激活信令</p>
+    <p>[0209]	相应的，所述终端31用于：</p>
+    <p>[0210]	在所述下行载波上接收所述RRC信令和所述SPS激活信令，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</p>
+    <p>[0211]	参见图4，本发明实施例还提供一种网络设备，该网络设备包括：</p>
+    <p>[0212]	业务确定单元40，用于确定SPS业务与待配置给终端的SPS资源之间的绑定关系；</p>
+    <p>[0213]	信令发送单元41，用于按照所述SPS业务对应的SPS信令发送方式和/或发送内容，向终端发送SPS信令，以指示终端在接收到该SPS信令后利用所述SPS资源传输所述 SPS业务的数据。</p>
+    <p>[0214]	所述信令发送单元41用于：</p>
+    <p>[0215]	向终端发送用于配置SPS资源的无线资源控制RRC信令，该RRC信令中携带所述 SPS业务的业务标识；通过物理下行控制信道PDCCH向终端发送SPS激活信令，该SPS激活信令中携带所述SPS业务的业务标识；或者，[0216]	根据预先配置的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，</p>
+    <p>[0217]	根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS 资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，</p>
+    <p>[0218]	根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI、用于配置SPS资源的RRC信令；利用确定的 C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，</p>
+    <p>[0219]	根据预先配置的业务标识与C-RNTI的绑定关系，确定与所述SPS业务的业务标识绑定的C-RNTI，向终端发送携带确定的C-RNTI和所述SPS业务的业务标识、用于配置SPS 资源的RRC信令；利用确定的C-RNTI对SPS激活信令进行加扰，通过PDCCH向终端发送加扰后的、携带所述SPS业务的业务标识的SPS激活信令；所述绑定关系中不同业务标识所对应的C-RNTI不同；或者，[0220]	根据预先配置的业务标识与下行载波标识的绑定关系，确定与所述SPS业务的业务标识绑定的下行载波标识；在确定的下行载波标识对应的下行载波上，向终端发送用于配置SPS资源的RRC信令；在该下行载波上通过PDCCH向终端发送SPS激活信令；所述绑定关系中不同业务标识绑定的下行载波标识不同；或者，</p>
+    <p>[0221]	确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送携带所述SPS 业务的业务标识、用于配置SPS资源的RRC信令，在该下行载波上通过PDCCH向终端发送 SPS激活信令；或者，</p>
+    <p>[0222]	确定所述SPS资源所针对的下行载波；在该下行载波上向终端发送用于配置SPS 资源的RRC信令；在该下行载波上通过PDCCH向终端发送携带所述SPS业务的业务标识的 SPS激活信令。</p>
+    <p>[0223]	参见图5，本发明实施例还提供一种终端，该终端包括：</p>
+    <p>[0224]	信令接收单元50，用于接收网络侧发来的SPS信令；</p>
+    <p>[0225]	业务确定单元51，用于根据所述SPS信令的发送方式和/或发送内容，确定所述 SPS信令对应的SPS业务；</p>
+    <p>[0226]	SPS传输单元52，用于利用所述SPS信令所指示的SPS资源传输所述SPS业务的数据。</p>
+    <p>[0227]	所述信令接收单元50用于：</p>
+    <p>[0228]	接收网络侧发来的用于配置SPS资源的无线资源控制RRC信令和SPS激活信令；</p>
+    <p>[0229]	所述业务确定单元51用于：</p>
+    <p>[0230]	在所述RRC信令和所述SPS激活信令中携带业务标识时，确定所述RRC信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述RRC信令对应的SPS业务；确定所述SPS激活信令中携带的业务标识对应的SPS业务，将该SPS业务确定为所述SPS激活信令对应的SPS业务；或者，</p>
+    <p>[0231]	在所述RRC信令中携带C-RNTI时，根据网络侧下发的业务标识与小区无线网络临时标识C-RNTI的绑定关系，确定与所述RRC信令中携带的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；根据所述绑定关系，确定与网络侧加扰所述SPS激活信令所使用的C-RNTI绑定的业务标识，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；或者，</p>
+    <p>[0232]	在所述RRC信令中携带C-RNTI和业务标识时，将该业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；确定网络侧加扰所述SPS激活信令所使用的C-RNTI为所述RRC信令中携带的C-RNTI后，将所述RRC信令中携带的业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；或者，</p>
+    <p>[0233]	在所述RRC信令中携带C-RNTI、所述SPS激活信令中携带业务标识时，将该业务标识对应的SPS业务确定为所述SPS激活信令对应的SPS业务；确定所述RRC信令中携带的C-RNTI为网络侧加扰所述SPS激活信令所使用的C-RNTI后，将所述SPS激活信令中携带的业务标识对应的SPS业务确定为所述RRC信令对应的SPS业务；或者，</p>
+    <p>[0234]	确定网络侧发送所述RRC信令和SPS激活信令所使用的下行载波，根据网络侧下发的业务标识与下行载波标识的绑定关系，确定与所述使用的下行载波的标识绑定的业务标识，将该业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务；或者，</p>
+    <p>[0235]	在所述RRC信令中携带业务标识、并且网络侧在同一个下行载波上发送所述RRC 信令和SPS激活信令时，将所述业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务；或者，</p>
+    <p>[0236]	在所述SPS激活信令中携带业务标识、并且网络侧在同一个下行载波上发送所述 RRC信令和SPS激活信令时，将所述业务标识对应的SPS业务确定为所述RRC信令和SPS激活信令对应的SPS业务。</p>
+    <p>[0237]	参见图6，本发明实施例提供的LCP方法，具体包括以下步骤：</p>
+    <p>[0238]	步骤60 ：终端确定网络侧在上行成员载波上配置了 SPS资源，并且网络侧未在该上行成员载波上配置动态调度资源；</p>
+    <p>[0239]	步骤61 ：终端在该上行成员载波上为SPS资源组织MAC PDU0</p>
+    <p>[0240]	进一步的，该方法还包括：</p>
+    <p>[0241]	步骤62 ：终端确定网络侧在除所述上行成员载波之外的一个或多个其他上行成员载波上配置了动态调度资源；将在所述一个或多个上行成员载波上配置的动态调度资源之和作为总的可用资源，根据所述总的可用资源以及动态调度资源所针对的各业务的优先级，为所述各业务分配资源；在所述一个或多个上行成员载波上，为所述各业务分配的资源组织 MAC PDU。</p>
+    <p>[0242]	步骤62可以在步骤60之前，也可以在步骤62之后，还可以与步骤60和步骤61 并行执行。</p>
+    <p>[0243]	参见图7，本发明实施例还提供一种终端，该终端包括：</p>
+    <p>[0244]	第一确定单元70，用于确定网络侧在上行成员载波上配置了半持续调度SPS资源，并且网络侧未在该上行成员载波上配置动态调度资源；</p>
+    <p>[0245]	第一组织单元71，用于在所述上行成员载波上为所述SPS资源组织媒体接入控制协议数据单元MAC PDU0</p>
+    <p>[0246]	该终端还包括：</p>
+    <p>[0247]	第二确定单元72，用于确定网络侧在除所述上行成员载波之外的一个或多个其他上行成员载波上配置了动态调度资源；</p>
+    <p>[0248]	第二组织单元73，用于将在所述一个或多个上行成员载波上配置的动态调度资源之和作为总的可用资源，根据所述总的可用资源以及动态调度资源所针对的各业务的优先级，为所述各业务分配资源；在所述一个或多个上行成员载波上，为所述各业务分配的资源组织 MAC PDU。</p>
+    <p>[0249]	对应的实施例如下：</p>
+    <p>[0250]	实施例6 ：沿用背景介绍中的LCP机制，计算总的UL grant时将SPS资源和PDCCH 动态分配的UL grant按照相同的原则处理，如1所示。</p>
+    <p>[0251]	实施例7 ：对SPS资源单独处理，计算总的UL grant时不考虑SPS预分配的资源。</p>
+    <p>[0252]	如图8所示，设在Carrierl上为RB2预分配了 400bit的SPS资源，则LCP处理过程如下图所示，计算总的UL grant时只考虑carrier2和carrier上UL grant分配的资源， carrierl上的SPS单独处理。步骤如下：</p>
+    <p>[0253]	步骤0 ：首先将CCl和CC3上分配的动态调度UL grant合并，总的可用资源UL_D_RESOURCE 能够承载的 bit 数为(1900+1400) = 3300 ；</p>
+    <p>[0254]	步骤1 ：对RBl和RB3按照RRC层配置的priority值排序，设RBl优先级高于RB3 ；</p>
+    <p>[0255]	步骤2 ：基于总的可用资源UL_D_RES0URCE以及RBl和RB3的PBR进行第一轮资源分配；</p>
+    <p>[0256]	步骤3 ：第一轮资源分配结束，再进行第二轮资源分配，直至资源耗尽；</p>
+    <p>[0257]	步骤4 ：对分配给RBl和RB3的资源进行合并；</p>
+    <p>[0258]	步骤5 ：完成资源到MAC PDU的映射，SPS业务独自生成一个MAC PDU0</p>
+    <p>[0259]	综上，本发明的有益效果包括：</p>
+    <p>[0260]	本发明实施例提供的方案中，网络侧确定与待配置给终端的SPS资源绑定的业务，并按照该业务对应的SPS信令发送方式和/或发送内容向终端发送SPS信令，终端接收到该SPS信令后，根据该SPS信令的发送方式和/或发送内容，确定该SPS信令对应的业务， 并利用该SPS信令所指示的SPS资源传输该业务的数据。可见，采用本发明，终端能够根据 SPS信令的发送方式和/或发送内容，确定该SPS信令所针对的业务，进而利用SPS信令所指示的SPS资源传输该业务的数据。</p>
+    <p>[0261]	显然，本领域的技术人员可以对本发明进行各种改动和变型而不脱离本发明的精神和范围。这样，倘若本发明的这些修改和变型属于本发明权利要求及其等同技术的范围之内，则本发明也意图包含这些改动和变型在内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101388748A?cl=zh">CN101388748A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月23日</td><td class="patent-data-table-td patent-date-value">2009年3月18日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种半持续调度方式下压缩调制编码信令的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101478381A?cl=zh">CN101478381A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年1月4日</td><td class="patent-data-table-td patent-date-value">2009年7月8日</td><td class="patent-data-table-td ">大唐移动通信设备有限公司</td><td class="patent-data-table-td ">一种半持续调度中数据包的处理方法、系统及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101499887A?cl=zh">CN101499887A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年1月28日</td><td class="patent-data-table-td patent-date-value">2009年8月5日</td><td class="patent-data-table-td ">大唐移动通信设备有限公司</td><td class="patent-data-table-td ">半静态资源调度方法及系统、重传选择调度方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101616403A?cl=zh">CN101616403A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年6月24日</td><td class="patent-data-table-td patent-date-value">2009年12月30日</td><td class="patent-data-table-td ">大唐移动通信设备有限公司</td><td class="patent-data-table-td ">发送持续调度小区无线网络临时标识的方法和基站</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20090197610">US20090197610</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年1月30日</td><td class="patent-data-table-td patent-date-value">2009年8月6日</td><td class="patent-data-table-td ">Lg Electronics Inc.</td><td class="patent-data-table-td ">Method for performing efficient bsr procedure using sps resource</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2009152637A1?cl=zh">WO2009152637A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年6月16日</td><td class="patent-data-table-td patent-date-value">2009年12月23日</td><td class="patent-data-table-td ">Alcatel Shanghai Bell Co., Ltd.</td><td class="patent-data-table-td ">用于dl半静态调度harq进程分配的方法及相应的系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">CATT: "<a href='http://scholar.google.com/scholar?q="Collision+avoidance+in+uplink+semi-persistent+scheduling+for+TDD"'>Collision avoidance in uplink semi-persistent scheduling for TDD</a>", 《3GPP TSG-RAN WG2 MEETING #60BIS》, 18 January 2008 (2008-01-18)</td></tr><tr><td class="patent-data-table-td ">2</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">ERICSSON: "<a href='http://scholar.google.com/scholar?q="Configuration+of+semi-persistent+scheduling"'>Configuration of semi-persistent scheduling</a>", 《TSG-RAN WG2 MEETING #60BIS》, 18 January 2008 (2008-01-18)</td></tr><tr><td class="patent-data-table-td ">3</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">QUALCOMM EUROP: "<a href='http://scholar.google.com/scholar?q="Semi-persistent+scheduling+allocation%EF%BC%8C2008-01-18"'>Semi-persistent scheduling allocation，2008-01-18</a>", 《3GPP TSG-RAN WG2 #60-BIS》, 18 January 2008 (2008-01-18)</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103079172A?cl=zh">CN103079172A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年10月26日</td><td class="patent-data-table-td patent-date-value">2013年5月1日</td><td class="patent-data-table-td ">鼎桥通信技术有限公司</td><td class="patent-data-table-td ">Td-lte数字集群通信系统中的群组业务接入方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2013131264A1?cl=zh">WO2013131264A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月8日</td><td class="patent-data-table-td patent-date-value">2013年9月12日</td><td class="patent-data-table-td ">Renesas Mobile Corporation</td><td class="patent-data-table-td ">Group sps design for low cost mtc devices</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014067302A1?cl=zh">WO2014067302A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年7月31日</td><td class="patent-data-table-td patent-date-value">2014年5月8日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种集群半静态调度资源配置方法及基站及终端</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=PTWGBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0072120000">H04W72/12</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年9月28日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年11月20日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3cdebb1ff5bcefd08c2a/CN102158973A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%8D%8A%E6%8C%81%E7%BB%AD%E8%B0%83%E5%BA%A6_%E4%BC%A0%E8%BE%93%E5%8F%8A%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95.pdf?id=PTWGBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1V3YFme-EbI9zK4H6TOFyHCSLQRQ"},"sample_url":"https://www.google.com/patents/reader?id=PTWGBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

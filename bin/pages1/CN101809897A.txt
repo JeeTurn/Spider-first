@@ -1,0 +1,433 @@
+<!DOCTYPE html><html><head><title>专利 CN101809897A - 在无线通信系统中检测控制信息的方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="在无线通信系统中检测控制信息的方法"><meta name="DC.contributor" content="成斗铉" scheme="inventor"><meta name="DC.contributor" content="郑载薰" scheme="inventor"><meta name="DC.contributor" content="金宗珉" scheme="inventor"><meta name="DC.contributor" content="金昭延" scheme="inventor"><meta name="DC.contributor" content="Lg电子株式会社" scheme="assignee"><meta name="DC.date" content="2008-9-26" scheme="dateSubmitted"><meta name="DC.description" content="提供了一种用于在无线通信系统中检测控制信息的方法。该方法包括：通过监视控制信道检查循环冗余检查(CRC)错误，确定错误检查字段的值是否等于特定值，以及，如果错误检查字段的值等于特定值，则检测控制信道上的控制信息。"><meta name="DC.date" content="2010-8-18"><meta name="citation_patent_publication_number" content="CN:101809897:A"><meta name="citation_patent_application_number" content="CN:200880108910"><link rel="canonical" href="https://www.google.com/patents/CN101809897A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101809897A?cl=zh"/><meta name="title" content="专利 CN101809897A - 在无线通信系统中检测控制信息的方法"/><meta name="description" content="提供了一种用于在无线通信系统中检测控制信息的方法。该方法包括：通过监视控制信道检查循环冗余检查(CRC)错误，确定错误检查字段的值是否等于特定值，以及，如果错误检查字段的值等于特定值，则检测控制信道上的控制信息。"/><meta property="og:title" content="专利 CN101809897A - 在无线通信系统中检测控制信息的方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101809897A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101809897A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101809897A&amp;usg=AFQjCNFrJ0Vxd34z8_ACBlFd1p4g-5z78g" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/d6b770da92d0bc1578b2/CN101809897A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/d6b770da92d0bc1578b2/CN101809897A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101809897A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101809897A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101809897A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101809897B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101809897A?cl=zh" style="display:none"><span itemprop="description">提供了一种用于在无线通信系统中检测控制信息的方法。该方法包括：通过监视控制信道检查循环冗余检查(CRC)错误，确定错误检查字段的值是否等于特定值，以及，如果错误检查字段的值等于特定值，则检测控制信道上的控制 ...</span><span itemprop="url">https://www.google.com/patents/CN101809897A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101809897A - 在无线通信系统中检测控制信息的方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101809897A - 在无线通信系统中检测控制信息的方法" title="专利 CN101809897A - 在无线通信系统中检测控制信息的方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101809897 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200880108910</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/KR2008/005718</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年8月18日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年9月26日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2007年9月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101809897B?hl=zh-CN&amp;cl=zh">CN101809897B</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103414533A?hl=zh-CN&amp;cl=zh">CN103414533A</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2193615A2?hl=zh-CN&amp;cl=zh">EP2193615A2</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2193615A4?hl=zh-CN&amp;cl=zh">EP2193615A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2193615B1?hl=zh-CN&amp;cl=zh">EP2193615B1</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20140204887?hl=zh-CN&amp;cl=zh">US20140204887</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2009041785A2?hl=zh-CN&amp;cl=zh">WO2009041785A2</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2009041785A3?hl=zh-CN&amp;cl=zh">WO2009041785A3</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200880108910.4, </span><span class="patent-bibdata-value">CN 101809897 A, </span><span class="patent-bibdata-value">CN 101809897A, </span><span class="patent-bibdata-value">CN 200880108910, </span><span class="patent-bibdata-value">CN-A-101809897, </span><span class="patent-bibdata-value">CN101809897 A, </span><span class="patent-bibdata-value">CN101809897A, </span><span class="patent-bibdata-value">CN200880108910, </span><span class="patent-bibdata-value">CN200880108910.4, </span><span class="patent-bibdata-value">PCT/2008/5718, </span><span class="patent-bibdata-value">PCT/KR/2008/005718, </span><span class="patent-bibdata-value">PCT/KR/2008/05718, </span><span class="patent-bibdata-value">PCT/KR/8/005718, </span><span class="patent-bibdata-value">PCT/KR/8/05718, </span><span class="patent-bibdata-value">PCT/KR2008/005718, </span><span class="patent-bibdata-value">PCT/KR2008/05718, </span><span class="patent-bibdata-value">PCT/KR2008005718, </span><span class="patent-bibdata-value">PCT/KR200805718, </span><span class="patent-bibdata-value">PCT/KR8/005718, </span><span class="patent-bibdata-value">PCT/KR8/05718, </span><span class="patent-bibdata-value">PCT/KR8005718, </span><span class="patent-bibdata-value">PCT/KR805718</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%88%90%E6%96%97%E9%93%89%22">成斗铉</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%83%91%E8%BD%BD%E8%96%B0%22">郑载薰</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%87%91%E5%AE%97%E7%8F%89%22">金宗珉</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%87%91%E6%98%AD%E5%BB%B6%22">金昭延</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22Lg%E7%94%B5%E5%AD%90%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%22">Lg电子株式会社</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101809897A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101809897A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101809897A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (9),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (7),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200880108910&amp;usg=AFQjCNGkV54Uiw1qovaB06BI9LHKLMFeKQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101809897A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHnGEdWVR2qYFCQzLa0XJxHvKgf1w"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT97093797" lang="ZH" load-source="patent-office">在无线通信系统中检测控制信息的方法</invention-title>
+    </span><br><span class="patent-number">CN 101809897 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA79650859" lang="ZH" load-source="patent-office">
+    <div class="abstract">提供了一种用于在无线通信系统中检测控制信息的方法。该方法包括：通过监视控制信道检查循环冗余检查(CRC)错误，确定错误检查字段的值是否等于特定值，以及，如果错误检查字段的值等于特定值，则检测控制信道上的控制信息。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(13)</span></span></div><div class="patent-text"><ol mxw-id="PCLM32911635" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种用于在无线通信系统中检测控制信息的方法，所述方法包括：通过监视控制信道检查循环冗余检查(CRC)错误；确定错误检查字段的值是否等于特定值，其中所述错误检查字段是在其中未检测到所述CRC错误的控制信道上的包括在所述控制信息中的多个字段中的字段；以及如果所述错误检查字段的值等于所述特定值，则检测其中未检测到所述CRC错误的所述控制信道上的所述控制信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.如权利要求1所述的方法，其中所述控制信道是物理下行链路控制信道（PDCCH)。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.如权利要求1所述的方法，其中半持久小区无线电网络临时标识符（C-RNTI)被掩码 在CRC上以指示半持久调度的激活。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.如权利要求3所述的方法，其中所述控制信道的监视是在使所述半持久C-RNTI解掩 码到所述CRC之后检查所述CRC错误。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.如权利要求1所述的方法，其中所述控制信息指示用于互联网协议语音（VoIP)的资 源指配信息的半持久调度的激活。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.如权利要求5所述的方法，进一步包括通过使用资源分配信息在特定时间间隔期间 在物理下行链路共享信道（PDSCH)上接收VoIP数据。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.如权利要求5所述的方法，进一步包括通过使用资源分配信息在特定时间间隔期间 在物理上行链路共享信道（PUSCH)上发射VoIP数据。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.如权利要求1所述的方法，其中所述控制信息指示半持久调度的去激活。</div>
+    </div>
+    </li> <li class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种用户设备，包括：射频（RF)单元，用于发射和接收无线电信号；和处理器，与所述RF单元耦合并且被配置为通过监视控制信道检查CRC错误，确定错误检查字段的值是否等于特定值，其中所述 错误检查字段是在其中未检测到CRC错误的所述控制信道上的控制信息中包括的多个字 段中的字段，以及，如果所述错误检查字段的值等于所述特定值，则检测在其中未检测到 CRC错误的所述控制信道上的所述控制信息。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求9所述的用户设备，其中在CRC上掩码半持久C-RNTI以指示半持久调 度的激活。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.如权利要求9所述的用户设备，其中所述控制信道的监视是在使所述半持久 C-RNTI解掩码到CRC之后检查所述CRC错误。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.如权利要求9所述的用户设备，其中所述控制信息指示用于VoIP的资源指配信息 的半持久调度的激活。</div>
+    </div>
+    </li> <li class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.	一种用于在无线通信系统中发射控制信息的方法，所述方法包括：生成包括具有特定值的错误检查字段的控制信息；以及通过使CRC附加到所述控制信息在控制信道上发射所述控制信息，其中根据所述错误检查字段的特定值和所述CRC确定所述控制信息的成功接收。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES38223046" lang="ZH" load-source="patent-office" class="description">
+    <p>在无线通信系统中检测控制信息的方法</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及无线通信，并且更具体地，涉及一种用于在无线通信系统中检测控制 信息的方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	在无线通信系统中，基站（BS)通常向多个用户设备（UE)提供业务。BS调度多个 UE的用户数据，并且一起发射控制信息和用户数据。控制信息包含关于用户数据的调度信 息。用于承载控制信息的信道通常被称为控制信道。用于承载用户数据的信道通常被称为 数据信道。UE监视控制信道以搜索UE的控制信息，并且通过使用该控制信息处理UE的数 据。</p>
+    <p>[0003]	为了使UE接收分配给该UE的用户数据，必须接收控制信道上的关于该用户数据 的控制信息。通常，在指配的带宽中的一个传输间隔中将多个UE的多个控制信息片段多路 复用。即，为了向多个UE提供业务，BS多路复用多个UE的多个控制信息片段并且在多个 控制信道上发射控制信息。每个UE在多个控制信道中搜索其自身的控制信道。</p>
+    <p>[0004]	盲检测是用于在多个多路复用控制信息片段中检测特定控制信息的方案之一。盲 检测意指UE尝试在所需用于恢复控制信道的信息不存在的状态下通过组合多个信息片段 恢复控制信道。即，在UE既不了解从BS接收的多个控制信息片段是否是UE的控制信息也 不了解UE的控制信息存在的位置的状态下，UE对所提供的控制信息的所有片段解码，直至 检测到该UE的控制信息。UE可以使用其唯一信息确定接收的控制信息是否是该UE的控制 信息。例如，当BS多路复用每个UE的控制信息时，BS可以通过将每个UE的唯一标识符掩 码到循环冗余检查（CRC)上，发射该标识符。CRC是在错误检测中使用的码。UE使其唯一 标识符解掩码到接收的控制信息的CRC，并且随后可以通过执行CRC检查确定接收的控制 信息是否是该UE的控制信息。</p>
+    <p>[0005]	然而，当UE通过CRC错误检测来监视控制信道时，即使控制信道是另一 UE的控制 信道，可能仍未检测到CRC错误并且因此可能错误地通知解码成功的解码结果。在半持久 调度（SPS)的情况中，不正确的CRC错误检测变得更加成问题。这是因为，在SPS中，UE接 收用于分配无线电资源的控制信息并且随后通过使用在SPS间隔期间使用控制信息分配 的无线电资源来发射或接收数据。这导致了有限的无线电资源的浪费和无线通信的可靠性 的劣化。因此，需要一种用于以增加的准确性检测控制信息的方法。</p>
+    <p>发明内容</p>
+    <p>[0006]	技术问题</p>
+    <p>[0007]	本发明提供了一种用于在无线通信系统中检测控制信息的方法。</p>
+    <p>[0008]	技术方案</p>
+    <p>[0009]	在一个方面，提供了一种用于在无线通信系统中检测控制信息的方法。该方法包 括：通过监视控制信道检查循环冗余检查（CRC)错误；确定错误检查字段的值是否等于特定值，其中该错误检查字段是在其中未检测到CRC错误的控制信道上的控制信息中包括的 字段中的字段；以及，如果错误检查字段的值等于特定值，则检测其中未检测到CRC错误的 控制信道上的控制信息。</p>
+    <p>[0010]	在另一方面，提供了一种用户设备。该用户设备包括：射频（RF)单元，用于发射和 接收无线电信号；和处理器，与RF单元耦合并且被配置为通过监视控制信道检查CRC错误， 确定错误检查字段的值是否等于特定值，其中错误检查字段是在其中未检测到CRC错误的 控制信道上的控制信息中包括的字段中的字段，以及，如果错误检查字段的值等于特定值， 则检测其中未检测到CRC错误的控制信道上的控制信息。</p>
+    <p>[0011]	在又一方面，提供了一种用于在无线通信系统中发射控制信息的方法。该方法包 括：生成包括具有特定值的错误检查字段的控制信息；以及，通过使CRC附加到该控制信息 在控制信道上发射该控制信息，其中根据错误检查字段的特定值和CRC确定控制信息的成 功接收。</p>
+    <p>[0012]	有益效果</p>
+    <p>[0013]	可以提供无线通信系统中的具有提高的准确性的用于检测控制信息的方法。错误 检查字段的特定值可以用作虚拟循环冗余检查（CRC)。用户设备可以通过在检测到控制信 息时使用该虚拟CRC提高CRC错误检查的准确性。即，在有效地利用无线电资源的同时可 以准确地检测控制信息。因此，可以提高整体系统性能。</p>
+    <p>附图说明</p>
+    <p>[0014]	图1是示出无线通信系统的框图。</p>
+    <p>[0015]	图2是示出演进通用地面无线电接入网络（E-UTRAN)和演进分组核心（EPC)之间 的功能分割的框图。</p>
+    <p>[0016]	图3是示出用户设备的构成元件的框图。</p>
+    <p>[0017]	图4是示出用户平面的无线电协议架构的示图。</p>
+    <p>[0018]	图5是示出控制平面的无线电协议架构的示图。</p>
+    <p>[0019]	图6示出了下行链路逻辑信道和下行链路传送信道之间的映射。</p>
+    <p>[0020]	图7示出了下行链路传送信道和下行链路物理信道之间的映射。</p>
+    <p>[0021]	图8示出了无线电帧的结构。</p>
+    <p>[0022]	图9示出了关于一个下行链路时隙的资源网格的示例。</p>
+    <p>[0023]	图10示出了子帧的结构。</p>
+    <p>[0024]	图11是示出物理下行链路控制信道（PDCCH)配置的流程图。</p>
+    <p>[0025]	图12是示出PDCCH处理的流程图。</p>
+    <p>[0026]	图13示出了用于利用构成下行链路控制信息（DCI)格式的多个信息字段中的未 使用的信息字段的方法的示例。</p>
+    <p>[0027]	图14是示出根据本发明的实施例的用于检测控制信息的方法的流程图。</p>
+    <p>[0028]	图15是示出使用动态调度方案的下行链路数据传输的流程图。</p>
+    <p>[0029]	图16是示出使用动态调度方案的上行链路数据传输的流程图。</p>
+    <p>[0030]	图17示出了互联网协议语音（VoIP)中的流量模型的示例。</p>
+    <p>[0031]	图18是示出使用半持久调度方案的下行链路数据传输的流程图。[0032]	图19是示出使用半持久调度方案的上行链路数据传输的流程图。 具体实施方式</p>
+    <p>[0033]	图1是示出无线通信系统的框图。无线通信系统可以具有演进通用移动电信系统 (E-UMTS)的网络结构。E-UMTS可被称为长期演进（LTE)系统。可广泛地部署无线通信系 统以提供各种通信业务，诸如语音、分组数据等。</p>
+    <p>[0034]	参照图1，演进UMTS地面无线电接入网络（E-UTRAN)包括至少一个基站（BS)20， 其提供控制平面和用户平面。</p>
+    <p>[0035]	用户设备（UE) 10可以是固定的或移动的，并且可被称为另一术语，诸如移动站 (MS)、用户终端（UT)、订户站（SS)、无线设备等。BS 20通常是与UE 10通信的固定站并且 可被称为另一术语，诸如演进节点B(eNB)、基站收发信机系统（BTS)、接入点等。BS 20可以 向一个或多个小区提供业务。该小区是其中BS 20提供通信业务的区域。在BS 20之间可 以使用用于发射用户流量或控制业务的接口。在下文中，下行链路被定义为从BS 20到UE 10的通信链路，并且上行链路被定义为从UE 10到BS 20的通信链路。</p>
+    <p>[0036]	BS 20借助于X2接口互连。BS 20还借助于S1接口连接到演进分组核心（EPC)， 更具体地，连接到移动性管理实体（MME) /服务网关（S-GW) 30。S1接口支持BS 20和MME/ S-GW 30之间的多对多关系。</p>
+    <p>[0037]	无线通信系统不仅可以是多输入多输出（MIM0)系统或多输入单输出（MIS0)系 统，还可以是单输入单输出（SIS0)系统或单输入多输出（SIM0)系统。MIM0方案使用多个 发射（Tx)天线和多个接收（Rx)天线提高数据Tx/Rx效率和频谱效率。MIM0方案的示例包 括空间分集、空间多路复用、波束成形等。</p>
+    <p>[0038]	图2是示出E-UTRAN和EPC之间的功能分割的框图。斜线方框示出了无线电协议 层并且白色方框示出了控制平面的功能实体。</p>
+    <p>[0039]	参照图2，BS执行如下功能：（1)用于无线电资源管理（RRM)的功能，诸如无线电 承载控制、无线电准入控制、连接移动性控制和针对UE的动态资源分配、（2)互联网协议 (IP)报头压缩和用户数据流的加密、⑶用户平面数据到S-GW的路由、⑷寻呼消息的调 度和传输、（5)广播信息的调度和传输以及（6)关于移动性和调度的测量和测量报告配置。</p>
+    <p>[0040]	MME执行如下功能：（1)非接入层（NAS)信令、⑵NAS信令安全性、（3)闲置模式 UE可达性、(4)跟踪区域列表管理、(5)漫游和(6)鉴权。</p>
+    <p>[0041]	S-GW执行如下功能：（1)移动性锚定和⑵合法侦听。PDN网关（P-GW)执行如下 功能：（1)UE互联网协议（IP)分配和⑵分组过滤。</p>
+    <p>[0042]	图3是示出UE的构成元件的框图。UE 50包括处理器51、存储器52、射频（RF)单 元53、显示单元54和用户接口单元55。在处理器51中实现无线电接口协议的各层。处理 器51提供控制平面和用户平面。可以在处理器51中实现每个层的功能。存储器52耦合 至处理器51并且存储操作系统、应用和一般文件。显示单元54显示UE的各种信息并且可 以使用诸如液晶显示器（LCD)、有机光发射二极管（0LED)等公知的元件。用户接口单元55 可被配置为具有诸如键盘、触摸屏等的公知用户接口的组合。RF单元53耦合至处理器51 并且发射和/或接收无线电信号。</p>
+    <p>[0043]	基于通信系统中公知的开放系统互连（0SI)模型的下三层，可将UE和网络之间的</p>
+    <p>5无线电接口协议层分类为Ll层（第一层）、L2层（第二层）和L3层（第三层）。物理层， 或者简称PHY层，属于第一层并且通过物理信道提供信息传递业务。无线电资源控制（RRC) 层属于第三层并且用于控制UE和网络之间的无线电资源。UE和网络经由RRC层交换RRC 消息。</p>
+    <p>[0044]	图4是示出用户平面的无线电协议架构的示图。图5是示出控制平面的无线电协 议架构的示图。它们说明了 UE和E-UTRAN之间的无线电接口协议的架构。用户平面是用 于用户数据传输的协议栈。控制平面是用于控制信号传输的协议栈。 [0045]	参照图4和5，PHY层属于第一层并且通过物理信道为上层提供信息传递业务。PHY 层通过传送信道与媒体接入控制（MAC)层（即PHY层的上层）耦合。通过传送信道在MAC 层和PHY层之间传递数据。在不同的PHY层（S卩，发射机的PHY层和接收机的PHY层）之 间，通过物理信道传递数据。</p>
+    <p>[0046]	MAC层属于第二层并且通过逻辑信道向无线电链路控制（RLC)层（即MAC层的上 层）提供业务。第二层中的RLC层支持可靠的数据传递。在RLC层中存在根据数据传递方 法的三种操作模式，即透明模式（TM)、无应答模式（UM)和应答模式（AM)。AM RLC提供双向 数据传输业务并且在RLC协议数据单元（PDU)的传递失败时支持重传。</p>
+    <p>[0047]	分组数据会聚协议（PDCP)层属于第二层并且执行用于减小IP分组报头尺寸的报 头压缩功能。</p>
+    <p>[0048]	无线电资源控制（RRC)层属于第三层并且仅在控制平面中被定义。RRC层用于与 无线电承载（RB)的配置、重新配置和释放关联地控制逻辑信道、传送信道和物理信道。RB 是第二层为UE和E-UTRAN之间的数据传输提供的业务。当建立UE的RRC层和网络的RRC 层之间的RRC连接时，称作UE处于RRC连接模式。当仍未建立RRC连接时，称作UE处于 RRC闲置模式。</p>
+    <p>[0049]	非接入层（NAS)层属于RRC层的上层并且用于执行会话管理、移动性管理等。</p>
+    <p>[0050]	图6示出了下行链路逻辑信道和下行链路传送信道之间的映射。这可以在 3GPP TS 36. 300 V8. 3.0(2007-12)技术规范组无线接入网络；演进通用地面无线电接入 (E-UTRA)和演进通用地面无线电接入网络（E-UTRAN)；整体描述Stage 2 (Release 8)的章 节6. 1.3. 2中找到。</p>
+    <p>[0051]	参照图6，寻呼控制信道（PCCH)被映射到寻呼信道（PCH)。广播控制信道（BCCH) 被映射到广播信道（BCH)或下行链路共享信道（DL-SCH)。公共控制信道（CCCH)、专用控制 信道（DCCH)、专用业务信道（DTCH)、多播控制信道（MCCH)和多播流量信道（MTCH)被映射 到DL-SCH。MCCH和MTCH还被映射到多播信道（MCH)。</p>
+    <p>[0052]	根据待发射的信息的类型限定每个逻辑信道的类型。逻辑信道被分类为两个组， 即控制信道和流量信道。</p>
+    <p>[0053]	控制信道用于传递控制平面信息。BCCH是用于广播系统控制信息的下行链路信 道。PCCH是用于发射寻呼信息的下行链路信道并且在网络不了解UE的位置时使用。CCCH 是用于发射UE和网络之间的控制信息的信道并且在未建立UE和网络之间的RRC连接时使 用。MCCH是用于发射多媒体广播多播业务（MBMS)控制信息的点对多点下行链路信道。MCCH 由接收MBMS的UE使用。DCCH是用于发射UE和网络之间的专用控制信息的点对点单向信 道，并且由具有RRC连接的UE使用。[0054]	流量信道用于传递用户平面信息。DTCH是用于传递用户信息的点对点信道。DTCH 可以存在于上行链路和下行链路中。MTCH是用于发射流量数据的点对多点下行链路信道并 且由接收MBMS的UE使用。</p>
+    <p>[0055]	根据通过无线电接口的数据传输的类型和特性对传送信道分类。BCH是小区的整 个覆盖区域中的广播并且具有固定的预先定义的格式。DL-SCH的特征在于支持混合自动 重复请求（HARQ)；通过改变调制、编码、和Tx功率、将在整个小区中广播的可能性和使用波 束成形的可能性，支持动态链路自适应；支持动态和半静态资源分配；支持UE不连续接收 (DRX)以实现UE功率节约；以及支持MBMS发射。PCH的特征在于支持DRX以实现UE功率 节约以及支持小区的整个覆盖区域中的广播。MCH的特征在于支持小区的整个覆盖区域中 的广播以及支持MBMS单频率网络（MBSFN)。</p>
+    <p>[0056]	图7示出了下行链路传送信道和下行链路物理信道之间的映射。这可以在3GPP TS 36. 300 V8. 3. 0(2007-12)的章节 5. 3. 1 中找到。</p>
+    <p>[0057]	参照图7，BCH被映射到物理广播信道（PBCH)。MCH被映射到物理多播信道（PMCH)。 PCH和DL-SCH被映射到物理下行链路共享信道（PDSCH)。PBCH载送BCH传送块。PMCH载 送 MCH。PDSCH 载送 DL-SCH 禾口 PCH。</p>
+    <p>[0058]	在PHY层中使用数个下行链路物理控制信道。物理下行链路控制信道（PDCCH)向 UE通知PCH和DL-SCH的资源分配，并且还向UE通知与DL-SCH相关的HARQ信息。PDCCH可 以载送上行链路调度许可，该上行链路调度许可向UE通知用于上行链路传输的资源分配。 物理控制格式指示符信道（PCFICH)向UE通知用于子帧中的PDCCH的传递的正交频分复用 (OFDM)符号的数目。在每个子帧中发射PCFICH。物理混合ARQ指示符信道（PHICH)载送 响应上行链路传输的HARQ应答（ACK)/否定应答（NACK)信号。</p>
+    <p>[0059]	图8示出了无线电帧的结构。</p>
+    <p>[0060]	参照图8，无线电帧包括10个子帧。一个子帧包括两个时隙。用于发射一个子帧 的时间被定义为传输时间间隔（TTI)。例如，一个子帧可以具有lms的长度，并且一个时隙 可以具有0. 5ms的长度。</p>
+    <p>[0061]	仅为了示例性目的而示出图8的无线电帧。因此，无线电帧中包括的子帧的数目 或者子帧中包括的时隙的数目或者时隙中包括的OFDM符号的数目可以不同地改变。</p>
+    <p>[0062]	图9示出了关于一个下行链路时隙的资源网格的示例。</p>
+    <p>[0063]	参照图9，下行链路时隙包括时域中的多个OFDM符号。尽管此处描述了一个下行 链路时隙包括7个OFDM符号并且一个资源块包括频域中的12个子载波，但是这仅用于示 例性目的，并且因此OFDM符号的数目和子载波的数目不限于此。</p>
+    <p>[0064]	资源网格上的元素被称为资源元素。一个资源块包括12X7个资源元素。下行链 路时隙中包括的资源块的数目NDL取决于小区中确定的下行链路传输带宽。</p>
+    <p>[0065]	图10示出了子帧的结构。</p>
+    <p>[0066]	参照图10，子帧包括两个连续的时隙。位于子帧中的第一时隙的前部分中的最多 三个0FDM符号对应于将被指配有PDCCH的控制区域。剩余的0FDM符号对应于将被指配有 PDSCH的数据区域。除了 PDCCH之外，诸如PCFICH、PHICH等的控制信道可被指配给控制区 域。通过对通过PDCCH发射的控制信息进行解码，UE可以读取通过PDSCH发射的数据信息。 尽管此处控制区域包括三个0FDM符号，但是这仅用于示例性目的。PCFICH可以了解子帧的控制区域中包括的OFDM符号的数目。</p>
+    <p>[0067]	控制区域由多个控制信道元素（CCE)组成，该多个CCE是逻辑CCE序列。在下文 中，CCE序列表示构成一个子帧中的控制区域的所有CCE的汇聚（aggregation)。CCE对应 于多个资源元素组。例如，CCE可以对应于9个资源元素组。资源元素组用于定义控制信 道对资源元素的映射。例如，一个资源元素组可以由四个资源元素组成。</p>
+    <p>[0068]	在控制区域中可以发射多个PDCCH。PDCCH载送诸如调度分配的控制信息。在一 个或数个连续CCE的汇聚上发射PDCCH。根据构成CCE汇聚的CCE数目确定PDCCH格式 和可用PDCCH比特的数目。在下文中用于PDCCH传输的CCE的数目被称为CCE汇聚水平 (aggregation level)。CCE汇聚水平是用于搜索PDCCH的CCE单元。由连续CCE的数目定 义CCE汇聚水平的大小。例如，CCE汇聚水平可以是{1，2，4，8}的元素。</p>
+    <p>[0069]	下面的表1示出了根据CCE汇聚水平的PDCCH格式和可用PDCCH比特的数目的示 例。</p>
+    <p>[0070]	[表 1]</p>
+    <p>[0071]</p>
+    <p>PDCCH格式	CCE汇聚水平	资源元素组的数目	PDCCH比特数目0	1	9	721	2	18	1442	4	36	2883	8	72	576</p>
+    <p>[0072]	通过PDCCH发射的控制信息被称为下行链路控制信息（在下文中被称为DCI)。 DCI发射上行链路调度信息、下行链路调度信息、系统信息、上行链路功率控制命令、用于寻 呼的控制信息、指示随机接入信道（RACH)响应的控制信息等。而且，DCI可以发射指示半 持久调度（SPS)的激活的控制信息。DCI还可以发射指示SPS去激活的控制信息。SPS可 用于上行链路或下行链路互联网协议语音（VoIP)传输。</p>
+    <p>[0073]	DCI格式的示例包括用于物理上行链路共享信道（PUSCH)的调度的格式0、用于一 个物理下行链路共享信道（PDSCH)码字的调度的格式1、用于一个PDSCH码字的紧凑调度的 格式1A、用于空间多路复用模式中的单个码字等级-1传输的调度的格式1B、用于下行链路 共享信道（DL-SCH)的非常紧凑调度的格式1C、用于多用户空间多路复用模式中的PDSCH的 调度的格式1D、用于闭环空间多路复用模式中的PDSCH的调度的格式2、用于开环空间多路 复用模式中的PDSCH的调度的格式2A、以及用于关于上行链路信道的传输功率控制（TPC) 命令的传输的格式3和3A。</p>
+    <p>[0074]	图11是示出PDCCH配置的流程图。</p>
+    <p>[0075]	参照图11，BS根据DCI格式生成控制信息。BS可以根据待发射到UE的控制信息 从多个DCI格式（DCI格式1、2.....N)中选择一个DCI格式。</p>
+    <p>[0076]	在步骤S110中，附加循环冗余检查（CRC)以从根据每个DCI格式生成的控制信 息中检查错误。根据PDCCH的用途或所有者，唯一标识符（即，无线电网络临时标识符</p>
+    <p>8(RNTI))被掩码在CRC上。如果PDCCH用于特定的UE，则该UE的唯一标识符（例如，小区 RNTI (C-RNTI))可以掩码在CRC上。S卩，可以将CRC与UE的唯一标识符一起加扰。关于特 定UE的RNTI的示例包括临时C-RNTI、半持久C-RNTI等。临时C-RNTI是UE的临时标识符 并且可以在随机存取过程期间使用。半持久C-RNTI可用于指示SPS激活。</p>
+    <p>[0077]	如果PDCCH用于通过PCH发射的寻呼消息，则寻呼标识符（例如，寻 呼-RNTI (P-RNTI))可以掩码在CRC上。如果PDCCH用于通过DL-SCH发射的系统信息，则 系统信息标识符（例如，系统信息-RNTI (SI-RNTI))可以掩码在CRC上。如果PDCCH用于 指示随机接入响应，该随机接入响应是用于传输UE的随机接入前导的响应，则随机接入 RNTI (RA-RNTI)可以掩码在CRC上。表2示出了掩码在PDCCH上的标识符的示例。</p>
+    <p>[0078]	[表 2]</p>
+    <p>[0079]</p>
+    <p>&lt;table&gt;table see original document page 9&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0080]	在使用C-RNTI、临时C-RNTI或者半持久C-RNTI时，PDCCH载送关于对应的特定UE 的控制信息。在使用其他RNTI时，PDCCH载送待由小区中的所有UE接收的公共控制信息。</p>
+    <p>[0081]	在步骤S120中，对附加了 CRC的控制信息执行信道编码以生成编码数据。在步骤 S130中，根据指配给PDCCH格式的CCE汇聚水平执行速率匹配。</p>
+    <p>[0082]	在步骤S140中，对编码数据进行调制以生成调制符号。构成一个PDCCH的调制符 号可以具有CCE汇聚水平1、2、4和8中的一个。在步骤S150中，将调制符号映射到物理资 源元素（RE) ( S卩，CCE至RE的映射）。</p>
+    <p>[0083]	图12是示出PDCCH处理的流程图。</p>
+    <p>[0084]	参照图12，在步骤S210中，UE使CCE从物理RE解映射（即，CCE至RE的解映射）。 在步骤S220中，由于UE不了解使用哪个CCE汇聚水平接收PDCCH，因此UE对各个CCE汇 聚水平进行解调。在步骤S230中，UE对解调数据执行速率解匹配。由于UE不了解UE将 接收的控制信息的DCI格式，因此UE对各个DCI格式执行速率解匹配。在步骤S240中，UE 根据码速率对速率解匹配的数据执行信道解码，并且通过执行CRC检查来检测错误。如果 未检测到错误，则视为UE检测到其自身的PDCCH。否则，如果检测到错误，则UE连续地对 另一 CCE汇聚水平或另一 DCI格式执行盲解码。在步骤S250中，在检测到其自身的PDCCH 时，UE从解码数据移除CRC并且因此获得关于UE的控制信息。</p>
+    <p>[0085]	可以在一个子帧的控制区域中发射用于多个UE的多个多路复用PDCCH。UE监视 PDCCH。该监视是UE尝试根据所监视的DCI格式对各个PDCCH进行解码的操作。BS未向 UE提供指示对应的PDCCH在子帧中指配的控制区域中的位置。UE通过监视子帧中的一组 PDCCH候选者找到其自身的PDCCH。这被称为盲解码（或盲检测）。通过盲解码，UE同时地执行发射到该UE的PDCCH的识别并且执行通过PDCCH发射的控制信息的解码。例如，如 果通过使UE自身的C-RNTI从PDCCH解掩码未检测到CRC错误，则视为UE检测到其自身的 PDCCH0</p>
+    <p>[0086]	限制待通过PDCCH发射的DCI格式的数目以有效地减少盲解码的开销。DCI格式 的数目小于待使用PDCCH发射的控制信息的不同类型的数目。DCI格式包括多个不同的信 息字段。根据DCI格式，构成DCI格式的信息字段的类型、信息字段的数目、每个信息字段 的比特数目等是不同的。此外，根据DCI格式，符合DCI格式的控制信息的尺寸不同。通过 使用有限数目的DCI格式中的一个DCI格式，通过PDCCH发射各种控制信息。S卩，任意DCI 格式可用于发射具有不同类型的两个或多个控制信息片段。因此，当通过向构成DCI格式 的多个信息字段指配特定值来指明控制信息时，多个信息字段中的一些信息字段可能是不 需要的。即，在构成DCI格式的多个信息字段中的一些信息字段中，可以不定义特定值。构 成DCI格式的一些信息字段可以是预留字段并且因此可以在具有任意值的状态下被预留。 该信息字段被预留用于尺寸自适应的目的，从而使多个不同类型的控制信息可以符合一个 DCI格式。然而，如果在发射控制信息时存在预留字段，则BS低效地消耗传输能量和传输功 率用于发射在任何功能中未使用的预留字段。因此，在生成符合DCI格式的控制信息时，需 要一种能够利用构成DCI格式的多个信息字段中的未使用的信息字段的方法。</p>
+    <p>[0087]	图13示出了用于利用构成DCI格式的多个信息字段中的未使用的信息字段的方 法的示例。</p>
+    <p>[0088]	参照图13，不同类型的控制信息A、B和C被分组为使用一个DCI格式。控制信息 A、B和C符合一个DCI格式。DCI格式由多个不同的信息字段组成。通过向DCI格式的所 有信息字段指配特定值来指明控制信息A。通过向DCI格式的一些信息字段指配特定值来 指明控制信息B或C。在组中，控制信息A具有最大信息比特尺寸。这是因为，DCI格式的 所有信息字段被配置为在控制信息A中被有意义地使用。控制信息A的信息比特尺寸是基 准信息比特尺寸。空信息被附加到控制信息B或C以配合与基准信息比特尺寸相同的尺寸。 因此，组中的控制信息A、B和C被固定为相同的信息比特尺寸。</p>
+    <p>[0089]	这样，不同类型的控制信息被分组为符合一个任意确定的DCI格式。通过将特定 值映射到构成DCI格式的信息字段来指明每个控制信息片段。通过向DCI格式的所有信息 字段指配特定值，可以指明组中包括的任意控制信息片段。另一方面，通过向DCI格式的一 些信息字段指配特定值，可以指明组中包括的其他控制信息。即，在指明其他控制信息时， DCI格式的其他信息字段是不需要的。用于指明控制信息的信息字段的总尺寸可被定义为 信息比特尺寸。前者的控制信息的信息比特尺寸是最大的。后者的控制信息的信息比特尺 寸是相对小的。</p>
+    <p>[0090]	基准信息比特尺寸被定义为通过向DCI格式的所有信息字段指配特定值来指明 控制信息时的信息比特尺寸。基准信息比特尺寸表示构成DCI格式的信息字段的总尺寸和 /或DCI格式自身的尺寸。在组中包括的其他控制信息具有小于基准信息比特尺寸的信息 比特尺寸的情况中，附加空信息以配合与基准信息比特尺寸相同的尺寸。即，在通过向DCI 格式中定义的所有信息字段中的一些信息字段指配值来指明特定控制信息时，其中未被指 配值的剩余信息字段用作空信息。用作空信息的信息字段可被称为错误检查字段。</p>
+    <p>[0091]	空信息被附加，从而使符合DCI格式的控制信息具有与该DCI格式的基准信息比特尺寸相同的尺寸。在根据DCI格式生成控制信息时，部分未使用的信息字段可以用作空 信息。空信息具有特定值。例如，用作空信息的信息字段的所有比特均可被设定为比特“O” 或比特“1”。可替选地，用作空信息的字段可被设定为UE已知的二进制码流值。该二进制 码流可被命名为二进制扰码流。根据用于生成BS和UE已知的二进制比特流和用于生成BS 和UE通过使用相同输入参数生成的Gold序列或m-序列的方法，可以生成该二进制流。</p>
+    <p>[0092]	可以在BS和UE之间预先确定用作空信息的信息字段或者可以由BS将其报告给 UE。例如，BS可以通过使用RRC信令或系统信息向UE报告关于用作空信息的信息字段的 fn息ο [0093]	当UE通过执行CRC错误检测来监视PDCCH时，UE可能错误地将另一 UE的 PDCCH辨认为其自身的PDCCH，或者在利用与实际RNTI不同的RNTI执行解掩码时，UE可 能错误地辨认为，未检测到CRC错误并且因此解码是成功的。这被称为误是错误（false positiveerror)。为了减少误是错误，空信息可被用作虚拟CRC或关于额外错误检查的探 查(probe)。</p>
+    <p>[0094]	图14是示出根据本发明的实施例的用于检测控制信息的方法的流程图。</p>
+    <p>[0095]	参考图14，UE通过监视控制信道检查CRC错误（步骤S310)。控制信道可以是 PDCCH。如果检测到CRC错误，则UE连续地监视控制信道（步骤S320)。如果未检测到CRC 错误，则UE确定错误检查字段的值是否等于特定值（步骤S330)。错误检查字段是其中未 检测到CRC错误的控制信道上的控制信息中包括的字段中的一个。错误检查字段是构成控 制信息的多个信息字段中的用作空信息的信息字段。</p>
+    <p>[0096]	如果错误检查字段的值不等于特定值，则UE连续地监视控制信道（步骤S340)。 否则，如果错误检查字段的值等于特定值，则UE检测其中未检测到CRC错误的控制信道上 的控制信息，作为其自身的控制信息（步骤S350)。即，仅在空信息被解码为UE已知的特定 值时，通过对应的PDCCH发射的控制信息被接收作为UE的控制信息。</p>
+    <p>[0097]	下面将详细描述用于使用空信息发射控制信息的方法。假设通过使用针对其他用 途定义的PDCCH的DCI格式发射控制信息以指示半持久调度（SPS)激活。S卩，指示SPS激 活的控制信息和其他类型的控制信息使用一个DCI格式。SPS可用于上行链路和下行链路 VoIP传输。</p>
+    <p>[0098]	无线电资源调度方案包括动态调度方案、持久调度方案和SPS方案。动态调度方 案是如下方案，其中在无论何时发射或接收数据时通过使用控制信号请求调度信息。持久 调度方案是如下方案，其中使用预先确定的信息，从而在无论何时发射或接收数据时不使 用控制信号请求调度信息。SPS方案是如下方案，其中在无论何时发射或接收数据时不使用 控制信号在SPS间隔期间请求调度信息。SPS间隔可以在接收到指示SPS激活的控制信息 时开始。SPS间隔可以在接收到指示SPS去激活的控制信息时结束。可替选地，可以通过 RRC信令确定SPS间隔。</p>
+    <p>[0099]	图15是示出使用动态调度方案的下行链路数据传输的流程图。无论何时在通过 PDSCH发射下行链路数据时，BS通过PDCCH向UE发射下行链路（DL)许可。UE通过使用通 过PDCCH接收的DL许可接收通过PDSCH发射的下行链路数据。有利地，BS可以根据下行 链路信道条件适当地调度无线电资源。</p>
+    <p>[0100]	图16是示出使用动态调度方案的上行链路数据传输的流程图。在通过PUSCH发射上行链路数据之前，BS根据上行链路（UL)许可向UE分配无线电资源。UL许可是通过 PDCCH发射的。</p>
+    <p>[0101]	IP语音（VoIP)业务通过互联网协议（IP)网络提供语音数据。常规地，已在电路交换（CS)域中提供了语音数据。然而，在VoIP业务中，在分组交换（PS)域中提供语音数 据。在基于CS的语音业务中，在以端对端方式保持连接的同时发射语音数据。另一方面， 在VoIP业务中，由于可以通过无连接的方式发射语音数据，因此可以非常有效地使用网络 资源。</p>
+    <p>[0102]	随着无线通信技术的开发，用户数据量迅速增加。因此，为了有效地使用有限的 网络资源，常规的基于CS的业务近来已被基于PS的业务所取代。正在以相同的方式开发 VoIP业务，并且预期在未来的大部分无线通信系统中通过VoIP提供所有语音业务。</p>
+    <p>[0103]	实时传送协议（RTP)被开发以有效地提供基于PS的语音业务。而且，RTP控制协 议（RTCP)也被开发以控制RTP。在RTP中，在每个分组中载送时间戳信息，并且因此可以解 决抖动问题。而且，通过RTCP报告RTP分组损失，并且因此可以通过速率控制降低帧错误 率（FER)。除了 RTP/RTCP之外，通过开发会话发起协议（SIP)和会话描述协议（SDP)，可以 通过端对端的方式保持虚拟连接。因此，可以极大地解决延迟问题。</p>
+    <p>[0104]	图17示出了 VoIP中的流量模型的示例。</p>
+    <p>[0105]	参照图17，在VoIP中生成两种类型的语音分组，即在通话突发中生成的分组和在 静默时段中生成的分组。例如，如果假设12. 2kbps的自适应多速率（AMR)，则以20ms的周 期在通话突发中生成RTP分组，并且该RTP分组具有35至49字节的尺寸。在静默时段中， 以160ms的周期生成RTP分组，并且该RTP分组具有10至24字节的尺寸。</p>
+    <p>[0106]	当在诸如VoIP业务的语音业务中以恒定周期生成分组时，所生成的分组的尺寸 是相对小的和恒定的。因此，VoIP通常使用持久调度方案或SPS方案。在使用持久调度方 案时，通过在无线电承载配置过程中预测调度方案来持久地分配无线电资源，并且因此可 以在没有包括调度信息的控制信号的情况下发射和接收分组。在使用持久调度方案发射或 接收数据时，由于在未提供调度信息的情况下使用预先确定的无线电资源，因此未考虑发 射或接收数据的时间点处的信道条件。结果，传输错误率可能连同信道条件的改变一起增 力口。当通话突发用作SPS间隔时，VoIP适于使用SPS方案。</p>
+    <p>[0107]	图18是示出使用SPS方案的下行链路数据传输的流程图。BS通过PDCCH向UE发 射指示资源分配信息的SPS激活的控制信息。在SPS间隔期间，UE可以通过使用资源分配 信息通过PDSCH从BS接收VoIP数据。</p>
+    <p>[0108]	图19是示出使用SPS方案的上行链路数据传输的流程图。BS通过PDCCH向UE发 射指示资源分配信息的SPS激活的控制信息。在SPS间隔期间，UE可以通过使用资源分配 信息通过PUSCH向BS发射VoIP数据。</p>
+    <p>[0109]	首先，将描述通过使用DCI格式O发射指示SPS激活的控制信息的方法。通过使 用DCI格式O可以发射指示PUSCH调度的控制信息和指示SPS激活的控制信息。SPS激活 可用于上行链路VoIP传输。</p>
+    <p>[0110]	下面的表3示出了使用DCI格式O发射的控制信息的示例。</p>
+    <p>[0111][表	3]</p>
+    <p>[0112]&lt;table&gt;table see original document page 13&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0113]	DCI格式0包括多个信息字段。该信息字段是（1)标志字段、（2)跳频标志字段、 (3)资源块指配和跳频资源分配字段、⑷调制和编码方案（MCS)和冗余版本字段、（5)新 数据指示符字段、（6)TPC命令字段、（7)循环移位字段、（S)UL索引字段和（9)信道质量指 示符（CQI)请求字段。每个信息字段的比特尺寸仅用于示例性目的，并且因此比特尺寸不 限于此。</p>
+    <p>[0114]	标志字段是用于使格式0区别于格式IA的信息字段。资源块指配和跳频资源分 配字段可以具有根据跳频PUSCH或非跳频PUSCH变化的比特尺寸。用于非跳频PUSCH的资 源块指配和跳频资源分配字段提供了</p>
+    <p>[0115]	log2(NEBUL(NEBUL+l)/2)</p>
+    <p>[0116]	个比特以分配上行链路子帧中的第一时隙的资源。这里，Ν:1表示上行链路时隙 中包括的资源块的数目，并且取决于小区中确定的上行链路Tx带宽。用于跳频PUSCH的资 源块指配和跳频资源分配字段提供了</p>
+    <p>[0117]	&lt;formula&gt;formula see original document page 13&lt;/formula&gt;</p>
+    <p>[0118]	个比特以分配上行链路子帧中的第一时隙的资源。</p>
+    <p>[0119]	如果格式O的信息比特的数目小于格式IA的信息比特的数目，则将“O”附加到格 式O直至载荷尺寸变得等于格式IA的载荷尺寸。</p>
+    <p>[0120]	使用所有前述字段表示用于PUSCH调度的控制信息。因此，具有基准信息比特尺 寸的控制信息符合用于PUSCH调度的DCI格式O。</p>
+    <p>[0121]	如果使用DCI格式O发射用于SPS激活的控制信息，则为配合DCI格式O的基准 信息比特尺寸而附加的空信息可以与为符合格式IA的载荷尺寸而填充的“O”比特一起使用，用于虚拟CRC检查。 [0122]	下文中，将描述当使用DCI格式0发射用于SPS激活的控制信息时可以用作空信 息的信息字段的示例。</p>
+    <p>[0123]	(1)第1实施例</p>
+    <p>[0124]	如果假设UE在不执行用于下行链路VoIP传输的不定期PUSCH反馈的情况下仅执 行基于PUCCH的反馈，则CQI请求字段可以用作空信息。</p>
+    <p>[0125]	下面的表4示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信息 的第1实施例。</p>
+    <p>[0126]	[表 4]</p>
+    <p>[0127]</p>
+    <p>信息字段	比特数目</p>
+    <p>~~(9) CQI 请求	I</p>
+    <p>对于上行链路半持久调度的激活，该 信息比特被设定为零。</p>
+    <p>[0128]	如果控制信息用于上行链路SPS激活，则CQI请求字段的值被设定为“O”。除了 CQI请求字段以外的DCI格式O的剩余字段与上文表3中示出的相同。假设UE在不执行用 于下行链路VoIP传输的不定期PUSCH反馈的情况下仅执行基于PUCCH的反馈。</p>
+    <p>[0129]	(2)第2实施例</p>
+    <p>[0130]	假设用于上行链路VoIP分组传输的指示SPS激活的控制信息不需要额外的闭环 功率控制，并且基于开环类型或混合类型的功率控制确定VoIP传输的Tx功率。当通过考 虑半静态资源块的指配而未使用关于调度的PUSCH的TPC命令字段时，TPC命令字段可以 用作全fn息ο</p>
+    <p>[0131]	下面的表5示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信息 的第2实施例。</p>
+    <p>[0132]	[表 5]</p>
+    <p>[0133]</p>
+    <p>信息字段	比特数目</p>
+    <p>~~(6) 关于调度的PUSCH的TPC命令	2</p>
+    <p>对于上行链路半持久调度的激活，这 些信息比特均被设定为零。[0134]	如果控制信息用于上行链路SPS激活，则TPC命令字段的值均被设定为“0”。除了 TPC命令字段以外的DCI格式0的剩余字段与上文表3中示出的相同。</p>
+    <p>[0135]	(3)第3实施例</p>
+    <p>[0136]	用于上行链路VoIP分组传输的指示SPS激活的控制信息可以不隐含地使用用于 特定信息递送的新数据指示符字段。在该情况中，新数据指示符字段可以用作空信息。</p>
+    <p>[0137]	下面的表6示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信息 的第3实施例。 [0138]	[表 6]</p>
+    <p>[0139]</p>
+    <p>&lt;table&gt;table see original document page 15&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0140]	如果控制信息用于上行链路SPS激活，则新数据指示符字段的值被设定为“O”。除 了新数据指示符字段以外的DCI格式O的剩余字段与上文表3中示出的相同。</p>
+    <p>[0141]	(4)第4实施例</p>
+    <p>[0142]	用于上行链路VoIP分组传输的指示SPS激活的控制信息可以在不指示MCS和冗 余版本字段中的MCS或冗余版本的情况下使用额外信令。当在不指示MCS和冗余版本字段 中的MCS的情况下使用额外信令时，MCS和冗余版本字段的5个比特中的3个比特可用于 空信息。当在不指示冗余版本字段中的冗余版本的情况下使用额外信令时，5个比特中的2 个比特可用于空信息。在对于MCS和冗余版本均可以使用额外信令时，5个比特均可用于空 fn息ο</p>
+    <p>[0143]	下面的表7示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信息 的第4实施例。</p>
+    <p>[0144]	[表 7]</p>
+    <p>[0145]&lt;table&gt;table see original document page 15&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;&lt;table&gt;table see original document page 16&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0146]	如果控制信息用于上行链路SPS激活，则MCS和冗余版本字段的5个比特中的2、 3或5个比特被设定为“0”。除了 MCS和冗余版本字段以外的DCI格式0的剩余字段与上 文表3中示出的相同。</p>
+    <p>[0147]	(5)第5实施例</p>
+    <p>[0148]	用于上行链路VoIP分组传输的指示SPS激活的控制信息可以不额外地指示关于 解调基准符号（DM-RS)的循环移位字段。在该情况中，循环移位字段用于空信息。</p>
+    <p>[0149]	下面的表8示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信息 的第5实施例。</p>
+    <p>[0150]	[表 8]</p>
+    <p>[0151]</p>
+    <p>&lt;table&gt;table see original document page 16&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0152]	如果控制信息用于上行链路SPS激活，则循环移位字段的值均被设定为“O”。除了 TPC命令字段以外的DCI格式O的剩余字段与上文表3中示出的相同。</p>
+    <p>[0153]	(6)第6实施例</p>
+    <p>[0154]	用于上行链路VoIP分组传输的指示SPS激活的控制信息可以允许VoIP限制可被 分配在整个系统带宽上的带宽。在该情况中，资源块指配和跳频资源分配字段可以用作空 信息。在</p>
+    <p>[0155]	log2(NEBUL(NEBUL+l)/2)</p>
+    <p>[0156]	个比特中，M个比特可用于空信息。这里，M是从1至IJ</p>
+    <p>[0157]	|log2(NRB（NRBUL+1)/2)-1</p>
+    <p>[0158]	的范围中的自然数。</p>
+    <p>[0159]	下面的表9示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信息的第5实施例。</p>
+    <p>[0160]	[表 9]</p>
+    <p>[0161]&lt;table&gt;table see original document page 17&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0162]	如果控制信息用于上行链路SPS激活，则</p>
+    <p>[0163]	&lt;formula&gt;formula see original document page 17&lt;/formula&gt;[0164]	个比特中的M个比特被设定为“0”。这里，M是从1到</p>
+    <p>[0165]	&lt;formula&gt;formula see original document page 17&lt;/formula&gt;[0166]	的范围中的自然数。除了资源块指配和跳频资源分配字段以外的DCI格式0的剩 余字段与上文表3中示出的相同。</p>
+    <p>[0167]	(7)第7实施例</p>
+    <p>[0168]	DCI格式0的多个信息字段的组合用作空信息。可将任意信息字段组合以用作空 信息。整个信息字段可以用作空信息。在多个信息字段的组合中可以使用在第1至第6实 施例中用作空信息的信息字段。例如，如第4实施例中描述的，当额外信令用于MSC或冗余 版本时，在多个信息字段的组合中可以使用MCS和冗余版本字段的5个比特中的2、3或5 个比特。在使用频分双工（FDD)系统时，通过将上行链路索引字段的比特附加到在第1至 第6实施例中用作空信息的信息字段，上行链路索引字段的比特可以用作空信息。</p>
+    <p>[0169]	(8)第8实施例</p>
+    <p>[0170]	第8实施例是第7实施例的详细的实施例。如果使用DCI格式0发射用于SPS激 活的控制信息，则资源块指配和跳频资源分配字段、MCS和冗余版本字段、TPC命令字段、循 环移位字段和CQI请求字段的组合可以用作空信息。</p>
+    <p>[0171]	下面的表10示出了使用用于PUSCH调度和SPS激活的DCI格式0发射的控制信 息的第8实施例。</p>
+    <p>[0172][表	10]&lt;table&gt;table see original document page 18&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0174]	这里，资源块指配和跳频资源分配中的M可以被具体地设定为“2”，并且MCS和冗 余版本字段中的N可被具体地设定为“ 1 ”。</p>
+    <p>[0175]	(9)第9实施例</p>
+    <p>[0176]	第9实施例是第7实施例的详细的实施例。如果使用DCI格式O发射用于SPS激 活的控制信息，则资源块指配和跳频资源分配字段、MCS和冗余版本字段、新数据指示符字 段、TPC命令字段、循环移位字段和CQI请求字段的组合可以用作空信息。这是新数据指示 符字段被添加到第8实施例的信息字段组合以便于用作空信息的情况。</p>
+    <p>[0177]	下面的表11示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信 息的第9实施例。</p>
+    <p>[0178][表	11][0179]	&lt;table&gt;table see original document page 19&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0180]	这里，资源块指配和跳频资源分配中的M可以被具体地设定为“2”，并且MCS和冗 余版本字段中的N可被具体地设定为“ 1 ”。</p>
+    <p>[0181]	(10)第10实施例</p>
+    <p>[0182]	第10实施例是第7实施例的详细的实施例。如果使用DCI格式0发射用于SPS 激活的控制信息，则根据资源块指配和跳频资源分配字段与MCS和冗余版本字段之间的关 系，空信息可用于这两个字段。这两个字段可以通过额外的RRC指示相关。除了这两个字 段之外，TPC命令字段、循环移位字段和CQI请求字段的组合也可以用作空信息。</p>
+    <p>[0183]	下面的表12示出了使用用于PUSCH调度和SPS激活的DCI格式0发射的控制信 息的第10实施例。</p>
+    <p>[0184][表	12]</p>
+    <p>[0185]</p>
+    <p>&lt;table&gt;table see original document page 19&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;&lt;table&gt;table see original document page 20&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0186]	这里，R可以是1、2、...或者可以是</p>
+    <p>[0187]	I Iog2 (NkbuL(Neb1Vi)/2) I+4</p>
+    <p>[0188]	个比特。可替选地，R可以被具体地设定为“3”或“4”。</p>
+    <p>[0189]	(11)第11实施例</p>
+    <p>[0190]	第11实施例是第7实施例的详细的实施例。如果使用DCI格式O发射用于SPS 激活的控制信息，则新数据指示符字段被添加到第10实施例的信息字段组合以便于用作 全fn息。</p>
+    <p>[0191]	下面的表13示出了使用用于PUSCH调度和SPS激活的DCI格式O发射的控制信 息的第11实施例。</p>
+    <p>[0192]	[表 13]</p>
+    <p>[0193]</p>
+    <p>&lt;table&gt;table see original document page 20&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;信息字段	I比特数目</p>
+    <p>~13) 资源块指配和跳频资源分配	log2(NEBUL(NEBUL+l)/2) ^</p>
+    <p>~~(4) 调制和编码方案和冗余版本	5</p>
+    <p>对于上行链路半持久调度的激活，来自 “资源块指配和跳频资源分配以及调 制和编码方案和冗余版本”的R个信 息比特均被设定为零。</p>
+    <p>"75) 新数据指示符	1</p>
+    <p>对于上行链路半持久调度的激活，该信 息比特被设定为零。</p>
+    <p>~~(6) 关于调度的PUSCH的TPC命令	2</p>
+    <p>对于上行链路半持久调度的激活，这些 信息比特均被设定为零。</p>
+    <p>~~(7) 关于DM RS的循环移位	3</p>
+    <p>对于上行链路半持久调度的激活，这些 信息比特均被设定为零。</p>
+    <p>(8) UL 索引（TDD)	2</p>
+    <p>~~(9) CQI 请求	1</p>
+    <p>对于上行链路半持久调度的激活，该信 息比特被设定为零。</p>
+    <p>[0194]	这里，R可以是1、2、...或者可以是</p>
+    <p>[0195]	|10&amp;(队广(1皿+1)/2) |+4</p>
+    <p>[0196]	个比特。可替选地，R可以被具体地设定为“3”或“4”。</p>
+    <p>[0197]	现将描述用于使用DCI格式IA发射指示SPS激活的控制信息的方法。DCI格式IA 可用于发射用于一个PDSCH码字的紧凑调度的控制信息和指示SPS激活的控制信息。SPS 激活可用于上行链路VoIP传输。</p>
+    <p>[0198]	下面的表14示出了使用DCI格式IA发射的控制信息的示例。</p>
+    <p>[0199][表	14]</p>
+    <p>[0200]信息字段	比特数目</p>
+    <p>"71) 用于区别格式o/格式&#943;α的标志	I</p>
+    <p>"72) 局部化/分布式VRB指配标志	1 "73) 资源块指配	log2(NEBDL(NEBDL+l)/2) ^</p>
+    <p>~~(4) 调制和编码方案	5</p>
+    <p>~~(5) HARQ过程编号	3或4</p>
+    <p>~16) 新数据指示符	1</p>
+    <p>~~(7) 冗余版本	2</p>
+    <p>~~(8) 关于调度的PUCCH的TPC命令	2</p>
+    <p>"79) 下行链路指配索引（TDD)	2</p>
+    <p>[0201]	DCI格式IA包括多个信息字段。该信息字段是（1)标志字段、（2)局部化/分布 式虚拟资源块（VRB)指配标志字段、(3)资源块指配字段、(4)调制和编码方案（MCS)字段、 (5)混合自动重复请求（HARQ)过程编号字段、（6)新数据指示符字段、（7)冗余版本字段、 (S)TPC命令字段和（9)下行链路指配索引字段。每个信息字段的比特尺寸仅用于示例性目 的，并且因此比特尺寸不限于此。</p>
+    <p>[0202]	标志字段是用于使格式0区别于格式IA的信息字段。如果DCI格式IA的CRC通 过RA-RNTI、P-RNTI或SI-RNTI被加扰，则标志字段的比特指示传送块尺寸（TBS)表格的列 NPKB1A。如果标志字段是“0”，则化皿^是〗。。如果标志字段是“1”，则化皿^是巧”。否则，标 志字段指示DCI格式。</p>
+    <p>[0203]	资源块指配字段可以具有根据局部化VRB或分布式VRB变化的比特尺寸。用于局 部化VRB的资源块指配字段提供了</p>
+    <p>[0204]	I Iog2 (NkbdL(Nebi^I)/2)</p>
+    <p>[0205]	个比特用于资源指配。这里，NkbdL表示下行链路时隙中包括的资源块的数目，并且 取决于小区中确定的下行链路Tx带宽。用于分布式VRB的资源块指配字段根据Nk广是否 小于50或者NkbdL是否大于或等于50而变化。如果N:1小于50或者如果DCI格式IA的 CRC 通过 RA-RNTI、P-RNTI 或 SI-RNTI 被加扰，贝Ij</p>
+    <p>[0206]	I Iog2 (NkbdL(Nebi^I)/2)</p>
+    <p>[0207]	个比特被提供用于资源指配，如果NkbdL大于或等于50，则</p>
+    <p>[0208]	I Iog2 (NkbdL(Nebi^I)/2)卜 1</p>
+    <p>[0209]	个比特被提供用于资源指配。[0210]	如果DCI格式IA的CRC通过RA-RNTI、P-RNTI或SI-RNTI被加扰，则新数据指示 符字段指示间隙值。例如，如果新数据指示符字段是“0”，则Ngap是Ngap，l。如果新数据 指示符字段是“ 1 ”，则Ngap是Ngap，2。否则，新数据指示符字段指示新数据。</p>
+    <p>[0211]	可以使用所有前述字段表示指示PDSCH上的信道指配的控制信息。因此，具有基 准信息尺寸的控制信息符合用于指配PDSCH的信道的DCI格式1A。</p>
+    <p>[0212]	下文中，将描述当使用DCI格式IA发射用于SPS激活的控制信息时可以用作空信 息的信息字段的示例。</p>
+    <p>[0213]	(12)第12实施例</p>
+    <p>[0214]	用于下行链路VoIP分组传输的指示SPS激活的控制信息不必报告用于下行链路 VoIP传输的HARQ过程编号。在该情况中，HARQ过程编号字段可以用作空信息。例如，如果 假设UE在不执行用于下行链路VoIP传输的不定期PUSCH反馈的情况下仅执行基于PUCCH 的反馈，则HARQ过程编号字段可以用作空信息。</p>
+    <p>[0215]	下面的表15示出了使用用于PDSCH信道指配和SPS激活的DCI格式IA发射的控 制信息的第12实施例。</p>
+    <p>[0216][表	15]</p>
+    <p>[0217]</p>
+    <p>信息字段	比特数目</p>
+    <p>~~(5) HARQ过程编号	3或4</p>
+    <p>对于下行链路半持久调度的激活，这些 信息比特均被设定为零。</p>
+    <p>[0218]	如果控制信息用于下行链路SPS激活，则HARQ过程编号字段被设定为“O”。除了 HARQ过程编号字段以外的DCI格式IA的剩余字段与上文表14中示出的相同。</p>
+    <p>[0219]	(13)第13实施例</p>
+    <p>[0220]	假设用于下行链路VoIP分组传输的指示SPS激活的控制信息不需要额外的闭环 功率控制，并且基于开环类型或混合类型的功率控制确定PUCCH传输的Tx功率。当通过考 虑半静态资源块的指配而未使用TPC命令字段时，TPC命令字段可以用作空信息。</p>
+    <p>[0221]	下面的表16示出了使用用于PDSCH信道指配和SPS激活的DCI格式IA发射的控 制信息的第13实施例。</p>
+    <p>[0222][表	16]</p>
+    <p>[0223]</p>
+    <p>&lt;table&gt;table see original document page 23&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;&lt;table&gt;table see original document page 24&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0224]	如果控制信息用于下行链路SPS激活，则TPC命令字段的值均被设定为“0”。除了 TPC命令字段以外的DCI格式1A的剩余字段与上文表14中示出的相同。</p>
+    <p>[0225]	(14)第14实施例</p>
+    <p>[0226]	用于下行链路VoIP分组的指示SPS激活的控制信息可以不隐含地使用用于特定 信息递送的新数据指示符字段。在该情况中，新数据指示符字段可以用作空信息。</p>
+    <p>[0227]	下面的表17示出了使用用于PDSCH信道指配和SPS激活的DCI格式1A发射的控 制信息的第14实施例。</p>
+    <p>[0228][表	17]</p>
+    <p>[0229]&lt;table&gt;table see original document page 24&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0230]	如果控制信息用于下行链路SPS激活，则新数据指示符字段的值被设定为“0”。除 了新数据指示符字段以外的DCI格式1A的剩余字段与上文表14中示出的相同。</p>
+    <p>[0231]	(15)第15实施例</p>
+    <p>[0232]	用于下行链路VoIP分组的指示SPS激活的控制信息可以不隐含地使用用于特定 信息递送的冗余版本字段。在该情况中，冗余版本字段可以用作空信息。</p>
+    <p>[0233]	下面的表18示出了使用用于PDSCH信道指配和SPS激活的DCI格式1A发射的控 制信息的第14实施例。</p>
+    <p>[0234][表	18]</p>
+    <p>[0235]&lt;table&gt;table see original document page 24&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;&lt;table&gt;table see original document page 25&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0236]	如果控制信息用于下行链路SPS激活，则冗余版本字段的值被设定为“0”。除了冗 余版本字段以外的DCI格式1A的剩余字段与上文表14中示出的相同。</p>
+    <p>[0237]	(16)第16实施例</p>
+    <p>[0238]	用于下行链路VoIP分组的指示SPS激活的控制信息可以在不指示MCS字段中的 MCS的情况下使用额外信令。可替选地，可以使用调制方案和编码速率的一些或所有可能的 情况。在该情况中，MCS字段的5个比特中的Q个比特可以用作空信息。这里，Q是1至5 的范围中的自然数。</p>
+    <p>[0239]	下面的表19示出了使用用于PDSCH信道指配和SPS激活的DCI格式1A发射的控 制信息的第16实施例。</p>
+    <p>[0240]	[表 19]</p>
+    <p>[0241]</p>
+    <p>&lt;table&gt;table see original document page 25&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0242]	如果控制信息用于下行链路SPS激活，则MCS字段的5个比特中的Q个比特被设 定为“0”。这里，Q是1至5的范围中的自然数。除了 MCS字段以外的DCI格式1A的剩余 字段与上文表14中示出的相同。</p>
+    <p>[0243]	(17)第17实施例</p>
+    <p>[0244]	用于下行链路VoIP分组的指示SPS激活的控制信息可以允许VoIP限制分配在整 个系统带宽上的带宽。在该情况中，资源块指配字段可以用作空信息。在</p>
+    <p>[0245]	&lt;formula&gt;formula see original document page 25&lt;/formula&gt;</p>
+    <p>[0246]	个比特中，P个比特可用于空信息。这里，P是从1到</p>
+    <p>[0247]	&lt;formula&gt;formula see original document page 25&lt;/formula&gt;</p>
+    <p>[0248]	的范围中的自然数。[0249]	下面的表20示出了使用用于PDSCH信道指配和SPS激活的DCI格式1A发射的控 制信息的第17实施例。</p>
+    <p>[0250]	[表 20]</p>
+    <p>[0251]&lt;table&gt;table see original document page 26&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0252]	如果控制信息用于下行链路SPS激活，则</p>
+    <p>[0253]	log2(NEBDL(NEBDL+l)/2)</p>
+    <p>[0254]	中的P个比特被设定为“0”。这里，P是从1到</p>
+    <p>[0255]	|10&amp;(队广（^皿+1)/2)卜 1</p>
+    <p>[0256]	的范围中的自然数。除了资源块指配字段以外的DCI格式1A的剩余字段与上文 表14中示出的相同。</p>
+    <p>[0257]	(18)第18实施例</p>
+    <p>[0258]	DCI格式1A的多个信息字段的组合用作空信息。可将任意信息字段组合以用作 空信息。整个信息字段可以用作空信息。在多个信息字段的组合中可以使用在第12至第 17实施例中用作空信息的信息字段。例如，如第16实施例中描述的，当额外信令用于MSC 时，在多个信息字段的组合中可以使用MCS字段的5个比特中的Q个比特。这里，Q是1至 5的范围中的自然数。此外，如第17实施例中的，在信息字段的组合中可以使用资源块指配 字段的</p>
+    <p>[0259]	&lt;formula&gt;formula see original document page 26&lt;/formula&gt;</p>
+    <p>[0260]	个比特中的P个比特。这里，P是从1至IJ</p>
+    <p>[0261]	&lt;formula&gt;formula see original document page 26&lt;/formula&gt;</p>
+    <p>[0262]	的范围中的自然数。在使用FDD系统时，通过将下行链路索引字段的比特附加到 在第12至第17实施例中用作空信息的信息字段，下行链路索引字段的比特可以用作空信 肩、o</p>
+    <p>[0263]	(19)第19实施例</p>
+    <p>[0264]	第19实施例是第18实施例的详细的实施例。如果使用DCI格式1A发射用于SPS 激活的控制信息，则资源块指配字段、MCS字段和冗余版本字段的组合用作空信息。</p>
+    <p>[0265]	下面的表21示出了使用用于PDSCH信道指配和SPS激活的DCI格式1A发射的控 制信息的第19实施例。</p>
+    <p>[0266][表	21]</p>
+    <p>26&lt;table&gt;table see original document page 27&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0268]	(20)第20实施例</p>
+    <p>[0269]	第20实施例是第18实施例的详细的实施例。如果使用DCI格式IA发射用于SPS 激活的控制信息，则资源块指配字段、MCS字段、新数据指示符字段和冗余版本的组合用作 空信息。这是将新数据指示符字段添加到第19实施例的信息字段的组合以便于用作空信 息的情况。</p>
+    <p>[0270]	下面的表22示出了使用用于PDSCH信道指配和SPS激活的DCI格式IA发射的控制信息的第20实施例。</p>
+    <p>[0271][表	22]</p>
+    <p>[0272]</p>
+    <p>&lt;table&gt;table see original document page 28&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0273]	(21)第21实施例</p>
+    <p>[0274]	第21实施例是第18实施例的详细的实施例。如果使用DCI格式IA发射用于SPS 激活的控制信息，则资源块指配字段、MCS字段、HARQ过程编号字段和冗余版本字段的组合 用作空信息。这是将HARQ过程编号字段添加到第19实施例的信息字段的组合以便于用作 空信息的情况。</p>
+    <p>[0275][表	23]</p>
+    <p>[0276]&lt;table&gt;table see original document page 29&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0277]	(22)第22实施例</p>
+    <p>[0278]	第22实施例是第18实施例的详细的实施例。如果使用DCI格式IA发射用于SPS 激活的控制信息，则资源块指配字段、MCS字段、HARQ过程编号字段、新数据指示符字段和 冗余版本字段的组合用作空信息。这是将新数据指示符字段添加到第21实施例的信息字 段的组合以便于用作空信息的情况。</p>
+    <p>[0279][表 24]</p>
+    <p>[0280]&lt;table&gt;table see original document page 29&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;&lt;table&gt;table see original document page 30&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0281]	(23)第23实施例</p>
+    <p>[0282]	第23实施例是第18实施例的详细的实施例。如果使用DCI格式IA发射用于SPS</p>
+    <p>激活的控制信息，则根据资源块指配字段与MCS字段之间的关系，空信息可用于这两个字</p>
+    <p>段。这两个字段可以通过额外的RRC指示相关。除了这两个字段之外，冗余版本字段也可</p>
+    <p>被进一步组合以便于用作空信息。</p>
+    <p>[0283]	下面的表25示出了使用用于PDSCH信道指配和SPS激活的DCI格式IA发射的控</p>
+    <p>制信息的第23实施例。</p>
+    <p>[0284]	[表 25]</p>
+    <p>[0285]&lt;table&gt;table see original document page 31&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0286]	这里，S可以是1、2、...或者可以是</p>
+    <p>[0287]	I Iog2 (NkbdL(Nebi^I)/2) |+4</p>
+    <p>[0288]	个比特。</p>
+    <p>[0289]	(24)第24实施例</p>
+    <p>[0290]	第24实施例是第18实施例的详细的实施例。如果使用DCI格式IA发射用于SPS 激活的控制信息，则根据资源块指配字段与MCS字段之间的关系，空信息可用于这两个字 段。这两个字段可以通过额外的RRC指示相关。除了这两个字段之外，新数据指示符字段 和冗余版本字段的组合可以用作空信息。这是将新数据指示符字段添加到第23实施例的 信息字段的组合以便于用作空信息的情况。</p>
+    <p>[0291]	下面的表26示出了使用用于PDSCH信道指配和SPS激活的DCI格式IA发射的控 制信息的第24实施例。</p>
+    <p>[0292]	[表 26]</p>
+    <p>[0293]&lt;table&gt;table see original document page 32&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>[0294]	这里，S可以是1、2、...或者可以是</p>
+    <p>[0295]	I Iog2 (NkbDL(Nebi^I)/2) +4 个比特。</p>
+    <p>[0296]	(25)第25实施例</p>
+    <p>[0297]	第25实施例是第18实施例的详细的实施例。如果使用DCI格式IA发射用于SPS 激活的控制信息，则根据资源块指配字段与MCS字段之间的关系，空信息可用于这两个字 段。这两个字段可以通过额外的RRC指示相关。除了这两个字段之外，HARQ过程编号字段和冗余版本字段的组合可以用作空信息。这是将HARQ过程编号字段添加到第23实施例的 信息字段的组合以便于用作空信息的情况。</p>
+    <p>[0298]	下面的表27示出了使用用于PDSCH信道指配和SPS激活的DCI格式IA发射的控 制信息的第25实施例。</p>
+    <p>[0299]	[表 27]</p>
+    <p>[0300]</p>
+    <p>信息字段	比特数目~</p>
+    <p>~~0) 用于区别格式0/格式IA的标志	1</p>
+    <p>"72) 局部化/分布式VRB指配标志	1</p>
+    <p>"73) 资源块指配	Iog2 (N: (1</p>
+    <p>~~(4) 调制和编码方案	5</p>
+    <p>对于下行链路半持久调度的激活，来自“资源块 指配”和“调制和编码方案”的S个信息比特均 被设定为零。</p>
+    <p>~~(5) HARQ过程编号	3或4</p>
+    <p>&lt;table&gt;table see original document page 33&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0303]	(26)第26实施例</p>
+    <p>[0304]	第26实施例是第18实施例的详细的实施例。如果使用DCI格式IA发射用于SPS 激活的控制信息，则根据资源块指配字段与MCS字段之间的关系，空信息可用于这两个字 段。这两个字段可以通过额外的RRC指示相关。除了这两个字段之外，HARQ过程编号字段、 新数据指示符字段和冗余版本字段的组合可以用作空信息。这是将新数据指示符字段添加到第25实施例的信息字段的组合以便于用作空信息的情况。</p>
+    <p>[0305]	下面的表28示出了使用用于PDSCH信道指配和SPS激活的DCI格式IA发射的控 制信息的第26实施例。</p>
+    <p>[0306]	[表 28]</p>
+    <p>[0307]</p>
+    <p>&lt;table&gt;table see original document page 34&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;[0308]</p>
+    <p>[0309]	这里，S可以是1、2、...或者可以是</p>
+    <p>[0310]	I Iog2 (NkbdL(Nebi^I)/2) +4 个比特。</p>
+    <p>[0311]	(27)第27实施例</p>
+    <p>[0312]	DCI格式1可用于发射用于PDSCH上的信道指配的控制信息，该控制信息基于用于 下行链路VoIP分组传输的指示SPS激活的通用资源分配和控制信息。在第12至第26实施例的方法中，在使用DCI格式IA发射指示PDSCH上的信道指配的控制信息的条件下，其 中该控制信息基于用于下行链路VoIP分组传输的指示SPS激活的特定资源分配和控制信 息，DIC格式IA中定义的信息字段用作空信息。第12至第26实施例的方法可以等同地应 用于使用DCI格式1发射指示SPS激活的控制信息的情况。DCI格式1中定义的信息字段 也可以用作空信息。</p>
+    <p>[0313]	(28)第28实施例</p>
+    <p>[0314]	DCI格式2可用于发射用于被设定为空间多路复用模式的UE的PDSCH调度的控制 信息和用于下行链路VoIP分组传输的用于SPS激活的控制信息。第12至第26实施例的 方法可以等同地应用于使用DCI格式2发射用于SPS激活的控制信息的情况。DCI格式2 中定义的信息字段也可以用作空信息。</p>
+    <p>[0315]	DCI格式2包括HARQ调换标志字段。HARQ调换标志字段也可以通过被附加到在 DCI格式2中用作空信息的信息字段而用作空信息。HARQ调换标志字段和其他信息字段的 所有可能组合也可以用作空信息。</p>
+    <p>[0316]	如上文所描述的，在无线通信系统中可以提供具有提高的准确性的用于检测控制 信息的方法。错误检查字段的特定值可以用作虚拟CRC。用户设备在检测控制信息时通过 使用虚拟CRC可以提高CRC错误检查的准确性。即，在有效地利用无线电资源的同时可以 准确地检测控制信息。因此，可以提高整体系统性能。</p>
+    <p>[0317]	上文所描述的所有功能可以根据用于执行该功能的软件或程序代码由诸如微处 理器、控制器、微控制器和专用集成电路（ASIC)的处理器执行。可以基于本发明的描述而 设计、开发和实现该程序代码，并且这对于本领域的技术人员是公知的。</p>
+    <p>[0318]	尽管通过参考本发明的示例性实施例具体地示出和描述了本发明，但是本领域的 技术人员应理解，在不偏离如所附权利要求限定的本发明的精神和范围的前提下，可以对 其进行形式和细节上的各种改变。示例性实施例应仅被视为描述性的而非用于限制的目 的。因此，本发明的范围并非由本发明的详细描述限定，而是由所附权利要求限定，并且该 范围中的所有差异将被解释为包括在本发明中。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102186193A?cl=zh">CN102186193A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月6日</td><td class="patent-data-table-td patent-date-value">2011年9月14日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">误检测判决方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102186201A?cl=zh">CN102186201A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年5月17日</td><td class="patent-data-table-td patent-date-value">2011年9月14日</td><td class="patent-data-table-td ">大唐移动通信设备有限公司</td><td class="patent-data-table-td ">一种ue及其检测pdcch的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102186201B?cl=zh">CN102186201B</a></td><td class="patent-data-table-td patent-date-value">2011年5月17日</td><td class="patent-data-table-td patent-date-value">2013年7月24日</td><td class="patent-data-table-td ">大唐移动通信设备有限公司</td><td class="patent-data-table-td ">一种ue及其检测pdcch的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103002579A?cl=zh">CN103002579A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月8日</td><td class="patent-data-table-td patent-date-value">2013年3月27日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">传输控制信息的方法、基站和用户设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103002579B?cl=zh">CN103002579B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年9月8日</td><td class="patent-data-table-td patent-date-value">2015年4月29日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">传输控制信息的方法、基站和用户设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103283292A?cl=zh">CN103283292A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月20日</td><td class="patent-data-table-td patent-date-value">2013年9月4日</td><td class="patent-data-table-td ">松下电器产业株式会社</td><td class="patent-data-table-td ">终端装置、基站装置、发送方法和接收方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103283292B?cl=zh">CN103283292B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月20日</td><td class="patent-data-table-td patent-date-value">2016年5月25日</td><td class="patent-data-table-td ">松下电器（美国）知识产权公司</td><td class="patent-data-table-td ">终端装置、基站装置、发送方法和接收方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US9295054">US9295054</a></td><td class="patent-data-table-td patent-date-value">2015年6月3日</td><td class="patent-data-table-td patent-date-value">2016年3月22日</td><td class="patent-data-table-td ">Panasonic Intellectual Property Corporation Of America</td><td class="patent-data-table-td ">Terminal device, base station device, transmitting method and receiving method</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012151976A1?cl=zh">WO2012151976A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年12月7日</td><td class="patent-data-table-td patent-date-value">2012年11月15日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">误检测判决方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04B0007260000">H04B7/26</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W52/22">H04W52/22</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L1/0061">H04L1/0061</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L1/0083">H04L1/0083</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=pph5BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L5/003">H04L5/003</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">H04L1/00F2</span>, <span class="nested-value">H04L1/00B7E</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年8月18日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年10月6日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年7月31日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/d6b770da92d0bc1578b2/CN101809897A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9C%A8%E6%97%A0%E7%BA%BF%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E4%B8%AD%E6%A3%80%E6%B5%8B%E6%8E%A7%E5%88%B6%E4%BF%A1.pdf?id=pph5BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2JyeSj8KtZkyK9fBy2HjkDLP_9IA"},"sample_url":"https://www.google.com/patents/reader?id=pph5BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

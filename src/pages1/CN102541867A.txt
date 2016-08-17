@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head><title>专利 CN102541867A - 数据字典生成方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_4874c258b856314cce6b80d777b4ee7a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_4874c258b856314cce6b80d777b4ee7a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="数据字典生成方法及系统"><meta name="DC.contributor" content="张艳芳" scheme="inventor"><meta name="DC.contributor" content="金蝶软件（中国）有限公司" scheme="assignee"><meta name="DC.date" content="2010-12-15" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种数据字典生成方法及系统。一种数据字典生成方法，包括：获取实体对象，并获取实体对象对应的数据库表的表名；获取实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。本发明实施例公开的数据字典生成方法及系统，是通过对实体对象和数据对象之间的关系进行解析，获得实体对象的属性别名，并与数据对象记录的字段的定义进行整合，并最终导出生成该实体对象的数据字典。与现有技术相比，不需要开发人员不断地从实体对象和数据对象的定义中拷贝以获取数据字典，进而减少开发人员的工作时间和工作量，提高工作效率。"><meta name="DC.date" content="2012-7-4"><meta name="DC.relation" content="CN:101034349:A" scheme="references"><meta name="DC.relation" content="CN:101046810:A" scheme="references"><meta name="DC.relation" content="CN:101673287:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:102541867:A"><meta name="citation_patent_application_number" content="CN:201010589254"><link rel="canonical" href="https://www.google.com/patents/CN102541867A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102541867A?cl=zh"/><meta name="title" content="专利 CN102541867A - 数据字典生成方法及系统"/><meta name="description" content="本发明公开了一种数据字典生成方法及系统。一种数据字典生成方法，包括：获取实体对象，并获取实体对象对应的数据库表的表名；获取实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。本发明实施例公开的数据字典生成方法及系统，是通过对实体对象和数据对象之间的关系进行解析，获得实体对象的属性别名，并与数据对象记录的字段的定义进行整合，并最终导出生成该实体对象的数据字典。与现有技术相比，不需要开发人员不断地从实体对象和数据对象的定义中拷贝以获取数据字典，进而减少开发人员的工作时间和工作量，提高工作效率。"/><meta property="og:title" content="专利 CN102541867A - 数据字典生成方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102541867A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102541867A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=AypvBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102541867A&amp;usg=AFQjCNEa7F0xJgfTHp54n2nBk3CXrJ4otw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/bed5a9ab08b5e5f1ca31/CN102541867A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/bed5a9ab08b5e5f1ca31/CN102541867A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102541867A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102541867A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102541867A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种数据字典生成方法及系统。一种数据字典生成方法，包括：获取实体对象，并获取实体对象对应的数据库表的表名；获取实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；将表名、属性...</span><span itemprop="url">https://www.google.com/patents/CN102541867A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102541867A - 数据字典生成方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102541867A - 数据字典生成方法及系统" title="专利 CN102541867A - 数据字典生成方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102541867 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010589254</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2012年7月4日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年12月15日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年12月15日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010589254.3, </span><span class="patent-bibdata-value">CN 102541867 A, </span><span class="patent-bibdata-value">CN 102541867A, </span><span class="patent-bibdata-value">CN 201010589254, </span><span class="patent-bibdata-value">CN-A-102541867, </span><span class="patent-bibdata-value">CN102541867 A, </span><span class="patent-bibdata-value">CN102541867A, </span><span class="patent-bibdata-value">CN201010589254, </span><span class="patent-bibdata-value">CN201010589254.3</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BC%A0%E8%89%B3%E8%8A%B3%22">张艳芳</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E9%87%91%E8%9D%B6%E8%BD%AF%E4%BB%B6%EF%BC%88%E4%B8%AD%E5%9B%BD%EF%BC%89%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">金蝶软件（中国）有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102541867A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102541867A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102541867A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (1),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=AypvBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010589254&amp;usg=AFQjCNGRDTjBzp1PU32rJ59B6Au3vfE1XA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=AypvBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102541867A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFlEuc9ckUf7GXHBcE4fs90v9IzGw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT113674626" lang="ZH" load-source="patent-office">数据字典生成方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 102541867 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA97657344" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种数据字典生成方法及系统。一种数据字典生成方法，包括：获取实体对象，并获取实体对象对应的数据库表的表名；获取实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。本发明实施例公开的数据字典生成方法及系统，是通过对实体对象和数据对象之间的关系进行解析，获得实体对象的属性别名，并与数据对象记录的字段的定义进行整合，并最终导出生成该实体对象的数据字典。与现有技术相比，不需要开发人员不断地从实体对象和数据对象的定义中拷贝以获取数据字典，进而减少开发人员的工作时间和工作量，提高工作效率。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(8)</span></span></div><div class="patent-text"><div mxw-id="PCLM43791107" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种数据字典生成方法，其特征在于，包括：获取实体对象，并获取所述实体对象对应的数据库表的表名；获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的数据字典生成方法，其特征在于，所述获取实体对象，并获取所述实体对象对应的数据库表的表名具体为：使用企业应用服务标准产品EAS内设置的查询分析器功能，以获取实体对象和对应的数据库表的表名。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的数据字典生成方法，其特征在于，将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典具体为：使用企业应用服务标准产品EAS内设置的导出功能将表名、属性别名和字段的定义导出到EXCEL中，以生成该实体对象的数据字典。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的数据字典生成方法，其特征在于，还包括：获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义之后，将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典之前还包括：显示所获取的表名、属性别名和字段的定义。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的数据字典生成方法，其特征在于，所述获取实体对象，并获取所述实体对象对应的数据库表的表名具体为：解析实体对象的XML文件；获取所述XML文件中所记载的与该实体对象对应的数据对象的表名。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的数据字典生成方法，其特征在于，所述获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义具体为：获取〈owrfroperty〉和&lt;linkProperty&gt;下的&lt;alias&gt;中属性别名标识，在实体元数据 XML的〈resource〉中找到与之对应的&lt;rs&gt;，获取属性别名；依据 &lt;ownProperty&gt; 禾口 &lt;linkProperty&gt; 下的 &lt;mappingField&gt; 中的字段名，获取与实体对象相对应的数据库表中与之对应的〈column〉，以获取与属性相对应的字段的定义。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1-6任意一项所述的数据字典生成方法，其特征在于，所述字段的定义包括：字段名称、数据类型、长度、默认值、精度、是否允许为空。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.	一种数据字典生成系统，其特征在于，包括：表名获取装置，用于获取实体对象，并获取所述实体对象对应的数据库表的表名； 信息获取装置，用于获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；字典生成装置，用于将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES49235926" lang="ZH" load-source="patent-office" class="description">
+    <p>数据字典生成方法及系统</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及信息处理领域，尤其涉及一种数据字典生成方法及系统。 背景技术</p>
+    <p>[0002]	BOS(Business Operating System，业务操作系统）是以模型驱动为理念研发的新一代技术平台。BOS中用来描述业务数据模型结构的模型数据称为元数据。实体、数据表、 关系是诸多元数据类型中的其中三种。其中：非抽象实体对象作为实体对象中的一种，其具有的属性为自有属性或者该属性是另一个业务对象的实例时，与数据表元数据中的字段相对应；数据表元数据又称为数据对象，对应于关系型数据库中的数据库表，用来描述关系型数据库中数据库表的设计结构，数据对象定义了数据库表表名、数据表别名和字段的定义。 字段的定义又包括字段名称、字段描述、数据类型、长度、精度、默认值、是否允许为空等。关系型数据库表中的字段值即为实体对象的属性值。数据字典是用来描述关系型数据库中的数据库表设计的文档，主要包括字段名称、字段描述、数据类型、长度、精度、默认值、是否允许为空等描述表的属性的内容，是系统设计、开发、实施和维护的重要依据。</p>
+    <p>[0003]	对于EAS (Enterprise Application krvice，企业应用服务）标准产品来说，虽然它已提供一套早期的数据字典说明文档，但是面对大量的二次开发项目和任务，需要不断根据客户的需求对EAS系统的关系型数据库表进行增加和修改，进而要在数据字典中增加或修改数据表结构。然而，从目前情况来说，无论从外部的关系型数据库、EAS系统本身还是BOS Mudio(BC)S开发设计工具）来说，都无法根据现有功能来自动获得数据字典。</p>
+    <p>[0004]	首先，从物理存储数据的关系型数据库角度来考虑。在BOS Studio中建模时，会自动生成实体对象和数据对象，进而根据数据对象来自动生成关系型数据库中的物理数据库表，这成功地解决了企业应用软件在开发、实施和维护过程中的质量、周期、成本、风险等方面的问题。然而，通过查询关系数据库会发现，在所生成的数据库表中虽然定义了字段名称、数据类型、长度、精度、是否为空等信息，但是并没有关于字段的具体意义的描述，即无法从外部的关系型数据库中获得数据库表的详细定义，从而切断了获得数据字典的来源。</p>
+    <p>[0005]	其次，从EAS系统本身考虑。查询分析器作为EAS系统一部分，它的最大的作用是在EAS系统界面对数据库进行操作，而无需再安装关系型数据库软件。查询分析器提供了诸多功能，其中之一就是通过输入数据表表名来查询数据库表定义，把查询结果显示在EAS 系统列表界面上。然而该结果也是通过对关系型数据库操作获得的，显示的结果中虽然包含字段名称、数据类型、长度、精度等信息外，并没有关于字段的具体意义的描述，因此虽然 EAS系统提供了列表界面的导出功能，但是通过导出的结果并不能获知该字段的具体意义， 进而无法对该字段所在的数据库表进行后续操作。</p>
+    <p>[0006]	在BOS开发环境下，虽然在二次开发过程中生成数据对象时，字段的意义描述存在相应的值，但是在早期的标准产品的实体对象所对应的数据对象中是没有字段意义描述的。也就是说，要获得全部的完整的数据对象字段的定义需要浏览实体对象和数据对象两种元数据，才可以获得完整的字段信息，但这也仅仅是对于开发人员来说。而且BOS Studio并没有提供相应的功能，可以导出完整的数据字典信息。同时，虽然在BOS Mudio下获得生成数据库表的sql语句，但是这些语句中也没有说明每个字段代表的意义，也就无法通过在关系型数据库软件中执行sql语句来获得数据库表完整的定义。</p>
+    <p>[0007]	因此，对于IT项目中的工作人员来说，获得数据字典的唯一方式只能由开发人员不断地在BOS开发环境下从实体对象和数据对象的定义中拷贝，显然，这会很繁琐，也会花费去很多精力和时间，增加开发人员的工作时间和工作量，工作效率低。</p>
+    <p>发明内容</p>
+    <p>[0008]	有鉴于此，本发明提供了一种数据字典生成方法及系统，以解决现有技术中获取完整数据字典时操作繁琐所导致的工作时间和工作量长，工作效率低的问题。其具体方案如下：</p>
+    <p>[0009]	一种数据字典生成方法，包括：</p>
+    <p>[0010]	获取实体对象，并获取所述实体对象对应的数据库表的表名；</p>
+    <p>[0011]	获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；</p>
+    <p>[0012]	将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。</p>
+    <p>[0013]	优选地，所述获取实体对象，并获取所述实体对象对应的数据库表的表名具体为： 使用企业应用服务标准产品EAS内设置的查询分析器功能，以获取实体对象和对应的数据库表的表名。</p>
+    <p>[0014]	优选地，将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典具体为：使用企业应用服务标准产品EAS内设置的导出功能将表名、属性别名和字段的定义导出到EXCEL中，以生成该实体对象的数据字典。</p>
+    <p>[0015]	优选地，还包括：获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义之后，将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典之前还包括：</p>
+    <p>[0016]	显示所获取的表名、属性别名和字段的定义。</p>
+    <p>[0017]	优选地，所述获取实体对象，并获取所述实体对象对应的数据库表的表名具体为：</p>
+    <p>[0018]	解析实体对象的XML文件；</p>
+    <p>[0019]	获取所述XML文件中所记载的与该实体对象对应的数据对象的表名。</p>
+    <p>[0020]	优选地，所述获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义具体为：</p>
+    <p>[0021]	获取&lt;ownProperty&gt;和&lt;linkProperty&gt;下的&lt;alias&gt;中属性别名标识,在实体元数据XML的〈resource〉中找到与之对应的&lt;rs&gt;，获取属性别名；</p>
+    <p>[0022]	依据 &lt;ownProperty&gt; 禾口 &lt;linkProperty&gt; 下的 &lt;mappingField&gt; 中的字段名，获取与实体对象相对应的数据库表中与之对应的〈column〉，以获取与属性相对应的字段的定义。</p>
+    <p>[0023]	优选地，所述字段的定义包括：字段名称、数据类型、长度、默认值、精度、是否允许为空。</p>
+    <p>[0024]	本发明实施例还提供一种数据字典生成系统，包括：</p>
+    <p>[0025]	表名获取装置，用于获取实体对象，并获取所述实体对象对应的数据库表的表名；</p>
+    <p>[0026]	信息获取装置，用于获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；</p>
+    <p>[0027]	字典生成装置，用于将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。</p>
+    <p>[0028]	从上述的技术方案可以看出，本发明实施例公开的数据字典生成方法及系统，是通过对实体对象和数据对象之间的关系进行解析，获得实体对象的属性别名，并与数据对象记录的字段的定义进行整合，并最终导出生成该实体对象的数据字典。在这里，实体对象的属性别名即为数据库表的字段意义描述，比如：对于实体对象“Person”来说，属性name 的别名为：姓名，该实体对象对应的数据库表表名为：“T_DB_Pers0n”，那么属性name映射的T_DB_Pers0n中的字段FName就表示“姓名”。与现有技术相比，不需要开发人员不断地在BOS开发环境下从实体对象和数据对象的定义中拷贝以获取数据字典，进而减少开发人员的工作时间和工作量，提高工作效率。</p>
+    <p>附图说明</p>
+    <p>[0029]	为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0030]	图1为实体对象和数据对象的映射关系；</p>
+    <p>[0031]	图2为实体对象和数据对象的另一种映射关系；</p>
+    <p>[0032]	图3为实体对象和数据对象的再一种映射关系；</p>
+    <p>[0033]	图4为本发明公开的数据字典生成方法的流程图；</p>
+    <p>[0034]	图5为本发明所基于的操作界面示意图；</p>
+    <p>[0035]	图6为本发明公开的数据字典生成系统的结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0036]	为了本领域技术人员能够更好的理解本发明，在阐述本发明的技术方案之前，首先介绍实体对象和数据对象之间的关系。</p>
+    <p>[0037]	实体对象是元数据模型的核心内容，数据对象、关系对象等其他类型的元数据均附属或依赖于它。实体对象是数据存储的一个逻辑视图，它对应于业务系统中的实体类，指的是可永久存储的数据对象。实体对象可以定义为“抽象”的，抽象实体对象不定义与数据对象的映射，也就没有相应的关系型数据库表产生。因此在下文中所提到的实体对象均指的是非抽象实体，在此进行说明。</p>
+    <p>[0038]	实体对象是对现实世界中事物的抽象，用来描述一个业务对象的特征及行为，例如职员实体对象可以用来描述职员的姓名、性别、年龄、所在单位、主要岗位、教育背景、工</p>
+    <p>5作经历等，而单位、岗位、教育背景、工作经历又可以作为另外的实体对象存在，来描述相应的业务信息。</p>
+    <p>[0039]	数据对象是对业务数据实际存储空间的定义，用来描述关系型数据库中数据表的设计结构，对应于关系型数据库中的数据库表。数据对象中定义了数据库表名、别名、字段名称、别名、是否为多语言字段、默认值、数据类型、长度、精度、小数位、是否允许为空等。多语言类型的字段在数据对象中存在与支持语言数据相同的字段数。例如：表示职员姓名的字段是数据库表T_BD_Pers0n中的FName，该字段需要提供不同语言环境下的值，则该字段就是一个多语言字段。如果支持英文、简体中文两种语言，则该字段在物理数据库中有两个字段FName_ll和FName_12两个字段来表示。</p>
+    <p>[0040]	关系是BOS中另一种元数据类型，用来描述实体对象间的连接关系。这种连接关系，简单地说，可以分为：聚合和组合两种类型。聚合表示两个对象间是整体和部分的弱关系，部分的生命周期可以超越整体，如电脑和鼠标。组合表示两个对象之间是整体和部分的强关系，部分的生命周期不能超于整体，或者说不能超越整体而存在。组合关系的“部分”是不能在整体之间进行共享的，如人和眼睛的关系。关系元数据中定义了关系类型、相关的两个实体对象以及实体的多重性。实体多重性包括：0.. . 1，1，0. . . *，1. . . *。两个实体间的关系存在一个约束条件：关系只能是多对多、或者一对多、或一对</p>
+    <p>[0041]	实体对象中定义了该实体对象所对应的数据对象和属性等信息。每个非抽象实体对象对应于一个数据对象，也就间接对应于一个关系型数据库表，数据库表中保存着实体对象属性的值。实体对象中包含多个属性，每个属性有它的属性名和属性别名。它们或者属于自有属性，或者属于连接属性。自有属性直接映射到数据对象的字段，连接属性中必须定义实体间的关系，允许不定义映射字段。实体对象的属性与数据对象的字段间存在着重要的联系。我们的目的就是要分析这些联系，对实体对象中属性的别名与数据对象中字段的定义信息加以整合，获得构成数据字典的基础数据。</p>
+    <p>[0042]	下面对实体对象的属性与数据对象字段的关系加以说明。</p>
+    <p>[0043]	(1)自有属性是实体对象中的最简单的一种属性，作为实体的一部分直接映射到数据模型，并进行物理存储，例如职员实体的姓名、性别、年龄等。自有属性的定义中除了名称、别名及其他一些信息外，最重要的一点是指定了与所在实体对象中定义的数据对象的某个字段的映射。映射关系如图1所示。值得说明的是，每个实体对象中都有一个自有属性id，标识着该实体对象的唯一性。自有属性id与数据对象中定义的主键Fid相对应。</p>
+    <p>[0044]	(2)连接属性是实体对象中比较复杂的一种属性。它可以是另一个业务对象的实例，例如职员实体的所在单位和主要岗位，也可以是业务对象集合的实例，例如职员实体的教育背景和工作经历。连接属性与自有属性最大的不同在于连接属性中定义了与其他实体对象的关系。在此，为方便说明，将要获得其数据字典的实体对象称为主实体对象，另外的实体对象称为相关实体对象。</p>
+    <p>[0045]	a.作为另外一个业务对象的实例</p>
+    <p>[0046]	首先，连接属性中指定了实体对象定义的数据对象中与该属性对应的字段。同时， 重要的是定义了与另外一个实体的关系。关系中的主体是我们要获得其数据字典的实体对象。相关的实体对象提供了主实体对象中连接属性对应字段的值，这个值一般为相关实体对象的id。从某种程度上可以理解为，相关实体对象对应的关系型数据库表的主键即为主实体对象对应的关系型数据库表的外键。例如职员实体对象中的主要岗位就是这样一个连接属性。岗位实体对象是相关实体对象。职员实体对象和岗位实体对象间是1:0. . . 1的聚合关系。岗位实体对象的生命周期可以超过职员实体对象。关系型数据库中职员表的所在岗位的字段的值就是岗位表中的主键值。职员的所在单位属性也是如此。映射关系如图2 所示。</p>
+    <p>[0047]	b、作为业务对象集合的实例</p>
+    <p>[0048]	参阅图3，当连接属性作为业务对象集合的实例时，连接属性一般不定义与数据对象中字段的映射。它只是定义了与另外一个实体对象的关系。这种关系一般为1:0...*的组合关系。相关实体对象的生命周期不能超过主实体对象。相关的实体对象中存在一个连接属性parent，parent中定义的关系与当前所述连接属性中定义的关系是同一个元数据。 它作为主实体对象的实例而存在。也就是说主实体对象定义的数据对象对应的关系型数据库表与相关实体对象定义的数据对象对应的关系型数据库表是主子关系。相关实体对象的连接属性parent在关系数据库中的字段Fparent的值取自主实体对象id在关系数据库中的字段Fid的值。例如职员实体中的工作经历是这样一个连接属性。工作经历是相关实体对象。职员实体对象可以没有工作经历，也可以有多个工作经历。关系型数据库中工作经历表的FparentId字段值来源于职员表的Fid。职员实体对象的教育背景属性也属于此类。</p>
+    <p>[0049]	综上所述，实体对象的属性与数据对象中定义的字段有着复杂且重要的关系。而数据对象又是对关系型数据库中数据库表的定义。因此通过遍历实体对象中的属性，分析它们与关系型数据库字段之间的关系，就可以获得构成数据字典的基本信息，从而达到导出数据字典的目的。</p>
+    <p>[0050]	申请人经研究发现，现有技术中，无论是从关系型数据库、EAS系统还是BOS Studio下，获得数据字典的唯一方式只能由开发人员不断地在BOS开发环境下从实体对象和数据对象的定义中拷贝，显然，这会很繁琐，也会花费去很多精力和时间，增加开发人员的工作时间和工作量，工作效率低。</p>
+    <p>[0051]	为了解决上述问题，本发明实施例提供的数据字典生成方法，是将实体对象属性的属性别名与数据对象记录的字段信息进行整合，获得构成数据字典的基本信息，进而导出添加到数据字典中。其中，属性别名是对实体对象所具有的属性意义的描述，例如：实体对象A表示职员，姓名是职员的一个属性，属性的名称为Name，“姓名，，就是属性Name的别名。通过分析实体对象属性与数据对象字段之间的关系，来获得数据字典的完整信息。下面分别结合EAS系统和XML文件，对图4所示的数据字典生成方法进行说明。</p>
+    <p>[0052]	一个实施例</p>
+    <p>[0053]	该实施例是结合EAS系统对图4所示的数据字典生成方法进行说明。图4是本发明实施例提供的数据字典生成方法的流程图，包括：</p>
+    <p>[0054]	SlOl ：获取实体对象，并获取所述实体对象对应的数据库表的表名；</p>
+    <p>[0055]	步骤SlOl可以通过使用EAS系统中的查询分析器，查询分析器的操作界面示意图如图5所示。其中：“实体表搜索”是查询分析器的功能之一。它在实体对象和数据对象之间建立了索引。通过在“实体表搜索”界面输入要获得数据字典的业务对象的别名来进行模糊查询实体对象与数据对象或者说数据库表之间的关系。查询的结果包括业务对象的实体名（实体对象名）、类名（实体对象实现类名）、实体别名（实体对象描述）、数据库表名(数据对象名和关系数据库表名）。操作界面如图5所示，在“实体表搜索”中输入“职员”， 可以得到如下表1所示的结果。</p>
+    <p>[0056]	表1界面检索结果</p>
+    <p>[0057]</p>
+    <p>实体名	类名	实体别名	数据库表表名Person	com. kingdee. eas. basedata. person, app. Person	职员信息	T&#8212;BD&#8212;Person</p>
+    <p>[0058]	因此通过查询分析器，可以获得职员实体对象实现类的全名和数据库表名。</p>
+    <p>[0059]	前已述及，实体对象和数据对象之间存在着重要的关联关系。依据这种关联关系， 则可确定与实体对象相对应的数据对象。根据获得的实体对象实现类的全名，调用BOS框架中的接口或方法，可以直接获得该实体对象。进而由该实体对象获得该实体对象所对应的数据对象。</p>
+    <p>[0060]	S102:获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；</p>
+    <p>[0061]	遍历实体对象的属性，当该属性存在有映射关系的字段时，获取属性别名作为该字段的意义描述。同时根据属性名从SlOl所述数据对象中获得与该属性对应的列对象。列对象是数据对象字段的实例，具体描述字段的定义，字段的定义包括字段名称、别名、类型、 长度、默认值、是否为空、精度等。因此也就获得了字段的全部定义信息。</p>
+    <p>[0062]	S103:将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。</p>
+    <p>[0063]	构建集合，将SlOl中获得的数据表名、S102中获得的属性别名以及中字段名称、 数据类型、长度、默认值、精度、是否允许为空等信息加入到该集合中，并以列表的形式显示在EAS系统界面中。如用户点击图5中的“显示数据库表定义”，则表示操作界面接收到显示数据库表定义的指令，在操作界面的显示区域显示数据库表的定义。利用EAS系统本身具有的导出功能，即接收用户点击导出按钮发送的导出指令，将列表导出到EXCEL表格里， 从而形成我们所需要的数据字典。当然，可以直接利用导出功能导出，而不进行显示操作。</p>
+    <p>[0064]	需要说明的是：</p>
+    <p>[0065]	(1)在步骤SlOl中，当通过EAS系统查询分析器中的“实体表搜索”功能查询实体对象时，会模糊查询出多条记录。例如图5中所示，在“实体表搜索”界面输入“订单”，点击 “查询”后，下方列表会显示“采购订单”、“销售订单”、“计划订单”等。那么可以通过选择多个实体对象，进行遍历，依次重复步骤S102和S103，可以同时获得多个实体对象的数据字</p>
+    <p>Fffi. &#8222;</p>
+    <p>[0066]	(2)在S102中遍历实体对象的属性时，当该属性没有指定映射的字段，并且该属性是相关实体对象集合的实例，那么通过调用BOS框架提供的方法获得该属性所指定的关系对象，进而获得该关系对象中定义的另外的相关实体对象，依次重复步骤S102和S103， 就可以获得相关实体对象的数据字典，也就是原实体对象对应的数据对象中定义的数据库表的子表的数据字典。</p>
+    <p>[0067]	(2)实体对象的属性别名可以用不同语言表示，例如中文简体、中文繁体、英文等。 通过选择不同的语言，可以在下方列表中显示不同语言下的实体对象属性别名，即字段描述。而字段的定义如字段类型、长度、精度等或者用英文表示或者用数字表示，无需与属性别名选择的语言相对应。由此则可以根据选择的语言的不同，获得该实体对象的不同语言的数据字典。</p>
+    <p>[0068]	应用上述技术方案，通过对实体对象和数据对象之间的关系进行解析，获得实体对象各个属性的属性别名，将属性别名与数据库表中与各个属性相对应的字段的定义整合导出，以生成该实体对象的数据字典。属性别名为数据库表的字段意义描述，比如：对于 "Person"实体对象来说，对应的数据库表表名为：“T_DB_PerSon”，属性Name的别名为姓名，与T_DB_PerSOn中FName字段有映射关系，那么导出的关于T_DB_PerSOn的数据表定义文档中字段FName的意义描述就是姓名。与现有技术相比，不需要开发人员不断地在BOS 开发环境下从实体对象和数据对象的定义中拷贝以获取数据字典，进而减少开发人员的工作时间和工作量，提高工作效率。此外，用户通过查询数据字典中的属性别名则可获知数据库表各字段所表示的具体意义，进而获知数据库表所记录的信息的具体意义，进而对该数据库表进行后续操作。</p>
+    <p>[0069]	又一个实施例</p>
+    <p>[0070]	上述实施例生成数据字典依赖于EAS客户端，需要在EAS操作界面来执行。除此之外，在不启动EAS客户端的情况下，也可以自动生成完整的数据字典。因为在建模伊始，实体元数据、关系元数据、数据元数据都是以XML文件形式存在的，所以要获得想要的信息， 并导出到数据字典中，只需要对这几类元数据的XML文件解析即可。下面结合XML文件，对图4所示的数据字典生成方法进行说明。</p>
+    <p>[0071]	首先介绍实体元数据、关系元数据、数据元数据的XML文件结构。</p>
+    <p>[0072]	实体对象XML文件中的部分结构如下：</p>
+    <p>[0073]	&lt;entityObject&gt;</p>
+    <p>[0074]	&lt;package&gt; 实体对象包名 &lt;/package&gt;</p>
+    <p>[0075]	&lt;name&gt; 实体对象名 &lt;/name&gt;</p>
+    <p>[0076]	&lt;alias&gt;实体对象别名标识&lt;/alias&gt;</p>
+    <p>[0077]	〈table〉数据对象全名（包括包名和数据对象名）〈/table〉</p>
+    <p>[0078]	&lt; ！-自有属性一&gt;</p>
+    <p>[0079]	&lt;ownProperty&gt;</p>
+    <p>[0080]	&lt;name&gt;实体对象属性名&lt;/name&gt;</p>
+    <p>[0081]	&lt;alias&gt;实体对象属性别名标识&lt;/alias&gt;</p>
+    <p>[0082]	&lt;mappingField&gt; 映射字段名 &lt;/mappingField&gt;</p>
+    <p>[0083]	&lt;/ownProperty&gt;</p>
+    <p>[0084]	&lt; ！-连接属性，实体对象属性作为另一个业务对象的实例一&gt;</p>
+    <p>[0085]	&lt;linkProperty&gt;</p>
+    <p>[0086]	&lt;name&gt;实体对象属性名&lt;/name&gt;</p>
+    <p>[0087]	&lt;alias&gt;实体对象属性别名标识&lt;/alias&gt;</p>
+    <p>[0088]	&lt;mappingField&gt; 映射字段名 &lt;/mappingField&gt;</p>
+    <p>[0089]	〈relationship〉该连接属性对应的关系元数据的所在包名和关系</p>
+    <p>[0090]	元数据名〈/relationship〉0091]	&lt;/linkProperty&gt;</p>
+    <p>0092]	&lt; ！-连接属性，实体对象属性作为另一个业务对象集合的实例，此时不需要有指定映射字段，只需注明关系一&gt;</p>
+    <p>0093]	&lt;linkProperty&gt;</p>
+    <p>0094]	&lt;name&gt;实体对象属性名&lt;/name&gt;</p>
+    <p>0095]	&lt;alias&gt;实体对象属性别名标识&lt;/alias&gt;</p>
+    <p>0096]	〈relationship〉该连接属性对应的关系元数据的所在包名和关系元数据名 :/relationship&gt;</p>
+    <p>0097]	&lt;/linkProperty&gt;</p>
+    <p>0098]	&lt;resource&gt;</p>
+    <p>0099]	&lt;rs key="上述实体对象属性别名标识"&gt;</p>
+    <p>........... /&gt;</p>
+    <p>0100]	&lt;lang locale ="	zh_	_CN"	value =	属性别名（中文简体）0101]	&lt;lang locale ="	en_	_us"	Yalue =	属性别名（英文）"/0102]	&lt;lang locale ="	zh_	Jff"	Yalue ='	属性别名（中文繁体）</p>
+    <p>&#8212;	_</p>
+    <p>0103]	&lt;/rs&gt;</p>
+    <p>0104]	&lt;/resource&gt;</p>
+    <p>0105]	&lt;/entityObject&gt;</p>
+    <p>0106]	数据对象XML文件的部分结构如下：</p>
+    <p>0107]	&lt;dataTable&gt;</p>
+    <p>0108]	&lt;package&gt;	&lt;/package&gt;</p>
+    <p>0109]	&lt;name&gt; 数据对象名 &lt;/name&gt;</p>
+    <p>0110]	&lt;alias&gt;数据对象别名标识&lt;/alias&gt;</p>
+    <p>0111]	&lt;columns&gt;</p>
+    <p>0112]	&lt;column&gt;</p>
+    <p>0113]	&lt;name&gt; 字段名 &lt;/name&gt;</p>
+    <p>0114]	&lt;alias&gt; 字段别名标识 &lt;/alias&gt;</p>
+    <p>0115]	&lt;isNullable&gt; 是否可空 &lt;/isNullable&gt;</p>
+    <p>0116]	&lt;defaultValue&gt; 默认值 &lt;/defaultValue&gt;</p>
+    <p>0117]	&lt;sqlType&gt; 字段类型 &lt;/sqlType&gt;</p>
+    <p>0118]	〈length〉字段长度〈/length〉</p>
+    <p>0119]	&lt;scale&gt; 小数位数 &lt;/scale&gt;</p>
+    <p>0120]	&lt;precision&gt; 精度 &lt;/precision&gt;</p>
+    <p>[0121]	&lt;/column)		[0122]	&lt;/columns)		[0123]	&lt;resource&gt;		[0124]	&lt;rs key =“上述类	&#943;据对象字段别名标识	“&gt;[0125]	&lt;lang locale =	“zh_CN" value =“	字段别名（中文简体）[0126]	&lt;lang locale =	“en_US" value =“	字段别名（英文）"/[0127]	&lt;lang locale =	“zh.Tff" value =“	字段别名（中文繁体）[0128]	&lt;/rs&gt;</p>
+    <p>[0129]	&lt;/resource&gt;</p>
+    <p>[0130]	&lt;/dataTable&gt;</p>
+    <p>[0131]	关系元数据XML文件部分结构如下：</p>
+    <p>[0132]	〈relationship" &gt;</p>
+    <p>[0133]	〈package〉关系元数据所在包名〈/package〉</p>
+    <p>[0134]	&lt;name&gt;关系元数据名称&lt;/name&gt;</p>
+    <p>[0135]	&lt;type&gt; 关系类型 &lt;/type&gt;</p>
+    <p>[0136]	&lt;clientCardinality&gt; 实体对象多重性 &lt;/clientCardinality&gt;</p>
+    <p>[0137]	&lt;supplierCardinality&gt;与实体对象属性相关实体对象</p>
+    <p>[0138]	&lt;/supplierCardinality&gt;</p>
+    <p>[0139]	&lt;clientObject&gt;实体对象所在包名和实体对象名〈/clientObject&gt;</p>
+    <p>[0140]	&lt;supplierObject&gt;</p>
+    <p>[0141]	相关实体对象所在包名和相关实体对象名</p>
+    <p>[0142]	&lt;/supplierObject&gt;</p>
+    <p>[0143]	〈/relationship〉</p>
+    <p>[0144]	接下来结合XML文件，介绍如何利用图4所示的数据字典生成方法实现生成完整的数据字典。</p>
+    <p>[0145]	SlOl ：获取实体对象，并获取所述实体对象对应的数据库表的表名；</p>
+    <p>[0146]	通过解析实体对象XML文件，根据〈table〉标记可以获得数据对象相对路径和数据对象名，数据对象名即所对应的数据库表的表名，为读取数据对象XML文件做好准备。</p>
+    <p>[0147]	S102:获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；</p>
+    <p>[0148]	如上述提供的实体对象XML文件中的部分结构中=OwnftOperty表示实体对象的自有属性，IinkProperty为实体对象的连接属性。</p>
+    <p>[0149]	遍历〈properties〉下的 &lt;ownProperty&gt; 标记禾口 &lt;linkProperty&gt; 标记，获得 &lt;ownProperty&gt;和&lt;linkProperty&gt;下的&lt;alias&gt;中属性别名标识，在实体元数据XML里 〈resource〉中找到与之对应的&lt;rs&gt;，可以得到不同语言下的属性别名，以此作为字段意义的描述。</p>
+    <p>[0150]	依据 &lt;ownProperty&gt; 禾口 &lt;linkProperty&gt; 下的 &lt;mappingField&gt; 中的字段名，在 SlOl中获得数据库表中找到与之对应的〈column〉，〈column〉中〈name〉就是与属性相对应的字段名。〈column〉下的其他标记 &lt;isNullable&gt;、&lt;defaultValue/&gt;、&lt;sqlType&gt;、 〈length〉、〈scale〉、〈precision〉分别表示是否允许为空、默认值、数据类型、长度、小数位数、精度。〈mappingField〉所属属性的属性别名与〈column〉中的字段的定义就组成数据字典的基础数据。</p>
+    <p>[0151]	S103:将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。</p>
+    <p>[0152]	需要说明的是：</p>
+    <p>[0153]	(1)在执行步骤SlOl时，可以同时获得多个实体元数据XML文件，并进行遍历。经过步骤S102和步骤S103之后，可以同时获得多个实体对象的数据字典。也就是说，本发明实施例提供的数据字典生成方法可以同时生成多个实体对象的数据字典。</p>
+    <p>[0154]	(2)对于S102中不存在&lt;mappingField&gt;标记的连接属性，可以根据 〈relationship〉标记获得该属性对应的关系元数据所在相对路径和关系元数据名称，由此找到关系元数据文件。根据关系元数据中〈supplierObject〉标记，找到相关实体对象相对路径和名称，即可获得相关实体对象的XML文件，进而，获得实体对象对应的关系型数据库表的子表的数据字典。</p>
+    <p>[0155]	(3)由上述得知，实体对象XML文件中〈resource〉下提供了不同语言的属性别名。 那么根据用户选择的语言种类，获得&lt;lang&gt;下相应语言的属性别名。例如当用户选择中文繁体时，识别&lt;lang&gt;下locale = “ zh_TW〃标记，获得相应的value值，这就是中文繁体的属性别名。当然，前提是根据〈owrfroperty〉和〈linkProperty〉下的〈alias〉中属性别名标识，在实体元数据XML里〈resource〉中找到与之对应的&lt;rs&gt;。综上所述，依据用户对语言种类的选择，可以获得相应语言下的属性别名，也就可以获得该实体对象的不同语言的数据字典。</p>
+    <p>[0156]	应用上述技术方案，通过对实体对象和数据对象之间的关系进行解析，获得实体对象各个属性的属性别名，将属性别名与数据库表中与各个属性相对应的字段的定义整合导出，以生成该实体对象的数据字典。与现有技术相比，不需要开发人员不断地在BOS开发环境下从实体对象和数据对象的定义中拷贝以获取数据字典，进而减少开发人员的工作时间和工作量，提高工作效率。此外，用户通过查询数据字典中的属性别名则可获知数据库表各字段所表示的具体意义，进而获知数据库表所记录的信息的具体意义，进而对该数据库表进行后续操作。</p>
+    <p>[0157]	与图4所示方法相对应的，本发明实施例还提供一种数据字典生成系统，该系统的结构示意图如图6所示，包括：表名获取装置601、信息获取装置602和字典生成装置 603，其中：</p>
+    <p>[0158]	表名获取装置601，用于获取实体对象，并获取所述实体对象对应的数据库表的表名；</p>
+    <p>[0159]	信息获取装置602，用于获取所述实体对象各个属性的属性别名和数据库表中与各个属性对应的字段的定义；</p>
+    <p>[0160]	字典生成装置603，用于将表名、属性别名和字段的定义整合导出到EXCEL表格中，以生成该实体对象的数据字典。</p>
+    <p>[0161]	本说明书中各个实施例采用递进的方式描述，每个实施例重点说明的都是与其他实施例的不同之处，各个实施例之间相同相似部分互相参见即可。对于实施例公开的装置而言，由于其与实施例公开的方法相对应，所以描述的比较简单，相关之处参见方法部分说明即可。</p>
+    <p>[0162]	专业人员还可以进一步意识到，结合本文中所公开的实施例描述的各示例的单元及算法步骤，能够以电子硬件、计算机软件或者二者的结合来实现，为了清楚地说明硬件和软件的可互换性，在上述说明中已经按照功能一般性地描述了各示例的组成及步骤。这些功能究竟以硬件还是软件方式来执行，取决于技术方案的特定应用和设计约束条件。专业技术人员可以对每个特定的应用来使用不同方法来实现所描述的功能，但是这种实现不应认为超出本发明的范围。</p>
+    <p>[0163]	结合本文中所公开的实施例描述的方法或算法的步骤可以直接用硬件、处理器执行的软件模块，或者二者的结合来实施。软件模块可以置于随机存储器（RAM)、内存、只读存储器（ROM)、电可编程ROM、电可擦除可编程ROM、寄存器、硬盘、可移动磁盘、CD-ROM、或技术领域内所公知的任意其它形式的存储介质中。</p>
+    <p>[0164]	对所公开的实施例的上述说明，使本领域专业技术人员能够实现或使用本发明。 对这些实施例的多种修改对本领域的专业技术人员来说将是显而易见的，本文中所定义的一般原理可以在不脱离本发明的精神或范围的情况下，在其它实施例中实现。因此，本发明将不会被限制于本文所示的这些实施例，而是要符合与本文所公开的原理和新颖特点相一致的最宽的范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101034349A?cl=zh">CN101034349A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年4月6日</td><td class="patent-data-table-td patent-date-value">2007年9月12日</td><td class="patent-data-table-td ">西安万年科技实业有限公司</td><td class="patent-data-table-td ">基于功能设计的数据库应用系统开发平台</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101046810A?cl=zh">CN101046810A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年5月26日</td><td class="patent-data-table-td patent-date-value">2007年10月3日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">自动建立关系模型的系统及其方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101673287A?cl=zh">CN101673287A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年10月16日</td><td class="patent-data-table-td patent-date-value">2010年3月17日</td><td class="patent-data-table-td ">金蝶软件（中国）有限公司</td><td class="patent-data-table-td ">一种sql语句生成方法及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014187216A1?cl=zh">WO2014187216A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年4月22日</td><td class="patent-data-table-td patent-date-value">2014年11月27日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">数据库结构对象处理方法及装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=AypvBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06F0017300000">G06F17/30</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2012年7月4日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年9月5日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年3月11日</td><td class="patent-data-table-td ">C12</td><td class="patent-data-table-td ">Rejection of a patent application after its publication</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/bed5a9ab08b5e5f1ca31/CN102541867A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_4874c258b856314cce6b80d777b4ee7a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F.pdf?id=AypvBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U20GUicM4E5bSpBjnLMalWSIkSKeg"},"sample_url":"https://www.google.com/patents/reader?id=AypvBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

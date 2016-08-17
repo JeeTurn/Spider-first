@@ -1,0 +1,366 @@
+<!DOCTYPE html><html><head><title>专利 CN101499887A - 半静态资源调度方法及系统、重传选择调度方法及系统 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="半静态资源调度方法及系统、重传选择调度方法及系统"><meta name="DC.contributor" content="李晓卡" scheme="inventor"><meta name="DC.contributor" content="胡金玲" scheme="inventor"><meta name="DC.contributor" content="卓 高" scheme="inventor"><meta name="DC.contributor" content="大唐移动通信设备有限公司" scheme="assignee"><meta name="DC.date" content="2008-1-28" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种半静态资源调度方法，该方法包括以下步骤：配置业务信道占用的最大物理资源量，设置传输块大小(TBS)和TBS对应的物理资源；当根据当前业务信道承载的网络电话(VOIP)数据块大小选择TBS后，根据所述TBS和TBS对应的物理资源计算当前业务信道占用的物理资源量；根据最大物理资源量和物理资源量获得当前业务信道占用的物理资源余量，并将物理资源余量确定为调整信息封装到控制信令中，发送到网络侧设备用于调度。本发明还公开了一种半静态资源调度系统、以及基于该半静态调度的一种重传选择调度方法及系统。采用本发明的方法及系统，在实现对VOIP业务支持的同时，有效地减少了控制信道的开销。"><meta name="DC.date" content="2009-8-5"><meta name="citation_patent_publication_number" content="CN:101499887:A"><meta name="citation_patent_application_number" content="CN:200810056969"><link rel="canonical" href="https://www.google.com/patents/CN101499887A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101499887A?cl=zh"/><meta name="title" content="专利 CN101499887A - 半静态资源调度方法及系统、重传选择调度方法及系统"/><meta name="description" content="本发明公开了一种半静态资源调度方法，该方法包括以下步骤：配置业务信道占用的最大物理资源量，设置传输块大小(TBS)和TBS对应的物理资源；当根据当前业务信道承载的网络电话(VOIP)数据块大小选择TBS后，根据所述TBS和TBS对应的物理资源计算当前业务信道占用的物理资源量；根据最大物理资源量和物理资源量获得当前业务信道占用的物理资源余量，并将物理资源余量确定为调整信息封装到控制信令中，发送到网络侧设备用于调度。本发明还公开了一种半静态资源调度系统、以及基于该半静态调度的一种重传选择调度方法及系统。采用本发明的方法及系统，在实现对VOIP业务支持的同时，有效地减少了控制信道的开销。"/><meta property="og:title" content="专利 CN101499887A - 半静态资源调度方法及系统、重传选择调度方法及系统"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101499887A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101499887A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=rSNsBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101499887A&amp;usg=AFQjCNG-l5k92SiIIw9naIq7jjW8NjnX5g" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/809b7fdb06e319512edc/CN101499887A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/809b7fdb06e319512edc/CN101499887A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101499887A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101499887A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101499887A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101499887B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101499887A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种半静态资源调度方法，该方法包括以下步骤：配置业务信道占用的最大物理资源量，设置传输块大小(TBS)和TBS对应的物理资源；当根据当前业务信道承载的网络电话(VOIP)数据块大小选择TBS后，根据所述TBS和TBS对 ...</span><span itemprop="url">https://www.google.com/patents/CN101499887A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101499887A - 半静态资源调度方法及系统、重传选择调度方法及系统</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101499887A - 半静态资源调度方法及系统、重传选择调度方法及系统" title="专利 CN101499887A - 半静态资源调度方法及系统、重传选择调度方法及系统"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101499887 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200810056969</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2009年8月5日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年1月28日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2008年1月28日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101499887B?hl=zh-CN&amp;cl=zh">CN101499887B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200810056969.5, </span><span class="patent-bibdata-value">CN 101499887 A, </span><span class="patent-bibdata-value">CN 101499887A, </span><span class="patent-bibdata-value">CN 200810056969, </span><span class="patent-bibdata-value">CN-A-101499887, </span><span class="patent-bibdata-value">CN101499887 A, </span><span class="patent-bibdata-value">CN101499887A, </span><span class="patent-bibdata-value">CN200810056969, </span><span class="patent-bibdata-value">CN200810056969.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E6%99%93%E5%8D%A1%22">李晓卡</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%83%A1%E9%87%91%E7%8E%B2%22">胡金玲</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%8D%93+%E9%AB%98%22">卓 高</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A4%A7%E5%94%90%E7%A7%BB%E5%8A%A8%E9%80%9A%E4%BF%A1%E8%AE%BE%E5%A4%87%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">大唐移动通信设备有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101499887A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101499887A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101499887A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (10),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (6)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=rSNsBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200810056969&amp;usg=AFQjCNHIL831cByIE0gYgpD6z184u50Dcw"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=rSNsBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101499887A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGC7berMK16XpUO_vy41XHRdDSm-Q"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT85321790" lang="ZH" load-source="patent-office">半静态资源调度方法及系统、重传选择调度方法及系统</invention-title>
+      </span><br><span class="patent-number">CN 101499887 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA61503177" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种半静态资源调度方法，该方法包括以下步骤：配置业务信道占用的最大物理资源量，设置传输块大小(TBS)和TBS对应的物理资源；当根据当前业务信道承载的网络电话(VOIP)数据块大小选择TBS后，根据所述TBS和TBS对应的物理资源计算当前业务信道占用的物理资源量；根据最大物理资源量和物理资源量获得当前业务信道占用的物理资源余量，并将物理资源余量确定为调整信息封装到控制信令中，发送到网络侧设备用于调度。本发明还公开了一种半静态资源调度系统、以及基于该半静态调度的一种重传选择调度方法及系统。采用本发明的方法及系统，在实现对VOIP业务支持的同时，有效地减少了控制信道的开销。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(26)</span></span></div><div class="patent-text"><div mxw-id="PCLM22721605" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1、一种半静态资源调度方法，其特征在于，该方法包括以下步骤：A1、配置业务信道占用的最大物理资源量，设置传输块大小TBS和所述TBS对应的物理资源；B1、当根据当前业务信道承载的网络电话VOIP数据块大小选择所述TBS后，根据所述TBS和所述TBS对应的物理资源计算当前业务信道占用的物理资源量；根据所述最大物理资源量和所述物理资源量获得所述当前业务信道占用的物理资源余量，并将所述物理资源余量确定为调整信息封装到控制信令中，发送到网络侧设备进行调度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2、 根据权利要求l所述的方法，其特征在于，步骤A1中，所述设置TBS 和TBS对应的物理资源包括协议固定设置方式，和高层信令设置方式。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3、 根据权利要求l所述的方法，其特征在于，步骤A1中，所述设置TBS 和TBS对应的物理资源后还包括：将对应于较大TBS值的物理资源覆盖对应 于较小TBS值的物理资源；并且，在同一时隙内，所述对应于较小TBS值的 物理资源尽量占据所在时隙的边缘码道资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4、 根据权利要求l所述的方法，其特征在于，所述设置TBS和TBS对应 的物理资源后还包括：重新配置所述TBS和TBS对应的物理资源。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5、 根据权利要求1至4中任一项所述的方法，其特征在于，在上行链路方 向，所述步骤Bl具体为：B111、用户设备UE根据即将要发送的上行VOIP数据块大小选择上行TBS 并根据上行TBS和物理资源的对应关系，计算所需使用的具体物理资源信息， 按照预先设置业务信道与控制信道之间的定时关系，通过所述控制信道承载上 行VOIP控制信令将包括上行TBS和物理资源对应关系的TBS索引信息发送给基站；UE根据所述定时关系，基于所述具体物理资源信息发送所述上行VOIP数据块；B112、所述基站先接收到所述上行VOIP控制信令并解码，根据获取所述 TBS索引信息中上行TBS和物理资源的对应关系，计算接下来要接收的所述 上行VOIP数据块所占用的所述具体物理资源信息；基站将所述具体物理资源信息确定为当前业务信道占用的物理资源量，并 结合所述配置的业务信道占用的最大物理资源量计算当前业务信道占用的物理 资源余量，将所述物理资源余量确定为调整信息封装到控制信令中发送到基站 调度器；基站根据所述定时关系，基于所述具体物理资源信息接收所述上行VOIP 数据块并解码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6、 根据权利要求5所述的方法，其特征在于，步骤B112中，所述基站接 收上行VOIP数据块并解码后还包括：所述基站根据所述定时关系，通过所述控制信道承载的下行VOIP控制信 令将解码信息反馈给UE;当基站检测到上行VOIP数据块解码错误时，启动重 传选择调度过程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7、 根据权利要求5所述的方法，其特征在于，所述控制信道进一步为：增 强上行混合自动请求重传应答指示信道E-HICH类型的控制信道。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8、 根据权利要求1至4中任一项所述的方法，其特征在于，在下行链路方 向，所述步骤B1具体为：B121、所述基站周期性地判断即将发送的下行VOIP数据块大小，如果所 述下行VOIP数据块大小为零，则执行步骤B122;否则，执行步骤B123;B122、基站将所述配置的业务信道占用的最大物理资源量确定为所述调整 信息封装到控制信令中发送到基站调度器；结&#26481;当前半静态资源调度流程；同时，基站通过下行VOIP控制信令将TBS为O的信息发送到UE;或者， 基站不发送任何TBS信息；如果UE检测不到所述下行VOIP控制信令中的TBS 信息，则UE判定接下来的下行VOIP资源时刻没有任何VOIP数据发送；结&#26481; 当前半静态资源调度流程；B123、所述基站根据所述下行VOIP数据块大小选择下行TBS，并根据所述下行TBS和物理资源的对应关系，计算需占用的具体物理资源信息，按照预先 设置业务信道与控制信道之间的定时关系，通过所述控制信道承载的所述下行VOIP控制信令将包括下行TBS和物理资源对应关系的TBS索引信息发送给 UE;同时，基站将所述具体物理资源信息确定为当前业务信道实际占用的物理 资源量，并结合所述配置的业务信道占用的最大物理资源量计算当前业务信道 占用的物理资源余量，将所述物理资源余量确定为调整信息封装到控制信令中 发送到所述基站调度器；结&#26481;当前半静态资源调度流程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9、 根据权利要求8所述的方法，其特征在于，步骤B123中，所述通过控 制信道承载的下行VOIP控制信令将TBS索引信息发送给UE后还包括：B124、所述基站根据所述定时关系，基于所述具体物理资源信息发送所述 下行VOIP数据块；B125、所述UE先接收到所述下行VOIP控制信令并解码，根据获取所述 TBS索引信息中下行TBS和物理资源的对应关系，计算接下来要接收的所述 下行VOIP数据块所占用的所述具体物理资源信息；B126、 l正基于所述具体物理资源信息接收所述下行VOIP数据块并解码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10、 根据权利要求9所述的方法，其特征在于，步骤B126还包括：所述UE通过控制信道承载的上行VOIP控制信令将下行VOIP数据块的解 码信息反馈给所述基站；当基站通过上行VOIP控制信令检测到下行VOIP数 据块解码错误时，启动重传选择调度过程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11、 根据权利要求9所述的方法，其特征在于，当发生时延抖动时，步骤 B124进一步为：所述基站采用缓存数据方式、或调度方式发送发生时延抖动的 下行VOIP数据块。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12、 一种半静态资源调度系统，其特征在于，该系统包括：业务信道占用 最大物理资源量的配置单元、TBS和物理资源对应关系的设置单元、当前业务 信道占用物理资源量的计算单元；其中，业务信道占用最大物理资源量的配置单元，用于为承载的VOIP数据块配置其业务信道占用的最大物理资源量；TBS和物理资源对应关系的设置单元，用于设置TBS和物理资源的对应关系；当前业务信道占用物理资源量的计算单元，用于从所述最大物理资源量的配置单元获取所述最大物理资源量，从所述TBS和物理资源对应关系的设置单 元获取TBS和物理资源的对应关系；根据当前业务信道承载的VOIP数据块大 小选择TBS后，根据所述TBS和物理资源的对应关系计算当前业务信道占用 的物理资源量；根据所述最大物理资源量和所述当前业务信道占用的物理资源 量获得当前业务信道占用的物理资源余量，并将所述物理资源余量确定为调整 信息封装到控制信令中，发送到网络侧设备。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13、 根据权利要求12所述的系统，其特征在于，所述TBS和物理资源对 应关系的设置单元包括协议固定设置模块，和高层信令设置模块。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14、 一种重传选择调度方法，其特征在于，该方法包括以下步骤：A2、配置用于VOIP数据块重传调度的下行调度控制信道，并通过链路建 立过程消息将所述配置的下行调度控制信道进行发送；B2、如果半静态资源调度过程中解码信息正确，则UE停止监听并接收所 述配置的下行调度控制信道；如果半静态资源调度过程中解码信息错误，则UE启动监听并接收所述配 置的下行调度控制信道；同时，当基站调度器根据UE优先级、负荷状态和时 延要求判定需要执行重传后，启动重传选择调度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15、 根据权利要求14所述的方法，其特征在于，所述配置的下行调度控制 信道包括：高速上行分组接入下行调度控制信道E-AGCH和高速下行分组接入 下行调度控制信道HS-SCCH。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16、 根据权利要求15所述的方法，其特征在于，在上行链路方向，步骤 B2进一步为：B211、如果解码信息正确，则所述基站通过控制信道承载的下行VOIP控 制信令，将针对上行VOIP数据块的ACK反馈给UE后，所述UE停止监听并接收所述E-AGCH;如果解码信息错误，则基站通过所述下行VOIP控制信令， 将针对所述上行VOIP数据块的NACK反馈给UE后，UE启动监听并接收所述 E-AGCH。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17、 根据权利要求16所述的方法，其特征在于，步骤B211中，所述启动重传选择调度后还包括：B212、基站调度器通过所述E-AGCH发送重传上行VOIP数据块的调度控 制信息，并且所述调度控制信息中携带有所要重传上行VOIP数据块的标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18、 根据权利要求17所述的方法，其特征在于，步骤B212后还包括： B213、所述UE根据监听到所述E-AGCH上的UE标识判断UE自身是否被调度；B214、所述UE根据预设的业务信道与所述控制信道之间的定时关系，在 所述调度控制信息指定的资源上，根据调度控制信息中携带的所述重传上行 VOIP数据块的标识，重传所述标识所指示的需要被重传的上行VOIP数据块； 同时，UE在E-UCCH中指示该重传上行VOIP数据块的标识；B215、基站对所述重传的上行VOIP数据块进行解码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19、 根据权利要求17或18所述的方法，其特征在于，所述重传上行VOIP 数据块标识的承载方式为：在所述E-AGCH和所述E-UCCH中同时承载所述重 传上行VOIP数据块的标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20、 根据权利要求15所述的方法，其特征在于，在下行链路方向，步骤 B2进一步为：B221、如果解码信息正确，则所述基站通过控制信道承载的上行VOIP控 制信令，将针对下行VOIP数据块的ACK反馈给UE后，所述UE停止监听并 接收所述HS-SCCH;如果解码信息错误，则基站通过所述上行VOIP控制信令， 将针对所述下行VOIP数据块的NACK反馈给基站后，UE启动监听并接收所 述HS-SCCH。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21、 根据权利要求20所述的方法，其特征在于，步骤B221中，所述启动 重传选择调度后还包括：B222、基站调度器通过所述HS-SCCH发送重传下行VOIP数据块的调度 控制信息，并且所述调度控制信息中携带有所要重传下行VOIP数据块的标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22、 根据权利要求21所述的方法，其特征在于，步骤B222后还包括： B223、所述基站根据预设的业务信道与所述控制信道之间的定时关系，在所述业务信道上发送所述重传的下行VOIP数据块；B224、所述UE根据监听到HS-SCCH上的UE标识判断UE自身是否被调 度，并根据所述重传下行VOIP数据块的标识判定需要被重传的下行VOIP数 据块；B225、所述UE根据所述定时关系，在所述调度控制信息指定的资源上接 收所述重传的下行VOIP数据块并进行解码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23、 根据权利要求21或22所述的方法，其特征在于，所述重传下行VOIP 数据块标识的承载方式为：在所述HS-SCCH中承载所述重传下行VOIP数据块 的标识。</div>
+    </div>
+    </div> <div class="claim"> <div num="24" class="claim">
+      <div class="claim-text">24、 一种重传选择调度系统，其特征在于，该系统包括：配置单元、发送 单元、判断单元；其中，配置单元，用于配置下行调度控制信道并发送到所述发送单元；发送单元，用于通过链路建立过程消息将所述配置的下行调度控制信道进行发送；判断单元，用于接收所述配置的下行调度控制信道后，根据对半静态资源 调度过程中解码信息的判定执行相应的重传选择调度处理。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25、 根据权利要求24所述的系统，其特征在于，所述判断单元，进一步用 于判定解码信息正确后，UE停止监听并接收所述配置的下行调度控制信道。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26、 根据权利要求24所述的系统，其特征在于，所述判断单元，进一步用 于判定解码信息错误后，UE启动监听并接收所述配置的下行调度控制信道；同 时，当基站调度器根据UE优先级、负荷状态和时延要求判定需要执行重传后， 启动重传选择调度。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES27916284" lang="ZH" load-source="patent-office" class="description">
+    <p>半静态资源调度方法及系统、重传选择调度方法及系统</p>
+    <p>技术领域</p>
+    <p>本发明涉及调度技术，尤其涉及一种支持网络电话（VOIP)业务的半静态</p>
+    <p>资源调度方法及系统、和基于半静态调度技术的重传选择调度方法及系统。 背景技术</p>
+    <p>第三代合作伙伴计划（3GPP)作为制定3G技术规范的机构，在R5和R6 中分别引入了高速下行分组接入（HSDPA)技术和高速上行分组接入（HSUPA ) 技术，二者统称为高速分组接入（HSPA)技术。另外，在R5的网络架构中引 入了IP传输机制。随着IP多媒体子系统（IMS, IP Multimedia Subsystem )等 技术的发展，通过IP网络提供语音业务逐渐成为一种趋势，也就是说，当前 的发展趋势是：在HSPA演进系统中，实现对VOIP业务的支持。</p>
+    <p>以下，分别针对现有HSDPA技术、现有HSUPA技术和现有VOIP业务的 特点进行阐述。</p>
+    <p>针对HSDPA技术而言，为了满足UE曰益增长的对高速分组数据接入服务 的需求，3GPPRel5引入了HSDPA技术。其中，采用自适应调制编码（AMC ) 或混合自动请求重传（HARQ)技术用于实现高阶调制；并且在基站侧增加了 一个媒体接入控制层HSDPA (MAC-hs)实体用于实现数据的快速调度。采用 AMC/HARQ和MAC-hs这些HSDPA的关键技术，不仅可以获得较高的UE峰 值速率和小区数据吞吐率，而且减少了数据传输时延。</p>
+    <p>引入HSDPA技术后，相应引入的信道包括：高速下行共享信道（HS-DSCH, High Speed Downlink Shared Channel);高速物理下行共享信道（HS-PDSCH, High Speed Physical Downlink Shared Channel); HS-DSCH的共享控制信道 (HS-SCCH， Shared Control Channel for HS-DSCH);共享信息信道（HS-SICH，Shared Information Channel )。</p>
+    <p>其中，HS-DSCH作为HSDPA的传输信道，用于承载下行HSDPA数据， 完成高速下行数据的传输，被映射到HS-PDSCH上。多个用户设备（l正）通 过时分复用和码分复用共享HS-DSCH。 HS-DSCH采用链路自适应技术，并且 总是伴随有一个专用物理信道(DPCH沐一个或者多个HS-SCCH。除HS-DSCH 之外，其他信道皆是物理信道。其中，上行的HS-SICH和下行的HS-SCCH是 与HS-DSCH相关的两个物理层的共享控制信道，通过这两个控制信道的配合， 完成数据传输的闭环控制。这里，HS-SICH也可以称为HSDPA上行反馈信道。 HS-SCCH也可以称为HSDPA下行调度控制信道。</p>
+    <p>其中，HS-SCCH是HSDPA的下行控制信道，占用两个下行扩频因子（SF ) 为16的码道，采用固定四相移相键控（QPSK)调制方式，用于承载HS-DSCH 的控制信息。对每一个HS-DSCH的传输时间间隔（TTI)来说，都有HS-SCCH 为UE携带的HS-DSCH相关下行控制信息。</p>
+    <p>下述表1为HS-SCCH所承载的信息，如表1所示，HS-SCCH承载的控 制信息包括传输格式资源指示（TFRI)信息、HARQ信息、HSDPA无线网络 临时标识（H-RNTI )信息、和上行同步控制信息（SS )/上行功率控制信息（TPC )。 其中，TFRI信息用于指示随后HS-DSCH的传输格式，包括HS-DSCH的时隙 码道分配信息、调制方式、和传输块的传输块大小（TBS)信息。HARQ信息 包括HARQ进程识别号、增量冗余版本号、新数据指示、和用于HS-SCCH信 道质量估计的HS-SCCH的循环序列（HCSN, HS-SCCH Cyclic Sequence Number )。这里，不同的增量冗余版本号决定不同的速率匹配方案、和不同的 16-QAM bit重排方案。H-RNTI信息用于区分HS-DSCH这一共享信道上的不 同UE。</p>
+    <p>&lt;table&gt;table see original document page 9&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;码道分配必然是连续的，且各个时隙分配的码</p>
+    <p>道是一样的，start=15,stop =0,表明SF二l, 其余情况start〈stop_调制方式(lbit)	0-QPSK，    1-16-QAM</p>
+    <p>传输块大小(6bits)	索引值</p>
+    <p>HARQ	HARQ进程识别号 (3bit)	取值范围为0-7,即一个传输信道上并行进程 最多为8个</p>
+    <p>增量冗余版本号(3bit)	版本号r/s用于指示是否有自解码的能力，b用于 指示影响16-QAM的bit重排</p>
+    <p>新数据指示(lbit)	用于指示是新数据还是重传数据</p>
+    <p>HCSN序列（3bit)	用于在功率控制过程中统计HS-SCCH的误块 率（BLER)</p>
+    <p>H-RNTI	(16bit)	用于标识控制信息的所属UE</p>
+    <p>SS	上行同步控制信息	用于保持HS-SICH的上行同步</p>
+    <p>TPC	上行功率控制信息	用于HS-SICH的闭环功控</p>
+    <p>表 1</p>
+    <p>其中，HS-SICH是HSDPA的上行控制信道，占用 一个上行SF为16的码 道，采用固定QPSK调制方式，用于对接收到HS-DSCH上的数据块以 ACK/NACK消息进行应答，并反馈下行链路的质量信息，即HS-DSCH信道质 量指示（CQI)以便于更好地帮助基站进行调度。另外，HS-SICH还承载下行 链路的功控控制字信息。</p>
+    <p>并且，HSDPA共享信道定时关系及HS-SCCH的控制过程具体为：下行数 据到达后，经基站调度先在HS-SCCH上发送下行控制信息；UE接收到 HS-SCCH后，留出时间对控制信道上的控制信息进行解码；之后，根据该控制 信息监听数据信道，并正确接收HS-DSCH映射到HS-PDSCH上的下行HSDPA 数据；最后，利用相应的HS-SICH信道反馈ACK/NACK消息给基站。</p>
+    <p>针对HSUPA技术而言，为了提高上行峰值速率，满足比如使用游戏类业 务的UE,尤其是当使用游戏类业务的UE较多时对上行速率的要求，因此，在 R6/R7版本的协议中，对于频分双工（FDD)系统和时分双工（TDD)系统， 相继引入了 HSUPA技术这一上行增强技术，以提高系统容量和覆盖，降低上 行接入时延。从而能满足UE对系统上行总体吞吐量的要求。</p>
+    <p>10类似于HSDPA技术，HSUPA技术中，最主要的关键技术也包括基站调度、 AMC和HARQ。与HSDPA技术这一下行增强技术不同的是，HSUPA中涉及 的基站调度技术还需要UE发送调度请求信息，报告上行缓冲（Buffer)信息和 其它相关信息。这里的相关信息包括物理层测量信息，比如服务小区和邻小区 的路径损耗以及UE的功率余量信息。同时，为了保证上行覆盖和系统稳定性 的原因，HSUPA的上行需要维持噪声升高量（ROT)即上行干扰在一个合适的 门限范围内，因此基站调度技术通常采用基于功率的调度。这里，对HSUPA 的上行链路需要比较严格的功率控制，以便保证上行负荷和小区间的上行干扰 在一个可以接受的范围内。</p>
+    <p>引入HSUPA技术后，相应引入的信道包括：增强专用信道（E-DCH )、增 强上行控制信道（E-UCCH)、增强上行物理信道（E-PUCH)、增强上行随机接 入信道（E-RUCCH)、增强上行混合自动请求重传应答指示信道（E-HICH)、 增强上行绝对接入允许信道（E-AGCH)。</p>
+    <p>这里，E-DCH为传输信道，其他信道皆是物理信道。其中，E-DCH也可 以称为HSUPA的增强上行传输信道，用于承载高速上行业务数据以及承载上 行调度信息（SI, Schedule Information )。 E-UCCH作为控制信道，用于传输上 行增强相关的信令信息。E-UCCH通常和E-DCH复用在一起，用于传输当前 E-DCH HARQ相关的信息，具体来说，用于承载UE的HARQ进程标识、E-PUCH 的传输格式信息。并且，该传输格式信息包括E-PUCH的传输格式组合指示 (E-TFCI)和E-PUCH的重传序列号（RSN),从而基站能根据该传输格式信 息对E-PUCH进行解码等操作。E-DCH和E-UCCH可以同时映射到E-PUCH 上。</p>
+    <p>其中，类似于E-UCCH, E-RUCCH作为控制信道，也用于传输上行增强 相关的信令信息，并且主要用于上行增强业务的接入请求。那么，当UE长时 间未获得调度信息或数据传输，导致较长时间的停顿后，UE利用E-RUCCH承 载SI,可以重新获得上行同步。这里，该SI包括服务小区与邻小区路径损耗信 息、UE可用发射功率的相关信息、缓存有数据占用的最高优先级逻辑信道的标</p>
+    <p>11识信息、最高优先级逻辑信道缓存的占用信息、以及UE总的缓存占用信息。</p>
+    <p>&lt;古自 i口 ,、、。</p>
+    <p>其中，E-HICH也可以称为HSUPA下行反馈信道，用于支持HARQ过程 中反馈比如ACK/NACK等应答信息。那么，基站接收到UE的上行数据后，利 用该信道反馈相应的ACK/NACK应答信息。并且多个UE的ACK/NACK应答 信息可以利用正交码复用到一个E-HICH上。另外，用于非调度传输和调度传 输的E-HICH不同，用于非调度传输的E-HICH除了承载UE的ACK/NACK应 答信息外，还承载上行链路的TPC/SS信息。</p>
+    <p>其中，E-AGCH也可以称为HSUPA下行调度控制信道，用于承载基站对 UE的调度控制信息。具体来说，用于承载时隙、码道等物理资源和功率许可相 关信息，承载UE调度E-HICH的指示信息， 一个调度传输的TTI内携带的 E-UCCH个数等信息，以及携带UE标识信息。从而UE根据上述基站对UE的 调度控制信息判断是否属于自身的调度控制信息。另外，E-AGCH还用于承载 E-DCH的调度控制信息。 一个E-AGCH固定占用两个下行SF为16的码道， 采用固定QPSK调制方式。同时，承载对于E-PUCH的SS、 TPC等信息，如 下述表2所示，表2为E-AGCH所承载的信息。E-AGCH所承载的信息包括功 率资源相关信息（PRRI)、码道资源相关信息（CRRI)、时隙资源相关信息 (TRRI)、资源持续时间（RDI)信息、E-AGCH的循环序列码（ECSN)信息、 E-HICH信道指示信息（EI)、 E-UCCH信道的个数（ENI)信息、增强无线网 络临时标识（E-RNTI )信息、上行同步控制信息（SS )、上行功率控制信息（TPC )。</p>
+    <p>&lt;table&gt;table see original document page 12&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;高层信令配置</p>
+    <p>ECSN	ECSN为3比特s;用于计算E-AGCH的误块率</p>
+    <p>EI	EI为2比特s;用于标识所调度UE对应哪个E-HICH</p>
+    <p>ENI	ENI为3比特s;用于标识一个TTI内E-PUCH上承载的 E-UCCH个数</p>
+    <p>E-脂TI	E-RNTI为16比特s;用于标识对哪个UE发送调度许可</p>
+    <p>SS	SS用于保持E-PUCH的上行同步控制</p>
+    <p>TPC	TPC用于E-PUCH的功率控制</p>
+    <p>表 2</p>
+    <p>并且，HSUPA共享信道的定时关系及E-AGCH的控制过程具体为：当UE 需要向基站发送上行HSUPA数据时，UE先在E-PUCH上单独发送或携带发送 SI请求给基站；经基站调度并在UE监听的E-AGCH信道上发送HSUPA控制 信息；UE接收并正确解读该HSUPA控制信息后，根据定时关系经过一定时间 间隔，UE发送E-DCH映射到E-PUCH上的上行HSUPA数据给基站；之后， 基站又经过一定时间间隔，在相应的E-HICH信道反馈ACK/NACK应答信息 给UE。</p>
+    <p>针对VOIP的业务特点而言，通常数据激活期内数据包的变化范围是35_ 49字节，数据非激活期内数据包的变化范围是10-24字节。具体来说，对VOIP 业务的特点分析如下，VOIP业务的语音激活期，数据包大小为35 -49字节， 语音激活期数据包间隔为20ms;   VOIP业务的语音非激活期数据包大小10-24字节，语音非激活期数据包间隔为160ms。并且，按照语音激活期每20ms 承载最大49字节得到的VOIP的最高数据速率为：（49x 8) /20=19.6kbps。这 里，语音非激活期也可以称为语音静默期。</p>
+    <p>通过上述分析可知，由于VOIP业务对实时性要求比较高，当通过HSPA 信道承载最高速率为19.6kbps的VOIP业务时，会导致其控制信道开销较大的 问题。而且控制信道开销较大势必会导致系统容量和系统资源利用率的下降。</p>
+    <p>13这里，以HSDPA技术为例，当发送19.6kbps低速数据时，同样需要使用两个 下行HS-SCCH和一个上行HS-SICH。那么，控制信道开销相对于传输高速数 据来说，控制信道开销较大。</p>
+    <p>目前，现有技术是：针对FDD系统支持VOIP业务并减少控制信道开销的 解决方案。FDD系统在支持VOIP业务时，为了减少控制信道开销，采取了一 系列的优化措施，以下行VOIP业务的优化措施为例来说， 一方面，VOIP数据 包初次传输时不发送控制信道HS-SCCH, UE在没有收到HS-SCCH的情况下， 通过盲检测方式直接接收VOIP数据包；另一方面，VOIP数据包初次传输时通 过HS-SCCH发送控制信息，但数据包重传时，并不发送HS-SCCH。其中，所 谓盲检测指：不需要额外传递对数据信道的控制信息，比如不需要额外传递传 输格式指示信息，l正按照预定义的格式对数据信道进行解码，预定义的格式可 以通过链路建立阶段的高层信令配置，也可以通过协议固定配置。</p>
+    <p>参考上述针对FDD系统支持VOIP业务并减少控制信道开销的解决方案， 如果在TDD系统中，UE同样&#37318;用盲检测方式接收VOIP数据包，那么传送一 个49字节的VOIP数据包将需要一个5ms TTI内的八个SF为16的码道资源， UE始终需要对这八个码道资源的数据进行盲检测，这样，会导致UE耗电量增 加。可见在TDD系统中，直接使用现有FDD系统的解决方案并不合适。</p>
+    <p>另外，针对TDD系统的特点和VOIP业务的需求而言，现有TDD系统中 采用的相关技术也不利于对VOIP业务的支持。</p>
+    <p>举例来说，针对VOIP数据包的重传问题而言，时分同步码分多址 (TD-SCDMA) TDD系统的TTI为5ms, HSDPA和HSUPA的往返时延（RTT, Round Trip Time )均为20ms。根据VOIP业务的数据包特点，语音激活期内， VOIP数据包的到达间隔为20ms。对于TDD系统来说，如果以20ms的RTT 对数据间隔为20ms的数据进行重传，则势必导致VOIP数据包的乱序以及时延 的进一步增加。可见现有TDD系统中采用20ms的RTT并不适合VOIP数据包 的重传。</p>
+    <p>而且，由于VOIP业务对服务质量（QoS)要求较高，因此现有承载VOIP</p>
+    <p>14业务的方案均是采用QPSK调制方式来承载，并且编码率也不能太大。那么，</p>
+    <p>在编码率较小的QPSK调制方式下，如果重传VOIP数据包，则势必导致TDD 系统资源利用率的下降。考虑到时延的要求和TDD系统容量的要求，TDD系 统承载VOIP业务几乎不能允许重传，为保证VOIP业务的QoS质量，应当从 链路质量方面进行保证。可见当通过现有TDD系统承载VOIP业务时，需要面 对重传次数限制、控制信道开销较大以及系统容量需求等诸多问题。</p>
+    <p>另外，如果通过专用信道（DCH)承载VOIP业务，则在VOIP业务语音 静默期，分配给UE的专用资源将会大大浪费。因此，通过DCH承载VOIP业 务也不合适。</p>
+    <p>综上所述，由于FDD系统和TDD系统的不同特点，比如前者适用于对称 业务，后者适用于非对称业务。因此，如果将现有FDD系统支持VOIP业务并 减少控制信道开销的解决方案直接应用于TDD系统并不合适。而且，针对TDD 系统的特点和VOIP业务的需求而言，现有TDD系统中采用的相关技术也不利 于对VOIP业务的支持。针对TDD系统而言，目前还没有支持VOIP业务并减 少控制信道开销的有效解决方案。</p>
+    <p>发明内容</p>
+    <p>有鉴于此，本发明的主要目的在于提供一种支持VOIP业务的半静态资源 调度方法，在实现对VOIP业务支持的同时，有效地减少了控制信道的开销。</p>
+    <p>本发明的另一目的在于提供一种支持VOIP业务的半静态资源调度系统， 在实现对VOIP业务支持的同时，有效地减少了控制信道的开销。</p>
+    <p>本发明的又一目的在于提供一种支持VOIP业务的重传选择调度方法，在 实现对VOIP业务支持的同时，有效地减少了控制信道的开销。</p>
+    <p>本发明的再一目的在于提供一种支持VOIP业务的重传选择调度系统，在 实现对VOIP业务支持的同时，有效地减少了控制信道的开销。</p>
+    <p>为达到上述目的，本发明的技术方案是这样实现的：</p>
+    <p>一种半静态资源调度方法，该方法包括以下步骤：</p>
+    <p>15Al、配置业务信道占用的最大物理资源量，设置传输块大小TBS和所述 TBS对应的物理资源；</p>
+    <p>Bl、当根据当前业务信道承载的网络电话VOIP数据块大小选择所述TBS 后，根据所述TBS和所述TBS对应的物理资源计算当前业务信道占用的物理 资源量；根据所述最大物理资源量和所述物理资源量获得所述当前业务信道占 用的物理资源余量，并将所述物理资源余量确定为调整信息封装到控制信令中， 发送到网络侧设备进行调度。</p>
+    <p>其中，步骤A1中，所述设置TBS和TBS对应的物理资源包括协议固定设 置方式，和高层信令设置方式。</p>
+    <p>其中，步骤A1中，所述设置TBS和TBS对应的物理资源后还包括：将对 应于较大TBS值的物理资源覆盖对应于较小TBS值的物理资源；并且，在同 一时隙内，所述对应于较小TBS值的物理资源尽量占据所在时隙的边缘码道资 源。</p>
+    <p>其中，所述设置TBS和TBS对应的物理资源后还包括：重新配置所述TBS 和TBS对应的物理资源。</p>
+    <p>其中，在上行链路方向，所述步骤Bl具体为：</p>
+    <p>Bl 11 、用户设备UE根据即将要发送的上行VOIP数据块大小选择上行TBS 并根据上行TBS和物理资源的对应关系，计算所需使用的具体物理资源信息， 按照预先设置业务信道与控制信道之间的定时关系，通过所述控制信道承载上 行VOIP控制信令将包括上行TBS和物理资源对应关系的TBS索引信息发送 给基站；</p>
+    <p>UE根据所述定时关系，基于所述具体物理资源信息发送所述上行VOIP数</p>
+    <p>据块；</p>
+    <p>B112、所述基站先接收到所述上行VOIP控制信令并解码，根据获取所述 TBS索引信息中上行TBS和物理资源的对应关系，计算接下来要接收的所述 上行VOIP数据块所占用的所述具体物理资源信息；</p>
+    <p>基站将所述具体物理资源信息确定为当前业务信道占用的物理资源量，并结合所述配置的业务信道占用的最大物理资源量计算当前业务信道占用的物理 资源余量，将所述物理资源余量确定为调整信息封装到控制信令中发送到基站 调度器；</p>
+    <p>基站根据所述定时关系，基于所述具体物理资源信息接收所述上行VOIP 数据块并解码。</p>
+    <p>其中，步骤B112中，所述基站接收上行VOIP数据块并解码后还包括： 所述基站根据所述定时关系，通过所述控制信道承载的下行VOIP控制信</p>
+    <p>令将解码信息反馈给UE;当基站检测到上行VOIP数据块解码错误时，启动重</p>
+    <p>传选择调度过程。</p>
+    <p>其中，所述控制信道进一步为：增强上行混合自动请求重传应答指示信道 E-HICH类型的控制信道。</p>
+    <p>其中，在下行链路方向，所述步骤B1具体为：</p>
+    <p>B121、所述基站周期性地判断即将发送的下行VOIP数据块大小，如果所 述下行VOIP数据块大小为零，则执行步骤B122;否则，执行步骤B123;</p>
+    <p>B122、基站将所述配置的业务信道占用的最大物理资源量确定为所述调整 信息封装到控制信令中发送到基站调度器；结&#26481;当前半静态资源调度流程；</p>
+    <p>同时，基站通过下行VOIP控制信令将TBS为O的信息发送到UE;或者， 基站不发送任何TBS信息；如果UE检测不到所述下行VOIP控制信令中的TBS 信息，则UE判定接下来的下行VOIP资源时刻没有任何VOIP数据发送；结&#26481; 当前半静态资源调度流程；</p>
+    <p>B123、所述基站根据所述下行VOIP数据块大小选择下行TBS,并根据所述 下行TBS和物理资源的对应关系，计算需占用的具体物理资源信息，按照预先 设置业务信道与控制信道之间的定时关系，通过所述控制信道承载的所述下行 VOIP控制信令将包括下行TB S和物理资源对应关系的TB S索引信息发送给 UE;</p>
+    <p>同时，基站将所述具体物理资源信息确定为当前业务信道实际占用的物理 资源量，并结合所述配置的业务信道占用的最大物理资源量计算当前业务信道占用的物理资源余量，将所述物理资源余量确定为调整信息封装到控制信令中 发送到所述基站调度器；结&#26481;当前半静态资源调度流程。</p>
+    <p>其中，步骤B123中，所述通过控制信道承载的下行VOIP控制信令将TBS 索引信息发送给UE后还包括：</p>
+    <p>B124、所述基站根据所述定时关系，基于所述具体物理资源信息发送所述 下行VOIP数据块；</p>
+    <p>B125、所述UE先接收到所述下行VOIP控制信令并解码，根据获取所述 TBS索引信息中下行TBS和物理资源的对应关系，计算接下来要接收的所述 下行VOIP数据块所占用的所述具体物理资源信息；</p>
+    <p>B126、 UE基于所述具体物理资源信息接收所述下行VOIP数据块并解码。</p>
+    <p>其中，步骤B126还包括：</p>
+    <p>所述UE通过控制信道承载的上行VOIP控制信令将下行VOIP数据块的解 码信息反馈给所述基站；当基站通过上行VOIP控制信令检测到下行VOIP数 据块解码错误时，启动重传选择调度过程。</p>
+    <p>其中，当发生时延抖动时，步骤B124进一步为：所述基站采用缓存数据 方式、或调度方式发送发生时延抖动的下行VOIP数据块。</p>
+    <p>一种半静态资源调度系统，该系统包括：业务信道占用最大物理资源量的 配置单元、TBS和物理资源对应关系的设置单元、当前业务信道占用物理资源 量的计算单元；其中，</p>
+    <p>业务信道占用最大物理资源量的配置单元，用于为承载的VOIP数据块配 置其业务信道占用的最大物理资源量；</p>
+    <p>TBS和物理资源对应关系的设置单元，用于设置TBS和物理资源的对应关</p>
+    <p>系；</p>
+    <p>当前业务信道占用物理资源量的计算单元，用于从所述最大物理资源量的</p>
+    <p>配置单元获取所述最大物理资源量，从所述TBS和物理资源对应关系的设置单 元获取TBS和物理资源的对应关系；根据当前业务信道承载的VOIP数据块大 小选择TBS后，根据所述TBS和物理资源的对应关系计算当前业务信道占用的物理资源量；根据所述最大物理资源量和所述当前业务信道占用的物理资源 量获得当前业务信道占用的物理资源余量，并将所述物理资源余量确定为调整 信息封装到控制信令中，发送到网络侧设备。</p>
+    <p>其中，所述TBS和物理资源对应关系的设置单元包括协议固定设置模块， 和高层信令设置模块。</p>
+    <p>一种重传选择调度方法，该方法包括以下步骤：</p>
+    <p>A2、配置用于VOIP数据块重传调度的下行调度控制信道，并通过链路建 立过程消息将所述配置的下行调度控制信道进行发送；</p>
+    <p>B2、如果半静态资源调度过程中解码信息正确，则UE停止监听并接收所 述配置的下行调度控制信道；</p>
+    <p>如果半静态资源调度过程中解码信息错误，则UE启动监听并接收所述配 置的下行调度控制信道；同时，当基站调度器根据UE优先级、负荷状态和时 延要求判定需要执行重传后，启动重传选择调度。</p>
+    <p>其中，所述配置的下行调度控制信道包括：高速上行分组接入下行调度控 制信道E-AGCH和高速下行分组接入下行调度控制信道HS-SCCH。</p>
+    <p>其中，在上行链路方向，步骤B2进一步为：</p>
+    <p>B211、如果解码信息正确，则所述基站通过控制信道承载的下行VOIP控 制信令，将针对上行VOIP数据块的ACK反馈给UE后，所述UE停止监听并 接收所述E-AGCH;如果解码信息错误，则基站通过所述下行VOIP控制信令， 将针对所述上行VOIP数据块的NACK反馈给UE后，UE启动监听并接收所述 E-AGCH。</p>
+    <p>其中，步骤B211中，所述启动重传选择调度后还包括： B212、基站调度器通过所述E-AGCH发送重传上行VOIP数据块的调度控 制信息，并且所述调度控制信息中携带有所要重传上行VOIP数据块的标识。 其中，步骤B212后还包括：</p>
+    <p>B213、所述UE根据监听到所述E-AGCH上的UE标识判断UE自身是否 被调度；</p>
+    <p>19B214、所述UE根据预设的业务信道与所述控制信道之间的定时关系，在</p>
+    <p>所述调度控制信息指定的资源上，根据调度控制信息中携带的所述重传上行</p>
+    <p>VOIP数据块的标识，重传所述标识所指示的需要被重传的上行VOIP数据块； 同时，UE在E-UCCH中指示该重传上行VOIP数据块的标识；</p>
+    <p>B215、基站对所述重传的上行VOIP数据块进行解码。</p>
+    <p>其中，所述重传上行VOIP数据块标识的承载方式为：在所述E-AGCH和 所述E-UCCH中同时承载所述重传上行VOIP数据块的标识。</p>
+    <p>其中，在下行链路方向，步骤B2进一步为：</p>
+    <p>B221、如果解码信息正确，则所述基站通过控制信道承载的上行VOIP控 制信令，将针对下行VOIP数据块的ACK反馈给UE后，所述UE停止监听并 接收所述HS-SCCH;如果解码信息错误，则基站通过所述上行VOIP控制信令， 将针对所述下行VOIP数据块的NACK反馈给基站后，UE启动监听并接收所 述HS-SCCH。</p>
+    <p>其中，步骤B221中，所述启动重传选择调度后还包括： B222、基站调度器通过所述HS-SCCH发送重传下行VOIP数据块的调度 控制信息，并且所述调度控制信息中携带有所要重传下行VOIP数据块的标识。 其中，步骤B222后还包括：</p>
+    <p>B223、所述基站根据预设的业务信道与所述控制信道之间的定时关系，在 所述业务信道上发送所述重传的下行VOIP数据块；</p>
+    <p>B224、所述UE根据监听到HS-SCCH上的UE标识判断UE自身是否被调 度，并根据所述重传下行VOIP数据块的标识判定需要被重传的下行VOIP数</p>
+    <p>据块；</p>
+    <p>B225、所述UE根据所述定时关系，在所述调度控制信息指定的资源上接 收所述重传的下行VOIP数据块并进行解码。</p>
+    <p>其中，所述重传下行VOIP数据块标识的承载方式为：在所述HS-SCCH中 承载所述重传下行VOIP数据块的标识。</p>
+    <p>一种重传选择调度系统，该系统包括：配置单元、发送单元、判断单元；</p>
+    <p>20其中，</p>
+    <p>配置单元，用于配置下行调度控制信道并发送到所述发送单元；发送单元，用于通过链路建立过程消息将所述配置的下行调度控制信道进行发送；</p>
+    <p>判断单元，用于接收所述配置的下行调度控制信道后，根据对半静态资源调度过程中解码信息的判定执行相应的重传选择调度处理。</p>
+    <p>其中，所述判断单元，进一步用于判定解码信息正确后，UE停止监听并接收所述配置的下行调度控制信道。</p>
+    <p>其中，所述判断单元，进一步用于判定解码信息错误后，UE启动监听并接收所述配置的下行调度控制信道；同时，当基站调度器根据UE优先级、负荷状态和时延要求判定需要执行重传后，启动重传选择调度。</p>
+    <p>本发明在TDD系统中，&#37318;用半静态资源调度方法、以及基于半静态资源调度技术的重传选择调度方法来支持VOIP业务，在实现对VOIP业务支持的同</p>
+    <p>时，有效地减少了控制信道的开销。</p>
+    <p>其中，&#37318;用半静态资源调度方法进行调度的实现过程包括两个阶段。第一</p>
+    <p>个阶段是链路建立阶段，网络为VOIPUE配置业务信道资源即预留出业务信道占用的最大物理资源量，以及配置控制信道承载的控制信令资源。设置上行/下行TBS和物理资源的对应关系。另外，考虑到系统容量，使多个UE复用相同的业务信道资源和控制信令资源，比如将连续N个子帧的相同业务信道资源以时间分割的方式分别分配给N个不同的UE。从而在现有系统容量的基础上，达到提高资源利用率的目的。</p>
+    <p>第二个阶段是业务进行阶段，基站/UE根据当前业务信道承载的VOIP数据块选择TBS后，根据上行/下行TBS和物理资源的对应关系计算当前业务信道实际占用的物理资源量。之后，基站根据为业务信道预留的最大物理资源量和当前业务信道实际占用的物理资源量，获得当前业务信道占用的物理资源余量，并将该物理资源余量确定为调整信息封装到控制信令中，提前通知给基站调度器。也就是说，最大程度地将语音静默期的资源贡献给基站调度器，以便</p>
+    <p>21基站调度器&#37318;用该调整信息对其他UE和VOIP业务进行调度。</p>
+    <p>其中，&#37318;用基于半静态资源调度技术的重传选择调度方法进行调度的实现</p>
+    <p>过程为：基于半静态资源调度技术，不设定固定的重传次数，基站调度器根据UE优先级、系统负荷状况和时延的需求等影响因素，来选择对错误解码的数据块进行调度重传。业务信道所承载数据块的错误解码信息通过控制信令传递给基站。</p>
+    <p>综上所述，采用本发明在保证VOIP业务的资源需求前提下，最大程度地将VOIP语音静默期无需占用的码道资源高效地交给基站调度器使用，有效地减少了控制信道的开销。进而最大程度地避免了资源碎片的问题，提高了资源利用率。而且，还能很好地解决了上行同步和功率控制的问题。</p>
+    <p>附图说明</p>
+    <p>图1为本发明半静态资源调度方法原理的实现流程示意图；图2为本发明重传选择调度方法原理的实现流程示意图。</p>
+    <p>具体实施方式</p>
+    <p>本发明的核心思想是：本发明在TDD系统中，采用半静态资源调度技术、以及基于半静态资源调度技术对重传选择进行调度来支持VOIP业务，在实现对VOIP业务支持的同时，有效地减少了控制信道的开销。</p>
+    <p>为使本发明的目的、技术方案和优点更加清楚明白，以下举实施例并参照附图，对本发明进一步详细说明。</p>
+    <p>如图l所示， 一种半静态资源调度方法，该方法包括以下步骤：</p>
+    <p>步骤IOI、在链路建立阶段，网络为VOIPUE配置业务信道占用的最大物理资源量，以及控制信道承载的控制信令资源。预先设置业务信道上用于传输VOIP数据块的TBS，以及与该TBS对应的物理资源。预先设置业务信道与控制信道之间的定时关系。</p>
+    <p>这里，预先设置与TBS对应的物理资源的设定原则为：首先，按照VOIP</p>
+    <p>22数据块的特征设置n种TBS。然后，根据VOIP UE的链路质量需求，为每种TBS设置与其对应的物理资源，与该设置的物理资源对应的具体物理资源信息交由高层信令设置。比如，TBS!对应的具体物理资源信息为MP TBS2对应的具体物理资源信息为M2， TBSn对应的具体物理资源信息为Mn。其中，具体物理资源信息M」U&lt;=j&lt;=n)包括设置的物理资源所占用的时隙、码道等配置信息。</p>
+    <p>针对TBS、物理资源和具体物理资源信息而言，举例来说，TBS为96，该TBS对应的物理资源为两个SF为16的码道即两个基本资源单位（BRU),所谓BRU指SF为16的一个码道。该物理资源对应的具体物理资源信息可以为时隙内SF为16码道中的第0和第l个码道。</p>
+    <p>这里，预先设置与TBS对应的物理资源包括两种方式：协议固定设置方式和高层信令设置方式。</p>
+    <p>其中，协议固定设置方式为：采用协议固定设置每种TBS,以及每种TBS对应的物理资源；而为每种TBS设置的物理资源所对应的具体物理资源信息交由高层信令设置。在链路建立阶段，每种TBS，以及每种TBS对应的物理资源通过协议通知给基站/UE,每种TBS对应的具体物理资源信息通过高层信令通知给基站/UE。这里，针对设置每种TBS对应的物理资源而言，举例来说，协议固定配置5种TBS,则TBSindex-4，对应八个BRU; TBS index = 3对应六个BRU,以此类推，TBS index = 0对应零个BRU。</p>
+    <p>相较于协议固定设置方式而言，高层信令设置方式不固定设置每种TBS,以及每种TBS对应的物理资源。高层信令设置方式为：每种TBS，每种TBS对应的物理资源，为每种TBS设置的物理资源所对应的具体物理资源信息皆由高层信令设置并通知。</p>
+    <p>步骤102、业务进行阶段，当基站或UE根据当前业务信道承载的VOIP数据块大小选择TBS后，根据该TBS和该TBS对应的物理资源计算当前业务信道实际占用的物理资源量。</p>
+    <p>步骤103、基站根据为业务信道预留的最大物理资源量和当前业务信道实际占用的物理资源量获得当前业务信道占用的物理资源余量，并将该物理资源余量确定为调整信息封装到控制信令中，发送到网络恻设备。网络侧设备&#37318;用该</p>
+    <p>调整信息对其他VOIP UE或VOIP之外的其他业务进行调度。</p>
+    <p>这里，网络侧设备可以为基站调度器。</p>
+    <p>进而，为了避免半静态资源调度方法产生资源碎片，对上述步骤101中预先设置与TBS对应的物理资源进行优化，那么步骤101中，预先设置业务信道上用于传输VOIP数据块的TBS，以及与该TBS对应的物理资源后还包括优化操作，使空闲的物理资源连续化。</p>
+    <p>优化操作具体为：将为TBS较大的VOIP数据块所配置的物理资源覆盖为TBS较小的VOIP数据块所配置的物理资源。并且，在同一时隙内，为TBS较小的VOIP数据块所配置的物理资源尽量占据所在时隙的资源编号靠两端的边缘码道资源。这里，为TBS较大的VOIP数据块所配置的物理资源即对应于较大TBS值的物理资源。为TBS较小的VOIP数据块所配置的物理资源即对应于较小TBS值的物理资源。</p>
+    <p>上述优化操作的好处是：在一个时隙的物理资源分配给多个UE，比如分配给两个UE的情况下，每个UE的最大TBS分别分配了八个码道资源。那么，如果UE按照实际VOIP数据块大小选择的TBS仅使用了四个码道，则两个UE空闲的八个码道资源不连续的话，不便于基站调度器进行调度。采用上述优化搡作可以尽量使得空闲的物理资源连续化。</p>
+    <p>举例来说，TBSi与TBS2相比较，TBS2为较大TBS值。如果TBS,的VOIP数据块所分配的物理资源为某时隙i内编号为Cc = 0和Cc = 1的两个BRU;则TBS2的VOIP数据块所分配的物理资源为同 一时隙i内编号为Cc = 0和Cc = 1,Cc = 2, Cc-3的四个BRU,即覆盖了 Cc-0和Cc-l。如果TBS,的VOIP数据块所分配的资源为某时隙i内编号为Cc = 15和Cc = 14的两个BRU;则，TBS2的VOIP数据块所分配的资源为相同时隙i内编号为Q^15和Cc-14, Cc =13, CcM2的四个BRU，即覆盖了 Cc= 15和Cc= 14。</p>
+    <p>综上所述，结合上述半静态资源调度方法中设置TBS和与其对应物理资源的方案进行举例，下面给出一种TBS和对应物理资源的典型设置方案。</p>
+    <p>首先，对VOIP业务数据包特点进行分析，语音静默期数据包的范围10-24字节，语音激活期数据包范围35 -49字节；那么可将VOIP的数据块设置为 4种TBS。其中，TBS产12字节，TBS2-24字节，TBS3:36字节，TBS4 = 49 字节，4种不同的TBS尺寸基本呈等比分布，换算成比特形式为TBS产96比特, TBS2=192比特，TBS3 = 288比特，TBS4 = 392比特。特别地，使用TBS。 = 0 比特，表示没有任何VOIP数据发送的情况。</p>
+    <p>然后，计算不同的TBS所需要的物理资源，当采用QPSK调制方式时，一 个5ms TTI内的两个BRU最多可以承载176比特信息，采用两个BRU承载12 字节即96比特VOIP数据块得到相应的码率为96比特/176比特=0.5454。在 码率基本相同的情况下，TBS2为192比特的VOIP数据块需要四个BRU承载， TBS3为288比特的VOIP数据块需要六个BRU承载，TBS4为392比特的VOIP 数据块需要八个BRU承载。</p>
+    <p>对于传统DPCH承载传统语音业务的情况来说，自适应多速率（AMR) 12.2kbps的语音和3.4k信令复用在TTI=20ms的两个BRU上，传统 AMR12.2kbps的语音采用QPSK调制方式，计算所得的码率为0.46。这样，照 上述TBS和对应物理资源的典型设置方案来说，VOIP的码率与传统DPCH的 码率基本相当。如表3所示，表3中列出了典型设置方案下VOIP业务和传统 语音业务的码率对比。</p>
+    <p>VOIP	TBS索引	TBS大小	BRU数量	码率	备注</p>
+    <p>0	0	0		语音静默期，无数据包 状态</p>
+    <p>1	96	2	0.54 54</p>
+    <p>2	192	4	0.54 54</p>
+    <p>3	288	6	0.54 54</p>
+    <p>5	392	8	0.55 68</p>
+    <p>25&lt;table&gt;table see original document page 26&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;表 3</p>
+    <p>并且，基于上述TBS和对应物理资源的典型设置方案下的链路质量分析，进一步进行上述优化操作，如表4所示，表4给出了一种对TBS和对应物理资源进行优化操作后的典型设置方案。从表4中可知，对应于较大TBS值的物理资源覆盖对应于较小TBS值的物理资源，对应于较小TBS值的物理资源尽量占据边缘码道资源，即资源编号靠两端的BRU。</p>
+    <p>&lt;table&gt;table see original document page 26&lt;/column&gt;&lt;/row&gt;
+&lt;table&gt;</p>
+    <p>表 4</p>
+    <p>进而，针对上述半静态资源调度方法中，设置的TBS和TBS对应的物理资源而言，在该设置后还包括：根据当前的业务需求，重新配置TBS和TBS对应的物理资源。比如当前的业务需求为：降低编码率。那么为了进一步降低编码率，保证VOIP业务的链路质量，步骤IOI中，预先设置业务信道上用于传输VOIP数据块的TBS，以及与该TBS对应的物理资源后还包括用于降低编码率的操作。</p>
+    <p>该用于降低编码率的操作具体为：对于相同的TBS而言，为TBS值相同的TBS设置更多的物理资源。</p>
+    <p>那么仍沿用TBS和对应物理资源的典型设置方案举例来说，比如为TBS,为96比特的VOIP数据块配置三个BRU，为TBS2为192比特的VOIP数据块配置六个BRU，为TBS3为288比特VOIP的数据块配置九个BRU,为TBS4为392比特的VOIP数据块配置十二个BRU。同样地，还可以改变TBS的数目，比如配置大于5种的TBS，并设定每种TBS对应的物理资源。</p>
+    <p>另外，在设置TBS和其对应的物理资源时，还需要考虑到该设置方案所带来对系统容量和资源利用效率的问题。不能一味地为了提高VOIP链路质量而降低系统容量和系统资源利用率。以下仍沿用TBS和对应物理资源的典型设置方案进行举例。</p>
+    <p>具体来说，对传统AMR12.2kbps语音业务以及VOIP业务的容量进行比较可知，传统语音业务数据速率一般为AMR12.2kbps。由于VOIP业务协议头开销的问题，即使采用协议头压缩技术的VOIP的业务峰值速率也会高于AMR12.2kbps。那么，只有采用类似半静态资源调度的方式尽量减少VOIP语音静默期所占用的物理资源量，才能保证VOIP业务容量不受较大损失。在上述典型设置方案下， 一个传统的AMRl2.2kbps的语音UE占用两个BRU， TTI为20ms。 一个VOIPUE占用八个BRU， TTI为5ms, 20ms内四个UE时分复用相同的物理资源，则相当于每个VOIPUE占用TTI=20ms内的两个BRU，因此，按照上述典型设置方案中典型VOIP数据块所对应TBS和其对应物理资源的设置，VOIPUE的容量较传统语音业务的容量基本不会受到损失。</p>
+    <p>方法实施例一为：在上行链路方向采用半静态资源调度方法进行调度，有效地减少控制信道开销的解决方案。本实施例的实现流程包括以下步骤：</p>
+    <p>步骤201、在链路建立阶段，网络为VOIPUE配置业务信道占用的最大物理资源量，以及控制信道承载的控制信令资源。可以通过协议固定设置方式，和高层信令设置方式预先设置业务信道上用于传输上行VOIP数据块的上行TBS,以及与该上行TBS对应的物理资源。并且，可以通过协议固定设置方式和&#39641;层信令设置方式预先设置业务信道与控制信道之间的定时关系。</p>
+    <p>步骤202、 UE根据即将要发送的上行VOIP数据块大小选择上行TBS，并根据上行TBS和物理资源的对应关系，计算上行VOIP数据块所占用的具体物理资</p>
+    <p>27源信息。按照预先设置业务信道与控制信道之间的定时关系，通过控制信道承</p>
+    <p>载的上行VOIP控制信令将TBS索引信息发送给基站。并且，这里的具体物理资源信息为上行VOIP物理信道资源。这里的TBS索引信息包括上行TBS和物理</p>
+    <p>资源的对应关系。</p>
+    <p>这里，举例来说，上行TBS为96比特，该上行TBS对应的物理资源为两个BRU。则计算获得该物理资源对应的具体物理资源信息可以为时隙内SF为16码道中的第0和第1个码道。</p>
+    <p>这里，针对定时关系而言，比如对于UE来说，控制信道总是比业务信道提前发送到基站。</p>
+    <p>这里，用于承载上行VOIP控制信令的控制信道进一步为：E-HICH类型的</p>
+    <p>控制信道。</p>
+    <p>步骤203、 UE根据预先设置业务信道与控制信道之间的定时关系，基于计算的上行VOIP数据块所占用的具体物理资源信息发送上行VOIP数据块。</p>
+    <p>步骤204、基站先接收到上行VOIP控制信令并解码，获取TBS索引信息中上行TBS和物理资源的对应关系。根据上行TBS和物理资源的对应关系计算接下来要接收的上行VOIP数据块所占用的具体物理资源信息。</p>
+    <p>这里，需要指出的是，由于根据预先设置业务信道与控制信道之间的定时关系，控制信道总是比业务信道提前发送到基站，因此，基站先接收到步骤202中的上行VOIP控制信令，后接收到步骤203中的上行VOIP数据块。</p>
+    <p>步骤205、基站将计算得到的上行VOIP数据块所占用的具体物理资源信息确定为当前业务信道实际占用的物理资源量，并结合分配给该UE的业务信道占用的最大物理资源量计算当前业务信道占用的物理资源余量。如果有物理资源余量，则将该物理资源余量确定为调整信息封装到控制信令中发送到基站调度器。以便基站调度器采用该调度信息对其他UE或其他业务进行调度。</p>
+    <p>步骤206、基站根据预先设置业务信道与控制信道之间的定时关系，基于计算得到的上行VOIP数据块所占用的具体物理资源信息接收上行VOIP数据块并根据TBS索引信息进行解码。步骤207、完成解码后，基站根据预先设置业务信道与控制信道之间的定时关系，通过控制信道承载的下行VOIP控制信令将前一个上行VOIP数据块</p>
+    <p>的解码信息，比如ACK/NACK反馈给UE。并且，当基站检测到前一个上行VOIP数据块解码错误时，基站启动后续的重传选择调度过程。</p>
+    <p>方法实施例二：在下行链路方向采用半静态资源调度方法进行调度，有效地减少控制信道开销的解决方案。本实施例的实现流程包括以下步骤：</p>
+    <p>步骤301、在链路建立阶段，网络为VOIPUE配置业务信道占用的最大物理资源量，以及控制信道承载的控制信令资源。可以通过协议固定设置方式，和高层信令设置方式预先设置业务信道上用于传输下行VOIP数据块的下行TBS，以及与该下行TBS对应的物理资源。并且，可以通过协议固定设置方式和高层信令设置方式预先设置业务信道与控制信道之间的定时关系。</p>
+    <p>步骤302、基站周期性地检测下行缓存区中即将发送的下行VOIP数据块大小，如果判定即将要发送的下行VOIP数据块大小为零，也就是下行VOIP处于语音静默期并且没有任何VOIP数据发送时，则执行步骤303;否则，如果判定即将要发送的下行VOIP数据块大小不为零，则执行步骤304。</p>
+    <p>步骤303、基站将配置给该UE的所有物理资源即配置给该UE的业务信道占用的最大物理资源量确定为所述调整信息封装到控制信令中发送到基站调度器。以便于基站调度器&#37318;用该调整信息用于对其他UE或其他业务的调度。结&#26481;当前半静态资源调度流程。</p>
+    <p>这里，执行步骤303的伺时、基站通过下行VOIP控制信令将TB^为0的信息发送到UE;或者，基站不发送任何TBS信息，来表示即将到来的TBS为0。之后，如果UE检测不到下行VOIP控制信令中的TBS信息，则UE就直接判定接下来的下行VOIP资源时刻没有任何VOIP数据发送，UE无需对VOIP业务信道进行接收。结束当前半静态资源调度流程。</p>
+    <p>这里需要指出的是，将TBS。为0的信息发送到UE;或者不发送任何TBS信息皆表示没有任何VOIP数据发送的情况。</p>
+    <p>步骤304、基站根据即将要发送的下行VOIP数据块大小选择下行TBS，并根据下行TBS和物理资源的对应关系，计算下行VOIP数据块所占用的具体物理资源信息。按照预先设置业务信道与控制信道之间的定时关系，通过控制信道</p>
+    <p>承载的下行VOIP控制信令将TBS索引信息发送给l正。并且，这里的具体物理资源信息为下行VOIP物理信道资源。这里的TBS索引信息包括下行TBS和物理资源的对应关系。</p>
+    <p>这里，执行步骤304的同时，基站将计算得到的下行VOIP数据块所占用的具体物理资源信息确定为当前业务信道实际占用的物理资源量，并结合分配给该UE的业务信道占用的最大物理资源量计算当前业务信道占用的物理资源余量，将该物理资源余量确定为调整信息封装到控制信令中发送到基站调度器。以便基站调度器&#37318;用该调度信息对其他UE或其他业务进行调度。结束当前半静态资源调度流程。</p>
+    <p>这里，步骤304中，通过控制信道承载的下行VOIP控制信令将TBS索引信息发送给UE后还包括：</p>
+    <p>步骤305、基站根据预先设置业务信道与控制信道之间的定时关系，基于计算的下行VOIP数据块所占用的具体物理资源信息发送下行VOIP数据块。</p>
+    <p>这里，当发生时延抖动时，步骤305进一步为：基站采用缓存数据方式、或调度方式发送发生时延抖动的下行VOIP数据块。</p>
+    <p>针对下行VOIP数据块涉及到的时延抖动问题，以下阐述避免时延抖动问题的解决方法。</p>
+    <p>通过IP传输网络传输VOIP语音业务需要考虑的直接问题是VOIP数据块的时延抖动问题，虽然传输网络已经&#37318;取了一些措施避免时延抖动问题，但是，不可避免数据在传输过程中仍然可能会存在时延抖动，特别是下行链路方向，时延抖动带来的直接问题是将下行VOIP数据块丢弃。</p>
+    <p>那么，本发明避免时延抖动问题的解决方法包括两种方式。 一是：&#37318;用缓存数据方式即对下行VOIP数据块进行缓存的方式发送发生时延抖动的下行VOIP数据块。二是：采用调度方式发送发生时延抖动的下行VOIP数据块。</p>
+    <p>针对采用缓存数据方式而言，比如基站在下行链路方向，事先缓存n个20ms</p>
+    <p>30的下行VOIP数据块，并且以20ms为周期连续检测是否有新的下行VOIP数据块达到。对缓存的下行VOIP数据块启动一个发送定时器，该定时器预设的时间为T-nx20ms。超过n x 20ms就发送数据。如果发现超过定时器预设的时间或者缓存下行VOIP数据块的数目大于等于n,则无论后续是否有新的下行VOIP数据块达到，&#37318;用先入先出的原则发送下行VOIP数据块，或者将发现超过定时器预设时间时刻的下行VOIP数据块从缓存中发送出去，以对抗传输网络层的时延抖动。并且避免语音静默期下行VOIP数据块以160ms为间隔传输时所弓l入的时延增加等问题。</p>
+    <p>针对&#37318;用调度方式而言，基站预定义的发送时刻为每隔20ms发送数据。那么基站以20ms为周期将达到的下行VOIP数据块发送出去。对于因时延抖动延迟达到的下行VOIP数据块，也就是说，下行VOIP数据块到达基站的时刻已经晚于基站预定义的发送时刻。那么，如果不采用上述缓存数据方式进行处理的话，则每20ms基站需要发送一次下行VOIP数据块，错过了每20ms的发送时刻，则在下一个20ms的发送时刻，可能有新的下行VOIP数据块达到，旧的数据即延迟到达的下行VOIP数据块就会被基站丢弃掉。</p>
+    <p>为了规避这个问题，还可以采用调度方式发送发生时延抖动的下行VOIP数据块。比如，在链路建立阶段时，网络为VOIPUE分配用于VOIP动态调度的HS-SCCH。 UE在进行半静态资源调度的同时，连续监听HS-SCCH，以检测是否有发生时延抖动的下行VOIP数据块到达。这里，需要指出的是，在这种调度方式下，需要将该发生时延抖动的下行VOIP数据块的标识，即该发生时延抖动的下行VOIP数据块的指针信息发送到l正。所述指针信息表示为：当前发生时延抖动的下行VOIP数据块到达时间与预定义到达时间的差值。</p>
+    <p>执行该调度的下行VOIP数据块所在TTI与预定义发送时刻的差值。</p>
+    <p>其中，该发生时延抖动下行VOIP数据块的指针信息，用于以指针的形式指示所要发送的发生时延抖动下行VOIP数据块。所述指针信息的具体承载方式以及具体指示方式，同后续重传选择调度过程中用于重传上行/下行VOIP数据块的重传指针信息的方式。这里不作阐述。需要明确的是，该重传指针信息</p>
+    <p>31即重传上行/下行VOIP数据块的指针信息，也就是重传的上行/下行VOIP数据 块的标识。</p>
+    <p>步骤306、 UE先接收到下行VOIP控制信令并解码，获取TBS索引信息 中下行TBS和物理资源的对应关系。根据下行TBS和物理资源的对应关系计 算接下来要接收的下行VOIP数据块所占用的具体物理资源信息。</p>
+    <p>这里，需要指出的是，由于根据预先设置业务信道与控制信道之间的定时 关系，控制信道总是比业务信道提前发送到UE，因此，UE先接收到步骤304 中的下行VOIP控制信令，后接收到步骤305中的下行VOIP数据块。</p>
+    <p>步骤307、 UE基于计算得到的下行VOIP数据块所占用的具体物理资源信 息接收下行VOIP数据块并根据TBS索引信息进行解码。</p>
+    <p>步骤308、完成解码后，UE通过控制信道承载的上行VOIP控制信令将前 一个下行VOIP数据块的解码信息，比如ACK/NACK反馈给基站。并且，当基 站收到UE反馈的解码信息是NACK时，也就是说基站通过上行VOIP控制信 令检测到下行VOIP数据块解码错误时，基站启动后续的重传选择调度过程。</p>
+    <p>本发明的半静态资源调度系统，该系统包括：业务信道占用最大物理资源 量的配置单元、TBS和物理资源对应关系的设置单元、当前业务信道占用物理 资源量的计算单元。</p>
+    <p>其中，业务信道占用最大物理资源量的配置单元，用于为承载的VOIP数 据块配置其业务信道占用的最大物理资源量。TBS和物理资源对应关系的设置 单元，用于设置TBS和物理资源的对应关系。当前业务信道占用物理资源量的 计算单元，用于从所述最大物理资源量的配置单元获取所述最大物理资源量， 从所述TBS和物理资源对应关系的设置单元获取TBS和物理资源的对应关系； 根据当前业务信道承载的VOIP数据块大小选择TBS后，根据所述TBS和物理 资源的对应关系计算当前业务信道占用的物理资源量；根据所述最大物理资源 量和所述当前业务信道占用的物理资源量获得当前业务信道占用的物理资源余 量，并将所述物理资源余量确定为调整信息封装到控制信令中，发送到基站调 度器。</p>
+    <p>32这里，TBS和物理资源对应关系的设置单元包括协议固定设置模块，和高 层信令设置模块。</p>
+    <p>如图2所示， 一种重传选择调度方法，该方法包括以下步骤：</p>
+    <p>步骤401、配置用于VOIP数据块重传调度的下行调度控制信道，并通过链</p>
+    <p>路建立过程消息将所述配置的下行调度控制信道进行发送。</p>
+    <p>这里，配置的下行调度控制信道包括：E-AGCH和HS-SCCH。其中，E-AGCH</p>
+    <p>也可以称为HSUPA下行调度控制信道；HS-SCCH也可以称为HSDPA下行调</p>
+    <p>度控制信道。</p>
+    <p>步骤402、如果半静态资源调度过程中解码信息正确，则UE停止监听并接 收所述配置的下行调度控制信道；如果半静态资源调度过程中解码信息错误， 则l正启动监听并接收所述配置的下行调度控制信道，同时，当基站调度器根 据UE优先级、负荷状态和时延要求判定需要执行重传后，启动重传选择调度。</p>
+    <p>方法实施例三为：在上行链路方向采用基于半静态资源调度技术的重传选 择调度方法进行调度，有效地减少控制信道开销，并进一步提高VOIP服务质 量的解决方案。基于方法实施例一的&#37318;用半静态资源进行调度的上行解决方案， 当半静态资源调度过程中解码信息错误时，基站调度器根据UE优先级、负荷 状态和时延要求判定需要执行重传后，启动重传选择调度。那么，本实施例的 实现流程包括以下步骤：</p>
+    <p>步骤501、网络为VOIP UE配置用于VOIP数据块重传调度的E-AGCH和 HS-SCCH,并通过链路建立过程消息将配置的E-AGCH和HS-SCCH发送给基 站和UE。</p>
+    <p>步骤502、基站对接收到的上行VOIP数据块进行解码，并判断是否正确解 码；如果正确解码即解码信息正确，则执行步骤503;否则，错误解码即解码 信息错误，则执行步骤504。</p>
+    <p>步骤503、基站通过控制信道承载的下行VOIP控制信令，将针对上行VOIP 数据块的解码信息ACK反馈给UE。 UE接收到ACK后，停止监听并接收 E-AGCH，结&#26481;当前重传选择调度流程。步骤504、基站通过控制信道承载的下行VOIP控制信令，将针对上行VOIP 数据块的解码信息NACK反馈给UE后，UE启动监听并接收E-AGCH。</p>
+    <p>步骤505、基站调度器根据UE优先级、负荷状况和时延要求判断是否执行</p>
+    <p>重传；如果基站调度器判定不执行重传，则结束当前重传选择调度流程；否则，</p>
+    <p>基站调度器判定执行重传，执行步骤506。</p>
+    <p>这里，针对UE优先级而言，比如链路建立或者重配置阶段，网络将系统 中UE的调度优先级信息配置给基站调度器，基站调度器根据该调度优先级信 息优先对高优先级的UE进行调度。针对负荷状况而言，如果某时刻，基站调 度器的负荷较重，无法对重传的上行VOIP数据块进行调度，则基站调度器就 不对重传进行调度。针对时延要求而言，如果某个UE的某种业务的时延要求 较高，不适合重传，则基站调度器不对该UE的该业务进行调度。</p>
+    <p>步骤506、基站调度器通过E-AGCH发送重传上行VOIP数据块的调度控 制信息，并且该调度控制信息中携带有所要重传上行VOIP数据块的标识。</p>
+    <p>这里，重传上行VOIP数据块的标识也可以理解为重传上行VOIP数据块 的指针信息，用于以指针的形式指示所要重传的上行VOIP数据块。</p>
+    <p>步骤507、UE根据监听到E-AGCH上的UE标识判断UE自身是否被调度。</p>
+    <p>步骤508、 UE根据预设的业务信道与控制信道之间的定时关系，在调度控 制信息指定的资源上，根据调度控制信息中携带的所要重传上行VOIP数据块 的标识，重传该标识所指示的需要被重传的上行VOIP数据块。同时，UE在 E-UCCH中指示该重传上行VOIP数据块的标识。</p>
+    <p>步骤509、基站对重传的上行VOIP数据块进行解码。</p>
+    <p>这里需要指出的是，重传上行VOIP数据块标识的承载方式为：在E-AGCH 和E-UCCH中同时承载该重传上行VOIP数据块的标识。</p>
+    <p>其中，E-AGCH和E-UCCH是配合使用的。E-AGCH本身是下行方向的， 用于携带基站分配给UE的上行资源信息，如表2中所示的PRRI、 CRRI和TRRI。 并且检测上行VOIP数据块解码错误的功能位于基站。当基站检测到上行VOIP 解码块解码错误后，需要通过E-AGCH承载重传上行VOIP数据块的标识，并以指针的形式通知UE,用以指示UE究竟该重传哪个上行VOIP数据块。</p>
+    <p>E-UCCH本身是上行方向的，UE收到上行资源信息后，将上行VOIP数据块通 过E-AGCH分配的上行资源发送给基站，同时，UE需要通过E-UCCH承载重 传上行VOIP数据块的标识并发送给基站。</p>
+    <p>方法实施例四为：在下行链路方向&#37318;用基于半静态资源调度技术的重传选 择调度方法进行调度，有效地减少控制信道开销，并进一步提高VOIP服务质 量的解决方案。基于方法实施例二的采用半静态资源进行调度的上行解决方案， 当半静态资源调度过程中解码信息错误时，基站调度器根据UE优先级、负荷 状态和时延要求判定需要执行重传后，启动重传选择调度。那么，本实施例的 实现流程包括以下步骤：</p>
+    <p>步骤601、网络为VOIP UE配置用于VOIP数据块重传调度的E-AGCH和 HS-SCCH，并通过链路建立过程消息将配置的E-AGCH和HS-SCCH发送给基 站和UE。</p>
+    <p>步骤602、 UE对接收到的下行VOIP数据块进行解码，并判断是否正确解 码；如果正确解码即解码信息正确，则执行步骤603;否则，错误解码即解码 信息错误，则执行步骤604。</p>
+    <p>步骤603、 UE通过控制信道承载的上行VOIP控制信令，将针对下行VOIP 数据块的解码信息ACK反馈给基站。UE停止对HS-SCCH的监听并接收，结 &#26481;当前重传选择调度流程。</p>
+    <p>步骤604、 UE通过控制信道承载的上行VOIP控制信令，将针对下行VOIP 数据块的解码信息NACK反馈给基站后，UE启动监听并接收HS-SCCH。</p>
+    <p>步骤605、基站调度器根据UE优先级、负荷状态和时延要求判断是否需要 执行重传；如果基站调度器判定不执行重传，则结束当前重传选择调度流程； 否则，基站调度器判定执行重传，执行步骤606。</p>
+    <p>这里，针对UE优先级而言，比如链路建立或者重配置阶段，网络将系统 中UE的调度优先级信息配置给基站调度器，基站调度器根据该调度优先级信 息优先对高优先级的UE进行调度。针对负荷状况而言，如果某时刻，基站调度器的负荷较重，无法对重传的下行VOIP数据块进行调度，则基站调度器就 不对重传进行调度。针对时延要求而言，如果某个UE的某种业务的时延要求 较高，不适合重传，则基站调度器不对该UE的该业务进行调度。</p>
+    <p>步骤606、基站调度器通过HS-SCCH发送重传下行VOIP数据块的调度控 制信息，并且该调度控制信息中携带有所要重传下行VOIP数据块的标识。</p>
+    <p>这里，重传下行VOIP数据块的标识也可以理解为重传下行VOIP数据块 的指针信息，用于以指针的形式指示所要重传的下行VOIP数据块。</p>
+    <p>步骤607、基站根据预设的业务信道与控制信道之间的定时关系，在业务 信道上发送重传的下行VOIP数据块。</p>
+    <p>步骤608、 UE根据监听到HS-SCCH上的UE标识判断UE自身是否被调 度，并根据重传下行VOIP数据块的标识判断哪个下行VOIP数据块需要被重 传。</p>
+    <p>步骤609、 UE根据预设的业务信道与控制信道之间的定时关系，在调度控 制信息指定的资源上接收重传的下行VOIP数据块并进行解码。</p>
+    <p>这里需要指出的是，重传下行VOIP数据块标识的承载方式为：仅在所述 HS-SCCH中承载所述重传下行VOIP数据块的标识。</p>
+    <p>综上所述，基于本发明的半静态资源调度方法和重传选择调度方法，针对 本发明涉及到控制信道承载上行/下行VOIP控制信令的方式而言，由于承载 VOIP业务需要解决的重要问题就是控制信道的开销问题，同时为了保证VOIP 对QoS的高要求，需要提高系统的资源利用率。因此本发明采用上述事先预留 资源并在业务进行过程中调整资源的半静态资源调度方法，涉及到的业务信道 采用多UE分时复用相同物理资源的方式，涉及到的控制信道同样&#37318;用多UE 分时复用的方式。</p>
+    <p>以下针对控制信道承载的信息进行分析。</p>
+    <p>承载TBS信息时，为了解决控制信道的开销问题，采用半静态资源调度方 式，即根据TBS信息动态调整使用的物理资源。VOIP业务数据块的TBS种类 较少，比如可以设置为4种，加上TBS-0表示语音静默期，这样一共需要5种TBS。承载ACK/NACK反馈信息时，为进一步确保VOIP业务的QoS机制， 采用重传选择调度方法，需要在控制信道中承载1比特的的反馈信息。承载 TPC/SS时，VOIP业务进行中必须要考虑的问题就是上行/下行同步问题，通过 专用信道承载TPC/SS可以很好地解决上行/下行同步和功率控制问题，联合 TPC/SS编码共有6种形式。</p>
+    <p>以下针对控制信道承载信息的需求进行分析。</p>
+    <p>本发明涉及到的控制信道非常类似于目前HSUPA的E-fflCH, E-HICH作 为非调度信道占用一个SF为16码道，经二次扩频后， 一共有80个序列码， 80个码被分成了20组，每组4个序列码。那么，在链路建立阶段，网络给每 个非调度UE分配专用的l个码组中的4个码序列，该码组中最小的码用来承 载ACK和NACK反馈信息，其他3个码序列选择一个发送，用以承载联合 TPC/SS命令。并且3个码序列有三种选择方式，每个码序列可以发送正码和反 码两种形式。由于TPC/SS联合编码共有6中不同的形式，因此使用3个码序 列中仅发送l个码序列的方式，即可满足需求。</p>
+    <p>目前，E-HICH中一个码组已经可以承载控制信道上行/下行VOIP控制信 令中的TPC/SS和ACK/NACK信息。从后向兼容性角度出发，为了避免VOIP 业务引入特有的控制信道，这里采用给VOIPUE分配两个码组的方法。其中， 第 一个码组承载TPC/SS和ACK/NACK信息，发送方式完全同目前E-HICH方 式；另外一个码组承载TBS信息，采用4个码码序列选择发送一个码序列的方 式完全可以承载5种TBS信息。并且2个码组从时间上可以被4个UE同时复 用。综上所述，由于现有E-HICH的信道结构仅为下行信道，因此，本发明在 上行链路方向进一步引入现有E-HICH类型的控制信道，用于承载上行VOIP 控制信令。</p>
+    <p>以下针对重传选择调度过程中，重传指针信息的承载方式进行具体阐述。 需要明确的是，该重传指针信息即重传上行/下行VOIP数据块的指针信息，也 就是重传的上行/下行VOIP数据块的标识。</p>
+    <p>重传选择调度过程中，需要通过控制信道比如HS-SCCH、 E-AGCH以及</p>
+    <p>37E-UCCH承载重传的上行/下行VOIP数据块的标识。对于重传下行VOIP数据 块标识的承载方式，在HS-SCCH中承载该重传下行VOIP数据块标识即可。对 于重传上行VOIP数据块标识的承载方式，需要在E-AGCH和E-UCCH中同时 承载该重传下行VOIP数据块标识。并且，重传的上行/下行VOIP数据块的标 识可以表示控制信道发送时刻与所重传的上行/下行VOIP数据块所在TTI的差 值。</p>
+    <p>以下对重传上行/下行VOIP数据块的标识，其指示方式进行举例。</p>
+    <p>基于后向兼容方面的考虑，在不改变目前调度控制信道格式的情况下，对 于重传下行VOIP数据块标识的承载方式而言，通过目前HS-SCCH和E-UCCH 中TBS的信息位承载该重传下行VOIP数据块的标识。由于VOIP业务的TBS 种类较少，目前的HS-SCCH和E-UCCH中TBS占用6个比特。比如，使用2 个比特就可以表示VOIP的TBS,那么HS-SCCH和E-UCCH中剩余TBS的信 息位可以用来承载该重传下行VOIP数据块的标识。对于重传上行VOIP数据 块标识的承载方式而言，由于VOIP数据块较小，因此可以使用目前E-AGCH 中的RDI字段用来承载该重传上行VOIP数据块的标识。</p>
+    <p>一种重传选择调度系统，该系统包括：配置单元、发送单元、判断单元。</p>
+    <p>其中，配置单元，用于配置下行调度控制信道并发送到所述发送单元。发 送单元，用于通过链路建立过程消息将所述配置的下行调度控制信道进行发送。 判断单元，用于接收所述配置的下行调度控制信道后，根据对半静态资源调度 过程中解码信息的判定执行相应的重传选择调度处理。</p>
+    <p>这里，判断单元，进一步用于判定解码信息正确后，UE停止监听并接收所 述配置的下行调度控制信道。</p>
+    <p>这里，判断单元，进一步用于判定解码信息错误后，l正启动监听并接收所 述配置的下行调度控制信道；同时，当基站调度器根据UE优先级、负荷状态 和时延要求判定需要执行重传后，启动重传选择调度。</p>
+    <p>以上所述仅为本发明的较佳实施例而已，并非用于限定本发明的保护范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101646202B?cl=zh">CN101646202B</a></td><td class="patent-data-table-td patent-date-value">2009年8月25日</td><td class="patent-data-table-td patent-date-value">2011年11月16日</td><td class="patent-data-table-td ">普天信息技术研究院有限公司</td><td class="patent-data-table-td ">一种半静态调度下行传输的实现方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102083208B?cl=zh">CN102083208B</a></td><td class="patent-data-table-td patent-date-value">2009年11月30日</td><td class="patent-data-table-td patent-date-value">2013年9月25日</td><td class="patent-data-table-td ">普天信息技术研究院有限公司</td><td class="patent-data-table-td ">资源分配方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102158973A?cl=zh">CN102158973A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年2月11日</td><td class="patent-data-table-td patent-date-value">2011年8月17日</td><td class="patent-data-table-td ">电信科学技术研究院</td><td class="patent-data-table-td ">半持续调度、传输及处理方法、系统和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102158973B?cl=zh">CN102158973B</a></td><td class="patent-data-table-td patent-date-value">2010年2月11日</td><td class="patent-data-table-td patent-date-value">2013年11月20日</td><td class="patent-data-table-td ">电信科学技术研究院</td><td class="patent-data-table-td ">半持续调度、传输及处理方法、系统和设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102202343A?cl=zh">CN102202343A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年3月23日</td><td class="patent-data-table-td patent-date-value">2011年9月28日</td><td class="patent-data-table-td ">电信科学技术研究院</td><td class="patent-data-table-td ">资源分配方法和用户侧上报bsr的方法及网络侧设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102202343B?cl=zh">CN102202343B</a></td><td class="patent-data-table-td patent-date-value">2010年3月23日</td><td class="patent-data-table-td patent-date-value">2013年11月27日</td><td class="patent-data-table-td ">电信科学技术研究院</td><td class="patent-data-table-td ">资源分配方法和用户侧上报bsr的方法及网络侧设备</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102883366A?cl=zh">CN102883366A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年7月12日</td><td class="patent-data-table-td patent-date-value">2013年1月16日</td><td class="patent-data-table-td ">普天信息技术研究院有限公司</td><td class="patent-data-table-td ">一种ue的控制信息发送方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102883366B?cl=zh">CN102883366B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年7月12日</td><td class="patent-data-table-td patent-date-value">2015年7月1日</td><td class="patent-data-table-td ">普天信息技术研究院有限公司</td><td class="patent-data-table-td ">一种ue的控制信息发送方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102972079A?cl=zh">CN102972079A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年6月22日</td><td class="patent-data-table-td patent-date-value">2013年3月13日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">基于互联网协议的语音业务数据包传输的处理方法和基站</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012155589A1?cl=zh">WO2012155589A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年2月24日</td><td class="patent-data-table-td patent-date-value">2012年11月22日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种上行半静态调度资源分配方法和装置</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=rSNsBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04M0007000000">H04M7/00</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=rSNsBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0001160000">H04L1/16</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=rSNsBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0001180000">H04L1/18</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2009年8月5日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2009年9月30日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年5月11日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of the right of patent application or the patent right</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年5月11日</td><td class="patent-data-table-td ">COR</td><td class="patent-data-table-td ">Bibliographic change or correction in the description</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">CORRECT: ADDRESS; FROM: 100083 NO. 29, XUEYUAN ROAD, HAIDIAN DISTRICT, BEIJING TO: 100191 NO. 40, XUEYUAN ROAD, HAIDIAN DISTRICT, BEIJING</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年5月11日</td><td class="patent-data-table-td ">ASS</td><td class="patent-data-table-td ">Succession or assignment of patent right</td><td class="patent-data-table-td "><div class="nested-key-value"><span class="nested-key">Owner name: </span><span class="nested-value">INST OF TELECOMMUNICATION SCIENCE AND TECHNOLGOY</span></div><div class="nested-key-value"><span class="nested-key">Free format text: </span><span class="nested-value">FORMER OWNER: DATANG MOBILE COMMUNICATION EQUIPMENT CO., LTD.</span></div><div class="nested-key-value"><span class="nested-key">Effective date: </span><span class="nested-value">20110402</span></div></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年4月4日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/809b7fdb06e319512edc/CN101499887A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%8D%8A%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%B0%83%E5%BA%A6%E6%96%B9%E6%B3%95%E5%8F%8A%E7%B3%BB%E7%BB%9F_%E9%87%8D.pdf?id=rSNsBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1swTCQLdyngWNrJhFsipyxla6oHw"},"sample_url":"https://www.google.com/patents/reader?id=rSNsBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

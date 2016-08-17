@@ -1,0 +1,638 @@
+<!DOCTYPE html><html><head><title>专利 CN103384980A - 检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应 ... -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5bd24152bf5a1e342ae546da267fae0b/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5bd24152bf5a1e342ae546da267fae0b__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序"><meta name="DC.contributor" content="伊藤隆" scheme="inventor"><meta name="DC.contributor" content="服部充洋" scheme="inventor"><meta name="DC.contributor" content="松田规" scheme="inventor"><meta name="DC.contributor" content="太田和夫" scheme="inventor"><meta name="DC.contributor" content="坂井&#31056;介" scheme="inventor"><meta name="DC.contributor" content="三菱电机株式会社" scheme="assignee"><meta name="DC.contributor" content="国立大学法人电气通信大学" scheme="assignee"><meta name="DC.date" content="2012-2-20" scheme="dateSubmitted"><meta name="DC.description" content="实现具有对频度分析的抗性的隐匿检索。（1）变换规则管理装置（400）生成将检索关键字和变换关键字群对应起来的变换规则表格。（2）数据登记装置（500）基于变换规则表格生成将加密数据和加密关键字对应起来的登记数据，将登记数据登记到服务器装置（300）。（3）信息处理装置（200）从变换规则表格获取与指定的检索关键字对应的变换关键字群，生成加密关键字群，指定加密关键字群来请求数据检索。（4）服务器装置（300）将加密关键字群所包含的加密关键字作为检索关键码来检索与检索关键码对应的加密数据，响应所检索到的加密数据。（5）信息处理装置（200）对所检索到的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出。"><meta name="DC.date" content="2013-11-6"><meta name="DC.relation" content="CN:101276368:A" scheme="references"><meta name="DC.relation" content="CN:1858747:A" scheme="references"><meta name="DC.relation" content="JP:2001507837" scheme="references"><meta name="DC.relation" content="JP:2005072917" scheme="references"><meta name="citation_patent_publication_number" content="CN:103384980:A"><meta name="citation_patent_application_number" content="CN:201280009910"><link rel="canonical" href="https://www.google.com/patents/CN103384980A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103384980A?cl=zh"/><meta name="title" content="专利 CN103384980A - 检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序"/><meta name="description" content="实现具有对频度分析的抗性的隐匿检索。（1）变换规则管理装置（400）生成将检索关键字和变换关键字群对应起来的变换规则表格。（2）数据登记装置（500）基于变换规则表格生成将加密数据和加密关键字对应起来的登记数据，将登记数据登记到服务器装置（300）。（3）信息处理装置（200）从变换规则表格获取与指定的检索关键字对应的变换关键字群，生成加密关键字群，指定加密关键字群来请求数据检索。（4）服务器装置（300）将加密关键字群所包含的加密关键字作为检索关键码来检索与检索关键码对应的加密数据，响应所检索到的加密数据。（5）信息处理装置（200）对所检索到的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出。"/><meta property="og:title" content="专利 CN103384980A - 检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103384980A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103384980A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103384980A&amp;usg=AFQjCNGqsKgbBL6A1S2U5Wzf13Hq8rEuxg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/3d8cdbdf6154b1df91bd/CN103384980A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/3d8cdbdf6154b1df91bd/CN103384980A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103384980A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103384980A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN103384980A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN103384980B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103384980A?cl=zh" style="display:none"><span itemprop="description">实现具有对频度分析的抗性的隐匿检索。（1）变换规则管理装置（400）生成将检索关键字和变换关键字群对应起来的变换规则表格。（2）数据登记装置（500）基于变换规则表格生成将加密数据和加密关键字对应起来的登记数据 ...</span><span itemprop="url">https://www.google.com/patents/CN103384980A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103384980A - 检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103384980A - 检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序" title="专利 CN103384980A - 检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103384980 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201280009910</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/JP2012/053948</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年11月6日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年2月20日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年2月22日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103384980B?hl=zh-CN&amp;cl=zh">CN103384980B</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2680251A1?hl=zh-CN&amp;cl=zh">EP2680251A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2680251A4?hl=zh-CN&amp;cl=zh">EP2680251A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2680251B1?hl=zh-CN&amp;cl=zh">EP2680251B1</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20130332729?hl=zh-CN&amp;cl=zh">US20130332729</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2012115031A1?hl=zh-CN&amp;cl=zh">WO2012115031A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201280009910.5, </span><span class="patent-bibdata-value">CN 103384980 A, </span><span class="patent-bibdata-value">CN 103384980A, </span><span class="patent-bibdata-value">CN 201280009910, </span><span class="patent-bibdata-value">CN-A-103384980, </span><span class="patent-bibdata-value">CN103384980 A, </span><span class="patent-bibdata-value">CN103384980A, </span><span class="patent-bibdata-value">CN201280009910, </span><span class="patent-bibdata-value">CN201280009910.5, </span><span class="patent-bibdata-value">PCT/2012/53948, </span><span class="patent-bibdata-value">PCT/JP/12/053948, </span><span class="patent-bibdata-value">PCT/JP/12/53948, </span><span class="patent-bibdata-value">PCT/JP/2012/053948, </span><span class="patent-bibdata-value">PCT/JP/2012/53948, </span><span class="patent-bibdata-value">PCT/JP12/053948, </span><span class="patent-bibdata-value">PCT/JP12/53948, </span><span class="patent-bibdata-value">PCT/JP12053948, </span><span class="patent-bibdata-value">PCT/JP1253948, </span><span class="patent-bibdata-value">PCT/JP2012/053948, </span><span class="patent-bibdata-value">PCT/JP2012/53948, </span><span class="patent-bibdata-value">PCT/JP2012053948, </span><span class="patent-bibdata-value">PCT/JP201253948</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BC%8A%E8%97%A4%E9%9A%86%22">伊藤隆</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9C%8D%E9%83%A8%E5%85%85%E6%B4%8B%22">服部充洋</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%BE%E7%94%B0%E8%A7%84%22">松田规</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A4%AA%E7%94%B0%E5%92%8C%E5%A4%AB%22">太田和夫</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%9D%82%E4%BA%95%E7%A5%90%E4%BB%8B%22">坂井&#31056;介</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%89%E8%8F%B1%E7%94%B5%E6%9C%BA%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%22">三菱电机株式会社</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%9B%BD%E7%AB%8B%E5%A4%A7%E5%AD%A6%E6%B3%95%E4%BA%BA%E7%94%B5%E6%B0%94%E9%80%9A%E4%BF%A1%E5%A4%A7%E5%AD%A6%22">国立大学法人电气通信大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103384980A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103384980A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103384980A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (7),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201280009910&amp;usg=AFQjCNEKKO8a-N9kHLiHl1u20pw7cuK1Ow"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103384980A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEkRNhlTwDNS5qcmD8cWXk-bxJuzw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT131079617" lang="ZH" load-source="patent-office">检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序</invention-title>
+      </span><br><span class="patent-number">CN 103384980 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA125208030" lang="ZH" load-source="patent-office">
+    <div class="abstract">实现具有对频度分析的抗性的隐匿检索。（1）变换规则管理装置（400）生成将检索关键字和变换关键字群对应起来的变换规则表格。（2）数据登记装置（500）基于变换规则表格生成将加密数据和加密关键字对应起来的登记数据，将登记数据登记到服务器装置（300）。（3）信息处理装置（200）从变换规则表格获取与指定的检索关键字对应的变换关键字群，生成加密关键字群，指定加密关键字群来请求数据检索。（4）服务器装置（300）将加密关键字群所包含的加密关键字作为检索关键码来检索与检索关键码对应的加密数据，响应所检索到的加密数据。（5）信息处理装置（200）对所检索到的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(20)</span></span></div><div class="patent-text"><div mxw-id="PCLM56684313" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种检索系统，具备信息处理装置和检索装置，其特征在于，所述信息处理装置具备:  对应关键字存储部，存储使检索关键字和一个以上的对应关键字对应的对应关键字群，作为对应关键字数据；  检索关键字输入部，输入检索关键字；  对应关键字群获取部，从所述对应关键字存储部所存储的对应关键字数据获取与通过所述检索关键字输入部输入的所述检索关键字对应的对应关键字群；  加密关键字群生成部，对由所述对应关键字群获取部获取到的对应关键字群所包含的对应关键字进行加密来生成加密关键字群；  检索请求数据发送部，将包括由所述加密关键字群生成部生成的加密关键字群的检索请求数据发送到所述检索装置；  检索响应数据接收部，接收从所述检索装置发送的检索响应数据；以及检索结果输出部，对由所述检索响应数据接收部接收到的检索响应数据所包含的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出，  所述检索装置具备:  加密数据存储部，存储对检索数据进行加密而得到的加密数据，针对每个检索数据将对该检索数据进行加密而得到的加密数据和对对应关键字进行加密而得到的加密关键字对应起来地存储；  检索请求数据接收部，接收从所述信息处理装置发送的检索请求数据；  加密数据检索部，基于由所 述检索请求数据接收部接收到的检索请求数据，将所述检索请求数据内的加密关键字群所包含的加密关键字作为检索关键码，从所述加密数据存储部获取与检索关键码对应的加密数据；以及  检索响应数据发送部,发送包括由所述加密数据检索部获取到的加密数据的检索响应数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利请求I所述的检索系统，其特征在于，  所述检索系统还具备对应关键字管理装置，  所述对应关键字管理装置具备:  出现频度存储部，存储出现频度数据，所述出现频度数据定义检索关键字并且将与特定的检索关键字对应起来的检索数据的比例定义为特定的检索关键字的出现频度；  对应关键字数计算部，根据所述出现频度存储部所存储的出现频度数据中定义的所述检索关键字的出现频度，计算与所述检索关键字对应起来的对应关键字的个数，作为对应关键字数；  对应关键字群生成部，生成与由所述对应关键字数计算部计算出的对应关键字数相同的个数的对应关键字，作为对应关键字群；以及  对应关键字数据生成部，将所述出现频度数据中定义的检索关键字和由所述对应关键字群生成部生成的对应关键字群对应起来地生成所述对应关键字数据，  所述信息处理装置的对应关键字存储部存储由所述对应关键字管理装置生成的对应关键字数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的检索系统，其特征在于，所述对应关键字管理装置的对应关键字数计算部基于所述出现频度数据中定义的检索关键字的出现频度，针对所述检索关键字的每个对应关键字来计算从所述检索关键字的对应关键字群选择该对应关键字的比例，作为对应关键字选择率，  所述对应关键字管理装置的对应关键字数据生成部生成将所述检索关键字、所述对应关键字群以及所述对应关键字选择率对应起来的数据，作为对应关键字选择率数据，  所述检索系统还具备加密数据生成装置，  所述加密数据生成装置具备:  检索数据存储部，将检索数据和检索关键字对应起来地存储；  对应关键字选择率存储部，存储由所述对应关键字管理装置生成的对应关键字选择率数据；  对应关键字选择部，从所述对应关键字选择率数据获取与所述检索数据存储部所存储的检索关键字对应的对应关键字群，根据所述对应关键字选择率数据所包含的对应关键字选择率，选择所获取到的对应关键字群所包含的至少某一个对应关键字；以及  加密数据生成部,对所述检索数据存储部所存储的检索数据进行加密来生成加密数据，对由所述对应关键字选择部选择的对应关键字进行加密来生成加密关键字，  所述检索装置的所述加密数据存储部将由所述加密数据生成装置生成的加密数据和加密关键字对应起来地存储。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的检索系统，其特征在于，  所述对应关键字管理装置的对应关 键字数计算部计算各检索关键字的对应关键字数，以使得按各检索关键字的对应关键字数来分割了的分割后的各检索关键字的出现频度相坐寸，  所述对应关键字数计算部针对每个检索关键字来计算所述对应关键字数的倒数，作为所述对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的检索系统，其特征在于，  所述对应关键字数计算部计算各检索关键字的出现频度的最大公约数，针对每个检索关键字来计算将检索关键字的出现频度除以所述最大公约数而得到的值，作为检索关键字的对应关键字数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求3所述的检索系统，其特征在于，  所述对应关键字管理装置的对应关键字数计算部计算以使规定的匿名数以上的检索关键字具有相同的出现频度的方式来分割各检索关键字的出现频度的分割数，作为各检索关键字的对应关键字数，计算分割各检索关键字的出现频度的分割比例，作为各检索关键字的对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求3所述的检索系统，其特征在于，  所述对应关键字数计算部从各检索关键字的出现频度选择第规定的匿名数大的出现频度作为运算频度，从所述运算频度以上的出现频度减去一个以上的运算频度，从进行相减后的各检索关键字的出现频度选择第所述匿名数大的出现频度作为新的运算频度，从新的运算频度以上的出现频度减去一个以上的新的运算频度，针对每个检索关键字来计算从出现频度减去的各运算频度的数量，作为对应关键字数，并且计算各运算频度相对原来的出现频度的比例，作为对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求3所述的检索系统，其特征在于，  所述对应关键字数计算部针对每个检索关键字，使用规定的基数的幂值来将检索关键字的出现频度分割为多个出现频度，针对每个检索关键字来计算出现频度的分割数作为对应关键字数，并且计算分割后的出现频度相对分割前的出现频度的比例作为对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的检索系统，其特征在于，  所述对应关键字数计算部使用所述基数的幂值来分割各检索关键字的分割后的出现频度中的具有该出现频度的检索关键字的数量小于规定的匿名数的出现频度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求3所述的检索系统，其特征在于，  所述对应关键字数计算部基于各检索关键字的出现频度，计算通过规定的组合来将检索关键字和特定数量的对应关键字对应起来的概率，作为针对每个检索关键字设置了特定数量的对应关键字的情况下的对应概率值，基于所计算出的对应概率值来计算检索关键字和特定数量的对应关键字的组合的熵作为熵值，对所计算出的熵值乘以所述对应概率值来计算熵指标值，将所计算出的熵指标值与规定的熵阈值进行比较，在所述熵指标值大于所述熵阈值的情况下，计算所述对应关键字的特定数量，作为对应关键字数，  所述对应关键字数计算部计算所述对应关键字数的倒数，作为所述对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim"> <div num="11" class="claim">
+      <div class="claim-text">11.一种检索系统的检索方法，所述检索系统具备信息处理装置和检索装置，其特征在于，   所述信息处理装置具备对应关键字存储部，所述对应关键字存储部存储使检索关键字和一个以上的对应关键字对应的对应关键字群，作为对应关键字数据，  所述信息处理装置执行:  检索关键字输入处理，输入检索关键字；  对应关键字群获取处理，从所述对应关键字存储部所存储的对应关键字数据获取与通过所述检索关键字输入部输入的所述检索关键字对应的对应关键字群；  加密关键字群生成处理，对通过所述对应关键字群获取处理获取到的对应关键字群所包含的对应关键字进行加密来生成加密关键字群；以及  检索请求数据发送处理，将包括通过所述加密关键字群生成处理生成的加密关键字群的检索请求数据发送到所述检索装置，  所述检索装置具备加密数据存储部，所述加密数据存储部存储对检索数据进行加密而得到的加密数据，针对每个检索数据来将对该检索数据进行加密而得到的加密数据和对对应关键字进行加密而得到的加密关键字对应起来地存储，  所述检索装置执行:  检索请求数据接收处理，接收从所述信息处理装置发送的检索请求数据；  加密数据检索处理,基于通过所述检索请求数据接收处理所接收到的检索请求数据，将所述检索请求数据内的加密关键字群所包含的加密关键字作为检索关键码，从所述加密数据存储部获取与检索关键码对应的加密数据；以及  检索响应数据发送处理，发送包括通过所述加密数据检索处理所获取到的加密数据的检索响应数据，所述信息处理装置还执行:  检索响应数据接收处理，接收从所述检索装置发送的检索响应数据；以及检索结果输出处理，对通过所述检索响应数据接收处理所接收到的检索响应数据所包含的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出。</div>
+    </div>
+    </div> <div class="claim"> <div num="12" class="claim">
+      <div class="claim-text">12.一种信息处理装置，其特征在于，具备:  对应关键字存储部，存储使检索关键字和一个以上的对应关键字对应的对应关键字群，作为对应关键字数据；  检索关键字输入部，输入检索关键字；  对应关键字群获取部，从所述对应关键字存储部所存储的对应关键字数据获取与通过所述检索关键字输入部输入的所述检索关键字对应的对应关键字群；  加密关键字群生成部，基于通过所述对应关键字群获取部所获取到的对应关键字群，对所述对应关键字群所包含的对应关键字进行加密来生成加密关键字群；  检索请求数据发送部，将包括由所述加密关键字群生成部生成的加密关键字群的检索请求数据发送到规定的检索装置；  检索响应数据接收部，接收从所述检索装置发送的、并且包括与所述加密关键字对应的加密数据的检索响应数据；以及  检索结果输出部，对通过所述检索响应数据接收部所接收到的检索响应数据所包含的加密数据进行解密，将进行解密而得 到的检索数据作为检索结果输出。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.一种信息处理装置的检索程序，所述信息处理装置具备对应关键字存储部，该对应关键字存储部存储使检索关键字和一个以上的对应关键字对应的对应关键字群，作为对应关键字数据，其特征在于，使所述信息处理装置执行:  检索关键字输入处理，输入检索关键字；  对应关键字群获取处理，从所述对应关键字存储部所存储的对应关键字数据获取与通过所述检索关键字输入部输入的所述检索关键字对应的对应关键字群；  加密关键字群生成处理，基于通过所述对应关键字群获取处理所获取到的对应关键字群，对所述对应关键字群所包含的对应关键字进行加密来生成加密关键字群；  检索请求数据发送处理，将包括通过所述加密关键字群生成处理生成的加密关键字群的检索请求数据发送到规定的检索装置；  检索响应数据接收处理，接收从所述检索装置发送的、并且包括与加密关键字群对应的加密数据的检索请求数据；以及  检索结果输出处理，对通过所述检索响应数据接收处理所接收到的检索响应数据所包含的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出。</div>
+    </div>
+    </div> <div class="claim"> <div num="14" class="claim">
+      <div class="claim-text">14.一种对应关键字管理装置，其特征在于，具备:  出现频度存储部，存储出现频度数据，所述出现频度数据定义检索关键字并且将与特定的检索关键字对应起来的检索数据的比例定义为特定的检索关键字的出现频度；  对应关键字数计算部，根据所述出现频度存储部所存储的出现频度数据中定义的所述检索关键字的出现频度，计算与所述检索关键字对应起来的对应关键字的个数作为对应关键字数，针对所述检索关键字的每个对应关键字来计算选择该对应关键字的比例作为对应关键字选择率；对应关键字群生成部，生成与通过所述对应关键字数计算部所计算出的对应关键字数相同的个数的对应关键字，作为对应关键字群；以及  对应关键字数据生成部，生成将所述出现频度数据中定义的检索关键字、由所述对应关键字群生成部生成的对应关键字群、以及由所述对应关键字数计算部计算出的对应关键字选择率对应起来的数据，作为对应关键字数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的对应关键字管理装置，其特征在于，  所述对应关键字数计算部计算以使规定的匿名数以上的检索关键字具有相同的出现频度的方式来分割各检索关键字的出现频度的分割数，作为各检索关键字的对应关键字数，计算分割各检索关键字的出现频度的分割比例，作为各检索关键字的对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求14所述的对应关键字管理装置，其特征在于，  所述对应关键字数计算部从各检索关键字的出现频度选择第规定的匿名数大的出现频度作为运算频度，从所述运算频度以上的出现频度减去一个以上的运算频度，从进行相减后的各检索关键字的出现频度选择第所述匿名数大的出现频度作为新的运算频度，从新的运算频度以上的出现频度减去一个以上的新的运算频度，针对每个检索关键字来计算从出现频度减去的各运算频度的数量，作为对应关键字数，并且计算各运算频度相对原来的出现频度的比例，作为对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求14所述的对应关键字管理装置，其特征在于，  所述对应关键字数计算部针对每个检索关键字来使用规定的基数的幂值，将检索关键字的出现频度分割为多个出现频度，针对每个检索关键字来计算出现频度的分割数作为对应关键字数，并且计算分割后的出现频度相对分割前的出现频度的比例作为对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的对应关键字管理装置，其特征在于，  所述对应关键字数计算部使用所述基数的幂值来分割各检索关键字的分割后的出现频度中的具有该出现频度的检索关键字的数量小于规定的匿名数的出现频度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求14所述的对应关键字管理装置，其特征在于，  所述对应关键字数计算部基于各检索关键字的出现频度，计算通过规定的组合来将检索关键字和特定数量的对应关键字对应起来的概率，作为针对每个检索关键字设置了特定数量的对应关键字的情况下的对应概率值，基于所计算出的对应概率值来计算检索关键字和特定数量的对应关键字的组合的熵作为熵值，对所计算出的熵值乘以所述对应概率值来计算熵指标值，将所计算出的熵指标值与规定的熵阈值进行比较，在所述熵指标值大于所述熵阈值的情况下，计算所述对应关键字的特定数量作为对应关键字数，  所述对应关键字数计算部计算所述对应关键字数的倒数，作为所述对应关键字选择率。</div>
+    </div>
+    </div> <div class="claim"> <div num="20" class="claim">
+      <div class="claim-text">20.&#8212;种对应关键字管理装置的对应关键字管理程序，所述对应关键字管理装置具备存储出现频度数据的出现频度存储部，所述出现频度数据定义检索关键字并且将与特定的检索关键字对应起来的检索数据的比例定义为特定的检索关键字的出现频度，其特征在于，使所述对应关键字管理装置执行:  对应关键字数计算处理，根据所述出现频度存储部所存储的出现频度数据中定义的所述检索关键字的出现频度，计算与所述检索关键字对应起来的对应关键字的个数作为对应关键字数，针对所述检索关键字的每个对应关键字来计算选择该对应关键字的比例作为对应关键字选择率；  对应关键字群生成处理，生成与通过所述对应关键字数计算处理所计算出的对应关键字数相同的个数的对应关键字，作为对应关键字群；以及  对应关键字数据生成处理，生成将所述出现频度数据中定义的检索关键字、通过所述对应关键字群生成处理所生成的对应关键字群、以及由所述对应关键字数计算部计算出的对应关键字选择率对应起来的数据， 作为对应关键字数据。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES63666622" lang="ZH" load-source="patent-office" class="description">
+    <p>检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及例如进行隐匿检索的检索系统、检索系统的检索方法、信息处理装置、检索程序、对应关键字管理装置以及对应关键字管理程序。</p>
+    <p>背景技术</p>
+    <p>[0002]	隐匿检索系统使检索者能够指定关键字来检索保存于服务器的数据，并且此时针对服务器而使数据和关键字隐匿。</p>
+    <p>[0003]	隐匿检索系统被期待应用到机密数据管理的外包、邮件服务器中的加密邮件的过滤。</p>
+    <p>[0004]	因此，作为隐匿检索系统的技术，提出了用于达成各种安全性必要条件的技术、用于削减服务器、检索者的存储、通信开销和运算开销的技术。</p>
+    <p>[0005]	特别是，在以确定的密码为基础的隐匿检索技术中，由于相同的关键字对应于相同的加密关键字，所以服务器仅进行基于指定的加密关键字的一致检索即可。因此，能够实现使用了现有的检索技术的高速化。</p>
+    <p>[0006]	但是，在使用确定的密码对关键字进行了加密的情况下，关键字的频度信息原样地作为加密关键字的频度信息出现。因此，能够通过调查加密关键字的频度来推测对应的关键字。即，能够进行被称为“频度分析”的攻击。</p>
+    <p>[0007]	作为对该频度分析的对策，有插入用于对频度进行干扰的虚拟数据的方法。</p>
+    <p>[0008]	在专利文献I中，公开了利用标点符号等在通常检索中不被使用的字符串来生成虚拟数据的方式。通过该方式，无需增加数据库的大小而能够使得具有对频度分析的抗性。</p>
+    <p>[0009]	专利文献1:日本特开2005-72917号公报</p>
+    <p>发明内容</p>
+    <p>[0010]	发明要解决的技术问题</p>
+    <p>[0011]	在利用虚拟数据的插入的频度干扰方式中，在原来的关键字的频度中有大的偏差的情况下，需要准备与频度的差相当的大量的虚拟数据。</p>
+    <p>[0012]	在专利文献I中，利用在检索中不被使用的字符串来防止数据库大小增加，但根据数据库的种类，也有可能“在检索中不被使用的字符串”少或者完全不存在。在该情况下，无法高效地进行频度干扰。</p>
+    <p>[0013]	本发明的目的在于例如不论关键字的频度分布是什么样的分布，都可以进行高效的频度干扰，从而能够实现具有对频度分析的抗性的高速的隐匿检索。</p>
+    <p>[0014]	解决问题的技术手段</p>
+    <p>[0015]	本发明的检索系统具备信息处理装置和检索装置。</p>
+    <p>[0016]	所述信息处理装置具备:</p>
+    <p>[0017]	对应关键字存储部，将使检索关键字和一个以上的对应关键字对应的对应关键字群作为对应关键字数据而存储；</p>
+    <p>[0018]	检索关键字输入部，输入检索关键字；</p>
+    <p>[0019]	对应关键字群获取部，从所述对应关键字存储部所存储的对应关键字数据获取与通过所述检索关键字输入部输入的所述检索关键字对应的对应关键字群；</p>
+    <p>[0020]	加密关键字群生成部，对由所述对应关键字群获取部获取到的对应关键字群所包含的对应关键字进行加密来生成加密关键字群；</p>
+    <p>[0021]	检索请求数据发送部，将包括由所述加密关键字群生成部生成的加密关键字群的检索请求数据发送到所述检索装置；</p>
+    <p>[0022]	检索响应数据接收部，接收从所述检索装置发送的检索响应数据；以及</p>
+    <p>[0023]	检索结果输出部，对由所述检索响应数据接收部接收到的检索响应数据所包含的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出，</p>
+    <p>[0024]	所述检索装置具备:</p>
+    <p>[0025]	加密数据存储部，存储对检索数据进行加密而得到的加密数据，并且针对每个检索数据将对该检索数据进行加密而得到的加密数据和对对应关键字进行加密而得到的加密关键字对应起来存储；</p>
+    <p>[0026]	检索请求数据接收部，接收从所述信息处理装置发送的检索请求数据；</p>
+    <p>[0027]	加密数据检索部，基于由所述检索请求数据接收部接收到的检索请求数据，将所述检索请求数据内的加密关键字群所包含的加密关键字作为检索关键码，从所述加密数据存储部获取与检索关键码对应的加密数据；以及</p>
+    <p>[0028]	检索响应数据发送部，发送包括由所述加密数据检索部获取到的加密数据的检索响应数据。</p>
+    <p>[0029]	发明的效果</p>
+    <p>[0030]	根据本发明，例如，通过将检索数据和多个加密关键字对应起来，不论关键字的频度分布是什么样的分布，都能够进行高效的频度干扰，实现具有对频度分析的抗性的高速的隐匿检索。</p>
+    <p>附图说明</p>
+    <p>[0031]	图1是实施方式I中的隐匿检索系统100的结构图。</p>
+    <p>[0032]	图2是实施方式I中的信息处理装置200的功能结构图。</p>
+    <p>[0033]	图3是实施方式I中的服务器装置300的功能结构图。</p>
+    <p>[0034]	图4是实施方式I中的变换规则管理装置400的功能结构图。</p>
+    <p>[0035]	图5是实施方式I中的数据登记装置500的功能结构图。</p>
+    <p>[0036]	图6是示出实施方式I中的变换规则管理装置400的变换规则管理方法的流程图。</p>
+    <p>[0037]	图7是示出实施方式I中的检索关键字表格491的图。</p>
+    <p>[0038]	图8是示出实施方式I中的变换规则计算处理(SllO)的一个例子的流程图。</p>
+    <p>[0039]	图9是示出实施方式I中的变换规则表格291的图。</p>
+    <p>[0040]	图10是示出实施方式I中的数据登记装置500的数据登记方法的流程图。</p>
+    <p>[0041]	图11是示出实施方式I中的登记数据表格391的图。[0042]	图12是示出实施方式I中的加密关键字的登记频度的图。</p>
+    <p>[0043]	图13是示出实施方式I中的信息处理装置200的检索方法的流程图。</p>
+    <p>[0044]	图14是示出实施方式I中的服务器装置300的检索方法的流程图。</p>
+    <p>[0045]	图15是示出实施方式I中的隐匿检索系统100的硬件资源的一个例子的图。</p>
+    <p>[0046]	图16是实施方式2中的变换规则计算处理(SllO)的流程图。</p>
+    <p>[0047]	图17是示出实施方式2中的检索关键字表格491和已分割频度表格492的图。</p>
+    <p>[0048]	图18是实施方式2中的变换规则计算处理(SI 10)的概要图。</p>
+    <p>[0049]	图19是实施方式2中的变换规则计算处理(SI 10)的概要图。</p>
+    <p>[0050]	图20是实施方式2中的变换规则计算处理(SI 10)的概要图。</p>
+    <p>[0051]	图21是实施方式2中的变换规则计算处理(SllO)的概要图。</p>
+    <p>[0052]	图22是示出实施方式2中的变换规则表格291的图。</p>
+    <p>[0053]	图23是示出实施方式2中的加密关键字的登记频度的图。</p>
+    <p>[0054]	图24是示出实施方式2中的检索关键字表格491和已分割频度表格492的其他例的图。</p>
+    <p>[0055]	图25是示出实施方式2中的变换规则计算处理(SllO)的再分割处理(S116B)的流程图。</p>
+    <p>[0056]	图26是实施方式2中的再分割处理(SI 16B)的概要图。</p>
+    <p>[0057]	图27是实施方式2中的再分割处理(SI 16B)的概要图。</p>
+    <p>[0058]	图28是示出实施方式2中的已分割频度的最优化的图。</p>
+    <p>[0059]	图29是示出实施方式2中的已分割频度的最优化的图。</p>
+    <p>[0060]	图30是示出实施方式2中的已分割频度的最优化的图。</p>
+    <p>[0061]	图31是实施方式3中的变换规则计算处理(SllO)的流程图。</p>
+    <p>[0062]	图32是实施方式3中的变换规则计算处理(SI 10)的概要图。</p>
+    <p>[0063]	图33是实施方式3中的变换规则计算处理(SI 10)的概要图。</p>
+    <p>[0064]	图34是示出实施方式3中的变换规则表格291的图。</p>
+    <p>[0065]	图35是示出实施方式3中的加密关键字的登记频度的图。</p>
+    <p>[0066]	图36是示出实施方式3中的已分割频度表格492的最优化的具体例的图。</p>
+    <p>[0067]	图37是示出实施方式3中的变换规则表格291的其他例的图。</p>
+    <p>[0068]	图38是示出实施方式3中的加密关键字的登记频度的其他例的图。</p>
+    <p>[0069]	图39是示出实施方式4中的变换规则计算处理(SllO)的流程图。</p>
+    <p>[0070]	图40是示出实施方式4中的检索关键字表格491的图。</p>
+    <p>[0071]	图41是示出实施方式4中的变换规则表格291的一个例子的图。</p>
+    <p>[0072]	图42是示出实施方式4中的检索关键字和变换关键字的组合的一个例子的图。</p>
+    <p>[0073]	图43是示出实施方式4中的检索关键字和变换关键字的组合的一个例子的图。</p>
+    <p>[0074](符号说明)</p>
+    <p>[0075]	100:隐匿检索系统；101:网络；200:信息处理装置；210:检索关键字输入部；220:变换关键字群获取部；230:加密关键字群生成部；240:检索请求部；250:检索结果输出部；280:处理装置通信部；290:处理装置存储部；291:变换规则表格；292:密码密钥数据；293:解密密钥数据；300:服务器装置；310:服务器装置通信部；320:数据检索部；330:数据登记部；390:服务器装置存储部；391:登记数据表格；400:变换规则管理装置；410:变换规则计算部；420:变换关键字群生成部；430:变换规则生成部；440:管理装置通信部；490:管理装置存储部；491:检索关键字表格；492:已分割频度表格；500:数据登记装置；510:登记装置输入部；520:关键字变换部；530:登记数据生成部；540:登记请求部；580:登记装置通信部；590:登记装置存储部；591:检索数据表格；901 =CPU ；902:总线；903:ROM ；904 =RAM ；905:通信板；911:显示器装置；912:键盘；913:鼠标；914:驱动器装置；920:磁盘装置；921:0S ；922:程序群；923:文件群。</p>
+    <p>具体实施方式</p>
+    <p>[0076]	实施方式1.[0077]	对使用加密了的检索关键字来进行数据检索的隐匿检索系统的方式、且防止加密了的检索关键字被频度分析的隐匿检索系统的方式进行说明。</p>
+    <p>[0078]	图1是实施方式I中的隐匿检索系统100的结构图。</p>
+    <p>[0079]	基于图1，对实施方式I中的隐匿检索系统100的概要进行说明。</p>
+    <p>[0080]	隐匿检索系统100 (检索系统的一个例子)具备信息处理装置200、服务器装置300(检索装置的一个例子)、变换规则管理装置400 (对应关键字管理装置的一个例子)以及数据登记装置500 (加密数据生成装置的一个例子)，各装置经由网络101进行通信。</p>
+    <p>[0081 ] (I)变换规则管理装置400生成将检索关键字和变换关键字群对应起来的变换规则表格(变换规则生成处理)。</p>
+    <p>[0082]	(2)数据登记装置500基于变换规则表格生成将对检索数据进行加密而得到的加密数据和对变换关键字进行 加密而得到的加密关键字对应起来的登记数据。然后，数据登记装置500将登记数据登记到服务器装置300 (数据登记处理)。</p>
+    <p>[0083]	(3)信息处理装置200从变换规则表格获取与使用者指定的检索关键字对应的变换关键字群，对所获取到的变换关键字群进行加密而生成加密关键字群。然后，信息处理装置200指定加密关键字群并向服务器装置300请求数据检索(检索请求处理)。</p>
+    <p>[0084]	(4)服务器装置300将由信息处理装置200指定的加密关键字群所包含的加密关键字(keyword)作为检索关键码(key)来检索与检索关键码对应的加密数据。然后，服务器装置300将检索到的加密数据响应给信息处理装置200 (检索处理)。</p>
+    <p>[0085]	(5)信息处理装置200对由服务器装置300检索到的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出(检索结果输出处理)。</p>
+    <p>[0086]	以下，说明隐匿检索系统100的详细情况。</p>
+    <p>[0087]	图2是实施方式I中的信息处理装置200的功能结构图。</p>
+    <p>[0088]	基于图2，对实施方式I中的信息处理装置200的功能结构进行说明。</p>
+    <p>[0089]	信息处理装置200具备检索关键字输入部210、变换关键字群获取部220、加密关键字群生成部230、检索请求部240、检索结果输出部250、处理装置通信部280以及处理装置存储部290。</p>
+    <p>[0090]	处理装置存储部290 (对应关键字存储部的一个例子)存储在信息处理装置200中使用的数据。</p>
+    <p>[0091]	变换规则表格291、密码密钥数据292或者解密密钥数据293是处理装置存储部290所存储的数据的一个例子。</p>
+    <p>[0092]	变换规则表格291 (对应关键字数据的一个例子)是定义使检索关键字和一个以上的变换关键字(对应关键字)对应了的变换关键字群的数据。例如，变换规则表格291是定义多个检索关键字并且针对每个检索关键字将一个以上的变换关键字定义为变换关键字群的数据。</p>
+    <p>[0093]	检索关键字输入部210输入检索关键字(检索关键字输入处理)。</p>
+    <p>[0094]	变换关键字群获取部220 (对应关键字群获取部的一个例子)从处理装置存储部290所存储的变换规则表格291获取与通过检索关键字输入部210输入的检索关键字对应的变换关键字群(对应关键字群获取处理)。</p>
+    <p>[0095]	加密关键字群生成部230对由变换关键字群获取部220获取到的变换关键字群所包含的变换关键字使用密码密钥数据292进行加密来生成加密关键字群(加密关键字群生成处理)。</p>
+    <p>[0096]	检索请求部240 (检索请求数据发送部、检索响应数据接收部的一个例子)将包括由加密关键字群生成部230生成的加密关键字群的检索请求数据经由处理装置通信部280发送到服务器装置300 (检索请求数据发送处理)。</p>
+    <p>[0097]	检索请求部240接收从服务器装置300发送的检索响应数据(检索响应数据接收处理)。</p>
+    <p>[0098]	检索结果输出部250对由检索请求部240接收到的检索响应数据所包含的加密数据使用解密密钥数据293进行解密，将进行解密而得到的检索数据作为检索结果输出(检索结果输出处理)。</p>
+    <p>[0099]	处理装置通信部280进行数据通信。</p>
+    <p>[0100]	例如，处理装置通信部280将检索请求数据发送到服务器装置300，从服务器装置300接收检索响应数据。</p>
+    <p>[0101]	另外，处理装置通信部280从变换规则管理装置400接收变换规则表格291，将所接收到的变换规则表格291存储到处理装置存储部290中。</p>
+    <p>[0102]	图3是实施方式I中的服务器装置300的功能结构图。</p>
+    <p>[0103]	基于图3，对实施方式I中的服务器装置300的功能结构进行说明。</p>
+    <p>[0104]	服务器装置300具备服务器装置通信部310、数据检索部320、数据登记部330以及服务器装置存储部390。</p>
+    <p>[0105]	服务器装置存储部390 (加密数据存储部的一个例子)存储在服务器装置300中使用的数据。</p>
+    <p>[0106]	登记数据表格391是服务器装置存储部390所存储的数据的一个例子。</p>
+    <p>[0107]	登记数据表格391是将对检索数据进行加密而得到的加密数据和对变换关键字进行加密而得到的加密关键字对应起来的数据。例如，登记数据表格391是针对每个检索数据将对该检索数据进行加密而得到的加密数据和对特定的变换关键字进行加密而得到的加密关键字对应起来的数据。</p>
+    <p>[0108]	服务器装置通信部310 (检索请求数据接收部、检索响应数据发送部的一个例子)进行数据通信。</p>
+    <p>[0109]	例如，服务器装置通信部310接收从信息处理装置200发送的检索请求数据(检索请求数据接收处理)。</p>
+    <p>[0110]	另外，服务器装置通信部310发送包括由数据检索部320获取的加密数据的检索响应数据(检索响应数据发送处理)。</p>
+    <p>[0111]	另外，服务器装置通信部310接收从数据登记装置500发送的登记请求数据(登记请求数据接收处理)。</p>
+    <p>[0112]	数据检索部320基于由服务器装置通信部310接收到的检索请求数据，将检索请求数据内的加密关键字群所包含的加密关键字作为检索关键码，从登记数据表格391获取与检索关键码对应的加密数据(数据检索处理)。</p>
+    <p>[0113]	数据登记部330将由服务器装置通信部310接收的登记请求数据所包含的登记数据(加密数据、加密关键字)设定到登记数据表格391 (数据登记处理)。</p>
+    <p>[0114]	图4是实施方式I中的变换规则管理装置400的功能结构图。</p>
+    <p>[0115]	基于图4，说明实施方式I中的变换规则管理装置400的功能结构。</p>
+    <p>[0116]	变换规则管理装置400 (对应关键字管理装置)具备变换规则计算部410、变换关键字群生成部420、变换规则生成部430、管理装置通信部440以及管理装置存储部490。</p>
+    <p>[0117]	管理装置存储部490存储在变换规则管理装置400中使用的数据。</p>
+    <p>[0118]	检索关键字表格491是管理装置存储部490所存储的数据的一个例子。</p>
+    <p>[0119]	检索关键字表格491 (出现频度数据的一个例子)是定义检索关键字并且将与特定的检索关键字对应起来的检索数据的比例定义为特定的检索关键字的出现频度的数据。</p>
+    <p>[0120]	变换规则计算部410 (对应关键字数计算部的一个例子)根据检索关键字表格491中定义的检索关键字的出现频度，计算与检索关键字对应起来的变换关键字的个数，作为变换关键字数(对应关键字数计算处理)。</p>
+    <p>[0121]	变换规则计算部410基于检索关键字表格491中定义的检索关键字的出现频度，针对检索关键字的每个对应关键字，计算从检索关键字的对应关键字群选择该对应关键字的比例，作为变换概率(对应关键字选择率)(对应关键字选择率计算处理)。</p>
+    <p>[0122]	例如，变换规则计算部410如以下那样计算变换关键字数和变换概率。</p>
+    <p>[0123]	变换规则计算部410按照使按各检索关键字的变换关键字数来分割了的分割后的各检索关键字的出现频度相等的方式，计算各检索关键字的变换关键字数。</p>
+    <p>[0124]	变换规则计算部410计算各检索关键字的出现频度的最大公约数，针对每个检索关键字计算将检索关键字的出现频度除以最大公约数而得到的值，作为检索关键字的变换关键字数。</p>
+    <p>[0125]	变换规则计算部410针对每个检索关键字计算变换关键字数的倒数，作为变换概率。</p>
+    <p>[0126]	变换关键字群生成部420 (对应关键字群生成部的一个例子)将与由变换规则计算部410计算出的变换关键字数相同的个数的变换关键字生成为变换关键字群(对应关键字群生成处理)。</p>
+    <p>[0127]	变换规则生成部430 (对应关键字数据生成部的一个例子)将检索关键字、变换关键字群、以及变换概率对应起来，生成变换规则表格291 (对应关键字数据、对应关键字选择率数据的一个例子)(对应关键字数据生成处理)。</p>
+    <p>[0128]	管理装置通信部440进行数据通信。[0129]	例如，管理装置通信部440将由变换规则生成部430生成的变换规则表格291发送到信息处理装置200以及数据登记装置500。</p>
+    <p>[0130]	图5是实施方式I中的数据登记装置500的功能结构图。</p>
+    <p>[0131]	基于图5，说明实施方式I中的数据登记装置500的功能结构。</p>
+    <p>[0132]	数据登记装置500 (加密数据生成装置的一个例子)具备登记装置输入部510、关键字变换部520、登记数据生成部530、登记请求部540、登记装置通信部580以及登记装置存储部590。</p>
+    <p>[0133]	登记装置存储部590 (检索数据存储部、关键字选择率存储部的一个例子)存储在数据登记装置500中使用的数据。</p>
+    <p>[0134]	检索数据表格591、变换规则表格291或者密码密钥数据292是登记装置存储部590所存储的数据的一个例子。</p>
+    <p>[0135]	检索数据表格591是将检索数据和检索关键字对应起来的数据。</p>
+    <p>[0136]	关键字变换部520 (对应关键字选择部的一个例子)针对检索数据表格591所包含的每个检索关键字从变换规则表格291获取与检索关键字对应的变换关键字群。</p>
+    <p>[0137]	关键字变换部520根据变换规则表格291所包含的变换概率，选择所获取到的变换关键字群所包含的至少某一个变换关键字(对应关键字选择处理)。</p>
+    <p>[0138]	登记数据生成部530 (加密数据生成部的一个例子)针对检索数据表格591所包含的每个检索数据使用密码密钥数据292对检索数据进行加密而生成加密数据(加密数据生成处理)。</p>
+    <p>[0139]	登记数据生成部530针对由关键字变换部520选择的变换关键字使用密码密钥数据292进行加密来生成加密关键字(加密关键字生成处理)。</p>
+    <p>[0140]	登记请求部540经由登记装置通信部580将登记请求数据发送到服务器装置300，该登记请求数据是通过将由登记数据生成部530生成的加密数据和加密关键字对应起来而设定的数据(登记请求处理)。</p>
+    <p>[0141]	登记装置通信部580进行数据通信。</p>
+    <p>[0142]	例如，登记装置通信部580将登记请求数据发送到服务器装置300。</p>
+    <p>[0143]	图6是示出实施方式I中的变换规则管理装置400的变换规则管理方法的流程图。</p>
+    <p>[0144]	基于图6，说明实施方式I中的变换规则管理装置400的变换规则管理方法。</p>
+    <p>[0145]	首先，说明变换规则管理装置400的变换规则管理方法的概要。</p>
+    <p>[0146]	变换规则计算部410基于检索关键字的出现频度，计算变换关键字数和各变换关键字的变换概率(S110)。</p>
+    <p>[0147]	变换关键字群生成部420生成与变换关键字数相同的数量的变换关键字(变换关键字群)(S120)。</p>
+    <p>[0148]	变换规则生成部430将检索关键字、变换关键字群、以及各变换关键字的变换概率对应起来生成变换规则表格291 (S130)。</p>
+    <p>[0149]	管理装置通信部440将变换规则表格291发送到信息处理装置200以及数据登记装置 500 (S140)o</p>
+    <p>[0150]	接下来，说明变换规则管理装置400的变换规则管理方法的详细情况。[0151]	在SI 10中，变换规则计算部410从管理装置存储部490获取检索关键字表格491。检索关键字表格491预先存储于管理装置存储部490。</p>
+    <p>[0152]	图7是示出实施方式I中的检索关键字表格491的图。</p>
+    <p>[0153]	如图7所示，检索关键字表格491是将检索关键字和出现频度对应起来的数据。</p>
+    <p>[0154]	出现频度表示将对应的检索关键字用作检索关键码的检索数据的比例的意思。例如，在100个检索数据中的25个检索数据中将检索关键字“A公司”用作检索关键码的情况下，检索关键字“A公司”的出现频度是“25% (=25/100)”。</p>
+    <p>[0155]	返回图6，继续SllO的说明。</p>
+    <p>[0156]	在SI 10中，变换规则计算部410基于检索关键字表格491，计算使各检索关键字的分割后的出现频度均等那样的频度分割数，作为“变换关键字数”。</p>
+    <p>[0157]	进而，变换规则计算部410计算变换关键字数的倒数，作为“变换概率”。</p>
+    <p>[0158]	例如，图7所示的检索关键字表格491将检索关键字“A公司”的出现频度定义为“25%”、将检索关键字“B公司”的出现频度定义为“ 15%”、将其他检索关键字的出现频度定义为“5%”。</p>
+    <p>[0159]	在该情况下，如果对检索关键字“A公司”的出现频度“25%”进行5分割，对检索关键字“B公司”的出现频度“15%”进行3分割，则分割后的所有出现频度变为均等的值“5%”。</p>
+    <p>[0160]	因此，在变换规则计算部410中，计算频度分割数“5”作为检索关键字“A公司”的变换关键字数，计算频度分割数“3”作为检索关键字“B公司”的变换关键字数，计算频度分割数“ I ”作为其他检索关键字的变换关键字数。</p>
+    <p>[0161]	另外，变换规则计算部410计算检索关键字“A公司”的变换概率“1/5”、检索关键字“B公司”的变换概率“1/3”、其他检索关键字的变换概率“1/1”。</p>
+    <p>[0162]	例如，变换规则计算部410使用出现频度的最大公约数来计算变换关键字数和变换概率。</p>
+    <p>[0163]	图8是示出实施方式I中的变换规则计算处理(SllO)的一个例子的流程图。</p>
+    <p>[0164]	基于图8，说明使用出现频度的最大公约数来计算变换关键字数和变换概率的变换规则计算处理(S110)。</p>
+    <p>[0165]	在Slll中，变换规则计算部410基于检索关键字表格491中设定的各检索关键字的出现频度，计算出现频度的最大公约数。</p>
+    <p>[0166]	例如，在图7所示的检索关键字表格491的情况下，出现频度的最大公约数是“5%”。</p>
+    <p>[0167]在	Slll 之后，进入 S112。</p>
+    <p>[0168]	在S112中，变换规则计算部410针对每个检索关键字将出现频度除以最大公约数。于是，进行除法而得到的值是变换关键字数。</p>
+    <p>[0169]	例如，在图7的情况下，检索关键字“A公司”的变换关键字数是将出现频度“25%”除以最大公约数“5%”而得到的值“5 (=25%+5%)”。</p>
+    <p>[0170]在	S112 之后，进入 S113。</p>
+    <p>[0171]	在SI 13中，变换规则计算部410针对每个检索关键字数计算变换关键字数的倒数，作为变换概率。</p>
+    <p>[0172]	例如，在图7的情况下，检索关键字“A公司”的变换概率是变换关键字数“5”的倒数 “1/5”。</p>
+    <p>[0173]	通过S113，变换规则计算处理(SllO)结束。</p>
+    <p>[0174]	返回图6，继续变换规则管理方法的说明。</p>
+    <p>[0175]在	SllO 之后，进入 S120。</p>
+    <p>[0176]	在S120中，变换关键字群生成部420针对每个检索关键字生成与变换关键字数相同的数量的变换关键字。以下，将与变换关键字数相同的数量的变换关键字称为“变换关键字群”。</p>
+    <p>[0177]	例如，在检索关键字“A公司”的变换关键字数是“5”的情况下，变换关键字群生成部420将连续编号附加到检索关键字“A公司”的词尾来生成变换关键字群“A公司-1”、“A公司-2”、“A公司-3”、“A公司-4”、“A公司-5”。</p>
+    <p>[0178]	但是，变换关键字也可以不包括检索关键字。例如，也可以将组合了随机选择的字符、数值、记号等而得到的关键字作为变换关键字。另外，也可以为了生成变换关键字而使用单向函数。</p>
+    <p>[0179]在	S120 之后，进入 S130。</p>
+    <p>[0180]	在S130中，变换规则生成部430将检索关键字表格491中设定的检索关键字、在SllO中计算的变换概率、以及在S120中生成的变换关键字群对应起来生成变换规则表格</p>
+    <p>291。</p>
+    <p>[0181]	图9是示出实施方式I中的变换规则表格291的图。</p>
+    <p>[0182]	如图9所示，变换规则表格291是将检索关键字、变换概率、以及变换关键字对应起来的数据。</p>
+    <p>[0183]	图9所不的变换规则表格291是基于图7所不的检索关键字表格491生成的变换规则表格291。即，各变换关键字的出现频度如图7所说明的那样，是均等的值“5%”。</p>
+    <p>[0184]	返回图6，继续变换规则管理方法的说明。</p>
+    <p>[0185]在	S130 之后，进入 S140。</p>
+    <p>[0186]	在S140中，管理装置通信部440将在S130中生成的变换规则表格291发送到信息处理装置200以及数据登记装置500。</p>
+    <p>[0187]	信息处理装置200的处理装置通信部280接收变换规则表格291，将所接收到的变换规则表格291存储到处理装置存储部290。</p>
+    <p>[0188]	另外，数据登记装置500的登记装置通信部580接收变换规则表格291，将所接收到的变换规则表格291存储到登记装置存储部590中。</p>
+    <p>[0189]	通过S140，变换规则管理方法的处理结束。</p>
+    <p>[0190]	图10是示出实施方式I中的数据登记装置500的数据登记方法的流程图。</p>
+    <p>[0191]	基于图10，说明实施方式I中的数据登记装置500的数据登记方法。</p>
+    <p>[0192]	首先，说明数据登记装置500的数据登记方法的概要。</p>
+    <p>[0193]	登记装置输入部510输入检索数据和检索关键字(S210)。</p>
+    <p>[0194]	关键字变换部520从变换规则表格291选择与输入关键字对应的变换关键字(S220)。</p>
+    <p>[0195]	登记数据生成部530对输入数据和选择关键字进行加密而生成登记数据(S230)。</p>
+    <p>[0196]	登记请求部540将包括登记数据的登记请求数据发送到服务器装置300 (S240)。[0197]	接下来，说明数据登记装置500的数据登记方法的详细情况。</p>
+    <p>[0198]	在S210中，管理者使用键盘、鼠标等输入装置对数据登记装置500指定检索数据和检索关键字的组合。年龄等数值、性别等属性、姓名等字符串、文档等文件是检索数据的一个例子。</p>
+    <p>[0199]	登记装置输入部510从输入装置输入由管理者指定的检索数据和检索关键字的组合。</p>
+    <p>[0200]	但是，也可以将检索数据和检索关键字的多个组合预先存储于登记装置存储部590，登记装置输入部510从登记装置存储部590逐个输入检索数据和检索关键字的组合。</p>
+    <p>[0201]	以下，将在S210中输入了的检索数据和检索关键字分别称为“输入数据”、“输入关</p>
+    <p>键字”。</p>
+    <p>[0202]在	S210 之后，进入 S220。</p>
+    <p>[0203]	在S220中，关键字变换部520从登记装置存储部590获取变换规则表格291 (参照图9)。</p>
+    <p>[0204]	关键字变换部520从变换规则表格291获取与和输入关键字相同的检索关键字对应的变换关键字群。</p>
+    <p>[0205]	关键字变换部520从所获取到的变换关键字群随机选择某一个变换关键字。但是，选择各变换关键字的选择概率遵循变换规则表格291中设定的变换概率。</p>
+    <p>[0206]	以下，将在S220中选择了的变换关键字称为“选择关键字”。</p>
+    <p>[0207]	例如，在图9所示的变换规则表格291的情况下，针对输入关键字“A公司”，选择变换关键字“A公司-1”、“A公司-2”、“Α公司-3”、“Α公司-4”或者“Α公司-5”。选择各变换关键字的概率(变换概率)是“1/5”。</p>
+    <p>[0208]	S卩，在有100个输入关键字“Α公司”的情况下，“Α公司-1”、“Α公司_2”、“Α公司-3”、“Α公司-4”以及“Α公司-5”分别各被选择20次左右。</p>
+    <p>[0209]在	S220 之后，进入 S230。</p>
+    <p>[0210]	在S230中，登记数据生成部530从登记装置存储部590获取密码密钥数据292。密码密钥数据292通过规定的密钥生成算法生成，并预先存储于登记装置存储部590。</p>
+    <p>[0211]	登记数据生成部530使用密码密钥数据292通过规定的加密算法对输入数据进行加密。以下，将加密了的输入数据称为“加密数据”。</p>
+    <p>[0212]	登记数据生成部530使用密码密钥数据292通过规定的加密算法(确定的密码)对选择关键字进行加密。以下，将加密了的选择关键字称为“加密关键字”。</p>
+    <p>[0213]	但是，也可以将与输入数据的加密中使用的密码密钥数据不同的密码密钥数据用于选择关键字的加密。另外，也可以将与输入数据的加密中使用的加密算法不同的加密算法用于选择关键字的加密。</p>
+    <p>[0214]	以下，将加密数据和加密关键字的组合称为“登记数据”。</p>
+    <p>[0215]在	S230 之后，进入 S240。</p>
+    <p>[0216]	在S240中，登记请求部540生成包括在S230中生成的登记数据的登记请求数据，将所生成的登记请求数据经由登记装置通信部580发送到服务器装置300。但是，登记请求部540也可以将包括多个登记数据的登记请求数据发送到服务器装置300。</p>
+    <p>[0217]	服务器装置300的服务器装置通信部310接收登记请求数据，在登记数据表格391中登记(设定)所接收到的登记请求数据所包含的登记数据。</p>
+    <p>[0218]	通过S240，数据登记方法的处理结束。</p>
+    <p>[0219]	图11是示出实施方式I中的登记数据表格391的图。</p>
+    <p>[0220]	如图11所示，登记数据表格391 (还称为数据库)是包括多个加密关键字和加密数据的组合(登记数据)的数据。即，登记数据表格391是将加密关键字和加密数据对应起来的数据。</p>
+    <p>[0221 ] “EU)”表示对“ X ”进行加密而得到的数据。</p>
+    <p>[0222]	如上所述，以变换规则表格291中定义的均等的变换概率，选择各变换关键字(图</p>
+    <p>10、S220)。</p>
+    <p>[0223]	因此，在登记数据表格391中登记的登记数据的数量充分多的情况下，登记数据表格391所包含的各加密关键字的数量是大致均等的。</p>
+    <p>[0224]	也可以将加密关键字和加密数据分到不同的表格或者存储装置来存储。例如，准备将加密关键字和加密数据的数据ID对应起来的表格、以及将数据ID和加密数据对应起来的表格即可。</p>
+    <p>[0225]	图12是示出实施方式I中的加密关键字的登记频度的图。</p>
+    <p>[0226]	例如，基于图9所不的变换规则表格291选择变换关键字，在对所选择的变换关键字进行了加密的情况下，登记数据表格391中登记的各加密关键字的比例(登记频度)按照“5%”被均等化(参照图12)。</p>
+    <p>[0227]	因此，即使基于服务器装置300所存储的登记数据表格391对加密关键字进行频度分析，也无法根据加密关键字推测检索关键字。其原因是，在加密关键字中几乎没有登记频度的差。</p>
+    <p>[0228]	图13是示出实施方式I中的信息处理装置200的检索方法的流程图。</p>
+    <p>[0229]	基于图13，说明实施方式I中的信息处理装置200的检索方法。</p>
+    <p>[0230]	首先，说明信息处理装置200的检索方法的概要。</p>
+    <p>[0231]	检索关键字输入部210输入检索关键字(S310)。</p>
+    <p>[0232]	变换关键字群获取部220从变换规则表格291获取与输入关键字对应的变换关键字群(S320)。</p>
+    <p>[0233]	加密关键字群生成部230对变换关键字群进行加密而生成加密关键字群(S330)。</p>
+    <p>[0234]	检索请求部240将包括加密关键字群的检索请求数据发送到服务器装置300(S340)。</p>
+    <p>[0235]	检索请求部240从服务器装置300接收包括加密数据的检索响应数据(S350)。</p>
+    <p>[0236]	检索结果输出部250对检索响应数据所包含的加密数据进行解密，将进行解密而得到的检索数据作为检索结果输出(S360)。</p>
+    <p>[0237]	接下来，说明信息处理装置200的检索方法的详细情况。</p>
+    <p>[0238]	在S310中，使用者使用键盘、鼠标等输入装置对信息处理装置200指定检索关键字。</p>
+    <p>[0239]	检索关键字输入部210从输入装置输入由使用者指定的检索关键字。</p>
+    <p>[0240]	以下，将在S310中输入的检索关键字称为“输入关键字”。</p>
+    <p>[0241]在	S310 之后，进入 S320。[0242]	在S320中，变换关键字群获取部220从处理装置存储部290所存储的变换规则表格291获取与输入关键字对应的变换关键字群。</p>
+    <p>[0243]	例如，变换关键字群获取部220从图9所示的变换规则表格291获取与输入关键字“A公司”对应的变换关键字群“A公司-1”、“A公司-2”、“Α公司-3”、“Α公司_4”、“Α公司-5”。</p>
+    <p>[0244]在	S320 之后，进入 S330。</p>
+    <p>[0245]	在S330中，加密关键字群生成部230从处理装置存储部290获取密码密钥数据</p>
+    <p>292。</p>
+    <p>[0246]	加密关键字群生成部230使用密码密钥数据292通过规定的加密算法(确定的密码)，对在S320中获取到的变换关键字群所包含的各变换关键字进行加密。</p>
+    <p>[0247]	其中，在S330中使用的密码密钥数据292以及加密算法与在登记数据生成时(图10的S230)在检索关键字的加密中使用的密码密钥数据以及加密算法相同。</p>
+    <p>[0248]	以下，将加密了的变换关键字称为“加密关键字”，将由加密关键字构成的数据称为“加密关键字群”。</p>
+    <p>[0249]在	S330 之后，进入 S340。</p>
+    <p>[0250]	在S340中，检索请求部240生成包括在S330中生成的加密关键字群的检索请求数据，将所生成的检索请求数据经由处理装置通信部280发送到服务器装置300。</p>
+    <p>[0251]	例如，在图9所示的变换规则表格291的情况下，在针对输入关键字“Α公司”的检索请求数据中，包括加密关键字群“Ε (Α公司-1)”、“Ε (Α公司-2)”、“E (A公司-3)”、“E(A 公司-4)”、‘&#904; (Α 公司-5)”。</p>
+    <p>[0252]在	S340 之后，进入 S350。</p>
+    <p>[0253]	在S350中，服务器装置300基于检索请求数据检索加密数据，将包括在检索中命中了的一个或者多个加密数据的检索响应数据发送到信息处理装置200。</p>
+    <p>[0254]	检索请求部240经由处理装置通信部280接收从服务器装置300发送的检索响应数据。</p>
+    <p>[0255]在	S350 之后，进入 S360。</p>
+    <p>[0256]	在S360中，检索结果输出部250从处理装置存储部290获取解密密钥数据293。</p>
+    <p>[0257]	检索结果输出部250使用解密密钥数据293通过规定的解密算法，对检索响应数据所包含的各加密数据进行解密。</p>
+    <p>[0258]	检索结果输出部250将进行解密而得到的各检索数据作为针对输入关键字的检索结果来输出。例如，检索结果输出部250将检索结果显不于显不装直。</p>
+    <p>[0259]	其中，在S360中使用的解密密钥数据293是与在检索数据的加密时(图10的S230)使用的密码密钥数据成对的数据，在S360中使用的解密算法是与在检索数据的加密时使用的加密算法成对的算法。</p>
+    <p>[0260]	通过S360，信息处理装置200的检索方法的处理结束。</p>
+    <p>[0261]	图14是示出实施方式I中的服务器装置300的检索方法的流程图。</p>
+    <p>[0262]	基于图14，说明实施方式I中的服务器装置300的检索方法。</p>
+    <p>[0263]	首先，说明服务器装置300的检索方法的概要。</p>
+    <p>[0264]	服务器装置通信部310接收包括检索请求关键字群的检索请求数据(S410)。[0265]	数据检索部320从登记数据表格391获取与检索请求关键字群内的检索请求关键字对应起来的加密数据(S420 )。</p>
+    <p>[0266]	服务器装置通信部310将包括加密数据的检索响应数据发送到信息处理装置200(S430)。</p>
+    <p>[0267]	接下来，说明服务器装置300的检索方法的详细情况。</p>
+    <p>[0268]	在S410中，服务器装置通信部310接收从信息处理装置200发送的检索请求数据。</p>
+    <p>[0269]	以下，将检索请求数据所包含的加密关键字群(加密关键字)称为“检索请求关键字群(检索请求关键字)”。</p>
+    <p>[0270]在	S410 之后，进入 S420。</p>
+    <p>[0271]	在S420中，数据检索部320将检索请求关键字群所包含的各检索请求关键字作为检索关键码来检索登记数据表格391 (参照图11)。即，数据检索部320检索登记数据表格391，确定与至少某一个检索请求关键字一致的加密关键字(0R检索)。</p>
+    <p>[0272]	此处，将与检索关键码一致的加密关键字称为“对象关键字”。</p>
+    <p>[0273]	然后，数据检索部320从登记数据表格391获取与各对象关键字对应起来的加密数据。</p>
+    <p>[0274]	例如，在图11所示的登记数据表格391的情况下，数据检索部320针对检索请求关键字群 “Ε (A 公司-1)”、‘&#904; (Α 公司-2)”、‘&#904; (Α 公司-3)”、‘&#904; (Α 公司-4)”、‘&#904; (Α 公司-5)”获取加密数据“E (数据a)”、“E (数据b)”以及“E (数据d)”。</p>
+    <p>[0275]	也可以使用以往的检索技术(例如，使用散列表格的技术)而使检索处理(S420)高速化。</p>
+    <p>[0276]在	S420 之后，进入 S430。</p>
+    <p>[0277]	在S430中，数据检索部320生成包括在S420中获取到的各加密数据的检索响应数据。</p>
+    <p>[0278]	然后，服务器装置通信部310将由数据检索部320生成的检索响应数据发送到信息处理装置200。</p>
+    <p>[0279]	通过S430，服务器装置300的检索方法结束。</p>
+    <p>[0280]	图15是示出实施方式I中的隐匿检索系统100的硬件资源的一个例子的图。</p>
+    <p>[0281]	在图15中，信息处理装置200、服务器装置300、变换规则管理装置400以及数据登记装置500具备CPU901 (Central Processing Unit:中央处理单元)。CPU901经由总线902来与R0M903、RAM904、通信板905、显示器装置911、键盘912、鼠标913、驱动器装置914、磁盘装置920连接，控制这些硬件设备。驱动器装置914是对FD (Flexible Disk Drive:软磁盘机)、CD (Compact Disc:光盘)、DVD (Digital Versatile Disc:数字化通用磁盘)等存储介质进行读写的装置。</p>
+    <p>[0282]	通信板905通过有线或者无线,连接到LAN (Local Area Network:局域网)、因特网、电话线路等通信网。</p>
+    <p>[0283]	在磁盘装置920中，存储有0S921 (操作系统)、程序群922、文件群923。</p>
+    <p>[0284]	在程序群922中，包括执行在实施方式中作为“&#12316;部”进行说明的功能的程序。程序由CPU901读出并执行。即，程序用于使计算机作为“&#12316;部”发挥功能，并且用于使计算机执行“&#12316;部”的步骤、方法。</p>
+    <p>[0285]	在文件群923中，包括在实施方式中说明的“&#12316;部”所使用的各种数据(输入、输出、判定结果、计算结果、处理结果等)。</p>
+    <p>[0286]	在实施方式中结构图以及流程图所包含的箭头主要表示数据、信号的输入输出。</p>
+    <p>[0287]	在实施方式中作为“&#12316;部”进行说明的既可以是“&#12316;电路”、“&#12316;装置”、“&#12316;设备”，并且也可以是“&#12316;步骤”、“&#12316;工序”、“&#12316;处理”。即，作为“&#12316;部”进行说明的部分可以通过固件、软件、硬件或者它们的组合中的任意一个来安装。</p>
+    <p>[0288]	在实施方式I中，说明了例如以下那样的隐匿检索系统100。</p>
+    <p>[0289]	信息处理装置200在使数据和关键字相对服务器装置300保持隐匿的状态下进行检索。</p>
+    <p>[0290]	由于不利用随机密码而利用确定的密码，所以在检索时进行二进制数据的完全一致检索即可。由此，能够实现利用了现有的检索技术的高速化。</p>
+    <p>[0291]	确定的密码是指，明文数据和加密数据一对一地对应的密码方式。即，加密数据根据明文数据唯一地确定。</p>
+    <p>[0292]	随机密码是指，存在多个与明文数据对应的加密数据的密码方式。加密数据并非根据明文数据唯一地确定。</p>
+    <p>[0293]	在隐匿检索系统100中如专利文献I那样不需要虚拟数据。因此，在存储区域的方面是高效的。</p>
+    <p>[0294]	变换规则表格2 91是以使所提供的关键字(例如，加密关键字)的频度信息(出现频度、登记频度)具有对由攻击者进行的频度分析的抗性为目的而生成的。</p>
+    <p>[0295]	也可以对变换规则表格291进行加密来提高隐匿性。</p>
+    <p>[0296]	也可以对信息处理装置200、服务器装置300、变换规则管理装置400或者数据登记装置500进行合并或者分割。</p>
+    <p>[0297]	例如，信息处理装置200也可以具备变换规则管理装置400或者数据登记装置500的功能。</p>
+    <p>[0298]	与加密数据对应起来的加密关键字的数量既可以是一个也可以是多个。在将多个加密关键字与加密数据对应起来的情况、检索请求关键字群中包括所有加密关键字的情况、或者包括至少某一个加密关键字的情况下，将该加密数据作为在检索中命中了的数据来进行处理。</p>
+    <p>[0299]	另外，也可以将多个加密数据与一个加密关键字对应起来。在该情况下，在检索请求关键字群中包括该加密关键字的情况下，将所有加密数据或者至少某一个加密数据作为在检索中命中了的数据来进行处理。</p>
+    <p>[0300]	密码密钥数据292既可以从IC卡等输入，也可以基于口令、生物体信息等使用者信息来自动生成。</p>
+    <p>[0301]	实施方式2.[0302]	说明满足“k_匿名性”的隐匿检索系统100的方式。</p>
+    <p>[0303]	以下，主要说明与实施方式I不同的事项。关于省略说明的事项，与实施方式I相同。</p>
+    <p>[0304]	“k_匿名性”是指，通过将登记频度相等的加密关键字的数量设为“k”个以上，使加密关键字的频度分析变得困难的性质。</p>
+    <p>[0305]	隐匿检索系统100的装置结构以及各装置的功能结构与实施方式I (参照图1-5)相同。</p>
+    <p>[0306]	但是，变换规则管理装置400的变换规则计算部410如以下那样计算变换关键字数和变换概率。</p>
+    <p>[0307]	变换规则计算部410计算按照使规定的匿名数“k”以上的检索关键字具有相同的出现频度的方式来分割各检索关键字的出现频度的分割数，作为各检索关键字的变换关键字数(对应关键字数)。</p>
+    <p>[0308]	变换规则计算部410计算分割各检索关键字的出现频度的分割比例(后述的已分割频度)，作为各检索关键字的变换概率(对应关键字选择率)。</p>
+    <p>[0309]	例如，变换规则计算部410如以下那样计算变换关键字数和变换概率。</p>
+    <p>[0310]	变换规则计算部410从各检索关键字的出现频度选择第“k”大的出现频度作为运算频度，“k”为规定的匿名数。</p>
+    <p>[0311]	变换规则计算部410从运算频度以上的出现频度减去一个以上的运算频度。</p>
+    <p>[0312]	变换规则计算部410从进行相减后的各检索关键字的出现频度选择第“k”大的出现频度作为新的运算频度，“k”为匿名数。</p>
+    <p>[0313]	变换规则计算部410从新的运算频度以上的出现频度减去一个以上的新的运算频度。</p>
+    <p>[0314]	变换规则计算部410针对每个检索关键字计算从出现频度减去之后的各运算频度的数量作为变换关键字数。</p>
+    <p>[0315]	变换规则计算部410针对每个检索关键字计算各运算频度相对原来的出现频度的比例作为变换概率。</p>
+    <p>[0316]	图16是实施方式2中的变换规则计算处理(SllO)的流程图。</p>
+    <p>[0317]	基于图16，说明实施方式2中的变换规则计算处理(S110)。</p>
+    <p>[0318]	在SlllB中，变换规则计算部410生成包括检索关键字表格491的已分割频度表格 492。</p>
+    <p>[0319]	图17是示出实施方式2中的检索关键字表格491和已分割频度表格492的图。</p>
+    <p>[0320]	如图17所示，检索关键字表格491是将“检索关键字”和“出现频度”对应起来的数据。其中，用整数比表示出现频度。</p>
+    <p>[0321]	另外，已分割频度表格492是包括检索关键字表格491的数据，是将“检索关键字”、“出现频度”、以及“已分割频度”对应起来的数据。</p>
+    <p>[0322]	返回图16，继续变换规则计算处理(SllO)的说明。</p>
+    <p>[0323]在	SlllB 之后，进入 S112B。</p>
+    <p>[0324]	在S112B中，变换规则计算部410从已分割频度表格492选择第k大的出现频度。</p>
+    <p>[0325]	此处，设“k”表示被定义为“k-匿名性”的参数值的匿名数“k”的意思。</p>
+    <p>[0326]	例如，在“3-匿名性(k=3)”的情况下，变换规则计算部410从图17所示的已分割频度表格492选择第3大的出现频度“28”。</p>
+    <p>[0327]	以下，将在SlllB中选择的出现频度称为“运算频度”。</p>
+    <p>[0328]在	S112B 之后，进入 S113B。[0329]	在S113B中，变换规则计算部410从已分割频度表格492选择运算频度以上的出现频度。以下，将在S113B中选择的出现频度称为“对象频度”。</p>
+    <p>[0330]	变换规则计算部410从对象频度减去运算频度来更新对象频度，将运算频度设定为已分割频度。</p>
+    <p>[0331]	图18是实施方式2中的变换规则计算处理(SI 10)的概要图。</p>
+    <p>[0332]	在图18的(I)所示的已分割频度表格492中“3-匿名性(k=3)”的运算频度是“28”，对象频度(28以上的出现频度)是“40”、“35”、“28”。</p>
+    <p>[0333]	变换规则计算部410如图18的(2)所示，从对象频度“40”减去运算频度“28”而将对象频度更新为“12 (=40-28)”。</p>
+    <p>[0334]	另外，变换规则计算部410将运算频度“28”设定为已分割频度。</p>
+    <p>[0335]	由此，对象频度“40”被分割为进行相减后的对象频度“ 12”和已分割频度“28”。</p>
+    <p>[0336]	同样地，变换规则计算部410将对象频度“35”分割为进行相减后的对象频度“7”和已分割频度“28”，将对象频度“28”分割为进行相减后的对象频度“O”和已分割频度“28”。</p>
+    <p>[0337]	但是，在对象频度是运算频度的η倍以上的值的情况下(η是I以上的整数值)，变换规则计算部410从对象频度减去η个运算频度来更新对象频度，将η个运算频度设定为已分割频度。</p>
+    <p>[0338]	例如，在对象频度是“60”的情况下，变换规则计算部410从对象频度“60”减去2个运算频度“28”而将对象频度更新为“4 (=60-28-28)”，将2个运算频度“28”设定为已分割频度。由此，对象频度“60”被分割为进行相减后的对象频度“4”和2个已分割频度“28”、“28”。</p>
+    <p>[0339]	返回图16，继续变换规则计算处理(SllO)的说明。</p>
+    <p>[0340]在	S113B 之后，进入 S114B。</p>
+    <p>[0341]	在S114B中，变换规则计算部410判定在已分割频度表格492中是否残留有“O”以外的出现频度。</p>
+    <p>[0342]	在残留有“O”以外的出现频度的情况下(“是”)，进入S115B。</p>
+    <p>[0343]	在未残留“O”以外的出现频度的情况下(“否”)，进入S117B。</p>
+    <p>[0344]	在S115B中，变换规则计算部410判定在已分割频度表格492中“O”以外的出现频度是否残留有“k”个以上。</p>
+    <p>[0345]	在“O”以外的出现频度残留有“k”个以上的情况下(“是”)，返回S112B。例如，在所述图18的(2)所示的已分割频度表格492中“O”以外的出现频度残留7个、即3 (=k)个以上。因此，处理返回S112B。</p>
+    <p>[0346]	在“O”以外的出现频度仅残留不足“k”个的情况下(“否”)，进入S116B。</p>
+    <p>[0347]	在S116B中，变换规则计算部410进行再分割以使已分割频度表格492中设定的已分割频度满足k-匿名性。</p>
+    <p>[0348]	另行说明S116B的处理的详细情况。</p>
+    <p>[0349]在	S116B 之后，进入 S117B。</p>
+    <p>[0350]	在S117B中，变换规则计算部410计算已分割频度表格492中设定的已分割频度的数量作为“变换关键字数”。[0351]	另外，变换规则计算部410计算各已分割频度的比例作为“变换概率”。</p>
+    <p>[0352]	另行说明变换关键字数以及变换概率的计算方法的具体例。</p>
+    <p>[0353]	通过SI 17B，变换规则计算处理(SI 10)结束。</p>
+    <p>[0354]	图19至图21是实施方式2中的变换规则计算处理(SllO)的概要图。</p>
+    <p>[0355]	图22是示出实施方式2中的变换规则表格291的图。</p>
+    <p>[0356]	基于图19至图22，说明在S115B中“O”以外的出现频度残留有“k”个以上的情况(“是”)的处理的具体例。</p>
+    <p>[0357]	在图19中，变换规则计算部410从(2)已分割频度表格492选择第3 (=k)大的出现频度“22”作为运算频度(S112B)。</p>
+    <p>[0358]	接下来，变换规则计算部410将运算频度“22”以上的出现频度“27”、“23”、“22”、“22”选择为对象频度。然后，变换规则计算部410将对象频度“27”分割为“5”和“22”，将对象频度“ 23 ”分割为“ I”和“ 22 ”，将对象频度“ 22 ”分割为“ O ”和“ 22 ”( S113B )。</p>
+    <p>[0359]	由此，生成图19所示的(3)已分割频度表格492。</p>
+    <p>[0360]	由于在(3)已分割频度表格492中“O”以外的出现频度残留有3 (=k)个以上，所以处理返回S112B (S114B-S115B)。以下继续说明。</p>
+    <p>[0361]	在图20中，变换规则计算部410从(3)已分割频度表格492选择第3 (=k)大的出现频度“7”作为运算频度(S112B)。</p>
+    <p>[0362]	接下来，变换规则计算部410将运算频度“7”以上的出现频度“21”、“12”、“7”选择为对象频度。然后，变换规则计算部410将对象频度“21”分割为“O”和3个“7”，将对象频度“ 12 ”分割为“ 5 ”和“ 7 ”，将对象频度“ 7 ”分割为“ O ”和“ 7 ”( S113B )。</p>
+    <p>[0363]	由此，生成图20所示的(4)已分割频度表格492。</p>
+    <p>[0364]	由于在(4)已分割频度表格492中“O”以外的出现频度残留有3 (=k)个以上，所以处理返回S112B (S114B-S115B)。以下继续说明。</p>
+    <p>[0365]	在图21中，变换规则计算部410从(4)已分割频度表格492选择第3 (=k)大的出现频度“I”作为运算频度(S112B)。</p>
+    <p>[0366]	接下来，变换规则计算部410将运算频度“I”以上的出现频度“5”、“5”、“I”选择为对象频度。然后，变换规则计算部410将对象频度“5”分割为“O”和5个“1”，将对象频度“I”分割为“O”和“I”(S113B)。</p>
+    <p>[0367]	由此，生成图21所示的(5)已分割频度表格492。</p>
+    <p>[0368]	在(5)已分割频度表格492中不存在“O”以上的出现频度(S114B)，所以变换规则计算部410如以下那样计算各检索关键字的变换关键字数以及变换概率(S117B)。</p>
+    <p>[0369]	在(5)已分割频度表格492中，检索关键字“佐藤”的已分割频度是“28”、“7”以及5个“I”。</p>
+    <p>[0370]	变换规则计算部410参照(5)已分割频度表格492，计算检索关键字“佐藤”的已分割频度的个数“7”，作为检索关键字“佐藤”的变换关键字数。</p>
+    <p>[0371]	进而，变换规则计算部410计算检索关键字“佐藤”的各已分割频度的比例“ 28/40 ”、“ 7/40 ”、“ 1/40 ”作为检索关键字“佐藤”的各变换关键字的变换概率。</p>
+    <p>[0372]	关于其他检索关键字的变换关键字数以及变换概率，变换规则计算部410也同样地求出。[0373]	基于图21所示的(5)已分割频度表格492生成变换规则表格291。</p>
+    <p>[0374]	例如，在变换规则表格291中与检索关键字“佐藤”对应起来地设定与变换关键字数“7”相同的个数的变换关键字“佐藤-1&#12316;7”。</p>
+    <p>[0375]	另外，在变换规则表格291中，与检索关键字“佐藤”的各变换关键字对应起来地设定变换概率 “ 28/40 ”、“ 7/40 ”、“ 1/40 ”。</p>
+    <p>[0376]	图23是示出实施方式2中的加密关键字的登记频度的图。</p>
+    <p>[0377]	例如，在基于图22所示的变换规则表格291选择变换关键字，并对所选择的变换关键字进行了加密的情况下，以图23所示那样的登记比例在登记数据表格391中登记各加密关键字。</p>
+    <p>[0378]	例如，作为登记频度是“28”的加密关键字，存在“E (佐藤_1)”、“E (铃木_1)”、“E(高桥-1)”这3 (=k)种加密关键字。因此，无法确定这些3个加密关键字中的哪一个是与检索关键字“佐藤(或者铃木、高桥)”对应的数据。</p>
+    <p>[0379]	S卩，由于“3-匿名性”被保证，所以加密关键字的频度分析是困难的。</p>
+    <p>[0380]	同样地，对于其他登记频度“22”、“7”、“1”，也在3 (=k)种以上的加密关键字中共用。因此，由于“3-匿名性”被保证，所以加密关键字的频度分析是困难的。</p>
+    <p>[0381]	图24是示出实施方式2中的检索关键字表格491和已分割频度表格492的其他例的图。</p>
+    <p>[0382]	图25是示出实施方式2中的变换规则计算处理(SllO)的再分割处理(S116B)的流程图。</p>
+    <p>[0383]	图26、图27是实施方式2中的再分割处理(SI 16B)的概要图。</p>
+    <p>[0384]	基于图24-图27，说明在S115B中“O”以外的出现频度仅残留不足“k”个的情况(“否”)的再分割处理(S116B)。</p>
+    <p>[0385]	在基于图24所示的检索关键字表格491，而在S112B-S115B中(参照图16)分割了各检索关键字的出现频度的情况下，得到图24的(I)已分割频度表格492。</p>
+    <p>[0386]	(I)已分割频度表格492中残留的“O”以外的出现频度“5”的数量是2个。即，“O”以外的出现频度仅残留不足3个(=k)，所以执行图25所示的再分割处理(S116B)。</p>
+    <p>[0387]	在S116B-1 (参照图25)中，变换规则计算部410基于已分割频度表格492，针对由相同值的已分割频度构成的每个已分割频度组计算已分割频度组所包含的已分割频度的数量。以下，将已分割频度组所包含的已分割频度的数量称为“组内频度数”。</p>
+    <p>[0388]	在图24所示的(I)已分割频度表格492中，包括由3个已分割频度“28”构成的“28”已分割频度组、由4个已分割频度“22”构成的“22”已分割频度组、以及由5个已分割频度“7”构成的“7”已分割频度组这3个组。在该情况下，“28”已分割频度组的组内频度数是“3”，“22”已分割频度组的组内频度数是“4”，“7”已分割频度组的组内频度数是“5”。</p>
+    <p>[0389]	变换规则计算部410将组内频度数比匿名数“k”多的已分割频度组判定为“分割候补组”。其原因是满足“k_匿名性”。</p>
+    <p>[0390]	在图24所示的(I)已分割频度表格492的情况下，“22”已分割频度组和“7”已分割频度组是分割候补组。</p>
+    <p>[0391]	变换规则计算部410选择由最小的已分割频度构成的分割候补组作为“再分割频</p>
+    <p>度组”。[0392]	在图24所示的(I)已分割频度表格492的情况下，“7”已分割频度组是再分割频度组。</p>
+    <p>[0393]	但是，变换规则计算部410既可以选择由最大的已分割频度构成的分割候补组作为再分割频度组，也可以选择组内频度数最多(或者少)的已分割频度组作为再分割频度组，也可以从各分割候补组随机地选择再分割频度组。</p>
+    <p>[0394]	变换规则计算部410从再分割频度组所包含的多个已分割频度选择返回到出现频度的已分割频度作为“再分割频度”。</p>
+    <p>[0395]	例如，变换规则计算部410以与再分割频度组内的剩余的已分割频度对应的检索关键字的数量成为匿名数“k”以上为条件来选择再分割频度。</p>
+    <p>[0396]	在图24所示的(I)已分割频度表格492的情况下，变换规则计算部410选择检索关键字“中村”的已分割频度“ 7 ”作为再分割频度。</p>
+    <p>[0397]在	S116B-1 之后，进入 S116B-2。</p>
+    <p>[0398]	在S116B-2中，变换规则计算部410将再分割频度加到分割源(减法源)的出现频度来更新分割源的出现频度，删除再分割频度。由此，再分割频度从“已分割频度”返回到分割源的“出现频度”。</p>
+    <p>[0399]	例如，如果在图26所示的(I)已分割频度表格492中使再分割频度“7”返回到出现频度，则得到(2)已分割频度表格492。</p>
+    <p>[0400]在	S116B-2 之后，进入 S116B-3。</p>
+    <p>[0401]	在S116B-3中，变换规则计算部410判定在已分割频度表格492中“O”以外的出现频度是否残留有“k”个以上。</p>
+    <p>[0402]	在“O”以外的出现频度残留有“k”个以上的情况下(“是”)，进入S116B-4。</p>
+    <p>[0403]	在“O”以外的出现频度仅残留不足“k”个的情况下(“否”)，返回S116B-1。</p>
+    <p>[0404]	在S116B-4中，变换规则计算部410决定用于对已分割频度表格492中残留的各出现频度(古O)进行分割的已分割频度的组合，以所决定的已分割频度的组合来分割各出现频度。</p>
+    <p>[0405]	其中，设变换规则计算部410使用构成已分割频度的组合的所有已分割频度来分割各出现频度。</p>
+    <p>[0406]	S卩，各出现频度通过与其他出现频度相同的已分割频度的组合而来被分割。由此，能够满足“k_匿名性”。</p>
+    <p>[0407]	在图27所示的(2)已分割频度表格492中残留有出现频度“5”、“5”、“7”。出现频度“ 5 ”、“ 5 ”、“ 7 ”能够分别组合“ 3 ”和“ 2 ”来分割。在将出现频度“ 5 ”、“ 5 ”、“ 7 ”分割为已分割频度“3”、“2”的情况下，得到(3)已分割频度表格492。</p>
+    <p>[0408]	例如，变换规则计算部410循环地分割各出现频度(分割的穷举搜索)来生成多个组合候补，针对所生成的每个组合候补计算依照该组合候补分割了各出现频度的情况下的已分割频度的总数。然后，变换规则计算部410将已分割频度的总数最少的组合候补选择为已分割频度的组合，以所选择的已分割频度的组合来分割各出现频度。该已分割频度的组合是使变换关键字数的平均值最小的组合。由此，能够使检索请求数据所包含的检索请求关键字(加密关键字)的数量的平均值最小。</p>
+    <p>[0409]	例如，出现频度“ 5 ”、“ 5 ”、“ 7 ”还能够以“4”和“ I ”的组合、“ 3 ”和“ I ”的组合或者“2”和“I”的组合来分割。但是，在以“3”和“2”的组合来分割了各出现频度的情况下已分割频度的总数变得最少。因此，变换规则计算部410将出现频度“5”、“5”、“7”分割为已分割频度“3”、“2”。</p>
+    <p>[0410]	但是，变换规则计算部410也可以针对每个组合候补计算依照该组合候补来分割了各出现频度的情况下的变换关键字数的最大值，将变换关键字数的最大值为最小的组合候补选择为已分割频度的组合。由此，能够减小检索请求数据所包含的检索请求关键字的数量的最大值。</p>
+    <p>[0411]	通过S116B-4，再分割处理(S116B)结束。</p>
+    <p>[0412]	此处，进行图16所示的变换规则计算处理(SllO)的补充说明。</p>
+    <p>[0413]	在S115B (图16)中，在“O”以外的出现频度残留有“k”个以上的情况下(“是”)，也可以通过进行与在图25中说明了的再分割处理(S116B)相同的处理，来使已分割频度最优化。</p>
+    <p>[0414]	图28-图30是示出实施方式2中的已分割频度的最优化的图。</p>
+    <p>[0415]	基于图20、图28-图30，说明已分割频度的具体例。</p>
+    <p>[0416]	在图20中在(4)已分割频度表格492中新设定的已分割频度“7”的数量比3 (=k)个多。</p>
+    <p>[0417]	此时，虽然“O”以外的出现频度“5”、“5”、“ I”残留有3 (=k)个以上，但在剩余的出现频度“5”、“5”、“I”中第3 (=k)大的出现频度“I”(运算频度)是规定的频度阈值(例如I)以下。</p>
+    <p>[0418]	因此，变换规则计算部410使5个已分割频度“7”中的满足“3-匿名性”的检索关键字“中村”的已分割频度“7”返回到出现频度。由此，得到图28的(5)已分割频度表格492。</p>
+    <p>[0419]	变换规则计算部410分割剩余的出现频度“7”、“5”、“5”、“1”而生成已分割频度</p>
+    <p>的组合候补。其中，设各已分割频度的组合候补满足“3-匿名性”。即，满足构成已分割频度的组合候补的各已分割频度与3 (=k)个以上的检索关键字对应起来地被设定这样的条件。</p>
+    <p>[0420]	然后，变换规则计算部410从所生成的已分割频度的组合候补选择已分割频度的组合，以所选择的已分割频度的组合分割各出现频度“7”、“5”、“5”、“1”。</p>
+    <p>[0421]	在图29的(A)已分割频度表格492中示出使变换关键字数的平均值(已分割频度的总数)为最少而得到的分割结果，在图29的(B)已分割频度表格492中示出使变换关键字数的最大值为最小而得到的分割结果。</p>
+    <p>[0422]	(A)已分割频度表格492的变换关键字数的平均值是“2.5”，是比图21所示的(5)已分割频度表格492的变换关键字数的平均值“2.875”小的值。</p>
+    <p>[0423]	(B)已分割频度表格492的变换关键字数的最大值是“5”(检索关键字:佐藤、中村)，是比图21所示的(5)已分割频度表格492的变换关键字数的最大值“7”(检索关键字:佐藤)小的值。</p>
+    <p>[0424]	进而，变换规则计算部410也可以针对多个“k-匿名性”生成已分割频度表格492。</p>
+    <p>[0425]	在该情况下，变换规则计算部410判定所生成的已分割频度表格492中的满足规定的最优化条件的已分割频度表格492，选择满足规定的最优化条件(例如，检索关键字数的平均值或者最大值)的已分割频度表格492中的“k”的值为最大的已分割频度表格492。</p>
+    <p>[0426]	例如，变换规则计算部410生成“3-匿名性”、“4-匿名性”、“5_匿名性”的已分割频度表格492。</p>
+    <p>[0427]	图30示出“3-匿名性”的已分割频度表格492以及“4_匿名性”的已分割频度表格492。关于“5-匿名性”的已分割频度表格492，图示省略。</p>
+    <p>[0428]	变换规则计算部410计算“3-匿名性”、“4-匿名性”、“5_匿名性”的检索关键字数的平均值。在图30的情况下，“3-匿名性”的检索关键字数的平均值是“2.5”，“4-匿名性”的检索关键字数的平均值是“2.75”。另外，设为“5-匿名性”的检索关键字数的平均值是 “3.5”。</p>
+    <p>[0429]	变换规则计算部410将各检索关键字数的平均值“2.5”、“2.75”、“3.5”与规定的最优化条件值“3.0”进行比较。在该情况下，“3-匿名性”的检索关键字的平均值“2.5”以及“4-匿名性”的检索关键字的平均值“2.75”是在最优化条件值“3.0”以下，满足最优化条件。</p>
+    <p>[0430]	因此，变换规则计算部410选择“3-匿名性”的已分割频度表格492和“4_匿名性”的已分割频度表格492中的“k”的值大的“4-匿名性”的已分割频度表格492。</p>
+    <p>[0431]	如上所述，变换规则计算部410也可以使已分割频度表格492最优化。</p>
+    <p>[0432]	变换规则管理装置400的变换规则管理方法的其他处理(S120-S140)与实施方式I (参照图6)相同。</p>
+    <p>[0433]	另外，数 据登记装置500的数据登记方法、信息处理装置200的检索方法以及服务器装置300的检索方法与实施方式I (参照图10、13、14)相同。</p>
+    <p>[0434]	在实施方式2中，例如，说明了如以下那样的隐匿检索系统100。</p>
+    <p>[0435]	在隐匿检索系统100中作为安全性的指标定义“k_匿名性”这样的指标，基于该指标，变换规则管理装置400生成变换规则。</p>
+    <p>[0436]	由此，能够减小在检索时信息处理装置200发送到服务器装置300的检索请求的大小。</p>
+    <p>[0437]	k-匿名性是指，在攻击者得到关键字的频度分布、变换规则、加密关键字的频度分布的所有信息的基础上由加密关键字推测关键字的情况下，针对任意的加密关键字，可对应的关键字存在k个以上。</p>
+    <p>[0438]	在隐匿检索系统100中，信息处理装置200能够在使数据和关键字相对服务器装置300保持隐匿的状态下进行检索。</p>
+    <p>[0439]	通过满足k_匿名性这样的性质，能够防止通过服务器装置300确定关键字，进而相比于实施方式I，能够减小检索请求的大小。</p>
+    <p>[0440]	例如，在基于图17所示的检索关键字表格491生成了变换规则表格291的情况下，在实施方式I中，为了使各变换关键字的出现频度均匀，需要针对检索关键字“佐藤”，设置出现频度是“I”的40个变换关键字。另一方面，在实施方式2中，如图22所示，针对检索关键字“佐藤”设置7个变换关键字即可。即，由于实施方式2的变换关键字数更少，所以实施方式2的检索请求数据的大小更小。</p>
+    <p>[0441]	实施方式3.[0442]	作为满足“k_匿名性”的隐匿检索系统100的方式，说明与实施方式2不同的方式。</p>
+    <p>[0443]	以下，主要说明与实施方式1-2不同的事项。关于省略说明的事项，与实施方式1-2相同。</p>
+    <p>[0444]	隐匿检索系统100的装置结构以及各装置的功能结构与实施方式I (参照图1-5)相同。</p>
+    <p>[0445]	但是，变换规则管理装置400的变换规则计算部410如以下那样计算变换关键字数和变换概率。</p>
+    <p>[0446]	变换规则计算部410使用规定的基数的幂值，针对每个检索关键字将检索关键字的出现频度分割为多个出现频度。</p>
+    <p>[0447]	变换规则计算部410针对每个检索关键字计算出现频度的分割数作为变换关键字数(对应关键字数)。</p>
+    <p>[0448]	变换规则计算部410计算已分割频度(分割后的出现频度)相对分割前的出现频度的比例作为变换概率(对应关键字选择率)。</p>
+    <p>[0449]	另外，变换规则计算部410使用基数的幂值来分割各检索关键字的已分割频度中的具有该已分割频度的检索关键字的数量小于规定的匿名数“k”的已分割频度。</p>
+    <p>[0450]	图31是实施方式3中的变换规则计算处理(SllO)的流程图。</p>
+    <p>[0451]	图32、图33是实施方式3中的变换规则计算处理(SllO)的概要图。</p>
+    <p>[0452]	基于图31-33说明实施方式3中的变换规则计算处理(S110)。</p>
+    <p>[0453]	在SlllC (参照图31)中，变换规则计算部410使用规定的基数值“p”对已分割频度表格492中设定的各出现频度进行P进制展开，将各出现频度分割为多个已分割频度。</p>
+    <p>[0454]	在图32中，关于(I)已分割频度表格492中设定的各出现频度，能够如(2)已分割频度表格492中设定的已分割频度那样进行2进制展开。</p>
+    <p>[0455]	例如，检索关键字“佐藤”的出现频度“40”被分割为对基数“2 (=p)”进行5次方而得到的值“32”和对基数“2”进行3次方而得到的值“8”。</p>
+    <p>[0456]	但是，也可以通过以“2”以外的值(例如，3、5)作为基数的幂值来分割各出现频度。</p>
+    <p>[0457]	返回图31，继续变换规则计算处理(SllO)的说明。</p>
+    <p>[0458]在	SlllC 之后，进入 S112C。</p>
+    <p>[0459]	在S112C中，变换规则计算部410基于已分割频度表格492针对已分割频度的每个值计算已分割频度的个数。以下，将已分割频度的个数称为“频度个数”。</p>
+    <p>[0460]	变换规则计算部410判定是否有频度个数小于匿名数“k”的已分割频度。</p>
+    <p>[0461]	在有频度个数小于匿名数“k”的已分割频度的情况下(“是”)，进入S113C。</p>
+    <p>[0462]	在无频度个数小于匿名数“k”的已分割频度的情况下(“否”)，进入S114C。</p>
+    <p>[0463]	在图32的(2)已分割频度表格492的情况下，已分割频度“32”的频度个数是“2”，已分割频度“16”的频度个数是“6”，已分割频度“8”的频度个数是“3”，已分割频度“4”的频度个数是“5”，已分割频度“2”的频度个数是“5”，已分割频度“I”的频度个数是“4”。</p>
+    <p>[0464]	在该情况下，已分割频度“32”的频度个数“2”小于“3 (=k)”。</p>
+    <p>[0465]	因此，处理进入S113C。</p>
+    <p>[0466]	返回图31，从S113C继续说明。</p>
+    <p>[0467]	在S113C中，变换规则计算部410对频度个数小于匿名数“k”的已分割频度(以下，称为“再分割频度”)进行P进制展开来分割。</p>
+    <p>[0468]	图33的(2)已分割频度表格492中设定的再分割频度“32”能够分割为对2 (=p)进行4次方而得到的值“16”。由此，得到(3)已分割频度表格492。</p>
+    <p>[0469]	返回图31，继续变换规则计算处理(SllO)的说明。</p>
+    <p>[0470]在	S113C 之后，返回 S112C。</p>
+    <p>[0471]	在图33所示的(3)已分割频度表格492中，所有已分割频度的频度个数都是“3(=k)，，以上。</p>
+    <p>[0472]	因此，在S112C之后，进入S114C (参照图31)。</p>
+    <p>[0473]	在S114C中，变换规则计算部410基于已分割频度表格492针对每个变换关键字计算已分割频度的数量作为“变换关键字数”，计算各已分割频度的比例作为“变换概率”。</p>
+    <p>[0474]	在图33的(3)已分割频度表格492的情况下，检索关键字“佐藤”的已分割频度是“16”、“ 16”、“8”。</p>
+    <p>[0475]因此，变换规则计算部410计算检索关键字“佐藤”的已分割频度的个数“3”作为</p>
+    <p>检索关键字“佐藤”的变换关键字数。</p>
+    <p>[0476]	进而，变换规则计算部410计算检索关键字“佐藤”的各已分割频度的比例“16/40”、“ 16/40”、“8/40”作为检索关键字“佐藤”的各变换关键字的变换概率。</p>
+    <p>[0477]	变换规则计算部410针对其他检索关键字的变换关键字数以及变换概率也同样地求出。</p>
+    <p>[0478]	图34是示出实施方式3中的变换规则表格291的图。</p>
+    <p>[0479]	图35是示出实施方式3中的加密关键字的登记频度的图。</p>
+    <p>[0480]	基于图33所示的(3)已分割频度表格492来生成图34所示的变换规则表格291。</p>
+    <p>[0481]	例如，在变换规则表格291中与检索关键字“佐藤”对应起来地设定与变换关键字数“3”相同的个数的变换关键字“佐藤-1&#12316;3”。</p>
+    <p>[0482]	另外，在变换规则表格291中，与检索关键字“佐藤”的各变换关键字对应起来地设定变换概率 “ 16/40 ”、“ 16/40 ”、“ 8/40 ”。</p>
+    <p>[0483]	在基于图34的变换规则表格291选择变换关键字，并对所选择的变换关键字进行了加密的情况下，各加密关键字以图35所示那样的登记比例被登记到登记数据表格391。</p>
+    <p>[0484]	各登记频度在3 (=k)种以上的加密关键字中共用。因此，“3-匿名性”被保证，力口密关键字的频度分析是困难的。</p>
+    <p>[0485]	变换规则计算部410也可以使已分割频度表格492最优化。</p>
+    <p>[0486]	例如，变换规则计算部410如以下那样使已分割频度表格492最优化。</p>
+    <p>[0487]	参照已分割频度表格492，变换规则计算部410将即使进行合并也仍满足“k_匿名性”的已分割频度的组合判定为“合并候补”。</p>
+    <p>[0488]	变换规则计算部410针对每个合并候补合并已分割频度来生成已分割频度表格492。</p>
+    <p>[0489]	变换规则计算部410针对每个已分割频度表格492计算变换关键字数的平均值(或者变换关键字数的最大值)。</p>
+    <p>[0490]	变换规则计算部410选择变换关键字数的平均值(或者变换关键字数的最大值)最小的已分割频度表格492。[0491]	图36是示出实施方式3中的已分割频度表格492的最优化的具体例的图。</p>
+    <p>[0492]	在图36所示的(3)已分割频度表格492的情况下，作为满足“3_匿名性”的合并候补，可以举出{16、8}、{16、4}、{16、2}、{16、1}。其原因是，即使选择某个合并候补来合并已分割频度，合并后的各已分割频度在3 (=k)个以上的检索关键字中仍共用。</p>
+    <p>[0493]	例如，在将合并候补{16、2}合并为已分割频度“18 (=16+2)”的情况下，得到图36所示的(4)已分割频度表格492。(4)已分割频度表格492的变换关键字数的平均值是“2.75”。</p>
+    <p>[0494]	另外，合并了合并候补{16、8}的情况下的变换关键字数的平均值是“3.0”，合并了合并候补{16、4}的情况下的变换关键字数的平均值是“2.75”，合并了合并候补{16、1}的情况下的变换关键字数的平均值是“2.875”。</p>
+    <p>[0495]	S卩，由于合并了合并候补{16、2}的情况下的变换关键字数的平均值“2.75”最小，所以变换规则计算部410选择合并了合并候补{16、2}的(4)已分割频度表格492。但是，即使在合并了合并候补{16、4}的情况下，由于变换关键字数的平均值也是“2.75”，所以变换规则计算部410可以选择合并了合并候补{16、4}的已分割频度表格492。</p>
+    <p>[0496]	图37、38示出基于合并了合并候补{16、2}的(4)已分割频度表格492的变换规则表格291和加密关键字的登记频度。</p>
+    <p>[0497]	另外，变换规则计算部410也可以从多个合并候补随机地选择某一个合并候补，采用所选择的合并候补来生成已分割频度表格492。</p>
+    <p>[0498]	在上述中，通过P进制法展`开对检索关键字的出现频度进行了分割，但也可以依照P进制法以外的分割规则来分割检索关键字的出现频度。</p>
+    <p>[0499]	例如，预先定义由多个分割值“1、5、10、50、100、500、…”构成的分割规则。然后，变换规则计算部410依照该分割规则来分割检索关键字的出现频度。在该情况下，出现频度 “28” 被分割为 “ 10”、“ 10”、“5”、“ I ”、“ I ”、“ I ”。</p>
+    <p>[0500]	变换规则管理装置400的变换规则管理方法的其他处理(S120-S140)与实施方式I (参照图6)相同。</p>
+    <p>[0501]	另外，数据登记装置500的数据登记方法、信息处理装置200的检索方法以及服务器装置300的检索方法与实施方式I (参照图10、13、14)相同。</p>
+    <p>[0502]	通过实施方式3，能够得到与实施方式2相同的效果。</p>
+    <p>[0503]	实施方式4.[0504]	对将在攻击者推测关键字时的不确定性(熵)作为安全性指标来计算变换关键字数和变换概率的方式进行说明。</p>
+    <p>[0505]	以下，主要说明与实施方式1-3不同的事项。关于省略说明的事项，与实施方式1-3相同。</p>
+    <p>[0506]	隐匿检索系统100的装置结构以及各装置的功能结构与实施方式I (参照图1-5)相同。</p>
+    <p>[0507]	但是，变换规则管理装置400的变换规则计算部410如以下那样计算变换关键字数和变换概率。</p>
+    <p>[0508]	在变换规则计算部410中，基于各检索关键字的出现频度，计算通过规定的组合将检索关键字和特定数量的变换关键字对应起来的概率，作为针对每个检索关键字设置了特定数量的变换关键字的情况下的发生概率值(对应概率值)。</p>
+    <p>[0509]	变换规则计算部410基于所计算出的发生概率值来计算检索关键字和特定数量的变换关键字的组合的熵作为熵值。</p>
+    <p>[0510]	变换规则计算部410对所计算出的熵值乘以发生概率值来计算熵指标值。</p>
+    <p>[0511]	变换规则计算部410将所计算出的熵指标值与规定的熵阈值进行比较。</p>
+    <p>[0512]	变换规则计算部410在熵指标值大于熵阈值的情况下，计算变换关键字的特定数量作为变换关键字数。</p>
+    <p>[0513]	变换规则计算部 410计算变换关键字数的倒数作为变换概率(变换关键字选择率)。</p>
+    <p>[0514]	图39是示出实施方式4中的变换规则计算处理(SllO)的流程图。</p>
+    <p>[0515]	基于图39，说明实施方式4中的变换规则计算处理(S110)。</p>
+    <p>[0516]	以下，设作为表示安全性的参数值，提供了登记数据数“N”和熵阈值“H”。</p>
+    <p>[0517]	在SlllD中，变换规则计算部410对变量“关键字变换数w”设定初始值“I”。但是，初始值也可以是2以上的整数。</p>
+    <p>[0518]在	SlllD 之后，进入 S112D。</p>
+    <p>[0519]	在S112D中，变换规则计算部410基于各检索关键字的出现频度来计算针对每个检索关键字设置了关键字变换数w的变换关键字的情况下的发生概率值。发生概率值是指，将检索关键字和关键字变换数w的变换关键字通过正确的组合对应起来的概率。</p>
+    <p>[0520]	图40是示出实施方式4中的检索关键字表格491的图。</p>
+    <p>[0521]	图41是示出实施方式4中的变换规则表格291的一个例子的图。</p>
+    <p>[0522]	图42、图43是示出实施方式4中的检索关键字和变换关键字的组合的一个例子的图。</p>
+    <p>[0523]	在基于图40所示的检索关键字表格491针对检索关键字“已婚”设置了 I (=w)个变换关键字“已婚-1”，针对检索关键字“未婚”设置了 I个变换关键字“未婚-1”的情况下，得到图41所示的(I)变换规则表格291。</p>
+    <p>[0524]	在将对变换关键字“已婚_1”、“未婚-1”进行加密而得到的加密关键字设为“E (已婚-1)”、“E (未婚-1)”的情况下，检索关键字和加密关键字的组合如图42的(1)、(2)所示存在2组。图42的(I)的组合是正确的组合。</p>
+    <p>[0525]	另外，在关键字变换数w是“2”的情况下，基于图40所示的检索关键字表格491来得到图41所示的(2)变换规则表格291。</p>
+    <p>[0526]	在该情况下，检索关键字和加密关键字的组合如图43的(I)&#12316;(6)所示存在6组。</p>
+    <p>[0527]	如图40所示，检索关键字“已婚”的出现频度是“75% (=3/4)”，检索关键字“未婚”的出现频度是“25% (=1/4)”。</p>
+    <p>[0528]	因此，加密关键字“E (已婚-1)”的登记频度是“75% (=3/4)”，加密关键字“E (未婚-1)”的登记频度是“25% (=1/4)”。</p>
+    <p>[0529]	此处，在登记数据数“N=10”的情况下，存在在登记数据表格391 (参照图11)中登记I个加密关键字“E (已婚-1)”和9个加密关键字“E (未婚-1)”的可能性。</p>
+    <p>[0530]	另外，还存在登记2个、3个、…、10个加密关键字“E (已婚-1)”的可能性。进而，还存在未登记加密关键字“E (已婚-1)”、即加密关键字“E (已婚-1)”是O个的可能性。[0531]	但是，由于变换关键字被加密，所以即使观察加密关键字仍无法判别加密关键字是对哪个变换关键字进行加密而得到的数据。因此，检索关键字和加密关键字的正确的组合不清楚。</p>
+    <p>[0532]	例如，如果设在登记数据表格391中登记有6个加密关键字“E (已婚-1)”和4个加密关键字“E (未婚-1)”，则在如图42的(I)所示那样正确地组合了检索关键字和加密关键字的情况下，登记有6个加密关键字“E (已婚-1)”和4个加密关键字“E (未婚-1)”的登记概率是3741° (= (3/4) 6X (1/4)4)。该值是基于登记数据数“10”、加密关键字的登记数“6”、“4”以及加密关键字的登记频度“3/4”、“1/4”的值。</p>
+    <p>[0533]	同样地，如图42的(2)所示，将检索关键字和加密关键字错误地组合了的情况下的登记概率是 34/41Q (= (3/4) 4X (1/4)6)。</p>
+    <p>[0534]	因此，图42的(I)的组合是正确的组合的似然度是0.9 (= (36/410) /(36/410+34/410))。同样地，图42的(I)的组合是错误的组合的似然度是0.1 (= (34/410)/(36/4io+34/4io))o这些值是使用登记概率“Υ/Ρ&#906;4/#”通过贝叶斯定理来计算的值。以下，将计算出的似然度称为“发生概率值”。</p>
+    <p>[0535]	变换规则计算部410针对加密关键字“Ε (已婚-1)”的每个登记数，如上所述地计算发生概率值。但是，也可以基于蒙特卡洛(Monte Carlo)法，随机地选择一个以上的具有N个登记数据的登记数据表格，针对所选择的每个登记数据表格来计算发生概率值。</p>
+    <p>[0536]在	S112D (图 39)之后，进入 S113D。</p>
+    <p>[0537]	在S113D中，变换规则计算部410基于在S112D中计算出的发生概率值，计算检索关键字和变换关键字的组合的熵，作为熵值。但是，变换规则计算部410针对加密关键字“E(已婚-1)”的每个登记数来计算熵值。另外，当针对在S112D中随机地选择出的每个登记数据表格来计算了发生概率值的情况下，变换规则计算部410针对计算了发生概率值的每个登记数据表格来计算熵值 。</p>
+    <p>[0538]	例如，在发生概率值是“0.9”、“0.1”的情况下，熵值是0.47 (&#12316;&#8212;(0.91og20.9+0.1log20.1))。</p>
+    <p>[0539]在	S113D 之后，进入 S114D。</p>
+    <p>[0540]	在S114D中，变换规则计算部410针对加密关键字“E (已婚-1)”的每个登记数，将在S113D中计算出的熵值A乘以所述登记数的加密关键字“E (已婚-1)”发生的概率B，来计算加权熵值C (=AXB)。</p>
+    <p>[0541]	以下，将与加密关键字“E (已婚-1)”的登记数η (η是O以上N以下的整数)对应的加权熵值记为“Cn”。</p>
+    <p>[0542]	变换规则计算部410计算加权熵值Cn的合计值作为熵指标值“h”。</p>
+    <p>[0543]在	S114D 之后，进入 S115D。</p>
+    <p>[0544]	在S115D中，变换规则计算部410比较在S114D中计算出的熵指标值“h”和预先提供的熵阈值“H”。</p>
+    <p>[0545]	在熵指标值“h”是在熵阈值“H”以上的情况下(“是”)，进入S117D。</p>
+    <p>[0546]	在熵指标值“h”小于熵阈值“H”的情况下(“否”)，进入S116D。</p>
+    <p>[0547]	在S116D中，变换规则计算部410对关键字变换数“w”加上相加值“ I”。但是，相加值也可以是2以上的整数。另外，也可以将关键字变换数“w”进行整数倍运算。[0548]在	S116D 之后，返回 S112D。</p>
+    <p>[0549]	在S117D中，变换规则计算部410将关键字变换数“w”作为变换关键字数输出。</p>
+    <p>[0550]	另外，变换规则计算部410计算变换关键字数的倒数“ Ι/w”作为各变换关键字的变换概率。</p>
+    <p>[0551]	变换规则管理装置400的变换规则管理方法的其他处理(S120-S140)与实施方式</p>
+    <p>I	(参照图6)相同。</p>
+    <p>[0552]	但是，在变换规则表格291中也可以不针对每个变换关键字设定变换概率。其原因是，由于各变换关键字的变换概率相同，所以另行存储一个变换概率即可。</p>
+    <p>[0553]	另外，数据登记装置500的数据登记方法、信息处理装置200的检索方法以及服务器装置300的检索方法与实施方式I (参照图10、13、14)相同。</p>
+    <p>[0554]	以下，对实施方式4进行补充说明。</p>
+    <p>[0555]	频度分析攻击是指，通过比较检索关键字的频度分布和加密关键字的频度分布来将它们对应起来，推测加密关键字的内容的攻击。</p>
+    <p>[0556]	在攻击者充分地得到加密关键字的情况下，可认为加密关键字的频度分布充分接近检索关键字的频度分布。</p>
+    <p>[0557]	因此，在各实施方式中，制作多个具有同一频度的加密关键字，防止检索关键字的确定。</p>
+    <p>[0558]	在攻击者得到的加密关键字的量少的情况下，加密关键字的频度分布与检索关键字的频度分布不一定一致。</p>
+    <p>[0559]	在该情况下，不仅无法确定频度一致的加密关键字的内容，而且推测频度接近的加密关键字的内容也变得困难。</p>
+    <p>[0560]	因此，在实施方式4中，假设攻击者得到被限定的量的加密关键字，将加密关键字和检索关键字的对应起来的不确定性(熵)用数值来表示，将该数值作为安全性指标，生成变换规则。</p>
+    <p>[0561]	在实施方式4中，例如，说明了以下那样的隐匿检索系统100。</p>
+    <p>[0562]	在隐匿检索系统100中，信息处理装置200能够在对服务器装置300隐匿了数据和关键字的状态下进行检索。</p>
+    <p>[0563]	能够通过基于熵的安全性来在利用服务器装置300进行的关键字推测中确保某种程度的不确定性，进而相比于实施方式1，能够减小检索请求的大小。</p>
+    <p>[0564]	另外，通过使各变换关键字的变换概率(检索关键字的频度分割数)为恒定，能够减小变换规则表格291的数据大小。其原因是，也可以不针对每个变换关键字设定变换概率。</p>
+    <p>[0565]	但是，也可以使变换概率针对每个变换关键字是可变的。例如也可以如“关东地方的都县名是10分割”、“近畿地方的府县名是9分割”那样，对检索关键字进行分组来针对每个组使用恒定的变换概率。</p>
+    <p>[0566]	在上述说明中，在固定了熵这样的安全性的下限的基础上进行了检索请求大小的削减、变换规则的简化，但也可以在固定了检索请求大小、变换规则的复杂度的基础上提高安全性。</p>
+    <p>[0567]	例如，也可以利用将检索请求大小的平均值(关键字变换数W、变换关键字数的平均值)限定为2以下而使熵成为最大的变换规则。</p>
+    <p>[0568]另外，在检索关键字的分组中，也可以利用在将组数限定为3个的分割中熵成为最大的变换规则。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN1858747A?cl=zh">CN1858747A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年4月30日</td><td class="patent-data-table-td patent-date-value">2006年11月8日</td><td class="patent-data-table-td ">北京金山软件有限公司</td><td class="patent-data-table-td ">一种数据存储/检索方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101276368A?cl=zh">CN101276368A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年1月10日</td><td class="patent-data-table-td patent-date-value">2008年10月1日</td><td class="patent-data-table-td ">株式会社东芝</td><td class="patent-data-table-td ">信息检索装置和方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D2001507837A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNEHCg8ruQi98y_VJNn-R0xQEjjxXg">JP2001507837A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DJP%26NR%3D2005072917A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGH-9w9UtxnWxC0Mfe1yywbO2duNg">JP2005072917A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td "> </td><td class="patent-data-table-td citation-no-title">没有名称</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0009000000">H04L9/00</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F2221/2123">G06F2221/2123</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L9/0894">H04L9/0894</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/6227">G06F21/6227</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/60">G06F21/60</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L9/002">H04L9/002</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=TXrgCAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F21/6218">G06F21/6218</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年11月6日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年12月4日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2016年1月13日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/3d8cdbdf6154b1df91bd/CN103384980A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5bd24152bf5a1e342ae546da267fae0b.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E6%A3%80%E7%B4%A2%E7%B3%BB%E7%BB%9F_%E6%A3%80%E7%B4%A2%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A3%80%E7%B4%A2%E6%96%B9%E6%B3%95.pdf?id=TXrgCAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U200UJSFO-EuOp889UX5OG9ZHgZMQ"},"sample_url":"https://www.google.com/patents/reader?id=TXrgCAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

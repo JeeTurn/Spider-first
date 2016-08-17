@@ -1,0 +1,345 @@
+<!DOCTYPE html><html><head><title>专利 CN103095479A - 业务配置的方法及装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="业务配置的方法及装置"><meta name="DC.contributor" content="康娇" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2011-11-4" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种业务配置的方法及装置，涉及通信网络技术领域。包括解析接收到的业务请求，获取业务标识；根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口；根据业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式；将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。本发明实施例提供的方案适合在实现业务配置时采用，可以减少系统中的冗余数据，提高系统的处理性能。"><meta name="DC.date" content="2013-5-8"><meta name="DC.relation" content="CN:101621435:A" scheme="references"><meta name="DC.relation" content="US:20050262397:A1" scheme="references"><meta name="DC.relation" content="US:20080289012:A1" scheme="references"><meta name="DC.relation" content="US:20110020631:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:103095479:A"><meta name="citation_patent_application_number" content="CN:201110345963"><link rel="canonical" href="https://www.google.com/patents/CN103095479A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103095479A?cl=zh"/><meta name="title" content="专利 CN103095479A - 业务配置的方法及装置"/><meta name="description" content="本发明公开了一种业务配置的方法及装置，涉及通信网络技术领域。包括解析接收到的业务请求，获取业务标识；根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口；根据业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式；将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。本发明实施例提供的方案适合在实现业务配置时采用，可以减少系统中的冗余数据，提高系统的处理性能。"/><meta property="og:title" content="专利 CN103095479A - 业务配置的方法及装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103095479A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103095479A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103095479A&amp;usg=AFQjCNFXN05yCVlN1tftW8oWRj6eL-7jQQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/8330e166737baa5cd2f0/CN103095479A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/8330e166737baa5cd2f0/CN103095479A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103095479A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103095479A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103095479A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种业务配置的方法及装置，涉及通信网络技术领域。包括解析接收到的业务请求，获取业务标识；根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务...</span><span itemprop="url">https://www.google.com/patents/CN103095479A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103095479A - 业务配置的方法及装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103095479A - 业务配置的方法及装置" title="专利 CN103095479A - 业务配置的方法及装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103095479 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110345963</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年5月8日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年11月4日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年11月4日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/EP2765756A1?hl=zh-CN&amp;cl=zh">EP2765756A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2765756A4?hl=zh-CN&amp;cl=zh">EP2765756A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20140244809?hl=zh-CN&amp;cl=zh">US20140244809</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2013064080A1?hl=zh-CN&amp;cl=zh">WO2013064080A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110345963.1, </span><span class="patent-bibdata-value">CN 103095479 A, </span><span class="patent-bibdata-value">CN 103095479A, </span><span class="patent-bibdata-value">CN 201110345963, </span><span class="patent-bibdata-value">CN-A-103095479, </span><span class="patent-bibdata-value">CN103095479 A, </span><span class="patent-bibdata-value">CN103095479A, </span><span class="patent-bibdata-value">CN201110345963, </span><span class="patent-bibdata-value">CN201110345963.1</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%BA%B7%E5%A8%87%22">康娇</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103095479A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103095479A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103095479A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (4),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (1),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (6),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110345963&amp;usg=AFQjCNFfCOW5y-C4BSEhjIGGpVqlqnUoDg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103095479A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHczp6MHUEVdkkjJEaAjVXNgEImcw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT124095200" lang="ZH" load-source="patent-office">业务配置的方法及装置</invention-title>
+      </span><br><span class="patent-number">CN 103095479 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA111060405" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种业务配置的方法及装置，涉及通信网络技术领域。包括解析接收到的业务请求，获取业务标识；根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口；根据业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式；将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。本发明实施例提供的方案适合在实现业务配置时采用，可以减少系统中的冗余数据，提高系统的处理性能。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(23)</span></span></div><div class="patent-text"><div mxw-id="PCLM52936550" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种业务配置的方法，其特征在于，包括:  解析接收到的业务请求，获取业务标识；  根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口；  根据业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式；  将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的业务配置的方法，其特征在于，所述解析接收到的业务请求，获取所述业务标识包括:  接收发送的业务请求,所述请求中包含业务的地址；  解析所述业务的地址，获取所述业务标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求1或2所述的业务配置的方法，其特征在于，所述根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口包括:  根据所述业务标识，确定所述业务标识对应的业务激活的业务接口 ；根据激活的业务接口与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求3所述的业务配置的方法，其特征在于，所述确定所述业务标识对应的目标业务或者目标业务接口包括:  根据配置的目标业务或目标业务接口的选择规则，确定所述业务标识对应的目标业务或目标业务接口 ；或者，  根据目标业务或目标业务接口的排列顺序及可使用状态，确定所述业务标识对应的目标业务或目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的业务配置的方法，其特征在于，在所述解析接收到的业务请求，获取所述业务标识之前，所述方法还包括:  配置激活的业务接口与调用的业务或者调用的业务接口之间的映射关系；或者，配置业务标识与调用的业务或者调用的业务接口之间的映射关系；  根据所述配置的激活的业务接口与调用的业务或者调用的业务接口之间的映射关系或者所述配置的业务标识与调用的业务或者调用的业务接口之间的映射关系，配置所述业务与调用的业务或者调用的业务接口之间的转换规则。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1，4或5之一所述的业务配置的方法，其特征在于，  所述业务包括不同类型的业务接口，所述业务在系统内存在唯一的业务标识，所述业务接口在所述业务中存在唯一的业务接口标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1所述的业务配置的方法，其特征在于，在将所述业务请求转发至所述目标业务或者所述目标业务接口之后，所述方法还包括:  接收所述目标业务或者所述目标业务接口发送的业务请求响应；  将所述业务请求响应发送给业务请求方，或者，根据所述业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求响应的格式，并将所述格式转换后的所述业务请求响应发送给所述业务请求方。</div>
+    </div>
+    </div> <div class="claim"> <div num="8" class="claim">
+      <div class="claim-text">8.一种业务配置的方法，其特征在于，包括:  解析接收到的业务接口请求，获取业务接口标识；  根据所述业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口；  根据业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至目标业务的格式或者目标业务接口的格式；  将转化格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求8所述的业务配置的方法，其特征在于，所述解析接收到的业务接口的请求，获取业务接口标识包括:  接收发送的业务接口请求,所述请求中包含业务接口的地址；  解析所述业务接口的地址，获取所述业务接口标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的业务配置的方法，其特征在于，所述确定目标业务或者目标业务接口包括:  根据配置的目标业务或目标业务接口的选择规则，确定所述业务接口标识对应的目标业务或目标业务接口 ；或者，  根据目标业务或目标业务接口的排列顺序及可使用状态，确定所述业务接口标识对应的目标业务或目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求8所述的业务配置的方法，其特征在于，在所述解析接收到业务接口请求，获取所述业务接口标识之前，所述方法还包括:  配置所述业务接口标识与所述调用的业务或者调用的业务接口之间的映射关系；根据所述配置的所述业务接口标识与所述调用的业务或者调用的业务接口之间的映射关系，配置所述业务接口与调用的业务或者调用的业务接口之间的转换规则。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求8所述的业务配置的方法，其特征在于，在将所述请求转发至所述目标业务接口之后，所述方法还包括:  接收所述目标业务或者所述目标业务接口发送的业务接口请求响应；  将所述业务接口请求响应发送给业务请求方；或者，根据所述业务接口与调用的业务或者调用的业务接口之间的所述转换规则，转换所述业务接口请求响应的格式，并将所述转换后的所述业务接口请求响应发送给所述业务请求方。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.一种业务配置的装置，其特征在于，包括:  获取单元，用于解析接收到的业务请求，获取业务标识并将所述业务标识发送给确定单元；  确定单元，用于在收到所述获取单元发送的业务标识后，根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口并将所述确定的所述业务标识对应的目标业务或者目标业务接口发送给转换单元；  转换单元，用于在收到所述确定单元发送的所述目标业务或者目标业务接口后，根据业务与所述调用的业务或者所述调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式并将所述转换格式后的业务请求发送给转发单元；  转发单元，用于在收到所述转换单元发送的转换格式后的业务请求后，将转换格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的业务配置的装置，其特征在于，所述获取单元还  用于接收发送的业务请求获取所述业务请求中包含业务的地址；并解析所述业务的地址获取所述业务标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求13或14所述的业务配置的装置，其特征在于，所述确定单元还用于:  根据所述业务标识，确定所述业务标识对应的业务激活的业务接口 ；并根据激活的业务接口与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的业务配置的装置，其特征在于，所述确定单元还用于根据配置的目标业务或目标业务接口的选择规则，确定所述业务标识对应的目标业务或目标业务接口 ；  或者，用于根据目标业务或目标业务接口的排列顺序及可使用状态，确定所述业务标识对应的目标业务或目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求13所述的业务配置的装置，其特征在于，所述确定单元还用于配置所述激活的业务接口与调用的业务或者调用的业务接口之间的映射关系；或者，配置所述业务标识与调用的业务或者调用的业务接口之间的映射关系；  所述确定单元还用于根据所述配置的所述激活的业务接口与调用的业务或者调用的业务接口之间的映射关系或者配置的所述业务标识与调用的业务或者调用的业务接口之间的所述映射关系，配置所述业务与调用的业务或者调用的业务接口之间的转换规则。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求13所述的业务配置的装置，其特征在于，所述转发单元还用于:  接收所述目标业务或者所述目标业务接口发送的业务请求响应，并将所述业务请求响应发送给业务请求方；或者，接收所述目标业务或者所述目标业务接口发送的业务请求响应；根据所述业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求响应的格式，并将所述格式转换后的业务请求响应发送给所述业务请求方。</div>
+    </div>
+    </div> <div class="claim"> <div num="19" class="claim">
+      <div class="claim-text">19.一种业务配置的装置，其特征在于，包括:  获取单元，用于解析接收到的业务接口请求，获取业务接口标识并将所述业务接口标识发送给确定单元；  确定单元，用于在接收到所述获取单元发送的所述业务接口标识后，根据业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口并将所述确定的所述业务接口标识对应的目标业务或者目标业务接口发送给转换单元；  转换单元，用于在接收到所述确定单元发送的所述目标业务或者目标业务接口后，根据业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至所述目标业务接口的格式并将所述转换格式后的业务接口请求发送给转发单元；  转发单元，用于在接收到所述转换单元发送的所述转换格式后的业务接口请求后，将转换格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求19所述的业务配置的装置，其特征在于，所述获取单元还  用于接收发送的业务接口请求，获取所述业务接口请求中包含的业务接口的地址，解析所述业务接口的地址获取所述业务接口标识。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求20所述的业务配置的装置，其特征在于，所述确定单元还用于根据配置的目标业务或目标业务接口的选择规则，确定所述业务接口标识对应的目标业务或目标业务接口；  或者，根据目标业务或目标业务接口的排列顺序及可使用状态，确定所述业务接口标识对应的目标业务或目标业务接口。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求19所述的业务配置的装置，其特征在于，所述确定单元还用于配置所述业务接口标识与调用的业务或者调用的业务接口之间的映射关系；  根据所述配置的所述业务接口标识与调用的业务或者调用的业务接口之间的映射关系，配置所述业务接口与调用的业务或者调用的业务接口之间的转换规则。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求19所述的业务配置的装置，其特征在于，所述转发单元还用于接收所述目标业务或者所述目标业务接口发送的业务接口请求响应，并将所述业务接口请求响应发送给业务请求方；  所述转发单元还用于，接收所述目标业务或者所述目标业务接口发送的业务接口请求响应，根据所述业务接口与调用的业务或者调用的业务接口之间的所述转换规则，转换所述业务接口请求响应的格式，并将所述格式转换后的所述业务接口请求响应发送给所述业务请求 方。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES59988391" lang="ZH" load-source="patent-office" class="description">
+    <p>业务配置的方法及装置技术领域</p>
+    <p>[0001]	本发明涉及通信网络技术领域，尤其涉及一种业务配置的方法及装置。</p>
+    <p>背景技术</p>
+    <p>[0002]	在电信运营商向综合服务提供商转型的过程中，业务层的地位变得越来越重要。很多厂商都开发自己的网络业务，并对外开放接口，供开发者从外部进行调用。这些网络业务使用特定网址的HTTP (Hyper Text Transfer Protocol,超文本传输协议)请求并将网址参数作为参数提供给业务。一般来讲，这些业务会在HTTP请求中以JSON(JavaScriptObject Notation,基于JavaScript语言的轻量级的数据交换格式，JavaScript为一种程序语言)，SOAP (Simple object access protocol,简单对象访问协议)或 XML (ExtensibleMarkup Language,可扩展标记语言)等形式传回数据,供应用程序进行解析和/或处理。</p>
+    <p>[0003]在	NGSON (Next Generation Service Overlay Network,下一代业务叠加网)中，采取一种集中模式来管理大规模的业务，业界应用比较广泛的网络业务API可以发布到平台上，供访问者购买和调用。开发者也可以根据需求，利用系统中发布的API，灵活的封装不同接口类型或不同功能的网络业务API。在NGSON中，业界应用比较广泛的单个网络业务API (Application Program Interface,应用程序接口)发布/注册为一个业务为用户或开发者提供网络服务。针对这种API，系统为每个发布的业务分配一个唯一的业务标识，并建立每个业务的业务标识与真实地址之间的映射关系。当业务被用户调用时，系统解析业务请求，获取业务标识，根据业务标识与业务真实地址之间的映射关系获取业务真实地址，执行业务的路由和调用。另外对于开发者，利用系统已有的网络业务API进一步封装API，系统为每个封装的API分配一个唯一业务标识，并保存封装的API与其实际调用API (即系统已有的API)之间的映射关系和接口对应关系。</p>
+    <p>[0004]	在实际应用中，网络业务提供者会在同一业务下封装多种不同数据类型的接口或封装实现不同功能的接口，以方便开发者集中调用。采用现有技术执行业务映射时，需要将归属于同一业务下的多个接口发布和注册为多个业务，执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明的实施例提供一种业务配置的方法及装置，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0006]	为达到上述目的，本发明的实施例采用如下技术方案:</p>
+    <p>[0007]	一种业务配置的方法，包括:</p>
+    <p>[0008]	解析接收到的业务请求，获取 业务标识；</p>
+    <p>[0009]	根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口；</p>
+    <p>[0010]	根据业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式；</p>
+    <p>[0011]	将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0012]	一种业务配置的方法，包括:</p>
+    <p>[0013]	解析接收到的业务接口请求，获取业务接口标识；</p>
+    <p>[0014]	根据所述业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口；</p>
+    <p>[0015]	根据业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至所述目标业务的格式或者所述目标业务接口的格式；</p>
+    <p>[0016]	将转化格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0017]	一种业务配置的装置，包括:</p>
+    <p>[0018]	获取单元，用于解析接收到的业务请求，获取业务标识并将所述业务标识发送给确定单元；</p>
+    <p>[0019]	确定单元，用于在收到所述获取单元发送的业务标识后，根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口并将所述确定的所述业务标识对应的目标业务或者目标业务接口发送给转换单元;</p>
+    <p>[0020]	转换单元，用于在收到所述确定单元发送的所述目标业务或者目标业务接口后，根据业务与所述调用的业务或者所述调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式并将所述转换格式后的业务请求发送给转发单元；</p>
+    <p>[0021]	转发单元，用于在收到所述转换单元发送的转换格式后的业务请求后，将转换格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0022]	一种业务配置的装置，包括:</p>
+    <p>[0023]	获取单元，用于解析接收到的业务接口请求，获取业务接口标识并将所述业务接口标识发送给确定单元；</p>
+    <p>[0024]	确定单元，用于在接收到所述获取单元发送的所述业务接口标识后，根据业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口并将所述确定的所述业务接口标识对应的目标业务或者目标业务接口发送给转换单元；</p>
+    <p>[0025]	转换单元，用于在接收到所述确定单元发送的所述目标业务或者目标业务接口后，根据业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至所述目标业务接口的格式并将所述转换格式后的业务接口请求发送给转发单元；</p>
+    <p>[0026]	转发单元，用于在接收到所述转换单元发送的所述转换格式后的业务接口请求后，将转换格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0027]	本发明实施例提供的一种业务配置的方法及装置，通过解析接收到的业务请求，获取业务标识，根据所述业务标识与调用的业务或者调用的业务接口之间的映射关系，确定目标业务或者目标业务接口，根据业务与所述调用的业务或者所述调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务或者所述目标业务接口的格式；并将转化格式后的所述请求转发至所述目标业务或者所述目标业务接口。[0028]	与现有技术中单个API作为一个业务为用户提供网络服务，当接口数据类型不同的多个业务调用时，需要执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能相比，本发明实施例提供的方案通过根据业务标识或者业务接口标识与调用的业务或者调用的业务接口之间的映射关系确定目标业务或者目标业务接口，并根据业务或者业务接口与调用的业务或者调用的业务接口之间的转换规则转换业务请求的格式，这样可以减少多次业务的发布和注册，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>附图说明</p>
+    <p>[0029]	为了更清楚地说明本发明实施例或现有技术中的技术方案，下面将对实施例或现有技术描述中所需要使用的附图作简单地介绍，显而易见地，下面描述中的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0030]	图1为本发明实施例1提供的一种业务配置的方法的流程图；</p>
+    <p>[0031]	图2为本发明实施例1提供的另一种业务配置的方法的流程图；</p>
+    <p>[0032]	图3为本发明实施例1提供的一种业务配置的装置的框图；</p>
+    <p>[0033]	图4为本发明实施例2提供的一种业务配置的方法的流程图；</p>
+    <p>[0034]	图5为本发明实施例2提供的Google、厂商、开发者提供的业务请求和业务响应的格式示意图；</p>
+    <p>[0035]	图6为本发明实施例2提供的无映射业务的接口配置示意图；</p>
+    <p>[0036]	图7为本发明实施例2提供的执行映射业务的接口配置示意图；</p>
+    <p>[0037]	图8为本发明实施例2提供的另一种业务配置的方法的流程图。</p>
+    <p>具体实施方式</p>
+    <p>[0038]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例仅仅是本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员在没有作出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0039]	实施例1</p>
+    <p>[0040]	本发明实施例提供一种业务配置的方法，该业务配置的方法的执行主体可以是业务路由器。如图1所示，该业务配置方法包括:</p>
+    <p>[0041]	步骤101，解析接收到的业务请求，获取业务标识；</p>
+    <p>[0042]	具体地，首先接收发送的业务请求，所述业务请求中包含所述业务地址；解析所述业务地址，获取所述业务标识。其中，所述业务请求是由业务请求方发送过来的。</p>
+    <p>[0043]	进一步地，所述业务包括不同类型的业务接口，所述业务在系统内存在唯一的业务标识，这里，系统为业务配置和路由的应用系统。</p>
+    <p>[0044]	步骤102，根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口。</p>
+    <p>[0045]	具体地，确定所述业务标识对应的目标业务或者目标业务接口的方式可以包括:[0046]	当所述请求为业务请求时，根据所述业务标识，确定所述业务标识对应的业务激活的业务接口 ；根据所述激活的业务接口与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口。</p>
+    <p>[0047]	步骤103，根据业务与所述调用的业务或者所述调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式；</p>
+    <p>[0048]	步骤104，将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0049]	进一步地,接收所述目标业务或者所述目标业务接口发送的请求响应；</p>
+    <p>[0050]	将所述业务请求响应发送给业务请求方；或者，根据所述业务与调用的业务或者调用的业务接口之间的所述转换规则，转换所述业务请求响应的格式为调用的业务或者调用的业务接口的格式，并将所述转换后的所述业务请求响应发送给业务请求方，这样用户可以使用网络提供的服务。</p>
+    <p>[0051]	本发明实施例提供的一种业务配置的方法，通过解析接收到的业务请求，获取业务标识，根据所述业务标识与调用的业务或者调用的业务接口之间的映射关系，确定目标业务或者目标业务接口，根据业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务或者所述目标业务接口的格式，并将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0052]	与现有技术中当接口数据类型不同的多个业务调用时，需要执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能相比，本发明实施例提供的方案可以直接通过业务标识与调用的业务或者调用的业务接口之间的映射关系获取目标业务或者目标业务接口，并根据业务或者业务接口与调用的业务或者调用的业务接口之间的转换规则转换业务请求的格式，这样可以减少多次业务的发布和注册，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0053]	本发明实施例提供一种业务配置的方法，该业务配置的方法的执行主体可以是业务路由器。如图2所示，该方法包括:</p>
+    <p>[0054]	步骤201，解析接收到的业务接口请求，获取业务接口标识；</p>
+    <p>[0055]	具体地，首先接收发送的业务接口请求，所述请求中包含业务接口的地址；解析所述业务接口的地址，获取所述业务接口标识。其中，所述业务接口请求由业务请求方发送的。</p>
+    <p>[0056]	进一步地,所述业务接口在所述业务中存在唯一的业务接口标识。</p>
+    <p>[0057]	步骤202，根据业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口；</p>
+    <p>[0058]	具体地，根据所述业务接口标识，以及与所述业务接口标识对应的所述业务接口与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口。</p>
+    <p>[0059]	进一步地，根据配置的目标业务或目标业务接口的选择规则，以及所述业务接口标识确定所述业务接口标识对应的目标业务或目标业务接口；或者，根据目标业务或目标业务接口的排列顺序及可使用状态，以及所述业务接口标识确定所述业务接口标识对应的目标业务或目标业务接口。[0060]	步骤203，根据业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至所述目标业务接口的格式；</p>
+    <p>[0061 ] 步骤204，将转化格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0062]	进一步地，接收所述目标业务或者所述目标业务接口发送的业务接口请求响应；</p>
+    <p>[0063]	将所述业务接口请求响应发送给所述业务请求方；或者，根据所述业务接口与调用的业务或者调用的业务接口之间的所述转换规则，转换所述业务接口请求响应的格式，并将所述格式转换后的所述业务接口请求响应发送给所述业务请求方。</p>
+    <p>[0064]	本发明实施例提供的一种业务配置的方法，通过解析接收到的业务接口请求，获取业务接口标识，根据所述业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口，根据业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至所述目标业务接口的格式；将转化格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0065]	与现有技术中当接口数据类型不同的多个业务调用时，需要执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能相比，本发明实施例提供的方案可以直接通过业务接口标识与调用的业务或者调用的业务接口之间的映射关系获取目标业务或者目标业务接口，并根据业务接口与调用的业务或者调用的业务接口之间的转换规则转换业务接口请求至目标业务接口的格式，这样可以减少多次业务的发布和注册，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0066]	本发明实施例提供一种业务配置的装置，该装置可以为一个业务路由器，如图3所示，该装置包括:获取单元301，确定单元302，转换单元303和转发单元304。</p>
+    <p>[0067]	获取单元301，用于解析接收到的业务请求，获取业务标识并将获取的业务标识发送给确定单元302 ；</p>
+    <p>[0068]	具体地，所述获取单元301用于接收发送的业务请求，获取所述业务请求中包含的业务的地址；并解析所述业务的地址，获取所述业务标识并将获取的业务标识发送给确定单元302。确定单元302，用于根据业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口并将所述确定的所述业务标识对应的目标业务或者目标业务接口发送给转换单元303。</p>
+    <p>[0069]	具体地，所述确定单元302用于确定与业务标识对应的业务激活的业务接口 ；并根据激活的业务接口与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口对应的目标业务或者目标业务接口 ；进一步地，所述确定单元302还用于根据配置的目标业务或目标业务接口的选择规则，以及所述业务标识确定所述业务标识对应的目标业务或目标业务接口并将所述确定的所述业务标识对应的目标业务或目标业务接口发送给转换单元303 ;或者所述确定单元302用于根据目标业务或目标业务接口的排列顺序及可使用状态，以及所述业务标识确定所述业务标识对应的目标业务或目标业务接口并将所述确定的所述业务标识对应的目标业务或目标业务接口发送给转换单元303。</p>
+    <p>[0070]	转换单元303在接收到所述确定单元302发送的所述确定的所述业务标识对应的目标业务或目标业务接口之后，用于根据业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务的格式或者所述目标业务接口的格式，并将所述转换格式后的业务请求发送给转发单元304 ；</p>
+    <p>[0071]	转发单元304在收到转换单元303发送的所述格式转换后的业务请求后，用于将格式转换后的所述业务请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0072]	进一步地，所述获取单元301还用于接收所述目标业务或者所述目标业务接口发送的业务请求响应并将所述业务请求响应发送给业务请求方；进一步地，所述获取单元还用于，根据所述业务与调用的业务或者调用的业务接口之间的所述转换规则，转换所述业务请求响应的格式，并将所述转换后的所述业务请求响应发送给所述业务请求方。</p>
+    <p>[0073]	本发明实施例提供的一种业务配置的装置，通过获取单元解析接收到的业务请求，获取业务标识，之后确定单元根据所述业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口，转换单元根据业务与所述调用的业务或者所述调用的业务接口之间的转换规则，转换所述请求至所述目标业务或者所述目标业务接口的格式，转发单元将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0074]	与现有技术中当接口数据类型不同的多个业务调用时，需要执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能相比，本发明实施例提供的方案可以直接通过业务与调用的业务或者调用的业务接口之间的映射关系获取目标业务或者目标业务接口，并根据业务与调用的业务或者调用的业务接口之间的转换规则转换业务请求至所述目标业务或者目标业务接口的格式，这样可以减少多次业务的发布和注册，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0075]	本发明实施例提供一种业务配置的装置，该装置可以为一个业务路由器，参照图3所示，该装置包括:获取单元301，确定单元302，转换单元303和转发单元304。</p>
+    <p>[0076]	获取单元301，用于解析接收到的业务接口请求，获取业务接口标识并将所述业务接口标识发送给所述确定单元302。</p>
+    <p>[0077]	具体地，所述获取单元301解析用于接收发送的业务接口请求，获取所述请求中包含的业务接口的地址；解析所述业务接口的地址，获取所述业务接口标识并将所述业务接口标识发送给确定单元302。</p>
+    <p>[0078]	确定单元302用于在接收到所述获取单元301发送的所述业务接口标识后，根据业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口并将所述确定的所述业务接口标识对应的目标业务或者目标业务接口发送给转换单元303。</p>
+    <p>[0079]	转换单元303用于在接收到所述确定单元302发送的所述目标业务或者目标业务接口后，根据业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至所述目标业务接口的格式并将所述转换格式后的业务接口请求发送给所述转换单元304.转发单元304用于在收到所述转换单元303发送的所述转换格式后的业务接口请求后，将转化格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接□。</p>
+    <p>[0080]	进一步地，所述获取单元301，用于接收所述目标业务或者所述目标业务接口发送的业务接口请求响应；并将所述业务接口请求响应发送给业务请求方。进一步地，所述获取单元301还用于根据所述业务接口与调用的业务或者调用的业务接口之间的所述转换规贝1J，转换所述业务接口请求响应的格式，并将所述转换后的所述业务接口请求响应发送给所述业务请求方。</p>
+    <p>[0081]	需要说明的是，本发明的两个装置实施例中的所述确定单元302中还可以进一步配置所述激活的业务接口与调用的业务或者调用的业务接口之间的映射关系；或者，配置所述业务标识与调用的业务或者调用的业务接口之间的映射关系；然后，根据配置的所述映射关系，配置所述业务与调用的业务或者调用的业务接口之间的转换规则。</p>
+    <p>[0082]	所述调用的业务或者所述调用的业务接口中包含要调用的目标业务或者要调用的目标业务接口 ；所述业务包括不同的业务类型，不同业务类型的所述业务在系统内存在唯一的业务标识，其中，业务类型描述业务功能，用于业务发现和业务关联。通过在业务中封装的多种不同类型的接口，可以方便多个业务调用，减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0083]	本发明实施例提供的一种业务配置的装置，通过解析接收到的业务接口请求，获取单元获取业务接口标识，根据所述业务接口标识与调用的业务或者调用的业务接口之间的映射关系，由确定单元确定目标业务接口，并根据所述业务接口与调用的业务或者调用的业务接口之间的转换规则，转换单元转换所述业务接口请求至所述目标业务接口的格式，转发单元将转化格式后的所述业务接口请求转发至所述目标业务接口。</p>
+    <p>[0084]	与现有技术中单个API作为一个业务为用户提供网络服务，当接口数据类型不同的多个业务调用时，需要执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能相比，本发明实施例提供的方案通过根据业务标识或者业务接口标识与调用的业务或者调用的业务接口之间的映射关系确定目标业务或者目标业务接口，并根据业务或者业务接口与调用的业务或者调用的业务接口之间的转换规则转换业务请求的格式，这样可以减少多次业务的发布和注册，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0085]	实施例2</p>
+    <p>[0086]	本发明实施例提供一种业务配置的方法，如图4所示，该方法包括:</p>
+    <p>[0087]	步骤401，业务路由器配置激活的业务接口与调用的业务或者调用的业务接口之间的映射关系；所述调用的业务或者所述调用的业务接口包含要调用的目标业务或者要调用的目标业务接口；</p>
+    <p>[0088]	业务路由器包括业务路由实体(Service Routing Function Entity)、业务发布和发现实体(Service Publication &amp; Discovery Function Entity)和业务路由器注册实体(Service Routing Register Function Entity)。在实际应用中，这三个功能实体可以合成在一个物理实体中，提供上述的功能。本发明中，将上述三个功能实体合成后的这个物理实体称之为“业务路由器”。</p>
+    <p>[0089]	其中，业务路由实体是业务叠加网络最重要的功能实体，是实现业务之间网络化交互的基础。业务路由实体的基本功能是根据业务的静态信息和动态信息，结合配置的路由规则，将业务之间的交互消息路由转发到合适的下一跳业务路由实体或者是目的业务端点。由于当前业务的多样性和复杂性，业务路由实体简单的路由转发功能已经无法满足用户需求和实现复杂业务的正确调用，业务路由实体在支持简单路由的同时，可以执行更多的智能，例如根据转换规则，在业务之间转换业务请求方发送的业务请求的格式至调用的目标业务或者调用的目标业务接口的格式，或者转换调用的目标业务或者调用的目标业务接口的响应的格式至业务请求的格式,再发送给业务请求方。</p>
+    <p>[0090]	业务发布和发现实体是处理业务发布、业务发现、业务订阅、以及保存业务静态信息的功能实体，所述业务的静态信息包括接口、提供者信息、业务类别、业务名、和业务类型等;</p>
+    <p>[0091]	业务路由注册实体用于维护业务的动态信息，所述的业务动态信息包括业务逻辑地址、业务真实IP地址和端口号、业务漫游状态、业务费率和业务性能等。</p>
+    <p>[0092]	进一步地，所述业务包括不同的业务类型，不同业务类型的所述业务在系统内存在唯一的业务标识，其中，系统指提供本发明实施例提供的业务配置的方法和根据业务配置的方法进行路由时的应用系统，业务类型描述业务功能，用于业务发现和业务关联。</p>
+    <p>[0093]	举例说明，图5中3幅附图所示，为整个业务请求和业务响应过程中所涉及到的业务和业务接口，其中，如图5(1)所示，Google在网络中发布和注册Google ElevationMap业务，具体地，Google Elevation Map业务即为本发明实施例中的调用的业务；GET IURLENCONDED | XML&amp;JS0N中，GET表示该业务支持HTTP请求GET方法，对业务请求进行处理后，返回的业务请求响应支持XML格式或者JSON格式；URLENC0NDED表示将数据采用URL (Uniform/Universal Resource Locator,统一资源定位符)编码，即在 URL 中携带参数，通过参数标识返回的数据是XML格式或者JSON格式。</p>
+    <p>[0094]	Google Elevation API示例一:其中，以科罗拉多州丹佛的海拔为例，响应采用JSON格式: </p>
+    <p>[0095]	http://maps.google.com/maps/api/elevation/json ? locations =39.7391536, -104.9847034&amp;sensor = false</p>
+    <p>[0096]	返回的业务请求响应:</p>
+    <p>[0097]</p>
+    <p>                                               {</p>
+    <p>                      "status": "OK",</p>
+    <p>                     "results": [ {                          "locat ion": {</p>
+    <p>                              丨丨 Iat丨丨:39.7391536,                              nIngn: -104.9847034</p>
+    <p>                                 },</p>
+    <p>                       "elevation": 1608.8402100                     }]</p>
+    <p>                                           }</p>
+    <p>[0098]	Google Elevation API示例二:其中，以科罗拉多州丹佛的海拔为例，响应采用XML格 式:[0099]	http://maps.google.com/maps/api/elevation/xml ? locations =39.7391536, -104.9847034&amp;sensor = false</p>
+    <p>[0100]	返回的业务请求响应:</p>
+    <p>[0101]</p>
+    <p>                    &lt;Elevat ionResponse&gt;</p>
+    <p>                  &lt;s tatus&gt;0K&lt;/status〉</p>
+    <p>                 〈result〉</p>
+    <p>                 &lt;location&gt;</p>
+    <p>                   &lt;lat&gt;39.7391536&lt;/lat&gt;</p>
+    <p>                    &lt;lng&gt;-104.9847034&lt;/lng&gt;</p>
+    <p>                  &lt;/locat ion&gt;</p>
+    <p>                 &lt;elevation&gt;1608.8402100&lt;/elevation&gt;</p>
+    <p>                 &lt;/result&gt;</p>
+    <p>                &lt;/Elevat ionResponse&gt; </p>
+    <p>[0102]	如图5(2)所示，厂商X在网络中发布和注册获取位置海拔业务，命名为“XEIevationAPI ”，具体地，XElevationAPI业务为本发明实施例中的调用的业务接口，为此业务封装的接口分别为接口 I和接口 2，接口分别支持以下两种:</p>
+    <p>[0103]	接口 I (POST IXML | XML):支持HTTP请求POST方法，请求中数据为XML格式，响应数据为XML格式，具体地，XElevationAPI接口 I示例如下:</p>
+    <p>[0104]</p>
+    <p>       POST http: // 10.70.109.94: 8080/XElevationAPI HTTP/1.1       Accept-Encoding: gzip,deflate       Content-Type: text/xml; charset=UTF-8       User-Agent: Jakarta Commons-HttpClient/3.1       Content-Length: 90</p>
+    <p>[0105]〈locations〉</p>
+    <p>                        &lt;loc&gt;</p>
+    <p>&lt;la&gt;39.7391536&lt;/la&gt;</p>
+    <p>&lt;lo&gt;-104.9847034&lt;/lo&gt;</p>
+    <p>                        &lt;/loc&gt;</p>
+    <p>                       &lt;/locat ions&gt;</p>
+    <p>[0106]	返回的业务接口请求响应:</p>
+    <p>[0107]</p>
+    <p>               &lt;info&gt;</p>
+    <p>                 〈result&gt;</p>
+    <p>                  &lt;location&gt;</p>
+    <p>                     &lt;lat&gt;39.7391536&lt;/lat&gt;</p>
+    <p>                     &lt;lng&gt;-104.9847034&lt;/lng&gt;                   &lt;/locat ion&gt; &lt;elevation&gt;1608.8402100&lt;/eIevat ion&gt;</p>
+    <p>                 &lt;/result&gt;</p>
+    <p>               &lt;/info&gt;</p>
+    <p>[0108]接口	2 (GET I URLENCONDED | XML):支持 HTTP 请求 GET 方法，请求支持 URLENCONDED，即在URL中携带参数，响应支持XML格式，具体地，XElevationAPI接口示例如下:</p>
+    <p>[0109]	http://10.70.109.94:8080/XElevationAPI ? latitude = 39.7391536&amp;longitude = -104.9847034</p>
+    <p>[0110]	返回的业务接口请求响应:</p>
+    <p>[0111]	&lt;elevation&gt;1608.8402100&lt;/elevation&gt;</p>
+    <p>[0112]	如图5(3)所示，开发者A开发了一个获取用户位置海拔信息的业务，命名为“HaiBalnfo”，HaiBaInfo业务为本发明实施例中的请求者请求的业务，业务要求输入I个参数，参数名字为“loc”其值为用户要求查询海拔的位置信息，格式表示为位置的纬度和经度，例如39.7391536,-104.9847034。在该业务下封装了接口 I和接口 2两个接口，业务支持如下两种接口:</p>
+    <p>[0113]接口	I (GET I URLENCONDED | XML):支持 HTTP 请求 GET 方法，请求支持 URLENCONDED,即在URL中携带参数，业务响应的数据格式为XML ;具体的，HaiBaInfo业务接口示例如下:[0114]	http://10.70.109.94:8080/HaiBaInfo? Ia = 39.7391536&amp;lo = -104.9847034</p>
+    <p>[0115]	返回的业务接口请求响应:</p>
+    <p>[0116]	&lt;haiba&gt;1608.8402100〈/haiba&gt;</p>
+    <p>[0117]	接口 2 (POST IXML | JSON):支持HTTP请求POST方法，请求的数据格式为XML，业务响应的数据格式为JSON ;具体地，HaiBaInfo业务接口示例如下:</p>
+    <p>[0118]</p>
+    <p>          POST http: // 10.70.109.94: 8080/HaiBaInfo HTTP/1.1          Accept-Encoding: gzip,deflate          Content-Type: text/xml; charset=UTF-8          User-Agent: Jakarta Commons-HttpClient/3.1          Content-Length: 90</p>
+    <p>         &lt;location&gt;</p>
+    <p>         &lt;la&gt;39.7391536&lt;/la&gt;</p>
+    <p>               &lt;lo&gt;-104.9847034&lt;/lo&gt;</p>
+    <p>         &lt;/locat ion&gt;</p>
+    <p>[0119]	返回的业务接口请求响应:</p>
+    <p>[0120]</p>
+    <p>                                                           {</p>
+    <p>                             "location": {</p>
+    <p>[0121]</p>
+    <p>                                     丨丨 Iat 丨丨:39.7391536,                   &#183;                  nIngn: -104.9847034</p>
+    <p>                                      },</p>
+    <p>                        "elevation": 1608.8402100</p>
+    <p>                                          }</p>
+    <p>[0122]	需要说明的是，系统为业务或业务接口指定唯一的逻辑地址。步骤301提供的配置方案为无映射业务，即业务下可以封装多个业务接口，并将所述业务接口激活，再配置激活的业务接口与其调用的业务或者业务接口之间的映射关系。所述调用的业务中包含调用的目标业务，所述调用的业务接口中包含调用的目标业务接口，这样，根据激活的业务接口可以直接确定调用的目标业务或者目标业务接口，例如，如图6所示，配置业务下封装的业务接口 1、业务接口 2、业务接口 3与真实地址之间的一一对应的关系，并设置业务映射的接口 ；具体地，图6中，经过解析业务逻辑地址，获取业务标识，业务接口 1、业务接口 2、业务接口 3即为对业务封装的业务接口，再设置业务接口 I与业务接口 I的真实地址的&#8212;&#8212;对应的关系，设置业务接口 2与业务接口 2的真实地址的一一对应的关系，设置业务接口 3与业务接口 3的真实地址的一一对应的关系。这里，业务映射的接口指业务被调用时，使用哪个接口提供服务，真实地址是目标业务或者目标业务接口。</p>
+    <p>[0123]	举例说明，可以激活HaiBainfo业务下的接口 I,并配置HaiBainfo业务下的接口I与Google Elevation Map业务的映射关系，或者配置HaiBainfo业务下的接口 I与GoogleElevation Map业务下的接口的映射关系。</p>
+    <p>[0124]	步骤402，所述业务路由器配置业务标识与调用的业务或者调用的业务接口之间的映射关系；</p>
+    <p>[0125]	需要说明的是，步骤402提供的配置方案为执行映射的业务，例如，如图7所示，对业务逻辑地址进行解析，获取业务的标识，业务下封装的业务接口分别为:业务接口 1、业务接口 2和业务接口 3 ;配置业务接口与其调用的业务或者调用的业务接口之间的映射关系。具体地，如图6所示，配置业务接口 I与其调用的业务I的映射关系，根据调用的业务I与业务I的真实地址的一一对应关系，确定业务I的真实地址；当然，也可以配置业务接口I与其调用的业务2中的接口 I的映射关系，根据调用的业务2中的接口 I与调用的业务2</p>
+    <p>中的接口 I的真实地址的--对应关系，确定调用的业务2中的接口 I的真实地址；或者，</p>
+    <p>也可以配置业务接口 I与其调用的业务3中的接口 3的映射关系，根据调用的业务3中的接口 3与调用的业务3中的接口 3的真实地址的一一对应关系，确定调用的业务3中的接口 3的真实地址。</p>
+    <p>[0126]	举例说明，可以配置HaiBainfo业务与XElevationAPI业务的映射关系，或者配置HaiBainfo业务与XElevationAPI业务下的接口(接口 I或者接口 2)之间的映射关系。</p>
+    <p>[0127]	需要说明的是，步骤401与步骤402的执行 顺序并不是固定的，可以先执行步骤401，再执行步骤402，也可以先执行步骤402，再执行步骤401。</p>
+    <p>[0128]	步骤403，根据步骤402配置的所述映射关系，配置所述业务与调用的业务或者业务接口之间的转换规则。</p>
+    <p>[0129]	步骤403用于将请求的所述业务的数据格式，转换为调用的业务或者业务接口的数据格式，业务支持的数据格式可以为=XML格式，或JSON格式，或普通文本格式。具体地，以 HaiBaInfo 业务与 Google Elevation API 业务为例，配置 HaibaInfo 业务与 GoogleElevation Map (xml)业务的业务请求的转换规则描述如下:</p>
+    <p>[0130]	1.获取 Google Elevation Map (xml)业务的 URL 地址:</p>
+    <p>[0131]	http://maps.google.com/maps/api/elevation/xml ? locations =39.7391536,-104.9847034&amp;sensor = false ；</p>
+    <p>[0132]	2.将HaiBalnfo业务请求中参数la和1值取出，使用字符“，”连接，生成字符串“39.7391536，-104.9847034”，将生成的字符串赋值给GoogleElevationAPI业务请求的参数 location。</p>
+    <p>[0133]	配置HaibaInfo业务与Google Elevation Map (xml)业务的业务响应的转换规则描述如下:</p>
+    <p>[0134]	取出Google Elevation Map (xml)业务的业务响应的元素〈elevation〉值,赋值给HaiBalnfo业务的业务响应〈haibai〉值。[0135]	上述规则，在具体实现中可以先将各业务接口使用XML格式描述，再根据转换规则进行业务请求转换，所述转换规则可以表述任意机器可以识别的语法格式，例如转换规则可以为xml或xslt文件格式。以配置HaibaInfo业务与Google Elevation Map (xml)业务的业务请求的转换规则，例如HaiBalnfo业务请求描述成XML如下:</p>
+    <p>[0136]</p>
+    <p>  CHaiBaiInfo&gt;</p>
+    <p>  &lt;la&gt;?&lt;/la&gt;</p>
+    <p>  &lt;lo&gt;?&lt;/lo&gt;</p>
+    <p>  &lt;/HaiBaiInfo&gt;</p>
+    <p>[0137]	GoogleElevationAPI业务请求格式使用XML描述如下:</p>
+    <p>[0138]	&lt;GoogleElevationAPI&gt;</p>
+    <p>[0139]	〈locations〉 ? 〈/locations〉</p>
+    <p>[0140]	&lt;/GoogleElevationAPI&gt;</p>
+    <p>[0141]	业务请求转换规则表述为XSLT如下:</p>
+    <p>[0142]</p>
+    <p>   &lt;?xml vers ion="1.0" encoding="UTF-8"?&gt;</p>
+    <p>              &lt;xsl: stylesheet vers ion="1.0"         xmlns: xsl = "http: //www.w3.0rg/1999/XSL/Transform"&gt;</p>
+    <p>                &lt;xs 1: output method=丨丨xml丨丨/&gt;</p>
+    <p>               &lt;xs1:variable name="spliterl"&gt;</p>
+    <p>                 &lt;xs1:value-of seIect="/HaiBaiInfo/la"/&gt;</p>
+    <p>               &lt;/xs1:variable〉</p>
+    <p>                &lt;xs1: variable name=丨丨spliter丨丨〉</p>
+    <p>                 &lt;xs1:value-of seIect="/HaiBaiInfo/1"/&gt;</p>
+    <p>               &lt;/xs1:variable〉</p>
+    <p>               &lt;xs1: template match="/"&gt;</p>
+    <p>                  &lt;GoogleElevat ionAPI&gt;</p>
+    <p>                      &lt;locat ions&gt;</p>
+    <p>[0143]&lt;xs1: value-of select=丨丨concat ($spliterl,/,/,$spliter)"/&gt;        &lt;/locat ions&gt;</p>
+    <p>     〈/GoogleElevat ionAPI〉</p>
+    <p>   &lt;/xs1: template〉</p>
+    <p>&lt;/xs1: stylesheet&gt;</p>
+    <p>[0144]	步骤404，业务请求方向业务路由器发送业务请求，所述业务请求中包含业务的地址；</p>
+    <p>[0145]	具体地，系统为业务或业务接口指定唯一的逻辑地址。举例说明，网络为该业务分配业务逻辑地址为:http://10.70.109.94:8080/HaiBaInfoo</p>
+    <p>[0146]	步骤405，所述业务路由器接收所述业务请求方发送的所述业务请求，并解析所述业务请求中包括的所述业务地址，获取业务标识；</p>
+    <p>[0147]	举例说明，解析http://10.70.109.94:8080/HaiBaInfo,可以获得业务标识HaiBalnfo。</p>
+    <p>[0148]	步骤406， 所述业务路由器根据所述业务标识与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口 ；</p>
+    <p>[0149]	进一步地，步骤406确定目标业务或者目标业务接口时，可以包括:</p>
+    <p>[0150]	根据所述业务标识，确定与所述业务标识对应的业务激活的业务接口 ；根据所述激活的业务接口与调用的业务或者调用的业务接口之间的映射关系，确定所述业务标识对应的目标业务或者目标业务接口；</p>
+    <p>[0151]	具体地，根据业务标识及设置的业务对应接口的激活状态，可以确定当前业务激活的业务接口，举例说明，可以根据用户对接口数据类型的要求设置HaibaInfo映射的业务接口中，接口 I为激活状态，接口 2为未激活状态。</p>
+    <p>[0152]	需要说明的是，当业务类型和数据格式不同时，现有技术在执行业务映射时，需要将归属于同一业务下的多个接口发布和/或注册为多个业务，执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能，且在执行业务路由和调用时，缺乏灵活性，而本发明实施例提供的方案可以通过在业务下封装不同类型的接口，当调用时，直接根据接口之间的映射关系进行调用，减少系统中的冗余数据，提高系统的处理性能，并且在执行业务路由和调用时，较灵活。</p>
+    <p>[0153]	进一步地，确定目标业务或者目标业务接口的方式可以为以下任一种方式:</p>
+    <p>[0154]	根据配置的目标业务或目标业务接口的选择规则，以及所述业务标识确定所述业务标识对应的目标业务或目标业务接口；</p>
+    <p>[0155]	这里，选择规则可以配置在特定情况下选择某个特定业务，例如，当业务请求中参数I值为I时，选择目标业务1，当参数I值为2时，选择目标业务2。在具体实现中，可以使用xml描述规则，或者使用任意机器可识别的语法格式；</p>
+    <p>[0156]	或者，根据目标业务或目标业务接口的排列顺序及可使用状态，以及所述业务标识确定所属业务标识对应的目标业务或目标业务接口。</p>
+    <p>[0157]	这里，排列顺序可以为系统中业务与目标业务或目标业务接口的映射关系的保存顺序，具体地，可以根据系统中保存的顺序来执行目标业务或目标业务接口的调用。</p>
+    <p>[0158]	在根据目标业务或目标业务接口的可使用状态确定目标业务或目标业务接是，可以按照系统中业务与目标业务或目标业务接口的映射关系的保存顺序来执行目标业务或目标业务接口的调用，如果当前选择的目标业务或目标业务接口不可用，则顺序选择下一个目标业务或目标业务接口。</p>
+    <p>[0159]	步骤407，根据所述业务与调用的业务或者调用的业务接口之间的转换规则，转换所述业务请求至所述目标业务或者所述目标业务接口的格式；</p>
+    <p>[0160]	将所述业务请求的数据格式转换为所述目标业务或者目标业务接口的数据格式，具体地可参照步骤403中的描述，在次不一一赘述。</p>
+    <p>[0161]	举例说明，业务路由器根据HaiBalnfo业务的映射关系，确定调用XElevationAPI业务，具体地，根据配置的目标业务或目标业务接口的选择规则，或者，根据目标业务或目标业务接口的排列顺序及可使用状态，确定目标业务或目标业务接口，具体可参照步骤406中确定目标业务或者目标业务接口的方式，在此不一一赘述；然后根据转换规则，将业务请求方发送的业务请求的数据格式转换至XElevationAPI的格式。</p>
+    <p>[0162]	步骤408，将转化格式后的所述业务请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0163]	举例说明，业务路由器转发转换格式后的业务请求至XElevationAPI业务；或者，业务路由器转发转换格式后的业务请求至至XElevationAPI业务接口。</p>
+    <p>[0164]	步骤409，所述目标业务或者所述目标业务接口根据接收到的所述业务路由器发送的转化格式后的所述业务请求，进行处理，并向所述业务路由器发送业务请求响应；</p>
+    <p>[0165]	具体地，该步骤可以是目标业务或者所述目标业务接口的处理器进行处理。</p>
+    <p>[0166]	步骤410，所述业务路由器接收所述目标业务或者所述目标业务接口发送的业务请求响应；</p>
+    <p>[0167]	例如，业务路由器接收到XElevationAPI返回的业务请求响应；</p>
+    <p>[0168]	步骤411，将所述业务请求响应发送给所述业务请求方；或者，根据所述业务与调用的业务或者调用的业务接口之间的所述转换规则，转换所述业务请求响应的格式，并将所述转换后的所述业务请求响应发送给所述业务请求方。</p>
+    <p>[0169]	当所述业务请求响应的格式与用户请求的业务的响应格式相同时，可以直接将所述请求响应发送给业务请求方；例如，XElevationAPI返回的业务请求响应的格式为XML,且HaiBalnfo业务请求响应的格式为XML,此时,直接将所述请求响应发送给所述业务请求方；</p>
+    <p>[0170]	当所述业务请求响应的格式与业务请求方请求的业务的响应格式不相同时，需要根据转化规则，将请求响应的格式转换为用户请求的业务的响应格式。例如，XElevationAPI返回的业务请求响应的格式为JS0N,而HaiBalnfo业务请求响应的格式为XML,此时，需要根据转化规则，将请求响应的格式JSON转换为业务请求方请求的业务的响应格式XML。</p>
+    <p>[0171]	用户接收到请求响应后，即可以获得需要查询的内容。</p>
+    <p>[0172]	本发明实施例提供的一种业务配置的方法，通过为网络中的业务封装不同类型的接口，优化网络中业务映射关系的配置，以支持不同格式的请求和响应需求，与现有技术中当接口数据类型不同的多个业务调用时，需要通过执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能相比，本发明实施例提供的方案通过在业务中封装的多种不同类型的接口，根据业务标识或者业务接口标识与调用的业务或者调用的业务接口之间的映射关系确定目标业务或者目标业务接口，并根据业务或者业务接口与调用的业务或者调用的业务接口之间的转换规则转换业务请求的格式，这样可以减少多次业务的发布和注册，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0173]	本发明实施例提供一种业务配置的方法，如图8所示，该方法包括:</p>
+    <p>[0174]	步骤801，业务路由器配置业务接口标识与调用的业务或者调用的业务接口之间的映射关系；所述调用的业务或者所述调用的业务接口包含要调用的目标业务或者要调用的目标业务接口。</p>
+    <p>[0175]	业务接口标识对应的业务接口包含不同的业务接口类型，不同业务接口类型的所述业务接口在所述业务中存在唯一的业务接口标识，其中，业务接口标识指定业务接口类型和参数结构，业务接口类型包括业务的请求和响应的方法以及数据类型。</p>
+    <p>[0176]	举例说明，图5中3幅附图所示，为整个业务请求和业务响应过程中所涉及到的业务接口，具体请参看实施例2步骤401的描述,在此不--赘述。</p>
+    <p>[0177]	举例说明，可以配置HaiBainfo业务下封装的接口 I与XElevationAPI业务的映射关系，或者配置HaiBainfo业务下封装的接口 I与XElevationAPI业务下的接口 I的映身寸关系。</p>
+    <p>[0178]	步骤802，配置业务接口与调用的业务或者调用的业务接口之间的转换规则。</p>
+    <p>[0179]	所述转换规则用于描述业务接口与调用的业务或业务接口之间参数的对应关系，例如，如果所述业务接口与调用 的业务或业务接口均支持HTTP协议，则转换规则将描述两者HTTP方法、HTTP头部参数以及HTTP消息体参数之间的对应关系。所述转换规则可以表述任意机器可以识别的语法格式，例如转换规则可以为xml文件或xslt文件格式。</p>
+    <p>[0180]	步骤803,业务请求方向业务路由器发送业务接口请求，所述业务接口请求中包含业务接口的地址。</p>
+    <p>[0181]	具体地，系统为业务或业务接口指定唯一的逻辑地址。举例说明，网络为该业务分配业务逻辑地址为:http://10.70.109.94:8080/HaiBaInfoo</p>
+    <p>[0182]	步骤804，所述业务路由器接收所述业务请求方发送的所述业务接口请求，并解析所述业务接口请求中包含的所述业务接口地址，获取业务接口标识；</p>
+    <p>[0183]	举例说明，解析http://10.70.109.94:8080/HaiBaInfo,可以获得业务标识HaiBalnfo。</p>
+    <p>[0184]	步骤805，根据所述业务接口标识与调用的业务或者调用的业务接口之间的映射关系，确定目标业务接口 ；</p>
+    <p>[0185]	具体地，当所述请求为业务接口请求时，根据所述业务接口标识，以及所述业务接口与调用的业务或者调用的业务接口之间的映射关系，确定所述业务接口标识对应的目标业务或者目标业务接口。</p>
+    <p>[0186]	需要说明的是，当业务类型和数据格式不同时，现有技术在执行业务映射时，需要将归属于同一业务下的多个接口发布和/或注册为多个业务，执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能，且在执行业务路由和调用时，缺乏灵活性，而本发明实施例提供的方案可以通过在业务下封装不同类型的接口，当调用时，直接根据接口之间的映射关系进行调用，减少系统中的冗余数据，提高系统的处理性能，并且在执行业务路由和调用时，较灵活。</p>
+    <p>[0187]	进一步地，确定目标业务或者目标业务接口的方式可以为以下任一种方式:</p>
+    <p>[0188]	根据配置的目标业务或目标业务接口的选择规则，以及所述业务标识确定所述业务接口标识对应的目标业务或目标业务接口 ；</p>
+    <p>[0189]	这里，选择规则可以配置在特定情况下选择某个特定业务，例如，当业务请求中参数I值为I时，选择目标业务1，当参数I值为2时，选择目标业务2。在具体实现中，可以使用xml描述规则，或者使用任意机器可识别的语法格式；</p>
+    <p>[0190]	或者，根据目标业务或目标业务接口的排列顺序及可使用状态，以及所述业务标识确定所述业务接口标识对应的目标业务或目标业务接口。</p>
+    <p>[0191]	这里，排列顺序可以为系统中业务与目标业务或目标业务接口的映射关系的保存顺序，具体地，可以根据系统中保存的顺序来执行目标业务或目标业务接口的调用。</p>
+    <p>[0192]	在根据目标业务或目标业务接口的可使用状态确定目标业务或目标业务接是，可以按照系统中业务与目标业务或目标业务接口的映射关系的保存顺序来执行目标业务或目标业务接口的调用，如果当前选择的目标业务或目标业务接口不可用，则顺序选择下一个目标业务或目标业务接口。</p>
+    <p>[0193]	步骤806，根据与所述业务接口标识对应的业务接口与调用的业务或者调用的业务接口之间的转换规则，转换所述业务接口请求至所述目标业务接口的格式。</p>
+    <p>[0194]	具体地，将所述业务接口请求的数据格式转换为所述目标业务或者目标业务接口的数据格式；举例说明，业务路由器根据HaiBalnfo业务下封装的接口 I与XElevationAPI业务下的接口 I的映射关系，确定调用XElevationAPI业务下的接口 1，具体地，根据配置的目标业务或目标业务接口的选择规则，或者，根据目标业务或目标业务接口的排列顺序及可使用状态，确定所述业务接口标识对应的目标业务或目标业务接口，然后根据转换规则，将用户发送的业务请求的数据格式转换至XElevationAPI业务下的接口 I的格式。</p>
+    <p>[0195]	步骤807，将转化格式后的所述业务接口请求转发至所述目标业务或者所述目标业务接口。</p>
+    <p>[0196]	举例说明，业务路由器转发转换格式后的业务接口请求至XElevationAPI业务；或者，业务路由器转发转换格式后的业务接口请求至至XElevationAPI业务接口。</p>
+    <p>[0197]	步骤808，所述目标业务或者所述目标业务接口根据接收到的转化格式后的所述业务接口请求，进行处理，并向所述业务路由器发送业务接口请求响应；</p>
+    <p>[0198]	步骤809，所述业务路由器接收所述目标业务或者所述目标业务接口发送的业务请求响应；</p>
+    <p>[0199]	例如，业务路由器接收到XElevationAPI返回的业务请求响应；</p>
+    <p>[0200]	步骤810，将所述业务接口请求响应发送给所述业务请求方；或者，根据所述业务接口与调用的业务或者调用的业务接口之间的所述转换规则，转换所述业务接口请求响应的格式，并将所述转换后的所述业务接口请求响应发送给所述业务请求方。</p>
+    <p>[0201]	用户接收到请求响应后，即可以获得需要查询的内容。[0202]	本发明实施例提供的一种业务配置的方法，与现有技术中当接口数据类型不同的多个业务调用时，需要通过执行多次业务的发布和注册，系统需保存和管理大量业务的静态信息和动态信息，造成数据冗余，降低了系统的处理性能相比，本发明实施例提供的方案通过在业务中封装的多种不同类型的接口，根据业务标识或者业务接口标识与调用的业务或者调用的业务接口之间的映射关系确定目标业务或者目标业务接口，并根据业务或者业务接口与调用的业务或者调用的业务接口之间的转换规则转换业务请求的格式，这样可以减少多次业务的发布和注册，可以减少系统中的冗余数据，提高系统的处理性能。</p>
+    <p>[0203]	本实施例的各个步骤的具体实现过程可以参照图4所示实施例的相关描述。以上所述，仅为本发明的具体实施方式，但本发明的保护范围并不局限于此，任何熟悉本技术领域的技术人员在本发明揭露的技术范围内，可轻易想到变化或替换，都应涵盖在本发明的保护范围之内。因此，本发明的保护范围应所述以权利要求的保护范围为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101621435A?cl=zh">CN101621435A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年7月4日</td><td class="patent-data-table-td patent-date-value">2010年1月6日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">一种通用业务架构下业务调用的方法、装置与系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20050262397">US20050262397</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2005年1月13日</td><td class="patent-data-table-td patent-date-value">2005年11月24日</td><td class="patent-data-table-td ">Fitzgerald David J</td><td class="patent-data-table-td ">System and method for providing a mission based management system</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20080289012">US20080289012</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年8月5日</td><td class="patent-data-table-td patent-date-value">2008年11月20日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">System and method for creating, executing, and mapping service</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20110020631">US20110020631</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月5日</td><td class="patent-data-table-td patent-date-value">2011年1月27日</td><td class="patent-data-table-td ">Douglas J Miller</td><td class="patent-data-table-td ">Coated Carbon Foam Article</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103414757A?cl=zh">CN103414757A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年7月17日</td><td class="patent-data-table-td patent-date-value">2013年11月27日</td><td class="patent-data-table-td ">广州从兴电子开发有限公司</td><td class="patent-data-table-td ">一种跨渠道数据传递对外开放方法及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029080000">H04L29/08</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029120000">H04L29/12</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012240000">H04L12/24</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L67/02">H04L67/02</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F15/177">G06F15/177</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=W-73BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L67/2823">H04L67/2823</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年5月8日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年1月22日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/8330e166737baa5cd2f0/CN103095479A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%9A%E5%8A%A1%E9%85%8D%E7%BD%AE%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%8A%E8%A3%85%E7%BD%AE.pdf?id=W-73BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0yaK9XKSfP_7K-561HVk4SNKWZDQ"},"sample_url":"https://www.google.com/patents/reader?id=W-73BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

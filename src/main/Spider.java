@@ -53,14 +53,7 @@ public class Spider {
 	public static void main(String[] args) {
 		urlQueue = new LinkedList<String>();
 		
-		//恢复上次的爬取状态
-		String savedQueue = FileTools.ReadFile("src/SavedQueue.txt");
-		if(savedQueue.length()!=0){
-			String que[] = savedQueue.split(",");
-			for (String string : que) {
-				urlQueue.offer(string);
-			}
-		}
+		
 		
 		//开启爬取线程 根据队列信息爬取
 		SpiderThread spiderThread = new SpiderThread();
@@ -69,7 +62,8 @@ public class Spider {
 		//等待输入，保存爬取状态
 		Scanner scanner = new Scanner(System.in);
 		status = scanner.nextInt();
-		SaveQueue();
+		//SaveQueue();
+		FileTools.SavePages("src/visited.txt", FileTools.GetTempString());
 		System.out.println("保存完成");
 	}
 	
@@ -79,7 +73,7 @@ public class Spider {
 	    public void run() {
 			while(status==0){   //当队列不空
 				//每爬取引用专利200条以后，清空队列并随机查找一个专利
-				if(Rnumber==200||urlQueue.isEmpty()){
+				if(Rnumber==50||urlQueue.isEmpty()){
 					Rnumber=0;
 					String tPatent = "";
 					while(tPatent.length()==0){
@@ -96,8 +90,9 @@ public class Spider {
 					for (String string : urlList) {
 						if(MatchPatentNumber(string)){
 							System.out.println(string+"        matches");
-							if(!Visited(string))
-						    urlQueue.offer(string);
+							if(!Visited(string)){
+						        urlQueue.offer(string);
+							}
 						}
 					}
 					SetVisited(toVisit);
@@ -106,13 +101,13 @@ public class Spider {
 						urlQueue.offer(toVisit);
 					}
 				}
-				try {
-					System.out.println("-----waiting-----");
-					sleep(5000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+//				try {
+//					System.out.println("-----waiting-----");
+//					sleep(5000);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
 			}
 			
 	    }
@@ -121,7 +116,7 @@ public class Spider {
 	
 	//TODO
 	public static boolean Visited(String url){
-		String visitString = FileTools.ReadFile("src/visited.txt");
+		String visitString = FileTools.GetTempString();
 		String visits[] = visitString.split(",");
 		for (String string : visits) {
 			if(string.equals(url))
@@ -131,10 +126,10 @@ public class Spider {
 	}
 	//TODO
 	public static void SetVisited(String toAppend){
-		if(FileTools.ReadFile("src/visited.txt").length()!=0)
-		   FileTools.AppendTextOnFile("src/visited.txt", ","+toAppend);
+		if(FileTools.GetTempString().length()!=0)
+		   FileTools.AppendTextOnVisitFile( ","+toAppend);
 		else
-		   FileTools.AppendTextOnFile("src/visited.txt",toAppend);
+		   FileTools.AppendTextOnVisitFile(toAppend);
 	}
 
 	public static String NumberGet(String result) {
@@ -157,7 +152,8 @@ public class Spider {
 			url = "https://www.google.com/patents/"+url+"?cl=zh&hl=zh-CN";
 			System.out.println("本次访问："+url);
 			HttpGet get = new HttpGet(new URI(url));
-			get.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "gb2312");
+			//get.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "gb2312");
+			//get.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "utf-8");
 			RequestConfig requestConfig = RequestConfig.custom()  
 			        .setConnectTimeout(5000).setConnectionRequestTimeout(1000)  
 			        .setSocketTimeout(5000).build();  
@@ -166,7 +162,7 @@ public class Spider {
 			if (response.getStatusLine().getStatusCode() == 200) {
 				HttpEntity entity = response.getEntity();
 				String result = EntityUtils.toString(entity);
-				FileTools.SavePages("src/pages/" + NumberGet(result) + ".txt", result);
+				FileTools.SavePages("src/pages1/" + NumberGet(result) + ".txt", result);
 				Rnumber++;
 				System.out.println(result);
 				System.out.println(Rnumber);
@@ -176,7 +172,7 @@ public class Spider {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-			SaveQueue();
+			FileTools.SavePages("src/visited.txt", FileTools.GetTempString());
 		}
 		return "error";
 	}
@@ -203,59 +199,9 @@ public class Spider {
 		return matcher.matches();
 	}
 	
-	public static void SaveQueue(){
-		String toWriteQueue = "";
-		for (String string : urlQueue) {
-			if(toWriteQueue.length()==0)
-			toWriteQueue+=string;
-			else 
-				toWriteQueue+=","+string;
-		}
-		FileTools.SavePages("src/SavedQueue.txt", toWriteQueue);
-	}
+
 	
 
-	// public static boolean matcher(String s, String pattern) {
-	// Pattern p = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE +
-	// Pattern.UNICODE_CASE);
-	// Matcher matcher = p.matcher(s);
-	// if (matcher.find()) {
-	//
-	// return true;
-	//
-	// } else {
-	//
-	// return false;
-	//
-	// }
-	//
-	// }
-	//
-	// public static String getContentCharset(HttpResponse response) {
-	//
-	// String charset = "ISO_8859-1";
-	//
-	// Header header = response.getEntity().getContentType();
-	// if (header != null) {
-	// String s = header.getValue();
-	// if (matcher(s, "(charset)\\s?=\\s?(utf-?8)")) {
-	//
-	// charset = "utf-8";
-	//
-	// } else if (matcher(s, "(charset)\\s?=\\s?(gbk)")) {
-	//
-	// charset = "gbk";
-	//
-	// } else if (matcher(s, "(charset)\\s?=\\s?(gb2312)")) {
-	//
-	// charset = "gb2312";
-	//
-	// }
-	//
-	// }
-	//
-	// return charset;
-	//
-	// }
+
 
 }

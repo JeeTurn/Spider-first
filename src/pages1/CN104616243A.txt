@@ -1,0 +1,279 @@
+<!DOCTYPE html><html><head><title>专利 CN104616243A - 一种高效的gpu三维视频融合绘制方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5bd24152bf5a1e342ae546da267fae0b/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5bd24152bf5a1e342ae546da267fae0b__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种高效的gpu三维视频融合绘制方法"><meta name="DC.contributor" content="李胜" scheme="inventor"><meta name="DC.contributor" content="闾晓琴" scheme="inventor"><meta name="DC.contributor" content="汪国平" scheme="inventor"><meta name="DC.contributor" content="北京大学" scheme="assignee"><meta name="DC.date" content="2015-1-20" scheme="dateSubmitted"><meta name="DC.description" content="本发明涉及一种高效的GPU三维视频融合绘制方法，其步骤包括：通过视频对象缓冲区获取由多路视频流所输入的视频数据；在GPU中对所获取视频数据并对其进行可扩展分层解码，解码线程由视频对象所依赖的对应三维场景部分的可视特性进行控制和驱动，可视特性包括可见性、分层属性和时间一致性；解码完成后将所有按照同步时间解码相应的时间片段而得到的图像序列和纹理ID绑定并存放在图像纹理缓冲区中；采用时空纹理映射函数对图像纹理缓冲区中的纹理进行采样，将其映射到三维场景中的物体的表面，并完成其它真实感绘制相关的操作，最终输出基于视频的虚实融合绘制结果。本发明能够满足三维视频虚实融合的有效性需求、准确性需求和可靠性需求。"><meta name="DC.date" content="2015-5-13"><meta name="citation_patent_publication_number" content="CN:104616243:A"><meta name="citation_patent_application_number" content="CN:201510028009"><link rel="canonical" href="https://www.google.com/patents/CN104616243A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN104616243A?cl=zh"/><meta name="title" content="专利 CN104616243A - 一种高效的gpu三维视频融合绘制方法"/><meta name="description" content="本发明涉及一种高效的GPU三维视频融合绘制方法，其步骤包括：通过视频对象缓冲区获取由多路视频流所输入的视频数据；在GPU中对所获取视频数据并对其进行可扩展分层解码，解码线程由视频对象所依赖的对应三维场景部分的可视特性进行控制和驱动，可视特性包括可见性、分层属性和时间一致性；解码完成后将所有按照同步时间解码相应的时间片段而得到的图像序列和纹理ID绑定并存放在图像纹理缓冲区中；采用时空纹理映射函数对图像纹理缓冲区中的纹理进行采样，将其映射到三维场景中的物体的表面，并完成其它真实感绘制相关的操作，最终输出基于视频的虚实融合绘制结果。本发明能够满足三维视频虚实融合的有效性需求、准确性需求和可靠性需求。"/><meta property="og:title" content="专利 CN104616243A - 一种高效的gpu三维视频融合绘制方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN104616243A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN104616243A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=yKRUCQABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN104616243A&amp;usg=AFQjCNHKOMHGv7GTVdc144H9gUmEVGsE6g" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ff0d0ecd677deb4b1f6d/CN104616243A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ff0d0ecd677deb4b1f6d/CN104616243A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN104616243A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN104616243A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN104616243A?cl=zh" style="display:none"><span itemprop="description">本发明涉及一种高效的GPU三维视频融合绘制方法，其步骤包括：通过视频对象缓冲区获取由多路视频流所输入的视频数据；在GPU中对所获取视频数据并对其进行可扩展分层解码，解码线程由视频对象所依赖的对应三维场景部分的...</span><span itemprop="url">https://www.google.com/patents/CN104616243A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN104616243A - 一种高效的gpu三维视频融合绘制方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN104616243A - 一种高效的gpu三维视频融合绘制方法" title="专利 CN104616243A - 一种高效的gpu三维视频融合绘制方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN104616243 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201510028009</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2015年5月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2015年1月20日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2015年1月20日</td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201510028009.8, </span><span class="patent-bibdata-value">CN 104616243 A, </span><span class="patent-bibdata-value">CN 104616243A, </span><span class="patent-bibdata-value">CN 201510028009, </span><span class="patent-bibdata-value">CN-A-104616243, </span><span class="patent-bibdata-value">CN104616243 A, </span><span class="patent-bibdata-value">CN104616243A, </span><span class="patent-bibdata-value">CN201510028009, </span><span class="patent-bibdata-value">CN201510028009.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E8%83%9C%22">李胜</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%97%BE%E6%99%93%E7%90%B4%22">闾晓琴</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%B1%AA%E5%9B%BD%E5%B9%B3%22">汪国平</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%22">北京大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN104616243A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104616243A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN104616243A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=yKRUCQABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201510028009&amp;usg=AFQjCNHHY0mDzyEyl696lx8Mpq5ezvVJIA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=yKRUCQABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D104616243A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNHHdfNNPpNTq_FcmXSvpSI8ZdBTtQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT157259895" lang="ZH" load-source="patent-office">一种高效的gpu三维视频融合绘制方法</invention-title>
+      </span><br><span class="patent-number">CN 104616243 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA157455047" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明涉及一种高效的GPU三维视频融合绘制方法，其步骤包括：通过视频对象缓冲区获取由多路视频流所输入的视频数据；在GPU中对所获取视频数据并对其进行可扩展分层解码，解码线程由视频对象所依赖的对应三维场景部分的可视特性进行控制和驱动，可视特性包括可见性、分层属性和时间一致性；解码完成后将所有按照同步时间解码相应的时间片段而得到的图像序列和纹理ID绑定并存放在图像纹理缓冲区中；采用时空纹理映射函数对图像纹理缓冲区中的纹理进行采样，将其映射到三维场景中的物体的表面，并完成其它真实感绘制相关的操作，最终输出基于视频的虚实融合绘制结果。本发明能够满足三维视频虚实融合的有效性需求、准确性需求和可靠性需求。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(10)</span></span></div><div class="patent-text"><div mxw-id="PCLM84029925" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1. 一种高效的GPU三维视频融合绘制方法，其步骤包括：  1) 通过视频对象缓冲区获取由多路视频流所输入的视频数据，采用视频解码器对其进 行解码，视频对象的解码线程由视频对象所依赖的对应三维场景部分的可视特性进行控制 和驱动，所述可视特性包括可见性、分层属性和时间一致性；  2) 在解码完成后，将所有按照同步时间解码相应的时间片段而得到的图像序列和纹理 ID绑定并存放在图像纹理缓冲区中；  3) 采用时空纹理映射函数对图像纹理缓冲区中的纹理进行采样，将其映射到三维场景 中的物体的表面，并完成其它真实感绘制相关的操作，最终输出基于视频的虚实融合绘制 结果。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 如权利要求1所述的方法，其特征在于：步骤1)所述可见性包括视域可见性、背向 面可见性和遮挡可见性；所述分层属性包括空间分层分辨率和时间分层分辨率；所述时间 一致性通过三维绘制系统向各个解码线程发送同步时间戳实现。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 如权利要求1或2所述的方法，其特征在于：步骤1)在三维场景对应部分的可视特 性的控制下进行解码时，依序分别计算和判定视频对象的可见性、空间分层、时间分层；首 先根据三维场景空间信息，通过计算视频对象的可见性，从m路视频所对应的视频对象中 选择出n路有效视频；然后分别计算出n路视频中每一个有效视频对象的空间分层分辨率 和时间分层分辨率；然后根据当前时间计算出每个视频对象的起始播放时间，并且找到其 对应的起始解码的I帧，后续的解码则从当前的I帧开始；当三维场景的观察参数发生变化 时，或者三维场景中的视频对象本身发生变化时，重新计算视频对象的可见性、时间分层和 空间分层分辨率和起始解码的I帧。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 如权利要求3所述的方法，其特征在于，所述可见性的判断和剔除方法包括： 视域体判断剔除，输入视频对象K所依附的三维场景表面Gk如果完全位于当前视点的 观察三维场景视域体之外，则该部分的三维场景表面相对于当前视点不可见，标记可见性 状态vk= � ;否则该部分的三维场景表面部分或者完全位于视域体之内，标记可见性状态vk  =1�  背向面判断剔除，针对所有通过上述视域体判断的输入视频对象K所依附的三维场景 表面Gk，如果属于相对当前视点观察三维场景时的背向面，则该部分的三维场景表面相对 于当前视点不可见，标记对应视频对象的可见性状态vk= � ;否则为正向面，标记视频对象 的可见性状态vk= 1 ;  以及遮挡判断剔除，针对所有通过上述视域体判断和背向面判断得到的输入视频对象K所依附的三维场景表面Gk，如果能够找到完全遮挡该Gk的其它三维场景，则标记其对应视 频对象的可见性状态vk= �,否则对应视频对象的可见性状态vk= 1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 如权利要求4所述的方法，其特征在于：所述视域体判断剔除的过程中，采用三维场 景表面的包围盒代替三维场景表面本身进行近似判断，具体方法是：采用基于轴对齐包围 盒的方法，通过2个顶点直接确定包围盒与视域体的相交情况，这两个顶点称为正侧点p和 负侧点n，相对于检测平面Jr，p点的有向距离最大，而n点的有向距离最小，如果p点在平 面的负方向，那么包围盒完全在视域体之外，否则进一步检测n点，若n点在平面31的 负方向，则包围盒与视域体相交，否则完全包含在其内部。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 如权利要求2所述的方法，其特征在于，步骤1)所述分层属性中空间分层分辨率的 计算方法为：利用包围盒在成像平面上的近似投影面积作为计算视频对象空间分辨率的依 据；设包围盒所对应的场景部分投影所占据的屏幕的像素数为Nk;设视频对象K的空间分  级由最低分辨率至最高分辨率依次为.jf，则其分级对应的分辨率所占据的像素数 为则如果存在i使得.形，)&lt;%S ，则当前视频对象K解码的合适的空间分  层值为</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 如权利要求6所述的方法，其特征在于，步骤1)在视频对象空间分层评估之后，将视 频解码的帧速率与当前三维虚拟现实系统的绘制的帧速率相匹配，即在满足整个虚实融合 的虚拟现实系统显示的实时性的前提条件下合理分配时间，计算得到符合条件的视频播放 的时间分层。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 如权利要求7所述的方法，其特征在于，步骤1)进行时间分层分辨率的计算时，对一 个三维场景进行在GPU上执行多路视频解码并虚实融合的时间估计方法是：</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00031.png"> <img img-format="tif" img-content="drawing" file="CN104616243AC00031.tif" id="icf0001" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00031.png" class="patent-full-image" alt="Figure CN104616243AC00031"> </a> </div>
+      </div>
+      <div class="claim-text">其中，cl、c2、c3为实验得出的经验系数，#tv�为场景中顶点变换的数量，#pix�为场 景中需要绘制的像素数量，VideoTexO为需要进行基于视频对象的纹理映射的纹理数量， VideoDecorderO为场景中视频解码的总时间，S表示三维场景；  为满足实时性，需要e，其中e为时间阈值，因此满足上述条件的方程式即可 以改写为：</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00032.png"> <img img-format="tif" img-content="drawing" file="CN104616243AC00032.tif" id="icf0002" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00032.png" class="patent-full-image" alt="Figure CN104616243AC00032"> </a> </div>
+      </div>
+      <div class="claim-text">7  而</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00033.png"> <img img-format="tif" img-content="drawing" file="CN104616243AC00033.tif" id="icf0003" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00033.png" class="patent-full-image" alt="Figure CN104616243AC00033"> </a> </div>
+      </div>
+      <div class="claim-text">其中代表第i  个视频对象的时间分层所代表的分辨率，f()函数代表该视频对象按照其对应的时间分层 和空间分层进行解码所耗费的代价函数，而g()函数代表该视频对象按照时间分成和空间 分层进行解码所获得的视频帧作为纹理数据进行纹理映射时耗费的时间代价函数；  根据上述不等式求解出每个视频对象K进行解码时满足条件的合适的时间分层所代  表的分辨率&amp; = 该时间分层所代表的分辨率与空间分层所代表的分辨率4共同决  定了每个有效地输入视频对象的分层解码状态。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 如权利要求1所述的方法，其特征在于，步骤2)所述图像纹理缓冲区采用自动更新 策略来管理缓冲区并避免存储的溢出，具体方法是： ① 每一张进行过纹理映射的纹理都立刻被打上删除标记；  ② 每一张纹理都带有一个时间标签t，如果S为设定的某一个极小的时 间量，则该张纹理被打上删除标记；  ③ 每隔一定的时间间隔，检查缓冲区中的图像纹理，将所有被打上删除标记的图像纹 理删除，并释放其所占据的显存空间；  ④ 如果某一时刻缓冲区检测到溢出，则立刻执行步骤③所述的删除和释放存储空间的 操作；  ⑤ 如果步骤④所述的操作执行完毕之后缓冲区依然被检测到溢出，则执行下述两种方  案之一或者同时执行这两种方案：方案一，将纹理缓冲区大小n扩大为n*2 ;方案二，将时 间量6缩小为6/2。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.如权利要求1所述的方法，其特征在于，步骤3)所述纹理映射函数表示为如下的映 射关系：给定具有时间维度的四维时空FeR4和具有时间维度的三维参数空间DeR3,对 于F中的任意一点（X，y，z，t)，其中t为F域中的时间维度，通过纹理映射�找到它的视频 纹理参数域中的对应点（u，v，T)，其中t为视频纹理域中的时间维度，即：</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00041.png"> <img img-format="tif" img-content="drawing" file="CN104616243AC00041.tif" id="icf0026" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AC00041.png" class="patent-full-image" alt="Figure CN104616243AC00041"> </a> </div>
+      </div>
+      <div class="claim-text">根据上述纹理映射函数进行视频纹理的采样。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES92129968" lang="ZH" load-source="patent-office" class="description">
+    <invention-title lang="ZH">-种高效的GPU H维视频融合绘制方法</invention-title>
+    <technical-field>
+      <p>技术领域</p>
+      <p>[0001] 本发明属于计算机图形、虚拟现实、增强现实技术领域，具体设及一种高效的GPU 上=维场景与多路视频融合绘制方法，可W增强大规模=维场景的内外部细节，并且为用 户提供随时序变化的动态=维场景的实时高逼真度展示。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>[0002] 近年来，GPU的强大并行计算能力被逐渐应用到视频编解码中。文献[Shen 2005，G. Shen, G. -P. Gao, S. Li, H. -Y. Shum, and Y. -Q. Zhang, "Accelerate video decoding with generic GPU, "IEEE Trans. Circuits Syst. Video Technol.，vol. 1 5, no. 5, pp. 685-693, May 2005.]将微软公司WMV-8解码器中的运动补偿、重构、色彩 空间转换该3个模块移植到GPU中，取得了较好的加速效果。文献[Fang 2005, Fang B.,Shen G.,Li S.,Chen H. :Techniques for efficeitne dct/idct implementation on generic gpu.In Proceedings of IEEE International Symposium on Circuits and Systems (2005), pp. 1126-1129.]提出了许多新的技术在通用可编程GPU上实 现DC、IDCT，实验结果表明该方法明显快于在CPU上使用MMX优化的IDCT算法。文献 [Pieters 2007a ;Pieters, B. , I^ijsse化ergen, D. V. , Neve, W. D. ,, de Walle, R. V. , 2007. Performance evaluation of h.264/avc decoding and visualization using the GPU. In:Proceedings of SPIE on Applications of Digital Image Processing, vol. 6696, pp. 669606-1 - 669606-13. ;Pieters 200化；Pieters, D. Van I^ijsse化ergen,W.De Neve and R. Van de Walle"Motion compensation and reconstruction of 比 264/AVC video bitstreams using the GPU", WIAMISV 07:Pr0c. 8th Int. Workshop Image Analysis for Multimedia Interactive Services,卵.69, 2007.]将 H. 264 中运动补偿、重构、色彩空 间转换移入GPU，实现了高清视频的实时解码。文献怔ung 2008, M. Kung，0. Au，P. Wong and C. Liu"Block based parallel motion estimation using programmable graphics hardware", Proc. Int. Conf. Audio, Language and Image Processing, pp. 599-603, 2008] 通过重新排列4*4块的编码顺序，去除块之间的相关性，实现了运动估计的GPU加速。实验 结果表明，该方法比CPU优化的SDVTD快了 45倍。</p>
+      <p>[0003] 在传统的视频解码的完整流程中，视频解码的流处理需要占据接近50%的CPU资 源，动态补偿则占据约12%，去块滤波占8%，视频变换则占2. 6%，四项加起来总CPU占用 超过70 %。如果没有硬件加速支持，完全依靠CPU负责解码的话，将导致CPU占用率居高 不下、发热量剧增，甚至无法播放视频。基于GPU的强大并行能力和在视频图像处理领域的 巨大潜力，Nvidia公司针对上述问题在GPU上开发了新一代化reVideo皿解码引擎支持 比264硬件解码，将所有图像解码工作交由显示核屯、负责，包括支持降低噪声，支持边缘增 强锐利度和图像细节，支持图像色彩校正，校正显示屏屏幕与电视屏幕在色彩特性上的差 异，确保输出图像质素与显示屏相若。支持LCD锐利化，增强色彩信号，对某些过慢反应时 间的LCD显示屏进行补偿，消除残影。此外化reVideo的开发环境DXVA还定义了一组可W 让图形驱动实现运算加速的硬件驱动接口值evice Driver Inte;rfaces/DDIs)。但是GPU 上视频编解码的核屯、硬件VP (Video Processor)作为独立的处理部件与GPU上执行并行计 算和图形处理的CUDA架构并不是硬件一体的，而且其硬件视频处理的运行模式与GPU图形 处理器上的运行模式为分离独立模式，整个视频的处理和=维图形的处理在逻辑流程上是 完全分离的，给需要同时进行视频图像处理和3D图形绘制的虚实融合应用带来障碍。</p>
+      <p>[0004] 在多路视频与大规模=维虚实融合绘制与可视化的场景及其应用系统中，当面对 多路视频输入的虚实融合处理与计算时，无论视频解码还是融合场景的3D图形绘制处理， 都面临庞大的计算量。虽然化reVideo的开发环境DXVA还定义了一组可W让图形驱动实 现运算加速的硬件驱动接口值evice Driver Interfaces/孤Is),但是由于GPU上视频编解 码的核屯、硬件VP (Video Processor)作为独立的处理部件与GPU上执行并行计算和图形处 理的CUDA架构并不是硬件一体的，而且其硬件视频处理的运行模式与GPU图形处理器上的 运行模式为分离独立模式，整个视频的处理和=维图形的处理流程是完全分离的。在视频 与图形的处理过程中，视频的数据输入及后处理数据输出与图形的数据输入及后处理数据 输出完全隔离，数据无法在显存中直接有效共享，往往只能间接通过PCIE通道进入内存后 再通过纹理绑定的形式进行从视频数据到图形纹理数据的交换和共享。由于视频解码之后 的图像数据量几乎可W达到Gb/s级，PCIE通道带宽基本被完全占用。此外，视频的解码和 =维虚拟场景的绘制是被视为两个单独的任务进行处理，仅仅在视频解码的数据被指定打 包成纹理数据之后才进入绘制的流水线，导致多路视频中大量的视频解码数据并不能适应 或者符合=维图形绘制引擎中纹理映射和融合绘制的需求：</p>
+      <p>[0005] 1)有效性需求；有m路视频输入，但是在浏览=维场景的某一时刻，只有其中某些 视频所对应的S维场景部分位于当前的视点观察范围之内，则只有该些处于观察范围之内 的n(n《m)路视频才是有效的，其他则是无效的。针对无效视频的解码W及执行后续融合 绘制操作都对最终的可视结果不产生任何影响，因此是无用的，但是执行解码会形成额外 的系统开销从而导致系统性能的下降；</p>
+      <p>[0006] 2)准确性需求；在保证视频信息的有效性基础之上，在浏览=维场景的某一时 亥IJ，处于当前的视点观察范围之内的n路有效视频，视频彼此之间的时间和空间分辨率往 往存在不一致现象，即视频质量的需求不一样。例如位于距离视点较近距离的=维场景上 出现的视频对象应该清晰度高，而距离视点较远的=维场景上出现的视频对象允许清晰度 较低。每个视频对象都应该根据其所依附的当前=维场景的具体状况而采取相应的视频 质量，而不应该所有的视频在解码时都采用最高清晰度标准进行解码，因为对n路有效视 频按照原始最高清晰度标准解码对最终的可视结果不产生任何影响，因此是无用的，但是 上述无用的解码开销会形成无谓的浪费从而导致系统性能的下降；此外，视频解码的帖速 率应该是与当前=维场景绘制的帖速率相匹配的，即解码出来的视频帖的速率应该接近当 前场景绘制的帖速率，因为当前场景的绘制帖速率是=维场景展示的决定性因素，过高的 视频解码帖速率并不会带来更好的视觉效果，反而会造成系统资源的浪费和系统性能的下 降。</p>
+      <p>[0007] 3)可靠性需求；对同时出现在=维场景中的n路有效视频对象，需要精确计算出 需要解码的初始视频帖，同时保证场景中多路视频对象播放时的时间的一致性。即在=维 场景中同时出现的A和B两个来源于实时监控的视频对象，视频A的当前显示的播放时间 为ta，视频B的当前显示播放时间为忧，则I ta-忧I需要小于某一个较小的误差阔值e，使 得两个视频对象的所播放的内容在视觉效果上基本同步的。</p>
+      <p>[000引显然，在面向基于视频的虚实融合图形应用中，如果每一秒甚至每一帖都进行大 量的视频解码之后的图像数据交换，对于整个虚实融合计算和显示的时间和效率影响将是 灾难性的。=维图形绘制与计算中往往设及大规模的=维场景模型，同时场景的绘制可能 还包含多重纹理映射、多遍绘制及多目标绘制、半透明、透明绘制等复杂绘制方法与手段， 需要占用大量的系统计算和存储资源，给虚拟现实系统或者增强现实系统的实时性需求带 来了极大的挑战。满足S维图形绘制引擎中实时纹理映射和融合绘制需求的系统和方法， 需要多路视频解码所在的视频处理模块和纹理映射所在的=维图形绘制模块两者协调组 织在一起，并协同完成基于视频的实时虚实融合绘制任务。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>[0009] 本发明针对传统的整个视频的处理和=维图形的处理流程是完全分离的架构W 及所带来的视频解码和虚实融合绘制效率低下影响系统实时性的问题，提出了一种新型的 高效的GPU上S维视频融合绘制方法，能够极大地提高基于多路视频的虚拟现实系统或者 增强显示系统中虚实融合绘制的效率。</p>
+      <p>[0010] 为实现上述目的，本发明采用如下技术方案：</p>
+      <p>[0011] 一种高效的GPU S维视频融合绘制方法，其步骤包括；</p>
+      <p>[0012] 1)通过视频对象缓冲区获取由多路视频流所输入的视频数据，采用视频解码器对 其进行解码，视频对象的解码线程由视频对象所依赖的对应=维场景部分的可视特性进行 控制和驱动，所述可视特性包括可见性、分层属性和时间一致性；</p>
+      <p>[001引 2)在解码完成后，将所有按照同步时间解码相应的时间片段而得到的图像序列和 纹理ID绑定并存放在图像纹理缓冲区中；</p>
+      <p>[0014] 3)采用时空纹理映射函数对图像纹理缓冲区中的纹理进行采样，将其映射到S维 场景中的物体的表面，并完成其它真实感绘制相关的操作，最终输出基于视频的虚实融合 绘制结果。</p>
+      <p>[0015] 进一步地，步骤1)在=维场景对应部分的可视特性的控制下进行解码时，，依序 分别计算和判定视频对象的可见性、空间分层、时间分层；首先根据=维场景空间信息，通 过计算视频对象的可见性，从m路视频所对应的视频对象中选择出n路有效视频；然后分别 计算出n路视频中每一个有效视频对象的空间分层分辨率和时间分层分辨率；然后根据当 前时间计算出每个视频对象的起始播放时间，并且找到其对应的起始解码的I帖，后续的 解码则从当前的I帖开始；当=维场景的观察参数发生变化时，或者=维场景中的视频对 象本身发生变化时，重新计算视频对象的可见性、时间分层和空间分层分辨率和起始解码 的I帖。</p>
+      <p>[0016] 进一步地，步骤1)所述可见性包括视域可见性、背向面可见性和遮挡可见性；所 述分层属性包括空间分层分辨率和时间分层分辨率；所述时间一致性通过=维绘制系统向 各个解码线程发送同步时间戳实现。</p>
+      <p>[0017] 与现有技术相比，本发明的有益效果如下；</p>
+      <p>[001引本发明的视频解码处理和S维图形绘制及纹理映射等过程都是发生在GPU之中， 整个实现过程利用并实现在统一的GPU硬件并行处理流程之中，进行自适应的解码（根据 可见性、LOD及准确时间估计），提高解码的效率，避免无效无用的解码，同时提高了视频纹 理映射的效率，将合适的视频纹理映射到=维场景的几何表面上，是一种高效的图形与视 频处理融合并行处理的方法，能够满足视频虚实融合的有效性需求、准确性需求和可靠性 需求。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>[0019] 图1是本发明的高效的GPU S维视频融合绘制方法的总体流程图。</p>
+      <p>[0020] 图2是可见性判断剔除算法的示意图。</p>
+      <p>[0021] 图3是包围盒的n点，P点W及相应检测平面n的示意图。</p>
+      <p>[0022] 图4是包围盒在屏幕的投影示意图，其中（a)图为1个面可见，化）图为2个面可 见，（C)图为3个面可见。</p>
+      <p>[0023] 图5是给包围盒的顶点进行编号的示意图。</p>
+      <p>[0024] 图6是对投影多边形进行围线积分的示意图。</p>
+      <p>[0025] 图7是视频的解码时间定位操作的示意图。</p>
+      <p>[0026] 图8是=维虚拟场景与多路视频输入进行虚实融合的绘制效果图。</p>
+      <p>[0027] 图9是当前视点条件下选择合适的视频分层解码进行虚实融合的效果图。</p>
+      <p>[002引图10是一个实例中开启（(a)图）和关闭（(b)图）基于视频的虚实融合的效果 对比图。</p>
+      <p>[0029] 图11是另一个实例中开启（(a)图）和关闭（(b)图）基于视频的虚实融合的效 果对比图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>[0030] 为使本发明的上述目的、特征和优点能够更加明显易懂，下面通过具体实施例和 附图，对本发明做进一步说明。</p>
+      <p>[0031] 图1是本发明方法的总体流程图。首先多路视频流输入至GPU上的视频对象缓冲 区。视频对象缓冲区由buffer管理与调度（缓冲区管理与调度）模块进行缓冲区对象的添 力口，删除，视频流的数据缓冲暂存，视频流数据的清空等，该接口同时为视频与图形处理统 一框架中的视频解码器提供原始视频数据，成为统一框架中的数据输入接口。该视频对象 缓冲区中的视频对象通过SVC(Scaled Video Coding)视频解码器与图像纹理缓冲进行数 据的单向转换，即将视频缓冲区中的视频对象经过视频处理解码之后转成=维虚拟场景模 型绘制所需要的表面纹理对象，W利于虚实融合的计算。其次，视频对象的解码线程受视频 对象所依赖的=维场景对应部分的视觉特性的控制和驱动，包括首先对=维场景的对应部 分计算其可见性（视域可见性、背向面可见性、遮挡可见性）评估，然后对基于SVC策略编 码的视频对象进行分层属性信息的计算和判定，包括空间分层分辨率，时间分层分辨率，从 而决定其解码恢复的视频图像的质量。针对各个视频对象，=维虚拟现实系统会定时跟该 些视频对象进行时间同步，W确保各个视频帖解码和播放的时间一致性，时间同步通过= 维绘制系统向各个解码线程发送同步时间戳实现。经过GPU视频解码器进行解码W后，所 有按照同步时间解码相应的时间片段而得到的图像序列和纹理ID绑定并存放在图像纹理 缓冲区中，缓冲区中的图像纹理会被定期清理w容纳更新的视频图像。=维虚实融合场景 的绘制中需要用到大量的视频纹理，因此构造一个新型的时间相关的时空纹理映射函数， 从而向图像纹理缓冲中的纹理进行采样，并映射到=维场景的表面，并一起完成其他真实 感绘制相关的操作。图像纹理缓冲区中的纹理图像在被采样访问结束之后，该幅纹理图像 将会被销毁。=维场景经过纹理映射和其它光照等绘制结束之后，输出基于视频的虚实融 合绘制的结果。</p>
+      <p>[0032] 上述方案满足了视频虚实融合的有效性需求、准确性需求和可靠性需求，其基本 过程如下；针对视频对象缓冲区中存储的由多路视频流所输入的视频对象，首先根据=维 场景空间信息采取计算视频对象可见性的方法，从m路视频所对应的视频对象中选择出n 路有效视频，W满足视频虚实融合的有效性需求；然后采取计算视频对象质量或者分辨率 的方法，分别计算出n路视频中每一个有效视频对象的分辨率（包括时间分层分辨率和空 间分层分辨率），W满足视频虚实融合的准确性需求；然后根据当前时间，计算出每个视频 对象的起始解码时间，并且找到其对应的起始解码的I帖，后续的解码则从当前的I帖开 始，上述工作满足虚实融合的可靠性需求。当=维场景的观察参数发生变化时，例如视点的 位置、观察朝向、焦距等相机参数发生变化，或者=维场景中的视频对象本身发生变化时， 则需要重新计算视频对象的可见性、分辨率和起始解码的I帖。视频对象按照分辨率需求 解码之后所获得的每一帖图像都将直接作为图像纹理对象驻留在显存中，=维场景绘制的 流程中，显示视频对象的部分则需要绑定相应的纹理对象并将纹理图像映射在=维场景中 的物体的表面，上述执行一个视频纹理映射操作，最终结合场景的绘制需求，例如光照明或 者其它半透明、多层纹理、法向纹理映射等多种真实感细节特效绘制等，绘制出融合了多路 视频输入作为场景表面细节增强的=维虚拟场景或者增强现实场景。</p>
+      <p>[0033] 一.视频对象可见性计算</p>
+      <p>[0034] 视频与=维场景的融合过程中，视频对象是依附于=维场景中的某些区域或者模 型的表面的，当进行虚实融合绘制之前，首先要确定该些视频对象所依附的=维场景的区 域或者模型表面是否可见，从而确定该些视频的可见性。因此，首先进行的可见性判断的 主要目标是当用户基于特定的视点位置或区域时，能够迅速判断出视频对象所依附的=维 场景表面是否可见。对于视频对象所依附的=维场景的表面，采用的可见性的判断和剔 除算法有W下S种；背向面判断剔除化ack-化ce culling),视域体判断剔除（VFC, view frustum州lling)，和遮挡判断剔除（occlusion culling)。如图2所不。</p>
+      <p>[003引 1)视域体判断剔除</p>
+      <p>[0036] 输入视频对象K所依附的S维场景表面化如果完全位于当前视点的观察S维场 景视域体之外，则该部分的S维场景表面相对于当前视点不可见，标记可见性状态vk = 0 ; 否则该部分的=维场景表面部分（相交）或者完全（包含）位于视域体之内，标记可见性 状态vk= 1。在判断的过程中，为了提高判断的效率，采用S维场景表面的包围盒（又称 为包围体）代替=维场景表面本身进行近似判断，即判断包围体是完全在视域体之内（包 含），还是完全在视域体之外（排除），或是有一部分与视域体相交。对于完全在视域体外 的包围盒所对应的S维场景表面化，直接赋予其可见性vk = 0 ;否则标记可见性状态vk = 1�</p>
+      <p>[0037] 随着视点位置不断变化，视域体也在随之发生相应变化，如何根据当前视点信息 快速计算视域体的6个平面成为整个VFC算法的基础。本发明采用了基于视点投影矩阵的 快速计算方法。</p>
+      <p>[00&#28204;首先计算当前相机的视点投影矩阵M(view projection matrix)，M = PXV，其中 P是投影矩阵（projection matrix)，V是视点矩阵（view matrix),通过矩阵M可W将当前 的世界坐标系转换成另一个仿射坐标系，在该个仿射坐标系中；原来的视域体转换成了一 个立方体，令世界坐标系下的一个点为；V = (X，y，Z，W)，W = 1，经过矩阵M变换之后得到 的点为 V' = (X'，y'，z'，w')，即有：</p>
+      <p>[0039]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00101.png"> <img id="idf0004" file="CN104616243AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00101.png" class="patent-full-image" alt="Figure CN104616243AD00101"> </a> </div>
+      
+      <p>[0040] 其中；= C&#8482;k'e..阻fe&#36889;），k = 0, 1，2, 3;</p>
+      <p>[0041] 若此时点V'在视域体转换成的立方体之内，则点V在世界坐标系下的视域体内。</p>
+      <p>[0042] 此时；V'满足；</p>
+      <p>[0043] -W' &lt; X' &lt; W'</p>
+      <p>[0044] -W' &lt;y' &lt;w'</p>
+      <p>[0045] -w' &lt; z' &lt; w'</p>
+      <p>[0046] 下面W视域体的右侧面为例，阐述世界坐标系下的平面方程推导过程。视域体右 侧面对应仿射坐标系下立方体的右侧面，则有：</p>
+      <p>[0047] X' &lt;w'</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00102.png"> <img id="idf0005" file="CN104616243AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00102.png" class="patent-full-image" alt="Figure CN104616243AD00102"> </a> </div>
+      
+      <p>[0化0] 根据空间解析几何，视域体右侧平面方程即为：</p>
+      <p>[0化1]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00103.png"> <img id="idf0006" file="CN104616243AD00103.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00103.png" class="patent-full-image" alt="Figure CN104616243AD00103"> </a> </div>
+      
+      <p>[0化2] 将此方程整理成nT &#8226; v+d = 0的形式：</p>
+      <p>[0053]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00104.png"> <img id="idf0007" file="CN104616243AD00104.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00104.png" class="patent-full-image" alt="Figure CN104616243AD00104"> </a> </div>
+      
+      <p>[0化4]则有；nT= (m 3�-1%|，m32-m�2)，</p>
+      <p>[0055] d = m33-m�3</p>
+      <p>[0056] 同理可W推导出视域体其他各个面的方程，总结如表1所示。</p>
+      <p>[0化7] 表1 ;视域体各面方程参数一览表</p>
+      <p>[005引</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00105.png"> <img id="idf0008" file="CN104616243AD00105.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00105.png" class="patent-full-image" alt="Figure CN104616243AD00105"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00106.png"> <img id="idf0009" file="CN104616243AD00106.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00106.png" class="patent-full-image" alt="Figure CN104616243AD00106"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00107.png"> <img id="idf0010" file="CN104616243AD00107.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00107.png" class="patent-full-image" alt="Figure CN104616243AD00107"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00108.png"> <img id="idf0011" file="CN104616243AD00108.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00108.png" class="patent-full-image" alt="Figure CN104616243AD00108"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00109.png"> <img id="idf0012" file="CN104616243AD00109.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00109.png" class="patent-full-image" alt="Figure CN104616243AD00109"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD001010.png"> <img id="idf0013" file="CN104616243AD001010.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD001010.png" class="patent-full-image" alt="Figure CN104616243AD001010"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00111.png"> <img id="idf0014" file="CN104616243AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00111.png" class="patent-full-image" alt="Figure CN104616243AD00111"> </a> </div>
+      
+      <p>[0化9]=维场景中的=维模型形状千变万化，直接判断其是否在视域体之内显然不切实 际，本发明使用模型的包围盒或者包围体炬ounding Volume/Bounding Box)作为近似， 采用了基于轴对齐包围盒（Axis Ali即ed Bounding Box, AABB)的快速计算方法，该种方 法只需要2个顶点就可W直接确定包围盒与视域体的相交情况，该两个点称为"正侧点 (Positive vertex)"和"负侧点（Negative vertex)"(下文简称P点和n点），相对于检 巧ij平面JT，P点的有向距离最大，而n点的有向距离最小，如图3所示，如果P点在平面31 的负方向，那么AABB完全在视域体之外，否则进一步检测n点，若n点在平面31的负方向， 则AABB与视域体相交，否则完全包含在其内部。</p>
+      <p>[0060] 与传统方法相比，该算法极大的减少了计算次数，符合实时绘制要求，通常的算法 需要计算包围盒8个顶点与视域体的空间位置关系，该需要48次"点-面"位置关系计算， 在模型数量巨大的情况下，效率很低，根本无法满足实时擅染的要求。</p>
+      <p>[0061] 。背向面判断剔除</p>
+      <p>[0062] 针对所有通过上述视域体判断的输入视频对象K(VkJ的视频对象）所依附的S维 场景表面Gk，如果属于相对当前视点观察S维场景时的背向面，则该部分的S维场景表面 相对于当前视点不可见，标记对应视频对象的可见性状态Vk^O。背向面的判断有多种常用 处理方法，在实施例中，选择从多边形所在平面上的任意一点做一条指向视点的向量，如果 该个向量与多边形法线之间的夹角大于等于90°，即两个向量的点乘运算《0,则多边形 为背向面，标记对应视频对象的可见性状态&#20034;1^^0，需要被剔除；否则多边形为正向面，标记 视频对象的可见性状态Vk = 1。</p>
+      <p>[006引如遮挡判断剔除</p>
+      <p>[0064] 针对所有通过上述视域体判断和背向面判断得到的输入视频对象K(Vk^ 1的视频 对象）所依附的=维场景表面Gk，它们处于视域体之内，但是有一些模型表面可能被其他物 体完全遮挡，如图2中阴影区内黑色虚线所表示的几何形状，因此通过遮挡判断剔除方法， 找出被其它=维场景完全遮挡的=维场景表面，标记其对应视频对象的可见性状态&#20034;1^^0， 否则对应视频对象的可见性状态Vk = 1。</p>
+      <p>[00化]由于图形处理器GPU具有快速光栅化的能力，而且随着硬件技术的发展提供了相 应的API接口，支持遮挡查询操作（Occlusion Query)。因此，本实施例中采用遮挡查询操 作进行遮挡判断工作。具体步骤为：</p>
+      <p>[0066] 1)初始化一个查询；</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00112.png"> <img id="idf0015" file="CN104616243AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00112.png" class="patent-full-image" alt="Figure CN104616243AD00112"> </a> </div>
+      
+      <p>[0067] 2)禁用写入帖和写深度缓冲区的操作，同时关闭其他所有多余状态；</p>
+      <p>[0068] 3)选取输入视频对象K所依附的=维场景表面Gk的一个简单、保守表示，通常是 其包围体进行单独一遍绘制并光栅化到深度缓冲区（depth buffer),由于只需要知道深度 信息，绘制过程避免了像素点颜色着色，纹理、光照信息的多次反复计算等操作；</p>
+      <p>[0069] 4) GPU统计能够通过深度测试的片元（化agments)数目，结束遮挡查询；</p>
+      <p>[0070] 5)获取查询结果，即包围体的可见像素数目，如果绘制的像素数目大于某个阔值 (通常为0)，则对应视频对象的可见性状态Vk= 1，否则其可见性状态V k= 0 ;</p>
+      <p>[0071] 该基于GPU硬件遮挡查询的可见性判断充分利用GPU内部的并行计算能力，节省 CPU计算资源。因为在GPU执行遮挡查询的阶段，仅对深度缓冲区（cbpth buffer)进行了 单独的一遍擅染，之后仅对于能够通过深度测试，即在屏幕可见的模型像素进行着色擅染， 无形之中节约了大量代价高昂的擅染操作。</p>
+      <p>[0072] 通过上述=项可见性测试判断的视频对象称为可见的有效视频对象，进入下一阶 段的处理。</p>
+      <p>[0073] 二.视频对象的 LOD(Level of detail)评估</p>
+      <p>[0074] 本发明所针对的视频源为当前的主流视频源，当前的主流视频源包含MPEG4、 H. 264等及其更高版本的视频源都支持扩展性视频编码，即分层视频编码（Layered Video Coding或者Seal油le Video Coding, SVC)。分层编码是将视频内容压缩成多个子比特 流（Substream)，其中一个比特流作为基本位流，形成基本层炬ase Layer)视频数据流，解 码器可W对其进行独立解码，并产生粗趟质量的视频序列；而其它的比特流则形成增强层 巧nhancement Layer)视频数据流，解码器必须依靠基本位流才能对其进行解码，解码后的 视频质量将大大优于仅依靠基本位流解码的视频质量。通过将视频信息进行分层，动态调 整编码速度，W适应不同网络环境下网络带宽所发生的变化，具有网络带宽适应能力，特别 适用于网络传输。传统的动态分层解码的依赖于网络传输环境作为判据，而在虚实融合的 虚拟现实系统中，本发明提出基于=维可视效果的动态分层解码策略。在分层视频编码方 式下，如果要得到最佳的视频解码效果，必须对所有比特流（基本层和增强层）进行解码还 原，但是在=维虚拟现实系统或者增强现实系统中，视频对象是作为=维场景中的某些局 部表面的附属外观特征而存在的，其视觉感知的需求与=维场景及视点属性（或者相机属 性）的密切相关，因此针对=维场景实际漫游浏览时进行=维成像所需要的视频质量，解 码还原到恰当合适的视频的时间和空间分层分辨率W满足上述需求，即本发明所述的视频 对象的L0D，包含空间层次细节（spatial L0D)和时间层次细节（temporal L0D)。</p>
+      <p>[0075] 1)视频对象空间分层的分辨率评估</p>
+      <p>[0076] 针对所有通过上述视频对象可见性判断得到的输入视频对象K所依附的=维场 景表面Gk，及其包围盒（或包围体）Bk，进行下述的空间分层的分辨率评估计算。利用包围 盒在成像平面上的近似投影面积作为计算视频对象空间分辨率（空间层次细节）的依据。 Bk的投影面积的计算方法算法如图4-6所示。</p>
+      <p>[0077] 首先，按照可见面的数目，将包围盒在屏幕的投影分成W下3种情况，如图4所示， (a)图所示为情况1 ;一个面可见，2D多边形包括4个可见顶点；化）图所示为情况2 ;2个 面可见，2D多边形包括6个可见顶点；（C)图所示为情况3 ;3个面可见，2D多边形包括7个 可见顶点。</p>
+      <p>[007引包围盒的6个平面把3维空间划分成了 27区域，那么只要根据视点位置，计算出 它所在的区域，就可W判断包围盒在屏幕投影的情况。给包围盒的顶点进行编号，并规定6 个面的名称，如图5所示；</p>
+      <p>[0079] 其次，建立一种从视点所在区域到2D多边形顶点标号顺序（顺时针）的映射，如 图所示情形，标号顺序为；�, 3, 7,6, 2,1，可见面为前面和顶面。对场景中的所有包围盒，每 一帖实时计算该个序列是非常低效的，为此引入查找表技术，将事先计算好的顶点序列存 于此表中，根据视点所在区域的编码进行快速查找。定义包围盒的外侧为平面正侧（用1 表示），内侧为平面负侧（用0表示），设计区域编码方法如表2所示：</p>
+      <p>[0080] 表2.区域编码</p>
+      <p>[0081]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00131.png"> <img id="idf0016" file="CN104616243AD00131.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00131.png" class="patent-full-image" alt="Figure CN104616243AD00131"> </a> </div>
+      
+      <p>[008引如；000000代表包围盒的内部区域，理论上编码存在26= 64种组合，实际上存在 一些无效情况，如；第0，1位均为1(表明视点同时在左侧和右侧平面的外侧）的情形，所W 需要约束条件W排除该些情况，具体描述是；第化位与第化+1位不可W同时为1，该里n = 0, 1，2。</p>
+      <p>[008引使用向量运算来确定视点所在区域，设视点位置为P，若向量？^与向量敞 点乘运算&lt;0,即夹角小于90°，则P在底面的负侧；反之，P在底面的正侧（把P在平面上 的情况归类于在平面的正侧），W此类推其他6个面，将计算出的区域编码所对应的十进制 数值作为索引，则可得到区域编码与顶点序列的映射关系表。特别的，当视点在包围盒内的 情况，设定此时num值为-1，作为特殊情况标记，表示直接使用最精细层的LOD模型进行擅 染，其他情况，当num值为0时，表示是无效情况，直接抛出异常，否则读取索引序列。</p>
+      <p>[0084] 由于投影多边形是封闭图形，且索引序列按照顶点顺时针顺序环绕一圈，所W可 W使用围线积分（Contour Integral)的方法，如图6所示，计算有向面积之和，其绝对值就 是最终投影多边形的面积Sk，即Sk= Proj炬k)。对于不同的显示设备，单位投影面积所占 据屏幕的像素数不同，设为&#29280;ixels_per_unit，则包围盒所对应的场景部分投影所占据的 屏幕的像素数为Nk= S k*&#29280;ixels_per_unit。</p>
+      <p>[0085] 设视频对象K的空间分级（或者空间分层）由最低分辨率至最高分辨率依次为 If ...1;^，&#20596;其分级对应的分辨率所占据的像素数为单调函数[乃1&#38272;，则如果存在i使 得;WD竭圣乃柏)，则当前视频对象K解码的合适的空间分层值为辟苗。</p>
+      <p>[0086] 2)视频对象时间分层的分辨率评估</p>
+      <p>[0087] 在视频对象空间分层评估之后，要进行其时间分层的评估。时间分层的评估将决 定视频对象播放的帖速率。根据前述原则，视频播放的帖速率需要与当前=维虚拟现实系 统的绘制的帖速率相匹配，即在满足整个虚实融合的虚拟现实系统显示的实时性的前提条 件下，合理分配时间，计算得到符合条件的视频解码的时间分层。</p>
+      <p>[008引 S维虚实融合的虚拟现实系统的运行时间按照如下公式划分：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00132.png"> <img id="idf0017" file="CN104616243AD00132.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00132.png" class="patent-full-image" alt="Figure CN104616243AD00132"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00141.png"> <img id="idf0018" file="CN104616243AD00141.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00141.png" class="patent-full-image" alt="Figure CN104616243AD00141"> </a> </div>
+      
+      <p>[0092] 其中，system代表S维虚拟现实系统之外，由于其他运行的系统和应用程序抢占 CPU或者GPU最远而导致的额外运行时延，nr代表非绘制相关的系统任务，r为S维场景绘 制任务，fs代表GPU程序的环境和框架准备与构建的任务，mm此处代表多媒体的数据组织 及解码等任务，idle代表运行空闲的时间。</p>
+      <p>[0093] 下面对各个分解因素进行分析：</p>
+      <p>[0094] 首先，系统时间是一个不可预测的变量，因为即使将；维虚拟现实系统的 优先级提升到一个非常高的水平，仍然无法阻止操作系统后台及其他程序的运行对资源的 消耗。而且，该不是一个可预测的分布，并没有一种行之有效的方法或者已知函数可W刻画 系统运行对于资源的消耗。但是，system带来的影响通常可W忽略不计，特别是在如今硬 件水平不断提高的情况下。</p>
+      <p>[0095] 其次，max (ET&#8482;，ET^u) -项中，在实时S维绘制系统中，ET^u-项时间应小于 ET°\该是一个普遍共识，只要程序优化得当，现代CPU的处理能力足W完成所分配的任务。 实际的S维绘制系统中，在在线运行run-time阶段实际运行中CPU使用率常常不到15%。</p>
+      <p>[0096] 再次，ET^u各项中，最为关键的影响因素是绘制和多媒体视频相关工作和 化因为设计良好的系统，应该能够保证GPU空闲时间&#163;7；品为0。巧jp'晰代表的 GI^U程序的运行环境和框架准备与构建的任务的执行时间与GPU中执行绘制任务和视频任 务相比也是几乎可W忽略不计的。</p>
+      <p>[0097] 最后，毋庸置疑，大多数情况下的主要瓶颈在于&#8226;墅和&#29234;:f，而在绘制一个 由部件Xi，X2. . . X。构成的S维场景S时，绘制任意两个部件的组合(Xi货屯）的时间满足： &#163;r,f巧(Xi货&#20034;2) ^&#24859;巧巧'（义1) +霞巧阿(巧)</p>
+      <p>[009引对此，本发明提出对一个S维场景进行在GPU上执行多路视频解码并虚实融合的 时间估计方法：</p>
+      <p>[0099]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00142.png"> <img id="idf0019" file="CN104616243AD00142.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00142.png" class="patent-full-image" alt="Figure CN104616243AD00142"> </a> </div>
+      
+      <p>[0100] 其中，cl、C2、C3为实验得出的经验系数，#tv�为场景中顶点变换的数量，&#29280;ixO 为场景中需要绘制的像素数量，VideoTexO为需要进行基于视频对象的纹理映射的纹理数 量，VideoDecorderO为场景中视频解码的总时间，上述时间计算表达式是考虑了在GPU中 视频解码和=维场景的绘制的可并行性。</p>
+      <p>[0101] 为满足实时性，需要&#163;1；^篇^^ e，其中e为时间阔值，由于一般实时性的定义为 帖速率超过25帖每秒（巧S)，因此一般为40ms。因此满足上述条件的方程式即可W改写 为：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00143.png"> <img id="idf0020" file="CN104616243AD00143.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00143.png" class="patent-full-image" alt="Figure CN104616243AD00143"> </a> </div>
+      
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00144.png"> <img id="idf0021" file="CN104616243AD00144.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00144.png" class="patent-full-image" alt="Figure CN104616243AD00144"> </a> </div>
+      
+      <p>[0102]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00151.png"> <img id="idf0022" file="CN104616243AD00151.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00151.png" class="patent-full-image" alt="Figure CN104616243AD00151"> </a> </div>
+      
+      <p>[010引 而Vid野图Demrd:障1:巧=巧=1巧!严)，&#165;icieoT酵X巧）=巧一留巧*乎其中代 表第i个视频对象的时间分层所代表的分辨率，fO函数代表该视频对象按照其对应的时 间分层和空间分层进行解码所耗费的代价函数，而g0函数代表该视频对象按照时间分成 和空间分层进行解码所获得的视频帖作为纹理数据进行纹理映射时耗费的时间代价函数。</p>
+      <p>[0104] 根据上述不等式求解出每个视频对象K进行解码时满足条件的合适的时间分层 所代表的分辨率巧C 该时间分层所代表的分辨率^巧：-与空间分层所代表的分辨率it 共同决定了每个有效地输入视频对象的分层解码状态。</p>
+      <p>[0105] 视频对象的解码时间同步</p>
+      <p>[0106] 对同时出现在=维场景中的n路有效视频对象，设定w =维虚拟现实的起始运行 时间为基准时间tbaw，系统当前的运行时间为Ttu"。。,，每隔一定的时间步长S，S维虚拟现 实系统发送一个时间戳同步信号给当前活动的视频对象进行时间同步，每个视频对象K的 解码线程接收到系统当前运行时间戳TtwuM之后，会计算当前视频对象K的解码出来的视 频帖的时间 tk与 T current 的差 A t - T current^tj^j</p>
+      <p>[0107] 1)如果At&lt;0,说明当前视频对象K的解码速度快于系统指定的速度，则将当前视 频对象K的解码时间延迟At, W等待一定时间之后，使得当前解码时间tk与系统的时间一 致；</p>
+      <p>[0108] 2)如果At&lt;0,说明当前视频对象K的解码速度慢于系统指定的速度，则当前 视频对象的解码速度需要加快，&#25436;索当前视频对象K中的两个I帖分别为I。和I。+1，使得 则视频对象K等待twi-Ttwu。拥长之后，开始解码I。+1，使得当前视频对象 更新之后的解码时间tk与系统的时间保持一致。</p>
+      <p>[0109] 3)如果=维虚拟现实系统中当前某一个视频对象由无效转为有效，即该视频对象 通过了前面所述步骤的判断和检测，则该视频对象获取向虚拟现实系统获取时间戳TtwuM， 并查找由此时间向后出现的第一个I帖，即ti〉Tcu"eM，则该视频对象在等待ti-Tcu"eM时长 之后开始解码，解出第一个I帖。</p>
+      <p>[0110] 上述的时间同步操作，使得当前场景中多路有效视频对象播放时的时间的一致 性。即在=维场景中同时出现的A和B两个来源于实时监控的视频对象，假定视频A的当前 显示的播放时间为t。，视频B的当前显示播放时间为tb，则通过上述方法使得Itg-tJ满足 小于某一个较小的误差阔值e，使得两个视频对象的所播放的内容是视觉上基本同步的。</p>
+      <p>[0111] 四.视频对象的GPU分层解码</p>
+      <p>[0112] W目前主流的H.264/MPEG-4视频格式为本发明的主要对象，其他支持分层编码 机制的视频编解码格式皆可W采用本发明所采用的方法。H.264/MPEG-4 AVC的编解码方 案流程主要包括如下5个部分；精密运动估计与帖内估计巧stimation)、变换（Transform) 及逆变换、量化（Quantization)及逆量化、环路滤波器（Loop Filter)、滴编码（^Entropy Coding)。比264/MPEG-4在GPU上的高清解码过程分为4个步骤，第一即对滴编码处理，该 里面包括了 CABAC/CAVLC，第二步实行逆变换计算，第=步进行运动补偿，然后就是去块滤 波。4个步骤都可W完全由GPU来完成而无需CPU干预。本实施例义用了 Nvidia提供的</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00152.png"> <img id="idf0023" file="CN104616243AD00152.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00152.png" class="patent-full-image" alt="Figure CN104616243AD00152"> </a> </div>
+      
+      <p>CUDADecoder API实现了 GPU上的视频解码，其分层解码的步骤和原理如下面所述。</p>
+      <p>[0113] 分层解码；由于扩展性视频编码是将视频内容压缩成多个子比特流（Substream)， 其中一个比特流作为基本位流，形成基本层炬ase Layer)视频数据流。针对每个有效的视 频对象K，GPU解码器可W对其进行独立解码，并产生粗趟质量的视频序列；而其它的比特 流则形成增强层巧nhancement Layer)视频数据流，解码器必须依靠基本位流才能对其进 行解码，解码后的视频质量将大大优于仅依靠基本位流解码的视频质量。在分层视频编码 方式下，本发明根据前述计算得到视频的时间分层所代表的分辨率与空间分层所代表 的分辨率;14,对所有n个视频对象的比特流（基本层和增强层）进行解码还原。</p>
+      <p>[0114] 视频对象的时间分层解码；首先按照视频对象K的时间分辨率14;进行解码，由于 视频W相同的空间分辨率、不同的帖率将原始视频信息压缩成两层一一基本层和增强层， 不同的时间分辨率就是对视频帖序列进行时间采样（即抽帖），W此来改变帖率。通常将I 帖和P帖（前项预测帖）作为基本层，W低帖率进行编码。将B帖（双向预测帖）作为增 强层，W较高的帖率进行编码。因为B帖本身不作为运动补偿的基准帖，B帖的丢弃对其它 各帖的质量没有影响。当然，P帖也可W作为增强层，但是由于P帖是对前后的B帖和后继 的P帖进行解码的基准帖，因此，丢弃P帖将直接或间接影响前后B帖和P帖的解码。假定 视频K的所有时间分辨率增强层按照时间分辨率从低至高分别标记为fi，f,，…fm，则由于 时间分辨率Lt并不能够确保恰好等于其中某一个fi(l ^ i ^m),因此寻找fi&lt; ^ fwj 则将当前视频对象K的增强层解压缩分辨率设为fw，采用GPU解码器将增强层的解码一直 进行到i+1层，获得当前视点条件下用户所需要的时间分层解码之后的视频。</p>
+      <p>[0115] 视频对象空间分层解码：其次按照其不同的空间分辨率进行解码，由于空间分 层多分辨率编码是将原始视频信息压成两层一-基本层和增强层，不同的空间分辨率就是 对视频序列帖进行空间采样。基本层W较低的空间分辨率进行编码。增强层在基本层的基 础上形成高分辨率图像的空间预测。该样，空间抽样随着层次的增加，分辨率逐渐提高，同 时码率也越来越高。GPU解码器在解码了视频对象K的基本层之后，依据141值持续从最低 层的增强层一直到14诉片在的层，将上述满足视觉精度需求的空间分层视频解码出来。</p>
+      <p>[0116] 上述视频时间分层解码和空间分层解码既可W按照顺序先后组合进行，也可W单 独进行。</p>
+      <p>[0117] 精确的时间帖定位；当获取了S维虚拟现实系统的运行时刻之后，的视频解码 就要按照该时刻进行解码播放，即视频帖的精确时间定位。针对每一个有效视频对象，W ffmpeg为实施例说明如何用跳转的函数进行某一时刻视频帖的定位av_seek_hame (fmtC ontext, videoStreamId, QirrentTime, AV沈EKJLAG_BACKWA&#30033;）；</p>
+      <p>[0118] 前面两个参数都是用来指明视频流的，第=个参数是想要跳转的时间戳，第四个 参数有如下=个枚举值：</p>
+      <p>[0119] &#30033;；若设置CurrentTime时间为1秒，但是只有0秒和2秒上 才有I帖，则时间从0秒的I帖开始进行解码。</p>
+      <p>[0120] AVSEEK_FLAG_ANY ;若设置化rrentTime时间为1秒，但是只有0秒和2秒上才有 I帖，则时间从2秒开始的I帖开始解码。</p>
+      <p>[0121] ;若设置化rrentTime时间为1秒，但是只有0秒和2秒上才 有I帖，则时间从2秒开始的I帖开始解码。</p>
+      <p>[0122] 视频对象进行同步或者状态由无效转换为有效视频对象时，需要精确定位视频帖 的位置，如果希望查找当前时间T,u"eDt之前的I帖，则可W采用AVSEEK_FLAG_BACKWARD，也 是就往前找最近的I帖；如果希望查找当前时间Tcurrent之后的I帖，则可W采用AVSEEK_ FLAG_ANY，也是就往后找最近的I帖。</p>
+      <p>[0123] 在实际系统中一次视频的解码时间定位操作如下：</p>
+      <p>[0124] 同步线程；将系统当前时间戳TtutuM发送给各个视频对象的解码线程；</p>
+      <p>[01巧]视频解码线程：收到新的时间戳后随即更新本地的时间，并调用av_seek_ 打ame找到Tcurrent前向最近的I帖（假设它的时间戳为T</p>
+      <p>[01%] 在上述视频对象解码时间同步部分，已经论述了如何将各个视频的解码时间进行 同步，但是由于其中大量设及解码线程的等待操作，虽然使得解码时间得到同步，但是会造 成在3D视频播放过程中的暂停或者跳帖现象。在实际的实施例中，为了消除视频暂停和跳 帖现象，我们采用下述的更改解码帖速率的策略。假设当前视频的解码时间慢于系统所设 定的解码时间（或者说解码的速度慢于系统需求的速度），当前系统所设定的解码时间是 TeutaM，TwtaM所对应的解码帖为B帖（如图7所示）。贝惜先&#25436;索到系统设定的解码时间 TcurreM之前的I帖，该帖对应的解码时间是TeutteM-t。，TwtteM之后的I帖，该帖对应的解码 时间是T^rrent+V贝Ij当前视频并不会立刻跳到Twrre"t+ti所对应的I帖，并在等待t 1 (即解 码线程休眠）之后开始执行Ttu"&#171;t+ti所对应的I帖，而是会从T 开始不停地解码每 一帖（该个速度大概是每秒50-60帖），该个解码帖速率会高于原本的正常的解码帖速率， 也就是加快了解码的速度和进度，而在大概2*t的时间后，帖的解码时间会赶上TtutuM的进 度，此时解码和播放速度恢复正常，如图7所示。针对当前视频的解码时间块于系统所设定 的解码时间（或者说解码的速度块于系统需求的速度）该种情况，我们可W采用同样的原 理减慢解码的速度和进度，从而达到跟=维虚拟现实系统的时间同步一致，并且多个视频 对象彼此之间的解码速度和进度也是同步一致的。</p>
+      <p>[0127] 实际使用的测试的t的值一般都在1秒内的一个较小的值，也就是一般在2秒内 播放速度会恢复正常视频的速度。</p>
+      <p>[0128] 解码视频帖的纹理映射：多路有效视频在执行完某一段时刻的解码之后，输出至 图像纹理缓冲区，该缓冲区占据GPU显存的一部分空间，设定缓冲区大小为n。在图像纹 理缓冲区中的每一个视频对象都对应的存储了一系列连续的图像纹理，每一张图像纹理分 别对应某一个瞬时时刻，则Ktm，Ktm+i，一Kt。代表并涵盖了视频对象K从t m时刻至t。时刻 的视频离散得出的图像序列，一般t"-tm所代表的时间间隔小于1秒钟。在图像纹理缓冲中 为每一张纹理图像打上时间标签，同时绑定一个纹理ID。在场景模型的绘制的纹理映射部 分，需要根据时间映射函数，找到准确的视频帖所对应的纹理图像，纹理采样在对应的纹理 对象内进行。</p>
+      <p>[0129] 为了避免图像纹理缓冲区的由于过量视频解码数据涌入而造成的溢出或者可能 形成的系统故障，该缓冲区的管理采用自动更新策略。1)每一张被使用过的（即进行过 纹理映射）的纹理都立刻被打上删除标记；2)每一张纹理都带有一个时间标签t，如果 5为设定的某一个极小的时间量，则该张纹理被打上删除标记。3)每隔一定 的时间间隔，检查缓冲区中的图像纹理，将所有被打上删除标记的图像纹理删除，并释放其 所占据的显存空间；4)如果某一时刻缓冲区检测到溢出，则立刻执行步骤3)所述的删除和 释放存储空间的操作；5)如果步骤4)所述的操作执行完毕之后缓冲区依然被检测到溢出， 则执行下述两种方案之一或者同时执行该两种方案。方案一；将纹理缓冲区大小n扩大为 n *2,；方案二：将时间量5缩小为5/2。</p>
+      <p>[0130] S维场景的绘制中需要用到本发明提出的视频纹理映射，采用逆向视频纹理映射 方法。在逆向视频纹理映射中，按=维场景启动绘制之后屏幕光栅化产生的像素（此部分 像素一定是从视频对象所对应的=维场景几何部分Gk而来）顺序访问图像纹理缓冲区中 的对应纹理图像及其中的纹理元素，对纹理图案进行随机采样。</p>
+      <p>[0131] 本发明设计的新型面向视频的时空纹理映射的算法可表示为如下的映射关系的 描述。传统的纹理映射为给定S维空间表面F G R3和二维参数域D G R2,对于F中的任意 一点（x，y，z)，通过纹理映射�找到它的纹理参数域中的对应点（u，v)。而新型的视频纹 理映射可W表示为如下的映射关系，给定具有时间维度的四维空间F G R4和具有时间维度 的S维参数空间D G R3,对于F中的任意一点（x，y，z，t)，其中t为F域中的时间维度，通 过纹理映射�找到它的视频纹理参数域中的对应点（u，v，T)，其中T为视频纹理域中的 时间维度。即：</p>
+      <p>[0132]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00181.png"> <img id="idf0024" file="CN104616243AD00181.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00181.png" class="patent-full-image" alt="Figure CN104616243AD00181"> </a> </div>
+      
+      <p>[0133] 在具体的实现中，每一个有效的视频对象与S维场景空间中相关的模型区域的关 联关系不相同，因此为每一个视频对象K及其关联区域Gk都建立一个映射函数� 1。通过 上述纹理映射函数关系的确定，对于绘制场景时S维空间中任意一点，都能够找到在视频 纹理域中的对应纹理点。在视频纹理域中的查找是首先通过参数T所确定的时间找到图 像纹理缓冲中相对应的具有时间标签的纹理图像，然后通过参数U，V访问该纹理图像的对 应纹素。如果对应纹理图像的结果尚未从视频解码过程中生成完毕，则纹理映射模块可W 等待所需纹理图像及其对象准备完毕之后再进行。</p>
+      <p>[0134] 本发明的纹理映射同样采用双线性滤波，该是目前通用的纹理映射算法，用来解 决点采样产生的块状效应，算法步骤如下：</p>
+      <p>[01巧](1)对传入纹理单元的纹理坐标（U，V)处理，取出（U，V)小数部分（U化ac，V化ac) 化及（u，v)在纹理图片中像素位置的整数部分（uint，Vint):</p>
+      <p>[0136] (2)从纹理图片中读取（uint, vint), (uint+1, vint), (uint, vint+1), (uint+1, V int+1)处 4 个纹素值 Cl, C2, C3, C4 ;</p>
+      <p>[0137] (3)按公式（2)进行双线性插值：</p>
+      <p>[0138] C = (1-ufrac) (l-vfrac)Cl+(ufrac) (l-vfrac)C化</p>
+      <p>[0139] (1-ufrac) (vfrac) C3+(ufrac) (vfrac) C4</p>
+      <p>[0140] 图8-11为本发明方法的绘制效果图。其中，图8为S维虚拟场景与多路视频输入 进行虚实融合的绘制效果图，图9为当前视点条件下选择合适的视频分层解码进行虚实融 合的效果图，图10为一个实例中开启（(a)图）和关闭（(b)图）基于视频的虚实融合的效 果对比图，图11为另一个实例中开启（(a)图）和关闭（(b)图）基于视频的虚实融合的效</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00182.png"> <img id="idf0025" file="CN104616243AD00182.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN104616243A/CN104616243AD00182.png" class="patent-full-image" alt="Figure CN104616243AD00182"> </a> </div>
+      
+      <p>果对比图。</p>
+      <p>[0141] W上实施例仅用W说明本发明的技术方案而非对其进行限制，本领域的普通技术 人员可W对本发明的技术方案进行修改或者等同替换，而不脱离本发明的精神和范围，本 发明的保护范围应W权利要求所述为准。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=yKRUCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G06T0001000000">G06T1/00</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=yKRUCQABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0013000000">H04N13/00</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2015年5月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年6月10日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ff0d0ecd677deb4b1f6d/CN104616243A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5bd24152bf5a1e342ae546da267fae0b.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E9%AB%98%E6%95%88%E7%9A%84gpu%E4%B8%89%E7%BB%B4%E8%A7%86%E9%A2%91%E8%9E%8D%E5%90%88%E7%BB%98.pdf?id=yKRUCQABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U25Kb4_2bmH28iHDeXDslCcYZLeeQ"},"sample_url":"https://www.google.com/patents/reader?id=yKRUCQABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

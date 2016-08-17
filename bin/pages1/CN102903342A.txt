@@ -1,0 +1,1059 @@
+<!DOCTYPE html><html><head><title>专利 CN102903342A - 驱动图像显示装置的方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="驱动图像显示装置的方法"><meta name="DC.contributor" content="加边正章" scheme="inventor"><meta name="DC.contributor" content="长妻敏之" scheme="inventor"><meta name="DC.contributor" content="乃一俊&#31056;" scheme="inventor"><meta name="DC.contributor" content="松井靖幸" scheme="inventor"><meta name="DC.contributor" content="黑川壮一郎" scheme="inventor"><meta name="DC.contributor" content="境川亮" scheme="inventor"><meta name="DC.contributor" content="东周" scheme="inventor"><meta name="DC.contributor" content="株式会社日本显示器西" scheme="assignee"><meta name="DC.date" content="2012-7-24" scheme="dateSubmitted"><meta name="DC.description" content="一种驱动图像显示装置的方法，该图像显示装置包括：（A）图像显示面板，其中，具有分别显示第一至第三原色和第四色的第一至第四子像素的像素以二维矩阵的形式排列该图像显示面板中，以及（B）信号处理器，在第i个图像显示帧中，在信号处理器中，至少基于第一至第四子像素输入信号和校正扩大系数α&#39;i-0来获得第一至第四子像素输出信号，并分别输出至第一至第四子像素，在信号处理器中获得或在信号处理器中存储具有HSV颜色空间中的饱和度S的亮度的最大值Vmax(S)，并且在第i个图像显示帧中，在信号处理器中，（a）获得像素中的饱和度Si和亮度Vi(S)，（b）获得扩大系数αi-0以及（c）确定校正扩大系数α&#39;i-0。"><meta name="DC.date" content="2013-1-30"><meta name="DC.relation" content="CN:101286306:A" scheme="references"><meta name="DC.relation" content="CN:101546544:A" scheme="references"><meta name="DC.relation" content="CN:101587697:A" scheme="references"><meta name="DC.relation" content="US:20110012915:A1" scheme="references"><meta name="DC.relation" content="US:20110181635:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102903342:A"><meta name="citation_patent_application_number" content="CN:201210258585"><link rel="canonical" href="https://www.google.com/patents/CN102903342A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102903342A?cl=zh"/><meta name="title" content="专利 CN102903342A - 驱动图像显示装置的方法"/><meta name="description" content="一种驱动图像显示装置的方法，该图像显示装置包括：（A）图像显示面板，其中，具有分别显示第一至第三原色和第四色的第一至第四子像素的像素以二维矩阵的形式排列该图像显示面板中，以及（B）信号处理器，在第i个图像显示帧中，在信号处理器中，至少基于第一至第四子像素输入信号和校正扩大系数α&#39;i-0来获得第一至第四子像素输出信号，并分别输出至第一至第四子像素，在信号处理器中获得或在信号处理器中存储具有HSV颜色空间中的饱和度S的亮度的最大值Vmax(S)，并且在第i个图像显示帧中，在信号处理器中，（a）获得像素中的饱和度Si和亮度Vi(S)，（b）获得扩大系数αi-0以及（c）确定校正扩大系数α&#39;i-0。"/><meta property="og:title" content="专利 CN102903342A - 驱动图像显示装置的方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102903342A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102903342A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102903342A&amp;usg=AFQjCNH9F_6G8WzIivL8UOar6Y_jwdDoGg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ebd4b9e6021a30016f60/CN102903342A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ebd4b9e6021a30016f60/CN102903342A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102903342A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102903342A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102903342A?cl=zh" style="display:none"><span itemprop="description">一种驱动图像显示装置的方法，该图像显示装置包括：（A）图像显示面板，其中，具有分别显示第一至第三原色和第四色的第一至第四子像素的像素以二维矩阵的形式排列该图像显示面板中，以及（B）信号处理器，在第i个图像...</span><span itemprop="url">https://www.google.com/patents/CN102903342A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102903342A - 驱动图像显示装置的方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102903342A - 驱动图像显示装置的方法" title="专利 CN102903342A - 驱动图像显示装置的方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102903342 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201210258585</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2013年1月30日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年7月24日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年7月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/US9001163?hl=zh-CN&amp;cl=zh">US9001163</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20130027441?hl=zh-CN&amp;cl=zh">US20130027441</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201210258585.8, </span><span class="patent-bibdata-value">CN 102903342 A, </span><span class="patent-bibdata-value">CN 102903342A, </span><span class="patent-bibdata-value">CN 201210258585, </span><span class="patent-bibdata-value">CN-A-102903342, </span><span class="patent-bibdata-value">CN102903342 A, </span><span class="patent-bibdata-value">CN102903342A, </span><span class="patent-bibdata-value">CN201210258585, </span><span class="patent-bibdata-value">CN201210258585.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%8A%A0%E8%BE%B9%E6%AD%A3%E7%AB%A0%22">加边正章</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%95%BF%E5%A6%BB%E6%95%8F%E4%B9%8B%22">长妻敏之</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%B9%83%E4%B8%80%E4%BF%8A%E7%A5%90%22">乃一俊&#31056;</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%BE%E4%BA%95%E9%9D%96%E5%B9%B8%22">松井靖幸</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%BB%91%E5%B7%9D%E5%A3%AE%E4%B8%80%E9%83%8E%22">黑川壮一郎</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%A2%83%E5%B7%9D%E4%BA%AE%22">境川亮</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%B8%9C%E5%91%A8%22">东周</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E6%97%A5%E6%9C%AC%E6%98%BE%E7%A4%BA%E5%99%A8%E8%A5%BF%22">株式会社日本显示器西</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102903342A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102903342A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102903342A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (11),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201210258585&amp;usg=AFQjCNELCgPgPlbcTYr9af1590sAf-cpMQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102903342A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFjyovHi4t8-Z0qMTCZfJXSM84xUw"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT120567059" lang="ZH" load-source="patent-office">驱动图像显示装置的方法</invention-title>
+      </span><br><span class="patent-number">CN 102903342 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA106311198" lang="ZH" load-source="patent-office">
+    <div class="abstract">一种驱动图像显示装置的方法，该图像显示装置包括：（A）图像显示面板，其中，具有分别显示第一至第三原色和第四色的第一至第四子像素的像素以二维矩阵的形式排列该图像显示面板中，以及（B）信号处理器，在第i个图像显示帧中，在信号处理器中，至少基于第一至第四子像素输入信号和校正扩大系数α'i-0来获得第一至第四子像素输出信号，并分别输出至第一至第四子像素，在信号处理器中获得或在信号处理器中存储具有HSV颜色空间中的饱和度S的亮度的最大值Vmax(S)，并且在第i个图像显示帧中，在信号处理器中，（a）获得像素中的饱和度Si和亮度Vi(S)，（b）获得扩大系数αi-0以及（c）确定校正扩大系数α'i-0。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(9)</span></span></div><div class="patent-text"><div mxw-id="PCLM50456578" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种驱动图像显示装置的方法，  其中，所述图像显示装置包括  (A)图像显示面板，具有显示第一原色的第一子像素、显示第二原色的第二子像素、显示第三原色的第三子像素以及显示第四色的第四子像素的像素以二维矩阵的方式排列在所述图像显示面板中，以及  (B)信号处理器，  在第i个图像显示帧中，在所述信号处理器中，  至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，并输出至所述第一子像素，  至少基于第二子像素输入信号和所述校正扩大系数α ’ 获得第二子像素输出信号，并输出至所述第二子像素，  至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，  基于所述第一子像素输入信号、所述第二子像素输入信号和所述第三子像素输入信号获得第四子像素输出信号，并输出至所述第四子像素，  在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax⑶，以及在所述第i个图像显示帧中，在所述信号处理器中，  (a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，  (b)基于在所述多个像素中获得的值Vmax(S)/Vi(S)中的至少一个值，获得扩大系数a i-。，以及  (c)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数a	’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定所述校正扩大系数a’g，其中，j是等于或大于I的正整数，  其中，饱和度S和亮度V(S)表示为如下  S=(Max-Min)/Max    V	(S)=Max  Max:包括至所述像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，  Min:包括至所述像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</div>
+    </div>
+    </div> <div class="claim"> <div num="2" class="claim">
+      <div class="claim-text">2.	一种驱动图像显示装置的方法，  其中，所述图像显示装置包括  (A)图像显示面板，具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素的像素在所述图像显示面板中以二维矩阵的方式排列在第一方向和第二方向上，至少由排列在所述第一方向的第一像素和第二像素形成像素组，并且在每个像素组中，显示第四色的第四子像素布置在所述第一像素和所述第二像素之间，以及  (B)信号处理器，在第i个图像显示帧中，在所述信号处理器中，  关于所述第一像素，  至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，并输出至所述第一子像素，  至少基于第二子像素输入信号和所述校正扩大系数α ’ 获得第二子像素输出信号，并输出至所述第二子像素，以及  至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，  关于所述第二像素，  至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，并输出至所述第一子像素，  至少基于第二子像素输入信号和所述校正扩大系数α ’ 获得第二子像素输出信号，并输出至所述第二子像素，以及  至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，以及关于所述第四子像素，  基于根据至所述第一像素的所述第一子像素输入信号、所述第二子像素输入信号和所述第三子像素输入信号获得的第四子像素控制第一信号；以及根据至所述第二像素的所述第一子像素输入信号、所述第二子像素输入信号和所述第三子像素输入信号获得的第四子像素控制第二信号，获得第四子像素输出信号，并输出至所述第四子像素，  在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax⑶，以及在所述第i个图像显示帧中，在所述信号处理器中，  (a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，  (b)基于在所述多个像素中获得的值Vmax(S)/Vi(S)中的至少一个值，获得扩大系数a i-。，以及  (c)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数a	’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定所述校正扩大系数a’g，其中，j是等于或大于I的正整数，  其中，饱和度S和亮度V(S)表示为如下  S=(Max-Min)/Max    V	(S)=Max  Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，  Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</div>
+    </div>
+    </div> <div class="claim"> <div num="3" class="claim">
+      <div class="claim-text">3.	&#8212;种驱动图像显示装置的方法，  其中，所述图像显示装置包括(A)图像显示面板，第一方向上的P个像素组和第二方向上的Q个像素组的总共PXQ个像素组以二维矩阵的方式排列在所述图像显示面板中，以及  (B)信号处理器，  每个像素组均具有在所述第一方向的第一像素和第二像素，  所述第一像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素，  所述第二像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第四色的第四子像素，  在第i个图像显示帧中，在所述信号处理器中，  至少基于至在所述第一方向计数时的第（P，q)个第一像素的第三子像素输入信号、至第（P，q)个第二像素的第三子像素输入信号和校正扩大系数α ’ g，获得至所述第（P，q)个第一像素的第三子像素输出信号，并输出至所述第（P，q)个第一像素的所述第三子像素，其中，p=l，2，…，P，并且q=l，2，…，和Q;以及  基于根据至所述第（P，q)个第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；根据至所述第一方向上与所述第(P，q)个第二像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号以及所述校正扩大系数α ’卜。，获得至所述第（P，q)个第二像素的第四子像素输出信号，并输出至所述第（P，q)个第二像素的所述第四子像素，  在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax⑶，以及在所述第i个图像显示帧中，在所述信号处理器中，  (a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，  (b)基于在所述多个像素中获得的值Vmax(S)/Vi(S)中的至少一个值，获得扩大系数a i-。，以及  (c)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数a	’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定所述校正扩大系数a’g，其中，j是等于或大于I的正整数，  其中，饱和度S和亮度V(S)表示为如下  S=(Max-Min)/Max    V	(S)=Max  Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，  Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</div>
+    </div>
+    </div> <div class="claim"> <div num="4" class="claim">
+      <div class="claim-text">4.	一种驱动图像显示装置的方法，  其中，所述图像显示装置包括  (A)图像显示面板，第一方向上的Ptl个像素和第二方向上的Qtl个像素的总共PciXQq个像素以二维矩阵的方式排列在所述图像显示面板中，以及  (B)信号处理器，  每个像素均具有显示第一原色的第一子像素、显示第二原色的第二子像素、显示第三原色的第三子像素和显示第四色的第四子像素，  在第i个图像显示帧中，在所述信号处理器中，  至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，并输出至所述第一子像素，  至少基于第二子像素输入信号和所述校正扩大系数α ’ 获得第二子像素输出信号，并输出至所述第二子像素，  至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，以及  基于根据至在所述第二方向上计数时的第（P，q)个像素的第一子像素输入信号、第二子像素输入信号以及第三子像素输入信号获得的第四子像素控制第二信号；以及根据至所述第二方向上与所述第（P，q)个像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号，获得至所述第（P，q)个像素的第四子像素输出信号，并输出至所述第（P，q)个像素的所述第四子像素，其中，p=l，2，…，和 P。，并且 q=l，2，…，和 Q0,  在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax⑶，以及在所述第i个图像显示帧中，在所述信号处理器中，  (a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，  (b)基于在所述多个像素中获得的值Vmax(S)/Vi(S)中的至少一个值，获得扩大系数a i-。，以及  (c)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数a	’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定所述校正扩大系数a’g，其中，j是等于或大于I的正整数，  其中，饱和度S和亮度V(S)表示为如下  S=(Max-Min)/Max    V	(S)=Max  Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值  Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</div>
+    </div>
+    </div> <div class="claim"> <div num="5" class="claim">
+      <div class="claim-text">5.	一种驱动图像显示装置的方法，  其中，所述图像显示装置包括：  (A)图像显示面板，第一方向上的P个像素组和第二方向上的Q个像素组的总共PXQ个像素组以二维矩阵的方式排列在所述图像显示面板中，以及  (B)信号处理器，每个像素组均具有在所述第一方向的第一像素和第二像素，  所述第一像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素，  所述第二像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第四色的第四子像素，  在第i个图像显示帧中，在所述信号处理器中，  基于根据至在所述第二方向上计数时的第（P，q)个第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；根据至所述第二方向上与所述第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号以及校正扩大系数a’g，获得第四子像素输出信号，并输出至所述第（P，q)个第二像素的所述第四子像素，其中，p=l，2，…，P，并且q=l，2，…，和Q，以及  至少基于至所述第（P，q)个第二像素的第三子像素输入信号、至第（P，q)个第一像素的第三子像素输入信号以及所述校正扩大系数α ’ g，获得第三子像素输出信号，并输出至所述第（P，q)个第一像素的所述第三子像素，  在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax⑶，以及在所述第i个图像显示帧中，在所述信号处理器中，  (a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，  (b)基于在所述多个像素中获得的值Vmax(S)/Vi(S)中的至少一个值，获得扩大系数a i-。，以及  (c)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数a	’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定所述校正扩大系数a’g，其中，j是等于或大于I的正整数，  其中，饱和度S和亮度V(S)表示为如下  S=(Max-Min)/Max    V	(S)=Max  Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，  Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求I至5中任一项所述的方法，其中，当Λ !&gt; Δ 2&gt;0、Λ 4&gt; Δ 3&gt;0，第一预定值为ε 1;第二预定值为ε 2,第三预定值为ε 3,第四预定值为ε 4，ε ^ ε 2〈0,且ε 4&gt; ε 3&gt;0时， (A)如果（I/δ)	=	的值小于所述第一预定值S1，则基于以下表达式来计算所述校正扩大系数α ’ ^0,   (1/0(1"， (i-j)-o) A I  (B)如果（I/Si)等于或大于所述第一预定值S1并且小于所述第二预定值ε2，则基于以下表达式来计算所述校正扩大系数a’g，    (1/0(1"， (i-j)-0) " A 2  (C)如果（I/Si)等于或大于所述第二预定值ε2并且小于所述第三预定值ε3，则基于以下表达式来计算所述校正扩大系数a’g，     (1/α i-0) = (1/α (i-j)-o)  (D)如果（I/Si)等于或大于所述第三预定值ε3并且小于所述第四预定值ε4，则基于以下表达式来计算所述校正扩大系数a’g，     (l/a i-0) = (1/ Q (i-j)-o) + Δ 3  (E)如果（I/Si)等于或大于所述第四预定值ε4，则基于以下表达式来计算所述校正扩大系数α ’ ^0,     (l/a i-0) = (1/ α (i-j)-o) + Δ 4o</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求I至5中任一项所述的方法，  其中，所述图像显示装置进一步包括照明所述图像显示面板的平面光源装置，以及  使用所述校正扩大系数α ’ i-o来控制所述平面光源装置的亮度。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，  其中，利用所述校正扩大系数α ’ 控制的所述平面光源装置的亮度是所述平面光源装置在第（i+k)个图像显示帧中的亮度，其中，O &lt; k &lt; 5。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求6所述的方法，其中，A1=A4=I	(1/δ,) -ε2,A2=A3=I (I/δ ,) |/2。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES57515917" lang="ZH" load-source="patent-office" class="description">
+    <p>驱动图像显示装置的方法技术领域</p>
+    <p>[0001]	本发明涉及驱动图像显示装置的方法。</p>
+    <p>背景技术</p>
+    <p>[0002]	近年来，在诸如彩色液晶显示器的图像显示装置中，性能的增强伴随有功耗的增大。具体地，例如，在彩色液晶显示器中，分辨率增强、颜色再现范围的扩大、或者亮度增大伴随有平面光源装置(背光）的功耗的增大。为了解决该问题，使每个显示像素具有四个子像素构造的技术引起了人们的关注，其中该四个子像素构造例如除了具有显示红色的红色显示子像素、显示绿色的绿色显示子像素以及显示蓝色的蓝色显示子像素的三个子像素之外还具有显示白色的白色显示子像素，从而利用白色显示子像素提高了亮度。借助于四个子像素构造，由于以与现有技术相同的功耗获得了高亮度，因此，如果亮度与现有技术相同，则可以降低平面光源装置的功耗并提高显示质量。</p>
+    <p>[0003]	例如，在日本专利No. 3167026中描述的彩色图像显示装置具有使用加色三原色法从输入信号生成三种彩色信号的单元，以及以相等比添加三个色调的彩色信号以生成辅助信号、并将包括辅助信号和通过从三个色调的信号减去辅助信号获得的三种彩色信号的共四种显示信号提供给显示单元的单元。通过三种彩色信号驱动红色显示子像素、绿色显 示子像素以及蓝色显示子像素，并且通过辅助信号驱动白色显示子像素。</p>
+    <p>[0004]	日本专利No. 3805150描述了这样的一种液晶显示器，即，包括其中红色输出子像素、绿色输出子像素、蓝色输出子像素和亮度子像素形成一个主像素单元从而可以执行彩色显示的液晶面板。液晶显示器具有计算单元，其使用从输入图像信号获得的红色输入子像素、绿色输入子像素和蓝色输入子像素的数字值Ri、Gi和Bi，计算用于驱动亮度子像素的数字值W以及用于驱动红色输出子像素、绿色输出子像素、蓝色输出子像素的数字值Ro、Go和Bo。计算单元计算满足以下关系的数字值Ro、Go、Bo、和W，并且借助于该数字值，通过添加亮度子像素，实现了其中比仅提供红色输入子像素、绿色输入子像素和蓝色输入子像素的构造的亮度增强。</p>
+    <p>[0005]	Ri : Gi : Bi= (Ro+ff) : (Go+ff) : (Bo+ff)</p>
+    <p>[0006]	另一方面，根据日本专利No. 3167026或日本专利No. 3805150中描述的技术，虽然白色显示子像素的亮度增大，但是红色显示子像素、绿色显示子像素以及蓝色显示子像素的亮度并没有增大。为了解决该问题，例如，JP-A-2010-033014描述了一种用于驱动图像显示装置的方法，其中，每个像素均具有显示第一原色的第一子像素、显示第二原色的第二子像素、显示第三原色的第三子像素以及显示第四色的第四子像素。根据该方法，计算扩大系数Citl，并且基于有关的扩大系数a ^来获得输出信号。</p>
+    <p>发明内容</p>
+    <p>[0007]	JP-A-2010-033014中描述的用于驱动图像显示装置的方法具有优势的原因在于可以可靠地实现亮度增大、实现显示质量的提高以及降低平面光源装置的功耗。在每个图像显示帧中都确定扩大系数Qci，并且平面光源装置(背光）的亮度基于扩大系数而减小。然而，当某一图像显示帧中的扩大系数a^和与该图像显示帧相邻的图像显示帧中的扩大系数之间的变化很大时，在图像中可能观察到闪烁。</p>
+    <p>[0008]	因此，期望提供一种驱动图像显示装置的方法，其中，即使在某一图像显示帧中的扩大系数Qci和与该图像显示帧相邻的图像显示帧中的扩大系数Citl之间的变化很大时，也极不可能在图像中出现闪烁。</p>
+    <p>[0009]	本发明的第一实施方式涉及驱动图像显示装置的方法。该图像显示装置包括：(A)图像显示面板，其中，具有显示第一原色的第一子像素、显示第二原色的第二子像素、显示第三原色的第三子像素和显示第四色的第四子像素的像素以二维矩阵的方式排列在该图像显示面板中；以及（B)信号处理器。在第i个图像显示帧中，在信号处理器中，至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，并输出至第一子像素，至少基于第二子像素输入信号和校正扩大系数α ’ g获得第二子像素输出信号，并输出至第二子像素，至少基于第三子像素输入信号和校正扩大系数α ’ 获得第三子像素输 出信号，并输出至第三子像素，以及基于第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得第四子像素输出信号，并输出至第四子像素。</p>
+    <p>[0010]	根据本发明的第二实施方式涉及驱动图像显示装置的方法。该图像显示装置包括：（Α)图像显示面板，其中，具有显示第一原色的第一子像素、显示第二原色的第二子像素和显不第三原色的第三子像素以二维矩阵的方式排列在第一方向和第二方向上,在第一方向排列的至少第一像素和第二像素形成像素组，并且在每个像素组中，显示第四色的第四子像素排列在第一像素和第二像素之间；以及（B)信号处理器。在第i个图像显示帧中，在信号处理器中，关于第一像素，至少基于第一子像素输入信号和校正扩大系数α ’ g获得第一子像素输出信号，并输出至第一子像素，至少基于第二子像素输入信号和校正扩大系数α ’卜。获得第二子像素输出信号，并输出至第二子像素，以及至少基于第三子像素输入信号和校正扩大系数α ’ 获得第三子像素输出信号，并输出至第三子像素，关于第二像素，至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，并输出至第一子像素，至少基于第二子像素输入信号和校正扩大系数α ’ 获得第二子像素输出信号，并输出至第二子像素，以及至少基于第三子像素输入信号和校正扩大系数α ’ g获得第三子像素输出信号，并输出至第三子像素，以及关于第四子像素，基于根据至第一像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号；以及根据至第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号，获得第四子像素输出信号，并输出至第四子像素。</p>
+    <p>[0011]	本发明的第三实施方式涉及驱动图像显示装置的方法。该图像显示装置包括：(A)图像显示面板，其中，第一方向上的P个像素组和第二方向上的Q个像素组共PXQ个像素组排列成二维矩阵，以及（B)信号处理器。每个像素组均具有第一方向上的第一像素和第二像素，第一像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素，第二像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第四色的第四子像素。在第i个图像显示帧中，在信号处理器中，至少基于至第（P，q)个第一像素的第三子像素输入信号、至第（P，q)个第二像素的第三子像素输入信号和校正扩大系数a’g，获得至在第一方向上计数时的第（P，q)个第一像素[其中，P=I, 2,…，P,并且q=l, 2,…，和Q]的第三子像素输出信号，并输出至第(p, q)个第一像素的第三子像素；以及，基于根据至第（P，q)个第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；根据至第一方向上与第(P，q)个第二像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号；以及校正扩大系数a’g，获得至第（p，q)个第二像素的第四子像素输出信号，并输出至第（P，q)个第二像素的第四子像素。</p>
+    <p>[0012]	本发明的第四实施方式涉及驱动图像显示装置的方法。该图像显示装置包括：(A)图像显示面板，其中，第一方向上的Ptl个像素和第二方向的Qtl个像素共PciXQtl个像素排列成二维矩阵，以及（B)信号处理器。每个像素均具有显示第一原色的第一子像素、显示第二原色的第二子像素、显示第三原色的第三子像素和显示第四色的第四子像素。在第i个图像显示帧中，在信号处理器中，至少基于第一子像素输入信号和校正扩大系数a’g获得第一子像素输出信号，并输出至第一子像素，至少基于第二子像素输入信号和校正扩大系数α ’ g获得第二子像素输出信号，并输出至第二子像素，至少基于第三子像素输入信号和校正扩大系数α ’ i-o获得第三子像素输出信号，并输出至第三子像素，以及基于根据&#183;至第（P，q)个像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；以及根据至第二方向上与第（P，q)个像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号，获得至在第二方向计数时的第（P，q)个像素[其中，P=I, 2,…，和Ptl，并且q=l，2，…，和QJ的第四子像素输出信号，并输出至第（p，q)个像素的第四子像素。</p>
+    <p>[0013]	本发明的第五实施方式涉及驱动图像显示装置的方法。该图像显示装置包括：(A)图像显示面板，其中，第一方向上的P个像素组和第二方向上的Q个像素组共PXQ个像素组排列成二维矩阵，以及（B)信号处理器。每个像素组均具有第一方向上的第一像素和第二像素，第一像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素，并且第二像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第四色的第四子像素。在第i个图像显示帧中，在信号处理器中，基于根据至在第二方向计数时的第（P，q)个第二像素[其中，P=I, 2, &#8226;&#8226;&#8226;，？，并且9=1，2，…，和Q]的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号、根据至第二方向上与第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号；以及校正扩大系数a’g，获得第四子像素输出信号，并输出至第（p，q)个第二像素的第四子像素；以及至少基于至第（P，q)个第二像素的第三子像素输入信号、至第（P，q)个第一像素的第三子像素输入信号以及校正扩大系数α ’ g，获得第三子像素输出信号，并输出至第(P，q)个第一像素的第三子像素。</p>
+    <p>[0014]	在根据本发明第一至第五实施方式的驱动图像显示装置的方法中，在信号处理器中获得或在在信号处理器中存储以通过添加第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax (S)，并且在第i个图像显示帧中，在信号处理器中，（a)基于多个像素中的子像素输入信号值，获得多个像素中的饱和度Si和亮度Vi (S) ； (b)基于在多个像素中获得的值Vmax(S)/Vi (S)中的至少一个值，获得扩大系数ag;以及（C)基于预先在第（i-j)个图像显示帧中(其中，j是等于或大于I的正整数)应用的校正扩大系数α ’ (&#971;)_。和在第i个图像显示帧中获得的扩大系数a g，确定校正扩大系数《 ’ i-。。</p>
+    <p>[0015]	这里，饱和度S和亮度V(S)表示为如下。</p>
+    <p>[0016]	S=(Max-Min)/Max</p>
+    <p>[0017]	V ⑶=Max</p>
+    <p>[0018]	Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值</p>
+    <p>[0019]	Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。 [0020]	饱和度S可以具有从O至I的值，亮度V (S)可以具有从O至（2n_l)的值，并且η是显示灰度位数。“HSV颜色空间”的“H”表示代表颜色类型的色调，“S”表示代表颜色彩度（vividness)的饱和度(饱和度或色度)，“V”表示代表颜色亮度的亮度(亮度值或亮度值(lightness value))。这同样适用于以下描述。上限值j可以在从I至8的范围内。</p>
+    <p>[0021]	借助于根据本发明第一至第五实施方式的驱动图像显示装置的方法，通过添加第四色扩大了颜色空间（HSV颜色空间)，并且至少基于子像素输入信号和校正扩大系数α ’</p>
+    <p>获得子像素输出信号。以此方式，由于基于校正扩大系数α’μ扩大了输出信号值，因此不同于现有技术，没有白色显示子像素的亮度增大而红色显示子像素、绿色显示子像素和蓝色显示子像素的亮度不增大的情况。即，例如，不仅可以增大白色显示子像素的亮度，还可以增大红色显示子像素、绿色显示子像素和蓝色显示子像素的亮度。</p>
+    <p>[0022]	基于预先在第（i-j)个图像显示帧中应用的校正扩大系数α ’ Hcl和在第i个图像显示帧中获得的扩大系数a g来确定校正扩大系数ci’g。因此，可以提供一种驱动图像显示装置的方法，其能够减小第（i-j)个图像显示帧中的校正扩大系数α ’ 和第i个图像显示帧中的扩大系数a g之间的变化，并且几乎不可能发生图像闪烁。</p>
+    <p>[0023]	借助于根据本发明第一实施方式的驱动图像显示装置的方法，可以基于校正扩大系数α ’ 减小平面光源装置的亮度，从而实现平面光源装置的功耗减小。</p>
+    <p>[0024]	借助于根据本发明第二和第三实施方式的驱动图像显示装置的方法，信号处理器根据至每个像素组中的第一像素和第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得并输出第四子像素输出信号。即，由于第四子像素输出信号是基于至相邻的第一像素和第二像素的输入信号获得的，因此实现了至第四子像素的输出信号的优化。借助于根据本发明第二和第三实施方式的驱动图像显示装置的方法，由于为具有至少第一像素和第二像素的像素组布置一个第四子像素，因此可以抑制子像素的开口区域的面积减小。结果，可以可靠地实现亮度增大，使得可以实现显示质量的提高，并减小平面光源装置的功耗。</p>
+    <p>[0025]	借助于根据本发明第四实施方式的驱动图像显示装置的方法，基于至第（P，q)个像素的子像素输入信号和至第二方向上与该像素相邻的相邻像素的子像素输入信号，获得至第（P，q)个像素的第四子像素输出信号。即，由于还基于至与特定像素相邻的相邻像素的输入信号获得至特定像素的第四子像素输出信号，因此，实现了至第四子像素的输出信号的优化。由于设置了第四子像素，因此可以可靠地实现亮度增大，使得可以实现显示质量的提高，并减小平面光源装置的功耗。[0026]	借助于根据本发明第五实施方式的驱动图像显示装置的方法，基于至第（p，q)个第二像素的子像素输入信号和至第二方向上与该第二像素相邻的相邻像素的子像素输入信号，获得至第（P，q)个第二像素的第四子像素输出信号。即，由于至形成特定像素组的第二像素的第四子像素输出信号是不仅基于至形成特定像素组的第二像素的输入信号还基于至与该第二像素相邻的相邻像素的输入信号获得的，因此实现了至第四子像素的输出信号的优化。由于为具有第一像素和第二像素的像素组布置一个第四子像素，因此可以抑制子像素的开口区域的面积减小。结果，可以可靠地实现亮度增大，使得可以实现显示质量的提高，并减小平面光源装置的功耗。</p>
+    <p>附图说明</p>
+    <p>[0027]	图I是示出用于计算示例I的图像显示装置中的校正扩大系数的流程的示意图。</p>
+    <p>[0028]	图2A和图2B是示例I的图像显示装置中的图像显示面板和图像显示面板驱动电路的概念图。</p>
+    <p>[0029]	图3是示例I的图像显示装置的概念图。</p>
+    <p>[0030]	图4A和图4B分别是一般柱状HSV颜色空间的概念图和示意性示出饱和度S和亮 度V(S)之间的关系的示意图，并且图4C和图4D分别是示例I中的放大柱状HSV颜色空间的概念图和示意性示出饱和度S和亮度V(S)之间的关系的示意图。</p>
+    <p>[0031]	图5A和图5B是示意性示出了通过在示例I中添加第四色（白色）而扩大的柱状HSV颜色空间中的饱和度S和亮度V(S)之间的关系的示意图。</p>
+    <p>[0032]	图6是示出在示例I中添加第四色（白色）之前的现有HSV颜色空间、通过添加第四色（白色）扩大的HSV颜色空间以及输入信号的饱和度S和亮度V(S)之间的关系的示意图。</p>
+    <p>[0033]	图7是示出在示例I中添加第四色（白色）之前的现有HSV颜色空间、通过添加第四色（白色）扩大的HSV颜色空间以及输出信号（已经过扩大处理）的饱和度S和亮度V(S)之间的关系的不意图。</p>
+    <p>[0034]	图8A和图8B是示意性示出了输入信号值和输出信号值并示出示例I的驱动图像显示装置的方法和日本专利No. 3805150中描述的处理方法中的扩大处理之间的差异的示意图。</p>
+    <p>[0035]	图9是示例2的图像显示装置的图像显示面板和平面光源装置的概念图。</p>
+    <p>[0036]	图10是示例2的图像显示装置的平面光源装置中的平面光源装置控制电路的电路图。</p>
+    <p>[0037]	图11是示意性示出示例2的图像显示装置的平面光源装置中平面光源单元等的布局和布置的示意图。</p>
+    <p>[0038]	图12A和图12B是示出了在平面光源装置驱动电路的控制下，增大和减小平面光源单元的光源亮度Y2的状态，使得当假设将与显示区域单元内信号最大值Xmax-(s，t)相当的控制信号提供给子像素时，显示亮度第二规定值y2被平面光源单元获得的概念图。</p>
+    <p>[0039]	图13是示例3的图像显示装置的等效电路图。</p>
+    <p>[0040]	图14是示例3的图像显示装置中的图像显示面板的概念图。</p>
+    <p>[0041]	图15是示意性示出示例4的图像显示面板中的像素和像素组的布局的示意图。[0042]	图16是示意性示出示例5的图像显示面板中的像素和像素组的布局的示意图。</p>
+    <p>[0043]	图17是示意性示出示例6的图像显示面板中的像素和像素组的布局的示意图。</p>
+    <p>[0044]	图18是示例4的图像显示装置中的图像显示面板和图像显示面板驱动电路的概念图。</p>
+    <p>[0045]	图19是示意性示出示例4的驱动图像显示装置的方法中的扩大处理中的输入信号值和输出信号值的示意图。</p>
+    <p>[0046]	图20是示意性示出示例7、8或10的图像显示面板中的像素和像素组的布局的示意图。</p>
+    <p>[0047]	图21是示意性示出示例7、8或10的图像显示面板中的像素和像素组的布 局的另一示例的示意图。</p>
+    <p>[0048]	图22是示出形成示例8中的像素组的第一像素和第二像素中的第一子像素、第二子像素、第三子像素以及第四子像素的布置的变形例的概念图。</p>
+    <p>[0049]	图23是示意性示出示例9的图像显示装置中的像素的布局示例的示意图。</p>
+    <p>[0050]	图24是示意性示出示例10的图像显示装置中的像素和像素组的另一布局示例的示意图。</p>
+    <p>[0051]	图25是边缘光型(侧光型）平面光源装置的概念图。</p>
+    <p>具体实施方式</p>
+    <p>[0052]	下面，将参照附图基于示例来描述本发明。然而，本发明不限于该示例，示例中说明的各种数值、材料等仅仅是说明性的。将按以下顺序进行描述。</p>
+    <p>[0053]	I.根据本发明第一至第五实施方式的驱动图像显示装置的方法的一般描述</p>
+    <p>[0054]	2.示例I (根据本发明第一实施方式的驱动图像显示装置的方法）</p>
+    <p>[0055]	3.示例2 (示例I的变形例）</p>
+    <p>[0056]	4.示例3 (示例I的另一变形例）</p>
+    <p>[0057]	5.示例4 (根据本发明第二实施方式的驱动图像显示装置的方法）</p>
+    <p>[0058]	6.示例5 (示例4的变形例）</p>
+    <p>[0059]	7.示例6 (示例4的另一变形例）</p>
+    <p>[0060]	8.示例7 (根据本发明第三实施方式的驱动图像显示装置的方法）</p>
+    <p>[0061]	9.示例8 (示例I的变形例）</p>
+    <p>[0062]	10.示例9 (根据本发明第四实施方式的驱动图像显示装置的方法）</p>
+    <p>[0063]	11.示例10 (根据本发明第五实施方式的驱动图像显示装置的方法）</p>
+    <p>[0064]	其他</p>
+    <p>[0065][根据本发明第一至第五实施方式的驱动图像显示装置的方法的一般描述]</p>
+    <p>[0066]	在根据本发明第一至第五实施方式的驱动图像显示装置的方法中，当Λ !&gt; Δ 2&gt;0，Λ 4&gt; Λ 3&gt;0，第一预定值为E1，第二预定值为ε2，第三预定值为ε3，第四预定值为ε4，ε !&lt; ε 2&lt;0,并且 ε 4&gt; ε 3&gt;0 时，</p>
+    <p>[0067]	(A)如果（Ι/δχ&#912;/α^-α/α、+。）的值小于第一预定值S1，则可以基于以下表达式来计算校正扩大系数α ’ g :</p>
+    <p>[0068]	(I/ α ’ 卜。）=(I/ α ’ 的)&#8212;。）-Δ ι[0069]	(B)如果（I/Si)等于或大于第一预定值S1且小于第二预定值ε2，则可以基于以下表达式来计算校正扩大系数α ’ g :</p>
+    <p>[0070]	(I/ α ’ 卜。）=(I/ α ’ 的)&#8212;。）-Δ 2</p>
+    <p>[0071]	(C)如果（I/Si)等于或大于第二预定值ε2且小于第三预定值ε3，则可以基于以下表达式来计算校正扩大系数α ’ g :</p>
+    <p>[0072]	(l/a’gXl/a，（卜」)_0)</p>
+    <p>[0073]	(D)如果（I/Si)等于或大于第三预定值ε3且小于第四预定值，则可以基于以下表达式来计算校正扩大系数a ’ g  :</p>
+    <p>[0074]	(I/ α ’ 卜。）=(I/ a ’ 的)&#8212;。）+ Δ 3</p>
+    <p>[0075]	(E)如果（I/Si)等于或大于第四预定值ε4，则可以基于以下表达式来计算校正扩大系数a ’ g :</p>
+    <p>[0076]	(I/ α ’ 卜。）=(I/ a ’ 的)&#8212;。）+ Δ 4</p>
+    <p>[0077]	值厶1、厶2、厶3、厶4、81、&#163;2、&#163;3和ε 4可以是固定的、可以由图像观察者使用例如开关来切换、或者可以根据屏幕（图像）自动切换。</p>
+    <p>[0078]	在包括上述优选模式的根据本发明第一至第五实施方式的驱动图像显示装置的方法中，进一步设置了照亮图像显示面板的平面光源装置(背光)，并且使用校正扩大系数a来控制平面光源装置的亮度。在该情况下，使用校正扩大系数a控制的平面光源装置的亮度是平面光源装置在第（i+k)(其中，5)个图像显示帧中的亮度。因此，几乎不可能发生图像闪烁。具体地，照亮图像显示装置的平面光源装置的亮度(光源亮度）基于校正扩大系数Vi-O来降低就足以。</p>
+    <p>[0079]	在包括上述优选模式和构造的根据本发明第一至第五实施方式的驱动图像显示装置的方法中，虽然基于在多个像素中算出的值Vmax (S)/Vi (S)[= a (S)]中的至少一个值来计算扩大系数ag，但是可以基于一个值(例如，最小值Cimin)来计算扩大系数ag，可以从最小值顺序计算多个值α (S)，并且这些值的平均值（CiaJ可以设定为扩大系数cig，或者（1±0.4) 中的任何值可以设定为扩大系数cig。可选地，如果当从最小值顺序计算多个值a (S)时的像素数量等于或小于预定数量，则在多个值的数量改变之后，可以再次从最小值顺序计算多个值a (S)。</p>
+    <p>[0080]	可选地，在根据本发明第一至第五实施方式的驱动图像显示装置的方法中，可以确定扩大系数ag，以使得从亮度V1 (S)和扩大系数a g的乘积获得的扩大亮度的值超过最大值Vmax(S)的像素与所有像素的比等于或小于预定值（β PD)。为了方便，该驱动系统被称为“驱动方法-Α”。预定值βΡΙ)可以在O. 003至O. 05的范围内。即，可以确定扩大系数ag，以使得从亮度Vi (S)和扩大系数ag的乘积获得的扩大亮度的值超过了最大值Vfflax(S)的像素与所有像素的比等于或大于O. 3%且等于或小于5%。</p>
+    <p>[0081]	在驱动方法-A中，基于多个像素的子像素输入信号值获得多个像素中的饱和度Si和亮度\ (S)，并且确定扩大系数a ^0,使得从亮度Vi (S)和扩大系数a 的乘积获得的扩大亮度的值超过了最大值Vmax(S)的像素与所有像素的比等于或小于预定值（β PD)。因此，可以实现至子像素的输出信号的优化，并且防止发生所谓的“灰度损失”显著并产生不自然图像的现象。还可以可靠地实现整个图像显示装置的亮度增大和功耗减小。</p>
+    <p>[0082]	可选地，在根据本发明第一至第五实施方式的驱动图像显示装置的方法中，假设在具有与第一子像素输出信号的最大信号值相当的值的信号输入至第一子像素、具有与第二子像素输出信号的最大信号值相当的值的信号输入至第二子像素、并且具有与第三子像素输出信号的最大信号值相当的值的信号输入至第三子像素时，形成像素(本发明的第一实施方式或本发明的第四实施方式）或像素组(本发明的第二实施方式、本发明的第三实施方式或本发明的第五实施方式）的第一子像素、第二子像素和第三子像素的集合体的亮度为BNn，并且当具有与第四子像素输出信号的最大信号值相当的值的信号输入至第四子像素时，形成像素(本发明的第一实施方式或本发明的第四实施方式）或像素组(本发明的第二实施方式、本发明的第三实施方式或本发明的第五实施方式）的第四子像素的亮度为BN4，则可以建立以下表达式：</p>
+    <p>[0083]	a W=(BN4ZBNh)+I</p>
+    <p>[0084]	广义上讲，可以进行其中使用（BN/BU的函数来表示扩大系数a 的模式。为了方便，该驱动系统称为“驱动方法-B”。</p>
+    <p>[0085]	在驱动方法-B中，通过以下表达式来表示扩大系数a g。&#183;</p>
+    <p>[0086]	a W=(BN4ZBNh)+I</p>
+    <p>[0087]	因此，可以防止所谓的“灰度损失”显著并产生不自然图像的现象的发生。还可以可靠地实现整个图像显示装置的亮度增大和功耗减小。</p>
+    <p>[0088]	可选地，在根据本发明第一至第五实施方式的驱动图像显示装置的方法中，可以有如下模式：其中，当在像素中显示由（R，G，B)定义的颜色，并且HSV颜色空间中的色调H和饱和度S在由以下表达式定义的范围内的像素与所有像素的比超过预定值β’ΡΙ)(例如，具体地，2%)时，扩大系数ag被设定为等于或小于预定值a’PD (具体地，例如，等于或小于 I. 3)。</p>
+    <p>[0089]	40 ^ H ^ 65</p>
+    <p>[0090]	O. 5 ^ S ^ I. O</p>
+    <p>[0091]	扩大系数ag的下限值为1.0。这同样适用于以下描述。为了方便，该驱动系统被称为“驱动方法-C”。</p>
+    <p>[0092]	对于（R，G，B)，当R的值最大时，色调H用以下表达式表示：</p>
+    <p>[0093]	H=60 (G-B) / (Max-Min)</p>
+    <p>[0094]	当G的值最大时，色调H用以下表达式表示：</p>
+    <p>[0095]	H=60 (B-R)/(Max-Min)+120</p>
+    <p>[0096]	当B的值最大时，色调H用以下表达式表示：</p>
+    <p>[0097]	H=60(R-G)/(Max-Min)+240</p>
+    <p>[0098]	饱和度用以下表达式表示：</p>
+    <p>[0099]	S= (Max-Min) /Max</p>
+    <p>[0100]	Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值以及第三子像素输入信号值的三个子像素输入信号值中的最大值</p>
+    <p>[0101]	Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值以及第三子像素输入信号值的三个子像素输入信号值中的最小值</p>
+    <p>[0102]	通过各种试验，在图像的颜色中大量地混入黄色时，如果扩大系数α㈠超过预定值a’PD (例如，α ' PD=1. 3)，则确定生成了不自然的彩色图像。在驱动方法-C中，当其中HSV颜色空间中的色调H和饱和度S在预定范围内的像素与所有像素的比超过预定值β ’ PD(例如，具体地，2%)时(换句话说，在图像的颜色中大量地混入黄色时)，扩大系数a g被设定为等于或小于预定值a' PD (例如，具体地，等于或小于I. 3)。因此，即使在图像的颜色中大量地混入黄色时，也可以实现至子像素的输出信号的优化，并防止图像变为不自然图像。还可以可靠地实现整个图像显示装置的亮度增大和功耗减小。</p>
+    <p>[0103]	可选地，在根据本发明第一至第五实施方式的驱动图像显示装置的方法中，可以有如下模式：其中，当在像素中显示用（R，G，B)定义的颜色，并且（R，G，B)满足以下表达式的像素与所有像素的比超过预定值β’&#8482; (例如，具体地，2%)时，可以将扩大系数ag设定为等于或小于预定值a’PD (例如，具体地，等于或小于I. 3)。为了方便，该驱动系统被称为“驱动方法-D”。</p>
+    <p>[0104]	关于（R，G，B)，当R的值为最大值并且B的值为最小值时，R、G和B的值满足以下</p>
+    <p>表达式。 </p>
+    <p>[0105]	R ^ O. 78 X (2n-l)</p>
+    <p>[0106]	G 彡（2R/3) + (B/3)</p>
+    <p>[0107]	B 彡 0.50R</p>
+    <p>[0108]	可选地，关于（R，G，B)，当G的值是最大值并且B的值是最小值时，R、G和B的值满足以下表达式。</p>
+    <p>[0109]	R 彡（4B/60) + (56G/60)</p>
+    <p>[0110]	G ^ O. 78 X (2n-l)</p>
+    <p>[0111]	B 彡 0.50R</p>
+    <p>[0112]	这里，η是显示灰度位的数量。</p>
+    <p>[0113]	在驱动方法-D中，当具有（R，G，B)中的特定值的像素与所有像素的比超过预定值β’ΡΙ)(例如，具体地，2%)时(换句话说，在图像的颜色中大量地混入黄色时)，将扩大系数α g设定为等于或小于预定值a’PD (例如，具体地，等于或小于I. 3)。因此，即使在图像的颜色中大量地混入黄色时，也可以实现至子像素的输出信号的优化，并防止该图像变为不自然图像。还可以可靠地实现整个图像显示装置的亮度增大和功耗减小。还可以以小的计算量来确定图像的颜色中是否大量地混入黄色，从而减小信号处理器的电路尺寸，并实现计算时间的减小。</p>
+    <p>[0114]	可选地，在根据本发明第一至第五实施方式的驱动图像显示装置的方法中，可以有如下模式：其中，当显示黄色的像素与所有像素的比超过预定值β’ΡΙ)(例如，具体地，2%)时，扩大系数a g被设定为等于或小于预定值(例如，具体地，等于或小于I. 3)。为了方便，该驱动系统称为“驱动方法-E”。</p>
+    <p>[0115]	在驱动方法-E中，当其中显示黄色的像素与所有像素的比超过预定值β’ΡΙ)(例如，具体地，2%)时，将扩大系数ag设定为等于或小于预定值(例如，具体地，等于或小于1.3)。因此，可以实现至子像素的输出信号的优化，并防止该图像变为不自然图像。还可以可靠地实现整个图像显示装置的亮度增大和功耗减小。</p>
+    <p>[0116]	在包括上述优选模式、构造以及驱动方法-A至驱动方法-E的根据本发明第一实施方式的驱动图像显示装置的方法(下文中，还称为“本发明第一实施方式”）或者根据本发明第四实施方式的驱动图像显示装置的方法中（下文中，还称为“本发明第四实施方式”）中，对于第（P，q)个像素(其中，I彡P彡P。且Q。），信号处理器可以具有如下构造，其中：</p>
+    <p>[0117]	具有信号值Xhm)的第一子像素输入信号，</p>
+    <p>[0118]	具有信号值X2_(p，q)的第二子像素输入信号，以及</p>
+    <p>[0119]	具有信号值X3_(p，q)的第三子像素输入信号输入至信号处理器中。</p>
+    <p>[0120]	信号处理器可以构造为输出：</p>
+    <p>&#183;[0121]	具有用于确定第一子像素的显不灰度的信号值Xhm)的第一子像素输出信号，</p>
+    <p>[0122]	具有用于确定第二子像素的显示灰度的信号值X2_(p，q)的第二子像素输出信号，</p>
+    <p>[0123]	具有用于确定第三子像素的显示灰度的信号值X3_(p，q)的第三子像素输出信号，以及</p>
+    <p>[0124]	具有用于确定第四子像素的显示灰度的信号值X4_(p，q)的第四子像素输出信号。</p>
+    <p>[0125]	在包括上述优选模式、构造以及驱动方法-A至驱动方法-E的根据本发明第二实施方式的驱动图像显示装置的方法(下面，还称为“本发明的第二实施方式”)、根据本发明第三实施方式的驱动图像显示装置的方法(下面，还称为“本发明的第三实施方式”)、或者根据本发明第五实施方式的驱动图像显示装置的方法(下面，还称为“本发明的第五实施方式”）中，对于形成第（P，q)个像素组的第一像素(其中，I彡P彡P且I彡q彡Q)，</p>
+    <p>[0126]	具有信号值Xn，n的第一子像素输入信号，</p>
+    <p>[0127]	具有信号值X2^1的第二子像素输入信号，以及</p>
+    <p>[0128]	具有信号值的第三子像素输入信号输入至信号处理器，并且</p>
+    <p>[0129]	对于形成第（p，q)个像素组的第二像素，</p>
+    <p>[0130]	具有信号值Xn，μ的第一子像素输入信号，</p>
+    <p>[0131]	具有信号值X2_(p,q)_2的第二子像素输入信号，以及</p>
+    <p>[0132]	具有信号值的第三子像素输入信号输入至信号处理器。</p>
+    <p>[0133]	对于形成第（p，q)个像素组的第一像素，信号处理器输出：</p>
+    <p>[0134]	具有用于确定第一子像素的显不灰度的信号值Xi+n的第一子像素输出信号，</p>
+    <p>[0135]	具有用于确定第二子像素的显示灰度的信号值XmmH的第二子像素输出信号，以及</p>
+    <p>[0136]	具有用于确定第三子像素的显示灰度的信号值的第三子像素输出信号，并且</p>
+    <p>[0137]	对于形成第（p，q)个像素组的第二像素，输出：</p>
+    <p>[0138]	具有用于确定第一子像素的显不灰度的信号值的第一子像素输出信号，</p>
+    <p>[0139]	具有用于确定第二子像素的显示灰度的信号值X2_(p，q)_2的第二子像素输出信号，以及</p>
+    <p>[0140]	具有用于确定第三子像素的显示灰度的信号值&amp;_(1^)_2的第三子像素输出信号(本发明的第二实施方式)，并且</p>
+    <p>[0141]	对于第四子像素，输出具有用于确定第四子像素的显示灰度的信号值\_(1^)_2的第四子像素输出信号(本发明的第二、第三或第五实施方式)。</p>
+    <p>[0142]	在本发明的第三实施方式中，关于与第（p，q)个像素相邻的相邻像素，信号处理器可以具有如下构造，其中：[0143]	具有信号值Xnj的第一子像素输入信号，</p>
+    <p>[0144]	具有信号值X2_(p，，q)的第二子像素输入信号，以及</p>
+    <p>[0145]	具有信号值Xmp^)的第三子像素输入信号输入至信号处理器中。</p>
+    <p>[0146]	在本发明的第四和第五实施方式中，关于与第（p，q)个像素相邻的相邻像素，信号处理器可以具有如下构造，其中：</p>
+    <p>[0147]	具有信号值Xhy)的第一子像素输入信号，</p>
+    <p>[0148]	具有信号值X2_(p，q，）的第二子像素输入信号，以及</p>
+    <p>[0149]	具有信号值X3_(p，q,)的第三子像素输入信号输入至信号处理器中。</p>
+    <p>[0150]	Max(p；q)&gt; Min(p；q)&gt; Max^’n、Min(p；Max(p；q)_2&gt; Min(p；q)_2&gt; Max^H、Min(p’’m Max(p；q&gt;)和Min(p，q，）被定义为如下。</p>
+    <p>[0151]	-Max(p,q):包括至第（p，q)个像素的第一子像素输入信号值Xl_(p,,)、第二子像素输入信号值xmm)以及第三子像素输入信号值Xmp,,)的三个子像素输入信号值中的最大值</p>
+    <p>[0152]	&#183; Min(p,q):包括至第（P，q)个像素的第一子像素输入信号值Xl_(p,,)、第二子像素输入信号值xmm)以及第三子像素输入信号值Xmp,,)的三个子像素输入信号值中的最小值</p>
+    <p>[0153]	-Maxip,:包括至第（p，q)个第一像素的第一子像素输入信号值、第二子像素输入信号值 X2-(P，q)-1 以及第三子像素输入信号值 X3-(p，q) -I 的三个子像素输入信号值中的最大值</p>
+    <p>[0154]	-Minip,:包括至第（p，q)个第一像素的第一子像素输入信号值、第二子</p>
+    <p>像素输入信号值 X2-(P，q)-1 以及第三子像素输入信号值 X3-(p，q) -I 的三个子像素输入信号值中的最小值</p>
+    <p>[0155]	&#183; Max(p,q)_2 :包括至第（p，q)个第二像素的第一子像素输入信号值、第二子像素输入信号值x2-(p, &lt;j)-2以及第三子像素输入信号值Χμρ,,μ的三个子像素输入信号值中的最大值</p>
+    <p>[0156]	* Min(p,q)_2 :小包括至第（p，q)个第二像素的第一子像素输入信号值、第二子像素输入信号值x2-(p, q)-2以及第三子像素输入信号值x3-(p, q)-3的三个子像素输入信号值中的最小值</p>
+    <p>[0157]	&#183; Max(p, ,^1 :包括至第一方向上与第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号值Xl-(p, ,,)、第二子像素输入信号值x2-(p,,,)以及第三子像素输入信号值x3_(p, ,q)的三个子像素输入信号值中的最大值</p>
+    <p>[0158]	&#183; Min(p, :包括至第一方向上与第（P，q)个第二像素相邻的相邻像素的第一</p>
+    <p>子像素输入信号值Xl-(p, ,,)、第二子像素输入信号值x2-(p,,,)以及第三子像素输入信号值x3_(p, ,q)的三个子像素输入信号值中的最小值</p>
+    <p>[0159]	&#183; Max(p, q,):包括至第二方向上与第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号值 Xl-(p，q,) 第二子像素输入信号值 ^-2-(p, q1 ) 以及第三子像素输入信号值 X3-(P，</p>
+    <p>)的三个子像素输入信号值中的最大值</p>
+    <p>[0160]	*Min(pjq,):包括至第二方向上与第（p，q)个第二像素相邻的相邻像素的第一子像素输入信号值XHpV )、第二子像素输入信号值Xmm,)以及第三子像素输入信号值X3^)的三个子像素输入信号值中的最小值。</p>
+    <p>[0161]	在本发明的第一实施方式中，可以有其中至少基于Min值和校正扩大系数a’g来计算第四子像素输出信号值的构造。具体地，可以从以下的表达式获得第四子像素输出号值这里，cn&gt;c12&gt;c13&gt;c14&gt;C15和c16是常数。可以通过实验地制作图像显不装置并例如由图像观察者进行图像评价，来适宜地确定什么样的值或表达式用作X4_(p，q)的值，</p>
+    <p>[0162]	X4-(p,q)=cn (Min(p；q)) &#183; α ’ 卜0…（1-1)或</p>
+    <p>[0163]	X4-W=C12(Minw)2CiV0... (1-2)或</p>
+    <p>[0164]	…（1&#8212;3)或</p>
+    <p>[0165]	X4-(p,q)=c14 {(Min(p；q)/Max(p；q))或（2n_l)与 α ’ 卜。的乘积}…（1-4)或</p>
+    <p>[0166]	X4-(p,q)=c15[{(2n-l) XMin(p；q)/(Max(p；q)-Min(p；q))}或（2n_l)与 α ’ 卜。的乘积]...(1-5)或 [0167]	X4-(p,q)=c16{(Max(p；q))1/2 和 Min(p，q)中的较小值与 α ’ 的乘积}…（1-6)</p>
+    <p>[0168]	在本发明的第一实施方式或本发明的第四实施方式中，可以进行以下构造：</p>
+    <p>[0169]	至少基于第一子像素输入信号和校正扩大系数α ’ 来获得第一子像素输出信号，</p>
+    <p>[0170]至少基于第二子像素输入信号和校正扩大系数α	’ g来获得第二子像素输出信号，以及</p>
+    <p>[0171]	至少基于第三子像素输入信号和校正扩大系数a’g来获得第三子像素输出信号。</p>
+    <p>[0172]	更具体地，在本发明的第一实施方式或本发明的第四实施方式中，当根据图像显示装置将X设定为常数时，在信号处理器中，可以从以下表达式获得至第（P，q)个像素(或第一子像素、第二子像素和第三子像素的组）的第一子像素输出信号值Χημ)、第二子像素输出信号值X2-(p，q)以及第三子像素输出信号值X3-(p，q)。以下将描述第四子像素控制第二信号值SG2_(p，q)、第四子像素控制第一信号值SGmm)以及控制信号值(第三子像素控制信号值）SG3如)。</p>
+    <p>[0173][本发明的第一实施方式]</p>
+    <p>[0174]	Xg’fa，η &#183; X1-(M)-X * X4-(P,q) &#8212; (I-A)</p>
+    <p>[0175]	X2-(p,q)=a ' i-o * Χ2-(Ρ,,)-χ * Χ4-(ρ,,)&#8212; (I-B)</p>
+    <p>[0176]	X3-(J^)=Q ’ η &#183; X3-(Pitl)-X * X4-(P,q)&#8212; (I-C)</p>
+    <p>[0177][本发明的第四实施方式]</p>
+    <p>[0178]	X1-(Pjq)=O '卜0 &#183; X1-(Pjq)-X &#183; SG2-W... (1_D)</p>
+    <p>[0179]	X2-(p；q)=a '卜0 &#183; X2-(M)-X &#183; SG2-W... (1_E)</p>
+    <p>[0180]	X3-(p,q)=a ' i-o &#183; Χ3-(Ρ,,)-χ &#183; SG2-(M)... (1_F)</p>
+    <p>[0181]	假设在具有与第一子像素输出信号的最大信号值相当的值的信号输入至第一子像素、具有与第二子像素输出信号的最大信号值相当的值的信号输入至第二子像素以及具有与第三子像素输出信号的最大信号值相当的值的信号输入至第三子像素时，形成像素(本发明的第一实施方式或本发明的第四实施方式）或像素组(本发明的第二实施方式、本发明的第三实施方式或本发明的第五实施方式）的第一子像素、第二子像素和第三子像素的集合体的亮度为BNp3，并且当具有与第四子像素输出信号的最大信号值相当的值的信号输入至第四子像素时，形成像素(本发明的第一实施方式或本发明的第四实施方式）或像素组(本发明的第二实施方式、本发明的第三实施方式或本发明的第五实施方式）的第四子像素的亮度为BN4,则可以通过以下表达式表示常数X。</p>
+    <p>[0182]	X =BN4/BN 卜 3</p>
+    <p>[0183]	因此，在上述驱动方法-B中，表达式a ^=BN4ZiBUl可以改写为a ^0= x+I0</p>
+    <p>[0184]	常数X 是图像显示装置的固有值，并通过图像显示装置唯一确定。对于常数X，同样适用于以下描述。</p>
+    <p>[0185]	在本发明的第二实施方式中，可以进行以下构造：</p>
+    <p>[0186]	对于第一像素，尽管至少基于第一子像素输入信号和校正扩大系数a’g获得第一子像素输出信号，但是至少基于第一子像素输入信号(信号值^，^)、校正扩大系数α ’ ,-ο以及第四子像素控制第一信号(信号值SGmm))来计算第一子像素输出信号(信号值</p>
+    <p>Xl-(P, q)_l )，</p>
+    <p>[0187]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ g获得第二子像素输出信号，但是至少基于第二子像素输入信号值 X2-(p，q)-1、 校正扩大系数a’g和第四子像素控制第一信号(信号值SGhfcq))来获得第二子像素输出信号(信号值Am)，以及</p>
+    <p>[0188]	尽管至少基于第三子像素输入信号和校正扩大系数α ’ g获得第三子像素输出信号，但是至少基于第三子像素输入信号值 X3-(p，q)-1、 校正扩大系数a’g和第四子像素控制第一信号(信号值SG1^q))来获得第三子像素输出信号(信号值X3Hi);以及</p>
+    <p>[0189]	对于第二像素，尽管至少基于第一子像素输入信号和校正扩大系数a’g获得第一子像素输出信号，但是至少基于第一子像素输入信号值Xl-(p，q)-2、校正扩大系数α ’</p>
+    <p>以及第四子像素控制第二信号(信号值SG2_(p，q))来获得第一子像素输出信号(信号值</p>
+    <p>Xl-(p, q)-2)，</p>
+    <p>[0190]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ g获得第二子像素输出信号，但是至少基于第二子像素输入信号值X2-(p，q)-2、校正扩大系数a’g以及第四子像素控制第二信号(信号值SG2_(p，q))来获得第二子像素输出信号(信号值X2_(p，q)_2)，以及</p>
+    <p>[0191]	尽管至少基于第三子像素输入信号和校正扩大系数α ’ g获得第三子像素输出信号，但是至少基于第三子像素输入信号值 X3-(p，q) -2、 校正扩大系数α ’ i-o以及第四子像素控制第二信号(信号值SG2_(p，q))来获得第三子像素输出信号(信号值X3-(p，q)-2)。</p>
+    <p>[0192]	如上所述，在本发明的第二实施方式中，虽然基于第一子像素输入信号值xgn、校正扩大系数α ’ i-o以及第四子像素控制第一信号值SGmm)来获得第一子像素输出信号值X1-U+但是可以从以下表达式获得第一子像素输出信号值ΧημΜ。</p>
+    <p>[0193]	[χ&#912;-(ρ, q)-li α i-Ο&#970; SG^(Pjq)]或</p>
+    <p>[0194]	[X1-(Pjq)-^X1 &#8212;(p，q)&#8212;2，以 i&#8212;0，SG1-(Pjq)] ο</p>
+    <p>[0195]	类似地，虽然至少基于第二子像素输入信号值</p>
+    <p>                                            X2-(p，q)-1、 校正扩大系数α ’ i-o以及第四子像素控制第一信号值SGmm)来计算第二子像素输出信号值X2-(P，，但是可以从以下的表达式来获得第二子像素输出信号值t-ipj-i。</p>
+    <p>[0196]	[χ2-(ρ, q)-l&gt; α i-0) SG1-(Pj)]或_7] [X2如X2-(p，q)-2，Q i-O，SG1-(^q)]</p>
+    <p>[0198] 类似地，虽然至少基于第三子像素输入信号值</p>
+    <p>                                            X3-(p，q)-1、 校正扩大系数α ’ i-o以及第四子像素控制第一信号值SGmm)来计算第三子像素输出信号值X3-(P，，但是可以从以下的表达式来获得第三子像素输出信号值Χμρ，,)-:。[0199]	[χ3-(ρ, q)-li α i-j SG^(Pjq)]或</p>
+    <p>[0200]	[X3-(Pjq)-!, X3-(p，q)-2，以 i-，SG1-(Pj)]</p>
+    <p>[0201]	这同样适用于输出信号值X1-Wf ^2-(p, q)-2 和 X3-(p，q)_2。</p>
+    <p>[0202]	更具体地，在本发明的第二实施方式中，在信号处理器中，可以从以下表达式获得</p>
+    <p>输出信号值X1^1 、^2- (p, q) -1、X3- (P, q) -1、Xl- (p, q) _2、^2-(p, q) _2 和 ^3- (p, q) _2。</p>
+    <p>[0203]	X卜(p,q)-i_a i-o &#183; xi-(p, q)-i_ x &#183; SG卜(p, ^) ... (2~A)</p>
+    <p>[0204]	X2-(p,q)-i=a ’ i-o &#183; X2-(Rq)-I- x &#183; SG1-(Pd)... (2_B)</p>
+    <p>[0205]	^3-(p, q)-l_ a i-o &#183; X3-(p,q)-l_X &#183; SGhrV (2_0 </p>
+    <p>[0206]	^l-(p, q)-2~ a i-o &#183; xI-(p, q)-2~ X &#183; SG2-(p’Q …（2~D)</p>
+    <p>[0207]	^2-(p, q)-2- a i-o &#183; x2-(p, q)-2~ X &#183; SG2-(p’Q …（2~E)</p>
+    <p>[0208]	^3-(p, q)-2- a i-o &#183; X3-(P, q)-2_x &#183; SG2-(p’Q …（2~F)</p>
+    <p>[0209]	在本发明的第三或第五实施方式中，对于第二像素，可以进行以下构造：</p>
+    <p>[0210]	尽管至少基于第一子像素输入信号和校正扩大系数a ’卜。获得第一子像素输出信号，但是至少基于第一子像素输入信号值Xl-(p，q)-2、校正扩大系数a’g以及第四子像素控制第二信号(信号值SG2_(p，q))来获得第一子像素输出信号(信号值以及</p>
+    <p>[0211]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ g获得第二子像素输出信号，但是至少基于第二子像素输入信号值X2-(p，q)-2、校正扩大系数a’g以及第四子像素控制第二信号(信号值SG2_(p，q))来获得第二子像素输出信号(信号值X2-(p，q)-2)。</p>
+    <p>[0212]	对于第一像素，可以进行以下构造：</p>
+    <p>[0213]	尽管至少基于第一子像素输入信号和校正扩大系数a ’ g获得第一子像素输出信号，但是至少基于第一子像素输入信号值 Xl-(P，q)-1、 校正扩大系数a ’ i-o以及第三子像素控制信号(信号值SG3_(p，q))或第四子像素控制第一信号(信号值SG1^q))来获得第一子像素输出信号(信号值Χι&#971;ι)，</p>
+    <p>[0214]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ g获得第二子像素输出信号，但是至少基于第二子像素输入信号值 X2-(p，q)-1、 校正扩大系数a ’ i-o以及第三子像素控制信号(信号值SG3_(p，q))或第四子像素控制第一信号(信号值SG1^q))来获得第二子像素输出信号(信号值&amp;&#971;ι)，</p>
+    <p>[0215]	尽管至少基于第三子像素输入信号和校正扩大系数α ’ g获得第三子像素输出信号，但是至少基于第三子像素输入信号值 X3- (P，q) -1 和 x3- (P，q) -2、 校正扩大系数a’i-o、第三子像素控制信号(信号值SG3_(p，q))以及第四子像素控制第二信号(信号值SG2_(p，q))来获得第三子像素输出信号(信号值 X3&#8212;(P，q)&#8212;I )， 或者至少基于第三子像素输入信号值 X3-(p，q)_l 和 X3-(p，q)_2、校正扩大系数a’g、第四子像素控制第一信号(信号值SGmm))以及第四子像素控制第二信号(信号值SG2_(p,q))来获得第三子像素输出信号(信号值X3H1X</p>
+    <p>[0216]	更具体地，在本发明的第三实施方式或本发明的第五实施方式中，在信号处理器中，可以从以下表达式获得输出信号值X1-Uf &#20034;2-(p，q)-2、Xl-(p，q)-1、&#20034;2-(p，q)-1 和&#20034;3&#8212;(p，q)&#8212;I。</p>
+    <p>[0217]	^l-(p, q)-2_ Q i-0 &#183; Xl-(p, q)-2_ X &#183; SG2&#8212;(p，q) &#183;&#183;&#183; (3_A)</p>
+    <p>[0218]	X2&#8212;(p，q)&#8212;2-a i_o &#183; x2-(p, q)-2_ x &#183; SG2&#8212;(p，q)&#183;&#183;&#183; (3~B)</p>
+    <p>[0219]	Xl-(p, q)-l~ a i-o &#183; Xl-(p，q)-1_X &#183; SG1.^ q) * * * (3~C)</p>
+    <p>[0220]	XmpH= Cl，卜。&#183;X &#183; SGhpV (3_D)或[0221]	Xl-(p，q)-l_a i-0 &#183; Xl-(p，q)-l_X &#183; SG3_(p； q) * * * (3~E)</p>
+    <p>[0222]	^2-(p, q)-l_ a i-0 &#183; X2-(p，q)-l_X &#183; SG3_(p； q) * * * (3~F)</p>
+    <p>[0223]	假设C31和C32被设定为常数，例如，可以从以下表达式获得第一像素中的第三子像素输出信号(第三子像素输出信号值Χμρ，,)-ι)。</p>
+    <p>[0224]	&#183; X，3-(^)^+032 &#183; X，3-(p,,)-2)/(C21+C22)…（3_a)或</p>
+    <p>[0225]	^3-(p, q)-I-C31 &#183; X 3-(p, q)-l+C32 &#183; X 3_(p，q)_2 …(3_b)或</p>
+    <p>[0226]	^3-(p, q)-I-C21 &#183; (X 3-(p，q)-l_X 3_ (p, q) _2) +。22 &#183; X 3-(p，q)_2... (3_C)</p>
+    <p>[0227]	这里，可以建立以下表达式。</p>
+    <p>[0228]	X，3-&#943;ρ,,)-!= α，i-o &#183; x3-(P,q)-i- &#20034; &#183; SG1^fe q)&#8212; (3-d) </p>
+    <p>[0229]	X 3-(p，q)-2_a i-o &#183; X3-(p，q)-2_X &#183; SG2-(p； q) * * * (3_θ)或</p>
+    <p>[0230]	X 3-(p; q)-l_ a i-0 &#183; X3-(p,q)-l_X &#183; SG3_(p； q) * * * (3~f)</p>
+    <p>[0231]	X 3-(p’q)-2_a i-0 &#183; X3_(p, q)_2_X &#183; SG2_(p； q) * * * (3~g)</p>
+    <p>[0232]	在本发明的第二至第五实施方式中，具体地，可以从以下表达式获得第四子像素控制第一信号(信号值SG1^)和第四子像素控制第二信号(信号值SG2_(p，q))。这里，c21&gt;C22、C23、C24、C25和C26是常数。可以通过实验地制作图像显示装置并例如由图像观察者执行图像评价，适宜地确定什么样的值或表达式用作X4U和Χμρ,μ的值，</p>
+    <p>[0233]	SG1^feqj=C21 (Minfeq^1) &#183; α ’ 卜0…（2&#8212;1&#8212;1)</p>
+    <p>[0234]	SG2^=C21 (Min^2) &#183; a ’ 卜0…(2+2)或</p>
+    <p>[0235]	SG1^=C22 (Min^1)2 &#183; a，卜0…(2-2-1)</p>
+    <p>[0236]	SG2如)=C22 (Min^2)2 &#183; a ’ 卜0…(2-2-2)或</p>
+    <p>[0237]	SG1^feqj =C23 (Maxfeq^1)172 &#183; α ’ 卜。…（2-3-1)</p>
+    <p>[0238]	SG2_(p，q) =C23 (MaX(p，q)_2)1/2 &#183; α ’ 卜。…（2-3-2)或</p>
+    <p>[0239]	SG1-W=C24 KMOax^1)或 d 与 α Vo 的乘积 I... (2-4-1)</p>
+    <p>[0240]	SG2_(p；q)=c24 {(Min(p；q)_2/Max(p；q)_2)或(2n_l)与 α，卜0 的乘积}... (2-4-2)或</p>
+    <p>[0241]	SG1-W =C25 [{(2n_l) *Min(p,,,^/(Maxip,^1-Minip,(2n_l)与 α ’ 卜0 的乘积]…(2-5-1)</p>
+    <p>[0242]	SG2_(p；q)=c25[{(2n-l)或（2n_l)与 α ’ 卜&#9702;的乘积]…(2-5-2)或</p>
+    <p>[0243]	SG1^pjqj=C26 ((Maxfeq)^1)1/2 和 MinfeqH 中的较小值与《 ’ 的乘积}…（2-6-1)</p>
+    <p>[0244]	SG2_(p；q)=c26{(Max(p；q)_2)1/2 和 Min(p，q)_2 中的较小值与 α ’ 的乘积}…（2-6-2)</p>
+    <p>[0245]	在本发明的第三实施方式中，上述表达式中的Max(p，和Min(p，可以用Maxm和Minm代替。在本发明的第四和第五实施方式中，上述表达式中的MaxfcH和 Min(p，可以用 Max(p，,，)和 Min(p，,，)代替。通过用“SG3_(P，q) ”代替表达式（2-1-1)、（2-2-1)、(2-3-1)、（2-4-1)、(2-5-1)和（2_6_1)左侧的“SG^，,) ”，可以获得控制信号值(第三子像素控制信号值）SG3_(p；q)0</p>
+    <p>[0246]	在本发明的第二至第五实施方式中，当C21、C22、C23、C24、C25和C26设定为常数时，可以从以下的表达式获得信号值X4-(m)。</p>
+    <p>[0247]	X4_(p,q) = (C21 &#183; SG1^feqj+C22 &#183; SG2_(p’q)/(C21+C22)…（2-11)或</p>
+    <p>[0248]	X4^=C23 &#183; SG1^feqj+C24 &#183; SGmm)... (2-12)或[0249]	X4-(M)=C25(SGhm)-SGmpJ+C26 &#183; SG2_(p’q)... (2-13)或均方根，即</p>
+    <p>[0250]	/+SGmm)2)/2]"、..（2-14)</p>
+    <p>[0251]	在本发明的第三实施方式或本发明的第五实施方式中，表达式（2-11)至（2-14)中的‘％-(p，/’可以用‘％_&amp;):代替。 </p>
+    <p>[0252]	根据SG1^的值，可以选择上述表达式中的一个，根据SG2_(p，q)的值，可以选择上述表达式中的一个，或者根据SGpfcq)和SG2_(p，q)的值,可以选择上述表达式中的一个。即，在每个像素组中，上述表达式中的一个可以固定用于获得X4-(p，q)和X4-(p，q)-2，或者在每个像素组中，上述表达式中的一个可以选择性地用于获得X4-(p’q)和X4-(p，q)-2。</p>
+    <p>[0253]	在本发明的第二实施方式或本发明的第三实施方式中，当形成每个像素组的像素数量为Po时，Po=2o然而，Po不限于P(|=2,可以使用Ptl彡3。</p>
+    <p>[0254]	虽然在本发明的第三实施方式中，相邻像素在第一方向上与第（P，q)个第二像素相邻，但是相邻像素可以是第（P，q)个第一像素或者相邻像素可以是第（P+l，q)个第一像素。</p>
+    <p>[0255]	在本发明的第三实施方式中，可以进行以下构造：其中，在第一方向上，第一像素布置为彼此相邻并且第二像素布置为彼此相邻，或者第一像素和第二像素布置为在第二方向上彼此相邻。</p>
+    <p>[0256]	期望的是，第一像素具有在第一方向上顺次排列的显示第一原色的第一子像素、显示第二原色的第二子像素以及显示第三原色的第三子像素，以及</p>
+    <p>[0257]	第二像素具有在第一方向上顺次排列的显示第一原色的第一子像素、显示第二原色的第二子像素以及显示第四色的第四子像素。即，期望的是，第四像素在第一方向上设置在像素组的下游端。</p>
+    <p>[0258]	然而，布局不限于此。</p>
+    <p>[0259]	例如，可以进行如下构造：其中第一像素具有位于第一方向上的显示第一原色的第一子像素、显示第三原色的第三子像素以及显示第二原色的第二子像素，以及</p>
+    <p>[0260]	第二像素具有排列在第一方向上的显示第一原色的第一子像素、显示第四色的第四子像素以及显示第二原色的第二子像素。</p>
+    <p>[0261]	可以选择总共6X6的36个组合中的一个。S卩，可以给出6个组合作为第一像素中的(第一子像素、第二子像素、第三子像素）的排列组合，并且可以给出6个组合作为第二像素中的(第一子像素、第二子像素、第四子像素）的排列组合。一般地，子像素的形状为矩形，但是期望的是，将子像素布置为矩形的长边与第二方向平行，并且矩形的短边与第一方向平行。</p>
+    <p>[0262]	在本发明的第四或第五实施方式中，可以使 用第（P，q-Ι)个像素、第（P，q+1)个像素、或第（p，q-Ι)个像素和第（p，q+1)个像素，作为与第（P，q)个第一像素相邻的相邻像素或者与第（P，q)个第二像素相邻的相邻像素。</p>
+    <p>[0263]	一般地，子像素的形状为矩形，但是期望的是，将子像素布置为矩形的长边与第二方向平行，并且矩形的短边与第一方向平行。然而，布局不限于此。</p>
+    <p>[0264]	对于其中使用要获得其饱和度Si和亮度Vi(S)的多个像素或像素组的模式，存在其中使用全部像素或像素组的模式或者其中使用全部像素或像素组的（1/N)的模式。值得注意的是，“N”是等于或大于2的自然数。对于N的具体值，可以使用诸如2、4、8、16.......的2的阶乘。如果使用前一种模式，则可以最大的保持图像质量而不会改变图像</p>
+    <p>质量。如果使用后一种模式，则可以实现处理速度的提高以及信号处理器的电路的简化。</p>
+    <p>[0265]	在包括上述优选构造和模式的本发明的实施方式中，可以进行其中第四色是白色的模式。然而，该模式不限于此，第四色可以是另一颜色，例如，黄色、青色或洋红色。在这些情况下，当图像显示装置是彩色液晶显示器时，可以进行其中进一步设置有以下单元的构造：</p>
+    <p>[0266]	第一彩色滤光片，布置在第一子像素和图像观察者之间并用以使第一原色透过，</p>
+    <p>[0267]	第二彩色滤光片，布置在第二子像素和图像观察者之间并用以使第二原色透过，以及</p>
+    <p>[0268]	第三彩色滤光片，布置在第三子像素和图像观察者之间并用以使第三原色透过。&#183;[0269]	对于形成平面光源装置的光源，可以使用发光元件(具体地，发光二极管（LED))。使用发光二极管的发光元件具有小的占用体积，适合布置多个发光元件。对于用作发光元件的发光二极管，可以使用白色发光二极管(例如，其中将紫外线或蓝色发光二极管和发光粒子组合来发出白光的发光二极管)。</p>
+    <p>[0270]	对于发光粒子，可以使用红色发光荧光粒子、绿色发光荧光粒子或蓝色发光荧光粒子。红色发光荧光粒子的材料示例包括：Y203:Eu、YV04:Eu, Y (P, V) O4: Eu,3. 5Mg0 &#183; O. 5MgF2 &#183; Ge2:Mn、CaSiO3: Pb, Mn、Mg6AsO11:Mn、(Sr, Mg) 3 (PO4) 3: Sn、La2O2S: Eu、Y2O2S: Eu、（ME: Eu) S [其中，“ME ”表示选自由Ca、Sr和Ba组成的组中的至少一种原子，这同样适用于以下描述]、（M: Sm) x (Si，Al) 12 (O, N) 16 [其中，“M”表示选自由Li、Mg和Ca组成的组中的至少一种原子，这同样适用于以下描述]、ME2Si5N8:Eu、(Ca:Eu) SiN2以及（Ca:Eu)AlSiN3。绿色发光荧光粒子的材料示例包括：LaP04:Ce，Tb、BaMgAl1(l017:Eu、Mn、Zn2Si04:Mn、MgAl11O19ICe, Tb 以及 Y2SiO5:Ce, Tb、MgAl11O19:CE、Tb、Mn，并且进一步包括(MEiEu)Ga2S4,(M: RE) x (Si，Al)12 (0，N) 16 [其中，“RE” 表示 Tb 和 Yb]、（M: Tb) x (Si，Al) 12 (0，N) 16 以及(M:Yb)x(Si, AD12 (O, N) 160 蓝色发光荧光粒子的材料示例包括=BaMgAlltlO17:Eu、BaMg2Al16O27 = EiuSr2P2O7:Eu、Sr5 (PO4)3Cl:Eu、(Sr, Ca, Ba, Mg) 5(PO4) 3C1:Eu 以及 CaWO4、CaWO4:Pb。发光粒子不限于荧光粒子，并且例如，借助于间接跃迁型硅基材料，可以使用将载波函数局部化以像直接跃迁型一样高效地将载波转换成光的具有利用量子效应的量子阱结构(例如，二维量子阱结构、一维量子阱结构(量子线）或零维量子阱结构(量子点））的发光粒子，或者，已知的是，添加至半导体材料的稀土原子通过内部跃迁会强烈地发光，并且可以使用应用该技术的发光粒子。</p>
+    <p>[0271]	可选地，对于形成平面光源装置的光源，可以组合使用发射红光(例如，640nm的主发射波长）的红色发光兀件(例如，发光二极管)、发射绿光(例如,530nm的主发射波长）的绿色发光元件(例如，GaN基发光二极管）以及发射蓝光(例如，450nm的主发射波长）的蓝色发光元件(例如，GaN基发光二极管)。还可以进一步设置发射不同于红色、绿色和蓝色的第四色、第五色……的发光元件。</p>
+    <p>[0272]	发光二极管可以具有所谓的正装结构或者可以具有倒装结构。即，发光二极管包括基板和形成在基板上的发光层，并且可以具有其中从发光层向外部发光的结构或者可以具有其中从发光层通过基板向外部发光的结构。更具体地，发光二极管（LED)具有例如层压结构，即在该层压结构中，具有第一导电类型(例如，η型）的第一化合物半导体层形成在基板上，活性层形成在第一化合物半导体层上，并且具有第二导电类型(例如，P型）的第二化合物半导体层形成在活性层上，并且发光二极管包括电连接至第一化合物半导体层的第一电极和电连接至第二化合物半导体层的第二电极。形成发光二极管的层可以根据发射波长由已知化合物半导体材料制成。</p>
+    <p>[0273]	平面光源装置可以是两种平面光源装置(背光)，S卩，在JP-UM-A-63-187120或JP-A-2002-277870中描述的直接型平面光源装置以及在例如JP-A-2002-131552中描述的边缘光型(还称为侧光型）平面光源装置。</p>
+    <p>[0274]	直接型平面光源装置可以具有其中用作光源的上述发光元件布置并排列在壳体中的构造，但是平面光源装置的构造不限于此。当多个红色发光元件、多个绿色发光元件以及多个蓝色发光元件布置并排列在壳体中时，对于这些发光元件的排列状态，可以使用如下排列：每个均具有红色发光元件、绿色发光元件以及蓝色发光元件的多个发光元件组在图像显示面板(具体地，例如，液晶显示器）的屏幕水平方向上排列为一行，以形成发光元件组阵列，并且多个发光元件组阵列在图像显示面板的屏幕垂直方向排列。对于发光元件组， 可以使用诸如以下组合：（一个红色发光元件、一个绿色发光元件、一个蓝色发光元件)、（一个红色发光元件、两个绿色发光元件、一个蓝色发光元件）以及(两个红色发光元件、两个绿色发光元件、一个蓝色发光元件)。例如，该发光元件可以具有在Nikkei Electronics, 2004年12月20日，卷889的第128页描述的光提取镜头。</p>
+    <p>[0275]	当直接型平面光源装置具有多个平面光源单元时，一个平面光源单元可以具有一个发光元件组，或者多个两个以上的发光元件组。可选地，一个平面光源单元可以具有一个白色发光二极管或多个两个以上的白色发光二极管。</p>
+    <p>[0276]	当直接型平面光源装置具有多个平面光源单元时，在平面光源单元之间可以布置间隔壁。对于间隔壁的材料，具体地，可以使用诸如丙烯酸树脂、聚碳酸酯或ABS树脂的对从平面光源单元中的发光元件发出的光不透明的材料，并且对于对从平面光源单元中的发光元件发出的光透明的材料，可以使用聚甲基丙烯酸甲酯树脂（PMMA)、聚碳酸酯树脂(PO,聚芳酯树脂（PAR)、聚乙烯树脂（PET)或玻璃。间隔壁的表面可以具有光漫射反射功能，或者可以具有镜面反射功能。为了为间隔壁的表面提供光漫射反射功能，可以通过喷砂在间隔壁的表面中形成凹凸，或者，可以将具有凹凸的膜(光漫射膜）贴附至间隔壁的表面。为了为间隔壁的表面提供镜面反射功能，可以将光反射膜贴附至间隔壁的表面，或者可以通过例如电镀在间隔壁的表面上形成光反射层。</p>
+    <p>[0277]	直接型平面光源装置可以包括光学功能片组，诸如光漫射板、光漫射片、棱镜片、偏振转换片或光反射片。可以使用广为人知的材料作为光漫射板、光漫射片、棱镜片、偏振转换片和光反射片。光学功能片组可以具有分离布置的各种片，或者可以是层压为一体的片。例如，光漫射片、棱镜片、偏振转换片等可以层压为一体片。光漫射板或光学功能片组布置在平面光源装置和图像显示面板之间。</p>
+    <p>[0278]	在边缘光型平面光源装置中，导光板布置为面向图像显示面板(具体地，例如，液晶显不器)，并且发光兀件布置在导光板的侧面（以下描述的第一侧面)。导光板具有第一表面(底面)、面向第一表面的第二表面(顶面)、第一侧面、第二侧面、面向第一侧面的第三侧面以及面向第二侧面的第四侧面。导光板的具体形状可以是整体上为楔形截棱锥形。在该情况下，截棱锥的两个相对侧面相当于第一表面和第二表面，并且截棱锥的底面相当于第一侧面。期望的是，在第一表面(底面）的表面部分中设置有凸部和/或凹部。光从导光板的第一侧面进入，并且光从第二表面(顶面）出射至图像显示面板。导光板的第二表面可以是光滑的（即，可以是镜面)，或者可以提供具有光漫射效果的喷砂纹理（即，可以提供细微锯齿表面)。</p>
+    <p>[0279]	期望的，在导光板的第一表面(底面）设置凸部和/或凹部。即期望的是，凸部、凹部、或者凹凸部设置在导光板的第一表面中。当设置凹凸部时，凹部和凸部可以是连续或不连续的。设置在导光板的第一表面中的凸部和/或凹部可以是在相对于至导光板的光输入方向具有预定角度的方向延伸的连续凸部和/或凹部。在该构造中，对于利用垂直于在至导光板的光输入方向的第一表面的虚拟面截取的导光板的连续凸部形状或凹部形状的横截面形状，可以使用三角形；包括正方形、矩形和梯形的任意四边形；任意多边形；以及包括圆、椭圆、抛物线、双曲线、悬链线等的任意光滑曲线。相对于至导光板的光输入方向具有预定角度的方向指的是当至导光板的光输入方向为O度时的60度至120度的方向。这同样适用于以下描述。可选地，设置在导光板的第一表面中的凸部和/或凹部可以是在相对于至导光板的光输入方向具有预定角度的方向延伸的不连续凸部和/或凹部。在该构造中，对于不连续凸部形状或凹部形状的形状，可以使用各种光滑曲面，例如包括金字塔、圆锥体、圆柱体、三角柱和四角柱的多角柱；球的一部分；回转椭圆体的一部分；旋转抛物面的一部分；旋转双曲面的一部分。在导光板中，凸部和凹部均都不可以形成在第一表面的边缘部分中。尽管从光源发出并入射至导光板的光碰撞到形成于导光板的第一表面中的凸部 或凹部并被散射，但导光板的第一表面中设置的凸部或凹部的高度、深度、间距和形状可以设定为一定的，或者可以随着距光源距离的增加而改变。在后一种情况下，例如，随着距光源的距离增大，可以使凸部或凹部的间距被设定为微细的。凸部的间距或凹部的间距表示在至导光板的光输入方向上凸部的间距或凹部的间距。</p>
+    <p>[0280]	在包括导光板的平面光源装置中，期望的是，光反射部件被布置为面向导光板的第一表面。图像显示面板(具体地，例如，液晶显示器)布置为面向导光板的第二表面。从光源发出的光从导光板的第一侧面(例如，相对于截棱锥的底面的表面）输入至导光板，碰撞到第一表面的凸部或凹部并被散射，从第一表面发出，被光反射部件反射，再次输入至第一表面，从第二表面发出，并照射图像显示面板。例如，光漫射片或棱镜片可以布置在图像显/Jn面板和导光板的第二表面之间。从光源发出的光可以被直接导向导光板，或者可以被间接导向导光板。在后一种情况中，例如，可以使用光纤。</p>
+    <p>[0281]	期望的是，导光板由很少吸收从光源发出的光的材料制成。具体地，导光板的材料示例例如包括玻璃和塑料材料(例如，PMMA、聚碳酸酯树脂、丙烯酸树脂、非晶聚丙烯树脂、包括AS树脂的苯乙烯树脂)。</p>
+    <p>[0282]	在本发明的实施方式中，平面光源装置的驱动方法和驱动条件不被特定地限制，并且可以集中地控制光源。即，例如，可以同时驱动多个发光元件。可选地，可以部分地驱动(分割驱动)多个发光元件。即，当平面光源装置具有多个平面光源单元时，假设图像显示面板的显示区分成S X T个虚拟显示区单元，可以进行如下构造：平面光源装置具有与S X T个显示区单元相对应的S X T个平面光源单元，并且分离地控制S X T个平面光源单元的发光状态。</p>
+    <p>[0283]	用于驱动平面光源装置和图像显示面板的驱动电路包括：例如，具有发光二极管(LED)驱动电路、算术电路、存储装置(存储器）等的平面光源装置控制电路；以及具有已知电路的图像显示面板驱动电路。在平面光源装置控制电路中，可以包括温度控制电路。在每个图像显示帧中控制显示区部分的亮度(显示亮度）和平面光源单元的亮度(光源亮度)。值得注意的是，在一秒内作为电信号传输至驱动电路的图像信息数(每秒图像数）是帧频率(帧速率),并且帧频率的倒数是帧时间(单位：秒)。</p>
+    <p>[0284]	透射型液晶显示器包括：例如，具有透明第一电极的前面板、具有透明第二电极的后面板以及布置在前面板和后面板之间的液晶材料。</p>
+    <p>[0285]	更具体地，前面板包括：例如，由玻璃基板或硅基板制成的第一基板、设置在第一基板的内表面上的透明第一电极(也称为共电极，并由例如ITO制成）以及设置在第一基板的外表面上的偏振膜。在透射型彩色液晶显示器中，涂覆有由丙烯酸树脂或环氧树脂制成的保护层的彩色滤光片设置在第一基板的内表面上。前面板具有其中透明第一电极形成在保护层上的构造。配向膜形成在透明第一电极上。更具体地，后面板包括：例如，由玻璃基板或硅基板制成的第二基板、形成在第二基板的内表面上的开关元件、其中通过开关元件控制导电/非导电的透明第二电极(也称为像素电极，并由例如ITO制成）以及设置在第二&#183;基板的外表面上的偏振膜。配向膜形成在包括透明第二电极的整个表面上。形成包括透射型彩色液晶显示器的液晶显示器的各个部件和液晶材料可以是已知部件和材料。对于开关元件，可以使用诸如形成在单晶硅半导体基板上的诸如MOS-FET或薄膜晶体管（TFT)的三端子元件以及诸如MIM元件、压敏电阻元件或二极管的两端子元件。彩色滤光片的排列图案的示例包括与三角排列类似的排列、与条形排列类似的排列、与斜纹排列类似的排列以及与矩形排列类似的排列。</p>
+    <p>[0286]	当排列成二维矩阵的像素数量PciXQc^ (PtlA)表示时，具体地，表示为（PtlA)的值时，可以使用用于图像显示的若干显示分辨率，诸如VGA(640，480)、S-VGA(800, 600)、XGA(1024,768)、APRC(1 152,900)、S-XGA (1280, 1024)、U-XGA (1600, 1200)、HD-TV (1920，1080)、Q-XGA (2048，1536)、（1920,1035)、（720,480)以及（1280，960)，但是(Po, Q0)的值不限于这些值。（P。，Qq)的值和（S，T)的值之间的关系会在表I中示出，但是该关系不限于此。形成一个显示区单元的像素数量可以是20X20至320X240，并且优选地，50 X 50至200 X 200。显示区单元中的像素数可以是常数，或者可以变化。</p>
+    <p>[0287]表	I</p>
+    <p>[0288]</p>
+    <p>         S的值	T的值</p>
+    <p>     VGA (640,840)	^32	^24</p>
+    <p>      S-VGA (800,600)	^40	^30</p>
+    <p>      XGA (1024, 768)	4^50	^39</p>
+    <p>     APRC (1152,900)	4^	^45</p>
+    <p>       S-XGA (1280, 1024)	4^64	4^U-XGA (1600, 1200)	~^80	~4^60</p>
+    <p>          HD-TV (1920, 1080)	^86</p>
+    <p>       Q-XGA (2048, 1536)	7-102	pT7</p>
+    <p>     ~(1920, 1035)	7^64	^52</p>
+    <p>    ~(720,480)	^34	^24</p>
+    <p>    ~(1280,960)	4^64	^48</p>
+    <p>[0289]	子像素的排列状态的示例包括与三角排列（三角形排列）类似的排列、与 条形排列类似的排列、与斜纹排列（马赛克排列)类似的排列以及与矩形排列类似的排列。一般地，与条形排列类似的排列适于在个人计算机等中显示数据或字符串。另一方面，与马赛克排列类似的排列适于在摄像机、数码照相机等中显示自然图像。</p>
+    <p>[0290]	在根据本发明实施方式的驱动图像显示装置的方法中，对于图像显示装置，可以使用直视型或投影型彩色显示图像显示装置以及场序系统的彩色显示图像显示装置(直视型或投影型)。可以基于图像显示装置所需的规格来确定形成图像显示装置的发光元件的数量。可以进行其中基于图像显示装置所需的规格进一步设置光阀的构造。</p>
+    <p>[0291]	图像显示装置不限于彩色液晶显示器，可以使用有机电致发光显示装置(有机EL显示装置)、无机电致发光显示装置(无机EL显示装置)、冷阴极场致电子发射显示装置(FED)、表面传导式电子发射显示装置（SED)、等离子显示装置（PDP)、具有衍射光栅光学调制器（GLV)的衍射光栅光调制装置、数字微镜器件（DMD)、CRT等。彩色液晶显示器不限于透射型液晶显示器，并且可以使用反射型液晶显示器或半透射型液晶显示器。</p>
+    <p>[0292]	[示例 I]</p>
+    <p>[0293]	示例I涉及根据本发明第一实施方式的驱动图像显示装置的方法。</p>
+    <p>[0294]	如图3的概念图所示，示例I的图像显示装置10包括图像显示面板30和信号处理器20。示例I的图像显示装置进一步包括从背面照亮图像显示装置(具体地，图像显示面板30)的平面光源装置50。如图2A和图2B的概念图所示，图像显示面板30具有如下构造=PciXQtl (P。在水平方向并且Q。在垂直方向）个像素排列成二维矩阵，每个像素均具有显示第一原色(例如，红色，并且这同样适用于以下描述的各示例）的第一子像素(用“R”表示)、显示第二原色(例如，绿色，并且这同样适用于以下描述的各示例）的第二子像素(用“G”表示)、显示第三原色(例如，蓝色，并且这同样适用于以下描述的各示例）的第三子像素(用“B”表示)、以及显示第四色(具体地，白色，并且这同样适用于以下描述的各示例）的第四子像素(用“W”表示)。</p>
+    <p>[0295]	更具体地，示例I的图像显示装置是透射型彩色液晶显示器，图像显示面板30是彩色液晶显示面板，并进一步包括布置在第一子像素R和图像观察者之间并用于透过第一原色的第一彩色滤光片、布置在第二子像素G和图像观察者之间并用于透过第二原色的第二彩色滤光片以及布置在第三子像素B和图像观察者之间并用于透过第三原色的第三彩色滤光片。在第四子像素W中，没有设置彩色滤光片。在第四子像素W中，可以设置透明树脂层来代替彩色滤光片。如果不设置彩色滤光片，则可以防止在第四子像素W中发生大的阶跃。这同样适用于以下描述的各示例。</p>
+    <p>[0296]	根据示例1，在图2A示出的示例中，第一子像素R、第二子像素G、第三子像素B以及第四子像素W被布置成与斜纹排列（马赛克排列)类似的排列。在图2B示出的示例中，第一子像素R、第二子像素G、第三子像素B以及第四子像素W被布置成与条形排列类似的排列。</p>
+    <p>[0297]	在示例I中，信号处理器20包括驱动图像显示面板(更具体地，彩色液晶显示面板）的图像显示面板驱动电路40以及驱动平面光源装置50的平面光源装置控制电路60。图像显示面板驱动电路40包括信号输出电路41和扫描电路42。用于控制图像显示面板30中的子像素的操作(透射性)的开关元件(例如，TFT)由扫描电路42控制接通/断开。视频信号由信号输出电路41保持，并然后顺次输出至图像显示面板30。信号输出电路41和图像显示面板30通过配线DTL电连接在一起，并且扫描电路42和图像显示面板30通过配线SCL电连接在一起。这同样适用于以下描述的各示例。 </p>
+    <p>[0298]	在示例I的信号处理器20中，关于第（p，q)个像素(其中，I彡P彡P。且I ^ Q0),</p>
+    <p>[0299]	具有信号值Χι_(Μ)的第一子像素输入信号，</p>
+    <p>[0300]	具有信号值X2_(p,q)的第二子像素输入信号，以及</p>
+    <p>[0301]	具有信号值X3_(p，q)的第三子像素输入信号输入至信号处理器中。</p>
+    <p>[0302]	信号处理器20输出：</p>
+    <p>[0303]	具有用于确定第一子像素R的显不灰度的信号值X1^q)的第一子像素输出信号，</p>
+    <p>[0304]	具有用于确定第二子像素G的显示灰度的信号值X2_(p，q)的第二子像素输出信号，</p>
+    <p>[0305]	具有用于确定第三子像素B的显示灰度的信号值X3_(p，q)的第三子像素输出信号，以及</p>
+    <p>[0306]	具有用于确定第四子像素W的显示灰度的信号值X4_(p，q)的第四子像素输出信号。</p>
+    <p>[0307]	在示例I或以下描述的各示例中，以通过添加第四色（白色）而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax(S)在信号处理器20中获得或者存储在信号处理器20中。即，通过添加第四色（白色)，HSV颜色空间中的亮度的动态范围变宽。</p>
+    <p>[0308]	在第i个图像显示帧中，在示例I的信号处理器20中，</p>
+    <p>[0309]	至少基于第一子像素输入信号(信号值Xhm))和校正扩大系数Ct ’ j_0获得第一子像素输出信号(信号值X1-(M)),并输出至第一子像素R，</p>
+    <p>[0310]	至少基于第二子像素输入信号(信号值X2_(p，q))和校正扩大系数α ’ 获得第二子像素输出信号(信号值X2-(p，q))，并输出至第二子像素G，</p>
+    <p>[0311]	至少基于第三子像素输入信号(信号值X3_(p,q))和校正扩大系数α ’ 获得第三子像素输出信号(信号值Xmm))，并输出至第三子像素B，以及</p>
+    <p>[0312]	基于第一子像素输入信号(信号值X1-^ )、第二子像素输入信号(信号值x2-(p，q))和第三子像素输入信号(信号值XMp，,)）获得第四子像素输出信号(信号值X4-(p，q))，并输出至第四子像素W。</p>
+    <p>[0313]	具体地，在示例I中</p>
+    <p>[0314]	至少基于第一子像素输入信号、校正扩大系数a’g和第四子像素输出信号来获得第一子像素输出信号，</p>
+    <p>[0315]	至少基于第二子像素输入信号、校正扩大系数a’g和第四子像素输出信号来获得第二子像素输出信号，</p>
+    <p>[0316]	至少基于第三子像素输入信号、校正扩大系数a’g和第四子像素输出信号来获得第三子像素输出信号。</p>
+    <p>[0317]	S卩，当根据图像显示装置将X设定为常数时，在信号处理器20中，可以从以下表达式获得至第（P，q)个像素(或者第一子像素R、第二子像素G和第三子像素B的组）的第一子像素输出信号值X^，,)、第二子像素输出信号值X2-(p，q)以及第三子像素输出信号值</p>
+    <p>^3-(p, q)。</p>
+    <p>[0318]	X1-(PitJ)=Q，i-o &#183; X1-(Pd)-X &#183; X4-W…（I-A) </p>
+    <p>[0319]	^2- (p, q) _ a i-0 &#183; x2- (p, q厂 X &#183; L-fc, q)…（1_B)</p>
+    <p>[0320]	X3_ (p； q) - Ct j_o &#183; x3-(p，q)_x &#183; ^4- (p, q) * * * (1_C)</p>
+    <p>[0321]	在第i个图像显示帧时，在信号处理器20中，</p>
+    <p>[0322]	(a)基于多个像素中的子像素输入信号值来获得多个像素中的饱和度Si和亮度Vi⑶，</p>
+    <p>[0323]	(b)至少基于在多个像素中获得的值Vniax (S)/Vi (S)中的一个值，来获得扩大系数</p>
+    <p>Q i-O，</p>
+    <p>[0324]	(C)基于在第（i-j)(其中，j是等于或大于I的正整数，并且在示例I中，j = I)个图像显示帧中预先应用的校正扩大系数α ’ 以及在第i个图像显示帧中获得的扩大系数a i-o，确定校正扩大系数α ’ i-。，</p>
+    <p>[0325]	这里，饱和度S和亮度V(S)表示为如下。</p>
+    <p>[0326]	S= (Max-Min) /Max</p>
+    <p>[0327]	V ⑶=Max</p>
+    <p>[0328]	饱和度S可以是从O至I的值，亮度V(S)可以是从O至（2n_l)的值，η为显示灰度位的数量。</p>
+    <p>[0329]	Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值以及第三子像素输入信号值的三个子像素输入信号值中的最大值</p>
+    <p>[0330]	Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值以及第三子像素输入信号值的三个子像素输入信号值中的最小值</p>
+    <p>[0331]	这同样适用于以下的描述。</p>
+    <p>[0332]	在示例I中，可以基于Minfcq)和校正扩大系数α ’ 的乘积来获得信号值Χ4_(Μ)。具体地，可以从表达式（1-1)来获得信号值x4_(p，q)，并且更具体地，可以从以下表达式来获得。</p>
+    <p>[0333]	X4_(p；q)=Min(p；q) &#183; α ’ 卜0/x …（11)</p>
+    <p>[0334]	尽管在表达式（11)中，Min(p，q)和校正扩大系数α ’ 的乘积除以χ，但是该计算不限于此。</p>
+    <p>[0335]	下文中，将对此进行描述。</p>
+    <p>[0336]	&#8212;般地,在第（P, q)个像素中，可以基于第一子像素输入信号(信号值Xhm))、第二子像素输入信号(信号值&amp;-(1^))以及第三子像素输入信号(信号值Xmm))，从表达式(12-1)和（12-2)获得柱状HSV颜色空间中的饱和度S(p，q)和发光度(亮度）V(S) (p，q)。图4A是柱状HSV颜色空间的概念图，图4B示意性示出了饱和度S和亮度V(S)之间的关系。在图4B和以下描述的图4D、图5A、图5B中，亮度（2n_l)的值用“MAX_1”表示，并且亮度(2n-l) X ( χ +1)的值用 “MAX_2” 表示。</p>
+    <p>[0337]	S(M) = (Maxfetl)-Minfcq) VMaxfeq)…(12&#8212;1)</p>
+    <p>[0338]	&#20034;⑶ W=Maxfeq)…（12-2)</p>
+    <p>[0339]	值得注意的是，MaX(p，q)是三个子像素输入信号值（X</p>
+    <p>I-(P，q)、X2-(P, q)、X3-(P, q) )中的最大</p>
+    <p>值，Min(p；q)是三个子像素输入信号值（xg，,)、x2-(p,q)&gt; x3-(p,q))中的最小值。在示例I中，η 设定为η=8。即，显示灰度位的数量设定为8位(显示灰度的值具体地设定为O至255)。这同样适用于以下示例。</p>
+    <p>[0340]	图4C是通过在示例I中添加第四色（白色)而扩大的柱状HSV颜色空间的概念图，并且图4D示意性示出了饱和度S和亮度V(S)之间的关系。在显示白色的第四子像素W中，没有布置彩色滤光片。假设在具有与第一子像素输出信号的最大信号值相当的值的信号输入至第一子像素R、具有与第二子像素输出信号的最大信号值相当的值的信号输入至第二子像素G以及具有与第三子像素输出信号的最大信号值相当的值的信号输入至第三子像素B时，形成像素(示例I至3和9)或像素组(示例4至8以及10)的第一子像素R、第二子像素G和第三子像素B的集合体的亮度为BN”，并且在具有与第四子像素输出信号的最大信号值相当的值的信号输入至第四子像素B时，形成像素(示例I至3和9)或像素组(示例4至8以及10)的第四子像素W的亮度为ΒΝ4。通过第一子像素R、第二子像素G和第三子像素B的集合体来显示具有最大亮度的白色，并且所涉及的白色的亮度用BN^表示。因此，当根据图像显示装置将χ设定为常数时，常数χ通过以下表达式来表示。</p>
+    <p>[0341]	χ =BN4ZBN1^3</p>
+    <p>[0342]	具体地，假设具有显示灰度值255的输入信号输入至第四子像素W时的亮度BN4,比具有以下显示灰度值的输入信号输入至第一子像素B、第二子像素G和第三子像素B的集合体时的白色的亮度BNn大I. 5倍。</p>
+    <p>[0343]	Xhp, &#162;)=255</p>
+    <p>[0344]	x2_ (p，q) =2 5 5</p>
+    <p>[0345]	x3-(p, q)=255</p>
+    <p>[0346]	SP，在示例 I 中，χ=1&#183; 5。</p>
+    <p>[0347]	当信号值X4_(p，q)通过表达式（11)给出时，Vmax(S)可以通过以下表达式来表示。</p>
+    <p>[0348]当	S &lt; S0 时=Vmax (S) = ( χ +1) &#183; (2n-l)... (13-1)</p>
+    <p>[0349]当	S0〈S ( I 时=Vmax (S) = (2n-l) &#183; (1/S)... (13-2)</p>
+    <p>[0350]其中，Stl=I/(	χ+1)</p>
+    <p>[0351]	以通过添加以上述方式获得的第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax(S)，例如作为一种查找表存储在信号处理器20中，或者每次在信号处理器20中获得。</p>
+    <p>[0352]	下面，将参照图I描述如何获得第i个图像显示帧中的第（P，q)个像素中的输出信号值X1^p,q)、X2-(p,q)&gt; X3-(p,q)和X4-(P，q)(扩大处理)，其中，图I是示出在示例I的图像显示装置中获得校正扩大系数的流程的示意图。由于将对第i个图像显示帧进行描述，通常将下标“i”赋予各个符号；然而，为了避免复杂，在一些情况下，省略了下标“i”。将执行以下处理，以保持通过(第一子像素R+第四子像素W)显示的第一原色的亮度、通过(第二子像素G+第四子像素W)显示的第二原色的亮度以及通过(第三子像素B+第四子像素W)显示的第三原色的亮度比。将执行以下处理以保持(维持）色调。将执行以下处理以保持（维持）灰度-亮度特性(伽玛特性，Y特性)。</p>
+    <p>[0353]	当一个像素或像素组中的所有输入信号值均是“O”（或较小）时，在不包括该像素或像素组的情况下获得校正扩大系数^㈠就足以。这同样适用于以下示例。</p>
+    <p>[0354][步骤-100]</p>
+    <p>[0355]	首先，在信号处理器20中，基于多个像素中的子像素输入信号值来获得多个像素中的饱和度Si和亮度Vi (S)。具体地，基于至第（p，q)个像素的第一子像素输入信号值Xl-(p，q)、第二子像素输入信号值XMp，q)以及第三子像素输入信号值XMm)来获得 S^q)和V(S)i^feqjo将对所有像素执行该处理。</p>
+    <p>[0356][步骤-110]</p>
+    <p>[0357]	然后，在信号处理器20中，基于在多个像素中获得的值Vmax⑶/VJS)中的至少一个，来获得扩大系数ag。</p>
+    <p>[0358]	具体地，获取在所有像素中获得的值Vmax (S)/Vi (S)中的最小值(最小值，Qmin)来作为扩大系数1。。即，在所有像素中获得Qgp q) =Vmax(S)/Vhm) (S)的值，并且将Cimp q)的最小值设定为Cipmin (=扩大系数α^)。</p>
+    <p>[0359]。卜0=[值V&#183;⑶/Vi	(S)中的最小值]…（14)</p>
+    <p>[0360]	在示意性示出通过添加第四色（白色)而扩大的柱状HSV颜色空间中饱和度S和亮度V(S)之间的关系的图5A和图5B中，提供a C1的饱和度S的值用“S' ”表示，饱和度S’处的亮度V(S)用“V (S’）”表示，并且Vmax (S)用“Vmax(S’）”表示。在图5B中，V(S)用黑色圆形标志表示，V (S) X a ^用白色圆形标志表示，并且饱和度S处的Vniax (S)用白色三角标志表不。</p>
+    <p>[0361][步骤-120]</p>
+    <p>[0362]	然后，基于预先在第（i-j)个图像显示帧(其中，j = O中应用的校正扩大系数α ’ α_^0和在第i个图像显示帧中获得的扩大系数a 来确定校正扩大系数α ’卜。。</p>
+    <p>[0363]	具体地’基于校正常数厶^厶^厶^卩厶^预先在第（i-j)个图像显示帧中应用的校正扩大系数α ’ m以及在第i个图像显示帧中获得的扩大系数a g，来确定校正扩大系数a’g。这里，Λ P Λ 2&gt;0且厶4&gt; Λ 3&gt;0。假设,第一预定值为E1，第二预定值为ε 2，第三预定值为ε3，第四预定值为ε 4，ε^εχο且ε 4&gt; ε 3&gt;0。具体地，由于显示灰度位的数量为8位，则值可以设定为如下。</p>
+    <p>[0364]第一预定值	ε 1=-(16/256)</p>
+    <p>[0365]第二预定值	ε 2=-(8/256)</p>
+    <p>[0366]第三预定值	ε 3=(8/256)</p>
+    <p>[0367]第四预定值	ε 4=(16/256)</p>
+    <p>[0368]	Δ != Δ 4</p>
+    <p>[0369]	Δ 2= Δ 3</p>
+    <p>[0370]	然而，这些值不限于此。[0371]具体地，获得（Ι/δχ&#912;/α^-α/α’Μ&#8212;。）的值。</p>
+    <p>[0372]	当（I/ δ J的值小于第一预定值ε i时，即，</p>
+    <p>[0373]	(I/ δ j)&lt; ε !</p>
+    <p>[0374]	从以下表达式获得校正扩大系数α ’ g。</p>
+    <p>[0375]	(l/α'^) = (1/0'^jvo)-A1</p>
+    <p>[0376]这里，Λ	el (I/δ J |-ε 2</p>
+    <p>[0377]	表达式不限于此。以上表达式可以修改成以下表达式。</p>
+    <p>[0378]	(1/a' 1_0) = (l/a t_0) + ε 2&#183;[0379]	可选地，可以从以下表达式获得校正扩大系数a’g。</p>
+    <p>[0380]	(l/a’gXl/a，（η)_0)-1</p>
+    <p>[0381]	当（I/ δ J等于或大于第一预定值ε !并小于第二预定值ε 2时，即，</p>
+    <p>[0382]	ε ! ^ (I/ δ j)&lt; ε 2</p>
+    <p>[0383]	从以下表达式获得校正扩大系数α ’ g。</p>
+    <p>[0384]	(I/ a ’ 卜。）=(I/ a ’ 的)&#8212;。）-Δ 2</p>
+    <p>[0385]这里，A2=	I (I/Si) I/2</p>
+    <p>[0386]	表达式不限于此。以上表达式可以修改成以下表达式。</p>
+    <p>[0387]	(I/ a ’ 卜0) = {(I/ a 卜0) + (Ι/a '幻)_0)} /2</p>
+    <p>[0388]	可选地，可以从以下表达式获得校正扩大系数a’㈠。</p>
+    <p>[0389]	(l/a’gXl/a，（η)_0)-1</p>
+    <p>[0390]	当（I/ δ J等于或大于第二预定值ε 2并小于第三预定值ε 3时，即，</p>
+    <p>[0391]	ε 2 彡(I/ δ j)&lt; ε 3</p>
+    <p>[0392]	从以下表达式获得校正扩大系数α ’ g。</p>
+    <p>[0393]	(l/a’gXl/a，（Η)_0)</p>
+    <p>[0394]	当（I/ δ J等于或大于第三预定值ε 3并小于第四预定值ε 4时，SP，</p>
+    <p>[0395]	ε 3 ^ (I/ δ j)&lt; ε 4</p>
+    <p>[0396]	从以下表达式获得校正扩大系数α ’ g。</p>
+    <p>[0397]	(I/ a ’ 卜。）=(I/ a ’ 的)&#8212;。）+ Δ 3</p>
+    <p>[0398]	以上表达式可以修改成以下表达式。</p>
+    <p>[0399]	(I/ a ’ 卜0) = {(I/ a 卜0) + (Ι/a '幻)_0)} /2</p>
+    <p>[0400]	当（I/ δ J的值等于或大于第四预定值ε 4时，即，</p>
+    <p>[0401]	ε 4 彡（I/ δ J</p>
+    <p>[0402]	从以下表达式获得校正扩大系数a ’卜。。</p>
+    <p>[0403]	(I/ a ’ 卜0) = (I/ a ’（&#943;_」)_0) + Δ 4</p>
+    <p>[0404]	以上表达式被修改成以下表达式。</p>
+    <p>[0405]	(I/a'^) = (1/a ^0)-ε2</p>
+    <p>[0406]	如何获得校正扩大系数a ’ 的上述方式仅仅是示意性的，当然可以进行适当变化。</p>
+    <p>[0407][步骤-130]</p>
+    <p>[0408]	然后，在信号处理器20中，至少基于信号值Xl_(p，q)、信号值x2_(p，q)和信号值X3-(m)来获得第（P，q)个像素的信号值。具体地，在示例I中，基于Min(p，q)、校正扩大系数α ’卜。和常数X来确定信号值Χ4-(μ)。更具体地，在示例I中，如上所述，从以下表达式获得信号</p>
+    <p>    Χ4&#8212;(p，q) &#9702;</p>
+    <p>[0409]	X4-(p,q)=Min(p；q) &#183; α ’ ^0/ χ …（11)</p>
+    <p>[0410]	在所有的P。X Q0个像素中获得X4_(p，q)。</p>
+    <p>[0411][步骤-140]</p>
+    <p>[0412]	之后，在信号处理器20中，基于信号值Xl_(p’,)、校正扩大系数α ’ B和信号值X4_(p，q)获得第（P，q)个像素中的信号值Xg，,)。基于信号值X2-(p，q)、校正扩大系数《’i-o和信号值1(1^来获得第（P，d)个像素中的信号值X2(P,q)。基于信号值Xmm)、校正扩大系数α、。和信号值X4-(p，q)来获得第（P，q)个像素中的信号值X3-(p，q)。具体地，如上所述，从以下表达 式来获得第（P，q)个像素中的信号值Xn，,)、信号值X2(p，q)和信号值X3-(P，q)。</p>
+    <p>[0413]	Xg’fa，η &#183; X1-(M)-X &#183; X4-W…（I-A)</p>
+    <p>[0414]	X2-(J^)=Q，η &#183; X2-(M)-X &#183; X4-W…（I-B)</p>
+    <p>[0415]	X3-(p,q)=a ' i-o * Χ3-(Ρ,,)-χ * Χ4-(ρ,,)&#8212; (I-C)</p>
+    <p>[0416]	图6示出了在示例I中添加第四色（白色）之前的现有HSV颜色空间、通过添加第四色（白色)而扩大的HSV颜色空间以及输入信号的饱和度S和亮度V(S)之间的关系示例。图7示出了在示例I中添加第四色（白色）之前的现有HSV颜色空间、通过添加第四色（白色）而扩大的HSV颜色空间以及输出信号（经过扩大处理）的饱和度S和亮度V(S)之间的关系示例。值得注意的是，图6和图7中的横轴的饱和度S的值最初是O至I之间的值，但是在图6和图7中，该值以255倍显示。</p>
+    <p>[0417]	关键点在于，如表达式（11)所示，Min(p,q)的值通过校正扩大系数^’^来扩大。这样，Minfcq)的值通过校正扩大系数a ’ ^来扩大，因此，不仅仅白色显示子像素(第四子像素W)的亮度，而且红色显示子像素、绿色显示子像素以及蓝色显示子像素(第一子像素R、第二子像素G以及第三子像素B)的亮度如表达式（1-A)、（ 1-B)、和（I-C)所示均增大。因此，可以可靠地防止出现颜色暗沉的问题的发生。即，如果Min(p，q)的值通过校正扩大系数a ’ g而扩大，则相比于Min(p,q)的值不扩大的情况，整个图像的亮度扩大了 a ’ g倍。因此，平面光源装置50的亮度是（I/a’g)倍就足以，从而使得可以获得整个图像显示装置的低功耗。</p>
+    <p>[0418]	当X =1.5且（2n_l)=255时，在表2中示出了当表2所示的值作为输入信号值(Xl-(P，q)，^2-(p，q)，^3-(p，q) )输入时，输出的输出信号值假设a i&#8212;o=a (i&#8212;j)&#8212;ο=1&#183; 467。</p>
+    <p>[0419]表	2</p>
+    <p>[0420]</p>
+    <p>  No. I X1 I x2 I X3 I Max I Min I S V | Vmax a =VmaJV~I X4 I X1 I X2 I X3~I 240255 160255 160 0.373 255 638 2.502	156 U8 140 O~</p>
+    <p>~ 240 160 160 240 160 0.333 240 638 2.658	156 U8 O O~</p>
+    <p>~ 24080 160 240 80 0.667 240 382 1.592	78 235 O &#912;&#970;δ"</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102903342A/CN102903342AD00351.png"> <img id="idf0001" file="CN102903342AD00351.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102903342A/CN102903342AD00351.png" class="patent-full-image" alt="Figure CN102903342AD00351"> </a> </div>
+    <p>[0421]	例如，利用表2中示出的No. I输入信号值，在考虑校正扩大系数α ’ 时，在遵循8位显示时，基于输入信号值= 255，160)将显示的亮度值如下。</p>
+    <p>[0422]弟一子像素	R 的&#22770;度值==ct j_0 &#183; X1-(Pd) = I. 467 X 240=352</p>
+    <p>[0423]第二子像素	G 的亮度值=α，卜。&#183; x2_(p；q)=l. 467X255=374</p>
+    <p>[0424]第三子像素	B 的亮度值=a ’ &#183; x3_(p；q)=l. 467 X 160=234</p>
+    <p>[0425]	从表达式（11)所获得的第四子像素W的输出信号值X4_(p，q)的值为156。因此，其亮度值为如下。</p>
+    <p>[0426]第四子像素	W 的亮度值=x *X4_(p；q)=l. 5X 156=234&#183;</p>
+    <p>[0427]因此，第一子像素输出信号值Xg，,)、第二子像素输出信号值X2_(p，q)以及第三子像素输出信号值Xmm)为如下。</p>
+    <p>[0428]	X1^feq) =352-234=118</p>
+    <p>[0429]	X2-(P, q)=374-234=140</p>
+    <p>[0430]	X3_(p； q)=234-234=0</p>
+    <p>[0431]	这样,在表2中不出的No. I输入信号值所输入至的像素中,最小输入信号值的子像素(在该情况下，第三子像素B)的输出信号值为0，并且第三子像素B的显示被第四子像素W代替。第一子像素R、第二子像素G以及第三子像素B的输出信号值&amp;%，,)、X2_(p,q)和X3-(P,q)最初成为小于所要求的值的值。</p>
+    <p>[0432]	在示例I的驱动图像显示装置的方法中，第（p，q)个像素中的信号值信号值&amp;-(1^)、信号值&amp;-(1)，(1)以及信号值X4-(P，q)被扩大倍。为此，如上所述，平面光源装置50的亮度为（1/a’g)倍就足以。因此，可以实现平面光源装置功耗的减小。</p>
+    <p>[0433]	虽然进行了其中使用校正扩大系数α ’ 来控制平面光源装置的亮度的构造，但是使用校正扩大系数α ’ g控制的平面光源装置的亮度可以是平面光源装置在第（i+k)个图像显示帧中的亮度(其中，O彡k彡5)，使得几乎不可能发生图像闪烁。具体地，利用k=l、k=2、k=3、k=4和k=5,通过观察者的观察来评价图像闪烁度。结果是，图像闪烁度最小时的k值为I或2，并且当k值为3至5时，图像闪烁没有引起实际问题。</p>
+    <p>[0434]	将参照图8A和图8B来描述示例I的驱动图像显示装置的方法和日本专利No. 3805150中描述的处理方法中的扩大处理之间的差异。图8A和图8B分别是示意性示出根据示例I的驱动图像显示装置的方法和日本专利No. 3805150中描述的处理方法的输入信号值和输出信号值的示意图。在图8A示出的示例中，第一子像素R、第二子像素G和第三子像素B的组的输入信号值在[I]中示出。其中执行扩大处理(获得输入信号值和扩大系数的乘积的操作)的状态在[2]中示出。执行扩大处理后的状态(其中获得输出信号值Xhp，,)、X2-(P，q)、Xmm)和X4-(P’q)的状态）在[3]中示出。根据日本专利No. 3805150中描述的处理方法的第一子像素R、第二子像素G和第三子像素B的组的输入信号值在[4]中示出。这些输入信号值与图8A的[I]中示出的那些相同。红色输入子像素、绿色输入子像素和蓝色输入子像素的数字值Ri、Gi和Bi以及用于驱动亮度子像素的数字值W在[5]中示出。Ro、Go、Bo和W的每个值的结果在[6]中示出。从图8A和图8B可以看出，在根据示例I的驱动图像显示装置的方法中，在第二子像素G中获得最大可实现亮度。根据在日本专利No. 3805150中描述的处理方法，发现在第二子像素G中没有达到最大可实现亮度。如上所述，相比于日本专利No. 3805150中描述的处理方法，根据示例I的驱动图像显示装置的方法可以以更高的亮度实现图像显示。</p>
+    <p>[0435]	在示例I中，可以使用驱动方法-A代替上述确定扩大系数a 的方法。即，在信号处理器20中，可以将扩大系数ag确定为，使得其中从亮度VJS)和扩大系数ag的乘积获得的扩大亮度的值超过最大值Vmax(S)的像素与所有像素的比等于或小于预定值（βΡΒ)。</p>
+    <p>[0436]	在多个像素(在示例I中，全部Ptl X Qtl个像素）中获得的扩大系数a (S)的值按升序排列成一行，并且将与扩大系数α⑶的PciXQci个值中从最小值开始的第WpdXPciXQc1)个相当的扩大系数a (S)设定为扩大系数cig。这样，可以将扩大系数a g确定为，使得其中从亮度Vi (S)和扩大系数ag的乘积获得的扩大亮度的值超过最大值Vmax (S)的像素与所有像素的比等于或小于预定值（βΡΙ))。</p>
+    <p>[0437]	β PD被设定为O. 003至O. 05 (O. 3%至5%)就足以，具体地，β PD设定为β PD=0. 01。&#183;即，将扩大系数a g确定为，使得其中从亮度Vi (S)和扩大系数a g的乘积获得的扩大亮度的值超过最大值Vmax(S)的像素与所有像素的比等于或大于O. 3%且等于或小于5%，具体地，1%。通过执行各种试验来确定β PD的值。</p>
+    <p>[0438]当将Vmax	(S)/Vi (S)的最小值设定为扩大系数ag时，对于输入信号值的输出信号值不超过（28_1)。然而，如果扩大系数ag为如上所述确定的，而不是Vmax (S)/Vi (S)的最小值，则在扩大系数a (S)小于扩大系数a g的情况下，对于像素而言扩大系数ai_Q大大增大，且扩大亮度的值超过最大值Vmax (S)。结果，发生所谓的“灰度损失”。另一方面，当β PD的值如上所述设定为例如O. 003至O. 05时，可以防止灰度损失显著且生成不自然图像的现象的发生。如果值β PD超过O. 05，则在一些情况下，已经证实灰度损失显著且生成不自然图像。值得注意的是，当输出信号值由于扩大处理而超过作为上限值的（2η_1)时，将输出信号值设定为（2η_1)作为上限值就足以。</p>
+    <p>[0439]	另一方面，α⑶的值通常超过I. O并集中在I. O附近。因此，当Vmax⑶/Vi⑶的最小值被设定为扩大系数a i-o时，输出信号值的扩大度很小，并且通常难以获得图像显示装置的低功耗。顺便提及，例如，如果β PD的值设定为O. 003至O. 05，则可以增大扩大系数Qi-Cl的值，并且平面光源装置50的亮度为（1/a’g)倍就足以。因此，可以获得整个图像显示装置的低功耗。</p>
+    <p>[0440]	值得注意的是，即使在β PD的值超过O. 05时，如果扩大系数ag很小，则发现灰度损失不显著并且不生成不自然图像。具体地，即使可选地将以下值用作值CIg时，</p>
+    <p>[0441]	a ^0= (BN4ZBN1^3)+!- (15-1)</p>
+    <p>[0442]	=x+1...(15-2)</p>
+    <p>[0443]	S卩，即使在使用驱动方法-B时，发现也存在灰度损失不显著且没有生成不自然图像的情况，并且还可以获得整个图像显示装置的低功耗。</p>
+    <p>[0444]	当建立以下关系时，</p>
+    <p>[0445]	α ,_0=χ+1... (15-2)</p>
+    <p>[0446]	并且当对于所有像素，从亮度Vi (S)和扩大系数a 的乘积获得的扩大亮度的值超过最大值Vmax(S)的像素比（β ")显著大于预定值（βΡΒ)(例如，β " =0.07)时，期望的是使用其中将扩大系数恢复至在[步骤-110]中获得的CIg的构造。</p>
+    <p>[0447]	各种试验显示，当在图像的颜色中大量地混入黄色时，如果扩大系数ag超过I. 3，则黄色变暗，并且生成不自然彩色图像。为此，在执行各种试验之后，当在像素中显示以（R，G，B)定义的颜色，并且HSV颜色空间中的色调H和饱和度S在由以下表达式定义的范围内的像素与所有像素的比超过预定值β’ΡΙ)(例如，具体地，2%)(即，在图像的颜色中大量地混入黄色）时，</p>
+    <p>[0448]	40 ≤ H≤ 65…（16-1)</p>
+    <p>[0449]	O. 5 ≤ S ≤I. O... (16-2)</p>
+    <p>[0450]	如果扩大系数a 设定为等于或小于预定值α ’ PD，具体地，等于或小于I. 3 (驱动方法-C)，则获得其中黄色不变暗并且没有生成不自然彩色图像的结果。还可以实现整个图像显示装置的功耗降低。</p>
+    <p>[0451]	对于（R，G，B)，当R的值是最大值时，通过以下表达式表示色调H。</p>
+    <p>[0452]	H=60 (G-B) / (Max-Min)…（16&#8212;3)</p>
+    <p>[0453]	当G的值是最大值时，通过以下表达式表示色调H。</p>
+    <p>[0454]	H=60 (B-R) / (Max-Min) +120... (16-4)</p>
+    <p>[0455]	当B的值是最大值时，通过以下表达式表示色调H。</p>
+    <p>[0456]	H=60 (R-G) / (Max-Min) +240…（16-5)</p>
+    <p>[0457]	值得注意的是，确定在图像的颜色中是否大量地混入黄色，而不是以下表达式，当在像素中显示以（R，G，B)定义的颜色，并且（R，G，B)满足表达式（17-1)至（17-6)的像素与所有像素的比超过预定值β’&#8482; (例如，具体地，2%)时，可以将扩大系数ag设定为等于或小于预定值a’PD (例如，具体地，等于或小于I. 3)(驱动方法-D)。</p>
+    <p>[0458]	40 ≤ H ≤ 65…（16-1)</p>
+    <p>[0459]	O. 5 ≤ S ≤ I. O... (16-2)</p>
+    <p>[0460]	对于（R，G，B)，当R的值是最大值且B的值是最小值时，R、G和B的值满足以下表达式。</p>
+    <p>[0461]	R≤ O. 78X (2n_l)…（17-1)</p>
+    <p>[0462]	G ≤（2R/3) + (B/3)…(17-2)</p>
+    <p>[0463]	B≤ O. 50R... (17-3)</p>
+    <p>[0464]	可选地，对于（R，G，B)，当G的值是最大值且B的值是最小值时，R、G和B的值满足以下表达式。</p>
+    <p>[0465]	R≤（4B/60) + (56G/60)…（17-4)</p>
+    <p>[0466]	G ≤ O. 78 X (2n_l)…（17-5)</p>
+    <p>[0467]	B ≤ O. 50R... (17-6)</p>
+    <p>[0468]	这里，η是显示灰度位的数量。</p>
+    <p>[0469]	这样，通过使用表达式（17-1)至（17-6)，可以以小计算量确定在图像的颜色中是否大量地混入黄色，从而减小信号处理器20的电路规模，并且实现计算时间的减少。表达式（17-1)至（17-6)中的系数和数值不限于此。当（R，G，B)的数据位数较大时，如果使用高阶位，则可以以更小的计算量来执行确定，并进一步减小信号处理器20的电路规模。具体地，在16位数据并且例如R=52621的情况下，当使用高阶8位时，R设定为R=205。[0470]	可选地，换句话说，当显示黄色的像素与所有像素的比超过预定值β’ΡΙ)(例如，具体地，2%)时，扩大系数ag设定为等于或小于预定值(例如，具体地，等于或小于I. 3)(驱动方法-E)。</p>
+    <p>[0471]	值得注意的是，示例I中的驱动图像显示装置的方法，驱动方法-A中的β PD值的范围、驱动方法-B中的表达式（15-1)和（15-2)的定义、驱动方法-C中的表达式（16-1)至（16-5)的定义、驱动方法-D中的表达式（17-1)至（17-6)的定义以及驱动方法-E中的定义可以应用于以下示例。因此，在以下描述中，将不再进行重复描述，将提供与形成像素的子像素相关的描述，并将描述至子像素的输入信号和输出信号之间的关系等。</p>
+    <p>[0472][示例	2]</p>
+    <p>[0473]	示例2是示例I的变形例。虽然现有直接型平面光源装置可以用作平面光面装置，但是在示例2中，使用以下描述的分割驱动系统(部分驱动系统）的平面光源装置150。值得注意的是，扩大处理本身与示例I中描述的扩大处理相同。 </p>
+    <p>[0474]	图9是示例2的图像显示装置中的图像显示面板和平面光源装置的概念图。图10是图像显示装置的平面光源装置中的平面光源装置控制电路的电路图。图11示意性示出了图像显示装置的平面光源装置中的平面光源单元等的布局和排列状态。</p>
+    <p>[0475]	假设构成彩色液晶显示器的图像显示面板130的显示区131被分成SXT个虚拟显示区单元132，分割驱动系统的平面光源装置150具有与SXT个显示区单元对应的SXT个平面光源单元152。分离地控制SXT个平面光源单元152的发光状态。</p>
+    <p>[0476]	如图9的概念图所示，图像显示面板(彩色液晶显示面板）130包括第一方向上的P个像素和第二方向上的Q个像素共PXQ个像素以二维矩阵的方式排列在其中的显示区131。假设显示区131分成SXT个虚拟显示区单元132。每个显示区单元132均具有多个像素。具体地，例如，满足作为图像显示分辨率的HD-TV标准，当二维矩阵中布置的PX Q个像素的数量用（P，Q)表示时，图像显示分辨率例如用（1920,1080)表示。具有以二维矩阵方式布置的像素的显示区131 (在图9中，用一个点链线表示）被分成SXT个虚拟显示区单元132 (其之间的边界用虚线表示)。（S，Τ)的值例如是（19，12)。为了简化附图，图9中的显示区单元132 (或者以下描述的平面光源单元152)的数量不同于该值。每个显示区单元132均具有多个像素，并且构成一个显示区单元132的像素数量例如为大约10，OOO0 一般地，图像显示面板130被线顺次驱动。更具体地，图像显示面板130具有在矩阵中相交的扫描电极(在第一方向延伸）和数据电极(在第二方向延伸)，将扫描信号从扫描电路输入扫描电极以选择和扫描扫描电极，并基于从信号输出电路输入至数据电极的数据信号(输出信号）显示图像，从而形成一个画面。</p>
+    <p>[0477]	直接型平面光源装置(背光）150具有与SXT个虚拟显示区单元132对应的SXT个平面光源单元152。每个平面光源单元152从背面照亮与平面光源单元152对应的显示区单元132。平面光源单元152中的光源被分离地控制。虽然在图9中平面光源装置150位于图像显示面板130的下方，但是图像显示面板130和平面光源装置150是分离表示的。</p>
+    <p>[0478]	虽然像素排列成二维矩阵的显示区131被分成SXT个显示区单元132，但是如果该状态用“行”和“列”表示，则可以说，显示区131被分成T-行XS-列的显示区单元132。虽然显示区单元132具有多个像素（MtlXNtl),但是如果该状态用“行”和“列”表示，则可以说，显示区132具有N。-行XMtl-列个像素。[0479]	图11示出了平面光源装置150中的平面光源单元152等的布局和排列状态。光源具有基于脉冲宽度调制（PWM)控制系统来驱动的发光二极管153。通过根据构成平面光源单元152的发光二极管153的脉冲宽度调制对占空比的增大/减小控制，来执行平面光源单元152的亮度的增大/减小。从发光二极管153发出的照明光通过光漫射板从平面光源单元152发出，穿过诸如光漫射片、棱镜片和偏振转换片的光学功能片组(未示出），并从背面照亮图像显示面板130。一个光学传感器(光电二极管67)布置在一个平面光源单元152中。利用光电二极管67，测量发光二极管153的亮度和色度。</p>
+    <p>[0480]	如图9和图10所示，基于来自信号处理器20的平面光源装置控制信号(驱动信号）驱动平面光源单元152的平面光源装置控制电路160，使用脉冲宽度调制控制系统来执行使构成平面光源单元152的发光二极管153的通/断控制。平面光源装置控制电路160包括算术电路61、存储装置(存储器）62、LED驱动电路63、光电二极管控制电路64、由FET制成的开关元件65以及发光二极管驱动电源(恒流源）66。构成平面光源装置控制电路160 的这些电路等可以是已知电路等。</p>
+    <p>[0481]	形成反馈机制，以使得通过光电二极管67测量某一图像显示帧中的发光二极管153的发光状态，光电二极管67的输出被输入至光电二极管控制电路64，并在光电二极管控制电路64和算术电路61中被设定为关于例如发光二极管153的亮度和色度的数据(信号)，相关数据被发送至LED驱动电路63，并且控制下一图像显示帧中的发光二极管153的发光状态。</p>
+    <p>[0482]	用于电流检测的电阻元件r与发光二极管153串联地插入发光二极管153的下游，在电阻元件r中流动的电流被转换成电压，并且在LED驱动电路63的控制下，发光二极管驱动电源66的操作被控制为，使得电阻元件r中的电压降具有预定值。虽然图10示出了单个发光二极管驱动电源(恒流源）66，但实际上，发光二极管驱动电源66被布置为驱动每个发光二极管153。值得注意的是，图10示出了三组平面光源单元152。虽然在图10中进行的是其中一个发光二极管153设置在一个平面光源单元152中的构造，但是，构成一个平面光源单元152的发光二极管153的数量不限于一个。</p>
+    <p>[0483]	如上所述，每个像素均具有第一子像素R、第二子像素G、第三子像素B和第四子像素W四种子像素作为一组。这里，各像素的亮度控制(灰度控制）是8位控制，并将以O至255的28阶执行。用于控制形成各平面光源单元152的各发光二极管153的发光时间的脉冲宽度调制输出信号的值PS具有O至255的28阶的值。然而，这些值不限于此，并且例如，灰度控制可以是10位控制，并且可以以O至1023的21°阶执行。在该情况下，应当例如是具有8位数值的表达式的四倍。</p>
+    <p>[0484]	这里，如下定义子像素的透光率(也称为孔径比）Lt、与子像素对应的显示区部分的亮度(显示亮度）y以及平面光源单元152的亮度(光源亮度）Y。</p>
+    <p>[0485]	Y^&#183;&#183;例如，光源亮度的最高亮度，并且在下文中可以称为光源亮度第一规定值。</p>
+    <p>[0486]	Ltr&#183;&#183;例如，显示区单元132中的子像素的透光率(孔径比）的最大值，并且可以在下文中称为透光率第一规定值。</p>
+    <p>[0487]	Ltf&#183;&#183;假设与显示区单元内信号最大值Xmax_(s，t)对应的控制信号被提供给子像素时的子像素透光率(孔径比)，并在下文中称为透光率第二规定值，其中，显示区单元内信号最大值x_-(s，t)是要输入至用于驱动形成显示区单元132的所有像素的图像显示面板驱动电路40的、来自信号处理器20的输出信号值中的最大值。值得注意的是，应当满足O ^ Lt2 ^ Lt10</p>
+    <p>[0488]	y^&#183;&#183;假设光源亮度是光源亮度第一规定值Y1,并且子像素的透光率(孔径比）是透光率第二规定值Lt2时获得的显示亮度，并且可以在下文中称为显示亮度第二规定值。</p>
+    <p>[0489]	Yf&#183;&#183;假设与显示区单元内信号最大值Xmax_(s，t)对应的控制信号被提供给子像素、并且此时的子像素的透光率(孔径比）被校正为透光率第一规定值Lt1时，用于将子像素亮度设定为显示亮度第二规定值（y2)的平面光源单元152的光源亮度。另一方面，考虑到各平面光源单元152的光源亮度对另一平面光源单元152的光源亮度的影响，可以对光源亮度Y2执行校正。</p>
+    <p>[0490]	虽然通过平面光源装置控制电路160来控制形成与显示区单元132对应的平面光源单元152的发光元件的亮度，以使得在假设与显示区单元内信号最大值Xmax_(s，t)对应的控 制信号被提供至子像素时的子像素亮度(具有透光率第一规定值Lt1的显示亮度第二规定值y2)在部分驱动（分割驱动）平面光源装置时获得，具体地，例如，光源亮度Y2被控制(例如，减小)为使得在将子像素的透光率(孔径比)设定为例如透光率第一规定值Lt1时获得的显示亮度72就可以。即，例如，在每个图像显示帧中控制平面光源单元152的光源亮度Y2,以使得满足表达式（A)就可以。值得注意的是，建立关系Y2SYp该控制的概念图在图12A和图12B中示出。</p>
+    <p>[0491]	Y2 &#183; Lt1=Y1 &#183; Lt2 …（A)</p>
+    <p>[0492]	为了控制各个子像素，用于控制各子像素的透光率Lt的输出信号</p>
+    <p>^l-(p, q)、^2-(p, q)、</p>
+    <p>X3-(P,q)和X4-(P,q)从信号处理器20发送至图像显示面板驱动电路40。在图像显示面板驱动电路40中，从输出信号生成控制信号，并且这些控制信号被提供(输出)至子像素。基于相应的控制信号来驱动构成每个子像素的开关元件，并且将所需电压施加至构成液晶单元（cell)的透明第一电极和透明第二电极(未示出），因此，控制各个子像素的透光率(孔径比)。这里，控制信号越强，子像素的透光率(孔径比)Lt越高，并且与子像素对应的显示区部分的亮度值(显示亮度y)越高。即，由穿过子像素的光形成的图像(通常，一种点状）是亮的。</p>
+    <p>[0493]	对于每个显示区单元以及对于每个平面光源单元，在图像显示面板130的图像显示的每个图像显示帧中执行显示亮度I和光源亮度Y2的控制。图像显示面板130的操作和平面光源装置150的操作在一个图像显示帧是同步的。值得注意的是，在一秒内要作为电信号传输至驱动电路的图像信息数(每秒的图像）是帧频率(帧速率)，并且帧频率的倒数是中贞时间(单位，秒)。</p>
+    <p>[0494]	在示例I中，已经基于一个校正扩大系数α ’ 对所有像素执行了用于扩大输入信号以获得输出信号的扩大处理。另一方面，在示例2中，在SXT个显示区单元132的每一个中获得校正扩大系数α ’ Μ+，,)，并且在各个显示区单元132中执行基于校正扩大系数</p>
+    <p>α ’ I-O-(Sjt)的扩大处理。</p>
+    <p>[0495]	在与所获得的校正扩大系数为α ’ t)的第（s，t)个显示区单元132对应的第(s，t)个平面光源单元152中，光源的亮度设定为（l/a’i+at))。</p>
+    <p>[0496]	可选地，形成与显示区单元132对应的平面光源单元152的光源的亮度由平面光源装置控制电路160控制，以使得将假设与显示区单元内信号最大值Xmax_(s，t)对应的控制信号被提供至子像素时的子像素亮度(具有透光率第一规定值Lt1的显示亮度第二规定值y2)获得，其中，最大值Xmax-(s，t)是从信号处理器20输入以驱动形成每个显示区单元132的所有子像素的输出信号值X1-M、X2-(s，t)、XMs，t)和X4-(s，t)中的最大值。具体地，控制(例如，减小）光源亮度Y2,以使得在子像素的透光率(孔径比）为透光率第一规定值Lt1时获得显示亮度Y2就足以。即，具体地，应当满足在每个图像显示帧控制平面光源单元152的光源亮度Y2,以使得满足表达式（A)。</p>
+    <p>[0497]	另一方面，在平面光源装置150中，例如，当假设（s，t) = (l，I)的平面光源单元152的亮度被控制时，可能存在需要考虑来自其他SXT个平面光源单元152的影响的情况。由于另一平面光源单元152对平面光源单元152的影响可根据各个平面光源单元152的发光轮廓预先判断出，因此可以通过逆运算来计算差异，结果，可以执行校正。以下将描述算术运算的基本形式。</p>
+    <p>[0498]	基于表达式（A)的要求，SXT个平面光源单元152所必要的亮度(光源亮度Y2)将用矩阵[Lpxq]来表示。对于SXT个平面光源单元152，预先获得在仅驱动某一平面光源单元而不驱动其他平面光源单元时获得的某一平面光源单元的亮度。有关亮度用矩阵[L’ PxQ]表示。校正系数用矩阵[aPxQ]表示。当出现如此情形时，可以通过表达式（B-I)来表示矩 阵之间的关系。可以预先获得校正系数矩阵[aPxQ]。</p>
+    <p>[0499]	[LPxQ]-[L PxQ] &#183; [ α PxQ]…(B-I)</p>
+    <p>[0500]	因此，可以从表达式（B-I)获得矩阵[L’PxQ]。可以从逆矩阵的计算来获得矩阵[L’PxQ]。即，应当计算以下表达式。</p>
+    <p>[0501]	[L，PxQ] = [LPxQ] &#183; [apj-1... (B-2)</p>
+    <p>[0502]	将每个平面光源单元152中的光源(发光二极管153)的亮度控制为获得用矩阵[L’PxQ]表示的亮度就足以。具体地，使用平面光源装置控制电路160的存储装置(存储器）62中存储的信息(数据表）来执行有关操作和处理就足以。值得注意的是，通过控制发光二极管153，由于矩阵[L’PxQ]的值不具有负值，因此毋庸置疑，计算结果应当包括在正区域中。因此，表达式（B-2)的解不是精确解，而会是近似解。</p>
+    <p>[0503]	这样，如上所述，根据基于在平面光源装置控制电路160中获得的表达式（A)的值的矩阵[Lpxq]和校正系数的矩阵[a PxQ]，获得假设平面光源单元被单独驱动时的亮度矩阵[L’ PxQ]，并且基于存储装置62中存储的转换表，将其转换成O至255范围内的相应整数(脉冲宽度调制输出信号的值)。这样，在构成平面光源装置控制电路160的算术电路61中，能够获得用于控制平面光源单元152中的发光二极管153的发光时间的脉冲宽度调制输出信号的值。基于平面光源装置控制电路160中的脉冲宽度调制输出信号的值，来确定构成平面光源单元152的发光二极管153的接通时间和关闭时间t-就足以。值得注意的是，</p>
+    <p>恒定值t。&#183;,。基于发光二极管的脉冲宽度调制进行驱动时的占空比可以表示为如下。</p>
+    <p>[0504]	t0N/ (t0N+t0FF) -t0N/tConst</p>
+    <p>[0505]	与构成平面光源单元152的发光二极管153的接通时间相对应的信号被发送至LED驱动电路63。基于来自LED驱动电路63的与接通时间tQN对应的信号值，开关元件65处于接通状态长达接通时间tQN。然后，来自发光二极管驱动电源66的LED驱动电流流入发光二极管153。结果，各个发光二极管153在一个图像显示帧中发光长达接通时间tQN。这样，以预定亮度照亮各个显示区单元132。[0506]	值得注意的是，示例2中描述的分割驱动系统(部分驱动系统）的平面光源装置150可以用于其他示例。</p>
+    <p>[0507][示例	3]</p>
+    <p>[0508]	示例3也是示例I的变形例。图13是示例3的图像显示装置的等效电路图。图14是形成图像显示装置的图像显示面板的概念图。在示例3中，使用以下描述的图像显示装置。即，示例3的图像显 示装置包括图像显示面板，在该图像显示面板中，用于显示彩色图像的发光元件单元UN排列成二维矩阵，每个发光元件单元具有发出红光的第一发光元件(对应于第一子像素R)、发出绿光的第二发光元件(对应于第二子像素G)、发出蓝光的第三发光元件(对应于第三子像素B)以及发出白光的第四发光元件(对应于第四子像素W)。对于形成示例3的图像显示装置的图像显示面板，例如，可以使用具有以下描述的构造和结构的图像显示面板。基于图像显示装置所要求的规格来确定发光元件单元UN的数量就足以。</p>
+    <p>[0509]	S卩，形成示例3的图像显示装置的图像显示面板是直视型彩色显示器的无源矩阵型或有源矩阵型图像显示面板，其中，直视型彩色显示器分别控制第一发光元件、第二发光元件、第三发光元件和第四发光元件的发光/非发光状态以直接视觉上辨别出各发光元件的发光状态。可选地，图像显示面板是投影型彩色显示器的无源矩阵型或有源矩阵型图像显示面板，其中，投影型彩色显示器分别控制第一发光元件、第二发光元件、第三发光元件和第四发光元件的发光/非发光状态并将图像投影至屏幕上以显示图像。</p>
+    <p>[0510]	例如，图13是包括形成直视型彩色显示器的有源矩阵型图像显示面板的发光元件面板的电路图。在图13中，各个发光元件210(在图13中，发出红光的发光元件(第一子像素）用“R”表示、发出绿光的发光元件(第二子像素）用“G”表示、发出蓝光的发光元件(第三子像素B)用“B”表示）的一个电极（P侧电极或η侧电极）连接至驱动器233，并且驱动器233连接至列驱动器231和行驱动器232。各个发光元件210的另一电极（η侧电极或ρ侧电极)连接至地线。例如，通过选择使用行驱动器232的驱动器233，来执行各个发光元件210的发光/非发光状态的控制，并且用于驱动各个发光元件210的亮度信号从列驱动器231提供至驱动器233。由驱动器233来执行对发出红光的发光元件R (第一发光元件，第一子像素R)、发出绿光的发光元件G (第二发光元件，第二子像素G)、发出蓝光的发光元件B (第三发光元件、第三子像素B)以及发出白光的发光元件W (第四发光元件、第四子像素W)的选择。可以以分时方式来控制发出红光的发光兀件R、发出绿光的发光兀件G、发出蓝光的发光元件B以及发出白光的发光元件W中的每个发光元件的发光/非发光状态。可选地，这些元件可以同时发光。值得注意的是，各个发光元件的发光/非发光状态在直视型图像显示装置中被直接识别出，或者在投影型图像显示装置中通过投影透镜投影至屏幕上。</p>
+    <p>[0511]	图14是形成该图像显示装置的图像显示面板的概念图。各个发光元件的发光/非发光状态在直视型图像显示装置中被直接观看到，或者在投影型图像显示装置中通过投影透镜203投影至屏幕上。</p>
+    <p>[0512]	可选地，形成示例3的图像显示装置的图像显示面板可以是用于彩色显示器的直视型或投影型图像显示面板，彩色显示器包括用于控制从排列成二维矩阵的发光元件单元发出的光的透射/非透射的光透射控制装置(光阀，并且具体地，例如，包括高温多晶硅型薄膜晶体管的液晶显示器。这同样适用于以下示例)，以分时方式控制发光元件单元中的第一发光元件、第二发光元件、第三发光元件以及第四发光元件中的各个的发光/非发光状态，并进一步利用光透射控制装置来控制从第一发光元件、第二发光元件、第三发光元件以及第四发光元件发出的光的透射/非透射，以显示图像。</p>
+    <p>[0513]	在示例3中，通过示例I中描述的扩大处理，获得用于控制第一发光元件(第一子像素R)、第二发光元件(第二子像素G)、第三发光元件(第三子像素B)以及第四发光元件(第四子像素W)中的各个的发光状态的输出信号。如果基于通过扩大处理获得的输出信号的值Xl-(p，q)、X2-(p，q)、X3-(p，q)和&#20034;4_“)来驱动图像显不装直，则可以将整个图像显不装直的&#22770;度增大ag倍。因此，如果第一发光元件(第一子像素R)、第二发光元件(第二子像素G)、第三发光元件(第三子像素B)以及第四发光元件(第四子像素W)的发光亮度是输出信号的值X1-U、X2H X3-W和Au的倍，则可以实现整个图像显示装置的功耗减小，而不会带来图像质量的劣化。</p>
+    <p>[0514][示例	4]</p>
+    <p>[0515]	示例4涉及根据本发明第二实施方式的驱动图像显示装置的方法。 </p>
+    <p>[0516]	如图15中的像素布局中示意性示出的，在示例4的图像显示面板30中，具有显示第一原色(例如，红色）的第一子像素R、显示第二原色(例如，绿色）的第二子像素G以及显示第三原色(例如，蓝色)的第三子像素B的像素Px在第一方向和第二方向上排列成二维矩阵。排列在第一方向的至少第一像素Px1和第二像素Px2形成像素组PG。值得注意的是，在示例4中，具体地，像素组PG具有第一像素Px1和第二像素Px2,并且当形成像素组PG的像素数量为Ptl时，Po=2。在每个像素组PG中，显示第四色(在示例4中，具体地，白色）的第四子像素W布置在第一像素Px1和第二像素Px2之间。值得注意的是，虽然为了方便，图18示出了像素布局的概念图，但图18中示出的布局是以下描述的示例6中的像素布局。</p>
+    <p>[0517]	这里，如果正数P是第一方向的像素组PG的数量，正数Q是第二方向的像素组PG的数量，更具体地、PXQ个像素Px[在作为第一方向的水平方向上的（PtlXP)个像素，以及在作为第二方向的垂直方向上的Q个像素]排列成二维矩阵。在示例4中，如上所述，在每个像素组PG中，pQ=2。</p>
+    <p>[0518]	在示例4中，当第一方向是行方向，并且第二方向是列方向时，第q’列的第一像素Px1和第（q’+l)列的第一像素Px1彼此相邻(其中，I彡q’彡Q_l)，并且第q’列的第四子像素W和第（q’+l)列的第四子像素W彼此不相邻。即，第二像素Px2和第四子像素W在第二方向上交替地布置。值得注意的是，在图15中，形成第一像素Px1的第一子像素R、第二子像素G和第三子像素B被实线围绕，并且形成第二像素Px2的第一子像素R、第二子像素G和第三子像素B被虚线围绕。这同样适用于以下描述的图16、图17、图20、图21和图22。由于第二像素Px2和第四子像素W在第二方向交替地布置，因此可以可靠地防止由于存在第四子像素W同于与像素间距有关而在图像中观察到条纹图案。</p>
+    <p>[0519]	在示例4中，关于形成第（p，q)个像素组PG(p，q)的第一像素Pwi (其中，I彡P彡P且I彡q彡Q)，</p>
+    <p>[0520]	具有信号值的第一子像素输入信号，</p>
+    <p>[0521]	具有信号值X2^1的第二子像素输入信号，以及</p>
+    <p>[0522]	具有信号值X3^1的第三子像素输入信号输入至信号处理器20，并且</p>
+    <p>[0523]	关于形成第（p，q)个像素组PG(p,q)的第二像素PX(p,q)_2，[0524]	具有信号值XhpI2的第一子像素输入信号，</p>
+    <p>[0525]	具有信号值X2_(p，q)_2的第二子像素输入信号，以及</p>
+    <p>[0526]	具有信号值x3-(p，q)-2的第三子像素输入信号输入至信号处理器20.</p>
+    <p>[0527]	在示例4中，关于形成第（p，q)个像素组PG(p，q)的第一像素Px(p，^，信号处理器输出，</p>
+    <p>[0528]	具有用于确定第一子像素R的显不灰度的信号值Xgp，^的第一子像素输出信号，</p>
+    <p>[0529]	具有用于确定第二子像素G的显示灰度的信号值X2^1的第二子像素输出信号，</p>
+    <p>[0530]	具有用于确定第三子像素B的显示灰度的信号值的第三子像素输出信号，</p>
+    <p>[0531]	关于形成第（p，q)个像素组PG(p,q)的第二像素PX(p,q)_2，输出</p>
+    <p>[0532]	具有用于确定第一子像素R的显不灰度的信号值的第一子像素输出信号，</p>
+    <p>[0533]	具有用于确定第二子像素G的显示灰度的信号值X2_(p，q)_2的第二子像素输出信号， </p>
+    <p>[0534]	具有用于确定第三子像素B的显示灰度的信号值X3_(p，q)_2的第三子像素输出信号，</p>
+    <p>[0535]	关于形成第（p，q)个像素组PG(p，q)的第四子像素W，输出具有用于确定第四子像素W的显示灰度的信号值x4_(p，q)的第四子像素输出信号。</p>
+    <p>[0536]	在示例4中，在信号处理器20中，关于第一像素Px^-i，</p>
+    <p>[0537]	至少基于第一子像素输入信号(信号值Xgp，^)和校正扩大系数a ’ !获得第一子像素输出信号(信号值Χ^，^)，并输出至第一子像素R，</p>
+    <p>[0538]	至少基于第二子像素输入信号(信号值和校正扩大系数α ’ 获得第二子像素输出信号(信号值Χμρ，^)，并输出至第二子像素G，以及</p>
+    <p>[0539]	至少基于第三子像素输入信号（信号值X3^1)和校正扩大系数α ’ 获得第三子像素输出信号(信号值Χμρ，^)，并输出至第三子像素B，以及</p>
+    <p>[0540]关于第二像素	Px(p，q)_2，</p>
+    <p>[0541]	至少基于第一子像素输入信号(信号值Xgpjj)和校正扩大系数α ’ !获得第一子像素输出信号(信号值Χ^，^)，并输出至第一子像素R，</p>
+    <p>[0542]	至少基于第二子像素输入信号(信号值X2-(p，q)-2)和校正扩大系数α ’ 获得第二子像素输出信号(信号值X2-(P，q)-2)，并输出至第二子像素G，以及</p>
+    <p>[0543]	至少基于第三子像素输入信号（信号值和校正扩大系数α ’ 获得第三子像素输出信号(信号值X3-(P，q)-2)，并输出至第三子像素B。</p>
+    <p>[0544]	关于第四子像素W，基于根据至第一像素的第一子像素输入信号(信号值XgH)、第二子像素输入信号(信号值X&amp;H)和第三子像素输入信号(信号值</p>
+    <p>得的第四子像素控制第一信号(信号值SGmm))以及根据至第二像素的PX(p，q)_2的第一子像素输入信号(信号值X1-(PM)-A第二子像素输入信号(信号值XMp，q)-2)和第三子像素输入信号(信号值获得的第四子像素控制第二信号(信号值SG2_(p，q))获得第四子像素输出信号(信号值X4-(p，q))，并输出至第四子像素W。</p>
+    <p>[0545]	在示例4中，具体地，基于Minfct^1和校正扩大系数α ’ g来确定第四子像素控制第一信号值SG1^,)，并基于Min(p，q)_2和校正扩大系数α ’ 来确定第四子像素控制第二信号值SG2_(p，q)。更具体地，使用基于表达式（2-1-1)和（2-1-2)的表达式（41-1)和（41_2)作为第四子像素控制第一信号值SGmm)和第四子像素控制第二信号值SG2_(p，q)。</p>
+    <p>[0546]	SG1^fe,,=Minipjq)^ &#183; α ’ 卜0…（41-1)[0547]	SG2_(p,q)=Min(p,q)_2 &#183; α，卜0... (41&#8212;2)</p>
+    <p>[0548]	关于第一像素Ρχ^η，</p>
+    <p>[0549]	尽管至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，但是基于第一子像素输入信号值 Xl-(P，q)-1、</p>
+    <p>                    校正扩大系数a’g、第四子像素控制第一信号值SGmp,,)和常数X获得第一子像素输出信号值Xgp,，即，</p>
+    <p>[0550]	[χ&#912;-(ρ, q)-l) α i-0)	q), X]</p>
+    <p>[0551]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ g获得第二子像素输出信号，但是基于第二子像素输入信号值 X2-(p，q)-1、&#183;                    校正扩大系数a’g、第四子像素控制第一信号值SGmp,,)和常数X来获得第二子像素输出信号值Xmp,^，即，</p>
+    <p>[0552]	[χ2-(ρ, q)-l&gt; α i-0)	q), X]</p>
+    <p>[0553]	尽管至少基于第三子像素输入信号和校正扩大系数α ’ 获得第三子像素输出信号，但是基于第三子像素输入信号值 X3-(p，q)-1、</p>
+    <p>                    校正扩大系数a’g、第四子像素控制第一信号值SGmm)和常数X来确定第三子像素输出信号值Xmp，即</p>
+    <p>[0554]	[x3_(…，α，</p>
+    <p>                          i&#8212;O，SGi&#8212;(p，q)，X ]</p>
+    <p>[0555]关于第二像素	Px(p，q)_2，</p>
+    <p>[0556]	尽管至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，但是基于第一子像素输入信号值Xl-(p，q)-2、校正扩大系数a’g、第四子像素控制第二信号值SG2_(p，q)和常数X获得第一子像素输出信号值Xmmm，即，</p>
+    <p>[0557]	[Χι_(ρ；(&#912;)_2, α’ i-0，SG2-(P，(J)，X]</p>
+    <p>[0558]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ 获得第二子像素输出信号，但是基于第二子像素输入信号值X2-(p，q)-2、校正扩大系数a’g、第四子像素控制第二信号值SG2_(p，q)和常数X来获得第二子像素输出信号值X2_(p，q)_2，即，</p>
+    <p>[0559]	[X2-(p，q)-2，α i-0) SG2_(p；q), X]</p>
+    <p>[0560]	尽管至少基于第三子像素输入信号和校正扩大系数α ’ 获得第三子像素输出信号，但是基于第三子像素输入信号值 X3-(p，q)-2、 校正扩大系数a、第四子像素控制第二信号值SG2_(p，q)和常数X来获得第三子像素输出信号值X3_(p，q)_2，即，</p>
+    <p>[0561]	[χ3-(ρ, q) -2J Q i&#8212;O，SG2&#8212;(p，q” X ]</p>
+    <p>[0562]	在信号处理器20中，如上所述，可以基于校正扩大系数α\_。和常数x来获得输出信号值、和X3^2，更具体地，可以通过以下表达式来获得。</p>
+    <p>[0563]	^i-(p, q)-i_ a i-o &#183; xi-(p，q)-ι_χ &#183; SG1.^ q) * * * (2~A)</p>
+    <p>[0564]	X2&#8212;(p，q)&#8212;「ct 卜。&#183; X2-(Pj q)-i_ x &#183; SG卜(p，q)…（2_B)</p>
+    <p>[0565]	X3&#8212;(p，q)&#8212;「ct 卜。&#183; X3-(p? q)-i_ x &#183; SGhp，w (2-C)</p>
+    <p>[0566]	Xl-(p, q)-2_ a 1-0 &#183; Xl-(p，q)-2_X &#183; SG2&#8212;(p，q) &#183;&#183;&#183; (2~D)</p>
+    <p>[0567]	X2&#8212;(p，q)&#8212;2-a i_o &#183; x2&#8212;(p，q)&#8212;2_x &#183; SG2&#8212;(p，q)&#183;&#183;&#183; (2~E)</p>
+    <p>[0568]	X3&#8212;(p，q)&#8212;2-a i_o &#183; x3&#8212;(p，q)&#8212;2_x &#183; SG2&#8212;(p，q)&#183;&#183;&#183; (2~F)</p>
+    <p>[0569]	基于表达式（2-11)，通过算术平均表达式（42-1)和（42-2 )来获得信号值X4&#8212;(p，q)。</p>
+    <p>[0570]	X4&#8212;匕疒⑶卜(p，q)+SG2&#8212;(p，q))/(2 X )…（42-1)</p>
+    <p>[0571]	=(Min(p，q)&#8212;i &#183; a，卜0+Min(p，q)&#8212;2 &#183; a，卜。）/ (2 x ) &#183;&#183;&#183; (42-2)[0572]	值得注意的是，在表达式（42-1)和（42-2)的右侧，执行使用x的除法，但是表达式不限于此。</p>
+    <p>[0573]	在每个图像显示帧中确定校正扩大系数α ’ ^00平面光源装置50的亮度基于校正扩大系数α ’ 而减小。具体地，平面光源装置50的亮度为（l/α ’ ^0)倍就足以。</p>
+    <p>[0574]	在示例4中，如同在示例I中，以通过添加第四色（白色)而扩大的HSV颜色空间中的饱和度S作为变量的亮度最大值Vmax(S)存储在信号处理器20中。即，通过添加第四色(白色)，加宽了 HSV颜色空间中的亮度的动态范围。</p>
+    <p>[0575]	下文中，将描述如何获得第（p，q)个像素组PG(p，q)中的输出信号值Xhp，^、</p>
+    <p>^2- (P, q) -I、父3- (p, q) -I、Xl- (p, q) -2、^2- (p, q) _2、^3- (p, q) _2 和父4_ (p, q) (扩大处理)。值得注意的是，将执行以</p>
+    <p>下处理，以在第一像素和第二像素的全体(即，在每个像素组中)保持由(第一子像素R+第四子像素W)显示的第一原色的亮度、由（第二子像素G+第四子像素W)显示的第二原色的亮&#183;度、由（第三子像素B+第四子像素W)显示的第三原色的亮度的亮度比。将执行以下处理，以保持(维持）色调。还将执行以下处理来保持(维持）灰度-亮度特性(伽玛特性，Y特性)。</p>
+    <p>[0576][步骤-400]</p>
+    <p>[0577]	首先，在信号处理器20中，基于多个像素中的子像素输入信号值来获得多个像素组PG(p，q)中的饱和度Si和亮度Vi (S)。具体地，基于至第（p，q)个像素组PG(p，q)的第一子像素输入信号值XHpH和XHpj-2、第二子像素输入信号值XMpH和X2-(P，&lt;!)-2以及第三子像素输入信号值 X3^1 和 x3-(p，q)-2，从表达式（43-1)至（43-4)来获得3(1)，(1)_1、5(1)，(1)_2、&#165;(5)(P,,)-!和V(S) (p，q)_2。将对所有像素组PG(p，q)执行该处理。</p>
+    <p>[0578]	S“η= (Max“η-Min(p’n)/MaxfcqV (43-1)</p>
+    <p>[0579]	V⑶“H=Maxw. (43-2)</p>
+    <p>[0580]	Sw&#8212;HMax^h-MinwJ/Max^’w (43-3)</p>
+    <p>[0581]	V (S) (p,q)-2=Max(p；q)_2&#8212; (43-4)</p>
+    <p>[0582][步骤-410]</p>
+    <p>[0583]	然后，在信号处理器20中，以与示例I中相同的方式，从在多个像素组PG(p，q)中获得的值Vmax (S)/Vi (S)，确定校正扩大系数a’if可选地，从预定值β PD确定校正扩大系数a[驱动方法-A]，基于表达式（15-2)、表达式（16-1)至（16_5)或表达式（17_1)至(17_6)的定义来确定校正扩大系数ct ’ i-o [驱动方法-B、驱动方法-C和驱动方法-D],或者基于驱动方法-E中的定义来确定校正扩大系数a ’ g。</p>
+    <p>[0584][步骤	_420]</p>
+    <p>[0585]	之后，在信号处理器20中，至少基于输入信号值</p>
+    <p>Xl-(p，q)-1、X2-(p，q)-1、&#20034;3-(p，q)-1、</p>
+    <p>Xl-(p，q)-2、X2_(p，q)_2 和 X：3-(p，q)_2 来&#29374;得弟(P) Q)个像素组 PG(p，(j)中的号值 X4-(p，q)。具体地，在示例4中，基于、校正扩大系数a ’ 和常数x来确定信号值X4_(p，q)。具体地，在示例4中，从以下表达式获得信号值X4_(p，q)。</p>
+    <p>[0586]	X4-(Pjq) = (Minipjq)^1 &#183; a ’ ^Min&#183; a ’ 卜0)/(2 x )... (42-2)</p>
+    <p>[0587]	值得注意的是，为所有的PXQ个像素组PG(p，q)获得X4_(p’q)。</p>
+    <p>[0588][步骤-430]</p>
+    <p>[0589]	之后，在信号处理器20中，基于信号值Xl_(p，n、校正扩大系数a ’卜。以及第四子像素控制第一信号SGpfcq)来获得第（P, q)个像素组PG(p，q)中的信号值Χηρ，^,基于信号值X2H1、校正扩大系数α ’ 以及第四子像素控制第一信号SGgp,,)来获得信号值XmpH,并且基于信号值Χμμη、校正扩大系数α ’ 以及第四子像素控制第一信号SGmm)来获得信号值ΧμμΗ。类似地，基于信号值Xl-(p，q)-2、校正扩大系数a’g以及第四子像素控制第二信号SG2_(p，q)来获得信号值X1^2，基于信号值x2_(p，q)_2、校正扩大系数α ’ 以及第四子像素控制第二信号SG2_(p，q)来获得信号值X2_(p，q)_2，并且基于信号值X3_(p，q)_2、校正扩大系数α ’ g以及第四子像素控制第二信号SG2_(p，q)来获得信号值X3_(p，q)_2。值得注意的是，[步骤-420]和[步骤-430]可以同时执行，或者，[步骤-420]可以在执行了 [步骤-430]之后执行。</p>
+    <p>[0590]	具体地，从表达式（2-A)至（2-F)获得第（p，q)个像素组PG(p，q)中的输出信号值</p>
+    <p>Xl-(p，q)-l、^2-(p, q)-l&gt; ^3-(p, q)-l&gt; Xl_(p，q)_2、^2-(p, q)-2 和 ^3-(p, q)-2 °</p>
+    <p>[0591]	关键点在于，如表达式（41-1)、（41-2)和（42-2)所示，通过校正扩大系数α ’卜。来扩大Minfet^1和Min(p，q)_2的值。以此方式，通过校正扩大系数α ’ 来扩大Minfet^1和 Min(p,q)_2的值，因此，如表达式（2-Α)至（2-F)所示，不仅白色显示子像素(第四子像素W)的亮度增大，而且红色显示子像素、绿色显示子像素和蓝色显示子像素(第一子像素R、第二子像素G以及第三子像素B)的亮度也增大。为此，可以可靠地防止出现颜色暗沉的问题的发生。即，如果通过校正扩大系数α ’ 来扩大Minfe^1和Min(p，q)_2的值，则相比于没有扩大Minfct^1和Min(p，q)_2的值的情况，整个图像的亮度扩大α ’ ^倍。因此，平面光源装置50的亮度为（1/a’g)倍就足以。</p>
+    <p>[0592]	将参照图19来描述示例4的驱动图像显示装置的方法中的扩大处理。图19是示意性示出了输入信号值和输出信号值的示意图。在图19中，第一子像素R、第二子像素G和第三子像素B的组的输入信号值在[I]中示出。其中正在执行扩大处理(获得输入信号值和校正扩大系数α ’ i-o的乘积的操作）的状态在[2]中示出。已经执行扩大处理后的状态(其中获得输出信号值X2-(Pjq)-^ X3-(p,q)-i和X4-M的状态）在[3]中示出。在图19示出的示例中，在第二子像素G获得了最大可实现亮度。</p>
+    <p>[0593]	在示例4的驱动图像显示装置的方法中，在信号处理器20中，基于根据至每个像素组PG中的第一像素Px1和第二像素Px2的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号值SGmm)和第四子像素控制第二信号值SG2_(p，q)获得第四子像素输出信号，并输出。S卩，由于基于至相邻的第一像素Px1和第二像素Px2的输入信号获得第四子像素输出信号，因此实现了至第四子像素W的输出信号的优化。由于为至少具有第一像素Px1和第二像素Px2的像素组PG布置了一个第四子像素W，因此可以抑制子像素的开口区域的面积减小。结果，可以可靠地实现亮度增大，使得可以实现显示质量的提高，并减小平面光源装置的功耗。</p>
+    <p>[0594]	例如，如果在第一方向上像素长度为L1，则根据日本专利No. 3167026或日本专利No. 3805150中描述的技术，由于一个像素需要分成四个子像素，所以第一方向上的一个子像素的长度为（1^/4=0.251^)。另一方面，在示例4中，第一方向上的一个子像素的长度为(2^/7=0. 286Q)。因此，相比于日本专利No. 3167026或日本专利No. 3805150中描述的技术，第一方向上的一个子像素的长度增大了 14%。</p>
+    <p>[0595]	值得注意的是，在示例4中，可以从以下表达式获得信号值</p>
+    <p>Xl-(p，q)-1、&#20034;2-(p，q)-1、</p>
+    <p>&#20034;3-(p，q)-1、Xl-(p，q)-2、&#20034;2-(p，q)-2 矛口&#20034;3-(p，q)-2。[0596]	[χ&#912;-(ρ, q)-l) Χ1-(ρ, q)-2&gt;	Q	i-0&gt; SG^fp q),	X]</p>
+    <p>[0597]	[χ2-(ρ, q)-l) x2-(p, q)-2)	Q	i_(l，SG卜(p，^)，X]</p>
+    <p>[0598]	[X3-(p，q)_l, X3-(P，q)_2，Q	i_0，SG卜(p,①，X]</p>
+    <p>[0599]	[χ&#912;-(ρ, q)-l) Xl-(p, q)-2&gt;	Q	i-0&gt; SG2_(p；q),	X]</p>
+    <p>[0600]	[X2-(p，q)_l，X2-(P，q)_2，Q	i-0&gt; SG2_(p；q),	X]</p>
+    <p>[0601]	[X3_(p, q)_l, X3_(p, q)_2，Q i-0&gt; SG2_(p；q), X]</p>
+    <p>[0602][示例	5]</p>
+    <p>[0603]	示例5是示例4的变形例。在示例5中，改变了第一像素、第二像素和第四子像素W的排列状态。即，在示例5中，如图16的像素布局中示意性示出的，当第一方向是行方向 并且第二方向是列方向时，可以进行以下构：其中，第q’列的第一像素Px1和第（q’+l)列的第二像素Px2彼此相邻(其中，I彡q’彡Q-1)，并且第q’列的第四子像素W和第（q’+l)列的第四子像素W彼此不相邻。</p>
+    <p>[0604]	除了这一点，示例5的驱动图像显示装置的方法可以与示例4的驱动图像显示装置的方法相同，因此将不再重复详细描述。</p>
+    <p>[0605][示例	6]</p>
+    <p>[0606]	示例6也是示例4的变形例。在示例6中，改变了第一像素、第二像素和第四子像素W的排列状态。S卩，在示例6中，如图17的像素布局中示意性示出的，当第一方向是行方向并且第二方向是列方向时，第q’列的第一像素Px1和第（q’+l)列的第一像素Px1彼此相邻(其中，l&lt;q’ SQ-1)，并且第q’列的第四子像素W和第（q’+l)列的第四子像素W彼此相邻。在图15和图17的示例中，第一子像素R、第二子像素G、第三子像素B以及第四子像素W排列成与条状排列类似的排列。</p>
+    <p>[0607]	除了这一点，示例6的驱动图像显示装置的方法可以与示例4的驱动图像显示装置的方法相同，因此将不再重复详细描述。</p>
+    <p>[0608][示例	7]</p>
+    <p>[0609]	示例7涉及根据本发明第三实施方式的驱动图像显示装置的方法。图20和图21示意性示出了示例7的图像显示面板中的像素和像素组的布局。</p>
+    <p>[0610]	在示例7中，提供其中第一方向上的P个像素组和第二方向上的Q个像素组共PXQ个像素组排列成二维矩阵图像显示面板。每个像素组PG均具有第一方向上的第一像素和第二像素。第一像素Px1具有显示第一原色(例如，红色）的第一子像素R、显示第二原色(例如，绿色）的第二子像素G以及显示第三原色(例如，蓝色）的第三子像素B。第二像素Px2具有显示第一原色(例如，红色)的第一子像素R、显示第二原色(例如，绿色)的第二子像素G以及显示第四色(例如，白色）的第四子像素W。更具体地，第一像素Px1具有在第一方向顺次布置的显示第一原色的第一子像素R、显示第二原色的第二子像素G以及显示第三原色的第三子像素B。第二像素Px2具有在第一方向上顺次布置的显示第一原色的第一子像素R、显示第二原色的第二子像素G以及显示第四色的第四子像素W。形成第一像素Px1的第三子像素B和形成第二像素Px2的第一子像素R彼此相邻。与该像素组相邻的像素组中形成第二像素Px2的第四子像素W和形成第一像素Px1的第一子像素R彼此相邻。值得注意的是，子像素的形状是矩形，并且子像素布置为使得矩形的长边与第二方向平行，并且矩形的短边与第一方向平行。[0611]	值得注意的是，在示例7中，第三子像素B是显示蓝色的子像素。这是因为，蓝色的可见度与绿色可见度相比大约为1/6，并且即使在像素组中显示蓝色的子像素的数量为一半时，也不会发生大问题。这同样适用于以下描述的示例8和10。</p>
+    <p>[0612]	示例7的图像显示装置可以与示例I至3中描述的图像显示装置相同。即，示例7的图像显示装置10也包括例如图像显示面板和信号处理器20。示例7的图像显示装置还包括例如从背面照亮图像显示装置(具体地，图像显示面板）的平面光源装置50。示例7的信号处理器20和平面光源装置50可以与示例I中描述的信号处理器20和平面光源装置50相同。这同样适用于以下描述的各示例。</p>
+    <p>[0613]	在示例7中，关于第一像素Ρχ^η，</p>
+    <p>[0614]	具有信号值X1H1的第一子像素输入信号，</p>
+    <p>[0615]	具有信号值X2^1的第二子像素输入信号，以及 </p>
+    <p>[0616]	具有信号值XMp，^的第三子像素输入信号输入至信号处理器20,并且</p>
+    <p>[0617]	关于第二像素Pw2,</p>
+    <p>[0618]	具有信号值X1H2的第一子像素输入信号，</p>
+    <p>[0619]	具有信号值X2_(p，q)_2的第二子像素输入信号，以及</p>
+    <p>[0620]	具有信号值x3-(p，q)-2的第三子像素输入信号输入至信号处理器20。</p>
+    <p>[0621]	关于第一像素Pxfetl)^，信号处理器20输出</p>
+    <p>[0622]	具有用于确定第一子像素R的显不灰度的信号值Xgp，^的第一子像素输出信号，</p>
+    <p>[0623]	具有用于确定第二子像素G的显示灰度的信号值Xmmm的第二子像素输出信号，以及</p>
+    <p>[0624]	具有用于确定第三子像素B的显示灰度的信号值的第三子像素输出信号，</p>
+    <p>[0625]	关于第二像素Px(m)-2，输出</p>
+    <p>[0626]	具有用于确定第一子像素R的显不灰度的信号值的第一子像素输出信号，以及</p>
+    <p>[0627]	具有用于确定第二子像素G的显示灰度的信号值X2_(p，q)_2的第二子像素输出信号，并且</p>
+    <p>[0628]	关于第四子像素W，输出具有用于确定第四子像素W的显示灰度的信号值X4_(p，q)_2的第四子像素输出信号。</p>
+    <p>[0629]	在信号处理器20中，至少基于至第（p，q)个第一像素的第三子像素输入信号(信号值 X3-(P，q)-1 )和至第（P，q)个第二像素的第三子像素输入信号(信号值 X3- (p，q) -2 )，获得至从第一方向计数的第（P，q)个第一像素的第三子像素输出信号(信号值Xmp，^)[其中，p=l、2、…，和P，并且q=l、2、…，和Q]，并输出至第（p，q)个第一像素的第三子像素B。基于根据至第（P，q)个第二像素的第一子像素输入信号(信号值七+,”)、第二子像素输入信号(信号值&#20034;2-(P，q) -2 )和第三子像素输入信号(信号值 X3-(p，q) -2 )获得的第四子像素控制第二信号(信号值SG2_(p，q))、以及根据至在第一方向上与第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号(信号值SGmm)),获得至第（p，q)个第二像素的第四子像素输出信号(信号值&#20034;4&#8212;(p，q)&#8212;2)， 并输出至第（P，q)个第二像素的第四子像素W。</p>
+    <p>[0630]	这里，虽然相邻像素在第一方向上与第（P，q)个第二像素相邻，在示例7中，具体地，相邻像素是第（P，q)个第一像素。因此，基于第一子像素输入信号(信号值七+^)、第二子像素输入信号(信号值x2-(p，q)-!)以及第三子像素输入信号(信号值xMp，,)-!)来获得第四子像素控制第一信号(信号值SGhm))。</p>
+    <p>[0631]	值得注意的是，关于第一像素和第二像素的排列，第一方向上的P个像素组和第二方向上的Q个像素组总共PXQ个像素组PG排列成二维矩阵，并且如图20所示，可以使用其中第一像素Px1和第二像素Px2在第二方向上布置为彼此相邻的构造。可选地，如图21所示，可以使用其中第一像素Px1和第一像素Px1在第二方向上布置为彼此相邻、并且第二像素Px2和第二像素Px2在第二方向上布置为彼此相邻的构造。</p>
+    <p>[0632]	具体地，在示例7中，基于Minfct^1和校正扩大系数α ’ ^来确定第四子像素控制第一信号SGpfcq),并基于Min(p，q)_2和校正扩大系数α ’ !来确定第四子像素控制第二信号 SG2_(p，q)。更具体地，如同在示例4中，使用表达式（41-1)和（41-2)作为第四子像素控制第一信号SGmm)和第四子像素控制第二信号SG2_(p，q)。</p>
+    <p>[0633]	SG1^feqj =Minfe^1 &#183; α ’ 卜0…（41&#8212;1)</p>
+    <p>[0634]	SG2_(p；q)=Min(p；q)_2 &#183; α ’ 卜0…(41-2)</p>
+    <p>[0635]对于第二像素	Px(p，q)_2，</p>
+    <p>[0636]	尽管至少基于第一子像素输入信号和校正扩大系数α ’ 获得第一子像素输出信号，但是基于第一子像素输入信号值Xl-(p，q)-2、校正扩大系数a’g、第四子像素控制第二信号值SG2_(p，q)和常数X来获得第一子像素输出信号值，即，</p>
+    <p>[0637]	[χ&#912;-(ρ, q)-2&gt; α i-0) SG2-(p；q), X ]</p>
+    <p>[0638]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ 获得第二子像素输出信号，但是基于第二子像素输入信号值X2-(p，q)-2、校正扩大系数a’g、第四子像素控制第二信号值SG2_(p，q)和常数X来获得第二子像素输出信号值X2(p，q)_2，即，</p>
+    <p>[0639]	[X2-(p，q)-2，α i-0) SG2_(p；q), X]</p>
+    <p>[0640]	关于第一像素Ρχ^η，</p>
+    <p>[0641]	尽管至少基于第一子像素输入信号和校正扩大系数α ’ g获得第一子像素输出信号，但是基于第一子像素输入信号值 Xl-(P，q)-1、</p>
+    <p>                    校正扩大系数a’g、第四子像素控制第一信号值SGmp,,)和常数X来获得第一子像素输出信号值Xgp,^，即，</p>
+    <p>[0642]	[χ&#912;-(ρ, q)-l) α i-CI，SG1-Ja (J)，X]</p>
+    <p>[0643]	尽管至少基于第二子像素输入信号和校正扩大系数α ’ 获得第二子像素输出信号，但是基于第二子像素输入信号值 X2-(p，q)-1、</p>
+    <p>                    校正扩大系数a’g、第四子像素控制第一信号值SGmp,,)和常数X来获得第二子像素输出信号值Xmp,^，即，</p>
+    <p>[0644]	[χ2-(ρ, q)-l) α i-ci，SG1-Ja (J)，X]</p>
+    <p>[0645]	尽管至少基于第三子像素输入信号和校正扩大系数α ’ 获得第三子像素输出信号，但是基于第三子像素输入信号值 X3-(p，q)-1、X3-(p，q)-2、 校正扩大系数α’Μ、第四子像素控制第一信号值SG^，,)、第四子像素控制第二信号值SG2_(p，q)和常数X来获得第三子像素输出信号值X3-W-P即，</p>
+    <p>[0646]	[X3-(Pjq)-! ，X3-(p，q)-2，以 i-O，SG1-^q), SG]-(p，q)X4-(p，q)-2，^ ]</p>
+    <p>[0647]	具体地，在信号处理器20中，输出信号值X1-Uf &#20034;2-(p，q)-2、Xl-(p，q)-1、&#20034;2&#8212;(p，q)&#8212;I 和x3&#8212;(P，可以基于校正扩大系数a’i&#8212;。和常数X来获得，更具体地，可以从表达式（3-A)至(3-D)、（3-a’)、（3-d)和（3-e)获得。</p>
+    <p>[0648]	X1-^ q)-2= a，i-0 &#183; Xi-(p,q)-2- x &#183; SGmrq)…（3_A)</p>
+    <p>[0649]	^2-(p, q)-2_ a i-0 &#183; X2-(p,q)_2_X &#183; SG2_(p； q) * * * (3~B)</p>
+    <p>[0650]	Xl-(p，q)-l_a i-0 &#183; Xl-(p，q)-l_X &#183;	q) * * * (3~C)</p>
+    <p>[0651]	^2-(p, q)-l_ a i-o &#183; X2-(p，q)-l_X &#183;	q) * * * (3~D)</p>
+    <p>[0652]	X3_(p，n-(X 3-(p； q)-i+X 3-(p，q)-2)/2…（3_a ) [0653]这里， [0654]	X’ an= a ’ i-0 &#183; x3-(p,q)-i- X &#183; SG1^fe q)&#8212; (3-d)</p>
+    <p>[0655]	X 3-(p，q)-2_a i-o &#183; X3-(p，q)-2_X &#183; SG2_(p； q) * * * (3~θ)</p>
+    <p>[0656]	信号值X4_(p，q)_2从算术平均表达式获得，即，如同在示例4中，从与表达式（42-1)和(42-2)类似的表达式(71-1)和(71-2)获得。</p>
+    <p>_] X4-^2= (SGg^SG2-(W)/(2 x )…（71-1)</p>
+    <p>[0658]	=(Minfeq)^1 &#183; a ’ ^o+Min^,)^ &#183; a ’ 卜0)/(2 x )... (71-2)</p>
+    <p>[0659]	确定每个图像显示帧中的校正扩大系数a’卜。。</p>
+    <p>[0660]	在示例7中，在信号处理器20中存储以通过添加第四色（白色）而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax⑶。即，通过添加第四色（白色)，加宽了HSV颜色空间中的亮度的动态范围。</p>
+    <p>[0661]	下文中，将描述如何获得第（p，q)个像素组PG(p，q)中的输出信号值</p>
+    <p>Xl-(P，q)-2、</p>
+    <p>&#20034;2-(p，q)-2、&#20034;4-(p，q)-2、Xl-(p，q)-1、&#20034;2-(p，q)-1 和&#20034;3&#8212;(p，q)&#8212;I (扩大处理)。值得注意的是，如同在示例4中，将执行以下处理，以在第一像素和第二像素整体（即，在每个像素组中）尽可能地保持亮度t匕。将执行以下处理，以保持(维持）色调。还将执行以下处理来保持(维持）灰度-亮度特性(伽玛特性，Y特性)。</p>
+    <p>[0662][步骤-700]</p>
+    <p>[0663]	首先，以与示例4的[步骤-400]相同的方式，在信号处理器20中，基于多个像素中的子像素输入信号值来获得多个像素组PG(p，q)中的饱和度Si和亮度Vi (S)。具体地，基于至第（P，q)个像素组PG(p,q)的第一子像素输入信号值X1^1和Xl-(M)-2、第二子像素输入信号值XMpH和ΧΜρ，,)-2以及第三子像素输入信号值XMpH和X3-(P，q)-2，从表达式（43-1)至（43-4)来获得Sim S(p，q)-2、V⑶“Η和V(S) (p，q)_2。将对所有像素组PG(p，q)执行该处理。</p>
+    <p>[0664][步骤-710]</p>
+    <p>[0665]	然后，在信号处理器20中，以与示例I中相同的方式，根据在多个像素组PG(p，q)中获得的值Vmax (S)/Vi (S)，确定校正扩大系数α ’ if可选地，根据预定值β PD确定校正扩大系数a[驱动方法-A]，基于表达式（15-2)、表达式（16-1)至（16_5)或者表达式（17_1)至（17_6)的定义来确定校正扩大系数ct ’ ![驱动方法-B、驱动方法-C、驱动方法-D],或者基于驱动方法-E中的定义来确定校正扩大系数α ’ g。</p>
+    <p>[0666][步骤-MO]</p>
+    <p>[0667]	之后，在信号处理器20中，从表达式（41-1)和（41-2)来获得每个像素组PG(p，q)中的第四子像素控制第一信号SGmm)和第四子像素控制第二信号SG2_(p，q)。将对所有像素组PG(p，q)执行该处理。从表达式（71-2)获得第四子像素输出信号值X4_(p，q)_2。从表达式（3-A)至（3-D)、（3-a’）、（3-d)和（3-e)获得 XgM、X2-^f Xhp,^Xmp,,h 和 X3^1。将对所有PXQ个像素组PG(p，q)执行该处理。将具有由此获得的输出信号值的输出信号提供给子像素。</p>
+    <p>[0668]	值得注意的是，在每个像素组中，第一像素和第二像素中的输出信号值的比：</p>
+    <p>[0669]	Xl-(p, q)-l : ^2-(p, q)_l : ^3-(p, q)-l</p>
+    <p>[0670]	^l-(p, q)-2 ： ^2-(p, q)-2</p>
+    <p>[0671 ]与&#32048;入可值的比 X 卜(p，q)-l : x2-(p, q)-l : X3_(p, q)-I、X 卜(p，q)_2 : X2-(p, q)-2 略有不&#20875;。</p>
+    <p>[0672]	为此，在单独观察每个像素时，关于相对输入信号的每个像素的色调略有不同，当以像素组观察像素时，不发生关于每个像素组的色调的问题。这同样适用于以下描述。 [0673]	在示例7中，如表达式（41-1)、(41-2)和（71-2)所示，关键点在于，</p>
+    <p>Min(p；q)_2的值通过校正扩大系数α ’ ^来扩大。以此方式，MinfcH和Min(p，q)_2的值利用校正扩大系数a’g扩大，因此，不仅白色显示子像素(第四子像素W)的亮度增大，而且红色显示子像素、绿色显示子像素以及蓝色显示子像素(第一子像素R、第二子像素G以及第三子像素B)的亮度也增大，如表达式（3-A)至（3-D)和（3-a’）所示。因此，可以可靠地防止出现颜色暗沉的问题的发生。S卩，如果Minfct^1和&#32068;!^,^的值通过校正扩大系数a’g而扩大，由于相比于Mirv^1和Min(p,q)_2的值不扩大的情况，整个图像的亮度扩大了 α ’</p>
+    <p>倍，因此平面光源装置50的亮度是（1/a’g)倍就足以。</p>
+    <p>[0674]	在示例7的驱动图像显示装置的方法中，在信号处理器20中，基于根据至每个像素组PG的第一像素Px1和第二像素Px2的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号值SGmm)和第四子像素控制第二信号值SG2_(p，q)，获得第四子像素输出信号，并输出。即，由于基于至相邻的第一像素Px1和第二像素Px2的输入信号获得第四子像素输出信号，因此实现了至第四子像素W的输出信号的优化。由于为至少具有第一像素Px1和第二像素Px2的每个像素组PG布置一个第三子像素B和一个第四子像素W，因此可以抑制子像素的开口区域的面积减小。结果，可以可靠地实现亮度增大。还可以实现显示质量的提高。</p>
+    <p>[0675]	另一方面，当第一像素Pxfcn的和第二像素Px(P，q)-2的Min(p，q)_2的差别很大时，如果使用表达式（71-2)，则第四子像素W的亮度不会增大至所需水平。在该情况下，期望的是使用表达式（2-12)、(2-13)或（2-14)而不是表达式（71_2)来获得信号值l(P，q)-2。例如，哪种表达式用于获得1(1^)-2可以通过实验性地制作图像显示装置并通过图像观察者执行图像评价，来适宜地确定。</p>
+    <p>[0676]	表3中示出了根据上述示例7和以下描述的示例8的像素组中的输入信号和输出信号之间的关系。</p>
+    <p>[0677]表	3</p>
+    <p>[0678]示例	7</p>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102903342A/CN102903342AD00531.png"> <img id="idf0002" file="CN102903342AD00531.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102903342A/CN102903342AD00531.png" class="patent-full-image" alt="Figure CN102903342AD00531"> </a> </div>
+    <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102903342A/CN102903342AD00541.png"> <img id="idf0003" file="CN102903342AD00541.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102903342A/CN102903342AD00541.png" class="patent-full-image" alt="Figure CN102903342AD00541"> </a> </div>
+    <p>[0682][示例	8]</p>
+    <p>[0683]	示例8是示例7的变形例。在示例7中，相邻像素在第一方向上与第（p，q)个第二像素相邻。另一方面，在示例8中，令相邻像素是第（p+l，q)个第一像素。示例8中的像素布局与示例7中的像素布局相同，并且与图20或图21中示意性示出的相同。</p>
+    <p>[0684]	在图20示出的示例中，第一像素和第二像素布置为在第二方向彼此相邻。在该情况下，形成第一像素的第一子像素R和形成第二像素的第一子像素R可以布置为在第二方向彼此相邻，或者可以不布置为彼此相邻。类似地，形成第一像素的第二子像素G和形成第二像素的第二子像素G可以布置为在第二方向彼此相邻，或者可以不布置为彼此相邻。类似地，形成第一像素的第三子像素B和形成第二像素的第四子像素W可以布置为在第二方向彼此相邻，或者可以不布置为彼此相邻。另一方面，在图21示出的示例中，第一像素和第一像素布置为在第二方向彼此相邻，并且第二像素和第二像素布置为在第二方向彼此相邻。在该情况下，形成第一像素的第一子像素R和形成第二像素的第一子像素R可以布置为在第二方向彼此相邻，或者可以不布置为彼此相邻。类似地，形成第一像素的第二子像素G和形成第二像素的第二子像素G可以布置为在第二方向彼此相邻，或者可以不布置为彼此相邻。类似地，形成第一像素的第三子像素B和形成第二像素的第四子像素W可以布置为在第二方向彼此相邻，或者可以不布置为彼此相邻。这同样可以适用于示例7或以下描 述的示例10。</p>
+    <p>[0685]	如同在示例7中，在信号处理器20中，</p>
+    <p>[0686]	(I)至少基于至第一像素Px1的第一子像素输入信号和校正扩大系数a’g获得至第一像素Px1的第一子像素输出信号，并输出至第一像素Px1的第一子像素R，</p>
+    <p>[0687]	(2)至少基于至第一像素Px1的第二子像素输入信号和校正扩大系数α ’ 获得至第一像素Px1的第二子像素输出信号，并输出至第一像素Px1的第二子像素G，</p>
+    <p>[0688]	(3)至少基于至第二像素Px2的第一子像素输入信号和校正扩大系数α ’ 获得至第二像素Px2的第一子像素输出信号，并输出至第二像素Px2的第一子像素R，</p>
+    <p>[0689]	(4)至少基于至第二像素Px2的第二子像素输入信号和校正扩大系数α ’ 获得至第二像素Px2的第二子像素输出信号，并输出至第二像素Px2的第二子像素G。</p>
+    <p>[0690]	在示例8中，如同在示例7中，关于形成第（p，q)个像素组PG(p，q)的第一像素Pxfeq)-!(其中，I彡P彡P且I彡q彡Q)，</p>
+    <p>[0691]	具有信号值XhpH的第一子像素输入信号，</p>
+    <p>[0692]	具有信号值的第二子像素输入信号，以及</p>
+    <p>[0693]	具有信号值X3^1的第三子像素输入信号输入至信号处理器20，以及</p>
+    <p>[0694]	关于形成第（p，q)个像素组PG(p,q)的第二像素PX(p,q)_2，</p>
+    <p>[0695]	具有信号值的第一子像素输入信号，</p>
+    <p>[0696]	具有信号值X2_(p，q)_2的第二子像素输入信号，以及</p>
+    <p>[0697]	具有信号值x3-(p，q)-2的第三子像素输入信号输入至信号处理器20。</p>
+    <p>[0698]	如同在示例7中，关于形成第（p，q)个像素组PG(p，q)的第一像素Px(p，，信号处理器20输出</p>
+    <p>[0699]	具有用于确定第一子像素R的显不灰度的信号值Xgp，^的第一子像素输出信号，</p>
+    <p>[0700]	具有用于确定第二子像素G的显示灰度的信号值X2^1的第二子像素输出信号，以及</p>
+    <p>[0701 ] 具有用于确定第三子像素B的显示灰度的信号值X3_(p，的第三子像素输出信号，并且</p>
+    <p>[0702]	关于形成第（p，q)个像素组PG(p，q)的第二像素PX(p，q)_2，输出</p>
+    <p>[0703]	具有用于确定第一子像素R的显不灰度的信号值的第一子像素输出信号，</p>
+    <p>[0704]	具有用于确定第二子像素G的显示灰度的信号值X2_(p，q)_2的第二子像素输出信号，以及</p>
+    <p>[0705]	具有用于确定第四子像素W的显示灰度的信号值X4_(p，q)_2的第四子像素输出信号。</p>
+    <p>[0706]	在示例8中，如同在示例7中，至少基于至第（p，q)个第一像素Pxfct^1的第三子像素输入信号值和至第（P，q)个第二像素PXfeM的第三子像素输入信号值X3^2,获得至第（P，q)个第一像素PXfci1的第三子像素输出信号值XMp，,)+并输出至第三子像素B。另一方面，不同于示例7，基于根据至第（p，q)个第二像素PX(p，q)_2的第一子像素输入信号值Xl-(p，q)-2、第二子像素输入信号值X2-(p，q)-2以及第三子像素输入信号值获得的 第四子像素控制第二信号值SG2_(p，q);以及根据至第（p+l，q)个第一像素第一子像素输入信号值X1-I &lt;J)、第二子像素输入信号值x2-(p’’q)和第三子像素输入信号值x3-(p，，q)获得的第四子像素控制第一信号值SG1+,),获得至第（p，q)个第二像素Px2的第四子像素输出信号值X4-(p，q)-2，并输出至第四子像素W。</p>
+    <p>[0707]在示例	8 中，从表达式(71-2)、(3-A)、(3-B)、(3-E)、(3-F)、(3_a，)、(3-f)、(3_g)、(41’-I)、（41’-2)和（41’-3)获得输出信号值 X4-(p,q)-2、X1-^f X2-(p,q)-2、Xhp,^ X2-^h</p>
+    <p>和 X3_(p, q)_l。</p>
+    <p>[0708]	Xl-(p’q)-2_a i-0 &#183; Xl-(p,q)_2_X &#183; SG2-(p’Q …（3~A)</p>
+    <p>[0709]	^2-(p, q)-2- a i-o &#183; x2-(p, q)-2~ X &#183; SG2-(p，Q …（3~B)</p>
+    <p>[0710]	X 卜(p, q)-l_a i-0 &#183; Xl-(p，q)-l_X &#183; SG3_(p； q) * * * (3_E)</p>
+    <p>[0711]	^2-(p, q)-l_ a i-o &#183; X2-(p，q)-l_X &#183; SG3_(p； q) * * * (3~F)</p>
+    <p>[0712]	3-(p,q)-l+X，3-(p,q)-2)/2 (3-a，)</p>
+    <p>[0713]这里，</p>
+    <p>[0714]	X，'卜0 &#183; X3-(Pjq)-!-x &#183; SG3-(M)…（3_f)</p>
+    <p>[0715]	X 3-(p，q)-2_a i-0 &#183; X3-(p，q)_2_X &#183; SG2_(p； q) * * * (3~g)</p>
+    <p>[0716]	SG2_(p,q)=Min(p,q)_2 &#183; a，卜0... (41，_2)</p>
+    <p>[0717]	SG1-W=Mirv ；q) &#183; a，iV.. (41，-I)</p>
+    <p>[0718]	SG3_(p，q) =MinfeqH &#183; a ’ i-o…（41，_3)</p>
+    <p>[0719]	以下，将描述如何获得第（p，q)个像素组PG(p，q)中的输出信号值X1</p>
+    <p>-(P，q)-2'^2-(p, q)_2、</p>
+    <p>X4-(p,q)-2&gt; Xi-(p,q)-i&gt; X2-(p,q)-i和Am (扩大处理)。值得注意的是，将执行以下处理，以保持(维持）灰度-亮度特性(伽玛特性，Y特性)。执行以下处理，以在第一像素和第二像素的全体(即，在每个像素组）中尽量保持亮度比，并且将执行该处理以尽量保持(维持）色调。</p>
+    <p>[0720][步骤-800]</p>
+    <p>[0721]	首先，在信号处理器20中，基于多个像素中的子像素输入信号值来获得多个像素组中的饱和度Si和亮度Vi(S)。基于至第（P，q)个第一像素px(p的第一子像素输入信号(信号值^，^)、第二子像素输入信号(信号值和第三子像素输入信号(信号值X3H1);以及至第二像素Px(P,q)-2的第一子像素输入信号(信号值XgM)、第二子像素输入信号(信号值XMp，q)_2)和第三子像素输入信号(信号值从表达式（43-1)、(43-2)、(43-3)和（43-4)来获得 Sfeq)+S(p，q)_2、V ⑶ 和 V(S) (p，q)_2。将对所有像素组执行该处理。</p>
+    <p>[0722][步骤-810]</p>
+    <p>[0723]	然后，在信号处理器20中，以与示例I中相同的方式，从在多个像素组中获得的值Vmax(S)ZVi(S)，确定校正扩大系数α ’ g。可选地，从预定值β PD确定校正扩大系数α ’ ^ci [驱动方法-A]，基于表达式（15-2)、表达式（16-1)至（16-5)或者表达式（17_1)至（17_6)的定义来确定校正扩大系数α ’ g [驱动方法-B、驱动方法-C和驱动方法-D]，或者基于驱动方法-E中的定义来确定校正扩大系数α ’ g。</p>
+    <p>[0724][步骤-820]</p>
+    <p>[0725]	之后，在信号处理器20中，从表达式（71-1)来获得至第（p，q)个像素组PG(p,q)的第四子像素输出信号值X4Ijf [步骤-810]和[步骤-820]可以同时执行。 </p>
+    <p>[0726][步骤-830]</p>
+    <p>[0727]然后，在信号处理器	20 中，从表达式（3-A)、（3-B)、（3-E)、（3-F)、（3_a’)、(3-f)、(3-g)、（41’-I)、（41’-2)和（41’-3)来获得至第（p，q)个像素组的输出信号值 Xl-(P，q)-2、X2-Wf X1^p,Idnx3-W-P值得注意的是，[步骤-820]和[步骤-830]可以同时执行，或者[步骤-820]可以在执行[步骤-830]之后执行。</p>
+    <p>[0728]当第四子像素控制第一信号值SG1^和第四子像素控制第二信号值SG2_(p，q)之间的关系满足特定条件时，例如，执行示例7，当该关系偏离该特定条件时，例如，可以使用其中执行示例8的构造。例如，当基于X4-(p，q)-2= (SG1+^SGmrq))/(2 X )来执行处理时，如果ISG^y-SG2U I的值等于或大于(或等于或小于)预定值X'，则可以执行示例7，否则，可以执行示例8。可选地，例如，如果I SGmrU-SGmrq) I的值等于或大于(或等于或小于)预定值X'，则可以使用仅基于SG1U的值或仅基于SG2_(p，q)的值作为X4-(p，q)-2，并且可以应用示例7或示例8。可选地,如果（SGhj^-SGmj^))的值等于或大于预定值X〃2,或者如果(SG1^-SG2+,))的值等于或小于预定值&#20034;"3，则可以执行示例7 (或示例8)，否则，可以执行示例8 (或示例7)。</p>
+    <p>[0729]	在示例7或示例8中，当将形成第一像素和第二像素的子像素的排列顺序表示为[(第一像素）（第二像素）]时，该顺序为</p>
+    <p>[0730][(第一子像素R、第二子像素G、第三子像素B)(第一子像素R、第二子像素G、第四子像素W)]</p>
+    <p>[0731]	或者当表示为[(第二像素）（第一像素）]时，该顺序为</p>
+    <p>[0732][(第四子像素W、第二子像素G、第一子像素R)(第三子像素B、第二子像素G、第一子像素R) I</p>
+    <p>[0733]	但是排列顺序不限于这些排列顺序。例如，对于[(第一像素)(第二像素)]的排列顺序，可以使用以下顺序：</p>
+    <p>[0734][(第一子像素R、第三子像素B、第二子像素G)(第一子像素R、第四子像素W、第二子像素G)]。</p>
+    <p>[0735]	虽然示例8中的该状态示出在图22的上部中，但是从另一角度来看，如在图22的下部的虚拟像素部分中示出的，排列顺序等价于以下顺序：其中，第（P，q)个像素组的第一像素中的第一子像素R和第（P_l，q)个像素组的第二像素中的第二子像素G和第四子像素W这三个子像素被虚拟地看作第（P，q)个像素组的第二像素中的（第一子像素R、第二子像素G、第四子像素W)。该顺序还等价于以下顺序：其中，第（p，q)个像素组的第二像素中的第一子像素R和第一像素中的第二子像素G和第三子像素B这三个子像素被看作第（P，q)个像素组的第一像素。为此，示例8可以应用于形成这些虚拟像素组的第一像素和第二像素。尽管在示例7和示例8中，已经描述了第一方向是从左手朝向右手的方向的情况，但是如同上述的[(第二像素）（第一像素）]，第一方向可以是从右手至左手的方向。 [0736][示例	9]</p>
+    <p>[0737]	示例9涉及根据本发明第四实施方式的驱动图像显示装置的方法。</p>
+    <p>[0738]	如图23中示意性示出的像素布局，示例9的图像显示面板30具有以二维矩阵方式排列的第一方向上的P。个像素和第二方向上的Q。个像素共PtlXQcl个像素Px。值得注意的是，在图23中，第一子像素R、第二子像素G、第三子像素B和第四子像素W被实线围绕。每个像素Px具有显示第一原色(例如，红色)的第一子像素R、显示第二原色(例如，绿色)的第二子像素G、显示第三原色(例如，蓝色）的第三子像素B和显示第四色(例如，白色的）第四子像素W。子像素的形状为矩形，并且子像素布置为使得矩形的长边与第二方向平行，并且矩形的短边与第一方向平行。</p>
+    <p>[0739]	在信号处理器20中，至少基于第一子像素输入信号（信号值Xhm))和校正扩大系数a’g来获得至像素PX(p，q)的第一子像素输出信号（信号值Xhm)),并输出至第一子像素R。至少基于第二子像素输入信号（信号值X2-(p，q))和校正扩大系数a’g来获得第二子像素输出信号（信号值X2-(p，q))，并输出至第二子像素G。至少基于第三子像素输入信号(信号值Xmm))和校正扩大系数a’g来获得第三子像素输出信号（信号值X3_(p，q))，并输出至第三子像素B。</p>
+    <p>[0740]	在示例9中，关于形成第（P，q)个像素Px(p，q)的像素Px(p，q)，（其中，I彡P彡P。且I ^ q ^ Q0)</p>
+    <p>[0741]	具有信号值X1-M的第一子像素输入信号，</p>
+    <p>[0742]	具有信号值X2_(p，q)的第二子像素输入信号，以及</p>
+    <p>[0743]	具有信号值X3_(p，q)的第三子像素输入信号输入至信号处理器20。关于像素PX(p，q)，信号处理器20输出</p>
+    <p>[0744]	具有用于确定第一子像素R的显不灰度的信号值X1^q)的第一子像素输出信号，</p>
+    <p>[0745]	具有用于确定第二子像素G的显示灰度的信号值X2_(p，q)的第二子像素输出信号，</p>
+    <p>[0746]	具有用于确定第三子像素B的显示灰度的信号值X3_(p，q)的第三子像素输出信号，以及</p>
+    <p>[0747]	具有用于确定第四子像素W的显示灰度的信号值X4_(p，q)的第四子像素输出信号。</p>
+    <p>[0748]	对于与第（p，q)个像素相邻的相邻像素，</p>
+    <p>[0749]	具有信号值&#971;,，）的第一子像素输入信号，</p>
+    <p>[0750]	具有信号值X2_(p，q，）的第二子像素输入信号，以及</p>
+    <p>[0751]	具有信号值X3_(p,q,)的第三子像素输入信号输入至信号处理器20。</p>
+    <p>[0752]	值得注意的是，在示例9中，与第（P，q)个像素相邻的相邻像素是第（P，q_l)个像素。然而，相邻像素不限于此。可以使用第（P，q+1)个像素或者可以使用第（P，q_l)个像素和第（p，q+l)个像素。[0753]	在信号处理器20中，基于根据至在第二方向计数的第（p，q)个像素[其中，P=I, 2,…，和Ptl,且q=l，2,…，和Qj的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；以及根据至第二方向上与第（P，q)个像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号，获得第四子像素输出信号，并将获得的第四子像素输出信号输出至第（P，q)个像素。</p>
+    <p>[0754]	具体地，根据至第（p，q)个像素Px(p，q)的第一子像素输入信号值Xl_(p，q)、第二子像素输入信号值12-(1^和第三子像素输入信号值Xmm)，获得第四子像素控制第二信号值SG2_(p，q)。根据至第二方向上与第（p，q)个像素相邻的相邻像素的第一子像素输入信号值XiU)、第二子像素输入信号值XMp，,,）和第三子像素输入信号值x3-(P，q,)，获得第四子像素控制第一信号值SGhm)。基于第四子像素控制第一信号值SGmm)和第四子像素控制第二信号值SG2_(p，q)获得第四子像素输出信号，并将获得的第四子像素输出信号值X4_(p，q)输出至第（P，q)个像素。</p>
+    <p>[0755]	在示例9中，从表达式（42-1)和（91)获得第四子像素输出信号值X4_(p，,)。即，通过算术平均获得第四子像素输出信号值X4-(p，q)。</p>
+    <p>[0756]	x )…（42&#8212;1) </p>
+    <p>[0757]	=(Minfcq) &#183; a ' ^+Minfeq.) &#183; α，卜。）/(2 x )…（91)</p>
+    <p>[0758]	值得注意的是，基于Min(p，q，）和校正扩大系数a’g获得第四子像素控制第一信号值361(1)，(1)，并基于祖11(1)，(1)和校正扩大系数α ’ 获得第四子像素控制第二信号值SG2_(p，q)。具体地，从表达式（92-1)和（92-2 )获得第四子像素控制第一信号值SG1^,)和第四子像素控制第二信号值SG2_(p，q)。</p>
+    <p>[0759]	SG1^feqj=Minfe0 &#183; α ’ 卜0... (92&#8212;1)</p>
+    <p>[0760]	SG2-W=Mirvq) &#183; α，卜。…（92-2)</p>
+    <p>[0761]	在信号处理器20中，第一子像素R、第二子像素G和第三子像素B中的输出信号值和X3-W可以基于校正扩大系数a’g和常数X来获得，更具体地，可以从表达式（I-D)至（I-F)获得。</p>
+    <p>[0762]	X1-(Pjq)=O '卜0 &#183; X1-(Pjq)-X &#183; SG2-W... (1_D)</p>
+    <p>[0763]	X2-(p；q)=a ’ i-o &#183; X2-(p, q)_ x &#183; SG2_(p，q)... (1_E)</p>
+    <p>[0764]	X3-(p,q)=a ' i-o &#183; x3-(P，q)-x &#183; SG2_(p；q)&#8212; (I-F)</p>
+    <p>[0765]	接下来，将描述如何获得第（P，q)个像素组PG(p，q)中的输出信号值X1^XmpIXmp，,)和Xmp，,）（扩大处理)。值得注意的是，如同在示例4中，将执行以下处理，以在第一像素和第二像素的全体（即，在每个像素组中)，保持由（第一子像素R+第四子像素W)显示的第一原色的亮度、由（第二子像素G+第四子像素W)显示的第二原色的亮度以及由（第三子像素B+第四子像素W)显示的第三原色的亮度的亮度比。将执行以下处理来保持(维持）色调。还将执行以下处理来保持(维持）灰度-亮度特性(伽玛特性，Y特性)。</p>
+    <p>[0766][步骤-900]</p>
+    <p>[0767]	首先，在信号处理器20中，基于多个像素中的子像素输入信号值来获得多个像素中的饱和度Si和亮度Vi(S)。具体地，基于至第（p，q)个像素Px(p，q)的第一子像素输入信号值χηρ，,)、第二子像素输入信号值Xmp,,)和第三子像素输入信号值Xmp,,);以及至第（p，q_l)个像素(相邻像素）的第一子像素输入信号值Xl_(p，q，)、第二子像素输入信号值x2-(p,q&#183;)和第三子像素输入信号值x3-(p，q，)，从与表达式（43-1)、（43-2)、（43-3)和（43-4)类似的表达式获得、V⑶(p，q)和v(s)(p，q,)。将对所有像素执行该处理。</p>
+    <p>[0768][步骤-910]</p>
+    <p>[0769]	然后，在信号处理器20中，以与示例I中相同的方式，从在多个像素中获得的值Vmax(S)ZVi(S)，确定校正扩大系数α ’ if可选地，从预定值β PD确定校正扩大系数α ’ ^ci [驱动方法-A]，基于表达式（15-2)、表达式（16-1)至（16-5)或者表达式（17_1)至（17_6)的定义来确定校正扩大系数α ’ g [驱动方法-B、驱动方法-C和驱动方法-D]，或者基于驱动 方法-E中的定义来确定校正扩大系数α ’ g。</p>
+    <p>[0770][步骤-920]</p>
+    <p>[0771]	之后，在信号处理器20中，从表达式（92-1)、（92-2)和（91)来获得至第（p，q)个像素px(p，q)的第四子像素输出信号值X4_(p，q)。值得注意的是，[步骤-910]和[步骤-920]可以同时执行。</p>
+    <p>[0772][步骤-930]</p>
+    <p>[0773]	然后，在信号处理器20中，基于输入信号值Xl_(p，q)、校正扩大系数a’g和常数X来确定至第（P, q)个像素Pxfctl)的第一子像素输出信号值X1-(Pj)。基于输入信号值Xpipj、校正扩大系数α ’ g和常数 ' 获得第二子像素输出信号值X2-(p，q)。基于输入信号值Xmm)、校正扩大系数a’g和常数X来获得第三子像素输出信号值X3_(p，q)。值得注意的是，[步骤-920]和[步骤-930]可以同时执行，或者，[步骤-920]可以在执行[步骤-930]之后执行。</p>
+    <p>[0774]	具体地，从上述表达式（I-D)至（I-F)来获得第（p，q)个像素Px(p，q)中的输出信</p>
+    <p>              、^2-(p, q)和 X3_(p, q)。</p>
+    <p>[0775]	在示例9的驱动图像显示装置的方法中，在第（P，q)个像素组PG(p，q)中，输出信号值 X1-W、 &#20034;2-(P, q)、X3&#8212;(P, q)和&#20034;4&#8212;(P, q) 扩大了 a’g倍。为此，为了将图像的亮度匹配为与未扩大状态下的图像亮度相同，期望的是，基于校正扩大系数α ’ g来减小平面光源装置50的亮度。具体地，平面光源装置50的亮度为（1/a’g)倍就足以。因此，可以实现平面光源装置的功耗减小。</p>
+    <p>[0776][示例	10]</p>
+    <p>[0777]	示例10涉及根据本发明第五实施方式的驱动图像显示装置的方法。示例10的图像显示面板中像素和像素组的布局与示例7中相同，并且与图20或图21中示意性示出的相同。</p>
+    <p>[0778]	在示例10中，图像显示面板30具有以二维矩阵方式排列的第一方向（例如，水平方向）上的P个像素组和第二方向(例如,垂直方向）上的Q个像素组共PXQ个像素组。值得注意的是，当形成像素组的像素数量为PO时，p0=2。具体地，如图20或图21所示，在示例10的图像显示面板30中，每个像素组具有第一方向上的第一像素Px1和第二像素Px2。第一像素Px1具有显示第一原色(例如，红色)的第一子像素R、显示第二原色(例如，绿色)的第二子像素G和显示第三原色(例如，蓝色)的第三子像素B。第二像素Px2具有显示第一原色的第一子像素R、显示第二原色的第二子像素G和显示第四色(例如，白色)的第四子像素W。更具体地，第一像素Px1具有顺次排列在第一方向上的显示第一原色的第一子像素R、显示第二原色的第二子像素G和显示第三原色的第三子像素B。第二像素Px2具有顺次排列在第一方向上的显示第一原色的第一子像素R、显示第二原色的第二子像素G和显示第四色的第四子像素W。形成第一像素Px1的第三子像素B和形成第二像素Px2的第一子像素R彼此相邻。与该像素组相邻的像素组中的形成第二像素Px2的第四子像素W和形成第一像素Px1的第一子像素R彼此相邻。值得注意的是，子像素的形状为矩形，并且子像素被布置为使得矩形的长边与第二方向平行，并且矩形的短边与第一方向平行。值得注意的是，在图20中示出的示例中，第一像素和第二像素布置为在第二方向上彼此相邻。在图21示出的示例中，第一像素和第一像素布置为在第二方向上彼此相邻，并且第二像素和第二像素布置为在第二方向上彼此相邻。</p>
+    <p>[0779]	在信号处理器20中，至少基于至第一像素Px1的第一子像素输入信号和校正扩大系数α ’ 获得至第一像素Px1的第一子像素输出信号，并输出至第一像素Px1的第一子像素R，并且至少基于至第一像素Px1的第二子像素输入信号和校正扩大系数α ’ 获得至第一像素Px1的第二子像素输出信号，并输出至第一像素Px1的第二子像素G。至少基于至第二像素Px2的第一子像素输入信号和校正扩大系数α ’ i-o获得至第二像素Px2的第一子像素输出信号，并输出至第二像素Px2的第一子像素R，并且至少基于至第二像素Px2的第二 子像素输入信号和校正扩大系数^!’㈠获得至第二像素Px2的第二子像素输出信号，并输出至第二像素Px2的第二子像素G。</p>
+    <p>[0780]	在示例10中，在形成第（p，q)个像素组PG(p，q)的第一像素Px(p，中（其中I彡P彡P且I彡q彡Q)，</p>
+    <p>[0781]	具有信号值ΧΗρ，^的第一子像素输入信号，</p>
+    <p>[0782]	具有信号值的第二子像素输入信号，以及</p>
+    <p>[0783]	具有信号值X3^1的第三子像素输入信号输入至信号处理器20，并且，</p>
+    <p>[0784]	关于形成第（p，q)个像素组PG(p,q)的第二像素PX(p,q)_2，</p>
+    <p>[0785]	具有信号值的第一子像素输入信号，</p>
+    <p>[0786]	具有信号值X2_(p，q)_2的第二子像素输入信号，以及</p>
+    <p>[0787]	具有信号值的第三子像素输入信号输入至信号处理器20。</p>
+    <p>[0788]	在示例10中，关于形成第（p，q)个像素组PG(p，q)的第一像素Px(p，n，信号处理器20输出</p>
+    <p>[0789]	具有用于确定第一子像素R的显不灰度的信号值Xgp，^的第一子像素输出信号，</p>
+    <p>[0790]	具有用于确定第二子像素G的显示灰度的信号值Xmmm的第二子像素输出信号，以及</p>
+    <p>[0791]	具有用于确定第三子像素B的显示灰度的信号值的第三子像素输出信号，并且</p>
+    <p>[0792]	关于形成第（p，q)个像素组PG(p，q)的第二像素Px(p，q)_2，信号处理器20输出</p>
+    <p>[0793]	具有用于确定第一子像素R的显不灰度的信号值的第一子像素输出信号，</p>
+    <p>[0794]	具有用于确定第二子像素G的显示灰度的信号值X2_(p，q)_2的第二子像素输出信号，以及</p>
+    <p>[0795]	具有用于确定第四子像素W的显示灰度的信号值X4_(p，q)_2的第四子像素输出信号。</p>
+    <p>[0796]	关于与第（p，q)个第二像素相邻的相邻像素，[0797]	具有信号值X1-(Pj)的第一子像素输入信号，</p>
+    <p>[0798]	具有信号值X2_(p，q，）的第二子像素输入信号，以及</p>
+    <p>[0799]	具有信号值X3^)的第三子像素输入信号输入至信号处理器20。</p>
+    <p>[0800]	在示例10中，在信号处理器20中，基于在第二方向上计数时的第（P，q)个[其中，p=l，2，&#183;&#183;&#183;，和P，并且q=2，3，&#183;&#183;&#183;，(《第二像素PX(p,q)_2*的第四子像素控制第二信号（信号值SG2_(p，q))以及在第二方向上与第（p，q)个第二像素PX(p，q)_2相邻的相邻像素中的第四子像素控制第一信号（信号值SGg,))，获得第四子像素输出信号（信号值X4_(p，q)_2)，并输出至第（P，q)个第二像素Px(p,q)-2的第四子像素W。这里，根据至第（p，q)个第二像素PX(p,q)_2的第一子像素输入信号（信号值^-^)』、第二子像素输入信号（信号值X2^2)和第三子像素输入信号（信号值XmmU)，获得第四子像素控制第二信号（信号值SG2_(p，q))。根据至第二方向上与第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号（信号值X1-Wi)、第二子像素输入信号（信号值Xmw)和第三子像素输入信号（信号值X3-W)),获得第四子像素控制第一信号（信号值SGgq))。&#183;</p>
+    <p>[0801]	至少基于至第（p，q)个第二像素PX(p,q)_2的第三子像素输入信号（信号值X3^2)和至第（P，q)个第一像素的第三子像素输入信号（信号值xMp，^)，获得第三子像素输出信号（信号值并输出至第（P，q)个第一像素Pxfct^1的第三子像素。</p>
+    <p>[0802]	值得注意的是，在示例10中，与第（P，q)个像素相邻的相邻像素是第（P，q-Ι)个像素。然而，相邻像素不限于此，可以使用第（P，q+1)个像素，或者可以使用第（P，q_l)个像素和第（P，q+1)个像素。</p>
+    <p>[0803]	在示例10中，在每个图像显示帧确定校正扩大系数a’g。分别从与表达式(2-1-1)和(2-1-2)相当的表达式(101-1)和(101-2)获得第四子像素控制第一信号值SGmm)和第四子像素控制第二信号值SG2_(1，q)。从表达式（101-3)获得控制信号值（第三子像素控制信号值）SG3_(p，q)。</p>
+    <p>[0804]	SG1-W=Mirvq, ) &#183; a，卜0…（101-1)</p>
+    <p>[0805]	SG2_(p；q)=Min(p；q)_2 &#183; α ’ 卜0…（101&#8212;2)</p>
+    <p>[0806]	SG3-(Pjq)=Min(Pjq)^1 &#183; α ’ 卜0…（101&#8212;3)</p>
+    <p>[0807]	在示例10中，从算术平均表达式（102)获得第四子像素输出信号值X4_(p，q)_2。从表达式（3-A)、（3-B)、（3-E)、（3-F)、(3_a，）、(3_f)、(3-g)和(101-3)获得输出信号值</p>
+    <p>Xl-(p，q)-2、X2-(p，q)_2、Xl-(p，q)_l、X2-(p，q)_l 和 X3-(p，q)_l。</p>
+    <p>[0808]	X4_(p, q)_2= (SGhp, q)+SG2_(p, q))/(2x)</p>
+    <p>[0809]	=(Min(p；q.) &#183; α ’ j^+Min^,)^ &#183; a ’ 卜0)/ (2 x )... (102)</p>
+    <p>[0810]	^l-(p, q)-2~ Q i-0 &#183; Xl-(p, q)-2~ X &#183; SG2-(p’Q …（3~A)</p>
+    <p>[0811]	^2-(p, q)-2- a i-o &#183; x2-(p, q)-2- X &#183; SG2-(p，Q …（3~B)</p>
+    <p>[0812]	X 卜(p，q)-l_a i-0 &#183; xi-(p, q)-l_ X &#183; SG3_(p； q) * * * (3_E)</p>
+    <p>[0813]	^2-(p, q)-l_ a i-o &#183; X2-(p，q)-l_X &#183; SG3_(p； q) * * * (3~F)</p>
+    <p>[0814]	X3-(p，q)-l=(X，3-(p，q)-l+X，3-(p，q)-2)/2... (3_a，）</p>
+    <p>[0815]	这里</p>
+    <p>[0816]	X 3-(p； q)-l_ α i-0 &#183; X3-(p，q)-l_X &#183; SG3_(p； q) * * * (3~f)</p>
+    <p>[0817]	X 3-(p’q)-2_a i-o &#183; X3-(P, q)-2_x &#183; SG2_(p； q) * * * (3~g)[0818]	下面，将描述如何获得第（p，q)个像素组PG(p，q)中的输出信号值X1</p>
+    <p>-(P，q)-2'^2-(p, q)_2、</p>
+    <p>X4-(p,q)-2&gt;Xl-(p,q)-l&gt;X2-(p,q)-l和^^(扩大处理)。值得注意的是，将执行以下处理来保持(维持）灰度-亮度特性(伽玛特性，Y特性)。执行以下处理，以在第一像素和第二像素的全体(即，在每个像素组中)，尽量保持亮度比，并将执行该处理来尽量保持(维持）色调。</p>
+    <p>[0819][步骤-1000]</p>
+    <p>[0820]	首先，在信号处理器20中，以与示例4的[步骤-400]相同的方式，基于多个像素中的子像素输入信号值来获得多个像素组中的饱和度Si和亮度Vi(S)。具体地，基于至第(P，q)个第一像素Px(p，q)-1的第一子像素输入信号的输入信号值、第二子像素输入信号的输入信号值和第三子像素输入信号的输入信号值巧^^以及至第二像素Px(p,q)-2的第一子像素输入信号的输入信号值第二子像素输入信号的输入信号值X2-(p, q)-2和第三子像素输入信号的输入信号值x3-(p，q)-2，从表达式（43-1)、(43-2)、 (43-3)和(43-4)获得Sfeq)+ S(p，q)_2、V⑶和V(S) (p，q)_2。将对所有像素组执行该处理。</p>
+    <p>[0821][步骤-1010]</p>
+    <p>[0822]	然后，在信号处理器20中，以与示例I中相同的方式，根据在多个像素组中获得的值Vmax (S)/Vi (S)，确定校正扩大系数a’if可选地，从预定值β PD确定校正扩大系数a[驱动方法-A]，基于表达式（15-2)、表达式（16-1)至（16_5)或者表达式（17_1)至(17_6)的定义来确定校正扩大系数ct ’ i-o [驱动方法-B、驱动方法-C和驱动方法-D],或者基于驱动方法-E中的定义来确定校正扩大系数α ’ g。</p>
+    <p>[0823][步骤-IO2O]</p>
+    <p>[0824]	之后，在信号处理器20中，从表达式（101-1)、（101-2)和（102)来获得至第（p，q)</p>
+    <p>个像素组PG(p，q)的第四子像素输出信号值X4_(p，q)_2。[步骤-1010]和[步骤-1020]可以同时执行。</p>
+    <p>[0825][步骤-IO3O]</p>
+    <p>[0826]	然后，在信号处理器20中，基于输入信号值Xl_(p，q)_2、校正扩大系数a’g和常数X，从表达式（3-A)、(3-B)、(3-E)、(3-F)、（3_a’)、(3-f)和（3_g)来获得至第（p, q)个第二像素Px(p，q)-；i的第一子像素输出信号值Α-&#943;ρ,&#971;，并且基于输入信号值XMp，q)-2、校正扩大系数和常数X获得第二子像素输出信号值X2_(p，q)_2。基于输入信号值4_(1)、校正扩大系数a’g和常数X获得至第（p，q)个第一像素的第一子像素输出信号值X1H1，基于输入信号值XMpH、校正扩大系数a’i-。和常数 ' 获得第二子像素输出信号值ΧμμΗ，基于输入信号值XMmH和XMpjf校正扩大系数α、和常数X获得第三子像素输出信号值XwmH。值得注意的是，[步骤-1020]和[步骤-1030]可以同时执行，或者[步骤-1020]可以在执行[步骤-1030]之后执行。</p>
+    <p>[0827]	在示例10的驱动图像显示装置的方法中，在第（P，q)个像素组PG(p，q)中，输出信号值 Xl-(p，q)-2、 &#20034;2-(p，q)-2、&#20034;4-(p，q)-2、&#20034;1-(p，q)-1、&#20034;2&#8212;(p，q)&#8212;I 和&#20034;3&#8212;(p，q)&#8212;I 扩大a’g倍。为此，为了将图像亮度匹配为与未扩大状态下的图像亮度相同，期望的是，基于校正扩大系数α ’ i-。来降低平面光源装置50的亮度。具体地，平面光源装置50的亮度为（1/a’g)倍就足以。因此，可以实现平面光源装置的功耗降低。</p>
+    <p>[0828]	值得注意的是，在每个像素组中，第一像素和第二像素中的输出信号值的比</p>
+    <p>[0829]	^l-(p, q)-2 ： ^2-(p, q)-2[0830]	Xl- (P，q) -I : X2- (p, q) -I : ^3-(p, q) -I</p>
+    <p>[0831]与	$H!]入可值的比 X卜(p，q)-2 : X2-(P，q)_2、Χ卜(p，q)_l : X2-(p，q)-l : X3-(p，q)-l 略有不&#20875;。</p>
+    <p>[0832]	在单独观察每个像素时，关于相对输入信号的各像素的色调略有差异，当以像素组观察像素时，不会发生关于各像素组的色调的任何问题。</p>
+    <p>[0833]	如果第四子像素控制第一信号值SG^q)和第四子像素控制第二信号值SG2_(p，q)之间的关系偏离特定条件，则相邻像素可能改变。即，当相邻像素是第（P，q_l)个像素时，相邻像素可以改变成第（P，q+1)个像素，或者相邻像素可以改变成第（P，q_l)个像素和第(P，q+Ι)个像素。</p>
+    <p>[0834]	可选地，如果第四子像素控制第一信号值SGmm)和第四子 像素控制第二信号值SG2_(p,q)之间的关系偏离特定条件，即，例如，如果ISG1-W-SGmrq) I的值等于或大于(或等于或小于）预定值X'，则可以使用仅基于SGmm)的值或仅基于SG2_(p，q)的值作为X4_(p，q)_2值，并且可以应用于各示例。可选地，如果（SG1^-SG2+,))的值等于或大于预定值&#20034;〃2，或者如果（SGhm)-SGmm))的值等于或小于预定值X〃3，则可以执行与示例10中的处理不同的处理的操作。</p>
+    <p>[0835]	在一些情况下，可以如下改变示例10中描述的像素组的排列，并且可以实质上执行示例10中描述的驱动图像显示装置的方法。即，如图24所示，可以使用驱动图像显示装置的方法，</p>
+    <p>[0836]	其中，图像显示装置包括具有以二维矩阵方式排列的第一方向上的P个像素和第二方向上的Q个像素共PXQ个像素的图像显示面板以及信号处理器，</p>
+    <p>[0837]	图像显示面板具有其中第一像素排列在第一方向上的第一像素阵列和第二像素排列在第一方向上的第二像素阵列，第二像素阵列与第一像素阵列相邻，并且第一像素阵列和第二像素阵列交替排列，</p>
+    <p>[0838]	第一像素具有显示第一原色的第一子像素R、显示第二原色的第二子像素G和显示第三原色的第三子像素B，</p>
+    <p>[0839]	第二像素具有显示第一原色的第一子像素R、显示第二原色的第二子像素G和显示第四色的第四子像素W，</p>
+    <p>[0840]	在信号处理器中，</p>
+    <p>[0841]	至少基于至第一像素的第一子像素输入信号和校正扩大系数α ’ g，获得至第一像素的第一子像素输出信号，并输出至第一像素的第一子像素R，</p>
+    <p>[0842]	至少基于至第一像素的第二子像素输入信号和校正扩大系数α ’ ^0,获得至第一像素的第二子像素输出信号，并输出至第一像素的第二子像素G，</p>
+    <p>[0843]	至少基于至第二像素的第一子像素输入信号和校正扩大系数α ’ ^0,获得至第二像素的第一子像素输出信号，并输出至第二像素的第一子像素R，</p>
+    <p>[0844]	至少基于至第二像素的第二子像素输入信号和校正扩大系数α ’ ^0,获得至第二像素的第二子像素输出信号，并输出至第二像素的第二子像素G，并且</p>
+    <p>[0845]	在信号处理器中，进一步地，基于根据至在第二方向上计数的第（p，q)个[其中，P=I, 2,…，和P,并且q=l, 2,…，和Q]第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；以及根据至第二方向上与第（P，q)个第二像素相邻的第一像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号，获得第四子像素输出信号，并将获得的第四子像素输出信号输出至第（P，q)个第二像素，以及</p>
+    <p>[0846]	至少基于至第（p，q)个第二像素的第三子像素输入信号和至与第（P，q)个第二像素相邻的第一像素的第三子像素输入信号，获得第三子像素输出信号，并将获得的第三子像素输出信号输出至第（P，q)个第一像素。</p>
+    <p>[0847]	虽然已经基于优选示例描述了本发明，但是本发明不限于这些示例。示例中描述的彩色液晶显示器、平面光源装置、平面光源单元、驱动电路的构造和结构是示意性的，并且构成这些的部件、材料等也是示意性的，并可以适宜地改变。</p>
+    <p>[0848]	本发明第一实施方式(或根据本发明第一实施方式的驱动方法-A)、根据本发明第 一实施方式的驱动方法-B、根据本发明第一实施方式的驱动方法-C以及根据本发明第一实施方式的驱动方法-D的任意两种驱动方法可以组合，并且可以组合任意三种驱动方法，或者可以组合所有这四种驱动方法。本发明第二实施方式(或根据本发明第二实施方式的驱动方法-A)、根据本发明第二实施方式的驱动方法-B、根据本发明第二实施方式的驱动方法-C以及根据本发明第二实施方式的驱动方法-D的任意两种驱动方法可以组合，并且可以组合任意三种驱动方法，或者可以组合所有这四种驱动方法。本发明第三实施方式(或根据本发明第三实施方式的驱动方法-A)、根据本发明第三实施方式的驱动方法-B、根据本发明第三实施方式的驱动方法-C以及根据本发明第三实施方式的驱动方法-D的任意两种驱动方法可以组合，并且可以组合任意三种驱动方法，或者可以组合所有这四种驱动方法。本发明第四实施方式(或根据本发明第四实施方式的驱动方法-A)、根据本发明第四实施方式的驱动方法-B、根据本发明第四实施方式的驱动方法-C以及根据本发明第四实施方式的驱动方法-D的任意两种驱动方法可以组合，并且可以组合任意三种驱动方法，或者可以组合所有这四种驱动方法。本发明第五实施方式(或根据本发明第五实施方式的驱动方法-A)、根据本发明第五实施方式的驱动方法-B、根据本发明第五实施方式的驱动方法-C以及根据本发明第五实施方式的驱动方法-D的任意两种驱动方法可以组合，并且可以组合任意三种驱动方法，或者可以组合所有这四种驱动方法。</p>
+    <p>[0849]	尽管在示例中，应获得其饱和度Si和亮度Vi (S)的多个像素(或第一子像素R、第二子像素G和第三子像素B的组)是全部PXQ个像素(或第一子像素R、第二子像素G和第三子像素B的组)，或所有PtlXQtlA像素组，但是本发明不限于此。即，应当获得其饱和度Si和亮度Vi (S)的多个像素(或第一子像素R、第二子像素G和第三子像素B的组)或像素组可以是例如每四个像素或像素组中一个或者每八个像素或像素组中一个。</p>
+    <p>[0850]	虽然在不例中，基于第一子像素输入信号、第二子像素输入信号、第三子像素输入信号等来获得校正扩大系数α ’卜。，但是可以基于第一子像素输入信号、第二子像素输入信号和第三子像素输入信号中的一个输入信号(或者第一子像素R、第二子像素G和第三子像素B的组中的子像素输入信号的一个输入信号,或第一输入信号、第二输入信号和第三输入信号中的一个输入信号）来获得校正扩大系数a’g。具体地，例如，对于绿色的输入信号值xMp1 q)可以用作任一种输入信号的输入信号值。以与不例中相同的方式，从获得的校正扩大系数α ’ 获得信号值X4_(p，q)，进一步地，信号值X I-(P，q)、&#20034;2-(P，q)和&#20034;3-(P，q) &#9702; 在该情况下，代替表达式（12-1)和（12-2)中的S(p，q)和&#20034;⑶^)，可以使用“I”作为S(p，q)的值（SP，使用x2-(P，q)作为表达式（12-1)中的MaX(p，q)的值，并且Min(p，,)=())，并且可以使用x2_(p’q)作为V(S) (p，q)。类似地,可以基于第一子像素输入信号、第二子像素输入信号和第三子像素输入信号中的任意两种输入信号(或者，第一子像素R、第二子像素G和第三子像素B的组中的子像素输入信号的任意两种输入信号，或者第一输入信号、第二输入信号和第三输入信号的任意两种输入信号）的输入信号值来获得校正扩大系数a’g。具体地，例如，可以使用对于红色的输入信号值X1-U和对于绿色的输入信号值X2-(m)。可以以与示例中相同的方式，从获得的校正扩大系数α ’ i-o获得信号值X4-(p，q)，并且进一步地信号值X1-U &gt;X2-(p,q)和X3-(p,q)o值得注意的是，在该情况下，不使用表达式（12-1)和（12-2) Ws(p，q)和V(S) (M)，并且对于s(p，q)的值，</p>
+    <p>[0851]当	Χι_(ρ (1)彡 x2_(p；q)时,可以使用</p>
+    <p>[0852]	S (p，q)=(Xl-(p； (J)-X2-(P, q)) /χι-(ρ，q)</p>
+    <p>[0853]	V ⑶</p>
+    <p>[0854]并且当Xgjhu时，可以使用 </p>
+    <p>[0855]	S (p； q) - (x2_ (p； (J)-X1- (p； q) ) /x2-(p, q)</p>
+    <p>[0856]</p>
+    <p>[0857]	例如，当彩色图像显示装置显示单色图像时，足以执行该扩大处理。这同样适用于其他示例。</p>
+    <p>[0858]	可以使用边缘光型(侧光型）平面光源装置。在该情况下，如图25的概念图中所不，例如，由聚碳酸酯树脂制成的导光板510具有第一表面(底面)511、面向第一表面511的第二表面(顶面）513、第一侧面514、第二侧面515、面向第一侧面154的第三侧面516以及面向第二侧面515的第四侧面。导光板的更具体形状是整体的楔形截棱锥形，其中，截棱锥的两个相对侧面相当于第一表面511和第二表面513,并且截棱锥的底面相当于第一侧面514。凹部和凸部512设置在第一表面511的表面部分中。使用垂直于至导光板510的第一原色光输入方向上的第一表面511的虚拟面截取的导光板510的连续凸部和凹部的横截面形状是三角形。即，设置在第一表面511的表面部分中的凹部和凸部512具有棱柱形。导光板510的第二表面513可以是光滑的（S卩，可以具有镜面)，或者可以设置具有光漫射效果的喷砂纹理（即，可以设置细微锯齿形表面)。光反射件520被设置为面向导光板510的第一表面511。图像显不面板(例如,彩色液晶显不面板）布置为面向导光板510的第二表面513。光漫射片531和棱镜片532进一步布置在导光板510的第二表面513和图像显示面板之间。从光源500发出的第一原色光从导光板510的第一表面514(例如,相当于截棱锥的底面的表面）输入至导光板510，碰撞到第一表面511的凹凸部512并被散射，从第一表面511发出，被光反射件520反射,再次输入至第一表面511,从第二表面513发出，穿过光漫射片531和棱镜片532，并照亮各示例中的图像显示面板。</p>
+    <p>[0859]	可以使用发射作为第一原色光的蓝光的荧光灯或半导体激光器来代替发光二极管作为光源。在该情况下，与从荧光灯或半导体激光器发出的第一原色(蓝色）光相当的第一原色光的波长λ i可以是例如450nm。与由荧光灯或半导体激光器激发的第二原色发光粒子相当的绿色发光粒子可以是例如由SrGa2S4 = Eu制成的绿色发光荧光粒子，并且与第三原色发光粒子相当的红色发光粒子可以是由例如CaS:Eu制成的红色发光荧光粒子。可选地，当使用半导体激光器时，与从半导体激光器发出的第一原色(蓝色）相当的第一原色光的波长X1可以为457nm。在该情况下，与由半导体层激发的第二原色发光粒子相当的绿色发光粒子可以是由例如SrGa2S4 = Eu制成的绿色发光荧光粒子，并且与第三原色发光粒子相当的红色发光粒子可以是由例如CaS:Eu制成的红色发光荧光粒子。可选地，对于平面光源装置的光源，可以使用冷阴极荧光灯（CCFL)、热阴极荧光灯（HCFL)或外部电极荧光灯（EEFL)。</p>
+    <p>[0860]	本发明还可以实施为以下构造。</p>
+    <p>[0861]	[1]〈〈驱动图像显示装置的方法：第一形式》</p>
+    <p>[0862]	一种驱动图像显示装置的方法</p>
+    <p>[0863]	其中，所述图像显示装置包括</p>
+    <p>[0864]	(A)图像显示面板，具有显示第一原色的第一子像素、显示第二原色的第二子像素、显示第三原色的第三子像素以及显示第四色的第四子像素的像素以二维矩阵的方式排列在所述图像显示面板中，以及 </p>
+    <p>[0865]	(B)信号处理器，</p>
+    <p>[0866]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0867]	至少基于第一子像素输入信号和校正扩大系数α ’ i-o获得第一子像素输出信号，并输出至所述第一子像素，</p>
+    <p>[0868]至少基于第二子像素输入信号和所述校正扩大系数α	’ 获得第二子像素输出信号，并输出至所述第二子像素，</p>
+    <p>[0869]	至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，</p>
+    <p>[0870]	基于所述第一子像素输入信号、所述第二子像素输入信号和所述第三子像素输入信号获得第四子像素输出信号，并输出至所述第四子像素，</p>
+    <p>[0871]	在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax(S)，以及</p>
+    <p>[0872]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0873]	(a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，</p>
+    <p>[0874]	(b)基于在所述多个像素中获得的值Vniax (S)/Vi (S)中的至少一个值，获得扩大系数a g，以及</p>
+    <p>[0875]	(C)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数α ’ 和在所述第i个图像显示帧中获得的所述扩大系数ag，确定所述校正扩大系数a’g，其中，j是等于或大于I的正整数，</p>
+    <p>[0876]	其中，饱和度S和亮度V(S)表示为如下</p>
+    <p>[0877]	S= (Max-Min) /Max</p>
+    <p>[0878]	V ⑶=Max</p>
+    <p>[0879]	Max:包括至所述像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，</p>
+    <p>[0880]	Min:包括至所述像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</p>
+    <p>[0881]	[2]&#171;驱动图像显示装置的方法：第二形式&gt;&gt;</p>
+    <p>[0882]	一种驱动图像显示装置的方法，[0883]	其中，所述图像显示装置包括</p>
+    <p>[0884]	(A)图像显示面板，具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素的像素在所述图像显示面板中以二维矩阵的方式排列在第一方向和第二方向上，至少由排列在所述第一方向的第一像素和第二像素形成像素组，并且在每个像素组中，显示第四色的第四子像素布置在所述第一像素和所述第二像素之间，以及</p>
+    <p>[0885]	(B)信号处理器，</p>
+    <p>[0886]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0887]	关于所述第一像素，</p>
+    <p>[0888]	至少基于第一子像素输入信号和校正扩大系数α ’ i-o获得第一子像素输出信号，并输出至所述第一子像素，</p>
+    <p>[0889]至少基于第二子像素输入信号和所述校正扩大系数α	’ 获得第二子像素输出信号，并输出至所述第二子像素，以及</p>
+    <p>[0890]	至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，</p>
+    <p>[0891]	关于所述第二像素，</p>
+    <p>[0892]	至少基于第一子像素输入信号和校正扩大系数α ’ i-o获得第一子像素输出信号，并输出至所述第一子像素，</p>
+    <p>[0893]至少基于第二子像素输入信号和所述校正扩大系数α	’ 获得第二子像素输出信号，并输出至所述第二子像素，以及</p>
+    <p>[0894]	至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，以及</p>
+    <p>[0895]	关于所述第四子像素，</p>
+    <p>[0896]	基于根据至所述第一像素的所述第一子像素输入信号、所述第二子像素输入信号和所述第三子像素输入信号获得的第四子像素控制第一信号；以及根据至所述第二像素的所述第一子像素输入信号、所述第二子像素输入信号和所述第三子像素输入信号获得的第四子像素控制第二信号，获得第四子像素输出信号，并输出至所述第四子像素，</p>
+    <p>[0897]	在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax(S)，以及</p>
+    <p>[0898]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0899]	(a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，</p>
+    <p>[0900]	(b)基于在所述多个像素中获得的值Vniax (S)/Vi (S)中的至少一个值，获得扩大系数a g，以及</p>
+    <p>[0901]	(C)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数α ’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定校正扩大系数α ’ g，其中，j是等于或大于I的正整数，</p>
+    <p>[0902]	其中，饱和度S和亮度V(S)表示为如下</p>
+    <p>[0903]	S= (Max-Min) /Max[0904]	V ⑶=Max</p>
+    <p>[0905]	Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，</p>
+    <p>[0906]	Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</p>
+    <p>[0907]	[3]&#171;驱动图像显示装置的方法：第三形式&gt;&gt;</p>
+    <p>[0908]	一种驱动图像显示装置的方法，</p>
+    <p>[0909]	其中，所述图像显示装置包括</p>
+    <p>[0910]	(A)图像显示面板，第一方向上的P个像素组和第二方向上的Q个像素组的总共PXQ个像素组以二维矩阵的方式排列在所述图像显示面板中，以及 </p>
+    <p>[0911]	(B)信号处理器，</p>
+    <p>[0912]	每个像素组均具有在所述第一方向的第一像素和第二像素，</p>
+    <p>[0913]	所述第一像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素，</p>
+    <p>[0914]	所述第二像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第四色的第四子像素，</p>
+    <p>[0915]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0916]	至少基于至在所述第一方向计数时的第（p，q)个第一像素的第三子像素输入信号、至第（P，q)个第二像素的第三子像素输入信号和校正扩大系数a’g，获得至所述第(P，q)个第一像素的第三子像素输出信号，并输出至所述第（P，q)个第一像素的第三子像素，其中，P=l，2，…，P，并且q=l，2，…，和Q;以及</p>
+    <p>[0917]基于根据至所述第（p，q)个第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；根据至所述第一方向上与所述第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号以及所述校正扩大系数α ’卜。，获得至所述第（P，q)个第二像素的第四子像素输出信号，并输出至所述第（P，q)个第二像素的所述第四子像素，</p>
+    <p>[0918]	在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax(S)，以及</p>
+    <p>[0919]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0920]	(a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，</p>
+    <p>[0921]	(b)基于在所述多个像素中获得的值Vniax (S)/Vi (S)中的至少一个值，获得扩大系数a g，以及</p>
+    <p>[0922]	(C)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数α ’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定校正扩大系数α ’ g，其中，j是等于或大于I的正整数，</p>
+    <p>[0923]	其中，饱和度S和亮度V(S)表示为如下</p>
+    <p>[0924]	S= (Max-Min) /Max[0925]	V ⑶=Max</p>
+    <p>[0926]	Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，</p>
+    <p>[0927]	Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</p>
+    <p>[0928]	[4]&#171;驱动图像显示装置的方法：第四形式&gt;&gt;</p>
+    <p>[0929]	一种驱动图像显示装置的方法，</p>
+    <p>[0930]	其中，所述图像显示装置包括</p>
+    <p>[0931]	(A)图像显示面板，第一方向上的PtlA像素和第二方向上的Qtl个像素的总共P0XQ0个像素以二维矩阵的方式排列在所述图像显示面板中，以及&#183;</p>
+    <p>[0932]	(B)信号处理器，</p>
+    <p>[0933]	每个像素均具有显示第一原色的第一子像素、显示第二原色的第二子像素、显示第三原色的第三子像素和显示第四色的第四子像素，</p>
+    <p>[0934]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0935]	至少基于第一子像素输入信号和校正扩大系数α ’ i-o获得第一子像素输出信号，并输出至所述第一子像素，</p>
+    <p>[0936]至少基于第二子像素输入信号和所述校正扩大系数α	’ 获得第二子像素输出信号，并输出至所述第二子像素，</p>
+    <p>[0937]	至少基于第三子像素输入信号和所述校正扩大系数α ’ 获得第三子像素输出信号，并输出至所述第三子像素，以及</p>
+    <p>[0938]	基于根据至在所述第二方向上计数时的第（p，q)个像素的第一子像素输入信号、第二子像素输入信号以及第三子像素输入信号获得的第四子像素控制第二信号；以及根据至所述第二方向上与所述第（P，q)个像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号，获得至所述第(P，q)个像素的第四子像素输出信号，并输出至所述第（P，q)个像素的所述第四子像素，其中，p=l，2，…，和P。，并且q=l，2，…，和Q0,</p>
+    <p>[0939]	在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax(S)，以及</p>
+    <p>[0940]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0941]	(a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，</p>
+    <p>[0942]	(b)基于在所述多个像素中获得的值Vniax (S)/Vi (S)中的至少一个值，获得扩大系数a g，以及</p>
+    <p>[0943]	(C)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数α ’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定校正扩大系数α ’ g，其中，j是等于或大于I的正整数，</p>
+    <p>[0944]	其中，饱和度S和亮度V(S)表示为如下</p>
+    <p>[0945]	S= (Max-Min) /Max</p>
+    <p>[0946]	V ⑶=Max[0947]	Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值</p>
+    <p>[0948]	Min:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</p>
+    <p>[0949]	[5]&#171;驱动图像显示装置的方法：第五形式&gt;&gt;</p>
+    <p>[0950]	一种驱动图像显示装置的方法， [0951]	其中，所述图像显示装置包括：</p>
+    <p>[0952]	(A)图像显示面板，第一方向上的P个像素组和第二方向上的Q个像素组的总共PXQ个像素组以二维矩阵的方式排列在所述图像显示面板中，以及</p>
+    <p>[0953]	(B)信号处理器，</p>
+    <p>[0954]	每个像素组均具有在所述第一方向的第一像素和第二像素，</p>
+    <p>[0955]	所述第一像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第三原色的第三子像素，</p>
+    <p>[0956]	所述第二像素具有显示第一原色的第一子像素、显示第二原色的第二子像素和显示第四色的第四子像素，</p>
+    <p>[0957]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0958]	基于根据至在所述第二方向上计数时的第（p，q)个第二像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第二信号；根据至所述第二方向上与所述第（P，q)个第二像素相邻的相邻像素的第一子像素输入信号、第二子像素输入信号和第三子像素输入信号获得的第四子像素控制第一信号以及校正扩大系数a’g，获得第四子像素输出信号，并输出至所述第（p，q)个第二像素的所述第四子像素，其中，P=l，2，…，P，并且q=l，2，…，和Q，以及</p>
+    <p>[0959]	至少基于至所述第（p，q)个第二像素的第三子像素输入信号、至第（P，q)个第一像素的第三子像素输入信号以及所述校正扩大系数α ’卜。，获得第三子像素输出信号，并输出至所述第（P，q)个第一像素的所述第三子像素，</p>
+    <p>[0960]	在所述信号处理器中获得或者在所述信号处理器中存储以通过添加所述第四色而扩大的HSV颜色空间中的饱和度S作为变量的亮度的最大值Vmax(S)，以及</p>
+    <p>[0961]	在第i个图像显示帧中，在所述信号处理器中，</p>
+    <p>[0962]	(a)基于多个像素中的子像素输入信号值，获得所述多个像素中的饱和度Si和亮度Vi⑶，</p>
+    <p>[0963]	(b)基于在所述多个像素中获得的值Vniax (S)/Vi (S)中的至少一个值，获得扩大系数a g，以及</p>
+    <p>[0964]	(C)基于预先在第（i_j)个图像显示帧中应用的校正扩大系数α ’ 和在所述第i个图像显示帧中获得的所述扩大系数a g，确定校正扩大系数α ’ g，其中，j是等于或大于I的正整数，</p>
+    <p>[0965]	其中，饱和度S和亮度V(S)表示为如下</p>
+    <p>[0966]	S= (Max-Min) /Max</p>
+    <p>[0967]	V ⑶=Max</p>
+    <p>[0968]	Max:包括至像素的第一子像素输入信号值、第二子像素输入信号值和第三子像素输入信号值的三个子像素输入信号值中的最大值，</p>
+    <p>[0969]	Min :包括至像素的第一子像素输入信号值、第二子像素输入</p>
+    <p>[0970]	信号值和第三子像素输入信号值的三个子像素输入信号值中的最小值。</p>
+    <p>[0971]	[6]根据[I]至[5]中任一项所述的方法，其中，当Δ !&gt; Δ 2&gt;0、Λ 4&gt; Δ 3&gt;0时，第一预定值为E1，第二预定值为ε2，第三预定值为ε3，第四预定值为ε4，ε^ε^Ο，且ε 4&gt; ε 3&gt;0 时，</p>
+    <p>[0972]	(A)如果（Ι/δχ&#912;/α^-α/α、+。）的值小于所述第一预定值S1，则基于以下表达式来计算所述校正扩大系数α ’ ^0,</p>
+    <p>[0973]	(l/α'^) = (1/0'^jvo)-A1</p>
+    <p>[0974]	(B)如果（I/ δ J等于或大于所述第一预定值ε i并且小于所述第二预定值ε 2，则基于以下表达式来计算所述校正扩大系数a’g，</p>
+    <p>[0975]	(I/ α ’ 卜。）=(I/ α ’ 的)&#8212;。）-Δ 2</p>
+    <p>[0976]	(C)如果（I/ δ J等于或大于所述第二预定值ε 2并且小于所述第三预定值ε 3，则基于以下表达式来计算所述校正扩大系数a’g，</p>
+    <p>[0977]	(l/a’gXl/a，（Η)_0)</p>
+    <p>[0978]	(D)如果（I/ δ J等于或大于所述第三预定值ε 3并且小于所述第四预定值ε 4，则基于以下表达式来计算所述校正扩大系数a’g，</p>
+    <p>[0979]	(1/0^^) = (1/0' α^_0)+Δ 3</p>
+    <p>[0980]	(E)如果（I/ δ J等于或大于所述第四预定值ε 4，则基于以下表达式来计算所述校正扩大系数α ’ B，</p>
+    <p>[0981]	(1/0，卜0) = (1/0，（η)_0)+Λ4。</p>
+    <p>[0982]	[7]根据[I]至[6]中任一项所述的方法，</p>
+    <p>[0983]	其中，图像显示装置进一步包括照射图像显示面板的平面光源装置，以及</p>
+    <p>[0984]	使用校正扩大系数α ’ 来控制平面光源装置的亮度。</p>
+    <p>[0985]	[8]根据[I]至[7]中任一项的方法，</p>
+    <p>[0986]	其中，利用所述校正扩大系数a控制的所述平面光源装置的亮度是所述平面光源装置在第（i+k)个图像显示帧中的亮度，其中，5。</p>
+    <p>[0987]	本申请包含于2011年7月29日向日本专利局提交的日本优先权专利申请JP2011-166593公开的相关主题，其全部内容结合于此作为参考。</p>
+    <p>[0988]	本领域技术人员应当理解，根据设计需要和其他因素，可以有各种改变、组合、子组合和变形，只要它们在所附权利要求及其等同替换的范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101286306A?cl=zh">CN101286306A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年4月9日</td><td class="patent-data-table-td patent-date-value">2008年10月15日</td><td class="patent-data-table-td ">株式会社日立显示器</td><td class="patent-data-table-td ">液晶显示装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101546544A?cl=zh">CN101546544A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年3月27日</td><td class="patent-data-table-td patent-date-value">2009年9月30日</td><td class="patent-data-table-td ">索尼株式会社</td><td class="patent-data-table-td ">视频信号处理电路、显示装置和视频信号处理方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101587697A?cl=zh">CN101587697A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年5月14日</td><td class="patent-data-table-td patent-date-value">2009年11月25日</td><td class="patent-data-table-td ">株式会社瑞萨科技</td><td class="patent-data-table-td ">液晶驱动装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20110012915">US20110012915</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value">2011年1月20日</td><td class="patent-data-table-td ">Seiko Epson Corporation</td><td class="patent-data-table-td ">Image display device and image display method</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20110181635">US20110181635</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value"></td><td class="patent-data-table-td patent-date-value">2011年7月28日</td><td class="patent-data-table-td ">Sony Corporation</td><td class="patent-data-table-td ">Driving method for image display apparatus</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G09G0005020000">G09G5/02</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=G09G0003360000">G09G3/36</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G2320/0242">G09G2320/0242</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G2300/0426">G09G2300/0426</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G2300/0452">G09G2300/0452</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G3/3426">G09G3/3426</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G2320/0666">G09G2320/0666</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G2340/06">G09G2340/06</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G2330/021">G09G2330/021</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G3/3413">G09G3/3413</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=Jhu8BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G09G5/02">G09G5/02</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2013年1月30日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2014年6月11日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年11月25日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of patent application or patent right or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ebd4b9e6021a30016f60/CN102903342A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E9%A9%B1%E5%8A%A8%E5%9B%BE%E5%83%8F%E6%98%BE%E7%A4%BA%E8%A3%85%E7%BD%AE%E7%9A%84%E6%96%B9%E6%B3%95.pdf?id=Jhu8BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2YGTDaWpShlDp-4iSztCkPwf9Asg"},"sample_url":"https://www.google.com/patents/reader?id=Jhu8BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

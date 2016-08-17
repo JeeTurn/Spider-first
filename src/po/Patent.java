@@ -1,5 +1,5 @@
 package po;
-
+//一个不经常进行插入和删除的表，不需要进行过复杂的设计 只需要考虑优化查询操作即可
 public class Patent {
 	private String patentId;
 	private String applyId;
@@ -9,6 +9,30 @@ public class Patent {
 	private String patentAbstract;
 	private String claim;
 	private String patentText;
+	private String TitleSeg;
+	private String PatentTextSeg;
+	private String PatentIpc;
+	private String KeyWords;
+	private String Quote;
+	private String BeQuote;
+	public String getQuote() {
+		return Quote;
+	}
+	public void setQuote(String quote) {
+		Quote = quote;
+	}
+	public String getBeQuote() {
+		return BeQuote;
+	}
+	public void setBeQuote(String beQuote) {
+		BeQuote = beQuote;
+	}
+	public String getKeyWords() {
+		return KeyWords;
+	}
+	public void setKeyWords(String keyWords) {
+		KeyWords = keyWords;
+	}
 	public String getPatentId() {
 		return patentId;
 	}
@@ -56,5 +80,23 @@ public class Patent {
 	}
 	public void setPatentText(String patentText) {
 		this.patentText = patentText;
+	}
+	public String getTitleSeg() {
+		return TitleSeg;
+	}
+	public void setTitleSeg(String titleSeg) {
+		TitleSeg = titleSeg;
+	}
+	public String getPatentTextSeg() {
+		return PatentTextSeg;
+	}
+	public void setPatentTextSeg(String patentTextSeg) {
+		PatentTextSeg = patentTextSeg;
+	}
+	public String getPatentIpc() {
+		return PatentIpc;
+	}
+	public void setPatentIpc(String patentIpc) {
+		PatentIpc = patentIpc;
 	}
 }

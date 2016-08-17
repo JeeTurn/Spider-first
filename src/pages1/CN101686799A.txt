@@ -1,0 +1,499 @@
+<!DOCTYPE html><html><head><title>专利 CN101686799A - 图像处理装置、该图像处理装置的动作方法以及程序 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="图像处理装置、该图像处理装置的动作方法以及程序"><meta name="DC.contributor" content="小栗淳" scheme="inventor"><meta name="DC.contributor" content="西山武志" scheme="inventor"><meta name="DC.contributor" content="谷口胜义" scheme="inventor"><meta name="DC.contributor" content="重盛敏明" scheme="inventor"><meta name="DC.contributor" content="奥林巴斯医疗株式会社" scheme="assignee"><meta name="DC.date" content="2008-6-16" scheme="dateSubmitted"><meta name="DC.description" content="本发明所涉及的图像处理装置具备：获取单元，其获取作为由胶囊型内窥镜按时间序列拍摄得到的图像数据的时间序列图像数据；图像检测单元，其从所获取的上述时间序列图像数据中检测上述规定的图像数据；以及显示控制单元，其以一览形式显示所获取的上述图像数据中的规定的图像数据。"><meta name="DC.date" content="2010-3-31"><meta name="citation_patent_publication_number" content="CN:101686799:A"><meta name="citation_patent_application_number" content="CN:200880023920"><link rel="canonical" href="https://www.google.com/patents/CN101686799A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101686799A?cl=zh"/><meta name="title" content="专利 CN101686799A - 图像处理装置、该图像处理装置的动作方法以及程序"/><meta name="description" content="本发明所涉及的图像处理装置具备：获取单元，其获取作为由胶囊型内窥镜按时间序列拍摄得到的图像数据的时间序列图像数据；图像检测单元，其从所获取的上述时间序列图像数据中检测上述规定的图像数据；以及显示控制单元，其以一览形式显示所获取的上述图像数据中的规定的图像数据。"/><meta property="og:title" content="专利 CN101686799A - 图像处理装置、该图像处理装置的动作方法以及程序"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101686799A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101686799A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101686799A&amp;usg=AFQjCNHKNhEeYLGa-ITw0dfJ3By_mtFMRw" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/59c4aea61847041bb14b/CN101686799A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/59c4aea61847041bb14b/CN101686799A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101686799A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101686799A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN101686799A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN101686799B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101686799A?cl=zh" style="display:none"><span itemprop="description">本发明所涉及的图像处理装置具备：获取单元，其获取作为由胶囊型内窥镜按时间序列拍摄得到的图像数据的时间序列图像数据；图像检测单元，其从所获取的上述时间序列图像数据中检测上述规定的图像数据；以及显示控制单...</span><span itemprop="url">https://www.google.com/patents/CN101686799A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101686799A - 图像处理装置、该图像处理装置的动作方法以及程序</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101686799A - 图像处理装置、该图像处理装置的动作方法以及程序" title="专利 CN101686799A - 图像处理装置、该图像处理装置的动作方法以及程序"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101686799 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 200880023920</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/JP2008/001549</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年3月31日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2008年6月16日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2007年7月12日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101686799B?hl=zh-CN&amp;cl=zh">CN101686799B</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2174578A1?hl=zh-CN&amp;cl=zh">EP2174578A1</a>, </span><span class="patent-bibdata-value"><a href="/patents/EP2174578A4?hl=zh-CN&amp;cl=zh">EP2174578A4</a>, </span><span class="patent-bibdata-value"><a href="/patents/US20100182412?hl=zh-CN&amp;cl=zh">US20100182412</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2009008125A1?hl=zh-CN&amp;cl=zh">WO2009008125A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">200880023920.8, </span><span class="patent-bibdata-value">CN 101686799 A, </span><span class="patent-bibdata-value">CN 101686799A, </span><span class="patent-bibdata-value">CN 200880023920, </span><span class="patent-bibdata-value">CN-A-101686799, </span><span class="patent-bibdata-value">CN101686799 A, </span><span class="patent-bibdata-value">CN101686799A, </span><span class="patent-bibdata-value">CN200880023920, </span><span class="patent-bibdata-value">CN200880023920.8, </span><span class="patent-bibdata-value">PCT/2008/1549, </span><span class="patent-bibdata-value">PCT/JP/2008/001549, </span><span class="patent-bibdata-value">PCT/JP/2008/01549, </span><span class="patent-bibdata-value">PCT/JP/8/001549, </span><span class="patent-bibdata-value">PCT/JP/8/01549, </span><span class="patent-bibdata-value">PCT/JP2008/001549, </span><span class="patent-bibdata-value">PCT/JP2008/01549, </span><span class="patent-bibdata-value">PCT/JP2008001549, </span><span class="patent-bibdata-value">PCT/JP200801549, </span><span class="patent-bibdata-value">PCT/JP8/001549, </span><span class="patent-bibdata-value">PCT/JP8/01549, </span><span class="patent-bibdata-value">PCT/JP8001549, </span><span class="patent-bibdata-value">PCT/JP801549</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%B0%8F%E6%A0%97%E6%B7%B3%22">小栗淳</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%A5%BF%E5%B1%B1%E6%AD%A6%E5%BF%97%22">西山武志</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%B0%B7%E5%8F%A3%E8%83%9C%E4%B9%89%22">谷口胜义</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E9%87%8D%E7%9B%9B%E6%95%8F%E6%98%8E%22">重盛敏明</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%A5%A5%E6%9E%97%E5%B7%B4%E6%96%AF%E5%8C%BB%E7%96%97%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%22">奥林巴斯医疗株式会社</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101686799A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101686799A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101686799A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (9),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (4)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D200880023920&amp;usg=AFQjCNFWRVN37aL66zNLRh2nSv6INKztxQ"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101686799A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNG6fAZ0Bxh6s8iKTo7q8M4qjpfELQ"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT94628441" lang="ZH" load-source="patent-office">图像处理装置、该图像处理装置的动作方法以及程序</invention-title>
+      </span><br><span class="patent-number">CN 101686799 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA76471590" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明所涉及的图像处理装置具备：获取单元，其获取作为由胶囊型内窥镜按时间序列拍摄得到的图像数据的时间序列图像数据；图像检测单元，其从所获取的上述时间序列图像数据中检测上述规定的图像数据；以及显示控制单元，其以一览形式显示所获取的上述图像数据中的规定的图像数据。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(75)</span></span></div><div class="patent-text"><div mxw-id="PCLM31497629" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种图像处理装置，其特征在于，具备：    获取单元，其获取时间序列图像数据，该时间序列图像数据是由胶囊型内窥镜按时间序列拍摄得到的图像数据；    图像检测单元，其从所获取的上述时间序列图像数据中检测规定的图像数据；以及    显示控制单元，其对作为上述检测出的图像数据的检测图像数据进行一览显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2. 根据权利要求l所述的图像处理装置，其特征在于，上述图像处理装置还具备显示指示输入单元，该显示指示输入单元被jlr入对上述显示控制单元的指示，显示指示输入单元具备：检测方法选择单元，其选择通过上述图像检测单元进行检测时所4吏用的4全测方法；一览显示选择单元，其用于通过上述显示控制单元来一览显示上述图像数据；以及运动图像再现选择单元，其以运动图像的方式再现按时间序列拍摄得到的上述图像数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3. 根据权利要求2所述的图像处理装置，其特征在于，能够由上述4全测方法选才&#22890;单元选4&#22890;的#r测方法是如下方法中的至少一个或两个以上的组合：每隔固定间隔抽取按时间序列拍摄得到的上述图像数据；根据按时间序列排列的第n个的图像数据与第n士m个（n、 m:任意的整数）的图像数据间的差来抽取图像数据；根据病变位置的特征来抽取上述图像数据；根据上述图像数据的颜色成分来抽取图像数据；以及根据按时间序列排列的第n个的图像数据与第n个的前后p个（n、 p:任意的整数）的图像平均值的图像数据间的差来抽取图像数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4. 根据权利要求3所述的图像处理装置，其特征在于，上述显示控制单元能够显示通过上述检测方法没有被抽取出的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5. 根据权利要求l所述的图像处理装置，其特征在于，上述显示控制单元以纵向j(j:任意的整数）个x横向k(k:任意的整数）个的方式 一 览显示上述图像数据的缩略图。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6. 根据权利要求5所述的图像处理装置，其特征在于，关于上述jxk的设定，能够由用户任意地进行设定，或者根据上述缩略图的大小来进行设定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7. 根据权利要求5所述的图像处理装置，其特征在于，上述显示控制单元还将一览显示的上述缩略图中的拍摄到病变部位的缩略图进行增强显示，或者对该缩略图附加规定的识别4言息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8. 根据权利要求5所述的图像处理装置，其特征在于， 上述显示控制单元还在一览显示的上述缩略图中的规定的缩略图被选择的情况下，显示如下命令中的至少一个命令：对与所选择的该缩略图对应的图像数据附加意见信息的命令；将所选择的该缩略图追加到规定的图像显示区域中的命令；在与病例有关的报告中添加与所选择的该缩略图对应的图像数据的命令；该缩略图对应的图像数据处于哪个位置的命令，该时间刻度表示按时间序列拍摄得到的 一 系列的上述图像数据的摄像期间；转变为以运动图像的方式对与所选择的该缩略图对应的图像数据以后的图像数据进行再现的运动图像显示画面，来以运动图像的方式再现该图像数据的命令；显示与所选择的该缩略图对应的图像数据的前后x(x:任意的整数）个图像数据的命令；显示处于所选择的该缩略图与时间序列上的所选择的该缩略图的前一个上述一览显示的缩略图之间的所有图像的命令；以及显示处于所选择的该缩略图与时间序列上的所选择的该缩略图的后一个上述一览显示的缩略图之间的所有图像的命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9. 根据权利要求l所述的图像处理装置，其特征在于，上述图像^r测单元使用如下图像检测例程中的至少 一 个图像检测例程来从按时间序列拍摄得到的图像数据中检测上述规定的图像作为上述检测图像数据：检测每隔固定时间的图像的图像检测例程；检测相邻的图像之间相似度低的图像的图像检测例程；检测拍摄到病变部位的图像的图像检测例程；检测除了诊断所不需要的图像以外的图像的图像检测例程；以及才全测^见定颜色成分的像素的比例多的图像或包含规定颜色成分的像素的比例多的区域的图像的图像检测例程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10. 根据权利要求9所述的图像处理装置，其特征在于，上述显示控制单元能够显示通过上述图像检测例程没有被抽取出的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11. 根据权利要求9所述的图像处理装置，其特征在于，上述图像处理装置还具备图像检测例程选择单元，该图像检测例程选择单元用于选择上述图像检测例程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12. 根据权利要求ll所述的图像处理装置，其特征在于，上述图像处理装置还具备关联单元，该关联单元将由上述 图像检测单元检测出的上述检测图像数据与在该检测中使用的 图像检测例程名进行关联，上述显示控制单元在显示上述一览显示的图像的同时，将 上述图像检测例程名作为标签名进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13. 根据权利要求9所述的图像处理装置，其特征在于，上述图像处理装置还具备意见信息附加单元，该意见信息附加单元对上述一览显示的图像中的被选择的图像附加意见信 白</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14. 根据权利要求13所述的图像处理装置，其特征在于， 上述图像处理装置还具备：报告制作单元，其制作与针对上述一览显示的图像中的被 选择的图像的病例有关的报告；以及意见信息插入单元，其在上述被选择的图像中附加有上述 意见信息的情况下，在对上述报告插入该被选择的图像的同时 插入该意见信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15. 根据权利要求14所述的图像处理装置，其特征在于， 上述图像处理装置还具备成批输出单元，该成批输出单元将由上述图像检测单元检测出的所有的检测图像数据成批输出 到上述报告中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16. 根据权利要求l所述的图像处理装置，其特征在于， 上述显示控制单元对作为检测出的图像数据的上述检测图像数据进行 一 览显示，并且显示按时间序列拍摄的所有图像的 概要信息，并且随着进行从该 一 览显示的检测图像中选择任意 的图像的动作，将表示所选择的该图像在上述概要信息中的位 置的标记信息附加到上述概要信息中来进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17. 根据权利要求16所述的图像处理装置，其特征在于，上述显示控制单元将表示上述概要信息所包含的图像群中 的上述一览显示的图像群的区间的标记信息附加到该概要信息 中来进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18. 根据权利要求16所述的图像处理装置，其特征在于， 上述显示控制单元在对上述检测图像进行一览显示的情况下，以行为单位、以页为单位或以图像为单位使上述检测图像 滚动。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19. 根据权利要求16所述的图像处理装置，其特征在于， 上述显示控制单元在从以运动图像的方式显示按时间序列拍摄的上述图像的运动图像显示画面转变为对上述检测图像进 行一 览显示的 一 览显示画面时，从所检测出的上述时间序列的 检测图像群的开头起进行 一 览显示，或者以在该运动图像显示 画面上正在显示的画面为中心对上述4全测图像进行一览显示， 或者对包含该运动图像显示画面上正在显示的画面的范围的上 述检测图像进行 一 览显示，或者在上述检测图像的 一 览的页的 开头显示该运动图像显示画面上正在显示的图像，或者在上述 检测图像的一览的页的末尾显示该运动图像显示画面上正在显 示的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20. 根据权利要求19所述的图像处理装置，其特征在于， 在从以运动图像的方式显示按时间序列拍摄的上述图像的运动图像显示画面转变为对上述检测图像进行一览显示的一览 显示画面时，能够设定将该图像显示在一览显示画面上的位置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21. 根据权利要求16所述的图像处理装置，其特征在于， 上述显示控制单元在从对上述检测图像进行一览显示的一览显示画面转变为以运动图像的方式显示按时间序列拍摄的上 述图像的运动图像显示画面时，对按上述时间序列拍摄的开头 图像进行显示，或者再次对转变为上述一览显示画面之前的前一次在上述运动图像显示画面上所显示的图像进行显示，或者 对上述一览显示画面上所选^^的画面进4于显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22. 根据权利要求16所述的图像处理装置，其特征在于， 上述显示控制单元将表示页区间的标记信息附加在上述概要信息中来进行显示，该页区间是一次一 览显示的图像群的单位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23. 根据权利要求16所述的图像处理装置，其特征在于， 上述显示控制单元对一览显示的上述图像中的被选择的图像附加表示已选择的意思的识别信息，并对该识别信息进行标 记显示或增强显示，或者在仅显示被选择的图像的副显示区域 上追加显示上述被选择的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24. 根据权利要求23所述的图像处理装置，其特征在于， 上述显示控制单元使上述副显示区域所显示的图像随着一览显示画面的滚动动作而进行滚动，并且在该副显示区域^又显 示上述一览显示的区间的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25. 根据权利要求16所述的图像处理装置，其特征在于， 上述显示控制单元还进行如下处理：将在以运动图像的方式显示按时间序列拍摄的上述图像的运动图像显示画面上任意 选择的图像追加显示在对上述检测图像进行 一 览显示的 一 览显 示画面，并且将从检测出并被一览显示的上述图像中任意选择 的该图像进行增强显示或者附加用于识别所选择的该图像的识 别信息来进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26. 根据权利要求16所述的图像处理装置，其特征在于， 上述显示控制单元将表示上述检测出的所有图像数据在上述概要信息中的位置的识别信息附加到上述概要信息中来进行 显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27. 根据权利要求26所述的图像处理装置，其特征在于，上述显示控制单元还进行如下处理：仅对与包含在上述概 要信息中的期望范围中的上述识别信息对应的图像进行一览显 示，放大显示该期望范围的概要信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28. 根据权利要求16所述的图像处理装置，其特征在于， 能够以行为单位或以页为单位指定被一览显示的上述检测图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29. 根据权利要求l所述的图像处理装置，其特征在于， 上述显示控制单元在第 一方向上显示由上述图像检测单元从上述时间序列图像数据中检测出的检测图像数据，将与各个 该检测图像数据前后的帧图像相当的0个以上的上述时间序列 图像数据从该检测图像数据起显示在第二方向上。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30. 根据权利要求l所述的图像处理装置，其特征在于， 上述显示控制单元在光标被置于上述一览显示的各图像的情况下，放大显示该图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="31" class="claim">
+      <div class="claim-text">31. 根据权利要求3所述的图像处理装置，其特征在于， 上述图像处理装置还具备相似度阈值设定单元，该相似度阈值设定单元通过设定关于上述图像数据间的相似度的阈值， 能够调整要检测的图像的相似度的水平。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32. 根据权利要求l所述的图像处理装置，其特征在于， 上述图像处理装置还具备区间设定单元，该区间设定单元从上述时间序列图像数据中指定处于任意的区间的时间序列图 像，上述显示控制单元对所指定的上述区间内的时间序列图像 群进行一览显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33. 根据权利要求31所述的图像处理装置，其特征在于， 上述图像处理装置还具备区间设定单元，该区间设定单元从上述时间序列图像数据中指定处于任意的区间的时间序列图像，上述显示控制单元根据上述阈值，从所指定的上述区间内 的时间序列图像中 一 览显示检测图像数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34. 根据权利要求l所述的图像处理装置，其特征在于，上述图像处理装置还具备设定单元，该设定单元从上述时 间序列图像数据中指定多个任意的区间，对所指定的每个该区 间设定用于由上述图像才全测单元进行4全测的阈值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35. 根据权利要求l所述的图像处理装置，其特征在于， 上述显示控制单元在以多页 一 览显示了上述图像的情况下，每当经过^见定时间时翻页。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36. 根据权利要求3所述的图像处理装置，其特征在于， 上述图像显示单元还具备再现时间设定单元，该再现时间设定单元能够设定对上述检测图像进行再现的时间，上述显示控制单元基于所设定的上述时间，根据帧频计算 要再现的图像个数，决定关于上述图像数据间的差的阈值以能 够得到所计算出的该图像个数的上述检测图像数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="37" class="claim">
+      <div class="claim-text">37. &#8212;种图像处理装置，其特征在于，具备： 获取单元，其获取时间序列图像数据，该时间序列图像数据是由胶&#22178;型内窥镜按时间序列拍摄得到的图像数据；图像检测单元，其从所获取的上述时间序列图像数据中检 测规定的图像数据；显示单元，其具有用于显示图像的主显示区域和两个副显 示区域，该副显示区域小于该主显示区域；以及显示控制单元，其在上述主显示区域上再现由上述图像检 测单元从上述时间序列图像数据中检测出的检测图像数据，并 且在各上述副显示区域上对该检测图像数据前后的检测图像数 据进行再现显示，如果该再现停止，则在该主显示区域上显示停止该再现时的检测图像数据，并且在该副显示区域上显示与 该检测图像数据前后的帧图像相当的该时间序列图像数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="38" class="claim">
+      <div class="claim-text">38. &#8212;种图像处理装置的动作方法，其特征在于， 获取时间序列图像数据，该时间序列图像数据是由胶&#22178;型内窥镜按时间序列拍摄得到的图像数据，从所获取的上述时间序列图像数据中检测规定的图像数据，对作为上述检测出的图像数据的检测图像数据进行一览显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，根据在显示指示输入画面上输入的指示，选择在进行上述 检测时使用的检测方法、选择用于进行上述一览显示的一览显 示或者以运动图像的方式对按时间序列拍摄得到的上述图像数 据进行再现，上述显示指示输入画面被输入与显示有关的指示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="40" class="claim">
+      <div class="claim-text">40. 根据权利要求39所述的图像处理装置的动作方法，其 特征在于，能够通过上述显示指示输入画面选择的4全测方法是如下方法中的至少 一 个或两个以上的组合：每隔固定间隔抽取按时间序列拍摄得到的上述图像数据； 根据按时间序列排列的第n个的图像数据与第n士m个（n、 m:任意的整数）的图像数据间的差来抽取图像数据；根据病变位置的特征来抽取上述图像数据；以及 根据上述图像数据的颜色成分来抽取图像数据； 根据按时间序列排列的第n个的图像数据与第n个的前后p个（n、 p:任意的整数）的图像平均值的图像数据间的差来抽取图像数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41. 根据权利要求40所述的图像处理装置的动作方法，其 特征在于，还显示通过上述检测方法没有被抽取出的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，以纵向j(j:任意的整数）个x横向k(k:任意的整数）个的方 式一览显示上述图像数据的缩略图。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="43" class="claim">
+      <div class="claim-text">43. 根据权利要求42所述的图像处理装置的动作方法，其 特征在于，关于上述jxk的设定，能够由用户任意地进行设定，或者根 据上述缩略图的大小进行设定。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="44" class="claim">
+      <div class="claim-text">44. 根据权利要求42所述的图像处理装置的动作方法，其 特征在于，还将一览显示的上述缩略图中的拍摄到病变部位的缩略图 进行增强显示，或者对该缩略图附加规定的识别信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="45" class="claim">
+      <div class="claim-text">45. 根据权利要求42所述的图像处理装置的动作方法，其 特征在于，还在一览显示的上述缩略图中的规定的缩略图被选择的情 况下，显示如下命令中的至少一个命令：对与所选择的该缩略图对应的图像数据附加意见信息的命令；将所选择的该缩略图追加到规定的图像显示区域中的命令；在与病例有关的报告中添加与所选择的该缩略图对应的图 像数据的命令；在作为时间刻度而显示的时间显示轴上标记出与所选才&#22890;的 该缩略图对应的图像数据处于哪个位置的命令，该时间刻度表示按时间序列拍摄得到的 一 系列的上述图像数据的摄像期间；转变为以运动图像的方式对与所选择的该缩略图对应的图 像数据以后的图像数据进行再现的运动图像显示画面，来以运动图像的方式再现该图像数据的命令；显示与所选择的该缩略图对应的图像数据的前后x(x:任意的整数）个图像的命令；显示处于所选择的该缩略图与时间序列上的所选择的该缩 略图的前一个上述一览显示的缩略图之间的所有图像的命令； 以及显示处于所选择的该缩略图与时间序列上的所选择的该缩 略图的后一个上述一览显示的缩略图之间的所有图像的命令。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="46" class="claim">
+      <div class="claim-text">46. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，在检测上述图像数据的情况下，使用如下图像检测例程中 的至少 一 个图像检测例程来从按时间序列拍摄得到的图像数据 中检测上述规定的图像作为上述检测图像数据： 检测每隔固定时间的图像的图像检测例程； 检测相邻的图像之间相似度低的图像的图像4企测例程； 检测拍摄到病变部位的图像的图像检测例程； 检测除了诊断所不需要的图像以外的图像的图像检测例 程；以及#全测*见定颜色成分的像素的比例多的图像或包含少见定颜色 成分的像素的比例多的区域的图像的图像检测例程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="47" class="claim">
+      <div class="claim-text">47. 根据权利要求46所述的图像处理装置的动作方法，其 特征在于，显示通过上述图像检测例程没有被抽取出的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="48" class="claim">
+      <div class="claim-text">48. 根据权利要求46所述的图像处理装置的动作方法，其特征在于，还能够选择上述图像检测例程。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="49" class="claim">
+      <div class="claim-text">49. 根据权利要求46所述的图像处理装置的动作方法，其 特征在于，还将作为所检测出的图像数据的上述检测图像数据与在该 检测中使用的图像检测例程名进行关联，在显示上述 一 览显示 的图像的同时，将该图像检测例程名作为标签名进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="50" class="claim">
+      <div class="claim-text">50. 根据权利要求46所述的图像处理装置的动作方法，其 特征在于，还对上述一览显示的图像中的被选择的图像附加意见信自、</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="51" class="claim">
+      <div class="claim-text">51. 根据权利要求50所述的图像处理装置的动作方法，其 特征在于，还制作与针对上述一览显示的图像中的被选择的图像的病 例有关的报告，在上述被选择的图像中附加有上述意见信息的情况下，在 对上述报告插入该被选择的图像的同时插入该意见信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="52" class="claim">
+      <div class="claim-text">52. 根据权利要求51所述的图像处理装置的动作方法，其 特征在于，还将所检测出的所有的上述检测图像数据成批输出到上述 报告中。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="53" class="claim">
+      <div class="claim-text">53. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，对作为检测出的图像数据的上述检测图像数据进行一览显 示，并且显示按时间序列拍摄的所有图像的概要信息，并且随 着进行从该 一 览显示的检测图像中选择任意的图像的动作，将 表示所选择的该图像在上述概要信息中的位置的标记信息附加到上述概要信息中来进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="54" class="claim">
+      <div class="claim-text">54. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，将表示上述概要信息所包含的图像群中的上述一览显示的 图像群的区间的标记信息附加到该概要信息中来进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="55" class="claim">
+      <div class="claim-text">55. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，在对上述检测图像进行一览显示的情况下，以行为单位、 以页为单位或以图像为单位使上述^r测图像滚动。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="56" class="claim">
+      <div class="claim-text">56. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，在从以运动图像的方式显示按时间序列拍摄的上述图像的 运动图像显示画面转变为对上述检测图像进行一 览显示的 一 览 显示画面时，从所检测出的上述时间序列的检测图像群的开头 起进行一览显示，或者以在该运动图像显示画面上正在显示的 画面为中心对上述检测图像进行一览显示，或者对包含该运动 图像显示画面上正在显示的画面的范围的上述检测图像进行一 览显示，或者在上述检测图像的一览的页的开头显示该运动图 像显示画面上正在显示的图像，或者在上述检测图像的一览的 页的末尾显示该运动图像显示画面上正在显示的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="57" class="claim">
+      <div class="claim-text">57. 根据权利要求13所述的图像处理装置的动作方法，其 特征在于，在从以运动图像的方式显示按时间序列拍摄的上述图像的 运动图像显示画面转变为对上述检测图像进行一 览显示的 一 览 显示画面时，能够设定将该图像显示在一览显示画面上的位置。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="58" class="claim">
+      <div class="claim-text">58. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，在从对上述;f企测图像进行一览显示的一览显示画面转变为 以运动图像的方式显示按时间序列拍摄的上述图像的运动图像 显示画面时，对上述按时间序列拍摄的开头图像进行显示，或 者再次对转变为上述一览显示画面之前的前一次在上述运动图 像显示画面上所显示的图像进行显示，或者对上述一览显示画 面上所选择的画面进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="59" class="claim">
+      <div class="claim-text">59. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，将表示页区间的标记信息附加在上述概要信息中来进行显 示，该页区间是一次一览显示的图像群的单位。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="60" class="claim">
+      <div class="claim-text">60. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，对一览显示的上述图像中的被选择的图像附加表示已选择 的意思的识别信息，并对该识别信息进行标记显示或增强显示， 或者在仅显示被选择的图像的副显示区域上追加显示上述被选 择的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="61" class="claim">
+      <div class="claim-text">61. 根据权利要求60所述的图像处理装置的动作方法，其 特征在于，使上述副显示区域所显示的图像随着 一 览显示画面的滚动 动作而进行滚动，并且在该副显示区域仅显示上述 一 览显示的 区间的图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="62" class="claim">
+      <div class="claim-text">62. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，还将在以运动图像的方式显示按时间序列拍摄的上述图像 的运动图像显示画面上任意选择的图像追加显示在对上述检测 图像进行一览显示的一览显示画面，并且将从检测出并被一览 显示的上述图像中任意选择的该图像进行增强显示或者附加用于识别所选择的该图像的识别信息来进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="63" class="claim">
+      <div class="claim-text">63. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，将表示上述检测出的所有图像数据在上述概要信息中的位 置的识别信息附加到上述概要信息中来进行显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="64" class="claim">
+      <div class="claim-text">64. 根据权利要求63所述的图像处理装置的动作方法，其 特征在于，还仅对与包含在上述概要信息中的期望范围中的上述识别信息对应的图像进行一览显示，放大显示该期望范围的概要信 白</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="65" class="claim">
+      <div class="claim-text">65. 根据权利要求53所述的图像处理装置的动作方法，其 特征在于，能够以行为单位或以页为单位指定被一 览显示的上述检测 图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="66" class="claim">
+      <div class="claim-text">66. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，在第一方向上显示从上述时间序列图像数据中检测出的上 述检测图像数据，将与各个该检测图像数据前后的帧图像相当 的0个以上的上述时间序列图像数据从该检测图像数据起显示 在第二方向上。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="67" class="claim">
+      <div class="claim-text">67. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，在光标被置于一览显示的上述各图像的情况下，放大显示 该图像。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="68" class="claim">
+      <div class="claim-text">68. 根据权利要求40所述的图像处理装置的动作方法，其 特征在于，还通过设定关于上述图像数据间的相似度的阈值，来调整要检测的图像的相似度的水平。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="69" class="claim">
+      <div class="claim-text">69. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，还从上述时间序列图像数据中指定处于任意的区间的时间 序列图像，并对所指定的该区间内的时间序列图像群进行一 览 显示。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="70" class="claim">
+      <div class="claim-text">70. 根据权利要求68所述的图像处理装置的动作方法，其 特征在于，从上述时间序列图像数据中指定处于任意的区间的时间序 列图像，根据上述阈值，从所指定的上述区间内的时间序列图像中 一览显示检测图像数据。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="71" class="claim">
+      <div class="claim-text">71. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，还从上述时间序列图像数据中指定多个任意的区间，对所 指定的每个该区间设定用于检测上述规定的图像的阈值。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="72" class="claim">
+      <div class="claim-text">72. 根据权利要求38所述的图像处理装置的动作方法，其 特征在于，在以多页一览显示了上述图像的情况下，每当经过规定时 间时翻页。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="73" class="claim">
+      <div class="claim-text">73. 根据权利要求40所述的图像处理装置的动作方法，其 特征在于，设定对上述检测图像进行再现的时间，基于所设定的上述时间，根据帧频计算要再现的图像个数， 决定关于上述图像数据间的差的阔值以能够得到所计算出的该 图像个数的上述检测图像数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="74" class="claim">
+      <div class="claim-text">74. &#8212;种图像处理装置的动作方法，其特征在于，获取时间序列图像数据，该时间序列图像数据是由胶&#22178;型 内窥镜按时间序列拍摄得到的图像数据，从所获取的上述时间序列图像数据中检测规定的图像数据，对具有用于显示图像的主显示区域和两个副显示区域的显示画面进^亍显示，该副显示区域小于该主显示区3或；以及在上述主显示区域上再现从上述时间序列图像数据中检测 出的上述;f全测图像数据，并且在各上述副显示区域上对该检测 图像数据前后的检测图像数据进行再现显示，如果该再现停止， 则在该主显示区域上显示停止该再现时的检测图像数据，并且 在该副显示区域上显示与该检测图像数据前后的帧图像相当的 该时间序列图像数据。</div>
+    </div>
+    </div> <div class="claim"> <div num="75" class="claim">
+      <div class="claim-text">75.   &#8212;种图像显示程序，使计算机执行显示图像的处理， 该图像显示程序的特征在于，使计算机执行如下处理：获取处理，获取时间序列图像数据，该时间序列图像数据 是由胶&#22178;型内窥镜按时间序列拍摄得到的图像数据；图像检测处理，从所获取的上述时间序列图像数据中检测 规定的图像数据；以及显示控制处理，以一览形式显示作为上述检测出的图像数 据的检测图像数据。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES36940329" lang="ZH" load-source="patent-office" class="description">
+    <p>图像处理装置、该图像处理装置的动作方法以及程序 技术领域</p>
+    <p>本发明涉及由胶&#22178;型内窥镜所拍摄到的观察图像的显示。 背景技术</p>
+    <p>近年来，胶&#22178;型内窥镜系统受到关注。胶&#22178;型内窥镜系统</p>
+    <p>是如下的系统（例如，专利文献l):在从患者的口中吞服具备摄 像装置和无线装置的胶&#22178;形状的内窥镜之后直到从人体自然排 出该胶&#22178;型内窥镜为止的观察期间，该胶&#22178;型内窥镜能够依次 拍摄胃、小肠等脏器，向外部的接收机发送该摄像图像并进行 记录，将所记录的该图像显示在工作站等的计算机的显示器上 来进行再现。</p>
+    <p>如上所述，胶&#22178;型内窥镜与普通的内窥镜不同，在受验者 吞服该胶&#22178;型内窥镜之后直到自然排出为止的期间该胶&#22178;型内 窥镜拍摄各脏器，因此如观察(检查）时间为大约8个小时那样所 需时间较长。因此，在诊察等阶段，确认长时间拍摄到的庞大 数量的所有图像或者检测所期望的图像也要花费大量的时间、 劳力。因此，公开了一种具有如下功能的胶&#22178;型内窥镜系统： 将小肠用胶&#22178;型内窥镜的大约8个小时的检查数据归纳为大约 1&#12316;2分钟的摘要（digest)，并以运动图像的方式进行显示。</p>
+    <p>然而，以运动图像的方式显示该摘要并不是最好的方法。 这是因为以运动图像的方式进行显示是指一个一个地依次显示 静止图像，例如在病变部分存在于最后图像中的情况下，直到 再现结束之前无法看到病变部分，另外，有时该运动图像的再 现速度也不适合用户。</p>
+    <p>另外，胶&#22178;型内&#31418;镜的观察装置具有从最长8个小时、大约60000个的图像中检测出血等病变的红色检测功能。在红色检测 条上显示所检测出的红色的位置。以往，医生为了观察所检测 出的图像，需要 一 边使图像的再现位置与红色检测条所显示的 4企测位置一致， 一边逐一确认图像。例如，在将通过红色4企测 所检测出的所有图像都作为要记载在报告中的图像而进行选择 时，需要按下逐帧播放按钮来逐一进行选择，花费时间。</p>
+    <p>鉴于上述问题，本发明的目的在于在对由胶&#22178;型内窥镜所 拍摄的一 系列图像群的摘要或通过规定的图像处理所检测出的 图像进行显示的情况下进行一 览显示。</p>
+    <p>专利文献l:日本特开2007-75158号公报</p>
+    <p>发明内容</p>
+    <p>本发明所涉及的图像处理装置具备：获取单元，其获取时 间序列图像数据，该时间序列图像数据是由胶&#22178;型内窥镜按时 间序列拍摄得到的图像数据；图像检测单元，其从所获取的上 述时间序列图像数据中检测规定的图像数据；以及显示控制单 元，其对作为上述检测出的图像数据的检测图像数据进行一览 显示。</p>
+    <p>本发明所涉及的图像处理装置的特征在于，具备：获取单 元，其获取时间序列图像数据，该时间序列图像数据是由胶&#22178; 型内&#31418;镜按时间序列拍摄得到的图像数据；图像检测单元，其 从所获取的上述时间序列图像数据中检测规定的图像数据；显 示单元，其具有用于显示图像的主显示区域和两个副显示区域，</p>
+    <p>该副显示区域小于该主显示区域；以及显示控制单元，其在上 述主显示区域上再现由上述图像检测单元从上述时间序列图像 数据中检测出的检测图像数据，并且在各上述副显示区域上对 该检测图像数据前后的检测图像数据进行再现显示，如果该再</p>
+    <p>20现停止，则在该主显示区域上显示停止该再现时的检测图像数 据，并且在该副显示区域上显示与该检测图像数据前后的帧图 像相当的该时间序列图像数据。</p>
+    <p>本发明所涉及的图像处理装置的动作方法的特征在于，获 取时间序列图像数据，该时间序列图像数据是由胶&#22178;型内窥镜 按时间序列拍摄得到的图像数据，从所获取的上述时间序列图 像数据中检测规定的图像数据，对作为上述检测出的图像数据 的检测图像数据进行 一 览显示。</p>
+    <p>另外，本发明所涉及的图像处理装置的动作方法的特征在 于，获取时间序列图像数据，该时间序列图像数据是由胶&#22178;型 内&#31418;镜按时间序列拍摄得到的图像数据，从所获取的上述时间 序列图像数据中检测规定的图像数据，对具有用于显示图像的 主显示区i或和两个副显示区i或的显示画面进4亍显示，该副显示</p>
+    <p>区域小于该主显示区域；以及在上述主显示区域上再现从上述 时间序列图像数据中检测出的上述检测图像数据，并且在各上 述副显示区域上对该检测图像数据前后的检测图像数据进行再 现显示，如果该再现停止，则在该主显示区域上显示停止该再 现时的检测图像数据，并且在该副显示区域上显示与该检测图 像数据前后的帧图像相当的该时间序列图像数据。</p>
+    <p>本发明所涉及的使计算机执行显示图像的处理的图像显示 程序的特征在于，使计算机执行如下处理：获取处理，获取时 间序列图像数据，该时间序列图像数据是由胶&#22178;型内&#31418;镜按时 间序列拍摄得到的图像数据；图像检测处理，从所获取的上述 时间序列图像数据中检测规定的图像数据；以及显示控制处理， 以 一 览形式显示作为上述检测出的图像数据的检测图像数据。</p>
+    <p>附图说明图l表示第一实施方式中的在体腔内检查中利用的胶&#22178;型 内窥镜及其外围设备。</p>
+    <p>图2表示第一实施方式中的对由胶&#22178;型内窥镜l所拍摄得到</p>
+    <p>的图像数据进行图像处理的工作站7的内部结构的概要。</p>
+    <p>图3表示第一实施方式的内窥镜系统的观察画面。</p>
+    <p>图4表示第一实施方式的摘要显示的显示方法为一览显示 的情况下的显示画面。</p>
+    <p>图5是用于说明第一实施方式中的选择了命令"再现该帧周 围的帧"54f的情况下的一例（之一）的图。</p>
+    <p>图6是用于说明第一实施方式中的选择了命令"再现该帧周 围的帧"54f的情况下的一例（之二）的图。</p>
+    <p>图7表示第一实施方式的摘要显示的显示方法为运动图像 显示的情况下的显示画面。</p>
+    <p>图8是用于说明第二实施方式的一览显示的图。</p>
+    <p>图9是用于说明第二实施方式中的针对被一览显示的各图 像附加注释的情形的图。</p>
+    <p>图IO是用于说明第二实施方式中的用于将一览显示的图像 成批输出到报告中的按钮的图。</p>
+    <p>图ll表示第三实施方式（实施例l)的同时显示一览显示和 彩色条或时间条并明确示出了在一览显示上所选择的图像的位 置关系的显示画面。</p>
+    <p>图12表示第三实施方式（实施例2)的以不同的画面同时显 示一览显示和彩色条或时间条并明确示出了在一览显示上所选 择的图像的位置关系的 一 览显示窗口和概要信息显示窗口 。</p>
+    <p>图13表示第四实施方式（实施例l)中的在彩色条或时间条 上显示一览显示区间的一览显示画面。</p>
+    <p>图14表示第四实施方式（实施例2)中的在彩色条或时间条</p>
+    <p>22上显示一览显示区间的一览显示画面。</p>
+    <p>图15表示第四实施方式（实施例3)中的在彩色条或时间条上显示一览显示区间的一览显示画面。</p>
+    <p>图16表示第四实施方式（实施例4)中的在彩色条或时间条上显示一览显示区间的一览显示画面。</p>
+    <p>图17表示第五实施方式中的以任意的单位实施一览显示上的滚动的一览显示画面。</p>
+    <p>图18表示第六实施方式（实施例l)中的从运动图像显示画面转变为 一 览显示画面的情形。</p>
+    <p>图19表示第六实施方式（实施例2)中的从运动图像显示画面转变为 一 览显示画面的情形。</p>
+    <p>图20表示第六实施方式（实施例3)中的从运动图像显示画面31转变为一览显示画面IOO的情形。</p>
+    <p>图21表示第六实施方式（实施例4)中的/人运动图 &lt;象显示画面31转变为一览显示画面IOO的情形。</p>
+    <p>图22表示第六实施方式（实施例5)中的从运动图像显示画面31转变为一览显示画面IOO的情形。</p>
+    <p>图23表示第七实施方式（实施例l)中的&#20034;人一览显示画面转变为运动图像显示画面的情形。</p>
+    <p>图24表示第七实施方式（实施例2)中的从一览显示画面转变为运动图像显示画面的情形。</p>
+    <p>图25表示第七实施方式（实施例3)中的/人一览显示画面转变为运动图像显示画面的情形。</p>
+    <p>图26表示第八实施方式中的在彩色条或时间条上显示一览显示的页区间的 一 览显示画面。</p>
+    <p>图27表示第九实施方式（实施例l)中的能够对一览显示上的关注图像作出记号的 一 览显示画面。图28表示第九实施方式（实施例2)中的能够对一览显示上的关注图像作出记号的 一 览显示画面。</p>
+    <p>图29表示第十实施方式（实施例l)中的一览显示用副显示区域的关注图像的显示状态发生变化的情形。</p>
+    <p>图30表示第十实施方式（实施例2)中的 一览显示用副显示区域的关注图像的显示状态发生变化的情形。</p>
+    <p>图31表示第十一实施方式中的在运动图像显示画面中所选出的图像被追加到 一 览显示画面中的情形。</p>
+    <p>图32表示第十二实施方式中的在彩色条或时间条上对为了一览显示而抽取出的图像作出标记的 一 览显示画面。</p>
+    <p>图33表示第十二实施方式（变形例l)中的对在与为了 一览显示而抽取出的图像对应的位置处作出标记的彩色条或时间条中的期望范围进行显示的 一 览显示画面的 一例。</p>
+    <p>图34表示第十二实施方式（实施例2)的一览显示画面。</p>
+    <p>图35表示第十三实施方式的一览显示画面100。</p>
+    <p>图36表示第十四实施方式中的使鼠标光标161移动到一览显示区域101上所显示的图像时的图像的放大显示。</p>
+    <p>图37表示第十五实施方式中的对用于检测摘要图像的检测条件进行设定的一企测条件设定画面。</p>
+    <p>图38表示第十六实施方式中的从时间序列图像群中指定位于特定区间的图像群并对所指定的该范围内的时间序列图像进行一览显示的一览显示画面100。</p>
+    <p>图39表示第十七实施方式中的用于按每个脏器（部位）或每个特定区间;险测摘要图像的测条件设定画面。</p>
+    <p>图40表示第十八实施方式中的在一览显示跨越多页的情况下在经过操作者所设定的时间之后依次对 一 览显示的页进行翻页的情形。图4 1表示第十九实施方式中的用于设定观察时间的检测条</p>
+    <p>件:没定画面200。</p>
+    <p>图42表示第二十实施方式中的内窥镜系统的观察画面。</p>
+    <p>具体实施方式</p>
+    <p>&lt;第 一实施方式&gt;</p>
+    <p>在本实施方式中，说明在显示由胶&#22178;型内&#31418;镜所拍摄的一系列图像群的摘要的情况下以一览形式进行显示的情形。通过使用本实施方式，在对由胶&#22178;型内窥镜所拍摄的一系列图像群的摘要或通过规定的图像处理所检测出的图像进行显示的情况下能够进行一览显示，能够高效地辨认所需的图像。</p>
+    <p>图l表示本实施方式的在体腔内检查中利用的胶&#22178;型内窥镜及其外围设备。如图1的（A)所示，使用了胶&#22178;型内窥镜l的检查系统由月交&#22178;型内&#31418;4竟1、天线村垫（antennapad)4、外部装置5构成。</p>
+    <p>通过患者2从口中吞服胶&#22178;型内窥镜l，该胶&#22178;型内&#31418;镜l检查体腔内。外部装置5是被配置在该患者2的体外的接收机，该接收机与通过无线接收由胶&#22178;型内窥镜l所拍摄的图像数据的多个天线衬垫4相连接。</p>
+    <p>在进行体腔内才全查时，将Compact Flash(注册商标）存储器等可移动式存储介质安装于外部装置5，来记录从胶&#22178;型内&#31418;镜1发送并由外部装置5所接收到的图像信息。</p>
+    <p>并且，通过该可移动式存储介质，将上述图像信息取入到个人计算机、工作站等终端装置7(在本实施方式中使用工作站</p>
+    <p>7)。 '</p>
+    <p>或者，如图1的（B)所示，该外部装置5能够安装于托架6中或者能够通过未图示的USB线缆等来与工作站7进行电连接，能</p>
+    <p>25够进行信息的传送。由此，能够将插入到该外部装置5的可移动式存储介质所存储的图像数据取入到工作站7。另外，也可以对</p>
+    <p>工作站7连接移动式存储介质的读取装置，对该读取装置插入可</p>
+    <p>移动式存储，从而读出可移动式存储所存储的图像数据，并将</p>
+    <p>该图像数据取入到工作站7。</p>
+    <p>通过键盘9、鼠标10等输入操作设备的操作来执行上述图像的取入。此时，也可以;险测USB等的电连接，以该电连接的&#26545;，测为触发来取入图像。取入到工作站7的图像能够显示在显示器8上或者输出到打印机。</p>
+    <p>如图1的（A)所示，在吞服胶&#22178;型内窥镜l来进行内&#31418;镜检查的情况下，在患者2所穿上的夹克3上安装有多个天线衬垫4。此时，也可以对患者直接粘贴天线衬垫4。由胶&#22178;型内窥镜l拍摄得到的图像数据通过无线向天线衬垫4发送，并由天线衬垫4接收该图像数据。然后，该图像数据被保存到与天线衬垫4相连接的外部装置5中。该外部装置5例如通过装卸自如的挂钩（hook)安装在患者2的腰带上。</p>
+    <p>图2表示本实施方式的对由胶&#22178;型内&#31418;镜l拍摄得到的图像数据进行图像处理的工作站7的内部结构的概要。工作站7由存储器20、大容量存储装置21、控制部22、输入接口（I/F)23、输出接口 （I/F)24、图像处理部25以及连接这些部件的总线26构成。</p>
+    <p>存储器20是在各种处理中利用的RAM(Random AccessMemory:随机存取存储器）、ROM(Read Only Memory:只读存储器）等存储器。大容量存储装置21是保存大容量的数据的硬盘驱动器（HDD)。</p>
+    <p>输入接口 23是耳又入来自外部装置5(或者Compact Flash(注册商标）存储器等的可移动式存储介质）的图像数据或者从键盘9、鼠标10等操作部输入数据或指示的输入接口 。输出接口24是用于向显示器8输出由胶&#22178;型内窥镜所拍摄的图像等或者向打印机等输出数据的输出接口 。</p>
+    <p>控制部22通过CPU等来实现，该CPU执行大容量存储装置21所存储的各种处理程序。另外，进行画面的控制、各种控制，该画面用于进行上述本发明的实施方式的一览显示、运动图像显示。</p>
+    <p>图像处理部25根据控制部22的控制，从外部装置5或大容量存储装置21获取图像数据，对所荻取的该图像数据进行浓度变换（伽马变换等）、平滑化（噪声去除等）、锐化（边缘增强等）、图像识别（特征图像区域的检测、平均色的运算等）等各种图像处理。</p>
+    <p>由胶&#22178;型内窥镜1拍摄得到的图像数据被逐 一 发送到外部装置5，并被存储到外部装置5内的可移动式存储介质中。如上所述，通过将外部装置5安装于托架6中或者将可移动式存储介质设置于读取装置中来与工作站7进行电连接，将所存储的该图像数据保存到工作站7内的大容量存储装置21中。这样，由胶&#22178;型内&#31418;镜l所拍:f聂的图像被取入到工作站7中。</p>
+    <p>图3表示本实施方式的内窥镜系统的观察画面。如图3所示，在显示器8上显示作为GUI画面的窗口 31("诊察/诊断"窗口）。在窗口31内，主显示区域32、图像操作区域39、作为表示一系列被检体内图像的摄像期间的时间刻度的彩色条36和时间条37以及副显示区域38在显示画面上按该顺序从上到下排列显示，其中，该主显示区域32显示主显示图像等，该图像操作区域39显示表示为图标的各种图像操作按钮，该副显示区域38显示缩略图等。</p>
+    <p>在主显示区域32内显示主显示图像33、天线配置图34、患者信息显示栏35以及摘要显示操作区域40，该主显示图像33是根据从键盘9 、鼠标1 0等操作部输入的指示信息而从 一 系列被检</p>
+    <p>体内图像中选择的图像，该天线配置图34示意性地表示患者2 上的天线ll的配置。</p>
+    <p>在患者信息显示栏3 5中作为文字信息而显示与选择作为主 显示图像33的被检体内图像相对应的患者2的姓名、ID编号、 性别、年龄、出生年月日、摄像年月日、摄像时刻等。此外， 在主显示区域32中根据规定操作能够显示两个以上的规定数量 的主显示图像。</p>
+    <p>在天线配置图34中，示意性地显示天线4的配置和患者2的 一部分轮廓。另外，在天线配置图34中，在天线ll的附近以文 字方式显示作为该各天线的识别编号的天线编号。</p>
+    <p>在摘要显示操作区域40中显示摘要显示算法选择开关 41(41a、 41b、 41c、 41d、 41e)、摘要显示方法选择开关42("&#8212; 览"开关42a、"运动图像"开关42b)以及运动图像控制键43。</p>
+    <p>摘要显示算法选择开关41是如下的开关：在从由胶&#22178;型内 窥镜所拍摄的庞大数量的时间序列图像（病例数据）中例如抽取 几百个&#12316;几千个的图像来作为摘要进行显示的情况下，指定用 于选择作为被显示为该摘要的对象的图像（以下称为摘要图像） 的算法。</p>
+    <p>当按下开关l(41a)时，例如抽取第20个、第40个、第60个…那 样，从由胶&#22178;型内窥镜所拍摄的庞大数量的图像中每隔固定间 隔而抽取图像来显示为摘要。</p>
+    <p>当按下开关2(41b)时，例如在第n个图像与第n+l个图像相 似的情况下，删除第n个图像，对所有图像进行这种删除操作， 其结果所得到的图像仅为图像之间有较大变化（运动）的图像， 因此将该图像显示为摘要。例如，能够取两个图像间的像素值 的差，根据该差是否超过阔值来判断图像间的相似。此外，进行比较的图像不限定于第n个图像和第n+l个图 像，也可以是第n个图像和第n士m个（m:任意的整数）图像。另 外，也可以根据第n个的图像数据与第n个的前后p个（n、 p:任 意的整数）的图像平均值的图像数据间的差来抽取图像数据。</p>
+    <p>当按下开关3(41c)时，仅抽取拍l聂到^皮认为出血、病变的 特征部位的图像，并作为摘要进行显示。作为抽取拍摄到出血 部位的图像的方法，例如也可以抽取在局部图像区域具有超过 规定阈值的红色成分的图像。另外，作为抽取拍摄到病变部位 的图像的方法，例如也可以预先登记病变形状、病变的颜色等 的图案，抽取具有与该图案一致或在规定的误差范围内一致的 图案的图像。</p>
+    <p>当按下开关4(41d)时，例如不抽耳又如仅反映出除了作为观 察对象的器官部分以外的器官（例如管腔部分）、残渣那样的进 行诊断所不需要的图像，而抽取除此以外的图像来显示为摘要。 作为抽取拍摄到除了作为观察对象的器官部分以外的器官的图 像的方法，例如能够根据图像整体的颜色成分的平均等来确定 器官，因此也可以根据目标器官的图像的特征（颜色成分等）的 相似度来进行抽取。</p>
+    <p>当按下开关5(41e)时，能够显示将开关2(41b)、开关3(41c) 以及开关4(41d)的功能组合得到的摘要图像。即，能够仅抽取 有运动且存在病变、红色的图像来显示摘要。</p>
+    <p>当按下开关6(41f)时，能够仅对大约8个小时的病例数据之 中用户预先选"f&#22890;的器官部分（例如小肠部分）应用开关 1(41a)&#12316;5(41e)中的任一个开关的功能。</p>
+    <p>当按下"一览"开关42a时，以一览的方式显示摘要图像。此 时，运动图像控制键43成为不显示状态或不可用状态。在图4 中详细记述该摘要图像的一览显示。</p>
+    <p>29当按下"运动图像"开关42b时，将摘要图像一 个 一 个地按顺</p>
+    <p>序显示为运动图像。此时，在运动图像控制键43处于不显示状 态或不可用状态的情况下，"运动图像"控制键4 3被显示并成为 可使用状态。在图7中详细记述该摘要图像的运动图像显示。</p>
+    <p>"运动图像"控制键4 3是以运动图像的方式显示摘要图像的 情况下控制运动图像的再现、反向再现、暂停的开关。</p>
+    <p>在彩色条36上按时间序列整体地显示包含在一系列被检体 内图像中的各图像的平均色。即，在彩色条36上的各时刻的显 示区域中显示有在该时刻所拍摄到的被检体内图像的平均色。 一系列被检体内图像由于与所拍摄到的脏器相应地具有特有的 平均色，因此观察者等根据沿着彩色条36上的时间轴（图3中是 横轴）的平均色的变化，能够容易地辨别各时刻的被检体内图像 中所拍摄到的脏器。</p>
+    <p>在时间条37上显示滑块37a，该滑块37a在该时间条37上能 够沿时间轴方向移动。滑块3 7 a在时间条3 7上指示作为主显示图 像33而显示的被检体内图像的拍摄时刻，并且随着主显示图像 33的显示切换而在时间条37上移动。</p>
+    <p>在副显示区域38上作为缩略图而显示从一 系列被检体内图 像中选择并抽取出的图像。具体地说，例如与规定的按钮操作 或鼠标操作等相应地，在该操作时刻显示为主显示图像3 3的被 检体内图像作为缩略图而追加显示在副显示区域38上。</p>
+    <p>图4表示本实施方式中的摘要显示的显示方法为一览显示 的情况下的显示画面。如上所述，当按下"一览"开关42a时，能 够显示该摘要一览显示画面51。 一览显示的各图像是缩略图。 以一览方式显示的缩略图的个数例如是纵向7个x横向7个、纵 向10个x横向10个等，能够由用户任意地进行选择。另外，缩 略图的大小也能够由用户任意地进行选择。此外，也可以设为当指定缩略图的大小时自动地显示与所指定的图像大小相应的 个数的缩略图。</p>
+    <p>当 一 览显示了摘要图像时，如附图标记52所示的帧那样， 拍摄到认为出血、病变的特征部位的帧图像自动地以高亮等方 式被增强显示，或者被附加规定的识别信息来进行显示。由此， 容易引起用户的注意。</p>
+    <p>当选择一览显示的摘要图像中的任意图像时，对显示有多</p>
+    <p>个命令的弹出式菜单54进行显示。弹出式菜单54所显示的命令 中有"追力口注释，，54a、"追力口缩略图"54b、"追力口才艮告"54c、"附 加界标"54d、"从该帧起再现"54e、"再现该帧周围的帧"54f。</p>
+    <p>当选择"追加注释"54a时，显示注释输入画面53,能够在一 览显示的基础上对所选择的该帧图像追加对该帧图像的意见等 来作为注释。此外，追加了注释的帧图^f象也可以自动地追加到 报告中。</p>
+    <p>当选择"追加缩略图"54b时，能够将所选择的该帧图像的缩 略图登记到副显示区域38(缩略图登记）。此外，也能够通过双 击或右击所选择的该帧图像来追加缩略图。</p>
+    <p>当选择"追加报告"5 4 c时，能够将所选择的该帧图像直接粘 贴在记载对病例的意见、诊断等的报告中。</p>
+    <p>当选择"附加界标"54d时，能够对所选择的该帧图像附加界 标。当附加界标时，在时间条37上的与附加有该界标的图像相 当的时间的位置处显示规定的标记。</p>
+    <p>当选裤，"从该帧起再现"54e时，转变为窗口31,在主显示区 域3 2上再现所选择的该帧图像以后的普通的运动图像。</p>
+    <p>当选择"再现该帧周围的帧"54f时，转变为窗口31,在主显 示区域32上一个一个地依次显示以所选才&#22890;的该帧图像为中心的 前后x(x:任意的整数）个图像来进行再现显示。关于x个的设定</p>
+    <p>31方法，既可以在菜单条的"设定，，中预先设定，也可以从通过右</p>
+    <p>击所显示的弹出式菜单中选择"再现该帧周围的帧"54f后，进一 步显示弹出式菜单，在该弹出式菜单内设置设定命令。另外， 当选择"再现该帧周围的帧"54f时，如图5和图6所示，转变为窗 口 31,在主显示区域32上一个一个地依次显示如下的图像来进 行再现显示：处于所选择的该帧图像与前一个抽取图像之间的 所有图像；以及处于所选择的帧图像与后 一 个抽取图像之间的 所有图像。</p>
+    <p>图7表示本实施方式的摘要显示的显示方法为运动图像显 示的情况下的显示画面。当按下"运动图像"开关42b时，在主显 示区域32内能够将摘要图像一个一个地按顺序显示为运动图 像。</p>
+    <p>在画面左侧显示"帧频"设定栏61 、"个数"设定栏62 、"时间" 显示栏63。在"帧频，，设定栏61中能够设定将由摘要显示算法选 择开关41所抽取的图像一个一个地按顺序显示为运动图像的情 况下的帧频。在"个数"设定栏62中能够设定将由摘要显示算法 选择开关41所抽取的图像一个一个地按顺序显示为运动图像的 情况下的显示个数。在"时间"显示栏6 3中根据"帧频"设定栏61 和"个数"设定栏62中所设定的帧频和个数来显示运动图像的再 现时间。</p>
+    <p>当以运动图像的方式显示摘要图像时，拍摄到认为出血、 病变的特征部位的帧图像自动地以高亮等方式被增强显示，或 者被附加规定的识别信息来进行显示。由此，容易引起用户的 注意。</p>
+    <p>在运动图像显示过程中按下"运动图像"控制键4 3的暂停 键，从而在显示任意帧图像的状态下停止该运动图像再现。当 对停止后的该画面进行右击或双击时，对显示有多个命令的弹出式菜单64进行显示。弹出式菜单54所显示的命令中有"追加注 释"64a、"追加缩略图"64b、"追加报告"64c、"附加界标"64d、 "从该帧起再现"64e、"再现该帧周围的帧"64f。</p>
+    <p>当选拷&#8212;'追加注释"64a时，显示注释输入画面63,能够在一 览显示的基础上对所选择的该帧图像追加注释。此外，追加了 注释的帧图J象也可以自动地追加到报告中。</p>
+    <p>当选择"追加缩略图"64b时，能够将所选择的该帧图像的缩 略图登记到副显示区域38(缩略图登记）。此外，也能够通过双 击或右击所选择的该帧图像来追加缩略图。</p>
+    <p>当选择"追加报告，，64c时，能够将所选择的该帧图像直接粘 贴在报告中。</p>
+    <p>当选择"附加界标"64d时，能够对所选择的该帧图像附加界 标。当附加界标时，在时间条37上的与附加有该界标的图像相 当的时间的位置处显示规定的标记。</p>
+    <p>当选择"从该帧起再现"64e时，再现所选择的该帧图像以后 的普通的运动图像。</p>
+    <p>当选择"再现该帧周围的帧"64f时， 一个一个地依次显示以 所选择的该帧图像为中心的前后x(x:任意的整数）个图像来进 行再现显示。关于x个的设定方法，既可以在菜单条的"设定" 中预先设定，也可以从通过右击所显示的弹出式菜单中选择"再 现该帧周围的帧"64f后，进一步显示弹出式菜单，在该弹出式 菜单内设置设定命令。</p>
+    <p>此外，在本实施方式中，在弹出式菜单中显示命令群，但 是不限定于此，例如也可以将命令群显示在预先显示的按钮、 下拉菜单等中。</p>
+    <p>另外，在本实施方式中，对通过摘要显示算法所抽取的图 像进行了一览显示，但是不限定于此，也可以对除了通过摘要显示算法所抽取的图像以外的图像进行一览显示。</p>
+    <p>根据本实施方式，能够按照用户的目的来选择摘要显示的</p>
+    <p>算法。另外，能够将摘要显示的显示方法设为多个来使用户选</p>
+    <p>择。另外，提供以摘要显示为中心的观察方式，可期待观察时</p>
+    <p>间的缩短。</p>
+    <p>&lt;第二实施方式&gt;</p>
+    <p>在第一实施方式中，以摘要图像为对象进行了一览显示， 但是在本实施方式中，对由胶&#22178;型内窥镜拍摄得到的病例数据</p>
+    <p>实施一个以上的图Y象处理例程，对通过各个图^f象处理所;险测出 的图像以标签的方式附加该图像处理例程名来进行 一 览显示。 此外，在本实施方式中，由于也使用第一实施方式所使用的工 作站7,因此省略其说明。</p>
+    <p>图8是用于说明本实施方式的一览显示的图。首先，由外部 装置5向工作站7传输由胶&#22178;型内窥镜拍摄得到的大约60000个 的图像所构成的病例数据71 。图像处理部25对该病例数据71实 施例如颜色检测（红色检测、白色检测等）、息肉检测等的一个 以上的图像处理例程，其中，在该颜色检测中对基于规定的颜 色成分的亮度值大于规定的阈值的图像进行检测，在该息肉检 测中根据预先登记的息肉的形状、颜色等图案来检测息肉。</p>
+    <p>接着，控制部22制作仅针对该病例数据71中的通过图像处 理所检测出的图像的列表数据72。列表数据72中通过上述图像 处理所检测出的图像与标签名相对应。标签名是通过上述图像 处理所检测出的图像的图像检测例程名（例如红色检测、白色检 测等）。</p>
+    <p>接着，控制部22根据该列表数据72,使显示器8将病例数据 的图像作为检测结果一览显示73而进行一览显示。此时，在一 览显示的各图像的附近显示标签名。此外，作为标签名而显示</p>
+    <p>34的内容不限定于文本，也可以是通过识别用图形等作出的标记。 由此，能够以一览显示的方式观察通过规定的图像处理例 程所检测出的图像，因此能够缩短观察这些检测结果时所花费 的时间。</p>
+    <p>接着，说明对一览显示的各图像附加注释的情形。 图9是用于说明本实施方式中的对一览显示的各图像附加 注释的情形的图。使用鼠标、键盘等输入装置对检测结果一览</p>
+    <p>显示73所显示的图像中的任一个图像进行选择，对所选择的该 图像输入注释。</p>
+    <p>于是，所输入的该注释数据72c被附加到列表数据72内的与 该注释数据对应的图像数据中。</p>
+    <p>并且，当使用鼠标等输入装置选择要记载在报告中的图像 时，在选择了附加有注释的图像的情况下，该注释被自动地插 入到报告74中。</p>
+    <p>由此，能够简单地对通过红色检测功能或白色检测功能等 所检测出的图像附加注释，因此能够高效地进行诊断。另外， 由于能够从所检测出的图像中简单地选择要记载在报告中的图 像，因此能够有效地制作报告。</p>
+    <p>此外，也可以如图10所示那样，通过按下设置于检测结果 一览显示73的画面上的规定的按钮75 ，来将列表数据72的图像 成批地记载到报告中。由此，由于能够简单地制作登载有所检 测出的所有图像的报告，因此能够高效地制作报告。</p>
+    <p>根据本实施方式，为了快速地浏览检测结果，而能够制作 包含所检测出的所有图像的列表数据，根据该列表数据来将图 像的一览显示在画面上。另外，能够使用键盘等输入装置来对 显示为检测结果的 一 览的图像输入能够使用于报告等的注释。 另外，通过按下设置在画面上的规定的按钮，能够将所检测出的所有图像自动地输出到报告中。 &lt;第三实施方式&gt;</p>
+    <p>在本实施方式中，对如下的操作进行说明：在同一画面上 实施缩略图的一览显示和所有图像的概要信息显示（彩色条、时 间条等），显示将在 一 览显示中选择或显示的缩略图与所有图像 的概要信息进行链接的信息。</p>
+    <p>图ll表示如下的第三实施方式（实施例l)的显示画面：同时 显示一览显示和彩色条或时间条，明确示出了在一览显示上所 选择的图像的位置关系。在一览显示画面100上存在显示有缩略 图的一览的一览显示区域101和显示有彩色条或时间条103等的 所有图像的概要信息的概要信息显示区域105 。</p>
+    <p>在彩色条或时间条103上，能够通过光标104等标记或线、 颜色变化等来对在一览显示上聚焦的图像102的位置信息进行 显示。</p>
+    <p>另外，当移动一览显示上的焦点（以下将一览显示上的通过 焦点所选择的图像称为焦点图像102。）时，随之，光标104等的 位置显示也移动到该焦点图像的位置。相反地，当移动彩色条 或时间条103上的光标104时，随之， 一览显示上的焦点也移动， 焦点图像102被变更。此时，在光标104移动到没被一览显示的 区域的情况下， 一览显示进行滚动，从而一览显示上的焦点聚 焦于与光标104的移动位置对应的图像上。</p>
+    <p>图12表示第三实施方式（实施例2)的如下的一览显示窗口 lll和才既要信息显示窗口 112:在不同的画面同时显示一览显示 和彩色条或时间条，明确示出了在一览显示上所选择的图像的 位置关系。</p>
+    <p>本实施例与上述实施例l不同，缩略图的一览显示区域与彩 色条或时间条103等的显示所有图像的概要信息的概要信息显</p>
+    <p>36示区域分离，分&#21029;如一览显示窗口 111、概要信息显示窗口112</p>
+    <p>那样成为不同的窗口 。</p>
+    <p>作为画面上的动作，与实施例l相同， 一览显示窗口上的焦</p>
+    <p>点随着概要信息显示窗口 112上的光标104的位置而进行移动。</p>
+    <p>因而，当对这两个画面中的一个画面进行操作时，才艮据该操作， 另一个画面的显示也随之发生变化。此外，画面的数量可以是 若干个，也可以存在与所显示的数据项目的数量相应的个数的画面。</p>
+    <p>&lt;第四实施方式〉</p>
+    <p>在本实施方式中，针对如下内容进行说明：显示正在一览 显示的图像的区间相当于所有图像的概要信息中的哪个部分。 作为表示相当于所有图像的概要信息中的哪个部分的方法，具 有画线、上色等各种方法。</p>
+    <p>图13表示第四实施方式（实施例1)的在彩色条或时间条上 显示一览显示区间的一览显示画面。如该图所示，通过在彩色 条或时间条103上画线115，能够明确在一览显示区域IOI中正在 一览显示的图像的区间。</p>
+    <p>图14表示第四实施方式（实施例2)的在彩色条或时间条上 显示一览显示区间的一览显示画面。如该图所示，通过改变颜 色来显示与正在一览显示的图像对应的区间所对应的彩色条或 时间条103上的区间部分116。由此，能够明确正在一览显示的 区间。</p>
+    <p>图15表示第四实施方式（实施例3)的在彩色条或时间条上 显示一览显示区间的一览显示画面。如该图所示，通过标记117 来显示与正在一览显示的图像对应的区间所对应的彩色条或时 间条103上的区间部分116。由此，能够明确正在一览显示的区 间。图16表示第四实施方式（实施例4)中的在彩色条或时间条 上显示一览显示区间的一览显示画面。在本实施例中，为了确 定一览显示的图像的区间，而改变对位置进行显示的光标104 的形状。在该图中，与光标104的宽度对应的区间的图像正在进 行一览显示。由此，能够明确正在一览显示的区间。</p>
+    <p>&lt;第五实施方式&gt;</p>
+    <p>在本实施方式中，针对如下内容进行说明： 一览显示画面 能够进行滚动，不仅是按每行进行该滚动，也可以选择每多行、 每个画面、每个图像来进行该滚动。</p>
+    <p>图17表示第五实施方式中的以任意的单位实施一览显示上 的滚动的一览显示画面。图17的（A)表示以一4于为单位将一览进 行滚动的情况。图17的（B)表示以多行为单位将一览进行滚动的 情况。图17的（C)表示以画面（页）为单位将一览进行滚动的情 况。图17的（D)表示以一个图像为单位将一览进行滚动的情况。</p>
+    <p>能够预先设定这种实施滚动操作的情况下的滚动量。因而， 根据设定值，滚动操作时的图像的滚动量不同。</p>
+    <p>&lt;第六实施方式&gt;</p>
+    <p>在本实施方式中，针对如下内容进4亍"i&#20812;明：在从进行运动 图像显示的画面转变为一览显示画面时，（l)从连续图像的开头 起选择或显示特征图像；（2)以在运动图像显示画面上正在显示 的画面为中心选才&#22890;或显示特征图像；（3)选择或显示包含运动图 像显示画面上正在显示的画面的范围的特征图像。</p>
+    <p>图18表示第六实施方式（实施例l)中的从运动图像显示画 面转变为 一 览显示画面的情形。该图左侧的运动图像显示画面 是相当于图3的画面31的画面。另外，光标120是表示图3的画面 31的彩色条36或时间条37上的当前的动作再现位置的光标。</p>
+    <p>在本实施例中，在从运动图像显示画面31转变为一览显示</p>
+    <p>38画面100时，与当前的运动图像的再现无关地，从连续图像的开</p>
+    <p>头起对特征图像进行一览显示。</p>
+    <p>由此，在/人运动图&lt;象显示画面31转变为一览显示画面100 时，无论是什么样的状况都能够从连续图像的开头起选择或显 示特征图像。另外，无论在什么样的操作的过程中都能够从连 续运动图像的开头起确认图像。</p>
+    <p>图19表示第六实施方式（实施例2)中的从运动图像显示画 面转变为一览显示画面的情形。在本实施例中，在从运动图像 显示画面31转变为一览显示画面100时，以在运动图^f象显示画面 31上当前正在再现的图像位置为中心来对规定个数的图像进行 一览显示。由此，能够对位于运动图像显示画面31上正在观察 的图像前后的特征图像进行观察。</p>
+    <p>图20表示第六实施方式（实施例3)中的从运动图像显示画 面31转变为一览显示画面100的情形。在本实施例中，在从运动 图像显示画面31转变为一览显示画面100时，对包含当前的图像 位置的页的图像进行一览显示。由此，无论从什么样的操作开 始，在光标处于规定的区间内的情况下，都选择或显示相同的 图像群。</p>
+    <p>图21表示第六实施方式（实施例4)中的从运动图像显示画 面31转变为一览显示画面100的情形。在本实施例中，在从运动 图像显示画面31转变为 一览显示画面IOO时，从页的开头起对当 前正在显示的图像进行一览显示。</p>
+    <p>图22表示第六实施方式（实施例5)中的从运动图像显示画 面31转变为一览显示画面100的情形。在本实施例中，在从运动 图4象显示画面31转变为一览显示画面IOO时，以当前正在再现的 图像成为页的末尾的方式进行一览显示。</p>
+    <p>另外，能够设定选择图18所示的第六实施方式（实施例l)、</p>
+    <p>39图19所示的第六实施方式（实施例2)、图20所示的第六实施方式 (实施例3)、图21所示的第六实施方式（实施例4)、图22所示的第 六实施方式（实施例5)中的哪一个实施例。 &lt;第七实施方式&gt;</p>
+    <p>在本实施方式中，针对如下的内容进行说明：在从一览显 示画面100转变为运动图^象显示画面31时，（l)对连续图^^的开 头图像进行显示；（2)对显示为一览显示画面之前的画面进行显 示；（3)对在一览显示画面上所选择的画面进行显示。</p>
+    <p>图23表示第七实施方式（实施例l)中的从一览显示画面转 变为运动图像显示画面的情形。在该图中，在从一览显示画面 IOO转变为运动图像显示画面31时，选择或显示连续图像的开头 图像。由此，无论在什么样的操作的过程中都能够从连续运动 图像的开头起确认图像。</p>
+    <p>图24表示第七实施方式（实施例2)中的从一览显示画面转 变为运动图像显示画面的情形。在该图中，在从一览显示画面 IOO转变为运动图像显示画面31时，选择或显示转变为一览显示 之前的图像。由此，无论在什么样的操作的过程中都能够返回 到一览显示画面显示前的操作。</p>
+    <p>图25表示第七实施方式（实施例3)中的从一览显示画面转 变为运动图像显示画面的情形。在该图中，在从一览显示画面 100转变为运动图像显示画面31时，选择或显示当前在一览上所 聚焦的图像。由此，能够以在一览显示图像中正在关注的图像 为起点来确认图像。</p>
+    <p>&lt;第八实施方式&gt;</p>
+    <p>在本实施方式中，针对如下内容进行说明：在一览显示画 面上选择或显示的画面跨越多页的情况下，将获知其页分隔那 样的显示线显示在所有图像的概要信息（彩色条或时间条）上。显示方法中有画线、上色等各种方法。</p>
+    <p>图26表示第八实施方式中的在彩色条或时间条上显示一览</p>
+    <p>显示的页区间的一览显示画面。如该图所示，在彩色条或时间</p>
+    <p>条103上所画的线130的间隔与被一览显示的图像的显示区间相 对应。</p>
+    <p>由此，能够明确一览显示中的页区间。此外，不仅仅用线 表示页的分割，例如也可以采用第四实施方式所示的各种标记 方法。</p>
+    <p>&lt;第九实施方式&gt;</p>
+    <p>在本实施方式中，说明在一览显示画面上能够对所关心的 图像作出记号的一览显示画面。</p>
+    <p>图27表示第九实施方式（实施例1)中的能够对一览显示上 的关注图像作出记号的一览显示画面。在本实施例中，在一览 显示画面IOO上能够选择所关注的图像并作出记号131。</p>
+    <p>如该图所示，能够通过显示标记等或改变框的颜色等在图 像附近进行显示来辨别作出记号的图像。此外，用于识别作出 记号的图像的标记只要是识别记号即可，标记的颜色、形状是 任意的。也可以是文本。</p>
+    <p>图28表示第九实施方式（实施例2)中的能够对一览显示上 的关注图像作出记号的一览显示画面。在本实施例中，与图27 同样地，在一览显示画面IOO上能够选择所关注的图像并作出记 号。</p>
+    <p>如该图所示，在一览显示区域101上作出记号的图像作为缩 略图136被登记在副显示区域135上。此外，与一览显示相关联 的标记只要是识别记号即可，标记的颜色、形状是任意的。也 可以是文本。</p>
+    <p>这样，在对一览显示的任意的图像作出记号的情况下，除</p>
+    <p>41了对该图像附加标记或者变更该图像的框的颜色（增强显示）等 在一览显示用缩略图的附近附加识别信息之外，还能够准备用 于显示作出记号的该图像的副显示区域，在该区域追加作出记 号的图像。</p>
+    <p>&lt;第十实施方式&gt;</p>
+    <p>在本实施方式中针对如下内容进行说明：当将一览显示区 域进行滚动时，与此同时地，在一览显示图像上作为关心图像 而作出记号并显示在副显示区域上的图像进行滚动。此时，在 副显示区域所显示的图像不存在于正在一览显示的图像区间内 的情况下，也能够选择显示该图像的方法或不显示该图像的方 法。</p>
+    <p>图29表示第十实施方式（实施例1)的一览显示用副显示区 域的关注图像的显示状态发生变化的情形。如该图所示，在一 览显示区域101上作出记号的关注图像作为缩略图而显示在副 显示区域135。</p>
+    <p>在副显示区域135仅显示处于当前在一览显示区域101上正 在显示的图像的区间的关注图像。因此，当滚动一览显示区域 101来替换所有图像时，与其相应地副显示区域135的缩略图也 被替换。此外，能够通过设定来切换当在一览显示区域101上替 换图像时副显示区域135是否也要替换。</p>
+    <p>图30表示第十实施方式（实施例2)的一览显示用副显示区 域的关注图像的显示状态发生变化的情形。如该图所示，在一 览显示区域IOI上作出记号的关注图像作为缩略图而显示在副 显示区域135上。</p>
+    <p>在本实施例中，没有被显示在一览显示区域101上的区间的 关注图像也全部都显示在副显示区域135上。因此，即使滚动一 览显示区域101来替换所有图像，副显示区域的缩略图也不会发生变化。</p>
+    <p>但是，在具有副显示区域135无法完全放置的数量的缩略图 的情况下，在中央显示与图像的显示位置最靠近的缩略图。此 外，能够通过设定来切换当在一览显示区域101上替换图像时副</p>
+    <p>显示区域135是否也要替换。 &lt;第十一实施方式&gt;</p>
+    <p>在本实施方式中，在进行运动图像显示的图像中存在已经 作为特征图像而拾取的图像的情况下，也能够设定为对通过为 了 一览显示而选择的算法没被选择的图像也进行一览显示。另 外，针对如下的内容进行说明：对这些图像显示表示通过其它 算法而被选择的情形的标记或者通过变更框的颜色等来作出标 记。</p>
+    <p>图31表示第十一实施方式中的在运动图像显示画面中拾取 的图像被追加到一览显示画面的情形。如该图所示，即使在运 动图像显示画面31中拾取的图像是通过所选择的 一 览显示用算 法（病变部检测等）没有被选择的图像，也能够进行显示为一览 显示画面上的缩略图的设定。也可以通过显示表示不是通过所 选择的一览显示用算法而选择的图像的标记来区分该拾取图 像。</p>
+    <p>&lt;第十二实施方式〉</p>
+    <p>在本实施方式中，针对如下内容进行说明：将一览显示画 面所显示的每个图像的位置叠加显示在所有图像的概要信息 上。由此，能够判断通过所选择的算法抽取出的图像存在于所 有图像的哪个部分。</p>
+    <p>图32表示第十二实施方式中的在彩色条或时间条上对为了 一览显示而抽取出的图像作出标记的一览显示画面。如该图所 示，通过线140在彩色条或时间条103上的与为了 一览显示而抽</p>
+    <p>43取出的各个图像相对应的位置作出标记。由此，能够明确为了 一览显示而抽取出的图像在彩色条或时间条103上的位置。此 外，不仅仅用线表示图像的位置，也可以采用第四实施方式所 示的各种标记方法。</p>
+    <p>图33表示第十二实施方式（变形例l)中的对在与为了 一览 显示而抽取出的图像对应的位置处作出标记的彩色条或时间条 中的期望范围进行显示的一览显示画面的一例。在图32中，在 表示所有时间序列图像的彩色条或时间条103上，在与为了一览 显示而抽取出的各个图像对应的位置处作出标记。另 一方面， 在本变形例中，选择图32所示的表示所有时间序列图像的彩色 条或时间条103中的期望范围，来使与所选择的该范围相应的彩 色条或时间条进行放大显示（彩色条或时间条103a)。在一览显 示区域IOI中 &lt;又显示与该彩色条或时间条103a上的标记相对应 的图像。</p>
+    <p>图34表示第十二实施方式（变形例2)的 一 览显示画面。从没 有缩小到期望范围的 一 览显示画面（图32)中，既可以如图34的 标记141所示那样以行为单位指定范围，或者也可以以页为单位 指定范围。</p>
+    <p>&lt;第十三实施方式&gt;</p>
+    <p>在本实施方式中，示出如下的显示例：将如上述实施方式 所说明的那样通过规定的检测算法所检测出的摘要图像和该摘 要图像前后的时间序列图像（不执行检测算法的情况下的图像) 显示在一览显示区域101上。</p>
+    <p>图35表示本实施方式的一览显示画面100。在一览显示区域 IOI上，在中央的列151中从上开始按顺序沿时间序列显示摘要 图像TV T2、 T3、 ...Tn。夹着各摘要图像L、 T2、 T3、…T。在左 右显示有各摘要图像L、 T2、 T3、…Tn前后的时间序列图像。具体地说，在图像区域153上连续显示时间序列上早于摘要图 像的一个以上的图像。另外，在图像区域152上连续显示时间 序列上晚于摘要图像的O个以上的图像。也可以为了容易获知 图像区域151是摘要图像而对图像区域151进行放大显示或附 力口才示i己。</p>
+    <p>根据本实施方式，能够确认通过规定的检测算法所检测出 的摘要图像前后的时间序列图像。由此，通过在一览显示的时 刻显示具有特征的图像前后的图像，能够提高观察的效率。</p>
+    <p>&lt;第十四实施方式&gt;</p>
+    <p>在本实施方式中，针对使鼠标光标161移动到一览显示区域 101所显示的各图像时的图像的放大显示进行说明。</p>
+    <p>图36表示本实施方式中的使鼠标光标161移动到一览显示 区域101所显示的图像时的图像的放大显示。最靠近鼠标光标 161的图像如附图标记160所示那样被放大显示。在显示由附图 标记160所示出的》文大显示时，也可以同时进行属性显示。</p>
+    <p>根据本实施方式，当将光标置于被一览显示的图像中的想 要关注的图像时，能够使该图像进行放大显示。由此，即使不 转变为其它画面也能够使想要关注的该图像进行放大显示，从 而提高观察效率。</p>
+    <p>&lt;第十五实施方式&gt;</p>
+    <p>在本实施方式中，说明设定用于^r测摘要图像的阈值的情况。</p>
+    <p>图37表示本实施方式中的对用于检测摘要图像的检测条件 进行设定的4企测条件设定画面。如第一实施方式所说明的那样， 当按下开关2(41b)时，从时间序列图像中根据相似度来检测摘 要图像，在检测条件设定画面170中能够设定该相似度。</p>
+    <p>在图37中"特征水平"171相当于上述相似度。在"特征水</p>
+    <p>45平"171中例如能够通过光标172从五个等级选择并设定特征水</p>
+    <p>平。如上所述，例如取两个图像间的像素值的差，根据该差是否超过阈值来判断图像间的相似。因而，将特征水平设定得越大，该差变得越大。</p>
+    <p>在设定上述检测条件来更新该设定内容的情况下，按下"确</p>
+    <p>定，，按钮174。在关闭该画面的情况下，按下"关闭，，按钮175。才艮据本实施方式，在进行斗全测时，能够由用户i殳定^r测条</p>
+    <p>件，因此能够进行更适合用户的检测。&lt;第十六实施方式&gt;</p>
+    <p>在本实施方式中，针对如下内容进行说明：从时间序列图像群中指定处于特定区间的图像群，并对所指定的该范围内的时间序列图像进行一览显示。</p>
+    <p>图38表示本实施方式中的从时间序列图像群中指定处于特定区间的图像群并对所指定的该范围内的时间序列图像进行一览显示的一览显示画面100。</p>
+    <p>在彩色条或时间条103上，通过特定区间开始光标181指定区间的开始，通过特定区间结束光标18 2指定区间的结束。于是，检测出所指定的该区间内的时间序列图像，并如附图标记183所示那样进行一览显示。此时，所指定的区间以外的时间序列图像也可以包含在一览显示图像中。</p>
+    <p>根据本实施方式，能够仅针对特定区间的时间序列图像进行显示。因此，通过将拍摄到任意脏器的图像的摄像区间设定为该特定区间，能够仅显示相应脏器的时间序列图像。</p>
+    <p>并且，通过与第十五实施方式组合，也可以对所设定的该特定区间内i殳定特^正^r测的阈值。由此，能够显示该特定区间内的摘要图像的一览。</p>
+    <p>&lt;第十七实施方式&gt;在本实施方式中，针对如下内容进行说明：指定时间序列图像的多个特定区间，对所指定的每个该区间设定用于检测摘要图像的阈值。</p>
+    <p>图39表示本实施方式中的用于按每个脏器（部位）或每个特定区间;险测摘要图 &lt;象的4全测条件设定画面。该图的画面由以下部分构成：特定区间开始光标191,其指定区间的开始；特定区间结束光标192,其指定区间的结束；指定各区间的指定光标193-1、…、193-n;设定画面196，其对用于冲佥测所指定的区间内的具有特征的图像的特征水平（阈值）进行设定；以及设定各区间的阈值的i殳定字l殳195-l、…、195-n。</p>
+    <p>首先，通过特定区间开始光标191、特定区间结束光标192、指定光标193-1、…、193-n来指定各区间。4妾着，在设定画面196的设定字段195-1、…、195-n中设定对应的指定区间的特征水平（阈值）。</p>
+    <p>根据上述设定内容，当检测摘要图像时，检测各区间内的摘要图像，并显示在一览显示画面上。此时，所指定的区间外的时间序列图像也可以包含在一览显示图像中。</p>
+    <p>根据本实施方式，能够按每个脏器（部位）或每个特定区间设定检测阈值。由此，能够应对如下问题：由于胶&#22178;型内窥镜的行进速度根据每个脏器（部位）而不同，因此特征检测的阈值根据每个部位而不同。</p>
+    <p>&lt;第十八实施方式〉</p>
+    <p>在本实施方式中，说明在经过操作者所设定的时间之后依次对 一 览显示的页进行翻页的情况。</p>
+    <p>图4 0表示本实施方式中的在 一 览显示跨越多页的情况下经过操作者所设定的时间之后依次对一 览显示的页进行翻页的情形。附图标记199表示滚动条。随着对一览显示进行翻页，滚动条也进行移动。</p>
+    <p>根据本实施方式，在即使进行一览显示也跨越多页的情况下，能够自动地进行翻页，因此能够省去用户进行滚动的麻烦。</p>
+    <p>&lt;第十九实施方式&gt;</p>
+    <p>在本实施方式中，针对如下内容进行说明：通过将观察时间指定为检测条件，来决定检测摘要图像的阈值。</p>
+    <p>图41表示本实施方式中的用于设定观察时间的才全测条件设定画面200。检测条件设定画面200由"观察时间"输入栏201、"确定"按钮174、"关闭"按钮175构成。当按下"关闭"按钮175时，关闭;f全测条件i殳定画面200。</p>
+    <p>当在"观察时间"输入栏201中设定时间（分钟）并按下"确定"按钮174时，能够在所设定的该观察时间内再现摘要图像。具体地说，基于所设定的该时间信息，根据帧频来计算作为观察对象的图像个数使得能够在操作者所设定的时间内进行观察。决定在从时间序列图像中进行检测时所使用的相似度的阈值（特征水平）以能够得到与所计算出的该图像个数相应的数量的摘要图像。</p>
+    <p>根据本实施方式，能够在忙碌的观察者所限定的时间内抽取特征水平较大的图像并进行观察。&lt;第二十实施方式&gt;</p>
+    <p>在本实施方式中，针对如下内容进行说明：在图3所说明的主显示区域32上作为主显示图像33显示摘要图像，在主显示图像33的左右（或上下）显示该摘要图像前后的时间序列图像。</p>
+    <p>图42表示本实施方式的内窥镜系统的观察画面。在窗口31内显示主显示区域32和彩色条或时间条103,该主显示区域32显示主显示图像等。</p>
+    <p>在主显示区域32内，在中央显示主显示图像33,夹着主显示图像33而在左右显示副显示图像211、 212。在摘要图像的再现过程中，当例如作为主显示图像33而再现摘要图像T2时，在副显示图像211、 212处再现该摘要图像T2前后的摘要图像1VT3。</p>
+    <p>当停止摘要图像的再现时，在主显示图像33处显示指示停止时的摘要图^f象T2。此时，在副显示图i象211、 212处分别显示摘要图像丁2前后的时间序列图像T2-1、 T2+l。</p>
+    <p>根据本实施方式，能够在显示摘要图像的同时显示摘要图</p>
+    <p>像前后的时间序列图像，因此能够提高观察效率。</p>
+    <p>根据本发明的实施方式，在通过一览图像显示来确认病例</p>
+    <p>数据时，通过与整体的位置关系相对照来进行观察，能够容易</p>
+    <p>掌握图像的时间序列上的信息。另外，通过提高现有的功能以</p>
+    <p>及一 览图像与运动图像显示的协作性，能够提高从连续图像中</p>
+    <p>检测特征部位的检测速度。</p>
+    <p>此外，在本发明所说明的任一个实施方式中，只要不脱离</p>
+    <p>其宗旨就能够进行各种变形。另外，在能够实施的限度内也能</p>
+    <p>够任意地组合两个以上上述实施方式。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102376332A?cl=zh">CN102376332A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年8月19日</td><td class="patent-data-table-td patent-date-value">2012年3月14日</td><td class="patent-data-table-td ">上海博泰悦臻电子设备制造有限公司</td><td class="patent-data-table-td ">专辑的播放显示界面的显示控制方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103764029A?cl=zh">CN103764029A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月7日</td><td class="patent-data-table-td patent-date-value">2014年4月30日</td><td class="patent-data-table-td ">株式会社日立医疗器械</td><td class="patent-data-table-td ">图像显示控制装置、图像显示控制方法以及程序</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103764029B?cl=zh">CN103764029B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月7日</td><td class="patent-data-table-td patent-date-value">2016年6月1日</td><td class="patent-data-table-td ">株式会社日立医疗器械</td><td class="patent-data-table-td ">图像显示控制装置、图像显示控制方法以及程序</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=A61B0005070000">A61B5/07</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=A61B0001040000">A61B1/04</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=A61B0001000000">A61B1/00</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F19/3406">G06F19/3406</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=G06F19/322">G06F19/322</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=WWR4BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=A61B1/041">A61B1/041</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">A61B1/04C</span>, <span class="nested-value">G06F19/32C</span>, <span class="nested-value">G06F19/34A</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年3月31日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2010年5月12日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年8月22日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2015年12月30日</td><td class="patent-data-table-td ">C41</td><td class="patent-data-table-td ">Transfer of patent application or patent right or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/59c4aea61847041bb14b/CN101686799A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E8%A3%85%E7%BD%AE_%E8%AF%A5%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E8%A3%85%E7%BD%AE.pdf?id=WWR4BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U0yvtapVB0nNI36F7dqeqe5A_NgAw"},"sample_url":"https://www.google.com/patents/reader?id=WWR4BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html><html><head><title>专利 CN102186077A - 基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_4874c258b856314cce6b80d777b4ee7a/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_4874c258b856314cce6b80d777b4ee7a__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法"><meta name="DC.contributor" content="宋彬" scheme="inventor"><meta name="DC.contributor" content="屈蓓" scheme="inventor"><meta name="DC.contributor" content="秦浩" scheme="inventor"><meta name="DC.contributor" content="杨明明" scheme="inventor"><meta name="DC.contributor" content="刘海华" scheme="inventor"><meta name="DC.contributor" content="西安电子科技大学" scheme="assignee"><meta name="DC.date" content="2011-5-4" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法，属于分布式视频编码技术领域，主要解决现有Wyner-Ziv帧选取量化矩阵时没有合理利用信道资源的问题，本发明的控制系统包括有训练模块、码率估计模块和选取模块。训练模块用于确定系数带率失真模型系数；码率估计模块利用结合信源信道编码的率失真模型计算估计码率；选取模块从八个备选量化矩阵中选取最佳量化矩阵。本发明通过建立结合信源信道编码的系数带率失真模型来估计系数带的码率，由此确定量化矩阵更加准确，从而提高了DVC的率失真性能。本发明提供的码率分配方法可用于无反馈码率控制的Wyner-Ziv视频编码系统中。"><meta name="DC.date" content="2011-9-14"><meta name="DC.relation" content="CN:101360236:A" scheme="references"><meta name="DC.relation" content="CN:101621690:A" scheme="references"><meta name="DC.relation" content="CN:101835042:A" scheme="references"><meta name="DC.relation" content="CN:101860748:A" scheme="references"><meta name="DC.relation" content="CN:102026000:A" scheme="references"><meta name="DC.relation" content="US:20100111198:A1" scheme="references"><meta name="DC.relation" content="US:5836003" scheme="references"><meta name="citation_reference" content="《北京邮电大学学报》 20090815 王凤琴等 变换域Wyner-Ziv视频编码的码率控制 15-19 1-6 第32卷, 第04期"><meta name="citation_reference" content="《通信学报》 20101231 宋彬等 Wyner-Ziv视频编码中边信息生成算法研究 97-103 1-6 第31卷, 第12期"><meta name="citation_patent_publication_number" content="CN:102186077:A"><meta name="citation_patent_application_number" content="CN:201110114629"><link rel="canonical" href="https://www.google.com/patents/CN102186077A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102186077A?cl=zh"/><meta name="title" content="专利 CN102186077A - 基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法"/><meta name="description" content="本发明公开了一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法，属于分布式视频编码技术领域，主要解决现有Wyner-Ziv帧选取量化矩阵时没有合理利用信道资源的问题，本发明的控制系统包括有训练模块、码率估计模块和选取模块。训练模块用于确定系数带率失真模型系数；码率估计模块利用结合信源信道编码的率失真模型计算估计码率；选取模块从八个备选量化矩阵中选取最佳量化矩阵。本发明通过建立结合信源信道编码的系数带率失真模型来估计系数带的码率，由此确定量化矩阵更加准确，从而提高了DVC的率失真性能。本发明提供的码率分配方法可用于无反馈码率控制的Wyner-Ziv视频编码系统中。"/><meta property="og:title" content="专利 CN102186077A - 基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102186077A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102186077A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=D86FBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102186077A&amp;usg=AFQjCNFLgLGqD1voOhcJsDtjs8KjCPardQ" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/ee77b76a7f2eedbdd390/CN102186077A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/ee77b76a7f2eedbdd390/CN102186077A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102186077A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102186077A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102186077A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102186077B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102186077A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法，属于分布式视频编码技术领域，主要解决现有Wyner-Ziv帧选取量化矩阵时没有合理利用信道资源的问题，本发明的控制系统包括有训练模块、码率估计模块和...</span><span itemprop="url">https://www.google.com/patents/CN102186077A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102186077A - 基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102186077A - 基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法" title="专利 CN102186077A - 基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102186077 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201110114629</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年9月14日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2011年5月4日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2011年5月4日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102186077B?hl=zh-CN&amp;cl=zh">CN102186077B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201110114629.5, </span><span class="patent-bibdata-value">CN 102186077 A, </span><span class="patent-bibdata-value">CN 102186077A, </span><span class="patent-bibdata-value">CN 201110114629, </span><span class="patent-bibdata-value">CN-A-102186077, </span><span class="patent-bibdata-value">CN102186077 A, </span><span class="patent-bibdata-value">CN102186077A, </span><span class="patent-bibdata-value">CN201110114629, </span><span class="patent-bibdata-value">CN201110114629.5</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%AE%8B%E5%BD%AC%22">宋彬</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%B1%88%E8%93%93%22">屈蓓</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%A7%A6%E6%B5%A9%22">秦浩</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%A8%E6%98%8E%E6%98%8E%22">杨明明</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%88%98%E6%B5%B7%E5%8D%8E%22">刘海华</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E8%A5%BF%E5%AE%89%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%22">西安电子科技大学</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102186077A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102186077A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102186077A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (7),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (3),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=D86FBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201110114629&amp;usg=AFQjCNGu9poIVkffMTd6CvsJv1e4oX1DEA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=D86FBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102186077A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNGGEm67E5X7iShy8BgAUV7n1Y_x_A"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT104494770" lang="ZH" load-source="patent-office">基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法</invention-title>
+      </span><br><span class="patent-number">CN 102186077 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA109408157" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法，属于分布式视频编码技术领域，主要解决现有Wyner-Ziv帧选取量化矩阵时没有合理利用信道资源的问题，本发明的控制系统包括有训练模块、码率估计模块和选取模块。训练模块用于确定系数带率失真模型系数；码率估计模块利用结合信源信道编码的率失真模型计算估计码率；选取模块从八个备选量化矩阵中选取最佳量化矩阵。本发明通过建立结合信源信道编码的系数带率失真模型来估计系数带的码率，由此确定量化矩阵更加准确，从而提高了DVC的率失真性能。本发明提供的码率分配方法可用于无反馈码率控制的Wyner-Ziv视频编码系统中。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(6)</span></span></div><div class="patent-text"><div mxw-id="PCLM51240173" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统，其特征在于：该系统包括有：训练模块、码率估计模块、选取模块，训练模块接收待编码序列的第一个 Wyner-Ziv帧，利用两个典型的量化矩阵进行训练，得到结合信源信道编码的系数带率失真模型系数，在码率估计模块中利用结合信源信道编码的系数带率失真BRD-SCC模型计算八个量化矩阵对应的估计码率，接入选取模块，在选取模块中将八个估计码率与目标码率相比较，选择满足目标码率的量化矩阵。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.权利要求1所述的Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统，其特征在于： 所述两个典型量化矩阵Ql和Q2分别为：</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00021.png"> <img id="icf0001" file="CN102186077AC00021.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00021.png" class="patent-full-image" alt="Figure CN102186077AC00021"> </a> </div>
+      </div>
+    </div>
+    </div> <div class="claim"> <div num="3" class="claim">
+      <div class="claim-text">3.	一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法，其特征在于：根据编码码率变化动态的选择量化矩阵，该控制方法的步骤包括有：步骤1，选取第一个GOP的Wyner-Ziv帧作为训练帧，对其进行4 X 4块的离散余弦变换 DCT，并提取系数带；步骤2，训练，利用两个典型量化矩阵Ql和Q2分别量化训练帧的系数带，生成两个率失真点，计算得到BRD-SCC模型系数a和b ；步骤3，读取当前Wyner-Ziv帧，对其进行4X4DCT，并提取系数带；步骤4，选择量化矩阵，利用系数带率失真模型和训练得到的BRD-SCC模型系数a 和b，计算得到八个量化矩阵对应的估计码率，将八个估计码率与帧层码率控制得到的 Wyner-Ziv帧目标码率相比较，选择与目标码率最接近的估计码率所对应的量化矩阵；步骤5，利用选择得到的量化矩阵量化Wyner-Ziv帧，并提取比特面；步骤6，按照边信息与源信息的相关性进行比特面码率分配；步骤7，步骤3至6为一个Wyner-Ziv帧的码率控制过程，重复步骤3至6即可完成整个视频序列所有Wyner-Ziv帧的码率控制。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.权利要求3所述的基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法，其特征在于：所述BRD-SCC模型的建立过程如下：4. 1，Wyner-Ziv帧的像素域率失真模型：</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00022.png"> <img id="icf0002" file="CN102186077AC00022.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00022.png" class="patent-full-image" alt="Figure CN102186077AC00022"> </a> </div>
+      </div>
+      <div class="claim-text">式中，R为Wyner-Ziv帧的码率，单位为比特，σ,2、σ&#8222;2分别为Wyner-Ziv帧和相关噪声的方差，D为量化失真；4. 2，由于</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00023.png"> <img id="icf0003" file="CN102186077AC00023.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00023.png" class="patent-full-image" alt="Figure CN102186077AC00023"> </a> </div>
+      </div>
+      <div class="claim-text">，所以上述率失真模型化简为：</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00024.png"> <img id="icf0004" file="CN102186077AC00024.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00024.png" class="patent-full-image" alt="Figure CN102186077AC00024"> </a> </div>
+      </div>
+      <div class="claim-text">4. 3，均&#21243;量化的量化失真D为量化步长Δ的函数，D= Δ2/12，将其代入上式，并考虑到不同信道编码的压缩性能，得到BRD-SCC模型： Rband = a &#183; Iog2(α A)+b式中，Rband定义为系数带的校验位数目与信息位数目的比值，α、Δ分别为拉普拉斯参数和量化步长</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00031.png"> <img id="icf0005" file="CN102186077AC00031.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00031.png" class="patent-full-image" alt="Figure CN102186077AC00031"> </a> </div>
+      </div>
+      <div class="claim-text">为边信息系数带与Wyner-Ziv帧系数带之间的噪声方差，a、b 为模型系数，它们均为二维1X16的数组，代表4X4DCT的16个系数带。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.权利要求3所述的基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法，其特征在于：训练过程，具体步骤如下：5. 1，结合边信息与Wyner-Ziv帧的DCT系数带，计算相关噪声模型参数α i ； 5. 2，用两个典型量化矩阵Ql和Q2，分别量化训练Wyner-Ziv帧，得到系数带Ti的两个量化步长Δ ‘ i和Δ 〃 并提取比特面；5. 3，分别计算在两种量化方案下，系数带\校验位数目与信息位数目的比值R’bandl和 R"bandl；band,5. 4，利用上面得到的两个率失真点，计算系数带xi的BRD-SCC模型系数^和、：</div>
+      <div class="claim-text">
+        <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00032.png"> <img id="icf0006" file="CN102186077AC00032.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AC00032.png" class="patent-full-image" alt="Figure CN102186077AC00032"> </a> </div>
+      </div>
+      <div class="claim-text">5.	5，重复上述4个步骤，得到所有BRD-SCC系数。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.权利要求3所述的基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法，其特征在于选择量化矩阵过程，具体步骤如下：6. 1，读取当前Wyner-Ziv帧的前驱关键帧和后继关键帧，简单运动补偿内插生成边信息；6. 2，对边信息进行4Χ 4DCT，并提取系数带Yi,它与Wyner-Ziv帧系数带的残差服从拉普拉斯分布；6. 3，计算系数带\的拉普拉斯参数α i ；6. 4，对应于确定的量化矩阵，计算系数带&amp;的量化步长Ai ；6. 5，将6. 3得到的拉普拉斯参数、和6.4得到的量化步长Ai代入BRD-SCC模型中， 估计各系数带的码率，并计算得到Wyner-Ziv帧的估计码率；6. 6，重复6. 3至6. 5，计算得到八个量化矩阵对应的估计码率； 6. 7，逐一比较目标码率和八个估计码率，若量化矩阵j对应的估计码率最接近目标码率，则选择量化矩阵j量化当前Wyner-Ziv帧。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES58281178" lang="ZH" load-source="patent-office" class="description">
+    <p>基于Wyner-Z i ν视频编码的Wyner-Z i ν帧码率控制系统和方法</p>
+    <technical-field>
+      <p>技术领域</p>
+      <p>[0001]	本发明属于视频编码技术领域，涉及分布式视频编码系统，具体是一种基于 Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法，可用于实际Wyner-Ziv视频编码系统和终端编码设备简单的视频通信系统。</p>
+    </technical-field>
+    <background-art>
+      <p>背景技术</p>
+      <p>[0002]	随着现代技术的发展，传统的视频编码标准H. 264/AVC, MPEG-X已不能满足某些应用场合，比如无线视频传感器网络、移动视频电话和无线视频监控等。因为这些应用普遍需要编码简单、需要小的功耗，所以客观上需要一种新的编解码系统，这种新的编解码系统应具有编码端的构成和处理简化的特点，编码端的复杂度远远小于比解码端，或者说将编码端的复杂度转移到解码端。</p>
+      <p>[0003]	分布式视频编码技术（Distributed Video Coding, DVC)与传统的编码技术相反，它是编码简单解码复杂的一种新的编解码方案。基于Slepain-Wolf无损编码理论和 Wyner-Ziv有损信源编码两个理论基础，分布式视频编码技术已日趋成熟。在无线视频传感器网络、移动视频电话和无线视频监控等得到广泛应用，因此Wyner-Ziv编码系统也是目前国内外分布式视频编码的一个研究热点，它将视频序列分为关键帧和Wyner-Ziv帧， 一个图像组（Group of Pictures，G0P)包括一个关键帧和它与下一关键帧之间的所有 Wyner-Ziv帧，以GOP为单位进行编码更加方便。</p>
+      <p>[0004]	在分布式视频编码中，码率控制是很关键的一项技术，它涉及到整个系统的率失真性能。Wyner-Ziv帧码率控制主要包括量化矩阵的选取和比特面码率控制。通过用EI检索Wyner-Ziv帧的量化矩阵选取方式，即如何从备选量化矩阵中选取最优量化矩阵，发现现有DVC系统大都根据与关键帧量化参数匹配的经验值确定量化矩阵，没有将目标码率的约束考虑进来。比特面码率控制分为有反馈码率控制和无反馈码率控制两种方式。有反馈方式根据解码端解码情况通过反馈信道反复传送校验位，直至解码成功，这种方式需要编解码同时进行即在线情况下才能进行，并且不会根据带宽要求适当的调节。无反馈码率控制在编码端估计码率以传输合适的校验位，主要依据边信息与源信息的相关性。</p>
+      <p>[0005]	在上面的码率分配方案中，在选择量化矩阵时，简单的根据Wyner-Ziv帧与关键帧质量相当的原则，并没有考虑到Wyner-Ziv帧联合信道信源编码的特点，忽略了此编码特点对Wyner-Ziv帧码率的影响，不能根据Wyner-Ziv帧目标码率变化动态的选取量化矩阵，最终不能合理的利用信道资源，影响视频序列的解码质量。</p>
+    </background-art>
+    <disclosure>
+      <p>发明内容</p>
+      <p>[0006]	本发明的目的在于克服上述已有技术的缺点，提出一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统和方法，通过建立结合信源信道编码的系数带率失真模型 (Band Rate-Distortion of Source-Channel Coding，BRD-SCC)，对比目标码率与八个备选量化矩阵对应的估计码率，选定码率最接近时对应的量化矩阵量化Wyner-Ziv帧，进行比特面码率分配，提高了 DVC系统的率失真性能。</p>
+      <p>[0007]	本发明是一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统，其实现在于：该系统包括有：训练模块、码率估计模块、选取模块，训练模块接收待编码序列的第一个Wyner-Ziv帧，利用两个典型的量化矩阵进行训练，得到结合信源信道编码的系数带率失真模型系数，在码率估计模块中利用结合信源信道编码的系数带率失真BRD-SCC模型计算八个量化矩阵对应的估计码率，接入选取模块，在选取模块中将八个估计码率与目标码率相比较，选择满足目标码率的量化矩阵。</p>
+      <p>[0008]	目前，分布式视频编码系统和终端编码设备简单的视频通信系统中对Wyner-Ziv 帧的码率控制采用使得关键帧与Wyner-Ziv帧质量相当的配对方法，没有考虑到 Wyner-Ziv帧的比特面码率的影响，最终不能合理的利用信道资源。本发明克服了上述缺点，提出了一种动态调整的Wyner-Ziv帧码率控制系统。</p>
+      <p>[0009]	在整个Wyner-Ziv视频编码系统中，在编码端进行帧层码率分配后，将得到的 Wyner-Ziv帧目标码率作为输入，接入本发明基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统，本发明合理的利用信道资源，实现动态Wyner-Ziv帧码率控制，本发明的输出f 息作为均&#21243;量化器的输入。</p>
+      <p>[0010]	本发明的实现还在于：用于进行训练的两个典型量化矩阵为</p>
+      <p>[0011]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00051.png"> <img id="idf0001" file="CN102186077AD00051.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00051.png" class="patent-full-image" alt="Figure CN102186077AD00051"> </a> </div>
+      
+      <p>[0012]	量化矩阵中的元素表示用于系数带的量化比特数，数值越大，量化越细，量化步长越小，从中可以看出：Q1的量化较细，而Q2的量化较粗，由这两个矩阵得到的率失真点相差较远，所以确定的BRD-SCC模型系数较准确。</p>
+      <p>[0013]	本发明还是一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法，其特征在于：根据编码码率变化动态的选择量化矩阵，该控制方法的步骤包括有：</p>
+      <p>[0014]	步骤1，选取第一个GOP的Wyner-Ziv帧作为训练帧，对其进行4X4块的离散余弦变换DCT，并提取系数带；</p>
+      <p>[0015]	步骤2，训练，利用两个典型量化矩阵Ql和Q2分别量化训练帧的系数带，生成两个率失真点，计算得到BRD-SCC模型系数a和b ；</p>
+      <p>[0016]	步骤3，读取当前Wyner-Ziv帧，对其进行4X 4DCT，并提取系数带；</p>
+      <p>[0017]	步骤4，选择量化矩阵，利用系数带率失真模型和训练得到的BRD-SCC模型系数 a和b，计算得到八个量化矩阵对应的估计码率，将八个估计码率与帧层码率控制得到的 Wyner-Ziv帧目标码率相比较，选择与目标码率最接近的估计码率所对应的量化矩阵；</p>
+      <p>[0018]	步骤5，利用选择得到的量化矩阵量化Wyner-Ziv巾贞，并提取比特面；</p>
+      <p>[0019]	步骤6，按照边信息与源信息的相关性进行比特面码率分配；</p>
+      <p>[0020]	步骤7，步骤3至6为一个Wyner-Ziv帧的码率控制过程，重复步骤3至6即可完成整个视频序列所有Wyner-Ziv帧的码率控制。</p>
+      <p>[0021 ] 本发明通过训练过程确定BRD-SCC模型系数a和b，该模型用于估计各量化矩阵对应的码率，从而选择满足目标码率的量化矩阵来量化Wyner-Ziv帧，因为考虑到目标码率的约束，实现视频编码的Wyner-Ziv帧码率控制，所以本发明更加合理地利用了信道资源。</p>
+      <p>[0022]	本发明的实现还在于=BRD-SCC模型的建立过程如下：</p>
+      <p>[0023]	4. 1，Wyner-Ziv帧的像素域率失真模型：</p>
+      <p>[0024]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00061.png"> <img id="idf0002" file="CN102186077AD00061.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00061.png" class="patent-full-image" alt="Figure CN102186077AD00061"> </a> </div>
+      
+      <p>[0025]	式中，R为Wyner-Ziv帧的码率，单位为比特，σ】、σ&#8222;2分别为Wyner-Ziv帧和相关噪声的方差，D为量化失真；</p>
+      <p>[0026]	4. 2，由于σ〗&#187;σ&#8222;2，所以上述率失真模型化简为：</p>
+      <p>[0027]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00062.png"> <img id="idf0003" file="CN102186077AD00062.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00062.png" class="patent-full-image" alt="Figure CN102186077AD00062"> </a> </div>
+      
+      <p>[0028]	4. 3，均&#21243;量化的量化失真D为量化步长Δ的函数，D = Δ2/12，将其代入式O)， 并考虑到不同信道编码的压缩性能，得到BRD-SCC模型：</p>
+      <p>[0029]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00063.png"> <img id="idf0004" file="CN102186077AD00063.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00063.png" class="patent-full-image" alt="Figure CN102186077AD00063"> </a> </div>
+      
+      <p>[0030]	式中，Rband定义为系数带的校验位数目与信息位数目的比值，α、Δ分别为拉普拉斯参数和量化步长，α =V^i"，σ&#8222;2为边信息系数带与Wyner-Ziv帧系数带之间的噪声方差，a、b为模型系数，它们均为二维IX 16的数组，代表4X4DCT的16个系数带。</p>
+      <p>[0031]	上述BRD-SCC模型的优点在于：对于不同的信道编码方案，视频序列的BRD-SCC模型系数灵活可变，可以通过训练过程确定BRD-SCC模型系数a和b。</p>
+      <p>[0032]	本发明的实现还在于：训练过程，其具体步骤包括（以系数带&amp;的BRD-SCC模型系数为例）：</p>
+      <p>[0033]	5. 1，结合边信息与Wyner-Ziv帧的DCT系数带，计算相关噪声模型参数α ,；</p>
+      <p>[0034]	5. 2，用两个典型量化矩阵Ql和Q2，分别量化训练Wyner-Ziv帧，得到系数带Ti的两个量化步长Δ ‘ i和Δ “ 并提取比特面；</p>
+      <p>[0035]	5. 3，分别计算在两种量化方案下，系数带\校验位数目与信息位数目的比值&lt;_</p>
+      <p>禾口 band,</p>
+      <p>[0036]	5. 4，利用上面得到的两个率失真点，计算系数带&amp;的BRD-SCC模型系数&#12316;和h ：</p>
+      <p>[0037]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00064.png"> <img id="idf0005" file="CN102186077AD00064.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00064.png" class="patent-full-image" alt="Figure CN102186077AD00064"> </a> </div>
+      
+      <p>[0038]	5. 5，重复上述4个步骤，得到所有BRD-SCC系数。</p>
+      <p>[0039]	通过上述训练过程，可以针对不同的比特面码率分配方案，得到与之对应的 BRD-SCC模型系数，实现了动态调整，以更准确的估计码率。</p>
+      <p>[0040]	本发明的实现还在于：选择量化矩阵过程，其具体步骤包括：</p>
+      <p>[0041]	6. 1，读取当前Wyner-Ziv帧的前驱关键帧和后继关键帧，简单运动补偿内插生成边信息；</p>
+      <p>[0042]	6. 2，对边信息进行4X4DCT，并提取系数带Yi,它与Wyner-Ziv帧系数带的残差服从拉普拉斯分布；</p>
+      <p>[0043]	6. 3，计算系数带\的拉普拉斯参数α ,；</p>
+      <p>[0044]	6. 4，对应于确定的量化矩阵，计算系数带&amp;的量化步长Ai ；</p>
+      <p>[0045]	6. 5，将6. 3得到的拉普拉斯参数α i和6. 4得到的量化步长Δ ,代入BRD-SCC模型中，估计各系数带的码率，并计算得到Wyner-Ziv帧的估计码率；</p>
+      <p>[0046]	6. 6，重复6. 3至6. 5，计算得到八个量化矩阵对应的估计码率；</p>
+      <p>[0047]	6. 7，逐一比较目标码率和八个估计码率，若量化矩阵j对应的估计码率最接近目标码率，则选择量化矩阵j量化当前Wyner-Ziv帧。</p>
+      <p>[0048]	在选择最佳量化矩阵后，对Wyner-Ziv帧量化并提取比特面，进行比特面码率分配，完成Wyner-Ziv帧的码率控制。</p>
+      <p>[0049]	本发明构建了基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统，并在此基础上设定了基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法，建立了 BRD-SCC模型， 这是一种将信源编码和信道编码结合的率失真模型，通过模型系数a和b的不同，适用不同的信道资源。本发明通过建立结合信源信道编码的系数带率失真模型来估计系数带的码率，由此确定量化矩阵更加准确，从而提高了 DVC的率失真性能。</p>
+      <p>[0050]	本发明与现有技术相比具有如下优点：</p>
+      <p>[0051]	1)本发明建立了 BRD-SCC模型，并利用BRD-SCC模型计算不同量化矩阵对应的估计码率，根据Wyner-Ziv帧目标码率从备选量化矩阵中选择量化矩阵，这种方法考虑到目标码率的约束，实现了更加合理的利用信道资源的目的；</p>
+      <p>[0052]	2)本发明通过训练来确定BRD-SCC模型系数a和b，对于不同的比特面码率分配方案，可以通过训练确定合适的BRD-SCC模型系数，以保证BRD-SCC模型的准确性，实现更准确的码率控制，最终能提高DVC系统的率失真性能。</p>
+    </disclosure>
+    <description-of-drawings>
+      <p>附图说明</p>
+      <p>[0053]	图1是Wyner-Ziv视频编码系统框图，其中虚线加框部分为本发明基于Wyner-Ziv 视频编码的Wyner-Ziv帧码率控制系统构成示意图；</p>
+      <p>[0054]	图2是本发明训练过程所用的两个典型量化矩阵，其中图2(a)是量化矩阵Q1，图 2(b)是量化矩阵Q2;</p>
+      <p>[0055]	图3是本发明基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法的流程示意图；</p>
+      <p>[0056]	图4是本发明Wyner-Ziv帧码率控制方法和现有Wyner-Ziv帧码率控制方法， hall序列的率失真性能对比图；</p>
+      <p>[0057]	图5是本发明Wyner-Ziv帧码率控制方法和现有Wyner-Ziv帧码率控制方法， foreman序列的率失真性能对比图；</p>
+      <p>[0058]	图6是本发明Wyner-Ziv帧码率控制方法和现有Wyner-Ziv帧码率控制方法， coastguard序列的率失真性能对比图。</p>
+    </description-of-drawings>
+    <mode-for-invention>
+      <p>具体实施方式</p>
+      <p>[0059]	实施例1</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00081.png"> <img id="idf0006" file="CN102186077AD00081.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00081.png" class="patent-full-image" alt="Figure CN102186077AD00081"> </a> </div>
+      
+      <p>[0060]	参见图1，本发明是基于Wyner-Ziv视频编码的Wyner-Ziv帧的码率控制系统。</p>
+      <p>[0061]	图1是Wyner-Ziv视频编解码整个系统，本发明提出基于Wyner-Ziv视频编码的 Wyner-Ziv帧码率控制系统处于虚线加框所示位置，该系统包括训练模块、码率估计模块和选取模块，训练模块接收待编码序列的第一个Wyner-Ziv帧，利用两个典型量化矩阵对其进行训练，得到BRD-SCC模型系数，在码率估计模块中利用BRD-SCC模型计算八个量化矩阵对应的估计码率，在选取模块中选择满足目标码率的量化矩阵，具体就是将八个估计码率与目标码率相比较，它们最接近时得到估计码率对应的量化矩阵作为最佳量化矩阵。</p>
+      <p>[0062]	本发明基于Wyner-Ziv视频编码的Wyner-Ziν帧码率控制系统的输入是当前 Wyner-Ziv帧和帧层码率分配得到Wyner-Ziv帧目标码率，输出是为待编码Wyner-Ziv帧选定的量化矩阵，接入均&#21243;量化器中，各个模块的功能如下：</p>
+      <p>[0063]	训练模块：用两个典型量化矩阵Ql和Q2分别量化训练帧，得到两个率失真点，以计算BRD-SCC模型系数，各系数带的BRD-SCC模型随之而确定；两个典型量化矩阵Ql和Q2 见图2，具体如下：</p>
+      <p>[0064] Ql =</p>
+      <p>[0065]	码率估计模块：对于待编码Wyner-Ziv帧，用训练确定的BRD-SCC模型来估计系数带码率，对应于八个备选量化矩阵，得到Wyner-Ziv帧的八个估计码率；</p>
+      <p>[0066]	选取模块：将帧层码率分配得到的Wyner-Ziv帧目标码率作为输入，从八个备选量化矩阵中，即八个估计码率对应的量化矩阵，选取符合Wyner-Ziv帧目标码率的最佳量化矩阵作为输出信息。</p>
+      <p>[0067]	在Wyner-Ziv视频编码系统中，本发明为Wyner-Ziv帧选择最佳量化矩阵来量化 Wyner-Ziv帧，进行比特面码率分配，使得Wyner-Ziv帧的码率控制更加准确。</p>
+      <p>[0068]	实施例2</p>
+      <p>[0069]	本发明还是一种基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法，该方法的应用是在上述基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统中运行，参照图3， 实现步骤包括有：</p>
+      <p>[0070]	步骤1，读取第一个GOP的Wyner-Ziv帧作为训练帧，对其进行4 X 4DCT并提取系数带 Ti (i = 1,2, ... ,16)；</p>
+      <p>[0071 ] 步骤2，训练，利用两个典型量化矩阵Ql和Q2分别量化训练帧的系数带，生成两个率失真点，计算得到BRD-SCC模型系数a和b。</p>
+      <p>[0072]	步骤3，读取待编码Wyner-Ziv帧，对其进行4X4DCT，并提取系数带&amp;。</p>
+      <p>[0073]	步骤4，选择量化矩阵，利用BRD-SCC模型和训练得到的BRD-SCC模型系数a 和b，计算得到八个量化矩阵对应的估计码率，将八个估计码率与帧层码率控制得到的 Wyner-Ziv帧目标码率相比较，选择与目标码率最接近的估计码率所对应的量化矩阵。本发明是从八个备选量化矩阵中选取最佳量化矩阵。</p>
+      <p>[0074]	步骤5，利用选择得到的量化矩阵量化Wyner-Ziv帧，并提取比特面。</p>
+      <p>[0075]	步骤6，按照边信息与源信息的相关性进行比特面码率分配。</p>
+      <p>[0076]	步骤7，步骤3至6为一个Wyner-Ziv帧的码率控制过程，重复步骤3至6即可完成整个视频序列所有Wyner-Ziv帧的码率控制。</p>
+      <p>[0077]	本发明BRD-SCC模型的建立过程如下：</p>
+      <p>[0078]	4. 1，Wyner-Ziv帧的像素域率失真模型：</p>
+      <p>[0079]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00091.png"> <img id="idf0007" file="CN102186077AD00091.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00091.png" class="patent-full-image" alt="Figure CN102186077AD00091"> </a> </div>
+      
+      <p>[0080]	式中，R为Wyner-Ziv帧的码率，单位为比特，σ〗、σ&#8222;2分别为Wyner-Ziv帧和相关噪声的方差，D为量化失真；</p>
+      <p>[0081]	4. 2，由于σ〗&#187;a2u，所以上述率失真模型化简为：</p>
+      <p>[0082]	R=U0g2(^l)	(6)</p>
+      <p>[0083]	4. 3，均&#21243;量化的量化失真D为量化步长Δ的函数，D = Δ2/12，将其代入式O)， 并考虑到不同信道编码的压缩性能，得到BRD-SCC模型：</p>
+      <p>[0084]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00092.png"> <img id="idf0008" file="CN102186077AD00092.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00092.png" class="patent-full-image" alt="Figure CN102186077AD00092"> </a> </div>
+      
+      <p>[0085]	式中，Rband定义为系数带的校验位数目与信息位数目的比值，α、Δ分别为拉普拉斯参数和量化步长，α = ，σ&#8222;2为边信息系数带与Wyner-ZiV帧系数带之间的噪声方差，a、b为模型系数，它们均为二维1X16的数组，代表4X4DCT的16个系数带。</p>
+      <p>[0086]	其中，步骤2的训练过程，具体步骤如下：</p>
+      <p>[0087]	5. 1，读取训练帧的前驱关键帧和后继关键帧，简单运动补偿内插生成边信息，并对边信息进行4 X 4DCT，提取系数带Yi,并结合训练帧系数带Ti计算得到对应系数带的噪声方差为：</p>
+      <p>[0088]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00093.png"> <img id="idf0009" file="CN102186077AD00093.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00093.png" class="patent-full-image" alt="Figure CN102186077AD00093"> </a> </div>
+      
+      <p>(8)</p>
+      <p>[0089]	式中，Ε[&#183;]是求期望运算；</p>
+      <p>[0090]	所以，第i个系数带的相关噪声模型的拉普拉斯参数Cii为：</p>
+      <p>[0091]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00094.png"> <img id="idf0010" file="CN102186077AD00094.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00094.png" class="patent-full-image" alt="Figure CN102186077AD00094"> </a> </div>
+      
+      <p>(9)</p>
+      <p>[0092]	5. 2，用两个典型量化矩阵Ql和Q2分别量化训练帧系数带Ti,在两种量化方案下得到两个量化步长Δ ‘ ρ Δ “ i，提取比特面；</p>
+      <p>[0093]	若Mi,」表示用量化矩阵j(j = 1，2. . .，8)量化Wyner-Ziv帧时系数带&amp;对应的量化比特数，所以Wyner-Ziv帧的量化比特数为所有系数带的比特数之和，即：</p>
+      <p>[0094]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00095.png"> <img id="idf0011" file="CN102186077AD00095.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00095.png" class="patent-full-image" alt="Figure CN102186077AD00095"> </a> </div>
+      
+      <p>(10)</p>
+      <p>[0095]	式中，L为系数带的长度，例如对标准大小为QCIF(176X144)的图像进行 4X4DCT，得到亮度系数带的长度为L= 176X144/(4X4) = 1584 ；</p>
+      <p>[0096]	5. 3，按照一定的比特面码率分配方案，计算各个比特面的码率，并计算整个系数带的平均码率iC^、先-,，系数带&amp;的码率计算公式为：</p>
+      <p>[0097]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00101.png"> <img id="idf0012" file="CN102186077AD00101.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00101.png" class="patent-full-image" alt="Figure CN102186077AD00101"> </a> </div>
+      
+      <p>[0098]式中，R‘	b ,R'' b</p>
+      <p>与信息比特数的比值。W i、Μ" i分别为典型量化矩阵Ql和Q2对系数带Ti的量化比特数；</p>
+      <p>[0099]	5. 4，利用步骤1至4生成的两个率失真点</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00102.png"> <img id="idf0013" file="CN102186077AD00102.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00102.png" class="patent-full-image" alt="Figure CN102186077AD00102"> </a> </div>
+      
+      <p>,，计算得到系数带Ti的BRD-SCC模型系数&#12316;和h ：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00103.png"> <img id="idf0014" file="CN102186077AD00103.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00103.png" class="patent-full-image" alt="Figure CN102186077AD00103"> </a> </div>
+      
+      <p>[0101]	5. 5，重复上述4个步骤，得到所有BRD-SCC系数。</p>
+      <p>[0102]	本发明步骤4选择量化矩阵过程，具体步骤如下：</p>
+      <p>[0103]	6. 1，读取待编码Wyner-Ziv帧的前驱关键帧和后继关键帧，简单运动补偿内插生成边信息；</p>
+      <p>[0104]	6. 2，对边信息进行4 X 4DCT，提取系数带Yi, Yi与Wyner-Ziv帧系数带&amp;的残差服从拉普拉斯分布；</p>
+      <p>[0105]	6. 3，计算Wyner-Ziv帧系数带&amp;的拉普拉斯分布参数α ,；</p>
+      <p>[0106]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00104.png"> <img id="idf0015" file="CN102186077AD00104.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00104.png" class="patent-full-image" alt="Figure CN102186077AD00104"> </a> </div>
+      
+      <p>[0107]	式中，σ2ul,为系数带xi的相关噪声方差，它的计算如下：</p>
+      <p>[0108]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00105.png"> <img id="idf0016" file="CN102186077AD00105.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00105.png" class="patent-full-image" alt="Figure CN102186077AD00105"> </a> </div>
+      
+      <p>[0109]	6. 4，对应于确定的量化矩阵，计算系数带&amp;的量化步长Ai ；量化步长由下式计算可得：</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00106.png"> <img id="idf0017" file="CN102186077AD00106.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00106.png" class="patent-full-image" alt="Figure CN102186077AD00106"> </a> </div>
+      
+      <p>[0111]	其中，My为用量化矩阵j量化Wyner-ZiV帧时，系数带&amp;的比特面数目；Hici为系数带&amp;内系数的最大绝对值，i = 1对应DC系数带的量化步长，i &gt; 1对应AC系数带的量化步长；</p>
+      <p>[0112]	6. 5，将6. 3得到的拉普拉斯参数、和6.4得到的量化步长Δ i代入BRD-SCC模型中，估计各系数带的码率，并计算得到Wyner-Ziv帧的估计码率；</p>
+      <p>[0113]	6. 6，重复6. 3至6. 5，计算得到八个量化矩阵对应的估计码率；</p>
+      <p>[0114]	6. 7，将八个估计码率R^j逐一与目标码率进行比较，若量化矩阵对应的估计码率</p>
+      <p>R^j*与目标码率最接近，则选择量化矩阵量化当前Wyner-Ziv帧的DCT系数带。</p>
+      <p>[0115]	实施例3</p>
+      <p>[0116]	基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统同实施例1，基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法同实施例2。本例对选择量化矩阵进行具体计算，其中步骤6. 1-6. 4同实施例2，步骤6. 5中，利用BRD-SCC模型及训练确定的模型系数估计系数带码率，则用量化矩阵j量化Wyner-Ziv帧时，系数带Xi的码率为：</p>
+      <p>[0117]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00111.png"> <img id="idf0018" file="CN102186077AD00111.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00111.png" class="patent-full-image" alt="Figure CN102186077AD00111"> </a> </div>
+      
+      <p>[0118]	将量化步长式（1&#190;代入BRD-SCC模型式（16)中，得到量化矩阵j对应的系数带 Xi的估计码率：</p>
+      <p>[0119]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00112.png"> <img id="idf0019" file="CN102186077AD00112.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00112.png" class="patent-full-image" alt="Figure CN102186077AD00112"> </a> </div>
+      
+      <p>[0120]	利用式（17)可计算各量化矩阵量化Wyner-Ziv帧时，4 X 4DCT的16个系数带的估计码率；</p>
+      <p>[0121 ] 估计量化矩阵j对应的Wyner-ZiV帧估计码率，将Wyner-Ziv帧16个系数带的码率加和得到Wyner-Ziv帧的总码率为：</p>
+      <p>[0122]</p>
+      <p>
+        </p> <div class="patent-image small-patent-image"> <a href="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00113.png"> <img id="idf0020" file="CN102186077AD00113.tif" img-content="drawing" img-format="tif" src="//patentimages.storage.googleapis.com/CN102186077A/CN102186077AD00113.png" class="patent-full-image" alt="Figure CN102186077AD00113"> </a> </div>
+      
+      <p>[0123]	式中，L为系数带的长度，用式（18)可以计算得到八个备选量化矩阵对应的估计码率，当j为1时，对应第一个量化矩阵的估计码率Λ，当j为2时，对应第二个量化矩阵的估计码率&amp;，当j为8时，对应第八个量化矩阵的估计码率i8。之后的步骤6. 6-6. 7同实施例2。</p>
+      <p>[0124]	实施例4</p>
+      <p>[0125]	基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统同实施例1，基于 Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法同实施例2-3。</p>
+      <p>[0126]	为了清楚说明本发明与Wyner-Ziv视频编码的关联和作用，首先对Wyner-Ziv视频编码系统的编码端实现步骤简述如下：</p>
+      <p>[0127]	&#8212;、将输入视频序列分割为关键帧和Wyner-Ziv帧，关键帧和Wyner-Ziv帧组成长度为2的GOP ；</p>
+      <p>[0128]	二、对于关键帧，采用H. 264/AVC帧内编码；</p>
+      <p>[0129]	三、对Wyner-Ziv帧进行4X4DCT，并提取系数带；</p>
+      <p>[0130]	四、对Wyner-Ziv帧系数带进行量化，并提取比特面；</p>
+      <p>[0131]	五、对比特面进行LDPC编码，生成校验位，传输到解码端辅助LDPC解码。</p>
+      <p>[0132]	在Wyner-Ziv视频编码系统进行步骤二提取系数带后，现有技术中通过与关键帧量化参数匹配的经验值进行量化，而本发明在此需要计算各量化矩阵对应的估计码率，将它们与帧层码率控制得到的Wyner-Ziv帧目标码率进行对比，选取合适的量化矩阵，为步骤四的量化过程做准备，在整个Wyner-Ziv视频编码系统进行步骤四时所用的量化矩阵是本发明提供的量化矩阵。</p>
+      <p>[0133]	实施例5</p>
+      <p>[0134]	基于Wyner-Ziv视频编码的Wyner-Ziv帧码率控制系统同实施例1，基于 Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法同实施例2-4。</p>
+      <p>[0135]	分别将本发明和现有方法用于Wyner-Ziv视频编解码系统，对帧率为15Hz的视频序列Hall进行编解码，用峰值信噪比（Peak Signal-Noise Ratio, PSNR)衡量解码重建视频的客观质量，比较在相同码率下，两种Wyner-Ziv帧码率控制方法的系统率失真性能，实验条件如下：</p>
+      <p>[0136]硬件环境：CPUAMD	Sempron 3000+, 1. 8GHz, 512MB 内存；</p>
+      <p>[0137]软件环境：Windows	XP, Microsoft Visual Studio. NET 2003 ；</p>
+      <p>[0138]	图像大小：QCIF(176X144)；</p>
+      <p>[0139]	GOP 长度：2;</p>
+      <p>[0140]	序列长度：300帧。</p>
+      <p>[0141]	实验结果如图4所示，从图中可以看出，对于hall序列，在相同码率下，采用本发明提出的码率控制方法比采用现有的码率控制方法PSNR提高了 IdB左右。</p>
+      <p>[0142]	实施例6</p>
+      <p>[0143]	基于Wyner-Ziv视频编码的Wyner-Ziν帧码率控制系统同实施例1，基于 Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法同实施例2-4。</p>
+      <p>[0144]	分别将本发明和现有方法用于如实施例1的Wyner-Ziv视频编码系统，对帧率为 30Hz的视频序列i^reman进行编解码，实验条件同实施例5，用PSNR衡量解码重建视频的客观质量，在相同码率下比较，两种Wyner-Ziv帧码率控制方法的系统率失真性能。</p>
+      <p>[0145]	实验结果如图5，从图中可以看出，对于i^reman序列，在相同码率下，本发明比现有的码率控制方法PSNR提高了 0. 5dB左右。</p>
+      <p>[0146]	实施例7</p>
+      <p>[0147]	基于Wyner-Ziv视频编码的Wyner-Ziν帧码率控制系统同实施例1，基于 Wyner-Ziv视频编码的Wyner-Ziv帧码率控制方法同实施例2-4。</p>
+      <p>[0148]	分别将本发明和现有方法应用于Wyner-Ziv视频编码系统，对帧率为30Hz的视频序列Coastguard进行编解码，实验条件同实施例5，用PSNR衡量解码重建视频的客观质量， 在相同码率下比较，两种Wyner-Ziv帧码率控制方法的系统率失真性能。</p>
+      <p>[0149]	实验结果如图6，从图中可以看出，对于Coastguard序列，在相同码率下，本发明比现有的码率控制方法PSNR提高了 0. 5dB左右。</p>
+      <p>[0150]	由以上实验结果可知：采用本发明提出的Wyner-Ziv帧码率控制方法，可以不同程度的提高无反馈分布式视频编码系统的率失真性能，对于运动量较小的视频序列，由于 BRD-SCC模型系数的确定较准确，所以率失真性能提高较多；反之，运动量较大的视频序列，率失真性能提高较少。</p>
+      <p>[0151]	本发明通过建立结合信源信道编码的系数带率失真模型来估计系数带的码率，由此确定量化矩阵更加准确，从而提高了 DVC的率失真性能。本发明的码率分配方法可用于无反馈码率控制的Wyner-Ziv视频编码系统中。</p>
+    </mode-for-invention>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101360236A?cl=zh">CN101360236A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年8月8日</td><td class="patent-data-table-td patent-date-value">2009年2月4日</td><td class="patent-data-table-td ">宁波大学</td><td class="patent-data-table-td ">一种Wyner-ziv视频编解码方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101621690A?cl=zh">CN101621690A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年7月24日</td><td class="patent-data-table-td patent-date-value">2010年1月6日</td><td class="patent-data-table-td ">北京交通大学</td><td class="patent-data-table-td ">基于Wyner-Ziv理论的两描述视频编码方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101835042A?cl=zh">CN101835042A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年3月19日</td><td class="patent-data-table-td patent-date-value">2010年9月15日</td><td class="patent-data-table-td ">西安电子科技大学</td><td class="patent-data-table-td ">基于无反馈速率控制的Wyner-Ziv视频编码系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101860748A?cl=zh">CN101860748A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年4月2日</td><td class="patent-data-table-td patent-date-value">2010年10月13日</td><td class="patent-data-table-td ">西安电子科技大学</td><td class="patent-data-table-td ">基于分布式视频编码的边信息生成系统及方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102026000A?cl=zh">CN102026000A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2011年1月6日</td><td class="patent-data-table-td patent-date-value">2011年4月20日</td><td class="patent-data-table-td ">西安电子科技大学</td><td class="patent-data-table-td ">像素域-变换域联合的分布式视频编码系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US5836003">US5836003</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">1996年12月13日</td><td class="patent-data-table-td patent-date-value">1998年11月10日</td><td class="patent-data-table-td ">Visnet Ltd.</td><td class="patent-data-table-td ">Methods and means for image and voice compression</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20100111198">US20100111198</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年10月23日</td><td class="patent-data-table-td patent-date-value">2010年5月6日</td><td class="patent-data-table-td ">Canon Kabushiki Kaisha</td><td class="patent-data-table-td ">Rate-distortion control in dvc with no feedback channel</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">《北京邮电大学学报》 20090815 王凤琴等 变换域Wyner-Ziv视频编码的码率控制 15-19 1-6 第32卷, 第04期</td></tr><tr><td class="patent-data-table-td ">2</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">《通信学报》 20101231 宋彬等 Wyner-Ziv视频编码中边信息生成算法研究 97-103 1-6 第31卷, 第12期</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102724495A?cl=zh">CN102724495A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年5月4日</td><td class="patent-data-table-td patent-date-value">2012年10月10日</td><td class="patent-data-table-td ">西安电子科技大学</td><td class="patent-data-table-td ">基于率失真的Wyner-Ziv帧量化方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102857760A?cl=zh">CN102857760A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2013年1月2日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种无反馈的优化码率的分布式视频编解码方法及其系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102857760B?cl=zh">CN102857760B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2015年2月25日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种无反馈的优化码率的分布式视频编解码方法及其系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102857761A?cl=zh">CN102857761A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2013年1月2日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种无反馈的分布式视频编解码方法及其系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN102857761B?cl=zh">CN102857761B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年9月29日</td><td class="patent-data-table-td patent-date-value">2015年4月22日</td><td class="patent-data-table-td ">中国科学院计算技术研究所</td><td class="patent-data-table-td ">一种无反馈的分布式视频编解码方法及其系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103888765A?cl=zh">CN103888765A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年3月27日</td><td class="patent-data-table-td patent-date-value">2014年6月25日</td><td class="patent-data-table-td ">天格科技（杭州）有限公司</td><td class="patent-data-table-td ">一种改进型R-λ模型H.265码率控制方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103888765B?cl=zh">CN103888765B</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2014年3月27日</td><td class="patent-data-table-td patent-date-value">2015年9月30日</td><td class="patent-data-table-td ">天格科技（杭州）有限公司</td><td class="patent-data-table-td ">一种改进型R-λ模型H.265码率控制方法</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=D86FBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0019147000">H04N19/147</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=D86FBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0019567000">H04N19/567</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=D86FBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04N0007240000">H04N7/24</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年9月14日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年11月2日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Request of examination as to substance</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2012年12月26日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Granted</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/ee77b76a7f2eedbdd390/CN102186077A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_4874c258b856314cce6b80d777b4ee7a.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%9F%BA%E4%BA%8EWyner_Ziv%E8%A7%86%E9%A2%91%E7%BC%96%E7%A0%81%E7%9A%84Wyner_Ziv.pdf?id=D86FBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U3DBQ01rpA8dgykiBRgqvCTVZlu7g"},"sample_url":"https://www.google.com/patents/reader?id=D86FBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

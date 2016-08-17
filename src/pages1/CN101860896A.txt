@@ -1,0 +1,508 @@
+<!DOCTYPE html><html><head><title>专利 CN101860896A - 一种确定用户专有搜索空间的方法和装置 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="一种确定用户专有搜索空间的方法和装置"><meta name="DC.contributor" content="吴欣" scheme="inventor"><meta name="DC.contributor" content="左志松" scheme="inventor"><meta name="DC.contributor" content="戴博" scheme="inventor"><meta name="DC.contributor" content="曾萍" scheme="inventor"><meta name="DC.contributor" content="中兴通讯股份有限公司" scheme="assignee"><meta name="DC.date" content="2010-6-13" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种确定用户专有搜索空间的方法和装置，均可获取分量载波索引、各分量载波的每个聚合等级下各个候选物理下行控制信道PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位置，所述索引位置指每个分量载波的候选PDCCH的编号；根据所获取的分量载波索引以及相对位置信息，确定监测PDCCH的用户专有搜索空间。本发明方法和装置，均可在R10版本中确定用户专有搜索空间。"><meta name="DC.date" content="2010-10-13"><meta name="DC.relation" content="CN:101505498:A" scheme="references"><meta name="DC.relation" content="CN:101714892:A" scheme="references"><meta name="DC.relation" content="US:20090088148:A1" scheme="references"><meta name="citation_reference" content="NTT DOCOMO: &quot;Investigation on UE-Specific Search Space for Carrier Aggregation&quot;, 《3GPP TSG RAN WG1 MEETING #61》, 14 May 2010 (2010-05-14), pages 1 - 7"><meta name="citation_reference" content="ZTE: &quot;PDCCH blind decoding and search space for carrier aggregation of LTE-A&quot;, 《3GPP TSG-RAN WG1 #60BIS》, 16 April 2010 (2010-04-16), pages 1 - 5"><meta name="citation_patent_publication_number" content="CN:101860896:A"><meta name="citation_patent_application_number" content="CN:201010207437"><link rel="canonical" href="https://www.google.com/patents/CN101860896A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN101860896A?cl=zh"/><meta name="title" content="专利 CN101860896A - 一种确定用户专有搜索空间的方法和装置"/><meta name="description" content="本发明公开了一种确定用户专有搜索空间的方法和装置，均可获取分量载波索引、各分量载波的每个聚合等级下各个候选物理下行控制信道PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位置，所述索引位置指每个分量载波的候选PDCCH的编号；根据所获取的分量载波索引以及相对位置信息，确定监测PDCCH的用户专有搜索空间。本发明方法和装置，均可在R10版本中确定用户专有搜索空间。"/><meta property="og:title" content="专利 CN101860896A - 一种确定用户专有搜索空间的方法和装置"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN101860896A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN101860896A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=an97BwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN101860896A&amp;usg=AFQjCNFdPmbFgpPczMT3LpouFJpPDtHgvg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/56d78feb29f4d08c3e8b/CN101860896A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/56d78feb29f4d08c3e8b/CN101860896A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN101860896A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN101860896A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN101860896A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种确定用户专有搜索空间的方法和装置，均可获取分量载波索引、各分量载波的每个聚合等级下各个候选物理下行控制信道PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位置，所 ...</span><span itemprop="url">https://www.google.com/patents/CN101860896A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN101860896A - 一种确定用户专有搜索空间的方法和装置</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN101860896A - 一种确定用户专有搜索空间的方法和装置" title="专利 CN101860896A - 一种确定用户专有搜索空间的方法和装置"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN101860896 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010207437</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2010年10月13日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年6月13日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年6月13日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/WO2011156989A1?hl=zh-CN&amp;cl=zh">WO2011156989A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010207437.4, </span><span class="patent-bibdata-value">CN 101860896 A, </span><span class="patent-bibdata-value">CN 101860896A, </span><span class="patent-bibdata-value">CN 201010207437, </span><span class="patent-bibdata-value">CN-A-101860896, </span><span class="patent-bibdata-value">CN101860896 A, </span><span class="patent-bibdata-value">CN101860896A, </span><span class="patent-bibdata-value">CN201010207437, </span><span class="patent-bibdata-value">CN201010207437.4</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%90%B4%E6%AC%A3%22">吴欣</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%B7%A6%E5%BF%97%E6%9D%BE%22">左志松</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%88%B4%E5%8D%9A%22">戴博</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9B%BE%E8%90%8D%22">曾萍</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E4%B8%AD%E5%85%B4%E9%80%9A%E8%AE%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">中兴通讯股份有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN101860896A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101860896A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN101860896A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#npl-citations">非专利引用</a> (2),</span> <span class="patent-bibdata-value"><a href="#forward-citations"> 被以下专利引用</a> (9),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (6),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (2)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=an97BwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010207437&amp;usg=AFQjCNEjvx21ix16VUOMm5DqyAXf8xWgXg"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=an97BwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D101860896A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNG0kyKpopA-QA3cs4L-snG_ecWIcA"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT98290394" lang="ZH" load-source="patent-office">一种确定用户专有搜索空间的方法和装置</invention-title>
+      </span><br><span class="patent-number">CN 101860896 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA80770276" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种确定用户专有搜索空间的方法和装置，均可获取分量载波索引、各分量载波的每个聚合等级下各个候选物理下行控制信道PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位置，所述索引位置指每个分量载波的候选PDCCH的编号；根据所获取的分量载波索引以及相对位置信息，确定监测PDCCH的用户专有搜索空间。本发明方法和装置，均可在R10版本中确定用户专有搜索空间。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(16)</span></span></div><div class="patent-text"><ol mxw-id="PCLM33454594" lang="ZH" load-source="patent-office" class="claims">
+    <li class="claim"> <div num="1" class="claim">
+      <div class="claim-text">一种确定用户专有搜索空间的方法，其特征在于，该方法包括：获取分量载波索引、各分量载波的每个聚合等级下各个候选物理下行控制信道PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位置，所述索引位置指每个分量载波的候选PDCCH的编号；根据所获取的分量载波索引以及相对位置信息，确定监测PDCCH的用户专有搜索空间。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，各分量载波的每个聚合等级下各个候选 PDCCH之间的相对位置是变化的，各分量载波之间相同索引位置上的候选PDCCH之间的相 对位置是固定的；确定所述用户专有搜索空间的方法为：方法一、在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选 为L&amp;raj M」，其中NeeE, k为第k个子帧中控制信道元素CCE的数目；分量载波j的第i个 候选PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K (i)= P(i+1，j，L)-P(i，j, L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对所有分量载 波的所有聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，根据分量载波 的数量或者载波指示域确定K (i)；当i为Q+1时，根据CCE的总数、聚合等级、候选PDCCH的 个数以及分量载波的数量中的一种或者多种确定K (i)；如果N小于等于1，则根据CCE的总 数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定K(i)； N其中，Q = j或者Q为其它的1到N之间的正整数；或者，方法二、在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为l^ccw “」，其中NeeE, k为第 k个子帧中CCE的数目；分量载波j的第i个候选PDCCH在W个可用位置中的位置为P(i， j，L)，候选 PDCCH 之间的 N 个间距为 K ⑴=P (i+1，j，L) -P (i，j，L)，i = 1，2，. &#8226; &#8226; N，N 的 值为候选PDCCH的个数减去1 ；对所有分量载波的所有聚合等级，如果N大于1，当i为从 1到Q，以及i为从Q+2到N时，K⑴取为1 ；当i为Q+1时，根据CCE的总数、聚合等级、候 选PDCCH的个数以及分量载波的数量中的一种或者多种确定K(i)；如果N小于等于1，则 根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定 K(i)； 其中，Q= [N/2]或者Q为其它的1到N之间的正整数。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于：在将所有分量载波索引排序，并且相邻两 个分量载波索引为a和b时，所述候选PDCCH之间的间距的确定方法为：方法一中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选PDCCH 的位置为P(i，a, L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) =P(i，a, L)-P(i，b，L)，H(i)为1，或根据聚合等级和载波指示域确定，或根据聚合等级和分量载波 的数量确定；方法二中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选PDCCH 的位置为P(i，a, L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) =P(i，a,L)-P(i，b，L)，H(i)根据聚合等级和候选PDCCH的数量确定，或根据聚合等级、候选PDCCH 的数量和载波指示域确定。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1所述的方法，其特征在于，在各分量载波的每个聚合等级下，各个候 选PDCCH之间的相对位置是固定的，但是各分量载波之间相同索引位置上的候选PDCCH之 间的相对位置是变化的；确定所述用户专有搜索空间的方法为：在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 其中NeeE,k为第k个子帧中控制信道粒子CCE的数目；分量载波j的第i个候选 PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对于每个分量载波的所 有聚合等级，同一分量载波的K(i)对于所有的i均为固定值，这个固定值可以为1到W中 的任一值，但是不同分量载波的K(i)可以为不同的值；相邻两个分量载波索引为a和b的分量载波的候选PDCCH的位置为P(i，a，L)和P(i， b，L)，他们的第i个候选PDCCH之间的间距H(i) = P(i，a, L)_P(i，b，L)；对于所有聚合等 级下，所有相邻分量载波的H(i)根据i的不同而随机取值，或根据i的增加而增大，或根据 i的增加而减小，H(i)的取值范围为1到W中的任一值。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的方法，其特征在于，在各分量载波的每个聚合等级下，各个候 选PDCCH之间的相对位置是变化的，各分量载波之间相同索引位置上的候选PDCCH之间的 相对位置是变化的；确定所述用户专有搜索空间的方法为：在每个聚合等级下，将各个分量载波的所有候选PDCCH都随机分布在整个用户专有搜 索空间上。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1所述的方法，其特征在于，在各分量载波的每个聚合等级下，各个候 选PDCCH之间的相对位置是固定的，各分量载波之间相同索引位置上的候选PDCCH之间的 相对位置是固定的；确定所述用户专有搜索空间的方法为：在各个分量载波在每个聚合等级下，将其中一个分量载波的候选PDCCH等间距分布在 用户专有搜索空间上，而将另一个分量载波的各个候选PDCCH，在对应于第一个分量载波的 各个候选PDCCH相同的索引位置上，紧接着第一个分量载波的各个候选PDCCH放置；将其它 的分量载波以此方式紧接着上一个分量载波配置候选PDCCH。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1至6任一项所述的方法，其特征在于，所述分量载波索引包括实施跨 载波调度和被跨载波调度的各分量载波对应的分量载波索引；获取所述分量载波索引的方法为：在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定实施跨载 波调度的分量载波对应的索引为0，其余的需要被跨载波调度的分量载波按照频点的高低， 按从大到小或从小到大的顺序排列；或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定实施 跨载波调度的分量载波对应的索引为指定值0，将所有分量载波按照频点的高低顺序的排 列；按照此排列顺序，从实施跨载波调度的分量载波开始，循环的紧接着上述指定值分配其它分量载波的分量载波索引；或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，将这些分 量载波按照频点的高低，按从大到小或从小到大的顺序排列；或者，在跨载波调度使能的情况下，各个分量载波对应的分量载波索引等于各个分量 载波对应的载波指示域CIF值；或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，通过高层 信令配置。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求7所述的方法，其特征在于，在LTE-Advanced的载波聚合场景下，当跨 载波调度使能时，上行分量载波与其对应的下行分量载波需要监测的用户专有搜索空间相 同；该方法进一步包括：在已经确定的用户专有搜索空间上，对上行分量载波上需要监测的下行控制信息格式 DCI format进行监测。</div>
+    </div>
+    </li> <li class="claim"> <div num="9" class="claim">
+      <div class="claim-text">9.	一种确定用户专有搜索空间的装置，其特征在于，该装置包括参考因素获取单元、搜 索空间决策单元；其中，所述参考因素获取单元，用于获取分量载波索引、各分量载波的每个聚合等级下各个 候选PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对 位置；并将所获取的分量载波索引以及相对位置信息发送给所述搜索空间决策单元，所述 索引位置指每个分量载波的候选PDCCH的编号；所述搜索空间决策单元，用于根据收到的分量载波索引以及相对位置信息，确定监测 PDCCH的用户专有搜索空间。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的装置，其特征在于，在各分量载波的每个聚合等级下，各个 候选PDCCH之间的相对位置是变化的，各分量载波之间相同索引位置上的候选PDCCH之间 的相对位置是固定的；所述搜索空间决策单元在确定所述用户专有搜索空间时用于：应用方法一时，在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为l^eew /^」，其中NeeE, k为第k个子帧中控制信道元素CCE的数目；分量载波j的第 i个候选PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴ =P(i+1，j，L)-P(i，j，L)，i = 1，2，&#8226; &#8226; &#8226; N，N的值为候选PDCCH的个数减去1 ；对所有分量 载波的所有聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，根据分量载 波的数量或者载波指示域确定K(i)；当i为Q+1时，根据CCE的总数、聚合等级、候选PDCCH 的个数以及分量载波的数量中的一种或者多种确定K (i)；如果N小于等于1，则根据CCE的 总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定K(i)； N其中，Q= j或者Q为其它的1到N之间的正整数；或者，应用方法二时，在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置， W的值优选为L^x;^ /i」，其中NeeE,k为第k个子帧中CCE的数目；分量载波j的第i个候选 PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对所有分量载波的所有聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，K⑴取为1 ；当i为Q+1 时，根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种 确定K⑴；如果N小于等于1，则根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载 波的数量中的一种或者多种确定K(i)； N其中，Q= I或者Q为其它的1到N之间的正整数。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的装置，其特征在于，在将所有分量载波索引排序，并且相邻 两个分量载波索引为a和b时，方法一中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选PDCCH 的位置为P(i，a, L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) =P(i，a, L)-P(i，b，L)，H(i)为1，或根据聚合等级和载波指示域确定，或根据聚合等级和分量载波 的数量确定；方法二中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选PDCCH 的位置为P(i，a, L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) =P(i，a, L)-P(i，b，L)，H(i)根据聚合等级和候选PDCCH的数量确定，或根据聚合等级、候选PDCCH 的数量和载波指示域确定。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求9所述的装置，其特征在于，在各分量载波的每个聚合等级下，各个 候选PDCCH之间的相对位置是固定的，但是各分量载波之间相同索引位置上的候选PDCCH 之间的相对位置是变化的；所述搜索空间决策单元在确定所述用户专有搜索空间时用于：在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为[NCCE,k^\，其中NeeE, k为第k个子帧中控制信道粒子CCE的数目；分量载波j的第i个 候选PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K (i)= P(i+1，j，L)-P(i，j, L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对于每个分量 载波的所有聚合等级，同一分量载波的K(i)对于所有的i均为固定值，这个固定值可以为 1到W中的任一值，但是不同分量载波的K(i)可以为不同的值；相邻两个分量载波索引为a和b的分量载波的候选PDCCH的位置为P(i，a，L)和P(i， b，L)，他们的第i个候选PDCCH之间的间距H(i) = P(i，a, L)_P(i，b，L)；对于所有聚合等 级下，所有相邻分量载波的H(i)根据i的不同而随机取值，或根据i的增加而增大，或根据 i的增加而减小，H(i)的取值范围为1到W中的任一值。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求9所述的装置，其特征在于，在各分量载波的每个聚合等级下，各个 候选PDCCH之间的相对位置是变化的，各分量载波之间相同索引位置上的候选PDCCH之间 的相对位置是变化的；所述搜索空间决策单元在确定所述用户专有搜索空间时用于：在每个聚合等级下，将各个分量载波的所有候选PDCCH都随机分布在整个用户专有搜 索空间上。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求9所述的装置，其特征在于，在各分量载波的每个聚合等级下，各个 候选PDCCH之间的相对位置是固定的，各分量载波之间相同索引位置上的候选PDCCH之间 的相对位置是固定的；所述搜索空间决策单元在确定所述用户专有搜索空间时用于：在各个分量载波在每个聚合等级下，将其中一个分量载波的候选PDCCH等间距分布在 用户专有搜索空间上，而将另一个分量载波的各个候选PDCCH，在对应于第一个分量载波的 各个候选PDCCH相同的索引位置上，紧接着第一个分量载波的各个候选PDCCH放置；将其它 的分量载波以此方式紧接着上一个分量载波配置候选PDCCH。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求9至14任一项所述的装置，其特征在于，所述分量载波索引包括实施 跨载波调度和被跨载波调度的各分量载波对应的分量载波索引；所述参考因素获取单元在获取所述分量载波索引时用于：在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定实施跨载 波调度的分量载波对应的索引为0，其余的需要被跨载波调度的分量载波按照频点的高低， 按从大到小或从小到大的顺序排列；或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定实施 跨载波调度的分量载波对应的索引为指定值0，将所有分量载波按照频点的高低顺序的排 列；按照此排列顺序，从实施跨载波调度的分量载波开始，循环的紧接着上述指定值分配其 它分量载波的分量载波索引；或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，将这些分 量载波按照频点的高低，按从大到小或从小到大的顺序排列；或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，随机分配 索引；或者，在跨载波调度使能的情况下，针对各个分量载波对应的CIF值，分配对应的分量 载波索引；或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，通过高层 信令配置。</div>
+    </div>
+    </li> <li class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求15所述的装置，其特征在于，在LTE-Advanced的载波聚合场景下，当 跨载波调度使能时，上行分量载波与其对应的下行分量载波需要监测的用户专有搜索空间 相同；该装置进一步包括检测单元；所述搜索空间决策单元，进一步用于将进行检测时所需的用户专有搜索空间信息发送 给所述检测单元；所述检测单元，用于在已经确定的用户专有搜索空间上，对上行分量载波上需要监测 的DCI format进行监测。</div>
+    </div>
+  </li> </ol>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES38720690" lang="ZH" load-source="patent-office" class="description">
+    <p>一种确定用户专有搜索空间的方法和装置</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信领域，具体涉及一种确定用户专有搜索空间的方法和装置。 背景技术</p>
+    <p>[0002]	长期演进（LTE，Long Term Evolution)系统中的无线帧（radio frame)包括频分 双工（FDD，Frequency Division Duplex)模式和时分双工(TDD,TimeDivision Duplex)模 式的帧结构。FDD模式的帧结构如图1所示，一个10毫秒（ms)的无线帧由二十个长度为</p>
+    <p>0.	5ms、编号0&#12316;19的时隙(slot)组成，时隙2i和2i+l组成长度为lms的子帧(subframe)</p>
+    <p>1。TDD模式的帧结构如图2所示，一个10ms的无线帧由两个长为5ms的半帧（half	frame) 组成，一个半帧包括5个长度为lms的子帧，子帧i定义为2个长为0. 5ms的时隙2i和2i+l。 在上述两种帧结构里，对于标准循环前缀（Normal CP, Normal Cyclic Prefix)，一个时隙 包含7个长度为66. 7微秒（us)的符号，其中第一个符号的CP长度为5. 21us，其余6个符 号的 CP 长度为 4. 69us ；对于扩展循环前缀（Extended CP, Extended Cyclic Prefix)，一个 时隙包含6个符号，所有符号的CP长度均为16. 67us。</p>
+    <p>[0003]	LTE的版本号对应于R8 (Release 8)，其增加版本对应的版本号为R9 (Release 9)，而对于今后的LTE-Advance，其版本号就为R10 (Release 10)。LTE中定义了如下三 种下行物理控制信道：物理下行控制格式指示信道（PCFICH，Physical Control Format Indicator Channel)；物理混合自动重传请求指示信道(PHICH, Physical Hybrid Automatic Retransmission Request IndicatorChannel) ；it (PDCCH, Physical Downlink Control Channel)。</p>
+    <p>[0004]	其中，PCFICH承载的信息用于指示在一个子帧里传输PDCCH的正交频分复用 (OFDM, Orthogonal Frequency Division Multiplexing)符号的数目，在子帧的第一个 0FDM符号上发送，所在频率位置由系统下行带宽与小区标识（ID，Identity)确定。</p>
+    <p>[0005]	PHICH用于承载上行传输数据的肯定应答/否定应答（ACK/NACK)反馈信息。PHICH 的数目、时频位置可由PHICH所在的下行载波的物理广播信道（PBCH，Physical Broadcast Channel)中的系统消息和小区ID确定。</p>
+    <p>[0006]	PDCCH 用于承载下行控制信息（DCI，Downlink Control Information)，包括：上、 下行调度信息、以及上行功率控制信息。DCI格式（DCI format)分为以下几种：DCI format 0、DCI format 1、DCI format 1A、DCI format IB、DCI format 1C、DCI format ID、DCI format 2、DCI format 2A、DCI format 3 禾口 DCI format 3A 等；其中：</p>
+    <p>[0007]	DCI format 0 用于指示物理上行共享信道(PUSCH, Physical Uplink SharedChannel)的调度；</p>
+    <p>[0008]	DCI format 1、DCI format 1A、DCI format IB、DCI format 1C 以及 DCI format ID用于一个PDSCH码字调度的不同模式；</p>
+    <p>[0009]	DCI format 2、DCI format 2A 以及 DCI format 2B 用于空分复用的不同模式；</p>
+    <p>[0010]	DCI format 3、DCI format 3A 用于物理上行控制信道（PUCCH，PhysicalUplinkControl Channel)和PUSCH的功率控制指令的不同模式。</p>
+    <p>[0011]	物理下行控制信道PDCCH传输的物理资源以控制信道元素（CCE，ControlChannel Element)为单位，一个CCE的大小为9个资源元素组（REG，ResourceElement Group)、即 36个资源元素(Resource Element)，一个PDCCH可能占用1、2、4或者8个CCE。对于占用 1、2、4、8个CCE的这四种PDCCH大小，采用树状的聚合(Aggregration)，即占用1个CCE的 PDCCH可以从任意CCE位置开始；占用2个CCE的PDCCH从偶数CCE位置开始；占用4个CCE 的PDCCH从4的整数倍的CCE位置开始；占用8个CCE的PDCCH从8的整数倍的CCE位置 开始。</p>
+    <p>[0012]	针对每个聚合级别（Aggregration level)定义一个搜索空间（Search space)，包 括公共（common)的搜索空间和用户设备（UE，User Equipment)专有（UE-Specific)的搜 索空间。整个搜索空间的CCE数目由每个下行子帧中PCFICH指示的控制区所占用的0FDM 符号数和PHICH的组数确定。UE在搜索空间内按所处传输模式的DCI format对所有可能 的PDCCH码率进行盲检测。</p>
+    <p>[0013]	在第k个子帧中，承载PDCCH的控制域由一组编号为0至NeeE, k-l的NeeE, k个CCE 构成。UE应当在每一个非不连续接收(non-Discontinuous Reception, non&#8212;DRX)子帧检 测一组候选的PDCCH以获取控制信息，所述检测是指按照所有待检测的DCI format对组内 的PDCCH进行解码。需要检测的候选PDCCH (PDCCH candidate)以搜索空间的方式定义，对 聚合等级（aggregation level)LG {1，2，4，8}，搜索空间匆。由一组候选PDCCH定义。搜索</p>
+    <p>空间Sf〗中候选PDCCH的m所对应的CCE由下式定义：</p>
+    <p>[0014]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0015]其中，i	= 0，...，L-l，m = 0，...，Ma)-l，Ma)为搜索空间 中待检的候选 PDCCH 的个数。</p>
+    <p>[0016]	对公共搜索空间(common search space)，Yk = 0，L 取 4 禾口 8 ；</p>
+    <p>[0017]对	UE 专有搜索空间（UE-specific search space)，L 取 1，2，4，8 ；</p>
+    <p>[0018]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0019]其中，=	nfflTI 乒 0，A = 39827，D = 65537, ^ = K/2J ；[」表示向下取整；ns</p>
+    <p>为一个无线帧中的时隙号；nKNTI为相应的无线网络临时标识（Radio NetworkTemporary Identifier, RNTI)。</p>
+    <p>[0020]	UE应检测aggregation level为4和8的各一个公共搜索空间，以及aggregation level为1、2、4、8的各一个UE专有搜索空间，公共搜索空间和UE专有搜索空间可以重叠。 具体的检测次数和对应的搜索空间如表1 ：</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0022]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0023]	表 1</p>
+    <p>[0024]	可以基于高层信令半静态（semi-statically)地设置以下传输模式 (transmission mode)，并按照用户设备专有（UE-Specific)搜索空间的PDCCH指示来接收 PDSCH数据传输：</p>
+    <p>[0025]模式	1 ：单天线端口 ；端口 0 (Single-antenna port ；port 0)；</p>
+    <p>[0026]模式	2 ：发射分集(Transmit diversity)；</p>
+    <p>[0027]	模式 3:开环空间复用（Open-loop spatial multiplexing)；</p>
+    <p>[0028]模式	4:闭环空间复用(Closed-loop spatial multiplexing)；</p>
+    <p>[0029]	模式5 ：多用户多输入多输出（Multi-user MIM0)；</p>
+    <p>[0030]	模式 6 ：闭环 Rank = 1 预编码（Closed-loop Rank = lprecoding)；</p>
+    <p>[0031]	模式 7 ：单天线端口 ；端口 5 (Single-antenna port ；port 5)；</p>
+    <p>[0032]	如果UE被高层设置为用小区无线网络临时标识（C-RNTI，Cell RadioNetwork Temporary Identifier)加扰的循环冗余校验(CRC, Cyclical RedundancyCheck)来进行 PDCCH解码，则UE应当按照表2中定义的相应组合来解码PDCCH和所有相关的PDSCH ：</p>
+    <p>[0033]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0034]</p>
+    <span class="patent-image-not-available"> </span>
+    <span class="patent-image-not-available"> </span>
+    <p>[0036]	表 2</p>
+    <p>[0037]	如果UE被高层设置为用半静态调度小区无线网络临时标识（SPS C-RNTI， Semi-persistently Scheduled Cell Radio Network Temporary Identifier)力口扰的CRC 来进行PDCCH解码，则UE应当按照下表3中定义的相应组合来解码PDCCH和所有相关的 PDSCH ：</p>
+    <p>[0038]</p>
+    <span class="patent-image-not-available"> </span>
+    <span class="patent-image-not-available"> </span>
+    <span class="patent-image-not-available"> </span>
+    <p>[0041]表	3</p>
+    <p>[0042]	如果UE被高层设置为用传输功率控制上行控制信道小区无线网络临时标识 (TPC-PUCCH-RNTI, Transmit Power Control-PUCCH-Cel1 Radio NetworkTemporary Identifier)加扰的CRC来进行PDCCH解码，则UE应当按照下表4中定义的相应组合来解 码 PDCCH ：</p>
+    <p>[0043]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0044]	表 4</p>
+    <p>[0045]	如果UE被高层设置为用传输功率控制上行共享信道小区无线网络临时标识 (TPC-PUSCH-RNTI, Transmit Power Control-PUSCH-Cel1 Radio NetworkTemporary Identifier)加扰的CRC来进行PDCCH解码，则UE应当按照下表5中定义的相应组合来解 码 PDCCH ：</p>
+    <p>[0046]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0047]	表 5</p>
+    <p>[0048]	由于LTE-Advanced网络需要能够接入LTE用户，所以其操作频带需要覆 盖目前LTE频带，但在这个频段上已经不存在可分配的连续100MHz的频谱带宽，所 以LTE-Advanced需要将几个分布在不同频段上的连续分量载频（频谱）（Component Carrier)采用载波聚合（Carrier Aggregation)技术聚合起来，形成LTE-Advanced可以使 用的100MHz带宽。即对于聚集后的频谱，被划分为n个分量载频（频谱），每个分量载频 (频谱）内的频谱是连续的。</p>
+    <p>[0049]	3GPP设定在载波聚合的场景下，可以采用跨载波调度（Cross ComponentCarrier Scheduling)的方式对多个分量载波进行调度，即可以在某个分量载波上监测其它分量载 波的PDCCH。那么，就需要在DCI format中添加载波指示域(Carrier Indicator Field, CIF)，以确定监测到的PDCCH所对应的分量载波。</p>
+    <p>[0050]	目前，在跨载波调度时，普遍认同需要在R10版本中合理确定用户专有搜索空间，以将原来R8版本的用户专有搜索空间进行扩大，以解决多个分量载波所带来的阻塞率问 题。但是，目前还没有具体的扩大用户专有搜索空间的方案，因而无法解决多个分量载波所 带来的阻塞率问题，从而给实际应用带来不便。</p>
+    <p>发明内容</p>
+    <p>[0051]	有鉴于此，本发明的主要目的在于提供一种确定用户专有搜索空间的方法和装 置，以在R10版本中确定用户专有搜索空间。</p>
+    <p>[0052]	为达到上述目的，本发明的技术方案是这样实现的：</p>
+    <p>[0053]	一种确定用户专有搜索空间的方法，该方法包括：</p>
+    <p>[0054]	获取分量载波索引、各分量载波的每个聚合等级下各个候选PDCCH之间的相对位 置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位置，所述索引位置指每 个分量载波的候选PDCCH的编号；</p>
+    <p>[0055]	根据所获取的分量载波索引以及相对位置信息，确定监测PDCCH的用户专有搜索 空间。</p>
+    <p>[0056]	各分量载波的每个聚合等级下各个候选PDCCH之间的相对位置是变化的，各分量 载波之间相同索引位置上的候选PDCCH之间的相对位置是固定的；</p>
+    <p>[0057]	确定所述用户专有搜索空间的方法为：</p>
+    <p>[0058]	方法一、在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优 选为LVccej /△」，其中NeeE, k为第k个子帧中CCE的数目；分量载波j的第i个候选PDCCH 在W个可用位置中的位置为P(i，j，L)，候选PDCCH之间的N个间距为K(i) =P(i+l，j, L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对所有分量载波的所有聚 合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，根据分量载波的数量或者 载波指示域确定K(i)；当i为Q+1时，根据CCE的总数、聚合等级、候选PDCCH的个数以及 分量载波的数量中的一种或者多种确定K(i)；如果N小于等于1，则根据CCE的总数、聚合 等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定K(i)；</p>
+    <p>N</p>
+    <p>[0059]	其中，Q= j或者Q为其它的1到N之间的正整数；</p>
+    <p>[0060]	或者，方法二、在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W 的值优选为/△」，其中NeeE, k为第k个子帧中CCE的数目；分量载波j的第i个候选 PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对所有分量载波的所有 聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，K⑴取为1 ；当i为Q+1 时，根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种 确定K⑴；如果N小于等于1，则根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载 波的数量中的一种或者多种确定K(i)；</p>
+    <p>N</p>
+    <p>[0061]	其中，Q 二 I或者Q为其它的1到N之间的正整数。</p>
+    <p>[0062]	在将所有分量载波索引排序，并且相邻两个分量载波索引为a和b时，所述候选</p>
+    <p>14PDCCH之间的间距的确定方法为：</p>
+    <p>[0063]	方法一中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选 PDCCH的位置为P(i，a，L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) = P(i, a, L)-P(i，b，L)，H(i)为1，或根据聚合等级和载波指示域确定，或根据聚合等级和分量载 波的数量确定；</p>
+    <p>[0064]	方法二中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选 PDCCH的位置为P(i，a，L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) = P(i, a，L) -P (i，b，L)，H(i)根据聚合等级和候选PDCCH的数量确定，或根据聚合等级、候选PDCCH 的数量和载波指示域确定。</p>
+    <p>[0065]	在各分量载波的每个聚合等级下，各个候选PDCCH之间的相对位置是固定的，但 是各分量载波之间相同索引位置上的候选PDCCH之间的相对位置是变化的；</p>
+    <p>[0066]	确定所述用户专有搜索空间的方法为：</p>
+    <p>[0067]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 [A^ou/Z」，其中NeeE,k为第k个子帧中控制信道粒子CCE的数目；分量载波j的第i个候选 PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对于每个分量载波的所 有聚合等级，同一分量载波的K(i)对于所有的i均为固定值，这个固定值可以为1到W中 的任一值，但是不同分量载波的K(i)可以为不同的值。；</p>
+    <p>[0068]	相邻两个分量载波索引为a和b的分量载波的候选PDCCH的位置为P(i，a, L)和 P (i，b，L)，他们的第i个候选PDCCH之间的间距H⑴=P (i，a, L) _P (i，b，L)；对于所有聚 合等级下，所有相邻分量载波的H(i)根据i的不同而随机取值，或根据i的增加而增大，或 根据i的增加而减小，H(i)的取值范围为1到W中的任一值。</p>
+    <p>[0069]	在各分量载波的每个聚合等级下，各个候选PDCCH之间的相对位置是变化的，各 分量载波之间相同索引位置上的候选PDCCH之间的相对位置是变化的；</p>
+    <p>[0070]	确定所述用户专有搜索空间的方法为：</p>
+    <p>[0071]	在每个聚合等级下，将各个分量载波的所有候选PDCCH都随机分布在整个用户专 有搜索空间上。</p>
+    <p>[0072]	在各分量载波的每个聚合等级下，各个候选PDCCH之间的相对位置是固定的，各 分量载波之间相同索引位置上的候选PDCCH之间的相对位置是固定的；</p>
+    <p>[0073]	确定所述用户专有搜索空间的方法为：</p>
+    <p>[0074]	在各个分量载波在每个聚合等级下，将其中一个分量载波的候选PDCCH等间距分 布在用户专有搜索空间上，而将另一个分量载波的各个候选PDCCH，在对应于第一个分量载 波的各个候选PDCCH相同的索引位置上，紧接着第一个分量载波的各个候选PDCCH放置；将 其它的分量载波以此方式紧接着上一个分量载波配置候选PDCCH。</p>
+    <p>[0075]	所述分量载波索引包括实施跨载波调度和被跨载波调度的各分量载波对应的分 量载波索引；</p>
+    <p>[0076]	获取所述分量载波索引的方法为：</p>
+    <p>[0077]	在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定实施 跨载波调度的分量载波对应的索引为0，其余的需要被跨载波调度的分量载波按照频点的高低，按从大到小或从小到大的顺序排列；</p>
+    <p>[0078]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定 实施跨载波调度的分量载波对应的索引为指定值0，将所有分量载波按照频点的高低顺序 的排列；按照此排列顺序，从实施跨载波调度的分量载波开始，循环的紧接着上述指定值分 配其它分量载波的分量载波索引；</p>
+    <p>[0079]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，将这 些分量载波按照频点的高低，按从大到小或从小到大的顺序排列；</p>
+    <p>[0080]	或者，在跨载波调度使能的情况下，各个分量载波对应的分量载波索引等于各个 分量载波对应的载波指示域CIF值；</p>
+    <p>[0081]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，通过 高层信令配置。</p>
+    <p>[0082]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，上行分量载波与其对 应的下行分量载波需要监测的用户专有搜索空间相同；该方法进一步包括：</p>
+    <p>[0083]	在已经确定的用户专有搜索空间上，对上行分量载波上需要监测的DCIformat进 行监测。</p>
+    <p>[0084]	一种确定用户专有搜索空间的装置，该装置包括参考因素获取单元、搜索空间决 策单元；其中，</p>
+    <p>[0085]	所述参考因素获取单元，用于获取分量载波索引、各分量载波的每个聚合等级下 各个候选PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的 相对位置；并将所获取的分量载波索引以及相对位置信息发送给所述搜索空间决策单元， 所述索引位置指每个分量载波的候选PDCCH的编号；</p>
+    <p>[0086]	所述搜索空间决策单元，用于根据收到的分量载波索引以及相对位置信息，确定 监测PDCCH的用户专有搜索空间。</p>
+    <p>[0087]	在各分量载波的每个聚合等级下，各个候选PDCCH之间的相对位置是变化的，各 分量载波之间相同索引位置上的候选PDCCH之间的相对位置是固定的；</p>
+    <p>[0088]	所述搜索空间决策单元在确定所述用户专有搜索空间时用于：</p>
+    <p>[0089]	应用方法一时，在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，</p>
+    <p>W的值优选为|_A^CE，fc &#20034;」，其中NeeE, k为第k个子帧中控制信道元素CCE的数目；分量载波 j的第i个候选PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距 为 K⑴=P(i+1, j, L)-P(i, j, L), i = 1，2，...N，N 的值为候选 PDCCH 的个数减去 1 ；对 所有分量载波的所有聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，根 据分量载波的数量或者载波指示域确定K(i)；当i为Q+1时，根据CCE的总数、聚合等级、 候选PDCCH的个数以及分量载波的数量中的一种或者多种确定K (i)；如果N小于等于1，则 根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定 K(i)；</p>
+    <p>N</p>
+    <p>[0090]	其中，Q= y或者Q为其它的1到N之间的正整数；</p>
+    <p>[0091]	或者，应用方法二时，在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为[^(^&#20034; !L\，其中NeeE,k为第k个子帧中CCE的数目；分量载波j的第i 个候选PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K (i) =P(i+1，j，L)-P(i，j，L)，i = 1，2，... N，N的值为候选PDCCH的个数减去1 ；对所有分量 载波的所有聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，K (i)取为1 ； 当i为Q+1时，根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一 种或者多种确定K (i)；如果N小于等于1，则根据CCE的总数、聚合等级、候选PDCCH的个数 以及分量载波的数量中的一种或者多种确定K(i)； N</p>
+    <p>[0092]	其中，Q=-或者Q为其它的1到N之间的正整数。</p>
+    <p>[0093]	在将所有分量载波索引排序，并且相邻两个分量载波索引为a和b时，</p>
+    <p>[0094]	方法一中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选 PDCCH的位置为P(i，a，L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) = P(i, a, L)-P(i，b，L)，H(i)为1，或根据聚合等级和载波指示域确定，或根据聚合等级和分量载 波的数量确定；</p>
+    <p>[0095]	方法二中，在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选 PDCCH的位置为P(i，a，L)和P(i，b，L)，他们的第i个候选PDCCH之间的间距H(i) = P(i, a，L) -P (i，b，L)，H(i)根据聚合等级和候选PDCCH的数量确定，或根据聚合等级、候选PDCCH 的数量和载波指示域确定。</p>
+    <p>[0096]	在各分量载波的每个聚合等级下，各个候选PDCCH之间的相对位置是固定的，但 是各分量载波之间相同索引位置上的候选PDCCH之间的相对位置是变化的；</p>
+    <p>[0097]	所述搜索空间决策单元在确定所述用户专有搜索空间时用于：</p>
+    <p>[0098]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为</p>
+    <p>L&amp;cw"」，其中为第k个子帧中控制信道粒子CCE的数目；分量载波j的第i个候选 PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对于每个分量载波的所 有聚合等级，同一分量载波的K(i)对于所有的i均为固定值，这个固定值可以为1到W中 的任一值，但是不同分量载波的K(i)可以为不同的值。；</p>
+    <p>[0099]	相邻两个分量载波索引为a和b的分量载波的候选PDCCH的位置为P(i，a, L)和 P (i，b，L)，他们的第i个候选PDCCH之间的间距H⑴=P (i，a, L) _P (i，b，L)；对于所有聚 合等级下，所有相邻分量载波的H(i)根据i的不同而随机取值，或根据i的增加而增大，或 根据i的增加而减小，H(i)的取值范围为1到W中的任一值。</p>
+    <p>[0100]	在各分量载波的每个聚合等级下，各个候选PDCCH之间的相对位置是变化的，各 分量载波之间相同索引位置上的候选PDCCH之间的相对位置是变化的；</p>
+    <p>[0101]	所述搜索空间决策单元在确定所述用户专有搜索空间时用于：</p>
+    <p>[0102]	在每个聚合等级下，将各个分量载波的所有候选PDCCH都随机分布在整个用户专 有搜索空间上。</p>
+    <p>[0103]	在各分量载波的每个聚合等级下，各个候选PDCCH之间的相对位置是固定的，各 分量载波之间相同索引位置上的候选PDCCH之间的相对位置是固定的；</p>
+    <p>17[0104]	所述搜索空间决策单元在确定所述用户专有搜索空间时用于：</p>
+    <p>[0105]	在各个分量载波在每个聚合等级下，将其中一个分量载波的候选PDCCH等间距分 布在用户专有搜索空间上，而将另一个分量载波的各个候选PDCCH，在对应于第一个分量载 波的各个候选PDCCH相同的索引位置上，紧接着第一个分量载波的各个候选PDCCH放置；将 其它的分量载波以此方式紧接着上一个分量载波配置候选PDCCH。</p>
+    <p>[0106]	所述分量载波索引包括实施跨载波调度和被跨载波调度的各分量载波对应的分 量载波索引；</p>
+    <p>[0107]	所述参考因素获取单元在获取所述分量载波索引时用于：</p>
+    <p>[0108]	在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定实施 跨载波调度的分量载波对应的索引为0，其余的需要被跨载波调度的分量载波按照频点的 高低，按从大到小或从小到大的顺序排列；</p>
+    <p>[0109]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，设定 实施跨载波调度的分量载波对应的索引为指定值0，将所有分量载波按照频点的高低顺序 的排列；按照此排列顺序，从实施跨载波调度的分量载波开始，循环的紧接着上述指定值分 配其它分量载波的分量载波索引；</p>
+    <p>[0110]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，将这 些分量载波按照频点的高低，按从大到小或从小到大的顺序排列；</p>
+    <p>[0111]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，随机 分配索引；</p>
+    <p>[0112]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的CIF值，分配对应的 分量载波索引；</p>
+    <p>[0113]	或者，在跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引，通过 高层信令配置。</p>
+    <p>[0114]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，上行分量载波与其对 应的下行分量载波需要监测的用户专有搜索空间相同；该装置进一步包括检测单元；</p>
+    <p>[0115]	所述搜索空间决策单元，进一步用于将进行检测时所需的用户专有搜索空间信息 发送给所述检测单元；</p>
+    <p>[0116]	所述检测单元，用于在已经确定的用户专有搜索空间上，对上行分量载波上需要 监测的DCI format进行监测。</p>
+    <p>[0117]	本发明方法和装置，均可在R10版本中确定用户专有搜索空间。 附图说明</p>
+    <p>[0118]	图1为现有技术中FDD模式的帧结构示意图；</p>
+    <p>[0119]	图2为现有技术中TDD模式的帧结构示意图；</p>
+    <p>[0120]	图3为现有技术中R8版本的用户专有搜索空间示意图；</p>
+    <p>[0121]	图4为本发明实施例一的用户专有搜索空间示意图；</p>
+    <p>[0122]	图5为本发明实施例二的用户专有搜索空间示意图；</p>
+    <p>[0123]	图6为本发明实施例三的用户专有搜索空间示意图；</p>
+    <p>[0124]	图7为本发明实施例四的用户专有搜索空间示意图；</p>
+    <p>18[0125]	图8为本发明实施例五的用户专有搜索空间示意图；</p>
+    <p>[0126]	图9为本发明的确定用户专有搜索空间的流程简图；</p>
+    <p>[0127]	图10为本发明一实施例的确定用户专有搜索空间的装置图。</p>
+    <p>具体实施方式</p>
+    <p>[0128]	总体而言，在跨载波调度使能时，可以获取用于确定用户专有搜索空间的参考因 素：分量载波索引、各分量载波的每个聚合等级下各个候选PDCCH之间的相对位置以及各 分量载波之间相同索引位置上的候选PDCCH之间的相对位置，并由UE根据上述参考因素确 定监测PDCCH的用户专有搜索空间。所述索引位置指每个分量载波的候选PDCCH的编号，所 述分量载波索引包括实施跨载波调度和被跨载波调度的各分量载波对应的分量载波索引。</p>
+    <p>[0129]	针对实施跨载波调度和被跨载波调度的各分量载波所对应的用户专有搜索空间 而言，各分量载波上的每个聚合等级条件下，各个候选PDCCH之间的相对位置可以是固定 或是变化的；同理，各分量载波之间相同索引位置上的候选PDCCH之间的相对位置也可以 是固定或是变化的。并且，针对各分量载波的分量载波索引而言，可以按照基站配置给用户 设备的分量载波数目来配置分量载波索引。</p>
+    <p>[0130]	配置分量载波索引时，可以将实施跨载波调度的分量载波的分量载波索引设置为 一指定值，所述指定值为0，二进制表示时可以表示为000 ；其余被跨载波调度的各分量载 波按照各自频点位置高低紧接着所述指定值顺序配置分量载波索引；</p>
+    <p>[0131]	或者，将实施跨载波调度的分量载波的分量载波索引设置为一指定值，所述指定 值为0，二进制表示时可以表示为000 ；将所有分量载波按照各自频点的高低顺序排列，并 按照此排列顺序从实施跨载波调度的分量载波开始，紧接着上述指定值循环分配其它分量 载波的分量载波索引；</p>
+    <p>[0132]	或者，将实施跨载波调度和被跨载波调度的各分量载波按照各自频点位置，以高 低顺序配置分量载波索引；</p>
+    <p>[0133]	或者，按照基站配置给用户设备的各个分量载波的载波指示域来配置分量载波索 引。</p>
+    <p>[0134]	或者，通过高层信令配置来配置分量载波索引。</p>
+    <p>[0135]	再有，在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，上行分量载波 与其对应的下行分量载波需要监测的用户专有搜索空间相同；可以在已经确定的用户专有 搜索空间上，对上行分量载波上需要监测的下行控制信息格式DCI format进行监测。</p>
+    <p>[0136]	具体应用时，可根据如下四种方法确定PDCCH的用户专有搜索空间：</p>
+    <p>[0137]	第一种用户专有搜索空间确定方法：</p>
+    <p>[0138]	在各分量载波上的每个聚合等级条件下，各个候选PDCCH之间的相对位置是变化 的，但是各分量载波之间相同索引位置上的候选PDCCH之间的相对位置是固定的。</p>
+    <p>[0139]	用户设备可以改变R8中的搜索空间中候选PDCCH的m所对应的CCE公式，以</p>
+    <p>确定用户专有搜索空间：</p>
+    <p>[0140]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0141]	其中，i = 0，...，L-l，m = 0，…，Ma)-l，Ma)为搜索空间对中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0142]	具体而言，有如下两种配置：</p>
+    <p>[0143]	配置一：在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值 优选为L^cc^t /&#19972;」,其中NeeE, k为第k个子帧中控制信道元素CCE的数目；分量载波j的第</p>
+    <p>i个候选PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K (i) =P(i+1，j，L)-P(i，j，L)，i = 1，2，&#8226; &#8226; &#8226; N，N的值为候选PDCCH的个数减去1 ；对所有分量 载波的所有聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，根据分量载 波的数量或者载波指示域确定K(i)；当i为Q+1时，根据CCE的总数、聚合等级、候选PDCCH 的个数以及分量载波的数量中的一种或者多种确定K (i)；如果N小于等于1，则根据CCE的 总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定K(i)； N</p>
+    <p>[0144]	其中，Q= y或者Q为其它的1到N之间的正整数；</p>
+    <p>[0145]	在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选PDCCH的位 置为P(i，a, L)和P(i，b，L)，那么他们的第i个候选PDCCH之间的间距H(i) = P(i, a, L)-P(i，b，L)，此时H(i)为1，或根据聚合等级和载波指示域来确定，或根据聚合等级和分 量载波的数量确定；</p>
+    <p>[0146]	K⑴的各个值可以是不一样的，例如，K(i) = 2，其中i的取值为除了 Ma)/2以外 的其它所有值，K(M(l)/2)可以是0到L&amp;cw/i：」中的任一值。而H(i)的各个值都是固定</p>
+    <p>的，例如都为1。那么，f(m, I)的定义可以参照如下公式：</p>
+    <p>[0147]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0148]	其中，NumCC是配置给用户的分量载波的数量，也可以是配置给用户的激活 的（active)分量载波数量，也可以当前系统的最大分量载波数量，也可以是一个固 定值，此固定值可以由高层信令配置；n为1到Ma)中的任一值，如Ma)/2 ；offsetl (m)</p>
+    <p>=K(m)，其取值可以参照offsetl在每个m的条件下，取0到L^ou/^l中的任一 值，例如</p>
+    <span class="patent-image-not-available"> </span>
+    <p>或者</p>
+    <span class="patent-image-not-available"> </span>
+    <p>其中 p 为任一正整数，可以取为 2 或者 NumCC</p>
+    <p>等，并且此时offsetl (0)取0 ;offset2 = H(i)，其取值可以参照offset2 = H(i) = 1 ；或 者，offsetl和offset2的值还可以通过高层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <p>[0149]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>[0150]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0151]其中，=	nfflTI 乒 0，A = 39827，D = 65537, ^ = K/2J ；[」表示向下取整，ns 为</p>
+    <p>一个无线帧中的时隙号；1%&#8222;为相应的RNTI。其余的设计与LTE Release 8版本中的一样。 R8版本的一种用户专有搜索空间设计如图3中所示，而按照上述方法设计的用户专有搜索 空间如图4中所示。</p>
+    <p>[0152]	配置二 ：在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值 优选为，其中NeeE,k为第k个子帧中CCE的数目；分量载波j的第i个候选PDCCH 在W个可用位置中的位置为P(i，j，L)，候选PDCCH之间的N个间距为K(i) =P(i+l，j, L)-P(i，j, L)，i = 1,2, ... N，N的值为候选PDCCH的个数减去1 ；对所有分量载波的所有 聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，K⑴取为1 ；当i为Q+1 时，根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种 确定K⑴；如果N小于等于1，则根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载 波的数量中的一种或者多种确定K(i)；</p>
+    <p>N</p>
+    <p>[0153]	其中，Q= y或者Q为其它的1到N之间的正整数。</p>
+    <p>[0154]	在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选PDCCH的位置 为P (i，a，L)和P (i，b，L)，那么他们的第i个候选PDCCH之间的间距H⑴=P (i，a, L) -P (i， b，L)，此时H(i)根据聚合等级和候选PDCCH的数量确定，或根据聚合等级、候选PDCCH的数 量和载波指示域确定。</p>
+    <p>[0155]	K⑴的各个值可以是不一样的，例如，K(i) = 1，其中i的取值为除了 Ma)/2以外 的其它所有值，K(Ma)/2)可以是0到|^cx^/Z」中的任一值；而H(i)的各个值都是固定的。</p>
+    <p>再例如，都为Ma)/2。那么，f(m，I)的定义可以参照如下公式：</p>
+    <p>[0156]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0157]其中，n	为 1 到 M(L)中的任一值，如 M(L)/2 ；offset 1 (m) = K(m)，其 取值可以参照offsetl在每个m的条件下，取0到中的任一值，例</p>
+    <p>如</p>
+    <span class="patent-image-not-available"> </span>
+    <p>或者</p>
+    <span class="patent-image-not-available"> </span>
+    <p>其中NumCC是配置给用户的分量载波的数量，</p>
+    <p>也可以是配置给用户的激活的分量载波数量，也可以当前系统的最大分量载波数量，也可 以是一个固定值，此固定值可以由高层信令配置，P为正整数，可以取为2或者NumCC等，并 且此时 offsetl(O)取 0 ;offset2 = H(i)，其取值可以参照 offset2 = H(i) = Ma)/2。或 者，offsetl和offset2的值还可以通过高层信令来配置，也可以固定的定义为任一个正整</p>
+    <p>21数。</p>
+    <p>[0158]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>[0159]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0160]其中，=	nENTI 兴 0，A = 39827，D = 65537，= L&#12316;/2」」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号；1%&#8222;为相应的RNTI。其余的设计与LTE Release 8版本中的一样， 按照上述方法设计的用户专有搜索空间如图5中所示。</p>
+    <p>[0161]	第二种用户专有搜索空间确定方法：</p>
+    <p>[0162]	在各分量载波上的每个聚合等级条件下，各个候选PDCCH之间的相对位置是固定 的，但是各分量载波之间相同索引位置上的候选PDCCH之间的相对位置是变化的。</p>
+    <p>[0163]	用户设备可以改变R8中的搜索空间中候选PDCCH的m所对应的CCE公式，以</p>
+    <p>确定用户专有搜索空间：</p>
+    <p>[0164]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0165]	其中，i = 0，...，L-l，m = 0，…，Ma)_l，Ma)为搜索空间对中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0166]	具体而言，可有如下的配置：</p>
+    <p>[0167]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 /1」，其中NeeE,k为第k个子帧中控制信道粒子CCE的数目；分量载波j的第i个候选</p>
+    <p>PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对于每个分量载波的所 有聚合等级，同一分量载波的K(i)对于所有的i均为固定值，这个固定值可以为1到W中 的任一值，但是不同分量载波的K(i)可以为不同的值。相邻两个分量载波索引为a和b的 分量载波的候选PDCCH的位置为P (i，a，L)和P (i，b，L)，他们的第i个候选PDCCH之间的 间距H(i) =P(i，a，L)-P(i，b，L)；对于所有聚合等级下，所有相邻分量载波的H(i)根据i 的不同而随机取值，或根据i的增加而增大，或根据i的增加而减小，H(i)的取值范围为1 到W中的任一值。</p>
+    <p>[0168]	K⑴的各个值都是固定的，例如，= ^CCE；f/Z」。而H⑴的各个值可以是不</p>
+    <p>M(L)</p>
+    <p>一样的，例如H(i)为0到LiVCCE，t/i：」中的任一个值。那么，f(m，I)的定义可以参照如下公 式：</p>
+    <p>[0169]	f (m, I) = m ‘ offsetl (I) +1 ‘ offset2 (m)；</p>
+    <p>[0170]	其中，offsetl (I)取值为在每个I的条件下，取一个固定的值，例如offsetl (0)的</p>
+    <p>取值为L^ccy/Z」，offsetl (1)的取值为L^^i + 1;0ffset2 = H(m)，其取值可以参 M(l)	M(L)</p>
+    <p>照offset2在每个m的条件下，取0到…(：巩丨/&#19972;」中的任一个值。或者，offsetl和offset2的值还可以通过高层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <p>[0171]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>[0172]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0173]其中，=	nfflTI ^ 0 ;A = 39827 ；D = 65537 ;k = lns/2i;^」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号。％^为相应的RNTI。其余的设计与LTE Release 8版本中的一 样，按照上述方法设计的用户专有搜索空间如图6中所示。</p>
+    <p>[0174]	第三种用户专有搜索空间确定方法：</p>
+    <p>[0175]	在各分量载波上的每个聚合等级条件下，各个候选PDCCH之间的相对位置是变化 的，各分量载波之间相同索引位置上的候选PDCCH之间的相对位置也是变化的。</p>
+    <p>[0176]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 L^ccE.i /Z」，其中NeeE,k为第k个子帧中CCE的数目。分量载波j的第i个候选PDCCH在W 个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1，j，L) -P (i， j，L)，i = 1，2，. . . N，N的值为候选PDCCH的个数减去1。相邻两个分量载波索引为a和b 的分量载波的候选PDCCH的位置为P(i，a, L)和P(i，b，L)，那么他们的第i个候选PDCCH 之间的间距 H(i) = P(i，a，L)-P(i，b，L)。</p>
+    <p>[0177]	用户设备可以改变R8中的搜索空间中候选PDCCH的m所对应的CCE公式，以</p>
+    <p>确定用户专有搜索空间：</p>
+    <p>[0178]</p>
+    <p>L. {{Yk + f(m, /)) mod |_iVCCE，,+</p>
+    <p>[0179]	其中，i = 0，...，L-l，m = 0，…，Ma)_l，Ma)为搜索空间Sf)中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0180]	具体而言，可有如下的配置：</p>
+    <p>[0181]	各个分量载波在每个聚合等级下，它们的所有候选PDCCH都随机分布在整个用户 专有搜索空间上。</p>
+    <p>[0182]	K⑴的各个值都是不一样的，而H(i)的各个值也是不一样的，例如K(i)和H(i) 为o到中的任一个值；并且，他们的值各不相同。那么，f(m，I)的定义可以参照 如下公式：</p>
+    <p>[0183]	f (m, I) = offsetl(m)+I &#8226; offset2 (m)；</p>
+    <p>[0184]其中，off	set l(m) = K(m), of f set2 (m) = H(m)，他们的取值可以参考 offset 1 和 offset2在每个m的条件下，取0到&#20034;」中的任一个值，并且这里offsetl (0)为0。</p>
+    <p>或者，offsetl和offset2的值还可以通过高层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0188]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>[0189]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0190]其中，=	nfflTI 兴 0，A = 39827，D = 65537, ^ = K/2J ；[」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号；1%&#8222;为相应的RNTI。其余的设计与LTE Release 8版本中的一样， 按照上述方法设计的用户专有搜索空间如图7中所示。</p>
+    <p>[0191]	第四种用户专有搜索空间确定方法：</p>
+    <p>[0192]	在各分量载波上的每个聚合等级条件下，各个候选PDCCH之间的相对位置是固定 的，各分量载波之间相同索引位置上的候选PDCCH之间的相对位置也是固定的。</p>
+    <p>[0193]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 L^cce,^ /I」，其中NeeE,k为第k个子帧中CCE的数目。分量载波j的第i个候选PDCCH在W 个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1，j，L) -P (i， j，L)，i = 1，2，. . . N，N的值为候选PDCCH的个数减去1。相邻两个分量载波索引为a和b 的分量载波的候选PDCCH的位置为P(i，a, L)和P(i，b，L)，那么他们的第i个候选PDCCH 之间的间距 H(i) = P(i，a，L)-P(i，b，L)。</p>
+    <p>[0194]	用户设备可以改变R8中的搜索空间Sf中候选PDCCH的m所对应的CCE公式，以</p>
+    <p>确定用户专有搜索空间：</p>
+    <p>[0195]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0196]	其中，i = 0，...，L-l，m = 0，…，Ma)_l，Ma)为搜索空间Sf)中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0197]	具体而言，可有如下的配置：</p>
+    <p>[0198]	各个分量载波在每个聚合等级下，其中一个分量载波的候选PDCCH等间距分布在 用户专有搜索空间上，而另一个分量载波的各个候选PDCCH，在对应于第一个分量载波的各 个候选PDCCH相同的索引位置上，紧接着第一个分量载波的各个候选PDCCH放置；其它的分 量载波以此方式紧接着上一个分量载波配置它们的候选PDCCH。 </p>
+    <p>[0199]	K⑴的各个值都是固定的，例如，</p>
+    <span class="patent-image-not-available"> </span>
+    <p>而H(i)的各个值也都是</p>
+    <p>固定的，例如都为1。那么，f(m, I)的定义可以参照如下公式：</p>
+    <p>[0200]  f(m,l)=m&#183;offset1+l&#183;offset2; [0201]	其中，#作讨1 = 1((1)，其取值可以参照0</p>
+    <span class="patent-image-not-available"> </span>
+    <p>H(i)，其取值可以参照offset2 = H(i) =1。或者，offsetl和offset2的值还可以通过高 层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <p>[0202]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>[0203]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0204]其中，=	nfflTI 兴 0，A = 39827，D = 65537, ^ = K/2J ；[」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号；1%&#8222;为相应的RNTI。其余的设计与LTE Release 8版本中的一样， 按照上述方法设计的用户专有搜索空间如图8中所示。</p>
+    <p>[0205]	经过上述四种方法对f(m，I)的描述，再按照公式：</p>
+    <p>[0206]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0207]	进行取模操作，以最终确定用户专有搜索空间。</p>
+    <p>[0208]	在实际应用中，各分量载波的分量载波索引可以按照如下方法进行配置：</p>
+    <p>[0209]	跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引I，可以预定义 实施跨载波调度以及被跨载波调度的各个分量载波对应的分量载波索引I，如：设定实施 跨载波调度的分量载波对应的索引为0，其余的需要被跨载波调度的分量载波按照频点的 高低，按从大到小的顺序排列，也可以按照从小到大的顺序排列，取值范围从1到4。</p>
+    <p>[0210]	或者，跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引I，可以 预定义实施跨载波调度以及被跨载波调度的各个分量载波对应的分量载波索引I，如：设 定实施跨载波调度的分量载波对应的索引为指定值0，将所有分量载波按照频点的高低顺 序的排列，按照此排列顺序，从实施跨载波调度的分量载波开始，循环的紧接着上述指定值 来分配其它分量载波的分量载波索引，取值范围从1到4。</p>
+    <p>[0211]	或者，跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引I，可以 预定义实施跨载波调度以及被跨载波调度的各个分量载波对应的分量载波索引I，如：将 这些分量载波按照频点的高低，按从大到小的顺序排列，也可以按照从小到大的顺序排列， 取值范围从0到4。</p>
+    <p>[0212]	或者，跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引I，可以 按照实施跨载波调度以及被跨载波调度的各个分量载波对应的CIF值，分配对应的分量载 波索引I，取值范围从0到7。比如，CIF值为010，则分量载波索引I为2。</p>
+    <p>[0213]	或者，跨载波调度使能的情况下，针对各个分量载波对应的分量载波索引I，可以 通过高层信令来配置，取值范围从0到7。</p>
+    <p>[0214]	另外，在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，上行分量载波 与其对应的下行分量载波需要监测的用户专有搜索空间是一样的，在已经确定的用户专有 搜索空间上，UE对上行分量载波上需要监测的下行控制信息格式DCI format进行监测。</p>
+    <p>[0215]	在具体应用时，可以参照如下各具体实例以确定用户专有搜索空间。</p>
+    <p>[0216]	具体实例一：</p>
+    <p>[0217]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，高层将会通知物理层 某个分量载波上需要调度哪些其它的分量载波，即会得到分量载波的索引，这里可以设这 个索引的参数为I，其取值范围为{0,1,2,3,4}或者{0，1，2，3，4，5，6，7}。</p>
+    <p>[0218]	那么，当跨载波调度使能时，PDCCH监测的用户专有搜索空间可以根据需要调度的 分量载波来确定，用户设备可以改变R8中的搜索空间^尸中候选PDCCH的m所对应的CCE公式，以确定用户专有搜索空间：</p>
+    <p>[0219]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0220]	其中，i = 0，...，L-l，m = 0，…，Ma)_l，Ma)为搜索空间匆中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0221]	具体而言，有如下配置：</p>
+    <p>[0222]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 [Ncc^k /I」，其中NeeE,k为第k个子帧中控制信道元素CCE的数目；分量载波j的第i个候选 PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，. . . N，N的值为候选PDCCH的个数减去1 ；对所有分量载波的所 有聚合等级，如果N大于1，当i为从1到Q，以及i为从Q+2到N时，根据分量载波的数量 或者载波指示域确定K(i)；当i为Q+1时，根据CCE的总数、聚合等级、候选PDCCH的个数 以及分量载波的数量中的一种或者多种确定K(i)；如果N小于等于1，则根据CCE的总数、 聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定K(i)； </p>
+    <p>[0223]	其中，Q=[N/2]或者Q为其它的1到N之间的正整数；</p>
+    <p>[0224]	在聚合等级L下，相邻两个分量载波索引为a和b的分量载波的候选PDCCH的位 置为P(i，a, L)和P(i，b，L)，那么他们的第i个候选PDCCH之间的间距H(i) = P(i, a, L)-P(i，b，L)，此时H(i)为1，或根据聚合等级和载波指示域来确定，或根据聚合等级和分 量载波的数量确定；</p>
+    <p>[0225]	f(m，I)的定义可以参照如下公式：</p>
+    <p>[0226]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0227]	其中，NumCC是配置给用户的分量载波的数量，也可以是配置给用户的激活的分量 载波数量，也可以当前系统的最大分量载波数量，也可以是一个固定值，此固定值可以由高 层信令配置，其中P为任一正整数，可以取为2或者NumCC等。</p>
+    <p>[0228]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>[0229]	Yk = (A &#8226; Yk-1）modD ；</p>
+    <p>[0230]其中，=	nENTI  ≠ 0，A = 39827，D = 65537, k = [ns/2]；[」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号；nKNTI为相应的RNTI。</p>
+    <p>[0231]	经过上述对f (m，I)的设计，再按照公式：</p>
+    <p>[0232]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0233]	进行取模操作，以最终确定用户专有搜索空间。</p>
+    <p>[0234]	具体实例二 ：</p>
+    <p>[0235]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，高层将会通知物理层 某个分量载波上需要调度哪些其它的分量载波，即会得到分量载波的索引，这里可以设这 个索引的参数为I，其取值范围为{0,1,2,3,4}或者{0，1，2，3，4，5，6，7}。</p>
+    <p>[0236]	那么，当跨载波调度使能时，PDCCH监测的用户专有搜索空间可以根据需要调度的 分量载波来确定，用户设备可以改变R8中的搜索空间中候选PDCCH的m所对应的CCE</p>
+    <p>公式，以确定用户专有搜索空间：</p>
+    <p>[0237]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0238]	其中，i = 0，. . .，L-l，m = 0，…，Ma)_l，Ma)为搜索空间5f)中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0239]	具体而言，有如下配置：</p>
+    <p>[0240]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 L^au /I」，其中NeeE,k为第k个子帧中CCE的数目；分量载波j的第i个候选PDCCH在W个 可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1，j，L) -P (i，j， L)，i = 1，2，. . . N，N的值为候选PDCCH的个数减去1 ；对所有分量载波的所有聚合等级，如 果N大于1，当i为从1到Q，以及i为从Q+2到N时，K⑴取为1 ；当i为Q+1时，根据CCE 的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的一种或者多种确定K(i)；如 果N小于等于1，则根据CCE的总数、聚合等级、候选PDCCH的个数以及分量载波的数量中的 一种或者多种确定K(i)；</p>
+    <p>[0241]	其中，Q=&#8212;或者Q为其它的1到N之间的正整数。</p>
+    <p>[0242]	在聚合等级L下，相邻两个分量载波索弓|为a和b的分量载波的候选PDCCH的位置 为P (i，a，L)和P (i，b，L)，那么他们的第i个候选PDCCH之间的间距H⑴=P (i，a, L) -P (i， b，L)，此时H(i)根据聚合等级和候选PDCCH的数量确定，或根据聚合等级、候选PDCCH的数 量和载波指示域确定。</p>
+    <p>[0243]	f(m，I)的定义可以参照如下公式：</p>
+    <p>[0244]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0245]	其中，NumCC是配置给用户的分量载波的数量，也可以是配置给用户的激活的分量 载波数量，也可以当前系统的最大分量载波数量，也可以是一个固定值，此固定值可以由高 层信令配置，P为正整数，可以取为2或者NumCC等等。</p>
+    <p>[0246]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：[0247]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0248]其中，=	nENTI 兴 0，A = 39827, D = 65537, ^ = L^/2J ；[」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号；nKNTI为相应的RNTI。</p>
+    <p>[0249]	经过上述对f (m，I)的设计，再按照公式：</p>
+    <p>[0250]</p>
+    <p>X-{(7,+/(m,7))modLiVCCE&gt;/L\} + i ；</p>
+    <p>[0251]	进行取模操作，以最终确定用户专有搜索空间。</p>
+    <p>[0252]	具体实例三：</p>
+    <p>[0253]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，高层将会通知物理层 某个分量载波上需要调度哪些其它的分量载波，即会得到分量载波的索引，这里可以设这 个索引的参数为I，其取值范围为{0,1,2,3,4}或者{0，1，2，3，4，5，6，7}。</p>
+    <p>[0254]	那么，当跨载波调度使能时，PDCCH监测的用户专有搜索空间可以根据需要调度的 分量载波来确定，用户设备可以通过改变R8中的搜索空间^尸中候选PDCCH的m所对应的</p>
+    <p>CCE公式，以确定用户专有搜索空间：</p>
+    <p>[0255]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0256]	其中，i = 0，. . .，L_l，m = 0，…，Ma)_l，Ma)为搜索空间Sf)中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0257]	具体而言，可有如下配置：</p>
+    <p>[0258]	在聚合等级L下，分量载波j在整个搜索空间中有W个可用位置，W的值优选为 L^ccEjt “」，其中NeeE,k为第k个子帧中控制信道粒子CCE的数目；分量载波j的第i个候选 PDCCH在W个可用位置中的位置为P (i，j，L)，候选PDCCH之间的N个间距为K⑴=P (i+1， j，L)-P(i，j，L)，i = 1，2，...N，N的值为候选PDCCH的个数减去1 ；对于每个分量载波的所 有聚合等级，同一分量载波的K(i)对于所有的i均为固定值，这个固定值可以为1到W中 的任一值，但是不同分量载波的K(i)可以为不同的值。相邻两个分量载波索引为a和b的 分量载波的候选PDCCH的位置为P (i，a，L)和P (i，b，L)，他们的第i个候选PDCCH之间的 间距H(i) =P(i，a，L)-P(i，b，L)；对于所有聚合等级下，所有相邻分量载波的H(i)根据i 的不同而随机取值，或根据i的增加而增大，或根据i的增加而减小，H(i)的取值范围为1 到W中的任一值。</p>
+    <p>[0259]	f(m, I)的定义可以参照如下公式：</p>
+    <p>[0260]	f (m, I) = m &#8226; offsetl(I)+I &#8226; offset2 (m)；</p>
+    <p>[0261]	其中，offsetld)在每个I的条件下，取一个固定的值，例如Offsetl(0)的取值为</p>
+    <p>, offsetl (!)的取值为+丨；0ffset2的取值可以参考在每个m的条 M{L)	M(L)</p>
+    <p>件下，取0 到I^cceV&#19972;」中的任一个值，例如 offset2(0) =0，offset2(l) = l，offset2(2)</p>
+    <span class="patent-image-not-available"> </span>
+    <p>(5) =5。或者，offsetl 和 offset2 的值还可以通过高层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <p>[0262]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <span class="patent-image-not-available"> </span>
+    <p>一个无线帧中的时隙号；nKNTI为相应的RNTI。</p>
+    <p>[0265]	经过上述对f (m，I)的设计，再按照公式：</p>
+    <p>[0266]</p>
+    <p>L\{Yk+ f(m, /)) mod [ NCCE，k/lj} + /.</p>
+    <p>[0267]	进行取模操作，以最终确定用户专有搜索空间。</p>
+    <p>[0268]	具体实例四：</p>
+    <p>[0269]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，高层将会通知物理层 某个分量载波上需要调度哪些其它的分量载波，即会得到分量载波的索引，这里可以设这 个索引的参数为I，其取值范围为{0,1,2,3,4}或者{0，1，2，3，4，5，6，7}。</p>
+    <p>[0270]	那么，当跨载波调度使能时，PDCCH监测的用户专有搜索空间可以根据需要调度的 分量载波来确定，用户设备可以改变R8中的搜索空间中候选PDCCH的m所对应的CCE</p>
+    <p>公式，以确定用户专有搜索空间：</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0272]	其中，i = 0，...，L-l，m = 0，…，Ma)_l，Ma)为搜索空间中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0273]	具体而言，可有如下配置：</p>
+    <p>[0274]	各个分量载波在每个聚合等级下，它们的所有候选PDCCH都随机分布在整个用户 专有搜索空间上。</p>
+    <p>[0275]	f(m, I)的定义可以参照如下公式：</p>
+    <p>[0276]	f (m, I) = offsetl(m)+I &#8226; offset2 (m)；</p>
+    <p>[0277]	其中，offsetl和offset2的取值可以参考在每个m的条件下，取0到/&#19972;」</p>
+    <p>中的任一个值，例如 offsetl(O) = 0,offsetl (1) = 5, offsetl (2) = 7, offsetl (3) =3， offsetl (4) = 2，offsetl (5) = 1 ；offset2(0) = 0，offset2(l) = 1，offset2 (2) = 2， offset2(3) = 3，offset2(4) = 4，offset2 (5) = 5。或者，offsetl 和 offset2 的值还可 以通过高层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <p>[0278]	或者，offsetl和offset2可以由如下公式得到：</p>
+    <p>[0279]	offsetl = nffln+216 &#8226; I+219 &#8226; m 或者 offsetl = nfflTI+216 &#8226; m ；</p>
+    <p>[0280]	offset2 = nffln+216 &#8226; I+219 &#8226; m 或者 offset2 = nfflTI+216 &#8226; m ；</p>
+    <p>[0281]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>29[0282]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0283]其中，=	nENTI 乒 0，A = 39827，D = 65537, ^ = K/2J ；[_」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号；nKNTI为相应的RNTI。</p>
+    <p>[0284]	经过上述对f (m，I)的设计，再按照公式：</p>
+    <p>[0285]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0286]	进行取模操作，以最终确定用户专有搜索空间。</p>
+    <p>[0287]	具体实例五：</p>
+    <p>[0288]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，高层将会通知物理层 某个分量载波上需要调度哪些其它的分量载波，即会得到分量载波的索引，这里可以设这 个索引的参数为I，其取值范围为{0,1,2,3,4}或者{0，1，2，3，4，5，6，7}。</p>
+    <p>[0289]	那么，当跨载波调度使能时，PDCCH监测的用户专有搜索空间可以根据需要调度的 分量载波来确定，用户设备可以改变R8中的搜索空间匆“中候选PDCCH的m所对应的CCE</p>
+    <p>公式，以确定用户专有搜索空间：</p>
+    <p>[0290]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0291]	其中，i = 0，...，L-l，m = 0，…，Ma)_l，Ma)为搜索空间Sf)中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0292]	具体而言，可有如下配置：</p>
+    <p>[0293]	各个分量载波在每个聚合等级下，其中一个分量载波的候选PDCCH等间距分布在 整个用户专有搜索空间上，而另一个分量载波的各个候选PDCCH，在对应于第一个分量载波 的各个候选PDCCH相同的索引位置上，紧接着第一个分量载波的各个候选PDCCH放置，其它 的分量载波以此方式紧接着上一个分量载波配置各自的候选PDCCH。</p>
+    <p>[0294]	f(m, I)的定义可以参照如下公式：</p>
+    <p>[0295]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0296]	而对于第一个分量载波，或者分量载波索引为0的分量载波，其每个聚合等级下 的第一个候选PDCCH的起始位置，可以根据如下方法确定：</p>
+    <p>[0297]	Yk = (A &#8226; YkJmod D ；</p>
+    <p>[0298]其中，=	nENTI 兴 0，A = 39827，D = 65537，“ L""2」」表示向下取整；ns 为</p>
+    <p>一个无线帧中的时隙号；nKNTI为相应的RNTI。</p>
+    <p>[0299]	经过上述对f (m，I)的设计，再按照公式：</p>
+    <p>[0300]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0301]	进行取模操作，以最终确定用户专有搜索空间。</p>
+    <p>[0302]	具体实例六：</p>
+    <p>[0303]	在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，高层将会通知物理层 某个分量载波上需要调度哪些其它的分量载波，即会得到分量载波的索引，这里可以设这 个索引的参数为I，其取值范围为{0,1,2,3,4}或者{0，1，2，3，4，5，6，7}。</p>
+    <p>[0304]	那么，当跨载波调度使能时，PDCCH监测的用户专有搜索空间可以根据需要调度的 分量载波来确定，用户设备可以改变R8中的搜索空间^尸中候选PDCCH的m所对应的CCE</p>
+    <p>公式，以确定用户专有搜索空间：</p>
+    <p>[0305]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0306]	其中，i = 0，...，L-l，m = 0，…，Ma)_l，Ma)为搜索空间对中待检的候选PDCCH 的个数，NeeE,k为第k个子帧承载PDCCH控制域的CCE的个数，f(m, I)是由分量载波索引I 和m作为输入的函数。</p>
+    <p>[0307]	分量载波索引I的配置有如下的方法：</p>
+    <p>[0308]	可以将实施跨载波调度的分量载波的分量载波索引设置为一指定值，所述指定值 为0，二进制表示时可以表示为000 ；其余被跨载波调度的各分量载波按照各自频点位置高 低紧接着所述指定值顺序配置分量载波索引；</p>
+    <p>[0309]	或者，将实施跨载波调度的分量载波的分量载波索引设置为一指定值，所述指定 值为0，二进制表示时可以表示为000 ；将所有分量载波按照各自频点的高低顺序排列，并 按照此排列顺序从实施跨载波调度的分量载波开始，紧接着上述指定值循环分配其它分量 载波的分量载波索引；</p>
+    <p>[0310]	或者，将实施跨载波调度和被跨载波调度的各分量载波按照各自频点位置，以高 低顺序配置分量载波索引；</p>
+    <p>[0311]	或者，按照基站配置给用户设备的各个分量载波的载波指示域来配置分量载波索 引。</p>
+    <p>[0312]	或者，通过高层信令配置来配置分量载波索引。</p>
+    <p>[0313]	对于Yk有如下确定方法：</p>
+    <p>[0314]	Yk = (A &#8226; YkJmodD ；</p>
+    <p>[0315]或者	Yk = (A &#8226; YH+gdDmodD，其中 g(I)的优选值为 216 &#8226; I ；</p>
+    <p>[0316]或者	Yk= (A.YH+ga^DmodD，其中 g(I)的优选值为 216 &#8226; I+219 &#8226; m。</p>
+    <p>[0317]其中，=	nKNTI 乒 0，</p>
+    <p>[0318]或者	= nfflTI+g(I)兴 0，其中 g(I)的优选值为 216 &#8226; I ；</p>
+    <p>[0319]或者	= nmi+g(I，m)乒 0，其中 g ⑴的优选值为 216 &#8226; I+219 &#8226; m。A = 39827，D =65537，A = L&#12316;/2」;|_」表示向下取整；ns为一个无线帧中的时隙号；nKNTI为相应的RNTI。</p>
+    <p>[0320]	而f (m，I)的定义可以有如下的方法：</p>
+    <p>[0321]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0322]	其中，NumCC是配置给用户的分量载波的数量，也可以是配置给用户的激活 的（active)分量载波数量，也可以当前系统的最大分量载波数量，也可以是一个固定 值，此固定值可以由高层信令配置；n为1到Ma)中的任一值，如Ma)/2;0ffSetl(m)，</p>
+    <p>其取值可以参照</p>
+    <span class="patent-image-not-available"> </span>
+    <p>在每个m的条件下，取0到中的任一值，例如</p>
+    <span class="patent-image-not-available"> </span>
+    <p>,或柯一务p^Jj,其</p>
+    <p>中P为任一正整数，可以取为2或者NumCC等，并且此时offsetl (0)取0 ；offset2取值可 以参照offset2= 1 ；或者，offsetl和offset2的值还可以通过高层信令来配置，也可以固 定的定义为任一个正整数。</p>
+    <p>[0323]</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0324]	其中，n为1到Ma)中的任一值，如Ma)/2 ；offsetl (m),其取值可 以参照offsetl在每个m的条件下，取0到I^ccej/”中的任一值，例如</p>
+    <p>offset = |W小广1’或者&#8226;《)=L^J ,其</p>
+    <p>中NumCC是配置给用户的分量载波的数量，也可以是配置给用户的激活的分量载波数量， 也可以当前系统的最大分量载波数量，也可以是一个固定值，此固定值可以由高层信令配 置；P为正整数，可以取为2或者NumCC等，并且此时offsetl (0)取0 ;0ffSet2取值可以参 照offset2 = Ma)/2。或者，offsetl和offset2的值还可以通过高层信令来配置，也可以 固定的定义为任一个正整数。</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0326]	其中，offsetl (I)取值在每个I的条件下，取一个固定的值，例如offsetl (0)的</p>
+    <p>取值为，offsetl (1)的取值为+ 1 ； 0ffset2 取值可以参照</p>
+    <span class="patent-image-not-available"> </span>
+    <p>在每个m的条件下，取0到|_W(xe，丨中的任一个值。或者，offsetl和offset2的值还可</p>
+    <p>以通过高层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0328]	其中，</p>
+    <span class="patent-image-not-available"> </span>
+    <p>(m)的取值可以参考offsetl和offset2在每个m 的条件下，取0到中的任一个值，并且这里Offsetl (0)为0。或者，offsetl和</p>
+    <p>offset2的值还可以通过高层信令来配置，也可以固定的定义为任一个正整数。</p>
+    <p>[0329]	或者，offsetl和offset2可以由如下公式得到：</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0332]	5</p>
+    <span class="patent-image-not-available"> </span>
+    <p>[0333]	其中，offsetl取值可以参照0#诚1= L ^」；offset2取值可以参照</p>
+    <p>offset2 = 1。或者，offsetl和offset2的值还可以通过高层信令来配置，也可以固定的 定义为任一个正整数。</p>
+    <p>[0334]	结合以上技术描述可知，本发明确定用户专有搜索空间的操作思路可以表示如图 9所示。参见图9，图9为本发明的确定用户专有搜索空间的流程简图，该流程包括以下步 骤：</p>
+    <p>[0335]	步骤910 ：获取分量载波索引、各分量载波上的每个聚合等级条件下各个候选 PDCCH之间的相对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位 置。目前，上述参考因素的具体获取方式有多种，如：从UE的通信信令中获取，或从配置表 项中查找得到。</p>
+    <p>[0336]	步骤920 ：根据所获取的分量载波索引以及相对位置信息，确定监测PDCCH的用户 专有搜索空间。</p>
+    <p>[0337]	为了保证上述操作能够顺利进行，可以进行如图10所示的设置。参见图10，图10 为本发明一实施例的确定用户专有搜索空间的装置图，该装置包括相连的参考因素获取单 元、搜索空间决策单元。其中，参考因素获取单元用于获取能够确定用户专有搜索空间的 参考因素：分量载波索引、各分量载波上的每个聚合等级条件下各个候选PDCCH之间的相 对位置以及各分量载波之间相同索引位置上的候选PDCCH之间的相对位置，并将获得的参 考因素发送给搜索空间决策单元，由搜索空间决策单元根据收到的上述参考因素确定监测 PDCCH的用户专有搜索空间。</p>
+    <p>[0338]	需要说明的是，在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，上行 分量载波与其对应的下行分量载波需要监测的用户专有搜索空间是一样的，在应用前述技 术描述已经确定的用户专有搜索空间上，UE对上行分量载波上需要监测的下行控制信息格 式DCI format进行监测。上述检测操作可以由与搜索空间决策单元相连的检测单元完成， 进行检测时所需的用户专有搜索空间信息等内容可以由搜索空间决策单元发送给检测单兀。</p>
+    <p>[0339]	上述各单元所能执行的具体操作已经在前述实施例中详细描述，在此不再赘述。</p>
+    <p>[0340]	综上所述可见，无论是方法还是装置，本发明确定用户专有搜索空间的技术，解决 了在LTE-Advanced的载波聚合场景下，当跨载波调度使能时，如何定义UE监测PDCCH的用 户专有搜索空间的问题；进而解决了多个分量载波所带来的阻塞率问题，避免了该问题在 通信过程中给实际应用带来的不便。</p>
+    <p>[0341]	以上所述，仅为本发明的较佳实施例而已，并非用于限定本发明的保护范围，凡在 本发明的精神和原则之内所作的任何修改、等同替换和改进等，均应包含在本发明的保护 范围之内。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101505498A?cl=zh">CN101505498A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年3月17日</td><td class="patent-data-table-td patent-date-value">2009年8月12日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">下行控制信息发送方法及相关系统、装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101714892A?cl=zh">CN101714892A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年11月2日</td><td class="patent-data-table-td patent-date-value">2010年5月26日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种下行控制信息的传输方法及系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20090088148">US20090088148</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年9月29日</td><td class="patent-data-table-td patent-date-value">2009年4月2日</td><td class="patent-data-table-td ">Lg Electronics Inc.</td><td class="patent-data-table-td ">Wireless communication system for monitoring physical downlink control channel</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="npl-citations"></a><div class="patent-section-header"><span class="patent-section-title">非专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th colspan="3"class="patent-data-table-th">参考文献</th></tr></thead><tr><td class="patent-data-table-td ">1</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">NTT DOCOMO: "<a href='http://scholar.google.com/scholar?q="Investigation+on+UE-Specific+Search+Space+for+Carrier+Aggregation"'>Investigation on UE-Specific Search Space for Carrier Aggregation</a>", 《3GPP TSG RAN WG1 MEETING #61》, 14 May 2010 (2010-05-14), pages 1 - 7</td></tr><tr><td class="patent-data-table-td ">2</td><td class="patent-data-table-td "><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td ">ZTE: "<a href='http://scholar.google.com/scholar?q="PDCCH+blind+decoding+and+search+space+for+carrier+aggregation+of+LTE-A"'>PDCCH blind decoding and search space for carrier aggregation of LTE-A</a>", 《3GPP TSG-RAN WG1 #60BIS》, 16 April 2010 (2010-04-16), pages 1 - 5</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="forward-citations"></a><div class="patent-section-header"><span class="patent-section-title"> 被以下专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN103096493A?cl=zh">CN103096493A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年1月10日</td><td class="patent-data-table-td patent-date-value">2013年5月8日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">接收和发送控制信道的方法、用户设备和基站</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/EP2728961A1?cl=zh">EP2728961A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月8日</td><td class="patent-data-table-td patent-date-value">2014年5月7日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd</td><td class="patent-data-table-td ">Method and equipment for detecting and transmitting information</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/EP2728961A4?cl=zh">EP2728961A4</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年8月8日</td><td class="patent-data-table-td patent-date-value">2014年7月2日</td><td class="patent-data-table-td ">Huawei Tech Co Ltd</td><td class="patent-data-table-td ">Method and equipment for detecting and transmitting information</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012016414A1?cl=zh">WO2012016414A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2010年12月28日</td><td class="patent-data-table-td patent-date-value">2012年2月9日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种确定用户专有搜索空间的方法和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012152142A1?cl=zh">WO2012152142A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月23日</td><td class="patent-data-table-td patent-date-value">2012年11月15日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">下行控制信息发送、接收方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012155690A1?cl=zh">WO2012155690A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月26日</td><td class="patent-data-table-td patent-date-value">2012年11月22日</td><td class="patent-data-table-td ">China Academy Of Telecommunications Technology</td><td class="patent-data-table-td ">资源位置指示及信道盲检的方法、系统和装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2012174913A1?cl=zh">WO2012174913A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年3月26日</td><td class="patent-data-table-td patent-date-value">2012年12月27日</td><td class="patent-data-table-td ">Zte Corporation</td><td class="patent-data-table-td ">一种确定搜索空间的方法及装置</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2013063948A1?cl=zh">WO2013063948A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2012年6月29日</td><td class="patent-data-table-td patent-date-value">2013年5月10日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">接收和发送控制信道的方法、用户设备和基站</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/WO2014166045A1?cl=zh">WO2014166045A1</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2013年4月8日</td><td class="patent-data-table-td patent-date-value">2014年10月16日</td><td class="patent-data-table-td ">Huawei Technologies Co., Ltd.</td><td class="patent-data-table-td ">控制信道的发送方法、接收方法，以及用户设备和基站</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=an97BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0028020000">H04W28/02</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=an97BwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04W0072120000">H04W72/12</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=an97BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L5/001">H04L5/001</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=an97BwABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L5/0053">H04L5/0053</a></span></td></tr><tr><td class="patent-data-table-td "> 欧洲专利分类号</td><td class="patent-data-table-td "><span class="nested-value">H04L5/00C6</span>, <span class="nested-value">H04L5/00A2A11</span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2010年10月13日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年5月22日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/56d78feb29f4d08c3e8b/CN101860896A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E4%B8%80%E7%A7%8D%E7%A1%AE%E5%AE%9A%E7%94%A8%E6%88%B7%E4%B8%93%E6%9C%89%E6%90%9C%E7%B4%A2%E7%A9%BA%E9%97%B4%E7%9A%84.pdf?id=an97BwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2LZtsD5mY4JHLNzoNDBkGbTfO15w"},"sample_url":"https://www.google.com/patents/reader?id=an97BwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html><html><head><title>专利 CN103621023A - 处理QoS的方法、应用服务器、QoS控制网元和移动网络 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_5bd24152bf5a1e342ae546da267fae0b/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_5bd24152bf5a1e342ae546da267fae0b__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="处理QoS的方法、应用服务器、QoS控制网元和移动网络"><meta name="DC.contributor" content="吴问付" scheme="inventor"><meta name="DC.contributor" content="王岩" scheme="inventor"><meta name="DC.contributor" content="袁立平" scheme="inventor"><meta name="DC.contributor" content="李岩" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2012-6-29" scheme="dateSubmitted"><meta name="DC.description" content="本发明公开了一种处理服务质量的方法、应用服务器、QoS控制网元和移动网络。该方法包括：获取用户设备在移动网络中的初始服务质量QoS信息；根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息。本发明实施例的处理服务质量的方法、应用服务器、QoS控制网元和移动网络，能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。"><meta name="DC.date" content="2014-3-5"><meta name="DC.relation" content="CN:101159568:A" scheme="references"><meta name="DC.relation" content="CN:101242560:A" scheme="references"><meta name="DC.relation" content="CN:101345916:A" scheme="references"><meta name="DC.relation" content="CN:101478791:A" scheme="references"><meta name="DC.relation" content="CN:101656988:A" scheme="references"><meta name="citation_patent_publication_number" content="CN:103621023:A"><meta name="citation_patent_application_number" content="CN:201280000901"><link rel="canonical" href="https://www.google.com/patents/CN103621023A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN103621023A?cl=zh"/><meta name="title" content="专利 CN103621023A - 处理QoS的方法、应用服务器、QoS控制网元和移动网络"/><meta name="description" content="本发明公开了一种处理服务质量的方法、应用服务器、QoS控制网元和移动网络。该方法包括：获取用户设备在移动网络中的初始服务质量QoS信息；根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息。本发明实施例的处理服务质量的方法、应用服务器、QoS控制网元和移动网络，能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。"/><meta property="og:title" content="专利 CN103621023A - 处理QoS的方法、应用服务器、QoS控制网元和移动网络"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN103621023A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN103621023A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN103621023A&amp;usg=AFQjCNHfoqHjD2sv3-oW_ZD0oBzQXnG67Q" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/2566ec929a1a5302d2e7/CN103621023A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/2566ec929a1a5302d2e7/CN103621023A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN103621023A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN103621023A?cl=en&amp;hl=zh-CN"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN103621023A?cl=zh" style="display:none"><span itemprop="description">本发明公开了一种处理服务质量的方法、应用服务器、QoS控制网元和移动网络。该方法包括：获取用户设备在移动网络中的初始服务质量QoS信息；根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；向QoS控制网...</span><span itemprop="url">https://www.google.com/patents/CN103621023A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN103621023A - 处理QoS的方法、应用服务器、QoS控制网元和移动网络</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN103621023A - 处理QoS的方法、应用服务器、QoS控制网元和移动网络" title="专利 CN103621023A - 处理QoS的方法、应用服务器、QoS控制网元和移动网络"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN103621023 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201280000901</td></tr><tr><td class="patent-bibdata-heading"> 专利合作条约 (PCT) 编号</td><td class="single-patent-bibdata">PCT/CN2012/077882</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2014年3月5日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2012年6月29日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2012年6月29日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/US20150103670?hl=zh-CN&amp;cl=zh">US20150103670</a>, </span><span class="patent-bibdata-value"><a href="/patents/WO2014000260A1?hl=zh-CN&amp;cl=zh">WO2014000260A1</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201280000901.X, </span><span class="patent-bibdata-value">CN 103621023 A, </span><span class="patent-bibdata-value">CN 103621023A, </span><span class="patent-bibdata-value">CN 201280000901, </span><span class="patent-bibdata-value">CN-A-103621023, </span><span class="patent-bibdata-value">CN103621023 A, </span><span class="patent-bibdata-value">CN103621023A, </span><span class="patent-bibdata-value">CN201280000901, </span><span class="patent-bibdata-value">CN201280000901.X, </span><span class="patent-bibdata-value">PCT/2012/77882, </span><span class="patent-bibdata-value">PCT/CN/12/077882, </span><span class="patent-bibdata-value">PCT/CN/12/77882, </span><span class="patent-bibdata-value">PCT/CN/2012/077882, </span><span class="patent-bibdata-value">PCT/CN/2012/77882, </span><span class="patent-bibdata-value">PCT/CN12/077882, </span><span class="patent-bibdata-value">PCT/CN12/77882, </span><span class="patent-bibdata-value">PCT/CN12077882, </span><span class="patent-bibdata-value">PCT/CN1277882, </span><span class="patent-bibdata-value">PCT/CN2012/077882, </span><span class="patent-bibdata-value">PCT/CN2012/77882, </span><span class="patent-bibdata-value">PCT/CN2012077882, </span><span class="patent-bibdata-value">PCT/CN201277882</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E5%90%B4%E9%97%AE%E4%BB%98%22">吴问付</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E7%8E%8B%E5%B2%A9%22">王岩</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%A2%81%E7%AB%8B%E5%B9%B3%22">袁立平</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E6%9D%8E%E5%B2%A9%22">李岩</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN103621023A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103621023A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN103621023A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (5),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (6),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (1)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201280000901&amp;usg=AFQjCNG4Zb_elWdBXE--EOMvJG0Kv0nr9A"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D103621023A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNF7AbpMrFK_dmwuEBJx2-HeIiiJcg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT133871351" lang="ZH" load-source="patent-office">处理QoS的方法、应用服务器、QoS控制网元和移动网络</invention-title>
+      </span><br><span class="patent-number">CN 103621023 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA130982264" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明公开了一种处理服务质量的方法、应用服务器、QoS控制网元和移动网络。该方法包括：获取用户设备在移动网络中的初始服务质量QoS信息；根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息。本发明实施例的处理服务质量的方法、应用服务器、QoS控制网元和移动网络，能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(42)</span></span></div><div class="patent-text"><div mxw-id="PCLM59603698" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.一种处理服务质量的方法，其特征在于，包括:  获取用户设备在移动网络中的初始服务质量QoS信息；  根据所述初始QoS信息，确定向所述移动网络请求提高所述用户设备的QoS等级；  向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；  接收所述QoS控制网元发送的QoS提高应答，所述QoS提高应答包括所述移动网络为所述用户设备分配的增强QoS信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述获取用户设备在移动网络中的初始服务质量QoS信息，包括:  向所述QoS控制网元发送业务请求；  接收所述QoS控制网元发送的业务应答，所述业务应答包括所述移动网络为所述用户设备分配的分配QoS信息；  根据所述业务应答信息获取包括所述分配QoS信息的所述初始QoS信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述业务应答还包括所述用户设备在所述移动网络中的签约QoS信息和/或计费套餐信息；所述初始QoS信息还包括所述签约QoS信息和/或所述计费套餐信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求1至3中任一项所述的方法，其特征在于，所述获取用户设备在移动网络中的初始服务质量QoS信息，包括:  向所述QoS控制网元发送用户信息查询请求；  接收所述QoS控制网元发送的用户信息查询应答，所述用户信息查询应答包括所述用户设备在所述移动网络中的可用QoS信息；  根据所述用户信息查询应答获取包括所述可用QoS信息的所述初始QoS信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求4所述的方法，其特征在于，所述用户信息查询应答还包括所述用户设备在所述移动网络中的签约QoS信息和/或计费套餐信息；所述初始QoS信息还包括所述签约QoS信息和/或所述计费套餐信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求1至5中任一项所述的方法，其特征在于，所述根据所述初始QoS信息，确定向所述移动网络请求提高所述用户设备的QoS等级，包括:  根据所述初始QoS信息和预置规则，确定向所述移动网络请求提高所述用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求1至6中任一项所述的方法，其特征在于，所述根据所述初始QoS信息，确定向所述移动网络请求提高所述用户设备的QoS等级，包括:  在所述初始QoS信息包括的所述移动网络为所述用户设备分配的分配QoS信息不满足业务的QoS需求时，确定向所述移动网络请求提高所述用户设备的QoS等级；或  在所述初始QoS信息包括的所述用户设备在所述移动网络中的可用QoS信息不满足业务的QoS需求时，确定向所述移动网络请求提高所述用户设备的QoS等级；或  在所述初始QoS信息包括的所述用户设备在所述移动网络中的签约QoS信息不满足业务的QoS需求时，确定向所述移动网络请求提高所述用户设备的QoS等级；或  在所述初始QoS信息包括的计费套餐信息不满足计费套餐要求时，确定向所述移动网络请求提高所述用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求1至7中任一项所述的方法，其特征在于，所述根据所述初始QoS信息，确定向所述移动网络请求提高所述用户设备的QoS等级，包括:  根据所述初始QoS信息，确定向所述移动网络请求提高所述用户设备允许使用的带宽，和/或请求提高所述用户设备的用户等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求1至8中任一项所述的方法，其特征在于，所述方法还包括:  向所述QoS控制网元发送计费协商请求，以与所述移动网络协商计费参数信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="10" class="claim">
+      <div class="claim-text">10.一种处理服务质量的方法，其特征在于，包括:  接收应用服务器发送的QoS提高请求，所述QoS提高请求用于请求移动网络提高用户设备的QoS等级；  根据所述QoS提高请求以及所述应用服务器与所述移动网络之间的QoS增强协议，确定所述移动网络为所述用户设备分配的增强QoS信息；  向所述应用服务器发送QoS提高应答，所述QoS提高应答包括所述增强QoS信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的方法，其特征在于，所述方法还包括:  获取所述移动网络的网络能力信息；  接收所述应用服务器发送的业务请求，所述业务请求包括所述用户设备执行业务需要的 QoS ；  根据所述网络能力信息以及所述业务请求，确定所述初始QoS信息，所述初始QoS信息包括所述移动网络为所述用户设备分配的分配QoS信息；`  向所述应用服务器发送业务应答，所述业务应答包括所述初始QoS信息，以便于所述应用服务器根据所述初始QoS信息确定是否提高用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求11所述的方法，其特征在于，所述网络能力信息包括小区负荷信息、接入网兀负荷彳目息、接入网络支持的QoS、网关网兀负荷彳目息和网关网兀支持的QoS中的至少一种。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="13" class="claim">
+      <div class="claim-text">13.根据权利要求10至12中任一项所述的方法，其特征在于，所述方法还包括:  接收所述应用服务器发送的用户信息查询请求，所述用户信息查询请求包括所述用户设备的标识；  根据所述用户设备的标识，确定所述初始QoS信息，所述初始QoS信息包括所述用户设备在所述移动网络中的可用QoS信息；  向所述应用服务器发送用户信息查询应答，所述用户信息查询应答包括所述初始QoS信息，以便于所述应用服务器根据所述初始QoS信息确定是否提高用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求11至13中任一项所述的方法，其特征在于，所述初始QoS信息还包括:所述用户设备在所述移动网络中的签约QoS信息和/或计费套餐信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求10至14中任一项所述的方法，其特征在于，所述方法还包括:  接收所述应用服务器发送的计费协商请求；  确定与所述应用服务器协商的计费参数信息；  将所述计费参数信息发送给计费系统。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求10至15中任一项所述的方法，其特征在于，所述方法还包括:  向所述移动网络发送所述应用服务器的业务流标识、所述增强QoS信息和QoS增强指示信息，以便于所述移动网络进行计费信息的收集。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求10至16中任一项所述的方法，其特征在于，所述用户设备的QoS等级包括所述用户设备允许使用的带宽，和/或所述用户设备的用户等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求10至17中任一项所述的方法，其特征在于，所述QoS增强协议包括:所述应用服务器与所述移动网络之间的QoS增强计费套餐。</div>
+    </div>
+    </div> <div class="claim"> <div num="19" class="claim">
+      <div class="claim-text">19.一种处理服务质量的方法，其特征在于，包括:  接收QoS控制网元发送的QoS增强指示信息，所述QoS增强指示信息为所述QoS控制网元在接收到应用服务器发送的QoS提高请求，并确定提高用户设备的QoS等级后发送的；根据所述QoS增强指示信息，收集所述用户设备在QoS等级提高后的计费信息；  向计费系统发送所述计费信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求19所述的方法，其特征在于，所述计费信息包括所述用户设备在QoS等级提高后应用的数据时长和/或数据流量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求19或20所述的方法，其特征在于，所述用户设备的QoS等级包括所述用户设备允许使用的带宽，和/或所述用户设备的用户等级。</div>
+    </div>
+    </div> <div class="claim"> <div num="22" class="claim">
+      <div class="claim-text">22.&#8212;种应用服务器，其特征在于，包括:  获取模块，用于获取用户设备在移动网络中的初始服务质量QoS信息；  确定模块，用于根据所述初始QoS信息，确定向所述移动网络请求提高所述用户设备的QoS等级；  发送模块，用于向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；  接收模块，用于接收所述QoS控制网元发送的QoS提高应答，所述QoS提高应答包括所述移动网络为所述用户设备分配的增强QoS信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求22所述的应用服务器，其特征在于，所述获取模块包括:  第一发送单元，用于向所述QoS控制网元发送业务请求；  第一接收单元，用于接收所述QoS控制网元发送的业务应答，所述业务应答包括所述移动网络为所述用户设备分配的分配QoS信息；  第一获取单元，用于根据所述业务应答信息获取包括所述分配QoS信息的所述初始QoS f目息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求23所述的应用服务器，其特征在于，所述第一接收单元接收的所述业务应答还包括所述用户设备在所述移动网络中的签约QoS信息和/或计费套餐信息；所述第一获取单元获取的所述初始QoS信息还包括所述签约QoS信息和/或所述计费套餐信肩、O</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="25" class="claim">
+      <div class="claim-text">25.根据权利要求22至24中任一项所述的应用服务器，其特征在于，所述获取模块包括:  第二发送单元，用于向所述QoS控制网元发送用户信息查询请求；  第二接收单元，用于接收所述QoS控制网元发送的用户信息查询应答，所述用户信息查询应答包括所述用户设备在所述移动网络中的可用QoS信息；  第二获取单元，用于根据所述用户信息查询应答获取包括所述可用QoS信息的所述初始QoS信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="26" class="claim">
+      <div class="claim-text">26.根据权利要求25所述的应用服务器，其特征在于，所述第二接收单元接收的所述用户信息查询应答还包括所述用户设备在所述移动网络中的签约QoS信息和/或计费套餐信息；所述第二获取单元获取的所述初始QoS信息还包括所述签约QoS信息和/或所述计费套餐信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="27" class="claim">
+      <div class="claim-text">27.根据权利要求22至26中任一项所述的应用服务器，其特征在于，所述确定模块还用于根据所述初始QoS信息和预置规则，确定向所述移动网络请求提高所述用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="28" class="claim">
+      <div class="claim-text">28.根据权利要求22至27中任一项所述的应用服务器，其特征在于，所述确定模块包括:  第一确定单元，用于在所述初始QoS信息包括的所述移动网络为所述用户设备分配的分配QoS信息不满足业务的QoS需求时，确定向所述移动网络请求提高所述用户设备的QoS等级；或  第二确定单元，用于在所述初始QoS信息包括的所述用户设备在所述移动网络中的可用QoS信息不满足业务的QoS需求时，确定向所述移动网络请求提高所述用户设备的QoS等级；或  第三确定单元，用于在所述初始QoS信息包括的所述用户设备在所述移动网络中的签约QoS信息不满足业务的QoS需求时，确定向所述移动网络请求提高所述用户设备的QoS等级；或   第四确定单元，用于在所述初始QoS信息包括的计费套餐信息不满足计费套餐要求时，确定向所述移动网络请求提高所述用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="29" class="claim">
+      <div class="claim-text">29.根据权利要求22至28中任一项所述的应用服务器，其特征在于，所述确定模块包括:  第五确定单元，用于根据所述初始QoS信息，确定向所述移动网络请求提高所述用户设备允许使用的带宽，和/或请求提高所述用户设备的用户等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="30" class="claim">
+      <div class="claim-text">30.根据权利要求22至29中任一项所述的应用服务器，其特征在于，所述应用服务器还包括:  协商模块，用于向所述QoS控制网元发送计费协商请求，以与所述移动网络协商计费参数信息。</div>
+    </div>
+    </div> <div class="claim"> <div num="31" class="claim">
+      <div class="claim-text">31.一种QoS控制网元，其特征在于，包括:  第一接收模块，用于接收应用服务器发送的QoS提高请求，所述QoS提高请求用于请求移动网络提闻用户设备的QoS等级；  第一确定模块，用于根据所述QoS提高请求以及所述应用服务器与所述移动网络之间的QoS增强协议，确定所述移动网络为所述用户设备分配的增强QoS信息；  第一发送模块，用于向所述应用服务器发送QoS提高应答，所述QoS提高应答包括所述增强QoS信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="32" class="claim">
+      <div class="claim-text">32.根据权利要求31所述的QoS控制网元，其特征在于，所述QoS控制网元还包括:  获取模块，用于获取所述移动网络的网络能力信息；  第二接收模块，用于接收所述应用服务器发送的业务请求，所述业务请求包括所述用户设备执行业务需要的QoS;  第二确定模块，用于根据所述网络能力信息以及所述业务请求，确定所述初始QoS信息，所述初始QoS信息包括所述移动网络为所述用户设备分配的分配QoS信息；第二发送模块，用于向所述应用服务器发送业务应答，所述业务应答包括所述初始QoS信息，以便于所述应用服务器根据所述初始QoS信息确定是否提高用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="33" class="claim">
+      <div class="claim-text">33.根据权利要求31所述的QoS控制网元，其特征在于，所述获取模块获取的所述网络能力信息包括小区负荷信息、接入网元负荷信息、接入网络支持的QoS、网关网元负荷信息和网关网元支持的QoS中的至少一种。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="34" class="claim">
+      <div class="claim-text">34.根据权利要求31至33中任一项所述的QoS控制网元，其特征在于，所述QoS控制网元还包括:  第三接收模块，用于接收所述应用服务器发送的用户信息查询请求，所述用户信息查询请求包括所述用户设备的标识；  第三确定模块，用于根据所述用户设备的标识，确定所述初始QoS信息，所述初始QoS信息包括所述用户设备在所述移动网络中的可用QoS信息；  第三发送模块，用于向所述应用服务器发送用户信息查询应答，所述用户信息查询应答包括所述初始QoS信息，以便于所述应用服务器根据所述初始QoS信息确定是否提高用户设备的QoS等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="35" class="claim">
+      <div class="claim-text">35.根据权利要求32至34中任一项所述的QoS控制网元，其特征在于，所述初始QoS信息还包括:所述用户设备在所述移动网络中的签约QoS信息和/或计费套餐信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="36" class="claim">
+      <div class="claim-text">36.根据权利要求31至35中任一项所述的QoS控制网元，其特征在于，所述QoS控制网元还包括:   第四接收模块，用于接收所述应用服务器发送的计费协商请求；  第四确定模块，用于确定与所述应用服务器协商的计费参数信息；  第四发送模块，用于将所述计费参数信息发送给计费系统。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="37" class="claim">
+      <div class="claim-text">37.根据权利要求31至36中任一项所述的QoS控制网元，其特征在于，所述QoS控制网元还包括:  第五发送模块，用于向所述移动网络发送所述应用服务器的业务流标识、所述增强QoS信息和QoS增强指示信息，以便于所述移动网络进行计费信息的收集。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="38" class="claim">
+      <div class="claim-text">38.根据权利要求31至37中任一项所述的QoS控制网元，其特征在于，所述用户设备的QoS等级包括所述用户设备允许使用的带宽，和/或所述用户设备的用户等级。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="39" class="claim">
+      <div class="claim-text">39.根据权利要求31至38中任一项所述的QoS控制网元，其特征在于，所述QoS增强协议包括:所述应用服务器与所述移动网络之间的QoS增强计费套餐。</div>
+    </div>
+    </div> <div class="claim"> <div num="40" class="claim">
+      <div class="claim-text">40.一种移动网络，其特征在于，包括:  接收模块，用于接收QoS控制网元发送的QoS增强指示信息，所述QoS增强指示信息为所述QoS控制网元在接收到应用服务器发送的QoS提高请求，并确定提高用户设备的QoS等级后发送的；  收集模块，用于根据所述QoS增强指示信息，收集所述用户设备在QoS等级提高后的计费信息；  发送模块，用于向计费系统发送所述计费信息。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="41" class="claim">
+      <div class="claim-text">41.根据权利要求40所述的移动网络，其特征在于，所述收集模块收集的所述计费信息包括所述用户设备在QoS等级提高后应用的数据时长和/或数据流量。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="42" class="claim">
+      <div class="claim-text">42.根据权利要求40或41所述的移动网络，其特征在于，所述用户设备的QoS等级包括所述用户设备允许使用的带宽， 和/或所述用户设备的用户等级。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES67601023" lang="ZH" load-source="patent-office" class="description">
+    <p>处理QoS的方法、应用服务器、QoS控制网元和移动网络</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信领域，尤其涉及通信领域中处理服务质量QoS的方法、应用服务器、QoS控制网元和移动网络。</p>
+    <p>背景技术</p>
+    <p>[0002]在第三代合作伙伴计划(3rd	Generation Partnership Project,简称为“3GPP”)的系统架构演进(System Architecture Evolution,简称为“SAE”)网络中，用户设备在移动网络中的服务质量(Quality of Service，简称为“QoS”)是基于静态的签约QoS信息来控制的。例如，用户设备在移动网络中的视频业务签约的最大带宽为2M，那么用户设备在进行视频业务时，即使用户设备请求的带宽超过2M，移动网络为这个用户设备分配的最大带宽也不会超过2M。</p>
+    <p>[0003]	对于如下应用场景，例如，用户A为移动网络中的普通用户，最大允许带宽为IM ;用户B为移动网络中的金牌用户，最大允许带宽为3M ;用户A和用户B在视频网站中都是付费用户，视频提供商保证带宽2M ;当用户A和用户B通过移动网络接入到视频网站中的应用服务器时，由于在移动网络中静态签约的限制，移动网络为用户A分配的最大带宽不超过1M，因而用户A无法享受到视频网站保证的2M带宽体验；移动网络为用户B分配的最大带宽不超过3M，所以用户B可以享受到视频网站保证的2M带宽体验。</p>
+    <p>[0004]	即在目前的移动网络中，QoS的控制是基于静态的QoS签约数据进行的，不能根据行业用户(应用提供商)的QoS要求进行动态调整，因而用户体验较差。</p>
+    <p>发明内容</p>
+    <p>[0005]	本发明实施例提供了一种处理服务质量的方法、应用服务器、QoS控制网元和移动网络，能够调整用户设备的QoS等级。</p>
+    <p>[0006]	一方面，本发明实施例提供了一种处理服务质量的方法，该方法包括:获取用户设备在移动网络中的初始服务质量QoS信息；根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息。</p>
+    <p>[0007]	另一方面，本发明实施例提供了一种处理服务质量的方法，该方法包括:接收应用服务器发送的QoS提高请求，该QoS提高请求用于请求移动网络提高用户设备的QoS等级；根据该QoS提高请求以及该应用服务器与该移动网络之间的QoS增强协议，确定该移动网络为该用户设备分配的增强QoS信息；向该应用服务器发送QoS提高应答，该QoS提高应答包括该增强QoS信息。</p>
+    <p>[0008]	再一方面，本发明实施例提供了一种处理服务质量的方法，该方法包括:接收QoS控制网元发送的QoS增强指示信息，该QoS增强指示信息为该QoS控制网元在接收到应用服务器发送的QoS提高请求，并确定提高用户设备的QoS等级后发送的；根据该QoS增强指示信息，收集该用户设备在QoS等级提高后的计费信息；向计费系统发送该计费信息。</p>
+    <p>[0009]	再一方面，本发明实施例提供了一种应用服务器，该应用服务器包括:获取模块，用于获取用户设备在移动网络中的初始服务质量QoS信息；确定模块，用于根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；发送模块，用于向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；接收模块，用于接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信肩、O</p>
+    <p>[0010]	再一方面，本发明实施例提供了一种QoS控制网元，该QoS控制网元包括:第一接收模块，用于接收应用服务器发送的QoS提高请求，该QoS提高请求用于请求移动网络提高用户设备的QoS等级；第一确定模块，用于根据该QoS提高请求以及该应用服务器与该移动网络之间的QoS增强协议，确定该移动网络为该用户设备分配的增强QoS信息；第一发送模块，用于向该应用服务器发送QoS提高应答，该QoS提高应答包括该增强QoS信息。</p>
+    <p>[0011]	再一方面，本发明实施例提供了一种移动网络，该移动网络包括:接收模块，用于接收QoS控制网元发送的QoS增强指示信息，该QoS增强指示信息为该QoS控制网元在接收到应用服务器发送的QoS提高请求，并确定提高用户设备的QoS等级后发送的；收集模块，用于根据该QoS增强指示信息，收集该用户设备在QoS等级提高后的计费信息；发送模块，用于向计费系统发送该计费信息。</p>
+    <p>[0012]	基于上述技术方案，本发明实施例的处理服务质量的方法、应用服务器、QoS控制网元和移动网络，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>附图说明</p>
+    <p>[0013]	为了更清楚地说明本发明实施例的技术方案，下面将对本发明实施例中所需要使用的附图作简单地介绍，显而易见地，下面所描述的附图仅仅是本发明的一些实施例，对于本领域普通技术人员来讲，在不付出创造性劳动的前提下，还可以根据这些附图获得其他的附图。</p>
+    <p>[0014]	图1是本发明实施例的一种应用场景的示意性架构图。</p>
+    <p>[0015]	图2是根据本发明实施例的处理QoS的方法的示意性流程图。</p>
+    <p>[0016]	图3是根据本发明实施例的获取初始QoS信息的方法的示意性流程图。</p>
+    <p>[0017]	图4是根据本发明实施例的获取初始QoS信息的方法的另一示意性流程图。</p>
+    <p>[0018]	图5是根据本发明实施例的处理QoS的方法的另一示意性流程图。</p>
+    <p>[0019]	图6是根据本发明另一实施例的处理QoS的方法的示意性流程图。</p>
+    <p>[0020]	图7是根据本发明另一实施例的处理QoS的方法的另一示意性流程图。</p>
+    <p>[0021]	图8是根据本发明另一实施例的处理QoS的方法的再一示意性流程图。</p>
+    <p>[0022]	图9是根据本发明另一实施例的处理QoS的方法的再一示意性流程图。</p>
+    <p>[0023]	图10是根据本发明再一实施例的处理QoS的方法的示意性流程图。</p>
+    <p>[0024]	图11是根据本发明再一实施例的处理QoS的方法的示意性流程图。</p>
+    <p>[0025]	图12是根据本发明实施例的应用服务器的示意性框图。[0026]	图13是根据本发明实施例的获取模块的示意性框图。</p>
+    <p>[0027]	图14是根据本发明实施例的获取模块的另一示意性框图。</p>
+    <p>[0028]	图15是根据本发明实施例的确定模块的示意性框图。</p>
+    <p>[0029]	图16是根据本发明实施例的应用服务器的另一示意性框图。</p>
+    <p>[0030]	图17是根据本发明实施例的QoS控制网元的示意性框图。</p>
+    <p>[0031]	图18是根据本发明实施例的QoS控制网元的另一示意性框图。</p>
+    <p>[0032]	图19是根据本发明实施例的QoS控制网元的再一示意性框图。</p>
+    <p>[0033]	图20是根据本发明实施例的QoS控制网元的再一示意性框图。</p>
+    <p>[0034]	图21是根据本发明实施例的QoS控制网元的再一示意性框图。</p>
+    <p>[0035]	图22是根据本发明实施例的移动网络的示意性框图。</p>
+    <p>具体实施方式</p>
+    <p>[0036]	下面将结合本发明实施例中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例是本发明的一部分实施例，而不是全部实施例。基于本发明中的实施例，本领域普通技术人员在没有做出创造性劳动的前提下所获得的所有其他实施例，都应属于本发明保护的范围。</p>
+    <p>[0037]	应理解，本发明实施例的技术方案可以应用于各种通信系统，例如:全球移动通讯(Global System of Mobile communication,简称为“GSM”)系统、码分多址(Code DivisionMultiple Access,简称为“CDMA”)系统、宽带码分多址(Wideband Code Division MultipleAccess,简称为 “WCDMA”)系统、通用分组无线业务(General Packet Radio Service,简称为“GPRS”)、长期演进(Long Term Evolution，简称为“LTE”)系统、LTE频分双工(Frequency Division Duplex,简称为“FDD”)系统、LTE 时分双工(Time Division Duplex,简称为 “TDD”)、通用移动通信系统(Universal Mobile Telecommunication System,简称为“UMTS”)、全球互联微波接入(Worldwide Interoperability for Microwave Access,简称为“WiMAX”)通信系统等。</p>
+    <p>[0038]	应理解，本发明实施例将以在SAE系统中的应用为例进行说明，但本发明并不限于此。另外，本文中术语“系统”和“网络”在本文中常被可互换使用。本文中术语“和/或”，仅仅是一种描述关联对象的关联关系，表示可以存在三种关系，例如，A和/或B，可以表示:单独存在A，同时存在A和B，单独存在B这三种情况。另外，本文中字符“/”，一般表示前后关联对象是一种“或”的关系。</p>
+    <p>[0039]	图1示出了本发明实施例的一种应用场景的示意性架构图。如图1所示，该SAE系统可以包括:演进的UMTS陆地无线接入网(Evolved UMTS TerrestrialRadio Access Network,简称为 “E-UTRAN” ；其中通用移动通信系统(Universal MobileTelecommunications System)简称为 “UMTS”)、移动性管理网兀(Mobility ManagementEntity，简称为“MME”)、服务网关实体(Serving Gateway，简称为“SGW”)、分组数据网络网关实体(Packet Data Network Gateway,简称为“PGW”)、策略和计费规则功能实体(Policyand Charging Rule Function,简称为 “PCRF”)、归属网络服务器(Home SubscriberServer，简称为 “HSS”)等。</p>
+    <p>[0040]	其中，E-UTRAN用于实现所有与演进网络无线有关的功能；MME负责控制面的移动性管理，包括用户上下文和移动状态的管理，分配用户临时身份标识等；SGW是3GPP接入网络间的用户面锚点，终止E-TURAN的接口 ；PGW是3GPP接入网络和非3GPP接入网络之间的用户面锚点，终止和外部分组数据网络(Packet Data Network，简称为“PDN”)的接口 ；PCRF用于策略控制决定和流计费控制功能；HSS用于存储用户签约信息。</p>
+    <p>[0041]	在图1所示的SAE系统架构中，UMTS陆地无线接入网(UMTS Terrestrial RadioAccess Network,简称为 “UTRAN”)、GSM/EDGE 无线接入网(GSM/EDGE Radio AccessNetwork,简称为“GERAN”,其中增强型数据速率GSM演进(Enhanced Data Rate for GSMEvolution)简称为“EDGE”)，用于实现所有与现有GPRS/UMTS网络中无线有关的功能；服务通用分组无线业务支持节点(Serving GPRS Supporting Node,简称为“SGSN”)用于实现GPRS/UMTS网络中路由转发、移动性管理、会话管理以及用户信息存储等功能；非3GPP IP接入网络(Non-3GPP IP Access)主要包括一些非3GPP组织定义的接入网络，例如无线局域网(Wireless Local Area Network,简称为“WLAN”)、WiMAX、CDMA等网络；认证、授权与计费服务器(Authentication, Authorization and Accounting Server,简称为“AAA Server”)用于对UE执行接入认证、授权和计费功能。</p>
+    <p>[0042]	图2示出了根据本发明实施例的处理QoS的方法100，该方法100可以由应用服务器执行。如图2所示，该方法100包括:</p>
+    <p>[0043]	S110，获取用户设备在移动网络中的初始服务质量QoS信息；</p>
+    <p>[0044]	S120，根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；</p>
+    <p>[0045]	S130,向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提高请求；</p>
+    <p>[0046]	S140，接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息。</p>
+    <p>[0047]	当用户设备向应用服务器发起应用请求，以请求进行应用业务时，或当应用服务器向用户设备推送应用业务时，或在其它应用场景下，应用服务器可以先获取用户设备在移动网络中的初始QoS信息，并确定是否向该移动网络请求提高该用户设备的QoS等级；如果应用服务器确定请求提高用户设备的QoS等级，那么应用服务器可以向QoS控制网元发送QoS提高请求，以用于请求提高用户设备的QoS等级，并且应用服务器可以接收到该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息；如果应用服务器确定不提高用户设备的QoS等级，则应用服务器可以继续给用户设备提供应用业务。</p>
+    <p>[0048]	因此，本发明实施例的处理服务质量的方法，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0049]	此外，通过本发明实施例的处理QoS的方法，移动运营商能够收取提高QoS等级的费用，货币化其移动宽带管道能力，增加其在移动互联网产业链中的价值；并且通过请求提高QoS等级，能够为高优先级的用户提供更高的QoS，使得高优先级用户获得更好的用户体验；此外，应用提供商吸引终端用户提升在应用中的用户等级(经验值)，有利于应用业务的推广，也能够提升应用提供商的收入。</p>
+    <p>[0050]	在本发明实施例中，应用服务器可以是视频服务器，也可以是文件传输协议(FileTransfer Protocol，简称为“FTP”)服务器，FTP服务器是专门为用户提供各种文件的服务器，FTP服务器上往往存储大量的文件，例如:软件、MP3、电影、程序等，该应用服务器还可以是邮件服务器或其它服务器，本发明并不限于此；另一方面，在本发明实施例中，应用业务或应用内容可以是视频、软件、MP3、电影、程序、或邮件内容等，本发明并不以此为限。</p>
+    <p>[0051]	在本发明各实施例中，QoS控制网元可以是PCRF、能力开放平台、业务开发平台或者业务网关等，本发明并不以此为限。例如，QoS控制网元也可以是其它开放平台。</p>
+    <p>[0052]	应理解，在本发明实施例中，术语“初始QoS信息”表示QoS控制网元确定改变QoS信息之前，用户设备在移动网络中的QoS信息，例如，用户设备发起业务请求时的当前QoS信息等，本发明实施例并不以此为限。</p>
+    <p>[0053]	应理解，在本发明各实施例中，如果本发明中的QoS控制网元是PCRF，则应用服务器和QoS控制网元之间的交互可以通过开放平台来实现。例如，应用服务器向开放平台发送请求提高用户设备的QoS等级的QoS提高请求,开放平台再向QoS控制网元发送请求提闻用户设备的QoS等级的QoS提闻请求。</p>
+    <p>[0054]	还应理解，在本发明各实施例中，各网元之间可以通过消息接口传输信息，也可以通过API接口传输信息，还可以通过其它类型的接口或其它方式传输信息，本发明实施例并不限于此。</p>
+    <p>[0055]	还应理解，在本发明各实施例中，各种“请求”和“应答”仅仅是指代承载信息或内容的某种载体，例如消息等，而并不限于具体的名称。例如，“QoS提高请求”仅表示用于请求提高用户设备的QoS等级的请求，而并不限于名称为QoS提高请求的请求；同样，“QoS提高应答”仅表示包括移动网络为用户设备分配的增强QoS信息的应答，而不限于名称为QoS提闻应答的应答。</p>
+    <p>[0056]	并且，术语“应答”并不限于对“请求”的响应或答复，还可以仅指代一些信息或内容，或指代包括一些信息或内容的载体，例如消息等。例如，QoS提高应答可以表示针对QoS提高请求的响应，也可以表示该增强QoS信息，还可以表示包括增强QoS信息的消息，或包括该增强QoS信息的其它形式的载体，本发明并不限于此。</p>
+    <p>[0057]	在SllO中，应用服务器获取用户设备在移动网络中的初始QoS信息。</p>
+    <p>[0058]	在本发明实施例中，可选地，该初始QoS信息包括下列信息中的至少一种:用户设备在移动网络中的签约QoS信息、移动网络为用户设备分配的分配QoS信息、用户设备在移动网络中的可用QoS信息和计费套餐信息。应理解，该初始QoS信息例如为带宽信息等，本发明实施例以初始QoS信息为带宽信息为例进行说明，但本发明并不限于此。还应理解，术语“可用QoS信息”指用户设备在移动网络中能够使用的QoS信息。</p>
+    <p>[0059]	下面将结合图3和图4，详细说明应用服务器获取初始QoS信息的方法。</p>
+    <p>[0060]	如图3所示，应用服务器获取初始QoS信息的方法110包括:</p>
+    <p>[0061]	S111，向QoS控制网元发送业务请求；</p>
+    <p>[0062]	S112，接收该QoS控制网元发送的业务应答，该业务应答包括该移动网络为该用户设备分配的分配QoS信息；</p>
+    <p>[0063]	S113，根据该业务应答信息获取包括该分配QoS信息的该初始QoS信息。</p>
+    <p>[0064]	在Slll中，应用服务器向QoS控制网元发送业务请求。该QoS控制网元可以是PCRF、业务网关、能力开发平台或业务开发平台等网元，本发明并不以此为限。该业务请求可以包括业务类型和业务需要的QoS，例如需要的带宽；该业务请求还可以包括业务标识坐寸O</p>
+    <p>[0065]	在本发明实施例中，移动运营商可以给第三方应用(例如本发明实施例中的应用服务器)提供一个QoS请求应用程序编程接口(Application Programming Interface,简称为“API”)，该API中可以包括第三方业务请求的业务类型、业务需要的QoS等参数，第三方应用通过调用这个API，请求移动网络为所请求的业务分配QoS，例如带宽等。</p>
+    <p>[0066]	在S112中，应用服务器接收该QoS控制网元发送的业务应答，该业务应答包括该移动网络为该用户设备分配的分配QoS信息。可选地，该业务应答还包括该用户设备在该移动网络中的签约QoS信息和/或计费套餐信息。</p>
+    <p>[0067]	在本发明实施例中，移动运营商可以给第三方应用提供一个QoS通知API，该API中可以包括移动网络为应用业务分配的分配QoS信息(例如带宽)等参数，移动网络可以通过这个API将移动网络为应用业务分配的分配QoS信息通知给第三方应用(例如本发明实施例中的应用服务器)。</p>
+    <p>[0068]	应理解，在本发明实施例中，QoS控制网元也可以通过其它方式将移动网络为该用户设备分配的分配QoS信息通知到应用服务器，本发明并不限定具体的通知方式。</p>
+    <p>[0069]	在S113中，应用服务器根据该业务应答信息获取包括该分配QoS信息的该初始QoS信息。可选地,该初始QoS信息还包括该签约QoS信息和/或该计费套餐信息。</p>
+    <p>[0070]	由此，应用服务器能够获取包括分配QoS信息、签约QoS信息和/或计费套餐信息的初始QoS彳目息，从而能够确定是否向移动网络请求提闻用户设备的QoS等级。</p>
+    <p>[0071]	图4示出了根据本发明实施例的获取初始QoS信息的方法110的另一示意性流程图，该方法110可以由应用服务器执行。如图4所示，该方法110包括:</p>
+    <p>[0072]	S116，向该QoS控制网元发送用户信息查询请求；</p>
+    <p>[0073]	S117，接收该QoS控制网元发送的用户信息查询应答，该用户信息查询应答包括该用户设备在该移动网络中的可用QoS信息；</p>
+    <p>[0074]	S118，根据该用户信息查询应答获取包括该可用QoS信息的该初始QoS信息。</p>
+    <p>[0075]	在S116中，应用服务器向QoS控制网元(例如PCRF或能力开放平台等)发送用户信息查询请求，以用于请求查询用户设备的信息，该用户信息查询请求可以包括用户设备的标识，该标识例如为通用资源标志符(Uniform Resource Identifier,简称为“URI”)、完全合格域名/全称域名(Fully Qualified Domain Name，简称为“FQDN”)或移动用户号码</p>
+    <p>坐寸ο</p>
+    <p>[0076]	在本发明实施例中，移动运营商可以给第三方应用提供一个用户信息查询请求API，该API中可以包括用户设备的标识，第三方应用(例如本发明实施例中的应用服务器)可以通过调用这个API，请求移动网络提供用户设备的信息。</p>
+    <p>[0077]	在S117中，应用服务器接收QoS控制网元发送的用户信息查询应答，该用户信息查询应答包括该用户设备在该移动网络中的可用QoS信息。可选地，该用户信息查询应答还包括该用户设备在该移动网络中的签约QoS信息和/或计费套餐信息。</p>
+    <p>[0078]	在本发明实施例中，移动运营商可以给第三方应用提供一个用户信息通知API，该API中可以包括用户设备在移动网络中的可用QoS信息，还可以包括签约QoS信息(例如签约的带宽)、计费套餐信息等，移动网络可以通过这个API将用户设备的信息通知给第三方应用。[0079]	应理解，在本发明实施例中，QoS控制网元也可以通过其它方式将该用户设备在该移动网络中的可用QoS信息通知到应用服务器，本发明并不限定具体的通知方式。</p>
+    <p>[0080]	在S118中，应用服务器根据该用户信息查询应答获取包括该可用QoS信息的该初始QoS信息。可选地,该初始QoS信息还包括该签约QoS信息和/或该计费套餐信息。</p>
+    <p>[0081]	应理解，应用服务器还可以通过其它方法获取初始QoS信息，例如，移动网络主动将初始QoS信息通知给应用服务器，应用服务器从本地可以读取初始QoS信息等。</p>
+    <p>[0082]	由此，应用服务器能够获取包括分配QoS信息、签约QoS信息和/或计费套餐信息的初始QoS彳目息，从而能够确定是否向移动网络请求提闻用户设备的QoS等级。</p>
+    <p>[0083]	在S120中，应用服务器根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级。</p>
+    <p>[0084]	在本发明实施例中，用户设备的QoS等级包括用户设备允许使用的带宽，和/或用户设备的用户等级。可选地，应用服务器根据该初始QoS信息，确定向该移动网络请求提高该用户设备允许使用的带宽，和/或请求提高该用户设备的用户等级，例如，将用户设备的用户等级由铜牌用户等级升级为银牌用户等级或者金牌用户等级。</p>
+    <p>[0085]	在本发明实施例中，可选地，应用服务器根据该初始QoS信息和预置规则，确定向该移动网络请求提高该用户设备的QoS等级。应理解，该预置规则可以是与初始QoS信息相关的规则，下面将详细进行描述，但本发明实施例并不限于此。</p>
+    <p>[0086]	应理解，该QoS提高请求可以包括应用服务器希望移动网络为用户设备提高的QoS或用户等级等；但同时还应理解，QoS控制网元除了可以根据应用服务器的QoS提高请求之外，还可以根据多种参数最终确定为用户设备分配的增强QoS信息，例如QoS控制网元还考虑初始QoS彳目息等参数，确定增强QoS /[目息。</p>
+    <p>[0087]	在本发明实施例中，可选地，在该初始QoS信息包括的该移动网络为该用户设备分配的分配QoS信息不满足业务的QoS需求时，确定向该移动网络请求提高该用户设备的QoS等级；或在该初始QoS信息包括的该用户设备在该移动网络中的可用QoS信息不满足业务的QoS需求时，确定向该移动网络请求提高该用户设备的QoS等级；或在该初始QoS信息包括的该用户设备在该移动网络中的签约QoS信息不满足业务的QoS需求时，确定向该移动网络请求提高该用户设备的QoS等级；或在该初始QoS信息包括的计费套餐信息不满足计费套餐要求时，确定向该移动网络请求提高该用户设备的QoS等级。</p>
+    <p>[0088]	在S130中，应用服务器向QoS控制网元发送QoS提高请求,该QoS提高请求用于请求提高用户设备的QoS等级。该QoS提高请求可以包括业务需要的带宽等信息。</p>
+    <p>[0089]	移动运营商可以给第三方应用提供一个QoS增强API，该API中可以包括第三方应用要求的增强QoS信息(例如带宽或者用户等级等)，第三方应用可以通过调用这个API，请求移动网络提闻用户设备的QoS等级。</p>
+    <p>[0090]	在S140中，应用服务器接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息。</p>
+    <p>[0091]	应理解，在本发明实施例中，QoS控制网元也可以通过其它方式将移动网络为该用户设备分配的增强QoS信息通知到应用服务器，例如，调用QoS通知API，将移动网络为该用户设备分配的增强QoS信息通知到应用服务器。本发明并不限定具体的通知方式。</p>
+    <p>[0092]	因此，本发明实施例的处理服务质量的方法，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0093]	在本发明实施例中，可选地，如图5所示，处理服务质量的方法100还包括:</p>
+    <p>[0094]	S150,向该QoS控制网元发送计费协商请求，以与该移动网络协商计费参数信息。</p>
+    <p>[0095]	在本发明实施例中，应用提供商向该QoS控制网元发送计费协商请求，以与移动运营商之间协商计费相关参数信息。例如，协商按QoS增强的时间计费(如，QoS增强10分钟I毛钱)，还是按QoS增强次数来计费(如，QoS增强一次I毛钱)等。</p>
+    <p>[0096]	具体而言，应用提供商与移动运营商之间协商计费模式可以如下处理:移动运营商可以给第三方应用提供一个计费协商API，该API中可以包括:计费模式(ChargingMode),例如在线(online)模式或者离线(Off line)模式；测量模式(Measurement Mode),例如数据流量(data volume)、数据时长(data duration)、数据流量与数据时长或其它事件(Event);计费套餐(如，10元/IOOM/月或者I元/ 一次QoS增强等)。第三方应用可以通过调用这个API来与移动运营商协商计费参数信息。</p>
+    <p>[0097]	例如，应用提供商通过调用这个API获得移动运营商提供的计费参数信息(如计费套餐信息)，然后应用提供商选择计费参数信息(如，选择一个计费套餐)，应用提供商将选择的计费参数信息发送给移动运营商；或者，应用提供商通过调用这个API将自己希望的计费参数信息发给移动运营商，移动运营商确定应用提供商请求的计费参数信息，将确定的计费参数信息发给应用提供商，从而第三方应用和移动运营商之间完成计费参数信息协商。</p>
+    <p>[0098]	应理解，在本发明实施例中，如果QoS控制网元是PCRF，则应用服务器可以向开放平台发送计费协商请求，以与该移动网络协商计费参数信息，这种场景下计费参数协商在应用服务器和开放平台之间进行。</p>
+    <p>[0099]	应理解，根据本发明实施例的处理QoS的方法还包括:应用服务器接收QoS控制网元发送的计费信息等流程。</p>
+    <p>[0100]	应理解，在本发明实施例中，各网元之间可以通过消息接口传输信息，也可以通过API接口传输信息，还可以通过其它类型的接口传输信息，本发明实施例并不限于此。</p>
+    <p>[0101]	应理解，在本发明实施例中，各网元之间的API或者消息名称仅仅是个示意，本发明实施例并不限于API或者消息的具体名称。</p>
+    <p>[0102]	还应理解，在本发明的各种实施例中，上述各过程的序号的大小并不意味着执行顺序的先后，各过程的执行顺序应以其功能和内在逻辑确定，而不应对本发明实施例的实施过程构成任何限定。例如，应用提供商和移动运营商可以先协商计费参数信息，然后再进行QoS增强处理。</p>
+    <p>[0103]	因此，本发明实施例的处理服务质量的方法，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0104]	上文中结合图1至图5，从应用服务器的角度详细描述了根据本发明实施例的处理服务质量的方法，下面将结合图6至图9，从QoS控制网元的角度描述根据本发明实施例的处理服务质量的方法。</p>
+    <p>[0105]	如图6所示，根据本发明实施例的处理QoS的方法200可以由QoS控制网元执行，该QoS控制网元例如为PCRF、业务网关、能力开放平台或业务开放平台等。该方法200包括:</p>
+    <p>[0106]	S210，接收应用服务器发送的QoS提高请求，该QoS提高请求用于请求移动网络提闻用户设备的QoS等级；</p>
+    <p>[0107]	S220，根据该QoS提高请求以及该应用服务器与该移动网络之间的QoS增强协议，确定该移动网络为该用户设备分配的增强QoS信息；</p>
+    <p>[0108]	S230,向该应用服务器发送QoS提高应答，该QoS提高应答包括该增强QoS信息。</p>
+    <p>[0109]	因此，本发明实施例的处理服务质量的方法，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0110]	在S210中，QoS控制网元接收应用服务器发送的QoS提高请求，该QoS提高请求用于请求移动网络提高用户设备的QoS等级。</p>
+    <p>[0111]	QoS控制网元例如通过上述QoS增强API，接收用于服务器发送的QoS提高请求。该QoS提高请求可以包括请求增强的QoS参数，例如需要提高的带宽、用户等级等信息。</p>
+    <p>[0112]	在S220中，QoS控制网元根据该QoS提高请求以及该应用服务器与该移动网络之间的QoS增强协议，确定该移动网络为该用户设备分配的增强QoS信息。</p>
+    <p>[0113]	在本发明实施例中，应用服务器与移动网络之间的QoS增强协议包括QoS增强计费套餐等。QoS控制网元可根据该QoS提高请求以及该QoS增强协议，确定该移动网络为该用户设备分配的增强QoS信息。</p>
+    <p>[0114]	例如，该QoS增强计费套餐具体为:套餐为500元，可以1000次将用户设备的带宽提高到4M。如果应用服务器发送的QoS提高请求要求提高带宽至4M，则QoS控制网元可以根据该QoS提高请求以及该QoS增强协议，确定增强的QoS信息包括的带宽为4M ;如果应用服务器发送的QoS提高请求要求提高带宽至5M，则QoS控制网元根据该QoS提高请求以及该QoS增强协议，确定增强的QoS信息包括的带宽只能为4M。</p>
+    <p>[0115]	应理解，上述例子仅为了示例，QoS控制网元还可以基于其它信息确定增强QoS信息。例如，QoS控制网元还可以考虑网络负荷或网络能力，确定增强的QoS信息包括的带宽为3M等，即使QoS增强计费套餐可以允许的带宽为4M。</p>
+    <p>[0116]	在S230中，QoS控制网元向该应用服务器发送QoS提高应答，该QoS提高应答包括该增强QoS信息。</p>
+    <p>[0117]	应理解，在本发明实施例中，QoS控制网元也可以通过其它方式将该增强QoS信息通知到应用服务器，例如，调用QoS通知API将该增强QoS信息通知到应用服务器。本发明不限定具体的通知方式。</p>
+    <p>[0118]	在本发明实施例中，可选地，如图7所示，根据本发明实施例的处理QoS的方法200还包括:</p>
+    <p>[0119]	S241，获取该移动网络的网络能力信息；</p>
+    <p>[0120]	S242，接收该应用服务器发送的业务请求，该业务请求包括该用户设备执行业务需要的QoS ；</p>
+    <p>[0121]	S243，根据该网络能力信息以及该业务请求，确定该初始QoS信息，该初始QoS信息包括该移动网络为该用户设备分配的分配QoS信息；[0122]	S244，向该应用服务器发送业务应答，该业务应答包括该初始QoS信息，以便于该应用服务器根据该初始QoS信息确定是否提高用户设备的QoS等级。</p>
+    <p>[0123]	应理解，在本发明实施例中，QoS控制网元也可以通过其它方式将该初始QoS信息通知到应用服务器，如，调用QoS通知API将该初始QoS信息通知到应用服务器。本发明并不限定具体的通知方式。</p>
+    <p>[0124]	在本发明实施例中，可选地，该网络能力信息包括小区负荷信息、接入网元负荷信息、接入网络支持的QoS、网关网兀负荷彳目息和网关网兀支持的QoS中的至少一种。</p>
+    <p>[0125]	QoS控制网元可以通过多种方式获取该网络能力信息，例如，移动网络上报网络负荷或者网络能力等信息到QoS控制网元(例如PCRF或者能力开放平台等)。例如，接入网元上报小区负荷信息或者接入网元负荷信息到QoS控制网元，或者，接入网元上报接入网络能支持的QoS信息(例如支持的最大带宽)到QoS控制网元，或者，核心网的网关设备可以上报网关网元负荷信息到QoS控制网元，或者，核心网的网关设备可以上报网关网元能支持的QoS信息(例如支持的最大带宽)到QoS控制网元。</p>
+    <p>[0126]	在本发明实施例中，QoS控制网元根据该网络能力信息以及该业务请求，确定该初始QoS信息，该初始QoS信息包括该移动网络为该用户设备分配的分配QoS信息。例如，QoS控制网元可以基于网络的负荷或者网络的能力来确定移动网络能分配的QoS，例如，如果网络负荷比较高，则确定移动网络分配较低的QoS (例如较低的带宽)给用户设备请求的业务；如果网络负荷比较低，则确定移动网络分配较高的QoS (例如较高的带宽)给用户设备请求的业务。</p>
+    <p>[0127]	因此，通过QoS控制网元向应用服务器发送初始QoS信息，使得该应用服务器能够根据该初始QoS信息确定是否提高用户设备的QoS等级。</p>
+    <p>[0128]	在本发明实施例中，可选地，如图8所示，根据本发明实施例的处理QoS的方法200还包括:</p>
+    <p>[0129]	S251，接收该应用服务器发送的用户信息查询请求，该用户信息查询请求包括该用户设备的标识；</p>
+    <p>[0130]	S252，根据该用户设备的标识，确定该初始QoS信息，该初始QoS信息包括该用户设备在该移动网络中的可用QoS信息；</p>
+    <p>[0131]	S253，向该应用服务器发送用户信息查询应答，该用户信息查询应答包括该初始QoS信息，以便于该应用服务器根据该初始QoS信息确定是否提高用户设备的QoS等级。</p>
+    <p>[0132]	应理解，在本发明实施例中，QoS控制网元也可以通过其它方式将该初始QoS信息通知到应用服务器，如，调用QoS通知API将该初始QoS信息通知到应用服务器。本发明并不限定具体的通知方式。</p>
+    <p>[0133]	在本发明实施例中，可选地，该初始QoS信息还包括:该用户设备在该移动网络中的签约QoS信息和/或计费套餐信息。</p>
+    <p>[0134]	在本发明实施例中可选地，该用户设备的QoS等级包括该用户设备允许使用的带宽，和/或该用户设备的用户等级。</p>
+    <p>[0135]	因此，通过QoS控制网元向应用服务器发送初始QoS信息，使得该应用服务器能够根据该初始QoS信息确定是否提高用户设备的QoS等级。</p>
+    <p>[0136]	在本发明实施例中，可选地，如图9所示该方法200还包括:[0137]	S261，接收该应用服务器发送的计费协商请求；</p>
+    <p>[0138]	S262，确定与该应用服务器协商的计费参数信息；</p>
+    <p>[0139]	S263，将该计费参数信息发送给计费系统。</p>
+    <p>[0140]	在本发明实施例中，QoS控制网元接收应用服务器发送的计费协商请求；该计费协商请求例如包括请求协商计费模式、测量模式、计费套餐等计费参数信息，该计费模式例如包括在线模式和离线模式，该测量模式例如包括数据流量、数据时长、数据流量和数据时长、或其它测量事件等。从而使得计费系统能够根据增强的QoS信息进行计费。</p>
+    <p>[0141]	应理解，在本发明实施例中，应用提供商和移动运营商还可以通过其它方式来协商计费参数信息，如，应用服务器从移动网络(如，开放平台)中获得可用的计费参数信息(如，计费套餐信息)，应用服务器选择计费参数信息(如，选择一个计费套餐)，应用服务器将选择的计费参数信息通知给移动网络(如，通知给移动网络中的开放平台)，即，应用提供商从移动运营商中获得可用的计费参数信息(如，计费套餐信息)，应用提供商选择计费参数信息(如，选择一个计费套餐)，应用提供商将选择的计费参数信息通知给移动运营商。</p>
+    <p>[0142]	如图9所示，可选地，该方法200还包括:</p>
+    <p>[0143]	S270,向该移动网络发送该应用服务器的业务流标识、该增强QoS信息和QoS增强指示信息，以便于该移动网络进行计费信息的收集。</p>
+    <p>[0144]	QoS控制网兀根据第二方应用提交的QoS提闻请求，提闻用户设备的QoS等级，确保业务请求的QoS保障。该流程还需要一些增强处理，QoS控制网元将应用的业务流标识、增强QoS信息以及QoS增强指示信息通知给移动网络，该业务流标识例如为五元组，包括源IP地址、目的IP地址、源端口号、目的端口号和协议类型。</p>
+    <p>[0145]	移动网络根据该QoS增强指示信息，可以做如下一些增强处理:移动网络的网关设备收集本次提高用户设备QoS等级后的计费信息，该计费信息例如为用户设备进行应用的数据时长、数据流量、数据时长和数据流量，以及本次提高用户设备的QoS等级的事件信息等，并在这个应用结束后将收集的计费信息发给计费系统。对于在线计费，移动运营商从应用提供商的余额中直接扣减掉本次提高用户设备的QoS等级的费用；对于离线计费，计费系统为本次临时申请带宽产生计费话单，并通知给应用提供商。在移动网络收集计费信息之后，QoS控制网元将本次的计费信息发给应用服务器。</p>
+    <p>[0146]	应理解，应用服务器侧描述的应用服务器与QoS控制网元之间的交互及相关特性、功能等与QoS控制网元侧的描述相应，为了简洁，在此不再赘述。</p>
+    <p>[0147]	应理解，在本发明实施例中，各网元之间可以通过消息接口传输信息，也可以通过API接口传输信息，还可以通过其它类型的接口传输信息，本发明实施例并不限于此。</p>
+    <p>[0148]	还应理解，在本发明的各种实施例中，上述各过程的序号的大小并不意味着执行顺序的先后，各过程的执行顺序应以其功能和内在逻辑确定，而不应对本发明实施例的实施过程构成任何限定。</p>
+    <p>[0149]	因此，本发明实施例的处理服务质量的方法，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0150]	上文中结合图1至图9，分别从应用服务器和QoS控制网元的角度详细描述了根据本发明实施例的处理服务质量的方法，下面将结合图10，从移动网络的角度描述根据本发明实施例的处理服务质量的方法。</p>
+    <p>[0151]	如图10所示，根据本发明实施例的处理服务质量的方法300可以由移动网络执行，例如由SAE网络执行。该方法300包括:</p>
+    <p>[0152]	S310，接收QoS控制网元发送的QoS增强指示信息，该QoS增强指示信息为该QoS控制网元在接收到应用服务器发送的QoS提高请求，并确定提高用户设备的QoS等级后发送的；</p>
+    <p>[0153]	S320，根据该QoS增强指示信息，收集该用户设备在QoS等级提高后的计费信息；</p>
+    <p>[0154]	S330，向计费系统发送该计费信息。</p>
+    <p>[0155]	在本发明实施例中，可选地，该计费信息包括该用户设备在QoS等级提高后应用的数据时长和/或数据流量。可选地，该用户设备的QoS等级包括该用户设备允许使用的带宽，和/或该用户设备的用户等级。</p>
+    <p>[0156]	具体而言，在QoS控制网元接收到应用服务器发送的QoS提高请求，并确定提高用户设备的QoS等级后，接收QoS控制网元发送的QoS增强指示信息。移动网络根据该QoS增强指示信息，可以做如下一些增强处理:移动网络的网关设备收集本次提高用户设备QoS等级后的计费信息，该计费信息例如为用户设备进行应用的数据时长、数据流量、数据时长和数据流量，以及本次提高用户设备的QoS等级的事件信息等，并在这个应用结束后将收集的计费信息发给计费系统。</p>
+    <p>[0157]	应理解，对于在线计费，移动运营商从应用提供商的余额中直接扣减掉本次提高用户设备的QoS等级的费用；对于离线计费，计费系统为本次临时申请带宽产生计费话单，并通知给应用提供商。</p>
+    <p>[0158]	应理解，在本发明实施例中，各网元之间可以通过消息接口传输信息，也可以通过API接口传输信息，还可以通过其它类型的接口传输信息，本发明实施例并不限于此。</p>
+    <p>[0159]	应理解，应用服务器侧以及QoS控制网元描述的与移动网络之间的交互及相关特性、功能等与移动网络侧的描述相应，为了简洁，在此不再赘述。</p>
+    <p>[0160]	还应理解，在本发明的各种实施例中，上述各过程的序号的大小并不意味着执行顺序的先后，各过程的执行顺序应以其功能和内在逻辑确定，而不应对本发明实施例的实施过程构成任何限定。</p>
+    <p>[0161]	因此，本发明实施例的处理服务质量的方法，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0162]	图11示出了根据本发明实施例的处理QoS的方法400的示意性流程图。如图11所示，该处理QoS的方法400可以从S401开始一直到S405，再从S441到S448 ;该方法400也可以从S421开始一直到S423，再从S441到S448。</p>
+    <p>[0163]	在S401中，移动网络上报网络能力信息到QoS控制网元。该QoS控制网元可以是PCRF、业务网关、能力开放平台或业务开发平台等网元；该网络能力信息包括网络负荷或者网络能力等信息。如果QoS控制网元中已有网络能力信息，则不需要该步骤。</p>
+    <p>[0164]	在S402中，用户设备向应用服务器发起应用请求，请求进行的应用业务。该应用业务例如为视频业务等。对于应用服务器发起的主动推送业务，不需要该步骤。</p>
+    <p>[0165]	在S403中，应用服务器向QoS控制网元发送业务请求，以请求业务需要的QoS，该业务请求中例如可以包括业务标识、业务类型、业务需要的QoS (例如带宽)等。例如，应用服务器可以通过QoS请求API向QoS控制网元发送业务请求。</p>
+    <p>[0166]	在S404中，QoS控制网元与移动网络协商请求的业务在移动网络中能分配的QoS。QoS控制网络可以基于网络的负荷或者网络的能力来确定移动网络能分配的QoS，例如，如果网络负荷比较高，则可以确定移动网络分配较低的QoS给请求的业务；如果网络负荷比较低，则可以确定移动网络分配较高的QoS给请求的业务。</p>
+    <p>[0167]	在S405中，QoS控制网元将确定的QoS信息通知给应用服务器。QoS控制网元还可以将用户设备在移动网络中的签约QoS信息或者计费套餐等信息通知给应用服务器。例如，QoS控制网元可以通过QoS通知API，将确定的QoS信息通知给应用服务器。</p>
+    <p>[0168]	在S421中，用户设备向应用服务器发起应用请求，请求进行的应用业务。该应用业务例如为视频业务等。对于应用服务器发起的主动推送业务，不需要该步骤。</p>
+    <p>[0169]	在S422中，应用服务器向QoS控制网元发送用户信息查询请求，该用户信息查询请求可以包括用户设备的标识等信息。例如，应用服务器可以通过调用用户信息查询请求API，请求移动网络提供用户设备的信息。</p>
+    <p>[0170]	在S423中，应用服务器接收QoS控制网元发送的用户信息查询应答，该用户信息查询应答包括该用户设备在该移动网络中的可用QoS信息。该用户信息查询应答还可以包括该用户设备在该移动网络中的签约QoS信息和/或计费套餐信息。例如，移动网络可以通过用户信息通知API，将用户设备的信息通知给应用服务器。</p>
+    <p>[0171]	在S441中，应用服务器(或者也可以说应用提供商)确定请求移动网络提高用户设备的QoS等级，并向QoS控制网元发送QoS提高请求。应用服务器请求移动网络提高用户设备的QoS等级包括:提高用户设备允许使用的带宽和/或提高用户设备的用户等级，例如，将用户设备的用户等级由铜牌用户等级升级为银牌用户等级或者金牌用户等级。</p>
+    <p>[0172]	应用服务器确定是否提高用户设备的QoS等级的策略如下:当应用服务器确定移动网络分配的分配QoS信息，或用户设备在该移动网络中的可用QoS信息不能满足其业务要求的QoS需求时，应用服务器确定请求移动网络提高用户设备的QoS等级；或当应用服务器确定用户设备在移动网络中的签约QoS信息(如，带宽或者用户等级)或者计费套餐不满足应用服务器保证提供给用户设备的QoS要求或者计费套餐要求时，应用服务器确定请求移动网络提闻用户设备的QoS等级。</p>
+    <p>[0173]	例如，应用服务器可以通过调用QoS增强API，以请求移动网络提高用户设备的QoS等级。</p>
+    <p>[0174]	在S442中，应用提供商和移动运营商之间协商计费参数信息。例如，协商按QoS增强的时间计费(如，QoS增强10分钟I毛钱)，还是按QoS增强次数来计费(如，QoS增强一次I毛钱)等。这个步骤也是可选的。</p>
+    <p>[0175]	应用提供商和移动运营商之间协商的计费参数信息可以包括:计费模式(在线模式或离线模式)、测量模式(数据流量、数据时长、数据流量/时长混合或者事件等)、计费套餐(例如，10元/IOOM/月或者I元/ 一次QoS增强等)等。例如，应用服务器可以通过调用计费协商API，来与移动运营商协商计费参数信息。</p>
+    <p>[0176]	在S443中，QoS控制网元认证应用服务器提交的计费协商API请求，如果移动网络接收应用服务器提交的该请求，则QoS控制网元将协商后的计费参数信息通知给计费系统。</p>
+    <p>[0177]	在S444中，QoS控制网元根据应用服务器提交的请求，提高用户设备的QoS等级，确保业务请求的QoS保障。这个步骤需要一些增强处理，QoS控制网元将应用业务的业务流标识(例如，5元组(源IP地址、目的IP地址、源端口号、目的端口号和协议类型))、增强QoS信息以及QoS增强指示信息通知给移动网络。</p>
+    <p>[0178]	在S445中，QoS控制网元将确定的增强QoS信息通过QoS提高应答发送给应用服务器。</p>
+    <p>[0179]	在S446中，移动网络根据该QoS增强指示信息，可以做如下一些增强处理:移动网络的网关设备收集本次提升用户设备QoS等级后的计费信息，例如，用户设备进行应用的数据时长，或数据流量，或数据时长/数据流量混合信息，或本次提升用户设备QoS等级的事件信息等，并在这个应用结束后将收集的计费信息发给计费系统。</p>
+    <p>[0180]	在S447中，对于在线计费，移动运营商的计费系统从应用提供商的余额中直接扣减掉本次提升用户设备QoS等级的费用；对于离线计费，计费系统为本次临时申请带宽产生计费话单，并通知给应用提供商。即计费系统向QoS控制网元发送计费通知。</p>
+    <p>[0181]	在S448中，QoS控制网元将本次的计费信息发送给应用服务器。</p>
+    <p>[0182]	应理解，在本发明实施例中，各网元之间可以通过消息接口传输信息，也可以通过API接口传输信息，还可以通过其它类型的接口传输信息，本发明实施例并不限于此。</p>
+    <p>[0183]	还应理解，在本发明的各种实施例中，上述各过程的序号的大小并不意味着执行顺序的先后，各过程的执行顺序应以其功能和内在逻辑确定，而不应对本发明实施例的实施过程构成任何限定。</p>
+    <p>[0184]	因此，本发明实施例的处理服务质量的方法，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0185]	上文中结合图1至图11，详细描述了根据本发明实施例的传输随机接入应答消息的方法，下面将结合图12至图22，描述根据本发明实施例的应用服务器、QoS控制网元和移动网络。</p>
+    <p>[0186]	图12示出了根据本发明实施例的应用服务器600的示意性框图。如图12所示，该应用服务器600包括:</p>
+    <p>[0187]	获取模块610，用于获取用户设备在移动网络中的初始服务质量QoS信息；</p>
+    <p>[0188]	确定模块620，用于根据该初始QoS信息，确定向该移动网络请求提高该用户设备的QoS等级；</p>
+    <p>[0189]	发送模块630，用于向QoS控制网元发送用于请求提高用户设备的QoS等级的QoS提闻请求；</p>
+    <p>[0190]	接收模块640，用于接收该QoS控制网元发送的QoS提高应答，该QoS提高应答包括该移动网络为该用户设备分配的增强QoS信息。</p>
+    <p>[0191]	因此，本发明实施例的应用服务器，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0192]	可选地，如图13所示，该获取模块610包括:[0193]	第一发送单元611，用于向该QoS控制网元发送业务请求；</p>
+    <p>[0194]	第一接收单元612，用于接收该QoS控制网元发送的业务应答，该业务应答包括该移动网络为该用户设备分配的分配QoS信息；</p>
+    <p>[0195]	第一获取单元613，用于根据该业务应答信息获取包括该分配QoS信息的该初始QoS f目息。</p>
+    <p>[0196]	在本发明实施例中，可选地，该第一接收单元612接收的该业务应答还包括该用户设备在该移动网络中的签约QoS信息和/或计费套餐信息；该第一获取单元613获取的该初始QoS信息还包括该签约QoS信息和/或该计费套餐信息。</p>
+    <p>[0197]	可选地，如图14所示，该获取模块610包括:</p>
+    <p>[0198]	第二发送单元616，用于向该QoS控制网元发送用户信息查询请求；</p>
+    <p>[0199]	第二接收单元617，用于接收该QoS控制网元发送的用户信息查询应答，该用户信息查询应答包括该用户设备在该移动网络中的可用QoS信息；</p>
+    <p>[0200]	第二获取单元618，用于根据该用户信息查询应答获取包括该可用QoS信息的该初始QoS信息。</p>
+    <p>[0201]	在本发明实施例中，可选地，该第二接收单元617接收的该用户信息查询应答还包括该用户设备在该移动网络中的签约QoS信息和/或计费套餐信息；该第二获取单元618获取的该初始QoS信息还包括该签约QoS信息和/或该计费套餐信息。</p>
+    <p>[0202]	在本发明实施例中，可选地，确定模块620还用于根据初始QoS信息和预置规则，确定向移动网络请求提闻用户设备的QoS等级。</p>
+    <p>[0203]	在本发明实施例中，可选地，如图15所示，该确定模块620包括:</p>
+    <p>[0204]	第一确定单元621，用于在该初始QoS信息包括的该移动网络为该用户设备分配的分配QoS信息不满足业务的QoS需求时，确定向该移动网络请求提高该用户设备的QoS等级。</p>
+    <p>[0205]	可选地，如图15所示，该确定模块620包括:</p>
+    <p>[0206]	第二确定单元622，用于在该初始QoS信息包括的该用户设备在该移动网络中的可用QoS信息不满足业务的QoS需求时，确定向该移动网络请求提高该用户设备的QoS等级。</p>
+    <p>[0207]	可选地，如图15所示，该确定模块620包括:</p>
+    <p>[0208]	第三确定单元623，用于在该初始QoS信息包括的该用户设备在该移动网络中的签约QoS信息不满足业务的QoS需求时，确定向该移动网络请求提高该用户设备的QoS等级。</p>
+    <p>[0209]	可选地，如图15所示，该确定模块620包括:</p>
+    <p>[0210]	第四确定单元624，用于在该初始QoS信息包括的计费套餐信息不满足计费套餐要求时，确定向该移动网络请求提高该用户设备的QoS等级。</p>
+    <p>[0211]	可选地，如图15所示，该确定模块620包括:</p>
+    <p>[0212]	第五确定单元625，用于根据该初始QoS信息，确定向该移动网络请求提高该用户设备允许使用的带宽，和/或请求提高该用户设备的用户等级。</p>
+    <p>[0213]	应理解，确定模块620可以包括上述确定单元中的一个或多个单元，本发明实施例并不限于此。[0214]	在本发明实施例中，可选地，如图16所示，该应用服务器600还包括:</p>
+    <p>[0215]	协商模块650，用于向该QoS控制网元发送计费协商请求，以与该移动网络协商计</p>
+    <p>费参数信息。</p>
+    <p>[0216]	在本发明实施例中，应用服务器可以是视频服务器，也可以是FTP服务器，FTP服务器是专门为用户提供各种文件的服务器，FTP服务器上往往存储大量的文件，例如:软件、MP3、电影、程序等，该应用服务器还可以是邮件服务器或其它服务器，本发明并不限于此。</p>
+    <p>[0217]	应理解，根据本发明实施例的应用服务器600可对应于本发明实施例中的应用服务器或第三方应用，并且应用服务器600中的各个模块的上述和其它操作和/或功能分别为了实现图1至图11中的各个方法的相应流程，为了简洁，在此不再赘述。</p>
+    <p>[0218]	因此，本发明实施例的应用服务器，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0219]	图17示出了根据本发明实施例的QoS控制网元700的示意性框图。如图17所示，该QoS控制网元700包括:</p>
+    <p>[0220]	第一接收模块710，用于接收应用服务器发送的QoS提高请求，该QoS提高请求用于请求移动网络提闻用户设备的QoS等级；</p>
+    <p>[0221]	第一确定模块720，用于根据该QoS提高请求以及该应用服务器与该移动网络之间的QoS增强协议，确定该移动网络为该用户设备分配的增强QoS信息；</p>
+    <p>[0222]	第一发送模块730，用于向该应用服务器发送QoS提高应答，该QoS提高应答包括该增强QoS信息。</p>
+    <p>[0223]	因此，本发明实施例的QoS控制网元，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0224]	在本发明实施例中，可选地，如图18所示，该QoS控制网元700还包括:</p>
+    <p>[0225]	获取模块741，用于获取该移动网络的网络能力信息；</p>
+    <p>[0226]	第二接收模块742，用于接收该应用服务器发送的业务请求，该业务请求包括该用户设备执行业务需要的QoS;</p>
+    <p>[0227]	第二确定模块743，用于根据该网络能力信息以及该业务请求，确定该初始QoS信息，该初始QoS信息包括该移动网络为该用户设备分配的分配QoS信息；</p>
+    <p>[0228]	第二发送模块744，用于向该应用服务器发送业务应答，该业务应答包括该初始QoS信息，以便于该应用服务器根据该初始QoS信息确定是否提高用户设备的QoS等级。</p>
+    <p>[0229]	可选地，该获取模块741获取的该网络能力信息包括小区负荷信息、接入网元负荷f目息、接入网络支持的QoS、网关网兀负荷彳目息和网关网兀支持的QoS中的至少一种。</p>
+    <p>[0230]	在本发明实施例中，可选地，如图19所示，该QoS控制网元700还包括:</p>
+    <p>[0231]	第三接收模块751，用于接收该应用服务器发送的用户信息查询请求，该用户信息查询请求包括该用户设备的标识；</p>
+    <p>[0232]	第三确定模块752，用于根据该用户设备的标识，确定该初始QoS信息，该初始QoS信息包括该用户设备在该移动网络中的可用QoS信息；[0233]	第三发送模块753，用于向该应用服务器发送用户信息查询应答，该用户信息查询应答包括该初始QoS信息，以便于该应用服务器根据该初始QoS信息确定是否提高用户设备的QoS等级。</p>
+    <p>[0234]	可选地，该初始QoS信息还包括:该用户设备在该移动网络中的签约QoS信息和/</p>
+    <p>或计费套餐信息。</p>
+    <p>[0235]	可选地，如图20所示，该QoS控制网元700还包括:</p>
+    <p>[0236]	第四接收模块761，用于接收该应用服务器发送的计费协商请求；</p>
+    <p>[0237]	第四确定模块762，用于确定与该应用服务器协商的计费参数信息；</p>
+    <p>[0238]	第四发送模块763，用于将该计费参数信息发送给计费系统。</p>
+    <p>[0239]	可选地，如图21所示，该QoS控制网元700还包括:</p>
+    <p>[0240]	第五发送模块770，用于向该移动网络发送该应用服务器的业务流标识、该增强QoS信息和QoS增强指示信息，以便于该移动网络进行计费信息的收集。</p>
+    <p>[0241]	可选地，该用户设备的QoS等级包括该用户设备允许使用的带宽，和/或该用户设备的用户等级。可选地，该QoS增强协议包括:该应用服务器与该移动网络之间的QoS增强</p>
+    <p>计费套餐。</p>
+    <p>[0242]	在本发明实施例中，该QoS控制网元可以是PCRF、业务网关、能力开发平台或业务开发平台等网元，本发明并不以此为限。</p>
+    <p>[0243]	应理解，根据本发明实施例的QoS控制网元700可对应于本发明实施例中的QoS控制网元，或对应于PCRF、业务网关、能力开发平台或业务开发平台等网元，并且QoS控制网元700中的各个模块的上述和其它操作和/或功能分别为了实现图1至图11中的各个方法的相应流程，为了简洁，在此不再赘述。</p>
+    <p>[0244]	因此，本发明实施例的QoS控制网元，通过QoS控制网元接收应用服务器发送的提高用户设备的QoS等级请求，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0245]	图22示出了根据本发明实施例的移动网络800的示意性框图。如图22所示，该移动网络800包括:</p>
+    <p>[0246]	接收模块810，用于接收QoS控制网元发送的QoS增强指示信息，该QoS增强指示信息为该QoS控制网元在接收到应用服务器发送的QoS提高请求，并确定提高用户设备的QoS等级后发送的；</p>
+    <p>[0247]	收集模块820，用于根据该QoS增强指示信息，收集该用户设备在QoS等级提高后的计费信息；</p>
+    <p>[0248]	发送模块830，用于向计费系统发送该计费信息。</p>
+    <p>[0249]	可选地，该收集模块820收集的该计费信息包括该用户设备在QoS等级提高后应用的数据时长和/或数据流量。</p>
+    <p>[0250]	可选地，该用户设备的QoS等级包括该用户设备允许使用的带宽，和/或该用户设备的用户等级。</p>
+    <p>[0251]	在本发明实施例中，该移动网络例如可以SAE网络或SAE系统，也可以是LTE系统等，本发明并不以此为限。</p>
+    <p>[0252]	应理解，根据本发明实施例的移动网络800可对应于本发明实施例中的移动网络，并且移动网络800中的各个模块的上述和其它操作和/或功能分别为了实现图1至图11中的各个方法的相应流程，为了简洁，在此不再赘述。</p>
+    <p>[0253]	因此，本发明实施例的移动网络，通过应用服务器向QoS控制网元请求提高用户设备的QoS等级，使得移动网络能够动态调整用户设备的QoS等级，从而能够提高用户体验，并有利于应用业务的推广。</p>
+    <p>[0254]	本领域普通技术人员可以意识到，结合本文中所公开的实施例描述的各示例的单元及算法步骤，能够以电子硬件、计算机软件或者二者的结合来实现，为了清楚地说明硬件和软件的可互换性，在上述说明中已经按照功能一般性地描述了各示例的组成及步骤。这些功能究竟以硬件还是软件方式来执行，取决于技术方案的特定应用和设计约束条件。专业技术人员可以对每个特定的应用来使用不同方法来实现所描述的功能，但是这种实现不应认为超出本发明的范围。</p>
+    <p>[0255]	所属领域的技术人员可以清楚地了解到，为了描述的方便和简洁，上述描述的系统、装置和单元的具体工作过程，可以参考前述方法实施例中的对应过程，在此不再赘述。</p>
+    <p>[0256]	在本申请所提供的几个实施例中，应该理解到，所揭露的系统、装置和方法，可以通过其它的方式实现。例如，以上所描述的装置实施例仅仅是示意性的，例如，所述单元的划分，仅仅为一种逻辑功能划分，实际实现时可以有另外的划分方式，例如多个单元或组件可以结合或者可以集成到另一个系统，或一些特征可以忽略，或不执行。另外，所显示或讨论的相互之间的耦合或直接耦合或通信连接可以是通过一些接口、装置或单元的间接耦合或通信连接，也可以是电的，机械的或其它的形式连接。</p>
+    <p>[0257]	所述作为分离部件说明的单元可以是或者也可以不是物理上分开的，作为单元显示的部件可以是或者也可以不是物理单元，即可以位于一个地方，或者也可以分布到多个网络单元上。可以根据实际的需要选择其中的部分或者全部单元来实现本发明实施例方案的目的。</p>
+    <p>[0258]	另外，在本发明各个实施例中的各功能单元可以集成在一个处理单元中，也可以是各个单元单独物理存在，也可以是两个或两个以上单元集成在一个单元中。上述集成的单元既可以采用硬件的形式实现，也可以采用软件功能单元的形式实现。</p>
+    <p>[0259]	所述集成的单元如果以软件功能单元的形式实现并作为独立的产品销售或使用时，可以存储在一个计算机可读取存储介质中。基于这样的理解，本发明的技术方案本质上或者说对现有技术做出贡献的部分，或者该技术方案的全部或部分可以以软件产品的形式体现出来，该计算机软件产品存储在一个存储介质中，包括若干指令用以使得一台计算机设备(可以是个人计算机，服务器，或者网络设备等)执行本发明各个实施例所述方法的全部或部分步骤。而前述的存储介质包括:U盘、移动硬盘、只读存储器(ROM，Read-OnlyMemory)、随机存取存储器(RAM, Random Access Memory)、磁碟或者光盘等各种可以存储程序代码的介质。</p>
+    <p>[0260]	以上所述，仅为本发明的具体实施方式，但本发明的保护范围并不局限于此，任何熟悉本技术领域的技术人员在本发明揭露的技术范围内，可轻易想到各种等效的修改或替换，这些修改或替换都应涵盖在本发明的保护范围之内。</p>
+    <p>[0261]	因此，本发明的保护范围应以权利要求的保护范围为准。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101159568A?cl=zh">CN101159568A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年10月18日</td><td class="patent-data-table-td patent-date-value">2008年4月9日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">基于QoS策略的计费方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101242560A?cl=zh">CN101242560A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2007年2月8日</td><td class="patent-data-table-td patent-date-value">2008年8月13日</td><td class="patent-data-table-td ">中兴通讯股份有限公司</td><td class="patent-data-table-td ">一种hsdpa系统中优化实时业务的方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101345916A?cl=zh">CN101345916A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年8月21日</td><td class="patent-data-table-td patent-date-value">2009年1月14日</td><td class="patent-data-table-td ">中国联合通信有限公司</td><td class="patent-data-table-td ">一种基于业务与用户优先级QoS提升方法与系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101478791A?cl=zh">CN101478791A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年1月2日</td><td class="patent-data-table-td patent-date-value">2009年7月8日</td><td class="patent-data-table-td ">中国移动通信集团上海有限公司</td><td class="patent-data-table-td ">在sae融合架构下的服务质量管理方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101656988A?cl=zh">CN101656988A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2008年8月19日</td><td class="patent-data-table-td patent-date-value">2010年2月24日</td><td class="patent-data-table-td ">中国移动通信集团上海有限公司</td><td class="patent-data-table-td ">一种服务质量管理方法、装置及系统</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012725000">H04L12/725</a></span></td></tr><tr><td class="patent-data-table-td "> 合作分类</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L47/805">H04L47/805</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L47/808">H04L47/808</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W28/24">H04W28/24</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04W28/0268">H04W28/0268</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=MF_1CAABERAJ&amp;q=http://worldwide.espacenet.com/classification&amp;usg=AFQjCNGs5WqSrPE3A4ZP63zGuM6PRNfEFA#!/CPC=H04L47/2416">H04L47/2416</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2014年4月2日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/2566ec929a1a5302d2e7/CN103621023A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_5bd24152bf5a1e342ae546da267fae0b.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E5%A4%84%E7%90%86QoS%E7%9A%84%E6%96%B9%E6%B3%95_%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8_QoS.pdf?id=MF_1CAABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U2kzH-9Pb36WoBOmujl9Vn7UTsQQA"},"sample_url":"https://www.google.com/patents/reader?id=MF_1CAABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>

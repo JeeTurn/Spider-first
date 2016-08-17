@@ -1,0 +1,270 @@
+<!DOCTYPE html><html><head><title>专利 CN102143244A - 配置子网掩码的方法及设备 -  Google 专利</title><script>(function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var f=a?new e(a.responseStart):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_",
+"_wtsrt",d),b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})();})();
+</script><link rel="stylesheet" href="/patents/css/_1ec17bec5b1e6ba0eab577be28b6afb9/kl_intl_patents_bundle.css" type="text/css" /><script src="/books/javascript/atb_1ec17bec5b1e6ba0eab577be28b6afb9__zh_cn.js"></script><script>function googleTranslateElementInit() {new google.translate.TranslateElement({pageLanguage: "zh",gaTrack: true,gaId: "UA-27188110-1",multilanguagePage: true});}</script><script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><meta name="DC.type" content="Patent"><meta name="DC.title" content="配置子网掩码的方法及设备"><meta name="DC.contributor" content="俞冬春" scheme="inventor"><meta name="DC.contributor" content="蓝海青" scheme="inventor"><meta name="DC.contributor" content="华为技术有限公司" scheme="assignee"><meta name="DC.date" content="2010-11-1" scheme="dateSubmitted"><meta name="DC.description" content="本发明提供一种配置子网掩码的方法及设备。该方法包括构造探测IP地址；采用所述探测IP地址，发送请求消息；根据所述请求消息的响应情况，确定子网掩码的网络位长度，以进行子网掩码的配置；其中，所述子网掩码的网络位的长度为能够临界接收到所述请求消息对应的响应消息时，所述探测IP地址与同一网段内的网关的IP地址中连续相同的高位的个数，所述探测IP地址与所述网关的IP地址满足如下条件：所述探测IP地址与所述网关的IP地址中紧邻相同的高位的低位互为反码。本发明实施例可以实现子网掩码的自动配置。"><meta name="DC.date" content="2011-8-3"><meta name="DC.relation" content="CN:101094150:A" scheme="references"><meta name="DC.relation" content="CN:101651722:A" scheme="references"><meta name="DC.relation" content="US:20080130647:A1" scheme="references"><meta name="citation_patent_publication_number" content="CN:102143244:A"><meta name="citation_patent_application_number" content="CN:201010532089"><link rel="canonical" href="https://www.google.com/patents/CN102143244A?cl=zh"/><meta property="og:url" content="https://www.google.com/patents/CN102143244A?cl=zh"/><meta name="title" content="专利 CN102143244A - 配置子网掩码的方法及设备"/><meta name="description" content="本发明提供一种配置子网掩码的方法及设备。该方法包括构造探测IP地址；采用所述探测IP地址，发送请求消息；根据所述请求消息的响应情况，确定子网掩码的网络位长度，以进行子网掩码的配置；其中，所述子网掩码的网络位的长度为能够临界接收到所述请求消息对应的响应消息时，所述探测IP地址与同一网段内的网关的IP地址中连续相同的高位的个数，所述探测IP地址与所述网关的IP地址满足如下条件：所述探测IP地址与所述网关的IP地址中紧邻相同的高位的低位互为反码。本发明实施例可以实现子网掩码的自动配置。"/><meta property="og:title" content="专利 CN102143244A - 配置子网掩码的方法及设备"/><meta property="og:type" content="book"/><meta property="og:site_name" content="Google Books"/><meta property="og:image" content="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><link rel="image_src" href="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"/><script>if (window['_OC_timingAction']) {window['_OC_timingAction']('patents_refpage');}</script><style>#gbar,#guser{font-size:13px;padding-top:1px !important;}#gbar{height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+#gbar { padding:.3em .6em !important;}</style></head><body ><div id=gbar><nobr><a class=gb1 href="https://www.google.com/search?tab=tw">搜索</a> <a class=gb1 href="https://www.google.com/search?hl=zh-CN&tbm=isch&source=og&tab=ti">图片</a> <a class=gb1 href="https://maps.google.com/maps?hl=zh-CN&tab=tl">地图</a> <a class=gb1 href="https://play.google.com/?hl=zh-CN&tab=t8">Play</a> <a class=gb1 href="https://www.youtube.com/results?tab=t1">YouTube</a> <a class=gb1 href="https://news.google.com/nwshp?hl=zh-CN&tab=tn">新闻</a> <a class=gb1 href="https://mail.google.com/mail/?tab=tm">Gmail</a> <a class=gb1 href="https://drive.google.com/?tab=to">云端硬盘</a> <a class=gb1 style="text-decoration:none" href="https://www.google.com/intl/zh-CN/options/"><u>更多</u> &raquo;</a></nobr></div><div id=guser width=100%><nobr><span id=gbn class=gbi></span><span id=gbf class=gbf></span><span id=gbe></span><a target=_top id=gb_70 href="https://www.google.com/accounts/Login?service=&continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN&hl=zh-CN" class=gb4>登录</a></nobr></div><div class=gbh style=left:0></div><div class=gbh style=right:0></div><div role="alert" style="position: absolute; left: 0; right: 0;"><a href="https://www.google.com/patents/CN102143244A?cl=zh&amp;hl=zh-CN&amp;output=html_text" title="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"><img border="0" src="//www.google.com/images/cleardot.gif"alt="屏幕阅读器用户请注意：点击此链接可进入无障碍模式。阅读器在无障碍模式下具有同样的基本功能，但可让用户获得更好的体验。"></a></div><div class="kd-appbar"><h2 class="kd-appname"><a href="/patents?hl=zh-CN"> 专利</a></h2><div class="kd-buttonbar left" id="left-toolbar-buttons"><a id="appbar-write-review-link" href=""></a><a id="appbar-view-print-sample-link" href=""></a><a id="appbar-view-ebook-sample-link" href=""></a><a id="appbar-patents-prior-art-finder-link" href="https://www.google.com/patents/related/CN102143244A"></a><a id="appbar-patents-discuss-this-link" href="https://www.google.com/url?id=tc9xBwABERAJ&amp;q=http://patents.stackexchange.com/redirect/google-patents%3Fpublication%3DCN102143244A&amp;usg=AFQjCNFFaMMShb5Aw2rvM9X-fzMipG84Zg" data-is-grant="false"></a><a id="appbar-read-patent-link" href="//docs.google.com/viewer?url=patentimages.storage.googleapis.com/pdfs/2ce4ce24cc7209ac9d93/CN102143244A.pdf"></a><a id="appbar-download-pdf-link" href="//patentimages.storage.googleapis.com/pdfs/2ce4ce24cc7209ac9d93/CN102143244A.pdf"></a><a class="appbar-content-language-link" data-selected="true" data-label="中文" href="/patents/CN102143244A?cl=zh&amp;hl=zh-CN"></a><a class="appbar-content-language-link" data-label="英语" href="/patents/CN102143244A?cl=en&amp;hl=zh-CN"></a><a class="appbar-application-grant-link" data-selected="true" data-label="申请" href="/patents/CN102143244A?hl=zh-CN&amp;cl=zh"></a><a class="appbar-application-grant-link" data-label="授权" href="/patents/CN102143244B?hl=zh-CN&amp;cl=zh"></a></div><div class="kd-buttonbar right" id="right-toolbar-buttons"></div></div><div id="books-microdata" itemscope=""itemtype="http://schema.org/Book"itemid="https://www.google.com/patents/CN102143244A?cl=zh" style="display:none"><span itemprop="description">本发明提供一种配置子网掩码的方法及设备。该方法包括构造探测IP地址；采用所述探测IP地址，发送请求消息；根据所述请求消息的响应情况，确定子网掩码的网络位长度，以进行子网掩码的配置；其中，所述子网掩码的网络 ...</span><span itemprop="url">https://www.google.com/patents/CN102143244A?cl=zh&amp;utm_source=gb-gplus-share</span><span class="main-title" itemprop="name">专利 CN102143244A - 配置子网掩码的方法及设备</span><img itemprop="image" src="https://www.google.com/patents?id=&amp;printsec=frontcover&amp;img=1&amp;zoom=1"alt="专利 CN102143244A - 配置子网掩码的方法及设备" title="专利 CN102143244A - 配置子网掩码的方法及设备"></div><div style="display: none"><ol id="ofe-gear-menu-contents" class="gbmcc"><li class="gbe gbmtc"><a class="gbmt goog-menuitem-content" id="" href="https://www.google.com/advanced_patent_search?hl=zh-CN"> 高级专利搜索</a></li></ol></div><div id="volume-main"><div id="volume-center"><div class=vertical_module_list_row><div id=intl_patents class=about_content><div id=intl_patents_v><table class="patent-bibdata patent-drawings-missing"><tr><td class="patent-bibdata-heading"> 公开号</td><td class="single-patent-bibdata">CN102143244 A</td></tr><tr><td class="patent-bibdata-heading">发布类型</td><td class="single-patent-bibdata">申请</td></tr><tr><td class="patent-bibdata-heading"> 专利申请号</td><td class="single-patent-bibdata">CN 201010532089</td></tr><tr><td class="patent-bibdata-heading">公开日</td><td class="single-patent-bibdata">2011年8月3日</td></tr><tr><td class="patent-bibdata-heading"> 申请日期</td><td class="single-patent-bibdata">2010年11月1日</td></tr><tr><td class="patent-bibdata-heading"> 优先权日<span class="patent-tooltip-anchor patent-question-icon"data-tooltip-text="优先日期属于假设性质，不具任何法律效力。Google 对于所列日期的正确性并没有进行法律分析，也不作任何陈述。"></span></td><td class="single-patent-bibdata">2010年11月1日</td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">公告号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102143244B?hl=zh-CN&amp;cl=zh">CN102143244B</a></span></span></td></tr><tr class="patent-bibdata-list-row alternate-patent-number"><td class="patent-bibdata-heading"> 公开号</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value">201010532089.8, </span><span class="patent-bibdata-value">CN 102143244 A, </span><span class="patent-bibdata-value">CN 102143244A, </span><span class="patent-bibdata-value">CN 201010532089, </span><span class="patent-bibdata-value">CN-A-102143244, </span><span class="patent-bibdata-value">CN102143244 A, </span><span class="patent-bibdata-value">CN102143244A, </span><span class="patent-bibdata-value">CN201010532089, </span><span class="patent-bibdata-value">CN201010532089.8</span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 发明者</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E4%BF%9E%E5%86%AC%E6%98%A5%22">俞冬春</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=ininventor:%22%E8%93%9D%E6%B5%B7%E9%9D%92%22">蓝海青</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading"> 申请人</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="https://www.google.com/search?tbo=p&amp;tbm=pts&amp;hl=en&amp;q=inassignee:%22%E5%8D%8E%E4%B8%BA%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%22">华为技术有限公司</a></span></span></td></tr><tr class="patent-bibdata-list-row "><td class="patent-bibdata-heading">导出引文</td><td><span class="patent-bibdata-value-list"><span class="patent-bibdata-value"><a href="/patents/CN102143244A.bibtex?cl=zh">BiBTeX</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102143244A.enw?cl=zh">EndNote</a>, </span><span class="patent-bibdata-value"><a href="/patents/CN102143244A.ris?cl=zh">RefMan</a></span></span></td></tr><tr class="patent-internal-links"><td colspan=2><span class="patent-bibdata-value"><a href="#backward-citations">专利引用</a> (3),</span> <span class="patent-bibdata-value"><a href="#classifications">分类</a> (2),</span> <span class="patent-bibdata-value"><a href="#legal-events">法律事件</a> (3)</span> </td></tr><tr><td colspan=2 class="patent-bibdata-external-link-spacer-top"></td></tr><tr class="patent-bibdata-external-link-spacer-bottom"></tr><tr><td colspan=2><span class="patent-bibdata-heading">外部链接:&nbsp;</span><span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=tc9xBwABERAJ&amp;q=http://211.157.104.87:8080/sipo/zljs/hyjs-yx-new.jsp%3Frecid%3D201010532089&amp;usg=AFQjCNFJID3GgQAFG6gb9of47BI0i3JwjA"> 中国国家知识产权局</a>, </span><span class="patent-bibdata-value"><a href="https://www.google.com/url?id=tc9xBwABERAJ&amp;q=http://worldwide.espacenet.com/publicationDetails/biblio%3FCC%3DCN%26NR%3D102143244A%26KC%3DA%26FT%3DD&amp;usg=AFQjCNFId7DzWgVHEtcpEBej58GJ0BBpFg"> 欧洲专利数据库 (Espacenet)</a></span></span></td></tr><tr class="patent-bibdata-group-spacer"></tr></table><div class="number-and-title"><span class="patent-title"><invention-title mxw-id="PT104338346" lang="ZH" load-source="patent-office">配置子网掩码的方法及设备</invention-title>
+      </span><br><span class="patent-number">CN 102143244 A</span></div><div class="patent-section patent-abstract-section"><div class="patent-section-header"><span class="patent-section-title"> 摘要</span></div><div class="patent-text"><abstract mxw-id="PA86241940" lang="ZH" load-source="patent-office">
+    <div class="abstract">本发明提供一种配置子网掩码的方法及设备。该方法包括构造探测IP地址；采用所述探测IP地址，发送请求消息；根据所述请求消息的响应情况，确定子网掩码的网络位长度，以进行子网掩码的配置；其中，所述子网掩码的网络位的长度为能够临界接收到所述请求消息对应的响应消息时，所述探测IP地址与同一网段内的网关的IP地址中连续相同的高位的个数，所述探测IP地址与所述网关的IP地址满足如下条件：所述探测IP地址与所述网关的IP地址中紧邻相同的高位的低位互为反码。本发明实施例可以实现子网掩码的自动配置。</div>
+  </abstract>
+  </div></div><div class="patent-section patent-claims-section"><div class="patent-section-header"><span class="patent-section-title">权利要求<span class="patent-section-count">(24)</span></span></div><div class="patent-text"><div mxw-id="PCLM37839464" lang="ZH" load-source="patent-office" class="claims">
+    <div class="claim"> <div num="1" class="claim">
+      <div class="claim-text">1.	一种配置子网掩码的方法，其特征在于，包括： 构造探测因特网协议IP地址；采用所述探测IP地址，发送请求消息；根据所述请求消息的响应情况，确定子网掩码的网络位的长度，以进行子网掩码的配置；其中，所述子网掩码的网络位的长度为能够临界接收到所述请求消息对应的响应消息 时，所述探测IP地址与同一网段内的网关的IP地址中连续相同的高位的个数，所述探测IP 地址与所述网关的IP地址满足如下条件：所述探测IP地址与所述网关的IP地址中紧邻相 同的高位的低位互为反码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="2" class="claim">
+      <div class="claim-text">2.根据权利要求1所述的方法，其特征在于，所述构造探测IP地址，包括：构造满足第一限定条件的探测IP地址，所述第一限定条件为：所述探测IP地址的高 N-M位与预先获取的网关的IP地址的高N-M位相同，且按照从高到低的顺序，所述探测IP 地址的第N-M+1位与所述网关的IP地址的第N-M+1位互为反码，其中，N、M为变量，N的初 始值为能够取得的子网掩码的网络位的最大长度，M的初始值为预先设定的初始步长； 所述请求消息为地址解析协议ARP请求，所述采用所述探测IP地址，发送请求消息，包括：将所述探测IP地址作为所述ARP请求的源IP地址，向所述网关发送ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="3" class="claim">
+      <div class="claim-text">3.根据权利要求2所述的方法，其特征在于，所述根据所述请求消息的响应情况，确定 子网掩码的网络位长度，包括：当接收到所述网关发送的ARP响应时，将接收到所述ARP响应时的M作为差值对N进行 减小处理，并重新设定M,根据减小后的N及重新设定的M重新构造探测IP地址，并采用重 新构造的探测IP地址向所述网关发送ARP请求，直至接收不到所述网关发送的ARP响应； 当接收不到所述网关发送的ARP响应时，如果接收不到所述网关发送的ARP响应时的M为1，则将接收不到所述ARP响应时的N 作为配置的子网掩码的网络位的长度； 或者，如果接收不到所述网关发送的ARP响应时的M大于1，则对接收不到所述网关发送的 ARP响应时的M进行更新处理，使得更新后的M小于更新前的M,并根据所述更新后的M重 新构造探测IP地址，并采用重新构造的探测IP地址向所述网关发送ARP请求，直至接收不 到所述ARP响应时的M为1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="4" class="claim">
+      <div class="claim-text">4.根据权利要求2所述的方法，其特征在于，还包括：将所述探测IP地址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求 以判断所述探测IP地址是否在本网段内已经存在；当判断出所述探测IP地址在本网段内已经存在时，将判断出探测IP地址在本网段内 已经存在时的M作为差值对N进行减小处理，并重新设定M,根据减小后的N及重新设定的 M重新构造探测IP地址，直至构造的探测IP地址在本网段内未存在；所述将所述探测IP地址作为所述ARP请求的源IP地址，向所述网关发送ARP请求，包括：当判断出所述探测IP地址在本网段内未存在时，将所述探测IP地址作为所述ARP请求的源IP地址，向所述网关发送ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="5" class="claim">
+      <div class="claim-text">5.根据权利要求1所述的方法，其特征在于，所述构造探测IP地址，包括：构造满足第二限定条件的探测IP地址，所述第二限定条件为：所述探测IP地址的高 L+M位与预先获取的网关的IP地址的高L+M位相同，且按照从高到低的顺序，所述探测IP 地址的第L+M+1位与所述网关的IP地址的第L+M+1位互为反码，其中，L、M为变量，L的初 始值为-1，M的初始值为预先设定的初始步长。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="6" class="claim">
+      <div class="claim-text">6.根据权利要求5所述的方法，其特征在于，所述请求消息为ARP请求，所述采用所述 探测IP地址，发送请求消息，包括：将所述探测IP地址作为所述ARP请求的源IP地址，向所述网关发送ARP请求； 所述根据所述请求消息的响应情况，确定子网掩码的网络位长度，包括： 当接收不到所述网关发送的ARP响应时，将接收不到所述ARP响应时的M作为增值对 L进行增加处理，并重新设定M,根据增加后的L及重新设定的M重新构造探测IP地址，并 采用重新构造的探测IP地址向所述网关发送ARP请求，直至接收到所述网关发送的ARP响 应；当接收到所述网关发送的ARP响应时，如果接收到所述网关发送的ARP响应时的M为1，则将接收到所述ARP响应时的L增加 1后作为配置的子网掩码的网络位的长度； 或者，如果接收到所述网关发送的ARP响应时的M大于1，则对接收到所述网关发送的ARP 响应时的M进行更新处理，使得更新后的M小于更新前的M,并根据所述更新后的M重新构 造探测IP地址，并采用重新构造的探测IP地址向所述网关发送ARP请求，直至接收到所述 ARP响应时的M为1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="7" class="claim">
+      <div class="claim-text">7.根据权利要求6所述的方法，其特征在于，所述将所述探测IP地址作为所述ARP请 求的源IP地址，向所述网关发送ARP请求，包括：将所述探测IP地址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求 以判断所述探测IP地址是否在本网段内已经存在；当判断出所述探测IP地址在本网段内未存在时，将所述探测IP地址作为所述ARP请 求的源IP地址，向所述网关发送ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="8" class="claim">
+      <div class="claim-text">8.根据权利要求5所述的方法，其特征在于，所述请求消息为免费ARP请求，所述采用 所述探测IP地址，发送请求消息，包括：将所述探测IP地址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求 以判断所述探测IP地址是否在本网段内已经存在；所述根据所述请求消息的响应情况，确定子网掩码的网络位长度，包括： 当判断出所述探测IP地址在本网段内已经存在时，如果判断出所述探测IP地址在本网段内已经存在时的M为1，则将判断出所述探测IP 地址在本网段内已经存在时的L增加1后作为配置的子网掩码的网络位的长度； 或者，如果判断出所述探测IP地址在本网段内已经存在时的M大于1，则对判断出所述探测 IP地址在本网段内已经存在时的M进行更新处理，使得更新后的M小于更新前的M，并根据3所述更新后的M重新构造探测IP地址，直至构造的探测IP地址在本网段内未存在，或者， 判断出所述探测IP地址在本网段内已经存在时的M为1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="9" class="claim">
+      <div class="claim-text">9.根据权利要求1所述的方法，其特征在于，所述构造探测IP地址，包括：构造满足第三限定条件的探测IP地址，所述第三限定条件为：所述探测IP地址的高Q 位与预先获取的网关的IP地址的高Q位相同，且按照从高到低的顺序，所述探测IP地址的 第Q+1位与所述网关的IP地址的第Q+1位互为反码，其中，Q大于L且小于N，Q、L、N为变 量，N的初始值为能够取得的子网掩码的网络位的最大长度，L为初始值为-1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="10" class="claim">
+      <div class="claim-text">10.根据权利要求9所述的方法，其特征在于，所述请求消息为ARP请求，所述采用所述 探测IP地址，发送请求消息，包括：将所述探测IP地址作为ARP请求的源IP地址，向所述网关发送ARP请求； 所述根据所述请求消息的响应情况，确定子网掩码的网络位长度，包括： 当接收到所述网关发送的ARP响应时，对所述N进行减小处理，使得减小处理后的N为 减小处理前对应的Q ；以及，当接收不到所述网关发送的ARP响应时，对所述L进行增加处 理，使得增加处理后的L为增加处理前对应的Q ；如果所述减小处理后的N与减小处理前对应的L相差1，或者，增加处理前对应的N与 增加处理后的L相差1，则将N与L相差1时的N作为配置的子网掩码的网络位的长度； 或者，如果所述减小处理后的N与减小处理前对应的L相差大于1，则重新选取Q，使得重新 选取的Q大于减小处理前对应的L小于减小处理后的N，或者，如果所述增加处理前对应的 N与增加处理后的L相差大于1，则重新选取Q，使得重新选取的Q大于增加处理后的L小于 增加处理前对应的N ；根据重新选取的Q重新构造探测IP地址，并采用重新构造的探测IP 地址向所述网关发送ARP请求，直至所述减小处理后的N与减小处理前对应的L相差1，或 者，增加处理前对应的N与增加处理后的L相差1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="11" class="claim">
+      <div class="claim-text">11.根据权利要求10所述的方法，其特征在于，所述将所述探测IP地址作为ARP请求 的源IP地址，向所述网关发送ARP请求，包括：将所述探测IP地址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求 以判断所述探测IP地址是否在本网段内已经存在；当判断出所述探测IP地址在本网段内未存在时，采用所述探测IP地址，向所述网关发 送ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="12" class="claim">
+      <div class="claim-text">12.根据权利要求10所述的方法，其特征在于，所述请求消息为免费ARP请求，所述采 用所述探测IP地址，发送请求消息，包括：将所述探测IP地址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求 以判断所述探测IP地址是否在本网段内已经存在；所述根据所述请求消息的响应情况，确定子网掩码的网络位长度，包括： 当判断出所述探测IP地址在本网段内已经存在时，对所述N进行减小处理，使得减小 处理后的N为减小处理前对应的Q ；如果所述减小处理后的N与减小处理前对应的L相差1，则将N与L相差1时的N作为 配置的子网掩码的网络位的长度； 或者，如果所述减小处理后的N与减小处理前对应的L相差大于1，则重新选取Q，使得重新 选取的Q大于减小处理前对应的L小于减小处理后的N ；根据重新选取的Q重新构造探测 IP地址，并采用重新构造的探测IP地址向所述网关发送ARP请求，直至构造的探测IP地址 在本网段内未存在，或者，判断出所述探测IP地址在本网段内已经存在时对所述N进行减 小处理后的N与减小处理前对应的L相差1。</div>
+    </div>
+    </div> <div class="claim"> <div num="13" class="claim">
+      <div class="claim-text">13.	&#8212;种配置子网掩码的设备，其特征在于，包括：构造模块，用于构造探测因特网协议IP地址；发送模块，用于采用所述探测IP地址，发送请求消息；确定模块，用于根据所述请求消息的响应情况，确定子网掩码的网络位的长度，以进行 子网掩码的配置；其中，所述子网掩码的网络位的长度为能够临界接收到所述请求消息对应的响应消息 时，所述探测IP地址与同一网段内的网关的IP地址中连续相同的高位的个数，所述探测IP 地址与所述网关的IP地址满足如下条件：所述探测IP地址与所述网关的IP地址中紧邻相 同的高位的低位互为反码。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="14" class="claim">
+      <div class="claim-text">14.根据权利要求13所述的设备，其特征在于，所述构造模块具体用于构造满足第一限定条件的探测IP地址，所述第一限定条件为： 所述探测IP地址的高N-M位与预先获取的网关的IP地址的高N-M位相同，且按照从高到 低的顺序，所述探测IP地址的第N-M+1位与所述网关的IP地址的第N-M+1位互为反码，其 中，N、M为变量，N的初始值为能够取得的子网掩码的网络位的最大长度，M的初始值为预先 设定的初始步长；所述请求消息为ARP请求，所述发送模块具体用于将所述探测IP地址作为所述ARP请 求的源IP地址，向所述网关发送地址解析协议ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="15" class="claim">
+      <div class="claim-text">15.根据权利要求14所述的设备，其特征在于，所述确定模块具体用于当接收到所述 网关发送的ARP响应时，将接收到所述ARP响应时的M作为差值对N进行减小处理，并重新 设定M，根据减小后的N及重新设定的M重新构造探测IP地址，并采用重新构造的探测IP 地址向所述网关发送ARP请求，直至接收不到所述网关发送的ARP响应；所述确定模块还用于当接收不到所述网关发送的ARP响应时，如果接收不到所述网关 发送的ARP响应时的M为1，则将接收不到所述ARP响应时的N作为配置的子网掩码的网络 位的长度；或者，如果接收不到所述网关发送的ARP响应时的M大于1，则对接收不到所述 网关发送的ARP响应时的M进行更新处理，使得更新后的M小于更新前的M,并根据所述更 新后的M重新构造探测IP地址，并采用重新构造的探测IP地址向所述网关发送ARP请求， 直至接收不到所述ARP响应时的M为1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="16" class="claim">
+      <div class="claim-text">16.根据权利要求14所述的设备，其特征在于，还包括：广播模块，用于将所述探测IP地址作为免费ARP请求的源IP地址和目的IP地址，广 播免费ARP请求以判断所述探测IP地址是否在本网段内已经存在；处理模块，用于当判断出所述探测IP地址在本网段内已经存在时，将判断出探测IP地 址在本网段内已经存在时的M作为差值对N进行减小处理，并重新设定M,根据减小后的N 及重新设定的M重新构造探测IP地址，直至构造的探测IP地址在本网段内未存在；所述发送模块具体用于当判断出所述探测IP地址在本网段内未存在时，将所述探测IP地址作为所述ARP请求的源IP地址，向所述网关发送ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="17" class="claim">
+      <div class="claim-text">17.根据权利要求13所述的设备，其特征在于，所述构造模块具体用于构造满足第二限定条件的探测IP地址，所述第二限定条件为： 所述探测IP地址的高L+M位与预先获取的网关的IP地址的高L+M位相同，且按照从高到 低的顺序，所述探测IP地址的第L+M+1位与所述网关的IP地址的第L+M+1位互为反码，其 中，L、M为变量，L的初始值为-1，M的初始值为预先设定的初始步长。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="18" class="claim">
+      <div class="claim-text">18.根据权利要求17所述的设备，其特征在于，所述请求消息为ARP请求，所述发送模块具体用于将所述探测IP地址作为所述ARP请 求的源IP地址，向所述网关发送ARP请求；所述确定模块具体用于当接收不到所述网关发送的ARP响应时，将接收不到所述ARP 响应时的M作为增值对L进行增加处理，并重新设定M,根据增加后的L及重新设定的M重 新构造探测IP地址，并采用重新构造的探测IP地址向所述网关发送ARP请求，直至接收到 所述网关发送的ARP响应；当接收到所述网关发送的ARP响应时，如果接收到所述网关发送 的ARP响应时的M为1，则将接收到所述ARP响应时的L增加1后作为配置的子网掩码的网 络位的长度；或者，如果接收到所述网关发送的ARP响应时的M大于1，则对接收到所述网 关发送的ARP响应时的M进行更新处理，使得更新后的M小于更新前的M,并根据所述更新 后的M重新构造探测IP地址，并采用重新构造的探测IP地址向所述网关发送ARP请求，直 至接收到所述ARP响应时的M为1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="19" class="claim">
+      <div class="claim-text">19.根据权利要求18所述的设备，其特征在于，所述发送模块具体用于将所述探测IP 地址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求以判断所述探测IP 地址是否在本网段内已经存在；当判断出所述探测IP地址在本网段内未存在时，将所述探 测IP地址作为所述ARP请求的源IP地址，向所述网关发送ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="20" class="claim">
+      <div class="claim-text">20.根据权利要求17所述的设备，其特征在于，所述请求消息为免费ARP请求；所述发送模块具体用于将所述探测IP地址作为免费ARP请求的源IP地址和目的IP 地址，广播免费ARP请求以判断所述探测IP地址是否在本网段内已经存在；所述确定模块具体用于当判断出所述探测IP地址在本网段内已经存在时，如果判断 出所述探测IP地址在本网段内已经存在时的M为1，则将判断出所述探测IP地址在本网段 内已经存在时的L增加1后作为配置的子网掩码的网络位的长度；或者，如果判断出所述探 测IP地址在本网段内已经存在时的M大于1，则对判断出所述探测IP地址在本网段内已经 存在时的M进行更新处理，使得更新后的M小于更新前的M,并根据所述更新后的M重新构 造探测IP地址，直至构造的探测IP地址在本网段内未存在，或者，判断出所述探测IP地址 在本网段内已经存在时的M为1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="21" class="claim">
+      <div class="claim-text">21.根据权利要求13所述的设备，其特征在于，所述构造模块具体用于构造满足第三限定条件的探测IP地址，所述第三限定条件为： 所述探测IP地址的高Q位与预先获取的网关的IP地址的高Q位相同，且按照从高到低的 顺序，所述探测IP地址的第Q+1位与所述网关的IP地址的第Q+1位互为反码，其中，Q大 于L且小于N，Q、L、N为变量，N的初始值为能够取得的子网掩码的网络位的最大长度，L为 初始值为-1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="22" class="claim">
+      <div class="claim-text">22.根据权利要求21所述的设备，其特征在于，所述请求消息为ARP请求，所述发送模块具体用于将所述探测IP地址作为ARP请求的 源IP地址，向所述网关发送ARP请求；所述确定模块具体用于当接收到所述网关发送的ARP响应时，对所述N进行减小处理， 使得减小处理后的N为减小处理前对应的Q ；以及，当接收不到所述网关发送的ARP响应 时，对所述L进行增加处理，使得增加处理后的L为增加处理前对应的Q ；如果所述减小处 理后的N与减小处理前对应的L相差1，或者，增加处理前对应的N与增加处理后的L相差 1，则将N与L相差1时的N作为配置的子网掩码的网络位的长度；或者，如果所述减小处理 后的N与减小处理前对应的L相差大于1，则重新选取Q，使得重新选取的Q大于减小处理 前对应的L小于减小处理后的N，或者，如果所述增加处理前对应的N与增加处理后的L相 差大于1，则重新选取Q，使得重新选取的Q大于增加处理后的L小于增加处理前对应的N ； 根据重新选取的Q重新构造探测IP地址，并采用重新构造的探测IP地址向所述网关发送 ARP请求，直至所述减小处理后的N与减小处理前对应的L相差1，或者，增加处理前对应的 N与增加处理后的L相差1。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="23" class="claim">
+      <div class="claim-text">23.根据权利要求22所述的设备，其特征在于，所述发送模块具体用于将所述探测IP 地址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求以判断所述探测IP 地址是否在本网段内已经存在；当判断出所述探测IP地址在本网段内未存在时，采用所述 探测IP地址，向所述网关发送ARP请求。</div>
+    </div>
+    </div> <div class="claim-dependent"> <div num="24" class="claim">
+      <div class="claim-text">24.根据权利要求21所述的设备，其特征在于，所述请求消息为免费ARP请求，所述发送模块具体用于将所述探测IP地址作为免费 ARP请求的源IP地址和目的IP地址，广播免费ARP请求以判断所述探测IP地址是否在本 网段内已经存在；所述确定模块具体用于当判断出所述探测IP地址在本网段内已经存在时，对所述N进 行减小处理，使得减小处理后的N为减小处理前对应的Q ；如果所述减小处理后的N与减小 处理前对应的L相差1，则将N与L相差1时的N作为配置的子网掩码的网络位的长度；或 者，如果所述减小处理后的N与减小处理前对应的L相差大于1，则重新选取Q，使得重新选 取的Q大于减小处理前对应的L小于减小处理后的N ；根据重新选取的Q重新构造探测IP 地址，并采用重新构造的探测IP地址向所述网关发送ARP请求，直至构造的探测IP地址在 本网段内未存在，或者，判断出所述探测IP地址在本网段内已经存在时对所述N进行减小 处理后的N与减小处理前对应的L相差1。</div>
+    </div>
+  </div> </div>
+  </div></div><div class="patent-section patent-description-section"><div class="patent-section-header"><span class="patent-section-title"> 说明</span></div><div class="patent-text"><div mxw-id="PDES43418504" lang="ZH" load-source="patent-office" class="description">
+    <p>配置子网掩码的方法及设备</p>
+    <p>技术领域</p>
+    <p>[0001]	本发明涉及通信技术，尤其涉及一种配置子网掩码的方法及设备。 背景技术</p>
+    <p>[0002]	子网掩码（subnet mask)在因特网协议(Internet Protocol, IP)通信中承担着 重要角色，可以用于确定源设备与目标设备是否在同一网段中（同一以太网广播域），以便 进行不同的路由。子网掩码的长度与IP地址的长度相同，包括网络位和主机位，网络位为 全1，主机位为全0。源设备要向目标设备发送IP包时，该IP包头中包含探测IP地址和目 的IP地址，通过将探测IP地址与子网掩码按位相与得到一个网络地址，通过将目的IP地 址与子网掩码按位相与得到另一个网络地址。如果得到的两个网络地址相同，则表明源设 备与目标设备在同一个网段，源设备可以直接将IP包发送给目标设备，中间不需要经过网 关转发；如果得到的两个网络地址不同，则表明源设备与目标设备不在同一个网段，则源地 址需要将IP包发送给网关，由网关转发给目标设备。</p>
+    <p>[0003]	子网掩码是IP路由的重要信息，保证子网掩码准确方便的获取是IP网络部署的 重要环节。同一网段内的通信设备与网关都必须配置子网掩码，并且要求通信设备与网关 的子网掩码一样。为了保证二者的子网掩码配置一样，通信设备通常是直接引用网关的子 网掩码。所以，获取网关的子网掩码，并配置通信设备的子网掩码是IP通信配置的重要环 节。</p>
+    <p>[0004]	现有技术中，承载网规划者在做网络配置时，会完成子网掩码的规划，其中包括对 网关的子网掩码规划。网络业务使用者可以从承载网规划者处获取网关的子网掩码，之后， 将得到的网关的子网掩码配置给与该网关同一网段的通信设备。</p>
+    <p>[0005]	发明人发现，现有技术中至少存在如下问题：现有对通信设备的子网掩码的配置 属于人工配置方案，该人工配置方案存在数据获取可能错误、配置可能错误、数据获取所需 时间长、配置所需时间长、对技术人员要求高等问题。</p>
+    <p>发明内容</p>
+    <p>[0006]	本发明实施例提供一种配置子网掩码的方法及设备，用以解决现有技术中人工配 置方案存在的问题。</p>
+    <p>[0007]	本发明实施例提供一种配置子网掩码的方法，包括：</p>
+    <p>[0008]	构造探测IP地址；</p>
+    <p>[0009]	采用所述探测IP地址，发送请求消息；</p>
+    <p>[0010]	根据所述请求消息的响应情况，确定子网掩码的网络位的长度，以进行子网掩码 的配置；</p>
+    <p>[0011]	其中，所述子网掩码的网络位的长度为能够临界接收到所述请求消息对应的响应 消息时，所述探测IP地址与同一网段内的网关的IP地址中连续相同的高位的个数，所述探 测IP地址与所述网关的IP地址满足如下条件：所述探测IP地址与所述网关的IP地址中紧邻相同的高位的低位互为反码。</p>
+    <p>[0012]	本发明实施例提供一种配置子网掩码的设备，包括：</p>
+    <p>[0013]	构造模块，用于构造探测IP地址；</p>
+    <p>[0014]	发送模块，用于采用所述探测IP地址，发送请求消息；</p>
+    <p>[0015]	确定模块，用于根据所述请求消息的响应情况，确定子网掩码的网络位的长度，以 进行子网掩码的配置；</p>
+    <p>[0016]	其中，所述子网掩码的网络位的长度为能够临界接收到所述请求消息对应的响应 消息时，所述探测IP地址与同一网段内的网关的IP地址中连续相同的高位的个数，所述探 测IP地址与所述网关的IP地址满足如下条件：所述探测IP地址与所述网关的IP地址中 紧邻相同的高位的低位互为反码。</p>
+    <p>[0017]	由上述技术方案可知，本发明实施例的配置子网掩码的方法及设备，通过构造探 测IP地址，根据采用该探测IP地址发送的ARP请求的响应情况，配置子网掩码，实现子网 掩码的自动配置，避免人工配置引起的问题。</p>
+    <p>附图说明</p>
+    <p>[0018]	为了更清楚地说明本发明实施例中的技术方案，下面将对实施例描述中所需要使 用的附图作一简单地介绍，显而易见地，下面描述中的附图是本发明的一些实施例，对于本 领域普通技术人员来讲，在不付出创造性劳动性的前提下，还可以根据这些附图获得其他 的附图。</p>
+    <p>[0019]	图1为本发明第一实施例的方法流程示意图；</p>
+    <p>[0020]	图2为本发明第二实施例的方法流程示意图；</p>
+    <p>[0021]	图3为本发明第二实施例中网关的IP地址的示意图；</p>
+    <p>[0022]	图4为本发明第二实施例中构造的探测IP地址的示意图；</p>
+    <p>[0023]	图5为本发明第三实施例的方法流程示意图；</p>
+    <p>[0024]	图6为本发明第四实施例的方法流程示意图；</p>
+    <p>[0025]	图7为本发明第四实施例中探测IP地址和网关的IP地址的结构比较示意图；</p>
+    <p>[0026]	图8为本发明第六实施例的方法流程示意图；</p>
+    <p>[0027]	图9为本发明第六实施例中探测IP地址和网关的IP地址的结构比较示意图；</p>
+    <p>[0028]	图10为本发明第七实施例的方法流程示意图；</p>
+    <p>[0029]	图11为本发明第七实施例中探测IP地址和网关的IP地址的结构比较示意图；</p>
+    <p>[0030]	图12为本发明第八实施例的设备结构示意图。</p>
+    <p>具体实施方式</p>
+    <p>[0031]	为使本发明实施例的目的、技术方案和优点更加清楚，下面将结合本发明实施例 中的附图，对本发明实施例中的技术方案进行清楚、完整地描述，显然，所描述的实施例是 本发明一部分实施例，而不是全部的实施例。基于本发明中的实施例，本领域普通技术人员 在没有做出创造性劳动前提下所获得的所有其他实施例，都属于本发明保护的范围。</p>
+    <p>[0032]	本发明实施例提供的技术方案的思路是：（1)网络地址掩码的长度是有限的，采 用以限次假设的网络地址掩码去试探，一定可以找到最终的网络地址掩码。(2)利用最终网络地址掩码N的特点：网关路由器认为只有主机的IP地址N位与自己的前位N位相同时， 网关路由器才会认为自己主机同属一网段。(3)通过不断的调整假设的网络掩码值，步步逼 近，找到满足上述条件O)的N值。</p>
+    <p>[0033]	图1为本发明第一实施例的方法流程示意图，包括：</p>
+    <p>[0034]	步骤11 ：配置子网掩码的设备，例如主机构造探测IP地址；</p>
+    <p>[0035]	步骤12 ：主机采用该探测IP地址，发送请求消息；</p>
+    <p>[0036]	步骤13 ：主机根据该请求消息的响应情况，确定子网掩码的网络位的长度，以进 行子网掩码的配置，其中，该子网掩码的网络位的长度为能够临界接收到该请求消息对应 的响应消息时，该探测IP地址与同一网段内的网关的IP地址中连续相同的高位个数，该探 测IP地址与该网关的IP地址中紧邻相同的高位的低位互为反码。</p>
+    <p>[0037]	其中，以配置的子网掩码的网络位的长度为N为例，能够临界接收到该请求消息 对应的响应消息是指：</p>
+    <p>[0038]	当该探测IP地址的高N位与同一网段内的网关的IP地址的高N位相同，且按照 从高到低的顺序，该探测IP地址的第N+1位与该网关的第N+1位互为反码时，能够接收到 该请求消息对应的响应消息；以及/或，</p>
+    <p>[0039]	当该探测IP地址的高N-I位与该网关的IP地址的高N-I位相同，且按照从高到 低的顺序，该探测IP地址的第N位与该网关的第N位互为反码时，不能接收到该请求消息 对应的响应消息。</p>
+    <p>[0040]	具体地，以探测IP地址的高n-1位与该网关的IP地址的高n-1位相同，且按照从 高到低的顺序，该探测IP地址的第η位与该网关的第η位互为反码时为例，探测IP地址与 网关的IP地址的对应关系可以如下：</p>
+    <p>[0041]	例如，以IP地址为32位为例，假设网关的IP地址为：</p>
+    <p>[0042]	Y1 Y2 Y3 ... Ylri Yn ... Y32，其中，Y1 为最高位，Y32 为最低位。</p>
+    <p>[0043]	则构造的探测IP地址为：</p>
+    <p>[0044]	Y1 Y2 Y3 …Ylri Zn …&amp;2，</p>
+    <p>[0045]	其中，Y1 Y2 Y3…Ylri与网关的IP地址的高n-1位相同，&amp;与Yn互为反码，即 「0 当 Y =1</p>
+    <p>Zn=Ii ^J1 Λ，对于其他的ζη+1&#183;&#183;&#183;^可以任选。可选的，如果考虑到保留的主机地址， I1 &#30004; γη = ο</p>
+    <p>即主机位全O或者全1作为保留位不予分配，此种情况下，不能为全O或者全1。</p>
+    <p>[0046]	该采用该探测IP地址，发送请求消息，可以包括：</p>
+    <p>[0047]	采用该探测IP地址，向该网关发送地址解析协议（Address Resolution Protocol, ARP)请求。</p>
+    <p>[0048]	进一步地，在发送ARP请求之前，可以先广播免费ARP请求，以判断探测IP地址是 否在本网段内已经存在（或者理解为该探测IP地址在本网段活动），以避免地址冲突，即， 本实施例在采用探测IP地址发送ARP请求之前，还可以进一步包括：</p>
+    <p>[0049]	主机采用该探测IP地址广播免费ARP请求以判断探测IP地址是否在本网段内活 动；</p>
+    <p>[0050]	当探测IP地址不在本网段内活动时，采用该探测IP地址向网关发送ARP请求。</p>
+    <p>[0051]	其中，当主机广播免费ARP请求后，如果收到ARP响应或者免费ARP响应，则表明构造的探测IP地址在同一网段内活动，表明地址冲突。</p>
+    <p>[0052]	本发明实施例中，具体地，构造的探测IP地址和网关的IP地址具体的相同高位的 个数η可以从大到小进行处理，和/或，也可以从小到大进行处理，且，处理时可以按位依次 进行增加和/或减小，也可以每次增加和/或减小大于1位：</p>
+    <p>[0053]	方式一，从大到小处理：构造满足第一限定条件的探测IP地址，该第一限定条件 为：该探测IP地址的高N-M位与预先获取的网关的IP地址的高N-M位相同，且按照从高到 低的顺序，该探测IP地址的第Ν-Μ+1位与该网关的IP地址的第Ν-Μ+1位互为反码，其中， Ν、Μ为变量，满足一定条件后的N为待配置的子网掩码的网络位的长度，M为步长，N的初始 值为能够取得的子网掩码的网络位的最大长度，M的初始值为预先设定的初始步长。</p>
+    <p>[0054]	满足的一定条件可以包括：该采用该探测IP地址，发送请求消息，包括：采用该探 测IP地址，向该网关发送ARP请求。该根据该请求消息的响应情况，配置子网掩码，包括： 当接收到该网关发送的ARP响应时，将接收到该ARP响应时的M作为差值对N进行减小处 理，并重新设定Μ,根据减小后的N及重新设定的M重新构造探测IP地址，并采用重新构造 的探测IP地址向该网关发送ARP请求，直至接收不到该网关发送的ARP响应。当接收不到 该网关发送的ARP响应时，如果接收不到该网关发送的ARP响应时的M为1，则将接收不到 该ARP响应时的N作为配置的子网掩码的网络位的长度；或者，如果接收不到该网关发送的 ARP响应时的M大于1，则对接收不到该网关发送的ARP响应时的M进行更新处理，使得更 新后的M小于更新前的Μ,并根据该更新后的M重新构造探测IP地址，并采用重新构造的探 测IP地址向该网关发送ARP请求，直至接收不到该ARP响应时的M为1。</p>
+    <p>[0055]	另外，为了避免地址冲突，还可以包括广播免费ARP请求的步骤，即还可以包括： 采用该探测IP地址广播免费ARP请求以判断该探测IP地址是否在本网段内活动；当判断 出该探测IP地址在本网段内活动时，将判断出探测IP地址在本网段内活动时的M作为差 值对N进行减小处理，并重新设定Μ,根据减小后的N及重新设定的M重新构造探测IP地 址，直至构造的探测IP地址不在本网段内活动。当判断出该探测IP地址不在本网段内活 动时，采用该探测IP地址，向该网关发送ARP请求。具体内容可以参见后续实施例。</p>
+    <p>[0056]	方式二，从小到大进行处理：构造满足第二限定条件的探测IP地址，该第二限定 条件为：该探测IP地址的高L+M位与预先获取的网关的IP地址的高L+M位相同，且按照从 高到低的顺序，该探测IP地址的第L+M+1位与该网关的IP地址的第L+M+1位互为反码，其 中，L、M为变量，满足一定条件后的L为待配置的子网掩码的网络位的长度，M为步长，L的 初始值为-1，M的初始值为预先设定的初始步长。</p>
+    <p>[0057]	满足的一定条件可以包括：该采用该探测IP地址，发送请求消息，包括：采用该探 测IP地址，向该网关发送ARP请求。该根据该请求消息的响应情况，配置子网掩码，包括： 当接收不到该网关发送的ARP响应时，将接收不到该ARP响应时的M作为增值对L进行增 加处理，并重新设定Μ,根据增加后的L及重新设定的M重新构造探测IP地址，并采用重新 构造的探测IP地址向该网关发送ARP请求，直至接收到该网关发送的ARP响应。当接收 到该网关发送的ARP响应时，如果接收到该网关发送的ARP响应时的M为1，则将接收到该 ARP响应时的L增加1后作为配置的子网掩码的网络位的长度；或者，如果接收到该网关发 送的ARP响应时的M大于1，则对接收到该网关发送的ARP响应时的M进行更新处理，使得 更新后的M小于更新前的Μ，并根据该更新后的M重新构造探测IP地址，并采用重新构造的探测IP地址向该网关发送ARP请求，直至接收到该ARP响应时的M为1。</p>
+    <p>[0058]	其中，采用该探测IP地址，向该网关发送ARP请求可以包括：采用该探测IP地址 广播免费ARP请求以判断该探测IP地址是否在本网段内活动；当判断出该探测IP地址不 在本网段内活动时，采用该探测IP地址，向该网关发送ARP请求。</p>
+    <p>[0059]	另外，该采用该探测IP地址，发送请求消息，可以包括：</p>
+    <p>[0060]	采用该探测IP地址，广播免费ARP请求以判断该探测IP地址是否在本网段内活 动；该根据该请求消息的响应情况，配置子网掩码，包括：当判断出该探测IP地址在本网段 内活动时，如果判断出该探测IP地址在本网段内活动时的M为1，则将判断出该探测IP地 址在本网段内活动时的L增加1后作为配置的子网掩码的网络位的长度；或者，如果判断出 该探测IP地址在本网段内活动时的M大于1，则对判断出该探测IP地址在本网段内活动 时的M进行更新处理，使得更新后的M小于更新前的M,并根据该更新后的M重新构造探测 IP地址，直至构造的探测IP地址不在本网段内活动，或者，判断出该探测IP地址在本网段 内活动时的M为1。具体内容可以参见下述实施例。</p>
+    <p>[0061]	方式三，从大到小及从小到大逐次逼近的方式：该构造探测IP地址，包括：构造满 足第三限定条件的探测IP地址，该第三限定条件为：该探测IP地址的高Q位与预先获取的 网关的IP地址的高Q位相同，且按照从高到低的顺序，该探测IP地址的第Q+1位与该网关 的IP地址的第Q+1位互为反码，其中，Q大于L且小于N，Q、L、N为变量，N的初始值为能够 取得的子网掩码的网络位的最大长度，L为初始值为-1。</p>
+    <p>[0062]	该采用该探测IP地址，发送请求消息，包括：采用该探测IP地址，向该网关发送 ARP请求。该根据该请求消息的响应情况，配置子网掩码，包括：当接收到该网关发送的ARP 响应时，对该N进行减小处理，使得减小处理后的N为减小处理前对应的Q ；以及，当接收不 到该网关发送的ARP响应时，对该L进行增加处理，使得增加处理后的L为增加处理前对应 的Q ；如果该减小处理后的N与减小处理前对应的L相差1，或者，增加处理前对应的N与 增加处理后的L相差1，则将N与L相差1时的N作为配置的子网掩码的网络位的长度；或 者，如果该减小处理后的N与减小处理前对应的L相差大于1，则重新选取Q，使得重新选取 的Q大于减小处理前对应的L小于减小处理后的N，或者，如果该增加处理前对应的N与增 加处理后的L相差大于1，则重新选取Q，使得重新选取的Q大于增加处理后的L小于增加 处理前对应的N ；根据重新选取的Q重新构造探测IP地址，并采用重新构造的探测IP地址 向该网关发送ARP请求，直至该减小处理后的N与减小处理前对应的L相差1，或者，增加处 理前对应的N与增加处理后的L相差1。</p>
+    <p>[0063]	其中，该采用该探测IP地址，向该网关发送ARP请求，包括：采用该探测IP地址广 播免费ARP请求以判断该探测IP地址是否在本网段内活动；当判断出该探测IP地址在本 网段内活动时，采用该探测IP地址，向该网关发送ARP请求。</p>
+    <p>[0064]	另外，该采用该探测IP地址，发送请求消息，包括：采用该探测IP地址，广播免费 ARP请求以判断该探测IP地址是否在本网段内活动；该根据该请求消息的响应情况，配置 子网掩码，包括：当判断出该探测IP地址在本网段内活动时，对该N进行减小处理，使得减 小处理后的N为减小处理前对应的Q ；如果该减小处理后的N与减小处理前对应的L相差 1，则将N与L相差1时的N作为配置的子网掩码的网络位的长度；或者，如果该减小处理后 的N与减小处理前对应的L相差大于1，则重新选取Q，使得重新选取的Q大于减小处理前对应的L小于减小处理后的N ；根据重新选取的Q重新构造探测IP地址，并采用重新构造 的探测IP地址向该网关发送ARP请求，直至构造的探测IP地址不在本网段内活动，或者， 判断出该探测IP地址在本网段内活动时对该N进行减小处理后的N与减小处理前对应的 L相差1。具体内容可以参见下述实施例。</p>
+    <p>[0065]	本实施例通过构造探测IP地址，根据采用该探测IP地址发送的ARP请求的响应 情况，配置子网掩码，实现子网掩码的自动配置，避免人工配置引起的问题，保证主机配置 的子网掩码的正确性，保证配置子网掩码时的快速性及方便性，保证配置子网掩码时无需 人工参与，降低人工技术及成本要求。通过对η进行增加或者减小处理，可以提高适用范 围。通过首先进行免费ARP过程，可以避免地址冲突。</p>
+    <p>[0066]	图2为本发明第二实施例的方法流程示意图，本实施例以网络位长度从大到小依 次按位处理为例。参见图2，本实施例包括：</p>
+    <p>[0067]	步骤201 ：主机读取网关的IP地址，假设网关的IP地址为ΙΡ0。</p>
+    <p>[0068]	图3为本发明第二实施例中网关的IP地址的示意图，参见图3，以32位的IP地址 为例，IPO按照从高到低的顺序为=Y1 Y2 ... Y32O</p>
+    <p>[0069]	步骤202 ：主机设置子网掩码的网络位长度N的初始值。</p>
+    <p>[0070]	假设N的初始值Ntl = 30。</p>
+    <p>[0071]	步骤203 ：主机根据网络位的长度构造探测IP地址，假设该探测IP地址为ΙΡ1。</p>
+    <p>[0072]	图4为本发明第二实施例中构造的探测IP地址的示意图，参见图4，该探测IP地 址满足如下条件：该探测IP地址的高N-I位与网关的IP地址的高N-I位分别相同，即探测 IP地址的高N-I位分别为=Y1 Y2…Yim，从高到低的顺序，第N位与网关的IP地址的第N 位互为反码，即4与&amp;互为反码，其余的^&#171;…^可以任选。同样的，如果考虑到保留位的 问题，\&#183;&#183;&#183;τι不能为全ο或者全1。初始时ν为设置的初始值队。</p>
+    <p>[0073]	步骤204 ：主机在本网段内广播免费ARP请求，该免费ARP请求的源IP地址和目 的IP地址均为该探测IP地址。</p>
+    <p>[0074]	通过广播免费ARP请求，可以查询该网关的网段内是否存在地址为IPl的主机，以 防止发生IP地址冲突。</p>
+    <p>[0075]	为了防止数据丢失，例如，防止免费ARP请求丢失，主机可以多次广播免费ARP请 求。</p>
+    <p>[0076]	步骤205 ：主机判断是否接收到地址为IPl的主机发送的ARP响应或者免费ARP响 应，若是，执行步骤206，否则执行步骤207。</p>
+    <p>[0077]	其中，主机可以设置一个时间阈值Tl，判断在该时间阈值Tl内是否收到上述的 ARP响应包或者免费ARP响应包。当网关所属网段内存在地址为IPl的主机时，该地址为 IPl的主机在接收到免费ARP请求后，可能会反馈ARP响应，也可能会反馈免费ARP响应，不 论是反馈ARP响应还是免费ARP响应均表明IPl在本网段内活动，也即地址存在冲突。当 地址冲突时，表明网关所属网段内存在ΙΡ1，进一步的意思是IPl和IPO同属的子网掩码的 网络位长度小于等于N-I。</p>
+    <p>[0078]	步骤206 ：主机将网络位的长度进行减小处理，例如，将N的数值减1，即执行N = N-I的处理，之后，重复执行步骤203及其后续步骤。</p>
+    <p>[0079]	步骤207 ：主机采用探测IP地址向网关发送ARP请求，该ARP请求的源地址为ΙΡ1，目的地址为IPO。</p>
+    <p>[0080]	为了防止数据丢失，主机可以多次发送ARP请求。</p>
+    <p>[0081]	步骤208 ：主机判断是否接收到网关发送的ARP响应，若是，执行步骤209，否则执 行步骤210。</p>
+    <p>[0082]	其中，主机可以设置一个时间阈值T2，判断在该时间阈值T2内是否收到网关发送 的ARP响应。</p>
+    <p>[0083]	当收到ARP响应时，表明IPO和IPl同属的子网掩码的网络位的长度小于等于 N-I。</p>
+    <p>[0084]	步骤209 ：主机将网络位的长度进行减小处理，例如，将N的数值减1，即执行N = N-I的处理，之后，重复执行步骤203及其后续步骤。</p>
+    <p>[0085]	步骤210 ：确定当前的N为要配置的子网掩码的网络位的长度，之后，根据该当前 的N配置子网掩码。例如，网络位为16位，则子网掩码为高16位为1，低16位为0。</p>
+    <p>[0086]	本实施例根据网络位的长度构造探测IP地址，采用探测IP地址向网关发送ARP 请求，根据网关对ARP请求的响应情况更新网络位的长度，重复上述过程直至确定最终的 网络位长度，可以自动完成子网掩码的配置，无需人工配置，避免人工配置的问题。本实施 例可以应用于对网络位长度从大到小处理的场景。</p>
+    <p>[0087]	图5为本发明第三实施例的方法流程示意图，本实施例以网络位长度从小到大依 次按位处理为例。参见图5，本实施例包括：</p>
+    <p>[0088]	步骤501 ：主机读取网关的IP地址，假设网关的IP地址为ΙΡ0。</p>
+    <p>[0089]	例如，IPO按照从高到低的顺序为=Y1 Y2 Y3-Y32O</p>
+    <p>[0090]	步骤502 ：主机设置L的初始值Ltl = -1。</p>
+    <p>[0091]	步骤503 ：主机根据L构造探测IP地址，假设该探测IP地址为IP1。</p>
+    <p>[0092]	其中，该探测IP地址满足如下条件：该探测IP地址的高L+1位与网关的IP地址 的高L+1位分别相同，即探测IP地址的高L+1位分别为=Y1 Y2 Y3…YL+1，从高到低的顺序， 第L+2位与网关的IP地址的第L+2位互为反码，即Zy2与Yy2互为反码，其余的、…Vxi可 以任选，但是如果考虑到保留位的问题，Zy2…&amp;不能为全0或者全1。步骤504 ：主机广播 免费ARP请求，该免费ARP请求的源IP地址和目的IP地址均为该探测IP地址。</p>
+    <p>[0093]	通过广播免费ARP请求，可以查询该网关的网段内是否存在地址为IPl的主机，以 防止发生IP地址冲突。</p>
+    <p>[0094]	为了防止数据丢失，主机可以多次广播免费ARP请求。</p>
+    <p>[0095]	步骤505 ：主机判断是否接收到地址为IPl的主机发送的ARP响应或者免费ARP响 应，若否，执行步骤506，若是，执行步骤509。</p>
+    <p>[0096]	其中，当接收到ARP响应或者免费ARP响应时，表明网关所属网段内存在IP1，进一 步的意思是IPl和IPO同属的子网掩码的网络位长度小于等于L+1。</p>
+    <p>[0097]	步骤506 ：主机采用探测IP地址向网关发送ARP请求，该ARP请求的源地址为IP1， 目的地址为IPO。</p>
+    <p>[0098]	为了防止数据丢失，主机可以多次发送ARP请求。</p>
+    <p>[0099]	步骤507 ：主机判断是否接收到网关发送的ARP响应，若是，执行步骤509，否则执 行步骤508。[0100]	其中，主机可以设置一个时间阈值T2，判断在该时间阈值T2内是否收到网关发送 的ARP响应。</p>
+    <p>[0101]	当未收到ARP响应时，表明IPO和IPl同属的子网掩码的网络位的长度大于L+1 ；</p>
+    <p>[0102]	当接收到ARP响应时，表明IPO和IPl同属的子网掩码的网络位的长度小于等于 L+1。</p>
+    <p>[0103]	步骤508 ：主机将L进行增加处理，例如，将L的数值加1，即执行L = L+1的处理， 之后，重复执行步骤503及其后续步骤。</p>
+    <p>[0104]	步骤509 ：确定当前的L增加1后为要配置的子网掩码的网络位的长度，即，网络 位的长度为L+1，之后，根据该网络位的长度L+1配置子网掩码。例如，网络位为16位，则子 网掩码为高16位为1，低16位为0。</p>
+    <p>[0105]	本实施例根据网络位的长度构造探测IP地址，采用探测IP地址向网关发送ARP 请求，根据网关对ARP请求的响应情况更新网络位的长度，重复上述过程直至确定最终的 网络位长度，可以自动完成子网掩码的配置，无需人工配置，避免人工配置的问题。本实施 例可以应用于对网络位长度从小到大处理的场景。</p>
+    <p>[0106]	上述分别描述了对网络位长度减小或者增加的流程，可以理解的是，在实施过程 中也可以减小、增加都进行，并且，减小或者增加的数值也不限于1，也可以为其他数值。</p>
+    <p>[0107]	下面以不限于1的步长为例，说明本发明实施例。</p>
+    <p>[0108]	图6为本发明第四实施例的方法流程示意图，本实施例以不限于1的步长为例，且 探测IP地址与网关IP地址相同的高位数按照从大到小的顺序变化为例。参见图6，本实施 例包括：</p>
+    <p>[0109]	步骤601 ：读取网关的IP地址。</p>
+    <p>[0110]	例如网关的IP地址为ΙΡ0。</p>
+    <p>[0111]	步骤602 ：设置子网掩码的网络位长度N为最大值M。</p>
+    <p>[0112]	例如，参见上述实施例，如果考虑到可用的IP地址空间，以IP地址为32位为例， 则 M = 30。</p>
+    <p>[0113]	步骤603:设置步长m。</p>
+    <p>[0114]	步长m满足：0&lt;m彡N。</p>
+    <p>[0115]	步骤604 ：构造探测IP地址。</p>
+    <p>[0116]	其中，图7为本发明第四实施例中探测IP地址和网关的IP地址的结构比较示意 图，本实施例中，以网关的IP地址为ΙΡ0，探测IP地址为IPl为例。</p>
+    <p>[0117]	参见图7，IPl和IPO满足如下条件：高N-m位与预先获取的网关的IP地址的高 N-m位相同，且按照从高到低的顺序，该探测IP地址的第N-m+1位与该网关的IP地址的第 N-m+1位互为反码。其中，图7中，MSB表示高位，LSB表示低位，变化位即为互为反码位。</p>
+    <p>[0118]	步骤605 ：判断探测IP地址是否在本网段内活动，若是，执行步骤610，否则，执行 步骤606。</p>
+    <p>[0119]	具体内容可以参见上述实施例，例如，向本网段内以该探测IP地址广播免费ARP 请求，如果收到对应的响应消息，例如收到免费ARP响应或者ARP响应，则表明探测IP地址 在本网段内活动，否则为探测IP地址未在本网段内活动。</p>
+    <p>[0120]	步骤606 ：采用该探测IP地址向网关发送ARP请求。[0121]	步骤607 ：判断是否收到网关返回的ARP响应，若是，执行步骤610，否则，执行步骤 608。</p>
+    <p>[0122]	步骤608 ：判断采用的步长是否为1，若是，执行步骤609，否则，执行步骤611。</p>
+    <p>[0123]	步骤609 ：确定N为待配置的子网掩码的网络位的长度。之后，可以根据子网掩码 的网络位的长度配置子网掩码。</p>
+    <p>[0124]	步骤610 ：采用设置的步长m对N进行减小处理。之后，重复执行步骤603及其后</p>
+    <p>续步骤。</p>
+    <p>[0125]	例如，减小后的N =减小前的N-m。</p>
+    <p>[0126]	步骤611 ：更新步长值，其中，更新后的步长大于0，小于更新前的步长。之后，重复 执行步骤604及其后续步骤。</p>
+    <p>[0127]	本实施例可以实现子网掩码的自动配置，并且，本实施例对步长值没有特别限制， 可以扩大适用范围。</p>
+    <p>[0128]	图8为本发明第六实施例的方法流程示意图，本实施例以不限于1的步长为例，且 探测IP地址与网关IP地址相同的高位数按照从小到大的顺序变化为例。参见图8，本实施 例包括：</p>
+    <p>[0129]	步骤801 ：读取网关的IP地址。</p>
+    <p>[0130]	例如网关的IP地址为ΙΡ0。</p>
+    <p>[0131]	步骤802 ：设置L的初始值为-1。</p>
+    <p>[0132]	步骤803:设置步长m。</p>
+    <p>[0133]	步长m满足：0 &lt; m彡M-L。</p>
+    <p>[0134]	步骤804 ：构造探测IP地址。</p>
+    <p>[0135]	其中，图9为本发明第六实施例中探测IP地址和网关的IP地址的结构比较示意 图，本实施例中，以网关的IP地址为ΙΡ0，探测IP地址为IPl为例。</p>
+    <p>[0136]	参见图9，IPl和IPO满足如下条件：高L+m位与预先获取的网关的IP地址的高 L+m位相同，且按照从高到低的顺序，该探测IP地址的第L+m+1位与该网关的IP地址的第 L+m+1位互为反码。其中，图9中，MSB表示高位，LSB表示低位，变化位即为互为反码位。</p>
+    <p>[0137]	步骤805 ：判断探测IP地址是否在本网段内活动，若是，执行步骤808，否则，执行 步骤806。</p>
+    <p>[0138]	具体内容可以参见上述实施例，例如，向本网段内以该探测IP地址广播免费ARP 请求，如果收到对应的响应消息，例如收到免费ARP响应或者ARP响应，则表明探测IP地址 在本网段内活动，否则为探测IP地址未在本网段内活动。</p>
+    <p>[0139]	步骤806 ：采用该探测IP地址向网关发送ARP请求。</p>
+    <p>[0140]	步骤807 ：判断是否收到网关返回的ARP响应，若是，执行步骤808，否则，执行步骤 810。</p>
+    <p>[0141]	步骤808 ：判断采用的步长是否为1，若是，执行步骤809，否则，执行步骤811。</p>
+    <p>[0142]	步骤809 ：确定L+1为待配置的子网掩码的网络位的长度。之后，可以根据子网掩 码的网络位的长度配置子网掩码。</p>
+    <p>[0143]	步骤810 ：采用设置的步长m对L进行增加处理。之后，重复执行步骤803及其后 续步骤。[0144]	例如，增加后的L =增加前的L+m。</p>
+    <p>[0145]	步骤811 ：更新步长值，其中，更新后的步长大于0，小于更新前的步长。之后，重复 执行步骤804及其后续步骤。</p>
+    <p>[0146]	本实施例可以实现子网掩码的自动配置，并且，本实施例对步长值没有特别限制， 可以扩大适用范围。</p>
+    <p>[0147]	图6、8所示的实施例以更新步长为例，也可以采用逐次逼近的方式获取上述的子 网掩码的网络位长度，参见图10。</p>
+    <p>[0148]	图10为本发明第七实施例的方法流程示意图，本实施例以采用逐次逼近的方式 获取网络位的长度为例。参见图10，本实施例包括：</p>
+    <p>[0149]	步骤1001 ：读取网关的IP地址。</p>
+    <p>[0150]	例如网关的IP地址为ΙΡ0。</p>
+    <p>[0151]	步骤1002 ：设置L、N的初始值。</p>
+    <p>[0152]	其中L的初始值为_1，N的初始值为能够取得的子网掩码的网络位的最大长度，以 32为IP地址且需要包括4个地址空间为例，N的初始值=M = 30。</p>
+    <p>[0153]	步骤1003 ：在L、N之间选取Q。</p>
+    <p>[0154]其中，Q	满足：L &lt; Q &lt; N。</p>
+    <p>[0155]	步骤1004 ：构造探测IP地址。</p>
+    <p>[0156]	其中，图11为本发明第七实施例中探测IP地址和网关的IP地址的结构比较示意 图，本实施例中，以网关的IP地址为ΙΡ0，探测IP地址为IPl为例。</p>
+    <p>[0157]	参见图11，IPl和IPO满足如下条件：高Q位与预先获取的网关的IP地址的高Q 位相同，且按照从高到低的顺序，该探测IP地址的第Q+1位与该网关的IP地址的第Q+1位 互为反码。其中，图11中，MSB表示高位，LSB表示低位，变化位即为互为反码位。</p>
+    <p>[0158]	步骤1005 ：判断探测IP地址是否在本网段内活动，若是，执行步骤1008，否则，执 行步骤1006。</p>
+    <p>[0159]	具体内容可以参见上述实施例，例如，向本网段内以该探测IP地址广播免费ARP 请求，如果收到对应的响应消息，例如收到免费ARP响应或者ARP响应，则表明探测IP地址 在本网段内活动，否则为探测IP地址未在本网段内活动。</p>
+    <p>[0160]	步骤1006 ：采用该探测IP地址向网关发送ARP请求。</p>
+    <p>[0161]	步骤1007 ：判断是否收到网关返回的ARP响应，若是，执行步骤1008，否则，执行步 骤 1009。</p>
+    <p>[0162]	步骤1008 ：调整N值，使得调整后的N值与调整前的Q相等，即，调整后的N = Q。 之后，执行步骤1010。</p>
+    <p>[0163]	步骤1009 ：调整L值，使得调整后的L值与调整前的Q相等，即调整后的L = Q。</p>
+    <p>[0164]	步骤1010 ：判断N-L是否等于1，若是，执行步骤1011，否则，执行步骤1003及其</p>
+    <p>后续步骤。</p>
+    <p>[0165]	其中，如果N调整了，则该步骤判断时采用的N为调整后的N ；如果L调整了，则该 步骤判断时采用的L为调制后的L。</p>
+    <p>[0166]	步骤1011 ：确定N为待配置的子网掩码的网络位的长度。之后，可以根据子网掩 码的网络位的长度配置子网掩码。[0167]	其中，如果N发生了调整，则该步骤中的N为调整后的N。</p>
+    <p>[0168]	本实施例可以实现子网掩码的自动配置，并且，本实施例对步长值没有特别限制， 可以扩大适用范围。</p>
+    <p>[0169]	图12为本发明第八实施例的设备结构示意图，包括构造模块121、发送模块122 和确定模块123 ；构造模块121用于构造探测IP地址；发送模块122用于采用该探测IP地 址，发送请求消息；确定模块123用于根据该请求消息的响应情况，确定子网掩码的网络位 长度，以进行子网掩码的配置；其中，该子网掩码的网络位的长度为能够临界接收到该请求 消息对应的响应消息时，该探测IP地址与同一网段内的网关的IP地址中连续相同的高位 的个数，该探测IP地址与该网关的IP地址满足如下条件：该探测IP地址与该网关的IP地 址中紧邻相同的高位的低位互为反码。</p>
+    <p>[0170]	具体可以是，该构造模块121具体用于构造满足第一限定条件的探测IP地址，该 第一限定条件为：该探测IP地址的高N-M位与预先获取的网关的IP地址的高N-M位相同， 且按照从高到低的顺序，该探测IP地址的第N-M+1位与该网关的IP地址的第N-M+1位互为 反码，其中，N、M为变量，N的初始值为能够取得的子网掩码的网络位的最大长度，M的初始 值为预先设定的初始步长；该请求消息为ARP请求，该发送模块122具体用于将该探测IP 地址作为该ARP请求的源IP地址，向该网关发送ARP请求。该确定模块123具体用于当接 收到该网关发送的ARP响应时，将接收到该ARP响应时的M作为差值对N进行减小处理，并 重新设定M，根据减小后的N及重新设定的M重新构造探测IP地址，并采用重新构造的探测 IP地址向该网关发送ARP请求，直至接收不到该网关发送的ARP响应；该确定模块123还 用于当接收不到该网关发送的ARP响应时，如果接收不到该网关发送的ARP响应时的M为 1，则将接收不到该ARP响应时的N作为配置的子网掩码的网络位的长度；或者，如果接收不 到该网关发送的ARP响应时的M大于1，则对接收不到该网关发送的ARP响应时的M进行更 新处理，使得更新后的M小于更新前的M,并根据该更新后的M重新构造探测IP地址，并采 用重新构造的探测IP地址向该网关发送ARP请求，直至接收不到该ARP响应时的M为1。 [0171 ] 此时，还可以包括广播模块，用于将该探测IP地址作为免费ARP请求的源IP地址 和目的IP地址，广播免费ARP请求以判断该探测IP地址是否在本网段内已经存在；处理模 块，用于当判断出该探测IP地址在本网段内已经存在时，将判断出探测IP地址在本网段内 已经存在时的M作为差值对N进行减小处理，并重新设定M,根据减小后的N及重新设定的 M重新构造探测IP地址，直至构造的探测IP地址在本网段内未存在；此时，该发送模块122 具体用于当判断出该探测IP地址在本网段内未存在时，将该探测IP地址作为该ARP请求 的源IP地址，向该网关发送ARP请求。</p>
+    <p>[0172]	也可以是，该构造模块121具体用于构造满足第二限定条件的探测IP地址，该第 二限定条件为：该探测IP地址的高L+M位与预先获取的网关的IP地址的高L+M位相同，且 按照从高到低的顺序，该探测IP地址的第L+M+1位与该网关的IP地址的第L+M+1位互为 反码，其中，L、M为变量，L的初始值为-1，M的初始值为预先设定的初始步长。</p>
+    <p>[0173]	该请求消息为ARP请求，该发送模块122具体用于将该探测IP地址作为该ARP请 求的源IP地址，向该网关发送ARP请求；该确定模块123具体用于当接收不到该网关发送 的ARP响应时，将接收不到该ARP响应时的M作为增值对L进行增加处理，并重新设定M， 根据增加后的L及重新设定的M重新构造探测IP地址，并采用重新构造的探测IP地址向该网关发送ARP请求，直至接收到该网关发送的ARP响应；当接收到该网关发送的ARP响应 时，如果接收到该网关发送的ARP响应时的M为1，则将接收到该ARP响应时的L增加1后 作为配置的子网掩码的网络位的长度；或者，如果接收到该网关发送的ARP响应时的M大于 1，则对接收到该网关发送的ARP响应时的M进行更新处理，使得更新后的M小于更新前的 M，并根据该更新后的M重新构造探测IP地址，并采用重新构造的探测IP地址向该网关发 送ARP请求，直至接收到该ARP响应时的M为1。该发送模块122具体用于将该探测IP地 址作为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求以判断该探测IP地址 是否在本网段内已经存在；当判断出该探测IP地址在本网段内未存在时，将该探测IP地址 作为该ARP请求的源IP地址，向该网关发送ARP请求。</p>
+    <p>[0174]	或者，该请求消息为免费ARP请求；该发送模块122具体用于将该探测IP地址作 为免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求以判断该探测IP地址是否 在本网段内已经存在；该确定模块123具体用于当判断出该探测IP地址在本网段内已经存 在时，如果判断出该探测IP地址在本网段内已经存在时的M为1，则将判断出该探测IP地 址在本网段内已经存在时的L增加1后作为配置的子网掩码的网络位的长度；或者，如果判 断出该探测IP地址在本网段内已经存在时的M大于1，则对判断出该探测IP地址在本网段 内已经存在时的M进行更新处理，使得更新后的M小于更新前的M,并根据该更新后的M重 新构造探测IP地址，直至构造的探测IP地址在本网段内未存在，或者，判断出该探测IP地 址在本网段内已经存在时的M为1。</p>
+    <p>[0175]	也可以是，该构造模块121具体用于构造满足第三限定条件的探测IP地址，该第 三限定条件为：该探测IP地址的高Q位与预先获取的网关的IP地址的高Q位相同，且按 照从高到低的顺序，该探测IP地址的第Q+1位与该网关的IP地址的第Q+1位互为反码，其 中，Q大于L且小于N，Q、L、N为变量，N的初始值为能够取得的子网掩码的网络位的最大长 度，L为初始值为-1。</p>
+    <p>[0176]	该请求消息为ARP请求，该发送模块122具体用于将该探测IP地址作为ARP请 求的源IP地址，向该网关发送ARP请求；该确定模块123具体用于当接收到该网关发送的 ARP响应时，对该N进行减小处理，使得减小处理后的N为减小处理前对应的Q ；以及，当接 收不到该网关发送的ARP响应时，对该L进行增加处理，使得增加处理后的L为增加处理前 对应的Q ；如果该减小处理后的N与减小处理前对应的L相差1，或者，增加处理前对应的N 与增加处理后的L相差1，则将N与L相差1时的N作为配置的子网掩码的网络位的长度； 或者，如果该减小处理后的N与减小处理前对应的L相差大于1，则重新选取Q，使得重新选 取的Q大于减小处理前对应的L小于减小处理后的N，或者，如果该增加处理前对应的N与 增加处理后的L相差大于1，则重新选取Q，使得重新选取的Q大于增加处理后的L小于增 加处理前对应的N ；根据重新选取的Q重新构造探测IP地址，并采用重新构造的探测IP地 址向该网关发送ARP请求，直至该减小处理后的N与减小处理前对应的L相差1，或者，增加 处理前对应的N与增加处理后的L相差1。该发送模块122具体用于将该探测IP地址作为 免费ARP请求的源IP地址和目的IP地址，广播免费ARP请求以判断该探测IP地址是否在 本网段内已经存在；当判断出该探测IP地址在本网段内未存在时，采用该探测IP地址，向 该网关发送ARP请求。</p>
+    <p>[0177]或者，[0178]	该请求消息为免费ARP请求，该发送模块122具体用于将该探测IP地址作为免费 ARP请求的源IP地址和目的IP地址，广播免费ARP请求以判断该探测IP地址是否在本网 段内已经存在；该确定模块123具体用于当判断出该探测IP地址在本网段内已经存在时， 对该N进行减小处理，使得减小处理后的N为减小处理前对应的Q ；如果该减小处理后的N 与减小处理前对应的L相差1，则将N与L相差1时的N作为配置的子网掩码的网络位的长 度；或者，如果该减小处理后的N与减小处理前对应的L相差大于1，则重新选取Q，使得重 新选取的Q大于减小处理前对应的L小于减小处理后的N ；根据重新选取的Q重新构造探 测IP地址，并采用重新构造的探测IP地址向该网关发送ARP请求，直至构造的探测IP地 址在本网段内未存在，或者，判断出该探测IP地址在本网段内已经存在时对该N进行减小 处理后的N与减小处理前对应的L相差1。</p>
+    <p>[0179]	本实施例通过构造探测IP地址，根据采用该探测IP地址发送的ARP请求的响应 情况，配置子网掩码，实现子网掩码的自动配置，避免人工配置引起的问题，保证主机配置 的子网掩码的正确性，保证配置子网掩码时的快速性及方便性，保证配置子网掩码时无需 人工参与，降低人工技术及成本要求。通过对η进行增加或者减小处理，可以提高适用范 围。通过首先进行免费ARP过程，可以避免地址冲突。</p>
+    <p>[0180]	可以理解的是，上述方法及设备中的相应特征可以相互适用。</p>
+    <p>[0181]	本领域普通技术人员可以理解：实现上述方法实施例的全部或部分步骤可以通过 程序指令相关的硬件来完成，前述的程序可以存储于计算机可读取存储介质中，该程序在 执行时，执行包括上述方法实施例的步骤；而前述的存储介质包括：R0M、RAM、磁碟或者光 盘等各种可以存储程序代码的介质。</p>
+    <p>[0182]	最后应说明的是：以上实施例仅用以说明本发明的技术方案，而非对其限制；尽 管参照前述实施例对本发明进行了详细的说明，本领域的普通技术人员应当理解：其依然 可以对前述各实施例所记载的技术方案进行修改，或者对其中部分技术特征进行等同替 换；而这些修改或者替换，并不使相应技术方案的本质脱离本发明各实施例技术方案的精 神和范围。</p>
+  </div>
+  </div></div><div class="patent-section patent-tabular-section"><a id="backward-citations"></a><div class="patent-section-header"><span class="patent-section-title">专利引用</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th">引用的专利</th><th class="patent-data-table-th"> 申请日期</th><th class="patent-data-table-th">公开日</th><th class="patent-data-table-th"> 申请人</th><th class="patent-data-table-th">专利名</th></tr></thead><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101094150A?cl=zh">CN101094150A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年6月22日</td><td class="patent-data-table-td patent-date-value">2007年12月26日</td><td class="patent-data-table-td ">上海未来宽带技术及应用工程研究中心有限公司</td><td class="patent-data-table-td ">一种基于缆桥技术的设备自动配置方法</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/CN101651722A?cl=zh">CN101651722A</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2009年8月28日</td><td class="patent-data-table-td patent-date-value">2010年2月17日</td><td class="patent-data-table-td ">华为技术有限公司</td><td class="patent-data-table-td ">Ip地址自动配置方法及其装置、系统</td></tr><tr><td class="patent-data-table-td citation-patent"><a href="/patents/US20080130647">US20080130647</a><span class='patent-tooltip-anchor' data-tooltip-text="由审查员引用"> *</span></td><td class="patent-data-table-td patent-date-value">2006年12月5日</td><td class="patent-data-table-td patent-date-value">2008年6月5日</td><td class="patent-data-table-td ">Yoshihiro Ohba</td><td class="patent-data-table-td ">Assisted proactive ip address acquisition</td></tr></table><div class="patent-section-footer">* 由审查员引用</div></div><div class="patent-section patent-tabular-section"><a id="classifications"></a><div class="patent-section-header"><span class="patent-section-title">分类</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> </th><th class="patent-data-table-th"> </th></tr></thead><tr><td class="patent-data-table-td ">国际分类号</td><td class="patent-data-table-td "><span class="nested-value"><a href="https://www.google.com/url?id=tc9xBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0012260000">H04L12/26</a></span>, <span class="nested-value"><a href="https://www.google.com/url?id=tc9xBwABERAJ&amp;q=http://web2.wipo.int/ipcpub/&amp;usg=AFQjCNER44F5jlVoswCkvW3YEcB5lW4moA#refresh=page&amp;notion=scheme&amp;version=20130101&amp;symbol=H04L0029120000">H04L29/12</a></span></td></tr></table><div class="patent-section-footer"></div></div><div class="patent-section patent-tabular-section"><a id="legal-events"></a><div class="patent-section-header"><span class="patent-section-title">法律事件</span></div><table class="patent-data-table"><thead class="patent-data-table-thead"><tr class="patent-data-table"><th class="patent-data-table-th"> 日期</th><th class="patent-data-table-th">代码</th><th class="patent-data-table-th">事件</th><th class="patent-data-table-th">说明</th></tr></thead><tr><td class="patent-data-table-td patent-date-value">2011年8月3日</td><td class="patent-data-table-td ">C06</td><td class="patent-data-table-td ">Publication</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2011年9月28日</td><td class="patent-data-table-td ">C10</td><td class="patent-data-table-td ">Entry into substantive examination</td><td class="patent-data-table-td "></td></tr><tr><td class="patent-data-table-td patent-date-value">2013年8月7日</td><td class="patent-data-table-td ">C14</td><td class="patent-data-table-td ">Grant of patent or utility model</td><td class="patent-data-table-td "></td></tr></table><div class="patent-section-footer"></div></div><div class="modal-dialog" id="patent-images-lightbox"><div class="patent-lightbox-controls"><div class="patent-lightbox-rotate-controls"><div class="patent-lightbox-rotation-text">旋转</div><div class="rotate-icon rotate-ccw-icon"></div><div class="rotate-icon rotate-cw-icon"></div></div><div class="patent-lightbox-index-counter"></div><a class="patent-lightbox-fullsize-link" target="_blank">原始图片</a><div class="patent-drawings-control patent-drawings-next"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_right.png" alt="Next page"width="21" height="21" /></div><div class="patent-drawings-control patent-drawings-prev"><img class="patent-drawings-button-img"src="/googlebooks/images/kennedy/page_left.png" alt="Previous page"width="21" height="21" /></div></div><div class="modal-dialog-content"><div class="patent-lightbox-image-holder"><div class="patent-lightbox-placeholder"></div></div></div></div><script>_OC_initPatentsAtb({image_not_available_html: " 未提供图片。\x3ca href\x3d//docs.google.com/viewer?url\x3dpatentimages.storage.googleapis.com/pdfs/2ce4ce24cc7209ac9d93/CN102143244A.pdf\x3e查看 PDF\x3c/a\x3e"});</script></div></div></div></div></div><script>(function() {var href = window.location.href;if (href.indexOf('?') !== -1) {var parameters = href.split('?')[1].split('&');for (var i = 0; i < parameters.length; i++) {var param = parameters[i].split('=');if (param[0] == 'focus') {var elem = document.getElementById(param[1]);if (elem) {elem.focus();}}}}})();</script><script>_OC_addFlags({LockSrc:"/books/javascript/lock_1ec17bec5b1e6ba0eab577be28b6afb9.js", Host:"https://www.google.com/", IsBooksRentalEnabled:1, IsBrowsingHistoryEnabled:1, IsWebReaderSvgEnabled:0, IsImageModeNotesEnabled:1, IsOfflineBubbleEnabled:1, IsFutureOnSaleVolumesEnabled:1, IsBooksUnifiedLeftNavEnabled:1, IsMobileRequest:0, IsZipitFolderCollectionEnabled:1, IsAdsDisabled:0, IsEmbeddedMediaEnabled:1, IsImageModeAnnotationsEnabled:1, IsMyLibraryGooglePlusEnabled:1, IsImagePageProviderEnabled:1, IsBookcardListPriceSmall:0, IsInternalUser:0, IsBooksShareButtonEnabled:0, IsDisabledRandomBookshelves:0});_OC_Run({"enable_p13n":false,"is_cobrand":false,"sign_in_url":"https://www.google.com/accounts/Login?service=\u0026continue=https://www.google.com/patents%3Fcl%3Dzh%26hl%3Dzh-CN\u0026hl=zh-CN"}, {"volume_id":"","is_ebook":true,"volumeresult":{"has_flowing_text":false,"has_scanned_text":true,"can_download_pdf":false,"can_download_epub":false,"is_pdf_drm_enabled":false,"is_epub_drm_enabled":false,"download_pdf_url":"https://www.google.com/patents/download/%E9%85%8D%E7%BD%AE%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95%E5%8F%8A%E8%AE%BE%E5%A4%87.pdf?id=tc9xBwABERAJ\u0026hl=zh-CN\u0026output=pdf\u0026sig=ACfU3U1NEQ9QND2CiuZsTlZPMT7cKZL31A"},"sample_url":"https://www.google.com/patents/reader?id=tc9xBwABERAJ\u0026hl=zh-CN\u0026printsec=frontcover\u0026output=reader\u0026source=gbs_atb_hover","is_browsable":true,"is_public_domain":true}, {});</script><div id="footer_table" style="font-size:83%;text-align:center;position:relative;top:20px;height:4.5em;margin-top:2em"><div style="margin-bottom:8px"><a href="https://www.google.com/search?hl=zh-CN"><nobr>Google&nbsp;首页</nobr></a> - <a href="//www.google.com/patents/sitemap/"><nobr>站点地图</nobr></a> - <a href="http://www.google.com/googlebooks/uspto.html"><nobr>美国专利商标局 (USPTO) 专利信息批量下载</nobr></a> - <a href="/intl/zh-CN/privacy/"><nobr>隐私权政策</nobr></a> - <a href="/intl/zh-CN/policies/terms/"><nobr>服务条款</nobr></a> - <a href="https://support.google.com/faqs/answer/2539193?hl=zh-CN"><nobr> 关于 Google 专利</nobr></a> - <a href="//www.google.com/tools/feedback/intl/zh-CN/error.html" onclick="try{_OC_startFeedback({productId: '72792',locale: 'zh-CN'});return false;}catch(e){}"><nobr>发送反馈</nobr></a></div></div> <script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script><script type="text/javascript">var pageTracker = _gat._getTracker("UA-27188110-1");pageTracker._setCookiePath("/patents/");pageTracker._trackPageview();</script> </body></html>
